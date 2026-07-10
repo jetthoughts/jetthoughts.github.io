@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). Print after running the synthesis from [Chapter 2.1](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Fill in 45 minutes. Hand to your AI agent or contractor tomorrow.
+📋 Template companion to the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). Print after running the [Chapter 2.5 synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Fill in 45 minutes. Hand to your AI agent or contractor tomorrow.
 
 # Vibe PRD Template - One Page, Five Sections
 
@@ -39,7 +39,7 @@ related_posts: false
 
 ## Why this exists
 
-A solo founder I spoke with last quarter had a validated problem statement and a Lovable subscription. She typed her problem statement into the Lovable prompt and asked it to "build the simplest version of this." Twelve hours later she had a working web app with a settings page, a billing dashboard, three integrations, and 17 toggles she didn't ask for. She spent the next three weeks deciding which parts to delete. When she opened a second project with a one-page one-page brief - the same problem, but now with a no-go list - Lovable shipped the smallest end-to-end thing in 90 minutes. The page she filled in between the two attempts was the difference. The agent fills blanks with reasonable defaults; the brief is your only way to forbid the defaults.
+A solo founder I spoke with last quarter had a validated problem statement and a Lovable subscription. She typed her problem statement into the Lovable prompt and asked it to "build the simplest version of this." Twelve hours later she had a working web app with a settings page, a billing dashboard, three integrations, and 17 toggles she didn't ask for. She spent the next three weeks deciding which parts to delete. When she opened a second project with a one-page brief - the same problem, but now with a no-go list - Lovable shipped the smallest end-to-end thing in 90 minutes. The page she filled in between the two attempts was the difference. The agent fills blanks with reasonable defaults; the brief is your only way to forbid the defaults.
 
 ## How to use this
 
@@ -238,7 +238,7 @@ The good no-go list names eight things a competent agent or junior might add. Ea
 
 Skip the no-go list and you ship a working demo of a product nobody asked for. Six weeks later you're posting a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about an MVP you can't extend. The page is cheap. The build round you save by writing it is the expensive thing you avoid.
 
-If you want the doctrine in long form, the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between one-page brief and traditional PRD, and the case for paying $1,000 vs writing the page yourself for free.
+If you want the doctrine in long form, the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between one-page brief and traditional PRD, and the case for paying for a live cohort vs writing the page yourself for free.
 
 ---
 

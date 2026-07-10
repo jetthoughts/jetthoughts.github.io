@@ -38,7 +38,7 @@ She showed us the contract on a Tuesday. By Friday we had walked her through the
 
 ## How to use this
 
-Friday afternoon, alone, 30 minutes, before coffee runs out. Bring three documents: your filled-in [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) from Chapter 2.1, your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1, and a current bank statement showing months of runway. Pen on paper. Phone in another room.
+Friday afternoon, alone, 30 minutes, before coffee runs out. Bring three documents: your filled-in [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) from Chapter 2.5, your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1, and a current bank statement showing months of runway. Pen on paper. Phone in another room.
 
 Answer the five questions in order. Each one is factual, not aspirational. "Number of paying pre-orders" is a count from your Stripe dashboard, not a vibe. "Months of runway" is cash on hand divided by monthly burn, not a guess. The matrix at the bottom routes you to Path 1, 2, 3, or 4 based on the five answers.
 

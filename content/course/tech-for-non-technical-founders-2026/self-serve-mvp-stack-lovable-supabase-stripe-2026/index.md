@@ -184,7 +184,7 @@ You are about to hit a wall: a Lovable prompt that produces the wrong component,
 | **[Indie Hackers](https://www.indiehackers.com/)** | Bootstrap-focused | Honest revenue posts + shipping logs; Friday-demo accountability rhythm | Free + paid tier (varies) |
 | **[No Code Founders (NCF Slack)](https://www.nocodefounders.com/)** | Full no-code stack (Bubble, Webflow, Glide, Softr) | If Lovable is wrong for your UI shape; worth membership even if you stay on Lovable | Free membership |
 | **r/nocode + r/vibecoding (Reddit)** | Free, indexable | Lower signal-to-noise than Slack; search before post | Free |
-| **[Buildspace + Maven cohorts](https://maven.com/)** | Drew Falkman's "Vibe Coding Data-Enabled AI Apps" (~$1K) | Peer cohort + office hours; for founders who ship harder under deadline | ~$1,000 |
+| **[Buildspace + Maven cohorts](https://maven.com/)** | Drew Falkman's "Vibe Coding Data-Enabled AI Apps" | Peer cohort + office hours; for founders who ship harder under deadline | Paid - check the course page |
 
 None of these is JetThoughts. None of them sells you a service. They are the founder peer pool the YC stance on co-founders [now points at](https://www.ycombinator.com/library/) instead of the 50%-equity hire.
 

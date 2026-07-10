@@ -29,17 +29,19 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 3 · Step 1 of 2** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 3 · Lesson 3.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a one-page validated problem statement (from [Ch 2.5 · Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), after running interviews in Ch 2.3 + 2.4) + verbatim "describe in one sentence" vocabulary (from your [Ch 2.6 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) - Section 3 of the brief uses these exact words)
 >
 > **Output:** a one-page Product Brief (Vibe PRD) you can hand to Lovable or a hired team
+>
+> **Progress:** M3 · 1 of 2 · Results so far: a validated problem statement (2.5) + a prototype pass/fail with user vocabulary (2.6) - this page turns them into the one page Module 4 builds from
 
 > **TL;DR:** One page, five sections. The problem (verbatim from interviews), the user's 60-second context, the one workflow, the one metric, and what you're NOT building. Hand it to Lovable or a contractor tomorrow morning.
 
-Sarah, an EdTech founder we audited in Q2 2026, had 17 settings toggles in her admin UI. In a one-day spec review we found 12 had no backend code and 2 crashed on toggle. The Vibe PRD she wrote next listed 5 settings she actually needed. Everything else came out. That is what a one-page brief does to a build that has drifted - it forces every line to earn its place tomorrow morning.
+Sarah, an EdTech founder we audited in Q2 2026, had 17 settings toggles in her admin UI - 12 had no backend code and 2 crashed on toggle. The Vibe PRD she wrote next listed the 5 settings she actually needed, and everything else came out. That is what a one-page brief does to a build that has drifted: it forces every line to earn its place.
 
-This chapter walks you through the **Product Brief** - some founders call it a **Vibe PRD** (PRD stands for Product Requirements Document). It is a single page that names the user, the problem, the one workflow you are building, the one metric you will measure, and what you are explicitly NOT building. The five sections below are the same ones Drew Falkman teaches in a 4-week Maven cohort for $1,000; this chapter walks you through the template so you can fill yours in tonight.
+This chapter walks you through the **Product Brief** - some founders call it a **Vibe PRD** (PRD stands for Product Requirements Document). It is a single page that names the user, the problem, the one workflow you are building, the one metric you will measure, and what you are explicitly NOT building. The five sections below are the same ones Drew Falkman teaches in a paid multi-week Maven cohort; this chapter walks you through the template so you can fill yours in tonight.
 
 ![One-page Vibe PRD template with five labeled sections: the problem, the user and their context, what you're building, success metric, what you're NOT building.](vibe-prd-template-visual.svg)
 
@@ -60,7 +62,7 @@ The simplest reliable order is *problem → user → build → metric → no-go*
 
 > **How long is each section?** Each of the 5 sections is 2-4 sentences in plain English. Section 5 (no-go list) is 5-8 bullet lines. Total brief ≤ 250 words on one side of A4 at 11pt. If you spill past 250 words, the persona is too broad or the pain is too vague - revise the section that ran longest first.
 
-### Section 1 - The problem (lifted from Chapter 2.1 synthesis)
+### Section 1 - The problem (lifted from your Chapter 2.5 synthesis)
 
 What goes in it: one paragraph copied directly from your [validated problem statement](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Named persona, named industry, dated 10-call sample, one verbatim quote, one quantified cost.
 
@@ -137,11 +139,11 @@ flowchart TD
 
 **Traditional PRD if** the next stop is a senior engineering team, an in-house product committee, or a board that needs a budget number attached. Senior engineers read briefs to find load-bearing assumptions you haven't named, and they expect a data model, an API outline, and an integration list. Product committees expect a roadmap, a phasing plan, and a go-to-market section. Both audiences will write the missing parts themselves if you don't include them, which is rarely what you want.
 
-The trap most founders fall into is writing a traditional PRD for a junior or an AI agent. The 5-page document buries the one paragraph the builder needed. By page 3, the agent has skimmed past the no-go list and started building a settings page.
+The classic trap is writing a traditional PRD for a junior or an AI agent. The 5-page document buries the one paragraph the builder needed. By page 3, the agent has skimmed past the no-go list and started building a settings page.
 
-## When the $1,000 Maven course is worth it
+## When a paid cohort course is worth it
 
-Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.com/), a 4-week cohort priced at $1,000. The course teaches the same five-section Vibe PRD template, plus the Lovable + Supabase + Stripe + GitHub stack, plus live community and 1:1 instructor feedback. The Maven [course reviews](https://maven.com/p/about) hover around 4.8/5.
+Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.com/), a multi-week live cohort (paid - check the course page for current pricing and format). The course teaches the same five-section Vibe PRD template, plus the Lovable + Supabase + Stripe + GitHub stack, plus live community and 1:1 instructor feedback.
 
 | Scenario | Maven cohort is worth it | This template is enough to start |
 |---|---|---|
@@ -150,7 +152,7 @@ Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.co
 | You want to go deeper on Lovable + Supabase + Stripe stack mechanics. | Yes. The cohort spends 2 of 4 weeks on this. | No. You'll need the stack tutorials anyway; the template is concept-only. |
 | You can sit alone for 2 hours and finish the brief from the page above. | No. | Yes. The cohort buys peer review + deadline + deeper stack work, but you'll ship either way. |
 
-**Rule of thumb:** If you can sit alone for two hours and finish the brief, start here. The cohort buys structure, deadline, and stack depth. If you can't sit alone, $1,000 buys the accountability that gets the brief out of you.
+**Rule of thumb:** If you can sit alone for two hours and finish the brief, start here. The cohort buys structure, deadline, and stack depth. If you can't sit alone, the cohort fee buys the accountability that gets the brief out of you.
 
 ## What to do tomorrow
 
@@ -166,7 +168,7 @@ Skipping the brief and going straight into prompting is the most common way a no
 
 ## What comes next (Chapter 3.2, then Chapter 4.1)
 
-You now have two validated artifacts: a one-page problem statement (from Chapter 2.1 synthesis) and a one-page Vibe PRD (from this chapter). Two more steps before Lovable touches your brief:
+You now have two validated artifacts: a one-page problem statement (from your Chapter 2.5 synthesis) and a one-page Vibe PRD (from this chapter). Two more steps before Lovable touches your brief:
 
 1. **[Chapter 3.2 - Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)** - stress-test Section 3 ("what you're building") by rewriting feature nouns as outcome-shaped job stories. This is the quality gate on the brief you just wrote, not a separate writing exercise.
 2. **[Chapter 4.1 - Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)** - a 5-question decision tree that routes you to one of 4 build paths (validate without code / self-serve / fractional CTO / hire). The default for a non-technical founder is self-serve ([Chapter 4.3a · Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + [4.3b · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)), but only after the decision gate confirms it's right for YOUR runway and YOUR problem. Chapter 4.1 explicitly requires the outcome-shaped brief from Chapter 3.2 as its input.
@@ -175,7 +177,7 @@ A Vibe PRD is what's left when you remove everything an AI agent or a hired juni
 
 ## Further reading
 
-- Drew Falkman, [Vibe Coding Data-Enabled AI Apps on Maven](https://maven.com/) - the $1,000, 4-week cohort that teaches the Vibe PRD with live feedback. Recommended if accountability is your blocker.
+- Drew Falkman, [Vibe Coding Data-Enabled AI Apps on Maven](https://maven.com/) - the paid live cohort that teaches the Vibe PRD with instructor feedback. Recommended if accountability is your blocker.
 - Marty Cagan, [Good Product Manager / Bad Product Manager](https://www.svpg.com/good-product-manager-bad-product-manager/) - the canonical essay on what a PRD is for. The Vibe PRD is the AI-era compression of the same shape.
 - Marty Cagan, [Product vs Feature Teams](https://www.svpg.com/product-vs-feature-teams/) - why the brief shapes what gets built. The no-go list is the part feature teams ignore.
 - Jake Knapp and John Zeratsky, [Foundation Sprint (Click, April 2025)](https://www.thesprintbook.com/foundation-sprint) - the 2-day version of the same artifact for teams that have 2 days. The Foundation Sprint workbook is freely sampled from the book site.
@@ -183,9 +185,11 @@ A Vibe PRD is what's left when you remove everything an AI agent or a hired juni
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - the 45% LLM-generated-code-flaw stat. Context for why the no-go list matters.
 - Y Combinator, [How to Write a PRD (Startup Library)](https://www.ycombinator.com/library/) - YC's distilled version of the same compression.
 
-> **Done when:** All 5 sections of your one-page brief are filled in, Section 1 is copied verbatim from your validated problem statement, and you have read the brief aloud to one peer.
-> **Founder OS · Artifact #4 of 6:** The one-page Product Brief (Vibe PRD). Save as `Product Brief - [date]` in your `Founder OS` folder. Module 4.1 reads the brief to decide your build path; Module 4.3 reads it to prompt Lovable.
-> **Next click:** [3.2 · Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
+> **Done:** all 5 sections of your one-page brief are filled in, Section 1 is copied verbatim from your validated problem statement, and you have read the brief aloud to one peer.
+>
+> **You have now:** a validated problem statement (2.5) + prototype vocabulary (2.6) + the one-page Product Brief (Vibe PRD). Save it as `Product Brief - [date]` in your `Founder OS` folder - Chapter 4.1 reads it to decide your build path, and Chapter 4.3 reads it to prompt Lovable.
+>
+> **Next:** [3.2 · Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) - the quality gate on the brief you just wrote.
 > **If blocked:** If you can't fill Section 3 (what you're building) in one paragraph, your scope is too big. Pick the single smallest workflow one persona can complete end-to-end and cut everything else to the no-go list.
 
 > **Case Study: Tomas & Mia**

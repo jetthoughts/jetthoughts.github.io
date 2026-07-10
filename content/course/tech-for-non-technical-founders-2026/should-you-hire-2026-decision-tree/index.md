@@ -186,7 +186,7 @@ Two refundable deposits beat 200 LinkedIn likes.
 - Paul Graham, [*Do Things That Don't Scale*](https://paulgraham.com/ds.html) - the YC essay that named the Airbnb-style validation pattern. The first section is the Airbnb story; the rest is the manual that founders skip.
 - Paul Graham, [*The Airbnbs*](https://www.paulgraham.com/airbnbs.html) - PG's own short note on the Airbnb founders' early experiments. 6-minute read.
 - Sophia Matveeva, [*The Non-Technical Founder's Guide to Hiring*](https://www.amazon.com/Non-Technical-Founders-Guide-Hiring-Product-ebook/dp/B0B7WRLBZF) - the long-form companion to this post. Heavy on hiring, light on the validate-without-code path that comes first.
-- Drew Falkman, [*Vibe Coding Data-Enabled AI Apps* on Maven](https://maven.com/) - the $1,000 cohort that teaches the self-serve stack (Path 2). Recommended if accountability is your blocker.
+- Drew Falkman, [*Vibe Coding Data-Enabled AI Apps* on Maven](https://maven.com/) - the paid live cohort that teaches the self-serve stack (Path 2). Recommended if accountability is your blocker.
 - Y Combinator, [Startup School: Customer Discovery](https://www.ycombinator.com/library/) - YC's distilled take on validating before building. The path-1 reading list.
 - DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for keeping the architecture small enough that one developer can ship outcomes end-to-end. Reading for Path 2 and Path 3 founders.
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - 45% of LLM-generated code shipped at least one exploitable security flaw. Context for why Path 2 needs the 1-hour-a-month architecture review.
