@@ -188,12 +188,8 @@ When your brief skips the moment, the action, and the result, the engineer or th
 
 > **Stuck? Most first-timers stall here:** every feature in Section 3 looks equally important, so the list keeps growing. **Fix:** pick the ONE outcome that would make a real customer pay or stay. Build that. Cut the rest to the no-go list. You can add them back after the first pilot in Module 5.
 
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: Rewrites 3 feature-nouns as job stories. Example: "When a Stripe transaction has no matching QuickBooks invoice, I want to see the top 3 candidate matches so I can confirm in one click - not scan 200 line items." Passes the outcome filter: 4 of 5 sections are now outcomes, not features.
->
-> **Mia**: Rewrites 3 feature-nouns as job stories. Example: "When I search for a math tutor for my 10-year-old with dyslexia, I want to filter by 'dyslexia-trained' and see reviews from other parents - not scroll 50 generic math tutors." Passes: 5 of 5 sections are outcomes.
-
 ---
+
+*See it in action: [Module 3 walkthrough: Mia writes the one-page brief](/course/tech-for-non-technical-founders-2026/module-3-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*
