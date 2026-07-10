@@ -82,7 +82,7 @@ In Lovable, install the Supabase integration. Lovable will add the Supabase JS c
 
 > **Self-test your RLS policy before going live (two paths).**
 >
-> *No-code path (default for Sam).* In Claude or ChatGPT, paste: *"Audit my Supabase RLS policy. Here is my schema: [paste your table definitions from Supabase Table Editor]. Here is my current RLS policy: [paste from Authentication -> Policies]. Tell me whether a logged-in user with a fake user-id can read rows that belong to other users. If yes, give me the exact policy SQL to fix it."* Paste the AI's suggested policy into Supabase Authentication -> Policies.
+> *No-code path (the default for a non-technical founder).* In Claude or ChatGPT, paste: *"Audit my Supabase RLS policy. Here is my schema: [paste your table definitions from Supabase Table Editor]. Here is my current RLS policy: [paste from Authentication -> Policies]. Tell me whether a logged-in user with a fake user-id can read rows that belong to other users. If yes, give me the exact policy SQL to fix it."* Paste the AI's suggested policy into Supabase Authentication -> Policies.
 >
 > *SQL path (only if you are comfortable writing SQL).* In Supabase Dashboard -> SQL Editor, paste the test below, replacing `<table>` with your main user-data table. The pretend user-id `999` has no real rows; if the query returns any, your policy has a hole.
 >
@@ -105,7 +105,7 @@ Spend the rest of the phase running $1 test transactions through the flow: signu
 
 ### Phase 4 - deploy, send to 5 ICP users, iterate from the data
 
-Switch Stripe out of test mode. Buy a domain (~$10/year on [Porkbun](https://porkbun.com/) - .com registration is $9.73 first year, $10.91 renewal as of 2026 - or your registrar of choice; never let a tool hold your domain). Point the domain at the Lovable staging URL. Take final screenshots, write a 3-line cold email or LinkedIn DM, and send to 5 ICP prospects from your [Module 2 outreach list](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/).
+Switch Stripe out of test mode. Buy a domain (roughly $10/year for a .com on [Porkbun](https://porkbun.com/) or your registrar of choice; never let a tool hold your domain). Point the domain at the Lovable staging URL. Take final screenshots, write a 3-line cold email or LinkedIn DM, and send to 5 ICP prospects from your [Module 2 outreach list](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/).
 
 > "Hey [name] - the workflow you described recently (logging client check-ins by hand on a spreadsheet) is now a tool. Quick first-use, $29/month after a trial window. URL: [staging URL]. Honest reactions only."
 
@@ -163,8 +163,8 @@ What the stack actually costs, per published vendor pricing:
 | Phase | Cost shape | Line items |
 |------|-------|-----------|
 | Start | Free tiers | Free tiers across Lovable, Supabase, Stripe, GitHub |
-| First ship | Per-tool monthly fees | Lovable Pro $25 + Supabase Pro $25 + Porkbun .com ~$10/yr + Resend $20 + Stripe 2.9% + $0.30 per transaction |
-| Post-launch | Scale-tier monthly fees | Lovable Scale $100 + Supabase Pro $25 + Resend $35 + Sentry $26 + monitoring $14 |
+| First ship | Per-tool monthly fees | Lovable + Supabase entry paid tiers + a .com domain (~$10/yr) + Resend entry tier + Stripe per-transaction fees |
+| Post-launch | Scale-tier monthly fees | Lovable scale tier + Supabase paid tier + Resend/Sentry/monitoring paid tiers - check vendor pricing pages |
 
 The architectural ceiling tends to land at the post-launch tier - at ~10K users, route to Chapter 4.4 or a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). A hire-a-team build is material monthly burn before revenue; this stack ships the same first 10 paying customers on a fraction of that.
 

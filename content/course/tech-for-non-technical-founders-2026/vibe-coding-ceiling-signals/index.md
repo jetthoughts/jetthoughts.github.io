@@ -38,11 +38,11 @@ related_posts: false
 
 > **TL;DR:** Five architectural signals that mean the self-serve stack is maxed out. Two firing for 4+ weeks = graduate to a fractional CTO or hire. Run this check monthly once your MVP is live.
 
-A working morning. Your [Lovable](https://lovable.dev) app is live (Lovable is an AI app builder that generates a working web app from a prompt - free trial, paid plans from $25/month, no coding required). 47 paying coaches on the platform.
+A working morning. Your [Lovable](https://lovable.dev) app is live (Lovable is an AI app builder that generates a working web app from a prompt - free trial available, no coding required). 38 paying coaches on the platform.
 
 The dashboard takes 11 seconds to load for your largest account, a coach managing 80 clients. The Stripe webhook fired twice on three of yesterday's payments and you spent the morning refunding duplicates.
 
-Two of your users keep landing on each other's data because the [Supabase](https://supabase.com) row-level security drifted last week when a contractor patched the check-in form (Supabase is a database + auth service that Lovable connects to automatically - free tier covers early-stage usage, paid plans from $25/month).
+Two of your users keep landing on each other's data because the [Supabase](https://supabase.com) row-level security drifted last week when a contractor patched the check-in form (Supabase is a database + auth service that Lovable connects to automatically - free tier covers early-stage usage).
 
 The ceiling is visible now, but it was visible two months earlier too. That's when this check should have caught it.
 
@@ -56,7 +56,7 @@ Once your build goes live, run this 5-signal check monthly. Each signal that fir
 
 ## Who this 5-signal check is for
 
-The Lovable + Supabase + Stripe shed from [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) holds 80% of pre-seed B2B SaaS workloads. The other 20% is what this post is about.
+The Lovable + Supabase + Stripe shed from [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) holds most pre-seed B2B SaaS workloads. The remainder is what this post is about.
 
 Run this check monthly once your MVP is live and the ceiling shows up while it is still a tuning problem. Wait until something breaks - slow dashboard, duplicate webhooks, support tickets climbing - and you are paying late-fix prices on what was an early-fix problem.
 
@@ -156,7 +156,7 @@ Vanta, [Drata](https://drata.com), and [Secureframe](https://secureframe.com) au
 
 > *"Thank you for the SOC2 / [BAA / PCI] questionnaire. We are pre-SOC2 [or pre-BAA] today and are starting the readiness work in Q3. In the meantime, I can share our security one-pager (encryption at rest via Supabase, payments via Stripe Checkout, data deletion on request) and offer a 90-day pilot with the data-handling restrictions of your choice - including hosting in a sandboxed instance if that helps your security team approve. Would that bridge work while we complete the formal certification?"*
 
-This buys you 60-90 days to start the engineering work. About 30-40% of enterprise security teams will accept a documented bridge for a small pilot; the rest will say "come back when SOC2 is done" - which is the same answer you would get from ghosting them, plus you have preserved the relationship for the rebid 6 months later.
+This buys you 60-90 days to start the engineering work. Some enterprise security teams will accept a documented bridge for a small pilot; the rest will say "come back when SOC2 is done" - which is the same answer you would get from ghosting them, plus you have preserved the relationship for the rebid 6 months later.
 
 Keep the security one-pager as a shared Google Doc with: data flow diagram, encryption-at-rest summary, vendor list (Supabase, Stripe, Lovable, Loom, etc.), and a one-line incident-response contact. 30 minutes to draft; reusable across every enterprise sales conversation.
 

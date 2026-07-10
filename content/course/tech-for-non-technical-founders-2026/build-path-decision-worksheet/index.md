@@ -189,7 +189,7 @@ your Notion doc)
 
 | Path | Choose when | First action this week | Cost |
 |---|---|---|---|
-| **1. Validate without code** | Q1 = No, OR Q3 = less than 4 months | Ship Carrd page + Stripe checkout + Notion FAQ. Send to 35 ICP prospects. | $0 - $300 in tools + optional $100-200 in paid ads |
+| **1. Validate without code** | Q1 = No, OR Q3 = less than 4 months | Ship Carrd page + Stripe checkout + Notion FAQ. Send to your 30-name outreach list. | $0 - $300 in tools + optional $100-200 in paid ads |
 | **2. Self-serve build (6A)** | Q1 yes, Q2 light, Q4 = $0-$400/wk, Q5 = senior eng in network | Paste one-page brief into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
 | **3. Fractional CTO bridge (5.2)** | Q1 yes, Q2 mid, Q4 = $1.6K-$4K/mo OR Q5 = no senior eng | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month |
 | **4. Hire a team (6B)** | Q1 yes, Q2 heavy, Q4 = $5K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |

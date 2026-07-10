@@ -30,7 +30,7 @@ related_posts: false
 course_nav: false
 ---
 
-> **Chapter 5.2 · Step 1 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Going Further · Manage a Hired Team** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a team in place + a signed SOW
 >

@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the Oversight Rhythm sub-section (Chapter 5.2) of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Send to your team Monday. Run Friday at 4pm.
+📋 Template companion to the Oversight Rhythm sub-section of [The Founder Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) (Going Further). Send to your team Monday. Run Friday at 4pm.
 
 # The Friday Demo Template
 

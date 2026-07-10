@@ -62,15 +62,15 @@ Brian Chesky and Joe Gebbia did not write code first. They blew up an air mattre
 
 The product was a website with a payment link. The validation was three strangers paying real money. Paul Graham later wrote about the same instinct in [*Do things that don't scale*](https://paulgraham.com/ds.html): the founders who win are the ones who do the unscalable, manual experiment that proves demand before they industrialize it.
 
-The 2026 version of the Airbnb test takes one afternoon: a Carrd page with a Stripe checkout for an annual plan, a Notion FAQ that explains exactly what the buyer gets, and the link sent to 35 ICP prospects from your [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) outreach list. The result you are watching for is in the next paragraph.
+The 2026 version of the Airbnb test takes one afternoon: a Carrd page with a Stripe checkout for an annual plan, a Notion FAQ that explains exactly what the buyer gets, and the link sent to the 30 people from your [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) outreach list. The result you are watching for is in the next paragraph.
 
-![A 3-step illustration of the Airbnb test: Carrd page with Stripe checkout (Step 1), send link to 35 ICP prospects (Step 2), refund non-buyers and build only what you sold (Step 3). A sticky note at the bottom warns: if 0 of 35 click, the problem is real but your pitch is wrong, rewrite the page.](airbnb-test.svg)
+![A 3-step illustration of the Airbnb test: Carrd page with Stripe checkout (Step 1), send link to 30 ICP prospects (Step 2), refund non-buyers and build only what you sold (Step 3). A sticky note at the bottom warns: if 0 of 30 click, the problem is real but your pitch is wrong, rewrite the page.](airbnb-test.svg)
 
 The signal you are looking for is small. Two paying buyers from 35 cold outreach hits is enough to flip the build switch.
 
 We know a B2B SaaS founder who sold five annual contracts at $1,800 each via a Stripe link and a Notion doc before she wrote a line of code. By the time her contractor delivered the v1 web app eight weeks later, she had $9,000 in pre-revenue and a customer-feedback loop already running. The build was constrained by what she had already promised the five buyers, which is the cheapest scope-control mechanism that exists.
 
-Zero clicks from 35 prospects is brutal in the other direction. The problem might be real (you validated it in [Decide What's Next](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)) but your pitch is wrong, your price is wrong, or the timing is wrong. Find out for $200 instead of $30,000.
+Zero clicks from 30 prospects is brutal in the other direction. The problem might be real (you validated it in [Decide What's Next](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)) but your pitch is wrong, your price is wrong, or the timing is wrong. Find out for $200 instead of $30,000.
 
 ## Pick the right building before you commit to build
 
@@ -91,13 +91,13 @@ Most build-vs-hire posts give you one answer. The honest answer is four answers,
 
 ### 1. Validate without code
 
-Use this path when you have no MVP yet, a single untested hypothesis, and no confirmation that anyone will pay. This week: ship a Carrd page + Stripe checkout + Notion FAQ, add a Lovable demo screen recording if you have one, and send the link to 35 ICP prospects from your [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) outreach list. Tooling is per-vendor (Carrd annual domain + page, Stripe free until transactions, Notion free, Lovable trial), with optional LinkedIn or Google ad spend on top. If zero buyers click, you found that out before you spent real runway - rewrite the pitch or pivot the problem.
+Use this path when you have no MVP yet, a single untested hypothesis, and no confirmation that anyone will pay. This week: ship a Carrd page + Stripe checkout + Notion FAQ, add a Lovable demo screen recording if you have one, and send the link to 30 ICP prospects from your [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) outreach list. Tooling is per-vendor (Carrd annual domain + page, Stripe free until transactions, Notion free, Lovable trial), with optional LinkedIn or Google ad spend on top. If zero buyers click, you found that out before you spent real runway - rewrite the pitch or pivot the problem.
 
 ### 2. Self-serve build ([The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/))
 
 Pick this path when the problem is validated (10+ Mom Test interviews with ≥7 strong-signal scores per the Ch 2.5 synthesis rubric + a Ch 1.4 smoke test that cleared the 6%+ "Promising" band - pre-orders and paid pilots are produced LATER in Module 5, do not require them as the gate), the scope is one workflow for one persona, and the backend requirements are simple - no real-time collaboration, no complex refund flows, no compliance scope.
 
-This week: paste your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) into [Lovable](https://lovable.dev) (an AI app builder - free trial, paid plans from $25/month), ship the smallest end-to-end thing it generates, and connect [Supabase](https://supabase.com) (database + auth, free tier) + Stripe + Resend on top. Tooling is per-vendor pricing across the stack. Watch one failure mode: hitting the architectural ceiling when the app crosses ~5,000 users or your second integration. [5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to move up.
+This week: paste your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) into [Lovable](https://lovable.dev) (an AI app builder - free trial available), ship the smallest end-to-end thing it generates, and connect [Supabase](https://supabase.com) (database + auth, free tier) + Stripe + Resend on top. Tooling is per-vendor pricing across the stack. Watch one failure mode: hitting the architectural ceiling when the app crosses ~5,000 users or your second integration. [5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to move up.
 
 ### 3. Fractional CTO bridge ([The Fractional CTO Bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge))
 
@@ -142,7 +142,7 @@ flowchart TD
     class Hire hire
 ```
 
-The Mermaid above is the worksheet. The five questions live in the diagram. The table below adds what each routed-to outcome means in practice and which chapter Sam reads next:
+The Mermaid above is the worksheet. The five questions live in the diagram. The table below adds what each routed-to outcome means in practice and which chapter you read next:
 
 | Route | What it means | Next chapter to read |
 |---|---|---|

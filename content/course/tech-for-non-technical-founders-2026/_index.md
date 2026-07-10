@@ -65,7 +65,7 @@ The five mistakes below sink more first products than bad code does - we have wa
 - You have never systematically validated a business before
 - You might have tinkered with no-code tools, but you want a structured path instead of guessing
 
-Skip this course if you want to learn to code or hand off founder judgment to someone else.
+Skip this course if you want to learn to code or hand off founder judgment to someone else. And if what you need most is cohort deadlines and peers, [YC Startup School](https://www.startupschool.org/) runs free - this course is the self-paced, artifact-first alternative.
 
 ## Module map
 

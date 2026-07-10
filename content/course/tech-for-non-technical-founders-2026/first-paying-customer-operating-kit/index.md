@@ -80,7 +80,7 @@ Why it matters: removes the "what do I say in the email" friction so you spend 6
 
 ### 3. Design Partner Agreement template (one-page LOI + paid pilot)
 
-The one-page DPA from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Six sections plus signature block. Plain English, mutual-edit document, no lawyer required for v1. Comes in three formats: Google Docs (default), PDF (for customers who want to print), DocuSign-import (for customers who want to e-sign with audit trail).
+The one-page DPA from [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Six sections plus signature block. Plain English, mutual-edit document, no lawyer required for v1. Comes in three formats: Google Docs (default), PDF (for customers who want to print), DocuSign-import (for customers who want to e-sign with audit trail).
 
 Two annotated examples: a $1,500 B2B SaaS pilot DPA and a $5,000 B2B services pilot DPA, both based on real (anonymized) 2026 founder deals.
 

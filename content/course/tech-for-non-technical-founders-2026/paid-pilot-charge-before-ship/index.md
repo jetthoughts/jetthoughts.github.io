@@ -41,7 +41,7 @@ Two pilots, same product, same buyer profile, different deposit timing:
 
 | Variant | Setup | Result at Week 8 |
 |---|---|---|
-| **Free pilot** | Six weeks of free build, customer "loves it," 47 enthusiastic Slack messages, year-one contract sent on day pilot ended | "We're going to revisit at the next budget cycle." There is no next budget cycle. |
+| **Free pilot** | Six weeks of free build, customer "loves it," a wall of enthusiastic Slack messages, year-one contract sent on day pilot ended | "We're going to revisit at the next budget cycle." There is no next budget cycle. |
 | **Paid pilot** | One-page Design Partner Agreement, $1,200 refundable deposit collected before any code ships | Year-one contract closes day one. |
 
 The playbook below is the second variant: a one-page Design Partner Agreement, a 15-minute Stripe Checkout setup, and the pricing math that puts you in the conversation instead of stuck waiting for a CFO who never approved the pilot.
@@ -171,7 +171,7 @@ Two annotated worked examples (a $1,500 B2B SaaS pilot and a $5,000 B2B services
 
 The deposit number is not arbitrary. It is anchored to projected year-one ACV and to what a typical CFO will sign without a procurement review. The bands by sector:
 
-> For Sam's first pilot, the per-seat / 5-10 seats row applies. Skip the mid-market row until you have 5+ customers.
+> For your first pilot, the per-seat / 5-10 seats row applies. Skip the mid-market row until you have 5+ customers.
 
 | Sector | Year-1 ACV | Pilot fee (10-30%) | Pilot fee notes |
 |---|---|---|---|

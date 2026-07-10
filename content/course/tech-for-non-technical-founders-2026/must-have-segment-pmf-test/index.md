@@ -44,7 +44,7 @@ The dashboard will tell you the same thing it would have told you if you had cal
 The real question after the MVP ships is whether the people who already touched it would notice if it vanished tomorrow. If less than 40% would be very disappointed, no amount of ad spend will turn that group into customers. Paid traffic does not fix a product problem; it routes more users into something they will not return to.
 
 > **What your first-pass numbers will probably look like (and that is not a failure signal).** An idea-stage founder with 4-6 onramp users typically sees one of three patterns on the first survey run:
-> - All "somewhat disappointed" or "not disappointed" → directional KILL. Run more interviews before re-attempting.
+> - All "somewhat disappointed" or "not disappointed" → that segment is not must-have; do not scale it. Run more interviews before re-attempting.
 > - 2-3 "very disappointed" out of 6 → directional MAYBE. Almost certainly a sample-size problem, not a product problem; book 5-10 more users.
 > - 4+ "very disappointed" out of 6 → directional YES. Advance to M5.2 with the caveat above.
 >

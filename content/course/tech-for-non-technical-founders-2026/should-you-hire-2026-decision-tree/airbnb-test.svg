@@ -32,7 +32,7 @@
   <rect x="330" y="110" width="220" height="225" fill="#e8f4f8" stroke="#0277bd" stroke-width="2.5" filter="url(#rough2)"/>
   <text x="440" y="140" font-size="24" text-anchor="middle" fill="#0277bd" font-weight="bold">Step 2</text>
   <text x="440" y="168" font-size="20" text-anchor="middle" fill="#1a1a1a">Send the link to</text>
-  <text x="440" y="190" font-size="20" text-anchor="middle" fill="#1a1a1a">35 ICP prospects.</text>
+  <text x="440" y="190" font-size="20" text-anchor="middle" fill="#1a1a1a">30 ICP prospects.</text>
   <text x="440" y="216" font-size="20" text-anchor="middle" fill="#1a1a1a">Watch what happens.</text>
   <text x="440" y="248" font-size="18" text-anchor="middle" fill="#444" font-style="italic">7 reply. 5 ask questions.</text>
   <text x="440" y="268" font-size="18" text-anchor="middle" fill="#444" font-style="italic">3 click checkout.</text>
@@ -53,7 +53,7 @@
 
   <!-- Sticky note -->
   <rect x="278" y="372" width="360" height="100" fill="#fffacc" stroke="#cc342d" stroke-width="2" filter="url(#rough2)" transform="rotate(-1 458 416)"/>
-  <text x="458" y="400" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold" transform="rotate(-1 458 416)">If 0 of 35 click: the problem is real,</text>
+  <text x="458" y="400" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold" transform="rotate(-1 458 416)">If 0 of 30 click: the problem is real,</text>
   <text x="458" y="422" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold" transform="rotate(-1 458 416)">your pitch is wrong. Re-write the page.</text>
   <text x="458" y="446" font-size="18" text-anchor="middle" fill="#666" font-style="italic" transform="rotate(-1 458 416)">$0 spent on engineering. 0% sunk cost. 100% information.</text>
 </svg>
