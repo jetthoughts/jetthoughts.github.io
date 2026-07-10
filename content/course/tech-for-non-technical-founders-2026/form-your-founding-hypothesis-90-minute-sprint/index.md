@@ -43,7 +43,7 @@ A **Founding Hypothesis** is a fill-in-the-blanks sentence (Mad Libs style) from
 
 > *"If we help [customer] solve [problem] with [approach], they'll choose it over [competition] because [differentiation]."*
 
-Five blanks. One sentence - not a deck - because a sentence can't hide vague thinking, and because you'll reuse it everywhere: it feeds your landing-page headline in 1.2 (reshaped into a customer-plus-outcome one-liner) and opens every Module 2 interview as context. The discipline is filling all five blanks with specifics, not categories.
+Five blanks. One sentence - not a deck - because a sentence can't hide vague thinking, and because you'll reuse it everywhere: it feeds your landing-page headline in 1.2 (reshaped into a customer-plus-outcome one-liner) and tells Module 2 who to interview and which problem to ask about (you keep the sentence to yourself in interviews - pitching it contaminates the answers). The discipline is filling all five blanks with specifics, not categories.
 
 Each blank is an assumption, and each assumption has a test waiting for it later in the course:
 
@@ -90,7 +90,7 @@ Score each lens 1-5. Be honest - this is for you, not an investor deck.
 > 2. Fill each blank with the most specific noun you can. If a blank says "small businesses," rewrite it until it names one person in one industry.
 > 3. Score your sentence using the four lenses above.
 > 4. **✅ Success check:** total ≥14/20 (or ≥11/15 if Money is blank) AND no lens below 2.
-> 5. Save the sentence to a Google Doc titled `Founding Hypothesis - [today's date]`. You'll paste it verbatim into Lessons 1.2, 1.4, 1.5, and every Module 2 interview.
+> 5. Save the sentence to a Google Doc titled `Founding Hypothesis - [today's date]`. You'll paste it verbatim into Lessons 1.2, 1.4, and 1.5. Module 2 uses it too - to choose who you interview and what you ask about - but you never read it to an interviewee.
 
 ---
 

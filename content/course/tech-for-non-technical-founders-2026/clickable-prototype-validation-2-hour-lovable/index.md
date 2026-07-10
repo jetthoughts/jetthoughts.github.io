@@ -32,11 +32,11 @@ related_posts: false
 
 > **Module 2 · Lesson 2.6 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 5 of the 10 Mom Test interviewees from Chapter 2.3 (recruited in [2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), messaged in [2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)) - pick the strongest-signal ones (scored per the Ch 2.1 rubric)
+> **Input:** a BUILD decision plus your validated problem statement from [2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), and 5 of the 10 Mom Test interviewees (recruited in [2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), messaged in [2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)) - pick the strongest-signal ones (scored per the Ch 2.1 rubric)
 >
 > **Output:** 5 of them watched navigating a throwaway clickable prototype, with pass/fail per session
 >
-> **Progress:** M2 · 6 of 6 · Results so far: question list + 30-name list + 10 interviews run and scored
+> **Progress:** M2 · 6 of 6 · Results so far: question list + 30-name list + 10 scored interviews + a build/pivot/kill verdict and validated problem statement
 
 > **TL;DR:** Three throwaway screens, five silent-observation sessions. Watch whether users can navigate your solution without coaching - something interviews cannot tell you.
 
@@ -126,7 +126,7 @@ What the user sees after the core action succeeds. A confirmation message, a sum
 
 > **📋 Save this template.** Copy the prompt below into your notes. You'll reuse the same structure in [Module 4's real MVP build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) - same Lovable tool, same 3-screen skeleton, but with real auth, real database, and real Stripe.
 
-> **Practical Lovable onramp.** [Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt - you type what you want in English, it ships the screens. The **free trial** gives you a small number of messages per day with no credit card required, which is enough to ship this 3-screen throwaway prototype. **Paid plans lift the cap - check Lovable's pricing page.** and are only worth it later if you decide to upgrade for higher message volume - not required for this chapter.
+> **Practical Lovable onramp.** [Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt - you type what you want in English, it ships the screens. The **free trial** gives you a small number of messages per day with no credit card required, which is enough to ship this 3-screen throwaway prototype. **Paid plans lift the cap - check Lovable's pricing page.** They only become worth it if you later need higher message volume - not required for this chapter.
 
 > **If you hit Lovable's free-tier daily message cap (check current limits):** save your work-in-progress (Lovable auto-saves to your account, but copy the prompt + the current screen output to a note), come back tomorrow when the cap resets, OR upgrade to a paid plan if you want to ship in one focused session. The 3-screen prototype rarely needs more than 10 total messages once your prompt is well-formed - the cap usually bites only on poorly-scoped first attempts.
 
@@ -221,7 +221,7 @@ flowchart TD
 
 ### Setup - recruit and book
 
-Choose 5 of the 10 interviewees whose Mom Test scores were 7 or higher. You already have a relationship with them. They already confirmed the problem is real. Now you are asking them one hour of a different kind of time: watching them use the interface, not answering your questions.
+Choose 5 of the 10 interviewees whose Mom Test scores were 7 or higher. You already have a relationship with them. They already confirmed the problem is real. Now you are asking them for 30 minutes of a different kind of time: watching them use the interface, not answering your questions.
 
 Book the sessions as 30-minute video calls. Send the Lovable prototype link 10 minutes before - not earlier. You do not want them exploring it solo before you can observe.
 
@@ -229,9 +229,9 @@ Book the sessions as 30-minute video calls. Send the Lovable prototype link 10 m
 
 > *"Hi [name] - thank you for the 40 minutes last week. I built a quick clickable prototype based on what you told me about [their specific workaround from the Mom Test transcript]. I'd like 30 more minutes to watch you try it without me explaining anything - just silent observation while you click through. I'll send the link 10 minutes before. Would Tuesday afternoon or Wednesday afternoon work?"*
 
-Expect 4-5 of 5 to say yes. They invested 40 minutes in the first call; the second ask is half that time and a different motion. The *"I built something based on what you told me"* line is what gets them to say yes - it signals you listened, and it makes the prototype session feel like the natural continuation of the first conversation rather than a fresh cold outreach.
+Expect 4-5 of 5 to say yes. They invested 40 minutes in the first call; the second ask is shorter and a different motion. The *"I built something based on what you told me"* line is what gets them to say yes - it signals you listened, and it makes the prototype session feel like the natural continuation of the first conversation rather than a fresh cold outreach.
 
-> **Slow-path variant for the part-time founder**: scheduling 5 live observation calls on top of your only weekly window is unrealistic. Async alternative: send each interviewee the Lovable prototype link + a short Loom prompt ("record yourself trying these 3 tasks"). Use [Maze](https://maze.co) (free tier covers a handful of testers - check current limits) or [UserTesting](https://www.usertesting.com) (paid) if you want screen recording with click heatmaps. You lose the real-time follow-up question ability, but you gain async scheduling - the testers record on their own time, you watch the 5 recordings in one batch. Catch rate is about 70% of what live sessions surface (you miss the "what were you about to click" follow-ups) but 200% better than skipping the validation step because you couldn't schedule it.
+> **Slow-path variant for the part-time founder**: scheduling 5 live observation calls on top of your only weekly window is unrealistic. Async alternative: send each interviewee the Lovable prototype link + a short Loom prompt ("record yourself trying these 3 tasks"). Use [Maze](https://maze.co) (free tier covers a handful of testers - check current limits) or [UserTesting](https://www.usertesting.com) (paid) if you want screen recording with click heatmaps. You lose the real-time follow-up question ability, but you gain async scheduling - the testers record on their own time, you watch the 5 recordings in one batch. Recordings surface less than live sessions do (you miss the "what were you about to click" follow-ups), and still far more than skipping the validation step because you couldn't schedule it.
 
 ### Script - the prototype session
 
@@ -273,7 +273,7 @@ Write down their exact words. Do not prompt. If they give a vague answer, say: "
 - "What was the moment you felt most lost?"
 - "What did you expect to see on the second screen that wasn't there?"
 - "If you used this every week, what would you call the thing it does for you?"
-- "What would have to be true for you to pay [your target price] for this?" (Use the price hypothesis you tested in [Chapter 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - if you haven't run that test yet, the chapter's $49-$299 band is your default starting point.)
+- "What would have to be true for you to pay [your target price] for this?" (Use the price hypothesis you tested in [Chapter 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - if you haven't run that test yet, the $49-$299 band from the [full price-test reference](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/) is your default starting point.)
 
 Thank them. End the call. Score the session immediately.
 
@@ -329,7 +329,7 @@ Catching it in Module 4, after you have started the real build, costs the real b
 
 ## Artifacts you carry out of Module 2
 
-After finishing Ch 2.1-2.6, Sam has five artifacts. Each one feeds a specific downstream destination - this table is the map:
+After finishing Ch 2.1-2.6, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
 
 | Artifact | Where it goes next |
 |---|---|
@@ -341,9 +341,9 @@ After finishing Ch 2.1-2.6, Sam has five artifacts. Each one feeds a specific do
 
 ## Iterate or proceed? The combined Module-2 decision matrix
 
-The 2 chapters each have their own iteration guidance (Ch 2.3-2.4 reply rate, Ch 2.6 pass count above). The COMBINED decision uses both signals together:
+Each signal has its own iteration guidance (Ch 2.5's build/pivot/kill call on the scored interviews, and the Ch 2.6 pass count above). The COMBINED decision uses both signals together:
 
-| Ch 2.3-2.4 interview signal | Ch 2.6 prototype signal | Decision |
+| Interview signal (Ch 2.5 synthesis) | Ch 2.6 prototype signal | Decision |
 |---|---|---|
 | 7+ of 10 scored ≥7 | 4-5 of 5 passed | **PROCEED** - write the Ch 3.1 brief tonight |
 | 7+ of 10 scored ≥7 | 2-3 of 5 passed | **ONE iteration round** - revise the prototype's worst-failing screen, re-run 2 replacement sessions (NOT new interviews) |
@@ -362,7 +362,7 @@ The artifacts from this chapter (pass/fail log + vocabulary) plus the validated 
 
 | Step | Action | Output |
 |---|---|---|
-| **1** | Open Lovable and run the persona-setup prompt with your 3 ICP variants. Aim for a navigable 3-screen prototype within your first ~10 Lovable exchanges; stop at 3 screens (a 4th is the prototype turning into the MVP). | Throwaway 3-screen prototype with link |
+| **1** | Open Lovable and paste this chapter's 3-screen prompt template with every `[PLACEHOLDER]` filled in. Aim for a navigable 3-screen prototype within your first ~10 Lovable exchanges; stop at 3 screens (a 4th is the prototype turning into the MVP). | Throwaway 3-screen prototype with link |
 | **2** | Book 5 silent-observation sessions with interviewees who scored 7+ on the Mom Test. Send the prototype link 10 minutes before each call. | 5 sessions on the calendar |
 | **3** | Tally the pass count from 5 sessions. Copy the exact "describe in one sentence" answers into a doc - those words go into the [One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) verbatim. | Pass/fail count + verbatim vocabulary |
 
@@ -376,7 +376,7 @@ Nothing from the throwaway prototype carries forward except what you learned.
 - [Lovable](https://lovable.dev) - the AI builder used in this chapter's throwaway prompt-to-prototype workflow.
 
 > **Done:** 5 silent-observation sessions are complete, scored with pass/fail per session, and you have verbatim vocabulary from the closing "describe in one sentence" answers.
-> **Founder OS · Artifact #3 of 6:** 10 scored Mom Test transcripts (from Ch 2.3 + 2.4) + 5 prototype session pass/fail signals + the `Prototype Vocabulary - [date]` doc with verbatim "describe in one sentence" answers. Drop them all in your `Founder OS` folder; Ch 3.1 reads the vocabulary into Section 3 of the brief.
+> **Founder OS · Module 2 bundle:** 10 scored Mom Test transcripts (from Ch 2.3 + 2.4) + the validated problem statement (Ch 2.5) + 5 prototype session pass/fail signals + the `Prototype Vocabulary - [date]` doc with verbatim "describe in one sentence" answers. Drop them all in your `Founder OS` folder; Ch 3.1 reads the vocabulary into Section 3 of the brief.
 >
 > **You have now:** all Module 2 artifacts - scored interviews (2.1-2.4), the build/pivot/kill decision (2.5), and prototype feedback from 5 real customers (2.6). Module 2 closes here.
 >
@@ -384,7 +384,7 @@ Nothing from the throwaway prototype carries forward except what you learned.
 >
 > **If blocked:** If 0-1 of 5 sessions passed, the solution shape is wrong. Read the "what did you expect to see" answers from the closing questions - that is the user's mental model. Return to Ch 2.1 before writing the brief.
 
-> **Module 2 closes here.** Before opening Module 3, you should have: (1) a sharpened question list after the AI persona rehearsal (Ch 2.2), (2) a 30-name ICP list built from real complaints (Ch 2.3), (3) 10 interview transcripts scored 7+/10 strong signal (Ch 2.4), (4) a one-page validated problem statement with build/pivot/kill verdict (Ch 2.5 synthesis), and (5) 5 prototype sessions with verbatim "describe in one sentence" vocabulary (this chapter). All five in your `Founder OS` folder. Missing one? Go back - Module 3 cannot start without the validated problem statement + prototype vocabulary.
+> **Module 2 closes here.** Before opening Module 3, you should have: (1) a sharpened question list after the AI persona rehearsal (Ch 2.2), (2) a 30-name ICP list built from real complaints (Ch 2.3), (3) 10 interview transcripts scored per the Ch 2.1 rubric (calls booked in Ch 2.4), (4) a one-page validated problem statement with build/pivot/kill verdict (Ch 2.5 synthesis), and (5) 5 prototype sessions with verbatim "describe in one sentence" vocabulary (this chapter). All five in your `Founder OS` folder. Missing one? Go back - Module 3 cannot start without the validated problem statement + prototype vocabulary.
 
 ---
 

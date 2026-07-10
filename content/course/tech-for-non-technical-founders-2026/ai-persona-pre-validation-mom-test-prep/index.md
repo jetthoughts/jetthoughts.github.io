@@ -32,7 +32,7 @@ related_posts: false
 
 > **Module 2 · Lesson 2.2 · [OPTIONAL]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** your draft Mom Test question list (5-8 questions from Ch 2.1) + 3 ICP characteristics (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names, introduced in Ch 1.1)
+> **Input:** your draft Mom Test question list (5-8 questions from Ch 2.1) + your `[customer]` blank from the Ch 1.1 hypothesis (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
 >
 > **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Ch 2.3-2.4 recruitment and real interviews
 >
@@ -48,7 +48,7 @@ related_posts: false
 
 You drafted 5-8 Mom Test questions in Ch 2.1. Before you spend a real interview slot on a question that turns out to be pitch-shaped, run the question list past a Claude persona that matches your ICP. The persona answers in character; you ask Claude (out of character) which question generated which kind of answer and why.
 
-The failure shape the rehearsal catches: a question like "Would you use a tool like this?" reads fine on paper, generates a polite "sounds great" from any persona, and absorbs five real interview slots before you notice the pattern. The rehearsal flags the question shape before you spend the slot. Same applies to questions that smuggle in your solution, ask for a hypothetical purchase, or bury the past-tense ask under three clauses.
+The failure shape the rehearsal catches: a question like "Would you use a tool like this?" reads fine on paper, generates a polite "sounds great" from any persona, and quietly burns real interview slots before you notice the pattern. The rehearsal flags the question shape before you spend the slot. Same applies to questions that smuggle in your solution, ask for a hypothetical purchase, or bury the past-tense ask under three clauses.
 
 After this lesson you will be able to: **spot and repair pitch-shaped questions before they cost you a real interview slot.**
 
@@ -60,12 +60,12 @@ An AI rehearsal costs nothing. A short pass through Claude before you pick up th
 
 Real interviews stay irreplaceable for the things rehearsal cannot simulate: the noncommittal shrug on question three, the mention of a workaround you never imagined, the silence after Q4 that tells you more than ten polite yeses. The rehearsal sharpens your questions before you spend a real customer's hour on them.
 
-This chapter is the companion polish step between Ch 2.1 (where you learned the Mom Test technique and drafted 5-8 rough questions) and Ch 2.3-2.4 (where you recruit 10 real interviewees). You don't validate anything here - the real interviews do that. You catch the broken question shapes before they reach a real human - one focused rehearsal session saves 5 wasted interview slots. Here's the rehearsal flow at a glance:
+This chapter is the companion polish step between Ch 2.1 (where you learned the Mom Test technique and drafted 5-8 rough questions) and Ch 2.3-2.4 (where you recruit 10 real interviewees). You don't validate anything here - the real interviews do that. You catch the broken question shapes before they reach a real human - one focused rehearsal session can save you several wasted interview slots. Here's the rehearsal flow at a glance:
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
-    Start(["Your draft Mom Test questions<br/>+ 3 ICP characteristics"])
+    Start(["Your draft Mom Test questions<br/>+ your customer blank from Ch 1.1"])
     P1["Prompts 1-2: Build 3 ICP personas,<br/>test each draft question in-character"]
     P2["Prompt 3: Get Claude's<br/>out-of-character diagnosis"]
     P3["Prompts 4-5: Surface 3 likely objections,<br/>sharpen weak questions (past-anchored)"]
@@ -114,13 +114,13 @@ Stay in character for this entire conversation. Do not break character to explai
 | Placeholder | Where it lives in your artifacts |
 |---|---|
 | `[ROLE]` | Founding Hypothesis `[customer]` blank (Ch 1.1) - e.g. "solo chiropractor managing insurance claims" |
-| `[INDUSTRY]` + `[COMPANY SIZE]` | The three ICP characteristics you wrote in Ch 1.1 Step 1 |
+| `[INDUSTRY]` + `[COMPANY SIZE]` | Your Ch 1.1 `[customer]` blank - the company size and situation it names |
 | `[PROBLEM DESCRIPTION]` | Founding Hypothesis `[problem]` blank (Ch 1.1) |
 | `[PROBLEM AREA]` | The `[problem]` blank summarized in 2-3 words (e.g. "claim resubmission backlog") |
 | `[CURRENT WORKAROUND]` | Founding Hypothesis `[competition]` blank (what they do today) |
 | `[YOUR DRAFT QUESTION 1]`, `2`, `3`, ... | Pick one question at a time from your Ch 2.1 `Mom Test draft - [date]` doc (5-8 question list) |
 | `[QUESTION X]` (in Prompt 5) | Whichever question you want to sharpen from your draft list |
-| `[PERSONA NAME]`, `[FREQUENCY]`, `[DURATION]`, `[BUDGET RANGE]`, `[REASON]` | Your judgment, anchored to deep-research findings if you ran the Ch 1.1 sidebar - see fallback below |
+| `[PERSONA NAME]`, `[FREQUENCY]`, `[DURATION]`, `[BUDGET RANGE]`, `[REASON]` | Your judgment, anchored to deep-research findings if you ran the deep-research prompt on the [full sprint reference](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/) linked from Ch 1.1 - see fallback below |
 
 > **Fallback for the 3 fields not in your hypothesis (`[FREQUENCY]`, `[DURATION]`, `[REASON]`):** make your best informed guess. The rehearsal is calibrated; the persona doesn't have to be perfect. After your first real Ch 2.3-2.4 interview, you will know whether your guess was too mild ("monthly" when reality is "daily") or too aggressive. Revise BETWEEN interview 1 and interview 2. If any placeholder above is empty, the Ch 1.1 hypothesis is not specific enough - tighten it before rehearsing.
 
@@ -221,7 +221,7 @@ Reuse the rehearsal stack when a round of real interviews ends in partial signal
 
 | Scenario | What to do | Why |
 |---|---|---|
-| **Real interviews end in partial signal** | Run a new persona session with a revised ICP before booking another 10 slots | Filling the 48 hours between round 1 and round 2 surfaces question gaps |
+| **Real interviews end in partial signal** | Run a new persona session with a revised ICP before booking your next round of interviews | A rehearsal pass between rounds surfaces question gaps before you spend new slots on them |
 | **Hypothesis partially invalidated** (problem is real, but wrong customer named) | Build 3 new personas reflecting the ICP shift, run the same prompt sequence | This still doesn't substitute for more real interviews; it just sharpens them |
 | **Product-direction pivot emerges** (round 1 surfaces a different problem) | Build a persona around the new problem before rebuilding the question list from scratch | Spinning up a persona costs 5 minutes; spinning up another 10 interview slots costs a week |
 | **Considering a customer pivot between validation rounds** | Compare question performance across both the old ICP persona and the new one before committing | Reveals which questions survive the ICP shift and which ones were persona-specific |

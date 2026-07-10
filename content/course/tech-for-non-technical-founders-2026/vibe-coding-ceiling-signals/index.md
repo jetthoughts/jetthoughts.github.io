@@ -220,7 +220,7 @@ Three actions. The first is tonight.
 
 ## Artifacts you carry out of Module 4
 
-After finishing Ch 4.1-4.4, Sam has five artifacts. Each one feeds a specific downstream destination - this table is the map:
+After finishing Ch 4.1-4.4, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
 
 | Artifact | Where it goes next |
 |---|---|

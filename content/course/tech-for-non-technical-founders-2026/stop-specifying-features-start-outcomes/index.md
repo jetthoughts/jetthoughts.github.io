@@ -151,7 +151,7 @@ Three actions, in order.
 
 ## Artifacts you carry out of Module 3
 
-After finishing Ch 3.1-3.2, Sam has five artifacts. Each one feeds a specific downstream destination - this table is the map:
+After finishing Ch 3.1-3.2, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
 
 | Artifact | Where it goes next |
 |---|---|

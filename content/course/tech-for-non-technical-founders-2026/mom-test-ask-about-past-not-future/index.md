@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 2 · Lesson 2.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a Founding Hypothesis sentence (from Ch 1.1) + 3 ICP characteristics (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1)
+> **Input:** a Founding Hypothesis sentence (from Ch 1.1) + your `[customer]` blank from that sentence (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
 >
 > **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3-2.4 recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
 >
@@ -41,7 +41,7 @@ related_posts: false
 
 > **Where you are in the round:** If you do not have interview transcripts yet, read straight through. After your Ch 2.3-2.4 interviews, return to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and decide build/pivot/kill.
 
-Run eleven interviews where the only question is "would you pay for this?" and you'll close the week with nine yeses and an empty launch. The hypothetical question produces the polite shape - the answer says nothing about what the person actually did last Tuesday.
+Run ten interviews where the only question is "would you pay for this?" and you'll close the week with a stack of yeses and an empty launch. The hypothetical question produces the polite shape - the answer says nothing about what the person actually did last Tuesday.
 
 The technique below switches every question to the past tense. What did you do last time? What did it cost? Show me the spreadsheet. Past-tense questions force the answer back into reality; whoever pays in the past keeps paying in the future, and whoever did nothing in the past will do nothing in the future no matter what they tell you over coffee.
 
@@ -91,7 +91,7 @@ The script runs in order. Each question funnels the interviewee deeper into a re
 
 ### Q3: "What have you **tried already** to fix this?"
 
-- **What it catches**: existing workarounds. A hack, a paid tool, a hired VA, two spreadsheets duct-taped = real. Nothing tried = theoretical.
+- **What it catches**: existing workarounds. A hack, a paid tool, a hired VA (virtual assistant), two spreadsheets duct-taped = real. Nothing tried = theoretical.
 - **Pass**: a named tool, a hired person, a custom script. *"I pay $79/month for Zapier to copy QuickBooks to Google Sheets. It breaks every two weeks. My VA on Upwork fixes it."*
 - **Fail**: *"Nothing yet."* / *"We just deal with it."* / *"I've been meaning to look into something."*
 - **Follow-up**: *"What broke about the workaround? Why are you still talking to me about this?"* The crack is the gap your product would fill.
@@ -131,19 +131,15 @@ While the script runs, your job is to listen for three patterns. These flags do 
 flowchart TD
     Start(["Call starts.<br/>Script open on second screen."])
     Start --> Q1[Q1 - Last time it happened?]
-    Q1 --> Listen{Listen for emotional<br/>language flags}
-    Listen -->|0-1 flags| Generic[Generic polite mode<br/>Ask the follow-up]
-    Listen -->|2+ flags| Real[Real felt problem<br/>Move to Q2]
+    Q1 --> Listen[Emotional flags?]
+    Listen -->|0-1 flags| Generic[Polite mode -<br/>ask the follow-up, retry Q1]
+    Listen -->|2+ flags| Rest[Real felt problem -<br/>run Q2 - Q5 in order:<br/>cost, tried, 1-10 priority, who else]
     Generic --> Q1
-    Real --> Q2[Q2 - What did it cost?]
-    Q2 --> Q3[Q3 - What have you tried?]
-    Q3 --> Q4[Q4 - 1-10 vs everything else?]
-    Q4 --> Q5[Q5 - Who else feels this?]
-    Q5 --> Score{Score the call<br/>1-10}
-    Score -->|7+ with comparison<br/>3+ flags| Validated[Strong signal<br/>Ask for intro and prototype]
-    Score -->|5-6 or weak<br/>1-2 flags| Weak[Polite default<br/>Score as 5]
-    Score -->|0-4 or 0 flags| Fail[No felt problem<br/>Discount the call]
-    Validated --> Next[10 calls done<br/>7+ scores of 7+ means validated]
+    Rest --> Score[Score the call 1-10]
+    Score -->|7+ with comparison, 3+ flags| Validated[Strong signal -<br/>ask for intro + prototype]
+    Score -->|5-6 or weak flags| Weak[Polite default - score as 5]
+    Score -->|0-4 or 0 flags| Fail[No felt problem - discount]
+    Validated --> Next[After 10 calls:<br/>7+ scores of 7+ = validated]
     Weak --> Next
     Fail --> Next
 
@@ -155,7 +151,7 @@ flowchart TD
     classDef fail fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#1a1a1a
 
     class Start start
-    class Q1,Q2,Q3,Q4,Q5,Real q
+    class Q1,Rest q
     class Listen,Score decision
     class Validated,Next pass
     class Weak,Generic warn
@@ -178,8 +174,6 @@ Three actions. In order.
 | **Take notes by hand, not by typing.** | Hand-writing slows you down enough that you stop transcribing and start listening for the three emotional flags. Typing during a call turns you into a court reporter. | Don't try to transcribe everything. Write the Q4 score and the flag count, not the full transcript. |
 | **Score the call 1-10 within 5 minutes of hanging up.** Use Q4 plus your emotional-flag count. | If you score later, you will round up. By interview 10 you have a validation total, not 10 unsorted transcripts. | Don't defer scoring. Your gut scoring in the moment is more honest than the one after a week of wanting the number to be higher. |
 
-Sometimes Q1 is wrong - the problem context is too narrow - and a broader framing wakes the interviewee up.
-
 The [stop-looking-for-product-market-fit guide](/blog/stop-looking-for-product-market-fit-startup-tutorial/) covers what the validation signal does and doesn't tell you about whether you have product-market fit (spoiler: a validated problem is necessary, not sufficient).
 
 ## The Mom Test interview script artifact
@@ -190,7 +184,7 @@ The artifact at **[/course/tech-for-non-technical-founders-2026/mom-test-intervi
 
 **How to use it:** Print the artifact. Keep it open on your second monitor during all 10 interviews. The artifact is the screen-side reference while this post is the explanation of why it works.
 
-After 10 calls, you have either 10 scored transcripts that converge on a real problem (score them on [Chapter 2.5: Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), then proceed to 2.6) or 10 transcripts that don't (re-frame the ICP and run another 10).
+After 10 calls, you have either 10 scored transcripts that converge on a real problem (score them on [Chapter 2.5: Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), then proceed to 2.6) or 10 transcripts that don't (follow Chapter 2.5's pivot path: sharpen the ICP and run 5 more interviews against the narrower group).
 
 Fake the convergence to start building anyway, and you join the long line of post-mortem threads about wasted MVP spend. The [quality tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) is what happens when you ship against a hypothesis nobody confirmed.
 

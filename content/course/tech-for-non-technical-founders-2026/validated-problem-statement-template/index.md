@@ -38,7 +38,7 @@ related_posts: false
 > 4. **Why now** - trigger event in last 12 months + market shift
 > 5. **How big is the pain** - average + strong-signal score → BUILD / PIVOT / KILL
 >
-> Fill in order Mon morning. Send to one founder friend by Mon EOD.
+> Fill in order Mon morning. Send to your 2 readers (one advisor, one peer) by Mon EOD.
 
 ## Why this exists
 
@@ -50,7 +50,7 @@ Block 90 minutes on a single morning. Print the template (or copy the markdown v
 
 The order matters. Score first, count second, write the page third. Write the page before scoring and you write the page you wished the calls had returned, not the page the transcripts actually support. The friction of writing the score before the prose is what stops you from talking yourself into the build.
 
-Take the filled page to 2 readers within 48 hours. One advisor (a founder one step ahead, a founder friend one step ahead, a peer from a founder community). One peer (another founder still pre-launch). Ask each: "Would you argue with this?" If both nod, you're done with Module 2. If either picks a fight on the persona, the cost, or the why-now, you have your next 5 interviews to run.
+Take the filled page to 2 readers within 48 hours. One advisor (a founder one step ahead of you, or a mentor from a founder community). One peer (another founder still pre-launch). Ask each: "Would you argue with this?" If both nod, you're done with Module 2. If either picks a fight on the persona, the cost, or the why-now, you have your next 5 interviews to run.
 
 Total time budget: 30 minutes to write, 48 hours to circulate, 1 hour to incorporate the 2 advisor reads. Hard cap at 3 hours total. Beyond that, you're polishing instead of validating.
 
@@ -129,7 +129,7 @@ ______ /10
 Strong signals (score 7+ with 3+ emotional flags): ___ /10
 
 Decision based on strong-signal count:
- [ ] 7 or more  → BUILD. Move to Module 4.
+ [ ] 7 or more  → BUILD. Test the shape in Ch 2.6, then Module 3.
  [ ] 4 to 6     → PIVOT. Run 5 sharper interviews.
  [ ] Fewer than 4 → KILL. Find a different problem.
 
@@ -162,7 +162,7 @@ The good version names the persona by stage, industry, and the specific workflow
 
 > Bad: *"It costs them time and money. It's a significant pain point."*
 
-> Good: *"6 hours per week. $800 per month in CFO contractor time. One founder I spoke with paid $1,500 for a SurveyMonkey panel after the bookkeeping pain spiked - the panel returned 47 useless responses and she did the work herself anyway. Cost was consistent across 8 of 10 calls; 2 were running their own pre-revenue and had zero contractor spend (but 12 hours of personal time per week)."*
+> Good: *"6 hours per week. $800 per month in CFO contractor time. One founder I spoke with paid $1,500 for a SurveyMonkey panel after the bookkeeping pain spiked - the panel returned a stack of useless responses and she did the work herself anyway. Cost was consistent across 8 of 10 calls; 2 were running their own pre-revenue and had zero contractor spend (but 12 hours of personal time per week)."*
 
 The good version uses real numbers from transcripts. The $1,500 panel anecdote is from a specific person. The 6 hours and $800 are averages with the sample's variance noted. The bad version is unfilled white space dressed up as prose.
 
@@ -170,7 +170,7 @@ The good version uses real numbers from transcripts. The $1,500 panel anecdote i
 
 > Bad: *"AI is changing everything. The market is ready."*
 
-> Good: *"AI inference cost for the document-classification step fell from $0.04 to $0.001 per call between 2024 and 2026 - the unit economics flip at $9/month per seat. Stripe's automated tax product (launching Q1 2026) signals SMB finance is being deconstructed feature by feature, but bookkeeping reconciliation at pre-seed founder budgets is still manual."*
+> Good: *"AI inference cost for the document-classification step fell from $0.04 to $0.001 per call between 2024 and 2026 - the unit economics flip at $9/month per seat. Stripe's automated tax product (live since 2021) signals SMB finance is being deconstructed feature by feature, but bookkeeping reconciliation at pre-seed founder budgets is still manual."*
 
 The good version names the specific cost number, the specific competitor's specific product, and the specific gap. It cites a competitor signal that *supports* the timing rather than refuting it. The bad version is filler that means nothing and helps no one.
 
@@ -178,7 +178,7 @@ The good version names the specific cost number, the specific competitor's speci
 
 The decision the filled page makes for you:
 
-- **BUILD** if: 7+ strong-signal calls (score 7+ with 3+ emotional flags), a named workaround the customer is already paying for, and a named why-now from the last 12 months. Move to [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/).
+- **BUILD** if: 7+ strong-signal calls (score 7+ with 3+ emotional flags), a named workaround the customer is already paying for, and a named why-now from the last 12 months. Test the shape in [Ch 2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/), then move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/).
 - **PIVOT** if: 4-6 strong signals, OR the pain is real but belongs to a different persona than you targeted (e.g., you interviewed founders but the pain lives with their CFOs). Run 5 sharper interviews with the corrected ICP, then refill this page.
 - **KILL** if: fewer than 4 strong signals OR no workaround surfaced in the 10 interviews. Find a different problem and write the 200-word post-mortem below.
 

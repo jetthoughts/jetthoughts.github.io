@@ -69,9 +69,9 @@ flowchart TD
     S1 --> S2[Step 2<br/>Count strong signals 7+]
     S2 --> S3[Step 3<br/>Write the one page]
     S3 --> S4{Strong signals<br/>in 10 calls?}
-    S4 -->|7 or more| Build[BUILD<br/>Move to Chapter 3.1<br/>Write the Product Brief]
+    S4 -->|7 or more| Build[BUILD<br/>Test the shape in Ch 2.6<br/>then write the Ch 3.1 brief]
     S4 -->|4 to 6| Pivot[PIVOT<br/>Run 5 more interviews<br/>Refine the ICP first]
-    S4 -->|Fewer than 4| Kill[KILL<br/>Find a different problem<br/>Restart at Ch 2.3]
+    S4 -->|Fewer than 4| Kill[KILL<br/>Rewrite the hypothesis in Ch 1.1<br/>then re-run Ch 2.3]
     Build --> Sign[Show to 2 advisors.<br/>Get 2 signatures before building.]
     Pivot --> Sign
     Kill --> Sign
@@ -93,13 +93,13 @@ flowchart TD
     class Sign sign
 ```
 
-**7+ strong signals: build.** You have a problem that 70%+ of a stranger sample confirmed with felt urgency. The validated problem statement is your input to [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/).
+**7+ strong signals: build.** You have a problem that 70%+ of a stranger sample confirmed with felt urgency. The validated problem statement travels with you into [2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test the shape, and from there into [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/).
 
-Before you start writing code, run the 3 pre-orders test: ask 3 of your strongest-signal interviewees for a pre-order, a paid letter of intent, or a deposit. Strangers who told you their problem score is a 9 should be willing to put a small commitment behind it. If 3 of your top 5 say yes, you have validation with money attached - the strongest signal there is. If 0 of 5 say yes, the 7+ scores were politer than you thought.
+Before you start writing code, run the 3 pre-orders test: ask your 5 strongest-signal interviewees for a pre-order, a paid letter of intent, or a deposit. Strangers who told you their problem score is a 9 should be willing to put a small commitment behind it. If 3 of the 5 say yes, you have validation with money attached - the strongest signal there is. If 0 of the 5 say yes, the 7+ scores were politer than you thought.
 
 **4-6 strong signals: pivot.** The signal is partial. Most often this is an ICP problem, not a problem problem. Pick the cleanest segment, sharpen the ICP definition, run 5 more interviews against that narrower group. Don't build yet. The 5 sharper interviews cost you a week. A built MVP against a fuzzy ICP costs you a quarter.
 
-**Below 4 strong signals: kill.** Strangers were polite. The market said no in the only way the market knows how to say no before a launch: by not feeling the pain enough to put a number on it. Write down what you learned about the wrong ICP, the wrong framing, or the wrong trigger event. Start [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) again with a different hypothesis.
+**Below 4 strong signals: kill.** Strangers were polite. The market said no in the only way the market knows how to say no before a launch: by not feeling the pain enough to put a number on it. Write down what you learned about the wrong ICP, the wrong framing, or the wrong trigger event. Return to [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/), rewrite the weakest blank using what the dead transcripts taught you, then rebuild your list in [2.3 · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/).
 
 ## What good looks like vs what bad looks like
 
@@ -121,7 +121,7 @@ Writing the one-page statement is the validation step. Ten transcripts in a fold
 >
 > **You have now:** question list (2.1-2.2) + 30-name list (2.3) + 10 scored interviews (2.4) + the build/pivot/kill decision. The orientation pages state this gate as "7 of 10 interviewees have spent time or money on the problem" - the two are the same bar, because a transcript cannot score 7+ without real past spend surfacing in Q2/Q3.
 >
-> **Next:** If build - [2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test the shape with 5 of your strongest-signal interviewees, then [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). If pivot - return to [2.3 · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) to rebuild your list around a sharper hypothesis (same hypothesis, different list). If kill - the hypothesis is wrong, not the list; return to [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank using verbatim quotes from your dead transcripts, then re-run 2.3.
+> **Next:** If build - [2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test the shape with 5 of your strongest-signal interviewees, then [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). If pivot - sharpen the [customer] blank of your hypothesis, then return to [2.3 · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) to rebuild your list around that narrower group. If kill - the hypothesis is wrong, not the list; return to [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank using verbatim quotes from your dead transcripts, then re-run 2.3.
 > **If blocked:** If the numbers aren't adding up, re-read [Ch 2.1's scoring rubric](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - the Q4 score and flag-count combination is what separates a 7 from a 5.
 
 ---

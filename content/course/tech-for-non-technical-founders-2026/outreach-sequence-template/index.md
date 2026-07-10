@@ -34,7 +34,7 @@ related_posts: false
 >
 > **Output:** 10 interview calls booked, using nothing more than Gmail, a [NeetoCal](https://www.neeto.com/neetocal) booking link, and a handful of messages a day
 
-Everything below is copy-pasteable. Replace the `[BRACKETS]`, keep the shape. The rules that make these messages work - and the diagnosis table for when they don't - live in [Chapter 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/); this page is the reference card.
+Everything below is copy-pasteable. Replace the `[BRACKETS]`, keep the shape. The rules that make these messages work - and what to do when they don't - live in [Chapter 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/); this page is the reference card.
 
 ## The Day-0 message (email or DM)
 
@@ -88,7 +88,7 @@ One spreadsheet row per name (your 2.3 list already has the first four columns):
 >
 > **Next:** run the calls with the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/), then score the transcripts on the [Synthesis page](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/).
 >
-> **If blocked:** replies not coming? [Chapter 2.4's diagnosis table](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the failure modes - it is almost always a first line that could have been sent to anyone.
+> **If blocked:** replies not coming? [Chapter 2.4's reply-rate calibration steps](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) cover the failure modes - it is almost always a first line that could have been sent to anyone.
 
 ---
 

@@ -64,7 +64,7 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 |---|---|---|
 | Under 3% | Kill or pivot | Hypothesis is wrong. Rewrite the weakest blank and re-test. |
 | 3-6% | Iterate the message | Rewrite headline or try a different audience. Same hypothesis, different framing. |
-| 6-10% | Promising | Move to [Module 2 interviews](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). Talk to the people who signed up. |
+| 6-10% | Promising | Finish [1.5 · the price test](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/), then start [Module 2 interviews](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - the people who signed up go on your interview list. |
 | 10-20% | Strong signal | Run interviews + [Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) in parallel. |
 | Over 20% | Suspicious | Either hot market OR broken targeting. Verify with a second channel. |
 

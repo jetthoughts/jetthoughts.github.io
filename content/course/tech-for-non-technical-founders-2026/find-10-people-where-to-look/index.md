@@ -37,7 +37,7 @@ related_posts: false
 >
 > **Progress:** M2 · 3 of 6 · Results so far: question list ready to run
 
-> **TL;DR (Part 1 of 2):** Paste your three-sentence hypothesis into Claude, get back the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1) profile + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
+> **TL;DR (Part 1 of 2):** Expand your one-sentence hypothesis from Ch 1.1 into three sentences (a short step below), paste them into Claude, and get back the ICP profile (ICP = Ideal Customer Profile - the specific kind of person your hypothesis's [customer] blank names) + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
 
 The instinctive first move is "I'll just message my LinkedIn network." Sixty polite DMs over a week tend to produce 3 calls - two old colleagues showing up to be nice, one real lead who ghosts on reschedule.
 
@@ -119,7 +119,7 @@ Return:
 If you cannot describe a real community for any item, respond with "NOT FOUND - [item]" rather than guessing.
 ```
 
-> No competitor URLs yet? If you ran the [naive Claude/ChatGPT prompt in Chapter 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) with the follow-up "name 3-5 competitors," you already have them. Otherwise: Google your problem in plain words plus `tool` or `software`, grab the top 2 results that aren't blog posts.
+> No competitor URLs yet? Ask Claude or ChatGPT to name 3-5 competitors for your one-sentence hypothesis, or Google your problem in plain words plus `tool` or `software` and grab the top 2 results that aren't blog posts.
 
 What you get back: the channels you'll read next and the search strings you'll use to build the list. If a community the AI proposes turns out to be dead or off-topic, drop it and ask: `Suggest 3 alternatives more focused on [vertical].`
 
@@ -165,7 +165,7 @@ Aim for 30 hand-picked people in one focused sitting.
 
 **This is the most important step in the chapter.** A list of 30 individuals you can name - because you read what they wrote - replies far more often than a list of strangers a tool exported for you - the quoted line is the difference.
 
-If you run out of named posters before you hit 30, [Apollo](https://apollo.io)'s free tier (credit-based: roughly 100 email credits + 10 export credits per month, no credit card) lets you filter on role + industry + company size and export the rest (at 10 exports/month, this fills the gap over several weeks, not one sitting). Treat it as backfill, not the source - the hand-picked names always perform better.
+If you run out of named posters before you hit 30, [Apollo](https://apollo.io)'s free tier (credit-based, no credit card - a small monthly allowance of email and export credits) lets you filter on role + industry + company size and export the rest (the monthly export allowance is small, so this fills the gap over several weeks, not one sitting). Treat it as backfill, not the source - the hand-picked names always perform better.
 
 > **Save the Apollo filter and whatever contacts your monthly export credits cover (a small monthly allowance on the free tier) to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
 
@@ -200,7 +200,7 @@ These are skip-by-default. The main chapter works without any of them.
 
 **Offline-heavy verticals - paid panel as Plan A.** If your ICP lives in trades, nursing, in-store retail, elderly users, or regulated B2B, the Reddit / LinkedIn / G2 flow returns nothing useful. Use a paid panel instead. [UserInterviews](https://www.userinterviews.com/) and [Respondent](https://www.respondent.io/) have screened participants across these verticals; pricing is per completed interview - check the panel's current rates. Decision rule: if your ICP description names an offline trade, an over-60 user, or a regulated profession, budget for a paid panel as Plan A.
 
-**Monitoring tools that cut the manual reading load.** [Keyworddit](https://keyworddit.com) (free, no signup) surfaces the high-frequency keywords inside any subreddit. [F5Bot](https://f5bot.com) (free) sends email alerts when your keywords appear on Reddit, Hacker News, or Lobste.rs. [Reddinbox](https://reddinbox.com) / " These tools surface the threads faster - you still read them yourself.
+**Monitoring tools that cut the manual reading load.** [Keyworddit](https://keyworddit.com) (free, no signup) surfaces the high-frequency keywords inside any subreddit. [F5Bot](https://f5bot.com) (free) sends email alerts when your keywords appear on Reddit, Hacker News, or Lobste.rs. [Reddinbox](https://reddinbox.com) watches Reddit for your keywords and collects the matching conversations in one inbox so you can reply from there. These tools surface the threads faster - you still read them yourself.
 
 ## Further reading
 

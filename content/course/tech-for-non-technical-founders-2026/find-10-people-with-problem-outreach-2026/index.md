@@ -33,11 +33,11 @@ related_posts: false
 >
 > **Input:** a 30-name list from [Part 1: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - specific people you can name because you read what they posted
 >
-> **Output:** 10 interview calls booked, transcripts in hand, ready to score per the Ch 2.1 rubric
+> **Output:** 10 interview calls booked and the first outreach batch sent - you'll run the calls with the Ch 2.1 script, then score them in Ch 2.5
 >
 > **Progress:** M2 · 4 of 6 · Results so far: question list + 30-name prospect list
 
-> **TL;DR:** Send 30 staggered messages referencing specific posts you read. A 3-message sequence (Day 0 intro + Day 3 bump + Day 7 close) books 10 interviews. Reply rate runs 20-30% when each message names a specific post; 1-5% when it doesn't.
+> **TL;DR:** Send 30 staggered messages referencing specific posts you read, using a 3-message sequence (Day 0 intro + Day 3 bump + Day 7 close). Reply rate runs 20-30% when each message names a specific post; 1-5% when it doesn't. Plan to extend the list once or twice before all 10 calls are booked.
 
 > **This is Part 2 of 2.** [Part 1: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) covers the ICP mapping, reading threads, and building the 30-name list. You need the list from Part 1 before the templates below will work - generic openers collapse to 1-5% reply rates.
 
@@ -51,7 +51,7 @@ After this lesson you will be able to: **send outreach that names something the 
 
 Nervous about messaging strangers? The asymmetry works in your favor: you're asking someone to talk about their own expertise and frustrations to a person who is actually listening - more people are flattered by that than bothered by it.
 
-Send 30 messages staggered, not in one burst. A handful a day, by hand, beats a single bulk-send. In outreach runs we've coached, reply rates land around 20-30% when each message names a specific post you read - 2-3 booked calls per batch, which is enough to hit 10 interviews when stacked with replies still trickling in.
+Send 30 messages staggered, not in one burst. A handful a day, by hand, beats a single bulk-send. In outreach runs we've coached, reply rates land around 20-30% when each message names a specific post you read - 2-3 booked calls per batch of 30; stack batches until 10 calls are on the calendar.
 
 You can do this from Gmail and a [NeetoCal](https://www.neeto.com/neetocal) booking link. If 6 a day by hand is too slow, [Gmail's multi-send](https://support.google.com/mail/) (daily caps vary by plan - check Google's current limits) or [Streak](https://www.streak.com/) does the mail merge for you. Reply by hand either way - the back-and-forth is where the interview actually gets booked.
 
@@ -97,8 +97,8 @@ questions about how you handle [task] today? Calendar: [NeetoCal link]."
 
 **Day-3 bump message - pick the version that fits your stage:**
 
-- **First-round variant (you have 0-9 interviews done):** "Hi [name] - circling back on the [topic] piece. Running my first 10 conversations on this problem - still learning, would value 25 minutes if you have it."
-- **Experienced variant (you have 10+ interviews done):** "Hi [name] - circling back on the [topic] piece. Already 30+ founders in - the conversations are sharper than I expected; happy to share the pattern if you have 25 min."
+- **First-round variant (you have 0-9 interviews done):** "Hi [name] - circling back on the [topic] piece. Running my first 10 conversations on this problem - still learning, would value 20 minutes if you have it."
+- **Experienced variant (you have 10+ interviews done):** "Hi [name] - circling back on the [topic] piece. [TRUE NUMBER] conversations in so far - they're sharper than I expected; happy to share the pattern if you have 20 min." Use your real count - never claim conversations you have not had.
 
 The Day-3 bump reliably recovers another slice of non-responders - people who meant to reply and lost the tab. Subject line: `re: [their workaround]`.
 
@@ -116,7 +116,7 @@ The same 3-email pattern works as LinkedIn DMs. Subject becomes the connection-r
 
 ### Volume targets
 
-Send 30 to 50 messages to land 10 interviews. Target a reply rate of 20% or higher - below that, your opener is too generic or you're in the wrong channel. Of the replies who say yes, expect roughly half or more to actually show. If your show rate drops below 50%, add a 24-hour reminder message and confirm the meeting time the day before.
+Work through the 30-name list first, then extend it with Part 1's second-degree searches until 10 interviews are booked - plan on 50-100 messages total. Target a reply rate of 20% or higher. Under 10% means your opener is too generic or you're in the wrong channel - rewrite the Day-0 message before sending more. 10-20% is workable: let the sequence run and tighten the subject line on the next batch. Of the replies who say yes, expect roughly half or more to actually show. If your show rate drops below 50%, add a 24-hour reminder message and confirm the meeting time the day before.
 
 ## What if cold outreach can't reach them
 
@@ -134,7 +134,7 @@ While the cold-outreach path books the calls, the smoke-test landing page from [
 
 > "You signed up for the waitlist on [page] last Tuesday - up for a 20-minute call?"
 
-That opener out-performs every cold variant - the person already raised a hand - the highest in this whole chapter.
+That opener out-performs every cold variant in this chapter - the person already raised a hand.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -182,7 +182,7 @@ This chapter's output is 10 booked interviewees. Running them, scoring them, and
 
 The chain of artifacts the booked calls produce:
 
-1. **Run each interview using the Ch 2.1 5-question Mom Test technique.** Open the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) artifact on a second monitor; read the 5 questions verbatim. 30-40 minutes per call.
+1. **Run each interview using the Ch 2.1 5-question Mom Test technique.** Open the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) artifact on a second monitor; read the 5 questions verbatim. Plan 20-30 minutes per call.
 2. **Score each call 1-10 within 5 minutes of hanging up** per the Ch 2.1 scoring rubric. Write the score before opening the next browser tab.
 3. **After all 10 calls are done, fill the [Validated Problem Statement template](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/)** using the [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) page.
 4. **Pick the 5 strongest-signal interviewees** (Mom Test score ≥ 7) for Ch 2.6 prototype sessions.
