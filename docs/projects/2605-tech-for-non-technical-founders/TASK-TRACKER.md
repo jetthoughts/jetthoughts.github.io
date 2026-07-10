@@ -1,8 +1,21 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-07-09 (Course MERGED to master via PR #345 and LIVE in production. M2 v2 migration started on branch `module-2-validate-the-problem`.)
+**Last Updated**: 2026-07-10 (M2 v2 migration COMPLETE on PR #351 - awaiting merge. All review rounds closed, 65-finding fan-out fixed, regression ratchet live.)
 
-## Active Phase: M2 v2 Migration (branch `module-2-validate-the-problem`)
+## Active Phase: M2 release (PR #351 ready) → next: M3 migration
+
+**🚀 What shipped 2026-07-09..10: Module 2 v2 complete (PR #351, 20 commits)**
+- ✅ All chapters on the M1 v2 template; numbering FLATTENED to 2.1-2.6 (letters retired; Synthesis is Lesson 2.5, in yaml prev/next). Chapter count derives 25 via course-stat.
+- ✅ Module 2 Mia walkthrough (incl. Lesson 2.5 section) wired into all lessons + landing.
+- ✅ Decision gate canonical everywhere: BUILD 7+ / PIVOT 4-6 / KILL <4, with score≥7 ≡ real-past-spend equivalence stated on 2.5.
+- ✅ outreach-sequence-template rewritten as the true 2.4 companion (Gmail + NeetoCal, honest bump variants).
+- ✅ Four gatekeeper reports + re-verification + final cold-eyes + 65-finding fan-out (40.12/40.14) - ALL findings fixed or skipped-with-reason. M1↔M2 boundary breaks fixed (no pitch-the-hypothesis instruction; 1.4→1.5→2.1 spine; ICP derives from the [customer] blank).
+- ✅ Covers: stale landing-copy covers on 2.3/2.5 replaced with purpose-made lesson covers; clipped Q5 SVG + 1881px interview-flow mermaid fixed (now 971px).
+- ✅ **Regression ratchet** (40.13): validator 8 `banned-string-ratchet` + data/course_banned_strings.yaml (25 signatures). Every review fix adds its signature in the same commit. Caught 6 live instances outside review scope across 3 runs.
+- ✅ Six external reader reviews triaged: 8 improvements adopted (2.1 awkward-first-calls + no-story interviewee; 2.2 GIGO routing + objection emotional-prep; 2.3 perfectionism time-box; 2.4 flattery reframe), rest confirmed content.
+- 🔲 Carry-forwards: "Artifact #N of 6" labels in 3.1/4.3b/5.4 renumber in their sprints; M3-M5 in-lesson case studies removed in their sprints; word-count-band spec gap needs split-or-waiver decision; 2.5 "why now" timing factor = backlog idea.
+
+## Previous phase (merged): course shipped via PR #345
 
 **🚀 What shipped 2026-07-07..09: full course merged + Module 1 hardened (PR #345, squash 90216d2f, deployed)**
 - ✅ Landing page redesigned: hero lede + chips + CTA buttons above the fold, module cards, mistake list; Founder OS artifact grid merged into the module-map intro (dedup). Old 12,000px bullet-list layout gone.
