@@ -315,8 +315,8 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 
 | Page | Slug (stable) | Work |
 |---|---|---|
-| 3.1 The One-Page Product Brief | `one-page-product-brief-vibe-prd` | v2 8-part template (Module 3 · Lesson 3.1 · CORE, Progress M3 · 1 of 2); remove in-lesson "Case Study: Tomas & Mia" block; fix defects 1-3 below |
-| 3.2 Quality-check Your Brief | `stop-specifying-features-start-outcomes` | v2 template (Lesson 3.2 · CORE, Progress M3 · 2 of 2); remove case block; align "Artifacts you carry out of Module 3" with Founder OS framing |
+| 3.1 The One-Page Product Brief | `one-page-product-brief-vibe-prd` | v2 8-part template (Module 3 · Lesson 3.1 · CORE, Progress M3 · 1 of 2); remove in-lesson "Case Study: Tomas & Mia" block; fix defects 1-3 below; improvements I4-I5 |
+| 3.2 Quality-check Your Brief | `stop-specifying-features-start-outcomes` | v2 template (Lesson 3.2 · CORE, Progress M3 · 2 of 2); remove case block; align "Artifacts you carry out of Module 3" with Founder OS framing; fix defect 4; improvements I1-I3 |
 | Walkthrough (NEW) | `module-3-walkthrough-mia` | Mia drafts + quality-checks the TutorMatch brief. Seed content already exists in the two case blocks being removed (core 3 jobs, no-go list, job-story rewrites). M2 walkthrough's closing promise binds it: "Every feature on that page will trace back to a line a parent actually said." See-it-in-action lines land in the SAME commit (30.03 §2.7) |
 | Companion | `vibe-prd-template` | Align with 3.1 v2 the way `outreach-sequence-template` was aligned with 2.4 last sprint: fix defect 5 below, adopt the M2-companion header format (Input/Output callout), verify cover exists |
 
@@ -327,20 +327,24 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 4. Verify 3.2's `admin-panel-spaceship.svg` desc/alt text ("47 buttons") doesn't collide with the `47-button admin panel` ratchet signature; the illustration itself stays (informational, not decorative).
 5. `vibe-prd-template` companion: header says "synthesis from **Chapter 2.1**" while linking the 2.5 synthesis page (same renumber-leftover class); "one-page one-page brief" doubled-word typo; "$1,000" Maven price echoed twice more.
 
-**Content improvements IN scope (evidence: 40.06 trust-score friction, both chapters 7/10):**
-- **3.2 hook reframe** - 40.06 records Sam's resistance verbatim: "I already wrote Section 3 in Chapter 3.1 - why do I need to rewrite it?" The v2 Hook must earn the rewrite up front (the 20-minute rewrite is insurance against the $15K spaceship), not assume compliance.
-- **AI critic manual fallback** - 40.06 flags that 3.2's quality-check prompt requires a Claude account. Add the manual path (read each Section 3 sentence, ask "is this a thing the user does, or a thing the software has?") per the manual-minimum policy.
-- **Explicit module gate in the v2 Done footer** - M1 ends on go/iterate/kill, M2 on build/pivot/kill; M3's implicit pass ("4 of 5 sections outcome-shaped", currently buried in the case blocks being deleted) becomes the stated Done criterion.
+**Content improvements IN scope (numbered; I1-I3 grounded in 40.06 trust-score friction, both chapters 7/10; I4-I5 grounded in documented CLAUDE.md content-organization rules):**
+- **I1 - 3.2 hook reframe.** 40.06 records Sam's resistance verbatim: "I already wrote Section 3 in Chapter 3.1 - why do I need to rewrite it?" The v2 Hook (≤3 sentences) must earn the rewrite up front - the 20-minute rewrite is insurance against the $15K admin-panel spaceship - and the objection gets answered before the first exercise, not assumed away. *Lands in: 3.2 Hook + the sentence right after Input/Output.*
+- **I2 - AI critic manual fallback.** 40.06 flags that 3.2's quality-check prompt requires a Claude account. Add the manual path (read each Section 3 sentence and ask: "is this a thing the user does, or a thing the software has?") per the manual-minimum policy. *Lands in: 3.2, directly under the existing AI quality-check prompt block.*
+- **I3 - Explicit module gate in the Done footer.** M1 ends on go/iterate/kill, M2 on build/pivot/kill; M3's implicit pass ("4 of 5 sections outcome-shaped", currently buried in the case blocks being deleted) becomes the stated Done criterion. *Lands in: 3.2 Done footer ("Done when 4 of 5 brief sections read as outcomes; brief saved to Founder OS").*
+- **I4 - "The 2 forks: Vibe PRD vs traditional PRD" → decision table.** The section is if-X-then-Y prose; the decision-aid rule (10.05 Part 2 / CLAUDE.md F-pattern rules) says render it as a compact decision table, and it currently sits BEFORE the 5-section walkthrough - demote it below the template so action comes first. *Lands in: 3.1.*
+- **I5 - First-fold visual hook check.** Verify both lessons put an informational visual inside the first viewport at 1280×800 (hero rule, Pew 2026); `vibe-prd-template-visual.svg` / `feature-vs-outcome.svg` are the natural candidates if repositioning is needed. *Lands in: 3.1 + 3.2, verified in the visual-QA step.*
+
+**Backlog rows this sprint closes for M3** (mark them in the ICP backlog table when done): P2 "TL;DR summaries" and P2 "completion criteria" for 3.1/3.2 - both are delivered inherently by the v2 template ("After this lesson you will be able to" + Done/Next/If-blocked footers).
 
 **Content improvements OUT of scope (decided, don't relitigate):** no new lessons, no splits, no synthesis-style addition. M3's two-step arc (draft → quality-check) is sound, trust scores are healthy, and the module is deliberately the short breather between M2 interviews and the M4 build. OpinionX stack-ranking stays the optional callout it already is.
 
 **Ordered steps (each gate before the next):**
 1. Voice sweep on both v1 chapters BEFORE template conversion (em-dash, banned patterns, full ratchet run) - so v2 inherits clean voice.
-2. Convert 3.1, then 3.2 (dependency order; the 3.1→3.2 bridge names exactly which brief sections 3.2 audits).
+2. Convert 3.1 (with I4), then 3.2 (with I1-I3) - dependency order; the 3.1→3.2 bridge names exactly which brief sections 3.2 audits.
 3. Walkthrough + See-it-in-action lines + case-block removal in one commit.
 4. Cross-page pass: landing/quickstart/FAQ/HTCW M3 rows; M2→M3 inbound promises honored (2.5 problem statement → Section 1 verbatim; 2.6 "describe in one sentence" vocabulary → Section 3; prototype code discarded, fresh M4 build); M3→M4 outbound intact (4.1 reads the brief for the build-path decision, 4.3 prompts Lovable from it).
 5. Semantic-leftover pass (40.13): grep order-encoding prose ("next chapter", "proceed to", "after step") in every touched file.
-6. Chrome-devtools visual QA at 1280×800 + 390×844: all 4 SVGs, both mermaid diagrams (height ≤ ~1600px), both covers (verify content is current - 2.3/2.5 covers turned out to be stale copies last sprint; regen from the family template if facts are wrong).
+6. Chrome-devtools visual QA at 1280×800 + 390×844: all 4 SVGs, both mermaid diagrams (height ≤ ~1600px), both covers (verify content is current - 2.3/2.5 covers turned out to be stale copies last sprint; regen from the family template if facts are wrong), first-fold visual hook per I5.
 7. ONE fan-out review (find → dedup → adversarial verify) AFTER migration is complete; fixes reviewed as scoped diffs, never whole-world re-samples; every fix adds its ratchet signature in the same commit.
 8. Mechanized gates: `bin/hugo-build` (8 validators) + `bin/rake test:critical`; `bin/dtest` too if any template/CSS file is touched; production link sweep.
 9. ONE PR for the sprint.
