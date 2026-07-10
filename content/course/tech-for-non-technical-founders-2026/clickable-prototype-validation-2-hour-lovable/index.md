@@ -335,7 +335,7 @@ After finishing Ch 2.1-2.6, you have five artifacts. Each one feeds a specific d
 |---|---|
 | **Validated Problem Statement** (Ch 2.5 synthesis applied to your Ch 2.3-2.4 transcripts) | Ch 3.1 Section 1 - copy verbatim. This is the PRD's foundation. (PRD = product requirements document, the one-page spec a team or AI agent builds from.) |
 | **Pass/fail prototype log** (5 sessions from this chapter) | Reference doc: did we get the shape right? If yes, write the brief. If no, the table above routes you to a revision or restart. |
-| **Verbatim "describe in one sentence" vocabulary** (closing answers from this chapter) | Ch 3.1 Section 3 ("what you're building") + Ch 4.3-4.5 Lovable prompts. The user's words beat your marketing copy. |
+| **Verbatim "describe in one sentence" vocabulary** (closing answers from this chapter) | Ch 3.1 Section 3 ("what you're building") + Ch 4.3-4.4 Lovable prompts. The user's words beat your marketing copy. |
 | **10 raw transcripts** (Ch 2.3-2.4 interview recordings + notes) | Archive. Reference if you ever pivot - they hold the language for a re-targeted ICP. |
 | **30 raw verbatim sentences** (Ch 2.3-2.4 step 2, Reddit/forum complaints) | Reference for Ch 3.1 Section 1 supplementary evidence + the bank for Ch 2.3-2.4 cold-message subject lines in any future round 2. |
 

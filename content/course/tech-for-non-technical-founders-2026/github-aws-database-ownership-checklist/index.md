@@ -203,4 +203,6 @@ Ownership audit done right means no Marcus stands between you and a 9pm Tuesday 
 
 ---
 
+*See it in action: [Module 4 walkthrough: Mia ships TutorMatch](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)*
+
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

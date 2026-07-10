@@ -323,4 +323,6 @@ A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 b
 
 ---
 
+*See it in action: [Module 5 walkthrough: Mia gets paid](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)*
+
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

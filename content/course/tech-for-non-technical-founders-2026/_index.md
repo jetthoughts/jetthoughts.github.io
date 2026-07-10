@@ -145,7 +145,7 @@ Read the modules in order. Each module's output is the next module's input, and 
     <li><span class="module-card__num">5.4</span> <a href="/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/">Write the Outreach Message</a></li>
     <li><span class="module-card__num">5.5</span> <a href="/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/">Send, Track, and Read the Replies</a></li>
     <li><span class="module-card__num">5.6</span> <a href="/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/">Charge Before You Ship: The Paid Pilot Contract</a></li>
-    <li><span class="module-card__num">5.7</span> <a href="/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/">Going Outbound Without a Sales Team</a> <span class="module-card__optional">optional</span><br><em>Skip if your personal network in 5.3-5.7 produced your first 10 customers. This is the systematic path for when warm intros run out.</em></li>
+    <li><span class="module-card__num">5.7</span> <a href="/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/">Going Outbound Without a Sales Team</a> <span class="module-card__optional">optional</span><br><em>Skip if your personal network in 5.3-5.5 produced your first 10 customers. This is the systematic path for when warm intros run out.</em></li>
   </ol>
   <p class="module-card__extras">Template in this module: <a href="/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/">First Paying Customer Operating Kit</a></p>
   <p class="module-card__leave"><strong>You leave with:</strong> a signed paid pilot and your first dollar from a customer, not a favor.</p>

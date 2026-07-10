@@ -198,8 +198,10 @@ Two refundable deposits beat 200 LinkedIn likes.
 > **You have now:** a quality-checked one-page brief (3.2) + a build-path decision (validate / self-serve / fractional CTO / hire), saved in your `Founder OS` folder.
 >
 > **Next:** [4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
-> **If blocked:** If your answer routes you to "hire a team" but your runway is under 4 months, you are reading the wrong path. Default to self-serve (Ch 4.3-4.5) and revisit hiring when a ceiling signal fires in Ch 4.5.
+> **If blocked:** If your answer routes you to "hire a team" but your runway is under 4 months, you are reading the wrong path. Default to self-serve (Ch 4.3-4.4) and revisit hiring when a ceiling signal fires in Ch 4.5.
 
 ---
+
+*See it in action: [Module 4 walkthrough: Mia ships TutorMatch](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

@@ -188,7 +188,7 @@ The chain of artifacts the booked calls produce:
 4. **Pick the 5 strongest-signal interviewees** (Mom Test score ≥ 7) for Ch 2.6 prototype sessions.
 5. **Two artifacts now flow into Module 3 + later modules:**
    - The Validated Problem Statement (Section 1 of the Ch 3.1 one-page brief, lifted verbatim)
-   - The 5 strongest-signal interviewees (Ch 2.6 input - and later, your Module 5 onramp invitees in Ch 4.3-4.5, plus your warm-list seed in Ch 5.3)
+   - The 5 strongest-signal interviewees (Ch 2.6 input - and later, your Module 5 onramp invitees in Ch 4.3-4.4, plus your warm-list seed in Ch 5.3)
 
 If fewer than 7 of 10 calls score ≥ 7, the problem is too weak for this ICP. Re-evaluate the ICP, the problem framing, or the question wording before booking another 10 calls. The full kill / iterate / proceed decision lives in the [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) page.
 
