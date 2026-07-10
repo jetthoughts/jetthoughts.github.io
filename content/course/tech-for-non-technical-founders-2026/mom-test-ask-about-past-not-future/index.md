@@ -164,6 +164,10 @@ flowchart TD
 
 Stick to the order. Improvise mid-call ("oh that reminds me of my product idea") and you contaminate the rest of the transcript - the interviewee starts answering the pitch instead of describing their own life. Read the questions as written, take notes by hand, score after.
 
+Expect your first two or three interviews to feel awkward - you will catch yourself pitching at least once. That's normal, not failure: score the contaminated call honestly (in the [Module 2 walkthrough](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/), Mia breaks her own script in interview one, scores it 3/10, and keeps the other nine clean). The skill is in the recovery, not in being perfect on call one.
+
+One more failure mode worth naming: an interviewee with no story. If Q1 produces genuine blankness - not evasion, just no last time to walk through - they don't have the problem. End the call politely at the 10-minute mark and count it: a person who was supposed to be your customer and has no story IS data about your [customer] blank.
+
 ## What to do tomorrow
 
 Three actions. In order.
