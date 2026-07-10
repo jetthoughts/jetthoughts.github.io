@@ -69,7 +69,7 @@ Skip this course if you want to learn to code or hand off founder judgment to so
 
 ## Module map
 
-Read the modules in order. Each module's output is the next module's input, and each leaves you with at least one fill-in-the-blank artifact - the **"You leave with"** line on every card below. The {{< course-stat artifacts >}} artifacts bundle into a single Google Drive folder - your **Founder OS** - that doubles as your decision log. If you ever raise, the same folder is the evidence pack investors fund.
+Read the modules in order. Each module's output is the next module's input, and each card's **"You leave with"** line names its output; together with the fill-in templates they total {{< course-stat artifacts >}} artifacts, which bundle into a single Google Drive folder - your **Founder OS** - that doubles as your decision log. If you ever raise, the same folder is the evidence pack investors fund.
 
 <div class="module-card" id="module-1">
   <span class="module-card__badge">Module 1</span>
@@ -113,7 +113,7 @@ Read the modules in order. Each module's output is the next module's input, and 
     <li><span class="module-card__num">3.1</span> <a href="/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/">The One-Page Product Brief (Vibe PRD)</a></li>
     <li><span class="module-card__num">3.2</span> <a href="/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/">Quality-check Your Brief: Features to Outcomes</a></li>
   </ol>
-  <p class="module-card__extras">Template in this module: <a href="/course/tech-for-non-technical-founders-2026/vibe-prd-template/">Vibe PRD</a> · Course glossary (reference, not in the linear path): <a href="/course/tech-for-non-technical-founders-2026/five-tech-words-stop-nodding-at/">Five Tech Words to Stop Nodding At</a></p>
+  <p class="module-card__extras">Template in this module: <a href="/course/tech-for-non-technical-founders-2026/vibe-prd-template/">Vibe PRD</a> · Course glossary (reference, not in the linear path): <a href="/course/tech-for-non-technical-founders-2026/five-tech-words-stop-nodding-at/">Five Tech Words to Stop Nodding At</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-3-walkthrough-mia/">Mia writes the one-page brief</a></p>
   <p class="module-card__leave"><strong>You leave with:</strong> a one-page Product Brief where every feature traces back to something a customer actually said.</p>
 </div>
 
@@ -129,7 +129,7 @@ Read the modules in order. Each module's output is the next module's input, and 
     <li><span class="module-card__num">4.4</span> <a href="/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/">The Self-Serve MVP Stack: Build Phases</a></li>
     <li><span class="module-card__num">4.5</span> <a href="/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/">Vibe Coding Done Right: 5 Ceiling Signals</a> <span class="module-card__optional">optional</span><br><em>Skip on first pass. Come back when your no-code build hits a wall - a feature you can't add, a query you can't tune, an auth flow Lovable can't handle.</em></li>
   </ol>
-  <p class="module-card__extras">Templates in this module: <a href="/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/">Build Path Decision Worksheet</a> · <a href="/course/tech-for-non-technical-founders-2026/ownership-checklist/">Ownership Checklist</a> · <a href="/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/">Self-Serve Stack Walkthrough</a></p>
+  <p class="module-card__extras">Templates in this module: <a href="/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/">Build Path Decision Worksheet</a> · <a href="/course/tech-for-non-technical-founders-2026/ownership-checklist/">Ownership Checklist</a> · <a href="/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/">Self-Serve Stack Walkthrough</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/">Mia ships TutorMatch</a></p>
   <p class="module-card__leave"><strong>You leave with:</strong> a live MVP at a real URL that you built and you own - every account in your name from Day 1.</p>
 </div>
 
@@ -147,7 +147,7 @@ Read the modules in order. Each module's output is the next module's input, and 
     <li><span class="module-card__num">5.6</span> <a href="/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/">Charge Before You Ship: The Paid Pilot Contract</a></li>
     <li><span class="module-card__num">5.7</span> <a href="/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/">Going Outbound Without a Sales Team</a> <span class="module-card__optional">optional</span><br><em>Skip if your personal network in 5.3-5.5 produced your first 10 customers. This is the systematic path for when warm intros run out.</em></li>
   </ol>
-  <p class="module-card__extras">Template in this module: <a href="/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/">First Paying Customer Operating Kit</a></p>
+  <p class="module-card__extras">Template in this module: <a href="/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/">First Paying Customer Operating Kit</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/">Mia gets paid</a></p>
   <p class="module-card__leave"><strong>You leave with:</strong> a signed paid pilot and your first dollar from a customer, not a favor.</p>
 </div>
 
