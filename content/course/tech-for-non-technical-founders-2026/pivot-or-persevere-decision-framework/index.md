@@ -158,7 +158,7 @@ A Technology pivot routes you to the [salvage-vs-rebuild decision framework](/co
 
 A persevere decision keeps you on whatever module you were on. Re-measure trigger conditions in 30 days.
 
-The course was always a loop. The reason it reads as a numbered sequence is that the discovery moves work the same regardless of whether you are running them for the first time or the fifth. The founders who graduate the course - the ones holding all eight Founder OS artifacts at the end - are not the founders who never pivoted. They are the founders who ran the loop three or four times and got better at each pass.
+The course was always a loop. The reason it reads as a numbered sequence is that the discovery moves work the same regardless of whether you are running them for the first time or the fifth. The founders who graduate the course - the ones holding all six Founder OS artifacts at the end - are not the founders who never pivoted. They are the founders who ran the loop three or four times and got better at each pass.
 
 D. is on his third pivot now. He ran the original hypothesis once (audit prep), pivoted to month-end close (Customer Need), then 7 weeks later pivoted the channel from outbound to partnerships (Channel). The two pivots cost him 5 weeks of build time combined and saved him at least two quarters of running each wrong hypothesis to its conclusion. The pivot framework is what made each loop a deliberate decision instead of a flail.
 

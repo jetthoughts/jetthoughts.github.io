@@ -174,7 +174,6 @@ These are the tools the course references - AI research tools, no-code builders,
 | **Lovable / Bolt.new** | AI app builder from text prompts | Clickable prototype (Module 2), MVP build (Module 4) | Free tier |
 | **Supabase** | Hosted Postgres + auth + realtime | MVP backend (Module 4) | Free tier |
 | **Tally + Zapier + Airtable** | "Wizard of Oz" no-code stack (a fake-it-till-you-make-it pattern: the customer thinks software is running, but you do the work by hand behind the scenes to test demand before you build the real thing) | Concierge MVP before committing to a code build (Module 4 alt path) | Free tiers |
-| **WorthBuild** | Auto-parses social media for leads, generates personalized outreach messages | After validation, setting up first-customer pipeline (Module 5) | Free tier |
 
 </details>
 

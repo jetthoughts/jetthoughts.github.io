@@ -116,7 +116,7 @@ Those three pairs anchor the pattern; the table below is the fill-in-the-blank v
 | | DNS provider | Logged in under your account with MFA, ready to add an A record now |
 | | Third-party API keys | (Stripe, SendGrid, Twilio, OpenAI, Plaid) on your account, your card |
 
-Two of those twelve are existential. AWS root email controls whether a contractor can lock you out in ten minutes. Domain registrar turns into a 14-day ICANN-mandated wait if someone else will not release the auth code. The other ten matter; these two end the company if they go wrong.
+Two of those twelve are existential. AWS root email controls whether a contractor can lock you out in ten minutes. Domain registrar turns into a 14-day practical buffer (approval itself takes about five days; the 60-day post-registration lock is the ICANN rule) if someone else will not release the auth code. The other ten matter; these two end the company if they go wrong.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#f5f5f5', 'primaryBorderColor':'#666', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -133,7 +133,7 @@ flowchart TD
     Sec -->|"'Marcus has it'"| FixSec[Set up Secrets Manager<br/>or 1Password vault tonight.<br/>Migrate this sprint]
 
     Dom -->|Yes, on your card| Pass[Audit clean.<br/>Quarterly recurring block.<br/>Email investor / board.]
-    Dom -->|No| FixDom[Initiate registrar transfer.<br/>Budget 14 days minimum.<br/>Escalate to ICANN if blocked]
+    Dom -->|No| FixDom[Initiate registrar transfer.<br/>Budget 14 days as a practical buffer.<br/>Escalate to ICANN if blocked]
 
     FixCode --> Recovery[Recovery plan<br/>started this Friday]
     FixCloud --> Recovery

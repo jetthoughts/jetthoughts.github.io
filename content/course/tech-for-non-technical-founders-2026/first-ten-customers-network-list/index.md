@@ -33,7 +33,7 @@ related_posts: false
 >
 > **Progress:** M5 · 3 of 7 · Results so far: your first users answered the 40% test (5.1) - this page builds the 50-name list for the first sales push
 
-> **TL;DR:** Build a 50-name list from people who already know you, sorted into 4 buckets - champions, hot, warm, cold. Around 60% of fast-growing B2B startups landed their first 10 customers this way. One focused sitting.
+> **TL;DR:** Build a 50-name list from people who already know you, sorted into 4 buckets - champions, hot, warm, cold. Lenny Rachitsky's research on fast-growing B2B startups found the personal network was the number-one source of first customers. One focused sitting.
 
 ---
 
@@ -43,7 +43,7 @@ After this lesson you will be able to: **sort 50 names into 4 outreach buckets s
 
 ---
 
-In 2021, Lenny Rachitsky asked 21 of the fastest-growing B2B companies (Figma, Stripe, Slack, Notion) where their first 10 customers came from. [The answer](https://www.lennysnewsletter.com/p/how-todays-fastest-growing-b2b-businesses): ~60% from personal network, ~35% from cold outbound, only 5% from inbound or launch events.
+Lenny Rachitsky asked today's fastest-growing B2B companies (Figma, Stripe, Slack, Notion among them) where their first 10 customers came from. [The answer](https://www.lennysnewsletter.com/p/how-todays-fastest-growing-b2b-businesses): the personal network came first for nearly every company, cold outbound was the recurring second theme, and inbound barely registered at that stage.
 
 You are not asking friends to buy. You are asking them to be first to try something that solves a problem they already have, at a steep discount, while you fix the rough edges they catch.
 

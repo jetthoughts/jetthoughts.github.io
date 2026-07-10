@@ -44,8 +44,6 @@ The channel-flailing pattern: switch every 10 days - LinkedIn for two weeks, col
 
 The fix is rarely "find a smarter channel." It's pick one channel from your interview evidence and stick with it through a full send/reply/follow-up arc. Same six weeks on LinkedIn alone produces 11 conversations, 2 paid pilots, and a clear hypothesis about what to test next.
 
-
-
 You ran 10 interviews in [Module 2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/). Your interviewees told you exactly how they find tools like yours. They just did not use the word "channel" when they said it.
 
 This chapter is about listening to what they actually said and committing to one channel before you try anything else.
@@ -146,8 +144,6 @@ The prompt is a forcing function, not a crystal ball. The real data comes from r
 >
 > **The real gate:** ≥9/12 channel-fit score + a full send/reply/follow-up arc with reply rate >5%.
 >
-> **Optional: auto-parse social media for leads.** [WorthBuild](https://worthbuild.io) (free tier available) scans Reddit, Twitter/X, and LinkedIn for posts matching your ICP's problem description and returns a list of named people publicly complaining about the thing you solve. Use it to seed your outreach list when the manual reading in Ch 2.3-2.4 didn't produce enough names. The free tier is metered - save it until you have exhausted your hand-picked list and need fresh contacts.
-
 ## Channel Selection Worksheet
 
 Fill this out before you send message one. It prevents the wasted-effort cycle of channel-hopping.

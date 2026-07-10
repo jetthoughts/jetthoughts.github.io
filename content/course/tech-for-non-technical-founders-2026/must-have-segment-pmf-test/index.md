@@ -78,7 +78,7 @@ You need enough responses from people who have used your product recently to spo
 - Your beta waitlist if it converted to active users.
 - The trial list if you ran paid trials.
 
-If you only have ten users, that is fine. Sean Ellis has written that even ten responses are directional. Ten of ten "very disappointed" is a louder signal than 40 of 100. You are not running a peer-reviewed study; you are looking for a dividing line.
+If you only have ten users, that is fine. Treat anything under ten responses as directional only. Ten of ten "very disappointed" is a louder signal than 40 of 100. You are not running a peer-reviewed study; you are looking for a dividing line.
 
 Strip out two groups before you send:
 

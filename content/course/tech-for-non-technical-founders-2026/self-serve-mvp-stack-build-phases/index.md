@@ -123,7 +123,7 @@ Watch what happens. If 0 of 5 click, the cold message is wrong, not the product 
 >
 > Advance to Module 5 only when all 5 are green. If any are red, the MVP is NOT ready for the 10-30 users Module 5 needs as input. Fix the red light first, then re-check.
 
-> **Pre-flight before M5.1: book up to 10 user sessions.** Phase 4's 4-6 onramp accounts are not enough for M5.1's Sean Ellis 40% test (under 10 respondents = noise, not signal). Before you start Module 5, book a second small invite wave: 5-10 more sessions from your Ch 2.3-2.4 interviewee list, your community connections, or a fresh micro-batch of cold DMs. Aim for 10-15 active users total by the time M5.1's survey ships. Without this pre-flight, you will run the 40% test on 5 people, get an ambiguous result, and falsely conclude you have a product problem when you really have a sample-size problem.
+> **Pre-flight before M5.1: book up to 10 user sessions.** Phase 4's 4-6 onramp accounts are not enough for M5.1's Sean Ellis 40% test (under 10 respondents = noise, not signal). Before you start Module 5, book a second small invite wave: 5-10 more sessions from your Ch 2.3-2.4 interviewee list, your community connections, or a fresh micro-batch of cold DMs. Aim for 10-30 active users by the time M5.1's survey ships - 5.1 treats 10 as directional-only and 20+ as a useful read. Without this pre-flight, you will run the 40% test on 5 people, get an ambiguous result, and falsely conclude you have a product problem when you really have a sample-size problem.
 
 ### Onramp phase - Module 5 handoff: invite your Module 2 interviewees onto the live MVP
 
@@ -158,7 +158,7 @@ Be honest about the trade-off. This stack cannot host every business. It can hos
 
 The stack holds until it doesn't. Five specific signals tell you the ceiling is close. The next chapter ([Chapter 4.5 - Proactive Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)) walks through each one with the threshold to watch.
 
-Quick preview: scale beyond roughly 10,000 users, complex data model that no longer fits a single Supabase project, real-time features the auto-generated REST API cannot serve, security or compliance scope that needs an external audit, AI inference at scale where per-request cost crosses pennies. When you see two of these, route to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) or to a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the architecture call. Architecture does not collapse overnight; the warning shows up in the metrics before the customer sees it. Chapter 4.5 names the metrics.
+Quick preview: scale beyond roughly 5,000 users, complex data model that no longer fits a single Supabase project, real-time features the auto-generated REST API cannot serve, security or compliance scope that needs an external audit, AI inference at scale where per-request cost crosses pennies. When you see two of these, route to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) or to a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the architecture call. Architecture does not collapse overnight; the warning shows up in the metrics before the customer sees it. Chapter 4.5 names the metrics.
 
 What the stack actually costs, per published vendor pricing:
 
@@ -168,7 +168,7 @@ What the stack actually costs, per published vendor pricing:
 | First ship | Per-tool monthly fees | Lovable + Supabase entry paid tiers + a .com domain (~$10/yr) + Resend entry tier + Stripe per-transaction fees |
 | Post-launch | Scale-tier monthly fees | Lovable scale tier + Supabase paid tier + Resend/Sentry/monitoring paid tiers - check vendor pricing pages |
 
-The architectural ceiling tends to land at the post-launch tier - at ~10K users, route to Chapter 4.5 or a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). A hire-a-team build is material monthly burn before revenue; this stack ships the same first 10 paying customers on a fraction of that.
+The architectural ceiling tends to land at the post-launch tier - at ~5K users, route to Chapter 4.5 or a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). A hire-a-team build is material monthly burn before revenue; this stack ships the same first 10 paying customers on a fraction of that.
 
 ## What to do tomorrow
 
@@ -190,7 +190,7 @@ The shed build never grows that large. Either you reach the architectural ceilin
 
 Self-serve has a ceiling. The [ceiling-signal monitoring chapter](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) covers the 5 signals that mean it's time to bring in help. When 2+ signals fire in one monthly check, switch to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/).
 
-Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your validated problem to a staging URL on per-vendor pricing. The bigger architecture is a different conversation, and you have not earned the right to have it yet.
+Build the shed first. Lovable + Supabase + Stripe + a ~$10 domain ships your validated problem to a staging URL on per-vendor pricing. The bigger architecture is a different conversation, and you have not earned the right to have it yet.
 
 ## Further reading
 
@@ -201,7 +201,7 @@ Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your vali
 - Lovable, [Pricing tiers](https://lovable.dev/pricing) and [community Discord](https://lovable.dev/community)
 - Supabase, [Row-Level Security guide](https://supabase.com/docs/guides/database/postgres/row-level-security)
 - Stripe, [Checkout quickstart](https://docs.stripe.com/payments/checkout/quickstart) and [Pricing page](https://stripe.com/pricing)
-- Drew Falkman, [Vibe Coding Data-Enabled AI Apps on Maven](https://maven.com/)
+- Drew Falkman, "Vibe Coding Data-Enabled AI Apps" on Maven
 
 > **Done:** all 5 green lights are lit - Stripe in live mode, custom domain wired, 1 ICP user tested the paywall, zero JS errors on the signup + checkout flow, and a weekly demo recording exists.
 >

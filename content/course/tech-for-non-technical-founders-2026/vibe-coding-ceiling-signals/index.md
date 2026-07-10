@@ -48,7 +48,7 @@ Two of your users keep landing on each other's data because the [Supabase](https
 
 The ceiling is visible now, but it was visible two months earlier too. That's when this check should have caught it.
 
-**Vibe Coding** is shipping a real product with AI-generated code from tools like Lovable, Cursor, or Bolt - no engineer, no dev shop, no months of build. The term comes from indie founder Pieter Levels and describes the 2026 default for solo non-technical founders. This chapter is about the moment the shed stops holding.
+**Vibe Coding** is shipping a real product with AI-generated code from tools like Lovable, Cursor, or Bolt - no engineer, no dev shop, no months of build. The term was coined by Andrej Karpathy in early 2025; indie founder Pieter Levels made it famous in practice and describes the 2026 default for solo non-technical founders. This chapter is about the moment the shed stops holding.
 
 Once your build goes live, run this 5-signal check monthly. Each signal that fires earlier saves rebuilds later. This is a proactive monitoring habit, not a post-mortem - the goal is to catch the ceiling before you slam into it.
 
@@ -108,7 +108,7 @@ It writes a query that ignores a join, or it adds a column to one screen but not
 
 The founder shipped six features in month four and zero in months five and six because every change surfaced something else.
 
-**Cost of addressing now**: a 2-hour [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) schema review (roughly $300-500 - a couple of hours at a senior fractional rate). They sketch the proper entity-relationship diagram, identify the joins your current schema is missing, and tell you whether the next 10 features fit on the current schema or need a redesign. If the verdict is "rebuild on a real ORM," route to [Reading the SOW](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow).
+**Cost of addressing now**: a 2-hour [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) schema review (roughly $160-$240 - two hours at the $80-$120/hour fractional band). They sketch the proper entity-relationship diagram, identify the joins your current schema is missing, and tell you whether the next 10 features fit on the current schema or need a redesign. If the verdict is "rebuild on a real ORM," route to [Reading the SOW](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow).
 
 ### Signal 3: Real-time features becoming non-negotiable (detectable: Week 4-8)
 

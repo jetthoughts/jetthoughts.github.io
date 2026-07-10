@@ -143,7 +143,7 @@ The classic trap is writing a traditional PRD for a junior or an AI agent. The 5
 
 ## When a paid cohort course is worth it
 
-Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.com/), a multi-week live cohort (paid - check the course page for current pricing and format). The course teaches the same five-section Vibe PRD template, plus the Lovable + Supabase + Stripe + GitHub stack, plus live community and 1:1 instructor feedback.
+Drew Falkman runs "Vibe Coding Data-Enabled AI Apps" on Maven, a multi-week live cohort (paid - check the course page for current pricing and format). The course teaches the same five-section Vibe PRD template, plus the Lovable + Supabase + Stripe + GitHub stack, plus live community and 1:1 instructor feedback.
 
 | Scenario | Maven cohort is worth it | This template is enough to start |
 |---|---|---|
@@ -177,7 +177,7 @@ A Vibe PRD is what's left when you remove everything an AI agent or a hired juni
 
 ## Further reading
 
-- Drew Falkman, [Vibe Coding Data-Enabled AI Apps on Maven](https://maven.com/) - the paid live cohort that teaches the Vibe PRD with instructor feedback. Recommended if accountability is your blocker.
+- Drew Falkman, "Vibe Coding Data-Enabled AI Apps" on Maven - the paid live cohort that teaches the Vibe PRD with instructor feedback. Recommended if accountability is your blocker.
 - Marty Cagan, [Good Product Manager / Bad Product Manager](https://www.svpg.com/good-product-manager-bad-product-manager/) - the canonical essay on what a PRD is for. The Vibe PRD is the AI-era compression of the same shape.
 - Marty Cagan, [Product vs Feature Teams](https://www.svpg.com/product-vs-feature-teams/) - why the brief shapes what gets built. The no-go list is the part feature teams ignore.
 - Jake Knapp and John Zeratsky, [Foundation Sprint (Click, April 2025)](https://www.thesprintbook.com/foundation-sprint) - the 2-day version of the same artifact for teams that have 2 days. The Foundation Sprint workbook is freely sampled from the book site.

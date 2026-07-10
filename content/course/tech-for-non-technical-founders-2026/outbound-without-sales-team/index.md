@@ -67,7 +67,7 @@ The four-line cold-email sequence below is what customer five answers in week th
 
 This is the closing chapter of Module 5 (First Paying Customer). Once your personal network is exhausted, the next 10 customers come from filtered cold outbound, not from launch events.
 
-Figma's first customer 11-20 cohort came from cold DMs to influential designers identified via Twitter data. Retool filtered Crunchbase by funding recency. Your Rails MVP customer 11-20 cohort will come from LinkedIn Sales Navigator (or Apollo, or both) feeding the four-line script below.
+Figma's first customer 11-20 cohort reportedly came from cold DMs to influential designers; Retool reportedly filtered Crunchbase by funding recency. Your Rails MVP customer 11-20 cohort will come from LinkedIn Sales Navigator (or Apollo, or both) feeding the four-line script below.
 
 ## Why Product Hunt is the wrong lever for a B2B SaaS product
 
@@ -211,7 +211,7 @@ flowchart TB
     class W3,W7 conv;
 ```
 
-Expect a 10-15% reply rate on a properly filtered, properly personalized 30-message batch. That is 3-6 replies, of which 2-4 will agree to a 15-minute demo. Of the demos, 1-2 will agree to a paid pilot. Of the pilots, the [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds.
+Expect 3-8% replies on a realistic first batch - 1-2 replies per 30 messages - and treat 10-15% as what a tightly filtered, heavily personalized batch can reach: 3-4 replies, of which 1-2 agree to a 15-minute demo, of which one becomes a paid-pilot conversation. Of the pilots, the [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds.
 
 The 30-message batch is not a one-time event. Run fresh 30-message batches until you have 20 customers. The second and third batches will outperform the first by 30-50% because you will have learned which reference patterns earn replies and which do not.
 
@@ -229,7 +229,7 @@ A 30-message batch with zero replies is rare and almost always indicates a filte
 
 3. **Is the reference real?** Look at the first paragraph of your last 10 sent messages. If the "specific reference" sentence sounds generic ("noticed you work at [Company] in [role]"), it was not specific enough. Real specificity means the prospect can verify the claim - a date, a post title, a name, an event.
 
-10-15% reply rate is the baseline for a well-filtered, well-personalized batch in 2026.
+3-8% replies is the realistic first-batch band; 10-15% is the ceiling a well-filtered, well-personalized batch can reach.
 
 > **Stop / continue / accelerate, by reply rate band.**
 > - **<5% reply rate** → STOP after batch 1. Diagnose before batch 2: filter is wrong, domain reputation is dead, or script reads generic. Sending batch 2 over a broken upstream stage wastes the next 30 best-fit names on the same broken funnel.
@@ -251,7 +251,7 @@ A 30-message batch with zero replies is rare and almost always indicates a filte
 | Step | Action | Output |
 |---|---|---|
 | **1** | Open your `Module 5 cold seed` tab from Ch 2.3-2.4 - the Apollo filter is already saved and 8-12 contacts may already be exported. Top up to 30-50 high-fit names using the same filter. Drop bottom 20 into a "later batch" tab in your Sheet. Pick one of three message variants and customize deposit + product description. | 30-50 target list built. Message template ready. |
-| **2** | Spend 60-90 minutes personalizing the first 30 messages. One specific reference per prospect (recent post, hire milestone, role change). Send via LinkedIn DM or cold email tool ([Smartlead](https://smartlead.ai), [Instantly](https://instantly.ai)). | 30 messages sent. 3-6 replies expected. |
+| **2** | Spend 60-90 minutes personalizing the first 30 messages. One specific reference per prospect (recent post, hire milestone, role change). Send via LinkedIn DM or cold email tool ([Smartlead](https://smartlead.ai), [Instantly](https://instantly.ai)). | 30 messages sent. 1-4 replies expected. |
 | **3** | Tally replies once they settle. Book demos. Follow up with non-responders once only. | 2-4 demo calls booked. Next batch ready. |
 
 The full cold-email scripts (3 variants: B2B SaaS shipped-MVP, B2B services, B2C app), the filter checklist, and the Apollo + Sales Navigator setup guide all ship in [the First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).
