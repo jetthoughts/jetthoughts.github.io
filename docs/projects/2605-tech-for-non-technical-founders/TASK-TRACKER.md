@@ -305,7 +305,9 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 
 **Module 2 exit gate:** All 6 micro-lessons follow template. Core path (2.1 → 2.3a → 2.3b → 2.4) produces validated problem statement without 2.2. Bridge chain verified.
 
-#### Module 3 — Design from Evidence (~1-2 days) — PLAN REVISED + CONFIRMED 2026-07-09 (post-M2 re-review)
+#### Module 3 — Design from Evidence (~1-2 days) — IN PROGRESS on branch `module-3-design-from-evidence` (2026-07-09)
+
+**Progress 2026-07-09:** steps 1-6 done - 3.1 v2 (ea8943ec, incl. course-wide 2.1→2.5 mislabel + Maven price sweep across 5.1/4.1/4.3a/worksheet/companion, 6 ratchet sigs), 3.2 v2 with I1-I3 (4a2ff457), Mia walkthrough + See-it-in-action + case-block removal (453fc5be), companion aligned + cover wired + 90-min contradiction fixed (95a5c23e), SVG-internal renumber leftovers fixed - visual QA caught 'Chapter 2.1' inside vibe-prd-template-visual.svg and pivot-ledger.svg, note the ratchet does NOT scan SVGs (3220e2f2, 498974ca). I4 verified already-compliant (2-forks section already sits below the template as a labeled flowchart). Covers verified current (no regen needed). Mobile: no overflow, mermaids compact. Orientation pages already correct for M3. Remaining: 4-lens whole-course review synthesis (agents running), test gates, ONE PR.
 
 > The original "2 chapters → ~3 micro-lessons" plan predates the M2 sprint and is superseded by this section. Revision grounded in: M2 shipped shape (PR #351), 40.13 process rules, 30.03 §2.7, and a fresh re-read of both M3 chapters on 2026-07-09.
 
