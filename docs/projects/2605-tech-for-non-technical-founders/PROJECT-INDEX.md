@@ -1,7 +1,7 @@
 # Project 2605 - Master Index
 
 **Project**: Tech for Non-Technical Founders 2026
-**Status**: 🟢 Course LIVE (PR #345) · 🟢 M2 v2 COMPLETE on PR #351 (awaiting merge) · 🔲 M3 next
+**Status**: 🟢 Course LIVE (PR #345) · 🟢 M1-M3 live (PRs #345/#351/#352) · 🟢 M4+M5 v2 complete on branch modules-4-5-v2 (PR pending) · course fully on v2 template
 **Last Updated**: 2026-07-10 (M2 done: flattened 2.1-2.6 with Synthesis as 2.5, walkthrough, all review rounds closed, regression ratchet validator live - see 40.12/40.13/40.14)
 **Parent**: `../2510-seo-content-strategy/`
 
