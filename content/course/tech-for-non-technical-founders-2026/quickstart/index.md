@@ -51,7 +51,7 @@ Skip the lessons marked "optional" on the [course landing page](/course/tech-for
 ### Module 2 - Validate the Problem
 *Output: 10 Mom Test interviews + clickable prototype tested with 5 people.*
 
-- [**2.1** · The Mom Test: Ask About the Past](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
+- [**2.1** · The Mom Test: Ask About the Past](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) *(2.2, the optional AI interview rehearsal, is skip-safe on this fast path)*
 - [**2.3** · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)
 - [**2.4** · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
 - [**2.5** · Mom Test Synthesis: Build, Pivot, or Kill](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)

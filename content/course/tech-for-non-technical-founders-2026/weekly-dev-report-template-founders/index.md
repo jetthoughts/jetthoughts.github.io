@@ -29,7 +29,7 @@ cover_image_alt: "JetThoughts blog cover for The Plain-English Weekly Dev Report
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/"
 ---
 
-> **Chapter 5.5 · Step 4 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Going Further · Manage a Hired Team** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a team in place + Friday demos running
 >

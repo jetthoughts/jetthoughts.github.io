@@ -38,7 +38,7 @@ She showed us the contract on a Tuesday. By Friday we had walked her through the
 
 ## How to use this
 
-Friday afternoon, alone, 30 minutes, before coffee runs out. Bring three documents: your filled-in [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) from Chapter 2.1, your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1, and a current bank statement showing months of runway. Pen on paper. Phone in another room.
+Friday afternoon, alone, 30 minutes, before coffee runs out. Bring three documents: your filled-in [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) from Chapter 2.5, your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1, and a current bank statement showing months of runway. Pen on paper. Phone in another room.
 
 Answer the five questions in order. Each one is factual, not aspirational. "Number of paying pre-orders" is a count from your Stripe dashboard, not a vibe. "Months of runway" is cash on hand divided by monthly burn, not a guess. The matrix at the bottom routes you to Path 1, 2, 3, or 4 based on the five answers.
 
@@ -189,7 +189,7 @@ your Notion doc)
 
 | Path | Choose when | First action this week | Cost |
 |---|---|---|---|
-| **1. Validate without code** | Q1 = No, OR Q3 = less than 4 months | Ship Carrd page + Stripe checkout + Notion FAQ. Send to 35 ICP prospects. | $0 - $300 in tools + optional $100-200 in paid ads |
+| **1. Validate without code** | Q1 = No, OR Q3 = less than 4 months | Ship Carrd page + Stripe checkout + Notion FAQ. Send to your 30-name outreach list. | $0 - $300 in tools + optional $100-200 in paid ads |
 | **2. Self-serve build (6A)** | Q1 yes, Q2 light, Q4 = $0-$400/wk, Q5 = senior eng in network | Paste one-page brief into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
 | **3. Fractional CTO bridge (5.2)** | Q1 yes, Q2 mid, Q4 = $1.6K-$4K/mo OR Q5 = no senior eng | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month |
 | **4. Hire a team (6B)** | Q1 yes, Q2 heavy, Q4 = $5K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |

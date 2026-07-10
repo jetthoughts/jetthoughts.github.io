@@ -89,7 +89,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 ### Module 3 - Design from Evidence
 **You have:** 10 interview transcripts + prototype feedback.
 **You walk away with:** a one-page Product Brief written from real customer vocabulary.
-**Time:** ~3-5 days.
+**Time:** ~3-5 days on the calendar - about one evening of writing plus a lunch-break quality check, with a night's sleep between drafts.
 
 | Step | What You Do | Key Tool |
 |---|---|---|

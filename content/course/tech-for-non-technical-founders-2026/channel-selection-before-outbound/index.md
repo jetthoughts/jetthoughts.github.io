@@ -96,8 +96,8 @@ At this stage you are choosing from four options. Here is what each one actually
 
 | Channel | Best for | Requires | Red flag |
 |---------|----------|----------|----------|
-| **LinkedIn DM** | B2B SaaS/services, professional buyers, job-title filtering, $200+/mo | 1-2 hrs/week; Sales Navigator trial or Apollo.io free tier (credit-based: ~100 email credits + ~10 export credits/mo); one clear filter (title + company + industry) | Buyer is not a professional (freelancer, solo creator, non-employee) |
-| **Cold email** | Any B2B with verified work emails; cheaper at volume | Separate sending domain; free tool ([Instantly](https://instantly.ai) / [Smartlead](https://smartlead.ai)); 30-50 emails from [Apollo](https://apollo.io) / [Hunter](https://hunter.io) (25 searches/mo free tier) | Open rate <20% after first batch = domain rep or subject lines broken; fix before scale |
+| **LinkedIn DM** | B2B SaaS/services, professional buyers, job-title filtering, $200+/mo | 1-2 hrs/week; Sales Navigator trial or Apollo.io free tier (credit-based free tier); one clear filter (title + company + industry) | Buyer is not a professional (freelancer, solo creator, non-employee) |
+| **Cold email** | Any B2B with verified work emails; cheaper at volume | Separate sending domain; free tool ([Instantly](https://instantly.ai) / [Smartlead](https://smartlead.ai)); 30-50 emails from [Apollo](https://apollo.io) / [Hunter](https://hunter.io) (free tier available) | Open rate <20% after first batch = domain rep or subject lines broken; fix before scale |
 | **Community outreach** | B2B and prosumer where buyers already gather in Slack/Discord/forum | Must be a genuine participant first; one signal-quality post per sprint (not per week); spend 2 weeks commenting before posting product or get banned permanently | Joining this week then immediately selling = permanent ban from the community |
 | **Social organic** | B2C and prosumer, visual products (apps, productivity tools, demos); buyer discovery from peers/influencers | A sustained posting cadence; format shows product working (screen recordings, before/after, results) | Never posted before AND can't commit to the early low-visibility stretch |
 | **Engineering as Marketing** | Any B2B or prosumer where your ICP searches for tactical solutions; zero-CAC organic SEO | One free no-code micro-tool (calculator, checklist, grader, template) that solves one micro-problem for your ICP; build it on Carrd/Tally/Notion in an afternoon | Your ICP doesn't search for tactical tooling (they buy via referral or sales call); the micro-tool solves a toy problem nobody actually has |
@@ -144,7 +144,7 @@ The prompt is a forcing function, not a crystal ball. The real data comes from r
 >
 > **The real gate:** ≥9/12 channel-fit score + a full send/reply/follow-up arc with reply rate >5%.
 >
-> **Optional: auto-parse social media for leads.** [WorthBuild](https://worthbuild.io) (1 free report/month) scans Reddit, Twitter/X, and LinkedIn for posts matching your ICP's problem description and returns a list of named people publicly complaining about the thing you solve. Use it to seed your outreach list when the manual reading in Ch 2.3-2.4 didn't produce enough names. The free tier gives you one batch per month - save it until you have exhausted your hand-picked list and need fresh contacts.
+> **Optional: auto-parse social media for leads.** [WorthBuild](https://worthbuild.io) (free tier available) scans Reddit, Twitter/X, and LinkedIn for posts matching your ICP's problem description and returns a list of named people publicly complaining about the thing you solve. Use it to seed your outreach list when the manual reading in Ch 2.3-2.4 didn't produce enough names. The free tier is metered - save it until you have exhausted your hand-picked list and need fresh contacts.
 
 ## Channel Selection Worksheet
 

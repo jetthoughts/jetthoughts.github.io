@@ -52,8 +52,8 @@ The stack, top to bottom:
 
 | Layer | Tool | Job | Cost |
 |-------|------|-----|------|
-| UI | Lovable | Render the screens. Send form data down. | $0 free / $25 Pro / $100 Scale |
-| Data | Supabase | Store the user, the row, the file. Listen for Stripe events. | $0 free / $25 Pro |
+| UI | Lovable | Render the screens. Send form data down. | Free tier + paid tiers |
+| Data | Supabase | Store the user, the row, the file. Listen for Stripe events. | Free tier + paid tiers |
 | Money | Stripe | Charge the card. Tell Supabase the customer is paid. | 2.9% + $0.30 per transaction |
 
 The buyer opens the staging URL → Lovable shows the screens → Supabase stores the data → Stripe charges the card → a Stripe webhook tells Supabase the row is now paid.
@@ -96,7 +96,7 @@ Pre-seed founders ask "which framework" before they ask "which job." Three tools
 
 Lovable is an AI-powered builder for the screens. You describe an app in English: *"a dashboard for fitness coaches to log client check-ins, with a weekly export to CSV"*, and Lovable generates a working web frontend with proper component structure, routing, and form validation. Every save deploys to a public staging URL you can paste into a Slack message.
 
-[Lovable's pricing tiers in 2026](https://lovable.dev/pricing) run $0 (Free, capped messages), $25/mo (Pro), $50/mo (Business), and $100/mo (Scale, the tier most paying-MVP founders settle on after the first month).
+[Lovable's pricing](https://lovable.dev/pricing) runs from a capped free tier through paid tiers sized by build velocity - check the pricing page for current numbers. Most paying-MVP founders settle on a mid or scale tier after the first month.
 
 The key thing it does not do well: heavy backend logic, complex auth flows, anything custom on the database side. That is what Supabase is for.
 
@@ -104,9 +104,9 @@ The key thing it does not do well: heavy backend logic, complex auth flows, anyt
 
 Supabase is managed Postgres + auth + file storage + row-level security in one console. Lovable's built-in storage is fine for a prototype; Supabase is what you connect when you have real users whose data has to survive a redeploy.
 
-The free tier handles up to 50,000 monthly active users and 500MB of database before you have to upgrade. Pro is $25/month and most pre-seed founders never outgrow it before they hit the architectural ceiling.
+The free tier comfortably covers early-stage usage - [check Supabase's pricing page](https://supabase.com/pricing) for current limits. Most pre-seed founders never outgrow the first paid tier before they hit the architectural ceiling.
 
-Supabase auto-generates a REST API and a JavaScript client on top of any table you create, which is what Lovable calls when it needs to read or write a row. [Supabase's 2026 pricing](https://supabase.com/pricing) lists the bands clearly. The auth product replaces 80% of what founders used to pay Auth0 or Clerk for; the row-level security policies replace what a contractor would have hand-coded over two weeks.
+Supabase auto-generates a REST API and a JavaScript client on top of any table you create, which is what Lovable calls when it needs to read or write a row. [Supabase's 2026 pricing](https://supabase.com/pricing) lists the bands clearly. The auth product replaces most of what founders used to pay Auth0 or Clerk for; the row-level security policies replace what a contractor would have hand-coded over two weeks.
 
 ### Stripe - the money layer
 
@@ -167,7 +167,7 @@ Synthesis of every rule scattered across Module 4 and the supplementary referenc
 6. **Set up GitHub sync in Lovable Settings on day 1.** Lovable can drop the work; GitHub is your backup. Skipping this is the #1 reason founders cannot retrieve their source.
 7. **Enable Row-Level Security on every Supabase table from day 1.** RLS is the rule that says "Coach A can only read Coach A's rows." Skipping it ships the cross-tenant data leak that ends pilots (see Ch 4.4 Signal 4).
 8. **Stripe webhook handler must be idempotent.** Idempotent means "safe to run twice without breaking anything" - Stripe sometimes sends the same payment event more than once, and your handler must not double-charge or double-activate. Check `WHERE event_id = $1 AND processed = true` before re-running the update. (See production hardening section of [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#production-hardening-checklist-what-your-fractional-cto-will-look-for) for details.)
-9. **Budget envelope: vendor free tiers + per-tool monthly fees.** Lovable free, Supabase free, Stripe transaction fees, domain registration. Upgrade Lovable to $25/mo Pro only when build velocity demands it.
+9. **Budget envelope: vendor free tiers + per-tool monthly fees.** Lovable free, Supabase free, Stripe transaction fees, domain registration. Upgrade Lovable to a paid tier only when build velocity demands it.
 10. **Ship before scope creep, then a short stabilization phase.** Build the smallest end-to-end thing, then a stabilization phase before paid-pilot conversations. Sits inside the multi-month journey to first paying customer.
 11. **Monthly Ch 4.4 ceiling-signal check once the live MVP is up.** Even if everything is green, the habit catches the 5 architectural break-points before they become rebuilds.
 12. **Do not scale a Lovable stack past ~5K users or 2 ceiling signals at red.** When you hit either limit, graduate to a Fractional CTO bridge (see [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge)). The shed is not the house; pouring skyscraper foundations into a shed slab does not build a skyscraper.
@@ -184,7 +184,7 @@ You are about to hit a wall: a Lovable prompt that produces the wrong component,
 | **[Indie Hackers](https://www.indiehackers.com/)** | Bootstrap-focused | Honest revenue posts + shipping logs; Friday-demo accountability rhythm | Free + paid tier (varies) |
 | **[No Code Founders (NCF Slack)](https://www.nocodefounders.com/)** | Full no-code stack (Bubble, Webflow, Glide, Softr) | If Lovable is wrong for your UI shape; worth membership even if you stay on Lovable | Free membership |
 | **r/nocode + r/vibecoding (Reddit)** | Free, indexable | Lower signal-to-noise than Slack; search before post | Free |
-| **[Buildspace + Maven cohorts](https://maven.com/)** | Drew Falkman's "Vibe Coding Data-Enabled AI Apps" (~$1K) | Peer cohort + office hours; for founders who ship harder under deadline | ~$1,000 |
+| **[Buildspace + Maven cohorts](https://maven.com/)** | Drew Falkman's "Vibe Coding Data-Enabled AI Apps" | Peer cohort + office hours; for founders who ship harder under deadline | Paid - check the course page |
 
 None of these is JetThoughts. None of them sells you a service. They are the founder peer pool the YC stance on co-founders [now points at](https://www.ycombinator.com/library/) instead of the 50%-equity hire.
 
@@ -205,7 +205,7 @@ None of these is JetThoughts. None of them sells you a service. They are the fou
 >
 > **If blocked:** If the tools don't click yet, skim the Lovable Discord or Indie Hackers to see real founders shipping with this exact stack. The communities section above lists free help channels.
 
-> **Stuck? Most first-timers stall here:** the 12 rules list feels like a homework checklist and you haven't opened Lovable yet. **Fix:** read ONLY the 3 pre-Lovable rules at the top of the list. The other 9 fire inline during the build - they're reminders, not prerequisites. Open Lovable and paste your brief's Section 3. Ship one screen tonight.
+> **Stuck here?** The 12 rules list feels like a homework checklist and you haven't opened Lovable yet. **Fix:** read ONLY the 3 pre-Lovable rules at the top of the list. The other 9 fire inline during the build - they're reminders, not prerequisites. Open Lovable and paste your brief's Section 3. Ship one screen tonight.
 
 > **Case Study: Tomas & Mia**
 >

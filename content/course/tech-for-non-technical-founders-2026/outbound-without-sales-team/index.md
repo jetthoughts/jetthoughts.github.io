@@ -43,7 +43,7 @@ related_posts: false
 >
 > Reading this chapter before your network is dry is the most common sequencing mistake founders make in Module 5 - it feels like progress, but you are skipping the higher-converting path for the lower one. The chapter will still be here when your network is done.
 
-> **$0 outbound stack.** Apollo's free tier (credit-based: roughly 100 email credits + 10 export credits per month) + a Google Sheet + Gmail mail-merge add-on (free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo Pro ($49) or Smartlead ($39 Base plan) only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
+> **$0 outbound stack.** Apollo's free tier (credit-based - check the current allowance) + a Google Sheet + Gmail mail-merge add-on (free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo's or Smartlead's paid tiers only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
 
 This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
 
@@ -53,7 +53,7 @@ The one difference is that those Module 2 interviewees are warm targets - they a
 
 Product Hunt converted at 3.1% per launch event across 387 launches OpenHunts studied in 2024. Indie Hackers - posts written as engagement rather than launch announcements - converted at 23.1% per engaged post over the same period.
 
-89% of the Product Hunt founders OpenHunts surveyed said they would not launch on the platform again ([source](https://awesome-directories.com/blog/indie-hackers-launch-strategy-guide-2025/)). The data has been public since the OpenHunts study released in mid-2024, yet every "first 10 customers" article still leads with Product Hunt.
+89% of the Product Hunt founders OpenHunts surveyed said they would not launch on the platform again ([OpenHunts launch statistics](https://openhunts.com/blog/tech-product-launch-statistics-insights)). The data has been public since the OpenHunts study released in mid-2024, yet every "first 10 customers" article still leads with Product Hunt.
 
 Product Hunt is not bad; it is a one-day event in a job that needs sustained motion over a quarter.
 
@@ -92,9 +92,9 @@ The five tools and their 2026 pricing:
 
 | Tool | Role | Price |
 |---|---|---|
-| LinkedIn Sales Navigator | Filter buyers by title, company size, funding signal, role tenure | $99/month single-user (Core tier) |
-| Apollo.io (Starter / free tier) | Cheaper alternative to Sales Nav for B2B email + filters | Free tier available; paid Apollo Pro starts ~$49/mo |
-| Loom | 90s product walkthrough + you on camera | Free tier: 25 videos |
+| LinkedIn Sales Navigator | Filter buyers by title, company size, funding signal, role tenure | Paid single-user plans - check LinkedIn pricing |
+| Apollo.io (Starter / free tier) | Cheaper alternative to Sales Nav for B2B email + filters | Free tier available; paid plans for scale |
+| Loom | 90s product walkthrough + you on camera | Free tier available |
 | Calendly | 15-min demo booking, auto-confirm | Free tier supports one event type |
 | Stripe Invoice | Pilot deposit, no monthly fee | 2.9% + 30c per transaction |
 
@@ -137,7 +137,7 @@ Pull 100-150 raw rows. Strip three categories before sending:
 
 You should be left with 30-50 clean names. Hold the bottom 20 for a later batch and send the top 30 in the first batch.
 
-> **Apollo free-tier reality.** Apollo's free tier is credit-based (~100 email credits + ~10 EXPORT credits per month). The "pull 100-150 raw rows" instruction is achievable on the free tier only if you spread it across 10+ months OR use LinkedIn DM for batch 1 and reserve Apollo exports for batch 2+. Recommended sequence for free-tier founders: (1) build batch 1 from your existing LinkedIn 1st-degree connections + Sales Navigator trial (free for 1 month, no Apollo needed); (2) start Apollo on month 2 with the credits dripping in over time; (3) upgrade to Apollo Pro ($49/mo) only when you have a working reply-rate signal that justifies the spend.
+> **Apollo free-tier reality.** Apollo's free tier is credit-based (a small monthly allowance of email and export credits). The "pull 100-150 raw rows" instruction usually exceeds one month of free credits, so either spread it over time OR use LinkedIn DM for batch 1 and reserve Apollo exports for batch 2+. Recommended sequence for free-tier founders: (1) build batch 1 from your existing LinkedIn 1st-degree connections + Sales Navigator trial (free for 1 month, no Apollo needed); (2) start Apollo on month 2 with the credits dripping in over time; (3) upgrade to a paid Apollo tier only when you have a working reply-rate signal that justifies the spend.
 
 ### Personalize: 60-90 seconds per name, not 10 minutes
 
@@ -209,7 +209,7 @@ flowchart TB
     class W3,W7 conv;
 ```
 
-Expect a 10-20% reply rate on a properly filtered, properly personalized 30-message batch. That is 3-6 replies, of which 2-4 will agree to a 15-minute demo. Of the demos, 1-2 will agree to a paid pilot. Of the pilots, the [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds - around 60% of paid pilots convert to year-one customers.
+Expect a 10-20% reply rate on a properly filtered, properly personalized 30-message batch. That is 3-6 replies, of which 2-4 will agree to a 15-minute demo. Of the demos, 1-2 will agree to a paid pilot. Of the pilots, the [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds.
 
 The 30-message batch is not a one-time event. Run fresh 30-message batches until you have 20 customers. The second and third batches will outperform the first by 30-50% because you will have learned which reference patterns earn replies and which do not.
 
@@ -277,7 +277,7 @@ Module 5 closes with a deposit in your Stripe account. Everything from here is k
 
 ## Further reading
 
-- OpenHunts (via Awesome Directories), [Indie Hackers Launch Strategy Guide 2025](https://awesome-directories.com/blog/indie-hackers-launch-strategy-guide-2025/) - source for the Product Hunt 3.1% vs Indie Hackers 23.1% per-engaged-post conversion data from the 387-launch 2024 study.
+- OpenHunts, [Product Launch Statistics: Success Rates & Data](https://openhunts.com/blog/tech-product-launch-statistics-insights) - the primary source for the Product Hunt 3.1% vs Indie Hackers 23.1% per-engaged-post conversion data (387-launch 2024 study, 156 founders surveyed).
 - Lenny Rachitsky, [How to win your first 10 B2B customers](https://www.lennysnewsletter.com/p/how-to-win-your-first-10-b2b-customers) - the 7-step playbook from 100+ B2B founders, including the cold-outbound section.
 - First Round Capital, [Cold Outreach That Works: A Founder Playbook](https://review.firstround.com/from-1-to-1000-users-tactics-from-airbnb-tinder-etsy-reddit-and-more/) - tactical cold-outreach scripts from Airbnb, Tinder, Etsy, Reddit founder interviews.
 - Paul Graham, [Do Things That Don't Scale](http://paulgraham.com/ds.html) - the foundational text on manual customer recruitment, including the Stripe Collison-brothers cold-DM-and-install motion.

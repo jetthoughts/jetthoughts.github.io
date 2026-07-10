@@ -305,7 +305,11 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 
 **Module 2 exit gate:** All 6 micro-lessons follow template. Core path (2.1 → 2.3a → 2.3b → 2.4) produces validated problem statement without 2.2. Bridge chain verified.
 
-#### Module 3 — Design from Evidence (~1-2 days) — PLAN REVISED + CONFIRMED 2026-07-09 (post-M2 re-review)
+#### Module 3 — Design from Evidence (~1-2 days) — IN PROGRESS on branch `module-3-design-from-evidence` (2026-07-09)
+
+**Progress 2026-07-10:** whole-course 4-lens validity review run mid-sprint at user request - verdict VALID, 13 finding-classes fixed in 46b3f0a4 (M5 numbering collision on Going Further pages, 3 Sam persona leaks, volatile price hardcodes across 7 M4/M5 files, OpenHunts primary-source repoint, 35→30 canon, 32 ratchet sigs). Full report + carry-forwards: `40-49-review/40.15-whole-course-review-2026-07-10.md`. M4/M5 sprint scopes now pre-seeded by 40.15 §Deferred.
+
+**Progress 2026-07-09:** steps 1-6 done - 3.1 v2 (ea8943ec, incl. course-wide 2.1→2.5 mislabel + Maven price sweep across 5.1/4.1/4.3a/worksheet/companion, 6 ratchet sigs), 3.2 v2 with I1-I3 (4a2ff457), Mia walkthrough + See-it-in-action + case-block removal (453fc5be), companion aligned + cover wired + 90-min contradiction fixed (95a5c23e), SVG-internal renumber leftovers fixed - visual QA caught 'Chapter 2.1' inside vibe-prd-template-visual.svg and pivot-ledger.svg, note the ratchet does NOT scan SVGs (3220e2f2, 498974ca). I4 verified already-compliant (2-forks section already sits below the template as a labeled flowchart). Covers verified current (no regen needed). Mobile: no overflow, mermaids compact. Orientation pages already correct for M3. 2026-07-10 finalization: 4-lens M3 fan-out (ICP/quality/voice/boundary) - all findings fixed in e854b3d9 (walkthrough coherence, rubric contradiction, callout stacks, glosses, Sarah-anecdote single-sourcing, Most-first-timers dodge in 4 Stuck boxes); visual scroll gate run on all 4 pages x 2 viewports (mermaid clipping + SVG border overflow + stale companion cover fixed, cover regenerated); scroll gate codified as blocking check in docs/workflows/visual-scroll-gate.md + CLAUDE.md + 30.03 §7 + 40.13 (a05424f5). PR #352 carries the full sprint.
 
 > The original "2 chapters → ~3 micro-lessons" plan predates the M2 sprint and is superseded by this section. Revision grounded in: M2 shipped shape (PR #351), 40.13 process rules, 30.03 §2.7, and a fresh re-read of both M3 chapters on 2026-07-09.
 

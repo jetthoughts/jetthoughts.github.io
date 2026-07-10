@@ -48,7 +48,7 @@ If no real reference exists for a cold-bucket name, move them to [Ch 5.5 cold ou
 
 **Part 2: One line on the problem, in their language.** Use the verbatim Q3 answers from your [Chapter 5.1 survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/). "I am building a tool that lets B2B marketers run an end-to-end attribution model without an analyst."
 
-**Part 3: A Loom video, not a paragraph.** Record one 90-second Loom. Free tier gives you 25 videos. Show your product in 60 seconds, you on camera for the other 30. The Loom script comes directly from your Ch 5.1 verbatims. Read the Q2-Q3 quotes aloud, then point at the product feature that addresses the pain they describe.
+**Part 3: A Loom video, not a paragraph.** Record one 90-second Loom. The free tier covers this batch. Show your product in 60 seconds, you on camera for the other 30. The Loom script comes directly from your Ch 5.1 verbatims. Read the Q2-Q3 quotes aloud, then point at the product feature that addresses the pain they describe.
 
 **Part 4: A specific ask.** "15 minutes to walk you through it and see if it solves [the problem]? Open to a paid pilot if it does. Calendly: [link]." The "paid pilot" teaser is load-bearing. Full mechanic lives in [5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/).
 
