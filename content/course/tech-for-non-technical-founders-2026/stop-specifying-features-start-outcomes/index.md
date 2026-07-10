@@ -29,19 +29,21 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 3 · Step 2 of 2** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 3 · Lesson 3.2 · [CORE] - the quality gate on your 3.1 brief** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a one-page Product Brief (from [Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/))
 >
 > **Output:** a one-page Product Brief rewritten so engineers and AI agents stop overengineering
-
-> **Jump to:** [What to do tomorrow](#what-to-do-tomorrow) · [Artifacts you carry out](#artifacts-you-carry-out-of-module-3)
+>
+> **Progress:** M3 · 2 of 2 · Results so far: one-page brief drafted (3.1) - this page stress-tests Section 3 before Module 4 builds from it
 
 > **TL;DR:** Rewrite every feature noun as an outcome-shaped job story. "Build a CSV export" becomes "When I prepare the weekly report, I want to grab the top 5 metrics in 30 seconds." The engineer has nothing left to invent.
 
-> **Skip to the action:** [What to do tomorrow](#what-to-do-tomorrow) if you have your Ch 3.1 brief open and want the rewrite steps now. The examples and the theory will still be here.
+> **Skip to the action:** [What to do tomorrow](#what-to-do-tomorrow) if you have your Ch 3.1 brief open and want the rewrite steps now, or jump ahead to [Artifacts you carry out of Module 3](#artifacts-you-carry-out-of-module-3). The examples and the theory will still be here.
 
 You sent your engineer (or your AI agent) a one-line spec: *"build a simple admin panel."* Ten weeks later you have an admin panel with 47 buttons, role-based permissions, an audit log, and a co-pilot AI assistant. Your engineer isn't a show-off - those four words "a simple admin panel" don't tell anyone what "simple" means, who's using the panel, or what the panel needs to do. The engineer (or the training data) filled in those blanks from every big-company SaaS panel they had ever seen.
+
+You finished Section 3 of your brief in the last lesson, so this page can feel like being asked to write it twice. It is not a rewrite for style - it is the 20-minute check that decides whether the builder ships the three buttons you meant or the spaceship above. The Section 3 you fix here is the exact text Module 4 pastes into Lovable.
 
 ![A hand-drawn comparison: the simple three-button admin panel you asked for on the left, the absurdly complex 47-button control deck that got built on the right, connected by a red arrow labeled 10-week build, $15K](admin-panel-spaceship.svg)
 
@@ -139,6 +141,8 @@ Three actions, in order.
 >
 > If Claude names 2+ items outside your no-go list, the brief failed quality-check the same as a peer flagging them. Revise Section 3 and re-run. This is the same failure signal a peer would surface, with no calendar coordination needed.
 >
+> **No peer and no AI account?** The manual pass works too: read each Section 3 line and ask, "is this a thing the user does, or a thing the software has?" A line that names software parts (a dashboard, user roles, a settings page) is feature-shaped - rewrite it in the *When / I want / So I can* shape until it names a moment and a result instead.
+>
 > **What AI cannot prove or substitute:**
 > - Whether your scope solves the validated problem (only the Module 4 build + real users can)
 > - Whether a real contractor would interpret the brief the same way (AI is a proxy, not a substitute)
@@ -175,8 +179,11 @@ When your brief skips the moment, the action, and the result, the engineer or th
 - Tom Kerwin, [JTBD Job Stories vs User Stories](https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27) - the 2013 Klement piece on Medium that popularised the shape, for readers who want the original 1,500 words.
 - Y Combinator, [Startup School: How to Write a Product Spec](https://www.ycombinator.com/library/) - YC's distilled take on specs that ship versus specs that sit.
 
-> **Done when:** Every feature in Section 3 of your brief is rewritten as an outcome-shaped job story, and a peer (or Claude) confirms the brief stays inside your scope and no-go list.
-> **Next click:** [4.1 · Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
+> **Done:** every line of Section 3 is rewritten in the *When / I want / So I can* shape, and one quality-check pass (peer, AI, or the manual question) names nothing outside your Section 3 scope and no-go list.
+>
+> **You have now:** the complete Module 3 output - a one-page Product Brief with an outcome-shaped Section 3, a no-go list of 5-10 items, and a passed quality check, all in your `Founder OS` folder. This is the page Module 4 builds from.
+>
+> **Next:** [4.1 · Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) - it reads the brief you just quality-checked as its input.
 > **If blocked:** If Claude names 2+ items outside your no-go list when you run the quality-check prompt, your Section 3 is still too vague. Tighten the "When / I want / So I can" shape until Claude's answer stays inside your scope.
 
 > **Stuck? Most first-timers stall here:** every feature in Section 3 looks equally important, so the list keeps growing. **Fix:** pick the ONE outcome that would make a real customer pay or stay. Build that. Cut the rest to the no-go list. You can add them back after the first pilot in Module 5.
