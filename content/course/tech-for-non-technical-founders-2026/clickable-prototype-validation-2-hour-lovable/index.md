@@ -104,7 +104,7 @@ Try to "polish the prototype into the MVP later" and you spend much longer on it
 
 ## Build 3 Screens with Lovable
 
-[Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt. Free trial; . No coding required.
+[Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt. Free trial available. No coding required.
 
 Three screens is the constraint - not five, not ten - because each extra screen multiplies the build effort without sharpening the validation signal.
 

@@ -70,7 +70,7 @@ The signal you are looking for is small. Two paying buyers from 35 cold outreach
 
 We know a B2B SaaS founder who sold five annual contracts at $1,800 each via a Stripe link and a Notion doc before she wrote a line of code. By the time her contractor delivered the v1 web app eight weeks later, she had $9,000 in pre-revenue and a customer-feedback loop already running. The build was constrained by what she had already promised the five buyers, which is the cheapest scope-control mechanism that exists.
 
-Zero clicks from 35 prospects is brutal in the other direction. The problem might be real (you validated it in [Decide What's Next](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next)) but your pitch is wrong, your price is wrong, or the timing is wrong. Find out for $200 instead of $30,000.
+Zero clicks from 35 prospects is brutal in the other direction. The problem might be real (you validated it in [Decide What's Next](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)) but your pitch is wrong, your price is wrong, or the timing is wrong. Find out for $200 instead of $30,000.
 
 ## Pick the right building before you commit to build
 
