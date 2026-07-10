@@ -151,7 +151,7 @@ The Mermaid above is the worksheet. The five questions live in the diagram. The 
 | **Fractional CTO (Q4=No, Q5=fractional)** | Same self-serve build, but the architecture review is bought commercially instead of borrowed from your network. 0% equity. | [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) |
 | **Hire a team (Q2=Yes OR Q5=full team)** | Backend-heavy OR runway gives you 12+ months. Material monthly burn. Read the SOW first. | [SOW reading guide](/course/tech-for-non-technical-founders-2026/sow-reading-guide/) before signing anything |
 
-**Q1 ("problem validated?")** counts as yes only if you have 10+ Mom Test interviews showing strong past-behavior signal, a smoke test that cleared the 6%+ "Promising" band (or a 5%+ Stripe-click), and a 2.4 prototype run with 4 of 5 testers reaching the right screen.
+**Q1 ("problem validated?")** counts as yes only if you have 10+ Mom Test interviews showing strong past-behavior signal, a smoke test that cleared the 6%+ "Promising" band (or a 5%+ Stripe-click), and a Ch 2.6 prototype run with 4 of 5 testers reaching the right screen.
 
 **Q2 ("backend-heavy?")** translates to plain English: does your app need users to see each other typing in real time (Google Docs / Slack behavior), OR does it touch healthcare data, payment-card numbers stored on your servers, or enterprise SOC 2 audits? If neither, the answer is almost certainly **no** - simple apps, dashboards, forms, and single-user tools are not heavy.
 

@@ -205,7 +205,7 @@ None of these is JetThoughts. None of them sells you a service. They are the fou
 >
 > **If blocked:** If the tools don't click yet, skim the Lovable Discord or Indie Hackers to see real founders shipping with this exact stack. The communities section above lists free help channels.
 
-> **Stuck? Most first-timers stall here:** the 12 rules list feels like a homework checklist and you haven't opened Lovable yet. **Fix:** read ONLY the 3 pre-Lovable rules at the top of the list. The other 9 fire inline during the build - they're reminders, not prerequisites. Open Lovable and paste your brief's Section 3. Ship one screen tonight.
+> **Stuck here?** The 12 rules list feels like a homework checklist and you haven't opened Lovable yet. **Fix:** read ONLY the 3 pre-Lovable rules at the top of the list. The other 9 fire inline during the build - they're reminders, not prerequisites. Open Lovable and paste your brief's Section 3. Ship one screen tonight.
 
 > **Case Study: Tomas & Mia**
 >

@@ -49,7 +49,7 @@ related_posts: false
 
 ## Why this exists
 
-A solo founder I spoke with last quarter had a validated problem statement and a Lovable subscription. She typed her problem statement into the Lovable prompt and asked it to "build the simplest version of this." Twelve hours later she had a working web app with a settings page, a billing dashboard, three integrations, and 17 toggles she didn't ask for. She spent the next three weeks deciding which parts to delete. When she opened a second project with a one-page brief - the same problem, but now with a no-go list - Lovable shipped the smallest end-to-end thing in 90 minutes. The page she filled in between the two attempts was the difference. The agent fills blanks with reasonable defaults; the brief is your only way to forbid the defaults.
+A solo founder I spoke with last quarter had a validated problem statement and a Lovable subscription. She typed her problem statement into the Lovable prompt and asked it to "build the simplest version of this." Twelve hours later she had a working web app with a settings page, a billing dashboard, three integrations, and a pile of toggles she didn't ask for. She spent the next three weeks deciding which parts to delete. When she opened a second project with a one-page brief - the same problem, but now with a no-go list - Lovable shipped the smallest end-to-end thing in 90 minutes. The page she filled in between the two attempts was the difference. The agent fills blanks with reasonable defaults; the brief is your only way to forbid the defaults.
 
 ## How to use this
 
@@ -133,7 +133,7 @@ _________________________________________________________
 Output the user gets back:
 _________________________________________________________
 
-Authentication method (magic link / OAuth / none):
+Authentication method (magic link = email sign-in link / OAuth = "sign in with Google" / none):
 _________________________________________________________
 
 What v1 explicitly supports (scope of "done"):
@@ -220,7 +220,7 @@ The same one page works for the first three audiences below. Senior engineers an
 
 > Bad: *"Founders need a better way to handle their finances."*
 
-> Good: *"Pre-seed B2B SaaS founders running their own Stripe-to-QuickBooks reconciliation lose 6 hours per week and £800 per month in CFO contractor time. 8 of 10 interviewees confirmed (May 2026 sample). Quote: 'Tuesday at 9pm I spent 40 minutes copying Stripe payouts into QuickBooks. I called my CFO. She did it in 90 seconds.' Why now: AI inference cost for the classification step fell to $0.001 per call - the unit economics flip at $9/month per seat."*
+> Good: *"Pre-seed B2B SaaS founders running their own Stripe-to-QuickBooks reconciliation lose 6 hours per week and $800 per month in CFO contractor time. 8 of 10 interviewees confirmed (May 2026 sample). Quote: 'Tuesday at 9pm I spent 40 minutes copying Stripe payouts into QuickBooks. I called my CFO. She did it in 90 seconds.' Why now: the AI step that does the matching now costs a fraction of a cent per transaction - cheap enough to sell the whole tool at $9/month per seat."*
 
 The good version is inherited from the validated problem statement. It names the persona by stage, industry, and specific workflow. It puts the cost in time and money. It includes a verbatim quote with a specific moment. It names the why-now with a specific number. A peer can argue with it. The bad version is too broad to argue with, which is why the agent or the junior fills it in for you.
 
@@ -238,7 +238,7 @@ The good version is one paragraph, verb-led. It names the input (paste CSV), the
 
 > Good: *"Not in v1: multi-currency support. Multi-Stripe-account support. Automatic recurring sync. A settings page. A billing dashboard. User roles and permissions. A marketing site beyond the signup page. Mobile responsive design beyond 'works on a 1024px screen.' We will revisit each of these after the Section 4 metric is hit."*
 
-The good no-go list names eight things a competent agent or junior might add. Each is concrete. The bad version is blank, which is how an EdTech founder I spoke with ended up with 17 settings toggles in version one. Twelve had no backend. Two crashed the app. The team had read her brief as a wish list and added everything she didn't forbid.
+The good no-go list names eight things a competent agent or junior might add. Each is concrete. The bad version is blank, which is how the EdTech founder who opens [Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) ended up with 17 settings toggles in version one - 12 with no backend, 2 that crashed. Her team had read the brief as a wish list and added everything she didn't forbid.
 
 ## What to do after
 

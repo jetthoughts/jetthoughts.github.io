@@ -39,7 +39,7 @@ related_posts: false
 
 > **TL;DR:** Rewrite every feature noun as an outcome-shaped job story. "Build a CSV export" becomes "When I prepare the weekly report, I want to grab the top 5 metrics in 30 seconds." The engineer has nothing left to invent.
 
-> **Skip to the action:** [What to do tomorrow](#what-to-do-tomorrow) if you have your Ch 3.1 brief open and want the rewrite steps now, or jump ahead to [Artifacts you carry out of Module 3](#artifacts-you-carry-out-of-module-3). The examples and the theory will still be here.
+*Skip to the action: [What to do tomorrow](#what-to-do-tomorrow) if you have your Ch 3.1 brief open and want the rewrite steps now, or jump ahead to [Artifacts you carry out of Module 3](#artifacts-you-carry-out-of-module-3). The examples and the theory will still be here.*
 
 You sent your engineer (or your AI agent) a one-line spec: *"build a simple admin panel."* Ten weeks later you have an admin panel with 47 buttons, role-based permissions, an audit log, and a co-pilot AI assistant. Your engineer isn't a show-off - those four words "a simple admin panel" don't tell anyone what "simple" means, who's using the panel, or what the panel needs to do. The engineer (or the training data) filled in those blanks from every big-company SaaS panel they had ever seen.
 
@@ -49,13 +49,13 @@ You finished Section 3 of your brief in the last lesson, so this page can feel l
 
 ## Why feature briefs overbuild
 
-Engineers and AI agents fill vague requests from training data - big-company SaaS panels, GitHub-scraped baselines, the busiest version of whatever they last saw. A feature word in isolation ("CSV export," "user roles") has no anchor to your actual job, so the engineer or agent invents the missing context. An outcome-shaped request ("when I prepare the weekly investor report, I want to grab the top 5 metrics in 30 seconds before the 4pm call") leaves nothing for them to invent - the moment, the action, the deadline, and the result are already on the page.
+Engineers and AI agents fill vague requests from training data - big-company SaaS panels, GitHub-scraped baselines, the busiest version of whatever they last saw. A feature word in isolation ("CSV export," "user roles") has no anchor to your actual job, so the engineer or agent invents the missing context. An outcome-shaped request ("when I prepare the weekly investor report, I want to grab the top 5 metrics in 30 seconds before the 4pm call") leaves no blanks to fill - the moment, the action, the deadline, and the result are already on the page.
 
 ## Two briefs, two shapes each
 
 Same job, two ways to write it. Read each pair out loud. Notice how much the engineer or the agent has to invent under the feature shape, and how little they have to invent under the outcome shape.
 
-![Feature-shaped brief on the left leading to a sketched BI suite with nine modules; outcome-shaped brief on the right leading to a single 'Copy top 5 metrics' button with a five-row data table](feature-vs-outcome.svg)
+![Feature-shaped brief on the left leading to a sketched BI suite bristling with modules; outcome-shaped brief on the right leading to a single 'Copy top 5 metrics' button with a five-row data table](feature-vs-outcome.svg)
 
 ### Pair 1 - The CSV button
 
@@ -65,7 +65,7 @@ Same job, two ways to write it. Read each pair out loud. Notice how much the eng
 
 What the engineer builds from the feature shape: a reporting module with three dashboards, scheduled email exports, role-based access on who can export, a date-range picker, custom column selectors, and an audit log of every download. Six weeks of work. You used the CSV button once a week for the investor email and ignored the other eight features.
 
-What the engineer builds from the outcome shape: one button at the bottom of the existing dashboard that says *"Copy top 5 metrics to clipboard,"* hard-coded to MRR, net new MRR, active accounts, trial-to-paid conversion, and runway. Ninety minutes of work in a Rails controller, one line per metric. The next investor email goes out before the deck even opens.
+What the engineer builds from the outcome shape: one button at the bottom of the existing dashboard that says *"Copy top 5 metrics to clipboard,"* hard-coded to MRR (monthly recurring revenue - what subscribers pay you each month), net new MRR, active accounts, trial-to-paid conversion, and runway. Ninety minutes of work in a Rails controller, one line per metric. The next investor email goes out before the deck even opens.
 
 ### Pair 2 - The CRM module
 
@@ -87,7 +87,7 @@ Both outcome-shaped briefs in the section above use the same three parts. The sh
 
 **So I can [outcome]** - the business or personal result that proves the build worked. *"So I can paste them into the deck before the 4pm call"* gives a finish line the engineer can hold up against any feature suggestion. The engineer can now say: *"Does the build let you paste into the deck before 4pm? Then we are done. Does the audit log help with that? No? Cut it."*
 
-Put the three parts together and the engineer (or the AI agent) has nowhere left to invent. Drop any one part - the timeframe, the action, or the outcome - and the gap gets filled in from training data instead of your intent. The same shape has a name in product-management literature; see *Further reading* below if you want to chase the lineage.
+Put the three parts together and the engineer (or the AI agent) has no gaps left to guess at. Drop any one part - the timeframe, the action, or the outcome - and the gap gets filled in from training data instead of your intent. The same shape has a name in product-management literature; see *Further reading* below if you want to chase the lineage.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -119,14 +119,13 @@ flowchart TD
 
 Three actions, in order.
 
-- **Open your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1.** Find Section 3 ("What you're building"). Read the section out loud. If any line begins with a noun-shaped feature ("a CSV button," "a CRM," "user roles," "a settings page"), it is feature-shaped. Mark it.
-- **Rewrite each marked line in the *When / I want / So I can* shape.** The *when* has to name a specific moment with a deadline, the *I want* has to name a verb and a budget, and the *so I can* has to name a result you can measure that week. Keep the whole section to a single focused pass. If you spill, the section is too big - your one-page brief is trying to be three.
+- **Open your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1.** Find Section 3 ("What you're building"). Read the section out loud. If any sentence leans on a noun-shaped feature ("a CSV button," "a CRM," "user roles," "a settings page"), it is feature-shaped. Mark it.
+- **Rewrite each marked sentence in the *When / I want / So I can* shape.** The *when* has to name a specific moment with a deadline, the *I want* has to name a verb and a budget, and the *so I can* has to name a result you can measure that week. Keep the whole section to a single focused pass. If you spill, the section is too big - your one-page brief is trying to be three.
 - **Share the rewritten section with your engineer or your AI agent and ask exactly one question**: *"What would you build differently from this brief than you would have built from the feature list?"* Their first answer is the scope you were about to lose. Their second answer is the scope you are about to keep.
 
 > **The pass/fail rubric.** Read the peer's answer. The brief PASSES quality-check only if their answer stays inside your scope - the features in your Section 3 and the items NOT in your no-go list. The brief FAILS if their answer:
 >
-> - names any feature you didn't list in Section 3, OR
-> - mentions anything you explicitly cut in your no-go list, OR
+> - names anything you explicitly cut in your no-go list, OR
 > - includes 2+ items outside the no-go list (your scope is too vague).
 >
 > FAIL = revise Section 3 outcome-shape and ask a fresh peer. Do NOT advance to Module 4 with a failed brief; the Lovable build will inherit the fuzziness.
@@ -149,9 +148,9 @@ Three actions, in order.
 >
 > **The real gate:** a clean peer QA (human or AI) where the answer stays inside your scope AND no-go list.
 
-> The cheap fix for this whole pattern is the rewrite tomorrow morning. The expensive fix is the salvage decision you read after the spaceship lands and investors ask why the demo is so heavy. One focused pass with a marker now spares you the build-and-throwaway later.
+The cheap fix for this whole pattern is the rewrite tomorrow morning. The expensive fix is the salvage decision you read after the spaceship lands and investors ask why the demo is so heavy. One focused pass with a marker now spares you the build-and-throwaway later.
 
-> **Optional: stack-rank features with real users.** After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. If you need to know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, not rate everything "very important." Paste your 5-7 outcome statements, send the link to your Ch 2.3-2.4 interviewees, and the forced-choice format surfaces real priorities that a 1-10 rating scale hides. The output is a ranked list backed by pairwise win rates, not averaged scores. Use this before handing the brief to Lovable or a contractor - it prevents the "build everything because everything scored 8/10" trap.
+**Optional: stack-rank features with real users.** After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. If you need to know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, not rate everything "very important." Paste your 5-7 outcome statements, send the link to your Ch 2.3-2.4 interviewees, and the forced-choice format surfaces real priorities that a 1-10 rating scale hides. The output is a ranked list backed by pairwise win rates, not averaged scores. Use this before handing the brief to Lovable or a contractor - it prevents the "build everything because everything scored 8/10" trap.
 
 ## Artifacts you carry out of Module 3
 
@@ -160,14 +159,14 @@ After finishing Ch 3.1-3.2, you have five artifacts. Each one feeds a specific d
 | Artifact | Where it goes next |
 |---|---|
 | **One-Page Product Brief / Vibe PRD** (Ch 3.1 output) | Ch 4.1 build-path decision (the brief is the input the worksheet routes against) + Ch 4.3 (a + b) Lovable kickoff prompt. The single source of truth Module 4 builds from. |
-| **Outcome-shaped feature list** (Ch 3.2 rewrite of Section 3 in Job Story format) | Ch 4.1 contractor SOW (if you route to hire) + Ch 4.3 (a + b) Lovable prompt body. Replaces the noun-shaped feature list that causes overbuild. |
-| **No-Go list** (5-10 items you explicitly cut from Ch 3.1 Section 5) | Ch 4.3 (a + b) self-serve scope guard + Ch 4.4 ceiling-signal monitoring. The written "we are not building this yet" line that prevents Module 4 scope creep. |
+| **Outcome-shaped feature list** (Ch 3.2 rewrite of Section 3 in Job Story format) | Ch 4.1 contractor SOW (Statement of Work - the document that tells a contractor exactly what to build) if you route to hire + Ch 4.3 (a + b) Lovable prompt body. Replaces the noun-shaped feature list that causes overbuild. |
+| **No-Go list** (5-8 items you explicitly cut from Ch 3.1 Section 5) | Ch 4.3 (a + b) self-serve scope guard + Ch 4.4 ceiling-signal monitoring. The written "we are not building this yet" line that prevents Module 4 scope creep. |
 | **Audience-of-one fork** (the audience choice from Ch 3.1: AI agent / junior dev / senior team) | Ch 4.1 Q2 build-path routing. The fork decides whether the brief routes to Lovable (AI agent) or a contractor (junior or senior team). |
 | **Quality-check verdict** (Ch 3.2 - peer answers "what would you build differently?" cleanly?) | Checkpoint before Module 4. If the peer cannot answer cleanly, return to Ch 3.2 and rewrite Section 3 before opening Lovable or sending the SOW. |
 
-> **Module 3 closes here.** Before opening Module 4, you should have: (1) a one-page Product Brief (Vibe PRD) with 5 sections filled in (Ch 3.1), (2) Section 3 rewritten as outcome-shaped job stories that pass the peer "what would you build differently?" test (this chapter), and (3) a no-go list of 5-10 items you explicitly cut. Both in your `Founder OS` folder. Missing one? Go back - Module 4 reads the brief into Lovable prompts; a half-written brief produces a half-working MVP.
+> **Module 3 closes here.** Before opening Module 4, you should have: (1) a one-page Product Brief (Vibe PRD) with 5 sections filled in (Ch 3.1), (2) Section 3 rewritten as outcome-shaped job stories that pass the peer "what would you build differently?" test (this chapter), and (3) a no-go list of 5-8 items you explicitly cut. Both in your `Founder OS` folder. Missing one? Go back - Module 4 reads the brief into Lovable prompts; a half-written brief produces a half-working MVP.
 
-When your brief skips the moment, the action, and the result, the engineer or the AI agent fills them in from training data. Name those three and there is nothing left for them to invent.
+When your brief skips the moment, the action, and the result, the engineer or the AI agent fills them in from training data. Name all three in every line of Section 3, and the builder builds only what you asked for.
 
 ## Further reading
 
@@ -181,12 +180,12 @@ When your brief skips the moment, the action, and the result, the engineer or th
 
 > **Done:** every line of Section 3 is rewritten in the *When / I want / So I can* shape, and one quality-check pass (peer, AI, or the manual question) names nothing outside your Section 3 scope and no-go list.
 >
-> **You have now:** the complete Module 3 output - a one-page Product Brief with an outcome-shaped Section 3, a no-go list of 5-10 items, and a passed quality check, all in your `Founder OS` folder. This is the page Module 4 builds from.
+> **You have now:** the complete Module 3 output - a one-page Product Brief with an outcome-shaped Section 3, a no-go list of 5-8 items, and a passed quality check, all in your `Founder OS` folder. This is the page Module 4 builds from.
 >
 > **Next:** [4.1 · Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) - it reads the brief you just quality-checked as its input.
 > **If blocked:** If Claude names 2+ items outside your no-go list when you run the quality-check prompt, your Section 3 is still too vague. Tighten the "When / I want / So I can" shape until Claude's answer stays inside your scope.
 
-> **Stuck? Most first-timers stall here:** every feature in Section 3 looks equally important, so the list keeps growing. **Fix:** pick the ONE outcome that would make a real customer pay or stay. Build that. Cut the rest to the no-go list. You can add them back after the first pilot in Module 5.
+> **Stuck here?** Every feature in Section 3 looks equally important, so the list keeps growing. **Fix:** pick the ONE outcome that would make a real customer pay or stay. Build that. Cut the rest to the no-go list. You can add them back after the first pilot in Module 5.
 
 ---
 

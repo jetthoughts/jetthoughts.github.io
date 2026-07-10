@@ -316,7 +316,7 @@ A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 b
 >
 > **If blocked:** If the customer says "can we start free and convert later," reframe: the deposit is year-one ACV prepaid, not added cost. If they still say no, they are not in your must-have segment - move to the next lead.
 
-> **Stuck? Most first-timers stall here:** asking for money from someone you know, even as a refundable deposit. **Fix:** the deposit is a test of whether the problem is real - not a test of whether you deserve to be paid. If they value the solved problem less than the deposit, their problem isn't acute enough. Send the DPA to your warmest lead first. The second one is easier.
+> **Stuck here?** Asking for money from someone you know is the stall point, even as a refundable deposit. **Fix:** the deposit is a test of whether the problem is real - not a test of whether you deserve to be paid. If they value the solved problem less than the deposit, their problem isn't acute enough. Send the DPA to your warmest lead first. The second one is easier.
 
 > **Case Study: Tomas & Mia**
 >

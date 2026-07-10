@@ -31,9 +31,9 @@ related_posts: false
 
 > **Module 3 · Lesson 3.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a one-page validated problem statement (from [Ch 2.5 · Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), after running interviews in Ch 2.3 + 2.4) + verbatim "describe in one sentence" vocabulary (from your [Ch 2.6 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) - Section 3 of the brief uses these exact words)
+> **Input:** a one-page validated problem statement (from [Ch 2.5 · Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), after running interviews in Ch 2.3 + 2.4) + verbatim "describe in one sentence" vocabulary (from your [Ch 2.6 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/))
 >
-> **Output:** a one-page Product Brief (Vibe PRD) you can hand to Lovable or a hired team
+> **Output:** a one-page Product Brief (Vibe PRD) you can hand to [Lovable](https://lovable.dev) (an AI app builder that turns a plain-English prompt into a working web app) or a hired team
 >
 > **Progress:** M3 · 1 of 2 · Results so far: a validated problem statement (2.5) + a prototype pass/fail with user vocabulary (2.6) - this page turns them into the one page Module 4 builds from
 
@@ -64,7 +64,7 @@ The simplest reliable order is *problem → user → build → metric → no-go*
 
 ### Section 1 - The problem (lifted from your Chapter 2.5 synthesis)
 
-What goes in it: one paragraph copied directly from your [validated problem statement](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Named persona, named industry, dated 10-call sample, one verbatim quote, one quantified cost.
+What goes in it: one paragraph copied directly from your [validated problem statement](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Named persona, named industry, dated 10-call sample, one verbatim quote, one quantified cost, and the one-line why-now from your problem statement.
 
 Example: *Pre-seed B2B SaaS founders doing their own Stripe-to-QuickBooks reconciliation lose 6 hours per week and $800 per month in CFO contractor time. 8 of 10 interviewees confirmed (May 2026 sample). One founder said: "Tuesday at 9pm I spent 40 minutes copying Stripe payouts into QuickBooks. I called my CFO. She did it in 90 seconds."*
 
@@ -76,13 +76,13 @@ What goes in it: who the user is *while* they're using your product. Not the per
 
 Example: *A pre-seed founder, alone in their browser at 9pm on a Tuesday, finishing the week's bookkeeping. They have a Stripe dashboard open in one tab and a QuickBooks ledger in another. They are tired, mildly annoyed, looking for a way to finish in 10 minutes instead of 40. They will open our app from a bookmark, paste one Stripe export, and close the tab when the numbers line up.*
 
-Common mistake: writing the persona's company size, ARR (annual recurring revenue), and tech stack as if pitching to investors. The agent or contractor doesn't need their TAM (Total Addressable Market - how big the whole market is in dollars; investor-pitch math, not builder math). They need to know the user is tired, has two tabs open, and wants to be done. Specific context produces a usable interface; abstract persona data produces a dashboard with seventeen filters nobody uses.
+Common mistake: writing the persona's company size, ARR (annual recurring revenue), and tech stack as if pitching to investors. The agent or contractor doesn't need their TAM (Total Addressable Market - how big the whole market is in dollars; investor-pitch math, not builder math). They need to know the user is tired, has two tabs open, and wants to be done. Specific context produces a usable interface; abstract persona data produces a dashboard full of filters nobody uses.
 
 ### Section 3 - What you're building (one paragraph, plain English)
 
 What goes in it: one paragraph that names the smallest end-to-end thing a user can do. Verb-led. Mentions the inputs the user provides and the output they get back. No feature list, no tech stack instructions, no mention of microservices or auth strategies.
 
-Example: *A web app where the founder pastes a Stripe payout CSV and the app returns a QuickBooks-compatible journal entry CSV they can import in one click. The first version supports USD only, one Stripe account per user, and no multi-currency. The user authenticates with email + magic link. We never store the CSV after the conversion completes.*
+Example: *A web app where the founder pastes a Stripe payout CSV (a plain spreadsheet-style file exported from Stripe) and the app returns a QuickBooks-compatible journal entry CSV they can import in one click. The first version supports USD only, one Stripe account per user, and no multi-currency. The user authenticates with email + magic link (they type their email and click a one-time sign-in link - no password to build or store). We never store the CSV after the conversion completes.*
 
 Common mistake: writing this in feature-list form ("Stripe integration · QuickBooks export · user dashboard · settings page"). The agent reads the feature list and produces a settings page nobody asked for and an integration that breaks in the first edge case. One paragraph forces you to name the thing the user *does*, not the menu items the engineer might build.
 
@@ -92,7 +92,7 @@ What goes in it: one number, with a unit, that tells you whether the build worke
 
 Example: *Of the first 20 users who land on the app, 10 successfully convert at least one Stripe export to a QuickBooks journal entry within 30 days of signup. Below that, the persona is wrong or the workflow is wrong. The metric is the conversion-completed event in our analytics, not signups.*
 
-Common mistake: listing three metrics (signups, retention, NPS) instead of one. Three metrics let you cherry-pick whichever one looks best. One metric forces a build/no-build decision in 30 days. The [pre-PMF founder rule](/blog/sales-pre-pmf-should-be-done-by-founders/) applies: one number, measured by you, defended in front of one advisor.
+Common mistake: listing three metrics (signups, retention, a satisfaction score) instead of one. Three metrics let you cherry-pick whichever one looks best. One metric forces a build/no-build decision in 30 days. The [pre-PMF founder rule](/blog/sales-pre-pmf-should-be-done-by-founders/) applies: one number, measured by you, defended in front of one advisor.
 
 ### Section 5 - What you're NOT building (the no-go list)
 
@@ -100,7 +100,7 @@ What goes in it: 5 to 8 lines naming the things a competent agent or contractor 
 
 Example: *Not in v1: multi-currency support, multi-Stripe-account support, automatic recurring sync, a settings page, a billing dashboard, user roles and permissions, a marketing site beyond the signup page, mobile responsive design beyond "works on a 1024px screen." We will revisit each of these after metric in Section 4 is hit.*
 
-Common mistake: leaving this section blank because "we'll just say what we want and skip what we don't." Lovable, [Cursor](https://cursor.com), and a hired junior all fill blanks with reasonable defaults, and reasonable defaults stack into a settings page nobody asked for. The same shape produced Sarah's 17 toggles (12 wired to nothing) at the top of this chapter.
+Common mistake: leaving this section blank because "we'll just say what we want and skip what we don't." Lovable, [Cursor](https://cursor.com) (an AI coding tool developers run on their own machines), and a hired junior all fill blanks with reasonable defaults, and reasonable defaults stack into a settings page nobody asked for. The same shape produced Sarah's 17 toggles (12 wired to nothing) at the top of this chapter.
 
 ![Side by side bad vs good Vibe PRD. Left: bad brief reads 'Build a CRM.' Right: good brief names the persona, the 60-second context, the one workflow, the one metric, and the no-go list.](good-vs-bad-prd.svg)
 
@@ -150,9 +150,9 @@ Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.co
 | You wrote the page tonight and can't tell whether it is good. | Yes. Go for peer review + feedback. | Actually, post the draft in a founder Slack - free feedback in 2 hours. |
 | Accountability is your blocker. (3 abandoned briefs in a drawer.) | Yes. The cohort structure + deadline forces you through. | No. You need external structure. The template alone won't help. |
 | You want to go deeper on Lovable + Supabase + Stripe stack mechanics. | Yes. The cohort spends much of its time on exactly this. | No. You'll need the stack tutorials anyway; the template is concept-only. |
-| You can sit alone for 2 hours and finish the brief from the page above. | No. | Yes. The cohort buys peer review + deadline + deeper stack work, but you'll ship either way. |
+| You can sit alone for 90 minutes and finish the brief from the page above. | No. | Yes. The cohort buys peer review + deadline + deeper stack work, but you'll ship either way. |
 
-**Rule of thumb:** If you can sit alone for two hours and finish the brief, start here. The cohort buys structure, deadline, and stack depth. If you can't sit alone, the cohort fee buys the accountability that gets the brief out of you.
+**Rule of thumb:** If you can sit alone for 90 minutes and finish the brief, start here. The cohort buys structure, deadline, and stack depth. If you can't sit alone, the cohort fee buys the accountability that gets the brief out of you.
 
 ## What to do tomorrow
 
