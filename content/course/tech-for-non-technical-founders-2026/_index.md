@@ -101,7 +101,7 @@ Read the modules in order. Each module's output is the next module's input, and 
     <li><span class="module-card__num">2.6</span> <a href="/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/">Build a Clickable Prototype</a></li>
   </ol>
   <p class="module-card__extras">Templates in this module: <a href="/course/tech-for-non-technical-founders-2026/mom-test-interview-script/">Interview Script</a> · <a href="/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/">Validated Problem Statement</a> · <a href="/course/tech-for-non-technical-founders-2026/outreach-sequence-template/">Outreach Sequence</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/">Mia interviews ten parents - a full Module 2 walkthrough</a></p>
-  <p class="module-card__leave"><strong>You leave with:</strong> 10 scored interview transcripts and a prototype 5 real customers have clicked through - evidence you can quote back to yourself when doubt creeps in.</p>
+  <p class="module-card__leave"><strong>You leave with:</strong> 10 scored interview transcripts, a written build/pivot/kill decision, and a prototype 5 real customers have clicked through - evidence you can quote back to yourself when doubt creeps in.</p>
 </div>
 
 <div class="module-card" id="module-3">

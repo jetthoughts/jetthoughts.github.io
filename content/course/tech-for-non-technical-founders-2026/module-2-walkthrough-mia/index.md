@@ -1,6 +1,6 @@
 ---
 title: "Module 2 Walkthrough: Mia Interviews Ten Parents"
-description: "Follow Mia through Module 2 as she drafts Mom Test questions, rehearses them against an AI persona, builds a 30-name list, books ten interviews, and tests a clickable prototype with five parents."
+description: "Follow Mia through Module 2 as she drafts Mom Test questions, rehearses them against an AI persona, builds a 30-name list, books ten interviews, scores them into a build decision, and tests a clickable prototype with five parents."
 date: 2026-07-09
 draft: false
 slug: module-2-walkthrough-mia
@@ -50,9 +50,15 @@ The [outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-
 
 The first interview she broke her own script - described TutorMatch in minute four, watched the answers turn agreeable, and scored the call a 3 out of 10 that evening. The other nine she kept to past tense.
 
+---
+
+## [Lesson 2.5: Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)
+
+The Sunday after her last call, she ran the 90-minute synthesis pass: one row per transcript, a score out of 10 for each, and a strong-signal count at the bottom of the sheet.
+
 The scores told a cleaner story than she'd feared: eight of ten parents had spent real money or real evenings on the problem in the past year - specialist searches that ate three weekends, a $600 mistake with a generic center, one father who had built a spreadsheet of 14 tutors with a column for "actually called back." Two parents were sympathetic but had spent nothing, and she marked them as the polite-interest bucket the gate exists to catch.
 
-Eight of ten cleared the [Module 2 gate](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) of seven. And her Money question got its answer from receipts, not projections: the parents who had hired specialists paid $70-$120 a session, which made her $99-for-four-months founding rate look almost embarrassingly cheap - a pricing note she carried forward for Module 3.
+Eight of ten cleared the gate of seven - a BUILD verdict on the synthesis page's 7+/4-6/under-4 scale - and she wrote the one-page validated problem statement while the transcripts were still fresh. And her Money question got its answer from receipts, not projections: the parents who had hired specialists paid $70-$120 a session, which made her $99-for-four-months founding rate look almost embarrassingly cheap - a pricing note she carried forward for Module 3.
 
 The location question closed too, without an ad dollar: nine of ten described searching by their kid's need first. "Near me" came second, if at all.
 

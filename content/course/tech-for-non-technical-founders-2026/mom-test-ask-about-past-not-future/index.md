@@ -186,7 +186,7 @@ The artifact at **[/course/tech-for-non-technical-founders-2026/mom-test-intervi
 
 **How to use it:** Print the artifact. Keep it open on your second monitor during all 10 interviews. The artifact is the screen-side reference while this post is the explanation of why it works.
 
-After 10 calls, you have either 10 scored transcripts that converge on a real problem (proceed to [Chapter 2.6: Clickable Prototype Validation](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)) or 10 transcripts that don't (re-frame the ICP and run another 10).
+After 10 calls, you have either 10 scored transcripts that converge on a real problem (score them on [Chapter 2.5: Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), then proceed to 2.6) or 10 transcripts that don't (re-frame the ICP and run another 10).
 
 Fake the convergence to start building anyway, and you join the long line of post-mortem threads about wasted MVP spend. The [quality tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) is what happens when you ship against a hypothesis nobody confirmed.
 

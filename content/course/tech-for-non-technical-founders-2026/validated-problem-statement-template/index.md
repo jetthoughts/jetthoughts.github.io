@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to [the Mom Test synthesis section](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/../mom-test-synthesis-build-pivot-kill/). Print after running 10 interviews. Fill in 30 minutes. Show to 2 advisors before building anything.
+📋 Template companion to [the Mom Test synthesis section](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Print after running 10 interviews. Fill in 30 minutes. Show to 2 advisors before building anything.
 
 # Validated Problem Statement Template - One Page, Five Sections
 
@@ -56,7 +56,7 @@ Total time budget: 30 minutes to write, 48 hours to circulate, 1 hour to incorpo
 
 ## The template - copy and paste
 
-Use the markdown block below directly in Notion, or ./mom-test-synthesis-build-pivot-kill/)).
+Use the markdown block below directly in Notion, or copy it into any doc tool - then score it against the [Mom Test Synthesis rubric](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/).
 
 ```text
 ================ VALIDATED PROBLEM STATEMENT ================

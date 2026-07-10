@@ -329,11 +329,11 @@ Catching it in Module 4, after you have started the real build, costs the real b
 
 ## Artifacts you carry out of Module 2
 
-After finishing Ch 2.1-2.4, Sam has five artifacts. Each one feeds a specific downstream destination - this table is the map:
+After finishing Ch 2.1-2.6, Sam has five artifacts. Each one feeds a specific downstream destination - this table is the map:
 
 | Artifact | Where it goes next |
 |---|---|
-| **Validated Problem Statement** (Ch 2.1 synthesis applied to your Ch 2.3-2.4 transcripts) | Ch 3.1 Section 1 - copy verbatim. This is the PRD's foundation. (PRD = product requirements document, the one-page spec a team or AI agent builds from.) |
+| **Validated Problem Statement** (Ch 2.5 synthesis applied to your Ch 2.3-2.4 transcripts) | Ch 3.1 Section 1 - copy verbatim. This is the PRD's foundation. (PRD = product requirements document, the one-page spec a team or AI agent builds from.) |
 | **Pass/fail prototype log** (5 sessions from this chapter) | Reference doc: did we get the shape right? If yes, write the brief. If no, the table above routes you to a revision or restart. |
 | **Verbatim "describe in one sentence" vocabulary** (closing answers from this chapter) | Ch 3.1 Section 3 ("what you're building") + Ch 4.3 (a + b) Lovable prompts. The user's words beat your marketing copy. |
 | **10 raw transcripts** (Ch 2.3-2.4 interview recordings + notes) | Archive. Reference if you ever pivot - they hold the language for a re-targeted ICP. |
@@ -356,7 +356,7 @@ The trap to avoid: doing 2-3 iteration rounds when the matrix says STOP. Module 
 
 ---
 
-The artifacts from this chapter (pass/fail log + vocabulary) plus the validated problem statement from Ch 2.1 synthesis are everything Module 3 needs. The brief goes into [Module 4's fresh Lovable build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/).
+The artifacts from this chapter (pass/fail log + vocabulary) plus the validated problem statement from Ch 2.5 synthesis are everything Module 3 needs. The brief goes into [Module 4's fresh Lovable build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/).
 
 ## What to do next
 
@@ -378,7 +378,7 @@ Nothing from the throwaway prototype carries forward except what you learned.
 > **Done:** 5 silent-observation sessions are complete, scored with pass/fail per session, and you have verbatim vocabulary from the closing "describe in one sentence" answers.
 > **Founder OS · Artifact #3 of 6:** 10 scored Mom Test transcripts (from Ch 2.3 + 2.4) + 5 prototype session pass/fail signals + the `Prototype Vocabulary - [date]` doc with verbatim "describe in one sentence" answers. Drop them all in your `Founder OS` folder; Ch 3.1 reads the vocabulary into Section 3 of the brief.
 >
-> **You have now:** all Module 2 artifacts - scored interviews (2.1-2.3) + prototype feedback from 5 real customers (2.4). Module 2 closes here.
+> **You have now:** all Module 2 artifacts - scored interviews (2.1-2.4), the build/pivot/kill decision (2.5), and prototype feedback from 5 real customers (2.6). Module 2 closes here.
 >
 > **Next:** [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
 >
