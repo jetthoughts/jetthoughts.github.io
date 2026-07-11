@@ -1,3 +1,7 @@
+/* CSS Variables Foundation (WP1.1) — single-use-cases bundle has no critical/base.css,
+   so --font-system-ui must be imported here before use */
+@import "foundations/css-variables.css";
+
 .fl-builder-content *,
 .fl-builder-content *:before,
 .fl-builder-content *:after {
