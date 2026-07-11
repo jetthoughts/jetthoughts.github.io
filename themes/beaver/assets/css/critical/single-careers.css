@@ -57,20 +57,7 @@ h2 {
 h1,
 h2 {
   color: #121212;
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 800;
   line-height: 1.4;
   text-transform: none;
@@ -1441,20 +1428,7 @@ body:not(.single-fl-theme-layout)
   margin-bottom: 0;
 }
 .fl-node-rnjk7gex4iu1 .pp-social-share-content .pp-share-button-title {
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 300;
   font-size: 20px;
 }
@@ -1634,20 +1608,7 @@ body:not(.single-fl-theme-layout)
   font-size: 30px;
 }
 .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield .gfield_label {
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 14px;
 }
@@ -1658,20 +1619,7 @@ body:not(.single-fl-theme-layout)
   input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
     [type="button"]
   ):not([type="image"]):not([type="file"]) {
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 400;
   font-size: 18px;
 }
@@ -1861,20 +1809,7 @@ h1,
 h2,
 h3 {
   color: #121212;
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 800;
   line-height: 1.4;
   text-transform: none;
@@ -1885,20 +1820,7 @@ h1 {
   line-height: 1;
   letter-spacing: -1px;
   color: #121212;
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 800;
   font-style: normal;
   text-transform: none;
@@ -2019,20 +1941,7 @@ input[type="text"]:-ms-input-placeholder {
 .fl-page button:visited {
   color: #fff;
   background-color: #1a8cff;
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.45;
