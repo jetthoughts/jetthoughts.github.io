@@ -1,8 +1,8 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-07-11 (ICP journey audit 40.17 + same-day fix sprint on branch icp-journey-fixes: all 4 waves executed, cold-eyes review passed, all gates green. Execution log: 40.17 §8. PR pending merge.)
+**Last Updated**: 2026-07-11 (PR #354 MERGED as 76acb4ff, deployed, production verified: branch-aware nav live on 2.4/2.5/5.1, M5 walkthrough exits to Going-further, worksheet/stack-walkthrough rewrites live, 10 new covers serving. Also addressed in the same PR: CodeRabbit's 15 review comments + the premium anchor-text class. Execution log: 40.17 §8.)
 
-## Active Phase: icp-journey-fixes PR → then distribution prep
+## Active Phase: external validation pilot (real Sams, kit at 40-49-review/_DEFERRED_external-validation-pilot-kit.md) + funnel instrumentation → distribution prep
 
 **🚀 What shipped 2026-07-09..10: Module 2 v2 complete (PR #351, 20 commits)**
 - ✅ All chapters on the M1 v2 template; numbering FLATTENED to 2.1-2.6 (letters retired; Synthesis is Lesson 2.5, in yaml prev/next). Chapter count derives 25 via course-stat.
