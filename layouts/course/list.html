@@ -39,9 +39,9 @@
 
           {{ if .Params.hero_primary_url }}
             <div class="course-hero-ctas">
-              <a class="cta-link" href="{{ .Params.hero_primary_url }}">{{ .Params.hero_primary_text }}</a>
+              <a class="cta-link" href="{{ .Params.hero_primary_url }}" data-course-event="start-course">{{ .Params.hero_primary_text }}</a>
               {{ if .Params.hero_secondary_url }}
-                <a class="cta-link cta-link--ghost" href="{{ .Params.hero_secondary_url }}">{{ .Params.hero_secondary_text }}</a>
+                <a class="cta-link cta-link--ghost" href="{{ .Params.hero_secondary_url }}" data-course-event="quickstart">{{ .Params.hero_secondary_text }}</a>
               {{ end }}
             </div>
           {{ end }}
@@ -67,4 +67,5 @@
       </article>
     </div>
   </div>
+  {{ partial "blog/course-analytics.html" . }}
 {{ end }}
