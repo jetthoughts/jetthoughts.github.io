@@ -216,7 +216,7 @@ your Notion doc)
 | **4. Hire a team** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)) | Q2 heavy (any budget), or Q4 = $30K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |
 
 **Failure mode to watch for each path** ->
-- Path 1 -> 0 of 35 click. Pivot the pitch or the problem.
+- Path 1 -> 0 of 30 click. Pivot the pitch or the problem.
 - Path 2 -> Hits architectural ceiling at ~5K users. Route to the [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) for the next layer.
 - Path 3 -> CTO drifts into coder. 90-day review on hour allocation.
 - Path 4 -> Spaceship for the wrong moon. Friday demo + Org Chart audit catch it in week 3.

@@ -48,7 +48,7 @@ A solo founder I spoke with last month sent 47 cold DMs to Twitter strangers com
 
 ## How to use this
 
-Block 90 minutes on a single morning. Print the template (or copy the markdown version below into a Notion doc). Bring all 10 interview transcripts, your handwritten Q4 scores, your emotional-flag counts.
+Block 90 minutes on a single morning - about 30 of them go to the writing itself, the rest to re-reading transcripts and scores. Print the template (or copy the markdown version below into a Notion doc). Bring all 10 interview transcripts, your handwritten Q4 scores, your emotional-flag counts.
 
 The order matters. Score first, count second, write the page third. Write the page before scoring and you write the page you wished the calls had returned, not the page the transcripts actually support. The friction of writing the score before the prose is what stops you from talking yourself into the build.
 
