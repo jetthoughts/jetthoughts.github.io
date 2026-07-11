@@ -1,8 +1,8 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-07-10 (M4+M5 v2 COMPLETE on branch modules-4-5-v2 - the whole course is now on the v2 template. Gate report: 40.16.)
+**Last Updated**: 2026-07-11 (M4+M5 merged as PR #353, deployed. ICP customer-journey live walk complete: 6 agents, 44 page-visits against production. Report: 40.17 — 6 P1 journey-breaks found, all navigation-layer or legacy companion pages; lesson prose clean. Improvement sprint proposed in 40.17 §7.)
 
-## Active Phase: M4+M5 release (PR pending) → next: Phase 3 cross-cutting polish or distribution prep
+## Active Phase: ICP journey fixes (40.17 §7 waves 1-4) → then distribution prep
 
 **🚀 What shipped 2026-07-09..10: Module 2 v2 complete (PR #351, 20 commits)**
 - ✅ All chapters on the M1 v2 template; numbering FLATTENED to 2.1-2.6 (letters retired; Synthesis is Lesson 2.5, in yaml prev/next). Chapter count derives 25 via course-stat.
