@@ -46,12 +46,12 @@ The whole message rests on the first line naming something they actually wrote. 
 
 ## The Day-3 bump - two variants, pick honestly
 
-**If this is your first research round:**
-
+> **If this is your first research round:**
+>
 > Bumping this once in case it got buried - I'm at the start of this research and your [POST TOPIC] experience is exactly the kind I'm trying to learn from. 20 minutes, any day this week.
-
-**If you have already run interviews:**
-
+>
+> **If you have already run interviews:**
+>
 > Bumping once - I've now talked to [TRUE NUMBER] people about this, and your situation ([THEIR DETAIL]) is the one the others kept pointing at. I'd love your 20 minutes before I write up what I've heard.
 
 Never claim conversations you have not had. The first-round variant works fine on its own - curiosity about their post is the hook, not your credentials.

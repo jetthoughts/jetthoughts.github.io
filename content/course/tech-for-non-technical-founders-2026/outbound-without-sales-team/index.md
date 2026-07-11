@@ -45,8 +45,6 @@ related_posts: false
 >
 > Reading this chapter before your network is dry is the most common sequencing mistake founders make in Module 5 - it feels like progress, but you are skipping the higher-converting path for the lower one. The chapter will still be here when your network is done.
 
-> **$0 outbound stack.** Apollo's free tier (Apollo is a B2B contact database that finds prospects' names and work emails; its free tier is credit-based - check the current allowance) + a Google Sheet + a Gmail mail-merge add-on (sends the same email to many recipients at once, free) + Loom + Calendly covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo's or Smartlead's paid tiers only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
-
 This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
 
 The 10 people you interviewed in Module 2 may or may not become customers, and outreach to them goes through the sales sequence below rather than the recruitment script.
@@ -81,6 +79,8 @@ Figma's first customer 11-20 cohort reportedly came from cold DMs to influential
 
 You run the whole pipeline in six stages with off-the-shelf tools - no engineer, no $1,200/month sales stack, no Salesforce.
 
+The tooling is a volume choice, and both versions ship the same 30-message batch. The $0 stack - Apollo's free tier (Apollo is a B2B contact database that finds prospects' names and work emails; its free tier is credit-based - check the current allowance), a Google Sheet, a Gmail mail-merge add-on (sends the same email to many recipients at once, free), Loom, and Calendly - covers every stage; you enrich the list by hand in the sheet, which costs your time. The paid version swaps the manual enrichment for automation through Smartlead or Apollo's paid tiers, which costs money and pays off once you're sending 100+ messages a week and the hand-enrichment is the bottleneck. At this chapter's 30-message volume, either works - pick by whether your scarcer resource is hours or dollars.
+
 The cold-outbound pipeline in one glance:
 
 1. **Filter** - LinkedIn Sales Navigator or Apollo.io. Pull 100-150 raw rows, strip to 30 clean names.
@@ -109,7 +109,7 @@ If your buyer is a 50-200 person company contact in a specific industry, Apollo 
 > **Pre-flight: warm your sending domain BEFORE batch 1.** A brand-new sending domain (e.g., `yourcompany.com` registered last week, no email history) will land in spam on batch 1 even with a perfect ICP list and a sharp script. The fix is either:
 >
 > 1. **Use LinkedIn DM for batch 1.** No domain warmup required. Sales Navigator + 30 personalized DMs gets the same reach as cold email for a B2B founder, and the messages reliably deliver.
-> 2. **OR warm the domain for 2-3 weeks first.** Use a tool like [Mailwarm](https://mailwarm.com) or [Smartlead's warmup](https://smartlead.ai) (the same tools mentioned in this chapter's $0 stack section) to send 5-10 low-volume reply-conversation emails per day to seed positive sender reputation. After 2-3 weeks of warmup, send batch 1 from the same domain.
+> 2. **OR warm the domain for 2-3 weeks first.** Use a tool like [Mailwarm](https://mailwarm.com) or [Smartlead's warmup](https://smartlead.ai) (the same Smartlead from the tooling choice above) to send 5-10 low-volume reply-conversation emails per day to seed positive sender reputation. After 2-3 weeks of warmup, send batch 1 from the same domain.
 >
 > Skip this step and the &lt;5% reply-rate diagnostic below tells you "domain rep is dead" - because the domain never had reputation in the first place. The mechanical cause of your 0 replies is the domain, not the ICP filter or the script.
 
@@ -195,7 +195,7 @@ All three variants follow the same shape: a specific reference earns the open, o
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TB
+flowchart LR
     W1[Stage 1<br/>Send 30 messages<br/>1-4 replies expected]
     W2[Stage 2<br/>Run 3-5 demos<br/>2-3 DPAs sent]
     W3[Stage 3<br/>1-2 deposits cleared<br/>Pilot kickoffs scheduled]

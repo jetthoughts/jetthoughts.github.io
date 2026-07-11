@@ -76,6 +76,16 @@
   position: relative;
 }
 
+/* TL;DR callout accent (render-blockquote hook adds .bq-tldr) - gives the
+   lesson-head stack a visual hierarchy: neutral orientation card, purple
+   TL;DR, neutral skip-note. */
+.blog blockquote.bq-tldr {
+  box-shadow: inset 3px 0 0 0 #a855f7;
+  background: rgba(168, 85, 247, 0.05);
+  border-radius: 0 8px 8px 0;
+  padding-right: 16px;
+}
+
 .blog blockquote p {
   margin-top: 22px;
 }

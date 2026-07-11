@@ -64,7 +64,7 @@ Boring is what you want for an MVP. The boring path lets one non-technical found
 
 The cost to disprove your hypothesis is vendor free tiers and the small per-tool monthly fees in the cost table above. The cost to prove it is the same.
 
-> **Alternative: $0 Concierge MVP (no-code "Wizard of Oz" - you fake the automation by hand behind the curtain).** If you want more demand evidence before committing to Lovable code, run a Concierge MVP first: **Tally** (free form) → **Zapier or Make.com** (free routing) → **Airtable or Notion** (free storage). The customer fills the Tally form, Zapier drops the row in Airtable, you process by hand. To the customer it looks automated. Validate willingness-to-pay before committing to the build. All three tools have free tiers. This is a stepping stone, not a replacement; the Lovable + Supabase + Stripe stack is what ships in Chapter 4.4.
+How much demand evidence you already have decides the path. With enough of it, you open Lovable and build. Without it, a $0 Concierge MVP - a no-code "Wizard of Oz" where you fake the automation by hand behind the curtain - gets you more evidence before you commit to Lovable code. Wire up Tally (free form) → Zapier or Make.com (free routing) → Airtable or Notion (free storage): the customer fills the Tally form, Zapier drops the row in Airtable, and you process it by hand. To the customer it looks automated, so you validate willingness-to-pay before writing code. The trade-off is that you run it by hand, which makes it a stepping stone, not a replacement. Either way, the Lovable + Supabase + Stripe stack is what ships in Chapter 4.4.
 
 ## M2 prototype vs M4 MVP - different artifacts, different rigor
 
