@@ -52,7 +52,7 @@
   <text x="750" y="292" font-size="18" text-anchor="middle" fill="#444" font-weight="bold">that delivers what you sold.</text>
 
   <!-- Sticky note -->
-  <rect x="278" y="372" width="360" height="100" fill="#fffacc" stroke="#cc342d" stroke-width="2" filter="url(#rough2)" transform="rotate(-1 458 416)"/>
+  <rect x="222" y="372" width="472" height="100" fill="#fffacc" stroke="#cc342d" stroke-width="2" filter="url(#rough2)" transform="rotate(-1 458 416)"/>
   <text x="458" y="400" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold" transform="rotate(-1 458 416)">If 0 of 30 click: the problem is real,</text>
   <text x="458" y="422" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold" transform="rotate(-1 458 416)">your pitch is wrong. Re-write the page.</text>
   <text x="458" y="446" font-size="18" text-anchor="middle" fill="#666" font-style="italic" transform="rotate(-1 458 416)">$0 spent on engineering. 0% sunk cost. 100% information.</text>

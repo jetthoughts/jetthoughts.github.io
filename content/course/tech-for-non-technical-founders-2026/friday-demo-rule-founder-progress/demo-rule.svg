@@ -55,8 +55,8 @@
     <circle cx="18" cy="19" r="3" fill="#ff5f57"/>
     <circle cx="30" cy="19" r="3" fill="#febc2e"/>
     <circle cx="42" cy="19" r="3" fill="#28c840"/>
-    <rect x="55" y="13" width="150" height="14" rx="3" fill="#ffffff"/>
-    <text x="60" y="24" class="url">staging.acme.app/checkout</text>
+    <rect x="52" y="13" width="156" height="14" rx="3" fill="#ffffff"/>
+    <text x="57" y="24" class="url" style="font-size:9.5px">staging.acme.app/checkout</text>
     <!-- page body -->
     <rect x="8" y="30" width="204" height="107" class="browser-page"/>
     <!-- success line -->
@@ -65,17 +65,17 @@
     <text x="20" y="89" font-family="Caveat, Patrick Hand, cursive" font-size="13" fill="#444">webhook fired ✓</text>
     <text x="20" y="105" font-family="Caveat, Patrick Hand, cursive" font-size="13" fill="#444">receipt → demo@example.com</text>
     <!-- Stripe pill -->
-    <rect x="20" y="113" width="92" height="18" rx="9" class="stripe-pill"/>
-    <text x="66" y="126" text-anchor="middle" class="stripe-text">stripe sandbox</text>
+    <rect x="20" y="113" width="128" height="18" rx="9" class="stripe-pill"/>
+    <text x="84" y="126" text-anchor="middle" class="stripe-text" style="font-size:12px">stripe sandbox</text>
     <!-- laptop base -->
     <polygon points="-15,145 235,145 220,160 0,160" class="laptop-base"/>
   </g>
 
   <!-- Login chip -->
   <g transform="translate(305, 260)">
-    <rect x="0" y="0" width="220" height="50" rx="8" class="ok-box"/>
-    <text x="10" y="20" class="small">login (one message, one paste)</text>
-    <text x="10" y="40" class="url">demo@example.com / example-pass-123</text>
+    <rect x="0" y="0" width="250" height="50" rx="8" class="ok-box"/>
+    <text x="12" y="20" class="small">login (one message, one paste)</text>
+    <text x="12" y="40" class="url" style="font-size:10px">demo@example.com / example-pass-123</text>
   </g>
 
   <!-- Caption -->

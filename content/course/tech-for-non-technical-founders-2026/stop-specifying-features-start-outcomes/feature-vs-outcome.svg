@@ -43,7 +43,7 @@
   <text x="260" y="260" text-anchor="middle" class="h label">What the engineer builds</text>
 
   <!-- BI suite sketch -->
-  <rect x="60" y="278" width="400" height="320" rx="6" fill="#fff" stroke="#cc342d" stroke-width="1.5"/>
+  <rect x="60" y="278" width="400" height="338" rx="6" fill="#fff" stroke="#cc342d" stroke-width="1.5"/>
   <text x="260" y="300" text-anchor="middle" class="h label">Reporting &amp; Analytics Module v1</text>
 
   <rect x="78" y="316" width="118" height="40" class="box-bad"/>

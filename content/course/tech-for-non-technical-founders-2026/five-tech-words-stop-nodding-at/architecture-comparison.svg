@@ -15,8 +15,8 @@
     </style>
   </defs>
 
-  <text x="240" y="40" class="panel-title" text-anchor="middle">HEALTHY (Rails monolith)</text>
-  <text x="60"  y="44" class="check">✓</text>
+  <text x="255" y="40" class="panel-title" text-anchor="middle">HEALTHY (Rails monolith)</text>
+  <text x="42"  y="44" class="check">✓</text>
 
   <rect x="30" y="65" width="420" height="330" rx="14" class="good-box" transform="rotate(-0.3 240 230)"/>
   <text x="240" y="93" class="box-label" text-anchor="middle">Rails monolith · one repo</text>
@@ -44,8 +44,8 @@
   <text x="240" y="370" class="caption" text-anchor="middle">1 repo · 1 full-stack dev ships</text>
   <text x="240" y="392" class="caption" text-anchor="middle">a feature idea-to-production</text>
 
-  <text x="745" y="40"  class="panel-title" text-anchor="middle">OVER-ENGINEERED</text>
-  <text x="615" y="44"  class="x">✗</text>
+  <text x="758" y="40"  class="panel-title" text-anchor="middle">OVER-ENGINEERED</text>
+  <text x="596" y="44"  class="x">✗</text>
 
   <rect x="500" y="80"  width="120" height="55" rx="8" class="bad-box" transform="rotate(-2 560 107)"/>
   <text x="560" y="100" class="small-label" text-anchor="middle">React</text>

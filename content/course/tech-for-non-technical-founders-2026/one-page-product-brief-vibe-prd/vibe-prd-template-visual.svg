@@ -75,6 +75,6 @@
   <text x="160" y="752" class="sans snum">5.</text>
   <text x="194" y="752" class="sans stitle">What you're NOT building (the no-go list)</text>
   <text x="160" y="776" class="sans body">5-8 lines of things the agent or contractor will add unprompted:</text>
-  <text x="160" y="800" class="sans body">_______________________________________________________</text>
-  <text x="595" y="800" class="sans footer">Longer list = cheaper build</text>
+  <text x="160" y="796" class="sans body">_______________________________________________________</text>
+  <text x="840" y="826" text-anchor="end" class="sans footer">Longer list = cheaper build</text>
 </svg>

@@ -50,7 +50,8 @@
 
   <!-- ARROW -->
   <path d="M 330 280 Q 470 200 500 280 Q 530 360 670 280" class="arrow"/>
-  <text x="500" y="200" text-anchor="middle" class="h stamp-bad-text">10-week build · $15,000 · "interpreted the brief"</text>
+  <text x="500" y="176" text-anchor="middle" class="h stamp-bad-text">10-week build · $15,000</text>
+  <text x="500" y="198" text-anchor="middle" class="h stamp-bad-text">"interpreted the brief"</text>
 
   <!-- RIGHT: the spaceship -->
   <text x="830" y="78" text-anchor="middle" class="h stamp-bad-text">What got built</text>

@@ -48,9 +48,9 @@
 
   <!-- Decision arrow -->
   <text x="100" y="160" class="axis">If you ran ads first:</text>
-  <path d="M 100 175 Q 200 230 285 270" class="arrow"/>
-  <text x="100" y="195" class="note">you would burn $3K-$5K</text>
-  <text x="100" y="215" class="note">finding out the same thing.</text>
+  <text x="100" y="183" class="note">you would burn $3K-$5K</text>
+  <text x="100" y="203" class="note">finding out the same thing.</text>
+  <path d="M 115 224 Q 205 250 284 268" class="arrow"/>
 
   <!-- Bottom callout -->
   <rect x="120" y="455" width="660" height="65" rx="12" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
