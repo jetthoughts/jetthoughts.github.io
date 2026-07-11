@@ -4,6 +4,14 @@ description: "Follow Mia through Module 4 as she routes herself to the self-serv
 date: 2026-07-10
 draft: false
 slug: module-4-walkthrough-mia
+course_nav_prev:
+  slug: vibe-coding-ceiling-signals
+  module: "Chapter 4.5"
+  title: "4.5 · Vibe Coding Done Right: 5 Ceiling Signals"
+course_nav_next:
+  slug: must-have-segment-pmf-test
+  module: "Chapter 5.1"
+  title: "5.1 · Your First Customer Is Not a Marketing Problem"
 ---
 
 > **Module 4 walkthrough · Mia** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)

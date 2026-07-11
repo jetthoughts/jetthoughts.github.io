@@ -4,6 +4,14 @@ description: "Follow Mia through Module 1 as she writes a Founding Hypothesis, b
 date: 2026-06-11
 draft: false
 slug: module-1-walkthrough-mia
+course_nav_prev:
+  slug: price-hypothesis-on-smoke-test-page
+  module: "Chapter 1.5"
+  title: "1.5 · Price Your Hypothesis on the Smoke-Test Page"
+course_nav_next:
+  slug: mom-test-ask-about-past-not-future
+  module: "Chapter 2.1"
+  title: "2.1 · The Mom Test: Ask About the Past, Not the Future"
 ---
 
 > **Module 1 walkthrough · Mia** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)

@@ -7,6 +7,14 @@ draft: false
 course_chapter: true
 author: "JetThoughts Team"
 slug: vibe-prd-template
+course_nav_prev:
+  slug: one-page-product-brief-vibe-prd
+  module: "Chapter 3.1"
+  title: "3.1 · The One-Page Product Brief (Vibe PRD)"
+course_nav_next:
+  slug: stop-specifying-features-start-outcomes
+  module: "Chapter 3.2"
+  title: "3.2 · Quality-check your brief: features to outcomes"
 keywords:
   - vibe prd template
   - one page product brief template

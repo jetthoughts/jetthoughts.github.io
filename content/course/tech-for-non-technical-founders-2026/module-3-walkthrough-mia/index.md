@@ -4,6 +4,14 @@ description: "Follow Mia through Module 3 as she turns ten scored transcripts an
 date: 2026-07-09
 draft: false
 slug: module-3-walkthrough-mia
+course_nav_prev:
+  slug: stop-specifying-features-start-outcomes
+  module: "Chapter 3.2"
+  title: "3.2 · Quality-check your brief: features to outcomes"
+course_nav_next:
+  slug: should-you-hire-2026-decision-tree
+  module: "Chapter 4.1"
+  title: "4.1 · Should You Hire? The 2026 Decision Tree"
 ---
 
 > **Module 3 walkthrough · Mia** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)

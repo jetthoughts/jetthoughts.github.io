@@ -4,6 +4,14 @@ description: "Follow Mia through Module 5 as she runs the 40% test on her first 
 date: 2026-07-10
 draft: false
 slug: module-5-walkthrough-mia
+course_nav_prev:
+  slug: paid-pilot-charge-before-ship
+  module: "Chapter 5.6"
+  title: "5.6 · Charge Before You Ship: The Paid Pilot Contract"
+course_nav_next:
+  url: "/course/tech-for-non-technical-founders-2026/#going-further-after-first-paying-customer"
+  module: "After the course"
+  title: "Going further: churn triage, pivot-or-persevere, the operating kit"
 ---
 
 > **Module 5 walkthrough · Mia** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
