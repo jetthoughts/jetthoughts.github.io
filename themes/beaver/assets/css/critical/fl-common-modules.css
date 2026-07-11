@@ -261,7 +261,6 @@
 }
 
 /* Custom JT Rich Text Styles */
-@charset "UTF-8";
 .fl-rich-text p {
   margin-bottom: 0 !important;
 }
@@ -420,7 +419,6 @@ button::-moz-focus-inner {
 }
 
 /* Theme Base Styles (Bootstrap + JT Theme) */
-@charset "UTF-8";
 *,
 *::before,
 *::after {
