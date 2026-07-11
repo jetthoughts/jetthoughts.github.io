@@ -46,7 +46,7 @@ In April 2025, Lasso Security published findings that AI assistants suggested ov
 
 ## What slopsquatting is
 
-LLMs invent package names that sound plausible but do not exist. The original [Lasso Security research from March 2025](https://www.lasso.security/blog/ai-package-hallucinations) tested GPT-4, Claude, and the open-source Code Llama against thousands of common developer prompts. About 5.2% of GPT-4's package suggestions and 21.7% of Code Llama's were hallucinated. [Snyk's reproduction in late 2025](https://snyk.io/articles/slopsquatting-mitigation-strategies/) ran the same experiment across npm and PyPI and confirmed the rate had not improved with newer model releases. Attackers then register the most-suggested hallucinated names as squatted packages, sometimes with a malicious payload (data exfiltration, credential theft, persistence backdoor), sometimes empty until a real victim shows up. Rubygems, PyPI, npm, Composer, and crates.io all have the same exposure. The attack does not need a 0day. It needs a developer who trusts a model.
+LLMs invent package names that sound plausible but do not exist. The original [Lasso Security research from March 2025](https://www.lasso.security/blog/ai-package-hallucinations) tested GPT-4, Claude, and the open-source Code Llama against thousands of common developer prompts. About 5.2% of GPT-4's package suggestions and 21.7% of Code Llama's were hallucinated. [Snyk's slopsquatting write-up](https://snyk.io/articles/slopsquatting-mitigation-strategies/) cites follow-up research putting the overall rate at roughly one in five AI-suggested packages across models. Attackers then register the most-suggested hallucinated names as squatted packages, sometimes with a malicious payload (data exfiltration, credential theft, persistence backdoor), sometimes empty until a real victim shows up. Rubygems, PyPI, npm, Composer, and crates.io all have the same exposure. The attack does not need a 0day. It needs a developer who trusts a model.
 
 ## The 3-line CI gate (the simplest defense)
 
@@ -132,7 +132,7 @@ A working agency signs this without renegotiating. One that fights the language 
 
 ## The 2026 statistics
 
-The threat data has caught up to the technique. [Snyk's audit of AI coding agent skills](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) found that **13.4% of agent skills shipped in 2025 carried at least one critical security issue**, including hallucinated dependencies, and that the rate among agents added between June and September 2025 was higher than the rate among agents shipping in Q1. The trajectory is wrong, not improving.
+The threat data has caught up to the technique. [Snyk's ToxicSkills audit of AI coding agent skills](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) found that **13.4% of the audited agent skills carried at least one critical security issue** (534 skills on the ClawHub registry, February 2026), including hallucinated dependencies.
 
 [SecurityWeek's coverage of the AI coding agents supply-chain risk](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/), published in mid-2025 and updated with the 2026 incident logs, lists three documented production incidents traceable to slopsquatted packages between October 2025 and February 2026:
 
@@ -157,7 +157,7 @@ This is the last supplementary chapter. The full artifact list (Founder OS) and 
 ## Further reading
 
 - Lasso Security, [AI Package Hallucinations: A New Class of Software Supply-Chain Attack](https://www.lasso.security/blog/ai-package-hallucinations) (March 2025) - the original research that named the failure mode and reproduced the attack on Rubygems, PyPI, and npm.
-- Snyk, [Package Hallucinations: When AI Creates Phantom Packages](https://snyk.io/articles/package-hallucinations/) - independent reproduction and the production-incident audit that found 12 codebases with hallucinated `requestz` already merged.
+- Snyk, [Package Hallucinations: When AI Creates Phantom Packages](https://snyk.io/articles/package-hallucinations/) - how hallucinated names become attack vectors, including the empty `huggingface-cli` test package that drew 30,000+ downloads in three months.
 - Snyk, [ToxicSkills: a security audit of AI agent skills](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) - the 13.4% critical-issue rate finding across the agent-skills corpus.
 - Infosecurity Magazine, [AI Hallucinations Open New Slopsquatting Attack Vector](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) (April 2025) - the writeup that coined "slopsquatting" and walked the kill chain for a non-security audience.
 - SecurityWeek, [AI Coding Agents Could Fuel the Next Supply Chain Crisis](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/) - the production-incident log through early 2026 and the policy response from CISA and ENISA.

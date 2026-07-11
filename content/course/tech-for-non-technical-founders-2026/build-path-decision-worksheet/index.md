@@ -221,7 +221,7 @@ your Notion doc)
 
 > Bad: *"I posted on LinkedIn and got 47 likes and 12 comments. People love the idea."*
 
-> Good: *"I ran 12 Mom Test calls (May 2026 sample). 9 of 12 described the exact problem in past-tense with a number attached (hours per week, dollars per month). My smoke-test page converted 8% of visitors on the fake 'Buy' button, above the 6% 'Promising' bar. 4 of 5 prototype testers reached the sign-up screen without me coaching them."*
+> Good: *"I ran 12 Mom Test calls (May 2026 sample). 9 of 12 described the exact problem in past-tense with a number attached (hours per week, dollars per month). My smoke-test page converted 8% of visitors to email sign-ups, above the 6% 'Promising' bar. 4 of 5 prototype testers reached the sign-up screen without me coaching them."*
 
 The good answer is countable: 12 calls, 9 strong signals, an 8% smoke-test click rate, 4 of 5 testers through the prototype. The bad answer is a vibe metric (likes) and a hypothetical (love the idea). Likes are not behavior. The matrix routes the bad answer to Path 1 regardless of how confident the founder feels, because the data is not there.
 
