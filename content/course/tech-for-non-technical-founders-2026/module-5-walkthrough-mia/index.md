@@ -4,6 +4,11 @@ description: "Follow Mia through Module 5 as she runs the 40% test on her first 
 date: 2026-07-10
 draft: false
 slug: module-5-walkthrough-mia
+cover_image: cover.png
+cover_image_alt: "JetThoughts cover showing Mia's Module 5 run - from a 40% test niche to a signed paid pilot and a complete Founder OS"
+metatags:
+  image: cover.png
+  og_title: "Module 5 Walkthrough: Mia Gets Paid"
 course_nav_prev:
   slug: paid-pilot-charge-before-ship
   module: "Chapter 5.6"
@@ -21,6 +26,8 @@ course_nav_next:
 Mia entered Module 5 with a live product and a number that could embarrass her: nineteen invitations sent, and no idea whether anyone who clicked would actually miss TutorMatch if it disappeared. Her six founding members had paid for a promise back in Module 1 - pre-sold, face to face, before the product existed. Module 5 asks the harder question: what does the product earn from people who never made that early bet on Mia herself?
 
 ---
+
+![Mia's Module 5 artifact trail - a 40% test niche, a warm 50-name list, a signed paid pilot, and a complete Founder OS](artifact-trail.svg)
 
 ## [Lesson 5.1: The 40% Test](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
 
