@@ -69,8 +69,10 @@ tasks:
         single-use-cases) that never defined the variable
   - [ ] Extract --color-primary, --color-secondary, --color-text
   - [ ] Extract --border-radius-default, --spacing-unit
-  - [ ] Dedup the identical 35-line Bootstrap :root block copied across
-        8 critical files (~280 lines) — found during 2026-07-11 sprint
+  - [x] Dedup the identical 35-line Bootstrap :root block copied across
+        8 critical files — DELETED outright (sprint 2, 2026-07-11): zero
+        var() consumers repo-wide, so no relocation needed; 280 lines
+        removed; vendor base-4.min.css copy untouched
   - [x] Validation: bin/rake test:critical (46/46 pass, 84 screenshots 0 diffs)
   - [x] Validation: bin/dtest Linux gate (46/46 pass, per commit)
   - [ ] Validation: FCP metrics unchanged
@@ -545,6 +547,16 @@ fcp_metrics:
 ---
 
 ## 🔄 UPDATE LOG
+
+### 2026-07-11 (sprint 2)
+- **Action**: Dead Bootstrap :root block deleted from all 8 critical files
+- **Metrics**: 8 commits (763996f2..17838e2d), 280 lines removed, 0 added
+- **Quality**: 100% test pass both platforms per commit, 0 visual regressions;
+  reviewer independently re-verified zero consumers of all 28 vars
+- **New follow-ups**: stray mid-file @charset in single-services.css,
+  single-use-cases.css, fl-common-modules.css (pre-existing concat leftovers)
+- **Next**: WP1.1 remaining variables (--color-primary already exists in
+  variables/colors.css naming — reconcile), orphaned use-cases-critical.css
 
 ### 2026-07-11
 - **Action**: WP1.1 sprint 1 executed — --font-system-ui extraction complete
