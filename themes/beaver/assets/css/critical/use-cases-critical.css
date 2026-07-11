@@ -118,20 +118,7 @@
 }
 .fl-node-vbmpyhxt6i7k .pp-tabs-labels .pp-tabs-label .pp-tab-title,
 .fl-node-vbmpyhxt6i7k .pp-tabs-panels .pp-tabs-label .pp-tab-title {
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 20px;
   text-align: left;
