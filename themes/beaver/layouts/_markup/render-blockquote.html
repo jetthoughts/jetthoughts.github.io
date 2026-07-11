@@ -3,6 +3,11 @@
   class "bq-tldr" when the quote opens with a bold "TL;DR" label so the
   course lesson-head stack reads visually ranked (orientation card vs
   TL;DR vs skip-note - 40.17 follow-up, Sprint B #4).
+
+  Notes: .Text is the blockquote context field at Hugo 0.164 (.Content is
+  not available here; re-check on major Hugo bumps). This hook also
+  overrides GitHub-style alerts ("> [!NOTE]") - none exist in content
+  today; add an .AlertType branch if they're ever adopted.
 */ -}}
 {{- if strings.HasPrefix .Text "<p><strong>TL;DR" -}}
 <blockquote class="bq-tldr">

@@ -1,6 +1,6 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-07-11 (PR #354 MERGED as 76acb4ff, deployed, production verified: branch-aware nav live on 2.4/2.5/5.1, M5 walkthrough exits to Going-further, worksheet/stack-walkthrough rewrites live, 10 new covers serving. Also addressed in the same PR: CodeRabbit's 15 review comments + the premium anchor-text class. Execution log: 40.17 §8.)
+**Last Updated**: 2026-07-11 (Sprints A+B+C executed on branch course-p0-p1-sprints by a 6-agent swarm + coordinator, cold-eyes review verdict SHIP: GA4 funnel events + Clarity hook + pilot kit revived as 40.18 [Sprint A]; TL;DR accent hook, 5 walkthrough heroes + artifact-trail SVGs, 21 stale cover badges, de-stacks, 1.5 SVG rebuild, 5.7 mermaid LR [Sprint B]; PDF pipeline + 5 printable worksheets [Sprint C]. Paul actions before pilot invites: Clarity project + param, consent posture, budget, calendar - see 40.18 revival section. Earlier same day: PR #354 merged/deployed.)
 
 ## Active Phase: external validation pilot (real Sams, kit at 40-49-review/_DEFERRED_external-validation-pilot-kit.md) + funnel instrumentation → distribution prep
 
