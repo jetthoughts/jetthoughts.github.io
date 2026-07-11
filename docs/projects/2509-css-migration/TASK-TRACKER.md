@@ -559,10 +559,17 @@ fcp_metrics:
   unmasking a short-variant body rule as cascade winner → 17 macOS screenshot
   diffs (Linux green — font resolution masks it). See memory
   project-css-var-extraction-dedup-trap.
-- **BLOCKED pending decision**: skin extraction + --color-ruby literal
-  replacement (same risk class). Options: (a) per-case production-bundle
-  masking analysis, (b) reconfigure/drop postcss-delete-duplicate-css,
-  (c) skip var-extraction for multiply-declared selector/property pairs.
+- **RESOLVED (Paul chose option a — per-case production-bundle masking
+  analysis)**: skin extraction landed for the 3 button-group stacks only
+  (d0da5e7b); body/h1/h1-h6 stay literal with KEEP LITERAL comments —
+  v2 attempt confirmed the minifier hoists merged h1 rules up-cascade
+  (reviewer hand-traced h1 70px→40px inversion; 17 macOS diffs).
+  --color-ruby rollout complete: token defined (91d5da27), foundation
+  inlined site-wide via baseof navigation bundle (987935a1), all 14
+  literal declarations replaced across style.css/navigation.css/
+  single-post.css (6ba9b23b, ef907fc8, 1ae080e0) — each commit gated by
+  production-bundle rule-level diff + rule-count check + both platform
+  suites; zero rollbacks needed under the option-a protocol.
 - **New follow-ups**: root list.html is dead code (no taxonomy pages
   generated; its "blog-list" bundleName collides with blog/list.html's) —
   rename or remove; --color-ruby token name approved by Paul for #cc342d.
