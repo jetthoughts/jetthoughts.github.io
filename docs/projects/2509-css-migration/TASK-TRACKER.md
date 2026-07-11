@@ -548,6 +548,25 @@ fcp_metrics:
 
 ## 🔄 UPDATE LOG
 
+### 2026-07-11 (sprint 3)
+- **Landed**: orphaned use-cases-critical.css deleted (265 lines); 8 invalid
+  mid-file @charset removed; css-variables foundation wired into the 4
+  bundles that lacked it (blog-single, taxonomy list, not_found, course-single)
+- **ROLLED BACK**: skin-65eda28877e04.css font-stack extraction (6 stacks).
+  Root cause: postcss-delete-duplicate-css (production builds only) deletes
+  the later of two byte-identical declarations; converting skin's body
+  font-family to var() made it duplicate an earlier critical-CSS declaration,
+  unmasking a short-variant body rule as cascade winner → 17 macOS screenshot
+  diffs (Linux green — font resolution masks it). See memory
+  project-css-var-extraction-dedup-trap.
+- **BLOCKED pending decision**: skin extraction + --color-ruby literal
+  replacement (same risk class). Options: (a) per-case production-bundle
+  masking analysis, (b) reconfigure/drop postcss-delete-duplicate-css,
+  (c) skip var-extraction for multiply-declared selector/property pairs.
+- **New follow-ups**: root list.html is dead code (no taxonomy pages
+  generated; its "blog-list" bundleName collides with blog/list.html's) —
+  rename or remove; --color-ruby token name approved by Paul for #cc342d.
+
 ### 2026-07-11 (sprint 2)
 - **Action**: Dead Bootstrap :root block deleted from all 8 critical files
 - **Metrics**: 8 commits (763996f2..17838e2d), 280 lines removed, 0 added
