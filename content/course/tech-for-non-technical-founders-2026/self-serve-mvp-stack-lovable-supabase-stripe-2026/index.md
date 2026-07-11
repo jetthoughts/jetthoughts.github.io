@@ -42,11 +42,7 @@ related_posts: false
 
 > **Jump to:** [What each tool does](#what-each-tool-does-in-plain-english) · [12 rules checklist](#12-rules-for-a-self-built-mvp-done-right) · [Communities](#communities-that-replace-a-co-founder) · [The ship plan](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#the-ship-plan)
 
-> **This chapter starts FRESH from your one-page brief - do NOT iterate the Chapter 2.6 prototype.**
->
-> The Chapter 2.6 prototype was a short research artifact: fake data, no auth, viewed by 5 interview subjects, archived after the shape test. This chapter is the production build: real Supabase auth, real Stripe payments, real domain, real users. The first proved users can navigate the SHAPE; the second ships the actual product. Reusing the prototype code multiplies the build effort and ships every research compromise into production.
-
-If you completed Modules 1-4, your default Module 4 path is to build it yourself with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger covered in the [supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/), not a parallel choice.
+If you completed Modules 1-3, your default Module 4 path is to build it yourself with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger covered in the [supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/), not a parallel choice.
 
 You will not write code. You will spend two months running [Mom Test calls](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) before you touch a single tool, then start the build after the [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) is locked and the [build-path decision tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routes you to Path 2.
 
@@ -71,8 +67,6 @@ The cost to disprove your hypothesis is vendor free tiers and the small per-tool
 > **Alternative: $0 Concierge MVP (no-code "Wizard of Oz" - you fake the automation by hand behind the curtain).** If you want more demand evidence before committing to Lovable code, run a Concierge MVP first: **Tally** (free form) → **Zapier or Make.com** (free routing) → **Airtable or Notion** (free storage). The customer fills the Tally form, Zapier drops the row in Airtable, you process by hand. To the customer it looks automated. Validate willingness-to-pay before committing to the build. All three tools have free tiers. This is a stepping stone, not a replacement; the Lovable + Supabase + Stripe stack is what ships in Chapter 4.4.
 
 ## M2 prototype vs M4 MVP - different artifacts, different rigor
-
-**You do NOT polish your Module 2 prototype into the MVP. The prototype was throwaway by design. The MVP is built fresh with production rigor - real auth, real Stripe, real domain, real user data.**
 
 The Module 2 clickable prototype (Lovable in 2 hours) tested whether 5 interview subjects could navigate the SHAPE of the solution. It had no real auth, no payment integration, no production domain. Discard it.
 
@@ -197,7 +191,7 @@ None of these is JetThoughts. None of them sells you a service. They are the fou
 - Rob Walling, [Vibe Coding interview on Creator Science](https://podcast.creatorscience.com/rob-walling/) - the shed vs skyscraper analogy that frames the architectural ceiling. 35-minute listen.
 - Lovable, [Pricing tiers](https://lovable.dev/pricing) and [community Discord](https://lovable.dev/community)
 - Supabase, [Pricing tiers](https://supabase.com/pricing) and [Row-Level Security guide](https://supabase.com/docs/guides/database/postgres/row-level-security)
-- Stripe, [Checkout quickstart](https://docs.stripe.com/payments/checkout/quickstart) and [Pricing page](https://stripe.com/pricing)
+- Stripe, [Checkout quickstart](https://docs.stripe.com/checkout/quickstart) and [Pricing page](https://stripe.com/pricing)
 - DHH, [The One-Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318)
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/)
 

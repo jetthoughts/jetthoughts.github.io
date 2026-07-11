@@ -45,7 +45,7 @@ related_posts: false
 >
 > Reading this chapter before your network is dry is the most common sequencing mistake founders make in Module 5 - it feels like progress, but you are skipping the higher-converting path for the lower one. The chapter will still be here when your network is done.
 
-> **$0 outbound stack.** Apollo's free tier (credit-based - check the current allowance) + a Google Sheet + a Gmail mail-merge add-on (sends the same email to many recipients at once, free) + Loom + Calendly covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo's or Smartlead's paid tiers only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
+> **$0 outbound stack.** Apollo's free tier (Apollo is a B2B contact database that finds prospects' names and work emails; its free tier is credit-based - check the current allowance) + a Google Sheet + a Gmail mail-merge add-on (sends the same email to many recipients at once, free) + Loom + Calendly covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo's or Smartlead's paid tiers only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
 
 This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
 
@@ -67,7 +67,7 @@ The four-line cold-email sequence below is what customer five answers in week th
 
 This is the closing chapter of Module 5 (First Paying Customer). Once your personal network is exhausted, the next 10 customers come from filtered cold outbound, not from launch events.
 
-Figma's first customer 11-20 cohort reportedly came from cold DMs to influential designers; Retool reportedly filtered Crunchbase by funding recency. Your Rails MVP customer 11-20 cohort will come from LinkedIn Sales Navigator (or Apollo, or both) feeding the four-line script below.
+Figma's first customer 11-20 cohort reportedly came from cold DMs to influential designers; Retool reportedly filtered Crunchbase by funding recency. Your Rails MVP customer 11-20 cohort will come from LinkedIn Sales Navigator (LinkedIn's paid search tool for filtering buyers by job title, company size, and industry) or Apollo, or both, feeding the four-line script below.
 
 ## Why Product Hunt is the wrong lever for a B2B SaaS product
 
@@ -258,7 +258,7 @@ The full cold-email scripts (3 variants: B2B SaaS shipped-MVP, B2B services, B2C
 
 ## Advanced (optional sidebar)
 
-Once you have closed 5-10 paid pilots from cold outbound and want to layer on sales-system rigor, read the [First Round Capital sales scripts collection](https://review.firstround.com/category/sales/), Sahil Bloom's ["The First 10 Customers"](https://www.sahilbloom.com/newsletter/the-first-10-customers) playbook, and the [Y Combinator library on early sales](https://www.ycombinator.com/library/4f-startup-sales-the-fastest-way-to-find-your-first-customers). Once you cross customer 30, the sales playbooks designed for solo founders give way to operator manuals: Mark Roberge's *The Sales Acceleration Formula* for hiring your first AE (account executive - a dedicated salesperson), Mike Weinberg's *New Sales. Simplified.* for the manager handbook. The main path above gets you from customer 11 to customer 20. The advanced versions matter after that.
+Once you have closed 5-10 paid pilots from cold outbound and want to layer on sales-system rigor, read First Round Review's [sales article collection](https://review.firstround.com/articles/sales/), Sahil Bloom's [Curiosity Chronicle newsletter](https://www.sahilbloom.com/newsletter), and the [Y Combinator library on founder-led sales](https://www.ycombinator.com/library/Mo-the-sales-playbook-for-founders). Once you cross customer 30, the sales playbooks designed for solo founders give way to operator manuals: Mark Roberge's *The Sales Acceleration Formula* for hiring your first AE (account executive - a dedicated salesperson), Mike Weinberg's *New Sales. Simplified.* for the manager handbook. The main path above gets you from customer 11 to customer 20. The advanced versions matter after that.
 
 > **Module 5 closes here.** → Download the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) (the full 6-piece template bundle). Now you have a paying pilot, the rest of the course is about keeping the build honest while you ship more: the [oversight rhythm](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) sets up the weekly Friday demo + standup + report cadence. Or revisit the [course landing page](/course/tech-for-non-technical-founders-2026/) to pick the next chapter.
 
@@ -281,10 +281,10 @@ Module 5 closes with a deposit in your Stripe account. Everything from here is k
 
 - OpenHunts, [Product Launch Statistics: Success Rates & Data](https://openhunts.com/blog/tech-product-launch-statistics-insights) - the primary source for the Product Hunt 3.1% vs Indie Hackers 23.1% per-engaged-post conversion data (387-launch 2024 study, 156 founders surveyed).
 - Lenny Rachitsky, [How to win your first 10 B2B customers](https://www.lennysnewsletter.com/p/how-to-win-your-first-10-b2b-customers) - the 7-step playbook from 100+ B2B founders, including the cold-outbound section.
-- First Round Capital, [Cold Outreach That Works: A Founder Playbook](https://review.firstround.com/from-1-to-1000-users-tactics-from-airbnb-tinder-etsy-reddit-and-more/) - tactical cold-outreach scripts from Airbnb, Tinder, Etsy, Reddit founder interviews.
+- Lenny Rachitsky, [How the biggest consumer apps got their first 1,000 users](https://www.lennysnewsletter.com/p/how-the-biggest-consumer-apps-got) - first-users tactics from Airbnb, Tinder, Etsy, Reddit and more.
 - Paul Graham, [Do Things That Don't Scale](http://paulgraham.com/ds.html) - the foundational text on manual customer recruitment, including the Stripe Collison-brothers cold-DM-and-install motion.
-- Y Combinator Library, [Startup Sales: The Fastest Way to Find Your First Customers](https://www.ycombinator.com/library/4f-startup-sales-the-fastest-way-to-find-your-first-customers) - YC's collection on founder-led sales including the filter-and-personalize cold-outreach motion.
-- Sahil Bloom, [The First 10 Customers](https://www.sahilbloom.com/newsletter/the-first-10-customers) - playbook framing the relationship-to-cold transition that closes the personal-network gap.
+- Y Combinator Library, [The Sales Playbook for Founders](https://www.ycombinator.com/library/Mo-the-sales-playbook-for-founders) - YC's playbook on founder-led sales, from first pilots to closed recurring revenue.
+- Sahil Bloom, [The Curiosity Chronicle](https://www.sahilbloom.com/newsletter) - his newsletter on early traction and the relationship-to-cold transition that closes the personal-network gap.
 
 > **Done:** 30 cold messages are sent, replies are tracked in your spreadsheet, and 1-2 paid pilots are booked from the replies.
 >

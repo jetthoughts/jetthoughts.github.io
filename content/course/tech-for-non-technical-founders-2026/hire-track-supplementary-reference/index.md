@@ -101,11 +101,10 @@ flowchart TD
 
 ### Seven platforms ranked
 
-The hiring market for AI-Augmented Developers in 2026 lives across seven platforms. Pick two based on your geography decision above. Post the role on both, and do not waste a Friday on a tour of all seven.
+The hiring market for AI-Augmented Developers in 2026 lives across six platforms. Pick two based on your geography decision above. Post the role on both, and do not waste a Friday on a tour of all six.
 
 - **[Toptal Fractional Executives](https://www.toptal.com/fractional/cto)** - Senior + screened, 3-5 day hire cycle, $90-$200/hr. Best for Senior fractional roles where the cost of a wrong hire would dwarf the platform markup.
-- **[Bolster](https://bolster.com/marketplace/fractional-cto/)** - the largest curated fractional executive marketplace. Strong for fractional CTO and VP Engineering.
-- **[GoCoFound](https://gocofound.com/)** - fractional CTO and fractional product specifically. Smaller pool, sharper match for pre-seed founders.
+- **[Bolster](https://www.bolster.com/on-demand-hiring)** - the largest curated fractional executive marketplace. Strong for fractional CTO and VP Engineering.
 - **[LatHire](https://www.lathire.com/)** - LATAM nearshore developers, full-time and contract. Pre-screens for English fluency and engineering depth.
 - **[AI People Agency](https://aipeople.agency/)** - AI-native engineer screening. Sub-48-hour candidate slates for AI Integration Engineer and AI Quality Engineer roles.
 - **[Seedium](https://seedium.io/)** - AI-first software agency. Project work via SOW, not headcount.
@@ -143,13 +142,13 @@ Most "Fractional CTO" listings on LinkedIn are either career CTOs in transition 
 
 **4. References from non-technical founders specifically.** Ask for two non-technical-founder references. Call both. Ask: "Did the Fractional CTO ever push back on a feature you wanted to ship? What happened?" If the answer is "they always shipped what I asked for," that is a no-hire signal.
 
-**5. $400-$600/wk for 5 hrs is the 2026 market range.** [Bolster's marketplace data](https://bolster.com/marketplace/fractional-cto/) and Toptal Fractional Executives put the range at $80 to $120 per hour for a competent Fractional CTO. 5 hours per week lands at $400 to $600. Above $1,000 per week you are paying for a name brand or a CTO over-spec for pre-seed. Below $300 you are buying a junior engineer with the title inflated.
+**5. $400-$600/wk for 5 hrs is the 2026 market range.** [Bolster's marketplace data](https://www.bolster.com/on-demand-hiring) and Toptal Fractional Executives put the range at $80 to $120 per hour for a competent Fractional CTO. 5 hours per week lands at $400 to $600. Above $1,000 per week you are paying for a name brand or a CTO over-spec for pre-seed. Below $300 you are buying a junior engineer with the title inflated.
 
 ### Where to find them
 
 - **LinkedIn**: search "Fractional CTO" + your industry. Send 10 short DMs that name the project and the budget. Reply rate is around 30%.
 - **Y Combinator alumni network**: post in the founder Slack. The talent pool here is dense.
-- **Platforms**: [Toptal Fractional Executives](https://www.toptal.com/fractional/cto), [Bolster](https://bolster.com/marketplace/fractional-cto/), [GoCoFound](https://gocofound.com/). Each pre-screens. You pay a markup, you save a week of vetting.
+- **Platforms**: [Toptal Fractional Executives](https://www.toptal.com/fractional/cto), [Bolster](https://www.bolster.com/on-demand-hiring). Each pre-screens. You pay a markup, you save a week of vetting.
 - **Indie Hackers Fractional channel**: free, slower, founder-to-founder. Best for SaaS micro-startups.
 - **Your investor network**: one email to your lead angel often produces 2 to 4 warm intros within 48 hours.
 

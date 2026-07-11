@@ -101,7 +101,7 @@ In Lovable, install the Supabase integration. Lovable will add the Supabase JS c
 
 ### Phase 3 - add Stripe, wire checkout, $1 test transactions
 
-Create a Stripe account in test mode. Build one product (your monthly plan) at one price (the price your one-page brief locked in). Use [Stripe Checkout](https://docs.stripe.com/payments/checkout/quickstart) for the simplest possible integration: one URL Lovable links to, one webhook (a webhook is an automatic message Stripe sends your app the moment a payment succeeds - you don't write code to call Stripe; Stripe calls you) back to Supabase that flips the `coaches.subscription_status` column to `active` when the charge clears.
+Create a Stripe account in test mode. Build one product (your monthly plan) at one price (the price your one-page brief locked in). Use [Stripe Checkout](https://docs.stripe.com/checkout/quickstart) for the simplest possible integration: one URL Lovable links to, one webhook (a webhook is an automatic message Stripe sends your app the moment a payment succeeds - you don't write code to call Stripe; Stripe calls you) back to Supabase that flips the `coaches.subscription_status` column to `active` when the charge clears.
 
 Spend the rest of the phase running $1 test transactions through the flow: signup, hit the paywall, pay $1 in test mode, land in the paid view. Use Stripe's [test card numbers](https://docs.stripe.com/testing) to simulate failures (declined card, 3D Secure challenge, dispute). The phase demo is to yourself: you sign up as a fake coach, you pay $1, you land on the paid dashboard, you check Supabase, the row says paid. Webhook works.
 
@@ -200,7 +200,7 @@ Build the shed first. Lovable + Supabase + Stripe + a ~$10 domain ships your val
 - Rob Walling, [Vibe Coding interview on Creator Science](https://podcast.creatorscience.com/rob-walling/) - the shed vs skyscraper analogy
 - Lovable, [Pricing tiers](https://lovable.dev/pricing) and [community Discord](https://lovable.dev/community)
 - Supabase, [Row-Level Security guide](https://supabase.com/docs/guides/database/postgres/row-level-security)
-- Stripe, [Checkout quickstart](https://docs.stripe.com/payments/checkout/quickstart) and [Pricing page](https://stripe.com/pricing)
+- Stripe, [Checkout quickstart](https://docs.stripe.com/checkout/quickstart) and [Pricing page](https://stripe.com/pricing)
 - Drew Falkman, "Vibe Coding Data-Enabled AI Apps" on Maven
 
 > **Done:** all 5 green lights are lit - Stripe in live mode, custom domain wired, 1 ICP user tested the paywall, zero JS errors on the signup + checkout flow, and a weekly demo recording exists.

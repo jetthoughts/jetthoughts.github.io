@@ -35,7 +35,7 @@ You have a live page and tracking installed. Now you need cold strangers to see 
 
 After this lesson you will be able to: **make a go / iterate / kill decision on your hypothesis based on what 300 cold strangers do with your page.**
 
----
+## Pick your channel
 
 **Pick your ad channel** based on who your hypothesis names in the [customer] blank. The dollar ranges below are **CPC** (cost-per-click - what one ad click costs you):
 
@@ -44,13 +44,15 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 - **Developer tools** → [Reddit Ads](https://ads.reddit.com/) ($1.25-$3 CPC) in r/programming, r/webdev, r/SaaS.
 - **Niche vertical** → Google Search long-tail ($1-$5 CPC) - real estate, dentists, contractors Googling pain.
 
+## Set your budget
+
 **Budget:** your channel's CPC × 300 visits, plus ~20% slack for ad iterations. On Meta that's $210-$570 in clicks - plan $250-$700 total; on LinkedIn, $1,650-$6,600 before slack. Not ready to spend? Start with the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/) - slower but real.
 
 **Start ad-account setup 2-3 days before launch.** First-time ad accounts can take 24-72 hours to approve. Meta is the slowest; Reddit clears same-day.
 
 ![A landing page with ad traffic arrows pointing to it, a tracking dashboard showing conversion numbers, and a decision arrow leading to go/iterate/kill](smoke-test-signal.svg)
 
----
+## Launch and read the signal
 
 > **Launch:**
 >
@@ -72,7 +74,7 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 
 **✅ Success check:** you have a conversion rate from ≥300 cold visits AND a go/iterate/kill decision written down.
 
----
+## If the number looks wrong
 
 **If this fails: conversion is below 3%.** **Why:** your [customer] or [differentiation] blank is too vague - strangers don't recognize themselves in the headline. **Fix:** go back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the blank that scored lowest on your 4-lens test.
 

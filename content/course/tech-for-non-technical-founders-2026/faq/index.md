@@ -135,4 +135,8 @@ If you validated the problem (10+ customer interviews), start at [Module 3 - Des
 
 ---
 
+**Back to the course:** [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) - or jump back into the module you came from. Ready to start? [Chapter 1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/).
+
+---
+
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

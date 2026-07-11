@@ -35,7 +35,7 @@ Your smoke test collected emails, and an email signup only tells you a stranger 
 
 After this lesson you will be able to: **find out whether strangers will pay for your offer - not just leave an email.**
 
----
+## Set your price hypothesis
 
 A **Stripe Payment Link** is a hosted checkout URL you generate from your Stripe dashboard - no code, no integration. You paste the link on your landing page. Stripe hosts the checkout. Strangers who click through and enter card details produce a payment intent - the strongest demand signal a pre-product page can generate.
 
@@ -49,6 +49,8 @@ Your price hypothesis needs three parts:
 
 **Default price anchor:** if your product replaces manual work, price it against the time it saves - a tool that saves someone 4 hours a month is worth a meaningful fraction of what those hours cost them. Not sure? Spend 10 minutes finding what 2-3 existing tools in your category charge, and start at their middle tier. The number is a hypothesis like everything else here - you'll refine it after Module 2 interviews.
 
+## Write the button copy
+
 **Button copy matters more than the price number.** Two framings we keep reaching for on pre-product pages:
 
 - **Outcome framing:** "Stop spending 4 hours on reconciliation - $97" (anchors price to the problem it replaces)
@@ -58,7 +60,7 @@ Pick one pattern. Do not A/B test - 150 visits each on a $300 budget can't disti
 
 ![Stripe Payment Link flow: dashboard → create link → paste URL on landing page → visitor clicks → card entry → payment intent](stripe-payment-link.svg)
 
----
+## Add the Stripe button
 
 > **Price:**
 >
@@ -69,7 +71,7 @@ Pick one pattern. Do not A/B test - 150 visits each on a $300 budget can't disti
 > 5. Paste the Payment Link URL on your CTA button. Below it, smaller text: "Not ready? Join the waitlist instead."
 > 6. **✅ Success check:** your Stripe dashboard shows live-mode (not test-mode) and the button opens a real checkout page.
 
----
+## If Stripe or checkout stalls
 
 **If this fails: Stripe verification takes more than 3 days.** **Why:** Stripe sometimes requests an ID upload for first-time accounts. **Fix:** build the page without the button. Run the email-only smoke test from 1.4 while Stripe processes. The demand signal doesn't depend on the price button being live today.
 

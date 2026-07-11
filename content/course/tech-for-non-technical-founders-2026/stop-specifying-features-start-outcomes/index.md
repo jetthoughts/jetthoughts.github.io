@@ -37,7 +37,7 @@ related_posts: false
 >
 > **Progress:** M3 · 2 of 2 · Results so far: one-page brief drafted (3.1) - this page stress-tests Section 3 before Module 4 builds from it
 
-> **TL;DR:** Rewrite every feature noun as an outcome-shaped job story. "Build a CSV export" becomes "When I prepare the weekly report, I want to grab the top 5 metrics in 30 seconds." The engineer has nothing left to invent.
+> **TL;DR:** Rewrite every feature noun as an outcome-shaped job story. "Build a CSV export" (CSV = a plain spreadsheet file people open in Excel) becomes "When I prepare the weekly report, I want to grab the top 5 metrics in 30 seconds." The engineer has nothing left to invent.
 
 *Skip to the action: [What to do tomorrow](#what-to-do-tomorrow) if you have your Ch 3.1 brief open and want the rewrite steps now, or jump ahead to [Artifacts you carry out of Module 3](#artifacts-you-carry-out-of-module-3). The examples and the theory will still be here.*
 
@@ -69,7 +69,7 @@ What the engineer builds from the outcome shape: one button at the bottom of the
 
 ### Pair 2 - The CRM module
 
-**Feature shape**: *"Build a CRM module."*
+**Feature shape**: *"Build a CRM module."* (A CRM - customer relationship management tool - is the contact list and deal tracker a sales team works out of.)
 
 **Outcome shape**: *"When a new customer signs up, the founder needs to see which 3 of our existing customers most resemble them, so we can pattern-match the onboarding playbook that worked for those three."*
 
@@ -170,12 +170,12 @@ When your brief skips the moment, the action, and the result, the engineer or th
 
 ## Further reading
 
-- Alan Klement, [*When Coffee and Kale Compete*](https://www.whencoffeeandkalecompete.com/) - the book that introduced the *When / I want / So I can* shape under the name "Job Stories" in 2013. The framework is worth chasing once your team is bigger than two; the shape is worth using tomorrow.
+- Alan Klement, [*When Coffee and Kale Compete*](https://web.archive.org/web/20230319130354/https://www.whencoffeeandkalecompete.com/) - the book that introduced the *When / I want / So I can* shape under the name "Job Stories" in 2013. The framework is worth chasing once your team is bigger than two; the shape is worth using tomorrow.
 - Marty Cagan, [Product vs Feature Teams](https://www.svpg.com/product-vs-feature-teams/) - the canonical essay on why product teams (chartered with outcomes) ship better than feature teams (chartered with feature lists).
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - 45% of LLM-generated code shipped at least one exploitable security flaw. Vague briefs amplify the rate.
 - DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for keeping the architecture small enough that one developer can ship outcomes end-to-end.
 - Basecamp / Ryan Singer, [Shape Up - Appetite vs Estimate](https://basecamp.com/shapeup/1.2-chapter-03) - the chapter on writing pitches that fix the appetite first, so the build collapses to fit.
-- Tom Kerwin, [JTBD Job Stories vs User Stories](https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27) - the 2013 Klement piece on Medium that popularised the shape, for readers who want the original 1,500 words.
+- Tom Kerwin, [JTBD Job Stories vs User Stories](https://web.archive.org/web/20240819160036/https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27) - the 2013 Klement piece on Medium that popularised the shape, for readers who want the original 1,500 words.
 - Y Combinator, [Startup School: How to Write a Product Spec](https://www.ycombinator.com/library/) - YC's distilled take on specs that ship versus specs that sit.
 
 > **Done:** every line of Section 3 is rewritten in the *When / I want / So I can* shape, and one quality-check pass (peer, AI, or the manual question) names nothing outside your Section 3 scope and no-go list.

@@ -72,13 +72,12 @@ $35-$120/hr, project-based, 1-3 days to hire. Pick when: single landing page, lo
 
 ## The 7 platforms ranked
 
-Pick two: one primary based on your geography row above, one backup. Do not post on all seven.
+Pick two: one primary based on your geography row above, one backup. Do not post on all six.
 
 | Platform | Best for | Pricing |
 |---|---|---|
 | [**Toptal Fractional Executives**](https://toptal.com/fractional/cto) | Senior fractional roles, screened top 3% (3-5 days to slate) | $90 - $200/hr |
-| [**Bolster**](https://bolster.com/marketplace) | Largest curated fractional executive marketplace (3-7 days to slate) | Marketplace, transparent |
-| [**GoCoFound**](https://gocofound.com) | Fractional CTO and fractional product specifically (3-7 days to slate) | Project + retainer |
+| [**Bolster**](https://www.bolster.com/on-demand-hiring) | Largest curated fractional executive marketplace (3-7 days to slate) | Marketplace, transparent |
 | [**LatHire**](https://lathire.com) | LATAM nearshore developers, full-time and contract (2-5 days to slate) | $45 - $100/hr |
 | [**AI People Agency**](https://aipeople.agency) | AI-native engineer screening, AI Integration Engineer roles (<48 hr to slate) | $90 - $250/hr |
 | [**Seedium**](https://seedium.io) | AI-first software agency, project work via SOW (1-2 weeks to slate) | Project-based estimate |

@@ -145,7 +145,7 @@ The bad report leans on soft verbs, passive voice, and unnamed actors because it
 - DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for one full-stack developer shipping a feature end-to-end, which is why the five-section report fits on one page.
 - Marty Cagan, [Product Status Reports](https://www.svpg.com/product-status-reports/) - on why traditional status reports tell you nothing about whether the product is moving and what to ask for instead.
 - Will Larson via First Round Review, [Engineering leadership anti-patterns from Stripe, Uber, Carta](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) - on the pull request funnel as the load-bearing signal in any status format.
-- Wes Kao, [How to Write a Great Status Update](https://newsletter.weskao.com/p/great-status-update) - a practitioner reference on the discipline of writing one short, useful update a week.
+- Wes Kao, [How I give the right amount of context](https://newsletter.weskao.com/p/how-i-give-the-right-amount-of-context) - a practitioner reference on the discipline of writing one short, useful update a week.
 - Eric Ries via Lean Startup Co., [What Is an MVP?](https://leanstartup.co/resources/articles/what-is-an-mvp/) - the validated-learning framing that makes "what did we cut?" a real product question, not a comfort question.
 
 Built by JetThoughts as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum. Authorship credit only - no service pitch.

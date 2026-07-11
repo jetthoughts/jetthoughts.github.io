@@ -38,7 +38,7 @@ Run a smoke test without tracking and you get hundreds of clicks, a handful of s
 
 After this lesson you will be able to: **install Clarity and GA4 on your landing page so you can see who visits and what they click before traffic starts.**
 
----
+## The two tools you need
 
 A **tracking snippet** is a small block of code (HTML or JavaScript) that you copy from one site and paste into a field on your page builder. You do not write or edit it. Once installed, each snippet records visitor activity to a dashboard you read later.
 
@@ -50,6 +50,8 @@ You need two things regardless of which ad channel you pick in [Lesson 1.4](/cou
 **Your channel-specific pixel** (Meta Pixel, LinkedIn Insight Tag, or Reddit Pixel) gets installed in Lesson 1.4 after you pick your channel - same process (copy snippet, paste in head-tag), under one minute.
 
 All snippets paste into the **head-tag field** - the hidden block at the top of every webpage. Page builders label this "head," "custom code," or "tracking scripts" (Mixo: Settings → Custom Code → Header).
+
+## The three numbers you'll read
 
 The 3 numbers you will read in Lesson 1.4:
 
@@ -63,7 +65,7 @@ Conversion rate = form submits ÷ page views. That is the number your hypothesis
 
 ![Three tracking snippets stacked vertically: Microsoft Clarity (heatmap icon), ad-platform pixel (target icon), GA4 (chart icon), with arrows pointing to a landing page wireframe showing where each snippet fires (page view, CTA click, form submit)](tracking-snippets.svg)
 
----
+## Install the tracking
 
 > **Install:**
 >
@@ -74,7 +76,7 @@ Conversion rate = form submits ÷ page views. That is the number your hypothesis
 >
 > (One "custom code" field? That field is the head-tag - paste all snippets there.)
 
----
+## If the dashboard stays empty
 
 **If this fails: Clarity shows "No data yet" after 5 minutes.** **Why:** the snippet is in the wrong field - usually pasted in the page body instead of the head tag, or your builder's preview mode is blocking scripts. **Fix:** double-check the field name; most builders separate "head code" from "body code," and the snippet must go in head. If your builder only has one "custom code" field, that field is usually the right one. Still nothing after the fix? Wait one hour and re-check. Clarity sometimes lags on the first install.
 
