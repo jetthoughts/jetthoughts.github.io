@@ -42,7 +42,7 @@ A B2B SaaS founder we picked up in Q2 2026 had been paying $185K base for a San 
 
 ## How to use this
 
-Monday morning, alone, 30 minutes. Bring your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) so you know the backend complexity. Bring your bank statement so you know the budget. Walk the four-row region table, circle the row your scope and budget land in, write the verdict at the top. Then pick two platforms from the seven-row list, one primary and one backup. Then copy the job description template, fill in the four fields in square brackets, and post both before lunch.
+Monday morning, alone, 30 minutes. Bring your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) so you know the backend complexity. Bring your bank statement so you know the budget. Walk the four-row region table, circle the row your scope and budget land in, write the verdict at the top. Then pick two platforms from the six-row list, one primary and one backup. Then copy the job description template, fill in the four fields in square brackets, and post both before lunch.
 
 If you find yourself comparing all four regions for an hour, you are negotiating with yourself. The decision is in your scope (regulated yes/no, async-acceptable yes/no) and your hourly budget. Both are factual.
 
@@ -70,7 +70,7 @@ $15-$70/hr, $30K-$140K annualized, 1-5 days to hire. Pick when: backend-heavy wo
 
 $35-$120/hr, project-based, 1-3 days to hire. Pick when: single landing page, logo, or one-off scraper. Anything you would ship and never touch again. Watch out for: you become the technical interviewer; no platform vetting. NOT for backend, payments, or auth.
 
-## The 7 platforms ranked
+## The 6 platforms ranked
 
 Pick two: one primary based on your geography row above, one backup. Do not post on all six.
 

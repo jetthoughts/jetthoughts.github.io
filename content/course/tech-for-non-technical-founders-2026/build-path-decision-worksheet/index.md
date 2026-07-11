@@ -69,14 +69,14 @@ Counts as YES only if all 4 below are true:
  [ ] 10 or more Mom Test interviews complete
  [ ] Strong past-behavior signal in at least 7 of 10
  [ ] Smoke test cleared the 6%+ "Promising" band -
-     the share of visitors who clicked your fake
-     "Buy" button on the test page (from Module 1)
+     the share of visitors who left their email on
+     your test page (Module 1, Chapter 1.4)
  [ ] Prototype test: 4 of 5 people reached the right
      screen without you coaching them (from Module 2)
 
 LinkedIn likes do not count. "They said they would
 buy" does not count. What people DID counts - the
-clicks on the smoke test and the prototype run, not
+sign-ups on the smoke test and the prototype run, not
 what they said they would do. Pre-orders and paid
 pilots come later (Module 5); you do not need them
 to answer YES here.
@@ -205,9 +205,9 @@ your Notion doc)
 | Path | Choose when | First action this week | Cost |
 |---|---|---|---|
 | **1. Validate without code** | Q1 = No, OR Q3 = less than 4 months | Ship Carrd page + Stripe checkout + Notion FAQ. Send to your 30-name outreach list. | $0 - $300 in tools + optional $100-200 in paid ads |
-| **2. Self-serve build** ([Ch 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) then [4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)) | Q1 yes, Q2 light, Q4 = $0-$400/wk, Q5 = senior eng in network | Paste one-page brief into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
-| **3. Fractional CTO bridge** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge)) | Q1 yes, Q2 mid, Q4 = $1.6K-$4K/mo OR Q5 = no senior eng | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month |
-| **4. Hire a team** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)) | Q1 yes, Q2 heavy, Q4 = $5K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |
+| **2. Self-serve build** ([Ch 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) then [4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)) | Q1 yes, Q2 light or mid, and either Q4 = $0-$400/wk of your own time, or Q4 = $1.6K-$4K/mo with a senior engineer in your network (Q5 yes) | Paste one-page brief into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
+| **3. Fractional CTO bridge** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge)) | Q1 yes, Q2 light or mid, and either Q4 = $1.6K-$4K/mo with no senior engineer (Q5 no), or Q4 = $5K-$30K/mo | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month |
+| **4. Hire a team** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)) | Q2 heavy (any budget), or Q4 = $30K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |
 
 **Failure mode to watch for each path** ->
 - Path 1 -> 0 of 35 click. Pivot the pitch or the problem.

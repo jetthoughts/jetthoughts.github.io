@@ -99,7 +99,7 @@ flowchart TD
   class Upwork upwork
 ```
 
-### Seven platforms ranked
+### Six platforms ranked
 
 The hiring market for AI-Augmented Developers in 2026 lives across six platforms. Pick two based on your geography decision above. Post the role on both, and do not waste a Friday on a tour of all six.
 

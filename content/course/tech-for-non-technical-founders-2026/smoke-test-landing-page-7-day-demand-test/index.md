@@ -37,7 +37,7 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 
 ## Pick your channel
 
-**Pick your ad channel** based on who your hypothesis names in the [customer] blank. The dollar ranges below are **CPC** (cost-per-click - what one ad click costs you):
+Choose based on who your hypothesis names in the [customer] blank. The dollar ranges below are **CPC** (cost-per-click - what one ad click costs you):
 
 - **Selling to individual people** → [Meta Ads](https://business.facebook.com/) ($0.70-$1.90 CPC). Best when the product is visual and the audience is broad.
 - **Selling to businesses, by job title** → [Google Search](https://ads.google.com/) ($3-$8 CPC) if your customer Googles the problem; [LinkedIn](https://www.linkedin.com/campaignmanager/) ($5.70-$22 CPC) if they don't.

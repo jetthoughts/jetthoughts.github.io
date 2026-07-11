@@ -63,7 +63,7 @@
     <text x="20" y="55" font-family="Caveat, Patrick Hand, cursive" font-size="14" fill="#2e7d32" font-weight="700">✓ $1 test charge processed</text>
     <text x="20" y="73" font-family="Caveat, Patrick Hand, cursive" font-size="13" fill="#444">order #1284 → paid</text>
     <text x="20" y="89" font-family="Caveat, Patrick Hand, cursive" font-size="13" fill="#444">webhook fired ✓</text>
-    <text x="20" y="105" font-family="Caveat, Patrick Hand, cursive" font-size="13" fill="#444">receipt → founder@test.com</text>
+    <text x="20" y="105" font-family="Caveat, Patrick Hand, cursive" font-size="13" fill="#444">receipt → demo@example.com</text>
     <!-- Stripe pill -->
     <rect x="20" y="113" width="92" height="18" rx="9" class="stripe-pill"/>
     <text x="66" y="126" text-anchor="middle" class="stripe-text">stripe sandbox</text>
@@ -75,7 +75,7 @@
   <g transform="translate(305, 260)">
     <rect x="0" y="0" width="220" height="50" rx="8" class="ok-box"/>
     <text x="10" y="20" class="small">login (one message, one paste)</text>
-    <text x="10" y="40" class="url">founder@test.com / demo1234</text>
+    <text x="10" y="40" class="url">demo@example.com / example-pass-123</text>
   </g>
 
   <!-- Caption -->

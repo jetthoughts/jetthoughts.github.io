@@ -67,7 +67,7 @@ The per-question detail below explains the failure modes each question catches, 
 
 The question catches the **progress mirage** - tickets moving on Jira while nothing reaches a place the founder can click. Pain #12 in [our ICP profile](/blog/checklist-for-non-tech-founder-agile/) and the single most common signal across our 40+ rescues.
 
-**Pass.** A clickable URL with a specific route. "It is live at `staging.acme.app/checkout/v2`. Use `founder@test.com / demo1234`. The Stripe webhook fires on test card `4242 4242 4242 4242`." You should be able to click it during the call and reach the screen the developer described.
+**Pass.** A clickable URL with a specific route. "It is live at `staging.acme.app/checkout/v2`. Use `demo@example.com / example-pass-123`. The Stripe webhook fires on test card `4242 4242 4242 4242`." You should be able to click it during the call and reach the screen the developer described.
 
 **Fail.** "It is in PR review." / "It will be on staging by Friday." / "I can record a Loom after the standup." All three mean the same thing: nothing shipped yesterday, and the team is hoping you accept process motion as evidence of product motion. A Loom recorded after the fact is not staging - it is a video the team controls.
 

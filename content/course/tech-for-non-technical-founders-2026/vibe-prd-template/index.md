@@ -46,7 +46,7 @@ related_posts: false
 
 # Vibe PRD Template - One Page, Five Sections
 
-*The brief that turns a validated problem into something Lovable (an AI app builder), Cursor (an AI coding editor developers use), or a hired junior can ship from on Tuesday morning.*
+*The brief that turns a validated problem into something Lovable (an AI app builder), Cursor (an AI coding editor developers use), or a hired junior can ship on Tuesday morning.*
 
 > **The one-page brief, 5 sections:**
 > 1. The problem (copied from your validated problem statement)

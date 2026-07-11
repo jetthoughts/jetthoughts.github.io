@@ -81,7 +81,7 @@ Bad answers describe completion as a feeling. Good answers point at evidence and
 
 > Bad: "I will send you a Loom of it after the demo."
 >
-> Good: "staging.acme.app/dashboard. Login: `founder@test.com / demo1234`."
+> Good: "staging.acme.app/dashboard. Login: `demo@example.com / example-pass-123`."
 
 You should be able to click the thing yourself within five minutes. If you cannot, you do not have admin access, the staging environment does not exist, or the feature is not actually deployed. All three are emergencies.
 

@@ -51,7 +51,7 @@ Your price hypothesis needs three parts:
 
 ## Write the button copy
 
-**Button copy matters more than the price number.** Two framings we keep reaching for on pre-product pages:
+The copy matters more than the price number. Two framings we keep reaching for on pre-product pages:
 
 - **Outcome framing:** "Stop spending 4 hours on reconciliation - $97" (anchors price to the problem it replaces)
 - **Risk-reduction framing:** "Reserve your spot - $97 refundable for 30 days" (reduces first-touch risk)
