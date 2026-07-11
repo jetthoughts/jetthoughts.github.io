@@ -52,9 +52,9 @@ Lines Eliminated: 0 / 27,394-31,936 target (0% complete)
 
 ### Work Package Status
 
-#### WP1.1: CSS Variables Foundation 🔲 NOT STARTED
+#### WP1.1: CSS Variables Foundation 🔄 IN PROGRESS
 ```yaml
-status: 🔲 Not Started
+status: 🔄 In Progress (font-system-ui extraction COMPLETE 2026-07-11)
 priority: P0 🔥 Critical
 duration: 4-6 hours
 files_affected: 12 inline critical CSS files
@@ -62,22 +62,35 @@ impact: 2.8KB savings, ~50 lines eliminated
 micro_commits_target: 15-20 commits
 
 tasks:
-  - [ ] Create _css-variables.scss with design tokens
-  - [ ] Extract --font-system-ui variable (18 font-family declarations)
+  - [x] Create foundations/css-variables.css with design tokens (pre-existing, 2025-10-12)
+  - [x] Extract --font-system-ui variable — ALL exact-match literal stacks
+        (25 stacks across 8 critical files) replaced with var(--font-system-ui);
+        @import wired into the 3 no-base bundles (careers, single-careers,
+        single-use-cases) that never defined the variable
   - [ ] Extract --color-primary, --color-secondary, --color-text
   - [ ] Extract --border-radius-default, --spacing-unit
-  - [ ] Update 12 inline critical CSS files to reference variables
-  - [ ] Validation: bin/rake test:critical (all pass)
+  - [ ] Dedup the identical 35-line Bootstrap :root block copied across
+        8 critical files (~280 lines) — found during 2026-07-11 sprint
+  - [x] Validation: bin/rake test:critical (46/46 pass, 84 screenshots 0 diffs)
+  - [x] Validation: bin/dtest Linux gate (46/46 pass, per commit)
   - [ ] Validation: FCP metrics unchanged
 
 blockers: NONE
 dependencies: NONE (can start immediately)
-assigned_to: TBD
-started_date: -
+assigned_to: Claude (sprint 1, 2026-07-11)
+started_date: 2026-07-11
 completed_date: -
-actual_duration: -
-actual_commits: -
-notes: Foundation for all CSS variable usage
+actual_duration: ~2.5 hours (sprint 1)
+actual_commits: 10 (c2a161f6..498edbba), 9 files, +44/-420 lines
+notes: |
+  Foundation for all CSS variable usage.
+  Sprint-1 findings:
+  - careers bundle had 4 var(--font-system-ui) usages with NO definition
+    (unresolved var since a prior partial extraction) — fixed by @import.
+  - use-cases-critical.css is ORPHANED (no template loads it; repo-wide
+    grep finds zero loaders). Follow-up: wire into use-cases bundle or delete.
+  - Variant stacks (short system-ui + Bootstrap-reboot -apple-system-first)
+    intentionally NOT converted — different values, would be value changes.
 ```
 
 #### WP1.2: Reset Utilities Extraction 🔲 NOT STARTED
@@ -532,6 +545,14 @@ fcp_metrics:
 ---
 
 ## 🔄 UPDATE LOG
+
+### 2026-07-11
+- **Action**: WP1.1 sprint 1 executed — --font-system-ui extraction complete
+- **Status**: WP1.1 🔄 In Progress; Phase 1 progress 0→~0.5/4 WPs
+- **Metrics**: 10 commits, 9 files, +44/-420 lines (376 net eliminated)
+- **Quality**: 100% test pass maintained (macOS + Linux gates per commit), 0 visual regressions
+- **Findings**: careers bundle unresolved-var defect fixed; use-cases-critical.css orphaned (follow-up); 35-line :root Bootstrap block duplicated across 8 critical files (queued for sprint 2)
+- **Next**: WP1.1 remaining variables (--color-primary, --color-text, spacing/radius) + :root dedup
 
 ### 2025-01-27
 - **Action**: Initial task tracker created
