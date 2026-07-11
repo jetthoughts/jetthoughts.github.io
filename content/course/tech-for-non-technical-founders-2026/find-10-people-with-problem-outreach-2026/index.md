@@ -24,7 +24,7 @@ metatags:
   image: cover.png
   og_title: "2.4 · Find 10 People: What to Say"
   og_description: "The message templates that book 10 customer interviews. 3-message sequence, volume targets, research panel fallback."
-cover_image_alt: "JetThoughts cover showing the 5-step outreach funnel from Reddit mining at the top down to 10 calls booked at the bottom"
+cover_image_alt: "JetThoughts cover showing a network graph of outreach contacts converging on 10 booked interview calls, sent with Gmail from your 30-name list"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/"
 related_posts: false
 ---

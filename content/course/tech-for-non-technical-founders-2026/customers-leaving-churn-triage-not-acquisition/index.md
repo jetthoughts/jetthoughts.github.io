@@ -22,7 +22,7 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "7.5 · When Your Customers Are Leaving: Churn Triage Before Acquisition"
+  og_title: "When Your Customers Are Leaving: Churn Triage Before Acquisition"
   og_description: "30 paying users churning at 60% / month. Module 5 is about getting customers; this chapter is about keeping the ones you have. The 3-decision triage."
 cover_image_alt: "JetThoughts course cover for the churn triage chapter showing a leaky bucket with users dropping out faster than they enter"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/"

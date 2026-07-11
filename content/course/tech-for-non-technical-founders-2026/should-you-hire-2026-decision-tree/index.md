@@ -23,7 +23,7 @@ metatags:
   image: cover.png
   og_title: "4.1 · Should You Hire? The 2026 Decision Tree"
   og_description: "5 questions route you to one of 4 build paths: validate without code, self-serve, fractional CTO, or hire a team. Module 4 of this course."
-cover_image_alt: "JetThoughts cover showing a 2-by-2 decision matrix labeled Validate / Self-serve / Fractional CTO / Hire, with a hand-drawn red arrow pointing at the Validate quadrant"
+cover_image_alt: "JetThoughts cover showing a decision node branching into the four build paths: Validate, Self-serve, Fractional CTO, and Hire a team"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/"
 related_posts: false
 ---
