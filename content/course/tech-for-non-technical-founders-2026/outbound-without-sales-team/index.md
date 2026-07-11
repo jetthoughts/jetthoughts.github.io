@@ -194,7 +194,7 @@ All three variants follow the same shape: a specific reference earns the open, o
 ## Stage-by-stage cadence
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'fontSize':'20px', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart LR
     W1[Stage 1<br/>Send 30 messages<br/>1-4 replies expected]
     W2[Stage 2<br/>Run 3-5 demos<br/>2-3 DPAs sent]
