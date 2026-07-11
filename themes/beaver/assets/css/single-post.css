@@ -352,6 +352,12 @@
     border: 1px solid #999 !important;
   }
 
+  /* The "Prefer paper? Download the PDF" line is self-referential on
+     paper - hide the paragraph that carries the download link. */
+  p:has(a[data-course-event="pdf-download"]) {
+    display: none !important;
+  }
+
   /* Neutralize dark-theme callout backgrounds so ink stays readable. */
   blockquote {
     background: #f7f7f7 !important;
