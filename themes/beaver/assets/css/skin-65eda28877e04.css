@@ -1,6 +1,9 @@
 body {
   background-color: #fff;
   color: #121212;
+  /* KEEP LITERAL: var() form gets deduped against the earlier critical body var rule
+     by postcss-delete-duplicate-css (production only), unmasking the short-stack
+     body rule. See TASK-TRACKER 2026-07-11 sprint 3. */
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 18px;
   font-weight: 400;
@@ -22,6 +25,7 @@ body.modal-open .media-modal-close:focus {
 
 h1, h2, h3, h4, h5, h6 {
   color: #121212;
+  /* KEEP LITERAL: same minifier-hoist trap as the h1 rule below. 2026-07-11. */
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 800;
   line-height: 1.4;
@@ -42,6 +46,9 @@ h1 {
   line-height: 1;
   letter-spacing: -1px;
   color: #121212;
+  /* KEEP LITERAL: converting to var(--font-system-ui) makes this mergeable with the
+     early critical h1 var rule; the production minifier hoists skin h1 styles there,
+     letting Bootstrap reboot (fl-common-modules) win: h1 70px->40px. 2026-07-11. */
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 800;
   font-style: normal;
@@ -1053,7 +1060,7 @@ input[type=text].fl-search-input:focus {
 .fl-page .fl-module-woocommerce a.button, .fl-page .fl-module-woocommerce button.button.alt, .fl-page .fl-post-module-woo-button button[type=submit], .fl-page .fl-post-module-woo-button button[type=submit].alt.disabled, .fl-page .fl-post-module-woo-button a.button {
   color: #515151;
   background-color: #ebe9eb;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.2;
@@ -1077,7 +1084,7 @@ input[type=text].fl-search-input:focus {
 .woocommerce-page ul.products li.product a.button, .woocommerce-page .woocommerce-message a.button, .woocommerce-page .woocommerce-message a.button.wc-forward, .woocommerce-page .woocommerce a.button.wc-forward, .woocommerce-page button.button, .woocommerce-page button.button.alt, .woocommerce-page a.button, .woocommerce-page a.button.alt, .woocommerce-page .woocommerce button[type=submit], .woocommerce-page button[type=submit].alt.disabled {
   color: #515151;
   background-color: #ebe9eb;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.2;
@@ -2384,7 +2391,7 @@ ul.wp-block-latest-posts.alignwide, ul.wp-block-latest-posts.alignfull, ul.wp-bl
 .fl-page button:visited, .fl-responsive-preview-content button:visited, .fl-button-lightbox-content button:visited, .fl-page input[type=button], .fl-responsive-preview-content input[type=button], .fl-button-lightbox-content input[type=button], .fl-page input[type=submit], .fl-responsive-preview-content input[type=submit], .fl-button-lightbox-content input[type=submit], .fl-page a.fl-button, .fl-responsive-preview-content a.fl-button, .fl-button-lightbox-content a.fl-button, .fl-page a.fl-button:visited, .fl-responsive-preview-content a.fl-button:visited, .fl-button-lightbox-content a.fl-button:visited, .fl-page a.button, .fl-responsive-preview-content a.button, .fl-button-lightbox-content a.button, .fl-page a.button:visited, .fl-responsive-preview-content a.button:visited, .fl-button-lightbox-content a.button:visited, .fl-page button.button, .fl-responsive-preview-content button.button, .fl-button-lightbox-content button.button, .fl-page button.button:visited, .fl-responsive-preview-content button.button:visited, .fl-button-lightbox-content button.button:visited, .fl-page .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle, .fl-responsive-preview-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle, .fl-button-lightbox-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle, .fl-page .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:visited, .fl-responsive-preview-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:visited, .fl-button-lightbox-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:visited {
   color: #fff;
   background-color: #1a8cff;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.45;

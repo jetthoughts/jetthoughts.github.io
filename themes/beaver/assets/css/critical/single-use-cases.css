@@ -1,3 +1,7 @@
+/* CSS Variables Foundation (WP1.1) — single-use-cases bundle has no critical/base.css,
+   so --font-system-ui must be imported here before use */
+@import "foundations/css-variables.css";
+
 .fl-builder-content *,
 .fl-builder-content *:before,
 .fl-builder-content *:after {
@@ -1205,7 +1209,6 @@ body:not(.single-fl-theme-layout)
 .fl-node-header-nav-row .fl-row-content {
   min-width: 0;
 }
-@charset "UTF-8";
 .fl-rich-text p {
   margin-bottom: 0 !important;
 }
@@ -1355,42 +1358,6 @@ header
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
-}
-@charset "UTF-8";
-:root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #007bff;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace:
-    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-    monospace;
 }
 *,
 *::before,
@@ -1558,20 +1525,7 @@ body {
 }
 h1 {
   color: #121212;
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 800;
   line-height: 1.4;
   text-transform: none;
@@ -1582,20 +1536,7 @@ h1 {
   line-height: 1;
   letter-spacing: -1px;
   color: #121212;
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 800;
   font-style: normal;
   text-transform: none;
@@ -1731,20 +1672,7 @@ button {
 .fl-page a.fl-button:visited {
   color: #fff;
   background-color: #1a8cff;
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.45;

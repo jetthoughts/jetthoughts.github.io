@@ -21,7 +21,9 @@
       content="{{ $browserConfig.Permalink }}" />
     <meta name="theme-color" content="#ffffff" />
 
-    {{- $navigationResources := slice (resources.Get "css/navigation.css") -}}
+    {{- /* css-variables first: inlined on every page so design tokens resolve site-wide,
+           including bundles that don't load critical/base.css (e.g. /blog/) */ -}}
+    {{- $navigationResources := slice (resources.Get "css/foundations/css-variables.css") (resources.Get "css/navigation.css") -}}
     {{ partialCached "assets/css-inline.html" (dict "resources" $navigationResources "bundleName" "navigation") "navigation" }}
 
     {{- $componentsResources := slice (resources.Get "css/components.css") -}}

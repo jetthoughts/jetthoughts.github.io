@@ -278,20 +278,7 @@
   border-bottom-right-radius: 14px;
 }
 .fl-node-0pigeztak1xl .pp-more-link {
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
 }
 .fl-node-0pigeztak1xl .pp-infobox .pp-more-link {
@@ -364,20 +351,7 @@
   border-bottom-right-radius: 14px;
 }
 .fl-node-ugiypbhnvlfw .pp-more-link {
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
 }
 .fl-node-ugiypbhnvlfw .pp-infobox .pp-more-link {
@@ -450,20 +424,7 @@
   border-bottom-right-radius: 14px;
 }
 .fl-node-h2wjp3zb7afk .pp-more-link {
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Noto Sans",
-    "Liberation Sans",
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
 }
 .fl-node-h2wjp3zb7afk .pp-infobox .pp-more-link {

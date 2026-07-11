@@ -31,7 +31,7 @@ body {
    leaks onto pagination Next button (which is `<li class="page-item"><a class="btn btn-primary">`). */
 .btn.btn-primary,
 .btn.btn-primary:visited {
-  background-color: #cc342d;
+  background-color: var(--color-ruby);
   color: #fff !important;
   padding: 14px 28px;
   border-radius: 8px;
@@ -56,7 +56,7 @@ body {
 a.fl-button,
 a.fl-button:visited,
 .fl-button-wrap a {
-  background-color: #cc342d !important;
+  background-color: var(--color-ruby) !important;
   color: #fff !important;
   padding: 14px 28px !important;
   border-radius: 8px !important;
@@ -80,7 +80,7 @@ a.fl-button:hover,
    and .fl-button so all CTAs read as one brand action. */
 a.action-button,
 a.action-button:visited {
-  background-color: #cc342d !important;
+  background-color: var(--color-ruby) !important;
   color: #fff !important;
   padding: 14px 28px !important;
   border-radius: 8px !important;

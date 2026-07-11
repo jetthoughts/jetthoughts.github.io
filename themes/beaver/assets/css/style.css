@@ -320,7 +320,7 @@ input[type=submit]:disabled {
 }
 
 .blog .post-tags a:hover {
-  color: #cc342d;
+  color: var(--color-ruby);
   text-decoration: none;
 }
 
@@ -344,7 +344,7 @@ input[type=submit]:disabled {
   text-decoration: none;
 }
 .blog .post-tags-card a:hover {
-  color: #cc342d;
+  color: var(--color-ruby);
   text-decoration: none;
 }
 .blog .post-tags-card .post-tags-sep {
@@ -477,7 +477,7 @@ input[type=submit]:disabled {
 /* Brand-colored blockquotes — true callout treatment (background + padding + radius) */
 .blog blockquote {
   background: rgba(204, 52, 45, 0.05);
-  border-left: 6px solid #cc342d;
+  border-left: 6px solid var(--color-ruby);
   box-shadow: none;
   margin: 48px 0;
   padding: 24px 28px;
@@ -525,7 +525,7 @@ input[type=submit]:disabled {
 .blog li a.cta-link,
 .blog .cta-link {
   display: inline-block;
-  background: #cc342d;
+  background: var(--color-ruby);
   color: #ffffff;
   text-decoration: none;
   padding: 14px 28px;
@@ -695,8 +695,8 @@ input[type=submit]:disabled {
 .blog .cta-link--ghost,
 .blog .course-hero-ctas a.cta-link--ghost {
   background: transparent;
-  border: 2px solid #cc342d;
-  color: #cc342d;
+  border: 2px solid var(--color-ruby);
+  color: var(--color-ruby);
   padding: 12px 26px;
 }
 .blog .cta-link--ghost:hover,
@@ -705,7 +705,7 @@ input[type=submit]:disabled {
   color: #a8231e;
 }
 .blog .course-hero-ctas a.cta-link--ghost:visited {
-  color: #cc342d;
+  color: var(--color-ruby);
 }
 
 /* Module cards — one card per module in the syllabus. Breaks the
@@ -723,7 +723,7 @@ input[type=submit]:disabled {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #cc342d;
+  color: var(--color-ruby);
   margin-bottom: 6px;
 }
 .blog .module-card h3,
@@ -812,7 +812,7 @@ input[type=submit]:disabled {
   position: absolute;
   left: 0;
   top: 1px;
-  color: #cc342d;
+  color: var(--color-ruby);
   font-weight: 700;
   font-size: 20px;
 }

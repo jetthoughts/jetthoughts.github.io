@@ -52,9 +52,9 @@ Lines Eliminated: 0 / 27,394-31,936 target (0% complete)
 
 ### Work Package Status
 
-#### WP1.1: CSS Variables Foundation 🔲 NOT STARTED
+#### WP1.1: CSS Variables Foundation 🔄 IN PROGRESS
 ```yaml
-status: 🔲 Not Started
+status: 🔄 In Progress (font-system-ui extraction COMPLETE 2026-07-11)
 priority: P0 🔥 Critical
 duration: 4-6 hours
 files_affected: 12 inline critical CSS files
@@ -62,22 +62,37 @@ impact: 2.8KB savings, ~50 lines eliminated
 micro_commits_target: 15-20 commits
 
 tasks:
-  - [ ] Create _css-variables.scss with design tokens
-  - [ ] Extract --font-system-ui variable (18 font-family declarations)
+  - [x] Create foundations/css-variables.css with design tokens (pre-existing, 2025-10-12)
+  - [x] Extract --font-system-ui variable — ALL exact-match literal stacks
+        (25 stacks across 8 critical files) replaced with var(--font-system-ui);
+        @import wired into the 3 no-base bundles (careers, single-careers,
+        single-use-cases) that never defined the variable
   - [ ] Extract --color-primary, --color-secondary, --color-text
   - [ ] Extract --border-radius-default, --spacing-unit
-  - [ ] Update 12 inline critical CSS files to reference variables
-  - [ ] Validation: bin/rake test:critical (all pass)
+  - [x] Dedup the identical 35-line Bootstrap :root block copied across
+        8 critical files — DELETED outright (sprint 2, 2026-07-11): zero
+        var() consumers repo-wide, so no relocation needed; 280 lines
+        removed; vendor base-4.min.css copy untouched
+  - [x] Validation: bin/rake test:critical (46/46 pass, 84 screenshots 0 diffs)
+  - [x] Validation: bin/dtest Linux gate (46/46 pass, per commit)
   - [ ] Validation: FCP metrics unchanged
 
 blockers: NONE
 dependencies: NONE (can start immediately)
-assigned_to: TBD
-started_date: -
+assigned_to: Claude (sprint 1, 2026-07-11)
+started_date: 2026-07-11
 completed_date: -
-actual_duration: -
-actual_commits: -
-notes: Foundation for all CSS variable usage
+actual_duration: ~2.5 hours (sprint 1)
+actual_commits: 10 (c2a161f6..498edbba), 9 files, +44/-420 lines
+notes: |
+  Foundation for all CSS variable usage.
+  Sprint-1 findings:
+  - careers bundle had 4 var(--font-system-ui) usages with NO definition
+    (unresolved var since a prior partial extraction) — fixed by @import.
+  - use-cases-critical.css is ORPHANED (no template loads it; repo-wide
+    grep finds zero loaders). Follow-up: wire into use-cases bundle or delete.
+  - Variant stacks (short system-ui + Bootstrap-reboot -apple-system-first)
+    intentionally NOT converted — different values, would be value changes.
 ```
 
 #### WP1.2: Reset Utilities Extraction 🔲 NOT STARTED
@@ -532,6 +547,50 @@ fcp_metrics:
 ---
 
 ## 🔄 UPDATE LOG
+
+### 2026-07-11 (sprint 3)
+- **Landed**: orphaned use-cases-critical.css deleted (265 lines); 8 invalid
+  mid-file @charset removed; css-variables foundation wired into the 4
+  bundles that lacked it (blog-single, taxonomy list, not_found, course-single)
+- **ROLLED BACK**: skin-65eda28877e04.css font-stack extraction (6 stacks).
+  Root cause: postcss-delete-duplicate-css (production builds only) deletes
+  the later of two byte-identical declarations; converting skin's body
+  font-family to var() made it duplicate an earlier critical-CSS declaration,
+  unmasking a short-variant body rule as cascade winner → 17 macOS screenshot
+  diffs (Linux green — font resolution masks it). See memory
+  project-css-var-extraction-dedup-trap.
+- **RESOLVED (Paul chose option a — per-case production-bundle masking
+  analysis)**: skin extraction landed for the 3 button-group stacks only
+  (d0da5e7b); body/h1/h1-h6 stay literal with KEEP LITERAL comments —
+  v2 attempt confirmed the minifier hoists merged h1 rules up-cascade
+  (reviewer hand-traced h1 70px→40px inversion; 17 macOS diffs).
+  --color-ruby rollout complete: token defined (91d5da27), foundation
+  inlined site-wide via baseof navigation bundle (987935a1), all 14
+  literal declarations replaced across style.css/navigation.css/
+  single-post.css (6ba9b23b, ef907fc8, 1ae080e0) — each commit gated by
+  production-bundle rule-level diff + rule-count check + both platform
+  suites; zero rollbacks needed under the option-a protocol.
+- **New follow-ups**: root list.html is dead code (no taxonomy pages
+  generated; its "blog-list" bundleName collides with blog/list.html's) —
+  rename or remove; --color-ruby token name approved by Paul for #cc342d.
+
+### 2026-07-11 (sprint 2)
+- **Action**: Dead Bootstrap :root block deleted from all 8 critical files
+- **Metrics**: 8 commits (763996f2..17838e2d), 280 lines removed, 0 added
+- **Quality**: 100% test pass both platforms per commit, 0 visual regressions;
+  reviewer independently re-verified zero consumers of all 28 vars
+- **New follow-ups**: stray mid-file @charset in single-services.css,
+  single-use-cases.css, fl-common-modules.css (pre-existing concat leftovers)
+- **Next**: WP1.1 remaining variables (--color-primary already exists in
+  variables/colors.css naming — reconcile), orphaned use-cases-critical.css
+
+### 2026-07-11
+- **Action**: WP1.1 sprint 1 executed — --font-system-ui extraction complete
+- **Status**: WP1.1 🔄 In Progress; Phase 1 progress 0→~0.5/4 WPs
+- **Metrics**: 10 commits, 9 files, +44/-420 lines (376 net eliminated)
+- **Quality**: 100% test pass maintained (macOS + Linux gates per commit), 0 visual regressions
+- **Findings**: careers bundle unresolved-var defect fixed; use-cases-critical.css orphaned (follow-up); 35-line :root Bootstrap block duplicated across 8 critical files (queued for sprint 2)
+- **Next**: WP1.1 remaining variables (--color-primary, --color-text, spacing/radius) + :root dedup
 
 ### 2025-01-27
 - **Action**: Initial task tracker created
