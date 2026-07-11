@@ -1,4 +1,9 @@
 @charset "UTF-8";
+
+/* CSS Variables Foundation (WP1.1) — single-career bundle has no critical/base.css,
+   so --font-system-ui must be imported here before use */
+@import "foundations/css-variables.css";
+
 .fl-node-d09l8jp3qrgf {
   width: 100%;
 }
