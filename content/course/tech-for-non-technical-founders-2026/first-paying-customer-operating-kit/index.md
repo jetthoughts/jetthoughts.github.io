@@ -34,6 +34,8 @@ related_posts: false
 
 > **Status: shipping.** The DPA template (component 3) is live below - copy and paste into Google Docs. The other 5 components are described here and shipping as each is ready. There is no email signup; when a template is downloadable, the link appears inline below. Bookmark and check back.
 
+*Prefer paper? <a href="first-paying-customer-operating-kit.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
+
 # The First-Paying-Customer Operating Kit
 
 *From live MVP to signed paid pilot in 4 weeks - the templates Module 5 runs on.*

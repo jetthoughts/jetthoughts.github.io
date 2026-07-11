@@ -30,6 +30,8 @@ related_posts: false
 
 *Print one side of paper. Pen. 30 minutes alone. Walk out with a defensible build decision and the next module to read.*
 
+*Prefer paper? <a href="build-path-decision-worksheet.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
+
 ## Why this exists
 
 A wellness-coaching founder who came to us in early 2026 had spent four months building a Lovable MVP, then panicked and signed a $24K-per-month agency contract because three advisors told her "you need a real team now." Two of the advisors had never seen her validation data. The third had not asked.
