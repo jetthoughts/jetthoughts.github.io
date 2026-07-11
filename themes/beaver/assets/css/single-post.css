@@ -157,7 +157,7 @@
   min-height: 5rem;
 }
 .course-prev-next__link:hover {
-  border-color: #cc342d;
+  border-color: var(--color-ruby);
   background: #fff5f5;
   text-decoration: none;
 }
@@ -176,7 +176,7 @@
 .course-prev-next__direction {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #cc342d;
+  color: var(--color-ruby);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
