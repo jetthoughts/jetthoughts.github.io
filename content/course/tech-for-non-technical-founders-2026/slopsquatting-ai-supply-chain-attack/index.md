@@ -46,7 +46,7 @@ In April 2025, Lasso Security published findings that AI assistants suggested ov
 
 ## What slopsquatting is
 
-LLMs invent package names that sound plausible but do not exist. The original [Lasso Security research from March 2025](https://www.lasso.security/blog/ai-package-hallucinations) tested GPT-4, Claude, and the open-source Code Llama against thousands of common developer prompts. About 5.2% of GPT-4's package suggestions and 21.7% of Code Llama's were hallucinated. [Snyk's reproduction in late 2025](https://snyk.io/blog/ai-package-hallucinations-slopsquatting/) ran the same experiment across npm and PyPI and confirmed the rate had not improved with newer model releases. Attackers then register the most-suggested hallucinated names as squatted packages, sometimes with a malicious payload (data exfiltration, credential theft, persistence backdoor), sometimes empty until a real victim shows up. Rubygems, PyPI, npm, Composer, and crates.io all have the same exposure. The attack does not need a 0day. It needs a developer who trusts a model.
+LLMs invent package names that sound plausible but do not exist. The original [Lasso Security research from March 2025](https://www.lasso.security/blog/ai-package-hallucinations) tested GPT-4, Claude, and the open-source Code Llama against thousands of common developer prompts. About 5.2% of GPT-4's package suggestions and 21.7% of Code Llama's were hallucinated. [Snyk's slopsquatting write-up](https://snyk.io/articles/slopsquatting-mitigation-strategies/) cites follow-up research putting the overall rate at roughly one in five AI-suggested packages across models. Attackers then register the most-suggested hallucinated names as squatted packages, sometimes with a malicious payload (data exfiltration, credential theft, persistence backdoor), sometimes empty until a real victim shows up. Rubygems, PyPI, npm, Composer, and crates.io all have the same exposure. The attack does not need a 0day. It needs a developer who trusts a model.
 
 ## The 3-line CI gate (the simplest defense)
 
@@ -132,15 +132,9 @@ A working agency signs this without renegotiating. One that fights the language 
 
 ## The 2026 statistics
 
-The threat data has caught up to the technique. [Snyk's October 2025 audit of AI coding agents](https://snyk.io/blog/ai-coding-agent-security-audit-2025/) found that **13.4% of agent skills shipped in 2025 carried at least one critical security issue**, including hallucinated dependencies, and that the rate among agents added between June and September 2025 was higher than the rate among agents shipping in Q1. The trajectory is wrong, not improving.
+The threat data has caught up to the technique. [Snyk's ToxicSkills audit of AI coding agent skills](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) found that **13.4% of the audited agent skills carried at least one critical security issue** (534 of 3,984 skills audited across ClawHub and skills.sh, February 2026).
 
-[SecurityWeek's coverage of the AI coding agents supply-chain risk](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/), published in mid-2025 and updated with the 2026 incident logs, lists three documented production incidents traceable to slopsquatted packages between October 2025 and February 2026:
-
-- A YC W26 batch fintech lost a customer database after a Cursor-suggested PyPI package shipped a credential-exfiltration hook in `setup.py`.
-- A 14-person Rails-based marketing SaaS shipped a slopsquatted gem to production for 11 days before the package's malicious update was caught by a manual security review prompted by an unrelated outage.
-- A Laravel agency working for a non-technical founder pushed `composer.lock` with three hallucinated package names; one of the three was registered by an attacker the following week and pulled in on the next CI build.
-
-[GitHub's 2025 State of the Octoverse](https://github.blog/2026-01-15-the-state-of-the-octoverse-2025/) reports AI-assisted commits crossing 47% of all merged PRs across the platform in November 2025. The supply-chain gap scales with that adoption. The discipline does not.
+[GitHub's 2025 State of the Octoverse](https://octoverse.github.com/) reports that among active Copilot users, close to half the code written is now AI-generated. The supply-chain gap scales with that adoption. The discipline does not.
 
 ## What to do tomorrow
 
@@ -157,12 +151,12 @@ This is the last supplementary chapter. The full artifact list (Founder OS) and 
 ## Further reading
 
 - Lasso Security, [AI Package Hallucinations: A New Class of Software Supply-Chain Attack](https://www.lasso.security/blog/ai-package-hallucinations) (March 2025) - the original research that named the failure mode and reproduced the attack on Rubygems, PyPI, and npm.
-- Snyk, [AI Package Hallucinations and Slopsquatting](https://snyk.io/blog/ai-package-hallucinations-slopsquatting/) (October 2025) - independent reproduction and the production-incident audit that found 12 codebases with hallucinated `requestz` already merged.
-- Snyk, [AI Coding Agent Security Audit 2025](https://snyk.io/blog/ai-coding-agent-security-audit-2025/) - the 13.4% critical-issue rate finding and the rising trajectory through Q3 2025.
+- Snyk, [Package Hallucinations: When AI Creates Phantom Packages](https://snyk.io/articles/package-hallucinations/) - how hallucinated names become attack vectors, including the empty `huggingface-cli` test package that drew 30,000+ downloads in three months.
+- Snyk, [ToxicSkills: a security audit of AI agent skills](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) - the 13.4% critical-issue rate finding across the agent-skills corpus.
 - Infosecurity Magazine, [AI Hallucinations Open New Slopsquatting Attack Vector](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) (April 2025) - the writeup that coined "slopsquatting" and walked the kill chain for a non-security audience.
-- SecurityWeek, [AI Coding Agents Could Fuel the Next Supply Chain Crisis](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/) - the production-incident log through early 2026 and the policy response from CISA and ENISA.
-- Veracode, [State of Software Security 2025: AI-Generated Code](https://www.veracode.com/blog/research/state-of-software-security-2025-ai-generated-code/) - the 45% OWASP-Top-10 vulnerability rate in AI-generated code, including hallucinated dependencies.
-- GitHub, [The State of the Octoverse 2025](https://github.blog/2026-01-15-the-state-of-the-octoverse-2025/) - the 47% AI-assisted PR rate that scales the slopsquatting exposure across the platform.
+- SecurityWeek, [AI Coding Agents Could Fuel the Next Supply Chain Crisis](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/) - why agent-driven coding expands the software supply-chain attack surface.
+- Veracode, [2025 GenAI Code Security Report](https://www.veracode.com/blog/genai-code-security-report/) - the 45% OWASP-Top-10 vulnerability rate in AI-generated code, including hallucinated dependencies.
+- GitHub, [The State of the Octoverse 2025](https://octoverse.github.com/) - the AI-assisted development surge that scales the slopsquatting exposure across the platform.
 - Security Boulevard, [Vibe Coding vs SBOM: One Builds Fast, the Other Tells You What You Just Built](https://securityboulevard.com/2026/04/vibe-coding-vs-sbom-one-builds-fast-the-other-tells-you-what-you-just-built/) - the SBOM case for "if you cannot name what is in your software, you do not control your software."
 
 ---

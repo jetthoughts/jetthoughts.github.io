@@ -22,18 +22,18 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "7.5 · When Your Customers Are Leaving: Churn Triage Before Acquisition"
+  og_title: "When Your Customers Are Leaving: Churn Triage Before Acquisition"
   og_description: "30 paying users churning at 60% / month. Module 5 is about getting customers; this chapter is about keeping the ones you have. The 3-decision triage."
 cover_image_alt: "JetThoughts course cover for the churn triage chapter showing a leaky bucket with users dropping out faster than they enter"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/"
 related_posts: false
 ---
 
-> **Going further · Continuation chapter 5 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Going further · Continuation chapter** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a live product with paying customers AND a churn rate above 30%/month
 >
-> **Output:** a 3-decision triage (fix the product, change the segment, or kill the SKU) backed by cohort data you can read in 60 minutes
+> **Output:** a 3-decision triage (fix the product, change the segment, or kill the SKU - shut this product down and stop selling it) backed by cohort data you can read in 60 minutes
 
 ## Acquisition Is Not Your Problem
 
@@ -174,18 +174,18 @@ The honest trade-off: a refund-the-wrong-segment campaign cuts your customer cou
 
 You walk out of this chapter holding one of three artifacts: a fix-the-product plan with a 4-6 week ship date, a change-the-segment plan with a refund script and a redirected outreach motion, or a kill-the-SKU verdict pointing toward a pivot decision. Pick the next move from your verdict and re-run the cohort floor every 6 weeks until the bucket stops leaking.
 
-1. **If Decision 1 (FIX THE PRODUCT):** open the [salvage-vs-rebuild decision framework](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) and feed it the cohort data. Use the same numbers in the brief to whoever rebuilds the workflow - dev shop, fractional CTO, or AI tooling - so they know which workflow to rebuild and which to leave alone.
+1. **If Decision 1 (FIX THE PRODUCT):** open the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the salvage-vs-rebuild decision and feed it the cohort data. Use the same numbers in the brief to whoever rebuilds the workflow - dev shop, fractional CTO, or AI tooling - so they know which workflow to rebuild and which to leave alone.
 2. **If Decision 2 (CHANGE THE SEGMENT):** re-run [Chapter 5.3 - personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) aimed at the high-retention segment. R.'s 11 kept customers seeded her next outreach run - she asked each for two intros to similar 3-person teams and landed 7 paid pilots in 3 weeks. Your cohort data ("we have 11 customers who look like you and they retain at 70%") is the warmest possible referral.
 3. **If Decision 3 (KILL THE SKU):** open [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/). The cohort floor numbers are the evidence the pivot framework asks for - four cohorts saying the same thing, not a hunch.
 
 ## Further reading
 
 - Sean Ellis and Morgan Brown, [*Hacking Growth*](https://hackinggrowth.org/) - the cohort-and-segment-driven north-star approach Ellis used at Dropbox and LogMeIn.
-- Lenny Rachitsky, [The Sean Ellis test for product-market fit](https://www.lennysnewsletter.com/p/the-sean-ellis-test-for-product-market) - the must-have-user framing the segment slice in this chapter operationalizes.
-- ProfitWell (Patrick Campbell), [The Hidden Cost of High Churn](https://www.profitwell.com/recur/all/cost-of-churn) - the unit-economics math that explains why refunds beat churn for wrong-segment customers.
+- Lenny Rachitsky, [How to know if you've got product-market fit](https://www.lennysnewsletter.com/p/how-to-know-if-youve-got-productmarket) - the Sean Ellis must-have-user framing the segment slice in this chapter operationalizes.
+- ProfitWell / Paddle, [How to calculate and reduce revenue churn](https://www.paddle.com/resources/revenue-churn) - the unit-economics math that explains why refunds beat churn for wrong-segment customers.
 - Rahul Vohra, [How Superhuman built an engine to find product-market fit](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/) - segment-isolation playbook layered on top of the 40% test.
-- Kieran Flanagan and Scott Tousley, [B2B SaaS retention benchmarks 2025](https://www.lennysnewsletter.com/p/b2b-saas-retention-benchmarks) - the 30-day-retention floors used in the 90-minute cohort questions.
-- Steve Blank, [The Customer Development Manifesto](https://steveblank.com/2010/01/25/the-customer-development-manifesto-reasons-for-the-revolution-part-1/) - the foundational framing for "fire the wrong customer before adding more."
+- Lenny Rachitsky, [What is good retention](https://www.lennysnewsletter.com/p/what-is-good-retention-issue-29) - the B2B SaaS retention floors used in the 90-minute cohort questions.
+- Steve Blank, [The Customer Development Manifesto](https://steveblank.com/2009/08/31/the-customer-development-manifesto-reasons-for-the-revolution-part-1/) - the foundational framing for "fire the wrong customer before adding more."
 
 ---
 

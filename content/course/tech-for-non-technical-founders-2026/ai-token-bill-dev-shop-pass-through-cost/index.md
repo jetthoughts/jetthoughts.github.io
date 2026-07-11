@@ -173,9 +173,9 @@ Three actions. In order.
 - [OpenAI API pricing](https://openai.com/api/pricing/) - the gpt-4o, o3, and o1 per-token rates. Note the cached input rates if your team uses prompt caching aggressively.
 - [Cursor pricing](https://cursor.com/pricing) - Pro, Business, and Ultra tiers. Business is the modal agency choice in 2026.
 - [GitHub Copilot pricing](https://github.com/features/copilot/plans) - Individual, Business, Enterprise. The fallback for teams that have not switched to Claude Code.
-- The Pragmatic Engineer, [The state of AI coding tools in 2025](https://newsletter.pragmaticengineer.com/p/state-ai-coding-tools-2025) - per-developer spend ranges from a survey of senior engineers, useful for sanity-checking the numbers above.
-- Simon Willison, [Pelican on a bicycle benchmarks](https://simonwillison.net/2024/Oct/25/llm-pricing/) - running cost comparison across models with public token-cost ranges.
-- Latent Space, [The AI engineer's stack 2026](https://www.latent.space/p/ai-engineer-stack) - which model and tool combinations large engineering orgs settle on, with cost commentary.
+- The Pragmatic Engineer, [Software engineering with LLMs in 2025: reality check](https://newsletter.pragmaticengineer.com/p/software-engineering-with-llms-in-2025) - per-developer spend ranges from a survey of senior engineers, useful for sanity-checking the numbers above.
+- Simon Willison, [LLM pricing calculator](https://simonwillison.net/2025/Apr/10/llm-pricing-calculator/) - running cost comparison across models with public token-cost ranges.
+- Latent Space, [The Rise of the AI Engineer](https://www.latent.space/p/ai-engineer) - which model and tool combinations large engineering orgs settle on, with cost commentary.
 
 Related course posts:
 - ["We Use AI": 5 Follow-Up Questions for Your Agency](/course/tech-for-non-technical-founders-2026/agency-ai-five-questions/) - sister chapter; the 5-question script for AI theatre detection includes the cost question this post expands.

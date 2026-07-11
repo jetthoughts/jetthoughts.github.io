@@ -4,6 +4,14 @@ description: "Follow Mia through Module 2 as she drafts Mom Test questions, rehe
 date: 2026-07-09
 draft: false
 slug: module-2-walkthrough-mia
+course_nav_prev:
+  slug: clickable-prototype-validation-2-hour-lovable
+  module: "Chapter 2.6"
+  title: "2.6 · Build a Clickable Prototype"
+course_nav_next:
+  slug: one-page-product-brief-vibe-prd
+  module: "Chapter 3.1"
+  title: "3.1 · The One-Page Product Brief (Vibe PRD)"
 ---
 
 > **Module 2 walkthrough · Mia** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)

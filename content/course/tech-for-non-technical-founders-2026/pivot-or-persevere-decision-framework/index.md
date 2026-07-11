@@ -29,7 +29,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Going further · Continuation chapter 6 of 6** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Going further · Continuation chapter** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a decision from the [churn-triage chapter](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/) OR a Sean Ellis 40% test result ([Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/))
 >
@@ -154,7 +154,7 @@ A Solution pivot routes you back to [Decide What's Next](/course/tech-for-non-te
 
 A Channel pivot or Revenue Model pivot routes you back to [Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) with the new channel or pricing model. The hypothesis stays intact; the go-to-market motion changes.
 
-A Technology pivot routes you to the [salvage-vs-rebuild decision framework](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/). The customer-facing hypothesis is the same; the implementation needs to be re-platformed.
+A Technology pivot routes you to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the salvage-vs-rebuild decision. The customer-facing hypothesis is the same; the implementation needs to be re-platformed.
 
 A persevere decision keeps you on whatever module you were on. Re-measure trigger conditions in 30 days.
 
@@ -165,11 +165,11 @@ D. is on his third pivot now. He ran the original hypothesis once (audit prep), 
 ## Further reading
 
 - Eric Ries, [*The Lean Startup*](https://theleanstartup.com/) - the canonical text on pivots, including all ten pivot types and the discovery-loop framing this chapter compresses.
-- Steve Blank, [The Customer Development Manifesto](https://steveblank.com/2010/01/25/the-customer-development-manifesto-reasons-for-the-revolution-part-1/) - the customer-development counterpart to Ries's pivot framework.
+- Steve Blank, [The Customer Development Manifesto](https://steveblank.com/2009/08/31/the-customer-development-manifesto-reasons-for-the-revolution-part-1/) - the customer-development counterpart to Ries's pivot framework.
 - Patrick Vlaskovits and Brant Cooper, [*The Lean Entrepreneur*](https://leanentrepreneur.co/) - field-tested patterns for running discovery loops with limited resources.
-- Lenny Rachitsky, [How and when to pivot](https://www.lennysnewsletter.com/p/how-and-when-to-pivot) - decision-criteria interviews with founders who pivoted and survived (and some who pivoted and did not).
+- Lenny Rachitsky, [The art of the pivot: how, why, and when to pivot](https://www.lennysnewsletter.com/p/the-art-of-the-pivot-part-2-how-why) - decision-criteria interviews with founders who pivoted and survived (and some who pivoted and did not).
 - Marty Cagan, [Continuous Discovery vs Continuous Pivots](https://www.svpg.com/continuous-discovery-vs-continuous-pivots/) - the senior product perspective on when persevere beats pivot.
-- Y Combinator, [How to know when to pivot](https://www.ycombinator.com/library/4S-how-to-know-when-to-pivot) - the YC partner perspective on trigger conditions and signal strength.
+- Y Combinator, [All about pivoting](https://www.ycombinator.com/library/6p-all-about-pivoting) - the YC partner perspective on trigger conditions and signal strength.
 
 ---
 

@@ -1,8 +1,8 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-07-11 (M4+M5 merged as PR #353, deployed. ICP customer-journey live walk complete: 6 agents, 44 page-visits against production. Report: 40.17 — 6 P1 journey-breaks found, all navigation-layer or legacy companion pages; lesson prose clean. Improvement sprint proposed in 40.17 §7.)
+**Last Updated**: 2026-07-11 (ICP journey audit 40.17 + same-day fix sprint on branch icp-journey-fixes: all 4 waves executed, cold-eyes review passed, all gates green. Execution log: 40.17 §8. PR pending merge.)
 
-## Active Phase: ICP journey fixes (40.17 §7 waves 1-4) → then distribution prep
+## Active Phase: icp-journey-fixes PR → then distribution prep
 
 **🚀 What shipped 2026-07-09..10: Module 2 v2 complete (PR #351, 20 commits)**
 - ✅ All chapters on the M1 v2 template; numbering FLATTENED to 2.1-2.6 (letters retired; Synthesis is Lesson 2.5, in yaml prev/next). Chapter count derives 25 via course-stat.

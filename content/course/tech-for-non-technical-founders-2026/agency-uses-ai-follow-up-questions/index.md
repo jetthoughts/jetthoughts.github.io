@@ -180,7 +180,7 @@ Three concrete moves for the next 24 hours, in order.
 
 ## Further reading
 
-- Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/genai-security-report-2025) - 45% of LLM-generated code shipped at least one exploitable security flaw. The data behind Q3 (verification) and Q5 (accountability).
+- Veracode, [2025 GenAI Code Security Report](https://www.veracode.com/blog/genai-code-security-report/) - 45% of tested LLM-generated code samples carried at least one exploitable security flaw. The data behind Q3 (verification) and Q5 (accountability).
 - Stack Overflow, [2025 Developer Survey - AI section](https://survey.stackoverflow.co/2025/) - 84% of developers now use or plan to use AI tools. The market context behind why "we use AI" became a meaningless homepage line.
 - Bleeping Computer, [AI code suggestions sabotage software supply chain](https://www.bleepingcomputer.com/news/security/ai-code-suggestions-sabotage-software-supply-chain/) - the slopsquatting attack vector in plain English. The thing your agency must spot in PR review (Q4).
 - SecurityWeek, [AI Coding Agents Could Fuel Next Supply Chain Crisis](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/) - the practitioner read on why hallucinated package names are now the leading AI-era attack surface.

@@ -31,7 +31,7 @@ You have an idea and no time, so this page lists only the core lessons - the sma
 
 ## The Problem (in your language)
 
-You want to validate whether your idea has real demand before you spend $10K+ on a dev shop - but you can't read code, your available time is evenings and weekends (maybe 2-4 hours a week), and hiring anyone is premature. This route works within all three constraints.
+You want to validate whether your idea has real demand before you spend $30K+ on a dev shop - but you can't read code, your available time is evenings and weekends (maybe 2-4 hours a week), and hiring anyone is premature. This route works within all three constraints.
 
 ## The Minimal Path (Core Lessons Only)
 

@@ -6,6 +6,17 @@
   data/course_sequence.yaml and emits a small flex strip with
   "← Prev" / "Course home" / "Next →" links.
 
+  Branch-aware: a sequence entry may carry `branches:` (list of
+  {slug|url, direction, title}) - decision-gate pages (2.4, 2.5, 5.1)
+  render the real routing options as a stacked set of cards instead of
+  a single linear "Next →", so the strip never contradicts the
+  hand-written footer routing (ICP journey audit 40.17, P1 #1).
+
+  Fallback for pages NOT in the sequence (module walkthroughs, template
+  pages): frontmatter params `course_nav_prev` / `course_nav_next`, each
+  a map with `slug` (or `url`), `module`, `title`. Fixes the walkthrough
+  dead-ends (40.17, P1 #2).
+
   Insertion point: bottom of the chapter body, ABOVE the
   "## Continue the course" footer table. The intra-page "Next →"
   blockquote that some chapters already have is complementary - this
@@ -14,27 +25,45 @@
 {{ if eq (default true .Page.Params.course_nav) false }}{{ return }}{{ end }}
 {{- $slug := .Params.slug | default .File.BaseFileName -}}
 {{- $sequence := site.Data.course_sequence.sequence -}}
+{{- $base := "/course/tech-for-non-technical-founders-2026/" -}}
 {{- $idx := -1 -}}
-{{- range $i, $entry := $sequence -}}
-  {{- if eq $entry.slug $slug -}}
+{{- $entry := dict -}}
+{{- range $i, $e := $sequence -}}
+  {{- if eq $e.slug $slug -}}
     {{- $idx = $i -}}
+    {{- $entry = $e -}}
   {{- end -}}
 {{- end -}}
 
+{{- $prev := "" -}}
+{{- $next := "" -}}
+{{- $branches := slice -}}
+{{- $render := false -}}
+
 {{- if ge $idx 0 -}}
-  {{- $prev := "" -}}
-  {{- $next := "" -}}
+  {{- $render = true -}}
   {{- if gt $idx 0 -}}
     {{- $prev = index $sequence (sub $idx 1) -}}
   {{- end -}}
-  {{- if lt $idx (sub (len $sequence) 1) -}}
+  {{- if $entry.branches -}}
+    {{- $branches = $entry.branches -}}
+  {{- else if lt $idx (sub (len $sequence) 1) -}}
     {{- $next = index $sequence (add $idx 1) -}}
   {{- end -}}
+{{- else -}}
+  {{/* Not in the linear sequence: walkthroughs + template pages opt in via frontmatter. */}}
+  {{- if or .Params.course_nav_prev .Params.course_nav_next -}}
+    {{- $render = true -}}
+    {{- with .Params.course_nav_prev -}}{{- $prev = . -}}{{- end -}}
+    {{- with .Params.course_nav_next -}}{{- $next = . -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
 
+{{- if $render -}}
 <nav class="course-prev-next" aria-label="Course navigation">
   <div class="course-prev-next__inner">
     {{- if $prev }}
-    <a class="course-prev-next__link course-prev-next__link--prev" href="/course/tech-for-non-technical-founders-2026/{{ $prev.slug }}/">
+    <a class="course-prev-next__link course-prev-next__link--prev" href="{{ or $prev.url (printf "%s%s/" $base $prev.slug) }}">
       <span class="course-prev-next__direction">← Previous</span>
       <span class="course-prev-next__module">{{ $prev.module }}</span>
       <span class="course-prev-next__title">{{ $prev.title }}</span>
@@ -43,13 +72,22 @@
     <span class="course-prev-next__link course-prev-next__link--placeholder" aria-hidden="true"></span>
     {{- end }}
 
-    <a class="course-prev-next__link course-prev-next__link--home" href="/course/tech-for-non-technical-founders-2026/">
+    <a class="course-prev-next__link course-prev-next__link--home" href="{{ $base }}">
       <span class="course-prev-next__direction">Course home</span>
       <span class="course-prev-next__title">All 5 modules</span>
     </a>
 
-    {{- if $next }}
-    <a class="course-prev-next__link course-prev-next__link--next" href="/course/tech-for-non-technical-founders-2026/{{ $next.slug }}/">
+    {{- if $branches }}
+    <div class="course-prev-next__branches">
+      {{- range $branches }}
+      <a class="course-prev-next__link course-prev-next__link--next course-prev-next__link--branch" href="{{ or .url (printf "%s%s/" $base .slug) }}">
+        <span class="course-prev-next__direction">{{ .direction }}</span>
+        <span class="course-prev-next__title">{{ .title }}</span>
+      </a>
+      {{- end }}
+    </div>
+    {{- else if $next }}
+    <a class="course-prev-next__link course-prev-next__link--next" href="{{ or $next.url (printf "%s%s/" $base $next.slug) }}">
       <span class="course-prev-next__direction">Next →</span>
       <span class="course-prev-next__module">{{ $next.module }}</span>
       <span class="course-prev-next__title">{{ $next.title }}</span>
@@ -58,5 +96,6 @@
     <span class="course-prev-next__link course-prev-next__link--placeholder" aria-hidden="true"></span>
     {{- end }}
   </div>
+  <p class="course-prev-next__glossary">Tripping on a term? <a href="{{ $base }}five-tech-words-stop-nodding-at/">Five Tech Words to Stop Nodding At</a> - the course glossary.</p>
 </nav>
 {{- end -}}

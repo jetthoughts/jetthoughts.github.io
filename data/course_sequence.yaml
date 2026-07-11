@@ -75,11 +75,32 @@ sequence:
     title: "2.4 · Find 10 People: What to Say"
     module: "Chapter 2.4"
     goal: "The 3-message sequence, volume targets, and research-panel fallback that turn the 30-name list into 10 booked interviews (expanding the list if replies run thin)."
+    # Branch-aware strip (40.17 P1 #1): the linear Next jumped straight to the
+    # 2.5 scoring gate, skipping the days-long "actually run the interviews" loop.
+    branches:
+      - slug: mom-test-ask-about-past-not-future
+        direction: "Now →"
+        title: "Run your ten interviews with the 2.1 script (this takes days, not one sitting)"
+      - slug: mom-test-synthesis-build-pivot-kill
+        direction: "Interviews done? →"
+        title: "2.5 · Synthesis: Build, Pivot, or Kill"
 
   - slug: mom-test-synthesis-build-pivot-kill
     title: "2.5 · Mom Test Synthesis: Build, Pivot, or Kill"
     module: "Chapter 2.5"
     goal: "Score the 10 transcripts, count strong signals, and make the build / pivot / kill call: 7+ build, 4-6 pivot, under 4 kill."
+    # Branch-aware strip (40.17 P1 #1): a single "Next → 2.6" hid the gate and
+    # funneled pivot/kill scorers into building the thing they just invalidated.
+    branches:
+      - slug: clickable-prototype-validation-2-hour-lovable
+        direction: "7+ strong: build →"
+        title: "2.6 · Build a Clickable Prototype"
+      - slug: find-10-people-where-to-look
+        direction: "4-6: pivot →"
+        title: "2.3 · Re-target and find 10 new people"
+      - slug: form-your-founding-hypothesis-90-minute-sprint
+        direction: "Under 4: kill →"
+        title: "1.1 · Form a new hypothesis"
 
   - slug: clickable-prototype-validation-2-hour-lovable
     title: "2.6 · Build a Clickable Prototype"
@@ -125,6 +146,15 @@ sequence:
     title: "5.1 · Your First Customer Is Not a Marketing Problem"
     module: "Chapter 5.1"
     goal: "Pass the Sean Ellis 40% test against your earliest users before any paid ads."
+    # Branch-aware strip (40.17 P1 #1): the linear Next detoured the core path
+    # into optional 5.2; the core path continues at 5.3.
+    branches:
+      - slug: first-ten-customers-network-list
+        direction: "Core path →"
+        title: "5.3 · Build Your 50-Name Network List"
+      - slug: channel-selection-before-outbound
+        direction: "Optional detour →"
+        title: "5.2 · Choose Your Channel (skip if your first 10 are clearly in your network)"
 
   - slug: channel-selection-before-outbound
     title: "5.2 · Choose Your Channel Before You Send One Message"

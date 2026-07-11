@@ -178,7 +178,7 @@ The [stop-looking-for-product-market-fit guide](/blog/stop-looking-for-product-m
 
 ## The Mom Test interview script artifact
 
-The artifact at **[/course/tech-for-non-technical-founders-2026/mom-test-interview-script/](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/)** carries the same 5 questions verbatim, the follow-ups, the pass/fail signals, the 3 emotional-language flags, and the scoring rubric.
+The **[Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/)** carries the same 5 questions verbatim, the follow-ups, the pass/fail signals, the 3 emotional-language flags, and the scoring rubric.
 
 **Save your draft list before moving on.** Open a new Google Doc titled `Mom Test draft - [date]` in the same `Founder OS` folder as your Founding Hypothesis. Copy the 5 verbatim questions from the artifact, then add 2-3 ICP-specific probes of your own (e.g., for a chiropractor ICP: "Walk me through your last insurance-claim resubmission. When did it happen?"). That 5-8 question list is the input Ch 2.2 expects you to sharpen against AI personas.
 

@@ -32,9 +32,9 @@ related_posts: false
 > **Course glossary** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course.
 > Vocabulary the rest of the course assumes you have. Skim once; come back when you hit a word you nodded at.
 
-A founder we picked up in Q1 2026 had nodded at the same word for fourteen months. Every Friday her contractor's PM said "we're refactoring the order flow" and she wrote it down. When her new fractional CTO finally read the repo, he came back with one line: nothing new had shipped to production since month three. **"Refactoring" had cost her $51K and a year of runway.** She had nodded because she did not know what else to do.
+One founder nodded at the same word for fourteen months. Every Friday her contractor's PM said "we're refactoring the order flow" and she wrote it down. When her new fractional CTO finally read the repo, he came back with one line: nothing new had shipped to production since month three. **"Refactoring" had cost her $51K and a year of runway.** She nodded because the word gave her nothing to push back on - which is exactly what the questions in this glossary hand you.
 
-A non-technical founder often learn engineering vocabulary under pressure, mid-meeting, with a bill on the table. The agency throws a word, the founder nods, the meeting moves on. By the time the founder figures out what the word actually meant, the next sprint is already approved.
+Non-technical founders often learn engineering vocabulary under pressure, mid-meeting, with a bill on the table. The agency throws a word, the founder nods, the meeting moves on. By the time the founder figures out what the word actually meant, the next sprint is already approved.
 
 Below is the cheat sheet for the five words that hide the most invoices: refactoring, Docker, tech debt, MVP, architecture. For each you get a plain-English definition, the dishonest version your dev shop probably means when they say it, and one question you can ask in your next standup that the BS-version cannot answer.
 
@@ -186,3 +186,7 @@ If your team's vocabulary makes you nervous, the next layer of the diagnostic is
 - DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for keeping the architecture small.
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - 45% of LLM-generated code shipped at least one exploitable flaw.
 - LitsLink, [Cost of Outsourcing Software Development](https://litslink.com/blog/cost-of-outsourcing-software-development) - 42% of developer time goes to technical debt.
+
+---
+
+**Back to the course:** [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) - or jump back into the module you came from.

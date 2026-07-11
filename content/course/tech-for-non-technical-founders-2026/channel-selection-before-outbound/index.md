@@ -241,7 +241,7 @@ Pick the channel your interviews already named, commit to it long enough to read
 - Lenny Rachitsky, [How today's fastest growing B2B businesses found their first ten customers](https://www.lennysnewsletter.com/p/how-todays-fastest-growing-b2b-businesses) - the channel breakdown across Figma, Stripe, Slack, Notion. Channel choice is the first lever, not the last.
 - Brian Balfour, [Why Product Market Fit Isn't Enough](https://brianbalfour.com/essays/product-market-fit-isnt-enough) - the case for channel-model fit as a distinct requirement from product-market fit. Strong reading for any founder who has a working product but no acquisition motion.
 - Andrew Chen, [The Law of Shitty Clickthroughs](https://andrewchen.com/the-law-of-shitty-clickthroughs/) - why every channel degrades over time and why early-stage founders need to pick the channel that works now, not the channel that worked for a more established company 3 years ago.
-- First Round Capital, [From 1 to 1,000 Users](https://review.firstround.com/from-1-to-1000-users-tactics-from-airbnb-tinder-etsy-reddit-and-more/) - channel selection stories from Airbnb, Tinder, Etsy, Reddit, including how each picked their first acquisition channel based on where their early customers actually lived online.
+- Lenny Rachitsky, [How the biggest consumer apps got their first 1,000 users](https://www.lennysnewsletter.com/p/how-the-biggest-consumer-apps-got) - channel selection stories from Airbnb, Tinder, Etsy, Reddit, including how each picked their first acquisition channel based on where their early customers actually lived online.
 
 > **Done:** your worksheet is filled, one channel is chosen, and you have written your commitment statement (channel name + why + evaluation criteria).
 >

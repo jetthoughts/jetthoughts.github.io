@@ -38,7 +38,7 @@ related_posts: false
 
 After this lesson you will be able to: **publish a landing page so clear that strangers grasp your idea in 3 seconds.**
 
----
+## What the page is made of
 
 A **smoke-test page** is one URL that describes your unbuilt product and asks visitors for an email if they want it. This lesson builds the page so strangers can understand it. Tracking goes in 1.3; the demand test runs in 1.4 (would strangers actually sign up?).
 
@@ -53,7 +53,7 @@ The page has four copy blocks that decide whether it converts:
 
 ![Smoke-test page anatomy showing 4 labeled blocks - headline names customer plus outcome, sub-headline explains the mechanism, a row of 3-4 value props, and the CTA button with coming-soon footer line](page-anatomy.svg)
 
----
+## Build the page
 
 > **Build:**
 >
@@ -62,11 +62,13 @@ The page has four copy blocks that decide whether it converts:
 > 3. Swap the hero image (the main image at the top of your page). Ask your AI assistant for: *"Photorealistic image: [pain scenario in one sentence]. Candid, natural lighting, no text or logos."* If your AI can't generate images, grab a stock photo from [Unsplash](https://unsplash.com/). In Mixo: click the hero section → Replace image → Upload. If the image doesn't help, delete it - the headline carries the page. **Never** use a product mockup of something you have not built.
 > 4. Click **Publish**. Mixo gives a URL like `yourname.mixo.io`. Open it in an incognito window. Confirm the page loads.
 
+## Test it on one stranger
+
 Send the URL to **ONE real person** who has not seen your work. Any stranger works (they don't need to be your target customer - this tests headline clarity, not buying interest). Ask: "In 3 seconds, who is this page for and what does it do?" **Nobody available right now?** Record a short screen recording of your page with [Loom](https://www.loom.com/) (a free screen-recording tool) and send it to someone tomorrow with the same 3-second question. Or post the URL in a relevant subreddit with "What does this page do in 3 seconds?"
 
 > **✅ Success check:** they can name both. If they cannot, the headline is almost always the fix - rewrite it and retest.
 
----
+## If strangers can't name it
 
 **If this fails: strangers cannot name who the page is for or what it does, even after 2 headline rewrites.** **Why:** your hypothesis `[customer]` or `[differentiation]` blank is still too vague. **Fix:** back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten ("solo chiropractors," not "small businesses").
 

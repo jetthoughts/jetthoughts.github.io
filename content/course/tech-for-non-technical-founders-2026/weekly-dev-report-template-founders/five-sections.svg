@@ -14,7 +14,7 @@
     <rect width="540" height="92" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" rx="6"/>
     <text x="20" y="32" font-size="22" fill="#2e7d32" font-weight="bold">1. Shipped</text>
     <text x="20" y="58" font-size="16" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">staging URL + test login + one sentence per feature</text>
-    <text x="20" y="80" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-style="italic">"staging.acme.app/co/v2 - login: founder@test.com / demo1234"</text>
+    <text x="20" y="80" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-style="italic">"staging.acme.app/co/v2 - login: demo@example.com / example-pass-123"</text>
     <text x="510" y="32" text-anchor="end" font-size="14" fill="#2e7d32">PROOF</text>
   </g>
 

@@ -24,7 +24,7 @@ metatags:
   image: cover.png
   og_title: "2.4 · Find 10 People: What to Say"
   og_description: "The message templates that book 10 customer interviews. 3-message sequence, volume targets, research panel fallback."
-cover_image_alt: "JetThoughts cover showing the 5-step outreach funnel from Reddit mining at the top down to 10 calls booked at the bottom"
+cover_image_alt: "JetThoughts cover showing a network graph of outreach contacts converging on 10 booked interview calls, sent with Gmail from your 30-name list"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/"
 related_posts: false
 ---
@@ -126,7 +126,7 @@ If your ICP can't be reached cold - a CFO at a regulated bank, an oncology nurse
 
 **[User Interviews](https://userinterviews.com)** and **[Respondent](https://respondent.io)** are the two big ones. You write a screener, upload the interview script, and they ship booked calls in 3-5 days. Respondent tends to reach business roles (CFOs, engineering directors, ops leads) more reliably; User Interviews has broader consumer coverage.
 
-The cost is real - each booked call has a meaningful incentive attached - so panels are not the default. Use them only when the cold-outreach path can't reach your ICP. When they do work, run them in parallel with cold outreach: the two samples bias differently (free-time strangers vs. paid-time strangers), and together they give you a more honest read.
+Everything up to here costs $0 - Gmail and the 30-name list you built in Part 1. A research panel is the paid shortcut: you pay the service to book interviewees for you, which usually runs a few hundred dollars total for a round of calls. That is why it is not the default - use it only when the cold-outreach path can't reach your ICP and replies run thin. When it does work, run it in parallel with cold outreach: the two samples bias differently (free-time strangers vs. paid-time strangers), and together they give you a more honest read.
 
 ### The parallel smoke-test landing page
 

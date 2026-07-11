@@ -69,6 +69,8 @@ Each blank is an assumption, and each assumption has a test waiting for it later
 
 ![5 blanks of the Mad Libs hypothesis sentence with a filled example below](hypothesis-mad-libs.svg)
 
+Can't tell whether a blank is specific enough to bet on? The [validation tools field guide](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/) walks three AI tools that stress-test your five blanks in about ten minutes - a structured second opinion before you commit the sentence and start booking interviews.
+
 ---
 
 ## How to Score Your Hypothesis

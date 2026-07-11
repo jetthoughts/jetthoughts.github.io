@@ -41,7 +41,7 @@ Five modules take you from that idea to a signed paid pilot: test demand with st
 
 The first checkpoint comes fast. Two to three weeks in, at an evenings-and-weekends pace, you'll know whether the idea is worth building at all - a go/iterate/kill verdict on your **Founding Hypothesis** (the one-sentence version of your idea: who the customer is, what problem you solve, why they'd pick you) from real demand data instead of polite nods from friends.
 
-Need orientation first? See the [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) (3 min), [FAQ](/course/tech-for-non-technical-founders-2026/faq/) (the most common blockers), or [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) (full route overview).
+New here? Read [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) once - the 10-minute route map - then start [Chapter 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Short on time tonight? The [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) (3 min) is the compressed version, and the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) answers the most common blockers.
 
 *Returning? [Skip to the syllabus ↓](#module-map)*
 
