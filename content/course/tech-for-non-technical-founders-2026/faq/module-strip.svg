@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 200" role="img" aria-labelledby="faq-strip-title">
+  <title id="faq-strip-title">FAQ map: questions are grouped as General, then Module 1 Hypothesis and smoke test, Module 2 Validate the problem, Module 3 Design from evidence, Module 4 Build it yourself, and Module 5 First paying customer - in that order.</title>
+  <defs>
+    <style>
+      .num    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #ffffff; font-weight: 700; }
+      .lab    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #ffffff; font-weight: 700; }
+      .glab   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #1a1a1a; font-weight: 700; }
+      .gsub   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #666; }
+      .cap    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #555; font-style: italic; }
+      .chip   { fill: #cc342d; stroke: #a5241f; stroke-width: 2; }
+      .gen    { fill: #fffdf8; stroke: #cc342d; stroke-width: 2; }
+    </style>
+    <marker id="fa" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6" fill="none" stroke="#999" stroke-width="1.6"/>
+    </marker>
+  </defs>
+
+  <!-- General (entry) -->
+  <g transform="rotate(-0.4 91.5 94)">
+    <rect x="24" y="44" width="135" height="100" rx="14" class="gen"/>
+    <text x="91.5" y="90" class="glab" text-anchor="middle">General</text>
+    <text x="91.5" y="112" class="gsub" text-anchor="middle">pace &amp; order</text>
+  </g>
+
+  <!-- M1 -->
+  <g transform="rotate(0.4 246.5 94)">
+    <rect x="179" y="44" width="135" height="100" rx="14" class="chip"/>
+    <text x="246.5" y="78" class="num" text-anchor="middle">M1</text>
+    <text x="246.5" y="103" class="lab" text-anchor="middle">Hypothesis</text>
+    <text x="246.5" y="123" class="lab" text-anchor="middle">&amp; smoke test</text>
+  </g>
+
+  <!-- M2 -->
+  <g transform="rotate(-0.3 401.5 94)">
+    <rect x="334" y="44" width="135" height="100" rx="14" class="chip"/>
+    <text x="401.5" y="78" class="num" text-anchor="middle">M2</text>
+    <text x="401.5" y="103" class="lab" text-anchor="middle">Validate</text>
+    <text x="401.5" y="123" class="lab" text-anchor="middle">the problem</text>
+  </g>
+
+  <!-- M3 -->
+  <g transform="rotate(0.3 556.5 94)">
+    <rect x="489" y="44" width="135" height="100" rx="14" class="chip"/>
+    <text x="556.5" y="78" class="num" text-anchor="middle">M3</text>
+    <text x="556.5" y="103" class="lab" text-anchor="middle">Design from</text>
+    <text x="556.5" y="123" class="lab" text-anchor="middle">evidence</text>
+  </g>
+
+  <!-- M4 -->
+  <g transform="rotate(-0.3 711.5 94)">
+    <rect x="644" y="44" width="135" height="100" rx="14" class="chip"/>
+    <text x="711.5" y="78" class="num" text-anchor="middle">M4</text>
+    <text x="711.5" y="103" class="lab" text-anchor="middle">Build it</text>
+    <text x="711.5" y="123" class="lab" text-anchor="middle">yourself</text>
+  </g>
+
+  <!-- M5 -->
+  <g transform="rotate(0.4 866.5 94)">
+    <rect x="799" y="44" width="135" height="100" rx="14" class="chip"/>
+    <text x="866.5" y="78" class="num" text-anchor="middle">M5</text>
+    <text x="866.5" y="103" class="lab" text-anchor="middle">First paying</text>
+    <text x="866.5" y="123" class="lab" text-anchor="middle">customer</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="161" y1="94" x2="177" y2="94" stroke="#999" stroke-width="1.6" marker-end="url(#fa)"/>
+  <line x1="316" y1="94" x2="332" y2="94" stroke="#999" stroke-width="1.6" marker-end="url(#fa)"/>
+  <line x1="471" y1="94" x2="487" y2="94" stroke="#999" stroke-width="1.6" marker-end="url(#fa)"/>
+  <line x1="626" y1="94" x2="642" y2="94" stroke="#999" stroke-width="1.6" marker-end="url(#fa)"/>
+  <line x1="781" y1="94" x2="797" y2="94" stroke="#999" stroke-width="1.6" marker-end="url(#fa)"/>
+
+  <text x="480" y="178" class="cap" text-anchor="middle">Find your module below - questions are grouped in this order.</text>
+</svg>

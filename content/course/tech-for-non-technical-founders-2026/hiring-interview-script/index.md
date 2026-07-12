@@ -48,15 +48,9 @@ related_posts: false
 
 ## The 7 questions at a glance
 
-| # | Question (compressed) | What it tests |
-|---|---|---|
-| 1 | Workflow: Jira ticket to merged code, with AI in the loop | Tools named by version, real PR from last week |
-| 2 | Cost: $/dev/month on AI tokens, who pays it | Specific dollar range, pulled before the call |
-| 3 | Verification: what the senior reviewer checks on AI PRs | Opens a real PR on screen, names line-level checks |
-| 4 | Slopsquatting: how do you stop a hallucinated package | Named defense, uses the word, cites the source |
-| 5 | Accountability: last AI-generated-code incident you owned | Date in last 6 months, root cause, workflow change after |
-| 6 | Refactor: last one you led, what stayed/changed/broke | Named system, kept-changed-broke-safety-net structure |
-| 7 | Disagreement: PR review where you said no to the AI | Real PR on screen, specific technical reason, one of many |
+Keep this card open during the call or print it: what to listen for (Pass) sits beside what to walk away from (Fail), question by question. The full criteria for each are in the sections below.
+
+![The 7 hiring questions on one card - the pass signal beside the fail signal for each, with a checkbox to score in real time](scorecard-at-a-glance.svg)
 
 ## Why this exists
 
