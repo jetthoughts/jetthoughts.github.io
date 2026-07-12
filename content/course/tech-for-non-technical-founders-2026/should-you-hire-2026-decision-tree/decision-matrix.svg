@@ -31,7 +31,7 @@
   <!-- Top right: Self-serve build -->
   <rect x="530" y="116" width="460" height="220" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" filter="url(#rough)"/>
   <text x="550" y="146" font-size="24" fill="#2e7d32" font-weight="bold">2. Self-serve build (Ch 4.3-4.4)</text>
-  <text x="550" y="172" font-size="20" fill="#1a1a1a">When: validated. Simple MVP. 4-8 weeks free.</text>
+  <text x="550" y="172" font-size="20" fill="#1a1a1a">When: validated. Simple MVP.</text>
   <text x="550" y="194" font-size="20" fill="#1a1a1a">First action: paste Vibe PRD into Lovable.</text>
   <text x="550" y="216" font-size="20" fill="#1a1a1a">Cost: $200-$1,200/mo. Timeline: 6-12 weeks.</text>
   <text x="550" y="238" font-size="20" fill="#1a1a1a">Failure mode: hits ceiling at 5K users.</text>

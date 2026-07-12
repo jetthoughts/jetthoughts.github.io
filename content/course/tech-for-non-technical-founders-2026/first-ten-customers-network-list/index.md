@@ -6,6 +6,7 @@ draft: false
 course_chapter: true
 author: "JetThoughts Team"
 slug: first-ten-customers-network-list
+aliases: ["/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/"]
 keywords:
   - first 10 b2b customers
   - personal network outreach founder

@@ -200,7 +200,7 @@ These are skip-by-default. The main chapter works without any of them.
 
 **Offline-heavy verticals - paid panel as Plan A.** If your ICP lives in trades, nursing, in-store retail, elderly users, or regulated B2B, the Reddit / LinkedIn / G2 flow returns nothing useful. Use a paid panel instead. [UserInterviews](https://www.userinterviews.com/) and [Respondent](https://www.respondent.io/) have screened participants across these verticals; pricing is per completed interview - check the panel's current rates. Decision rule: if your ICP description names an offline trade, an over-60 user, or a regulated profession, budget for a paid panel as Plan A.
 
-**Monitoring tools that cut the manual reading load.** [Keyworddit](https://keyworddit.com) (free, no signup) surfaces the high-frequency keywords inside any subreddit. [F5Bot](https://f5bot.com) (free) sends email alerts when your keywords appear on Reddit, Hacker News, or Lobste.rs. [Reddinbox](https://reddinbox.com) watches Reddit for your keywords and collects the matching conversations in one inbox so you can reply from there. These tools surface the threads faster - you still read them yourself.
+**Monitoring tools that cut the manual reading load.** [Keyworddit](https://keyworddit.com) (no signup) surfaces the high-frequency keywords inside any subreddit. [F5Bot](https://f5bot.com) sends email alerts when your keywords appear on Reddit, Hacker News, or Lobste.rs. [Reddinbox](https://reddinbox.com) watches Reddit for your keywords and collects the matching conversations in one inbox so you can reply from there. These tools surface the threads faster - you still read them yourself.
 
 ## Further reading
 
@@ -216,7 +216,7 @@ These are skip-by-default. The main chapter works without any of them.
 > **Next:** [2.4 · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - the message templates, cadence, and follow-up sequence.
 > **If blocked:** If the AI returned "NOT FOUND" for every community, your hypothesis is too vague. Go back to Ch 1.1 and rewrite the customer sentence with a specific role, company size, and the moment in their week when the pain happens.
 
-> **Stuck here?** Your name list stops at 3 people. **Fix:** search a related keyword - "boarding costs" instead of "pet sitter," "claim denial appeal" instead of "medical billing." The second-degree search surfaces people with the same problem but different vocabulary. 30 minutes of keyword variation turns 3 names into 12. Not "License Apollo Pro."
+> **Stuck here?** Your name list stops at 3 people. **Fix:** search a related keyword - "boarding costs" instead of "pet sitter," "claim denial appeal" instead of "medical billing." The second-degree search surfaces people with the same problem but different vocabulary. 30 minutes of keyword variation turns 3 names into 12 - not jumping to a paid Apollo plan.
 
 ---
 

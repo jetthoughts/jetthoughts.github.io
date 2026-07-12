@@ -30,7 +30,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to [Module 5 of the From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Six artifacts that take you from live MVP to signed paid pilot in 4 weeks.
+📋 Template companion to [Module 5 of the From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Six artifacts that take you from live MVP to signed paid pilot in 4 weeks - the Design Partner Agreement is live below; the other five ship as they are ready.
 
 > **Status: shipping.** The DPA template (component 3) is live below - copy and paste into Google Docs. The other 5 components are described here and shipping as each is ready. There is no email signup; when a template is downloadable, the link appears inline below. Bookmark and check back.
 
@@ -229,4 +229,4 @@ Module 5 ends here. The kit ships alongside Module 5 as each artifact is ready.
 
 ## Built by
 
-[JetThoughts](https://jetthoughts.com), a Rails-first dev shop that has rescued non-technical founders' codebases for 20 years. We published this course because the same five mistakes kept showing up in the rescue calls. The kit ships free for the same reason.
+[JetThoughts](https://jetthoughts.com), a Rails-first dev shop that has rescued non-technical founders' codebases for 20 years. We published this course because the same five mistakes kept showing up in the rescue calls. The kit ships open for the same reason.

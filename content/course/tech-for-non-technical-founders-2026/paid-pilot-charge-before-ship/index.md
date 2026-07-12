@@ -242,7 +242,7 @@ You have a warm lead from [Chapter 5.5](/course/tech-for-non-technical-founders-
 
 ### Advanced objections (after customer #5)
 
-The five responses below show up once you start talking to enterprise buyers or repeat prospects. For the first 4-5 pilots, the basic-objection table above covers what you will hear. These render as expandable rows so each long answer doesn't overflow on mobile.
+The five responses below show up once you start talking to enterprise buyers or repeat prospects. For the first 4-5 pilots, the basic-objection table above covers what you will hear.
 
 **"Can we do it at $300 instead of $1,200?"**
 

@@ -158,3 +158,5 @@ If the answers came back vague, contradictory, or missing, that is the signal. T
 - Will Larson (interviewed by First Round Review), [Engineering leadership anti-patterns from Stripe, Uber, Carta](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) - on review processes and the PR funnel as the productivity signal.
 - TechTIQ Solutions, [IT Staff Augmentation Cost Breakdown 2026](https://techtiqsolutions.com/it-staff-augmentation-cost-breakdown-and-pricing-models/) - hidden costs of staff-augmented teams.
 - DataToBiz, [The Strategic Advantage of Subcontracting in IT Staff Augmentation](https://www.datatobiz.com/blog/subcontracting-in-it-staff-augmentation/) - plain description of the subcontracting layers founders rarely see.
+
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

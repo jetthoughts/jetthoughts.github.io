@@ -25,7 +25,7 @@ metatags:
   image: cover.png
   og_title: "4.3 · The Self-Serve MVP Stack: Tools & Setup"
   og_description: "Why Lovable + Supabase + Stripe is the dominant self-serve path. Plain-English roles, vendor pricing, 12 rules, communities. Chapter 4.3 of the course; Chapter 4.4 walks the build."
-cover_image_alt: "JetThoughts cover showing three hand-drawn stacked layers labeled Lovable, Supabase, and Stripe with arrows linking them, and a sticky note reading Ship by Friday week 4."
+cover_image_alt: "JetThoughts cover showing three hand-drawn stacked layers labeled Lovable, Supabase, and Stripe with arrows linking them, and a sticky note reading Weeks 4-10 for the build-phase plan."
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/"
 related_posts: false
 ---

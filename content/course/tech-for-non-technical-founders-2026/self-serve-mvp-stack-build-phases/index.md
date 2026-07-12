@@ -23,7 +23,7 @@ metatags:
   image: cover.png
   og_title: "4.4 · The Self-Serve MVP Stack: Build Phases"
   og_description: "The build plan: 4 phases from Lovable UI to live Stripe checkout. Phase exit criteria, 5 green lights, and the Module 5 handoff."
-cover_image_alt: "JetThoughts cover showing three hand-drawn stacked layers labeled Lovable, Supabase, and Stripe with arrows linking them, and a sticky note reading Ship by Friday week 4."
+cover_image_alt: "JetThoughts cover showing three hand-drawn stacked layers labeled Lovable, Supabase, and Stripe with arrows linking them, and a sticky note reading Weeks 4-10 for the build-phase plan."
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/"
 related_posts: false
 ---
