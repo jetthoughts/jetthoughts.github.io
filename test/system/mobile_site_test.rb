@@ -67,6 +67,14 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "course/landing", tolerance: 0.03, skip_area: %w[picture img]
   end
 
+  def test_client_single_full
+    visit "/clients/agent-inbox/"
+
+    assert_selector "h1", text: "Agent Inbox"
+
+    assert_stable_screenshot "clients/single-full", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
   def test_course_chapter
     visit "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/"
 

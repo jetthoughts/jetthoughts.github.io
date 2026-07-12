@@ -286,6 +286,14 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "404"
   end
 
+  def test_client_single_full
+    visit "/clients/agent-inbox/"
+
+    assert_selector "h1", text: "Agent Inbox"
+
+    assert_stable_screenshot "clients/single-full", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
   def test_privacy_policy
     visit "/privacy-policy/"
 
