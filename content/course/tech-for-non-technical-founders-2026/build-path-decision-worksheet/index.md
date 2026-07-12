@@ -50,161 +50,74 @@ Total time budget: 30 minutes alone, 20 minutes with one peer, 0 minutes second-
 
 ## The 5 questions - check the box that matches
 
-```
-=========== BUILD PATH DECISION WORKSHEET ===========
-
-Founder: _________________  Date: ____________________
-
-one-page brief finalized on: ____________________
-
-Months of runway in the bank: ________________________
-```
+<div class="ws-card">
+  <div class="ws-field"><span class="ws-flabel">Founder</span><span class="ws-blank"></span><span class="ws-flabel">Date</span><span class="ws-blank"></span></div>
+  <div class="ws-field"><span class="ws-flabel">One-page brief finalized on</span><span class="ws-blank"></span></div>
+  <div class="ws-field"><span class="ws-flabel">Months of runway in the bank</span><span class="ws-blank"></span></div>
+</div>
 
 ### Q1: Is the problem validated?
 
-```
-------------------------------------------------------
-Q1. Is the problem validated?
-------------------------------------------------------
-
-Counts as YES only if all 4 below are true:
- [ ] 10 or more Mom Test interviews complete
- [ ] Strong past-behavior signal in at least 7 of 10
- [ ] Smoke test cleared the 6%+ "Promising" band -
-     the share of visitors who left their email on
-     your test page (Module 1, Chapter 1.4)
- [ ] Prototype test: 4 of 5 people reached the right
-     screen without you coaching them (from Module 2)
-
-LinkedIn likes do not count. "They said they would
-buy" does not count. What people DID counts - the
-sign-ups on the smoke test and the prototype run, not
-what they said they would do. Pre-orders and paid
-pilots come later (Module 5); you do not need them
-to answer YES here.
-
-VERDICT: [ ] Yes    [ ] No
-
-If NO -> stop here. Path 1 (Validate without code).
-        Run the Airbnb test this week.
-
-If YES -> go to Q2.
-```
+<div class="ws-card">
+  <p>Counts as YES only if all 4 below are true:</p>
+  <ul class="ws-checks">
+    <li>10 or more Mom Test interviews complete</li>
+    <li>Strong past-behavior signal in at least 7 of 10</li>
+    <li>Smoke test cleared the 6%+ "Promising" band - the share of visitors who left their email on your test page (Module 1, Chapter 1.4)</li>
+    <li>Prototype test: 4 of 5 people reached the right screen without you coaching them (from Module 2)</li>
+  </ul>
+  <p>LinkedIn likes do not count. "They said they would buy" does not count. What people DID counts - the sign-ups on the smoke test and the prototype run, not what they said they would do. Pre-orders and paid pilots come later (Module 5); you do not need them to answer YES here.</p>
+  <div class="ws-verdict"><span class="ws-vlabel">Verdict</span><span class="ws-opt"><span class="ws-box"></span> Yes</span><span class="ws-opt"><span class="ws-box"></span> No</span></div>
+  <div class="ws-route ws-route-alt"><strong>If NO</strong> → stop here. Path 1 (Validate without code). Run the Airbnb test this week.</div>
+  <div class="ws-route ws-route-go"><strong>If YES</strong> → go to Q2.</div>
+</div>
 
 ### Q2: How backend-heavy is the build?
 
-```
-------------------------------------------------------
-Q2. How backend-heavy is the build?
-------------------------------------------------------
-
-Check every TRUE row:
- [ ] Live updates that appear on screen without
-     anyone refreshing the page (like watching
-     someone type in Google Docs or Slack)
- [ ] Heavy jobs that run in the background and keep
-     retrying if they fail (mass emails, big uploads)
- [ ] An AI model runs every time someone uses the
-     feature, and each run costs real money (more
-     than a cent per use)
- [ ] Many separate companies use the same app and
-     none can ever see another company's data
- [ ] The app connects to 5 or more outside services
-     (payments, email, maps, calendars, and so on)
- [ ] Regulated data - health records (HIPAA), stored
-     credit-card numbers (PCI), or enterprise
-     security audits (SOC 2)
-
-VERDICT:
- [ ] 0-1 boxes checked   = LIGHT backend
- [ ] 2-3 boxes checked   = MID backend
- [ ] 4 or more checked   = HEAVY backend
-
-If HEAVY -> Path 4 (Hire a team - see the hire-track
-            supplementary reference, linked in the
-            verdict table below).
-            Read the SOW guide before kickoff.
-
-If LIGHT or MID -> go to Q3.
-```
+<div class="ws-card">
+  <p>Check every TRUE row:</p>
+  <ul class="ws-checks">
+    <li>Live updates that appear on screen without anyone refreshing the page (like watching someone type in Google Docs or Slack)</li>
+    <li>Heavy jobs that run in the background and keep retrying if they fail (mass emails, big uploads)</li>
+    <li>An AI model runs every time someone uses the feature, and each run costs real money (more than a cent per use)</li>
+    <li>Many separate companies use the same app and none can ever see another company's data</li>
+    <li>The app connects to 5 or more outside services (payments, email, maps, calendars, and so on)</li>
+    <li>Regulated data - health records (HIPAA), stored credit-card numbers (PCI), or enterprise security audits (SOC 2)</li>
+  </ul>
+  <div class="ws-verdict ws-verdict-stack"><span class="ws-vlabel">Verdict</span><span class="ws-opt"><span class="ws-box"></span> 0-1 boxes checked = LIGHT backend</span><span class="ws-opt"><span class="ws-box"></span> 2-3 boxes checked = MID backend</span><span class="ws-opt"><span class="ws-box"></span> 4 or more checked = HEAVY backend</span></div>
+  <div class="ws-route ws-route-alt"><strong>If HEAVY</strong> → Path 4 (Hire a team - see the hire-track supplementary reference, linked in the verdict table below). Read the SOW guide before kickoff.</div>
+  <div class="ws-route ws-route-go"><strong>If LIGHT or MID</strong> → go to Q3.</div>
+</div>
 
 ### Q3: What is your runway?
 
-```
-------------------------------------------------------
-Q3. What is your runway?
-------------------------------------------------------
-
-Months of cash until you must show paying customers:
-
- [ ] Less than 4 months
- [ ] 4 to 12 months
- [ ] 12 or more months
-
-If LESS THAN 4 -> Path 1 (Validate without code),
-                  regardless of how validated you
-                  feel. The Airbnb test is the only
-                  experiment that fits in the window.
-
-If 4 TO 12 -> Paths 2, 3 are on the table. Go to Q4.
-
-If 12+ -> Paths 2, 3, 4 are on the table. Go to Q4.
-```
+<div class="ws-card">
+  <p>Months of cash until you must show paying customers:</p>
+  <div class="ws-verdict ws-verdict-stack"><span class="ws-opt"><span class="ws-box"></span> Less than 4 months</span><span class="ws-opt"><span class="ws-box"></span> 4 to 12 months</span><span class="ws-opt"><span class="ws-box"></span> 12 or more months</span></div>
+  <div class="ws-route ws-route-alt"><strong>If LESS THAN 4</strong> → Path 1 (Validate without code), regardless of how validated you feel. The Airbnb test is the only experiment that fits in the window.</div>
+  <div class="ws-route ws-route-go"><strong>If 4 TO 12</strong> → Paths 2, 3 are on the table. Go to Q4.</div>
+  <div class="ws-route ws-route-go"><strong>If 12+</strong> → Paths 2, 3, 4 are on the table. Go to Q4.</div>
+</div>
 
 ### Q4: What is your monthly engineering budget?
 
-```
-------------------------------------------------------
-Q4. What is your monthly engineering budget?
-------------------------------------------------------
-
-Money you can commit for at least 6 months:
-
- [ ] $0 to $400/wk of your own time
- [ ] $1,600 to $4,000/mo (Fractional CTO band)
- [ ] $5,000 to $30,000/mo (small team band)
- [ ] $30,000+ /mo (multi-person team band)
-
-If $0-$400 -> Path 2 (Self-serve / Ch 4.3 then 4.4).
-              Paste one-page brief into Lovable.
-
-If $1.6K-$4K -> go to Q5.
-
-If $5K-$30K -> Path 3 (Fractional CTO) until problem
-               complexity demands more.
-
-If $30K+ -> Path 4 (Hire a team - see the hire-track
-            supplementary reference, linked in the
-            verdict table below).
-```
+<div class="ws-card">
+  <p>Money you can commit for at least 6 months:</p>
+  <div class="ws-verdict ws-verdict-stack"><span class="ws-opt"><span class="ws-box"></span> $0 to $400/wk of your own time</span><span class="ws-opt"><span class="ws-box"></span> $1,600 to $4,000/mo (Fractional CTO band)</span><span class="ws-opt"><span class="ws-box"></span> $5,000 to $30,000/mo (small team band)</span><span class="ws-opt"><span class="ws-box"></span> $30,000+ /mo (multi-person team band)</span></div>
+  <div class="ws-route ws-route-alt"><strong>If $0-$400</strong> → Path 2 (Self-serve / Ch 4.3 then 4.4). Paste one-page brief into Lovable.</div>
+  <div class="ws-route ws-route-go"><strong>If $1.6K-$4K</strong> → go to Q5.</div>
+  <div class="ws-route ws-route-alt"><strong>If $5K-$30K</strong> → Path 3 (Fractional CTO) until problem complexity demands more.</div>
+  <div class="ws-route ws-route-alt"><strong>If $30K+</strong> → Path 4 (Hire a team - see the hire-track supplementary reference, linked in the verdict table below).</div>
+</div>
 
 ### Q5: Senior engineer in your network for 1 hour of architecture review per month?
 
-```
-------------------------------------------------------
-Q5. Senior engineer in your network for 1 hour
-    of architecture review per month?
-------------------------------------------------------
-
-A real human you can text. Returns calls within 48 hrs.
-Has shipped a backend at scale in the last 5 years.
-
- [ ] Yes, named: ___________________________________
- [ ] No
-
-If YES -> Path 2 (Self-serve / Ch 4.3 then 4.4).
-          Use them for the monthly architecture call
-          + worst-route code review.
-
-If NO -> Path 3 (Fractional CTO bridge - see the
-         hire-track supplementary reference).
-         Buy the same insurance commercially.
-
-======================================================
-THE 4-PATH VERDICT (write your row at the top of
-your Notion doc)
-======================================================
-```
+<div class="ws-card">
+  <p>A real human you can text. Returns calls within 48 hrs. Has shipped a backend at scale in the last 5 years.</p>
+  <div class="ws-verdict ws-verdict-stack"><span class="ws-opt" style="width:100%"><span class="ws-box"></span> Yes, named:<span class="ws-blank"></span></span><span class="ws-opt"><span class="ws-box"></span> No</span></div>
+  <div class="ws-route ws-route-alt"><strong>If YES</strong> → Path 2 (Self-serve / Ch 4.3 then 4.4). Use them for the monthly architecture call + worst-route code review.</div>
+  <div class="ws-route ws-route-alt"><strong>If NO</strong> → Path 3 (Fractional CTO bridge - see the hire-track supplementary reference). Buy the same insurance commercially.</div>
+</div>
 
 ## The 4-path verdict table
 

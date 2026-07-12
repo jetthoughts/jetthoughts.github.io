@@ -590,6 +590,155 @@ input[type=submit]:disabled {
   margin-bottom: 0;
 }
 
+/* Worksheet cards — fill-in form treatment for course companion worksheets.
+   Use as <div class="ws-card"> blocks in content markdown. Route colors are
+   semantic: green = advance to the next question, purple = terminal path
+   assignment (the worksheet's output). Red stays reserved for insight
+   blockquotes so the five stacked cards don't shout. */
+.blog .ws-card {
+  background: #faf7f2;
+  border: 2px solid #2b2b2b;
+  border-radius: 14px;
+  padding: 22px 28px;
+  margin: 24px 0 40px;
+}
+.blog .ws-card p {
+  font-size: 17px;
+  line-height: 1.55;
+  margin: 0 0 12px;
+  color: #1a1a2e;
+}
+.blog .ws-field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 14px;
+  margin: 14px 0;
+  font-size: 17px;
+}
+.blog .ws-flabel {
+  font-weight: 600;
+  color: #1a1a2e;
+}
+.blog .ws-blank {
+  flex: 1 1 140px;
+  min-width: 110px;
+  border-bottom: 2px dotted #8b8578;
+  height: 1.3em;
+}
+.blog .ws-card ul.ws-checks {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+.blog .ws-card ul.ws-checks li {
+  position: relative;
+  padding-left: 34px;
+  margin: 10px 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #1a1a2e;
+}
+.blog .ws-card ul.ws-checks li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #444;
+  border-radius: 4px;
+  background: #fff;
+}
+.blog .ws-verdict {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 26px;
+  background: #fff;
+  border: 2px dashed #b9b2a4;
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin: 18px 0;
+  font-size: 17px;
+}
+.blog .ws-verdict-stack {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.blog .ws-vlabel {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #6b6558;
+}
+.blog .ws-opt {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #1a1a2e;
+}
+.blog .ws-opt .ws-box {
+  width: 17px;
+  height: 17px;
+  flex: none;
+  border: 2px solid #444;
+  border-radius: 4px;
+  background: #fff;
+}
+.blog .ws-route {
+  font-size: 16.5px;
+  line-height: 1.5;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 10px 0;
+  color: #1a1a2e;
+}
+.blog .ws-route p { margin: 0; font-size: 16.5px; }
+.blog .ws-route-go {
+  background: #f0f9f0;
+  border-left: 5px solid #2e7d32;
+}
+.blog .ws-route-alt {
+  background: #fbe9ff;
+  border-left: 5px solid #a855f7;
+}
+@media (max-width: 480px) {
+  .blog .ws-card { padding: 16px 14px; }
+}
+
+/* Course reading typography — course pages only (body.section-course).
+   Lessons run 3-5K words; the site-wide 22.4px body stretches them past
+   15K px tall and shows barely two paragraphs per screen (Gloria Mark:
+   ~43s attention per screen). 20px/1.65 keeps the approachable size while
+   fitting ~30% more per screen, restores H3 contrast (26/20 = 1.3x) so
+   scanning landmarks work, and drops callouts a step (19px) so they read
+   as asides, not more wall. Blog pages keep the site-wide scale. */
+/* Selectors mirror single-post.css's `.blog article.single-content
+   .fl-rich-text p` (0,3,2) - anything weaker silently loses to it. */
+.section-course .blog article.single-content .fl-rich-text p,
+.section-course .blog article.single-content .fl-rich-text li {
+  font-size: 20px;
+  line-height: 1.65;
+}
+.section-course .blog article.single-content .fl-rich-text li {
+  margin-bottom: 12px;
+}
+.section-course .blog article.single-content .fl-rich-text blockquote p {
+  font-size: 19px;
+  line-height: 1.6;
+}
+.section-course .blog article.single-content .fl-rich-text .ws-card p,
+.section-course .blog article.single-content .fl-rich-text .ws-card ul.ws-checks li {
+  font-size: 17px;
+  line-height: 1.55;
+}
+.section-course .blog article.single-content .fl-rich-text .ws-route p {
+  font-size: 16.5px;
+}
+
 /* Details/summary — collapsible tool-stack accordion.
    Summary looks like a clickable heading, details body has standard spacing. */
 .blog details {

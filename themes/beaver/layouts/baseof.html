@@ -103,11 +103,12 @@
         // Mermaid source (fewer nodes, shorter labels, or split into
         // sub-diagrams), not CSS gymnastics.
         //
-        // Site-wide house theme (2026-07-12 design-critic pass). Per-diagram
-        // %%init%% directives still override these; the defaults fix the three
-        // theme-wide tells the critique found on all 22 course diagrams:
-        // hairline default edges, floating edge labels, and cursive text
-        // rattling inside oversized auto-measured nodes.
+        // Site-wide house theme (2026-07-12 design-critic pass). The
+        // handwritten family is the house identity - a clean-sans variant
+        // was tried on 2026-07-12 and rejected by the owner on sight.
+        // Legibility problems get fixed structurally (decision tables,
+        // compact SVGs, shorter node labels), not by changing the font.
+        // Per-diagram %%init%% directives still override these.
         mermaid.initialize({
           startOnLoad: true,
           theme: 'base',
@@ -121,7 +122,11 @@
             edgeLabelBackground: '#faf7f2'
           },
           flowchart: { nodeSpacing: 45, rankSpacing: 55, padding: 14 },
-          themeCSS: '.edgePaths path { stroke-width: 2.25px; } .edgeLabel { font-size: 18px; padding: 2px 6px; border-radius: 6px; }'
+          // Never set font-size or padding on .edgeLabel via themeCSS:
+          // mermaid measures the label box BEFORE themeCSS applies, so any
+          // late metric change renders text wider than the measured box and
+          // clips trailing characters. border-radius is safe (non-metric).
+          themeCSS: '.edgePaths path { stroke-width: 2.25px; } .edgeLabel { border-radius: 6px; }'
         });
       </script>
     {{ end }}

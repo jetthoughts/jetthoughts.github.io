@@ -44,8 +44,6 @@ Pre-seed founders hiring engineering before a single paying customer is confirme
 
 The hire is the move that breaks the runway. The skipped step is the cheaper experiment - a smoke test, a clickable prototype, a Concierge MVP - that would have told you whether you need to build at all.
 
-![A hand-drawn 2-by-2 decision matrix with four quadrants labeled Validate without code, Self-serve build, Fractional CTO bridge, and Hire a team. Each quadrant lists a first action, cost band, and timeline.](decision-matrix.svg)
-
 ## Your real question: do you need to build at all
 
 > **The decision is not "code or no-code." It is "what evidence do I have that I need to build at all?"**

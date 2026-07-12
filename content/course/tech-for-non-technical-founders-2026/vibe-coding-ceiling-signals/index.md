@@ -181,7 +181,7 @@ flowchart TD
     Q1{"Q1: Has any signal been<br/>firing for 4+ weeks?"}
     Q2{"Q2: Is your runway<br/>&gt; 6 months from today?"}
     Stay["STAY SELF-SERVE<br/>Keep shipping on the shed.<br/>Re-score every 2 weeks."]
-    Bridge["GRADUATE: BRIDGE<br/>Fractional CTO<br/>(5 hours / week, ~$1.6-2.6K / mo)"]
+    Bridge["GRADUATE:<br/>BRIDGE<br/>Fractional CTO<br/>5 hours / week<br/>~$1.6-2.6K / mo"]
     Hire["GRADUATE: HIRE A TEAM<br/>1-2 engineers on Rails /<br/>Django / Laravel. SOW signed<br/>before kickoff."]
 
     Start --> Q1

@@ -135,7 +135,15 @@ Most "Fractional CTO" listings on LinkedIn are either career CTOs in transition 
 
 > **JetThoughts is not a Fractional CTO provider.** We are an engineering services shop (full-team rescues, rebuilds, technical coaching). The platforms above host specialized fractional executives screened on the criteria in this section. This chapter teaches you how to hire one well; we do not sell the role.
 
-**Week 1 onboarding:** Sign the MSA on Day 0. Day 1: share the Validated Problem Statement and one-page brief. Add them to the private GitHub org with `Triage` repo permissions (can review pull requests but cannot merge code) - not `Admin`, not `Write`. Day 3: first 30-minute architecture review. They write one paragraph in a shared Notion doc: "what I would change, what I would leave alone." Day 7: first PR review. Their comments should be in plain English so you understand the trade-off. End of Week 4: ask them the Friday-coaching question. "Should I hire any contractors yet?" If the answer is hand-wavy, you have hired wrong; replace.
+**Week 1 onboarding:**
+
+| Day | What happens |
+|---|---|
+| **Day 0** | Sign the MSA. |
+| **Day 1** | Share the Validated Problem Statement and one-page brief. Add them to the private GitHub org with `Triage` repo permissions (can review pull requests but cannot merge code) - not `Admin`, not `Write`. |
+| **Day 3** | First 30-minute architecture review. They write one paragraph in a shared Notion doc: "what I would change, what I would leave alone." |
+| **Day 7** | First PR review. Their comments should be in plain English so you understand the trade-off. |
+| **End of Week 4** | Ask them the Friday-coaching question: "Should I hire any contractors yet?" If the answer is hand-wavy, you have hired wrong; replace. |
 
 ### The Fractional CTO's first 4 weeks (parallel to your Module 5 first-paying-customer push)
 
@@ -233,10 +241,12 @@ Run it after the resume passes, before any technical take-home. The 30-minute sc
 
 The seven questions are organised around what costs the most when a candidate fakes it.
 
-- **Workflow + cost (Q1, Q2)** catch the candidate who has never set up a `.cursorrules` file or seen a personal Anthropic invoice. That candidate will silently run your monthly AI bill from $200 to $4,800 in their first sprint.
-- **Verification + slopsquatting (Q3, Q4)** catch the candidate who outsources PR review to the model. That is the candidate whose name ends up next to the CSRF hole in your incident postmortem.
-- **Accountability + refactor (Q5, Q6)** catch the candidate who has never owned a system through a production incident or a non-trivial rewrite. The "I refactor as I go" answer is the kind of rewrite that kills startups.
-- **Disagreement (Q7)** is the one question that actually splits the population. AI theater candidates accept the model's first suggestion. AI direction candidates read the diff, reject most of it, and can show you the PR comment where they did it.
+| Question pair | Catches the candidate who... | What faking it costs you |
+|---|---|---|
+| **Workflow + cost (Q1, Q2)** | Has never set up a `.cursorrules` file or seen a personal Anthropic invoice | Silently runs your monthly AI bill from $200 to $4,800 in their first sprint |
+| **Verification + slopsquatting (Q3, Q4)** | Outsources PR review to the model | Their name ends up next to the CSRF hole in your incident postmortem |
+| **Accountability + refactor (Q5, Q6)** | Has never owned a system through a production incident or a non-trivial rewrite | The "I refactor as I go" answer is the kind of rewrite that kills startups |
+| **Disagreement (Q7)** | Accepts the model's first suggestion and cannot show one PR where they disagreed with it | This is the one question that actually splits the population - a candidate who directs the model reads the diff, rejects most of it, and can show you the PR comment where they did it |
 
 ### The scoring discipline
 

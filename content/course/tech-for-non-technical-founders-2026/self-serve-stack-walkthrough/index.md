@@ -21,6 +21,7 @@ tags:
   - self-serve
   - vibe-coding
 categories: ["Templates"]
+cover_image_alt: "JetThoughts cover titled Self-Serve Stack Walkthrough, showing four cards - Lovable, Supabase, Stripe, Go live - each marked 5 sessions, with chips reading Pace Evenings OK, Sessions 20, Team Solo."
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/"
 related_posts: false
 ---

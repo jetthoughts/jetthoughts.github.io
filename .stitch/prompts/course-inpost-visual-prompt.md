@@ -34,19 +34,34 @@ HOUSE FAMILY - "informational sketch, drawn by a confident hand":
 - Typography: Caveat / Patrick Hand for labels (>=15px effective at column
   width), plain sans-serif is acceptable for dense table-like cells; NEVER
   mix a third family; NEVER let a font fallback to system defaults (embed or
-  restrict text to the declared stack + sans-serif tail).
+  restrict text to the declared stack + sans-serif tail). The handwritten
+  family is the house identity - the owner rejected a clean-sans diagram
+  variant on sight (2026-07-12).
 - Hierarchy: exactly one visual entry point (title or biggest shape); reading
   order left-to-right or top-to-bottom, marked with arrows that touch the
   shapes they connect; annotations in gray italic BELOW or BESIDE, never
   across artwork.
 
 MERMAID-SPECIFIC (when the diagram stays a mermaid block):
-- Always include the house init: theme base, fontFamily 'Caveat, Patrick Hand,
-  cursive', fontSize >=20px, primaryColor #fff5f5, primaryBorderColor #cc342d,
-  lineColor #333, primaryTextColor #1a1a1a - PLUS 'padding': 12 so cursive
-  glyphs never touch node borders.
+- The handwritten family STAYS. A clean-sans mermaid theme was shipped and
+  rejected by the owner on sight the same day (2026-07-12: "typography is
+  not handwritten") - and it clipped labels anyway (sans glyphs are wider
+  than mermaid's measured boxes). Fix legibility STRUCTURALLY: an
+  oversized / awkward / all-red flowchart becomes a compact hand-drawn
+  SVG in the house family (exemplar: ai-token-bill invoice-loop.svg) or
+  a decision table - not a font change.
+- Always include the house init: theme base, fontFamily 'Caveat, Patrick
+  Hand, cursive', fontSize >=20px, primaryColor #fff5f5,
+  primaryBorderColor #cc342d, lineColor #333, primaryTextColor #1a1a1a.
+  The site-level default in baseof.html already carries these; the
+  per-diagram init is for repo-greppable self-containment.
 - Rect nodes with the question/threshold INSIDE; never bare diamonds (they
   crush cursive text).
+- Edge labels: mermaid's measured label box runs ~1 glyph short, so labels
+  ending in a wide glyph (%, digits, K) clip their last character. Append
+  `&nbsp;` inside the label (`-->|Over 40%&nbsp;|`) or keep edge labels to
+  1-2 short words and move thresholds into the node. Never set font-size
+  or padding on .edgeLabel via themeCSS - it applies after measurement.
 - Max ~6 nodes per direction; a sequential checklist of gates is NOT a
   flowchart - render it as a decision TABLE instead (proven pattern:
   engineering-org-chart, pivot-or-persevere).
