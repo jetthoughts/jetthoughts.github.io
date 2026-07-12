@@ -35,7 +35,7 @@ course_nav: false
 >
 > **Input:** a signed agency contract OR a hire who claims "AI-augmented."
 >
-> **Output:** monthly AI cost predicted within ±20% + 3 contract clauses you add to the next SOW
+> **Output:** monthly AI cost predicted within ±20% + 3 contract clauses you add to the next SOW (statement of work)
 
 **Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
 
@@ -97,7 +97,7 @@ Take your invoice in three numbers.
 - Avg per-dev AI cost: $100/month (disciplined: Cursor seat + Claude Code with budget alerts)
 - Agency margin: 0% (per Clause 1 in the SOW)
 - Expected monthly AI line: **$400 ± 20% = $320 to $480**
-- If invoice shows $1,800: undisciplined developer (Devon in the table above), 30% hidden margin, or both - 15-minute conversation either way
+- If invoice shows $1,800: undisciplined developer (like Devon in the invoice table below), 30% hidden margin, or both - 15-minute conversation either way
 
 **Worked example - 2-dev team with one heavy agent-loop user:**
 

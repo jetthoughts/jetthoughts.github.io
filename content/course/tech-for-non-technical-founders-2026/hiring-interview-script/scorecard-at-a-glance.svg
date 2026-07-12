@@ -2,13 +2,13 @@
   <title id="scorecard-title">The 7 hiring questions on one card: pass signal versus fail signal for each</title>
   <defs>
     <style>
-      .title    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 27px; fill: #1a1a1a; font-weight: 700; }
-      .note     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #444; font-style: italic; }
-      .colhead  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 17px; fill: #1a1a1a; font-weight: 700; }
-      .qnum     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 20px; fill: #cc342d; font-weight: 700; }
-      .qtext    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #1a1a1a; font-weight: 700; }
-      .pass     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #1b5e20; }
-      .fail     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #b3261e; }
+      .title    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 27px; fill: #1a1a1a; font-weight: 700; }
+      .note     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .colhead  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #1a1a1a; font-weight: 700; }
+      .qnum     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #cc342d; font-weight: 700; }
+      .qtext    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #1a1a1a; font-weight: 700; }
+      .pass     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #1b5e20; }
+      .fail     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #b3261e; }
       .box      { fill: #ffffff; stroke: #1a1a1a; stroke-width: 2; }
     </style>
   </defs>

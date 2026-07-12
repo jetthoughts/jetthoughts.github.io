@@ -2,11 +2,11 @@
   <title id="anatomy-title">Smoke-test page anatomy: 4 stacked blocks - headline names customer + outcome, sub-headline explains the mechanism, a row of 3-4 value props, and the CTA with coming-soon footer</title>
   <defs>
     <style>
-      .heading   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 30px; fill: #1a1a1a; font-weight: 700; }
-      .label     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #cc342d; font-weight: 700; letter-spacing: 1px; }
-      .desc      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 20px; fill: #1a1a1a; }
-      .note      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 17px; fill: #555; font-style: italic; }
-      .cta-text  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 24px; fill: #fff; font-weight: 700; }
+      .heading   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 30px; fill: #1a1a1a; font-weight: 700; }
+      .label     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #cc342d; font-weight: 700; letter-spacing: 1px; }
+      .desc      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #1a1a1a; }
+      .note      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #555; font-style: italic; }
+      .cta-text  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 24px; fill: #fff; font-weight: 700; }
       .block     { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
       .block-cta { fill: #cc342d; stroke: none; }
     </style>

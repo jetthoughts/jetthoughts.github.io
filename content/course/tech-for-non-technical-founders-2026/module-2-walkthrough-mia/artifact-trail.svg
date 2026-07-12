@@ -2,13 +2,13 @@
   <title id="m2-trail-title">Mia's Module 2 artifact trail: a Mom-Test script to a 30-name list to 10 scored interviews to a BUILD verdict to a Money answer to prototype feedback</title>
   <defs>
     <style>
-      .h      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 25px; fill: #1a1a1a; font-weight: 700; }
-      .foot   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #666; font-style: italic; }
-      .chip   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #ffffff; font-weight: 700; }
-      .title  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
-      .big    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 25px; fill: #cc342d; font-weight: 700; }
-      .gbig   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 25px; fill: #2e7d32; font-weight: 700; }
-      .note   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 13px; fill: #555; }
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #1a1a1a; font-weight: 700; }
+      .foot   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #666; font-style: italic; }
+      .chip   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #ffffff; font-weight: 700; }
+      .title  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
+      .big    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #cc342d; font-weight: 700; }
+      .gbig   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #2e7d32; font-weight: 700; }
+      .note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #555; }
       .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2; }
       .build  { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2.5; }
       .pay    { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
@@ -61,7 +61,7 @@
     <text x="668.5" y="118" class="chip" text-anchor="middle">2.5</text>
     <text x="668.5" y="152" class="title" text-anchor="middle">Money</text>
     <text x="668.5" y="173" class="title" text-anchor="middle">answer</text>
-    <text x="668.5" y="216" class="big" text-anchor="middle">$70-120</text>
+    <text x="668.5" y="216" class="gbig" text-anchor="middle">$70-120</text>
     <text x="668.5" y="252" class="note" text-anchor="middle">per session, receipts</text>
   </g>
 

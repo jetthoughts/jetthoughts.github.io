@@ -33,7 +33,7 @@ related_posts: false
 > **Geography quick-pick** (cost x timezone fit):
 > - **Onshore** (US / UK): high cost, timezone-aligned, fast ramp
 > - **LATAM** (Mexico, Colombia, Argentina): mid cost, timezone-aligned
-> - **Tier-2 India** (Coimbatore, Pune): low cost, async-only
+> - **Tier-2 India** (Jaipur, Kochi, Indore, Coimbatore): low cost, async-only
 > - **Upwork / freelance**: variable, task-based, no commitment
 
 ## Why this exists
@@ -56,7 +56,7 @@ Walk these four blocks in order. Circle the one your scope and budget land in, t
 
 ### Onshore (US / EU)
 
-Salaried, $130K - $210K+/year, 30-60 days to hire. Pick when: regulated industry (HIPAA, SOC 2 with US data residency, fintech license), security clearance, or board-mandated US team. Watch out for: 51% offer-acceptance rate and the worst cost-to-output ratio on the map.
+Salaried, $130K - $210K+/year, 30-60 days to hire. Pick when: regulated industry (HIPAA, SOC 2 with US data residency, fintech license), security clearance, or board-mandated US team. Watch out for: low offer-acceptance rates and the worst cost-to-output ratio on the map.
 
 ### Nearshore (LATAM)
 

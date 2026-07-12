@@ -2,11 +2,11 @@
   <title id="faq-strip-title">FAQ map: questions are grouped as General, then Module 1 Hypothesis and smoke test, Module 2 Validate the problem, Module 3 Design from evidence, Module 4 Build it yourself, and Module 5 First paying customer - in that order.</title>
   <defs>
     <style>
-      .num    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #ffffff; font-weight: 700; }
-      .lab    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #ffffff; font-weight: 700; }
-      .glab   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #1a1a1a; font-weight: 700; }
-      .gsub   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #666; }
-      .cap    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #555; font-style: italic; }
+      .num    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #ffffff; font-weight: 700; }
+      .lab    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #ffffff; font-weight: 700; }
+      .glab   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #1a1a1a; font-weight: 700; }
+      .gsub   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #666; }
+      .cap    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #555; font-style: italic; }
       .chip   { fill: #cc342d; stroke: #a5241f; stroke-width: 2; }
       .gen    { fill: #fffdf8; stroke: #cc342d; stroke-width: 2; }
     </style>

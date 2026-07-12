@@ -120,7 +120,7 @@ Every blank in the Mad Libs sentence is a blank in your VenturusAI input. Specif
 
 The report has 7-8 sections. You do not need to read all of them. Focus on three:
 
-**Porter's Five Forces - Competitive Rivalry section.** If it names a competitor you had not thought of, add that competitor to your Step 1 competition column in Ch 1.1. If it names one you already knew about but describes their advantage in a way you had not considered, rewrite your [differentiation] blank.
+**Porter's Five Forces - Competitive Rivalry section.** If it names a competitor you had not thought of, add that competitor to the Competition column in the [full hypothesis sprint](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/). If it names one you already knew about but describes their advantage in a way you had not considered, rewrite your [differentiation] blank.
 
 **SWOT - Weaknesses.** This is the section that hurts. If the AI flags a weakness you already knew about (e.g., "founder has no engineering background"), that is expected. If it flags one you had not considered (e.g., "customer acquisition depends on insurance-industry partnerships that take 6-12 months to close"), pay attention. That is a structural blank in your hypothesis.
 
@@ -160,7 +160,7 @@ The Starter report is 5-7 pages. You only need to read two sections on the first
 
 **Kill Risks.** This is the section that justifies the $9. It flags existential threats: market saturation (too many entrenched players), low barriers to entry (competitors can clone you in a weekend), CAC-to-LTV problems (acquiring a customer costs more than they will ever pay you), and regulatory hurdles. If any kill risk is specific - names a competitor, a regulation, or a cost number - take it seriously. If it is generic ("the market is competitive"), treat it as a yellow flag, not a red one.
 
-**Retention-Curve / Unit Economics.** This section estimates whether the numbers work. If it says your target market is too small at your price point, revisit the [customer] blank in Ch 1.1 Step 1. If it says your CAC is too high relative to LTV, revisit your channel assumption.
+**Retention-Curve / Unit Economics.** This section estimates whether the numbers work. If it says your target market is too small at your price point, revisit the [customer] blank in Ch 1.1. If it says your CAC is too high relative to LTV, revisit your channel assumption.
 
 Skip the Executive Summary and Go-To-Market sections on first read. They are AI-generated strategy and rarely say anything you could not have guessed. Come back to them after you have real interview data.
 
@@ -287,7 +287,7 @@ These tools sharpen your hypothesis. They do not validate it. Specifically:
 
 **They cannot tell you whether the problem is real.** AI tools summarize what people have already said online. They cannot surface a problem that nobody has articulated publicly. The Mom Test interviews in Ch 2.1 surface what specific named humans actually did last Friday - a signal no AI tool can produce.
 
-**They cannot substitute for the Pragmatic-lens gut-check.** VenturusAI can flag that you have no engineering background, but only you know whether you can ship the thing with Lovable on evenings and weekends. The Pragmatic lens in Ch 1.1 Step 4 is still yours to score.
+**They cannot substitute for the Pragmatic-lens gut-check.** VenturusAI can flag that you have no engineering background, but only you know whether you can ship the thing with Lovable on evenings and weekends. The Pragmatic lens in Ch 1.1 is still yours to score.
 
 **They do not replace talking to humans.** If you spend three hours across these tools and zero hours on interviews, you have three AI reports and zero validation. The tools exist to sharpen the sentence you test in interviews. Skip the interviews and you have sharpened a sentence that might describe nothing.
 

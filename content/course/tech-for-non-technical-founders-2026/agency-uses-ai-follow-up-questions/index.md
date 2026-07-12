@@ -51,7 +51,7 @@ Score 0 or 1 in real time during the discovery call. Below 3 means walk.
 | # | Question | Pass (1) | Fail (0) |
 |---|---|---|---|
 | Q1 | **Workflow:** walk one Jira ticket to merged PR with AI | Named tools, written gates, real PR number from last week | Slogans, no PR shown |
-| Q2 | **Cost:** per-developer monthly AI token spend, who pays | Dollar range, pass-through written into SOW, sample invoice line | "It's all included" |
+| Q2 | **Cost:** per-developer monthly AI token spend, who pays | Dollar range, pass-through written into the SOW (statement of work), sample invoice line | "It's all included" |
 | Q3 | **Verification:** what senior checks on a 200-line AI PR | Opens real PR on screenshare, names checks line by line | "We trust the model" |
 | Q4 | **Slopsquatting:** how do you stop a hallucinated package install | Named defense (allowlist, Socket/Snyk, gated CI), uses the term unprompted | Confused look |
 | Q5 | **Accountability:** who is on the hook for an AI-caused incident | Specific incident with date, root cause, named reviewer, workflow change | "We've never had one" |
@@ -139,8 +139,8 @@ Same five questions, two completely different conversations:
 | # | AI Theatre (walk away) | AI Direction (sign with confidence) |
 |---|---|---|
 | Q1 | "Our developers use AI where it makes sense. We are AI-native." | "Cursor + Claude 4.5 Sonnet. Here is PR #1247 from Tuesday." |
-| Q2 | "It's all included in the rate. Don't worry about token costs." | "$140-$220 per dev per month. SOW pass-through. Sample invoice line below." |
-| Q3 | "We trust the model. Cursor catches the obvious stuff." | "Marcus reviewed PR #1247 - flagged a hardcoded API key." |
+| Q2 | "It's all included in the rate. Don't worry about token costs." | "$140-$220 per dev per month for our stack. SOW pass-through. Sample invoice line below." |
+| Q3 | "We trust the model. Cursor catches the obvious stuff." | "Marcos reviewed PR #1247 - flagged a hardcoded API key." |
 | Q4 | "Our developers know what packages to use." [confused look] | "Socket on every PR. Allowlist in `Gemfile.policy`. Yes, slopsquatting." |
 | Q5 | "We've never had an AI-related incident. Our standards are high." | "March 14: AI-generated webhook retried 8x. Added idempotency key." |
 | Score | 0 / 5 - polite no the same evening | 5 / 5 - ask for AI-project references next |

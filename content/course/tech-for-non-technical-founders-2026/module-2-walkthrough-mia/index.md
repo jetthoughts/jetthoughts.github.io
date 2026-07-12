@@ -57,7 +57,7 @@ Her first instinct was the one the lesson warned about: post in her Facebook fee
 
 The [30-name list](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) filled slower than she expected: name, where they posted, the URL, and one quoted line each. A mother who had "called eleven places in March." A father asking whether $95 a session was normal because he had "no idea what anyone else pays." Reading the quotes back, she noticed her Money answer was already forming before a single call.
 
-The [outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) went out five messages a day, each one naming the specific post: "You wrote that three centers never called you back - I'm researching exactly that failure and would trade 20 minutes for everything you learned." No pitch, no product link. Eight of the first twenty replied; by the end of the second week she had ten calls on the calendar, and a waitlist parent from her smoke-test page made eleven - one father no-showed twice, leaving ten who actually happened.
+The [outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) went out five messages a day, each one naming the specific post: "You wrote that three centers never called you back - I'm researching exactly that failure and would trade 20 minutes for everything you learned." No pitch, no product link. Six of the first twenty replied; by the end of the second week she had ten calls on the calendar, and a waitlist parent from her smoke-test page made eleven - one father no-showed twice, leaving ten who actually happened.
 
 ---
 

@@ -2,17 +2,17 @@
   <title id="attn-title">PR reviewer attention math: 4 projects, 15 minutes per PR, what gets missed</title>
   <defs>
     <style>
-      .title    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
-      .label    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; }
-      .label-w  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #ffffff; font-weight: 700; }
-      .small    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #1a1a1a; }
-      .number   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #cc342d; font-weight: 700; }
+      .title    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .label    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; }
+      .label-w  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #ffffff; font-weight: 700; }
+      .small    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #1a1a1a; }
+      .number   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #cc342d; font-weight: 700; }
       .you-box     { fill: #cc342d; stroke: #1a1a1a; stroke-width: 2; }
       .other-box   { fill: #e0e0e0; stroke: #1a1a1a; stroke-width: 2; }
       .pr-good     { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2; stroke-linejoin: round; }
       .pr-bad      { fill: #fff5f5; stroke: #cc342d; stroke-width: 2; stroke-linejoin: round; }
       .arrow       { stroke: #1a1a1a; stroke-width: 2; stroke-linecap: round; fill: none; }
-      .quote       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 19px; fill: #cc342d; font-style: italic; }
+      .quote       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 19px; fill: #cc342d; font-style: italic; }
     </style>
   </defs>
 

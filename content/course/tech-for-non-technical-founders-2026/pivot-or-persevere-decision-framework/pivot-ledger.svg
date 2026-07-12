@@ -2,12 +2,12 @@
   <title id="ledger-title">The pivot ledger: 4-column table tracking what survives the pivot and what does not</title>
   <defs>
     <style>
-      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .header        { font-family: "Caveat", "Patrick Hand", cursive; font-size: 19px; fill: #1a1a1a; font-weight: 700; }
-      .row           { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #1a1a1a; }
-      .keep          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 17px; fill: #2e7d32; font-weight: 700; }
-      .drop          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 17px; fill: #cc342d; font-weight: 700; }
-      .note          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .heading       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .header        { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 19px; fill: #1a1a1a; font-weight: 700; }
+      .row           { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #1a1a1a; }
+      .keep          { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #2e7d32; font-weight: 700; }
+      .drop          { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #cc342d; font-weight: 700; }
+      .note          { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
       .table-bg      { fill: #fefefe; stroke: #1a1a1a; stroke-width: 2; }
       .header-bg     { fill: #fff5f5; stroke: #cc342d; stroke-width: 2; }
       .row-line      { stroke: #ccc; stroke-width: 1; }

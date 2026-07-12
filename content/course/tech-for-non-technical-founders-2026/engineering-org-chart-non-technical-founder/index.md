@@ -32,7 +32,7 @@ course_nav: false
 
 > **Going Further · Manage a Hired Team** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a team in place + a signed SOW
+> **Input:** a team in place + a signed SOW (statement of work)
 >
 > **Output:** a weekly oversight rhythm running by month 3
 >
@@ -93,7 +93,7 @@ Ask flat. Watch the pause. [DataToBiz describes the practice plainly](https://ww
 
 ### 4. "Who is on-call if production breaks at midnight, and what is the handoff?"
 
-A shop with a real on-call rotation can tell you the schedule, the escalation path, and the SLA in under a minute. Without one, you get "best effort" coverage - which means your senior sees the Sentry email when she opens her laptop on Monday. [Team Coherence on code ownership and accountability](https://www.teamcoherence.com/code-ownership-and-accountability/) makes the point: ownership without a named person is not ownership. JT's [remote team accountability writeup](/blog/remote-team-accountability-non-technical-founders/) covers the same ground in plain English.
+A shop with a real on-call rotation can tell you the schedule, the escalation path, and the SLA (service-level agreement - the response time they committed to) in under a minute. Without one, you get "best effort" coverage - which means your senior sees the Sentry email when she opens her laptop on Monday. [Team Coherence on code ownership and accountability](https://www.teamcoherence.com/code-ownership-and-accountability/) makes the point: ownership without a named person is not ownership. JT's [remote team accountability writeup](/blog/remote-team-accountability-non-technical-founders/) covers the same ground in plain English.
 
 ### 5. "If your senior reviewer quits Friday, who replaces them on my project Monday?"
 
@@ -118,7 +118,7 @@ Run the six on your next status call, in order. Every answer in the right column
 
 ## What to do tomorrow
 
-Email your agency tonight. One line: "Please send me the current org chart with names, roles, and FTE allocation for everyone touching my code this month. Include any subcontracted resources." Forward the response to your fractional CTO or developer-friend - if you do not have one, [our note on fractional CTO ROI](/blog/fractional-cto-vs-full-time-cto-complete-comparison-2025/) explains the shape. Cross-check against [our dev-shop red flags checklist](/blog/dev-shop-red-flags-checklist/) and the [non-technical founder checklist](/blog/checklist-for-non-tech-founder-agile/). If the reply has fewer named humans than the kickoff deck promised, the deck was the pitch and the reply is the truth.
+Email your agency tonight. One line: "Please send me the current org chart with names, roles, and FTE (full-time equivalent) allocation for everyone touching my code this month. Include any subcontracted resources." Forward the response to your fractional CTO or developer-friend - if you do not have one, [our note on fractional CTO ROI](/blog/fractional-cto-vs-full-time-cto-complete-comparison-2025/) explains the shape. Cross-check against [our dev-shop red flags checklist](/blog/dev-shop-red-flags-checklist/) and the [non-technical founder checklist](/blog/checklist-for-non-tech-founder-agile/). If the reply has fewer named humans than the kickoff deck promised, the deck was the pitch and the reply is the truth.
 
 ## When the org chart shows you've got a problem
 

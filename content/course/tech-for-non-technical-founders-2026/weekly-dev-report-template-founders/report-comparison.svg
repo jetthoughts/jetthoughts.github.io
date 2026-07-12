@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Caveat, 'Patrick Hand', cursive" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Caveat, 'Patrick Hand', 'Comic Sans MS', cursive" role="img" aria-labelledby="title desc">
   <title id="title">Weekly report comparison: jargon wall vs. one-page five-section format</title>
   <desc id="desc">Two side-by-side mock email screenshots covering the same five working days. The left panel is a 1,840-word jargon wall with no clickable URL. The right panel is a one-page report with five labelled sections - Shipped, In review, Blocked, Cut, Concern.</desc>
 

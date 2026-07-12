@@ -2,10 +2,10 @@
   <title id="demo-rule-title">The Friday Demo Rule: 15 minutes, working software only, no slides or Jira screenshots</title>
   <defs>
     <style>
-      .panel-title    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
-      .label          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 20px; fill: #1a1a1a; font-weight: 600; }
-      .small          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #444; }
-      .note           { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #666; font-style: italic; }
+      .panel-title    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .label          { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #1a1a1a; font-weight: 600; }
+      .small          { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #444; }
+      .note           { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #666; font-style: italic; }
       .url            { font-family: "Courier New", monospace; font-size: 15px; fill: #0277bd; }
       .ok-box         { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; stroke-linejoin: round; }
       .ok-box-strong  { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 3; stroke-linejoin: round; }

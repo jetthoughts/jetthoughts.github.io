@@ -36,7 +36,7 @@ By Friday of week 4 you will know whether your dev team is shipping or stalling.
 
 ## Why this exists
 
-A founder we worked with last year was four months and $62K into a six-week MVP. Jira showed nine tickets closed that week. When she asked the team to demo the checkout flow, the lead developer said "it's behind a feature flag, give us until Monday." Monday came: the flag had been on for three weeks. The page threw a 500 on every click. None of the three developers had opened it themselves.
+A founder we worked with last year was four months and $54K into a six-week MVP. Jira showed nine tickets closed that week. When she asked the team to demo the checkout flow, the lead developer said "it's behind a feature flag, give us until Monday." Monday came: the flag had been on for three weeks. The page threw a 500 on every click. None of the three developers had opened it themselves.
 
 ## How to use it
 
@@ -97,7 +97,7 @@ This is the over-engineering check. If your team never cuts anything, they are e
 
 > Bad: "A few things are in PR, I can send you the list later."
 >
-> Good: "PR #847 - signup rate limiting. Marcus reviewed it Tuesday, three changes requested, will merge Monday. PR #851 - admin search. Nobody has reviewed it yet because Marcus is on vacation."
+> Good: "PR #851 - signup rate limiting. Priya reviewed it Tuesday, three changes requested, will merge Monday. PR #843 - admin search. Nobody has reviewed it yet because Priya is on vacation."
 
 If the same name keeps appearing as the only reviewer, you have a single point of failure - the [JetThoughts red-flags checklist](/blog/dev-shop-red-flags-checklist/) calls this bus factor of one.
 

@@ -47,7 +47,7 @@ Both teams worked the same five days, and the second report gave you everything 
 
 ## Why weekly reports usually fail
 
-The weekly report habit gets inherited from whichever PM the agency assigned in week one. The PM was trained to write status reports for an enterprise customer who wanted comfort: lots of words, a velocity chart, a RAG indicator that has been amber for six months. The format survived because nobody on the agency side had to read it. You did.
+The weekly report habit gets inherited from whichever PM the agency assigned in week one. The PM was trained to write status reports for an enterprise customer who wanted comfort: lots of words, a velocity chart, a RAG (red-amber-green) status indicator that has been amber for six months. The format survived because nobody on the agency side had to read it. You did.
 
 The vibe-coding wave made the prose worse, not better. The same PM now pastes the standup transcripts into a long-context model and asks for "an executive summary suitable for the founder." What you get back is a wall of soft language - "exploring," "optimising," "iterating on" - assembled out of whatever the team said in standup, with no signal about whether anything reached a place you can click. [Atlassian's writeup of weekly status reporting](https://www.atlassian.com/work-management/project-management/status-reports) makes the point flat: a status report that does not link to working software is theatre, regardless of how cleanly it is formatted.
 
@@ -63,7 +63,7 @@ Send this to your tech lead Sunday night or first-thing Monday. Frame it as the 
 >
 > **1. What shipped this week.** One line per shipped feature. Each line must include the staging or production URL I can click, the test login if it is gated, and one sentence on what the user can now do. Example: `staging.acme.app/co/v2 - login: demo@example.com / example-pass-123 - users can now apply a discount code at checkout.` If nothing shipped, write "Nothing shipped this week" and skip to section 2. Do not pad.
 >
-> **2. What is in review but not shipped.** One line per open pull request. Include the PR number, the author, the named reviewer, the date the review was requested, and what is holding it up. Example: `PR #847 - Marcos opened Tue, Priya reviewing, two changes requested Wed evening - waiting on author.` If nobody reviewed it, name that.
+> **2. What is in review but not shipped.** One line per open pull request. Include the PR number, the author, the named reviewer, the date the review was requested, and what is holding it up. Example: `PR #843 - Marcos opened Tue, Priya reviewing, two changes requested Wed evening - waiting on author.` If nobody reviewed it, name that.
 >
 > **3. What is blocked, and on whom.** One line per blocked item. Name the person, the answer they need, and the deadline they need it by. If I am the blocker, list me first. Example: `Stripe live keys - waiting on you - need them by Wed end-of-day or the launch slips to next week.`
 >
@@ -113,7 +113,7 @@ You finish reading at 9:18am. You cannot tell what shipped, who reviewed what, o
 > - `staging.acme.app/account/email` - email change flow now sends confirmation and reverts on link expiry.
 >
 > **2. In review:**
-> - PR #847 (admin search) - Marcos, Priya reviewing since Tue; two changes requested Wed evening; waiting on author.
+> - PR #843 (admin search) - Marcos, Priya reviewing since Tue; two changes requested Wed evening; waiting on author.
 > - PR #851 (rate limiting on signup) - Marcos, no reviewer yet because Priya is on PTO Thu-Fri; will assign Mon.
 >
 > **3. Blocked:**

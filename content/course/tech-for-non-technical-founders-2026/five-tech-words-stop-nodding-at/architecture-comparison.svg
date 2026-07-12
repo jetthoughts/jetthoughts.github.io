@@ -2,10 +2,10 @@
   <title id="arch-title">Healthy Rails monolith vs over-engineered microservice mess for a pre-Series-A startup</title>
   <defs>
     <style>
-      .panel-title { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
-      .box-label   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; }
-      .small-label { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #1a1a1a; }
-      .caption     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #666; font-style: italic; }
+      .panel-title { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .box-label   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; }
+      .small-label { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #1a1a1a; }
+      .caption     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #666; font-style: italic; }
       .good-box   { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; stroke-linejoin: round; }
       .good-inner { fill: #ffffff; stroke: #2e7d32; stroke-width: 2;   stroke-linejoin: round; }
       .bad-box    { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; stroke-linejoin: round; }

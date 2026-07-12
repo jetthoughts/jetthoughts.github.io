@@ -113,7 +113,7 @@ Five is enough to start. Message all five before you try cold outbound - people 
 
 **Q: The customer wants to start free and convert later. Should I accept?**
 
-No. A verbal yes is not a paid pilot. Reframe: the deposit is year-one ACV (annual contract value - what one customer pays in year one) prepaid, not added cost. If they still say no, their problem isn't acute enough - they're not in your must-have segment. Move to the next lead.
+No. A verbal yes is not a paid pilot. Reframe: the deposit is credited toward year-one ACV (annual contract value - what one customer pays in year one), not added cost. If they still say no, their problem isn't acute enough - they're not in your must-have segment. Move to the next lead.
 
 ---
 

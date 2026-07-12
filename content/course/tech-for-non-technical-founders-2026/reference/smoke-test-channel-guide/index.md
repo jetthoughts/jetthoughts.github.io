@@ -42,7 +42,7 @@ Picking the channel takes minutes; getting the ad account approved and ready to 
 
 ## B2B on a Small Budget
 
-If your ideal customer profile (ICP) says LinkedIn but $1,800+ is out of reach, three viable substitutes at ~10% of the cost:
+If your ideal customer profile (ICP) says LinkedIn but $1,800+ is out of reach, three viable substitutes - two free, one at a fraction of the cost:
 
 | Alternative | How | Cost |
 |---|---|---|

@@ -26,6 +26,7 @@ hugo.linux
 # Other
 .DS_Store
 .*
+!.okf
 !.claude
 .claude/**/*.json
 .claude/**/*.sh

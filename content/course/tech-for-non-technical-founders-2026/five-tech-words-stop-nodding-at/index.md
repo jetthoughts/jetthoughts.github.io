@@ -42,7 +42,7 @@ Below is the cheat sheet for the five words that hide the most invoices: refacto
 
 ## Why these five words now
 
-The vibe-coding wave made jargon worse. Agencies now stack three vocabularies on top of each other - the old enterprise one (microservices, Docker, refactoring), the AI one (agents, prompts, RAG, MCP), and the no-code one (workflows, automations, integrations). Founders walk into status meetings and hear words from all three at once. The founders we work with in 2026 did not lose money on vocabulary - they lost it because they nodded at words the agency was using to mean something else. Veracode's 2025 study found 45% of LLM-generated code shipped at least one exploitable security flaw, and that kind of failure hides perfectly inside the word "refactoring" when nobody asks what was changed.
+The vibe-coding wave made jargon worse. Agencies now stack three vocabularies on top of each other - the old enterprise one (microservices, Docker, refactoring), the AI one (agents, prompts, RAG, MCP), and the no-code one (workflows, automations, integrations). Founders walk into status meetings and hear words from all three at once. The money is not lost on vocabulary - it is lost when a founder nods at a word the agency is using to mean something else. Veracode's 2025 study found 45% of LLM-generated code shipped at least one exploitable security flaw, and that kind of failure hides perfectly inside the word "refactoring" when nobody asks what was changed.
 
 ## The Five Words
 

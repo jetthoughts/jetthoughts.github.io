@@ -2,13 +2,13 @@
   <title id="framings-title">Same button, two framings side by side - an outcome-framed CTA and a risk-reduction-framed CTA, both showing the identical $97 price</title>
   <defs>
     <style>
-      .heading    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .note       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #444; font-style: italic; }
-      .card-label { font-family: "Caveat", "Patrick Hand", cursive; font-size: 22px; font-weight: 700; }
-      .cta-text   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 17px; fill: #fff; font-weight: 700; }
-      .cta-price  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 20px; fill: #fff; font-weight: 700; }
-      .card-note  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #444; font-style: italic; }
-      .callout    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 17px; fill: #1a1a1a; font-weight: 600; }
+      .heading    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .note       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #444; font-style: italic; }
+      .card-label { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 22px; font-weight: 700; }
+      .cta-text   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #fff; font-weight: 700; }
+      .cta-price  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #fff; font-weight: 700; }
+      .card-note  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .callout    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #1a1a1a; font-weight: 600; }
       .card-out   { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
       .card-risk  { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
       .btn        { fill: #cc342d; stroke: #1a1a1a; stroke-width: 1.5; }

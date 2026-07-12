@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 620" font-family="Caveat, 'Patrick Hand', cursive" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 620" font-family="Caveat, 'Patrick Hand', 'Comic Sans MS', cursive" role="img" aria-labelledby="title desc">
   <title id="title">The five sections of the weekly dev report on one page</title>
   <desc id="desc">Five labelled boxes stacked vertically representing the one-page weekly report. Box 1 (green) Shipped: staging URL plus test login. Box 2 (yellow) In review: PR number plus reviewer name. Box 3 (red) Blocked: named person plus deadline. Box 4 (blue) Cut: what got descoped and why. Box 5 (purple) Concern: one sentence on next week's risk.</desc>
 

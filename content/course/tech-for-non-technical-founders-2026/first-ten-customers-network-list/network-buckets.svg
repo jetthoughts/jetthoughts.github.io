@@ -2,11 +2,11 @@
   <title id="bucket-title">The 50-name network list sorted into 4 outreach buckets</title>
   <defs>
     <style>
-      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .bucket-label  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 22px; fill: #1a1a1a; font-weight: 700; }
-      .bucket-num    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 38px; fill: #cc342d; font-weight: 700; }
-      .bucket-note   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #444; font-style: italic; }
-      .bucket-rule   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #1a1a1a; }
+      .heading       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .bucket-label  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 22px; fill: #1a1a1a; font-weight: 700; }
+      .bucket-num    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 38px; fill: #cc342d; font-weight: 700; }
+      .bucket-note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .bucket-rule   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #1a1a1a; }
       .champion      { fill: #fbe9ff; stroke: #a855f7; stroke-width: 3; }
       .hot           { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
       .warm          { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }

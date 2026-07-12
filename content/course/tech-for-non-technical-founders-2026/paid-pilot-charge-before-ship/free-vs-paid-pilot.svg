@@ -2,16 +2,16 @@
   <title id="pilot-title">Why free pilots ghost and paid pilots convert - the skin-in-the-game gap</title>
   <defs>
     <style>
-      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .panel-title   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 24px; fill: #1a1a1a; font-weight: 700; }
-      .stat-big      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 56px; font-weight: 700; }
+      .heading       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .panel-title   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 24px; fill: #1a1a1a; font-weight: 700; }
+      .stat-big      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 56px; font-weight: 700; }
       .stat-red      { fill: #cc342d; }
       .stat-purple   { fill: #2e7d32; }
-      .label         { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 600; }
-      .note          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .label         { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 600; }
+      .note          { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
       .panel-free    { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
       .panel-paid    { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
-      .caveat        { font-family: "Caveat", "Patrick Hand", cursive; font-size: 13px; fill: #777; font-style: italic; }
+      .caveat        { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #777; font-style: italic; }
     </style>
   </defs>
 

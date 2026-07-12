@@ -30,7 +30,7 @@ related_posts: false
 
 Five questions that catch AI theatre in 30 minutes - hand them to your next agency call before you sign anything.
 
-By the end of one Tuesday discovery call you will know whether the agency claiming "we use AI to ship 3x faster" can describe what their developers do with Cursor on a Wednesday morning, or whether the AI talk is a slide. Five questions, sent in writing 24 hours before the call, scored 0 or 1 in real time. Two failed questions is a walkaway.
+By the end of one Tuesday discovery call you will know whether the agency claiming "we use AI to ship 3x faster" can describe what their developers do with Cursor on a Wednesday morning, or whether the AI talk is a slide. Five questions, sent in writing 24 hours before the call, scored 0 or 1 in real time. Three failed questions is a walkaway.
 
 A founder we picked up in Q1 2026 had been three weeks deep with an "AI-native" agency that promised a four-week MVP for $34K. She asked for a walkthrough of one PR the team had merged that week. The lead developer screenshared a staging branch; her independent advisor paused the screen-share and pointed at line 14 of `config/database.yml`: an OpenAI API key, a Stripe live key, and a database password committed in plaintext, on a public-by-default GitHub repo.
 
@@ -109,7 +109,7 @@ The AI-theatre pattern: the salesperson takes every question. Answers come back 
 One concrete contrast on Q3:
 
 > Bad: "Our senior reviews every PR. We have a high standard."
-> Good: "Open PR #1247 - Marcus reviewed it Tuesday morning. He flagged that Cursor had added `gem 'active_record_extras_helper'` to the Gemfile - a gem that does not exist on Rubygems. He blocked the merge and asked the developer to use the real `active_record_extra` gem. The hallucinated name would have been a slopsquat install if an attacker had registered it."
+> Good: "Open PR #1247 - Marcos reviewed it Tuesday morning. He flagged that Cursor had added `gem 'active_record_extras_helper'` to the Gemfile - a gem that does not exist on Rubygems. He blocked the merge and asked the developer to use the real `active_record_extra` gem. The hallucinated name would have been a slopsquat install if an attacker had registered it."
 
 ## What to do after the call
 

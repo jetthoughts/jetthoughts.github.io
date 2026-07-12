@@ -152,6 +152,8 @@ Date: ______________
 
 ## What good looks like vs what bad looks like
 
+Three worked examples for the sections founders most often get wrong - 1, 2, and 4. Sections 3 and 5 are direct transcript copying; the same specific-beats-vague rule applies.
+
 **Section 1 - Who has the problem**
 
 > Bad: *"Founders and small business owners who need help with productivity."*
@@ -180,13 +182,13 @@ The good version names the specific cost number, the specific competitor's speci
 
 The decision the filled page makes for you:
 
-- **BUILD** if: 7+ strong-signal calls (score 7+ with 3+ emotional flags), a named workaround the customer is already paying for, and a named why-now from the last 12 months. Test the shape in [Ch 2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/), then move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/).
+- **BUILD** if: 7+ strong-signal calls (score 7+ with 3+ emotional flags), a named workaround the customer is already paying for, and a named why-now from the last 12 months. Test the shape in [Ch 2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/), then move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/).
 - **PIVOT** if: 4-6 strong signals, OR the pain is real but belongs to a different persona than you targeted (e.g., you interviewed founders but the pain lives with their CFOs). Run 5 sharper interviews with the corrected ICP, then refill this page.
 - **KILL** if: fewer than 4 strong signals OR no workaround surfaced in the 10 interviews. Find a different problem and write the 200-word post-mortem below.
 
 Then walk the page through these four moves:
 
-- **Get 2 advisor signatures within 48 hours.** Email the page as a PDF. Ask: "Would you argue with this problem statement?" One sentence response is enough. If both say no, you've passed Module 2's checkpoint and you move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/) next.
+- **Get 2 advisor signatures within 48 hours.** Email the page as a PDF. Ask: "Would you argue with this problem statement?" One sentence response is enough. If both say no, you've passed Module 2's checkpoint and you move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) next.
 - **If you landed in the BUILD lane (7+ strong signals), run the 3 pre-orders test before writing code.** Email your 5 strongest-signal interviewees. Ask each for a $500 deposit, a signed letter of intent, or a paid waitlist slot. Three yes-and-paid out of five = build. Zero yes = the 7+ scores were politer than you thought, slide back to pivot.
 - **If you landed in the PIVOT lane (4-6), pick the cleanest segment and run 5 sharper interviews using [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) again.** Don't rerun the same 10 - they've already given you their honest answer. New segment, new interviews, one week.
 - **If you landed in the KILL lane (fewer than 4), write a 200-word post-mortem to your future self.** What ICP did you pick wrong? What why-now did you assume that wasn't true? What workaround did you not learn about until interview 7? The post-mortem is the most valuable artifact from a kill round - it stops you from picking the same wrong target again next quarter. The [stop-AI-obsession validation post](/blog/stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap/) has the long version of the discipline.
