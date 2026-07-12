@@ -25,12 +25,12 @@
 ## 📊 OVERALL PROGRESS
 
 ```
-Phase 1: Critical CSS Inline     [🔲🔲🔲🔲] 0/4 WPs    (0% complete)
+Phase 1: Critical CSS Inline     [✅❌✅❌] 4/4 WPs resolved (2 done, 2 closed with evidence)
 Phase 2: FL-Builder Foundations  [🔲🔲🔲🔲] 0/4 WPs    (0% complete)
 Phase 3: Additional Patterns     [🔲🔲🔲🔲] 0/4 WPs    (0% complete)
 
-Total Progress: 0/12 work packages (0% complete)
-Lines Eliminated: 0 / 27,394-31,936 target (0% complete)
+Total Progress: 4/12 work packages resolved
+Lines Eliminated: ~70,600 (sprints 1-6; orphan deletion + consolidation)
 ```
 
 **Status Legend**:
@@ -52,9 +52,9 @@ Lines Eliminated: 0 / 27,394-31,936 target (0% complete)
 
 ### Work Package Status
 
-#### WP1.1: CSS Variables Foundation 🔄 IN PROGRESS
+#### WP1.1: CSS Variables Foundation ✅ COMPLETED
 ```yaml
-status: 🔄 In Progress (font-system-ui extraction COMPLETE 2026-07-11)
+status: ✅ Completed 2026-07-12 (sprint 6 / PR #360)
 priority: P0 🔥 Critical
 duration: 4-6 hours
 files_affected: 12 inline critical CSS files
@@ -73,15 +73,28 @@ tasks:
         inline components tree (deferred). The ~157 in orphan files and the
         variables/colors.css duplicate def were removed with those files
         (sprint 5, 2026-07-12).
-  - [ ] Extract --color-primary, --color-secondary, --color-text
-  - [ ] Extract --border-radius-default, --spacing-unit
+  - [x] Extract --color-primary (#1a8cff) — token had consumers for years but
+        was NEVER DEFINED (28 fallback-less declarations shipped invalid);
+        six live broken rule groups codified to shipped rendering first,
+        then defined + ~280 literals tokenized across 50 files (sprint 6)
+  - [x] --color-secondary — OBSOLETE: only consumers lived in orphaned
+        buttons-migration.css (deleted sprint 6); no definition needed
+  - [x] --color-text — delivered as --color-muted (#969798, 168 literals);
+        body text color is --color-dark
+  - [x] Extract --radius-default (4px; 137 exact swaps incl. vendor prefixes;
+        reboot-generic button triplets KEEP LITERAL) and --spacing-sm/md
+        (values = the fallbacks live consumers already resolved to;
+        --spacing-unit as a single token is fiction — no dominant unit exists)
   - [x] Dedup the identical 35-line Bootstrap :root block copied across
         8 critical files — DELETED outright (sprint 2, 2026-07-11): zero
         var() consumers repo-wide, so no relocation needed; 280 lines
         removed; vendor base-4.min.css copy untouched
   - [x] Validation: bin/rake test:critical (46/46 pass, 84 screenshots 0 diffs)
   - [x] Validation: bin/dtest Linux gate (46/46 pass, per commit)
-  - [ ] Validation: FCP metrics unchanged
+  - [x] Validation: FCP unchanged — first-fold page HTML (inline critical CSS
+        included) byte-identical pre/post sprint-6 token work (homepage,
+        services, blog, careers, free-consultation). External bundles +4.8KB
+        raw (+0.18%, var() names longer than hex; gzip absorbs it)
 
 blockers: NONE
 dependencies: NONE (can start immediately)
@@ -101,9 +114,20 @@ notes: |
     intentionally NOT converted — different values, would be value changes.
 ```
 
-#### WP1.2: Reset Utilities Extraction 🔲 NOT STARTED
+#### WP1.2: Reset Utilities Extraction ❌ OBSOLETE
 ```yaml
-status: 🔲 Not Started
+status: ❌ Closed as obsolete 2026-07-12 (sprint 6) — premise falsified:
+  (1) only 18 of ~140 padding:0/margin:0 occurrences in critical/ are
+  standalone rules; the other 122 are declarations inside larger blocks
+  that utility classes cannot replace without splitting rules AND editing
+  FL-Builder-generated markup;
+  (2) the utility files this WP asks for ALREADY EXISTED
+  (utilities/margins.css, padding.css, display.css, flexbox.css …) —
+  extracted in an earlier effort, imported only by the dead
+  _consolidated-utilities.css aggregator, classes present in zero
+  templates; the whole closure was deleted as orphans in sprint 6;
+  (3) the byte savings the WP projected are already realized in output by
+  cssnano rule-merging + postcss-delete-duplicate-css per bundle.
 priority: P0 🔥 Critical
 duration: 6-8 hours
 files_affected: 12 inline critical CSS files
@@ -129,9 +153,15 @@ actual_commits: -
 notes: High-impact utility extraction
 ```
 
-#### WP1.3: PowerPack Infobox Pattern 🔲 NOT STARTED
+#### WP1.3: PowerPack Infobox Pattern ✅ COMPLETED
 ```yaml
-status: 🔲 Not Started
+status: ✅ Completed 2026-07-12 (sprint 6, 23ed3049) — 6 per-fl-node
+  duplicate blocks in services-critical.css consolidated via selector
+  grouping (-224 source lines). Note the projected 1.5KB output saving
+  was ALREADY realized by cssnano merging the duplicates — compiled
+  output byte-identical; this is source hygiene. Gate: per-node rule
+  expansion identical; services/index.html is the only page inlining
+  these nodes.
 priority: P1 ⚠️ High
 duration: 4-6 hours
 files_affected: services.html (6 duplicates)
@@ -155,9 +185,18 @@ actual_commits: -
 notes: Page-specific optimization for services page
 ```
 
-#### WP1.4: Media Query Consolidation 🔲 NOT STARTED
+#### WP1.4: Media Query Consolidation ❌ REJECTED (measured)
 ```yaml
-status: 🔲 Not Started
+status: ❌ Closed as net-negative 2026-07-12 (sprint 6) — implemented via
+  postcss-sort-media-queries (production-only, after purge/dedup), measured,
+  reverted. Raw bytes: −6% (homepage 332 @media blocks → 28). BUT transfer
+  size is what ships: gzip GREW +2-3% per bundle (merging scatters the
+  repetitive per-node blocks gzip compresses best); brotli −0.3-1% ≈ noise.
+  Zero real win against real cascade-reorder risk (cssnano removed its own
+  media-merging for exactly this) plus a plugin crash on PurgeCSS's empty
+  @media rules that needed a workaround. Source-level regrouping would
+  change output the same way — same verdict. Do not revisit without new
+  evidence.
 priority: P1 ⚠️ High
 duration: 6-8 hours
 files_affected: 12 inline critical CSS files (168 @media occurrences)
@@ -182,17 +221,18 @@ actual_commits: -
 notes: Highest line count reduction in Phase 1
 ```
 
-### Phase 1 Summary
+### Phase 1 Summary — ✅ CLOSED 2026-07-12
 ```yaml
 work_packages_total: 4
-work_packages_completed: 0
-work_packages_blocked: 0
-total_duration_target: 20-30 hours
-total_duration_actual: 0 hours
-total_lines_eliminated_target: 300-400 lines
-total_lines_eliminated_actual: 0 lines
-total_commits_target: 78-100 commits
-total_commits_actual: 0 commits
+work_packages_completed: 2   # WP1.1, WP1.3
+work_packages_closed_obsolete: 2   # WP1.2 (premise falsified), WP1.4 (measured net-negative)
+total_lines_eliminated_actual: ~70,600 across sprints 1-6 (mostly orphan deletion;
+  the WPs' own line targets were largely already realized in OUTPUT by the
+  postcss pipeline — the 2025-10 analysis measured source, not compiled bundles)
+notes: |
+  Phase-1 lesson: the original WP estimates predate cssnano/delete-duplicate
+  awareness. Before starting any Phase-2 WP, verify its projected savings
+  against COMPILED bundle output (and gzip), not source line counts.
 ```
 
 ---
@@ -553,6 +593,40 @@ fcp_metrics:
 ---
 
 ## 🔄 UPDATE LOG
+
+### 2026-07-12 (sprint 6 continuation — WP1 / Phase 1 closed)
+- **Landed** (same branch/PR #360, 7 more commits): Phase 1 fully resolved.
+  1. 23ed3049 — WP1.3 done: 6 duplicated infobox blocks in
+     services-critical.css consolidated by selector grouping (-224 lines;
+     output byte-identical — cssnano had already merged them).
+  2. 06207988 — 16 MORE orphans deleted (audit finding): components
+     buttons-migration/c-navigation/c-gravity-forms/navigation-migration
+     + dead _consolidated-utilities.css aggregator closure (12 utility
+     files incl. the very margins/padding utilities WP1.2 asked for).
+  3. d4370857 — components tree #121212 → var(--color-dark) (15 swaps);
+     foundation @imported at top of components.css; --spacing-sm/md
+     defined at live fallback values. TRAP DOCUMENTED: prepending the
+     foundation via the baseof resource slice put :root before
+     components.css's @imports → CSS invalidated them → the whole
+     components inline bundle silently vanished (caught by swap gate).
+  4. d3b049e3 — --color-primary (#1a8cff) DEFINED for the first time
+     (28 fallback-less consumers had shipped invalid for years; 6 live
+     groups codified to shipped rendering first: inherit/transparent/
+     currentColor) + ~280 literals tokenized across 50 files.
+  5. 20b4896b — --color-muted (#969798, ~168 swaps) + --radius-default
+     (4px, 137 swaps) defined + rolled out; reboot-generic button radius
+     triplets KEEP LITERAL (dedup-twin re-appearance in all 13 bundles).
+  6. WP1.2 closed obsolete, WP1.4 closed net-negative (see WP sections
+     for evidence; WP1.4: raw −6% but gzip +2-3% — transfer size LOST).
+- **Gate additions (reusable)**: swap-gate.sh (symmetric rule-level diff,
+  generic :root-def strip, inline-bundle extraction) + mq-fingerprint.pl
+  (viewport fingerprint: last-wins winner per selector/property from
+  active @media contexts at each breakpoint width — proves computed
+  equivalence for merge-product churn, twin re-splits, shorthand↔longhand).
+- **FCP evidence**: first-fold page HTML byte-identical pre/post token
+  work; external bundles +4.8KB raw (+0.18%), gzip-neutral.
+- **Quality**: per commit — swap gate + fingerprint where bytes moved +
+  test:critical 46/46 + dtest 46/46. Zero visual regressions.
 
 ### 2026-07-12 (sprint 6 — swarm-verified cleanup)
 - **Landed** (branch css-migration/wp1.1-sprint-6, stacked on sprint-5,
