@@ -12,7 +12,7 @@
       .numdot { fill: #cc342d; }
       .card-cold { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.25; }
       .card-warm { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.25; }
-      .card-conv { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.25; }
+      .card-conv { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.25; }
       .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
       .legend { font-size: 15px; fill: #333; }
     </style>
@@ -92,5 +92,5 @@
   <rect x="423" y="410" width="18" height="18" rx="4" class="card-warm"/>
   <text x="447" y="424" class="h legend">Warm pipeline</text>
   <rect x="604" y="410" width="18" height="18" rx="4" class="card-conv"/>
-  <text x="628" y="424" class="h legend">Conversion</text>
+  <text x="628" y="424" class="h legend">Money lands</text>
 </svg>

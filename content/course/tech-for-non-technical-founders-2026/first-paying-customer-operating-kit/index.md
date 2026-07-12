@@ -45,7 +45,7 @@ related_posts: false
 Module 5 of this course runs seven lessons (5.1-5.7): the Sean Ellis 40% test, channel choice, the personal-network outreach arc, the paid-pilot contract, and the cold-outbound pipeline. The lessons reference these templates. This page hosts them as each one ships. The DPA template is live below (component 3); the remaining 5 are described and shipping next.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TB
     Kit[First-Paying-Customer<br/>Operating Kit]
     Kit --> T1[1. 50-name network list<br/>Google Sheets template]
@@ -54,7 +54,7 @@ flowchart TB
     Kit --> T4[4. Stripe Checkout setup<br/>Rails / Django / Laravel]
     Kit --> T5[5. Sean Ellis survey<br/>5 questions, Typeform-ready]
     Kit --> T6[6. First 10 Customers tracker<br/>Google Sheet template]
-    classDef kitstyle fill:#a855f7,stroke:#1a1a1a,stroke-width:2px,color:#fff;
+    classDef kitstyle fill:#fbe9ff,stroke:#a855f7,stroke-width:2px,color:#1a1a1a;
     classDef compstyle fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
     class Kit kitstyle;
     class T1,T2,T3,T4,T5,T6 compstyle;
@@ -88,66 +88,60 @@ Two annotated examples: a $1,500 B2B SaaS pilot DPA and a $5,000 B2B services pi
 
 The outcome: makes the "we run paid pilots" conversation a 15-second handoff instead of a three-week back-and-forth.
 
-> **📋 Copy-pasteable DPA template - copy into Google Docs, fill the [BLANKS], send:**
->
-> # Design Partner Agreement
->
-> **Between:** [Your Company Name] ("Company") and [Customer Company Name] ("Design Partner")
-> **Date:** [YYYY-MM-DD]
->
-> ## 1. Scope of Pilot
->
-> The Company will deliver the following outcomes during the pilot period:
-> 1. [Outcome 1 - measurable, e.g. "Reduce weekly report prep from 3 hours to 30 minutes"]
-> 2. [Outcome 2]
-> 3. [Outcome 3]
->
-> Specific use cases covered: [Use case 1], [Use case 2].
-> Anything outside this list is out of scope until year-one conversion.
->
-> ## 2. Duration + Dates
->
-> Start date: [YYYY-MM-DD]
-> End date: [YYYY-MM-DD] (6-8 weeks)
-> Weekly Friday demo at [time] [timezone]. 15 minutes. Loom or live screenshare.
->
-> ## 3. Pilot Fee + Deposit
->
-> One-time deposit: $[500-6,000] (10-30% of year-one ACV).
-> Paid via Stripe before pilot kickoff. Credited dollar-for-dollar toward year-one invoice on conversion.
-> If Design Partner cancels before week 4: deposit forfeited.
-> If Company cancels for any reason: 100% refund within 14 days.
->
-> ## 4. Success Criteria
->
-> The pilot is successful if **2 of 3** criteria are met by [end date]:
-> 1. [Measurable criterion 1 - e.g. "Report prep time reduced to ≤30 min/week, verified in Friday demo"]
-> 2. [Measurable criterion 2]
-> 3. [Measurable criterion 3]
->
-> If 2+ criteria met: year-one contract auto-converts unless Design Partner opts out in writing within 7 days.
-> If <2 criteria met: both parties walk. Company retains deposit as paid consideration for pilot work.
->
-> ## 5. Conversion Terms
->
-> Year-one price: $[amount] / [month or year]
-> Billing: [monthly / annual]
-> Conversion: auto-convert at pilot end unless Design Partner opts out in writing.
-> Post year-one: 30-day written notice to cancel.
->
-> ## 6. Data, IP, Termination
->
-> Design Partner keeps their data. Company keeps the product IP.
-> Either party may exit at 30 days written notice during pilot.
-> Design Partner's data remains exportable for 90 days after termination.
->
-> **Signed:**
->
-> _________________________  Date: __________
-> [Your Name], [Your Company]
->
-> _________________________  Date: __________
-> [Champion Name], [Customer Company]
+**📋 Copy-pasteable DPA template - copy into Google Docs, fill the [BLANKS], send:**
+
+```text
+DESIGN PARTNER AGREEMENT
+
+Between: [Your Company Name] ("Company") and [Customer Company Name] ("Design Partner")
+Date: [YYYY-MM-DD]
+
+1. SCOPE OF PILOT
+The Company will deliver the following outcomes during the pilot period:
+  1. [Outcome 1 - measurable, e.g. "Reduce weekly report prep from 3 hours to 30 minutes"]
+  2. [Outcome 2]
+  3. [Outcome 3]
+Specific use cases covered: [Use case 1], [Use case 2].
+Anything outside this list is out of scope until year-one conversion.
+
+2. DURATION + DATES
+Start date: [YYYY-MM-DD]
+End date: [YYYY-MM-DD] (6-8 weeks)
+Weekly Friday demo at [time] [timezone]. 15 minutes. Loom or live screenshare.
+
+3. PILOT FEE + DEPOSIT
+One-time deposit: $[500-6,000] (10-30% of year-one ACV).
+Paid via Stripe before pilot kickoff. Credited dollar-for-dollar toward year-one invoice on conversion.
+If Design Partner cancels before week 4: deposit forfeited.
+If Company cancels for any reason: 100% refund within 14 days.
+
+4. SUCCESS CRITERIA
+The pilot is successful if 2 of 3 criteria are met by [end date]:
+  1. [Measurable criterion 1 - e.g. "Report prep time reduced to <=30 min/week, verified in Friday demo"]
+  2. [Measurable criterion 2]
+  3. [Measurable criterion 3]
+If 2+ criteria met: year-one contract auto-converts unless Design Partner opts out in writing within 7 days.
+If <2 criteria met: both parties walk. Company retains deposit as paid consideration for pilot work.
+
+5. CONVERSION TERMS
+Year-one price: $[amount] / [month or year]
+Billing: [monthly / annual]
+Conversion: auto-convert at pilot end unless Design Partner opts out in writing.
+Post year-one: 30-day written notice to cancel.
+
+6. DATA, IP, TERMINATION
+Design Partner keeps their data. Company keeps the product IP.
+Either party may exit at 30 days written notice during pilot.
+Design Partner's data remains exportable for 90 days after termination.
+
+SIGNED:
+
+_________________________  Date: __________
+[Your Name], [Your Company]
+
+_________________________  Date: __________
+[Champion Name], [Customer Company]
+```
 
 ### 4. Stripe Checkout setup checklist (Rails / Django / Laravel)
 

@@ -210,7 +210,7 @@ The five-minute path:
 That is the entire setup. No webhook, no Rails controller, no Django view, no Laravel route. If you want to log paid pilots into your existing app, you can - but you do not have to. The CSV export from Stripe is enough for a Module 5 first-pilot motion.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 sequenceDiagram
     participant Founder
     participant Stripe

@@ -26,7 +26,7 @@
 
   <!-- Header: the average-hides-the-signal point -->
   <text x="480" y="38" text-anchor="middle" class="h title">One blended average hides three different products.</text>
-  <text x="480" y="64" text-anchor="middle" class="h sub">Same 28 responses. The overall 28% looks like failure — until you slice by who the user is.</text>
+  <text x="480" y="64" text-anchor="middle" class="h sub">Same 28 responses. The overall 28% looks like failure - until you slice by who the user is.</text>
 
   <!-- CARD 1: B2B Marketers (PASS) -->
   <rect x="24" y="86" width="288" height="288" rx="15" class="card-g" transform="rotate(-0.5 168 230)"/>
@@ -54,7 +54,7 @@
   <text x="456" y="256" text-anchor="middle" class="h tick">40% line</text>
   <text x="480" y="272" text-anchor="middle" class="h count">1 of 7 said "very disappointed"</text>
   <text x="480" y="296" text-anchor="middle" class="h trait">Tried it once. Forgot it existed.</text>
-  <text x="480" y="339" text-anchor="middle" class="h verdict">Below the line — not now</text>
+  <text x="480" y="339" text-anchor="middle" class="h verdict">Below the line - not now</text>
 
   <!-- CARD 3: Agencies (neutral) -->
   <rect x="648" y="86" width="288" height="288" rx="15" class="card-n" transform="rotate(-0.4 792 230)"/>

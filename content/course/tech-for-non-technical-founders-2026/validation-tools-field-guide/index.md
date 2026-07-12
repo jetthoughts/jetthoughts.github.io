@@ -43,7 +43,7 @@ This guide covers three tools - VenturusAI, DimeADozen, and Preuve AI - with eno
 Write the Mad Libs sentence in five minutes and you'll fall in love with it. Run it through one validation tool first and you'll find the blank you were vague about before it costs you ten interviews.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     Draft(["Draft hypothesis<br/>(rough Mad Libs sentence)"])
     Draft --> V["VenturusAI · ~30s<br/>catches weak differentiation<br/>and missed competitors"]

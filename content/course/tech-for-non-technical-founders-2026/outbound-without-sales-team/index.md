@@ -155,39 +155,45 @@ The 60-90 second rule keeps the volume tractable. 30 prospects × 90 seconds = 4
 
 ### Variant 1: B2B SaaS, shipped-MVP context
 
-> Subject: shipped MVP last month - your post on [topic]
->
-> Hi [first name],
->
-> Saw your post on [topic, paraphrased in their words] last [Tuesday]. I shipped my MVP for [the same problem] last month using [Lovable + Supabase + Stripe] after 10 interviews with people who flagged the exact issue you described. I built [a tool that does X for Y].
->
-> Worth 15 minutes to walk through? Paid design partner spots, [$ deposit] credited toward year one. Calendly: [link]
->
-> [Your name]
+```text
+Subject: shipped MVP last month - your post on [topic]
+
+Hi [first name],
+
+Saw your post on [topic, paraphrased in their words] last [Tuesday]. I shipped my MVP for [the same problem] last month using [Lovable + Supabase + Stripe] after 10 interviews with people who flagged the exact issue you described. I built [a tool that does X for Y].
+
+Worth 15 minutes to walk through? Paid design partner spots, [$ deposit] credited toward year one. Calendly: [link]
+
+[Your name]
+```
 
 ### Variant 2: B2B services
 
-> Subject: noticed your hiring for [role]
->
-> Hi [first name],
->
-> Saw [Company] is hiring a [role] - guessing [the problem the role solves] is on your roadmap. I run a [services category] practice and we have helped [a comparable company size] handle [the same problem] in [the same vertical] in the last six months.
->
-> Open to a 15-minute walk-through? Paid pilot model, [$ deposit] credited toward year-one engagement. Calendly: [link]
->
-> [Your name]
+```text
+Subject: noticed your hiring for [role]
+
+Hi [first name],
+
+Saw [Company] is hiring a [role] - guessing [the problem the role solves] is on your roadmap. I run a [services category] practice and we have helped [a comparable company size] handle [the same problem] in [the same vertical] in the last six months.
+
+Open to a 15-minute walk-through? Paid pilot model, [$ deposit] credited toward year-one engagement. Calendly: [link]
+
+[Your name]
+```
 
 ### Variant 3: B2C app
 
-> Subject: re: your [Reddit post / TikTok video] on [topic]
->
-> Hi [first name],
->
-> Your [Reddit post / TikTok video] on [topic] hit. I built an app that handles [the painful task you described] - the link below is a 90-second Loom showing it work end-to-end on my phone.
->
-> Loom: [link]. App: [link]. If it looks useful, I am opening 20 paid beta spots at $9/month for the first month. Reply to claim one.
->
-> [Your name]
+```text
+Subject: re: your [Reddit post / TikTok video] on [topic]
+
+Hi [first name],
+
+Your [Reddit post / TikTok video] on [topic] hit. I built an app that handles [the painful task you described] - the link below is a 90-second Loom showing it work end-to-end on my phone.
+
+Loom: [link]. App: [link]. If it looks useful, I am opening 20 paid beta spots at $9/month for the first month. Reply to claim one.
+
+[Your name]
+```
 
 All three variants follow the same shape: a specific reference earns the open, one sentence on what you built, one specific ask with friction removed (Calendly or Loom + claim link), one currency anchor (deposit, beta price). Total length: 4-6 lines including subject. Anything longer reduces response rate.
 

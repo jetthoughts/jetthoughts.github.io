@@ -91,6 +91,16 @@
 
     {{ partialCached "page/site-scripts" . "site-scripts" }}
     {{ if .Store.Get "features.mermaid" }}
+      {{/* The house diagram font. Without this, 'Caveat, Patrick Hand,
+           cursive' resolves to the PLATFORM generic cursive (Apple
+           Chancery on macOS, varies elsewhere) - a per-visitor identity
+           lottery caught by the 2026-07-12 M5 design review. Loaded only
+           on pages that render mermaid. */}}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap"
+        rel="stylesheet" />
       <script
         src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js"
         integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF"
@@ -110,10 +120,17 @@
         // compact SVGs, shorter node labels), not by changing the font.
         // Per-diagram %%init%% directives still override these.
         mermaid.initialize({
-          startOnLoad: true,
+          // startOnLoad is off: we render only after document.fonts.ready,
+          // so mermaid MEASURES node boxes with the same font it renders
+          // with. Rendering before Caveat loads measured labels in the
+          // fallback font's metrics - the root cause of the recurring
+          // "last character clipped" defects.
+          startOnLoad: false,
           theme: 'base',
           themeVariables: {
-            fontFamily: "'Caveat', 'Patrick Hand', cursive",
+            // Comic Sans MS mirrors the in-post SVGs' fallback so the two
+            // asset families stay visually related if the webfont fails.
+            fontFamily: "'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive",
             fontSize: '20px',
             primaryColor: '#fff5f5',
             primaryBorderColor: '#cc342d',
@@ -127,6 +144,9 @@
           // late metric change renders text wider than the measured box and
           // clips trailing characters. border-radius is safe (non-metric).
           themeCSS: '.edgePaths path { stroke-width: 2.25px; } .edgeLabel { border-radius: 6px; }'
+        });
+        document.fonts.ready.then(function () {
+          mermaid.run();
         });
       </script>
     {{ end }}

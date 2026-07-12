@@ -48,14 +48,14 @@
   <text x="141" y="266" text-anchor="middle" class="h cardhd-a">UNDER 40%</text>
   <text x="141" y="292" text-anchor="middle" class="h cardln">Product problem,</text>
   <text x="141" y="312" text-anchor="middle" class="h cardln">not a marketing one.</text>
-  <text x="141" y="336" text-anchor="middle" class="h cardln">More ads won't fix it —</text>
+  <text x="141" y="336" text-anchor="middle" class="h cardln">More ads won't fix it -</text>
   <text x="141" y="352" text-anchor="middle" class="h cardln">talk to the "very disappointed".</text>
 
   <!-- Green caption card (right, 40% or more) -->
   <rect x="702" y="236" width="234" height="120" rx="14" class="card-g" transform="rotate(0.5 819 296)"/>
   <text x="819" y="266" text-anchor="middle" class="h cardhd-g">40% OR MORE</text>
   <text x="819" y="292" text-anchor="middle" class="h cardln">You have a must-have user.</text>
-  <text x="819" y="312" text-anchor="middle" class="h cardln">Outreach beats paid ads —</text>
+  <text x="819" y="312" text-anchor="middle" class="h cardln">Outreach beats paid ads -</text>
   <text x="819" y="336" text-anchor="middle" class="h cardln">go find more of them</text>
   <text x="819" y="352" text-anchor="middle" class="h cardln">and start selling.</text>
 

@@ -62,7 +62,7 @@ The pattern matters more than the average. Eight 7+ scores and two 3s is a stron
 Your strong-signal count from Step 2 routes you to one of three outcomes.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     Start(["10 Mom Test transcripts.<br/>90 minutes alone, pen + printed template."])
     Start --> S1[Step 1<br/>Score each interview 1-10]

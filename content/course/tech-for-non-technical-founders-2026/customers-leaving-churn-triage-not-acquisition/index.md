@@ -112,9 +112,9 @@ The trade-off worth naming: a 90-minute cohort analysis on 32 users is direction
 The cohort numbers route you to one of three decisions. There is no fourth option. "Keep running ads" is not a fourth option; it is the option you took before reading this chapter, and the bucket numbers tell you how that ends.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
-    A[Cohort numbers from the 90-minute floor] --> B{Per-segment 30-day retention spread?}
+    A[Cohort numbers from the 90-minute floor] --> B[Per-segment 30-day retention spread?]
     B -->|All segments under 25%<br/>and roughly the same| C[Decision 3 - KILL THE SKU<br/>Sunset gracefully + pivot]
     B -->|All segments around 20-35%<br/>and roughly the same| D[Decision 1 - FIX THE PRODUCT<br/>Rebuild one workflow]
     B -->|One segment over 50%<br/>others under 20%| E[Decision 2 - CHANGE THE SEGMENT<br/>Refund the wrong half]

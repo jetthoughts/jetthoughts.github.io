@@ -175,7 +175,7 @@ A skyscraper - compliance-bound, multi-tenant, real-time, AI-heavy - needs a hir
 The 2-question test runs in 90 seconds. Print it. Tape it inside the laptop case.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#1a1a1a', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#1a1a1a', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     Start(["Open the 5-signal scoreboard"])
     Q1{"Q1: Has any signal been<br/>firing for 4+ weeks?"}

@@ -139,11 +139,11 @@ Pull three numbers:
 ### Step 5 - The decision tree
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
-    A[Run the 5-question survey] --> B{Overall must-have %}
+    A[Run the 5-question survey] --> B[Overall must-have %]
     B -->|Under 25%&nbsp;| C[Stop. Product problem.<br/>Talk to 5 'very disappointed' users.<br/>Find what you missed.]
-    B -->|25-40%&nbsp;&nbsp;| D{Any segment over 40%?}
+    B -->|25-40%&nbsp;&nbsp;| D[Any segment over 40%?]
     B -->|Over 40%&nbsp;| E[You have a must-have user.<br/>Chapter 5.3 outreach starts here.]
     D -->|Yes| F[Target that segment.<br/>Rebuild the persona on those quotes.]
     D -->|No| G[Refine the product first.<br/>Re-run after the next release.]

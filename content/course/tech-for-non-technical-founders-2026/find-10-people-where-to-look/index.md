@@ -48,7 +48,7 @@ After this lesson you will be able to: **build a 30-name list of specific people
 The full journey, top to bottom:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'fontSize':'24px', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'fontSize':'24px', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart LR
     H(["Hypothesis<br/>from Ch 1.1"])
     H --> S1["1. AI ICP map<br/>paste into Claude"]

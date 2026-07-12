@@ -28,7 +28,7 @@
 
   <!-- Title -->
   <text x="550" y="38" class="page-title" text-anchor="middle">The 5-Module Pipeline</text>
-  <text x="550" y="62" class="page-sub" text-anchor="middle">Each module's output is the next module's input — from rough idea to signed paid pilot</text>
+  <text x="550" y="62" class="page-sub" text-anchor="middle">Each module's output is the next module's input - from rough idea to signed paid pilot</text>
 
   <!-- Card 1: Module 1 -->
   <rect x="20" y="85" width="180" height="230" rx="10" class="card-1" filter="url(#rough)"/>

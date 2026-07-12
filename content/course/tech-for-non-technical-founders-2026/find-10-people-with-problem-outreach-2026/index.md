@@ -137,7 +137,7 @@ While the cold-outreach path books the calls, the smoke-test landing page from [
 That opener out-performs every cold variant in this chapter - the person already raised a hand.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     A(["Start a focused block. 30-name list from Part 1."])
     A --> B[Cold outreach track: 30 messages by hand]

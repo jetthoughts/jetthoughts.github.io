@@ -85,7 +85,7 @@ The [smoke test](/course/tech-for-non-technical-founders-2026/smoke-test-landing
 Neither answers the question this chapter is built around - whether a real user can find their way through your interface without someone over their shoulder telling them what to do.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart LR
     A["Smoke Test<br/>Do strangers click?<br/>Demand signal"] --> B["Mom Test<br/>Is the problem felt?<br/>Problem signal"]
     B --> C["Prototype Session<br/>Can users navigate?<br/>Shape signal"]
@@ -199,7 +199,7 @@ First, use the vocabulary you heard in Mom Test interviews, not the vocabulary y
 Second, resist adding a fourth screen. The constraint is the test. If you feel the prototype needs a fourth screen to "make sense," that is a finding: your solution has more steps than a single session can validate. Note it and keep the prototype to three screens. You are testing legibility of the shape, not the completeness of the product.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     P["Open Lovable<br/>Paste the prompt template"]
     P --> R["Read fake data out loud<br/>Change vocab to match<br/>interview language"]

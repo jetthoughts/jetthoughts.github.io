@@ -112,7 +112,7 @@ Choose this when the build is backend-heavy (real-time, queues, AI inference at 
 Five questions feed the matrix. Answer them alone with a printed worksheet, write the result at the top of your Notion doc, and the matrix picks for you.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     Start(["Default: self-serve.<br/>Five questions test it."])
     Start --> Q1["Q1: Problem validated?<br/>10+ calls, 7+ signals, smoke test 6%+"]

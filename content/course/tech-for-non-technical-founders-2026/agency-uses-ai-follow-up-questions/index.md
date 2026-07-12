@@ -150,7 +150,7 @@ Same five questions, two completely different conversations:
 Run the call on a 30-minute Zoom block. Hold the timer.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     A["0-3 min<br/>Set the frame<br/>(you sent the questions<br/>24h ago; senior present?)"]
     A --> B["3-23 min<br/>Walk Q1 - Q5<br/>(~4 min each)<br/>Score 0/1 in Notion live"]

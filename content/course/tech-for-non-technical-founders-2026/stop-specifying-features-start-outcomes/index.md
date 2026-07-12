@@ -90,7 +90,7 @@ Both outcome-shaped briefs in the section above use the same three parts. The sh
 Put the three parts together and the engineer (or the AI agent) has no gaps left to guess at. Drop any one part - the timeframe, the action, or the outcome - and the gap gets filled in from training data instead of your intent. The same shape has a name in product-management literature; see *Further reading* below if you want to chase the lineage.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     Feature["FEATURE brief: Build a CRM module"]
     Feature --> F1["Companies + contacts"]
