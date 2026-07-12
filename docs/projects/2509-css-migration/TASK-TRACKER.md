@@ -1,36 +1,40 @@
 # CSS Migration Task Tracker
 
-**Purpose**: Real-time work package status tracking for CSS duplication elimination goal
-**Update Frequency**: After each work package completion or status change
+**Purpose**: Status tracking for the CSS maintainability goal — FL-Builder export CSS retired page-by-page (strangler rewrites)
+**Update Frequency**: After each sprint or status change
 **Last Updated**: 2026-07-12
-**Current Phase**: Phase 1 - Critical CSS Inline Consolidation
+**Current Phase**: Phase 0 - Safety scaffolding (test coverage + guards)
 
 ---
 
 ## 🎯 GOAL OVERVIEW
 
-**Objective**: Eliminate 70-80% CSS duplication (27,094-31,536 lines)
-**Approach**: 3-phase execution with micro-commit discipline
-**Execution Mode**: Solo autonomous (NO swarm spawning for mechanical work)
-**Success Criteria**: 100% test pass rate, zero visual regressions maintained
+**Objective**: Every style hand-editable, understood, single-source — FL export CSS 16 files → 0
+**Approach**: Phase 0 scaffolding, then one-page-per-sprint full rewrites (semantic HTML + token-based page CSS), easiest first
+**Execution Mode**: One feature branch + one bundled PR per sprint; read-only audit agents allowed, mutations sequential
+**Success Criteria**: FL burn-down to zero; no hash-named/obfuscated files; no duplication in the hand-maintained layer; both snapdiff suites green with every non-target page 0.0-diff
 
 **Quick Links**:
-- 📋 [Full Goal Document](35-39-project-management/35.04-revised-goal-css-duplication-elimination.md)
+- 📋 [Approved spec (authority)](2026-07-12-css-maintainability-redesign.md)
+- 🗺️ [Bundle ownership map + FL burn-down](css-bundle-ownership-map.md)
 - 📊 [Project Index](PROJECT-INDEX.md)
-- 🔍 [Top 5 Patterns](10-19-analysis/10.06-fl-builder-duplication-analysis.md)
-- 🔍 [Patterns #6-#15](10-19-analysis/10.09-css-duplication-patterns-6-15-analysis.md)
+- 📚 [Superseded Oct-2025 plan (archived)](70-79-archives/superseded-2026-07-12/README.md)
 
 ---
 
 ## 📊 OVERALL PROGRESS
 
 ```
+OLD PLAN (falsified, closed):
 Phase 1: Critical CSS Inline     [✅❌✅❌] 4/4 WPs resolved (2 done, 2 closed with evidence)
 Phase 2: FL-Builder Foundations  [❌❌❌❌] 4/4 WPs resolved (all closed with evidence; cleanup shipped instead)
-Phase 3: Additional Patterns     [🔲🔲🔲🔲] 0/4 WPs    (0% complete)
+Phase 3: Additional Patterns     SUPERSEDED 2026-07-12 — never started; premise died with Phases 1+2
 
-Total Progress: 8/12 work packages resolved
-Lines Eliminated: ~73,150 (sprints 1-7; orphan deletion + consolidation)
+CURRENT PLAN (2026-07-12 spec):
+Phase 0: Safety scaffolding      [🔲🔲✅🔲] 1/4 items (blog-post test coverage, per-page coverage check, ownership map ✅ 2026-07-12, orphan guard)
+Rewrites: FL burn-down           16/16 files live → target 0 (R1 = 3059-layout: course-list + privacy-policy pages)
+
+Historical: ~73,150 lines eliminated sprints 1-7 (orphan deletion + consolidation)
 ```
 
 **Status Legend**:
@@ -377,139 +381,71 @@ lesson: same as WP1.4 — savings claims must be verified against compiled+gzipp
 
 ---
 
-## 📅 PHASE 3: Additional Pattern Consolidation + Hugo Enhancements
+## 📅 PHASE 3 (OLD PLAN): Additional Pattern Consolidation + Hugo Enhancements — ❌ SUPERSEDED 2026-07-12
 
-**Phase Status**: 🔲 Not Started
-**Duration**: 20-30 hours (base) OR 30-45 hours (with Hugo enhancements)
-**Target Impact**: 484-768 lines + optional Hugo pipeline improvements
-**Risk Level**: LOW - Cleanup and optimization
+**Phase Status**: ❌ Superseded before start — closed 2026-07-12 (never begun)
+**Reason**: Its premise (source-level pattern consolidation into shared foundation
+files, measured in raw line counts) is the same methodology falsified by Phase 1
+(WP1.2/WP1.4) and the whole of Phase 2: PurgeCSS runs per bundle, so each page
+already ships only its own FL subset — foundation extraction grows shipped bytes.
+WP3.1/WP3.2 also proposed `.scss` files in a Sass-less pipeline. WP3.3's Hugo
+enhancements (hugo_stats.json, PurgeCSS, safelists) already exist in production.
+The WP3.1-3.4 definitions are preserved in git history (commit 2388c437 and
+earlier) and the archived plan docs under `70-79-archives/superseded-2026-07-12/`.
 
-### Work Package Status
+**Replaced by**: the strangler rewrite plan in
+[2026-07-12-css-maintainability-redesign.md](2026-07-12-css-maintainability-redesign.md).
 
-#### WP3.1: Background Patterns Consolidation 🔲 NOT STARTED
+---
+
+## 📅 PHASE 0 (CURRENT PLAN): Safety scaffolding
+
+**Phase Status**: 🔄 In progress (1/4 items)
+**Source**: Spec §"Phase 0 — safety scaffolding". No legacy CSS edits in this phase.
+**Gate mechanism**: existing snapdiff suites only — `bin/test` (macOS) + `bin/dtest`
+(Linux), `FORCE_SCREENSHOT_UPDATE=true` to regenerate baselines. No new custom
+baseline/compare scripts; missing coverage is fixed by ADDING TESTS.
+
 ```yaml
-status: 🔲 Not Started
-priority: P2 📋 Medium
-duration: 10-14 hours
-files_affected: 7 FL-Builder layout files
-pattern: FL-row background patterns (colors, images, gradients)
-impact: 400-600 lines eliminated
-micro_commits_target: 30-40 commits
-
-tasks:
-  - [ ] Create _fl-background-utilities.scss
-  - [ ] Extract common background patterns (colors, images)
-  - [ ] Consolidate gradient definitions
-  - [ ] Import utilities in layout files
-  - [ ] Remove duplicated background CSS
-  - [ ] Validation: bin/rake test:critical (all pass)
-  - [ ] Validation: Background visual tests (all 7 pages)
-
-blockers: NONE
-dependencies: Phase 2 complete (WP2.1-WP2.4)
-assigned_to: TBD
-started_date: -
-completed_date: -
-actual_duration: -
-actual_commits: -
-notes: Lower priority, can be deferred if needed
+items:
+  - [ ] P0.1 Special-content blog post coverage: desktop+mobile screenshot tests
+        for one representative post per surface — Mermaid (3 posts exist),
+        Chroma code-highlight (139 posts), inline style= HTML (3 posts),
+        youtube shortcode. Revive or replace the skipped
+        test/system/components/diagram_component_test.rb.
+  - [ ] P0.2 Rewrite-target coverage check: before each rewrite sprint, confirm
+        the target page has desktop+mobile snapdiff coverage; add it first if not.
+  - [x] P0.3 Page→bundle ownership map: css-bundle-ownership-map.md (2026-07-12) —
+        19 bundles × owning template × FL files × gzip; FL burn-down table 16→0.
+  - [ ] P0.4 Orphan guard: check listing CSS files under themes/beaver/assets/css/
+        referenced by no template resource slice.
 ```
 
-#### WP3.2: @import Statement Deduplication 🔲 NOT STARTED
+---
+
+## 📅 REWRITE SPRINTS (CURRENT PLAN): FL burn-down 16 → 0
+
+One page type per sprint: semantic HTML template + one token-based file under
+`css/pages/`, FL file(s) deleted in the same PR, design improvements per
+JetVelocity (`.stitch/design.md`) with Paul's screenshot approval. Full protocol
+in the spec; live status in `css-bundle-ownership-map.md`.
+
 ```yaml
-status: 🔲 Not Started
-priority: P2 📋 Medium
-duration: 6-8 hours
-files_affected: 7 FL-Builder layout files
-pattern: Duplicate @import statements
-impact: 84-168 lines eliminated
-micro_commits_target: 15-20 commits
-
-tasks:
-  - [ ] Create master _fl-imports.scss
-  - [ ] Consolidate all foundation imports into master file
-  - [ ] Replace individual @import statements with master import
-  - [ ] Validation: Build validation (CSS compilation)
-  - [ ] Validation: No broken imports
-
-blockers: NONE
-dependencies: WP3.1 (all foundations extracted and stable)
-assigned_to: TBD
-started_date: -
-completed_date: -
-actual_duration: -
-actual_commits: -
-notes: Cleanup work, enhances maintainability
-```
-
-#### WP3.3: Hugo Pipeline Enhancements (OPTIONAL) 🔲 NOT STARTED
-```yaml
-status: 🔲 Not Started
-priority: OPTIONAL (can be separate initiative)
-duration: 10-15 hours
-files_affected: config.toml, postcss.config.js, layouts
-impact: 20-40% additional CSS reduction + automated workflows
-micro_commits_target: 15-20 commits
-
-tasks:
-  - [ ] Enable hugo_stats.json generation (config.toml)
-  - [ ] Add postcss-purgecss plugin to postcss.config.js
-  - [ ] Configure safelist for FL-Builder/PowerPack classes
-  - [ ] Add postcss-critical for automated critical CSS
-  - [ ] Update layouts to use automated critical CSS
-  - [ ] Validation: Lighthouse audits (FCP, CLS improvements)
-  - [ ] Validation: Bundle size comparison (before/after)
-
-blockers: NONE
-dependencies: WP3.2 (SOURCE CSS consolidation complete)
-assigned_to: TBD
-started_date: -
-completed_date: -
-actual_duration: -
-actual_commits: -
-notes: See 30.05-hugo-pipeline-enhancement-strategy.md for details
-reference: Can be executed as separate initiative if Phase 3 base completes
-```
-
-#### WP3.4: PostCSS Final Validation 🔲 NOT STARTED
-```yaml
-status: 🔲 Not Started
-priority: P0 🔥 Critical (Phase gate)
-duration: 4-8 hours
-files_affected: All compiled CSS files
-impact: Runtime validation, final duplication metrics
-micro_commits_target: 5-10 commits
-
-tasks:
-  - [ ] Run PostCSS postcss-delete-duplicate-css plugin
-  - [ ] Validate remaining duplication < 5%
-  - [ ] Document any intentional duplication (with justification)
-  - [ ] Generate final duplication metrics report
-  - [ ] Validation: Build output analysis
-  - [ ] Generate Phase 3 completion report
-
-blockers: NONE
-dependencies: WP3.1, WP3.2 complete (or WP3.3 if Hugo enhancements executed)
-assigned_to: TBD
-started_date: -
-completed_date: -
-actual_duration: -
-actual_commits: -
-notes: MANDATORY - Phase 3 gate and goal completion validation
-```
-
-### Phase 3 Summary
-```yaml
-work_packages_total: 4 (3 base + 1 optional Hugo)
-work_packages_completed: 0
-work_packages_blocked: 0
-total_duration_target: 20-30 hours (base) OR 30-45 hours (with Hugo)
-total_duration_actual: 0 hours
-total_lines_eliminated_target: 484-768 lines (base) + 20-40% (Hugo)
-total_lines_eliminated_actual: 0 lines
-total_commits_target: 50-70 commits (base) OR 70-100 commits (with Hugo)
-total_commits_actual: 0 commits
-foundation_files_created: 0 / 2 (_fl-backgrounds, _fl-imports)
+order_easiest_first:  # ascending FL size; order may flex on business need
+  - R1:  3059-layout.css (924)   → pages: privacy-policy (page/single.html) + course-list (layouts/course/list.html)
+  - R2:  706-layout.css (2,202)  → contact-us
+  - R3:  3114-layout.css (2,272) → blog-single, course-single (+ feeds single-career, single-client)
+  - R4:  homepage-layout.css + services-layout.css (~4,356) → blog-list, free-consultation
+  - R5:  e966db44…-layout-bundle.css (4,364) → single-career
+  - R6:  701-layout.css (4,462)  → about-us
+  - R7+: 3027 (5,056), 3086-layout2 (5,157), 3082 (5,399), 2949 (5,407),
+         3021 (6,409), fb2624… (6,523), 737 (6,489) — ascending
+  - Rlast: 590-layout.css (12,437) → homepage
+notes: |
+  bf72bba…-layout-bundle.css (1,969; 9 bundles) and the critical/ FL trio retire
+  when their last consumer page is rewritten. Satellites fold with their single
+  importers (fl-builder-common-base.css → 3021; fl-builder-grid.css → homepage-layout).
+completed: []
 ```
 
 ---
@@ -518,11 +454,10 @@ foundation_files_created: 0 / 2 (_fl-backgrounds, _fl-imports)
 
 ### Current Blockers
 ```yaml
-phase_1_blockers: NONE - Ready to start immediately
-phase_2_blockers: NONE - Waiting for Phase 1 completion
-phase_3_blockers: NONE - Phase 2 closed 2026-07-12; Phase 3 WPs must be re-scoped against compiled+gzip output BEFORE any work starts (Phase 1+2 both falsified their specs)
+phase_0_blockers: NONE - P0.1/P0.2/P0.4 ready to start (P0.3 shipped 2026-07-12)
+rewrite_sprint_blockers: R1 gated on Phase 0 items P0.1 + P0.4 (coverage + orphan guard)
 
-critical_path_risks: NONE - All dependencies clear
+critical_path_risks: NONE - old-plan phases all closed; see UPDATE LOG for history
 ```
 
 ### Risk Mitigation Status
@@ -537,38 +472,19 @@ performance_baseline: ✅ YES - FCP, CLS metrics documented
 
 ## 📈 CUMULATIVE METRICS
 
-### Lines Eliminated (Running Total)
+### FL burn-down (the headline metric)
 ```
-Phase 1 Target:  300-400 lines    | Actual: 0 lines    | Progress: 0%
-Phase 2 Target:  1,900-2,900 lines| Actual: 0 lines    | Progress: 0%
-Phase 3 Target:  484-768 lines    | Actual: 0 lines    | Progress: 0%
-─────────────────────────────────────────────────────────────────────
-TOTAL Target:    27,394-31,936    | Actual: 0 lines    | Progress: 0%
-```
-
-### Micro-Commits (Running Total)
-```
-Phase 1 Target:  78-100 commits   | Actual: 0 commits  | Progress: 0%
-Phase 2 Target:  100-135 commits  | Actual: 0 commits  | Progress: 0%
-Phase 3 Target:  50-70 commits    | Actual: 0 commits  | Progress: 0%
-─────────────────────────────────────────────────────────────────────
-TOTAL Target:    300-390 commits  | Actual: 0 commits  | Progress: 0%
+Live FL layout files: 16 / 16 (target: 0)
+Retired: e93d9b85…-layout-bundle.css (merged into bf72bba…, PR #363) +
+         6 never-loaded orphans (PR #363)
+Authoritative table: css-bundle-ownership-map.md
 ```
 
-### Foundation Files Created
+### Historical (old plan, closed)
 ```
-Target: 5-7 foundation files
-Actual: 0 foundation files created
-
-Planned:
-  - _css-variables.scss (WP1.1)
-  - _reset-utilities.scss (WP1.2)
-  - _responsive-utilities.scss (WP1.4)
-  - _fl-row-foundation.scss (WP2.1)
-  - _fl-col-foundation.scss (WP2.2)
-  - _fl-responsive-display.scss (WP2.3)
-  - _fl-background-utilities.scss (WP3.1)
-  - _fl-imports.scss (WP3.2)
+Lines eliminated sprints 1-7: ~73,150 (orphan cleanup + consolidation + dedup)
+Old line-count targets (27,394-31,936) retired — methodology falsified;
+see 70-79-archives/superseded-2026-07-12/README.md
 ```
 
 ### Quality Metrics (Maintained Throughout)
@@ -597,6 +513,23 @@ fcp_metrics:
 ---
 
 ## 🔄 UPDATE LOG
+
+### 2026-07-12 (sprint 8 — plan re-wised, project docs realigned)
+- **Action**: Goal reframed from line-count elimination to maintainability
+  (hand-editable, single-source, FL export retired) — approved spec
+  `2026-07-12-css-maintainability-redesign.md` (brainstormed section-by-section,
+  merged in PR #363). This tracker rewritten to the new plan: Phase 3
+  superseded before start; new Phase 0 (safety scaffolding) + rewrite sprints
+  R1…Rlast (FL burn-down 16→0, easiest first).
+- **Shipped**: `css-bundle-ownership-map.md` (Phase 0 item P0.3) — 19 bundles ×
+  template × FL files × gzip from a converged production build; 36 superseded
+  Oct-2025 docs moved to `70-79-archives/superseded-2026-07-12/` (audited
+  file-by-file by a read-only agent); PROJECT-INDEX rewritten;
+  `css-loading-order-analysis.md` banner + CLAUDE.md pointer updated.
+- **Evidence basis**: PR #363 review (independent agent, SAFE-TO-MERGE) +
+  the sprint-7 compiled+gzip falsification of the extraction plan.
+- **Next**: Phase 0 items P0.1 (special-content blog post tests), P0.4 (orphan
+  guard), then R1 (3059-layout → privacy-policy + course-list pages).
 
 ### 2026-07-12 (sprint 7 — Phase 2 re-scoped and closed)
 
@@ -884,48 +817,37 @@ further whole-file merges found.
 
 ## 📋 QUICK ACTIONS
 
-### Start Next Work Package
+### Start the next sprint
 ```bash
-# Current: WP1.1 CSS Variables Foundation (ready to start)
-git checkout -b feat/css-duplication-elimination
-# Create themes/beaver/assets/css/foundations/_css-variables.scss
-# Update 12 inline critical CSS files
-# Test after each file: bin/rake test:critical
-# Commit on green (≤3 lines per commit)
+# Current: Phase 0 items P0.1 (blog-post coverage) / P0.4 (orphan guard)
+git checkout -b css-migration/<sprint-name>
+# Follow the spec: 2026-07-12-css-maintainability-redesign.md
+# Gates on every commit: bin/test (macOS) AND bin/dtest (Linux)
+# Baselines regenerate only intentionally: FORCE_SCREENSHOT_UPDATE=true
+# One bundled PR per sprint
 ```
 
-### Update This Tracker After WP Completion
+### Update this tracker after a sprint
 ```bash
-# Update work package status from 🔲 to ✅
-# Update actual duration, commits, lines eliminated
-# Update cumulative metrics
-# Add notes/lessons learned
-# Update "Last Updated" date at top
-# Commit tracker changes
+# Flip Phase 0 item / rewrite sprint status; update FL burn-down count
+# Update css-bundle-ownership-map.md statuses in the same commit
+# Add an UPDATE LOG entry; bump "Last Updated" at top
 ```
 
-### Check Goal Completion
+### Check goal completion
 ```bash
-# Read goal document for success criteria
-Read: 35-39-project-management/35.04-revised-goal-css-duplication-elimination.md
-
-# Validate all phases complete
-All 12 work packages: ✅ Completed
-
-# Validate metrics targets met
-Lines eliminated: 27,394-31,936 ✅
-Foundation files: 5-7 ✅
-Test pass rate: 100% ✅
-Visual regressions: 0 ✅
+# Success criteria live in: 2026-07-12-css-maintainability-redesign.md
+# FL layout files: 0 remaining (css-bundle-ownership-map.md burn-down)
+# No hash-named CSS files; no fl-node-* markup in templates
+# Both snapdiff suites green; per-page payload checked compiled+gzip
 ```
 
 ---
 
 **Navigation**:
 - 🏠 [Project Index](PROJECT-INDEX.md)
-- 🎯 [Current Goal](35-39-project-management/35.04-revised-goal-css-duplication-elimination.md)
-- 📊 [Goal At A Glance](GOAL-AT-A-GLANCE.md)
-- 🔍 [Analyst Context](ANALYST-CONTEXT.md)
+- 🎯 [Approved spec (authority)](2026-07-12-css-maintainability-redesign.md)
+- 🗺️ [Bundle ownership map + burn-down](css-bundle-ownership-map.md)
 
-**Last Updated**: 2025-01-27
-**Next Update**: After WP1.1 completion or status change
+**Last Updated**: 2026-07-12
+**Next Update**: After Phase 0 item completion or status change
