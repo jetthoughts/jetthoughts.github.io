@@ -775,14 +775,14 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   border-bottom-width: 0;
   border-left-width: 0;
   border-right-width: 0;
-  color: #121212
+  color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu .menu > li > a:hover, .fl-node-menu .pp-advanced-menu .menu > li > a:focus, .fl-node-menu .pp-advanced-menu .menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .pp-advanced-menu .menu > li > .pp-has-submenu-container > a:focus {
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-menu-toggle:before {
-  border-color: #121212
+  border-color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li.focus .pp-menu-toggle:before {
@@ -822,7 +822,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
   border-width: 0;
   border-style: solid;
-  color: #121212
+  color: var(--color-dark)
 }
 
 .fl-node-menu .sub-menu > li > a:hover, .fl-node-menu .sub-menu > li > a:focus, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:focus {
@@ -837,7 +837,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .sub-menu .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .sub-menu .pp-menu-toggle:before {
-  border-color: #121212
+  border-color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .sub-menu li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .sub-menu li:hover .pp-menu-toggle:before {
@@ -1004,7 +1004,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle {
-  color: #121212
+  color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:before, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:after {
@@ -1012,12 +1012,12 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:before, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:after {
-  background-color: #121212;
+  background-color: var(--color-dark);
   height: 3px
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle rect {
-  fill: #121212
+  fill: var(--color-dark)
 }
 
 @media (min-width: 861px) {
@@ -1050,7 +1050,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   }
 
   .fl-node-menu .pp-advanced-menu .menu > li > a, .fl-node-menu .pp-advanced-menu .menu > li > .pp-has-submenu-container > a {
-    color: #121212
+    color: var(--color-dark)
   }
 
   .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
@@ -1084,7 +1084,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 
 .fl-node-menu .pp-advanced-menu .pp-off-canvas-menu .pp-menu-close-btn {
   font-size: 30px;
-  color: #121212
+  color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .menu {
@@ -1104,7 +1104,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .menu li a, .fl-node-menu .pp-advanced-menu.off-canvas .menu li .pp-has-submenu-container a {
-  color: #121212;
+  color: var(--color-dark);
   border-style: solid;
   border-bottom-color: transparent;
   -webkit-transition: all .3s ease-in-out;
@@ -1120,7 +1120,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-arrows .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-none .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-arrows .sub-menu .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-none .sub-menu .pp-menu-toggle:before {
-  border-color: #121212
+  border-color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-arrows .pp-menu-toggle {

@@ -348,11 +348,11 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-service-box:hover .pp-infobox-title-wrapper .pp-infobox-title a {
-  color: #121212 !important;
+  color: var(--color-dark) !important;
 }
 
 .jt-service-box:hover .pp-infobox-description {
-  color: #121212 !important;
+  color: var(--color-dark) !important;
 }
 
 .jt-service-box:hover .pp-infobox-description .pp-infobox-button .pp-more-link {
@@ -669,7 +669,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
   .blog-archive-search .pp-post-filters-wrapper .pp-search-form-wrap form .pp-search-form__container button {
     background-color: transparent !important;
-    color: #121212 !important;
+    color: var(--color-dark) !important;
   }
 }
 
@@ -848,7 +848,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 .single-author .pp-description-wrap .author-social a {
   padding: 9px 12px;
-  background-color: #121212;
+  background-color: var(--color-dark);
   color: #FFF;
   border-radius: 6px;
   font-size: 14px;
@@ -866,7 +866,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 .single-author .pp-description-wrap .author-social a:hover {
   background-color: #FFF;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .single-author .pp-description-wrap .author-social.social-linkedin + p {
@@ -1137,7 +1137,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   }
 
   ul.menu li .pp-has-submenu-container a .menu-item-text .pp-menu-toggle::before {
-    border-color: #121212 !important;
+    border-color: var(--color-dark) !important;
   }
 
   ul.menu li ul.sub-menu {
@@ -1173,7 +1173,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
   ul.menu > li:last-child {
     padding: 11px;
-    background: #121212;
+    background: var(--color-dark);
     border-radius: 6px;
   }
 

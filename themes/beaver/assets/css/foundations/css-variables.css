@@ -10,4 +10,9 @@
      NOT --color-primary: that token already exists as #1a8cff (blue)
      with 89 usages. Name approved by Paul 2026-07-11. */
   --color-ruby: #cc342d;
+
+  /* Primary dark text/border color (JetVelocity obsidian dark; 648
+     literal occurrences repo-wide). Canonical home of the token —
+     variables/colors.css also declares it but is bundled nowhere. */
+  --color-dark: #121212;
 }

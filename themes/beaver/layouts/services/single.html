@@ -1,6 +1,12 @@
 {{ define "header" }}
 
+  {{- /* css-variables first: critical/single-services.css consumes
+         var(--font-system-ui) but this bundle never carried the definition
+         (sprint-1 wiring covered the careers/single-careers/single-use-cases
+         no-base bundles and missed this one), so the token was unresolved
+         and fonts fell back to inherited stacks. */ -}}
   {{- $servicesResources := slice
+    (resources.Get "css/foundations/css-variables.css")
     (resources.Get "css/critical/single-services.css")
     (resources.Get "css/2949-layout.css")
     (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")

@@ -2,7 +2,7 @@
 
 **Purpose**: Real-time work package status tracking for CSS duplication elimination goal
 **Update Frequency**: After each work package completion or status change
-**Last Updated**: 2025-01-27
+**Last Updated**: 2026-07-12
 **Current Phase**: Phase 1 - Critical CSS Inline Consolidation
 
 ---
@@ -67,6 +67,11 @@ tasks:
         (25 stacks across 8 critical files) replaced with var(--font-system-ui);
         @import wired into the 3 no-base bundles (careers, single-careers,
         single-use-cases) that never defined the variable
+  - [x] Extract --color-dark (#121212) — defined in foundations/css-variables.css
+        (sprint 4, 2026-07-12); 404 of 648 literals tokenized across 32 files;
+        47 literals kept by design (KEEP LITERAL comments in-file), ~157 sit in
+        orphan files queued for deletion, ~19 in the inline components tree
+        (deferred). variables/colors.css duplicate def is dead (bundled nowhere).
   - [ ] Extract --color-primary, --color-secondary, --color-text
   - [ ] Extract --border-radius-default, --spacing-unit
   - [x] Dedup the identical 35-line Bootstrap :root block copied across
@@ -547,6 +552,83 @@ fcp_metrics:
 ---
 
 ## 🔄 UPDATE LOG
+
+### 2026-07-12 (sprint 4)
+- **Landed** (branch css-migration/wp1.1-sprint-4, one bundled PR, 6 commits):
+  1. fbd38c63 — blog-list bundleName collision fixed via shared partial
+     assets/blog-list-css-resources.html. CORRECTION to the sprint-3 log:
+     taxonomy pages DO generate — 383 /blog/tags/* pages render through root
+     list.html; both templates raced for the "blog-list" concat name and
+     blog/list.html's slice always won (verified in scratch builds AND live
+     site), so sprint 3's css-variables wiring for "taxonomy list" was
+     silently ineffective. Fix is deterministic-by-construction; compiled
+     output byte-identical (all 19 bundle hashes unchanged).
+  2. a621f8f6 — LIVE BUG: single-service bundle shipped 17 unresolved
+     var(--font-system-ui) (sprint-1 no-base sweep missed services/single.html);
+     foundation wired in, +1 :root rule, everything else byte-identical.
+  3. 9c264fa3 — --color-dark:#121212 defined in foundations/css-variables.css
+     (canonical home; the variables/colors.css copy is bundled NOWHERE — dead
+     file, delete candidate). Made already-shipped var(--color-dark) consumers
+     (free-consultation gform/accordion rules) resolve; reviewer traced every
+     consumer selector against rendered HTML — no visible change.
+  4. e25d9f00 — blog-list bundle wired with the foundation (its
+     services-layout/homepage-layout consumers were invalid at computed-value
+     time; consumer markup renders on none of the bundle's pages).
+  5. 48bb2c71 — #121212→var(--color-dark): 384 swaps across 29 files (19 live
+     layout/bundle files whole-file + 10 critical/* minus reboot generics).
+  6. 662b59cb — batch 3: skin/theme-main/navigation scoped lines (20 swaps);
+     the site-wide inline navigation bundle now carries the def, so
+     --color-dark resolves on every page.
+- **Totals**: 404/648 literals tokenized. Kept by design (all carry KEEP
+  LITERAL comments in-file): 25 reboot-generic body/h1 color rules in
+  critical/*, 10 fl-button dedup-twin border-colors (8 critical + skin
+  L2401/2411), 6 invisible-border border-colors (skin woo L1077/1105,
+  theme-main L1227/1288/3167/3233), 2 shadow-token defs (theme-main --jt-*),
+  2 bare-textarea selector parts, skin/theme-main/navigation body+h1 generics.
+  ~157 literals sit in 13 ORPHAN files (delete, don't tokenize — follow-up),
+  ~19 in the inline components tree (deferred), forms.css 7 (dead import).
+- **Gate method (option-a, evolved)**: per commit — production build to
+  scratch + SYMMETRIC rule-level diff (normalize var↔literal both sides,
+  strip the def, require empty diff + equal rule counts per bundle; inline
+  bundles extracted from compiled HTML and diffed the same way). Caught three
+  masking classes the visual suites alone would miss:
+  (a) dedup-twin rule RE-appearance when only one of two byte-identical
+      same-selector rules in a bundle is tokenized (590↔homepage-critical,
+      e966db44↔single-careers) → tokenize bundles atomically;
+  (b) minifier border shorthand/longhand merge-product churn when
+      border-color goes var() on style:none invisible borders → keep literal;
+  (c) cssnano merge-hoist on reboot-generic body/h1 rules (sprint-3 class).
+- **Pre-existing build nondeterminism documented (visually inert)**: inline
+  components bundle flickers dead rules (.c-content-block__paragraph pair)
+  between builds — the class exists only in dead templates so hugo_stats.json
+  omits it while stale postcss cache sometimes preserves it; no
+  [[build.cachebusters]] for hugo_stats.json configured. Benign per-build HTML
+  noise: sw.js?v= stamp, taxonomy term-title casing races (CrewAI vs Crewai —
+  live tag-page titles are nondeterministic), sitemap order. Sprint-start
+  3-failure macOS flake (mobile 404/blog text shift) was a cold-worktree
+  first-run flake; re-run green.
+- **Quality**: per commit — rule-level gate + bin/rake test:critical 46/46 +
+  bin/dtest 46/46 + standing reviewer approval with independent re-derivation.
+  Zero rollbacks.
+- **New follow-ups**:
+  - Cleanup PR: delete 13 orphan CSS files (fl-use-cases-layout,
+    beaver-grid-layout, fl-clients-alt-bundle, fl-services-layout,
+    fl-homepage-layout, fl-contact-layout, fl-clients-bundle,
+    fl-careers-layout, fl-about-layout, fl-clients-layout,
+    fl-component-layout, utilities.css, fl-service-detail-layout) + dead
+    aggregators (critical.css, _consolidated-layouts.css) + dead
+    page/service-template.html + dead variables/colors.css + dead partials
+    (homepage/services.html, homepage/clients.html, components/cta-block.html)
+    + dead .c-content-block__paragraph rules + commented-out forms import.
+  - Add [[build.cachebusters]] (hugo_stats.json → css).
+  - Inline components tree tokenization if components.css gets the foundation.
+  - Decide: repoint theme-main --jt-text-color/--jt-text-primary and
+    bem-home-page-minimal --cta-button-bg at var(--color-dark) (deliberate).
+  - fl-common-modules.css Bootstrap reboot purge ASSESSED & DEFERRED: block
+    ~L425-540 + second body reboot ~L560; @imported by 28 files; rules are
+    live-in-cascade (overridden, not dead) — needs per-page computed-style
+    proof (h1 size, body color) per bundle; own sprint.
+  - WP1.2 (reset utilities) not started.
 
 ### 2026-07-11 (sprint 3)
 - **Landed**: orphaned use-cases-critical.css deleted (265 lines); 8 invalid
