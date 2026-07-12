@@ -69,9 +69,10 @@ tasks:
         single-use-cases) that never defined the variable
   - [x] Extract --color-dark (#121212) — defined in foundations/css-variables.css
         (sprint 4, 2026-07-12); 404 of 648 literals tokenized across 32 files;
-        47 literals kept by design (KEEP LITERAL comments in-file), ~157 sit in
-        orphan files queued for deletion, ~19 in the inline components tree
-        (deferred). variables/colors.css duplicate def is dead (bundled nowhere).
+        47 literals kept by design (KEEP LITERAL comments in-file), ~19 in the
+        inline components tree (deferred). The ~157 in orphan files and the
+        variables/colors.css duplicate def were removed with those files
+        (sprint 5, 2026-07-12).
   - [ ] Extract --color-primary, --color-secondary, --color-text
   - [ ] Extract --border-radius-default, --spacing-unit
   - [x] Dedup the identical 35-line Bootstrap :root block copied across
@@ -552,6 +553,58 @@ fcp_metrics:
 ---
 
 ## 🔄 UPDATE LOG
+
+### 2026-07-12 (sprint 5 — orphan cleanup)
+- **Landed** (branch css-migration/wp1.1-sprint-5, one bundled PR, 6 commits,
+  28 files, +24/-67,517):
+  1. 08b0c6e3 — dead aggregators deleted: critical.css,
+     _consolidated-layouts.css, _consolidated-components.css (zero loaders;
+     the last was NOT on the sprint-4 list but is the same class — flagged),
+     plus forms.css (its only importer was _consolidated-components.css).
+  2. 6a92e204 — all 13 orphan CSS files deleted (66,459 lines): the 9
+     fl-*-layout files, fl-clients{,-alt}-bundle, beaver-grid-layout,
+     utilities.css. Only remaining refs were provenance comments. The ~157
+     untokenized #121212 literals from the sprint-4 count leave with them.
+  3. 23eda403 — dead variables/colors.css deleted; stale comments pointing
+     at it fixed (foundations/css-variables.css, c-navigation.css).
+  4. c458213b — dead templates deleted: page/service-template.html (no
+     content uses the layout; only loader of fl-service-detail-layout.css),
+     partials/homepage/services.html + clients.html (zero callers / only
+     called by each other), partials/components/cta-block.html (only caller
+     was the draft-only _test layout; test section removed there too).
+  5. 31e0e9a6 — dead .c-content-block__paragraph rule pair deleted from
+     content-block.css (the sprint-4 flicker source) + commented-out
+     components/forms import removed.
+  6. 21ca3789 — [[build.cachebusters]] hugo_stats.json → css added to
+     hugo.toml (Hugo defaults replicated alongside, since custom entries
+     replace them). Verified: cold-cache build now byte-matches warm build;
+     before the fix this sprint's own baseline reproduced the flicker (cold
+     differed from warm by 7 inline navigation-bundle rules).
+- **Gate method**: per commit — converged production build to scratch
+  (build twice, take the second) diffed against a converged pre-sprint
+  baseline: all 19 css bundle hashes + inline style blocks byte-identical,
+  whole-tree HTML diff empty modulo documented noise (sw.js?v= stamp,
+  taxonomy term-casing races). test:critical 46/46 + dtest 46/46 per
+  commit. Zero rollbacks.
+- **NEW FINDING — header partialCached race (pre-existing, NOT fixed)**:
+  partials/page/header.html caches header-content.html via partialCached
+  with NO variant key, so the whole header (incl. navigation -active
+  state) is computed once from whichever page renders first and reused on
+  ALL pages. One build during this sprint marked "Blog" -active on all
+  1300 pages; the steady state is NO item ever -active. Menu active-state
+  is effectively dead/nondeterministic site-wide. Fix (own change, visual
+  impact): key the cache by section/menu-state or drop active-state from
+  the cached fragment.
+- **New follow-ups**:
+  - hero-section.html, testimonial.html, use-case-card.html + the _test
+    layout/content are only reachable via the draft-only test page —
+    delete-or-keep decision (they'd take the remaining
+    .c-content-block__text/.u-text-center dead classes with them).
+  - header partialCached -active race (above).
+- **Carried follow-ups**: inline components tree tokenization (~19
+  literals) if components.css gets the foundation; --jt-text-color /
+  --cta-button-bg repoint decision (deliberate value change — Paul);
+  fl-common-modules.css Bootstrap reboot purge (own sprint); WP1.2.
 
 ### 2026-07-12 (sprint 4)
 - **Landed** (branch css-migration/wp1.1-sprint-4, one bundled PR, 6 commits):

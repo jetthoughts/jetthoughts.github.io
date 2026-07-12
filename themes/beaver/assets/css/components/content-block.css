@@ -29,16 +29,6 @@
   line-height: 1.2;
 }
 
-/* Content block paragraph element */
-.c-content-block__paragraph {
-  /* Paragraph base styles */
-  margin-bottom: var(--spacing-md, 1rem);
-}
-
-.c-content-block__paragraph:last-child {
-  margin-bottom: 0;
-}
-
 /* ========================================
    Content Block Modifiers
    ======================================== */
