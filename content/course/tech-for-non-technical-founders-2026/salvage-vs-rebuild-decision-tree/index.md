@@ -65,9 +65,9 @@ Add up the scores.
 
 | Score | Verdict | What you do next |
 |---|---|---|
-| **5-6** | **KEEP and harden.** | The codebase is salvageable. Spend the rebuild budget you were about to write a check for on test coverage, monitoring, and one senior hire. Do not rewrite. |
-| **3-4** | **FREEZE and stabilize.** | No new features for 30 to 60 days. One sprint on access ownership (run the [GitHub / AWS / database checklist](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)), one sprint on adding tests around the top three flows, one sprint on monitoring and backups. Re-score in 60 days. If you climb to 5+, you keep. If you stay at 3-4, you rebuild the core paths. |
-| **0-2** | **REBUILD core paths.** | Not a full rewrite. Identify the two or three highest-traffic flows (signup, checkout, the one core action your users repeat) and rebuild THOSE on a parallel codebase. Migrate users behind a feature flag. Keep the legacy system running for everything else for 90 days, then sunset it one flow at a time. |
+| **5-6** | <strong style="color:#2e7d32">KEEP and harden.</strong> | The codebase is salvageable. Spend the rebuild budget you were about to write a check for on test coverage, monitoring, and one senior hire. Do not rewrite. |
+| **3-4** | <strong style="color:#d97706">FREEZE and stabilize.</strong> | No new features for 30 to 60 days. One sprint on access ownership (run the [GitHub / AWS / database checklist](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)), one sprint on adding tests around the top three flows, one sprint on monitoring and backups. Re-score in 60 days. If you climb to 5+, you keep. If you stay at 3-4, you rebuild the core paths. |
+| **0-2** | <strong style="color:#cc342d">REBUILD core paths.</strong> | Not a full rewrite. Identify the two or three highest-traffic flows (signup, checkout, the one core action your users repeat) and rebuild THOSE on a parallel codebase. Migrate users behind a feature flag. Keep the legacy system running for everything else for 90 days, then sunset it one flow at a time. |
 
 A score of 0 is not a "burn it down" verdict. The legacy code keeps running while you carve out the parts that matter and rebuild them with tests, monitoring, and one engineer who owns them.
 

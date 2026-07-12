@@ -29,6 +29,8 @@ related_posts: false
 
 You have an idea and no time, so this page lists only the core lessons - the smallest amount of reading that still produces a real result.
 
+![The minimal path: five numbered core-lesson stops, one per module in its module colour - Hypothesis and Smoke Test (landing page and price signal), Validate the Problem (10 interviews and a prototype), Design from Evidence (a one-page Product Brief), Build It Yourself (a live MVP at a real URL), and First Paying Customer (a signed paid pilot).](minimal-path.svg)
+
 ## The Problem (in your language)
 
 You want to validate whether your idea has real demand before you spend $30K+ on a dev shop - but you can't read code, your available time is evenings and weekends (maybe 2-4 hours a week), and hiring anyone is premature. This route works within all three constraints.

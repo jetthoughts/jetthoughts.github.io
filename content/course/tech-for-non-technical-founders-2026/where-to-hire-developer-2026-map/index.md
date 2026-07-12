@@ -54,6 +54,13 @@ Walk these four blocks in order. Circle the one your scope and budget land in, t
 
 *The rate bands and hire-cycle times below are our own market reads from placing and hiring engineers through 2025-2026 at JetThoughts, not survey data - treat them as negotiation anchors, and expect your quotes to land inside the band, not on its edges.*
 
+| Region | Rate band & time to hire | Pick when | Watch out for |
+|---|---|---|---|
+| **Onshore (US / EU)** | $130K - $210K+/yr, 30-60 days | Regulated industry (HIPAA, SOC 2 with US data residency, fintech license), security clearance, or board-mandated US team | Low offer-acceptance rates and the worst cost-to-output ratio on the map |
+| **Nearshore (LATAM)** | $45 - $100/hr, 2-5 days | Real-time timezone overlap for pair programming, customer calls, or daily standups; US founder default in 2026 | Rates compressed in the top metros; English fluency varies by candidate - screen for it |
+| **Tier-2 India** | $15 - $70/hr, 1-5 days | Backend-heavy work where async is acceptable (Jaipur, Kochi, Indore, Coimbatore - NOT Bangalore) | No 9am Pacific standups; async PR culture; build CLAUDE.md / coding-standards docs before the first PR |
+| **Mass-market (Upwork)** | $35 - $120/hr, 1-3 days | Single landing page, logo, or one-off scraper - anything you'd ship and never touch again | You become the technical interviewer; no platform vetting; NOT for backend, payments, or auth |
+
 ### Onshore (US / EU)
 
 Salaried, $130K - $210K+/year, 30-60 days to hire. Pick when: regulated industry (HIPAA, SOC 2 with US data residency, fintech license), security clearance, or board-mandated US team. Watch out for: low offer-acceptance rates and the worst cost-to-output ratio on the map.

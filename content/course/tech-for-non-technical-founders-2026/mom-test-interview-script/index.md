@@ -30,12 +30,15 @@ related_posts: false
 
 *Five questions that get the interviewee to tell you what they actually did, not what sounds polite.*
 
-> **The 5 Mom Test questions, in order:**
-> Q1. Tell me about the last time [problem] happened. Walk me through what you did.
-> Q2. What did that cost you - in time, money, or sanity?
-> Q3. What have you tried already to fix this?
-> Q4. On a scale of 1-10, how big a problem is this compared to everything else on your plate?
-> Q5. Who else on your team feels this? How do they handle it?
+**The 5 Mom Test questions, in order:**
+
+| Question | What it surfaces |
+|---|---|
+| **Q1.** Tell me about the last time [problem] happened. Walk me through what you did. | Anchors in a real episode - story over preference. |
+| **Q2.** What did that cost you - in time, money, or sanity? | Quantifies the pain - an unquantified problem won't get paid for. |
+| **Q3.** What have you tried already to fix this? | Surfaces existing workarounds - if they never tried anything, it never actually hurt. |
+| **Q4.** On a scale of 1-10, how big a problem is this compared to everything else on your plate? | Calibrates urgency against the interviewee's whole problem stack - most "would be great if" problems land at 4. |
+| **Q5.** Who else on your team feels this? How do they handle it? | Surfaces the buying committee and workarounds other people on the team already own. |
 
 *Prefer paper? <a href="mom-test-interview-script.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
 

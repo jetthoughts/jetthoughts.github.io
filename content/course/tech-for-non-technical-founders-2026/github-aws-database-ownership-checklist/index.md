@@ -69,7 +69,7 @@ The financial damage is rarely the headline number on the contractor invoice. It
 
 ## What good looks like vs what bad looks like
 
-Every item rhymes the same way when it passes: an email on a domain you control, billing on a card you own, MFA (the same two-factor login code) on a phone in your pocket, and a password in a vault you can read. Failure rhymes too: somebody else's email, somebody else's card, and "let me ask Marcus" as the answer to "who can rotate this?"
+Every item rhymes the same way when it passes: an email on a domain you control, billing on a card you own, MFA (the same two-factor login code) on a phone in your pocket, and a password in a vault you can read. Failure rhymes too: somebody else's email, somebody else's card, and "let me ask Marcos" as the answer to "who can rotate this?"
 
 Three pairs that come up most often in ownership audits.
 
@@ -84,10 +84,10 @@ If the contractor controls the root email, AWS support will treat them as the ac
 
 **Item #7 - Production database password**
 
-> Bad: "Marcus has it. Slack him and he can DM it to you."
+> Bad: "Marcos has it. Slack him and he can DM it to you."
 > Good: "I opened AWS Secrets Manager just now and read it myself. I rotated it once in March when we offboarded the previous DBA (database administrator - the person who manages your production database)."
 
-The Marcus answer means you have a single point of failure. It does not matter whether Marcus is honest, kind, or available - one person holding the prod DB password is one person away from a production outage you cannot fix. Firing Marcus does not fix it. Putting the credential in a store you administer, with Marcus pulling read access from there, does.
+The Marcos answer means you have a single point of failure. It does not matter whether Marcos is honest, kind, or available - one person holding the prod DB password is one person away from a production outage you cannot fix. Firing Marcos does not fix it. Putting the credential in a store you administer, with Marcos pulling read access from there, does.
 
 **Item #10 - Domain registrar**
 
@@ -149,7 +149,7 @@ The [ownership checklist template](/course/tech-for-non-technical-founders-2026/
 | **Signed key infrastructure** | You have 50+ users AND you handle regulated data. Rotating to asymmetric signing keys (AWS KMS, HashiCorp Vault Transit engine) means revocation actually removes access. | You have <50 users. Defer to month three, not month eighteen. |
 | **Security audit reference** | Before an enterprise prospect sends a SOC2 questionnaire. Run [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) (free for Business/Enterprise) or [Prowler](https://github.com/prowler-cloud/prowler) (open-source). Both produce reports answering 80% of infra questions. | You have no enterprise prospects yet. No need for SOC2 or formal audit. |
 
-Ownership audit done right means no Marcus stands between you and a 9pm Tuesday production fix.
+Ownership audit done right means no Marcos stands between you and a 9pm Tuesday production fix.
 
 ## Further reading
 

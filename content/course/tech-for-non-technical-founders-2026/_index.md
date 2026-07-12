@@ -171,22 +171,28 @@ These conditional chapters kick in once you've passed the Module 5 gate. Read ea
 
 **Diagnose what's slowing growth**
 
-- Customers leaving faster than you can replace them → [Churn Triage Before Acquisition](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/)
-- A key metric flat for 2+ months → [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/)
-- Hit the self-serve ceiling, time to hire your first engineer → [Hire Track Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)
+| Trigger | Continuation chapter |
+|---|---|
+| Customers leaving faster than you can replace them | [Churn Triage Before Acquisition](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/) |
+| A key metric flat for 2+ months | [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/) |
+| Hit the self-serve ceiling, time to hire your first engineer | [Hire Track Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) |
 
 **Working with a dev agency in the AI era**
 
-- Before the discovery call → ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/)
-- Surprise AI tokens on the invoice → [AI Token Bill](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/)
-- Worried about AI supply-chain risk in the code they ship → [Slopsquatting](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/)
+| Trigger | Continuation chapter |
+|---|---|
+| Before the discovery call | ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/) |
+| Surprise AI tokens on the invoice | [AI Token Bill](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/) |
+| Worried about AI supply-chain risk in the code they ship | [Slopsquatting](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/) |
 
 **Manage a hired team without writing code**
 
-- Need a structure for who reports to whom → [Engineering Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/)
-- Want a weekly heartbeat to confirm something shipped → [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/)
-- Want a 3-question standup that catches problems early → [Three Standup Questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/)
-- Need a plain-English weekly report from the team → [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/)
+| Trigger | Continuation chapter |
+|---|---|
+| Need a structure for who reports to whom | [Engineering Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) |
+| Want a weekly heartbeat to confirm something shipped | [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) |
+| Want a 3-question standup that catches problems early | [Three Standup Questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/) |
+| Need a plain-English weekly report from the team | [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/) |
 
 ## Already started building?
 

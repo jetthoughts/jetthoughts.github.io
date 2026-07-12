@@ -71,7 +71,7 @@
 
       <!-- 2 In review -->
       <text x="490" y="215" font-weight="bold" fill="#b8860b">2. In review</text>
-      <text x="490" y="233" fill="#333">PR #847 - Marcos, Priya reviewing Tue</text>
+      <text x="490" y="233" fill="#333">PR #843 - Marcos, Priya reviewing Tue</text>
       <text x="490" y="249" fill="#333">PR #851 - Marcos, no reviewer (PTO)</text>
 
       <!-- 3 Blocked -->

@@ -129,7 +129,7 @@ The root account owns everything underneath it. If the contractor controls the r
 
 **#7 - Production database password rotation**
 
-The fail looks like one sentence: *"Marcus knows it. I would have to ask him."* The pass looks like one action: you open AWS Secrets Manager right now, read the password, and remember the last time you rotated it (e.g. March, when the previous DBA left).
+The fail looks like one sentence: *"Marcos knows it. I would have to ask him."* The pass looks like one action: you open AWS Secrets Manager right now, read the password, and remember the last time you rotated it (e.g. March, when the previous DBA left).
 
 If only one person can rotate the prod DB password, you do not have a database. You have a single point of failure.
 

@@ -161,10 +161,12 @@ flowchart TD
     classDef intro fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
     classDef body fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
     classDef pass fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+    classDef cond fill:#fffbeb,stroke:#d97706,stroke-width:2.5px,color:#1a1a1a
     classDef fail fill:#fce4ec,stroke:#c2185b,stroke-width:2.5px,color:#1a1a1a
     class A intro
     class B,C body
-    class D,E pass
+    class D pass
+    class E cond
     class F fail
 ```
 

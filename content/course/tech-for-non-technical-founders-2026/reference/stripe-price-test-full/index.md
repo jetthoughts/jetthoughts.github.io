@@ -8,6 +8,8 @@ slug: stripe-price-test-full
 
 > **Reference companion to [Lesson 1.5 · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)** - this page contains the full Stripe setup walkthrough with gotchas, click-vs-completion tracking table, detailed threshold bands, button copy patterns, and the Claude copy-generation prompt. Read the micro-lesson first; return here for deep pricing methodology.
 
+![The Stripe price-test flow: 1 create the Payment Link (one-time product at your price), 2 wire it to the page button in live mode, 3 read the visit-to-Stripe-click rate - then act on the band: under 5% iterate on price, 5-10% advance to interviews, over 10% verify with a second cold channel](price-test-flow.svg)
+
 ---
 
 ## The Maya Story (Full Version)

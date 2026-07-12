@@ -8,6 +8,8 @@ slug: hypothesis-sprint-full
 
 > **Reference companion to [Lesson 1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)** - the full 6-step sprint, 4-lens scoring methodology, AI research prompts, and worked examples. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.
 
+![The 6-step founding-hypothesis sprint as a numbered snake: 1 The Basics (five candidates per column), 2 Differentiator (faster, easier, or cheaper), 3 Three Approaches (one sentence each), 4 Magic Lenses (score 1-5 on four lenses), 5 Write It Down (the one Mad Libs sentence), 6 Design the Test (smoke test plus interviews) - one notebook, about 90 minutes, run alone](sprint-timeline.svg)
+
 ---
 
 ## The Full 6-Step Sprint

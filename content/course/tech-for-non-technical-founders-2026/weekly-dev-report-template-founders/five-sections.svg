@@ -23,7 +23,7 @@
     <rect width="540" height="92" fill="#fffaf0" stroke="#b8860b" stroke-width="2.5" rx="6"/>
     <text x="20" y="32" font-size="22" fill="#b8860b" font-weight="bold">2. In review</text>
     <text x="20" y="58" font-size="16" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">PR number + author + named reviewer + what is holding it up</text>
-    <text x="20" y="80" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-style="italic">"PR #847 - Marcos opened Tue, Priya reviewing, two changes requested"</text>
+    <text x="20" y="80" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-style="italic">"PR #843 - Marcos opened Tue, Priya reviewing, two changes requested"</text>
     <text x="510" y="32" text-anchor="end" font-size="14" fill="#b8860b">PIPELINE</text>
   </g>
 

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="channel-title">
+  <title id="channel-title">Channel-by-ICP matrix - the right paid channel for the audience your hypothesis names</title>
+  <desc>Four handwritten cards, one per audience type. Top-left B2C consumer: Meta, 0.70 to 1.90 dollars per click, split 60/40 Reels and feed. Top-right B2B sold by job title: LinkedIn for unaware audiences or Google Search for active searchers, 3 to 22 dollars per click. Bottom-left developer tools: Reddit Ads, 1.25 to 3 dollars per click, in r/programming, r/webdev, r/SaaS. Bottom-right niche vertical: Google Search on long-tail intent, 1 to 5 dollars per click. Footer: skip Twitter/X for first-time validation in 2026 - targeting signal too noisy.</desc>
+  <defs>
+    <style>
+      .h     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .head  { font-size: 30px; font-weight: 700; fill: #1a1a1a; }
+      .sub   { font-size: 19px; fill: #666; font-style: italic; }
+      .icp   { font-size: 23px; font-weight: 700; fill: #1a1a1a; }
+      .chan  { font-size: 24px; font-weight: 700; }
+      .chan-r{ fill: #cc342d; }
+      .chan-p{ fill: #7b2fb5; }
+      .body  { font-size: 19px; fill: #333; }
+      .cpc   { font-size: 20px; font-weight: 700; fill: #555; }
+      .note  { font-size: 17px; fill: #777; font-style: italic; }
+      .box-r { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; stroke-linejoin: round; }
+      .box-p { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; stroke-linejoin: round; }
+      .foot  { fill: #faf7f2; stroke: #666; stroke-width: 2; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" class="h head">Where the audience actually lives</text>
+  <text x="450" y="58" text-anchor="middle" class="h sub">Pick the channel where your customer scrolls - not the one YOU scroll.</text>
+
+  <!-- Top-left: B2C -->
+  <g transform="rotate(-0.4 250 172)">
+    <rect x="60" y="78" width="380" height="188" rx="14" class="box-r"/>
+    <text x="82" y="110" class="h icp">B2C consumer products</text>
+    <text x="82" y="146" class="h chan chan-r">Meta (Facebook + Instagram)</text>
+    <text x="82" y="176" class="h body">Cheap CPMs, fast learning.</text>
+    <text x="82" y="200" class="h body">Split 60% Reels / 40% feed.</text>
+    <text x="82" y="230" class="h cpc">$0.70 - $1.90 per click</text>
+    <text x="82" y="254" class="h note">Best targeting for broad consumer reach.</text>
+  </g>
+
+  <!-- Top-right: B2B -->
+  <g transform="rotate(0.4 650 172)">
+    <rect x="460" y="78" width="380" height="188" rx="14" class="box-r"/>
+    <text x="482" y="110" class="h icp">B2B, sold by job title</text>
+    <text x="482" y="146" class="h chan chan-r">LinkedIn or Google Search</text>
+    <text x="482" y="176" class="h body">LinkedIn: unaware audience.</text>
+    <text x="482" y="200" class="h body">Google: already searching for a fix.</text>
+    <text x="482" y="230" class="h cpc">$3 - $22 per click</text>
+    <text x="482" y="254" class="h note">Job-title + company-size targeting.</text>
+  </g>
+
+  <!-- Bottom-left: Developer -->
+  <g transform="rotate(0.5 250 388)">
+    <rect x="60" y="294" width="380" height="188" rx="14" class="box-p"/>
+    <text x="82" y="326" class="h icp">Developer tools / technical</text>
+    <text x="82" y="362" class="h chan chan-p">Reddit Ads</text>
+    <text x="82" y="392" class="h body">r/programming, r/webdev,</text>
+    <text x="82" y="416" class="h body">r/SaaS - where devs already are.</text>
+    <text x="82" y="446" class="h cpc">$1.25 - $3 per click</text>
+    <text x="82" y="470" class="h note">Skip if procurement is non-technical.</text>
+  </g>
+
+  <!-- Bottom-right: Niche -->
+  <g transform="rotate(-0.4 650 388)">
+    <rect x="460" y="294" width="380" height="188" rx="14" class="box-p"/>
+    <text x="482" y="326" class="h icp">Niche vertical</text>
+    <text x="482" y="350" class="h note">(real estate, dentists, contractors)</text>
+    <text x="482" y="384" class="h chan chan-p">Google Search</text>
+    <text x="482" y="414" class="h body">Long-tail keywords with</text>
+    <text x="482" y="438" class="h body">clear purchase intent.</text>
+    <text x="482" y="468" class="h cpc">$1 - $5 per click</text>
+  </g>
+
+  <!-- Footer rule -->
+  <rect x="60" y="500" width="780" height="44" rx="12" class="foot"/>
+  <text x="450" y="528" text-anchor="middle" class="h body" style="font-style:italic;fill:#555">Twitter / X: skip for first-time validation in 2026 - the targeting signal is too noisy now.</text>
+</svg>

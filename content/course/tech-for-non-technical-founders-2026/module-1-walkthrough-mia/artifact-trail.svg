@@ -61,7 +61,7 @@
     <text x="668.5" y="118" class="chip" text-anchor="middle">1.4</text>
     <text x="668.5" y="152" class="title" text-anchor="middle">Smoke test</text>
     <text x="668.5" y="173" class="title" text-anchor="middle">run</text>
-    <text x="668.5" y="216" class="big" text-anchor="middle">6.5%</text>
+    <text x="668.5" y="216" class="gbig" text-anchor="middle">6.5%</text>
     <text x="668.5" y="252" class="note" text-anchor="middle">300 visits · Promising</text>
   </g>
 

@@ -56,6 +56,8 @@ Use one of these, run it the same way until the numbers stabilize, read the resu
 
 ## Channel by ICP (Full Breakdown)
 
+![Channel-by-ICP matrix: Meta for B2C consumer at $0.70-$1.90 per click, LinkedIn or Google Search for B2B at $3-$22, Reddit Ads for developer tools at $1.25-$3, Google Search for niche verticals at $1-$5, and skip Twitter/X for first-time validation in 2026](channel-icp-matrix.svg)
+
 ### B2C Consumer
 **Channel:** Meta ($0.70-$1.90 CPC). Split 60/40 Reels/feed.
 **When to pick:** Product is visual, audience is broad.

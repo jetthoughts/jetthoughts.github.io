@@ -96,7 +96,7 @@ Two reports on the same week of work. Same team. Same backlog. Different formats
 
 ### Bad report (1,840 words, no clickable URL)
 
-> *Subject: Weekly Status Report - Sprint 12*
+> **Bad** - *Subject: Weekly Status Report - Sprint 12*
 >
 > Team made significant progress this sprint on architectural improvements and tech debt reduction. We continued to iterate on the v2 checkout flow, exploring options for the discount-code feature and aligning on best practices for the underlying data model. Velocity remained steady at 34 points (vs. 32 last sprint). The team participated in three architecture workshops to ensure long-term maintainability. RAG status: Amber. We are tracking three risks around third-party dependencies and will provide a deeper writeup in next week's report. PR throughput remained healthy.
 >
@@ -106,7 +106,7 @@ You finish reading at 9:18am. You cannot tell what shipped, who reviewed what, o
 
 ### Good report (one page, five sections)
 
-> *Subject: Weekly report - week of 5 Oct*
+> **Good** - *Subject: Weekly report - week of 5 Oct*
 >
 > **1. Shipped:**
 > - `staging.acme.app/co/v2` - discount-code field is live; test code `LAUNCH10` gives 10% off; webhook to Stripe fires correctly. Login: `demo@example.com / example-pass-123`.
