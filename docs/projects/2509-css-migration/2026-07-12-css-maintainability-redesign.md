@@ -31,8 +31,8 @@ pattern), not to optimize in place.
    `foundations/css-variables.css` and shared components; the same rule appearing
    twice is a defect.
 4. **Safe-edit guarantee**: for any CSS file, "which pages does this affect?" is
-   answerable in under a minute (ownership map + per-file header), and one command
-   verifies a change (`bin/css-compare`).
+   answerable in under a minute (ownership map + per-file header), and the existing
+   test suites (`bin/test` + `bin/dtest`) verify a change end-to-end.
 5. **Evidence rule**: any size/perf claim is validated on compiled + gzip per-page
    payload, never raw source line counts.
 
@@ -44,12 +44,26 @@ pattern), not to optimize in place.
 
 ## Phase 0 — safety scaffolding (one small sprint, before any rewrite)
 
-1. **`bin/css-baseline`** — build production twice to scratch (convergence), store
-   per-bundle md5 hashes + gzip sizes as the baseline.
-2. **`bin/css-compare`** — rebuild, diff against baseline; report per-bundle
-   byte/gzip deltas and HTML diffs with known noise filtered (`sw.js?v=` cachebuster,
-   taxonomy term-casing races). This is the cross-page-breakage detector every
-   rewrite PR runs.
+Regression detection uses the EXISTING snapdiff infrastructure — `bin/test` (macOS)
+and `bin/dtest` (Linux/Docker), built on capybara_screenshot_diff with
+`FORCE_SCREENSHOT_UPDATE=true` for baseline regeneration and
+`SCREENSHOT_STABILITY_TIME` for flaky pages. **No new custom baseline/compare
+scripts.** Where the suites don't cover a surface, the fix is adding tests, not
+tooling. Phase 0 closes the known coverage gaps:
+
+1. **Special-content blog post coverage.** Blog posts exercise CSS surfaces no
+   marketing page touches, and today only one post (red-flags…) is screenshot-tested.
+   Inventory findings (2026-07-12): 3 posts use Mermaid diagrams
+   (langchain-memory-systems…, rails-performance-at-scale…, hidden-cost-poor-
+   development…), 139 posts have Chroma-highlighted code fences, 3 posts carry raw
+   inline `style=` HTML, and the `youtube` shortcode is in use. Add desktop + mobile
+   screenshot tests for one representative post per surface: a Mermaid post, a
+   code-highlight-heavy post (Dracula wrapper must render), an inline-style post,
+   and a youtube-embed post. The skipped `DiagramComponentTest`
+   (test/system/components/diagram_component_test.rb) gets revived or replaced by
+   the Mermaid-post test.
+2. **Rewrite-target coverage check.** Before each page's rewrite sprint, confirm the
+   suites screenshot that page (desktop + mobile); add the missing test first if not.
 3. **Page→bundle ownership map** — one doc in this folder listing all 19 bundles:
    owning template, feeding CSS files, URLs that load it, current gzip size, rewrite
    status (live-FL / rewritten / retired). Doubles as the burn-down chart. Each FL
@@ -61,8 +75,10 @@ No legacy CSS edits in Phase 0.
 
 ## The per-page rewrite protocol (repeating unit; one page, one branch, one PR)
 
-1. **Capture the before**: `bin/css-baseline`; full-page screenshots at 1280×800 and
-   390×844 as the design reference.
+1. **Capture the before**: confirm the page has snapdiff coverage (add the test if
+   missing — Phase 0 item 2), regenerate its baselines
+   (`FORCE_SCREENSHOT_UPDATE=true`) on both suites; full-page screenshots at
+   1280×800 and 390×844 as the design reference.
 2. **Design pass**: start from `.stitch/design.md` (JetVelocity). Visual improvement
    is allowed and expected; write a short layout-intent note (what stays, what
    modernizes). Review includes a scored design-critic pass against external anchors,
@@ -76,11 +92,10 @@ No legacy CSS edits in Phase 0.
 5. **Delete in the same PR**: the page's FL layout CSS plus any satellite that loses
    its last importer. Orphan guard confirms.
 6. **Verify**:
-   - `bin/css-compare`: every OTHER page's bundle byte-identical (the no-cross-page-
-     breakage guarantee).
-   - Both visual suites (`bin/rake test:critical` macOS + `bin/dtest` Linux): this
-     page's baselines change intentionally and are updated in the PR after Paul
-     approves; every other page 0.0-diff.
+   - Both visual suites (`bin/test` macOS + `bin/dtest` Linux): this page's
+     baselines change intentionally and are updated in the PR (both macos/ AND
+     linux/) after Paul approves; every OTHER page and every special-content blog
+     screenshot must be 0.0-diff — that is the no-cross-page-breakage guarantee.
    - Chrome DevTools: zero console errors, zero 404s; desktop + mobile screenshots
      attached to the PR for design approval.
 7. **Rule of three**: extract a shared component to `css/components/` only when a
