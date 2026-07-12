@@ -1,5 +1,15 @@
 # Hugo CSS Loading Order Architecture Analysis
 
+> **⚠️ PARTIALLY SUPERSEDED 2026-07-12.** This doc's load-order mechanics
+> (baseof inline bundles → per-page bundle, concat order inside a bundle) are
+> still accurate and useful. Its STRATEGY framing is not: "extraction sequence",
+> layer preservation rules, and any "NEVER extract/consolidate FL layouts as a
+> transfer-size win" reasoning belong to the falsified Oct-2025 plan. The
+> current plan RETIRES FL CSS page-by-page instead — see
+> `2026-07-12-css-maintainability-redesign.md` (authority) and
+> `css-bundle-ownership-map.md` (current bundle↔template↔file map with sizes).
+> Bundle names/hashes below are 2025-10-14 snapshots; trust the ownership map.
+
 **Project**: CSS Migration Project (2509)
 **Date**: 2025-10-14
 **Purpose**: Comprehensive CSS inclusion order mapping to guide component extraction strategy

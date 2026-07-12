@@ -26,7 +26,8 @@ Always read these files before making changes. They define the project's archite
 | `@bin/hugo-build` | Build/deploy workflow |
 | `@Rakefile` | Test workflow |
 | `@test/test_helper.rb` | Writing new tests |
-| `@docs/projects/2509-css-migration/css-loading-order-analysis.md` | ANY CSS changes |
+| `@docs/projects/2509-css-migration/2026-07-12-css-maintainability-redesign.md` | ANY CSS changes — the approved plan + evidence rule (compiled+gzip, never raw line counts) |
+| `@docs/projects/2509-css-migration/css-bundle-ownership-map.md` | ANY CSS changes — which pages a CSS file affects + FL burn-down |
 
 ---
 
