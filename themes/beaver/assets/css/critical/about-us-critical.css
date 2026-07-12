@@ -135,7 +135,7 @@
     a
     .menu-item-text
     .pp-menu-toggle::before {
-    border-color: #121212 !important;
+    border-color: var(--color-dark) !important;
   }
   ul.menu li ul.sub-menu {
     padding-top: 15px;
@@ -153,7 +153,7 @@
   }
   ul.menu > li:last-child {
     padding: 11px;
-    background: #121212;
+    background: var(--color-dark);
     border-radius: 6px;
   }
   ul.menu > li:last-child a {
@@ -913,13 +913,13 @@
   border-bottom-width: 0;
   border-left-width: 0;
   border-right-width: 0;
-  color: #121212;
+  color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq
   .pp-advanced-menu
   .pp-toggle-arrows
   .pp-menu-toggle:before {
-  border-color: #121212;
+  border-color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq .menu > li.current-menu-item > a {
   color: #1a8cff;
@@ -939,7 +939,7 @@
   border-width: 0;
   border-style: solid;
   border-bottom-width: px;
-  color: #121212;
+  color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq .sub-menu > li:last-child > a:not(:focus) {
   border: 0;
@@ -1020,7 +1020,7 @@
   justify-content: flex-end;
 }
 .fl-node-ncg61wov0ytq .pp-advanced-menu-mobile-toggle {
-  color: #121212;
+  color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq
   .pp-advanced-menu-mobile-toggle
@@ -1058,7 +1058,7 @@
   .pp-hamburger
   .pp-hamburger-box
   .pp-hamburger-inner:before {
-  background-color: #121212;
+  background-color: var(--color-dark);
   height: 3px;
 }
 @media (min-width: 861px) {
@@ -1130,7 +1130,7 @@
     > .pp-has-submenu-container
     > a,
   .fl-node-ncg61wov0ytq .pp-advanced-menu .menu > li > a {
-    color: #121212;
+    color: var(--color-dark);
   }
   .fl-node-ncg61wov0ytq .sub-menu > li > a {
     border-bottom-width: px;
@@ -1154,7 +1154,7 @@
 }
 .fl-node-ncg61wov0ytq .pp-advanced-menu .pp-off-canvas-menu .pp-menu-close-btn {
   font-size: 30px;
-  color: #121212;
+  color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq .pp-advanced-menu.off-canvas .sub-menu {
   box-shadow: none;
@@ -1171,7 +1171,7 @@
   .pp-has-submenu-container
   a,
 .fl-node-ncg61wov0ytq .pp-advanced-menu.off-canvas .menu li a {
-  color: #121212;
+  color: var(--color-dark);
   border-style: solid;
   border-bottom-color: transparent;
 }
@@ -1179,7 +1179,7 @@
   .pp-advanced-menu.off-canvas
   .pp-toggle-arrows
   .pp-menu-toggle:before {
-  border-color: #121212;
+  border-color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq
   .pp-advanced-menu.off-canvas
@@ -1458,7 +1458,7 @@ h1 {
 }
 body {
   background-color: #fff;
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -1468,7 +1468,7 @@ body {
   word-wrap: break-word;
 }
 h1 {
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
   font-family: var(--font-system-ui);
   font-weight: 800;
   line-height: 1.4;
@@ -1479,7 +1479,7 @@ h1 {
   font-size: 70px;
   line-height: 1;
   letter-spacing: -1px;
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
   font-family: var(--font-system-ui);
   font-weight: 800;
   font-style: normal;
@@ -1612,7 +1612,7 @@ button {
   text-transform: capitalize;
   border-style: none;
   border-width: 1px;
-  border-color: #121212;
+  border-color: #121212; /* KEEP LITERAL: dedup-twin of the identical skin-65eda28877e04.css .fl-page fl-button rule - var() here breaks the twin match and changes the minifier merge product (border is style:none, invisible anyway) */
   border-radius: 25px;
 }
 .fl-page a.fl-button *,
@@ -1782,7 +1782,7 @@ header ul.menu > li > ul.sub-menu > li > a .menu-image {
     a
     .menu-item-text
     .pp-menu-toggle::before {
-    border-color: #121212 !important;
+    border-color: var(--color-dark) !important;
   }
   ul.menu li ul.sub-menu {
     padding-top: 15px;
@@ -1800,7 +1800,7 @@ header ul.menu > li > ul.sub-menu > li > a .menu-image {
   }
   ul.menu > li:last-child {
     padding: 11px;
-    background: #121212;
+    background: var(--color-dark);
     border-radius: 6px;
   }
   ul.menu > li:last-child a {

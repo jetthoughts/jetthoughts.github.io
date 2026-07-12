@@ -380,7 +380,7 @@ header ul.menu > li > ul.sub-menu > li > a .menu-image {
     a
     .menu-item-text
     .pp-menu-toggle::before {
-    border-color: #121212 !important;
+    border-color: var(--color-dark) !important;
   }
   ul.menu li ul.sub-menu {
     padding-top: 15px;
@@ -398,7 +398,7 @@ header ul.menu > li > ul.sub-menu > li > a .menu-image {
   }
   ul.menu > li:last-child {
     padding: 11px;
-    background: #121212;
+    background: var(--color-dark);
     border-radius: 6px;
   }
   ul.menu > li:last-child a {
@@ -559,7 +559,7 @@ h1 {
 /* JT Theme Typography & Layout */
 body {
   background-color: #fff;
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -569,7 +569,7 @@ body {
   word-wrap: break-word;
 }
 h1 {
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
   font-family: var(--font-system-ui);
   font-weight: 800;
   line-height: 1.4;
@@ -580,7 +580,7 @@ h1 {
   font-size: 70px;
   line-height: 1;
   letter-spacing: -1px;
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
   font-family: var(--font-system-ui);
   font-weight: 800;
   font-style: normal;
@@ -712,7 +712,7 @@ button {
   text-transform: capitalize;
   border-style: none;
   border-width: 1px;
-  border-color: #121212;
+  border-color: #121212; /* KEEP LITERAL: dedup-twin of the identical skin-65eda28877e04.css .fl-page fl-button rule - var() here breaks the twin match and changes the minifier merge product (border is style:none, invisible anyway) */
   border-radius: 25px;
 }
 .fl-page a.fl-button *,

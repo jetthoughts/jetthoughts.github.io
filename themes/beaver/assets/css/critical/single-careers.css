@@ -56,7 +56,7 @@ h2 {
 }
 h1,
 h2 {
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
   font-family: var(--font-system-ui);
   font-weight: 800;
   line-height: 1.4;
@@ -142,7 +142,7 @@ h2 {
     a
     .menu-item-text
     .pp-menu-toggle::before {
-    border-color: #121212 !important;
+    border-color: var(--color-dark) !important;
   }
   ul.menu li ul.sub-menu {
     padding-top: 15px;
@@ -160,7 +160,7 @@ h2 {
   }
   ul.menu > li:last-child {
     padding: 11px;
-    background: #121212;
+    background: var(--color-dark);
     border-radius: 6px;
   }
   ul.menu > li:last-child a {
@@ -728,13 +728,13 @@ h2 {
   border-bottom-width: 0;
   border-left-width: 0;
   border-right-width: 0;
-  color: #121212;
+  color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq
   .pp-advanced-menu
   .pp-toggle-arrows
   .pp-menu-toggle:before {
-  border-color: #121212;
+  border-color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq .menu .pp-has-submenu .sub-menu {
   display: none;
@@ -751,7 +751,7 @@ h2 {
   border-width: 0;
   border-style: solid;
   border-bottom-width: px;
-  color: #121212;
+  color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq .sub-menu > li:last-child > a:not(:focus) {
   border: 0;
@@ -832,7 +832,7 @@ h2 {
   justify-content: flex-end;
 }
 .fl-node-ncg61wov0ytq .pp-advanced-menu-mobile-toggle {
-  color: #121212;
+  color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq
   .pp-advanced-menu-mobile-toggle
@@ -870,7 +870,7 @@ h2 {
   .pp-hamburger
   .pp-hamburger-box
   .pp-hamburger-inner:before {
-  background-color: #121212;
+  background-color: var(--color-dark);
   height: 3px;
 }
 @media (min-width: 861px) {
@@ -950,7 +950,7 @@ h2 {
     > .pp-has-submenu-container
     > a,
   .fl-node-ncg61wov0ytq .pp-advanced-menu .menu > li > a {
-    color: #121212;
+    color: var(--color-dark);
   }
   .fl-node-ncg61wov0ytq .sub-menu > li > a {
     border-bottom-width: px;
@@ -980,7 +980,7 @@ h2 {
 }
 .fl-node-ncg61wov0ytq .pp-advanced-menu .pp-off-canvas-menu .pp-menu-close-btn {
   font-size: 30px;
-  color: #121212;
+  color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq .pp-advanced-menu.off-canvas .sub-menu {
   box-shadow: none;
@@ -997,7 +997,7 @@ h2 {
   .pp-has-submenu-container
   a,
 .fl-node-ncg61wov0ytq .pp-advanced-menu.off-canvas .menu li a {
-  color: #121212;
+  color: var(--color-dark);
   border-style: solid;
   border-bottom-color: transparent;
 }
@@ -1005,7 +1005,7 @@ h2 {
   .pp-advanced-menu.off-canvas
   .pp-toggle-arrows
   .pp-menu-toggle:before {
-  border-color: #121212;
+  border-color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq
   .pp-advanced-menu.off-canvas
@@ -1393,7 +1393,7 @@ body:not(.single-fl-theme-layout)
   .pp-social-share-content.pp-share-buttons-skin-minimal
   .pp-share-button
   .pp-share-button-icon {
-  background-color: #121212;
+  background-color: var(--color-dark);
 }
 .fl-builder-content
   .fl-node-rnjk7gex4iu1
@@ -1406,7 +1406,7 @@ body:not(.single-fl-theme-layout)
   .pp-share-button
   a
   * {
-  color: #121212;
+  color: var(--color-dark);
 }
 .fl-builder-content
   .fl-node-rnjk7gex4iu1
@@ -1414,7 +1414,7 @@ body:not(.single-fl-theme-layout)
   .pp-share-button
   .pp-share-button-icon
   * {
-  color: #121212;
+  color: var(--color-dark);
 }
 .fl-node-rnjk7gex4iu1 .pp-social-share-content .pp-share-button {
   height: 22px;
@@ -1534,7 +1534,7 @@ body:not(.single-fl-theme-layout)
   .gform_wrapper
   .gfield
   .gfield_label {
-  color: #121212;
+  color: var(--color-dark);
   display: block;
 }
 .fl-builder-content
@@ -1551,7 +1551,7 @@ body:not(.single-fl-theme-layout)
   input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
     [type="button"]
   ):not([type="image"]):not([type="file"]) {
-  color: #121212;
+  color: var(--color-dark);
   background-color: #fff;
   width: 100% !important;
   outline: 0;
@@ -1761,7 +1761,7 @@ h3 {
 }
 body {
   background-color: #fff;
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
   font-family: Roboto, Arial, sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -1773,7 +1773,7 @@ body {
 h1,
 h2,
 h3 {
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
   font-family: var(--font-system-ui);
   font-weight: 800;
   line-height: 1.4;
@@ -1784,7 +1784,7 @@ h1 {
   font-size: 70px;
   line-height: 1;
   letter-spacing: -1px;
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
   font-family: var(--font-system-ui);
   font-weight: 800;
   font-style: normal;
@@ -1859,7 +1859,7 @@ input[type="text"] {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #121212;
+  color: var(--color-dark);
   background-color: #fcfcfc;
   background-image: none;
   border: 1px solid #e6e6e6;
@@ -1913,7 +1913,7 @@ input[type="text"]:-ms-input-placeholder {
   text-transform: capitalize;
   border-style: none;
   border-width: 1px;
-  border-color: #121212;
+  border-color: #121212; /* KEEP LITERAL: dedup-twin of the identical skin-65eda28877e04.css .fl-page fl-button rule - var() here breaks the twin match and changes the minifier merge product (border is style:none, invisible anyway) */
   border-radius: 25px;
 }
 .fl-page a.fl-button *,
@@ -2144,7 +2144,7 @@ header ul.menu > li > ul.sub-menu > li > a .menu-image {
     a
     .menu-item-text
     .pp-menu-toggle::before {
-    border-color: #121212 !important;
+    border-color: var(--color-dark) !important;
   }
   ul.menu li ul.sub-menu {
     padding-top: 15px;
@@ -2162,7 +2162,7 @@ header ul.menu > li > ul.sub-menu > li > a .menu-image {
   }
   ul.menu > li:last-child {
     padding: 11px;
-    background: #121212;
+    background: var(--color-dark);
     border-radius: 6px;
   }
   ul.menu > li:last-child a {

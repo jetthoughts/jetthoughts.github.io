@@ -1660,7 +1660,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-builder-content .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .gfield .gfield_label {
-  color: #121212;
+  color: var(--color-dark);
   display: block;
 }
 
@@ -1672,7 +1672,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .ginput_container label, .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper table.gfield_list thead th, .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper span.ginput_product_price, .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper span.ginput_product_price_label, .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper span.ginput_quantity_label, .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .gfield_html {
-  color: #121212 !important;
+  color: var(--color-dark) !important;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
@@ -1695,7 +1695,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .gfield select, .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .gfield textarea {
-  color: #121212;
+  color: var(--color-dark);
   background-color: #ffffff;
   width: 100% !important;
   outline: none;
@@ -1746,7 +1746,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']):focus, .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .gfield select:focus, .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .gfield textarea:focus {
-  border-color: #121212;
+  border-color: var(--color-dark);
 }
 
 .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .top_label input.medium, .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .top_label select.medium {
@@ -1811,7 +1811,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-dzu3licn9ow5 .pp-gf-content .gform_wrapper .gfield.gfield_error .gfield_label {
-  color: #121212;
+  color: var(--color-dark);
   margin-left: 0;
 }
 
@@ -1838,7 +1838,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-dzu3licn9ow5 .gform_confirmation_wrapper .gform_confirmation_message {
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-dzu3licn9ow5 .pp-gf-content {
@@ -2039,7 +2039,7 @@ span.pp-accordion-button-icon {
 
 .fl-node-bsgr4vwu32cn .pp-accordion-item .pp-accordion-button {
   background-color: #F5F6F8;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-bsgr4vwu32cn .pp-accordion-item .pp-accordion-button:hover, .fl-node-bsgr4vwu32cn .pp-accordion-item.pp-accordion-item-active .pp-accordion-button {
@@ -2061,14 +2061,14 @@ span.pp-accordion-button-icon {
 
 .fl-node-bsgr4vwu32cn .pp-accordion-item .pp-accordion-content {
   background-color: #ffffff;
-  color: #121212;
+  color: var(--color-dark);
   border-bottom-left-radius: px;
   border-bottom-right-radius: px;
 }
 
 .fl-node-bsgr4vwu32cn .pp-accordion-item .pp-accordion-button-icon {
   font-size: 18px;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-bsgr4vwu32cn .pp-accordion-item .pp-accordion-button-icon:before {
@@ -2078,7 +2078,7 @@ span.pp-accordion-button-icon {
 .fl-node-bsgr4vwu32cn .pp-accordion-item .pp-accordion-icon {
   font-size: 15px;
   width: 18.75px;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-bsgr4vwu32cn .pp-accordion-item .pp-accordion-button:hover .pp-accordion-icon, .fl-node-bsgr4vwu32cn .pp-accordion-item.pp-accordion-item-active .pp-accordion-icon {
@@ -2119,7 +2119,7 @@ span.pp-accordion-button-icon {
 
 .fl-node-qupih6a9xymw .pp-accordion-item .pp-accordion-button {
   background-color: #F5F6F8;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-qupih6a9xymw .pp-accordion-item .pp-accordion-button:hover, .fl-node-qupih6a9xymw .pp-accordion-item.pp-accordion-item-active .pp-accordion-button {
@@ -2141,14 +2141,14 @@ span.pp-accordion-button-icon {
 
 .fl-node-qupih6a9xymw .pp-accordion-item .pp-accordion-content {
   background-color: #ffffff;
-  color: #121212;
+  color: var(--color-dark);
   border-bottom-left-radius: px;
   border-bottom-right-radius: px;
 }
 
 .fl-node-qupih6a9xymw .pp-accordion-item .pp-accordion-button-icon {
   font-size: 18px;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-qupih6a9xymw .pp-accordion-item .pp-accordion-button-icon:before {
@@ -2158,7 +2158,7 @@ span.pp-accordion-button-icon {
 .fl-node-qupih6a9xymw .pp-accordion-item .pp-accordion-icon {
   font-size: 15px;
   width: 18.75px;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-qupih6a9xymw .pp-accordion-item .pp-accordion-button:hover .pp-accordion-icon, .fl-node-qupih6a9xymw .pp-accordion-item.pp-accordion-item-active .pp-accordion-icon {
