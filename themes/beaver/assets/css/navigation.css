@@ -296,14 +296,6 @@ a.action-button:hover {
   transition: .3s;
 }
 
-.navigation .-active .link {
-  color: #1a8cff;
-}
-
-.navigation .item.-active .arrow {
-  border-color: #1a8cff;
-}
-
 .navigation .sub-menu {
   display: none;
   background-color: #fff;
