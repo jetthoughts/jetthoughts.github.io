@@ -321,9 +321,9 @@
 }
 
 .fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  border-radius: var(--radius-default);
+  -moz-border-radius: var(--radius-default);
+  -webkit-border-radius: var(--radius-default);
   display: inline-block;
   font-size: 16px;
   font-weight: normal;

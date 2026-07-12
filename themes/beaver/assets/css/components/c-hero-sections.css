@@ -1084,7 +1084,7 @@
   color: white;
   border: none;
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
   cursor: pointer;
   font-size: 14px;
   transition: background 0.3s ease;

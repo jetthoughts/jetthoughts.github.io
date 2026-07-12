@@ -390,7 +390,7 @@ body input[type="submit"] {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 
 .c-pp-cta-button:hover {

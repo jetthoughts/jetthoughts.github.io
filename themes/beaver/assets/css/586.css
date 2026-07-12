@@ -131,7 +131,7 @@ body a, body .fl-button, body .pp-button, body button, body input[type="submit"]
   width: 18px;
   height: 18px;
   border: 1px solid #DEDEDE;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
   top: 0px;
 }
 
@@ -154,7 +154,7 @@ body a, body .fl-button, body .pp-button, body button, body input[type="submit"]
   border: 2px solid var(--color-primary);
   background-color: var(--color-primary);
   z-index: 0;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 
 .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container.ginput_container_checkbox .gfield_checkbox .gchoice input:checked + label:before {

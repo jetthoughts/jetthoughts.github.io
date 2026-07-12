@@ -1164,8 +1164,8 @@ button, input[type=button], input[type=submit] {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  -moz-border-radius: var(--radius-default);
+  -webkit-border-radius: var(--radius-default);
   border-radius: 4px
 }
 
@@ -1211,8 +1211,8 @@ input[type=text], input[type=password], input[type=email], input[type=tel], inpu
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  -moz-border-radius: var(--radius-default);
+  -webkit-border-radius: var(--radius-default);
   border-radius: 4px
 }
 

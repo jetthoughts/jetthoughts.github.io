@@ -27,4 +27,13 @@
      variant) was dead code, deleted 2026-07-12. */
   --spacing-sm: 0.75rem;
   --spacing-md: 1rem;
+
+  /* Muted gray text (168 literal occurrences at extraction; the voice the
+     design system calls muted — see .c-content-block--color-muted).
+     Fulfils the WP1.1 "--color-text" item: body text color is --color-dark,
+     secondary text is this. */
+  --color-muted: #969798;
+
+  /* Default corner radius (145 exact border-radius:4px occurrences). */
+  --radius-default: 4px;
 }

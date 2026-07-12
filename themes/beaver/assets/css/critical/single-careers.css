@@ -291,9 +291,9 @@ h2 {
 }
 .fl-builder-content a.fl-button,
 .fl-builder-content a.fl-button:visited {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  border-radius: var(--radius-default);
+  -moz-border-radius: var(--radius-default);
+  -webkit-border-radius: var(--radius-default);
   display: inline-block;
   font-size: 16px;
   font-weight: 400;
@@ -619,7 +619,7 @@ h2 {
   position: absolute;
   width: 30px;
   height: 3px;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 .pp-advanced-menu-mobile-toggle
   .pp-hamburger
@@ -1570,28 +1570,28 @@ body:not(.single-fl-theme-layout)
   .gform_wrapper
   .gfield
   input::-webkit-input-placeholder {
-  color: #969798;
+  color: var(--color-muted);
 }
 .fl-node-nkrzpgyfwo7s
   .pp-gf-content
   .gform_wrapper
   .gfield
   input:-moz-placeholder {
-  color: #969798;
+  color: var(--color-muted);
 }
 .fl-node-nkrzpgyfwo7s
   .pp-gf-content
   .gform_wrapper
   .gfield
   input::-moz-placeholder {
-  color: #969798;
+  color: var(--color-muted);
 }
 .fl-node-nkrzpgyfwo7s
   .pp-gf-content
   .gform_wrapper
   .gfield
   input:-ms-input-placeholder {
-  color: #969798;
+  color: var(--color-muted);
 }
 .fl-node-nkrzpgyfwo7s .pp-gf-content {
   border-top-left-radius: 16px;
@@ -1847,6 +1847,9 @@ button {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  /* KEEP LITERAL (all three): reboot-generic button rule — tokenizing breaks
+     dedup-twin byte-identity and the deleted duplicate re-appears in every
+     bundle (WP1.1) */
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -1866,9 +1869,9 @@ input[type="text"] {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  -moz-border-radius: var(--radius-default);
+  -webkit-border-radius: var(--radius-default);
+  border-radius: var(--radius-default);
 }
 input[type="email"]::-webkit-input-placeholder,
 input[type="tel"]::-webkit-input-placeholder,

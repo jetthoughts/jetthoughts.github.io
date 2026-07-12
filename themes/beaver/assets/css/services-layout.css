@@ -173,7 +173,7 @@ body input[type="submit"] {
   width: 18px;
   height: 18px;
   border: 1px solid #dedede;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
   top: 0px;
 }
 
@@ -214,7 +214,7 @@ body input[type="submit"] {
   border: 2px solid var(--color-primary);
   background-color: var(--color-primary);
   z-index: 0;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 
 .gform_wrapper

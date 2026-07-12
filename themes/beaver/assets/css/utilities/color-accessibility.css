@@ -43,13 +43,13 @@
 
 /* Secondary Text Combinations - WCAG AA Validated */
 .color-combo-secondary-on-white {
-  color: var(--jt-text-secondary); /* #969798 */
+  color: var(--jt-text-secondary); /* var(--color-muted) */
   background: var(--jt-white);     /* #ffffff */
   /* Contrast Ratio: 4.51:1 - Passes AA for normal text */
 }
 
 .color-combo-secondary-on-light {
-  color: var(--jt-text-secondary); /* #969798 */
+  color: var(--jt-text-secondary); /* var(--color-muted) */
   background: var(--jt-gray-light); /* #f5f5f5 */
   /* Contrast Ratio: 4.24:1 - Passes AA for normal text */
 }
