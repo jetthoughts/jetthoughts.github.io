@@ -48,14 +48,14 @@ After this lesson you will be able to: **build a 30-name list of specific people
 The full journey, top to bottom:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-    H(["Your 1-sentence hypothesis<br/>(from Ch 1.1)"])
-    H --> S1[Step 1<br/>Translate hypothesis → ICP map<br/>Paste into Claude/ChatGPT]
-    S1 --> S2[Step 2<br/>Read where they complain<br/>Reddit/LinkedIn/forums]
-    S2 --> S3[Step 3<br/>Build 30-name list<br/>One name per real complaint]
-    S3 --> S4[Step 4<br/>Write each one personally<br/>Templates in Part 2]
-    S4 --> S5(["Step 5<br/>10 interviews on calendar"])
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'fontSize':'24px', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart LR
+    H(["Hypothesis<br/>from Ch 1.1"])
+    H --> S1["1. AI ICP map<br/>paste into Claude"]
+    S1 --> S2["2. Read where<br/>they complain"]
+    S2 --> S3["3. Build the<br/>30-name list"]
+    S3 --> S4["4. Write each<br/>one personally"]
+    S4 --> S5(["10 interviews<br/>on calendar"])
 
     classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
     classDef step fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
