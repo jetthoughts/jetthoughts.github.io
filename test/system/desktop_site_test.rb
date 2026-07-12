@@ -321,11 +321,13 @@ class DesktopSiteTest < ApplicationSystemTestCase
     # The course landing page renders with title + key sections.
     visit "/course/tech-for-non-technical-founders-2026/"
 
-    within ".fl-heading" do
+    within "h1" do
       assert_text "From Idea to First Paying Customer"
     end
     assert_text "Why this course exists"
     assert_text "Module map"
+
+    assert_stable_screenshot "course/landing", tolerance: 0.03, skip_area: %w[picture img]
   end
 
   def test_visit_course_chapter_from_landing
