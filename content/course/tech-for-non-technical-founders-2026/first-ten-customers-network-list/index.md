@@ -65,7 +65,7 @@ Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship stre
 > |---|---|---|
 > | **30+** | Standard warm motion works. | Continue below. |
 > | **15-29** | Reduced warm motion. Build smaller buckets: 2 champions + 5 hot + 8 warm + 5 cold. You'll need cold outbound ([Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)) in parallel. |
-> | **Under 15** | Your network doesn't contain the ICP segment. | Skip to [Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound. |
+> | **Under 15** | Your network doesn't contain the ICP segment (ICP = Ideal Customer Profile - the specific kind of person your product is for). | Skip to [Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound. |
 
 ---
 

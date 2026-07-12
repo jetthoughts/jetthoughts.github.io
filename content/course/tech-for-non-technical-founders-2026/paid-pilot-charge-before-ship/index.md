@@ -54,7 +54,7 @@ Free pilots feel collaborative because the customer says yes, you build for six 
 
 Week 8 lands and you send the proposal for the year-one contract. The customer says "this is great, let me circle back to my CFO" - and that CFO has never heard of you, did not approve the pilot, and has no internal justification for the line item. The conversation dies in a forwarded email thread.
 
-That's the recurring mechanic. A 20% deposit at kickoff puts the CFO question on Week 0, when there's no project yet for the customer to defend. Conversion in Week 7 becomes paperwork, not negotiation. Skip the deposit and you're back at the Week 8 wall: "this is great" emails Friday, ghost on conversion Monday.
+That's the recurring mechanic: real money on the table before kickoff forces the internal budget conversation while there is still nothing riding on it for the customer to defend. By the time the pilot wraps, converting to a paid contract is a formality, not a fresh sales pitch. Skip the deposit and you're back at the Week 8 wall: "this is great" emails Friday, ghost on conversion Monday.
 
 First-time founders often default to "let the customer try it free and they'll pay once they see the value" - that instinct produces six months of free pilots and zero signed contracts. Charging first is what flips a curious user into a customer with skin in the game.
 

@@ -45,12 +45,9 @@ The dashboard tells that founder what five phone calls would have said for free:
 
 The real question after the MVP ships is whether the people who already touched it would notice if it vanished tomorrow. If less than 40% would be very disappointed, no amount of ad spend will turn that group into customers. Paid traffic does not fix a product problem; it routes more users into something they will not return to.
 
-> **What your first-pass numbers will probably look like (and that is not a failure signal).** An idea-stage founder with 4-6 onramp users typically sees one of three patterns on the first survey run:
-> - All "somewhat disappointed" or "not disappointed" → that segment is not must-have; do not scale it. Run more interviews before re-attempting.
-> - 3-4 "very disappointed" out of 6 → directional MAYBE. Almost certainly a sample-size problem, not a product problem; book 5-10 more users.
-> - 5+ "very disappointed" out of 6 → directional STRONG YES. Advance to M5.3 with the caveat above.
+> **What your first-pass numbers will probably look like (and that is not a failure signal).** An idea-stage founder with 4-6 onramp users will likely land somewhere in a wide range on the first survey run - that is expected, not a red flag. The exact read-by-count guide lives in the "Sample-size honesty" box in Step 5 below; use it once your numbers are in.
 >
-> A 25-40% reading at small sample size is not a failure. It is the normal state of a brand-new product with a brand-new founder. The Sean Ellis test is calibrated for ≥ 20 respondents with months of usage; your first-pass run is a forecast, not a verdict. Treat looping back to M2.3 outreach for more user sessions as the default first-pass move, not a setback.
+> A 25-40% reading at small sample size is not a failure. It is the normal state of a brand-new product with a brand-new founder. The Sean Ellis test is directional at ≥ 10 respondents and useful at 20+ with months of usage; your first-pass run is a forecast, not a verdict. Treat looping back to M2.3 outreach for more user sessions as the default first-pass move, not a setback.
 
 ## The 40% test, in one paragraph
 
@@ -158,11 +155,11 @@ flowchart TD
 
 Re-run cadence: re-run while the must-have rate is climbing, and after every major release once it holds above 40% for two consecutive runs. If a re-run drops, read the "somewhat disappointed" Q2-Q4 verbatims first - the diagnostic is in there.
 
-> **Sample-size honesty.** The Sean Ellis 40% threshold is statistically directional at **≥ 10 respondents**, useful at **20+**, and segment-sliceable at **30+**. Under 10 respondents your result is a hypothesis, not a verdict - with 6 "very disappointed" out of 10 the threshold says PASS, but the confidence band is wide enough that real demand could be 20% or 80%. Under 10, segment-slice math does not work and the 25-40% bands do not apply. Read the count directionally instead:
+> **Sample-size honesty.** The Sean Ellis 40% threshold is statistically directional at **≥ 10 respondents**, useful at **20+**, and segment-sliceable at **30+**. Under 10 respondents your result is a hypothesis, not a verdict - with 6 "very disappointed" out of 10 the threshold says PASS, but the confidence band is wide enough that real demand could be 20% or 80%. Under 10, segment-slice math does not work and the 25-40% bands do not apply. Read your first-pass count directionally instead, out of your 4-6 onramp users:
 >
 > - **0-2 "very disappointed"**: directional NO. Book more user sessions before re-running.
 > - **3-4 "very disappointed"**: directional MAYBE. Book 5-10 more users, re-run.
-> - **5+ "very disappointed" out of 6**: directional STRONG YES. Advance to M5.3 but caveat your outreach decisions - the segment language is hypothesis, not verified.
+> - **5+ "very disappointed"**: directional STRONG YES. Advance to M5.3 but caveat your outreach decisions - the segment language is hypothesis, not verified.
 >
 > Use an under-10 reading to prioritize the next outreach batch, not to advance into Module 5.3 with confidence.
 

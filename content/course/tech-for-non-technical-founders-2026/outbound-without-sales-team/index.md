@@ -57,7 +57,7 @@ Product Hunt converted at 3.1% per launch event across 387 launches OpenHunts st
 
 Product Hunt is not bad; it is a one-day event in a job that needs sustained motion over a quarter.
 
-Picture the situation. Four paid pilots have closed from your personal network and LinkedIn audience over six weeks. The warm names are gone at customer five. The default move is to book a launch coach or sign an ad-agency contract. Either decision costs the same six weeks and a few thousand dollars - and neither one was designed for your B2B vertical.
+Four paid pilots have closed from your personal network and LinkedIn audience over six weeks. The warm names are gone at customer five. The default move is to book a launch coach or sign an ad-agency contract. Either decision costs the same six weeks and a few thousand dollars - and neither one was designed for your B2B vertical.
 
 The four-line cold-email sequence below is what customer five answers in week three for under $40 of tooling.
 
@@ -159,7 +159,7 @@ The 60-90 second rule keeps the volume tractable. 30 prospects × 90 seconds = 4
 >
 > Hi [first name],
 >
-> Saw your post on [topic, paraphrased in their words] last [Tuesday]. I shipped my MVP for [the same problem] last month using [Lovable + Supabase + Stripe] after 12 interviews with people who flagged the exact issue you described. I built [a tool that does X for Y].
+> Saw your post on [topic, paraphrased in their words] last [Tuesday]. I shipped my MVP for [the same problem] last month using [Lovable + Supabase + Stripe] after 10 interviews with people who flagged the exact issue you described. I built [a tool that does X for Y].
 >
 > Worth 15 minutes to walk through? Paid design partner spots, [$ deposit] credited toward year one. Calendly: [link]
 >

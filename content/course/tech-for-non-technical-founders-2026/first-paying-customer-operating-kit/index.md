@@ -53,7 +53,7 @@ flowchart TB
     Kit --> T3[3. Design Partner Agreement<br/>one-page LOI]
     Kit --> T4[4. Stripe Checkout setup<br/>Rails / Django / Laravel]
     Kit --> T5[5. Sean Ellis survey<br/>5 questions, Typeform-ready]
-    Kit --> T6[6. First 10 Customers tracker<br/>Airtable template]
+    Kit --> T6[6. First 10 Customers tracker<br/>Google Sheet template]
     classDef kitstyle fill:#a855f7,stroke:#1a1a1a,stroke-width:2px,color:#fff;
     classDef compstyle fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
     class Kit kitstyle;
@@ -169,11 +169,11 @@ Plus a one-tab Google Sheet that computes per-segment must-have % from your CSV 
 
 Result: 24 hours from "I should run the test" to a scored result you can act on.
 
-### 6. The "First 10 Customers" Airtable tracker
+### 6. The "First 10 Customers" Google Sheet tracker
 
-The Airtable base from [Chapter 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Pre-filled columns - Name, Company, Bucket, Loom sent, Reply, Demo, DPA sent, Deposit - with color-coded bucket pills (champion / hot / warm / cold) and date stamps on every progress column. Filters: "Replied this week," "Demo this week," "Pilot landed this month."
+The Google Sheet from [Chapter 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Pre-filled columns - Name, Company, Bucket, Loom sent, Reply, Demo, DPA sent, Deposit - with color-coded bucket pills (champion / hot / warm / cold) and date stamps on every progress column. Filters: "Replied this week," "Demo this week," "Pilot landed this month."
 
-![Sample row from the First 10 Customers Airtable tracker](kit-sample-row.svg)
+![Sample row from the First 10 Customers Google Sheet tracker](kit-sample-row.svg)
 
 The payoff: turns Friday afternoon into a 10-minute "what shipped this week" review instead of a 90-minute scroll through Gmail.
 
@@ -210,7 +210,7 @@ By Friday of week 4, you should have: a segment-isolated persona doc, 50 sent me
 
 ## What this kit is not
 
-The kit is not a substitute for a sales course or a CRM. It will not teach the conversational mechanics of objection-handling, so if you have never run a customer call, read [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) and run 10 user calls first. It will not track touch counts past the first 30 customers the way HubSpot, Pipedrive, or Salesforce does - past 30, the Airtable tracker breaks and you graduate to a real CRM. It also does not replace the must-have-segment test from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - if your overall must-have % from template 5 is under 25%, your pipeline will fill, the demos will go fine, and conversions will stall at the deposit conversation. Run the 40% test first; download the kit second.
+The kit is not a substitute for a sales course or a CRM. It will not teach the conversational mechanics of objection-handling, so if you have never run a customer call, read [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) and run 10 user calls first. It will not track touch counts past the first 30 customers the way HubSpot, Pipedrive, or Salesforce does - past 30, the Sheet breaks and you graduate to a real CRM. It also does not replace the must-have-segment test from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - if your overall must-have % from template 5 is under 25%, your pipeline will fill, the demos will go fine, and conversions will stall at the deposit conversation. Run the 40% test first; download the kit second.
 
 ## How to get the kit
 

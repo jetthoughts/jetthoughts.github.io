@@ -47,7 +47,9 @@ related_posts: false
 
 A B2B SaaS founder I worked with in early 2026 - call her R. - opened her dashboard on a Wednesday morning and saw 32 paying users at $29/month. She had texted me the screenshot the night before with one line: *"net new this month is 3, what am I doing wrong with my ads."*
 
-Here is what the numbers under that screenshot looked like. Her trial-to-paid conversion was healthy (around 11%). Her Meta Ads spend was $4,800/month. Her dev support invoice for keeping the signup flow patched was $1,400/month. New paid signups: 24. Churn in the same 30 days: 21. The bucket was leaking faster than the funnel could fill it. Net new customer count: 3. All-in spend per net new customer: $2,066. She was paying enterprise-CAC numbers for a $29/month SMB product.
+*Illustrative composite based on patterns from real founder builds, not a single client story.*
+
+Here is what the numbers under that screenshot looked like. Her trial-to-paid conversion was healthy (around 11%). Her Meta Ads spend was $4,800/month. Her dev support invoice for keeping the signup flow patched was $1,400/month. New paid signups: 24. Churn in the same 30 days: 21. The bucket was leaking faster than the funnel could fill it. Net new customer count: 3. All-in spend per net new customer: $2,066. She was paying enterprise-CAC (customer-acquisition cost - what you spend to win one customer) numbers for a $29/month SMB (small and mid-size business) product.
 
 Her instinct, the same one every founder has when they see a 0.4% net-growth number, was to lift the funnel: better ads, lower CAC, more landing-page tests. We pulled the cohort data instead. Forty minutes in, the picture was obvious. The product worked great for one segment - 3-person teams using it as a shared workflow tool retained at around 70% by week 4. Solo users, who made up two-thirds of her signups, retained at 8% by week 4. She had been selling a 3-person workflow tool to people who wanted a single-user productivity tool. The ads were not the problem. The audience the ads were buying was the problem.
 
@@ -86,7 +88,7 @@ The cohort tool already groups users by signup week, so this is a matter of read
 3. **Of those week-2 returners, what percent are still active at day 30?** This is your 30-day retention. Sean Ellis-style must-have products land at 60-80%; struggling products land at 8-15%.
 4. **Slice question 3 by segment.** Job title from your signup form. Company size from your signup form. Use case from a single-question post-onboarding survey. One segment will retain dramatically higher than the rest. That segment is the answer to the triage question.
 
-A B2B founder with a $29/month tool I worked with last quarter ran this in 70 minutes flat. Her overall 30-day retention was 19%. Solid not-a-business numbers. Sliced by segment: 3-person teams 71%, freelancers 12%, solo founders 8%. The average hid the only real customer she had.
+R. ran this slice in 70 minutes flat. Her overall 30-day retention was 19%. Solid not-a-business numbers. Sliced by segment: 3-person teams 70%, freelancers 12%, solo founders 8%. The average hid the only real customer she had.
 
 ### Cohort retention by segment - one product, four shapes
 
@@ -117,7 +119,7 @@ flowchart TD
     B -->|All segments around 20-35%<br/>and roughly the same| D[Decision 1 - FIX THE PRODUCT<br/>Rebuild one workflow]
     B -->|One segment over 50%<br/>others under 20%| E[Decision 2 - CHANGE THE SEGMENT<br/>Refund the wrong half]
     C --> CK[Go to Pivot or Persevere<br/>in Going Further]
-    D --> DK[Go to the rescue chapters<br/>Going Further]
+    D --> DK[Read the Going Further chapters<br/>Going Further]
     E --> EK[Re-run Module 5 outreach<br/>aimed at the right segment]
 
     classDef redbox fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
@@ -138,7 +140,7 @@ The fix is to stop adding features and rebuild one workflow until it actually wo
 
 ### Decision 2 - CHANGE THE SEGMENT
 
-One segment retains at 50%+ while others languish under 20%. The product works; the audience is wrong. R.'s case from the opening was Decision 2 - 71% retention for 3-person teams, 8% for solo founders, two-thirds of her customers paying for a product that did not fit their job.
+One segment retains at 50%+ while others languish under 20%. The product works; the audience is wrong. R.'s case from the opening was Decision 2 - 70% retention for 3-person teams, 8% for solo founders, two-thirds of her customers paying for a product that did not fit their job.
 
 The fix has two parts. First, fire the wrong segment - refund their last 30 days, recommend an alternative tool, and remove them from the customer list. Second, double down on the right segment - rewrite the landing page headline for 3-person teams, redirect ad spend to that audience, and re-run [Chapter 5.3 personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) within the segment that retains.
 
@@ -176,7 +178,7 @@ Here is the email template that worked for R.'s 18 wrong-segment customers. Send
 
 The script does three things at once. It admits the misfit in the founder's voice (not a support template). It hands the user a concrete alternative (so they do not have to start the search over). It removes the future-pitch hook (which is the part wrong-segment users actually appreciate). R.'s response rate to this email was 14 of 18 sent - 11 thank-yous, 2 questions about the alternative tool, 1 angry user, 0 chargebacks. The 1 angry user wanted to keep using the product anyway; she comped them a year and removed their seat from the team metrics.
 
-The honest trade-off: a refund-the-wrong-segment campaign cuts your customer count and your MRR in the short term. R.'s MRR went from $928 to $319 the week she sent the emails. By month 3 she was back above $928 with the right segment, with churn at 11% instead of 65%. The instinct is to flinch and not let the MRR number drop in week 1; the founders who hold the line are the ones who get out of the leaky-bucket cycle.
+The honest trade-off: a refund-the-wrong-segment campaign cuts your customer count and your MRR (monthly recurring revenue - what your subscriptions bring in each month) in the short term. R.'s MRR went from $928 to $319 the week she sent the emails. By month 3 she was back above $928 with the right segment, with churn at 11% instead of 65%. The instinct is to flinch and not let the MRR number drop in week 1; the founders who hold the line are the ones who get out of the leaky-bucket cycle.
 
 ## Hand This to the Next Chapter
 
