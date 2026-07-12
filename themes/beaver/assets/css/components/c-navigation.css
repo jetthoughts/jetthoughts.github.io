@@ -7,7 +7,7 @@
  * Progress: Extracting patterns 1-82 using c-navigation prefix
  */
 
-/* CSS Variables - Navigation Color System (inherits from global variables/colors.css) */
+/* CSS Variables - Navigation Color System (inherits from foundations/css-variables.css) */
 :root {
   --nav-text-color: var(--color-dark, #121212);
   --nav-link-hover-bg: var(--color-primary, #1a8cff);

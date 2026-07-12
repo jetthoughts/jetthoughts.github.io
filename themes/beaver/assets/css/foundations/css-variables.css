@@ -11,8 +11,7 @@
      with 89 usages. Name approved by Paul 2026-07-11. */
   --color-ruby: #cc342d;
 
-  /* Primary dark text/border color (JetVelocity obsidian dark; 648
-     literal occurrences repo-wide). Canonical home of the token —
-     variables/colors.css also declares it but is bundled nowhere. */
+  /* Primary dark text/border color (JetVelocity obsidian dark).
+     Canonical home of the token. */
   --color-dark: #121212;
 }
