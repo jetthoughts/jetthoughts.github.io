@@ -51,6 +51,22 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "blog/post", tolerance: 0.03, skip_area: %w[picture img]
   end
 
+  def test_privacy_policy
+    visit "/privacy-policy/"
+
+    assert_stable_screenshot "privacy-policy"
+  end
+
+  def test_course_landing
+    visit "/course/tech-for-non-technical-founders-2026/"
+
+    within "h1" do
+      assert_text "From Idea to First Paying Customer"
+    end
+
+    assert_stable_screenshot "course/landing", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
   def test_about_us
     visit "/about-us/"
 
