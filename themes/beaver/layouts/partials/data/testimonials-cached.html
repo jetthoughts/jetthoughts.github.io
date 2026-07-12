@@ -1,3 +1,0 @@
-{{/* Cached testimonials data access - invalidates when testimonials.yaml changes */}}
-{{ $testimonialsHash := hugo.Data.testimonials | jsonify | md5 }}
-{{ return partialCached "data/testimonials-content.html" . $testimonialsHash }}

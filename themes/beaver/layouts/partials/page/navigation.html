@@ -2,12 +2,14 @@
   <div class="menu-close js-mobile-menu-close" aria-label="Close menu"></div>
 
   <ul class="list" role="menubar">
-    {{ $currentPage := .Page }}
+    {{/* No per-page active state: this partial renders inside
+         partialCached "page/header-content.html" (no variant key), so any
+         page-dependent output here would be frozen from whichever page
+         renders first. See 2509 tracker, sprint-5 findings. */}}
     {{ range .Site.Menus.main }}
-    {{ $active := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) }}
     {{ if .HasChildren }}
 
-      <li class="item {{if $active }}-active{{ end }}" role="menuitem" aria-haspopup="true">
+      <li class="item" role="menuitem" aria-haspopup="true">
         <span class="arrow js-sub-menu-opener" aria-label="Expand submenu"></span>
         <a href="{{ .URL }}" class="link" aria-expanded="false">{{ .Name | safeHTML }}</a>
 
@@ -31,7 +33,7 @@
       </li>
 
     {{ else }}
-      <li class="item {{if $active }}-active{{ end }}" role="menuitem">
+      <li class="item" role="menuitem">
         {{ if eq .Name "Contact Us" }}
           <a href="{{ .URL }}" class="btn btn-primary">{{ .Name | safeHTML }}</a>
         {{ else }}

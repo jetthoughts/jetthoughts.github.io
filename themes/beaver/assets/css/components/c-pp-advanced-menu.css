@@ -452,7 +452,7 @@ ul.c-pp-menu__horizontal li.mega-menu > ul.sub-menu .c-pp-menu__toggle {
 .fl-node-menu .c-pp-menu .menu > li > a:focus,
 .fl-node-menu .c-pp-menu .menu > li > .c-pp-menu__submenu-container > a:hover,
 .fl-node-menu .c-pp-menu .menu > li > .c-pp-menu__submenu-container > a:focus {
-  color: #121212;
+  color: var(--color-dark);
 }
 
 /* ==========================================================================

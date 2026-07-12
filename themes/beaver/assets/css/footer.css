@@ -68,7 +68,7 @@
 
 .footer-component .special {
     color: #fff;
-    background-color: #1a8cff;
+    background-color: var(--color-primary);
     border-radius: 10px;
     display: inline-block;
     margin-left: 5px;
@@ -78,7 +78,7 @@
 }
 
 .footer-component a {
-    color: #969798;
+    color: var(--color-muted);
     text-decoration: none;
 }
 

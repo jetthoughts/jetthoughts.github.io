@@ -15,9 +15,9 @@
 .c-button--secondary,
 .c-button--tertiary {
   /* Base button styling - Consolidated from all variants */
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  border-radius: var(--radius-default);
+  -moz-border-radius: var(--radius-default);
+  -webkit-border-radius: var(--radius-default);
   display: inline-block;
   font-size: 16px;
   font-weight: normal;
@@ -47,9 +47,9 @@
 
 /* Primary Button Variant - Only color differences remain */
 .c-button--primary {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #ffffff;
-  border: 2px solid #1a8cff;
+  border: 2px solid var(--color-primary);
 }
 
 .c-button--primary:hover {
@@ -61,19 +61,19 @@
 /* Secondary Button Variant - Only color differences remain */
 .c-button--secondary {
   background-color: #ffffff;
-  color: #121212;
-  border: 2px solid #121212;
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
 }
 
 .c-button--secondary:hover {
-  background-color: #121212;
+  background-color: var(--color-dark);
   color: #ffffff;
 }
 
 /* Tertiary Button Variant - Only color differences remain */
 .c-button--tertiary {
   background-color: transparent;
-  color: #1a8cff;
+  color: var(--color-primary);
   border: 2px solid transparent;
 }
 

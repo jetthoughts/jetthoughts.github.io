@@ -284,9 +284,9 @@
 }
 .fl-builder-content a.fl-button,
 .fl-builder-content a.fl-button:visited {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  border-radius: var(--radius-default);
+  -moz-border-radius: var(--radius-default);
+  -webkit-border-radius: var(--radius-default);
   display: inline-block;
   font-size: 16px;
   font-weight: 400;
@@ -544,7 +544,7 @@
 }
 .fl-builder-content .fl-node-ows5td8cbip3 .fl-module-content .fl-rich-text,
 .fl-builder-content .fl-node-ows5td8cbip3 .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 .fl-builder-content .fl-node-ows5td8cbip3 .fl-rich-text {
   font-weight: 600;
@@ -555,7 +555,7 @@
 }
 .fl-builder-content .fl-node-6d9equxbio2h .fl-module-content .fl-rich-text,
 .fl-builder-content .fl-node-6d9equxbio2h .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 .fl-builder-content .fl-node-6d9equxbio2h .fl-rich-text {
   font-weight: 600;
@@ -804,7 +804,7 @@
   position: absolute;
   width: 30px;
   height: 3px;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 .pp-advanced-menu-mobile-toggle
   .pp-hamburger
@@ -922,7 +922,7 @@
   border-color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq .menu > li.current-menu-item > a {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 .fl-node-ncg61wov0ytq .menu .pp-has-submenu .sub-menu {
   display: none;
@@ -1529,7 +1529,7 @@ img {
 }
 a.fl-button,
 a.fl-button:visited {
-  background: #1a8cff;
+  background: var(--color-primary);
   color: #fff;
   border: 1px solid #006ddc;
 }
@@ -1538,7 +1538,7 @@ a.fl-button:visited * {
   color: #fff;
 }
 button {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #fff;
   font-size: 18px;
   line-height: 1.45;
@@ -1549,6 +1549,9 @@ button {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  /* KEEP LITERAL (all three): reboot-generic button rule — tokenizing breaks
+     dedup-twin byte-identity and the deleted duplicate re-appears in every
+     bundle (WP1.1) */
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -1604,7 +1607,7 @@ button {
 .fl-page a.fl-button:visited,
 .fl-page button:visited {
   color: #fff;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 18px;

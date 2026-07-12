@@ -3,7 +3,7 @@
 }
 
 .technologies-component .subheading {
-    color: #1a8cff;
+    color: var(--color-primary);
     font-weight: 600;
 }
 

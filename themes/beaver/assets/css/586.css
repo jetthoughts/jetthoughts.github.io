@@ -50,7 +50,7 @@ body a, body .fl-button, body .pp-button, body button, body input[type="submit"]
   display: block;
   width: 100%;
   height: 40px;
-  background-color: #1A8CFF;
+  background-color: var(--color-primary);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -66,7 +66,7 @@ body a, body .fl-button, body .pp-button, body button, body input[type="submit"]
   display: block;
   width: 100%;
   height: 40px;
-  background-color: #1A8CFF;
+  background-color: var(--color-primary);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -131,7 +131,7 @@ body a, body .fl-button, body .pp-button, body button, body input[type="submit"]
   width: 18px;
   height: 18px;
   border: 1px solid #DEDEDE;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
   top: 0px;
 }
 
@@ -151,10 +151,10 @@ body a, body .fl-button, body .pp-button, body button, body input[type="submit"]
   top: 0;
   width: 18px;
   height: 18px;
-  border: 2px solid #1A8CFF;
-  background-color: #1A8CFF;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
   z-index: 0;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 
 .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container.ginput_container_checkbox .gfield_checkbox .gchoice input:checked + label:before {
@@ -217,9 +217,9 @@ body a, body .fl-button, body .pp-button, body button, body input[type="submit"]
 }
 
 .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container.ginput_container_radio .gfield_radio .gchoice input:checked + label, .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container.ginput_container_radio .gfield_radio .gchoice input:focus + label {
-  background: #1A8CFF !important;
+  background: var(--color-primary) !important;
   color: #FFF;
-  border-color: #1A8CFF;
+  border-color: var(--color-primary);
 }
 
 .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container.ginput_container_radio .gfield_radio .gchoice label {
@@ -233,7 +233,7 @@ body a, body .fl-button, body .pp-button, body button, body input[type="submit"]
 }
 
 .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container.ginput_container_radio .gfield_radio .gchoice label:hover {
-  border-color: #1A8CFF;
+  border-color: var(--color-primary);
 }
 
 @media (max-width: 860px) {
@@ -310,7 +310,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   color: #FFF;
   font-size: 10px;
   padding: 3px 6px;
-  background-color: #1A8CFF;
+  background-color: var(--color-primary);
   border-radius: 10px;
   display: inline-block;
   margin-left: 5px;
@@ -356,11 +356,11 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-service-box:hover .pp-infobox-description .pp-infobox-button .pp-more-link {
-  color: #1A8CFF !important;
+  color: var(--color-primary) !important;
 }
 
 .jt-service-box:hover .pp-infobox-description .pp-infobox-button .pp-more-link i {
-  color: #1A8CFF !important;
+  color: var(--color-primary) !important;
 }
 
 .jt-case-study > .fl-col-content {
@@ -394,7 +394,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-case-study > .fl-col-content:hover {
-  border-color: #1A8CFF !important;
+  border-color: var(--color-primary) !important;
 }
 
 .jt-case-study.jt-case-study--light li {
@@ -402,7 +402,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-case-study.jt-case-study--light li a {
-  color: #1A8CFF !important;
+  color: var(--color-primary) !important;
   font-weight: 700 !important;
 }
 
@@ -461,7 +461,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 .jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-panel-content div a {
   padding: 12px 25px;
-  background-color: #1A8CFF;
+  background-color: var(--color-primary);
   color: #FFF;
   border-radius: 25px;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
@@ -601,7 +601,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 /* Blog */
 .blog-archive-search .pp-post-filters-wrapper .pp-post-filters-toggle {
-  background-color: #1A8CFF;
+  background-color: var(--color-primary);
   padding: 9px 20px;
   border-radius: 21px;
   margin-bottom: 20px;
@@ -893,8 +893,8 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .uk-toc ul li.active a {
-  border-left-color: #1A8CFF;
-  color: #1A8CFF !important;
+  border-left-color: var(--color-primary);
+  color: var(--color-primary) !important;
 }
 
 /* Client Details */
@@ -1084,7 +1084,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   margin-right: 10px;
   background: rgba(26, 141, 255, 0.1);
   border: unset;
-  color: #1A8CFF;
+  color: var(--color-primary);
   padding: 10px 12px;
   font-weight: 500;
   font-size: 14px;

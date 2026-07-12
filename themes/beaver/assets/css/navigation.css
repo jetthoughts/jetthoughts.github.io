@@ -50,7 +50,7 @@ body {
 
 /* Brand the FL-builder CTA buttons (homepage hero, about-us footer, etc.).
    The legacy rule .fl-page a.fl-button (specificity 0,2,1) lives in per-page
-   bundles (about-us.css, homepage.css) and paints these blue (#1a8cff) with
+   bundles (about-us.css, homepage.css) and paints these blue (var(--color-primary)) with
    25px pill radius. !important here unifies them with .btn.btn-primary brand
    styling site-wide. */
 a.fl-button,
@@ -296,14 +296,6 @@ a.action-button:hover {
   transition: .3s;
 }
 
-.navigation .-active .link {
-  color: #1a8cff;
-}
-
-.navigation .item.-active .arrow {
-  border-color: #1a8cff;
-}
-
 .navigation .sub-menu {
   display: none;
   background-color: #fff;
@@ -384,7 +376,7 @@ a.action-button:hover {
 }
 
 .navigation .sub-item:hover .sub-name {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .navigation .sub-text {
@@ -402,12 +394,12 @@ a.action-button:hover {
   }
 
   .navigation .item:hover .link {
-    color: #1a8cff;
+    color: var(--color-primary);
   }
 
   .navigation .item:hover .arrow {
     transform: rotate(225deg);
-    border-color: #1a8cff;
+    border-color: var(--color-primary);
   }
 }
 
@@ -554,7 +546,7 @@ a.action-button:hover {
 /* Site-wide brand link color. Body content links inherit this everywhere
    links aren't styled by a more specific class (.btn, .fl-button, .cta-link,
    menu items). 4.78:1 WCAG AA on white background.
-   :not() chain raises specificity above the per-bundle `a { color: #1a8cff }`
+   :not() chain raises specificity above the per-bundle `a { color: var(--color-primary) }`
    rules so this wins regardless of cascade order. */
 a:not(.btn):not(.btn-primary):not(.fl-button):not([class^="cta"]):not(.menu-opener):not(.menu-close):not(.navigation .link):not(.footer-component a) {
   color: #0066d6;

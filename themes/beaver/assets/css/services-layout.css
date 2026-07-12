@@ -56,7 +56,7 @@ body input[type="submit"] {
   display: block;
   width: 100%;
   height: 40px;
-  background-color: var(--color-primary);
+  background-color: transparent; /* was undefined var(--color-primary) = initial */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -72,7 +72,7 @@ body input[type="submit"] {
   display: block;
   width: 100%;
   height: 40px;
-  background-color: var(--color-primary);
+  background-color: transparent; /* was undefined var(--color-primary) = initial */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -173,7 +173,7 @@ body input[type="submit"] {
   width: 18px;
   height: 18px;
   border: 1px solid #dedede;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
   top: 0px;
 }
 
@@ -214,7 +214,7 @@ body input[type="submit"] {
   border: 2px solid var(--color-primary);
   background-color: var(--color-primary);
   z-index: 0;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 
 .gform_wrapper
@@ -537,7 +537,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-service-box:hover .pp-infobox-description .pp-infobox-button .pp-more-link {
-  color: var(--color-primary) !important;
+  color: inherit !important; /* was undefined var(--color-primary) */
 }
 
 .jt-service-box:hover
@@ -545,7 +545,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   .pp-infobox-button
   .pp-more-link
   i {
-  color: var(--color-primary) !important;
+  color: inherit !important; /* was undefined var(--color-primary) */
 }
 
 .jt-case-study > .fl-col-content {
@@ -592,7 +592,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-case-study.jt-case-study--light li a {
-  color: var(--color-primary) !important;
+  color: inherit !important; /* was undefined var(--color-primary) */
   font-weight: 700 !important;
 }
 
@@ -1242,7 +1242,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 .uk-toc ul li.active a {
   border-left-color: var(--color-primary);
-  color: var(--color-primary) !important;
+  color: inherit !important; /* was undefined var(--color-primary) */
 }
 
 /* Client Details */
@@ -1445,7 +1445,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   margin-right: 10px;
   background: rgba(26, 141, 255, 0.1);
   border: unset;
-  color: var(--color-primary);
+  color: inherit; /* was undefined var(--color-primary) */
   padding: 10px 12px;
   font-weight: 500;
   font-size: 14px;

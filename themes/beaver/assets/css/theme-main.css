@@ -1,7 +1,7 @@
 :root {
   --jt-primary-color: var(--color-primary);
   --jt-text-color: #121212; /* KEEP LITERAL (value side): shadow token - repointing to var(--color-dark) is a deliberate follow-up decision, not a mechanical swap */
-  --jt-primary: #1a8cff;
+  --jt-primary: var(--color-primary);
   --jt-text-primary: #121212; /* KEEP LITERAL (value side): shadow token - repointing to var(--color-dark) is a deliberate follow-up decision, not a mechanical swap */
   --jt-primary-dark: #0066cc;
   --jt-primary-hover: #007af4;
@@ -160,12 +160,14 @@ h6 {
 }
 
 a {
-  color: var(--color-primary);
+  /* was var(--color-primary) — token was never defined, so this computed
+     `inherit` since day one; codified during WP1.1 token extraction */
+  color: inherit;
 }
 
 a:hover,
 a:focus {
-  color: var(--color-primary);
+  color: inherit; /* was undefined var(--color-primary) — see rule above */
 }
 
 blockquote {
@@ -825,7 +827,7 @@ img {
 .wp-pagenavi a:hover {
   border-color: #e6e6e6;
   color: #fff;
-  background: #1a8cff;
+  background: var(--color-primary);
   font-weight: normal;
 }
 
@@ -1164,7 +1166,7 @@ input[type="text"].fl-search-input:focus {
 
 .fl-page .fl-module span.onsale {
   color: #fff;
-  background: #1a8cff;
+  background: var(--color-primary);
   font-size: 13px;
   font-weight: normal;
   left: 10px;
@@ -1213,7 +1215,7 @@ input[type="text"].fl-search-input:focus {
   line-height: 1.2;
   text-transform: capitalize;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 
 .fl-page .fl-module-woocommerce a.button:hover,
@@ -1264,7 +1266,7 @@ input[type="text"].fl-search-input:focus {
   line-height: 1.2;
   text-transform: capitalize;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 
 .woocommerce-page button.button:disabled,
@@ -1304,7 +1306,7 @@ input[type="text"].fl-search-input:focus {
 
 a.fl-button,
 a.fl-button:visited {
-  background: #1a8cff;
+  background: var(--color-primary);
   color: #fff;
   border: 1px solid #006ddc;
 }
@@ -1344,7 +1346,7 @@ a.button:hover {
 button,
 input[type="button"],
 input[type="submit"] {
-  background-color: var(--color-primary);
+  background-color: transparent; /* was undefined var(--color-primary) = initial */
   color: #fff;
   font-size: 18px;
   line-height: 1.45;
@@ -1355,15 +1357,15 @@ input[type="submit"] {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  -moz-border-radius: var(--radius-default);
+  -webkit-border-radius: var(--radius-default);
+  border-radius: var(--radius-default);
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
-  background-color: var(--color-primary);
+  background-color: transparent; /* was undefined var(--color-primary) = initial */
   color: #fff;
   border: 1px solid #006ddc;
   text-decoration: none;
@@ -1375,7 +1377,7 @@ input[type="submit"]:active,
 button:focus,
 input[type="button"]:focus,
 input[type="submit"]:focus {
-  background-color: var(--color-primary);
+  background-color: transparent; /* was undefined var(--color-primary) = initial */
   color: #fff;
   border: 1px solid #006ddc;
   outline: none;
@@ -1434,9 +1436,9 @@ textarea {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  -moz-border-radius: var(--radius-default);
+  -webkit-border-radius: var(--radius-default);
+  border-radius: var(--radius-default);
 }
 
 input[type="text"]::-webkit-input-placeholder,
@@ -3610,7 +3612,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid #1a8cff;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -3636,15 +3638,15 @@ input[type="number"]:focus-visible,
 input[type="search"]:focus-visible,
 input[type="url"]:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #1a8cff;
+  outline: 2px solid var(--color-primary);
   outline-offset: 1px;
-  border-color: var(--color-primary);
+  border-color: currentColor; /* was undefined var(--color-primary) = initial */
 }
 
 /* Custom Form Control Focus (Checkboxes & Radios) */
 input[type="checkbox"]:focus-visible + label::before,
 input[type="radio"]:focus-visible + label::before {
-  outline: 2px solid #1a8cff;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   box-shadow: 0 0 0 3px rgba(26, 140, 255, 0.2);
 }

@@ -63,10 +63,10 @@
 .c-content-block--text-right { text-align: right; }
 
 /* Color modifiers - from most common brand patterns */
-.c-content-block--color-primary { color: #1a8cff; }
-.c-content-block--color-dark { color: #121212; }
+.c-content-block--color-primary { color: var(--color-primary); }
+.c-content-block--color-dark { color: var(--color-dark); }
 .c-content-block--color-light { color: #ffffff; }
-.c-content-block--color-muted { color: #969798; }
+.c-content-block--color-muted { color: var(--color-muted); }
 .c-content-block--color-background { color: #F5F6F8; }
 .c-content-block--color-accent { color: #e63946; }
 
@@ -114,7 +114,7 @@
  * Common in eyebrow text, labels, and highlights
  */
 .c-content-block--eyebrow {
-  color: #1a8cff;
+  color: var(--color-primary);
   font-weight: 600;
 }
 

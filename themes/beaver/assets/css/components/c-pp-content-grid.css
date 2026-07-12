@@ -97,7 +97,7 @@
 }
 
 .c-pp-content-grid__title a:hover {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 /* Content Grid Alternate Layout Specific */
@@ -143,21 +143,21 @@
   padding: 8px 12px;
   text-decoration: none;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
   transition: all 0.3s ease;
 }
 
 .c-pp-content-grid__pagination-link:hover {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: white;
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 .c-pp-content-grid__pagination-link--current {
   font-weight: bold;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: white;
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 .c-pp-content-grid__pagination-link--disabled {
@@ -175,10 +175,10 @@
 .c-pp-content-grid__load-more-button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: white;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
   font-weight: 600;
   transition: all 0.3s ease;
 }
