@@ -8,7 +8,7 @@ module: 1
 pillar: demand-before-build
 hypothesis: H1, H3
 icp_test: Do idea-stage and just-built founders recognize the build-first-ask-never sequence as their own?
-cta: "If you've shipped something, which came first for you, the build or the demand test?"
+cta: "If you've shipped something, did you build first, or check if anyone actually wanted it?"
 design: D
 design_file: none
 course_link_placement: first-comment
@@ -20,21 +20,27 @@ notes: |
   BLOCKING: the anecdote (wedding-photographer app, eight months, savings) is a SYNTHETIC PLACEHOLDER.
   Paul must replace it with a real encounter (real niche, real timeframe) before status: scheduled.
   Keep the shape: months spent + no stranger ever asked to pay + founder is rerunning the test now.
-  One negative-positive flip used ("He isn't careless, he's typical.") - at the 1-per-post budget.
   Multi-critic review 2026-07-12 (slop score 0/10): de-jargoned "cold traffic"; broadened the close so
   build-first founders can answer too (ICP flag); dropped "I talk to" to thin the week's
-  consultant-call drumbeat (cross-post flag). Do NOT add a second flip in future edits.
+  consultant-call drumbeat (cross-post flag).
+  Round 2 (2026-07-12, Paul flagged cliches/non-human text; 3-judge panel: rubric + human-ear +
+  simplify): removed "He isn't careless, he's typical." flip (all 3 judges); broke the balanced
+  "felt like progress / felt like begging" clause pair; de-maximed the "cheapest version of a
+  product" sentence; broke the "same idea, one page, 300 strangers, then a decision" noun-stack;
+  de-jargoned "demand test" in the CTA; added Paul into the room ("I told him so", "I've done it
+  myself"). Root cause named by panel: engineered symmetry, which slop-word scoring can't see.
+  No flips remain - do NOT add one back in future edits.
 ---
 
-Eight months of evenings and most of his savings went into an app for wedding photographers that no stranger had ever been asked to pay for.
+He put eight months of evenings and most of his savings into an app for wedding photographers. No stranger had ever been asked to pay for it.
 
-The founder walked me through it last month, and honestly, the product was good. So I asked how many photographers had seen a landing page before he started building. There was no landing page. Building felt like progress, and asking strangers for money felt like begging, so he built.
+He walked me through it last month. The product was good - I told him so. Then I asked how many photographers had seen a landing page before he started building. There was no landing page. Building felt like he was getting somewhere. Asking a stranger for money felt like begging. So he built.
 
-He isn't careless, he's typical. Nearly every first-time founder runs the steps in that order.
+He's not lazy or dumb. This is just what everyone does. I've done it myself.
 
-The cheapest version of a product is a page that describes it, with a real price on it, shown to strangers instead of friends. If nobody clicks, that page just saved you eight months. He's rerunning things in that order now: same idea, one page, 300 strangers, then a decision.
+The cheapest version of your product is a webpage with a price on it. Show it to strangers, not the friends who'll be nice about it. If nobody clicks, that page just saved you eight months of building. He's starting over now: same idea, but this time one page in front of 300 strangers before he writes any more code.
 
-If you've shipped something, which came first for you, the build or the demand test?
+If you've shipped something, did you build first, or check if anyone actually wanted it?
 
 ---
 

@@ -8,7 +8,7 @@ module: 1
 pillar: demand-before-build
 hypothesis: H2
 icp_test: Do concrete fill-in-the-blank frameworks earn saves and "trying this tonight" replies from idea-stage founders?
-cta: "Which blank fights you the hardest?"
+cta: "Which blank did you get stuck on?"
 design: B
 design_file: linkedin-posts/course-promo/assets/week1-tue-founding-hypothesis-sketch.png
 course_link_placement: first-comment
@@ -24,15 +24,22 @@ notes: |
   definitional opener ("An idea living in your head and a hypothesis...") - replaced with a
   person-anchored one; dropped the pre-answered closer ("For most founders I ask...") which killed
   the comment prompt and fed the consultant-call drumbeat; cut the "it hands you" coach-voice line.
+  Round 2 (2026-07-12, Paul flagged cliches/non-human text; 3-judge panel): split the 36-word opener
+  so the framework sits on its own line (blank labels kept verbatim to match the sketch attachment);
+  "your first research question" -> "the first thing to go find out" (course-author vocab leak);
+  "Which blank fights you the hardest?" -> "Which blank did you get stuck on?" (cute personification,
+  2 judges). Gym-owner line judged the most human line of the week - keep verbatim in any edit.
 ---
 
-The first thing I do with any new idea, mine included, is check whether it fits in one sentence with five blanks: if we help [customer] solve [problem] with [approach], they'll pick it over [what they do today] because [your edge].
+The first thing I do with any new idea, mine included, is try to say it in one sentence with five blanks:
 
-Vague words don't count in the blanks. "Busy professionals" is not a customer; "independent gym owners who chase no-shows by text every morning" is, because you can find those people and ask them what they actually do about it.
+If we help [customer] solve [problem] with [approach], they'll pick it over [what they do today] because [your edge].
 
-If an idea has been sitting in your head for a while, set a timer for 90 minutes tonight and try to fill all five. Wherever you get stuck, that blank is your first research question, and it's far cheaper to answer now than after the build.
+Vague words don't count. "Busy professionals" is not a customer. "Independent gym owners who chase no-shows by text every morning" is - because you can find those people and ask them what they actually do about it.
 
-Which blank fights you the hardest?
+If an idea has been sitting in your head for a while, set a timer for 90 minutes tonight and try to fill all five. Wherever you get stuck, that blank is the first thing to go find out, and it's way cheaper to answer now than after you build.
+
+Which blank did you get stuck on?
 
 ---
 

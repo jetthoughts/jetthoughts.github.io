@@ -8,7 +8,7 @@ module: 1
 pillar: demand-before-build
 hypothesis: H3, H4
 icp_test: Which first move do idea-stage founders actually default to, and do build-first voters self-identify in comments?
-cta: "Vote + the pattern I see gets shared once the votes are in."
+cta: "I'll share my guess, and what usually happens after each answer, once the votes are in."
 design: poll
 design_file: none
 course_link_placement: first-comment
@@ -23,13 +23,17 @@ notes: |
   Multi-critic review 2026-07-12 (slop score 0/10): removed "pick the most expensive option first" -
   the ICP critic showed it names the "wrong" answer before voting, shaming build-first voters and
   biasing the exact data the poll exists to collect. Cleanest post of the week per all three critics.
+  Round 2 (2026-07-12, Paul flagged cliches/non-human text; 3-judge panel): cleanest of the five
+  again (rubric ~1/10, ear 3/10). Only fix: split the 37-word "I'm asking because..." sentence and
+  plained "what usually follows" -> "what usually happens after". "The people who end up on calls
+  with me" judged a top human line of the campaign - protect verbatim.
 ---
 
 For everyone who has ever had a business idea in the shower: what did you actually do first?
 
 Not what a book says you should do. The thing you honestly did, or would do tomorrow if the idea felt real enough.
 
-I'm asking because I have a guess about which option wins, and I want to know whether it holds for everyone or just for the people who end up on calls with me. I'll share my guess, and what usually follows each answer, once the votes are in.
+I'm asking because I have a guess about which one wins. I want to know whether it holds for everyone, or just for the people who end up on calls with me. I'll share my guess, and what usually happens after each answer, once the votes are in.
 
 ---
 

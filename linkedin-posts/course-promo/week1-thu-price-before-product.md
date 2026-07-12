@@ -25,13 +25,21 @@ notes: |
   glossed in-body for phone scrollers who don't open the image; "different species of signal"
   copywriter phrase simplified. Opener kept personless deliberately - the ICP critic rated it the
   strongest hook of the week ("I have literally collected 'sounds great' comments").
+  Round 2 (2026-07-12, Paul flagged cliches/non-human text; 3-judge panel): worst post of the week
+  (rubric ~5/10) - four parallel/antithesis constructions in 150 words. Fixed: "A founder can" ->
+  direct "You can" (personless-type opener, 3 judges); killed "boring way to get real evidence"
+  coach-tease; broke the "Anyone who clicks; anyone who completes" parallel stems; replaced the
+  "click is the evidence... tells you something a supportive comment can't" aphorism (unanimous
+  worst line of the week); "two framings" -> "worded two ways" and broke the one-the-other-both
+  tri-beat. Stripe middle kept - judges rated the mechanics the most human part. One soft flip
+  remains ("real in a way a nice comment isn't") at the 1-per-post budget - do NOT add another.
 ---
 
-A founder can collect a hundred "sounds great" comments and still have zero evidence anyone will pay.
+You can collect a hundred "sounds great" comments and still not have one person who'll actually pay.
 
-There's a boring way to get real evidence, and it doesn't need a product. Stripe lets you create a payment link in about ten minutes, and that button goes on a one-page site describing the thing you haven't built yet. Anyone who clicks sees a real checkout; anyone who completes it gets a refund and an honest note about where the product stands. The click is the evidence, because a stranger reaching for a card tells you something a supportive comment can't.
+There's a way to find out before you build anything. It's not exciting, but it works. Stripe lets you create a payment link in about ten minutes, and that button goes on a one-page site describing the thing you haven't built yet. Click it and you hit a real checkout. If someone actually pays, you refund them and tell them straight where the product is. A stranger you've never met pulling out a card is real in a way a nice comment isn't.
 
-I drew the sketch below while writing up this step: same $97 button, two framings. One names the outcome the buyer gets, the other makes the first click feel safer, and both charge exactly the same.
+I drew the sketch below while writing up this step: same $97 button, worded two ways. One leads with what the buyer gets, the other just makes clicking feel less scary. Same price either way.
 
 Have you ever put a price on something that didn't exist yet?
 
