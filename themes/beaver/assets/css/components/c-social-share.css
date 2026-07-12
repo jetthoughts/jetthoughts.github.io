@@ -263,7 +263,7 @@
 
 .c-social-share--author .c-social-share__link {
   padding: 9px 12px;
-  background-color: #121212;
+  background-color: var(--color-dark);
   color: #fff;
   border-radius: 6px;
   font-size: 14px;
@@ -281,7 +281,7 @@
 
 .c-social-share--author .c-social-share__link:hover {
   background-color: #fff;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 /* LinkedIn social hide pattern */

@@ -14,4 +14,11 @@
   /* Primary dark text/border color (JetVelocity obsidian dark).
      Canonical home of the token. */
   --color-dark: #121212;
+
+  /* Spacing tokens — values match the fallbacks live consumers
+     (components/content-block.css) already resolve to, so defining them
+     is rendering-neutral. The old c-spacing.css family (0.5rem --spacing-sm
+     variant) was dead code, deleted 2026-07-12. */
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
 }

@@ -61,12 +61,12 @@
 /* Secondary Button Variant - Only color differences remain */
 .c-button--secondary {
   background-color: #ffffff;
-  color: #121212;
-  border: 2px solid #121212;
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
 }
 
 .c-button--secondary:hover {
-  background-color: #121212;
+  background-color: var(--color-dark);
   color: #ffffff;
 }
 
