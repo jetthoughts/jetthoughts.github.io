@@ -1,0 +1,17 @@
+/* Semantic replacements for what blog/course single pages consumed from the
+   retired 3114-layout.css (+ bf72bba… bundle). Pixel-parity clones:
+   .single-post-row mirrors .fl-row-content.fl-row-fixed-width; the
+   h1.post-title rule mirrors single-post.css's h1.fl-heading override
+   (style.css already covers h1.post-title in its shared 43rem block). */
+
+.single-post-row {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 0;
+  max-width: 1180px;
+}
+
+.blog article.single-content > header h1.post-title {
+  line-height: 1.15;
+  margin-bottom: 0.75rem !important;
+}

@@ -14,7 +14,7 @@
   {{ partialCached "assets/css-processor.html" (dict "resources" $CSS "bundleName" "privacy-policy") "privacy-policy" }}
 {{ end }}
 {{ define "main" }}
-  <main class="simple-page" role="main" itemprop="mainContentOfPage">
+  <div class="simple-page" itemprop="mainContentOfPage">
     <article
       itemscope="itemscope"
       itemtype="https://schema.org/CreativeWork">
@@ -29,5 +29,5 @@
         </div>
       </div>
     </article>
-  </main>
+  </div>
 {{ end }}
