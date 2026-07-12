@@ -23,8 +23,10 @@ pattern), not to optimize in place.
 
 ### Success criteria
 
-1. **FL retirement burn-down**: live FL layout files 17 → 0. Each rewritten page
-   deletes its FL CSS file(s) and its template's `fl-node-*` markup in the same PR.
+1. **FL retirement burn-down**: live FL layout files 16 → 0 (17 at audit time;
+   the e93d9b85 bundle was merged away in PR #363 — see
+   `css-bundle-ownership-map.md` for the live list). Each rewritten page deletes
+   its FL CSS file(s) and its template's `fl-node-*` markup in the same PR.
 2. **No obfuscated artifacts** at end state: zero hash-named CSS files
    (`bf72bba…`, `e966db44…`, `fb2624…`), zero generated node-id rules.
 3. **No duplication in the hand-maintained layer**: new CSS uses tokens from
@@ -126,7 +128,7 @@ sooner; the protocol never changes.
 - Old Phase 3 (pattern consolidation + Hugo enhancements, 20–45 h) is **closed as
   superseded** — its premise died with the compiled+gzip evidence.
 - TASK-TRACKER updates: GOAL OVERVIEW rewritten to this goal; stale CUMULATIVE
-  METRICS replaced by the FL burn-down table (17 → 0); new phases = Phase 0
+  METRICS replaced by the FL burn-down table (16 → 0); new phases = Phase 0
   (scaffolding) then rewrite sprints R1…Rn.
 - Pace: one page per sprint, no fixed calendar. One branch + one bundled PR per
   sprint, per repo policy.
