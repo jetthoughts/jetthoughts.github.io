@@ -554,6 +554,42 @@ fcp_metrics:
 
 ## 🔄 UPDATE LOG
 
+### 2026-07-12 (sprint 6 — swarm-verified cleanup)
+- **Landed** (branch css-migration/wp1.1-sprint-6, stacked on sprint-5,
+  4 commits): executed via swarm — two read-only verification agents
+  (deletion-manifest builder + header-race analyst), all mutations
+  sequential in the main loop under the standard gate.
+  1. e39ac043 — nav -active menu state removed (analyst option c). The
+     partialCached race means active-state NEVER worked (frozen from
+     first-rendered page; steady state = nothing highlighted) and was a
+     screenshot-flake source. Zero visual change: all 780 pages carrying
+     the inline nav bundle diff by exactly the two removed dead .-active
+     rules (verified per page). Alternative option b (make it work: key
+     header-content cache by computed active-menu id, 9 entries, ~1-2h,
+     baseline churn on section pages) documented for Paul.
+  2. b2cce936 — draft-only _test apparatus deleted: content/_test/,
+     layouts/_test/single.html + its 3 orphan partials
+     (components/hero-section, use-case-card, testimonial).
+     **CORRECTION to sprint-5 follow-up**: component-bundle.css is LIVE
+     (blog-list-css-resources.html:19 + free-consultation:7) — it and its
+     @imported component CSS (c-hero-sections, c-cta-blocks, c-pp-*) stay.
+  3. 616a94de — 6 more zero-loader CSS files deleted (swarm sweep):
+     accessibility-focus, bem-404-conversion, bem-home-page-minimal,
+     cta-backgrounds, fl-foundation, mobile-fixes. No resources.Match
+     globs exist in the theme, so loader counts are exhaustive.
+     bem-home-page-minimal carried the dead --cta-button-bg token —
+     that sprint-4 repoint follow-up dissolves.
+  4. 6166f561 — 3 zero-caller data partials deleted:
+     partials/data/{authors,testimonials,company}-cached.html.
+- **Gate**: per commit — converged production build diffed against the
+  prior commit's converged build (bundles + inline styles byte-identical,
+  zero non-noise HTML diffs) + test:critical 46/46 + dtest 46/46.
+  Zero rollbacks.
+- **Remaining follow-ups**: inline components tree tokenization (~19
+  literals); --jt-text-color/--jt-text-primary repoint (Paul);
+  fl-common-modules.css reboot purge (own sprint); WP1.2; optional
+  option-b nav active-state revival (Paul).
+
 ### 2026-07-12 (sprint 5 — orphan cleanup)
 - **Landed** (branch css-migration/wp1.1-sprint-5, one bundled PR, 6 commits,
   28 files, +24/-67,517):
