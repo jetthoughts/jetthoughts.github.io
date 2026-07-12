@@ -56,7 +56,7 @@ The real question after the MVP ships is whether the people who already touched 
 
 Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite. While he was building the playbook for those three, he kept noticing the same dividing line between products that ignited and products that needed life support. He surveyed every product's existing users with a single load-bearing question: "How would you feel if you could no longer use [product]?" The answer is one of four: very disappointed, somewhat disappointed, not disappointed, no longer use it. If at least 40% of users said "very disappointed," the product was almost always able to grow on outbound and word of mouth alone. Under 40%, growth stalled until the product changed. Ellis explained the cutoff and the survey wording on Lenny Rachitsky's podcast ([transcript and replay here](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis)).
 
-![Sean Ellis 40% gauge - the threshold that decides whether paid ads will work or burn](sean-ellis-gauge.svg)
+![Semicircular gauge of the share of users answering very disappointed: amber below the 40% line means product problem, green at 40% or more means a must-have user](sean-ellis-gauge.svg)
 
 ## Why you, the non-technical founder, get this wrong
 
@@ -137,7 +137,7 @@ Pull three numbers:
 2. **Per-segment must-have %.** Slice by job title and by company size. One segment will almost always be higher than the average. That is your must-have segment.
 3. **Three verbatim Q2-Q3 quotes from your must-have segment.** Paste them into a Google Doc. Those quotes are your persona description, your ad copy, and your cold-email subject line for the next chapter.
 
-![Segment isolation Venn - what an average hides and what one slice reveals](segment-isolation.svg)
+![Three segment cards showing what the blended 28% average hides: B2B Marketers at 64% must-have clear the 40% line, Solo Founders at 14% and Agencies at 0% do not](segment-isolation.svg)
 
 ### Step 5 - The decision tree
 

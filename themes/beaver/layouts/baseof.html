@@ -102,7 +102,27 @@
         // nodes to fit legibly on mobile, the fix is to simplify the
         // Mermaid source (fewer nodes, shorter labels, or split into
         // sub-diagrams), not CSS gymnastics.
-        mermaid.initialize({ startOnLoad: true });
+        //
+        // Site-wide house theme (2026-07-12 design-critic pass). Per-diagram
+        // %%init%% directives still override these; the defaults fix the three
+        // theme-wide tells the critique found on all 22 course diagrams:
+        // hairline default edges, floating edge labels, and cursive text
+        // rattling inside oversized auto-measured nodes.
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'base',
+          themeVariables: {
+            fontFamily: "'Caveat', 'Patrick Hand', cursive",
+            fontSize: '20px',
+            primaryColor: '#fff5f5',
+            primaryBorderColor: '#cc342d',
+            primaryTextColor: '#1a1a1a',
+            lineColor: '#453f3f',
+            edgeLabelBackground: '#faf7f2'
+          },
+          flowchart: { nodeSpacing: 45, rankSpacing: 55, padding: 14 },
+          themeCSS: '.edgePaths path { stroke-width: 2.25px; } .edgeLabel { font-size: 18px; padding: 2px 6px; border-radius: 6px; }'
+        });
       </script>
     {{ end }}
     <script>

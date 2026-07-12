@@ -1,46 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" role="img" aria-labelledby="phih-title">
-  <title id="phih-title">Product Hunt 3.1% vs Indie Hackers 23.1% - the OpenHunts 2024 conversion data</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="phih2-title">
+  <title id="phih2-title">Product Hunt 3.1% per launch event vs Indie Hackers 23.1% per engaged post - two separate metrics, not one axis.</title>
+  <desc>Two separate stat cards. Left, Product Hunt: 3.1% per launch event, 387 launches studied, 89% of founders would not launch again, shown as a single one-day spike. Right, Indie Hackers: 23.1% per engaged post, shown as sustained repeated engagement. Bottom note: Product Hunt is not bad - it is a one-day event in a job that needs sustained motion over a quarter.</desc>
   <defs>
     <style>
-      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
-      .bar-stat      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 44px; fill: #fff; font-weight: 700; }
-      .bar-label     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 22px; fill: #1a1a1a; font-weight: 700; }
-      .bar-note      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #444; font-style: italic; }
-      .axis          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #666; }
-      .insight       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 600; }
-      .bar-ph        { fill: #cc342d; stroke: #1a1a1a; stroke-width: 2; }
-      .bar-ih        { fill: #a855f7; stroke: #1a1a1a; stroke-width: 2; }
-      .source        { font-family: "Caveat", "Patrick Hand", cursive; font-size: 13px; fill: #666; }
+      .h      { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: bold; fill: #1a1a1a; }
+      .sub    { font-size: 15px; fill: #666; font-style: italic; }
+      .stamptx{ font-size: 16px; font-weight: bold; fill: #fff; }
+      .big-ph { font-size: 68px; font-weight: bold; fill: #cc342d; }
+      .big-ih { font-size: 68px; font-weight: bold; fill: #7c3aed; }
+      .metric { font-size: 19px; font-weight: bold; fill: #1a1a1a; }
+      .fact   { font-size: 15px; fill: #333; }
+      .motif  { font-size: 13px; fill: #888; font-style: italic; }
+      .note   { font-size: 18px; font-weight: bold; fill: #1a1a1a; }
+      .card-ph{ fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .card-ih{ fill: #fbe9ff; stroke: #7c3aed; stroke-width: 2.5; }
     </style>
   </defs>
 
-  <text x="500" y="40" class="heading" text-anchor="middle">Launch-day platforms - what actually converts in 2024</text>
-  <text x="500" y="68" class="bar-note" text-anchor="middle">OpenHunts study of 387 product launches and 156 founders surveyed</text>
+  <rect width="960" height="420" fill="#ffffff"/>
 
-  <!-- Axis -->
-  <line x1="180" y1="430" x2="900" y2="430" stroke="#1a1a1a" stroke-width="2"/>
-  <text x="180" y="450" class="axis" text-anchor="start">0%</text>
-  <text x="362" y="450" class="axis" text-anchor="middle">10%</text>
-  <text x="544" y="450" class="axis" text-anchor="middle">20%</text>
-  <text x="726" y="450" class="axis" text-anchor="middle">30%</text>
-  <text x="900" y="450" class="axis" text-anchor="end">40%</text>
+  <text x="480" y="36" text-anchor="middle" class="h title">Two channels. Two different jobs.</text>
+  <text x="480" y="60" text-anchor="middle" class="h sub">OpenHunts 2024 - 387 launches, 156 founders surveyed. Separate metrics, shown separately.</text>
 
-  <!-- Product Hunt bar (3.1%) -->
-  <text x="180" y="120" class="bar-label">Product Hunt</text>
-  <rect x="180" y="133" width="56" height="55" rx="6" class="bar-ph" transform="rotate(-0.3 208 160)"/>
-  <text x="260" y="175" class="bar-stat" fill="#cc342d">3.1%</text>
-  <text x="180" y="212" class="bar-note">per launch event</text>
-  <text x="180" y="234" class="bar-note">89% of PH founders surveyed</text>
-  <text x="180" y="256" class="bar-note">said they would not launch again</text>
+  <!-- ============ PRODUCT HUNT CARD ============ -->
+  <rect x="34" y="82" width="430" height="256" rx="14" class="card-ph" transform="rotate(-0.5 249 210)"/>
 
-  <!-- Indie Hackers bar (23.1%) -->
-  <text x="180" y="298" class="bar-label">Indie Hackers</text>
-  <rect x="180" y="312" width="420" height="55" rx="6" class="bar-ih" transform="rotate(0.4 390 339)"/>
-  <text x="625" y="354" class="bar-stat" fill="#a855f7">23.1%</text>
-  <text x="180" y="390" class="bar-note">per engaged post</text>
+  <rect x="58" y="102" width="176" height="30" rx="15" fill="#cc342d"/>
+  <text x="146" y="123" text-anchor="middle" class="h stamptx">PRODUCT HUNT</text>
 
-  <!-- Insight box -->
-  <rect x="100" y="465" width="800" height="60" rx="10" fill="#fff8e0" stroke="#b8860b" stroke-width="2"/>
-  <text x="500" y="492" class="insight" text-anchor="middle">7.4x conversion advantage for IH per engaged post vs PH per launch.</text>
-  <text x="500" y="513" class="source" text-anchor="middle">Different metrics, same lesson: showing up where founders complain converts; one-day launches do not.</text>
+  <text x="58" y="212" class="h big-ph">3.1%</text>
+  <text x="58" y="240" class="h metric">per launch event</text>
+
+  <text x="58" y="278" class="h fact">387 launches studied</text>
+  <text x="58" y="304" class="h fact">89% said they would not launch again</text>
+
+  <!-- one-day spike motif: flat, one sharp spike, flat again -->
+  <g transform="translate(300,150)">
+    <polyline points="0,60 44,60 58,14 72,60 150,60" fill="none" stroke="#cc342d" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <line x1="0" y1="60" x2="150" y2="60" stroke="#cc342d" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.5"/>
+    <text x="75" y="82" text-anchor="middle" class="h motif">one-day spike</text>
+  </g>
+
+  <!-- ============ INDIE HACKERS CARD ============ -->
+  <rect x="496" y="82" width="430" height="256" rx="14" class="card-ih" transform="rotate(0.5 711 210)"/>
+
+  <rect x="520" y="102" width="176" height="30" rx="15" fill="#7c3aed"/>
+  <text x="608" y="123" text-anchor="middle" class="h stamptx">INDIE HACKERS</text>
+
+  <text x="520" y="212" class="h big-ih">23.1%</text>
+  <text x="520" y="240" class="h metric">per engaged post</text>
+
+  <text x="520" y="278" class="h fact">Written as engagement,</text>
+  <text x="520" y="304" class="h fact">not a launch announcement</text>
+
+  <!-- sustained-engagement motif: repeated steady bumps -->
+  <g transform="translate(762,150)">
+    <line x1="0" y1="60" x2="150" y2="60" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.5"/>
+    <rect x="4"   y="30" width="16" height="30" rx="3" fill="#7c3aed"/>
+    <rect x="28"  y="24" width="16" height="36" rx="3" fill="#7c3aed"/>
+    <rect x="52"  y="28" width="16" height="32" rx="3" fill="#7c3aed"/>
+    <rect x="76"  y="20" width="16" height="40" rx="3" fill="#7c3aed"/>
+    <rect x="100" y="26" width="16" height="34" rx="3" fill="#7c3aed"/>
+    <rect x="124" y="18" width="16" height="42" rx="3" fill="#7c3aed"/>
+    <text x="75" y="82" text-anchor="middle" class="h motif">sustained motion</text>
+  </g>
+
+  <!-- ============ BOTTOM TAKEAWAY ============ -->
+  <rect x="34" y="352" width="892" height="52" rx="12" fill="#fff8e0" stroke="#b8860b" stroke-width="2"/>
+  <text x="480" y="384" text-anchor="middle" class="h note">Product Hunt is not bad - it is a one-day event in a job that needs sustained motion over a quarter.</text>
 </svg>

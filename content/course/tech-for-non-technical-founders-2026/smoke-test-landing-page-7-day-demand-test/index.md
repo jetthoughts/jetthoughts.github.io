@@ -50,7 +50,7 @@ Choose based on who your hypothesis names in the [customer] blank. The dollar ra
 
 **Start ad-account setup 2-3 days before launch.** First-time ad accounts can take 24-72 hours to approve. Meta is the slowest; Reddit clears same-day.
 
-![A landing page with ad traffic arrows pointing to it, a tracking dashboard showing conversion numbers, and a decision arrow leading to go/iterate/kill](smoke-test-signal.svg)
+![Signal meter reading the smoke-test conversion rate: 0-3% kill or pivot, 3-6% iterate the message, 6-10% promising, 10-20% strong signal, over 20% suspicious - with the 6% go line marked](smoke-test-signal.svg)
 
 ## Launch and read the signal
 

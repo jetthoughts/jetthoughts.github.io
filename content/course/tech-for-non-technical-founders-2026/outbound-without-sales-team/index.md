@@ -61,7 +61,7 @@ Picture the situation. Four paid pilots have closed from your personal network a
 
 The four-line cold-email sequence below is what customer five answers in week three for under $40 of tooling.
 
-![Product Hunt 3.1% vs Indie Hackers 23.1% - per OpenHunts 2024](ph-vs-ih.svg)
+![Two stat cards, separate metrics: Product Hunt 3.1% per launch event (one-day spike, 89% would not launch again) vs Indie Hackers 23.1% per engaged post (sustained motion) - OpenHunts 2024](ph-vs-ih.svg)
 
 This is the closing chapter of Module 5 (First Paying Customer). Once your personal network is exhausted, the next 10 customers come from filtered cold outbound, not from launch events.
 

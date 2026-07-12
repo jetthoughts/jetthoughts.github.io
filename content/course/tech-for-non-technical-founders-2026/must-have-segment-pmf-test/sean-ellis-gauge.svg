@@ -1,59 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="gauge-title">
-  <title id="gauge-title">The Sean Ellis 40% threshold: where founder paid-ads instinct fails and where it does not</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="gauge-title">
+  <title id="gauge-title">The Sean Ellis 40% gauge: the share of your first users who would be "very disappointed" without the product, with 40% as the pass line.</title>
+  <desc>A semicircular meter reading 0 to 100 percent of "very disappointed" survey answers. A bold red line marks the 40 percent threshold. The arc left of the line is amber (under 40 percent, a product problem); the arc right of the line is green (must-have segment, go sell). A needle points into the green zone.</desc>
   <defs>
     <style>
-      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .axis          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 600; }
-      .note          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #444; font-style: italic; }
-      .threshold     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 22px; fill: #cc342d; font-weight: 700; }
-      .gauge-bg      { fill: #fff5f5; stroke: #1a1a1a; stroke-width: 2.5; stroke-linejoin: round; }
-      .gauge-fill    { fill: #cc342d; opacity: 0.75; }
-      .gauge-pass    { fill: #a855f7; opacity: 0.7; }
-      .arrow         { stroke: #1a1a1a; stroke-width: 2; fill: none; marker-end: url(#arrow); }
-      .threshold-line{ stroke: #cc342d; stroke-width: 3; stroke-dasharray: 8 4; }
+      .h        { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .q        { font-size: 26px; font-weight: 700; fill: #1a1a1a; }
+      .sub      { font-size: 17px; fill: #666; font-style: italic; }
+      .tick     { font-size: 17px; font-weight: 700; fill: #1a1a1a; }
+      .thr      { font-size: 22px; font-weight: 700; fill: #cc342d; }
+      .cardhd-a { font-size: 20px; font-weight: 700; fill: #b8860b; }
+      .cardhd-g { font-size: 20px; font-weight: 700; fill: #2e7d32; }
+      .cardln   { font-size: 15px; fill: #1a1a1a; }
+      .foot     { font-size: 16px; fill: #666; font-style: italic; }
+      .needlenote { font-size: 15px; fill: #2e7d32; font-weight: 700; }
+      .arc-a    { fill: none; stroke: #e0a92e; stroke-width: 54; }
+      .arc-g    { fill: none; stroke: #2e7d32; stroke-width: 54; }
+      .card-a   { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
+      .card-g   { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .thrline  { stroke: #cc342d; stroke-width: 5; stroke-linecap: round; }
+      .needle   { stroke: #1a1a1a; stroke-width: 6; stroke-linecap: round; }
     </style>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L0,10 L10,5 z" fill="#1a1a1a"/>
-    </marker>
   </defs>
 
-  <text x="450" y="40" class="heading" text-anchor="middle">"Very disappointed if this disappeared tomorrow"</text>
-  <text x="450" y="68" class="note" text-anchor="middle">Sean Ellis 40% test - survey your first 10-30 users before spending a dollar on ads</text>
+  <!-- Survey question header -->
+  <text x="480" y="40" text-anchor="middle" class="h q">"How would you feel if you could no longer use it?"</text>
+  <text x="480" y="66" text-anchor="middle" class="h sub">Gauge = % of your first 10-30 users who answer "very disappointed"</text>
 
-  <!-- Axis -->
-  <line x1="120" y1="380" x2="780" y2="380" stroke="#1a1a1a" stroke-width="2.5"/>
-  <text x="120" y="405" class="axis" text-anchor="middle">0%</text>
-  <text x="350" y="405" class="axis" text-anchor="middle">25%</text>
-  <text x="450" y="405" class="threshold" text-anchor="middle">40%</text>
-  <text x="600" y="405" class="axis" text-anchor="middle">60%</text>
-  <text x="780" y="405" class="axis" text-anchor="middle">100%</text>
+  <!-- Gauge arcs (semicircle, mid-radius 185, centre 480,350) -->
+  <path class="arc-a" d="M 295 350 A 185 185 0 0 1 422.83 174.05"/>
+  <path class="arc-g" d="M 422.83 174.05 A 185 185 0 0 1 665 350"/>
 
-  <!-- Threshold line -->
-  <line x1="450" y1="120" x2="450" y2="380" class="threshold-line"/>
-  <text x="450" y="105" class="threshold" text-anchor="middle">40% line</text>
+  <!-- 40% threshold line across the band -->
+  <line class="thrline" x1="433.65" y1="207.34" x2="411.4" y2="138.86"/>
+  <text x="398" y="126" text-anchor="middle" class="h thr">40%</text>
+  <text x="398" y="106" text-anchor="middle" class="h thr" font-size="16">THE LINE</text>
 
-  <!-- Failing zone -->
-  <rect x="120" y="270" width="330" height="110" class="gauge-bg" transform="rotate(-0.3 285 325)"/>
-  <text x="285" y="298" class="axis" text-anchor="middle">UNDER 40%</text>
-  <text x="285" y="322" class="note" text-anchor="middle">Product problem.</text>
-  <text x="285" y="343" class="note" text-anchor="middle">More ads will not fix this.</text>
-  <text x="285" y="364" class="note" text-anchor="middle">Talk to your "very disappointed" users.</text>
+  <!-- Scale ticks -->
+  <text x="295" y="380" text-anchor="middle" class="h tick">0%</text>
+  <text x="665" y="380" text-anchor="middle" class="h tick">100%</text>
 
-  <!-- Passing zone -->
-  <rect x="450" y="200" width="330" height="110" class="gauge-bg" transform="rotate(0.4 615 255)"/>
-  <text x="615" y="228" class="axis" text-anchor="middle">40% OR HIGHER</text>
-  <text x="615" y="252" class="note" text-anchor="middle">You have a must-have user.</text>
-  <text x="615" y="273" class="note" text-anchor="middle">Now find more of them.</text>
-  <text x="615" y="294" class="note" text-anchor="middle">Outreach beats paid ads at this stage.</text>
+  <!-- Needle pointing into the green zone (~62%) -->
+  <line class="needle" x1="480" y1="350" x2="543.32" y2="190.08"/>
+  <circle cx="480" cy="350" r="13" fill="#1a1a1a"/>
 
-  <!-- Decision arrow -->
-  <text x="100" y="160" class="axis">If you ran ads first:</text>
-  <text x="100" y="183" class="note">you would burn $3K-$5K</text>
-  <text x="100" y="203" class="note">finding out the same thing.</text>
-  <path d="M 115 224 Q 205 250 284 268" class="arrow"/>
+  <!-- Amber caption card (left, under 40%) -->
+  <rect x="24" y="236" width="234" height="120" rx="14" class="card-a" transform="rotate(-0.6 141 296)"/>
+  <text x="141" y="266" text-anchor="middle" class="h cardhd-a">UNDER 40%</text>
+  <text x="141" y="292" text-anchor="middle" class="h cardln">Product problem,</text>
+  <text x="141" y="312" text-anchor="middle" class="h cardln">not a marketing one.</text>
+  <text x="141" y="336" text-anchor="middle" class="h cardln">More ads won't fix it —</text>
+  <text x="141" y="352" text-anchor="middle" class="h cardln">talk to the "very disappointed".</text>
 
-  <!-- Bottom callout -->
-  <rect x="120" y="455" width="660" height="65" rx="12" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
-  <text x="450" y="481" class="axis" text-anchor="middle">5 questions. 24-48 hour run. Free Typeform or Tally.</text>
-  <text x="450" y="504" class="note" text-anchor="middle">Re-run every 6 weeks until the must-have % stops climbing or holds steady above 40%.</text>
+  <!-- Green caption card (right, 40% or more) -->
+  <rect x="702" y="236" width="234" height="120" rx="14" class="card-g" transform="rotate(0.5 819 296)"/>
+  <text x="819" y="266" text-anchor="middle" class="h cardhd-g">40% OR MORE</text>
+  <text x="819" y="292" text-anchor="middle" class="h cardln">You have a must-have user.</text>
+  <text x="819" y="312" text-anchor="middle" class="h cardln">Outreach beats paid ads —</text>
+  <text x="819" y="336" text-anchor="middle" class="h cardln">go find more of them</text>
+  <text x="819" y="352" text-anchor="middle" class="h cardln">and start selling.</text>
+
+  <!-- Footer -->
+  <text x="480" y="416" text-anchor="middle" class="h foot">Run the survey before you buy any ads - 5 questions, free on Typeform or Tally.</text>
 </svg>
