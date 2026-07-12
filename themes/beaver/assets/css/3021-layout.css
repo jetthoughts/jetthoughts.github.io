@@ -1,7 +1,5 @@
 @import "foundations/css-variables.css";
 @import "foundations/fl-builder-common-base.css"; /* Consolidated: box-sizing, clearfix, sr-only utilities */
-/* FL-Builder visibility rules removed - already in utilities/fl-builder-visibility.css */
-/* Lines 42-48 removed: duplicate .fl-visible-desktop rules (already in utilities/fl-builder-visibility.css) */
 
 .fl-row, .fl-row-content {
   margin-left: auto;
@@ -317,9 +315,6 @@
   text-align: center;
   max-width: 100%;
 }
-/* FL-Builder button alignment removed - already in utilities/fl-builder-components.css */
-/* FL-Builder button alignment removed - already in utilities/fl-builder-components.css */
-/* FL-Builder button alignment removed - already in utilities/fl-builder-components.css */
 .fl-builder-content .fl-button i {
   font-size: 1.3em;
   height: auto;
@@ -727,10 +722,8 @@ img.mfp-img {
   }
 }
 
-/* @media (max-width: 1200px) visibility rules removed - already in utilities/fl-builder-visibility.css */
 
 @media (max-width: 1115px) {
-  /* .fl-visible-* rules removed - already in utilities/fl-builder-visibility.css */
 
   .fl-col-group.fl-col-group-medium-reversed {
     display: -webkit-flex;
@@ -749,7 +742,6 @@ img.mfp-img {
 }
 
 @media (max-width: 860px) {
-  /* .fl-visible-* rules removed - already in utilities/fl-builder-visibility.css */
 
   .fl-row-content-wrap {
     background-attachment: scroll !important;

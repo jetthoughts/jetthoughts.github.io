@@ -26,11 +26,11 @@
 
 ```
 Phase 1: Critical CSS Inline     [✅❌✅❌] 4/4 WPs resolved (2 done, 2 closed with evidence)
-Phase 2: FL-Builder Foundations  [🔲🔲🔲🔲] 0/4 WPs    (0% complete)
+Phase 2: FL-Builder Foundations  [❌❌❌❌] 4/4 WPs resolved (all closed with evidence; cleanup shipped instead)
 Phase 3: Additional Patterns     [🔲🔲🔲🔲] 0/4 WPs    (0% complete)
 
-Total Progress: 4/12 work packages resolved
-Lines Eliminated: ~70,600 (sprints 1-6; orphan deletion + consolidation)
+Total Progress: 8/12 work packages resolved
+Lines Eliminated: ~73,150 (sprints 1-7; orphan deletion + consolidation)
 ```
 
 **Status Legend**:
@@ -239,16 +239,22 @@ notes: |
 
 ## 📅 PHASE 2: FL-Builder Foundation Extraction
 
-**Phase Status**: 🔲 Not Started
-**Duration**: 40-50 hours (4-5 weeks part-time)
-**Target Impact**: 1,900-2,900 lines eliminated
-**Risk Level**: MEDIUM - Systematic extraction from 7 files
+**Phase Status**: ❌ CLOSED 2026-07-12 (sprint 7) — extraction rejected on measurement; orphan cleanup + bundle merge shipped instead
+**Original Target**: 1,900-2,900 lines eliminated via shared FL foundations
+**Why closed** (two independent read-only audits against the compiled production baseline):
+- The spec's "7 FL-Builder layout files" is stale: **17 live layout files**, all external `<link>` bundles via `css-processor.html`, none inline.
+- The proposed foundation files **already existed as never-wired orphans** (utilities/fl-builder-*, components/layout-*, foundations/_fl-responsive-display.scss — a .scss file in a Sass-less PostCSS pipeline). Deleted in sprint 7.
+- **Shipped-byte math is net-NEGATIVE**: each page loads exactly one PurgeCSS-purged bundle carrying only its own FL subset. A shared foundation must carry the union of all 979 unique FL rules (120KB raw / 11.3KB gz): first-visit +7.1KB gz (homepage) to +9.8KB gz (blog list) per page. Multi-page warm-cache session saves only ~1.5KB gz total across 4 pages.
+- The `.fl-visible` "90-95% duplication" claim measured at **41.9%** across bundles (453 instances, 263 distinct — high per-bundle counts are distinct breakpoint variants, not copies).
+- ~7,991 of 75,382 layout-file lines are per-page `fl-node-XXXX` rules that extraction cannot consolidate by definition; the byte-identical generic blocks are only a few hundred lines and already deduped per-bundle at build time by postcss-delete-duplicate-css.
+
+Same lesson as WP1.4: verify projected savings against COMPILED + GZIPPED output, not source line counts.
 
 ### Work Package Status
 
-#### WP2.1: FL-Row Foundation Extraction 🔲 NOT STARTED
+#### WP2.1: FL-Row Foundation Extraction ❌ CLOSED — net-negative on shipped bytes (see Phase header)
 ```yaml
-status: 🔲 Not Started
+status: ❌ Closed 2026-07-12 without implementation (sprint 7 measurement)
 priority: P0 🔥 Critical
 duration: 12-16 hours
 files_affected: 7 FL-Builder layout files
@@ -274,9 +280,9 @@ actual_commits: -
 notes: Largest single pattern extraction in project
 ```
 
-#### WP2.2: FL-Col Grid Foundation 🔲 NOT STARTED
+#### WP2.2: FL-Col Grid Foundation ❌ CLOSED — net-negative on shipped bytes (see Phase header)
 ```yaml
-status: 🔲 Not Started
+status: ❌ Closed 2026-07-12 without implementation (sprint 7 measurement)
 priority: P0 🔥 Critical
 duration: 10-14 hours
 files_affected: 7 FL-Builder layout files
@@ -302,9 +308,9 @@ actual_commits: -
 notes: Grid system must maintain responsive behavior
 ```
 
-#### WP2.3: FL-Visible Responsive Foundation 🔲 NOT STARTED
+#### WP2.3: FL-Visible Responsive Foundation ❌ CLOSED — duplication claim falsified (41.9%, not 90-95%)
 ```yaml
-status: 🔲 Not Started
+status: ❌ Closed 2026-07-12 without implementation (sprint 7 measurement)
 priority: P0 🔥 Critical
 duration: 10-14 hours
 files_affected: 7 FL-Builder layout files
@@ -330,9 +336,9 @@ actual_commits: -
 notes: Highest duplication percentage (90-95%)
 ```
 
-#### WP2.4: Foundation Integration & Validation 🔲 NOT STARTED
+#### WP2.4: Foundation Integration & Validation ❌ CLOSED — moot (no foundations to integrate; WP2.1-2.3 closed)
 ```yaml
-status: 🔲 Not Started
+status: ❌ Closed 2026-07-12 (sprint 7)
 priority: P0 🔥 Critical
 duration: 8-10 hours
 files_affected: All 7 FL-Builder layout files + 3 foundation files
@@ -360,15 +366,13 @@ notes: Phase 2 gate - must pass all validations
 ### Phase 2 Summary
 ```yaml
 work_packages_total: 4
-work_packages_completed: 0
-work_packages_blocked: 0
-total_duration_target: 40-50 hours
-total_duration_actual: 0 hours
-total_lines_eliminated_target: 1,900-2,900 lines
-total_lines_eliminated_actual: 0 lines
-total_commits_target: 100-135 commits
-total_commits_actual: 0 commits
-foundation_files_created: 0 / 3 (_fl-row, _fl-col, _fl-responsive-display)
+work_packages_completed: 0 (all 4 closed with evidence, no extraction implemented)
+phase_status: CLOSED 2026-07-12 (sprint 7)
+foundation_files_created: 0 — and the 6 pre-existing never-wired foundation orphans were DELETED
+shipped_instead:
+  - deleted 6 orphan artifacts + 61 stale comment refs (-597 lines, compiled output byte-identical)
+  - merged e93d9b85…-layout-bundle.css into its superset bf72bba… (-1,956 lines, compiled output byte-identical; clients page purges the 2 extra rules)
+lesson: same as WP1.4 — savings claims must be verified against compiled+gzipped bundles; PurgeCSS-per-bundle already gives each page its minimal FL subset, so shared foundations regress first-visit transfer size
 ```
 
 ---
@@ -516,7 +520,7 @@ foundation_files_created: 0 / 2 (_fl-backgrounds, _fl-imports)
 ```yaml
 phase_1_blockers: NONE - Ready to start immediately
 phase_2_blockers: NONE - Waiting for Phase 1 completion
-phase_3_blockers: NONE - Waiting for Phase 2 completion
+phase_3_blockers: NONE - Phase 2 closed 2026-07-12; Phase 3 WPs must be re-scoped against compiled+gzip output BEFORE any work starts (Phase 1+2 both falsified their specs)
 
 critical_path_risks: NONE - All dependencies clear
 ```
@@ -593,6 +597,39 @@ fcp_metrics:
 ---
 
 ## 🔄 UPDATE LOG
+
+### 2026-07-12 (sprint 7 — Phase 2 re-scoped and closed)
+
+Swarm protocol: two parallel read-only auditors (source inventory + compiled-output
+measurement against a converged production baseline); all mutations sequential in the
+main loop under the byte-diff gate + both visual suites per commit.
+
+**Evidence (falsified the Oct-2025 Phase 2 spec on every load-bearing claim):**
+- 17 live layout files (not 7), all external bundles, mapped file→template→page.
+- Proposed foundation destinations already existed as 6 never-wired orphans, one of them
+  `.scss` in a Sass-less pipeline. The Oct plan was half-built, abandoned, and never loaded.
+- Cross-source duplication per page < 1KB raw (FL portion ≈ 0); careers (worst page)
+  perfect-dedup saves 310 bytes gz. The 201KB "redundancy" spans 19 page-type bundles a
+  visitor never co-loads.
+- Shared-foundation simulation: first-visit +7.1 to +9.8KB gz per page (PurgeCSS already
+  ships per-page minimal subsets; union foundation = 120KB raw / 11.3KB gz unpurged).
+- `.fl-visible` duplication 41.9% measured vs 90-95% claimed.
+
+**Shipped:**
+- 5892fe44 — deleted 6 orphan FL-foundation artifacts + 61 stale comment refs
+  (-597 lines). Gate: all compiled bundles byte-identical; HTML diffs = known noise only
+  (sw.js?v= stamp, taxonomy term-casing race). macOS 46/46 + 84 screenshots clean;
+  Linux dtest 46/46.
+- (this commit) — merged `e93d9b85…-layout-bundle.css` (1,956 lines) into its superset
+  `bf72bba…` (13-line diff: img.mfp-img padding + fl-photo @860px block) by repointing
+  `page/clients.html`. Compiled output 100% byte-identical (PurgeCSS drops the 2 extra
+  rules for clients; clients page has zero mfp-img/fl-photo elements). Both suites green.
+
+**Not done / follow-ups:** Phase 3 specs carry the same Oct-2025 line-count methodology —
+re-scope against compiled+gzip before starting. `fl-builder-common-base.css` and
+`utilities/fl-builder-grid.css` are single-importer live files (fold-in candidates for a
+later sprint). Near-dupe cohort analysis (12 numbered files vs 4 hash bundles) done, no
+further whole-file merges found.
 
 ### 2026-07-12 (sprint 6 continuation — WP1 / Phase 1 closed)
 - **Landed** (same branch/PR #360, 7 more commits): Phase 1 fully resolved.
