@@ -330,6 +330,12 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "course/landing", tolerance: 0.03, skip_area: %w[picture img]
   end
 
+  def test_course_chapter
+    visit "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/"
+
+    assert_stable_screenshot "course/chapter", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
   def test_visit_course_chapter_from_landing
     # From the course landing, user can click into the first chapter (Founding Hypothesis).
     visit "/course/tech-for-non-technical-founders-2026/"
