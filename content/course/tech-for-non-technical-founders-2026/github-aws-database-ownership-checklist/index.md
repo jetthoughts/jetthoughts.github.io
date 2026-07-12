@@ -119,42 +119,7 @@ Those three pairs anchor the pattern; the table below is the fill-in-the-blank v
 
 Two of those twelve are existential. AWS root email controls whether a contractor can lock you out in ten minutes. Domain registrar turns into a 14-day practical buffer (approval itself takes about five days; the 60-day post-registration lock is the ICANN rule) if someone else will not release the auth code. The other ten matter; these two end the company if they go wrong.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#f5f5f5', 'primaryBorderColor':'#666', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-    Start(["Friday afternoon. Alone.<br/>Credit card + Notion doc."])
-    Start --> Code["Code: Are you<br/>GitHub org Owner?"]
-    Code -->|Yes| Cloud["Cloud: Is the AWS<br/>root email yours?"]
-    Code -->|No| FixCode[Slack the lead engineer.<br/>Self-serve org transfer]
-
-    Cloud -->|Yes, with MFA| Sec["Secrets: can you read the prod<br/>DB password without asking?"]
-    Cloud -->|No| FixCloud[Self-serve email change<br/>or 3-5 day AWS support<br/>recovery with corp docs]
-
-    Sec -->|Yes, from your vault| Dom["Domain: WHOIS shows<br/>your name + email?"]
-    Sec -->|"'Marcus has it'"| FixSec[Set up Secrets Manager<br/>or 1Password vault tonight.<br/>Migrate this sprint]
-
-    Dom -->|Yes, on your card| Pass[Audit clean.<br/>Quarterly recurring block.<br/>Email investor / board.]
-    Dom -->|No| FixDom[Initiate registrar transfer.<br/>Budget 14 days as a practical buffer.<br/>Escalate to ICANN if blocked]
-
-    FixCode --> Recovery[Recovery plan<br/>started this Friday]
-    FixCloud --> Recovery
-    FixSec --> Recovery
-    FixDom --> Recovery
-
-    Recovery --> Escalate["Contractor cooperated within<br/>7 days code / 14 days cloud?"]
-    Escalate -->|Yes| Pass
-    Escalate -->|No| Lawyer[Retain lawyer.<br/>$2K-$5K beats<br/>a stalled checkout]
-
-    classDef good fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-    classDef bad  fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
-    classDef neutral fill:#f5f5f5,stroke:#666,stroke-width:2px,color:#1a1a1a
-    classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
-
-    class Start start
-    class Code,Cloud,Sec,Dom,Escalate neutral
-    class Pass good
-    class FixCode,FixCloud,FixSec,FixDom,Recovery,Lawyer bad
-```
+![The Friday ownership audit: four numbered checks in a row - Code (are you GitHub org Owner? pass: your email, not the agency's), Cloud (is the AWS root email yours with MFA? pass: root on your domain, MFA on), Secrets (can you read the prod DB password solo? pass: from your vault, no asking), Domain (does WHOIS show you? pass: your name and your renewal email). Any failure drops into one shared amber fix lane naming the fix - Slack the lead engineer for org transfer, self-serve email change or 3-5 day AWS recovery, Secrets Manager or 1Password vault this sprint, registrar transfer with a 14-day buffer plus ICANN escalation. All four fixes converge on one card: recovery plan started this Friday. That leads to one question - did the contractor cooperate, 7 days for code or 14 days for cloud? Yes routes to a green card: audit clean, quarterly recurring block, email investor or board. No routes to a red card: retain a lawyer, $2K-$5K beats a stalled checkout.](ownership-audit-flow.svg)
 
 ## When the audit fails: a recovery plan that takes weeks, not months
 

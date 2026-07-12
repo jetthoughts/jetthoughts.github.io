@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" role="img" aria-labelledby="cadence-title">
+  <title id="cadence-title">The six-stage outbound cadence</title>
+  <desc>A snake-path diagram of six weekly stages. Row one, left to right: Stage 1, send 30 messages, 1-4 replies expected, tinted cold red. Stage 2, run 3-5 demos, 2-3 DPAs sent, tinted warm purple. Stage 3, 1-2 deposits cleared, pilot kickoffs scheduled, tinted conversion amber. The path drops down under Stage 3, then row two continues right to left: Stage 4, send next 20, hold for reply tail, tinted cold red. Stage 5, first Friday demos plus earlier prospects mature, tinted warm purple. Stage 6, year-one conversions plus next 20 cold names, tinted conversion amber. A legend below explains the three tints: cold outreach, warm pipeline, conversion.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title  { font-size: 26px; font-weight: 700; fill: #1a1a1a; }
+      .sub    { font-size: 16px; fill: #666; font-style: italic; }
+      .step   { font-size: 19px; font-weight: 700; fill: #1a1a1a; }
+      .stepsm { font-size: 15px; fill: #555; }
+      .num    { font-size: 14px; font-weight: 700; fill: #fff; }
+      .numdot { fill: #cc342d; }
+      .card-cold { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.25; }
+      .card-warm { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.25; }
+      .card-conv { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.25; }
+      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
+      .legend { font-size: 15px; fill: #333; }
+    </style>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="30" text-anchor="middle" class="h title">The six-stage outbound cadence</text>
+  <text x="480" y="54" text-anchor="middle" class="h sub">Cold sends and warm follow-ups, running the same week.</text>
+
+  <!-- Row 1 -->
+  <g transform="translate(30,80) rotate(-0.6 140 65)">
+    <rect width="280" height="130" rx="14" class="card-cold"/>
+    <circle cx="26" cy="40" r="14" class="numdot"/>
+    <text x="26" y="45" text-anchor="middle" class="h num">1</text>
+    <text x="50" y="47" class="h step">Send 30 messages</text>
+    <text x="50" y="78" class="h stepsm">1-4 replies expected</text>
+  </g>
+
+  <g transform="translate(340,80) rotate(0.5 140 65)">
+    <rect width="280" height="130" rx="14" class="card-warm"/>
+    <circle cx="26" cy="40" r="14" class="numdot"/>
+    <text x="26" y="45" text-anchor="middle" class="h num">2</text>
+    <text x="50" y="47" class="h step">Run 3-5 demos</text>
+    <text x="50" y="78" class="h stepsm">2-3 DPAs sent</text>
+  </g>
+
+  <g transform="translate(650,80) rotate(-0.5 140 65)">
+    <rect width="280" height="130" rx="14" class="card-conv"/>
+    <circle cx="26" cy="40" r="14" class="numdot"/>
+    <text x="26" y="45" text-anchor="middle" class="h num">3</text>
+    <text x="50" y="47" class="h step">1-2 deposits cleared</text>
+    <text x="50" y="78" class="h stepsm">Pilot kickoffs scheduled</text>
+  </g>
+
+  <!-- Row 1 arrows -->
+  <path d="M 312 145 L 338 145" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 622 145 L 648 145" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Turn: Stage 3 down to Stage 4, same column -->
+  <path d="M 790 210 L 790 258" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Row 2 (snake: right to left) -->
+  <g transform="translate(650,260) rotate(0.6 140 65)">
+    <rect width="280" height="130" rx="14" class="card-cold"/>
+    <circle cx="26" cy="40" r="14" class="numdot"/>
+    <text x="26" y="45" text-anchor="middle" class="h num">4</text>
+    <text x="50" y="47" class="h step">Send next 20</text>
+    <text x="50" y="78" class="h stepsm">Hold for reply tail</text>
+  </g>
+
+  <g transform="translate(340,260) rotate(-0.4 140 65)">
+    <rect width="280" height="130" rx="14" class="card-warm"/>
+    <circle cx="26" cy="40" r="14" class="numdot"/>
+    <text x="26" y="45" text-anchor="middle" class="h num">5</text>
+    <text x="50" y="47" class="h step">First Friday demos</text>
+    <text x="50" y="78" class="h stepsm">+ earlier prospects mature</text>
+  </g>
+
+  <g transform="translate(30,260) rotate(0.5 140 65)">
+    <rect width="280" height="130" rx="14" class="card-conv"/>
+    <circle cx="26" cy="40" r="14" class="numdot"/>
+    <text x="26" y="45" text-anchor="middle" class="h num">6</text>
+    <text x="50" y="47" class="h step">Year-one conversions</text>
+    <text x="50" y="78" class="h stepsm">+ next 20 cold names</text>
+  </g>
+
+  <!-- Row 2 arrows (leftward) -->
+  <path d="M 648 325 L 622 325" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 338 325 L 312 325" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Legend -->
+  <rect x="242" y="410" width="18" height="18" rx="4" class="card-cold"/>
+  <text x="266" y="424" class="h legend">Cold outreach</text>
+  <rect x="423" y="410" width="18" height="18" rx="4" class="card-warm"/>
+  <text x="447" y="424" class="h legend">Warm pipeline</text>
+  <rect x="604" y="410" width="18" height="18" rx="4" class="card-conv"/>
+  <text x="628" y="424" class="h legend">Conversion</text>
+</svg>

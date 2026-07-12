@@ -193,23 +193,7 @@ All three variants follow the same shape: a specific reference earns the open, o
 
 ## Stage-by-stage cadence
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'fontSize':'20px', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart LR
-    W1[Stage 1<br/>Send 30 messages<br/>1-4 replies expected]
-    W2[Stage 2<br/>Run 3-5 demos<br/>2-3 DPAs sent]
-    W3[Stage 3<br/>1-2 deposits cleared<br/>Pilot kickoffs scheduled]
-    W4[Stage 4<br/>Send next 20<br/>Hold for reply tail]
-    W5[Stage 5<br/>First Friday demos<br/>+ earlier prospects mature]
-    W7[Stage 6<br/>Year-one conversions<br/>+ next 20 cold names]
-    W1 --> W2 --> W3 --> W4 --> W5 --> W7
-    classDef coldweek fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
-    classDef warmweek fill:#fbe9ff,stroke:#a855f7,stroke-width:2px;
-    classDef conv fill:#fff8e0,stroke:#b8860b,stroke-width:2px;
-    class W1,W4 coldweek;
-    class W2,W5 warmweek;
-    class W3,W7 conv;
-```
+![Six-stage outbound cadence: Stage 1 send 30 messages with 1-4 replies expected, Stage 2 run 3-5 demos with 2-3 DPAs sent, Stage 3 1-2 deposits cleared with pilot kickoffs scheduled, Stage 4 send next 20 and hold for reply tail, Stage 5 first Friday demos plus earlier prospects mature, Stage 6 year-one conversions plus next 20 cold names](stage-cadence.svg)
 
 Expect 3-8% replies on a realistic first batch - 1-2 replies per 30 messages - and treat 10-15% as what a tightly filtered, heavily personalized batch can reach: 3-4 replies, of which 1-2 agree to a 15-minute demo, of which one becomes a paid-pilot conversation. Of the pilots, the [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds.
 
