@@ -29,6 +29,8 @@ related_posts: false
 
 If you're stuck, start here. These are the questions founders ask most often - read the 2-3 that match your situation and get back to the build. If your question isn't here, try the course's [Quickstart path](/course/tech-for-non-technical-founders-2026/quickstart/) or the [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) overview.
 
+![Module map for this FAQ: a General group followed by Module 1 Hypothesis and smoke test, Module 2 Validate the problem, Module 3 Design from evidence, Module 4 Build it yourself, and Module 5 First paying customer - questions below are grouped in this order.](module-strip.svg)
+
 ---
 
 ## Module 1 - Hypothesis & Smoke Test

@@ -108,6 +108,8 @@ Try to "polish the prototype into the MVP later" and you spend much longer on it
 
 Three screens is the constraint - not five, not ten - because each extra screen multiplies the build effort without sharpening the validation signal.
 
+![Wireframe of a passing 3-screen prototype: Screen 1 entry point with a fake file list and a Match transactions button, Screen 2 core action showing a Stripe-vs-QuickBooks match table where testers stall, and Screen 3 result with a summary card and Download report - the screen a passing tester reaches without coaching](wireframe-strip.svg)
+
 > **The two caps that replace "spend a weekend on it".** (1) **Stop at 3 screens.** The fourth screen is the prototype turning into the MVP - exactly the failure mode this chapter prevents. (2) **Aim for a navigable 3-screen prototype within your first ~10 Lovable exchanges.** If after 10 messages the screens still aren't navigable, the hypothesis or the prompt is too vague - sharpen the prompt (or go back to Ch 1.1) before continuing. Do NOT keep adding messages hoping to brute-force coherence.
 
 ### Screen 1 - The entry point
