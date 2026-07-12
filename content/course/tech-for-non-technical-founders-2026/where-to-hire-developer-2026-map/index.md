@@ -38,7 +38,7 @@ related_posts: false
 
 ## Why this exists
 
-A B2B SaaS founder we picked up in Q2 2026 had been paying $185K base for a San Francisco Senior pitched as "AI-native." The Senior wrote good code but had never opened Cursor for a real ship and treated every contractor PR like he was reviewing a junior. After four months she was shipping one feature every three weeks. Her fractional CTO walked her through this map on a Tuesday. By Friday she had a Coimbatore Rails engineer at $42 an hour on a 3-day take-home test, and by the following sprint she had two features shipped and a hallucinated Stripe webhook caught in PR review. Replacement cost: 22% of the original burn. The map was not on her desk in February. It is on yours now.
+The Monday you decide to hire, the map matters more than the job post. A B2B SaaS founder we worked with in Q2 2026 had been paying $185K base for a San Francisco Senior pitched as "AI-native." The Senior wrote good code but had never opened Cursor for a real ship and treated every contractor PR like he was reviewing a junior. After four months she was shipping one feature every three weeks. Her fractional CTO walked her through this map on a Tuesday. By Friday she had a Coimbatore Rails engineer at $42 an hour on a 3-day take-home test, and by the following sprint she had two features shipped and a hallucinated Stripe webhook caught in PR review. Replacement cost: 22% of the original burn. The map was not on her desk in February. It is on yours now.
 
 ## How to use this
 

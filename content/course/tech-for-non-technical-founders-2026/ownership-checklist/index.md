@@ -62,7 +62,7 @@ By the end of one Friday (or the 5 minutes if you're self-serve) you will know w
 
 ## Why this exists
 
-A founder we saw last year handed a contractor her company credit card on Day 1. The contractor opened the accounts fast and shipped the MVP inside six weeks. Nobody moved the accounts to her email afterwards. A year later the contractor left the industry, and she discovered the GitHub org, the AWS root, and the domain were all registered to an inbox nobody checked. Recovery is slow and expensive when the accounts are not in your name. The audit below catches all of this on Day 1 in 45 minutes.
+The account that locks you out is the one set up under someone else's email on Day 1 and never moved - and you find it a year later, once the person who opened it is gone. That is how it played out for a founder we saw last year: she handed a contractor her company credit card on Day 1, and he opened the accounts fast and shipped the MVP inside six weeks. Nobody moved the accounts to her email afterwards. A year later the contractor left the industry, and she discovered the GitHub org, the AWS root, and the domain were all registered to an inbox nobody checked. Recovery is slow and expensive when the accounts are not in your name. The audit below catches all of this on Day 1 in 45 minutes.
 
 Most contractors are not trying to lock you out. They set the accounts up under their own email on Day 1 because it was the fastest way to start, and nobody ever moved them. The damage is the same either way.
 
@@ -137,7 +137,7 @@ If only one person can rotate the prod DB password, you do not have a database. 
 > Bad: Renewals come to a contractor's email. You have never logged into the registrar.
 > Good: Logged into Namecheap with your account. WHOIS shows your name. Auto-renew is on, charged to your card.
 
-A domain transfer takes a minimum of **14 days** under ICANN rules and requires the losing registrar to release the auth code. If the contractor will not release it, your customers cannot reach your site for two weeks.
+Plan a 14-day buffer for a domain transfer: ICANN's release window is five days, and many registrars add a 60-day lock after registration or a recent transfer. If the contractor will not release the auth code, your customers cannot reach your site for two weeks.
 
 ## What to do if the audit fails
 

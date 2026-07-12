@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to Module 5B of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Read the night before you sign. Print, highlighter, 90 minutes alone.
+📋 Template companion to the Module 4 hire track of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Read the night before you sign. Print, highlighter, 90 minutes alone.
 
 # The SOW Reading Guide
 
@@ -34,7 +34,7 @@ By the time you finish your second coffee you will know whether the 47-page Stat
 
 ## Why this exists
 
-A SaaS founder we picked up in late Q1 2026 had signed a **47-page SOW** her general counsel cleared the night before. He flagged the liability cap and the IP assignment, fixed both, called it done. She missed the **milestone acceptance clause**: it defined "delivered" as "deployed to staging" rather than "passing the acceptance criteria with production traffic." Three months in, she had paid for **four of five milestones**, every one sitting on a staging URL that 500'd on the second click. By the time she renegotiated, the agency had invoiced **$78K** for milestones nobody could use, and her runway had compressed from twelve months to seven. Most agencies are not malicious about SOW language; they start from a template that survived their last twelve clients, and the template has a few clauses that quietly favor the agency.
+The SOW that cost $78K to misread ran to 47 pages, and a general counsel had cleared it the night before. A SaaS founder we worked with in late Q1 2026 signed on his sign-off: he flagged the liability cap and the IP assignment, fixed both, and called it done. She missed the **milestone acceptance clause**: it defined "delivered" as "deployed to staging" rather than "passing the acceptance criteria with production traffic." Three months in, she had paid for **four of five milestones**, every one sitting on a staging URL that 500'd on the second click. By the time she renegotiated, the agency had invoiced **$78K** for milestones nobody could use, and her runway had compressed from twelve months to seven. Most agencies are not malicious about SOW language; they start from a template that survived their last twelve clients, and the template has a few clauses that quietly favor the agency.
 
 ## How to use it
 

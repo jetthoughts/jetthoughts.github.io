@@ -158,7 +158,7 @@ Be honest about the trade-off. This stack cannot host every business. It can hos
 
 The stack holds until it doesn't. Five specific signals tell you the ceiling is close. The next chapter ([Chapter 4.5 - Proactive Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)) walks through each one with the threshold to watch.
 
-Quick preview: scale beyond roughly 5,000 users, complex data model that no longer fits a single Supabase project, real-time features the auto-generated REST API cannot serve, security or compliance scope that needs an external audit, AI inference at scale where per-request cost crosses pennies. When you see two of these, route to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) or to a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the architecture call. Architecture does not collapse overnight; the warning shows up in the metrics before the customer sees it. Chapter 4.5 names the metrics.
+Quick preview: scale beyond roughly 5,000 users, complex data model that no longer fits a single Supabase project, real-time features the auto-generated REST API cannot serve, security or compliance scope that needs an external audit, AI inference at scale where per-request cost crosses pennies. When two of these keep firing across two consecutive monthly checks (the 4-week rule from Chapter 4.5), route to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) or to a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the architecture call. Architecture does not collapse overnight; the warning shows up in the metrics before the customer sees it. Chapter 4.5 names the metrics.
 
 What the stack actually costs, per published vendor pricing:
 
@@ -188,7 +188,7 @@ The shed build never grows that large. Either you reach the architectural ceilin
 
 ## When this path ends
 
-Self-serve has a ceiling. The [ceiling-signal monitoring chapter](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) covers the 5 signals that mean it's time to bring in help. When 2+ signals fire in one monthly check, switch to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/).
+Self-serve has a ceiling. The [ceiling-signal monitoring chapter](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) covers the 5 signals that mean it's time to bring in help. When 2+ signals fire across two consecutive monthly checks (the 4-week rule from Chapter 4.5), switch to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/).
 
 Build the shed first. Lovable + Supabase + Stripe + a ~$10 domain ships your validated problem to a staging URL on per-vendor pricing. The bigger architecture is a different conversation, and you have not earned the right to have it yet.
 

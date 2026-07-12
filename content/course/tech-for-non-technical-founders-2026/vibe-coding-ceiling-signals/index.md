@@ -54,8 +54,6 @@ Once your build goes live, run this 5-signal check monthly. Each signal that fir
 
 > **This chapter is a monthly review reference, not an action-today chapter.** Your only action today: open your calendar and add a recurring monthly block titled "Vibe-coding 5-signal check." The first run is once the live MVP is up (Ch 4.3-4.4); until then, the chapter sits on the shelf. If you haven't shipped a live MVP yet, bookmark this and come back the moment you have real users clicking around. The morning scene above is what the ceiling looks like when it actually arrives.
 
-![A hand-drawn scoreboard showing the 5 architectural ceiling signals: data model, real-time, auth complexity, AI cost, compliance. Each row has the visible symptom and the recommended action.](signals-scoreboard.svg)
-
 ## Who this 5-signal check is for
 
 The Lovable + Supabase + Stripe shed from [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) handles the common early-SaaS build. The builds it cannot hold are what this post is about.
@@ -183,7 +181,7 @@ flowchart TD
     Q1{"Q1: Has any signal been<br/>firing for 4+ weeks?"}
     Q2{"Q2: Is your runway<br/>&gt; 6 months from today?"}
     Stay["STAY SELF-SERVE<br/>Keep shipping on the shed.<br/>Re-score every 2 weeks."]
-    Bridge["GRADUATE: BRIDGE<br/>Fractional CTO<br/>(5 hours / week, ~$8-15K / mo)"]
+    Bridge["GRADUATE: BRIDGE<br/>Fractional CTO<br/>(5 hours / week, ~$1.6-2.6K / mo)"]
     Hire["GRADUATE: HIRE A TEAM<br/>1-2 engineers on Rails /<br/>Django / Laravel. SOW signed<br/>before kickoff."]
 
     Start --> Q1
@@ -209,8 +207,6 @@ Q1 No: stay self-serve. The shed is holding. Re-score every two weeks. The cost 
 Q1 Yes + Q2 Yes: graduate to the hire-a-team path. You have the runway to scope, hire, and onboard a 1-2 engineer team on Rails, Django, or Laravel. The [SOW reading guide](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow) is your starting page.
 
 Q1 Yes + Q2 No: graduate to the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). Five hours a week of senior eyes for the next two to three months while you raise or grow into the runway needed for a hire. The [Salvage vs Rebuild decision tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) tells you which signal-firing pieces salvage and which the Fractional CTO triages first.
-
-> Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Either hire a team if you have runway, or bridge with a Fractional CTO until you do. Both beat watching the codebase get worse.
 
 ## What to do tomorrow
 

@@ -72,32 +72,15 @@ The 2026 hire decision is not "remote vs in office." It is which of four regions
 
 **Mass-market (Upwork) - $35 to $120 per hour.** Self-vetting required: the marketplace does no quality screen, you become the technical interviewer. Acceptable for point tasks only - a single landing page, a logo, a one-off web scraper. Anything load-bearing (payments, auth, multi-tenant data, a third-party integration with retry logic) belongs on one of the three professional platforms above, not Upwork.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-  Start(["You decided to hire.<br/>one-page brief says backend-heavy."])
-  Start --> Q1{"Regulated industry?<br/>HIPAA / SOC 2 / fintech?"}
-  Q1 -->|Yes| Onshore["Onshore (US / EU).<br/>$130K-$210K/yr. 30-60d hire."]
-  Q1 -->|No| Q2{"Backend-heavy and async OK?"}
-  Q2 -->|Yes| Q3{"Budget per hour?"}
-  Q2 -->|No, need timezone overlap| Nearshore["Nearshore (LATAM).<br/>$45-$100/hr. 2-5d hire."]
-  Q3 -->|"$15-$70/hr"| Tier2["Tier-2 India.<br/>Jaipur / Kochi / Indore / Coimbatore.<br/>NOT Bangalore."]
-  Q3 -->|"$45-$100/hr"| Nearshore
-  Q3 -->|"$130K+/yr"| Onshore
-  Start -.->|"Single point task<br/>(logo, landing page, scraper)"| Upwork["Upwork.<br/>$35-$120/hr. Point tasks only."]
-  classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
-  classDef question fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
-  classDef onshore fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
-  classDef nearshore fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-  classDef tier2 fill:#f5e9ff,stroke:#7c3aed,stroke-width:2.5px,color:#1a1a1a
-  classDef upwork fill:#fffbe6,stroke:#bf8a00,stroke-width:2.5px,color:#1a1a1a
-  class Start start
-  class Q1,Q2,Q3 question
-  class Onshore onshore
-  class Nearshore nearshore
-  class Tier2 tier2
-  class Upwork upwork
-```
+**Which geography for which build** (rate bands and hire cycles are in the four paragraphs above):
+
+| If your build is... | Route to | Why |
+|---|---|---|
+| In a regulated industry (HIPAA / SOC 2 / fintech), or your budget sits in the onshore band above | Onshore (US / EU) | Compliance, data-residency, or a board mandate justifies the highest cost-to-output ratio on the map |
+| Backend-heavy, async is fine, and you want the lowest rate band above | Tier-2 India - Jaipur, Kochi, Indore, Coimbatore (not Bangalore) | Senior engineers accept 20-30% below Bangalore; PRs merge overnight against your CLAUDE.md |
+| Backend-heavy, async is fine, at the mid rate band above | Nearshore (LATAM) | Same async workflow, shorter hire cycle, closer timezone overlap |
+| Anything needing live timezone overlap for daily standups | Nearshore (LATAM) | Full US Pacific-to-Eastern overlap; English fluency for standups and Slack |
+| A single point task - logo, landing page, one-off scraper | Upwork | Self-vetting marketplace; non-load-bearing work only |
 
 ### Six platforms ranked
 
@@ -120,15 +103,13 @@ You do not need a 50% co-founder. You need 5 hours a week of senior judgment to 
 
 ### The 5 jobs the Fractional CTO does
 
-**Architecture review - 1 hr/wk.** Every Monday morning, the Fractional CTO opens the codebase and reads what shipped last week. They look at the data model, the route table, the queue setup, and the third-party integrations. They tell you in one paragraph in a Notion doc: "this should be Rails, not microservices; here is why." They catch the moment your contractor proposes a separate React frontend talking to a Node API talking to a Python ML service for an app with 18 paying users.
-
-**PR review - 2 hrs/wk.** Every pull req your contractor opens passes through the Fractional CTO before merge. They catch the API key checked into the repo, the n+1 query in line 47, the missing CSRF token, the auth bypass on the admin route, the abstraction nobody asked for. Veracode's GenAI Code Security Report 2025 found 45% of LLM-generated code shipped at least one exploitable security flaw. PR review is the one thing that catches this before prod.
-
-**Hiring filter - 1 hr/wk during hiring sprint.** When you go to hire your first contractor or full-time engineer, the Fractional CTO runs the tech screen. They read the candidate's last three GitHub commits. They ask the four technical questions you cannot ask. The cost of one wrong-fit hire at month three is two months of runway. The cost of the Fractional CTO doing the screen is one hour at $80 to $120.
-
-**Vendor BS detection - as needed.** When the agency proposes Kubernetes for 200 users, the Fractional CTO sits in the call and says "why?" When the contractor proposes GraphQL because "REST is old," the Fractional CTO says "show me the monorepo plan." They are the senior voice in a room where you are otherwise the only buyer in front of three people pitching.
-
-**Founder coaching - 1 hr/wk.** Every Friday, 30 to 60 minutes. The Fractional CTO translates "the queue is backed up because Resque is dropping jobs" into "promise the May demo for May 12, not May 5." They make the engineering reality legible to your roadmap. The reverse is also true: they hear you describe the customer's pain and tell you which feature is one day of work and which is three weeks.
+| Job | Time / week | What it catches |
+|---|---|---|
+| **Architecture review** | 1 hr (Monday) | The contractor proposing microservices - or a separate React frontend + Node API + Python ML service - for an app with 18 paying users. The verdict lands as one paragraph in a Notion doc. |
+| **PR review** | 2 hrs | The API key checked into the repo, the n+1 query, the missing CSRF token, the auth bypass on the admin route - the 45% of LLM-generated code Veracode's GenAI Code Security Report 2025 found ships an exploitable security flaw, caught before prod. |
+| **Hiring filter** | 1 hr (during a hiring sprint) | A wrong-fit first hire, which costs two months of runway. The FCTO runs the tech screen, reads the candidate's last three commits, and asks the four technical questions you cannot. |
+| **Vendor BS detection** | As needed | Kubernetes for 200 users, GraphQL "because REST is old" - the senior "why?" in a room where you are otherwise the only buyer facing three people pitching. |
+| **Founder coaching** | 1 hr (Friday) | Translates "Resque is dropping jobs" into "promise the demo for the 12th, not the 5th" - and tells you which feature is one day of work and which is three weeks. |
 
 ### Five criteria for hiring a Fractional CTO
 
@@ -204,7 +185,7 @@ You are not picking the stack alone - your Fractional CTO or hired engineer make
 
 ### Default: Rails (Ruby on Rails)
 
-Rails is the JetThoughts default and the Indie Hackers / DHH / Pieter Levels community standard. The reasoning is empirical, not religious: Rails ships fast, one engineer can operate the full stack end-to-end, the conventions are tight enough that the next engineer you hire reads the codebase in a day, and the deployment story (Heroku, Fly.io, Render) costs $7-$50/month at pre-seed scale. Basecamp ([DHH's *One-Person Framework* essay](https://world.hey.com/dhh/the-one-person-framework-711e6318)) is the case study: 50M+ users on a Rails monolith run by ~20 engineers. At your scale (47-5,000 paying users) one Rails engineer can ship + operate the whole thing.
+Rails is the JetThoughts default and the Indie Hackers / DHH / Pieter Levels community standard. The reasoning is empirical, not religious: Rails ships fast, one engineer can operate the full stack end-to-end, the conventions are tight enough that the next engineer you hire reads the codebase in a day, and the deployment story (Heroku, Fly.io, Render) costs $7-$50/month at pre-seed scale. Basecamp ([DHH's *One-Person Framework* essay](https://world.hey.com/dhh/the-one-person-framework-711e6318)) is the case study: two decades of products on a Rails monolith run by a famously small team, and Shopify serves millions of merchants on one Rails monolith. At your scale (47-5,000 paying users) one Rails engineer can ship + operate the whole thing.
 
 **Why Rails wins for the non-technical founder's hired team:** the hire pool is deep (15+ years of Rails engineers), the framework opinions are tight (less time arguing about conventions, more time shipping), background jobs / email / file uploads / authentication / payment / admin / search are all batteries-included rather than 12 separate npm packages, and the Rails community produced the rescue patterns we see work in production (Pundit for authorization, Devise for auth, Sidekiq for jobs, ActiveAdmin for staff tools).
 
