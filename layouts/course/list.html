@@ -1,27 +1,25 @@
 {{ define "header" }}
   {{- $CSS := slice
     (resources.Get "css/critical/base.css")
-    (resources.Get "css/3059-layout.css")
-    (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
     (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
     (resources.Get "css/586.css")
     (resources.Get "css/vendors/base-4.min.css")
     (resources.Get "css/style.css")
     (resources.Get "css/skin-65eda28877e04.css")
     (resources.Get "css/single-post.css")
+    (resources.Get "css/pages/course-list.css")
     (resources.Get "css/footer.css")
   -}}
   {{ partial "assets/css-processor.html" (dict "resources" $CSS "bundleName" "course-list" "context" .) }}
 {{ end }}
 
 {{ define "main" }}
-  <div id="fl-main-content" class="blog" role="main">
-    <div class="fl-row-content fl-row-fixed-width">
-      <article
-        class="single-content"
-        style="max-width: 720px; margin:0 auto; padding-left:18px;padding-right:18px">
-        <header class="course-hero">
-          <h1 class="fl-heading">{{ .Title }}</h1>
+  <main class="blog" role="main">
+    <article
+      class="single-content"
+      style="max-width: 720px; margin:0 auto; padding-left:18px;padding-right:18px">
+      <header class="course-hero">
+        <h1 class="course-title">{{ .Title }}</h1>
 
           {{ with .Params.hero_lede }}
             <p class="course-hero-lede">{{ . | markdownify }}</p>
@@ -61,11 +59,10 @@
           {{ end }}
         </header>
 
-        <div class="post-content" itemprop="text">
-          {{ .Content }}
-        </div>
-      </article>
-    </div>
-  </div>
+      <div class="post-content" itemprop="text">
+        {{ .Content }}
+      </div>
+    </article>
+  </main>
   {{ partial "blog/course-analytics.html" . }}
 {{ end }}

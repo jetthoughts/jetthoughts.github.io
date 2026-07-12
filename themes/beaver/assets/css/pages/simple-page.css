@@ -1,0 +1,75 @@
+/* Semantic replacement for the retired 3059-layout.css markup on generic
+   pages (page/single.html: privacy-policy). Pixel-parity with the FL
+   original: .simple-page mirrors the Bootstrap .container side padding,
+   .simple-page-hero the .fl-row-content-wrap paddings, .simple-page-inner
+   the .fl-row-content 800px cap, and the title/content rules clone what
+   .fl-heading/.fl-heading-text/.fl-rich-text contributed (skin h1 keeps the
+   70px strut; the span carries the clamp like .fl-heading-text did). */
+
+/* No outer padding: on the FL original, skin's
+   `.fl-builder .container.fl-content-full { padding: 0 }` zeroes the
+   Bootstrap container/row/col trio, so the only horizontal inset is the
+   row-content-wrap's 20px (mirrored by .simple-page-hero). */
+.simple-page-hero {
+  padding: 200px 20px 130px;
+}
+
+.simple-page-inner {
+  margin: 0 auto;
+  max-width: 800px;
+  min-width: 0;
+}
+
+.simple-page-title {
+  margin: 0;
+  padding: 0;
+}
+
+.simple-page-title span {
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.15;
+}
+
+.simple-page-content {
+  margin-top: 80px;
+}
+
+.simple-page-content strong {
+  font-weight: 700;
+}
+
+/* Clones of the fl-common-modules .fl-rich-text spacing rules the content
+   relied on (that file stays in the bundle for the FL header, but its
+   selectors need the dropped .fl-rich-text class). */
+.simple-page-content p {
+  margin-bottom: 0 !important;
+}
+
+.simple-page-content p:not(:first-child) {
+  margin-top: 22px;
+}
+
+.simple-page-content ul {
+  margin-top: 30px;
+}
+
+.simple-page-content ul > li:not(:first-child) {
+  margin-top: 12px;
+}
+
+@media (max-width: 1115px) {
+  .simple-page-hero {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 860px) {
+  .simple-page-hero {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .simple-page-content {
+    margin-top: 30px;
+  }
+}
