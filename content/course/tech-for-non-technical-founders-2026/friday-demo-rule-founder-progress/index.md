@@ -1,5 +1,5 @@
 ---
-title: "6.3 · The Friday Demo Rule: 15 Min Truth Test"
+title: "The Friday Demo Rule: 15 Min Truth Test"
 aliases: ["/blog/friday-demo-rule-founder-progress/"]
 description: "The 15-minute Friday ritual that surfaces fake progress in 4 weeks flat. Loom or live, working software only, no Jira screenshots, no slides, hard stop."
 date: 2026-05-18
@@ -21,7 +21,7 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "6.3 · The Friday Demo Rule: 15 Min Truth Test"
+  og_title: "The Friday Demo Rule: 15 Min Truth Test"
   og_description: "The 15-minute Friday ritual that surfaces fake progress in 4 weeks flat. Loom or live, working software only, no Jira screenshots, no slides, hard stop."
 cover_image_alt: "JetThoughts blog cover for The Friday Demo Rule showing a kitchen-timer set to 15 minutes next to a laptop screen with a clickable staging URL and a struck-through Jira screenshot"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/"
@@ -53,7 +53,7 @@ One meeting per week. 15 minutes. Friday at 4pm in your timezone. Loom (a record
 
 **You attend with one question in your head.** Can I click everything they show me? You open your laptop, paste each staging URL into your browser as the developer mentions it, and try to reach the screen they just described. If the URL throws a 500 or asks for a login you do not have, interrupt and ask why. Do not save the question for Monday. The point of the recording is so you have proof; the point of the live attendance is so you catch the lie in real time.
 
-**Hard stop at 15 minutes.** Founders we have rescued who let the demo drift to 45 minutes lose the discipline within a month. The cap is what forces the team to pre-stage clickable URLs instead of debugging on the call. If the team needs longer than 15 minutes to show one week of work, something is wrong - and it is usually that nothing is on staging.
+**Hard stop at 15 minutes.** When the demo drifts to 45 minutes, the discipline is gone within a month. The cap is what forces the team to pre-stage clickable URLs instead of debugging on the call. If the team needs longer than 15 minutes to show one week of work, something is wrong - and it is usually that nothing is on staging.
 
 ![Kitchen-timer set to 15:00 next to a laptop displaying a clickable staging URL with admin login credentials and a passing $1 Stripe test transaction; struck-through icons of a Jira board, a Figma frame, and a slide deck stacked on the right with the caption "not allowed in the room"](demo-rule.svg)
 
@@ -87,7 +87,7 @@ A founder we worked with sat through six weeks of "I will send the URL after the
 
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#f5f5f5', 'primaryBorderColor':'#666', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 
-flowchart LR
+flowchart TD
 
     Mon([Monday 9am<br/>Founder posts the<br/>7-question template<br/>in #dev Slack]) --> Tue([Tuesday-Thursday<br/>Team builds + reviews<br/>against the questions])
     Tue --> Wed{Wednesday EOD<br/>Anything not<br/>going to be ready?}

@@ -130,7 +130,7 @@ Three actions, in order.
 >
 > FAIL = revise Section 3 outcome-shape and ask a fresh peer. Do NOT advance to Module 4 with a failed brief; the Lovable build will inherit the fuzziness.
 
-> **Module 3 AI critic/simulator block**
+> **Test your brief with an AI reviewer.**
 >
 > **No peer available? Use Claude or ChatGPT as the peer.** Paste your full Section 3 + Section 5 (no-go list) into Claude, then paste this prompt:
 >

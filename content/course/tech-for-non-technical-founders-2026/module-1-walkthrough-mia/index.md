@@ -4,6 +4,11 @@ description: "Follow Mia through Module 1 as she writes a Founding Hypothesis, b
 date: 2026-06-11
 draft: false
 slug: module-1-walkthrough-mia
+cover_image: cover.png
+cover_image_alt: "JetThoughts cover showing Mia's Module 1 run - from a founding hypothesis to a smoke-test page to six paying customers before any product code"
+metatags:
+  image: cover.png
+  og_title: "Module 1 Walkthrough: Mia Builds TutorMatch"
 course_nav_prev:
   slug: price-hypothesis-on-smoke-test-page
   module: "Chapter 1.5"
@@ -25,6 +30,8 @@ She'd been turning the same idea over for months. A marketplace where parents co
 Tonight she was going to find out if anyone else cared.
 
 ---
+
+![Mia's Module 1 artifact trail - Founding Hypothesis, smoke-test page, tracking wired, a 6.5% demand signal, and six paying customers before any product code](artifact-trail.svg)
 
 ## [Lesson 1.1: Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 

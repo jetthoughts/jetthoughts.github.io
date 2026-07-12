@@ -42,8 +42,8 @@
   </g>
 
   <!-- Arrow tracing the user journey on one URL -->
-  <text x="305" y="100" class="label">staging.acme.app</text>
-  <text x="305" y="120" class="url">/signup → /checkout → /receipt</text>
+  <text x="305" y="82" class="label">staging.acme.app</text>
+  <text x="305" y="102" class="url">/signup → /checkout → /receipt</text>
 
   <!-- journey arrow over single URL -->
   <g transform="translate(305, 140)">

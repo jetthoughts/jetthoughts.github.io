@@ -4,6 +4,11 @@ description: "Follow Mia through Module 4 as she routes herself to the self-serv
 date: 2026-07-10
 draft: false
 slug: module-4-walkthrough-mia
+cover_image: cover.png
+cover_image_alt: "JetThoughts cover showing Mia's Module 4 run - from a one-page brief to a live MVP on a domain she owns"
+metatags:
+  image: cover.png
+  og_title: "Module 4 Walkthrough: Mia Ships TutorMatch"
 course_nav_prev:
   slug: vibe-coding-ceiling-signals
   module: "Chapter 4.5"
@@ -21,6 +26,8 @@ course_nav_next:
 Mia arrived at Module 4 with a quality-checked one-page brief and a strong opinion she hadn't examined: that a "real" marketplace needed a real engineering team. Module 4 exists to test opinions like that against a worksheet.
 
 ---
+
+![Mia's Module 4 artifact trail - a self-serve build-path decision, locked ownership, a live MVP, a security fix, and a scheduled ceiling check](artifact-trail.svg)
 
 ## [Lesson 4.1: Should You Hire?](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
 

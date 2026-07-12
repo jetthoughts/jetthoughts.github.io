@@ -47,7 +47,7 @@ Don't skip - sign up for Stripe tonight and let it verify in the background whil
 
 **Q: Which landing page builder should I use?**
 
-Mixo (free tier, ~60 seconds from idea to page). If the templates don't fit, Carrd (no-code drag-drop). Don't comparison-shop for a week - you're testing demand, not builders. [Ch 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) has the workflow for both.
+Mixo (~60 seconds from idea to page). If the templates don't fit, Carrd (no-code drag-drop). Don't comparison-shop for a week - you're testing demand, not builders. [Ch 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) has the workflow for both.
 
 ---
 

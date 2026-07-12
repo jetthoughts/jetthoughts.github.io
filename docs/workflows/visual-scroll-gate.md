@@ -21,6 +21,39 @@
 
 5. Check the console (errors) and network (404s). Dev-server-only artifacts (e.g. webmanifest CORS when browsing via 127.0.0.1 against a localhost baseURL) are excusable - name them explicitly in the report; everything else is a blocker.
 
+### Asset-level SVG pass (MANDATORY - the in-page walk misses these)
+
+Sampling pages does NOT clear the SVGs: on 2026-07-11 a full asset sweep of all 43 course SVGs found 13 with internal defects (labels under cards, bars drawn over their own captions, right-edge clipping, stale chapter numbers) that months of page-level reviews had sailed past because each review sampled different pages. Rasterize EVERY SVG in scope and look at each one:
+
+```sh
+find content/course/<section> -name "*.svg" | while read f; do
+  rsvg-convert -w 1400 "$f" -o "/tmp/svgsweep/$(echo "$f" | awk -F/ '{print $(NF-1)"__"$NF}').png"
+done
+# then Read every PNG - the defect classes: text crossing its container,
+# elements drawn over other elements' text, edge clipping, arrows through
+# labels, stale facts baked into the art.
+```
+
+### No-MCP fallback (headless Chrome)
+
+When the chrome-devtools MCP is unavailable, the walk still happens - full-height capture + slicing replaces live scrolling:
+
+```sh
+CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+"$CHROME" --headless --disable-gpu --user-data-dir=$(mktemp -d) --hide-scrollbars \
+  --window-size=1280,16000 --virtual-time-budget=8000 \
+  --screenshot=page.png "file://$PWD/_dest/public-dev/<path>/index.html" & P=$!; sleep 16; kill $P
+magick page.png -trim +repage -crop 1280x2400 +repage slices/page--%02d.png
+# Read every slice. Chrome does not exit on its own (site JS keeps timers
+# alive) - the kill-after-sleep watchdog is required.
+```
+
+Caveat: raw headless `--window-size=390,...` does NOT emulate a mobile
+device (no viewport-meta scaling) - body text clips at the right edge on
+EVERY page, which reads as fake overflow. Mobile checks need the
+chrome-devtools MCP resize (or DevTools device emulation); use raw
+headless only for desktop-width captures.
+
 ## Per-view checklist
 
 | Class | What to look for | Caught before |

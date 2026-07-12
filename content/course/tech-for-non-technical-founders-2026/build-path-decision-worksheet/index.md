@@ -30,6 +30,8 @@ related_posts: false
 
 *Print one side of paper. Pen. 30 minutes alone. Walk out with a defensible build decision and the next module to read.*
 
+*Prefer paper? <a href="build-path-decision-worksheet.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
+
 ## Why this exists
 
 A wellness-coaching founder who came to us in early 2026 had spent four months building a Lovable MVP, then panicked and signed a $24K-per-month agency contract because three advisors told her "you need a real team now." Two of the advisors had never seen her validation data. The third had not asked.
@@ -118,7 +120,9 @@ VERDICT:
  [ ] 2-3 boxes checked   = MID backend
  [ ] 4 or more checked   = HEAVY backend
 
-If HEAVY -> Path 4 (Hire a team - see [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)).
+If HEAVY -> Path 4 (Hire a team - see the hire-track
+            supplementary reference, linked in the
+            verdict table below).
             Read the SOW guide before kickoff.
 
 If LIGHT or MID -> go to Q3.
@@ -169,7 +173,9 @@ If $1.6K-$4K -> go to Q5.
 If $5K-$30K -> Path 3 (Fractional CTO) until problem
                complexity demands more.
 
-If $30K+ -> Path 4 (Hire a team - see [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)).
+If $30K+ -> Path 4 (Hire a team - see the hire-track
+            supplementary reference, linked in the
+            verdict table below).
 ```
 
 ### Q5: Senior engineer in your network for 1 hour of architecture review per month?
@@ -210,7 +216,7 @@ your Notion doc)
 | **4. Hire a team** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)) | Q2 heavy (any budget), or Q4 = $30K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |
 
 **Failure mode to watch for each path** ->
-- Path 1 -> 0 of 35 click. Pivot the pitch or the problem.
+- Path 1 -> 0 of 30 click. Pivot the pitch or the problem.
 - Path 2 -> Hits architectural ceiling at ~5K users. Route to the [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) for the next layer.
 - Path 3 -> CTO drifts into coder. 90-day review on hour allocation.
 - Path 4 -> Spaceship for the wrong moon. Friday demo + Org Chart audit catch it in week 3.
@@ -223,7 +229,7 @@ your Notion doc)
 
 > Good: *"I ran 12 Mom Test calls (May 2026 sample). 9 of 12 described the exact problem in past-tense with a number attached (hours per week, dollars per month). My smoke-test page converted 8% of visitors to email sign-ups, above the 6% 'Promising' bar. 4 of 5 prototype testers reached the sign-up screen without me coaching them."*
 
-The good answer is countable: 12 calls, 9 strong signals, an 8% smoke-test click rate, 4 of 5 testers through the prototype. The bad answer is a vibe metric (likes) and a hypothetical (love the idea). Likes are not behavior. The matrix routes the bad answer to Path 1 regardless of how confident the founder feels, because the data is not there.
+The good answer is countable: 12 calls, 9 strong signals, an 8% smoke-test sign-up rate, 4 of 5 testers through the prototype. The bad answer is a vibe metric (likes) and a hypothetical (love the idea). Likes are not behavior. The matrix routes the bad answer to Path 1 regardless of how confident the founder feels, because the data is not there.
 
 **Q4 - Monthly engineering budget**
 

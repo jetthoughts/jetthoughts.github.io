@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-labelledby="m2-trail-title">
+  <title id="m2-trail-title">Mia's Module 2 artifact trail: a Mom-Test script to a 30-name list to 10 scored interviews to a BUILD verdict to a Money answer to prototype feedback</title>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 25px; fill: #1a1a1a; font-weight: 700; }
+      .foot   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #666; font-style: italic; }
+      .chip   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #ffffff; font-weight: 700; }
+      .title  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
+      .big    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 25px; fill: #cc342d; font-weight: 700; }
+      .gbig   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 25px; fill: #2e7d32; font-weight: 700; }
+      .note   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 13px; fill: #555; }
+      .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2; }
+      .build  { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2.5; }
+      .pay    { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
+      .chipbg { fill: #cc342d; }
+    </style>
+    <marker id="arw2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6" fill="none" stroke="#999" stroke-width="1.6"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="38" class="h" text-anchor="middle">What Mia produced in Module 2</text>
+
+  <!-- Card 1: Mom-Test script -->
+  <g transform="rotate(-0.4 98.5 182)">
+    <rect x="16" y="90" width="165" height="185" rx="12" class="card"/>
+    <rect x="61.5" y="100" width="74" height="26" rx="13" class="chipbg"/>
+    <text x="98.5" y="118" class="chip" text-anchor="middle">2.1-2.2</text>
+    <text x="98.5" y="152" class="title" text-anchor="middle">Mom-Test</text>
+    <text x="98.5" y="173" class="title" text-anchor="middle">script</text>
+    <text x="98.5" y="214" class="note" text-anchor="middle">5 past-tense Qs</text>
+    <text x="98.5" y="250" class="note" text-anchor="middle">no product mentioned</text>
+  </g>
+
+  <!-- Card 2: 30-name list -->
+  <g transform="rotate(0.4 288.5 182)">
+    <rect x="206" y="90" width="165" height="185" rx="12" class="card"/>
+    <rect x="251.5" y="100" width="74" height="26" rx="13" class="chipbg"/>
+    <text x="288.5" y="118" class="chip" text-anchor="middle">2.3-2.4</text>
+    <text x="288.5" y="152" class="title" text-anchor="middle">30-name</text>
+    <text x="288.5" y="173" class="title" text-anchor="middle">list</text>
+    <text x="288.5" y="216" class="big" text-anchor="middle">10 calls</text>
+    <text x="288.5" y="252" class="note" text-anchor="middle">booked in 2 weeks</text>
+  </g>
+
+  <!-- Card 3: transcripts + BUILD -->
+  <g transform="rotate(-0.3 478.5 182)">
+    <rect x="396" y="90" width="165" height="185" rx="12" class="build"/>
+    <rect x="445.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
+    <text x="478.5" y="118" class="chip" text-anchor="middle">2.5</text>
+    <text x="478.5" y="152" class="title" text-anchor="middle">10 scored</text>
+    <text x="478.5" y="173" class="title" text-anchor="middle">transcripts</text>
+    <text x="478.5" y="216" class="gbig" text-anchor="middle">BUILD</text>
+    <text x="478.5" y="252" class="note" text-anchor="middle">8 of 10 cleared gate</text>
+  </g>
+
+  <!-- Card 4: Money answer -->
+  <g transform="rotate(0.3 668.5 182)">
+    <rect x="586" y="90" width="165" height="185" rx="12" class="card"/>
+    <rect x="635.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
+    <text x="668.5" y="118" class="chip" text-anchor="middle">2.5</text>
+    <text x="668.5" y="152" class="title" text-anchor="middle">Money</text>
+    <text x="668.5" y="173" class="title" text-anchor="middle">answer</text>
+    <text x="668.5" y="216" class="big" text-anchor="middle">$70-120</text>
+    <text x="668.5" y="252" class="note" text-anchor="middle">per session, receipts</text>
+  </g>
+
+  <!-- Card 5: Prototype (payoff) -->
+  <g transform="rotate(-0.4 858.5 182)">
+    <rect x="776" y="90" width="165" height="185" rx="12" class="pay"/>
+    <rect x="825.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
+    <text x="858.5" y="118" class="chip" text-anchor="middle">2.6</text>
+    <text x="858.5" y="152" class="title" text-anchor="middle">Clickable</text>
+    <text x="858.5" y="173" class="title" text-anchor="middle">prototype</text>
+    <text x="858.5" y="216" class="big" text-anchor="middle">4 of 5</text>
+    <text x="858.5" y="252" class="note" text-anchor="middle">price goes on profile</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="184" y1="182" x2="203" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw2)"/>
+  <line x1="374" y1="182" x2="393" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw2)"/>
+  <line x1="564" y1="182" x2="583" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw2)"/>
+  <line x1="754" y1="182" x2="773" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw2)"/>
+
+  <text x="480" y="312" class="foot" text-anchor="middle">Ten real conversations turned two notebook questions into evidence.</text>
+</svg>

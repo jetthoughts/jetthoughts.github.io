@@ -54,5 +54,5 @@
 
   <!-- Bottom rule -->
   <rect x="60" y="488" width="780" height="40" class="quad-box" rx="8"/>
-  <text x="450" y="513" class="heading" text-anchor="middle">Twitter/X: decayed enough that we no longer recommend it for B2B validation in 2026.</text>
+  <text x="450" y="513" class="heading" style="font-size:17px" text-anchor="middle">Twitter/X: decayed enough that we no longer recommend it for B2B validation in 2026.</text>
 </svg>

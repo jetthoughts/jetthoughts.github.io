@@ -114,6 +114,7 @@ The trade-off you are accepting: ±20% is a wide band. AI usage is genuinely var
 Paste these into your next SOW under "Pricing and Pass-Through Costs." If the agency redlines all three, that tells you something. If they accept all three with a shrug, that also tells you something useful.
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     A[Sign SOW with the 3 clauses] --> B[Predict bill: devs x avg x margin]
     B --> C{Month-2 invoice arrives}

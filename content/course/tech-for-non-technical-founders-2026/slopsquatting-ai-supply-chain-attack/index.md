@@ -40,19 +40,19 @@ course_nav: false
 
 **Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
 
-In April 2025, Lasso Security published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers registered those names and waited. By the time the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) named the technique "slopsquatting" in April 2025, security teams had already logged the first installs of the proof-of-concept packages on real production systems. Your founder paid $34K for an MVP. The most expensive line in the codebase was free. It was the one a model invented and a developer typed into a `Gemfile` without checking that the gem existed.
+In April 2025, Lasso Security published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers registered those names and waited. By the time the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) named the technique "slopsquatting" in April 2025, security teams had already logged the first installs of the proof-of-concept packages on real production systems. You paid $34K for an MVP. The most expensive line in the codebase was free. It was the one a model invented and a developer typed into a `Gemfile` without checking that the gem existed.
 
 ![A hand-drawn diagram of the slopsquatting attack chain in five steps: AI hallucinates a package name, attacker watches public prompt logs, attacker registers the name on Rubygems / PyPI / npm with a malicious payload, developer installs without review, damage runs in production. Annotated with the Lasso Security 11-day reproduction window.](attack-chain.svg)
 
 ## What slopsquatting is
 
-LLMs invent package names that sound plausible but do not exist. The original [Lasso Security research from March 2025](https://www.lasso.security/blog/ai-package-hallucinations) tested GPT-4, Claude, and the open-source Code Llama against thousands of common developer prompts. About 5.2% of GPT-4's package suggestions and 21.7% of Code Llama's were hallucinated. [Snyk's slopsquatting write-up](https://snyk.io/articles/slopsquatting-mitigation-strategies/) cites follow-up research putting the overall rate at roughly one in five AI-suggested packages across models. Attackers then register the most-suggested hallucinated names as squatted packages, sometimes with a malicious payload (data exfiltration, credential theft, persistence backdoor), sometimes empty until a real victim shows up. Rubygems, PyPI, npm, Composer, and crates.io all have the same exposure. The attack does not need a 0day. It needs a developer who trusts a model.
+LLMs invent package names that sound plausible but do not exist. The original [Lasso Security research from March 2025](https://www.lasso.security/blog/ai-package-hallucinations) tested GPT-4, Claude, and the open-source Code Llama against thousands of common developer prompts. About 5.2% of GPT-4's package suggestions and 21.7% of Code Llama's were hallucinated. [Snyk's slopsquatting write-up](https://snyk.io/articles/slopsquatting-mitigation-strategies/) cites follow-up research putting the overall rate at roughly one in five AI-suggested packages across models. Attackers then register the most-suggested hallucinated names as squatted packages, sometimes with a malicious payload (data exfiltration, credential theft, persistence backdoor), sometimes empty until a real victim shows up. Rubygems, PyPI, npm, Composer, and crates.io all have the same exposure. The attack does not need a 0day - just a developer who trusts a model without checking.
 
-## The 3-line CI gate (the simplest defense)
+## The 20-line CI gate (the simplest defense)
 
 A CI gate that fails the build on any new dependency until a human signs off. Every Rails, Django, and Laravel founder can install this in 15 minutes.
 
-*What this 30-line CI gate actually does: blocks any pull request that adds a new package until you've eyeballed it - cheap protection against the slopsquatting attack pattern above.*
+*What this 20-line CI gate actually does: blocks any pull request that adds a new package until you've eyeballed it - cheap protection against the slopsquatting attack pattern above.*
 
 ```yaml
 
@@ -120,7 +120,7 @@ flowchart TD
 
 ```
 
-That is it. No Snyk subscription, no Socket.dev license, no signing key infrastructure. A 30-line YAML file and one founder who reads the PR comment when it fires.
+That is it. No Snyk subscription, no Socket.dev license, no signing key infrastructure. A 20-line YAML file and one founder who reads the PR comment when it fires.
 
 ## The contract clause
 
@@ -141,7 +141,7 @@ The threat data has caught up to the technique. [Snyk's ToxicSkills audit of AI 
 Three actions. None require an engineer to start.
 
 - **Tonight: open your `Gemfile.lock` / `package-lock.json` / `requirements.txt` / `composer.lock`.** Read the package names out loud. Any name you cannot identify in 5 seconds, paste it into your registry's search (rubygems.org, pypi.org, npmjs.com). If the package has fewer than 1,000 downloads or was first published in the last 60 days, write its name on a list and ask your dev shop in writing why it is in your codebase. Save the email - it is the start of your audit.
-- **This week: drop the 30-line CI gate above into `.github/workflows/dependency-gate.yml`.** Open the PR yourself if your dev shop is slow. The merge protection takes 10 minutes to wire in GitHub repository settings. Reference the [GitHub/AWS/DB ownership checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/) for repository admin access if your name is not on the org owners list.
+- **This week: drop the 20-line CI gate above into `.github/workflows/dependency-gate.yml`.** Open the PR yourself if your dev shop is slow. The merge protection takes 10 minutes to wire in GitHub repository settings. Reference the [GitHub/AWS/DB ownership checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/) for repository admin access if your name is not on the org owners list.
 - **Before any new SOW: paste the contract clause from this post into the addendum section.** If the agency strikes the clause, that is the audit finding. The [SOW reading guide](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow) covers the rest of the clauses you should be checking on the same pass.
 
 ## Wrapping the course

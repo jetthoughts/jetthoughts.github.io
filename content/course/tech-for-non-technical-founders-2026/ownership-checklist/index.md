@@ -33,6 +33,8 @@ related_posts: false
 > - **Path 3 (Fractional CTO bridge)**: run the full 45-minute audit BEFORE you give the FCTO any credential.
 > - **Path 4 (Hire a team)**: run the full audit BEFORE the contractor's first commit. This is the safety net that prevents the credential trap in the next section.
 
+*Prefer paper? <a href="ownership-checklist.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
+
 # The GitHub / AWS / Database Ownership Checklist
 
 A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or someone else does. For Path 2 self-serve founders, this is a 5-minute confirmation; for Path 3 and Path 4 founders, the full 45-minute version.

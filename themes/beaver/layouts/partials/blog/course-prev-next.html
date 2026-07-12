@@ -80,7 +80,7 @@
     {{- if $branches }}
     <div class="course-prev-next__branches">
       {{- range $branches }}
-      <a class="course-prev-next__link course-prev-next__link--next course-prev-next__link--branch" href="{{ or .url (printf "%s%s/" $base .slug) }}">
+      <a class="course-prev-next__link course-prev-next__link--next course-prev-next__link--branch" href="{{ or .url (printf "%s%s/" $base .slug) }}" data-course-event="branch-click" data-course-label="{{ $slug }}→{{ or .slug "going-further" }}">
         <span class="course-prev-next__direction">{{ .direction }}</span>
         <span class="course-prev-next__title">{{ .title }}</span>
       </a>
@@ -96,6 +96,6 @@
     <span class="course-prev-next__link course-prev-next__link--placeholder" aria-hidden="true"></span>
     {{- end }}
   </div>
-  <p class="course-prev-next__glossary">Tripping on a term? <a href="{{ $base }}five-tech-words-stop-nodding-at/">Five Tech Words to Stop Nodding At</a> - the course glossary.</p>
+  <p class="course-prev-next__glossary">Tripping on a term? <a href="{{ $base }}five-tech-words-stop-nodding-at/" data-course-event="glossary-click" data-course-label="{{ $slug }}">Five Tech Words to Stop Nodding At</a> - the course glossary.</p>
 </nav>
 {{- end -}}

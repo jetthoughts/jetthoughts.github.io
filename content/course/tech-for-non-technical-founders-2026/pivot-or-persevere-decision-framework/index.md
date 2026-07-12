@@ -7,6 +7,14 @@ draft: false
 course_chapter: true
 author: "JetThoughts Team"
 slug: pivot-or-persevere-decision-framework
+course_nav_prev:
+  slug: customers-leaving-churn-triage-not-acquisition
+  module: "Going further"
+  title: "When Your Customers Are Leaving: Churn Triage"
+course_nav_next:
+  url: "/course/tech-for-non-technical-founders-2026/#going-further-after-first-paying-customer"
+  module: "Going further"
+  title: "All Going-further chapters"
 keywords:
   - when to pivot startup
   - lean startup pivot framework
@@ -81,28 +89,17 @@ The skill is not memorizing the six types. The skill is asking which of the five
 
 The common pattern is not pivoting too early. It's pivoting too late - watching the cohort numbers, the conversion rates, the ad spend, and the CAC numbers all degrade for two quarters before admitting the signal is real. The trigger conditions below are the numerical thresholds that should override the "let me try one more thing" instinct.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-    Start[Pivot trigger detected] --> A{Sean Ellis 40% test}
-    A -->|Under 25% overall<br/>uniform across segments| P3[Solution pivot<br/>or Customer Need pivot]
-    A -->|Under 40% overall<br/>one segment over 50%| P1[Customer Segment pivot]
-    A -->|Above 40%| B{Cohort retention 30-day}
-    B -->|All segments under 25%| P3b[Solution pivot]
-    B -->|Above 40% in one segment| C{CAC vs LTV ratio}
-    C -->|CAC over 3x LTV<br/>customers love product| P6[Revenue Model pivot]
-    C -->|CAC sustainable| D{Outbound conversion}
-    D -->|Under 1% after 60 messages| P5[Channel pivot]
-    D -->|Above 2% in one channel| E{Tech ceiling hit?}
-    E -->|Yes - cost or performance| P4[Technology pivot]
-    E -->|No| Persevere[PERSEVERE<br/>You have signal]
+Work the five checks in order - the first row whose trigger matches names your pivot type; if none match, you persevere:
 
-    classDef redbox fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
-    classDef purplebox fill:#fbe9ff,stroke:#a855f7,stroke-width:2px;
-    classDef goodbox fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px;
-    class P3,P3b,P1,P6,P5,P4 redbox
-    class Persevere goodbox
-```
+| Check, in order | Trigger threshold | Verdict |
+|---|---|---|
+| 1. Sean Ellis 40% must-have test | Under 25% in ALL segments | Solution or Customer Need pivot |
+| | Under 40% overall, but one segment 50%+ | Customer Segment pivot |
+| 2. 30-day cohort retention | All segments under 25% | Solution pivot |
+| 3. CAC vs LTV ratio | CAC over 3x LTV while customers love the product | Revenue Model pivot |
+| 4. Outbound conversion | Under 1% after 60 personal messages | Channel pivot |
+| 5. Tech ceiling | Stack cost or performance ceiling hit | Technology pivot |
+| All five clear | - | **Persevere - you have signal** |
 
 **Sean Ellis 40% under 25% across all segments** triggers a Solution pivot or a Customer Need pivot. Founders typically react by trying harder on the same product - more features, better onboarding, more polish. The right move is to ask whether the solution shape itself is wrong, or whether you targeted the wrong job.
 

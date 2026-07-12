@@ -7,6 +7,14 @@ draft: false
 course_chapter: true
 author: "JetThoughts Team"
 slug: customers-leaving-churn-triage-not-acquisition
+course_nav_prev:
+  url: "/course/tech-for-non-technical-founders-2026/#going-further-after-first-paying-customer"
+  module: "Going further"
+  title: "All Going-further chapters"
+course_nav_next:
+  slug: pivot-or-persevere-decision-framework
+  module: "Going further"
+  title: "Pivot or Persevere: The Decision Framework"
 keywords:
   - founder churn triage
   - non technical founder customer churn
@@ -55,7 +63,7 @@ The fix was not a better Meta Ads brief. The fix was to stop the ads, run a 90-m
 
 Bucket holds **32 paying users at $29 / month**. Stop the ads. Run the 90-minute cohort triage. Decide: fix the product, change the segment, or kill the SKU.
 
-This chapter is the one Module 5 does not cover. Modules 6.1 through 6.5 teach you how to land your first paying customers. This chapter teaches you what to do when the customers you already have are leaving faster than the funnel can replace them. It is the chapter for the messy middle - the founder who hit Module 5 once, got customers, and watched them slip away faster than the spreadsheet predicted.
+Module 5 (Lessons 5.1-5.7) teaches you how to land your first paying customers. This chapter covers what Module 5 does not - what to do when the customers you already have are leaving faster than the funnel can replace them. It is the chapter for the messy middle - the founder who hit Module 5 once, got customers, and watched them slip away faster than the spreadsheet predicted.
 
 The KISS rule for this chapter: if your churn is above 30% in a 30-day window, every dollar you spend on acquisition is wasted until you triage. Read on.
 

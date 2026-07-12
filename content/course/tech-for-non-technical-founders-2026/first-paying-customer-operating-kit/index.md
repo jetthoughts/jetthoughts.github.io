@@ -30,9 +30,11 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to [Module 5 of the From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Six artifacts that take you from live MVP to signed paid pilot in 4 weeks.
+📋 Template companion to [Module 5 of the From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Six artifacts that take you from live MVP to signed paid pilot in 4 weeks - the Design Partner Agreement is live below; the other five ship as they are ready.
 
 > **Status: shipping.** The DPA template (component 3) is live below - copy and paste into Google Docs. The other 5 components are described here and shipping as each is ready. There is no email signup; when a template is downloadable, the link appears inline below. Bookmark and check back.
+
+*Prefer paper? <a href="first-paying-customer-operating-kit.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
 
 # The First-Paying-Customer Operating Kit
 
@@ -40,7 +42,7 @@ related_posts: false
 
 ## What this kit covers
 
-Module 5 of this course walks five chapters: the Sean Ellis 40% test, the personal-network outreach, the paid-pilot contract, and the cold-outbound pipeline. Each chapter references a template. This page hosts them as each one ships. The DPA template is live below (component 3); the remaining 5 are described and shipping next.
+Module 5 of this course runs seven lessons (5.1-5.7): the Sean Ellis 40% test, channel choice, the personal-network outreach arc, the paid-pilot contract, and the cold-outbound pipeline. The lessons reference these templates. This page hosts them as each one ships. The DPA template is live below (component 3); the remaining 5 are described and shipping next.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -175,7 +177,7 @@ The Airtable base from [Chapter 5.7](/course/tech-for-non-technical-founders-202
 
 The payoff: turns Friday afternoon into a 10-minute "what shipped this week" review instead of a 90-minute scroll through Gmail.
 
-### 7. Pilot kickoff call agenda (60-minute template)
+### Bonus: the pilot kickoff call agenda (60-minute template)
 
 The Stripe deposit cleared on Friday. The pilot starts Monday. Your customer is asking "so what happens next?" - and the course's [Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) chapter taught you how to get to the deposit, not what to run after it. This is the 60-minute kickoff call that turns a deposit into an operating pilot:
 
@@ -216,15 +218,15 @@ The DPA template (component 3) is copy-pasteable inline above. When the remainin
 
 ## Where this fits in the course
 
-This is the lead magnet for Module 5 of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course - the chapter that lands the first paying customer right after the MVP ships. Module 5 runs in four chapters:
+This kit is the template companion to Module 5 of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course - the module that lands the first paying customer right after the MVP ships. The lessons it serves:
 
-- 7.1 [Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - run the Sean Ellis 40% test against your 10-30 MVP users.
-- 7.2 [Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - 50-name list, 4 buckets; the [outreach message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/) and [send-and-track sequence](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) follow.
-- 7.3 [Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) - one-page Design Partner Agreement plus Stripe Checkout setup.
-- 7.4 [Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) - filtered cold outbound for customers 11-20.
+- 5.1 [Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - run the Sean Ellis 40% test against your 10-30 MVP users.
+- 5.3 [Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - 50-name list, 4 buckets; the [5.4 outreach message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/) and [5.5 send-and-track sequence](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) follow.
+- 5.6 [Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) - one-page Design Partner Agreement plus Stripe Checkout setup.
+- 5.7 [Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) - filtered cold outbound for customers 11-20.
 
 Module 5 ends here. The kit ships alongside Module 5 as each artifact is ready.
 
 ## Built by
 
-[JetThoughts](https://jetthoughts.com), a Rails-first dev shop that has rescued non-technical founders' codebases for 20 years. We published this course because the same five mistakes kept showing up in the rescue calls. The kit ships free for the same reason.
+[JetThoughts](https://jetthoughts.com), a Rails-first dev shop that has rescued non-technical founders' codebases for 20 years. We published this course because the same five mistakes kept showing up in the rescue calls. The kit ships open for the same reason.

@@ -4,6 +4,11 @@ description: "Follow Mia through Module 3 as she turns ten scored transcripts an
 date: 2026-07-09
 draft: false
 slug: module-3-walkthrough-mia
+cover_image: cover.png
+cover_image_alt: "JetThoughts cover showing Mia's Module 3 run - from ten scored transcripts to a quality-checked one-page product brief"
+metatags:
+  image: cover.png
+  og_title: "Module 3 Walkthrough: Mia Writes the One-Page Brief"
 course_nav_prev:
   slug: stop-specifying-features-start-outcomes
   module: "Chapter 3.2"
@@ -23,6 +28,8 @@ Mia came out of Module 2 with a BUILD verdict, a one-page validated problem stat
 Module 3 was one evening and one lunch break: draft the brief, then try to break it.
 
 ---
+
+![Mia's Module 3 artifact trail - a one-page Product Brief, a no-go list, an outcome rewrite, and a passed quality check](artifact-trail.svg)
 
 ## [Lesson 3.1: The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
 

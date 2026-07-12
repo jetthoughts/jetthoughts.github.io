@@ -34,7 +34,7 @@
 
   <rect x="50" y="320" width="260" height="90" rx="12" class="ga4" transform="rotate(-0.3 180 365)"/>
   <text x="180" y="355" class="label" text-anchor="middle">Google Analytics 4</text>
-  <text x="180" y="385" class="sub" text-anchor="middle">long-term analytics (optional)</text>
+  <text x="180" y="385" class="sub" text-anchor="middle">page views · clicks · form submits</text>
 
   <!-- Arrows from boxes to landing page -->
   <path d="M 318 125 Q 420 125 525 145" class="arrow" marker-end="url(#arrowhead)"/>

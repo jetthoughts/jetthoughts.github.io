@@ -4,6 +4,11 @@ description: "Follow Mia through Module 2 as she drafts Mom Test questions, rehe
 date: 2026-07-09
 draft: false
 slug: module-2-walkthrough-mia
+cover_image: cover.png
+cover_image_alt: "JetThoughts cover showing Mia's Module 2 run - from a Mom-Test script to ten scored parent interviews to a BUILD verdict and prototype feedback"
+metatags:
+  image: cover.png
+  og_title: "Module 2 Walkthrough: Mia Interviews Ten Parents"
 course_nav_prev:
   slug: clickable-prototype-validation-2-hour-lovable
   module: "Chapter 2.6"
@@ -23,6 +28,8 @@ Mia came out of Module 1 with six paying customers and two open questions in her
 Module 2 was where those questions stopped being notebook entries and became interview questions.
 
 ---
+
+![Mia's Module 2 artifact trail - a Mom-Test script, a 30-name list, ten scored interviews, a BUILD verdict, a Money answer, and prototype feedback](artifact-trail.svg)
 
 ## [Lesson 2.1: The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
 

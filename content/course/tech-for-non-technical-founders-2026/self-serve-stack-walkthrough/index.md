@@ -206,6 +206,8 @@ Send the staging URL to your spouse (or one ICP peer). Ask them to sign up with 
 
 Goal: a user signs up, hits the paywall after the trial, pays $1 in Stripe test mode, lands on the paid dashboard. Phase demo: you walk through your own flow, end to end, with a $1 charge that clears.
 
+This phase looks the most technical on paper - you will see database snippets and function names below. You write none of it by hand: the AI generates each block, you paste it where the step says, and the checklists tell you what "working" looks like. Treat the code the way you treat a boarding pass - you carry it, you do not have to understand the barcode.
+
 ### Session 1 - one product, one price, in Stripe test mode
 
 In the Stripe dashboard (Products > Add product):

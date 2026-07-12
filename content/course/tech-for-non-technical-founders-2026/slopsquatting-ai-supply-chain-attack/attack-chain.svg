@@ -61,6 +61,6 @@
   <text x="560" y="448" font-size="15" fill="#fafaf7">first install logged 11 days after register)</text>
 
   <!-- Defense annotation -->
-  <text x="480" y="510" font-size="20" text-anchor="middle" fill="#cc342d" font-weight="bold">The defense: a 3-line CI gate that blocks ANY new dependency until a human reviews it.</text>
+  <text x="480" y="510" font-size="20" text-anchor="middle" fill="#cc342d" font-weight="bold">The defense: a 20-line CI gate that blocks ANY new dependency until a human reviews it.</text>
   <text x="480" y="538" font-size="16" text-anchor="middle" fill="#555">See the YAML below. Time to install: 15 minutes.</text>
 </svg>

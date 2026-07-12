@@ -37,6 +37,7 @@ related_posts: false
 > Q4. On a scale of 1-10, how big a problem is this compared to everything else on your plate?
 > Q5. Who else on your team feels this? How do they handle it?
 
+*Prefer paper? <a href="mom-test-interview-script.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
 
 Rob Fitzpatrick's book *The Mom Test* (2013) named the technique: ask about past behavior, not future intent. The questions on this page are the script. You keep them open on a second screen during the call, read them as written, and listen for emotional language while you take notes by hand.
 

@@ -2,18 +2,18 @@
   <title id="kit-sample-title">Sample row from the First 10 Customers Airtable tracker</title>
   <defs>
     <style>
-      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 24px; fill: #1a1a1a; font-weight: 700; }
+      .heading       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", sans-serif; font-size: 24px; fill: #1a1a1a; font-weight: 700; }
       .header-row    { fill: #1a1a1a; }
-      .header-text   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #fff; font-weight: 700; }
-      .cell-text     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 13px; fill: #1a1a1a; }
+      .header-text   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", sans-serif; font-size: 14px; fill: #fff; font-weight: 700; }
+      .cell-text     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", sans-serif; font-size: 13px; fill: #1a1a1a; }
       .pill-champion { fill: #a855f7; }
       .pill-hot      { fill: #cc342d; }
       .pill-warm     { fill: #b8860b; }
-      .pill-text     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 12px; fill: #fff; font-weight: 700; }
+      .pill-text     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", sans-serif; font-size: 12px; fill: #fff; font-weight: 700; }
       .row-stripe-a  { fill: #fff5f5; stroke: #ddd; stroke-width: 0.5; }
       .row-stripe-b  { fill: #fdfdfd; stroke: #ddd; stroke-width: 0.5; }
       .row-stripe-c  { fill: #fbe9ff; stroke: #ddd; stroke-width: 0.5; }
-      .note          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #444; font-style: italic; }
+      .note          { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", sans-serif; font-size: 14px; fill: #444; font-style: italic; }
     </style>
   </defs>
 
@@ -73,7 +73,7 @@
   <rect x="335" y="244" width="55" height="22" rx="11" class="pill-hot"/>
   <text x="362" y="260" class="pill-text" text-anchor="middle">HOT</text>
   <text x="430" y="258" class="cell-text">May 6</text>
-  <text x="540" y="258" class="cell-text">Maybe - May 9</text>
+  <text x="540" y="258" class="cell-text">Maybe · 5/9</text>
   <text x="630" y="258" class="cell-text">F/u sent</text>
   <text x="730" y="258" class="cell-text">-</text>
   <text x="850" y="258" class="cell-text">-</text>

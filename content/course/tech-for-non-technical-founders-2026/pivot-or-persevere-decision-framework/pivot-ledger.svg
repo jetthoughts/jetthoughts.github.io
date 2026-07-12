@@ -46,7 +46,7 @@
 
   <!-- Row 3 -->
   <text x="60" y="260" class="row">Disconfirmed problem</text>
-  <text x="280" y="260" class="row">Chapter 2.3 / 7.5</text>
+  <text x="280" y="260" class="row">Ch 2.3 / churn triage</text>
   <text x="565" y="260" class="keep" text-anchor="middle">YES (negative)</text>
   <text x="650" y="260" class="row">Add to "do not chase" list</text>
   <line x1="50" y1="275" x2="850" y2="275" class="row-line"/>
@@ -74,9 +74,9 @@
 
   <!-- Row 7 -->
   <text x="60" y="440" class="row">Built MVP code</text>
-  <text x="280" y="440" class="row">Module 5A / 6B</text>
+  <text x="280" y="440" class="row">Ch 4.3-4.4 / hire track</text>
   <text x="565" y="440" class="drop" text-anchor="middle">DEPENDS</text>
-  <text x="650" y="440" class="row">Keep auth/billing, replace core</text>
+  <text x="650" y="440" class="row" style="font-size:15px">Keep auth/billing, swap core</text>
   <line x1="50" y1="455" x2="850" y2="455" class="row-line"/>
 
   <!-- Row 8 -->

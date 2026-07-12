@@ -181,7 +181,7 @@ These are the tools the course references - AI research tools, no-code builders,
 
 ## The Course's Rule: Kill Bad Ideas Fast
 
-Every module has a gate. If the data doesn't support your hypothesis, you stop and either pivot or kill the idea. The gate sends you back if the data doesn't support the hypothesis.
+Every module has a gate. If the data doesn't support your hypothesis, you stop and either pivot or kill the idea.
 
 | Module | The Gate | Signal to Proceed |
 |---|---|---|

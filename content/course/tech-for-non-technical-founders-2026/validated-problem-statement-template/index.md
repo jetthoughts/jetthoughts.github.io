@@ -40,13 +40,15 @@ related_posts: false
 >
 > Fill in order Mon morning. Send to your 2 readers (one advisor, one peer) by Mon EOD.
 
+*Prefer paper? <a href="validated-problem-statement-template.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
+
 ## Why this exists
 
 A solo founder I spoke with last month sent 47 cold DMs to Twitter strangers complaining about their CRM. Twelve answered. Of the twelve, two said yes and ten said honest, paragraph-long no's. She had spent six weekends collecting transcripts in a folder labeled `notes`. When she opened the folder to write the problem statement, she realized she had never named the persona, never tallied the strong signals, and never written the why-now. The ten no's looked alike in her memory and contradicted each other on the page. Half of them were not even the persona she was building for. The synthesis took 90 minutes the first time she sat down to do it - and the decision the page produced was *pivot to a different ICP* rather than *build*. She kept the calendar she would have spent prompting Lovable and ran 5 sharper interviews instead. This template is the page she filled in.
 
 ## How to use this
 
-Block 90 minutes on a single morning. Print the template (or copy the markdown version below into a Notion doc). Bring all 10 interview transcripts, your handwritten Q4 scores, your emotional-flag counts.
+Block 90 minutes on a single morning - about 30 of them go to the writing itself, the rest to re-reading transcripts and scores. Print the template (or copy the markdown version below into a Notion doc). Bring all 10 interview transcripts, your handwritten Q4 scores, your emotional-flag counts.
 
 The order matters. Score first, count second, write the page third. Write the page before scoring and you write the page you wished the calls had returned, not the page the transcripts actually support. The friction of writing the score before the prose is what stops you from talking yourself into the build.
 

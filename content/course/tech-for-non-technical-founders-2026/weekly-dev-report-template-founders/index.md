@@ -1,5 +1,5 @@
 ---
-title: "6.5 · The Plain-English Weekly Dev Report"
+title: "The Plain-English Weekly Dev Report"
 aliases: ["/blog/weekly-dev-report-template-founders/"]
 description: "A one-page weekly dev report you demand from your team every Monday. Five sections, copy-paste, with pass/fail examples for each. No jargon."
 date: 2026-05-18
@@ -23,7 +23,7 @@ related_posts: false
 course_nav: false
 cover_image: cover.png
 metatags:
-  og_title: "6.5 · The Plain-English Weekly Dev Report"
+  og_title: "The Plain-English Weekly Dev Report"
   og_description: "A one-page weekly dev report you demand from your team every Monday. Five sections, copy-paste, with pass/fail examples for each. No jargon."
 cover_image_alt: "JetThoughts blog cover for The Plain-English Weekly Dev Report showing two side-by-side email screenshots - a wall of jargon on the left and a one-page five-section report on the right"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/"
@@ -41,7 +41,7 @@ Open your inbox on a Monday morning. Two reports landed over the weekend from tw
 
 The first is 1,840 words long. It opens with "We made significant progress on the v2 architecture refactor and dependency hardening this sprint, prioritising long-term maintainability." There are seven Jira screenshots, a burndown chart, and a paragraph titled "Tech debt remediation." Nowhere in the report can you find a URL you can click. You read it twice. You still cannot say what shipped.
 
-The second is one page. The first line is a staging URL. The second line says "co flow is live; here is a $1 test charge that hit your Stripe dashboard at 14:02 UTC." The third line names two things the team cut to ship that. The fourth line names one person blocking one decision and the answer she needs from you by Wednesday. The fifth line says "next week we are worried about the migration; it locks the orders table and we want a 6am window."
+The second is one page. The first line is a staging URL. The second line says "checkout flow is live; here is a $1 test charge that hit your Stripe dashboard at 14:02 UTC." The third line names two things the team cut to ship that. The fourth line names one person blocking one decision and the answer she needs from you by Wednesday. The fifth line says "next week we are worried about the migration; it locks the orders table and we want a 6am window."
 
 Both teams worked the same five days, and the second report gave you everything you needed to run your Monday while the first burned half an hour of it.
 
@@ -148,4 +148,4 @@ The bad report leans on soft verbs, passive voice, and unnamed actors because it
 - Wes Kao, [How I give the right amount of context](https://newsletter.weskao.com/p/how-i-give-the-right-amount-of-context) - a practitioner reference on the discipline of writing one short, useful update a week.
 - Eric Ries via Lean Startup Co., [What Is an MVP?](https://leanstartup.co/resources/articles/what-is-an-mvp/) - the validated-learning framing that makes "what did we cut?" a real product question, not a comfort question.
 
-Built by JetThoughts as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum. Authorship credit only - no service pitch.
+Built by JetThoughts as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.
