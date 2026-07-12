@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="fh-title">
+  <title id="fh-title">The Founding Hypothesis - one sentence with five fill-in blanks: if we help your customer solve their problem with your approach, they'll pick it over what they do today because of your edge</title>
+  <defs>
+    <style>
+      .heading { font-family: "Caveat", "Patrick Hand", cursive; font-size: 56px; fill: #1a1a1a; font-weight: 700; }
+      .subnote { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #444; font-style: italic; }
+      .word    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 40px; fill: #1a1a1a; }
+      .blank   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 38px; fill: #cc342d; font-weight: 700; }
+      .box     { fill: #fff5f5; stroke: #cc342d; stroke-width: 3; }
+      .foot    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #444; font-style: italic; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1080" height="1080" fill="#ffffff"/>
+
+  <text x="540" y="105" class="heading" text-anchor="middle">The Founding Hypothesis</text>
+  <text x="540" y="152" class="subnote" text-anchor="middle">one sentence, written before you build anything</text>
+
+  <text x="540" y="240" class="word" text-anchor="middle">If we help</text>
+  <g transform="rotate(-1 540 296)">
+    <rect x="330" y="264" width="420" height="64" rx="14" class="box"/>
+    <text x="540" y="307" class="blank" text-anchor="middle">your customer</text>
+  </g>
+
+  <text x="540" y="395" class="word" text-anchor="middle">solve</text>
+  <g transform="rotate(0.8 540 451)">
+    <rect x="330" y="419" width="420" height="64" rx="14" class="box"/>
+    <text x="540" y="462" class="blank" text-anchor="middle">their problem</text>
+  </g>
+
+  <text x="540" y="550" class="word" text-anchor="middle">with</text>
+  <g transform="rotate(-0.7 540 606)">
+    <rect x="330" y="574" width="420" height="64" rx="14" class="box"/>
+    <text x="540" y="617" class="blank" text-anchor="middle">your approach</text>
+  </g>
+
+  <text x="540" y="705" class="word" text-anchor="middle">they'll pick it over</text>
+  <g transform="rotate(0.9 540 761)">
+    <rect x="250" y="729" width="580" height="64" rx="14" class="box"/>
+    <text x="540" y="772" class="blank" text-anchor="middle">what they do today</text>
+  </g>
+
+  <text x="540" y="860" class="word" text-anchor="middle">because</text>
+  <g transform="rotate(-0.8 540 916)">
+    <rect x="290" y="884" width="500" height="64" rx="14" class="box"/>
+    <text x="540" y="927" class="blank" text-anchor="middle">why they'd pick you</text>
+  </g>
+
+  <text x="540" y="1030" class="foot" text-anchor="middle">stuck on one blank? that's your first research question</text>
+</svg>
