@@ -2,6 +2,20 @@
    baseof.html on every page, making this the single source of truth for
    body typography. Earlier per-bundle body rules used to fight each other
    (homepage/services had Roboto+18/300/1.5; blog/post/about had nothing). */
+
+/* baseof.html's skip-link depends on .sr-only, which historically only
+   existed in the FL layout files; it must live site-wide so retiring those
+   files can't unhide the link (caught by the blog-single parity gate). */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
