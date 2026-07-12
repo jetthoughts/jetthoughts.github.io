@@ -67,6 +67,12 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "course/landing", tolerance: 0.03, skip_area: %w[picture img]
   end
 
+  def test_careers_ruby
+    visit "/careers/junior-ruby-on-rails-developer/"
+
+    assert_stable_screenshot "careers/junior-ruby-on-rails-developer", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
   def test_client_single_full
     visit "/clients/agent-inbox/"
 
