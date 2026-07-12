@@ -1,46 +1,7 @@
-/* Page-specific FL-Builder node styles - inherits framework from consolidated/fl-layout-grid.html + consolidated/fl-common-modules.html */
-
-/* Privacy Policy Page Row (fl-node-ypvs1kmu8ifb) */
-.fl-node-ypvs1kmu8ifb > .fl-row-content-wrap {
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-attachment: scroll;
-  background-size: cover;
-}
-.fl-node-ypvs1kmu8ifb .fl-row-content {
-  max-width: 800px;
-}
-.fl-node-ypvs1kmu8ifb > .fl-row-content-wrap {
-  padding-top: 200px;
-  padding-bottom: 130px;
-}
-@media (max-width: 1115px) {
-  .fl-node-ypvs1kmu8ifb.fl-row > .fl-row-content-wrap {
-    padding-top: 150px;
-  }
-}
-@media (max-width: 860px) {
-  .fl-node-ypvs1kmu8ifb.fl-row > .fl-row-content-wrap {
-    padding-top: 100px;
-    padding-bottom: 50px;
-  }
-}
-.fl-node-n35mvjhird21 {
-  width: 100%;
-}
-.fl-node-ypvs1kmu8ifb .fl-row-content {
-  min-width: 0;
-}
-
-/* Page-specific Rich Text Module Spacing */
-.fl-node-wdsg6r2ykhb1 > .fl-module-content {
-  margin-top: 80px;
-}
-@media (max-width: 860px) {
-  .fl-node-wdsg6r2ykhb1.fl-module > .fl-module-content {
-    margin-top: 30px;
-  }
-}
+/* Site header/nav styles for the privacy-policy bundle. The page-content
+   node rules that used to live here retired with the semantic rewrite
+   (see css/pages/simple-page.css); the FL/PowerPack header partial still
+   needs everything below until the header's own rewrite sprint. */
 
 /* Header Navigation Menu Node (fl-node-ncg61wov0ytq) - PowerPack Styles */
 .fl-node-ncg61wov0ytq .pp-advanced-menu-horizontal {
