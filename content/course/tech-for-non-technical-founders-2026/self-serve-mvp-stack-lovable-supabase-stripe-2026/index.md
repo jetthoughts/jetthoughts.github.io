@@ -114,7 +114,7 @@ The fee is the standard [per-transaction card processing rate](https://stripe.co
 
 Free for solo founders on the Free plan. You will not write much code yourself, but Lovable can sync to a GitHub repo (short for repository - the online folder that stores your code) on every save. Two reasons this matters: (a) you have a backup if Lovable goes down or you cancel the subscription, (b) when you eventually hire a contractor or a Fractional CTO, the code is already in a place they can read. Set this up in Lovable's Settings on day one. Skipping this is the most common reason a founder cannot retrieve the source six months later.
 
-> **Module 4 AI critic/simulator block**
+> **Have AI review the build before real users touch it.**
 >
 > **What AI can help with at this stage:**
 >

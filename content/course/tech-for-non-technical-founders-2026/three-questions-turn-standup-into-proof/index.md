@@ -1,5 +1,5 @@
 ---
-title: "6.4 · Three Questions That Turn Standup Into Proof"
+title: "Three Questions That Turn Standup Into Proof"
 aliases: ["/blog/three-questions-turn-standup-into-proof/"]
 description: "Three questions a non-technical founder can ask in any daily standup to tell shipping from stalling. Pass/fail signals, follow-ups, the Friday demo pairing."
 date: 2026-05-18
@@ -23,7 +23,7 @@ course_nav: false
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "6.4 · Three Questions That Turn Standup Into Proof"
+  og_title: "Three Questions That Turn Standup Into Proof"
   og_description: "Three questions a non-technical founder can ask in any daily standup to tell shipping from stalling. Pass/fail signals, follow-ups, the Friday demo pairing."
 cover_image_alt: "JetThoughts blog cover for Three Questions That Turn a Standup Into Proof showing three numbered question cards on a redacted Jira board"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/"

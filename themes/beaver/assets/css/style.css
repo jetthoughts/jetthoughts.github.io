@@ -76,14 +76,21 @@
   position: relative;
 }
 
-/* TL;DR callout accent (render-blockquote hook adds .bq-tldr) - gives the
-   lesson-head stack a visual hierarchy: neutral orientation card, purple
-   TL;DR, neutral skip-note. */
+/* Semantic callout accents (render-blockquote hook adds the classes).
+   The base "brand-colored blockquote" rule below paints border-left +
+   background; these override only the colors: purple = TL;DR (lesson-head
+   hierarchy), green = Good worked example, red stays for Bad/default. */
 .blog blockquote.bq-tldr {
-  box-shadow: inset 3px 0 0 0 #a855f7;
+  border-left-color: #a855f7;
   background: rgba(168, 85, 247, 0.05);
-  border-radius: 0 8px 8px 0;
-  padding-right: 16px;
+}
+.blog blockquote.bq-good {
+  border-left-color: #2e7d32;
+  background: rgba(46, 125, 50, 0.05);
+}
+.blog blockquote.bq-bad {
+  border-left-color: #cc342d;
+  background: rgba(204, 52, 45, 0.05);
 }
 
 .blog blockquote p {

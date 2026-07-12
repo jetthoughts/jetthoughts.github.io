@@ -48,6 +48,12 @@ magick page.png -trim +repage -crop 1280x2400 +repage slices/page--%02d.png
 # alive) - the kill-after-sleep watchdog is required.
 ```
 
+Caveat: raw headless `--window-size=390,...` does NOT emulate a mobile
+device (no viewport-meta scaling) - body text clips at the right edge on
+EVERY page, which reads as fake overflow. Mobile checks need the
+chrome-devtools MCP resize (or DevTools device emulation); use raw
+headless only for desktop-width captures.
+
 ## Per-view checklist
 
 | Class | What to look for | Caught before |

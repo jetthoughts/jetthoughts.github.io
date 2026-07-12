@@ -141,7 +141,7 @@ When you're done you should have 30 real sentences and 30 named people. Don't pa
 
 **Where to search (the AI gave you specifics; here are the common starting points):**
 
-- **Reddit** - subreddits in your vertical. Sort by Top → Past Month. The 1% willing to complain in public are usually willing to take a 20-minute call. Free tool [Keyworddit](https://keyworddit.com) surfaces the keywords a given subreddit is currently using, so you can search those phrases back into Reddit and find the named complainers.
+- **Reddit** - subreddits in your vertical. Sort by Top → Past Month. The 1% willing to complain in public are usually willing to take a 20-minute call. [Keyworddit](https://keyworddit.com) surfaces the keywords a given subreddit is currently using, so you can search those phrases back into Reddit and find the named complainers.
 - **LinkedIn** - paste the problem in quotes into search, filter to Posts → Past Week.
 - **Industry Slack and Discord** - Indie Hackers, Lovable, No Code Founders, and the vertical-specific communities your AI map named.
 - **[G2](https://www.g2.com/) and [Capterra](https://www.capterra.com/) reviews (the two big business-software review sites)** - pull every 2-star and 3-star review of the closest competitor. Pain a stranger typed for free, organized by feature.

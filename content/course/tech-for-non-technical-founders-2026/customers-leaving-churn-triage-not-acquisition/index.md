@@ -7,6 +7,14 @@ draft: false
 course_chapter: true
 author: "JetThoughts Team"
 slug: customers-leaving-churn-triage-not-acquisition
+course_nav_prev:
+  url: "/course/tech-for-non-technical-founders-2026/#going-further-after-first-paying-customer"
+  module: "Going further"
+  title: "All Going-further chapters"
+course_nav_next:
+  slug: pivot-or-persevere-decision-framework
+  module: "Going further"
+  title: "Pivot or Persevere: The Decision Framework"
 keywords:
   - founder churn triage
   - non technical founder customer churn

@@ -1,5 +1,5 @@
 ---
-title: "6.2 · The Org Chart Your Dev Shop Won't Draw"
+title: "The Org Chart Your Dev Shop Won't Draw"
 aliases: ["/blog/engineering-org-chart-non-technical-founder/"]
 description: "The 5-person team your agency pitched is rarely the team writing your code. Six questions to surface who actually ships, who reviews, and who is on-call."
 date: 2026-05-18
@@ -22,7 +22,7 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "6.2 · The Org Chart Your Dev Shop Won't Draw"
+  og_title: "The Org Chart Your Dev Shop Won't Draw"
   og_description: "The 5-person team your agency pitched is rarely the team writing your code. Six questions to surface who actually ships, who reviews, and who is on-call."
 cover_image_alt: "JetThoughts blog cover showing a redacted org chart with question marks over four boxes and one named senior reviewer"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/"
@@ -103,42 +103,18 @@ A real answer names a person, their familiarity with your repo, and their existi
 
 This catches what the first five missed. A team that ships well can replay a PR in a minute: "Marcos opened a 40-line change in the `OrdersController`, Priya pushed back on the missing test for the refund branch, Marcos added the test, she approved, CI went green, we merged at 3pm Wednesday." A team that does not ship well will describe a process instead of a transaction. JT's note on [small PRs as the unit of team productivity](/blog/how-small-pr-improves-team-productivity-development/) explains why the transaction is the trust signal; if your team cannot point at one, the unit does not exist.
 
-```mermaid
+Run the six on your next status call, in order. Every answer in the right column is a flag:
 
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#f5f5f5', 'primaryBorderColor':'#666', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+| Question, in order | Healthy answer | Red-flag answer = 1 flag |
+|---|---|---|
+| 1. Who reviewed the last 5 PRs? | Named humans | "the senior team" - single point of failure or no clear owner |
+| 2. How many other clients this week? | 1-2 | 3+ - 15 min per PR means skim and approve |
+| 3. Anyone subcontracted? | No, all in-house | Pause / "sometimes" - hidden labor layer at junior rate, senior bill |
+| 4. On-call for midnight outages? | Named rotation + SLA | "Best effort" - Sentry hits Monday morning, not Tuesday at 3am |
+| 5. Senior quits Friday - who replaces by Monday? | Named person, familiar with your repo | "We have bench depth" - you will pay for the scramble |
+| 6. Walk me through one PR from last week | Replays it in 60 seconds | Describes a process, not a transaction - the unit of trust is missing |
 
-flowchart TD
-
-    Start(["Run on your next status call.<br/>Six questions, in order."])
-    Start --> Q1{1. Who reviewed<br/>the last 5 PRs?}
-    Q1 -->|Named humans| Q2{2. How many other<br/>clients this week?}
-    Q1 -->|'the senior team'| F1[Single point of failure<br/>or no clear owner]
-    Q2 -->|1-2| Q3{3. Anyone<br/>subcontracted?}
-    Q2 -->|3+| F2[15 min per PR<br/>= skim and approve]
-    Q3 -->|No, all in-house| Q4{4. On-call for<br/>midnight outages?}
-    Q3 -->|Pause / 'sometimes'| F3[Hidden labor layer<br/>at junior rate, senior bill]
-    Q4 -->|Named rotation + SLA| Q5{5. If senior quits Friday,<br/>who replaces by Monday?}
-    Q4 -->|'best effort'| F4[Sentry hits Monday morning<br/>not Tuesday at 3am]
-    Q5 -->|Named person, familiar| Q6{6. Walk me through<br/>one PR from last week}
-    Q5 -->|'we have bench depth'| F5[You will pay for<br/>the scramble]
-    Q6 -->|Replays in 60 sec| Pass[✓ Real org chart visible<br/>Continue with team]
-    Q6 -->|Describes process,<br/>not transaction| F6[Unit of trust missing]
-    F1 --> Audit[3+ flags fire<br/>= time to audit your team<br/>cross-check PRs, AWS bill, names on commits]
-    F2 --> Audit
-    F3 --> Audit
-    F4 --> Audit
-    F5 --> Audit
-    F6 --> Audit
-    classDef good fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-    classDef bad  fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
-    classDef neutral fill:#f5f5f5,stroke:#666,stroke-width:2px,color:#1a1a1a
-    classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
-    class Start start
-    class Q1,Q2,Q3,Q4,Q5,Q6 neutral
-    class Pass good
-    class F1,F2,F3,F4,F5,F6,Audit bad
-
-```
+**Zero to two flags**: the real org chart is visible - continue with the team. **Three or more flags fire**: time to audit your team - cross-check PRs, the AWS bill, and the names on commits.
 
 ## What to do tomorrow
 

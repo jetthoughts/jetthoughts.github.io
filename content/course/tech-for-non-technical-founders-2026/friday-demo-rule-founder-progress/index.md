@@ -1,5 +1,5 @@
 ---
-title: "6.3 · The Friday Demo Rule: 15 Min Truth Test"
+title: "The Friday Demo Rule: 15 Min Truth Test"
 aliases: ["/blog/friday-demo-rule-founder-progress/"]
 description: "The 15-minute Friday ritual that surfaces fake progress in 4 weeks flat. Loom or live, working software only, no Jira screenshots, no slides, hard stop."
 date: 2026-05-18
@@ -21,7 +21,7 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "6.3 · The Friday Demo Rule: 15 Min Truth Test"
+  og_title: "The Friday Demo Rule: 15 Min Truth Test"
   og_description: "The 15-minute Friday ritual that surfaces fake progress in 4 weeks flat. Loom or live, working software only, no Jira screenshots, no slides, hard stop."
 cover_image_alt: "JetThoughts blog cover for The Friday Demo Rule showing a kitchen-timer set to 15 minutes next to a laptop screen with a clickable staging URL and a struck-through Jira screenshot"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/"

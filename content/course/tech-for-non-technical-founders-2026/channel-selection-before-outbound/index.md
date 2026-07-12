@@ -132,9 +132,9 @@ The prompt is a forcing function, not a crystal ball. The real data comes from r
 
 > **Fast-path exit: skip the worksheet if your interviews already named a channel.** If your Ch 2.3-2.4 interview transcripts pointed to a clear channel (e.g., 7+ of 10 interviewees found tools through LinkedIn, or 5+ named a specific Slack community), jump to Part 3: The Commitment at the bottom of the worksheet. Write your commitment statement and move to Ch 5.3. The full worksheet is for founders still deciding between channels. It's a diagnostic, not a gate.
 
-> **Module 5 AI critic/simulator block**
+> **What the Claude prompt above can and cannot tell you.**
 >
-> The Claude prompt in the section above is the Module 5 critic layer. It pressure-tests your channel hypothesis against interview evidence, surfaces assumptions behind each choice, and flags contradictions between what your transcripts said and what your gut says.
+> The prompt in the section above is your channel-choice pressure-test. It pressure-tests your channel hypothesis against interview evidence, surfaces assumptions behind each choice, and flags contradictions between what your transcripts said and what your gut says.
 >
 > **What AI cannot prove or substitute:**
 > - Which channel will actually convert (only a real send/reply/follow-up arc can)

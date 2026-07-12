@@ -13,6 +13,14 @@
 <blockquote class="bq-tldr">
 {{ .Text }}
 </blockquote>
+{{- else if or (strings.HasPrefix .Text "<p>Good:") (strings.HasPrefix .Text "<p><strong>Good") -}}
+<blockquote class="bq-good">
+{{ .Text }}
+</blockquote>
+{{- else if or (strings.HasPrefix .Text "<p>Bad:") (strings.HasPrefix .Text "<p><strong>Bad") -}}
+<blockquote class="bq-bad">
+{{ .Text }}
+</blockquote>
 {{- else -}}
 <blockquote>
 {{ .Text }}

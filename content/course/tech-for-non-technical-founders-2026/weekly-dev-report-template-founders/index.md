@@ -1,5 +1,5 @@
 ---
-title: "6.5 · The Plain-English Weekly Dev Report"
+title: "The Plain-English Weekly Dev Report"
 aliases: ["/blog/weekly-dev-report-template-founders/"]
 description: "A one-page weekly dev report you demand from your team every Monday. Five sections, copy-paste, with pass/fail examples for each. No jargon."
 date: 2026-05-18
@@ -23,7 +23,7 @@ related_posts: false
 course_nav: false
 cover_image: cover.png
 metatags:
-  og_title: "6.5 · The Plain-English Weekly Dev Report"
+  og_title: "The Plain-English Weekly Dev Report"
   og_description: "A one-page weekly dev report you demand from your team every Monday. Five sections, copy-paste, with pass/fail examples for each. No jargon."
 cover_image_alt: "JetThoughts blog cover for The Plain-English Weekly Dev Report showing two side-by-side email screenshots - a wall of jargon on the left and a one-page five-section report on the right"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/"

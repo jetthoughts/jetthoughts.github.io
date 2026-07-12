@@ -36,11 +36,9 @@ related_posts: false
 >
 > **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Ch 2.3-2.4 recruitment and real interviews
 >
-> **Progress:** M2 · 2 of 6 · Results so far: draft question list · Skip if you have interviewed customers before - 2.1 is the core
+> **Progress:** M2 · 2 of 6 · Results so far: draft question list · Interviewed customers before? Skip straight to [Ch 2.3: Find 10 People](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - 2.1 is the core
 >
 > **Cost:** $0 (free tier on Claude or ChatGPT)
-
-> **Skip this if you've interviewed before.** If you've run customer interviews in the past and your questions produced concrete past-tense answers, go straight to [Ch 2.3: Find 10 People](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). This chapter catches broken question shapes before they waste real interview slots - useful for first-timers, unnecessary if you've already calibrated your question technique.
 
 > **TL;DR:** A 90-minute AI rehearsal catches broken questions before you spend real interview slots on them. Claude personas expose hypothetical phrasing that generates polite yeses from anyone.
 
@@ -232,7 +230,7 @@ If your ICP description is wrong - the wrong role, the wrong company size, the w
 
 This is the other reason real interviews stay irreplaceable: a real customer can tell you your ICP description is wrong, while Claude can only simulate the ICP you described.
 
-> **Module 2 AI critic/simulator block** - This chapter IS the block.
+> **What this AI rehearsal can and cannot do for you.**
 >
 > **What AI can help with at this stage:**
 > - Simulate 3 ICP personas answering your draft Mom Test questions in-character

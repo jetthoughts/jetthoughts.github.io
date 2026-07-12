@@ -7,6 +7,14 @@ draft: false
 course_chapter: true
 author: "JetThoughts Team"
 slug: pivot-or-persevere-decision-framework
+course_nav_prev:
+  slug: customers-leaving-churn-triage-not-acquisition
+  module: "Going further"
+  title: "When Your Customers Are Leaving: Churn Triage"
+course_nav_next:
+  url: "/course/tech-for-non-technical-founders-2026/#going-further-after-first-paying-customer"
+  module: "Going further"
+  title: "All Going-further chapters"
 keywords:
   - when to pivot startup
   - lean startup pivot framework
