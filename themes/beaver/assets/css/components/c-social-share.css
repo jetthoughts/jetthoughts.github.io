@@ -309,7 +309,7 @@
 
 /* Social icon accessibility focus */
 .c-social-share__link:focus-visible {
-  outline: 2px solid #1a8cff;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   border-radius: 4px;
 }

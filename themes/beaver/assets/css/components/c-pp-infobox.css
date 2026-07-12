@@ -68,7 +68,7 @@
 
 .c-pp-infobox:hover .c-pp-infobox__icon i {
   transform: scale(1.1);
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 /* InfoBox Title Components */
@@ -97,7 +97,7 @@
 }
 
 .c-pp-infobox:hover .c-pp-infobox__title {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .c-pp-infobox__subtitle {
@@ -151,7 +151,7 @@
 .c-pp-infobox__more-link:hover,
 .c-pp-more-link:hover {
   text-decoration: none;
-  color: #1a8cff;
+  color: var(--color-primary);
   transform: translateX(3px);
 }
 
@@ -286,7 +286,7 @@
   height: 20px;
   margin: -10px 0 0 -10px;
   border: 2px solid transparent;
-  border-top-color: #1a8cff;
+  border-top-color: var(--color-primary);
   border-radius: 50%;
   animation: infoboxSpin 1s linear infinite;
   z-index: 10;
@@ -305,7 +305,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: white;
   border-radius: 50%;
   font-weight: bold;

@@ -404,7 +404,7 @@
 }
 .fl-builder-content .fl-node-4h3i0s82lbyx .fl-module-content .fl-rich-text,
 .fl-builder-content .fl-node-4h3i0s82lbyx .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 .fl-builder-content .fl-node-4h3i0s82lbyx .fl-rich-text {
   font-weight: 600;
@@ -840,7 +840,7 @@
   border-color: var(--color-dark);
 }
 .fl-node-ncg61wov0ytq .menu > li.current-menu-item > a {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 .fl-node-ncg61wov0ytq .menu .pp-has-submenu .sub-menu {
   display: none;
@@ -1455,7 +1455,7 @@ img {
 }
 a.fl-button,
 a.fl-button:visited {
-  background: #1a8cff;
+  background: var(--color-primary);
   color: #fff;
   border: 1px solid #006ddc;
 }
@@ -1464,7 +1464,7 @@ a.fl-button:visited * {
   color: #fff;
 }
 button {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #fff;
   font-size: 18px;
   line-height: 1.45;
@@ -1530,7 +1530,7 @@ button {
 .fl-page a.fl-button:visited,
 .fl-page button:visited {
   color: #fff;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 18px;

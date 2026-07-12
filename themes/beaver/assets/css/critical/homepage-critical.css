@@ -1752,7 +1752,7 @@ img {
 
 a.fl-button,
 a.fl-button:visited {
-  background: #1a8cff;
+  background: var(--color-primary);
   color: #fff;
   border: 1px solid #006ddc;
 }
@@ -1761,7 +1761,7 @@ a.fl-button:visited * {
   color: #fff;
 }
 button {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #fff;
   font-size: 18px;
   line-height: 1.45;
@@ -1831,7 +1831,7 @@ button {
 .fl-page a.fl-button:visited,
 .fl-page button:visited {
   color: #fff;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 18px;
@@ -2044,7 +2044,7 @@ header ul.menu > li > ul.sub-menu > li > a .menu-image {
 }
 .jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-panel-content div a {
   padding: 12px 25px;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #fff;
   border-radius: 25px;
   font-family: roboto, sans-serif !important;

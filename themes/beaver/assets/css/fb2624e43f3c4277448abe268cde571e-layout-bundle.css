@@ -1696,19 +1696,19 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li.focus .pp-menu-toggle:before {
-  border-color: #1A8CFF;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li a:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li a:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li a:focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li a:focus .pp-menu-toggle:before {
-  border-color: #1A8CFF;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu .menu > li > a:hover, .fl-node-menu .menu > li > a:focus, .fl-node-menu .menu > li:hover > .pp-has-submenu-container > a, .fl-node-menu .menu > li.focus > .pp-has-submenu-container > a, .fl-node-menu .menu > li.current-menu-item > a, .fl-node-menu .menu > li.current-menu-item > .pp-has-submenu-container > a {
-  color: #1A8CFF;
+  color: var(--color-primary);
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-has-submenu-container:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-has-submenu-container.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li.current-menu-item > .pp-has-submenu-container .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-has-submenu-container:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-has-submenu-container.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li.current-menu-item > .pp-has-submenu-container .pp-menu-toggle:before {
-  border-color: #1A8CFF;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu .menu .pp-has-submenu .sub-menu {
@@ -1747,7 +1747,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 
 .fl-node-menu .sub-menu > li > a:hover, .fl-node-menu .sub-menu > li > a:focus, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:focus, .fl-node-menu .sub-menu > li.current-menu-item > a, .fl-node-menu .sub-menu > li.current-menu-item > .pp-has-submenu-container > a {
   background-color: ;
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .sub-menu .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .sub-menu .pp-menu-toggle:before {
@@ -1755,7 +1755,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .sub-menu li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .sub-menu li:hover .pp-menu-toggle:before {
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu .pp-advanced-menu .pp-menu-toggle:before {
@@ -3011,7 +3011,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-tgivwns6ak74 a:hover {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-node-tgivwns6ak74 {
@@ -4130,7 +4130,7 @@ div.fancybox-container {
 }
 
 .fl-node-adblszvmw7uo .pp-image-carousel .swiper-pagination-bullet:hover, .fl-node-adblszvmw7uo .pp-image-carousel .swiper-pagination-bullet:focus, .fl-node-adblszvmw7uo .pp-image-carousel .swiper-pagination-bullet-active, .fl-node-adblszvmw7uo .pp-image-carousel .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   opacity: 1;
   box-shadow: none;
 }
@@ -5614,7 +5614,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-builder-content .fl-node-rujwd9mzxche .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-rujwd9mzxche .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-rujwd9mzxche .fl-rich-text, .fl-builder-content .fl-node-rujwd9mzxche .fl-rich-text *:not(b, strong) {
@@ -6492,7 +6492,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   padding: 7px 15px;
   background-color: rgba(26, 140, 255, 0.1) !important;
   border-radius: 21px;
-  color: #1A8CFF;
+  color: var(--color-primary);
   transition: all 0.3s ease-in-out;
   margin-bottom: 8px;
 }

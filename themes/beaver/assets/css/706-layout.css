@@ -1904,7 +1904,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-builder-content .fl-node-aqltr65gjmz4 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-aqltr65gjmz4 .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-aqltr65gjmz4 .fl-rich-text, .fl-builder-content .fl-node-aqltr65gjmz4 .fl-rich-text *:not(b, strong) {
@@ -2043,7 +2043,7 @@ span.pp-accordion-button-icon {
 }
 
 .fl-node-bsgr4vwu32cn .pp-accordion-item .pp-accordion-button:hover, .fl-node-bsgr4vwu32cn .pp-accordion-item.pp-accordion-item-active .pp-accordion-button {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #ffffff;
 }
 
@@ -2123,7 +2123,7 @@ span.pp-accordion-button-icon {
 }
 
 .fl-node-qupih6a9xymw .pp-accordion-item .pp-accordion-button:hover, .fl-node-qupih6a9xymw .pp-accordion-item.pp-accordion-item-active .pp-accordion-button {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #ffffff;
 }
 

@@ -1464,7 +1464,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-4h3i0s82lbyx .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-4h3i0s82lbyx .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-4h3i0s82lbyx .fl-rich-text, .fl-builder-content .fl-node-4h3i0s82lbyx .fl-rich-text *:not(b, strong) {
@@ -3139,7 +3139,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-31rjgest75um .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-31rjgest75um .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-31rjgest75um .fl-rich-text, .fl-builder-content .fl-node-31rjgest75um .fl-rich-text *:not(b, strong) {
@@ -4137,12 +4137,12 @@ body .pp-post-feed-meta {
 
 .fl-node-t2084qdhsoz6 .pp-content-grid-pagination li a.page-numbers, .fl-node-t2084qdhsoz6 .pp-content-grid-pagination li span.page-numbers {
   background-color: #ffffff;
-  color: #1a8cff;
+  color: var(--color-primary);
   margin-right: 5px;
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-grid-pagination li a.page-numbers:hover, .fl-node-t2084qdhsoz6 .pp-content-grid-pagination li span.current, .fl-node-t2084qdhsoz6 .pp-content-grid-pagination li span[aria-current] {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #ffffff;
 }
 
@@ -4153,14 +4153,14 @@ body .pp-post-feed-meta {
 
 .fl-node-t2084qdhsoz6 .pp-content-grid-load-more a {
   background-color: #ffffff;
-  color: #1a8cff;
+  color: var(--color-primary);
   text-align: center;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-grid-load-more a:hover {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #ffffff;
 }
 
@@ -4554,7 +4554,7 @@ body .pp-post-feed-meta {
   border-style: solid;
   border-width: 0;
   background-clip: border-box;
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
   border-top-width: 1px;
   border-right-width: 1px;
   border-bottom-width: 1px;
@@ -5129,7 +5129,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 .fl-node-t2084qdhsoz6 .career-detail h4 {
   font-size: 14px;
-  color: #1A8CFF;
+  color: var(--color-primary);
   margin: 0 0 10px 0;
 }
 

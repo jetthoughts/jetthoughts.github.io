@@ -126,12 +126,12 @@ body input[type="submit"] {
 
 .c-pp-infobox-button:hover .c-pp-more-link,
 .jt-service-box:hover .pp-infobox-description .pp-infobox-button .pp-more-link {
-  color: #1a8cff !important;
+  color: var(--color-primary) !important;
 }
 
 .c-pp-infobox-button:hover .c-pp-more-link i,
 .jt-service-box:hover .pp-infobox-description .pp-infobox-button .pp-more-link i {
-  color: #1a8cff !important;
+  color: var(--color-primary) !important;
 }
 
 /* PP Swiper Button Styles */
@@ -180,7 +180,7 @@ body input[type="submit"] {
   margin-right: 10px;
   background: rgba(26, 141, 255, 0.1);
   border: unset;
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 /* PP Menu Close Button Styles (from advanced menu) */
@@ -349,15 +349,15 @@ body input[type="submit"] {
 
 /* PP Button Style Variants */
 .c-pp-button--primary {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: white;
   border: none;
 }
 
 .c-pp-button--secondary {
   background-color: transparent;
-  color: #1a8cff;
-  border: 2px solid #1a8cff;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .c-pp-button--outline {

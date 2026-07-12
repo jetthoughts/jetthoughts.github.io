@@ -193,7 +193,7 @@ input[type=submit]:disabled {
 }
 
 /* Links: visible brand blue with hover underline (WCAG AA contrast)
-   #0066d6 = 4.78:1 on white. Sprint #2 promoted this from old #1a8cff
+   #0066d6 = 4.78:1 on white. Sprint #2 promoted this from old var(--color-primary)
    which was 3.37:1 (WCAG fail). */
 .blog p a,
 .blog li a,

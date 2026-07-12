@@ -47,9 +47,9 @@
 
 /* Primary Button Variant - Only color differences remain */
 .c-button--primary {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #ffffff;
-  border: 2px solid #1a8cff;
+  border: 2px solid var(--color-primary);
 }
 
 .c-button--primary:hover {
@@ -73,7 +73,7 @@
 /* Tertiary Button Variant - Only color differences remain */
 .c-button--tertiary {
   background-color: transparent;
-  color: #1a8cff;
+  color: var(--color-primary);
   border: 2px solid transparent;
 }
 

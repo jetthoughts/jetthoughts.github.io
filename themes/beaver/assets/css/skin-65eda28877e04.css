@@ -94,7 +94,7 @@ h6 {
 }
 
 a:hover, a:focus {
-  color: #1a8cff
+  color: var(--color-primary)
 }
 
 blockquote {
@@ -705,7 +705,7 @@ body.rtl .fl-screen-reader-text {
 .wp-pagenavi span.current, .wp-pagenavi a:hover {
   border-color: #e6e6e6;
   color: #fff;
-  background: #1a8cff;
+  background: var(--color-primary);
   font-weight: normal
 }
 
@@ -785,7 +785,7 @@ body.rtl .fl-screen-reader-text {
 }
 
 .post-edit-link {
-  color: #1a8cff;
+  color: var(--color-primary);
   font-size: 14px;
   font-weight: normal
 }
@@ -1034,7 +1034,7 @@ input[type=text].fl-search-input:focus {
 
 .fl-page .fl-module span.onsale {
   color: #fff;
-  background: #1a8cff;
+  background: var(--color-primary);
   font-size: 13px;
   font-weight: normal;
   left: 10px;
@@ -1119,7 +1119,7 @@ input[type=text].fl-search-input:focus {
 }
 
 a.fl-button, a.fl-button:visited {
-  background: #1a8cff;
+  background: var(--color-primary);
   color: #fff;
   border: 1px solid #006ddc
 }
@@ -1153,7 +1153,7 @@ a.fl-button:hover, a.button:hover {
 }
 
 button, input[type=button], input[type=submit] {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #fff;
   font-size: 18px;
   line-height: 1.45;
@@ -1170,14 +1170,14 @@ button, input[type=button], input[type=submit] {
 }
 
 button:hover, input[type=button]:hover, input[type=submit]:hover {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #fff;
   border: 1px solid #006ddc;
   text-decoration: none
 }
 
 button:active, input[type=button]:active, input[type=submit]:active, button:focus, input[type=button]:focus, input[type=submit]:focus {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #fff;
   border: 1px solid #006ddc;
   outline: none;
@@ -1389,11 +1389,11 @@ img.mfp-img {
   }
 
   .fl-page-nav .navbar-nav li > a:hover, .fl-page-nav .navbar-nav li > a:focus {
-    color: #1a8cff
+    color: var(--color-primary)
   }
 
   .fl-page-nav .navbar-nav li.current-menu-ancestor > a, .fl-page-nav .navbar-nav li.current-menu-parent > a, .fl-page-nav .navbar-nav li.current-menu-item > a {
-    color: #1a8cff
+    color: var(--color-primary)
   }
 
   .fl-page-nav .navbar-nav li.current-menu-item ~ li.current-menu-item > a {
@@ -2390,7 +2390,7 @@ ul.wp-block-latest-posts.alignwide, ul.wp-block-latest-posts.alignfull, ul.wp-bl
 
 .fl-page button:visited, .fl-responsive-preview-content button:visited, .fl-button-lightbox-content button:visited, .fl-page input[type=button], .fl-responsive-preview-content input[type=button], .fl-button-lightbox-content input[type=button], .fl-page input[type=submit], .fl-responsive-preview-content input[type=submit], .fl-button-lightbox-content input[type=submit], .fl-page a.fl-button, .fl-responsive-preview-content a.fl-button, .fl-button-lightbox-content a.fl-button, .fl-page a.fl-button:visited, .fl-responsive-preview-content a.fl-button:visited, .fl-button-lightbox-content a.fl-button:visited, .fl-page a.button, .fl-responsive-preview-content a.button, .fl-button-lightbox-content a.button, .fl-page a.button:visited, .fl-responsive-preview-content a.button:visited, .fl-button-lightbox-content a.button:visited, .fl-page button.button, .fl-responsive-preview-content button.button, .fl-button-lightbox-content button.button, .fl-page button.button:visited, .fl-responsive-preview-content button.button:visited, .fl-button-lightbox-content button.button:visited, .fl-page .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle, .fl-responsive-preview-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle, .fl-button-lightbox-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle, .fl-page .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:visited, .fl-responsive-preview-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:visited, .fl-button-lightbox-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:visited {
   color: #fff;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 18px;

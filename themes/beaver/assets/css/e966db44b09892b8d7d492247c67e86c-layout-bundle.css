@@ -1696,19 +1696,19 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li.focus .pp-menu-toggle:before {
-  border-color: #1A8CFF;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li a:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li a:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li a:focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li a:focus .pp-menu-toggle:before {
-  border-color: #1A8CFF;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu .menu > li > a:hover, .fl-node-menu .menu > li > a:focus, .fl-node-menu .menu > li:hover > .pp-has-submenu-container > a, .fl-node-menu .menu > li.focus > .pp-has-submenu-container > a, .fl-node-menu .menu > li.current-menu-item > a, .fl-node-menu .menu > li.current-menu-item > .pp-has-submenu-container > a {
-  color: #1A8CFF;
+  color: var(--color-primary);
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-has-submenu-container:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-has-submenu-container.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li.current-menu-item > .pp-has-submenu-container .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-has-submenu-container:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-has-submenu-container.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li.current-menu-item > .pp-has-submenu-container .pp-menu-toggle:before {
-  border-color: #1A8CFF;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu .menu .pp-has-submenu .sub-menu {
@@ -1747,7 +1747,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 
 .fl-node-menu .sub-menu > li > a:hover, .fl-node-menu .sub-menu > li > a:focus, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:focus, .fl-node-menu .sub-menu > li.current-menu-item > a, .fl-node-menu .sub-menu > li.current-menu-item > .pp-has-submenu-container > a {
   background-color: ;
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .sub-menu .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .sub-menu .pp-menu-toggle:before {
@@ -1755,7 +1755,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .sub-menu li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .sub-menu li:hover .pp-menu-toggle:before {
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu .pp-advanced-menu .pp-menu-toggle:before {
@@ -3113,7 +3113,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-qs2ucemf7j56 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-qs2ucemf7j56 .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-qs2ucemf7j56 .fl-rich-text, .fl-builder-content .fl-node-qs2ucemf7j56 .fl-rich-text *:not(b, strong) {
@@ -3136,7 +3136,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-r6ej0mdao5l2 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-r6ej0mdao5l2 .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-r6ej0mdao5l2 .fl-rich-text, .fl-builder-content .fl-node-r6ej0mdao5l2 .fl-rich-text *:not(b, strong) {
@@ -3159,7 +3159,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-wtch9dloa7yx .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-wtch9dloa7yx .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-wtch9dloa7yx .fl-rich-text, .fl-builder-content .fl-node-wtch9dloa7yx .fl-rich-text *:not(b, strong) {
@@ -3792,15 +3792,15 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button:hover a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button:hover a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover .pp-share-button-icon, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover .pp-share-button-icon {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button:hover a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button:hover a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover a * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button:hover a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button:hover a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover .pp-share-button-icon *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover .pp-share-button-icon * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 @media only screen and ( max-width: 1115px ) {

@@ -2579,7 +2579,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-a8slipjo6r9d .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-a8slipjo6r9d .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-a8slipjo6r9d .fl-rich-text, .fl-builder-content .fl-node-a8slipjo6r9d .fl-rich-text *:not(b, strong) {
@@ -2806,7 +2806,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-37jime6o5w12 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-37jime6o5w12 .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-37jime6o5w12 .fl-rich-text, .fl-builder-content .fl-node-37jime6o5w12 .fl-rich-text *:not(b, strong) {
@@ -4591,7 +4591,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-byg0v6ftixrd .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-byg0v6ftixrd .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-byg0v6ftixrd .fl-rich-text, .fl-builder-content .fl-node-byg0v6ftixrd .fl-rich-text *:not(b, strong) {
@@ -5579,7 +5579,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-rujwd9mzxche .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-rujwd9mzxche .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-rujwd9mzxche .fl-rich-text, .fl-builder-content .fl-node-rujwd9mzxche .fl-rich-text *:not(b, strong) {

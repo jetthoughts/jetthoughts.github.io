@@ -427,7 +427,7 @@
 /* Pattern 38: Hero Text Animation Type Writer */
 .c-hero-sections__text--typewriter {
   overflow: hidden;
-  border-right: 2px solid var(--jt-primary, #1a8cff);
+  border-right: 2px solid var(--jt-primary, var(--color-primary));
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.1em;
@@ -441,7 +441,7 @@
 
 @keyframes heroCursor {
   from, to { border-color: transparent; }
-  50% { border-color: var(--jt-primary, #1a8cff); }
+  50% { border-color: var(--jt-primary, var(--color-primary)); }
 }
 
 /* Pattern 39: Hero Shape Layer Integration */
@@ -488,7 +488,7 @@
   display: inline-block;
   padding: 8px 16px;
   background: rgba(26, 140, 255, 0.1);
-  color: var(--jt-primary, #1a8cff);
+  color: var(--jt-primary, var(--color-primary));
   border-radius: 50px;
   font-size: 14px;
   font-weight: 600;
@@ -510,7 +510,7 @@
 .c-hero-sections__stat-number {
   font-size: 48px;
   font-weight: 800;
-  color: var(--jt-primary, #1a8cff);
+  color: var(--jt-primary, var(--color-primary));
   display: block;
   line-height: 1;
 }
@@ -580,7 +580,7 @@
 }
 
 .c-hero-sections__breadcrumb a:hover {
-  color: var(--jt-primary, #1a8cff);
+  color: var(--jt-primary, var(--color-primary));
 }
 
 .c-hero-sections__breadcrumb-separator {

@@ -50,7 +50,7 @@
 /* Override Bootstrap defaults to match site brand */
 .page-link {
   font-size: 1rem;
-  color: #1a8cff;
+  color: var(--color-primary);
   border-radius: 6px;
   border-color: #e0e0e0;
 }
