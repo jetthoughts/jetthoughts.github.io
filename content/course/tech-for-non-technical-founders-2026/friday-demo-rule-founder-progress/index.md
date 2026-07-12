@@ -98,7 +98,7 @@ flowchart TD
     Click --> Forward([Forward Loom URL<br/>to your inbox<br/>same evening])
     Forward --> Score{After 4 weeks<br/>review the pattern}
     Score -->|4 of 4 demos clickable| Healthy([Cadence works<br/>continue weekly])
-    Score -->|2 of 4 or fewer| Investigate([Run the<br/>oversight audit<br/>standup + report + spaceship])
+    Score -->|2 of 4 or fewer| Investigate([Something is stalling<br/>Run the Org Chart audit<br/>+ red-flags checklist])
     classDef good fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
     classDef bad  fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
     classDef neutral fill:#f5f5f5,stroke:#666,stroke-width:2px,color:#1a1a1a
@@ -108,6 +108,8 @@ flowchart TD
     class Investigate bad
 
 ```
+
+If the four-week score lands at 2 of 4 or fewer, run the [Org Chart audit](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) and the [eight red flags checklist](/blog/dev-shop-red-flags-checklist/) before adding any new process - the demo cadence is the symptom log, those two are the diagnosis.
 
 ## What to do tomorrow
 
