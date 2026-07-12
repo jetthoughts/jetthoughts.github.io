@@ -103,7 +103,6 @@ scripts/lighthouse/reports/
 _dest/
 _temp/
 _tmp/
-docs/projects/2509-css-migration/50-59-execution/
 
 *.local.*
 .cache
