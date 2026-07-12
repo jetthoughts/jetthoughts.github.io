@@ -1,8 +1,8 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-07-11 (Sprints A+B+C executed on branch course-p0-p1-sprints by a 6-agent swarm + coordinator, cold-eyes review verdict SHIP: GA4 funnel events + Clarity hook + pilot kit revived as 40.18 [Sprint A]; TL;DR accent hook, 5 walkthrough heroes + artifact-trail SVGs, 21 stale cover badges, de-stacks, 1.5 SVG rebuild, 5.7 mermaid LR [Sprint B]; PDF pipeline + 5 printable worksheets [Sprint C]. Paul actions before pilot invites: Clarity project + param, consent posture, budget, calendar - see 40.18 revival section. Earlier same day: PR #354 merged/deployed.)
+**Last Updated**: 2026-07-12 (PR #356 MERGED as ad1cb19c, deployed, production verified. It carried: Sprints A+B+C [GA4 funnel events + Clarity hook + pilot kit 40.18; walkthrough heroes/artifact trails + TL;DR accent + 21 cover badges; PDF pipeline + 5 printable worksheets], the 3-round PDF/SVG visual loop [43 SVGs + 61 pages exhaustively inspected, 13 SVGs repaired], the 8-dimension premium swarm review 40.19 [54/60 PREMIUM; all sub-premium findings fixed], and the reflection round [old-spine 6.x title ghosts, AI-block label leaks x4, org-chart mermaid -> decision table, Good/Bad callout accents + cascade bug].)
 
-## Active Phase: external validation pilot (real Sams, kit at 40-49-review/_DEFERRED_external-validation-pilot-kit.md) + funnel instrumentation → distribution prep
+## Active Phase: external validation pilot (real Sams, kit at 40-49-review/40.18-external-validation-pilot-kit.md; Paul actions: Clarity project + param, consent posture, budget, calendar) → distribution prep
 
 ## Groomed backlog (2026-07-11 grooming session)
 
