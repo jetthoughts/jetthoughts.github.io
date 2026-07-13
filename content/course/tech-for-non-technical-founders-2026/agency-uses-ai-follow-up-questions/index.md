@@ -100,7 +100,7 @@ Ask which human's name shows up on the agency's `Assisted-by:` lines this week. 
 
 ### Q4 - The slopsquatting question
 
-> "In April 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers register those names and wait for developers to install the typo. How do you prevent installing a hallucinated package?"
+> "In March 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers register those names and wait for developers to install the typo. How do you prevent installing a hallucinated package?"
 
 A passing answer names a specific defense: a pre-vetted package allowlist with a written process for adding new dependencies, a scanner like [Socket](https://socket.dev/) or [Snyk](https://snyk.io/) on every PR that blocks the build until a human approves any new package, or a manual `gem info <name>` / `pip show <name>` / `npm view <name>` step before any new dependency lands.
 

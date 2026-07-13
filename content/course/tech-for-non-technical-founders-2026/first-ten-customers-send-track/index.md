@@ -72,7 +72,7 @@ A "no" from a cold-bucket name is a non-event. They were never the right name. M
 > 3. Send warm tomorrow or the day after.
 > 4. Send cold once early replies settle in.
 > 5. Track every reply in the four new columns. Book demos for evenings or weekend mornings.
-> 6. **✅ Success check:** at least 10 replies received across all buckets. Book 3-5 demos.
+> 6. **Success check:** at least 10 replies received across all buckets. Book 3-5 demos.
 
 ---
 

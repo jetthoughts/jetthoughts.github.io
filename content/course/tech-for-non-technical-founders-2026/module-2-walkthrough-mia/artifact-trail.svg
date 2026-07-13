@@ -56,7 +56,7 @@
 
   <!-- Card 4: Money answer -->
   <g transform="rotate(0.3 668.5 182)">
-    <rect x="586" y="90" width="165" height="185" rx="12" class="card"/>
+    <rect x="586" y="90" width="165" height="185" rx="12" class="build"/>
     <rect x="635.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
     <text x="668.5" y="118" class="chip" text-anchor="middle">2.5</text>
     <text x="668.5" y="152" class="title" text-anchor="middle">Money</text>

@@ -198,19 +198,7 @@ First, use the vocabulary you heard in Mom Test interviews, not the vocabulary y
 
 Second, resist adding a fourth screen. The constraint is the test. If you feel the prototype needs a fourth screen to "make sense," that is a finding: your solution has more steps than a single session can validate. Note it and keep the prototype to three screens. You are testing legibility of the shape, not the completeness of the product.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-    P["Open Lovable<br/>Paste the prompt template"]
-    P --> R["Read fake data out loud<br/>Change vocab to match<br/>interview language"]
-    R --> T["Test the 3 screens yourself<br/>as if you've never seen your idea"]
-    T --> Done["Prototype ready<br/>Share link to 5 interviewees"]
-
-    classDef red fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
-    classDef purple fill:#fbe9ff,stroke:#a855f7,stroke-width:2.5px,color:#1a1a1a
-    class P,R,T red
-    class Done purple
-```
+![Build the 3-screen prototype in three moves: open Lovable and paste the prompt template with placeholders filled, read the fake data out loud and change the vocabulary to match the words you heard in interviews, then test all three screens yourself as if you've never seen the idea - leaving with a prototype ready to share as a link to 5 interviewees](prototype-build-strip.svg)
 
 ## Run a Silent-Observation Session with 5 Interviewees
 

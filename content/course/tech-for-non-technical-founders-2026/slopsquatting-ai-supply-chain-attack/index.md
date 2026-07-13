@@ -48,6 +48,8 @@ In March 2025, Lasso Security published findings that AI assistants suggested ov
 
 LLMs invent package names that sound plausible but do not exist. The original [Lasso Security research from March 2025](https://www.lasso.security/blog/ai-package-hallucinations) tested GPT-4, Claude, and the open-source Code Llama against thousands of common developer prompts. About 5.2% of GPT-4's package suggestions and 21.7% of Code Llama's were hallucinated. [Snyk's slopsquatting write-up](https://snyk.io/articles/slopsquatting-mitigation-strategies/) cites follow-up research putting the overall rate at roughly one in five AI-suggested packages across models. Attackers then register the most-suggested hallucinated names as squatted packages, sometimes with a malicious payload (data exfiltration, credential theft, persistence backdoor), sometimes empty until a real victim shows up. Rubygems, PyPI, npm, Composer, and crates.io all have the same exposure. The attack does not need a 0day (a secret, unpatched vulnerability) - just a developer who trusts a model without checking.
 
+![A hand-drawn comparison table across three stacks - Rails/Ruby, Django/Python, and Laravel/npm. Each row shows the plausible-sounding package name an AI model hallucinated (active_support_extras_helper, requestz, react-toastify-fork) next to the real package it was confused with (active_record_extra, requests, react-toastify). All three hallucinated names were registered by Lasso researchers as proof-of-concept in April 2025.](hallucinated-vs-real.svg)
+
 ## The 20-line CI gate (the simplest defense)
 
 A CI gate that fails the build on any new dependency until a human signs off. Every Rails, Django, and Laravel founder can install this in 15 minutes.

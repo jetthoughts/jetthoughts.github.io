@@ -57,7 +57,7 @@ Read this **the night before you sign, alone**, with a printed SOW, a yellow hig
 
 **Plain English**: We do not know what we are building. We will figure it out and bill you for it.
 
-| **Bad wording** | **Good wording** |
+| <span style="color:#cc342d">**Bad wording**</span> | <span style="color:#2e7d32">**Good wording**</span> |
 |---|---|
 | "Vendor will deliver the features described in Exhibit A. Detailed scope, including specific tickets, will be defined sprint by sprint with Client's product owner." | Demand a feature list at the level of "a Rails 7 app with a Hotwire frontend, deployed via Kamal to Hetzner, with sign-up, contractor-match, payment, and an admin panel listing the last 100 jobs." Then ask for an estimate per feature in days, not story points. If they cannot estimate the work, they cannot price it. (See [the founder's guide to hiring a dev shop](/blog/founders-guide-hiring-dev-shop/) for what a real scope looks like.) |
 
@@ -67,7 +67,7 @@ Read this **the night before you sign, alone**, with a printed SOW, a yellow hig
 
 **Plain English**: We get paid when we push code to a URL nobody uses. If you do not write a structured rejection in five days, the money is ours.
 
-| **Bad wording** | **Good wording** |
+| <span style="color:#cc342d">**Bad wording**</span> | <span style="color:#2e7d32">**Good wording**</span> |
 |---|---|
 | "A milestone shall be deemed delivered upon Vendor's deployment to the Client-accessible staging environment. Client shall have five (5) business days to raise objections; absent objections, the milestone is accepted and payable." | "A milestone is delivered when (a) the acceptance criteria in Exhibit B pass in CI (`bundle exec rspec` for Rails, `pytest` for Django, `php artisan test` for Laravel), (b) Client has clicked the feature end-to-end on the staging URL, and (c) Client has signed off in writing." Acceptance criteria belong in the SOW, not in a Slack message. The [Friday demo template](/course/tech-for-non-technical-founders-2026/friday-demo-template/) covers what the click-through looks like. |
 
@@ -77,7 +77,7 @@ Read this **the night before you sign, alone**, with a printed SOW, a yellow hig
 
 **Plain English**: Anything you ask for after signing costs $185/hour with no ceiling. The estimate can be 4 hours or 400; you have nothing to compare it against.
 
-| **Bad wording** | **Good wording** |
+| <span style="color:#cc342d">**Bad wording**</span> | <span style="color:#2e7d32">**Good wording**</span> |
 |---|---|
 | "Any modification to Scope shall be processed via Change Order, billed at Vendor's standard rate of $185/hour. Vendor shall provide a written estimate prior to execution." | (1) Cap change orders at a percentage of the original SOW (10% standard, 20% generous). (2) Require a written estimate naming the developer, hours, and deliverable, with a 48-hour Founder-approval window. (3) Strike "verbal approval." Skip this and you end up with the [hidden-cost vendor management problem](/blog/hidden-cost-poor-development-vendor-management-fix/) on the AmEx statement. |
 
@@ -100,7 +100,7 @@ The single highest-stakes clause in the SOW: who owns the code while you're payi
 
 **Plain English**: We will rent AWS, Stripe, and the AI tools under our own accounts and bill you whatever they cost, plus 15%. When this engagement ends, the accounts stay with us.
 
-| **Bad wording** | **Good wording** |
+| <span style="color:#cc342d">**Bad wording**</span> | <span style="color:#2e7d32">**Good wording**</span> |
 |---|---|
 | "Vendor shall manage all third-party services required for the Project, including hosting, third-party APIs, and AI/ML tooling. Costs shall be passed through to Client at cost plus a 15% administrative fee." | (1) Every third-party account (AWS, GitHub, Stripe, Anthropic, OpenAI) is created under your company email from Day 1, paid by your company card; the agency gets IAM sub-access. (2) Pass-through costs capped per month with a Founder-approval gate above the ceiling. (3) AI token usage itemized monthly per developer and per project. Strike the 15% admin fee on infrastructure. |
 
@@ -125,7 +125,7 @@ The [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers what a clean te
 
 **Plain English**: We will fix bugs free for 30 days after we declare the thing delivered. If "delivered" means "deployed to staging" (see Clause 2), the warranty might run out before users ever touch the feature.
 
-| **Bad wording** | **Good wording** |
+| <span style="color:#cc342d">**Bad wording**</span> | <span style="color:#2e7d32">**Good wording**</span> |
 |---|---|
 | "Vendor warrants that the Deliverables shall conform to the specifications for thirty (30) days following Delivery." | Anchor the warranty to **production launch**: "The warranty period begins on the date the Deliverables are first served to live, paying users in production, and runs for 90 days thereafter." Define "warranted bug" plainly: anything that blocks a user from completing a flow listed in Exhibit A. The opening-story founder lost three weeks of warranty coverage because three milestones were "delivered" to staging but never reached production. |
 
@@ -135,7 +135,7 @@ The [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers what a clean te
 
 **Plain English**: If we ever fight about money, you fly to our city, hire a local lawyer, and wait six to twelve months for an arbitrator we know to decide.
 
-| **Bad wording** | **Good wording** |
+| <span style="color:#cc342d">**Bad wording**</span> | <span style="color:#2e7d32">**Good wording**</span> |
 |---|---|
 | "Any dispute arising under this Agreement shall be finally resolved by binding arbitration administered by JAMS in [Vendor's home county, Vendor's home state]. Each party shall bear its own costs." | (1) Add a **mediation step**: "The parties shall attempt in good faith to resolve any dispute through non-binding mediation in [Client's home city] before initiating arbitration." Mediation resolves about 80% of commercial disputes. (2) Set the arbitration venue at a **neutral location** or split it by who initiates the claim. (3) Add a **prevailing-party fee-shift**: the loser pays the winner's reasonable attorney fees. |
 

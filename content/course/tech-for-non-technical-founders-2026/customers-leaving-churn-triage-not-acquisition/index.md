@@ -115,9 +115,9 @@ The cohort numbers route you to one of three decisions. There is no fourth optio
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     A[Cohort numbers from the 90-minute floor] --> B[Per-segment 30-day retention spread?]
-    B -->|All segments under 25%<br/>and roughly the same| C[Decision 3 - KILL THE SKU<br/>Sunset gracefully + pivot]
-    B -->|All segments around 20-35%<br/>and roughly the same| D[Decision 1 - FIX THE PRODUCT<br/>Rebuild one workflow]
-    B -->|One segment over 50%<br/>others under 20%| E[Decision 2 - CHANGE THE SEGMENT<br/>Refund the wrong half]
+    B -->|All low| C[Decision 3 - KILL THE SKU<br/>All segments under 25%<br/>Sunset gracefully + pivot]
+    B -->|All medium| D[Decision 1 - FIX THE PRODUCT<br/>All segments 20-35%<br/>Rebuild one workflow]
+    B -->|One high| E[Decision 2 - CHANGE THE SEGMENT<br/>One over 50%, rest under 20%<br/>Refund the wrong half]
     C --> CK[Go to Pivot or Persevere<br/>in Going Further]
     D --> DK[Read the Going Further chapters<br/>Going Further]
     E --> EK[Re-run Module 5 outreach<br/>aimed at the right segment]
@@ -125,11 +125,11 @@ flowchart TD
     classDef redbox fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
     classDef yellowbox fill:#fff8e0,stroke:#b8860b,stroke-width:2px;
     classDef purplebox fill:#fbe9ff,stroke:#a855f7,stroke-width:2px;
-    classDef greenbox fill:#f0f9f0,stroke:#2e7d32,stroke-width:2px;
+    classDef navbox fill:#faf7f2,stroke:#1a1a1a,stroke-width:2px;
     class C redbox
     class D yellowbox
     class E purplebox
-    class CK,DK,EK greenbox
+    class CK,DK,EK navbox
 ```
 
 ### Decision 1 - FIX THE PRODUCT

@@ -192,7 +192,7 @@ flowchart TD
 
     classDef q fill:#fffbe6,stroke:#bf8a00,stroke-width:2.5px,color:#1a1a1a
     classDef stay fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-    classDef bridge fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
+    classDef bridge fill:#fbe9ff,stroke:#a855f7,stroke-width:2.5px,color:#1a1a1a
     classDef hire fill:#f5e9ff,stroke:#7c3aed,stroke-width:2.5px,color:#1a1a1a
     classDef start fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
     class Start start

@@ -48,6 +48,10 @@ If the agency declines to answer in advance, that is a 0 on every question. Exer
 
 ## The five questions
 
+Keep this card open during the call - the pass signal sits beside the fail signal for each question, with a box to score 0 or 1 in real time. The full criteria for each are in the sections below.
+
+![The five agency AI questions on one card - the pass signal beside the fail signal for each, with a box to score 0 or 1 in real time](scorecard-at-a-glance.svg)
+
 ### Q1 - The workflow question
 
 > "Walk me through how a developer on your team takes a Jira ticket and ends up with merged code, when they use AI in the loop. Name the tools, the prompt patterns, and the human review gates. Use a real ticket your team closed last week."
@@ -82,7 +86,7 @@ If the agency declines to answer in advance, that is a 0 on every question. Exer
 
 *slopsquatting: when AI suggests a package name that doesn't exist, an attacker registers it, and your build pulls the malicious version. See the [dedicated chapter](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/).*
 
-> "In April 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist; attackers register those names and wait for developers to install the typo. How does your team prevent installing a hallucinated gem or pip package?"
+> "In March 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist; attackers register those names and wait for developers to install the typo. How does your team prevent installing a hallucinated gem or pip package?"
 
 **Pass:** A pre-vetted allowlist with a written process for adding new packages. A scanner like Socket or Snyk on every PR that blocks the build on new dependencies until a human approves. They use the term "slopsquatting" without prompting and cite the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) or the [SecurityWeek piece on AI coding agents and supply-chain risk](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/).
 

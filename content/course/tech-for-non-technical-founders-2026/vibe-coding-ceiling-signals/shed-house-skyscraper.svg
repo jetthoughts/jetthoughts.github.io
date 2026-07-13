@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1030 560" font-family='"Segoe UI", system-ui, -apple-system, sans-serif'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1030 560" font-family='"Caveat", "Patrick Hand", "Comic Sans MS", cursive'>
   <defs>
     <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
       <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" seed="9"/>
@@ -26,7 +26,7 @@
   </g>
   <text x="180" y="464" font-size="22" text-anchor="middle" fill="#cc342d" font-weight="bold">The shed</text>
   <text x="180" y="484" font-size="20" text-anchor="middle" fill="#1a1a1a">Lovable + Supabase + Stripe</text>
-  <text x="180" y="502" font-size="18" text-anchor="middle" fill="#555">1 founder - ~$87 / mo - 4 weeks</text>
+  <text x="180" y="502" font-size="15" text-anchor="middle" fill="#555">1 founder - ~$87 / mo - 4 weeks</text>
 
   <!-- HOUSE (Fractional CTO + small team) -->
   <g filter="url(#rough)">
@@ -39,7 +39,7 @@
   </g>
   <text x="480" y="464" font-size="22" text-anchor="middle" fill="#2e7d32" font-weight="bold">The house</text>
   <text x="480" y="484" font-size="20" text-anchor="middle" fill="#1a1a1a">Fractional CTO + 1-2 engineers</text>
-  <text x="480" y="502" font-size="18" text-anchor="middle" fill="#555">Rails / Django / Laravel - ~$10-25K / mo</text>
+  <text x="480" y="502" font-size="15" text-anchor="middle" fill="#555">Rails / Django / Laravel - ~$10-25K / mo</text>
 
   <!-- SKYSCRAPER (Hired team) -->
   <g filter="url(#rough)">
@@ -60,7 +60,7 @@
   </g>
   <text x="840" y="464" font-size="22" text-anchor="middle" fill="#0277bd" font-weight="bold">The skyscraper</text>
   <text x="840" y="484" font-size="20" text-anchor="middle" fill="#1a1a1a">Hired engineering team</text>
-  <text x="840" y="502" font-size="18" text-anchor="middle" fill="#555">SOC2 / HIPAA - audit-ready - ~$50K+ / mo</text>
+  <text x="840" y="502" font-size="15" text-anchor="middle" fill="#555">SOC2 / HIPAA - audit-ready - ~$50K+ / mo</text>
 
   <!-- Arrows between -->
   <line x1="245" y1="395" x2="375" y2="365" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr2)"/>

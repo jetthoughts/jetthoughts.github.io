@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="rehloop-title">
+  <title id="rehloop-title">The rehearsal flow at a glance: bring in your draft Mom Test question list plus the customer blank from Ch 1.1. Prompts 1-2 build 3 ICP personas and test each draft question in-character. Prompt 3 gets Claude's out-of-character diagnosis of each question. Prompts 4-5 surface 3 likely objections and sharpen the weak questions to be past-anchored. You leave with 5-7 sharpened questions plus an Objection Tracker, ready for real interviews.</title>
+  <desc>A left-to-right strip of five cards joined by arrows: an input card, three numbered prompt-step cards, and an output card. Input: your draft question list plus the customer blank. Step 1 (Prompts 1-2): build 3 ICP personas, test each draft question in-character. Step 2 (Prompt 3): get Claude's out-of-character diagnosis. Step 3 (Prompts 4-5): surface 3 objections and sharpen weak questions past-anchored. Output: 5-7 sharpened questions plus an Objection Tracker, into real interviews.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub    { font-size: 17px; fill: #666; font-style: italic; }
+      .cap    { font-size: 12px; font-weight: 700; fill: #999; letter-spacing: 0.06em; }
+      .step   { font-size: 18px; font-weight: 700; fill: #1a1a1a; }
+      .body   { font-size: 15px; fill: #333; }
+      .lbl    { font-size: 13px; font-weight: 700; fill: #888; letter-spacing: 0.08em; }
+      .num    { font-size: 15px; font-weight: 700; fill: #fff; }
+      .note   { font-size: 16px; fill: #666; font-style: italic; }
+      .card   { fill: #faf7f2; stroke: #555; stroke-width: 2.25; }
+      .edge   { fill: #faf7f2; stroke: #999; stroke-width: 2; stroke-dasharray: 5 4; }
+      .numdot { fill: #cc342d; }
+      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
+    </style>
+    <marker id="rah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="34" text-anchor="middle" class="h title">The rehearsal flow at a glance</text>
+  <text x="480" y="60" text-anchor="middle" class="h sub">Sharpen the question list with 3 free Claude prompts before booking real interviews.</text>
+
+  <!-- Input card -->
+  <g transform="translate(0,0) rotate(-0.5 94 159)">
+    <rect x="20" y="84" width="148" height="150" rx="12" class="edge"/>
+    <text x="94" y="112" text-anchor="middle" class="h lbl">INPUT</text>
+    <text x="94" y="142" text-anchor="middle" class="h body">Draft question</text>
+    <text x="94" y="164" text-anchor="middle" class="h body">list (5-8) +</text>
+    <text x="94" y="186" text-anchor="middle" class="h body">customer blank</text>
+    <text x="94" y="208" text-anchor="middle" class="h body">(Ch 1.1)</text>
+  </g>
+
+  <!-- Step 1 -->
+  <g transform="rotate(0.4 282 159)">
+    <rect x="192" y="84" width="180" height="150" rx="12" class="card"/>
+    <circle cx="216" cy="108" r="13" class="numdot"/>
+    <text x="216" y="113" text-anchor="middle" class="h num">1</text>
+    <text x="238" y="113" class="h cap">PROMPTS 1-2</text>
+    <text x="204" y="146" class="h step">Build 3 personas</text>
+    <text x="204" y="172" class="h body">Test each draft</text>
+    <text x="204" y="194" class="h body">question</text>
+    <text x="204" y="216" class="h body">in-character</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="rotate(-0.4 475 159)">
+    <rect x="396" y="84" width="158" height="150" rx="12" class="card"/>
+    <circle cx="420" cy="108" r="13" class="numdot"/>
+    <text x="420" y="113" text-anchor="middle" class="h num">2</text>
+    <text x="442" y="113" class="h cap">PROMPT 3</text>
+    <text x="408" y="146" class="h step">Diagnose</text>
+    <text x="408" y="172" class="h body">Claude's out-of-</text>
+    <text x="408" y="194" class="h body">character read</text>
+    <text x="408" y="216" class="h body">on each Q</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="rotate(0.4 668 159)">
+    <rect x="578" y="84" width="180" height="150" rx="12" class="card"/>
+    <circle cx="602" cy="108" r="13" class="numdot"/>
+    <text x="602" y="113" text-anchor="middle" class="h num">3</text>
+    <text x="624" y="113" class="h cap">PROMPTS 4-5</text>
+    <text x="590" y="146" class="h step">Objections + fix</text>
+    <text x="590" y="172" class="h body">Surface 3 objections.</text>
+    <text x="590" y="194" class="h body">Rewrite weak Qs</text>
+    <text x="590" y="216" class="h body">past-anchored</text>
+  </g>
+
+  <!-- Output card -->
+  <g transform="rotate(-0.5 861 159)">
+    <rect x="782" y="84" width="158" height="150" rx="12" class="edge"/>
+    <text x="861" y="112" text-anchor="middle" class="h lbl">OUTPUT</text>
+    <text x="861" y="146" text-anchor="middle" class="h body">5-7 sharpened Qs</text>
+    <text x="861" y="172" text-anchor="middle" class="h body">+ Objection</text>
+    <text x="861" y="194" text-anchor="middle" class="h body">Tracker</text>
+    <text x="861" y="216" text-anchor="middle" class="h body">&#8594; real interviews</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M 168 159 L 190 159" class="arrow" marker-end="url(#rah)"/>
+  <path d="M 372 159 L 394 159" class="arrow" marker-end="url(#rah)"/>
+  <path d="M 554 159 L 576 159" class="arrow" marker-end="url(#rah)"/>
+  <path d="M 758 159 L 780 159" class="arrow" marker-end="url(#rah)"/>
+
+  <!-- Footer note -->
+  <text x="480" y="270" text-anchor="middle" class="h note">The in-character answer is plausible by default - the out-of-character diagnosis is where you learn.</text>
+</svg>

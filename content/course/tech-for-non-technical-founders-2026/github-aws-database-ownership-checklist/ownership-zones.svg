@@ -2,12 +2,12 @@
   <title id="zones-title">The four ownership zones a non-technical founder must control: code, cloud, secrets, and domain</title>
   <defs>
     <style>
-      .zone-title  { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
-      .zone-sub    { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 17px; fill: #444; font-weight: 600; }
-      .zone-note   { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 15px; fill: #555; font-style: italic; }
-      .header      { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 30px; fill: #1a1a1a; font-weight: 700; }
-      .caption     { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 16px; fill: #666; font-style: italic; }
-      .badge       { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 13px; fill: #fff; font-weight: 700; }
+      .zone-title  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .zone-sub    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #444; font-weight: 600; }
+      .zone-note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #555; font-style: italic; }
+      .header      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 30px; fill: #1a1a1a; font-weight: 700; }
+      .caption     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #666; font-style: italic; }
+      .badge       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #fff; font-weight: 700; }
       .zone-code   { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; stroke-linejoin: round; }
       .zone-cloud  { fill: #e8f4f8; stroke: #0277bd; stroke-width: 2.5; stroke-linejoin: round; }
       .zone-sec    { fill: #fff8e1; stroke: #b8860b; stroke-width: 2.5; stroke-linejoin: round; }

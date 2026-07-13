@@ -90,7 +90,7 @@ If a candidate refuses to share their screen for Q3 or Q7, that is a Fail on bot
 
 ### Q4. The slopsquatting question
 
-> "In April 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers register those names and wait for developers to install the typo. How do you prevent installing a hallucinated package in your own work?"
+> "In March 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers register those names and wait for developers to install the typo. How do you prevent installing a hallucinated package in your own work?"
 
 - **Pass:** specific defense (allowlist, Socket / Snyk on every PR, manual verification step) + uses the word "slopsquatting" without prompting + cites the Bleeping Computer or Infosecurity Magazine writeup
 - **Fail:** "I check the package name looks right" / "Cursor only suggests real packages" / "I have not run into that"

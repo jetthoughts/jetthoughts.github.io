@@ -72,7 +72,7 @@ Conversion rate = form submits ÷ page views. That is the number your hypothesis
 > 1. **Create accounts:** sign in to Microsoft (for Clarity) and Google (for GA4). Most people already have one or both - reuse them.
 > 2. **Install Clarity** ([clarity.microsoft.com](https://clarity.microsoft.com/), 60 seconds): copy the snippet, paste in your page builder's head-tag field.
 > 3. **Install GA4** ([analytics.google.com](https://analytics.google.com/)): copy the GA4 snippet, paste in the head-tag field. If you plan to use Google Ads in 1.4, you'll link GA4 in Google Ads Settings there.
-> 4. **Verify:** open your page in an incognito window. Wait 60 seconds. **✅ Clarity:** your visit appears as a session recording. **✅ GA4:** test visit registers in your dashboard.
+> 4. **Verify:** open your page in an incognito window. Wait 60 seconds. **Clarity:** your visit appears as a session recording. **GA4:** test visit registers in your dashboard.
 >
 > (One "custom code" field? That field is the head-tag - paste all snippets there.)
 

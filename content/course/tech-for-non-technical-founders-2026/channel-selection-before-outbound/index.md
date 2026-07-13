@@ -48,6 +48,8 @@ You ran 10 interviews in [Module 2](/course/tech-for-non-technical-founders-2026
 
 This chapter is about listening to what they actually said and committing to one channel before you try anything else.
 
+![Pick one channel from your interview transcripts, score each candidate out of 12, then commit to one full send-reply-follow-up arc before you switch](channel-decision.svg)
+
 ## The commitment rule
 
 Stick with one channel long enough to read the signal, not chase the algorithm. A cold-email sequence needs time to deliver, more time for replies to accumulate, and more time still before the "not now" replies reveal whether the non-replies are disinterest or bad timing.
@@ -130,8 +132,6 @@ Run the prompt against your own transcripts. If your interview evidence points t
 
 The prompt is a forcing function, not a crystal ball. The real data comes from running the channel.
 
-> **Fast-path exit: skip the worksheet if your interviews already named a channel.** If your Ch 2.3-2.4 interview transcripts pointed to a clear channel (e.g., 7+ of 10 interviewees found tools through LinkedIn, or 5+ named a specific Slack community), jump to Part 3: The Commitment at the bottom of the worksheet. Write your commitment statement and move to Ch 5.3. The full worksheet is for founders still deciding between channels. Use it to decide between channels; skipping it does not block anything.
-
 > **What the Claude prompt above can and cannot tell you.**
 >
 > The prompt in the section above is your channel-choice pressure-test. It pressure-tests your channel hypothesis against interview evidence, surfaces assumptions behind each choice, and flags contradictions between what your transcripts said and what your gut says.
@@ -147,73 +147,89 @@ The prompt is a forcing function, not a crystal ball. The real data comes from r
 
 Fill this out before you send message one. It prevents the wasted-effort cycle of channel-hopping.
 
+> **Fast-path exit: skip the worksheet if your interviews already named a channel.** If your Ch 2.3-2.4 interview transcripts pointed to a clear channel (e.g., 7+ of 10 interviewees found tools through LinkedIn, or 5+ named a specific Slack community), jump to Part 3: The Commitment below. Write your commitment statement and move to Ch 5.3. The full worksheet is for founders still deciding between channels. Use it to decide between channels; skipping it does not block anything.
+
 ### Part 1: Interview Evidence
 
-Go through each interview transcript. For each one, note any channel signal the interviewee gave - directly or indirectly.
-
-| Interview # | Interviewee role | Channel signal (direct quote or paraphrase) | Channel type implied |
-|-------------|------------------|---------------------------------------------|----------------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
-
-**Tally by channel type:**
-- LinkedIn mentions: ___
-- Email / newsletter mentions: ___
-- Community / Slack / Discord mentions: ___
-- Social (Twitter, Reddit, TikTok) mentions: ___
-- Search / Google mentions: ___
-- Word of mouth / referral mentions: ___
-
-**Strongest signal** (channel with most mentions): _______________
+<div class="ws-card">
+  <p>Go through each interview transcript. For each one, note any channel signal the interviewee gave - directly or indirectly.</p>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Interviewee role</th><th>Channel signal (quote or paraphrase)</th><th>Channel type implied</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td></td><td></td><td></td></tr>
+      <tr><td>2</td><td></td><td></td><td></td></tr>
+      <tr><td>3</td><td></td><td></td><td></td></tr>
+      <tr><td>4</td><td></td><td></td><td></td></tr>
+      <tr><td>5</td><td></td><td></td><td></td></tr>
+      <tr><td>6</td><td></td><td></td><td></td></tr>
+      <tr><td>7</td><td></td><td></td><td></td></tr>
+      <tr><td>8</td><td></td><td></td><td></td></tr>
+      <tr><td>9</td><td></td><td></td><td></td></tr>
+      <tr><td>10</td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p><strong>Tally by channel type</strong></p>
+  <div class="ws-field"><span class="ws-flabel">LinkedIn</span><span class="ws-blank"></span><span class="ws-flabel">Email / newsletter</span><span class="ws-blank"></span></div>
+  <div class="ws-field"><span class="ws-flabel">Community / Slack / Discord</span><span class="ws-blank"></span><span class="ws-flabel">Social (X, Reddit, TikTok)</span><span class="ws-blank"></span></div>
+  <div class="ws-field"><span class="ws-flabel">Search / Google</span><span class="ws-blank"></span><span class="ws-flabel">Word of mouth / referral</span><span class="ws-blank"></span></div>
+  <div class="ws-field"><span class="ws-flabel">Strongest signal (most mentions)</span><span class="ws-blank"></span></div>
+</div>
 
 ### Part 2: Channel-Fit Score
 
 Score each candidate channel 1-3 on the four dimensions (1 = poor fit, 2 = moderate, 3 = strong). Add the four to a total out of 12. Use the per-channel guidance below as the anchor.
 
-**LinkedIn DM → B2B SaaS, $200+/month.** Pick when: buyer is a professional, title and company size filter cleanly, 1-2 hours/week available. Skip when: buyer is a freelancer, solo creator, or under 30 years old.
-- Price fit: ___ / Buyer type fit: ___ / Time budget fit: ___ / Interview signal fit: ___ / **Total: ___**
+<div class="ws-card">
+  <p><strong>LinkedIn DM &#8594; B2B SaaS, $200+/month.</strong> Pick when: buyer is a professional, title and company size filter cleanly, 1-2 hours/week available. Skip when: buyer is a freelancer, solo creator, or under 30 years old.</p>
+  <div class="ws-field"><span class="ws-flabel">Price fit</span><span class="ws-blank"></span><span class="ws-flabel">Buyer type</span><span class="ws-blank"></span><span class="ws-flabel">Time budget</span><span class="ws-blank"></span><span class="ws-flabel">Interview signal</span><span class="ws-blank"></span></div>
+  <div class="ws-verdict"><span class="ws-vlabel">Total / 12</span><span class="ws-blank"></span></div>
+</div>
 
-**Cold email → Any B2B with verified work emails.** Pick when: you have 30-50 verified emails, a sending domain that is not your main domain, deliverability you can monitor. Skip when: open rates stay below 20% after batch 1 (domain or subject line is broken; fix before scale).
-- Price fit: ___ / Buyer type fit: ___ / Time budget fit: ___ / Interview signal fit: ___ / **Total: ___**
+<div class="ws-card">
+  <p><strong>Cold email &#8594; Any B2B with verified work emails.</strong> Pick when: you have 30-50 verified emails, a sending domain that is not your main domain, deliverability you can monitor. Skip when: open rates stay below 20% after batch 1 (domain or subject line is broken; fix before scale).</p>
+  <div class="ws-field"><span class="ws-flabel">Price fit</span><span class="ws-blank"></span><span class="ws-flabel">Buyer type</span><span class="ws-blank"></span><span class="ws-flabel">Time budget</span><span class="ws-blank"></span><span class="ws-flabel">Interview signal</span><span class="ws-blank"></span></div>
+  <div class="ws-verdict"><span class="ws-vlabel">Total / 12</span><span class="ws-blank"></span></div>
+</div>
 
-**Community outreach → B2B and prosumer where buyers already gather.** Pick when: a specific Slack/Discord/forum exists, you are already a participant, you can post one signal-quality post per sprint. Skip when: you joined this week (spend two weeks commenting before posting product, or get banned permanently).
-- Price fit: ___ / Buyer type fit: ___ / Time budget fit: ___ / Interview signal fit: ___ / **Total: ___**
+<div class="ws-card">
+  <p><strong>Community outreach &#8594; B2B and prosumer where buyers already gather.</strong> Pick when: a specific Slack/Discord/forum exists, you are already a participant, you can post one signal-quality post per sprint. Skip when: you joined this week (spend two weeks commenting before posting product, or get banned permanently).</p>
+  <div class="ws-field"><span class="ws-flabel">Price fit</span><span class="ws-blank"></span><span class="ws-flabel">Buyer type</span><span class="ws-blank"></span><span class="ws-flabel">Time budget</span><span class="ws-blank"></span><span class="ws-flabel">Interview signal</span><span class="ws-blank"></span></div>
+  <div class="ws-verdict"><span class="ws-vlabel">Total / 12</span><span class="ws-blank"></span></div>
+</div>
 
-**Social organic → B2C and prosumer with a visible product.** Pick when: a sustained posting cadence is realistic, format shows the product working (screen recordings, before/after, results). Skip when: you have never posted content before and cannot commit to the early stretch of posting into a void.
-- Price fit: ___ / Buyer type fit: ___ / Time budget fit: ___ / Interview signal fit: ___ / **Total: ___**
+<div class="ws-card">
+  <p><strong>Social organic &#8594; B2C and prosumer with a visible product.</strong> Pick when: a sustained posting cadence is realistic, format shows the product working (screen recordings, before/after, results). Skip when: you have never posted content before and cannot commit to the early stretch of posting into a void.</p>
+  <div class="ws-field"><span class="ws-flabel">Price fit</span><span class="ws-blank"></span><span class="ws-flabel">Buyer type</span><span class="ws-blank"></span><span class="ws-flabel">Time budget</span><span class="ws-blank"></span><span class="ws-flabel">Interview signal</span><span class="ws-blank"></span></div>
+  <div class="ws-verdict"><span class="ws-vlabel">Total / 12</span><span class="ws-blank"></span></div>
+</div>
 
-**Highest-scoring channel**: _______________
+<div class="ws-card">
+  <div class="ws-field"><span class="ws-flabel">Highest-scoring channel</span><span class="ws-blank"></span></div>
+</div>
 
 ### Part 3: The Commitment
 
 Write this down. Literally write it. Skip this step and you are the founder who hops channels at the first cricket.
 
-```text
-My chosen channel: [channel name]
-
-Why this channel:
-1. Interview evidence: [which interviewees, what they said]
-2. Buyer type match: [why this channel reaches my buyer]
-3. Price point math: [estimated cost per lead vs my price point]
-4. Time budget: [time per batch I will actually spend]
-
-I will not switch channels until I have run a full send/reply/follow-up arc.
-
-At the evaluation point, I will check:
-- Reply rate (target: >5%)
-- Demo-to-conversation rate (target: >20%)
-- Any paid conversations started (target: ≥1)
-
-If all three targets missed: diagnose the filter and script first, then consider a channel switch.
-```
+<div class="ws-card">
+  <div class="ws-field"><span class="ws-flabel">My chosen channel</span><span class="ws-blank"></span></div>
+  <p><strong>Why this channel</strong> - note the evidence beside each:</p>
+  <ul class="ws-checks">
+    <li>Interview evidence: which interviewees, and what they said</li>
+    <li>Buyer type match: why this channel reaches my buyer</li>
+    <li>Price point math: estimated cost per lead vs my price point</li>
+    <li>Time budget: time per batch I will actually spend</li>
+  </ul>
+  <div class="ws-verdict ws-verdict-stack">
+    <span class="ws-vlabel">At the evaluation point I check</span>
+    <span class="ws-opt"><span class="ws-box"></span> Reply rate (target: over 5%)</span>
+    <span class="ws-opt"><span class="ws-box"></span> Demo-to-conversation rate (target: over 20%)</span>
+    <span class="ws-opt"><span class="ws-box"></span> Any paid conversations started (target: 1 or more)</span>
+  </div>
+  <div class="ws-route ws-route-go"><strong>Commitment</strong> - I will not switch channels until I have run a full send/reply/follow-up arc. If all three targets are missed, I diagnose the filter and script first, then consider a channel switch.</div>
+</div>
 
 Keep this in the same Google Sheet as your interview transcripts. Look at it before you send each batch.
 

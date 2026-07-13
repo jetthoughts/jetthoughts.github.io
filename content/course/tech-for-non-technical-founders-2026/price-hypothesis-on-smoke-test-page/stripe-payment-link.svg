@@ -5,8 +5,8 @@
       .heading    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
       .note       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #444; font-style: italic; }
       .card-label { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 22px; font-weight: 700; }
-      .cta-text   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #fff; font-weight: 700; }
-      .cta-price  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #fff; font-weight: 700; }
+      .cta-text   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #fff; font-weight: 700; }
+      .cta-price  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 19px; fill: #fff; font-weight: 700; }
       .card-note  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
       .callout    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #1a1a1a; font-weight: 600; }
       .card-out   { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
@@ -19,20 +19,20 @@
   <text x="480" y="66" class="note" text-anchor="middle">The price ($97) is identical on both. Pick one - do not A/B test.</text>
 
   <!-- Left card: outcome framing -->
-  <rect x="40" y="90" width="420" height="185" rx="14" class="card-out" transform="rotate(-0.3 250 182)"/>
-  <text x="250" y="126" class="card-label" text-anchor="middle" fill="#cc342d">OUTCOME FRAMING</text>
-  <rect x="60" y="150" width="380" height="58" rx="29" class="btn" transform="rotate(0.2 250 179)"/>
-  <text x="250" y="186" class="cta-text" text-anchor="middle">Stop spending 4 hours on reconciliation - <tspan class="cta-price">$97</tspan></text>
-  <text x="250" y="248" class="card-note" text-anchor="middle">anchors the price to the problem it replaces</text>
+  <rect x="32" y="90" width="430" height="185" rx="14" class="card-out" transform="rotate(-0.3 247 182)"/>
+  <text x="247" y="126" class="card-label" text-anchor="middle" fill="#cc342d">OUTCOME FRAMING</text>
+  <rect x="44" y="150" width="406" height="58" rx="29" class="btn" transform="rotate(0.2 247 179)"/>
+  <text x="247" y="186" class="cta-text" text-anchor="middle">Stop spending 4 hours on reconciliation - <tspan class="cta-price">$97</tspan></text>
+  <text x="247" y="248" class="card-note" text-anchor="middle">anchors the price to the problem it replaces</text>
 
   <!-- Right card: risk-reduction framing -->
-  <rect x="500" y="90" width="420" height="185" rx="14" class="card-risk" transform="rotate(0.3 710 182)"/>
-  <text x="710" y="126" class="card-label" text-anchor="middle" fill="#b8860b">RISK-REDUCTION FRAMING</text>
-  <rect x="520" y="150" width="380" height="58" rx="29" class="btn" transform="rotate(-0.2 710 179)"/>
-  <text x="710" y="186" class="cta-text" text-anchor="middle">Reserve your spot - <tspan class="cta-price">$97</tspan> refundable for 30 days</text>
-  <text x="710" y="248" class="card-note" text-anchor="middle">reduces first-touch risk</text>
+  <rect x="498" y="90" width="430" height="185" rx="14" class="card-risk" transform="rotate(0.3 713 182)"/>
+  <text x="713" y="126" class="card-label" text-anchor="middle" fill="#b8860b">RISK-REDUCTION FRAMING</text>
+  <rect x="510" y="150" width="406" height="58" rx="29" class="btn" transform="rotate(-0.2 713 179)"/>
+  <text x="713" y="186" class="cta-text" text-anchor="middle">Reserve your spot - <tspan class="cta-price">$97</tspan> refundable 30 days</text>
+  <text x="713" y="248" class="card-note" text-anchor="middle">reduces first-touch risk</text>
 
   <!-- Bottom callout -->
-  <rect x="140" y="298" width="680" height="48" rx="12" fill="#fbe9ff" stroke="#a855f7" stroke-width="2"/>
+  <rect x="90" y="298" width="780" height="48" rx="12" fill="#fbe9ff" stroke="#a855f7" stroke-width="2"/>
   <text x="480" y="328" class="callout" text-anchor="middle">Same $97 either way - the frame changes what the visitor feels, not what they pay.</text>
 </svg>

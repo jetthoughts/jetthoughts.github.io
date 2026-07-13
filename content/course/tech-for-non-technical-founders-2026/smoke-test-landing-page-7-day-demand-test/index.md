@@ -72,7 +72,7 @@ Choose based on who your hypothesis names in the [customer] blank. The dollar ra
 
 *On a boundary (exactly 6%, 10%, or 20%)? Take the higher band's action.*
 
-**✅ Success check:** you have a conversion rate from ≥300 cold visits AND a go/iterate/kill decision written down.
+**Success check:** you have a conversion rate from ≥300 cold visits AND a go/iterate/kill decision written down.
 
 ## If the number looks wrong
 

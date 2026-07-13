@@ -11,7 +11,7 @@
       .note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #555; }
       .url    { font-family: "Courier New", monospace; font-size: 11px; fill: #0277bd; }
       .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2; }
-      .pay    { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
+      .pay    { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2.5; }
       .chipbg { fill: #cc342d; }
     </style>
     <marker id="arw1" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">

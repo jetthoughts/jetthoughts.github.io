@@ -44,21 +44,7 @@ related_posts: false
 
 Module 5 of this course runs seven lessons (5.1-5.7): the Sean Ellis 40% test, channel choice, the personal-network outreach arc, the paid-pilot contract, and the cold-outbound pipeline. The lessons reference these templates. This page hosts them as each one ships. The DPA template is live below (component 3); the remaining 5 are described and shipping next.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TB
-    Kit[First-Paying-Customer<br/>Operating Kit]
-    Kit --> T1[1. 50-name network list<br/>Google Sheets template]
-    Kit --> T2[2. Cold-email scripts<br/>3 variants]
-    Kit --> T3[3. Design Partner Agreement<br/>one-page LOI]
-    Kit --> T4[4. Stripe Checkout setup<br/>Rails / Django / Laravel]
-    Kit --> T5[5. Sean Ellis survey<br/>5 questions, Typeform-ready]
-    Kit --> T6[6. First 10 Customers tracker<br/>Google Sheet template]
-    classDef kitstyle fill:#fbe9ff,stroke:#a855f7,stroke-width:2px,color:#1a1a1a;
-    classDef compstyle fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
-    class Kit kitstyle;
-    class T1,T2,T3,T4,T5,T6 compstyle;
-```
+![The First-Paying-Customer Operating Kit and its six numbered components: the 50-name network list, cold-email scripts, the Design Partner Agreement, the Stripe Checkout setup, the Sean Ellis 40% survey, and the First 10 Customers tracker](kit-components.svg)
 
 ## The 6 components
 

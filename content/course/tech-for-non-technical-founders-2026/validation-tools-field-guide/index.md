@@ -255,6 +255,8 @@ For pre-interview validation, the Free Scan + Founder Report is the sweet spot. 
 
 The three tools work best in sequence, not all at once. Here is the order that produces the most signal for the least time:
 
+![The three validation tools in recommended order: VenturusAI first (free, ~30s) catches missed competitors and weak differentiation, Preuve AI free scan second (free, ~60s) reads market signal and flags a too-broad customer, DimeADozen Starter third (optional, $9, ~2min) catches kill risks and unit economics - none validates the hypothesis, only 10 Mom Test interviews do](tools-in-sequence.svg)
+
 ### 1. VenturusAI (first - free)
 
 Run your hypothesis paragraph through VenturusAI. Read the Porter's Five Forces Competitive Rivalry section and the SWOT Weaknesses section. If it flags a competitor you missed or a structural weakness you had not considered, fix those blanks in your hypothesis before moving to the next tool.

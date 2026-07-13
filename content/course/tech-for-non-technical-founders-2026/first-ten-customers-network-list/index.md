@@ -75,7 +75,7 @@ Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship stre
 > 2. Export the filtered list with [LinkedIn's data export](https://www.linkedin.com/help/linkedin/answer/a566336) (free, takes 24 hours; you can use yesterday's).
 > 3. Cross-reference your phone contacts, email inbox, and last three jobs' Slack workspaces if you still have access.
 > 4. Sort every name into one of the 4 buckets. Champions first. If you can't name 5 people who complained to you about this problem in the last 12 months, re-read your verbatim Q2-Q3 quotes from [5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/).
-> 5. **✅ Success check:** 50 names sorted across all 4 buckets, champions row fully filled.
+> 5. **Success check:** 50 names sorted across all 4 buckets, champions row fully filled.
 
 ---
 

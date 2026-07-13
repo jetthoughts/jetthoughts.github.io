@@ -60,20 +60,7 @@ Real interviews stay irreplaceable for the things rehearsal cannot simulate: the
 
 This chapter is the companion polish step between Ch 2.1 (where you learned the Mom Test technique and drafted 5-8 rough questions) and Ch 2.3-2.4 (where you recruit 10 real interviewees). You don't validate anything here - the real interviews do that. You catch the broken question shapes before they reach a real human - one focused rehearsal session can save you several wasted interview slots. Here's the rehearsal flow at a glance:
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-    Start(["Your draft Mom Test questions<br/>+ your customer blank from Ch 1.1"])
-    P1["Prompts 1-2: Build 3 ICP personas,<br/>test each draft question in-character"]
-    P2["Prompt 3: Get Claude's<br/>out-of-character diagnosis"]
-    P3["Prompts 4-5: Surface 3 likely objections,<br/>sharpen weak questions (past-anchored)"]
-    Done(["5-7 sharpened questions<br/>+ Objection Tracker → real interviews"])
-
-    Start --> P1
-    P1 --> P2
-    P2 --> P3
-    P3 --> Done
-```
+![The rehearsal flow at a glance: bring in your draft question list plus the Ch 1.1 customer blank, run Prompts 1-2 to build 3 ICP personas and test each question in-character, Prompt 3 for Claude's out-of-character diagnosis, Prompts 4-5 to surface 3 objections and sharpen weak questions past-anchored, and leave with 5-7 sharpened questions plus an Objection Tracker for real interviews](rehearsal-loop.svg)
 
 ## Why rehearse with AI at all
 

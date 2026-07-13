@@ -66,7 +66,7 @@ The page has four copy blocks that decide whether it converts:
 
 Send the URL to **ONE real person** who has not seen your work. Any stranger works (they don't need to be your target customer - this tests headline clarity, not buying interest). Ask: "In 3 seconds, who is this page for and what does it do?" **Nobody available right now?** Record a short screen recording of your page with [Loom](https://www.loom.com/) (a free screen-recording tool) and send it to someone tomorrow with the same 3-second question. Or post the URL in a relevant subreddit with "What does this page do in 3 seconds?"
 
-> **✅ Success check:** they can name both. If they cannot, the headline is almost always the fix - rewrite it and retest.
+> **Good** - **Success check:** they can name both. If they cannot, the headline is almost always the fix - rewrite it and retest.
 
 ## If strangers can't name it
 

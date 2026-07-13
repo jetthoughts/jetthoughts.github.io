@@ -54,36 +54,7 @@ Changing the structure of code without changing what it does for the user. Marti
 
 In Rails terms, a real refactor splits a 400-line `OrdersController` into three smaller controllers while the Stripe webhook still hits the same URL and the test suite stays green. JT caps each refactor commit at [three lines of production code](/blog/refactor-step-tdd-three-line-discipline-ruby/) for that reason. A SaaS founder we picked up in Q4 2025 was billed $9K for a "checkout refactor" that turned out to be one merge commit of 3,800 lines, no tests, and the Stripe webhook secret hard-coded into the controller. The checkout broke on stage at her board demo.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TB
-    Start["OrdersController · 400 lines<br/>messy, hard to read"]
-
-    Start --> RealQ{Real refactor?}
-    Start --> FakeQ{Fake refactor?}
-
-    RealQ --> R1["CartController · 120 lines"]
-    RealQ --> R2["CheckoutController · 140 lines"]
-    RealQ --> R3["ReceiptController · 130 lines"]
-
-    R1 --> RW["Same Stripe webhook URL<br/>Same tests stay green"]
-    R2 --> RW
-    R3 --> RW
-
-    RW --> Win["✓ Same behavior for users<br/>Cleaner structure<br/>Three-line commit cap"]
-
-    FakeQ --> F1["OrdersController v2<br/>3,800 lines, no tests"]
-    F1 --> F2["Stripe secret hard-coded<br/>into controller"]
-    F2 --> Lose["✗ Checkout broke at board demo<br/>$9K invoice for the rewrite"]
-
-    classDef good fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-    classDef bad  fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
-    classDef neutral fill:#f5f5f5,stroke:#666,stroke-width:2px,color:#1a1a1a
-
-    class Start,RealQ,FakeQ neutral
-    class R1,R2,R3,RW,Win good
-    class F1,F2,Lose bad
-```
+![Refactoring real versus fake: one messy 400-line OrdersController either splits into small Cart, Checkout, and Receipt controllers behind the same Stripe webhook with tests still green (real refactor), or gets rewritten into a 3,800-line v2 with the Stripe secret hard-coded that broke checkout at the board demo and cost a $9K invoice (fake refactor)](refactor-check.svg)
 
 ### 🐳 2. Docker
 
@@ -151,25 +122,37 @@ A healthy architecture for a pre-Series-A Rails SaaS is one Rails monolith on He
 
 The five words above are dev-shop jargon - vocabulary you'll hit in Modules 4-5 (build and ship). Modules 1-3 (hypothesis, validate, design) have their own acronym soup. Skim the list below once; come back when an unfamiliar acronym shows up in a chapter:
 
+**Customer & validation words** - who you serve and whether the demand is real:
+
 | Acronym | Plain English | Where it shows up |
 |---|---|---|
 | **ICP** | Ideal Customer Profile - the specific kind of person your hypothesis names | Ch 1.1, 2.3 |
-| **PMF** | Product-Market Fit - the survey question "would you be very disappointed if you could no longer use this?" 40%+ "very disappointed" = signal | Ch 5.1 |
 | **JTBD** | Jobs To Be Done - what a customer "hires" your product to do (instead of feature list) | Ch 3.1, 3.2 |
+| **PMF** | Product-Market Fit - the survey question "would you be very disappointed if you could no longer use this?" 40%+ "very disappointed" = signal | Ch 5.1 |
+| **NPS** | Net Promoter Score - "how likely are you to recommend us?" 0-10 scale; less useful at idea stage than PMF | Ch 5.1 sidebar |
+| **Retention** | What % of users come back next week / next month - the only metric that proves the product solves a real problem | Ch 5.1 |
+| **Wizard of Oz** | A no-code pattern - customer thinks software is running, but you do the work by hand behind the scenes to test demand before building | Ch 4.3 Concierge MVP |
+
+**Money & market words** - the numbers that decide whether it is a business:
+
+| Acronym | Plain English | Where it shows up |
+|---|---|---|
 | **MRR** / **ARR** | Monthly / Annual Recurring Revenue - what one customer pays per month or year | Ch 1.1, 5.6 |
 | **ACV** | Annual Contract Value - what one customer pays in year one (deposit math is 10-30% of ACV) | Ch 5.6 |
 | **CAC** / **LTV** | Customer Acquisition Cost / Lifetime Value - what you spend to land one customer vs what they pay you over their lifetime | Ch 5.2, 5.6 |
+| **Unit economics** | Revenue per customer minus cost to serve per customer - whether the math works at scale | Ch 1.1 Money lens |
+| **Runway** | Months of cash until you must show paying customers or close the company | Ch 4.1 Q3 |
+| **TAM** / **SAM** / **SOM** | Total / Serviceable / Serviceable-Obtainable Market - investor-pitch math, not builder math | _index pitch sections only |
+
+**Strategy, deal & tool words** - the frameworks, contracts, and tools you touch:
+
+| Acronym | Plain English | Where it shows up |
+|---|---|---|
+| **SWOT / PESTEL / Porter's Five Forces** | Three classic strategy-school checklists - VenturusAI runs all three on your hypothesis | Ch 1.1 sidebar |
+| **Pixel** | A small JavaScript tracking snippet from an ad platform (Meta/LinkedIn/Reddit) - paste it on your page and the platform learns who converted | Ch 1.3 |
 | **DPA** | Design Partner Agreement - a one-page contract where a customer pays a deposit to test your product as a co-design partner | Ch 5.6 |
 | **SOW** | Statement of Work - the contract that defines what an agency is paid to deliver | _index, rescue chapters |
 | **PRD** / **Vibe PRD** | Product Requirements Document - the "Vibe" version is a one-pager an AI builder can act on, not a 30-page spec | Ch 3.1 |
-| **TAM** / **SAM** / **SOM** | Total / Serviceable / Serviceable-Obtainable Market - investor-pitch math, not builder math | _index pitch sections only |
-| **Pixel** | A small JavaScript tracking snippet from an ad platform (Meta/LinkedIn/Reddit) - paste it on your page and the platform learns who converted | Ch 1.3 |
-| **NPS** | Net Promoter Score - "how likely are you to recommend us?" 0-10 scale; less useful at idea stage than PMF | Ch 5.1 sidebar |
-| **Retention** | What % of users come back next week / next month - the only metric that proves the product solves a real problem | Ch 5.1 |
-| **Unit economics** | Revenue per customer minus cost to serve per customer - whether the math works at scale | Ch 1.1 Money lens |
-| **Runway** | Months of cash until you must show paying customers or close the company | Ch 4.1 Q3 |
-| **SWOT / PESTEL / Porter's Five Forces** | Three classic strategy-school checklists - VenturusAI runs all three on your hypothesis | Ch 1.1 sidebar |
-| **Wizard of Oz** | A no-code pattern - customer thinks software is running, but you do the work by hand behind the scenes to test demand before building | Ch 4.3 Concierge MVP |
 
 ## What to do tomorrow
 

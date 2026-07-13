@@ -348,3 +348,5 @@ banned:
     reason: "overstated; Reddit substitute is a quarter to a seventh of LinkedIn cost, two others free"
   - string: "The founders we work with in 2026 did not lose money"
     reason: "fake-authority cohort generalization (voice guide)"
+  - string: "In April 2025 a security researcher published"
+    reason: "Lasso research is March 2025; April is only the slopsquatting coinage"
