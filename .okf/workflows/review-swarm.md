@@ -22,6 +22,16 @@ timestamp: 2026-07-13T00:00:00Z
 6. Gates per [test gates](/build/test-gates.md), commit to the sprint
    branch, one bundled PR per sprint.
 
+# Taste pass (premium bar)
+
+After defect review, run taste critics scoring 1-10 against
+`.stitch/course-taste-design.md` - defect checklists miss "technically
+fine but not premium" (monotone callout runs, brand living only in the
+cover, wall-shaped diagrams). Adjudicate critic conflicts against the
+anchor text, not majority vote: taste-e's red-metric ruling beat
+taste-a's recolor suggestion because the anchor names Ruby as the brand
+accent ink.
+
 # Known failure modes
 
 - Agents often go idle WITHOUT sending their report - nudge via SendMessage,
