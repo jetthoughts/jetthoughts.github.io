@@ -3,7 +3,7 @@ type: Playbook
 title: Two-critic review swarm
 description: The proven module-review loop - a design critic (full render walk) plus a content-canon critic, followed by verified fixer waves.
 tags: [swarm, review, process]
-timestamp: 2026-07-13T00:00:00Z
+timestamp: 2026-07-17T00:00:00Z
 ---
 
 # The loop
@@ -31,6 +31,14 @@ cover, wall-shaped diagrams). Adjudicate critic conflicts against the
 anchor text, not majority vote: taste-e's red-metric ruling beat
 taste-a's recolor suggestion because the anchor names Ruby as the brand
 accent ink.
+
+# Mechanical runbook
+
+The full audit is codified as a command+pass-rule checklist that
+less-powerful models can execute: `docs/workflows/course-audit-checklist.md`
+(8 phases: length, structure, terminology, canon, reuse/seams, render gate,
+judged checks with escalation rules, fix/report protocol). Hand agents that
+file instead of re-deriving audit briefs per session.
 
 # Known failure modes
 
