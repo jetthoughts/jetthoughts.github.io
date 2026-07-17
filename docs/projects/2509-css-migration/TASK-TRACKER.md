@@ -2,8 +2,8 @@
 
 **Purpose**: Status tracking for the CSS maintainability goal — FL-Builder export CSS retired page-by-page (strangler rewrites)
 **Update Frequency**: After each sprint or status change
-**Last Updated**: 2026-07-12
-**Current Phase**: Phase 0 - Safety scaffolding (test coverage + guards)
+**Last Updated**: 2026-07-17
+**Current Phase**: ✅ COMPLETE — FL burn-down 16/16 retired (PR #365); follow-ups only
 
 ---
 
@@ -31,8 +31,8 @@ Phase 2: FL-Builder Foundations  [❌❌❌❌] 4/4 WPs resolved (all closed wit
 Phase 3: Additional Patterns     SUPERSEDED 2026-07-12 — never started; premise died with Phases 1+2
 
 CURRENT PLAN (2026-07-12 spec):
-Phase 0: Safety scaffolding      [🔲🔲✅🔲] 1/4 items (blog-post test coverage, per-page coverage check, ownership map ✅ 2026-07-12, orphan guard)
-Rewrites: FL burn-down           16/16 files live → target 0 (R1 = 3059-layout: course-list + privacy-policy pages)
+Phase 0: Safety scaffolding      [✅✅✅✅] 4/4 items (P0.1 blog special-content tests ✅, P0.2 practiced before every sprint ✅, P0.3 ownership map ✅, P0.4 orphan guard unit test ✅)
+Rewrites: FL burn-down           ✅ 16/16 files RETIRED (R1–R9, PR #365, 2026-07-16..17) — zero snapdiff baseline changes across the entire run
 
 Historical: ~73,150 lines eliminated sprints 1-7 (orphan deletion + consolidation)
 ```
@@ -431,21 +431,34 @@ JetVelocity (`.stitch/design.md`) with Paul's screenshot approval. Full protocol
 in the spec; live status in `css-bundle-ownership-map.md`.
 
 ```yaml
-order_easiest_first:  # ascending FL size; order may flex on business need
-  - R1:  3059-layout.css (924)   → pages: privacy-policy (page/single.html) + course-list (layouts/course/list.html)
-  - R2:  706-layout.css (2,202)  → contact-us
-  - R3:  3114-layout.css (2,272) → blog-single, course-single (+ feeds single-career, single-client)
-  - R4:  homepage-layout.css + services-layout.css (~4,356) → blog-list, free-consultation
-  - R5:  e966db44…-layout-bundle.css (4,364) → single-career
-  - R6:  701-layout.css (4,462)  → about-us
-  - R7+: 3027 (5,056), 3086-layout2 (5,157), 3082 (5,399), 2949 (5,407),
-         3021 (6,409), fb2624… (6,523), 737 (6,489) — ascending
-  - Rlast: 590-layout.css (12,437) → homepage
+completed:  # all shipped in PR #365 (branch css-migration/strangler-run), 2026-07-16..17
+  - R1:  3059-layout retired — privacy-policy + course-list semantic rewrites (46060e0c lineage)
+  - R2:  706-layout retired — contact-us semantic rewrite
+  - R3a: blog-single off FL files; .sr-only moved site-wide
+  - R3b: course-single off FL files (+ chapter coverage)
+  - R3c: fb2624…-bundle retired — single-client semantic node aliases
+  - R3d: 3114-layout + e966db44…-bundle retired — single-career delta port
+  - R4a: blog-list semantic rewrite (dropped homepage-layout/services-layout from its slice)
+  - R4b: free-consultation semantic rewrite; homepage-layout, services-layout,
+         utilities/fl-builder-grid, critical/free-consultation-critical DELETED
+  - R5:  701-layout retired — about-us delta port (9 dead nodes pruned)
+  - R6:  3086-layout2 retired — careers verbatim move (compiled bundle byte-identical)
+  - R7:  3021 + 3027 retired — use-cases pair delta ports (58+14 dead nodes)
+  - R8a: 3082 retired — clients delta port (35 dead nodes)
+  - R8b: 2949 retired — single-service delta port (26 dead nodes, 8-page union prune)
+  - R8c: 737 retired + bf72bba…-bundle DELETED (last consumer) — services delta port (41 dead nodes)
+  - R9:  590-layout retired — homepage delta port (47 dead nodes). BURN-DOWN COMPLETE.
 notes: |
-  bf72bba…-layout-bundle.css (1,969; 9 bundles) and the critical/ FL trio retire
-  when their last consumer page is rewritten. Satellites fold with their single
-  importers (fl-builder-common-base.css → 3021; fl-builder-grid.css → homepage-layout).
-completed: []
+  Evidence bar held for every commit: converged production build ×2, only the
+  target bundle fingerprint changed, headless old-vs-new RMSE 0 (desktop +
+  mobile, full page), bin/rake test:critical AND bin/dtest green, ZERO
+  screenshot baseline changes. Satellite fl-builder-common-base.css KEPT
+  (imported by pages/use-cases.css; not byte-redundant). critical/ FL trio
+  stays as shared framework for kept fl-node markup.
+follow_ups:
+  - shared css/testimonials.css extraction (source hygiene; gate byte-identical)
+  - per-page semantic re-keying of delta-ported markup (R3c alias technique),
+    independent sprints with Paul's design approval if visuals change
 ```
 
 ---
@@ -513,6 +526,27 @@ fcp_metrics:
 ---
 
 ## 🔄 UPDATE LOG
+
+### 2026-07-17 (strangler run complete — FL burn-down 16/16, PR #365)
+- **Shipped**: R4a..R9 in one continuous run (R1..R3d landed 2026-07-16 on the
+  same branch): every FL-Builder export file retired; 16 hand-maintained
+  `css/pages/*.css` files own all page styling; bf72bba shared bundle,
+  homepage-layout, services-layout, fl-builder-grid, free-consultation-critical
+  deleted. gz deltas per bundle in css-bundle-ownership-map.md (typical −20-33%).
+- **Method that held**: Option-A delta ports via a media-aware dead-node pruner
+  (prune only rules keyed on fl-node ids absent from the rendered page; keep
+  generics verbatim) + compiled fragment-diff liveness check + headless
+  old-vs-new RMSE pre-gate (caught every parity miss BEFORE the suites:
+  all-sides wrap padding on blog-list mobile, 4 gform generics + footer
+  centering + a contact-us-only button margin on free-consultation, the
+  bf72bba header CTA trio on use-cases/clients/services).
+- **Upstream event absorbed mid-run**: rebase onto master's course v2 merge
+  (#361) — revalidated at HEAD both OSes; one bimodal text-wrap flake in the
+  new lesson-meta blockquote masked via skip_area in both chapter tests;
+  ZERO baseline changes.
+- **Standing evidence**: every commit gated on converged build ×2 +
+  only-target-bundle fingerprint change + both snapdiff suites green with zero
+  baseline changes. The "unchanged baselines ARE the proof" bar held 16/16.
 
 ### 2026-07-12 (sprint 8 — plan re-wised, project docs realigned)
 - **Action**: Goal reframed from line-count elimination to maintainability
@@ -849,5 +883,5 @@ git checkout -b css-migration/<sprint-name>
 - 🎯 [Approved spec (authority)](2026-07-12-css-maintainability-redesign.md)
 - 🗺️ [Bundle ownership map + burn-down](css-bundle-ownership-map.md)
 
-**Last Updated**: 2026-07-12
+**Last Updated**: 2026-07-17
 **Next Update**: After Phase 0 item completion or status change
