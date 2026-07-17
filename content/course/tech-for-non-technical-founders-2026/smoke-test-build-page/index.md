@@ -53,9 +53,25 @@ The page has four copy blocks that decide whether it converts:
 
 ![Smoke-test page anatomy showing 4 labeled blocks - headline names customer plus outcome, sub-headline explains the mechanism, a row of 3-4 value props, and the CTA button with coming-soon footer line](page-anatomy.svg)
 
-## The prompt to paste
+## Step 1: get 2-3 real customer quotes (10 minutes)
 
-Most builders ask you to "describe your idea" and then guess the rest of the page. Don't make them guess. Paste the prompt below instead - it hands the builder your hypothesis, the four blocks above, and your customers' own words, so the first draft comes back close. The same prompt works in Mixo, Carrd, or any AI builder. Fill the `[...]` slots from your Lesson 1.1 Founding Hypothesis; leave the last two lines exactly as written (they're the parts AI builders skip on their own).
+The builder prompt in Step 2 has three slots for your customers' own words - they become your value props, and they are what makes the page sound like your customer instead of like marketing. Most first-timers don't have quotes yet, and that's expected: run this in [Perplexity](https://www.perplexity.ai/) (or any AI search engine) and keep the best 2-3 lines. Already have real quotes from conversations? Skip straight to Step 2.
+
+```text
+Find real, verbatim complaints from [CUSTOMER] about [PROBLEM].
+Search Reddit, G2, Trustpilot, and niche forums. For each result, give me:
+- the exact quote, in the person's own words
+- a link to the source
+
+Return 5-8 quotes. Prefer recent posts and specific frustration over
+general opinions.
+```
+
+(These same quotes get reused later: your `[problem]` blank in 1.1 if it's still vague, and Module 2's people-hunting starts from the threads this search finds.)
+
+## Step 2: the prompt to paste
+
+Most builders ask you to "describe your idea" and then guess the rest of the page. Don't make them guess. Paste the prompt below instead - it hands the builder your hypothesis, the four blocks above, and the quotes from Step 1, so the first draft comes back close. The same prompt works in Mixo, Carrd, or any AI builder. Fill the `[...]` slots from your Lesson 1.1 Founding Hypothesis; leave the last two lines exactly as written (they're the parts AI builders skip on their own).
 
 ```text
 Build a landing page for a product that isn't built yet. Use exactly these
@@ -73,7 +89,8 @@ The problem they have: [PROBLEM blank]
 What they use today instead: [COMPETITION blank]
 Why they'd switch: [DIFFERENTIATION blank]
 
-Real customer wording to echo in the value props (use these exact phrases):
+Real customer wording to echo in the value props (use these exact phrases
+from Step 1):
 - "[verbatim customer quote 1]"
 - "[verbatim customer quote 2]"
 - "[verbatim customer quote 3]"
@@ -85,23 +102,11 @@ The page must pass this test: a stranger can say who it is for and what it does
 in 3 seconds. No pricing, no FAQ, no testimonials. Never write "Buy now."
 ```
 
-**Optional, about 10 minutes:** no real customer quotes yet? Run this in [Perplexity](https://www.perplexity.ai/) (or any AI search engine) first, then paste the best 2-3 lines into the `verbatim customer quote` slots above.
-
-```text
-Find real, verbatim complaints from [CUSTOMER] about [PROBLEM].
-Search Reddit, G2, Trustpilot, and niche forums. For each result, give me:
-- the exact quote, in the person's own words
-- a link to the source
-
-Return 5-8 quotes. Prefer recent posts and specific frustration over
-general opinions.
-```
-
 ## Build the page
 
 > **Build:**
 >
-> 1. Sign up at [mixo.io](https://www.mixo.io/) (email only). Paste the prompt above, click **Generate**. ~60 seconds.
+> 1. Sign up at [mixo.io](https://www.mixo.io/) (email only). Paste the Step 2 prompt, click **Generate**. ~60 seconds.
 > 2. Tighten the 4 copy blocks against the draft:
 >     - Headline names customer + outcome.
 >     - Value props rewrite as outcomes ("Stop calling 8 centers," not "Calendar integration").
@@ -137,7 +142,7 @@ Send the URL to **ONE real person** who has not seen your work. Any stranger wor
 **If this fails: no AI builder fits your idea, or you want manual layout control.**
 
 - **Why:** AI builders rely on common templates; niche layouts and technical product diagrams sometimes don't fit.
-- **Fix:** drop to manual mode with **[Carrd](https://carrd.co/)** (no-code drag-drop). Use the same workflow but write each copy block yourself first. The builder prompt at the top of this lesson works in Carrd's AI assistant too - paste it there instead of writing from scratch.
+- **Fix:** drop to manual mode with **[Carrd](https://carrd.co/)** (no-code drag-drop). Use the same workflow but write each copy block yourself first. The Step 2 builder prompt works in Carrd's AI assistant too - paste it there instead of writing from scratch.
 
 ---
 
