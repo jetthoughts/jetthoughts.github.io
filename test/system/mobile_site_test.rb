@@ -95,6 +95,18 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "about_us", skip_area: [".fl-photo-img"]
   end
 
+  def test_use_cases
+    visit "/use-cases/"
+
+    assert_stable_screenshot "use_cases", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
+  def test_use_case_single
+    visit "/use-cases/startup-mvp-prototyping-development/"
+
+    assert_stable_screenshot "use_cases/startup-mvp-prototyping-development", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
   def test_clients
     visit "/clients/"
 
