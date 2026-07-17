@@ -15,3 +15,14 @@ unreachable when mandated keeps (full prompts, teaching tables, reuse bridges)
 exceed the band - EXEMPLAR PARITY on an identical measurement basis is the
 real gate, not the raw number. M3 (3.1/3.2 at ~2,900w) is the remaining
 unmigrated pair.
+
+## 2026-07-17 (later) - Full-course migration complete
+M3 (3.1/3.2), M4 (all five), and M5 (5.1/5.2/5.6/5.7) migrated to v2
+micro-lesson form in one 5-fixer wave; 11 new reference companions created
+(every module now has its deep-dive set). Canon punch-list applied (Cursor
+seat range, "Sixty percent" stat, PR #847 collision, fast/easy/free columns,
+Chapter 0 -> Overview, faq 12-rules pointer). Cold-eyes M3+ reuse review
+fixed 4 restart defects (5.3 warm-list seeding, SOW brief-as-scope, 5.1
+persona reconciliation, PRD Section 2). No v1 long-form lessons remain.
+Gotcha: claude-flow daemons recreate .git/index.lock continuously - commit
+via retry loop (rm lock + immediate git add/commit, up to 10 attempts).

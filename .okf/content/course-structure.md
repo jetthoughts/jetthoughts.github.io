@@ -26,11 +26,17 @@ file. Never hardcode exact chapter counts in prose; use near numbers
 - **Mia walkthroughs**: one per module (`module-N-walkthrough-mia`).
 - **Templates**: worksheet/checklist/script chapters with
   [generated PDFs](/build/pdf-templates.md).
-- **Reference deep-dives** under `reference/` (M1: hypothesis-sprint-full,
-  smoke-test-channel-guide, stripe-price-test-full; M2: mom-test-full,
-  persona-rehearsal-full, find-10-people-full (shared by 2.3+2.4),
-  prototype-build-full). Lessons point at them via a `Deeper reference:`
-  footer line; the module landing cards link them as "Optional reference".
+- **Reference deep-dives** under `reference/` - every module now has them
+  (M1: hypothesis-sprint-full, smoke-test-channel-guide,
+  stripe-price-test-full; M2: mom-test-full, persona-rehearsal-full,
+  find-10-people-full (shared by 2.3+2.4), prototype-build-full;
+  M3: product-brief-full, outcomes-not-features-full; M4: hire-decision-full,
+  ownership-full, stack-tools-full, mvp-build-phases-full,
+  ceiling-signals-full; M5: must-have-survey-full, channel-selection-full,
+  paid-pilot-full, outbound-full). Lessons point at them via a
+  `Deeper reference:` footer line; the module landing cards link them as
+  "Optional reference". As of 2026-07-17 ALL five modules are migrated to
+  the v2 micro-lesson format - no v1 long-form lessons remain.
 - **Floating glossary**: five-tech-words-stop-nodding-at, reachable from every
   chapter, not in the linear order.
 
