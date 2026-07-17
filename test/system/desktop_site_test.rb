@@ -341,7 +341,9 @@ class DesktopSiteTest < ApplicationSystemTestCase
   def test_course_chapter
     visit "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/"
 
-    assert_stable_screenshot "course/chapter", tolerance: 0.03, skip_area: %w[picture img]
+    # blockquote: the lesson-meta callout's bold+link line wraps bimodally
+    # across runs (font-swap race), flipping every pixel below it.
+    assert_stable_screenshot "course/chapter", tolerance: 0.03, skip_area: %w[picture img blockquote]
   end
 
   def test_visit_course_chapter_from_landing
