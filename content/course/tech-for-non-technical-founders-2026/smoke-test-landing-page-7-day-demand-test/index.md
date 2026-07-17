@@ -62,7 +62,7 @@ You will not have to figure out the ad on your own: the launch checklist below l
 > 2. Verify your ad account is approved and payment method attached. If not, set it up tonight.
 > 3. Create and launch your campaign. Open the [campaign creation recipe](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) for your channel (Meta, Google, LinkedIn, or Reddit). Each recipe walks you through 7 settings: objective, budget, audience, placement, creative, tracking, and launch. Set a daily budget that gets you to 300 visits within 5-7 days.
 > 4. **Do not touch the page.** Resist headline rewrites, bid adjustments, and hourly dashboard refreshes for the full run. You want raw demand against the original hypothesis - not an optimized funnel.
-> 5. After 300 visits, work out your conversion rate (form submits ÷ page views) and find it on the meter above. The same bands, with the action for each:
+> 5. After 300 visits, work out your conversion rate (form submits ÷ visits that came from your ad campaign - use the campaign's landing-page-view count, not GA4's total page views, so friends and your own refreshes don't dilute the number) and find it on the meter above. The same bands, with the action for each:
 
 | Conversion rate from cold traffic | Decision | What to do |
 |---|---|---|

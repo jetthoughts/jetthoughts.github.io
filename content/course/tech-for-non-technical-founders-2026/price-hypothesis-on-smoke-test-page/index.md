@@ -79,7 +79,7 @@ Pick one pattern. Do not A/B test - 150 visits each on a $300 budget can't disti
 
 **If this fails: visitors click the button but nobody completes payment.**
 - **Why:** the checkout page is killing intent - price felt different in context, or the checkout page itself adds friction.
-- **Fix:** track both click (page → Stripe) and completion (Stripe → thank-you). 60 clicks with 3 completions = the checkout is killing intent. 6 clicks with 3 completions = 50% of clickers bought - strong signal. Same outcome, opposite diagnosis. The [full price test guide](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/) has the detailed threshold table.
+- **Fix:** track both click (page → Stripe) and completion (Stripe → thank-you). 60 clicks with 3 completions = the checkout is killing intent. 6 clicks with 3 completions = half of clickers bought - promising, but 6 clicks is too small a sample to call; keep the test running until you have 20+ clicks before trusting the ratio. Same completion count, opposite diagnosis. The [full price test guide](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/) has the detailed threshold table.
 
 ---
 

@@ -89,14 +89,16 @@ The problem they have: [PROBLEM blank]
 What they use today instead: [COMPETITION blank]
 Why they'd switch: [DIFFERENTIATION blank]
 
-Real customer wording to echo in the value props (use these exact phrases
-from Step 1):
+Real customer wording to echo in the value props (keep their words, compress
+each to fit the six-word cap - quotes from Step 1):
 - "[verbatim customer quote 1]"
 - "[verbatim customer quote 2]"
 - "[verbatim customer quote 3]"
 
 Before you write, do a quick web search for how [CUSTOMER] describe [PROBLEM]
-in their own words, and fill any gaps you find.
+in their own words, and match their vocabulary. Do NOT invent customer quotes:
+if you can't find real phrasing for a value prop, write it plainly and mark
+it [NEEDS REAL WORDING] so I can replace it.
 
 The page must pass this test: a stranger can say who it is for and what it does
 in 3 seconds. No pricing, no FAQ, no testimonials. Never write "Buy now."

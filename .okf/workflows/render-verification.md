@@ -32,8 +32,11 @@ Chrome never exits on its own - background it and kill after a sleep:
 sleep 14; kill $P
 ```
 
+- First-fold check is its own capture: rerun with `--window-size=1280,800`
+  (the tall 20,000px canvas shows content, not what fits the fold).
 - 390-wide window for mobile first-fold; raw headless is NOT full mobile
-  emulation.
+  emulation (no viewport-meta scaling; body text fake-clips at the right
+  edge) - true mobile checks need chrome-devtools MCP device emulation.
 - Slice for inspection: `magick page.png -trim +repage -crop 1280x2400 +repage p-%02d.png`
 - Standalone SVGs: `rsvg-convert -w 1400 file.svg -o out.png` then inspect.
 - Line-fraction crop estimates are unreliable (tables/code expand); iterate

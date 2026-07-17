@@ -22,8 +22,14 @@ timestamp: 2026-07-13T00:00:00Z
 - Visual failures are commit blockers, not warnings. Either fix the
   regression or update BOTH baseline dirs (macos/ and linux/) in the same
   commit with the intentional change.
-- Content-only + standalone-SVG waves need only
-  [bin/hugo-build](/build/hugo-build.md) + `test:critical`.
+- Content-only + standalone-SVG waves need
+  [bin/hugo-build](/build/hugo-build.md) + `test:critical` + the
+  [visual scroll gate](/workflows/render-verification.md) on edited pages -
+  the command matrix above is not the complete gate on its own.
+- Changes to `lib/` (validators, helpers) additionally require
+  `bundle exec rake test:unit` - CI runs the unit suite and `test:critical`
+  does NOT include it (2026-07-17: a validator change shipped green locally,
+  red in CI, because its unit fixture was never run).
 - Docker runs via Colima; fresh worktrees need `bun install` first.
 - Tests must assert behavior shape (`q=\d+`, has `<picture>`), never tunable
   config values (exact quality/width numbers).

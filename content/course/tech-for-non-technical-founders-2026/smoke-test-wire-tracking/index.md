@@ -73,6 +73,7 @@ Conversion rate = form submits ÷ page views. That is the number your hypothesis
 > 2. **Install Clarity** ([clarity.microsoft.com](https://clarity.microsoft.com/), 60 seconds): copy the snippet, paste in your page builder's head-tag field.
 > 3. **Install GA4** ([analytics.google.com](https://analytics.google.com/)): copy the GA4 snippet, paste in the head-tag field. If you plan to use Google Ads in 1.4, you'll link GA4 in Google Ads Settings there.
 > 4. **Verify:** open your page in an incognito window. Wait 60 seconds. **Clarity:** your visit appears as a session recording. **GA4:** test visit registers in your dashboard.
+> 5. **Verify the conversion event too:** submit the waitlist form once with a test email and confirm a form-submit event appears in GA4's Realtime report. That event is the top of the conversion-rate fraction in Lesson 1.4 - if it doesn't fire now, your week of ad spend reports zero conversions no matter what visitors do. (Builder forms sometimes don't trigger GA4's automatic form tracking; if nothing appears, use your builder's own signup counter as the submit count in 1.4 instead.)
 >
 > (One "custom code" field? That field is the head-tag - paste all snippets there.)
 
