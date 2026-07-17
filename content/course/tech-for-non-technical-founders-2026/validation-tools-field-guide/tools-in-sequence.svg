@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="toolseq-title">
+  <title id="toolseq-title">The three validation tools in the recommended order: first VenturusAI (free, about 30 seconds) catches missed competitors and weak differentiation; second Preuve AI's free scan (free, about 60 seconds) reads market signal and flags a customer that is too broad; third DimeADozen's Starter report (9 dollars, optional, about 2 minutes) catches kill risks and weak unit economics. None of them validates the hypothesis - only 10 Mom Test interviews do that.</title>
+  <desc>A left-to-right strip of three numbered tool cards joined by arrows. Card 1 VenturusAI: catches missed competitors and weak differentiation; chips read about 30 seconds and Free. Card 2 Preuve AI free scan: reads market signal, flags customer too broad; chips read about 60 seconds and Free scan. Card 3 DimeADozen (optional): catches kill risks and unit economics; chips read about 2 minutes and 9 dollar Starter.</desc>
+  <defs>
+    <style>
+      .h       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title   { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub     { font-size: 17px; fill: #666; font-style: italic; }
+      .tool    { font-size: 21px; font-weight: 700; fill: #1a1a1a; }
+      .opt     { font-size: 14px; fill: #888; font-style: italic; }
+      .cap     { font-size: 12px; font-weight: 700; fill: #999; letter-spacing: 0.07em; }
+      .catch   { font-size: 17px; fill: #1a1a1a; font-weight: 600; }
+      .num     { font-size: 15px; font-weight: 700; fill: #fff; }
+      .note    { font-size: 16px; fill: #666; font-style: italic; }
+      .card    { fill: #faf7f2; stroke: #555; stroke-width: 2.25; }
+      .numdot  { fill: #cc342d; }
+      .arrow   { stroke: #333; stroke-width: 2.25; fill: none; }
+      .chip    { fill: #fdfbf7; stroke: #aaa; stroke-width: 1.5; }
+      .chipa   { fill: #fffbeb; stroke: #d97706; stroke-width: 1.5; }
+      .chiptx  { font-size: 14px; fill: #555; }
+      .chiptxa { font-size: 14px; fill: #b8860b; font-weight: 700; }
+    </style>
+    <marker id="tah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="34" text-anchor="middle" class="h title">The 3 tools, in the order that pays off</text>
+  <text x="480" y="60" text-anchor="middle" class="h sub">Run them in sequence, not all at once - each catches what the next one can't.</text>
+
+  <!-- Card 1 - VenturusAI -->
+  <g transform="rotate(-0.4 170 162)">
+    <rect x="30" y="82" width="280" height="160" rx="12" class="card"/>
+    <circle cx="56" cy="108" r="13" class="numdot"/>
+    <text x="56" y="113" text-anchor="middle" class="h num">1</text>
+    <text x="78" y="115" class="h tool">VenturusAI</text>
+    <text x="46" y="150" class="h cap">CATCHES</text>
+    <text x="46" y="174" class="h catch">Missed rivals, weak edge</text>
+    <rect x="46" y="196" width="118" height="28" rx="14" class="chip"/>
+    <text x="105" y="215" text-anchor="middle" class="h chiptx">~30 seconds</text>
+    <rect x="176" y="196" width="118" height="28" rx="14" class="chip"/>
+    <text x="235" y="215" text-anchor="middle" class="h chiptx">Free</text>
+  </g>
+
+  <!-- Card 2 - Preuve AI -->
+  <g transform="rotate(0.4 480 162)">
+    <rect x="340" y="82" width="280" height="160" rx="12" class="card"/>
+    <circle cx="366" cy="108" r="13" class="numdot"/>
+    <text x="366" y="113" text-anchor="middle" class="h num">2</text>
+    <text x="388" y="115" class="h tool">Preuve AI</text>
+    <text x="356" y="150" class="h cap">CATCHES</text>
+    <text x="356" y="174" class="h catch">Market signal, too broad</text>
+    <rect x="356" y="196" width="118" height="28" rx="14" class="chip"/>
+    <text x="415" y="215" text-anchor="middle" class="h chiptx">~60 seconds</text>
+    <rect x="486" y="196" width="118" height="28" rx="14" class="chip"/>
+    <text x="545" y="215" text-anchor="middle" class="h chiptx">Free scan</text>
+  </g>
+
+  <!-- Card 3 - DimeADozen -->
+  <g transform="rotate(-0.4 790 162)">
+    <rect x="650" y="82" width="280" height="160" rx="12" class="card"/>
+    <circle cx="676" cy="108" r="13" class="numdot"/>
+    <text x="676" y="113" text-anchor="middle" class="h num">3</text>
+    <text x="698" y="115" class="h tool">DimeADozen</text>
+    <text x="838" y="115" class="h opt">optional</text>
+    <text x="666" y="150" class="h cap">CATCHES</text>
+    <text x="666" y="174" class="h catch">Kill risks, unit economics</text>
+    <rect x="666" y="196" width="118" height="28" rx="14" class="chip"/>
+    <text x="725" y="215" text-anchor="middle" class="h chiptx">~2 minutes</text>
+    <rect x="796" y="196" width="118" height="28" rx="14" class="chipa"/>
+    <text x="855" y="215" text-anchor="middle" class="h chiptxa">$9 Starter</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M 310 162 L 338 162" class="arrow" marker-end="url(#tah)"/>
+  <path d="M 620 162 L 648 162" class="arrow" marker-end="url(#tah)"/>
+
+  <!-- Footer note -->
+  <text x="480" y="272" text-anchor="middle" class="h note">None of these validates your hypothesis - only 10 Mom Test interviews do that.</text>
+</svg>

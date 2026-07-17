@@ -31,6 +31,19 @@ Always read these files before making changes. They define the project's archite
 
 ---
 
+## 📚 OKF Knowledge Bundle (`.okf/`)
+
+Distilled operational knowledge lives in the OKF v0.1 bundle at `.okf/` (markdown + YAML frontmatter, one concept per file). **Consume it via progressive disclosure**: read `.okf/index.md` first, then follow links into only the concepts relevant to the task.
+
+- `.okf/build/` — build pipeline, blocking test gates, template-PDF regeneration
+- `.okf/content/` — course structure, canonical numbers, voice rules, banned-strings ratchet
+- `.okf/design/` — mermaid/Caveat theme, house visual spec, cover pipeline, course typography
+- `.okf/workflows/` — render-verification recipes, review-swarm pattern
+
+**Maintain it as you work**: when you learn something durable (a new canon number, a root-cause fix, a workflow gotcha), update the affected concept file and its `timestamp`, refresh the section `index.md`, and append a dated entry to `.okf/log.md`. Validate with `/okf:validate .okf --strict` before committing bundle changes.
+
+---
+
 ## 🔍 Research Protocol (MANDATORY)
 
 **Session start**: Always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflows/flow-router.md`.

@@ -9,11 +9,11 @@ author: "JetThoughts Team"
 slug: vibe-prd-template
 course_nav_prev:
   slug: one-page-product-brief-vibe-prd
-  module: "Chapter 3.1"
+  module: "Lesson 3.1"
   title: "3.1 · The One-Page Product Brief (Vibe PRD)"
 course_nav_next:
   slug: stop-specifying-features-start-outcomes
-  module: "Chapter 3.2"
+  module: "Lesson 3.2"
   title: "3.2 · Quality-check your brief: features to outcomes"
 keywords:
   - vibe prd template
@@ -38,9 +38,9 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Template companion to [Chapter 3.1 - The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Template companion to [Lesson 3.1 - The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** your validated problem statement (from the [Chapter 2.5 synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)) + the "describe in one sentence" vocabulary from your [Chapter 2.6 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
+> **Input:** your validated problem statement (from the [Lesson 2.5 synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)) + the "describe in one sentence" vocabulary from your [Lesson 2.6 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
 >
 > **Output:** a filled one-page Product Brief (Vibe PRD), written in one 90-minute sitting, ready to hand to your AI agent or contractor tomorrow
 
@@ -52,18 +52,18 @@ related_posts: false
 > 1. The problem (copied from your validated problem statement)
 > 2. The user and their context
 > 3. What you're building (one paragraph, plain English)
-> 4. Success metric (one number)
+> 4. Success metric (one metric, one target number)
 > 5. What you're not building (the no-go list)
 
 ## Why this exists
 
-A solo founder I spoke with last quarter had a validated problem statement and a Lovable subscription. She typed her problem statement into the Lovable prompt and asked it to "build the simplest version of this." Twelve hours later she had a working web app with a settings page, a billing dashboard, three integrations, and a pile of toggles she didn't ask for. She spent the next three weeks deciding which parts to delete. When she opened a second project with a one-page brief - the same problem, but now with a no-go list - Lovable shipped the smallest end-to-end thing in 90 minutes. The page she filled in between the two attempts was the difference. The agent fills blanks with reasonable defaults; the brief is your only way to forbid the defaults.
+An AI app builder fills every blank you leave with a reasonable default - that is the whole reason a one-page brief exists. Feed it a bare problem statement and "build the simplest version of this," and twelve hours later you are deleting a settings page, a billing dashboard, three integrations, and a pile of toggles you never asked for, and that deleting runs three weeks. Give the same builder a one-page brief with a no-go list, and it ships the smallest end-to-end thing in 90 minutes. The page you fill in between those two attempts is the difference: the agent fills blanks with defaults, and the brief is your only way to forbid them.
 
 ## How to use this
 
 Block 90 minutes on a single morning. Print the template (or copy the markdown block below into a Notion doc). Bring your filled-in [validated problem statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/). Open Lovable, Cursor, or your contractor's kickoff doc in a second tab. You will not type into the second tab yet. The page first.
 
-Section 1 copies directly from your validated problem statement, word for word. Sections 2 through 5 you write from scratch. Hard cap: 90 minutes total. If you spill, the persona is too broad or you are designing too much.
+Section 1 copies directly from your validated problem statement, word for word. Section 2 pulls from your Module 2 interview notes and [2.6 prototype-session notes](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) - the moment-of-use detail is already there; don't invent it. Sections 3 through 5 you write from scratch. Hard cap: 90 minutes total. If you spill, the persona is too broad or you are designing too much.
 
 After the page is filled, read it aloud to one peer over a 20-minute call. Ask them: "If you built this in a week using Lovable, what would you build that isn't on my no-go list?" Their first answer is your missing no-go item.
 
@@ -71,7 +71,9 @@ Total time budget: 90 minutes to write, 1 hour to read aloud + revise, 0 minutes
 
 ## The template - copy and paste
 
-Use the markdown block below directly in Notion, Lovable's prompt window, or a Word doc. The [SVG of the page](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) is embedded in the Chapter 3.1 post for printing.
+Use the markdown blocks below directly in Notion, Lovable's prompt window, or a Word doc. The [SVG of the page](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) is embedded in the Lesson 3.1 post for printing.
+
+Copy section by section, or grab the whole template from the top.
 
 ```
 ======================= VIBE PRD =======================
@@ -83,7 +85,11 @@ Founder: _________________  Date: _______________________
 Source: validated problem statement signed ____/____/____
         by ____________________ (advisor 1) and
            ____________________ (advisor 2)
+```
 
+**Section 1 - the problem.** Copy this straight from your validated problem statement, word for word. Do not soften the wording.
+
+```
 ---------------------------------------------------------
 1. THE PROBLEM (copy from validated problem statement)
 ---------------------------------------------------------
@@ -103,7 +109,11 @@ _________________________________________________________
 Inherited from validated problem statement - DO NOT
 paraphrase. If you find yourself softening the wording,
 stop and reread the original page.
+```
 
+**Section 2 - the user and their context.** The agent or junior needs the moment of use, not the market size.
+
+```
 ---------------------------------------------------------
 2. THE USER AND THEIR CONTEXT
 ---------------------------------------------------------
@@ -126,7 +136,11 @@ _________________________________________________________
 The agent or junior needs the context, not the TAM.
 "Tired, two tabs open, wants to be done" beats
 "SMB SaaS company, 11-50 employees, Series A."
+```
 
+**Section 3 - what you're building.** One paragraph's worth, verb-led - the fields below assemble it. If it reads like a feature list, the agent builds a settings page nobody asked for.
+
+```
 ---------------------------------------------------------
 3. WHAT YOU'RE BUILDING (one paragraph, plain English)
 ---------------------------------------------------------
@@ -152,9 +166,13 @@ a feature list (Stripe integration + dashboard + settings)
 the agent will build a settings page nobody asked for.
 Rewrite until it reads like a sentence about what the
 user does.
+```
 
+**Section 4 - the success metric.** One number, not three. Three metrics let you cherry-pick.
+
+```
 ---------------------------------------------------------
-4. SUCCESS METRIC (one number)
+4. SUCCESS METRIC (one metric)
 ---------------------------------------------------------
 
 Number + unit + timeframe:
@@ -171,7 +189,11 @@ _________________________________________________________
 
 One metric, not three. Three metrics let you cherry-pick.
 One metric forces a build/no-build call in 30 days.
+```
 
+**Section 5 - what you're not building.** The longer this no-go list, the cheaper your build.
+
+```
 ---------------------------------------------------------
 5. WHAT YOU'RE NOT BUILDING (the no-go list)
 ---------------------------------------------------------
@@ -191,7 +213,11 @@ might add unprompted that you explicitly do not want in v1.
 If this section is shorter than 5 lines, you have not
 finished. The agent fills blanks. The longer your list,
 the cheaper your build.
+```
 
+**Hand-off.** Who the brief is going to, and the dates that keep it honest.
+
+```
 ---------------------------------------------------------
 HAND-OFF
 ---------------------------------------------------------
@@ -219,8 +245,8 @@ The same one page works for the first three audiences below. Senior engineers an
 | Lovable / Bolt / v0 | one-page brief as-is | Paste as prompt; agent fills defaults | 1 page |
 | Cursor / Claude Code | one-page brief + a `context.md` with stack | Paste as context file at repo root | 1 page + stack note |
 | Hired junior contractor | one-page brief + 30-min kickoff call | Page + verbal walkthrough | 1 page + recording |
-| Hired senior engineer | Traditional PRD | User stories, acceptance criteria, edge cases | 5-10 pages |
-| Product committee | Traditional PRD | Goals, KPIs, risks, dependencies, milestones | 10+ pages |
+| Hired senior engineer | Traditional PRD | User stories, acceptance criteria, edge cases | 3-5 pages |
+| Product committee | Traditional PRD | Goals, KPIs, risks, dependencies, milestones | 5-10 pages |
 
 ## What good looks like vs what bad looks like
 
@@ -246,7 +272,7 @@ The good version is one paragraph, verb-led. It names the input (paste CSV), the
 
 > Good: *"Not in v1: multi-currency support. Multi-Stripe-account support. Automatic recurring sync. A settings page. A billing dashboard. User roles and permissions. A marketing site beyond the signup page. Mobile responsive design beyond 'works on a 1024px screen.' We will revisit each of these after the Section 4 metric is hit."*
 
-The good no-go list names eight things a competent agent or junior might add. Each is concrete. The bad version is blank, which is how the EdTech founder who opens [Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) ended up with 17 settings toggles in version one - 12 with no backend, 2 that crashed. Her team had read the brief as a wish list and added everything she didn't forbid.
+The good no-go list names eight things a competent agent or junior might add. Each is concrete. The bad version is blank, which is how the EdTech founder who opens [Lesson 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) ended up with 17 settings toggles in version one - 12 with no backend, 2 that crashed. Her team had read the brief as a wish list and added everything she didn't forbid.
 
 ## What to do after
 
@@ -256,7 +282,7 @@ The good no-go list names eight things a competent agent or junior might add. Ea
 
 Skip the no-go list and you ship a working demo of a product nobody asked for. Six weeks later you're posting a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about an MVP you can't extend. The page is cheap. The build round you save by writing it is the expensive thing you avoid.
 
-If you want the doctrine in long form, the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between one-page brief and traditional PRD, and the case for paying for a live cohort vs writing the page yourself for free.
+If you want the doctrine in long form, the [Lesson 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between one-page brief and traditional PRD, and the case for paying for a live cohort vs writing the page yourself for free.
 
 ---
 

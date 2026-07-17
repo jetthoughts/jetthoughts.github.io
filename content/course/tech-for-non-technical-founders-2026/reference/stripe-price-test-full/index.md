@@ -8,6 +8,8 @@ slug: stripe-price-test-full
 
 > **Reference companion to [Lesson 1.5 · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)** - this page contains the full Stripe setup walkthrough with gotchas, click-vs-completion tracking table, detailed threshold bands, button copy patterns, and the Claude copy-generation prompt. Read the micro-lesson first; return here for deep pricing methodology.
 
+![The Stripe price-test flow: 1 create the Payment Link (one-time product at your price), 2 wire it to the page button in live mode, 3 read the visit-to-Stripe-click rate - then act on the band: under 5% iterate on price, 5-10% advance to interviews, over 10% verify with a second cold channel](price-test-flow.svg)
+
 ---
 
 ## The Maya Story (Full Version)
@@ -94,9 +96,9 @@ If you want copy variants to choose between before launch:
 ```text
 I'm testing a price hypothesis for a pre-product landing page.
 
-My hypothesis: [paste your one-sentence Founding Hypothesis here]
+My hypothesis: [paste your one-sentence Founding Hypothesis from Lesson 1.1]
 My test price: [e.g., $97 one-time founding member access]
-My target customer: [e.g., freelance bookkeepers who reconcile client accounts manually]
+My target customer (the [customer] blank from the hypothesis above): [e.g., freelance bookkeepers who reconcile client accounts manually]
 My hero benefit: [e.g., reconcile Stripe and QuickBooks in 90 seconds instead of 4 hours]
 
 Generate 2 button-label variants and a 1-sentence sub-copy for each:
@@ -115,8 +117,10 @@ SUB-COPY: [one sentence under the button]
 Paste into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier):
 
 ```text
-What do [YOUR ICP] currently pay for [YOUR CATEGORY]? Pull from G2 review price snippets, Reddit pricing threads, Capterra category averages, and competitor pricing pages. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing.
+What do [customer] currently pay for [YOUR CATEGORY]? Pull from G2 review price snippets, Reddit pricing threads, Capterra category averages, and competitor pricing pages. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing.
 ```
+
+Reuse the quotes you already pulled in Lesson 1.2's research prompt - this search is for PRICES, not pains.
 
 **Free-tier fallback:** Paste the same prompt into Claude free or ChatGPT free. Output is less exhaustive but the NOT-FOUND escape valve tells you which items it could not verify.
 

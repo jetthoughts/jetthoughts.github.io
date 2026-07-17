@@ -39,15 +39,17 @@ related_posts: false
 
 > **Going further · Continuation chapter** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a decision from the [churn-triage chapter](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/) OR a Sean Ellis 40% test result ([Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/))
+> **Input:** a decision from the [churn-triage chapter](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/) OR a Sean Ellis 40% test result ([Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/))
 >
 > **Output:** a pivot decision with the 6-type framework + a written list of what you keep vs what you change
 
 ## The Course Is a Loop, Not an Escalator
 
-A founder I rode shotgun with last quarter - a fintech founder named D. - hit the cold-outbound stage (Chapter 5.7) with a conversion rate of 0.6%. He had sent 287 personal emails to CFOs of 50-200-person companies over 14 days, with 11 replies and 0 paid pilots. His instinct, the same instinct every founder gets here, was to push forward into salvage-or-rebuild territory and start managing the build harder.
+A fintech founder I worked with last quarter - call him D. - hit the cold-outbound stage (Lesson 5.7) with a conversion rate of 0.6%. He had sent 287 personal emails to CFOs of 50-200-person companies over 14 days, with 11 replies and 0 paid pilots. His instinct, the same instinct every founder gets here, was to push forward into salvage-or-rebuild territory and start managing the build harder.
 
-That was the wrong move. The right move was backwards. The 0.6% conversion rate was telling him the messaging he had built off his [Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) sentence was not landing on the segment he had picked. Three things could be wrong: the customer (segment), the need (problem), or the channel (outbound vs PLG). Pushing forward into rebuild mode would have made him a better operator of a misaligned hypothesis. Going back to [Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) with a pivot decision made him a better founder.
+*Illustrative composite based on patterns from real founder builds, not a single client story.*
+
+That was the wrong move. The right move was backwards. The 0.6% conversion rate was telling him the messaging he had built off his [Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) sentence was not landing on the segment he had picked. Three things could be wrong: the customer (segment), the need (problem), or the channel (outbound vs PLG - product-led growth, where users find and buy the product self-serve). Pushing forward into rebuild mode would have made him a better operator of a misaligned hypothesis. Going back to [Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) with a pivot decision made him a better founder.
 
 The course you have been reading was structured as a numbered sequence because that is the cleanest way to learn the moves. But the actual job is a loop. A founder writes a hypothesis, smoke-tests it, talks to customers, builds an MVP, lands paying customers, and at any point can hit a signal that sends them back to [Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) with a new hypothesis. The courses that pretend the journey is one-way escalator produce founders who think pivoting is failure. It is not. Pivoting is the discovery loop working correctly.
 
@@ -73,7 +75,7 @@ Eric Ries catalogued ten pivot types in *The Lean Startup*; Steve Blank built on
 
 ### 4. Technology pivot
 
-*Right solution, wrong tech stack.* The shape of the solution is right but the platform you built it on cannot reach the price or performance the customer needs. Less common for non-technical founders because most ship on Lovable, Bubble, or with a hired team and the tech is opaque. Becomes relevant when you outgrow a no-code ceiling. Example: a B2C founder hit 4,000 MAU on Bubble and discovered the per-row pricing model would cost $11K/month at 20K MAU; the rebuild on a native stack made the unit economics work.
+*Right solution, wrong tech stack.* The shape of the solution is right but the platform you built it on cannot reach the price or performance the customer needs. Less common for non-technical founders because most ship on Lovable, Bubble, or with a hired team and the tech is opaque. Becomes relevant when you outgrow a no-code ceiling. Example: a B2C founder hit 4,000 MAU (monthly active users) on Bubble and discovered the per-row pricing model would cost $11K/month at 20K MAU; the rebuild on a native stack made the unit economics work.
 
 ### 5. Channel pivot
 
@@ -81,7 +83,7 @@ Eric Ries catalogued ten pivot types in *The Lean Startup*; Steve Blank built on
 
 ### 6. Revenue Model pivot
 
-*Right product, wrong pricing.* The product works and the audience pays, but the pricing shape (per seat, per event, flat tier, freemium) does not match how customers value or budget for the product. The signal comes from active customers churning at the renewal date with feedback that points at price, not the product. Example: a B2B SaaS priced at $200/seat/month for 10-seat teams; customers loved it but balked at the renewal because they only needed 3 power users. Pivot was to $400/month flat for unlimited seats with feature gates by usage tier. ARPU dropped 20% per customer; net revenue retention jumped to 118%.
+*Right product, wrong pricing.* The product works and the audience pays, but the pricing shape (per seat, per event, flat tier, freemium) does not match how customers value or budget for the product. The signal comes from active customers churning at the renewal date with feedback that points at price, not the product. Example: a B2B SaaS priced at $200/seat/month for 10-seat teams; customers loved it but balked at the renewal because they only needed 3 power users. Pivot was to $400/month flat for unlimited seats with feature gates by usage tier. ARPU (average revenue per user) dropped 20% per customer; net revenue retention (the revenue you keep plus expansion from existing customers) jumped to 118%.
 
 The skill is not memorizing the six types. The skill is asking which of the five Mad Libs blanks (customer, problem, approach, competition, differentiation) is wrong, and matching it to the pivot type that addresses that blank.
 

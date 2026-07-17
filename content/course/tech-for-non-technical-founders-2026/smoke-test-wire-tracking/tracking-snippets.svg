@@ -2,12 +2,12 @@
   <title id="tracking-title">Three tracking snippets stacked on the left side - Microsoft Clarity, Ad-platform pixel, Google Analytics 4 - with arrows pointing to a landing page wireframe on the right showing page_view, cta_click, and form_submit events firing</title>
   <defs>
     <style>
-      .heading   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .label     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 22px; fill: #cc342d; font-weight: 700; }
-      .sub       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #555; font-style: italic; }
+      .heading   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .label     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 22px; fill: #cc342d; font-weight: 700; }
+      .sub       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #555; font-style: italic; }
       .event     { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 16px; fill: #1a1a1a; }
-      .wf-text   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; }
-      .cta-text  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #fff; font-weight: 700; }
+      .wf-text   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; }
+      .cta-text  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #fff; font-weight: 700; }
       .clarity   { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
       .pixel     { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
       .ga4       { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="cd-title">
+  <title id="cd-title">Pick one channel from interview evidence, score it out of 12, then commit to one full send-reply-follow-up arc before switching</title>
+  <defs>
+    <style>
+      .h    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-weight: 700; fill: #1a1a1a; }
+      .sub  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; fill: #555; font-style: italic; }
+      .pill { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-weight: 700; }
+      .big  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-weight: 700; fill: #cc342d; }
+    </style>
+    <marker id="cd-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cc342d"/>
+    </marker>
+  </defs>
+
+  <text x="30" y="36" class="h" font-size="25">Pick one channel - then commit to it</text>
+
+  <!-- Card A: interview evidence -->
+  <rect x="30" y="60" width="215" height="118" rx="13" fill="#faf7f2" stroke="#1a1a1a" stroke-width="2.5"/>
+  <text x="137" y="104" class="h" font-size="20" text-anchor="middle">10 interview</text>
+  <text x="137" y="128" class="h" font-size="20" text-anchor="middle">transcripts</text>
+  <text x="137" y="153" class="sub" font-size="15" text-anchor="middle">from Module 2</text>
+
+  <!-- arrow A -> B -->
+  <line x1="250" y1="119" x2="294" y2="119" stroke="#cc342d" stroke-width="2.5" marker-end="url(#cd-arrow)"/>
+
+  <!-- Card B: score -->
+  <rect x="300" y="60" width="300" height="118" rx="13" fill="#faf7f2" stroke="#1a1a1a" stroke-width="2.5"/>
+  <text x="450" y="94" class="h" font-size="20" text-anchor="middle">Score each channel 1-3</text>
+  <text x="450" y="118" class="sub" font-size="15" text-anchor="middle">Price / Buyer / Time / Signal</text>
+  <text x="450" y="156" class="big" font-size="24" text-anchor="middle">= your total / 12</text>
+
+  <!-- arrow B -> pills -->
+  <line x1="605" y1="119" x2="649" y2="119" stroke="#cc342d" stroke-width="2.5" marker-end="url(#cd-arrow)"/>
+
+  <!-- Outcome pills -->
+  <rect x="655" y="63" width="280" height="33" rx="16" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="2.5"/>
+  <text x="672" y="86" class="pill" font-size="16" fill="#ffffff">9+ / 12  -  commit to it</text>
+
+  <rect x="655" y="102" width="280" height="33" rx="16" fill="#fffbeb" stroke="#d97706" stroke-width="2.5"/>
+  <text x="672" y="125" class="pill" font-size="16" fill="#b45309">7-8 / 12  -  pilot your top 2</text>
+
+  <rect x="655" y="141" width="280" height="33" rx="16" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <text x="672" y="164" class="pill" font-size="16" fill="#b3261e">6 or less  -  re-read transcripts</text>
+
+  <!-- Commitment banner -->
+  <rect x="30" y="206" width="905" height="70" rx="13" fill="#faf7f2" stroke="#1a1a1a" stroke-width="2.5"/>
+  <text x="482" y="238" class="h" font-size="19" text-anchor="middle">Then run ONE full send / reply / follow-up arc before you switch channels.</text>
+  <text x="482" y="262" class="sub" font-size="16" text-anchor="middle">Reply rate over 5% and demos turning into paid chats - keep going. All flat - fix the script first.</text>
+</svg>

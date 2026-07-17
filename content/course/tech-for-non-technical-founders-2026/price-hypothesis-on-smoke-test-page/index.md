@@ -69,13 +69,17 @@ Pick one pattern. Do not A/B test - 150 visits each on a $300 budget can't disti
 > 3. Set the after-payment redirect. **Skip it** if you're in a hurry (Stripe shows its own confirmation). **Set it** if you want GA4 to count payment completions as page views: **Mixo** - redirect to your main page URL (GA4 counts the revisit; rougher but works). **Carrd** - create a hidden section at the bottom, redirect to its anchor URL (`yourpage.carrd.co/#thanks`). Other builders: redirect to any page or anchor on your site that GA4 can register.
 > 4. Add a refund line in your page footer (not the Stripe checkout footer): "Full refund within 30 days if we don't ship." Standard pre-order disclosure - it keeps the offer honest and lowers click friction. (US readers: this is the FTC-friendly pattern; selling elsewhere, check your local pre-order rules.)
 > 5. Paste the Payment Link URL on your CTA button. Below it, smaller text: "Not ready? Join the waitlist instead."
-> 6. **✅ Success check:** your Stripe dashboard shows live-mode (not test-mode) and the button opens a real checkout page.
+> 6. **Success check:** your Stripe dashboard shows live-mode (not test-mode) and the button opens a real checkout page.
 
 ## If Stripe or checkout stalls
 
-**If this fails: Stripe verification takes more than 3 days.** **Why:** Stripe sometimes requests an ID upload for first-time accounts. **Fix:** build the page without the button. Run the email-only smoke test from 1.4 while Stripe processes. The demand signal doesn't depend on the price button being live today.
+**If this fails: Stripe verification takes more than 3 days.**
+- **Why:** Stripe sometimes requests an ID upload for first-time accounts.
+- **Fix:** build the page without the button. Run the email-only smoke test from 1.4 while Stripe processes. The demand signal doesn't depend on the price button being live today.
 
-**If this fails: visitors click the button but nobody completes payment.** **Why:** the checkout page is killing intent - price felt different in context, or the checkout page itself adds friction. **Fix:** track both click (page → Stripe) and completion (Stripe → thank-you). 60 clicks with 3 completions = the checkout is killing intent. 6 clicks with 3 completions = 50% of clickers bought - strong signal. Same outcome, opposite diagnosis. The [full price test guide](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/) has the detailed threshold table.
+**If this fails: visitors click the button but nobody completes payment.**
+- **Why:** the checkout page is killing intent - price felt different in context, or the checkout page itself adds friction.
+- **Fix:** track both click (page → Stripe) and completion (Stripe → thank-you). 60 clicks with 3 completions = the checkout is killing intent. 6 clicks with 3 completions = half of clickers bought - promising, but 6 clicks is too small a sample to call; keep the test running until you have 20+ clicks before trusting the ratio. Same completion count, opposite diagnosis. The [full price test guide](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/) has the detailed threshold table.
 
 ---
 

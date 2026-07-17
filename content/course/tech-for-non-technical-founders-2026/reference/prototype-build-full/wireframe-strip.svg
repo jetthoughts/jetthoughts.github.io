@@ -2,14 +2,14 @@
   <title id="wf-title">A passing 3-screen prototype: Screen 1 entry point (fake file list + a Match transactions button) leads to Screen 2 core action (a Stripe-vs-QuickBooks match table where testers stall) leads to Screen 3 result (a summary card and Download report), which is where a passing tester lands without coaching.</title>
   <defs>
     <style>
-      .heading { font-family: "Caveat", "Patrick Hand", cursive; font-size: 27px; fill: #1a1a1a; font-weight: 700; }
-      .stitle  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #cc342d; font-weight: 700; }
-      .stitleg { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #2e7d32; font-weight: 700; }
-      .box     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #333; }
-      .boxq    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #777; font-style: italic; }
-      .cta     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 17px; fill: #fff; font-weight: 700; }
-      .anno    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #555; font-style: italic; }
-      .pass    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #2e7d32; font-weight: 700; }
+      .heading { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 27px; fill: #1a1a1a; font-weight: 700; }
+      .stitle  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #cc342d; font-weight: 700; }
+      .stitleg { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #2e7d32; font-weight: 700; }
+      .box     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #333; }
+      .boxq    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #777; font-style: italic; }
+      .cta     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #fff; font-weight: 700; }
+      .anno    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #555; font-style: italic; }
+      .pass    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #2e7d32; font-weight: 700; }
       .frame   { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
       .frameg  { fill: #f1f9f1; stroke: #2e7d32; stroke-width: 2.5; }
       .bar     { fill: #ffffff; stroke: #e2b8b8; stroke-width: 1.5; }

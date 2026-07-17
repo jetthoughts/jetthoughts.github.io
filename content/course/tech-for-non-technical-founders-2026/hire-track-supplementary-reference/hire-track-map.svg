@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="hiretrack-title">
+  <title id="hiretrack-title">The hire track: four stops from the self-serve ceiling to a well-signed first hire.</title>
+  <desc>A left-to-right strip of four numbered cards. Step 1 find your developers: pick a geography and two platforms. Step 2 the Fractional CTO bridge: five hours a week of senior eyes at four hundred to six hundred dollars a week. Step 3 the interview screen: seven questions, where question seven splits the pool. Step 4 read the SOW: the milestone-acceptance clause is the seventy-eight thousand dollar line. Arrows connect each stop to the next.</desc>
+  <defs>
+    <style>
+      .h     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub   { font-size: 16px; fill: #666; font-style: italic; }
+      .num   { font-size: 18px; font-weight: 700; fill: #fff; }
+      .ttl   { font-size: 20px; font-weight: 700; fill: #1a1a1a; }
+      .out   { font-size: 15px; fill: #555; font-style: italic; }
+      .card  { fill: #faf7f2; stroke: #555; stroke-width: 2.25; }
+      .dot   { fill: #cc342d; }
+    </style>
+    <marker id="ht" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#999"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="34" text-anchor="middle" class="h title">The hire track</text>
+  <text x="480" y="58" text-anchor="middle" class="h sub">Four stops - the self-serve ceiling to a first hire whose contract cannot quietly bleed you.</text>
+
+  <!-- Stop 1 -->
+  <g transform="translate(14,92) rotate(-0.5 105 84)">
+    <rect width="210" height="168" rx="13" class="card"/>
+    <circle cx="105" cy="32" r="16" class="dot"/>
+    <text x="105" y="38" text-anchor="middle" class="h num">1</text>
+    <text x="105" y="78" text-anchor="middle" class="h ttl">Find your</text>
+    <text x="105" y="100" text-anchor="middle" class="h ttl">developers</text>
+    <text x="105" y="132" text-anchor="middle" class="h out">pick a geography</text>
+    <text x="105" y="152" text-anchor="middle" class="h out">+ two platforms</text>
+  </g>
+
+  <!-- Stop 2 -->
+  <g transform="translate(246,92) rotate(0.5 105 84)">
+    <rect width="210" height="168" rx="13" class="card"/>
+    <circle cx="105" cy="32" r="16" class="dot"/>
+    <text x="105" y="38" text-anchor="middle" class="h num">2</text>
+    <text x="105" y="78" text-anchor="middle" class="h ttl">Fractional CTO</text>
+    <text x="105" y="100" text-anchor="middle" class="h ttl">bridge</text>
+    <text x="105" y="132" text-anchor="middle" class="h out">5 hrs/wk senior eyes</text>
+    <text x="105" y="152" text-anchor="middle" class="h out">$400-600 a week</text>
+  </g>
+
+  <!-- Stop 3 -->
+  <g transform="translate(478,92) rotate(-0.4 105 84)">
+    <rect width="210" height="168" rx="13" class="card"/>
+    <circle cx="105" cy="32" r="16" class="dot"/>
+    <text x="105" y="38" text-anchor="middle" class="h num">3</text>
+    <text x="105" y="78" text-anchor="middle" class="h ttl">Interview</text>
+    <text x="105" y="100" text-anchor="middle" class="h ttl">screen</text>
+    <text x="105" y="132" text-anchor="middle" class="h out">7 questions -</text>
+    <text x="105" y="152" text-anchor="middle" class="h out">Q7 splits the pool</text>
+  </g>
+
+  <!-- Stop 4 -->
+  <g transform="translate(710,92) rotate(0.5 105 84)">
+    <rect width="210" height="168" rx="13" class="card"/>
+    <circle cx="105" cy="32" r="16" class="dot"/>
+    <text x="105" y="38" text-anchor="middle" class="h num">4</text>
+    <text x="105" y="78" text-anchor="middle" class="h ttl">Read the</text>
+    <text x="105" y="100" text-anchor="middle" class="h ttl">SOW</text>
+    <text x="105" y="132" text-anchor="middle" class="h out">milestone clause</text>
+    <text x="105" y="152" text-anchor="middle" class="h out">= the $78K line</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M 226 176 L 244 176" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#ht)"/>
+  <path d="M 458 176 L 476 176" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#ht)"/>
+  <path d="M 690 176 L 708 176" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#ht)"/>
+</svg>

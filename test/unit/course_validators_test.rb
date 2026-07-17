@@ -79,7 +79,7 @@ class CourseValidatorsTest < Minitest::Test
       { "slug" => "ch1", "title" => "1.1 · Test Chapter", "module" => "Chapter 1.1", "goal" => "Test" }
     ])
     write_course_chapter(slug: "ch1", title: "1.1 · Test Chapter",
-      body: "See Chapter 1.1 for details. Also Chapter 1.1 has more info.\n")
+      body: "See Lesson 1.1 for details. Also Lesson 1.1 has more info.\n")
 
     results = CourseValidators.run_all
     result = results.find { |r| r.name == "chapter-number-consistency" }
@@ -87,17 +87,31 @@ class CourseValidatorsTest < Minitest::Test
     assert result.passed, "Expected no chapter-number violations, got: #{result.violations.inspect}"
   end
 
+  def test_chapter_number_consistency_flags_chapter_terminology
+    write_yaml([
+      { "slug" => "ch1", "title" => "1.1 · Test Chapter", "module" => "Lesson 1.1", "goal" => "Test" }
+    ])
+    write_course_chapter(slug: "ch1", title: "1.1 · Test Chapter",
+      body: "See Chapter 1.1 for details.\n")
+
+    results = CourseValidators.run_all
+    result = results.find { |r| r.name == "chapter-number-consistency" }
+
+    refute result.passed, "Expected a terminology violation for 'Chapter 1.1'"
+    assert result.violations.any? { |v| v.include?("Lesson N.N") }
+  end
+
   def test_chapter_number_consistency_invalid_ref
     write_yaml([
       { "slug" => "ch1", "title" => "1.1 · Test Chapter", "module" => "Chapter 1.1", "goal" => "Test" }
     ])
     write_course_chapter(slug: "ch1", title: "1.1 · Test Chapter",
-      body: "See Chapter 9.9 for details.\n")
+      body: "See Lesson 9.9 for details.\n")
 
     results = CourseValidators.run_all
     result = results.find { |r| r.name == "chapter-number-consistency" }
 
-    refute result.passed, "Expected a violation for invalid Chapter 9.9"
+    refute result.passed, "Expected a violation for invalid Lesson 9.9"
     assert result.violations.any? { |v| v.include?("9.9") }
   end
 

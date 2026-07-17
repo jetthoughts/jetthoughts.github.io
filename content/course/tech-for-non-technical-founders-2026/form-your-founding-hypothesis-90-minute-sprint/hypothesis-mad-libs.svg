@@ -1,19 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" fill="none" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
-  <rect width="500" height="120" rx="8" fill="#f8f9fa"/>
-  <text x="250" y="30" text-anchor="middle" font-size="11" fill="#555">If we help</text>
-  <rect x="50" y="38" width="80" height="22" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="1"/>
-  <text x="90" y="53" text-anchor="middle" font-size="9" fill="#333">customer</text>
-  <text x="135" y="55" font-size="10" fill="#555">solve</text>
-  <rect x="175" y="38" width="80" height="22" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="1"/>
-  <text x="215" y="53" text-anchor="middle" font-size="9" fill="#333">problem</text>
-  <text x="260" y="55" font-size="10" fill="#555">with</text>
-  <rect x="285" y="38" width="70" height="22" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="1"/>
-  <text x="320" y="53" text-anchor="middle" font-size="9" fill="#333">approach</text>
-  <text x="30" y="80" font-size="9" fill="#555">they'll choose it over</text>
-  <rect x="150" y="68" width="70" height="20" rx="4" fill="#e8f4f8" stroke="#0277bd" stroke-width="1"/>
-  <text x="185" y="82" text-anchor="middle" font-size="8" fill="#333">competition</text>
-  <text x="225" y="81" font-size="9" fill="#555">because</text>
-  <rect x="275" y="68" width="80" height="20" rx="4" fill="#e8f4f8" stroke="#0277bd" stroke-width="1"/>
-  <text x="315" y="82" text-anchor="middle" font-size="8" fill="#333">differentiation</text>
-  <text x="250" y="110" text-anchor="middle" font-size="8" fill="#999">Five blanks. One sentence. No vagueness allowed.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 190" role="img" aria-labelledby="madlibs-title">
+  <title id="madlibs-title">The founding-hypothesis Mad Libs sentence with five blanks: If we help [customer] solve [problem] with [approach], they'll choose it over [competition] because [differentiation].</title>
+  <desc>Five fill-in-the-blank pills stitched into one sentence. Three red pills name the customer, the problem, and the approach; two purple pills name the competition and the differentiation. Caption: five blanks, one sentence, no vagueness allowed.</desc>
+  <defs>
+    <style>
+      .h    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .join { font-size: 21px; fill: #555; }
+      .pill { font-size: 20px; font-weight: 700; fill: #1a1a1a; }
+      .cap  { font-size: 18px; fill: #888; font-style: italic; }
+      .p-r  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2; stroke-linejoin: round; }
+      .p-p  { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- Line 1: If we help [customer] solve [problem] with [approach] -->
+  <text x="18" y="54" class="h join">If we help</text>
+  <g transform="rotate(-0.8 202 47)">
+    <rect x="152" y="32" width="100" height="30" rx="8" class="p-r"/>
+    <text x="202" y="54" text-anchor="middle" class="h pill">customer</text>
+  </g>
+  <text x="266" y="54" class="h join">solve</text>
+  <g transform="rotate(0.7 378 47)">
+    <rect x="330" y="32" width="96" height="30" rx="8" class="p-r"/>
+    <text x="378" y="54" text-anchor="middle" class="h pill">problem</text>
+  </g>
+  <text x="440" y="54" class="h join">with</text>
+  <g transform="rotate(-0.6 553 47)">
+    <rect x="500" y="32" width="106" height="30" rx="8" class="p-r"/>
+    <text x="553" y="54" text-anchor="middle" class="h pill">approach</text>
+  </g>
+
+  <!-- Line 2: they'll choose it over [competition] because [differentiation] -->
+  <text x="18" y="114" class="h join">they'll choose it over</text>
+  <g transform="rotate(0.6 340 107)">
+    <rect x="280" y="92" width="120" height="30" rx="8" class="p-p"/>
+    <text x="340" y="114" text-anchor="middle" class="h pill">competition</text>
+  </g>
+  <text x="414" y="114" class="h join">because</text>
+  <g transform="rotate(-0.7 584 107)">
+    <rect x="516" y="92" width="136" height="30" rx="8" class="p-p"/>
+    <text x="584" y="114" text-anchor="middle" class="h pill">differentiation</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="340" y="166" text-anchor="middle" class="h cap">Five blanks. One sentence. No vagueness allowed.</text>
 </svg>

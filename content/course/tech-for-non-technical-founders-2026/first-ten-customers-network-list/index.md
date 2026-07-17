@@ -28,7 +28,7 @@ related_posts: false
 
 > **Module 5 · Lesson 5.3 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** must-have-user persona + 1 named segment from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
+> **Input:** must-have-user persona + 1 named segment from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
 >
 > **Output:** 50 names sorted into 4 outreach buckets
 >
@@ -38,7 +38,7 @@ related_posts: false
 
 ---
 
-Sixty percent of the fastest-growing B2B startups got their first 10 customers from people who already knew the founder. Founders skip this step because it feels like begging. It's not. It's the highest-probability first sale you'll ever make.
+Nearly every one of today's fastest-growing B2B startups got their first 10 customers from people who already knew the founder. Founders skip this step because it feels like begging. It's not. It's the highest-probability first sale you'll ever make.
 
 After this lesson you will be able to: **sort 50 names into 4 outreach buckets so you know exactly who to message first.**
 
@@ -59,27 +59,30 @@ Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship stre
 
 ![The 4-bucket grid - how 50 names get sorted before the first message goes out](network-buckets.svg)
 
-> **First, count your network.** Filter your 1st-degree LinkedIn connections by your must-have segment from Ch 5.1 (title + company size + industry).
+> **First, count your network.** Filter your 1st-degree LinkedIn connections by your must-have segment from Lesson 5.1 (title + company size + industry).
 >
 > | Count | What this means | Your path |
 > |---|---|---|
 > | **30+** | Standard warm motion works. | Continue below. |
-> | **15-29** | Reduced warm motion. Build smaller buckets: 2 champions + 5 hot + 8 warm + 5 cold. You'll need cold outbound ([Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)) in parallel. |
-> | **Under 15** | Your network doesn't contain the ICP segment. | Skip to [Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound. |
+> | **15-29** | Reduced warm motion. Build smaller buckets: 2 champions + 5 hot + 8 warm + 5 cold. You'll need cold outbound ([Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)) in parallel. |
+> | **Under 15** | Your network doesn't contain the ICP segment (ICP = Ideal Customer Profile - the specific kind of person your product is for). | Skip to [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound. |
 
 ---
 
 > **Build:**
 >
+> 0. **Your champions and hot buckets are already built - drop them in by name first:** your [2.4 interviewees](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (ten people who spent 30 minutes describing the pain), your [1.4 smoke-test waitlist signups](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (they raised a hand for this exact product), and your [2.3 30-name list](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) (each with the exact line they wrote about the problem). Then use the steps below to top up to 50.
 > 1. Open LinkedIn. Filter 1st-degree connections by your must-have segment criteria.
 > 2. Export the filtered list with [LinkedIn's data export](https://www.linkedin.com/help/linkedin/answer/a566336) (free, takes 24 hours; you can use yesterday's).
 > 3. Cross-reference your phone contacts, email inbox, and last three jobs' Slack workspaces if you still have access.
 > 4. Sort every name into one of the 4 buckets. Champions first. If you can't name 5 people who complained to you about this problem in the last 12 months, re-read your verbatim Q2-Q3 quotes from [5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/).
-> 5. **✅ Success check:** 50 names sorted across all 4 buckets, champions row fully filled.
+> 5. **Success check:** 50 names sorted across all 4 buckets, champions row fully filled.
 
 ---
 
-**If this fails: your network is under 15 names after filtering.** **Why:** your must-have segment isn't represented in your professional network. **Fix:** skip to [Ch 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Use community fallbacks (Indie Hackers, sector Slack, Reddit) as warm-cold hybrid messages.
+**If this fails: your network is under 15 names after filtering.**
+- **Why:** your must-have segment isn't represented in your professional network.
+- **Fix:** skip to [Lesson 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Use community fallbacks (Indie Hackers, sector Slack, Reddit) as warm-cold hybrid messages.
 
 ---
 

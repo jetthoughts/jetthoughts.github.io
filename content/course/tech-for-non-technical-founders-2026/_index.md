@@ -32,7 +32,7 @@ hero_chips:
   - "5 modules"
   - "Evenings & weekends pace"
 hero_primary_url: "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/"
-hero_primary_text: "Start Chapter 1.1 →"
+hero_primary_text: "Start Lesson 1.1 →"
 hero_secondary_url: "/course/tech-for-non-technical-founders-2026/quickstart/"
 hero_secondary_text: "3-minute Quickstart"
 ---
@@ -41,7 +41,7 @@ Five modules take you from that idea to a signed paid pilot: test demand with st
 
 The first checkpoint comes fast. Two to three weeks in, at an evenings-and-weekends pace, you'll know whether the idea is worth building at all - a go/iterate/kill verdict on your **Founding Hypothesis** (the one-sentence version of your idea: who the customer is, what problem you solve, why they'd pick you) from real demand data instead of polite nods from friends.
 
-New here? Read [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) once - the 10-minute route map - then start [Chapter 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Short on time tonight? The [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) (3 min) is the compressed version, and the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) answers the most common blockers.
+New here? Read [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) once - the 10-minute route map - then start [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Short on time tonight? The [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) (3 min) is the compressed version, and the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) answers the most common blockers.
 
 *Returning? [Skip to the syllabus ↓](#module-map)*
 
@@ -94,13 +94,13 @@ Read the modules in order. Each module's output is the next module's input, and 
   <em>Start here if you've never talked to 10+ potential customers about the problem you want to solve.</em></p>
   <ol class="module-card__chapters">
     <li><span class="module-card__num">2.1</span> <a href="/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/">The Mom Test: Ask About the Past, Not the Future</a></li>
-    <li><span class="module-card__num">2.2</span> <a href="/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/">Sharpen Your Question List with AI Personas</a> <span class="module-card__optional">optional</span><br><em>Skip if you've interviewed before. The Mom Test in 2.1 is the core; this chapter rehearses your questions with AI personas first.</em></li>
+    <li><span class="module-card__num">2.2</span> <a href="/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/">Sharpen Your Question List with AI Personas</a> <span class="module-card__optional">optional</span><br><em>Skip if you've interviewed before. The Mom Test in 2.1 is the core; this lesson rehearses your questions with AI personas first.</em></li>
     <li><span class="module-card__num">2.3</span> <a href="/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/">Find 10 People: Where to Look</a></li>
     <li><span class="module-card__num">2.4</span> <a href="/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/">Find 10 People: What to Say</a></li>
     <li><span class="module-card__num">2.5</span> <a href="/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/">Mom Test Synthesis: Build, Pivot, or Kill</a></li>
     <li><span class="module-card__num">2.6</span> <a href="/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/">Build a Clickable Prototype</a></li>
   </ol>
-  <p class="module-card__extras">Templates in this module: <a href="/course/tech-for-non-technical-founders-2026/mom-test-interview-script/">Interview Script</a> · <a href="/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/">Validated Problem Statement</a> · <a href="/course/tech-for-non-technical-founders-2026/outreach-sequence-template/">Outreach Sequence</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/">Mia interviews ten parents - a full Module 2 walkthrough</a></p>
+  <p class="module-card__extras">Templates in this module: <a href="/course/tech-for-non-technical-founders-2026/mom-test-interview-script/">Interview Script</a> · <a href="/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/">Validated Problem Statement</a> · <a href="/course/tech-for-non-technical-founders-2026/outreach-sequence-template/">Outreach Sequence</a> · Optional reference: <a href="/course/tech-for-non-technical-founders-2026/reference/mom-test-full/">Mom Test deep dive</a> · <a href="/course/tech-for-non-technical-founders-2026/reference/persona-rehearsal-full/">Persona rehearsal</a> · <a href="/course/tech-for-non-technical-founders-2026/reference/find-10-people-full/">Find 10 People deep dive</a> · <a href="/course/tech-for-non-technical-founders-2026/reference/prototype-build-full/">Prototype build deep dive</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/">Mia interviews ten parents - a full Module 2 walkthrough</a></p>
   <p class="module-card__leave"><strong>You leave with:</strong> 10 scored interview transcripts, a written build/pivot/kill decision, and a prototype 5 real customers have clicked through - evidence you can quote back to yourself when doubt creeps in.</p>
 </div>
 
@@ -113,7 +113,7 @@ Read the modules in order. Each module's output is the next module's input, and 
     <li><span class="module-card__num">3.1</span> <a href="/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/">The One-Page Product Brief (Vibe PRD)</a></li>
     <li><span class="module-card__num">3.2</span> <a href="/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/">Quality-check Your Brief: Features to Outcomes</a></li>
   </ol>
-  <p class="module-card__extras">Template in this module: <a href="/course/tech-for-non-technical-founders-2026/vibe-prd-template/">Vibe PRD</a> · Course glossary (reference, not in the linear path): <a href="/course/tech-for-non-technical-founders-2026/five-tech-words-stop-nodding-at/">Five Tech Words to Stop Nodding At</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-3-walkthrough-mia/">Mia writes the one-page brief</a></p>
+  <p class="module-card__extras">Template in this module: <a href="/course/tech-for-non-technical-founders-2026/vibe-prd-template/">Vibe PRD</a> · Optional reference: <a href="/course/tech-for-non-technical-founders-2026/reference/product-brief-full/">Product Brief deep dive</a> · <a href="/course/tech-for-non-technical-founders-2026/reference/outcomes-not-features-full/">Outcome rewrite deep dive</a> · Course glossary (reference, not in the linear path): <a href="/course/tech-for-non-technical-founders-2026/five-tech-words-stop-nodding-at/">Five Tech Words to Stop Nodding At</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-3-walkthrough-mia/">Mia writes the one-page brief</a></p>
   <p class="module-card__leave"><strong>You leave with:</strong> a one-page Product Brief where every feature traces back to something a customer actually said.</p>
 </div>
 
@@ -129,7 +129,7 @@ Read the modules in order. Each module's output is the next module's input, and 
     <li><span class="module-card__num">4.4</span> <a href="/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/">The Self-Serve MVP Stack: Build Phases</a></li>
     <li><span class="module-card__num">4.5</span> <a href="/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/">Vibe Coding Done Right: 5 Ceiling Signals</a> <span class="module-card__optional">optional</span><br><em>Skip on first pass. Come back when your no-code build hits a wall - a feature you can't add, a query you can't tune, an auth flow Lovable can't handle.</em></li>
   </ol>
-  <p class="module-card__extras">Templates in this module: <a href="/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/">Build Path Decision Worksheet</a> · <a href="/course/tech-for-non-technical-founders-2026/ownership-checklist/">Ownership Checklist</a> · <a href="/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/">Self-Serve Stack Walkthrough</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/">Mia ships TutorMatch</a></p>
+  <p class="module-card__extras">Templates in this module: <a href="/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/">Build Path Decision Worksheet</a> · <a href="/course/tech-for-non-technical-founders-2026/ownership-checklist/">Ownership Checklist</a> · <a href="/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/">Self-Serve Stack Walkthrough</a> · Optional reference: <a href="/course/tech-for-non-technical-founders-2026/reference/hire-decision-full/">Build-vs-hire deep dive</a> · <a href="/course/tech-for-non-technical-founders-2026/reference/ownership-full/">Ownership deep dive</a> · <a href="/course/tech-for-non-technical-founders-2026/reference/stack-tools-full/">Stack tools deep dive</a> · <a href="/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/">Build phases deep dive</a> · <a href="/course/tech-for-non-technical-founders-2026/reference/ceiling-signals-full/">Ceiling signals deep dive</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/">Mia ships TutorMatch</a></p>
   <p class="module-card__leave"><strong>You leave with:</strong> a live MVP at a real URL that you built and you own - every account in your name from Day 1.</p>
 </div>
 
@@ -147,7 +147,7 @@ Read the modules in order. Each module's output is the next module's input, and 
     <li><span class="module-card__num">5.6</span> <a href="/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/">Charge Before You Ship: The Paid Pilot Contract</a></li>
     <li><span class="module-card__num">5.7</span> <a href="/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/">Going Outbound Without a Sales Team</a> <span class="module-card__optional">optional</span><br><em>Skip if your personal network in 5.3-5.5 produced your first 10 customers. This is the systematic path for when warm intros run out.</em></li>
   </ol>
-  <p class="module-card__extras">Template in this module: <a href="/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/">First Paying Customer Operating Kit</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/">Mia gets paid</a></p>
+  <p class="module-card__extras">Template in this module: <a href="/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/">First Paying Customer Operating Kit</a> · Optional reference: <a href="/course/tech-for-non-technical-founders-2026/reference/must-have-survey-full/">Sean Ellis survey deep dive</a> · <a href="/course/tech-for-non-technical-founders-2026/reference/channel-selection-full/">Channel selection</a> · <a href="/course/tech-for-non-technical-founders-2026/reference/paid-pilot-full/">Paid pilot playbook</a> · <a href="/course/tech-for-non-technical-founders-2026/reference/outbound-full/">Cold outbound deep dive</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/">Mia gets paid</a></p>
   <p class="module-card__leave"><strong>You leave with:</strong> a signed paid pilot and your first dollar from a customer, not a favor.</p>
 </div>
 
@@ -156,7 +156,7 @@ Read the modules in order. Each module's output is the next module's input, and 
 To save your time, here is what we intentionally exclude. None of these are needed for the promised result (idea → first paying customer):
 
 - **How to code.** The course assumes zero coding ability. [Lovable](https://lovable.dev) + [Supabase](https://supabase.com) + [Stripe](https://stripe.com) handle the technical side.
-- **How to hire a CTO or build an engineering team.** Hiring is covered as a build-path decision (Chapter 4.1), not as an org-design course.
+- **How to hire a CTO or build an engineering team.** Hiring is covered as a build-path decision (Lesson 4.1), not as an org-design course.
 - **How to raise venture capital.** The course produces the artifacts investors want to see. It does not teach pitch decks or fundraising mechanics.
 - **How to manage a 20-person engineering team.** Friday Demo Rule + Weekly Dev Report (in Going Further) cover early-stage management; full org management is out of scope.
 - **Mobile-only or marketplace-only specifics.** Examples use SaaS + B2B + B2C patterns. Mobile apps and two-sided marketplaces have their own playbooks.
@@ -171,22 +171,28 @@ These conditional chapters kick in once you've passed the Module 5 gate. Read ea
 
 **Diagnose what's slowing growth**
 
-- Customers leaving faster than you can replace them → [Churn Triage Before Acquisition](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/)
-- A key metric flat for 2+ months → [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/)
-- Hit the self-serve ceiling, time to hire your first engineer → [Hire Track Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)
+| Trigger | Continuation chapter |
+|---|---|
+| Customers leaving faster than you can replace them | [Churn Triage Before Acquisition](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/) |
+| A key metric flat for 2+ months | [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/) |
+| Hit the self-serve ceiling, time to hire your first engineer | [Hire Track Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) |
 
 **Working with a dev agency in the AI era**
 
-- Before the discovery call → ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/)
-- Surprise AI tokens on the invoice → [AI Token Bill](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/)
-- Worried about AI supply-chain risk in the code they ship → [Slopsquatting](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/)
+| Trigger | Continuation chapter |
+|---|---|
+| Before the discovery call | ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/) |
+| Surprise AI tokens on the invoice | [AI Token Bill](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/) |
+| Worried about AI supply-chain risk in the code they ship | [Slopsquatting](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/) |
 
 **Manage a hired team without writing code**
 
-- Need a structure for who reports to whom → [Engineering Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/)
-- Want a weekly heartbeat to confirm something shipped → [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/)
-- Want a 3-question standup that catches problems early → [Three Standup Questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/)
-- Need a plain-English weekly report from the team → [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/)
+| Trigger | Continuation chapter |
+|---|---|
+| Need a structure for who reports to whom | [Engineering Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) |
+| Want a weekly heartbeat to confirm something shipped | [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) |
+| Want a 3-question standup that catches problems early | [Three Standup Questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/) |
+| Need a plain-English weekly report from the team | [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/) |
 
 ## Already started building?
 

@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to [Chapter 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Where this fits: run after [Ch 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routes you to a path that involves anyone else touching your infrastructure.
+Template companion to [Lesson 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Where this fits: run after [Lesson 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routes you to a path that involves anyone else touching your infrastructure.
 
 > **Routing by M4.1 decision (read this first):**
 >
@@ -35,13 +35,11 @@ related_posts: false
 
 *Prefer paper? <a href="ownership-checklist.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
 
-# The GitHub / AWS / Database Ownership Checklist
-
 A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or someone else does. For Path 2 self-serve founders, this is a 5-minute confirmation; for Path 3 and Path 4 founders, the full 45-minute version.
 
 By the end of one Friday (or the 5 minutes if you're self-serve) you will know whether you can fire your dev team on Monday and still ship a hotfix on Tuesday. You will not have read a line of code. You will have logged into 12 accounts and answered one question for each: is the email on this account mine, or is it theirs?
 
-> **📋 Copy-pasteable audit spreadsheet - copy these 12 rows into Notion or Google Sheets before you start:**
+> **Copy-pasteable audit spreadsheet - copy these 12 rows into Notion or Google Sheets before you start:**
 >
 > | # | Check | Pass? | Actual email/name on file | Recovery needed? |
 > |---|-------|-------|---------------------------|------------------|
@@ -62,7 +60,7 @@ By the end of one Friday (or the 5 minutes if you're self-serve) you will know w
 
 ## Why this exists
 
-A founder we saw last year handed a contractor her company credit card on Day 1. The contractor opened the accounts fast and shipped the MVP inside six weeks. Nobody moved the accounts to her email afterwards. A year later the contractor left the industry, and she discovered the GitHub org, the AWS root, and the domain were all registered to an inbox nobody checked. Recovery is slow and expensive when the accounts are not in your name. The audit below catches all of this on Day 1 in 45 minutes.
+The account that locks you out is the one set up under someone else's email on Day 1 and never moved - and you find it a year later, once the person who opened it is gone. That is how it played out for a founder we saw last year: she handed a contractor her company credit card on Day 1, and he opened the accounts fast and shipped the MVP inside six weeks. Nobody moved the accounts to her email afterwards. A year later the contractor left the industry, and she discovered the GitHub org, the AWS root, and the domain were all registered to an inbox nobody checked. Recovery is slow and expensive when the accounts are not in your name. The audit below catches all of this on Day 1 in 45 minutes.
 
 Most contractors are not trying to lock you out. They set the accounts up under their own email on Day 1 because it was the fastest way to start, and nobody ever moved them. The damage is the same either way.
 
@@ -129,7 +127,7 @@ The root account owns everything underneath it. If the contractor controls the r
 
 **#7 - Production database password rotation**
 
-The fail looks like one sentence: *"Marcus knows it. I would have to ask him."* The pass looks like one action: you open AWS Secrets Manager right now, read the password, and remember the last time you rotated it (e.g. March, when the previous DBA left).
+The fail looks like one sentence: *"Marcos knows it. I would have to ask him."* The pass looks like one action: you open AWS Secrets Manager right now, read the password, and remember the last time you rotated it (e.g. March, when the previous DBA left).
 
 If only one person can rotate the prod DB password, you do not have a database. You have a single point of failure.
 
@@ -137,7 +135,7 @@ If only one person can rotate the prod DB password, you do not have a database. 
 > Bad: Renewals come to a contractor's email. You have never logged into the registrar.
 > Good: Logged into Namecheap with your account. WHOIS shows your name. Auto-renew is on, charged to your card.
 
-A domain transfer takes a minimum of **14 days** under ICANN rules and requires the losing registrar to release the auth code. If the contractor will not release it, your customers cannot reach your site for two weeks.
+Plan a 14-day buffer for a domain transfer: ICANN's release window is five days, and many registrars add a 60-day lock after registration or a recent transfer. If the contractor will not release the auth code, your customers cannot reach your site for two weeks.
 
 ## What to do if the audit fails
 

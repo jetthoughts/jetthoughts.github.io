@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 620" font-family="Caveat, 'Patrick Hand', cursive" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 620" font-family="Caveat, 'Patrick Hand', 'Comic Sans MS', cursive" role="img" aria-labelledby="title desc">
   <title id="title">The five sections of the weekly dev report on one page</title>
   <desc id="desc">Five labelled boxes stacked vertically representing the one-page weekly report. Box 1 (green) Shipped: staging URL plus test login. Box 2 (yellow) In review: PR number plus reviewer name. Box 3 (red) Blocked: named person plus deadline. Box 4 (blue) Cut: what got descoped and why. Box 5 (purple) Concern: one sentence on next week's risk.</desc>
 
@@ -23,7 +23,7 @@
     <rect width="540" height="92" fill="#fffaf0" stroke="#b8860b" stroke-width="2.5" rx="6"/>
     <text x="20" y="32" font-size="22" fill="#b8860b" font-weight="bold">2. In review</text>
     <text x="20" y="58" font-size="16" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">PR number + author + named reviewer + what is holding it up</text>
-    <text x="20" y="80" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-style="italic">"PR #847 - Marcos opened Tue, Priya reviewing, two changes requested"</text>
+    <text x="20" y="80" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-style="italic">"PR #843 - Marcos opened Tue, Priya reviewing, two changes requested"</text>
     <text x="510" y="32" text-anchor="end" font-size="14" fill="#b8860b">PIPELINE</text>
   </g>
 

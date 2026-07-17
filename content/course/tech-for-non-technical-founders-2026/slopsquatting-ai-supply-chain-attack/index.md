@@ -25,7 +25,7 @@ metatags:
   image: cover.png
   og_title: "Slopsquatting: The 2025 Supply-Chain Attack Vibe Coding Created"
   og_description: "AI assistants suggested 200+ package names that did not exist. Attackers registered them. Your $34K MVP pulled malware. The CI gate that stops it cold."
-cover_image_alt: "JetThoughts cover with a hand-drawn package box labeled 'gem active_record_extras_helper' with a skull sticker, next to a real-looking package labeled 'gem active_record_extra'."
+cover_image_alt: "JetThoughts cover for Slopsquatting: Supply-Chain Attack on Vibe Coding - a red npm-install card with a fake package suggested by AI, and chips reading 200+ hallucinated packages, $34K MVP cost, CI safelist gate."
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/"
 related_posts: false
 course_nav: false
@@ -40,13 +40,15 @@ course_nav: false
 
 **Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
 
-In April 2025, Lasso Security published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers registered those names and waited. By the time the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) named the technique "slopsquatting" in April 2025, security teams had already logged the first installs of the proof-of-concept packages on real production systems. You paid $34K for an MVP. The most expensive line in the codebase was free. It was the one a model invented and a developer typed into a `Gemfile` without checking that the gem existed.
+In March 2025, [Lasso Security published findings](https://www.lasso.security/blog/ai-package-hallucinations) that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers registered those names and waited. By the time the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) named the technique "slopsquatting" in April 2025, security teams had already logged the first installs of the proof-of-concept packages on real production systems. You paid $34K for an MVP. The most expensive line in the codebase was free. It was the one a model invented and a developer typed into a `Gemfile` without checking that the gem existed.
 
 ![A hand-drawn diagram of the slopsquatting attack chain in five steps: AI hallucinates a package name, attacker watches public prompt logs, attacker registers the name on Rubygems / PyPI / npm with a malicious payload, developer installs without review, damage runs in production. Annotated with the Lasso Security 11-day reproduction window.](attack-chain.svg)
 
 ## What slopsquatting is
 
-LLMs invent package names that sound plausible but do not exist. The original [Lasso Security research from March 2025](https://www.lasso.security/blog/ai-package-hallucinations) tested GPT-4, Claude, and the open-source Code Llama against thousands of common developer prompts. About 5.2% of GPT-4's package suggestions and 21.7% of Code Llama's were hallucinated. [Snyk's slopsquatting write-up](https://snyk.io/articles/slopsquatting-mitigation-strategies/) cites follow-up research putting the overall rate at roughly one in five AI-suggested packages across models. Attackers then register the most-suggested hallucinated names as squatted packages, sometimes with a malicious payload (data exfiltration, credential theft, persistence backdoor), sometimes empty until a real victim shows up. Rubygems, PyPI, npm, Composer, and crates.io all have the same exposure. The attack does not need a 0day - just a developer who trusts a model without checking.
+LLMs invent package names that sound plausible but do not exist. The original [Lasso Security research from March 2025](https://www.lasso.security/blog/ai-package-hallucinations) tested GPT-4, Claude, and the open-source Code Llama against thousands of common developer prompts. About 5.2% of GPT-4's package suggestions and 21.7% of Code Llama's were hallucinated. [Snyk's slopsquatting write-up](https://snyk.io/articles/slopsquatting-mitigation-strategies/) cites follow-up research putting the overall rate at roughly one in five AI-suggested packages across models. Attackers then register the most-suggested hallucinated names as squatted packages, sometimes with a malicious payload (data exfiltration, credential theft, persistence backdoor), sometimes empty until a real victim shows up. Rubygems, PyPI, npm, Composer, and crates.io all have the same exposure. The attack does not need a 0day (a secret, unpatched vulnerability) - just a developer who trusts a model without checking.
+
+![A hand-drawn comparison table across three stacks - Rails/Ruby, Django/Python, and Laravel/npm. Each row shows the plausible-sounding package name an AI model hallucinated (active_support_extras_helper, requestz, react-toastify-fork) next to the real package it was confused with (active_record_extra, requests, react-toastify). All three hallucinated names were registered by Lasso researchers as proof-of-concept in April 2025.](hallucinated-vs-real.svg)
 
 ## The 20-line CI gate (the simplest defense)
 
@@ -84,7 +86,7 @@ That is the entire defense. The PR cannot merge until a human looks at the new g
 
 ```mermaid
 
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#1a1a1a', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#1a1a1a', 'primaryTextColor':'#1a1a1a'}}}%%
 
 flowchart TD
 
@@ -124,7 +126,7 @@ That is it. No Snyk subscription, no Socket.dev license, no signing key infrastr
 
 ## The contract clause
 
-One paragraph. Send it as an SOW addendum to your existing dev shop, or paste it into the next agency MSA before signing. Do not let an agency talk you out of it.
+One paragraph. Send it as an SOW (statement of work) addendum to your existing dev shop, or paste it into the next agency MSA (master service agreement) before signing. Do not let an agency talk you out of it.
 
 > **Supply-chain hygiene.** Contractor will not introduce any third-party dependency (Ruby gem, PyPI package, npm module, Composer package, system library, or container base image) without prior written approval from the Founder. Approval requires (a) confirmation that the package exists on its canonical registry under the exact name proposed; (b) a published maintainer history of at least 12 months or a signed deviation memo; (c) a download / install count appropriate for the package's stated purpose; (d) a CI dependency gate that fails the build on any unapproved new dependency. Contractor is liable for any incident traceable to a hallucinated, typosquatted, or slopsquatted dependency that was not gated. AI tooling output is contractor's work product for the purpose of this clause; "the model suggested it" is not a defense.
 

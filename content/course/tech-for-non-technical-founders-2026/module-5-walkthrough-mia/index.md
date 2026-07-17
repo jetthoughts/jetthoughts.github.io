@@ -11,7 +11,7 @@ metatags:
   og_title: "Module 5 Walkthrough: Mia Gets Paid"
 course_nav_prev:
   slug: paid-pilot-charge-before-ship
-  module: "Chapter 5.6"
+  module: "Lesson 5.6"
   title: "5.6 · Charge Before You Ship: The Paid Pilot Contract"
 course_nav_next:
   url: "/course/tech-for-non-technical-founders-2026/#going-further-after-first-paying-customer"

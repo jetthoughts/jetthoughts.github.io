@@ -54,6 +54,32 @@ EVERY page, which reads as fake overflow. Mobile checks need the
 chrome-devtools MCP resize (or DevTools device emulation); use raw
 headless only for desktop-width captures.
 
+## Design-quality pass (separate from defect QA - 2026-07-12 lesson)
+
+Defect-checklist reviews systematically MISS taste problems: reviewer
+rubrics bias toward provable failures (overflow, broken links, banned
+strings) and "intentional style" allowances teach reviewers to wave
+through badly-executed instances of the style. The owner repeatedly
+caught dated/ugly visuals that geometry-QA rounds had passed. When the
+goal is "premium", run a dedicated critic pass with these properties:
+
+1. **Score, don't checklist**: 1-5 design-quality scale per asset with a
+   FORCED worst-first ranking (must name the bottom N with specific
+   visual sins). Critics allowed to say "this is ugly" without a rule ID.
+2. **External anchor**: judge against market-premium references, not
+   against the sibling corpus - when 40 assets share a style, the style
+   becomes the baseline and only outliers get flagged.
+3. **Judge in page context too**: an asset fine in isolation fails if it
+   duplicates the adjacent table/list, or repeats what the H1 says.
+4. **Read the TEXT inside artwork against policy**: prices, counts,
+   chapter numbers, banned phrases inside SVG/mermaid escape the
+   banned-string ratchet (it never scans them) - check manually.
+5. **"Intentional style" never exempts execution**: the question is not
+   "is sketch style allowed?" but "is this a GOOD sketch?".
+6. Mermaid renders client-side: text validators never see it. Theme-level
+   problems (edge weight, label chips, font-to-node ratio) repeat across
+   every diagram - diagnose once at the theme, not per diagram.
+
 ## Per-view checklist
 
 | Class | What to look for | Caught before |

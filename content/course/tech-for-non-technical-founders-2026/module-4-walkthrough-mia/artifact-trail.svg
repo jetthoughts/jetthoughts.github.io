@@ -2,13 +2,13 @@
   <title id="m4-trail-title">Mia's Module 4 artifact trail: a self-serve build-path decision to locked ownership to a live MVP to a security fix to a scheduled ceiling check</title>
   <defs>
     <style>
-      .h      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 25px; fill: #1a1a1a; font-weight: 700; }
-      .foot   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #666; font-style: italic; }
-      .chip   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #ffffff; font-weight: 700; }
-      .title  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
-      .big    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 23px; fill: #cc342d; font-weight: 700; }
-      .pbig   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 25px; fill: #a855f7; font-weight: 700; }
-      .note   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 13px; fill: #555; }
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #1a1a1a; font-weight: 700; }
+      .foot   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #666; font-style: italic; }
+      .chip   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #ffffff; font-weight: 700; }
+      .title  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
+      .big    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 23px; fill: #cc342d; font-weight: 700; }
+      .pbig   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #a855f7; font-weight: 700; }
+      .note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #555; }
       .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2; }
       .pay    { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
       .chipbg { fill: #cc342d; }

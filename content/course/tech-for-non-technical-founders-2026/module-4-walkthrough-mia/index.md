@@ -11,11 +11,11 @@ metatags:
   og_title: "Module 4 Walkthrough: Mia Ships TutorMatch"
 course_nav_prev:
   slug: vibe-coding-ceiling-signals
-  module: "Chapter 4.5"
+  module: "Lesson 4.5"
   title: "4.5 · Vibe Coding Done Right: 5 Ceiling Signals"
 course_nav_next:
   slug: must-have-segment-pmf-test
-  module: "Chapter 5.1"
+  module: "Lesson 5.1"
   title: "5.1 · Your First Customer Is Not a Marketing Problem"
 ---
 
@@ -47,7 +47,7 @@ The ownership audit was twenty minutes of green checkmarks - solo self-serve fou
 
 Setup first: Lovable, Supabase, Stripe, all on her accounts, pre-flight rules read twice. Then she pasted Section 3 of her brief - the outcome-shaped one, with the hand-curated shortlist line - into Lovable, exactly as written in Module 3.
 
-The [four phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) took her nine build evenings spread across ten calendar weeks - the part-time pace Chapter 4.4 tells you to plan for. The UI phase went fastest because the prototype had already settled the layout arguments: search by the kid's need, profiles with reviews, credentials, response time, and the session rate the fifth test parent had gone looking for. Auth was parent accounts with the same magic-link sign-in her brief specified. Stripe was the founding-member checkout she had been running manually since Module 1, now wired into the product. The deploy phase ended with her domain - the one she now owned - pointing at a live TutorMatch.
+The [four phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) took her nine build evenings spread across ten calendar weeks - the part-time pace Lesson 4.4 tells you to plan for. The UI phase went fastest because the prototype had already settled the layout arguments: search by the kid's need, profiles with reviews, credentials, response time, and the session rate the fifth test parent had gone looking for. Auth was parent accounts with the same magic-link sign-in her brief specified. Stripe was the founding-member checkout she had been running manually since Module 1, now wired into the product. The deploy phase ended with her domain - the one she now owned - pointing at a live TutorMatch.
 
 The scare came from the AI audit prompt in the build rules. She pasted her Supabase table definitions and row-level security policy into Claude and asked whether a logged-in parent could read another parent's rows. The answer was yes - the policy she had accepted from a Lovable default checked that a user was signed in, not which user they were. One corrected policy later, the check came back clean. It was the cheapest security review she will ever run.
 

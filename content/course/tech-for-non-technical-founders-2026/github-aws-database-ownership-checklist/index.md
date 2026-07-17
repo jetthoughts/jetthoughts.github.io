@@ -1,7 +1,7 @@
 ---
 title: "4.2 · Who Owns Your GitHub, AWS, and Database?"
 aliases: ["/blog/github-aws-database-ownership-checklist/"]
-description: "Before you hire anyone, lock down who owns the code, cloud, and domain. A 45-minute Friday audit surfaces every credential that should be in your name."
+description: "Before you hire anyone, lock down who owns the code, cloud, and domain. A 45-minute Friday audit surfaces every credential that should be in your name. Lesson 4.2 of the course."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -23,7 +23,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "4.2 · Who Owns Your GitHub, AWS, and Database?"
-  og_description: "Before you hire anyone, lock down who owns the code, cloud, and domain. A 45-minute Friday audit surfaces every credential that should be in your name."
+  og_description: "Before you hire anyone, lock down who owns the code, cloud, and domain. A 45-minute Friday audit surfaces every credential that should be in your name. Lesson 4.2 of the course."
 cover_image_alt: "JetThoughts blog cover showing four labeled boxes - Code, Cloud, Secrets, Domain - with red question marks over three of them and one founder email in green"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/"
 related_posts: false
@@ -31,15 +31,15 @@ related_posts: false
 
 > **Module 4 · Lesson 4.2 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a build-path decision from Chapter 4.1 (self-serve or hire)
+> **Input:** a build-path decision from [Lesson 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) (self-serve or hire)
 >
 > **Output:** a Day-1 audit confirming you own your code, cloud, and domain before the build starts (or a recovery plan if you don't)
 >
-> **Progress:** M4 · 2 of 5 · Results so far: build path chosen (4.1) - this page locks ownership before anything gets built
+> **Progress:** M4 · 2 of 5 · Results so far: build path chosen (4.1) - this lesson locks ownership before anything gets built
 
 > **TL;DR:** Before you hire anyone, run this 12-item audit. It takes 45 minutes. If you skip it, the story below is how it ends: the founder who spent 14 months before discovering the AWS root password was in someone else's Gmail.
 
-> **If you signed up for Lovable + Supabase + Stripe yourself (the default Path 2 from Ch 4.1), here is your 5-minute self-check** - the rest of this chapter applies the day you hire a contractor:
+> **If you signed up for Lovable + Supabase + Stripe yourself (the default Path 2 from Lesson 4.1), here is your 5-minute self-check** - the rest of this lesson applies the day you hire a contractor:
 >
 > 1. **GitHub**: account in your name, your email, your password manager. (If you used Lovable's "sign in with Google," your Google account IS the GitHub owner. Confirm.)
 > 2. **Lovable + Supabase + Stripe**: signed up with your personal email, billed to your card. (Not a co-founder's, not a friend's.)
@@ -47,60 +47,21 @@ related_posts: false
 > 4. **No shared admin passwords**: only you have the master password to each.
 > 5. **2FA on all four** (GitHub, Supabase, Stripe, domain registrar): turned on. 2FA (two-factor authentication) is the 6-digit code your phone shows at login, a second proof on top of your password.
 >
-> Pass all 5? You can skim the rest of the chapter as a future reference. Fail any? Fix that one before continuing - the 12-item audit below is the deeper version.
+> Pass all 5? You can skim the rest of the lesson as a future reference. Fail any? Fix that one before continuing - the 12-item audit below is the deeper version.
 
-This audit applies BEFORE you hand over a credit card to your first contractor. It also works as a post-hire check, but the cheaper time to run it is on Day 1, not month 14, when the story below kicks off.
+---
 
-Here's what happens if you skip it. A founder we saw last year: fourteen months into a build, 1,800 paying clinics, a Stripe account in the founder's name, and the AWS root password sitting in the contractor's personal Gmail. The founder had to send three emails asking the contractor to please change the root account email. He took six days.
+The cheapest day to confirm you own your own infrastructure is Day 1, before you hand a credit card to a contractor. The most expensive day is month 14, when production breaks at 9pm and you cannot push a fix because the database password lives in someone else's inbox. In 2025, one founder learned this the hard way: fourteen months into a build, 1,800 paying clinics, a Stripe account in the founder's name - and the AWS root password sitting in the contractor's personal Gmail. It took three emails and six days to get the root account email changed.
 
-*Ownership*: who controls the GitHub org, the AWS root account, the domain registrar, and the prod database. A Day-1 audit means you can switch contractors Tuesday without losing access to your own codebase Wednesday.
+After this lesson you will be able to: **run a 12-item audit that confirms every credential - code, cloud, secrets, domain - sits under an email and a card you control, and start a recovery plan for any that don't.**
 
-Open the AWS console and click your account name in the top-right corner. Read the email address on the root user. Whose inbox does that land in tonight?
+*Ownership* means you control the GitHub org, the AWS root account, the domain registrar, and the production database. A Day-1 audit is what lets you switch contractors on Tuesday without losing access to your own codebase on Wednesday. Open the AWS console right now and click your account name in the top-right corner. Read the email address on the root user. Whose inbox does that land in tonight?
 
-## The 2026 credential trap looks different
+## The 12 items, in four zones
 
-The contractors who create single points of failure in 2026 are not the same shops that did it in 2020. AI-augmented contractors spin up your entire infrastructure during the Cursor or Claude Code session on Day 1: GitHub org, AWS account, Vercel project, Supabase database, Stripe integration, Sentry, PostHog. They use whatever email was already logged in. Usually their own. The senior dev who set everything up moves to another client in month four. The junior who inherits your project does not know which credentials live where. Six months later, you are paying for accounts that nobody on the current team can administer.
+The audit covers 12 credentials grouped into four zones. Each item has one pass criterion: an email on a domain you control, a card you own, MFA on a phone in your pocket, and a password in a vault you can read. The full audit - with the exact recovery steps when an item fails - lives at the [GitHub / AWS / Database Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/).
 
-There is a second pattern, even more common: the **cloud-default-account problem**. A contractor opens a fresh AWS account using the company credit card you handed them, then sets the root email to a shared `dev@` mailbox that the agency owns. AWS treats whichever email is on the root as the legal account holder. Your incorporation paperwork is irrelevant if the root email belongs to someone else. [AWS's own root user documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html) is blunt about this: the root user has unrestricted access, and recovering control without the root credentials means filing a support ticket with corporate documents and waiting days.
-
-The financial damage is rarely the headline number on the contractor invoice. It is the day production breaks at 9pm and you cannot push a fix because you cannot read the prod database password. The week lost to support recovery while your customers see a maintenance page. None of that hits the budget line that says "engineering."
-
-![Four labeled zones a non-technical founder must own: Code (GitHub org and repos), Cloud (AWS root and billing), Secrets (database credentials and API keys), and Domain (registrar and DNS). Each zone shows the failure mode if a contractor email is on it instead of the founder.](ownership-zones.svg)
-
-## What good looks like vs what bad looks like
-
-Every item rhymes the same way when it passes: an email on a domain you control, billing on a card you own, MFA (the same two-factor login code) on a phone in your pocket, and a password in a vault you can read. Failure rhymes too: somebody else's email, somebody else's card, and "let me ask Marcus" as the answer to "who can rotate this?"
-
-Three pairs that come up most often in ownership audits.
-
-**Item #4 - AWS root account email**
-
-> Bad: Root email is `aws@bigdevshop.com`. The bill goes to their AmEx ending 4421. You have an IAM user (a limited-permission login, not the all-powerful root account) but have never logged in as root.
-> Good: Root email is `aws@mycompany.com`. The password is in your 1Password. MFA is on your phone with backup codes in your office safe. Bill goes to your company card.
-
-If the contractor controls the root email, AWS support will treat them as the account holder, not you. The incorporation paperwork in your filing cabinet does not matter to AWS until support has worked through their recovery process - which takes 3-5 business days after you have proven who you are.
-
-![Side-by-side panel showing the AWS root account fields - account email, billing card, your access level, recovery time if the agency disappears - in the bad scenario where everything points at the agency, and the good scenario where everything points at the founder. The Bad column shows aws@bigdevshop.com, agency AmEx, IAM-only access, and a 3-5 day support recovery. The Good column shows aws@mycompany.com, founder AmEx, root password in 1Password with MFA, and same-day recovery by revoking the contractor.](bad-vs-good-email.svg)
-
-**Item #7 - Production database password**
-
-> Bad: "Marcus has it. Slack him and he can DM it to you."
-> Good: "I opened AWS Secrets Manager just now and read it myself. I rotated it once in March when we offboarded the previous DBA (database administrator - the person who manages your production database)."
-
-The Marcus answer means you have a single point of failure. It does not matter whether Marcus is honest, kind, or available - one person holding the prod DB password is one person away from a production outage you cannot fix. Firing Marcus does not fix it. Putting the credential in a store you administer, with Marcus pulling read access from there, does.
-
-**Item #10 - Domain registrar**
-
-> Bad: Domain renewal notices arrive at `dev@theiragency.com`. You have never logged into Namecheap or GoDaddy in your life.
-> Good: Logged into the registrar with your account. WHOIS shows your name. Auto-renew is on, charged to your card, and you have your phone scanned for MFA.
-
-A domain transfer is the slowest recovery on the list. [ICANN's Transfer Policy](https://www.icann.org/en/contracted-parties/accredited-registrars/resources/domain-name-transfers/policy) gives your current registrar up to five days to hand over the transfer auth code, allows a further five-day window for the losing registrar to release the transfer once you request it, and many registrars add a 60-day lock after registration or a recent transfer during which transfers cannot start at all. If someone else holds your domain and refuses to cooperate, your customers are looking at a static placeholder for two weeks while you escalate to ICANN's transfer dispute resolution.
-
-## The 12 items, in four zones (fill-in-the-blank reference)
-
-Those three pairs anchor the pattern; the table below is the fill-in-the-blank version - 12 items, the exact pass criterion for each, the recovery steps when one fails. The full audit lives at the [GitHub / AWS / Database Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/).
-
-> **Acronyms in the table below:** IAM = Identity and Access Management (AWS's user-permissions system, separate from the root account). MFA = Multi-Factor Authentication (the 6-digit code your phone shows when you log in - a second proof beyond your password). WHOIS = the public registry that shows who legally owns a domain. ICANN = the global body that enforces domain-transfer rules (the source of the 5-day transfer-approval window and the 60-day post-registration lock). DNS = Domain Name System (the address book that points your domain at your servers; the "A record" is the one line that says which server answers).
+> **Acronyms in the table below:** IAM = Identity and Access Management (AWS's user-permissions system, separate from the root account). MFA = Multi-Factor Authentication (the 6-digit code your phone shows when you log in - a second proof beyond your password). WHOIS = the public registry that shows who legally owns a domain. ICANN = the global body that enforces domain-transfer rules. DNS = Domain Name System (the address book that points your domain at your servers; the "A record" is the one line that says which server answers).
 
 | Zone | Item | Pass Criterion |
 |---|---|---|
@@ -117,91 +78,43 @@ Those three pairs anchor the pattern; the table below is the fill-in-the-blank v
 | | DNS provider | Logged in under your account with MFA, ready to add an A record now |
 | | Third-party API keys | (Stripe, SendGrid, Twilio, OpenAI, Plaid) on your account, your card |
 
-Two of those twelve are existential. AWS root email controls whether a contractor can lock you out in ten minutes. Domain registrar turns into a 14-day practical buffer (approval itself takes about five days; the 60-day post-registration lock is the ICANN rule) if someone else will not release the auth code. The other ten matter; these two end the company if they go wrong.
+Two of the twelve are existential. **AWS root email** controls whether a contractor can lock you out in ten minutes. **Domain registrar** turns into a 14-day practical buffer (transfer approval itself takes about five days; the 60-day post-registration lock is the ICANN rule) if someone else will not release the auth code. The other ten matter; these two end the company if they go wrong.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#f5f5f5', 'primaryBorderColor':'#666', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-    Start(["Friday afternoon. Alone.<br/>Credit card + Notion doc."])
-    Start --> Code["Code: Are you<br/>GitHub org Owner?"]
-    Code -->|Yes| Cloud["Cloud: Is the AWS<br/>root email yours?"]
-    Code -->|No| FixCode[Slack the lead engineer.<br/>Self-serve org transfer]
+![The Friday ownership audit: four numbered checks in a row - Code (are you GitHub org Owner? pass: your email, not the agency's), Cloud (is the AWS root email yours with MFA? pass: root on your domain, MFA on), Secrets (can you read the prod DB password solo? pass: from your vault, no asking), Domain (does WHOIS show you? pass: your name and your renewal email). Any failure drops into one shared amber fix lane naming the fix - Slack the lead engineer for org transfer, self-serve email change or 3-5 day AWS recovery, Secrets Manager or 1Password vault this sprint, registrar transfer with a 14-day buffer plus ICANN escalation. All four fixes converge on one card: recovery plan started this Friday. That leads to one question - did the contractor cooperate, 7 days for code or 14 days for cloud? Yes routes to a green card: audit clean, quarterly recurring block, email investor or board. No routes to a red card: retain a lawyer, $2K-$5K beats a stalled checkout.](ownership-audit-flow.svg)
 
-    Cloud -->|Yes, with MFA| Sec["Secrets: can you read the prod<br/>DB password without asking?"]
-    Cloud -->|No| FixCloud[Self-serve email change<br/>or 3-5 day AWS support<br/>recovery with corp docs]
+Most audit failures are sloppy Day-1 setup, not malice - a contractor moving fast in the kickoff sprint who used whatever email was logged in, and nobody went back to clean it up. The [full ownership reference](/course/tech-for-non-technical-founders-2026/reference/ownership-full/) has the good-vs-bad walkthrough for the three items that fail most, the 2026 AI-contractor credential trap, and the exact three-step recovery sequence with the AWS support script and the registrar auth-code request template.
 
-    Sec -->|Yes, from your vault| Dom["Domain: WHOIS shows<br/>your name + email?"]
-    Sec -->|"'Marcus has it'"| FixSec[Set up Secrets Manager<br/>or 1Password vault tonight.<br/>Migrate this sprint]
+---
 
-    Dom -->|Yes, on your card| Pass[Audit clean.<br/>Quarterly recurring block.<br/>Email investor / board.]
-    Dom -->|No| FixDom[Initiate registrar transfer.<br/>Budget 14 days as a practical buffer.<br/>Escalate to ICANN if blocked]
-
-    FixCode --> Recovery[Recovery plan<br/>started this Friday]
-    FixCloud --> Recovery
-    FixSec --> Recovery
-    FixDom --> Recovery
-
-    Recovery --> Escalate["Contractor cooperated within<br/>7 days code / 14 days cloud?"]
-    Escalate -->|Yes| Pass
-    Escalate -->|No| Lawyer[Retain lawyer.<br/>$2K-$5K beats<br/>a stalled checkout]
-
-    classDef good fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-    classDef bad  fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
-    classDef neutral fill:#f5f5f5,stroke:#666,stroke-width:2px,color:#1a1a1a
-    classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
-
-    class Start start
-    class Code,Cloud,Sec,Dom,Escalate neutral
-    class Pass good
-    class FixCode,FixCloud,FixSec,FixDom,Recovery,Lawyer bad
-```
-
-## When the audit fails: a recovery plan that takes weeks, not months
-
-Most audit failures are sloppy Day-1 setup, not malice. The contractor was moving fast in the kickoff sprint, used whatever email was logged in, and nobody went back to clean it up. The fix follows three steps in this order, and the order matters.
-
-| Step | What to do | Cadence |
-|---|---|---|
-| 1: Stop the bleeding | Get yourself an admin path into every system the contractor controls. AWS root password reset to your email. Your name added as GitHub org owner alongside theirs. Your card added as the primary on Stripe, SendGrid, and OpenAI. Do this before the next sprint so you have a quiet window before anyone notices. | This sprint |
-| 2: Extract the IP (intellectual property - your source code and data, legally distinct from an IP network address) | Pull a fresh clone of every repo to a private GitHub org under your account. Export the database to an S3 bucket on an AWS account in your name. Document where every secret currently lives and where it will live after the migration. Work patiently on the existing setup. | Next sprint |
-| 3: Legal escalation, only if needed | A reasonable cooperation window looks like 7 days for GitHub org transfer, 14 days for AWS root, and the auth code released at all for the domain. If they stall, retain a lawyer for a one-time $2K-$5K letter referencing your contract's IP-assignment clause. | 7-14 days (or legal engagement) |
-
-The [ownership checklist template](/course/tech-for-non-technical-founders-2026/ownership-checklist/) walks the exact recovery sequence per item, including the AWS support phone script and the registrar auth-code request template.
-
-## What to do tomorrow
-
-| Step | Action |
-|---|---|
-| **Block the calendar** | Calendar invite to yourself titled "Ownership audit." Treat it like an investor meeting. No interruptions. Coffee on, phone on Do Not Disturb. |
-| **Start with AWS** | Open the AWS console first. Top-right, click the account name, click Account. Read the root user email. If it is not on a domain you control, that one item is your audit's first failure. |
-| **Run the 12-item audit** | Download the [GitHub / AWS / Database Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/) and run through it. Record pass/fail for each of the 12 items. Create a one-page summary to forward to your investor or board. |
-| **Triage the failures** | If three or more items fail, consider [the 30-day exit guide](/blog/fire-dev-shop-guide/) for a structured transition. |
-
-## Advanced (optional)
-
-| Topic | When to scope | When to skip |
-|---|---|---|
-| **Signed key infrastructure** | You have 50+ users AND you handle regulated data. Rotating to asymmetric signing keys (AWS KMS, HashiCorp Vault Transit engine) means revocation actually removes access. | You have <50 users. Defer to month three, not month eighteen. |
-| **Security audit reference** | Before an enterprise prospect sends a SOC2 questionnaire. Run [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) (free for Business/Enterprise) or [Prowler](https://github.com/prowler-cloud/prowler) (open-source). Both produce reports answering 80% of infra questions. | You have no enterprise prospects yet. No need for SOC2 or formal audit. |
-
-Ownership audit done right means no Marcus stands between you and a 9pm Tuesday production fix.
-
-## Further reading
-
-- AWS, [AWS Account Root User documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html) - the official explanation of why the root email is the master credential and how account recovery works.
-- ICANN, [Transfer Policy](https://www.icann.org/en/contracted-parties/accredited-registrars/resources/domain-name-transfers/policy) - the rules every domain registrar must follow when transferring a domain between accounts, including the 60-day lock and the five-day code-release and transfer-release windows.
-- GitGuardian, [The State of Secrets Sprawl 2024](https://www.gitguardian.com/state-of-secrets-sprawl-report-2024) - 12.8 million secrets exposed in public GitHub commits in 2023, with `.env` files as one of the most common leak vectors.
-- Rails Guides, [Security: Custom Credentials](https://guides.rubyonrails.org/security.html#custom-credentials) - the canonical Rails answer to the "where do production secrets live?" question, replacing the old `database.yml` plaintext pattern.
-- Will Larson (via First Round Review), [Engineering leadership anti-patterns from Stripe, Uber, Carta](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) - on ownership and accountability in engineering teams, including who holds the keys to production.
-- AWS, [Reset a lost or forgotten root user password](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_change-root.html) - the support process and timeline if you need to recover a root account where someone else controls the email.
-
-> **Done:** All 12 items on the ownership checklist are audited, failures are documented, and a recovery plan exists for each failure.
+> **Audit:**
 >
-> **You have now:** a quality-checked one-page brief (3.2) + a build-path decision (4.1) + a passed ownership audit, all saved in your `Founder OS` folder.
+> 1. Block 45 minutes on your calendar titled "Ownership audit." Treat it like an investor meeting - phone on Do Not Disturb.
+> 2. Open the AWS console first. Top-right, click the account name, click Account, and read the root user email. If it is not on a domain you control, that is your audit's first failure.
+> 3. Work down the 12-item table above (or the [printable checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/)). Record pass or fail for each item.
+> 4. For every failure, note the recovery step and start it this sprint. If three or more fail, consider [the 30-day exit guide](/blog/fire-dev-shop-guide/) for a structured transition.
+> 5. **Success check:** all 12 items are marked pass or fail, and every failure has a named recovery action with a date - a one-page summary you could forward to your investor or board.
+
+---
+
+**If this fails: the AWS root email belongs to someone else and they won't cooperate.**
+- **Why:** AWS treats whichever email is on the root as the legal account holder, so your incorporation paperwork does not move them until support has run its recovery process.
+- **Fix:** start the [AWS root account recovery process](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_change-root.html) immediately (3-5 business days). Do not build another line on an account you don't own - the deeper you build, the more expensive the eventual transfer.
+
+---
+
+Whose inbox did the AWS root email land in tonight? If the honest answer is "I'm not sure," that uncertainty is the whole reason this lesson comes before the build, not after.
+
+---
+
+> **Done:** all 12 items on the ownership checklist are audited, failures are documented, and a recovery plan exists for each failure.
+>
+> **You have now:** a quality-checked one-page brief (3.2) + a build-path decision (4.1) + a passed ownership audit (4.2), all saved in your `Founder OS` folder. The build itself is the next step.
 >
 > **Next:** [4.3 · The Self-Serve MVP Stack: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) - it builds on the accounts you now own.
 >
-> **If blocked:** If the AWS root email belongs to someone else and they won't cooperate, start the AWS support recovery process immediately (3-5 business days). Do not build on an account you don't own.
+> **If blocked:** see "If this fails" above.
+>
+> **Deeper reference:** [The good-vs-bad walkthrough, the 2026 credential trap, and the full recovery sequence](/course/tech-for-non-technical-founders-2026/reference/ownership-full/)
 
 ---
 

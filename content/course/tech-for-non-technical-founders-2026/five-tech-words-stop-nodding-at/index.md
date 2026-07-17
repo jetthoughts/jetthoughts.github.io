@@ -32,7 +32,7 @@ related_posts: false
 > **Course glossary** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course.
 > Vocabulary the rest of the course assumes you have. Skim once; come back when you hit a word you nodded at.
 
-One founder nodded at the same word for fourteen months. Every Friday her contractor's PM said "we're refactoring the order flow" and she wrote it down. When her new fractional CTO finally read the repo, he came back with one line: nothing new had shipped to production since month three. **"Refactoring" had cost her $51K and a year of runway.** She nodded because the word gave her nothing to push back on - which is exactly what the questions in this glossary hand you.
+One word can hide a year in which nothing shipped. "Refactoring" means changing the structure of code without changing what the user sees, so when an agency uses it to narrate week after week, there is nothing user-visible to check it against, and "we're refactoring the order flow" can cover a stretch where production never moved. That is how the word runs up a bill: **$51K and a year of runway** can pass before a new fractional CTO reads the repo and finds nothing new since month three. The glossary below hands you, for each word, the one question the padded version cannot answer.
 
 Non-technical founders often learn engineering vocabulary under pressure, mid-meeting, with a bill on the table. The agency throws a word, the founder nods, the meeting moves on. By the time the founder figures out what the word actually meant, the next sprint is already approved.
 
@@ -42,7 +42,7 @@ Below is the cheat sheet for the five words that hide the most invoices: refacto
 
 ## Why these five words now
 
-The vibe-coding wave made jargon worse. Agencies now stack three vocabularies on top of each other - the old enterprise one (microservices, Docker, refactoring), the AI one (agents, prompts, RAG, MCP), and the no-code one (workflows, automations, integrations). Founders walk into status meetings and hear words from all three at once. The founders we work with in 2026 did not lose money on vocabulary - they lost it because they nodded at words the agency was using to mean something else. Veracode's 2025 study found 45% of LLM-generated code shipped at least one exploitable security flaw, and that kind of failure hides perfectly inside the word "refactoring" when nobody asks what was changed.
+The vibe-coding wave made jargon worse. Agencies now stack three vocabularies on top of each other - the old enterprise one (microservices, Docker, refactoring), the AI one (agents, prompts, RAG, MCP), and the no-code one (workflows, automations, integrations). Founders walk into status meetings and hear words from all three at once. The money is not lost on vocabulary - it is lost when a founder nods at a word the agency is using to mean something else. Veracode's 2025 study found 45% of LLM-generated code shipped at least one exploitable security flaw, and that kind of failure hides perfectly inside the word "refactoring" when nobody asks what was changed.
 
 ## The Five Words
 
@@ -52,38 +52,9 @@ Changing the structure of code without changing what it does for the user. Marti
 
 > **🔍 BS-detection question:** *"Show me the user-facing thing that worked yesterday and still works today, but is now built on the new code."* A real refactor leaves at least one feature exactly as the user saw it. "We are still wiring it back up" means somebody is rewriting on your dime and calling it a tidy-up.
 
-In Rails terms, a real refactor splits a 400-line `OrdersController` into three smaller controllers while the Stripe webhook still hits the same URL and the test suite stays green. JT caps each refactor commit at [three lines of production code](/blog/refactor-step-tdd-three-line-discipline-ruby/) for that reason. A SaaS founder we picked up in Q4 2025 was billed $9K for a "checkout refactor" that turned out to be one merge commit of 3,800 lines, no tests, and the Stripe webhook secret hard-coded into the controller. The checkout broke on stage at her board demo.
+In Rails terms, a real refactor splits a 400-line `OrdersController` into three smaller controllers while the Stripe webhook still hits the same URL and the test suite stays green. JT caps each refactor commit at [three lines of production code](/blog/refactor-step-tdd-three-line-discipline-ruby/) for that reason. A SaaS founder was billed $9K in Q4 2025 for a "checkout refactor" that turned out to be one merge commit of 3,800 lines, no tests, and the Stripe webhook secret hard-coded into the controller. The checkout broke on stage at her board demo.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TB
-    Start["OrdersController · 400 lines<br/>messy, hard to read"]
-
-    Start --> RealQ{Real refactor?}
-    Start --> FakeQ{Fake refactor?}
-
-    RealQ --> R1["CartController · 120 lines"]
-    RealQ --> R2["CheckoutController · 140 lines"]
-    RealQ --> R3["ReceiptController · 130 lines"]
-
-    R1 --> RW["Same Stripe webhook URL<br/>Same tests stay green"]
-    R2 --> RW
-    R3 --> RW
-
-    RW --> Win["✓ Same behavior for users<br/>Cleaner structure<br/>Three-line commit cap"]
-
-    FakeQ --> F1["OrdersController v2<br/>3,800 lines, no tests"]
-    F1 --> F2["Stripe secret hard-coded<br/>into controller"]
-    F2 --> Lose["✗ Checkout broke at board demo<br/>$9K invoice for the rewrite"]
-
-    classDef good fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-    classDef bad  fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
-    classDef neutral fill:#f5f5f5,stroke:#666,stroke-width:2px,color:#1a1a1a
-
-    class Start,RealQ,FakeQ neutral
-    class R1,R2,R3,RW,Win good
-    class F1,F2,Lose bad
-```
+![Refactoring real versus fake: one messy 400-line OrdersController either splits into small Cart, Checkout, and Receipt controllers behind the same Stripe webhook with tests still green (real refactor), or gets rewritten into a 3,800-line v2 with the Stripe secret hard-coded that broke checkout at the board demo and cost a $9K invoice (fake refactor)](refactor-check.svg)
 
 ### 🐳 2. Docker
 
@@ -102,7 +73,7 @@ Listen for which side of this table your team lands on:
 | "Doing Docker work" (week 2 in a row, no clickable thing) | Something on the server broke, they cannot reproduce locally, they are fighting their own setup |
 | "We are containerizing the architecture" | Resume-driven plumbing - ask which feature ships sooner because of it |
 
-An EdTech founder we picked up paid $7K for "a Docker upgrade" across six weeks; the git history showed one commit changing a single line in `Dockerfile`. The real work was a Postgres migration that had broken staging the day the upgrade ticket opened. They labelled the sprint "Docker work" because it sounded more like infrastructure than "we shipped a bug."
+An EdTech founder paid $7K for "a Docker upgrade" across six weeks; the git history showed one commit changing a single line in `Dockerfile`. The real work was a Postgres migration that had broken staging the day the upgrade ticket opened. They labelled the sprint "Docker work" because it sounded more like infrastructure than "we shipped a bug."
 
 ### 💸 3. Tech debt
 
@@ -151,25 +122,37 @@ A healthy architecture for a pre-Series-A Rails SaaS is one Rails monolith on He
 
 The five words above are dev-shop jargon - vocabulary you'll hit in Modules 4-5 (build and ship). Modules 1-3 (hypothesis, validate, design) have their own acronym soup. Skim the list below once; come back when an unfamiliar acronym shows up in a chapter:
 
-| Acronym | Plain English | Where it shows up |
+**Customer & validation words** - who you serve and whether the demand is real:
+
+| Term | Plain English | Where it shows up |
 |---|---|---|
-| **ICP** | Ideal Customer Profile - the specific kind of person your hypothesis names | Ch 1.1, 2.3 |
-| **PMF** | Product-Market Fit - the survey question "would you be very disappointed if you could no longer use this?" 40%+ "very disappointed" = signal | Ch 5.1 |
-| **JTBD** | Jobs To Be Done - what a customer "hires" your product to do (instead of feature list) | Ch 3.1, 3.2 |
-| **MRR** / **ARR** | Monthly / Annual Recurring Revenue - what one customer pays per month or year | Ch 1.1, 5.6 |
-| **ACV** | Annual Contract Value - what one customer pays in year one (deposit math is 10-30% of ACV) | Ch 5.6 |
-| **CAC** / **LTV** | Customer Acquisition Cost / Lifetime Value - what you spend to land one customer vs what they pay you over their lifetime | Ch 5.2, 5.6 |
-| **DPA** | Design Partner Agreement - a one-page contract where a customer pays a deposit to test your product as a co-design partner | Ch 5.6 |
-| **SOW** | Statement of Work - the contract that defines what an agency is paid to deliver | _index, rescue chapters |
-| **PRD** / **Vibe PRD** | Product Requirements Document - the "Vibe" version is a one-pager an AI builder can act on, not a 30-page spec | Ch 3.1 |
+| **ICP** | Ideal Customer Profile - the specific kind of person your hypothesis names | Lesson 1.1, 2.3 |
+| **JTBD** | Jobs To Be Done - what a customer "hires" your product to do (instead of feature list) | Lesson 3.1, 3.2 |
+| **PMF** | Product-Market Fit - the survey question "would you be very disappointed if you could no longer use this?" 40%+ "very disappointed" = signal | Lesson 5.1 |
+| **NPS** | Net Promoter Score - "how likely are you to recommend us?" 0-10 scale; less useful at idea stage than PMF | Lesson 5.1 sidebar |
+| **Retention** | What % of users come back next week / next month - the only metric that proves the product solves a real problem | Lesson 5.1 |
+| **Wizard of Oz** | A no-code pattern - customer thinks software is running, but you do the work by hand behind the scenes to test demand before building | Lesson 4.3 Concierge MVP |
+
+**Money & market words** - the numbers that decide whether it is a business:
+
+| Term | Plain English | Where it shows up |
+|---|---|---|
+| **MRR** / **ARR** | Monthly / Annual Recurring Revenue - what one customer pays per month or year | Lesson 1.1, 5.6 |
+| **ACV** | Annual Contract Value - what one customer pays in year one (deposit math is 10-30% of ACV) | Lesson 5.6 |
+| **CAC** / **LTV** | Customer Acquisition Cost / Lifetime Value - what you spend to land one customer vs what they pay you over their lifetime | Lesson 5.2, 5.6 |
+| **Unit economics** | Revenue per customer minus cost to serve per customer - whether the math works at scale | Lesson 1.1 Money lens |
+| **Runway** | Months of cash until you must show paying customers or close the company | Lesson 4.1 Q3 |
 | **TAM** / **SAM** / **SOM** | Total / Serviceable / Serviceable-Obtainable Market - investor-pitch math, not builder math | _index pitch sections only |
-| **Pixel** | A small JavaScript tracking snippet from an ad platform (Meta/LinkedIn/Reddit) - paste it on your page and the platform learns who converted | Ch 1.3 |
-| **NPS** | Net Promoter Score - "how likely are you to recommend us?" 0-10 scale; less useful at idea stage than PMF | Ch 5.1 sidebar |
-| **Retention** | What % of users come back next week / next month - the only metric that proves the product solves a real problem | Ch 5.1 |
-| **Unit economics** | Revenue per customer minus cost to serve per customer - whether the math works at scale | Ch 1.1 Money lens |
-| **Runway** | Months of cash until you must show paying customers or close the company | Ch 4.1 Q3 |
-| **SWOT / PESTEL / Porter's Five Forces** | Three classic strategy-school checklists - VenturusAI runs all three on your hypothesis | Ch 1.1 sidebar |
-| **Wizard of Oz** | A no-code pattern - customer thinks software is running, but you do the work by hand behind the scenes to test demand before building | Ch 4.3 Concierge MVP |
+
+**Strategy, deal & tool words** - the frameworks, contracts, and tools you touch:
+
+| Term | Plain English | Where it shows up |
+|---|---|---|
+| **SWOT / PESTEL / Porter's Five Forces** | Three classic strategy-school checklists - VenturusAI runs all three on your hypothesis | Lesson 1.1 sidebar |
+| **Pixel** | A small JavaScript tracking snippet from an ad platform (Meta/LinkedIn/Reddit) - paste it on your page and the platform learns who converted | Lesson 1.4 |
+| **DPA** | Design Partner Agreement - a one-page contract where a customer pays a deposit to test your product as a co-design partner | Lesson 5.6 |
+| **SOW** | Statement of Work - the contract that defines what an agency is paid to deliver | _index, rescue chapters |
+| **PRD** / **Vibe PRD** | Product Requirements Document - the "Vibe" version is a one-pager an AI builder can act on, not a 30-page spec | Lesson 3.1 |
 
 ## What to do tomorrow
 

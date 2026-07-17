@@ -24,9 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the "When Things Break" path of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Run alone Friday afternoon. Send the score to one independent reviewer for a paid 30-minute call.
-
-# The Salvage vs Rebuild Decision Tree
+Template companion to the "When Things Break" path of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Run alone Friday afternoon. Send the score to one independent reviewer for a paid 30-minute call.
 
 A 30-minute decision that ends two weeks of analysis paralysis and gives you a defensible verdict by Friday night.
 
@@ -34,7 +32,9 @@ By Sunday morning you will know whether to KEEP your codebase, FREEZE it for 60 
 
 ## Why this exists
 
-A founder we picked up in late 2025 had spent **$95K and fourteen months** with the previous shop on a marketplace app for home-service contractors. The codebase was about **38,000 lines of Ruby on Rails** with **0% test coverage**, no staging environment, and an auth flow that had been reimplemented three times in three years. None of the three had been deleted. Two were still wired into different login URLs.
+A founder I worked with in late 2025 had spent **$95K and fourteen months** with the previous shop on a marketplace app for home-service contractors. The codebase was about **38,000 lines of Ruby on Rails** with **0% test coverage**, no staging environment, and an auth flow that had been reimplemented three times in three years. None of the three had been deleted. Two were still wired into different login URLs.
+
+*Illustrative composite based on patterns from real founder builds, not a single client story.*
 
 She had spent nine weeks asking three different consultants whether to keep, rewrite, or do something in between. Every consultant gave a different answer. Every answer cost $1,500 to $4,000. She ran the six questions below in one Friday afternoon, scored a 2 out of 6, and had a paid 30-minute review confirming a 30/60/90 day REBUILD-the-core-paths plan by the following Wednesday. The paralysis was the expensive part. The decision was 30 minutes.
 
@@ -65,9 +65,9 @@ Add up the scores.
 
 | Score | Verdict | What you do next |
 |---|---|---|
-| **5-6** | **KEEP and harden.** | The codebase is salvageable. Spend the rebuild budget you were about to write a check for on test coverage, monitoring, and one senior hire. Do not rewrite. |
-| **3-4** | **FREEZE and stabilize.** | No new features for 30 to 60 days. One sprint on access ownership (run the [GitHub / AWS / database checklist](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)), one sprint on adding tests around the top three flows, one sprint on monitoring and backups. Re-score in 60 days. If you climb to 5+, you keep. If you stay at 3-4, you rebuild the core paths. |
-| **0-2** | **REBUILD core paths.** | Not a full rewrite. Identify the two or three highest-traffic flows (signup, checkout, the one core action your users repeat) and rebuild THOSE on a parallel codebase. Migrate users behind a feature flag. Keep the legacy system running for everything else for 90 days, then sunset it one flow at a time. |
+| **5-6** | <strong style="color:#2e7d32">KEEP and harden.</strong> | The codebase is salvageable. Spend the rebuild budget you were about to write a check for on test coverage, monitoring, and one senior hire. Do not rewrite. |
+| **3-4** | <strong style="color:#d97706">FREEZE and stabilize.</strong> | No new features for 30 to 60 days. One sprint on access ownership (run the [GitHub / AWS / database checklist](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)), one sprint on adding tests around the top three flows, one sprint on monitoring and backups. Re-score in 60 days. If you climb to 5+, you keep. If you stay at 3-4, you rebuild the core paths. |
+| **0-2** | <strong style="color:#cc342d">REBUILD core paths.</strong> | Not a full rewrite. Identify the two or three highest-traffic flows (signup, checkout, the one core action your users repeat) and rebuild THOSE on a parallel codebase. Migrate users behind a feature flag. Keep the legacy system running for everything else for 90 days, then sunset it one flow at a time. |
 
 A score of 0 is not a "burn it down" verdict. The legacy code keeps running while you carve out the parts that matter and rebuild them with tests, monitoring, and one engineer who owns them.
 

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" role="img" aria-labelledby="refactor-title">
+  <title id="refactor-title">Refactoring, real versus fake: one messy 400-line controller either splits into small controllers behind the same Stripe webhook with tests still green (a real refactor), or gets rewritten into a 3,800-line v2 with the Stripe secret hard-coded that broke checkout at the board demo and cost a 9,000-dollar invoice (a fake refactor).</title>
+  <defs>
+    <style>
+      .h     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub   { font-size: 17px; fill: #666; font-style: italic; }
+      .lane  { font-size: 21px; font-weight: 700; }
+      .laneg { fill: #2e7d32; }
+      .laner { fill: #cc342d; }
+      .card-title { font-size: 19px; font-weight: 700; fill: #1a1a1a; }
+      .body  { font-size: 16px; fill: #1a1a1a; }
+      .win   { font-size: 19px; font-weight: 700; fill: #2e7d32; }
+      .lose  { font-size: 19px; font-weight: 700; fill: #cc342d; }
+      .note  { font-size: 16px; fill: #666; font-style: italic; }
+      .card-n { fill: #faf7f2; stroke: #555;    stroke-width: 2; }
+      .card-g { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.25; }
+      .card-w { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 3; }
+      .card-r { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.25; }
+      .card-l { fill: #fff5f5; stroke: #cc342d; stroke-width: 3; }
+      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
+    </style>
+    <marker id="rah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="460" y="34" text-anchor="middle" class="h title">Refactoring: real vs fake</text>
+  <text x="460" y="60" text-anchor="middle" class="h sub">One messy controller. Two ways the word lands on your invoice.</text>
+
+  <!-- Start -->
+  <g transform="rotate(-0.4 116 250)">
+    <rect x="26" y="200" width="180" height="100" rx="12" class="card-n"/>
+    <text x="116" y="238" text-anchor="middle" class="h card-title">OrdersController</text>
+    <text x="116" y="264" text-anchor="middle" class="h body">400 lines, messy,</text>
+    <text x="116" y="285" text-anchor="middle" class="h body">hard to read</text>
+  </g>
+
+  <!-- Fork arrows -->
+  <path d="M 208 224 C 224 200, 226 168, 238 150" class="arrow" marker-end="url(#rah)"/>
+  <path d="M 208 278 C 224 320, 226 348, 238 366" class="arrow" marker-end="url(#rah)"/>
+
+  <!-- TOP LANE: REAL REFACTOR -->
+  <text x="342" y="86" text-anchor="middle" class="h lane laneg">REAL REFACTOR &#10003;</text>
+
+  <g transform="rotate(0.3 342 113)">
+    <rect x="242" y="98"  width="200" height="30" rx="8" class="card-g"/>
+    <text x="342" y="119" text-anchor="middle" class="h body">Cart &#183; 120 lines</text>
+  </g>
+  <g transform="rotate(-0.2 342 149)">
+    <rect x="242" y="134" width="200" height="30" rx="8" class="card-g"/>
+    <text x="342" y="155" text-anchor="middle" class="h body">Checkout &#183; 140 lines</text>
+  </g>
+  <g transform="rotate(0.3 342 185)">
+    <rect x="242" y="170" width="200" height="30" rx="8" class="card-g"/>
+    <text x="342" y="191" text-anchor="middle" class="h body">Receipt &#183; 130 lines</text>
+  </g>
+
+  <path d="M 444 149 L 470 149" class="arrow" marker-end="url(#rah)"/>
+
+  <g transform="rotate(-0.3 562 149)">
+    <rect x="468" y="111" width="190" height="76" rx="12" class="card-g"/>
+    <text x="563" y="141" text-anchor="middle" class="h body">Same Stripe webhook</text>
+    <text x="563" y="166" text-anchor="middle" class="h body">Tests stay green</text>
+  </g>
+
+  <path d="M 660 149 L 686 149" class="arrow" marker-end="url(#rah)"/>
+
+  <g transform="rotate(0.3 795 150)">
+    <rect x="690" y="100" width="210" height="100" rx="12" class="card-w"/>
+    <text x="795" y="132" text-anchor="middle" class="h win">&#10003; Same behavior</text>
+    <text x="795" y="158" text-anchor="middle" class="h body">Cleaner structure</text>
+    <text x="795" y="182" text-anchor="middle" class="h body">3-line commit cap</text>
+  </g>
+
+  <!-- BOTTOM LANE: FAKE REFACTOR -->
+  <text x="342" y="322" text-anchor="middle" class="h lane laner">FAKE REFACTOR &#10007;</text>
+
+  <g transform="rotate(0.3 342 366)">
+    <rect x="242" y="330" width="200" height="72" rx="12" class="card-r"/>
+    <text x="342" y="360" text-anchor="middle" class="h card-title">OrdersController v2</text>
+    <text x="342" y="384" text-anchor="middle" class="h body">3,800 lines, no tests</text>
+  </g>
+
+  <path d="M 444 366 L 470 366" class="arrow" marker-end="url(#rah)"/>
+
+  <g transform="rotate(-0.3 563 366)">
+    <rect x="468" y="330" width="190" height="72" rx="12" class="card-r"/>
+    <text x="563" y="360" text-anchor="middle" class="h body">Stripe secret</text>
+    <text x="563" y="384" text-anchor="middle" class="h body">hard-coded in controller</text>
+  </g>
+
+  <path d="M 660 366 L 686 366" class="arrow" marker-end="url(#rah)"/>
+
+  <g transform="rotate(0.3 795 366)">
+    <rect x="690" y="322" width="210" height="92" rx="12" class="card-l"/>
+    <text x="795" y="352" text-anchor="middle" class="h lose">&#10007; Checkout broke</text>
+    <text x="795" y="377" text-anchor="middle" class="h body">at the board demo</text>
+    <text x="795" y="399" text-anchor="middle" class="h body">$9K for the rewrite</text>
+  </g>
+
+  <text x="460" y="456" text-anchor="middle" class="h note">A real refactor leaves a working feature untouched. A fake one rewrites it on your dime.</text>
+</svg>

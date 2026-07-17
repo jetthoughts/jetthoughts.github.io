@@ -11,11 +11,11 @@ metatags:
   og_title: "Module 1 Walkthrough: Mia Builds TutorMatch"
 course_nav_prev:
   slug: price-hypothesis-on-smoke-test-page
-  module: "Chapter 1.5"
+  module: "Lesson 1.5"
   title: "1.5 · Price Your Hypothesis on the Smoke-Test Page"
 course_nav_next:
   slug: mom-test-ask-about-past-not-future
-  module: "Chapter 2.1"
+  module: "Lesson 2.1"
   title: "2.1 · The Mom Test: Ask About the Past, Not the Future"
 ---
 
@@ -43,7 +43,7 @@ She closed the doc and opened Reddit. r/Dyslexia. She searched "tutor." The thir
 
 > *"I've called 11 tutoring centers this month. Five never called back. Three said they don't specialize in dyslexia. Two had waitlists. One told me their 'learning differences' program was a generic curriculum with a different label."*
 
-Mia copied the post into her notes. The blanks she'd left empty an hour earlier suddenly had specific names. The [customer] wasn't "parents" - it was parents of kids 8-14 with dyslexia or ADHD. The [problem] wasn't "finding tutors" - it was *finding a vetted specialist tutor*. The [competition] wasn't Google the company - it was the exact behavior the Vermont mother had described: Googling and calling dead numbers. By midnight her hypothesis read:
+Mia copied the post into her notes. The blanks she'd left empty an hour earlier suddenly had specific names. The `[customer]` wasn't "parents" - it was parents of kids 8-14 with dyslexia or ADHD. The `[problem]` wasn't "finding tutors" - it was *finding a vetted specialist tutor*. The `[competition]` wasn't Google the company - it was the exact behavior the Vermont mother had described: Googling and calling dead numbers. By midnight her hypothesis read:
 
 > *"If we help parents of kids 8-14 with dyslexia/ADHD solve finding a vetted specialist tutor with a search-by-specialty marketplace, they will choose it over Googling and calling dead numbers because it matches them in 48 hours with parent reviews."*
 
@@ -89,7 +89,7 @@ She had $400 to spend, a Growth lens that scored only 3/5, and a quiet knot in h
 
 She installed the Meta Pixel she'd deferred from 1.3. Same dance as Clarity and GA4, two minutes this time - the wrong-field detour had taught her where to click.
 
-Then the ads. Her first instinct was to split the budget - $200 on "dyslexia tutor" search interest, $200 on "ADHD tutor near me" in her city, and let the two angles fight it out. The channel guide's sample-size warning killed that plan: $200 buys roughly 150 visits, and below 300 visits a conversion rate can't tell 2% from 5%. Two half-tests would have bought her two unreadable numbers. She put the full $400 behind one angle - the specialty search, because that was the bet her hypothesis actually named: parents searching by their kid's need, not by zip code. The location question went into her notebook, not her ad account. She hit Launch on a Monday morning.
+Then the ads. Her first instinct was to split the budget - $200 on "dyslexia tutor" search interest, $200 on "ADHD tutor near me" in her city, and let the two angles fight it out. The channel guide's sample-size warning killed that plan: $200 buys roughly 150 visits, and below 300 visits a conversion rate can't tell 4% from 5%. Two half-tests would have bought her two unreadable numbers. She put the full $400 behind one angle - the specialty search, because that was the bet her hypothesis actually named: parents searching by their kid's need, not by zip code. The location question went into her notebook, not her ad account. She hit Launch on a Monday morning.
 
 Then she made a rule for herself: don't touch the page for seven days - no headline tweaks, no bid adjustments, and none of the anxious dashboard refreshing she knew she'd be tempted by. The point of a smoke test was a clean signal, and a clean signal needed clean traffic.
 
@@ -122,7 +122,7 @@ She added a note to her Module 2 prep: when she interviewed parents, she'd ask w
 - **Six paying customers at $99 each.** $594 in revenue, before the product existed.
 - **A Google Drive folder** holding all five Module 1 outputs. Her Founder OS, started.
 
-**Next: [Module 2, where Mia interviews ten parents using the Mom Test](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/).** Her interview script will ask whether parents have ever spent real money on a specialist tutor search (the [problem] blank in her hypothesis), and what they currently pay - so she can replace her Money lens guess with actual numbers from actual receipts.
+**Next: [Module 2, where Mia interviews ten parents using the Mom Test](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/).** Her interview script will ask whether parents have ever spent real money on a specialist tutor search (the `[problem]` blank in her hypothesis), and what they currently pay - so she can replace her Money lens guess with actual numbers from actual receipts.
 
 ---
 

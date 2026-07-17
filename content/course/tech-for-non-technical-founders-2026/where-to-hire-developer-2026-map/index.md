@@ -24,21 +24,19 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Hire Track Supplementary Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/). Print Monday morning. Pick your geography, pick your platform, post your role.
-
-# Where to Hire Developer 2026 - The Geography & Platform Map
+Template companion to the [Hire Track Supplementary Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/). Print Monday morning. Pick your geography, pick your platform, post your role.
 
 *One side of paper. Pick the region row. Pick two platforms. Write the job description from the template at the bottom. Post by Monday afternoon.*
 
 > **Geography quick-pick** (cost x timezone fit):
 > - **Onshore** (US / UK): high cost, timezone-aligned, fast ramp
 > - **LATAM** (Mexico, Colombia, Argentina): mid cost, timezone-aligned
-> - **Tier-2 India** (Coimbatore, Pune): low cost, async-only
+> - **Tier-2 India** (Jaipur, Kochi, Indore, Coimbatore): low cost, async-only
 > - **Upwork / freelance**: variable, task-based, no commitment
 
 ## Why this exists
 
-A B2B SaaS founder we picked up in Q2 2026 had been paying $185K base for a San Francisco Senior pitched as "AI-native." The Senior wrote good code but had never opened Cursor for a real ship and treated every contractor PR like he was reviewing a junior. After four months she was shipping one feature every three weeks. Her fractional CTO walked her through this map on a Tuesday. By Friday she had a Coimbatore Rails engineer at $42 an hour on a 3-day take-home test, and by the following sprint she had two features shipped and a hallucinated Stripe webhook caught in PR review. Replacement cost: 22% of the original burn. The map was not on her desk in February. It is on yours now.
+The Monday you decide to hire, the map matters more than the job post. Pay $185K base for a San Francisco Senior pitched as "AI-native" and you can still ship one feature every three weeks - a strong coder who has never opened Cursor for a real ship and reviews every contractor PR as if it were a junior's. Walk the same map instead and the arithmetic changes: a Coimbatore Rails engineer at $42 an hour clears a 3-day take-home, ships two features by the following sprint, and has a hallucinated Stripe webhook caught in PR review before it merges - a replacement that costs 22% of the original burn. That map was not on one founder's desk in February. It is on yours now.
 
 ## How to use this
 
@@ -50,25 +48,16 @@ Total time budget: 30 minutes alone, 30 minutes posting, 0 minutes second-guessi
 
 ## The 4 regions
 
-Walk these four blocks in order. Circle the one your scope and budget land in, then move to the platform list.
+Walk the four rows in order. Circle the one your scope and budget land in, then move to the platform list.
 
 *The rate bands and hire-cycle times below are our own market reads from placing and hiring engineers through 2025-2026 at JetThoughts, not survey data - treat them as negotiation anchors, and expect your quotes to land inside the band, not on its edges.*
 
-### Onshore (US / EU)
-
-Salaried, $130K - $210K+/year, 30-60 days to hire. Pick when: regulated industry (HIPAA, SOC 2 with US data residency, fintech license), security clearance, or board-mandated US team. Watch out for: 51% offer-acceptance rate and the worst cost-to-output ratio on the map.
-
-### Nearshore (LATAM)
-
-$45-$100/hr, $90K-$200K annualized, 2-5 days to hire. Pick when: you need real-time timezone overlap for pair programming, customer calls, or daily standups. US founder default in 2026. Watch out for: rates compressed in the top metros; English fluency varies by candidate - screen for it.
-
-### Tier-2 India
-
-$15-$70/hr, $30K-$140K annualized, 1-5 days to hire. Pick when: backend-heavy work where async is acceptable. Cities: Jaipur, Kochi, Indore, Coimbatore. NOT Bangalore. Watch out for: no 9am Pacific standups; async PR culture; build CLAUDE.md / coding-standards docs before the first PR lands.
-
-### Mass-market (Upwork)
-
-$35-$120/hr, project-based, 1-3 days to hire. Pick when: single landing page, logo, or one-off scraper. Anything you would ship and never touch again. Watch out for: you become the technical interviewer; no platform vetting. NOT for backend, payments, or auth.
+| Region | Rate band & time to hire | Pick when | Watch out for |
+|---|---|---|---|
+| **Onshore (US / EU)** | $130K - $210K+/yr, 30-60 days | Regulated industry (HIPAA, SOC 2 with US data residency, fintech license), security clearance, or board-mandated US team | Low offer-acceptance rates and the worst cost-to-output ratio on the map |
+| **Nearshore (LATAM)** | $45 - $100/hr ($90K - $200K annualized), 2-5 days | Real-time timezone overlap for pair programming, customer calls, or daily standups; US founder default in 2026 | Rates compressed in the top metros; English fluency varies by candidate - screen for it |
+| **Tier-2 India** | $15 - $70/hr ($30K - $140K annualized), 1-5 days | Backend-heavy work where async is acceptable (Jaipur, Kochi, Indore, Coimbatore - NOT Bangalore) | No 9am Pacific standups; async PR culture; build CLAUDE.md / coding-standards docs before the first PR |
+| **Mass-market (Upwork)** | $35 - $120/hr project-based, 1-3 days | Single landing page, logo, or one-off scraper - anything you'd ship and never touch again | You become the technical interviewer; no platform vetting; NOT for backend, payments, or auth |
 
 ## The 6 platforms ranked
 
@@ -179,12 +168,12 @@ The good answer is countable: years, ships, scale, recent quarter, screenshare o
 
 > Good: *"The candidate's code passes all tests. The package manifest pulls in `react-toolkit` (4 chars off from the real `redux-toolkit`). I asked. They had not noticed. The model invented the package, npm has a placeholder, and a malicious actor will register it within the week. The candidate did the work without the AI-direction discipline we hired for. Pass."*
 
-The good review reads the dependency manifest as carefully as the application code. The bad review checks the test green and stops there. The slopsquatting attack vector is in the [Bleeping Computer report on AI code supply chain attacks](https://www.bleepingcomputer.com/news/security/ai-code-suggestions-sabotage-software-supply-chain/); your candidate must spot this in PR review or you have hired the wrong profile.
+The good review reads the dependency manifest as carefully as the application code. The bad review checks the test green and stops there. The slopsquatting attack vector is in the [Infosecurity Magazine writeup on AI code supply chain attacks](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/); your candidate must spot this in PR review or you have hired the wrong profile.
 
 ## What to do tomorrow
 
 1. **Write your geography choice and your two platforms at the top of a fresh Notion doc.** One line: *"Region: [Tier-2 India / LATAM nearshore / US onshore]. Platforms: [primary] + [backup]. Posted on [date]. First slate by [date + 5 days]."*
-2. **Schedule 5 intro calls in the same week.** Not three. Not ten. Five gives you a comparison and a rolling shortlist. Each call is 30 minutes. Use the four-question script from the [Hire Track Supplementary Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#where-to-find-developers-in-2026).
+2. **Schedule 5 intro calls in the same week.** Not three. Not ten. Five gives you a comparison and a rolling shortlist. Each call is 30 minutes. Use the [7-question hiring interview script](/course/tech-for-non-technical-founders-2026/hiring-interview-script/).
 3. **Take the shortlist of 3-5 candidates to the [hiring interview](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#interviews-that-catch-ai-theater).** That section covers the deep-dive interview that catches AI theater. This map gets you to the shortlist; that post gets you to the hire.
 
 If you find yourself ten days in with no shortlist, the bottleneck is the job description, not the platforms. Re-read the AI-Augmented Developer profile in the post and tighten the five profile lines. Generic posts attract generic applicants.

@@ -24,9 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to [the Mom Test synthesis section](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Print after running 10 interviews. Fill in 30 minutes. Show to 2 advisors before building anything.
-
-# Validated Problem Statement Template - One Page, Five Sections
+Template companion to [the Mom Test synthesis section](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Print after running 10 interviews. Fill in 30 minutes. Show to 2 advisors before building anything.
 
 *The synthesis sheet that turns 10 Mom Test transcripts into a build, pivot, or kill decision.*
 
@@ -44,7 +42,7 @@ related_posts: false
 
 ## Why this exists
 
-A solo founder I spoke with last month sent 47 cold DMs to Twitter strangers complaining about their CRM. Twelve answered. Of the twelve, two said yes and ten said honest, paragraph-long no's. She had spent six weekends collecting transcripts in a folder labeled `notes`. When she opened the folder to write the problem statement, she realized she had never named the persona, never tallied the strong signals, and never written the why-now. The ten no's looked alike in her memory and contradicted each other on the page. Half of them were not even the persona she was building for. The synthesis took 90 minutes the first time she sat down to do it - and the decision the page produced was *pivot to a different ICP* rather than *build*. She kept the calendar she would have spent prompting Lovable and ran 5 sharper interviews instead. This template is the page she filled in.
+Send forty-odd cold DMs to strangers venting about their CRM and twelve answer - two yes, ten honest paragraph-long no's - and you have something that feels like validation. Left as transcripts in a folder labeled `notes`, they lie to you. The ten no's blur together in memory and contradict each other on the page; half of them turn out not to be the persona you are building for. Sit down to name the persona, tally the strong signals, and write the why-now, and the 90-minute synthesis can hand you a *pivot to a different ICP* where memory was telling you *build*. That is a weekend you would have spent prompting Lovable, spent instead on five sharper interviews. This template is the page you fill in to force it.
 
 ## How to use this
 
@@ -131,7 +129,7 @@ ______ /10
 Strong signals (score 7+ with 3+ emotional flags): ___ /10
 
 Decision based on strong-signal count:
- [ ] 7 or more  → BUILD. Test the shape in Ch 2.6, then Module 3.
+ [ ] 7 or more  → BUILD. Test the shape in Lesson 2.6, then Module 3.
  [ ] 4 to 6     → PIVOT. Run 5 sharper interviews.
  [ ] Fewer than 4 → KILL. Find a different problem.
 
@@ -151,6 +149,8 @@ Date: ______________
 ```
 
 ## What good looks like vs what bad looks like
+
+Three worked examples for the sections founders most often get wrong - 1, 2, and 4. Sections 3 and 5 are direct transcript copying; the same specific-beats-vague rule applies.
 
 **Section 1 - Who has the problem**
 
@@ -180,13 +180,13 @@ The good version names the specific cost number, the specific competitor's speci
 
 The decision the filled page makes for you:
 
-- **BUILD** if: 7+ strong-signal calls (score 7+ with 3+ emotional flags), a named workaround the customer is already paying for, and a named why-now from the last 12 months. Test the shape in [Ch 2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/), then move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/).
+- **BUILD** if: 7+ strong-signal calls (score 7+ with 3+ emotional flags), a named workaround the customer is already paying for, and a named why-now from the last 12 months. Test the shape in [Lesson 2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/), then move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/).
 - **PIVOT** if: 4-6 strong signals, OR the pain is real but belongs to a different persona than you targeted (e.g., you interviewed founders but the pain lives with their CFOs). Run 5 sharper interviews with the corrected ICP, then refill this page.
 - **KILL** if: fewer than 4 strong signals OR no workaround surfaced in the 10 interviews. Find a different problem and write the 200-word post-mortem below.
 
 Then walk the page through these four moves:
 
-- **Get 2 advisor signatures within 48 hours.** Email the page as a PDF. Ask: "Would you argue with this problem statement?" One sentence response is enough. If both say no, you've passed Module 2's checkpoint and you move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/) next.
+- **Get 2 advisor signatures within 48 hours.** Email the page as a PDF. Ask: "Would you argue with this problem statement?" One sentence response is enough. If both say no, you've passed Module 2's checkpoint and you move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) next.
 - **If you landed in the BUILD lane (7+ strong signals), run the 3 pre-orders test before writing code.** Email your 5 strongest-signal interviewees. Ask each for a $500 deposit, a signed letter of intent, or a paid waitlist slot. Three yes-and-paid out of five = build. Zero yes = the 7+ scores were politer than you thought, slide back to pivot.
 - **If you landed in the PIVOT lane (4-6), pick the cleanest segment and run 5 sharper interviews using [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) again.** Don't rerun the same 10 - they've already given you their honest answer. New segment, new interviews, one week.
 - **If you landed in the KILL lane (fewer than 4), write a 200-word post-mortem to your future self.** What ICP did you pick wrong? What why-now did you assume that wasn't true? What workaround did you not learn about until interview 7? The post-mortem is the most valuable artifact from a kill round - it stops you from picking the same wrong target again next quarter. The [stop-AI-obsession validation post](/blog/stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap/) has the long version of the discipline.

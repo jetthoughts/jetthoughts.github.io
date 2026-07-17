@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Caveat, 'Patrick Hand', cursive" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Caveat, 'Patrick Hand', 'Comic Sans MS', cursive" role="img" aria-labelledby="title desc">
   <title id="title">Weekly report comparison: jargon wall vs. one-page five-section format</title>
-  <desc id="desc">Two side-by-side mock email screenshots covering the same five working days. The left panel is a 1,840-word jargon wall with no clickable URL. The right panel is a one-page report with five labelled sections — Shipped, In review, Blocked, Cut, Concern.</desc>
+  <desc id="desc">Two side-by-side mock email screenshots covering the same five working days. The left panel is a 1,840-word jargon wall with no clickable URL. The right panel is a one-page report with five labelled sections - Shipped, In review, Blocked, Cut, Concern.</desc>
 
   <rect width="900" height="560" fill="#fafaf7"/>
 
@@ -71,7 +71,7 @@
 
       <!-- 2 In review -->
       <text x="490" y="215" font-weight="bold" fill="#b8860b">2. In review</text>
-      <text x="490" y="233" fill="#333">PR #847 - Marcos, Priya reviewing Tue</text>
+      <text x="490" y="233" fill="#333">PR #843 - Marcos, Priya reviewing Tue</text>
       <text x="490" y="249" fill="#333">PR #851 - Marcos, no reviewer (PTO)</text>
 
       <!-- 3 Blocked -->

@@ -38,6 +38,8 @@ related_posts: false
 
 This page consolidates the hire-track material from the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course into one reference. Read the section you need, skip the rest.
 
+![The hire track as a left-to-right strip of four numbered cards: step 1 find your developers - pick a geography and two platforms; step 2 the Fractional CTO bridge - 5 hours a week of senior eyes at $400-600 a week; step 3 the interview screen - 7 questions where Q7 splits the pool; step 4 read the SOW - the milestone clause is the $78K line.](hire-track-map.svg)
+
 ---
 
 ## Where to find developers in 2026
@@ -72,32 +74,15 @@ The 2026 hire decision is not "remote vs in office." It is which of four regions
 
 **Mass-market (Upwork) - $35 to $120 per hour.** Self-vetting required: the marketplace does no quality screen, you become the technical interviewer. Acceptable for point tasks only - a single landing page, a logo, a one-off web scraper. Anything load-bearing (payments, auth, multi-tenant data, a third-party integration with retry logic) belongs on one of the three professional platforms above, not Upwork.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-  Start(["You decided to hire.<br/>one-page brief says backend-heavy."])
-  Start --> Q1{"Regulated industry?<br/>HIPAA / SOC 2 / fintech?"}
-  Q1 -->|Yes| Onshore["Onshore (US / EU).<br/>$130K-$210K/yr. 30-60d hire."]
-  Q1 -->|No| Q2{"Backend-heavy and async OK?"}
-  Q2 -->|Yes| Q3{"Budget per hour?"}
-  Q2 -->|No, need timezone overlap| Nearshore["Nearshore (LATAM).<br/>$45-$100/hr. 2-5d hire."]
-  Q3 -->|"$15-$70/hr"| Tier2["Tier-2 India.<br/>Jaipur / Kochi / Indore / Coimbatore.<br/>NOT Bangalore."]
-  Q3 -->|"$45-$100/hr"| Nearshore
-  Q3 -->|"$130K+/yr"| Onshore
-  Start -.->|"Single point task<br/>(logo, landing page, scraper)"| Upwork["Upwork.<br/>$35-$120/hr. Point tasks only."]
-  classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
-  classDef question fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
-  classDef onshore fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
-  classDef nearshore fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-  classDef tier2 fill:#f5e9ff,stroke:#7c3aed,stroke-width:2.5px,color:#1a1a1a
-  classDef upwork fill:#fffbe6,stroke:#bf8a00,stroke-width:2.5px,color:#1a1a1a
-  class Start start
-  class Q1,Q2,Q3 question
-  class Onshore onshore
-  class Nearshore nearshore
-  class Tier2 tier2
-  class Upwork upwork
-```
+**Which geography for which build** (rate bands and hire cycles are in the four paragraphs above):
+
+| If your build is... | Route to | Why |
+|---|---|---|
+| In a regulated industry (HIPAA / SOC 2 / fintech), or your budget sits in the onshore band above | Onshore (US / EU) | Compliance, data-residency, or a board mandate justifies the highest cost-to-output ratio on the map |
+| Backend-heavy, async is fine, and you want the lowest rate band above | Tier-2 India - Jaipur, Kochi, Indore, Coimbatore (not Bangalore) | Senior engineers accept 20-30% below Bangalore; PRs merge overnight against your CLAUDE.md |
+| Backend-heavy, async is fine, at the mid rate band above | Nearshore (LATAM) | Same async workflow, shorter hire cycle, closer timezone overlap |
+| Anything needing live timezone overlap for daily standups | Nearshore (LATAM) | Full US Pacific-to-Eastern overlap; English fluency for standups and Slack |
+| A single point task - logo, landing page, one-off scraper | Upwork | Self-vetting marketplace; non-load-bearing work only |
 
 ### Six platforms ranked
 
@@ -120,15 +105,13 @@ You do not need a 50% co-founder. You need 5 hours a week of senior judgment to 
 
 ### The 5 jobs the Fractional CTO does
 
-**Architecture review - 1 hr/wk.** Every Monday morning, the Fractional CTO opens the codebase and reads what shipped last week. They look at the data model, the route table, the queue setup, and the third-party integrations. They tell you in one paragraph in a Notion doc: "this should be Rails, not microservices; here is why." They catch the moment your contractor proposes a separate React frontend talking to a Node API talking to a Python ML service for an app with 18 paying users.
-
-**PR review - 2 hrs/wk.** Every pull req your contractor opens passes through the Fractional CTO before merge. They catch the API key checked into the repo, the n+1 query in line 47, the missing CSRF token, the auth bypass on the admin route, the abstraction nobody asked for. Veracode's GenAI Code Security Report 2025 found 45% of LLM-generated code shipped at least one exploitable security flaw. PR review is the one thing that catches this before prod.
-
-**Hiring filter - 1 hr/wk during hiring sprint.** When you go to hire your first contractor or full-time engineer, the Fractional CTO runs the tech screen. They read the candidate's last three GitHub commits. They ask the four technical questions you cannot ask. The cost of one wrong-fit hire at month three is two months of runway. The cost of the Fractional CTO doing the screen is one hour at $80 to $120.
-
-**Vendor BS detection - as needed.** When the agency proposes Kubernetes for 200 users, the Fractional CTO sits in the call and says "why?" When the contractor proposes GraphQL because "REST is old," the Fractional CTO says "show me the monorepo plan." They are the senior voice in a room where you are otherwise the only buyer in front of three people pitching.
-
-**Founder coaching - 1 hr/wk.** Every Friday, 30 to 60 minutes. The Fractional CTO translates "the queue is backed up because Resque is dropping jobs" into "promise the May demo for May 12, not May 5." They make the engineering reality legible to your roadmap. The reverse is also true: they hear you describe the customer's pain and tell you which feature is one day of work and which is three weeks.
+| Job | Time / week | What it catches |
+|---|---|---|
+| **Architecture review** | 1 hr (Monday) | The contractor proposing microservices - or a separate React frontend + Node API + Python ML service - for an app with 18 paying users. The verdict lands as one paragraph in a Notion doc. |
+| **PR review** | 2 hrs | The API key checked into the repo, the n+1 query, the missing CSRF token, the auth bypass on the admin route - the 45% of LLM-generated code Veracode's GenAI Code Security Report 2025 found ships an exploitable security flaw, caught before prod. |
+| **Hiring filter** | 1 hr (during a hiring sprint) | A wrong-fit first hire, which costs two months of runway. The FCTO runs the tech screen, reads the candidate's last three commits, and asks the four technical questions you cannot. |
+| **Vendor BS detection** | As needed | Kubernetes for 200 users, GraphQL "because REST is old" - the senior "why?" in a room where you are otherwise the only buyer facing three people pitching. |
+| **Founder coaching** | 1 hr (Friday) | Translates "Resque is dropping jobs" into "promise the demo for the 12th, not the 5th" - and tells you which feature is one day of work and which is three weeks. |
 
 ### Five criteria for hiring a Fractional CTO
 
@@ -154,24 +137,32 @@ Most "Fractional CTO" listings on LinkedIn are either career CTOs in transition 
 
 > **JetThoughts is not a Fractional CTO provider.** We are an engineering services shop (full-team rescues, rebuilds, technical coaching). The platforms above host specialized fractional executives screened on the criteria in this section. This chapter teaches you how to hire one well; we do not sell the role.
 
-**Week 1 onboarding:** Sign the MSA on Day 0. Day 1: share the Validated Problem Statement and one-page brief. Add them to the private GitHub org with `Triage` repo permissions (can review pull requests but cannot merge code) - not `Admin`, not `Write`. Day 3: first 30-minute architecture review. They write one paragraph in a shared Notion doc: "what I would change, what I would leave alone." Day 7: first PR review. Their comments should be in plain English so you understand the trade-off. End of Week 4: ask them the Friday-coaching question. "Should I hire any contractors yet?" If the answer is hand-wavy, you have hired wrong; replace.
+**First-month onboarding (Day 0 through the Week-4 checkpoint):**
+
+| Day | What happens |
+|---|---|
+| **Day 0** | Sign the MSA. |
+| **Day 1** | Share the Validated Problem Statement and one-page brief. Add them to the private GitHub org with `Triage` repo permissions (can review pull requests but cannot merge code) - not `Admin`, not `Write`. |
+| **Day 3** | First 30-minute architecture review. They write one paragraph in a shared Notion doc: "what I would change, what I would leave alone." |
+| **Day 7** | First PR review. Their comments should be in plain English so you understand the trade-off. |
+| **End of Week 4** | Ask them the Friday-coaching question: "Should I hire any contractors yet?" If the answer is hand-wavy, you have hired wrong; replace. |
 
 ### The Fractional CTO's first 4 weeks (parallel to your Module 5 first-paying-customer push)
 
-**Read this before you decide whether to hire** - it shows what the FCTO's first 4 weeks look like alongside your Module 5 work, so you can evaluate whether the timing makes sense and what you should expect from the engagement. The FCTO arrives the week one or two Ch 4.5 ceiling signals flip red (Ch 4.5 has a 5-signal scoreboard; "red" means a signal has been firing for 4+ weeks). They are NOT building features alongside you - they are reading what already shipped, naming what is about to break, and deciding salvage vs rebuild. The four-week onboarding runs in parallel to your Module 5 outreach so neither stream blocks the other:
+**Read this before you decide whether to hire** - it shows what the FCTO's first 4 weeks look like alongside your Module 5 work, so you can evaluate whether the timing makes sense and what you should expect from the engagement. The FCTO arrives the week one or two Lesson 4.5 ceiling signals flip red (Lesson 4.5 has a 5-signal scoreboard; "red" means a signal has been firing for 4+ weeks). They are NOT building features alongside you - they are reading what already shipped, naming what is about to break, and deciding salvage vs rebuild. The four-week onboarding runs in parallel to your Module 5 outreach so neither stream blocks the other:
 
 | Week | Fractional CTO ships | You ship | Why parallel |
 |------|----------------------|----------|--------------|
-| **Week 1** | One-page architecture assessment in a shared Notion doc: "the shed is holding" OR "we need a house in 8 weeks." Names the highest-risk ceiling signal and the patch cost. | Send the 50-name personal-network outreach from Ch 5.3. | The architecture verdict is the input to your runway math; your outreach is the input to your revenue math. Both need to happen before week 5. |
-| **Week 2** | Watch Supabase logs for RLS violations, slow queries, error rates as your first 10 invited interviewees create accounts. Patches one critical bug ONLY if data-corruption risk. | Book the first 2-3 demo calls from Ch 5.3 replies. Run them. | The Fractional CTO reads the signal of your first 10 real users; you read the signal of your first 2-3 demo prospects. |
-| **Week 3** | Ships ONE small hardening change to staging: faster dashboard query, fixed RLS policy, or webhook idempotency check. Not a feature - a stabilizer. | Send the first Ch 5.6 Design Partner Agreement to a hot lead. | One stabilization stream + one revenue stream = the founder gets paid pilots without the contractor getting tempted into feature work. |
-| **Week 4** | Friday-coaching call: "based on the first 4 weeks, here is the 90-day plan." Either (a) keep self-serve + Fractional CTO bridge for 3 more months, (b) hire a full engineer this month, or (c) rebuild from scratch on Rails/Django/Laravel in 8-12 weeks. | Close the first paid pilot from Ch 5.6. Stripe deposit clears. | Both streams converge: the Fractional CTO's 90-day plan and your first revenue are the two inputs to the next hire decision. |
+| **Week 1** | One-page architecture assessment in a shared Notion doc: "the shed is holding" OR "we need a house in 8 weeks." Names the highest-risk ceiling signal and the patch cost. | Send the 50-name personal-network outreach from Lesson 5.3. | The architecture verdict is the input to your runway math; your outreach is the input to your revenue math. Both need to happen before week 5. |
+| **Week 2** | Watch Supabase logs for RLS violations, slow queries, error rates as your first 10 invited interviewees create accounts. Patches one critical bug ONLY if data-corruption risk. | Book the first 2-3 demo calls from Lesson 5.3 replies. Run them. | The Fractional CTO reads the signal of your first 10 real users; you read the signal of your first 2-3 demo prospects. |
+| **Week 3** | Ships ONE small hardening change to staging: faster dashboard query, fixed RLS policy, or webhook idempotency check. Not a feature - a stabilizer. | Send the first Lesson 5.6 Design Partner Agreement to a hot lead. | One stabilization stream + one revenue stream = the founder gets paid pilots without the contractor getting tempted into feature work. |
+| **Week 4** | Friday-coaching call: "based on the first 4 weeks, here is the 90-day plan." Either (a) keep self-serve + Fractional CTO bridge for 3 more months, (b) hire a full engineer this month, or (c) rebuild from scratch on Rails/Django/Laravel in 8-12 weeks. | Close the first paid pilot from Lesson 5.6. Stripe deposit clears. | Both streams converge: the Fractional CTO's 90-day plan and your first revenue are the two inputs to the next hire decision. |
 
 The trap to avoid: the Fractional CTO who arrives in Week 1 and immediately recommends "rewrite the whole thing in Rails." That candidate sees vibe-coded MVPs as broken not salvageable; the recommendation usually means they want the bigger billable engagement. Push back: "what is the ONE ceiling signal we can patch in Supabase this week to give us 90 more days to decide?" A real Fractional CTO has the patch ready by Friday.
 
 ### The monthly architecture review habit (the one thing the Fractional CTO does every month)
 
-First Monday of every month, 60 minutes, the Fractional CTO and you read the Ch 4.5 5-signal scoreboard together. The standing agenda:
+First Monday of every month, 60 minutes, the Fractional CTO and you read the Lesson 4.5 5-signal scoreboard together. The standing agenda:
 
 1. Re-score the 5 signals against last 30 days of usage data, OpenAI invoice, support tickets, schema changes, and customer security/compliance asks. 20 minutes.
 2. Compare to last month's score. Did any signal flip from green to yellow, or yellow to red? Did any flip back? 10 minutes.
@@ -204,7 +195,7 @@ You are not picking the stack alone - your Fractional CTO or hired engineer make
 
 ### Default: Rails (Ruby on Rails)
 
-Rails is the JetThoughts default and the Indie Hackers / DHH / Pieter Levels community standard. The reasoning is empirical, not religious: Rails ships fast, one engineer can operate the full stack end-to-end, the conventions are tight enough that the next engineer you hire reads the codebase in a day, and the deployment story (Heroku, Fly.io, Render) costs $7-$50/month at pre-seed scale. Basecamp ([DHH's *One-Person Framework* essay](https://world.hey.com/dhh/the-one-person-framework-711e6318)) is the case study: 50M+ users on a Rails monolith run by ~20 engineers. At your scale (47-5,000 paying users) one Rails engineer can ship + operate the whole thing.
+Rails is the JetThoughts default and the Indie Hackers / DHH / Pieter Levels community standard. The reasoning is empirical, not religious: Rails ships fast, one engineer can operate the full stack end-to-end, the conventions are tight enough that the next engineer you hire reads the codebase in a day, and the deployment story (Heroku, Fly.io, Render) costs $7-$50/month at pre-seed scale. Basecamp ([DHH's *One-Person Framework* essay](https://world.hey.com/dhh/the-one-person-framework-711e6318)) is the case study: two decades of products on a Rails monolith run by a famously small team, and Shopify serves millions of merchants on one Rails monolith. At your scale (47-5,000 paying users) one Rails engineer can ship + operate the whole thing.
 
 **Why Rails wins for the non-technical founder's hired team:** the hire pool is deep (15+ years of Rails engineers), the framework opinions are tight (less time arguing about conventions, more time shipping), background jobs / email / file uploads / authentication / payment / admin / search are all batteries-included rather than 12 separate npm packages, and the Rails community produced the rescue patterns we see work in production (Pundit for authorization, Devise for auth, Sidekiq for jobs, ActiveAdmin for staff tools).
 
@@ -252,10 +243,12 @@ Run it after the resume passes, before any technical take-home. The 30-minute sc
 
 The seven questions are organised around what costs the most when a candidate fakes it.
 
-- **Workflow + cost (Q1, Q2)** catch the candidate who has never set up a `.cursorrules` file or seen a personal Anthropic invoice. That candidate will silently run your monthly AI bill from $200 to $4,800 in their first sprint.
-- **Verification + slopsquatting (Q3, Q4)** catch the candidate who outsources PR review to the model. That is the candidate whose name ends up next to the CSRF hole in your incident postmortem.
-- **Accountability + refactor (Q5, Q6)** catch the candidate who has never owned a system through a production incident or a non-trivial rewrite. The "I refactor as I go" answer is the kind of rewrite that kills startups.
-- **Disagreement (Q7)** is the one question that actually splits the population. AI theater candidates accept the model's first suggestion. AI direction candidates read the diff, reject most of it, and can show you the PR comment where they did it.
+| Question pair | Catches the candidate who... | What faking it costs you |
+|---|---|---|
+| **Workflow + cost (Q1, Q2)** | Has never set up a `.cursorrules` file (the repo's standing instruction file for AI coding tools) or seen a personal Anthropic invoice | Silently runs your monthly AI bill from $200 to $4,800 in their first sprint |
+| **Verification + slopsquatting (Q3, Q4)** | Outsources PR review to the model ([slopsquatting](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/) = installing a fake package the AI invented) | Their name ends up next to the CSRF hole in your incident postmortem |
+| **Accountability + refactor (Q5, Q6)** | Has never owned a system through a production incident or a non-trivial rewrite | The "I refactor as I go" answer is the kind of rewrite that kills startups |
+| **Disagreement (Q7)** | Accepts the model's first suggestion and cannot show one PR where they disagreed with it | This is the one question that actually splits the population - a candidate who directs the model reads the diff, rejects most of it, and can show you the PR comment where they did it |
 
 ### The scoring discipline
 
@@ -267,22 +260,13 @@ Send the polite-no email the same evening, not Friday: "Thank you for the time. 
 
 ## Reading the SOW
 
-*"Vendor shall be deemed to have delivered a milestone upon deployment to the Client-accessible staging environment."* That is the single most expensive sentence a founder will sign this year. It moves the trigger for a milestone payment from "the feature works for users" to "the agency pushed code to a URL." A SaaS founder we worked with in Q1 2026 had $78K of milestone invoices clear under that one line before her fractional CTO opened the staging URL and watched it 500 on the second click.
+*"Vendor shall be deemed to have delivered a milestone upon deployment to the Client-accessible staging environment."* That is the single most expensive sentence a founder will sign this year. It moves the trigger for a milestone payment from "the feature works for users" to "the agency pushed code to a URL." In early 2026, one SaaS founder had $78K of milestone invoices clear under that one line before her fractional CTO opened the staging URL and watched it 500 on the second click.
 
 Her general counsel had cleared the SOW the night before signing. He had flagged liability and the IP assignment, fixed both, and called it done. The milestone-acceptance clause sat three pages later and he had skimmed it. Generalist lawyers cover the catastrophic clauses. Agency templates leak money through the operational ones in between.
 
 ### Eight clauses that quietly cost you money
 
-| Clause | What it should say | Red flag wording | What to redline |
-|---|---|---|---|
-| **1. Scope definition** | A feature list at "Rails 7 app with sign-up, contractor-match, payments, hundred-row admin" with a per-feature day estimate | "Scope to be defined sprint by sprint" / "agile discovery throughout" | Demand the feature list and day estimate before you sign. The SOW is a blank cheque without it. |
-| **2. Milestone acceptance** | Milestone passes when CI is green on main, you have clicked the feature end-to-end on staging, AND you have confirmed delivery in writing | Milestone "delivered upon deployment to the Client-accessible staging environment" with a 5-day silent-acceptance window | Write acceptance criteria into the SOW. Convert silent acceptance to active sign-off. |
-| **3. Change-request process** | Capped at 10% of SOW value, written estimate naming developer and hours per change | Open-ended hourly at $185/hr with verbal approval | Strike "verbal approval." Add the 10% cap and the written-estimate requirement. |
-| **4. IP and code ownership** | Milestone-based assignment: upon payment of each milestone, the code for that milestone is yours, irrevocably | Ownership transfers "upon receipt of all amounts due under this Agreement" | Strike "all amounts due." Replace with milestone-by-milestone IP transfer so payment disputes do not become hostage situations. |
-| **5. Third-party dependencies** | Every account (AWS, Stripe, OpenAI) on your company email from day one, paid by your card, agency on IAM sub-access only. Monthly pass-through capped with founder approval | Pass-through at cost + 15% with accounts under the agency's email | Demand account ownership from day one. Add the founder-approval gate. (One founder caught a $4,800 surprise OpenAI line by enforcing this.) |
-| **6. Termination triggers** | Quality trigger (2 consecutive missed acceptance criteria), slip trigger (>21 days without revised plan), termination-for-convenience with defined exit fee, 30-day handover obligation | "Terminate only for material breach" with 30 days to cure | Add the quality, slip, and convenience triggers. Lock in the 30-day handover. |
-| **7. Post-launch warranty** | Warranty starts the day deliverables are first served to live paying users, runs 90 days | Warranty clock starts at "Delivery" and runs 30 days (can expire before users see the feature) | Anchor warranty start to production launch, not delivery. Extend to 90 days. |
-| **8. Dispute resolution** | Non-binding mediation step before arbitration, neutral venue, prevailing-party fee-shift (loser pays winner's attorney fees) | Binding arbitration in the agency's home county, each party bearing own costs | Add mediation step. Switch to neutral venue. Add fee-shift. |
+For the full 8-clause table - what each clause should say, the red-flag wording, and the exact redline for each - see the [SOW Reading Guide](/course/tech-for-non-technical-founders-2026/sow-reading-guide/). The milestone-acceptance clause below is the one that costs the most; read it before you read the rest.
 
 ### The milestone-acceptance redline
 

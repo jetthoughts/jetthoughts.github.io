@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" role="img" aria-labelledby="kit-sample-title">
-  <title id="kit-sample-title">Sample row from the First 10 Customers Airtable tracker</title>
+  <title id="kit-sample-title">Sample row from the First 10 Customers Google Sheet tracker</title>
   <defs>
     <style>
       .heading       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", sans-serif; font-size: 24px; fill: #1a1a1a; font-weight: 700; }
@@ -17,7 +17,7 @@
     </style>
   </defs>
 
-  <text x="500" y="35" class="heading" text-anchor="middle">First 10 Customers tracker - sample rows from the Airtable template</text>
+  <text x="500" y="35" class="heading" text-anchor="middle">First 10 Customers tracker - sample rows from the Google Sheet template</text>
 
   <!-- Header -->
   <rect x="40" y="60" width="920" height="42" class="header-row"/>

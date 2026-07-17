@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Caveat','Patrick Hand',cursive">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Caveat','Patrick Hand','Comic Sans MS',cursive">
   <defs>
     <filter id="rough2" x="-2%" y="-2%" width="104%" height="104%">
       <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="13"/>

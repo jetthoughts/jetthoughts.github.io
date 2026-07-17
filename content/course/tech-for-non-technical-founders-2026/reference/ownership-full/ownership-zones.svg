@@ -2,12 +2,12 @@
   <title id="zones-title">The four ownership zones a non-technical founder must control: code, cloud, secrets, and domain</title>
   <defs>
     <style>
-      .zone-title  { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
-      .zone-sub    { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 17px; fill: #444; font-weight: 600; }
-      .zone-note   { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 15px; fill: #555; font-style: italic; }
-      .header      { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 30px; fill: #1a1a1a; font-weight: 700; }
-      .caption     { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 16px; fill: #666; font-style: italic; }
-      .badge       { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 13px; fill: #fff; font-weight: 700; }
+      .zone-title  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .zone-sub    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #444; font-weight: 600; }
+      .zone-note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #555; font-style: italic; }
+      .header      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 30px; fill: #1a1a1a; font-weight: 700; }
+      .caption     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #666; font-style: italic; }
+      .badge       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #fff; font-weight: 700; }
       .zone-code   { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; stroke-linejoin: round; }
       .zone-cloud  { fill: #e8f4f8; stroke: #0277bd; stroke-width: 2.5; stroke-linejoin: round; }
       .zone-sec    { fill: #fff8e1; stroke: #b8860b; stroke-width: 2.5; stroke-linejoin: round; }
@@ -53,7 +53,7 @@
   <text x="110" y="367" class="badge" text-anchor="middle">ZONE 3</text>
   <text x="162" y="371" class="zone-title">SECRETS</text>
   <text x="70" y="405" class="zone-sub">Database creds - API keys - .env</text>
-  <text x="70" y="433" class="zone-note">If only Marcus knows the prod DB</text>
+  <text x="70" y="433" class="zone-note">If only Marcos knows the prod DB</text>
   <text x="70" y="453" class="zone-note">password, you do not have a database.</text>
   <text x="70" y="481" class="zone-note">You have a hostage situation.</text>
   <text x="70" y="507" class="zone-note">Stored in Secrets Manager / 1Password</text>

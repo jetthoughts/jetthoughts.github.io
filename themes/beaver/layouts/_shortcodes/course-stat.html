@@ -1,6 +1,6 @@
 {{- /* Course stats from the single source data/course_sequence.yaml.
      Usage in body prose (positional param):
-       course-stat chapters   -> count of sequence entries excluding Chapter 0
+       course-stat chapters   -> count of sequence entries excluding the Overview
        course-stat modules    -> count of distinct module numbers in the sequence
        any other key          -> looked up in the yaml's `stats:` map (e.g. artifacts)
      Frontmatter and cover binaries cannot run shortcodes - use near numbers
@@ -10,14 +10,14 @@
 {{- if eq $key "chapters" -}}
   {{- $n := 0 -}}
   {{- range $data.sequence -}}
-    {{- if ne .module "Chapter 0" -}}{{- $n = add $n 1 -}}{{- end -}}
+    {{- if ne .module "Overview" -}}{{- $n = add $n 1 -}}{{- end -}}
   {{- end -}}
   {{- $n -}}
 {{- else if eq $key "modules" -}}
   {{- $mods := slice -}}
   {{- range $data.sequence -}}
-    {{- $m := index (findRE `^Chapter (\d+)` .module 1) 0 -}}
-    {{- if and $m (ne $m "Chapter 0") (not (in $mods $m)) -}}{{- $mods = $mods | append $m -}}{{- end -}}
+    {{- $m := index (findRE `^Lesson (\d+)` .module 1) 0 -}}
+    {{- if and $m (not (in $mods $m)) -}}{{- $mods = $mods | append $m -}}{{- end -}}
   {{- end -}}
   {{- len $mods -}}
 {{- else -}}

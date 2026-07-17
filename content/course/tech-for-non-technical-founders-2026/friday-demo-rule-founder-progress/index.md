@@ -37,9 +37,9 @@ course_nav: false
 >
 **Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
 
-What were you actually shown on your last status call? A B2B founder we picked up in Q3 2026 sat with that question for ten minutes after a Tuesday call. Her notes from the call said: a burndown chart, a screenshot of a Jira board with eleven cards in "Done", a Figma frame her designer had updated overnight, and a verbal summary that started with "good progress this week." Nothing in her notes was a thing she could click. She had paid **$31K that month** for the team that ran the call, and the call had shown her zero working software.
+What were you actually shown on your last status call? Pull up your notes and read what is on them: a burndown chart, a screenshot of a Jira board with eleven cards in "Done", a Figma frame the designer updated overnight, a verbal summary that opened with "good progress this week." Count how many of those are things you could click. On a call that costs a founder **$31K a month**, the honest count is often zero - a full status meeting that showed no working software at all.
 
-She wrote one Slack message that night: *"From now on we run a 15-minute Friday demo. Loom or live, your choice. Working software only. I want to click everything you show me."* By Friday of week 3, two of her four developers had quietly left the project; the lead admitted the checkout flow she had been tracking for six weeks was three Postman requests in a Notion doc and a Stripe sandbox key in someone's `.env`. She found that out in 15 minutes, on a recorded call, with no fight.
+The fix is one Slack message, sent that night: *"From now on we run a 15-minute Friday demo. Loom or live, your choice. Working software only. I want to click everything you show me."* Send it, and the answer arrives fast: by Friday of week 3, the developers who were coasting surface, and the checkout flow you have tracked for six weeks turns out to be three Postman requests in a Notion doc and a Stripe sandbox key in someone's `.env`. You find that out in fifteen minutes, on a recorded call, with no fight.
 
 ## Why most weekly status calls fail
 
@@ -81,33 +81,11 @@ The two patterns worth knowing in your head, not on a template:
 
 **Same-name reviewer on Q5.** If the same name keeps appearing as the only reviewer for every pull request, you have a bus factor of one. [Will Larson on engineering anti-patterns](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) treats the pull request funnel as the load-bearing signal for engineering health. The Friday demo is where you watch that funnel from outside the system. JT's [eight red flags checklist](/blog/dev-shop-red-flags-checklist/) describes the bus-factor failure mode in plain English.
 
-A founder we worked with sat through six weeks of "I will send the URL after the call" before her fractional CTO clicked the link the team finally sent and got a 404. The CTO's first audit found the staging environment had been broken for two months and nobody had escalated it.
+One founder sat through six weeks of "I will send the URL after the call" before her fractional CTO clicked the link the team finally sent and got a 404. The CTO's first audit found the staging environment had been broken for two months and nobody had escalated it.
 
-```mermaid
+![The Friday demo weekly loop: Monday 9am the founder posts the 7-question template in #dev Slack, Tuesday through Thursday the team builds and reviews against those questions, and Wednesday end of day the team checks whether anything won't be ready - if yes they replan before Friday, if no they go straight on. Friday 4pm is a 15-minute Loom or live demo of working software only, the founder clicks every staging URL during the call, and that evening forwards the Loom URL to their inbox - then the cycle repeats the next Monday. After 4 Fridays, review the pattern: 4 of 4 demos clickable means the cadence works and continues weekly; 2 of 4 or fewer means something is stalling, so run the Org Chart audit and the red-flags checklist.](friday-loop.svg)
 
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#f5f5f5', 'primaryBorderColor':'#666', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-
-flowchart TD
-
-    Mon([Monday 9am<br/>Founder posts the<br/>7-question template<br/>in #dev Slack]) --> Tue([Tuesday-Thursday<br/>Team builds + reviews<br/>against the questions])
-    Tue --> Wed{Wednesday EOD<br/>Anything not<br/>going to be ready?}
-    Wed -->|Yes| Replan([Team replans<br/>before Friday])
-    Wed -->|No| Fri([Friday 4pm<br/>15-min Loom or live<br/>working software only])
-    Replan --> Fri
-    Fri --> Click([Founder clicks<br/>every staging URL<br/>during the call])
-    Click --> Forward([Forward Loom URL<br/>to your inbox<br/>same evening])
-    Forward --> Score{After 4 weeks<br/>review the pattern}
-    Score -->|4 of 4 demos clickable| Healthy([Cadence works<br/>continue weekly])
-    Score -->|2 of 4 or fewer| Investigate([Run the<br/>oversight audit<br/>standup + report + spaceship])
-    classDef good fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-    classDef bad  fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
-    classDef neutral fill:#f5f5f5,stroke:#666,stroke-width:2px,color:#1a1a1a
-    class Mon,Tue,Fri,Click,Forward neutral
-    class Wed,Score neutral
-    class Replan,Healthy good
-    class Investigate bad
-
-```
+If the four-week score lands at 2 of 4 or fewer, run the [Org Chart audit](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) and the [eight red flags checklist](/blog/dev-shop-red-flags-checklist/) before adding any new process - the demo cadence is the symptom log, those two are the diagnosis.
 
 ## What to do tomorrow
 

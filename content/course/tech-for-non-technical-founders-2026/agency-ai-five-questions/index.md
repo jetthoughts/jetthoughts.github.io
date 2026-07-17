@@ -24,17 +24,13 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the "Manage AI-Era Risks" path of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Send 24 hours before the discovery call. Score in real time during the call.
-
-# The "We Use AI" 5-Question Script
+Template companion to the "Manage AI-Era Risks" path of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Send 24 hours before the discovery call. Score in real time during the call.
 
 Five questions that catch AI theatre in 30 minutes - hand them to your next agency call before you sign anything.
 
-By the end of one Tuesday discovery call you will know whether the agency claiming "we use AI to ship 3x faster" can describe what their developers do with Cursor on a Wednesday morning, or whether the AI talk is a slide. Five questions, sent in writing 24 hours before the call, scored 0 or 1 in real time. Two failed questions is a walkaway.
+By the end of one Tuesday discovery call you will know whether the agency claiming "we use AI to ship 3x faster" can describe what their developers do with Cursor on a Wednesday morning, or whether the AI talk is a slide. Five questions, sent in writing 24 hours before the call, scored 0 or 1 in real time. Three failed questions is a walkaway.
 
-A founder we picked up in Q1 2026 had been three weeks deep with an "AI-native" agency that promised a four-week MVP for $34K. She asked for a walkthrough of one PR the team had merged that week. The lead developer screenshared a staging branch; her independent advisor paused the screen-share and pointed at line 14 of `config/database.yml`: an OpenAI API key, a Stripe live key, and a database password committed in plaintext, on a public-by-default GitHub repo.
-
-Then he opened the agency's OpenAI billing dashboard the developer had also screenshared by accident: **$4,800 in API charges in the last 30 days**, no project tags, no per-developer attribution, and the agency owner could not explain which client the spend belonged to. She walked. The five questions below would have caught both in the first 20 minutes.
+Two failures hide behind the "AI-native" pitch, and both cost real money. The first is where the AI-written code lands. An agency moving fast with Cursor commits secrets straight into the repo - an OpenAI API key, a Stripe live key, a database password sitting in plaintext at line 14 of `config/database.yml`, on a GitHub repo that defaults to public. The second is the token bill. An agency that never priced its own AI usage runs up charges it cannot attribute - **$4,800 of OpenAI spend in 30 days** with no project tags and no per-developer breakdown, quietly passed through on top of the $34K four-week MVP. The five questions below surface both inside the first 20 minutes of a discovery call, before you sign.
 
 Most agencies in 2026 are not malicious about AI. They adopted Cursor in a hurry, never wrote down a workflow, and never priced the token bill. The damage is the same either way.
 
@@ -47,6 +43,10 @@ Score in real time - 0 or 1 per question, in a Notion doc next to each answer. A
 If the agency declines to answer in advance, that is a 0 on every question. Exercise over.
 
 ## The five questions
+
+Keep this card open during the call - the pass signal sits beside the fail signal for each question, with a box to score 0 or 1 in real time. The full criteria for each are in the sections below.
+
+![The five agency AI questions on one card - the pass signal beside the fail signal for each, with a box to score 0 or 1 in real time](scorecard-at-a-glance.svg)
 
 ### Q1 - The workflow question
 
@@ -62,7 +62,7 @@ If the agency declines to answer in advance, that is a 0 on every question. Exer
 
 > "What does the average developer on your team spend on AI tokens per month, and who pays it? Will it pass through to my invoice, and what should I budget per month for the project we just scoped?"
 
-**Pass:** A per-developer dollar range ($80 to $300 per month for Cursor seats plus Anthropic and OpenAI API usage), a pass-through model written into the SOW, and a sample invoice line-item they will email after the call. They have a budget alert on the API account.
+**Pass:** A per-developer dollar range ($80 to $300 per month in Anthropic and OpenAI API usage on top of the $20-40 Cursor seat; undisciplined agent-loop users can hit $500 - the [AI Token Bill lesson](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/) has the full bands), a pass-through model written into the SOW, and a sample invoice line-item they will email after the call. They have a budget alert on the API account.
 
 **Fail:** "It is included in the rate." "We don't track it that closely." "We absorb the AI costs." Sign without this number and you get a surprise five-figure OpenAI charge in month two - the $4,800 line in the opening story was that number two weeks before the founder caught it.
 
@@ -82,7 +82,7 @@ If the agency declines to answer in advance, that is a 0 on every question. Exer
 
 *slopsquatting: when AI suggests a package name that doesn't exist, an attacker registers it, and your build pulls the malicious version. See the [dedicated chapter](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/).*
 
-> "In April 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist; attackers register those names and wait for developers to install the typo. How does your team prevent installing a hallucinated gem or pip package?"
+> "In March 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist; attackers register those names and wait for developers to install the typo. How does your team prevent installing a hallucinated gem or pip package?"
 
 **Pass:** A pre-vetted allowlist with a written process for adding new packages. A scanner like Socket or Snyk on every PR that blocks the build on new dependencies until a human approves. They use the term "slopsquatting" without prompting and cite the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) or the [SecurityWeek piece on AI coding agents and supply-chain risk](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/).
 
@@ -109,7 +109,7 @@ The AI-theatre pattern: the salesperson takes every question. Answers come back 
 One concrete contrast on Q3:
 
 > Bad: "Our senior reviews every PR. We have a high standard."
-> Good: "Open PR #1247 - Marcus reviewed it Tuesday morning. He flagged that Cursor had added `gem 'active_record_extras_helper'` to the Gemfile - a gem that does not exist on Rubygems. He blocked the merge and asked the developer to use the real `active_record_extra` gem. The hallucinated name would have been a slopsquat install if an attacker had registered it."
+> Good: "Open PR #1247 - Marcos reviewed it Tuesday morning. He flagged that Cursor had added `gem 'active_record_extras_helper'` to the Gemfile - a gem that does not exist on Rubygems. He blocked the merge and asked the developer to use the real `active_record_extra` gem. The hallucinated name would have been a slopsquat install if an attacker had registered it."
 
 ## What to do after the call
 

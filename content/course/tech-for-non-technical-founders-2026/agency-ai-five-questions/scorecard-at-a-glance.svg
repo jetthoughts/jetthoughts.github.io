@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 388" role="img" aria-labelledby="scorecard-title">
+  <title id="scorecard-title">The five agency AI questions on one card: the pass signal beside the fail signal for each, scored 0 or 1</title>
+  <defs>
+    <style>
+      .title    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 27px; fill: #1a1a1a; font-weight: 700; }
+      .note     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .colhead  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #1a1a1a; font-weight: 700; }
+      .qnum     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #cc342d; font-weight: 700; }
+      .qtext    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #1a1a1a; font-weight: 700; }
+      .pass     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #1b5e20; }
+      .fail     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #b3261e; }
+      .box      { fill: #ffffff; stroke: #1a1a1a; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <text x="30" y="34" class="title">Score the call from this card</text>
+  <text x="30" y="57" class="note">Give 1 point when the answer lands on the Pass side, 0 when it lands on Fail. Full criteria below.</text>
+
+  <!-- Pass / Fail tinted columns -->
+  <rect x="348" y="72" width="300" height="262" rx="12" fill="#eafaea" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="654" y="72" width="292" height="262" rx="12" fill="#fff2f2" stroke="#cc342d" stroke-width="2"/>
+
+  <!-- Column headers -->
+  <text x="60"  y="93" class="colhead">Question</text>
+  <text x="364" y="93" class="colhead" fill="#1b5e20">PASS = 1 point</text>
+  <text x="670" y="93" class="colhead" fill="#b3261e">FAIL = 0 points</text>
+  <line x1="30" y1="102" x2="946" y2="102" stroke="#1a1a1a" stroke-width="1.5"/>
+
+  <!-- Q1 -->
+  <rect x="30" y="118" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="135" class="qnum">Q1</text>
+  <text x="98"  y="135" class="qtext">Workflow: ticket to code</text>
+  <text x="364" y="135" class="pass">Tools by version + a real PR</text>
+  <text x="670" y="135" class="fail">&#8220;Senior decides,&#8221; no PR</text>
+
+  <!-- Q2 -->
+  <rect x="30" y="163" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="180" class="qnum">Q2</text>
+  <text x="98"  y="180" class="qtext">Cost: $/dev/mo, who pays</text>
+  <text x="364" y="180" class="pass">$ range + pass-through in SOW</text>
+  <text x="670" y="180" class="fail">&#8220;Included in the rate&#8221;</text>
+
+  <!-- Q3 -->
+  <rect x="30" y="208" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="225" class="qnum">Q3</text>
+  <text x="98"  y="225" class="qtext">Verify: reviewer checks</text>
+  <text x="364" y="225" class="pass">Opens real PR, names checks</text>
+  <text x="670" y="225" class="fail">&#8220;We trust the model / CI&#8221;</text>
+
+  <!-- Q4 -->
+  <rect x="30" y="253" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="270" class="qnum">Q4</text>
+  <text x="98"  y="270" class="qtext">Slopsquatting defense</text>
+  <text x="364" y="270" class="pass">Allowlist/scanner + says word</text>
+  <text x="670" y="270" class="fail">&#8220;Our devs know packages&#8221;</text>
+
+  <!-- Q5 -->
+  <rect x="30" y="298" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="315" class="qnum">Q5</text>
+  <text x="98"  y="315" class="qtext">Accountability: owned it</text>
+  <text x="364" y="315" class="pass">Dated incident + root cause</text>
+  <text x="670" y="315" class="fail">&#8220;Never had one&#8221; / not my job</text>
+
+  <line x1="30" y1="334" x2="946" y2="334" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="30" y="368" class="note">Score in real time. A total of 2 or below out of 5 - do not sign, no matter how good the pitch.</text>
+</svg>

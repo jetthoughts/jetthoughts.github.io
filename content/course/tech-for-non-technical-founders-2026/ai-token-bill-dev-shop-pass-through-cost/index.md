@@ -35,7 +35,7 @@ course_nav: false
 >
 > **Input:** a signed agency contract OR a hire who claims "AI-augmented."
 >
-> **Output:** monthly AI cost predicted within ±20% + 3 contract clauses you add to the next SOW
+> **Output:** monthly AI cost predicted within ±20% + 3 contract clauses you add to the next SOW (statement of work)
 
 **Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
 
@@ -47,7 +47,7 @@ That is the gap this post closes. By the end of one coffee you will know the per
 
 | Line item | Per dev / month | What you control |
 |-----------|-----------------|------------------|
-| Cursor or Copilot Enterprise seat | $20-60 | Fixed monthly. Easy to predict. Pick a tier and stay |
+| Cursor or Copilot Enterprise seat | $20-40 | Fixed monthly. Easy to predict. Pick a tier and stay |
 | Anthropic API (Claude Code) | $30-200 | Usage discipline. Same dev = 7x range depending on agent-loop habits |
 | OpenAI API (gpt-4o, o3) | $50-300 | Whether the team uses it at all. Less common in 2026 if Claude Code dominates |
 | **Disciplined team total** | **$80-$120** | Cursor + Claude Code + budget alerts at $150 |
@@ -97,7 +97,7 @@ Take your invoice in three numbers.
 - Avg per-dev AI cost: $100/month (disciplined: Cursor seat + Claude Code with budget alerts)
 - Agency margin: 0% (per Clause 1 in the SOW)
 - Expected monthly AI line: **$400 ± 20% = $320 to $480**
-- If invoice shows $1,800: undisciplined developer (Devon in the table above), 30% hidden margin, or both - 15-minute conversation either way
+- If invoice shows $1,800: undisciplined developer (like Devon in the invoice table below), 30% hidden margin, or both - 15-minute conversation either way
 
 **Worked example - 2-dev team with one heavy agent-loop user:**
 
@@ -113,21 +113,7 @@ The trade-off you are accepting: ±20% is a wide band. AI usage is genuinely var
 
 Paste these into your next SOW under "Pricing and Pass-Through Costs." If the agency redlines all three, that tells you something. If they accept all three with a shrug, that also tells you something useful.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-    A[Sign SOW with the 3 clauses] --> B[Predict bill: devs x avg x margin]
-    B --> C{Month-2 invoice arrives}
-    C -->|Within +/-20%| D[Pay it. Mark as baseline]
-    C -->|>20% over| E[Itemized breakdown required]
-    E --> F{Itemization explains it?}
-    F -->|Yes - Devon hit a hard ticket| G[Update budget alert. Continue]
-    F -->|No - margin or padding| H[Push back. Cite Clause 1]
-    D --> I[Quarterly: review dashboards under Clause 3]
-    G --> I
-    H --> I
-    I --> A
-```
+![The month-2 invoice loop: sign the SOW with the 3 clauses, predict the bill (devs x avg AI cost x margin), compare the invoice. Within plus-or-minus 20 percent: pay it and mark the baseline. 20 percent or more over: demand the itemized breakdown - a hard ticket raises the budget alert, margin or padding gets pushed back under Clause 1. Quarterly, review the dashboards under Clause 3 and re-predict.](invoice-loop.svg)
 
 ### Clause 1 - Pass-through caps
 

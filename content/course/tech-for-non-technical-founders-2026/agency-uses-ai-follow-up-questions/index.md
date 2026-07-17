@@ -40,9 +40,7 @@ course_nav: false
 
 The agency's pitch deck said the weekly retainer was $14,200. The pitch deck also said "every PR ships with an `Assisted-by:` footer naming the human reviewer; AI direction is a first-class part of our delivery."
 
-A founder we picked up in Q3 2026 asked the senior engineer on the discovery call to open one such PR on screenshare. The engineer scrolled GitHub for forty seconds, then promised to email the link "by end of day." The link never arrived.
-
-Two hours of internal back-and-forth later the agency owner emailed back: the `Assisted-by:` line had been added to the pitch deck the week before the call. No PR in the repo carried it. The five questions below would have surfaced the gap inside the first 20 minutes, before any contract conversation, and saved the founder a $56,800 four-week commitment she would have unwound a month in.
+Ask the senior engineer on that call to open one such PR on screenshare, and the deck meets the repo. A team that ships the footer opens a real PR in seconds. One that only added the line to the deck the week before scrolls GitHub for forty seconds, then offers to email the link "by end of day" - and the link never arrives. The claim lives in the pitch deck; no commit in the repo carries it. At $14,200 a week, that gap is a $56,800 four-week commitment resting on a delivery practice that does not exist. The five questions below surface it inside the first 20 minutes, before any contract conversation.
 
 ### The 5-question scorecard at a glance
 
@@ -51,7 +49,7 @@ Score 0 or 1 in real time during the discovery call. Below 3 means walk.
 | # | Question | Pass (1) | Fail (0) |
 |---|---|---|---|
 | Q1 | **Workflow:** walk one Jira ticket to merged PR with AI | Named tools, written gates, real PR number from last week | Slogans, no PR shown |
-| Q2 | **Cost:** per-developer monthly AI token spend, who pays | Dollar range, pass-through written into SOW, sample invoice line | "It's all included" |
+| Q2 | **Cost:** per-developer monthly AI token spend, who pays | Dollar range, pass-through written into the SOW (statement of work), sample invoice line | "It's all included" |
 | Q3 | **Verification:** what senior checks on a 200-line AI PR | Opens real PR on screenshare, names checks line by line | "We trust the model" |
 | Q4 | **Slopsquatting:** how do you stop a hallucinated package install | Named defense (allowlist, Socket/Snyk, gated CI), uses the term unprompted | Confused look |
 | Q5 | **Accountability:** who is on the hook for an AI-caused incident | Specific incident with date, root cause, named reviewer, workflow change | "We've never had one" |
@@ -72,7 +70,7 @@ The full Pass/Fail rubric, scoring template, and "what to send 24 hours before t
 
 ### Q1 - The workflow question
 
-> "Walk me through how a developer on your team takes a Jira ticket and ends up with merged code, when they use AI in the loop. Name the tools, the prompt patterns, and the human review gates. Use a real ticket your team closed last week."
+> **Q1** - "Walk me through how a developer on your team takes a Jira ticket and ends up with merged code, when they use AI in the loop. Name the tools, the prompt patterns, and the human review gates. Use a real ticket your team closed last week."
 
 A team that cannot describe its workflow does not have one. The agencies that direct AI well have a written one-page playbook: ticket, draft prompt, generate, run the failing test the developer wrote first, review the diff against the spec, open the PR with an `Assisted-by:` footer, second senior reviews, merge. They will offer to email the playbook the same afternoon.
 
@@ -80,7 +78,7 @@ The agencies running theatre answer in slogans. The Q3 2026 founder above never 
 
 ### Q2 - The cost question
 
-> "What does the average developer on your team spend on AI tokens per month, and who pays it? Will it pass through to my invoice, and what should I budget for the project we just scoped?"
+> **Q2** - "What does the average developer on your team spend on AI tokens per month, and who pays it? Will it pass through to my invoice, and what should I budget for the project we just scoped?"
 
 AI tokens are a real budget line in 2026. A Cursor Pro seat is roughly $20-$40, and the Anthropic plus OpenAI API spend on top runs $80-$300 per developer per month for a team that is actually using Claude Code or Aider on big diffs.
 
@@ -90,7 +88,7 @@ The [agency-ai-five-questions script](/course/tech-for-non-technical-founders-20
 
 ### Q3 - The verification question
 
-> "When AI generates a 200-line PR, what does your senior reviewer actually check? Walk me through one PR you reviewed last week and tell me what you looked for."
+> **Q3** - "When AI generates a 200-line PR, what does your senior reviewer actually check? Walk me through one PR you reviewed last week and tell me what you looked for."
 
 The senior should pull up an actual PR on screenshare. They should read it line by line and explain what they verified: did the diff match the ticket spec, are there hardcoded secrets or API keys in the diff, are the tests genuine (written first as failing specs by the developer) or AI-generated to make CI green, did the AI introduce new gems or pip packages and do those packages actually exist on Rubygems / PyPI / npm.
 
@@ -100,17 +98,17 @@ Ask which human's name shows up on the agency's `Assisted-by:` lines this week. 
 
 ### Q4 - The slopsquatting question
 
-> "In April 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers register those names and wait for developers to install the typo. How do you prevent installing a hallucinated package?"
+> **Q4** - "In March 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers register those names and wait for developers to install the typo. How do you prevent installing a hallucinated package?"
 
 A passing answer names a specific defense: a pre-vetted package allowlist with a written process for adding new dependencies, a scanner like [Socket](https://socket.dev/) or [Snyk](https://snyk.io/) on every PR that blocks the build until a human approves any new package, or a manual `gem info <name>` / `pip show <name>` / `npm view <name>` step before any new dependency lands.
 
-They use the word "slopsquatting" without you prompting and can cite the [Bleeping Computer writeup](https://www.bleepingcomputer.com/news/security/ai-code-suggestions-sabotage-software-supply-chain/) or the [SecurityWeek piece on AI coding agents and supply-chain risk](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/).
+They use the word "slopsquatting" without you prompting and can cite the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) or the [SecurityWeek piece on AI coding agents and supply-chain risk](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/).
 
 An agency that has not heard of slopsquatting in late 2026 has not read its field's security press for over a year. The supply-chain attack moved from CVE bulletins to mainstream founder-facing risk the moment Cursor adoption crossed half the developer market.
 
 ### Q5 - The accountability question
 
-> "When AI-generated code causes a production incident, who is on the hook? Walk me through the last AI-generated-code incident your team had - what happened, when, and what you changed afterwards."
+> **Q5** - "When AI-generated code causes a production incident, who is on the hook? Walk me through the last AI-generated-code incident your team had - what happened, when, and what you changed afterwards."
 
 A specific incident with a date in the last six months. A one-paragraph root cause. The named senior who reviewed the offending PR. The workflow change made the week after. The agencies that have shipped AI code in production have written at least one of these postmortems already.
 
@@ -134,23 +132,14 @@ The agency runs AI theatre. Send a "we are pausing the search to refine our requ
 
 ### What "theatre" vs. "direction" sound like in the room
 
-Same five questions, two completely different conversations:
-
-| # | AI Theatre (walk away) | AI Direction (sign with confidence) |
-|---|---|---|
-| Q1 | "Our developers use AI where it makes sense. We are AI-native." | "Cursor + Claude 4.5 Sonnet. Here is PR #1247 from Tuesday." |
-| Q2 | "It's all included in the rate. Don't worry about token costs." | "$140-$220 per dev per month. SOW pass-through. Sample invoice line below." |
-| Q3 | "We trust the model. Cursor catches the obvious stuff." | "Marcus reviewed PR #1247 - flagged a hardcoded API key." |
-| Q4 | "Our developers know what packages to use." [confused look] | "Socket on every PR. Allowlist in `Gemfile.policy`. Yes, slopsquatting." |
-| Q5 | "We've never had an AI-related incident. Our standards are high." | "March 14: AI-generated webhook retried 8x. Added idempotency key." |
-| Score | 0 / 5 - polite no the same evening | 5 / 5 - ask for AI-project references next |
+The full Pass/Fail rubric, scorecard, and theatre-vs-direction examples live in [the 5-Question Script](/course/tech-for-non-technical-founders-2026/agency-ai-five-questions/) - print that page.
 
 ## The interrogation flow on a 30-minute call
 
 Run the call on a 30-minute Zoom block. Hold the timer.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     A["0-3 min<br/>Set the frame<br/>(you sent the questions<br/>24h ago; senior present?)"]
     A --> B["3-23 min<br/>Walk Q1 - Q5<br/>(~4 min each)<br/>Score 0/1 in Notion live"]
@@ -161,10 +150,12 @@ flowchart TD
     classDef intro fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
     classDef body fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
     classDef pass fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+    classDef cond fill:#fffbeb,stroke:#d97706,stroke-width:2.5px,color:#1a1a1a
     classDef fail fill:#fce4ec,stroke:#c2185b,stroke-width:2.5px,color:#1a1a1a
     class A intro
     class B,C body
-    class D,E pass
+    class D pass
+    class E cond
     class F fail
 ```
 
@@ -182,7 +173,7 @@ Three concrete moves for the next 24 hours, in order.
 
 - Veracode, [2025 GenAI Code Security Report](https://www.veracode.com/blog/genai-code-security-report/) - 45% of tested LLM-generated code samples carried at least one exploitable security flaw. The data behind Q3 (verification) and Q5 (accountability).
 - Stack Overflow, [2025 Developer Survey - AI section](https://survey.stackoverflow.co/2025/) - 84% of developers now use or plan to use AI tools. The market context behind why "we use AI" became a meaningless homepage line.
-- Bleeping Computer, [AI code suggestions sabotage software supply chain](https://www.bleepingcomputer.com/news/security/ai-code-suggestions-sabotage-software-supply-chain/) - the slopsquatting attack vector in plain English. The thing your agency must spot in PR review (Q4).
+- Infosecurity Magazine, [AI Hallucinations Open New Slopsquatting Attack Vector](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) - the slopsquatting attack vector in plain English. The thing your agency must spot in PR review (Q4).
 - SecurityWeek, [AI Coding Agents Could Fuel Next Supply Chain Crisis](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/) - the practitioner read on why hallucinated package names are now the leading AI-era attack surface.
 - Linus Torvalds, ["Assisted-by:" tag on Linux kernel commits](https://lore.kernel.org/lkml/CAHk-=wjbiaa7m9aGtw2T-fbmuuiq_-noqfrjEJzbpCSk0FrFkw@mail.gmail.com/) - the kernel rule that puts a human reviewer's name in the commit log when AI is in the loop. The accountability standard referenced in Q3 and Q5.
 - Anthropic, [Claude Code documentation](https://docs.claude.com/en/docs/claude-code/overview) - the official reference for one of the tools your agency should be naming in Q1. Worth skimming so you recognise the workflow language when they describe it.

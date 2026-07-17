@@ -43,9 +43,11 @@ class CourseValidators
 
   private
 
-  # ── Validator 1: Chapter-number consistency ──────────────────────────────
-  # Every "Chapter N.X" reference in body/frontmatter/SVG must resolve to an
-  # entry in data/course_sequence.yaml.
+  # ── Validator 1: Lesson-number consistency ───────────────────────────────
+  # Every "Lesson N.X" reference in body/frontmatter/SVG must resolve to an
+  # entry in data/course_sequence.yaml. Course canon calls the numbered core
+  # units "Lessons" (30.03 format spec); any numbered "Chapter N.X" or
+  # "Ch N.X" reference is a terminology violation.
 
   def check_chapter_number_consistency
     violations = []
@@ -55,12 +57,17 @@ class CourseValidators
       slug = File.basename(File.dirname(path))
       body = File.read(path)
 
-      # Find all "Chapter N.X" patterns in the body (not inside URLs or code blocks)
-      body.scan(/Chapter\s+(\d+\.\d+)/) do |match|
+      # Find all "Lesson N.X" patterns in the body (not inside URLs or code blocks)
+      body.scan(/Lesson\s+(\d+\.\d+)/) do |match|
         ref = match.first
         unless valid_chapters.include?(ref)
-          violations << "#{slug}: references 'Chapter #{ref}' which is not in course_sequence.yaml"
+          violations << "#{slug}: references 'Lesson #{ref}' which is not in course_sequence.yaml"
         end
+      end
+
+      # Numbered Chapter/Ch references are retired terminology (canon: Lesson)
+      body.scan(/\b(Chapter|Ch)\s+(\d+\.\d+)/) do |match|
+        violations << "#{slug}: uses '#{match[0]} #{match[1]}' - numbered core units are 'Lesson N.N' (30.03 spec)"
       end
 
       # Also check "Module N" callout references (e.g., "> **Module 1 · Step 2 of 3**")
@@ -84,12 +91,16 @@ class CourseValidators
       slug = File.basename(File.dirname(svg_path))
       content = File.read(svg_path)
 
-      content.scan(/Chapter\s+(\d+\.\d+)/) do |match|
+      content.scan(/Lesson\s+(\d+\.\d+)/) do |match|
         ref = match.first
-        next if ref == "Chapter 0.0" # Skip any default/placeholder
+        next if ref == "0.0" # Skip any default/placeholder
         unless valid_chapters.include?(ref)
-          violations << "#{slug}/#{File.basename(svg_path)}: SVG references 'Chapter #{ref}' which is not in course_sequence.yaml"
+          violations << "#{slug}/#{File.basename(svg_path)}: SVG references 'Lesson #{ref}' which is not in course_sequence.yaml"
         end
+      end
+
+      content.scan(/\b(Chapter|Ch)\s+(\d+\.\d+)/) do |match|
+        violations << "#{slug}/#{File.basename(svg_path)}: SVG uses '#{match[0]} #{match[1]}' - numbered core units are 'Lesson N.N' (30.03 spec)"
       end
     end
 

@@ -24,18 +24,19 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Chapter 2.1 post](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). Open on a second screen during the call. Read questions verbatim.
-
-# The Mom Test Interview Script - Ask About the Past, Not the Future
+Template companion to the [Lesson 2.1 post](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). Open on a second screen during the call. Read questions verbatim.
 
 *Five questions that get the interviewee to tell you what they actually did, not what sounds polite.*
 
-> **The 5 Mom Test questions, in order:**
-> Q1. Tell me about the last time [problem] happened. Walk me through what you did.
-> Q2. What did that cost you - in time, money, or sanity?
-> Q3. What have you tried already to fix this?
-> Q4. On a scale of 1-10, how big a problem is this compared to everything else on your plate?
-> Q5. Who else on your team feels this? How do they handle it?
+**The 5 Mom Test questions, in order:**
+
+| Question | What it surfaces |
+|---|---|
+| **Q1.** Tell me about the last time [problem] happened. Walk me through what you did. | Anchors in a real episode - story over preference. |
+| **Q2.** What did that cost you - in time, money, or sanity? | Quantifies the pain - an unquantified problem won't get paid for. |
+| **Q3.** What have you tried already to fix this? | Surfaces existing workarounds - if they never tried anything, it never actually hurt. |
+| **Q4.** On a scale of 1-10, how big a problem is this compared to everything else on your plate? | Calibrates urgency against the interviewee's whole problem stack - most "would be great if" problems land at 4. |
+| **Q5.** Who else on your team feels this? How do they handle it? | Surfaces the buying committee and workarounds other people on the team already own. |
 
 *Prefer paper? <a href="mom-test-interview-script.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
 
@@ -55,13 +56,13 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 *Anchors in a real episode - story over preference.*
 
-> "Tell me about the last time [problem context] happened. Walk me through what you did."
+> "Tell me about the last time [problem] happened. Walk me through what you did."
 
 **Pass signal:** A specific story with a date, a time of day, a tool they opened, a person they messaged. "Last Tuesday at 9pm I spent 40 minutes copying numbers from three spreadsheets into a slide for the board. I called my CFO and she pulled the numbers from QuickBooks for me."
 
 **Fail signal:** Vague generality. "Yeah, I usually struggle with reporting." "It happens all the time." No date. No mechanic. The interviewee never opens an actual memory.
 
-**Follow-up:** "Walk me through that specific Tuesday again. What did you do first?"
+**Follow-up (excavate):** "Walk me through that specific Tuesday again. What did you do first?" The first answer is always thin, so keep going: "Where were you? What happened right before? What did you do next?" Then stop and let the silence sit - people fill it with the detail they were about to skip.
 
 ### Q2 - The cost question
 
@@ -91,7 +92,7 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 *Calibrates urgency against the interviewee's whole problem stack - most "would be great if" problems land at 4.*
 
-> "On a scale of 1-10, how big a problem is this for you compared to everything else on your plate?"
+> "On a scale of 1-10, how big a problem is this compared to everything else on your plate?"
 
 **Pass signal:** A 7 or higher with a comparison. "This is an 8. The only thing higher is hiring my next engineer." A 9 or 10 is rare and a strong signal.
 
@@ -148,7 +149,7 @@ The bad closing pulls them back into hypothetical preference and gives you a use
 - **Score the call 1-10 within 5 minutes of hanging up.** Use Q4 plus your emotional-flag count. Write the score in your notes file. If you score later you will round up.
 - **If 7 or more of your 10 interviews scored 7+:** the problem is validated - BUILD. Move to the [Mom Test Synthesis page](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) and the Validated Problem Statement template.
 - **If 4 to 6 scored 7+:** PIVOT - re-evaluate the ICP, the problem framing, or the question wording, then book 5 sharper interviews with the narrower group. Sometimes Q1 is wrong (the problem context is too narrow) - retry with broader phrasing first.
-- **If fewer than 4 scored 7+:** KILL - the problem is too weak for this customer. Return to Ch 1.1 with a different [customer] or [problem] blank.
+- **If fewer than 4 scored 7+:** KILL - the problem is too weak for this customer. Return to Lesson 1.1 with a different [customer] or [problem] blank.
 - **Forward the transcripts to your founder friend one step ahead, or a peer from any founder community** before you make the build/no-build call. Two readers catch what one misses.
 
 Skip this script and run "feature interest" interviews ("would you pay for X?") and you almost always launch into silence. The Mom Test isn't a productivity trick. It is the only way to keep your interviewees from being polite while you are gambling six months of your life on what they said.

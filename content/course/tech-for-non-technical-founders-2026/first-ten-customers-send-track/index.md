@@ -72,13 +72,17 @@ A "no" from a cold-bucket name is a non-event. They were never the right name. M
 > 3. Send warm tomorrow or the day after.
 > 4. Send cold once early replies settle in.
 > 5. Track every reply in the four new columns. Book demos for evenings or weekend mornings.
-> 6. **✅ Success check:** at least 10 replies received across all buckets. Book 3-5 demos.
+> 6. **Success check:** at least 10 replies received across all buckets. Book 3-5 demos.
 
 ---
 
-**If this fails: you get fewer than 5 replies.** **Why:** your openers aren't specific enough, or your network is too small for warm motion. **Fix:** tighten the opener on your next 5 messages. If the next 5 still produce under 2 replies, your network is exhausted. Move to [Ch 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
+**If this fails: you get fewer than 5 replies.**
+- **Why:** your openers aren't specific enough, or your network is too small for warm motion.
+- **Fix:** tighten the opener on your next 5 messages. If the next 5 still produce under 2 replies, your network is exhausted. Move to [Lesson 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
 
-**If this fails: a champion says no.** **Why:** the problem moved, the buying motion is wrong, or you missed the brief. **Fix:** reply with a single question from the table above. A "no" from a champion is the most expensive feedback you'll get all year. Extract the signal before you move on.
+**If this fails: a champion says no.**
+- **Why:** the problem moved, the buying motion is wrong, or you missed the brief.
+- **Fix:** reply with a single question from the table above. A "no" from a champion is the most expensive feedback you'll get all year. Extract the signal before you move on.
 
 ---
 
@@ -92,7 +96,7 @@ So when a champion says no, reply and ask why - that answer is worth more than t
 >
 > **Next:** [5.6 · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) - the one-page DPA and Stripe deposit that converts a demo into a signed pilot.
 >
-> **If blocked:** see "If this fails" above. If your warm network produced fewer than 3 demos, move to [Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound in parallel, not sequentially.
+> **If blocked:** see "If this fails" above. If your warm network produced fewer than 3 demos, move to [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound in parallel, not sequentially.
 
 ---
 

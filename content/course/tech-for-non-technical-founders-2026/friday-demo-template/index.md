@@ -24,9 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the Oversight Rhythm sub-section of [The Founder Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) (Going Further). Send to your team Monday. Run Friday at 4pm.
-
-# The Friday Demo Template
+Template companion to [The Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/). Send to your team Monday. Run Friday at 4pm.
 
 A 15-minute Friday script that catches fake progress before it costs you a sprint.
 
@@ -36,7 +34,7 @@ By Friday of week 4 you will know whether your dev team is shipping or stalling.
 
 ## Why this exists
 
-A founder we worked with last year was four months and $62K into a six-week MVP. Jira showed nine tickets closed that week. When she asked the team to demo the checkout flow, the lead developer said "it's behind a feature flag, give us until Monday." Monday came: the flag had been on for three weeks. The page threw a 500 on every click. None of the three developers had opened it themselves.
+Jira closing nine tickets in a week tells you cards moved, not that anything works. A feature can sit "behind a feature flag" for three weeks, throw a 500 on every click, and still show up as closed tickets and a confident status update - four months and $54K into a six-week MVP - because no one on the call has to open it in front of you. The seven questions above force that open. Asked in order, they turn a status call into four demos and four staging URLs you click yourself: what shipped, what the user can now do, where it is live for you, and what got cut to make room.
 
 ## How to use it
 
@@ -97,7 +95,7 @@ This is the over-engineering check. If your team never cuts anything, they are e
 
 > Bad: "A few things are in PR, I can send you the list later."
 >
-> Good: "PR #847 - signup rate limiting. Marcus reviewed it Tuesday, three changes requested, will merge Monday. PR #851 - admin search. Nobody has reviewed it yet because Marcus is on vacation."
+> Good: "PR #843 - admin search. Priya reviewing since Tuesday, two changes requested, waiting on author. PR #851 - signup rate limiting. No reviewer yet because Priya is on PTO Thu-Fri; will assign Monday."
 
 If the same name keeps appearing as the only reviewer, you have a single point of failure - the [JetThoughts red-flags checklist](/blog/dev-shop-red-flags-checklist/) calls this bus factor of one.
 
@@ -105,7 +103,7 @@ If the same name keeps appearing as the only reviewer, you have a single point o
 
 1. **Click the staging URL while they are talking.** Open it on your laptop the moment they share it. If you get a 500, a login error, or "this page can't be reached", interrupt and ask. Do not wait until Monday to find out the URL was a screenshot.
 2. **Ask one follow-up per question.** Not three. If your follow-up gets a paragraph of jargon back, that is information. Save it for next time.
-3. **Write down one number per demo.** "PR #847", "$1 transaction", "47 paying users on the new flow". Three months of one-number receipts beat any retrospective the agency will run on themselves.
+3. **Write down one number per demo.** "PR #849", "$1 transaction", "47 paying users on the new flow". Three months of one-number receipts beat any retrospective the agency will run on themselves.
 
 ## What to do after the call
 

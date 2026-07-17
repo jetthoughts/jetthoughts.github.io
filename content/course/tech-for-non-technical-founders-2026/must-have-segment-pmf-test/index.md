@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 5 · Lesson 5.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live MVP + 10-30 users who touched it. **Don't have 10-30 yet?** Invite your Module 2 Mom Test interviewees + your [1.4 smoke-test email list](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (typically 15-50 signups) to your staging URL as the warm seed. If under 10 users still touched it, run [Ch 2.4 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for 10 more before re-attempting this survey.
+> **Input:** a live MVP + 10-30 users who touched it. **Don't have 10-30 yet?** Invite your Module 2 Mom Test interviewees + your [1.4 smoke-test email list](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (typically 15-50 signups) to your staging URL as the warm seed. If under 10 users still touched it, run [Lesson 2.4 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for 10 more before re-attempting this survey.
 >
 > **Output:** a written must-have-user persona with 3 verbatim quotes and one named segment to target
 >
@@ -39,56 +39,23 @@ related_posts: false
 
 > **TL;DR:** Before you buy traffic, survey your earliest users. If fewer than 40% would be "very disappointed" if your product vanished, you have a product problem, not a marketing problem.
 
-Here is the failure mode this lesson exists to prevent. A founder's Lovable MVP goes live. Forty people from a beta list poke at it. The dashboard says 0.4% conversion on $4,200 of Meta ads, and instinct says "scale the top of funnel."
+---
 
-The dashboard tells that founder what five phone calls would have said for free: most users never opened the app twice. You are two weeks and zero ad dollars away from that fork - this lesson is how you take the other path.
+A founder's MVP goes live, 40 beta users poke at it, and the dashboard shows 0.4% conversion on $4,200 of Meta ads. That dashboard just told the founder what five phone calls would have said for free: most users never opened the app twice, and no ad budget turns that group into customers.
 
-The real question after the MVP ships is whether the people who already touched it would notice if it vanished tomorrow. If less than 40% would be very disappointed, no amount of ad spend will turn that group into customers. Paid traffic does not fix a product problem; it routes more users into something they will not return to.
+After this lesson you will be able to: **run the 5-question Sean Ellis survey against your earliest users and name the one segment worth selling to.**
 
-> **What your first-pass numbers will probably look like (and that is not a failure signal).** An idea-stage founder with 4-6 onramp users typically sees one of three patterns on the first survey run:
-> - All "somewhat disappointed" or "not disappointed" → that segment is not must-have; do not scale it. Run more interviews before re-attempting.
-> - 3-4 "very disappointed" out of 6 → directional MAYBE. Almost certainly a sample-size problem, not a product problem; book 5-10 more users.
-> - 5+ "very disappointed" out of 6 → directional STRONG YES. Advance to M5.3 with the caveat above.
->
-> A 25-40% reading at small sample size is not a failure. It is the normal state of a brand-new product with a brand-new founder. The Sean Ellis test is calibrated for ≥ 20 respondents with months of usage; your first-pass run is a forecast, not a verdict. Treat looping back to M2.3 outreach for more user sessions as the default first-pass move, not a setback.
+---
 
 ## The 40% test, in one paragraph
 
-Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite. While he was building the playbook for those three, he kept noticing the same dividing line between products that ignited and products that needed life support. He surveyed every product's existing users with a single load-bearing question: "How would you feel if you could no longer use [product]?" The answer is one of four: very disappointed, somewhat disappointed, not disappointed, no longer use it. If at least 40% of users said "very disappointed," the product was almost always able to grow on outbound and word of mouth alone. Under 40%, growth stalled until the product changed. Ellis explained the cutoff and the survey wording on Lenny Rachitsky's podcast ([transcript and replay here](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis)).
+Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite, and kept seeing the same dividing line between products that ignited and products that needed life support. He surveyed each product's existing users with one load-bearing question: "How would you feel if you could no longer use [product]?" The answer is one of four: very disappointed, somewhat disappointed, not disappointed, no longer use it. If at least 40% said "very disappointed," the product could almost always grow on outbound and word of mouth alone. Under 40%, growth stalled until the product changed. Ellis explained the cutoff and wording on [Lenny Rachitsky's podcast](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis).
 
-![Sean Ellis 40% gauge - the threshold that decides whether paid ads will work or burn](sean-ellis-gauge.svg)
+![Semicircular gauge of the share of users answering very disappointed: amber below the 40% line means product problem, green at 40% or more means a must-have user](sean-ellis-gauge.svg)
 
-## Why you, the non-technical founder, get this wrong
+Use a free [Typeform](https://www.typeform.com) or [Tally](https://tally.so) form and a CSV export - no engineer needed. Survey people who used the product recently. Strip out anyone who signed up and never logged in twice (they can't answer), and the friends and family you onboarded as moral support (they'll all say very disappointed and tell you nothing).
 
-You just shipped your first Lovable MVP and 40 people from your beta list poked at it. The natural urge is to start collecting traction numbers immediately - surveys feel like a delay, ads feel like progress. And because you cannot read the codebase, "the conversion rate is 0.4%" sounds like a UX problem (a thing you can act on) instead of a product problem (a thing you cannot diagnose). Ad spend feels safer than going back into the build.
-
-The Twitter threads make it worse. On day 90 after launch, every thread is some growth marketer explaining that the founder of a now-public company spent $4M on Meta in the first six months. The threads do not mention that the founder ran the 40% test in week one, cleared the bar, and then spent on ads.
-
-Ask yourself the must-have rate before you ask anything else. The pattern across the burned-thousands-on-paid-ads stories is the same: a number that was never measured. Sometimes the rate is under 25% overall - genuine "no must-have user" territory. Sometimes one segment scores high and another scores low, but the ad targets the wrong half because the high-need segment is harder to reach. Knowing the number before the ad spend is the difference between an expensive lesson and a cheap one.
-
-## How to run the test, end to end
-
-The KISS path is a free Typeform or Tally form and a CSV export. No Rails webhook, no Postgres table, no engineer.
-
-### Step 1 - Who you survey
-
-You need enough responses from people who have used your product recently to spot a segment pattern; a few dozen is the floor. Pull the list from whatever you have:
-
-- The MVP database (sign-up table). For a Lovable, Bubble, or Supabase build, export `users` as CSV.
-- Your beta waitlist if it converted to active users.
-- The trial list if you ran paid trials.
-
-If you only have ten users, that is fine. Treat anything under ten responses as directional only. Ten of ten "very disappointed" is a louder signal than 40 of 100. You are not running a peer-reviewed study; you are looking for a dividing line.
-
-Strip out two groups before you send:
-
-- Anyone who signed up and never logged in twice. They never used the product, so the question is unanswerable.
-- Friends and family who you onboarded as moral support. They will all say very disappointed and tell you nothing.
-
-What is left is your sample. Annotate each row with the user's job title and company size before you send, so the CSV export later can be sliced by segment in one filter.
-
-### Step 2 - The 5 questions, verbatim
-
+## The 5 questions, verbatim
 
 Open Typeform or Tally. Five questions, in this order. Wording matters - changing a word changes the answer.
 
@@ -105,117 +72,48 @@ Open Typeform or Tally. Five questions, in this order. Wording matters - changin
 > *(Short text - 2 sentences. Tells you the competitive set the user actually compares against.)*
 >
 > **Q5.** What is your job title and company size?
-> *(Two short text fields. Drives the segment slice in step 4.)*
+> *(Two short text fields. Drives the segment slice.)*
 
-That is the survey. Do not add a sixth question. Do not change Q1 to "How disappointed would you be" - the original wording forces the user to pick a side. Tinker with the question and you consistently report softer numbers because you introduced a hedge.
+Do not add a sixth question. Do not soften Q1 to "How disappointed would you be" - the original wording forces the user to pick a side.
 
-### Step 3 - Send it
+## Score it
 
-Email subject line that works in 2026: *"Quick 90-second question about [product]"*. Body, three lines:
+Export the CSV. Compute the "very disappointed" share, excluding "no longer use it" answers (they are churned users, not should-be-paying users). Pull three numbers: **overall must-have %**, **per-segment must-have %** (slice by job title and company size - one segment is almost always higher than the average, and that is your must-have segment), and **three verbatim Q2-Q3 quotes** from that segment. Those quotes are your persona, your ad copy, and your cold-email opener for Lesson 5.3.
 
-> Hi [first name], building [product] and trying to figure out who really uses it. Would you spend 90 seconds on this? [link]
+Lay this segment beside the persona in your [Lesson 2.5 validated problem statement](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). If real usage points at a different segment than the interviews did, that is a real correction - write the delta down; don't keep two personas.
+
+## Read the result
+
+The Sean Ellis test is directional at **≥ 10 respondents**, useful at **20+**, and segment-sliceable at **30+**. Under 10, read your count as a hypothesis, not a verdict, and use it to prioritize the next outreach batch. Then:
+
+- **Under 25% overall:** product problem. Talk to 5 "very disappointed" users and find what you missed.
+- **25-40%:** check whether any single segment clears 40%. If one does, target it and rebuild the persona on its quotes.
+- **Over 40% in any segment:** you have a must-have user. [Lesson 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) outreach starts here.
+
+---
+
+> **Do this now:**
 >
-> No pitch. No follow-up. I read every response by hand.
->
-> Thanks, [your name]
+> 1. Export your users CSV. Strip the friends-and-family and the never-returned users. Annotate each row with job title and company size.
+> 2. Open Typeform or Tally. Type the five questions above verbatim.
+> 3. Send the email. Subject: *"Quick 90-second question about [product]"*. Re-send a few days later to non-openers.
+> 4. Export the responses. Compute overall must-have % and per-segment must-have %.
+> 5. Paste three Q2-Q3 verbatims from your top segment into a Google Doc.
+> 6. **Success check:** you have a headline %, a top-segment %, and 3 verbatim quotes - and you know whether any segment cleared 40%.
 
-Send the first batch to your largest user cluster. Re-send a few days later to anyone who has not opened. You will hit a 30-50% response rate on a list under 100, which is enough.
+---
 
-### Step 4 - Score it
+**If this fails: under 10 users responded.**
+- **Why:** your sample is too small to read, and segment-slice math does not work.
+- **Fix:** book 5-10 more user sessions with the [Lesson 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)-[2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) outreach playbook and re-run the survey. Treat looping back for more sessions as the default first-pass move, not a setback.
 
-Export the CSV. Pivot on Q1 by segment from Q5. You are computing one number per segment:
+---
 
-```text
-must_have_pct = ("Very disappointed" count) / (total responses excluding "No longer use it")
-```
+Treat the answer as a stop sign, not a market-research instrument. Under 40% means the next thing on your calendar is five user calls, not a Meta Ads brief.
 
-The "no longer use it" answers come out of the denominator. They are churned users, not should-be-paying users.
+The full survey template (Typeform-import format, the per-segment scoring spreadsheet, and the persona-writeup template) ships in [the First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).
 
-Pull three numbers:
-
-1. **Overall must-have %.** The headline figure.
-2. **Per-segment must-have %.** Slice by job title and by company size. One segment will almost always be higher than the average. That is your must-have segment.
-3. **Three verbatim Q2-Q3 quotes from your must-have segment.** Paste them into a Google Doc. Those quotes are your persona description, your ad copy, and your cold-email subject line for the next chapter.
-
-![Segment isolation Venn - what an average hides and what one slice reveals](segment-isolation.svg)
-
-### Step 5 - The decision tree
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-    A[Run the 5-question survey] --> B{Overall must-have %}
-    B -->|Under 25%| C[Stop. Product problem.<br/>Talk to 5 'very disappointed' users.<br/>Find what you missed.]
-    B -->|25-40%| D{Any segment over 40%?}
-    B -->|Over 40%| E[You have a must-have user.<br/>Chapter 5.3 outreach starts here.]
-    D -->|Yes| F[Target that segment.<br/>Rebuild the persona on those quotes.]
-    D -->|No| G[Refine the product first.<br/>Re-run after the next release.]
-    classDef redbox fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
-    classDef purplebox fill:#fbe9ff,stroke:#a855f7,stroke-width:2px;
-    class C,G redbox;
-    class E,F purplebox;
-```
-
-Re-run cadence: re-run while the must-have rate is climbing, and after every major release once it holds above 40% for two consecutive runs. If a re-run drops, read the "somewhat disappointed" Q2-Q4 verbatims first - the diagnostic is in there.
-
-> **Sample-size honesty.** The Sean Ellis 40% threshold is statistically directional at **≥ 10 respondents**, useful at **20+**, and segment-sliceable at **30+**. Under 10 respondents your result is a hypothesis, not a verdict - with 6 "very disappointed" out of 10 the threshold says PASS, but the confidence band is wide enough that real demand could be 20% or 80%. Under 10, segment-slice math does not work and the 25-40% bands do not apply. Read the count directionally instead:
->
-> - **0-2 "very disappointed"**: directional NO. Book more user sessions before re-running.
-> - **3-4 "very disappointed"**: directional MAYBE. Book 5-10 more users, re-run.
-> - **5+ "very disappointed" out of 6**: directional STRONG YES. Advance to M5.3 but caveat your outreach decisions - the segment language is hypothesis, not verified.
->
-> Use an under-10 reading to prioritize the next outreach batch, not to advance into Module 5.3 with confidence.
-
-## What "under 40%" actually means
-
-Under 40% means you have a product problem, not a marketing problem, and the Q2-Q4 verbatims tell you which one.
-
-| Pattern | Diagnostic | Fix | Re-entry point |
-|---|---|---|---|
-| **You built for the wrong segment** | The product works, but the people you onboarded do not have the pain. Your Q5 slice shows: one segment is at 55%, the rest are at 5%. | Stop selling to the audience and start selling to the segment. | [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) personal-network outreach to the right segment. |
-| **You built the right thing, but it is not finished** | The Q3 verbatims are hedged ("it is nice to have," "I would use it if it had X"). The main benefit answers lack conviction. | Go back into the build and finish the thing. | Schedule a [Friday demo](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) with the next release. |
-| **The pain is real, but your product is not the relief** | The Q4 verbatims name a workaround that is already 80% of the job (a spreadsheet, an existing tool, a person they pay). | Either niche into the 20% the workaround does not cover, or pivot. | [Chapter 2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) validated-problem statement. |
-| **The product solves the pain, but the workflow is too long** | Users say "very disappointed" but session logs show they bailed before the payoff. Funnel collapses between signup and the "30-minute save" moment. | UX cut, not a strategy pivot. Shorten the path to the first win. | Retest after shortening the funnel; re-run the 40% test after the next UX release. |
-
-## When founders should skip the test
-
-| Condition | What to do instead |
-|---|---|
-| **Under 10 users** | Run [Chapter 2.4 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (with the list-building method from [2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) if you don't already have a 30-name list) and book 10 more user calls before re-attempting the test. The test requires 10-30 users who actually touched the MVP to be meaningful. |
-| **Pre-launch** | Use the [Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) instead. The 40% test asks "if you could no longer use the product" - if the user never used it, the answer is meaningless. |
-
-## Advanced (optional)
-
-> **Layering on segment isolation for 100+ users:**
-> After you run the 40% test once and close your first paid pilot,
-> read Sean Ellis's original [*Hacking Growth*](https://hackinggrowth.org/)
-> and the [Superhuman PMF Engine](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/).
-> Both combine the 40% test with structured segment-isolation workflows.
-> The main path above is enough for the Module 5 decision;
-> the advanced version becomes relevant after your first 10 customers ship.
-
-## What to do next
-
-| Step | Action | Output |
-|---|---|---|
-| **1** | Export your users CSV. Strip the friends-and-family and the never-returned users. Open Typeform or Tally. Type the five questions verbatim. | Typeform/Tally survey ready to send |
-| **2** | Send the email to the list. Subject: *"Quick 90-second question about [product]"*. Re-send a few days later to non-openers. | 30-50% response rate expected |
-| **3** | Export the responses CSV. Compute overall must-have % and per-segment must-have % (by job title and company size). | One-page scorekeeping: headline %, top segment %, three verbatim quotes |
-| **4** | Paste three Q2-Q3 verbatims from your top segment into a Google Doc. Review which segment hit 40%+ (or if none did). | Persona writeup ready for Chapter 5.3 or decision on pivot |
-| **5** | If above 40% in any segment, move to [Chapter 5.3 personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). If below 40% across all segments, book five "very disappointed" user calls and re-read [Chapter 2.1 Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). | Decision made; next chapter unlocked OR product refinement scheduled |
-
-The full survey template (the 5 questions in a Typeform-import-ready format, the per-segment scoring spreadsheet, and the persona-writeup template) ships in [the First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).
-
-Treat the answer as a stop sign rather than a market-research instrument. Under 40% means the next thing on your calendar should be five user calls, not a Meta Ads brief.
-
-## Further reading
-
-- Lenny Rachitsky, [The original growth hacker, Sean Ellis, on the 40% test](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis) - the original 40% framing, with Sean's own commentary on what the number means and does not mean.
-- Sean Ellis and Morgan Brown, [*Hacking Growth*](https://hackinggrowth.org/) - the book that explains the survey-driven north-star approach Ellis built at Dropbox, LogMeIn, and Eventbrite.
-- Lenny Rachitsky, [How to win your first 10 B2B customers](https://www.lennysnewsletter.com/p/how-to-win-your-first-10-b2b-customers) - companion piece that maps the must-have-user concept to the first-ten-customer playbook.
-- Steve Blank, [The Customer Development Manifesto](https://steveblank.com/2009/08/31/the-customer-development-manifesto-reasons-for-the-revolution-part-1/) - the foundational framing for "get out of the building and validate before building." The Sean Ellis test is the post-build analog.
-- Rahul Vohra, [How Superhuman built an engine to find product-market fit](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/) - the segment-isolation playbook layered on top of the 40% test.
-- Rob Fitzpatrick, [*The Mom Test*](https://www.momtestbook.com/) - the pre-launch validation companion. Once your 40% test is above the line, the Mom Test questions are the ones you ask the 10 must-have users on their next call.
+> **Deeper reference:** [The full must-have survey walkthrough](/course/tech-for-non-technical-founders-2026/reference/must-have-survey-full/) - who to survey and who to strip, the send email, the per-segment scoring math, the decision tree, the under-40% diagnostic table, and the read-by-count guide.
 
 > **Done:** you have run the 5-question Sean Ellis survey, computed the overall and per-segment must-have %, and have 3 verbatim Q2-Q3 quotes from your top segment.
 >
@@ -223,7 +121,7 @@ Treat the answer as a stop sign rather than a market-research instrument. Under 
 >
 > **Next:** the core path continues at [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - it turns the named segment into the first 50 people you will message. If you are not sure where your buyers actually spend their time, read the optional [5.2 · channel selection](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/) first.
 >
-> **If blocked:** if under 10 users responded, your sample is too small to read. Book 5-10 more user sessions using the Ch 2.3-2.4 outreach playbook and re-run the survey.
+> **If blocked:** if under 10 users responded, your sample is too small to read. Book 5-10 more user sessions using the Lesson 2.3-2.4 outreach playbook and re-run the survey.
 
 ---
 

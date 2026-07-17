@@ -28,7 +28,7 @@ related_posts: false
 >
 > **Input:** the live landing page URL you published in [Lesson 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
 >
-> **Output:** Clarity + GA4 installed on your landing page - ready for channel selection and pixel install in Lesson 1.4
+> **Output:** you can watch a recording of any visit and read the three numbers that judge your page (views, clicks, signups) - the evidence 1.4's go / iterate / kill call runs on
 >
 > **Progress:** M1 · 3 of 5 · Results so far: hypothesis sentence + live landing page
 
@@ -45,9 +45,9 @@ A **tracking snippet** is a small block of code (HTML or JavaScript) that you co
 You need two things regardless of which ad channel you pick in [Lesson 1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/):
 
 - **[Microsoft Clarity](https://clarity.microsoft.com/)** - session recordings and heatmaps. Not needed to read conversion numbers, but essential when conversion is low and you need to see *why*. Watch ten replays after 300 visits; the pattern usually appears within the first three. Diagnose a <3% rate here before you rewrite your hypothesis.
-- **[Google Analytics 4](https://analytics.google.com/)** - your analytics foundation. Tracks page views, clicks, and form submits. Create a GA4 property at [analytics.google.com](https://analytics.google.com/), copy the tracking snippet, paste it into your builder's head-tag field. If you later pick Google Ads in 1.4, GA4 links directly to it - no separate pixel needed.
+- **[Google Analytics 4](https://analytics.google.com/)** - your analytics foundation. Tracks page views, clicks, and form submits. Create a GA4 property at [analytics.google.com](https://analytics.google.com/), copy the tracking snippet, paste it into your builder's head-tag field.
 
-**Your channel-specific pixel** (Meta Pixel, LinkedIn Insight Tag, or Reddit Pixel) gets installed in Lesson 1.4 after you pick your channel - same process (copy snippet, paste in head-tag), under one minute.
+(Lesson 1.4 adds one more snippet for the ad platform you pick there - same 60-second copy-paste process, nothing to prepare now.)
 
 All snippets paste into the **head-tag field** - the hidden block at the top of every webpage. Page builders label this "head," "custom code," or "tracking scripts" (Mixo: Settings → Custom Code → Header).
 
@@ -72,15 +72,20 @@ Conversion rate = form submits ÷ page views. That is the number your hypothesis
 > 1. **Create accounts:** sign in to Microsoft (for Clarity) and Google (for GA4). Most people already have one or both - reuse them.
 > 2. **Install Clarity** ([clarity.microsoft.com](https://clarity.microsoft.com/), 60 seconds): copy the snippet, paste in your page builder's head-tag field.
 > 3. **Install GA4** ([analytics.google.com](https://analytics.google.com/)): copy the GA4 snippet, paste in the head-tag field. If you plan to use Google Ads in 1.4, you'll link GA4 in Google Ads Settings there.
-> 4. **Verify:** open your page in an incognito window. Wait 60 seconds. **✅ Clarity:** your visit appears as a session recording. **✅ GA4:** test visit registers in your dashboard.
+> 4. **Verify:** open your page in an incognito window. Wait 60 seconds. **Clarity:** your visit appears as a session recording. **GA4:** test visit registers in your dashboard.
+> 5. **Verify the conversion event too:** submit the waitlist form once with a test email and confirm a form-submit event appears in GA4's Realtime report. That event is the top of the conversion-rate fraction in Lesson 1.4 - if it doesn't fire now, your week of ad spend reports zero conversions no matter what visitors do. (Builder forms sometimes don't trigger GA4's automatic form tracking; if nothing appears, use your builder's own signup counter as the submit count in 1.4 instead.)
 >
 > (One "custom code" field? That field is the head-tag - paste all snippets there.)
 
 ## If the dashboard stays empty
 
-**If this fails: Clarity shows "No data yet" after 5 minutes.** **Why:** the snippet is in the wrong field - usually pasted in the page body instead of the head tag, or your builder's preview mode is blocking scripts. **Fix:** double-check the field name; most builders separate "head code" from "body code," and the snippet must go in head. If your builder only has one "custom code" field, that field is usually the right one. Still nothing after the fix? Wait one hour and re-check. Clarity sometimes lags on the first install.
+**If this fails: Clarity shows "No data yet" after 5 minutes.**
+- **Why:** the snippet is in the wrong field - usually pasted in the page body instead of the head tag, or your builder's preview mode is blocking scripts.
+- **Fix:** double-check the field name; most builders separate "head code" from "body code," and the snippet must go in head. If your builder only has one "custom code" field, that field is usually the right one. Still nothing after the fix? Wait one hour and re-check. Clarity sometimes lags on the first install.
 
-**If this fails: GA4 shows no test visit after 5 minutes.** **Why:** same cause as Clarity - GA4 snippet pasted in the wrong field, or the builder's preview mode is blocking it. **Fix:** move the GA4 snippet to the head-tag field, publish the page, then refresh the GA4 Realtime report. GA4 needs a real page load (not preview) to register the first hit.
+**If this fails: GA4 shows no test visit after 5 minutes.**
+- **Why:** same cause as Clarity - GA4 snippet pasted in the wrong field, or the builder's preview mode is blocking it.
+- **Fix:** move the GA4 snippet to the head-tag field, publish the page, then refresh the GA4 Realtime report. GA4 needs a real page load (not preview) to register the first hit.
 
 ---
 
