@@ -47,24 +47,7 @@ After this lesson you will be able to: **build a 30-name list of specific people
 
 The full journey, top to bottom:
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'fontSize':'24px', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart LR
-    H(["Hypothesis<br/>from Ch 1.1"])
-    H --> S1["1. AI ICP map<br/>paste into Claude"]
-    S1 --> S2["2. Read where<br/>they complain"]
-    S2 --> S3["3. Build the<br/>30-name list"]
-    S3 --> S4["4. Write each<br/>one personally"]
-    S4 --> S5(["10 interviews<br/>on calendar"])
-
-    classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
-    classDef step fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
-    classDef end1 fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-
-    class H start
-    class S1,S2,S3,S4 step
-    class S5 end1
-```
+![The find-10 journey as a left-to-right strip of six cards: your hypothesis from Chapter 1.1, then four numbered steps - step 1 AI ICP map paste into Claude, step 2 read where they complain, step 3 build the 30-name list, step 4 write each one personally - ending in 10 interviews booked on the calendar.](find10-journey.svg)
 
 1. **Translate the hypothesis into an ICP map** - paste your three sentences and two competitor URLs into Claude or ChatGPT.
 2. **Read where they're already complaining** - work through the channels the AI proposed. Note 30 sentences in their real words.

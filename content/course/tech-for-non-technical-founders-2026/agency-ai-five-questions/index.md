@@ -24,9 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the "Manage AI-Era Risks" path of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Send 24 hours before the discovery call. Score in real time during the call.
-
-# The "We Use AI" 5-Question Script
+Template companion to the "Manage AI-Era Risks" path of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Send 24 hours before the discovery call. Score in real time during the call.
 
 Five questions that catch AI theatre in 30 minutes - hand them to your next agency call before you sign anything.
 

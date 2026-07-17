@@ -88,6 +88,8 @@ Side-by-side: the Module 2 throwaway prototype vs the Module 4 production MVP.
 
 It is tempting to ask "which framework" before you ask "which job." Three tools, three jobs. The boundaries between them are the only architecture you need to know on day one.
 
+![Three tools, three boundaries. Lovable owns the UI - it renders the screens and sends the form data down. Supabase owns the data and auth - it stores the users, rows, and files and holds the login. Stripe owns the money - it charges the card and confirms who paid. Data flows left to right from Lovable to Supabase to Stripe, and a Stripe webhook loops back to Supabase to tell it the customer is paid.](stack-boundaries.svg)
+
 ### Lovable - the UI layer
 
 Lovable is an AI-powered builder for the screens. You describe an app in English: *"a dashboard for fitness coaches to log client check-ins, with a weekly export to CSV"*, and Lovable generates a working web frontend with proper component structure, routing, and form validation. Every save deploys to a public staging URL you can paste into a Slack message.

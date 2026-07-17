@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-labelledby="bps-title">
+  <title id="bps-title">Four build phases, then the five-green-lights gate. Phase 1 Lovable UI: screens click, nothing saved. Phase 2 Supabase and auth: a real signup persists. Phase 3 Stripe checkout: a one-dollar test charge clears. Phase 4 go live: five ICP users click. All five lights green - Stripe in live mode, custom domain wired, one fresh ICP user hit the paywall, zero JS errors on signup and checkout, a weekly demo recording exists - advances you to Module 5.</title>
+  <desc>Four numbered phase cards in a row - Phase 1 Lovable UI, Phase 2 Supabase and auth, Phase 3 Stripe checkout, Phase 4 go live - each with its demo line, joined by arrows. An arrow drops into a wide green gate card below listing the five exit lights: Stripe live, custom domain wired, one fresh ICP user hit the paywall, zero JS errors, weekly demo recording exists. All five green advances to Module 5.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub    { font-size: 17px; fill: #666; font-style: italic; }
+      .ph     { font-size: 20px; font-weight: 700; fill: #1a1a1a; }
+      .demo   { font-size: 15px; fill: #555; }
+      .num    { font-size: 15px; font-weight: 700; fill: #fff; }
+      .gate   { font-size: 21px; font-weight: 700; fill: #2e7d32; }
+      .light  { font-size: 16px; fill: #1a1a1a; }
+      .card   { fill: #faf7f2; stroke: #555; stroke-width: 2; }
+      .card-g { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .numdot { fill: #cc342d; }
+      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
+      .tick   { font-size: 16px; font-weight: 700; fill: #2e7d32; }
+    </style>
+    <marker id="bp-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="36" text-anchor="middle" class="h title">Four phases, then the five green lights</text>
+  <text x="480" y="62" text-anchor="middle" class="h sub">One demo per phase - the demo is the data, not the screens.</text>
+
+  <!-- Phase cards -->
+  <g transform="translate(24,86) rotate(-0.5 107 52)">
+    <rect width="214" height="104" rx="12" class="card"/>
+    <circle cx="26" cy="26" r="13" class="numdot"/>
+    <text x="26" y="31" text-anchor="middle" class="h num">1</text>
+    <text x="48" y="33" class="h ph">Lovable UI</text>
+    <text x="20" y="66" class="h demo">Screens click,</text>
+    <text x="20" y="88" class="h demo">nothing saved yet</text>
+  </g>
+  <g transform="translate(256,86) rotate(0.4 107 52)">
+    <rect width="214" height="104" rx="12" class="card"/>
+    <circle cx="26" cy="26" r="13" class="numdot"/>
+    <text x="26" y="31" text-anchor="middle" class="h num">2</text>
+    <text x="48" y="33" class="h ph">Supabase + auth</text>
+    <text x="20" y="66" class="h demo">A real signup</text>
+    <text x="20" y="88" class="h demo">persists on refresh</text>
+  </g>
+  <g transform="translate(488,86) rotate(-0.4 107 52)">
+    <rect width="214" height="104" rx="12" class="card"/>
+    <circle cx="26" cy="26" r="13" class="numdot"/>
+    <text x="26" y="31" text-anchor="middle" class="h num">3</text>
+    <text x="48" y="33" class="h ph">Stripe checkout</text>
+    <text x="20" y="66" class="h demo">A $1 test charge</text>
+    <text x="20" y="88" class="h demo">flips the row to paid</text>
+  </g>
+  <g transform="translate(720,86) rotate(0.5 107 52)">
+    <rect width="214" height="104" rx="12" class="card"/>
+    <circle cx="26" cy="26" r="13" class="numdot"/>
+    <text x="26" y="31" text-anchor="middle" class="h num">4</text>
+    <text x="48" y="33" class="h ph">Go live</text>
+    <text x="20" y="66" class="h demo">5 ICP users click</text>
+    <text x="20" y="88" class="h demo">the live URL</text>
+  </g>
+
+  <!-- arrows between phases -->
+  <path d="M 240 138 L 254 138" class="arrow" marker-end="url(#bp-ah)"/>
+  <path d="M 472 138 L 486 138" class="arrow" marker-end="url(#bp-ah)"/>
+  <path d="M 704 138 L 718 138" class="arrow" marker-end="url(#bp-ah)"/>
+
+  <!-- drop arrow into the gate -->
+  <path d="M 480 192 L 480 246" class="arrow" marker-end="url(#bp-ah)"/>
+
+  <!-- five-lights gate -->
+  <g transform="translate(40,250)">
+    <rect width="880" height="126" rx="13" class="card-g"/>
+    <text x="30" y="34" class="h gate">All 5 lights green &#8594; advance to Module 5</text>
+    <text x="30" y="66" class="h light"><tspan class="tick">&#10003;</tspan> Stripe in LIVE mode - a real card clears</text>
+    <text x="30" y="92" class="h light"><tspan class="tick">&#10003;</tspan> Custom domain wired (not .lovable.app)</text>
+    <text x="30" y="118" class="h light"><tspan class="tick">&#10003;</tspan> 1 fresh ICP user hit the paywall</text>
+    <text x="470" y="66" class="h light"><tspan class="tick">&#10003;</tspan> Zero JS errors on signup + checkout</text>
+    <text x="470" y="92" class="h light"><tspan class="tick">&#10003;</tspan> A weekly demo recording exists</text>
+    <text x="470" y="118" class="h demo">Any light red = fix it first, then re-check.</text>
+  </g>
+</svg>

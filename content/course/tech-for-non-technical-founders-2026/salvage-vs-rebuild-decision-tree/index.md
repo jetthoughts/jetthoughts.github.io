@@ -24,9 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the "When Things Break" path of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Run alone Friday afternoon. Send the score to one independent reviewer for a paid 30-minute call.
-
-# The Salvage vs Rebuild Decision Tree
+Template companion to the "When Things Break" path of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Run alone Friday afternoon. Send the score to one independent reviewer for a paid 30-minute call.
 
 A 30-minute decision that ends two weeks of analysis paralysis and gives you a defensible verdict by Friday night.
 

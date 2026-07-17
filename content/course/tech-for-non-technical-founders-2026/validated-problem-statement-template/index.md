@@ -24,9 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to [the Mom Test synthesis section](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Print after running 10 interviews. Fill in 30 minutes. Show to 2 advisors before building anything.
-
-# Validated Problem Statement Template - One Page, Five Sections
+Template companion to [the Mom Test synthesis section](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Print after running 10 interviews. Fill in 30 minutes. Show to 2 advisors before building anything.
 
 *The synthesis sheet that turns 10 Mom Test transcripts into a build, pivot, or kill decision.*
 

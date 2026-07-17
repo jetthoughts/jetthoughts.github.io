@@ -71,7 +71,9 @@ Total time budget: 90 minutes to write, 1 hour to read aloud + revise, 0 minutes
 
 ## The template - copy and paste
 
-Use the markdown block below directly in Notion, Lovable's prompt window, or a Word doc. The [SVG of the page](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) is embedded in the Chapter 3.1 post for printing.
+Use the markdown blocks below directly in Notion, Lovable's prompt window, or a Word doc. The [SVG of the page](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) is embedded in the Chapter 3.1 post for printing.
+
+Copy section by section, or grab the whole template from the top.
 
 ```
 ======================= VIBE PRD =======================
@@ -83,7 +85,11 @@ Founder: _________________  Date: _______________________
 Source: validated problem statement signed ____/____/____
         by ____________________ (advisor 1) and
            ____________________ (advisor 2)
+```
 
+**Section 1 - the problem.** Copy this straight from your validated problem statement, word for word. Do not soften the wording.
+
+```
 ---------------------------------------------------------
 1. THE PROBLEM (copy from validated problem statement)
 ---------------------------------------------------------
@@ -103,7 +109,11 @@ _________________________________________________________
 Inherited from validated problem statement - DO NOT
 paraphrase. If you find yourself softening the wording,
 stop and reread the original page.
+```
 
+**Section 2 - the user and their context.** The agent or junior needs the moment of use, not the market size.
+
+```
 ---------------------------------------------------------
 2. THE USER AND THEIR CONTEXT
 ---------------------------------------------------------
@@ -126,7 +136,11 @@ _________________________________________________________
 The agent or junior needs the context, not the TAM.
 "Tired, two tabs open, wants to be done" beats
 "SMB SaaS company, 11-50 employees, Series A."
+```
 
+**Section 3 - what you're building.** One paragraph, verb-led. If it reads like a feature list, the agent builds a settings page nobody asked for.
+
+```
 ---------------------------------------------------------
 3. WHAT YOU'RE BUILDING (one paragraph, plain English)
 ---------------------------------------------------------
@@ -152,7 +166,11 @@ a feature list (Stripe integration + dashboard + settings)
 the agent will build a settings page nobody asked for.
 Rewrite until it reads like a sentence about what the
 user does.
+```
 
+**Section 4 - the success metric.** One number, not three. Three metrics let you cherry-pick.
+
+```
 ---------------------------------------------------------
 4. SUCCESS METRIC (one number)
 ---------------------------------------------------------
@@ -171,7 +189,11 @@ _________________________________________________________
 
 One metric, not three. Three metrics let you cherry-pick.
 One metric forces a build/no-build call in 30 days.
+```
 
+**Section 5 - what you're not building.** The longer this no-go list, the cheaper your build.
+
+```
 ---------------------------------------------------------
 5. WHAT YOU'RE NOT BUILDING (the no-go list)
 ---------------------------------------------------------
@@ -191,7 +213,11 @@ might add unprompted that you explicitly do not want in v1.
 If this section is shorter than 5 lines, you have not
 finished. The agent fills blanks. The longer your list,
 the cheaper your build.
+```
 
+**Hand-off.** Who the brief is going to, and the dates that keep it honest.
+
+```
 ---------------------------------------------------------
 HAND-OFF
 ---------------------------------------------------------

@@ -72,7 +72,7 @@ The full Pass/Fail rubric, scoring template, and "what to send 24 hours before t
 
 ### Q1 - The workflow question
 
-> "Walk me through how a developer on your team takes a Jira ticket and ends up with merged code, when they use AI in the loop. Name the tools, the prompt patterns, and the human review gates. Use a real ticket your team closed last week."
+> **Q1** - "Walk me through how a developer on your team takes a Jira ticket and ends up with merged code, when they use AI in the loop. Name the tools, the prompt patterns, and the human review gates. Use a real ticket your team closed last week."
 
 A team that cannot describe its workflow does not have one. The agencies that direct AI well have a written one-page playbook: ticket, draft prompt, generate, run the failing test the developer wrote first, review the diff against the spec, open the PR with an `Assisted-by:` footer, second senior reviews, merge. They will offer to email the playbook the same afternoon.
 
@@ -80,7 +80,7 @@ The agencies running theatre answer in slogans. The Q3 2026 founder above never 
 
 ### Q2 - The cost question
 
-> "What does the average developer on your team spend on AI tokens per month, and who pays it? Will it pass through to my invoice, and what should I budget for the project we just scoped?"
+> **Q2** - "What does the average developer on your team spend on AI tokens per month, and who pays it? Will it pass through to my invoice, and what should I budget for the project we just scoped?"
 
 AI tokens are a real budget line in 2026. A Cursor Pro seat is roughly $20-$40, and the Anthropic plus OpenAI API spend on top runs $80-$300 per developer per month for a team that is actually using Claude Code or Aider on big diffs.
 
@@ -90,7 +90,7 @@ The [agency-ai-five-questions script](/course/tech-for-non-technical-founders-20
 
 ### Q3 - The verification question
 
-> "When AI generates a 200-line PR, what does your senior reviewer actually check? Walk me through one PR you reviewed last week and tell me what you looked for."
+> **Q3** - "When AI generates a 200-line PR, what does your senior reviewer actually check? Walk me through one PR you reviewed last week and tell me what you looked for."
 
 The senior should pull up an actual PR on screenshare. They should read it line by line and explain what they verified: did the diff match the ticket spec, are there hardcoded secrets or API keys in the diff, are the tests genuine (written first as failing specs by the developer) or AI-generated to make CI green, did the AI introduce new gems or pip packages and do those packages actually exist on Rubygems / PyPI / npm.
 
@@ -100,7 +100,7 @@ Ask which human's name shows up on the agency's `Assisted-by:` lines this week. 
 
 ### Q4 - The slopsquatting question
 
-> "In March 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers register those names and wait for developers to install the typo. How do you prevent installing a hallucinated package?"
+> **Q4** - "In March 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers register those names and wait for developers to install the typo. How do you prevent installing a hallucinated package?"
 
 A passing answer names a specific defense: a pre-vetted package allowlist with a written process for adding new dependencies, a scanner like [Socket](https://socket.dev/) or [Snyk](https://snyk.io/) on every PR that blocks the build until a human approves any new package, or a manual `gem info <name>` / `pip show <name>` / `npm view <name>` step before any new dependency lands.
 
@@ -110,7 +110,7 @@ An agency that has not heard of slopsquatting in late 2026 has not read its fiel
 
 ### Q5 - The accountability question
 
-> "When AI-generated code causes a production incident, who is on the hook? Walk me through the last AI-generated-code incident your team had - what happened, when, and what you changed afterwards."
+> **Q5** - "When AI-generated code causes a production incident, who is on the hook? Walk me through the last AI-generated-code incident your team had - what happened, when, and what you changed afterwards."
 
 A specific incident with a date in the last six months. A one-paragraph root cause. The named senior who reviewed the offending PR. The workflow change made the week after. The agencies that have shipped AI code in production have written at least one of these postmortems already.
 

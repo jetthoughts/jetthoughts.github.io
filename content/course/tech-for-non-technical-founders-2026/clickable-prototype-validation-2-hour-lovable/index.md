@@ -126,7 +126,7 @@ What the user sees after the core action succeeds. A confirmation message, a sum
 
 ### The Lovable Prompt Template
 
-> **📋 Save this template.** Copy the prompt below into your notes. You'll reuse the same structure in [Module 4's real MVP build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) - same Lovable tool, same 3-screen skeleton, but with real auth, real database, and real Stripe.
+> **Save this template.** Copy the prompt below into your notes. You'll reuse the same structure in [Module 4's real MVP build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) - same Lovable tool, same 3-screen skeleton, but with real auth, real database, and real Stripe.
 
 > **Practical Lovable onramp.** [Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt - you type what you want in English, it ships the screens. The **free trial** gives you a small number of messages per day with no credit card required, which is enough to ship this 3-screen throwaway prototype. **Paid plans lift the cap - check Lovable's pricing page.** They only become worth it if you later need higher message volume - not required for this chapter.
 >

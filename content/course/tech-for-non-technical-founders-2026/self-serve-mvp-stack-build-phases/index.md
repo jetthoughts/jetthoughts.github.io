@@ -46,6 +46,8 @@ related_posts: false
 
 ## The ship plan
 
+![Four build phases, then the five-green-lights gate. Phase 1 Lovable UI - screens click, nothing saved. Phase 2 Supabase and auth - a real signup persists. Phase 3 Stripe checkout - a $1 test charge flips the row to paid. Phase 4 go live - 5 ICP users click the live URL. All five exit lights green (Stripe in live mode, custom domain wired, one fresh ICP user hit the paywall, zero JS errors on signup and checkout, a weekly demo recording exists) advances you to Module 5.](build-phases-strip.svg)
+
 The ship plan below is the BUILD portion only. It assumes you already ran Modules 1-3 (hypothesis, smoke test, 10 interviews, one-page brief) and read [Chapter 4.3: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). If you skip straight here without validation, the build ships into the silence Modules 1-3 were designed to prevent.
 
 Four build phases, plus an onramp phase that hands you off to Module 5. Each phase ends with one demo to one human (a friend, an advisor, your spouse, the dog if necessary - someone who has not seen the build). The build phase ends with five real ICP users on the staging URL; the onramp phase brings the rest of your Ch 2.3-2.4 interview pool onto the product.

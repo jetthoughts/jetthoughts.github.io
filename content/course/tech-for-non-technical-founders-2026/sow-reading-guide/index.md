@@ -24,9 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the Module 4 hire track of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Read the night before you sign. Print, highlighter, 90 minutes alone.
-
-# The SOW Reading Guide
+Template companion to the Module 4 hire track of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Read the night before you sign. Print, highlighter, 90 minutes alone.
 
 An annotated sample SOW that catches the 8 clauses agencies hope you skim.
 
@@ -143,7 +141,7 @@ The [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers what a clean te
 
 ## What to do before signing
 
-> **📋 Copy-pasteable pre-sign checklist - do this the night before you sign:**
+> **Copy-pasteable pre-sign checklist - do this the night before you sign:**
 >
 > - [ ] Printed SOW in hand, yellow highlighter ready
 > - [ ] All 8 clauses walked (scorecard above). Every fired flag has a question written in the margin.

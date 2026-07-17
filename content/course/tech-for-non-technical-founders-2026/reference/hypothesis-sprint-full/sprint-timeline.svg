@@ -44,13 +44,13 @@
     <text x="698" y="142" class="h desc">one sentence each</text>
   </g>
 
-  <!-- Row 2 (right to left): 4, 5, 6   x = 640, 340, 40 ; y = 196 -->
-  <g transform="rotate(0.4 780 246)">
-    <rect x="640" y="196" width="280" height="100" rx="12" class="card"/>
-    <circle cx="670" cy="226" r="14" class="numdot"/>
-    <text x="670" y="231" text-anchor="middle" class="h num">4</text>
-    <text x="698" y="236" class="h step">Magic Lenses</text>
-    <text x="698" y="266" class="h desc">score 1-5 on four lenses</text>
+  <!-- Row 2 (left to right): 4, 5, 6   x = 40, 340, 640 ; y = 196 -->
+  <g transform="rotate(0.4 180 246)">
+    <rect x="40" y="196" width="280" height="100" rx="12" class="card"/>
+    <circle cx="70" cy="226" r="14" class="numdot"/>
+    <text x="70" y="231" text-anchor="middle" class="h num">4</text>
+    <text x="98" y="236" class="h step">Magic Lenses</text>
+    <text x="98" y="266" class="h desc">score 1-5 on four lenses</text>
   </g>
   <g transform="rotate(-0.4 480 246)">
     <rect x="340" y="196" width="280" height="100" rx="12" class="card"/>
@@ -59,20 +59,20 @@
     <text x="398" y="236" class="h step">Write It Down</text>
     <text x="398" y="266" class="h desc">the one Mad Libs sentence</text>
   </g>
-  <g transform="rotate(0.4 180 246)">
-    <rect x="40" y="196" width="280" height="100" rx="12" class="card"/>
-    <circle cx="70" cy="226" r="14" class="numdot"/>
-    <text x="70" y="231" text-anchor="middle" class="h num">6</text>
-    <text x="98" y="236" class="h step">Design the Test</text>
-    <text x="98" y="266" class="h desc">smoke test + interviews</text>
+  <g transform="rotate(0.4 780 246)">
+    <rect x="640" y="196" width="280" height="100" rx="12" class="card"/>
+    <circle cx="670" cy="226" r="14" class="numdot"/>
+    <text x="670" y="231" text-anchor="middle" class="h num">6</text>
+    <text x="698" y="236" class="h step">Design the Test</text>
+    <text x="698" y="266" class="h desc">smoke test + interviews</text>
   </g>
 
   <!-- Arrows: row 1 rightward -->
   <path d="M 322 122 L 338 122" class="arrow" marker-end="url(#ts-ah)"/>
   <path d="M 622 122 L 638 122" class="arrow" marker-end="url(#ts-ah)"/>
-  <!-- Wrap down from 3 to 4 -->
-  <path d="M 780 174 L 780 194" class="arrow" marker-end="url(#ts-ah)"/>
-  <!-- Row 2 leftward -->
-  <path d="M 638 246 L 622 246" class="arrow" marker-end="url(#ts-ah)"/>
-  <path d="M 338 246 L 322 246" class="arrow" marker-end="url(#ts-ah)"/>
+  <!-- Connector: drop from step 3 (top-right) across to step 4 (bottom-left) -->
+  <path d="M 780 174 L 780 184 L 180 184 L 180 194" class="arrow" marker-end="url(#ts-ah)"/>
+  <!-- Row 2 rightward -->
+  <path d="M 322 246 L 338 246" class="arrow" marker-end="url(#ts-ah)"/>
+  <path d="M 622 246 L 638 246" class="arrow" marker-end="url(#ts-ah)"/>
 </svg>

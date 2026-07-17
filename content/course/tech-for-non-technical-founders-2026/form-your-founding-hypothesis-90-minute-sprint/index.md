@@ -41,7 +41,7 @@ A first-time founder usually treats their strategy as a fact ("parents need this
 
 A **Founding Hypothesis** is a fill-in-the-blanks sentence (Mad Libs style) from Jake Knapp and John Zeratsky's *Click* (2025):
 
-> *"If we help [customer] solve [problem] with [approach], they'll choose it over [competition] because [differentiation]."*
+> *"If we help `[customer]` solve `[problem]` with `[approach]`, they'll choose it over `[competition]` because `[differentiation]`."*
 
 Five blanks. One sentence - not a deck - because a sentence can't hide vague thinking, and because you'll reuse it everywhere: it feeds your landing-page headline in 1.2 (reshaped into a customer-plus-outcome one-liner) and tells Module 2 who to interview and which problem to ask about (you keep the sentence to yourself in interviews - pitching it contaminates the answers). The discipline is filling all five blanks with specifics, not categories.
 
@@ -49,9 +49,9 @@ Each blank is an assumption, and each assumption has a test waiting for it later
 
 | Blank | Where it gets tested |
 |---|---|
-| [customer] + [problem] | Strangers recognize themselves in your headline (1.2), then ten Mom Test interviews confirm the pain (Module 2) |
-| [approach] | A clickable prototype in front of 5 interviewees (Module 2) |
-| [competition] + [differentiation] | 300 cold strangers convert on your page - or don't (1.4) |
+| `[customer]` + `[problem]` | Strangers recognize themselves in your headline (1.2), then ten Mom Test interviews confirm the pain (Module 2) |
+| `[approach]` | A clickable prototype in front of 5 interviewees (Module 2) |
+| `[competition]` + `[differentiation]` | 300 cold strangers convert on your page - or don't (1.4) |
 | The whole bet: will they pay? | The Stripe price test (1.5) |
 
 **Why this works:** when the sentence is vague, people nod politely because there's nothing to disagree with; when it's specific, they push back - and the pushback is what you're after:
@@ -61,11 +61,11 @@ Each blank is an assumption, and each assumption has a test waiting for it later
 
 **What makes a blank specific:**
 
-- **[customer]**: the specific person - "solo chiropractors," not "small businesses"
-- **[problem]**: what they tried and failed at in the last 30 days, in their words
-- **[approach]**: the shape of your solution - "one-click resubmit," not "AI-powered workflow"
-- **[competition]**: what they currently use (a spreadsheet, a billing service, "doing nothing")
-- **[differentiation]**: why they'd switch - faster or cheaper, with numbers
+- **`[customer]`**: the specific person - "solo chiropractors," not "small businesses"
+- **`[problem]`**: what they tried and failed at in the last 30 days, in their words
+- **`[approach]`**: the shape of your solution - "one-click resubmit," not "AI-powered workflow"
+- **`[competition]`**: what they currently use (a spreadsheet, a billing service, "doing nothing")
+- **`[differentiation]`**: why they'd switch - faster or cheaper, with numbers
 
 ![5 blanks of the Mad Libs hypothesis sentence with a filled example below](hypothesis-mad-libs.svg)
 
@@ -96,9 +96,13 @@ Score each lens 1-5. Be honest - this is for you, not an investor deck.
 
 ---
 
-**If this fails: your sentence scores below 14 or has a lens at 1.** **Why:** a blank is still a category, not a specific noun. **Fix:** find a verbatim quote from a real person complaining about this problem ([Reddit](https://www.reddit.com/), [G2 reviews](https://www.g2.com/), or a conversation you had). Replace your [problem] blank with their exact words. If you don't have a quote yet, leave the [problem] blank as a placeholder and complete 1.2 - you'll fill it after Module 2 interviews.
+**If this fails: your sentence scores below 14 or has a lens at 1.**
+- **Why:** a blank is still a category, not a specific noun.
+- **Fix:** find a verbatim quote from a real person complaining about this problem ([Reddit](https://www.reddit.com/), [G2 reviews](https://www.g2.com/), or a conversation you had). Replace your `[problem]` blank with their exact words. If you don't have a quote yet, leave the `[problem]` blank as a placeholder and complete 1.2 - you'll fill it after Module 2 interviews.
 
-**If this fails: every blank is specific but the sentence still sounds generic.** **Why:** you're writing in market-research language instead of customer language. **Fix:** read the sentence aloud to one stranger. If they say "wait, can you say that again," rewrite the blank they tripped on. Three reads is normal.
+**If this fails: every blank is specific but the sentence still sounds generic.**
+- **Why:** you're writing in market-research language instead of customer language.
+- **Fix:** read the sentence aloud to one stranger. If they say "wait, can you say that again," rewrite the blank they tripped on. Three reads is normal.
 
 ---
 

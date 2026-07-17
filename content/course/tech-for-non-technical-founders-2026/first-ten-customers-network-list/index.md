@@ -79,7 +79,9 @@ Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship stre
 
 ---
 
-**If this fails: your network is under 15 names after filtering.** **Why:** your must-have segment isn't represented in your professional network. **Fix:** skip to [Ch 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Use community fallbacks (Indie Hackers, sector Slack, Reddit) as warm-cold hybrid messages.
+**If this fails: your network is under 15 names after filtering.**
+- **Why:** your must-have segment isn't represented in your professional network.
+- **Fix:** skip to [Ch 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Use community fallbacks (Indie Hackers, sector Slack, Reddit) as warm-cold hybrid messages.
 
 ---
 

@@ -24,9 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Chapter 2.1 post](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). Open on a second screen during the call. Read questions verbatim.
-
-# The Mom Test Interview Script - Ask About the Past, Not the Future
+Template companion to the [Chapter 2.1 post](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). Open on a second screen during the call. Read questions verbatim.
 
 *Five questions that get the interviewee to tell you what they actually did, not what sounds polite.*
 

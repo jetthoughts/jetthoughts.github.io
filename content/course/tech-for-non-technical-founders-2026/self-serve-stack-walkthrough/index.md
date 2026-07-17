@@ -26,11 +26,11 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to [Chapter 4.3 · The Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) and [4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/). Print it, pin it by your monitor, and work one session at a time.
-
-# Self-Serve Stack Walkthrough - 4 Phases, 3 Tools, 1 Staging URL
+Template companion to [Chapter 4.3 · The Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) and [4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/). Print it, pin it by your monitor, and work one session at a time.
 
 *Session-by-session tasks for shipping the Lovable + Supabase + Stripe MVP. Cross off as you go.*
+
+![The walkthrough, phase by phase. Phase 1 Lovable UI, 5 sessions, demo a clickable staging URL. Phase 2 Supabase and auth, 5 sessions, demo the first real signup. Phase 3 Stripe checkout, 5 sessions, demo a $1 paid flow that clears. Phase 4 go live, 5 sessions, demo 5 ICP users clicking. Twenty build sessions of about 90 minutes each - roughly 10 weeks evenings-only or 4 weeks full-time, the same 20 sessions either way.](walkthrough-milestones.svg)
 
 **The 4-phase roadmap:**
 
@@ -64,17 +64,20 @@ If a session runs long, or a phase takes you a couple of extra weeks, you are no
 
 ## Pre-flight checklist (before Phase 1)
 
-- [ ] **one-page brief finalized** ([template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/))
-- [ ] **Validated Problem Statement filled in** ([template](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/))
-- [ ] **[Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) verdict = Path 2 (Self-serve)**
-- [ ] **One Lovable account created** (Free tier OK to start; upgrade to a paid plan - check Lovable's pricing page - around Phase 2)
-- [ ] **One Supabase project created** (Free tier OK through Phase 4)
-- [ ] **One Stripe account created** in test mode (verify the email)
-- [ ] **One GitHub account** (Free plan is fine for solo founder)
-- [ ] **Recurring calendar blocks** scheduled: your build sessions, ~90 minutes each (two a week if you build evenings only, more if you are full-time)
-- [ ] **Demo audience chosen** for each phase (spouse, advisor, peer founder, ICP prospect - rotate)
-
-If any pre-flight box is unchecked, do that first. The plan does not work without the inputs.
+<div class="ws-card">
+  <p>Every box below must be checked before Phase 1. If any is unchecked, do that first - the plan does not work without the inputs.</p>
+  <ul class="ws-checks">
+    <li><strong>One-page brief finalized</strong> (<a href="/course/tech-for-non-technical-founders-2026/vibe-prd-template/">template</a>)</li>
+    <li><strong>Validated Problem Statement filled in</strong> (<a href="/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/">template</a>)</li>
+    <li><strong><a href="/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/">Build Path Decision Worksheet</a> verdict = Path 2 (Self-serve)</strong></li>
+    <li><strong>One Lovable account created</strong> (Free tier OK to start; upgrade to a paid plan - check Lovable's pricing page - around Phase 2)</li>
+    <li><strong>One Supabase project created</strong> (Free tier OK through Phase 4)</li>
+    <li><strong>One Stripe account created</strong> in test mode (verify the email)</li>
+    <li><strong>One GitHub account</strong> (Free plan is fine for a solo founder)</li>
+    <li><strong>Recurring calendar blocks</strong> scheduled: your build sessions, ~90 minutes each (two a week evenings-only, more if you are full-time)</li>
+    <li><strong>Demo audience chosen</strong> for each phase (spouse, advisor, peer founder, ICP prospect - rotate)</li>
+  </ul>
+</div>
 
 ## Phase 1 - Lovable + the UI (no backend yet)
 
@@ -123,7 +126,7 @@ Send the staging URL to someone who has not read the one-page brief. Watch them 
 
 **Result line (fill in)**: ____________________________________________
 
-> **Phase 1 outcome**: a clickable UI on a public staging URL, GitHub-synced, that a non-PRD reader can navigate without a tour.
+> **Good** - Phase 1 done: a clickable UI on a public staging URL, GitHub-synced, that a non-PRD reader can navigate without a tour.
 
 ## Phase 2 - Supabase + auth (real signup works)
 
@@ -201,7 +204,7 @@ Send the staging URL to your spouse (or one ICP peer). Ask them to sign up with 
 
 **Result line (fill in)**: ____________________________________________
 
-> **Phase 2 outcome**: a real signup persists across refresh, RLS is on, and the first row appears in the Supabase console live during the phase demo.
+> **Good** - Phase 2 done: a real signup persists across refresh, RLS is on, and the first row appears in the Supabase console live during the phase demo.
 
 ## Phase 3 - Stripe + checkout ($1 test transactions)
 
@@ -250,7 +253,7 @@ Walk through the full flow in test mode: signup -> dashboard -> add a client -> 
 
 **Result line (fill in)**: ____________________________________________
 
-> **Phase 3 outcome**: a paid signup flow end-to-end in test mode, webhook verified, `subscription_status` flips from `trial` to `active` within 10 seconds of a $1 charge.
+> **Good** - Phase 3 done: a paid signup flow end-to-end in test mode, webhook verified, `subscription_status` flips from `trial` to `active` within 10 seconds of a $1 charge.
 
 ## When the webhook doesn't fire (troubleshooting in 5 minutes)
 
@@ -309,7 +312,7 @@ The data picks the next week. Do not iterate on what you imagine; iterate on wha
 
 **Result line (fill in)**: ____________________________________________
 
-> **Phase 4 outcome**: a live domain pointing at the staging URL, 5 ICP prospects sent the link, and real signup/click/pay metrics on the table for the data review.
+> **Good** - Phase 4 done: a live domain pointing at the staging URL, 5 ICP prospects sent the link, and real signup/click/pay metrics on the table for the data review.
 
 ## Sample Lovable prompts (verbatim, copy-paste)
 

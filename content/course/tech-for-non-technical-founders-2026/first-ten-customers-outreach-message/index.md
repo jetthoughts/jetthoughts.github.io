@@ -75,9 +75,13 @@ If no real reference exists for a cold-bucket name, move them to [Ch 5.7 cold ou
 
 ---
 
-**If this fails: the message still reads generic after 2 rewrites.** **Why:** you're writing in your marketing voice, not your Ch 5.1 verbatim quotes. **Fix:** paste the exact Q3 answers from your survey into Part 2. If the words are not theirs, swap until they are.
+**If this fails: the message still reads generic after 2 rewrites.**
+- **Why:** you're writing in your marketing voice, not your Ch 5.1 verbatim quotes.
+- **Fix:** paste the exact Q3 answers from your survey into Part 2. If the words are not theirs, swap until they are.
 
-**If this fails: you can't find a real reference for a cold-bucket name.** **Why:** they should not be in your cold bucket. **Fix:** move them to [Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound. The playbook there is designed for zero-context outreach.
+**If this fails: you can't find a real reference for a cold-bucket name.**
+- **Why:** they should not be in your cold bucket.
+- **Fix:** move them to [Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound. The playbook there is designed for zero-context outreach.
 
 ---
 

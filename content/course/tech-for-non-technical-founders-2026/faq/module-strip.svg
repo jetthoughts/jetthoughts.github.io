@@ -13,7 +13,7 @@
       .chip4  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
       .chip5  { fill: #f0fdf4; stroke: #16a34a; stroke-width: 2.5; }
       .n1 { fill: #4f46e5; } .n2 { fill: #0e7490; } .n3 { fill: #b45309; } .n4 { fill: #cc342d; } .n5 { fill: #15803d; }
-      .gen    { fill: #fffdf8; stroke: #cc342d; stroke-width: 2; }
+      .gen    { fill: #faf7f2; stroke: #1a1a1a; stroke-width: 2; }
     </style>
     <marker id="fa" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
       <path d="M0,0 L6,3 L0,6" fill="none" stroke="#999" stroke-width="1.6"/>

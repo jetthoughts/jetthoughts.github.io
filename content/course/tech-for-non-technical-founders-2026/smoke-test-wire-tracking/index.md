@@ -78,9 +78,13 @@ Conversion rate = form submits ÷ page views. That is the number your hypothesis
 
 ## If the dashboard stays empty
 
-**If this fails: Clarity shows "No data yet" after 5 minutes.** **Why:** the snippet is in the wrong field - usually pasted in the page body instead of the head tag, or your builder's preview mode is blocking scripts. **Fix:** double-check the field name; most builders separate "head code" from "body code," and the snippet must go in head. If your builder only has one "custom code" field, that field is usually the right one. Still nothing after the fix? Wait one hour and re-check. Clarity sometimes lags on the first install.
+**If this fails: Clarity shows "No data yet" after 5 minutes.**
+- **Why:** the snippet is in the wrong field - usually pasted in the page body instead of the head tag, or your builder's preview mode is blocking scripts.
+- **Fix:** double-check the field name; most builders separate "head code" from "body code," and the snippet must go in head. If your builder only has one "custom code" field, that field is usually the right one. Still nothing after the fix? Wait one hour and re-check. Clarity sometimes lags on the first install.
 
-**If this fails: GA4 shows no test visit after 5 minutes.** **Why:** same cause as Clarity - GA4 snippet pasted in the wrong field, or the builder's preview mode is blocking it. **Fix:** move the GA4 snippet to the head-tag field, publish the page, then refresh the GA4 Realtime report. GA4 needs a real page load (not preview) to register the first hit.
+**If this fails: GA4 shows no test visit after 5 minutes.**
+- **Why:** same cause as Clarity - GA4 snippet pasted in the wrong field, or the builder's preview mode is blocking it.
+- **Fix:** move the GA4 snippet to the head-tag field, publish the page, then refresh the GA4 Realtime report. GA4 needs a real page load (not preview) to register the first hit.
 
 ---
 

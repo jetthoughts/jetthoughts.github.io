@@ -36,9 +36,9 @@ course_nav: false
 >
 > **Output:** a weekly oversight rhythm running by month 3
 >
-**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
->
 > **Read this if**: you've signed an SOW with a dev shop OR you're paying for "a team of N" without seeing the GitHub handles of who reviews your PRs each week.
+
+**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
 
 Marina, a FinTech founder we picked up in Q1 2026, had been billing **$44K a month for "a team of four."** Three months in, her new fractional CTO asked who had written the last twelve pull requests. The answer: one senior reviewer who signed off most weeks, two mid-level shippers, and three rotating juniors paid by a sub-contracted shop she had never heard of. She had been paying senior rates for code one junior wrote and another junior reviewed.
 

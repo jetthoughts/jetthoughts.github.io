@@ -70,10 +70,10 @@ The tools catch different things:
 | Blind spot | Which tool catches it |
 |---|---|
 | You named a competitor nobody has heard of (or missed the one everyone uses) | VenturusAI (Porter's Five Forces) |
-| Your [customer] blank is "small businesses" - a category, not a person | Preuve AI (niche-segment scan) |
+| Your `[customer]` blank is "small businesses" - a category, not a person | Preuve AI (niche-segment scan) |
 | Your unit economics assume $50/mo pricing when the market pays $15 | DimeADozen (retention-curve section) |
 | Your problem is real but the market is too small to support a business | DimeADozen (market-sizing section) |
-| Your [differentiation] is "easier to use" - the vaguest claim in SaaS | VenturusAI (SWOT strengths section flags it) |
+| Your `[differentiation]` is "easier to use" - the vaguest claim in SaaS | VenturusAI (SWOT strengths section flags it) |
 
 None of these tools costs more than a month of Perplexity Pro. Two are free. Run at least one before you fill the five blanks.
 
@@ -120,7 +120,7 @@ Every blank in the Mad Libs sentence is a blank in your VenturusAI input. Specif
 
 The report has 7-8 sections. You do not need to read all of them. Focus on three:
 
-**Porter's Five Forces - Competitive Rivalry section.** If it names a competitor you had not thought of, add that competitor to the Competition column in the [full hypothesis sprint](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/). If it names one you already knew about but describes their advantage in a way you had not considered, rewrite your [differentiation] blank.
+**Porter's Five Forces - Competitive Rivalry section.** If it names a competitor you had not thought of, add that competitor to the Competition column in the [full hypothesis sprint](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/). If it names one you already knew about but describes their advantage in a way you had not considered, rewrite your `[differentiation]` blank.
 
 **SWOT - Weaknesses.** This is the section that hurts. If the AI flags a weakness you already knew about (e.g., "founder has no engineering background"), that is expected. If it flags one you had not considered (e.g., "customer acquisition depends on insurance-industry partnerships that take 6-12 months to close"), pay attention. That is a structural blank in your hypothesis.
 
@@ -160,7 +160,7 @@ The Starter report is 5-7 pages. You only need to read two sections on the first
 
 **Kill Risks.** This is the section that justifies the $9. It flags existential threats: market saturation (too many entrenched players), low barriers to entry (competitors can clone you in a weekend), CAC-to-LTV problems (acquiring a customer costs more than they will ever pay you), and regulatory hurdles. If any kill risk is specific - names a competitor, a regulation, or a cost number - take it seriously. If it is generic ("the market is competitive"), treat it as a yellow flag, not a red one.
 
-**Retention-Curve / Unit Economics.** This section estimates whether the numbers work. If it says your target market is too small at your price point, revisit the [customer] blank in Ch 1.1. If it says your CAC is too high relative to LTV, revisit your channel assumption.
+**Retention-Curve / Unit Economics.** This section estimates whether the numbers work. If it says your target market is too small at your price point, revisit the `[customer]` blank in Ch 1.1. If it says your CAC is too high relative to LTV, revisit your channel assumption.
 
 Skip the Executive Summary and Go-To-Market sections on first read. They are AI-generated strategy and rarely say anything you could not have guessed. Come back to them after you have real interview data.
 
@@ -213,7 +213,7 @@ The tool matches your description against live data sources. A broad description
 
 **Start with the Viability Score (0-100).** A score above 70 means the tool found positive market signals. A score below 40 means it found more problems than opportunities. A score between 40-70 means the data is mixed - drill into the specific sections that pulled the score down.
 
-**Competitor Mapping.** Preuve identifies up to 15 competitors with pricing and "weak spots." The weak spots are the most actionable part of the report - they tell you where existing solutions fall short. If three competitors share the same weak spot, your [differentiation] blank should target it.
+**Competitor Mapping.** Preuve identifies up to 15 competitors with pricing and "weak spots." The weak spots are the most actionable part of the report - they tell you where existing solutions fall short. If three competitors share the same weak spot, your `[differentiation]` blank should target it.
 
 **Source links.** Every claim is linked to its source. If a score looks off - too high or too low - drill into the cited source before dismissing it. Sometimes the AI misinterprets a data point (e.g., a Reddit post from 2018 gets weighted too heavily). You are the human in the loop.
 
@@ -265,7 +265,7 @@ Run your hypothesis paragraph through VenturusAI. Read the Porter's Five Forces 
 
 ### 2. Preuve AI free scan (second - free)
 
-Run your refined hypothesis through Preuve's free scan. Check if the viability score is above 50 and whether the competitor mapping names companies in your space. If the score is low, revisit your [customer] or [problem] blank. If the score is solid, you have a data-backed signal that the market exists.
+Run your refined hypothesis through Preuve's free scan. Check if the viability score is above 50 and whether the competitor mapping names companies in your space. If the score is low, revisit your `[customer]` or `[problem]` blank. If the score is solid, you have a data-backed signal that the market exists.
 
 **Time:** 5 minutes.
 

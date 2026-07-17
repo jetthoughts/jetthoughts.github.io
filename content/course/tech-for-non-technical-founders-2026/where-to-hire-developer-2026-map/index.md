@@ -24,9 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Hire Track Supplementary Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/). Print Monday morning. Pick your geography, pick your platform, post your role.
-
-# Where to Hire Developer 2026 - The Geography & Platform Map
+Template companion to the [Hire Track Supplementary Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/). Print Monday morning. Pick your geography, pick your platform, post your role.
 
 *One side of paper. Pick the region row. Pick two platforms. Write the job description from the template at the bottom. Post by Monday afternoon.*
 

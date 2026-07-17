@@ -89,31 +89,14 @@ Both outcome-shaped briefs in the section above use the same three parts. The sh
 
 Put the three parts together and the engineer (or the AI agent) has no gaps left to guess at. Drop any one part - the timeframe, the action, or the outcome - and the gap gets filled in from training data instead of your intent. The same shape has a name in product-management literature; see *Further reading* below if you want to chase the lineage.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-    Feature["FEATURE brief: Build a CRM module"]
-    Feature --> F1["Companies + contacts"]
-    Feature --> F2["Deals + pipelines"]
-    Feature --> F3["Email + calendar integration"]
-    Feature --> F4["Custom fields + Kanban"]
-    F1 --> FOut["3 months. $40K. You used contacts + notes."]
-    F2 --> FOut
-    F3 --> FOut
-    F4 --> FOut
+The same request, written both ways, priced out:
 
-    Outcome["OUTCOME brief: Match new signups to 3 similar customers"]
-    Outcome --> O1["Nightly scoring script"]
-    Outcome --> O2["Slack message each morning"]
-    O1 --> OOut["2 days. $600. Onboarding playbook ready Monday."]
-    O2 --> OOut
-
-    classDef bad fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
-    classDef good fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-
-    class Feature,F1,F2,F3,F4,FOut bad
-    class Outcome,O1,O2,OOut good
-```
+| | <strong style="color:#cc342d">Feature brief</strong> | <strong style="color:#2e7d32">Outcome brief</strong> |
+|---|---|---|
+| **What you write** | "Build a CRM module" | "Match new signups to 3 similar customers" |
+| **What the team builds** | Companies + contacts, deals + pipelines, email + calendar integration, custom fields + Kanban | A nightly scoring script + a Slack message each morning |
+| **What it costs** | 3 months. $40K. | 2 days. $600. |
+| **What you actually use** | Contacts + notes | The onboarding playbook, ready Monday |
 
 ## What to do tomorrow
 

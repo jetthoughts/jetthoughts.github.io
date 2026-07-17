@@ -37,7 +37,7 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 
 ## Pick your channel
 
-Choose based on who your hypothesis names in the [customer] blank. The dollar ranges below are **CPC** (cost-per-click - what one ad click costs you):
+Choose based on who your hypothesis names in the `[customer]` blank. The dollar ranges below are **CPC** (cost-per-click - what one ad click costs you):
 
 - **Selling to individual people** → [Meta Ads](https://business.facebook.com/) ($0.70-$1.90 CPC). Best when the product is visual and the audience is broad.
 - **Selling to businesses, by job title** → [Google Search](https://ads.google.com/) ($3-$8 CPC) if your customer Googles the problem; [LinkedIn](https://www.linkedin.com/campaignmanager/) ($5.70-$22 CPC) if they don't.
@@ -50,6 +50,8 @@ Choose based on who your hypothesis names in the [customer] blank. The dollar ra
 
 **Start ad-account setup 2-3 days before launch.** First-time ad accounts can take 24-72 hours to approve. Meta is the slowest; Reddit clears same-day.
 
+You will not have to figure out the ad on your own: the launch checklist below links a [step-by-step recipe for your channel](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) (7 settings, click by click) plus a copy-paste prompt that writes the ad copy and image concept for you.
+
 ![Signal meter reading the smoke-test conversion rate: 0-3% kill or pivot, 3-6% iterate the message, 6-10% promising, 10-20% strong signal, over 20% suspicious - with the 6% go line marked](smoke-test-signal.svg)
 
 ## Launch and read the signal
@@ -60,7 +62,7 @@ Choose based on who your hypothesis names in the [customer] blank. The dollar ra
 > 2. Verify your ad account is approved and payment method attached. If not, set it up tonight.
 > 3. Create and launch your campaign. Open the [campaign creation recipe](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) for your channel (Meta, Google, LinkedIn, or Reddit). Each recipe walks you through 7 settings: objective, budget, audience, placement, creative, tracking, and launch. Set a daily budget that gets you to 300 visits within 5-7 days.
 > 4. **Do not touch the page.** Resist headline rewrites, bid adjustments, and hourly dashboard refreshes for the full run. You want raw demand against the original hypothesis - not an optimized funnel.
-> 5. After 300 visits, read your conversion rate (form submits ÷ page views) against this table:
+> 5. After 300 visits, work out your conversion rate (form submits ÷ page views) and find it on the meter above. The same bands, with the action for each:
 
 | Conversion rate from cold traffic | Decision | What to do |
 |---|---|---|
@@ -76,9 +78,13 @@ Choose based on who your hypothesis names in the [customer] blank. The dollar ra
 
 ## If the number looks wrong
 
-**If this fails: conversion is below 3%.** **Why:** your [customer] or [differentiation] blank is too vague - strangers don't recognize themselves in the headline. **Fix:** go back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the blank that scored lowest on your 4-lens test.
+**If this fails: conversion is below 3%.**
+- **Why:** your `[customer]` or `[differentiation]` blank is too vague - strangers don't recognize themselves in the headline.
+- **Fix:** go back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the blank that scored lowest on your 4-lens test.
 
-**If this fails: conversion is above 20%.** **Why:** either you have a hot market (rare) or your ad targeting is too narrow (common). **Fix:** run a second channel briefly. LinkedIn 22% + Reddit 3% = your LinkedIn targeting is the variable, not the hypothesis. Both channels near the rate = the signal is real.
+**If this fails: conversion is above 20%.**
+- **Why:** either you have a hot market (rare) or your ad targeting is too narrow (common).
+- **Fix:** run a second channel briefly. LinkedIn 22% + Reddit 3% = your LinkedIn targeting is the variable, not the hypothesis. Both channels near the rate = the signal is real.
 
 ---
 

@@ -75,7 +75,7 @@ The full test is two parts: (1) a smoke-test landing page for demand signal, and
 
 ## AI Deep-Research Prompts
 
-### For the [customer] and [problem] blanks
+### For the `[customer]` and `[problem]` blanks
 
 Paste into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier):
 

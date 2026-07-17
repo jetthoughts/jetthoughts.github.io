@@ -73,9 +73,13 @@ Pick one pattern. Do not A/B test - 150 visits each on a $300 budget can't disti
 
 ## If Stripe or checkout stalls
 
-**If this fails: Stripe verification takes more than 3 days.** **Why:** Stripe sometimes requests an ID upload for first-time accounts. **Fix:** build the page without the button. Run the email-only smoke test from 1.4 while Stripe processes. The demand signal doesn't depend on the price button being live today.
+**If this fails: Stripe verification takes more than 3 days.**
+- **Why:** Stripe sometimes requests an ID upload for first-time accounts.
+- **Fix:** build the page without the button. Run the email-only smoke test from 1.4 while Stripe processes. The demand signal doesn't depend on the price button being live today.
 
-**If this fails: visitors click the button but nobody completes payment.** **Why:** the checkout page is killing intent - price felt different in context, or the checkout page itself adds friction. **Fix:** track both click (page → Stripe) and completion (Stripe → thank-you). 60 clicks with 3 completions = the checkout is killing intent. 6 clicks with 3 completions = 50% of clickers bought - strong signal. Same outcome, opposite diagnosis. The [full price test guide](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/) has the detailed threshold table.
+**If this fails: visitors click the button but nobody completes payment.**
+- **Why:** the checkout page is killing intent - price felt different in context, or the checkout page itself adds friction.
+- **Fix:** track both click (page → Stripe) and completion (Stripe → thank-you). 60 clicks with 3 completions = the checkout is killing intent. 6 clicks with 3 completions = 50% of clickers bought - strong signal. Same outcome, opposite diagnosis. The [full price test guide](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/) has the detailed threshold table.
 
 ---
 

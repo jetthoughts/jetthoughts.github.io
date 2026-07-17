@@ -38,6 +38,8 @@ related_posts: false
 
 This page consolidates the hire-track material from the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course into one reference. Read the section you need, skip the rest.
 
+![The hire track as a left-to-right strip of four numbered cards: step 1 find your developers - pick a geography and two platforms; step 2 the Fractional CTO bridge - 5 hours a week of senior eyes at $400-600 a week; step 3 the interview screen - 7 questions where Q7 splits the pool; step 4 read the SOW - the milestone clause is the $78K line.](hire-track-map.svg)
+
 ---
 
 ## Where to find developers in 2026

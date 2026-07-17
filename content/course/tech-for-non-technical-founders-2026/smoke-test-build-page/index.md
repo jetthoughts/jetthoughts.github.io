@@ -53,13 +53,67 @@ The page has four copy blocks that decide whether it converts:
 
 ![Smoke-test page anatomy showing 4 labeled blocks - headline names customer plus outcome, sub-headline explains the mechanism, a row of 3-4 value props, and the CTA button with coming-soon footer line](page-anatomy.svg)
 
+## The prompt to paste
+
+Most builders ask you to "describe your idea" and then guess the rest of the page. Don't make them guess. Paste the prompt below instead - it hands the builder your hypothesis, the four blocks above, and your customers' own words, so the first draft comes back close. The same prompt works in Mixo, Carrd, or any AI builder. Fill the `[...]` slots from your Lesson 1.1 Founding Hypothesis; leave the last two lines exactly as written (they're the parts AI builders skip on their own).
+
+```text
+Build a landing page for a product that isn't built yet. Use exactly these
+blocks, in this order:
+- Hero headline: names the customer and the outcome in one line
+- Sub-headline: one line explaining how it works (the mechanism)
+- 3-4 value props: what the visitor gets, in their own words, max 6 words each
+- Call-to-action button, labeled: Get on the waitlist
+- Footer line: Coming soon. Email reserves your spot at launch.
+
+Here is the product:
+Founding Hypothesis: [PASTE YOUR 1.1 SENTENCE]
+Who it's for: [CUSTOMER blank]
+The problem they have: [PROBLEM blank]
+What they use today instead: [COMPETITION blank]
+Why they'd switch: [DIFFERENTIATION blank]
+
+Real customer wording to echo in the value props (use these exact phrases):
+- "[verbatim customer quote 1]"
+- "[verbatim customer quote 2]"
+- "[verbatim customer quote 3]"
+
+Before you write, do a quick web search for how [CUSTOMER] describe [PROBLEM]
+in their own words, and fill any gaps you find.
+
+The page must pass this test: a stranger can say who it is for and what it does
+in 3 seconds. No pricing, no FAQ, no testimonials. Never write "Buy now."
+```
+
+**Optional, about 10 minutes:** no real customer quotes yet? Run this in [Perplexity](https://www.perplexity.ai/) (or any AI search engine) first, then paste the best 2-3 lines into the `verbatim customer quote` slots above.
+
+```text
+Find real, verbatim complaints from [CUSTOMER] about [PROBLEM].
+Search Reddit, G2, Trustpilot, and niche forums. For each result, give me:
+- the exact quote, in the person's own words
+- a link to the source
+
+Return 5-8 quotes. Prefer recent posts and specific frustration over
+general opinions.
+```
+
 ## Build the page
 
 > **Build:**
 >
-> 1. Sign up at [mixo.io](https://www.mixo.io/) (email only). Paste your hypothesis, click **Generate**. ~60 seconds.
-> 2. Tighten the 4 copy blocks: headline names customer + outcome, value props rewrite as outcomes ("Stop calling 8 centers" not "Calendar integration"), CTA → "Get on the waitlist." Add "Coming soon. Email reserves your spot at launch." to the footer (AI builders skip this). Strip Pricing, FAQ, Testimonials. **If the AI-generated value props still read generic:** prompt your AI assistant: *"Turn this hypothesis into 3 outcome-focused value props, max 6 words each: [PASTE HYPOTHESIS]"* and paste the output into the value-props section.
-> 3. Swap the hero image (the main image at the top of your page). Ask your AI assistant for: *"Photorealistic image: [pain scenario in one sentence]. Candid, natural lighting, no text or logos."* If your AI can't generate images, grab a stock photo from [Unsplash](https://unsplash.com/). In Mixo: click the hero section → Replace image → Upload. If the image doesn't help, delete it - the headline carries the page. **Never** use a product mockup of something you have not built.
+> 1. Sign up at [mixo.io](https://www.mixo.io/) (email only). Paste the prompt above, click **Generate**. ~60 seconds.
+> 2. Tighten the 4 copy blocks against the draft:
+>     - Headline names customer + outcome.
+>     - Value props rewrite as outcomes ("Stop calling 8 centers," not "Calendar integration").
+>     - CTA reads "Get on the waitlist."
+>     - Footer says "Coming soon. Email reserves your spot at launch." (AI builders skip this.)
+>     - Strip any Pricing, FAQ, or Testimonials blocks the builder added.
+>     - Value props still read generic? Prompt your AI assistant: *"Turn this hypothesis into 3 outcome-focused value props, max 6 words each: [PASTE HYPOTHESIS]"* and paste the output into the value-props section.
+> 3. Swap the hero image (the main image at the top of your page):
+>     - Ask your AI assistant: *"Photorealistic image: [pain scenario in one sentence]. Candid, natural lighting, no text or logos."*
+>     - No image generator? Grab a stock photo from [Unsplash](https://unsplash.com/).
+>     - In Mixo: click the hero section → Replace image → Upload.
+>     - If the image doesn't help, delete it - the headline carries the page. **Never** use a product mockup of something you have not built.
 > 4. Click **Publish**. Mixo gives a URL like `yourname.mixo.io`. Open it in an incognito window. Confirm the page loads.
 
 ## Test it on one stranger
@@ -70,17 +124,20 @@ Send the URL to **ONE real person** who has not seen your work. Any stranger wor
 
 ## If strangers can't name it
 
-**If this fails: strangers cannot name who the page is for or what it does, even after 2 headline rewrites.** **Why:** your hypothesis `[customer]` or `[differentiation]` blank is still too vague. **Fix:** back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten ("solo chiropractors," not "small businesses").
+**If this fails: strangers cannot name who the page is for or what it does, even after 2 headline rewrites.**
 
-**If this fails: the builder's draft reads generic after 2 regenerations.** **Why:** your hypothesis `[problem]` blank is too vague. **Fix:** back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the `[problem]` blank to one specific failure mode.
+- **Why:** your hypothesis `[customer]` or `[differentiation]` blank is still too vague.
+- **Fix:** back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten ("solo chiropractors," not "small businesses").
 
-**If this fails: no AI builder fits your idea, or you want manual layout control.** **Why:** AI builders rely on common templates; niche layouts and technical product diagrams sometimes don't fit. **Fix:** drop to manual mode with **[Carrd](https://carrd.co/)** (no-code drag-drop). Use the same workflow but write each copy block yourself first. Prompt your AI assistant and paste the output into Carrd:
+**If this fails: the builder's draft reads generic after 2 regenerations.**
 
-```text
-Translate this hypothesis into these landing-page elements
-(headline, sub-headline, 3 value props, CTA copy, footer disclaimer):
-[PASTE HYPOTHESIS]
-```
+- **Why:** your hypothesis `[problem]` blank is too vague.
+- **Fix:** back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the `[problem]` blank to one specific failure mode.
+
+**If this fails: no AI builder fits your idea, or you want manual layout control.**
+
+- **Why:** AI builders rely on common templates; niche layouts and technical product diagrams sometimes don't fit.
+- **Fix:** drop to manual mode with **[Carrd](https://carrd.co/)** (no-code drag-drop). Use the same workflow but write each copy block yourself first. The builder prompt at the top of this lesson works in Carrd's AI assistant too - paste it there instead of writing from scratch.
 
 ---
 

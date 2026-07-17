@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to [Chapter 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Where this fits: run after [Ch 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routes you to a path that involves anyone else touching your infrastructure.
+Template companion to [Chapter 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Where this fits: run after [Ch 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routes you to a path that involves anyone else touching your infrastructure.
 
 > **Routing by M4.1 decision (read this first):**
 >
@@ -35,13 +35,11 @@ related_posts: false
 
 *Prefer paper? <a href="ownership-checklist.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
 
-# The GitHub / AWS / Database Ownership Checklist
-
 A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or someone else does. For Path 2 self-serve founders, this is a 5-minute confirmation; for Path 3 and Path 4 founders, the full 45-minute version.
 
 By the end of one Friday (or the 5 minutes if you're self-serve) you will know whether you can fire your dev team on Monday and still ship a hotfix on Tuesday. You will not have read a line of code. You will have logged into 12 accounts and answered one question for each: is the email on this account mine, or is it theirs?
 
-> **📋 Copy-pasteable audit spreadsheet - copy these 12 rows into Notion or Google Sheets before you start:**
+> **Copy-pasteable audit spreadsheet - copy these 12 rows into Notion or Google Sheets before you start:**
 >
 > | # | Check | Pass? | Actual email/name on file | Recovery needed? |
 > |---|-------|-------|---------------------------|------------------|

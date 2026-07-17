@@ -24,11 +24,11 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Hire Track Supplementary Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#interviews-that-catch-ai-theater). Send to candidate 24 hours before the call. Score each answer Pass / Fail in real time.
+Template companion to the [Hire Track Supplementary Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#interviews-that-catch-ai-theater). Send to candidate 24 hours before the call. Score each answer Pass / Fail in real time.
 
 > This template is the canonical source for the 7 hiring interview questions. The [Hire Track Supplementary Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) post links here for the full Q&A.
 
-> **📋 Copy-pasteable pre-interview email - send to candidate 24 hours before the call:**
+> **Copy-pasteable pre-interview email - send to candidate 24 hours before the call:**
 >
 > Subject: `[Date] interview prep - 7 questions`
 >
@@ -41,8 +41,6 @@ related_posts: false
 > The call runs 30 minutes: 5 min intro, 20 min on the questions, 5 min for your questions. Talk soon.
 >
 > [Your name]
-
-# The Hiring Interview Script - 7 Questions in 30 Minutes
 
 *Send Sunday night. Run Tuesday and Wednesday. Hire decision in your hand by Friday.*
 

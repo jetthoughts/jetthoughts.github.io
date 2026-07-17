@@ -43,7 +43,7 @@ She closed the doc and opened Reddit. r/Dyslexia. She searched "tutor." The thir
 
 > *"I've called 11 tutoring centers this month. Five never called back. Three said they don't specialize in dyslexia. Two had waitlists. One told me their 'learning differences' program was a generic curriculum with a different label."*
 
-Mia copied the post into her notes. The blanks she'd left empty an hour earlier suddenly had specific names. The [customer] wasn't "parents" - it was parents of kids 8-14 with dyslexia or ADHD. The [problem] wasn't "finding tutors" - it was *finding a vetted specialist tutor*. The [competition] wasn't Google the company - it was the exact behavior the Vermont mother had described: Googling and calling dead numbers. By midnight her hypothesis read:
+Mia copied the post into her notes. The blanks she'd left empty an hour earlier suddenly had specific names. The `[customer]` wasn't "parents" - it was parents of kids 8-14 with dyslexia or ADHD. The `[problem]` wasn't "finding tutors" - it was *finding a vetted specialist tutor*. The `[competition]` wasn't Google the company - it was the exact behavior the Vermont mother had described: Googling and calling dead numbers. By midnight her hypothesis read:
 
 > *"If we help parents of kids 8-14 with dyslexia/ADHD solve finding a vetted specialist tutor with a search-by-specialty marketplace, they will choose it over Googling and calling dead numbers because it matches them in 48 hours with parent reviews."*
 
@@ -122,7 +122,7 @@ She added a note to her Module 2 prep: when she interviewed parents, she'd ask w
 - **Six paying customers at $99 each.** $594 in revenue, before the product existed.
 - **A Google Drive folder** holding all five Module 1 outputs. Her Founder OS, started.
 
-**Next: [Module 2, where Mia interviews ten parents using the Mom Test](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/).** Her interview script will ask whether parents have ever spent real money on a specialist tutor search (the [problem] blank in her hypothesis), and what they currently pay - so she can replace her Money lens guess with actual numbers from actual receipts.
+**Next: [Module 2, where Mia interviews ten parents using the Mom Test](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/).** Her interview script will ask whether parents have ever spent real money on a specialist tutor search (the `[problem]` blank in her hypothesis), and what they currently pay - so she can replace her Money lens guess with actual numbers from actual receipts.
 
 ---
 

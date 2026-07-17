@@ -48,7 +48,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 ## The 5 Modules at a Glance
 
-### Module 1 - Hypothesis & Smoke Test
+### <span style="color:#4f46e5">Module 1 - Hypothesis & Smoke Test</span>
 **You have:** a rough idea or instinct.
 **You walk away with:** a one-sentence Founding Hypothesis + a live landing page with a Stripe price button.
 **Time:** ~7 days full-time; 2-3 weeks at an evenings-and-weekends pace.
@@ -67,7 +67,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 ---
 
-### Module 2 - Validate the Problem
+### <span style="color:#0891b2">Module 2 - Validate the Problem</span>
 **You have:** a Founding Hypothesis.
 **You walk away with:** 10 Mom Test interview transcripts + a validated problem statement + a clickable prototype tested with 5 people.
 **Time:** ~3-5 weeks full-time - booking the 10 interviews is the long pole (Ch 2.3 plans 2-4 calendar weeks for that step alone).
@@ -86,7 +86,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 ---
 
-### Module 3 - Design from Evidence
+### <span style="color:#d97706">Module 3 - Design from Evidence</span>
 **You have:** 10 interview transcripts + prototype feedback.
 **You walk away with:** a one-page Product Brief written from real customer vocabulary.
 **Time:** ~3-5 days on the calendar - about one evening of writing plus a lunch-break quality check, with a night's sleep between drafts.
@@ -100,7 +100,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 
 ---
 
-### Module 4 - Build It Yourself
+### <span style="color:#cc342d">Module 4 - Build It Yourself</span>
 **You have:** a one-page Product Brief.
 **You walk away with:** a build decision + a live MVP at a real URL, with you owning every account.
 **Time:** ~2-4 weeks.
@@ -117,7 +117,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 
 ---
 
-### Module 5 - First Paying Customer
+### <span style="color:#16a34a">Module 5 - First Paying Customer</span>
 **You have:** a live MVP at a real URL.
 **You walk away with:** one signed paid pilot with a real deposit ($500+ standard; 5.6 covers the low-price exception) + a repeatable outbound channel.
 **Time:** ~2-4 weeks.

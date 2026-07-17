@@ -24,9 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Module 4 post](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/). Run after your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) is signed. Print, fill in 30 minutes, write your chosen path at the top of your Notion doc.
-
-# Build Path Decision Worksheet - 5 Questions, 4 Paths
+Template companion to the [Module 4 post](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/). Run after your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) is signed. Print, fill in 30 minutes, write your chosen path at the top of your Notion doc.
 
 *Print one side of paper. Pen. 30 minutes alone. Walk out with a defensible build decision and the next module to read.*
 
