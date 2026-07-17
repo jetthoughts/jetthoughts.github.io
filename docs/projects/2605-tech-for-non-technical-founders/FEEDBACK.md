@@ -40,4 +40,4 @@
     2) "If you can’t write all three on a single napkin, do that first. The deeper version of these three lines is the one-page Product Brief in Chapter 3.1." - why we references future material? can we skip this step until 3.1?
   b. we have introduced Competitors, but before we have not used them, is it too late to use them? or should we review and track compettiotrs earlier?
   c. "Read where they’re already complaining" - we only now looks where are they compaining, but in Module 1 for site we already asking to find the quotes, which is result of this section. Confusion?
-
+  

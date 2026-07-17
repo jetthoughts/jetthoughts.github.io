@@ -124,3 +124,5 @@ docs/projects/**/sprint-*-verification-report.md
 docs/projects/**/*-coordinator-report.md
 docs/projects/**/*-verification-report.md
 .grepai/
+*.rvf
+*.rvf.lock
