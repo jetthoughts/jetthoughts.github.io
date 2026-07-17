@@ -104,7 +104,7 @@ Ask which human's name shows up on the agency's `Assisted-by:` lines this week. 
 
 A passing answer names a specific defense: a pre-vetted package allowlist with a written process for adding new dependencies, a scanner like [Socket](https://socket.dev/) or [Snyk](https://snyk.io/) on every PR that blocks the build until a human approves any new package, or a manual `gem info <name>` / `pip show <name>` / `npm view <name>` step before any new dependency lands.
 
-They use the word "slopsquatting" without you prompting and can cite the [Bleeping Computer writeup](https://www.bleepingcomputer.com/news/security/ai-code-suggestions-sabotage-software-supply-chain/) or the [SecurityWeek piece on AI coding agents and supply-chain risk](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/).
+They use the word "slopsquatting" without you prompting and can cite the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) or the [SecurityWeek piece on AI coding agents and supply-chain risk](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/).
 
 An agency that has not heard of slopsquatting in late 2026 has not read its field's security press for over a year. The supply-chain attack moved from CVE bulletins to mainstream founder-facing risk the moment Cursor adoption crossed half the developer market.
 
@@ -134,16 +134,7 @@ The agency runs AI theatre. Send a "we are pausing the search to refine our requ
 
 ### What "theatre" vs. "direction" sound like in the room
 
-Same five questions, two completely different conversations:
-
-| # | AI Theatre (walk away) | AI Direction (sign with confidence) |
-|---|---|---|
-| Q1 | "Our developers use AI where it makes sense. We are AI-native." | "Cursor + Claude 4.5 Sonnet. Here is PR #1247 from Tuesday." |
-| Q2 | "It's all included in the rate. Don't worry about token costs." | "$140-$220 per dev per month for our stack. SOW pass-through. Sample invoice line below." |
-| Q3 | "We trust the model. Cursor catches the obvious stuff." | "Marcos reviewed PR #1247 - flagged a hardcoded API key." |
-| Q4 | "Our developers know what packages to use." [confused look] | "Socket on every PR. Allowlist in `Gemfile.policy`. Yes, slopsquatting." |
-| Q5 | "We've never had an AI-related incident. Our standards are high." | "March 14: AI-generated webhook retried 8x. Added idempotency key." |
-| Score | 0 / 5 - polite no the same evening | 5 / 5 - ask for AI-project references next |
+The full Pass/Fail rubric, scorecard, and theatre-vs-direction examples live in [the 5-Question Script](/course/tech-for-non-technical-founders-2026/agency-ai-five-questions/) - print that page.
 
 ## The interrogation flow on a 30-minute call
 
@@ -184,7 +175,7 @@ Three concrete moves for the next 24 hours, in order.
 
 - Veracode, [2025 GenAI Code Security Report](https://www.veracode.com/blog/genai-code-security-report/) - 45% of tested LLM-generated code samples carried at least one exploitable security flaw. The data behind Q3 (verification) and Q5 (accountability).
 - Stack Overflow, [2025 Developer Survey - AI section](https://survey.stackoverflow.co/2025/) - 84% of developers now use or plan to use AI tools. The market context behind why "we use AI" became a meaningless homepage line.
-- Bleeping Computer, [AI code suggestions sabotage software supply chain](https://www.bleepingcomputer.com/news/security/ai-code-suggestions-sabotage-software-supply-chain/) - the slopsquatting attack vector in plain English. The thing your agency must spot in PR review (Q4).
+- Infosecurity Magazine, [AI Hallucinations Open New Slopsquatting Attack Vector](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) - the slopsquatting attack vector in plain English. The thing your agency must spot in PR review (Q4).
 - SecurityWeek, [AI Coding Agents Could Fuel Next Supply Chain Crisis](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/) - the practitioner read on why hallucinated package names are now the leading AI-era attack surface.
 - Linus Torvalds, ["Assisted-by:" tag on Linux kernel commits](https://lore.kernel.org/lkml/CAHk-=wjbiaa7m9aGtw2T-fbmuuiq_-noqfrjEJzbpCSk0FrFkw@mail.gmail.com/) - the kernel rule that puts a human reviewer's name in the commit log when AI is in the loop. The accountability standard referenced in Q3 and Q5.
 - Anthropic, [Claude Code documentation](https://docs.claude.com/en/docs/claude-code/overview) - the official reference for one of the tools your agency should be naming in Q1. Worth skimming so you recognise the workflow language when they describe it.

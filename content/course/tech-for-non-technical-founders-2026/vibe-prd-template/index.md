@@ -245,8 +245,8 @@ The same one page works for the first three audiences below. Senior engineers an
 | Lovable / Bolt / v0 | one-page brief as-is | Paste as prompt; agent fills defaults | 1 page |
 | Cursor / Claude Code | one-page brief + a `context.md` with stack | Paste as context file at repo root | 1 page + stack note |
 | Hired junior contractor | one-page brief + 30-min kickoff call | Page + verbal walkthrough | 1 page + recording |
-| Hired senior engineer | Traditional PRD | User stories, acceptance criteria, edge cases | 5-10 pages |
-| Product committee | Traditional PRD | Goals, KPIs, risks, dependencies, milestones | 10+ pages |
+| Hired senior engineer | Traditional PRD | User stories, acceptance criteria, edge cases | 3-5 pages |
+| Product committee | Traditional PRD | Goals, KPIs, risks, dependencies, milestones | 5-10 pages |
 
 ## What good looks like vs what bad looks like
 

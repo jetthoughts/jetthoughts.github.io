@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-Template companion to the Oversight Rhythm sub-section of [The Founder Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) (Going Further). Send to your team Monday. Run Friday at 4pm.
+Template companion to [The Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/). Send to your team Monday. Run Friday at 4pm.
 
 A 15-minute Friday script that catches fake progress before it costs you a sprint.
 
@@ -95,7 +95,7 @@ This is the over-engineering check. If your team never cuts anything, they are e
 
 > Bad: "A few things are in PR, I can send you the list later."
 >
-> Good: "PR #851 - signup rate limiting. Priya reviewed it Tuesday, three changes requested, will merge Monday. PR #843 - admin search. Nobody has reviewed it yet because Priya is on vacation."
+> Good: "PR #843 - admin search. Priya reviewing since Tuesday, two changes requested, waiting on author. PR #851 - signup rate limiting. No reviewer yet because Priya is on PTO Thu-Fri; will assign Monday."
 
 If the same name keeps appearing as the only reviewer, you have a single point of failure - the [JetThoughts red-flags checklist](/blog/dev-shop-red-flags-checklist/) calls this bus factor of one.
 

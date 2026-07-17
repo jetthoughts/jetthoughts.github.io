@@ -25,7 +25,7 @@ metatags:
   image: cover.png
   og_title: "Slopsquatting: The 2025 Supply-Chain Attack Vibe Coding Created"
   og_description: "AI assistants suggested 200+ package names that did not exist. Attackers registered them. Your $34K MVP pulled malware. The CI gate that stops it cold."
-cover_image_alt: "JetThoughts cover with a hand-drawn package box labeled 'gem active_record_extras_helper' with a skull sticker, next to a real-looking package labeled 'gem active_record_extra'."
+cover_image_alt: "JetThoughts cover for Slopsquatting: Supply-Chain Attack on Vibe Coding - a red npm-install card with a fake package suggested by AI, and chips reading 200+ hallucinated packages, $34K MVP cost, CI safelist gate."
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/"
 related_posts: false
 course_nav: false

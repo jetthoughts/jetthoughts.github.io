@@ -92,7 +92,7 @@ R. ran this slice in 70 minutes flat. Her overall 30-day retention was 19%. Soli
 
 ### Cohort retention by segment - one product, four shapes
 
-The 40% line is Sean Ellis's must-have threshold; cohorts that finish day 30 above it are habitual, below it are novelty.
+Cohorts that finish day 30 above the 40% retention line are habitual, below it are novelty. (Sean Ellis's 40% is a different number - the survey very-disappointed share from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/); don't conflate the two.)
 
 | Cohort | Day 7 → Day 30 retention | Verdict |
 |---|---|---|

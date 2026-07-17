@@ -64,7 +64,7 @@ Keep this card open during the call - the pass signal sits beside the fail signa
 
 > "What does the average developer on your team spend on AI tokens per month, and who pays it? Will it pass through to my invoice, and what should I budget per month for the project we just scoped?"
 
-**Pass:** A per-developer dollar range ($80 to $300 per month for Cursor seats plus Anthropic and OpenAI API usage), a pass-through model written into the SOW, and a sample invoice line-item they will email after the call. They have a budget alert on the API account.
+**Pass:** A per-developer dollar range ($80 to $300 per month in Anthropic and OpenAI API usage on top of the $20-40 Cursor seat; undisciplined agent-loop users can hit $500 - the [AI Token Bill lesson](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/) has the full bands), a pass-through model written into the SOW, and a sample invoice line-item they will email after the call. They have a budget alert on the API account.
 
 **Fail:** "It is included in the rate." "We don't track it that closely." "We absorb the AI costs." Sign without this number and you get a surprise five-figure OpenAI charge in month two - the $4,800 line in the opening story was that number two weeks before the founder caught it.
 

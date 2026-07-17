@@ -56,7 +56,7 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 *Anchors in a real episode - story over preference.*
 
-> "Tell me about the last time [problem context] happened. Walk me through what you did."
+> "Tell me about the last time [problem] happened. Walk me through what you did."
 
 **Pass signal:** A specific story with a date, a time of day, a tool they opened, a person they messaged. "Last Tuesday at 9pm I spent 40 minutes copying numbers from three spreadsheets into a slide for the board. I called my CFO and she pulled the numbers from QuickBooks for me."
 
@@ -92,7 +92,7 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 *Calibrates urgency against the interviewee's whole problem stack - most "would be great if" problems land at 4.*
 
-> "On a scale of 1-10, how big a problem is this for you compared to everything else on your plate?"
+> "On a scale of 1-10, how big a problem is this compared to everything else on your plate?"
 
 **Pass signal:** A 7 or higher with a comparison. "This is an 8. The only thing higher is hiring my next engineer." A 9 or 10 is rare and a strong signal.
 

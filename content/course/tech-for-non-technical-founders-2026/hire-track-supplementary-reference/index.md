@@ -266,16 +266,7 @@ Her general counsel had cleared the SOW the night before signing. He had flagged
 
 ### Eight clauses that quietly cost you money
 
-| Clause | What it should say | Red flag wording | What to redline |
-|---|---|---|---|
-| **1. Scope definition** | A feature list at "Rails 7 app with sign-up, contractor-match, payments, hundred-row admin" with a per-feature day estimate | "Scope to be defined sprint by sprint" / "agile discovery throughout" | Demand the feature list and day estimate before you sign. The SOW is a blank cheque without it. |
-| **2. Milestone acceptance** | Milestone passes when CI is green on main, you have clicked the feature end-to-end on staging, AND you have confirmed delivery in writing | Milestone "delivered upon deployment to the Client-accessible staging environment" with a 5-day silent-acceptance window | Write acceptance criteria into the SOW. Convert silent acceptance to active sign-off. |
-| **3. Change-request process** | Capped at 10% of SOW value, written estimate naming developer and hours per change | Open-ended hourly at $185/hr with verbal approval | Strike "verbal approval." Add the 10% cap and the written-estimate requirement. |
-| **4. IP and code ownership** | Milestone-based assignment: upon payment of each milestone, the code for that milestone is yours, irrevocably | Ownership transfers "upon receipt of all amounts due under this Agreement" | Strike "all amounts due." Replace with milestone-by-milestone IP transfer so payment disputes do not become hostage situations. |
-| **5. Third-party dependencies** | Every account (AWS, Stripe, OpenAI) on your company email from day one, paid by your card, agency on IAM sub-access only. Monthly pass-through capped with founder approval | Pass-through at cost + 15% with accounts under the agency's email | Demand account ownership from day one. Add the founder-approval gate. (One founder caught a $4,800 surprise OpenAI line by enforcing this.) |
-| **6. Termination triggers** | Quality trigger (2 consecutive missed acceptance criteria), slip trigger (>21 days without revised plan), termination-for-convenience with defined exit fee, 30-day handover obligation | "Terminate only for material breach" with 30 days to cure | Add the quality, slip, and convenience triggers. Lock in the 30-day handover. |
-| **7. Post-launch warranty** | Warranty starts the day deliverables are first served to live paying users, runs 90 days | Warranty clock starts at "Delivery" and runs 30 days (can expire before users see the feature) | Anchor warranty start to production launch, not delivery. Extend to 90 days. |
-| **8. Dispute resolution** | Non-binding mediation step before arbitration, neutral venue, prevailing-party fee-shift (loser pays winner's attorney fees) | Binding arbitration in the agency's home county, each party bearing own costs | Add mediation step. Switch to neutral venue. Add fee-shift. |
+For the full 8-clause table - what each clause should say, the red-flag wording, and the exact redline for each - see the [SOW Reading Guide](/course/tech-for-non-technical-founders-2026/sow-reading-guide/). The milestone-acceptance clause below is the one that costs the most; read it before you read the rest.
 
 ### The milestone-acceptance redline
 

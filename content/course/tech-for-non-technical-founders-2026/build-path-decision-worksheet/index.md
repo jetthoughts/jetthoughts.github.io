@@ -97,24 +97,23 @@ Total time budget: 30 minutes alone, 20 minutes with one peer, 0 minutes second-
   <div class="ws-route ws-route-go"><strong>If 12+</strong> → Paths 2, 3, 4 are on the table. Go to Q4.</div>
 </div>
 
-### Q4: What is your monthly engineering budget?
-
-<div class="ws-card">
-  <p>Money you can commit for at least 6 months:</p>
-  <div class="ws-verdict ws-verdict-stack"><span class="ws-opt"><span class="ws-box"></span> $0 to $400/wk of your own time</span><span class="ws-opt"><span class="ws-box"></span> $1,600 to $4,000/mo (Fractional CTO band)</span><span class="ws-opt"><span class="ws-box"></span> $5,000 to $30,000/mo (small team band)</span><span class="ws-opt"><span class="ws-box"></span> $30,000+ /mo (multi-person team band)</span></div>
-  <div class="ws-route ws-route-alt"><strong>If $0-$400</strong> → Path 2 (Self-serve / Lesson 4.3 then 4.4). Paste one-page brief into Lovable.</div>
-  <div class="ws-route ws-route-go"><strong>If $1.6K-$4K</strong> → go to Q5.</div>
-  <div class="ws-route ws-route-alt"><strong>If $5K-$30K</strong> → Path 3 (Fractional CTO) until problem complexity demands more.</div>
-  <div class="ws-route ws-route-alt"><strong>If $30K+</strong> → Path 4 (Hire a team - see the hire-track supplementary reference, linked in the verdict table below).</div>
-</div>
-
-### Q5: Senior engineer in your network for 1 hour of architecture review per month?
+### Q4: Senior engineer in your network for 1 hour of architecture review per month?
 
 <div class="ws-card">
   <p>A real human you can text. Returns calls within 48 hrs. Has shipped a backend at scale in the last 5 years.</p>
   <div class="ws-verdict ws-verdict-stack"><span class="ws-opt" style="width:100%"><span class="ws-box"></span> Yes, named:<span class="ws-blank"></span></span><span class="ws-opt"><span class="ws-box"></span> No</span></div>
-  <div class="ws-route ws-route-alt"><strong>If YES</strong> → Path 2 (Self-serve / Lesson 4.3 then 4.4). Use them for the monthly architecture call + worst-route code review.</div>
-  <div class="ws-route ws-route-alt"><strong>If NO</strong> → Path 3 (Fractional CTO bridge - see the hire-track supplementary reference). Buy the same insurance commercially.</div>
+  <div class="ws-route ws-route-alt"><strong>If YES</strong> → Path 2 (Self-serve / Lesson 4.3 then 4.4), at any budget. Use them for the monthly architecture call + worst-route code review.</div>
+  <div class="ws-route ws-route-go"><strong>If NO</strong> → go to Q5.</div>
+</div>
+
+### Q5: What is your monthly engineering budget?
+
+<div class="ws-card">
+  <p>Money you can commit for at least 6 months:</p>
+  <div class="ws-verdict ws-verdict-stack"><span class="ws-opt"><span class="ws-box"></span> $0 to $400/wk of your own time</span><span class="ws-opt"><span class="ws-box"></span> $1,600 to $4,000/mo (Fractional CTO band)</span><span class="ws-opt"><span class="ws-box"></span> $5,000 to $30,000/mo (small team band)</span><span class="ws-opt"><span class="ws-box"></span> $30,000+ /mo (multi-person team band)</span></div>
+  <div class="ws-route ws-route-alt"><strong>If $0-$400</strong> → Path 2 (Self-serve / Lesson 4.3 then 4.4). Paste one-page brief into Lovable, and line up a senior review before you scale.</div>
+  <div class="ws-route ws-route-alt"><strong>If $1.6K-$4K or $5K-$30K</strong> → Path 3 (Fractional CTO bridge - see the hire-track supplementary reference). Buy the architecture insurance commercially.</div>
+  <div class="ws-route ws-route-alt"><strong>If $30K+</strong> → Path 4 (Hire a team - see the hire-track supplementary reference, linked in the verdict table below).</div>
 </div>
 
 ## The 4-path verdict table
@@ -122,9 +121,9 @@ Total time budget: 30 minutes alone, 20 minutes with one peer, 0 minutes second-
 | Path | Choose when | First action this week | Cost |
 |---|---|---|---|
 | **1. Validate without code** | Q1 = No, OR Q3 = less than 4 months | Ship Carrd page + Stripe checkout + Notion FAQ. Send to your 30-name outreach list. | $0 - $300 in tools + optional $100-200 in paid ads |
-| **2. Self-serve build** ([Lesson 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) then [4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)) | Q1 yes, Q2 light or mid, and either Q4 = $0-$400/wk of your own time, or Q4 = $1.6K-$4K/mo with a senior engineer in your network (Q5 yes) | Paste one-page brief into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
-| **3. Fractional CTO bridge** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge)) | Q1 yes, Q2 light or mid, and either Q4 = $1.6K-$4K/mo with no senior engineer (Q5 no), or Q4 = $5K-$30K/mo | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month |
-| **4. Hire a team** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)) | Q2 heavy (any budget), or Q4 = $30K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |
+| **2. Self-serve build** ([Lesson 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) then [4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)) | Q1 yes, Q2 light or mid, and a senior engineer in your network (Q4 yes) at any budget - or Q5 = $0-$400/wk of your own time | Paste one-page brief into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
+| **3. Fractional CTO bridge** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge)) | Q1 yes, Q2 light or mid, no senior engineer (Q4 no), and Q5 = $1.6K-$4K or $5K-$30K/mo | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month |
+| **4. Hire a team** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)) | Q2 heavy (any budget), or Q5 = $30K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |
 
 **Failure mode to watch for each path** ->
 - Path 1 -> 0 of 30 click. Pivot the pitch or the problem.
@@ -142,21 +141,21 @@ Total time budget: 30 minutes alone, 20 minutes with one peer, 0 minutes second-
 
 The good answer is countable: 12 calls, 9 strong signals, an 8% smoke-test sign-up rate, 4 of 5 testers through the prototype. The bad answer is a vibe metric (likes) and a hypothetical (love the idea). Likes are not behavior. The matrix routes the bad answer to Path 1 regardless of how confident the founder feels, because the data is not there.
 
-**Q4 - Monthly engineering budget**
-
-> Bad: *"We have $400K in the bank and we will spend whatever it takes to ship."*
-
-> Good: *"$420K in the bank. Burn is $28K/month (founder salary + tools + ads). 15 months of runway. I can commit $4K/month to engineering for the next 6 months without dipping into the marketing budget I need to test the channel."*
-
-The good answer ties budget to runway and to the marketing test that proves the channel. Bad answer commits the bank without a denominator. The matrix routes the bad answer to Path 4 (hire a team) on the founder's confidence, which is the path that runs them out of money. The good answer routes to Path 3 (Fractional CTO at $4K/mo) which fits inside 15 months of runway with the marketing budget intact.
-
-**Q5 - Senior engineer in your network**
+**Q4 - Senior engineer in your network**
 
 > Bad: *"Yes, my college roommate is a software engineer at Google."*
 
 > Good: *"Yes - Maya Chen, ex-Stripe payments backend, currently fractional. Returns texts within a few hours. She agreed to a 1-hour architecture call on the first Monday of every month at $300/hr. First call booked for Sept 7."*
 
 The good answer names the person, the relevant experience (Stripe payments backend, not Google ads), the cadence (first Monday), the price ($300/hr), and the next call (Sept 7). Bad answer names a person without the cadence or the agreement. "My roommate is an engineer" is not a check-in. The matrix counts only the named, scheduled, paid arrangement.
+
+**Q5 - Monthly engineering budget**
+
+> Bad: *"We have $400K in the bank and we will spend whatever it takes to ship."*
+
+> Good: *"$420K in the bank. Burn is $28K/month (founder salary + tools + ads). 15 months of runway. I can commit $4K/month to engineering for the next 6 months without dipping into the marketing budget I need to test the channel."*
+
+The good answer ties budget to runway and to the marketing test that proves the channel. Bad answer commits the bank without a denominator. The matrix routes the bad answer to Path 4 (hire a team) on the founder's confidence, which is the path that runs them out of money. The good answer routes to Path 3 (Fractional CTO at $4K/mo) which fits inside 15 months of runway with the marketing budget intact.
 
 ## What to do after
 

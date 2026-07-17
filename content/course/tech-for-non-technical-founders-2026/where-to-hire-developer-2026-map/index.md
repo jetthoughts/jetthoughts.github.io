@@ -168,12 +168,12 @@ The good answer is countable: years, ships, scale, recent quarter, screenshare o
 
 > Good: *"The candidate's code passes all tests. The package manifest pulls in `react-toolkit` (4 chars off from the real `redux-toolkit`). I asked. They had not noticed. The model invented the package, npm has a placeholder, and a malicious actor will register it within the week. The candidate did the work without the AI-direction discipline we hired for. Pass."*
 
-The good review reads the dependency manifest as carefully as the application code. The bad review checks the test green and stops there. The slopsquatting attack vector is in the [Bleeping Computer report on AI code supply chain attacks](https://www.bleepingcomputer.com/news/security/ai-code-suggestions-sabotage-software-supply-chain/); your candidate must spot this in PR review or you have hired the wrong profile.
+The good review reads the dependency manifest as carefully as the application code. The bad review checks the test green and stops there. The slopsquatting attack vector is in the [Infosecurity Magazine writeup on AI code supply chain attacks](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/); your candidate must spot this in PR review or you have hired the wrong profile.
 
 ## What to do tomorrow
 
 1. **Write your geography choice and your two platforms at the top of a fresh Notion doc.** One line: *"Region: [Tier-2 India / LATAM nearshore / US onshore]. Platforms: [primary] + [backup]. Posted on [date]. First slate by [date + 5 days]."*
-2. **Schedule 5 intro calls in the same week.** Not three. Not ten. Five gives you a comparison and a rolling shortlist. Each call is 30 minutes. Use the four-question script from the [Hire Track Supplementary Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#where-to-find-developers-in-2026).
+2. **Schedule 5 intro calls in the same week.** Not three. Not ten. Five gives you a comparison and a rolling shortlist. Each call is 30 minutes. Use the [7-question hiring interview script](/course/tech-for-non-technical-founders-2026/hiring-interview-script/).
 3. **Take the shortlist of 3-5 candidates to the [hiring interview](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#interviews-that-catch-ai-theater).** That section covers the deep-dive interview that catches AI theater. This map gets you to the shortlist; that post gets you to the hire.
 
 If you find yourself ten days in with no shortlist, the bottleneck is the job description, not the platforms. Re-read the AI-Augmented Developer profile in the post and tighten the five profile lines. Generic posts attract generic applicants.

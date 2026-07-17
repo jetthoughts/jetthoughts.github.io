@@ -85,30 +85,13 @@ The rewrite fixes one thing at a time: subject names the topic they posted about
 
 ### The working 3-message sequence
 
-Copy the 3-message sequence below. Replace bracketed parts with their words from when you read where they're complaining in [Part 1](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), not yours.
+The Day-0 message is the one that has to work - the whole sequence rests on a first line that names something they actually wrote. Copy it verbatim, replace the brackets with their words from when you read where they're complaining in [Part 1](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), not yours:
 
-```text
-Day 0 - intro (reply rate target: 20-30%)
-Subject: quick question about [their exact workaround]
-"Saw your post on r/SaaS last week about [the thread]. I'm a [role]
-looking into the same problem. Not selling - 20 min so I can ask 5
-questions about how you handle [task] today? Calendar: [NeetoCal link]."
-```
+> Subject: your post about [their exact words]
+>
+> Hi [name] - you wrote that [ONE SPECIFIC LINE FROM THEIR POST, PARAPHRASED]. I'm researching exactly that problem and would trade 20 minutes for everything you learned the hard way. No pitch, nothing to sell - I don't even have a product yet. Would [DAY] or [DAY] work? Booking link if that's easier: [NEETOCAL LINK]
 
-**Day-3 bump message - pick the version that fits your stage:**
-
-- **First-round variant (you have 0-9 interviews done):** "Hi [name] - circling back on the [topic] piece. Running my first 10 conversations on this problem - still learning, would value 20 minutes if you have it."
-- **Experienced variant (you have 10+ interviews done):** "Hi [name] - circling back on the [topic] piece. [TRUE NUMBER] conversations in so far - they're sharper than I expected; happy to share the pattern if you have 20 min." Use your real count - never claim conversations you have not had.
-
-The Day-3 bump reliably recovers another slice of non-responders - people who meant to reply and lost the tab. Subject line: `re: [their workaround]`.
-
-```text
-Day 7 - close (catches a few last stragglers)
-Subject: last try - 20 min on [topic]
-"Last note. If this isn't your problem, no worries - I'll stop. If it is
-and you haven't had a chance: [NeetoCal]. Running interviews through next
-Friday."
-```
+Full 3-message sequence (Day 0 + Day 3 bump + Day 7 close) - copy it from the [Outreach Sequence Template](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/).
 
 That three-message shape is the whole engine - in the runs we've coached it reliably beats single-send by a wide margin when the Day-0 subject referenced something the recipient had actually posted - your mileage will vary by audience tightness and recency of the posted content. It collapses to 1-5% with a generic "love to pick your brain" opener - the difference is the reading you did in Part 1 to find named people. The [cold-email conversion playbook from YC Startup School](/blog/how-convert-customers-with-cold-emails-startup-school/) walks through more variations on the opener pattern.
 

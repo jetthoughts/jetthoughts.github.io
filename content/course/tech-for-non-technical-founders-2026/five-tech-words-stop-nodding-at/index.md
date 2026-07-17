@@ -149,7 +149,7 @@ The five words above are dev-shop jargon - vocabulary you'll hit in Modules 4-5 
 | Acronym | Plain English | Where it shows up |
 |---|---|---|
 | **SWOT / PESTEL / Porter's Five Forces** | Three classic strategy-school checklists - VenturusAI runs all three on your hypothesis | Lesson 1.1 sidebar |
-| **Pixel** | A small JavaScript tracking snippet from an ad platform (Meta/LinkedIn/Reddit) - paste it on your page and the platform learns who converted | Lesson 1.3 |
+| **Pixel** | A small JavaScript tracking snippet from an ad platform (Meta/LinkedIn/Reddit) - paste it on your page and the platform learns who converted | Lesson 1.4 |
 | **DPA** | Design Partner Agreement - a one-page contract where a customer pays a deposit to test your product as a co-design partner | Lesson 5.6 |
 | **SOW** | Statement of Work - the contract that defines what an agency is paid to deliver | _index, rescue chapters |
 | **PRD** / **Vibe PRD** | Product Requirements Document - the "Vibe" version is a one-pager an AI builder can act on, not a 30-page spec | Lesson 3.1 |

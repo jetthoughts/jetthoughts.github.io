@@ -56,11 +56,11 @@ In practice: turns a vague "I should reach out to people" instinct into 50 named
 
 The verbatim 4-line scripts from [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Three sector-specific versions:
 
-- **B2B SaaS Rails context** - the script for founders who built on Rails and are selling to operators in the same space.
+- **B2B SaaS, shipped-MVP context** - the script for founders who shipped an MVP on Lovable + Supabase + Stripe and are selling to operators who flagged the same problem.
 - **B2B services** - for fractional CTOs, consultancies, and managed-services founders who sell time rather than license.
 - **B2C app** - for direct-to-user products where the Loom + claim-link motion replaces a Calendly call.
 
-Each script comes with three sample subject lines that have cleared 25%+ open rates in 2026 founder cold-outbound runs, plus a 3-message follow-up cadence (day 0, day 4, day 11).
+Each script is 4-6 lines including the subject, opens with one specific personalized reference, and carries one currency anchor (deposit or beta price). Follow up with non-responders once only.
 
 Why it matters: removes the "what do I say in the email" friction so you spend 60-90 seconds per name on personalization, not 20 minutes.
 
@@ -72,60 +72,18 @@ Two annotated examples: a $1,500 B2B SaaS pilot DPA and a $5,000 B2B services pi
 
 The outcome: makes the "we run paid pilots" conversation a 15-second handoff instead of a three-week back-and-forth.
 
-**Copy-pasteable DPA template - copy into Google Docs, fill the [BLANKS], send:**
+**The full six-section DPA template lives in [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/#dpa-template). The clause that carries the pilot is the deposit:**
 
 ```text
 DESIGN PARTNER AGREEMENT
-
-Between: [Your Company Name] ("Company") and [Customer Company Name] ("Design Partner")
-Date: [YYYY-MM-DD]
-
-1. SCOPE OF PILOT
-The Company will deliver the following outcomes during the pilot period:
-  1. [Outcome 1 - measurable, e.g. "Reduce weekly report prep from 3 hours to 30 minutes"]
-  2. [Outcome 2]
-  3. [Outcome 3]
-Specific use cases covered: [Use case 1], [Use case 2].
-Anything outside this list is out of scope until year-one conversion.
-
-2. DURATION + DATES
-Start date: [YYYY-MM-DD]
-End date: [YYYY-MM-DD] (6-8 weeks)
-Weekly Friday demo at [time] [timezone]. 15 minutes. Loom or live screenshare.
 
 3. PILOT FEE + DEPOSIT
 One-time deposit: $[500-6,000] (10-30% of year-one ACV).
 Paid via Stripe before pilot kickoff. Credited dollar-for-dollar toward year-one invoice on conversion.
 If Design Partner cancels before week 4: deposit forfeited.
-If Company cancels for any reason: 100% refund within 14 days.
-
-4. SUCCESS CRITERIA
-The pilot is successful if 2 of 3 criteria are met by [end date]:
-  1. [Measurable criterion 1 - e.g. "Report prep time reduced to <=30 min/week, verified in Friday demo"]
-  2. [Measurable criterion 2]
-  3. [Measurable criterion 3]
-If 2+ criteria met: year-one contract auto-converts unless Design Partner opts out in writing within 7 days.
-If <2 criteria met: both parties walk. Company retains deposit as paid consideration for pilot work.
-
-5. CONVERSION TERMS
-Year-one price: $[amount] / [month or year]
-Billing: [monthly / annual]
-Conversion: auto-convert at pilot end unless Design Partner opts out in writing.
-Post year-one: 30-day written notice to cancel.
-
-6. DATA, IP, TERMINATION
-Design Partner keeps their data. Company keeps the product IP.
-Either party may exit at 30 days written notice during pilot.
-Design Partner's data remains exportable for 90 days after termination.
-
-SIGNED:
-
-_________________________  Date: __________
-[Your Name], [Your Company]
-
-_________________________  Date: __________
-[Champion Name], [Customer Company]
 ```
+
+Copy it verbatim from [Lesson 5.6's DPA block](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/#dpa-template), then apply the $1,500 or $5,000 sector fills described above.
 
 ### 4. Stripe Checkout setup checklist (Rails / Django / Laravel)
 
