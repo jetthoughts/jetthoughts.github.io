@@ -1,7 +1,7 @@
 ---
-title: "The First-Paying-Customer Operating Kit (DPA Template Live)"
+title: "The First-Paying-Customer Operating Kit"
 aliases: ["/blog/first-paying-customer-operating-kit/"]
-description: "The six-template kit for Module 5. We are assembling and shipping templates here as each one is ready - bookmark and check back. No email signup."
+description: "The six-template kit for Module 5. Every component lives in a Module 5 lesson or reference page - this is the one-page index. No email signup."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -23,16 +23,16 @@ categories: ["Templates"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "The First-Paying-Customer Operating Kit (DPA Template Live)"
-  og_description: "The six-template kit for Module 5. We are assembling and shipping templates here as each one is ready - bookmark and check back. No email signup."
+  og_title: "The First-Paying-Customer Operating Kit"
+  og_description: "The six-template kit for Module 5. Every component lives in a Module 5 lesson or reference page - this is the one-page index. No email signup."
 cover_image_alt: "JetThoughts blog cover for the First-Paying-Customer Operating Kit showing 6 component cards arranged as a single bundle"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/"
 related_posts: false
 ---
 
-Template companion to [Module 5 of the From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Six artifacts that take you from live MVP to signed paid pilot in 4 weeks - the Design Partner Agreement is live below; the other five ship as they are ready.
+Template companion to [Module 5 of the From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Six artifacts that take you from live MVP to signed paid pilot in 4 weeks - each one lives in a Module 5 lesson or its reference page, and this kit is the one-page index.
 
-> **Status: shipping.** The DPA template (component 3) is live below - copy and paste into Google Docs. The other 5 components are described here and shipping as each is ready. There is no email signup; when a template is downloadable, the link appears inline below. Bookmark and check back.
+> **How this works:** every component below links straight to the lesson or reference page that hosts it, copy-pasteable at the source. The DPA deposit clause is inline below as well. There is no email signup and nothing to wait for - just the links.
 
 *Prefer paper? <a href="first-paying-customer-operating-kit.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
 
@@ -40,7 +40,7 @@ Template companion to [Module 5 of the From Idea to First Paying Customer course
 
 ## What this kit covers
 
-Module 5 of this course runs seven lessons (5.1-5.7): the Sean Ellis 40% test, channel choice, the personal-network outreach arc, the paid-pilot contract, and the cold-outbound pipeline. The lessons reference these templates. This page hosts them as each one ships. The DPA template is live below (component 3); the remaining 5 are described and shipping next.
+Module 5 of this course runs seven lessons (5.1-5.7): the Sean Ellis 40% test, channel choice, the personal-network outreach arc, the paid-pilot contract, and the cold-outbound pipeline. The lessons carry these templates; this page is the index that points at each one.
 
 ![The First-Paying-Customer Operating Kit and its six numbered components: the 50-name network list, cold-email scripts, the Design Partner Agreement, the Stripe Checkout setup, the Sean Ellis 40% survey, and the First 10 Customers tracker](kit-components.svg)
 
@@ -54,7 +54,7 @@ In practice: turns a vague "I should reach out to people" instinct into 50 named
 
 ### 2. Cold-email scripts (3 variants)
 
-The verbatim 4-line scripts from [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Three sector-specific versions:
+The verbatim 4-line scripts: the B2B SaaS variant is inline in [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/); the services and B2C variants live in the [outbound reference](/course/tech-for-non-technical-founders-2026/reference/outbound-full/). Three sector-specific versions:
 
 - **B2B SaaS, shipped-MVP context** - the script for founders who shipped an MVP on Lovable + Supabase + Stripe and are selling to operators who flagged the same problem.
 - **B2B services** - for fractional CTOs, consultancies, and managed-services founders who sell time rather than license.
@@ -66,9 +66,9 @@ Why it matters: removes the "what do I say in the email" friction so you spend 6
 
 ### 3. Design Partner Agreement template (one-page LOI + paid pilot)
 
-The one-page DPA from [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Six sections plus signature block. Plain English, mutual-edit document, no lawyer required for v1. Comes in three formats: Google Docs (default), PDF (for customers who want to print), DocuSign-import (for customers who want to e-sign with audit trail).
+The one-page DPA from [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Six sections plus signature block. Plain English, mutual-edit document, no lawyer required for v1. Copy the block into Google Docs; export to PDF or import into DocuSign from there when a customer wants to print or e-sign.
 
-Two annotated examples: a $1,500 B2B SaaS pilot DPA and a $5,000 B2B services pilot DPA, both based on real (anonymized) 2026 founder deals.
+Typical fills: $1,500 deposit for a B2B SaaS pilot, $5,000 for a B2B services pilot - both inside the 10-30% of year-one ACV band.
 
 The outcome: makes the "we run paid pilots" conversation a 15-second handoff instead of a three-week back-and-forth.
 
@@ -87,7 +87,7 @@ Copy it verbatim from [Lesson 5.6's DPA block](/course/tech-for-non-technical-fo
 
 ### 4. Stripe Checkout setup checklist (Rails / Django / Laravel)
 
-Five steps to a working Stripe payment link, no engineer required. Plus optional Rails / Django / Laravel snippets for founders who want to wire deposits back into their app after the first pilot ships.
+Five steps to a working Stripe payment link, no engineer required - the setup walk lives in [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) with the framework detail in the [paid-pilot reference](/course/tech-for-non-technical-founders-2026/reference/paid-pilot-full/). Optional Rails / Django / Laravel snippets are for founders who want to wire deposits back into their app after the first pilot ships.
 
 The Rails snippet uses `Stripe::Checkout::Session.create` from the official `stripe` Ruby gem. The Django snippet uses `stripe.checkout.Session.create` from `stripe-python`. The Laravel snippet uses `Stripe\Checkout\Session::create()` from `stripe/stripe-php`. All three produce the same hosted checkout URL Stripe Payment Links produces; the difference is whether the deposit row gets logged in your app database in real time or you import the CSV at the end of the month.
 
@@ -95,19 +95,13 @@ What it does: 15-minute payment-link setup so the first deposit arrives Wednesda
 
 ### 5. Sean Ellis 40% survey template (5 questions, Typeform-import ready)
 
-The exact 5 questions from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/), in three importable formats:
-
-- **Typeform JSON** - drag-and-drop into a new Typeform.
-- **Tally.so spec** - paste into Tally's import flow.
-- **Google Forms** - copy the question list into a new Google Form (Forms does not support import, but the template is short).
-
-Plus a one-tab Google Sheet that computes per-segment must-have % from your CSV export. Pivot the Q1 column by the Q5 segment column and the per-segment number appears in cell B2.
+The exact 5 questions, verbatim, are in [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - type them into Typeform, Tally, or a Google Form (five questions, two minutes to set up). The CSV scoring walk, including the per-segment must-have % formula, is in the [survey reference](/course/tech-for-non-technical-founders-2026/reference/must-have-survey-full/): pivot the Q1 column by the Q5 segment column and the per-segment number appears.
 
 Result: 24 hours from "I should run the test" to a scored result you can act on.
 
 ### 6. The "First 10 Customers" Google Sheet tracker
 
-The Google Sheet from [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Pre-filled columns - Name, Company, Bucket, Loom sent, Reply, Demo, DPA sent, Deposit - with color-coded bucket pills (champion / hot / warm / cold) and date stamps on every progress column. Filters: "Replied this week," "Demo this week," "Pilot landed this month."
+The tracker from [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) - build it as a Google Sheet with these columns - Name, Company, Bucket, Loom sent, Reply, Demo, DPA sent, Deposit - with color-coded bucket pills (champion / hot / warm / cold) and date stamps on every progress column. Filters: "Replied this week," "Demo this week," "Pilot landed this month."
 
 ![Sample row from the First 10 Customers Google Sheet tracker](kit-sample-row.svg)
 
@@ -115,7 +109,7 @@ The payoff: turns Friday afternoon into a 10-minute "what shipped this week" rev
 
 ### Bonus: the pilot kickoff call agenda (60-minute template)
 
-The Stripe deposit cleared on Friday. The pilot starts Monday. Your customer is asking "so what happens next?" - and the course's [Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) chapter taught you how to get to the deposit, not what to run after it. This is the 60-minute kickoff call that turns a deposit into an operating pilot:
+The Stripe deposit cleared on Friday. The pilot starts Monday. Your customer is asking "so what happens next?" - and the course's [Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) lesson taught you how to get to the deposit, not what to run after it. This is the 60-minute kickoff call that turns a deposit into an operating pilot:
 
 | Minute | Section | What to cover | Output |
 |--------|---------|---------------|--------|
@@ -146,11 +140,11 @@ By Friday of week 4, you should have: a segment-isolated persona doc, 50 sent me
 
 ## What this kit is not
 
-The kit is not a substitute for a sales course or a CRM. It will not teach the conversational mechanics of objection-handling, so if you have never run a customer call, read [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) and run 10 user calls first. It will not track touch counts past the first 30 customers the way HubSpot, Pipedrive, or Salesforce does - past 30, the Sheet breaks and you graduate to a real CRM. It also does not replace the must-have-segment test from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - if your overall must-have % from template 5 is under 25%, your pipeline will fill, the demos will go fine, and conversions will stall at the deposit conversation. Run the 40% test first; download the kit second.
+The kit is not a substitute for a sales course or a CRM. It will not teach the conversational mechanics of objection-handling, so if you have never run a customer call, read [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) and run 10 user calls first. It will not track touch counts past the first 30 customers the way HubSpot, Pipedrive, or Salesforce does - past 30, the Sheet breaks and you graduate to a real CRM. It also does not replace the must-have-segment test from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - if your overall must-have % from template 5 is under 25%, your pipeline will fill, the demos will go fine, and conversions will stall at the deposit conversation. Run the 40% test first; work the kit second.
 
 ## How to get the kit
 
-The DPA template (component 3) is copy-pasteable inline above. When the remaining templates ship, they will appear in their matching component sections - no mailing list, no funnel, just the file.
+Every component is copy-pasteable from its linked lesson or reference page, and the DPA deposit clause is inline above. No mailing list, no funnel - just the links.
 
 ## Where this fits in the course
 
@@ -161,8 +155,8 @@ This kit is the template companion to Module 5 of the [From Idea to First Paying
 - 5.6 [Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) - one-page Design Partner Agreement plus Stripe Checkout setup.
 - 5.7 [Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) - filtered cold outbound for customers 11-20.
 
-Module 5 ends here. The kit ships alongside Module 5 as each artifact is ready.
+Module 5 ends here. Every kit artifact is live in its linked lesson or reference page.
 
 ## Built by
 
-[JetThoughts](https://jetthoughts.com), a Rails-first dev shop that has rescued non-technical founders' codebases for 20 years. We published this course because the same five mistakes kept showing up in the rescue calls. The kit ships open for the same reason.
+[JetThoughts](https://jetthoughts.com), a Rails-first dev shop that has built alongside non-technical founders for 20 years. We published this course because the same five mistakes kept showing up in first calls with founders. The kit ships open for the same reason.
