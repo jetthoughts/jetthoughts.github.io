@@ -55,7 +55,7 @@ The page has four copy blocks that decide whether it converts:
 
 ## Step 1: get 2-3 real customer quotes (10 minutes)
 
-The builder prompt in Step 2 has three slots for your customers' own words - they become your value props, and they are what makes the page sound like your customer instead of like marketing. Most first-timers don't have quotes yet, and that's expected: run this in [Perplexity](https://www.perplexity.ai/) (or any AI search engine) and keep the best 2-3 lines. Already have real quotes from conversations? Skip straight to Step 2.
+The builder prompt in Step 2 has three slots for your customers' own words - they become your value props, and they are what makes the page sound like your customer instead of like marketing. Most first-timers don't have quotes yet, and that's expected: run this in [Perplexity](https://www.perplexity.ai/) (or any AI search engine) and keep the best 2-3 lines - and keep the source URLs too, because Lesson 2.3 reads these same threads to find the named people you'll interview. Already have real quotes from conversations? Skip straight to Step 2. Already ran the deeper research pass in the [full hypothesis sprint](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/)? Reuse those quotes here - don't search twice.
 
 ```text
 Find real, verbatim complaints from [CUSTOMER] about [PROBLEM].
@@ -120,6 +120,7 @@ in 3 seconds. No pricing, no FAQ, no testimonials. Never write "Buy now."
 >     - In Mixo: click the hero section → Replace image → Upload.
 >     - If the image doesn't help, delete it - the headline carries the page. **Never** use a product mockup of something you have not built.
 > 4. Click **Publish**. Mixo gives a URL like `yourname.mixo.io`. Open it in an incognito window. Confirm the page loads.
+> 5. **Know where your signups land.** Find your builder's signup list (Mixo: Subscribers tab) - every email the waitlist collects lives there. Don't export anything yet; just confirm you can see the list. Module 2 interviews and Module 5's first customers both start from these names.
 
 ## Test it on one stranger
 

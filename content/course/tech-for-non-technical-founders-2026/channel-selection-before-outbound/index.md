@@ -112,13 +112,13 @@ Pick the one that matches your buyer type, your price point, and your honest tim
 After you pull the signal from your transcripts, run one Claude prompt to pressure-test your hypothesis before you commit to it:
 
 ```text
-I am a founder building [product description in one sentence].
-My must-have user is [specific buyer persona: title, company size, industry].
+I am a founder building [paste your one-sentence Founding Hypothesis from Lesson 1.1].
+My must-have user is [customer] (your Lesson 5.1 must-have segment - title, company size, industry).
 My price point is [monthly or per-seat price].
 
 From 10 customer interviews, I heard these channel signals:
-- [Quote or paraphrase from interview 1]
-- [Quote or paraphrase from interview 2]
+- [customer quote] from your Lesson 2.5 transcripts
+- [customer quote] from your Lesson 2.5 transcripts
 - [... up to 5 signals]
 
 I am considering [channel A] vs [channel B] for my first stretch of outbound.

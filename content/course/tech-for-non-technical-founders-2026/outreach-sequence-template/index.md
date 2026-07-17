@@ -38,9 +38,9 @@ Everything below is copy-pasteable. Replace the `[BRACKETS]`, keep the shape. Th
 
 ## The Day-0 message (email or DM)
 
-> Subject: your post about [THEIR EXACT WORDS]
+> Subject: your post about [their exact words]
 >
-> Hi [NAME] - you wrote that [ONE SPECIFIC LINE FROM THEIR POST, PARAPHRASED]. I'm researching exactly that problem and would trade 20 minutes for everything you learned the hard way. No pitch, nothing to sell - I don't even have a product yet. Would [DAY] or [DAY] work? Booking link if that's easier: [NEETOCAL LINK]
+> Hi [name] - you wrote that [ONE SPECIFIC LINE FROM THEIR POST, PARAPHRASED]. I'm researching exactly that problem and would trade 20 minutes for everything you learned the hard way. No pitch, nothing to sell - I don't even have a product yet. Would [DAY] or [DAY] work? Booking link if that's easier: [NEETOCAL LINK]
 
 The whole message rests on the first line naming something they actually wrote. Send a handful a day, by hand, per the 2.4 cadence - a stagger beats a burst.
 
@@ -62,7 +62,7 @@ Never claim conversations you have not had. The first-round variant works fine o
 
 ## LinkedIn DM opener (when there's no email)
 
-> [NAME] - your comment on [POST/THREAD] about [TOPIC] is why I'm writing. I'm researching that exact problem (not selling anything - there's no product yet). 20 minutes this week for everything you'd warn someone about?
+> [name] - your comment on [POST/THREAD] about [TOPIC] is why I'm writing. I'm researching that exact problem (not selling anything - there's no product yet). 20 minutes this week for everything you'd warn someone about?
 
 ## The Reddit research comment (public thread, DMs closed)
 
@@ -70,7 +70,7 @@ Never claim conversations you have not had. The first-round variant works fine o
 
 ## The waitlist-signup opener (for your Module 1 smoke-test signups)
 
-> Hi [NAME] - you joined the [PRODUCT] waitlist a while back. Before anything gets built, I'm talking to the people who signed up. 20 minutes on what made you click? You'll shape what gets built first.
+> Hi [name] - you joined the [PRODUCT] waitlist a while back. Before anything gets built, I'm talking to the people who signed up. 20 minutes on what made you click? You'll shape what gets built first.
 
 People who already raised a hand reply at the highest rate of any group you will message - start with them if you have them.
 

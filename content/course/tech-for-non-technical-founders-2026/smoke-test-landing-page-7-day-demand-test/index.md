@@ -88,13 +88,13 @@ You will not have to figure out the ad on your own: the launch checklist below l
 
 ---
 
-When you read the results, notice which number surprised you most - surprise means the data disagreed with something you believed, and whichever hypothesis blank produced that belief is the one worth testing first in Module 2.
+When you read the results, notice which number surprised you most - surprise means the data disagreed with something you believed, and whichever hypothesis blank produced that belief is the one worth testing first in Module 2. Open your Founding Hypothesis doc and check it against the blank you flagged as your riskiest assumption in 1.1: if the surprise landed on that same blank, your instinct was calibrated; if it landed somewhere else, update the flag - Module 2 interviews should chase the new one.
 
 ---
 
 > **Done:** ≥300 cold visitors have seen your page and you have a conversion rate read against the go/iterate/kill table. Decision written down.
 >
-> **You have now:** Founding Hypothesis (1.1) + clear landing page (1.2) + tracking (1.3) + cold-traffic data + a go / iterate / kill decision (1.4). Price test is next.
+> **You have now:** Founding Hypothesis (1.1) + clear landing page (1.2) + tracking (1.3) + cold-traffic data + a go / iterate / kill decision + a waitlist email list in your page builder (typically 15-50 signups - Module 2 interviews and Module 5 invites draw from it). Price test is next.
 >
 > **Next:** [1.5 · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - adds a Stripe button so you can find out if strangers will pay, not just sign up.
 >

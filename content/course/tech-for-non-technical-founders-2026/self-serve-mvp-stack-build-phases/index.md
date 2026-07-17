@@ -86,6 +86,8 @@ In Lovable, install the Supabase integration. Lovable will add the Supabase JS c
 
 > **Self-test your RLS policy before going live (two paths).**
 >
+> Same audit as the Lesson 4.3 pre-flight rule - now run it against your real tables.
+>
 > *No-code path (the default for a non-technical founder - this is copy-paste verification, not programming: the AI writes the fix, you paste it and read the answer).* In Claude or ChatGPT, paste: *"Audit my Supabase RLS policy. Here is my schema: [paste your table definitions from Supabase Table Editor]. Here is my current RLS policy: [paste from Authentication -> Policies]. Tell me whether a logged-in user with a fake user-id can read rows that belong to other users. If yes, give me the exact policy SQL to fix it."* Paste the AI's suggested policy into Supabase Authentication -> Policies.
 >
 > *SQL path (only if you are comfortable writing SQL).* In Supabase Dashboard -> SQL Editor, paste the test below, replacing `<table>` with your main user-data table. The pretend user-id `999` has no real rows; if the query returns any, your policy has a hole.

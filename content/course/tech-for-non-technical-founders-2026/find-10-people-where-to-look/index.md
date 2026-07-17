@@ -65,7 +65,7 @@ These are not new homework - they are your 1.1 Founding Hypothesis blanks, unpac
 
 | Profile | What to write | Bad vs Good |
 |---------|---------------|------------|
-| **Customer (one sentence)** | Your `[customer]` blank, expanded: *who* is this person in real-world detail - role, company size, the moment in their week when the pain happens. | Bad: "small-business owners"<br/>Good: "a 12-person law-firm office manager on Friday afternoon trying to invoice ten clients before Quickbooks logs her out" |
+| **Customer (one sentence)** | Your `[customer]` blank, expanded: *who* is this person in real-world detail - role, company size, the moment in their week when the pain happens. (If you ran the optional Lesson 2.2 persona rehearsal you already sketched role/industry/size - reuse it here.) | Bad: "small-business owners"<br/>Good: "a 12-person law-firm office manager on Friday afternoon trying to invoice ten clients before Quickbooks logs her out" |
 | **Business (one sentence)** | The one line your hypothesis doesn't carry: what kind of business are *you* building? B2B SaaS, B2B services, B2C app, marketplace. Free or paid. Self-serve or sales-led. | Bad: "a SaaS tool"<br/>Good: "B2B SaaS, self-serve, $29-49/month annual billing" |
 | **Solution (one sentence)** | Your `[approach]` blank, rewritten as the change it makes. You won't pitch this in calls, but you need it written down to know which conversations confirm or kill it. | Bad: "a tool that automates invoicing"<br/>Good: "I think a one-click invoice export to Stripe and Wave saves the office manager 90 minutes every Friday" |
 
@@ -78,6 +78,8 @@ You can do every part of this with a Reddit account, a Gmail address, and short 
 ### Translate the hypothesis into an ICP map
 
 The 2026 shortcut: AI does the part that used to take a week of research. You hand it your three sentences plus two competitor URLs; it returns the ICP profile, the exact places those people post, and the search strings to find named individuals.
+
+Ran the Lesson 1.2 research prompt? Paste 2-3 of those sourced complaints into the prompt as seed pains - they sharpen the search strings better than the hypothesis alone.
 
 Paste this prompt into Claude or ChatGPT:
 
@@ -94,6 +96,10 @@ Two competitors or adjacent products serving a similar customer
 your customer uses today):
 - [competitor 1 URL]
 - [competitor 2 URL]
+
+Seed pains from real posts (optional, from your Lesson 1.2 research):
+- "[customer quote]"
+- "[customer quote]"
 
 Return:
 1. A sharper ICP profile (role, industry, company size, the moment in their week when the pain happens, one quote in their language).
@@ -147,6 +153,8 @@ Turn the 30 sentences into 30 names. Open each thread you saved while reading, c
 - **Role + company** (one cell)
 - **The post you'll reference** (paste the URL)
 - **One specific line they wrote** (the phrase you'll quote back when you write to them)
+
+Your Lesson 1.2 complaints each came with a thread URL - those posters are named leads with a known pain; enter them as the first rows (name, post URL, quoted line).
 
 Aim for 30 hand-picked people in one focused sitting.
 

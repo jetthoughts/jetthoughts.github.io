@@ -120,7 +120,7 @@ Free for solo founders on the Free plan. You will not write much code yourself, 
 >
 > **What AI can help with at this stage:**
 >
-> **Review your Lovable build against your one-page brief.** Paste your brief's Section 3 into Claude, then paste this prompt:
+> **Review your Lovable build against your one-page brief.** Same leakage check as Lesson 3.2 - now against the actual build. Paste your brief's Section 3 into Claude, then paste this prompt:
 >
 > ```text
 > Here is Section 3 of my one-page brief (the outcome-shaped feature list). Based ONLY on this list, name 3 things a Lovable build of this brief would likely include that are NOT in the list. Be specific - feature names, not categories.

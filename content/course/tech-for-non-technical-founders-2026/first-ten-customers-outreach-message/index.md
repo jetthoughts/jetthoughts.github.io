@@ -58,7 +58,7 @@ If no real reference exists for a cold-bucket name, move them to [Lesson 5.7 col
 
 **Part 3: A Loom video, not a paragraph.** Record one 90-second Loom. Show your product in 60 seconds, you on camera for the other 30. The Loom script comes directly from your Lesson 5.1 verbatims. Read the Q2-Q3 quotes aloud, then point at the product feature that addresses the pain they describe.
 
-**Part 4: A specific ask.** "15 minutes to walk you through it and see if it solves [the problem]? Open to a paid pilot if it does. Calendly: [link]." (Calendly is a free scheduling page that lets people pick a call slot without the email back-and-forth.) The "paid pilot" teaser is load-bearing. Full mechanic lives in [5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/).
+**Part 4: A specific ask.** "15 minutes to walk you through it and see if it solves [the problem]? Open to a paid pilot if it does. Calendly: [link]." (Calendly is a free scheduling page that lets people pick a call slot without the email back-and-forth.) The "paid pilot" teaser is load-bearing - you only *mention* it here. The full mechanic, contract, and deposit live in [5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/), which you'll read before any money is due.
 
 **Total length:** 5-7 sentences. Anything longer and the recipient skims and forgets.
 

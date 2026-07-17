@@ -96,9 +96,9 @@ If you want copy variants to choose between before launch:
 ```text
 I'm testing a price hypothesis for a pre-product landing page.
 
-My hypothesis: [paste your one-sentence Founding Hypothesis here]
+My hypothesis: [paste your one-sentence Founding Hypothesis from Lesson 1.1]
 My test price: [e.g., $97 one-time founding member access]
-My target customer: [e.g., freelance bookkeepers who reconcile client accounts manually]
+My target customer (the [customer] blank from the hypothesis above): [e.g., freelance bookkeepers who reconcile client accounts manually]
 My hero benefit: [e.g., reconcile Stripe and QuickBooks in 90 seconds instead of 4 hours]
 
 Generate 2 button-label variants and a 1-sentence sub-copy for each:
@@ -117,8 +117,10 @@ SUB-COPY: [one sentence under the button]
 Paste into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier):
 
 ```text
-What do [YOUR ICP] currently pay for [YOUR CATEGORY]? Pull from G2 review price snippets, Reddit pricing threads, Capterra category averages, and competitor pricing pages. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing.
+What do [customer] currently pay for [YOUR CATEGORY]? Pull from G2 review price snippets, Reddit pricing threads, Capterra category averages, and competitor pricing pages. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing.
 ```
+
+Reuse the quotes you already pulled in Lesson 1.2's research prompt - this search is for PRICES, not pains.
 
 **Free-tier fallback:** Paste the same prompt into Claude free or ChatGPT free. Output is less exhaustive but the NOT-FOUND escape valve tells you which items it could not verify.
 

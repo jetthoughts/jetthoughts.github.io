@@ -139,7 +139,7 @@ Open [Lovable](https://lovable.dev), create a new project, and paste the followi
 **Prompt template to paste into Lovable** (placeholders in `[brackets]`):
 
 ```text
-Build a 3-screen clickable prototype for a [PRODUCT CATEGORY] tool targeting [TARGET USER].
+Build a 3-screen clickable prototype for a [PRODUCT CATEGORY] tool targeting [customer].
 
 This is a throwaway validation prototype. Use hard-coded fake data only. No backend, no auth, no database. All buttons should navigate between screens or show a static success state.
 
@@ -160,6 +160,8 @@ SCREEN 3 - [RESULT/CONFIRMATION NAME]:
 
 Design: Clean, minimal. Dark sidebar, white content area. [YOUR COLOR] accent. No login screen. No settings. No navigation beyond these 3 screens. Make it look functional, not finished.
 ```
+
+Where the blanks come from: `[customer]` is your `[customer]` blank from Lesson 1.1; `[PRIMARY ACTION ...]` is the top workaround-replacing action from your Lesson 2.5 validated problem statement; `[FAKE DATA EXAMPLE]` is names and numbers pulled from your interview transcripts.
 
 **Filled-in worked example.** Below is the same prompt with every blank replaced for one made-up product - a transaction-reconciliation tool for freelance bookkeepers. The category isn't the point; the *level of specificity* is. Read it before you fill yours in, so you can see what kind of answer each blank expects:
 

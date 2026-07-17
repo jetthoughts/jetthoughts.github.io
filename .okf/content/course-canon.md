@@ -32,6 +32,18 @@ timestamp: 2026-07-13T00:00:00Z
 Structural home: [course structure](/content/course-structure.md).
 Enforcement: [banned-strings ratchet](/content/banned-strings-ratchet.md).
 
+# Progressive elaboration rule (expand, never restart)
+
+Later lessons MAY deepen an earlier artifact; they MUST NOT re-derive it
+from a blank page. Mechanically: any lesson touching an earlier artifact
+opens WITH it - "open your [artifact] from Lesson N.N, paste it here" -
+and adds a named delta. Every prompt slot names its source artifact.
+Good: 2.3's three sentences ("your 1.1 blanks, unpacked - copy the
+sentence in"). Bad: a persona prompt asking Sam to describe the customer
+fresh when the ICP map already exists. Owner rule 2026-07-17: "it's ok to
+expand previous results; but if we start over to do the same it's
+confusing."
+
 # Terminology
 
 Numbered core units are **Lessons** ("Lesson N.N", never "Chapter N.N" or
