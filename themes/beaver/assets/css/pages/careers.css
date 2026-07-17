@@ -1,3 +1,6 @@
+/* Page bundle for /careers/ — formerly 3086-layout2.css (retired FL
+   export; every fl-node in it is a careers node). Moved verbatim: the
+   compiled careers bundle is byte-identical (unchanged fingerprint). */
 .fl-builder-content *, .fl-builder-content *:before, .fl-builder-content *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
