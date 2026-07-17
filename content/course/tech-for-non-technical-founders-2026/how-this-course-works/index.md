@@ -28,7 +28,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Chapter 0** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Overview** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **What this is:** the map - {{< course-stat modules >}} modules, {{< course-stat chapters >}} lessons, {{< course-stat artifacts >}} artifacts, each module's output feeding the next module's input, from rough idea to signed paid pilot. Read it once before Module 1, come back when you need to see where you are.
 

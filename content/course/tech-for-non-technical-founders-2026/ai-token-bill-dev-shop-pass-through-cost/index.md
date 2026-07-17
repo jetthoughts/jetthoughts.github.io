@@ -47,7 +47,7 @@ That is the gap this post closes. By the end of one coffee you will know the per
 
 | Line item | Per dev / month | What you control |
 |-----------|-----------------|------------------|
-| Cursor or Copilot Enterprise seat | $20-60 | Fixed monthly. Easy to predict. Pick a tier and stay |
+| Cursor or Copilot Enterprise seat | $20-40 | Fixed monthly. Easy to predict. Pick a tier and stay |
 | Anthropic API (Claude Code) | $30-200 | Usage discipline. Same dev = 7x range depending on agent-loop habits |
 | OpenAI API (gpt-4o, o3) | $50-300 | Whether the team uses it at all. Less common in 2026 if Claude Code dominates |
 | **Disciplined team total** | **$80-$120** | Cursor + Claude Code + budget alerts at $150 |

@@ -93,7 +93,7 @@ Run the [Lesson 4.1 decision tree](/course/tech-for-non-technical-founders-2026/
 
 **Q: The 12 rules checklist is overwhelming. Where do I even start?**
 
-Only 3 rules need to be true before you open Lovable: (1) your one-page brief passed the Lesson 3.2 quality-gate, (2) you scoped one workflow for one persona, (3) GitHub sync is on in Lovable Settings. The other 9 rules fire inline during the build. Read the [Lesson 4.3 chapter](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) for the full list.
+Only 3 rules need to be true before you open Lovable: (1) your one-page brief passed the Lesson 3.2 quality-gate, (2) you scoped one workflow for one persona, (3) GitHub sync is on in Lovable Settings. The other 9 rules fire inline during the build. [Lesson 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) teaches the 3 pre-flight rules; the [full stack reference](/course/tech-for-non-technical-founders-2026/reference/stack-tools-full/) has all 12.
 
 **Q: Lovable generated a sprawling admin panel from my one-page brief.**
 

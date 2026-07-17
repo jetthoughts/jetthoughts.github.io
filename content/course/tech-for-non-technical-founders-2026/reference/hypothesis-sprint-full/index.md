@@ -33,7 +33,7 @@ Beside the customer you circled, write three ideal-customer-profile (ICP) charac
 
 ### Step 2: Classic Differentiator
 
-Draw three columns: *fast*, *easy*, *free*. For each, write "more," "less," or "same" against the strongest competition entry from Step 1. Pick the one column you can credibly own.
+Draw three columns: *faster*, *easier*, *cheaper*. For each, write "more," "less," or "same" against the strongest competition entry from Step 1. Pick the one column you can credibly own.
 
 You cannot own all three. A product that is faster AND easier AND cheaper than the spreadsheet is a product nobody believes exists. Write one sentence: "Our product will be the [faster / easier / cheaper] one."
 

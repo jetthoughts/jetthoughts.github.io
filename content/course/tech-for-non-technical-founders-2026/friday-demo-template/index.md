@@ -103,7 +103,7 @@ If the same name keeps appearing as the only reviewer, you have a single point o
 
 1. **Click the staging URL while they are talking.** Open it on your laptop the moment they share it. If you get a 500, a login error, or "this page can't be reached", interrupt and ask. Do not wait until Monday to find out the URL was a screenshot.
 2. **Ask one follow-up per question.** Not three. If your follow-up gets a paragraph of jargon back, that is information. Save it for next time.
-3. **Write down one number per demo.** "PR #847", "$1 transaction", "47 paying users on the new flow". Three months of one-number receipts beat any retrospective the agency will run on themselves.
+3. **Write down one number per demo.** "PR #849", "$1 transaction", "47 paying users on the new flow". Three months of one-number receipts beat any retrospective the agency will run on themselves.
 
 ## What to do after the call
 
