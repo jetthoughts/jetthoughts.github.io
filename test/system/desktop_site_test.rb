@@ -185,6 +185,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     verify_section_for("careers", "overview", css: '[data-node="w02opu1zjdef"]')
     verify_section_for("careers", "offers", css: '[data-node="dkc4gbvj193z"]')
+    verify_section_for("careers", "newsletter", css: '[data-node="hfa6xverdc82"]')
     verify_section_for("careers", "footer", css: "footer")
   end
 
