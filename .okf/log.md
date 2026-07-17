@@ -26,3 +26,7 @@ fixed 4 restart defects (5.3 warm-list seeding, SOW brief-as-scope, 5.1
 persona reconciliation, PRD Section 2). No v1 long-form lessons remain.
 Gotcha: claude-flow daemons recreate .git/index.lock continuously - commit
 via retry loop (rm lock + immediate git add/commit, up to 10 attempts).
+Voice wave (same day): 16-page opener-shape rotation shipped - max 4 pages
+per shape, 4 composite-disclaimed vignettes kept, attribution phrases
+("we picked up"/"we worked with") now zero course-wide. Teaching numbers
+preserved as mechanism descriptions.
