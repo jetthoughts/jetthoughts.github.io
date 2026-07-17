@@ -5,8 +5,8 @@
       .heading       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
       .label         { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
       .sublabel      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #444; font-style: italic; }
-      .center        { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #fff; font-weight: 700; }
-      .center-sub    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #fff; font-style: italic; }
+      .center        { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 21px; fill: #fff; font-weight: 700; }
+      .center-sub    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #fff; font-style: italic; }
       .spoke         { stroke: #1a1a1a; stroke-width: 2; fill: none; }
       .pivot-1       { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
       .pivot-2       { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
@@ -23,9 +23,9 @@
 
   <!-- Center node -->
   <circle cx="450" cy="320" r="62" fill="#1a1a1a" stroke="#cc342d" stroke-width="3"/>
-  <text x="450" y="306" class="center" text-anchor="middle">Founding</text>
-  <text x="450" y="336" class="center" text-anchor="middle">Hypothesis</text>
-  <text x="450" y="360" class="center-sub" text-anchor="middle">5 blanks - 1 right</text>
+  <text x="450" y="305" class="center" text-anchor="middle">Founding</text>
+  <text x="450" y="330" class="center" text-anchor="middle">Hypothesis</text>
+  <text x="450" y="352" class="center-sub" text-anchor="middle">5 blanks - 1 right</text>
 
   <!-- Spoke 1: Customer Segment (top-left) -->
   <line x1="416" y1="270" x2="200" y2="180" class="spoke"/>

@@ -64,7 +64,7 @@ The contract has a data-handling clause. The workaround was not reviewed by anyo
 
 **Cost of leaving it alone**: you write the SOC2 (a security-audit standard B2B buyers ask for) letter and the SAML promise into the contract and ship a workaround. Months later, the workaround becomes the breach incident. The [vibe-coded auth shape](/blog/vibe-coding-disposable-by-design/) - public URL-based access controls, BOLA-class vulnerabilities (Broken Object Level Authorization - a URL where changing the ID in the address bar lets you read someone else's data), no audit log to diagnose what got read - is what deferred auth complexity produces.
 
-**Cost of addressing now**: a Fractional CTO scopes the role matrix on paper (1-2 weeks of part-time work, ~$8-15K), then hands the spec to a hired engineering team for the production build on Devise + Pundit (Rails) or django-allauth + django-guardian. Total auth-shaped rebuild: 4 to 8 weeks.
+**Cost of addressing now**: a Fractional CTO scopes the role matrix on paper (1-2 weeks of part-time work at the $80-$120/hour fractional band), then hands the spec to a hired engineering team for the production build on Devise + Pundit (Rails) or django-allauth + django-guardian. Total auth-shaped rebuild: 4 to 8 weeks.
 
 ## Signal 5: Compliance or security audit landing on the calendar (detectable: Week 8-12+)
 

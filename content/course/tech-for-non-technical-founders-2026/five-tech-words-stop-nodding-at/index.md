@@ -124,7 +124,7 @@ The five words above are dev-shop jargon - vocabulary you'll hit in Modules 4-5 
 
 **Customer & validation words** - who you serve and whether the demand is real:
 
-| Acronym | Plain English | Where it shows up |
+| Term | Plain English | Where it shows up |
 |---|---|---|
 | **ICP** | Ideal Customer Profile - the specific kind of person your hypothesis names | Lesson 1.1, 2.3 |
 | **JTBD** | Jobs To Be Done - what a customer "hires" your product to do (instead of feature list) | Lesson 3.1, 3.2 |
@@ -135,7 +135,7 @@ The five words above are dev-shop jargon - vocabulary you'll hit in Modules 4-5 
 
 **Money & market words** - the numbers that decide whether it is a business:
 
-| Acronym | Plain English | Where it shows up |
+| Term | Plain English | Where it shows up |
 |---|---|---|
 | **MRR** / **ARR** | Monthly / Annual Recurring Revenue - what one customer pays per month or year | Lesson 1.1, 5.6 |
 | **ACV** | Annual Contract Value - what one customer pays in year one (deposit math is 10-30% of ACV) | Lesson 5.6 |
@@ -146,7 +146,7 @@ The five words above are dev-shop jargon - vocabulary you'll hit in Modules 4-5 
 
 **Strategy, deal & tool words** - the frameworks, contracts, and tools you touch:
 
-| Acronym | Plain English | Where it shows up |
+| Term | Plain English | Where it shows up |
 |---|---|---|
 | **SWOT / PESTEL / Porter's Five Forces** | Three classic strategy-school checklists - VenturusAI runs all three on your hypothesis | Lesson 1.1 sidebar |
 | **Pixel** | A small JavaScript tracking snippet from an ad platform (Meta/LinkedIn/Reddit) - paste it on your page and the platform learns who converted | Lesson 1.4 |

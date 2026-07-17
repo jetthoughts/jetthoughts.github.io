@@ -137,7 +137,7 @@ Most "Fractional CTO" listings on LinkedIn are either career CTOs in transition 
 
 > **JetThoughts is not a Fractional CTO provider.** We are an engineering services shop (full-team rescues, rebuilds, technical coaching). The platforms above host specialized fractional executives screened on the criteria in this section. This chapter teaches you how to hire one well; we do not sell the role.
 
-**Week 1 onboarding:**
+**First-month onboarding (Day 0 through the Week-4 checkpoint):**
 
 | Day | What happens |
 |---|---|
@@ -245,8 +245,8 @@ The seven questions are organised around what costs the most when a candidate fa
 
 | Question pair | Catches the candidate who... | What faking it costs you |
 |---|---|---|
-| **Workflow + cost (Q1, Q2)** | Has never set up a `.cursorrules` file or seen a personal Anthropic invoice | Silently runs your monthly AI bill from $200 to $4,800 in their first sprint |
-| **Verification + slopsquatting (Q3, Q4)** | Outsources PR review to the model | Their name ends up next to the CSRF hole in your incident postmortem |
+| **Workflow + cost (Q1, Q2)** | Has never set up a `.cursorrules` file (the repo's standing instruction file for AI coding tools) or seen a personal Anthropic invoice | Silently runs your monthly AI bill from $200 to $4,800 in their first sprint |
+| **Verification + slopsquatting (Q3, Q4)** | Outsources PR review to the model ([slopsquatting](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/) = installing a fake package the AI invented) | Their name ends up next to the CSRF hole in your incident postmortem |
 | **Accountability + refactor (Q5, Q6)** | Has never owned a system through a production incident or a non-trivial rewrite | The "I refactor as I go" answer is the kind of rewrite that kills startups |
 | **Disagreement (Q7)** | Accepts the model's first suggestion and cannot show one PR where they disagreed with it | This is the one question that actually splits the population - a candidate who directs the model reads the diff, rejects most of it, and can show you the PR comment where they did it |
 

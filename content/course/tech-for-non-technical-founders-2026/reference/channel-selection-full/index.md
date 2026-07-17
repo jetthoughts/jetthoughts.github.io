@@ -6,7 +6,7 @@ draft: false
 slug: channel-selection-full
 ---
 
-> **Reference companion to [Lesson 5.2 · Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)** - the commitment-rule phase table, how to read channel signals from your interview transcripts, the 4-dimension channel-fit scoring, the 4-channel comparison, the Engineering-as-Marketing side door, and the full fill-in worksheet. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.
+> **Reference companion to [Lesson 5.2 · Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)** - the commitment-rule phase table, how to read channel signals from your interview transcripts, the 4-dimension channel-fit scoring, the 4-channel comparison, the Engineering-as-Marketing side door, and the full fill-in worksheet. Read the micro-lesson first for the commitment rule and the ≥9/12 score; return here when you want the full worksheet and the four-channel comparison.
 
 ---
 
@@ -106,7 +106,7 @@ Fill this out before you send message one. It prevents the wasted-effort cycle o
 Score each candidate channel 1-3 on the four dimensions (1 = poor fit, 2 = moderate, 3 = strong). Add the four to a total out of 12. Use the per-channel guidance below as the anchor.
 
 <div class="ws-card">
-  <p><strong>LinkedIn DM &#8594; B2B SaaS, $200+/month.</strong> Pick when: buyer is a professional, title and company size filter cleanly, 1-2 hours/week available. Skip when: buyer is a freelancer, solo creator, or under 30 years old.</p>
+  <p><strong>LinkedIn DM &#8594; B2B SaaS, $200+/month.</strong> Pick when: buyer is a professional, title and company size filter cleanly, 1-2 hours/week available. Skip when: buyer is a freelancer, solo creator, or someone whose work life happens outside LinkedIn (your 5.1 interviewees will have told you where they actually hang out).</p>
   <div class="ws-field"><span class="ws-flabel">Price fit</span><span class="ws-blank"></span><span class="ws-flabel">Buyer type</span><span class="ws-blank"></span><span class="ws-flabel">Time budget</span><span class="ws-blank"></span><span class="ws-flabel">Interview signal</span><span class="ws-blank"></span></div>
   <div class="ws-verdict"><span class="ws-vlabel">Total / 12</span><span class="ws-blank"></span></div>
 </div>

@@ -6,7 +6,7 @@ draft: false
 slug: hire-decision-full
 ---
 
-> **Reference companion to [Lesson 4.1 · Should You Hire?](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)** - the full Airbnb test walkthrough, each of the four build paths in depth, the shed-vs-house framing, and the Series-A off-ramp. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.
+> **Reference companion to [Lesson 4.1 · Should You Hire?](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)** - the full Airbnb test walkthrough, each of the four build paths in depth, the shed-vs-house framing, and the Series-A off-ramp. Read the micro-lesson first for the five routing questions and the four paths; return here when you want the Airbnb test and the Series-A off-ramp in full.
 
 ---
 
@@ -32,7 +32,7 @@ The 2026 version of the Airbnb test takes one afternoon: a Carrd page with a Str
 
 The signal you are looking for is small. Two paying buyers from 30 cold outreach hits is enough to flip the build switch.
 
-We know a B2B SaaS founder who sold five annual contracts at $1,800 each via a Stripe link and a Notion doc before she wrote a line of code. By the time her contractor delivered the v1 web app eight weeks later, she had $9,000 in pre-revenue and a customer-feedback loop already running. The build was constrained by what she had already promised the five buyers, which is the cheapest scope-control mechanism that exists.
+One B2B SaaS founder sold five annual contracts at $1,800 each via a Stripe link and a Notion doc before she wrote a line of code. By the time her contractor delivered the v1 web app eight weeks later, she had $9,000 in pre-revenue and a customer-feedback loop already running. The build was constrained by what she had already promised the five buyers, which is the cheapest scope-control mechanism that exists.
 
 Zero clicks from 30 prospects is brutal in the other direction. The problem might be real (you validated it in [Lesson 2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)) but your pitch is wrong, your price is wrong, or the timing is wrong. Find out for $200 instead of $30,000.
 

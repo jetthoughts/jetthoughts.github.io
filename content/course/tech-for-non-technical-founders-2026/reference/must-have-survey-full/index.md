@@ -6,7 +6,7 @@ draft: false
 slug: must-have-survey-full
 ---
 
-> **Reference companion to [Lesson 5.1 · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)** - who to survey and who to strip, the send email, the per-segment scoring math, the decision tree, the under-40% diagnostic table, the read-by-count guide, and the complete further-reading set. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.
+> **Reference companion to [Lesson 5.1 · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)** - who to survey and who to strip, the send email, the per-segment scoring math, the decision tree, the under-40% diagnostic table, the read-by-count guide, and the complete further-reading set. Read the micro-lesson first for the five questions and the score-it steps; return here when your result lands under 40% and you need the diagnostic table.
 
 ---
 

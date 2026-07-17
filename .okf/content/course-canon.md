@@ -35,7 +35,7 @@ Enforcement: [banned-strings ratchet](/content/banned-strings-ratchet.md).
 # External sources for cited claims
 
 - Sean Ellis 40% test: [Lenny's Podcast interview](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis) (cutoff + wording).
-- Slopsquatting: [Infosecurity Magazine, April 2025](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) (coined the term; reports the Lasso Security March 2025 findings).
+- Slopsquatting: [Lasso Security research](https://www.lasso.security/blog/ai-package-hallucinations) + [Infosecurity Magazine, April 2025](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) (coined the term).
 - First-10-customers network finding: [Lenny Rachitsky's B2B first-customers research](https://www.lennysnewsletter.com/p/how-todays-fastest-growing-b2b-businesses).
 - Interview method: Teresa Torres, [Customer Interviews](https://www.producttalk.org/customer-interviews/) and [Learning to Interview Continuously](https://www.producttalk.org/learning-to-interview-continuously/) (Product Talk).
 - Reply bands, deposit bands, token pass-through ranges: internal editorial

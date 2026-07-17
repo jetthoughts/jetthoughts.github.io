@@ -42,7 +42,7 @@ Template companion to [the Mom Test synthesis section](/course/tech-for-non-tech
 
 ## Why this exists
 
-Send 47 cold DMs to strangers venting about their CRM and twelve answer - two yes, ten honest paragraph-long no's - and you have something that feels like validation. Left as transcripts in a folder labeled `notes`, they lie to you. The ten no's blur together in memory and contradict each other on the page; half of them turn out not to be the persona you are building for. Sit down to name the persona, tally the strong signals, and write the why-now, and the 90-minute synthesis can hand you a *pivot to a different ICP* where memory was telling you *build*. That is a weekend you would have spent prompting Lovable, spent instead on five sharper interviews. This template is the page you fill in to force it.
+Send forty-odd cold DMs to strangers venting about their CRM and twelve answer - two yes, ten honest paragraph-long no's - and you have something that feels like validation. Left as transcripts in a folder labeled `notes`, they lie to you. The ten no's blur together in memory and contradict each other on the page; half of them turn out not to be the persona you are building for. Sit down to name the persona, tally the strong signals, and write the why-now, and the 90-minute synthesis can hand you a *pivot to a different ICP* where memory was telling you *build*. That is a weekend you would have spent prompting Lovable, spent instead on five sharper interviews. This template is the page you fill in to force it.
 
 ## How to use this
 

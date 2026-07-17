@@ -59,7 +59,7 @@ Read this **the night before you sign, alone**, with a printed SOW, a yellow hig
 |---|---|
 | "Vendor will deliver the features described in Exhibit A. Detailed scope, including specific tickets, will be defined sprint by sprint with Client's product owner." | Demand a feature list at the level of "a Rails 7 app with a Hotwire frontend, deployed via Kamal to Hetzner, with sign-up, contractor-match, payment, and an admin panel listing the last 100 jobs." Then ask for an estimate per feature in days, not story points. If they cannot estimate the work, they cannot price it. (See [the founder's guide to hiring a dev shop](/blog/founders-guide-hiring-dev-shop/) for what a real scope looks like.) |
 
-**Flag:** "Scope to be defined sprint by sprint", "agile discovery throughout", "exact features dependent on user research." Sounds collaborative; means the SOW is a blank cheque. If Exhibit A is vaguer than the outcome-shaped feature list you wrote in Lesson 3.2, that is this flag firing.
+**Flag:** "Scope to be defined sprint by sprint", "agile discovery throughout", "exact features dependent on user research." Sounds collaborative; means the SOW is a blank check. If Exhibit A is vaguer than the outcome-shaped feature list you wrote in Lesson 3.2, that is this flag firing.
 
 ### Clause 2 - Milestone acceptance
 
@@ -135,7 +135,7 @@ The [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers what a clean te
 
 | <span style="color:#cc342d">**Bad wording**</span> | <span style="color:#2e7d32">**Good wording**</span> |
 |---|---|
-| "Any dispute arising under this Agreement shall be finally resolved by binding arbitration administered by JAMS in [Vendor's home county, Vendor's home state]. Each party shall bear its own costs." | (1) Add a **mediation step**: "The parties shall attempt in good faith to resolve any dispute through non-binding mediation in [Client's home city] before initiating arbitration." Mediation resolves about 80% of commercial disputes. (2) Set the arbitration venue at a **neutral location** or split it by who initiates the claim. (3) Add a **prevailing-party fee-shift**: the loser pays the winner's reasonable attorney fees. |
+| "Any dispute arising under this Agreement shall be finally resolved by binding arbitration administered by JAMS in [Vendor's home county, Vendor's home state]. Each party shall bear its own costs." | (1) Add a **mediation step**: "The parties shall attempt in good faith to resolve any dispute through non-binding mediation in [Client's home city] before initiating arbitration." Most commercial disputes settle at mediation before arbitration ever starts. (2) Set the arbitration venue at a **neutral location** or split it by who initiates the claim. (3) Add a **prevailing-party fee-shift**: the loser pays the winner's reasonable attorney fees (enforceability varies by forum - confirm this one with your counsel). |
 
 **Flag:** Binding arbitration in the agency's home state. No mediation step before arbitration. "Each party bears its own costs" favors whichever party has more cash to wait you out.
 

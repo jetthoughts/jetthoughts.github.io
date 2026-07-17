@@ -6,7 +6,7 @@ draft: false
 slug: outcomes-not-features-full
 ---
 
-> **Reference companion to [Lesson 3.2 · Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)** - the two fully worked feature-vs-outcome pairs, the priced-out comparison, the complete AI-reviewer test protocol, and the optional stack-ranking step. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.
+> **Reference companion to [Lesson 3.2 · Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)** - the two fully worked feature-vs-outcome pairs, the priced-out comparison, the complete AI-reviewer test protocol, and the optional stack-ranking step. Read the micro-lesson first for the three-part rewrite and the pass/fail rubric; return here when a Section 3 line still reads feature-shaped and you want a worked pair.
 
 ---
 

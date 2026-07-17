@@ -6,7 +6,7 @@ draft: false
 slug: product-brief-full
 ---
 
-> **Reference companion to [Lesson 3.1 · The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)** - a worked example and common mistake for each of the five sections, the decision between a Vibe PRD and a traditional PRD, and when a paid cohort is worth it. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference. The fillable form lives on the [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) page.
+> **Reference companion to [Lesson 3.1 · The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)** - a worked example and common mistake for each of the five sections, the decision between a Vibe PRD and a traditional PRD, and when a paid cohort is worth it. Read the micro-lesson first for the five-section template and the do-this-now sitting; return here when you want the worked example for a section you are stuck on. The fillable form lives on the [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) page.
 
 ---
 

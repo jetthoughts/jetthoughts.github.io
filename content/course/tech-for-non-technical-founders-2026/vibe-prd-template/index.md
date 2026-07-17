@@ -52,7 +52,7 @@ related_posts: false
 > 1. The problem (copied from your validated problem statement)
 > 2. The user and their context
 > 3. What you're building (one paragraph, plain English)
-> 4. Success metric (one number)
+> 4. Success metric (one metric, one target number)
 > 5. What you're not building (the no-go list)
 
 ## Why this exists
@@ -138,7 +138,7 @@ The agent or junior needs the context, not the TAM.
 "SMB SaaS company, 11-50 employees, Series A."
 ```
 
-**Section 3 - what you're building.** One paragraph, verb-led. If it reads like a feature list, the agent builds a settings page nobody asked for.
+**Section 3 - what you're building.** One paragraph's worth, verb-led - the fields below assemble it. If it reads like a feature list, the agent builds a settings page nobody asked for.
 
 ```
 ---------------------------------------------------------
@@ -172,7 +172,7 @@ user does.
 
 ```
 ---------------------------------------------------------
-4. SUCCESS METRIC (one number)
+4. SUCCESS METRIC (one metric)
 ---------------------------------------------------------
 
 Number + unit + timeframe:

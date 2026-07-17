@@ -6,7 +6,7 @@ draft: false
 slug: paid-pilot-full
 ---
 
-> **Reference companion to [Lesson 5.6 · Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)** - the clause-by-clause DPA walkthrough, the full pricing-band math by sector, the Stripe Checkout flow, the conversation script with objection handling, and the honest exceptions. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.
+> **Reference companion to [Lesson 5.6 · Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)** - the clause-by-clause DPA walkthrough, the full pricing-band math by sector, the Stripe Checkout flow, the conversation script with objection handling, and the honest exceptions. Read the micro-lesson first for the DPA template and the deposit math; return here when a prospect pushes back and you need the objection scripts.
 
 ---
 

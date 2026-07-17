@@ -51,7 +51,7 @@ related_posts: false
 
 ---
 
-The cheapest day to confirm you own your own infrastructure is Day 1, before you hand a credit card to a contractor. The most expensive day is month 14, when production breaks at 9pm and you cannot push a fix because the database password lives in someone else's inbox. One founder we saw in 2025 learned this the hard way: fourteen months into a build, 1,800 paying clinics, a Stripe account in the founder's name - and the AWS root password sitting in the contractor's personal Gmail. It took three emails and six days to get the root account email changed.
+The cheapest day to confirm you own your own infrastructure is Day 1, before you hand a credit card to a contractor. The most expensive day is month 14, when production breaks at 9pm and you cannot push a fix because the database password lives in someone else's inbox. In 2025, one founder learned this the hard way: fourteen months into a build, 1,800 paying clinics, a Stripe account in the founder's name - and the AWS root password sitting in the contractor's personal Gmail. It took three emails and six days to get the root account email changed.
 
 After this lesson you will be able to: **run a 12-item audit that confirms every credential - code, cloud, secrets, domain - sits under an email and a card you control, and start a recovery plan for any that don't.**
 

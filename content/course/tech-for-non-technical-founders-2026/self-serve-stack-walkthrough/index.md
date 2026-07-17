@@ -253,7 +253,7 @@ Walk through the full flow in test mode: signup -> dashboard -> add a client -> 
 
 **Result line (fill in)**: ____________________________________________
 
-> **Good** - Phase 3 done: a paid signup flow end-to-end in test mode, webhook verified, `subscription_status` flips from `trial` to `active` within 10 seconds of a $1 charge.
+> **Good** - Phase 3 done: a paid signup flow end-to-end in test mode, webhook verified, `subscription_status` flips from `trial` to `active` within a minute or two of a $1 charge (Stripe webhooks are asynchronous - delivery can lag or retry).
 
 ## When the webhook doesn't fire (troubleshooting in 5 minutes)
 

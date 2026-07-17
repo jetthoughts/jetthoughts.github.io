@@ -10,7 +10,7 @@ slug: mvp-build-phases-full
 
 ---
 
-This guide assumes you already ran Modules 1-3 (hypothesis, smoke test, 10 interviews, one-page brief) and read [Lesson 4.3: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Lesson 4.3 covers the $0 path, the 12 rules, what each tool does, the Module 2 prototype vs the Module 4 MVP distinction, communities, and the AI critic block. The phases below reference those concepts without re-explaining them. Skip straight here without validation and the build ships into the silence Modules 1-3 were designed to prevent.
+This guide assumes you already ran Modules 1-3 (hypothesis, smoke test, 10 interviews, one-page brief) and read [Lesson 4.3: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Lesson 4.3 covers what each tool does, the 3 pre-flight rules, and the AI critic block; the $0 budget path, the full 12 build rules, the Module 2 prototype vs the Module 4 MVP distinction, and communities live in the [stack-and-tools reference](/course/tech-for-non-technical-founders-2026/reference/stack-tools-full/). The phases below reference those concepts without re-explaining them. Skip straight here without validation and the build ships into the silence Modules 1-3 were designed to prevent.
 
 > **Calendar reality for the MVP build.** A full-time founder with daytime availability can hit the Phase 4 5-lights in 4-6 weeks. An evening-only founder (the 2-4 hr/week pattern this course is built for) typically needs 10-12 weeks for the same outputs. Phase 2 (Supabase wiring + RLS - Row-Level Security, the database rule that walls one customer's data off from another's) and Phase 3 (Stripe webhook - an automatic message Stripe sends your app when a payment lands - plus idempotency, the rule that says "if the same webhook fires twice, only act once") are where part-time founders lose the most calendar. Plan the 10-week version, not the 4-week version.
 
@@ -71,15 +71,7 @@ Switch Stripe out of test mode. Buy a domain (roughly $10/year for a .com on [Po
 
 Watch what happens. If 0 of 5 click, the cold message is wrong, not the product (yet). If 5 click and 0 sign up, the landing screen is wrong, not the product. If 5 sign up and 0 pay, the paywall position or the price is wrong. Each failure shape tells you what to fix next. The demo is the data, not the screens.
 
-> **Phase 4 exit criteria: the MVP is "done" only when ALL 5 lights are green.** Without these, you either polish indefinitely in Lovable or hand Module 5 an MVP that real users cannot touch.
->
-> 1. **Stripe in LIVE mode** (not test mode) and a real card successfully clears the paywall at least once.
-> 2. **Custom domain wired** (not a `.lovable.app` subdomain) - the URL you DM to a user must be yours.
-> 3. **At least 1 ICP user who was NOT in your Lesson 2.3-2.4 interviews** has clicked through to the paywall on the live URL.
-> 4. **Zero errors in the browser Console** on the sign-up + checkout flow. Not a coding step: press F12, click through sign-up and checkout like a user, and check that the Console tab shows no red lines.
-> 5. **Friday-style weekly demo recording exists** for the last week of build (a Loom or screen-record proving the demo cadence held to the end).
->
-> Advance to Module 5 only when all 5 are green. If any are red, the MVP is NOT ready for the 10-30 users Module 5 needs as input. Fix the red light first, then re-check.
+> **Phase 4 exit criteria - the five green lights.** The MVP is "done" only when all five gates are green: Stripe in LIVE mode with a real card cleared, a custom domain wired, at least 1 fresh ICP user (not from your Lesson 2.3-2.4 interviews) reaching the paywall, zero red errors in the browser Console on the sign-up + checkout flow, and a final-week demo recording. [Lesson 4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#the-five-green-lights) lists each light with its exact check. Advance to Module 5 only when all five are green; if any are red, the MVP is NOT ready for the 10-30 users Module 5 needs - fix the red light first, then re-check.
 
 > **Pre-flight before M5.1: book up to 10 user sessions.** The onramp phase's 4-6 accounts are not enough for M5.1's Sean Ellis 40% test (under 10 respondents = noise, not signal). Before you start Module 5, book a second small invite wave: 5-10 more sessions from your Lesson 2.3-2.4 interviewee list, your community connections, or a fresh micro-batch of cold DMs. Aim for 10-30 active users by the time M5.1's survey ships - 5.1 treats 10 as directional-only and 20+ as a useful read. Without this pre-flight, you will run the 40% test on 5 people, get an ambiguous result, and falsely conclude you have a product problem when you really have a sample-size problem.
 
@@ -132,7 +124,8 @@ The [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/
 
 ## Further reading
 
-- [Lesson 4.3: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) - why these three tools, what each one does, 12 rules, communities, and the AI critic block
+- [Lesson 4.3: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) - why these three tools, what each one does, the 3 pre-flight rules, and the AI critic block
+- [Stack & Tools reference](/course/tech-for-non-technical-founders-2026/reference/stack-tools-full/) - each tool in depth, the M2-vs-M4 contrast, all 12 build rules, and the founder communities
 - [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/) - day-by-day version of the build plan; print before Phase 1
 - Y Combinator, [Startup School Library + 2026 Founder Resources](https://www.ycombinator.com/library/) - the YC stance on validating without code
 - Rob Walling, [Vibe Coding interview on Creator Science](https://podcast.creatorscience.com/rob-walling/) - the shed vs skyscraper analogy

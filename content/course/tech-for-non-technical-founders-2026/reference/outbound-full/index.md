@@ -6,7 +6,7 @@ draft: false
 slug: outbound-full
 ---
 
-> **Reference companion to [Lesson 5.7 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)** - the Product Hunt data, the full tooling stack, domain warmup, the funnel math, filter and personalization detail, all three script variants, the stage cadence, and the no-reply diagnostic. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.
+> **Reference companion to [Lesson 5.7 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)** - the Product Hunt data, the full tooling stack, domain warmup, the funnel math, filter and personalization detail, all three script variants, the stage cadence, and the no-reply diagnostic. Read the micro-lesson first for the six-stage pipeline and the four-line script; return here when your batch returns no replies and you need the diagnostic.
 
 ---
 
@@ -36,7 +36,7 @@ The five tools and their 2026 pricing:
 | Apollo.io (Starter / free tier) | Cheaper alternative to Sales Nav for B2B email + filters | Free tier available; paid plans for scale |
 | Loom | 90s product walkthrough + you on camera | Free tier available |
 | Calendly | 15-min demo booking, auto-confirm | Free tier supports one event type |
-| Stripe Invoice | Pilot deposit, no monthly fee | 2.9% + 30c per transaction |
+| Stripe Invoice | Pilot deposit, no monthly fee | Per-transaction card fee, no monthly cost - [Stripe pricing](https://stripe.com/pricing) |
 
 You can ship the entire pipeline for under $100/month if you use Apollo's free tier and skip Sales Navigator.
 
@@ -71,7 +71,7 @@ Pull 100-150 raw rows. Strip three categories before sending:
 
 - Anyone whose company size or title is one band off your ICP. The 80% match is not the 100% match.
 - Anyone whose LinkedIn shows no posting activity in the last 12 months. They will not see your DM.
-- Anyone whose company you have a competing product alignment with (you sell to their competitor). A B2B services founder who came to us in March 2026 lost a great lead this way and had to wait two quarters for the lead's company to pivot before reaching out again.
+- Anyone whose company you have a competing product alignment with (you sell to their competitor). A B2B services founder lost a great lead this way and had to wait two quarters for the lead's company to pivot before reaching out again.
 
 You should be left with 30-50 clean names. Hold the bottom 20 for a later batch and send the top 30 in the first batch.
 

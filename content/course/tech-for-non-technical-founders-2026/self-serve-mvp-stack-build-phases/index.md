@@ -30,7 +30,7 @@ related_posts: false
 
 > **Module 4 · Lesson 4.4 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Companion pair: read [Lesson 4.3 · Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) first** - it covers why these three tools, what each one does, the 12 rules, communities, and the AI critic block. The phases below reference those concepts without re-explaining them.
+> **Companion pair: read [Lesson 4.3 · Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) first** - it covers why these three tools, what each one does, the 3 pre-flight rules, and the AI critic block; the full 12 build rules and founder communities are in the [stack-and-tools reference](/course/tech-for-non-technical-founders-2026/reference/stack-tools-full/). The phases below reference those concepts without re-explaining them.
 >
 > **Input:** the self-serve stack set up plus the pre-flight rules from [Lesson 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + your one-page brief from Module 3
 >
@@ -72,7 +72,7 @@ The MVP is "done" only when ALL five lights are green. Without them, you either 
 4. **Zero red errors in the browser Console** on the sign-up + checkout flow (press F12, click through like a user, check the Console tab).
 5. **A weekly demo recording exists** for the last week of build (a Loom or screen-record proving the cadence held to the end).
 
-Advance to Module 5 only when all five are green. If any are red, fix the red light first - the [full build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/) has the exact check for each.
+Advance to Module 5 only when all five are green. If any are red, fix the red light first before you move on - a red gate hands Module 5 an MVP real users cannot touch.
 
 ## Ship the shed, not the skyscraper
 
