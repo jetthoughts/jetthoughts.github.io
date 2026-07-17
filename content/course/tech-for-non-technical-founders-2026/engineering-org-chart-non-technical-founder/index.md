@@ -40,7 +40,9 @@ course_nav: false
 
 **Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
 
-Marina, a FinTech founder we picked up in Q1 2026, had been billing **$44K a month for "a team of four."** Three months in, her new fractional CTO asked who had written the last twelve pull requests. The answer: one senior reviewer who signed off most weeks, two mid-level shippers, and three rotating juniors paid by a sub-contracted shop she had never heard of. She had been paying senior rates for code one junior wrote and another junior reviewed.
+Marina, a FinTech founder I worked with in Q1 2026, had been billing **$44K a month for "a team of four."** Three months in, her new fractional CTO asked who had written the last twelve pull requests. The answer: one senior reviewer who signed off most weeks, two mid-level shippers, and three rotating juniors paid by a sub-contracted shop she had never heard of. She had been paying senior rates for code one junior wrote and another junior reviewed.
+
+*Illustrative composite based on patterns from real founder builds, not a single client story.*
 
 The agency had not lied, exactly. The kickoff deck just did not say which names touched the repo on which weeks, who reviewed whose pull requests, or who picked up the phone at 2am when production was down.
 

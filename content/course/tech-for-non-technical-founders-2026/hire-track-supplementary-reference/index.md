@@ -260,7 +260,7 @@ Send the polite-no email the same evening, not Friday: "Thank you for the time. 
 
 ## Reading the SOW
 
-*"Vendor shall be deemed to have delivered a milestone upon deployment to the Client-accessible staging environment."* That is the single most expensive sentence a founder will sign this year. It moves the trigger for a milestone payment from "the feature works for users" to "the agency pushed code to a URL." A SaaS founder we worked with in Q1 2026 had $78K of milestone invoices clear under that one line before her fractional CTO opened the staging URL and watched it 500 on the second click.
+*"Vendor shall be deemed to have delivered a milestone upon deployment to the Client-accessible staging environment."* That is the single most expensive sentence a founder will sign this year. It moves the trigger for a milestone payment from "the feature works for users" to "the agency pushed code to a URL." In early 2026, one SaaS founder had $78K of milestone invoices clear under that one line before her fractional CTO opened the staging URL and watched it 500 on the second click.
 
 Her general counsel had cleared the SOW the night before signing. He had flagged liability and the IP assignment, fixed both, and called it done. The milestone-acceptance clause sat three pages later and he had skimmed it. Generalist lawyers cover the catastrophic clauses. Agency templates leak money through the operational ones in between.
 

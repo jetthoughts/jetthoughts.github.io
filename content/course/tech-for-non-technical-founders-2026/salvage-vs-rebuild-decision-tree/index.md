@@ -32,7 +32,9 @@ By Sunday morning you will know whether to KEEP your codebase, FREEZE it for 60 
 
 ## Why this exists
 
-A founder we picked up in late 2025 had spent **$95K and fourteen months** with the previous shop on a marketplace app for home-service contractors. The codebase was about **38,000 lines of Ruby on Rails** with **0% test coverage**, no staging environment, and an auth flow that had been reimplemented three times in three years. None of the three had been deleted. Two were still wired into different login URLs.
+A founder I worked with in late 2025 had spent **$95K and fourteen months** with the previous shop on a marketplace app for home-service contractors. The codebase was about **38,000 lines of Ruby on Rails** with **0% test coverage**, no staging environment, and an auth flow that had been reimplemented three times in three years. None of the three had been deleted. Two were still wired into different login URLs.
+
+*Illustrative composite based on patterns from real founder builds, not a single client story.*
 
 She had spent nine weeks asking three different consultants whether to keep, rewrite, or do something in between. Every consultant gave a different answer. Every answer cost $1,500 to $4,000. She ran the six questions below in one Friday afternoon, scored a 2 out of 6, and had a paid 30-minute review confirming a 30/60/90 day REBUILD-the-core-paths plan by the following Wednesday. The paralysis was the expensive part. The decision was 30 minutes.
 

@@ -52,7 +52,7 @@ Keep this card open during the call or print it: what to listen for (Pass) sits 
 
 ## Why this exists
 
-A pre-seed B2B SaaS founder we picked up in Q3 2026 had been three weeks into onboarding her second LATAM hire when the first signs landed. The candidate had cleared the standard 60-minute behavioural interview - tools named, Cursor seat shown, GitHub profile reviewed. By week three he had merged 4 PRs. Her fractional CTO opened the first one and found a `gem 'stripe_connect_v2_helper'` line that did not exist on Rubygems; the second PR had a hardcoded JWT secret in `config/secrets.yml`; the third was a copy-paste of the first with the variable names changed. The contractor was replaced inside ten days, but the cost of the on-ramp, the onboarding hours, and the rollback was real. The 7-question version of the interview below would have caught the gap on the original 30-minute call. The fail signals were there in Q3, Q4, and Q7. Nobody asked them.
+A standard 60-minute behavioural interview clears the candidate who names the right tools, shows a Cursor seat, and has a tidy GitHub profile - and none of that tells you whether the code holds up. You find out three weeks in, once the hire has merged a few PRs and someone reads them: a `gem 'stripe_connect_v2_helper'` line that does not exist on Rubygems, a hardcoded JWT secret in `config/secrets.yml`, a third PR that is the first one copy-pasted with the variable names changed. Replacing the contractor takes ten days; the onboarding hours and the rollback are already spent. The 7-question version below catches that gap on the first 30-minute call, where Q3, Q4, and Q7 are the questions that surface it.
 
 ## How to use this
 

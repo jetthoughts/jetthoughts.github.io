@@ -40,9 +40,7 @@ course_nav: false
 
 The agency's pitch deck said the weekly retainer was $14,200. The pitch deck also said "every PR ships with an `Assisted-by:` footer naming the human reviewer; AI direction is a first-class part of our delivery."
 
-A founder we picked up in Q3 2026 asked the senior engineer on the discovery call to open one such PR on screenshare. The engineer scrolled GitHub for forty seconds, then promised to email the link "by end of day." The link never arrived.
-
-Two hours of internal back-and-forth later the agency owner emailed back: the `Assisted-by:` line had been added to the pitch deck the week before the call. No PR in the repo carried it. The five questions below would have surfaced the gap inside the first 20 minutes, before any contract conversation, and saved the founder a $56,800 four-week commitment she would have unwound a month in.
+Ask the senior engineer on that call to open one such PR on screenshare, and the deck meets the repo. A team that ships the footer opens a real PR in seconds. One that only added the line to the deck the week before scrolls GitHub for forty seconds, then offers to email the link "by end of day" - and the link never arrives. The claim lives in the pitch deck; no commit in the repo carries it. At $14,200 a week, that gap is a $56,800 four-week commitment resting on a delivery practice that does not exist. The five questions below surface it inside the first 20 minutes, before any contract conversation.
 
 ### The 5-question scorecard at a glance
 

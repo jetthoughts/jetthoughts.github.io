@@ -32,7 +32,7 @@ related_posts: false
 > **Course glossary** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course.
 > Vocabulary the rest of the course assumes you have. Skim once; come back when you hit a word you nodded at.
 
-One founder nodded at the same word for fourteen months. Every Friday her contractor's PM said "we're refactoring the order flow" and she wrote it down. When her new fractional CTO finally read the repo, he came back with one line: nothing new had shipped to production since month three. **"Refactoring" had cost her $51K and a year of runway.** She nodded because the word gave her nothing to push back on - which is exactly what the questions in this glossary hand you.
+One word can hide a year in which nothing shipped. "Refactoring" means changing the structure of code without changing what the user sees, so when an agency uses it to narrate week after week, there is nothing user-visible to check it against, and "we're refactoring the order flow" can cover a stretch where production never moved. That is how the word runs up a bill: **$51K and a year of runway** can pass before a new fractional CTO reads the repo and finds nothing new since month three. The glossary below hands you, for each word, the one question the padded version cannot answer.
 
 Non-technical founders often learn engineering vocabulary under pressure, mid-meeting, with a bill on the table. The agency throws a word, the founder nods, the meeting moves on. By the time the founder figures out what the word actually meant, the next sprint is already approved.
 
@@ -52,7 +52,7 @@ Changing the structure of code without changing what it does for the user. Marti
 
 > **🔍 BS-detection question:** *"Show me the user-facing thing that worked yesterday and still works today, but is now built on the new code."* A real refactor leaves at least one feature exactly as the user saw it. "We are still wiring it back up" means somebody is rewriting on your dime and calling it a tidy-up.
 
-In Rails terms, a real refactor splits a 400-line `OrdersController` into three smaller controllers while the Stripe webhook still hits the same URL and the test suite stays green. JT caps each refactor commit at [three lines of production code](/blog/refactor-step-tdd-three-line-discipline-ruby/) for that reason. A SaaS founder we picked up in Q4 2025 was billed $9K for a "checkout refactor" that turned out to be one merge commit of 3,800 lines, no tests, and the Stripe webhook secret hard-coded into the controller. The checkout broke on stage at her board demo.
+In Rails terms, a real refactor splits a 400-line `OrdersController` into three smaller controllers while the Stripe webhook still hits the same URL and the test suite stays green. JT caps each refactor commit at [three lines of production code](/blog/refactor-step-tdd-three-line-discipline-ruby/) for that reason. A SaaS founder was billed $9K in Q4 2025 for a "checkout refactor" that turned out to be one merge commit of 3,800 lines, no tests, and the Stripe webhook secret hard-coded into the controller. The checkout broke on stage at her board demo.
 
 ![Refactoring real versus fake: one messy 400-line OrdersController either splits into small Cart, Checkout, and Receipt controllers behind the same Stripe webhook with tests still green (real refactor), or gets rewritten into a 3,800-line v2 with the Stripe secret hard-coded that broke checkout at the board demo and cost a $9K invoice (fake refactor)](refactor-check.svg)
 
@@ -73,7 +73,7 @@ Listen for which side of this table your team lands on:
 | "Doing Docker work" (week 2 in a row, no clickable thing) | Something on the server broke, they cannot reproduce locally, they are fighting their own setup |
 | "We are containerizing the architecture" | Resume-driven plumbing - ask which feature ships sooner because of it |
 
-An EdTech founder we picked up paid $7K for "a Docker upgrade" across six weeks; the git history showed one commit changing a single line in `Dockerfile`. The real work was a Postgres migration that had broken staging the day the upgrade ticket opened. They labelled the sprint "Docker work" because it sounded more like infrastructure than "we shipped a bug."
+An EdTech founder paid $7K for "a Docker upgrade" across six weeks; the git history showed one commit changing a single line in `Dockerfile`. The real work was a Postgres migration that had broken staging the day the upgrade ticket opened. They labelled the sprint "Docker work" because it sounded more like infrastructure than "we shipped a bug."
 
 ### 💸 3. Tech debt
 

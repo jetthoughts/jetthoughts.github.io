@@ -32,7 +32,7 @@ By the time you finish your second coffee you will know whether the 47-page Stat
 
 ## Why this exists
 
-The SOW that cost $78K to misread ran to 47 pages, and a general counsel had cleared it the night before. A SaaS founder we worked with in late Q1 2026 signed on the counsel's sign-off: he had flagged the liability cap and the IP assignment, fixed both, and called it done. The founder missed the **milestone acceptance clause**: it defined "delivered" as "deployed to staging" rather than "passing the acceptance criteria with production traffic." Three months in, she had paid for **four of five milestones**, every one sitting on a staging URL that 500'd on the second click. By the time she renegotiated, the agency had invoiced **$78K** for milestones nobody could use, and her runway had compressed from twelve months to seven. Most agencies are not malicious about SOW language; they start from a template that survived their last twelve clients, and the template has a few clauses that quietly favor the agency.
+One clause in a 47-page SOW decides whether you can withhold payment for work that does not run: the **milestone acceptance clause**. When it defines "delivered" as "deployed to staging" rather than "passing the acceptance criteria with production traffic," every milestone clears the moment code reaches a staging URL - even one that 500s on the second click. A general counsel reading the SOW the night before tends to catch the liability cap and the IP assignment and skim right past this line. Miss it, and three months in you can have paid for **four of five milestones** and been invoiced **$78K** for work nobody can use, with runway compressed from twelve months to seven. Most agencies are not malicious about SOW language; they start from a template that survived their last twelve clients, and the template has a few clauses that quietly favor the agency.
 
 ## How to use it
 
@@ -102,7 +102,7 @@ The single highest-stakes clause in the SOW: who owns the code while you're payi
 |---|---|
 | "Vendor shall manage all third-party services required for the Project, including hosting, third-party APIs, and AI/ML tooling. Costs shall be passed through to Client at cost plus a 15% administrative fee." | (1) Every third-party account (AWS, GitHub, Stripe, Anthropic, OpenAI) is created under your company email from Day 1, paid by your company card; the agency gets IAM sub-access. (2) Pass-through costs capped per month with a Founder-approval gate above the ceiling. (3) AI token usage itemized monthly per developer and per project. Strike the 15% admin fee on infrastructure. |
 
-**Flag:** Pass-through costs with no cap, no monthly attribution, and no language about who owns the third-party accounts. Watch AI token costs (Cursor seats, Anthropic API, OpenAI API) - the [5-question AI script](/course/tech-for-non-technical-founders-2026/agency-ai-five-questions/) caught a $4,800 OpenAI line that surprised one founder we worked with.
+**Flag:** Pass-through costs with no cap, no monthly attribution, and no language about who owns the third-party accounts. Watch AI token costs (Cursor seats, Anthropic API, OpenAI API) - the [5-question AI script](/course/tech-for-non-technical-founders-2026/agency-ai-five-questions/) caught a $4,800 OpenAI line that surprised one founder.
 
 ### Clause 6 - Termination triggers
 

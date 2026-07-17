@@ -42,7 +42,7 @@ Template companion to [the Mom Test synthesis section](/course/tech-for-non-tech
 
 ## Why this exists
 
-A solo founder I spoke with last month sent 47 cold DMs to Twitter strangers complaining about their CRM. Twelve answered. Of the twelve, two said yes and ten said honest, paragraph-long no's. She had spent six weekends collecting transcripts in a folder labeled `notes`. When she opened the folder to write the problem statement, she realized she had never named the persona, never tallied the strong signals, and never written the why-now. The ten no's looked alike in her memory and contradicted each other on the page. Half of them were not even the persona she was building for. The synthesis took 90 minutes the first time she sat down to do it - and the decision the page produced was *pivot to a different ICP* rather than *build*. She kept the calendar she would have spent prompting Lovable and ran 5 sharper interviews instead. This template is the page she filled in.
+Send 47 cold DMs to strangers venting about their CRM and twelve answer - two yes, ten honest paragraph-long no's - and you have something that feels like validation. Left as transcripts in a folder labeled `notes`, they lie to you. The ten no's blur together in memory and contradict each other on the page; half of them turn out not to be the persona you are building for. Sit down to name the persona, tally the strong signals, and write the why-now, and the 90-minute synthesis can hand you a *pivot to a different ICP* where memory was telling you *build*. That is a weekend you would have spent prompting Lovable, spent instead on five sharper interviews. This template is the page you fill in to force it.
 
 ## How to use this
 

@@ -36,7 +36,7 @@ Template companion to the [Hire Track Supplementary Reference](/course/tech-for-
 
 ## Why this exists
 
-The Monday you decide to hire, the map matters more than the job post. A B2B SaaS founder we worked with in Q2 2026 had been paying $185K base for a San Francisco Senior pitched as "AI-native." The Senior wrote good code but had never opened Cursor for a real ship and treated every contractor PR like he was reviewing a junior. After four months she was shipping one feature every three weeks. Her fractional CTO walked her through this map on a Tuesday. By Friday she had a Coimbatore Rails engineer at $42 an hour on a 3-day take-home test, and by the following sprint she had two features shipped and a hallucinated Stripe webhook caught in PR review. Replacement cost: 22% of the original burn. The map was not on her desk in February. It is on yours now.
+The Monday you decide to hire, the map matters more than the job post. Pay $185K base for a San Francisco Senior pitched as "AI-native" and you can still ship one feature every three weeks - a strong coder who has never opened Cursor for a real ship and reviews every contractor PR as if it were a junior's. Walk the same map instead and the arithmetic changes: a Coimbatore Rails engineer at $42 an hour clears a 3-day take-home, ships two features by the following sprint, and has a hallucinated Stripe webhook caught in PR review before it merges - a replacement that costs 22% of the original burn. That map was not on one founder's desk in February. It is on yours now.
 
 ## How to use this
 

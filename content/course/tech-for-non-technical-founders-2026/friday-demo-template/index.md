@@ -34,7 +34,7 @@ By Friday of week 4 you will know whether your dev team is shipping or stalling.
 
 ## Why this exists
 
-A founder we worked with last year was four months and $54K into a six-week MVP. Jira showed nine tickets closed that week. When she asked the team to demo the checkout flow, the lead developer said "it's behind a feature flag, give us until Monday." Monday came: the flag had been on for three weeks. The page threw a 500 on every click. None of the three developers had opened it themselves.
+Jira closing nine tickets in a week tells you cards moved, not that anything works. A feature can sit "behind a feature flag" for three weeks, throw a 500 on every click, and still show up as closed tickets and a confident status update - four months and $54K into a six-week MVP - because no one on the call has to open it in front of you. The seven questions above force that open. Asked in order, they turn a status call into four demos and four staging URLs you click yourself: what shipped, what the user can now do, where it is live for you, and what got cut to make room.
 
 ## How to use it
 

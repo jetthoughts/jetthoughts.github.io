@@ -57,7 +57,7 @@ related_posts: false
 
 ## Why this exists
 
-A solo founder I spoke with last quarter had a validated problem statement and a Lovable subscription. She typed her problem statement into the Lovable prompt and asked it to "build the simplest version of this." Twelve hours later she had a working web app with a settings page, a billing dashboard, three integrations, and a pile of toggles she didn't ask for. She spent the next three weeks deciding which parts to delete. When she opened a second project with a one-page brief - the same problem, but now with a no-go list - Lovable shipped the smallest end-to-end thing in 90 minutes. The page she filled in between the two attempts was the difference. The agent fills blanks with reasonable defaults; the brief is your only way to forbid the defaults.
+An AI app builder fills every blank you leave with a reasonable default - that is the whole reason a one-page brief exists. Feed it a bare problem statement and "build the simplest version of this," and twelve hours later you are deleting a settings page, a billing dashboard, three integrations, and a pile of toggles you never asked for, and that deleting runs three weeks. Give the same builder a one-page brief with a no-go list, and it ships the smallest end-to-end thing in 90 minutes. The page you fill in between those two attempts is the difference: the agent fills blanks with defaults, and the brief is your only way to forbid them.
 
 ## How to use this
 

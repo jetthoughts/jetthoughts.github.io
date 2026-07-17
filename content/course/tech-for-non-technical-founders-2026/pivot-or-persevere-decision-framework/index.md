@@ -45,7 +45,9 @@ related_posts: false
 
 ## The Course Is a Loop, Not an Escalator
 
-A founder I rode shotgun with last quarter - a fintech founder named D. - hit the cold-outbound stage (Lesson 5.7) with a conversion rate of 0.6%. He had sent 287 personal emails to CFOs of 50-200-person companies over 14 days, with 11 replies and 0 paid pilots. His instinct, the same instinct every founder gets here, was to push forward into salvage-or-rebuild territory and start managing the build harder.
+A fintech founder I worked with last quarter - call him D. - hit the cold-outbound stage (Lesson 5.7) with a conversion rate of 0.6%. He had sent 287 personal emails to CFOs of 50-200-person companies over 14 days, with 11 replies and 0 paid pilots. His instinct, the same instinct every founder gets here, was to push forward into salvage-or-rebuild territory and start managing the build harder.
+
+*Illustrative composite based on patterns from real founder builds, not a single client story.*
 
 That was the wrong move. The right move was backwards. The 0.6% conversion rate was telling him the messaging he had built off his [Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) sentence was not landing on the segment he had picked. Three things could be wrong: the customer (segment), the need (problem), or the channel (outbound vs PLG - product-led growth, where users find and buy the product self-serve). Pushing forward into rebuild mode would have made him a better operator of a misaligned hypothesis. Going back to [Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) with a pivot decision made him a better founder.
 

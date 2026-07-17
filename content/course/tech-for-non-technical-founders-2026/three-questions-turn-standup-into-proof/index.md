@@ -37,7 +37,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 
 **Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
 
-*"Yesterday I worked on the order flow. Today I am continuing the order flow."* A SaaS founder we picked up in Q2 2026 had heard that sentence on her **$25K/month project for nine weeks** before she clocked that two of her three developers were reading out the same Jira ticket name every day. **47 standups in.** Nobody had flagged that the ticket had not moved columns in seven weeks. She had been on every call, taken notes, and nodded.
+*"Yesterday I worked on the order flow. Today I am continuing the order flow."* That sentence can repeat every morning for nine weeks on a **$25K/month** project before anyone clocks that two of the three developers are reading out the same Jira ticket name each day. **Forty-seven standups in**, the ticket has not moved columns in seven weeks - and a founder can sit on every one of those calls, take notes, and nod, because the standup format never asks the question that would catch it. The three questions below are that question, split into three.
 
 > **The 3 questions - printable index-card format:**
 >
@@ -81,7 +81,7 @@ The question catches **rubber-stamp reviews** and **bus factor of one** - the fa
 
 **Fail.** "We trust each other's work." / "The CI caught the issues." / "Everyone reviews their own when the others are busy." First answer means there is no review. Second answer is a fundamental misunderstanding of what CI does - CI catches syntax errors and broken tests, not security gaps, not architectural drift, not the migration that locks the orders table at peak hours. Third answer is the [bus factor of one](/blog/dev-shop-red-flags-checklist/) JT's red-flags checklist warns about.
 
-**Follow-up if fail.** Ask: "How many reviewers approved code on my repo last week, and what is the average time from PR open to merge?" The first number wants to be at least two distinct humans, ideally three. The second number wants to be under two days. A FinTech founder we picked up in Q1 2026 ran this check and found one reviewer had approved 38 of the last 41 PRs, with an average time-to-merge of nineteen minutes. That is not review; that is a rubber stamp with a typing delay.
+**Follow-up if fail.** Ask: "How many reviewers approved code on my repo last week, and what is the average time from PR open to merge?" The first number wants to be at least two distinct humans, ideally three. The second number wants to be under two days. A FinTech founder ran this check in Q1 2026 and found one reviewer had approved 38 of the last 41 PRs, with an average time-to-merge of nineteen minutes. That is not review; that is a rubber stamp with a typing delay.
 
 ### Q3: "What did we cut, descope, or postpone yesterday to ship that?"
 
