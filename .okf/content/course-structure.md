@@ -4,7 +4,7 @@ title: Course structure (From Idea to First Paying Customer)
 description: 5-module linear spine defined in data/course_sequence.yaml, plus a non-linear Going Further set, per-module Mia walkthroughs, and template chapters.
 resource: content/course/tech-for-non-technical-founders-2026/
 tags: [course, structure, hugo]
-timestamp: 2026-07-13T00:00:00Z
+timestamp: 2026-07-17T00:00:00Z
 ---
 
 # The spine
@@ -26,8 +26,11 @@ file. Never hardcode exact chapter counts in prose; use near numbers
 - **Mia walkthroughs**: one per module (`module-N-walkthrough-mia`).
 - **Templates**: worksheet/checklist/script chapters with
   [generated PDFs](/build/pdf-templates.md).
-- **Reference deep-dives** under `reference/` (hypothesis-sprint-full,
-  smoke-test-channel-guide, stripe-price-test-full).
+- **Reference deep-dives** under `reference/` (M1: hypothesis-sprint-full,
+  smoke-test-channel-guide, stripe-price-test-full; M2: mom-test-full,
+  persona-rehearsal-full, find-10-people-full (shared by 2.3+2.4),
+  prototype-build-full). Lessons point at them via a `Deeper reference:`
+  footer line; the module landing cards link them as "Optional reference".
 - **Floating glossary**: five-tech-words-stop-nodding-at, reachable from every
   chapter, not in the linear order.
 
