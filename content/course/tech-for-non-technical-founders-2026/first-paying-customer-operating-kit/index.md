@@ -48,7 +48,7 @@ Module 5 of this course runs seven lessons (5.1-5.7): the Sean Ellis 40% test, c
 
 ### 1. 50-name network list template (Google Sheets)
 
-The fill-in spreadsheet from [Lesson 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Six columns - Name, Company, Role, Bucket, Relationship strength, Last contact date - plus four progress columns for tracking replies and demos. Pre-sorted by bucket: 5 champions on top, then 10 hot, 15 warm, 20 cold. Three blank rows in each bucket for week-2 additions.
+The fill-in spreadsheet from [Lesson 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Six columns - Name, Company, Role, Bucket, Relationship strength, Last contact date - plus four progress columns for tracking replies and demos. Pre-sorted by bucket: 5 champions on top, then 10 hot, 15 warm, 20 cold. Three blank rows in each bucket for week-2 additions. Seed it before hunting LinkedIn: your 2.4 interviewees, 1.4 waitlist signups, and 2.3 30-name list are the champions and hot rows already.
 
 In practice: turns a vague "I should reach out to people" instinct into 50 named messages going out by Friday EOD.
 
@@ -136,7 +136,7 @@ The kit runs Monday-to-Friday for the four weeks of Module 5. The sequence:
 
 **Week 1 (must-have segment).** Run the Sean Ellis survey (template 5). Compute per-segment must-have %. Pick your target segment.
 
-**Week 2 (personal network).** Fill the 50-name template (template 1). Record Loom. Send champion + hot Monday, warm Tuesday, cold Thursday.
+**Week 2 (personal network).** Fill the 50-name template (template 1), seeding it with your 2.4 interviewees, 1.4 waitlist signups, and 2.3 30-name list first. Record Loom. Send champion + hot Monday, warm Tuesday, cold Thursday.
 
 **Week 3 (paid pilot).** Send DPA (template 3) and Stripe link (template 4) to 1-2 warm leads who agreed to demos. Bank first deposit.
 

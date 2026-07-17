@@ -63,7 +63,7 @@ A solo founder I spoke with last quarter had a validated problem statement and a
 
 Block 90 minutes on a single morning. Print the template (or copy the markdown block below into a Notion doc). Bring your filled-in [validated problem statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/). Open Lovable, Cursor, or your contractor's kickoff doc in a second tab. You will not type into the second tab yet. The page first.
 
-Section 1 copies directly from your validated problem statement, word for word. Sections 2 through 5 you write from scratch. Hard cap: 90 minutes total. If you spill, the persona is too broad or you are designing too much.
+Section 1 copies directly from your validated problem statement, word for word. Section 2 pulls from your Module 2 interview notes and [2.6 prototype-session notes](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) - the moment-of-use detail is already there; don't invent it. Sections 3 through 5 you write from scratch. Hard cap: 90 minutes total. If you spill, the persona is too broad or you are designing too much.
 
 After the page is filled, read it aloud to one peer over a 20-minute call. Ask them: "If you built this in a week using Lovable, what would you build that isn't on my no-go list?" Their first answer is your missing no-go item.
 

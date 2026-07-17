@@ -134,6 +134,8 @@ Pull three numbers:
 2. **Per-segment must-have %.** Slice by job title and by company size. One segment will almost always be higher than the average. That is your must-have segment.
 3. **Three verbatim Q2-Q3 quotes from your must-have segment.** Paste them into a Google Doc. Those quotes are your persona description, your ad copy, and your cold-email subject line for the next chapter.
 
+Lay this segment beside the persona in your [Lesson 2.5 validated problem statement](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). If real usage points at a different segment than the interviews did, that is a real correction - write the delta down; don't keep two personas.
+
 ![Three segment cards showing what the blended 28% average hides: B2B Marketers at 64% must-have clear the 40% line, Solo Founders at 14% and Agencies at 0% do not](segment-isolation.svg)
 
 ### Step 5 - The decision tree

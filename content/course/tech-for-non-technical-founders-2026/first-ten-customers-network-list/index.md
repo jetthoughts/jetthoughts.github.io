@@ -71,6 +71,7 @@ Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship stre
 
 > **Build:**
 >
+> 0. **Your champions and hot buckets are already built - drop them in by name first:** your [2.4 interviewees](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (ten people who spent 30 minutes describing the pain), your [1.4 smoke-test waitlist signups](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (they raised a hand for this exact product), and your [2.3 30-name list](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) (each with the exact line they wrote about the problem). Then use the steps below to top up to 50.
 > 1. Open LinkedIn. Filter 1st-degree connections by your must-have segment criteria.
 > 2. Export the filtered list with [LinkedIn's data export](https://www.linkedin.com/help/linkedin/answer/a566336) (free, takes 24 hours; you can use yesterday's).
 > 3. Cross-reference your phone contacts, email inbox, and last three jobs' Slack workspaces if you still have access.
