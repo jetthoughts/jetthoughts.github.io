@@ -73,6 +73,8 @@ This chapter is the companion polish step between Ch 2.1 (where you learned the 
 
 Think of it as a trial attorney prepping cross-examination with a paralegal standing in as the witness. The paralegal can't give testimony, but the rehearsal finds the question that falls apart under any pressure at all.
 
+There's a second reason to rehearse: interviewing is a skill you build by doing it and getting feedback, not by reading about it. Teresa Torres' teams practice with mock interviews and a feedback loop before the questions ever reach a real customer - the clumsy run is where the learning happens ([Product Talk](https://www.producttalk.org/learning-to-interview-continuously/)). A Claude persona gives you that same loop without spending one of your ten real interviewees on a question you could have caught at your desk.
+
 ## Build 3 ICP personas in Claude
 
 You don't need a sophisticated prompt setup. You need to describe the person you're trying to interview in terms Claude can work with, and then ask Claude to stay in character while you practice questions.
@@ -241,6 +243,7 @@ The rehearsal does not validate the hypothesis. It validates that your questions
 - Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the canonical reference for past-anchored interview questions.
 - Y Combinator, [How to Talk to Users](https://www.ycombinator.com/library) - YC's short essay on why this conversation has to happen.
 - Anthropic, [Claude prompting guide](https://docs.anthropic.com/claude/docs/intro-to-prompting) - persona setup, role-play, and breaking character cleanly.
+- Teresa Torres, [Learning to Interview Continuously (Product Talk)](https://www.producttalk.org/learning-to-interview-continuously/) - why mock interviews with feedback are how interviewers get good before the questions reach a real customer.
 
 > **Done:** you have a sharpened question list (5-7 solid questions) and an Objection Tracker with the top 3 objections to listen for.
 >

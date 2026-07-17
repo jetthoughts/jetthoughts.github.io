@@ -114,6 +114,14 @@ That three-message shape is the whole engine - in the runs we've coached it reli
 
 The same 3-email pattern works as LinkedIn DMs. Subject becomes the connection-request note. Skip Day 7 on LinkedIn (too aggressive in DM context).
 
+### Why people say yes (or don't)
+
+Teresa Torres names three reasons a stranger turns down an interview ask, and the sequence above already answers two of them ([Product Talk](https://www.producttalk.org/customer-interviews/)):
+
+- **Limited time** - ask for 20 minutes, not "a quick chat" or an open-ended hour. The Day-0 template already does this.
+- **Unclear benefit** - say what they get out of it. Talking about their own expertise to someone actually listening is the benefit; the opener leans on it.
+- **Fear of the unknown** - people hesitate when they can't picture how the time will be spent. This is the one most first drafts skip. Tell them exactly what happens with one added sentence: *"We'll walk through what happened the last time you [problem] - no prep, no pitch."* Drop it into the Day-0 message right after the ask.
+
 ### Volume targets
 
 Work through the 30-name list first, then extend it with Part 1's second-degree searches until 10 interviews are booked - plan on 50-100 messages total. Target a reply rate of 20% or higher. Under 10% means your opener is too generic or you're in the wrong channel - rewrite the Day-0 message before sending more. 10-20% is workable: let the sequence run and tighten the subject line on the next batch. Of the replies who say yes, expect roughly half or more to actually show. If your show rate drops below 50%, add a 24-hour reminder message and confirm the meeting time the day before.

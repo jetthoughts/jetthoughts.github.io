@@ -60,6 +60,15 @@ sequence:
     title: "2.1 · The Mom Test: Ask About the Past, Not the Future"
     module: "Chapter 2.1"
     goal: "Learn the 5-question Mom Test technique and build your draft interview question list."
+    # 2.2 is an optional rehearsal detour (FEEDBACK.md item 6) - mirror the
+    # 5.1-around-5.2 branch pattern so the core path doesn't funnel through it.
+    branches:
+      - slug: find-10-people-where-to-look
+        direction: "Core path →"
+        title: "2.3 · Find 10 People: Where to Look"
+      - slug: ai-persona-pre-validation-mom-test-prep
+        direction: "Optional rehearsal →"
+        title: "2.2 · Sharpen Your Question List with AI Personas (skip if your list already reads past-tense and specific)"
 
   - slug: ai-persona-pre-validation-mom-test-prep
     title: "2.2 · Sharpen Your Question List with AI Personas"

@@ -61,13 +61,13 @@ This page covers steps 1-3. Part 2 covers steps 4-5. One time-box before you sta
 
 ## Before you start: write three sentences
 
-Write three sentences in your own words before you open Reddit. Without them, every interview answer sounds encouraging and you can't tell which ones confirm the bet and which ones kill it:
+These are not new homework - they are your 1.1 Founding Hypothesis blanks, unpacked for people-hunting. Open your `Founding Hypothesis` doc, copy the sentence in, and expand two of its blanks into full sentences (the third - Business - is the one genuinely new line). Without them, every interview answer sounds encouraging and you can't tell which ones confirm the bet and which ones kill it:
 
 | Profile | What to write | Bad vs Good |
 |---------|---------------|------------|
-| **Customer (one sentence)** | *Who* is this person, in real-world detail? Role, company size, the moment in their week when the pain happens. | Bad: "small-business owners"<br/>Good: "a 12-person law-firm office manager on Friday afternoon trying to invoice ten clients before Quickbooks logs her out" |
-| **Business (one sentence)** | What kind of business are *you* building? B2B SaaS, B2B services, B2C app, marketplace. Free or paid. Self-serve or sales-led. | Bad: "a SaaS tool"<br/>Good: "B2B SaaS, self-serve, $29-49/month annual billing" |
-| **Solution (one sentence)** | Not a feature list - a sentence about the change. You won't pitch this in calls, but you need it written down to know which conversations confirm or kill it. | Bad: "a tool that automates invoicing"<br/>Good: "I think a one-click invoice export to Stripe and Wave saves the office manager 90 minutes every Friday" |
+| **Customer (one sentence)** | Your `[customer]` blank, expanded: *who* is this person in real-world detail - role, company size, the moment in their week when the pain happens. | Bad: "small-business owners"<br/>Good: "a 12-person law-firm office manager on Friday afternoon trying to invoice ten clients before Quickbooks logs her out" |
+| **Business (one sentence)** | The one line your hypothesis doesn't carry: what kind of business are *you* building? B2B SaaS, B2B services, B2C app, marketplace. Free or paid. Self-serve or sales-led. | Bad: "a SaaS tool"<br/>Good: "B2B SaaS, self-serve, $29-49/month annual billing" |
+| **Solution (one sentence)** | Your `[approach]` blank, rewritten as the change it makes. You won't pitch this in calls, but you need it written down to know which conversations confirm or kill it. | Bad: "a tool that automates invoicing"<br/>Good: "I think a one-click invoice export to Stripe and Wave saves the office manager 90 minutes every Friday" |
 
 If you can't write all three on a single napkin, do that first. The deeper version of these three lines is the [one-page Product Brief in Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/).
 

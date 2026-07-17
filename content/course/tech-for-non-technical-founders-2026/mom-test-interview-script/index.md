@@ -62,7 +62,7 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 **Fail signal:** Vague generality. "Yeah, I usually struggle with reporting." "It happens all the time." No date. No mechanic. The interviewee never opens an actual memory.
 
-**Follow-up:** "Walk me through that specific Tuesday again. What did you do first?"
+**Follow-up (excavate):** "Walk me through that specific Tuesday again. What did you do first?" The first answer is always thin, so keep going: "Where were you? What happened right before? What did you do next?" Then stop and let the silence sit - people fill it with the detail they were about to skip.
 
 ### Q2 - The cost question
 

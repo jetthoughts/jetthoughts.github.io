@@ -28,7 +28,7 @@ related_posts: false
 >
 > **Input:** the live landing page URL you published in [Lesson 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
 >
-> **Output:** Clarity + GA4 installed on your landing page - ready for channel selection and pixel install in Lesson 1.4
+> **Output:** you can watch a recording of any visit and read the three numbers that judge your page (views, clicks, signups) - the evidence 1.4's go / iterate / kill call runs on
 >
 > **Progress:** M1 · 3 of 5 · Results so far: hypothesis sentence + live landing page
 
@@ -45,9 +45,9 @@ A **tracking snippet** is a small block of code (HTML or JavaScript) that you co
 You need two things regardless of which ad channel you pick in [Lesson 1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/):
 
 - **[Microsoft Clarity](https://clarity.microsoft.com/)** - session recordings and heatmaps. Not needed to read conversion numbers, but essential when conversion is low and you need to see *why*. Watch ten replays after 300 visits; the pattern usually appears within the first three. Diagnose a <3% rate here before you rewrite your hypothesis.
-- **[Google Analytics 4](https://analytics.google.com/)** - your analytics foundation. Tracks page views, clicks, and form submits. Create a GA4 property at [analytics.google.com](https://analytics.google.com/), copy the tracking snippet, paste it into your builder's head-tag field. If you later pick Google Ads in 1.4, GA4 links directly to it - no separate pixel needed.
+- **[Google Analytics 4](https://analytics.google.com/)** - your analytics foundation. Tracks page views, clicks, and form submits. Create a GA4 property at [analytics.google.com](https://analytics.google.com/), copy the tracking snippet, paste it into your builder's head-tag field.
 
-**Your channel-specific pixel** (Meta Pixel, LinkedIn Insight Tag, or Reddit Pixel) gets installed in Lesson 1.4 after you pick your channel - same process (copy snippet, paste in head-tag), under one minute.
+(Lesson 1.4 adds one more snippet for the ad platform you pick there - same 60-second copy-paste process, nothing to prepare now.)
 
 All snippets paste into the **head-tag field** - the hidden block at the top of every webpage. Page builders label this "head," "custom code," or "tracking scripts" (Mixo: Settings → Custom Code → Header).
 

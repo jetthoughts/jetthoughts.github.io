@@ -98,7 +98,7 @@ Score each lens 1-5. Be honest - this is for you, not an investor deck.
 
 **If this fails: your sentence scores below 14 or has a lens at 1.**
 - **Why:** a blank is still a category, not a specific noun.
-- **Fix:** find a verbatim quote from a real person complaining about this problem ([Reddit](https://www.reddit.com/), [G2 reviews](https://www.g2.com/), or a conversation you had). Replace your `[problem]` blank with their exact words. If you don't have a quote yet, leave the `[problem]` blank as a placeholder and complete 1.2 - you'll fill it after Module 2 interviews.
+- **Fix:** find a verbatim quote from a real person complaining about this problem ([Reddit](https://www.reddit.com/), [G2 reviews](https://www.g2.com/), or a conversation you had). The fastest way: the copy-paste research prompt in [Lesson 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) hands Perplexity your `[customer]` and `[problem]` blanks and returns 5-8 sourced quotes. Replace your `[problem]` blank with their exact words. If you don't have a quote yet, leave the `[problem]` blank as a placeholder and complete 1.2 - you'll fill it after Module 2 interviews.
 
 **If this fails: every blank is specific but the sentence still sounds generic.**
 - **Why:** you're writing in market-research language instead of customer language.

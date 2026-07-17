@@ -82,6 +82,8 @@ The script runs in order. Each question funnels the interviewee deeper into a re
 - **Fail**: vague generality. *"Yeah I usually struggle with reporting."* No date, no mechanic - autopilot polite mode.
 - **Follow-up**: *"Walk me through that specific Tuesday again. What did you do first?"*
 
+**The first answer is always thin - excavate.** Ask "tell me about the last time" and most people answer at the surface: *"Oh, last night after dinner."* Your job is to help them re-enter the moment and walk it forward - *"Where were you? What happened right before? What did you do next?"* - until the actual sequence comes out. Then stop talking. Leave a few seconds of silence after you ask; the pause is uncomfortable enough that people fill it with the detail they were about to skip. (Teresa Torres calls this story excavation - see [Further reading](#further-reading).)
+
 ### Q2: "What did that **cost** you - in time, money, or sanity?"
 
 - **What it catches**: whether the pain is quantifiable. Separates "this is annoying" from "I'd pay $200/month to make this stop."
@@ -206,6 +208,8 @@ After all 10 interviews, return to [Mom Test Synthesis: Build, Pivot, or Kill](/
 - Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library) - YC's distilled rules for the same conversation, free and 20 minutes.
 - Steve Blank, [The Four Steps to the Epiphany - Customer Discovery](https://steveblank.com/category/customer-development/) - the original customer-development methodology Fitzpatrick's script sits inside.
 - Teresa Torres, [Continuous Discovery Habits](https://www.producttalk.org/continuous-discovery-habits/) - what these interviews become after the validation phase, when you run them weekly forever.
+- Teresa Torres, [Customer Interviews (Product Talk)](https://www.producttalk.org/customer-interviews/) - the story-based method behind Q1: collect specific past stories and excavate them, because people overestimate what they typically do.
+- Teresa Torres, [Learning to Interview Continuously (Product Talk)](https://www.producttalk.org/learning-to-interview-continuously/) - how interviewers actually get good: anchor to specific moments, redirect general claims to concrete activities, and leave space for silence.
 
 > **Done:** you understand the 5 Mom Test questions, can spot hypothetical phrasing, and have a draft question list (5-8 questions) anchored in past behavior.
 >

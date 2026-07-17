@@ -115,6 +115,11 @@ The [Validated Problem Statement Template](/course/tech-for-non-technical-founde
 
 Writing the one-page statement is the validation step. Ten transcripts in a folder don't count - until you've scored them, counted the strong signals, and written down what the pattern says, you have raw material and a hypothesis, not a validated problem.
 
+## Further reading
+
+- Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the past-behavior technique behind every transcript you're scoring here.
+- Teresa Torres, [Customer Interviews (Product Talk)](https://www.producttalk.org/customer-interviews/) - the deeper-practice version of our scoring sheet: an interview snapshot, one page per interview, capturing a memorable verbatim quote, the quick context facts, and the unmet needs that surfaced.
+
 ---
 
 > **Done:** you have a build / pivot / kill decision backed by your strong-signal count, and a one-page validated problem statement.
