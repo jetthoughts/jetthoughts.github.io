@@ -1,7 +1,7 @@
 ---
 title: "3.1 · The One-Page Product Brief (Vibe PRD)"
 aliases: ["/blog/one-page-product-brief-vibe-prd/"]
-description: "The five sections your Lovable prompt or hired junior actually needs. Free Chapter 3.1 of the From Idea to First Paying Customer course."
+description: "The five sections your Lovable prompt or hired junior actually needs. Free Lesson 3.1 of the From Idea to First Paying Customer course."
 date: 2026-05-18
 draft: false
 course_chapter: true
@@ -23,7 +23,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "3.1 · The One-Page Product Brief (Vibe PRD)"
-  og_description: "The five sections your Lovable prompt or hired junior actually needs. Free Chapter 3.1 of the From Idea to First Paying Customer course."
+  og_description: "The five sections your Lovable prompt or hired junior actually needs. Free Lesson 3.1 of the From Idea to First Paying Customer course."
 cover_image_alt: "JetThoughts cover showing a one-page product brief on a notebook with five labeled sections and a side-by-side bad vs good example"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/"
 related_posts: false
@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 3 · Lesson 3.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a one-page validated problem statement (from [Ch 2.5 · Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), after running interviews in Ch 2.3 + 2.4) + verbatim "describe in one sentence" vocabulary (from your [Ch 2.6 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/))
+> **Input:** a one-page validated problem statement (from [Lesson 2.5 · Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), after running interviews in Lesson 2.3 + 2.4) + verbatim "describe in one sentence" vocabulary (from your [Lesson 2.6 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/))
 >
 > **Output:** a one-page Product Brief (Vibe PRD) you can hand to [Lovable](https://lovable.dev) (an AI app builder that turns a plain-English prompt into a working web app) or a hired team
 >
@@ -62,7 +62,7 @@ The simplest reliable order is *problem → user → build → metric → no-go*
 
 > **How long is each section?** Each of the 5 sections is 2-4 sentences in plain English. Section 5 (no-go list) is 5-8 bullet lines. Total brief ≤ 250 words on one side of A4 at 11pt. If you spill past 250 words, the persona is too broad or the pain is too vague - revise the section that ran longest first.
 
-### Section 1 - The problem (lifted from your Chapter 2.5 synthesis)
+### Section 1 - The problem (lifted from your Lesson 2.5 synthesis)
 
 What goes in it: one paragraph copied directly from your [validated problem statement](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Named persona, named industry, dated 10-call sample, one verbatim quote, one quantified cost, and the one-line why-now from your problem statement.
 
@@ -166,12 +166,12 @@ The [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-te
 
 Skipping the brief and going straight into prompting is the most common way a non-technical founder ends up deep into a working MVP they realise they did not actually want - and into the [salvage-or-rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) that follows. One focused sitting on this page tonight is what spares you that detour.
 
-## What comes next (Chapter 3.2, then Chapter 4.1)
+## What comes next (Lesson 3.2, then Lesson 4.1)
 
-You now have two validated artifacts: a one-page problem statement (from your Chapter 2.5 synthesis) and a one-page Vibe PRD (from this chapter). Two more steps before Lovable touches your brief:
+You now have two validated artifacts: a one-page problem statement (from your Lesson 2.5 synthesis) and a one-page Vibe PRD (from this chapter). Two more steps before Lovable touches your brief:
 
-1. **[Chapter 3.2 - Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)** - stress-test Section 3 ("what you're building") by rewriting feature nouns as outcome-shaped job stories. This is the quality gate on the brief you just wrote, not a separate writing exercise.
-2. **[Chapter 4.1 - Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)** - a 5-question decision tree that routes you to one of 4 build paths (validate without code / self-serve / fractional CTO / hire). The default for a non-technical founder is self-serve ([Chapter 4.3 · Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + [4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)), but only after the decision gate confirms it's right for YOUR runway and YOUR problem. Chapter 4.1 explicitly requires the outcome-shaped brief from Chapter 3.2 as its input.
+1. **[Lesson 3.2 - Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)** - stress-test Section 3 ("what you're building") by rewriting feature nouns as outcome-shaped job stories. This is the quality gate on the brief you just wrote, not a separate writing exercise.
+2. **[Lesson 4.1 - Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)** - a 5-question decision tree that routes you to one of 4 build paths (validate without code / self-serve / fractional CTO / hire). The default for a non-technical founder is self-serve ([Lesson 4.3 · Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + [4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)), but only after the decision gate confirms it's right for YOUR runway and YOUR problem. Lesson 4.1 explicitly requires the outcome-shaped brief from Lesson 3.2 as its input.
 
 A Vibe PRD is what's left when you remove everything an AI agent or a hired junior cannot act on by tomorrow morning.
 
@@ -187,7 +187,7 @@ A Vibe PRD is what's left when you remove everything an AI agent or a hired juni
 
 > **Done:** all 5 sections of your one-page brief are filled in, Section 1 is copied verbatim from your validated problem statement, and you have read the brief aloud to one peer.
 >
-> **You have now:** a validated problem statement (2.5) + prototype vocabulary (2.6) + the one-page Product Brief (Vibe PRD). Save it as `Product Brief - [date]` in your `Founder OS` folder - Chapter 4.1 reads it to decide your build path, and Chapter 4.3 reads it to prompt Lovable.
+> **You have now:** a validated problem statement (2.5) + prototype vocabulary (2.6) + the one-page Product Brief (Vibe PRD). Save it as `Product Brief - [date]` in your `Founder OS` folder - Lesson 4.1 reads it to decide your build path, and Lesson 4.3 reads it to prompt Lovable.
 >
 > **Next:** [3.2 · Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) - the quality gate on the brief you just wrote.
 > **If blocked:** If you can't fill Section 3 (what you're building) in one paragraph, your scope is too big. Pick the single smallest workflow one persona can complete end-to-end and cut everything else to the no-go list.

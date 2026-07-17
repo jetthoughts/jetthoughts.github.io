@@ -48,13 +48,13 @@ Module 5 of this course runs seven lessons (5.1-5.7): the Sean Ellis 40% test, c
 
 ### 1. 50-name network list template (Google Sheets)
 
-The fill-in spreadsheet from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Six columns - Name, Company, Role, Bucket, Relationship strength, Last contact date - plus four progress columns for tracking replies and demos. Pre-sorted by bucket: 5 champions on top, then 10 hot, 15 warm, 20 cold. Three blank rows in each bucket for week-2 additions.
+The fill-in spreadsheet from [Lesson 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Six columns - Name, Company, Role, Bucket, Relationship strength, Last contact date - plus four progress columns for tracking replies and demos. Pre-sorted by bucket: 5 champions on top, then 10 hot, 15 warm, 20 cold. Three blank rows in each bucket for week-2 additions.
 
 In practice: turns a vague "I should reach out to people" instinct into 50 named messages going out by Friday EOD.
 
 ### 2. Cold-email scripts (3 variants)
 
-The verbatim 4-line scripts from [Chapter 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Three sector-specific versions:
+The verbatim 4-line scripts from [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Three sector-specific versions:
 
 - **B2B SaaS Rails context** - the script for founders who built on Rails and are selling to operators in the same space.
 - **B2B services** - for fractional CTOs, consultancies, and managed-services founders who sell time rather than license.
@@ -66,7 +66,7 @@ Why it matters: removes the "what do I say in the email" friction so you spend 6
 
 ### 3. Design Partner Agreement template (one-page LOI + paid pilot)
 
-The one-page DPA from [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Six sections plus signature block. Plain English, mutual-edit document, no lawyer required for v1. Comes in three formats: Google Docs (default), PDF (for customers who want to print), DocuSign-import (for customers who want to e-sign with audit trail).
+The one-page DPA from [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Six sections plus signature block. Plain English, mutual-edit document, no lawyer required for v1. Comes in three formats: Google Docs (default), PDF (for customers who want to print), DocuSign-import (for customers who want to e-sign with audit trail).
 
 Two annotated examples: a $1,500 B2B SaaS pilot DPA and a $5,000 B2B services pilot DPA, both based on real (anonymized) 2026 founder deals.
 
@@ -137,7 +137,7 @@ What it does: 15-minute payment-link setup so the first deposit arrives Wednesda
 
 ### 5. Sean Ellis 40% survey template (5 questions, Typeform-import ready)
 
-The exact 5 questions from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/), in three importable formats:
+The exact 5 questions from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/), in three importable formats:
 
 - **Typeform JSON** - drag-and-drop into a new Typeform.
 - **Tally.so spec** - paste into Tally's import flow.
@@ -149,7 +149,7 @@ Result: 24 hours from "I should run the test" to a scored result you can act on.
 
 ### 6. The "First 10 Customers" Google Sheet tracker
 
-The Google Sheet from [Chapter 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Pre-filled columns - Name, Company, Bucket, Loom sent, Reply, Demo, DPA sent, Deposit - with color-coded bucket pills (champion / hot / warm / cold) and date stamps on every progress column. Filters: "Replied this week," "Demo this week," "Pilot landed this month."
+The Google Sheet from [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Pre-filled columns - Name, Company, Bucket, Loom sent, Reply, Demo, DPA sent, Deposit - with color-coded bucket pills (champion / hot / warm / cold) and date stamps on every progress column. Filters: "Replied this week," "Demo this week," "Pilot landed this month."
 
 ![Sample row from the First 10 Customers Google Sheet tracker](kit-sample-row.svg)
 
@@ -188,7 +188,7 @@ By Friday of week 4, you should have: a segment-isolated persona doc, 50 sent me
 
 ## What this kit is not
 
-The kit is not a substitute for a sales course or a CRM. It will not teach the conversational mechanics of objection-handling, so if you have never run a customer call, read [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) and run 10 user calls first. It will not track touch counts past the first 30 customers the way HubSpot, Pipedrive, or Salesforce does - past 30, the Sheet breaks and you graduate to a real CRM. It also does not replace the must-have-segment test from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - if your overall must-have % from template 5 is under 25%, your pipeline will fill, the demos will go fine, and conversions will stall at the deposit conversation. Run the 40% test first; download the kit second.
+The kit is not a substitute for a sales course or a CRM. It will not teach the conversational mechanics of objection-handling, so if you have never run a customer call, read [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) and run 10 user calls first. It will not track touch counts past the first 30 customers the way HubSpot, Pipedrive, or Salesforce does - past 30, the Sheet breaks and you graduate to a real CRM. It also does not replace the must-have-segment test from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - if your overall must-have % from template 5 is under 25%, your pipeline will fill, the demos will go fine, and conversions will stall at the deposit conversation. Run the 40% test first; download the kit second.
 
 ## How to get the kit
 

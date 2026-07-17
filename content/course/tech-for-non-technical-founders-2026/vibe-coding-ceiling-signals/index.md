@@ -1,7 +1,7 @@
 ---
 title: "4.5 · Vibe Coding Done Right: 5 Ceiling Signals"
 aliases: ["/blog/vibe-coding-ceiling-signals/"]
-description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Chapter 4.5 of the course."
+description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Lesson 4.5 of the course."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -24,7 +24,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "4.5 · Vibe Coding Done Right: 5 Ceiling Signals"
-  og_description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Chapter 4.5 of the course."
+  og_description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Lesson 4.5 of the course."
 cover_image_alt: "JetThoughts cover with three hand-drawn buildings - a small shed, a two-story house, and a tall skyscraper - and a sticky note reading Two ceiling signals = graduate."
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/"
 related_posts: false
@@ -32,7 +32,7 @@ related_posts: false
 
 > **Module 4 · Lesson 4.5 · [OPTIONAL] - a monthly review reference** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live MVP on the self-serve stack (from [Chapter 4.3 · Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + [4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/))
+> **Input:** a live MVP on the self-serve stack (from [Lesson 4.3 · Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + [4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/))
 >
 > **Output:** a yes/no decision on whether to graduate to Module 5 (First Paying Customer) or hire or stay self-serve
 >
@@ -52,7 +52,7 @@ The ceiling is visible now, but it was visible two months earlier too. That's wh
 
 Once your build goes live, run this 5-signal check monthly. Each signal that fires earlier saves rebuilds later. This is a proactive monitoring habit, not a post-mortem - the goal is to catch the ceiling before you slam into it.
 
-> **This chapter is a monthly review reference, not an action-today chapter.** Your only action today: open your calendar and add a recurring monthly block titled "Vibe-coding 5-signal check." The first run is once the live MVP is up (Ch 4.3-4.4); until then, the chapter sits on the shelf. If you haven't shipped a live MVP yet, bookmark this and come back the moment you have real users clicking around. The morning scene above is what the ceiling looks like when it actually arrives.
+> **This chapter is a monthly review reference, not an action-today chapter.** Your only action today: open your calendar and add a recurring monthly block titled "Vibe-coding 5-signal check." The first run is once the live MVP is up (Lesson 4.3-4.4); until then, the chapter sits on the shelf. If you haven't shipped a live MVP yet, bookmark this and come back the moment you have real users clicking around. The morning scene above is what the ceiling looks like when it actually arrives.
 
 ## Who this 5-signal check is for
 
@@ -150,7 +150,7 @@ The auditor needs a person to ask "show me how you decommission a leaver's acces
 
 Vanta, [Drata](https://drata.com), and [Secureframe](https://secureframe.com) automate the SOC2 paperwork; the engineering work underneath them needs a real architect, not a Lovable rebuild. Budget: 8 to 16 weeks to first-time SOC2 readiness, plus ongoing process work.
 
-> **What to bring to Vanta / Drata / Secureframe onboarding from your existing artifacts.** Your [Ch 4.2 ownership audit](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) third-party-API-keys section is your starting vendor inventory (Lovable, Supabase, Stripe, Resend, OpenAI, etc.). Your one-page brief Section 1 (problem, named persona, data flow) feeds the data-flow diagram. Without these two inputs ready, the first onboarding call burns on collecting basics the audit could have surfaced in 15 minutes.
+> **What to bring to Vanta / Drata / Secureframe onboarding from your existing artifacts.** Your [Lesson 4.2 ownership audit](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) third-party-API-keys section is your starting vendor inventory (Lovable, Supabase, Stripe, Resend, OpenAI, etc.). Your one-page brief Section 1 (problem, named persona, data flow) feeds the data-flow diagram. Without these two inputs ready, the first onboarding call burns on collecting basics the audit could have surfaced in 15 minutes.
 
 **What to say to the customer this week** (when they ask for SOC2 / HIPAA BAA / PCI before you can deliver it): respond within 48 hours with a 3-sentence email - do not ghost. Use this template:
 
@@ -218,15 +218,15 @@ Three actions. The first is tonight.
 
 ## Artifacts you carry out of Module 4
 
-After finishing Ch 4.1-4.5, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
+After finishing Lesson 4.1-4.5, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
 
 | Artifact | Where it goes next |
 |---|---|
-| **Build-path decision** (validate / self-serve / fractional CTO / hire - chosen and dated, from Ch 4.1) | Module 5 outbound posture. The build path determines whether you sell a live MVP (self-serve, hire) or a Carrd + Stripe pre-sale (validate path), which decides the Ch 5.2-5.7 scripts you use. |
-| **Ownership audit results** (12-item checklist - GitHub org owner, repo collaborators, branch protection, AWS root, billing, IAM, DB credentials, secrets store, backups, domain, DNS, third-party keys - all on your company email, from Ch 4.2) | Module 5 contract foundations. The Ch 5.6 Design Partner Agreement assumes you own the production environment. If ownership is split, fix that before sending any DPA. |
-| **Shipped MVP** (live URL + first 4-6 user accounts if self-serve, OR live URL + contractor weekly demo cadence if hired, from Ch 4.3-4.4) | Ch 5.1 must-have test denominator. The 40% test needs 10-30 users who actually touched the MVP; the first 4-6 are the starting cohort. |
-| **Monthly ceiling-signal scorecard** (the 5 signals from Ch 4.5, first run once the live MVP is up) | Recurring monthly check from live launch onward. The scorecard is the early-warning system that decides whether you stay self-serve or graduate while you sell. |
-| **Output for Module 5: 4-6 active users as the starting cohort + a path to 10+ via Ch 2.3-2.4 outreach** (from Ch 4.3-4.4 onboarding) | Ch 5.1 Sean Ellis 40% test input. 4-6 is the directional starting cohort - Ch 5.1's "Under-10 respondents" sidebar reads that as MAYBE, not a verdict. Re-engage your Ch 2.3-2.4 interview leads as Ch 5.1 invites to get above 10 for a confident reading. Their Q2-Q3 verbatims become the persona language for Ch 5.7 outbound. |
+| **Build-path decision** (validate / self-serve / fractional CTO / hire - chosen and dated, from Lesson 4.1) | Module 5 outbound posture. The build path determines whether you sell a live MVP (self-serve, hire) or a Carrd + Stripe pre-sale (validate path), which decides the Lesson 5.2-5.7 scripts you use. |
+| **Ownership audit results** (12-item checklist - GitHub org owner, repo collaborators, branch protection, AWS root, billing, IAM, DB credentials, secrets store, backups, domain, DNS, third-party keys - all on your company email, from Lesson 4.2) | Module 5 contract foundations. The Lesson 5.6 Design Partner Agreement assumes you own the production environment. If ownership is split, fix that before sending any DPA. |
+| **Shipped MVP** (live URL + first 4-6 user accounts if self-serve, OR live URL + contractor weekly demo cadence if hired, from Lesson 4.3-4.4) | Lesson 5.1 must-have test denominator. The 40% test needs 10-30 users who actually touched the MVP; the first 4-6 are the starting cohort. |
+| **Monthly ceiling-signal scorecard** (the 5 signals from Lesson 4.5, first run once the live MVP is up) | Recurring monthly check from live launch onward. The scorecard is the early-warning system that decides whether you stay self-serve or graduate while you sell. |
+| **Output for Module 5: 4-6 active users as the starting cohort + a path to 10+ via Lesson 2.3-2.4 outreach** (from Lesson 4.3-4.4 onboarding) | Lesson 5.1 Sean Ellis 40% test input. 4-6 is the directional starting cohort - Lesson 5.1's "Under-10 respondents" sidebar reads that as MAYBE, not a verdict. Re-engage your Lesson 2.3-2.4 interview leads as Lesson 5.1 invites to get above 10 for a confident reading. Their Q2-Q3 verbatims become the persona language for Lesson 5.7 outbound. |
 
 Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Either hire a team if you have the runway, or bridge with a Fractional CTO until you do - both beat watching the codebase get worse.
 
@@ -248,7 +248,7 @@ Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Eit
 >
 > **If blocked:** if 2+ signals are red but you are not sure whether to hire, book one free Fractional CTO call. The first call is usually free and the diagnosis alone is worth the hour.
 
-> **Module 4 closes here.** Before opening Module 5, you should have: (1) a build-path decision from the Ch 4.1 tree (self-serve / fractional CTO / hire), (2) a Day-1 ownership audit passed (Ch 4.2 - GitHub + AWS + domain all in your name), (3) a live MVP at a real URL with 5 ICP users tested + 5 green lights lit (Ch 4.4), and (4) a monthly 5-signal ceiling check on the calendar (this chapter). All four in your `Founder OS` folder. Missing one? Go back - Module 5 invites your Module 2 interviewees + smoke-test email list to your URL; if there's no URL, there's no Module 5.
+> **Module 4 closes here.** Before opening Module 5, you should have: (1) a build-path decision from the Lesson 4.1 tree (self-serve / fractional CTO / hire), (2) a Day-1 ownership audit passed (Lesson 4.2 - GitHub + AWS + domain all in your name), (3) a live MVP at a real URL with 5 ICP users tested + 5 green lights lit (Lesson 4.4), and (4) a monthly 5-signal ceiling check on the calendar (this chapter). All four in your `Founder OS` folder. Missing one? Go back - Module 5 invites your Module 2 interviewees + smoke-test email list to your URL; if there's no URL, there's no Module 5.
 
 ---
 

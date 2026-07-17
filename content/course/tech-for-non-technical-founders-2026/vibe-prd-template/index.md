@@ -9,11 +9,11 @@ author: "JetThoughts Team"
 slug: vibe-prd-template
 course_nav_prev:
   slug: one-page-product-brief-vibe-prd
-  module: "Chapter 3.1"
+  module: "Lesson 3.1"
   title: "3.1 · The One-Page Product Brief (Vibe PRD)"
 course_nav_next:
   slug: stop-specifying-features-start-outcomes
-  module: "Chapter 3.2"
+  module: "Lesson 3.2"
   title: "3.2 · Quality-check your brief: features to outcomes"
 keywords:
   - vibe prd template
@@ -38,9 +38,9 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Template companion to [Chapter 3.1 - The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Template companion to [Lesson 3.1 - The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** your validated problem statement (from the [Chapter 2.5 synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)) + the "describe in one sentence" vocabulary from your [Chapter 2.6 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
+> **Input:** your validated problem statement (from the [Lesson 2.5 synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)) + the "describe in one sentence" vocabulary from your [Lesson 2.6 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
 >
 > **Output:** a filled one-page Product Brief (Vibe PRD), written in one 90-minute sitting, ready to hand to your AI agent or contractor tomorrow
 
@@ -71,7 +71,7 @@ Total time budget: 90 minutes to write, 1 hour to read aloud + revise, 0 minutes
 
 ## The template - copy and paste
 
-Use the markdown blocks below directly in Notion, Lovable's prompt window, or a Word doc. The [SVG of the page](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) is embedded in the Chapter 3.1 post for printing.
+Use the markdown blocks below directly in Notion, Lovable's prompt window, or a Word doc. The [SVG of the page](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) is embedded in the Lesson 3.1 post for printing.
 
 Copy section by section, or grab the whole template from the top.
 
@@ -272,7 +272,7 @@ The good version is one paragraph, verb-led. It names the input (paste CSV), the
 
 > Good: *"Not in v1: multi-currency support. Multi-Stripe-account support. Automatic recurring sync. A settings page. A billing dashboard. User roles and permissions. A marketing site beyond the signup page. Mobile responsive design beyond 'works on a 1024px screen.' We will revisit each of these after the Section 4 metric is hit."*
 
-The good no-go list names eight things a competent agent or junior might add. Each is concrete. The bad version is blank, which is how the EdTech founder who opens [Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) ended up with 17 settings toggles in version one - 12 with no backend, 2 that crashed. Her team had read the brief as a wish list and added everything she didn't forbid.
+The good no-go list names eight things a competent agent or junior might add. Each is concrete. The bad version is blank, which is how the EdTech founder who opens [Lesson 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) ended up with 17 settings toggles in version one - 12 with no backend, 2 that crashed. Her team had read the brief as a wish list and added everything she didn't forbid.
 
 ## What to do after
 
@@ -282,7 +282,7 @@ The good no-go list names eight things a competent agent or junior might add. Ea
 
 Skip the no-go list and you ship a working demo of a product nobody asked for. Six weeks later you're posting a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about an MVP you can't extend. The page is cheap. The build round you save by writing it is the expensive thing you avoid.
 
-If you want the doctrine in long form, the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between one-page brief and traditional PRD, and the case for paying for a live cohort vs writing the page yourself for free.
+If you want the doctrine in long form, the [Lesson 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between one-page brief and traditional PRD, and the case for paying for a live cohort vs writing the page yourself for free.
 
 ---
 

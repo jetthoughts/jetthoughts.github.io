@@ -48,7 +48,7 @@ If you're running your first ever smoke test, use [the email-only version](/cour
 
 ## The setup (15 minutes)
 
-The Stripe Payment Link mechanic is the same as in [Chapter 1.5 (Price Your Hypothesis on the Smoke-Test Page)](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - read that for the full setup walkthrough. The variant-specific changes:
+The Stripe Payment Link mechanic is the same as in [Lesson 1.5 (Price Your Hypothesis on the Smoke-Test Page)](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - read that for the full setup walkthrough. The variant-specific changes:
 
 1. **CTA copy.** Replace "Get on the waitlist" with **"Reserve your spot ($1 today, refundable if we don't ship by [date])"**. The "$1 today" + "refundable" combination is the load-bearing phrase.
 2. **Thank-you page.** "You're reserved. We'll email you when we ship. Your $1 is fully refundable - just reply to this email and ask."
@@ -78,17 +78,17 @@ Based on Pieter Levels' [70-product startups portfolio](https://levels.io/startu
 
 The fake-pre-sale signal tells you the headline + price + audience combination converts at the moment of decision. It does NOT tell you:
 
-- Whether the product will retain users once shipped (that's [Chapter 5.1, the Sean Ellis 40% test](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)).
+- Whether the product will retain users once shipped (that's [Lesson 5.1, the Sean Ellis 40% test](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)).
 - Whether the unit economics work at full price (that's a follow-on test post-launch).
-- Whether the people who pre-ordered will actually use the product (that's interview-stage research - [Chapter 2.1, The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)).
+- Whether the people who pre-ordered will actually use the product (that's interview-stage research - [Lesson 2.1, The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)).
 
 The pre-sale is the strongest pre-build demand signal you can buy. It is not validation that you have a business.
 
 ## Further reading
 
 - Pieter Levels, [the 70-product startups portfolio](https://levels.io/startups/) - this technique in operation across a decade of indie launches.
-- [Chapter 1.4 (the standard smoke test - run-it phase)](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) and [Chapter 1.2 (build the page)](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) - the email-only version this page upgrades.
-- [Chapter 1.5 (Price Your Hypothesis on the Smoke-Test Page)](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - the full Stripe Payment Link setup walkthrough.
+- [Lesson 1.4 (the standard smoke test - run-it phase)](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) and [Lesson 1.2 (build the page)](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) - the email-only version this page upgrades.
+- [Lesson 1.5 (Price Your Hypothesis on the Smoke-Test Page)](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - the full Stripe Payment Link setup walkthrough.
 
 ---
 

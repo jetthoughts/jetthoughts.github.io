@@ -1,7 +1,7 @@
 ---
 title: "How This Course Works"
 aliases: ["/blog/how-this-course-works/"]
-description: "The complete journey from idea to first paying customer at a glance: 5 modules, 20+ chapters, 6 artifacts, and the AI tools that accelerate each stage."
+description: "The complete journey from idea to first paying customer at a glance: 5 modules, 20+ lessons, 6 artifacts, and the AI tools that accelerate each stage."
 date: 2026-06-04
 draft: false
 course_chapter: true
@@ -22,7 +22,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "How This Course Works - From Idea to First Paying Customer"
-  og_description: "The complete journey at a glance: 5 modules, 20+ chapters, 6 artifacts, and the AI tools that accelerate each stage."
+  og_description: "The complete journey at a glance: 5 modules, 20+ lessons, 6 artifacts, and the AI tools that accelerate each stage."
 cover_image_alt: "Course overview diagram showing the 5-module journey from idea to first paying customer"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/how-this-course-works/"
 related_posts: false
@@ -30,7 +30,7 @@ related_posts: false
 
 > **Chapter 0** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **What this is:** the map - {{< course-stat modules >}} modules, {{< course-stat chapters >}} chapters, {{< course-stat artifacts >}} artifacts, each module's output feeding the next module's input, from rough idea to signed paid pilot. Read it once before Module 1, come back when you need to see where you are.
+> **What this is:** the map - {{< course-stat modules >}} modules, {{< course-stat chapters >}} lessons, {{< course-stat artifacts >}} artifacts, each module's output feeding the next module's input, from rough idea to signed paid pilot. Read it once before Module 1, come back when you need to see where you are.
 
 This course takes a non-technical founder from a rough idea to a signed paid pilot - on evenings and weekends, with or without engineers. Each chapter names the tool it uses and what the tool costs at that step; most tools have a free tier. Below: the flow, the tools, the artifacts you'll compile, and how the stages connect.
 
@@ -42,7 +42,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 ![5-module pipeline: Module 1 Hypothesis & Smoke Test → Module 2 Validate the Problem → Module 3 Design from Evidence → Module 4 Build It Yourself → Module 5 First Paying Customer](module-pipeline.svg)
 
-{{< course-stat modules >}} modules. {{< course-stat chapters >}} chapters. {{< course-stat artifacts >}} artifacts you can hand to an investor or a co-founder. Each module's output is the next module's input.
+{{< course-stat modules >}} modules. {{< course-stat chapters >}} lessons. {{< course-stat artifacts >}} artifacts you can hand to an investor or a co-founder. Each module's output is the next module's input.
 
 ---
 
@@ -70,7 +70,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 ### <span style="color:#0891b2">Module 2 - Validate the Problem</span>
 **You have:** a Founding Hypothesis.
 **You walk away with:** 10 Mom Test interview transcripts + a validated problem statement + a clickable prototype tested with 5 people.
-**Time:** ~3-5 weeks full-time - booking the 10 interviews is the long pole (Ch 2.3 plans 2-4 calendar weeks for that step alone).
+**Time:** ~3-5 weeks full-time - booking the 10 interviews is the long pole (Lesson 2.3 plans 2-4 calendar weeks for that step alone).
 
 | Step | What You Do | Key Tool |
 |---|---|---|
@@ -199,7 +199,7 @@ If you fail a gate, the system requires you to go back, not forward. Failing at 
 
 ## Start Here
 
-Read the overview once. Then start at [Module 1, Chapter 1.1: Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Come back to this page when you need to see where you are in the full route.
+Read the overview once. Then start at [Module 1, Lesson 1.1: Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Come back to this page when you need to see where you are in the full route.
 
 If you're not at the idea stage - you're already building, or paying someone to build for you - see the [Already started building?](/course/tech-for-non-technical-founders-2026/#already-started-building) section on the course landing page.
 

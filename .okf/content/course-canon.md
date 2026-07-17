@@ -31,3 +31,10 @@ timestamp: 2026-07-13T00:00:00Z
 
 Structural home: [course structure](/content/course-structure.md).
 Enforcement: [banned-strings ratchet](/content/banned-strings-ratchet.md).
+
+# Terminology
+
+Numbered core units are **Lessons** ("Lesson N.N", never "Chapter N.N" or
+"Ch N.N" - enforced by the lesson-number validator; decided in the 30.03
+format spec). "Chapters" remains only for the non-numbered long-form set
+(Going Further, continuation, supplementary references).

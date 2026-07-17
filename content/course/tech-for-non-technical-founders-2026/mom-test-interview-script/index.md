@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-Template companion to the [Chapter 2.1 post](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). Open on a second screen during the call. Read questions verbatim.
+Template companion to the [Lesson 2.1 post](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). Open on a second screen during the call. Read questions verbatim.
 
 *Five questions that get the interviewee to tell you what they actually did, not what sounds polite.*
 
@@ -149,7 +149,7 @@ The bad closing pulls them back into hypothetical preference and gives you a use
 - **Score the call 1-10 within 5 minutes of hanging up.** Use Q4 plus your emotional-flag count. Write the score in your notes file. If you score later you will round up.
 - **If 7 or more of your 10 interviews scored 7+:** the problem is validated - BUILD. Move to the [Mom Test Synthesis page](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) and the Validated Problem Statement template.
 - **If 4 to 6 scored 7+:** PIVOT - re-evaluate the ICP, the problem framing, or the question wording, then book 5 sharper interviews with the narrower group. Sometimes Q1 is wrong (the problem context is too narrow) - retry with broader phrasing first.
-- **If fewer than 4 scored 7+:** KILL - the problem is too weak for this customer. Return to Ch 1.1 with a different [customer] or [problem] blank.
+- **If fewer than 4 scored 7+:** KILL - the problem is too weak for this customer. Return to Lesson 1.1 with a different [customer] or [problem] blank.
 - **Forward the transcripts to your founder friend one step ahead, or a peer from any founder community** before you make the build/no-build call. Two readers catch what one misses.
 
 Skip this script and run "feature interest" interviews ("would you pay for X?") and you almost always launch into silence. The Mom Test isn't a productivity trick. It is the only way to keep your interviewees from being polite while you are gambling six months of your life on what they said.

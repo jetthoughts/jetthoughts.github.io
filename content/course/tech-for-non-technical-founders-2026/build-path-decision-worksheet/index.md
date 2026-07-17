@@ -38,7 +38,7 @@ She showed us the contract on a Tuesday. By Friday we had walked her through the
 
 ## How to use this
 
-Friday afternoon, alone, 30 minutes, before coffee runs out. Bring three documents: your filled-in [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) from Chapter 2.5, your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1, and a current bank statement showing months of runway. Pen on paper. Phone in another room.
+Friday afternoon, alone, 30 minutes, before coffee runs out. Bring three documents: your filled-in [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) from Lesson 2.5, your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Lesson 3.1, and a current bank statement showing months of runway. Pen on paper. Phone in another room.
 
 Answer the five questions in order. Each one is factual, not aspirational. "Number of Mom Test interviews" is a count on your call log, not a vibe. "Months of runway" is cash on hand divided by monthly burn, not a guess. The matrix at the bottom routes you to Path 1, 2, 3, or 4 based on the five answers.
 
@@ -61,7 +61,7 @@ Total time budget: 30 minutes alone, 20 minutes with one peer, 0 minutes second-
   <ul class="ws-checks">
     <li>10 or more Mom Test interviews complete</li>
     <li>Strong past-behavior signal in at least 7 of 10</li>
-    <li>Smoke test cleared the 6%+ "Promising" band - the share of visitors who left their email on your test page (Module 1, Chapter 1.4)</li>
+    <li>Smoke test cleared the 6%+ "Promising" band - the share of visitors who left their email on your test page (Module 1, Lesson 1.4)</li>
     <li>Prototype test: 4 of 5 people reached the right screen without you coaching them (from Module 2)</li>
   </ul>
   <p>LinkedIn likes do not count. "They said they would buy" does not count. What people DID counts - the sign-ups on the smoke test and the prototype run, not what they said they would do. Pre-orders and paid pilots come later (Module 5); you do not need them to answer YES here.</p>
@@ -102,7 +102,7 @@ Total time budget: 30 minutes alone, 20 minutes with one peer, 0 minutes second-
 <div class="ws-card">
   <p>Money you can commit for at least 6 months:</p>
   <div class="ws-verdict ws-verdict-stack"><span class="ws-opt"><span class="ws-box"></span> $0 to $400/wk of your own time</span><span class="ws-opt"><span class="ws-box"></span> $1,600 to $4,000/mo (Fractional CTO band)</span><span class="ws-opt"><span class="ws-box"></span> $5,000 to $30,000/mo (small team band)</span><span class="ws-opt"><span class="ws-box"></span> $30,000+ /mo (multi-person team band)</span></div>
-  <div class="ws-route ws-route-alt"><strong>If $0-$400</strong> → Path 2 (Self-serve / Ch 4.3 then 4.4). Paste one-page brief into Lovable.</div>
+  <div class="ws-route ws-route-alt"><strong>If $0-$400</strong> → Path 2 (Self-serve / Lesson 4.3 then 4.4). Paste one-page brief into Lovable.</div>
   <div class="ws-route ws-route-go"><strong>If $1.6K-$4K</strong> → go to Q5.</div>
   <div class="ws-route ws-route-alt"><strong>If $5K-$30K</strong> → Path 3 (Fractional CTO) until problem complexity demands more.</div>
   <div class="ws-route ws-route-alt"><strong>If $30K+</strong> → Path 4 (Hire a team - see the hire-track supplementary reference, linked in the verdict table below).</div>
@@ -113,7 +113,7 @@ Total time budget: 30 minutes alone, 20 minutes with one peer, 0 minutes second-
 <div class="ws-card">
   <p>A real human you can text. Returns calls within 48 hrs. Has shipped a backend at scale in the last 5 years.</p>
   <div class="ws-verdict ws-verdict-stack"><span class="ws-opt" style="width:100%"><span class="ws-box"></span> Yes, named:<span class="ws-blank"></span></span><span class="ws-opt"><span class="ws-box"></span> No</span></div>
-  <div class="ws-route ws-route-alt"><strong>If YES</strong> → Path 2 (Self-serve / Ch 4.3 then 4.4). Use them for the monthly architecture call + worst-route code review.</div>
+  <div class="ws-route ws-route-alt"><strong>If YES</strong> → Path 2 (Self-serve / Lesson 4.3 then 4.4). Use them for the monthly architecture call + worst-route code review.</div>
   <div class="ws-route ws-route-alt"><strong>If NO</strong> → Path 3 (Fractional CTO bridge - see the hire-track supplementary reference). Buy the same insurance commercially.</div>
 </div>
 
@@ -122,7 +122,7 @@ Total time budget: 30 minutes alone, 20 minutes with one peer, 0 minutes second-
 | Path | Choose when | First action this week | Cost |
 |---|---|---|---|
 | **1. Validate without code** | Q1 = No, OR Q3 = less than 4 months | Ship Carrd page + Stripe checkout + Notion FAQ. Send to your 30-name outreach list. | $0 - $300 in tools + optional $100-200 in paid ads |
-| **2. Self-serve build** ([Ch 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) then [4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)) | Q1 yes, Q2 light or mid, and either Q4 = $0-$400/wk of your own time, or Q4 = $1.6K-$4K/mo with a senior engineer in your network (Q5 yes) | Paste one-page brief into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
+| **2. Self-serve build** ([Lesson 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) then [4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)) | Q1 yes, Q2 light or mid, and either Q4 = $0-$400/wk of your own time, or Q4 = $1.6K-$4K/mo with a senior engineer in your network (Q5 yes) | Paste one-page brief into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
 | **3. Fractional CTO bridge** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge)) | Q1 yes, Q2 light or mid, and either Q4 = $1.6K-$4K/mo with no senior engineer (Q5 no), or Q4 = $5K-$30K/mo | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month |
 | **4. Hire a team** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)) | Q2 heavy (any budget), or Q4 = $30K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |
 
@@ -160,7 +160,7 @@ The good answer names the person, the relevant experience (Stripe payments backe
 
 ## What to do after
 
-- **Write your verdict at the top of a fresh Notion doc.** One line: *"Path X (name). Started: [date]. Next: [Ch 4.3 self-serve / hire-track reference / back to Module 2 to re-validate]."* Pin the doc. Re-read the line every Monday for 4 weeks.
+- **Write your verdict at the top of a fresh Notion doc.** One line: *"Path X (name). Started: [date]. Next: [Lesson 4.3 self-serve / hire-track reference / back to Module 2 to re-validate]."* Pin the doc. Re-read the line every Monday for 4 weeks.
 - **Share the worksheet result with one peer or advisor in a 20-minute call.** Not three. One. Ask them: *"If the matrix said Path X, what would change your mind?"* Their first answer is the assumption you should pressure-test next. If they cannot name one, the matrix verdict holds.
 - **Schedule the first action for tomorrow morning.** Path 1: ship the Carrd page. Path 2: paste one-page brief into Lovable. Path 3: 3 LinkedIn outreach messages to Fractional CTOs in your industry. Path 4: read the SOW clause-by-clause with a printed pen, not in Google Docs. Calendar the action with a hard start time. The worksheet routes the decision; the calendar invite routes the work.
 

@@ -25,14 +25,14 @@ metatags:
   image: cover.png
   og_title: "5.2 · Choose Your Channel Before You Send One Message"
   og_description: "Channel-hopping after the first batch is the most common newbie mistake. The commitment rule + how to pick from interview evidence + AI-augmented channel research."
-cover_image_alt: "JetThoughts blog cover for Chapter 5.2 - choose one outbound channel and commit for four weeks before switching"
+cover_image_alt: "JetThoughts blog cover for Lesson 5.2 - choose one outbound channel and commit for four weeks before switching"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/"
 related_posts: false
 ---
 
 > **Module 5 · Lesson 5.2 · [OPTIONAL] - skip if you already know your channel** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 4 (Ch 4.4) + the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1) you sharpened across Modules 1-2
+> **Input:** 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 4 (Lesson 4.4) + the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Lesson 1.1) you sharpened across Modules 1-2
 >
 > **Output:** one channel hypothesis committed long enough to read the signal
 >
@@ -83,7 +83,7 @@ Not every channel fits every product. Four dimensions narrow the field before yo
 
 | Dimension | Question | Scoring rule |
 |-----------|----------|--------------|
-| **Price point** | Can you afford the channel's acquisition cost model? Use the price you tested in [Chapter 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) as the input here. | <$50/mo tested = free/organic only; $200-$500/mo = LinkedIn; >$500/mo = outbound calls viable |
+| **Price point** | Can you afford the channel's acquisition cost model? Use the price you tested in [Lesson 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) as the input here. | <$50/mo tested = free/organic only; $200-$500/mo = LinkedIn; >$500/mo = outbound calls viable |
 | **Buyer type** | Where do your must-have buyers actually live online? | Individuals = social + Reddit; B2B = LinkedIn + email + professional communities |
 | **Your time budget** | What can you honestly sustain through a full send/reply/follow-up arc? | LinkedIn 20-30 min/10 msgs; cold email 5-8 min/10 msgs; community 45 min/post + no daily mgmt |
 | **Interview signal** | What did your 10 transcripts actually say? | Count mentions per channel; 7-of-10 = louder than gut feeling |
@@ -147,7 +147,7 @@ The prompt is a forcing function, not a crystal ball. The real data comes from r
 
 Fill this out before you send message one. It prevents the wasted-effort cycle of channel-hopping.
 
-> **Fast-path exit: skip the worksheet if your interviews already named a channel.** If your Ch 2.3-2.4 interview transcripts pointed to a clear channel (e.g., 7+ of 10 interviewees found tools through LinkedIn, or 5+ named a specific Slack community), jump to Part 3: The Commitment below. Write your commitment statement and move to Ch 5.3. The full worksheet is for founders still deciding between channels. Use it to decide between channels; skipping it does not block anything.
+> **Fast-path exit: skip the worksheet if your interviews already named a channel.** If your Lesson 2.3-2.4 interview transcripts pointed to a clear channel (e.g., 7+ of 10 interviewees found tools through LinkedIn, or 5+ named a specific Slack community), jump to Part 3: The Commitment below. Write your commitment statement and move to Lesson 5.3. The full worksheet is for founders still deciding between channels. Use it to decide between channels; skipping it does not block anything.
 
 ### Part 1: Interview Evidence
 
@@ -241,13 +241,13 @@ With 30 focused messages you get a reply rate you can diagnose; with 10 messages
 
 Pick the channel your interviews point to, write it down, and give it a real run before you question it.
 
-The first place to apply this is your personal network in [Chapter 5.3 (Build Your 50-Name Network List)](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Once that is exhausted, [going outbound without a sales team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) covers the tactics for running the channel you just chose: the filter, the script, the Calendly-to-Stripe pipeline, and what the reply rate actually means.
+The first place to apply this is your personal network in [Lesson 5.3 (Build Your 50-Name Network List)](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Once that is exhausted, [going outbound without a sales team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) covers the tactics for running the channel you just chose: the filter, the script, the Calendly-to-Stripe pipeline, and what the reply rate actually means.
 
 ## What to do tomorrow
 
 1. Open the worksheet above and score each of the 4 channels against your customer interview answers. Pick the one that maps to the most evidence.
 2. Write the channel name + your commitment statement in a Notion doc. The clock starts the day you send your first outbound message.
-3. Read [Chapter 5.3 - Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) before your first send - that's the playbook for getting the first conversations on the channel you just picked.
+3. Read [Lesson 5.3 - Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) before your first send - that's the playbook for getting the first conversations on the channel you just picked.
 
 Pick the channel your interviews already named, commit to it long enough to read the signal, and stop running pilots against your own attention.
 

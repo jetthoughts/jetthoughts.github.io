@@ -11,11 +11,11 @@ metatags:
   og_title: "Module 1 Walkthrough: Mia Builds TutorMatch"
 course_nav_prev:
   slug: price-hypothesis-on-smoke-test-page
-  module: "Chapter 1.5"
+  module: "Lesson 1.5"
   title: "1.5 · Price Your Hypothesis on the Smoke-Test Page"
 course_nav_next:
   slug: mom-test-ask-about-past-not-future
-  module: "Chapter 2.1"
+  module: "Lesson 2.1"
   title: "2.1 · The Mom Test: Ask About the Past, Not the Future"
 ---
 

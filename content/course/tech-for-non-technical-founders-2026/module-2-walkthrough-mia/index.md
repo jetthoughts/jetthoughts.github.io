@@ -11,11 +11,11 @@ metatags:
   og_title: "Module 2 Walkthrough: Mia Interviews Ten Parents"
 course_nav_prev:
   slug: clickable-prototype-validation-2-hour-lovable
-  module: "Chapter 2.6"
+  module: "Lesson 2.6"
   title: "2.6 · Build a Clickable Prototype"
 course_nav_next:
   slug: one-page-product-brief-vibe-prd
-  module: "Chapter 3.1"
+  module: "Lesson 3.1"
   title: "3.1 · The One-Page Product Brief (Vibe PRD)"
 ---
 

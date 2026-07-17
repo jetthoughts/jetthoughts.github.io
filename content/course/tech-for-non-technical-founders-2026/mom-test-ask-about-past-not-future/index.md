@@ -1,7 +1,7 @@
 ---
 title: "2.1 · The Mom Test: Ask About the Past, Not the Future"
 aliases: ["/blog/mom-test-ask-about-past-not-future/"]
-description: "Chapter 2.1 of the From Idea to First Paying Customer course. The 5-question Mom Test script that prevents your interviewees from being polite - past-behavior validation for non-technical founders."
+description: "Lesson 2.1 of the From Idea to First Paying Customer course. The 5-question Mom Test script that prevents your interviewees from being polite - past-behavior validation for non-technical founders."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -23,7 +23,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "2.1 · The Mom Test: Ask About the Past, Not the Future"
-  og_description: "Chapter 2.1 of the From Idea to First Paying Customer course. The 5-question Mom Test script that prevents your interviewees from being polite - past-behavior validation for non-technical founders."
+  og_description: "Lesson 2.1 of the From Idea to First Paying Customer course. The 5-question Mom Test script that prevents your interviewees from being polite - past-behavior validation for non-technical founders."
 cover_image_alt: "JetThoughts cover showing five Mom Test question cards stacked vertically with pass and fail signals on each card"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/"
 related_posts: false
@@ -31,15 +31,15 @@ related_posts: false
 
 > **Module 2 · Lesson 2.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a Founding Hypothesis sentence (from Ch 1.1) + your `[customer]` blank from that sentence (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
+> **Input:** a Founding Hypothesis sentence (from Lesson 1.1) + your `[customer]` blank from that sentence (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
 >
-> **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3-2.4 recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
+> **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Lesson 2.2 and then run in real interviews after Lesson 2.3-2.4 recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
 >
 > **Progress:** M2 · 1 of 6 · Results so far: all Module 1 artifacts - Module 2 starts here
 
 > **TL;DR:** Five questions, all anchored in past behavior. Ask what they did last Tuesday, not what they'd do with a hypothetical product. Skip to: [The 5 questions ↓](#the-5-questions) · [The 3 emotional flags ↓](#the-3-emotional-language-flags) · [What to do tomorrow ↓](#what-to-do-tomorrow).
 
-> **Where you are in the round:** If you do not have interview transcripts yet, read straight through. After your Ch 2.3-2.4 interviews, return to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and decide build/pivot/kill.
+> **Where you are in the round:** If you do not have interview transcripts yet, read straight through. After your Lesson 2.3-2.4 interviews, return to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and decide build/pivot/kill.
 
 Run ten interviews where the only question is "would you pay for this?" and you'll close the week with a stack of yeses and an empty launch. The hypothetical question produces the polite shape - the answer says nothing about what the person actually did last Tuesday.
 
@@ -49,7 +49,7 @@ After this lesson you will be able to: **write interview questions that ask abou
 
 For the verbatim script + reference card, see [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/). This chapter teaches *why* those five questions work and how you'll score each call once interviews are done.
 
-Next, sharpen your draft list with [AI personas in Ch 2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/), then recruit 10 interviewees in [Ch 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
+Next, sharpen your draft list with [AI personas in Lesson 2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/), then recruit 10 interviewees in [Lesson 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 
 ![Five Mom Test question cards stacked: last-time, cost, workaround, priority, buying committee. Each card shows the pass and fail signal.](mom-test-script.svg)
 
@@ -182,11 +182,11 @@ The [stop-looking-for-product-market-fit guide](/blog/stop-looking-for-product-m
 
 The **[Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/)** carries the same 5 questions verbatim, the follow-ups, the pass/fail signals, the 3 emotional-language flags, and the scoring rubric.
 
-**Save your draft list before moving on.** Open a new Google Doc titled `Mom Test draft - [date]` in the same `Founder OS` folder as your Founding Hypothesis. Copy the 5 verbatim questions from the artifact, then add 2-3 ICP-specific probes of your own (e.g., for a chiropractor ICP: "Walk me through your last insurance-claim resubmission. When did it happen?"). That 5-8 question list is the input Ch 2.2 expects you to sharpen against AI personas.
+**Save your draft list before moving on.** Open a new Google Doc titled `Mom Test draft - [date]` in the same `Founder OS` folder as your Founding Hypothesis. Copy the 5 verbatim questions from the artifact, then add 2-3 ICP-specific probes of your own (e.g., for a chiropractor ICP: "Walk me through your last insurance-claim resubmission. When did it happen?"). That 5-8 question list is the input Lesson 2.2 expects you to sharpen against AI personas.
 
 **How to use it:** Print the artifact. Keep it open on your second monitor during all 10 interviews. The artifact is the screen-side reference while this post is the explanation of why it works.
 
-After 10 calls, you have either 10 scored transcripts that converge on a real problem (score them on [Chapter 2.5: Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), then proceed to 2.6) or 10 transcripts that don't (follow Chapter 2.5's pivot path: sharpen the ICP and run 5 more interviews against the narrower group).
+After 10 calls, you have either 10 scored transcripts that converge on a real problem (score them on [Lesson 2.5: Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), then proceed to 2.6) or 10 transcripts that don't (follow Lesson 2.5's pivot path: sharpen the ICP and run 5 more interviews against the narrower group).
 
 Fake the convergence to start building anyway, and you join the long line of post-mortem threads about wasted MVP spend. The [quality tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) is what happens when you ship against a hypothesis nobody confirmed.
 
@@ -196,7 +196,7 @@ Fake the convergence to start building anyway, and you join the long line of pos
 
 > **Optional: AI devil's advocate before your first interview.** [ValidatorAI](https://validatorai.com) (free tier) gives you an adversarial dialog: paste your draft question list, and it pushes back the way a skeptical interviewee would.
 >
-> It flags hypothetical questions, leading phrasing, and assumptions buried in your wording. Unlike Ch 2.2 persona rehearsal (which tests questions against simulated ICPs), ValidatorAI tests the questions themselves - are they built to surface real past behavior or polite agreement?
+> It flags hypothetical questions, leading phrasing, and assumptions buried in your wording. Unlike Lesson 2.2 persona rehearsal (which tests questions against simulated ICPs), ValidatorAI tests the questions themselves - are they built to surface real past behavior or polite agreement?
 >
 > Run it once before your first interview. It takes 5 minutes and catches the most common failure mode: a question list that produces coherent answers from anyone, regardless of whether they actually have the problem.
 

@@ -32,7 +32,7 @@ hero_chips:
   - "5 modules"
   - "Evenings & weekends pace"
 hero_primary_url: "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/"
-hero_primary_text: "Start Chapter 1.1 →"
+hero_primary_text: "Start Lesson 1.1 →"
 hero_secondary_url: "/course/tech-for-non-technical-founders-2026/quickstart/"
 hero_secondary_text: "3-minute Quickstart"
 ---
@@ -41,7 +41,7 @@ Five modules take you from that idea to a signed paid pilot: test demand with st
 
 The first checkpoint comes fast. Two to three weeks in, at an evenings-and-weekends pace, you'll know whether the idea is worth building at all - a go/iterate/kill verdict on your **Founding Hypothesis** (the one-sentence version of your idea: who the customer is, what problem you solve, why they'd pick you) from real demand data instead of polite nods from friends.
 
-New here? Read [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) once - the 10-minute route map - then start [Chapter 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Short on time tonight? The [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) (3 min) is the compressed version, and the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) answers the most common blockers.
+New here? Read [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) once - the 10-minute route map - then start [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Short on time tonight? The [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) (3 min) is the compressed version, and the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) answers the most common blockers.
 
 *Returning? [Skip to the syllabus ↓](#module-map)*
 
@@ -156,7 +156,7 @@ Read the modules in order. Each module's output is the next module's input, and 
 To save your time, here is what we intentionally exclude. None of these are needed for the promised result (idea → first paying customer):
 
 - **How to code.** The course assumes zero coding ability. [Lovable](https://lovable.dev) + [Supabase](https://supabase.com) + [Stripe](https://stripe.com) handle the technical side.
-- **How to hire a CTO or build an engineering team.** Hiring is covered as a build-path decision (Chapter 4.1), not as an org-design course.
+- **How to hire a CTO or build an engineering team.** Hiring is covered as a build-path decision (Lesson 4.1), not as an org-design course.
 - **How to raise venture capital.** The course produces the artifacts investors want to see. It does not teach pitch decks or fundraising mechanics.
 - **How to manage a 20-person engineering team.** Friday Demo Rule + Weekly Dev Report (in Going Further) cover early-stage management; full org management is out of scope.
 - **Mobile-only or marketplace-only specifics.** Examples use SaaS + B2B + B2C patterns. Mobile apps and two-sided marketplaces have their own playbooks.

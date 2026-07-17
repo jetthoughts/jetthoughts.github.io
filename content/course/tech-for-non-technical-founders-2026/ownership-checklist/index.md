@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-Template companion to [Chapter 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Where this fits: run after [Ch 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routes you to a path that involves anyone else touching your infrastructure.
+Template companion to [Lesson 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Where this fits: run after [Lesson 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routes you to a path that involves anyone else touching your infrastructure.
 
 > **Routing by M4.1 decision (read this first):**
 >

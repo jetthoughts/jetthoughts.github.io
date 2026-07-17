@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 5 · Lesson 5.6 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 3-5 warm leads from [Chapter 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
+> **Input:** 3-5 warm leads from [Lesson 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
 >
 > **Output:** 1 signed paid pilot before any new code ships
 >
@@ -88,7 +88,7 @@ The **scope of pilot** section is where new founders over-spec. Keep it to three
 
 The **pilot fee and deposit** clause is what makes everything else work. The deposit lands at 10-30% of projected year-one annual contract value (ACV), paid via Stripe before pilot kickoff and credited dollar-for-dollar against the year-one invoice on conversion. If the customer cancels before week 4, they forfeit the deposit (their commitment). If the founder cancels for any reason, the founder refunds 100% (your commitment). Pricing math is below.
 
-The **success criteria** clause is what makes the DPA a real contract instead of a handshake. Pick three measurable outcomes the pilot is supposed to produce (for example, hours saved per week, errors avoided per month, or revenue lifted per quarter), worded in the customer's verbatim language from the [Chapter 5.5 replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
+The **success criteria** clause is what makes the DPA a real contract instead of a handshake. Pick three measurable outcomes the pilot is supposed to produce (for example, hours saved per week, errors avoided per month, or revenue lifted per quarter), worded in the customer's verbatim language from the [Lesson 5.5 replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
 
 If two of three are hit by week 6, the year-one contract auto-converts unless the customer opts out in writing. If fewer than two are hit, both parties walk and the founder retains the deposit as paid consideration for the pilot work.
 
@@ -169,7 +169,7 @@ Two annotated worked examples (a $1,500 B2B SaaS pilot and a $5,000 B2B services
 
 ## The pricing math
 
-> **From Ch 1.5 smoke-test price to year-one ACV.** Take the monthly price you tested in [Chapter 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) and multiply by 12 (or your actual billing period). Example: a $97/month hypothesis → $1,164 year-one ACV. Take 10-30% of that as your deposit floor; the band table below tells you which percentage to pick by sector. If your number lands between two bands or you are unsure which to pick, **pick the midpoint of the smallest applicable band** until your customer's CFO pushes back. The deposit is a commitment device; below the floor it stops working as one. Above the band the customer needs procurement (the formal purchasing-approval process at bigger companies), which lengthens the timeline.
+> **From Lesson 1.5 smoke-test price to year-one ACV.** Take the monthly price you tested in [Lesson 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) and multiply by 12 (or your actual billing period). Example: a $97/month hypothesis → $1,164 year-one ACV. Take 10-30% of that as your deposit floor; the band table below tells you which percentage to pick by sector. If your number lands between two bands or you are unsure which to pick, **pick the midpoint of the smallest applicable band** until your customer's CFO pushes back. The deposit is a commitment device; below the floor it stops working as one. Above the band the customer needs procurement (the formal purchasing-approval process at bigger companies), which lengthens the timeline.
 
 The deposit number is not arbitrary. It is anchored to projected year-one ACV and to what a typical CFO will sign without a procurement review. The bands by sector:
 
@@ -229,7 +229,7 @@ If you do want to wire the payment into a Rails app for record-keeping later, th
 
 ## The conversation script
 
-You have a warm lead from [Chapter 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) who booked a 20-minute demo, the demo went well, and they said something close to "yes, I would love to try this with my team." The default first-time-founder move is to soften here. The 15-second script that does not soften:
+You have a warm lead from [Lesson 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) who booked a 20-minute demo, the demo went well, and they said something close to "yes, I would love to try this with my team." The default first-time-founder move is to soften here. The 15-second script that does not soften:
 
 > "Glad it resonates. Quick word on how I am setting up pilots - I am running them as paid design partnerships, so the customer has skin in the game and I have a real signal. The deposit is [$500-$6K], credited toward year one on conversion. Refunded in full if I cannot deliver on the success criteria. Want me to send the one-pager?"
 
@@ -280,7 +280,7 @@ The paid pilot is the default, but it has three honest exceptions.
 
 | Exception | When it applies | Substitute approach |
 |---|---|---|
-| **Champion conversion** | A champion from Chapter 5.3 offers free pilot + co-marketing case study + Loom testimonial. Trade: your work now for their case study + testimonial (your conversion assets for the next 10 customers). | Limit to 1-2 champions out of first 10 pilots. Only when case study is contractually committed. Case study must ship within 60 days. |
+| **Champion conversion** | A champion from Lesson 5.3 offers free pilot + co-marketing case study + Loom testimonial. Trade: your work now for their case study + testimonial (your conversion assets for the next 10 customers). | Limit to 1-2 champions out of first 10 pilots. Only when case study is contractually committed. Case study must ship within 60 days. |
 | **True early-MVP (30% built)** | Your MVP is genuinely unfinished. Paid pilot misrepresents what you can deliver in 6-8 weeks. | Run free pilot honestly, ship to the agreed scope, turn second customer into the paid pilot. The honesty signal is commitment of a different kind. |
 | **Pre-investment-grade product** | Your product is 12 months from differentiability. Customer is buying relationship, not product. | Follow the Paul Graham ["Do Things That Don't Scale"](http://paulgraham.com/ds.html) Stripe Collison playbook. Paid pilot returns once product is actually doing the job. |
 
@@ -289,10 +289,10 @@ The paid pilot is the default, but it has three honest exceptions.
 | Step | Action | Output |
 |---|---|---|
 | **1** | Copy the [DPA template above](#dpa-template) into a Google Doc, fill the 6 bracketed sections, pick deposit number from the sector table above, set up Stripe product + payment link. Optional: the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) has annotated worked examples + DocuSign-importable format. | Stripe link ready. DPA drafted. Deposit amount locked. |
-| **2** | Send the DPA + Stripe link to 1-2 warm leads from Chapter 5.5 who booked demos recently. | 1-2 DPA emails sent. Expect 1 procurement question + 1 ready-to-sign. |
+| **2** | Send the DPA + Stripe link to 1-2 warm leads from Lesson 5.5 who booked demos recently. | 1-2 DPA emails sent. Expect 1 procurement question + 1 ready-to-sign. |
 | **3** | Bank your first deposit. Schedule pilot kickoff and the first Friday demo cadence. | Deposit cleared. Kickoff scheduled. Pilot officially started. |
 
-**If you do not have warm demos yet**, your work is still in [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). The DPA is the wrong sprint for an empty pipeline.
+**If you do not have warm demos yet**, your work is still in [Lesson 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). The DPA is the wrong sprint for an empty pipeline.
 
 ## Advanced (optional sidebar)
 

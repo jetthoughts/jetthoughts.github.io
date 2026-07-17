@@ -1,7 +1,7 @@
 ---
 title: "2.2 · Sharpen Your Question List with AI Personas"
 aliases: ["/blog/ai-persona-pre-validation-mom-test-prep/"]
-description: "Chapter 2.2 of the From Idea to First Paying Customer course. A 90-minute companion pass: use Claude personas to sharpen the Mom Test question list you drafted in Ch 2.1 before booking real interviews."
+description: "Lesson 2.2 of the From Idea to First Paying Customer course. A 90-minute companion pass: use Claude personas to sharpen the Mom Test question list you drafted in Lesson 2.1 before booking real interviews."
 date: 2026-05-18
 draft: false
 course_chapter: true
@@ -24,19 +24,19 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "2.2 · Sharpen Your Question List with AI Personas"
-  og_description: "Chapter 2.2 of the From Idea to First Paying Customer course. A 90-minute companion pass: use Claude personas to sharpen the Mom Test question list you drafted in Ch 2.1 before booking real interviews."
-cover_image_alt: "JetThoughts cover for Chapter 2.2 - Claude persona rehearsing Mom Test questions to flag hypothetical-shaped traps before real interviews"
+  og_description: "Lesson 2.2 of the From Idea to First Paying Customer course. A 90-minute companion pass: use Claude personas to sharpen the Mom Test question list you drafted in Lesson 2.1 before booking real interviews."
+cover_image_alt: "JetThoughts cover for Lesson 2.2 - Claude persona rehearsing Mom Test questions to flag hypothetical-shaped traps before real interviews"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/"
 related_posts: false
 ---
 
 > **Module 2 · Lesson 2.2 · [OPTIONAL]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** your draft Mom Test question list (5-8 questions from Ch 2.1) + your `[customer]` blank from the Ch 1.1 hypothesis (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
+> **Input:** your draft Mom Test question list (5-8 questions from Lesson 2.1) + your `[customer]` blank from the Lesson 1.1 hypothesis (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
 >
-> **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Ch 2.3-2.4 recruitment and real interviews
+> **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Lesson 2.3-2.4 recruitment and real interviews
 >
-> **Progress:** M2 · 2 of 6 · Results so far: draft question list · Interviewed customers before? Skip straight to [Ch 2.3: Find 10 People](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - 2.1 is the core
+> **Progress:** M2 · 2 of 6 · Results so far: draft question list · Interviewed customers before? Skip straight to [Lesson 2.3: Find 10 People](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - 2.1 is the core
 >
 > **Cost:** $0 (free tier on Claude or ChatGPT)
 
@@ -44,7 +44,7 @@ related_posts: false
 
 > **Already using Perplexity Pro / Claude / ChatGPT Deep Research for Module 1?** The same tools work here for objection rehearsal - swap the deep-research prompts for the in-character persona prompts below; the cost line is already paid.
 
-You drafted 5-8 Mom Test questions in Ch 2.1. Before you spend a real interview slot on a question that turns out to be pitch-shaped, run the question list past a Claude persona that matches your ICP. The persona answers in character; you ask Claude (out of character) which question generated which kind of answer and why.
+You drafted 5-8 Mom Test questions in Lesson 2.1. Before you spend a real interview slot on a question that turns out to be pitch-shaped, run the question list past a Claude persona that matches your ICP. The persona answers in character; you ask Claude (out of character) which question generated which kind of answer and why.
 
 The failure shape the rehearsal catches: a question like "Would you use a tool like this?" reads fine on paper, generates a polite "sounds great" from any persona, and quietly burns real interview slots before you notice the pattern. The rehearsal flags the question shape before you spend the slot. Same applies to questions that smuggle in your solution, ask for a hypothetical purchase, or bury the past-tense ask under three clauses.
 
@@ -58,9 +58,9 @@ An AI rehearsal costs nothing. A short pass through Claude before you pick up th
 
 Real interviews stay irreplaceable for the things rehearsal cannot simulate: the noncommittal shrug on question three, the mention of a workaround you never imagined, the silence after Q4 that tells you more than ten polite yeses. The rehearsal sharpens your questions before you spend a real customer's hour on them.
 
-This chapter is the companion polish step between Ch 2.1 (where you learned the Mom Test technique and drafted 5-8 rough questions) and Ch 2.3-2.4 (where you recruit 10 real interviewees). You don't validate anything here - the real interviews do that. You catch the broken question shapes before they reach a real human - one focused rehearsal session can save you several wasted interview slots. Here's the rehearsal flow at a glance:
+This chapter is the companion polish step between Lesson 2.1 (where you learned the Mom Test technique and drafted 5-8 rough questions) and Lesson 2.3-2.4 (where you recruit 10 real interviewees). You don't validate anything here - the real interviews do that. You catch the broken question shapes before they reach a real human - one focused rehearsal session can save you several wasted interview slots. Here's the rehearsal flow at a glance:
 
-![The rehearsal flow at a glance: bring in your draft question list plus the Ch 1.1 customer blank, run Prompts 1-2 to build 3 ICP personas and test each question in-character, Prompt 3 for Claude's out-of-character diagnosis, Prompts 4-5 to surface 3 objections and sharpen weak questions past-anchored, and leave with 5-7 sharpened questions plus an Objection Tracker for real interviews](rehearsal-loop.svg)
+![The rehearsal flow at a glance: bring in your draft question list plus the Lesson 1.1 customer blank, run Prompts 1-2 to build 3 ICP personas and test each question in-character, Prompt 3 for Claude's out-of-character diagnosis, Prompts 4-5 to surface 3 objections and sharpen weak questions past-anchored, and leave with 5-7 sharpened questions plus an Objection Tracker for real interviews](rehearsal-loop.svg)
 
 ## Why rehearse with AI at all
 
@@ -100,16 +100,16 @@ Stay in character for this entire conversation. Do not break character to explai
 
 | Placeholder | Where it lives in your artifacts |
 |---|---|
-| `[ROLE]` | Founding Hypothesis `[customer]` blank (Ch 1.1) - e.g. "solo chiropractor managing insurance claims" |
-| `[INDUSTRY]` + `[COMPANY SIZE]` | Your Ch 1.1 `[customer]` blank - the company size and situation it names |
-| `[PROBLEM DESCRIPTION]` | Founding Hypothesis `[problem]` blank (Ch 1.1) |
+| `[ROLE]` | Founding Hypothesis `[customer]` blank (Lesson 1.1) - e.g. "solo chiropractor managing insurance claims" |
+| `[INDUSTRY]` + `[COMPANY SIZE]` | Your Lesson 1.1 `[customer]` blank - the company size and situation it names |
+| `[PROBLEM DESCRIPTION]` | Founding Hypothesis `[problem]` blank (Lesson 1.1) |
 | `[PROBLEM AREA]` | The `[problem]` blank summarized in 2-3 words (e.g. "claim resubmission backlog") |
 | `[CURRENT WORKAROUND]` | Founding Hypothesis `[competition]` blank (what they do today) |
-| `[YOUR DRAFT QUESTION 1]`, `2`, `3`, ... | Pick one question at a time from your Ch 2.1 `Mom Test draft - [date]` doc (5-8 question list) |
+| `[YOUR DRAFT QUESTION 1]`, `2`, `3`, ... | Pick one question at a time from your Lesson 2.1 `Mom Test draft - [date]` doc (5-8 question list) |
 | `[QUESTION X]` (in Prompt 5) | Whichever question you want to sharpen from your draft list |
-| `[PERSONA NAME]`, `[FREQUENCY]`, `[DURATION]`, `[BUDGET RANGE]`, `[REASON]` | Your judgment, anchored to deep-research findings if you ran the deep-research prompt on the [full sprint reference](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/) linked from Ch 1.1 - see fallback below |
+| `[PERSONA NAME]`, `[FREQUENCY]`, `[DURATION]`, `[BUDGET RANGE]`, `[REASON]` | Your judgment, anchored to deep-research findings if you ran the deep-research prompt on the [full sprint reference](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/) linked from Lesson 1.1 - see fallback below |
 
-> **Fallback for the 3 fields not in your hypothesis (`[FREQUENCY]`, `[DURATION]`, `[REASON]`):** make your best informed guess. The rehearsal is calibrated; the persona doesn't have to be perfect. After your first real Ch 2.3-2.4 interview, you will know whether your guess was too mild ("monthly" when reality is "daily") or too aggressive. Revise BETWEEN interview 1 and interview 2. If any placeholder above is empty, the Ch 1.1 hypothesis is not specific enough - tighten it before rehearsing.
+> **Fallback for the 3 fields not in your hypothesis (`[FREQUENCY]`, `[DURATION]`, `[REASON]`):** make your best informed guess. The rehearsal is calibrated; the persona doesn't have to be perfect. After your first real Lesson 2.3-2.4 interview, you will know whether your guess was too mild ("monthly" when reality is "daily") or too aggressive. Revise BETWEEN interview 1 and interview 2. If any placeholder above is empty, the Lesson 1.1 hypothesis is not specific enough - tighten it before rehearsing.
 
 > **Heads up:** Claude is trained to be helpful, which means it tends to give reasonable answers even to broken questions. Don't read a coherent persona answer as proof the question works. Read Claude's out-of-character diagnosis instead - the in-character answer reflects what Claude thinks a polite persona would say; the out-of-character note reflects what the question is actually asking.
 
@@ -215,7 +215,7 @@ Reuse the rehearsal stack when a round of real interviews ends in partial signal
 
 One constraint worth naming: the rehearsal only surfaces signal that's already in your mental model of the customer. Claude constructs the persona from what you tell it.
 
-If your ICP description is wrong - the wrong role, the wrong company size, the wrong industry detail - the persona will be wrong in the same direction, and the rehearsal will give you false confidence. If you notice you're struggling to write three distinct personas at all, that's a signal worth acting on: go back to [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the `[customer]` blank before rehearsing questions against a customer you can't describe.
+If your ICP description is wrong - the wrong role, the wrong company size, the wrong industry detail - the persona will be wrong in the same direction, and the rehearsal will give you false confidence. If you notice you're struggling to write three distinct personas at all, that's a signal worth acting on: go back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the `[customer]` blank before rehearsing questions against a customer you can't describe.
 
 This is the other reason real interviews stay irreplaceable: a real customer can tell you your ICP description is wrong, while Claude can only simulate the ICP you described.
 
@@ -232,7 +232,7 @@ This is the other reason real interviews stay irreplaceable: a real customer can
 > - What a real customer will actually say (Claude simulates the persona YOU describe)
 > - Whether the problem is real (only 10 Mom Test interviews can falsify the hypothesis)
 >
-> **The real gate:** 10 Mom Test interviews with real humans, ≥7/10 strong signal (Ch 2.1 technique + Ch 2.3-2.4 recruitment).
+> **The real gate:** 10 Mom Test interviews with real humans, ≥7/10 strong signal (Lesson 2.1 technique + Lesson 2.3-2.4 recruitment).
 
 > **Advanced: AI ensemble stress-test (after your interviews).** Once your 10 Mom Test interviews are done and you have a refined hypothesis, you can cross-validate the business logic using multiple AI models simultaneously. Paste your validated problem statement into [IdeaProof](https://ideaproof.io) (free tier to start) - it runs your hypothesis through several frontier models and flags contradictions between them. A claim that passes one model but fails another is a blind spot worth investigating before you build. The ensemble approach catches what a single-model rehearsal misses: each model has different training biases, and consensus across several is stronger signal than one model saying "sounds good." This is not a substitute for the Mom Test interviews - it validates the logic AFTER the interviews validated the problem. Think of it as the final sanity check before you commit to building.
 

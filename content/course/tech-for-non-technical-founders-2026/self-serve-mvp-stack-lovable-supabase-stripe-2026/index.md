@@ -1,7 +1,7 @@
 ---
 title: "4.3 · The Self-Serve MVP Stack: Tools & Setup"
 aliases: ["/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/"]
-description: "Why Lovable + Supabase + Stripe is the dominant self-serve path. Plain-English roles, vendor pricing, 12 rules, communities. Chapter 4.3 of the course; Chapter 4.4 walks the build."
+description: "Why Lovable + Supabase + Stripe is the dominant self-serve path. Plain-English roles, vendor pricing, 12 rules, communities. Lesson 4.3 of the course; Lesson 4.4 walks the build."
 date: 2026-05-18
 draft: false
 course_chapter: true
@@ -24,7 +24,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "4.3 · The Self-Serve MVP Stack: Tools & Setup"
-  og_description: "Why Lovable + Supabase + Stripe is the dominant self-serve path. Plain-English roles, vendor pricing, 12 rules, communities. Chapter 4.3 of the course; Chapter 4.4 walks the build."
+  og_description: "Why Lovable + Supabase + Stripe is the dominant self-serve path. Plain-English roles, vendor pricing, 12 rules, communities. Lesson 4.3 of the course; Lesson 4.4 walks the build."
 cover_image_alt: "JetThoughts cover showing three hand-drawn stacked layers labeled Lovable, Supabase, and Stripe with arrows linking them, and a sticky note reading Weeks 4-10 for the build-phase plan."
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/"
 related_posts: false
@@ -32,9 +32,9 @@ related_posts: false
 
 > **Module 4 · Lesson 4.3 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a Module 4 decision pointing to "self-serve" (from [Ch 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)) + a quality-checked one-page brief (from [Ch 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)) + a Day-1 ownership audit passed (from [Ch 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/))
+> **Input:** a Module 4 decision pointing to "self-serve" (from [Lesson 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)) + a quality-checked one-page brief (from [Lesson 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)) + a Day-1 ownership audit passed (from [Lesson 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/))
 >
-> **Output:** the 3 pre-flight rules locked in, tool boundaries clear, ready to start the build in [Chapter 4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
+> **Output:** the 3 pre-flight rules locked in, tool boundaries clear, ready to start the build in [Lesson 4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
 >
 > **Progress:** M4 · 3 of 5 · Results so far: build path = self-serve (4.1) + ownership locked (4.2) - this page sets up the stack and the pre-flight rules
 
@@ -64,7 +64,7 @@ Boring is what you want for an MVP. The boring path lets one non-technical found
 
 The cost to disprove your hypothesis is vendor free tiers and the small per-tool monthly fees in the cost table above. The cost to prove it is the same.
 
-How much demand evidence you already have decides the path. With enough of it, you open Lovable and build. Without it, a $0 Concierge MVP - a no-code "Wizard of Oz" where you fake the automation by hand behind the curtain - gets you more evidence before you commit to Lovable code. Wire up Tally (free form) → Zapier or Make.com (free routing) → Airtable or Notion (free storage): the customer fills the Tally form, Zapier drops the row in Airtable, and you process it by hand. To the customer it looks automated, so you validate willingness-to-pay before writing code. The trade-off is that you run it by hand, which makes it a stepping stone, not a replacement. Either way, the Lovable + Supabase + Stripe stack is what ships in Chapter 4.4.
+How much demand evidence you already have decides the path. With enough of it, you open Lovable and build. Without it, a $0 Concierge MVP - a no-code "Wizard of Oz" where you fake the automation by hand behind the curtain - gets you more evidence before you commit to Lovable code. Wire up Tally (free form) → Zapier or Make.com (free routing) → Airtable or Notion (free storage): the customer fills the Tally form, Zapier drops the row in Airtable, and you process it by hand. To the customer it looks automated, so you validate willingness-to-pay before writing code. The trade-off is that you run it by hand, which makes it a stepping stone, not a replacement. Either way, the Lovable + Supabase + Stripe stack is what ships in Lesson 4.4.
 
 ## M2 prototype vs M4 MVP - different artifacts, different rigor
 
@@ -145,32 +145,32 @@ Free for solo founders on the Free plan. You will not write much code yourself, 
 > **What AI cannot prove or substitute:**
 > - Whether real users can navigate the workflow (only uncoached ICP users can)
 > - Whether the Stripe webhook idempotency is correct (only test-mode charges can)
-> - Whether the architecture will hold at scale (only real traffic + Ch 4.5 ceiling signals can)
+> - Whether the architecture will hold at scale (only real traffic + Lesson 4.5 ceiling signals can)
 >
-> **The real gate:** 5 green lights (Phase 4 exit criteria in [Chapter 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)) + weekly demo to one non-PRD-reader human.
+> **The real gate:** 5 green lights (Phase 4 exit criteria in [Lesson 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)) + weekly demo to one non-PRD-reader human.
 
 ## 12 rules for a self-built MVP done right
 
-> **How to read this list.** 3 rules need to be true BEFORE you open Lovable. The rest fire inline during the Phase 1-4 build in [Chapter 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/). If you internalize ONLY the 3 pre-Lovable rules + the Phase 4 exit criteria, you ship a working MVP. The other rules are inline reminders, not a homework checklist.
+> **How to read this list.** 3 rules need to be true BEFORE you open Lovable. The rest fire inline during the Phase 1-4 build in [Lesson 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/). If you internalize ONLY the 3 pre-Lovable rules + the Phase 4 exit criteria, you ship a working MVP. The other rules are inline reminders, not a homework checklist.
 
 Synthesis of every rule scattered across Module 4 and the supplementary references. Print this page, tape it next to the laptop, re-read before every weekly demo.
 
-**Before you open Lovable - the 3 load-bearing pre-flight rules.** Rules **1, 2, and 6** in the list below are the ones that must be true on day zero. Rule 1 (one-page brief passed the Ch 3.2 quality-gate) keeps Phase 1 prompts from generating a sprawling admin panel. Rule 2 (one workflow, one persona, one happy path) keeps the build inside the shed. Rule 6 (GitHub sync turned on in Lovable Settings on day 1) keeps your source recoverable if Lovable drops it. Get those 3 right and the rest read as inline checks while you build. Get them wrong and the other 9 cannot save the project.
+**Before you open Lovable - the 3 load-bearing pre-flight rules.** Rules **1, 2, and 6** in the list below are the ones that must be true on day zero. Rule 1 (one-page brief passed the Lesson 3.2 quality-gate) keeps Phase 1 prompts from generating a sprawling admin panel. Rule 2 (one workflow, one persona, one happy path) keeps the build inside the shed. Rule 6 (GitHub sync turned on in Lovable Settings on day 1) keeps your source recoverable if Lovable drops it. Get those 3 right and the rest read as inline checks while you build. Get them wrong and the other 9 cannot save the project.
 
-1. **Start from a one-page brief that passed the Ch 3.2 quality-gate.** If Section 3 is feature-shaped, fix it before you open Lovable. Feature-shaped briefs produce sprawling admin panels.
+1. **Start from a one-page brief that passed the Lesson 3.2 quality-gate.** If Section 3 is feature-shaped, fix it before you open Lovable. Feature-shaped briefs produce sprawling admin panels.
 2. **One workflow, one persona, one happy path.** No multi-tenancy, no admin dashboard, no settings page on day one. Build the shed (Rob Walling's analogy), not the house.
 3. **Strict layer boundaries**: Lovable renders screens, Supabase stores data, Stripe collects payment. Do not let Lovable hand-roll auth; do not let Supabase render a UI; do not let Stripe become the source of truth for user state.
 4. **Weekly demo to one non-PRD-reader human.** Spouse, advisor, dog if necessary. Keep a ship-something-visible cadence every week. The demo IS the data; the screens are not.
-5. **Do NOT iterate the Ch 2.6 throwaway prototype.** Start the M4.3 build fresh from your one-page brief. The prototype answered "do users know what to click"; the MVP answers "do users pay."
+5. **Do NOT iterate the Lesson 2.6 throwaway prototype.** Start the M4.3 build fresh from your one-page brief. The prototype answered "do users know what to click"; the MVP answers "do users pay."
 6. **Set up GitHub sync in Lovable Settings on day 1.** Lovable can drop the work; GitHub is your backup. Skipping this is the #1 reason founders cannot retrieve their source.
-7. **Enable Row-Level Security on every Supabase table from day 1.** RLS is the rule that says "Coach A can only read Coach A's rows." Skipping it ships the cross-tenant data leak that ends pilots (see Ch 4.5 Signal 4).
+7. **Enable Row-Level Security on every Supabase table from day 1.** RLS is the rule that says "Coach A can only read Coach A's rows." Skipping it ships the cross-tenant data leak that ends pilots (see Lesson 4.5 Signal 4).
 8. **Stripe webhook handler must be idempotent.** Idempotent means "safe to run twice without breaking anything" - Stripe sometimes sends the same payment event more than once, and your handler must not double-charge or double-activate. Check `WHERE event_id = $1 AND processed = true` before re-running the update. (See production hardening section of [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#production-hardening-checklist-what-your-fractional-cto-will-look-for) for details.)
 9. **Budget envelope: vendor free tiers + per-tool monthly fees.** Lovable free, Supabase free, Stripe transaction fees, domain registration. Upgrade Lovable to a paid tier only when build velocity demands it.
 10. **Ship before scope creep, then a short stabilization phase.** Build the smallest end-to-end thing, then a stabilization phase before paid-pilot conversations. Sits inside the multi-month journey to first paying customer.
-11. **Monthly Ch 4.5 ceiling-signal check once the live MVP is up.** Even if everything is green, the habit catches the 5 architectural break-points before they become rebuilds.
+11. **Monthly Lesson 4.5 ceiling-signal check once the live MVP is up.** Even if everything is green, the habit catches the 5 architectural break-points before they become rebuilds.
 12. **Do not scale a Lovable stack past ~5K users or two ceiling signals firing for 4+ weeks.** When you hit either limit, graduate to a Fractional CTO bridge (see [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge)). The shed is not the house; pouring skyscraper foundations into a shed slab does not build a skyscraper.
 
-Each of the 12 rules is taught in depth somewhere across this chapter, the [self-serve stack walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/), [Ch 4.5 ceiling signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/), or the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/). The list above is the index; the surrounding chapters are the depth.
+Each of the 12 rules is taught in depth somewhere across this chapter, the [self-serve stack walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/), [Lesson 4.5 ceiling signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/), or the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/). The list above is the index; the surrounding chapters are the depth.
 
 ## Communities that replace a co-founder
 
@@ -188,7 +188,7 @@ None of these is JetThoughts. None of them sells you a service. They are the fou
 
 ## Further reading
 
-- [Chapter 4.4: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) - the companion page: 4 build phases, exit criteria, shed-vs-skyscraper, and the architectural ceiling
+- [Lesson 4.4: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) - the companion page: 4 build phases, exit criteria, shed-vs-skyscraper, and the architectural ceiling
 - Y Combinator, [Startup School Library + 2026 Founder Resources](https://www.ycombinator.com/library/) - the YC stance on validating without code and the changing role of the technical co-founder
 - Rob Walling, [Vibe Coding interview on Creator Science](https://podcast.creatorscience.com/rob-walling/) - the shed vs skyscraper analogy that frames the architectural ceiling. 35-minute listen.
 - Lovable, [Pricing tiers](https://lovable.dev/pricing) and [community Discord](https://lovable.dev/community)

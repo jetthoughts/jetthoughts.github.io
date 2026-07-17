@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="find10-title">
-  <title id="find10-title">The find-10 journey: from your Ch 1.1 hypothesis through four steps to ten booked interviews.</title>
-  <desc>A left-to-right strip of six cards. It starts with your hypothesis from Chapter 1.1, then runs four numbered steps: step 1 AI ICP map, paste your three sentences into Claude; step 2 read where they complain; step 3 build the 30-name list; step 4 write to each one personally. It ends with ten interviews booked on the calendar. Arrows connect each card to the next.</desc>
+  <title id="find10-title">The find-10 journey: from your Lesson 1.1 hypothesis through four steps to ten booked interviews.</title>
+  <desc>A left-to-right strip of six cards. It starts with your hypothesis from Lesson 1.1, then runs four numbered steps: step 1 AI ICP map, paste your three sentences into Claude; step 2 read where they complain; step 3 build the 30-name list; step 4 write to each one personally. It ends with ten interviews booked on the calendar. Arrows connect each card to the next.</desc>
   <defs>
     <style>
       .h     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
@@ -28,7 +28,7 @@
   <g transform="translate(8,90) rotate(-0.5 74 78)">
     <rect width="148" height="150" rx="12" class="cstart"/>
     <text x="74" y="58" text-anchor="middle" class="h ttl">Hypothesis</text>
-    <text x="74" y="80" text-anchor="middle" class="h ttl">from Ch 1.1</text>
+    <text x="74" y="80" text-anchor="middle" class="h ttl">from Lesson 1.1</text>
     <text x="74" y="112" text-anchor="middle" class="h role">your starting</text>
     <text x="74" y="130" text-anchor="middle" class="h role">bet</text>
   </g>

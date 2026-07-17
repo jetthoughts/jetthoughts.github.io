@@ -9,12 +9,12 @@ timestamp: 2026-07-13T00:00:00Z
 
 # The spine
 
-The reading order lives in `data/course_sequence.yaml` - Chapter 0
+The reading order lives in `data/course_sequence.yaml` - the Overview
 (how-this-course-works) then Modules 1-5 (hypothesis → smoke test →
 interviews → brief/build → first paying customer). The prev/next strip,
 branch-aware forks, and the `course-stat` shortcode all derive from that
 file. Never hardcode exact chapter counts in prose; use near numbers
-("20+ chapters").
+("20+ lessons").
 
 # Outside the spine
 

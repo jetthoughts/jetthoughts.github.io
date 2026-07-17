@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 5 · Lesson 5.7 · [OPTIONAL] - the systematic path when warm intros run out** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** network exhausted, ~10 customers in from [Chapter 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) and [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
+> **Input:** network exhausted, ~10 customers in from [Lesson 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) and [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 >
 > **Output:** 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared once replies mature
 >
@@ -39,13 +39,13 @@ related_posts: false
 
 > **TL;DR:** Once your network is exhausted, 30 filtered cold messages with a specific personalization per name put roughly one paid pilot in reach per batch - more as batches compound. Customers 11-20 come from cold outbound, not from launch events.
 
-> **Stop here if you have not exhausted your personal network.** This chapter covers cold outbound to strangers - it assumes you have already converted the people who know you through [Ch 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
+> **Stop here if you have not exhausted your personal network.** This chapter covers cold outbound to strangers - it assumes you have already converted the people who know you through [Lesson 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
 >
 > If you still have warm names in your network who fit your ICP (ideal customer profile - the specific buyer you're targeting), close them first. Cold outbound is harder, slower, and lower-converting than warm outreach.
 >
 > Reading this chapter before your network is dry is the most common sequencing mistake founders make in Module 5 - it feels like progress, but you are skipping the higher-converting path for the lower one. The chapter will still be here when your network is done.
 
-This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
+This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Lesson 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
 
 The 10 people you interviewed in Module 2 may or may not become customers, and outreach to them goes through the sales sequence below rather than the recruitment script.
 
@@ -85,10 +85,10 @@ The cold-outbound pipeline in one glance:
 
 1. **Filter** - LinkedIn Sales Navigator or Apollo.io. Pull 100-150 raw rows, strip to 30 clean names.
 2. **Personalize** - 60-90 seconds per name. Read the profile and the last post, find one specific reference.
-3. **Loom** - Same product Loom from [Chapter 5.4](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/). No re-record per prospect.
+3. **Loom** - Same product Loom from [Lesson 5.4](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/). No re-record per prospect.
 4. **Send** - LinkedIn DM or 4-line email. One personalized opener + the same body for everyone.
 5. **Calendly** - 15-min demo slot, auto-confirm. No back-and-forth scheduling.
-6. **Stripe** - DPA + deposit from [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Money on the table before you start work.
+6. **Stripe** - DPA + deposit from [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Money on the table before you start work.
 
 The five tools and their 2026 pricing:
 
@@ -129,7 +129,7 @@ A 10% reply rate on 30 messages is 3 replies. At 20% demo-to-paid, 3 demos lands
 
 ### Filter: getting to 30 high-fit names
 
-Apollo or Sales Navigator. Filter on the six dimensions you defined in [Chapter 2.3 · Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) (the same filter you saved as the `Module 5 cold seed` tab in your outreach spreadsheet): job title (the buyer or the user, pick one), company size (start one tight band), industry (one vertical first), geography (one timezone for callable demos), technology used (filter for tools your product replaces or integrates with), recent funding or hiring signal (companies with momentum reply faster).
+Apollo or Sales Navigator. Filter on the six dimensions you defined in [Lesson 2.3 · Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) (the same filter you saved as the `Module 5 cold seed` tab in your outreach spreadsheet): job title (the buyer or the user, pick one), company size (start one tight band), industry (one vertical first), geography (one timezone for callable demos), technology used (filter for tools your product replaces or integrates with), recent funding or hiring signal (companies with momentum reply faster).
 
 Pull 100-150 raw rows. Strip three categories before sending:
 
@@ -201,7 +201,7 @@ All three variants follow the same shape: a specific reference earns the open, o
 
 ![Six-stage outbound cadence: Stage 1 send 30 messages with 1-4 replies expected, Stage 2 run 3-5 demos with 2-3 DPAs sent, Stage 3 1-2 deposits cleared with pilot kickoffs scheduled, Stage 4 send next 20 and hold for reply tail, Stage 5 first Friday demos plus earlier prospects mature, Stage 6 year-one conversions plus next 20 cold names](stage-cadence.svg)
 
-Expect 3-8% replies on a realistic first batch - 1-2 replies per 30 messages - and treat 10-15% as what a tightly filtered, heavily personalized batch can reach: 3-4 replies, of which 1-2 agree to a 15-minute demo, of which one becomes a paid-pilot conversation. Of the pilots, the [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds.
+Expect 3-8% replies on a realistic first batch - 1-2 replies per 30 messages - and treat 10-15% as what a tightly filtered, heavily personalized batch can reach: 3-4 replies, of which 1-2 agree to a 15-minute demo, of which one becomes a paid-pilot conversation. Of the pilots, the [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds.
 
 The 30-message batch is not a one-time event. Run fresh 30-message batches until you have 20 customers. The second and third batches will outperform the first by 30-50% because you will have learned which reference patterns earn replies and which do not.
 
@@ -240,7 +240,7 @@ A 30-message batch with zero replies is rare and almost always indicates a filte
 
 | Step | Action | Output |
 |---|---|---|
-| **1** | Open your `Module 5 cold seed` tab from Ch 2.3-2.4 - the Apollo filter is already saved and 8-12 contacts may already be exported. Top up to 30-50 high-fit names using the same filter. Drop bottom 20 into a "later batch" tab in your Sheet. Pick one of three message variants and customize deposit + product description. | 30-50 target list built. Message template ready. |
+| **1** | Open your `Module 5 cold seed` tab from Lesson 2.3-2.4 - the Apollo filter is already saved and 8-12 contacts may already be exported. Top up to 30-50 high-fit names using the same filter. Drop bottom 20 into a "later batch" tab in your Sheet. Pick one of three message variants and customize deposit + product description. | 30-50 target list built. Message template ready. |
 | **2** | Spend 60-90 minutes personalizing the first 30 messages. One specific reference per prospect (recent post, hire milestone, role change). Send via LinkedIn DM or cold email tool ([Smartlead](https://smartlead.ai), [Instantly](https://instantly.ai)). | 30 messages sent. 1-4 replies expected. |
 | **3** | Tally replies once they settle. Book demos. Follow up with non-responders once only. | 2-4 demo calls booked. Next batch ready. |
 

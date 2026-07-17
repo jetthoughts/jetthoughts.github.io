@@ -126,33 +126,33 @@ The five words above are dev-shop jargon - vocabulary you'll hit in Modules 4-5 
 
 | Acronym | Plain English | Where it shows up |
 |---|---|---|
-| **ICP** | Ideal Customer Profile - the specific kind of person your hypothesis names | Ch 1.1, 2.3 |
-| **JTBD** | Jobs To Be Done - what a customer "hires" your product to do (instead of feature list) | Ch 3.1, 3.2 |
-| **PMF** | Product-Market Fit - the survey question "would you be very disappointed if you could no longer use this?" 40%+ "very disappointed" = signal | Ch 5.1 |
-| **NPS** | Net Promoter Score - "how likely are you to recommend us?" 0-10 scale; less useful at idea stage than PMF | Ch 5.1 sidebar |
-| **Retention** | What % of users come back next week / next month - the only metric that proves the product solves a real problem | Ch 5.1 |
-| **Wizard of Oz** | A no-code pattern - customer thinks software is running, but you do the work by hand behind the scenes to test demand before building | Ch 4.3 Concierge MVP |
+| **ICP** | Ideal Customer Profile - the specific kind of person your hypothesis names | Lesson 1.1, 2.3 |
+| **JTBD** | Jobs To Be Done - what a customer "hires" your product to do (instead of feature list) | Lesson 3.1, 3.2 |
+| **PMF** | Product-Market Fit - the survey question "would you be very disappointed if you could no longer use this?" 40%+ "very disappointed" = signal | Lesson 5.1 |
+| **NPS** | Net Promoter Score - "how likely are you to recommend us?" 0-10 scale; less useful at idea stage than PMF | Lesson 5.1 sidebar |
+| **Retention** | What % of users come back next week / next month - the only metric that proves the product solves a real problem | Lesson 5.1 |
+| **Wizard of Oz** | A no-code pattern - customer thinks software is running, but you do the work by hand behind the scenes to test demand before building | Lesson 4.3 Concierge MVP |
 
 **Money & market words** - the numbers that decide whether it is a business:
 
 | Acronym | Plain English | Where it shows up |
 |---|---|---|
-| **MRR** / **ARR** | Monthly / Annual Recurring Revenue - what one customer pays per month or year | Ch 1.1, 5.6 |
-| **ACV** | Annual Contract Value - what one customer pays in year one (deposit math is 10-30% of ACV) | Ch 5.6 |
-| **CAC** / **LTV** | Customer Acquisition Cost / Lifetime Value - what you spend to land one customer vs what they pay you over their lifetime | Ch 5.2, 5.6 |
-| **Unit economics** | Revenue per customer minus cost to serve per customer - whether the math works at scale | Ch 1.1 Money lens |
-| **Runway** | Months of cash until you must show paying customers or close the company | Ch 4.1 Q3 |
+| **MRR** / **ARR** | Monthly / Annual Recurring Revenue - what one customer pays per month or year | Lesson 1.1, 5.6 |
+| **ACV** | Annual Contract Value - what one customer pays in year one (deposit math is 10-30% of ACV) | Lesson 5.6 |
+| **CAC** / **LTV** | Customer Acquisition Cost / Lifetime Value - what you spend to land one customer vs what they pay you over their lifetime | Lesson 5.2, 5.6 |
+| **Unit economics** | Revenue per customer minus cost to serve per customer - whether the math works at scale | Lesson 1.1 Money lens |
+| **Runway** | Months of cash until you must show paying customers or close the company | Lesson 4.1 Q3 |
 | **TAM** / **SAM** / **SOM** | Total / Serviceable / Serviceable-Obtainable Market - investor-pitch math, not builder math | _index pitch sections only |
 
 **Strategy, deal & tool words** - the frameworks, contracts, and tools you touch:
 
 | Acronym | Plain English | Where it shows up |
 |---|---|---|
-| **SWOT / PESTEL / Porter's Five Forces** | Three classic strategy-school checklists - VenturusAI runs all three on your hypothesis | Ch 1.1 sidebar |
-| **Pixel** | A small JavaScript tracking snippet from an ad platform (Meta/LinkedIn/Reddit) - paste it on your page and the platform learns who converted | Ch 1.3 |
-| **DPA** | Design Partner Agreement - a one-page contract where a customer pays a deposit to test your product as a co-design partner | Ch 5.6 |
+| **SWOT / PESTEL / Porter's Five Forces** | Three classic strategy-school checklists - VenturusAI runs all three on your hypothesis | Lesson 1.1 sidebar |
+| **Pixel** | A small JavaScript tracking snippet from an ad platform (Meta/LinkedIn/Reddit) - paste it on your page and the platform learns who converted | Lesson 1.3 |
+| **DPA** | Design Partner Agreement - a one-page contract where a customer pays a deposit to test your product as a co-design partner | Lesson 5.6 |
 | **SOW** | Statement of Work - the contract that defines what an agency is paid to deliver | _index, rescue chapters |
-| **PRD** / **Vibe PRD** | Product Requirements Document - the "Vibe" version is a one-pager an AI builder can act on, not a 30-page spec | Ch 3.1 |
+| **PRD** / **Vibe PRD** | Product Requirements Document - the "Vibe" version is a one-pager an AI builder can act on, not a 30-page spec | Lesson 3.1 |
 
 ## What to do tomorrow
 

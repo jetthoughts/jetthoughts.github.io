@@ -1,7 +1,7 @@
 ---
 title: "3.2 · Quality-check your brief: features to outcomes"
 aliases: ["/blog/stop-specifying-features-start-outcomes/"]
-description: "Chapter 3.2 of the From Idea to First Paying Customer course. The quality-gate on your Chapter 3.1 brief: rewrite Section 3 feature nouns as outcome-shaped job stories before handing off to Lovable or a contractor."
+description: "Lesson 3.2 of the From Idea to First Paying Customer course. The quality-gate on your Lesson 3.1 brief: rewrite Section 3 feature nouns as outcome-shaped job stories before handing off to Lovable or a contractor."
 date: 2026-05-18
 draft: false
 course_chapter: true
@@ -23,7 +23,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "3.2 · Quality-check your brief: features to outcomes"
-  og_description: "Chapter 3.2 of the From Idea to First Paying Customer course. The quality-gate on your Chapter 3.1 brief: rewrite Section 3 feature nouns as outcome-shaped job stories before handing off to Lovable or a contractor."
+  og_description: "Lesson 3.2 of the From Idea to First Paying Customer course. The quality-gate on your Lesson 3.1 brief: rewrite Section 3 feature nouns as outcome-shaped job stories before handing off to Lovable or a contractor."
 cover_image_alt: "JetThoughts cover showing a simple three-button admin panel on the left and a 47-button spaceship control deck on the right, connected by a wavy red arrow labeled '10-week build, $15K'"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/"
 related_posts: false
@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 3 · Lesson 3.2 · [CORE] - the quality gate on your 3.1 brief** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a one-page Product Brief (from [Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/))
+> **Input:** a one-page Product Brief (from [Lesson 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/))
 >
 > **Output:** a one-page Product Brief rewritten so engineers and AI agents stop overengineering
 >
@@ -39,7 +39,7 @@ related_posts: false
 
 > **TL;DR:** Rewrite every feature noun as an outcome-shaped job story. "Build a CSV export" (CSV = a plain spreadsheet file people open in Excel) becomes "When I prepare the weekly report, I want to grab the top 5 metrics in 30 seconds." The engineer has nothing left to invent.
 
-*Skip to the action: [What to do tomorrow](#what-to-do-tomorrow) if you have your Ch 3.1 brief open and want the rewrite steps now, or jump ahead to [Artifacts you carry out of Module 3](#artifacts-you-carry-out-of-module-3). The examples and the theory will still be here.*
+*Skip to the action: [What to do tomorrow](#what-to-do-tomorrow) if you have your Lesson 3.1 brief open and want the rewrite steps now, or jump ahead to [Artifacts you carry out of Module 3](#artifacts-you-carry-out-of-module-3). The examples and the theory will still be here.*
 
 You sent your engineer (or your AI agent) a one-line spec: *"build a simple admin panel."* Ten weeks later you have an admin panel with 47 buttons, role-based permissions, an audit log, and a co-pilot AI assistant. Your engineer isn't a show-off - those four words "a simple admin panel" don't tell anyone what "simple" means, who's using the panel, or what the panel needs to do. The engineer (or the training data) filled in those blanks from every big-company SaaS panel they had ever seen.
 
@@ -102,7 +102,7 @@ The same request, written both ways, priced out:
 
 Three actions, in order.
 
-- **Open your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1.** Find Section 3 ("What you're building"). Read the section out loud. If any sentence leans on a noun-shaped feature ("a CSV button," "a CRM," "user roles," "a settings page"), it is feature-shaped. Mark it.
+- **Open your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Lesson 3.1.** Find Section 3 ("What you're building"). Read the section out loud. If any sentence leans on a noun-shaped feature ("a CSV button," "a CRM," "user roles," "a settings page"), it is feature-shaped. Mark it.
 - **Rewrite each marked sentence in the *When / I want / So I can* shape.** The *when* has to name a specific moment with a deadline, the *I want* has to name a verb and a budget, and the *so I can* has to name a result you can measure that week. Keep the whole section to a single focused pass. If you spill, the section is too big - your one-page brief is trying to be three.
 - **Share the rewritten section with your engineer or your AI agent and ask exactly one question**: *"What would you build differently from this brief than you would have built from the feature list?"* Their first answer is the scope you were about to lose. Their second answer is the scope you are about to keep.
 
@@ -133,21 +133,21 @@ Three actions, in order.
 
 The cheap fix for this whole pattern is the rewrite tomorrow morning. The expensive fix is the salvage decision you read after the spaceship lands and investors ask why the demo is so heavy. One focused pass with a marker now spares you the build-and-throwaway later.
 
-**Optional: stack-rank features with real users.** After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. If you need to know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, not rate everything "very important." Paste your 5-7 outcome statements, send the link to your Ch 2.3-2.4 interviewees, and the forced-choice format surfaces real priorities that a 1-10 rating scale hides. The output is a ranked list backed by pairwise win rates, not averaged scores. Use this before handing the brief to Lovable or a contractor - it prevents the "build everything because everything scored 8/10" trap.
+**Optional: stack-rank features with real users.** After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. If you need to know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, not rate everything "very important." Paste your 5-7 outcome statements, send the link to your Lesson 2.3-2.4 interviewees, and the forced-choice format surfaces real priorities that a 1-10 rating scale hides. The output is a ranked list backed by pairwise win rates, not averaged scores. Use this before handing the brief to Lovable or a contractor - it prevents the "build everything because everything scored 8/10" trap.
 
 ## Artifacts you carry out of Module 3
 
-After finishing Ch 3.1-3.2, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
+After finishing Lesson 3.1-3.2, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
 
 | Artifact | Where it goes next |
 |---|---|
-| **One-Page Product Brief / Vibe PRD** (Ch 3.1 output) | Ch 4.1 build-path decision (the brief is the input the worksheet routes against) + Ch 4.3-4.4 Lovable kickoff prompt. The single source of truth Module 4 builds from. |
-| **Outcome-shaped feature list** (Ch 3.2 rewrite of Section 3 in Job Story format) | Ch 4.1 contractor SOW (Statement of Work - the document that tells a contractor exactly what to build) if you route to hire + Ch 4.3-4.4 Lovable prompt body. Replaces the noun-shaped feature list that causes overbuild. |
-| **No-Go list** (5-8 items you explicitly cut from Ch 3.1 Section 5) | Ch 4.3-4.4 self-serve scope guard + Ch 4.5 ceiling-signal monitoring. The written "we are not building this yet" line that prevents Module 4 scope creep. |
-| **Audience-of-one fork** (the audience choice from Ch 3.1: AI agent / junior dev / senior team) | Ch 4.1 Q2 build-path routing. The fork decides whether the brief routes to Lovable (AI agent) or a contractor (junior or senior team). |
-| **Quality-check verdict** (Ch 3.2 - peer answers "what would you build differently?" cleanly?) | Checkpoint before Module 4. If the peer cannot answer cleanly, return to Ch 3.2 and rewrite Section 3 before opening Lovable or sending the SOW. |
+| **One-Page Product Brief / Vibe PRD** (Lesson 3.1 output) | Lesson 4.1 build-path decision (the brief is the input the worksheet routes against) + Lesson 4.3-4.4 Lovable kickoff prompt. The single source of truth Module 4 builds from. |
+| **Outcome-shaped feature list** (Lesson 3.2 rewrite of Section 3 in Job Story format) | Lesson 4.1 contractor SOW (Statement of Work - the document that tells a contractor exactly what to build) if you route to hire + Lesson 4.3-4.4 Lovable prompt body. Replaces the noun-shaped feature list that causes overbuild. |
+| **No-Go list** (5-8 items you explicitly cut from Lesson 3.1 Section 5) | Lesson 4.3-4.4 self-serve scope guard + Lesson 4.5 ceiling-signal monitoring. The written "we are not building this yet" line that prevents Module 4 scope creep. |
+| **Audience-of-one fork** (the audience choice from Lesson 3.1: AI agent / junior dev / senior team) | Lesson 4.1 Q2 build-path routing. The fork decides whether the brief routes to Lovable (AI agent) or a contractor (junior or senior team). |
+| **Quality-check verdict** (Lesson 3.2 - peer answers "what would you build differently?" cleanly?) | Checkpoint before Module 4. If the peer cannot answer cleanly, return to Lesson 3.2 and rewrite Section 3 before opening Lovable or sending the SOW. |
 
-> **Module 3 closes here.** Before opening Module 4, you should have: (1) a one-page Product Brief (Vibe PRD) with 5 sections filled in (Ch 3.1), (2) Section 3 rewritten as outcome-shaped job stories that pass the peer "what would you build differently?" test (this chapter), and (3) a no-go list of 5-8 items you explicitly cut. Both in your `Founder OS` folder. Missing one? Go back - Module 4 reads the brief into Lovable prompts; a half-written brief produces a half-working MVP.
+> **Module 3 closes here.** Before opening Module 4, you should have: (1) a one-page Product Brief (Vibe PRD) with 5 sections filled in (Lesson 3.1), (2) Section 3 rewritten as outcome-shaped job stories that pass the peer "what would you build differently?" test (this chapter), and (3) a no-go list of 5-8 items you explicitly cut. Both in your `Founder OS` folder. Missing one? Go back - Module 4 reads the brief into Lovable prompts; a half-written brief produces a half-working MVP.
 
 When your brief skips the moment, the action, and the result, the engineer or the AI agent fills them in from training data. Name all three in every line of Section 3, and the builder builds only what you asked for.
 

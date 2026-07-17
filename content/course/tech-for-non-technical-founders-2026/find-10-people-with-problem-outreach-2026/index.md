@@ -1,7 +1,7 @@
 ---
 title: "2.4 · Find 10 People: What to Say"
 aliases: ["/blog/find-10-people-with-problem-outreach-2026/"]
-description: "The message templates that book 10 customer interviews. 3-message sequence, volume targets, research panel fallback. Part 2 of Chapter 2.3."
+description: "The message templates that book 10 customer interviews. 3-message sequence, volume targets, research panel fallback. Part 2 of Lesson 2.3."
 date: 2026-05-18
 draft: false
 course_chapter: true
@@ -33,17 +33,17 @@ related_posts: false
 >
 > **Input:** a 30-name list from [Part 1: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - specific people you can name because you read what they posted
 >
-> **Output:** 10 interview calls booked and the first outreach batch sent - you'll run the calls with the Ch 2.1 script, then score them in Ch 2.5
+> **Output:** 10 interview calls booked and the first outreach batch sent - you'll run the calls with the Lesson 2.1 script, then score them in Lesson 2.5
 >
 > **Progress:** M2 · 4 of 6 · Results so far: question list + 30-name prospect list
 
 > **TL;DR:** Send 30 staggered messages referencing specific posts you read, using a 3-message sequence (Day 0 intro + Day 3 bump + Day 7 close). Reply rate runs 20-30% when each message names a specific post; 1-5% when it doesn't. Plan to extend the list once or twice before all 10 calls are booked.
 
-> **Read [Chapter 2.3 - Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) first.** It covers the ICP mapping, reading threads, and building the 30-name list. You need that list before the templates below will work - generic openers collapse to 1-5% reply rates.
+> **Read [Lesson 2.3 - Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) first.** It covers the ICP mapping, reading threads, and building the 30-name list. You need that list before the templates below will work - generic openers collapse to 1-5% reply rates.
 
-> **How this chapter relates to Ch 2.6:** this chapter recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Ch 2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel. Run Ch 2.3-2.4 first to validate THE PROBLEM, then Ch 2.6 to validate THE SOLUTION SHAPE.
+> **How this chapter relates to Lesson 2.6:** this chapter recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Lesson 2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel. Run Lesson 2.3-2.4 first to validate THE PROBLEM, then Lesson 2.6 to validate THE SOLUTION SHAPE.
 
-This is interview recruitment, not sales. You're asking for time and insight, not money - different message template, different channels, different reciprocity. Don't use the Chapter 5.7 cold-email script here; it scares interview subjects who don't yet know you have a product.
+This is interview recruitment, not sales. You're asking for time and insight, not money - different message template, different channels, different reciprocity. Don't use the Lesson 5.7 cold-email script here; it scares interview subjects who don't yet know you have a product.
 
 After this lesson you will be able to: **send outreach that names something the person actually wrote - and book 10 interviews from your 30-name list.**
 
@@ -138,7 +138,7 @@ Everything up to here costs $0 - Gmail and the 30-name list you built in Part 1.
 
 ### The parallel smoke-test landing page
 
-While the cold-outreach path books the calls, the smoke-test landing page from [Chapter 1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (built in [1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)) measures whether strangers will give you their email for the thing you described. Run it in parallel and drop the URL into your messages - it doubles as the warmest opener:
+While the cold-outreach path books the calls, the smoke-test landing page from [Lesson 1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (built in [1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)) measures whether strangers will give you their email for the thing you described. Run it in parallel and drop the URL into your messages - it doubles as the warmest opener:
 
 > "You signed up for the waitlist on [page] last Tuesday - up for a 20-minute call?"
 
@@ -150,11 +150,11 @@ flowchart TD
     A(["Start a focused block. 30-name list from Part 1."])
     A --> B[Cold outreach track: 30 messages by hand]
     A --> C[Research-panel track: only if cold can't reach the ICP]
-    A --> D[Smoke-test track: landing page from Chapter 1.2 + 1.3]
+    A --> D[Smoke-test track: landing page from Lesson 1.2 + 1.3]
     B --> E[10 interviews booked]
     C --> E
     D --> E
-    E --> F[Apply Mom Test script from Chapter 2.1]
+    E --> F[Apply Mom Test script from Lesson 2.1]
 
     classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
     classDef track fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
@@ -186,17 +186,17 @@ The [Outreach Sequence Template](/course/tech-for-non-technical-founders-2026/ou
 
 This chapter's output is 10 booked interviewees. Running them, scoring them, and turning them into the validated problem statement that Module 3 needs is the linear sequence below.
 
-> **You are now ready to run the interviews using Ch 2.1's 5-question script.** Open Ch 2.1 on a second tab and scroll to the scoring rubric. Then move to [Mom Test Synthesis: Build, Pivot, or Kill](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) once all 10 transcripts are scored.
+> **You are now ready to run the interviews using Lesson 2.1's 5-question script.** Open Lesson 2.1 on a second tab and scroll to the scoring rubric. Then move to [Mom Test Synthesis: Build, Pivot, or Kill](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) once all 10 transcripts are scored.
 
 The chain of artifacts the booked calls produce:
 
-1. **Run each interview using the Ch 2.1 5-question Mom Test technique.** Open the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) artifact on a second monitor; read the 5 questions verbatim. Plan 20-30 minutes per call.
-2. **Score each call 1-10 within 5 minutes of hanging up** per the Ch 2.1 scoring rubric. Write the score before opening the next browser tab.
+1. **Run each interview using the Lesson 2.1 5-question Mom Test technique.** Open the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) artifact on a second monitor; read the 5 questions verbatim. Plan 20-30 minutes per call.
+2. **Score each call 1-10 within 5 minutes of hanging up** per the Lesson 2.1 scoring rubric. Write the score before opening the next browser tab.
 3. **After all 10 calls are done, fill the [Validated Problem Statement template](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/)** using the [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) page.
-4. **Pick the 5 strongest-signal interviewees** (Mom Test score ≥ 7) for Ch 2.6 prototype sessions.
+4. **Pick the 5 strongest-signal interviewees** (Mom Test score ≥ 7) for Lesson 2.6 prototype sessions.
 5. **Two artifacts now flow into Module 3 + later modules:**
-   - The Validated Problem Statement (Section 1 of the Ch 3.1 one-page brief, lifted verbatim)
-   - The 5 strongest-signal interviewees (Ch 2.6 input - and later, your Module 5 onramp invitees in Ch 4.3-4.4, plus your warm-list seed in Ch 5.3)
+   - The Validated Problem Statement (Section 1 of the Lesson 3.1 one-page brief, lifted verbatim)
+   - The 5 strongest-signal interviewees (Lesson 2.6 input - and later, your Module 5 onramp invitees in Lesson 4.3-4.4, plus your warm-list seed in Lesson 5.3)
 
 If fewer than 7 of 10 calls score ≥ 7, the problem is too weak for this ICP. Re-evaluate the ICP, the problem framing, or the question wording before booking another 10 calls. The full kill / iterate / proceed decision lives in the [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) page.
 

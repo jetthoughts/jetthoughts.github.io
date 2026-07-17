@@ -26,7 +26,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-Template companion to [Chapter 4.3 · The Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) and [4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/). Print it, pin it by your monitor, and work one session at a time.
+Template companion to [Lesson 4.3 · The Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) and [4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/). Print it, pin it by your monitor, and work one session at a time.
 
 *Session-by-session tasks for shipping the Lovable + Supabase + Stripe MVP. Cross off as you go.*
 
@@ -394,9 +394,9 @@ The bad pattern ships an MVP where any user with the right URL pattern can fake 
 - **If 1+ paid signups**: continue. The hypothesis is alive. Build the second feature next, using the same one-feature-per-month rhythm. Re-read the [three-questions standup chapter](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/) for the weekly oversight rhythm once you bring in a contractor.
 - **If 0 paid signups but 3+ signups**: the product clicks but the price or the paywall is wrong. Run two A/B tests next: lower price ($19 vs $29), and earlier paywall (paid from day 1 vs 14-day trial). Pick the winner. Re-send to 5 new ICP prospects.
 - **If 0 signups**: the cold message and the landing screen are both wrong, OR the [Module 2](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) validation was a false positive. Re-read your Mom Test transcripts. Are the buyers who said "yes I'd pay" the same buyers ignoring your cold message? If yes, the validation was polite, not real. Loop back to Module 2 for ten more interviews before you build feature two.
-- **Watch for the architectural ceiling**: when two of the [5 ceiling signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) keep firing for 4+ weeks (covered in detail in Chapter 4.5), plan the route to the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). The shed does not collapse overnight; finish the build phase you are in, then plan the route rather than panicking mid-ship.
+- **Watch for the architectural ceiling**: when two of the [5 ceiling signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) keep firing for 4+ weeks (covered in detail in Lesson 4.5), plan the route to the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). The shed does not collapse overnight; finish the build phase you are in, then plan the route rather than panicking mid-ship.
 
-If you want the doctrine in long form, [Chapter 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) walks through what each tool does, the role boundaries, the cost reality, and the architectural ceiling preview.
+If you want the doctrine in long form, [Lesson 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) walks through what each tool does, the role boundaries, the cost reality, and the architectural ceiling preview.
 
 ## Appendix - reference code
 

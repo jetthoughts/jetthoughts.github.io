@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 4 · Lesson 4.2 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a build-path decision from Chapter 4.1 (self-serve or hire)
+> **Input:** a build-path decision from Lesson 4.1 (self-serve or hire)
 >
 > **Output:** a Day-1 audit confirming you own your code, cloud, and domain before the build starts (or a recovery plan if you don't)
 >
@@ -39,7 +39,7 @@ related_posts: false
 
 > **TL;DR:** Before you hire anyone, run this 12-item audit. It takes 45 minutes. If you skip it, the story below is how it ends: the founder who spent 14 months before discovering the AWS root password was in someone else's Gmail.
 
-> **If you signed up for Lovable + Supabase + Stripe yourself (the default Path 2 from Ch 4.1), here is your 5-minute self-check** - the rest of this chapter applies the day you hire a contractor:
+> **If you signed up for Lovable + Supabase + Stripe yourself (the default Path 2 from Lesson 4.1), here is your 5-minute self-check** - the rest of this chapter applies the day you hire a contractor:
 >
 > 1. **GitHub**: account in your name, your email, your password manager. (If you used Lovable's "sign in with Google," your Google account IS the GitHub owner. Confirm.)
 > 2. **Lovable + Supabase + Stripe**: signed up with your personal email, billed to your card. (Not a co-founder's, not a friend's.)

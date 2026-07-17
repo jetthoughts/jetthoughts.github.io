@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 5 · Lesson 5.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live MVP + 10-30 users who touched it. **Don't have 10-30 yet?** Invite your Module 2 Mom Test interviewees + your [1.4 smoke-test email list](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (typically 15-50 signups) to your staging URL as the warm seed. If under 10 users still touched it, run [Ch 2.4 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for 10 more before re-attempting this survey.
+> **Input:** a live MVP + 10-30 users who touched it. **Don't have 10-30 yet?** Invite your Module 2 Mom Test interviewees + your [1.4 smoke-test email list](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (typically 15-50 signups) to your staging URL as the warm seed. If under 10 users still touched it, run [Lesson 2.4 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for 10 more before re-attempting this survey.
 >
 > **Output:** a written must-have-user persona with 3 verbatim quotes and one named segment to target
 >
@@ -144,7 +144,7 @@ flowchart TD
     A[Run the 5-question survey] --> B[Overall must-have %]
     B -->|Under 25%&nbsp;| C[Stop. Product problem.<br/>Talk to 5 'very disappointed' users.<br/>Find what you missed.]
     B -->|25-40%&nbsp;&nbsp;| D[Any segment over 40%?]
-    B -->|Over 40%&nbsp;| E[You have a must-have user.<br/>Chapter 5.3 outreach starts here.]
+    B -->|Over 40%&nbsp;| E[You have a must-have user.<br/>Lesson 5.3 outreach starts here.]
     D -->|Yes| F[Target that segment.<br/>Rebuild the persona on those quotes.]
     D -->|No| G[Refine the product first.<br/>Re-run after the next release.]
     classDef redbox fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
@@ -169,16 +169,16 @@ Under 40% means you have a product problem, not a marketing problem, and the Q2-
 
 | Pattern | Diagnostic | Fix | Re-entry point |
 |---|---|---|---|
-| **You built for the wrong segment** | The product works, but the people you onboarded do not have the pain. Your Q5 slice shows: one segment is at 55%, the rest are at 5%. | Stop selling to the audience and start selling to the segment. | [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) personal-network outreach to the right segment. |
+| **You built for the wrong segment** | The product works, but the people you onboarded do not have the pain. Your Q5 slice shows: one segment is at 55%, the rest are at 5%. | Stop selling to the audience and start selling to the segment. | [Lesson 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) personal-network outreach to the right segment. |
 | **You built the right thing, but it is not finished** | The Q3 verbatims are hedged ("it is nice to have," "I would use it if it had X"). The main benefit answers lack conviction. | Go back into the build and finish the thing. | Schedule a [Friday demo](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) with the next release. |
-| **The pain is real, but your product is not the relief** | The Q4 verbatims name a workaround that is already 80% of the job (a spreadsheet, an existing tool, a person they pay). | Either niche into the 20% the workaround does not cover, or pivot. | [Chapter 2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) validated-problem statement. |
+| **The pain is real, but your product is not the relief** | The Q4 verbatims name a workaround that is already 80% of the job (a spreadsheet, an existing tool, a person they pay). | Either niche into the 20% the workaround does not cover, or pivot. | [Lesson 2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) validated-problem statement. |
 | **The product solves the pain, but the workflow is too long** | Users say "very disappointed" but session logs show they bailed before the payoff. Funnel collapses between signup and the "30-minute save" moment. | UX cut, not a strategy pivot. Shorten the path to the first win. | Retest after shortening the funnel; re-run the 40% test after the next UX release. |
 
 ## When founders should skip the test
 
 | Condition | What to do instead |
 |---|---|
-| **Under 10 users** | Run [Chapter 2.4 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (with the list-building method from [2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) if you don't already have a 30-name list) and book 10 more user calls before re-attempting the test. The test requires 10-30 users who actually touched the MVP to be meaningful. |
+| **Under 10 users** | Run [Lesson 2.4 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (with the list-building method from [2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) if you don't already have a 30-name list) and book 10 more user calls before re-attempting the test. The test requires 10-30 users who actually touched the MVP to be meaningful. |
 | **Pre-launch** | Use the [Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) instead. The 40% test asks "if you could no longer use the product" - if the user never used it, the answer is meaningless. |
 
 ## Advanced (optional)
@@ -198,8 +198,8 @@ Under 40% means you have a product problem, not a marketing problem, and the Q2-
 | **1** | Export your users CSV. Strip the friends-and-family and the never-returned users. Open Typeform or Tally. Type the five questions verbatim. | Typeform/Tally survey ready to send |
 | **2** | Send the email to the list. Subject: *"Quick 90-second question about [product]"*. Re-send a few days later to non-openers. | 30-50% response rate expected |
 | **3** | Export the responses CSV. Compute overall must-have % and per-segment must-have % (by job title and company size). | One-page scorekeeping: headline %, top segment %, three verbatim quotes |
-| **4** | Paste three Q2-Q3 verbatims from your top segment into a Google Doc. Review which segment hit 40%+ (or if none did). | Persona writeup ready for Chapter 5.3 or decision on pivot |
-| **5** | If above 40% in any segment, move to [Chapter 5.3 personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). If below 40% across all segments, book five "very disappointed" user calls and re-read [Chapter 2.1 Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). | Decision made; next chapter unlocked OR product refinement scheduled |
+| **4** | Paste three Q2-Q3 verbatims from your top segment into a Google Doc. Review which segment hit 40%+ (or if none did). | Persona writeup ready for Lesson 5.3 or decision on pivot |
+| **5** | If above 40% in any segment, move to [Lesson 5.3 personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). If below 40% across all segments, book five "very disappointed" user calls and re-read [Lesson 2.1 Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). | Decision made; next chapter unlocked OR product refinement scheduled |
 
 The full survey template (the 5 questions in a Typeform-import-ready format, the per-segment scoring spreadsheet, and the persona-writeup template) ships in [the First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).
 
@@ -220,7 +220,7 @@ Treat the answer as a stop sign rather than a market-research instrument. Under 
 >
 > **Next:** the core path continues at [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - it turns the named segment into the first 50 people you will message. If you are not sure where your buyers actually spend their time, read the optional [5.2 · channel selection](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/) first.
 >
-> **If blocked:** if under 10 users responded, your sample is too small to read. Book 5-10 more user sessions using the Ch 2.3-2.4 outreach playbook and re-run the survey.
+> **If blocked:** if under 10 users responded, your sample is too small to read. Book 5-10 more user sessions using the Lesson 2.3-2.4 outreach playbook and re-run the survey.
 
 ---
 

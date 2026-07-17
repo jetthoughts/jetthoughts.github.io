@@ -92,7 +92,7 @@ Skip the lessons marked "optional" on the [course landing page](/course/tech-for
 
 ---
 
-> **Start here:** [Chapter 1.1 - Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
+> **Start here:** [Lesson 1.1 - Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 
 ---
 

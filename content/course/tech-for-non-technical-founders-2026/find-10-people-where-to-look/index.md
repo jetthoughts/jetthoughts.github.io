@@ -31,13 +31,13 @@ related_posts: false
 
 > **Module 2 · Lesson 2.3 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a hypothesis you suspect is real (from Ch 1.1) + a sharpened Mom Test question list (built in Ch 2.1, polished in Ch 2.2)
+> **Input:** a hypothesis you suspect is real (from Lesson 1.1) + a sharpened Mom Test question list (built in Lesson 2.1, polished in Lesson 2.2)
 >
-> **Output:** a 30-name list of specific people you can name because you read what they wrote, ready for the outreach templates in [Ch 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
+> **Output:** a 30-name list of specific people you can name because you read what they wrote, ready for the outreach templates in [Lesson 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
 >
 > **Progress:** M2 · 3 of 6 · Results so far: question list ready to run
 
-> **TL;DR (Part 1 of 2):** Expand your one-sentence hypothesis from Ch 1.1 into three sentences (a short step below), paste them into Claude, and get back the ICP profile (ICP = Ideal Customer Profile - the specific kind of person your hypothesis's [customer] blank names) + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
+> **TL;DR (Part 1 of 2):** Expand your one-sentence hypothesis from Lesson 1.1 into three sentences (a short step below), paste them into Claude, and get back the ICP profile (ICP = Ideal Customer Profile - the specific kind of person your hypothesis's [customer] blank names) + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
 
 The instinctive first move is "I'll just message my LinkedIn network." Sixty polite DMs over a week tend to produce 3 calls - two old colleagues showing up to be nice, one real lead who ghosts on reschedule.
 
@@ -47,7 +47,7 @@ After this lesson you will be able to: **build a 30-name list of specific people
 
 The full journey, top to bottom:
 
-![The find-10 journey as a left-to-right strip of six cards: your hypothesis from Chapter 1.1, then four numbered steps - step 1 AI ICP map paste into Claude, step 2 read where they complain, step 3 build the 30-name list, step 4 write each one personally - ending in 10 interviews booked on the calendar.](find10-journey.svg)
+![The find-10 journey as a left-to-right strip of six cards: your hypothesis from Lesson 1.1, then four numbered steps - step 1 AI ICP map paste into Claude, step 2 read where they complain, step 3 build the 30-name list, step 4 write each one personally - ending in 10 interviews booked on the calendar.](find10-journey.svg)
 
 1. **Translate the hypothesis into an ICP map** - paste your three sentences and two competitor URLs into Claude or ChatGPT.
 2. **Read where they're already complaining** - work through the channels the AI proposed. Note 30 sentences in their real words.
@@ -55,7 +55,7 @@ The full journey, top to bottom:
 4. **Write to each one** using the templates in [Part 2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 5. **10 interview calls on the calendar.**
 
-> **Calendar reality + smoke-test gate before you start.** Full-time founder typically books 10 interviews across 2-4 calendar weeks; evening-only founder (2-4 hr/week) typically needs 6-8 calendar weeks - plan around the longer version. Your Ch 1.2-1.4 smoke test should have cleared roughly 6%+ email conversion (the "Promising" band) or 5%+ Stripe-click on the Ch 1.5 price-button variant. 3-6% is the "iterate the message" zone, not a green light. Below 3% means you have a demand-side problem - go back to [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank before booking interviews.
+> **Calendar reality + smoke-test gate before you start.** Full-time founder typically books 10 interviews across 2-4 calendar weeks; evening-only founder (2-4 hr/week) typically needs 6-8 calendar weeks - plan around the longer version. Your Lesson 1.2-1.4 smoke test should have cleared roughly 6%+ email conversion (the "Promising" band) or 5%+ Stripe-click on the Lesson 1.5 price-button variant. 3-6% is the "iterate the message" zone, not a green light. Below 3% means you have a demand-side problem - go back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank before booking interviews.
 
 This page covers steps 1-3. Part 2 covers steps 4-5. One time-box before you start: if you catch yourself on day three still polishing the list instead of moving to outreach, stop - the list is a means to 10 conversations, and 25 good rows now beat 30 perfect rows next week.
 
@@ -69,7 +69,7 @@ These are not new homework - they are your 1.1 Founding Hypothesis blanks, unpac
 | **Business (one sentence)** | The one line your hypothesis doesn't carry: what kind of business are *you* building? B2B SaaS, B2B services, B2C app, marketplace. Free or paid. Self-serve or sales-led. | Bad: "a SaaS tool"<br/>Good: "B2B SaaS, self-serve, $29-49/month annual billing" |
 | **Solution (one sentence)** | Your `[approach]` blank, rewritten as the change it makes. You won't pitch this in calls, but you need it written down to know which conversations confirm or kill it. | Bad: "a tool that automates invoicing"<br/>Good: "I think a one-click invoice export to Stripe and Wave saves the office manager 90 minutes every Friday" |
 
-If you can't write all three on a single napkin, do that first. The deeper version of these three lines is the [one-page Product Brief in Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/).
+If you can't write all three on a single napkin, do that first.
 
 ## How to find 10 people who actually have this problem
 
@@ -89,7 +89,9 @@ My hypothesis (3 sentences):
 - Business: [paste your business sentence]
 - Solution: [paste your solution sentence]
 
-Two competitors or adjacent products serving a similar customer:
+Two competitors or adjacent products serving a similar customer
+(start from the `[competition]` blank in your 1.1 hypothesis - what
+your customer uses today):
 - [competitor 1 URL]
 - [competitor 2 URL]
 
@@ -109,6 +111,8 @@ What you get back: the channels you'll read next and the search strings you'll u
 If your hypothesis is consumer-facing, swap "Slack/Discord" for "TikTok hashtags, Instagram comments, YouTube comment threads, and product subreddits."
 
 ### Read where they're already complaining
+
+Ran the research prompt back in [Lesson 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)? Then you've skimmed these places once already - but that pass collected *phrases* for your landing page. This pass collects the *named people* behind the complaints: every quote you keep now comes with a username and a URL, because these are the people you'll message in 2.4. Start with the threads Perplexity already found for you.
 
 Read before you write a single message. You're looking for the exact words people use when their problem flares up - those words become your subject lines when you write the cold messages in Part 2.
 
@@ -150,7 +154,7 @@ Aim for 30 hand-picked people in one focused sitting.
 
 If you run out of named posters before you hit 30, [Apollo](https://apollo.io)'s free tier (credit-based, no credit card - a small monthly allowance of email and export credits) lets you filter on role + industry + company size and export the rest (the monthly export allowance is small, so this fills the gap over several weeks, not one sitting). Treat it as backfill, not the source - the hand-picked names always perform better.
 
-> **Save the Apollo filter and whatever contacts your monthly export credits cover (a small monthly allowance on the free tier) to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Ch 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
+> **Save the Apollo filter and whatever contacts your monthly export credits cover (a small monthly allowance on the free tier) to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Lesson 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
 
 Filter the final list on six dimensions:
 
@@ -197,7 +201,7 @@ These are skip-by-default. The main chapter works without any of them.
 > **You have now:** a question list (2.1-2.2) + a 30-name list of real people (2.3). Outreach is next.
 >
 > **Next:** [2.4 · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - the message templates, cadence, and follow-up sequence.
-> **If blocked:** If the AI returned "NOT FOUND" for every community, your hypothesis is too vague. Go back to Ch 1.1 and rewrite the customer sentence with a specific role, company size, and the moment in their week when the pain happens.
+> **If blocked:** If the AI returned "NOT FOUND" for every community, your hypothesis is too vague. Go back to Lesson 1.1 and rewrite the customer sentence with a specific role, company size, and the moment in their week when the pain happens.
 
 > **Stuck here?** Your name list stops at 3 people. **Fix:** search a related keyword - "boarding costs" instead of "pet sitter," "claim denial appeal" instead of "medical billing." The second-degree search surfaces people with the same problem but different vocabulary. 30 minutes of keyword variation turns 3 names into 12 - not jumping to a paid Apollo plan.
 

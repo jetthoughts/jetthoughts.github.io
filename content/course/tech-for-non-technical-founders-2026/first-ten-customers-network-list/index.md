@@ -28,7 +28,7 @@ related_posts: false
 
 > **Module 5 · Lesson 5.3 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** must-have-user persona + 1 named segment from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
+> **Input:** must-have-user persona + 1 named segment from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
 >
 > **Output:** 50 names sorted into 4 outreach buckets
 >
@@ -59,13 +59,13 @@ Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship stre
 
 ![The 4-bucket grid - how 50 names get sorted before the first message goes out](network-buckets.svg)
 
-> **First, count your network.** Filter your 1st-degree LinkedIn connections by your must-have segment from Ch 5.1 (title + company size + industry).
+> **First, count your network.** Filter your 1st-degree LinkedIn connections by your must-have segment from Lesson 5.1 (title + company size + industry).
 >
 > | Count | What this means | Your path |
 > |---|---|---|
 > | **30+** | Standard warm motion works. | Continue below. |
-> | **15-29** | Reduced warm motion. Build smaller buckets: 2 champions + 5 hot + 8 warm + 5 cold. You'll need cold outbound ([Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)) in parallel. |
-> | **Under 15** | Your network doesn't contain the ICP segment (ICP = Ideal Customer Profile - the specific kind of person your product is for). | Skip to [Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound. |
+> | **15-29** | Reduced warm motion. Build smaller buckets: 2 champions + 5 hot + 8 warm + 5 cold. You'll need cold outbound ([Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)) in parallel. |
+> | **Under 15** | Your network doesn't contain the ICP segment (ICP = Ideal Customer Profile - the specific kind of person your product is for). | Skip to [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound. |
 
 ---
 
@@ -81,7 +81,7 @@ Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship stre
 
 **If this fails: your network is under 15 names after filtering.**
 - **Why:** your must-have segment isn't represented in your professional network.
-- **Fix:** skip to [Ch 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Use community fallbacks (Indie Hackers, sector Slack, Reddit) as warm-cold hybrid messages.
+- **Fix:** skip to [Lesson 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Use community fallbacks (Indie Hackers, sector Slack, Reddit) as warm-cold hybrid messages.
 
 ---
 

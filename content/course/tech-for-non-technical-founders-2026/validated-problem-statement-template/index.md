@@ -129,7 +129,7 @@ ______ /10
 Strong signals (score 7+ with 3+ emotional flags): ___ /10
 
 Decision based on strong-signal count:
- [ ] 7 or more  → BUILD. Test the shape in Ch 2.6, then Module 3.
+ [ ] 7 or more  → BUILD. Test the shape in Lesson 2.6, then Module 3.
  [ ] 4 to 6     → PIVOT. Run 5 sharper interviews.
  [ ] Fewer than 4 → KILL. Find a different problem.
 
@@ -180,7 +180,7 @@ The good version names the specific cost number, the specific competitor's speci
 
 The decision the filled page makes for you:
 
-- **BUILD** if: 7+ strong-signal calls (score 7+ with 3+ emotional flags), a named workaround the customer is already paying for, and a named why-now from the last 12 months. Test the shape in [Ch 2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/), then move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/).
+- **BUILD** if: 7+ strong-signal calls (score 7+ with 3+ emotional flags), a named workaround the customer is already paying for, and a named why-now from the last 12 months. Test the shape in [Lesson 2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/), then move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/).
 - **PIVOT** if: 4-6 strong signals, OR the pain is real but belongs to a different persona than you targeted (e.g., you interviewed founders but the pain lives with their CFOs). Run 5 sharper interviews with the corrected ICP, then refill this page.
 - **KILL** if: fewer than 4 strong signals OR no workaround surfaced in the 10 interviews. Find a different problem and write the 200-word post-mortem below.
 

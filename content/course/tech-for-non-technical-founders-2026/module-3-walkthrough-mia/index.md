@@ -11,11 +11,11 @@ metatags:
   og_title: "Module 3 Walkthrough: Mia Writes the One-Page Brief"
 course_nav_prev:
   slug: stop-specifying-features-start-outcomes
-  module: "Chapter 3.2"
+  module: "Lesson 3.2"
   title: "3.2 · Quality-check your brief: features to outcomes"
 course_nav_next:
   slug: should-you-hire-2026-decision-tree
-  module: "Chapter 4.1"
+  module: "Lesson 4.1"
   title: "4.1 · Should You Hire? The 2026 Decision Tree"
 ---
 
