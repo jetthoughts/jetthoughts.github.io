@@ -497,25 +497,53 @@ tasks:
         (whitespace/blank-line collapse). Identical → proceed. Divergent →
         narrow the component to the identical subset and LOG the variance
         here; do NOT reconcile differences inside this sprint.
-  - [ ] C1.1 components/testimonials.css — source partial
-        themes/beaver/layouts/partials/page/testimonials.html; node ids:
-        08kl1yzxeout 1a4igunq3xvj 1i28o7dq3pcv 38ejkdz2v4cq byg0v6ftixrd
-        c17gwsk2h8zy d4wp9kxy1uav q4x2z8f9l1k3 ud8jroeig5h2 zaerhibqp296.
-        Consumers (7): pages/about-us.css, clients.css, services.css,
-        homepage.css, single-use-cases.css, single-service.css, use-cases.css.
-        Commit 1: create the file (canonical block, header comment listing
-        the 7 owning bundles per ownership map) + swap the FIRST consumer
-        (about-us.css — smallest diff surface): delete its block, add
-        `@import "components/testimonials.css";` at the position of the
-        block's FIRST rule. Gate.
-        Commits 2–7: one consumer per commit, same swap, gate each.
-        NOTE homepage.css carries the block in TWO locations (lines ~768 and
-        ~9813) — the second occurrence is an in-file duplicate; the swap
-        keeps ONE @import at the first position and deletes both, and the
-        bundle rule-diff must show the production output unchanged (the
-        duplicate was already dropped by postcss-delete-duplicate-css —
-        verify, don't assume; if it was NOT dropped, cascade order matters:
-        stop and log).
+  - [🔄] C1.1 components/testimonials.css — source partial
+        themes/beaver/layouts/partials/page/testimonials.html; scope:
+        node ids (08kl1yzxeout 1a4igunq3xvj 1i28o7dq3pcv 38ejkdz2v4cq
+        byg0v6ftixrd c17gwsk2h8zy d4wp9kxy1uav q4x2z8f9l1k3 ud8jroeig5h2
+        zaerhibqp296) PLUS pp-review*/pp-reviews-wrapper anchored rules
+        (partial-exclusive; widened 2026-07-19 to fix an order flip vs the
+        wrapper's svg-sizing rule). Component = 133-rule intersection,
+        canonical order about-us.css, font stacks → var(--font-system-ui).
+        [x] Commit 1 (782507ec): component file + about-us swap. Gated.
+        [ ] Commits 2-6: clients, services, single-use-cases,
+            single-service, use-cases — one consumer per commit; regenerate
+            remainder via the split tool, add
+            `(resources.Get "css/components/testimonials.css")` to the
+            template slice directly before its pages/*.css entry, gate each
+            (fingerprint-only-target + decl-set + winner map + DOM probe
+            vs control + bin/qtest <page>).
+        [ ] Commit 7a (documented deletion): homepage dead
+            `.fl-node-08kl1yzxeout .pp-swiper-button svg {24px}` rule
+            (line ~1277) — shadowed by the 48px copy at ~10317; MUST be
+            deleted BEFORE the swap or the keep-fires-last order flips
+            homepage's buttons 48→24px.
+        [ ] Commit 7b: homepage swap (block present TWICE; both copies
+            removed by the split tool, second copy is 5 rules short —
+            verified subset).
+        METHOD CORRECTIONS (2026-07-19, learned in commit 1):
+        - @import in pages/*.css DOES NOT WORK: postcss-import skips
+          post-prelude imports (only critical/base.css + adjacent members
+          are prelude). Wire components as CONCAT SLICE MEMBERS in the
+          template instead. Latent pre-existing instance of this bug:
+          7 skipped @imports at concat lines ~4102-4123 of some bundle
+          (postcss warnings) — audit which bundle in C4.
+        - VARIANCE LOG (kept per-page, NOT unified): 38ejkdz2v4cq
+          wrapper margin/padding variants (homepage margin-top 130 vs 0;
+          clients/services/singles padding-top 130 vs about-us/homepage
+          none; @1115/@860 padding-top 50 vs 0); ud8jroeig5h2 @1115
+          margins 50px (5 pages) vs 0 (services, single-service) — its
+          @860 twin EXCLUDED from the component (equal-specificity
+          cross-media tie; extraction reorder flipped the mobile winner,
+          +60px heading shift, caught by qtest); use-cases carries NO
+          38ejkdz2v4cq cluster at all. Unification of the spacing
+          variants = design decision for Paul (would visually change
+          pages) — out of C1 scope per non-goals.
+        - Probe/RMSE builds MUST use `--baseURL /` — production default
+          baseURL makes headless Chrome fetch bundles from the LIVE site
+          (silent 404/stale-CSS false signals, hit twice).
+        - Component file header comment must CLOSE (`*/`) — an unclosed
+          comment swallows the whole file silently in every environment.
   - [ ] C1.2 components/cta-banner.css — source partial
         themes/beaver/layouts/partials/page/cta.html; node ids: 3h8mj6w59d2c
         9hf5wet31z02 d96zqbnxltuj fa7hjib92cpv fdsvgxpowi03 rujwd9mzxche
