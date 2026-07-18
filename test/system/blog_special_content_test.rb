@@ -8,7 +8,22 @@ require "application_system_test_case"
 # One representative post per surface. Mermaid is captured AFTER render
 # (wait for div.mermaid svg) so the diagram itself is verified; remaining
 # volatile regions (external iframe, responsive images) stay skipped.
+
+# Order matches the fence order in content/blog/codeblock-styles-fixture/index.md.
+module CodeblockFixtureSections
+  SECTIONS = {
+    "text" => 0, "md" => 1, "ruby" => 2, "python" => 3,
+    "js" => 4, "html" => 5, "bare" => 6, "indented" => 7
+  }.freeze
+
+  def codeblock_fixture_sections
+    SECTIONS
+  end
+end
+
 class BlogSpecialContentDesktopTest < ApplicationSystemTestCase
+  include CodeblockFixtureSections
+
   def setup
     Capybara.current_driver = :desktop_chrome
     screenshot_section "desktop"
@@ -35,6 +50,18 @@ class BlogSpecialContentDesktopTest < ApplicationSystemTestCase
       skip_area: %w[picture img], stability_time_limit: 1
   end
 
+  def test_codeblock_language_styles
+    visit "/blog/codeblock-styles-fixture/"
+
+    assert_css "pre", minimum: 8, wait: 5
+
+    codeblock_fixture_sections.each do |name, index|
+      scroll_to all("pre")[index]
+      assert_stable_screenshot "blog/special/codeblocks/#{name}", tolerance: 0.03,
+        skip_area: %w[picture img], stability_time_limit: 1
+    end
+  end
+
   def test_inline_style_post
     visit "/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/"
 
@@ -51,6 +78,8 @@ class BlogSpecialContentDesktopTest < ApplicationSystemTestCase
 end
 
 class BlogSpecialContentMobileTest < ApplicationSystemTestCase
+  include CodeblockFixtureSections
+
   def setup
     Capybara.current_driver = :mobile_chrome
     screenshot_section "mobile"
@@ -75,5 +104,17 @@ class BlogSpecialContentMobileTest < ApplicationSystemTestCase
 
     assert_stable_screenshot "blog/special/code_highlight_post", tolerance: 0.03,
       skip_area: %w[picture img], stability_time_limit: 1
+  end
+
+  def test_codeblock_language_styles
+    visit "/blog/codeblock-styles-fixture/"
+
+    assert_css "pre", minimum: 8, wait: 5
+
+    codeblock_fixture_sections.each do |name, index|
+      scroll_to all("pre")[index]
+      assert_stable_screenshot "blog/special/codeblocks/#{name}", tolerance: 0.03,
+        skip_area: %w[picture img], stability_time_limit: 1
+    end
   end
 end
