@@ -151,16 +151,15 @@ ok &= run_test("test/system/color_system_test.rb")
 if ok && elapsed.call < budget - 10
   scoped = Regexp.new(frags)
   pool = %w[test/system/desktop_site_test.rb test/system/mobile_site_test.rb]
-    .flat_map { |f| File.read(f).scan(/def (test_\w+)/).flatten }
-    .uniq.reject { |t| t.match?(scoped) }.shuffle
+    .flat_map { |f| File.read(f).scan(/def (test_\w+)/).flatten.map { |t| [f, t] } }
+    .reject { |_f, t| t.match?(scoped) }.shuffle
   until pool.empty? || elapsed.call >= budget - 10
     batch = pool.shift(3)
-    batch_re = "/^(#{batch.join("|")})$/"
-    puts "qtest: random extras: #{batch.join(", ")}"
-    ok &= run_test("test/system/desktop_site_test.rb", "-n", batch_re)
-    break if elapsed.call >= budget - 5
-
-    ok &= run_test("test/system/mobile_site_test.rb", "-n", batch_re)
+    batch.group_by(&:first).each do |file, pairs|
+      tests = pairs.map(&:last)
+      puts "qtest: random extras: #{tests.join(", ")} (#{File.basename(file)})"
+      ok &= run_test(file, "-n", "/^(#{tests.join("|")})$/")
+    end
   end
 end
 
