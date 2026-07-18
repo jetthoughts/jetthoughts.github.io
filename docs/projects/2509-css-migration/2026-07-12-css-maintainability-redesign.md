@@ -217,8 +217,19 @@ gated and revertable.
 3. **Headless RMSE pre-gate**: old-vs-new full-page compare, desktop + mobile,
    RMSE 0 — catches parity misses in ~1 min before the suites (memory
    `project-headless-rmse-parity-pregate`).
-4. **Suites**: `bin/rake test:critical`, then `bin/test` (macOS) AND `bin/dtest`
-   (Linux) — **zero baseline changes** (refactor tolerance 0.0).
+4. **Scoped suite (per micro-commit)**: `bin/qtest --changed` — builds once,
+   then runs ONLY the affected pages' desktop+mobile screenshot tests (mapping
+   mirrors the ownership map) + the orphan guard + color-system check.
+   ~25-60s for a one-consumer commit vs >5 min for the full stack (measured
+   2026-07-19: build ~11s, ~2.5s/test). Site-wide/unmapped files escalate to
+   the full critical suite automatically. **Zero baseline changes.**
+5. **Full suites (per component milestone + always before the PR)**:
+   `bin/rake test:critical`, then `bin/test` (macOS) AND `bin/dtest` (Linux) —
+   **zero baseline changes** (refactor tolerance 0.0). Run at minimum after
+   each C1.x component's last consumer swap, after each C2/C3 task completes,
+   and on the branch head before `gh pr create`. The macOS suite is the
+   dedup-trap catcher — never ship a component whose consumers were only
+   qtest-gated without one full macOS pass.
 
 **Known trap (blocking read)**: `postcss-delete-duplicate-css` runs in
 production builds and deletes the LATER of two byte-identical rules. Moving or

@@ -468,8 +468,11 @@ dedup-trap warning, and the non-goals (no DOM restructuring, no rule-content
 changes, no transfer-size targets).
 **Execution mode (XP)**: one feature branch + ONE bundled PR per sprint;
 micro-commits — one component/consumer/node per commit, every commit passes
-the full gate stack (converged build ×2 → bundle rule-diff → headless RMSE 0 →
-`bin/rake test:critical` → `bin/test` + `bin/dtest`, ZERO baseline changes).
+the gate stack (converged build ×2 → bundle rule-diff → headless RMSE 0 →
+`bin/qtest --changed` scoped visual gate, ZERO baseline changes). Full
+`bin/rake test:critical` + `bin/test` + `bin/dtest` at each component
+milestone (last consumer swap of a C1.x / completed C2-C3 task) and on the
+branch head before the PR — see spec gate stack items 4-5 (rev 2026-07-19).
 Read-only audit agents may run in parallel; ALL mutations sequential.
 A commit is a move OR a rename OR a documented deletion — never mixed.
 

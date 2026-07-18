@@ -42,3 +42,6 @@ Root index and workflows index updated with the new entries. No course-side
 concepts changed; distilled from CLAUDE.md, bin/hugo-build, Rakefile,
 config/_default/hugo.toml, theme layouts, and docs/workflows/ +
 docs/90-99-content-strategy/.
+
+## 2026-07-19
+- bin/qtest added (scoped visual gate): PRECOMPILED_ASSETS + Minitest -n filter over an ownership-map-derived page set; ~25-60s per micro-commit vs >5 min full stack. Spec Phase C gate stack now items 4 (qtest per commit) + 5 (full suites per milestone/PR). test-gates.md updated.

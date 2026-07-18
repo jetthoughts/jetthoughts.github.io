@@ -1,0 +1,168 @@
+#!/usr/bin/env bash
+#
+# qtest — fast scoped visual gate (target: <1-2 min per run).
+#
+# Runs ONLY the screenshot tests for the pages a change touches, against a
+# single prebuilt tree (PRECOMPILED_ASSETS), instead of the full 65-test
+# critical suite with an in-harness rebuild. Full `bin/test` + `bin/dtest`
+# remain the pre-PR bar; qtest is the per-micro-commit gate.
+#
+# Usage:
+#   bin/qtest homepage about-us         # explicit page keys (see PAGE_TESTS)
+#   bin/qtest --changed                 # derive pages from git diff (uncommitted,
+#                                       #   or last commit when the tree is clean)
+#   bin/qtest --changed origin/master   # derive from diff against a ref
+#   bin/qtest --all                     # whole critical suite, prebuilt assets
+#   ... --no-build                      # reuse existing _dest/public-fast
+#
+# CSS→page mapping mirrors docs/projects/2509-css-migration/css-bundle-ownership-map.md.
+# Site-wide files (skin, style.css, theme-main, 586, navigation, foundations/…)
+# escalate to --all: a scoped run cannot vouch for them.
+
+set -euo pipefail
+
+DEST="_dest/public-fast"
+BUILD=1
+ALL=0
+CHANGED=0
+REF=""
+PAGES=()
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --no-build) BUILD=0 ;;
+    --all) ALL=1 ;;
+    --changed) CHANGED=1; if [ $# -gt 1 ] && [[ "${2:-}" != --* ]]; then REF="$2"; shift; fi ;;
+    -h|--help) sed -n '2,20p' "$0"; exit 0 ;;
+    *) PAGES+=("$1") ;;
+  esac
+  shift
+done
+
+# --- page key → test-name regex fragments -----------------------------------
+# Keys match themes/beaver/assets/css/pages/*.css basenames.
+page_regex() {
+  case "$1" in
+    homepage)          echo 'homepage' ;;
+    about-us)          echo 'about_us|about_page' ;;
+    clients)           echo 'test_clients' ;;
+    single-client)     echo 'client_single_full|client_agent_inbox' ;;
+    services)          echo 'test_services($|_menu)' ;;
+    single-service)    echo 'service_single|services_fractional_cto|services_app' ;;
+    use-cases)         echo 'test_use_cases($|_menu)' ;;
+    single-use-cases)  echo 'use_case_single|use_cases_mvp_sections' ;;
+    careers)           echo 'test_careers' ;;
+    single-career)     echo 'careers_ruby' ;;
+    blog-list)         echo 'blog_index' ;;
+    blog-single)       echo 'blog_post|visit_blog_post' ;;
+    course-list)       echo 'course_landing|course_nav_link|old_blog_url' ;;
+    course-single)     echo 'course_chapter' ;;
+    contact-us)        echo 'contact_us' ;;
+    free-consultation) echo 'free_consultation' ;;
+    simple-page)       echo 'privacy_policy' ;;
+    not-found|404)     echo 'not_found' ;;
+    *) return 1 ;;
+  esac
+}
+
+# --- changed file → page keys (or "ALL" for site-wide files) ----------------
+file_pages() {
+  local f="$1"
+  case "$f" in
+    themes/beaver/assets/css/pages/*.css)
+      basename "$f" .css ;;
+    themes/beaver/assets/css/critical/*-critical.css)
+      basename "$f" -critical.css ;;
+    # C1 shared components → their consumer sets (ownership map / tracker C1.1-C1.3)
+    themes/beaver/assets/css/components/testimonials.css)
+      echo "about-us clients services homepage single-use-cases single-service use-cases" ;;
+    themes/beaver/assets/css/components/cta-banner.css|themes/beaver/layouts/partials/page/cta.html)
+      echo "about-us clients services homepage single-use-cases single-service use-cases contact-us" ;;
+    themes/beaver/assets/css/components/header-cta.css)
+      echo "use-cases clients services" ;;
+    themes/beaver/layouts/partials/page/testimonials.html)
+      echo "about-us clients services homepage single-use-cases single-service use-cases" ;;
+    themes/beaver/layouts/blog/*|content/blog/*)
+      echo "blog-list blog-single" ;;
+    themes/beaver/assets/css/*|themes/beaver/layouts/*)
+      echo "ALL" ;;                     # site-wide or unmapped theme file
+    *)
+      echo "" ;;                        # non-visual file — no pages
+  esac
+}
+
+if [ "$CHANGED" = 1 ]; then
+  if [ -n "$REF" ]; then
+    files=$(git diff --name-only "$REF")
+  else
+    files=$(git diff --name-only HEAD)
+    [ -z "$files" ] && files=$(git diff --name-only HEAD~1..HEAD)
+  fi
+  for f in $files; do
+    p=$(file_pages "$f")
+    if [ "$p" = "ALL" ]; then
+      echo "qtest: '$f' is site-wide/unmapped — escalating to --all"
+      ALL=1
+    elif [ -n "$p" ]; then
+      for k in $p; do PAGES+=("$k"); done
+    fi
+  done
+  if [ "$ALL" = 0 ] && [ ${#PAGES[@]} -eq 0 ]; then
+    echo "qtest: no visual-affecting changes detected — nothing to run"
+    exit 0
+  fi
+fi
+
+# --- build once (same options the test harness would use) -------------------
+if [ "$BUILD" = 1 ]; then
+  echo "qtest: building to $DEST ..."
+  hugo --baseURL / --environment production --buildDrafts --noBuildLock --quiet \
+    --destination "$DEST"
+fi
+
+export PRECOMPILED_ASSETS=true
+export HUGO_DEFAULT_PATH="$DEST"
+
+run_file() { # file [minitest args...]
+  local file="$1"; shift
+  echo "qtest: $file $*"
+  bundle exec ruby -Itest "$file" "$@"
+}
+
+if [ "$ALL" = 1 ]; then
+  bin/rake test:critical
+  exit $?
+fi
+
+if [ ${#PAGES[@]} -eq 0 ]; then
+  echo "qtest: no pages given. Usage: bin/qtest <page-key ...> | --changed | --all" >&2
+  exit 2
+fi
+
+# de-dup pages, build the union regex
+FRAGS=""
+NEED_BLOG_SPECIAL=0
+NEED_CAREERS_PAGE=0
+for p in $(printf '%s\n' "${PAGES[@]}" | sort -u); do
+  frag=$(page_regex "$p") || { echo "qtest: unknown page key '$p'" >&2; exit 2; }
+  FRAGS="${FRAGS:+$FRAGS|}$frag"
+  [ "$p" = blog-single ] && NEED_BLOG_SPECIAL=1
+  [ "$p" = careers ] && NEED_CAREERS_PAGE=1
+done
+REGEX="/${FRAGS}/"
+
+FAIL=0
+run_file test/system/desktop_site_test.rb -n "$REGEX" || FAIL=1
+run_file test/system/mobile_site_test.rb -n "$REGEX" || FAIL=1
+[ "$NEED_BLOG_SPECIAL" = 1 ] && { run_file test/system/blog_special_content_test.rb || FAIL=1; }
+[ "$NEED_CAREERS_PAGE" = 1 ] && [ -f test/system/pages/careers_page_test.rb ] && { run_file test/system/pages/careers_page_test.rb || FAIL=1; }
+
+# cheap insurance: CSS wiring guard (no browser) + computed-style color vars
+run_file test/unit/css_orphan_guard_test.rb || FAIL=1
+run_file test/system/color_system_test.rb || FAIL=1
+
+if [ "$FAIL" = 1 ]; then
+  echo "qtest: FAILED"
+  exit 1
+fi
+echo "qtest: green (scoped — run bin/test + bin/dtest before the PR)"
