@@ -1,6 +1,7 @@
 {{ define "header" }}
   {{- $CSS := slice
     (resources.Get "css/critical/base.css")
+    (resources.Get "css/foundations/fl-builder-common-base.css")
     (resources.Get "css/pages/use-cases.css")
     (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
     (resources.Get "css/586.css")

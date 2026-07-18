@@ -3,8 +3,6 @@
    prune against the rendered page; shared-partial nodes retained).
    bf72bba…-layout-bundle also left this slice (no rules for any node on
    this page). */
-@import "foundations/css-variables.css";
-@import "foundations/fl-builder-common-base.css"; /* Consolidated: box-sizing, clearfix, sr-only utilities */
 
 .fl-row, .fl-row-content {
   margin-left: auto;
