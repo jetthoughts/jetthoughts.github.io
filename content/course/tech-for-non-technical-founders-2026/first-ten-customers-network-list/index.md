@@ -40,7 +40,7 @@ related_posts: false
 
 Nearly every one of today's fastest-growing B2B startups got their first 10 customers from people who already knew the founder. Founders skip this step because it feels like begging. It's not. It's the highest-probability first sale you'll ever make.
 
-After this lesson you will be able to: **sort 50 names into 4 outreach buckets so you know exactly who to message first.**
+> → **Mia found 50 names** across LinkedIn, her old school contacts, and the parents' association. Five had already complained to her about the tutor search - those went straight into her champion bucket. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)
 
 ---
 

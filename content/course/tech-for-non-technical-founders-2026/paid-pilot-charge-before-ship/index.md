@@ -43,7 +43,7 @@ related_posts: false
 
 A free pilot feels collaborative: the customer says yes, you build for six weeks, and every Friday demo gets "this is great." Then Week 8 lands, you send the year-one contract, and the customer says "let me circle back to my CFO" - a CFO who never heard of you and never approved the pilot. A refundable Stripe deposit signed before kickoff is what turns that dead end into a formality.
 
-After this lesson you will be able to: **sign a Design Partner Agreement with a refundable Stripe deposit before writing new code.**
+> → **Mia sent her DPA** to a parent from her Module 2 interviews - someone who'd described paying $400/month for a tutor who didn't specialize. The $1,200 deposit cleared before she built anything new. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)
 
 ---
 

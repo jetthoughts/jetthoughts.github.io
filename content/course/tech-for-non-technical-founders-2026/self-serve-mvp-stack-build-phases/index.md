@@ -44,7 +44,7 @@ related_posts: false
 
 You validated the problem in Modules 1-3 and set up the stack in Lesson 4.3. What you do not have yet is a URL a stranger can pay on. This lesson is the build plan that gets you there - four phases, each ending in one working demo to one human who has not seen the build.
 
-After this lesson you will be able to: **run the four build phases in order, each ending in one demo to one person, until you have a live MVP at a real URL that real users can click.**
+> → **Mia walked the four phases** over three weekends. Her spouse signed up in Phase 2. By Phase 4, five parents clicked through the live URL. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)
 
 ![Four build phases, then the five-green-lights gate. Phase 1 Lovable UI - screens click, nothing saved. Phase 2 Supabase and auth - a real signup persists. Phase 3 Stripe checkout - a $1 test charge flips the row to paid. Phase 4 go live - 5 ICP users click the live URL. All five exit lights green advances you to Module 5.](build-phases-strip.svg)
 
