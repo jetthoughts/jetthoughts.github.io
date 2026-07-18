@@ -82,7 +82,7 @@ jobs:
 
 ```
 
-That is the entire defense. The PR cannot merge until a human looks at the new gem, the new pip package, or the new npm module and confirms it exists, is maintained, has the download count it should, and matches the name a developer would actually write. The gate runs on every PR. It blocks every new dependency by default. The reviewer overrides with a `dep-approved` label or a `[SKIP_DEP_GATE]` commit message that the founder must co-sign.
+That is the entire defense. The PR cannot merge until a human looks at the new gem, the new pip package, or the new npm module and confirms it exists, is maintained, has the download count it should, and matches the name a developer would actually write. The gate runs on every PR. It blocks every new dependency by default. To override: the founder manually approves the new dependency during PR review, confirming the package exists, is maintained, and has the expected download count.
 
 ```mermaid
 
