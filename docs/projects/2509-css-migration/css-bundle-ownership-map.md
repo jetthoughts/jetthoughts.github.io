@@ -96,3 +96,12 @@ bf72bba…, PR #363, 2026-07-12); 6 never-loaded orphans deleted same PR.
 - Markup still carries `fl-node-*` classes on pages migrated via delta port
   (Option A). Semantic re-keying per page remains available as separate,
   independently-gated cleanup sprints (the R3c alias technique).
+- Code-block fallback background is cascade-order-dependent: for bare/unknown
+  fences (no Chroma inline styles) the dark `#282a36` background wins only
+  because `style.css .blog pre` sorts after `586.css .single-content pre`
+  (equal 0-1-1 specificity) in the blog-single bundle. Hardening = delete the
+  losing `background-color:#F5F6F8` from `.single-content pre` (586.css:823)
+  — deferred because 586.css is shared by most bundles (fingerprint churn).
+  The regression is now screenshot-locked by `test_codeblock_language_styles`
+  (fixture post `codeblock-styles-fixture`, bare + indented shots would flip
+  to light-bg/invisible-text on a cascade flip).
