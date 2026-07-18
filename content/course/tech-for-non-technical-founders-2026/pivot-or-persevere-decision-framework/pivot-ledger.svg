@@ -62,7 +62,7 @@
   <text x="60" y="350" class="row">Hypothesis sentence</text>
   <text x="280" y="350" class="row">Lesson 1.1</text>
   <text x="565" y="350" class="drop" text-anchor="middle">REWRITE</text>
-  <text x="650" y="350" class="row">New blanks, same template</text>
+  <text x="650" y="350" class="row" style="font-size:15px">New blanks, same template</text>
   <line x1="50" y1="365" x2="850" y2="365" class="row-line"/>
 
   <!-- Row 6 -->
