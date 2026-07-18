@@ -239,6 +239,17 @@
   display: block;
   margin: 0 auto;
 }
+.mermaid .nodeLabel p,
+.mermaid .edgeLabel p {
+  /* Mermaid wraps HTML labels in <p>. Article paragraph styles (e.g.
+     .blog article.single-content .fl-rich-text p at 1.4rem/1.7) apply
+     AFTER mermaid has measured the label, re-wrapping text and inflating
+     node boxes. !important because the article rule wins on specificity
+     and mermaid labels must never take article typography. */
+  font-size: inherit !important;
+  line-height: inherit !important;
+  margin: 0 !important;
+}
 
 /* GFM task lists: Goldmark emits <li><input type=checkbox>...</li> without
    a class. Hide the default bullet on items that contain a checkbox so the
