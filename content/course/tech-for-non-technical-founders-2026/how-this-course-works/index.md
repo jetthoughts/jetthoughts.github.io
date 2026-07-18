@@ -120,7 +120,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 | 4.5 (optional) | Spot the 5 ceiling signals that mean it's time to graduate beyond no-code | Monthly calendar block |
 
 > → **Mia's Module 4:** chose self-serve, locked ownership of every account, walked the four build phases, and shipped TutorMatch on Lovable + Supabase + Stripe - her spouse signed up in Phase 2. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)
-
+>
 > **Before you write code: the $0 Concierge MVP.** If you're not ready to commit to a full Lovable build, use Tally + Zapier (or Make.com) + Airtable to simulate your product's backend. Collect customer requests through a Tally form, route them to Airtable via Zapier, and process them manually. The customer experiences a working product. You validate demand before writing a line of code. All three tools have free tiers.
 
 ---
