@@ -117,7 +117,7 @@ Fake the convergence to start building anyway, and you join the long line of pos
 >
 > Anchor every question in a specific past moment - last Tuesday at 9pm, the last invoice, the last time the spreadsheet broke - and the polite-mode answers run out fast.
 
-> **Optional: AI devil's advocate before your first interview.** [ValidatorAI](https://validatorai.com) (free tier) gives you an adversarial dialog: paste your draft question list, and it pushes back the way a skeptical interviewee would.
+> **Optional: AI devil's advocate before your first interview.** [ValidatorAI](https://validatorai.com) gives you an adversarial dialog: paste your draft question list, and it pushes back the way a skeptical interviewee would.
 >
 > It flags hypothetical questions, leading phrasing, and assumptions buried in your wording. Unlike Lesson 2.2 persona rehearsal (which tests questions against simulated ICPs), ValidatorAI tests the questions themselves - are they built to surface real past behavior or polite agreement?
 >
