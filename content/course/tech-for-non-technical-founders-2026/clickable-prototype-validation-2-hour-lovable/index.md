@@ -75,7 +75,7 @@ None of these show up in a Mom Test interview - they only appear the moment a re
 Open [Lovable](https://lovable.dev), create a new project, and paste the following. Replace all `[PLACEHOLDERS]` with your specific problem and solution.
 
 ```text
-Build a 3-screen clickable prototype for a [PRODUCT CATEGORY] tool targeting [customer].
+Build a 3-screen clickable prototype for a [PRODUCT CATEGORY] tool targeting [CUSTOMER].
 
 This is a throwaway validation prototype. Use hard-coded fake data only. No backend, no auth, no database. All buttons should navigate between screens or show a static success state.
 
@@ -97,7 +97,7 @@ SCREEN 3 - [RESULT/CONFIRMATION NAME]:
 Design: Clean, minimal. Dark sidebar, white content area. [YOUR COLOR] accent. No login screen. No settings. No navigation beyond these 3 screens. Make it look functional, not finished.
 ```
 
-Where the blanks come from: `[customer]` is your `[customer]` blank from Lesson 1.1; `[PRIMARY ACTION ...]` is the top workaround-replacing action from your Lesson 2.5 validated problem statement; `[FAKE DATA EXAMPLE]` is names and numbers pulled from your interview transcripts. Use the vocabulary you heard in interviews, not the words you use with other founders - if 7 of 10 interviewees called it "matching" and you call it "reconciliation," the prototype uses "matching."
+Where the blanks come from: `[CUSTOMER]` is your `[CUSTOMER]` blank from Lesson 1.1; `[PRIMARY ACTION ...]` is the top workaround-replacing action from your Lesson 2.5 validated problem statement; `[FAKE DATA EXAMPLE]` is names and numbers pulled from your interview transcripts. Use the vocabulary you heard in interviews, not the words you use with other founders - if 7 of 10 interviewees called it "matching" and you call it "reconciliation," the prototype uses "matching."
 
 ![Build the 3-screen prototype in three moves: open Lovable and paste the prompt template with placeholders filled, read the fake data out loud and change the vocabulary to match the words you heard in interviews, then test all three screens yourself as if you've never seen the idea - leaving with a prototype ready to share as a link to 5 interviewees](prototype-build-strip.svg)
 
@@ -109,7 +109,7 @@ Choose 5 of the 10 interviewees whose Mom Test scores were 7 or higher. Book 30-
 
 **The re-engagement message** (paste into LinkedIn DM or reply to your original Lesson 2.3-2.4 thread):
 
-> *"Hi [name] - thank you for the 30 minutes last week. I built a quick clickable prototype based on what you told me about [their specific workaround from the Mom Test transcript]. I'd like 30 more minutes to watch you try it without me explaining anything - just silent observation while you click through. I'll send the link 10 minutes before. Would Tuesday afternoon or Wednesday afternoon work?"*
+> *"Hi [NAME] - thank you for the 30 minutes last week. I built a quick clickable prototype based on what you told me about [their specific workaround from the Mom Test transcript]. I'd like 30 more minutes to watch you try it without me explaining anything - just silent observation while you click through. I'll send the link 10 minutes before. Would Tuesday afternoon or Wednesday afternoon work?"*
 
 Expect 4-5 of 5 to say yes - the *"I built something based on what you told me"* line signals you listened. During the session, stay silent and record behavior: write down the first buttons they reach for, note any pause over 5 seconds, and never answer their questions or coach them toward the right path. When they finish Screen 3, ask one question: "Describe in one sentence what that tool just did." Write down their exact words.
 

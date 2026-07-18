@@ -63,7 +63,7 @@ Sum each approach. Pick the highest sum. The lens that scored lowest across the 
 
 Open the Mad Libs sentence. Fill in the five blanks using the winning approach from Step 4, the customer and problem from Step 1, the competition from Step 2, and the differentiator from Step 2.
 
-Read it aloud three times. Stop when the sentence reads like a thing a friend could repeat back. Type the final sentence into a Google Doc titled `Founding Hypothesis - [date]` and save it to a `Founder OS` folder. This sentence becomes the raw material for your landing-page headline (1.2 reshapes it into a customer-plus-outcome one-liner), your interview script, and your Stripe price prompt.
+Read it aloud three times. Stop when the sentence reads like a thing a friend could repeat back. Type the final sentence into a Google Doc titled `Founding Hypothesis - [DATE]` and save it to a `Founder OS` folder. This sentence becomes the raw material for your landing-page headline (1.2 reshapes it into a customer-plus-outcome one-liner), your interview script, and your Stripe price prompt.
 
 ### Step 6: Test Design
 
@@ -75,12 +75,12 @@ The full test is two parts: (1) a smoke-test landing page for demand signal, and
 
 ## AI Deep-Research Prompts
 
-### For the `[customer]` and `[problem]` blanks
+### For the `[CUSTOMER]` and `[PROBLEM]` blanks
 
 Paste into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier):
 
 ```text
-Find the 5 most-named pain points among [customer] (your candidate version of the blank) in 2024-2026, from Reddit, LinkedIn posts, G2 reviews, and industry podcasts. Cite the exact source for each pain point and quote one verbatim phrase. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing.
+Find the 5 most-named pain points among [CUSTOMER] (your candidate version of the blank) in 2024-2026, from Reddit, LinkedIn posts, G2 reviews, and industry podcasts. Cite the exact source for each pain point and quote one verbatim phrase. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing.
 ```
 
 Keep the quotes AND their thread URLs - Lessons 1.2 and 2.3 reuse them.

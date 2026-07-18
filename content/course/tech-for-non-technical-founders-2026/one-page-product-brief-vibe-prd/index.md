@@ -89,7 +89,7 @@ Skipping the brief and going straight into prompting is the most common way a no
 
 > **Done:** all 5 sections of your one-page brief are filled in, Section 1 is copied verbatim from your validated problem statement, and you have read the brief aloud to one peer.
 >
-> **You have now:** a validated problem statement (2.5) + prototype vocabulary (2.6) + the one-page Product Brief (3.1). Save it as `Product Brief - [date]` in your `Founder OS` folder. Section 3 isn't stress-tested yet - Lesson 3.2 does that before Lovable touches it.
+> **You have now:** a validated problem statement (2.5) + prototype vocabulary (2.6) + the one-page Product Brief (3.1). Save it as `Product Brief - [DATE]` in your `Founder OS` folder. Section 3 isn't stress-tested yet - Lesson 3.2 does that before Lovable touches it.
 >
 > **Next:** [3.2 · Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) - stress-tests Section 3 of the brief you just wrote.
 >

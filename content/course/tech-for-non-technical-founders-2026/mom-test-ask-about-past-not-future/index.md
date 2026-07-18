@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 2 · Lesson 2.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a Founding Hypothesis sentence (from Lesson 1.1) + your `[customer]` blank from that sentence (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
+> **Input:** a Founding Hypothesis sentence (from Lesson 1.1) + your `[CUSTOMER]` blank from that sentence (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
 >
 > **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Lesson 2.2 and then run in real interviews after Lesson 2.3-2.4 recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
 >
@@ -53,11 +53,11 @@ Every question a first-time founder writes first feels like it gets to the truth
 
 | The question you'd write | Why it produces polite-yes | Fitzpatrick's past-behavior rewrite |
 |---|---|---|
-| "Do you find `[problem]` frustrating?" | Leading. The interviewee hears that you want a yes; their politeness reflex supplies one. | "Tell me about the last time `[problem]` happened." |
-| "Would you use a tool that solved `[problem]`?" | Hypothetical-future. Their answer is a guess about a person who doesn't exist yet. | "Walk me through what you did the last time you tried to handle `[problem]`." |
-| "How important is solving `[problem]` for you?" | Asks for a self-rating, which everyone inflates. People rate everything 7/10 to avoid sounding rude. | "What did the workaround cost you - in time, money, or sanity - the last time?" |
+| "Do you find `[PROBLEM]` frustrating?" | Leading. The interviewee hears that you want a yes; their politeness reflex supplies one. | "Tell me about the last time `[PROBLEM]` happened." |
+| "Would you use a tool that solved `[PROBLEM]`?" | Hypothetical-future. Their answer is a guess about a person who doesn't exist yet. | "Walk me through what you did the last time you tried to handle `[PROBLEM]`." |
+| "How important is solving `[PROBLEM]` for you?" | Asks for a self-rating, which everyone inflates. People rate everything 7/10 to avoid sounding rude. | "What did the workaround cost you - in time, money, or sanity - the last time?" |
 | "Would you pay $X for a solution?" | Pricing hypothetical. They have no skin in the game; saying yes costs them nothing. | "What have you already tried, paid, or built to deal with it?" |
-| "Does this idea sound good to you?" | Compliment-fishing. The interviewee can't refuse without being mean to you. | "On a scale of 1-10, how would you rank fixing `[problem]` this year against the other 3 things on your list?" |
+| "Does this idea sound good to you?" | Compliment-fishing. The interviewee can't refuse without being mean to you. | "On a scale of 1-10, how would you rank fixing `[PROBLEM]` this year against the other 3 things on your list?" |
 
 What a passing answer sounds like, versus a polite one, on the very first question:
 
@@ -75,7 +75,7 @@ While the script runs, listen for three patterns. They do more work than the wor
 | Flag | Example Phrases | What it signals |
 |---|---|---|
 | **Frustration language** | "I hate this." "It drives me crazy." "Every single week." | The problem is felt. Polite interviewees suppress feeling - the opposite of what validation needs. |
-| **Workaround language** | "I've been meaning to..." "We hacked together..." "I pay [tool] $X for this." | The interviewee already spent time or money on a solution that doesn't fully work. That budget is the line item your product would replace. |
+| **Workaround language** | "I've been meaning to..." "We hacked together..." "I pay [TOOL] $X for this." | The interviewee already spent time or money on a solution that doesn't fully work. That budget is the line item your product would replace. |
 | **Urgency language** | "Last week." "This morning." "I missed my kid's birthday because of this." | A problem that happened today is felt more sharply than one that happens "sometimes." Time-anchored urgency is the strongest signal in the set. |
 
 **Scoring the flags:** A passing call has 3 or more flags spread across the five answers. A failing call has 0 or 1 - the interviewee is being polite to you. Two flags is ambiguous; treat as a 5/10 default. This 1-10 score per call is what Lessons 2.4-2.6 count to make the build / pivot / kill decision, so score every call the same way.
@@ -84,7 +84,7 @@ While the script runs, listen for three patterns. They do more work than the wor
 
 > **Write:**
 >
-> 1. Open a new Google Doc titled `Mom Test draft - [date]` in the same `Founder OS` folder as your Founding Hypothesis.
+> 1. Open a new Google Doc titled `Mom Test draft - [DATE]` in the same `Founder OS` folder as your Founding Hypothesis.
 > 2. Copy the 5 verbatim rewrite questions from the table above.
 > 3. Add 2-3 ICP-specific probes of your own (e.g., for a chiropractor ICP: "Walk me through your last insurance-claim resubmission. When did it happen?").
 > 4. **Success check:** you have a 5-8 question list, every question anchored in a past event, none asking "would you."

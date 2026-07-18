@@ -26,7 +26,7 @@ related_posts: false
 
 > **Module 1 · Lesson 1.2 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** your Founding Hypothesis sentence from [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) (the one-sentence `if [customer] solves [problem] with [approach]...` you wrote)
+> **Input:** your Founding Hypothesis sentence from [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) (the one-sentence `if [CUSTOMER] solves [PROBLEM] with [APPROACH]...` you wrote)
 >
 > **Output:** a live landing page that explains your offer to potential customers
 >
@@ -67,7 +67,7 @@ Return 5-8 quotes. Prefer recent posts and specific frustration over
 general opinions.
 ```
 
-(These same quotes get reused later: your `[problem]` blank in 1.1 if it's still vague, and Module 2's people-hunting starts from the threads this search finds.)
+(These same quotes get reused later: your `[PROBLEM]` blank in 1.1 if it's still vague, and Module 2's people-hunting starts from the threads this search finds.)
 
 ## Step 2: the prompt to paste
 
@@ -134,13 +134,13 @@ Send the URL to **ONE real person** who has not seen your work. Any stranger wor
 
 **If this fails: strangers cannot name who the page is for or what it does, even after 2 headline rewrites.**
 
-- **Why:** your hypothesis `[customer]` or `[differentiation]` blank is still too vague.
+- **Why:** your hypothesis `[CUSTOMER]` or `[DIFFERENTIATION]` blank is still too vague.
 - **Fix:** back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten ("solo chiropractors," not "small businesses").
 
 **If this fails: the builder's draft reads generic after 2 regenerations.**
 
-- **Why:** your hypothesis `[problem]` blank is too vague.
-- **Fix:** back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the `[problem]` blank to one specific failure mode.
+- **Why:** your hypothesis `[PROBLEM]` blank is too vague.
+- **Fix:** back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the `[PROBLEM]` blank to one specific failure mode.
 
 **If this fails: no AI builder fits your idea, or you want manual layout control.**
 

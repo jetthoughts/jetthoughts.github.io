@@ -44,7 +44,7 @@ related_posts: false
 
 Three tools do the whole self-serve build, and each one has exactly one job. The trap is opening Lovable before you know where its job ends and Supabase's begins - that is how a founder ends up with auth hand-rolled in the UI layer and payment state scattered across three places. Get the boundaries and three pre-flight rules right first, and the build in Lesson 4.4 stays inside the shed.
 
-After this lesson you will be able to: **name what each of the three tools does, lock the 3 pre-flight rules, and run the AI leakage check that catches scope creep before you write a line of the build.**
+> → **Mia had never set up a database.** She opened Lovable, pasted her brief's Section 3, and let the three tools handle the rest. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)
 
 If you completed Modules 1-3, your default Module 4 path is to build it yourself with Lovable (an AI app builder that turns a plain-English prompt into a working web app) + Supabase (managed database + login system) + Stripe (the service that charges the card). Hiring is a ceiling-signal trigger covered in the [supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/), not a parallel choice. You will not write code.
 

@@ -67,7 +67,7 @@ Spend the rest of the phase running $1 test transactions through the flow: signu
 
 Switch Stripe out of test mode. Buy a domain (roughly $10/year for a .com on [Porkbun](https://porkbun.com/) or your registrar of choice; never let a tool hold your domain). Point the domain at the Lovable staging URL. Take final screenshots, write a 3-line cold email or LinkedIn DM, and send to 5 ICP prospects from your [Module 2 outreach list](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/).
 
-> "Hey [name] - the workflow you described recently (logging client check-ins by hand on a spreadsheet) is now a tool. Quick first-use, $29/month after a trial window. URL: [staging URL]. Honest reactions only."
+> "Hey [NAME] - the workflow you described recently (logging client check-ins by hand on a spreadsheet) is now a tool. Quick first-use, $29/month after a trial window. URL: [STAGING_URL]. Honest reactions only."
 
 Watch what happens. If 0 of 5 click, the cold message is wrong, not the product (yet). If 5 click and 0 sign up, the landing screen is wrong, not the product. If 5 sign up and 0 pay, the paywall position or the price is wrong. Each failure shape tells you what to fix next. The demo is the data, not the screens.
 

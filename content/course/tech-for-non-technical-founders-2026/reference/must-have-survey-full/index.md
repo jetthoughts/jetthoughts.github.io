@@ -29,13 +29,13 @@ What is left is your sample. Annotate each row with the user's job title and com
 
 ## Send it
 
-Email subject line that works in 2026: *"Quick 90-second question about [product]"*. Body, three lines:
+Email subject line that works in 2026: *"Quick 90-second question about [PRODUCT]"*. Body, three lines:
 
-> Hi [first name], building [product] and trying to figure out who really uses it. Would you spend 90 seconds on this? [link]
+> Hi [FIRST_NAME], building [PRODUCT] and trying to figure out who really uses it. Would you spend 90 seconds on this? [LINK]
 >
 > No pitch. No follow-up. I read every response by hand.
 >
-> Thanks, [your name]
+> Thanks, [YOUR_NAME]
 
 Send the first batch to your largest user cluster. Re-send a few days later to anyone who has not opened. You will hit a 30-50% response rate on a list under 100, which is enough.
 

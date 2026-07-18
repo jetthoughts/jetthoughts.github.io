@@ -31,6 +31,16 @@ per shape, 4 composite-disclaimed vignettes kept, attribution phrases
 ("we picked up"/"we worked with") now zero course-wide. Teaching numbers
 preserved as mechanism descriptions.
 
+## 2026-07-18 - Added course architecture concepts
+Added two course architecture concepts to `.okf/architecture/`:
+[icp-journey-sipoc](/architecture/icp-journey-sipoc.md) — Mermaid flowchart
+of Sam's full journey through all 25 lessons, gate thresholds, branch paths,
+and artifact handoffs; and [operational-dependency-map](/architecture/operational-dependency-map.md)
+— per-lesson operational prerequisites, template blank sources, wait times,
+and Plan B recovery paths. Both distilled from
+`docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/`.
+Architecture index updated with the two new entries.
+
 ## 2026-07-18 - Merged blog/site bundle into course bundle
 Folded a separately-produced Hugo blog/site OKF bundle into this one as two
 new sibling sections: `architecture/` (hugo-site, css-pipeline, blog-list-page,

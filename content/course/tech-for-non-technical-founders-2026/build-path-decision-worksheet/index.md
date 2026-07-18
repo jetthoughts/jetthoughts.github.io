@@ -161,7 +161,7 @@ The good answer ties budget to runway and to the marketing test that proves the 
 
 ## What to do after
 
-- **Write your verdict at the top of a fresh Notion doc.** One line: *"Path X (name). Started: [date]. Next: [Lesson 4.3 self-serve / hire-track reference / back to Module 2 to re-validate]."* Pin the doc. Re-read the line every Monday for 4 weeks.
+- **Write your verdict at the top of a fresh Notion doc.** One line: *"Path X (name). Started: [DATE]. Next: [Lesson 4.3 self-serve / hire-track reference / back to Module 2 to re-validate]."* Pin the doc. Re-read the line every Monday for 4 weeks.
 - **Share the worksheet result with one peer or advisor in a 20-minute call.** Not three. One. Ask them: *"If the matrix said Path X, what would change your mind?"* Their first answer is the assumption you should pressure-test next. If they cannot name one, the matrix verdict holds.
 - **Schedule the first action for tomorrow morning.** Path 1: ship the Carrd page. Path 2: paste one-page brief into Lovable. Path 3: 3 LinkedIn outreach messages to Fractional CTOs in your industry. Path 4: read the SOW clause-by-clause with a printed pen, not in Google Docs. Calendar the action with a hard start time. The worksheet routes the decision; the calendar invite routes the work.
 

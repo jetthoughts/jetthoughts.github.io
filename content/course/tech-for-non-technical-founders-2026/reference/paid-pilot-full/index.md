@@ -129,7 +129,7 @@ The five responses below show up once you start talking to enterprise buyers or 
 
 *Means:* Their commitment is real but they want defensible value.
 
-*Say back:* "I cannot offer category exclusivity at the pilot stage - I do not have enough signal yet to know what the right exclusivity term looks like. What I can do: write into the DPA that you are my first paying customer in [vertical], and that we will revisit category exclusivity at year-one renewal once we both know whether this is working. That gives you the chronology advantage without locking me in before I have learned what to lock to."
+*Say back:* "I cannot offer category exclusivity at the pilot stage - I do not have enough signal yet to know what the right exclusivity term looks like. What I can do: write into the DPA that you are my first paying customer in [VERTICAL], and that we will revisit category exclusivity at year-one renewal once we both know whether this is working. That gives you the chronology advantage without locking me in before I have learned what to lock to."
 
 ## When founders should not insist on a paid pilot
 

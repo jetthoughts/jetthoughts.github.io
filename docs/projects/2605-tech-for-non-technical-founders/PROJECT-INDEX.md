@@ -132,6 +132,17 @@ Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" 
 | `20-29-strategy/20.11-course-migration-roadmap.md` | **CANONICAL** — dependency-aware Now/Next/Later roadmap for v2 micro-lesson migration. Task-level dependency graph, parallelization map, risks. Generated from `.agent/tasks.json`. |
 | `20-29-strategy/_ARCHIVED_20.07-content-plan-tnt-founders-2026.md` | ~~The 26-post map, 11 artifacts...~~ **ARCHIVED** — shipped course uses 5-module spine. Historical reference only. |
 
+### 🏗 Architecture & Design (30-39)
+
+| File | Purpose |
+|---|---|
+| `30-39-architecture-design/30.02-adr-content-execution-readiness.md` | **CANONICAL** — content policy (no speculative time/money), binary anchor thresholds per chapter, Module 2 two-pass framing rationale, 4-persona critic gate, Tier 1/2/3 punch list shape |
+| `30-39-architecture-design/30.03-course-format-requirements-for-creators.md` | **CANONICAL v2 spec** — micro-learning course format requirements, 8-part lesson template, core/optional tagging, gap analysis, migration guide |
+| `30-39-architecture-design/30.05-icp-journey-sipoc.md` | **CANONICAL journey map** — agent-parseable Mermaid flowchart of Sam's full path: every lesson, gate threshold, branch path, tool, time estimate, and artifact handoff. Agents validate against this; humans scan it to understand the course flow. |
+| `30-39-architecture-design/30.06-operational-dependency-map.md` | **CANONICAL dependency map** — per-lesson operational prerequisites: accounts needed, registrations, wait times, templates to fill, output artifacts, and Plan B recovery paths. Cross-lesson wait-time parallelism table and total budget trajectory. Agents validate tool ordering and prerequisite coverage. |
+| `30-39-architecture-design/30.01-adr-course-url-migration.md` | [if exists] URL migration decision record |
+| `30-39-architecture-design/30.04-m1-assessment-rubric.md` | [if exists] M1 assessment rubric |
+
 ### 🛠️ Execution (50-59)
 
 | Sub-dir | Purpose | Status |

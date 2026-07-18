@@ -32,7 +32,7 @@ related_posts: false
 
 > **Module 2 · Lesson 2.2 · [OPTIONAL]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** your draft Mom Test question list (5-8 questions from Lesson 2.1) + your `[customer]` blank from the Lesson 1.1 hypothesis (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
+> **Input:** your draft Mom Test question list (5-8 questions from Lesson 2.1) + your `[CUSTOMER]` blank from the Lesson 1.1 hypothesis (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
 >
 > **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Lesson 2.3-2.4 recruitment and real interviews
 >
@@ -73,12 +73,12 @@ Stay in character for this entire conversation. Do not break character to explai
 
 | Placeholder | Where it lives in your artifacts |
 |---|---|
-| `[ROLE]` | Founding Hypothesis `[customer]` blank (Lesson 1.1) - e.g. "solo chiropractor managing insurance claims" |
-| `[INDUSTRY]` + `[COMPANY SIZE]` | Your Lesson 1.1 `[customer]` blank - the company size and situation it names |
-| `[PROBLEM DESCRIPTION]` | Founding Hypothesis `[problem]` blank (Lesson 1.1) |
-| `[PROBLEM AREA]` | The `[problem]` blank summarized in 2-3 words (e.g. "claim resubmission backlog") |
-| `[CURRENT WORKAROUND]` | Founding Hypothesis `[competition]` blank (what they do today) |
-| `[YOUR DRAFT QUESTION 1]`, `2`, `3`, ... | Pick one question at a time from your Lesson 2.1 `Mom Test draft - [date]` doc (5-8 question list) |
+| `[ROLE]` | Founding Hypothesis `[CUSTOMER]` blank (Lesson 1.1) - e.g. "solo chiropractor managing insurance claims" |
+| `[INDUSTRY]` + `[COMPANY SIZE]` | Your Lesson 1.1 `[CUSTOMER]` blank - the company size and situation it names |
+| `[PROBLEM DESCRIPTION]` | Founding Hypothesis `[PROBLEM]` blank (Lesson 1.1) |
+| `[PROBLEM AREA]` | The `[PROBLEM]` blank summarized in 2-3 words (e.g. "claim resubmission backlog") |
+| `[CURRENT WORKAROUND]` | Founding Hypothesis `[COMPETITION]` blank (what they do today) |
+| `[YOUR DRAFT QUESTION 1]`, `2`, `3`, ... | Pick one question at a time from your Lesson 2.1 `Mom Test draft - [DATE]` doc (5-8 question list) |
 | `[QUESTION X]` (in Prompt 5) | Whichever question you want to sharpen from your draft list |
 | `[PERSONA NAME]`, `[FREQUENCY]`, `[DURATION]`, `[BUDGET RANGE]`, `[REASON]` | Your judgment, anchored to deep-research findings if you ran the deep-research prompt on the [full sprint reference](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/) linked from Lesson 1.1 - see fallback below |
 
@@ -101,7 +101,7 @@ Once the persona is set, run your draft questions through four follow-up prompts
 
 **If this fails: all 3 personas produce nearly-identical answers.**
 - **Why:** your persona descriptions are too generic - three variations of the same person, not three different people.
-- **Fix:** rewrite them with sharper role, company-size, and urgency differences. If you can't write three distinct personas at all, go back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the `[customer]` blank first.
+- **Fix:** rewrite them with sharper role, company-size, and urgency differences. If you can't write three distinct personas at all, go back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the `[CUSTOMER]` blank first.
 
 ---
 

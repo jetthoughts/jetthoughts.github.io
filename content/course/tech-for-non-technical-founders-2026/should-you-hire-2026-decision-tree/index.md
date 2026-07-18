@@ -42,7 +42,7 @@ related_posts: false
 
 Hiring engineers before a single paying customer is confirmed is the most common build-decision mistake at the idea stage. The hire is the move that breaks the runway; the step it skips is the cheaper experiment that would have told you whether you need to build at all. Five questions route you to the smallest path that answers your next question.
 
-After this lesson you will be able to: **decide which of four build paths fits your evidence and runway - validate without code, self-serve, fractional CTO, or hire a team - and write the verdict at the top of your worksheet.**
+> → **Mia hit this gate** with a validated problem, a one-page brief, and zero experience hiring engineers. The decision tree said: self-serve. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)
 
 Self-serve with Lovable (an AI app builder that turns a plain-English prompt into a working web app), Supabase (the database that stores what the app records), and Stripe (the service that takes the payments) is the default for a non-technical founder in 2026. Hiring - whether a full team or a Fractional CTO (a part-time senior engineer who owns architecture but doesn't write the code) - is what you do when you hit a specific ceiling signal, not the first decision after the brief.
 

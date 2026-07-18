@@ -32,7 +32,7 @@ Template companion to the [Lesson 2.1 post](/course/tech-for-non-technical-found
 
 | Question | What it surfaces |
 |---|---|
-| **Q1.** Tell me about the last time [problem] happened. Walk me through what you did. | Anchors in a real episode - story over preference. |
+| **Q1.** Tell me about the last time [PROBLEM] happened. Walk me through what you did. | Anchors in a real episode - story over preference. |
 | **Q2.** What did that cost you - in time, money, or sanity? | Quantifies the pain - an unquantified problem won't get paid for. |
 | **Q3.** What have you tried already to fix this? | Surfaces existing workarounds - if they never tried anything, it never actually hurt. |
 | **Q4.** On a scale of 1-10, how big a problem is this compared to everything else on your plate? | Calibrates urgency against the interviewee's whole problem stack - most "would be great if" problems land at 4. |
@@ -56,7 +56,7 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 *Anchors in a real episode - story over preference.*
 
-> "Tell me about the last time [problem] happened. Walk me through what you did."
+> "Tell me about the last time [PROBLEM] happened. Walk me through what you did."
 
 **Pass signal:** A specific story with a date, a time of day, a tool they opened, a person they messaged. "Last Tuesday at 9pm I spent 40 minutes copying numbers from three spreadsheets into a slide for the board. I called my CFO and she pulled the numbers from QuickBooks for me."
 
@@ -118,7 +118,7 @@ While you are reading the questions, listen for three patterns in their answers.
 
 **Frustration language.** "I hate this." "It drives me crazy." "Every single week." "I can't believe we still do it this way." If the interviewee uses words with feeling, the problem is felt. Polite interviewees suppress feeling, which is exactly why you ignore polite answers.
 
-**Workaround language.** "I've been meaning to..." "We hacked together..." "I pay [tool] $X for this." "My VA does it manually." Workarounds prove the problem is real because the interviewee already spent time or money on a solution that doesn't fully work. The workaround is the budget you can pitch into.
+**Workaround language.** "I've been meaning to..." "We hacked together..." "I pay [TOOL] $X for this." "My VA does it manually." Workarounds prove the problem is real because the interviewee already spent time or money on a solution that doesn't fully work. The workaround is the budget you can pitch into.
 
 **Urgency language.** "Last week." "This morning." "I missed my kid's birthday because of this." A problem that happened today is felt more sharply than a problem that happens "sometimes." Time-anchored urgency is the strongest signal in the set.
 
@@ -149,7 +149,7 @@ The bad closing pulls them back into hypothetical preference and gives you a use
 - **Score the call 1-10 within 5 minutes of hanging up.** Use Q4 plus your emotional-flag count. Write the score in your notes file. If you score later you will round up.
 - **If 7 or more of your 10 interviews scored 7+:** the problem is validated - BUILD. Move to the [Mom Test Synthesis page](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) and the Validated Problem Statement template.
 - **If 4 to 6 scored 7+:** PIVOT - re-evaluate the ICP, the problem framing, or the question wording, then book 5 sharper interviews with the narrower group. Sometimes Q1 is wrong (the problem context is too narrow) - retry with broader phrasing first.
-- **If fewer than 4 scored 7+:** KILL - the problem is too weak for this customer. Return to Lesson 1.1 with a different [customer] or [problem] blank.
+- **If fewer than 4 scored 7+:** KILL - the problem is too weak for this customer. Return to Lesson 1.1 with a different [CUSTOMER] or [PROBLEM] blank.
 - **Forward the transcripts to your founder friend one step ahead, or a peer from any founder community** before you make the build/no-build call. Two readers catch what one misses.
 
 Skip this script and run "feature interest" interviews ("would you pay for X?") and you almost always launch into silence. The Mom Test isn't a productivity trick. It is the only way to keep your interviewees from being polite while you are gambling six months of your life on what they said.

@@ -103,7 +103,7 @@ You picked your channel above and created your ad account. Here are the settings
 
 ### Write the Ad With AI (Copy + Image)
 
-You do not have to invent ad copy from a blank page. You already have everything the ad needs: your Founding Hypothesis, your landing page words, and your customer's own pains and goals. Paste this prompt into any AI chat tool (ChatGPT, Claude, Gemini) - fill the brackets with what you have, set `[channel]` to Meta, Google, LinkedIn, or Reddit, and it writes the ad for you:
+You do not have to invent ad copy from a blank page. You already have everything the ad needs: your Founding Hypothesis, your landing page words, and your customer's own pains and goals. Paste this prompt into any AI chat tool (ChatGPT, Claude, Gemini) - fill the brackets with what you have, set `[CHANNEL]` to Meta, Google, LinkedIn, or Reddit, and it writes the ad for you:
 
 ```text
 You are a direct-response copywriter writing a first test ad for a product that has not launched yet. The goal is a simple demand test: get the right people to click through to a landing page and hand over an email. No hype, no fake urgency - just clear words in the customer's own language.
@@ -114,10 +114,10 @@ Here is everything I have:
 - Landing page value props: [paste your 2-4 value prop lines]
 - Customer pains, in their own words: [paste the exact phrases your customers use - from interviews, Reddit, reviews]
 - Customer gains / goals: [what they are trying to achieve - the win they want]
-- Channel this ad runs on: [channel]
+- Channel this ad runs on: [CHANNEL]
 
 Write me:
-1. Two to three PRIMARY TEXT variants (the main ad body). Use the customer's own vocabulary from the pains above - not marketing language. Match the tone of [channel] (Reddit = casual and honest, LinkedIn = professional, Meta = friendly and visual, Google = short and intent-driven).
+1. Two to three PRIMARY TEXT variants (the main ad body). Use the customer's own vocabulary from the pains above - not marketing language. Match the tone of [CHANNEL] (Reddit = casual and honest, LinkedIn = professional, Meta = friendly and visual, Google = short and intent-driven).
 2. Two HEADLINE variants (short, under 40 characters where the channel needs it).
 3. One IMAGE CONCEPT: describe a single image I can either generate with an AI image tool or fake with a simple product screenshot. Tell me exactly what should be in the frame and why it fits the message.
 4. A plain-English note telling me WHICH variant to run first and why - written so a non-marketer understands the reasoning.
@@ -131,7 +131,7 @@ Run the ad it gives you first. If the click-through rate is low, come back to th
 
 1. **Campaign objective:** Pick "Traffic" (not "Conversions" - you need pixel data before conversion optimization works).
 2. **Budget:** $10-20/day. Set a lifetime budget of $70-140 to hit ~100-200 visits (CPC $0.70-$1.90). Add 20% for creative iteration.
-3. **Audience:** Start broad. Meta's AI optimizer is better than manual interest stacking in 2026. If your `[customer]` blank is "solo chiropractors," add one interest (Chiropractic) and let the rest run broad. Age 25-55. All genders unless your product is gender-specific.
+3. **Audience:** Start broad. Meta's AI optimizer is better than manual interest stacking in 2026. If your `[CUSTOMER]` blank is "solo chiropractors," add one interest (Chiropractic) and let the rest run broad. Age 25-55. All genders unless your product is gender-specific.
 4. **Placement:** Advantage+ placements (automatic). Let Meta decide where your ad shows.
 5. **Ad creative:** Single image (your hero image from Lesson 1.2, or the AI-generated one). Primary text: your value prop sentence (1-2 lines from your landing page). Headline: your landing page headline. CTA button: "Learn More" or "Sign Up." Destination: your landing page URL.
 6. **Tracking:** Your Meta Pixel should already be installed (Lesson 1.4, step 1). In Ads Manager, under the ad set, verify the pixel is selected. If it says "No pixel," go back to that step and install it.
@@ -141,7 +141,7 @@ Run the ad it gives you first. If the click-through rate is low, come back to th
 
 1. **Campaign type:** Search campaign. NOT Performance Max (too broad for a smoke test). NOT Display (low intent).
 2. **Budget:** $20-50/day. Set max CPC bid at $3-8 (see channel table above for your use case).
-3. **Keywords:** 10-20 keywords in phrase match. Use your `[problem]` blank as the seed. Example: if your hypothesis is about chiropractor insurance claims, bid on "chiropractor insurance claim software," "resubmit denied claims chiropractor," "chiropractic billing automation."
+3. **Keywords:** 10-20 keywords in phrase match. Use your `[PROBLEM]` blank as the seed. Example: if your hypothesis is about chiropractor insurance claims, bid on "chiropractor insurance claim software," "resubmit denied claims chiropractor," "chiropractic billing automation."
 4. **Ad creative:** 3 headlines (Google shows 1-3). Headline 1: your landing page headline. Headline 2: one value prop. Headline 3: CTA ("Try It Free" or "See If It Works"). 2 descriptions. Description 1: your sub-headline. Description 2: one more value prop. Final URL: your landing page.
 5. **Tracking:** GA4 is installed (Lesson 1.3). In Google Ads > Tools > Linked Accounts, link your GA4 property. This takes 30 seconds - click "Link" next to your GA4 property, confirm, done.
 6. **Launch:** Submit. First-time accounts go into 24-hour review. Do not touch for 5-7 days.
@@ -150,7 +150,7 @@ Run the ad it gives you first. If the click-through rate is low, come back to th
 
 1. **Campaign objective:** Website visits.
 2. **Budget:** $50-80/day minimum (LinkedIn CPC is $5.70-$22). If this is too steep, use the B2B budget alternatives section above instead.
-3. **Audience:** Job title + industry + company size. Use your `[customer]` blank literally. If your hypothesis says "CTOs at 20-50 person SaaS companies," target exactly that. Do not broaden - on LinkedIn, narrow targeting is cheaper (less competition per audience slice).
+3. **Audience:** Job title + industry + company size. Use your `[CUSTOMER]` blank literally. If your hypothesis says "CTOs at 20-50 person SaaS companies," target exactly that. Do not broaden - on LinkedIn, narrow targeting is cheaper (less competition per audience slice).
 4. **Ad format:** Single image ad.
 5. **Ad creative:** Intro text: your value prop (keep it professional - LinkedIn readers expect B2B tone). Headline: your landing page headline. Image: your hero image or a simple text-on-color card. CTA: "Learn More" or "Sign Up." Destination: your landing page.
 6. **Tracking:** LinkedIn Insight Tag should already be installed (Lesson 1.4, step 1). In Campaign Manager, the tag should auto-detect if it's on your page.
@@ -160,9 +160,9 @@ Run the ad it gives you first. If the click-through rate is low, come back to th
 
 1. **Campaign objective:** Traffic.
 2. **Budget:** $10-25/day. Reddit CPC is $1.25-$3.00.
-3. **Targeting:** Community targeting. Pick 3-5 subreddits where your `[customer]` hangs out. For a developer tool: r/programming, r/webdev, r/SaaS. For B2B: r/startups, r/Entrepreneur. DO NOT target r/all - you'll burn budget on irrelevant clicks.
+3. **Targeting:** Community targeting. Pick 3-5 subreddits where your `[CUSTOMER]` hangs out. For a developer tool: r/programming, r/webdev, r/SaaS. For B2B: r/startups, r/Entrepreneur. DO NOT target r/all - you'll burn budget on irrelevant clicks.
 4. **Ad format:** Promoted post (looks like a regular Reddit post with a "Promoted" tag).
-5. **Ad creative:** Title: your headline, rewritten in Reddit's casual tone. "We built a thing that [solves X problem]" works better than polished marketing copy. Body: 2-3 sentences. Problem → solution → link. Authentic, not salesy. Link: your landing page.
+5. **Ad creative:** Title: your headline, rewritten in Reddit's casual tone. "We built a thing that [SOLVES_X_PROBLEM]" works better than polished marketing copy. Body: 2-3 sentences. Problem → solution → link. Authentic, not salesy. Link: your landing page.
 6. **Tracking:** Reddit Pixel should be installed (Lesson 1.4, step 1). In Ads Manager, the pixel status should show "Active."
 7. **Launch:** Submit. Reddit typically clears same-day. Comments will appear under your ad - leave them up unless they're spam. Real comments are free social proof or free feedback.
 

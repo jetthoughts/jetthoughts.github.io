@@ -49,7 +49,7 @@ After this lesson you will be able to: **run the 5-question Sean Ellis survey ag
 
 ## The 40% test, in one paragraph
 
-Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite, and kept seeing the same dividing line between products that ignited and products that needed life support. He surveyed each product's existing users with one load-bearing question: "How would you feel if you could no longer use [product]?" The answer is one of four: very disappointed, somewhat disappointed, not disappointed, no longer use it. If at least 40% said "very disappointed," the product could almost always grow on outbound and word of mouth alone. Under 40%, growth stalled until the product changed. Ellis explained the cutoff and wording on [Lenny Rachitsky's podcast](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis).
+Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite, and kept seeing the same dividing line between products that ignited and products that needed life support. He surveyed each product's existing users with one load-bearing question: "How would you feel if you could no longer use [PRODUCT]?" The answer is one of four: very disappointed, somewhat disappointed, not disappointed, no longer use it. If at least 40% said "very disappointed," the product could almost always grow on outbound and word of mouth alone. Under 40%, growth stalled until the product changed. Ellis explained the cutoff and wording on [Lenny Rachitsky's podcast](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis).
 
 ![Semicircular gauge of the share of users answering very disappointed: amber below the 40% line means product problem, green at 40% or more means a must-have user](sean-ellis-gauge.svg)
 
@@ -59,13 +59,13 @@ Use a free [Typeform](https://www.typeform.com) or [Tally](https://tally.so) for
 
 Open Typeform or Tally. Five questions, in this order. Wording matters - changing a word changes the answer.
 
-> **Q1.** How would you feel if you could no longer use [product]?
-> *(Multiple choice: Very disappointed / Somewhat disappointed / Not disappointed / No longer use [product])*
+> **Q1.** How would you feel if you could no longer use [PRODUCT]?
+> *(Multiple choice: Very disappointed / Somewhat disappointed / Not disappointed / No longer use [PRODUCT])*
 >
-> **Q2.** What type of person do you think would most benefit from [product]?
+> **Q2.** What type of person do you think would most benefit from [PRODUCT]?
 > *(Short text - 1 sentence. Reveals who the must-have segment thinks the target is.)*
 >
-> **Q3.** What is the main benefit you get from [product]?
+> **Q3.** What is the main benefit you get from [PRODUCT]?
 > *(Short text - 1 sentence. The verbatim language for your next ad copy if you do run paid later.)*
 >
 > **Q4.** How have you tried to solve this problem before? What did you switch from?
@@ -96,7 +96,7 @@ The Sean Ellis test is directional at **≥ 10 respondents**, useful at **20+**,
 >
 > 1. Export your users CSV. Strip the friends-and-family and the never-returned users. Annotate each row with job title and company size.
 > 2. Open Typeform or Tally. Type the five questions above verbatim.
-> 3. Send the email. Subject: *"Quick 90-second question about [product]"*. Re-send a few days later to non-openers.
+> 3. Send the email. Subject: *"Quick 90-second question about [PRODUCT]"*. Re-send a few days later to non-openers.
 > 4. Export the responses. Compute overall must-have % and per-segment must-have %.
 > 5. Paste three Q2-Q3 verbatims from your top segment into a Google Doc.
 > 6. **Success check:** you have a headline %, a top-segment %, and 3 verbatim quotes - and you know whether any segment cleared 40%.
