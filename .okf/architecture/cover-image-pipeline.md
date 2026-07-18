@@ -12,16 +12,20 @@ Cover images are generated at a 2400×1260 source PNG (2x retina) using
 the **JetVelocity "Obsidian Engine"** design system defined in
 `.stitch/design.md`, and follow a mandatory 6-slot layout (brand/category,
 year pill, 3-line gradient headline, visual ember, tag chips, status
-chip). Hugo derives the 1200×630 `og:image`, responsive
-640/960/1920 WebP/JPG variants, and a 360×189 thumbnail from that
-source at build/CDN time.
+chip). The 1200×630 og:image / 640·960·1920 responsive variants /
+360×189 thumbnail listed in `.stitch/design.md` are the design spec's
+**target** output sizes; the actual derivation each template performs is
+described below — the source PNG is what the pipeline is authored
+against.
 
 Two distinct rendering paths consume the same source image:
 
 - **`page/cover_image.html`** — emits only the `og:image` /
   `twitter:image` meta tags. If `site.Params.cdn.enabled`, it uses the
   CDN-resized resource's own `Permalink`/`Width`/`Height` directly;
-  otherwise it falls back to a local Hugo `.Fit "512x512 jpeg"`.
+  otherwise it falls back to a local Hugo `.Fit "512x512 jpeg"`. (The
+  fixed 1200×630 og:image is emitted separately by
+  [seo-meta-tags](/architecture/seo-meta-tags.md), not here.)
 - **`partials/blog/img-cropped.html`** — renders the actual
   `<picture>` thumbnail markup used on cards/list pages. It resolves
   the source image from `metatags.image` (primary convention), falling
