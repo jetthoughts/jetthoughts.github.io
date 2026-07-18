@@ -91,6 +91,11 @@ file_pages() {
   esac
 }
 
+# bare `bin/qtest` = `bin/qtest --changed`
+if [ "$CHANGED" = 0 ] && [ "$ALL" = 0 ] && [ ${#PAGES[@]} -eq 0 ]; then
+  CHANGED=1
+fi
+
 if [ "$CHANGED" = 1 ]; then
   if [ -n "$REF" ]; then
     files=$(git diff --name-only "$REF")
@@ -113,6 +118,25 @@ if [ "$CHANGED" = 1 ]; then
   fi
 fi
 
+if [ "$ALL" = 0 ] && [ ${#PAGES[@]} -eq 0 ]; then
+  echo "qtest: no pages given. Usage: bin/qtest [<page-key ...> | --changed [ref] | --all]" >&2
+  exit 2
+fi
+
+# validate keys + build the union regex BEFORE paying for the build
+FRAGS=""
+NEED_BLOG_SPECIAL=0
+NEED_CAREERS_PAGE=0
+if [ "$ALL" = 0 ]; then
+  for p in $(printf '%s\n' "${PAGES[@]}" | sort -u); do
+    frag=$(page_regex "$p") || { echo "qtest: unknown page key '$p'" >&2; exit 2; }
+    FRAGS="${FRAGS:+$FRAGS|}$frag"
+    [ "$p" = blog-single ] && NEED_BLOG_SPECIAL=1
+    [ "$p" = careers ] && NEED_CAREERS_PAGE=1
+  done
+fi
+REGEX="/${FRAGS}/"
+
 # --- build once (same options the test harness would use) -------------------
 if [ "$BUILD" = 1 ]; then
   echo "qtest: building to $DEST ..."
@@ -133,23 +157,6 @@ if [ "$ALL" = 1 ]; then
   bin/rake test:critical
   exit $?
 fi
-
-if [ ${#PAGES[@]} -eq 0 ]; then
-  echo "qtest: no pages given. Usage: bin/qtest <page-key ...> | --changed | --all" >&2
-  exit 2
-fi
-
-# de-dup pages, build the union regex
-FRAGS=""
-NEED_BLOG_SPECIAL=0
-NEED_CAREERS_PAGE=0
-for p in $(printf '%s\n' "${PAGES[@]}" | sort -u); do
-  frag=$(page_regex "$p") || { echo "qtest: unknown page key '$p'" >&2; exit 2; }
-  FRAGS="${FRAGS:+$FRAGS|}$frag"
-  [ "$p" = blog-single ] && NEED_BLOG_SPECIAL=1
-  [ "$p" = careers ] && NEED_CAREERS_PAGE=1
-done
-REGEX="/${FRAGS}/"
 
 FAIL=0
 run_file test/system/desktop_site_test.rb -n "$REGEX" || FAIL=1
