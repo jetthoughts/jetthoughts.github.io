@@ -90,6 +90,11 @@ bf72bba…, PR #363, 2026-07-12); 6 never-loaded orphans deleted same PR.
 
 ## Follow-ups (not blocking)
 
+**2026-07-18: absorbed into Phase C** (spec revision + TASK-TRACKER PHASE C
+section): testimonials/cta/header-cta extraction = sprint C1; fl-node
+re-keying = sprints C2/C3 + C4 backlog; the 586.css:823 hardening below =
+task C2.5.
+
 - Shared `css/testimonials.css`: the testimonials-partial node rules are now
   carried (identically) inside several pages/*.css files; extracting them once
   is a source-hygiene pass — gate on byte-identical compiled bundles.

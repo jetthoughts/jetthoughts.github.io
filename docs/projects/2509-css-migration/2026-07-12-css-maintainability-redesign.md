@@ -3,6 +3,10 @@
 Supersedes Phase 3 (WP3.1–3.4) of the original migration plan. Approved by Paul on
 2026-07-12 after per-section review (brainstorming session, sprint 7).
 
+**Revision 2026-07-18**: FL burn-down complete (16/16, PR #365). Phase C
+(post-burn-down cleanup) appended below — see "Phase C" section. Sprint task
+lists live in TASK-TRACKER.md.
+
 ## Why the plan changed
 
 The original goal — "eliminate 70-80% CSS duplication (27,094–31,536 lines)" — was
@@ -132,3 +136,101 @@ sooner; the protocol never changes.
   (scaffolding) then rewrite sprints R1…Rn.
 - Pace: one page per sprint, no fixed calendar. One branch + one bundled PR per
   sprint, per repo policy.
+
+---
+
+# Phase C — post-burn-down cleanup (revision 2026-07-18)
+
+The FL burn-down (R1–R9) shipped all 16 FL export files out of the tree at pixel
+parity. Measured against the success criteria above, the goal is NOT yet met:
+
+| # | Criterion | Status 2026-07-18 (tree at 1df33334) |
+|---|-----------|--------------------------------------|
+| 1 | FL files 16 → 0 | ✅ done (PR #365) |
+| 2 | No obfuscated artifacts | ❌ ~3,700 `.fl-node-*` rules moved INTO `pages/*.css` by the delta ports (homepage 1,038 · careers 583 · services 492 · clients 366 · about-us 364 · single-service 350 · single-use-cases 329 · use-cases 147 · single-career 67); 604 `fl-node/fl-row/fl-col` refs across 14 templates; `skin-65eda28877e04.css` still hash-named; `critical/fl-*` trio + `foundations/fl-builder-common-base.css` kept alive only by the fl markup |
+| 3 | No duplication in hand layer | ❌ 55–70% byte-identical lines between sibling page files (clients↔services 841/1,463 · single-service↔services 851/1,455 · use-cases↔single-use-cases 832/1,176) — shared-partial node rules copied into every consumer; `critical/*.css` files each share ~250+ identical lines with their page file |
+| 4 | Safe-edit under a minute | ✅ map + suites; per-file "affects pages" headers still to add (folded into C1/C2) |
+| 5 | Evidence rule | ✅ standing (compiled+gzip, never source lines) |
+
+**Phase C goal**: close criteria 2 and 3 without a single visual change. Same
+strangler discipline, smaller unit: micro-commits, every commit independently
+gated and revertable.
+
+## Phase C structure (dependency-ordered)
+
+- **C1 — extract shared components** (criterion 3). The rules keyed to the
+  shared partials' fl-nodes (`partials/page/testimonials.html`,
+  `partials/page/cta.html`) and the bf72bba header-CTA trio are byte-identical
+  copies inside 3–7 page files each. Extract each set once into
+  `css/components/*.css` and replace the copies with `@import`
+  (postcss-import inlines per bundle, so shipped bytes per page are unchanged —
+  this is source dedup, not transfer optimization). C1 MUST precede C2/C3:
+  after extraction each shared block gets re-keyed once, not seven times.
+- **C2 — de-obfuscate the shared layer** (criterion 2 start). Re-key the shared
+  partials' fl-node ids to semantic classes (template + component file in the
+  same commit, one node per commit); rename the hash-named skin file and
+  `dynamic-404-590.css`; land the deferred 586.css:823 cascade hardening.
+- **C3 — page re-keying pilots** (criterion 2, easiest pages first). R3c alias
+  technique: rename `.fl-node-xyz` → meaning-carrying class in page template +
+  page CSS, one node-cluster per commit, ZERO baseline changes. Pilots:
+  `clients/single` (1 node), `page/use-cases` (11), `careers/single` (18),
+  stretch `page/clients` (13). Establishes velocity for the C4 backlog.
+- **C4+ backlog** (own sprints, ordered easiest-first by template node count):
+  remaining page re-keys — 404 (16) → use-cases/single (32) → page/services
+  (33) → services/single (40) → about (41) → careers (58) → home (85); retire
+  `critical/fl-layout-grid.css` + `fl-shape-dividers.css` +
+  `fl-common-modules.css` + `foundations/fl-builder-common-base.css` when the
+  last `fl-*` markup dies; dedup `critical/*.css` against `pages/*.css`;
+  legacy-shared strangler (`theme-main.css` 3,671 · `component-bundle.css`
+  2,907 · skin 2,692 · `586.css` 1,260 · `style.css` 1,005 lines) via
+  per-bundle PurgeCSS-survival audit; numeric renames (`586.css`) whenever a
+  sprint touches them anyway; **wrapper collapse** (the HTML-size lever —
+  flatten the `fl-col-group`/`fl-col`/`fl-col-content` triple nesting on
+  re-keyed pages), one page per sprint AFTER that page is re-keyed, design
+  approval + baseline updates expected since DOM changes.
+
+### Explicit non-goals for C1–C3
+
+- **No DOM restructuring / wrapper collapse** (`fl-col-group`/`fl-col` nesting
+  stays). Structural HTML slimming changes rendering risk class and needs
+  design approval — schedule as separate per-page sprints after re-keying.
+- **No rule-content changes**: renames and moves only. A commit is either a
+  move (C1), a rename (C2/C3), or a documented deletion (586.css:823) — never
+  mixed.
+- No transfer-size targets: per-bundle compiled+gzip must come out UNCHANGED
+  (±noise) in C1 and change only by selector-name length in C2/C3.
+
+## The Phase C gate stack (every commit, cheapest first)
+
+1. **Converged build**: `bin/hugo-build` twice, compare the second run against
+   a pre-commit converged baseline (build flicker is a known false signal — see
+   memory `project-hugo-stats-purgecss-flicker`; build twice as control before
+   blaming an edit).
+2. **Bundle diff**: only the expected bundles' fingerprints change.
+   - C1 (move) commits: per-bundle rule-level equivalence — selector set,
+     declarations, and rule COUNT identical before/after (the @import inlines
+     to the same rules). Byte-identical when the moved block's position is
+     preserved; where source order shifts, rule-level equivalence + gate 3.
+   - C2/C3 (rename) commits: bundle diff is exactly the
+     `s/fl-node-<id>/<semantic>/` substitution and nothing else; rendered HTML
+     diff is the same class substitution.
+3. **Headless RMSE pre-gate**: old-vs-new full-page compare, desktop + mobile,
+   RMSE 0 — catches parity misses in ~1 min before the suites (memory
+   `project-headless-rmse-parity-pregate`).
+4. **Suites**: `bin/rake test:critical`, then `bin/test` (macOS) AND `bin/dtest`
+   (Linux) — **zero baseline changes** (refactor tolerance 0.0).
+
+**Known trap (blocking read)**: `postcss-delete-duplicate-css` runs in
+production builds and deletes the LATER of two byte-identical rules. Moving or
+renaming a rule can flip which duplicate survives and unmask a different
+cascade winner — macOS screenshots catch it, Linux alone does NOT (font
+resolution masks it). See memory `project-css-var-extraction-dedup-trap`.
+Gate 2's rule-count equality + gate 3 exist precisely for this.
+
+**Preflight rule (C1)**: before extracting a component, prove the candidate
+blocks are identical across all consumers (normalized whitespace diff). If any
+consumer diverges, STOP — narrow the component to the identical subset and log
+the variance in the tracker; never "fix" a divergence inside an extraction
+commit.
+
+Rollback unit = one commit (revert restores the copies or the old names).

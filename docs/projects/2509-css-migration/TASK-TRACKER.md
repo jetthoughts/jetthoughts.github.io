@@ -2,8 +2,8 @@
 
 **Purpose**: Status tracking for the CSS maintainability goal — FL-Builder export CSS retired page-by-page (strangler rewrites)
 **Update Frequency**: After each sprint or status change
-**Last Updated**: 2026-07-17
-**Current Phase**: ✅ COMPLETE — FL burn-down 16/16 retired (PR #365); follow-ups only
+**Last Updated**: 2026-07-18
+**Current Phase**: 🔄 Phase C (post-burn-down cleanup) — sprints C1–C3 planned; FL burn-down itself ✅ 16/16 (PR #365)
 
 ---
 
@@ -30,9 +30,10 @@ Phase 1: Critical CSS Inline     [✅❌✅❌] 4/4 WPs resolved (2 done, 2 clos
 Phase 2: FL-Builder Foundations  [❌❌❌❌] 4/4 WPs resolved (all closed with evidence; cleanup shipped instead)
 Phase 3: Additional Patterns     SUPERSEDED 2026-07-12 — never started; premise died with Phases 1+2
 
-CURRENT PLAN (2026-07-12 spec):
+CURRENT PLAN (2026-07-12 spec, revised 2026-07-18):
 Phase 0: Safety scaffolding      [✅✅✅✅] 4/4 items (P0.1 blog special-content tests ✅, P0.2 practiced before every sprint ✅, P0.3 ownership map ✅, P0.4 orphan guard unit test ✅)
 Rewrites: FL burn-down           ✅ 16/16 files RETIRED (R1–R9, PR #365, 2026-07-16..17) — zero snapdiff baseline changes across the entire run
+Phase C: Post-burn-down cleanup  [🔲🔲🔲] 0/3 planned sprints (C1 shared components, C2 de-obfuscate shared layer, C3 page re-key pilots) + C4 backlog
 
 Historical: ~73,150 lines eliminated sprints 1-7 (orphan deletion + consolidation)
 ```
@@ -400,7 +401,7 @@ earlier) and the archived plan docs under `70-79-archives/superseded-2026-07-12/
 
 ## 📅 PHASE 0 (CURRENT PLAN): Safety scaffolding
 
-**Phase Status**: 🔄 In progress (1/4 items)
+**Phase Status**: ✅ COMPLETE (4/4 items)
 **Source**: Spec §"Phase 0 — safety scaffolding". No legacy CSS edits in this phase.
 **Gate mechanism**: existing snapdiff suites only — `bin/test` (macOS) + `bin/dtest`
 (Linux), `FORCE_SCREENSHOT_UPDATE=true` to regenerate baselines. No new custom
@@ -408,17 +409,13 @@ baseline/compare scripts; missing coverage is fixed by ADDING TESTS.
 
 ```yaml
 items:
-  - [ ] P0.1 Special-content blog post coverage: desktop+mobile screenshot tests
-        for one representative post per surface — Mermaid (3 posts exist),
-        Chroma code-highlight (139 posts), inline style= HTML (3 posts),
-        youtube shortcode. Revive or replace the skipped
-        test/system/components/diagram_component_test.rb.
-  - [ ] P0.2 Rewrite-target coverage check: before each rewrite sprint, confirm
-        the target page has desktop+mobile snapdiff coverage; add it first if not.
+  - [x] P0.1 Special-content blog post coverage: mermaid rendered-diagram capture
+        (dfecb741) + per-language code-block screenshots via draft fixture post
+        (5a7a67f5, test_codeblock_language_styles).
+  - [x] P0.2 Rewrite-target coverage check: practiced before every R1–R9 sprint.
   - [x] P0.3 Page→bundle ownership map: css-bundle-ownership-map.md (2026-07-12) —
         19 bundles × owning template × FL files × gzip; FL burn-down table 16→0.
-  - [ ] P0.4 Orphan guard: check listing CSS files under themes/beaver/assets/css/
-        referenced by no template resource slice.
+  - [x] P0.4 Orphan guard: test/unit/css_orphan_guard_test.rb.
 ```
 
 ---
@@ -456,9 +453,176 @@ notes: |
   (imported by pages/use-cases.css; not byte-redundant). critical/ FL trio
   stays as shared framework for kept fl-node markup.
 follow_ups:
-  - shared css/testimonials.css extraction (source hygiene; gate byte-identical)
-  - per-page semantic re-keying of delta-ported markup (R3c alias technique),
-    independent sprints with Paul's design approval if visuals change
+  - ABSORBED into Phase C (2026-07-18): shared-component extraction = sprint C1;
+    semantic re-keying = sprints C2/C3 + C4 backlog. See PHASE C below.
+```
+
+---
+
+## 📅 PHASE C (CURRENT PLAN): Post-burn-down cleanup — sprints C1–C3
+
+**Phase Status**: 🔲 Not started (planned 2026-07-18)
+**Source**: Spec §"Phase C — post-burn-down cleanup" (revision 2026-07-18) —
+read it FIRST; it defines the gate stack, the preflight rule, the
+dedup-trap warning, and the non-goals (no DOM restructuring, no rule-content
+changes, no transfer-size targets).
+**Execution mode (XP)**: one feature branch + ONE bundled PR per sprint;
+micro-commits — one component/consumer/node per commit, every commit passes
+the full gate stack (converged build ×2 → bundle rule-diff → headless RMSE 0 →
+`bin/rake test:critical` → `bin/test` + `bin/dtest`, ZERO baseline changes).
+Read-only audit agents may run in parallel; ALL mutations sequential.
+A commit is a move OR a rename OR a documented deletion — never mixed.
+
+### Sprint C1 — extract shared components (kills the 55–70% page-file duplication)
+
+**Branch**: `css-migration/c1-shared-components`
+**Deliverable**: rules for the shared partials live ONCE under
+`themes/beaver/assets/css/components/`, `@import`-ed in place by their
+consumer `pages/*.css` files. Per-bundle compiled output rule-identical;
+per-bundle gzip unchanged (±noise) — record before/after in the PR.
+
+```yaml
+tasks:
+  - [ ] C1.0a Preflight — orphan-guard compatibility: confirm
+        test/unit/css_orphan_guard_test.rb counts files reachable via @import
+        from a slice member (components/*.css will have no direct template
+        reference). If it doesn't, teach it to follow @import in the same
+        commit that lands the first component file.
+  - [ ] C1.0b Preflight — identity proof per component: for each component
+        below, extract every consumer's candidate block (all rules whose
+        selectors contain the component's fl-node ids) and diff normalized
+        (whitespace/blank-line collapse). Identical → proceed. Divergent →
+        narrow the component to the identical subset and LOG the variance
+        here; do NOT reconcile differences inside this sprint.
+  - [ ] C1.1 components/testimonials.css — source partial
+        themes/beaver/layouts/partials/page/testimonials.html; node ids:
+        08kl1yzxeout 1a4igunq3xvj 1i28o7dq3pcv 38ejkdz2v4cq byg0v6ftixrd
+        c17gwsk2h8zy d4wp9kxy1uav q4x2z8f9l1k3 ud8jroeig5h2 zaerhibqp296.
+        Consumers (7): pages/about-us.css, clients.css, services.css,
+        homepage.css, single-use-cases.css, single-service.css, use-cases.css.
+        Commit 1: create the file (canonical block, header comment listing
+        the 7 owning bundles per ownership map) + swap the FIRST consumer
+        (about-us.css — smallest diff surface): delete its block, add
+        `@import "components/testimonials.css";` at the position of the
+        block's FIRST rule. Gate.
+        Commits 2–7: one consumer per commit, same swap, gate each.
+        NOTE homepage.css carries the block in TWO locations (lines ~768 and
+        ~9813) — the second occurrence is an in-file duplicate; the swap
+        keeps ONE @import at the first position and deletes both, and the
+        bundle rule-diff must show the production output unchanged (the
+        duplicate was already dropped by postcss-delete-duplicate-css —
+        verify, don't assume; if it was NOT dropped, cascade order matters:
+        stop and log).
+  - [ ] C1.2 components/cta-banner.css — source partial
+        themes/beaver/layouts/partials/page/cta.html; node ids: 3h8mj6w59d2c
+        9hf5wet31z02 d96zqbnxltuj fa7hjib92cpv fdsvgxpowi03 rujwd9mzxche
+        toa2hwegbp4q. Enumerate consumers first:
+        `grep -l 'rujwd9mzxche\|fa7hjib92cpv' themes/beaver/assets/css/pages/*.css`
+        Then same per-consumer commit protocol as C1.1.
+  - [ ] C1.3 components/header-cta.css — the bf72bba header-CTA trio (3 rules)
+        ported at R5–R8c into pages/use-cases.css, clients.css, services.css
+        (see ownership map, bf72bba row). Same protocol; also check
+        about-us/single-service criticals which carried byte-identical copies
+        (critical/ files are NOT in scope for the swap — inline critical CSS
+        has no @import pipeline position; leave them, note for C4 dedup).
+  - [ ] C1.4 Evidence + docs: per-bundle gzip before/after table in the PR
+        (expect ±0); add "affects pages:" header comments to the three new
+        component files AND to each touched pages/*.css (criterion 4);
+        update css-bundle-ownership-map.md (slice members now include
+        components/* via @import).
+  - [ ] C1.5 PR: one bundled PR, per-commit description, both suites green
+        on head, tracker UPDATE LOG entry.
+
+blockers: NONE — ready to start
+estimated_commits: ~18-22 (2 preflight, 7+~5+3 swaps, docs)
+```
+
+### Sprint C2 — de-obfuscate the shared layer (criterion 2 start)
+
+**Branch**: `css-migration/c2-deobfuscate-shared`
+**Depends on**: C1 merged (re-key each shared block once, not 7×).
+**Deliverable**: shared partials use semantic classes; zero hash-named CSS
+files; deferred cascade hardening landed.
+
+```yaml
+tasks:
+  - [ ] C2.1 Re-key testimonials — one node per commit (≈10 commits): rename
+        `fl-node-<id>` → semantic class (naming from section intent:
+        testimonials-section, testimonials-heading, testimonials-quote,
+        testimonials-author, …) in partials/page/testimonials.html AND
+        components/testimonials.css in the SAME commit. Keep the generic
+        `fl-row/fl-col/fl-module` framework classes (they die in C4 with the
+        critical/fl-* trio). Gate: bundle diff is exactly the class
+        substitution; rendered HTML diff likewise; ZERO baseline changes.
+  - [ ] C2.2 Re-key cta partial — same protocol, ≈7 commits
+        (cta-banner, cta-banner-heading, cta-banner-button, …) in
+        partials/page/cta.html + components/cta-banner.css.
+  - [ ] C2.3 Rename skin-65eda28877e04.css → legacy-theme-skin.css (last
+        hash-named file; criterion 2). Enumerate ALL refs first:
+        `grep -rln 'skin-65eda28877e04' themes/ config/ | sort` (12+ template
+        slices at last count). git mv + sed all refs in ONE commit; file
+        content untouched. Gate: every bundle's rule content identical
+        (fingerprints change — concat input renamed — that is the ONLY
+        expected diff). Name pre-approved? NO — flag in PR for Paul; rename
+        is one-commit revertable if he prefers another name.
+  - [ ] C2.4 Rename dynamic-404-590.css → dynamic-404.css (node-id 590 is
+        retired). Refs: themes/beaver/layouts/404.html +
+        partials/assets/homepage-css-resources.html. One commit, same gate
+        as C2.3.
+  - [ ] C2.5 Cascade hardening (deferred from burn-down): delete
+        `background-color:#F5F6F8` from `.single-content pre` (586.css:823)
+        — the losing duplicate whose only effect is masking the dark
+        code-block background behind cascade order. Gate: blog-single bundle
+        rule-diff shows EXACTLY this deletion; 586.css is in most slices so
+        expect broad fingerprint churn with rule-identical content elsewhere;
+        test_codeblock_language_styles (codeblock-styles-fixture post) must
+        stay green — it screenshot-locks the regression this prevents.
+  - [ ] C2.6 Safe-edit headers (criterion 4 closure for the legacy layer):
+        one-line "affects pages: see css-bundle-ownership-map.md; loaded by
+        <N> bundles" header comment on 586.css, style.css, theme-main.css,
+        component-bundle.css, legacy-theme-skin.css. Comment-only commits;
+        production bundles strip comments — output byte-identical.
+  - [ ] C2.7 PR + ownership map + tracker UPDATE LOG.
+
+blockers: C1 not merged
+estimated_commits: ~22 (10+7 re-keys, 2 renames, 1 deletion, headers, docs)
+```
+
+### Sprint C3 — page re-keying pilots (easiest pages first)
+
+**Branch**: `css-migration/c3-rekey-pilot`
+**Depends on**: C2 merged (shared partial nodes already semantic — page grep
+hits are page-own nodes only).
+**Deliverable**: 3–4 templates fully off `fl-node-*` ids; the R3c alias
+protocol timed and documented so C4 sprints can be sized.
+
+```yaml
+tasks:
+  - [ ] C3.1 clients/single.html — 1 remaining distinct node (pages/
+        single-client.css is already fully aliased from R3c). Verify the
+        node has zero rules in any live CSS
+        (`grep -rn '<id>' themes/beaver/assets/css/`); if dead, rename or
+        drop the class attr; one commit.
+  - [ ] C3.2 page/use-cases.html — 11 distinct page-own nodes /
+        pages/use-cases.css ~147 fl-node refs pre-C1. Protocol per
+        node-cluster (a section's nodes rename together, one commit each):
+        (a) name from rendered section intent (use-cases-hero,
+        use-cases-grid, use-cases-cta-strip, …; grep the template around the
+        node for the visible heading), (b) rename in template + CSS same
+        commit, (c) full gate. ≈5-8 commits.
+  - [ ] C3.3 careers/single.html — 18 distinct nodes /
+        pages/single-career.css 67 refs. Same protocol, ≈6-9 commits.
+  - [ ] C3.4 (stretch, only if velocity allows) page/clients.html —
+        13 distinct nodes. Same protocol.
+  - [ ] C3.5 Retro + sizing: record minutes-per-node actual; write the C4
+        re-key order with estimates into this tracker (spec backlog order:
+        404 16 → use-cases/single 32 → page/services 33 → services/single 40
+        → about 41 → careers 58 → home 85); PR + map + UPDATE LOG.
+
+blockers: C2 not merged
+estimated_commits: ~15-20
+non_goals: NO wrapper-div collapse, NO visual changes, NO rule edits —
+  renames only (spec §Phase C non-goals)
 ```
 
 ---
@@ -467,10 +631,16 @@ follow_ups:
 
 ### Current Blockers
 ```yaml
-phase_0_blockers: NONE - P0.1/P0.2/P0.4 ready to start (P0.3 shipped 2026-07-12)
-rewrite_sprint_blockers: R1 gated on Phase 0 items P0.1 + P0.4 (coverage + orphan guard)
+phase_c_blockers: NONE — C1 ready to start; C2 gated on C1 merge; C3 gated on C2 merge
 
-critical_path_risks: NONE - old-plan phases all closed; see UPDATE LOG for history
+critical_path_risks:
+  - postcss-delete-duplicate-css dedup trap (production-only, later-duplicate
+    deleted): rule moves/renames can flip cascade winners; Linux suite alone
+    CANNOT catch it (font masking) — macOS suite + RMSE pre-gate mandatory
+    per commit. See memory project-css-var-extraction-dedup-trap.
+  - build flicker false signals (term-casing races, header partialCached
+    -active race): build twice as control before blaming an edit. See memory
+    project-hugo-stats-purgecss-flicker.
 ```
 
 ### Risk Mitigation Status
@@ -487,10 +657,21 @@ performance_baseline: ✅ YES - FCP, CLS metrics documented
 
 ### FL burn-down (the headline metric)
 ```
-Live FL layout files: 16 / 16 (target: 0)
-Retired: e93d9b85…-layout-bundle.css (merged into bf72bba…, PR #363) +
-         6 never-loaded orphans (PR #363)
+Live FL layout files: 0 / 16 — ✅ COMPLETE 2026-07-17 (R1–R9, PR #365)
+Earlier: e93d9b85…-layout-bundle.css merged into bf72bba… + 6 never-loaded
+         orphans deleted (PR #363)
 Authoritative table: css-bundle-ownership-map.md
+```
+
+### Phase C headline metrics (criteria 2+3; measured 2026-07-18)
+```
+fl-node rules in pages/*.css:   ~3,700  (target: 0 — sprints C2/C3/C4)
+fl-* refs in templates:            604  (target: 0)
+Hash-named CSS files:                1  (skin-65eda28877e04.css; target: 0 — C2.3)
+Dup lines between sibling pages: 55-70% (target: ~0 — C1)
+Re-measure commands:
+  for f in themes/beaver/assets/css/pages/*.css; do grep -c 'fl-node-' "$f"; done
+  grep -r 'fl-node-' themes/beaver/layouts --include='*.html' | wc -l
 ```
 
 ### Historical (old plan, closed)
@@ -526,6 +707,27 @@ fcp_metrics:
 ---
 
 ## 🔄 UPDATE LOG
+
+### 2026-07-18 (plan revision — Phase C defined, sprints C1–C3 planned)
+- **Action**: Post-burn-down audit measured the tree against the spec's five
+  success criteria: criteria 2 (no obfuscated artifacts) and 3 (no duplication
+  in the hand layer) are NOT met — the delta ports moved ~3,700 fl-node rules
+  into pages/*.css, 604 fl-* refs remain in 14 templates, 55–70% of lines are
+  byte-identical between sibling page files (shared-partial copies), and
+  skin-65eda28877e04.css is still hash-named.
+- **Shipped**: spec revision (§"Phase C — post-burn-down cleanup": phase
+  structure C1→C4, gate stack, preflight rule, non-goals) + this tracker's
+  PHASE C section with agent-executable micro-commit task lists for sprints
+  C1 (shared-component extraction), C2 (shared-layer de-obfuscation),
+  C3 (page re-key pilots). Phase 0 yaml, blockers, metrics, and quick-actions
+  sections de-staled.
+- **Dropped from follow-ups (falsified)**: "root list.html is dead code" —
+  sprint-4 log already corrected this (383 /blog/tags/* pages render through
+  it; the bundleName collision was fixed via shared partial). Stray @charset
+  follow-up — already fixed in sprint 3 (grep confirms zero mid-file
+  @charset today). contact-us/free-consultation re-keying — already done
+  during R2/R4b (fl-node hits in those files are comments only).
+- **Next**: Sprint C1 on branch css-migration/c1-shared-components.
 
 ### 2026-07-17 (strangler run complete — FL burn-down 16/16, PR #365)
 - **Shipped**: R4a..R9 in one continuous run (R1..R3d landed 2026-07-16 on the
@@ -853,12 +1055,12 @@ further whole-file merges found.
 
 ### Start the next sprint
 ```bash
-# Current: Phase 0 items P0.1 (blog-post coverage) / P0.4 (orphan guard)
-git checkout -b css-migration/<sprint-name>
-# Follow the spec: 2026-07-12-css-maintainability-redesign.md
-# Gates on every commit: bin/test (macOS) AND bin/dtest (Linux)
-# Baselines regenerate only intentionally: FORCE_SCREENSHOT_UPDATE=true
-# One bundled PR per sprint
+# Current: Sprint C1 (shared-component extraction) — see PHASE C section
+git checkout -b css-migration/c1-shared-components
+# Follow the spec §"Phase C": 2026-07-12-css-maintainability-redesign.md
+# Gate stack EVERY commit: converged build ×2 → bundle rule-diff →
+#   headless RMSE 0 → bin/rake test:critical → bin/test AND bin/dtest
+# ZERO baseline changes (refactor tolerance 0.0); one bundled PR per sprint
 ```
 
 ### Update this tracker after a sprint
