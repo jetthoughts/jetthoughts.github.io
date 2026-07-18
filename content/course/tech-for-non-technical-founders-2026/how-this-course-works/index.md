@@ -61,6 +61,8 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 | 1.4 | Run 300 cold visitors and read the signal | Ad platform of choice |
 | 1.5 | Add a Stripe price button to measure payment intent | Stripe Payment Links |
 
+> → **Mia's Module 1:** spent $400 on Meta ads, 300 cold visitors, 6.5% conversion, six pre-orders at $99 each - before a line of product code. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)
+
 **Before you write the hypothesis:** spend 30 minutes with [Perplexity](https://www.perplexity.ai/) (an AI search engine that answers questions with cited sources). Ask it to find the top 5 user complaints about existing solutions in your niche, citing reviews from [G2](https://www.g2.com/) and [Capterra](https://www.capterra.com/) (the two big business-software review sites). Use the exact vocabulary from real complaints in your hypothesis blanks. If nobody is complaining about the problem anywhere online, the hypothesis is already in trouble.
 
 > **AI research layer (pre-hypothesis):** Perplexity + Trend Seeker (both have free tiers). Purpose: confirm people are actually searching for or complaining about the problem BEFORE you write a hypothesis about it. Verbatim quotes from Reddit and G2 feed directly into your landing page headline.
@@ -80,6 +82,8 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 | 2.5 | Score the transcripts and make the build / pivot / kill call | Mom Test Synthesis page |
 | 2.6 | Build a throwaway 3-screen clickable prototype | Lovable |
 
+> → **Mia's Module 2:** rehearsed questions with an AI persona, booked 10 interviews from a 30-name list, scored the transcripts to reach "build," and tested a clickable prototype with five parents. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/)
+
 **The Mom Test is irreplaceable.** AI tools can tell you what people say online, but they cannot tell you whether a specific human will open their wallet. Without the interviews, you're building features for a problem nobody confirmed exists.
 
 > **After interviews, before the brief:** run your refined hypothesis through IdeaProof (free tier to start). Its multi-model ensemble stress-tests your business logic and catches legal, economic, and competitive blind spots you haven't considered.
@@ -95,6 +99,8 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 |---|---|---|
 | 3.1 | Write a one-page Product Brief - "Vibe PRD" (PRD = Product Requirements Document; the "Vibe" version is a one-pager an AI builder can act on, not a 30-page spec for a 6-person team) | Vibe PRD Template |
 | 3.2 | Quality-check: rewrite features as outcome-shaped job stories | Claude or ChatGPT |
+
+> → **Mia's Module 3:** turned ten scored transcripts into a one-page product brief where every feature traced back to something a parent actually said. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-3-walkthrough-mia/)
 
 The brief is the handoff document. It goes to Lovable, a hired developer, or a fractional CTO. It prevents over-engineering because it describes what the customer needs to accomplish, not what features to build. Every feature in the brief must trace back to a verbatim quote from a Module 2 interview.
 
@@ -112,6 +118,8 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 | 4.3 | Set up the stack and pre-flight rules: Lovable + Supabase + Stripe | Lovable + Supabase + Stripe |
 | 4.4 | Walk the 4 build phases to a live MVP at a real URL | Same stack + a domain in your name |
 | 4.5 (optional) | Spot the 5 ceiling signals that mean it's time to graduate beyond no-code | Monthly calendar block |
+
+> → **Mia's Module 4:** chose self-serve, locked ownership of every account, walked the four build phases, and shipped TutorMatch on Lovable + Supabase + Stripe - her spouse signed up in Phase 2. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)
 
 > **Before you write code: the $0 Concierge MVP.** If you're not ready to commit to a full Lovable build, use Tally + Zapier (or Make.com) + Airtable to simulate your product's backend. Collect customer requests through a Tally form, route them to Airtable via Zapier, and process them manually. The customer experiences a working product. You validate demand before writing a line of code. All three tools have free tiers.
 
@@ -131,6 +139,8 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 | 5.5 | Send in sequence, track replies, book demos | The same spreadsheet |
 | 5.6 | Sign a Design Partner Agreement - "DPA" (a short contract where a customer pays a deposit to test your product as a co-design partner; cheaper and faster than a full enterprise contract) - with a refundable deposit | DPA template + Stripe |
 | 5.7 (optional) | Go cold outbound: 30 filtered messages, book 1-2 pilots | LinkedIn Sales Navigator or manual |
+
+> → **Mia's Module 5:** sent her DPA to the warmest lead from her champion bucket - the $1,200 deposit cleared before she built anything new. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)
 
 **Important distinction:** your warm network is the right place to sell your first paid pilot, and the wrong place to validate the problem. Friends and other founders will tell you your idea is great because they're being polite. Only cold strangers who describe the problem in their own words and pay money produce a real signal.
 
