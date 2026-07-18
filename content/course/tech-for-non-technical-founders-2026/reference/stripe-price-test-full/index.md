@@ -117,7 +117,7 @@ SUB-COPY: [one sentence under the button]
 Paste into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier):
 
 ```text
-What do [CUSTOMER] currently pay for [YOUR CATEGORY]? Pull from G2 review price snippets, Reddit pricing threads, Capterra category averages, and competitor pricing pages. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing.
+What do [CUSTOMER] currently pay for [YOUR CATEGORY]? Pull from G2 review price snippets, Reddit pricing threads, Capterra category averages, and competitor pricing pages. If you cannot find a real source for any item, respond with "NOT FOUND - [ITEM]" rather than estimating or paraphrasing.
 ```
 
 Reuse the quotes you already pulled in Lesson 1.2's research prompt - this search is for PRICES, not pains.

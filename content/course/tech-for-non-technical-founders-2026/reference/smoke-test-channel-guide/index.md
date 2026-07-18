@@ -114,10 +114,10 @@ Here is everything I have:
 - Landing page value props: [paste your 2-4 value prop lines]
 - Customer pains, in their own words: [paste the exact phrases your customers use - from interviews, Reddit, reviews]
 - Customer gains / goals: [what they are trying to achieve - the win they want]
-- Channel this ad runs on: [channel]
+- Channel this ad runs on: [CHANNEL]
 
 Write me:
-1. Two to three PRIMARY TEXT variants (the main ad body). Use the customer's own vocabulary from the pains above - not marketing language. Match the tone of [channel] (Reddit = casual and honest, LinkedIn = professional, Meta = friendly and visual, Google = short and intent-driven).
+1. Two to three PRIMARY TEXT variants (the main ad body). Use the customer's own vocabulary from the pains above - not marketing language. Match the tone of [CHANNEL] (Reddit = casual and honest, LinkedIn = professional, Meta = friendly and visual, Google = short and intent-driven).
 2. Two HEADLINE variants (short, under 40 characters where the channel needs it).
 3. One IMAGE CONCEPT: describe a single image I can either generate with an AI image tool or fake with a simple product screenshot. Tell me exactly what should be in the frame and why it fits the message.
 4. A plain-English note telling me WHICH variant to run first and why - written so a non-marketer understands the reasoning.
