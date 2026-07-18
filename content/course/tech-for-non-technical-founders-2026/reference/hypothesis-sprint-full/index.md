@@ -75,12 +75,12 @@ The full test is two parts: (1) a smoke-test landing page for demand signal, and
 
 ## AI Deep-Research Prompts
 
-### For the `[customer]` and `[problem]` blanks
+### For the `[CUSTOMER]` and `[PROBLEM]` blanks
 
 Paste into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier):
 
 ```text
-Find the 5 most-named pain points among [customer] (your candidate version of the blank) in 2024-2026, from Reddit, LinkedIn posts, G2 reviews, and industry podcasts. Cite the exact source for each pain point and quote one verbatim phrase. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing.
+Find the 5 most-named pain points among [CUSTOMER] (your candidate version of the blank) in 2024-2026, from Reddit, LinkedIn posts, G2 reviews, and industry podcasts. Cite the exact source for each pain point and quote one verbatim phrase. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing.
 ```
 
 Keep the quotes AND their thread URLs - Lessons 1.2 and 2.3 reuse them.

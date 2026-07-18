@@ -64,7 +64,7 @@ After you pull the signal from your transcripts, run one [Claude](https://claude
 
 ```text
 I am a founder building [paste your one-sentence Founding Hypothesis from Lesson 1.1].
-My must-have user is [customer] (your Lesson 5.1 must-have segment - title, company size, industry).
+My must-have user is [CUSTOMER] (your Lesson 5.1 must-have segment - title, company size, industry).
 My price point is [monthly or per-seat price].
 
 From 10 customer interviews, I heard these channel signals:

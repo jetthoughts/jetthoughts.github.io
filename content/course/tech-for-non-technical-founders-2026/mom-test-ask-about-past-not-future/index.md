@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 2 · Lesson 2.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a Founding Hypothesis sentence (from Lesson 1.1) + your `[customer]` blank from that sentence (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
+> **Input:** a Founding Hypothesis sentence (from Lesson 1.1) + your `[CUSTOMER]` blank from that sentence (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
 >
 > **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Lesson 2.2 and then run in real interviews after Lesson 2.3-2.4 recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
 >
@@ -53,11 +53,11 @@ Every question a first-time founder writes first feels like it gets to the truth
 
 | The question you'd write | Why it produces polite-yes | Fitzpatrick's past-behavior rewrite |
 |---|---|---|
-| "Do you find `[problem]` frustrating?" | Leading. The interviewee hears that you want a yes; their politeness reflex supplies one. | "Tell me about the last time `[problem]` happened." |
-| "Would you use a tool that solved `[problem]`?" | Hypothetical-future. Their answer is a guess about a person who doesn't exist yet. | "Walk me through what you did the last time you tried to handle `[problem]`." |
-| "How important is solving `[problem]` for you?" | Asks for a self-rating, which everyone inflates. People rate everything 7/10 to avoid sounding rude. | "What did the workaround cost you - in time, money, or sanity - the last time?" |
+| "Do you find `[PROBLEM]` frustrating?" | Leading. The interviewee hears that you want a yes; their politeness reflex supplies one. | "Tell me about the last time `[PROBLEM]` happened." |
+| "Would you use a tool that solved `[PROBLEM]`?" | Hypothetical-future. Their answer is a guess about a person who doesn't exist yet. | "Walk me through what you did the last time you tried to handle `[PROBLEM]`." |
+| "How important is solving `[PROBLEM]` for you?" | Asks for a self-rating, which everyone inflates. People rate everything 7/10 to avoid sounding rude. | "What did the workaround cost you - in time, money, or sanity - the last time?" |
 | "Would you pay $X for a solution?" | Pricing hypothetical. They have no skin in the game; saying yes costs them nothing. | "What have you already tried, paid, or built to deal with it?" |
-| "Does this idea sound good to you?" | Compliment-fishing. The interviewee can't refuse without being mean to you. | "On a scale of 1-10, how would you rank fixing `[problem]` this year against the other 3 things on your list?" |
+| "Does this idea sound good to you?" | Compliment-fishing. The interviewee can't refuse without being mean to you. | "On a scale of 1-10, how would you rank fixing `[PROBLEM]` this year against the other 3 things on your list?" |
 
 What a passing answer sounds like, versus a polite one, on the very first question:
 

@@ -61,7 +61,7 @@ Two fixes: (1) Your hypothesis is too vague - "small business owners" is not a s
 
 **Q: Everyone I interview says "sounds great" but nobody gives me real data.**
 
-Your questions are probably hypothetical-shaped. "Would you use a tool like this?" generates polite yeses from anyone. Switch to past-tense: "When was the last time you dealt with [problem]? Walk me through what happened." The [Mom Test chapter](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) has the 5-question template that fixes this.
+Your questions are probably hypothetical-shaped. "Would you use a tool like this?" generates polite yeses from anyone. Switch to past-tense: "When was the last time you dealt with [PROBLEM]? Walk me through what happened." The [Mom Test chapter](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) has the 5-question template that fixes this.
 
 **Q: Should I skip the AI persona rehearsal (Lesson 2.2)?**
 

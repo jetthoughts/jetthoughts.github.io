@@ -97,7 +97,7 @@ SCREEN 3 - [RESULT/CONFIRMATION NAME]:
 Design: Clean, minimal. Dark sidebar, white content area. [YOUR COLOR] accent. No login screen. No settings. No navigation beyond these 3 screens. Make it look functional, not finished.
 ```
 
-Where the blanks come from: `[CUSTOMER]` is your `[customer]` blank from Lesson 1.1; `[PRIMARY ACTION ...]` is the top workaround-replacing action from your Lesson 2.5 validated problem statement; `[FAKE DATA EXAMPLE]` is names and numbers pulled from your interview transcripts. Use the vocabulary you heard in interviews, not the words you use with other founders - if 7 of 10 interviewees called it "matching" and you call it "reconciliation," the prototype uses "matching."
+Where the blanks come from: `[CUSTOMER]` is your `[CUSTOMER]` blank from Lesson 1.1; `[PRIMARY ACTION ...]` is the top workaround-replacing action from your Lesson 2.5 validated problem statement; `[FAKE DATA EXAMPLE]` is names and numbers pulled from your interview transcripts. Use the vocabulary you heard in interviews, not the words you use with other founders - if 7 of 10 interviewees called it "matching" and you call it "reconciliation," the prototype uses "matching."
 
 ![Build the 3-screen prototype in three moves: open Lovable and paste the prompt template with placeholders filled, read the fake data out loud and change the vocabulary to match the words you heard in interviews, then test all three screens yourself as if you've never seen the idea - leaving with a prototype ready to share as a link to 5 interviewees](prototype-build-strip.svg)
 

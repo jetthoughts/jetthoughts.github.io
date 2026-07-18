@@ -71,7 +71,7 @@ Teresa Torres names three reasons a stranger turns down an interview ask, and th
 
 - **Limited time** - ask for 20 minutes, not "a quick chat" or an open-ended hour. The Day-0 template already does this.
 - **Unclear benefit** - say what they get out of it. Talking about their own expertise to someone actually listening is the benefit; the opener leans on it.
-- **Fear of the unknown** - people hesitate when they can't picture how the time will be spent. This is the one most first drafts skip. Tell them exactly what happens with one added sentence: *"We'll walk through what happened the last time you [problem] - no prep, no pitch."* Drop it into the Day-0 message right after the ask.
+- **Fear of the unknown** - people hesitate when they can't picture how the time will be spent. This is the one most first drafts skip. Tell them exactly what happens with one added sentence: *"We'll walk through what happened the last time you [PROBLEM] - no prep, no pitch."* Drop it into the Day-0 message right after the ask.
 
 ### Volume targets
 

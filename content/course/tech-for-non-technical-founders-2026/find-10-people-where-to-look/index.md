@@ -37,7 +37,7 @@ related_posts: false
 >
 > **Progress:** M2 · 3 of 6 · Results so far: question list ready to run
 
-> **TL;DR (Part 1 of 2):** Expand your one-sentence hypothesis from Lesson 1.1 into three sentences (a short step below), paste them into Claude, and get back the ICP profile (ICP = Ideal Customer Profile - the specific kind of person your hypothesis's [customer] blank names) + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
+> **TL;DR (Part 1 of 2):** Expand your one-sentence hypothesis from Lesson 1.1 into three sentences (a short step below), paste them into Claude, and get back the ICP profile (ICP = Ideal Customer Profile - the specific kind of person your hypothesis's [CUSTOMER] blank names) + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
 
 The instinctive first move is "I'll just message my LinkedIn network" - sixty polite DMs that produce 3 calls, two of them old colleagues being nice. The technique below replaces it: read where strangers already complain about your exact problem, then write back to those specific complainers. Same hypothesis, same hours, different place to look - and it fills a calendar with 10+ booked interviews instead of 2-3 polite ones.
 
@@ -57,9 +57,9 @@ These are not new homework - they are your 1.1 Founding Hypothesis blanks, unpac
 
 | Profile | What to write | Bad vs Good |
 |---------|---------------|------------|
-| **Customer (one sentence)** | Your `[customer]` blank, expanded: *who* is this person in real-world detail - role, company size, the moment in their week when the pain happens. (If you ran the optional Lesson 2.2 persona rehearsal you already sketched role/industry/size - reuse it here.) | Bad: "small-business owners"<br/>Good: "a 12-person law-firm office manager on Friday afternoon trying to invoice ten clients before Quickbooks logs her out" |
+| **Customer (one sentence)** | Your `[CUSTOMER]` blank, expanded: *who* is this person in real-world detail - role, company size, the moment in their week when the pain happens. (If you ran the optional Lesson 2.2 persona rehearsal you already sketched role/industry/size - reuse it here.) | Bad: "small-business owners"<br/>Good: "a 12-person law-firm office manager on Friday afternoon trying to invoice ten clients before Quickbooks logs her out" |
 | **Business (one sentence)** | The one line your hypothesis doesn't carry: what kind of business are *you* building? B2B SaaS, B2B services, B2C app, marketplace. Free or paid. Self-serve or sales-led. | Bad: "a SaaS tool"<br/>Good: "B2B SaaS, self-serve, $29-49/month annual billing" |
-| **Solution (one sentence)** | Your `[approach]` blank, rewritten as the change it makes. You won't pitch this in calls, but you need it written down to know which conversations confirm or kill it. | Bad: "a tool that automates invoicing"<br/>Good: "I think a one-click invoice export to Stripe and Wave saves the office manager 90 minutes every Friday" |
+| **Solution (one sentence)** | Your `[APPROACH]` blank, rewritten as the change it makes. You won't pitch this in calls, but you need it written down to know which conversations confirm or kill it. | Bad: "a tool that automates invoicing"<br/>Good: "I think a one-click invoice export to Stripe and Wave saves the office manager 90 minutes every Friday" |
 
 If you can't write all three on a single napkin, do that first.
 
@@ -80,7 +80,7 @@ My hypothesis (3 sentences):
 - Solution: [paste your solution sentence]
 
 Two competitors or adjacent products serving a similar customer
-(start from the `[competition]` blank in your 1.1 hypothesis - what
+(start from the `[COMPETITION]` blank in your 1.1 hypothesis - what
 your customer uses today):
 - [competitor 1 URL]
 - [competitor 2 URL]

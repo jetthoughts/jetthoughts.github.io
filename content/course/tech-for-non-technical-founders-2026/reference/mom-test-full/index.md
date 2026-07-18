@@ -16,7 +16,7 @@ slug: mom-test-full
 
 The script runs in order. Each question funnels the interviewee deeper into a real memory of the problem. Read the questions as written - small wording changes ("would you" instead of "did you") flip the answer back into hypothetical polite, which is exactly the failure mode you are paying 30 minutes to avoid.
 
-### Q1: "Tell me about the **last time** `[problem]` happened. Walk me through what you did."
+### Q1: "Tell me about the **last time** `[PROBLEM]` happened. Walk me through what you did."
 
 - **What it catches**: whether the problem actually happens, how often, what mechanic the interviewee uses. A real story has a date and a tool.
 - **Pass**: specific recent story. *"Last Tuesday at 9pm I spent 40 minutes copying numbers from three spreadsheets into a slide for the board."* Date, time, tool, duration, feeling.
@@ -89,7 +89,7 @@ Stick to the order. Improvise mid-call ("oh that reminds me of my product idea")
 
 Expect your first two or three interviews to feel awkward - you will catch yourself pitching at least once. That's normal, not failure: score the contaminated call honestly (in the [Module 2 walkthrough](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/), Mia breaks her own script in interview one, scores it 3/10, and keeps the other nine clean). The skill is in the recovery, not in being perfect on call one.
 
-One more failure mode worth naming: an interviewee with no story. If Q1 produces genuine blankness - not evasion, just no last time to walk through - they don't have the problem. End the call politely at the 10-minute mark and count it: a person who was supposed to be your customer and has no story IS data about your `[customer]` blank.
+One more failure mode worth naming: an interviewee with no story. If Q1 produces genuine blankness - not evasion, just no last time to walk through - they don't have the problem. End the call politely at the 10-minute mark and count it: a person who was supposed to be your customer and has no story IS data about your `[CUSTOMER]` blank.
 
 ## What to do tomorrow
 
