@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="pds-title">
+  <title id="pds-title">Why the fix doesn't stick: one bug - the retry loop double-charges - was pasted into seven files, one prompt at a time. The dev patched file 3. Files 4 through 7 kept firing. The commit said fixed retry logic; four days later the same bug fired from a different file.</title>
+  <desc>A red bug card at the top reads: one bug - the retry loop double-charges. An arrow fans down to a row of seven file cards, each containing the same retry-plus-charge logic. File 3 is green and marked patched. Files 4 through 7 are red and marked still firing. Files 1 and 2 are neutral and marked same logic. Below, two outcome cards: a cream card reading the commit - fixed retry logic, ticket closed - and a red card reading four days later, same bug, fired from a different file. A caption states: a patch lands in one duplicate; the other six keep producing the bug.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub    { font-size: 17px; fill: #666; font-style: italic; }
+      .step   { font-size: 19px; font-weight: 700; fill: #1a1a1a; }
+      .stepsm { font-size: 15px; fill: #555; }
+      .body   { font-size: 17px; fill: #1a1a1a; }
+      .note   { font-size: 16px; fill: #666; font-style: italic; }
+      .card   { fill: #faf7f2; stroke: #555; stroke-width: 2; }
+      .card-r { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .card-g { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .ok     { font-size: 15px; font-weight: 700; fill: #2e7d32; }
+      .bad    { font-size: 15px; font-weight: 700; fill: #cc342d; }
+      .meh    { font-size: 15px; font-style: italic; fill: #888; }
+      .redh   { font-size: 19px; font-weight: 700; fill: #cc342d; }
+      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
+      .loop   { stroke: #888; stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+    </style>
+    <marker id="pds-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="34" text-anchor="middle" class="h title">Why the fix doesn't stick</text>
+  <text x="480" y="60" text-anchor="middle" class="h sub">AI regenerates instead of refactoring - the same logic gets pasted into file after file.</text>
+
+  <!-- Bug card -->
+  <g transform="translate(255,78) rotate(-0.5 225 27)">
+    <rect width="450" height="54" rx="12" class="card-r"/>
+    <text x="225" y="34" text-anchor="middle" class="h step">One bug: the retry loop double-charges</text>
+  </g>
+
+  <!-- Arrow down to the file row -->
+  <path d="M 480 134 L 480 172" class="arrow" marker-end="url(#pds-ah)"/>
+  <text x="498" y="158" class="h note">pasted into seven files, one prompt at a time</text>
+
+  <!-- File row: 7 cards -->
+  <g transform="translate(37,178) rotate(-0.8 56 52)">
+    <rect width="112" height="104" rx="10" class="card"/>
+    <text x="56" y="28" text-anchor="middle" class="h step">file 1</text>
+    <text x="56" y="52" text-anchor="middle" class="h stepsm">retry +</text>
+    <text x="56" y="70" text-anchor="middle" class="h stepsm">charge</text>
+    <text x="56" y="93" text-anchor="middle" class="h meh">same logic</text>
+  </g>
+  <g transform="translate(166,178) rotate(0.6 56 52)">
+    <rect width="112" height="104" rx="10" class="card"/>
+    <text x="56" y="28" text-anchor="middle" class="h step">file 2</text>
+    <text x="56" y="52" text-anchor="middle" class="h stepsm">retry +</text>
+    <text x="56" y="70" text-anchor="middle" class="h stepsm">charge</text>
+    <text x="56" y="93" text-anchor="middle" class="h meh">same logic</text>
+  </g>
+  <g transform="translate(295,178) rotate(-0.5 56 52)">
+    <rect width="112" height="104" rx="10" class="card-g"/>
+    <text x="56" y="28" text-anchor="middle" class="h step">file 3</text>
+    <text x="56" y="52" text-anchor="middle" class="h stepsm">retry +</text>
+    <text x="56" y="70" text-anchor="middle" class="h stepsm">charge</text>
+    <text x="56" y="93" text-anchor="middle" class="h ok">patched &#10003;</text>
+  </g>
+  <g transform="translate(424,178) rotate(0.7 56 52)">
+    <rect width="112" height="104" rx="10" class="card-r"/>
+    <text x="56" y="28" text-anchor="middle" class="h step">file 4</text>
+    <text x="56" y="52" text-anchor="middle" class="h stepsm">retry +</text>
+    <text x="56" y="70" text-anchor="middle" class="h stepsm">charge</text>
+    <text x="56" y="93" text-anchor="middle" class="h bad">still firing &#10007;</text>
+  </g>
+  <g transform="translate(553,178) rotate(-0.6 56 52)">
+    <rect width="112" height="104" rx="10" class="card-r"/>
+    <text x="56" y="28" text-anchor="middle" class="h step">file 5</text>
+    <text x="56" y="52" text-anchor="middle" class="h stepsm">retry +</text>
+    <text x="56" y="70" text-anchor="middle" class="h stepsm">charge</text>
+    <text x="56" y="93" text-anchor="middle" class="h bad">still firing &#10007;</text>
+  </g>
+  <g transform="translate(682,178) rotate(0.5 56 52)">
+    <rect width="112" height="104" rx="10" class="card-r"/>
+    <text x="56" y="28" text-anchor="middle" class="h step">file 6</text>
+    <text x="56" y="52" text-anchor="middle" class="h stepsm">retry +</text>
+    <text x="56" y="70" text-anchor="middle" class="h stepsm">charge</text>
+    <text x="56" y="93" text-anchor="middle" class="h bad">still firing &#10007;</text>
+  </g>
+  <g transform="translate(811,178) rotate(-0.7 56 52)">
+    <rect width="112" height="104" rx="10" class="card-r"/>
+    <text x="56" y="28" text-anchor="middle" class="h step">file 7</text>
+    <text x="56" y="52" text-anchor="middle" class="h stepsm">retry +</text>
+    <text x="56" y="70" text-anchor="middle" class="h stepsm">charge</text>
+    <text x="56" y="93" text-anchor="middle" class="h bad">still firing &#10007;</text>
+  </g>
+
+  <!-- Outcome cards -->
+  <path d="M 351 284 C 340 305, 300 316, 264 328" class="arrow" marker-end="url(#pds-ah)"/>
+  <g transform="translate(90,332) rotate(0.5 165 40)">
+    <rect width="330" height="80" rx="12" class="card"/>
+    <text x="165" y="33" text-anchor="middle" class="h step">The commit: "fixed retry logic"</text>
+    <text x="165" y="61" text-anchor="middle" class="h stepsm">ticket closed, everyone moves on</text>
+  </g>
+
+  <path d="M 617 284 C 640 303, 672 312, 698 326" class="loop" marker-end="url(#pds-ah)"/>
+  <g transform="translate(540,332) rotate(-0.5 165 40)">
+    <rect width="330" height="80" rx="12" class="card-r"/>
+    <text x="165" y="33" text-anchor="middle" class="h redh">Four days later: same bug</text>
+    <text x="165" y="61" text-anchor="middle" class="h stepsm">fired from a different file</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="480" y="452" text-anchor="middle" class="h note">A patch lands in one duplicate. The other six keep producing the bug.</text>
+</svg>
