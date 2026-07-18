@@ -30,3 +30,15 @@ Voice wave (same day): 16-page opener-shape rotation shipped - max 4 pages
 per shape, 4 composite-disclaimed vignettes kept, attribution phrases
 ("we picked up"/"we worked with") now zero course-wide. Teaching numbers
 preserved as mechanism descriptions.
+
+## 2026-07-18 - Merged blog/site bundle into course bundle
+Folded a separately-produced Hugo blog/site OKF bundle into this one as two
+new sibling sections: `architecture/` (hugo-site, css-pipeline, blog-list-page,
+cover-image-pipeline, seo-meta-tags) and `content-strategy/`
+(icp-primary-website-target, voice-guide). Added five site/content workflow
+concepts to `workflows/` alongside the existing course pair: blog-pipeline,
+linkedin-post-pipeline, css-maintainability-plan, visual-scroll-gate, testing.
+Root index and workflows index updated with the new entries. No course-side
+concepts changed; distilled from CLAUDE.md, bin/hugo-build, Rakefile,
+config/_default/hugo.toml, theme layouts, and docs/workflows/ +
+docs/90-99-content-strategy/.
