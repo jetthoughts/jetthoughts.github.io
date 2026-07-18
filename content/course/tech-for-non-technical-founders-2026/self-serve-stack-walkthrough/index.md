@@ -466,7 +466,7 @@ create policy "coaches see own check-ins"
 
 - [ ] Stripe account verified (email confirmed)
 - [ ] One product created (your monthly plan), one price (the price your PRD locked in)
-- [ ] Webhook endpoint registered: `https://[your-supabase-project].supabase.co/functions/v1/stripe-webhook`
+- [ ] Webhook endpoint registered: `https://[YOUR_SUPABASE_PROJECT].supabase.co/functions/v1/stripe-webhook`
 - [ ] Webhook events selected: `checkout.session.completed` (the one this walkthrough wires; add `customer.subscription.updated`, `customer.subscription.deleted`, and `invoice.payment_failed` later, when you build cancellation and failed-payment handling)
 - [ ] Webhook signing secret stored in Supabase Edge Function environment as `STRIPE_WEBHOOK_SECRET`
 - [ ] Stripe API key (live, secret) stored as `STRIPE_SECRET_KEY` in Supabase Edge Function environment

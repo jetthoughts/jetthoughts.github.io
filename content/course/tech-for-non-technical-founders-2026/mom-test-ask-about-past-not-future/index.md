@@ -75,7 +75,7 @@ While the script runs, listen for three patterns. They do more work than the wor
 | Flag | Example Phrases | What it signals |
 |---|---|---|
 | **Frustration language** | "I hate this." "It drives me crazy." "Every single week." | The problem is felt. Polite interviewees suppress feeling - the opposite of what validation needs. |
-| **Workaround language** | "I've been meaning to..." "We hacked together..." "I pay [tool] $X for this." | The interviewee already spent time or money on a solution that doesn't fully work. That budget is the line item your product would replace. |
+| **Workaround language** | "I've been meaning to..." "We hacked together..." "I pay [TOOL] $X for this." | The interviewee already spent time or money on a solution that doesn't fully work. That budget is the line item your product would replace. |
 | **Urgency language** | "Last week." "This morning." "I missed my kid's birthday because of this." | A problem that happened today is felt more sharply than one that happens "sometimes." Time-anchored urgency is the strongest signal in the set. |
 
 **Scoring the flags:** A passing call has 3 or more flags spread across the five answers. A failing call has 0 or 1 - the interviewee is being polite to you. Two flags is ambiguous; treat as a 5/10 default. This 1-10 score per call is what Lessons 2.4-2.6 count to make the build / pivot / kill decision, so score every call the same way.
@@ -84,7 +84,7 @@ While the script runs, listen for three patterns. They do more work than the wor
 
 > **Write:**
 >
-> 1. Open a new Google Doc titled `Mom Test draft - [date]` in the same `Founder OS` folder as your Founding Hypothesis.
+> 1. Open a new Google Doc titled `Mom Test draft - [DATE]` in the same `Founder OS` folder as your Founding Hypothesis.
 > 2. Copy the 5 verbatim rewrite questions from the table above.
 > 3. Add 2-3 ICP-specific probes of your own (e.g., for a chiropractor ICP: "Walk me through your last insurance-claim resubmission. When did it happen?").
 > 4. **Success check:** you have a 5-8 question list, every question anchored in a past event, none asking "would you."

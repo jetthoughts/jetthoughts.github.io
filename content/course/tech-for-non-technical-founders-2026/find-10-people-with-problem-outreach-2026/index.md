@@ -57,9 +57,9 @@ You can do this from Gmail and a [NeetoCal](https://www.neeto.com/neetocal) book
 
 The Day-0 message is the one that has to work - the whole sequence rests on a first line that names something they actually wrote. Copy it verbatim, replace the brackets with their words from when you read where they're complaining in [Part 1](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), not yours:
 
-> Subject: your post about [their exact words]
+> Subject: your post about [THEIR_EXACT_WORDS]
 >
-> Hi [name] - you wrote that [ONE SPECIFIC LINE FROM THEIR POST, PARAPHRASED]. I'm researching exactly that problem and would trade 20 minutes for everything you learned the hard way. No pitch, nothing to sell - I don't even have a product yet. Would [DAY] or [DAY] work? Booking link if that's easier: [NEETOCAL LINK]
+> Hi [NAME] - you wrote that [ONE SPECIFIC LINE FROM THEIR POST, PARAPHRASED]. I'm researching exactly that problem and would trade 20 minutes for everything you learned the hard way. No pitch, nothing to sell - I don't even have a product yet. Would [DAY] or [DAY] work? Booking link if that's easier: [NEETOCAL LINK]
 
 Full 3-message sequence (Day 0 + Day 3 bump + Day 7 close) - copy it from the [Outreach Sequence Template](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/).
 
@@ -105,7 +105,7 @@ flowchart TD
 ```
 
 - **Research panel** - if your ICP can't be reached cold (a CFO at a regulated bank, an oncology nurse), a paid panel like [User Interviews](https://userinterviews.com) or [Respondent](https://respondent.io) books screened interviewees for a few hundred dollars. Use it only when replies run thin.
-- **Smoke-test landing page** - the page from [Lesson 1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) doubles as your warmest opener: *"You signed up for the waitlist on [page] last Tuesday - up for a 20-minute call?"*
+- **Smoke-test landing page** - the page from [Lesson 1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) doubles as your warmest opener: *"You signed up for the waitlist on [PAGE] last Tuesday - up for a 20-minute call?"*
 
 Both tracks, the parallel-run logic, and the part-time founder's batch-send variant are in the [full reference](/course/tech-for-non-technical-founders-2026/reference/find-10-people-full/).
 

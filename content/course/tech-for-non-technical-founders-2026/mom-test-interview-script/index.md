@@ -118,7 +118,7 @@ While you are reading the questions, listen for three patterns in their answers.
 
 **Frustration language.** "I hate this." "It drives me crazy." "Every single week." "I can't believe we still do it this way." If the interviewee uses words with feeling, the problem is felt. Polite interviewees suppress feeling, which is exactly why you ignore polite answers.
 
-**Workaround language.** "I've been meaning to..." "We hacked together..." "I pay [tool] $X for this." "My VA does it manually." Workarounds prove the problem is real because the interviewee already spent time or money on a solution that doesn't fully work. The workaround is the budget you can pitch into.
+**Workaround language.** "I've been meaning to..." "We hacked together..." "I pay [TOOL] $X for this." "My VA does it manually." Workarounds prove the problem is real because the interviewee already spent time or money on a solution that doesn't fully work. The workaround is the budget you can pitch into.
 
 **Urgency language.** "Last week." "This morning." "I missed my kid's birthday because of this." A problem that happened today is felt more sharply than a problem that happens "sometimes." Time-anchored urgency is the strongest signal in the set.
 

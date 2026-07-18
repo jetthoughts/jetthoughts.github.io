@@ -78,7 +78,7 @@ Stay in character for this entire conversation. Do not break character to explai
 | `[PROBLEM DESCRIPTION]` | Founding Hypothesis `[PROBLEM]` blank (Lesson 1.1) |
 | `[PROBLEM AREA]` | The `[PROBLEM]` blank summarized in 2-3 words (e.g. "claim resubmission backlog") |
 | `[CURRENT WORKAROUND]` | Founding Hypothesis `[COMPETITION]` blank (what they do today) |
-| `[YOUR DRAFT QUESTION 1]`, `2`, `3`, ... | Pick one question at a time from your Lesson 2.1 `Mom Test draft - [date]` doc (5-8 question list) |
+| `[YOUR DRAFT QUESTION 1]`, `2`, `3`, ... | Pick one question at a time from your Lesson 2.1 `Mom Test draft - [DATE]` doc (5-8 question list) |
 | `[QUESTION X]` (in Prompt 5) | Whichever question you want to sharpen from your draft list |
 | `[PERSONA NAME]`, `[FREQUENCY]`, `[DURATION]`, `[BUDGET RANGE]`, `[REASON]` | Your judgment, anchored to deep-research findings if you ran the deep-research prompt on the [full sprint reference](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/) linked from Lesson 1.1 - see fallback below |
 

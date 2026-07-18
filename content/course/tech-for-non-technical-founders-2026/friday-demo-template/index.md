@@ -111,7 +111,7 @@ Forward the Loom URL to your own inbox with the date in the subject line. After 
 
 > **📧 Copy-pasteable follow-up email - forward after each demo:**
 >
-> Subject: `Friday demo - [date] - [one-line summary]`
+> Subject: `Friday demo - [DATE] - [ONE_LINE_SUMMARY]`
 >
 > Forwarding the Loom from today's demo. [One sentence on what shipped.] [One sentence on what's blocked.] [One sentence on what's next.]
 >

@@ -55,9 +55,9 @@ Engineers and AI agents fill vague requests from training data - big-company Saa
 
 Rewrite every feature noun in three parts. Each part forecloses a category of overbuild.
 
-- **When [trigger context]** - the specific situation that activates the need. Names the moment, the day, the deadline, the surrounding tools. *"When I prepare the weekly investor report"* tells the builder this happens once a week, that there is a deck, that there is a 4pm call. No real-time streaming dashboard for something that happens on a Tuesday afternoon.
+- **When [TRIGGER_CONTEXT]** - the specific situation that activates the need. Names the moment, the day, the deadline, the surrounding tools. *"When I prepare the weekly investor report"* tells the builder this happens once a week, that there is a deck, that there is a 4pm call. No real-time streaming dashboard for something that happens on a Tuesday afternoon.
 - **I want [action + budget]** - a verb on a concrete object, with a limit. *"I want to grab the top 5 metrics in 30 seconds"* is a verb (grab), an object (the 5 metrics), and a budget (30 seconds). No 12-metric dashboard, no async export queue.
-- **So I can [outcome]** - the result that proves the build worked. *"So I can paste them into the deck before the 4pm call"* is a finish line the builder holds every feature suggestion up against: does the audit log help you paste before 4pm? No? Cut it.
+- **So I can [OUTCOME]** - the result that proves the build worked. *"So I can paste them into the deck before the 4pm call"* is a finish line the builder holds every feature suggestion up against: does the audit log help you paste before 4pm? No? Cut it.
 
 Put the three parts together and the builder has no gaps left to guess at. Drop any one - the timeframe, the action, or the outcome - and the gap gets filled from training data instead of your intent.
 

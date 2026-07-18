@@ -82,12 +82,12 @@ My hypothesis (3 sentences):
 Two competitors or adjacent products serving a similar customer
 (start from the `[COMPETITION]` blank in your 1.1 hypothesis - what
 your customer uses today):
-- [competitor 1 URL]
-- [competitor 2 URL]
+- [COMPETITOR_1_URL]
+- [COMPETITOR_2_URL]
 
 Seed pains from real posts (optional, from your Lesson 1.2 research):
-- "[customer quote]"
-- "[customer quote]"
+- "[CUSTOMER_QUOTE]"
+- "[CUSTOMER_QUOTE]"
 
 Return:
 1. A sharper ICP profile (role, industry, company size, the moment in their week when the pain happens, one quote in their language).
@@ -95,12 +95,12 @@ Return:
 3. 5 Google + LinkedIn search strings I can paste in today to find named people complaining about this problem (use `site:`, quotes, and `intext:` where helpful).
 4. 5 second-degree adjacent search terms I might miss (workarounds they use, related complaints, tool names they'd mention while frustrated).
 
-If you cannot describe a real community for any item, respond with "NOT FOUND - [item]" rather than guessing.
+If you cannot describe a real community for any item, respond with "NOT FOUND - [ITEM]" rather than guessing.
 ```
 
 > No competitor URLs yet? Ask Claude or ChatGPT to name 3-5 competitors for your one-sentence hypothesis, or Google your problem in plain words plus `tool` or `software` and grab the top 2 results that aren't blog posts.
 
-If a community the AI proposes is dead or off-topic, drop it and ask: `Suggest 3 alternatives more focused on [vertical].`
+If a community the AI proposes is dead or off-topic, drop it and ask: `Suggest 3 alternatives more focused on [VERTICAL].`
 
 ## Read where they're already complaining
 

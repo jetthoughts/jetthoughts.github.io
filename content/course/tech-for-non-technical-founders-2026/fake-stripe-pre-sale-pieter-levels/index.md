@@ -50,9 +50,9 @@ If you're running your first ever smoke test, use [the email-only version](/cour
 
 The Stripe Payment Link mechanic is the same as in [Lesson 1.5 (Price Your Hypothesis on the Smoke-Test Page)](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - read that for the full setup walkthrough. The variant-specific changes:
 
-1. **CTA copy.** Replace "Get on the waitlist" with **"Reserve your spot ($1 today, refundable if we don't ship by [date])"**. The "$1 today" + "refundable" combination is the load-bearing phrase.
+1. **CTA copy.** Replace "Get on the waitlist" with **"Reserve your spot ($1 today, refundable if we don't ship by [DATE])"**. The "$1 today" + "refundable" combination is the load-bearing phrase.
 2. **Thank-you page.** "You're reserved. We'll email you when we ship. Your $1 is fully refundable - just reply to this email and ask."
-3. **Footer disclosure.** A one-line "About this pre-order: we are testing demand for [product]. If we don't ship by [date], you get an automatic refund. Your $1 charge appears as JTHOUGHTS-RESERVE on your statement."
+3. **Footer disclosure.** A one-line "About this pre-order: we are testing demand for [PRODUCT]. If we don't ship by [DATE], you get an automatic refund. Your $1 charge appears as JTHOUGHTS-RESERVE on your statement."
 4. **Stripe metadata.** Set the product name to your hypothesis title + "(pre-order)". This shows up on the customer's bank statement and on the refund record.
 
 ## Refund discipline (non-negotiable)
@@ -60,7 +60,7 @@ The Stripe Payment Link mechanic is the same as in [Lesson 1.5 (Price Your Hypot
 If the test fails (you don't ship), you refund every $1 charge **automatically** within 30 days. Two reasons:
 
 - **Ethics.** People gave you real money for a product that doesn't exist. The refund is the implicit contract.
-- **FTC compliance.** US FTC pre-order rules require you to ship within 30 days of the charge unless you disclose the delay in writing AND get the buyer's consent. The blanket "refund if we don't ship by [date]" disclosure on the landing page + thank-you page covers this for the smoke-test window.
+- **FTC compliance.** US FTC pre-order rules require you to ship within 30 days of the charge unless you disclose the delay in writing AND get the buyer's consent. The blanket "refund if we don't ship by [DATE]" disclosure on the landing page + thank-you page covers this for the smoke-test window.
 
 Set a calendar reminder for Day 25 of the test window. If you haven't started the build by then, log into Stripe and refund all charges in one batch (Dashboard > Payments > select all > Refund). Takes 5 minutes.
 

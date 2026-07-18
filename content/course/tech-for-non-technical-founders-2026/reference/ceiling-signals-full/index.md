@@ -88,7 +88,7 @@ Vanta, [Drata](https://drata.com), and [Secureframe](https://secureframe.com) au
 
 **What to say to the customer this week** (when they ask for SOC2 / HIPAA BAA / PCI before you can deliver it): respond within 48 hours with a 3-sentence email - do not ghost. Use this template:
 
-> *"Thank you for the SOC2 / [BAA / PCI] questionnaire. We are pre-SOC2 [or pre-BAA] today and are starting the readiness work in Q3. In the meantime, I can share our security one-pager (encryption at rest via Supabase, payments via Stripe Checkout, data deletion on request) and offer a 90-day pilot with the data-handling restrictions of your choice - including hosting in a sandboxed instance if that helps your security team approve. Would that bridge work while we complete the formal certification?"*
+> *"Thank you for the SOC2 / [BAA / PCI] questionnaire. We are pre-SOC2 [OR_PRE_BAA] today and are starting the readiness work in Q3. In the meantime, I can share our security one-pager (encryption at rest via Supabase, payments via Stripe Checkout, data deletion on request) and offer a 90-day pilot with the data-handling restrictions of your choice - including hosting in a sandboxed instance if that helps your security team approve. Would that bridge work while we complete the formal certification?"*
 
 This buys you 60-90 days to start the engineering work. Some enterprise security teams will accept a documented bridge for a small pilot; the rest will say "come back when SOC2 is done" - which is the same answer you would get from ghosting them, plus you have preserved the relationship for the rebid 6 months later.
 

@@ -164,17 +164,17 @@ Here is the email template that worked for R.'s 18 wrong-segment customers. Send
 
 > Subject: Refunding your last 30 days, and a recommendation
 >
-> Hi [first name],
+> Hi [FIRST_NAME],
 >
-> I am writing to tell you something I should have figured out earlier. We built [product] as a workflow tool for 3-person teams to share invoice tracking. Looking at how you have been using it - mostly solo, a few times a week - I do not think we built the right product for your situation. The features that make this useful (shared comments, the team activity feed, the assignee column) are not the features you came here for.
+> I am writing to tell you something I should have figured out earlier. We built [PRODUCT] as a workflow tool for 3-person teams to share invoice tracking. Looking at how you have been using it - mostly solo, a few times a week - I do not think we built the right product for your situation. The features that make this useful (shared comments, the team activity feed, the assignee column) are not the features you came here for.
 >
-> I am refunding the last 30 days to your card. You should see the credit in 3-5 business days. You can keep using the account through the end of the month if you want; after that I am going to suggest you look at [specific alternative tool], which is built for solo invoice tracking and is one-third the price.
+> I am refunding the last 30 days to your card. You should see the credit in 3-5 business days. You can keep using the account through the end of the month if you want; after that I am going to suggest you look at [SPECIFIC_ALTERNATIVE_TOOL], which is built for solo invoice tracking and is one-third the price.
 >
 > No pitch, no follow-up. If we ever build a solo version (we are not planning to), I will email you first.
 >
 > Thanks for trying us out and for the 6 weeks of payments.
 >
-> [your name]
+> [YOUR_NAME]
 
 The script does three things at once. It admits the misfit in the founder's voice (not a support template). It hands the user a concrete alternative (so they do not have to start the search over). It removes the future-pitch hook (which is the part wrong-segment users actually appreciate). R.'s response rate to this email was 14 of 18 sent - 11 thank-yous, 2 questions about the alternative tool, 1 angry user, 0 chargebacks. The 1 angry user wanted to keep using the product anyway; she comped them a year and removed their seat from the team metrics.
 

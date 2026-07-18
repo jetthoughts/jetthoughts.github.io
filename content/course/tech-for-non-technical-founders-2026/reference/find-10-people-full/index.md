@@ -19,7 +19,7 @@ The AI ICP map (from Lesson 2.3) names your specific communities. Here is how to
 - **Industry Slack and Discord** - Indie Hackers, Lovable, No Code Founders, and the vertical-specific communities your AI map named.
 - **[G2](https://www.g2.com/) and [Capterra](https://www.capterra.com/) reviews (the two big business-software review sites)** - pull every 2-star and 3-star review of the closest competitor. Pain a stranger typed for free, organized by feature.
 - **Twitter/X** - the 280-character constraint forces complaints to be precise.
-- **Personal network referrals** - text 10 people you know: `Do you know anyone who [painful task] regularly? Research call, not sales.` Warm referrals almost always show - the mutual contact is on the line for it.
+- **Personal network referrals** - text 10 people you know: `Do you know anyone who [PAINFUL_TASK] regularly? Research call, not sales.` Warm referrals almost always show - the mutual contact is on the line for it.
 
 One Reddit rule: don't blast a launch post on day one. Read the sub for a week, leave three real comments, then post a research question. The [self-promotion on Reddit guide](/blog/self-promote-on-reddit-without-getting-banned-promotion/) covers the karma floor and the unwritten rules.
 
@@ -128,7 +128,7 @@ Everything up to here costs $0 - Gmail and the 30-name list you built in Lesson 
 
 While the cold-outreach path books the calls, the smoke-test landing page from [Lesson 1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (built in [1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)) measures whether strangers will give you their email for the thing you described. Run it in parallel and drop the URL into your messages - it doubles as the warmest opener:
 
-> "You signed up for the waitlist on [page] last Tuesday - up for a 20-minute call?"
+> "You signed up for the waitlist on [PAGE] last Tuesday - up for a 20-minute call?"
 
 That opener out-performs every cold variant - the person already raised a hand.
 

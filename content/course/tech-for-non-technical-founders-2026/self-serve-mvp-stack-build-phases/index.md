@@ -89,7 +89,7 @@ Open your Lesson 2.3-2.4 interview list. For each of the 10, write a 3-line pers
 Three actions, in order. The first two cost $0.
 
 1. **Sign up for the Lovable + Supabase free tiers** on [lovable.dev](https://lovable.dev) and [supabase.com](https://supabase.com), then connect GitHub sync inside Lovable so your code survives a cancelled subscription.
-2. **Pick ONE feature from your one-page brief's "what you're building" section.** Not three. One. The smallest workflow that solves the validated problem for one persona. Write it as: "build a [screen] for [persona] to [outcome]."
+2. **Pick ONE feature from your one-page brief's "what you're building" section.** Not three. One. The smallest workflow that solves the validated problem for one persona. Write it as: "build a [SCREEN] for [PERSONA] to [OUTCOME]."
 3. **Generate the UI in Lovable and demo it.** Iterate by chatting: rename, resize, reposition. Then show one human who has not read the brief and watch them try it without a tour.
 
 > **Success check:** a clickable UI on a public staging URL, and one person navigated the core screen without you explaining it. Nothing needs to persist yet - that is Phase 2.

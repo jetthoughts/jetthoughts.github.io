@@ -47,10 +47,10 @@ Every message follows the same 4-part structure. What changes by bucket is the o
 
 | Bucket | Opener |
 |---|---|
-| **Champions** | "Hey [name], you mentioned [the exact thing they said] back in [month]. Still happening?" |
-| **Hot** | "Hey [name], just saw [a specific thing they posted or shipped recently]. Have a question about [the problem]." |
-| **Warm** | "Hey [name], have not caught up since [the last specific touchpoint]. Working on something I think you might have a take on." |
-| **Cold** | "Hey [name], a true one-line reference ('we were both in the Acme batch')." |
+| **Champions** | "Hey [NAME], you mentioned [the exact thing they said] back in [MONTH]. Still happening?" |
+| **Hot** | "Hey [NAME], just saw [a specific thing they posted or shipped recently]. Have a question about [THE_PROBLEM]." |
+| **Warm** | "Hey [NAME], have not caught up since [the last specific touchpoint]. Working on something I think you might have a take on." |
+| **Cold** | "Hey [NAME], a true one-line reference ('we were both in the Acme batch')." |
 
 If no real reference exists for a cold-bucket name, move them to [Lesson 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) instead.
 
@@ -58,7 +58,7 @@ If no real reference exists for a cold-bucket name, move them to [Lesson 5.7 col
 
 **Part 3: A Loom video, not a paragraph.** Record one 90-second Loom. Show your product in 60 seconds, you on camera for the other 30. The Loom script comes directly from your Lesson 5.1 verbatims. Read the Q2-Q3 quotes aloud, then point at the product feature that addresses the pain they describe.
 
-**Part 4: A specific ask.** "15 minutes to walk you through it and see if it solves [the problem]? Open to a paid pilot if it does. Calendly: [link]." (Calendly is a free scheduling page that lets people pick a call slot without the email back-and-forth.) The "paid pilot" teaser is load-bearing - you only *mention* it here. The full mechanic, contract, and deposit live in [5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/), which you'll read before any money is due.
+**Part 4: A specific ask.** "15 minutes to walk you through it and see if it solves [THE_PROBLEM]? Open to a paid pilot if it does. Calendly: [LINK]." (Calendly is a free scheduling page that lets people pick a call slot without the email back-and-forth.) The "paid pilot" teaser is load-bearing - you only *mention* it here. The full mechanic, contract, and deposit live in [5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/), which you'll read before any money is due.
 
 **Total length:** 5-7 sentences. Anything longer and the recipient skims and forgets.
 

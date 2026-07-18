@@ -151,7 +151,7 @@ A 30-message batch with zero replies is rare and almost always indicates a filte
 
 2. **Is the filter right?** Re-read three random LinkedIn profiles from your sent list. If you cannot imagine the person reading the message and finding it relevant, your ICP filter is off. The fix is upstream of the script.
 
-3. **Is the reference real?** Look at the first paragraph of your last 10 sent messages. If the "specific reference" sentence sounds generic ("noticed you work at [Company] in [role]"), it was not specific enough. Real specificity means the prospect can verify the claim - a date, a post title, a name, an event.
+3. **Is the reference real?** Look at the first paragraph of your last 10 sent messages. If the "specific reference" sentence sounds generic ("noticed you work at [Company] in [ROLE]"), it was not specific enough. Real specificity means the prospect can verify the claim - a date, a post title, a name, an event.
 
 ## Compounding past customer 20
 

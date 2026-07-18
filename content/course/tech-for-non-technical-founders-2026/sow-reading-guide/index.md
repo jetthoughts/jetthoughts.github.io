@@ -152,7 +152,7 @@ The [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers what a clean te
 >
 > Subject: `SOW review - [N] questions before we sign`
 >
-> Hi [agency contact],
+> Hi [AGENCY_CONTACT],
 >
 > I walked the SOW last night with the [8-clause scoring guide](https://jetthoughts.com/course/tech-for-non-technical-founders-2026/sow-reading-guide/). A few questions below - happy to jump on a call, but please reply in writing so we both have the answers on file.
 >

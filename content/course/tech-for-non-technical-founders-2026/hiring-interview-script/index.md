@@ -32,9 +32,9 @@ Template companion to the [Hire Track Supplementary Reference](/course/tech-for-
 >
 > Subject: `[Date] interview prep - 7 questions`
 >
-> Hi [first name],
+> Hi [FIRST_NAME],
 >
-> Looking forward to our call [tomorrow / Tuesday]. Here are the 7 questions we will work through together. Please come prepared to share your screen for Q3 and Q7.
+> Looking forward to our call [TOMORROW_OR_TUESDAY]. Here are the 7 questions we will work through together. Please come prepared to share your screen for Q3 and Q7.
 >
 > [Paste Q1-Q7 from below - the bold headers only, not the scoring criteria.]
 >
@@ -180,7 +180,7 @@ If you booked a reference call, the next step is the [SOW reading guide](/course
 >
 > Subject: `[Date] interview - follow-up`
 >
-> Hi [first name],
+> Hi [FIRST_NAME],
 >
 > Thank you for the time today. We are pausing the search to refine our requirements. We will keep your details on file.
 >

@@ -109,7 +109,7 @@ Choose 5 of the 10 interviewees whose Mom Test scores were 7 or higher. Book 30-
 
 **The re-engagement message** (paste into LinkedIn DM or reply to your original Lesson 2.3-2.4 thread):
 
-> *"Hi [name] - thank you for the 30 minutes last week. I built a quick clickable prototype based on what you told me about [their specific workaround from the Mom Test transcript]. I'd like 30 more minutes to watch you try it without me explaining anything - just silent observation while you click through. I'll send the link 10 minutes before. Would Tuesday afternoon or Wednesday afternoon work?"*
+> *"Hi [NAME] - thank you for the 30 minutes last week. I built a quick clickable prototype based on what you told me about [their specific workaround from the Mom Test transcript]. I'd like 30 more minutes to watch you try it without me explaining anything - just silent observation while you click through. I'll send the link 10 minutes before. Would Tuesday afternoon or Wednesday afternoon work?"*
 
 Expect 4-5 of 5 to say yes - the *"I built something based on what you told me"* line signals you listened. During the session, stay silent and record behavior: write down the first buttons they reach for, note any pause over 5 seconds, and never answer their questions or coach them toward the right path. When they finish Screen 3, ask one question: "Describe in one sentence what that tool just did." Write down their exact words.
 

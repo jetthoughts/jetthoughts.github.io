@@ -158,7 +158,7 @@ The good answer names the framework conventions, the specific failure mode (hall
 
 > Bad: *"I have done a lot of full-stack work. Some Rails, some Node, some Python. I am a polyglot."*
 
-> Good: *"Rails since 2019. Six production apps shipped, four still in production. The biggest is a [type] app at [scale], the smallest is a [type] app at [scale]. My most recent Rails ship was [last quarter] for [client / employer]. I prefer Postgres over MySQL because [specific reason about your scope]. Happy to walk you through the GitHub history of the most recent app on a screenshare."*
+> Good: *"Rails since 2019. Six production apps shipped, four still in production. The biggest is a [TYPE] app at [SCALE], the smallest is a [TYPE] app at [SCALE]. My most recent Rails ship was [LAST_QUARTER] for [CLIENT_OR_EMPLOYER]. I prefer Postgres over MySQL because [specific reason about your scope]. Happy to walk you through the GitHub history of the most recent app on a screenshare."*
 
 The good answer is countable: years, ships, scale, recent quarter, screenshare offer. The bad answer is a list of frameworks the candidate has touched. Polyglot reads as "no deep ship in any one framework." For a pre-seed Rails app, you want six Rails ships, not three Rails + three Node + three Python.
 
@@ -172,7 +172,7 @@ The good review reads the dependency manifest as carefully as the application co
 
 ## What to do tomorrow
 
-1. **Write your geography choice and your two platforms at the top of a fresh Notion doc.** One line: *"Region: [Tier-2 India / LATAM nearshore / US onshore]. Platforms: [primary] + [backup]. Posted on [date]. First slate by [date + 5 days]."*
+1. **Write your geography choice and your two platforms at the top of a fresh Notion doc.** One line: *"Region: [Tier-2 India / LATAM nearshore / US onshore]. Platforms: [PRIMARY] + [BACKUP]. Posted on [DATE]. First slate by [date + 5 days]."*
 2. **Schedule 5 intro calls in the same week.** Not three. Not ten. Five gives you a comparison and a rolling shortlist. Each call is 30 minutes. Use the [7-question hiring interview script](/course/tech-for-non-technical-founders-2026/hiring-interview-script/).
 3. **Take the shortlist of 3-5 candidates to the [hiring interview](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#interviews-that-catch-ai-theater).** That section covers the deep-dive interview that catches AI theater. This map gets you to the shortlist; that post gets you to the hire.
 

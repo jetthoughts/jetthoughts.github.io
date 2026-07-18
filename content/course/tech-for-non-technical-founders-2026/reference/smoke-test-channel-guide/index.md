@@ -103,7 +103,7 @@ You picked your channel above and created your ad account. Here are the settings
 
 ### Write the Ad With AI (Copy + Image)
 
-You do not have to invent ad copy from a blank page. You already have everything the ad needs: your Founding Hypothesis, your landing page words, and your customer's own pains and goals. Paste this prompt into any AI chat tool (ChatGPT, Claude, Gemini) - fill the brackets with what you have, set `[channel]` to Meta, Google, LinkedIn, or Reddit, and it writes the ad for you:
+You do not have to invent ad copy from a blank page. You already have everything the ad needs: your Founding Hypothesis, your landing page words, and your customer's own pains and goals. Paste this prompt into any AI chat tool (ChatGPT, Claude, Gemini) - fill the brackets with what you have, set `[CHANNEL]` to Meta, Google, LinkedIn, or Reddit, and it writes the ad for you:
 
 ```text
 You are a direct-response copywriter writing a first test ad for a product that has not launched yet. The goal is a simple demand test: get the right people to click through to a landing page and hand over an email. No hype, no fake urgency - just clear words in the customer's own language.
@@ -162,7 +162,7 @@ Run the ad it gives you first. If the click-through rate is low, come back to th
 2. **Budget:** $10-25/day. Reddit CPC is $1.25-$3.00.
 3. **Targeting:** Community targeting. Pick 3-5 subreddits where your `[CUSTOMER]` hangs out. For a developer tool: r/programming, r/webdev, r/SaaS. For B2B: r/startups, r/Entrepreneur. DO NOT target r/all - you'll burn budget on irrelevant clicks.
 4. **Ad format:** Promoted post (looks like a regular Reddit post with a "Promoted" tag).
-5. **Ad creative:** Title: your headline, rewritten in Reddit's casual tone. "We built a thing that [solves X problem]" works better than polished marketing copy. Body: 2-3 sentences. Problem → solution → link. Authentic, not salesy. Link: your landing page.
+5. **Ad creative:** Title: your headline, rewritten in Reddit's casual tone. "We built a thing that [SOLVES_X_PROBLEM]" works better than polished marketing copy. Body: 2-3 sentences. Problem → solution → link. Authentic, not salesy. Link: your landing page.
 6. **Tracking:** Reddit Pixel should be installed (Lesson 1.4, step 1). In Ads Manager, the pixel status should show "Active."
 7. **Launch:** Submit. Reddit typically clears same-day. Comments will appear under your ad - leave them up unless they're spam. Real comments are free social proof or free feedback.
 
