@@ -56,10 +56,10 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 | Step | What You Do | Key Tool |
 |---|---|---|
 | 1.1 | Write your Founding Hypothesis | Notebook + kitchen timer |
-| 1.2 | Build a smoke-test landing page | Mixo or Carrd (free to start; the 1.3 tracking step may need the builder's small paid tier) |
-| 1.3 | Wire tracking before traffic starts | Microsoft Clarity + GA4 (free) |
+| 1.2 | Build a smoke-test landing page | Mixo or Carrd (the 1.3 tracking step may need the builder's small paid tier) |
+| 1.3 | Wire tracking before traffic starts | Microsoft Clarity + GA4 |
 | 1.4 | Run 300 cold visitors and read the signal | Ad platform of choice |
-| 1.5 | Add a Stripe price button to measure payment intent | Stripe Payment Links (free) |
+| 1.5 | Add a Stripe price button to measure payment intent | Stripe Payment Links |
 
 **Before you write the hypothesis:** spend 30 minutes with [Perplexity](https://www.perplexity.ai/) (an AI search engine that answers questions with cited sources). Ask it to find the top 5 user complaints about existing solutions in your niche, citing reviews from [G2](https://www.g2.com/) and [Capterra](https://www.capterra.com/) (the two big business-software review sites). Use the exact vocabulary from real complaints in your hypothesis blanks. If nobody is complaining about the problem anywhere online, the hypothesis is already in trouble.
 
@@ -75,10 +75,10 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 | Step | What You Do | Key Tool |
 |---|---|---|
 | 2.1 | Learn the 5 Mom Test rules (ask about past, not future) | Mom Test Interview Script |
-| 2.2 | Rehearse your questions with an AI persona (optional - skip if you've run customer interviews before) | Claude or ChatGPT (free) |
+| 2.2 | Rehearse your questions with an AI persona (optional - skip if you've run customer interviews before) | Claude or ChatGPT |
 | 2.3-2.4 | Find and book 10 ICP interviews (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names) | Reddit, LinkedIn, X |
 | 2.5 | Score the transcripts and make the build / pivot / kill call | Mom Test Synthesis page |
-| 2.6 | Build a throwaway 3-screen clickable prototype | Lovable (free tier) |
+| 2.6 | Build a throwaway 3-screen clickable prototype | Lovable |
 
 **The Mom Test is irreplaceable.** AI tools can tell you what people say online, but they cannot tell you whether a specific human will open their wallet. Without the interviews, you're building features for a problem nobody confirmed exists.
 
@@ -94,7 +94,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 | Step | What You Do | Key Tool |
 |---|---|---|
 | 3.1 | Write a one-page Product Brief - "Vibe PRD" (PRD = Product Requirements Document; the "Vibe" version is a one-pager an AI builder can act on, not a 30-page spec for a 6-person team) | Vibe PRD Template |
-| 3.2 | Quality-check: rewrite features as outcome-shaped job stories | Claude or ChatGPT (free) |
+| 3.2 | Quality-check: rewrite features as outcome-shaped job stories | Claude or ChatGPT |
 
 The brief is the handoff document. It goes to Lovable, a hired developer, or a fractional CTO. It prevents over-engineering because it describes what the customer needs to accomplish, not what features to build. Every feature in the brief must trace back to a verbatim quote from a Module 2 interview.
 
@@ -109,7 +109,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 |---|---|---|
 | 4.1 | Decide: self-serve, fractional CTO (a part-time senior engineer who owns architecture but doesn't write all the code), or hired team | Build Path Decision Worksheet |
 | 4.2 | Lock ownership: GitHub, AWS, domain, database in your name | Ownership Checklist |
-| 4.3 | Set up the stack and pre-flight rules: Lovable + Supabase + Stripe | Lovable + Supabase + Stripe (free tiers) |
+| 4.3 | Set up the stack and pre-flight rules: Lovable + Supabase + Stripe | Lovable + Supabase + Stripe |
 | 4.4 | Walk the 4 build phases to a live MVP at a real URL | Same stack + a domain in your name |
 | 4.5 (optional) | Spot the 5 ceiling signals that mean it's time to graduate beyond no-code | Monthly calendar block |
 
@@ -127,7 +127,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 | 5.1 | Run the Sean Ellis PMF test (PMF = Product-Market Fit; one survey question: "how would you feel if you could no longer use this product?" 40%+ "very disappointed" = signal) on your earliest users | PMF survey template |
 | 5.2 (optional) | Pick one outreach channel and commit before scaling | Channel selection framework |
 | 5.3 | Build the 50-name warm list, sorted into 4 outreach buckets | One spreadsheet |
-| 5.4 | Write the 4 bucket messages + a 90-second Loom | Loom (free tier) |
+| 5.4 | Write the 4 bucket messages + a 90-second Loom | Loom |
 | 5.5 | Send in sequence, track replies, book demos | The same spreadsheet |
 | 5.6 | Sign a Design Partner Agreement - "DPA" (a short contract where a customer pays a deposit to test your product as a co-design partner; cheaper and faster than a full enterprise contract) - with a refundable deposit | DPA template + Stripe |
 | 5.7 (optional) | Go cold outbound: 30 filtered messages, book 1-2 pilots | LinkedIn Sales Navigator or manual |
