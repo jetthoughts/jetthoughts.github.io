@@ -1,55 +1,632 @@
+# 30.06 — Operational Dependency Map: How Sam Obtains Every Input
+
+**Status:** Canonical operational dependency map
+**Date:** 2026-07-18
+**Purpose:** Maps every lesson's inputs — what Sam needs, **how Sam obtains it**, and which upstream lesson produced it. Also confirms that Sam's only original inputs are a rough idea and a Gmail address. Agents can validate that every `[BRACKET]` placeholder has a documented upstream source and that no step assumes a tool or account Sam hasn't set up yet.
+
 ---
-type: Architecture Decision
-title: Operational Dependency Map — How Sam Obtains Every Input
-description: Per-lesson map of external accounts, templates, blank sources, wait times, and Plan B paths. Every [BRACKET] placeholder traces to its upstream lesson. Confirms original inputs are only rough idea + Gmail + browser.
-resource: docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/30.06-operational-dependency-map.md
-tags: [course, dependencies, operations, templates]
-timestamp: 2026-07-18T00:00:00Z
+
+## The Original-Inputs Principle
+
+Sam arrives with exactly **three things** he already owns:
+
+| Original input | Why it's sufficient |
+|---|---|
+| **Rough idea or instinct** | The raw material for 1.1's hypothesis sentence — a problem he's observed, a market he knows, or something half-built he's been tinkering with |
+| **Gmail account** | Powers the `Founder OS` Google Drive folder (1.1), Google Analytics (1.3), Google Sheets (5.3), and Google Forms (5.1). Also used for signup to every external service. |
+| **Browser** | Required for every external signup (Mixo, Stripe, Lovable, Supabase, GitHub, AWS, etc.) and every AI tool (Perplexity, Claude). No assumption that Sam has a specific browser — any modern browser works. |
+
+Every other account, template, tool, and artifact is **set up or produced during the course** — no Stripe account, no ad account, no Lovable subscription, no domain, no GitHub account is assumed to exist before Day 1.
+
 ---
 
-# Overview
+## Legend
 
-Maps every lesson's operational prerequisites — what Sam needs, **how
-Sam obtains it**, and which upstream lesson produced it. Extends the
-[ICP journey SIPOC](/architecture/icp-journey-sipoc.md) with the
-operational layer agents need to validate tool ordering and
-dependency completeness.
+| Icon | Meaning |
+|---|---|
+| 🔑 | External account required — signup + verification. Every 🔑 lists the exact URL Sam visits and what credential he needs. |
+| ⏳ | Wait time / lead time — Sam starts these early or in parallel |
+| 💰 | Cost / budget required |
+| 📝 | Template blanks to fill — for every `[BRACKET]`, the source lesson is named |
+| 📦 | Output artifact — feeds into named downstream lessons |
+| 🆘 | Plan B / recovery path |
 
-# Original-Inputs Principle
+---
 
-Sam arrives with exactly three things:
-1. **Rough idea or instinct** — raw material for the 1.1 hypothesis
-2. **Gmail account** — powers Google Drive, Analytics, Sheets, Forms; used for all external signups
-3. **Browser** — required for every external service signup
+## MODULE 1: Hypothesis & Smoke Test (2-3 weeks)
 
-Everything else — Stripe, ad accounts, Lovable, Supabase, GitHub, AWS,
-domain — is set up during the course.
+### 1.1 · Form Your Founding Hypothesis
 
-# Coverage
+- **⏳ Wait:** None
+- **💰 Cost:** $0
+- **🔑 Setup:** Google Drive — Sam already has this via his Gmail. Creates a folder called `Founder OS` for all course artifacts. No new account needed.
+- **📦 Input:** Rough idea or instinct (original input #1)
+- **📝 Template — Mad Libs hypothesis sentence:** `If we help [CUSTOMER] solve [PROBLEM] with [APPROACH], they'll choose it over [COMPETITION] because [DIFFERENTIATION].`
+  | Blank | How Sam fills it | Source |
+  |---|---|---|
+  | `[CUSTOMER]` | Names one person in one industry — "solo chiropractors," not "small businesses." If stuck: the Perplexity prompt in 1.2 Step 1 surfaces real people complaining. | From Sam's head or 1.2 research |
+  | `[PROBLEM]` | What they tried and failed at in the last 30 days. If stuck: leave as placeholder, fill after 1.2's Perplexity search returns verbatim complaints. | From Sam's head, refined by 1.2 |
+  | `[APPROACH]` | The shape of the solution — "one-click resubmit," not "AI-powered workflow." | From Sam's head |
+  | `[COMPETITION]` | What they currently use — a spreadsheet, a billing service, "doing nothing." | From Sam's head |
+  | `[DIFFERENTIATION]` | Why they'd switch — faster or cheaper, with numbers. | From Sam's head |
+- **📝 Quality gate:** Score 4 lenses (Customer, Pragmatic, Growth, Money) 1-5 each. Total ≥14/20, no lens below 2.
+- **📦 Output:** One sentence saved as Google Doc `Founding Hypothesis - [today's date]` in `Founder OS` folder. Feeds: 1.2 (all blanks), 1.4 (campaign targeting), 2.1 (interview script), 2.3 (ICP map).
+- **🆘 Plan B — can't fill blanks:** Perplexity search for 2-3 verbatim Reddit/G2 complaints (prompt in 1.2 Step 1). Replace `[PROBLEM]` blank with their exact words. Leave blanks as placeholders if no quotes yet.
+- **🆘 Plan B — score below 14:** Find a verbatim quote from a real person. Three reads aloud to a stranger — the blank they trip on gets tightened first.
 
-- **20 lessons** mapped (core + optional), each with 🔑 accounts, ⏳ wait
-  times, 💰 costs, 📝 templates, 📦 outputs, 🆘 Plan B paths
-- **12 distinct external services** with exact signup URLs
-- **8 wait-time dependencies** with parallel-run mitigations
-- **27 Plan B recovery paths** matching "If this fails" sections
-- **Cross-lesson parallelism table** — what to start early to unblock
-  downstream steps
-- **Budget trajectory**: $0 (organic) to $7,280 (LinkedIn B2B maximum);
-  $0 path exists at every step
-- **Complete dependency chain diagram** tracing every `[BRACKET]`
-  placeholder to its upstream source
+### 1.2 · Build Smoke-Test Page
 
-# Agent validation checklist
+- **⏳ Wait:** None
+- **💰 Cost:** $0 (Mixo/Carrd free tier)
+- **🔑 Setup:** Mixo account at [mixo.io](https://www.mixo.io/) — email signup, ~60 seconds. No payment needed.
+- **📦 Input:**
+  | Input | How Sam obtains it | Upstream source |
+  |---|---|---|
+  | Founding Hypothesis sentence | Read from `Founding Hypothesis` Google Doc in `Founder OS` folder | **[1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) output** |
+  | `[CUSTOMER]` blank value | Copy from 1.1 `[CUSTOMER]` blank | **[1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)** |
+  | `[PROBLEM]` blank value | Copy from 1.1 `[PROBLEM]` blank | **[1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)** |
+  | `[COMPETITION]` blank value | Copy from 1.1 `[COMPETITION]` blank | **[1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)** |
+  | `[DIFFERENTIATION]` blank value | Copy from 1.1 `[DIFFERENTIATION]` blank | **[1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)** |
+  | 2-3 `[verbatim customer quote]` lines | Run Perplexity prompt in Step 1: searches Reddit/G2 for real complaints using `[CUSTOMER]` and `[PROBLEM]` from 1.1. Keep 2-3 best quotes AND their source URLs (needed for 2.3 people-hunting). | **[1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) blanks** → Perplexity search |
+  | Hero image | Ask AI assistant: "Photorealistic image: [pain scenario in one sentence]." Or grab a free stock photo from [Unsplash](https://unsplash.com/). Never use a product mockup of something not built. | Generated or found |
+- **📝 Builder prompt blanks:** All `[BRACKET]` values in the Step 2 builder prompt are filled from 1.1 hypothesis + Step 1 Perplexity quotes. Nothing new is invented here.
+- **📝 Success check:** One stranger names who the page is for and what it does in 3 seconds.
+- **📦 Output:** Live landing page URL (e.g., `yourname.mixo.io`). Feeds: 1.3 (tracking install), 1.4 (traffic), 1.5 (price button).
+- **🆘 Plan B — strangers can't name it after 2 headline rewrites:** `[CUSTOMER]` or `[DIFFERENTIATION]` blank is too vague → back to 1.1, tighten to a specific noun.
+- **🆘 Plan B — no AI builder fits:** Drop to Carrd (no-code drag-drop). Same Step 2 prompt pasted into Carrd's AI assistant.
 
-- Every `[BRACKET]` placeholder has a documented upstream source
-- No lesson requires an account set up in a later lesson
-- Original inputs are exactly: rough idea + Gmail + browser
-- Every 🔑 setup lists the exact URL
-- Deposit math in 5.6 traces to 1.5 price hypothesis (×12, ×10-30%, $500 floor)
-- DPA success criteria trace to 2.5 validated problem statement
-- Outreach message language traces to 5.1 Q3 verbatim answers
+### 1.3 · Wire Tracking
 
-# Citations
+- **⏳ Wait:** None
+- **💰 Cost:** $0 (both tools free)
+- **🔑 Setup:** Microsoft account (for Clarity) + Google account (for GA4). Sam already has Google via his Gmail; Microsoft signup if needed at [account.microsoft.com](https://account.microsoft.com). Most people already have both.
+- **📦 Input:** Live landing page URL from 1.2. **How Sam obtains it:** the URL is in his browser from the Mixo publish step. No search needed.
+- **📝 Action:** Paste 2 tracking snippets (Clarity + GA4) into page builder's head-tag field. Verify in incognito window.
+- **📦 Output:** Clarity session recording verified + GA4 test visit confirmed. Feeds: 1.4 (traffic measurement).
+- **🆘 Plan B — Clarity shows "No data yet":** Snippet is in wrong field (body instead of head tag). Move to head-tag field, publish, wait 1 hour.
 
-[1] `docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/30.06-operational-dependency-map.md`
-[2] `data/course_sequence.yaml`
+### 1.4 · Run Smoke Test (300 Cold Visitors)
+
+- **⏳ Wait:** Ad-account approval 24-72 hours. Meta slowest; Reddit same-day. 7-day traffic run.
+- **💰 Cost:** See channel table below. $0 organic path exists via smoke-test channel guide.
+- **🔑 Setup:** Ad platform account — Sam picks one (Meta/Google/LinkedIn/Reddit). Visits the platform's signup URL, attaches a payment method, waits for ad-account approval. Install channel's pixel in page head-tag. **How Sam chooses:** the channel-selection table in 1.4 ranks platforms by cost per click and Sam's ICP fit.
+- **📦 Input:** Tracking-enabled landing page URL from 1.3. **How Sam obtains it:** same URL — he's been working on it since 1.2.
+- **📝 Action:** Create campaign targeting the `[CUSTOMER]` from 1.1. Set daily budget to reach 300 visits. Do NOT touch the page for full run.
+- **📦 Output:** Conversion rate (form submits ÷ campaign landing-page views). Feeds: 1.5 (price button placement), 1.1 loop-back (if <3%).
+
+| Channel | Budget (300 visits) | CPC range | Best for | Signup URL |
+|---|---|---|---|---|
+| Meta | $250-$700 | $0.70-$1.90 | B2C, broad consumer | [business.facebook.com](https://business.facebook.com/) |
+| Reddit | $375-$900 | $1.25-$3 | Niche communities, B2B | [ads.reddit.com](https://ads.reddit.com/) |
+| Google Search | $900-$2,400 | $3-$8 | Existing search demand | [ads.google.com](https://ads.google.com/) |
+| LinkedIn | $1,650-$6,600 | $5.70-$22 | B2B, named companies | [linkedin.com/campaignmanager](https://www.linkedin.com/campaignmanager/) |
+| Organic (free) | $0 | $0 | Slow but real — social sharing | None (no account needed) |
+
+- **🆘 Plan B — conversion <3%:** Hypothesis is wrong → back to 1.1, tighten the blank that scored lowest.
+- **🆘 Plan B — ad budget out of reach:** Use $0 organic path in smoke-test channel guide.
+
+### 1.5 · Price Hypothesis
+
+- **⏳ Wait:** Stripe verification 1-3 business days. Bank account + tax ID required. **Start the weekend before launch.**
+- **💰 Cost:** $0 (Stripe free to set up; per-transaction fees on actual payments)
+- **🔑 Setup:** Stripe account at [stripe.com](https://stripe.com) — requires bank account + tax ID (SSN for US sole proprietors). Stripe doesn't verify incorporation at signup. **How Sam signs up:** visits stripe.com, clicks "Start now," follows the verification flow. Creates a Payment Link from Dashboard → Payments → Payment Links.
+- **📦 Input:** Live landing page from 1.4. **How Sam obtains it:** same URL from 1.2 — he's been iterating on it since then.
+- **📝 Price hypothesis:**
+  | Element | How Sam determines it | Source |
+  |---|---|---|
+  | **Number** | Find 2-3 existing tools in category, start at their middle tier. OR: price against time saved — tool that saves 4 hrs/month is worth a fraction of those hours' cost. | Web search (Google the category, look at pricing pages) |
+  | **Unit** | One-time (not subscription) for founding-member conversion. | 1.5 lesson guidance |
+  | **Framing** | Pick ONE: outcome framing ("Stop spending 4 hours on reconciliation - $97") OR risk-reduction ("Reserve your spot - $97 refundable for 30 days"). | 1.5 lesson template |
+- **📝 Button copy:** Paste the Payment Link URL on CTA button. Below it: "Not ready? Join the waitlist instead."
+- **📦 Output:** Stripe Payment Link live + measured click-to-payment rate. Feeds: 5.6 (deposit math — 1.5 price × 12 = year-one ACV).
+- **🆘 Plan B — Stripe verification >3 days:** Build page without button. Run email-only smoke test. Demand signal doesn't depend on button being live today.
+
+---
+
+## MODULE 2: Validate the Problem (3-5 weeks)
+
+### 2.1 · The Mom Test: Ask About the Past
+
+- **⏳ Wait:** None
+- **💰 Cost:** $0
+- **📦 Input:**
+  | Input | How Sam obtains it | Upstream source |
+  |---|---|---|
+  | `[CUSTOMER]` description (ICP) | Read from 1.1 hypothesis Google Doc — the `[CUSTOMER]` blank value | **[1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)** |
+  | Mom Test scoring rubric (1-10, strong signal at 7+) | Printed or open on screen from the 2.1 lesson | **2.1 lesson text** |
+- **📝 Template — 5 interview questions from the Mom Test table:**
+  | Question | How Sam writes it | Source |
+  |---|---|---|
+  | 5 verbatim rewrite questions | Copy from Mom Test table in 2.1 lesson. Rewrite to anchor in past events. Start with "Tell me about the last time..." | **[2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) lesson table** |
+  | 2-3 ICP-specific probes | Derived from the 1.1 `[PROBLEM]` and `[COMPETITION]` blanks — ask about specific workarounds | **[1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) blanks** |
+- **🔑 Setup:** None. Google Doc in existing `Founder OS` folder from 1.1.
+- **📦 Output:** 5-8 question list saved as `Mom Test draft - [date]` in `Founder OS` folder. Feeds: 2.2 (optional rehearsal), the 10 interviews before 2.5.
+- **🆘 Plan B — questions still sound hypothetical:** Rewrite to "Tell me about the last time..." or "Walk me through what you did when..."
+
+### 2.2 · AI Persona Rehearsal (OPTIONAL)
+
+- **⏳ Wait:** None
+- **💰 Cost:** $0 (Claude/ChatGPT free tier)
+- **🔑 Setup:** Claude account at [claude.ai](https://claude.ai) or ChatGPT (free tier). Already introduced for the Perplexity research in 1.2 — Sam likely has one by now.
+- **📦 Input:** Draft question list from 2.1. **How Sam obtains it:** open `Mom Test draft` Google Doc.
+- **📦 Output:** Sharpened question list + Objection Tracker. Feeds: the 10 interviews.
+- **🆘 Plan B — skip entirely:** If Sam has run customer interviews before, skip to 2.3.
+
+### 2.3 · Find 10 People: Where to Look
+
+- **⏳ Wait:** None (research step)
+- **💰 Cost:** $0
+- **📦 Input:**
+  | Input | How Sam obtains it | Upstream source |
+  |---|---|---|
+  | `[CUSTOMER]` blank value | Read from 1.1 hypothesis Google Doc | **[1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)** |
+  | Reddit/G2 source URLs | These are the URLs Sam saved from the 1.2 Step 1 Perplexity search | **[1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) Step 1** |
+- **📝 Template — AI ICP map prompt:**
+  | Element | How Sam fills it | Source |
+  |---|---|---|
+  | ICP description | Paste 1.1 `[CUSTOMER]` and `[PROBLEM]` blanks into Claude | **[1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)** |
+  | 8 communities + 5 search strings | Claude generates these from the ICP description | AI-generated from 1.1 inputs |
+- **📦 Output:** 30-name list in a spreadsheet. Feeds: 2.4 (outreach).
+- **🆘 Plan B — can't find anyone:** `[CUSTOMER]` is too vague → tighten to "12-person law-firm office manager," not "small business owners."
+
+### 2.4 · Find 10 People: What to Say
+
+- **⏳ Wait:** 2-4 calendar weeks to book 10 interviews (the long pole of Module 2)
+- **💰 Cost:** $0 (organic outreach). $250-$500 if using research panel fallback.
+- **🔑 Setup:** LinkedIn account (for DMs) or email. Calendly free tier at [calendly.com](https://calendly.com) for scheduling (optional). Sam already has email via Gmail (original input).
+- **📦 Input:** 30-name list from 2.3. **How Sam obtains it:** open the spreadsheet from 2.3.
+- **📝 Template — Outreach Sequence Template (3 messages):**
+  | Element | How Sam fills it | Source |
+  |---|---|---|
+  | Problem description | Use verbatim language from 1.2 Perplexity quotes and 1.1 `[PROBLEM]` blank | **1.2 quotes + 1.1 problem blank** |
+  | "I'm researching how [CUSTOMER] handles [PROBLEM]" | `[CUSTOMER]` and `[PROBLEM]` from 1.1 | **[1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)** |
+- **📦 Output:** 10 booked interviews on the calendar. Feeds: the 10 interviews, then 2.5 (synthesis).
+- **🆘 Plan B — reply rate under 15%:** Expand list to 60 names using 2.3 AI prompt. Usually an ICP-fit problem.
+
+### [Run 10 Mom Test Interviews — Days, Not One Sitting]
+
+- **⏳ Wait:** Days to weeks
+- **💰 Cost:** $0
+- **📦 Input:**
+  | Input | How Sam obtains it | Upstream source |
+  |---|---|---|
+  | Interview script | `Mom Test draft` Google Doc in `Founder OS` folder | **[2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) (or [2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/) if rehearsed)** |
+  | Booked interviewees | Calendar from 2.4 outreach | **[2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)** |
+- **📝 Template:** Score each interview 1-10 using the 2.1 rubric immediately after each call.
+- **📦 Output:** 10 scored transcripts. Feeds: 2.5 (synthesis).
+- **🆘 Plan B — fewer than 7 show up:** Book 12-15 expecting ~30% no-show. Research panel fallback (UserInterviews, $25-$50/screener) guarantees show rate.
+
+### 2.5 · Mom Test Synthesis: Build, Pivot, or Kill
+
+- **⏳ Wait:** None. 90 minutes with transcripts, printed template, pen.
+- **💰 Cost:** $0
+- **📦 Input:** 10 scored Mom Test transcripts. **How Sam obtains them:** his own notes from the 10 calls he just ran.
+- **📝 Validated Problem Statement Template — 5 sections:**
+  | Section | How Sam fills it | Source |
+  |---|---|---|
+  | Who has the problem | Name the persona from the interviews — not the 1.1 hypothesis; the actual people who showed pain | **10 interview transcripts** |
+  | What it costs them | Quantify from interviewee quotes — hours lost, dollars spent on workarounds | **Interview transcripts** |
+  | What they've tried | List workarounds named in interviews | **Interview transcripts** |
+  | Why now | What changed in the last 6 months that made this urgent | **Interview transcripts** |
+  | Pain magnitude | Count of 7+ scores vs total. ≥7/10 = BUILD, 4-6 = PIVOT, <4 = KILL | **Interview scores** |
+- **📦 Output:** Build/pivot/kill decision + one-page Validated Problem Statement. Feeds: 2.6 (prototype prompt), 3.1 (Product Brief Section 1 — copied verbatim).
+- **🆘 Plan B — pivot (4-6):** Sharpen ICP, run 5 more interviews. Cost: 1 week.
+- **🆘 Plan B — kill (<4):** Return to 1.1, rewrite weakest blank, re-run 2.3.
+
+### 2.6 · Build a Clickable Prototype
+
+- **⏳ Wait:** None. 2 hours build + 5 × 30-minute sessions.
+- **💰 Cost:** $0 (Lovable free tier)
+- **🔑 Setup:** Lovable account at [lovable.dev](https://lovable.dev). Sam visits the URL, signs up with email (Gmail). No payment needed.
+- **📦 Input:**
+  | Input | How Sam obtains it | Upstream source |
+  |---|---|---|
+  | BUILD decision | From 2.5 synthesis | **[2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)** |
+  | Validated Problem Statement | `Validated Problem Statement` Google Doc | **[2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)** |
+  | 5 strongest-signal interviewees (≥7) | Names from 2.5 scoring sheet | **[2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)** |
+- **📝 3-screen prototype prompt:**
+  | Blank | How Sam fills it | Source |
+  |---|---|---|
+  | `[PRODUCT CATEGORY]` | Derived from the problem statement — what kind of thing is this? | **[2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) problem statement** |
+| `[CUSTOMER]` | The persona from the validated problem statement | **[2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)** |
+| `[PRIMARY ACTION]` | The one thing the user does — verb-led, from the problem statement | **[2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)** |
+  | `[FAKE DATA]` | Realistic placeholder data Sam makes up matching the persona's world | Invented — realistic to the persona |
+  | `[BUTTON LABEL]` | The CTA verbatim from 2.5 interviewee vocabulary | **[2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) verbatim language** |
+- **📦 Output:** 5 silent-observation sessions scored + verbatim vocabulary from closing question. Feeds: 3.1 (Section 2 user context, Section 3 build scope).
+- **🆘 Plan B — 2-3 passes:** Revise one element (vocabulary, Screen 1 layout, or CTA), run 2 replacement sessions.
+
+---
+
+## MODULE 3: Design from Evidence (~1 week)
+
+### 3.1 · One-Page Product Brief (Vibe PRD)
+
+- **⏳ Wait:** None. One focused sitting (after a night's sleep between drafts).
+- **💰 Cost:** $0
+- **📦 Input:**
+  | Input | How Sam obtains it | Upstream source |
+  |---|---|---|
+  | Validated Problem Statement | Open `Validated Problem Statement` Google Doc in `Founder OS` folder | **[2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)** |
+  | Verbatim prototype vocabulary | Notes from 2.6 closing question — the words interviewees used to describe the product | **[2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)** |
+- **📝 Vibe PRD Template — 5 sections:**
+  | Section | How Sam fills it | Source |
+  |---|---|---|
+  | **1. The problem** | Copied **word-for-word** from 2.5 validated problem statement. Do not paraphrase. | **[2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) (verbatim copy)** |
+  | **2. User & context** | Who the user is *while* using the product — 60 seconds before and after. Uses prototype vocabulary from 2.6. | **2.6 vocabulary + 1.1 customer blank** |
+  | **3. What you're building** | One verb-led paragraph. Input → output. Uses 2.6 prototype observations — what the 5 interviewees actually tried to do. | **[2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) observations** |
+  | **4. Success metric** | One number, one unit, one timeframe. Measurable inside the app. | Sam defines from 2.5 problem cost |
+  | **5. What you're NOT building** | 5-8 no-go bullets. Start with: what a competent AI agent or junior would add unprompted. Add anything from the 1.1 `[APPROACH]` blank that didn't survive Module 2. | Sam's judgment + AI leakage check |
+- **📝 Constraint:** ≤250 words, one side of paper.
+- **📦 Output:** One-page Product Brief saved as `Product Brief - [date]` in `Founder OS` folder. Feeds: 3.2 (quality check), 4.3 (pre-flight rule 1), 4.4 (build prompt).
+- **🆘 Plan B — can't fit Section 3 in one paragraph:** Scope too big → pick single smallest workflow, cut everything else to Section 5.
+
+### 3.2 · Quality-Check: Features to Outcomes
+
+- **⏳ Wait:** None. 20-minute rewrite + peer/AI review.
+- **💰 Cost:** $0 (Claude/ChatGPT for AI reviewer if no peer available)
+- **📦 Input:** One-page Product Brief from 3.1. **How Sam obtains it:** `Product Brief` Google Doc in `Founder OS` folder.
+- **📝 Action:** Rewrite every feature noun in Section 3 as *When / I want / So I can* job stories. Then hand to peer (or paste Section 3 into Claude) with: "Name 3 things you'd build that are NOT in Section 3 and NOT in the no-go list."
+- **📝 Gate:** Reviewer names nothing outside no-go list. FAILS if 2+ items are outside.
+- **📦 Output:** Outcome-shaped Section 3 + quality-check verdict. Feeds: 4.1 (build-path decision), 4.3 (pre-flight rule 1 — "brief passed 3.2 quality-gate").
+- **🆘 Plan B — reviewer names 2+ things outside no-go list:** Section 3 is still vague → tighten *When/I want/So I can* shape on loosest line, ask fresh reviewer.
+
+---
+
+## MODULE 4: Build It Yourself (2-4 weeks)
+
+### 4.1 · Should You Hire? The 2026 Decision Tree
+
+- **⏳ Wait:** None. 20-minute solo + 20-minute peer sanity check.
+- **💰 Cost:** $0
+- **📦 Input:** Quality-checked one-page brief from 3.2. **How Sam obtains it:** `Product Brief` Google Doc — the 3.2 quality-checked version.
+- **📝 Build Path Decision Worksheet — 5 yes/no questions:**
+  | Question | How Sam answers | Source |
+  |---|---|---|
+  | Can I describe the build in one sentence? | Yes if brief Section 3 fits one paragraph | **[3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)** |
+  | Is my runway >4 months? | Sam's bank account / runway calculation | Sam knows this |
+  | ... (3 more questions from worksheet) | ... | **[4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) lesson worksheet** |
+- **📦 Output:** 4-way build-path decision (self-serve / validate / fractional CTO / hire). Feeds: 4.2 (ownership audit — all paths), 4.3 (self-serve path).
+- **🆘 Plan B — routes to "hire" but runway <4 months:** Runway wins → default to self-serve, revisit when 4.5 ceiling signal fires.
+
+### 4.2 · Ownership Audit
+
+- **⏳ Wait:** Domain transfer: up to 14 days. GitHub org transfer: 7 days if contractor cooperates. AWS root recovery: 3-5 business days.
+- **💰 Cost:** $0 (if accounts are in Sam's name). Domain: ~$10/year at [Porkbun](https://porkbun.com).
+- **🔑 Setup:** Three accounts — all under Sam's Gmail (original input #2):
+  | Account | How Sam creates it | URL |
+  |---|---|---|
+  | GitHub | Visit [github.com](https://github.com), sign up with Gmail, create free account | github.com |
+  | AWS | Visit [aws.amazon.com](https://aws.amazon.com), sign up with Gmail, free tier | aws.amazon.com |
+  | Domain registrar (Porkbun) | Visit [porkbun.com](https://porkbun.com), sign up with Gmail, buy domain ~$10/yr | porkbun.com |
+  | Stripe | Already set up from 1.5. Sam uses the same account. | **[1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) setup** |
+- **📦 Input:** Build-path decision from 4.1. Applies to ALL paths.
+- **📝 Ownership Checklist — 4 zones:**
+  | Zone | How Sam verifies it |
+  |---|---|
+  | Code | GitHub org Owner = Sam's account |
+  | Cloud | AWS root email = Sam's Gmail, MFA enabled |
+  | Secrets | Database passwords in Sam's possession |
+  | Domain | Registrar account shows Sam as the domain owner. If domain is in page builder's name (from 1.2 Mixo), transfer to Porkbun. |
+- **📦 Output:** All infrastructure accounts confirmed in Sam's name. Feeds: 4.3 (pre-requisite), 4.4 (custom domain green light).
+- **🆘 Plan B — contractor won't transfer GitHub org:** Retain lawyer, $2K-$5K.
+
+### 4.3 · Self-Serve Stack: Tools & Setup
+
+- **⏳ Wait:** None. Lovable + Supabase signups instant. GitHub sync immediate.
+- **💰 Cost:** $0 (all three tools free tiers)
+- **🔑 Setup:**
+  | Account | How Sam creates it | URL |
+  |---|---|---|
+  | Lovable | Already signed up from 2.6 prototype. If skipped 2.6: visit [lovable.dev](https://lovable.dev), sign up with Gmail. | lovable.dev |
+  | Supabase | Visit [supabase.com](https://supabase.com), sign up with Gmail, free tier | supabase.com |
+  | Stripe | Already set up from 1.5. Same account, same Payment Link experience. | **[1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) setup** |
+  | GitHub sync | In Lovable Settings → turn on GitHub sync (pre-flight rule 3). Uses GitHub account from 4.2. | **[4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) GitHub account** |
+- **📦 Input:**
+  | Input | How Sam obtains it | Upstream source |
+  |---|---|---|
+  | "Self-serve" build decision | From 4.1 worksheet | **[4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)** |
+  | Quality-checked one-page brief | `Product Brief` Google Doc — the 3.2 quality-checked version | **[3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)** |
+  | Passed ownership audit | 4.2 checklist completed | **[4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)** |
+- **📝 3 pre-flight rules:**
+  | Rule | How Sam verifies it | Source |
+  |---|---|---|
+  | 1. Brief passed 3.2 quality-gate | Section 3 reads as outcomes, not features | **[3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) output** |
+  | 2. One workflow, one persona, one happy path | Write one sentence naming all three — if it takes two sentences, scope is too big | **[3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) Section 3** |
+  | 3. GitHub sync ON | Checked in Lovable Settings | **[4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) GitHub account** |
+- **📝 AI leakage check:** Paste Section 3 into Claude with: "Name 3 things Lovable would build that are NOT in this list." Save flagged features as scope-leak watchlist.
+- **📦 Output:** 3 pre-flight rules locked + scope-leak watchlist + tool boundaries clear. Feeds: 4.4 (build phases).
+- **🆘 Plan B — 12-rules list overwhelming:** Only rules 1, 2, and 6 (the 3 pre-flight rules) must be true before starting. Other 9 fire inline during 4.4.
+
+### 4.4 · Self-Serve Stack: Build Phases
+
+- **⏳ Wait:** Build time: 2-4 weeks across 4 phases.
+- **💰 Cost:** Lovable + Supabase entry paid tiers + domain ($10/yr) + Stripe per-transaction fees.
+- **📦 Input:**
+  | Input | How Sam obtains it | Upstream source |
+  |---|---|---|
+  | 3 pre-flight rules locked | Verified in 4.3 setup | **[4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)** |
+  | One-page brief from Module 3 | `Product Brief` Google Doc | **[3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)** |
+  | Scope-leak watchlist | 3 flagged features from Claude leakage check | **[4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)** |
+  | Supabase project | Created in 4.3 | **[4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)** |
+  | Lovable project with GitHub sync | Created in 4.3 | **[4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)** |
+  | Stripe account (live mode) | Already set up from 1.5, now switched to live mode | **[1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) → [4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)** |
+  | Domain | Purchased in 4.2, now pointed to staging URL | **[4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)** |
+- **📝 4 build phases:** Phase 1 UI → Phase 2 Supabase+auth → Phase 3 Stripe+checkout → Phase 4 staging URL+5 ICP users.
+- **📝 5 green lights gate:**
+  | Green light | How Sam verifies it | Source of requirement |
+  |---|---|---|
+  | 1. Stripe in live mode, real card cleared | Test charge with own card, refund immediately | **[1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) Stripe setup** |
+  | 2. Custom domain wired | Domain from 4.2 points to staging URL | **[4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) domain** |
+  | 3. ≥1 fresh ICP user tested paywall | Send staging URL to 1 person from 2.3 list or 5.1 survey pool | **[2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) list** |
+  | 4. Zero red Console errors on signup+checkout | Open browser DevTools Console, run signup-to-checkout flow | Browser DevTools |
+  | 5. Weekly demo recording exists | Loom recording of the current state | Loom (free tier) |
+- **📦 Output:** Live MVP at real URL. Feeds: 5.1 (users for Sean Ellis test), 5.6 (pilot demo).
+- **🆘 Plan B — demo person needs a tour:** Rewrite Lovable prompt around the one job the screen does. If 2 testers stall on first screen, revisit 3.2 outcomes.
+
+### 4.5 · Ceiling Signals (OPTIONAL monthly check)
+
+- **⏳ Wait:** Monthly calendar block. Start after launch.
+- **💰 Cost:** $0
+- **📦 Input:** None required — fires when a signal triggers.
+- **📝 5 signals:** Feature Lovable can't build, query can't tune, auth flow limit, cross-tenant data leak risk, 5,000+ users.
+- **🆘 Plan B — hit signal mid-build:** Bookmark this lesson. Signals are for the operating phase.
+
+---
+
+## MODULE 5: First Paying Customer (2-4 weeks)
+
+### 5.1 · Sean Ellis 40% Test
+
+- **⏳ Wait:** None. 5 questions, Typeform/Google Form takes 2 minutes. Results within 24 hours.
+- **💰 Cost:** $0 (Typeform/Google Form free tier)
+- **🔑 Setup:** Google Forms at [forms.google.com](https://forms.google.com) (Sam already has Gmail) OR Typeform free tier.
+- **📦 Input:** ≥10-30 users on MVP. **How Sam obtains them:**
+  | Source of users | How to reach them |
+  |---|---|
+  | 4.4 onramp waitlist | Emails collected from the 1.2/1.4 landing page waitlist — export from your page builder (Mixo Subscribers, Carrd form responses, etc.) |
+  | 2.3-2.4 interviewees | The 10 people Sam interviewed — message them with the survey link |
+  | Friends/network who tested 4.4 staging URL | The people Sam did demos for in 4.4 Phase 4 |
+- **📝 5-question survey:**
+  | Question | How Sam fills it | Source |
+  |---|---|---|
+  | Q1: "How would you feel if you could no longer use this product?" | Copy verbatim from 5.1 lesson (Very disappointed / Somewhat disappointed / Not disappointed) | **[5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) lesson** |
+  | Q2: "Why?" (open) | Free text from respondent | n/a |
+  | Q3: "What would you use instead?" | Free text from respondent | n/a |
+  | Q4: "What's the primary benefit?" | Free text from respondent | n/a |
+  | Q5: Segment question (role / use case) | Sam defines based on 2.5 personas | **[2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) persona** |
+- **📝 Gate:** 40%+ "very disappointed" in at least one segment.
+- **📦 Output:** Must-have segment identified + per-segment %. Feeds: 5.3 (list seeding), 5.4 (message language — use Q3 verbatims).
+- **🆘 Plan B — no segment ≥40%:** If any segment is 25-39% = product needs refinement (back to 4.4, ship against most common Q3 answer from that segment). If all segments below 25% = significant product problem (back to 4.4, focus on the segment with highest Q3 frustration signal). Gate threshold is 40%+ in at least one segment.
+
+### 5.2 · Channel Selection (OPTIONAL)
+
+- **⏳ Wait:** None. 30-minute solo.
+- **💰 Cost:** $0
+- **📦 Input:** Q2-Q3 verbatim answers from 5.1 survey. **How Sam obtains them:** read the survey responses in Google Forms.
+- **🆘 Plan B — skip entirely:** If channel is obvious (personal network), skip to 5.3.
+
+### 5.3 · Build Your 50-Name Network List
+
+- **⏳ Wait:** None. 30-60 minutes.
+- **💰 Cost:** $0
+- **🔑 Setup:** Google Sheet in existing `Founder OS` folder. Sam already has Gmail → Google Sheets.
+- **📦 Input:** Must-have segment from 5.1. **How Sam obtains it:** 5.1 survey results — the segment with highest "very disappointed" %.
+- **📝 6-column spreadsheet — How Sam seeds it:**
+  | Seed source | How to retrieve it | Upstream |
+  |---|---|---|
+  | 2.4 interviewees | Names from 2.4 outreach tracking sheet | **[2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)** |
+  | 1.4 waitlist signups | Export from your landing page builder (Mixo Subscribers, Carrd form responses, etc.) | **[1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)/[1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)** |
+  | 2.3 30-name list | Open the spreadsheet from 2.3 — many are still warm | **[2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)** |
+  | Personal network | People Sam knows who match the must-have segment | Sam's own contacts |
+  | Cold names from Apollo/LinkedIn | If warm list <50, run 2.3 ICP map prompt again, this time for outbound targets | **[2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) method** |
+- **📦 Output:** 50 names sorted into 4 buckets (Champions/Hot/Warm/Cold). Feeds: 5.4 (message writing), 5.5 (send sequence).
+- **🆘 Plan B — only 5 names:** Five is enough to start. Message all five before cold outbound.
+
+### 5.4 · Write the Outreach Message
+
+- **⏳ Wait:** None. 90 seconds to record Loom.
+- **💰 Cost:** $0 (Loom free tier)
+- **🔑 Setup:** Loom account at [loom.com](https://www.loom.com). Sign up with Gmail. Free tier.
+- **📦 Input:**
+  | Input | How Sam obtains it | Upstream source |
+  |---|---|---|
+  | 50-name list with 4 buckets | Google Sheet from 5.3 | **[5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)** |
+  | Must-have segment name | From 5.1 survey results | **[5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)** |
+- **📝 4-part message structure:**
+  | Part | How Sam fills it | Source |
+  |---|---|---|
+  | 1. Bucket-specific opener | Champions: "Since we last spoke..." / Hot: "You signed up for the waitlist..." / Warm: "I noticed you're in [industry]..." / Cold: "I saw your post about [topic]..." | **[5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) bucket labels** |
+  | 2. One line on the problem in their language | Paste exact Q3 verbatim answers from 5.1 survey | **[5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) Q3** |
+  | 3. 90-second Loom | Record: 60s product walkthrough (show the MVP from 4.4), 30s personal intro | **[4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) MVP** |
+  | 4. Specific ask + Calendly link | "Would you be open to a 15-minute call?" + Calendly link + "paid pilot" teaser | Calendly from 2.4 |
+- **📦 Output:** 4 message variants + 90-second Loom. Feeds: 5.5 (send).
+- **🆘 Plan B — message reads generic:** Using marketing voice not verbatim quotes → paste exact 5.1 Q3 answers into Part 2.
+
+### 5.5 · Send, Track, and Read the Replies
+
+- **⏳ Wait:** Reply tail 1-2 weeks
+- **💰 Cost:** $0
+- **📦 Input:** 4 message templates + Loom from 5.4.
+- **📝 Send sequence:** Champions Monday → Hot Tuesday → Warm Wednesday → Cold Thursday. Track in the same Google Sheet: Reply, Demo booked, DPA sent, Deposit cleared.
+- **📦 Output:** Demos booked from warm list. Feeds: 5.6 (DPA send).
+- **🆘 Plan B — reply rate under 5%:** Re-record Loom using 5.1 Q2-Q3 verbatims. Re-send to non-responders.
+
+### 5.6 · Charge Before You Ship: The Paid Pilot
+
+- **⏳ Wait:** DPA legal review: 2-3 business days if customer's legal reviews it. Most one-page DPAs clear without legal.
+- **💰 Cost:** $0 (DPA template free). Stripe per-transaction fees on deposit.
+- **🔑 Setup:**
+  | Tool | How Sam sets it up | Source |
+  |---|---|---|
+  | Stripe | Already set up from 1.5. Creates a Payment Link in Dashboard for the deposit. | **[1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) Stripe account** |
+  | DocuSign/HelloSign OR PDF+email | Sam picks one. PDF+email is free (Google Doc → Download as PDF → attach to email). | New or from operating kit |
+  | Google Doc | Copy the DPA template below into a blank Google Doc in `Founder OS` | Google Drive (original input) |
+- **📦 Input:** 3-5 warm leads with demos booked from 5.5. **How Sam obtains them:** the Google Sheet tracking column "Demo booked" from 5.5.
+- **📝 DPA Template — 6 sections + signature block. For every `[BRACKET]`:**
+  | Blank | How Sam fills it | Source |
+  |---|---|---|
+  | `[Your Company Name]` | Sam's company name. If no company yet: Sam's full name. | Sam knows this |
+  | `[Customer Company Name]` | The company name of the warm lead from 5.5 tracking sheet | **[5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) lead info** |
+  | `[YYYY-MM-DD]` | Today's date | Calendar |
+  | `[Outcome 1]`, `[Outcome 2]`, `[Outcome 3]` | 3 measurable outcomes. Derived from the validated problem (2.5) + what the customer named in their demo call. "Reduce weekly report prep from 3 hours to 30 minutes." | **2.5 problem + 5.5 demo conversation** |
+  | `[Use case 1]`, `[Use case 2]` | 2 specific ways the customer will use the product. Named during the 5.5 demo. | **[5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) demo conversation** |
+  | `[time]` `[timezone]` | Friday demo time agreed during 5.5 | **[5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) scheduling** |
+  | `$[deposit]` | **How Sam calculates it:** 1.5 price hypothesis × 12 = year-one ACV. Deposit = 10-30% of ACV. **$500 floor.** When 10% of ACV < $300: charge first month upfront instead. Example: $97/month → $1,164 ACV → 10% = $116 (below floor) → charge $97 (first month) or raise to $500. | **1.5 price × 12** |
+  | `[Measurable criterion 1/2/3]` | Same as outcomes above but with a verifiable metric. "Report prep time reduced to ≤30 min/week, verified in Friday demo." | **[2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) problem cost** |
+  | `$[amount] / [month or year]` | Year-one contract price. Based on the 1.5 price hypothesis, refined by what Sam learned in Module 2 interviews and pilot conversations. | **1.5 price → refined by M2-M5** |
+  | `[monthly / annual]` | Pick one. Annual gives Sam committed revenue; monthly is easier to sell. | Sam's judgment |
+  | `[Your Name]` | Sam's name | Sam knows this |
+  | `[Champion Name]` | The person Sam demoed to in 5.5 — their name from the tracking sheet | **[5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) lead info** |
+- **📝 Friday Demo follow-up email (after each pilot demo):**
+  | Blank | How Sam fills it | Source |
+  |---|---|---|
+  | `[DATE]` | Today's date — the date of the Friday demo. Forward the Loom to yourself with this date in the subject line. | Calendar |
+  | `[ONE_LINE_SUMMARY]` | One sentence on what shipped this week — the answer to Q1 from the [Friday Demo Template](/course/tech-for-non-technical-founders-2026/friday-demo-template/). | The demo conversation (team's Q1 answer) |
+- **📝 Deposit math:** 1.5 price × 12 = year-one ACV. Deposit = 10-30% of ACV, standard **$500 floor**. Low-price exception: when 10% of ACV < $300, charge the first month's revenue upfront as the deposit instead. Example: $97/month → $1,164 ACV → 10% = $116 (below floor for percentage-based deposit) → charge $97 first month or raise to meet $500 floor.
+- **📝 Gate:** Stripe deposit cleared. Standard: ≥$500. Low-price path: whatever was charged as the first-month deposit (≥ first month's value). That cleared deposit is the "first paying customer."
+- **📦 Output:** Signed DPA + cleared deposit. This is the final course artifact — completes the `Founder OS` folder.
+- **🆘 Plan B — "can we start free?":** Reframe deposit as year-one ACV prepaid, not added cost.
+- **🆘 Plan B — "we do not do paid pilots":** Wrong buyer → move to next warm lead.
+
+### 5.7 · Cold Outbound (OPTIONAL)
+
+- **⏳ Wait:** 1-2 weeks reply tail
+- **💰 Cost:** $0 (Apollo free tier or manual)
+- **🔑 Setup:** Apollo free tier at [apollo.io](https://www.apollo.io) (contact enrichment) or manual LinkedIn search.
+- **📦 Input:** Warm network exhausted (5.3-5.6 done). **How Sam knows:** the 5.3 50-name list — Champions/Hot/Warm buckets are all at "Replied" or "Deposit cleared" status.
+- **📝 3 sector-specific scripts:** B2B SaaS / B2B services / B2C app. Sam picks one based on his product category.
+- **🆘 Plan B — 0 replies from 30:** Tighten one of: 4-line script or ICP filter. Re-send 20.
+
+---
+
+## Complete Dependency Chain: Where Every `[BRACKET]` Comes From
+
+```
+```text
+ROUGH IDEA (original input #1) + GMAIL (original input #2) + BROWSER (original input #3)
+│
+├─ [1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/): [CUSTOMER] [PROBLEM] [APPROACH] [COMPETITION] [DIFFERENTIATION] ← from Sam's head, refined by Perplexity in [1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
+│   │
+│   ├─ [1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/): [CUSTOMER] [PROBLEM] [COMPETITION] [DIFFERENTIATION] ← COPY from [1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) blanks
+│   │       [verbatim quote 1/2/3] ← Perplexity search using [1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) [CUSTOMER] + [PROBLEM]
+│   │       Hero image ← AI generator or Unsplash (free stock photos)
+│   │
+│   ├─ [1.3](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/): no blanks — pastes 2 tracking snippets into [1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) page
+│   │
+│   ├─ [1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/): campaign targeting ← [1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) [CUSTOMER] blank defines audience
+│   │       ad account ← new signup, payment method from Sam's wallet
+│   │
+│   └─ [1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/): price number ← web search for 2-3 existing tools in category
+│           price framing ← pick ONE from [1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) lesson template
+│           Stripe account ← bank + tax ID (SSN for US)
+│
+├─ [2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/): interview questions ← Mom Test table ([2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) lesson) + [1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) [PROBLEM]/[COMPETITION] blanks
+│   │
+│   ├─ [2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/) (opt): same question list ← [2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) draft, tested against AI personas
+│   │
+│   ├─ [2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/): ICP map prompt ← [1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) [CUSTOMER] + [PROBLEM] blanks + [1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) Perplexity source URLs
+│   │
+│   ├─ [2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/): outreach messages ← [1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) verbatim quotes + [1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) [CUSTOMER]/[PROBLEM] blanks
+│   │
+│   ├─ [2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/): Validated Problem Statement ← 10 interview transcripts (NOT [1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) hypothesis)
+│   │       Gate: ≥7/10 = BUILD, 4-6 = PIVOT, <4 = KILL
+│   │
+│   └─ [2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/): [PRODUCT CATEGORY] ← [2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) problem statement
+│           [CUSTOMER] ← [2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) validated persona
+│           [PRIMARY ACTION] ← [2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) problem statement
+│           [FAKE DATA] ← invented, realistic to persona
+│           [BUTTON LABEL] ← [2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) verbatim interviewee language
+│
+├─ [3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/): Section 1 ← VERBATIM COPY of [2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) problem statement
+│       Section 2 ← [2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) prototype vocabulary + [1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) customer blank
+│       Section 3 ← [2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) prototype observations
+│       Section 4 ← Sam defines from [2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) problem cost
+│       Section 5 ← Sam's judgment + AI leakage check
+│   │
+│   └─ [3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/): Section 3 rewrite ← [3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) Section 3 (feature→outcome job stories)
+│           Gate: reviewer names 0 things outside no-go list
+│
+├─ [4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/): build-path decision ← [3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) quality-checked brief + Sam's runway
+│   │
+│   ├─ [4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/): GitHub ← new signup [github.com] with Gmail
+│   │       AWS ← new signup [aws.amazon.com] with Gmail
+│   │       Domain ← purchase at [porkbun.com] ~$10/yr
+│   │
+│   ├─ [4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/): Supabase ← new signup [supabase.com] with Gmail
+│   │       Lovable ← signup [lovable.dev] (may exist from [2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/))
+│   │       3 pre-flight rules ← [3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) brief + scope sentence + GitHub sync
+│   │       Scope-leak watchlist ← Claude leakage check on [3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) Section 3
+│   │
+│   └─ [4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/): 4 build phases ← [3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) brief + [4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) stack + [4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) domain
+│           Stripe live mode ← [1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) account, now switched to live
+│           5 green lights ← each verifiable independently
+│
+└─ [5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/): 5 questions ← copy from [5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) lesson + [2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) persona for Q5
+    │    Users ← [1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)/[1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) waitlist + [2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)-[2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) interviewees + [4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) testers
+    │
+    ├─ [5.2](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/) (opt): channel score ← [5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) Q2-Q3 verbatim answers
+    │
+    ├─ [5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/): 50-name spreadsheet ← seed from [2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) interviewees + [1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) waitlist + [2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) list + personal network
+    │
+    ├─ [5.4](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/): Part 2 (problem language) ← [5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) Q3 verbatim answers
+    │       Loom recording ← [4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) MVP walkthrough
+    │
+    ├─ [5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/): send sequence ← [5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) bucket labels determine order
+    │
+    └─ [5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/): [Your Company Name] ← Sam knows this
+            [Customer Company Name] ← [5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) lead info
+            [Outcome 1/2/3] ← [2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) problem + [5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) demo conversation
+            [Use case 1/2] ← [5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) demo conversation
+            $[deposit] ← [1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) price × 12 × 10-30%, $500 floor
+            [Measurable criterion 1/2/3] ← [2.5](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) problem cost, verified in demo
+            $[amount]/[month or year] ← [1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) price, refined by M2-M5
+            [Your Name] ← Sam knows this
+            [Champion Name] ← [5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) lead info
+```
+
+---
+
+## Cross-Lesson Wait-Time Dependencies (Run in Parallel)
+
+These are the things Sam should start EARLY because they block multiple downstream steps:
+
+| What | When to start | Blocks | How to mitigate |
+|---|---|---|---|
+| **Stripe verification** | Weekend before 1.5 launch | 1.5 (price button), 5.6 (DPA deposit) | Run email-only smoke test while verifying |
+| **Ad account approval** | 2-3 days before 1.4 launch | 1.4 (smoke test traffic) | Meta is slowest; Reddit clears same-day |
+| **Interview booking** | Start in 2.3, runs through 2.4 | 2.5 (needs 10 transcripts) | The long pole; plan 2-4 calendar weeks. Book 12-15, expect ~30% no-show |
+| **GitHub account** | Before 4.2 | 4.3 (sync), 4.4 (backup) | Create free account in 2 minutes at github.com |
+| **GitHub org transfer** | Day of 4.2 audit | 4.3, 4.4 (no repo = no build) | 7 days if contractor cooperates. If not: retain lawyer |
+| **AWS root recovery** | Day of 4.2 audit | 4.3, 4.4 (can't deploy) | 3-5 business days via AWS account recovery |
+| **Domain registrar transfer** | Day of 4.2 audit | 4.4 (custom domain green light) | Up to 14 days. Start transfer in parallel with 4.3 build |
+| **Domain purchase** | During 4.4 Phase 4 | 4.4 (custom domain green light) | $10/yr at porkbun.com |
+
+---
+
+## Total Spend: Sam's Budget Trajectory
+
+| Module | Minimum | Typical | Maximum (LinkedIn B2B) |
+|---|---|---|---|
+| **M1** | $0 (organic) | $250-$700 (Meta) | $1,650-$6,600 (LinkedIn) |
+| **M2** | $0 | $0 | $500 (research panel fallback) |
+| **M3** | $0 | $0 | $0 |
+| **M4** | $0 (free tiers) | ~$30/month (entry paid tiers + domain) | ~$80/month |
+| **M5** | $0 | $0 | $100/month (Sales Navigator) |
+| **Total** | $0 | ~$280-$780 | ~$2,230-$7,280 |
+
+At every step, a $0 path exists. The course teaches both and lets Sam choose.
+
+---
+
+## Agent Validation Checklist
+
+Use these verifiable assertions when auditing the course for dependency completeness:
+
+1. ✅ Every `[BRACKET]` placeholder in every lesson has a documented upstream source in this map
+2. ✅ No lesson requires an account or tool that hasn't been set up in an earlier lesson (or is an original input)
+3. ✅ Original inputs are exactly: rough idea + Gmail + browser
+4. ✅ Every 🔑 setup lists the exact URL Sam visits and what credential he needs
+5. ✅ The deposit math in 5.6 traces back to the 1.5 price hypothesis (× 12, × 10-30%, $500 floor)
+6. ✅ The DPA success criteria in 5.6 trace back to the 2.5 validated problem statement
+7. ✅ The 5.4 outreach message language traces back to 5.1 Q3 verbatim answers
+8. ✅ No "just sign up for X" statement exists without a URL and a credential description
