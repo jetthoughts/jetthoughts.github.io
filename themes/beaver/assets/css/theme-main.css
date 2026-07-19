@@ -1,3 +1,5 @@
+/* affects pages: blog-list + free-consultation bundles - see docs/projects/2509-css-migration/css-bundle-ownership-map.md
+   Legacy shared layer (Phase C4 strangler target) - verify with bin/qtest before editing. */
 :root {
   --jt-primary-color: var(--color-primary);
   --jt-text-color: #121212; /* KEEP LITERAL (value side): shadow token - repointing to var(--color-dark) is a deliberate follow-up decision, not a mechanical swap */
