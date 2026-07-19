@@ -985,7 +985,7 @@ img.mfp-img {
 }
 
 
-.fl-node-r5xy9wufkc2e > .fl-row-content-wrap {
+.use-cases-technologies > .fl-row-content-wrap {
   background-color:#f5f6f8;
   background-repeat: no-repeat;
   background-position: center center;
@@ -994,14 +994,14 @@ img.mfp-img {
 }
 
 
-.fl-node-r5xy9wufkc2e > .fl-row-content-wrap {
+.use-cases-technologies > .fl-row-content-wrap {
   padding-top: 130px;
   padding-bottom: 130px;
 }
 
 
 @media ( max-width: 1115px ) {
-  .fl-node-r5xy9wufkc2e.fl-row > .fl-row-content-wrap {
+  .use-cases-technologies.fl-row > .fl-row-content-wrap {
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -1009,7 +1009,7 @@ img.mfp-img {
 
 
 @media ( max-width: 860px ) {
-  .fl-node-r5xy9wufkc2e.fl-row > .fl-row-content-wrap {
+  .use-cases-technologies.fl-row > .fl-row-content-wrap {
     padding-top: 50px;
     padding-right: 20px;
     padding-bottom: 50px;
@@ -2759,7 +2759,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 
-.fl-node-r5xy9wufkc2e .fl-row-content {
+.use-cases-technologies .fl-row-content {
   min-width: 0px;
 }
 
