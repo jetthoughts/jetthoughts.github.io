@@ -1,0 +1,82 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# css-winners OLD.css NEW.css [reverse-sed-name reverse-sed-id]...
+#
+# Compares two compiled CSS bundles at the per-selector last-wins winner
+# level (media-aware, paren-aware selector-group splitting). This is the
+# gate that catches cascade-order regressions that declaration-SET
+# comparison cannot: two rules with equal specificity whose relative
+# order decides the computed value (caught the ud8jroeig5h2 mobile shift
+# and the single-career apply-form flip in Phase C/D).
+#
+# Optional trailing name/id pairs reverse-substitute renamed classes in
+# NEW before comparing (boundary-guarded), for gating re-key commits.
+#
+# Exit 0 + "WINNERS IDENTICAL" when equal; exit 1 with the flips listed.
+
+old_path, new_path, *subs = ARGV
+abort "usage: css-winners OLD.css NEW.css [name id]..." unless old_path && new_path
+
+new_css = File.read(new_path)
+subs.each_slice(2) do |name, id|
+  next unless name && id
+  new_css.gsub!(/(?<![-a-z0-9_])#{Regexp.escape(name)}(?![-a-z0-9_])/, "fl-node-#{id}")
+end
+
+def split_selectors(str)
+  out = []
+  depth = 0
+  cur = +""
+  str.each_char do |c|
+    depth += 1 if c == "("
+    depth -= 1 if c == ")"
+    if c == "," && depth.zero?
+      out << cur
+      cur = +""
+    else
+      cur << c
+    end
+  end
+  out << cur
+  out.map(&:strip)
+end
+
+def winners(css)
+  win = Hash.new { |h, k| h[k] = {} }
+  media = nil
+  css.tr("\n", " ").scan(/@media[^{]*\{|[^{}]*\{[^}]*\}|\}/).each do |tok|
+    if tok.start_with?("@media")
+      media = tok[0..-2].strip
+    elsif tok == "}"
+      media = nil
+    else
+      b = tok.index("{")
+      next unless b
+      sels = split_selectors(tok[0...b])
+      tok[(b + 1)..-2].split(";").each do |d|
+        p, v = d.split(":", 2)
+        next unless p && v
+        sels.each { |s| win[[media, s]][p.strip] = v.strip }
+      end
+    end
+  end
+  win
+end
+
+a = winners(File.read(old_path))
+b = winners(new_css)
+diffs = []
+(a.keys | b.keys).each do |k|
+  (a[k].keys | b[k].keys).each do |p|
+    next if a[k][p] == b[k][p]
+    diffs << "#{k[0] ? "#{k[0]} " : ""}#{k[1]} | #{p}: #{a[k][p].inspect} -> #{b[k][p].inspect}"
+  end
+end
+
+if diffs.empty?
+  puts "WINNERS IDENTICAL"
+else
+  puts diffs
+  exit 1
+end

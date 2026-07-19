@@ -697,6 +697,36 @@ non_goals: NO wrapper-div collapse, NO visual changes, NO rule edits —
 
 ---
 
+## ✅ PHASE D COMPLETE (2026-07-19) — PROJECT COMPLETE; ROADMAP REVISED
+
+D1 fold-then-dedup: all 4 position-sensitive twin sets resolved
+(single-career folded to live winners + 18 twins; clients 45 twins -
+the C5 "flip" was a winner-parser comma artifact; single-service 49 +
+single-use-cases 53 twins with the TRIPLY position-load-bearing
+.clearfix pair kept and documented in-file). D2 dead-rule sweep: 760
+purged-everywhere rules deleted (~89KB source) from the 5 legacy files
+via agent survival audit + byte-gate (one false positive caught by the
+gate and restored). bin/css-winners promoted: the per-selector
+last-wins gate that caught both real regressions this phase.
+
+**ROADMAP REVISION (Claude, per Paul delegation 2026-07-19)**:
+- Project goal ACHIEVED by its own five criteria; this tracker moves to
+  maintenance mode.
+- Wrapper collapse + critical/fl-* trio retirement + deeper legacy
+  strangler: PARKED as trigger-conditioned work (do only when a page
+  redesign touches that DOM anyway). Rationale: position-load-bearing
+  accidents make per-line archaeology cost grow while the evidence rule
+  shows ~zero shipped-byte win (PurgeCSS already strips unused legacy
+  rules per bundle).
+- PROPOSED Phase E (awaiting Paul): "new-page paved path" - a page
+  starter template/archetype, 2-3 more extracted section components
+  (hero, card-grid, stat-row) via the proven C1 protocol, and
+  docs/workflows/new-page.md covering the traps (bundle-slice order,
+  purge greedy prefix for new class prefixes, qtest page map, ownership
+  map entry). Compounding value for every future page.
+- Standing user-visible item: jt-reviews-box swiper design restoration
+  (Paul design call; recipe in the C2 note).
+
 ## ✅ PHASE C CLOSURE (2026-07-19) + Phase D backlog
 
 Final scorecard: (1) FL files 0 ✅ · (2) no obfuscated artifacts ✅ - zero

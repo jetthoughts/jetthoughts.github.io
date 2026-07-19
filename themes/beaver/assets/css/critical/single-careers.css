@@ -3,13 +3,6 @@
 /* CSS Variables Foundation (WP1.1) — single-career bundle has no critical/base.css,
    so --font-system-ui must be imported here before use */
 @import "foundations/css-variables.css";
-.fl-builder-content
-  .career-form-module
-  .pp-gf-content
-  .gform_wrapper
-  .gform_title {
-  display: block;
-}
 .career-form-module .pp-gf-content .gform_wrapper .gform_title {
   font-size: 30px;
 }
@@ -1105,14 +1098,6 @@ body:not(.single-fl-theme-layout)
   background-size: cover;
   background-repeat: no-repeat;
 }
-.fl-builder-content .career-form-module .pp-gf-content .form-title,
-.fl-builder-content
-  .career-form-module
-  .pp-gf-content
-  .gform_wrapper
-  .gform_title {
-  display: block;
-}
 .fl-builder-content .career-form-module .pp-gf-content .form-title {
   display: block;
 }
@@ -1125,9 +1110,6 @@ body:not(.single-fl-theme-layout)
 }
 .fl-builder-content .career-form-module .pp-gf-content .form-description {
   display: none;
-}
-.fl-builder-content .career-form-module .pp-gf-content .form-description {
-  display: block;
 }
 .fl-builder-content
   .career-form-module
