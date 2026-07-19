@@ -718,6 +718,29 @@ last-wins gate that caught both real regressions this phase.
   accidents make per-line archaeology cost grow while the evidence rule
   shows ~zero shipped-byte win (PurgeCSS already strips unused legacy
   rules per bundle).
+## 🔄 PHASE E IN PROGRESS (2026-07-19, branch css-migration/phase-e-paved-path)
+
+Mandate (Paul): a person must be able to create a new page from scratch
+reusing existing components, consistently. Plan + measured facts:
+- E1 info-card component: the pp-infobox card pattern repeats ~21x across
+  home (6: home-service-*-box), services (6: services-card-*), about
+  (3: about-value-*), careers (6: careers-value-*-box). MEASURED:
+  home-cto vs services-cto = 24 rules identical modulo class name
+  (A=36 B=50); variance = home-only :hover colors, services-only
+  equal-height flex framework + empty-body hover stubs. Protocol:
+  C1-style intersection -> components/info-card.css keyed on ONE shared
+  class (jt-info-card), re-key all 21 template instances + page CSS
+  keeps, css-winners + qtest gates per page.
+- E2 stat-row component: about-stat-*, home-proof-stat*, service-stat*
+  counter rows - same treatment (unmeasured yet).
+- E3 paved path docs: docs/workflows/new-page.md (bundle-slice recipe +
+  order warning, purge greedy-prefix trap, qtest PAGE_TESTS entry,
+  ownership-map entry) + a starter/example page template.
+- E4 (optional, riskier): collapse the 6 inline CTA template copies onto
+  partials/page/cta.html - copies diverge at OUTER wrapper classes (page
+  keeps), needs per-page params + visual gates; the partial is already
+  usable for NEW pages today. Also fix cta.html duplicate data-node attr.
+
 - PROPOSED Phase E (awaiting Paul): "new-page paved path" - a page
   starter template/archetype, 2-3 more extracted section components
   (hero, card-grid, stat-row) via the proven C1 protocol, and
