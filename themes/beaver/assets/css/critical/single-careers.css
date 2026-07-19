@@ -1253,11 +1253,11 @@ body:not(.single-fl-theme-layout)
 .fl-node-p8famz26ljce > .fl-col-content {
   padding-left: 65px;
 }
-.fl-builder-content .fl-node-qs2ucemf7j56 .fl-module-content .fl-rich-text,
-.fl-builder-content .fl-node-qs2ucemf7j56 .fl-module-content .fl-rich-text * {
+.fl-builder-content .career-meta-label .fl-module-content .fl-rich-text,
+.fl-builder-content .career-meta-label .fl-module-content .fl-rich-text * {
   color: var(--color-primary);
 }
-.fl-builder-content .fl-node-qs2ucemf7j56 .fl-rich-text {
+.fl-builder-content .career-meta-label .fl-rich-text {
   font-weight: 700;
   font-size: 16px;
 }
