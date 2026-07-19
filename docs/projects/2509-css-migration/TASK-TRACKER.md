@@ -564,7 +564,12 @@ tasks:
   - [ ] C1.5 PR: one bundled PR, per-commit description, both suites green
         on head, tracker UPDATE LOG entry.
 
-blockers: NONE — ready to start
+blockers: NONE — C1.1 SHIPPED (9 commits + tooling, 2026-07-19); C1.2/C1.3
+  next via bin/css-split. Known PRE-EXISTING test:all failures (master-level,
+  branch exonerated by only-target-bundle fingerprints): linux
+  desktop/free_consultation baseline drift (fails on master too) + the 5
+  test/system/pages/careers_page_test.rb tests (old test:critical glob never
+  ran them; stale linux baselines). Both need a master-side baseline refresh.
 estimated_commits: ~18-22 (2 preflight, 7+~5+3 swaps, docs)
 ```
 
