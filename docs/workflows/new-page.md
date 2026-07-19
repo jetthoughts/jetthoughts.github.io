@@ -55,7 +55,7 @@ TRAPS:
 |---|---|---|
 | Testimonials section | `{{ partial "page/testimonials.html" . }}` | `components/testimonials.css` |
 | CTA banner ("Let's get started now") | `{{ partial "page/cta.html" . }}` | `components/cta-banner.css` |
-| Info card (pp-infobox) | `<div class="fl-module fl-module-pp-infobox jt-info-card <name>-card-x">` + pp-infobox markup (copy one instance from `page/services.html`) | `components/info-card.css` |
+| Info card (pp-infobox) | `<div class="fl-module fl-module-pp-infobox jt-info-card <name>-card <name>-card-x">` + pp-infobox markup (copy one instance from `page/services.html`) | `components/info-card.css` |
 | Header CTA trio | (only if the page renders the bf72bba header variant) | `components/header-cta.css` |
 | Technologies strip | `{{ partial "technologies.html" (dict "colorVariant" "dark") }}` | `technologies.css` |
 
@@ -97,3 +97,20 @@ bin/test && bin/dtest     # both platforms before the PR
 FORCE_SCREENSHOT_UPDATE=true regenerates baselines (commit macos/ AND
 linux/ together). A failing screenshot run overwrites baselines — restore
 via `git checkout -- test/fixtures/screenshots` before rerunning.
+
+## Patterns that are deliberately NOT components (measured 2026-07-19)
+
+- **Heroes**: cross-page intersection is 1 trivial rule - heroes are
+  page-unique by design. Build yours under `.<name>-hero` with tokens;
+  copy the closest existing hero as a starting point.
+- **Stat/counter rows**: pages structure them differently (per-stat
+  classes vs one shared class) - no forced component. Recipe: a col per
+  stat, `jt-counter-number` on the number (JS hook), label below, all
+  styled under your page prefix.
+
+## Card class tiers
+
+`jt-info-card <page>-card <instance>` - global 16-rule core (component)
+-> page core (in pages/<name>.css) -> instance tweaks. Copy an instance
+from page/services.html; the starter template shows the shape
+(themes/beaver/layouts/page/starter-example.html.txt).

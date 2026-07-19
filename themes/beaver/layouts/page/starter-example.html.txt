@@ -1,0 +1,78 @@
+{{/*
+  STARTER TEMPLATE — copy to themes/beaver/layouts/page/<name>.html and
+  rename every "starter" token. Companion doc: docs/workflows/new-page.md
+  (read it - it lists the traps: prelude-only @import, bundleName
+  uniqueness, purge greedy prefix, qtest map entry).
+
+  Kept as .txt so Hugo does not treat the example as a live layout.
+*/}}
+{{ define "header" }}
+  {{- $resources := slice
+    (resources.Get "css/critical/base.css")
+    (resources.Get "css/components/testimonials.css")
+    (resources.Get "css/components/cta-banner.css")
+    (resources.Get "css/components/info-card.css")
+    (resources.Get "css/pages/starter.css")
+    (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+    (resources.Get "css/586.css")
+    (resources.Get "css/vendors/base-4.min.css")
+    (resources.Get "css/style.css")
+    (resources.Get "css/legacy-theme-skin.css")
+    (resources.Get "css/footer.css")
+  -}}
+  {{ partialCached "assets/css-processor.html" (dict "resources" $resources "bundleName" "starter") "starter" }}
+{{ end }}
+
+{{ define "main" }}
+  <div id="fl-main-content" class="fl-page-content" role="main">
+    <div class="fl-content-full container">
+      <div class="row">
+        <div class="fl-content col-md-12">
+          <div class="fl-builder-content fl-builder-content-primary">
+
+            {{/* HERO — page-unique by design; style under .starter-hero in pages/starter.css */}}
+            <div class="fl-row fl-row-full-width fl-row-bg-photo starter-hero fl-row-default-height fl-row-align-center">
+              <div class="fl-row-content-wrap">
+                <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                  <div class="fl-col-group">
+                    <div class="fl-col starter-hero-col">
+                      <div class="fl-col-content fl-node-content">
+                        <div class="fl-module fl-module-heading starter-heading">
+                          <div class="fl-module-content fl-node-content">
+                            <h1 class="fl-heading"><span class="fl-heading-text">Page title</span></h1>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {{/* CARD GRID — three-tier card classes: global core + page core + instance */}}
+            <div class="fl-row fl-row-fixed-width starter-cards">
+              <div class="fl-row-content-wrap">
+                <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                  <div class="fl-col-group fl-col-group-equal-height fl-col-group-custom-width">
+                    <div class="fl-col starter-card-first-col">
+                      <div class="fl-col-content fl-node-content">
+                        <div class="fl-module fl-module-pp-infobox jt-info-card starter-card starter-card-first">
+                          {{/* copy pp-infobox inner markup from page/services.html (one card) */}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {{/* SHARED SECTIONS — partial + slice line, never copies */}}
+            {{ partial "page/testimonials.html" . }}
+            {{ partial "page/cta.html" . }}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
