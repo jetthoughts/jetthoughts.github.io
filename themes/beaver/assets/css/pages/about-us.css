@@ -1525,230 +1525,8 @@ img.mfp-img {
 .pp-infobox-wrap .layout-4 .pp-heading-wrapper {
   flex: 1;
 }
-.fl-col-group-equal-height .about-value-trust.fl-visible-large, .fl-col-group-equal-height .about-value-trust.fl-visible-medium, .fl-col-group-equal-height .about-value-trust.fl-visible-mobile {
-  display: none;
-}
-
-
-.fl-col-group-equal-height .about-value-trust.fl-visible-desktop {
-  display: flex;
-}
-
-
-.fl-col-group-equal-height.fl-col-group-align-center .about-value-trust .fl-module-content .pp-infobox-wrap .pp-infobox {
-  justify-content: center;
-}
-
-
-.fl-col-group-equal-height.fl-col-group-align-top .about-value-trust .fl-module-content .pp-infobox-wrap .pp-infobox {
-  justify-content: flex-start;
-}
-
-
-.fl-col-group-equal-height.fl-col-group-align-bottom .about-value-trust .fl-module-content .pp-infobox-wrap .pp-infobox {
-  justify-content: flex-end;
-}
-
-
-@media only screen and (max-width: 1200px) {
-  .fl-col-group-equal-height .about-value-trust.fl-visible-desktop {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-trust.fl-visible-large {
-    display: flex;
-  }
-}
-
-
-@media only screen and (max-width: 1115px) {
-  .fl-col-group-equal-height .about-value-trust.fl-visible-desktop {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-trust.fl-visible-large {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-trust.fl-visible-medium {
-    display: flex;
-  }
-}
-
-
-@media only screen and (max-width: 860px) {
-  .fl-col-group-equal-height .about-value-trust.fl-visible-desktop {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-trust.fl-visible-large {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-trust.fl-visible-medium {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-trust.fl-visible-mobile {
-    display: flex;
-  }
-}
-.about-value-trust .pp-infobox-title-wrapper .pp-infobox-title {
-  margin-top: 25px;
-  margin-bottom: 0px;
-}
-
-
-.about-value-trust .pp-infobox-title-wrapper .pp-infobox-title a {
-}
-
-
-.about-value-trust .pp-infobox-description {
-  margin-top: 15px;
-  margin-bottom: 0px;
-}
-
-
-.about-value-trust .pp-infobox:hover .pp-infobox-title-prefix {
-}
-
-
-.about-value-trust .pp-infobox:hover .pp-infobox-title {
-}
-
-
-.about-value-trust .pp-infobox:hover .pp-infobox-title a {
-}
-
-
-.about-value-trust .pp-infobox:hover .pp-infobox-description {
-}
 .about-value-trust .pp-infobox-icon-inner span.pp-icon, .about-value-trust .pp-infobox-image img {
   border-radius: px;
-}
-
-
-.about-value-trust .pp-infobox-wrap .pp-infobox {
-  background: rgba(245, 246, 248, 0);
-  text-align: left;
-}
-
-
-.about-value-trust .pp-infobox:hover {
-  background: rgba(245, 246, 248, 0);
-}
-.fl-builder-content .about-value-trust .pp-infobox-image img {
-  width: 37px;
-}
-
-
-.about-value-trust .pp-infobox {
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
-}
-.fl-col-group-equal-height .about-value-alignment.fl-visible-large, .fl-col-group-equal-height .about-value-alignment.fl-visible-medium, .fl-col-group-equal-height .about-value-alignment.fl-visible-mobile {
-  display: none;
-}
-
-
-.fl-col-group-equal-height .about-value-alignment.fl-visible-desktop {
-  display: flex;
-}
-
-
-.fl-col-group-equal-height.fl-col-group-align-center .about-value-alignment .fl-module-content .pp-infobox-wrap .pp-infobox {
-  justify-content: center;
-}
-
-
-.fl-col-group-equal-height.fl-col-group-align-top .about-value-alignment .fl-module-content .pp-infobox-wrap .pp-infobox {
-  justify-content: flex-start;
-}
-
-
-.fl-col-group-equal-height.fl-col-group-align-bottom .about-value-alignment .fl-module-content .pp-infobox-wrap .pp-infobox {
-  justify-content: flex-end;
-}
-
-
-@media only screen and (max-width: 1200px) {
-  .fl-col-group-equal-height .about-value-alignment.fl-visible-desktop {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-alignment.fl-visible-large {
-    display: flex;
-  }
-}
-
-
-@media only screen and (max-width: 1115px) {
-  .fl-col-group-equal-height .about-value-alignment.fl-visible-desktop {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-alignment.fl-visible-large {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-alignment.fl-visible-medium {
-    display: flex;
-  }
-}
-
-
-@media only screen and (max-width: 860px) {
-  .fl-col-group-equal-height .about-value-alignment.fl-visible-desktop {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-alignment.fl-visible-large {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-alignment.fl-visible-medium {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-alignment.fl-visible-mobile {
-    display: flex;
-  }
-}
-.about-value-alignment .pp-infobox-title-wrapper .pp-infobox-title {
-  margin-top: 25px;
-  margin-bottom: 0px;
-}
-
-
-.about-value-alignment .pp-infobox-title-wrapper .pp-infobox-title a {
-}
-
-
-.about-value-alignment .pp-infobox-description {
-  margin-top: 15px;
-  margin-bottom: 0px;
-}
-
-
-.about-value-alignment .pp-infobox:hover .pp-infobox-title-prefix {
-}
-
-
-.about-value-alignment .pp-infobox:hover .pp-infobox-title {
-}
-
-
-.about-value-alignment .pp-infobox:hover .pp-infobox-title a {
-}
-
-
-.about-value-alignment .pp-infobox:hover .pp-infobox-description {
 }
 .about-value-alignment .pp-infobox-icon-inner span.pp-icon, .about-value-alignment .pp-infobox-image img {
   border-top-left-radius: px;
@@ -1756,161 +1534,11 @@ img.mfp-img {
   border-bottom-left-radius: px;
   border-bottom-right-radius: px;
 }
-
-
-.about-value-alignment .pp-infobox-wrap .pp-infobox {
-  background: rgba(245, 246, 248, 0);
-  text-align: left;
-}
-
-
-.about-value-alignment .pp-infobox:hover {
-  background: rgba(245, 246, 248, 0);
-}
-.fl-builder-content .about-value-alignment .pp-infobox-image img {
-  width: 37px;
-}
-
-
-.about-value-alignment .pp-infobox {
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
-}
-.fl-col-group-equal-height .about-value-reliability.fl-visible-large, .fl-col-group-equal-height .about-value-reliability.fl-visible-medium, .fl-col-group-equal-height .about-value-reliability.fl-visible-mobile {
-  display: none;
-}
-
-
-.fl-col-group-equal-height .about-value-reliability.fl-visible-desktop {
-  display: flex;
-}
-
-
-.fl-col-group-equal-height.fl-col-group-align-center .about-value-reliability .fl-module-content .pp-infobox-wrap .pp-infobox {
-  justify-content: center;
-}
-
-
-.fl-col-group-equal-height.fl-col-group-align-top .about-value-reliability .fl-module-content .pp-infobox-wrap .pp-infobox {
-  justify-content: flex-start;
-}
-
-
-.fl-col-group-equal-height.fl-col-group-align-bottom .about-value-reliability .fl-module-content .pp-infobox-wrap .pp-infobox {
-  justify-content: flex-end;
-}
-
-
-@media only screen and (max-width: 1200px) {
-  .fl-col-group-equal-height .about-value-reliability.fl-visible-desktop {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-reliability.fl-visible-large {
-    display: flex;
-  }
-}
-
-
-@media only screen and (max-width: 1115px) {
-  .fl-col-group-equal-height .about-value-reliability.fl-visible-desktop {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-reliability.fl-visible-large {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-reliability.fl-visible-medium {
-    display: flex;
-  }
-}
-
-
-@media only screen and (max-width: 860px) {
-  .fl-col-group-equal-height .about-value-reliability.fl-visible-desktop {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-reliability.fl-visible-large {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-reliability.fl-visible-medium {
-    display: none;
-  }
-
-  .fl-col-group-equal-height .about-value-reliability.fl-visible-mobile {
-    display: flex;
-  }
-}
-.about-value-reliability .pp-infobox-title-wrapper .pp-infobox-title {
-  margin-top: 25px;
-  margin-bottom: 0px;
-}
-
-
-.about-value-reliability .pp-infobox-title-wrapper .pp-infobox-title a {
-}
-
-
-.about-value-reliability .pp-infobox-description {
-  margin-top: 15px;
-  margin-bottom: 0px;
-}
-
-
-.about-value-reliability .pp-infobox:hover .pp-infobox-title-prefix {
-}
-
-
-.about-value-reliability .pp-infobox:hover .pp-infobox-title {
-}
-
-
-.about-value-reliability .pp-infobox:hover .pp-infobox-title a {
-}
-
-
-.about-value-reliability .pp-infobox:hover .pp-infobox-description {
-}
 .about-value-reliability .pp-infobox-icon-inner span.pp-icon, .about-value-reliability .pp-infobox-image img {
   border-top-left-radius: px;
   border-top-right-radius: px;
   border-bottom-left-radius: px;
   border-bottom-right-radius: px;
-}
-
-
-.about-value-reliability .pp-infobox-wrap .pp-infobox {
-  background: rgba(245, 246, 248, 0);
-  text-align: left;
-}
-
-
-.about-value-reliability .pp-infobox:hover {
-  background: rgba(245, 246, 248, 0);
-}
-.fl-builder-content .about-value-reliability .pp-infobox-image img {
-  width: 37px;
-}
-
-
-.about-value-reliability .pp-infobox {
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
 }
 .fl-builder-content .about-achievements-eyebrow .fl-module-content .fl-rich-text, .fl-builder-content .about-achievements-eyebrow .fl-module-content .fl-rich-text * {
   color: var(--color-primary);
@@ -2645,4 +2273,149 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 .about-testimonials-cta .fl-row-content {
   min-width: 0px;
+}
+/* Page card core - shared by the 3 about-value-card instances (Phase E-2);
+   per-instance keeps stay under their own classes and win by later position. */
+
+.fl-col-group-equal-height .about-value-card.fl-visible-large, .fl-col-group-equal-height .about-value-card.fl-visible-medium, .fl-col-group-equal-height .about-value-card.fl-visible-mobile {
+  display: none;
+}
+
+
+
+.fl-col-group-equal-height .about-value-card.fl-visible-desktop {
+  display: flex;
+}
+
+
+
+.fl-col-group-equal-height.fl-col-group-align-center .about-value-card .fl-module-content .pp-infobox-wrap .pp-infobox {
+  justify-content: center;
+}
+
+
+
+.fl-col-group-equal-height.fl-col-group-align-top .about-value-card .fl-module-content .pp-infobox-wrap .pp-infobox {
+  justify-content: flex-start;
+}
+
+
+
+.fl-col-group-equal-height.fl-col-group-align-bottom .about-value-card .fl-module-content .pp-infobox-wrap .pp-infobox {
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 1200px) {
+
+  .fl-col-group-equal-height .about-value-card.fl-visible-desktop {
+    display: none;
+  }
+
+
+  .fl-col-group-equal-height .about-value-card.fl-visible-large {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 1115px) {
+
+  .fl-col-group-equal-height .about-value-card.fl-visible-desktop {
+    display: none;
+  }
+
+
+  .fl-col-group-equal-height .about-value-card.fl-visible-large {
+    display: none;
+  }
+
+
+  .fl-col-group-equal-height .about-value-card.fl-visible-medium {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 860px) {
+
+  .fl-col-group-equal-height .about-value-card.fl-visible-desktop {
+    display: none;
+  }
+
+
+  .fl-col-group-equal-height .about-value-card.fl-visible-large {
+    display: none;
+  }
+
+
+  .fl-col-group-equal-height .about-value-card.fl-visible-medium {
+    display: none;
+  }
+
+
+  .fl-col-group-equal-height .about-value-card.fl-visible-mobile {
+    display: flex;
+  }
+}
+
+.about-value-card .pp-infobox-title-wrapper .pp-infobox-title {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+
+
+.about-value-card .pp-infobox-title-wrapper .pp-infobox-title a {
+}
+
+
+
+.about-value-card .pp-infobox-description {
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+
+
+.about-value-card .pp-infobox:hover .pp-infobox-title-prefix {
+}
+
+
+
+.about-value-card .pp-infobox:hover .pp-infobox-title {
+}
+
+
+
+.about-value-card .pp-infobox:hover .pp-infobox-title a {
+}
+
+
+
+.about-value-card .pp-infobox:hover .pp-infobox-description {
+}
+
+
+
+.about-value-card .pp-infobox-wrap .pp-infobox {
+  background: rgba(245, 246, 248, 0);
+  text-align: left;
+}
+
+
+
+.about-value-card .pp-infobox:hover {
+  background: rgba(245, 246, 248, 0);
+}
+
+.fl-builder-content .about-value-card .pp-infobox-image img {
+  width: 37px;
+}
+
+
+
+.about-value-card .pp-infobox {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
 }
