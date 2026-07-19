@@ -35,6 +35,13 @@ const purgecss = createPurgeCss({
       // removing them despite hugo_stats.json containing the class —
       // explicit safelist guards against that drift.
       "btn", "btn-primary", "fl-button", "fl-button-wrap", "action-button",
+
+      // Accessibility skip-link (baseof.html) — same CI-purge phenomenon as
+      // the fl-button entries above: 2026-07-19 a scheduled deploy shipped
+      // the inline navigation bundle WITHOUT .sr-only (visible "Skip to
+      // main content" on every page) while local builds of the same commit
+      // kept it. Never purge these.
+      "sr-only", "skip-link",
     ],
 
     deep: [
