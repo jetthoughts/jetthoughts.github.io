@@ -80,12 +80,12 @@
 
 
 
-.fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text, .fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text *:not(b, strong) {
+.fl-builder-content .testimonials-rating .fl-rich-text, .fl-builder-content .testimonials-rating .fl-rich-text *:not(b, strong) {
   font-size: 20px;
   text-align: right;
 }@media (max-width: 860px) {
 
-  .fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text, .fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text *:not(b, strong) {
+  .fl-builder-content .testimonials-rating .fl-rich-text, .fl-builder-content .testimonials-rating .fl-rich-text *:not(b, strong) {
     text-align: center;
   }}
 
