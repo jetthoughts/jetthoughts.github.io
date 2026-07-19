@@ -32,27 +32,27 @@
 
 
 
-.fl-builder-content .fl-node-9hf5wet31z02 .fl-rich-text, .fl-builder-content .fl-node-9hf5wet31z02 .fl-rich-text *:not(b, strong) {
+.fl-builder-content .cta-banner-text .fl-rich-text, .fl-builder-content .cta-banner-text .fl-rich-text *:not(b, strong) {
   text-align: center;
 }
 
 
 
-.fl-node-9hf5wet31z02 > .fl-module-content {
+.cta-banner-text > .fl-module-content {
   margin-top: 15px;
   margin-right: 250px;
   margin-left: 250px;
 }
 @media ( max-width: 1115px ) {
 
-  .fl-node-9hf5wet31z02.fl-module > .fl-module-content {
+  .cta-banner-text.fl-module > .fl-module-content {
     margin-right: 0px;
     margin-left: 0px;
   }
 }
 @media ( max-width: 860px ) {
 
-  .fl-node-9hf5wet31z02.fl-module > .fl-module-content {
+  .cta-banner-text.fl-module > .fl-module-content {
     margin-top: 15px;
     margin-right: 0px;
     margin-left: 0px;
