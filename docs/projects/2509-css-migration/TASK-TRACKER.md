@@ -740,7 +740,23 @@ components, consistently. Grooming decisions below; velocity basis = E1
 - [ ] bin/qtest COMPONENT_CONSUMERS entries for info-card.css,
       cta-banner.css, header-cta.css (currently escalate to --all).
 
-### Sprint E-3 — one CTA source (~1 day, visual-gated)
+### Sprint E-3 — one CTA source: ✅ CLOSED WITH MEASURED VERDICT (2026-07-19)
+The 5 inline CTA copies have structurally diverged from the partial
+(page-specific wrappers, fl-node-content drift, 3 pages carry extra
+button-row modules). Collapsing them needs a param-soup partial that
+would WORSEN DevX - verdict: copies are FROZEN LEGACY; the partial
+(used by about + the starter) is canon for all new pages per
+new-page.md. Shipped: cta.html duplicate data-node attr fixed
+(rendered DOM identical - parsers dropped the second attr).
+
+### DEVXP EXIT ASSESSMENT (loop close, 2026-07-19)
+New-page DevX now: copy starter-example.html.txt, follow new-page.md,
+reuse 5 components + three-tier cards, tokens resolve site-wide, one
+greedy-prefix line, one qtest entry, sub-minute verify loop. Remaining
+backlog = parked trigger-conditioned items only. Goal met.
+
+#### (original E-3 spec below, superseded)
+  Sprint E-3 — one CTA source (~1 day, visual-gated)
 - [ ] Parametrize partials/page/cta.html (heading/text/wrapper-class)
       and collapse the 6 inline template copies onto it (home,
       page/services, page/use-cases, services/single, use-cases/single,
