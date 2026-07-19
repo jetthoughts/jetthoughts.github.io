@@ -10,7 +10,7 @@
 
 /* Hero tablet breakpoint (critical has only the 860px step) */
 @media (max-width: 1115px) {
-  .fl-node-3debxjmt89f4.fl-row > .fl-row-content-wrap {
+  .career-hero.fl-row > .fl-row-content-wrap {
     padding-top: 150px;
     padding-bottom: 50px;
   }
