@@ -18,33 +18,33 @@
 
 /* Mobile: hide the share-button text label */
 @media (max-width: 860px) {
-  .fl-node-rnjk7gex4iu1 .pp-social-share-content .pp-share-button .pp-share-button-text {
+  .career-share-module .pp-social-share-content .pp-share-button .pp-share-button-text {
     display: none;
   }
 }
 
 /* Share-button hover states (e966 3782-3804) */
-.fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button .pp-share-button-icon, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button .pp-share-button-icon {
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button .pp-share-button-icon, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button .pp-share-button-icon {
   background-color: var(--color-dark);
 }
 
-.fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button a * {
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button a * {
   color: var(--color-dark);
 }
 
-.fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button .pp-share-button-icon *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button .pp-share-button-icon * {
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button .pp-share-button-icon *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button .pp-share-button-icon * {
   color: var(--color-dark);
 }
 
-.fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button:hover a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button:hover a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover .pp-share-button-icon, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover .pp-share-button-icon {
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button:hover a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button:hover a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover .pp-share-button-icon, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover .pp-share-button-icon {
   background-color: var(--color-primary);
 }
 
-.fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button:hover a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover a, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button:hover a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover a * {
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button:hover a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button:hover a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover a * {
   color: var(--color-primary);
 }
 
-.fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button:hover a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button:hover a *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover .pp-share-button-icon *, .fl-builder-content .fl-node-rnjk7gex4iu1 .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover .pp-share-button-icon * {
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button:hover a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button:hover a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover .pp-share-button-icon *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover .pp-share-button-icon * {
   color: var(--color-primary);
 }
 

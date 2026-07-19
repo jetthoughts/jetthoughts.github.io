@@ -968,7 +968,7 @@ h2 {
     -ms-flex-pack: flex-end;
     justify-content: flex-end;
   }
-  .fl-node-rnjk7gex4iu1
+  .career-share-module
     .pp-social-share-content
     .pp-share-button
     .pp-share-button-text {
@@ -1375,33 +1375,33 @@ body:not(.single-fl-theme-layout)
   justify-content: flex-start;
 }
 .fl-builder-content
-  .fl-node-rnjk7gex4iu1
+  .career-share-module
   .pp-social-share-content.pp-social-share-col-0
   .pp-social-share-inner {
   margin-left: calc(-30px / 2);
   margin-right: calc(-30px / 2);
 }
 .fl-builder-content
-  .fl-node-rnjk7gex4iu1
+  .career-share-module
   .pp-social-share-content.pp-social-share-col-0
   .pp-share-button {
   margin-left: calc(30px / 2);
   margin-right: calc(30px / 2);
 }
 .fl-builder-content
-  .fl-node-rnjk7gex4iu1
+  .career-share-module
   .pp-social-share-content.pp-share-buttons-skin-minimal
   .pp-share-button
   .pp-share-button-icon {
   background-color: var(--color-dark);
 }
 .fl-builder-content
-  .fl-node-rnjk7gex4iu1
+  .career-share-module
   .pp-social-share-content.pp-share-buttons-skin-minimal
   .pp-share-button
   a,
 .fl-builder-content
-  .fl-node-rnjk7gex4iu1
+  .career-share-module
   .pp-social-share-content.pp-share-buttons-skin-minimal
   .pp-share-button
   a
@@ -1409,30 +1409,30 @@ body:not(.single-fl-theme-layout)
   color: var(--color-dark);
 }
 .fl-builder-content
-  .fl-node-rnjk7gex4iu1
+  .career-share-module
   .pp-social-share-content.pp-share-buttons-skin-minimal
   .pp-share-button
   .pp-share-button-icon
   * {
   color: var(--color-dark);
 }
-.fl-node-rnjk7gex4iu1 .pp-social-share-content .pp-share-button {
+.career-share-module .pp-social-share-content .pp-share-button {
   height: 22px;
 }
-.fl-node-rnjk7gex4iu1 .pp-social-share-content .pp-share-button a {
+.career-share-module .pp-social-share-content .pp-share-button a {
   border-width: 2px;
 }
-.fl-node-rnjk7gex4iu1
+.career-share-module
   .pp-social-share-content.pp-social-share-col-0
   .pp-share-button {
   margin-bottom: 0;
 }
-.fl-node-rnjk7gex4iu1 .pp-social-share-content .pp-share-button-title {
+.career-share-module .pp-social-share-content .pp-share-button-title {
   font-family: var(--font-system-ui);
   font-weight: 300;
   font-size: 20px;
 }
-.fl-node-rnjk7gex4iu1 > .fl-module-content {
+.career-share-module > .fl-module-content {
   margin-top: 20px;
 }
 @media (max-width: 860px) {
@@ -1467,7 +1467,7 @@ body:not(.single-fl-theme-layout)
   .career-meta-value.fl-module > .fl-module-content {
     margin-top: 10px;
   }
-  .fl-node-rnjk7gex4iu1.fl-module > .fl-module-content {
+  .career-share-module.fl-module > .fl-module-content {
     margin-top: 10px;
   }
 }
