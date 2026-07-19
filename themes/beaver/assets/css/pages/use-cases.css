@@ -1018,7 +1018,7 @@ img.mfp-img {
 }
 
 
-.fl-node-xpwrib80cd2l > .fl-row-content-wrap {
+.use-cases-cta > .fl-row-content-wrap {
 
   background-repeat: no-repeat;
   background-position: center top;
@@ -1027,12 +1027,12 @@ img.mfp-img {
 }
 
 
-.fl-node-xpwrib80cd2l .fl-builder-bottom-edge-layer {
+.use-cases-cta .fl-builder-bottom-edge-layer {
   bottom: -0.5%;
 }
 
 
-.fl-node-xpwrib80cd2l .fl-builder-bottom-edge-layer > * {
+.use-cases-cta .fl-builder-bottom-edge-layer > * {
   width: 100%;
   left: calc(50% - 50%);
   right: auto;
@@ -1043,26 +1043,26 @@ img.mfp-img {
 }
 
 
-.fl-node-xpwrib80cd2l .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
+.use-cases-cta .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
   fill: #000000;
 }
 
 
-.fl-node-xpwrib80cd2l > .fl-row-content-wrap {
+.use-cases-cta > .fl-row-content-wrap {
   padding-top: 130px;
   padding-bottom: 0px;
 }
 
 
 @media ( max-width: 1115px ) {
-  .fl-node-xpwrib80cd2l.fl-row > .fl-row-content-wrap {
+  .use-cases-cta.fl-row > .fl-row-content-wrap {
     padding-top: 50px;
   }
 }
 
 
 @media ( max-width: 860px ) {
-  .fl-node-xpwrib80cd2l.fl-row > .fl-row-content-wrap {
+  .use-cases-cta.fl-row > .fl-row-content-wrap {
     padding-top: 50px;
     padding-right: 20px;
     padding-bottom: 0px;
@@ -2764,6 +2764,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 
-.fl-node-xpwrib80cd2l .fl-row-content {
+.use-cases-cta .fl-row-content {
   min-width: 0px;
 }
