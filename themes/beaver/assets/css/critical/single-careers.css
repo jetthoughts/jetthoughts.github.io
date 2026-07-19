@@ -1182,20 +1182,20 @@ body:not(.single-fl-theme-layout)
     padding-bottom: 50px;
   }
 }
-.fl-node-8ws2e9fm0yqn {
+.career-hero-col {
   width: 100%;
 }
-.fl-node-8ws2e9fm0yqn > .fl-col-content {
+.career-hero-col > .fl-col-content {
   padding-bottom: 40px;
 }
 @media (max-width: 860px) {
-  .fl-builder-content .fl-node-8ws2e9fm0yqn {
+  .fl-builder-content .career-hero-col {
     width: 100% !important;
     max-width: none;
     clear: none;
     float: left;
   }
-  .fl-node-8ws2e9fm0yqn.fl-col > .fl-col-content {
+  .career-hero-col.fl-col > .fl-col-content {
     padding-bottom: 0;
   }
 }
