@@ -278,7 +278,10 @@ class DesktopSiteTest < ApplicationSystemTestCase
     find("a", text: "Talk to an Expert", match: :first, wait: 5).click
 
     assert_text "Free Consultation"
-    assert_stable_screenshot "free_consultation"
+    # Gravity Forms applies gf_browser_* classes at load time; linux
+    # captures alternate between two stable states (~10px form shift),
+    # so the form region is masked (precedent: blog/index .blog-post).
+    assert_stable_screenshot "free_consultation", skip_area: %w[.gform_wrapper]
   end
 
   def test_not_found

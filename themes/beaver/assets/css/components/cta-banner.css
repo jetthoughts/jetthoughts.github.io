@@ -1,0 +1,79 @@
+/* Shared CTA banner ("Let's get started now" - partials/page/cta.html).
+   Extracted in C1.2 from the identical copies in 6 consumer page files.
+   Canonical source order: about-us.css. Wired as a concat-slice member
+   directly before each consumer's pages entry (see testimonials.css
+   header for why @import cannot be used here).
+   Kept per-page (variance log in TASK-TRACKER.md): the rujwd9mzxche
+   rich-text pair (5 pages; services carries no rujwd rules) and
+   about-us's fdsvgxpowi03 column spacing cluster.
+
+   affects pages: about-us, homepage, services, single-service,
+   single-use-cases, use-cases - see
+   docs/projects/2509-css-migration/css-bundle-ownership-map.md */
+
+
+
+
+.fl-node-fa7hjib92cpv.fl-module-heading .fl-heading {
+  text-align: center;
+}
+
+
+
+.fl-node-fa7hjib92cpv > .fl-module-content {
+  margin-top: 20px;
+}
+@media ( max-width: 860px ) {
+
+  .fl-node-fa7hjib92cpv.fl-module > .fl-module-content {
+    margin-top: 10px;
+  }
+}
+
+
+
+.fl-builder-content .fl-node-9hf5wet31z02 .fl-rich-text, .fl-builder-content .fl-node-9hf5wet31z02 .fl-rich-text *:not(b, strong) {
+  text-align: center;
+}
+
+
+
+.fl-node-9hf5wet31z02 > .fl-module-content {
+  margin-top: 15px;
+  margin-right: 250px;
+  margin-left: 250px;
+}
+@media ( max-width: 1115px ) {
+
+  .fl-node-9hf5wet31z02.fl-module > .fl-module-content {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+@media ( max-width: 860px ) {
+
+  .fl-node-9hf5wet31z02.fl-module > .fl-module-content {
+    margin-top: 15px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+
+
+.fl-node-toa2hwegbp4q .pp-spacer-module {
+  height: 60px;
+  width: 100%;
+}
+@media only screen and (max-width: 1115px) {
+
+  .fl-node-toa2hwegbp4q .pp-spacer-module {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 860px) {
+
+  .fl-node-toa2hwegbp4q .pp-spacer-module {
+    height: 15px;
+  }
+}

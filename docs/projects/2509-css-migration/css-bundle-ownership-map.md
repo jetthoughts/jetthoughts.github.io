@@ -53,6 +53,22 @@ the critical/fl-* trio), `dynamic-icons.css`, `586.css`, `vendors/base-4.min.css
 `companies.css`, `careers.css`, `404.css`, `pagination.css`,
 `component-bundle.css`, `theme-main.css`).
 
+### Shared components (Phase C sprint C1, 2026-07-19)
+
+Extracted from the byte-identical shared-partial copies the delta ports left
+in sibling page files; wired as concat-slice members directly before each
+consumer's `pages/*.css` entry (NOT `@import` — postcss-import silently skips
+post-prelude imports; only `critical/base.css` is prelude):
+
+| Component | Rules | Consumers |
+|---|---|---|
+| `components/testimonials.css` | 133 | about-us, clients, services, homepage, single-use-cases, single-service, use-cases |
+| `components/cta-banner.css` | 10 | about-us, homepage, services, single-service, single-use-cases, use-cases |
+| `components/header-cta.css` | 3 | use-cases, clients, services |
+
+Page-specific overrides (spacing variants, homepage swiper sizing, the
+rujwd9mzxche pair) stay in the page files — variance log in TASK-TRACKER §C1.
+
 ## FL layout file burn-down: 16 → 0 ✅ COMPLETE (2026-07-17)
 
 All 16 generated FL-Builder export files under `themes/beaver/assets/css/`

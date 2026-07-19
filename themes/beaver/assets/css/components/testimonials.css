@@ -1,0 +1,756 @@
+/* Shared testimonials section (partials/page/testimonials.html).
+   Extracted in C1.1 from the byte-identical copies the R-sprints left in
+   the 7 consumer page files. Canonical source order: about-us.css.
+   Font stacks normalized to var(--font-system-ui) (defined site-wide via
+   the baseof navigation inline bundle); rules otherwise verbatim.
+   Wired as a concat-slice member in each consumer template, directly
+   before its pages/*.css entry (NOT via @import: pages/*.css sits after
+   rule-carrying critical files in the concat, so postcss-import treats
+   an @import there as post-prelude and silently skips it - only
+   critical/base.css and prelude-adjacent members can use @import).
+   Page-specific spacing overrides (node 38ejkdz2v4cq wrapper padding/margin,
+   ud8jroeig5h2 side margins at 1115px + 860px, homepage swiper-button
+   sizing) stay in their page files.
+
+   affects pages: about-us, clients, services, homepage, use-cases,
+   single-use-cases, single-service - see
+   docs/projects/2509-css-migration/css-bundle-ownership-map.md */
+
+
+
+
+.fl-node-zaerhibqp296 {
+  width: 100%;
+}@media (max-width: 860px) {
+
+  .fl-builder-content .fl-node-zaerhibqp296 {
+    width: 100% !important;
+    max-width: none;
+    clear: none;
+    float: left;
+  }}
+
+
+
+.fl-node-zaerhibqp296 > .fl-col-content {
+  padding-top: 60px;
+}@media ( max-width: 860px ) {
+
+  .fl-node-zaerhibqp296.fl-col > .fl-col-content {
+    padding-top: 30px;
+  }}
+
+
+
+.fl-builder-content .fl-node-byg0v6ftixrd .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-byg0v6ftixrd .fl-module-content .fl-rich-text * {
+  color: var(--color-primary);
+}
+
+
+.fl-builder-content .fl-node-byg0v6ftixrd .fl-rich-text, .fl-builder-content .fl-node-byg0v6ftixrd .fl-rich-text *:not(b, strong) {
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.fl-node-ud8jroeig5h2.fl-module-heading .fl-heading {
+  text-align: center;
+}
+
+
+.fl-node-ud8jroeig5h2 > .fl-module-content {
+  margin-top: 30px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+
+.fl-builder-content .fl-node-1i28o7dq3pcv .fl-rich-text, .fl-builder-content .fl-node-1i28o7dq3pcv .fl-rich-text *:not(b, strong) {
+  text-align: center;
+}
+
+
+.fl-node-1i28o7dq3pcv > .fl-module-content {
+  margin-top: 20px;
+}@media ( max-width: 860px ) {
+
+  .fl-node-1i28o7dq3pcv.fl-module > .fl-module-content {
+    margin-top: 15px;
+  }}
+
+
+
+.fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text, .fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text *:not(b, strong) {
+  font-size: 20px;
+  text-align: right;
+}@media (max-width: 860px) {
+
+  .fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text, .fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text *:not(b, strong) {
+    text-align: center;
+  }}
+
+
+
+.fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text, .fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text *:not(b, strong) {
+  font-size: 16px;
+  text-align: right;
+}@media (max-width: 860px) {
+
+  .fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text, .fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text *:not(b, strong) {
+    text-align: center;
+  }}
+
+
+
+.fl-node-d4wp9kxy1uav > .fl-module-content {
+  margin-top: 10px;
+}@media (max-width: 860px) {
+
+  .fl-node-d4wp9kxy1uav > .fl-module-content {
+    margin-top: 0px;
+  }}
+
+
+
+.fl-module-pp-reviews .fl-module-content.fl-node-content {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.pp-reviews-wrapper {
+  width: 94%;
+  margin: auto;
+}
+
+
+.pp-reviews-wrapper .sr-only {
+  position: absolute !important;
+  height: 1px !important;
+  width: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  overflow: hidden !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+
+.pp-reviews-wrapper .swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+}
+
+
+.pp-reviews-wrapper .swiper-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+.pp-reviews-wrapper .swiper-slide {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+.pp-reviews-wrapper .pp-review-item.swiper-slide {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  height: auto;
+}
+
+
+.pp-reviews-wrapper .pp-swiper-button {
+  background-image: none;
+  position: absolute;
+  display: inline-flex;
+  z-index: 1;
+  cursor: pointer;
+  padding: 3px;
+  line-height: 0;
+  top: calc(50% - (30px / 2));
+  transform: translateY(-50%);
+  color: hsla(0, 0%, 93%, .9);
+}
+
+
+.pp-reviews-wrapper .pp-swiper-button svg {
+  fill: currentColor;
+  width: 37px;
+  height: 37px;
+}
+
+
+.pp-reviews-wrapper .pp-swiper-button-prev {
+  left: 0;
+}
+
+
+.pp-reviews-wrapper .pp-swiper-button-next {
+  right: 0;
+}
+
+
+.pp-reviews-wrapper .pp-reviews-swiper {
+  padding-bottom: 30px;
+}
+
+
+.pp-reviews-wrapper .swiper-container-horizontal .swiper-pagination {
+  position: relative;
+  top: 0 !important;
+  bottom: unset !important;
+}
+
+
+.pp-reviews-wrapper .swiper-container-horizontal > .swiper-pagination-bullets, .pp-reviews-wrapper .swiper-pagination-custom, .pp-reviews-wrapper .swiper-pagination-fraction {
+  bottom: unset;
+}
+
+
+.pp-reviews-wrapper .dashicons, .pp-reviews-wrapper .dashicons-before:before {
+  width: unset !important;
+}
+
+
+.pp-review {
+  border: 1px solid #e8e8e8;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.pp-review-header, .pp-review-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+
+.pp-review-content {
+  flex-direction: column;
+  flex: 1;
+}
+
+
+.pp-review-link {
+  margin-top: auto;
+}
+
+
+.pp-review-link a {
+  text-decoration: none;
+}
+
+
+.pp-review-header {
+  padding-top: 15px;
+  padding-bottom: 6px;
+  font-family: var(--font-system-ui);
+  font-weight: 600;
+}
+
+
+.pp-review-name {
+  color: #1c2022;
+  font-size: 12.5px;
+  font-weight: 400;
+  font-family: inherit;
+  text-align: left;
+}
+
+
+.pp-review-title {
+  font-size: 12.5px;
+  font-weight: 400;
+  font-family: inherit;
+  text-align: left;
+}
+
+
+.pp-review-content {
+  padding-top: 6px;
+  padding-bottom: 15px;
+}
+
+
+.pp-review-header, .pp-review-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.pp-review-header.has-separator {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+
+.pp-review-image {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+
+.pp-review-image img {
+  height: 36px;
+  width: 36px;
+  border-radius: 999px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+
+.pp-review-cite {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1;
+  width: 100%;
+}
+
+
+.pp-review-icon {
+  display: flex;
+  margin-left: auto;
+}
+
+
+.pp-review-text {
+  width: 100%;
+}
+
+
+.fl-node-08kl1yzxeout .pp-reviews-wrapper {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review {
+  padding: 25px;
+  background-color: #F5F6F8;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review:hover {
+  background-color: #F5F6F8;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-header {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-name {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-title {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-text {
+  margin-top: 35px;
+  margin-bottom: 0px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-link a {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-link a:hover {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review:hover .pp-review-header {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-image {
+  align-self: flex-start;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-image img {
+  width: 36px;
+  height: 36px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-cite {
+  margin-left: 10px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-icon {
+  align-self: flex-start;
+}
+
+
+.fl-node-08kl1yzxeout .swiper-pagination-bullet {
+  background: #999999;
+}
+
+
+.fl-node-08kl1yzxeout .swiper-pagination-bullet-active {
+  background: #000000;
+}
+
+
+.fl-node-08kl1yzxeout .pp-swiper-button svg {
+  width: 48px;
+  height: 48px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-swiper-button {
+  color: #000000;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  opacity: 1;
+}
+
+
+.fl-node-08kl1yzxeout .pp-swiper-button:hover {
+}
+
+
+.fl-node-08kl1yzxeout .pp-swiper-button-prev {
+}
+
+
+.fl-node-08kl1yzxeout .pp-swiper-button-next {
+}
+
+
+.fl-node-08kl1yzxeout .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review .pp-review-icon i {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review:hover .pp-review-icon i {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover .pp-review-header {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review .pp-review-icon i {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover .pp-review-icon i {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review-header {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review-name {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover .pp-review-name {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review-title {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover .pp-review-title {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review-content {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover .pp-review-content {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover .pp-review-header {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review .pp-review-icon i {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover .pp-review-icon i {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review-header {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review-name {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover .pp-review-name {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review-title {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover .pp-review-title {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review-content {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover .pp-review-content {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover .pp-review-header {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review .pp-review-icon i {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover .pp-review-icon i {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review-header {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review-name {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover .pp-review-name {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review-title {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover .pp-review-title {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review-content {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover .pp-review-content {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover .pp-review-header {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review .pp-review-icon i {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover .pp-review-icon i {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review-header {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review-name {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover .pp-review-name {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review-title {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover .pp-review-title {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review-content {
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover .pp-review-content {
+}
+
+
+.fl-node-08kl1yzxeout .pp-rating {
+  text-align: left;
+}
+
+
+.fl-node-08kl1yzxeout .pp-rating i {
+  font-size: 30px;
+  color: #efecdc;
+}
+
+
+.fl-node-08kl1yzxeout .pp-rating i:before {
+  color: #f0ad4e;
+}
+
+
+.fl-node-08kl1yzxeout .pp-rating i:not(.pp-star-empty):before {
+  content: "\002605";
+}
+
+
+.fl-node-08kl1yzxeout .pp-review {
+  border-style: none;
+  border-width: 0;
+  background-clip: border-box;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 25px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-name {
+  font-family: var(--font-system-ui);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-title {
+  font-family: var(--font-system-ui);
+  font-weight: 300;
+  font-size: 16px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-text {
+  font-family: var(--font-system-ui);
+  font-weight: 300;
+  font-size: 18px;
+  text-align: left;
+}
+
+
+.fl-node-08kl1yzxeout .pp-rating i {
+  font-size: 30px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-image img {
+  height: 36px;
+}
+
+
+.fl-node-08kl1yzxeout .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+.fl-node-08kl1yzxeout .swiper-pagination {
+  margin-top: 5px;
+}
+
+
+.fl-node-08kl1yzxeout .pp-review-icon i:before {
+  font-size: 0px;
+}
