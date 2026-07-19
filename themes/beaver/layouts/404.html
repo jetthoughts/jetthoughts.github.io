@@ -1,7 +1,7 @@
 {{ define "header" }}
   {{- $cssResources := slice
     (resources.Get "css/foundations/css-variables.css")
-    (resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" .)
+    (resources.Get "css/dynamic-404.css" | resources.ExecuteAsTemplate "css/dynamic.css" .)
     (resources.Get "css/404.css")
     (resources.Get "css/vendors/base-4.min.css")
     (resources.Get "css/legacy-theme-skin.css")

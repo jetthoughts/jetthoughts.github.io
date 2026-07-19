@@ -605,7 +605,7 @@ tasks:
         (fingerprints change — concat input renamed — that is the ONLY
         expected diff). Name pre-approved? NO — flag in PR for Paul; rename
         is one-commit revertable if he prefers another name.
-  - [ ] C2.4 Rename dynamic-404-590.css → dynamic-404.css (node-id 590 is
+  - [ ] C2.4 Rename dynamic-404.css → dynamic-404.css (node-id 590 is
         retired). Refs: themes/beaver/layouts/404.html +
         partials/assets/homepage-css-resources.html. One commit, same gate
         as C2.3.

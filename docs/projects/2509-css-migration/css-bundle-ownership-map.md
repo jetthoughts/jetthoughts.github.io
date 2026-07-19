@@ -33,7 +33,7 @@ zero FL-Builder export files remain in any slice.
 | contact-us | `page/contact-us.html` (partial `contact-us-css-resources.html`) | pages/contact-us.css | 18.9K → 17.4K | migrated (R2) |
 | course-list | `layouts/course/list.html` (repo root, NOT in theme) | pages/course-list.css | 17.6K → 14.6K² | migrated (R1) |
 | privacy-policy | `page/single.html` (generic pages) | pages/simple-page.css | 17.1K → 14.6K | migrated (R1) |
-| not_found | `404.html` | — (404.css, dynamic-404-590.css) | 16.2K → 16.2K | no-FL |
+| not_found | `404.html` | — (404.css, dynamic-404.css) | 16.2K → 16.2K | no-FL |
 | pagination | `list.html` (second bundle) | — (pagination.css only) | 0.2K → 0.2K | no-FL |
 
 ¹ careers was a byte-identical verbatim move (3086-layout2 had zero dead

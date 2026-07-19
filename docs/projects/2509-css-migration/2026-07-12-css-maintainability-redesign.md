@@ -169,7 +169,7 @@ gated and revertable.
 - **C2 — de-obfuscate the shared layer** (criterion 2 start). Re-key the shared
   partials' fl-node ids to semantic classes (template + component file in the
   same commit, one node per commit); rename the hash-named skin file and
-  `dynamic-404-590.css`; land the deferred 586.css:823 cascade hardening.
+  `dynamic-404.css`; land the deferred 586.css:823 cascade hardening.
 - **C3 — page re-keying pilots** (criterion 2, easiest pages first). R3c alias
   technique: rename `.fl-node-xyz` → meaning-carrying class in page template +
   page CSS, one node-cluster per commit, ZERO baseline changes. Pilots:
