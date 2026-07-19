@@ -91,22 +91,22 @@
 
 
 
-.fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text, .fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text *:not(b, strong) {
+.fl-builder-content .testimonials-rating-count .fl-rich-text, .fl-builder-content .testimonials-rating-count .fl-rich-text *:not(b, strong) {
   font-size: 16px;
   text-align: right;
 }@media (max-width: 860px) {
 
-  .fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text, .fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text *:not(b, strong) {
+  .fl-builder-content .testimonials-rating-count .fl-rich-text, .fl-builder-content .testimonials-rating-count .fl-rich-text *:not(b, strong) {
     text-align: center;
   }}
 
 
 
-.fl-node-d4wp9kxy1uav > .fl-module-content {
+.testimonials-rating-count > .fl-module-content {
   margin-top: 10px;
 }@media (max-width: 860px) {
 
-  .fl-node-d4wp9kxy1uav > .fl-module-content {
+  .testimonials-rating-count > .fl-module-content {
     margin-top: 0px;
   }}
 
