@@ -461,7 +461,7 @@ follow_ups:
 
 ## 📅 PHASE C (CURRENT PLAN): Post-burn-down cleanup — sprints C1–C3
 
-**Phase Status**: 🔲 Not started (planned 2026-07-18)
+**Phase Status**: 🔄 C1 ✅ (PR #371, merged) · C2 ✅ (PR pending) · C3 next
 **Source**: Spec §"Phase C — post-burn-down cleanup" (revision 2026-07-18) —
 read it FIRST; it defines the gate stack, the preflight rule, the
 dedup-trap warning, and the non-goals (no DOM restructuring, no rule-content
@@ -578,6 +578,19 @@ estimated_commits: ~18-22 (2 preflight, 7+~5+3 swaps, docs)
 ```
 
 ### Sprint C2 — de-obfuscate the shared layer (criterion 2 start)
+
+**✅ SHIPPED 2026-07-19** (branch css-migration/c2-deobfuscate-shared, 21 commits):
+C2.1 all 10 testimonial nodes -> testimonials-* (incl. purge-safelist
+companion: /^testimonials-/ + /^cta-banner/ greedy entries replace the
+accidental /^fl-node/ shield for runtime pp-* classes); C2.2 all 7 CTA
+nodes -> cta-banner-* (swept across the partial + 6 inline template
+copies); C2.3 skin -> legacy-theme-skin.css (NAME AWAITING PAUL);
+C2.4 dynamic-404.css; C2.5 586.css masked-background deletion;
+C2.6 safe-edit headers. Gate held: every re-key byte-identical after
+guarded reverse substitution; renames fingerprint-identical.
+FOLLOW-UP for Paul: .jt-reviews-box swiper-arrow design has been
+silently purged in production (runtime classes, no shield) - restoring
+it is an intentional visual change needing a design decision.
 
 **Branch**: `css-migration/c2-deobfuscate-shared`
 **Depends on**: C1 merged (re-key each shared block once, not 7×).
