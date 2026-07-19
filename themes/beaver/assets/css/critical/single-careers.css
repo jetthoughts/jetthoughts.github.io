@@ -1199,11 +1199,11 @@ body:not(.single-fl-theme-layout)
     padding-bottom: 0;
   }
 }
-.fl-node-nmsh5axc3k28 {
+.career-meta-item {
   width: 20%;
 }
 @media (max-width: 1115px) {
-  .fl-builder-content .fl-node-nmsh5axc3k28 {
+  .fl-builder-content .career-meta-item {
     width: 25% !important;
     max-width: none;
     -webkit-box-flex: 0 1 auto;
@@ -1214,13 +1214,13 @@ body:not(.single-fl-theme-layout)
   }
 }
 @media (max-width: 860px) {
-  .fl-builder-content .fl-node-nmsh5axc3k28 {
+  .fl-builder-content .career-meta-item {
     width: 100% !important;
     max-width: none;
     clear: none;
     float: left;
   }
-  .fl-node-nmsh5axc3k28.fl-col > .fl-col-content {
+  .career-meta-item.fl-col > .fl-col-content {
     padding-top: 30px;
   }
 }
