@@ -73,6 +73,23 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugo-assets-
 
+      # Warm-up pass: hugo_stats.json does not exist on a cold runner, so the
+      # first build's PurgeCSS runs against absent/partial stats and can purge
+      # live classes (2026-07-19: a deploy shipped the inline nav bundle
+      # without .sr-only - visible skip-link site-wide; same phenomenon
+      # documented earlier for the fl-button safelist entries). The warm-up
+      # generates complete stats; the [[build.cachebusters]] entry then makes
+      # the real build reprocess every CSS bundle against them. Mirrors the
+      # local "converged build x2" gate doctrine.
+      - name: Warm up hugo_stats.json (PurgeCSS race guard)
+        run: |
+          PATH="./node_modules/.bin:app/bin:$PATH" hugo \
+            --gc \
+            --baseURL "https://jetthoughts.com/" \
+            --environment production \
+            --quiet || true
+          test -s hugo_stats.json && echo "hugo_stats.json ready: $(wc -c < hugo_stats.json) bytes"
+
       - name: Build with Hugo
         run: |
           PATH="./node_modules/.bin:app/bin:$PATH" hugo \

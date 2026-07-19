@@ -41,6 +41,16 @@ HUGO_ARGS=(hugo build --noBuildLock --environment "$ENVIRONMENT" --destination "
 [ -n "$BASE_URL" ] && HUGO_ARGS+=(--baseURL "$BASE_URL")
 [ -n "$BUILD_DRAFTS" ] && HUGO_ARGS+=(--buildDrafts)
 
+# Cold-start guard: production PurgeCSS reads hugo_stats.json, which only
+# exists AFTER a build. On a fresh clone/CI runner the first pass purges
+# against absent stats and can drop live classes (2026-07-19: a deploy
+# shipped the nav bundle without .sr-only). Warm up stats, then build for
+# real - the [[build.cachebusters]] entry reprocesses CSS against them.
+if [ "$ENVIRONMENT" = "production" ] && [ ! -s hugo_stats.json ]; then
+  echo "hugo_stats.json missing - warm-up pass (PurgeCSS race guard)..."
+  "${HUGO_ARGS[@]}" --quiet || true
+fi
+
 "${HUGO_ARGS[@]}"
 
 echo "✓ Build complete"
