@@ -48,7 +48,7 @@ site-wide). Not FL-affected.
 
 Shared non-FL slice members loaded by most bundles: `critical/base.css` (pulls
 the critical/fl-* trio), `dynamic-icons.css`, `586.css`, `vendors/base-4.min.css`,
-`style.css`, `skin-65eda28877e04.css`, `footer.css`, plus per-page extras
+`style.css`, `legacy-theme-skin.css`, `footer.css`, plus per-page extras
 (`technologies.css`, `single-post.css`, `use-cases-dynamic.css`, `homepage.css`,
 `companies.css`, `careers.css`, `404.css`, `pagination.css`,
 `component-bundle.css`, `theme-main.css`).

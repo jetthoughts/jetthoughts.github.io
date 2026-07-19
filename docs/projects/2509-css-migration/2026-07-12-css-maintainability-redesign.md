@@ -147,7 +147,7 @@ parity. Measured against the success criteria above, the goal is NOT yet met:
 | # | Criterion | Status 2026-07-18 (tree at 1df33334) |
 |---|-----------|--------------------------------------|
 | 1 | FL files 16 → 0 | ✅ done (PR #365) |
-| 2 | No obfuscated artifacts | ❌ ~3,700 `.fl-node-*` rules moved INTO `pages/*.css` by the delta ports (homepage 1,038 · careers 583 · services 492 · clients 366 · about-us 364 · single-service 350 · single-use-cases 329 · use-cases 147 · single-career 67); 604 `fl-node/fl-row/fl-col` refs across 14 templates; `skin-65eda28877e04.css` still hash-named; `critical/fl-*` trio + `foundations/fl-builder-common-base.css` kept alive only by the fl markup |
+| 2 | No obfuscated artifacts | ❌ ~3,700 `.fl-node-*` rules moved INTO `pages/*.css` by the delta ports (homepage 1,038 · careers 583 · services 492 · clients 366 · about-us 364 · single-service 350 · single-use-cases 329 · use-cases 147 · single-career 67); 604 `fl-node/fl-row/fl-col` refs across 14 templates; `legacy-theme-skin.css` still hash-named; `critical/fl-*` trio + `foundations/fl-builder-common-base.css` kept alive only by the fl markup |
 | 3 | No duplication in hand layer | ❌ 55–70% byte-identical lines between sibling page files (clients↔services 841/1,463 · single-service↔services 851/1,455 · use-cases↔single-use-cases 832/1,176) — shared-partial node rules copied into every consumer; `critical/*.css` files each share ~250+ identical lines with their page file |
 | 4 | Safe-edit under a minute | ✅ map + suites; per-file "affects pages" headers still to add (folded into C1/C2) |
 | 5 | Evidence rule | ✅ standing (compiled+gzip, never source lines) |

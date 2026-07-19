@@ -597,9 +597,9 @@ tasks:
   - [ ] C2.2 Re-key cta partial — same protocol, ≈7 commits
         (cta-banner, cta-banner-heading, cta-banner-button, …) in
         partials/page/cta.html + components/cta-banner.css.
-  - [ ] C2.3 Rename skin-65eda28877e04.css → legacy-theme-skin.css (last
+  - [ ] C2.3 Rename legacy-theme-skin.css → legacy-theme-skin.css (last
         hash-named file; criterion 2). Enumerate ALL refs first:
-        `grep -rln 'skin-65eda28877e04' themes/ config/ | sort` (12+ template
+        `grep -rln 'legacy-theme-skin.css' themes/ config/ | sort` (12+ template
         slices at last count). git mv + sed all refs in ONE commit; file
         content untouched. Gate: every bundle's rule content identical
         (fingerprints change — concat input renamed — that is the ONLY
@@ -707,7 +707,7 @@ Authoritative table: css-bundle-ownership-map.md
 ```
 fl-node rules in pages/*.css:   ~3,700  (target: 0 — sprints C2/C3/C4)
 fl-* refs in templates:            604  (target: 0)
-Hash-named CSS files:                1  (skin-65eda28877e04.css; target: 0 — C2.3)
+Hash-named CSS files:                1  (legacy-theme-skin.css; target: 0 — C2.3)
 Dup lines between sibling pages: 55-70% (target: ~0 — C1)
 Re-measure commands:
   for f in themes/beaver/assets/css/pages/*.css; do grep -c 'fl-node-' "$f"; done
@@ -754,7 +754,7 @@ fcp_metrics:
   in the hand layer) are NOT met — the delta ports moved ~3,700 fl-node rules
   into pages/*.css, 604 fl-* refs remain in 14 templates, 55–70% of lines are
   byte-identical between sibling page files (shared-partial copies), and
-  skin-65eda28877e04.css is still hash-named.
+  legacy-theme-skin.css is still hash-named.
 - **Shipped**: spec revision (§"Phase C — post-burn-down cleanup": phase
   structure C1→C4, gate stack, preflight rule, non-goals) + this tracker's
   PHASE C section with agent-executable micro-commit task lists for sprints
@@ -1043,7 +1043,7 @@ further whole-file merges found.
 - **Landed**: orphaned use-cases-critical.css deleted (265 lines); 8 invalid
   mid-file @charset removed; css-variables foundation wired into the 4
   bundles that lacked it (blog-single, taxonomy list, not_found, course-single)
-- **ROLLED BACK**: skin-65eda28877e04.css font-stack extraction (6 stacks).
+- **ROLLED BACK**: legacy-theme-skin.css font-stack extraction (6 stacks).
   Root cause: postcss-delete-duplicate-css (production builds only) deletes
   the later of two byte-identical declarations; converting skin's body
   font-family to var() made it duplicate an earlier critical-CSS declaration,
