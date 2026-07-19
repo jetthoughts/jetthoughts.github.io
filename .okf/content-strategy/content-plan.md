@@ -73,7 +73,7 @@ Three streams:
 1. Elital subdomain cleanup (53K junk upwork-login impressions)
 2. Rewrite 5 worst 0-CTR titles/metas — **completed 2026-07-19**
 3. Add TL;DR blocks to all 5 worst 0-CTR posts — **completed 2026-07-19**
-4. Consolidate 4 cannibalized Rails performance posts into 1 canonical
+4. Consolidate 4 cannibalized Rails performance posts into 1 canonical — **done (existing)**: Hugo aliases from `ruby-on-rails-performance-optimization-patterns-2026` cover all 5 old URLs. jtway.co redirects added for missing Medium migration entries.
 5. Fix `/services/` page title (zero stack keywords, 202 impr, 0 clicks)
 
 # Citations
