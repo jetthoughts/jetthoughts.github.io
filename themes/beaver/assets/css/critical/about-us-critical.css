@@ -45,7 +45,7 @@
 .pp-reviews-wrapper .pp-swiper-button-next {
   right: 0;
 }
-.fl-node-08kl1yzxeout .pp-swiper-button {
+.testimonials-reviews .pp-swiper-button {
   color: #000;
   padding-left: 13px;
   padding-right: 13px;
@@ -616,7 +616,7 @@
   width: 37px;
   height: 37px;
 }
-.fl-node-08kl1yzxeout .pp-swiper-button svg {
+.testimonials-reviews .pp-swiper-button svg {
   width: 24px;
   height: 24px;
 }
