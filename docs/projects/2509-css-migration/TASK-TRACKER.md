@@ -2,8 +2,8 @@
 
 **Purpose**: Status tracking for the CSS maintainability goal — FL-Builder export CSS retired page-by-page (strangler rewrites)
 **Update Frequency**: After each sprint or status change
-**Last Updated**: 2026-07-18
-**Current Phase**: 🔄 Phase C (post-burn-down cleanup) — sprints C1–C3 planned; FL burn-down itself ✅ 16/16 (PR #365)
+**Last Updated**: 2026-07-19
+**Current Phase**: ✅ PHASE C COMPLETE (2026-07-19) - C1 #371 · C2 #372 · C3 #374 · C4 #375 · C5 dedup. Phase D backlog defined below.
 
 ---
 
@@ -696,6 +696,31 @@ non_goals: NO wrapper-div collapse, NO visual changes, NO rule edits —
 ```
 
 ---
+
+## ✅ PHASE C CLOSURE (2026-07-19) + Phase D backlog
+
+Final scorecard: (1) FL files 0 ✅ · (2) no obfuscated artifacts ✅ - zero
+hashed fl-node classes in any template, zero hash-named files ·
+(3) no duplication in hand layer ✅ - shared components extracted (C1),
+critical-vs-pages twins deduped for the 5 winner-safe pairs (C5) ·
+(4) safe-edit headers + map ✅ · (5) evidence rule held throughout ✅.
+
+**C5 finding**: 4 twin sets are POSITION-LOAD-BEARING and NOT dedupeable
+as-is (clients rich-text font-size, single-service/single-use-cases
+.clearfix:after, single-career apply-form display) - the pages copies
+re-override critical-side defaults by position. Dedup requires
+rule-content normalization first (fold the override into one rule).
+
+**Phase D backlog (decisions, Claude 2026-07-19, per Paul delegation)**:
+- Wrapper collapse (fl-col-group/fl-col/fl-col-content flattening) +
+  the critical/fl-* trio + fl-builder-common-base retirement it
+  unblocks: DEFERRED - DOM restructuring with expected visual/baseline
+  changes contradicts Phase C charter; needs per-page design QA.
+- Legacy-shared strangler (theme-main 3,671 · component-bundle 2,907 ·
+  legacy-theme-skin 2,692 · 586 1,260 · style 1,005 lines) via
+  per-bundle PurgeCSS-survival audit: DEFERRED to own sprints.
+- The 4 position-sensitive twin sets above: fold-then-dedup, own sprint.
+- jt-reviews-box swiper design restoration: POSTPONED (Paul) - see C2 note.
 
 ## 🚨 BLOCKERS & RISKS
 
