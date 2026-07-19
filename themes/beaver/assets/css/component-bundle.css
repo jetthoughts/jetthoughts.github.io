@@ -2879,29 +2879,9 @@ body:not(.single-fl-theme-layout)
   width: 100%;
 }
 
-/* PowerPack BEM Components - Sprint 2 Integration */
-/* Extracted 2,628+ lines of PP patterns into modular BEM components */
-
-/* Include PowerPack Advanced Menu Component (563 lines) */
-@import "components/c-pp-advanced-menu.css";
-
-/* Include PowerPack Buttons & CTA Component (420 lines) */
-@import "components/c-pp-buttons.css";
-
-/* Include PowerPack Content Grid Component (513 lines) */
-@import "components/c-pp-content-grid.css";
-
-/* Include PowerPack Widgets Component (722 lines) */
-@import "components/c-pp-widgets.css";
-
-/* Include PowerPack InfoBox Component (410 lines) */
-@import "components/c-pp-infobox.css";
-
-/* Sprint 3: Core Components Integration */
-/* Hero Sections, CTA Blocks, and Testimonials */
-
-/* Include Hero Sections Component (312+ patterns, 1095 lines) */
-@import "components/c-hero-sections.css";
-
-/* Include CTA Blocks Component (189+ patterns, 53 lines) */
-@import "components/c-cta-blocks.css";
+/* The seven c-pp/c-hero/c-cta component @imports that sat here were DEAD:
+   this file joins its consumer concats (blog-list, free-consultation)
+   after rule-carrying members, so postcss-import silently skipped them
+   in every build (post-prelude @import). Their content ships site-wide
+   anyway via the components.css inline bundle in baseof.html. Removed
+   2026-07-19 with a compiled-output-identical gate. */

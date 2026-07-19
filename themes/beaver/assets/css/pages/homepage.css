@@ -2,7 +2,6 @@
    export, the last one). Verbatim minus 47 dead-node rule sets (media-
    aware source prune vs the rendered page; shared-partial nodes and the
    postcss-mixins responsive-visibility consumer retained). */
-@import "foundations/css-variables.css";
 
 
 .el-flex {

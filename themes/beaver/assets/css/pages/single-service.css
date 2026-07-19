@@ -4,7 +4,6 @@
    pages). Node twins with critical/single-services.css keep 2949
    cascade position — do not dedupe. bf72bba…-layout-bundle also left
    this slice. */
-@import "foundations/css-variables.css";
 
 
 .fl-builder-content *, .fl-builder-content *:before, .fl-builder-content *:after {
