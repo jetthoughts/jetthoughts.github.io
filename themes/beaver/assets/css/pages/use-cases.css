@@ -2325,7 +2325,6 @@ img.mfp-img {
   font-style: normal;
   display: inline-block;
   position: relative;
-  font-style: normal;
   cursor: default;
   transition: color .2s ease-in-out;
 }

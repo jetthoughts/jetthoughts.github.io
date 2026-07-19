@@ -28,18 +28,25 @@ FONT_STACK = 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", ' 
 
 Rule = Struct.new(:media, :text, :key, :from, :to, :shell_from, :shell_to)
 
+# Canonicalize while KEEPING descendant-combinator spaces: collapsing all
+# whitespace would collide ".a .b" with ".a.b" and silently extract both.
+def canonical(str)
+  str.gsub(/\s+/, " ").gsub(/\s*([{}:;,>~+()])\s*/, '\1').strip
+end
+
 def normalize(text, media)
-  k = text.gsub(%r{/\*.*?\*/}m, "").gsub(/\s+/, "")
-  k = k.gsub(FONT_STACK.gsub(/\s+/, ""), "var(--font-system-ui)")
-  media ? "#{media.gsub(/\s+/, "")}||#{k}" : k
+  k = canonical(text.gsub(%r{/\*.*?\*/}m, ""))
+  k = k.gsub(canonical(FONT_STACK), "var(--font-system-ui)")
+  media ? "#{canonical(media)}||#{k}" : k
 end
 
 # Returns [rules, plains] where rules are Rule structs in document order and
 # plains are top-level non-rule statements (@import/@charset) with positions.
 def parse(css, path)
-  depth = css.count("{") - css.count("}")
+  stripped = css.gsub(%r{/\*.*?\*/}m, "").gsub(/"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/m, "")
+  depth = stripped.count("{") - stripped.count("}")
   abort "css-split: #{path}: unbalanced braces (#{depth})" unless depth.zero?
-  abort "css-split: #{path}: unclosed comment" if css.gsub(%r{/\*.*?\*/}m, "").include?("/*")
+  abort "css-split: #{path}: unclosed comment" if stripped.include?("/*")
 
   rules = []
   i = 0
@@ -53,6 +60,13 @@ def parse(css, path)
     if c == "/" && css[i + 1] == "*"
       close = css.index("*/", i + 2)
       i = close ? close + 2 : n
+      next
+    end
+    if c == '"' || c == "'"
+      # skip string literals so braces/comment-openers inside them are inert
+      j = i + 1
+      j += (css[j] == "\\" ? 2 : 1) while j < n && css[j] != c
+      i = j + 1
       next
     end
     case c
@@ -110,7 +124,7 @@ when "extract"
   rules.each do |r|
     next if r.key == :plain
 
-    sel = r.text[/\A[^{]*/]
+    sel = r.text[/\A[^{]*/]&.gsub(%r{/\*.*?\*/}m, "")
     puts r.key if sel&.match?(pat)
   end
 when "keys", "component", "remainder"
