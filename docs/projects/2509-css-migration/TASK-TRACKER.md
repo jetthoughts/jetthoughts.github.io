@@ -461,7 +461,7 @@ follow_ups:
 
 ## 📅 PHASE C (CURRENT PLAN): Post-burn-down cleanup — sprints C1–C3
 
-**Phase Status**: 🔄 C1 ✅ (PR #371, merged) · C2 ✅ (PR pending) · C3 next
+**Phase Status**: ✅ C1 (PR #371) · C2 (PR #372) · C3 (PR #374) · C4 page re-keys (PR pending) - criterion 2 markup side COMPLETE: zero hashed fl-node classes in any template
 **Source**: Spec §"Phase C — post-burn-down cleanup" (revision 2026-07-18) —
 read it FIRST; it defines the gate stack, the preflight rule, the
 dedup-trap warning, and the non-goals (no DOM restructuring, no rule-content
@@ -584,13 +584,16 @@ C2.1 all 10 testimonial nodes -> testimonials-* (incl. purge-safelist
 companion: /^testimonials-/ + /^cta-banner/ greedy entries replace the
 accidental /^fl-node/ shield for runtime pp-* classes); C2.2 all 7 CTA
 nodes -> cta-banner-* (swept across the partial + 6 inline template
-copies); C2.3 skin -> legacy-theme-skin.css (NAME AWAITING PAUL);
+copies); C2.3 skin -> legacy-theme-skin.css (name APPROVED by Paul 2026-07-19);
 C2.4 dynamic-404.css; C2.5 586.css masked-background deletion;
 C2.6 safe-edit headers. Gate held: every re-key byte-identical after
 guarded reverse substitution; renames fingerprint-identical.
-FOLLOW-UP for Paul: .jt-reviews-box swiper-arrow design has been
-silently purged in production (runtime classes, no shield) - restoring
-it is an intentional visual change needing a design decision.
+POSTPONED (Paul, 2026-07-19): .jt-reviews-box swiper-arrow design
+restoration. The intended testimonial-slider arrow styling (hover
+arrows, 44% placement, bottom position) is silently purged in
+production (runtime pp-swiper classes have no purge shield). To
+restore: add /^pp-swiper/ + /^pp-review/ to the purge greedy safelist,
+re-baseline BOTH platforms, design review of the restored slider.
 
 **Branch**: `css-migration/c2-deobfuscate-shared`
 **Depends on**: C1 merged (re-key each shared block once, not 7×).
