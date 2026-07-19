@@ -718,6 +718,56 @@ last-wins gate that caught both real regressions this phase.
   accidents make per-line archaeology cost grow while the evidence rule
   shows ~zero shipped-byte win (PurgeCSS already strips unused legacy
   rules per bundle).
+## 📋 GROOMED BACKLOG + SPRINT SCHEDULE (2026-07-19, post-E1/E3)
+
+Goal (Paul): a person can create a new page from scratch reusing existing
+components, consistently. Grooming decisions below; velocity basis = E1
+(21-instance component measured, extracted, gated in ~half a day).
+
+### Sprint E-2 — finish the component library (NEXT; ~1 day)
+- [ ] stat-row component: about-stat-*/home-proof-stat*/service-stat*
+      (~34 rules across instances) - measured-intersection protocol,
+      additive jt-stat-row class.
+- [ ] hero pattern assessment: home/about/careers hero clusters
+      (~40 rules) - extract IF intersection is meaningful, else document
+      hero recipe in new-page.md instead (heroes may be genuinely
+      page-unique; do not force a component).
+- [ ] within-page card consolidation: services 6 cards still carry ~34
+      residual rules EACH post-E1 - collapse per-page to one
+      services-card class (same for home) - biggest remaining dedup.
+- [ ] starter template file: layouts page example referenced from
+      new-page.md (E3 shipped docs only).
+- [ ] bin/qtest COMPONENT_CONSUMERS entries for info-card.css,
+      cta-banner.css, header-cta.css (currently escalate to --all).
+
+### Sprint E-3 — one CTA source (~1 day, visual-gated)
+- [ ] Parametrize partials/page/cta.html (heading/text/wrapper-class)
+      and collapse the 6 inline template copies onto it (home,
+      page/services, page/use-cases, services/single, use-cases/single,
+      clients/single) - per-page winner + screenshot gates; copies
+      diverge at outer wrappers (page keeps).
+- [ ] Fix cta.html duplicate data-node attr (+ retarget the one test
+      selector if needed).
+- [ ] Consistency audit: every page uses the partial (not a copy) for
+      testimonials + cta; ownership map updated.
+
+### Design sprint (PAUL-GATED; schedule when he picks it up)
+- [ ] jt-reviews-box swiper-arrow restoration (recipe in C2 note:
+      safelist /^pp-swiper/ + /^pp-review/, re-baseline both platforms,
+      design review of the restored slider).
+
+### Parked (trigger-conditioned - reaffirmed at grooming)
+- Wrapper collapse; critical/fl-* trio + fl-builder-common-base
+  retirement; deeper legacy strangler (incl. the two ~35KB .fl-page
+  blocks in theme-main/legacy-theme-skin flagged by the D2 audit).
+  Trigger: a page redesign already touching that DOM.
+
+### Dropped at grooming
+- notfound-/use-case- unused greedy entries cleanup: harmless, not worth
+  a commit alone; fold into the next postcss.config.js touch.
+
+## 🔄 PHASE E IN PROGRESS
+
 ## 🔄 PHASE E IN PROGRESS (2026-07-19, branch css-migration/phase-e-paved-path)
 
 Mandate (Paul): a person must be able to create a new page from scratch
