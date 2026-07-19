@@ -25,11 +25,23 @@
       "skillPath": "skills/competitive-intel/composites/competitor-intel/SKILL.md",
       "computedHash": "1c46c1aba1c14bf421201b5f1f2585191fa5e785bb1c39f5c3088e5f95276542"
     },
+    "content-production": {
+      "source": "borghei/claude-skills",
+      "sourceType": "github",
+      "skillPath": "marketing/content-production/SKILL.md",
+      "computedHash": "1009991b0f4aba6618eab483e03c318998828edb867db271067175845f349543"
+    },
     "content-strategy": {
       "source": "guia-matthieu/clawfu-skills",
       "sourceType": "github",
       "skillPath": "skills/content/content-strategy/SKILL.md",
       "computedHash": "a17bde6d815d2ecb30772e87b63978893c1e1fe02854dd216e564e8f1e6c4070"
+    },
+    "copy-editing": {
+      "source": "borghei/claude-skills",
+      "sourceType": "github",
+      "skillPath": "marketing/copy-editing/SKILL.md",
+      "computedHash": "0534240ae2ccb6ba3b8bf358d2270f3335e1463bb01bb1b2ae71e13b2708ef35"
     },
     "copywriting": {
       "source": "kostja94/marketing-skills",
@@ -42,6 +54,12 @@
       "sourceType": "github",
       "skillPath": "skills/copywriting-core/SKILL.md",
       "computedHash": "9088b3efe63b86935a6a8584985d47231107c036da1e21e87bb7f4324cfee7a9"
+    },
+    "critique": {
+      "source": "neolabhq/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/reflexion/skills/critique/SKILL.md",
+      "computedHash": "c7508be7ee8bf6d726f0fc4e691a555a632477a52d3669832e3d481cfa5fa6dd"
     },
     "git-commit": {
       "source": "fvadicamo/dev-agent-skills",
@@ -97,6 +115,12 @@
       "skillPath": "skills/recommendation-canvas/SKILL.md",
       "computedHash": "c4306bd0310c6d51028c5a637383ee607de8988108b1ccf696fe2523e6cc2956"
     },
+    "reflect": {
+      "source": "neolabhq/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/reflexion/skills/reflect/SKILL.md",
+      "computedHash": "7523a929fd950d8b5342081996a97eb8cf1f264dd787afd8bd9e354de87924f5"
+    },
     "seo": {
       "source": "omer-metin/skills-for-antigravity",
       "sourceType": "github",
@@ -109,11 +133,23 @@
       "skillPath": "skills/data-ai/seo-aeo-audit/SKILL.md",
       "computedHash": "6e157f9dfc2edcaa465df672b9b5468392a769cfd0a5b187eb137fa365c56e44"
     },
+    "slop-detector": {
+      "source": "athola/claude-night-market",
+      "sourceType": "github",
+      "skillPath": "plugins/scribe/skills/slop-detector/SKILL.md",
+      "computedHash": "21cdca498143daadcaf5bb250a6d0df5a04dfd8676b59d0d19ffaf638ef87920"
+    },
     "social-media-trends-research": {
       "source": "drshailesh88/integrated_content_os",
       "sourceType": "github",
       "skillPath": "skills/cardiology/social-media-trends-research/SKILL.md",
       "computedHash": "281ccb70325481022b45e880da19d353a37e31926dfdcc5942be5a92186ad379"
+    },
+    "stitch-loop": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/stitch-utilities/skills/stitch-loop/SKILL.md",
+      "computedHash": "e04912a9719b855afa733cc928d30dde0b8a5b91707ca27b98f0efcb8d9310a9"
     },
     "validate": {
       "source": "scaccogatto/okf-skills",
