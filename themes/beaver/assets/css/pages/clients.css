@@ -3564,12 +3564,12 @@ img.mfp-img {
 }
 
 
-.fl-builder-content .fl-node-2jbfoa50irmx .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-2jbfoa50irmx .fl-module-content .fl-rich-text * {
+.fl-builder-content .clients-cta-divider .fl-module-content .fl-rich-text, .fl-builder-content .clients-cta-divider .fl-module-content .fl-rich-text * {
   color: var(--color-primary);
 }
 
 
-.fl-builder-content .fl-node-2jbfoa50irmx .fl-rich-text, .fl-builder-content .fl-node-2jbfoa50irmx .fl-rich-text *:not(b, strong) {
+.fl-builder-content .clients-cta-divider .fl-rich-text, .fl-builder-content .clients-cta-divider .fl-rich-text *:not(b, strong) {
   font-weight: 600;
   text-align: center;
 }
