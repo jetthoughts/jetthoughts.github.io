@@ -643,6 +643,20 @@ estimated_commits: ~22 (10+7 re-keys, 2 renames, 1 deletion, headers, docs)
 
 ### Sprint C3 — page re-keying pilots (easiest pages first)
 
+**✅ SHIPPED 2026-07-19** (branch css-migration/c3-rekey-pilot, ~30 commits):
+27 semantic re-keys - use-cases (use-cases-hero/-technologies/-cta/-cta-box,
+incl. the r5xy leak in shared technologies.css), careers/single (12
+career-* names, critical/single-careers.css copies swept in the same
+commits), page/clients (11 clients-* names incl. the 219-line
+grid/carousel clusters). Plus: 8 dead fl-node classes dropped from
+templates (zero CSS refs each, fingerprint-identical) and ~580 rules
+keyed on 3 site-wide dead ids (d09l8jp3qrgf/7d9wg1x8ua5m/ncg61wov0ytq)
+deleted across 12 files via bin/css-split (per-bundle decl-gate: zero
+non-dead losses). Gate evolution: byte-identity -> canonical rule-set
+equality (cssnano alphabetizes selector groups when names change).
+clients/single confirmed already re-keyed (pilot task was a no-op).
+Velocity: ~2-3 min/node with converged double-builds - C4 sizing basis.
+
 **Branch**: `css-migration/c3-rekey-pilot`
 **Depends on**: C2 merged (shared partial nodes already semantic — page grep
 hits are page-own nodes only).
