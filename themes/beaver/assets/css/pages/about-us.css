@@ -819,7 +819,6 @@ img.mfp-img {
 
   .fl-col-group.fl-col-group-medium-reversed:not(.fl-col-group-responsive-reversed) {
     display: unset;
-    display: unset;
     -webkit-flex-wrap: unset;
     flex-wrap: unset;
     flex-direction: unset;
@@ -2357,41 +2356,10 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   margin-top: 25px;
   margin-bottom: 0px;
 }
-
-
-
-.about-value-card .pp-infobox-title-wrapper .pp-infobox-title a {
-}
-
-
-
 .about-value-card .pp-infobox-description {
   margin-top: 15px;
   margin-bottom: 0px;
 }
-
-
-
-.about-value-card .pp-infobox:hover .pp-infobox-title-prefix {
-}
-
-
-
-.about-value-card .pp-infobox:hover .pp-infobox-title {
-}
-
-
-
-.about-value-card .pp-infobox:hover .pp-infobox-title a {
-}
-
-
-
-.about-value-card .pp-infobox:hover .pp-infobox-description {
-}
-
-
-
 .about-value-card .pp-infobox-wrap .pp-infobox {
   background: rgba(245, 246, 248, 0);
   text-align: left;

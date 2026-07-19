@@ -95,6 +95,7 @@ Follow official methodology from `/knowledge/`:
 
 ## 📁 Workflow Pointers
 
+- **New page (paved path)**: `docs/workflows/new-page.md` - starter template, component reuse, slice recipe, traps
 - CSS consolidation rules: `docs/workflows/css-consolidation.md`
 - Blog pipeline: `docs/workflows/blog-pipeline.md`
 - LinkedIn pipeline: `docs/workflows/linkedin-post-pipeline.md` (Paul Keen voice rules, AI score rubric, save-location convention)

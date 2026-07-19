@@ -988,7 +988,6 @@ img.mfp-img {
 
   .fl-col-group.fl-col-group-medium-reversed:not(.fl-col-group-responsive-reversed) {
     display: unset;
-    display: unset;
     -webkit-flex-wrap: unset;
     flex-wrap: unset;
     flex-direction: unset;
@@ -2389,10 +2388,6 @@ img.mfp-img {
   .pp-tabs-style-5 .pp-tabs-label .pp-tab-label-inner:after {
     display: none;
   }
-
-  .pp-tabs-horizontal.pp-tabs-default .pp-tabs-label.pp-tab-active {
-  }
-
   .pp-tabs-style-8 .pp-tabs-label {
     margin: 0 !important;
   }
@@ -3034,39 +3029,10 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   margin-top: 30px;
   margin-bottom: 0px;
 }
-
-
-
-.services-card .pp-infobox-title-wrapper .pp-infobox-title a {
-}
-
-
-
 .services-card .pp-infobox-description {
   margin-top: 15px;
   margin-bottom: 0px;
 }
-
-
-
-.services-card .pp-infobox .pp-infobox-title-prefix:hover {
-}
-
-
-
-.services-card .pp-infobox .pp-infobox-title:hover {
-}
-
-
-
-.services-card .pp-infobox .pp-infobox-title a:hover {
-}
-
-
-
-.services-card .pp-infobox .pp-infobox-description:hover {
-}
-
 .services-card .pp-infobox-icon-inner span.pp-icon, .services-card .pp-infobox-image img {
   border-top-left-radius: px;
   border-top-right-radius: px;

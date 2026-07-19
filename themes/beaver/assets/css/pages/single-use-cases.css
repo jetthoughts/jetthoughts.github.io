@@ -780,7 +780,6 @@ img.mfp-img {
 
   .fl-col-group.fl-col-group-medium-reversed:not(.fl-col-group-responsive-reversed) {
     display: unset;
-    display: unset;
     -webkit-flex-wrap: unset;
     flex-wrap: unset;
     flex-direction: unset;
@@ -1182,10 +1181,6 @@ img.mfp-img {
     margin-right: 0px;
   }
 }
-
-
-.fl-builder-content .use-case-hero-cta a.fl-button, .fl-builder-content .use-case-hero-cta a.fl-button:hover, .fl-builder-content .use-case-hero-cta a.fl-button:visited {
-}
 img.mfp-img {
   padding-bottom: 40px !important;
 }
@@ -1290,12 +1285,6 @@ img.mfp-img {
     margin-top: 0px;
   }
 }
-
-
-.fl-builder-content .use-case-clients-button a.fl-button, .fl-builder-content .use-case-clients-button a.fl-button:hover, .fl-builder-content .use-case-clients-button a.fl-button:visited {
-}
-
-
 .use-case-clients-button .fl-button-wrap {
   text-align: right;
 }
@@ -2054,7 +2043,6 @@ body .pp-post-feed-meta {
   margin-right: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  float: right;
   overflow: hidden;
   position: relative;
   height: 15px;
@@ -2432,38 +2420,10 @@ body .pp-post-feed-meta {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
-
-.use-case-clients-grid .pp-content-post .pp-post-title, .use-case-clients-grid .pp-content-post .pp-post-title a {
-}
-
-
-.use-case-clients-grid .pp-content-post:hover .pp-post-title, .use-case-clients-grid .pp-content-post:hover .pp-post-title a {
-}
-
-
 .use-case-clients-grid .pp-content-post .pp-post-content {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
-
-.use-case-clients-grid .pp-content-post:hover .pp-post-content {
-}
-
-
-.use-case-clients-grid .pp-post-event-calendar-date, .use-case-clients-grid .pp-post-event-calendar-date span {
-}
-
-
-.use-case-clients-grid .pp-post-event-calendar-venue, .use-case-clients-grid .pp-post-event-calendar-venue span.tribe-address {
-}
-
-
-.use-case-clients-grid .pp-post-event-calendar-cost, .use-case-clients-grid .pp-post-event-calendar-cost span.ticket-cost {
-}
-
-
 .use-case-clients-grid .pp-post-event-calendar-cost form {
   margin-top: 10px;
 }
@@ -2554,37 +2514,9 @@ body .pp-post-feed-meta {
 .use-case-clients-grid .pp-content-post .pp-post-meta {
   color: #606060;
 }
-
-
-.use-case-clients-grid .pp-content-post:hover .pp-post-meta {
-}
-
-
-.use-case-clients-grid .pp-content-post .pp-post-meta span {
-}
-
-
 .use-case-clients-grid .pp-content-post .pp-post-meta a {
   color: #606060;
 }
-
-
-.use-case-clients-grid .pp-content-post:hover .pp-post-meta a {
-}
-
-
-.use-case-clients-grid .pp-content-grid-post .pp-content-category-list, .use-case-clients-grid .pp-content-carousel-post .pp-content-category-list {
-}
-
-
-.use-case-clients-grid .pp-content-post.pp-grid-style-7 .pp-content-post-meta {
-}
-
-
-.use-case-clients-grid .pp-content-post.pp-grid-style-7:hover .pp-content-post-meta {
-}
-
-
 .use-case-clients-grid .pp-content-post-carousel .owl-theme .owl-dots .owl-dot span {
   opacity: 1;
   background: #666666;
@@ -2621,30 +2553,10 @@ body .pp-post-feed-meta {
 .use-case-clients-grid .pp-content-post-carousel .owl-nav button svg {
   height: 30px;
 }
-
-
-.use-case-clients-grid .pp-content-post-carousel .owl-nav button:hover {
-}
-
-
 .use-case-clients-grid .pp-content-post {
   opacity: 1;
   text-align: left;
 }
-
-
-.use-case-clients-grid .pp-content-post:hover {
-}
-
-
-.use-case-clients-grid .pp-content-post.pp-grid-style-7 .pp-content-body {
-}
-
-
-.use-case-clients-grid .pp-content-post.pp-grid-style-7:hover .pp-content-body {
-}
-
-
 .woocommerce .use-case-clients-grid .pp-content-post {
   margin-bottom: 2.5%;
 }
@@ -2707,12 +2619,6 @@ body .pp-post-feed-meta {
 .use-case-clients-grid .pp-content-post-grid.pp-filters-active .pp-content-grid-post {
   margin-right: 0;
 }
-
-
-.use-case-clients-grid .pp-content-post .pp-content-body {
-}
-
-
 .use-case-clients-grid .pp-content-post .star-rating {
   margin-left: 0;
 }
@@ -2795,10 +2701,6 @@ body .pp-post-feed-meta {
   .use-case-clients-grid.cg-grid-center-align .pp-content-post-grid {
     grid-template-columns: repeat(min(var(--items-count), var(--column-lg)), min(calc(100% / var(--items-count)), calc(100% / var(--column-lg))));
   }
-
-  .use-case-clients-grid .pp-content-post {
-  }
-
   .use-case-clients-grid .pp-grid-space {
     width: 2.5%;
   }
@@ -2814,10 +2716,6 @@ body .pp-post-feed-meta {
   .use-case-clients-grid.cg-grid-center-align .pp-content-post-grid {
     grid-template-columns: repeat(min(var(--items-count), var(--column-md)), min(calc(100% / var(--items-count)), calc(100% / var(--column-md))));
   }
-
-  .use-case-clients-grid .pp-content-post {
-  }
-
   .use-case-clients-grid .pp-grid-space {
     width: 2.5%;
   }
@@ -2845,10 +2743,6 @@ body .pp-post-feed-meta {
   .use-case-clients-grid.cg-grid-center-align .pp-content-post-grid {
     grid-template-columns: repeat(min(var(--items-count), var(--column-sm)), min(calc(100% / var(--items-count)), calc(100% / var(--column-sm))));
   }
-
-  .use-case-clients-grid .pp-content-post {
-  }
-
   .use-case-clients-grid .pp-grid-space {
     width: 2.5%;
   }

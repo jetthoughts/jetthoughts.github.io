@@ -100,8 +100,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   }
 }
 
-@media (max-width: 860px) {
-}
 .career-form-module .pp-gf-content {
   background-color: #F5F6F8;
   background-size: cover;
@@ -118,10 +116,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 .fl-builder-content .career-form-module .pp-gf-content .gform_wrapper .gfield_required {
   color: #ff0000;
 }
-
-.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper .gfield .ginput_complex.ginput_container label {
-}
-
 .career-form-module .pp-gf-content .gform_wrapper .ginput_container label, .career-form-module .pp-gf-content .gform_wrapper table.gfield_list thead th, .career-form-module .pp-gf-content .gform_wrapper span.ginput_product_price, .career-form-module .pp-gf-content .gform_wrapper span.ginput_product_price_label, .career-form-module .pp-gf-content .gform_wrapper span.ginput_quantity_label, .career-form-module .pp-gf-content .gform_wrapper .gfield_html {
   color: var(--color-dark) !important;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -131,10 +125,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 .career-form-module .pp-gf-content .gform_wrapper span.ginput_product_price {
   color: #900900 !important;
 }
-
-.career-form-module .pp-gf-content .gform_wrapper .gfield .gfield_description {
-}
-
 .career-form-module .pp-gf-content .gform_wrapper .gsection {
   border-bottom-width: 1px;
   border-bottom-color: #cccccc;
@@ -217,10 +207,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   padding-right: 25px;
   white-space: normal;
 }
-
-.career-form-module .pp-gf-content .gform_wrapper .gform_page_footer .button {
-}
-
 .career-form-module .pp-gf-content .gform_wrapper .gform-button:hover, .career-form-module .pp-gf-content .gform_wrapper .gform_footer .gform_button:hover, .career-form-module .pp-gf-content .gform_wrapper .gform_page_footer .button:hover {
   background: ;
 }
@@ -259,17 +245,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   border-color: #e63946;
   border-width: 1px !important;
 }
-
-@media only screen and (max-width: 1115px) {
-  .career-form-module .pp-gf-content .gform_wrapper .gform-button, .career-form-module .pp-gf-content .gform_wrapper .gform_footer .gform_button, .career-form-module .pp-gf-content .gform_wrapper.gf_browser_ie .gform_footer .gform_button, .career-form-module .pp-gf-content .gform_wrapper .gform_page_footer .button, .career-form-module .pp-gf-content .gform_wrapper.gf_browser_ie .gform_page_footer .button {
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .career-form-module .pp-gf-content .gform_wrapper .gform-button, .career-form-module .pp-gf-content .gform_wrapper .gform_footer .gform_button, .career-form-module .pp-gf-content .gform_wrapper.gf_browser_ie .gform_footer .gform_button, .career-form-module .pp-gf-content .gform_wrapper .gform_page_footer .button, .career-form-module .pp-gf-content .gform_wrapper.gf_browser_ie .gform_page_footer .button {
-  }
-}
-
 .career-form-module .gform_confirmation_wrapper .gform_confirmation_message {
   color: var(--color-dark);
 }

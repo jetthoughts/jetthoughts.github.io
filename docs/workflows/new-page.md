@@ -89,6 +89,7 @@ in production only — the visible-skip-link class of bug.
 ## 7. Verify
 
 ```
+bun run lint:css           # stylelint the hand-maintained layer
 bin/qtest <name>          # fast scoped gate (build + screenshots + guards)
 bin/rake test:critical    # before commit
 bin/test && bin/dtest     # both platforms before the PR
