@@ -3575,18 +3575,18 @@ img.mfp-img {
 }
 
 
-.fl-node-knxbsd4lg31h.fl-module-heading .fl-heading {
+.clients-cta-heading.fl-module-heading .fl-heading {
   text-align: center;
 }
 
 
-.fl-node-knxbsd4lg31h > .fl-module-content {
+.clients-cta-heading > .fl-module-content {
   margin-top: 20px;
 }
 
 
 @media ( max-width: 860px ) {
-  .fl-node-knxbsd4lg31h.fl-module > .fl-module-content {
+  .clients-cta-heading.fl-module > .fl-module-content {
     margin-top: 10px;
   }
 }
