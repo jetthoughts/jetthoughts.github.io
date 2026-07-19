@@ -42,12 +42,12 @@
 
 
 
-.fl-builder-content .fl-node-byg0v6ftixrd .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-byg0v6ftixrd .fl-module-content .fl-rich-text * {
+.fl-builder-content .testimonials-label .fl-module-content .fl-rich-text, .fl-builder-content .testimonials-label .fl-module-content .fl-rich-text * {
   color: var(--color-primary);
 }
 
 
-.fl-builder-content .fl-node-byg0v6ftixrd .fl-rich-text, .fl-builder-content .fl-node-byg0v6ftixrd .fl-rich-text *:not(b, strong) {
+.fl-builder-content .testimonials-label .fl-rich-text, .fl-builder-content .testimonials-label .fl-rich-text *:not(b, strong) {
   font-weight: 600;
   text-align: center;
 }
