@@ -1,0 +1,150 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# css-split — C1 shared-component extraction tool (spec: Phase C, sprint C1).
+#
+# Splits a page CSS file into component-member rules and a remainder, by a
+# normalized-key list, preserving original formatting, order, and @media
+# grouping. Replaces the scratchpad awk pipeline that caused two self-inflicted
+# defects in C1.1 (wrong-line dedupe, truncated header comment).
+#
+# Usage:
+#   bin/css-split keys KEYSFILE PAGE.css        # print normalized keys of matching rules
+#   bin/css-split component KEYSFILE PAGE.css   # print matching rules (original text)
+#   bin/css-split remainder KEYSFILE PAGE.css   # print file minus matching rules
+#   bin/css-split extract PATTERN PAGE.css      # print normalized keys of rules whose
+#                                               #   selector matches PATTERN (regex)
+#
+# Key format (one per line): [media||]selector{decls} with ALL whitespace
+# removed and the long system-ui font stack replaced by var(--font-system-ui).
+# Built-in checks: brace balance and comment closure on every input; the
+# remainder writer refuses to drop rules not present in KEYSFILE.
+
+require "set"
+
+FONT_STACK = 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", ' \
+  '"Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", ' \
+  '"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+
+Rule = Struct.new(:media, :text, :key)
+
+def normalize(text, media)
+  k = text.gsub(%r{/\*.*?\*/}m, "").gsub(/\s+/, "")
+  k = k.gsub(FONT_STACK.gsub(/\s+/, ""), "var(--font-system-ui)")
+  media ? "#{media.gsub(/\s+/, "")}||#{k}" : k
+end
+
+# Returns [rules, plains] where rules are Rule structs in document order and
+# plains are top-level non-rule statements (@import/@charset) with positions.
+def parse(css, path)
+  depth = css.count("{") - css.count("}")
+  abort "css-split: #{path}: unbalanced braces (#{depth})" unless depth.zero?
+  abort "css-split: #{path}: unclosed comment" if css.gsub(%r{/\*.*?\*/}m, "").include?("/*")
+
+  rules = []
+  i = 0
+  n = css.length
+  start = 0
+  depth = 0
+  media = nil
+  while i < n
+    c = css[i]
+    if c == "/" && css[i + 1] == "*"
+      close = css.index("*/", i + 2)
+      i = close ? close + 2 : n
+      next
+    end
+    case c
+    when ";"
+      if depth.zero? && media.nil?
+        rules << Rule.new(nil, css[start..i], :plain)
+        start = i + 1
+      end
+    when "{"
+      if depth.zero?
+        head = css[start...i].gsub(%r{/\*.*?\*/}m, "").gsub(/\s+/, " ").strip
+        if media.nil? && head.start_with?("@media")
+          media = head
+          start = i + 1
+          i += 1
+          next
+        end
+      end
+      depth += 1
+    when "}"
+      if depth.zero? && media
+        media = nil
+        start = i + 1
+        i += 1
+        next
+      end
+      depth -= 1
+      if depth.zero?
+        text = css[start..i]
+        rules << Rule.new(media, text, normalize(text, media))
+        start = i + 1
+      end
+    end
+    i += 1
+  end
+  rules
+end
+
+mode, keys_arg, path = ARGV
+abort "css-split: usage: bin/css-split keys|component|remainder|extract ARG PAGE.css" unless mode && keys_arg && path
+
+css = File.read(path)
+rules = parse(css, path)
+
+case mode
+when "extract"
+  pat = Regexp.new(keys_arg)
+  rules.each do |r|
+    next if r.key == :plain
+
+    sel = r.text[/\A[^{]*/]
+    puts r.key if sel&.match?(pat)
+  end
+when "keys", "component", "remainder"
+  keyset = File.readlines(keys_arg, chomp: true).reject(&:empty?).to_set
+  open_media = nil
+  rules.each do |r|
+    member = r.key != :plain && keyset.include?(r.key)
+    case mode
+    when "keys"
+      puts r.key if member
+    when "component"
+      next unless member
+
+      t = r.text.gsub(FONT_STACK, "var(--font-system-ui)")
+      if r.media != open_media
+        print "}\n" if open_media
+        print "#{r.media} {\n" if r.media
+        open_media = r.media
+      end
+      print t
+      print "\n"
+    when "remainder"
+      next if member
+
+      if r.media
+        # re-wrap surviving media rules under their shell
+        if r.media != open_media
+          print "}\n" if open_media
+          print "#{r.media} {\n"
+          open_media = r.media
+        end
+        print r.text
+        print "\n"
+      else
+        print "}\n" if open_media
+        open_media = nil
+        print r.text
+        print "\n"
+      end
+    end
+  end
+  print "}\n" if open_media && %w[component remainder].include?(mode)
+else
+  abort "css-split: unknown mode #{mode}"
+end
