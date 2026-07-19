@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "JetThoughts Hugo site with comprehensive build validation and zero-defect configuration",
   "scripts": {
+    "lint:css": "stylelint \"themes/beaver/assets/css/pages/*.css\" \"themes/beaver/assets/css/components/*.css\"",
     "build": "hugo",
     "build:production": "hugo --minify --gc --cleanDestinationDir --environment production",
     "build:preview": "hugo --buildDrafts --buildFuture",
@@ -30,6 +31,7 @@
     "postcss-import": "^16.1.1",
     "postcss-mixins": "^12.1.2",
     "postcss-nested": "^7.0.2",
+    "stylelint": "^17.14.0",
     "surge": "^0.27.4"
   },
   "dependencies": {

@@ -49,14 +49,6 @@
   height: auto;
   max-width: 100%;
 }
-
-
-
-.jt-info-card .pp-infobox:hover .pp-infobox-image img {
-}
-
-
-
 .jt-info-card .pp-infobox .animated {
   -webkit-animation-duration: 500ms;
   -moz-animation-duration: 500ms;
@@ -64,14 +56,6 @@
   -ms-animation-duration: 500ms;
   animation-duration: 500ms;
 }
-
-
-
-.jt-info-card .pp-infobox-wrap .layout-3-wrapper, .jt-info-card .pp-infobox-wrap .layout-4-wrapper {
-}
-
-
-
 .jt-info-card .pp-infobox-wrap .layout-1 .pp-heading-wrapper, .jt-info-card .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
   display: flex;
   align-items: center;

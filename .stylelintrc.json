@@ -1,0 +1,17 @@
+{
+  "rules": {
+    "declaration-block-no-duplicate-properties": [true, { "ignore": ["consecutive-duplicates-with-different-values"] }],
+    "no-duplicate-selectors": [true, { "severity": "warning" }],
+    "block-no-empty": true
+  },
+  "ignoreFiles": [
+    "themes/beaver/assets/css/vendors/**",
+    "themes/beaver/assets/css/586.css",
+    "themes/beaver/assets/css/style.css",
+    "themes/beaver/assets/css/theme-main.css",
+    "themes/beaver/assets/css/component-bundle.css",
+    "themes/beaver/assets/css/legacy-theme-skin.css",
+    "themes/beaver/assets/css/critical/fl-*.css",
+    "themes/beaver/assets/css/foundations/fl-builder-common-base.css"
+  ]
+}
