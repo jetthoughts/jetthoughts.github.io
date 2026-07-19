@@ -84,6 +84,36 @@
       "purpose": "Semantic code search — natural-language queries with nearest-neighbor expansion",
       "tools": ["search", "find_related"],
       "ref": ".claude/agents/semble-search.md"
+    },
+    "deepwiki": {
+      "purpose": "Repository documentation — AI-powered wiki for GitHub repos; ask structural questions about any codebase",
+      "tools": ["read_wiki_structure", "read_wiki_contents", "ask_question"],
+      "ref": "docs/workflows/BASE_HANDBOOK.md"
+    },
+    "claude-in-chrome": {
+      "purpose": "Browser automation — full Chrome control for UI testing, visual verification, cover image rendering",
+      "tools": ["navigate", "read_page", "computer", "gif_creator", "tabs_create_mcp", "tabs_context_mcp"],
+      "ref": "docs/workflows/visual-scroll-gate.md"
+    },
+    "stitch": {
+      "purpose": "Design generation — screen creation, design system application, cover image prototyping via Stitch MCP",
+      "tools": ["create_project", "generate_screen_from_text", "edit_screens", "get_screen", "apply_design_system"],
+      "ref": ".stitch/design.md"
+    },
+    "lean-ctx": {
+      "purpose": "Context runtime — compressed file reads, shell commands, semantic search with ~95% token reduction",
+      "tools": ["ctx_read", "ctx_shell", "ctx_search", "ctx_tree"],
+      "ref": "rules/lean-ctx.md"
+    },
+    "grepai": {
+      "purpose": "Semantic code search with call-graph tracing — find callers, callees, and related code across the repo",
+      "tools": ["grepai_search", "grepai_trace_callers", "grepai_trace_callees", "grepai_rpg_search"],
+      "ref": "docs/workflows/BASE_HANDBOOK.md"
+    },
+    "memory": {
+      "purpose": "Cross-session entity graph — persist named concepts, relationships, and observations across agent runs",
+      "tools": ["create_entities", "add_observations", "search_nodes", "read_graph"],
+      "ref": "docs/workflows/agents.md"
     }
   }
 }
