@@ -544,25 +544,29 @@ tasks:
           (silent 404/stale-CSS false signals, hit twice).
         - Component file header comment must CLOSE (`*/`) — an unclosed
           comment swallows the whole file silently in every environment.
-  - [ ] C1.2 components/cta-banner.css — source partial
-        themes/beaver/layouts/partials/page/cta.html; node ids: 3h8mj6w59d2c
-        9hf5wet31z02 d96zqbnxltuj fa7hjib92cpv fdsvgxpowi03 rujwd9mzxche
-        toa2hwegbp4q. Enumerate consumers first:
-        `grep -l 'rujwd9mzxche\|fa7hjib92cpv' themes/beaver/assets/css/pages/*.css`
-        Then same per-consumer commit protocol as C1.1.
-  - [ ] C1.3 components/header-cta.css — the bf72bba header-CTA trio (3 rules)
-        ported at R5–R8c into pages/use-cases.css, clients.css, services.css
-        (see ownership map, bf72bba row). Same protocol; also check
-        about-us/single-service criticals which carried byte-identical copies
-        (critical/ files are NOT in scope for the swap — inline critical CSS
-        has no @import pipeline position; leave them, note for C4 dedup).
-  - [ ] C1.4 Evidence + docs: per-bundle gzip before/after table in the PR
-        (expect ±0); add "affects pages:" header comments to the three new
-        component files AND to each touched pages/*.css (criterion 4);
-        update css-bundle-ownership-map.md (slice members now include
-        components/* via @import).
-  - [ ] C1.5 PR: one bundled PR, per-commit description, both suites green
-        on head, tracker UPDATE LOG entry.
+  - [x] C1.2 components/cta-banner.css — DONE 2026-07-19 (3 commits, via
+        bin/css-split). Real consumer count: 6, not 8 (clients + contact-us
+        carry NO cta node rules). 10-rule intersection; zero
+        selector+property ties (order-safe). VARIANCE: rujwd9mzxche
+        rich-text pair kept in 5 pages (services has none); about-us keeps
+        its fdsvgxpowi03 spacing cluster. Gates: only-target fingerprints,
+        decl-sets identical per bundle.
+  - [x] C1.3 components/header-cta.css — DONE 2026-07-19 (1 commit).
+        Trio byte-identical across use-cases/clients/services; node id
+        keeps the FL "contat" typo (rename = C2). critical/ copies left
+        for C4 dedup per plan.
+  - [x] C1.4 Evidence: per-bundle gzip after all three extractions
+        (vs pre-C1 baseline): about-us 14971→14927, clients 18651→18629,
+        services 19943→19942, homepage 26644→26645, single-service
+        19066→19099, single-use-cases 18845→18863, use-cases 16965→16978 —
+        all ±35B noise as designed. fl-node refs in pages/*.css:
+        ~3,700 → 2,834. Components carry "affects pages:" headers;
+        ownership map updated (components/ slice members).
+  - [x] C1.5 PR #371 (branch css-migration/c1-shared-components) — also
+        carries the fast-gate infra (bin/qtest, bin/css-split,
+        bin/dtest-all, churn-based test:critical), the dead-import +
+        never-shipped-orphan cleanups, the flaky careers_page test
+        deletion, and the free_consultation gform mask + re-baseline.
 
 blockers: NONE — C1.1 SHIPPED (9 commits + tooling, 2026-07-19); C1.2/C1.3
   next via bin/css-split. Known PRE-EXISTING test:all failures (master-level,
