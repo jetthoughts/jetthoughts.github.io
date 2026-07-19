@@ -3405,620 +3405,10 @@ img.mfp-img {
   flex: 1;
 }
 @mixin responsive-visibility dxali8vntcr0;
-.home-service-cto-box .pp-infobox-title-wrapper .pp-infobox-title {
-  color: #ffffff;
-  margin-top: 30px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-cto-box .pp-infobox-title-wrapper .pp-infobox-title a {
-  color: #ffffff;
-}
-
-
-.home-service-cto-box .pp-infobox-description {
-  color: #ffffff;
-  margin-top: 15px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-cto-box .pp-infobox .pp-infobox-title-prefix:hover {
-}
-
-
-.home-service-cto-box .pp-infobox .pp-infobox-title:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-cto-box .pp-infobox .pp-infobox-title a:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-cto-box .pp-infobox .pp-infobox-description:hover {
-  color: var(--color-dark);
-}
-.home-service-cto-box .pp-infobox-icon-inner span.pp-icon, .home-service-cto-box .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
-}
-
-
-.home-service-cto-box .pp-infobox-wrap .pp-infobox {
-  background: rgba(255, 255, 255, 0);
-  text-align: left;
-}
-
-
-.home-service-cto-box .pp-infobox:hover {
-  background: #ffffff;
-}
-
-
-.home-service-cto-box .pp-infobox .pp-more-link {
-  color: #ffffff;
-  background-color: rgba(255, 0, 0, 0);
-  text-decoration: none;
-  text-align: center;
-  margin: 0 auto;
-}
-
-
-.home-service-cto-box .pp-infobox .pp-more-link:hover {
-  color: var(--color-primary);
-  background-color: rgba(255, 0, 0, 0);
-}
-
-
-.home-service-cto-box .pp-infobox .pp-more-link .pp-button-icon {
-  font-size: 22px;
-  color: #ffffff;
-}
-
-
-.home-service-cto-box .pp-infobox .pp-more-link:hover .pp-button-icon {
-  color: var(--color-primary);
-}
-
-
-.home-service-cto-box .pp-infobox .pp-more-link .pp-button-icon-left {
-  margin-right: 15px;
-}
-
-
-.home-service-cto-box .pp-infobox .pp-more-link .pp-button-icon-right {
-  margin-left: 15px;
-}
-.fl-builder-content .home-service-cto-box .pp-infobox-image img {
-  width: 36px;
-}
-
-
-.home-service-cto-box .pp-infobox {
-  padding-top: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
-}
-
-
-.home-service-cto-box .pp-more-link {
-  font-family: var(--font-system-ui);
-  font-weight: 700;
-}
-
-
-.home-service-cto-box .pp-infobox .pp-more-link {
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  margin-top: 32px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-}
 @mixin responsive-visibility 075ztwhd3cxn;
-.home-service-web-dev-box .pp-infobox-title-wrapper .pp-infobox-title {
-  color: #ffffff;
-  margin-top: 30px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-web-dev-box .pp-infobox-title-wrapper .pp-infobox-title a {
-  color: #ffffff;
-}
-
-
-.home-service-web-dev-box .pp-infobox-description {
-  color: #ffffff;
-  margin-top: 15px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-web-dev-box .pp-infobox .pp-infobox-title-prefix:hover {
-}
-
-
-.home-service-web-dev-box .pp-infobox .pp-infobox-title:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-web-dev-box .pp-infobox .pp-infobox-title a:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-web-dev-box .pp-infobox .pp-infobox-description:hover {
-  color: var(--color-dark);
-}
-.home-service-web-dev-box .pp-infobox-icon-inner span.pp-icon, .home-service-web-dev-box .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
-}
-
-
-.home-service-web-dev-box .pp-infobox-wrap .pp-infobox {
-  background: rgba(255, 255, 255, 0);
-  text-align: left;
-}
-
-
-.home-service-web-dev-box .pp-infobox:hover {
-  background: #ffffff;
-}
-
-
-.home-service-web-dev-box .pp-infobox .pp-more-link {
-  color: #ffffff;
-  background-color: rgba(255, 0, 0, 0);
-  text-decoration: none;
-  text-align: center;
-  margin: 0 auto;
-}
-
-
-.home-service-web-dev-box .pp-infobox .pp-more-link:hover {
-  color: var(--color-primary);
-  background-color: rgba(255, 0, 0, 0);
-}
-
-
-.home-service-web-dev-box .pp-infobox .pp-more-link .pp-button-icon {
-  font-size: 22px;
-  color: #ffffff;
-}
-
-
-.home-service-web-dev-box .pp-infobox .pp-more-link:hover .pp-button-icon {
-  color: var(--color-primary);
-}
-
-
-.home-service-web-dev-box .pp-infobox .pp-more-link .pp-button-icon-left {
-  margin-right: 15px;
-}
-
-
-.home-service-web-dev-box .pp-infobox .pp-more-link .pp-button-icon-right {
-  margin-left: 15px;
-}
-.fl-builder-content .home-service-web-dev-box .pp-infobox-image img {
-  width: 36px;
-}
-
-
-.home-service-web-dev-box .pp-infobox {
-  padding-top: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
-}
-
-
-.home-service-web-dev-box .pp-more-link {
-  font-family: var(--font-system-ui);
-  font-weight: 700;
-}
-
-
-.home-service-web-dev-box .pp-infobox .pp-more-link {
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  margin-top: 32px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-}
 @mixin responsive-visibility lajty926uxf5;
-.home-service-qa-box .pp-infobox-title-wrapper .pp-infobox-title {
-  color: #ffffff;
-  margin-top: 30px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-qa-box .pp-infobox-title-wrapper .pp-infobox-title a {
-  color: #ffffff;
-}
-
-
-.home-service-qa-box .pp-infobox-description {
-  color: #ffffff;
-  margin-top: 15px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-qa-box .pp-infobox .pp-infobox-title-prefix:hover {
-}
-
-
-.home-service-qa-box .pp-infobox .pp-infobox-title:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-qa-box .pp-infobox .pp-infobox-title a:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-qa-box .pp-infobox .pp-infobox-description:hover {
-  color: var(--color-dark);
-}
-.home-service-qa-box .pp-infobox-icon-inner span.pp-icon, .home-service-qa-box .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
-}
-
-
-.home-service-qa-box .pp-infobox-wrap .pp-infobox {
-  background: rgba(255, 255, 255, 0);
-  text-align: left;
-}
-
-
-.home-service-qa-box .pp-infobox:hover {
-  background: #ffffff;
-}
-
-
-.home-service-qa-box .pp-infobox .pp-more-link {
-  color: #ffffff;
-  background-color: rgba(255, 0, 0, 0);
-  text-decoration: none;
-  text-align: center;
-  margin: 0 auto;
-}
-
-
-.home-service-qa-box .pp-infobox .pp-more-link:hover {
-  color: var(--color-primary);
-  background-color: rgba(255, 0, 0, 0);
-}
-
-
-.home-service-qa-box .pp-infobox .pp-more-link .pp-button-icon {
-  font-size: 22px;
-  color: #ffffff;
-}
-
-
-.home-service-qa-box .pp-infobox .pp-more-link:hover .pp-button-icon {
-  color: var(--color-primary);
-}
-
-
-.home-service-qa-box .pp-infobox .pp-more-link .pp-button-icon-left {
-  margin-right: 15px;
-}
-
-
-.home-service-qa-box .pp-infobox .pp-more-link .pp-button-icon-right {
-  margin-left: 15px;
-}
-.fl-builder-content .home-service-qa-box .pp-infobox-image img {
-  width: 36px;
-}
-
-
-.home-service-qa-box .pp-infobox {
-  padding-top: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
-}
-
-
-.home-service-qa-box .pp-more-link {
-  font-family: var(--font-system-ui);
-  font-weight: 700;
-}
-
-
-.home-service-qa-box .pp-infobox .pp-more-link {
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  margin-top: 32px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-}
 @mixin responsive-visibility do5fjakv8b29;
-.home-service-product-box .pp-infobox-title-wrapper .pp-infobox-title {
-  color: #ffffff;
-  margin-top: 30px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-product-box .pp-infobox-title-wrapper .pp-infobox-title a {
-  color: #ffffff;
-}
-
-
-.home-service-product-box .pp-infobox-description {
-  color: #ffffff;
-  margin-top: 15px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-product-box .pp-infobox .pp-infobox-title-prefix:hover {
-}
-
-
-.home-service-product-box .pp-infobox .pp-infobox-title:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-product-box .pp-infobox .pp-infobox-title a:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-product-box .pp-infobox .pp-infobox-description:hover {
-  color: var(--color-dark);
-}
-.home-service-product-box .pp-infobox-icon-inner span.pp-icon, .home-service-product-box .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
-}
-
-
-.home-service-product-box .pp-infobox-wrap .pp-infobox {
-  background: rgba(255, 255, 255, 0);
-  text-align: left;
-}
-
-
-.home-service-product-box .pp-infobox:hover {
-  background: #ffffff;
-}
-
-
-.home-service-product-box .pp-infobox .pp-more-link {
-  color: #ffffff;
-  background-color: rgba(255, 0, 0, 0);
-  text-decoration: none;
-  text-align: center;
-  margin: 0 auto;
-}
-
-
-.home-service-product-box .pp-infobox .pp-more-link:hover {
-  color: var(--color-primary);
-  background-color: rgba(255, 0, 0, 0);
-}
-
-
-.home-service-product-box .pp-infobox .pp-more-link .pp-button-icon {
-  font-size: 22px;
-  color: #ffffff;
-}
-
-
-.home-service-product-box .pp-infobox .pp-more-link:hover .pp-button-icon {
-  color: var(--color-primary);
-}
-
-
-.home-service-product-box .pp-infobox .pp-more-link .pp-button-icon-left {
-  margin-right: 15px;
-}
-
-
-.home-service-product-box .pp-infobox .pp-more-link .pp-button-icon-right {
-  margin-left: 15px;
-}
-.fl-builder-content .home-service-product-box .pp-infobox-image img {
-  width: 36px;
-}
-
-
-.home-service-product-box .pp-infobox {
-  padding-top: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
-}
-
-
-.home-service-product-box .pp-more-link {
-  font-family: var(--font-system-ui);
-  font-weight: 700;
-}
-
-
-.home-service-product-box .pp-infobox .pp-more-link {
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  margin-top: 32px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-}
 @mixin responsive-visibility 3eq5kcmfz0an;
-.home-service-staffing-box .pp-infobox-title-wrapper .pp-infobox-title {
-  color: #ffffff;
-  margin-top: 30px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-staffing-box .pp-infobox-title-wrapper .pp-infobox-title a {
-  color: #ffffff;
-}
-
-
-.home-service-staffing-box .pp-infobox-description {
-  color: #ffffff;
-  margin-top: 15px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-staffing-box .pp-infobox .pp-infobox-title-prefix:hover {
-}
-
-
-.home-service-staffing-box .pp-infobox .pp-infobox-title:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-staffing-box .pp-infobox .pp-infobox-title a:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-staffing-box .pp-infobox .pp-infobox-description:hover {
-  color: var(--color-dark);
-}
-.home-service-staffing-box .pp-infobox-icon-inner span.pp-icon, .home-service-staffing-box .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
-}
-
-
-.home-service-staffing-box .pp-infobox-wrap .pp-infobox {
-  background: rgba(255, 255, 255, 0);
-  text-align: left;
-}
-
-
-.home-service-staffing-box .pp-infobox:hover {
-  background: #ffffff;
-}
-
-
-.home-service-staffing-box .pp-infobox .pp-more-link {
-  color: #ffffff;
-  background-color: rgba(255, 0, 0, 0);
-  text-decoration: none;
-  text-align: center;
-  margin: 0 auto;
-}
-
-
-.home-service-staffing-box .pp-infobox .pp-more-link:hover {
-  color: var(--color-primary);
-  background-color: rgba(255, 0, 0, 0);
-}
-
-
-.home-service-staffing-box .pp-infobox .pp-more-link .pp-button-icon {
-  font-size: 22px;
-  color: #ffffff;
-}
-
-
-.home-service-staffing-box .pp-infobox .pp-more-link:hover .pp-button-icon {
-  color: var(--color-primary);
-}
-
-
-.home-service-staffing-box .pp-infobox .pp-more-link .pp-button-icon-left {
-  margin-right: 15px;
-}
-
-
-.home-service-staffing-box .pp-infobox .pp-more-link .pp-button-icon-right {
-  margin-left: 15px;
-}
-.fl-builder-content .home-service-staffing-box .pp-infobox-image img {
-  width: 36px;
-}
-
-
-.home-service-staffing-box .pp-infobox {
-  padding-top: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
-}
-
-
-.home-service-staffing-box .pp-more-link {
-  font-family: var(--font-system-ui);
-  font-weight: 700;
-}
-
-
-.home-service-staffing-box .pp-infobox .pp-more-link {
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  margin-top: 32px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-}
 .fl-col-group-equal-height .home-service-recruiting-box.fl-visible-large, .fl-col-group-equal-height .home-service-recruiting-box.fl-visible-medium, .fl-col-group-equal-height .home-service-recruiting-box.fl-visible-mobile {
   display: none;
 }
@@ -4086,128 +3476,6 @@ img.mfp-img {
   .fl-col-group-equal-height .home-service-recruiting-box.fl-visible-mobile {
     display: flex;
   }
-}
-.home-service-recruiting-box .pp-infobox-title-wrapper .pp-infobox-title {
-  color: #ffffff;
-  margin-top: 30px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-recruiting-box .pp-infobox-title-wrapper .pp-infobox-title a {
-  color: #ffffff;
-}
-
-
-.home-service-recruiting-box .pp-infobox-description {
-  color: #ffffff;
-  margin-top: 15px;
-  margin-bottom: 0px;
-}
-
-
-.home-service-recruiting-box .pp-infobox .pp-infobox-title-prefix:hover {
-}
-
-
-.home-service-recruiting-box .pp-infobox .pp-infobox-title:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-recruiting-box .pp-infobox .pp-infobox-title a:hover {
-  color: var(--color-dark);
-}
-
-
-.home-service-recruiting-box .pp-infobox .pp-infobox-description:hover {
-  color: var(--color-dark);
-}
-.home-service-recruiting-box .pp-infobox-icon-inner span.pp-icon, .home-service-recruiting-box .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
-}
-
-
-.home-service-recruiting-box .pp-infobox-wrap .pp-infobox {
-  background: rgba(255, 255, 255, 0);
-  text-align: left;
-}
-
-
-.home-service-recruiting-box .pp-infobox:hover {
-  background: #ffffff;
-}
-
-
-.home-service-recruiting-box .pp-infobox .pp-more-link {
-  color: #ffffff;
-  background-color: rgba(255, 0, 0, 0);
-  text-decoration: none;
-  text-align: center;
-  margin: 0 auto;
-}
-
-
-.home-service-recruiting-box .pp-infobox .pp-more-link:hover {
-  color: var(--color-primary);
-  background-color: rgba(255, 0, 0, 0);
-}
-
-
-.home-service-recruiting-box .pp-infobox .pp-more-link .pp-button-icon {
-  font-size: 22px;
-  color: #ffffff;
-}
-
-
-.home-service-recruiting-box .pp-infobox .pp-more-link:hover .pp-button-icon {
-  color: var(--color-primary);
-}
-
-
-.home-service-recruiting-box .pp-infobox .pp-more-link .pp-button-icon-left {
-  margin-right: 15px;
-}
-
-
-.home-service-recruiting-box .pp-infobox .pp-more-link .pp-button-icon-right {
-  margin-left: 15px;
-}
-.fl-builder-content .home-service-recruiting-box .pp-infobox-image img {
-  width: 36px;
-}
-
-
-.home-service-recruiting-box .pp-infobox {
-  padding-top: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
-}
-
-
-.home-service-recruiting-box .pp-more-link {
-  font-family: var(--font-system-ui);
-  font-weight: 700;
-}
-
-
-.home-service-recruiting-box .pp-infobox .pp-more-link {
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  margin-top: 32px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
 }
 .fl-builder-content .home-clients-eyebrow .fl-module-content .fl-rich-text, .fl-builder-content .home-clients-eyebrow .fl-module-content .fl-rich-text * {
   color: var(--color-primary);
@@ -8247,4 +7515,148 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
     padding-top: 20px;
     margin-top: 0;
   }
+}
+/* Page card core - shared by the 6 home-service-card instances (Phase E-2);
+   per-instance keeps stay under their own classes and win by later position. */
+
+.home-service-card .pp-infobox-title-wrapper .pp-infobox-title {
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+
+
+.home-service-card .pp-infobox-title-wrapper .pp-infobox-title a {
+  color: #ffffff;
+}
+
+
+
+.home-service-card .pp-infobox-description {
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+
+
+.home-service-card .pp-infobox .pp-infobox-title-prefix:hover {
+}
+
+
+
+.home-service-card .pp-infobox .pp-infobox-title:hover {
+  color: var(--color-dark);
+}
+
+
+
+.home-service-card .pp-infobox .pp-infobox-title a:hover {
+  color: var(--color-dark);
+}
+
+
+
+.home-service-card .pp-infobox .pp-infobox-description:hover {
+  color: var(--color-dark);
+}
+
+.home-service-card .pp-infobox-icon-inner span.pp-icon, .home-service-card .pp-infobox-image img {
+  border-top-left-radius: px;
+  border-top-right-radius: px;
+  border-bottom-left-radius: px;
+  border-bottom-right-radius: px;
+}
+
+
+
+.home-service-card .pp-infobox-wrap .pp-infobox {
+  background: rgba(255, 255, 255, 0);
+  text-align: left;
+}
+
+
+
+.home-service-card .pp-infobox:hover {
+  background: #ffffff;
+}
+
+
+
+.home-service-card .pp-infobox .pp-more-link {
+  color: #ffffff;
+  background-color: rgba(255, 0, 0, 0);
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+.home-service-card .pp-infobox .pp-more-link:hover {
+  color: var(--color-primary);
+  background-color: rgba(255, 0, 0, 0);
+}
+
+
+
+.home-service-card .pp-infobox .pp-more-link .pp-button-icon {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+
+
+.home-service-card .pp-infobox .pp-more-link:hover .pp-button-icon {
+  color: var(--color-primary);
+}
+
+
+
+.home-service-card .pp-infobox .pp-more-link .pp-button-icon-left {
+  margin-right: 15px;
+}
+
+
+
+.home-service-card .pp-infobox .pp-more-link .pp-button-icon-right {
+  margin-left: 15px;
+}
+
+.fl-builder-content .home-service-card .pp-infobox-image img {
+  width: 36px;
+}
+
+
+
+.home-service-card .pp-infobox {
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+
+
+.home-service-card .pp-more-link {
+  font-family: var(--font-system-ui);
+  font-weight: 700;
+}
+
+
+
+.home-service-card .pp-infobox .pp-more-link {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-top: 32px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
 }

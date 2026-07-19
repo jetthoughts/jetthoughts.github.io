@@ -55,6 +55,11 @@ const purgecss = createPurgeCss({
       // runtime classes like pp-swiper-button/pp-review-image are never in
       // hugo_stats.json, so without this the renamed rules get purged).
       /^testimonials-/, /^cta-banner/, /^jt-info-card/, /^career-/, /^clients-/,
+      // jt-reviews-box restoration (decision: Claude per Paul delegation
+      // 2026-07-19): the intended testimonial-slider design (arrow nav,
+      // card refinements) was silently purged because pp-swiper/pp-review
+      // runtime classes had no shield. Restored deliberately.
+      /^pp-swiper/, /^pp-review/,
       /^notfound-/, /^use-case-/, /^services-/, /^service-/, /^about-/, /^home-/, /^careers-/,
       // Brand CTA buttons — preserve any selector mentioning these classes.
       // Standard safelist didn't catch tag+class compound selectors like

@@ -47,9 +47,15 @@ PAGE_TESTS = {
 
 # extend as C1 adds components
 TESTIMONIALS_CONSUMERS = %w[about-us clients services homepage single-use-cases single-service use-cases].freeze
+CARD_PAGES = %w[homepage services about-us careers].freeze
+CTA_PAGES = %w[about-us homepage services single-service single-use-cases use-cases].freeze
 COMPONENT_CONSUMERS = {
   "themes/beaver/assets/css/components/testimonials.css" => TESTIMONIALS_CONSUMERS,
-  "themes/beaver/layouts/partials/page/testimonials.html" => TESTIMONIALS_CONSUMERS
+  "themes/beaver/layouts/partials/page/testimonials.html" => TESTIMONIALS_CONSUMERS,
+  "themes/beaver/assets/css/components/info-card.css" => CARD_PAGES,
+  "themes/beaver/assets/css/components/cta-banner.css" => CTA_PAGES,
+  "themes/beaver/layouts/partials/page/cta.html" => CTA_PAGES,
+  "themes/beaver/assets/css/components/header-cta.css" => %w[use-cases clients services]
 }.freeze
 
 def pages_for(file)
