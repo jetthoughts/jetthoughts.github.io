@@ -4,7 +4,7 @@ title: Hugo build (bin/hugo-build)
 description: Canonical build + validation entry point; runs Hugo plus the course validators including the banned-strings ratchet.
 resource: bin/hugo-build
 tags: [build, hugo, validation]
-timestamp: 2026-07-13T00:00:00Z
+timestamp: 2026-07-19T12:00:00Z
 ---
 
 `bin/hugo-build` builds the site into `_dest/public-dev/` (repo-root
@@ -29,3 +29,13 @@ before commit.
 ```bash
 bin/hugo-build            # build + validate
 ```
+
+# PurgeCSS cold-start race (fixed 2026-07-19)
+
+hugo_stats.json only exists AFTER a build; a cold runner's first
+production pass purges against absent stats and can drop live classes
+(shipped a visible skip-link site-wide; earlier forced the fl-button
+safelist entries). Guards: bin/hugo-build runs a warm-up pass when
+production + stats missing; the deploy workflow has an explicit warm-up
+step. sr-only/skip-link also safelisted as defense-in-depth. Never
+trust a first cold production build's CSS.
