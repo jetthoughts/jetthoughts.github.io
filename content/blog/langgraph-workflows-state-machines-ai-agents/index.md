@@ -1,6 +1,6 @@
 ---
-title: "Mastering LangGraph: Building Complex AI Agent Workflows with State Machines"
-description: "Learn to build production-ready AI agent workflows with LangGraph's state machines. Master node caching, deferred nodes, human-in-the-loop patterns, and map-reduce workflows with complete code examples."
+title: "LangGraph Tutorial: Build AI Agents with State Machines (Python)"
+description: "Complete LangGraph tutorial with working Python examples. Learn nodes, edges, checkpoints, human-in-the-loop, and map-reduce patterns. From first graph to production agent."
 date: 2025-10-15
 draft: false
 tags:
@@ -17,6 +17,12 @@ metatags:
   keywords: "langgraph tutorial, langgraph state machines, langchain workflows, ai agents, workflow automation, human-in-the-loop, map-reduce patterns"
 slug: langgraph-workflows-state-machines-ai-agents
 ---
+
+## TL;DR
+
+LangGraph is a Python library for building AI agent workflows as state machines. You define nodes (actions), edges (transitions), and checkpoints (save points) to create complex, production-ready agents. This post covers node caching, deferred nodes, human-in-the-loop patterns, map-reduce workflows, and streaming output — with complete, runnable Python code.
+
+**Quick start**: `pip install langgraph` -> define your `StateGraph` -> add nodes and edges -> `graph.invoke()`
 
 ## The agent orchestration problem
 

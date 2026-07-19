@@ -1,6 +1,6 @@
 ---
-title: "CrewAI Hierarchical Agents: Manager-Worker Orchestration"
-description: "Build hierarchical CrewAI crews with a manager agent delegating to specialized workers. Code examples for orchestration, task routing, and current patterns."
+title: "CrewAI Hierarchical Agents: Manager-Worker Pattern"
+description: "Step-by-step CrewAI tutorial with working Python code. Set up a manager agent, delegate tasks to specialized workers, handle failures. Includes v0.98+ patterns."
 date: "2025-10-15"
 created_at: "2025-10-15T17:20:00Z"
 draft: false
@@ -17,6 +17,12 @@ metatags:
   description: "Build scalable multi-agent AI systems with CrewAI. Step-by-step tutorial covering agent specialization, task orchestration, and production deployment patterns for customer support, content creation, and financial analysis."
   image: cover.png
 ---
+
+## TL;DR
+
+CrewAI lets you build multi-agent systems where a manager agent delegates tasks to specialized worker agents. This post walks through setting up hierarchical crews with working Python code — defining agents, tasks, routing logic, and failure handling. Covers v0.98+ patterns for production use.
+
+**Quick start**: `pip install crewai` → define `Agent` and `Task` objects → assemble a `Crew` → `crew.kickoff()`
 
 CrewAI is a Python framework for building manager-worker agent systems. You define agents by role, goal, and backstory, then assemble them into "crews" that run sequential or hierarchical workflows. This post walks through current CrewAI patterns for building production-grade crews, with code for three real workflows (customer support, content pipelines, financial analysis) and a FastAPI deployment example.
 

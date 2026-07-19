@@ -1,3 +1,12 @@
+---
+type: Reference
+title: "ICP Journey SIPOC: Sam's Path Through the Course"
+description: Visual Mermaid flowchart of Sam's full journey through all 25 lessons, gate thresholds, branch paths, and artifact handoffs. Machine-readable and human-readable.
+resource: docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/30.05-icp-journey-sipoc.md
+tags: [course, architecture, icp, journey-map]
+timestamp: 2026-07-18T00:00:00Z
+---
+
 # 30.05 — ICP Journey SIPOC: Sam's Path Through the Course
 
 **Status:** Canonical journey map — agent-parseable and human-readable

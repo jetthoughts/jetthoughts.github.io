@@ -1,6 +1,6 @@
 ---
-title: "Laravel 11 Migration Guide: Complete Production Deployment Strategies"
-description: "Master the migration from Laravel 10 to Laravel 11. Complete guide with breaking changes analysis, step-by-step migration, testing strategies, and zero-downtime production deployment."
+title: "Laravel 11 Upgrade Guide: Step-by-Step Migration"
+description: "Upgrade Laravel 10 to 11 without downtime. Breaking changes checklist, step-by-step migration commands, testing strategy, and production deployment plan."
 date: 2025-10-27
 draft: false
 tags: ["laravel", "php", "migration", "deployment", "laravel11"]
@@ -10,6 +10,12 @@ cover_image: "cover.png"
 metatags:
   image: cover.png
 ---
+
+## TL;DR
+
+Laravel 11 removes boilerplate: no more `Kernel.php` files, no default service providers, no `config/app.php` aliases. This guide walks through every breaking change with a step-by-step migration checklist, zero-downtime deployment strategy, and testing plan. For apps running Laravel 10 in production.
+
+**Quick start**: `composer require laravel/framework:^11.0` → run `php artisan migrate` on staging → update middleware to `bootstrap/app.php` → remove `$middleware` and `$routeMiddleware` arrays
 
 Your Laravel 10 app has six service providers, three kernel files, and twenty config files you haven't touched since scaffolding. Every new developer spends their first day asking "which of these do I actually need?" The answer, in most cases: about half.
 
