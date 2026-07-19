@@ -1,24 +1,24 @@
 /* Page-specific row styling */
-.fl-node-ec25np07hf63 > .fl-row-content-wrap {
+.clients-hero > .fl-row-content-wrap {
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-attachment: scroll;
   background-size: cover;
 }
-.fl-node-ec25np07hf63 .fl-builder-bottom-edge-layer {
+.clients-hero .fl-builder-bottom-edge-layer {
   bottom: -0.5%;
 }
-.fl-node-ec25np07hf63 > .fl-row-content-wrap {
+.clients-hero > .fl-row-content-wrap {
   padding-top: 200px;
   padding-bottom: 0;
 }
 @media (max-width: 1115px) {
-  .fl-node-ec25np07hf63.fl-row > .fl-row-content-wrap {
+  .clients-hero.fl-row > .fl-row-content-wrap {
     padding-top: 150px;
   }
 }
 @media (max-width: 860px) {
-  .fl-node-ec25np07hf63.fl-row > .fl-row-content-wrap {
+  .clients-hero.fl-row > .fl-row-content-wrap {
     padding-top: 100px;
     padding-right: 20px;
     padding-bottom: 0;
@@ -210,7 +210,7 @@
   height: 24px;
 }
 
-.fl-node-ec25np07hf63 .fl-row-content {
+.clients-hero .fl-row-content {
   min-width: 0;
 }
 
