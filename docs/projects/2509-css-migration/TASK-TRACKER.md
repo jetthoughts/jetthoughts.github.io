@@ -461,7 +461,7 @@ follow_ups:
 
 ## 📅 PHASE C (CURRENT PLAN): Post-burn-down cleanup — sprints C1–C3
 
-**Phase Status**: 🔄 C1 ✅ (PR #371, merged) · C2 ✅ (PR pending) · C3 next
+**Phase Status**: ✅ C1 (PR #371) · C2 (PR #372) · C3 (PR #374) · C4 page re-keys (PR pending) - criterion 2 markup side COMPLETE: zero hashed fl-node classes in any template
 **Source**: Spec §"Phase C — post-burn-down cleanup" (revision 2026-07-18) —
 read it FIRST; it defines the gate stack, the preflight rule, the
 dedup-trap warning, and the non-goals (no DOM restructuring, no rule-content
