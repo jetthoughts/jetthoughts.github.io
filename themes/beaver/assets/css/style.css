@@ -176,11 +176,6 @@
   padding: 5px 10px;
   font-size: 16px;
 }
-
-input[type=submit]:disabled {
-  opacity: 0.25
-}
-
 .blog ol,
 .blog ul {
   padding-left: 24px;
@@ -287,12 +282,6 @@ input[type=submit]:disabled {
 #cta-contact_us .fl-col-content {
   padding-bottom: 60px;
 }
-
-/* Testimonials section consistent top spacing */
-.testimonial__header {
-  padding-top: 60px;
-}
-
 /* Hero headings consistent sizing across pages */
 .fl-row-bg-photo h1 .fl-heading-text,
 .fl-row-bg-color h1 .fl-heading-text {
