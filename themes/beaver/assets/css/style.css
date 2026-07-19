@@ -1,6 +1,6 @@
 /* affects pages: 15 bundles (site-wide) - see docs/projects/2509-css-migration/css-bundle-ownership-map.md
    Legacy shared layer (Phase C4 strangler target) - verify with bin/qtest before editing. */
-.fl-node-ha6dj4z7r51f:last-child > .fl-col-content {
+.home-proof-stat:last-child > .fl-col-content {
   border-right-width: 0;
 }
 
