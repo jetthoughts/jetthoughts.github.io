@@ -26,7 +26,7 @@ FONT_STACK = 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", ' 
   '"Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", ' \
   '"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
 
-Rule = Struct.new(:media, :text, :key)
+Rule = Struct.new(:media, :text, :key, :from, :to, :shell_from, :shell_to)
 
 def normalize(text, media)
   k = text.gsub(%r{/\*.*?\*/}m, "").gsub(/\s+/, "")
@@ -47,6 +47,7 @@ def parse(css, path)
   start = 0
   depth = 0
   media = nil
+  mstart = nil
   while i < n
     c = css[i]
     if c == "/" && css[i + 1] == "*"
@@ -57,7 +58,7 @@ def parse(css, path)
     case c
     when ";"
       if depth.zero? && media.nil?
-        rules << Rule.new(nil, css[start..i], :plain)
+        rules << Rule.new(nil, css[start..i], :plain, start, i)
         start = i + 1
       end
     when "{"
@@ -65,6 +66,7 @@ def parse(css, path)
         head = css[start...i].gsub(%r{/\*.*?\*/}m, "").gsub(/\s+/, " ").strip
         if media.nil? && head.start_with?("@media")
           media = head
+          mstart = start
           start = i + 1
           i += 1
           next
@@ -73,6 +75,12 @@ def parse(css, path)
       depth += 1
     when "}"
       if depth.zero? && media
+        rules.reverse_each do |r|
+          break unless r.media == media && r.shell_to.nil?
+
+          r.shell_from = mstart
+          r.shell_to = i
+        end
         media = nil
         start = i + 1
         i += 1
@@ -81,7 +89,7 @@ def parse(css, path)
       depth -= 1
       if depth.zero?
         text = css[start..i]
-        rules << Rule.new(media, text, normalize(text, media))
+        rules << Rule.new(media, text, normalize(text, media), start, i)
         start = i + 1
       end
     end
@@ -124,27 +132,35 @@ when "keys", "component", "remainder"
       end
       print t
       print "\n"
-    when "remainder"
-      next if member
-
-      if r.media
-        # re-wrap surviving media rules under their shell
-        if r.media != open_media
-          print "}\n" if open_media
-          print "#{r.media} {\n"
-          open_media = r.media
-        end
-        print r.text
-        print "\n"
-      else
-        print "}\n" if open_media
-        open_media = nil
-        print r.text
-        print "\n"
-      end
     end
   end
-  print "}\n" if open_media && %w[component remainder].include?(mode)
+  print "}\n" if open_media && mode == "component"
+
+  if mode == "remainder"
+    # cut removed spans from the ORIGINAL text (untouched regions stay
+    # byte-identical); a media shell loses its whole span only when ALL
+    # its inner rules are removed
+    cuts = []
+    rules.group_by { |r| r.shell_from }.each do |shell, group|
+      removed = group.select { |r| r.key != :plain && keyset.include?(r.key) }
+      next if removed.empty?
+
+      if shell && removed.size == group.size
+        cuts << [shell, group.first.shell_to]
+      else
+        removed.each { |r| cuts << [r.from, r.to] }
+      end
+    end
+    out = +""
+    pos = 0
+    cuts.sort_by(&:first).each do |from, to|
+      out << css[pos...from]
+      pos = to + 1
+      pos += 1 while css[pos] == "\n" && css[pos, 2] == "\n\n"  # collapse the gap a little
+    end
+    out << css[pos..]
+    print out
+  end
 else
   abort "css-split: unknown mode #{mode}"
 end
