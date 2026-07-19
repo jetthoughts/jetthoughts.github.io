@@ -27,11 +27,11 @@
 }
 
 /* Page-specific column widths */
-.fl-node-vwmqhyjlfs05 {
+.clients-hero-col {
   width: 100%;
 }
 @media (max-width: 860px) {
-  .fl-builder-content .fl-node-vwmqhyjlfs05 {
+  .fl-builder-content .clients-hero-col {
     width: 100% !important;
     max-width: none;
     clear: none;
