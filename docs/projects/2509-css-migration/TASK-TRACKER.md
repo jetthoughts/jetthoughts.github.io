@@ -461,7 +461,7 @@ follow_ups:
 
 ## 📅 PHASE C (CURRENT PLAN): Post-burn-down cleanup — sprints C1–C3
 
-**Phase Status**: 🔲 Not started (planned 2026-07-18)
+**Phase Status**: 🔄 C1 ✅ (PR #371, merged) · C2 ✅ (PR pending) · C3 next
 **Source**: Spec §"Phase C — post-burn-down cleanup" (revision 2026-07-18) —
 read it FIRST; it defines the gate stack, the preflight rule, the
 dedup-trap warning, and the non-goals (no DOM restructuring, no rule-content
@@ -579,6 +579,19 @@ estimated_commits: ~18-22 (2 preflight, 7+~5+3 swaps, docs)
 
 ### Sprint C2 — de-obfuscate the shared layer (criterion 2 start)
 
+**✅ SHIPPED 2026-07-19** (branch css-migration/c2-deobfuscate-shared, 21 commits):
+C2.1 all 10 testimonial nodes -> testimonials-* (incl. purge-safelist
+companion: /^testimonials-/ + /^cta-banner/ greedy entries replace the
+accidental /^fl-node/ shield for runtime pp-* classes); C2.2 all 7 CTA
+nodes -> cta-banner-* (swept across the partial + 6 inline template
+copies); C2.3 skin -> legacy-theme-skin.css (NAME AWAITING PAUL);
+C2.4 dynamic-404.css; C2.5 586.css masked-background deletion;
+C2.6 safe-edit headers. Gate held: every re-key byte-identical after
+guarded reverse substitution; renames fingerprint-identical.
+FOLLOW-UP for Paul: .jt-reviews-box swiper-arrow design has been
+silently purged in production (runtime classes, no shield) - restoring
+it is an intentional visual change needing a design decision.
+
 **Branch**: `css-migration/c2-deobfuscate-shared`
 **Depends on**: C1 merged (re-key each shared block once, not 7×).
 **Deliverable**: shared partials use semantic classes; zero hash-named CSS
@@ -597,15 +610,15 @@ tasks:
   - [ ] C2.2 Re-key cta partial — same protocol, ≈7 commits
         (cta-banner, cta-banner-heading, cta-banner-button, …) in
         partials/page/cta.html + components/cta-banner.css.
-  - [ ] C2.3 Rename skin-65eda28877e04.css → legacy-theme-skin.css (last
+  - [ ] C2.3 Rename legacy-theme-skin.css → legacy-theme-skin.css (last
         hash-named file; criterion 2). Enumerate ALL refs first:
-        `grep -rln 'skin-65eda28877e04' themes/ config/ | sort` (12+ template
+        `grep -rln 'legacy-theme-skin.css' themes/ config/ | sort` (12+ template
         slices at last count). git mv + sed all refs in ONE commit; file
         content untouched. Gate: every bundle's rule content identical
         (fingerprints change — concat input renamed — that is the ONLY
         expected diff). Name pre-approved? NO — flag in PR for Paul; rename
         is one-commit revertable if he prefers another name.
-  - [ ] C2.4 Rename dynamic-404-590.css → dynamic-404.css (node-id 590 is
+  - [ ] C2.4 Rename dynamic-404.css → dynamic-404.css (node-id 590 is
         retired). Refs: themes/beaver/layouts/404.html +
         partials/assets/homepage-css-resources.html. One commit, same gate
         as C2.3.
@@ -707,7 +720,7 @@ Authoritative table: css-bundle-ownership-map.md
 ```
 fl-node rules in pages/*.css:   ~3,700  (target: 0 — sprints C2/C3/C4)
 fl-* refs in templates:            604  (target: 0)
-Hash-named CSS files:                1  (skin-65eda28877e04.css; target: 0 — C2.3)
+Hash-named CSS files:                1  (legacy-theme-skin.css; target: 0 — C2.3)
 Dup lines between sibling pages: 55-70% (target: ~0 — C1)
 Re-measure commands:
   for f in themes/beaver/assets/css/pages/*.css; do grep -c 'fl-node-' "$f"; done
@@ -754,7 +767,7 @@ fcp_metrics:
   in the hand layer) are NOT met — the delta ports moved ~3,700 fl-node rules
   into pages/*.css, 604 fl-* refs remain in 14 templates, 55–70% of lines are
   byte-identical between sibling page files (shared-partial copies), and
-  skin-65eda28877e04.css is still hash-named.
+  legacy-theme-skin.css is still hash-named.
 - **Shipped**: spec revision (§"Phase C — post-burn-down cleanup": phase
   structure C1→C4, gate stack, preflight rule, non-goals) + this tracker's
   PHASE C section with agent-executable micro-commit task lists for sprints
@@ -1043,7 +1056,7 @@ further whole-file merges found.
 - **Landed**: orphaned use-cases-critical.css deleted (265 lines); 8 invalid
   mid-file @charset removed; css-variables foundation wired into the 4
   bundles that lacked it (blog-single, taxonomy list, not_found, course-single)
-- **ROLLED BACK**: skin-65eda28877e04.css font-stack extraction (6 stacks).
+- **ROLLED BACK**: legacy-theme-skin.css font-stack extraction (6 stacks).
   Root cause: postcss-delete-duplicate-css (production builds only) deletes
   the later of two byte-identical declarations; converting skin's body
   font-family to var() made it duplicate an earlier critical-CSS declaration,

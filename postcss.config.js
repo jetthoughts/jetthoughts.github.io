@@ -43,6 +43,11 @@ const purgecss = createPurgeCss({
 
     greedy: [
       /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/, /^technologies-component/, /^footer-component/, /^use-cases/,
+      // C2 de-obfuscation: semantic component prefixes inherit the greedy
+      // protection their selectors previously got from /^fl-node/ (PowerPack
+      // runtime classes like pp-swiper-button/pp-review-image are never in
+      // hugo_stats.json, so without this the renamed rules get purged).
+      /^testimonials-/, /^cta-banner/,
       // Brand CTA buttons — preserve any selector mentioning these classes.
       // Standard safelist didn't catch tag+class compound selectors like
       // `a.fl-button` on CI (produced blue pills instead of Ruby red).

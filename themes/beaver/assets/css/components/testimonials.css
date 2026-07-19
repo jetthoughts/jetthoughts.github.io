@@ -19,11 +19,11 @@
 
 
 
-.fl-node-zaerhibqp296 {
+.testimonials-quote-col {
   width: 100%;
 }@media (max-width: 860px) {
 
-  .fl-builder-content .fl-node-zaerhibqp296 {
+  .fl-builder-content .testimonials-quote-col {
     width: 100% !important;
     max-width: none;
     clear: none;
@@ -32,81 +32,81 @@
 
 
 
-.fl-node-zaerhibqp296 > .fl-col-content {
+.testimonials-quote-col > .fl-col-content {
   padding-top: 60px;
 }@media ( max-width: 860px ) {
 
-  .fl-node-zaerhibqp296.fl-col > .fl-col-content {
+  .testimonials-quote-col.fl-col > .fl-col-content {
     padding-top: 30px;
   }}
 
 
 
-.fl-builder-content .fl-node-byg0v6ftixrd .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-byg0v6ftixrd .fl-module-content .fl-rich-text * {
+.fl-builder-content .testimonials-label .fl-module-content .fl-rich-text, .fl-builder-content .testimonials-label .fl-module-content .fl-rich-text * {
   color: var(--color-primary);
 }
 
 
-.fl-builder-content .fl-node-byg0v6ftixrd .fl-rich-text, .fl-builder-content .fl-node-byg0v6ftixrd .fl-rich-text *:not(b, strong) {
+.fl-builder-content .testimonials-label .fl-rich-text, .fl-builder-content .testimonials-label .fl-rich-text *:not(b, strong) {
   font-weight: 600;
   text-align: center;
 }
 
 
-.fl-node-ud8jroeig5h2.fl-module-heading .fl-heading {
+.testimonials-heading.fl-module-heading .fl-heading {
   text-align: center;
 }
 
 
-.fl-node-ud8jroeig5h2 > .fl-module-content {
+.testimonials-heading > .fl-module-content {
   margin-top: 30px;
   margin-right: 100px;
   margin-left: 100px;
 }
 
 
-.fl-builder-content .fl-node-1i28o7dq3pcv .fl-rich-text, .fl-builder-content .fl-node-1i28o7dq3pcv .fl-rich-text *:not(b, strong) {
+.fl-builder-content .testimonials-subheading .fl-rich-text, .fl-builder-content .testimonials-subheading .fl-rich-text *:not(b, strong) {
   text-align: center;
 }
 
 
-.fl-node-1i28o7dq3pcv > .fl-module-content {
+.testimonials-subheading > .fl-module-content {
   margin-top: 20px;
 }@media ( max-width: 860px ) {
 
-  .fl-node-1i28o7dq3pcv.fl-module > .fl-module-content {
+  .testimonials-subheading.fl-module > .fl-module-content {
     margin-top: 15px;
   }}
 
 
 
-.fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text, .fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text *:not(b, strong) {
+.fl-builder-content .testimonials-rating .fl-rich-text, .fl-builder-content .testimonials-rating .fl-rich-text *:not(b, strong) {
   font-size: 20px;
   text-align: right;
 }@media (max-width: 860px) {
 
-  .fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text, .fl-builder-content .fl-node-c17gwsk2h8zy .fl-rich-text *:not(b, strong) {
+  .fl-builder-content .testimonials-rating .fl-rich-text, .fl-builder-content .testimonials-rating .fl-rich-text *:not(b, strong) {
     text-align: center;
   }}
 
 
 
-.fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text, .fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text *:not(b, strong) {
+.fl-builder-content .testimonials-rating-count .fl-rich-text, .fl-builder-content .testimonials-rating-count .fl-rich-text *:not(b, strong) {
   font-size: 16px;
   text-align: right;
 }@media (max-width: 860px) {
 
-  .fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text, .fl-builder-content .fl-node-d4wp9kxy1uav .fl-rich-text *:not(b, strong) {
+  .fl-builder-content .testimonials-rating-count .fl-rich-text, .fl-builder-content .testimonials-rating-count .fl-rich-text *:not(b, strong) {
     text-align: center;
   }}
 
 
 
-.fl-node-d4wp9kxy1uav > .fl-module-content {
+.testimonials-rating-count > .fl-module-content {
   margin-top: 10px;
 }@media (max-width: 860px) {
 
-  .fl-node-d4wp9kxy1uav > .fl-module-content {
+  .testimonials-rating-count > .fl-module-content {
     margin-top: 0px;
   }}
 
@@ -360,93 +360,93 @@
 }
 
 
-.fl-node-08kl1yzxeout .pp-reviews-wrapper {
+.testimonials-reviews .pp-reviews-wrapper {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review {
+.testimonials-reviews .pp-review {
   padding: 25px;
   background-color: #F5F6F8;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review:hover {
+.testimonials-reviews .pp-review:hover {
   background-color: #F5F6F8;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-header {
+.testimonials-reviews .pp-review-header {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-name {
+.testimonials-reviews .pp-review-name {
   margin-top: 25px;
   margin-bottom: 0px;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-title {
+.testimonials-reviews .pp-review-title {
   margin-top: 10px;
   margin-bottom: 0px;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-text {
+.testimonials-reviews .pp-review-text {
   margin-top: 35px;
   margin-bottom: 0px;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-link a {
+.testimonials-reviews .pp-review-link a {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-link a:hover {
+.testimonials-reviews .pp-review-link a:hover {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review:hover .pp-review-header {
+.testimonials-reviews .pp-review:hover .pp-review-header {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-image {
+.testimonials-reviews .pp-review-image {
   align-self: flex-start;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-image img {
+.testimonials-reviews .pp-review-image img {
   width: 36px;
   height: 36px;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-cite {
+.testimonials-reviews .pp-review-cite {
   margin-left: 10px;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-icon {
+.testimonials-reviews .pp-review-icon {
   align-self: flex-start;
 }
 
 
-.fl-node-08kl1yzxeout .swiper-pagination-bullet {
+.testimonials-reviews .swiper-pagination-bullet {
   background: #999999;
 }
 
 
-.fl-node-08kl1yzxeout .swiper-pagination-bullet-active {
+.testimonials-reviews .swiper-pagination-bullet-active {
   background: #000000;
 }
 
 
-.fl-node-08kl1yzxeout .pp-swiper-button svg {
+.testimonials-reviews .pp-swiper-button svg {
   width: 48px;
   height: 48px;
 }
 
 
-.fl-node-08kl1yzxeout .pp-swiper-button {
+.testimonials-reviews .pp-swiper-button {
   color: #000000;
   padding-left: 13px;
   padding-right: 13px;
@@ -456,247 +456,247 @@
 }
 
 
-.fl-node-08kl1yzxeout .pp-swiper-button:hover {
+.testimonials-reviews .pp-swiper-button:hover {
 }
 
 
-.fl-node-08kl1yzxeout .pp-swiper-button-prev {
+.testimonials-reviews .pp-swiper-button-prev {
 }
 
 
-.fl-node-08kl1yzxeout .pp-swiper-button-next {
+.testimonials-reviews .pp-swiper-button-next {
 }
 
 
-.fl-node-08kl1yzxeout .swiper-pagination-bullet {
+.testimonials-reviews .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border-radius: 100px;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review .pp-review-icon i {
+.testimonials-reviews .pp-review .pp-review-icon i {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review:hover .pp-review-icon i {
+.testimonials-reviews .pp-review:hover .pp-review-icon i {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review {
+.testimonials-reviews .pp-review-item-0 .pp-review {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover {
+.testimonials-reviews .pp-review-item-0 .pp-review:hover {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover .pp-review-header {
+.testimonials-reviews .pp-review-item-0 .pp-review:hover .pp-review-header {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review .pp-review-icon i {
+.testimonials-reviews .pp-review-item-0 .pp-review .pp-review-icon i {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover .pp-review-icon i {
+.testimonials-reviews .pp-review-item-0 .pp-review:hover .pp-review-icon i {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review-header {
+.testimonials-reviews .pp-review-item-0 .pp-review-header {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review-name {
+.testimonials-reviews .pp-review-item-0 .pp-review-name {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover .pp-review-name {
+.testimonials-reviews .pp-review-item-0 .pp-review:hover .pp-review-name {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review-title {
+.testimonials-reviews .pp-review-item-0 .pp-review-title {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover .pp-review-title {
+.testimonials-reviews .pp-review-item-0 .pp-review:hover .pp-review-title {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review-content {
+.testimonials-reviews .pp-review-item-0 .pp-review-content {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-0 .pp-review:hover .pp-review-content {
+.testimonials-reviews .pp-review-item-0 .pp-review:hover .pp-review-content {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review {
+.testimonials-reviews .pp-review-item-1 .pp-review {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover {
+.testimonials-reviews .pp-review-item-1 .pp-review:hover {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover .pp-review-header {
+.testimonials-reviews .pp-review-item-1 .pp-review:hover .pp-review-header {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review .pp-review-icon i {
+.testimonials-reviews .pp-review-item-1 .pp-review .pp-review-icon i {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover .pp-review-icon i {
+.testimonials-reviews .pp-review-item-1 .pp-review:hover .pp-review-icon i {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review-header {
+.testimonials-reviews .pp-review-item-1 .pp-review-header {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review-name {
+.testimonials-reviews .pp-review-item-1 .pp-review-name {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover .pp-review-name {
+.testimonials-reviews .pp-review-item-1 .pp-review:hover .pp-review-name {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review-title {
+.testimonials-reviews .pp-review-item-1 .pp-review-title {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover .pp-review-title {
+.testimonials-reviews .pp-review-item-1 .pp-review:hover .pp-review-title {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review-content {
+.testimonials-reviews .pp-review-item-1 .pp-review-content {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-1 .pp-review:hover .pp-review-content {
+.testimonials-reviews .pp-review-item-1 .pp-review:hover .pp-review-content {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review {
+.testimonials-reviews .pp-review-item-2 .pp-review {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover {
+.testimonials-reviews .pp-review-item-2 .pp-review:hover {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover .pp-review-header {
+.testimonials-reviews .pp-review-item-2 .pp-review:hover .pp-review-header {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review .pp-review-icon i {
+.testimonials-reviews .pp-review-item-2 .pp-review .pp-review-icon i {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover .pp-review-icon i {
+.testimonials-reviews .pp-review-item-2 .pp-review:hover .pp-review-icon i {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review-header {
+.testimonials-reviews .pp-review-item-2 .pp-review-header {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review-name {
+.testimonials-reviews .pp-review-item-2 .pp-review-name {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover .pp-review-name {
+.testimonials-reviews .pp-review-item-2 .pp-review:hover .pp-review-name {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review-title {
+.testimonials-reviews .pp-review-item-2 .pp-review-title {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover .pp-review-title {
+.testimonials-reviews .pp-review-item-2 .pp-review:hover .pp-review-title {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review-content {
+.testimonials-reviews .pp-review-item-2 .pp-review-content {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-2 .pp-review:hover .pp-review-content {
+.testimonials-reviews .pp-review-item-2 .pp-review:hover .pp-review-content {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review {
+.testimonials-reviews .pp-review-item-3 .pp-review {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover {
+.testimonials-reviews .pp-review-item-3 .pp-review:hover {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover .pp-review-header {
+.testimonials-reviews .pp-review-item-3 .pp-review:hover .pp-review-header {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review .pp-review-icon i {
+.testimonials-reviews .pp-review-item-3 .pp-review .pp-review-icon i {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover .pp-review-icon i {
+.testimonials-reviews .pp-review-item-3 .pp-review:hover .pp-review-icon i {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review-header {
+.testimonials-reviews .pp-review-item-3 .pp-review-header {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review-name {
+.testimonials-reviews .pp-review-item-3 .pp-review-name {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover .pp-review-name {
+.testimonials-reviews .pp-review-item-3 .pp-review:hover .pp-review-name {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review-title {
+.testimonials-reviews .pp-review-item-3 .pp-review-title {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover .pp-review-title {
+.testimonials-reviews .pp-review-item-3 .pp-review:hover .pp-review-title {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review-content {
+.testimonials-reviews .pp-review-item-3 .pp-review-content {
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-item-3 .pp-review:hover .pp-review-content {
+.testimonials-reviews .pp-review-item-3 .pp-review:hover .pp-review-content {
 }
 
 
-.fl-node-08kl1yzxeout .pp-rating {
+.testimonials-reviews .pp-rating {
   text-align: left;
 }
 
 
-.fl-node-08kl1yzxeout .pp-rating i {
+.testimonials-reviews .pp-rating i {
   font-size: 30px;
   color: #efecdc;
 }
 
 
-.fl-node-08kl1yzxeout .pp-rating i:before {
+.testimonials-reviews .pp-rating i:before {
   color: #f0ad4e;
 }
 
 
-.fl-node-08kl1yzxeout .pp-rating i:not(.pp-star-empty):before {
+.testimonials-reviews .pp-rating i:not(.pp-star-empty):before {
   content: "\002605";
 }
 
 
-.fl-node-08kl1yzxeout .pp-review {
+.testimonials-reviews .pp-review {
   border-style: none;
   border-width: 0;
   background-clip: border-box;
@@ -708,21 +708,21 @@
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-name {
+.testimonials-reviews .pp-review-name {
   font-family: var(--font-system-ui);
   font-weight: 800;
   font-size: 18px;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-title {
+.testimonials-reviews .pp-review-title {
   font-family: var(--font-system-ui);
   font-weight: 300;
   font-size: 16px;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-text {
+.testimonials-reviews .pp-review-text {
   font-family: var(--font-system-ui);
   font-weight: 300;
   font-size: 18px;
@@ -730,27 +730,27 @@
 }
 
 
-.fl-node-08kl1yzxeout .pp-rating i {
+.testimonials-reviews .pp-rating i {
   font-size: 30px;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-image img {
+.testimonials-reviews .pp-review-image img {
   height: 36px;
 }
 
 
-.fl-node-08kl1yzxeout .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+.testimonials-reviews .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin-left: 5px;
   margin-right: 5px;
 }
 
 
-.fl-node-08kl1yzxeout .swiper-pagination {
+.testimonials-reviews .swiper-pagination {
   margin-top: 5px;
 }
 
 
-.fl-node-08kl1yzxeout .pp-review-icon i:before {
+.testimonials-reviews .pp-review-icon i:before {
   font-size: 0px;
 }

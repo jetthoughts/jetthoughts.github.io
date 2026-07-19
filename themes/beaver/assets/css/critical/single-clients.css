@@ -1468,7 +1468,7 @@ h1 {
 }
 body {
   background-color: #fff;
-  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see legacy-theme-skin.css body note */
   font-family: Roboto, Arial, sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -1478,7 +1478,7 @@ body {
   word-wrap: break-word;
 }
 h1 {
-  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see legacy-theme-skin.css body note */
   font-family: var(--font-system-ui);
   font-weight: 800;
   line-height: 1.4;
@@ -1489,7 +1489,7 @@ h1 {
   font-size: 70px;
   line-height: 1;
   letter-spacing: -1px;
-  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see skin-65eda28877e04.css body note */
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites cssnano merge-hoist / dedup unmask in production bundles; see legacy-theme-skin.css body note */
   font-family: var(--font-system-ui);
   font-weight: 800;
   font-style: normal;
@@ -1572,7 +1572,7 @@ button {
   text-transform: capitalize;
   border-style: none;
   border-width: 1px;
-  border-color: #121212; /* KEEP LITERAL: dedup-twin of the identical skin-65eda28877e04.css .fl-page fl-button rule - var() here breaks the twin match and changes the minifier merge product (border is style:none, invisible anyway) */
+  border-color: #121212; /* KEEP LITERAL: dedup-twin of the identical legacy-theme-skin.css .fl-page fl-button rule - var() here breaks the twin match and changes the minifier merge product (border is style:none, invisible anyway) */
   border-radius: 25px;
 }
 .fl-page a.fl-button *,
