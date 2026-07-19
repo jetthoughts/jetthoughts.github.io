@@ -53,17 +53,17 @@
   padding-top: 5px;
   opacity: 1;
 }
-.fl-node-toa2hwegbp4q .pp-spacer-module {
+.cta-banner-spacer .pp-spacer-module {
   height: 60px;
   width: 100%;
 }
 @media only screen and (max-width: 1115px) {
-  .fl-node-toa2hwegbp4q .pp-spacer-module {
+  .cta-banner-spacer .pp-spacer-module {
     height: 60px;
   }
 }
 @media only screen and (max-width: 860px) {
-  .fl-node-toa2hwegbp4q .pp-spacer-module {
+  .cta-banner-spacer .pp-spacer-module {
     height: 15px;
   }
 }
