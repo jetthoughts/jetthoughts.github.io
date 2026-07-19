@@ -1,6 +1,6 @@
 ---
-title: "Building Stateful Conversational AI with LangChain Memory Systems"
-description: "Master LangChain memory systems to build production-ready conversational AI with Python. Learn short-term, long-term, entity memory with PostgreSQL/Redis persistence, and real-world implementation patterns."
+title: "LangChain Memory: Conversation History with Python"
+description: "How to add memory to LangChain agents. Working Python examples for short-term, long-term, and entity memory. PostgreSQL and Redis persistence. Real production patterns."
 date: 2025-10-15
 draft: false
 tags: ["LangChain", "Conversational AI", "LangChain Memory", "Python", "AI Agents", "LangGraph", "PostgreSQL", "Redis"]
@@ -14,6 +14,12 @@ cover_image: "cover.png"
 metatags:
   image: cover.png
 ---
+
+## TL;DR
+
+LangChain's legacy memory classes (`ConversationBufferMemory`, `ConversationSummaryMemory`) are deprecated as of LangChain 0.3.1. The modern approach uses `RunnableWithMessageHistory` with PostgreSQL or Redis for persistence. This post covers short-term, long-term, and entity memory patterns with working Python examples and a migration path from the old API.
+
+**Quick start**: `pip install langchain langchain-postgres` → define a `RunnableWithMessageHistory` → pass `get_session_history` callable → invoke with `config` containing `session_id`
 
 > ## ⚠️ Important: API Deprecation Notice
 >

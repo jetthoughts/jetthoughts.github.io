@@ -1,3 +1,12 @@
+---
+type: Reference
+title: "Operational Dependency Map: How Sam Obtains Every Input"
+description: Per-lesson operational prerequisites map — every tool, account, template blank, wait time, and Plan B recovery path. Confirms Sam's only original inputs are a rough idea and a Gmail address.
+resource: docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/30.06-operational-dependency-map.md
+tags: [course, architecture, operations, dependencies]
+timestamp: 2026-07-18T00:00:00Z
+---
+
 # 30.06 — Operational Dependency Map: How Sam Obtains Every Input
 
 **Status:** Canonical operational dependency map

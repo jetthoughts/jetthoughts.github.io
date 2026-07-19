@@ -23,7 +23,7 @@
     "cssnano": "^8.0.1",
     "lighthouse": "^13.3.0",
     "markdownlint-cli": "^0.48.0",
-    "postcss": "^8.5.15",
+    "postcss": "^8.5.19",
     "postcss-cli": "^11.0.1",
     "postcss-delete-duplicate-css": "^1.0.0",
     "postcss-extend-rule": "^4.0.0",
@@ -52,37 +52,58 @@
     "description": "MCP servers available to agents on this project. No API keys, tokens, or secrets — values here are server names and tool names only.",
     "chrome-devtools": {
       "purpose": "Browser automation — screenshot capture, UI testing, visual regression",
-      "tools": ["new_page", "emulate", "take_screenshot"],
+      "tools": [
+        "new_page",
+        "emulate",
+        "take_screenshot"
+      ],
       "ref": ".stitch/design.md"
     },
     "context7": {
       "purpose": "Framework documentation — official API references, feature specs, integration patterns",
-      "tools": ["resolve-library-id", "get-library-docs"],
+      "tools": [
+        "resolve-library-id",
+        "get-library-docs"
+      ],
       "ref": "docs/mcp-tool-mastery-guide.md"
     },
     "github": {
       "purpose": "Repository coordination — PR management, issue tracking, repo analysis",
-      "tools": ["create_pull_request", "create_issue", "search_repositories"],
+      "tools": [
+        "create_pull_request",
+        "create_issue",
+        "search_repositories"
+      ],
       "ref": ".claude/commands/github/"
     },
     "brave-search": {
       "purpose": "Web search — technology best practices, emerging patterns",
-      "tools": ["search"],
+      "tools": [
+        "search"
+      ],
       "ref": "docs/mcp-tool-mastery-guide.md"
     },
     "searxng": {
       "purpose": "Web research — self-hosted metasearch, current best practices, community solutions",
-      "tools": ["search"],
+      "tools": [
+        "search"
+      ],
       "ref": "docs/mcp-tool-mastery-guide.md"
     },
     "package-search": {
       "purpose": "Package and dependency research — find and analyze npm/Ruby/Go packages before install",
-      "tools": ["package_search_hybrid", "package_search_grep"],
+      "tools": [
+        "package_search_hybrid",
+        "package_search_grep"
+      ],
       "ref": "docs/mcp-tool-mastery-guide.md"
     },
     "semble": {
       "purpose": "Semantic code search — natural-language queries with nearest-neighbor expansion",
-      "tools": ["search", "find_related"],
+      "tools": [
+        "search",
+        "find_related"
+      ],
       "ref": ".claude/agents/semble-search.md"
     }
   }

@@ -4,7 +4,7 @@ title: Blog Post Pipeline (Idea to Published)
 description: Canonical end-to-end workflow for drafting, reviewing, and publishing a JetThoughts blog post — mandatory for any write/draft/schedule/publish request.
 resource: docs/workflows/blog-pipeline.md
 tags: [content, blog, workflow]
-timestamp: 2026-07-12T00:00:00Z
+timestamp: 2026-07-19T00:00:00Z
 ---
 
 # Overview
@@ -17,7 +17,7 @@ is publish-ready when flipped to `false`).
 # Steps
 
 1. **Pick topic** — from the active content plan
-   (`docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md`),
+   (`docs/projects/2510-seo-content-strategy/20-29-strategy/20.08-content-plan-data-driven-q3-2026.md`),
    next 🔲 Planned topic.
 2. **Read context (mandatory)** — [icp](/content-strategy/icp-primary-website-target.md),
    [voice-guide](/content-strategy/voice-guide.md), the topic's content-plan
@@ -29,7 +29,7 @@ is publish-ready when flipped to `false`).
    `docs/blog-post-index.md` (584 posts, 135 tags). Never guess slugs —
    verify with `ls content/blog/<slug>/index.md`.
 5. **Draft** — `content/blog/<slug>/index.md`, frontmatter constraints
-   (title ≤45 chars, description 150-160 chars, `cover_image: cover.png`),
+   (title ≤60 chars for Google SERP display, description 150-160 chars, `cover_image: cover.png`),
    structure: hook → primary keyword in first 100 words → numbered H2s →
    vibe-coding angle → "when NOT to" → JetThoughts proof point → CTA →
    related reading → 5+ external citations.

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=2400, height=1260">
+<title>Falcon in Production — Cover</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=JetBrains+Mono:wght@600&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 2400px;
+  height: 1260px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d1117 0%, #10141a 50%, #1a0a2e 100%);
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  position: relative;
+}
+
+/* Grid dots backdrop */
+.grid-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(204,52,45,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+/* Ambient radial glows */
+.glow-ruby {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  right: -100px;
+  top: 100px;
+  background: radial-gradient(circle, rgba(204,52,45,0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.glow-purple {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  left: -100px;
+  bottom: -100px;
+  background: radial-gradient(circle, rgba(168,85,247,0.09) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* === SLOT 1: Brand + Category (top-left) === */
+.brand-row {
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  z-index: 10;
+}
+.brand-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  letter-spacing: -0.020em;
+  color: #cc342d;
+}
+.brand-sep {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: rgba(223,226,235,0.30);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+.category {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #7dd0fe;
+}
+
+/* === SLOT 2: Year Pill (top-right) === */
+.year-pill {
+  position: absolute;
+  top: 80px;
+  right: 100px;
+  background: #cc342d;
+  color: #ffb4ab;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: -0.005em;
+  padding: 14px 36px;
+  border-radius: 40px;
+  z-index: 10;
+}
+
+/* === SLOT 3: Headline (mid-left, 3 lines) === */
+.hero {
+  position: absolute;
+  top: 280px;
+  left: 100px;
+  z-index: 10;
+  max-width: 1400px;
+}
+.hero-line {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 180px;
+  letter-spacing: -0.030em;
+  line-height: 1.05;
+}
+.hero-line-1 { color: #dfe2eb; }
+.hero-line-2 {
+  background: linear-gradient(90deg, #cc342d 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-line-3 { color: #dfe2eb; font-size: 150px; }
+
+/* === SLOT 4: Ruby Gem SVG (mid-right) === */
+.gem-container {
+  position: absolute;
+  right: 80px;
+  top: 240px;
+  width: 600px;
+  height: 640px;
+  z-index: 5;
+}
+.gem-container svg { width: 100%; height: 100%; }
+
+/* === SLOT 5: Stat Chips (bottom-left, 3 chips) === */
+.chips-row {
+  position: absolute;
+  bottom: 80px;
+  left: 100px;
+  display: flex;
+  gap: 24px;
+  z-index: 10;
+}
+.chip {
+  background: rgba(28,32,38,0.75);
+  border-radius: 14px;
+  padding: 20px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-left: 4px solid;
+  backdrop-filter: blur(8px);
+}
+.chip-1 { border-left-color: #cc342d; }
+.chip-2 { border-left-color: #a855f7; }
+.chip-3 { border-left-color: #7dd0fe; }
+.chip-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(223,226,235,0.55);
+}
+.chip-value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: -0.005em;
+  color: #dfe2eb;
+}
+
+/* === SLOT 6: Status indicator (bottom-right) === */
+.status {
+  position: absolute;
+  bottom: 80px;
+  right: 100px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 10;
+}
+.status-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 12px rgba(34,197,94,0.5);
+}
+.status-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.20em;
+  color: rgba(223,226,235,0.70);
+}
+</style>
+</head>
+<body>
+
+<div class="grid-dots"></div>
+<div class="glow-ruby"></div>
+<div class="glow-purple"></div>
+
+<!-- Slot 1: Brand + Category -->
+<div class="brand-row">
+  <span class="brand-name">JetThoughts</span>
+  <span class="brand-sep">|</span>
+  <span class="category">ENGINEERING</span>
+</div>
+
+<!-- Slot 2: Year Pill -->
+<div class="year-pill">Ruby on Rails 2026</div>
+
+<!-- Slot 3: Headline -->
+<div class="hero">
+  <div class="hero-line hero-line-1">Falcon in</div>
+  <div class="hero-line hero-line-2">Production</div>
+  <div class="hero-line hero-line-3">Tuned &amp; Benchmarked</div>
+</div>
+
+<!-- Slot 4: Ruby Gem SVG -->
+<div class="gem-container">
+  <svg viewBox="0 0 400 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Low-poly ruby gem -->
+    <defs>
+      <linearGradient id="gemGrad1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#ff8a7a"/>
+        <stop offset="50%" stop-color="#cc342d"/>
+        <stop offset="100%" stop-color="#991b1b"/>
+      </linearGradient>
+      <linearGradient id="gemGrad2" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0%" stop-color="#cc342d"/>
+        <stop offset="100%" stop-color="#ff8a7a"/>
+      </linearGradient>
+      <linearGradient id="highlight" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.3)"/>
+        <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Crown facet (top) -->
+    <polygon points="200,60 120,160 280,160" fill="url(#highlight)" opacity="0.4"/>
+    <polygon points="200,60 80,180 120,160" fill="url(#gemGrad2)" opacity="0.8"/>
+    <polygon points="200,60 280,160 320,180" fill="url(#gemGrad1)" opacity="0.9"/>
+
+    <!-- Upper body facets -->
+    <polygon points="80,180 120,160 200,260 140,280" fill="url(#gemGrad1)" opacity="0.85"/>
+    <polygon points="120,160 200,160 280,200 200,260" fill="url(#gemGrad2)" opacity="0.7"/>
+    <polygon points="200,160 280,160 320,180 280,200" fill="url(#gemGrad1)" opacity="0.9"/>
+    <polygon points="320,180 280,200 200,260 260,280" fill="#cc342d" opacity="0.95"/>
+
+    <!-- Mid body facets -->
+    <polygon points="140,280 200,260 200,340 120,340" fill="url(#gemGrad2)" opacity="0.75"/>
+    <polygon points="200,260 260,280 280,340 200,340" fill="#cc342d"/>
+    <polygon points="260,280 320,180 340,300 280,340" fill="url(#gemGrad1)" opacity="0.88"/>
+
+    <!-- Lower body facets -->
+    <polygon points="120,340 200,340 200,400 140,390" fill="#991b1b" opacity="0.9"/>
+    <polygon points="200,340 280,340 260,390 200,400" fill="#cc342d" opacity="0.85"/>
+    <polygon points="280,340 340,300 320,380 260,390" fill="#7a1515" opacity="0.92"/>
+
+    <!-- Bottom point -->
+    <polygon points="140,390 200,400 200,430 160,420" fill="#661010" opacity="0.95"/>
+    <polygon points="200,400 260,390 240,420 200,430" fill="#7a1515" opacity="0.9"/>
+
+    <!-- Edge highlights -->
+    <line x1="200" y1="60" x2="80" y2="180" stroke="rgba(255,180,171,0.3)" stroke-width="1.5"/>
+    <line x1="200" y1="60" x2="320" y2="180" stroke="rgba(255,180,171,0.25)" stroke-width="1.5"/>
+    <line x1="200" y1="60" x2="200" y2="430" stroke="rgba(255,138,122,0.2)" stroke-width="1"/>
+
+    <!-- Sparkle -->
+    <circle cx="175" cy="145" r="3" fill="white" opacity="0.8"/>
+    <circle cx="185" cy="135" r="1.5" fill="white" opacity="0.6"/>
+  </svg>
+</div>
+
+<!-- Slot 5: Stat Chips -->
+<div class="chips-row">
+  <div class="chip chip-1">
+    <span class="chip-label">CONNECTIONS</span>
+    <span class="chip-value">fibers × workers × 0.6</span>
+  </div>
+  <div class="chip chip-2">
+    <span class="chip-label">LATENCY</span>
+    <span class="chip-value">P50 under 12ms</span>
+  </div>
+  <div class="chip chip-3">
+    <span class="chip-label">FIBERS</span>
+    <span class="chip-value">async I/O model</span>
+  </div>
+</div>
+
+<!-- Slot 6: Status -->
+<div class="status">
+  <div class="status-dot"></div>
+  <span class="status-text">PRODUCTION READY</span>
+</div>
+
+</body>
+</html>

@@ -41,6 +41,67 @@ and Plan B recovery paths. Both distilled from
 `docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/`.
 Architecture index updated with the two new entries.
 
+## 2026-07-19 (later) - Q3 content plan execution: Phase 1 expanders + snippet hygiene TL;DRs
+* **Published**: 3 Phase 1 expander posts from the Q3 content plan:
+  - [Falcon in Production: Benchmarks, Memory & Worker Count](/blog/falcon-web-server-production-tuning-benchmarks/) —
+    worker sizing formulas, 24-hour memory curves, wrk2 benchmarks, GC tuning,
+    rollback case study. 235 lines, 10/10 voice self-test.
+  - [Solid Queue Advanced: Retries, Concurrency & Monitoring](/blog/solid-queue-advanced-patterns-retries-concurrency/) —
+    exponential backoff, dead letter pattern, I/O profiling, dispatch config,
+    queue depth alerts, preserve_finished_jobs gotcha + client story. 324 lines,
+    10/10 voice self-test.
+  - [Rails 8 Authentication Generator: Complete Guide](/blog/rails-8-authentication-generator-complete-guide/) —
+    replaces Devise with built-in auth, sessions table, password reset,
+    email verification, rate limiting, production hardening checklist,
+    Devise migration case study. 347 lines, 10/10 voice self-test.
+* **Cover images**: 3 new covers generated via established pipeline
+  (duplicate Falcon HTML → Chrome headless 2× retina → Lanczos downsample):
+  Falcon 595KB, Solid Queue 611KB, Rails Auth 600KB — all at 2400×1260.
+  Covers live at `.stitch/designs/falcon-production-tuning-cover.html`,
+  `.stitch/designs/solid-queue-advanced-cover.html`,
+  `.stitch/designs/rails-8-authentication-cover.html`.
+* **Snippet hygiene — TL;DR blocks**: TL;DR summary blocks with Quick
+  start added to all 5 worst 0-CTR posts (langgraph-workflows, autogen-
+  crewai-langgraph, crewai-multi-agent, langchain-memory, laravel-11-
+  migration). Each includes 2-3 sentence summary + copy-paste-able quick
+  start command sequence for better SERP snippet extraction.
+* **Build infrastructure**: PostCSS installed (`npm install --save-dev
+  postcss postcss-cli`). `bin/hugo-build` now passes clean (740 pages,
+  exit code 0).
+* **Bug fixes**: langgraph-workflows frontmatter `---` delimiter had
+  concatenated to slug line during TL;DR insertion — split back to
+  separate line. All 3 new posts + 3 covers verified in Hugo build.
+* **Validation**: All 3 new posts passed blog pipeline validation
+  (voice self-test 10/10, zero banned words, zero em dashes, zero
+  generalized actors, zero mannerism nouns, zero definitional cadence).
+  Solid Queue post received +1 internal link (Rails Auth) and client
+  story (April 2026 preserve_finished_jobs disk incident).
+* **Content plan** — [content-plan](/content-strategy/content-plan.md) and
+  [blog-pipeline](/workflows/blog-pipeline.md) already synced.
+
+
+* **New**: [content-plan](/content-strategy/content-plan.md) concept — the
+  active Q3 2026 3-stream plan built from Apr–Jul GSC performance data (449
+  clicks, 478K impressions, 0.09% CTR). Supersedes the ICP-E-focused 20.07
+  plan. Rails technical 2/week, founder every other week, snippet hygiene
+  sprint. Resource at
+  `docs/projects/2510-seo-content-strategy/20-29-strategy/20.08-content-plan-data-driven-q3-2026.md`.
+* **New**: [Falcon Production Tuning](/blog/falcon-web-server-production-tuning-benchmarks/)
+  blog post — first Phase 1 expander from the new plan, extending the #1
+  performing post (54 clicks, 0.89% CTR) with production worker sizing,
+  24-hour memory curves, wrk2 benchmarking methodology, GC tuning, and
+  a "when we rolled back to Puma" case study.
+* **Update**: [blog-pipeline](/workflows/blog-pipeline.md) — content plan
+  reference updated from 20.07 to 20.08; title constraint relaxed from ≤45
+  to ≤60 chars (matches Google SERP display limit); added snippet-hygiene
+  cross-link to the content-plan concept.
+* **Update**: 5 worst 0-CTR blog posts had titles and meta descriptions
+  rewritten per the snippet-hygiene sprint (langgraph-workflows, autogen-
+  crewai-langgraph, crewai-multi-agent, langchain-memory, laravel-11-
+  migration). Projected +435 clicks/3mo. Titles now all ≤60 chars.
+* **Update**: [content-strategy index](/content-strategy/index.md) — added
+  content-plan entry.
+
 ## 2026-07-18 - Merged blog/site bundle into course bundle
 Folded a separately-produced Hugo blog/site OKF bundle into this one as two
 new sibling sections: `architecture/` (hugo-site, css-pipeline, blog-list-page,

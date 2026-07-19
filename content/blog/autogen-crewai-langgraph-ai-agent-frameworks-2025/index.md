@@ -1,6 +1,6 @@
 ---
-title: "LangGraph vs CrewAI vs AutoGen: Open Source Alternatives 2025"
-description: "Three open source agent frameworks compared: LangGraph state machines, CrewAI role-based crews, AutoGen conversations. License, deployment, and 2025 maturity."
+title: "LangGraph vs CrewAI vs AutoGen: Which AI Agent Framework? (2026)"
+description: "Compare LangGraph, CrewAI, and AutoGen head-to-head: code examples, production readiness, licensing, community size. Pick the right framework for your AI agent project."
 created_at: "2025-10-18T10:00:00Z"
 edited_at: "2025-10-18T10:00:00Z"
 draft: false
@@ -8,6 +8,12 @@ tags: ["ai", "autogen", "crewai", "langgraph", "multi-agent", "frameworks", "pyt
 canonical_url: "https://jetthoughts.com/blog/autogen-crewai-langgraph-ai-agent-frameworks-2025/"
 slug: "autogen-crewai-langgraph-ai-agent-frameworks-2025"
 ---
+
+## TL;DR
+
+Three frameworks, three philosophies: **LangGraph** uses graph-based state machines, **CrewAI** uses role-based agent crews, and **AutoGen** uses conversational agents. This post compares them head-to-head on production readiness, licensing, code complexity, and community support. If you're building AI agents in Python and need to pick one, start here.
+
+**Quick comparison**: LangGraph for fine-grained control → CrewAI for quick multi-agent prototypes → AutoGen for Microsoft ecosystem integration
 
 Three open-source agent frameworks dominate developer attention in 2025: AutoGen, CrewAI, and LangGraph. Each takes a different orchestration approach. The 30-second answer:
 
