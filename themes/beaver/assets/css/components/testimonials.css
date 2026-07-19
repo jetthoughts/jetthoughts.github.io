@@ -19,11 +19,11 @@
 
 
 
-.fl-node-zaerhibqp296 {
+.testimonials-quote-col {
   width: 100%;
 }@media (max-width: 860px) {
 
-  .fl-builder-content .fl-node-zaerhibqp296 {
+  .fl-builder-content .testimonials-quote-col {
     width: 100% !important;
     max-width: none;
     clear: none;
@@ -32,11 +32,11 @@
 
 
 
-.fl-node-zaerhibqp296 > .fl-col-content {
+.testimonials-quote-col > .fl-col-content {
   padding-top: 60px;
 }@media ( max-width: 860px ) {
 
-  .fl-node-zaerhibqp296.fl-col > .fl-col-content {
+  .testimonials-quote-col.fl-col > .fl-col-content {
     padding-top: 30px;
   }}
 
