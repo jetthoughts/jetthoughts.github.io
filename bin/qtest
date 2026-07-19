@@ -1,0 +1,181 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# qtest — fast scoped visual gate (default wall budget: 90s).
+#
+# Runs ONLY the screenshot tests for the pages a change touches, against a
+# single prebuilt tree (PRECOMPILED_ASSETS), then spends leftover budget on
+# RANDOM non-scoped tests so repeated runs rotate through the whole suite.
+# qtest is the per-micro-commit gate; the FULL suites (bin/rake test:critical
+# + bin/test + bin/dtest) remain mandatory before any PR merge.
+#
+# Usage:
+#   bin/qtest                         # = --changed
+#   bin/qtest homepage about-us       # explicit page keys (pages/*.css basenames)
+#   bin/qtest --changed [ref]         # derive pages from git diff
+#   bin/qtest --all                   # whole critical suite, prebuilt assets
+#   ... --no-build                    # reuse existing _dest/public-fast
+#   ... --budget SEC                  # wall budget (default 90)
+#
+# CSS→page mapping mirrors docs/projects/2509-css-migration/css-bundle-ownership-map.md.
+# Site-wide files (skin, style.css, theme-main, 586, navigation, foundations/…)
+# escalate to --all: a scoped run cannot vouch for them.
+
+DEST = "_dest/public-fast"
+
+PAGE_TESTS = {
+  "homepage" => "homepage",
+  "about-us" => "about_us|about_page",
+  "clients" => "test_clients",
+  "single-client" => "client_single_full|client_agent_inbox",
+  "services" => "test_services($|_menu)",
+  "single-service" => "service_single|services_fractional_cto|services_app",
+  "use-cases" => "test_use_cases($|_menu)",
+  "single-use-cases" => "use_case_single|use_cases_mvp_sections",
+  "careers" => "test_careers",
+  "single-career" => "careers_ruby",
+  "blog-list" => "blog_index",
+  "blog-single" => "blog_post|visit_blog_post",
+  "course-list" => "course_landing|course_nav_link|old_blog_url",
+  "course-single" => "course_chapter",
+  "contact-us" => "contact_us",
+  "free-consultation" => "free_consultation",
+  "simple-page" => "privacy_policy",
+  "not-found" => "not_found",
+  "404" => "not_found"
+}.freeze
+
+# extend as C1 adds components
+TESTIMONIALS_CONSUMERS = %w[about-us clients services homepage single-use-cases single-service use-cases].freeze
+COMPONENT_CONSUMERS = {
+  "themes/beaver/assets/css/components/testimonials.css" => TESTIMONIALS_CONSUMERS,
+  "themes/beaver/layouts/partials/page/testimonials.html" => TESTIMONIALS_CONSUMERS
+}.freeze
+
+def pages_for(file)
+  return COMPONENT_CONSUMERS[file] if COMPONENT_CONSUMERS.key?(file)
+
+  case file
+  when %r{^themes/beaver/assets/css/pages/([^/]+)\.css$} then [Regexp.last_match(1)]
+  when %r{^themes/beaver/assets/css/critical/([^/]+)-critical\.css$} then [Regexp.last_match(1)]
+  when %r{^themes/beaver/layouts/blog/}, %r{^content/blog/} then %w[blog-list blog-single]
+  when %r{^themes/beaver/assets/css/}, %r{^themes/beaver/layouts/} then :all
+  end
+end
+
+budget = 90
+build = true
+all = false
+changed = false
+ref = nil
+pages = []
+
+args = ARGV.dup
+until args.empty?
+  case (arg = args.shift)
+  when "--no-build" then build = false
+  when "--all" then all = true
+  when "--budget" then budget = Integer(args.shift)
+  when "--changed"
+    changed = true
+    ref = args.shift if args.first && !args.first.start_with?("--")
+  when "-h", "--help" then exec("sed", "-n", "2,22p", __FILE__)
+  else pages << arg
+  end
+end
+changed = true if !all && pages.empty? && !changed
+
+start = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+elapsed = -> { (Process.clock_gettime(Process::CLOCK_MONOTONIC) - start).round }
+
+if changed
+  files = `git diff --name-only #{ref}`.split("\n") if ref
+  files = `git diff --name-only HEAD`.split("\n") if files.nil? || files.empty?
+  files = `git diff --name-only HEAD~1..HEAD`.split("\n") if files.empty?
+  files.each do |f|
+    mapped = pages_for(f)
+    if mapped == :all
+      puts "qtest: '#{f}' is site-wide/unmapped — escalating to --all"
+      all = true
+    elsif mapped
+      pages.concat(mapped)
+    end
+  end
+  if !all && pages.empty?
+    puts "qtest: no visual-affecting changes detected — nothing to run"
+    exit 0
+  end
+end
+
+pages.uniq!
+unless all
+  unknown = pages.reject { |p| PAGE_TESTS.key?(p) }
+  abort "qtest: unknown page key(s): #{unknown.join(", ")}" if unknown.any?
+end
+
+# A failing/passing run REWRITES baselines - starting dirty makes results
+# unjudgeable and can silently commit a corrupted baseline.
+dirty = `git status --porcelain test/fixtures/screenshots`.lines.map(&:split).map(&:last)
+if dirty.any?
+  warn "qtest: screenshot fixtures are dirty - restore before running:"
+  dirty.first(10).each { |f| warn "  #{f}" }
+  warn "  git checkout -- test/fixtures/screenshots  # (after inspecting diffs)"
+  abort
+end
+
+if build
+  puts "qtest: building to #{DEST} ..."
+  system("hugo", "--baseURL", "/", "--environment", "production", "--buildDrafts",
+    "--noBuildLock", "--quiet", "--destination", DEST) || abort("qtest: hugo build failed")
+end
+
+ENV["PRECOMPILED_ASSETS"] = "true"
+ENV["HUGO_DEFAULT_PATH"] = DEST
+
+def run_test(file, *minitest_args)
+  puts "qtest: #{file} #{minitest_args.join(" ")}"
+  system("bundle", "exec", "ruby", "-Itest", file, *minitest_args)
+end
+
+if all
+  exec("bin/rake", "test:critical")
+end
+
+frags = pages.map { |p| PAGE_TESTS.fetch(p) }.join("|")
+regex = "/#{frags}/"
+ok = true
+
+ok &= run_test("test/system/desktop_site_test.rb", "-n", regex)
+ok &= run_test("test/system/mobile_site_test.rb", "-n", regex)
+ok &= run_test("test/system/blog_special_content_test.rb") if pages.include?("blog-single")
+if pages.include?("careers") && File.file?("test/system/pages/careers_page_test.rb")
+  ok &= run_test("test/system/pages/careers_page_test.rb")
+end
+
+# cheap insurance: CSS wiring guard (no browser) + computed-style color vars
+ok &= run_test("test/unit/css_orphan_guard_test.rb")
+ok &= run_test("test/system/color_system_test.rb")
+
+# spend leftover budget on RANDOM non-scoped tests (rotating suite coverage;
+# minitest's own random seed additionally shuffles order within each run)
+if ok && elapsed.call < budget - 10
+  scoped = Regexp.new(frags)
+  pool = %w[test/system/desktop_site_test.rb test/system/mobile_site_test.rb]
+    .flat_map { |f| File.read(f).scan(/def (test_\w+)/).flatten.map { |t| [f, t] } }
+    .reject { |_f, t| t.match?(scoped) }.shuffle
+  until pool.empty? || elapsed.call >= budget - 10
+    batch = pool.shift(3)
+    batch.group_by(&:first).each do |file, pairs|
+      tests = pairs.map(&:last)
+      puts "qtest: random extras: #{tests.join(", ")} (#{File.basename(file)})"
+      ok &= run_test(file, "-n", "/^(#{tests.join("|")})$/")
+    end
+  end
+end
+
+if ok
+  puts "qtest: green in #{elapsed.call}s (scoped + random extras — run the FULL suites before PR merge)"
+else
+  puts "qtest: FAILED (#{elapsed.call}s)"
+  exit 1
+end

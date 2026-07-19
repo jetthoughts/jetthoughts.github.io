@@ -1,0 +1,594 @@
+/* Semantic replacement for the retired homepage-layout.css /
+   services-layout.css / free-consultation-critical.css members of the
+   free-consultation bundle (page/free-consultation.html). Byte-clone of
+   pages/contact-us.css — free-consultation IS the contact layout (same
+   panel widths, gform skin, infolist, breakpoints; only H1 text and form
+   id differ) — with layout classes renamed .contact-* → .fc-* and the
+   .contact-title rules dropped (this page's H1 keeps .fl-heading /
+   .fl-heading-text). The pp-infolist / Gravity Forms component classes
+   and .contact-page form scope are unchanged. Old node keys: osu3g0cje2pw
+   → .fc-hero, pu3l7av51izm → .fc-intro, 1g7j05bi23er → .fc-lede,
+   e34a586lyj7z → .fc-band, mho8ft3lv5j2 → .fc-list-panel, qgc61ofijh74 →
+   .fc-form-panel, ot4qbyieg3xm/bmn85orw3pj1 → panel scopes. */
+
+/* --- Hero row (was fl-row dkf0o2an9q4r + fl-row-content fixed-width) --- */
+
+.fc-hero {
+  padding: 200px 20px 130px;
+}
+
+.fc-hero-inner {
+  margin: 0 auto;
+  max-width: 1180px;
+  min-width: 0;
+}
+
+/* --- Intro column (was col vug127lkeynf: heading + lede) --- */
+
+.fc-intro {
+  padding-bottom: 60px;
+}
+
+
+
+.fc-lede {
+  font-size: 20px;
+  margin: 15px 650px 0 0;
+}
+
+/* --- Two-column band (was col-group fdp28ibvcht7: equal height, centered,
+       custom widths; stays flex at mobile per fl-col-group-custom-width) --- */
+
+.fc-band {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.fc-list-panel,
+.fc-form-panel {
+  display: flex;
+  min-height: 1px;
+}
+
+.fc-list-panel {
+  width: 26%;
+}
+
+.fc-form-panel {
+  width: 74%;
+}
+
+.fc-list-panel-inner,
+.fc-form-panel-inner {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 1px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.fc-list-panel-inner {
+  background-color: #000000;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.fc-form-panel-inner {
+  margin-left: 40px;
+}
+
+.fc-form-panel-inner > * {
+  width: 100%;
+}
+
+/* --- Info list: generic PowerPack infolist rules the kept markup needs --- */
+
+.pp-infolist-title p {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.pp-infolist-description p {
+  margin-bottom: 15px;
+}
+
+.pp-infolist-description p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+.pp-list-connector {
+  height: 100%;
+  position: absolute;
+  top: 33px;
+  z-index: 2;
+}
+
+.pp-infolist-wrap .pp-list-item {
+  overflow: visible;
+  list-style: none;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.pp-infolist-wrap .pp-list-item-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+}
+
+.pp-list-item:last-of-type .pp-list-connector {
+  display: none;
+}
+
+.pp-icon-wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+.pp-infolist {
+  text-align: center;
+}
+
+.pp-infolist ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pp-infolist-icon {
+  border-width: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pp-infolist-icon-inner {
+  display: table;
+  height: 3em;
+  line-height: 0;
+  width: 3em;
+}
+
+.pp-infolist-icon span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.pp-infolist-icon-inner img {
+  border: none;
+}
+
+.pp-infolist-wrap .layout-1 {
+  text-align: left;
+}
+
+.pp-infolist-wrap .layout-1 .pp-icon-wrapper {
+  margin-right: 20px;
+}
+
+/* --- Info list: node-scoped overrides (was fl-node-svpm1j6z4e0c) --- */
+
+.fc-list-panel .pp-infolist-wrap .pp-list-item-content {
+  transition: all 0.3s ease-in-out;
+}
+
+.fc-list-panel .pp-infolist-wrap .pp-list-item {
+  padding-bottom: 0;
+}
+
+.fc-list-panel .pp-infolist-wrap .layout-1 .pp-list-item .pp-list-item-content {
+  align-items: flex-start;
+}
+
+.fc-list-panel .pp-infolist-title .pp-infolist-title-text {
+  color: #ffffff;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  transition: color 0.2s ease-in-out;
+}
+
+.fc-list-panel .pp-infolist-title .pp-infolist-title-text:hover {
+  color: #ffffff;
+}
+
+.fc-list-panel .pp-infolist ul {
+  gap: 25px;
+}
+
+.fc-list-panel .pp-infolist-title .pp-infolist-title-text {
+  font-family: var(--font-system-ui);
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.fc-list-panel .pp-infolist-icon {
+  padding: 0px;
+}
+
+.fc-list-panel .pp-infolist-icon-inner img {
+  width: 26px;
+  height: 26px;
+}
+
+.fc-list-panel .pp-infolist-icon-inner span.pp-icon,
+.fc-list-panel .pp-infolist-icon-inner span.pp-icon:before {
+  font-size: 26px;
+}
+
+.fc-list-panel .pp-infolist-icon-inner {
+  width: 30px;
+  height: 30px;
+}
+
+.fc-list-panel .pp-infolist-wrap .layout-1 .pp-icon-wrapper {
+  margin-right: 10px;
+}
+
+/* 586.css's .contact-page height chain requires the .fl-module-content
+   layer the semantic markup dropped — same rules, de-layered (586.css is
+   shared across bundles and stays byte-identical). */
+.contact-page .pp-gf-content,
+.contact-page .pp-gf-content .pp-gf-inner {
+  height: 100%;
+}
+
+.contact-page .pp-gf-content .pp-gf-inner .gform_confirmation_wrapper {
+  height: 100% !important;
+}
+
+.contact-page .pp-gf-content .pp-gf-inner .gform_confirmation_wrapper .gform_confirmation_message {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-page .pp-gf-content .pp-gf-inner .gform_confirmation_wrapper .gform_confirmation_message i {
+  margin-bottom: 0 !important;
+}
+
+/* --- Gravity form: generic structural rules the kept markup needs --- */
+
+.pp-gf-content {
+  position: relative;
+}
+
+.pp-gf-content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pp-gf-content .pp-gf-inner {
+  position: relative;
+}
+
+.pp-gf-content .gform_wrapper form {
+  position: relative;
+}
+
+.pp-gf-content legend {
+  border: 0;
+}
+
+.pp-gf-content .gform_wrapper .gform_body {
+  width: 100% !important;
+}
+
+.pp-gf-content .gform_wrapper ul.gform_fields {
+  padding: 0;
+}
+
+.pp-gf-content .gform_wrapper ul.gform_fields li.gfield {
+  padding-right: 0;
+}
+
+.gform_wrapper .ginput_complex input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]) {
+  width: 100% !important;
+}
+
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
+.gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
+  margin-top: 0 !important;
+}
+
+div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+  margin-bottom: 0;
+}
+
+.pp-gf-content .gform_wrapper ul li.gfield {
+  margin-top: 0;
+}
+
+.pp-gf-content .gform_wrapper .gfield .gfield_description {
+  padding-top: 5px;
+}
+
+/* --- Gravity form: node-scoped skin (was fl-node-dzu3licn9ow5) --- */
+
+.fc-form-panel .pp-gf-content .gform_wrapper {
+  max-width: 100%;
+}
+
+.fc-form-panel .pp-gf-content {
+  background-color: #F5F6F8;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  padding: 35px;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper ul li.gfield {
+  list-style-type: none !important;
+  margin-bottom: 20px;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gform_title,
+.fc-form-panel .pp-gf-content .form-title,
+.fc-form-panel .pp-gf-content .gform_wrapper span.gform_description,
+.fc-form-panel .pp-gf-content .form-description {
+  display: none;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield .gfield_label {
+  color: var(--color-dark);
+  display: block;
+  font-family: var(--font-system-ui);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield_required {
+  color: #ff0000;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .ginput_container label,
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield_html {
+  color: var(--color-dark) !important;
+  font-family: var(--font-system-ui);
+  font-weight: 700;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']),
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield select,
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield textarea {
+  color: var(--color-dark);
+  background-color: #ffffff;
+  width: 100% !important;
+  outline: none;
+  font-family: var(--font-system-ui);
+  font-weight: 400;
+  font-size: 18px;
+  border-style: solid;
+  border-width: 1px;
+  background-clip: border-box;
+  border-color: #DEDEDE;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']),
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield select {
+  height: 50px;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .ginput_complex input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]),
+.fc-form-panel .pp-gf-content .gform_wrapper .ginput_complex select {
+  margin-bottom: 6px;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .ginput_complex span {
+  margin-bottom: 8px;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield input::placeholder,
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield textarea::placeholder {
+  color: var(--color-muted);
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']):focus,
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield select:focus,
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield textarea:focus {
+  border-color: var(--color-dark);
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .top_label input.medium,
+.fc-form-panel .pp-gf-content .gform_wrapper .top_label select.medium,
+.fc-form-panel .pp-gf-content .gform_wrapper textarea.medium {
+  width: 100% !important;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .ginput_complex .ginput_right {
+  margin-left: 0 !important;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .ginput_complex .ginput_right input,
+.fc-form-panel .pp-gf-content .gform_wrapper .ginput_complex .ginput_right select {
+  width: 100% !important;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gform_footer {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gform-button,
+.fc-form-panel .pp-gf-content .gform_wrapper .gform_footer .gform_button,
+.fc-form-panel .pp-gf-content .gform_wrapper .gform_page_footer .button {
+  width: auto;
+  padding: 12px 25px;
+  white-space: normal;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield input[type=file] {
+  background-color: transparent;
+  border-style: none;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .validation_error,
+.fc-form-panel .pp-gf-content .gform_wrapper .gform_validation_errors,
+.fc-form-panel .pp-gf-content .gform_wrapper .gform_validation_errors > h2,
+.fc-form-panel .pp-gf-content .gform_wrapper li.gfield.gfield_error,
+.fc-form-panel .pp-gf-content .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  color: #790000 !important;
+  border-color: #e63946 !important;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .validation_error,
+.fc-form-panel .pp-gf-content .gform_wrapper .gform_validation_errors,
+.fc-form-panel .pp-gf-content .gform_wrapper .gform_validation_errors > h2 {
+  display: none !important;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield.gfield_error {
+  background-color: transparent;
+  width: 100%;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield.gfield_error .gfield_label {
+  color: var(--color-dark);
+  margin-left: 0;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield_error .validation_message {
+  display: block;
+  color: #e63946;
+  border-color: #e63946;
+}
+
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield_error input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']),
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield_error .ginput_container select,
+.fc-form-panel .pp-gf-content .gform_wrapper .gfield_error .ginput_container textarea {
+  border-color: #e63946;
+  border-width: 1px !important;
+}
+
+.fc-form-panel .gform_confirmation_wrapper .gform_confirmation_message {
+  color: var(--color-dark);
+  font-family: var(--font-system-ui);
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+
+.fc-form-panel .pp-gf-content .gform_confirmation_wrapper {
+  padding: 0px;
+}
+
+/* --- Breakpoints --- */
+
+@media (max-width: 1115px) {
+  .fc-hero {
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+
+  .fc-lede {
+    margin-right: 50px;
+  }
+
+  .fc-list-panel {
+    width: 30%;
+  }
+
+  .fc-form-panel {
+    width: 70%;
+  }
+}
+
+@media (max-width: 860px) {
+  .fc-hero {
+    padding: 100px 20px 50px;
+  }
+
+  .fc-intro {
+    padding-bottom: 30px;
+  }
+
+  .fc-lede {
+    font-size: 18px;
+    margin-right: 0;
+  }
+
+  .fc-list-panel,
+  .fc-form-panel {
+    width: 100%;
+  }
+
+  .fc-list-panel-inner {
+    padding: 20px;
+  }
+
+  .fc-form-panel-inner {
+    margin-left: 0;
+    padding-top: 30px;
+  }
+
+  .fc-form-panel .pp-gf-content {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .pp-gf-content .gform_wrapper ul.gform_fields li.gfield.gf_left_half {
+    padding-right: 0;
+  }
+}
+
+/* --- H1 span sizing (was style.css `.fl-row-bg-photo h1 .fl-heading-text`;
+       the bg-photo wrapper class left with the FL markup — same clamp,
+       re-keyed on the semantic hero at equal specificity). The h1 70px
+       strut itself stays in retained theme-main.css. --- */
+
+.fc-hero h1 .fl-heading-text {
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.15;
+}
+
+/* --- Gravity form generics this bundle used to inherit from the retired
+       homepage-layout/services-layout copies (canonical source 586.css,
+       which this bundle never included; selectors kept verbatim). --- */
+
+.gform_wrapper .gform_heading .gform_required_legend {
+  display: none !important;
+}
+
+.gform_wrapper form .gform_body .gform_fields .gfield {
+  margin-bottom: 20px !important;
+}
+
+@media (min-width: 861px) {
+  .gform_wrapper form .gform_body .gform_fields .gfield.gf_half {
+    width: 50% !important;
+    display: inline-block !important;
+    vertical-align: top;
+  }
+
+  .gform_wrapper form .gform_body .gform_fields .gfield.gf_half.gf_half_left {
+    padding-right: 10px;
+  }
+
+  .gform_wrapper form .gform_body .gform_fields .gfield.gf_half.gf_half_right {
+    padding-left: 10px;
+  }
+}
+
+.gform_wrapper form .gform_body .gform_fields .gfield .ginput_container.ginput_container_textarea textarea {
+  height: 100px;
+}
+
+@media (max-width: 860px) {
+  .gform_wrapper form .gform_footer {
+    text-align: center !important;
+  }
+}

@@ -1,0 +1,441 @@
+/* single-career — delta rules retired with 3114-layout.css and
+   e966db44b09892b8d7d492247c67e86c-layout-bundle.css (both dropped from this
+   slice; e966 deleted — this was its only consumer). The page-private
+   critical/single-careers.css already carries the rows/cols/modules and
+   visible share/form framework; this file re-hosts only what e966 added on
+   top: the hero tablet breakpoint, the mobile share-label hide, share-button
+   hover states, and the full Gravity-form skin (critical's subset is
+   incomplete). Selectors kept verbatim (same .fl-node-* keys, same cascade
+   slot) — parity by construction. */
+
+/* Hero tablet breakpoint (critical has only the 860px step) */
+@media (max-width: 1115px) {
+  .career-hero.fl-row > .fl-row-content-wrap {
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+}
+
+/* Mobile: hide the share-button text label */
+@media (max-width: 860px) {
+  .career-share-module .pp-social-share-content .pp-share-button .pp-share-button-text {
+    display: none;
+  }
+}
+
+/* Share-button hover states (e966 3782-3804) */
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button .pp-share-button-icon, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button .pp-share-button-icon {
+  background-color: var(--color-dark);
+}
+
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button a * {
+  color: var(--color-dark);
+}
+
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button .pp-share-button-icon *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button .pp-share-button-icon * {
+  color: var(--color-dark);
+}
+
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button:hover a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button:hover a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover .pp-share-button-icon, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover .pp-share-button-icon {
+  background-color: var(--color-primary);
+}
+
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button:hover a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover a, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-framed .pp-share-button:hover a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover a * {
+  color: var(--color-primary);
+}
+
+.fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button:hover a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button:hover a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover .pp-share-button-icon *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover .pp-share-button-icon * {
+  color: var(--color-primary);
+}
+
+/* Gravity-form framework + node skin (e966 3959-4348, verbatim) */
+.pp-gf-content {
+  position: relative;
+}
+
+.pp-gf-content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pp-gf-content .pp-gf-inner {
+  position: relative;
+}
+
+.pp-gf-content .form-title, .pp-gf-content .form-description {
+  position: relative;
+}
+
+.pp-gf-content .gform_wrapper form {
+  position: relative;
+}
+
+.pp-gf-content legend {
+  border: 0;
+}
+
+.pp-gf-content .gform_wrapper .gform_body {
+  width: 100% !important;
+}
+
+.pp-gf-content .gform_wrapper ul.gform_fields {
+  padding: 0;
+}
+
+.pp-gf-content .gform_wrapper ul.gform_fields li.gfield {
+  padding-right: 0;
+}
+
+.pp-gf-content .gform_wrapper ul.gform_fields li.gfield.gf_left_half {
+  padding-right: 16px;
+}
+
+.pp-gf-content .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+  max-width: 100% !important;
+}
+
+.pp-gf-content .gform_wrapper .gfield input[type="checkbox"]:focus, .pp-gf-content .gform_wrapper .gfield input[type="radio"]:focus {
+  width: auto;
+  text-align: left !important;
+}
+
+.gform_wrapper .top_label li.gfield.gf_left_half input.medium, .gform_wrapper .top_label li.gfield.gf_right_half input.medium, .gform_wrapper .top_label li.gfield.gf_left_half select.medium, .gform_wrapper .top_label li.gfield.gf_right_half select.medium {
+  width: 100% !important;
+}
+
+.gform_wrapper .ginput_complex input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]) {
+  width: 100% !important;
+}
+
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input, .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox], .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
+  margin-top: 0 !important;
+}
+
+div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+  margin-bottom: 0;
+}
+
+.pp-gf-content .gform_wrapper ul li.gfield {
+  margin-top: 0;
+}
+
+.pp-gf-content .gform_wrapper ul.gfield_radio li input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+  width: auto !important;
+  display: inline-block;
+}
+
+.pp-gf-content .gform_wrapper .ginput_complex span.ginput_full {
+  display: block;
+}
+
+.pp-gf-content .gform_wrapper .gfield .gfield_description {
+  padding-top: 5px;
+}
+
+.pp-gf-content .gform_wrapper h2.gsection_title {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 640px) {
+  .pp-gf-content .gform_wrapper ul.gform_fields li.gfield.gf_left_half {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 860px) {
+}
+
+.career-form-module .pp-gf-content .gform_wrapper {
+  max-width: 100%;
+}
+
+.career-form-module .pp-gf-content {
+  background-color: #F5F6F8;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper ul li.gfield {
+  list-style-type: none !important;
+  margin-bottom: 20px;
+}
+
+.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper .gform_title, .fl-builder-content .career-form-module .pp-gf-content .form-title {
+  display: block;
+}
+
+.fl-builder-content .career-form-module .pp-gf-content .form-title {
+  display: block;
+}
+
+.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper .gform_title {
+  display: none;
+}
+
+.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper span.gform_description, .fl-builder-content .career-form-module .pp-gf-content .form-description {
+  display: none;
+}
+
+.fl-builder-content .career-form-module .pp-gf-content .form-description {
+  display: block;
+}
+
+.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper span.gform_description {
+  display: none;
+}
+
+.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper .gfield .gfield_label {
+  color: var(--color-dark);
+  display: block;
+}
+
+.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper .gfield_required {
+  color: #ff0000;
+}
+
+.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper .gfield .ginput_complex.ginput_container label {
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .ginput_container label, .career-form-module .pp-gf-content .gform_wrapper table.gfield_list thead th, .career-form-module .pp-gf-content .gform_wrapper span.ginput_product_price, .career-form-module .pp-gf-content .gform_wrapper span.ginput_product_price_label, .career-form-module .pp-gf-content .gform_wrapper span.ginput_quantity_label, .career-form-module .pp-gf-content .gform_wrapper .gfield_html {
+  color: var(--color-dark) !important;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper span.ginput_product_price {
+  color: #900900 !important;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield .gfield_description {
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gsection {
+  border-bottom-width: 1px;
+  border-bottom-color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper h2.gsection_title, .career-form-module .pp-gf-content .gform_wrapper h3.gsection_title {
+  color: #333333;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .career-form-module .pp-gf-content .gform_wrapper .gfield select, .career-form-module .pp-gf-content .gform_wrapper .gfield textarea {
+  color: var(--color-dark);
+  background-color: #ffffff;
+  width: 100% !important;
+  outline: none;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .career-form-module .pp-gf-content .gform_wrapper .gfield select {
+  height: 50px;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .ginput_complex input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]), .career-form-module .pp-gf-content .gform_wrapper .ginput_complex select {
+  margin-bottom: 6px;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .ginput_complex span {
+  margin-bottom: 8px;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield input::-webkit-input-placeholder {
+  color: var(--color-muted);
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield input:-moz-placeholder {
+  color: var(--color-muted);
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield input::-moz-placeholder {
+  color: var(--color-muted);
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield input:-ms-input-placeholder {
+  color: var(--color-muted);
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield textarea::-webkit-input-placeholder {
+  color: var(--color-muted);
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield textarea:-moz-placeholder {
+  color: var(--color-muted);
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield textarea::-moz-placeholder {
+  color: var(--color-muted);
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield textarea:-ms-input-placeholder {
+  color: var(--color-muted);
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']):focus, .career-form-module .pp-gf-content .gform_wrapper .gfield select:focus, .career-form-module .pp-gf-content .gform_wrapper .gfield textarea:focus {
+  border-color: var(--color-dark);
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .top_label input.medium, .career-form-module .pp-gf-content .gform_wrapper .top_label select.medium {
+  width: 100% !important;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper textarea.medium {
+  width: 100% !important;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .ginput_complex .ginput_full input[type="text"], .career-form-module .pp-gf-content .gform_wrapper .ginput_complexinput[type="text"] {
+  width: 100% !important;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .ginput_complex .ginput_right {
+  margin-left: 0 !important;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .ginput_complex .ginput_right input, .career-form-module .pp-gf-content .gform_wrapper .ginput_complex .ginput_right select {
+  width: 100% !important;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gform_footer {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gform-button, .career-form-module .pp-gf-content .gform_wrapper .gform_footer .gform_button, .career-form-module .pp-gf-content .gform_wrapper.gf_browser_ie .gform_footer .gform_button, .career-form-module .pp-gf-content .gform_wrapper .gform_page_footer .button, .career-form-module .pp-gf-content .gform_wrapper.gf_browser_ie .gform_page_footer .button {
+  width: auto;
+  background-color: ;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 25px;
+  padding-right: 25px;
+  white-space: normal;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gform_page_footer .button {
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gform-button:hover, .career-form-module .pp-gf-content .gform_wrapper .gform_footer .gform_button:hover, .career-form-module .pp-gf-content .gform_wrapper .gform_page_footer .button:hover {
+  background: ;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield input[type=file] {
+  background-color: transparent;
+  border-style: none;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .validation_error, .career-form-module .pp-gf-content .gform_wrapper .gform_validation_errors, .career-form-module .pp-gf-content .gform_wrapper .gform_validation_errors > h2, .career-form-module .pp-gf-content .gform_wrapper li.gfield.gfield_error, .career-form-module .pp-gf-content .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  color: #790000 !important;
+  border-color: #e63946 !important;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .validation_error, .career-form-module .pp-gf-content .gform_wrapper .gform_validation_errors, .career-form-module .pp-gf-content .gform_wrapper .gform_validation_errors > h2 {
+  display: none !important;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield.gfield_error {
+  background-color: transparent;
+  width: 100%;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield.gfield_error .gfield_label {
+  color: var(--color-dark);
+  margin-left: 0;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield_error .validation_message {
+  display: block;
+  color: #e63946;
+  border-color: #e63946;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield_error input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .career-form-module .pp-gf-content .gform_wrapper .gfield_error .ginput_container select, .career-form-module .pp-gf-content .gform_wrapper .gfield_error .ginput_container textarea {
+  border-color: #e63946;
+  border-width: 1px !important;
+}
+
+@media only screen and (max-width: 1115px) {
+  .career-form-module .pp-gf-content .gform_wrapper .gform-button, .career-form-module .pp-gf-content .gform_wrapper .gform_footer .gform_button, .career-form-module .pp-gf-content .gform_wrapper.gf_browser_ie .gform_footer .gform_button, .career-form-module .pp-gf-content .gform_wrapper .gform_page_footer .button, .career-form-module .pp-gf-content .gform_wrapper.gf_browser_ie .gform_page_footer .button {
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .career-form-module .pp-gf-content .gform_wrapper .gform-button, .career-form-module .pp-gf-content .gform_wrapper .gform_footer .gform_button, .career-form-module .pp-gf-content .gform_wrapper.gf_browser_ie .gform_footer .gform_button, .career-form-module .pp-gf-content .gform_wrapper .gform_page_footer .button, .career-form-module .pp-gf-content .gform_wrapper.gf_browser_ie .gform_page_footer .button {
+  }
+}
+
+.career-form-module .gform_confirmation_wrapper .gform_confirmation_message {
+  color: var(--color-dark);
+}
+
+.career-form-module .pp-gf-content {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gform_title, .career-form-module .form-title {
+  font-size: 30px;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield .gfield_label {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .career-form-module .pp-gf-content .gform_wrapper .gfield select, .career-form-module .pp-gf-content .gform_wrapper .gfield textarea {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.career-form-module .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .career-form-module .pp-gf-content .gform_wrapper .gfield select, .career-form-module .pp-gf-content .gform_wrapper .gfield textarea {
+  border-style: solid;
+  border-width: 0;
+  background-clip: border-box;
+  border-color: #DEDEDE;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 20px;
+}
+
+.career-form-module .pp-gf-content .gform_confirmation_wrapper {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.career-form-module .pp-gf-content .gform_confirmation_wrapper .gform_confirmation_message {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .career-form-module .pp-gf-content {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+  }
+
+  .career-form-module .pp-gf-content .gform_wrapper .gform_title, .career-form-module .form-title {
+    font-size: 25px;
+  }
+}

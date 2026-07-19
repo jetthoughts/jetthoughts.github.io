@@ -1,0 +1,18 @@
+/* Replaces the retired 3059-layout.css dependencies on the course landing
+   page (layouts/course/list.html). Pixel-parity clones of the rules that
+   were keyed to h1.fl-heading — same selectors and importance, loaded after
+   style.css/single-post.css so the cascade resolves identically. */
+
+.blog article.single-content > header h1.course-title {
+  line-height: 1.15;
+  margin-bottom: 0.75rem !important;
+}
+
+.blog h1.course-title {
+  max-width: 43rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}

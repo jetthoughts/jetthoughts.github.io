@@ -5,4 +5,35 @@
 :root {
   /* System UI Font Stack - Pattern #4 (330 occurrences) */
   --font-system-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Brand Ruby red (JetVelocity design system; design.md "Ruby red").
+     Name approved by Paul 2026-07-11. */
+  --color-ruby: #cc342d;
+
+  /* Brand blue (279 literal occurrences at extraction time). First DEFINED
+     2026-07-12 (WP1.1): consumers existed for years but the token never had
+     a definition — the six rule groups that were live-but-invalid were
+     codified to their shipped rendering (inherit/transparent/currentColor)
+     before this definition landed, so defining it changes nothing. */
+  --color-primary: #1a8cff;
+
+  /* Primary dark text/border color (JetVelocity obsidian dark).
+     Canonical home of the token. */
+  --color-dark: #121212;
+
+  /* Spacing tokens — values match the fallbacks live consumers
+     (components/content-block.css) already resolve to, so defining them
+     is rendering-neutral. The old c-spacing.css family (0.5rem --spacing-sm
+     variant) was dead code, deleted 2026-07-12. */
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+
+  /* Muted gray text (168 literal occurrences at extraction; the voice the
+     design system calls muted — see .c-content-block--color-muted).
+     Fulfils the WP1.1 "--color-text" item: body text color is --color-dark,
+     secondary text is this. */
+  --color-muted: #969798;
+
+  /* Default corner radius (145 exact border-radius:4px occurrences). */
+  --radius-default: 4px;
 }

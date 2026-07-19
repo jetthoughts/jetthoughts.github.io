@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="tracking-title">
+  <title id="tracking-title">Three tracking snippets stacked on the left side - Microsoft Clarity, Ad-platform pixel, Google Analytics 4 - with arrows pointing to a landing page wireframe on the right showing page_view, cta_click, and form_submit events firing</title>
+  <defs>
+    <style>
+      .heading   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .label     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 22px; fill: #cc342d; font-weight: 700; }
+      .sub       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #555; font-style: italic; }
+      .event     { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 16px; fill: #1a1a1a; }
+      .wf-text   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; }
+      .cta-text  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #fff; font-weight: 700; }
+      .clarity   { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
+      .pixel     { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .ga4       { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
+      .wireframe { fill: #fafafa; stroke: #1a1a1a; stroke-width: 2.5; }
+      .ph-block  { fill: #e8e8e8; stroke: none; }
+      .ph-cta    { fill: #cc342d; stroke: none; }
+      .arrow     { stroke: #1a1a1a; stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+    </style>
+    <marker id="arrowhead" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" class="heading" text-anchor="middle">3 snippets in the head tag = 3 events you can read</text>
+
+  <!-- Left column: 3 snippet boxes -->
+  <rect x="50" y="80" width="260" height="90" rx="12" class="clarity" transform="rotate(-0.4 180 125)"/>
+  <text x="180" y="115" class="label" text-anchor="middle">Microsoft Clarity</text>
+  <text x="180" y="145" class="sub" text-anchor="middle">heatmaps + session replays</text>
+
+  <rect x="50" y="200" width="260" height="90" rx="12" class="pixel" transform="rotate(0.3 180 245)"/>
+  <text x="180" y="235" class="label" text-anchor="middle">Ad-platform pixel</text>
+  <text x="180" y="265" class="sub" text-anchor="middle">Meta · LinkedIn · Reddit</text>
+
+  <rect x="50" y="320" width="260" height="90" rx="12" class="ga4" transform="rotate(-0.3 180 365)"/>
+  <text x="180" y="355" class="label" text-anchor="middle">Google Analytics 4</text>
+  <text x="180" y="385" class="sub" text-anchor="middle">page views · clicks · form submits</text>
+
+  <!-- Arrows from boxes to landing page -->
+  <path d="M 318 125 Q 420 125 525 145" class="arrow" marker-end="url(#arrowhead)"/>
+  <path d="M 318 245 Q 420 245 525 245" class="arrow" marker-end="url(#arrowhead)"/>
+  <path d="M 318 365 Q 420 365 525 345" class="arrow" marker-end="url(#arrowhead)"/>
+
+  <!-- Right: landing page wireframe -->
+  <rect x="540" y="80" width="320" height="380" rx="14" class="wireframe" transform="rotate(0.2 700 270)"/>
+
+  <!-- Headline placeholder -->
+  <rect x="565" y="105" width="270" height="36" rx="4" class="ph-cta"/>
+  <text x="700" y="129" class="cta-text" text-anchor="middle">Headline</text>
+
+  <!-- page_view marker -->
+  <text x="700" y="165" class="event" text-anchor="middle">→ page_view</text>
+
+  <!-- Sub-headline placeholder -->
+  <rect x="565" y="180" width="270" height="22" rx="4" class="ph-block"/>
+
+  <!-- Value props row -->
+  <rect x="565" y="215" width="60" height="50" rx="4" class="ph-block"/>
+  <rect x="635" y="215" width="60" height="50" rx="4" class="ph-block"/>
+  <rect x="705" y="215" width="60" height="50" rx="4" class="ph-block"/>
+  <rect x="775" y="215" width="60" height="50" rx="4" class="ph-block"/>
+
+  <!-- CTA button -->
+  <rect x="615" y="290" width="170" height="44" rx="22" class="ph-cta"/>
+  <text x="700" y="319" class="cta-text" text-anchor="middle">Get on the waitlist</text>
+
+  <!-- cta_click marker -->
+  <text x="700" y="358" class="event" text-anchor="middle">→ cta_click</text>
+
+  <!-- email field placeholder -->
+  <rect x="615" y="375" width="170" height="32" rx="4" class="ph-block"/>
+
+  <!-- form_submit marker -->
+  <text x="700" y="436" class="event" text-anchor="middle">→ form_submit</text>
+</svg>

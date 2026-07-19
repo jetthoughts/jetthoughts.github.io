@@ -1,8 +1,10 @@
+/* affects pages: blog-list + free-consultation bundles - see docs/projects/2509-css-migration/css-bundle-ownership-map.md
+   Legacy shared layer (Phase C4 strangler target) - verify with bin/qtest before editing. */
 :root {
   --jt-primary-color: var(--color-primary);
-  --jt-text-color: #121212;
-  --jt-primary: #1a8cff;
-  --jt-text-primary: #121212;
+  --jt-text-color: #121212; /* KEEP LITERAL (value side): shadow token - repointing to var(--color-dark) is a deliberate follow-up decision, not a mechanical swap */
+  --jt-primary: var(--color-primary);
+  --jt-text-primary: #121212; /* KEEP LITERAL (value side): shadow token - repointing to var(--color-dark) is a deliberate follow-up decision, not a mechanical swap */
   --jt-primary-dark: #0066cc;
   --jt-primary-hover: #007af4;
   --jt-white: #ffffff;
@@ -18,7 +20,7 @@
 
 body {
   background-color: #fff;
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites minifier merge-hoist / dedup unmask; see body/h1 notes above */
   font-family:
     system-ui,
     -apple-system,
@@ -58,7 +60,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites minifier merge-hoist / dedup unmask; see body/h1 notes above */
   font-family:
     system-ui,
     -apple-system,
@@ -85,7 +87,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites minifier merge-hoist / dedup unmask; see body/h1 notes above */
 }
 
 h1 a:hover,
@@ -101,7 +103,7 @@ h1 {
   font-size: 70px;
   line-height: 1;
   letter-spacing: -1px;
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites minifier merge-hoist / dedup unmask; see body/h1 notes above */
   font-family:
     system-ui,
     -apple-system,
@@ -122,7 +124,7 @@ h1 {
 }
 
 h1 a {
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: reboot-generic selector - var() form invites minifier merge-hoist / dedup unmask; see body/h1 notes above */
 }
 
 h2 {
@@ -160,12 +162,14 @@ h6 {
 }
 
 a {
-  color: var(--color-primary);
+  /* was var(--color-primary) — token was never defined, so this computed
+     `inherit` since day one; codified during WP1.1 token extraction */
+  color: inherit;
 }
 
 a:hover,
 a:focus {
-  color: var(--color-primary);
+  color: inherit; /* was undefined var(--color-primary) — see rule above */
 }
 
 blockquote {
@@ -825,7 +829,7 @@ img {
 .wp-pagenavi a:hover {
   border-color: #e6e6e6;
   color: #fff;
-  background: #1a8cff;
+  background: var(--color-primary);
   font-weight: normal;
 }
 
@@ -1128,7 +1132,7 @@ input[type="text"].fl-search-input {
 }
 
 input[type="text"].fl-search-input:focus {
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .widget_calendar table {
@@ -1164,7 +1168,7 @@ input[type="text"].fl-search-input:focus {
 
 .fl-page .fl-module span.onsale {
   color: #fff;
-  background: #1a8cff;
+  background: var(--color-primary);
   font-size: 13px;
   font-weight: normal;
   left: 10px;
@@ -1213,7 +1217,7 @@ input[type="text"].fl-search-input:focus {
   line-height: 1.2;
   text-transform: capitalize;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 
 .fl-page .fl-module-woocommerce a.button:hover,
@@ -1224,7 +1228,7 @@ input[type="text"].fl-search-input:focus {
   color: #515151;
   border: none;
   border-radius: 25px;
-  border-color: #121212;
+  border-color: #121212; /* KEEP LITERAL: border is style:none (invisible); var() here changes the minifier border shorthand/longhand merge product across bundles */
 }
 
 .fl-page .fl-module-woocommerce button.button:disabled,
@@ -1264,7 +1268,7 @@ input[type="text"].fl-search-input:focus {
   line-height: 1.2;
   text-transform: capitalize;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 
 .woocommerce-page button.button:disabled,
@@ -1285,7 +1289,7 @@ input[type="text"].fl-search-input:focus {
   color: #515151;
   border: none;
   border-radius: 25px;
-  border-color: #121212;
+  border-color: #121212; /* KEEP LITERAL: border is style:none (invisible); var() here changes the minifier border shorthand/longhand merge product across bundles */
 }
 
 .woocommerce-page button.pswp__button:hover {
@@ -1304,7 +1308,7 @@ input[type="text"].fl-search-input:focus {
 
 a.fl-button,
 a.fl-button:visited {
-  background: #1a8cff;
+  background: var(--color-primary);
   color: #fff;
   border: 1px solid #006ddc;
 }
@@ -1344,7 +1348,7 @@ a.button:hover {
 button,
 input[type="button"],
 input[type="submit"] {
-  background-color: var(--color-primary);
+  background-color: transparent; /* was undefined var(--color-primary) = initial */
   color: #fff;
   font-size: 18px;
   line-height: 1.45;
@@ -1355,15 +1359,15 @@ input[type="submit"] {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  -moz-border-radius: var(--radius-default);
+  -webkit-border-radius: var(--radius-default);
+  border-radius: var(--radius-default);
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
-  background-color: var(--color-primary);
+  background-color: transparent; /* was undefined var(--color-primary) = initial */
   color: #fff;
   border: 1px solid #006ddc;
   text-decoration: none;
@@ -1375,7 +1379,7 @@ input[type="submit"]:active,
 button:focus,
 input[type="button"]:focus,
 input[type="submit"]:focus {
-  background-color: var(--color-primary);
+  background-color: transparent; /* was undefined var(--color-primary) = initial */
   color: #fff;
   border: 1px solid #006ddc;
   outline: none;
@@ -1394,7 +1398,7 @@ input[type="submit"].btn-default:focus,
 button.btn-default.active,
 input[type="button"].btn-default.active,
 input[type="submit"].btn-default.active {
-  color: #121212;
+  color: var(--color-dark);
   background-color: #fcfcfc;
   border-color: #ccc;
 }
@@ -1424,7 +1428,7 @@ textarea {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #121212;
+  color: #121212; /* KEEP LITERAL: bare textarea in selector list - reboot-generic class */
   background-color: #fcfcfc;
   background-image: none;
   border: 1px solid #e6e6e6;
@@ -1434,9 +1438,9 @@ textarea {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  -moz-border-radius: var(--radius-default);
+  -webkit-border-radius: var(--radius-default);
+  border-radius: var(--radius-default);
 }
 
 input[type="text"]::-webkit-input-placeholder,
@@ -1522,7 +1526,7 @@ textarea:focus {
 .form-control {
   background-color: #fcfcfc;
   border-color: #e6e6e6;
-  color: #121212;
+  color: var(--color-dark);
   -moz-transition: all ease-in-out 0.15s;
   -webkit-transition: all ease-in-out 0.15s;
   transition: all ease-in-out 0.15s;
@@ -1682,7 +1686,7 @@ img.mfp-img {
 
   .fl-page-nav .navbar-nav li > a {
     padding: 15px 15px;
-    color: #121212;
+    color: var(--color-dark);
   }
 
   .fl-page-nav .navbar-nav li > a:hover,
@@ -1697,7 +1701,7 @@ img.mfp-img {
   }
 
   .fl-page-nav .navbar-nav li.current-menu-item ~ li.current-menu-item > a {
-    color: #121212;
+    color: var(--color-dark);
   }
 
   .fl-page-nav-wrap {
@@ -2034,7 +2038,7 @@ body.fl-framework-bootstrap-4 nav a.no-menu {
 
 body.woocommerce-page.fl-framework-bootstrap .product .label {
   font-size: 18px;
-  color: #121212;
+  color: var(--color-dark);
   padding: 0px;
 }
 
@@ -3164,7 +3168,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   text-transform: capitalize;
   border-style: none;
   border-width: 1px;
-  border-color: #121212;
+  border-color: #121212; /* KEEP LITERAL: border is style:none (invisible); var() here changes the minifier border shorthand/longhand merge product across bundles */
   border-radius: 25px;
 }
 
@@ -3230,7 +3234,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .fl-page-nav
   .navbar-toggle:hover {
   color: #fff;
-  border-color: #121212;
+  border-color: #121212; /* KEEP LITERAL: border is style:none (invisible); var() here changes the minifier border shorthand/longhand merge product across bundles */
   background-color: #007af4;
   border-style: none;
   border-width: 1px;
@@ -3610,7 +3614,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid #1a8cff;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -3636,15 +3640,15 @@ input[type="number"]:focus-visible,
 input[type="search"]:focus-visible,
 input[type="url"]:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #1a8cff;
+  outline: 2px solid var(--color-primary);
   outline-offset: 1px;
-  border-color: var(--color-primary);
+  border-color: currentColor; /* was undefined var(--color-primary) = initial */
 }
 
 /* Custom Form Control Focus (Checkboxes & Radios) */
 input[type="checkbox"]:focus-visible + label::before,
 input[type="radio"]:focus-visible + label::before {
-  outline: 2px solid #1a8cff;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   box-shadow: 0 0 0 3px rgba(26, 140, 255, 0.2);
 }

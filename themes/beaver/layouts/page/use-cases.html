@@ -1,13 +1,16 @@
 {{ define "header" }}
   {{- $CSS := slice
     (resources.Get "css/critical/base.css")
-    (resources.Get "css/3021-layout.css")
-    (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
+    (resources.Get "css/foundations/fl-builder-common-base.css")
+    (resources.Get "css/components/testimonials.css")
+    (resources.Get "css/components/cta-banner.css")
+    (resources.Get "css/components/header-cta.css")
+    (resources.Get "css/pages/use-cases.css")
     (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
     (resources.Get "css/586.css")
     (resources.Get "css/vendors/base-4.min.css")
     (resources.Get "css/style.css")
-    (resources.Get "css/skin-65eda28877e04.css")
+    (resources.Get "css/legacy-theme-skin.css")
     (resources.Get "css/technologies.css")
     (resources.Get "css/footer.css")
     (resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .)
@@ -44,7 +47,7 @@
                 class="fl-builder-content fl-builder-content-3021 fl-builder-content-primary fl-builder-global-templates-locked"
                 data-post-id="3021">
                 <div
-                  class="fl-row fl-row-full-width fl-row-bg-photo fl-node-g2six6yjldnm fl-row-default-height fl-row-align-center"
+                  class="fl-row fl-row-full-width fl-row-bg-photo use-cases-hero fl-row-default-height fl-row-align-center"
                   data-node="g2six6yjldnm">
                   <div class="fl-row-content-wrap">
                     <div
@@ -55,7 +58,7 @@
                 </div>
 
                 <div
-                  class="fl-row fl-row-full-width fl-row-bg-photo fl-node-r5xy9wufkc2e fl-row-default-height fl-row-align-center">
+                  class="fl-row fl-row-full-width fl-row-bg-photo use-cases-technologies fl-row-default-height fl-row-align-center">
                   <div class="fl-row-content-wrap">
                     <div
                       class="fl-row-content fl-row-fixed-width fl-node-content">
@@ -65,7 +68,7 @@
                 </div>
 
                 <div
-                  class="fl-row fl-row-full-width fl-row-bg-photo fl-node-xpwrib80cd2l fl-row-default-height fl-row-align-center fl-row-has-layers"
+                  class="fl-row fl-row-full-width fl-row-bg-photo use-cases-cta fl-row-default-height fl-row-align-center fl-row-has-layers"
                   data-node="xpwrib80cd2l">
                   <div class="fl-row-content-wrap">
                     <div
@@ -91,20 +94,20 @@
 
 
                       <div
-                        class="fl-col-group fl-node-xfdrceov0hji fl-col-group-custom-width"
+                        class="fl-col-group fl-col-group-custom-width"
                         data-node="xfdrceov0hji">
                         <div
-                          class="fl-col fl-node-7l8hya5ixfdo fl-col-small-custom-width fl-col-has-cols blue-border"
+                          class="fl-col use-cases-cta-box fl-col-small-custom-width fl-col-has-cols blue-border"
                           data-node="7l8hya5ixfdo">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-rich-text fl-node-rujwd9mzxche"
+                              class="fl-module fl-module-rich-text cta-banner-eyebrow"
                               data-node="rujwd9mzxche">
                               <div
                                 class="fl-module-content fl-node-content"></div>
                             </div>
                             <div
-                              class="fl-module fl-module-heading fl-node-fa7hjib92cpv"
+                              class="fl-module fl-module-heading cta-banner-heading"
                               data-node="fa7hjib92cpv">
                               <div class="fl-module-content fl-node-content">
                                 <h2 class="fl-heading">
@@ -115,7 +118,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-rich-text fl-node-9hf5wet31z02"
+                              class="fl-module fl-module-rich-text cta-banner-text"
                               data-node="9hf5wet31z02">
                               <div class="fl-module-content fl-node-content">
                                 <div class="fl-rich-text">
@@ -128,14 +131,14 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-pp-spacer fl-node-toa2hwegbp4q fl-visible-desktop fl-visible-large fl-visible-medium"
+                              class="fl-module fl-module-pp-spacer cta-banner-spacer fl-visible-desktop fl-visible-large fl-visible-medium"
                               data-node="toa2hwegbp4q">
                               <div class="fl-module-content fl-node-content">
                                 <div class="pp-spacer-module"></div>
                               </div>
                             </div>
                             <div
-                              class="fl-col-group fl-node-d96zqbnxltuj fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width"
+                              class="fl-col-group cta-banner-button-row fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width"
                               data-node="d96zqbnxltuj">
                               <div class="fl-col-content fl-node-content">
                                 <div

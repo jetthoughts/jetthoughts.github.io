@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="anatomy-title">
+  <title id="anatomy-title">Smoke-test page anatomy: 4 stacked blocks - headline names customer + outcome, sub-headline explains the mechanism, a row of 3-4 value props, and the CTA with coming-soon footer</title>
+  <defs>
+    <style>
+      .heading   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 30px; fill: #1a1a1a; font-weight: 700; }
+      .label     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #cc342d; font-weight: 700; letter-spacing: 1px; }
+      .desc      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #1a1a1a; }
+      .note      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #555; font-style: italic; }
+      .cta-text  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 24px; fill: #fff; font-weight: 700; }
+      .block     { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .block-cta { fill: #cc342d; stroke: none; }
+    </style>
+  </defs>
+
+  <text x="400" y="32" class="heading" text-anchor="middle">A smoke-test page, anatomy</text>
+
+  <!-- Headline -->
+  <rect x="60" y="58" width="680" height="80" rx="12" class="block" transform="rotate(-0.3 400 98)"/>
+  <text x="400" y="92" class="label" text-anchor="middle">HEADLINE</text>
+  <text x="400" y="122" class="desc" text-anchor="middle">names the customer + the outcome (3-sec test)</text>
+
+  <!-- Sub-headline -->
+  <rect x="60" y="158" width="680" height="68" rx="12" class="block" transform="rotate(0.2 400 192)"/>
+  <text x="400" y="186" class="label" text-anchor="middle">SUB-HEADLINE</text>
+  <text x="400" y="212" class="desc" text-anchor="middle">explains HOW (the mechanism)</text>
+
+  <!-- Value props row -->
+  <rect x="60" y="246" width="160" height="120" rx="12" class="block" transform="rotate(-0.5 140 306)"/>
+  <text x="140" y="293" class="label" text-anchor="middle">VALUE</text>
+  <text x="140" y="320" class="label" text-anchor="middle">PROP 1</text>
+
+  <rect x="234" y="246" width="160" height="120" rx="12" class="block" transform="rotate(0.4 314 306)"/>
+  <text x="314" y="293" class="label" text-anchor="middle">VALUE</text>
+  <text x="314" y="320" class="label" text-anchor="middle">PROP 2</text>
+
+  <rect x="408" y="246" width="160" height="120" rx="12" class="block" transform="rotate(-0.3 488 306)"/>
+  <text x="488" y="293" class="label" text-anchor="middle">VALUE</text>
+  <text x="488" y="320" class="label" text-anchor="middle">PROP 3</text>
+
+  <rect x="582" y="246" width="158" height="120" rx="12" class="block" transform="rotate(0.5 661 306)"/>
+  <text x="661" y="293" class="label" text-anchor="middle">VALUE</text>
+  <text x="661" y="320" class="label" text-anchor="middle">PROP 4</text>
+
+  <text x="400" y="397" class="note" text-anchor="middle">outcomes the customer wants, not features</text>
+
+  <!-- CTA + footer -->
+  <rect x="60" y="425" width="680" height="145" rx="12" class="block" transform="rotate(-0.2 400 497)"/>
+  <rect x="245" y="455" width="310" height="62" rx="31" class="block-cta" transform="rotate(0.3 400 486)"/>
+  <text x="400" y="494" class="cta-text" text-anchor="middle">Get on the waitlist</text>
+  <text x="400" y="545" class="note" text-anchor="middle">Coming soon. Email reserves your spot at launch.</text>
+</svg>

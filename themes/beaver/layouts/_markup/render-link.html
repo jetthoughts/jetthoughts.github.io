@@ -1,1 +1,1 @@
-<a href="{{ .Destination }}">{{ .Text | safeHTML }}</a>
+<a href="{{ .Destination }}">{{ .Text | safeHTML }}</a>{{- /* chomp: the template's trailing newline otherwise lands after every link, rendering as a stray space before any punctuation that follows (e.g. "JetThoughts ." ) */ -}}

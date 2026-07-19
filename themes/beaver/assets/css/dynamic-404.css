@@ -1,0 +1,3 @@
+.error-page__cta-col > .fl-col-content, .home-cta-col > .fl-col-content {
+    background-image: url({{ (resources.Get "img/start-trial-cta.webp" | fingerprint).RelPermalink }});
+}

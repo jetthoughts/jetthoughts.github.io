@@ -1,0 +1,480 @@
+# Task Tracker - 2605 Tech for Non-Technical Founders
+
+**Last Updated**: 2026-07-12 (PR #356 MERGED as ad1cb19c, deployed, production verified. It carried: Sprints A+B+C [GA4 funnel events + Clarity hook + pilot kit 40.18; walkthrough heroes/artifact trails + TL;DR accent + 21 cover badges; PDF pipeline + 5 printable worksheets], the 3-round PDF/SVG visual loop [43 SVGs + 61 pages exhaustively inspected, 13 SVGs repaired], the 8-dimension premium swarm review 40.19 [54/60 PREMIUM; all sub-premium findings fixed], and the reflection round [old-spine 6.x title ghosts, AI-block label leaks x4, org-chart mermaid -> decision table, Good/Bad callout accents + cascade bug].)
+
+## Active Phase: external validation pilot (real Sams, kit at 40-49-review/40.18-external-validation-pilot-kit.md; Paul actions: Clarity project + param, consent posture, budget, calendar) → distribution prep
+
+## Groomed backlog (2026-07-11 grooming session)
+
+Course is content-complete on the v2 template, journey-audited (40.17), and review-clean. Grooming closed 7 stale items (marked in the table below) and organized the rest into 4 sprints:
+
+**Sprint A - P0, start now: pilot + measurement**
+1. Funnel instrumentation: Clarity/GA4 events for landing → 1.1 → 1.4 gate → M2 booking → 5.6 DPA (the course must practice its own Ch 1.3 discipline before we drive traffic)
+2. Revive the external validation pilot (kit: `40-49-review/_DEFERRED_external-validation-pilot-kit.md`) - recruit 3-5 real idea-stage founders, watch recordings
+3. Rider: fix the site-wide "© 2024" footer to a dynamic year (trust nit flagged by every Sam walk)
+
+**Sprint B - P1: media + template polish** (parallel with pilot recruitment lag)
+1. Visual hooks for the 5 Mia walkthroughs (most-linked pages; currently pure text walls - hero + per-lesson artifact motif)
+2. One mid-body informational visual each for 1.2 / 1.3 / 1.5 (1.4 already has its decision table)
+3. 5.7 stages mermaid: vertical ~1,200px wall → horizontal layout
+4. Typography: distinct accent for the TL;DR card so the lesson-head stack reads ranked (one CSS variant + template class)
+5. outreach-sequence-template: collapse 3× stacked variant blockquotes (existing P2)
+6. De-stack + rebalance "$0 path" callouts in outbound + self-serve-mvp per `feedback_budget_stance_free_and_paid_equal` (existing P2)
+7. Companion-cover regen audit: ~30 covers with stale "Curriculum NN/30" badge incl. glossary "08/30" (existing P3; covers pipeline is proven, cheap now)
+
+**Sprint C - P1: PDF thin slice** (regroomed from the 14-PDF item)
+1. Print stylesheet + `bin/generate-template-pdfs` (headless-Chrome print-to-PDF over rendered pages - single source, zero drift)
+2. Ship PDFs + "Download PDF" links for the 5 physically-used templates: Build Path Worksheet, Mom Test Interview Script, Ownership Checklist, Validated Problem Statement, DPA one-pager
+3. Landing "Free templates" section stays down until the full set exists (per the 2026-05-21 deal); extend to the other 9 if pilot recordings show download demand
+
+**Sprint D - P2, demand-driven (after first pilot data):**
+1. Operating Kit: ship the 5 remaining templates as pilot readers approach M5
+2. 10.08 content gaps batch: echo-chamber warning 2.3/5.3 (cheapest, do first), Wizard-of-Oz path 4.3, Loom outreach 5.2/5.5, Engineering-as-Marketing 5.2
+3. Manual-minimum audit for 5.3/5.4 paid-tool friction (existing partial)
+4. Whatever the pilot recordings surface (this replaces the vague "tighten practical proof" item)
+
+Then: distribution prep (blog funnel per 20.07 + LinkedIn campaign), gated on Sprint A instrumentation being live.
+
+**🚀 What shipped 2026-07-09..10: Module 2 v2 complete (PR #351, 20 commits)**
+- ✅ All chapters on the M1 v2 template; numbering FLATTENED to 2.1-2.6 (letters retired; Synthesis is Lesson 2.5, in yaml prev/next). Chapter count derives 25 via course-stat.
+- ✅ Module 2 Mia walkthrough (incl. Lesson 2.5 section) wired into all lessons + landing.
+- ✅ Decision gate canonical everywhere: BUILD 7+ / PIVOT 4-6 / KILL <4, with score≥7 ≡ real-past-spend equivalence stated on 2.5.
+- ✅ outreach-sequence-template rewritten as the true 2.4 companion (Gmail + NeetoCal, honest bump variants).
+- ✅ Four gatekeeper reports + re-verification + final cold-eyes + 65-finding fan-out (40.12/40.14) - ALL findings fixed or skipped-with-reason. M1↔M2 boundary breaks fixed (no pitch-the-hypothesis instruction; 1.4→1.5→2.1 spine; ICP derives from the [customer] blank).
+- ✅ Covers: stale landing-copy covers on 2.3/2.5 replaced with purpose-made lesson covers; clipped Q5 SVG + 1881px interview-flow mermaid fixed (now 971px).
+- ✅ **Regression ratchet** (40.13): validator 8 `banned-string-ratchet` + data/course_banned_strings.yaml (25 signatures). Every review fix adds its signature in the same commit. Caught 6 live instances outside review scope across 3 runs.
+- ✅ Six external reader reviews triaged: 8 improvements adopted (2.1 awkward-first-calls + no-story interviewee; 2.2 GIGO routing + objection emotional-prep; 2.3 perfectionism time-box; 2.4 flattery reframe), rest confirmed content.
+- 🔲 Carry-forwards: "Artifact #N of 6" labels in 3.1/4.3b/5.4 renumber in their sprints; M3-M5 in-lesson case studies removed in their sprints; word-count-band spec gap needs split-or-waiver decision; 2.5 "why now" timing factor = backlog idea.
+
+## Previous phase (merged): course shipped via PR #345
+
+**🚀 What shipped 2026-07-07..09: full course merged + Module 1 hardened (PR #345, squash 90216d2f, deployed)**
+- ✅ Landing page redesigned: hero lede + chips + CTA buttons above the fold, module cards, mistake list; Founder OS artifact grid merged into the module-map intro (dedup). Old 12,000px bullet-list layout gone.
+- ✅ Module 1 lesson numbering is now **1.1-1.5** (was 1.1/1.2a/1.2b/1.2c/1.3 in older tracker entries below - historical sections keep the old labels).
+- ✅ 1.1 reframed as strategy-as-hypothesis (Click / lean-inception rationale): advantage + assumptions exposed as blanks, blank→experiment map table, why-one-sentence.
+- ✅ Four independent review rounds all resolved: 2 cold-eyes subagent reviews, CodeRabbit triage, 5-lens fan-out (66 raw → 60 verified findings) + reviewer re-verification. Gate table bands contiguous (Under 3 / 3-6 / 6-10 / 10-20 / Over 20, proceed = ≥6%); FAQ/quickstart/HTCW aligned to it.
+- ✅ Single-source stats: `course-stat` shortcode derives chapters/modules/artifacts from `data/course_sequence.yaml` (24 chapters currently render). Covers use near numbers ("20+ chapters"). Never hardcode counts in prose.
+- ✅ Covers added for 1.2 + 1.3; landing + HTCW covers regenerated ("5 modules · 20+ chapters", TEMPLATES chip now "All free" - the old "14 free" note below is obsolete).
+- ✅ De-hardcoded volatile third-party claims (tool prices/limits → capability language + check-pricing-page note). Removed fabricated "Hacker News $475/mo" ad product. CPC table arithmetically consistent (Meta plan band $250-$700).
+- ✅ Site-wide fix: render-link.html trailing-newline chomp (stray space before punctuation after every markdown link).
+- ✅ Legacy deleted: drafted pre-split 5.3 chapter (first-ten-customers-personal-network) + 17 links retargeted to 5.3a/b/c.
+
+**🔄 In flight (this branch): M2 v2 migration**
+- ✅ 2026-07-09: all 5 M2 chapters aligned to the M1 v2 lesson template (Lesson 2.x · [CORE/OPTIONAL] headers, Progress chain M2 · n of 5, "After this lesson" lines, Done/You-have-now/Next/If-blocked footers). Commit 48552e7b.
+- 🔲 Module 2 Mia walkthrough (`module-2-walkthrough-mia`) + See-it-in-action lines in the 5 lessons (same-commit rule per 30.03 §2.7).
+- 🔲 Cross-page consistency pass + sweeps + cold-eyes review loop → ONE PR for the sprint.
+
+**Current sprint focus:** migrate Module 2 (Validate the Problem) to v2 micro-lesson format — 5 v1 chapters → ~6 micro-lessons following the 30.03 8-part template. M1 v2 is complete and serves as the canonical pattern. Cold AI agents should read `30.03-course-format-requirements-for-creators.md` + the M1 v2 lessons (1.1, 1.2a, 1.2b, 1.2c, 1.3) + the Mia walkthrough as the implementation reference before touching any M2 lesson.
+
+**🚀 What shipped 2026-06-22: Module 1 release (Option C reframe)**
+- ✅ Landing `_index.md` opener reframed: "Module 1 - Validate Demand - is released today. Modules 2-5 roll out through 2026." Drops the "live MVP, signed paid pilot" promise from the opener (those are M4/M5 outputs, not released yet).
+- ✅ Module map status badges added: M1 = `✅ Released today · v2 micro-lessons`; M2-M5 = `🗓️ Rolling out 2026 · v1 long-form chapters readable now`.
+- ✅ Founder OS section footnote: "Today: Module 1 produces artifacts 1 and 2. Artifacts 3 through 6 unlock as Modules 2-5 release through 2026."
+- ✅ `og_description` updated to be M1-honest (no fundraising/MVP promise).
+- ✅ Quickstart reframed: "What's released, what's coming" replaces the old "Promise" section; M1 chapter list fixed to current 5-lesson v2 structure (1.1, 1.2a, 1.2b, 1.2c, 1.3); status badges on M2-M5 sections.
+- ✅ FAQ: added 4 new release-status Q&As under "General"; existing "How long" Q split into M1-specific + full-course-when-released.
+- ✅ Stale slug `smoke-test-build-landing-page` → `smoke-test-build-page` corrected in Quickstart + FAQ (3 occurrences).
+- ✅ Build clean: 0 em-dashes across all 3 pages; all 7 course validators pass.
+
+**Deferred to follow-up sweeps (NOT in this release):**
+- ✅ OBSOLETE (2026-07-09): the "M2-M5 v1/v2 status callout" idea was dropped - the released-vs-rolling-out status lines were removed from the landing during the #345 redesign; the course presents as one coherent product.
+- ✅ Done differently (2026-07-08): covers regenerated with "5 modules · 20+ chapters" and "All free" chips; no roadmap badges.
+
+**What shipped earlier (2026-06-16): M1 v2 conversion COMPLETE**
+
+**What just shipped (2026-06-16): M1 v2 conversion COMPLETE**
+- ✅ All 5 Module 1 lessons converted to v2 micro-lesson format with full 8-part template:
+  - `form-your-founding-hypothesis-90-minute-sprint` (1.1) — Mad Libs frame → 4-lens scoring
+  - `smoke-test-build-page` (1.2a) — agnostic AI-builder workflow, Mixo as worked example
+  - `smoke-test-wire-tracking` (1.2b) — Clarity + GA4 (channel-independent), pixel deferred to 1.2c
+  - `smoke-test-landing-page-7-day-demand-test` (1.2c) — channel selection + pixel install + go/iterate/kill
+  - `price-hypothesis-on-smoke-test-page` (1.3) — Stripe Payment Link + price signal interpretation
+- ✅ Mia walkthrough page (`module-1-walkthrough-mia`) published with full narrative arc across all 5 lessons
+- ✅ Voice cleanup sweep applied to all M1 lessons + walkthrough (Hook ≤3 sentences, em-dash → hyphen, error blocks normalized, 4-slot closure pattern)
+- ✅ 1.2b title renamed: "Wire Tracking Before You Spend a Dollar" → "Wire Tracking Before Traffic Starts" across 7 files
+- ✅ Frontmatter title prefix consistency: all M1 lessons use `1.2X · ` prefix
+- ✅ Pixel install sequencing fixed: channel-independent tracking (Clarity + GA4) in 1.2b, channel-specific pixel in 1.2c
+- ✅ 1.3 Mixo redirect wording aligned: "GA4 counts the revisit"
+- ✅ Bridge chain verified: 1.1 → 1.2a → 1.2b → 1.2c → 1.3 → M2 intro intact
+
+**What shipped earlier (2026-06-08): Phase 1 pilot COMPLETE**
+- ✅ Phase 1 pilot RESTRUCTURED into ONE Mixo-only golden-path lesson:
+  - `smoke-test-build-page` — agnostic AI-builder workflow (Mixo as worked example, Manus AI and Durable named as equivalents, Carrd as manual-mode fallback): paste hypothesis → polish 4 copy blocks → swap hero → add disclaimer → publish → stranger test. Title and slug deliberately tool-agnostic so the lesson outlives any one tool.
+  - `smoke-test-wire-tracking` — Clarity + ad-platform pixel + optional GA4, ~430 words (unchanged from earlier pilot)
+- ✅ Deleted prior two-lesson split (`smoke-test-pick-builder-ship-page` + `smoke-test-ship-page`) - ICP review found audit framing + manual-path/AI-path conflation confused Sam; 6-element table positioned as audit gate but Mixo doesn't output labeled elements
+- ✅ Both lessons pass: Hugo build, validate-course (7/7), em-dash sweep (zero), word count in 500-800 band
+- ✅ Spec updates: 30.03 §2.7 mandates ONE case study per MODULE at module-end (slug `module-N-walkthrough-<founder>`); lesson bodies stay case-study-free; `See it in action` footer link added in SAME commit that publishes the walkthrough page (never before - placeholder URL reads as broken promise). AGENT-PROMPTS scaffolding file deleted - cold-agent workflow now lives inline in TASK-TRACKER + 30.03 + PROJECT-INDEX route.
+- ✅ Plan B (split-by-path: separate AI lesson + manual lesson) parked in LOW-IMPACT-IDEAS-BANK with trigger condition (reader data showing ≥30% Carrd-fallback rate)
+- ✅ Option C wired into landing: Quickstart + FAQ links in "Start here" callout, "What this course does NOT cover" section added with 7 explicit exclusions
+
+**Phase 1 pilot findings (record for cold agents):**
+
+| Observation | What it means for Phase 2 |
+|---|---|
+| Real time-per-lesson: ~25 min for the first draft + ~20 min for review/cuts ≈ 45 min/lesson | Phase 2 estimate of "~45-60 min per lesson" holds. M1 v2 conversion (5 lessons) took ~4 hours actual including walkthrough + voice sweep — validates the ~45 min/lesson estimate. M2 (5 chapters → ~6 micro-lessons) ≈ 4.5 hours realistic. Earlier estimates were padded. |
+| Two-case-studies-per-lesson pattern produced ~30% word-count drag on the 400-600 budget | Superseded 2026-06-08: case studies now live at module-end walkthrough page only (30.03 §2.7); lesson bodies are case-study-free. |
+| Split-by-step pattern (audit lesson + ship lesson) confused Sam: audit framing assumed Mixo outputs labeled 6-element list, but Mixo outputs a complete page Sam can't easily map to the 6 elements | Workflow-shaped lessons (one Mixo session = one lesson) beat framework-shaped lessons (audit then ship). Match the cognitive split to the reader's actual session boundaries, not to teacher-imposed pedagogical phases. |
+| Concept blocks naturally drift to ~310 words when GA4-style "industry standard" addendums creep in | Watch for "overkill but include for completeness" content. Cut or move to optional sidebar. The 300-word cap is enforced, not aspirational. |
+| Template labels (1. Hook, 2. Outcome, etc.) NEVER leak into published content when the writer reads the lesson aloud at the end | Read-aloud check before commit is a cheap insurance. Adds <60s, prevents the worst kind of regression. |
+| Step 2 of Do-Now in Lesson 1.2a originally combined all 6 elements into one ~95-word paragraph | Bullets beat paragraphs in Do-Now steps. Mobile scanability is the deciding factor. |
+| ICP-fit case-study selection: Mia worked for 1.2a (B2C "use what you have" theme), Tomas worked for 1.2b (B2B "invisible builder blind spot" theme) | Strict alternation would have put Tomas in 1.2a where Mia's "scrappy founder uses real screenshot" lands harder. ICP-fit picking is the right rule. |
+
+**Phase naming note:** This doc uses "Phase 0" for the remaining mechanical quick wins (outcome sentences, success checks, Stuck? boxes — see migration schedule below). The completed surgical improvements are called "Option C" (matching 30.03 §8.4-8.5). These are separate work streams. M1 v2 is complete; Phase 2 Module 2 migration is the active work stream.
+
+**Active sprint: M2 migration** (other candidates listed for visibility):
+1. **Phase 2 — Module 2 full migration** — apply v2 template to M2 (5 chapters → ~6 micro-lessons), start at 2.1 Mom Test (~4-5 days)
+2. **Landing page review against 30.03 + research** — audit `_index.md` against canonical spec + Sam journey reports (~2-3 hours, scope below)
+3. **Phase 0 mechanical sweep** — deferred until pilot lessons complete (~2-3 hours).
+
+## Current Active Scope
+
+This tracker is the **single source of truth** for all post-ship improvements. Recommendations from review files (40.04, 40.05, 40.06) and research (10.08) have been consolidated here.
+
+Current source of truth:
+
+- Chapter order: `data/course_sequence.yaml`
+- Project context and integration rules: `PROJECT-INDEX.md`
+- ICP lens: `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`
+- Voice lens: `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`
+- Research: `10-19-research/10.08-validation-tools-analysis-2026.md`
+- Course overview: Chapter 0 (`how-this-course-works`) + landing page (`_index.md`)
+- Course format requirements: `30-39-architecture-design/30.03-course-format-requirements-for-creators.md` (canonical spec for course creators)
+- Low-impact ideas: `LOW-IMPACT-IDEAS-BANK.md` (this directory)
+
+---
+
+## ICP Practicality Improvement Backlog
+
+Review lens: the course ICP - a non-technical founder going from idea (or half-built MVP) to first paying customer, who mostly has NOT hired yet. Burned/already-hired founders are a secondary audience routed to the rescue chapters (4.1/4.2) and the landing "If Your Team Is Already Failing" fast path - do not write validation/build chapter bodies to the burned founder. (Distinct from the website lead-gen ICP in `90.10-icp-primary-website-target.md`.)
+
+Current practicality score: 7.5/10.
+Target: 8.5/10 before launch.
+
+| Priority | Task | Status | Notes |
+|---|---|---|---|
+| ✅ Done 2026-05-20 | Fix course landing module map | Done | Landing page module list merged to 5 modules (commit 32e064dd). Stale "Proactive Ceiling Signals" title fixed. |
+| ✅ Done 2026-05-20 | Fix stale module/chapter numbering in companion pages | Done | Global `Module N.X` → `Chapter N.X` rename across 28 .md + 2 SVGs + YAML; 6-module → 5-module spine renumber; 3 companion pages (operating-kit, pivot-or-persevere, churn-triage) Module 7 references resolved. GOAL-AT-A-GLANCE rewritten to 5-module spine. 20.07 content plan marked superseded. |
+| ✅ Done 2026-05-20 | Repair missing artifact link | Done (no-op) | Audit confirmed `/blog/founding-hypothesis-worksheet/` is not linked from any chapter. The tracker entry was stale from a prior cleanup pass. |
+| ✅ Done 2026-05-20 | Remove unfulfilled download/email promises | Done (already correct) | Audit confirmed `first-paying-customer-operating-kit` already says "There is no email signup; when a template is downloadable, the link appears inline below. We will not promise files we cannot ship today." Matches course philosophy. |
+| ✅ Done 2026-05-20 | Build 4 source-of-truth validators (Kaizen Muda outcome) | Done | All 4 validators implemented as `bin/validate-course` + `lib/course_validators.rb` (with test/unit/course_validators_test.rb): (1) chapter-number-consistency, (2) title-yaml-match, (3) internal-link-existence, (4) table-width. Hooked into `bin/hugo-build` as pre-flight check. Globs updated to handle nested `content/course/<namespace>/<slug>/` structure. 3 of 4 pass after course-namespace migration; 1 (internal-link-existence) has 24 pre-existing broken-citation violations to non-existent research articles - separate follow-up. |
+| SUPERSEDED 2026-07-11 | Add "Burned founder fast path" to landing | Closed (grooming) | Superseded by the 2026-06-16 landing rework: "Already started building?" side-path + "Going further" 3 use-case clusters ARE the burned-founder routing, and per-chapter rescue blocks are explicitly banned (see 2026-05-22 reversal row). Course ICP is Sam; no further rescue framing on the course surface. |
+| P1 | Create downloadable PDF templates + restore "Free templates" section on landing | Regroomed 2026-07-11 → Sprint C (thin slice: print-CSS pipeline + 5 printable worksheets first; landing restore when full set exists; other 9 gated on pilot download demand) | 2026-05-21: removed "Free downloadable templates" H2 + 14-row table from `_index.md` because the links pointed to in-browser chapter pages, not actual PDF downloads. The chapter pages still exist (Outreach Sequence Template, Mom Test Interview Script, Validated Problem Statement Template, Vibe PRD Template, Build Path Decision Worksheet, GitHub/AWS/DB Ownership Checklist, Self-Serve Stack Walkthrough, Where-to-Hire Map 2026, Hiring Interview Script, SOW Reading Guide, First-Paying-Customer Operating Kit, Friday Demo Template, Salvage vs Rebuild Decision Tree, "We Use AI" 5-Question Script). When the 14 PDFs are precreated, restore the landing section with the correct framing (PDF + browser-page link side by side). Cover image chip "TEMPLATES 14 free" stays unchanged - it remains accurate because the template chapter pages still exist as free in-browser resources. |
+| SUPERSEDED 2026-07-11 | Add Founder Control Dashboard artifact | Closed (grooming) | Superseded by `first-paying-customer-operating-kit` - the 6-component control hub covers access/demos/reports/SOW/budget; its 5 remaining templates ship demand-driven (Sprint D #1). A second dashboard artifact would duplicate it. |
+| P1 | Make every artifact copy-pasteable | Done | Each template page needs on-page scripts/checklists, not only descriptions of future assets. Prioritize SOW, DPA, outreach, hiring interview, ownership, Friday demo. All 6 done 2026-06-02: outreach quick-ref checklist, SOW agency email + pre-sign checklist, hiring interview pre-interview + polite-no emails, ownership audit spreadsheet + recovery email, Friday demo follow-up + skipped-twice message, DPA one-page template skeleton. |
+| ✅ Done 2026-05-22 | Separate early-founder path from rescue path | Done | Decision reversed: chapter-level routing blocks removed, not rolled out. The Ch 1.1 "Already burned? / Already hired?" block was deleted 2026-05-22 - it interrupted the primary idea-stage ICP reader with two "leave this page" callouts before the hook, and duplicated the landing-page "If Your Team Is Already Failing" fast path (the real entry-point router for burned founders). Do NOT add per-chapter routing blocks to other module-start chapters; route burned founders at the landing page only. |
+| ✅ Done 2026-06-02 | Add AI critic/simulator blocks per module | Done | Standardize where AI helps: critique artifact, simulate customer/vendor/advisor, find contradictions. State what AI cannot prove. One block per module = 5 blocks (new 5-module spine). M1.1: crystallized AI tools sidebar. M2.2: framed chapter as canonical AI simulator. M3.2: AI-as-peer callout standardized. M4.3: NEW build-review prompts (audit brief, check RLS, detect overengineering). M5.2: AI channel research framed as critic layer. Commit df9a537e.
+| P1 | Roll manual-minimum sidebar to other tool-heavy chapters | Partial | 2026-05-20: 3 chapters got $0-budget callouts (Ch 1.2 smoke-test, Ch 4.3 self-serve-mvp-stack, Ch 5.5 outbound). Ch 2.2 already had manual-minimum sidebar. Audit remaining chapters (Ch 5.3, 5.4) for any unaddressed paid-tool friction. |
+| SUPERSEDED | Add "Skip to the action" anchor links to longest chapters (40.05 Rec #1) | Superseded by 40.07 Rec #1 (2026-06-07) | Replaced by refined 40.07 version: targets M4.3a, M1.2a, M3.2 (narrowed from M1.1, M3.2, M4.3). See P2 item below for current. |
+| DEFERRED | Add burned-founder acknowledgment callouts in Module 2 (40.05 Rec #2) | Deferred (2026-06-07) | **DEFERRED by user direction.** Burned-founder ICP improvements tabled as an idea. The course ICP is Sam (the idea-stage first-timer), NOT Alex (burned founder). See 40.07 for Sam-first alternative recommendations. |
+| ✅ Done (v2 migration) | Add TL;DR summaries to all chapters — phased rollout (40.05 Rec #3) | Closed 2026-07-11 (grooming) | Every spine lesson carries the TL;DR slot via the v2 template (M1-M5 migrations, PRs #351-353). Remaining refinement is visual only: distinct TL;DR accent (Sprint B #4). |
+| ✅ Done (v2 migration) | Add completion criteria to every chapter | Closed 2026-07-11 (grooming) | The v2 4-slot footer (Done / You have now / Next / If blocked) shipped on every spine lesson via PRs #351-353; conditional routing now also strip-level (branch-aware nav, PR #354). |
+| CONVERTED 2026-07-11 | Tighten practical proof in weaker modules | Closed (grooming) | Too vague to act on after 3 review rounds found no concrete instance. Converted to Sprint D #4: fix what real pilot recordings show readers stalling on, not what internal review guesses. |
+| P2 | Collapse outreach-sequence-template variant runs | Planned | 2026-05-23 audit found 3 variant groups rendered as 3 separate blockquote boxes each (LinkedIn DM openers ×3, cold-email subject lines ×3, possibly Day 1/3/7 email sequence ×3). Merge each group into ONE blockquote (use `>` blank-line separators) per the no-stacked-quotes rule. Lower priority because it's an artifact/template page, not a numbered linear chapter. |
+| P2 | De-stack + rebalance "$0 path" callouts (outbound, self-serve-mvp) | Planned | 2026-05-23: two chapters still have a "$0 path / $0 outbound stack" blockquote callout immediately under the Module banner (top-stack). Bundle with the deferred Module 4/5 budget-rebalance pass - de-stack to plain prose AND rebalance the framing per `feedback_budget_stance_free_and_paid_equal` (free and paid as equal options, reader chooses; don't lead with "$0 first"). |
+| P3 | Add Wizard of Oz Concierge MVP path to Ch 4.3 (10.08 Gap #2) | Planned | Add Tally + Zapier + Airtable as $0 no-code backend alternative to Lovable build for founders who should validate deeper before coding. Documented in 10.08-validation-tools-analysis-2026.md §Gap 2. |
+| P3 | Add echo chamber warning to Ch 5.3 and Ch 2.3 (10.08 Gap #3) | Planned | Warn that warm network is for SALES (valid) not VALIDATION (invalid echo chamber). Add cross-reference from Ch 2.3 warning against interviewing only other founders. Documented in 10.08 §Gap 3. |
+| P3 | Add Loom video outreach tactic to Ch 5.2 or 5.5 (10.08 Gap #4) | Planned | 10-minute personalized B2B video audits with higher conversion than cold email. Low effort, high differentiation. Documented in 10.08 §Gap 4. |
+| P3 | Add Engineering as Marketing to Ch 5.2 (10.08 Gap #5) | Planned | Free No-Code micro-tools (calculators/checklists) for $0 CAC organic SEO. Distinct from content marketing. Documented in 10.08 §Gap 5. |
+| Dropped | Add time-badge to each chapter header | Dropped (2026-06-02) | Each chapter needs a "**Time**: ~45 min" badge at the top so the reader can plan their session. 18 chapters. Dropped per user direction — time anchoring contradicts the ADR §1 policy of avoiding speculative effort estimates. |
+| P3 (downgraded 2026-07-11) | Build companion-post FAQ collection | Backlog | Downgraded in grooming: the FAQ page + landing "Going further" clusters + the 40.17 nav work cover most of the moment-of-need linking. Revisit only if pilot readers ask questions the FAQ misses. |
+| SUPERSEDED 2026-07-11 | Rescue-path routing audit | Closed (grooming) | Superseded by the 40.17 journey audit (44-page walk verified all module-boundary routing) + the standing 2026-05-22 decision that burned-founder routing lives at the landing page only. |
+| ✅ Done 2026-06-16 | Course landing page (`_index.md`) review + fixes against 30.03 + 40.06/40.07 | Done (commit 770dab88) | Comprehensive audit + restructure shipped from 3-critic cold-eyes review (ICP Sam + voice-guide enforcer + 30.03 spec auditor). **Tactical fixes:** deleted duplicate "What this course does NOT cover" section, renamed Module index → Module map (anchor #module-map), tagged M4.4 OPTIONAL (matches M2.2/M5.2 pattern), collapsed module map template sub-bullets to inline parentheticals. **Structural fixes:** trimmed YC/Lenny/Reforge competitor block, reframed payoff section as Founder OS bundle, reorganized "Going further" into 3 use-case clusters (diagnose / agency / manage team), consolidated 5 conflicting start-here buttons into 4 conditional routes, added "6-10 weeks at evenings-and-weekends pace" time commitment (Sam BLOCKER: page never named a duration). **Voice cleanup:** killed slogany flips ("Investors fund evidence, not ideas" used twice, "NOT for you if", "If X / If not X" pairing, "Walk into the meeting before the first slide" cinematic), killed staccato ("Free. No sign-up. Start tonight."), removed "skip the diagnostic / no trauma" callout (in-joke for burned founders, not Sam), rewrote aphoristic + cinematic openers, added human subject to "Rails-first dev shop" bio. Word count 2,551 → 2,179 (-15% after Stickiness pass added 5 win-recap callouts). All 7 course validators pass. **Note on 40.07 Rec #3 (line 131 below):** the "no trauma" callout previously shipped under that recommendation was reworded; the underlying intent (clean first-timer routing) is preserved in the new 4-route start-here block. **Stickiness pass (2026-06-16 follow-up):** §6.2 progress narrative + §6.3 per-module win recap shipped as one `**Walk away with:** [artifact]. [progress reinforcement].` blockquote per module (5 total, after each module's chapter list). §6.6 downloadable Founder OS toolkit dropped from queue per user direction — in-page Founder OS framing carries the bundle promise without PDF infra. |
+| P3 | Cover image regen audit for non-spine posts | Planned | 2026-05-20: 14 spine covers regenerated to clean "Curriculum 2026" badge. ~30 companion-post covers still have "Curriculum NN/30" stale counter. Regen via chrome-devtools at 2400×1260 if posts stay in active rotation. |
+| ✅ Done | Update decision doc 20.10 with Click correction | Done | Decision block added at top of 20.10.md (2026-05-20) marking Recommendation section as superseded. TASK-TRACKER entry updated 2026-05-29. |
+| ✅ Done 2026-06-04 | Add Sam customer journey report (40.06) with trust score methodology | Done | Single-ICP narrative spanning all 18 chapters + landing page. 3 entry-point doors. Per-chapter trust scores with emotional arc. Double-dip U-curve visualization. Appendix D: 19-row recalibrated trust score table with calibration constraints. Commit 63fb7d73. |
+| ✅ Done 2026-06-07 | Add Sam experience improvement report (40.07) | Done | 6 actionable Sam-first recommendations across 18 chapters. Burned-founder ICP framing removed per user direction. Recommendations logged here for triage. See `docs/projects/2605-tech-for-non-technical-founders/40-49-review/40.07-sam-experience-improvement-report-2026-06.md`. |
+| ✅ Done 2026-06-07 | Archived 10.07 Sam walkthrough | Done | Superseded by 40.06 (definitive Sam reference) and 40.07 (canonical recommendations). Renamed to `_ARCHIVED_10.07-icp-sam-persona-course-walkthrough.md` with cross-reference note to 40.06 + 40.07. |
+| ✅ Done 2026-06-07 | Published 30.03 course format requirements for creators | Done | Consolidated micro-learning spec + gap analysis + migration guide. Canonical requirements for course format design. See `30-39-architecture-design/30.03-course-format-requirements-for-creators.md`. |
+| ✅ Done 2026-06-10 | Applied 5 Sam-simulation surgical fixes to pilot lessons | Done | Added Mixo re-prompt hint (1.2a Step 2), Mixo head-tag path (1.2b), domain question (1.2a Step 5), non-Chrome incognito shortcuts (1.2a Step 5), preview-mode script-blocking note (1.2b Step 4). ~80 words total. Sam simulation report: 40.11. |
+| 🔲 P0 (UNBLOCKED 2026-07-11) | 5-Sam Validation Pilot — recruit 3-5 real founders, watch Clarity recordings | Sprint A #2 - course is complete, deferral condition met | Pivoted 2026-06-11: "pilot" in 2605 work = INTERNAL editorial template review (Paul-as-reviewer), NOT external recruitment. External kit deferred to post-course-completion at `40-49-review/_DEFERRED_external-validation-pilot-kit.md`. Original research questions preserved there for revival. |
+| 🔄 P1 | Course-wide voice cleanup sweep | M1 fully done 2026-06-14 (all 5 lessons + Mia walkthrough + 1.2b title rename + frontmatter prefix consistency); M2 active — apply sweep to M2 chapters BEFORE v2 conversion (so v2 lessons inherit clean voice from the start); M3-M5 queued | M1 sweep applied uniformly: Hook ≤3 sentences, em-dash → hyphen, error blocks normalized to `If this fails: / Why: / Fix:` triple, closure migrated to 4-slot pattern (`Done` / `You have now` / `Next` / `If blocked`), Outputs/Outcomes re-cast to Sam-voice result-state, budget/tool callouts comparison-context-only. 1.2b title renamed from "Wire Tracking Before You Spend a Dollar" → "Wire Tracking Before Traffic Starts" across 7 files (1.2b frontmatter, 1.2a Bridge, _index.md, data/course_sequence.yaml, 30.03 spec example, this entry; 1.2b SLUG kept stable for URL/SEO stability). 1.2a + 1.2b frontmatter titles gained `1.2X · ` prefix for consistency with 1.1/1.2c/1.3. Mia walkthrough em-dash sweep + vocab sync with locked 1.2b ("GA4 snippet" not "Measurement ID") + 1.3 ("waitlist" not "free waitlist"). **M2 active:** apply same sweep to all 5 M2 v1 chapters BEFORE converting to v2 (so v2 lessons inherit clean voice from the start). Tomas walkthrough drafted after M2 lessons stabilize. M3-M5 queued for later phases. |
+
+**5-Sam Pilot steps:**
+
+| Step | Action | Est. time |
+|---|---|---|
+| 0.1 | Recruit 3-5 idea-stage founders (indie-hackers, Reddit r/startups, personal network). Screening: no tech background, has an idea they haven't validated, reads on phone. | ~2 hours |
+| 0.2 | Post pilot lesson URLs (1.2a + 1.2b). Install Clarity on these pages. Instruct Sam to read both lessons and follow the Do-Now steps. | ~30 min |
+| 0.3 | Wait 3-5 days for Sams to complete. Watch Clarity session recordings + heatmaps. Record: completion rate, time-on-page, scroll depth, stall points, rage-clicks. | ~2 hours |
+| 0.4 | Synthesize findings: compare simulation predictions vs real behavior. Update Phase 2 template with any blind spots found. | ~1 hour |
+| 0.5 | Decision gate: if ≥3 Sams complete with no systemic stall point, fan out to Phase 2. If same stall point appears in ≥2 Sams, fix template first. | ~30 min |
+
+**Gate:** All 5 research questions have answers from real data. Template updated with findings.
+
+**Phase naming note:** This pilot uses "0.1-0.5" step numbering to distinguish it from the deferred Phase 0 mechanical quick wins. M1 v2 is now complete — the pilot validated the format; M2 is the first full-scale module migration.
+| ✅ Done 2026-06-07 | Add "Skip to the action" anchor links to longest chapters (40.07 Rec #1) | Done | Anchor-link callout added to M4.3a (6 links), M1.2a (4 links), M3.2 (4 links). Serves skim-first Sam. |
+| ✅ Done 2026-06-07 | Reduce builder comparison fatigue in M1.2a (40.07 Rec #2) | Done | Builder list restructured as decision tree: Mixo (start here) → Manus AI (fallback) → Durable/NeetoSite/Carrd (only if experienced). Eliminated the "Default vs Fallback" two-tier framing. |
+| ✅ Done 2026-06-07 | Add "First-timer fast path" to landing page (40.07 Rec #3) | Done | Callout added after hero section on `_index.md`: "New founder, no team, no trauma? Skip the diagnostic. Start at Chapter 1.1." |
+| ✅ Done 2026-06-07 | Reposition M2.2 (AI Persona) as optional (40.07 Rec #4) | Done | Implemented option 2: added "Skip this if you've interviewed before" callout to M2.2 + tagged [OPTIONAL] on landing page module index. M5.2 also tagged [OPTIONAL] per 40.06 trust scores. |
+| ✅ Done 2026-06-07 | Add "Stuck? Try this" boxes per module for first-timers (40.07 Rec #5) | Done | Stuck boxes added to M1.2a (builder paralysis), M2.3a (too-few-names), M3.2 (feature-list creep), M4.3a (12-rules overwhelm), M5.4 (asking-for-money terror). Placed after existing "If blocked" sections. |
+| ✅ Done 2026-06-07 | Move M4.3 AI critic block before the 12 rules (40.07 Rec #6) | Done | AI critic block (3 Claude prompts for build audit, RLS check, scope leak detection) moved before the 12 rules section. Sam hits the actionable prompts first; 12 rules are the reference checklist after. |
+| ✅ Done 2026-06-07 | Create one-page Quickstart (30.03 Option C) | Done | New page: `/quickstart/` — problem statement, promise, minimal path (core lessons only per module), gate thresholds, Start-here button. |
+| ✅ Done 2026-06-07 | Create FAQ page (30.03 Option C) | Done | New page: `/faq/` — 15 Q&A across all 5 modules + general questions. Typical blockers: Stripe verification, Mom Test scores <7, builder paralysis, 12-rules overwhelm, asking for money. |
+| ✅ Done 2026-06-07 | Create "What not to learn" section (30.03 Option C) | Done | Added to `_index.md` after "This is not for you if" — 7 explicitly excluded topics (coding, hiring CTO, VC, team mgmt, marketplace/mobile/AI, legal, SEO/marketing at scale).
+
+---
+
+## Closed today (2026-05-20)
+
+| Done | Notes |
+|---|---|
+| 3-cycle UI/UX polish across 18 spine chapters | 94 issues fixed across Groups A-F |
+| SEO frontmatter trims | 7 chapters trimmed for title ≤60 / desc ≤170 |
+| YAML title alignment | vibe-coding-ceiling-signals YAML matched file title |
+| Cover image regen | 14 spine covers, "Curriculum 2026" badge, ai-persona slogany dropped |
+| Module → Chapter nomenclature | Global sweep across content/blog + YAML + 2 SVGs (28 .md files) |
+| Ch 1.1 shame recovery paragraphs | 3 paragraphs after intro callout addressing burned-founder shame |
+| Ch 1.1 non-linear routing | Top-of-page block: "Already burned?" / "Already hired?" route to 5.2 / 5.1 |
+| Ch 1.1 Magic Lenses Money skip guidance | Pre-revenue founders can leave Money lens blank until smoke test data lands |
+| Ch 2.2 manual-minimum sidebar | $0 alternative to the $300-500/mo tool stack before the 5-step sequence (was Ch 3.2 pre-merge) |
+| Verified: "We..." opener density already at 0% in Ch 2.2 + Ch 5.3 (Group B polish caught this) |
+| **5-module spine merge** | Module 1 (1 chapter) + Module 2 (2 chapters) merged into 3-chapter Module 1 (Hypothesis & Smoke-Test). All downstream modules shifted down by 1. Slug-stable. |
+| YAML `goal:` field | Added one-sentence outcome per chapter to `data/course_sequence.yaml` (18 entries) |
+| $0-budget reframe | Top-of-chapter callouts in Ch 1.2 (smoke-test: Neeto/Carrd free + organic), Ch 4.3 (self-serve-mvp-stack: Lovable+Supabase+Stripe free tiers, under $50 to first customer), Ch 5.5 (outbound: Apollo free + Gmail mail-merge + Loom free + Calendly free) |
+| Module 2↔3 sequence swap DECIDED | Kept current order. Re-read Click's "Experiment" chapter: it's the lightweight landing-page-class test, NOT the heavier Design Sprint prototype + 5-user test. Our spine matches Click: Foundation (1.x) → Validate deeper (2.x) → Build. The reviewer's swap argument was anchored on "$300-500 ad spend before talking to anyone" — fixed by the $0-budget reframe instead of restructure. Decision doc: 20.10-sequence-decision-validate-vs-smoke-test.md |
+
+---
+
+## Course Migration Schedule (8-Part Template Rollout)
+
+**Reference docs:** 30.03 §8 (migration guide), 40.08 (gap report — all 21 chapters at 1.0-1.5/8), Appendix A micro-lesson example
+
+### Scheduling Principles
+
+Six principles drive this schedule. The wrong order wastes hours; the right order compounds learning.
+
+1. **Mechanical before creative.** Edits that follow a formula (add one outcome sentence, convert a table to a numbered list) require zero design brain. Do them all first while the mental model of the template is fresh. Creative rewrites (splitting a 3,000-word chapter into 4 micro-lessons) need the template to be second nature.
+
+2. **Complete one module end-to-end before fanning out.** The trap: add hooks to all 21 chapters, then outcomes to all 21, then concept blocks to all 21. You never see a single lesson fully working until the last pass. Instead: finish Module 1 (4 chapters → micro-lessons) completely. Ship it. Learn what broke. Apply those lessons to Module 2. Each module gets better.
+
+   **Exception: Phase 0 mechanical edits.** Adding one-sentence outcomes, success checks, and Stuck? boxes is purely formulaic — pull a YAML field, add a table row, name a common stall point. No design brain required. Fanning these out to all 21 chapters in one pass is safe and efficient. The principle applies to Phase 2 creative rewrites, where the risk of inconsistent bridges and broken handoffs is real.
+
+3. **Pilot before scale.** The first micro-lesson rewrite takes 3× longer than the fifth because you're discovering the real constraints — how 300 words actually feels, where Mermaid diagrams break on mobile, whether the bridge dependency actually holds. Do a 1-chapter pilot, measure the real time, recalibrate the estimates, then scale.
+
+4. **Top-of-funnel first.** Module 1 is where students decide to stay or leave. Improvements here have the highest conversion leverage. It's also the simplest module (no Supabase, no Stripe webhooks, no cold outreach). Start here to build momentum.
+
+5. **Dependency order within modules.** Never rewrite a chapter that depends on artifacts from a chapter you haven't rewritten yet. The bridge handoff (template §2.8) requires both lessons to be stable. Rewrite modules in linear order: 1 → 2 → 3 → 4 → 5.
+
+6. **High-complexity last.** Module 4 (Supabase wiring, Stripe webhooks, RLS policies) and Module 5 (paid pilot negotiation, cold outbound sequences) are the hardest to compress into 300-word concept blocks. By the time you reach them, you've done 10+ micro-lessons in simpler modules. The template is muscle memory.
+
+---
+
+### Phase 0: Remaining Quick Wins (DEFERRED — postponed until pilot lessons complete)
+
+> **Naming note:** This "Phase 0" is the mechanical quick-wins pass (outcome sentences, success checks, Stuck? boxes). It is separate from **Option C** (Quickstart, FAQ, "What not to learn," 6 Sam fixes) which is complete per 30.03 §8.4. See 30.03 §8.5 for the consolidated web delivery roadmap.
+
+**Status:** Deferred per user direction (2026-06-10). These are mechanical edits that don't require rewriting chapters — execute in one focused session when M2 migration momentum allows (~2-3 hours).
+
+| Step | Action | Chapters | Est. time |
+|---|---|---|---|
+| 0.1 | Add one-sentence outcomes | 21 | ~42 min |
+| 0.2 | Add success checks to "What to do next" tables | 21 | ~42 min |
+| 0.3 | Roll out Stuck? boxes to remaining chapters | 16 (5 already done) | ~80 min |
+
+**How:** Pull the `goal` field from `data/course_sequence.yaml` for each chapter's YAML frontmatter. Format: "After this chapter you will be able to: [goal]." Place after the Input/Output callout. For success checks: add a final row to each "What to do next" table — "✅ Success check:" with a verifiable condition. For Stuck? boxes: name the most common first-timer stall point for that chapter, give a concrete fix, place after existing "If blocked."
+
+**Gate:** Hugo build passes. No content rewrites — these are mechanical additions.
+
+---
+
+### Phase 1: Pilot Micro-Lesson Rewrite (✅ COMPLETE 2026-06-08, ~3 hours actual)
+
+**Status:** ✅ DONE. Chapter 1.2a (Smoke Test Build) migrated to 2 micro-lessons. Real time-per-lesson ~45 min (first draft + review). Template refinements + pilot findings recorded in "What just shipped" block above. Phase 2 can now proceed using the validated pattern.
+
+| Step | Action | Est. time |
+|---|---|---|
+| 1.1 | Select pilot chapter | 5 min |
+| 1.2 | Split chapter into 2-3 micro-lessons (concept boundaries) | 30 min |
+| 1.3 | Write all 8 parts for each micro-lesson | 2 hours |
+| 1.4 | Build Hugo, fix lint issues, verify on mobile viewport | 30 min |
+| 1.5 | Code review + final polish | 30 min |
+| 1.6 | Write post-pilot notes: actual time-per-lesson, surprises, template refinements | 15 min |
+
+**Recommended pilot:** Chapter 1.2a (Smoke Test Build). Reasons:
+- Lowest word count (2,364) → easiest to split
+- Already at 1.5/8 (Stuck? box + anchor links + visual)
+- Simple domain (landing page, not database schemas)
+- Top of Module 1 — the first module gets rewritten first anyway
+- Natural split points: builder choice → page elements → tracking setup
+
+**Alternative if 1.2a is too tool-dependent:** Chapter 2.1 (Mom Test, 2,931 words). The 5 micro-lesson exploration drafts (Mom Test 3-lesson sequence + paid-pilot + mom-test-5-questions) were removed 2026-06-08 to start the migration from a clean slate. The pilot would be a fresh rewrite using 30.03 Appendix A as the canonical pattern.
+
+**Gate:** One chapter fully migrated. Real time-per-lesson measured. Template refinements documented. Only then proceed to Phase 2.
+
+---
+
+### Phase 2: Module-by-Module Full Migration (~2-4 weeks, raises median to 6.5+/8)
+
+**Status:** In progress. M1 complete (2026-06-16). M2 is the active sprint.
+
+#### Module 1 — Hypothesis & Smoke Test (✅ COMPLETE 2026-06-16, ~4 hours actual)
+
+5 chapters → 5 micro-lessons + 1 walkthrough. Simplest content, highest leverage. **SHIPPED.**
+
+| Chapter | → Micro-lessons | Status |
+|---|---|---|
+| 1.1 Founding Hypothesis | 1 lesson | ✅ v2 live |
+| 1.2a Smoke Test Build | 1 lesson | ✅ v2 live (pilot) |
+| 1.2b Wire Tracking | 1 lesson | ✅ v2 live (pilot) |
+| 1.2c Smoke Test Run | 1 lesson | ✅ v2 live |
+| 1.3 Price Hypothesis | 1 lesson | ✅ v2 live |
+| Walkthrough | Mia builds TutorMatch | ✅ published |
+
+**Module 1 exit gate:** ✅ PASSED. All 5 micro-lessons follow 8-part template. Hugo build ✓. Mobile viewport ✓. Bridge chain verified (1.1 → 1.2a → 1.2b → 1.2c → 1.3 → M2 intro). Voice cleanup sweep ✓. Walkthrough published ✓.
+
+#### Module 2 — Validate the Problem (~4-5 days)
+
+5 chapters → ~6 micro-lessons. Medium complexity — the content is interview scripts and outreach, not technical. But it's the longest module.
+
+| Chapter | → Micro-lessons | Key split |
+|---|---|---|
+| 2.1 Mom Test | ~2 lessons | 5-question script → scoring rubric + synthesis decision |
+| 2.2 AI Personas [OPTIONAL] | ~1 lesson | One standalone optional lesson — skip-safe |
+| 2.3a Find People | ~1 lesson | ICP sharpening + community discovery + search strings |
+| 2.3b Outreach | ~1 lesson | Outreach templates + booking cadence |
+| 2.4 Clickable Prototype | ~1 lesson | Lovable prototype build + 5-user test signals |
+
+**Module 2 exit gate:** All 6 micro-lessons follow template. Core path (2.1 → 2.3a → 2.3b → 2.4) produces validated problem statement without 2.2. Bridge chain verified.
+
+#### Module 3 — Design from Evidence (~1-2 days) — IN PROGRESS on branch `module-3-design-from-evidence` (2026-07-09)
+
+**Progress 2026-07-10:** whole-course 4-lens validity review run mid-sprint at user request - verdict VALID, 13 finding-classes fixed in 46b3f0a4 (M5 numbering collision on Going Further pages, 3 Sam persona leaks, volatile price hardcodes across 7 M4/M5 files, OpenHunts primary-source repoint, 35→30 canon, 32 ratchet sigs). Full report + carry-forwards: `40-49-review/40.15-whole-course-review-2026-07-10.md`. M4/M5 sprint scopes now pre-seeded by 40.15 §Deferred.
+
+**Progress 2026-07-09:** steps 1-6 done - 3.1 v2 (ea8943ec, incl. course-wide 2.1→2.5 mislabel + Maven price sweep across 5.1/4.1/4.3a/worksheet/companion, 6 ratchet sigs), 3.2 v2 with I1-I3 (4a2ff457), Mia walkthrough + See-it-in-action + case-block removal (453fc5be), companion aligned + cover wired + 90-min contradiction fixed (95a5c23e), SVG-internal renumber leftovers fixed - visual QA caught 'Chapter 2.1' inside vibe-prd-template-visual.svg and pivot-ledger.svg, note the ratchet does NOT scan SVGs (3220e2f2, 498974ca). I4 verified already-compliant (2-forks section already sits below the template as a labeled flowchart). Covers verified current (no regen needed). Mobile: no overflow, mermaids compact. Orientation pages already correct for M3. 2026-07-10 finalization: 4-lens M3 fan-out (ICP/quality/voice/boundary) - all findings fixed in e854b3d9 (walkthrough coherence, rubric contradiction, callout stacks, glosses, Sarah-anecdote single-sourcing, Most-first-timers dodge in 4 Stuck boxes); visual scroll gate run on all 4 pages x 2 viewports (mermaid clipping + SVG border overflow + stale companion cover fixed, cover regenerated); scroll gate codified as blocking check in docs/workflows/visual-scroll-gate.md + CLAUDE.md + 30.03 §7 + 40.13 (a05424f5). PR #352 carries the full sprint.
+
+> The original "2 chapters → ~3 micro-lessons" plan predates the M2 sprint and is superseded by this section. Revision grounded in: M2 shipped shape (PR #351), 40.13 process rules, 30.03 §2.7, and a fresh re-read of both M3 chapters on 2026-07-09.
+
+**Prerequisite:** merge PR #351 first. Then branch `module-3-design-from-evidence` off fresh master. Cold agents read 30.03 + the M1/M2 v2 lessons + both Mia walkthroughs before touching M3.
+
+**Shape decision (revised): 1 chapter = 1 lesson, NO splits.** M2 retired letter-splits and shipped 1:1; splitting 3.1 would mint a new slug, cover, and redirect churn for no reader gain. Numbering stays 3.1 / 3.2 (already flat, already on landing/quickstart/yaml - no renumber needed, which removes M2's biggest defect source). Word-count band: both chapters sit at ~2.8-3.0k words vs the 30.03 400-900 band - proceed under the same waiver-by-precedent as M2 (spec split-or-waiver decision remains an open carry-forward, not a blocker).
+
+| Page | Slug (stable) | Work |
+|---|---|---|
+| 3.1 The One-Page Product Brief | `one-page-product-brief-vibe-prd` | v2 8-part template (Module 3 · Lesson 3.1 · CORE, Progress M3 · 1 of 2); remove in-lesson "Case Study: Tomas & Mia" block; fix defects 1-3 below; improvements I4-I5 |
+| 3.2 Quality-check Your Brief | `stop-specifying-features-start-outcomes` | v2 template (Lesson 3.2 · CORE, Progress M3 · 2 of 2); remove case block; align "Artifacts you carry out of Module 3" with Founder OS framing; fix defect 4; improvements I1-I3 |
+| Walkthrough (NEW) | `module-3-walkthrough-mia` | Mia drafts + quality-checks the TutorMatch brief. Seed content already exists in the two case blocks being removed (core 3 jobs, no-go list, job-story rewrites). M2 walkthrough's closing promise binds it: "Every feature on that page will trace back to a line a parent actually said." See-it-in-action lines land in the SAME commit (30.03 §2.7) |
+| Companion | `vibe-prd-template` | Align with 3.1 v2 the way `outreach-sequence-template` was aligned with 2.4 last sprint: fix defect 5 below, adopt the M2-companion header format (Input/Output callout), verify cover exists |
+
+**Known defects to fix regardless (found in the 2026-07-09 plan re-review):**
+1. 3.1 body says "Chapter 2.1 synthesis" twice (Section 1 heading + "What comes next") - M2 renumber leftover; synthesis is now Ch 2.5. The Input callout was fixed in the M2 fan-out, the body was not. Add `Chapter 2.1 synthesis` to the ratchet in the same commit.
+2. 3.1 "Founder OS · Artifact #4 of 6" hardcoded index - reconcile with the landing "You leave with" lines and the v2 footer style (name the artifact, drop the fragile index). 4.3b/5.4 keep theirs until their sprints.
+3. 3.1 hardcodes the "$1,000 Maven cohort" price 3× plus a "4.8/5 reviews" score (section heading, intro, Further reading) - volatile third-party facts; convert to capability language + check-the-pricing-page note per the de-hardcoding policy.
+4. Verify 3.2's `admin-panel-spaceship.svg` desc/alt text ("47 buttons") doesn't collide with the `47-button admin panel` ratchet signature; the illustration itself stays (informational, not decorative).
+5. `vibe-prd-template` companion: header says "synthesis from **Chapter 2.1**" while linking the 2.5 synthesis page (same renumber-leftover class); "one-page one-page brief" doubled-word typo; "$1,000" Maven price echoed twice more.
+
+**Content improvements IN scope (numbered; I1-I3 grounded in 40.06 trust-score friction, both chapters 7/10; I4-I5 grounded in documented CLAUDE.md content-organization rules):**
+- **I1 - 3.2 hook reframe.** 40.06 records Sam's resistance verbatim: "I already wrote Section 3 in Chapter 3.1 - why do I need to rewrite it?" The v2 Hook (≤3 sentences) must earn the rewrite up front - the 20-minute rewrite is insurance against the $15K admin-panel spaceship - and the objection gets answered before the first exercise, not assumed away. *Lands in: 3.2 Hook + the sentence right after Input/Output.*
+- **I2 - AI critic manual fallback.** 40.06 flags that 3.2's quality-check prompt requires a Claude account. Add the manual path (read each Section 3 sentence and ask: "is this a thing the user does, or a thing the software has?") per the manual-minimum policy. *Lands in: 3.2, directly under the existing AI quality-check prompt block.*
+- **I3 - Explicit module gate in the Done footer.** M1 ends on go/iterate/kill, M2 on build/pivot/kill; M3's implicit pass ("4 of 5 sections outcome-shaped", currently buried in the case blocks being deleted) becomes the stated Done criterion. *Lands in: 3.2 Done footer ("Done when 4 of 5 brief sections read as outcomes; brief saved to Founder OS").*
+- **I4 - "The 2 forks: Vibe PRD vs traditional PRD" → decision table.** The section is if-X-then-Y prose; the decision-aid rule (10.05 Part 2 / CLAUDE.md F-pattern rules) says render it as a compact decision table, and it currently sits BEFORE the 5-section walkthrough - demote it below the template so action comes first. *Lands in: 3.1.*
+- **I5 - First-fold visual hook check.** Verify both lessons put an informational visual inside the first viewport at 1280×800 (hero rule, Pew 2026); `vibe-prd-template-visual.svg` / `feature-vs-outcome.svg` are the natural candidates if repositioning is needed. *Lands in: 3.1 + 3.2, verified in the visual-QA step.*
+
+**Backlog rows this sprint closes for M3** (mark them in the ICP backlog table when done): P2 "TL;DR summaries" and P2 "completion criteria" for 3.1/3.2 - both are delivered inherently by the v2 template ("After this lesson you will be able to" + Done/Next/If-blocked footers).
+
+**Content improvements OUT of scope (decided, don't relitigate):** no new lessons, no splits, no synthesis-style addition. M3's two-step arc (draft → quality-check) is sound, trust scores are healthy, and the module is deliberately the short breather between M2 interviews and the M4 build. OpinionX stack-ranking stays the optional callout it already is.
+
+**Ordered steps (each gate before the next):**
+1. Voice sweep on both v1 chapters BEFORE template conversion (em-dash, banned patterns, full ratchet run) - so v2 inherits clean voice.
+2. Convert 3.1 (with I4), then 3.2 (with I1-I3) - dependency order; the 3.1→3.2 bridge names exactly which brief sections 3.2 audits.
+3. Walkthrough + See-it-in-action lines + case-block removal in one commit.
+4. Cross-page pass: landing/quickstart/FAQ/HTCW M3 rows; M2→M3 inbound promises honored (2.5 problem statement → Section 1 verbatim; 2.6 "describe in one sentence" vocabulary → Section 3; prototype code discarded, fresh M4 build); M3→M4 outbound intact (4.1 reads the brief for the build-path decision, 4.3 prompts Lovable from it).
+5. Semantic-leftover pass (40.13): grep order-encoding prose ("next chapter", "proceed to", "after step") in every touched file.
+6. Chrome-devtools visual QA at 1280×800 + 390×844: all 4 SVGs, both mermaid diagrams (height ≤ ~1600px), both covers (verify content is current - 2.3/2.5 covers turned out to be stale copies last sprint; regen from the family template if facts are wrong), first-fold visual hook per I5.
+7. ONE fan-out review (find → dedup → adversarial verify) AFTER migration is complete; fixes reviewed as scoped diffs, never whole-world re-samples; every fix adds its ratchet signature in the same commit.
+8. Mechanized gates: `bin/hugo-build` (8 validators) + `bin/rake test:critical`; `bin/dtest` too if any template/CSS file is touched; production link sweep.
+9. ONE PR for the sprint.
+
+**Module 3 exit gate:** both lessons on the 8-part template; walkthrough live and linked; boundary promises verified in both directions; all mechanized gates pass. Report format per 40.13: "all N mechanized gates pass; review round K found X" - never "everything is fine".
+
+#### Module 4 — Build It Yourself (~4-5 days)
+
+5 chapters → ~6 micro-lessons. **Highest technical complexity.** Supabase RLS, Stripe webhooks, SQL self-tests, 12 build rules. This is where the 300-word concept block constraint is hardest to satisfy.
+
+| Chapter | → Micro-lessons | Key split |
+|---|---|---|
+| 4.1 Hire Decision | ~1 lesson | Decision tree → path selection |
+| 4.2 Ownership Audit | ~1 lesson | 12-item checklist → recovery email |
+| 4.3a Stack Tools | ~2 lessons | What each tool does → pre-flight rules |
+| 4.3b Build Phases | ~2 lessons | Phases 1-2 (UI + auth) → Phases 3-4 (Stripe + deploy) |
+| 4.4 Ceiling Signals [OPTIONAL] | ~1 lesson | One standalone optional lesson |
+
+**Module 4 exit gate:** All 6 micro-lessons follow template. Technical concept blocks pass the ≤300-word check. RLS + webhook concepts distilled to 3 sentences each. Bridge chain verified. Optional 4.4 skip-safe.
+
+#### Module 5 — First Paying Customer (~4-5 days)
+
+5 chapters → ~6 micro-lessons. Highest emotional stakes — asking for money, cold outreach, PMF testing. The paid pilot DPA template is the hardest single block to compress.
+
+| Chapter | → Micro-lessons | Key split |
+|---|---|---|
+| 5.1 PMF Test | ~1 lesson | Survey setup → 40% threshold interpretation |
+| 5.2 Channel Selection [OPTIONAL] | ~1 lesson | One standalone optional lesson |
+| 5.3 Personal Network | ~1 lesson | 8-name audit → outreach motion |
+| 5.4 Paid Pilot | ~2 lessons | DPA template → Stripe deposit + kickoff cadence |
+| 5.5 Cold Outbound [OPTIONAL] | ~1 lesson | Filter → personalize → Loom → Calendly pipeline |
+
+**Module 5 exit gate:** All 6 micro-lessons follow template. DPA template split into concept block (<300 words) + do-this-now steps. Bridge chain verified. Win recap + share prompt on final lesson. Completion Toolkit bundle linked.
+
+---
+
+### Phase 3: Cross-Cutting Polish Pass (~2-3 days)
+
+**Status:** Not started. After all 5 modules are rewritten, do a single pass across all lessons to ensure consistency.
+
+| Step | Action | Est. time |
+|---|---|---|
+| 3.1 | Verify every bridge names a specific dependency (not just "Next: Ch X") | ~1 hour |
+| 3.2 | Verify core path alone produces all 6 artifacts without touching optional lessons | ~30 min |
+| 3.3 | Verify emotional arc (40.06 trust curve) is preserved across micro-lessons | ~1 hour |
+| 3.4 | Verify all 6 artifacts are bundled in final Completion Toolkit reference | ~30 min |
+| 3.5 | Mobile viewport test on all lessons (375px iPhone SE) | ~1 hour |
+| 3.6 | Full Hugo build + validate-course + link checker | ~30 min |
+| 3.7 | Update landing page module maps to reflect new lesson structure | ~30 min |
+| 3.8 | Update Quickstart to reflect micro-lesson path | ~30 min |
+| 3.9 | Final code review | ~30 min |
+
+**Phase 3 exit gate:** All lessons pass template QA checklist (30.03 §7). Hugo build ✓. validate-course ✓. Mobile viewport ✓. Emotional arc preserved. Core path produces all artifacts.
+
+---
+
+### Total Estimated Effort
+
+| Phase | Description | Est. time | Cumulative median score |
+|---|---|---|---|
+| Phase 0 | Quick wins (mechanical) | ~2 hours | 1.0 → ~2.5/8 |
+| Phase 1 | Pilot micro-lesson rewrite | ~~~4 hours~~ ✅ COMPLETE 2026-06-08 | Proof of concept |
+| Phase 2 | Module-by-module full migration | 🔄 In progress (M1 done, M2 active) | M1: 6.5+/8; M2-M5: pending |
+| Phase 3 | Cross-cutting polish pass | ~2-3 days | 6.5 → 7.0+/8 |
+| **Total** | | **~2-4 weeks remaining (M2-M5 + polish)** | **1.0 → 7.0+/8** |
+
+> **Day estimates in Phase 2 include:** writing + Hugo build verification + mobile viewport check + bridge chain verification per module. Not pure writing time — the overhead of splitting chapters, designing bridge dependencies, and compressing concept blocks is baked in.
+
+> **Why the range:** Phase 2 is `2-4 weeks` based on pilot data from Phase 1 (~45 min per lesson real time). The 30.03 Appendix A example took ~30 min for one lesson; at 20-25 lessons, that's 15-19 hours of pure writing. But splitting chapters, designing bridges, compressing concept blocks, and fixing mobile issues adds overhead. The 2-week estimate assumes 4 lessons/day (sustainable pace after pilot); the 4-week estimate allows for Module 4's technical complexity and Module 5's emotional-stakes rewrites.
+
+---
+
+### Risk Mitigation
+
+| Risk | Mitigation |
+|---|---|
+| Phase 2 stretches past 4 weeks | Ship module-by-module. Each module is independently shippable — Module 1 can go live while Module 2 is still being written. Never block the whole release on the last module. |
+| Phase 0 work is deferred until after pilot lessons complete | Phase 0 costs ~2-3 hours. Deferred per user direction (2026-06-10) so pilot momentum is not interrupted. Execute when pilot lessons are stable and Phase 2 begins. |
+| Technical chapters (4.3a, 4.3b) can't compress to 300 words | Allow 400-word concept blocks for technical chapters with hard constraints (RLS, webhooks). The template says ≤300; the spirit is "no bloat." A 400-word block that genuinely needs the space is better than a 300-word block that omits a critical concept. Flag these as exceptions in the rewrite notes. |
+| Bridges break when upstream lesson changes | The Phase 3 bridge audit catches these. Do NOT try to get bridges right on first pass — expect them to need adjustment when the full chain is visible. |
+| Phase 1 pilot diverges from 30.03 Appendix A worked example | 30.03 Appendix A is the canonical pattern. If Phase 1 discovers the pattern needs refinement, update 30.03 (with user approval) — do not let the pilot silently set a different precedent. |
+| Mobile viewport issues discovered late | The Phase 3 viewport test is a safety net, not the primary check. Test each module's lessons on mobile as part of the module exit gate. Don't defer all mobile testing to the end. |
+
+---
+
+## Practicality Model Chapters
+
+Preserve these as the standard for future edits:
+
+- Ownership audit
+- Friday demo
+- Weekly report
+- SOW review
+- Salvage/rebuild
+- Switch dev shops
+- AI agency questions
+- AI token bill
+- Slopsquatting gate

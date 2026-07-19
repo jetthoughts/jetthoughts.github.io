@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" role="img" aria-labelledby="pilot-title">
+  <title id="pilot-title">Why free pilots ghost and paid pilots convert - the skin-in-the-game gap</title>
+  <defs>
+    <style>
+      .heading       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .panel-title   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 24px; fill: #1a1a1a; font-weight: 700; }
+      .stat-big      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 56px; font-weight: 700; }
+      .stat-red      { fill: #cc342d; }
+      .stat-purple   { fill: #2e7d32; }
+      .label         { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 600; }
+      .note          { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .panel-free    { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .panel-paid    { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .caveat        { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #777; font-style: italic; }
+    </style>
+  </defs>
+
+  <text x="500" y="40" class="heading" text-anchor="middle">Free pilot vs paid pilot - what skin in the game does</text>
+  <text x="500" y="68" class="note" text-anchor="middle">Illustrative from 4 founders we worked with who ran both motions in 2026. Your numbers will vary.</text>
+
+  <!-- Free pilot panel -->
+  <rect x="60" y="100" width="420" height="380" rx="14" class="panel-free" transform="rotate(-0.3 270 290)"/>
+  <text x="270" y="135" class="panel-title" text-anchor="middle">FREE PILOT</text>
+  <text x="270" y="220" class="stat-big stat-red" text-anchor="middle">12%</text>
+  <text x="270" y="248" class="label" text-anchor="middle">convert to paying</text>
+  <text x="270" y="290" class="note" text-anchor="middle">Customer never had to defend the spend.</text>
+  <text x="270" y="312" class="note" text-anchor="middle">"This is great" emails on Friday,</text>
+  <text x="270" y="334" class="note" text-anchor="middle">ghost on conversion in week 8.</text>
+  <text x="270" y="376" class="note" text-anchor="middle">Average pilot length: 6-8 weeks.</text>
+  <text x="270" y="398" class="note" text-anchor="middle">Average founder hours: 25-40.</text>
+  <text x="270" y="420" class="note" text-anchor="middle">Average revenue: $0.</text>
+  <text x="270" y="455" class="caveat" text-anchor="middle">"It is great. Let me circle back next quarter."</text>
+
+  <!-- Paid pilot panel -->
+  <rect x="520" y="100" width="420" height="380" rx="14" class="panel-paid" transform="rotate(0.4 730 290)"/>
+  <text x="730" y="135" class="panel-title" text-anchor="middle">PAID PILOT ($500-$6K deposit)</text>
+  <text x="730" y="220" class="stat-big stat-purple" text-anchor="middle">65%</text>
+  <text x="730" y="248" class="label" text-anchor="middle">convert to paying</text>
+  <text x="730" y="290" class="note" text-anchor="middle">Customer defended the spend internally.</text>
+  <text x="730" y="312" class="note" text-anchor="middle">CFO or boss already approved.</text>
+  <text x="730" y="334" class="note" text-anchor="middle">Conversion is paperwork, not a new decision.</text>
+  <text x="730" y="376" class="note" text-anchor="middle">Average pilot length: 6-8 weeks.</text>
+  <text x="730" y="398" class="note" text-anchor="middle">Average founder hours: 25-40.</text>
+  <text x="730" y="420" class="note" text-anchor="middle">Average revenue: $500-$6K + annual.</text>
+  <text x="730" y="455" class="caveat" text-anchor="middle">"Ship the year-one invoice next week."</text>
+
+  <!-- Bottom callout -->
+  <rect x="80" y="495" width="840" height="35" rx="8" fill="#fff8e0" stroke="#b8860b" stroke-width="2"/>
+  <text x="500" y="519" class="label" text-anchor="middle">Same product. Same customer. Same eight weeks. The deposit is the variable.</text>
+</svg>

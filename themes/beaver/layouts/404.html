@@ -1,9 +1,10 @@
 {{ define "header" }}
   {{- $cssResources := slice
-    (resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" .)
+    (resources.Get "css/foundations/css-variables.css")
+    (resources.Get "css/dynamic-404.css" | resources.ExecuteAsTemplate "css/dynamic.css" .)
     (resources.Get "css/404.css")
     (resources.Get "css/vendors/base-4.min.css")
-    (resources.Get "css/skin-65eda28877e04.css")
+    (resources.Get "css/legacy-theme-skin.css")
     (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
     (resources.Get "css/586.css")
     (resources.Get "css/footer.css")
@@ -17,7 +18,7 @@
       class="fl-builder-content fl-builder-content-713 fl-builder-global-templates-locked"
       data-post-id="713">
       <div
-        class="fl-row fl-row-full-width fl-row-bg-none fl-node-cydnh3z89fkb fl-row-default-height fl-row-align-center fl-row-has-layers error-page__hero"
+        class="fl-row fl-row-full-width fl-row-bg-none error-page__hero fl-row-default-height fl-row-align-center fl-row-has-layers"
         data-node="cydnh3z89fkb">
         <div class="fl-row-content-wrap">
           <div
@@ -40,14 +41,14 @@
           </div>
           <div class="fl-row-content fl-row-fixed-width">
             <div
-              class="fl-col-group fl-node-p0fg9w7ec5ut fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width fl-col-group-responsive-reversed error-page__main-section"
+              class="fl-col-group fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width fl-col-group-responsive-reversed error-page__main-section"
               data-node="p0fg9w7ec5ut">
               <div
-                class="fl-col fl-node-0ptma2d86ugo fl-col-small fl-col-small-custom-width error-page__message-col"
+                class="fl-col error-page__message-col fl-col-small fl-col-small-custom-width"
                 data-node="0ptma2d86ugo">
                 <div class="fl-col-content">
                   <div
-                    class="fl-module fl-module-heading fl-node-sh625973faxk"
+                    class="fl-module fl-module-heading error-page__heading"
                     data-node="sh625973faxk">
                     <div class="fl-module-content">
                       <h1 class="fl-heading">
@@ -59,7 +60,7 @@
                     </div>
                   </div>
                   <div
-                    class="fl-module fl-module-rich-text fl-node-0qz7321m48js"
+                    class="fl-module fl-module-rich-text error-page__message"
                     data-node="0qz7321m48js">
                     <div class="fl-module-content">
                       <div class="fl-rich-text">
@@ -68,7 +69,7 @@
                     </div>
                   </div>
                   <div
-                    class="fl-module fl-module-button fl-node-ar7hkgve10jq"
+                    class="fl-module fl-module-button error-page__home-button"
                     data-node="ar7hkgve10jq">
                     <div class="fl-module-content">
                       <div
@@ -85,11 +86,11 @@
                 </div>
               </div>
               <div
-                class="fl-col fl-node-1amo8q937zkf fl-col-small fl-col-small-custom-width error-page__image-col"
+                class="fl-col error-page__image-col fl-col-small fl-col-small-custom-width"
                 data-node="1amo8q937zkf">
                 <div class="fl-col-content">
                   <div
-                    class="fl-module fl-module-photo fl-node-0zfdxjbv1k3s"
+                    class="fl-module fl-module-photo error-page__image"
                     data-node="0zfdxjbv1k3s">
                     <div class="fl-module-content">
                       <div class="fl-photo fl-photo-align-center">
@@ -105,12 +106,12 @@
             </div>
 
             <div
-              class="fl-col-group fl-node-wngd074viayh error-page__spacer-section"
+              class="fl-col-group error-page__spacer-section"
               data-node="wngd074viayh">
-              <div class="fl-col fl-node-1fwv4o9g2ict" data-node="1fwv4o9g2ict">
+              <div class="fl-col error-page__spacer-col" data-node="1fwv4o9g2ict">
                 <div class="fl-col-content">
                   <div
-                    class="fl-module fl-module-pp-spacer fl-node-ndgsicr250p4 fl-visible-desktop fl-visible-large fl-visible-medium"
+                    class="fl-module fl-module-pp-spacer error-page__spacer fl-visible-desktop fl-visible-large fl-visible-medium"
                     data-node="ndgsicr250p4">
                     <div class="fl-module-content"></div>
                   </div>
@@ -119,14 +120,14 @@
             </div>
 
             <div
-              class="fl-col-group fl-node-l0ph4ozc7qgv fl-col-group-custom-width error-page__cta-section"
+              class="fl-col-group fl-col-group-custom-width error-page__cta-section"
               data-node="l0ph4ozc7qgv">
               <div
-                class="fl-col fl-node-jucnbqyew63f fl-col-small-custom-width"
+                class="fl-col error-page__cta-col fl-col-small-custom-width"
                 data-node="jucnbqyew63f">
                 <div class="fl-col-content">
                   <div
-                    class="fl-module fl-module-heading fl-node-qdmba8hk6c5u"
+                    class="fl-module fl-module-heading error-page__cta-heading"
                     data-node="qdmba8hk6c5u">
                     <div class="fl-module-content">
                       <h2 class="fl-heading">
@@ -138,7 +139,7 @@
                     </div>
                   </div>
                   <div
-                    class="fl-module fl-module-rich-text fl-node-waie8sk5qlnj"
+                    class="fl-module fl-module-rich-text error-page__cta-text"
                     data-node="waie8sk5qlnj">
                     <div class="fl-module-content">
                       <div class="fl-rich-text">
@@ -151,7 +152,7 @@
                     </div>
                   </div>
                   <div
-                    class="fl-module fl-module-button fl-node-fxvw9yp0o6l7"
+                    class="fl-module fl-module-button error-page__cta-button"
                     data-node="fxvw9yp0o6l7">
                     <div class="fl-module-content">
                       <div

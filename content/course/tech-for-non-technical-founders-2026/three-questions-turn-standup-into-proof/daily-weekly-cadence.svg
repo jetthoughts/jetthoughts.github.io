@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="cadence-title">
+  <title id="cadence-title">The weekly oversight cadence: five daily standups feed one Friday demo, then the loop resets Monday.</title>
+  <desc>On the left, a daily-standup panel labelled Mon to Fri holds the three questions asked at the end of every standup: show the staging URL of what shipped, walk through one PR you reviewed and what you flagged, and what did we cut to ship it. An arrow labelled five days of proof feeds a green Friday demo card - the week's working software. That feeds a purple weekly report card - what shipped, what is next. A dashed loop returns from the weekly report to the daily standup with the caption: Monday, the loop resets - you already know what should be on staging.</desc>
+  <defs>
+    <style>
+      .h       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title   { font-size: 28px; font-weight: 700; fill: #1a1a1a; }
+      .sub     { font-size: 17px; fill: #666; font-style: italic; }
+      .panel-t { font-size: 21px; font-weight: 700; fill: #cc342d; }
+      .panel-s { font-size: 15px; fill: #666; font-style: italic; }
+      .q       { font-size: 19px; fill: #1a1a1a; }
+      .num     { font-size: 15px; font-weight: 700; fill: #fff; }
+      .card-t  { font-size: 22px; font-weight: 700; }
+      .card-tg { fill: #2e7d32; }
+      .card-tp { fill: #7c3aed; }
+      .card-s  { font-size: 16px; fill: #444; }
+      .arrow-l { font-size: 16px; fill: #666; font-style: italic; }
+      .note    { font-size: 16px; fill: #666; font-style: italic; }
+      .panel   { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .card-g  { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .card-p  { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
+      .numdot  { fill: #cc342d; }
+      .arrow   { stroke: #333; stroke-width: 2.25; fill: none; }
+      .loop    { stroke: #888; stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+    </style>
+    <marker id="cah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    </marker>
+    <marker id="cahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="36" text-anchor="middle" class="h title">The weekly oversight cadence</text>
+  <text x="480" y="62" text-anchor="middle" class="h sub">Five daily standups feed one Friday demo - then the loop resets.</text>
+
+  <!-- Daily standup panel -->
+  <g transform="translate(38,90) rotate(-0.4 180 108)">
+    <rect width="360" height="216" rx="14" class="panel"/>
+    <text x="24" y="38" class="h panel-t">Daily standup - Mon to Fri</text>
+    <text x="24" y="60" class="h panel-s">Ask these 3 at the end, every day.</text>
+
+    <circle cx="34" cy="98" r="14" class="numdot"/>
+    <text x="34" y="103" text-anchor="middle" class="h num">1</text>
+    <text x="60" y="104" class="h q">Staging URL of what shipped?</text>
+
+    <circle cx="34" cy="142" r="14" class="numdot"/>
+    <text x="34" y="147" text-anchor="middle" class="h num">2</text>
+    <text x="60" y="148" class="h q">One PR reviewed - what you flagged?</text>
+
+    <circle cx="34" cy="186" r="14" class="numdot"/>
+    <text x="34" y="191" text-anchor="middle" class="h num">3</text>
+    <text x="60" y="192" class="h q">What did we cut to ship it?</text>
+  </g>
+
+  <!-- Feed arrow: standup -> Friday demo -->
+  <text x="435" y="176" text-anchor="middle" class="h arrow-l">5 days</text>
+  <text x="435" y="194" text-anchor="middle" class="h arrow-l">of proof</text>
+  <path d="M 400 205 L 486 205" class="arrow" marker-end="url(#cah)"/>
+
+  <!-- Friday demo card -->
+  <g transform="translate(490,132) rotate(0.5 105 73)">
+    <rect width="210" height="146" rx="14" class="card-g"/>
+    <text x="105" y="52" text-anchor="middle" class="h card-t card-tg">Friday demo</text>
+    <text x="105" y="86" text-anchor="middle" class="h card-s">the week's</text>
+    <text x="105" y="108" text-anchor="middle" class="h card-s">working software</text>
+  </g>
+
+  <!-- Arrow: Friday demo -> weekly report -->
+  <path d="M 704 205 L 738 205" class="arrow" marker-end="url(#cah)"/>
+
+  <!-- Weekly report card -->
+  <g transform="translate(742,132) rotate(-0.5 90 73)">
+    <rect width="180" height="146" rx="14" class="card-p"/>
+    <text x="90" y="52" text-anchor="middle" class="h card-t card-tp">Weekly report</text>
+    <text x="90" y="86" text-anchor="middle" class="h card-s">what shipped,</text>
+    <text x="90" y="108" text-anchor="middle" class="h card-s">what's next</text>
+  </g>
+
+  <!-- Loop back to daily standup -->
+  <path d="M 832 282 C 780 328, 420 336, 218 314" class="loop" marker-end="url(#cahg)"/>
+  <text x="480" y="350" text-anchor="middle" class="h note">Monday: the loop resets - you already know what should be on staging.</text>
+</svg>

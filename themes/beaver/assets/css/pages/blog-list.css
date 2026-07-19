@@ -1,0 +1,78 @@
+/* Semantic blog index/listing card styles — ported from the retired
+   homepage-layout.css block (was rows 2608-2678) when homepage-layout.css
+   + services-layout.css were dropped from the blog-list bundle. Card
+   layout only; .blog typography, .post-tags*, and .blog-index live in the
+   retained style.css + single-post.css. The two source .post-title
+   declarations (1.5em then 1.15em) are merged to their computed winner. */
+
+/* Preserves the generic .fl-row-content-wrap{padding:20px} the blog
+   column sat in (dropped with homepage-layout.css). All FOUR sides: the
+   horizontal 20px is invisible on desktop (centered max-width absorbs
+   it) but real on mobile, where it stacks with the inner 18px gutter. */
+.blog-index-page {
+  padding: 20px;
+}
+
+.blog-post {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.post-image {
+  margin-right: 20px;
+  min-width: 180px;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  background: #10141a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  min-width: 0;
+}
+
+.post-title {
+  font-size: 1.15em;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.post-meta {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.post-meta .post-tags,
+.post-meta .post-date {
+  display: block;
+}
+
+.post-description {
+  font-size: 0.85em;
+  line-height: 1.5;
+  color: #555;
+  margin-top: 6px;
+}
+
+@media (max-width: 860px) {
+  .post-image { display: none; }
+  .post-title { font-size: 1em; }
+  .post-meta .post-tags { display: none; }
+}

@@ -7,6 +7,11 @@ set -euo pipefail
 OUTPUT_DIR=${OUTPUT_DIR:-_dest/public-dev}
 ENVIRONMENT=${ENVIRONMENT:-development}
 
+# Set HUGO_ENVIRONMENT for PostCSS (postcss.config.js checks this to
+# skip PurgeCSS, cssnano, and other expensive plugins in dev mode).
+# Hugo does not automatically export this env var to Node child processes.
+export HUGO_ENVIRONMENT="$ENVIRONMENT"
+
 BASE_URL=${BASE_URL:-}
 
 echo "Building Hugo site..."
@@ -15,12 +20,22 @@ echo "Output: $OUTPUT_DIR"
 
 BUILD_DRAFTS=${BUILD_DRAFTS:-}
 
-# Project uses Bun for JS, never Node. bin/shims/node forwards Hugo's
-# hardcoded "node" lookup to bun. The [security.node.permissions]
-# block in hugo.toml is a defensive fallback for vanilla Node 22+.
+# Add node_modules/.bin to PATH for npm CLI tools. Hugo 0.161+ node
+# permission flags are handled by [security.node.permissions] in hugo.toml.
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PATH="$SCRIPT_DIR/shims:$SCRIPT_DIR/../node_modules/.bin:$PATH"
+PATH="$SCRIPT_DIR/../node_modules/.bin:$PATH"
 export PATH
+
+# Run course source-of-truth validators before building
+if [ -f "$SCRIPT_DIR/validate-course" ]; then
+  echo "Running course validators..."
+  if ! "$SCRIPT_DIR/validate-course"; then
+    echo ""
+    echo "❌ Course validators failed. Fix violations before building."
+    echo "   Run bin/validate-course --verbose for full details."
+    exit 1
+  fi
+fi
 
 HUGO_ARGS=(hugo build --noBuildLock --environment "$ENVIRONMENT" --destination "$OUTPUT_DIR")
 [ -n "$BASE_URL" ] && HUGO_ARGS+=(--baseURL "$BASE_URL")

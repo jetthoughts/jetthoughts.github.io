@@ -2,13 +2,15 @@
   {{- $CSS := slice
     (resources.Get "css/critical/base.css")
     (resources.Get "css/critical/services-critical.css")
-    (resources.Get "css/737-layout.css")
-    (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
+    (resources.Get "css/components/testimonials.css")
+    (resources.Get "css/components/cta-banner.css")
+    (resources.Get "css/components/header-cta.css")
+    (resources.Get "css/pages/services.css")
     (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
     (resources.Get "css/586.css")
     (resources.Get "css/vendors/base-4.min.css")
     (resources.Get "css/style.css")
-    (resources.Get "css/skin-65eda28877e04.css")
+    (resources.Get "css/legacy-theme-skin.css")
     (resources.Get "css/technologies.css")
     (resources.Get "css/footer.css")
     (resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .)
@@ -45,20 +47,20 @@
                 class="fl-builder-content fl-builder-content-737 fl-builder-content-primary fl-builder-global-templates-locked"
                 data-post-id="737">
                 <div
-                  class="fl-row fl-row-full-width fl-row-bg-photo fl-node-nhf6l2ycmzoe fl-row-default-height fl-row-align-center"
+                  class="fl-row fl-row-full-width fl-row-bg-photo services-hero fl-row-default-height fl-row-align-center"
                   data-node="nhf6l2ycmzoe">
                   <div class="fl-row-content-wrap">
                     <div
                       class="fl-row-content fl-row-fixed-width fl-node-content">
                       <div
-                        class="fl-col-group fl-node-i8x1zs2grf9h"
+                        class="fl-col-group"
                         data-node="i8x1zs2grf9h">
                         <div
-                          class="fl-col fl-node-ub6cphnzm7dy"
+                          class="fl-col services-intro-col"
                           data-node="ub6cphnzm7dy">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-rich-text fl-node-5auhpfbjkslc"
+                              class="fl-module fl-module-rich-text services-eyebrow"
                               data-node="5auhpfbjkslc">
                               <div class="fl-module-content fl-node-content">
                                 <div class="fl-rich-text">
@@ -67,7 +69,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-heading fl-node-geh5kf43xaqi"
+                              class="fl-module fl-module-heading services-heading"
                               data-node="geh5kf43xaqi">
                               <div class="fl-module-content fl-node-content">
                                 <h1 class="fl-heading">
@@ -78,7 +80,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-rich-text fl-node-lc2vf9wtsg7e"
+                              class="fl-module fl-module-rich-text services-subtitle"
                               data-node="lc2vf9wtsg7e">
                               <div class="fl-module-content fl-node-content">
                                 <div class="fl-rich-text">
@@ -95,14 +97,14 @@
                         </div>
                       </div>
                       <div
-                        class="fl-col-group fl-node-hpiux561ftv7 fl-col-group-custom-width"
+                        class="fl-col-group fl-col-group-custom-width"
                         data-node="hpiux561ftv7">
                         <div
-                          class="fl-col fl-node-7jz6cas305te fl-col-small fl-col-small-custom-width hover-box"
+                          class="fl-col services-card-cto-col fl-col-small fl-col-small-custom-width hover-box"
                           data-node="7jz6cas305te">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-pp-infobox fl-node-0pigeztak1xl jt-service-box"
+                              class="fl-module fl-module-pp-infobox services-card-cto jt-service-box"
                               data-node="0pigeztak1xl">
                               <div class="fl-module-content fl-node-content">
                                 <div class="pp-infobox-wrap">
@@ -152,11 +154,11 @@
                           </div>
                         </div>
                         <div
-                          class="fl-col fl-node-rxpuo06w93bn fl-col-small fl-col-small-custom-width hover-box"
+                          class="fl-col services-card-webdev-col fl-col-small fl-col-small-custom-width hover-box"
                           data-node="rxpuo06w93bn">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-pp-infobox fl-node-ugiypbhnvlfw jt-service-box"
+                              class="fl-module fl-module-pp-infobox services-card-webdev jt-service-box"
                               data-node="ugiypbhnvlfw">
                               <div class="fl-module-content fl-node-content">
                                 <div class="pp-infobox-wrap">
@@ -206,11 +208,11 @@
                           </div>
                         </div>
                         <div
-                          class="fl-col fl-node-aj2ch9vn5k1w fl-col-small fl-col-small-custom-width hover-box"
+                          class="fl-col services-card-qa-col fl-col-small fl-col-small-custom-width hover-box"
                           data-node="aj2ch9vn5k1w">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-pp-infobox fl-node-h2wjp3zb7afk jt-service-box"
+                              class="fl-module fl-module-pp-infobox services-card-qa jt-service-box"
                               data-node="h2wjp3zb7afk">
                               <div class="fl-module-content fl-node-content">
                                 <div class="pp-infobox-wrap">
@@ -261,14 +263,14 @@
                         </div>
                       </div>
                       <div
-                        class="fl-col-group fl-node-g9ub4ojrvt2l"
+                        class="fl-col-group"
                         data-node="g9ub4ojrvt2l">
                         <div
-                          class="fl-col fl-node-qvfo6gn7h5jx"
+                          class="fl-col services-spacer-col"
                           data-node="qvfo6gn7h5jx">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-pp-spacer fl-node-tl5fvc086rnw fl-visible-desktop fl-visible-large fl-visible-medium"
+                              class="fl-module fl-module-pp-spacer services-spacer fl-visible-desktop fl-visible-large fl-visible-medium"
                               data-node="tl5fvc086rnw">
                               <div class="fl-module-content fl-node-content">
                                 <div class="pp-spacer-module"></div>
@@ -278,14 +280,14 @@
                         </div>
                       </div>
                       <div
-                        class="fl-col-group fl-node-ys6b4evd1tj8 fl-col-group-custom-width"
+                        class="fl-col-group fl-col-group-custom-width"
                         data-node="ys6b4evd1tj8">
                         <div
-                          class="fl-col fl-node-r0jkz1qcfsgp fl-col-small fl-col-small-custom-width hover-box"
+                          class="fl-col services-card-product-col fl-col-small fl-col-small-custom-width hover-box"
                           data-node="r0jkz1qcfsgp">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-pp-infobox fl-node-nwx7eiysakvl jt-service-box"
+                              class="fl-module fl-module-pp-infobox services-card-product jt-service-box"
                               data-node="nwx7eiysakvl">
                               <div class="fl-module-content fl-node-content">
                                 <div class="pp-infobox-wrap">
@@ -335,11 +337,11 @@
                           </div>
                         </div>
                         <div
-                          class="fl-col fl-node-w4f3716ghpvs fl-col-small fl-col-small-custom-width hover-box"
+                          class="fl-col services-card-staffing-col fl-col-small fl-col-small-custom-width hover-box"
                           data-node="w4f3716ghpvs">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-pp-infobox fl-node-a5khmr6nto3z jt-service-box"
+                              class="fl-module fl-module-pp-infobox services-card-staffing jt-service-box"
                               data-node="a5khmr6nto3z">
                               <div class="fl-module-content fl-node-content">
                                 <div class="pp-infobox-wrap">
@@ -389,11 +391,11 @@
                           </div>
                         </div>
                         <div
-                          class="fl-col fl-node-6ogabjsdei1h fl-col-small fl-col-small-custom-width hover-box"
+                          class="fl-col services-card-recruiting-col fl-col-small fl-col-small-custom-width hover-box"
                           data-node="6ogabjsdei1h">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-pp-infobox fl-node-2ufxtslray80 jt-service-box"
+                              class="fl-module fl-module-pp-infobox services-card-recruiting jt-service-box"
                               data-node="2ufxtslray80">
                               <div class="fl-module-content fl-node-content">
                                 <div class="pp-infobox-wrap">
@@ -448,7 +450,7 @@
                 </div>
 
                 <div
-                  class="fl-row fl-row-full-width fl-row-bg-photo fl-node-w8dym2q746pj fl-row-default-height fl-row-align-center">
+                  class="fl-row fl-row-full-width fl-row-bg-photo services-technologies fl-row-default-height fl-row-align-center">
                   <div class="fl-row-content-wrap">
                     <div
                       class="fl-row-content fl-row-fixed-width fl-node-content">
@@ -458,7 +460,7 @@
                 </div>
 
                 <div
-                  class="fl-row fl-row-full-width fl-row-bg-photo fl-node-s4nzp8mbkgoi fl-row-default-height fl-row-align-center fl-row-has-layers"
+                  class="fl-row fl-row-full-width fl-row-bg-photo services-showcase fl-row-default-height fl-row-align-center fl-row-has-layers"
                   data-node="s4nzp8mbkgoi">
                   <div class="fl-row-content-wrap">
                     <div
@@ -484,14 +486,14 @@
 
                       {{ partial "page/testimonials.html" . }}
                       <div
-                        class="fl-col-group fl-node-ygpn8524mqh7 fl-col-group-custom-width"
+                        class="fl-col-group fl-col-group-custom-width"
                         data-node="ygpn8524mqh7">
                         <div
-                          class="fl-col fl-node-ohd51ixf3842 fl-col-small-custom-width fl-col-has-cols blue-border"
+                          class="fl-col services-cta-col fl-col-small-custom-width fl-col-has-cols blue-border"
                           data-node="ohd51ixf3842">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-heading fl-node-fa7hjib92cpv"
+                              class="fl-module fl-module-heading cta-banner-heading"
                               data-node="fa7hjib92cpv">
                               <div class="fl-module-content fl-node-content">
                                 <h2 class="fl-heading">
@@ -502,7 +504,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-rich-text fl-node-9hf5wet31z02"
+                              class="fl-module fl-module-rich-text cta-banner-text"
                               data-node="9hf5wet31z02">
                               <div class="fl-module-content fl-node-content">
                                 <div class="fl-rich-text">
@@ -515,14 +517,14 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-pp-spacer fl-node-toa2hwegbp4q fl-visible-desktop fl-visible-large fl-visible-medium"
+                              class="fl-module fl-module-pp-spacer cta-banner-spacer fl-visible-desktop fl-visible-large fl-visible-medium"
                               data-node="toa2hwegbp4q">
                               <div class="fl-module-content fl-node-content">
                                 <div class="pp-spacer-module"></div>
                               </div>
                             </div>
                             <div
-                              class="fl-col-group fl-node-d96zqbnxltuj fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width"
+                              class="fl-col-group cta-banner-button-row fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width"
                               data-node="d96zqbnxltuj">
                               <div
                                 class="fl-module fl-module-button fl-node-header-nav-contat-us-btn-nested"

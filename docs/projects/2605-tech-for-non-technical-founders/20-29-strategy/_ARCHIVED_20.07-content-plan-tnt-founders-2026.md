@@ -1,0 +1,238 @@
+> **SUPERSEDED (2026-05-20)**: This content plan documents the 26-post / 8-module structure from 2026-05-12. The course shipped as **18 chapters across 5 modules** (Module 1+2 merged into Hypothesis & Smoke-Test on 2026-05-20). See `../../data/course_sequence.yaml` for the current chapter order + per-chapter `goal:` field, and `../GOAL-AT-A-GLANCE.md` for the current strategy summary. This file is kept as a historical planning record.
+
+# Content Plan - Tech for Non-Technical Founders 2026 (26-post course)
+
+**Project**: 2605-tech-for-non-technical-founders
+**Parent plan**: `../../2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md`
+**Created**: 2026-05-12 (restructured from 14-post / 4-pillar to 26-post / 8-module)
+**Voice rules**: `../../../90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`
+**Course modules**: `20.01-course-modules.md` (read first for input/output/checkpoint per module)
+
+---
+
+## ⚠️ INTEGRATION RULES - read first
+
+1. **No parallel slugs.** 10 of 26 posts wrap existing 2510 slugs. The 2605 course adds curriculum frame via callout; does NOT create new slugs for existing 2510 entries.
+2. **Course frame in every post.** Top callout `> **Module X · Step N**` after frontmatter + bottom `## Continue the course` 9-row module nav table with current module marked.
+3. **Simplest method on main path.** Structured frameworks (Foundation Sprint, JTBD Canvas, Shape Up, Impact Mapping, Continuous Discovery, User Story Mapping, Lean Inception, Empathy Mapping, Design Sprint) appear ONLY in "Advanced (optional)" sidebar at the bottom of Modules 1, 2, and 5. Memory: `feedback_kiss_simplest_solutions_only.md`.
+4. **All voice rules apply.** No length caps; cut test per section. Engagement first.
+5. **≥3 handmade infographics per post** (Mermaid + sketchy SVG mix; Excalidraw aesthetic). Memory: `feedback_infographics_required.md`.
+6. **Tech-stack defaults**: Rails/Django/Laravel + full-stack pattern. Memory: `feedback_jt_tech_stack_preferences.md`.
+7. **ZERO JT service CTAs.** Course is a pure lead magnet (Option C positioning, adopted 2026-05-12). No "book a Control Audit," no "schedule a consultation," no service offers. Authorship credit stays at the footer; that's signing the work, not selling. Memory: `feedback_curriculum_is_pure_lead_magnet.md`.
+8. **Every post engineered for viral sharing** on Reddit/Twitter/Facebook. Mandatory elements: (a) contrarian hook in opening 80 words, (b) one quote-tweetable insight 140-280 chars, (c) a specific tactic the reader can execute this week, (d) a free downloadable artifact, (e) a shareable headline structure. Memory: `feedback_curriculum_viral_shareability.md`.
+
+---
+
+## 26 posts in course order
+
+### Module 0 - Where Are You? *(1 post)*
+
+| Step | Slug | Status | Notes |
+|---|---|---|---|
+| 0.1 | `course-map-self-assessment-non-technical-founder-2026` | 🆕 net-new | Self-Assessment Worksheet artifact; 10 questions output the reader's entry module |
+
+### Module 1 - Validate the Problem *(3 posts)*
+
+| Step | Slug | Status | Notes |
+|---|---|---|---|
+| 1.1 | `find-10-people-with-problem-outreach-2026` | 🆕 net-new | Reddit/LinkedIn/Discord mining + Clay or Apollo + Lindy AI + paid panels + smoke-test landing page |
+| 1.2 | `mom-test-ask-about-past-not-future` | 🆕 net-new | Rob Fitzpatrick's 5-question script + interview transcript template |
+| 1.3 | `validated-problem-statement-decide-whats-next` | 🆕 net-new | One-page problem statement + "3 pre-orders = green light" rule |
+
+### Module 2 - Design the Solution *(3 posts)*
+
+| Step | Slug | Status | Notes |
+|---|---|---|---|
+| 2.1 | `five-tech-words-stop-nodding-at` | ✅ drafted | Existing post; nav table swaps from "Foundation pillar · post 1 of 14" to "Module 2 · Step 1 of 3" |
+| 2.2 | `one-page-product-brief-vibe-prd-template` | 🆕 net-new | The simplest brief format: who/what problem/current workaround/what you'll build/what you won't/how you'll know it worked |
+| 2.3 | `stop-specifying-features-start-outcomes` | 🆕 net-new | Title: "Stop Specifying Features. Start Specifying Outcomes." Teaches the job-story format as a TACTIC inside the post; never names "Job Stories" as a framework on main path. References 5.6 spaceship admin panel as cautionary tale. Renamed 2026-05-12 per KISS doctrine. |
+
+### Module 3 - Choose Your Build Path *(2 posts)*
+
+| Step | Slug | Status | Notes |
+|---|---|---|---|
+| 3.1 | `should-you-hire-2026-decision-tree` | 🆕 net-new | Airbnb test (validate without code) + Rob Walling shed warning + when DIY is enough |
+| 3.2 | `fractional-cto-bridge-5-hours-beats-cofounder` | 🆕 net-new | $0-equity alternative to 50%-equity technical cofounder |
+
+### Module 4A - Ship Self-Serve *(branch, 2 posts)*
+
+| Step | Slug | Status | Notes |
+|---|---|---|---|
+| 4A.1 | `self-serve-mvp-stack-lovable-supabase-stripe-2026` | 🆕 net-new | What each tool does in plain English + how they connect + Lovable Discord community reference |
+| 4A.2 | `vibe-coding-ceiling-signals-when-ai-builds-break` | 🆕 net-new | 5 ceiling signals; triggers route to 4B |
+
+### Module 4B - Hire & Ship *(branch, 4 posts)*
+
+| Step | Slug | Status | Notes |
+|---|---|---|---|
+| 4B.1 | `who-where-hire-developer-2026-ai-augmented-offshore` | 🆕 net-new | AI-Augmented Developer profile + onshore/nearshore/Tier-2 offshore map |
+| 4B.2 | `hiring-interview-catches-ai-theater-7-questions` | 🆕 net-new | 7-question script extending existing AI 5-question lead magnet |
+| 4B.3 | `cheap-developers-expensive-without-cto-review` | 🔁 wrap | 2510 NEW-L; LinkedIn validation 2026-05-24 |
+| 4B.4 | `reading-sow-clause-by-clause` | ✅ drafted | Existing post; nav table swap |
+
+### Module 5 - Manage Your Build *(6 posts)*
+
+| Step | Slug | Status | Notes |
+|---|---|---|---|
+| 5.1 | `engineering-org-chart-non-technical-founder` | ✅ drafted | Existing; nav swap |
+| 5.2 | `friday-demo-rule-founder-progress` | 🔁 wrap | 2510 NEW-J; LinkedIn 2026-05-13 |
+| 5.3 | `three-questions-turn-standup-into-proof` | ✅ drafted | Existing; nav swap |
+| 5.4 | `weekly-dev-report-template-founders` | 🔁 wrap | 2510 NEW-A |
+| 5.5 | `github-aws-database-ownership-checklist` | 🔁 wrap | 2510 NEW-K; LinkedIn 2026-05-17 |
+| 5.6 | `asked-simple-admin-panel-built-spaceship` | 🔁 wrap | 2510 NEW-I; LinkedIn 2026-05-20 |
+
+### Module 6 - When Things Break *(2 posts)*
+
+| Step | Slug | Status | Notes |
+|---|---|---|---|
+| 6.1 | `salvage-vs-rebuild-software-project` | 🔁 wrap | 2510 NEW-M; LinkedIn 2026-05-27 |
+| 6.2 | `switch-dev-shops-safely-transition-guide` | 🔁 wrap | 2510 NEW-C |
+
+### Module 7 - Manage AI-Era Risks *(3 posts)*
+
+| Step | Slug | Status | Notes |
+|---|---|---|---|
+| 7.1 | `agency-uses-ai-follow-up-questions` | 🔁 wrap | 2510 NEW-E; dual-purpose with 4B.2 |
+| 7.2 | `ai-token-bill-dev-shop-pass-through-cost` | 🔁 wrap | 2510 NEW-D2 |
+| 7.3 | `slopsquatting-ai-supply-chain-attack` | 🔁 wrap | 2510 #20 |
+
+**Totals**: 26 posts · 12 net-new · 4 drafted · 10 wraps
+
+---
+
+## Required course-frame in every post (mandatory)
+
+### Top callout (immediately after frontmatter)
+
+```
+> **Module X · Step N of M** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) free course.
+> Input: [what reader brings]. Output: [deliverable].
+```
+
+Example for `five-tech-words-stop-nodding-at` (Module 2 · Step 1 of 3):
+```
+> **Module 2 · Step 1 of 3** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) free course.
+> Input: validated problem from Module 1. Output: one-page Product Brief (Vibe PRD).
+```
+
+### Bottom course-nav section (last H2 before "Further reading")
+
+```markdown
+## Continue the course
+
+This is Step N of Module X in the free **[Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/)** course.
+
+| # | Module | Output you walk away with |
+|---|---|---|
+| 0 | Where Are You? | Self-assessment + your starting module |
+| 1 | Validate the Problem | One-page validated problem |
+| 2 | Design the Solution | One-page Product Brief (Vibe PRD) |
+| 3 | Choose Your Build Path | Build decision (self-serve or hire) |
+| 4A | Ship Self-Serve | Live MVP at staging URL |
+| 4B | Hire & Ship | Signed SOW, kickoff scheduled |
+| 5 | Manage Your Build | Weekly oversight rhythm |
+| 6 | When Things Break | Salvage / rebuild decision |
+| 7 | Manage AI-Era Risks | AI interrogation system |
+
+**In Module X**: [list this module's posts; current post marked `← you are here`].
+
+The full course landing page (with all artifacts) publishes after Module 5 ships. Until then, bookmark this post.
+```
+
+The 9-row table shows the full course arc. The `In Module X` line keeps the current chapter visible without bloating the nav.
+
+---
+
+## Advanced sidebar format *(for Modules 1, 2, 5 only)*
+
+A single callout near the bottom of each module's last post (or any post within the module that names a framework). Standard wording:
+
+```
+> **Going further (optional, for teams with capacity)**
+> Once you have a co-founder, a Fractional CTO, or a junior product hire, these structured workshops scale what this module covered:
+> - **[Framework name]** ([author / book]) - one-line summary
+> - **[Framework name]** ([author / book]) - one-line summary
+>
+> Free to read. None are required to ship your first product. The simple path in this module is enough.
+```
+
+**Module 1 sidebar**: Empathy Mapping (Dave Gray, XPLANE) · JTBD Canvas 2 (Jim Kalbach, 2023) · Customer Journey · Continuous Discovery (Teresa Torres, *Continuous Discovery Habits*) + Opportunity Solution Tree.
+
+**Module 2 sidebar**: Impact Mapping (Gojko Adzic) · Foundation Sprint (Knapp/Zeratsky, *Click*, April 2025) · Design Sprint (Knapp 2016) · Lean Inception (Paulo Caroli) · User Story Mapping (Jeff Patton).
+
+**Module 5 sidebar**: Shape Up (Basecamp / Ryan Singer) · Continuous Discovery during build (Teresa Torres) · User Story Mapping for release planning (Jeff Patton).
+
+---
+
+## Lead-magnet artifacts (11 total)
+
+| # | Artifact | Module | Status |
+|---|---|---|---|
+| 1 | Self-Assessment Worksheet | 0 | 🆕 net-new |
+| 2 | Module 1 Toolkit (Outreach Sequence + Mom Test Script + Validated Problem Statement) | 1 | 🆕 net-new |
+| 3 | Vibe PRD Template (Product Brief) | 2 | 🆕 net-new |
+| 4 | Build Path Decision Worksheet | 3 | 🆕 net-new |
+| 5 | Self-Serve Stack Walkthrough PDF | 4A | 🆕 net-new |
+| 6 | Hiring Kit (Where-to-Hire Map + Hiring Interview Script + SOW Reading Guide) | 4B | partial: SOW Reading Guide ✅; others 🆕 net-new |
+| 7 | Friday Demo Template | 5 | ✅ drafted |
+| 8 | Ownership Checklist | 5 | ✅ drafted |
+| 9 | Weekly Report Template | 5 | 🆕 net-new (referenced in NEW-A but template not yet shipped) |
+| 10 | Salvage vs Rebuild Decision Tree | 6 | ✅ drafted |
+| 11 | AI 5-Question Script + AI Cost Worksheet | 7 | partial: 5-Question Script ✅; Cost Worksheet 🆕 net-new |
+
+**Existing**: 5 (Friday Demo Template, Ownership Checklist, Salvage Decision Tree, AI 5-Question Script, SOW Reading Guide).
+**Net-new**: 6-7 (Self-Assessment, Module 1 Toolkit, Vibe PRD, Build Path Worksheet, Self-Serve Stack PDF, Where-to-Hire Map + Hiring Interview Script, AI Cost Worksheet, Weekly Report Template).
+
+---
+
+## Publish calendar (proposed)
+
+The 10 wrap posts ship per the existing 2510 LinkedIn validation sprint (May 13 - June 17, 2026). The 4 drafted posts (Five Tech Words, Org Chart, SOW Reading, Standup Questions) need cover images + multi-persona review before publishing - target Q3 2026.
+
+The 12 net-new posts (Modules 0-3 + Module 4A + Module 4B net-new) ship at ~2/week starting 2026-07-01, ahead of the curriculum landing page in Q4.
+
+| Window | What ships | Notes |
+|---|---|---|
+| 2026-05-13 → 2026-06-17 | 10 wrap posts via 2510 schedule | Curriculum frame added retroactively when each ships |
+| 2026-07-01 → 2026-08-15 | 4 drafted posts + 8 of 12 net-new | ~2/week cadence; Modules 0-4A complete |
+| 2026-08-15 → 2026-09-15 | Remaining 4 net-new (Module 4B + final Module 1-3 polish) | Module 4B kit shipping (Where-to-Hire Map + Hiring Interview Script + Hiring Kit lead magnet) |
+| 2026-09-30 | Curriculum landing page live at `/blog/tech-for-non-technical-founders-2026/` | After Module 5 wraps publish |
+| 2026-10 onwards | Quarterly refresh on Module 7 (AI-era posts decay fast) | Q1 2027 first refresh |
+
+---
+
+## Distinctness audit *(per `feedback_cross_post_signal_repetition.md`)*
+
+Each post leads with a distinct proof signal / anecdote. No two posts share the same dollar anchor or technical mechanic:
+
+| Step | Lead signal / anecdote |
+|---|---|
+| 1.1 | Outreach math: 10 interviews booked in 1 week via Clay + Lindy |
+| 1.2 | Mom Test: "tell me about the last time you did X" |
+| 1.3 | "3 pre-orders = green light" rule |
+| 2.1 | "Refactoring cost her $51K and a year of runway" (existing) |
+| 2.2 | One-page Vibe PRD that saved 4 weeks of scope creep |
+| 2.3 | $9K "checkout refactor" = single 3,800-line merge (referenced from existing post 2.1) |
+| 3.1 | Airbnb test - validate without code |
+| 3.2 | $400/week Fractional CTO beats 50% equity |
+| 4A.1 | Founder shipped Stripe checkout in 6 weeks on Lovable + Supabase |
+| 4A.2 | 5 architectural ceiling signals before total rewrite |
+| 4B.1 | $44K/month "team of 4" (existing 5.1 anecdote referenced from hiring angle) |
+| 4B.2 | $34K AI agency rescue (existing 7.1 anecdote referenced from hiring angle) |
+| 4B.3 | Student over-engineering trap (wrap NEW-L) |
+| 4B.4 | $78K milestone-acceptance failure (existing 4B.4 / SOW post) |
+| 5.1-5.6 | Existing post anecdotes (Org chart $44K, Friday demo $62K, Standup $25K/47 standups, etc.) |
+| 6.1 | $95K marketplace, 38K LOC, 0% test coverage |
+| 6.2 | "Investor legend" trick for repo transfer |
+| 7.1 | $34K AI agency with secrets in `database.yml` (existing AI 5-questions anecdote) |
+| 7.2 | $4,800 OpenAI bill nobody could explain |
+| 7.3 | Slopsquatting npm/Rubygems/PyPI hallucinated packages |
+
+---
+
+## Out of scope (explicit)
+
+- We do **not** write a "how to learn to code" curriculum.
+- We do **not** issue certificates, host cohorts, or charge for the course.
+- We do **not** refresh the course mid-quarter except for Module 7 (AI-era posts) which carry "last reviewed" stamps.
+- We do **not** include frameworks (Foundation Sprint, JTBD Canvas, Shape Up, etc.) on the main reading path - they live in Advanced sidebars only.

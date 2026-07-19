@@ -2,13 +2,14 @@
   {{- $resources := slice
     (resources.Get "css/critical/base.css")
     (resources.Get "css/critical/clients-critical.css")
-    (resources.Get "css/3082-layout.css")
-    (resources.Get "css/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css")
+    (resources.Get "css/components/testimonials.css")
+    (resources.Get "css/components/header-cta.css")
+    (resources.Get "css/pages/clients.css")
     (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
     (resources.Get "css/586.css")
     (resources.Get "css/vendors/base-4.min.css")
     (resources.Get "css/style.css")
-    (resources.Get "css/skin-65eda28877e04.css")
+    (resources.Get "css/legacy-theme-skin.css")
     (resources.Get "css/technologies.css")
     (resources.Get "css/footer.css")
   -}}
@@ -31,7 +32,7 @@
                 class="fl-builder-content fl-builder-content-3082 fl-builder-content-primary fl-builder-global-templates-locked"
                 data-post-id="3082">
                 <div
-                  class="fl-row fl-row-full-width fl-row-bg-photo fl-node-ec25np07hf63 fl-row-default-height fl-row-align-center fl-row-has-layers"
+                  class="fl-row fl-row-full-width fl-row-bg-photo clients-hero fl-row-default-height fl-row-align-center fl-row-has-layers"
                   data-node="ec25np07hf63">
                   <div class="fl-row-content-wrap">
                     <div
@@ -54,14 +55,14 @@
                     <div class="fl-row-content fl-row-fixed-width">
                       <div
                         id="real-clients"
-                        class="fl-col-group fl-node-ywdijlprtzo2 fl-col-group-custom-width"
+                        class="fl-col-group fl-col-group-custom-width"
                         data-node="ywdijlprtzo2">
                         <div
-                          class="fl-col fl-node-vwmqhyjlfs05 fl-col-small-custom-width"
+                          class="fl-col clients-hero-col fl-col-small-custom-width"
                           data-node="vwmqhyjlfs05">
                           <div class="fl-col-content">
                             <div
-                              class="fl-module fl-module-heading fl-node-xrzgk7n2i63o"
+                              class="fl-module fl-module-heading clients-heading"
                               data-node="xrzgk7n2i63o">
                               <div class="fl-module-content">
                                 <h1 class="fl-heading">
@@ -72,7 +73,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-rich-text fl-node-17hr8iqz4nyg"
+                              class="fl-module fl-module-rich-text clients-intro"
                               data-node="17hr8iqz4nyg">
                               <div class="fl-module-content">
                                 <div class="fl-rich-text">
@@ -88,7 +89,7 @@
                             {{ $allClientsGrid := partialCached "clients/all-clients-grid.html" . "all-clients" }}
                             <div
                               id="clients"
-                              class="fl-module fl-module-pp-content-grid fl-node-z9jw2gxm5ev0 fl-visible-desktop fl-visible-large fl-visible-medium fl-visible-mobile jt-clickable"
+                              class="fl-module fl-module-pp-content-grid clients-grid fl-visible-desktop fl-visible-large fl-visible-medium fl-visible-mobile jt-clickable"
                               data-node="z9jw2gxm5ev0">
                               <div class="fl-module-content">
                                 <div class="pp-posts-wrapper">
@@ -108,7 +109,7 @@
                             </div>
 
                             <div
-                              class="fl-module fl-module-pp-content-grid fl-node-nj7igdpblkay fl-visible-mobile jt-clickable"
+                              class="fl-module fl-module-pp-content-grid clients-carousel fl-visible-mobile jt-clickable"
                               data-node="nj7igdpblkay">
                               <div class="fl-module-content">
                                 <div class="pp-posts-wrapper">
@@ -139,19 +140,19 @@
 
                       <div
                         id="cta-contact_us"
-                        class="fl-col-group fl-node-f14gkcmxeo5i fl-col-group-custom-width"
+                        class="fl-col-group fl-col-group-custom-width"
                         data-node="f14gkcmxeo5i">
                         <div
-                          class="fl-col fl-node-spwc0eio5znl fl-col-small-custom-width fl-col-has-cols blue-border"
+                          class="fl-col clients-cta-box fl-col-small-custom-width fl-col-has-cols blue-border"
                           data-node="spwc0eio5znl">
                           <div class="fl-col-content">
                             <div
-                              class="fl-module fl-module-rich-text fl-node-2jbfoa50irmx"
+                              class="fl-module fl-module-rich-text clients-cta-divider"
                               data-node="2jbfoa50irmx">
                               <div class="fl-module-content"></div>
                             </div>
                             <div
-                              class="fl-module fl-module-heading fl-node-knxbsd4lg31h"
+                              class="fl-module fl-module-heading clients-cta-heading"
                               data-node="knxbsd4lg31h">
                               <div class="fl-module-content">
                                 <h2 class="fl-heading">
@@ -162,7 +163,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-rich-text fl-node-0iopft495rwa"
+                              class="fl-module fl-module-rich-text clients-cta-text"
                               data-node="0iopft495rwa">
                               <div class="fl-module-content">
                                 <div class="fl-rich-text">
@@ -175,7 +176,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-pp-spacer fl-node-u9ey46xfdt8o fl-visible-desktop fl-visible-large fl-visible-medium"
+                              class="fl-module fl-module-pp-spacer clients-cta-spacer fl-visible-desktop fl-visible-large fl-visible-medium"
                               data-node="u9ey46xfdt8o">
                               <div class="fl-module-content">
                                 <div class="pp-spacer-module"></div>

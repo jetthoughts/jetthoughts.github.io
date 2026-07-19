@@ -21,7 +21,9 @@
       content="{{ $browserConfig.Permalink }}" />
     <meta name="theme-color" content="#ffffff" />
 
-    {{- $navigationResources := slice (resources.Get "css/navigation.css") -}}
+    {{- /* css-variables first: inlined on every page so design tokens resolve site-wide,
+           including bundles that don't load critical/base.css (e.g. /blog/) */ -}}
+    {{- $navigationResources := slice (resources.Get "css/foundations/css-variables.css") (resources.Get "css/navigation.css") -}}
     {{ partialCached "assets/css-inline.html" (dict "resources" $navigationResources "bundleName" "navigation") "navigation" }}
 
     {{- $componentsResources := slice (resources.Get "css/components.css") -}}
@@ -89,12 +91,63 @@
 
     {{ partialCached "page/site-scripts" . "site-scripts" }}
     {{ if .Store.Get "features.mermaid" }}
+      {{/* The house diagram font. Without this, 'Caveat, Patrick Hand,
+           cursive' resolves to the PLATFORM generic cursive (Apple
+           Chancery on macOS, varies elsewhere) - a per-visitor identity
+           lottery caught by the 2026-07-12 M5 design review. Loaded only
+           on pages that render mermaid. */}}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap"
+        rel="stylesheet" />
       <script
-        src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"
-        integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+        src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js"
+        integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF"
         crossorigin="anonymous"></script>
       <script>
-        mermaid.initialize({ startOnLoad: true });
+        // useMaxWidth: true is Mermaid's default. SVGs scale to fit the
+        // content column on desktop (no big empty space when diagrams
+        // are tall) and shrink on mobile. For diagrams with too many
+        // nodes to fit legibly on mobile, the fix is to simplify the
+        // Mermaid source (fewer nodes, shorter labels, or split into
+        // sub-diagrams), not CSS gymnastics.
+        //
+        // Site-wide house theme (2026-07-12 design-critic pass). The
+        // handwritten family is the house identity - a clean-sans variant
+        // was tried on 2026-07-12 and rejected by the owner on sight.
+        // Legibility problems get fixed structurally (decision tables,
+        // compact SVGs, shorter node labels), not by changing the font.
+        // Per-diagram %%init%% directives still override these.
+        mermaid.initialize({
+          // startOnLoad is off: we render only after document.fonts.ready,
+          // so mermaid MEASURES node boxes with the same font it renders
+          // with. Rendering before Caveat loads measured labels in the
+          // fallback font's metrics - the root cause of the recurring
+          // "last character clipped" defects.
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: {
+            // Comic Sans MS mirrors the in-post SVGs' fallback so the two
+            // asset families stay visually related if the webfont fails.
+            fontFamily: "'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive",
+            fontSize: '20px',
+            primaryColor: '#fff5f5',
+            primaryBorderColor: '#cc342d',
+            primaryTextColor: '#1a1a1a',
+            lineColor: '#333',
+            edgeLabelBackground: '#faf7f2'
+          },
+          flowchart: { nodeSpacing: 45, rankSpacing: 55, padding: 14 },
+          // Never set font-size or padding on .edgeLabel via themeCSS:
+          // mermaid measures the label box BEFORE themeCSS applies, so any
+          // late metric change renders text wider than the measured box and
+          // clips trailing characters. border-radius is safe (non-metric).
+          themeCSS: '.edgePaths path { stroke-width: 2.25px; } .edgeLabel { border-radius: 6px; }'
+        });
+        document.fonts.ready.then(function () {
+          mermaid.run();
+        });
       </script>
     {{ end }}
     <script>

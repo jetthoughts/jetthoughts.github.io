@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="invloop-title">
+  <title id="invloop-title">The month-2 invoice loop: sign the SOW with the 3 clauses, predict the bill, compare the invoice. Within plus-or-minus 20 percent, pay it and mark the baseline. 20 percent or more over, demand the itemized breakdown - a hard ticket updates the budget alert, margin or padding gets pushed back citing Clause 1. Quarterly, review the dashboards under Clause 3.</title>
+  <desc>Three numbered step cards in a row: sign the SOW, predict the bill with the formula devs times average times margin, month-2 invoice arrives. The invoice card forks into two outcome cards: a green card for within 20 percent - pay it, mark it the baseline - and an amber card for 20 percent or more over - demand the itemized breakdown, with two inner lines: a check for a hard ticket that updates the budget alert, and a cross for margin or padding that gets pushed back under Clause 1. A dashed loop arrow returns to the predict step with the caption: quarterly, review the dashboards under Clause 3.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub    { font-size: 17px; fill: #666; font-style: italic; }
+      .step   { font-size: 20px; font-weight: 700; fill: #1a1a1a; }
+      .stepsm { font-size: 16px; fill: #555; }
+      .num    { font-size: 15px; font-weight: 700; fill: #fff; }
+      .out    { font-size: 19px; font-weight: 700; }
+      .outg   { fill: #2e7d32; }
+      .outa   { fill: #b8860b; }
+      .body   { font-size: 16px; fill: #1a1a1a; }
+      .note   { font-size: 16px; fill: #666; font-style: italic; }
+      .card   { fill: #faf7f2; stroke: #555; stroke-width: 2; }
+      .card-g { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .card-a { fill: #fffbeb; stroke: #b8860b; stroke-width: 2.5; }
+      .numdot { fill: #cc342d; }
+      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
+      .loop   { stroke: #888; stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+      .ok     { font-size: 16px; font-weight: 700; fill: #2e7d32; }
+      .bad    { font-size: 16px; font-weight: 700; fill: #cc342d; }
+    </style>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="36" text-anchor="middle" class="h title">The month-2 invoice loop</text>
+  <text x="480" y="62" text-anchor="middle" class="h sub">Predict the bill first - then the invoice is a comparison, not a surprise.</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(40,92) rotate(-0.6 130 40)">
+    <rect width="260" height="84" rx="12" class="card"/>
+    <circle cx="26" cy="24" r="13" class="numdot"/>
+    <text x="26" y="29" text-anchor="middle" class="h num">1</text>
+    <text x="48" y="31" class="h step">Sign the SOW</text>
+    <text x="48" y="60" class="h stepsm">with the 3 clauses below</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(350,92) rotate(0.5 130 40)">
+    <rect width="260" height="84" rx="12" class="card"/>
+    <circle cx="26" cy="24" r="13" class="numdot"/>
+    <text x="26" y="29" text-anchor="middle" class="h num">2</text>
+    <text x="48" y="31" class="h step">Predict the bill</text>
+    <text x="48" y="60" class="h stepsm">devs &#215; avg AI cost &#215; margin</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(660,92) rotate(-0.5 130 40)">
+    <rect width="260" height="84" rx="12" class="card"/>
+    <circle cx="26" cy="24" r="13" class="numdot"/>
+    <text x="26" y="29" text-anchor="middle" class="h num">3</text>
+    <text x="48" y="31" class="h step">The invoice lands</text>
+    <text x="48" y="60" class="h stepsm">compare it to the prediction</text>
+  </g>
+
+  <!-- Step arrows -->
+  <path d="M 302 134 L 344 134" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 612 134 L 654 134" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Fork arrows from step 3 down -->
+  <path d="M 745 180 C 640 215, 400 200, 255 238" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 800 180 C 795 205, 760 215, 715 236" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Outcome: within band -->
+  <g transform="translate(60,244) rotate(0.5 195 60)">
+    <rect width="390" height="112" rx="12" class="card-g"/>
+    <text x="24" y="36" class="h out outg">Within &#177;20% of the prediction</text>
+    <text x="24" y="66" class="h body">Pay it. Mark it as the baseline</text>
+    <text x="24" y="90" class="h body">for every month after.</text>
+  </g>
+
+  <!-- Outcome: over band -->
+  <g transform="translate(510,244) rotate(-0.5 195 60)">
+    <rect width="390" height="140" rx="12" class="card-a"/>
+    <text x="24" y="36" class="h out outa">20%+ over: demand the breakdown</text>
+    <text x="24" y="68" class="h body"><tspan class="ok">&#10003;</tspan> One dev hit a hard ticket &#8594; raise the</text>
+    <text x="42" y="90" class="h body">budget alert and carry on.</text>
+    <text x="24" y="118" class="h body"><tspan class="bad">&#10007;</tspan> Margin or padding &#8594; push back, cite Clause 1.</text>
+  </g>
+
+  <!-- Quarterly loop back to step 2, routed through the channel between the outcome cards -->
+  <path d="M 690 392 C 600 424, 484 420, 481 380 L 481 186" class="loop" marker-end="url(#ahg)"/>
+  <text x="480" y="452" text-anchor="middle" class="h note">Quarterly: open the usage dashboards yourself (Clause 3), then re-predict next month's bill.</text>
+</svg>

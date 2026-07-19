@@ -1,0 +1,79 @@
+/* Shared CTA banner ("Let's get started now" - partials/page/cta.html).
+   Extracted in C1.2 from the identical copies in 6 consumer page files.
+   Canonical source order: about-us.css. Wired as a concat-slice member
+   directly before each consumer's pages entry (see testimonials.css
+   header for why @import cannot be used here).
+   Kept per-page (variance log in TASK-TRACKER.md): the rujwd9mzxche
+   rich-text pair (5 pages; services carries no rujwd rules) and
+   about-us's fdsvgxpowi03 column spacing cluster.
+
+   affects pages: about-us, homepage, services, single-service,
+   single-use-cases, use-cases - see
+   docs/projects/2509-css-migration/css-bundle-ownership-map.md */
+
+
+
+
+.cta-banner-heading.fl-module-heading .fl-heading {
+  text-align: center;
+}
+
+
+
+.cta-banner-heading > .fl-module-content {
+  margin-top: 20px;
+}
+@media ( max-width: 860px ) {
+
+  .cta-banner-heading.fl-module > .fl-module-content {
+    margin-top: 10px;
+  }
+}
+
+
+
+.fl-builder-content .cta-banner-text .fl-rich-text, .fl-builder-content .cta-banner-text .fl-rich-text *:not(b, strong) {
+  text-align: center;
+}
+
+
+
+.cta-banner-text > .fl-module-content {
+  margin-top: 15px;
+  margin-right: 250px;
+  margin-left: 250px;
+}
+@media ( max-width: 1115px ) {
+
+  .cta-banner-text.fl-module > .fl-module-content {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+@media ( max-width: 860px ) {
+
+  .cta-banner-text.fl-module > .fl-module-content {
+    margin-top: 15px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+
+
+.cta-banner-spacer .pp-spacer-module {
+  height: 60px;
+  width: 100%;
+}
+@media only screen and (max-width: 1115px) {
+
+  .cta-banner-spacer .pp-spacer-module {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 860px) {
+
+  .cta-banner-spacer .pp-spacer-module {
+    height: 15px;
+  }
+}

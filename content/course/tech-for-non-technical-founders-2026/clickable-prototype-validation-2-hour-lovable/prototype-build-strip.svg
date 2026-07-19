@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="protobuild-title">
+  <title id="protobuild-title">Building the 3-screen prototype in three moves: open Lovable and paste the prompt template with your placeholders filled in; read the fake data out loud and change the vocabulary to match the words you heard in interviews; test all three screens yourself as if you have never seen the idea. You leave with a prototype ready to share as a link to 5 interviewees.</title>
+  <desc>A left-to-right strip of four cards joined by arrows: three numbered build-step cards and one output card. Step 1: open Lovable, paste the prompt template with placeholders filled. Step 2: read the fake data out loud, change vocabulary to match interview language. Step 3: test all 3 screens yourself as if new to the idea. Output: prototype ready, share the link to 5 interviewees.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub    { font-size: 17px; fill: #666; font-style: italic; }
+      .step   { font-size: 18px; font-weight: 700; fill: #1a1a1a; }
+      .body   { font-size: 15px; fill: #333; }
+      .lbl    { font-size: 13px; font-weight: 700; fill: #9333c4; letter-spacing: 0.08em; }
+      .num    { font-size: 15px; font-weight: 700; fill: #fff; }
+      .note   { font-size: 16px; fill: #666; font-style: italic; }
+      .card   { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .out    { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
+      .numdot { fill: #cc342d; }
+      .arrow  { stroke: #cc342d; stroke-width: 2.5; fill: none; }
+    </style>
+    <marker id="pah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#cc342d"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="34" text-anchor="middle" class="h title">Build the 3-screen prototype</text>
+  <text x="480" y="60" text-anchor="middle" class="h sub">Three moves in Lovable, then hand the link to 5 interviewees.</text>
+
+  <!-- Step 1 -->
+  <g transform="rotate(-0.4 127 159)">
+    <rect x="20" y="84" width="214" height="150" rx="12" class="card"/>
+    <circle cx="44" cy="108" r="13" class="numdot"/>
+    <text x="44" y="113" text-anchor="middle" class="h num">1</text>
+    <text x="66" y="114" class="h step">Open Lovable</text>
+    <text x="32" y="150" class="h body">Paste the prompt</text>
+    <text x="32" y="174" class="h body">template with your</text>
+    <text x="32" y="198" class="h body">placeholders filled</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="rotate(0.4 367 159)">
+    <rect x="260" y="84" width="214" height="150" rx="12" class="card"/>
+    <circle cx="284" cy="108" r="13" class="numdot"/>
+    <text x="284" y="113" text-anchor="middle" class="h num">2</text>
+    <text x="306" y="114" class="h step">Read it out loud</text>
+    <text x="272" y="150" class="h body">Change vocab to</text>
+    <text x="272" y="174" class="h body">match the words you</text>
+    <text x="272" y="198" class="h body">heard in interviews</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="rotate(-0.4 607 159)">
+    <rect x="500" y="84" width="214" height="150" rx="12" class="card"/>
+    <circle cx="524" cy="108" r="13" class="numdot"/>
+    <text x="524" y="113" text-anchor="middle" class="h num">3</text>
+    <text x="546" y="114" class="h step">Test it yourself</text>
+    <text x="512" y="150" class="h body">Click all 3 screens</text>
+    <text x="512" y="174" class="h body">as if you've never</text>
+    <text x="512" y="198" class="h body">seen your idea</text>
+  </g>
+
+  <!-- Output card -->
+  <g transform="rotate(0.5 840 159)">
+    <rect x="740" y="84" width="200" height="150" rx="12" class="out"/>
+    <text x="840" y="112" text-anchor="middle" class="h lbl">PROTOTYPE READY</text>
+    <text x="840" y="150" text-anchor="middle" class="h body">Share the link</text>
+    <text x="840" y="174" text-anchor="middle" class="h body">to 5 of your Mom</text>
+    <text x="840" y="198" text-anchor="middle" class="h body">Test interviewees</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M 234 159 L 258 159" class="arrow" marker-end="url(#pah)"/>
+  <path d="M 474 159 L 498 159" class="arrow" marker-end="url(#pah)"/>
+  <path d="M 714 159 L 738 159" class="arrow" marker-end="url(#pah)"/>
+
+  <!-- Footer note -->
+  <text x="480" y="270" text-anchor="middle" class="h note">The constraint is the test - stop at 3 screens; a 4th is the prototype turning into the MVP.</text>
+</svg>

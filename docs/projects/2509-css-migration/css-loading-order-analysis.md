@@ -1,5 +1,15 @@
 # Hugo CSS Loading Order Architecture Analysis
 
+> **⚠️ PARTIALLY SUPERSEDED 2026-07-12.** This doc's load-order mechanics
+> (baseof inline bundles → per-page bundle, concat order inside a bundle) are
+> still accurate and useful. Its STRATEGY framing is not: "extraction sequence",
+> layer preservation rules, and any "NEVER extract/consolidate FL layouts as a
+> transfer-size win" reasoning belong to the falsified Oct-2025 plan. The
+> current plan RETIRES FL CSS page-by-page instead — see
+> `2026-07-12-css-maintainability-redesign.md` (authority) and
+> `css-bundle-ownership-map.md` (current bundle↔template↔file map with sizes).
+> Bundle names/hashes below are 2025-10-14 snapshots; trust the ownership map.
+
 **Project**: CSS Migration Project (2509)
 **Date**: 2025-10-14
 **Purpose**: Comprehensive CSS inclusion order mapping to guide component extraction strategy
@@ -92,7 +102,7 @@ This analysis maps the complete CSS loading architecture across all Hugo templat
 5. css/homepage.css                           # Homepage main styles
 6. css/dynamic-404-590.css                    # Dynamic FL-builder styles (template-generated)
 7. css/590-layout.css                         # FL-builder layout (590 = homepage post ID)
-8. css/skin-65eda28877e04.css                # Theme skin
+8. css/legacy-theme-skin.css                # Theme skin
 9. css/style.css                              # General styles
 10. css/dynamic-icons.css                      # Dynamic icon styles (template-generated)
 11. css/586.css                                # Additional FL-builder module styles
@@ -113,7 +123,7 @@ This analysis maps the complete CSS loading architecture across all Hugo templat
 ```yaml
 1. css/critical/base.css                      # Critical global styles
 2. css/701-layout.css                         # FL-builder layout (701 = about page ID)
-3. css/skin-65eda28877e04.css                # Theme skin
+3. css/legacy-theme-skin.css                # Theme skin
 4. css/dynamic-icons.css                      # Dynamic icon styles
 5. css/586.css                                # FL-builder module styles
 6. css/bf72bba397177a0376baed325bffdc75-layout-bundle.css  # Shared layout bundle
@@ -135,7 +145,7 @@ This analysis maps the complete CSS loading architecture across all Hugo templat
 5. css/586.css                                # FL-builder module styles
 6. css/vendors/base-4.min.css                 # ⚠️ VENDOR DEPENDENCY: Foundation framework
 7. css/style.css                              # General styles
-8. css/skin-65eda28877e04.css                # Theme skin
+8. css/legacy-theme-skin.css                # Theme skin
 9. css/technologies.css                       # Technologies section
 10. css/footer.css                             # Footer styles
 11. css/use-cases-dynamic.css                  # Use cases dynamic styles
@@ -173,7 +183,7 @@ This analysis maps the complete CSS loading architecture across all Hugo templat
 4. css/vendors/base-4.min.css                 # ⚠️ VENDOR DEPENDENCY: Foundation framework
 5. css/3114-layout.css                        # FL-builder layout (3114 = blog template ID)
 6. css/bf72bba397177a0376baed325bffdc75-layout-bundle.css  # Shared layout bundle
-7. css/skin-65eda28877e04.css                # Theme skin
+7. css/legacy-theme-skin.css                # Theme skin
 8. css/single-post.css                        # Single post styles
 9. css/footer.css                             # Footer styles
 ```
@@ -192,7 +202,7 @@ This analysis maps the complete CSS loading architecture across all Hugo templat
 5. css/homepage.css                           # Homepage styles (form reuse)
 6. css/vendors/base-4.min.css                 # ⚠️ VENDOR DEPENDENCY: Foundation framework
 7. css/style.css                              # General styles
-8. css/skin-65eda28877e04.css                # Theme skin
+8. css/legacy-theme-skin.css                # Theme skin
 9. css/footer.css                             # Footer styles
 ```
 
@@ -345,14 +355,14 @@ fl-shape-dividers.css:   # FL-builder shape dividers
 
 ```yaml
 style.css:               # General site styles (typography, utilities, etc.)
-skin-65eda28877e04.css: # Theme skin (colors, spacing, FL-builder theme)
+legacy-theme-skin.css: # Theme skin (colors, spacing, FL-builder theme)
 footer.css:             # Footer component styles
 586.css:                # FL-builder module styles (ID 586)
 ```
 
 **Loading Pattern**:
 - `style.css` loads mid-bundle (after layouts, before skin)
-- `skin-65eda28877e04.css` loads near end (theme overrides)
+- `legacy-theme-skin.css` loads near end (theme overrides)
 - `footer.css` loads LAST (footer appears last in DOM)
 
 ### 8.2 Component-Specific Global Files
@@ -408,7 +418,7 @@ homepage-layout.css:   # Homepage layout grid
 **Order 4: Theme & Overrides**
 ```yaml
 10. css/style.css                              # General site styles
-11. css/skin-65eda28877e04.css                # Theme skin (colors, spacing)
+11. css/legacy-theme-skin.css                # Theme skin (colors, spacing)
 ```
 
 **Rationale**: Theme overrides component defaults
@@ -450,7 +460,7 @@ homepage-layout.css:   # Homepage layout grid
 
 **Extract LAST** (Highest Cascade Risk):
 1. 🚨 `css/style.css` → Complex dependencies, audit required
-2. 🚨 `css/skin-65eda28877e04.css` → Theme overrides, affects all pages
+2. 🚨 `css/legacy-theme-skin.css` → Theme overrides, affects all pages
 3. 🚨 `css/{page-id}-layout.css` → FL-builder layouts, preserve node classes
 4. 🚨 `css/vendors/base-4.min.css` → Foundation grid, system-wide impact
 
@@ -565,7 +575,7 @@ css/critical/*-critical.css:          # ALL critical CSS files
 
 ```yaml
 css/style.css:                        # General styles, complex dependencies
-css/skin-65eda28877e04.css:          # Theme skin, global overrides
+css/legacy-theme-skin.css:          # Theme skin, global overrides
 css/bf72bba397177a0376baed325bffdc75-layout-bundle.css:  # Shared layout, used by multiple pages
 ```
 
@@ -631,7 +641,7 @@ Load Order:
   5. css/homepage.css
   6. css/dynamic-404-590.css (template-generated)
   7. css/590-layout.css (FL-builder)
-  8. css/skin-65eda28877e04.css
+  8. css/legacy-theme-skin.css
   9. css/style.css
   10. css/dynamic-icons.css (template-generated)
   11. css/586.css
@@ -643,7 +653,7 @@ Bundle: about-us
 Load Order:
   1. css/critical/base.css
   2. css/701-layout.css (FL-builder)
-  3. css/skin-65eda28877e04.css
+  3. css/legacy-theme-skin.css
   4. css/dynamic-icons.css (template-generated)
   5. css/586.css
   6. css/bf72bba397177a0376baed325bffdc75-layout-bundle.css
@@ -659,7 +669,7 @@ Load Order:
   5. css/586.css
   6. css/vendors/base-4.min.css (⚠️ Foundation)
   7. css/style.css
-  8. css/skin-65eda28877e04.css
+  8. css/legacy-theme-skin.css
   9. css/technologies.css
   10. css/footer.css
   11. css/use-cases-dynamic.css (template-generated)
@@ -687,7 +697,7 @@ Load Order:
   4. css/vendors/base-4.min.css (⚠️ Foundation)
   5. css/3114-layout.css (FL-builder)
   6. css/bf72bba397177a0376baed325bffdc75-layout-bundle.css
-  7. css/skin-65eda28877e04.css
+  7. css/legacy-theme-skin.css
   8. css/single-post.css
   9. css/footer.css
 
@@ -701,7 +711,7 @@ Load Order:
   5. css/homepage.css
   6. css/vendors/base-4.min.css (⚠️ Foundation)
   7. css/style.css
-  8. css/skin-65eda28877e04.css
+  8. css/legacy-theme-skin.css
   9. css/footer.css
 ```
 

@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# dtest-all — the WHOLE test suite (rake test:all) in Docker, detached,
+# so local work can continue while it runs.
+#
+# Isolation: builds a dedicated snapshot to _dest/public-dtest-all (never
+# touched by bin/test/bin/dtest/qtest), then runs the suite in a background
+# container against it. Keep editing freely once "container started" prints -
+# the only shared writes are Linux screenshot baselines
+# (test/fixtures/screenshots/linux/), which macOS-side work never touches.
+# Note: test *code* is read from the live mount at container boot, so avoid
+# editing test/**/*.rb during the first seconds of the run.
+#
+# Usage:
+#   bin/dtest-all            # start; prints log path + container id
+#   tail -f tmp/dtest-all.log
+
+DEST = "_dest/public-dtest-all"
+LOG = "tmp/dtest-all.log"
+
+puts "dtest-all: building snapshot to #{DEST} ..."
+system("hugo", "--noBuildLock", "--buildDrafts", "--environment", "production",
+  "--destination", DEST, "--logLevel", "warn",
+  "--baseURL", "http://localhost:1314") || abort("dtest-all: hugo build failed")
+
+require "fileutils"
+FileUtils.mkdir_p("tmp")
+
+cmd = [
+  "bin/dc", "run", "--rm", "--detach", "--quiet-pull", "--remove-orphans",
+  "--env", "PRECOMPILED_ASSETS=true",
+  "--env", "TEST_SERVER_PORT=1314",
+  "--env", "HUGO_DEFAULT_PATH=#{DEST}",
+  "t", "sh", "-c", "bin/rake test:all > #{LOG} 2>&1; echo EXIT=$? >> #{LOG}"
+]
+system(*cmd) || abort("dtest-all: failed to start container")
+
+puts "dtest-all: started (docker ps | grep jtcom-t)"
+puts "dtest-all: follow with   tail -f #{LOG}"
+puts "dtest-all: last line will read EXIT=0 on success"

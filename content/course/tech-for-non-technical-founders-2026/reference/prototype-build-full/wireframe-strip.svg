@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-labelledby="wf-title">
+  <title id="wf-title">A passing 3-screen prototype: Screen 1 entry point (fake file list + a Match transactions button) leads to Screen 2 core action (a Stripe-vs-QuickBooks match table where testers stall) leads to Screen 3 result (a summary card and Download report), which is where a passing tester lands without coaching.</title>
+  <defs>
+    <style>
+      .heading { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 27px; fill: #1a1a1a; font-weight: 700; }
+      .stitle  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #cc342d; font-weight: 700; }
+      .stitleg { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #2e7d32; font-weight: 700; }
+      .box     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #333; }
+      .boxq    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #777; font-style: italic; }
+      .cta     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #fff; font-weight: 700; }
+      .anno    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #555; font-style: italic; }
+      .pass    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #2e7d32; font-weight: 700; }
+      .frame   { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .frameg  { fill: #f1f9f1; stroke: #2e7d32; stroke-width: 2.5; }
+      .bar     { fill: #ffffff; stroke: #e2b8b8; stroke-width: 1.5; }
+      .barg    { fill: #ffffff; stroke: #b6d9b6; stroke-width: 1.5; }
+      .ctabtn  { fill: #cc342d; stroke: none; }
+      .arrow   { stroke: #cc342d; stroke-width: 3; fill: none; }
+    </style>
+  </defs>
+
+  <text x="480" y="34" class="heading" text-anchor="middle">A passing 3-screen prototype, wireframed</text>
+
+  <!-- ============ PANEL 1 - Entry point ============ -->
+  <g transform="rotate(-0.4 159 173)">
+    <rect x="20" y="58" width="278" height="230" rx="14" class="frame"/>
+    <rect x="34" y="74" width="250" height="32" rx="7" class="bar"/>
+    <text x="159" y="96" class="stitle" text-anchor="middle">Screen 1 · Entry point</text>
+    <rect x="34" y="120" width="250" height="66" rx="8" class="bar"/>
+    <text x="159" y="145" class="box" text-anchor="middle">3 CSV files listed</text>
+    <text x="159" y="168" class="boxq" text-anchor="middle">(hard-coded fake data)</text>
+    <rect x="49" y="210" width="220" height="40" rx="20" class="ctabtn"/>
+    <text x="159" y="236" class="cta" text-anchor="middle">Match transactions</text>
+  </g>
+  <text x="159" y="312" class="anno" text-anchor="middle">First click - can they start?</text>
+
+  <!-- arrow 1 -->
+  <g>
+    <path d="M 303 173 L 330 173" class="arrow"/>
+    <path d="M 330 167 L 342 173 L 330 179 Z" fill="#cc342d"/>
+  </g>
+
+  <!-- ============ PANEL 2 - Core action ============ -->
+  <g transform="rotate(0.4 477 173)">
+    <rect x="338" y="58" width="278" height="230" rx="14" class="frame"/>
+    <rect x="352" y="74" width="250" height="32" rx="7" class="bar"/>
+    <text x="477" y="96" class="stitle" text-anchor="middle">Screen 2 · Core action</text>
+    <rect x="352" y="120" width="250" height="66" rx="8" class="bar"/>
+    <text x="477" y="145" class="box" text-anchor="middle">Stripe  vs  QuickBooks</text>
+    <text x="477" y="168" class="box" text-anchor="middle">12 matched · 3 flagged</text>
+    <rect x="367" y="210" width="220" height="40" rx="20" class="ctabtn"/>
+    <text x="477" y="236" class="cta" text-anchor="middle">Approve all matches</text>
+  </g>
+  <text x="477" y="312" class="anno" text-anchor="middle">Where testers stall</text>
+
+  <!-- arrow 2 -->
+  <g>
+    <path d="M 621 173 L 648 173" class="arrow"/>
+    <path d="M 648 167 L 660 173 L 648 179 Z" fill="#cc342d"/>
+  </g>
+
+  <!-- ============ PANEL 3 - Result (pass target) ============ -->
+  <g transform="rotate(-0.3 795 173)">
+    <rect x="656" y="58" width="278" height="230" rx="14" class="frameg"/>
+    <rect x="670" y="74" width="250" height="32" rx="7" class="barg"/>
+    <text x="795" y="96" class="stitleg" text-anchor="middle">Screen 3 · Result</text>
+    <rect x="670" y="120" width="250" height="66" rx="8" class="barg"/>
+    <text x="795" y="145" class="box" text-anchor="middle">Summary card</text>
+    <text x="795" y="168" class="box" text-anchor="middle">12 matched, 3 flagged</text>
+    <rect x="685" y="210" width="220" height="40" rx="20" class="ctabtn"/>
+    <text x="795" y="236" class="cta" text-anchor="middle">Download report</text>
+  </g>
+  <text x="795" y="312" class="anno" text-anchor="middle">Can they name what it did?</text>
+
+  <!-- PASS marker on the right screen -->
+  <rect x="660" y="326" width="270" height="30" rx="15" fill="#eaf6ea" stroke="#2e7d32" stroke-width="2"/>
+  <text x="795" y="346" class="pass" text-anchor="middle">PASS = reaches here uncoached</text>
+</svg>

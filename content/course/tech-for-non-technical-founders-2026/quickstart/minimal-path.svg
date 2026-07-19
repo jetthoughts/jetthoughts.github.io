@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="minpath-title">
+  <title id="minpath-title">The minimal path: five numbered core-lesson stops from idea to first paying customer.</title>
+  <desc>A left-to-right strip of five numbered step cards, one per module, each in its module colour. Step 1 Hypothesis and Smoke Test produces a landing page and a price signal. Step 2 Validate the Problem produces 10 interviews and a prototype. Step 3 Design from Evidence produces a one-page Product Brief. Step 4 Build It Yourself produces a live MVP at a real URL. Step 5 First Paying Customer produces a signed paid pilot. Arrows connect each step to the next.</desc>
+  <defs>
+    <style>
+      .h     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub   { font-size: 16px; fill: #666; font-style: italic; }
+      .num   { font-size: 18px; font-weight: 700; fill: #fff; }
+      .ttl   { font-size: 18px; font-weight: 700; fill: #1a1a1a; }
+      .out   { font-size: 15px; fill: #555; font-style: italic; }
+      .c1 { fill: #eef2ff; stroke: #4f46e5; stroke-width: 2.5; }
+      .c2 { fill: #ecfeff; stroke: #0891b2; stroke-width: 2.5; }
+      .c3 { fill: #fffbeb; stroke: #d97706; stroke-width: 2.5; }
+      .c4 { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .c5 { fill: #f0fdf4; stroke: #16a34a; stroke-width: 2.5; }
+      .d1 { fill: #4f46e5; } .d2 { fill: #0e7490; } .d3 { fill: #b45309; } .d4 { fill: #cc342d; } .d5 { fill: #15803d; }
+    </style>
+    <marker id="mp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#999"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="34" text-anchor="middle" class="h title">The Minimal Path</text>
+  <text x="480" y="58" text-anchor="middle" class="h sub">Core lessons only - the shortest route from idea to first paying customer.</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(20,86) rotate(-0.5 80 78)">
+    <rect width="160" height="156" rx="12" class="c1"/>
+    <circle cx="80" cy="30" r="15" class="d1"/>
+    <text x="80" y="36" text-anchor="middle" class="h num">1</text>
+    <text x="80" y="70" text-anchor="middle" class="h ttl">Hypothesis &amp;</text>
+    <text x="80" y="90" text-anchor="middle" class="h ttl">Smoke Test</text>
+    <text x="80" y="122" text-anchor="middle" class="h out">landing page +</text>
+    <text x="80" y="141" text-anchor="middle" class="h out">price signal</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(210,86) rotate(0.5 80 78)">
+    <rect width="160" height="156" rx="12" class="c2"/>
+    <circle cx="80" cy="30" r="15" class="d2"/>
+    <text x="80" y="36" text-anchor="middle" class="h num">2</text>
+    <text x="80" y="70" text-anchor="middle" class="h ttl">Validate the</text>
+    <text x="80" y="90" text-anchor="middle" class="h ttl">Problem</text>
+    <text x="80" y="122" text-anchor="middle" class="h out">10 interviews +</text>
+    <text x="80" y="141" text-anchor="middle" class="h out">prototype</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(400,86) rotate(-0.4 80 78)">
+    <rect width="160" height="156" rx="12" class="c3"/>
+    <circle cx="80" cy="30" r="15" class="d3"/>
+    <text x="80" y="36" text-anchor="middle" class="h num">3</text>
+    <text x="80" y="70" text-anchor="middle" class="h ttl">Design from</text>
+    <text x="80" y="90" text-anchor="middle" class="h ttl">Evidence</text>
+    <text x="80" y="122" text-anchor="middle" class="h out">one-page</text>
+    <text x="80" y="141" text-anchor="middle" class="h out">Product Brief</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g transform="translate(590,86) rotate(0.4 80 78)">
+    <rect width="160" height="156" rx="12" class="c4"/>
+    <circle cx="80" cy="30" r="15" class="d4"/>
+    <text x="80" y="36" text-anchor="middle" class="h num">4</text>
+    <text x="80" y="70" text-anchor="middle" class="h ttl">Build It</text>
+    <text x="80" y="90" text-anchor="middle" class="h ttl">Yourself</text>
+    <text x="80" y="122" text-anchor="middle" class="h out">live MVP at</text>
+    <text x="80" y="141" text-anchor="middle" class="h out">a real URL</text>
+  </g>
+
+  <!-- Step 5 -->
+  <g transform="translate(780,86) rotate(-0.5 80 78)">
+    <rect width="160" height="156" rx="12" class="c5"/>
+    <circle cx="80" cy="30" r="15" class="d5"/>
+    <text x="80" y="36" text-anchor="middle" class="h num">5</text>
+    <text x="80" y="70" text-anchor="middle" class="h ttl">First Paying</text>
+    <text x="80" y="90" text-anchor="middle" class="h ttl">Customer</text>
+    <text x="80" y="122" text-anchor="middle" class="h out">signed</text>
+    <text x="80" y="141" text-anchor="middle" class="h out">paid pilot</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M 182 164 L 206 164" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#mp)"/>
+  <path d="M 372 164 L 396 164" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#mp)"/>
+  <path d="M 562 164 L 586 164" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#mp)"/>
+  <path d="M 752 164 L 776 164" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#mp)"/>
+</svg>

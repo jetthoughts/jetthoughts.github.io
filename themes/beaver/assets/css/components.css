@@ -2,12 +2,19 @@
 
 COMMENTED TO MAKE TESTS PASS */
 
+/* Design tokens first — PurgeCSS (variables: true) keeps a def only in
+   bundles with an in-bundle consumer, so this bundle carries its own defs
+   for the tokens component files consume. NOTE: must stay an @import at
+   the top of THIS file; prepending it via the baseof.html resource slice
+   puts :root before these @imports and invalidates them (CSS requires
+   @import before all other statements). */
+@import 'foundations/css-variables.css';
+
 /* Sprint 3 - c-button Component (GREEN Phase - Shameless Green Implementation) */
 @import 'components/c-button';
 
 /* @import 'components/foundation'; */
 @import 'components/alerts';
-/* @import 'components/forms'; */
 
 @import 'components/content-block';
 @import 'components/css-utilities';

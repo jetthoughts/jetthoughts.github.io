@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" role="img" aria-labelledby="smoke2-title">
+  <title id="smoke2-title">Smoke-test signal meter: read your cold-traffic conversion rate against the kill / iterate / promising / strong / suspicious bands.</title>
+  <desc>A horizontal meter from 0 to over 20 percent conversion. Under 3 percent is Kill or pivot (red). 3 to 6 percent is Iterate the message (amber). 6 to 10 percent is Promising (green). 10 to 20 percent is Strong signal (deep green). Over 20 percent is Suspicious - verify with a second channel (gray). A pointer marks the 6 percent line where the demand is real enough to start building.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: bold; fill: #1a1a1a; }
+      .sub    { font-size: 15px; fill: #666; font-style: italic; }
+      .band-pct { font-size: 20px; font-weight: bold; fill: #fff; }
+      .band-verd{ font-size: 16px; font-weight: bold; fill: #fff; }
+      .tick   { font-size: 15px; fill: #555; }
+      .ptr    { font-size: 17px; font-weight: bold; fill: #1a1a1a; }
+      .rule   { font-size: 19px; font-weight: bold; fill: #1a1a1a; }
+    </style>
+  </defs>
+
+  <rect width="960" height="380" fill="#ffffff"/>
+
+  <text x="480" y="40" text-anchor="middle" class="h title">Read your conversion rate off the meter</text>
+  <text x="480" y="64" text-anchor="middle" class="h sub">form submits ÷ page views, after 300 cold visitors</text>
+
+  <!-- ================= POINTER at 6% (x=276) ================= -->
+  <g class="h">
+    <text x="276" y="120" text-anchor="middle" class="ptr">6% = the go line</text>
+    <text x="276" y="140" text-anchor="middle" class="ptr" font-weight="normal" font-size="14" fill="#555">demand is real - start building</text>
+    <path d="M276,148 C270,158 270,160 276,172 C282,160 282,158 276,148 Z" fill="#1a1a1a"/>
+    <line x1="276" y1="150" x2="276" y2="185" stroke="#1a1a1a" stroke-width="2.5"/>
+  </g>
+
+  <!-- ================= METER BAR (y 185..278) ================= -->
+  <!-- Kill 0-3% : x60 w108 -->
+  <rect x="60"  y="185" width="108" height="93" fill="#cc342d"/>
+  <text x="114" y="228" text-anchor="middle" class="h band-pct">0-3%</text>
+  <text x="114" y="252" text-anchor="middle" class="h band-verd">Kill / pivot</text>
+
+  <!-- Iterate 3-6% : x168 w108 -->
+  <rect x="168" y="185" width="108" height="93" fill="#d98c1f"/>
+  <text x="222" y="228" text-anchor="middle" class="h band-pct">3-6%</text>
+  <text x="222" y="252" text-anchor="middle" class="h band-verd">Iterate msg</text>
+
+  <!-- Promising 6-10% : x276 w144 -->
+  <rect x="276" y="185" width="144" height="93" fill="#4caf50"/>
+  <text x="348" y="228" text-anchor="middle" class="h band-pct">6-10%</text>
+  <text x="348" y="252" text-anchor="middle" class="h band-verd">Promising</text>
+
+  <!-- Strong 10-20% : x420 w360 -->
+  <rect x="420" y="185" width="360" height="93" fill="#2e7d32"/>
+  <text x="600" y="228" text-anchor="middle" class="h band-pct">10-20%</text>
+  <text x="600" y="252" text-anchor="middle" class="h band-verd">Strong signal</text>
+
+  <!-- Suspicious 20%+ : x780 w120 -->
+  <rect x="780" y="185" width="120" height="93" fill="#8a8a8a"/>
+  <text x="840" y="228" text-anchor="middle" class="h band-pct">20%+</text>
+  <text x="840" y="252" text-anchor="middle" class="h band-verd">Suspicious?</text>
+
+  <!-- band divider ticks / boundary marks -->
+  <g class="h">
+    <text x="60"  y="302" text-anchor="middle" class="tick">0%</text>
+    <text x="168" y="302" text-anchor="middle" class="tick">3%</text>
+    <text x="276" y="302" text-anchor="middle" class="tick" fill="#1a1a1a" font-weight="bold">6%</text>
+    <text x="420" y="302" text-anchor="middle" class="tick">10%</text>
+    <text x="780" y="302" text-anchor="middle" class="tick">20%</text>
+  </g>
+
+  <!-- 6% boundary emphasis line through the bar -->
+  <line x1="276" y1="181" x2="276" y2="282" stroke="#1a1a1a" stroke-width="3"/>
+
+  <!-- ================= CURSIVE RULE ================= -->
+  <text x="480" y="344" text-anchor="middle" class="h rule">A stranger's signup is a real vote. A friend's "sounds great" is not.</text>
+</svg>

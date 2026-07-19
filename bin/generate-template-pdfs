@@ -1,0 +1,95 @@
+#!/usr/bin/env bash
+#
+# generate-template-pdfs - render printable PDFs for the course template
+# companion pages using headless Chrome.
+#
+# SINGLE SOURCE OF TRUTH: the page markdown under content/course/... . The PDFs
+# committed into each page's bundle are DERIVED artifacts. Regenerate them
+# whenever any of the 5 pages below (or the print CSS in single-post.css)
+# changes, so the paper version stays in sync with the web page.
+#
+# Usage:
+#   bin/hugo-build           # build the site into _dest/public-dev FIRST
+#   bin/generate-template-pdfs
+#
+# Each PDF is written INTO the page's own Hugo page-bundle as <slug>.pdf, so
+# Hugo copies it out as a bundle resource on the next build and the on-page
+# "Download the PDF" link resolves.
+
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+BUILT_DIR="${REPO_ROOT}/_dest/public-dev/course/tech-for-non-technical-founders-2026"
+CONTENT_DIR="${REPO_ROOT}/content/course/tech-for-non-technical-founders-2026"
+CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+# Seconds to let Chrome render before the watchdog kills it. Chrome writes the
+# PDF well within this window but often will NOT exit on its own (the site's JS
+# keeps timers alive under --virtual-time-budget), so we reap it ourselves.
+RENDER_TIMEOUT=25
+
+# The 5 template companion pages that get a printable PDF. Edit this list when
+# the set of printable templates changes.
+SLUGS=(
+  build-path-decision-worksheet
+  mom-test-interview-script
+  ownership-checklist
+  validated-problem-statement-template
+  first-paying-customer-operating-kit
+)
+
+if [[ ! -x "${CHROME}" ]]; then
+  echo "ERROR: Google Chrome not found at: ${CHROME}" >&2
+  exit 1
+fi
+
+if [[ ! -d "${BUILT_DIR}" ]]; then
+  echo "ERROR: built site not found at ${BUILT_DIR}. Run bin/hugo-build first." >&2
+  exit 1
+fi
+
+fail=0
+for slug in "${SLUGS[@]}"; do
+  src="${BUILT_DIR}/${slug}/index.html"
+  out="${CONTENT_DIR}/${slug}/${slug}.pdf"
+
+  if [[ ! -f "${src}" ]]; then
+    echo "MISSING source HTML: ${src}" >&2
+    fail=1
+    continue
+  fi
+
+  # Own throwaway profile dir so we never touch the shared MCP browser profile.
+  profile="$(mktemp -d)"
+
+  # --virtual-time-budget lets client-rendered content (e.g. Mermaid diagrams)
+  # finish before capture. Run in the background with a watchdog so a Chrome
+  # that renders the PDF but never exits cannot stall the whole batch.
+  "${CHROME}" \
+    --headless \
+    --disable-gpu \
+    --no-sandbox \
+    --user-data-dir="${profile}" \
+    --no-pdf-header-footer \
+    --virtual-time-budget=8000 \
+    --print-to-pdf="${out}" \
+    "file://${src}" >/dev/null 2>&1 &
+  chrome_pid=$!
+  ( sleep "${RENDER_TIMEOUT}"; kill -9 "${chrome_pid}" 2>/dev/null ) &
+  watchdog_pid=$!
+  wait "${chrome_pid}" 2>/dev/null || true
+  kill "${watchdog_pid}" 2>/dev/null || true
+  wait "${watchdog_pid}" 2>/dev/null || true
+
+  rm -rf "${profile}"
+
+  if [[ -f "${out}" ]]; then
+    size=$(wc -c < "${out}")
+    printf 'OK   %-40s %8d bytes\n' "${slug}.pdf" "${size}"
+  else
+    echo "FAILED to render: ${slug}" >&2
+    fail=1
+  fi
+done
+
+exit "${fail}"

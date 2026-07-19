@@ -36,6 +36,26 @@ disableKinds = []
 [build]
   writeStats = true
 
+  # PurgeCSS (postcss.config.js) reads ./hugo_stats.json; without this
+  # cachebuster a stale postcss cache can resurrect purged rules between
+  # builds (sprint-4 finding). Custom cachebusters REPLACE Hugo's defaults,
+  # so the defaults are replicated below.
+  [[build.cachebusters]]
+    source = "hugo_stats\\.json"
+    target = "css"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(js|ts|jsx|tsx)"
+    target = "js"
+  [[build.cachebusters]]
+    source = "(postcss|tailwind)\\.config\\.js"
+    target = "css"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(css|sass|scss)$"
+    target = "css"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(.*)$"
+    target = "$1"
+
 [imaging]
   quality = 80
   resampleFilter = "box"
@@ -61,7 +81,6 @@ disableKinds = []
   email="info@jetthoughts.com"
   phone="+1 754 216 9568"
   description="JetThoughts's expert team of developers and consultants has helped clients launch highly tailored projects, and we'd love to help you, too."
-  copyright="© 2024 JetThoughts. All Rights Reserved."
   testimonials_heading = "Most clients stay over 3 years. Some stayed beyond 6."
   testimonials_description = "Don't just take our word for it. See what our clients say about our services."
 
@@ -189,6 +208,12 @@ disableKinds = []
   name = "Blog"
   pageRef= "blog/"
   weight = 25
+
+[[menu.main]]
+  identifier = "course"
+  name = "Course"
+  pageRef= "course/tech-for-non-technical-founders-2026/"
+  weight = 28
 
 [[menu.main]]
   identifier = "about-us"

@@ -775,30 +775,30 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   border-bottom-width: 0;
   border-left-width: 0;
   border-right-width: 0;
-  color: #121212
+  color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu .menu > li > a:hover, .fl-node-menu .pp-advanced-menu .menu > li > a:focus, .fl-node-menu .pp-advanced-menu .menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .pp-advanced-menu .menu > li > .pp-has-submenu-container > a:focus {
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-menu-toggle:before {
-  border-color: #121212
+  border-color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li.focus .pp-menu-toggle:before {
-  border-color: #1a8cff
+  border-color: var(--color-primary)
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li a:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li a:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li a:focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li a:focus .pp-menu-toggle:before {
-  border-color: #1a8cff
+  border-color: var(--color-primary)
 }
 
 .fl-node-menu .menu > li > a:hover, .fl-node-menu .menu > li > a:focus, .fl-node-menu .menu > li:hover > .pp-has-submenu-container > a, .fl-node-menu .menu > li.focus > .pp-has-submenu-container > a, .fl-node-menu .menu > li.current-menu-item > a, .fl-node-menu .menu > li.current-menu-item > .pp-has-submenu-container > a {
-  color: #1a8cff
+  color: var(--color-primary)
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-has-submenu-container:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-has-submenu-container.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li.current-menu-item > .pp-has-submenu-container .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-has-submenu-container:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-has-submenu-container.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li.current-menu-item > .pp-has-submenu-container .pp-menu-toggle:before {
-  border-color: #1a8cff
+  border-color: var(--color-primary)
 }
 
 .fl-node-menu .menu .pp-has-submenu .sub-menu {
@@ -822,7 +822,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
   border-width: 0;
   border-style: solid;
-  color: #121212
+  color: var(--color-dark)
 }
 
 .fl-node-menu .sub-menu > li > a:hover, .fl-node-menu .sub-menu > li > a:focus, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:focus {
@@ -833,15 +833,15 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .sub-menu > li > a:hover, .fl-node-menu .sub-menu > li > a:focus, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:focus, .fl-node-menu .sub-menu > li.current-menu-item > a, .fl-node-menu .sub-menu > li.current-menu-item > .pp-has-submenu-container > a {
-  color: #1a8cff
+  color: var(--color-primary)
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .sub-menu .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .sub-menu .pp-menu-toggle:before {
-  border-color: #121212
+  border-color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .sub-menu li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .sub-menu li:hover .pp-menu-toggle:before {
-  border-color: #1a8cff
+  border-color: var(--color-primary)
 }
 
 .fl-node-menu .pp-advanced-menu .pp-menu-toggle:before {
@@ -1004,7 +1004,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle {
-  color: #121212
+  color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:before, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:after {
@@ -1012,12 +1012,12 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:before, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:after {
-  background-color: #121212;
+  background-color: var(--color-dark);
   height: 3px
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle rect {
-  fill: #121212
+  fill: var(--color-dark)
 }
 
 @media (min-width: 861px) {
@@ -1050,7 +1050,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   }
 
   .fl-node-menu .pp-advanced-menu .menu > li > a, .fl-node-menu .pp-advanced-menu .menu > li > .pp-has-submenu-container > a {
-    color: #121212
+    color: var(--color-dark)
   }
 
   .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
@@ -1084,7 +1084,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 
 .fl-node-menu .pp-advanced-menu .pp-off-canvas-menu .pp-menu-close-btn {
   font-size: 30px;
-  color: #121212
+  color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .menu {
@@ -1104,7 +1104,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .menu li a, .fl-node-menu .pp-advanced-menu.off-canvas .menu li .pp-has-submenu-container a {
-  color: #121212;
+  color: var(--color-dark);
   border-style: solid;
   border-bottom-color: transparent;
   -webkit-transition: all .3s ease-in-out;
@@ -1120,7 +1120,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-arrows .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-none .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-arrows .sub-menu .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-none .sub-menu .pp-menu-toggle:before {
-  border-color: #121212
+  border-color: var(--color-dark)
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-arrows .pp-menu-toggle {
@@ -1412,7 +1412,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-ntfp1iza9jy8 a {
-  color: #969798
+  color: var(--color-muted)
 }
 
 .fl-builder-content .fl-node-ntfp1iza9jy8 a:hover {
@@ -1455,7 +1455,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-5dcip6gnz2at a {
-  color: #969798
+  color: var(--color-muted)
 }
 
 .fl-builder-content .fl-node-5dcip6gnz2at a:hover {
@@ -1488,7 +1488,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-7p1us6kjlz9d a {
-  color: #969798
+  color: var(--color-muted)
 }
 
 .fl-builder-content .fl-node-7p1us6kjlz9d a:hover {
@@ -1521,7 +1521,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-fxtbmly0wvq4 a {
-  color: #969798
+  color: var(--color-muted)
 }
 
 .fl-builder-content .fl-node-fxtbmly0wvq4 a:hover {
@@ -1558,11 +1558,6 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
     padding-top: 30px
   }
 }
-
-.fl-node-d09l8jp3qrgf {
-  width: 100%
-}
-
 .fl-node-j3vd1emwi9k5 {
   width: 33.33%
 }
@@ -1660,7 +1655,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-lsrnf83ijm06 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-lsrnf83ijm06 .fl-module-content .fl-rich-text * {
-  color: #969798
+  color: var(--color-muted)
 }
 
 .fl-builder-content .fl-node-lsrnf83ijm06 .fl-rich-text, .fl-builder-content .fl-node-lsrnf83ijm06 .fl-rich-text *:not(b,strong) {
@@ -1744,24 +1739,6 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 
 @media (max-width: 860px) {
 }
-
-.fl-node-7d9wg1x8ua5m .pp-spacer-module {
-  height: 100px;
-  width: 100%
-}
-
-@media only screen and (max-width: 1115px) {
-  .fl-node-7d9wg1x8ua5m .pp-spacer-module {
-    height: 100px
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .fl-node-7d9wg1x8ua5m .pp-spacer-module {
-    height: 15px
-  }
-}
-
 .fl-builder-content .fl-node-9c2hyrnig0m4 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-9c2hyrnig0m4 .fl-module-content .fl-rich-text * {
   color: #fff
 }

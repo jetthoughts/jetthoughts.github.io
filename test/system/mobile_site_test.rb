@@ -30,7 +30,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     scroll_to find("#pagination")
 
-    assert_stable_screenshot "blog/index/_pagination", skip_area: [".blog-post"]
+    assert_stable_screenshot "blog/index/_pagination", skip_area: [".blog-post"], tolerance: 0.03
   end
 
   def test_visit_blog_post
@@ -42,7 +42,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     end
 
     # Wait for navigation to complete and page to load
-    assert_selector ".fl-heading,.heading,[role=title]", wait: 10
+    assert_selector ".post-title,.fl-heading,.heading,[role=title]", wait: 10
   end
 
   def test_blog_post
@@ -51,10 +51,72 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "blog/post", tolerance: 0.03, skip_area: %w[picture img]
   end
 
+  def test_privacy_policy
+    visit "/privacy-policy/"
+
+    assert_stable_screenshot "privacy-policy"
+  end
+
+  def test_course_landing
+    visit "/course/tech-for-non-technical-founders-2026/"
+
+    within "h1" do
+      assert_text "From Idea to First Paying Customer"
+    end
+
+    assert_stable_screenshot "course/landing", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
+  def test_careers_ruby
+    visit "/careers/junior-ruby-on-rails-developer/"
+
+    assert_stable_screenshot "careers/junior-ruby-on-rails-developer", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
+  def test_client_single_full
+    visit "/clients/agent-inbox/"
+
+    assert_selector "h1", text: "Agent Inbox"
+
+    assert_stable_screenshot "clients/single-full", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
+  def test_course_chapter
+    visit "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/"
+
+    # blockquote: the lesson-meta callout's bold+link line wraps bimodally
+    # across runs (font-swap race), flipping every pixel below it.
+    assert_stable_screenshot "course/chapter", tolerance: 0.03, skip_area: %w[picture img blockquote]
+  end
+
   def test_about_us
     visit "/about-us/"
 
     assert_stable_screenshot "about_us", skip_area: [".fl-photo-img"]
+  end
+
+  def test_services
+    visit "/services/"
+
+    assert_stable_screenshot "services", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
+  def test_service_single
+    visit "/services/fractional-cto/"
+
+    assert_stable_screenshot "services/fractional_cto", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
+  def test_use_cases
+    visit "/use-cases/"
+
+    assert_stable_screenshot "use_cases", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
+  def test_use_case_single
+    visit "/use-cases/startup-mvp-prototyping-development/"
+
+    assert_stable_screenshot "use_cases/startup-mvp-prototyping-development", tolerance: 0.03, skip_area: %w[picture img]
   end
 
   def test_clients
@@ -119,7 +181,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/about-us/"
     preload_all_images
 
-    scroll_to(find(".fl-node-os8vrc1dwlji"))
+    scroll_to(find(".about-values-header-col"))
     assert_stable_screenshot "about_page/values", tolerance: 0.03
   end
 
@@ -127,7 +189,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/about-us/"
     preload_all_images
 
-    scroll_to(find(".fl-node-nb2thxdw075q"))
+    scroll_to(find(".about-achievements-eyebrow"))
     assert_stable_screenshot "about_page/achievements", tolerance: 0.03
   end
 

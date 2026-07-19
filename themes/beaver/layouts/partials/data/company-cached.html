@@ -1,3 +1,0 @@
-{{/* Cached company data access - invalidates when company.yaml changes */}}
-{{ $companyHash := hugo.Data.company | jsonify | md5 }}
-{{ return partialCached "data/company-content.html" . $companyHash }}

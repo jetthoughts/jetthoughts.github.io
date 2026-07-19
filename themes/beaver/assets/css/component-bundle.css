@@ -1,3 +1,5 @@
+/* affects pages: blog-list + free-consultation bundles - see docs/projects/2509-css-migration/css-bundle-ownership-map.md
+   Legacy shared layer (Phase C4 strangler target) - verify with bin/qtest before editing. */
 .fl-node-header-nav-row .fl-row-content {
   max-width: 1280px;
 }
@@ -299,7 +301,7 @@ img.mfp-img {
   transition-timing-function: ease;
   transition-duration: 0.15s;
   transition-property: transform;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
 }
 
 .pp-advanced-menu-mobile-toggle
@@ -932,7 +934,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   border-left-width: 0px;
   border-right-width: 0px;
   border-color: transparent;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-menu .pp-advanced-menu .menu > li > a:hover,
@@ -953,7 +955,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-menu-toggle:before,
 .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-menu-toggle:before {
-  border-color: #121212;
+  border-color: var(--color-dark);
 }
 
 .fl-node-menu
@@ -972,7 +974,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   .pp-toggle-none
   li.focus
   .pp-menu-toggle:before {
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu
@@ -999,7 +1001,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   li
   a:focus
   .pp-menu-toggle:before {
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu .menu > li > a:hover,
@@ -1008,7 +1010,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 .fl-node-menu .menu > li.focus > .pp-has-submenu-container > a,
 .fl-node-menu .menu > li.current-menu-item > a,
 .fl-node-menu .menu > li.current-menu-item > .pp-has-submenu-container > a {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-node-menu
@@ -1043,7 +1045,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   li.current-menu-item
   > .pp-has-submenu-container
   .pp-menu-toggle:before {
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu .menu .pp-has-submenu .sub-menu {
@@ -1071,7 +1073,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   border-bottom-width: 0px;
   border-color: transparent;
 
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-menu .sub-menu > li > a:hover,
@@ -1096,7 +1098,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 .fl-node-menu .sub-menu > li.current-menu-item > a,
 .fl-node-menu .sub-menu > li.current-menu-item > .pp-has-submenu-container > a {
 
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-node-menu
@@ -1109,7 +1111,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   .pp-toggle-none
   .sub-menu
   .pp-menu-toggle:before {
-  border-color: #121212;
+  border-color: var(--color-dark);
 }
 
 .fl-node-menu
@@ -1124,7 +1126,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   .sub-menu
   li:hover
   .pp-menu-toggle:before {
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 .fl-node-menu .pp-advanced-menu .pp-menu-toggle:before {
@@ -1329,7 +1331,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle {
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box,
@@ -1366,12 +1368,12 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   .pp-hamburger
   .pp-hamburger-box
   .pp-hamburger-inner:after {
-  background-color: #121212;
+  background-color: var(--color-dark);
   height: 3px;
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle rect {
-  fill: #121212;
+  fill: var(--color-dark);
 }
 
 @media (min-width: 861px) {
@@ -1440,7 +1442,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 
   .fl-node-menu .pp-advanced-menu .menu > li > a,
   .fl-node-menu .pp-advanced-menu .menu > li > .pp-has-submenu-container > a {
-    color: #121212;
+    color: var(--color-dark);
   }
 
   .fl-node-menu .sub-menu > li > a,
@@ -1477,7 +1479,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 
 .fl-node-menu .pp-advanced-menu .pp-off-canvas-menu .pp-menu-close-btn {
   font-size: 30px;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .menu {
@@ -1508,7 +1510,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   li
   .pp-has-submenu-container
   a {
-  color: #121212;
+  color: var(--color-dark);
   border-style: solid;
   border-bottom-color: transparent;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1571,7 +1573,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   .pp-toggle-none
   .sub-menu
   .pp-menu-toggle:before {
-  border-color: #121212;
+  border-color: var(--color-dark);
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-arrows .pp-menu-toggle {
@@ -1936,7 +1938,7 @@ body:not(.single-fl-theme-layout)
 }
 
 .fl-builder-content .fl-node-ntfp1iza9jy8 a {
-  color: #969798;
+  color: var(--color-muted);
 }
 
 .fl-builder-content .fl-node-ntfp1iza9jy8 a:hover {
@@ -1990,7 +1992,7 @@ body:not(.single-fl-theme-layout)
 }
 
 .fl-builder-content .fl-node-5dcip6gnz2at a {
-  color: #969798;
+  color: var(--color-muted);
 }
 
 .fl-builder-content .fl-node-5dcip6gnz2at a:hover {
@@ -2023,7 +2025,7 @@ body:not(.single-fl-theme-layout)
 }
 
 .fl-builder-content .fl-node-7p1us6kjlz9d a {
-  color: #969798;
+  color: var(--color-muted);
 }
 
 .fl-builder-content .fl-node-7p1us6kjlz9d a:hover {
@@ -2056,7 +2058,7 @@ body:not(.single-fl-theme-layout)
 }
 
 .fl-builder-content .fl-node-fxtbmly0wvq4 a {
-  color: #969798;
+  color: var(--color-muted);
 }
 
 .fl-builder-content .fl-node-fxtbmly0wvq4 a:hover {
@@ -2093,11 +2095,6 @@ body:not(.single-fl-theme-layout)
     padding-top: 30px;
   }
 }
-
-.fl-node-d09l8jp3qrgf {
-  width: 100%;
-}
-
 .fl-node-j3vd1emwi9k5 {
   width: 33.33%;
 }
@@ -2194,7 +2191,7 @@ body:not(.single-fl-theme-layout)
 
 .fl-builder-content .fl-node-lsrnf83ijm06 .fl-module-content .fl-rich-text,
 .fl-builder-content .fl-node-lsrnf83ijm06 .fl-module-content .fl-rich-text * {
-  color: #969798;
+  color: var(--color-muted);
 }
 
 .fl-builder-content .fl-node-lsrnf83ijm06 .fl-rich-text,
@@ -2286,24 +2283,6 @@ body:not(.single-fl-theme-layout)
 
 @media (max-width: 860px) {
 }
-
-.fl-node-7d9wg1x8ua5m .pp-spacer-module {
-  height: 100px;
-  width: 100%;
-}
-
-@media only screen and (max-width: 1115px) {
-  .fl-node-7d9wg1x8ua5m .pp-spacer-module {
-    height: 100px;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .fl-node-7d9wg1x8ua5m .pp-spacer-module {
-    height: 15px;
-  }
-}
-
 .fl-builder-content .fl-node-9c2hyrnig0m4 .fl-module-content .fl-rich-text,
 .fl-builder-content .fl-node-9c2hyrnig0m4 .fl-module-content .fl-rich-text * {
   color: #ffffff;
@@ -2802,7 +2781,7 @@ body:not(.single-fl-theme-layout)
 
 .authority-list li:before {
   content: "★";
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 /* Additional styling for better visual hierarchy */
@@ -2879,29 +2858,9 @@ body:not(.single-fl-theme-layout)
   width: 100%;
 }
 
-/* PowerPack BEM Components - Sprint 2 Integration */
-/* Extracted 2,628+ lines of PP patterns into modular BEM components */
-
-/* Include PowerPack Advanced Menu Component (563 lines) */
-@import "components/c-pp-advanced-menu.css";
-
-/* Include PowerPack Buttons & CTA Component (420 lines) */
-@import "components/c-pp-buttons.css";
-
-/* Include PowerPack Content Grid Component (513 lines) */
-@import "components/c-pp-content-grid.css";
-
-/* Include PowerPack Widgets Component (722 lines) */
-@import "components/c-pp-widgets.css";
-
-/* Include PowerPack InfoBox Component (410 lines) */
-@import "components/c-pp-infobox.css";
-
-/* Sprint 3: Core Components Integration */
-/* Hero Sections, CTA Blocks, and Testimonials */
-
-/* Include Hero Sections Component (312+ patterns, 1095 lines) */
-@import "components/c-hero-sections.css";
-
-/* Include CTA Blocks Component (189+ patterns, 53 lines) */
-@import "components/c-cta-blocks.css";
+/* The seven c-pp/c-hero/c-cta component @imports that sat here were DEAD:
+   this file joins its consumer concats (blog-list, free-consultation)
+   after rule-carrying members, so postcss-import silently skipped them
+   in every build (post-prelude @import). Their content ships site-wide
+   anyway via the components.css inline bundle in baseof.html. Removed
+   2026-07-19 with a compiled-output-identical gate. */

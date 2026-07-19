@@ -43,6 +43,12 @@ const purgecss = createPurgeCss({
 
     greedy: [
       /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/, /^technologies-component/, /^footer-component/, /^use-cases/,
+      // C2 de-obfuscation: semantic component prefixes inherit the greedy
+      // protection their selectors previously got from /^fl-node/ (PowerPack
+      // runtime classes like pp-swiper-button/pp-review-image are never in
+      // hugo_stats.json, so without this the renamed rules get purged).
+      /^testimonials-/, /^cta-banner/, /^career-/, /^clients-/,
+      /^notfound-/, /^use-case-/, /^services-/, /^service-/, /^about-/, /^home-/, /^careers-/,
       // Brand CTA buttons — preserve any selector mentioning these classes.
       // Standard safelist didn't catch tag+class compound selectors like
       // `a.fl-button` on CI (produced blue pills instead of Ruby red).
@@ -72,6 +78,12 @@ module.exports = {
       path: ["themes/beaver/assets/css", "themes/beaver/assets/css/mixins"],
       skipDuplicates: true
     }),
+
+    // NOTE: POSTCSS_ENABLE_MIXINS and POSTCSS_ENABLE_EXTEND are inherited naturally
+    // from the parent shell through standard OS process inheritance. Hugo does NOT
+    // filter child-process env vars — only HUGO_ENVIRONMENT fails to auto-export.
+    // These two toggles work without any explicit export in bin/dev, bin/hugo-build,
+    // or CI. They're only needed if you want to DISABLE a plugin (export either as 'false').
 
     // Mixins first so they can be expanded before nesting/extend
     process.env.POSTCSS_ENABLE_MIXINS === 'false' ? null : postcssMixins({

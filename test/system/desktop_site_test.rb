@@ -185,6 +185,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     verify_section_for("careers", "overview", css: '[data-node="w02opu1zjdef"]')
     verify_section_for("careers", "offers", css: '[data-node="dkc4gbvj193z"]')
+    verify_section_for("careers", "newsletter", css: '[data-node="hfa6xverdc82"]')
     verify_section_for("careers", "footer", css: "footer")
   end
 
@@ -277,13 +278,24 @@ class DesktopSiteTest < ApplicationSystemTestCase
     find("a", text: "Talk to an Expert", match: :first, wait: 5).click
 
     assert_text "Free Consultation"
-    assert_stable_screenshot "free_consultation"
+    # Gravity Forms applies gf_browser_* classes at load time; linux
+    # captures alternate between two stable states (~10px form shift),
+    # so the form region is masked (precedent: blog/index .blog-post).
+    assert_stable_screenshot "free_consultation", skip_area: %w[.gform_wrapper]
   end
 
   def test_not_found
     visit "/404.html"
 
     assert_stable_screenshot "404"
+  end
+
+  def test_client_single_full
+    visit "/clients/agent-inbox/"
+
+    assert_selector "h1", text: "Agent Inbox"
+
+    assert_stable_screenshot "clients/single-full", tolerance: 0.03, skip_area: %w[picture img]
   end
 
   def test_privacy_policy
@@ -303,6 +315,58 @@ class DesktopSiteTest < ApplicationSystemTestCase
     verify_section_for("about_page", "testimonials-header", css: '[data-node="1a4igunq3xvj"]')
     verify_section_for("about_page", "cta-contact_us", css: '[data-node="3h8mj6w59d2c"]')
     verify_section_for("about_page", "footer", css: "footer")
+  end
+
+  def test_course_nav_link_exists_on_homepage
+    # User can find the course from the homepage via the nav bar "Course" link.
+    # The link points to the namespaced course URL.
+    visit "/"
+    within_top_bar do
+      link = find("a", text: "Course", visible: true, wait: 5)
+      href = link[:href]
+      assert_match %r{/course/tech-for-non-technical-founders-2026/?\z}, href,
+        "Expected Course nav link to point to /course/tech-for-non-technical-founders-2026/, got: #{href}"
+    end
+  end
+
+  def test_course_landing_page_renders
+    # The course landing page renders with title + key sections.
+    visit "/course/tech-for-non-technical-founders-2026/"
+
+    within "h1" do
+      assert_text "From Idea to First Paying Customer"
+    end
+    assert_text "Why this course exists"
+    assert_text "Module map"
+
+    assert_stable_screenshot "course/landing", tolerance: 0.03, skip_area: %w[picture img]
+  end
+
+  def test_course_chapter
+    visit "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/"
+
+    # blockquote: the lesson-meta callout's bold+link line wraps bimodally
+    # across runs (font-swap race), flipping every pixel below it.
+    assert_stable_screenshot "course/chapter", tolerance: 0.03, skip_area: %w[picture img blockquote]
+  end
+
+  def test_visit_course_chapter_from_landing
+    # From the course landing, user can click into the first chapter (Founding Hypothesis).
+    visit "/course/tech-for-non-technical-founders-2026/"
+
+    within ".post-content" do
+      find("a", text: /Form Your Founding Hypothesis/, match: :first, visible: true).click
+    end
+
+    assert_current_path "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/", wait: 10
+    assert_text "Form Your Founding Hypothesis"
+  end
+
+  def test_old_blog_url_redirects_to_course
+    # Old /blog/<slug>/ URLs alias-redirect to the new /course/<namespace>/<slug>/ URL via Hugo meta-refresh.
+    # Capybara follows the meta-refresh automatically.
+    visit "/blog/form-your-founding-hypothesis-90-minute-sprint/"
+    assert_current_path "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/", wait: 5
   end
 
   private

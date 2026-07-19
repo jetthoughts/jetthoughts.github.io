@@ -3,7 +3,7 @@
 }
 
 .technologies-component .subheading {
-    color: #1a8cff;
+    color: var(--color-primary);
     font-weight: 600;
 }
 
@@ -60,12 +60,12 @@
 quick fix services page
  */
 
-.fl-node-w8dym2q746pj>.fl-row-content-wrap {
+.services-technologies>.fl-row-content-wrap {
     padding-top: 0;
 }
 /*
 quick fix use-case page
  */
-.fl-node-r5xy9wufkc2e>.fl-row-content-wrap {
+.use-cases-technologies>.fl-row-content-wrap {
     padding-top: 0;
 }

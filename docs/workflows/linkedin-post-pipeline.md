@@ -360,6 +360,7 @@ When asked to write a LinkedIn post for Paul:
 - [ ] If score >2/10: run sentence-by-sentence pass (Editing methodology §1)
 - [ ] Run story-flow fluency test (read aloud, listen for connectors at seams)
 - [ ] If campaign post or first in sequence: spawn multi-critic review (Editing methodology §3)
+- [ ] If the user flags the same draft as "AI", "sales-y", "fluffy", or "not human" a SECOND time, spawn multi-critic review (Editing methodology §3) BEFORE iterating again. Solo revision past the second user pushback consistently misses pattern-level tells (cinematic beat-marking, omniscient framing, copywriter shape) that single-pass review keeps missing — observed on the 2026-05-11 Monday Jira-not-progress post, which needed 5 solo passes after the AI rubric scored 0/10.
 - [ ] Run frontmatter-to-body consistency check (Editing methodology §4)
 - [ ] No marketing CTA, no JT mention, no website link
 - [ ] No "learned the hard way" framing, no credential stamps

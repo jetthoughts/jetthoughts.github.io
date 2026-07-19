@@ -46,6 +46,8 @@ What's missing is everything below the surface. The AI wasn't asked to write tes
 
 AI generates code from scratch on each prompt instead of refactoring existing patterns. After a hundred prompts, your codebase has fourteen slightly different implementations of the same auth check, six places that handle currency rounding differently, and two competing definitions of who counts as a paying user. When a bug shows up and you ask the AI to fix it, it patches one of those places. The duplicates keep producing the bug.
 
+![Why the fix doesn't stick: one bug - the retry loop double-charges - pasted into seven files. The dev patched file 3; files 4 through 7 kept firing. The commit said "fixed retry logic"; four days later the same bug fired from a different file.](patch-doesnt-stick.svg)
+
 Founders feel this chain without seeing the cause directly. The fixes don't stick. New features take longer to ship than the last ones did, and nobody on the team can quite say why. Eventually you hire your first engineer to make sense of it, and they reach the verdict most engineers we've placed on inherited vibe-coded codebases reach within a week: rebuild, don't refactor.
 
 A developer used to need months to create the kind of messy system a senior engineer needs months to clean up. With AI-assisted code, the same complexity gets built in a weekend. The fragile system arrives ten times faster, but cleanup is still set by humans reading every line - and that pace hasn't changed.
@@ -62,6 +64,15 @@ The maintenance failure mode is the quiet one. The loud one is what surfaces whe
 
 **EnrichLead (March 2025).** Founder Leo Acevedo [shipped a sales-lead SaaS](https://vibegraveyard.ai/story/enrichlead-vibe-coded-saas-shutdown/) built entirely in Cursor with what he publicly called "zero hand-written code." Within two days of his viral launch post, attackers bypassed the subscription paywall, manipulated user data, and burned through his API budget. The product shut down in seven days.
 
+Four companies, one failure shape:
+
+| Incident | What surfaced | How fast |
+|---|---|---|
+| Lovable (Apr 2026) | 170+ of 1,645 sampled apps leaking personal data | 48 days exposed |
+| Moltbook (Jan 2026) | Open database: 1.5M API tokens, 35K emails | Days after launch |
+| Replit + SaaStr (Jul 2025) | Production database deleted mid code freeze | During a 12-day test |
+| EnrichLead (Mar 2025) | Paywall bypassed, API budget drained | Dead in 7 days |
+
 Veracode's 2025 study tested over 100 LLMs and found [45% of generated code samples failed security tests and introduced OWASP Top 10 vulnerabilities](https://www.veracode.com/blog/genai-code-security-report/). [Escape.tech scanned over 1,400 vibe-coded production applications](https://escape.tech/state-of-security-of-vibe-coded-apps) and reported that **65% had at least one security issue and 58% had a critical vulnerability**. None of these failures came from hostile attackers doing clever things - they came from codebases nobody could read or audit.
 
 ## The math: every vibe-to-production shortcut pays twice
@@ -73,6 +84,8 @@ You spent maybe $500-$2,000 in API credits and a few weekends on the vibe-coded 
 Then the rebuild estimate lands. Across our rescue engagements, rebuilds typically land between $40K (a thin SaaS with one core workflow) and $200K (multi-tenant with billing, integrations, and auth). Three to six months of runway either way. You haven't added a single new feature during the rebuild - you've replaced what you already had with code that runs and survives Monday morning.
 
 Compare honestly. The greenfield-from-scratch path ($40K) skips validation entirely - so it's not a real alternative. Vibe-validate ($1,500) plus production rebuild after the vibe attempt fails under load ($80K) lands at $81.5K total. Vibe-validate ($1,500) plus a production build on the validated hypothesis ($40K) lands at $41.5K. The $40K premium comes from rebuilding a rushed production app, not from the validation work.
+
+![Three paths to a production app, drawn to scale: build from scratch with no validation ($40K), vibe-validate then build fresh ($41.5K), or ship the prototype and rebuild under fire ($81.5K plus months of runway)](pay-twice-math.svg)
 
 Add the lost months to that bill. While you were rebuilding, your competitor shipped two new features and a paid integration. Your conversion rate is drifting. Your investor update for next quarter is a sentence you don't want to write.
 
@@ -87,6 +100,30 @@ Use vibe coding to validate a hypothesis, then throw the code out. Build the rou
 Once the hypothesis is real, kill the prototype. Don't try to maintain it - it can't be maintained. Don't try to refactor it incrementally - the duplicates and missing layers are structural, not patchable.
 
 Rebuild in a stack a human can read - Rails, Django, Laravel, or whatever your engineer is fluent in. Write [tests as you go](/blog/why-how-use-tdd-main-tips-testing/). Deploy through CI. Let someone read every line before it ships. What ships from this stage is a product that survives paying customers and the next twelve rounds of feature requests.
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#faf7f2', 'primaryBorderColor':'#555', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart TD
+    A["Weekend prototype<br/>Cursor / Replit / Lovable&nbsp;"] --> B["Show it to ten<br/>potential customers"]
+    B --> C["Verified hypothesis:<br/>what they will pay for"]
+    C -->|"keep the spec&nbsp;"| D["Kill the prototype<br/>throw the code away"]
+    D --> E["Rebuild fresh<br/>tests, CI, code review"]
+    E --> H["Survives paying customers<br/>and feature requests"]
+    C -.->|"the trap&nbsp;"| F["Keep iterating<br/>on the prototype"]
+    F -.-> G["Rebuild anyway, later,<br/>with less runway"]
+
+    classDef step fill:#faf7f2,stroke:#555,stroke-width:2px,color:#1a1a1a
+    classDef kill fill:#f5e9ff,stroke:#7c3aed,stroke-width:2.5px,color:#1a1a1a
+    classDef win fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+    classDef warn fill:#fffbe6,stroke:#bf8a00,stroke-width:2px,color:#1a1a1a
+    classDef trap fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
+
+    class A,B,C,E step
+    class D kill
+    class H win
+    class F warn
+    class G trap
+```
 
 The validation work survives the kill. User flows, edge cases the prototype exposed, the data model that survived first contact with customers - those become the spec for what you build next. A senior move on the rebuild is to write tests against the running prototype first, capturing the actual behavior including discount logic and customer-specific carve-outs nobody wrote down. Then build against the tests. Otherwise you ship v2 and customers tell you "but the old one did X" for six months.
 

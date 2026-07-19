@@ -1,0 +1,204 @@
+---
+title: "Full Reference: The Clickable Prototype - Build, Sessions, and Scoring Detail"
+description: "The complete clickable-prototype reference - why interviews miss shape signal, the screen-by-screen Lovable build, the filled worked example, the full silent-observation script, the combined Module 2 decision matrix, and the artifacts map. Companion to Lesson 2.6."
+date: 2026-05-18
+draft: false
+slug: prototype-build-full
+---
+
+> **Reference companion to [Lesson 2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)** - the extended theory, the screen-by-screen build, a filled worked example, the full verbatim session script, the combined Module 2 decision matrix, and the artifacts map. Read the micro-lesson first for the minimum effective path; return here for the deep walkthrough.
+
+![Wireframe of a passing 3-screen prototype: Screen 1 entry point with a fake file list and a Match transactions button, Screen 2 core action showing a Stripe-vs-QuickBooks match table where testers stall, and Screen 3 result with a summary card and Download report - the screen a passing tester reaches without coaching](wireframe-strip.svg)
+
+---
+
+## Why a Clickable Prototype Catches What Interviews Miss
+
+A Mom Test interview pulls the interviewee into the past. You ask "tell me about the last time this happened" because you are trying to find out whether the problem actually occurred and how badly it hurt when it did.
+
+A prototype session does the opposite: it puts the interviewee into a possible future and watches what they do. You hand them three screens and watch whether they can figure out which button to click next without you coaching them. That is the signal interviews cannot give you.
+
+The prototype session is the third validation pillar. The [smoke test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) shows whether strangers will click your headline. The [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) shows whether the problem you found is one your interviewees actually feel. Neither answers whether a real user can find their way through your interface without someone over their shoulder telling them what to do.
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart LR
+    A["Smoke Test<br/>Do strangers click?<br/>Demand signal"] --> B["Mom Test<br/>Is the problem felt?<br/>Problem signal"]
+    B --> C["Prototype Session<br/>Can users navigate?<br/>Shape signal"]
+    C --> D["Module 3<br/>One-Page Product Brief"]
+    classDef red fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
+    classDef purple fill:#fbe9ff,stroke:#a855f7,stroke-width:2.5px,color:#1a1a1a
+    class A,B,C red
+    class D purple
+```
+
+### The build that skipped this step
+
+A founder we advised had run 8 Mom Test interviews that came back strong: workaround evidence, named monthly costs, real frustration language. She moved to Lovable (an AI app builder; see the gloss in [Lesson 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)) and built a working app over several weeks.
+
+When she had 5 of the same interviewees log in to try the live app, several stalled on screen 2 - they recognised the problem the app was solving but could not figure out which button to click next. Validating the problem had not validated whether the interface shape was something they could navigate. A throwaway prototype run in front of 5 of your interview subjects would have surfaced that early, not after the real build had landed.
+
+## This Is Throwaway
+
+Three screens, fake data hard-coded in, CTAs that navigate but do not save. You are building a question - "Does the user know what to do?" - not a product. Then you archive it.
+
+Try to "polish the prototype into the MVP later" and you spend much longer on it, add features that invalidate the shape test, and carry every throwaway compromise into production. The [Module 4 Lovable build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) starts fresh with a proper one-page brief, real auth, and a real database. This prototype has one goal: three screens, five sessions, then archive.
+
+## Build 3 Screens with Lovable
+
+Three screens is the constraint - not five, not ten - because each extra screen multiplies the build effort without sharpening the validation signal.
+
+### Screen 1 - The entry point
+
+Whatever the user sees first when they open your product. For a workflow tool that is usually a dashboard or an upload screen. For a booking product, a calendar or a search bar. Keep it to one dominant action. The user should be able to answer "what does this screen want me to do?" in 5 seconds.
+
+### Screen 2 - The core action
+
+The step where the value is delivered. For the reconciliation tool: the screen where matched transactions appear. For a booking product: the screen where the user picks a time. For a document tool: the screen where the user sees the processed output. This is where users stall if the vocabulary or layout is wrong.
+
+### Screen 3 - The confirmation or result
+
+What the user sees after the core action succeeds. A confirmation message, a summary, a next-step prompt. This is what the user walks away holding in their memory. If they cannot describe it 10 minutes after the session, the outcome of the product is not clear.
+
+### Practical Lovable onramp
+
+[Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt - you type what you want in English, it ships the screens. The **free trial** gives you a small number of messages per day with no credit card required, which is enough to ship this 3-screen throwaway prototype. **Paid plans lift the cap - check Lovable's pricing page.** They only become worth it if you later need higher message volume - not required for this prototype.
+
+If you hit the daily message cap mid-build: save your work-in-progress (Lovable auto-saves to your account, but copy the prompt + the current screen output to a note), come back tomorrow when the cap resets, or upgrade if you want to ship in one focused session. The 3-screen prototype rarely needs more than 10 total messages once your prompt is well-formed - the cap usually bites only on poorly-scoped first attempts.
+
+### Filled-in worked example
+
+Below is the build prompt with every blank replaced for one made-up product - a transaction-reconciliation tool for freelance bookkeepers. The category isn't the point; the *level of specificity* is. Read it before you fill yours in, so you can see what kind of answer each blank expects:
+
+```text
+Build a 3-screen clickable prototype for a transaction-reconciliation tool targeting freelance bookkeepers who reconcile Stripe + QuickBooks for client accounts.
+
+This is a throwaway validation prototype. Use hard-coded fake data only. No backend, no auth, no database. All buttons should navigate between screens or show a static success state.
+
+SCREEN 1 - Upload Statements:
+- The user uploads 3 CSVs (one Stripe export, one QuickBooks export, one bank export)
+- Show 3 uploaded files listed: Q1-report.csv, march-invoices.csv, stripe-export.csv
+- One prominent CTA button: "Match transactions"
+
+SCREEN 2 - Match Review:
+- A side-by-side table of Stripe rows next to QuickBooks rows, with a "match" indicator
+- Show 12 matched transactions, 3 flagged for review (use the word "match" not "reconcile" - the bookkeeper vocabulary is "match")
+- Use the word "match" not "reconcile" - the bookkeeper vocabulary in the field is "match"
+- One action: "Approve all matches"
+
+SCREEN 3 - Summary:
+- A summary card showing "12 transactions matched, $4,320 reconciled. 3 flagged need your review."
+- Next step prompt: "Download client-ready report (PDF)"
+
+Design: Clean, minimal. Dark sidebar, white content area. Teal accent. No login screen. No settings. No navigation beyond these 3 screens. Make it look functional, not finished.
+```
+
+If you can't fill in even the worked example's level of specificity (real product category, real user, real vocabulary, real fake-data examples), the prototype isn't your blocker - the hypothesis is. Go back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and sharpen it first.
+
+That prompt typically produces a navigable 3-screen prototype in Lovable in our experience - results vary with prompt detail and Lovable model availability that day. Once the screens render, spend the rest of the build on one thing: reading the fake data out loud and asking yourself "does this make sense to someone who has never heard my idea?" If you hesitate, change the wording.
+
+Two rules for the Lovable session itself. First, use the vocabulary you heard in Mom Test interviews, not the vocabulary you use when you describe the problem to other founders. If 7 of your 10 interviewees called it "matching" and you call it "reconciliation," the prototype uses "matching." Second, resist adding a fourth screen. The constraint is the test. If you feel the prototype needs a fourth screen to "make sense," that is a finding: your solution has more steps than a single session can validate. Note it and keep the prototype to three screens.
+
+## Run a Silent-Observation Session with 5 Interviewees
+
+### Setup - recruit and book
+
+Choose 5 of the 10 interviewees whose Mom Test scores were 7 or higher. You already have a relationship with them. They already confirmed the problem is real. Now you are asking them for 30 minutes of a different kind of time: watching them use the interface, not answering your questions.
+
+Book the sessions as 30-minute video calls. Send the Lovable prototype link 10 minutes before - not earlier. You do not want them exploring it solo before you can observe.
+
+> **Slow-path variant for the part-time founder**: scheduling 5 live observation calls on top of your only weekly window is unrealistic. Async alternative: send each interviewee the Lovable prototype link + a short Loom prompt ("record yourself trying these 3 tasks"). Use [Maze](https://maze.co) (free tier covers a handful of testers - check current limits) or [UserTesting](https://www.usertesting.com) (paid) if you want screen recording with click heatmaps. You lose the real-time follow-up question ability, but you gain async scheduling - the testers record on their own time, you watch the 5 recordings in one batch. Recordings surface less than live sessions do (you miss the "what were you about to click" follow-ups), and still far more than skipping the validation step because you couldn't schedule it.
+
+### Script - the prototype session
+
+**What most founders say first (and why it ruins the session):**
+
+> "Hi! Thanks so much for testing my prototype. I'm really excited to show you what I've been working on - I've been building this for the last few weeks. Just click around and tell me what you think! Don't worry, it's still early. Let me know if anything's confusing and I can walk you through it."
+
+Every sentence above quietly biases the test:
+
+- **"my prototype"** + **"I've been building"** - the interviewee now knows it's YOUR baby. They're going to be kind, not honest.
+- **"really excited"** - sets the emotional contract: please don't disappoint me.
+- **"click around and tell me what you think"** - asks for opinion, not behavior. Opinions are cheap and polite.
+- **"I can walk you through it"** - signals you will rescue them if they get stuck. The whole point of the test is to find where they get stuck WITHOUT rescue.
+
+**Opening (read verbatim, do not paraphrase):**
+
+"Thank you for your time. I'm going to share a link with you - I'm sending it now in the chat. It's a very early rough prototype, not a real product. I want to watch you use it and understand where it's clear and where it's confusing. Please don't try to be kind to me. The most useful thing you can do is think out loud while you click through it and tell me when you're confused or when something doesn't make sense. I won't explain anything while you use it. Just start from Screen 1 and try to do what the screen is asking. I'll stay quiet."
+
+*[Paste the Lovable link in the chat. Start your screen recording. Say nothing.]*
+
+**While they work through it:**
+
+- Start a timer when they first touch the interface.
+- Write down: the first 3 things they click or try to click.
+- Note the first moment they pause for more than 5 seconds.
+- Note any words they say out loud ("what does this mean", "where do I", "I thought it would").
+- Do not respond to questions. Say "I'd love to hear what you're thinking, just keep going" if they ask you a direct question. Do not explain. Do not coach.
+
+**After they reach Screen 3 (or after 10 minutes, whichever is first):**
+
+"Thank you. Can you describe to me in one sentence what that tool just did for you?"
+
+Write down their exact words. Do not prompt. If they give a vague answer, say: "Say more about that." If they stall, say: "What would you tell a colleague this does?"
+
+**Closing questions (pick 2, not all 4):**
+
+- "What was the moment you felt most lost?"
+- "What did you expect to see on the second screen that wasn't there?"
+- "If you used this every week, what would you call the thing it does for you?"
+- "What would have to be true for you to pay [YOUR_TARGET_PRICE] for this?" (Use the price hypothesis you tested in [Lesson 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - if you haven't run that test yet, the $49-$299 band from the [full price-test reference](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/) is your default starting point.)
+
+Thank them. End the call. Score the session immediately.
+
+### Scoring - what to record live
+
+When the user pauses on Screen 2 for 8 seconds and clicks the wrong button, you will want to help. Do not. The pause and the wrong click are the signal you came for. Write down exactly which button they clicked and how long they paused. That is the data.
+
+If the user says "I give up" or "I have no idea what this wants me to do" - that is a fail. Thank them, ask the closing questions, end the call. A session where the user cannot get past Screen 1 is a strong signal: the entry point is wrong.
+
+### The common fixable failures
+
+**The vocabulary fail.** The user understands the goal but uses a different word than your interface. Fix: run a word-swap on Screen 2. Match the vocabulary you heard in the sessions. Test with one new session before advancing.
+
+**The wrong first click.** The user clicks a secondary element on Screen 1 first - a logo, a link, a visual that looks interactive. Fix: remove everything on Screen 1 that is not the primary CTA. Prototype UI clutter is a signal that the real product will have the same problem.
+
+**The "what am I supposed to do?" question.** The user asks you what the product does before touching it. Fix: add one line of microcopy above the primary CTA on Screen 1 that names the action in the user's vocabulary. Not a headline about the product. One instruction sentence.
+
+## The Combined Module 2 Decision Matrix
+
+Each signal has its own iteration guidance (Lesson 2.5's build/pivot/kill call on the scored interviews, and the Lesson 2.6 pass count). The COMBINED decision uses both signals together:
+
+| Interview signal (Lesson 2.5 synthesis) | Lesson 2.6 prototype signal | Decision |
+|---|---|---|
+| 7+ of 10 scored ≥7 | 4-5 of 5 passed | **PROCEED** - write the Lesson 3.1 brief tonight |
+| 7+ of 10 scored ≥7 | 2-3 of 5 passed | **ONE iteration round** - revise the prototype's worst-failing screen, re-run 2 replacement sessions (NOT new interviews) |
+| 4-6 of 10 scored ≥7 | 4-5 of 5 passed | **ONE iteration round** - re-interview 3 of the polite-yes scorers asking sharper past-behavior questions (NOT a new prototype) |
+| 4-6 of 10 scored ≥7 | 2-3 of 5 passed | **STOP and re-evaluate** - read all 10 transcripts; either the ICP is wrong (re-target) or the problem framing is wrong (re-write hypothesis at Lesson 1.1) |
+| Under 4 of 10 scored ≥7 | (any) | **KILL** - the problem is too weak for this ICP. Return to Lesson 1.1 with a different customer or problem blank rewritten. |
+| (any) | 0-1 of 5 passed | **STOP, don't proceed to M3** - the solution shape is fundamentally wrong; return to Lesson 2.1 |
+
+The trap to avoid: doing 2-3 iteration rounds when the matrix says STOP. Module 2 is the cheapest place in the course to discover the problem or ICP is wrong - don't burn another round of interviews trying to massage signal into a problem that isn't there.
+
+## Artifacts You Carry Out of Module 2
+
+After finishing Lesson 2.1-2.6, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
+
+| Artifact | Where it goes next |
+|---|---|
+| **Validated Problem Statement** (Lesson 2.5 synthesis applied to your Lesson 2.3-2.4 transcripts) | Lesson 3.1 Section 1 - copy verbatim. This is the PRD's foundation. (PRD = product requirements document, the one-page spec a team or AI agent builds from.) |
+| **Pass/fail prototype log** (5 sessions from this chapter) | Reference doc: did we get the shape right? If yes, write the brief. If no, the matrix above routes you to a revision or restart. |
+| **Verbatim "describe in one sentence" vocabulary** (closing answers from this chapter) | Lesson 3.1 Section 3 ("what you're building") + Lesson 4.3-4.4 Lovable prompts. The user's words beat your marketing copy. |
+| **10 raw transcripts** (Lesson 2.3-2.4 interview recordings + notes) | Archive. Reference if you ever pivot - they hold the language for a re-targeted ICP. |
+| **30 raw verbatim sentences** (Lesson 2.3-2.4 step 2, Reddit/forum complaints) | Reference for Lesson 3.1 Section 1 supplementary evidence + the bank for Lesson 2.3-2.4 cold-message subject lines in any future round 2. |
+
+## Further Reading
+
+- Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the problem-signal validation this prototype session builds on.
+- Steve Krug, [Don't Make Me Think](https://sensible.com/dont-make-me-think/) - the thinking-aloud usability test that the silent-observation session above is adapted from.
+- Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library) - how the prototype observation fits into the broader customer-discovery arc.
+- [Lovable](https://lovable.dev) - the AI builder used in this chapter's throwaway prompt-to-prototype workflow.
+
+---
+
+*Built by [JetThoughts](https://jetthoughts.com) as a companion reference to the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

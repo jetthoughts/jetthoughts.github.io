@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 478" role="img" aria-labelledby="scorecard-title">
+  <title id="scorecard-title">The 7 hiring questions on one card: pass signal versus fail signal for each</title>
+  <defs>
+    <style>
+      .title    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 27px; fill: #1a1a1a; font-weight: 700; }
+      .note     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .colhead  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #1a1a1a; font-weight: 700; }
+      .qnum     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #cc342d; font-weight: 700; }
+      .qtext    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #1a1a1a; font-weight: 700; }
+      .pass     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #1b5e20; }
+      .fail     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #b3261e; }
+      .box      { fill: #ffffff; stroke: #1a1a1a; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <text x="30" y="34" class="title">Run the interview from this card</text>
+  <text x="30" y="57" class="note">Tick the box when the answer lands on the Pass side. Full criteria for each question are below.</text>
+
+  <!-- Pass / Fail tinted columns -->
+  <rect x="348" y="72" width="300" height="352" rx="12" fill="#eafaea" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="654" y="72" width="292" height="352" rx="12" fill="#fff2f2" stroke="#cc342d" stroke-width="2"/>
+
+  <!-- Column headers -->
+  <text x="60"  y="93" class="colhead">Question</text>
+  <text x="364" y="93" class="colhead" fill="#1b5e20">PASS sounds like</text>
+  <text x="670" y="93" class="colhead" fill="#b3261e">FAIL sounds like</text>
+  <line x1="30" y1="102" x2="946" y2="102" stroke="#1a1a1a" stroke-width="1.5"/>
+
+  <!-- Q1 -->
+  <rect x="30" y="118" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="135" class="qnum">Q1</text>
+  <text x="98"  y="135" class="qtext">Workflow: ticket to code</text>
+  <text x="364" y="135" class="pass">Tools by version + real PR</text>
+  <text x="670" y="135" class="fail">&#8220;Cursor does boilerplate,&#8221; no PR</text>
+
+  <!-- Q2 -->
+  <rect x="30" y="163" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="180" class="qnum">Q2</text>
+  <text x="98"  y="180" class="qtext">Cost: $/dev/month</text>
+  <text x="364" y="180" class="pass">$80-300, pulled the receipt</text>
+  <text x="670" y="180" class="fail">&#8220;My company pays,&#8221; no tracking</text>
+
+  <!-- Q3 -->
+  <rect x="30" y="208" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="225" class="qnum">Q3</text>
+  <text x="98"  y="225" class="qtext">Verify: reviewer checks</text>
+  <text x="364" y="225" class="pass">Opens real PR, names checks</text>
+  <text x="670" y="225" class="fail">&#8220;I trust the model / CI&#8221;</text>
+
+  <!-- Q4 -->
+  <rect x="30" y="253" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="270" class="qnum">Q4</text>
+  <text x="98"  y="270" class="qtext">Slopsquatting defense</text>
+  <text x="364" y="270" class="pass">Named defense + says the word</text>
+  <text x="670" y="270" class="fail">&#8220;Name looks right,&#8221; never hit it</text>
+
+  <!-- Q5 -->
+  <rect x="30" y="298" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="315" class="qnum">Q5</text>
+  <text x="98"  y="315" class="qtext">Accountability: owned it</text>
+  <text x="364" y="315" class="pass">Dated incident + root cause</text>
+  <text x="670" y="315" class="fail">&#8220;Never had one,&#8221; blamed Cursor</text>
+
+  <!-- Q6 -->
+  <rect x="30" y="343" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="360" class="qnum">Q6</text>
+  <text x="98"  y="360" class="qtext">Refactor you led</text>
+  <text x="364" y="360" class="pass">Named system: kept/changed/broke</text>
+  <text x="670" y="360" class="fail">&#8220;Refactor as I go / rewrote it&#8221;</text>
+
+  <!-- Q7 -->
+  <rect x="30" y="388" width="22" height="22" rx="4" class="box"/>
+  <text x="64"  y="405" class="qnum">Q7</text>
+  <text x="98"  y="405" class="qtext">Disagreement with the AI</text>
+  <text x="364" y="405" class="pass">Real PR on screen, specific reason</text>
+  <text x="670" y="405" class="fail">&#8220;Usually agree,&#8221; then silence</text>
+
+  <line x1="30" y1="424" x2="946" y2="424" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="30" y="462" class="note">Refuses to share screen on Q3 or Q7 = automatic Fail on both. The interview is over.</text>
+</svg>
