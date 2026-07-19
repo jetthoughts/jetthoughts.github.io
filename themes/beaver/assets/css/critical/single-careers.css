@@ -1267,11 +1267,11 @@ body:not(.single-fl-theme-layout)
 .career-meta-value > .fl-module-content {
   margin-top: 20px;
 }
-.fl-builder-content .fl-node-wtch9dloa7yx .fl-module-content .fl-rich-text,
-.fl-builder-content .fl-node-wtch9dloa7yx .fl-module-content .fl-rich-text * {
+.fl-builder-content .career-share-label .fl-module-content .fl-rich-text,
+.fl-builder-content .career-share-label .fl-module-content .fl-rich-text * {
   color: var(--color-primary);
 }
-.fl-builder-content .fl-node-wtch9dloa7yx .fl-rich-text {
+.fl-builder-content .career-share-label .fl-rich-text {
   font-weight: 700;
   font-size: 16px;
 }
