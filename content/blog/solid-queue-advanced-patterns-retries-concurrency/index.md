@@ -1,5 +1,5 @@
 ---
-title: "Solid Queue Advanced: Retries, Concurrency & Monitoring"
+title: "Solid Queue: Retries, Concurrency, Monitoring"
 description: "Production patterns for Solid Queue: custom retry strategies, concurrency tuning, worker pool sizing, dead letter queues, and monitoring. Working Rails 8 config examples."
 date: 2026-07-24
 draft: false
@@ -20,7 +20,7 @@ These are the patterns we run on production Rails apps since migrating to Solid 
 
 ## Retry strategies beyond the defaults
 
-Solid Queue's default retry behavior is linear: a fixed delay, a max attempt count, done. That's fine for transient failures — a database connection blip, a Redis timeout. It breaks when the failure is upstream.
+Solid Queue's default retry behavior is linear: a fixed delay, a max attempt count, done. That's fine for transient failures - a database connection blip, a Redis timeout. It breaks when the failure is upstream.
 
 ### Exponential backoff with a ceiling
 
@@ -59,7 +59,7 @@ Solid Queue has a built-in dead set at every failed job's final attempt, but the
 Rails.application.config.after_initialize do    # Available in Solid Queue 1.0+. For earlier versions,
     # poll SolidQueue::Job.where.not(failed_at: nil) directly.
     SolidQueue.on_dead_job do |job|
-    Rails.logger.error "DEAD JOB: #{job.class_name}##{job.job_id} — #{job.last_error&.truncate(200)}"
+    Rails.logger.error "DEAD JOB: #{job.class_name}##{job.job_id} - #{job.last_error&.truncate(200)}"
 
     # Alert on unexpected dead jobs
     if job.failed_at > 10.minutes.ago
@@ -74,7 +74,7 @@ Rails.application.config.after_initialize do    # Available in Solid Queue 1.0+.
 end
 ```
 
-We pipe that `dead_job.solid_queue` event into our error tracker. A dead job fires a PagerDuty alert if the class is on the critical list (`PaymentProcessingJob`, `WelcomeEmailJob`). Batched maintenance jobs (`CleanupOldSessionsJob`) log and don't page — someone checks the dashboard Monday morning.
+We pipe that `dead_job.solid_queue` event into our error tracker. A dead job fires a PagerDuty alert if the class is on the critical list (`PaymentProcessingJob`, `WelcomeEmailJob`). Batched maintenance jobs (`CleanupOldSessionsJob`) log and don't page - someone checks the dashboard Monday morning.
 
 ### Job-specific concurrency keys
 
@@ -97,7 +97,7 @@ class ProcessOrderJob < ApplicationJob
 end
 ```
 
-Without the uniqueness lock, a webhook that fires twice for the same event (Stripe does this) processes the order twice. The `uniquely` block prevents that — second enqueue silently drops while the first is running.
+Without the uniqueness lock, a webhook that fires twice for the same event (Stripe does this) processes the order twice. The `uniquely` block prevents that - second enqueue silently drops while the first is running.
 
 ## Concurrency tuning: stop guessing
 
@@ -131,7 +131,7 @@ namespace :solid_queue do
 
     # Rule of thumb: threads per worker = (avg I/O wait / avg CPU time) + 1
     # If your jobs average 200ms of database wait and 10ms of Ruby CPU time,
-    # that ratio is 20:1 — you can run ~20 threads per worker without contention.
+    # that ratio is 20:1 - you can run ~20 threads per worker without contention.
   end
 end
 ```
@@ -174,13 +174,13 @@ production:
       polling_interval: 0.5
 ```
 
-**Why separate payment processing into its own worker with 2 threads?** Not because it's high-volume — because it's high-stakes. If a payment job crashes, we want the smallest possible blast radius. Two threads means at most two payments affected by a worker crash. The `uniquely` lock on `ProcessOrderJob` handles the rest.
+**Why separate payment processing into its own worker with 2 threads?** Not because it's high-volume - because it's high-stakes. If a payment job crashes, we want the smallest possible blast radius. Two threads means at most two payments affected by a worker crash. The `uniquely` lock on `ProcessOrderJob` handles the rest.
 
-**Why `polling_interval: 0.5` on high-priority queues?** Solid Queue uses database polling, not Redis pub/sub. The default 1-second poll means a queued job waits up to 1 second before any worker picks it up. For `default` and `payments` queues, 0.5s halves that latency. The database load increase is negligible — the `SELECT ... FOR UPDATE SKIP LOCKED` query is cheap.
+**Why `polling_interval: 0.5` on high-priority queues?** Solid Queue uses database polling, not Redis pub/sub. The default 1-second poll means a queued job waits up to 1 second before any worker picks it up. For `default` and `payments` queues, 0.5s halves that latency. The database load increase is negligible - the `SELECT ... FOR UPDATE SKIP LOCKED` query is cheap.
 
 ### What happens when you over-subscribe
 
-We ran 16 threads per worker on a CPU-mixed workload. The database connection pool exhausted. Every thread tried to check out a connection, every connection was busy, and jobs started failing with `ActiveRecord::ConnectionTimeoutError` — not in the job body, but in Solid Queue's own dispatch logic.
+We ran 16 threads per worker on a CPU-mixed workload. The database connection pool exhausted. Every thread tried to check out a connection, every connection was busy, and jobs started failing with `ActiveRecord::ConnectionTimeoutError` - not in the job body, but in Solid Queue's own dispatch logic.
 
 The symptom was cryptic: jobs appeared to succeed (no error in the job itself) but the dispatch logged `Error performing job: could not obtain a connection from the pool`. Solid Queue needs its own connection pool headroom. The formula:
 
@@ -238,7 +238,7 @@ Rails.application.config.after_initialize do
 end
 ```
 
-Queue depth is the canary. If the `api` queue hits 500 pending and isn't draining, your upstream is down or your workers are saturated. Either way, adding more workers is the wrong first move — check the upstream first, then check your thread count.
+Queue depth is the canary. If the `api` queue hits 500 pending and isn't draining, your upstream is down or your workers are saturated. Either way, adding more workers is the wrong first move - check the upstream first, then check your thread count.
 
 ### The dashboard you actually need
 
@@ -250,7 +250,7 @@ namespace :solid_queue do
   desc "Print queue health summary"
   task stats: :environment do
     puts "=" * 60
-    puts "Solid Queue Health — #{Time.current.strftime('%Y-%m-%d %H:%M UTC')}"
+    puts "Solid Queue Health - #{Time.current.strftime('%Y-%m-%d %H:%M UTC')}"
     puts "=" * 60
 
     # Per-queue breakdown
@@ -299,7 +299,7 @@ Wire this to a cron job every 5 minutes and log the output. If the summary ever 
 
 ### The Sidekiq migration gotcha
 
-Solid Queue stores jobs in PostgreSQL. If you're coming from Sidekiq, your Redis memory was your job buffer. Under Solid Queue, that buffer is now rows in `solid_queue_jobs`. A queue with 500,000 pending jobs is a 500,000-row table. PostgreSQL handles it fine — until it doesn't.
+Solid Queue stores jobs in PostgreSQL. If you're coming from Sidekiq, your Redis memory was your job buffer. Under Solid Queue, that buffer is now rows in `solid_queue_jobs`. A queue with 500,000 pending jobs is a 500,000-row table. PostgreSQL handles it fine - until it doesn't.
 
 The vacuum: `solid_queue_jobs` accumulates finished jobs unless you configure retention. By default, Solid Queue keeps finished jobs for `preserve_finished_jobs: true` (indefinitely). In development, fine. In production, that table grows unbounded.
 
@@ -309,11 +309,11 @@ Rails.application.config.solid_queue.preserve_finished_jobs = false
 Rails.application.config.solid_queue.clear_finished_jobs_after = 7.days
 ```
 
-Set `clear_finished_jobs_after` to something your debugging workflow tolerates. Seven days is enough to investigate a weekend failure on Monday. At 100,000 jobs/day, that's 700,000 rows — a few hundred MB. Fine.
+Set `clear_finished_jobs_after` to something your debugging workflow tolerates. Seven days is enough to investigate a weekend failure on Monday. At 100,000 jobs/day, that's 700,000 rows - a few hundred MB. Fine.
 
 If you need to debug a job that ran 3 weeks ago, pull the logs, not the database row.
 
-We learned this the hard way. A client migrated from Sidekiq to Solid Queue in April 2026 — 80K jobs/day, standard RDS instance. The `preserve_finished_jobs` default ate 8GB of disk in the first week before their monitoring caught it. After setting `clear_finished_jobs_after: 7.days`, the table stabilized at 700K rows and 500MB. The fix was two config lines. The diagnosis took a morning of digging through a bloated jobs table.
+We learned this the hard way. A client migrated from Sidekiq to Solid Queue in April 2026 - 80K jobs/day, standard RDS instance. The `preserve_finished_jobs` default ate 8GB of disk in the first week before their monitoring caught it. After setting `clear_finished_jobs_after: 7.days`, the table stabilized at 700K rows and 500MB. The fix was two config lines. The diagnosis took a morning of digging through a bloated jobs table.
 
 ## When Solid Queue isn't enough
 
@@ -325,6 +325,6 @@ Solid Queue replaces Sidekiq for 80% of Rails apps. The 20% where it doesn't:
 
 **You run PostgreSQL on a single small instance.** Solid Queue adds constant read/write load to your primary database. If your RDS is already at 80% CPU serving web traffic, adding a job queue on top will push it over. Either size up or run Sidekiq on Redis.
 
-For the rest of us — the apps processing 10K-200K jobs/hour, running on reasonable hardware — Solid Queue eliminates a Redis dependency, simplifies the stack, and gives you job visibility in the same database you already query. The trade-off is real but the simplification wins for most workloads.
+For the rest of us - the apps processing 10K-200K jobs/hour, running on reasonable hardware - Solid Queue eliminates a Redis dependency, simplifies the stack, and gives you job visibility in the same database you already query. The trade-off is real but the simplification wins for most workloads.
 
 *For the migration guide and benchmarks, see [Rails 8 Solid Queue: Migration Guide for Production Apps](/blog/rails-8-solid-queue-migration-guide/). For deployment patterns that pair well with Solid Queue, see [Falcon in Production: Benchmarks, Memory & Worker Count](/blog/falcon-web-server-production-tuning-benchmarks/). For replacing Devise in the same stack, see [Rails 8 Authentication Generator: Complete Guide](/blog/rails-8-authentication-generator-complete-guide/). If you're running Solid Queue at scale, [our Rails team can help](/services/app-web-development/).*
