@@ -1241,10 +1241,10 @@ body:not(.single-fl-theme-layout)
 .career-share-col > .fl-col-content {
   padding-left: 50px;
 }
-.fl-node-1swhjnc7y8ki {
+.career-content-col {
   width: 48%;
 }
-.fl-node-1swhjnc7y8ki > .fl-col-content {
+.career-content-col > .fl-col-content {
   padding-right: 65px;
 }
 .fl-node-p8famz26ljce {
@@ -1445,13 +1445,13 @@ body:not(.single-fl-theme-layout)
   .career-share-col.fl-col > .fl-col-content {
     padding-top: 20px;
   }
-  .fl-builder-content .fl-node-1swhjnc7y8ki {
+  .fl-builder-content .career-content-col {
     width: 100% !important;
     max-width: none;
     clear: none;
     float: left;
   }
-  .fl-node-1swhjnc7y8ki.fl-col > .fl-col-content {
+  .career-content-col.fl-col > .fl-col-content {
     padding-right: 0;
   }
   .fl-builder-content .fl-node-p8famz26ljce {
