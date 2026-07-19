@@ -181,7 +181,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/about-us/"
     preload_all_images
 
-    scroll_to(find(".fl-node-os8vrc1dwlji"))
+    scroll_to(find(".about-values-header-col"))
     assert_stable_screenshot "about_page/values", tolerance: 0.03
   end
 
@@ -189,7 +189,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/about-us/"
     preload_all_images
 
-    scroll_to(find(".fl-node-nb2thxdw075q"))
+    scroll_to(find(".about-achievements-eyebrow"))
     assert_stable_screenshot "about_page/achievements", tolerance: 0.03
   end
 
