@@ -54,7 +54,7 @@ const purgecss = createPurgeCss({
       // protection their selectors previously got from /^fl-node/ (PowerPack
       // runtime classes like pp-swiper-button/pp-review-image are never in
       // hugo_stats.json, so without this the renamed rules get purged).
-      /^testimonials-/, /^cta-banner/, /^career-/, /^clients-/,
+      /^testimonials-/, /^cta-banner/, /^jt-info-card/, /^career-/, /^clients-/,
       /^notfound-/, /^use-case-/, /^services-/, /^service-/, /^about-/, /^home-/, /^careers-/,
       // Brand CTA buttons — preserve any selector mentioning these classes.
       // Standard safelist didn't catch tag+class compound selectors like

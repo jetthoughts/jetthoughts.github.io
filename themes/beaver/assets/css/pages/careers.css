@@ -1454,24 +1454,6 @@ img.mfp-img {
 
 @media (max-width: 860px) {
 }
-
-.fl-col-group-equal-height .careers-value-people-box, .fl-col-group-equal-height .careers-value-people-box .fl-module-content, .fl-col-group-equal-height .careers-value-people-box .fl-module-content .pp-infobox-wrap, .fl-col-group-equal-height .careers-value-people-box .fl-module-content .pp-infobox-wrap .pp-infobox, .fl-col-group-equal-height .careers-value-people-box .fl-module-content .pp-infobox-wrap > .pp-infobox-link, .fl-col-group-equal-height .careers-value-people-box .fl-module-content .pp-infobox-wrap > .pp-more-link {
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  flex-shrink: 1;
-  min-width: 1px;
-  max-width: 100%;
-  -webkit-box-flex: 1 1 auto;
-  -moz-box-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
 .fl-col-group-equal-height .careers-value-people-box.fl-visible-large, .fl-col-group-equal-height .careers-value-people-box.fl-visible-medium, .fl-col-group-equal-height .careers-value-people-box.fl-visible-mobile {
   display: none;
 }
@@ -1533,11 +1515,6 @@ img.mfp-img {
     display: flex;
   }
 }
-
-.careers-value-people-box .pp-infobox .pp-infobox-title-prefix {
-  display: none;
-}
-
 .careers-value-people-box .pp-infobox-title-wrapper .pp-infobox-title {
   margin-top: 30px;
   margin-bottom: 0px;
@@ -1562,19 +1539,6 @@ img.mfp-img {
 
 .careers-value-people-box .pp-infobox:hover .pp-infobox-description {
 }
-
-.careers-value-people-box .pp-infobox-image {
-  text-align: left
-}
-
-.fl-builder-content .careers-value-people-box .pp-infobox-image img {
-  height: auto;
-  max-width: 100%;
-}
-
-.careers-value-people-box .pp-infobox:hover .pp-infobox-image img {
-}
-
 .careers-value-people-box .pp-infobox-icon-inner span.pp-icon, .careers-value-people-box .pp-infobox-image img {
   border-top-left-radius: px;
   border-top-right-radius: px;
@@ -1588,54 +1552,6 @@ img.mfp-img {
 
 .careers-value-people-box .pp-infobox:hover {
 }
-
-.careers-value-people-box .pp-infobox .animated {
-  -webkit-animation-duration: 500ms;
-  -moz-animation-duration: 500ms;
-  -o-animation-duration: 500ms;
-  -ms-animation-duration: 500ms;
-  animation-duration: 500ms;
-}
-
-.careers-value-people-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-people-box .pp-infobox-wrap .layout-4-wrapper {
-}
-
-.careers-value-people-box .pp-infobox-wrap .layout-1 .pp-heading-wrapper, .careers-value-people-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.careers-value-people-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-people-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  float: left;
-}
-
-@media only screen and (max-width: 1115px) {
-  .careers-value-people-box .pp-infobox {
-    text-align: left;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .careers-value-people-box .pp-infobox-wrap .pp-infobox {
-    text-align: left;
-  }
-
-  .careers-value-people-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-people-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-    float: left;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .careers-value-people-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-people-box .pp-infobox-wrap .layout-4-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.careers-value-people-box .pp-infobox-title-wrapper .pp-infobox-title {
-  font-size: 22px;
-}
-
 .fl-builder-content .careers-value-people-box .pp-infobox-image img {
   width: 35px;
 }
@@ -1655,32 +1571,6 @@ img.mfp-img {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
-
-.careers-value-people-box .pp-infobox-wrap .layout-3 .pp-icon-wrapper {
-  margin-right: 10px;
-}
-
-.careers-value-people-box .pp-infobox-wrap .layout-4 .pp-icon-wrapper {
-  margin-left: 10px;
-}
-
-.fl-col-group-equal-height .careers-value-longterm-box, .fl-col-group-equal-height .careers-value-longterm-box .fl-module-content, .fl-col-group-equal-height .careers-value-longterm-box .fl-module-content .pp-infobox-wrap, .fl-col-group-equal-height .careers-value-longterm-box .fl-module-content .pp-infobox-wrap .pp-infobox, .fl-col-group-equal-height .careers-value-longterm-box .fl-module-content .pp-infobox-wrap > .pp-infobox-link, .fl-col-group-equal-height .careers-value-longterm-box .fl-module-content .pp-infobox-wrap > .pp-more-link {
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  flex-shrink: 1;
-  min-width: 1px;
-  max-width: 100%;
-  -webkit-box-flex: 1 1 auto;
-  -moz-box-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
 .fl-col-group-equal-height .careers-value-longterm-box.fl-visible-large, .fl-col-group-equal-height .careers-value-longterm-box.fl-visible-medium, .fl-col-group-equal-height .careers-value-longterm-box.fl-visible-mobile {
   display: none;
 }
@@ -1742,11 +1632,6 @@ img.mfp-img {
     display: flex;
   }
 }
-
-.careers-value-longterm-box .pp-infobox .pp-infobox-title-prefix {
-  display: none;
-}
-
 .careers-value-longterm-box .pp-infobox-title-wrapper .pp-infobox-title {
   margin-top: 30px;
   margin-bottom: 0px;
@@ -1771,19 +1656,6 @@ img.mfp-img {
 
 .careers-value-longterm-box .pp-infobox:hover .pp-infobox-description {
 }
-
-.careers-value-longterm-box .pp-infobox-image {
-  text-align: left
-}
-
-.fl-builder-content .careers-value-longterm-box .pp-infobox-image img {
-  height: auto;
-  max-width: 100%;
-}
-
-.careers-value-longterm-box .pp-infobox:hover .pp-infobox-image img {
-}
-
 .careers-value-longterm-box .pp-infobox-icon-inner span.pp-icon, .careers-value-longterm-box .pp-infobox-image img {
   border-top-left-radius: px;
   border-top-right-radius: px;
@@ -1797,54 +1669,6 @@ img.mfp-img {
 
 .careers-value-longterm-box .pp-infobox:hover {
 }
-
-.careers-value-longterm-box .pp-infobox .animated {
-  -webkit-animation-duration: 500ms;
-  -moz-animation-duration: 500ms;
-  -o-animation-duration: 500ms;
-  -ms-animation-duration: 500ms;
-  animation-duration: 500ms;
-}
-
-.careers-value-longterm-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-longterm-box .pp-infobox-wrap .layout-4-wrapper {
-}
-
-.careers-value-longterm-box .pp-infobox-wrap .layout-1 .pp-heading-wrapper, .careers-value-longterm-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.careers-value-longterm-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-longterm-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  float: left;
-}
-
-@media only screen and (max-width: 1115px) {
-  .careers-value-longterm-box .pp-infobox {
-    text-align: left;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .careers-value-longterm-box .pp-infobox-wrap .pp-infobox {
-    text-align: left;
-  }
-
-  .careers-value-longterm-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-longterm-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-    float: left;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .careers-value-longterm-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-longterm-box .pp-infobox-wrap .layout-4-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.careers-value-longterm-box .pp-infobox-title-wrapper .pp-infobox-title {
-  font-size: 22px;
-}
-
 .fl-builder-content .careers-value-longterm-box .pp-infobox-image img {
   width: 35px;
 }
@@ -1864,32 +1688,6 @@ img.mfp-img {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
-
-.careers-value-longterm-box .pp-infobox-wrap .layout-3 .pp-icon-wrapper {
-  margin-right: 10px;
-}
-
-.careers-value-longterm-box .pp-infobox-wrap .layout-4 .pp-icon-wrapper {
-  margin-left: 10px;
-}
-
-.fl-col-group-equal-height .careers-value-team-box, .fl-col-group-equal-height .careers-value-team-box .fl-module-content, .fl-col-group-equal-height .careers-value-team-box .fl-module-content .pp-infobox-wrap, .fl-col-group-equal-height .careers-value-team-box .fl-module-content .pp-infobox-wrap .pp-infobox, .fl-col-group-equal-height .careers-value-team-box .fl-module-content .pp-infobox-wrap > .pp-infobox-link, .fl-col-group-equal-height .careers-value-team-box .fl-module-content .pp-infobox-wrap > .pp-more-link {
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  flex-shrink: 1;
-  min-width: 1px;
-  max-width: 100%;
-  -webkit-box-flex: 1 1 auto;
-  -moz-box-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
 .fl-col-group-equal-height .careers-value-team-box.fl-visible-large, .fl-col-group-equal-height .careers-value-team-box.fl-visible-medium, .fl-col-group-equal-height .careers-value-team-box.fl-visible-mobile {
   display: none;
 }
@@ -1951,11 +1749,6 @@ img.mfp-img {
     display: flex;
   }
 }
-
-.careers-value-team-box .pp-infobox .pp-infobox-title-prefix {
-  display: none;
-}
-
 .careers-value-team-box .pp-infobox-title-wrapper .pp-infobox-title {
   margin-top: 30px;
   margin-bottom: 0px;
@@ -1980,19 +1773,6 @@ img.mfp-img {
 
 .careers-value-team-box .pp-infobox:hover .pp-infobox-description {
 }
-
-.careers-value-team-box .pp-infobox-image {
-  text-align: left
-}
-
-.fl-builder-content .careers-value-team-box .pp-infobox-image img {
-  height: auto;
-  max-width: 100%;
-}
-
-.careers-value-team-box .pp-infobox:hover .pp-infobox-image img {
-}
-
 .careers-value-team-box .pp-infobox-icon-inner span.pp-icon, .careers-value-team-box .pp-infobox-image img {
   border-top-left-radius: px;
   border-top-right-radius: px;
@@ -2006,54 +1786,6 @@ img.mfp-img {
 
 .careers-value-team-box .pp-infobox:hover {
 }
-
-.careers-value-team-box .pp-infobox .animated {
-  -webkit-animation-duration: 500ms;
-  -moz-animation-duration: 500ms;
-  -o-animation-duration: 500ms;
-  -ms-animation-duration: 500ms;
-  animation-duration: 500ms;
-}
-
-.careers-value-team-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-team-box .pp-infobox-wrap .layout-4-wrapper {
-}
-
-.careers-value-team-box .pp-infobox-wrap .layout-1 .pp-heading-wrapper, .careers-value-team-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.careers-value-team-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-team-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  float: left;
-}
-
-@media only screen and (max-width: 1115px) {
-  .careers-value-team-box .pp-infobox {
-    text-align: left;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .careers-value-team-box .pp-infobox-wrap .pp-infobox {
-    text-align: left;
-  }
-
-  .careers-value-team-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-team-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-    float: left;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .careers-value-team-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-team-box .pp-infobox-wrap .layout-4-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.careers-value-team-box .pp-infobox-title-wrapper .pp-infobox-title {
-  font-size: 22px;
-}
-
 .fl-builder-content .careers-value-team-box .pp-infobox-image img {
   width: 35px;
 }
@@ -2073,31 +1805,6 @@ img.mfp-img {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
-
-.careers-value-team-box .pp-infobox-wrap .layout-3 .pp-icon-wrapper {
-  margin-right: 10px;
-}
-
-.careers-value-team-box .pp-infobox-wrap .layout-4 .pp-icon-wrapper {
-  margin-left: 10px;
-}
-.fl-col-group-equal-height .careers-value-flexibility-box, .fl-col-group-equal-height .careers-value-flexibility-box .fl-module-content, .fl-col-group-equal-height .careers-value-flexibility-box .fl-module-content .pp-infobox-wrap, .fl-col-group-equal-height .careers-value-flexibility-box .fl-module-content .pp-infobox-wrap .pp-infobox, .fl-col-group-equal-height .careers-value-flexibility-box .fl-module-content .pp-infobox-wrap > .pp-infobox-link, .fl-col-group-equal-height .careers-value-flexibility-box .fl-module-content .pp-infobox-wrap > .pp-more-link {
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  flex-shrink: 1;
-  min-width: 1px;
-  max-width: 100%;
-  -webkit-box-flex: 1 1 auto;
-  -moz-box-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
 .fl-col-group-equal-height .careers-value-flexibility-box.fl-visible-large, .fl-col-group-equal-height .careers-value-flexibility-box.fl-visible-medium, .fl-col-group-equal-height .careers-value-flexibility-box.fl-visible-mobile {
   display: none;
 }
@@ -2159,11 +1866,6 @@ img.mfp-img {
     display: flex;
   }
 }
-
-.careers-value-flexibility-box .pp-infobox .pp-infobox-title-prefix {
-  display: none;
-}
-
 .careers-value-flexibility-box .pp-infobox-title-wrapper .pp-infobox-title {
   margin-top: 30px;
   margin-bottom: 0px;
@@ -2188,19 +1890,6 @@ img.mfp-img {
 
 .careers-value-flexibility-box .pp-infobox:hover .pp-infobox-description {
 }
-
-.careers-value-flexibility-box .pp-infobox-image {
-  text-align: left
-}
-
-.fl-builder-content .careers-value-flexibility-box .pp-infobox-image img {
-  height: auto;
-  max-width: 100%;
-}
-
-.careers-value-flexibility-box .pp-infobox:hover .pp-infobox-image img {
-}
-
 .careers-value-flexibility-box .pp-infobox-icon-inner span.pp-icon, .careers-value-flexibility-box .pp-infobox-image img {
   border-top-left-radius: px;
   border-top-right-radius: px;
@@ -2214,54 +1903,6 @@ img.mfp-img {
 
 .careers-value-flexibility-box .pp-infobox:hover {
 }
-
-.careers-value-flexibility-box .pp-infobox .animated {
-  -webkit-animation-duration: 500ms;
-  -moz-animation-duration: 500ms;
-  -o-animation-duration: 500ms;
-  -ms-animation-duration: 500ms;
-  animation-duration: 500ms;
-}
-
-.careers-value-flexibility-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-flexibility-box .pp-infobox-wrap .layout-4-wrapper {
-}
-
-.careers-value-flexibility-box .pp-infobox-wrap .layout-1 .pp-heading-wrapper, .careers-value-flexibility-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.careers-value-flexibility-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-flexibility-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  float: left;
-}
-
-@media only screen and (max-width: 1115px) {
-  .careers-value-flexibility-box .pp-infobox {
-    text-align: left;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .careers-value-flexibility-box .pp-infobox-wrap .pp-infobox {
-    text-align: left;
-  }
-
-  .careers-value-flexibility-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-flexibility-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-    float: left;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .careers-value-flexibility-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-flexibility-box .pp-infobox-wrap .layout-4-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.careers-value-flexibility-box .pp-infobox-title-wrapper .pp-infobox-title {
-  font-size: 22px;
-}
-
 .fl-builder-content .careers-value-flexibility-box .pp-infobox-image img {
   width: 35px;
 }
@@ -2281,32 +1922,6 @@ img.mfp-img {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
-
-.careers-value-flexibility-box .pp-infobox-wrap .layout-3 .pp-icon-wrapper {
-  margin-right: 10px;
-}
-
-.careers-value-flexibility-box .pp-infobox-wrap .layout-4 .pp-icon-wrapper {
-  margin-left: 10px;
-}
-
-.fl-col-group-equal-height .careers-value-growth-box, .fl-col-group-equal-height .careers-value-growth-box .fl-module-content, .fl-col-group-equal-height .careers-value-growth-box .fl-module-content .pp-infobox-wrap, .fl-col-group-equal-height .careers-value-growth-box .fl-module-content .pp-infobox-wrap .pp-infobox, .fl-col-group-equal-height .careers-value-growth-box .fl-module-content .pp-infobox-wrap > .pp-infobox-link, .fl-col-group-equal-height .careers-value-growth-box .fl-module-content .pp-infobox-wrap > .pp-more-link {
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  flex-shrink: 1;
-  min-width: 1px;
-  max-width: 100%;
-  -webkit-box-flex: 1 1 auto;
-  -moz-box-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
 .fl-col-group-equal-height .careers-value-growth-box.fl-visible-large, .fl-col-group-equal-height .careers-value-growth-box.fl-visible-medium, .fl-col-group-equal-height .careers-value-growth-box.fl-visible-mobile {
   display: none;
 }
@@ -2368,11 +1983,6 @@ img.mfp-img {
     display: flex;
   }
 }
-
-.careers-value-growth-box .pp-infobox .pp-infobox-title-prefix {
-  display: none;
-}
-
 .careers-value-growth-box .pp-infobox-title-wrapper .pp-infobox-title {
   margin-top: 30px;
   margin-bottom: 0px;
@@ -2397,19 +2007,6 @@ img.mfp-img {
 
 .careers-value-growth-box .pp-infobox:hover .pp-infobox-description {
 }
-
-.careers-value-growth-box .pp-infobox-image {
-  text-align: left
-}
-
-.fl-builder-content .careers-value-growth-box .pp-infobox-image img {
-  height: auto;
-  max-width: 100%;
-}
-
-.careers-value-growth-box .pp-infobox:hover .pp-infobox-image img {
-}
-
 .careers-value-growth-box .pp-infobox-icon-inner span.pp-icon, .careers-value-growth-box .pp-infobox-image img {
   border-top-left-radius: px;
   border-top-right-radius: px;
@@ -2423,54 +2020,6 @@ img.mfp-img {
 
 .careers-value-growth-box .pp-infobox:hover {
 }
-
-.careers-value-growth-box .pp-infobox .animated {
-  -webkit-animation-duration: 500ms;
-  -moz-animation-duration: 500ms;
-  -o-animation-duration: 500ms;
-  -ms-animation-duration: 500ms;
-  animation-duration: 500ms;
-}
-
-.careers-value-growth-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-growth-box .pp-infobox-wrap .layout-4-wrapper {
-}
-
-.careers-value-growth-box .pp-infobox-wrap .layout-1 .pp-heading-wrapper, .careers-value-growth-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.careers-value-growth-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-growth-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  float: left;
-}
-
-@media only screen and (max-width: 1115px) {
-  .careers-value-growth-box .pp-infobox {
-    text-align: left;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .careers-value-growth-box .pp-infobox-wrap .pp-infobox {
-    text-align: left;
-  }
-
-  .careers-value-growth-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-growth-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-    float: left;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .careers-value-growth-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-growth-box .pp-infobox-wrap .layout-4-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.careers-value-growth-box .pp-infobox-title-wrapper .pp-infobox-title {
-  font-size: 22px;
-}
-
 .fl-builder-content .careers-value-growth-box .pp-infobox-image img {
   width: 35px;
 }
@@ -2490,32 +2039,6 @@ img.mfp-img {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
-
-.careers-value-growth-box .pp-infobox-wrap .layout-3 .pp-icon-wrapper {
-  margin-right: 10px;
-}
-
-.careers-value-growth-box .pp-infobox-wrap .layout-4 .pp-icon-wrapper {
-  margin-left: 10px;
-}
-
-.fl-col-group-equal-height .careers-value-training-box, .fl-col-group-equal-height .careers-value-training-box .fl-module-content, .fl-col-group-equal-height .careers-value-training-box .fl-module-content .pp-infobox-wrap, .fl-col-group-equal-height .careers-value-training-box .fl-module-content .pp-infobox-wrap .pp-infobox, .fl-col-group-equal-height .careers-value-training-box .fl-module-content .pp-infobox-wrap > .pp-infobox-link, .fl-col-group-equal-height .careers-value-training-box .fl-module-content .pp-infobox-wrap > .pp-more-link {
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  flex-shrink: 1;
-  min-width: 1px;
-  max-width: 100%;
-  -webkit-box-flex: 1 1 auto;
-  -moz-box-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
 .fl-col-group-equal-height .careers-value-training-box.fl-visible-large, .fl-col-group-equal-height .careers-value-training-box.fl-visible-medium, .fl-col-group-equal-height .careers-value-training-box.fl-visible-mobile {
   display: none;
 }
@@ -2577,11 +2100,6 @@ img.mfp-img {
     display: flex;
   }
 }
-
-.careers-value-training-box .pp-infobox .pp-infobox-title-prefix {
-  display: none;
-}
-
 .careers-value-training-box .pp-infobox-title-wrapper .pp-infobox-title {
   margin-top: 30px;
   margin-bottom: 0px;
@@ -2606,19 +2124,6 @@ img.mfp-img {
 
 .careers-value-training-box .pp-infobox:hover .pp-infobox-description {
 }
-
-.careers-value-training-box .pp-infobox-image {
-  text-align: left
-}
-
-.fl-builder-content .careers-value-training-box .pp-infobox-image img {
-  height: auto;
-  max-width: 100%;
-}
-
-.careers-value-training-box .pp-infobox:hover .pp-infobox-image img {
-}
-
 .careers-value-training-box .pp-infobox-icon-inner span.pp-icon, .careers-value-training-box .pp-infobox-image img {
   border-top-left-radius: px;
   border-top-right-radius: px;
@@ -2632,54 +2137,6 @@ img.mfp-img {
 
 .careers-value-training-box .pp-infobox:hover {
 }
-
-.careers-value-training-box .pp-infobox .animated {
-  -webkit-animation-duration: 500ms;
-  -moz-animation-duration: 500ms;
-  -o-animation-duration: 500ms;
-  -ms-animation-duration: 500ms;
-  animation-duration: 500ms;
-}
-
-.careers-value-training-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-training-box .pp-infobox-wrap .layout-4-wrapper {
-}
-
-.careers-value-training-box .pp-infobox-wrap .layout-1 .pp-heading-wrapper, .careers-value-training-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.careers-value-training-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-training-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-  float: left;
-}
-
-@media only screen and (max-width: 1115px) {
-  .careers-value-training-box .pp-infobox {
-    text-align: left;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .careers-value-training-box .pp-infobox-wrap .pp-infobox {
-    text-align: left;
-  }
-
-  .careers-value-training-box .pp-infobox-wrap .layout-2 .pp-infobox-description, .careers-value-training-box .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
-    float: left;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .careers-value-training-box .pp-infobox-wrap .layout-3-wrapper, .careers-value-training-box .pp-infobox-wrap .layout-4-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.careers-value-training-box .pp-infobox-title-wrapper .pp-infobox-title {
-  font-size: 22px;
-}
-
 .fl-builder-content .careers-value-training-box .pp-infobox-image img {
   width: 35px;
 }
@@ -2699,15 +2156,6 @@ img.mfp-img {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
-
-.careers-value-training-box .pp-infobox-wrap .layout-3 .pp-icon-wrapper {
-  margin-right: 10px;
-}
-
-.careers-value-training-box .pp-infobox-wrap .layout-4 .pp-icon-wrapper {
-  margin-left: 10px;
-}
-
 .careers-testimonial-photo .fl-photo {
   text-align: left;
 }
