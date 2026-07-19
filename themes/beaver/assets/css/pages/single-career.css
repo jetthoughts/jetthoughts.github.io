@@ -1,20 +1,3 @@
-/* single-career — delta rules retired with 3114-layout.css and
-   e966db44b09892b8d7d492247c67e86c-layout-bundle.css (both dropped from this
-   slice; e966 deleted — this was its only consumer). The page-private
-   critical/single-careers.css already carries the rows/cols/modules and
-   visible share/form framework; this file re-hosts only what e966 added on
-   top: the hero tablet breakpoint, the mobile share-label hide, share-button
-   hover states, and the full Gravity-form skin (critical's subset is
-   incomplete). Selectors kept verbatim (same .fl-node-* keys, same cascade
-   slot) — parity by construction. */
-
-/* Hero tablet breakpoint (critical has only the 860px step) */
-@media (max-width: 1115px) {
-  .career-hero.fl-row > .fl-row-content-wrap {
-    padding-top: 150px;
-    padding-bottom: 50px;
-  }
-}
 
 /* Mobile: hide the share-button text label */
 @media (max-width: 860px) {
@@ -47,42 +30,12 @@
 .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-flat .pp-share-button:hover a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-gradient .pp-share-button:hover a *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-boxed .pp-share-button:hover .pp-share-button-icon *, .fl-builder-content .career-share-module .pp-social-share-content.pp-share-buttons-skin-minimal .pp-share-button:hover .pp-share-button-icon * {
   color: var(--color-primary);
 }
-
-/* Gravity-form framework + node skin (e966 3959-4348, verbatim) */
-.pp-gf-content {
-  position: relative;
-}
-
-.pp-gf-content:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.pp-gf-content .pp-gf-inner {
-  position: relative;
-}
-
 .pp-gf-content .form-title, .pp-gf-content .form-description {
   position: relative;
 }
-
-.pp-gf-content .gform_wrapper form {
-  position: relative;
-}
-
 .pp-gf-content legend {
   border: 0;
 }
-
-.pp-gf-content .gform_wrapper .gform_body {
-  width: 100% !important;
-}
-
 .pp-gf-content .gform_wrapper ul.gform_fields {
   padding: 0;
 }
@@ -149,11 +102,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 @media (max-width: 860px) {
 }
-
-.career-form-module .pp-gf-content .gform_wrapper {
-  max-width: 100%;
-}
-
 .career-form-module .pp-gf-content {
   background-color: #F5F6F8;
   background-size: cover;
@@ -164,36 +112,9 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   list-style-type: none !important;
   margin-bottom: 20px;
 }
-
-.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper .gform_title, .fl-builder-content .career-form-module .pp-gf-content .form-title {
-  display: block;
-}
-
-.fl-builder-content .career-form-module .pp-gf-content .form-title {
-  display: block;
-}
-
-.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper .gform_title {
-  display: none;
-}
-
-.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper span.gform_description, .fl-builder-content .career-form-module .pp-gf-content .form-description {
-  display: none;
-}
-
-.fl-builder-content .career-form-module .pp-gf-content .form-description {
-  display: block;
-}
-
 .fl-builder-content .career-form-module .pp-gf-content .gform_wrapper span.gform_description {
   display: none;
 }
-
-.fl-builder-content .career-form-module .pp-gf-content .gform_wrapper .gfield .gfield_label {
-  color: var(--color-dark);
-  display: block;
-}
-
 .fl-builder-content .career-form-module .pp-gf-content .gform_wrapper .gfield_required {
   color: #ff0000;
 }
@@ -242,23 +163,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 .career-form-module .pp-gf-content .gform_wrapper .ginput_complex span {
   margin-bottom: 8px;
 }
-
-.career-form-module .pp-gf-content .gform_wrapper .gfield input::-webkit-input-placeholder {
-  color: var(--color-muted);
-}
-
-.career-form-module .pp-gf-content .gform_wrapper .gfield input:-moz-placeholder {
-  color: var(--color-muted);
-}
-
-.career-form-module .pp-gf-content .gform_wrapper .gfield input::-moz-placeholder {
-  color: var(--color-muted);
-}
-
-.career-form-module .pp-gf-content .gform_wrapper .gfield input:-ms-input-placeholder {
-  color: var(--color-muted);
-}
-
 .career-form-module .pp-gf-content .gform_wrapper .gfield textarea::-webkit-input-placeholder {
   color: var(--color-muted);
 }
@@ -369,28 +273,9 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 .career-form-module .gform_confirmation_wrapper .gform_confirmation_message {
   color: var(--color-dark);
 }
-
-.career-form-module .pp-gf-content {
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  padding-top: 40px;
-  padding-right: 40px;
-  padding-bottom: 80px;
-  padding-left: 40px;
-}
-
 .career-form-module .pp-gf-content .gform_wrapper .gform_title, .career-form-module .form-title {
   font-size: 30px;
 }
-
-.career-form-module .pp-gf-content .gform_wrapper .gfield .gfield_label {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  font-size: 14px;
-}
-
 .career-form-module .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .career-form-module .pp-gf-content .gform_wrapper .gfield select, .career-form-module .pp-gf-content .gform_wrapper .gfield textarea {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
@@ -428,13 +313,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 @media (max-width: 860px) {
-  .career-form-module .pp-gf-content {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 60px;
-    padding-left: 20px;
-  }
-
   .career-form-module .pp-gf-content .gform_wrapper .gform_title, .career-form-module .form-title {
     font-size: 25px;
   }
