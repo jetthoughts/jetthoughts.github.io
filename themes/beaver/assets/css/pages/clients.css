@@ -1173,13 +1173,13 @@ img.mfp-img {
 }
 
 
-.fl-builder-content .fl-node-17hr8iqz4nyg .fl-rich-text, .fl-builder-content .fl-node-17hr8iqz4nyg .fl-rich-text *:not(b, strong) {
+.fl-builder-content .clients-intro .fl-rich-text, .fl-builder-content .clients-intro .fl-rich-text *:not(b, strong) {
   font-size: 20px;
   text-align: center;
 }
 
 
-.fl-node-17hr8iqz4nyg > .fl-module-content {
+.clients-intro > .fl-module-content {
   margin-top: 15px;
   margin-right: 200px;
   margin-left: 200px;
@@ -1187,7 +1187,7 @@ img.mfp-img {
 
 
 @media ( max-width: 860px ) {
-  .fl-node-17hr8iqz4nyg.fl-module > .fl-module-content {
+  .clients-intro.fl-module > .fl-module-content {
     margin-top: 15px;
     margin-right: 0px;
     margin-left: 0px;
