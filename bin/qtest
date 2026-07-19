@@ -113,6 +113,16 @@ unless all
   abort "qtest: unknown page key(s): #{unknown.join(", ")}" if unknown.any?
 end
 
+# A failing/passing run REWRITES baselines - starting dirty makes results
+# unjudgeable and can silently commit a corrupted baseline.
+dirty = `git status --porcelain test/fixtures/screenshots`.lines.map(&:split).map(&:last)
+if dirty.any?
+  warn "qtest: screenshot fixtures are dirty - restore before running:"
+  dirty.first(10).each { |f| warn "  #{f}" }
+  warn "  git checkout -- test/fixtures/screenshots  # (after inspecting diffs)"
+  abort
+end
+
 if build
   puts "qtest: building to #{DEST} ..."
   system("hugo", "--baseURL", "/", "--environment", "production", "--buildDrafts",
