@@ -1,6 +1,6 @@
 ---
-title: "Falcon in Production: Benchmarks, Memory & Worker Count"
-description: "Tune Falcon for production Ruby apps. Real benchmarks vs Puma, worker-count formulas, memory profiling, GC tuning, and connection-pool sizing. Working config examples."
+title: "Falcon in Production: Tuning and Benchmarks"
+description: "Falcon production tuning: real benchmarks vs Puma, worker-count formulas, memory profiling, GC tuning, connection-pool sizing, and working config examples."
 date: 2026-07-22
 draft: false
 tags: ["ruby", "performance", "async", "falcon", "web-server", "benchmarks", "production"]
