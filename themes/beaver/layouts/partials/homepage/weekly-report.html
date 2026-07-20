@@ -1,0 +1,67 @@
+{{/* Homepage transparency artifact: the Friday report format.
+     ICP-E ("Alex") weighs transparency proof at 25% of the buying decision and
+     names "sample weekly report" as the artifact he looks for
+     (docs/90-99-content-strategy/strategy-analysis/90.10, §5 and §7).
+     The three sections match the approved phrasing in the voice guide:
+     "what shipped, what's blocked, what's next". */}}
+<div id="weekly-report" class="jt-home-report">
+  <div class="home-report-inner">
+    <header class="home-report-intro">
+      <h2 class="home-report-title">The Friday report, in plain English</h2>
+      <p class="home-report-lede">
+        Your last agency sent you a burndown chart and a Jira board you could
+        not read. Every Friday one of our developers writes you this instead:
+        one page, in the body of the email, no attachment.
+      </p>
+    </header>
+
+    <div class="home-report-card">
+      <div class="home-report-card-head">
+        <span class="home-report-card-label">Weekly report</span>
+        <span class="home-report-card-meta">Friday, week 14</span>
+      </div>
+
+      <dl class="home-report-rows">
+        <div class="home-report-row">
+          <dt class="home-report-row-key home-report-row-key--shipped">
+            What shipped
+          </dt>
+          <dd class="home-report-row-value">
+            Customers can pay with Apple Pay at checkout. Try it yourself on
+            staging, sign in as demo@yourapp.test.
+          </dd>
+        </div>
+        <div class="home-report-row">
+          <dt class="home-report-row-key home-report-row-key--blocked">
+            What's blocked
+          </dt>
+          <dd class="home-report-row-value">
+            We need your Stripe live keys. Send them by Tuesday or the launch
+            moves to the following week.
+          </dd>
+        </div>
+        <div class="home-report-row">
+          <dt class="home-report-row-key home-report-row-key--next">
+            What's next
+          </dt>
+          <dd class="home-report-row-value">
+            Order history screen. Two developers, four days. Marcos reviews it.
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <p class="home-report-note">
+      This shows the format. A real report names your staging URL, your pull
+      requests, and the person who owes you an answer.
+    </p>
+
+    <p class="home-report-cta">
+      {{/* Class must start with "cta" so the site-wide brand-blue link rule in
+           navigation.css exempts it and the ruby brand color applies. */}}
+      <a href="{{ relURL "free-consultation/" }}" class="cta-report-link"
+        >See what a free code audit gets you</a
+      >
+    </p>
+  </div>
+</div>
