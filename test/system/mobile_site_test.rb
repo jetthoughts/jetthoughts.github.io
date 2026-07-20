@@ -11,7 +11,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
   def test_homepage
     visit "/"
-    assert_text "Build faster. Scale smarter."
+    assert_text "Your dev shop stopped delivering. We rescue and stabilize."
 
     preload_all_images
 

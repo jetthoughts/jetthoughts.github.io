@@ -14,7 +14,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     preload_all_images
 
-    assert_text "Build faster. Scale smarter."
+    assert_text "Your dev shop stopped delivering. We rescue and stabilize."
 
     # Move mouse to (0,0) to prevent menu hover state causing flakiness
     page.driver.browser.action.move_to_location(0, 0).perform
