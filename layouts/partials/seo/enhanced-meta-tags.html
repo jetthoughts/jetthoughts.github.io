@@ -7,9 +7,7 @@
 {{- $titleSuffix := " | JetThoughts" -}}
 {{- $maxTitleLength := 60 -}}
 
-{{- if .IsHome -}}
-  {{- $title = "Expert Software Development & Consulting | JetThoughts" -}}
-{{- else if eq .Section "blog" -}}
+{{- if eq .Section "blog" -}}
   {{- if .IsSection -}}
     {{- $title = "Expert Software Development Blog - 540+ Articles | JT" -}}
   {{- else -}}
@@ -17,7 +15,7 @@
     {{- $title = printf "%s | JetThoughts Blog" $blogTitle -}}
   {{- end -}}
 {{- else -}}
-  {{- $title = printf "%s | JetThoughts" .Title -}}
+  {{- $title = printf "%s%s" .Title $titleSuffix -}}
 {{- end -}}
 
 {{- if gt (len $title) $maxTitleLength -}}
@@ -30,11 +28,9 @@
 {{- $description := "" -}}
 {{- $maxDescLength := 160 -}}
 
-{{- if .IsHome -}}
-  {{- $description = "Expert software development & consulting with 95% client retention. Reduce costs 50% while accelerating delivery 3x faster. Free consultation ✓" -}}
-{{- else if eq .Section "blog" -}}
+{{- if eq .Section "blog" -}}
   {{- if .IsSection -}}
-    {{- $description = "540+ expert articles on software development, Ruby on Rails, React, and tech leadership. Learn from 18+ years of industry experience ✓" -}}
+    {{- $description = printf "540+ expert articles on software development, Ruby on Rails, React, and tech leadership. Learn from %d+ years of industry experience ✓" (sub now.Year (int site.Params.foundingYear)) -}}
   {{- else -}}
     {{- with .Description -}}
       {{- $description = . -}}

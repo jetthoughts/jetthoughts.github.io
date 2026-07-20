@@ -24,7 +24,7 @@
                     <div class="pp-infolist layout-1">
                       <ul class="pp-list-items">
                         {{ range $i, $item := slice
-                          "18+ Years of Industry Experience"
+                          (printf "%d+ Years of Industry Experience" (sub now.Year (int site.Params.foundingYear)))
                           "2 Years is Our Shortest Client Relationship"
                           "Proprietary Talent Network"
                           "Competitive Cost Structure"
