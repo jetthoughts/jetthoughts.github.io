@@ -7,8 +7,6 @@
 {{ define "footer" }}
   {{ $tabsResources := slice (resources.Get "js/tabs.js") }}
   {{ partial "assets/js-processor.html" (dict "resources" $tabsResources "bundleName" "tabs" "defer" true) }}
-
-  {{ partial "header/json-ld-company.html" . }}
 {{ end }}
 
 {{ define "main" }}
@@ -36,7 +34,7 @@
                     <div
                       class="fl-row-content fl-row-fixed-width fl-node-content">
                       <div
-                        class="fl-col-group fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width fl-col-group-responsive-reversed"
+                        class="fl-col-group fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width"
                         data-node="hptklxb98v20">
                         <div
                           class="fl-col home-hero-copy fl-col-small fl-col-small-custom-width"
@@ -48,7 +46,7 @@
                               <div class="fl-module-content fl-node-content">
                                 <h1 class="fl-heading">
                                   <span class="fl-heading-text"
-                                    >Build faster. Scale smarter.</span
+                                    >{{ .Params.headline }}</span
                                   >
                                 </h1>
                               </div>
@@ -58,12 +56,7 @@
                               data-node="8yibs7gtxvjp">
                               <div class="fl-module-content fl-node-content">
                                 <div class="fl-rich-text">
-                                  <p>
-                                    Streamline development, accelerate delivery,
-                                    &amp; achieve your product vision with
-                                    access to turnkey engineering resources
-                                    backed by world-class technical talent.
-                                  </p>
+                                  <p>{{ .Params.excerpt }}</p>
                                 </div>
                               </div>
                             </div>
@@ -78,7 +71,7 @@
                                     target="_self"
                                     class="fl-button">
                                     <span class="fl-button-text"
-                                      >Talk to an Expert</span
+                                      >Get a Free Code Audit</span
                                     >
                                   </a>
                                 </div>
@@ -134,10 +127,11 @@
                                       class="fl-module-content fl-node-content">
                                       <div class="fl-rich-text">
                                         <p>
+                                          {{ $tenureYears := sub now.Year (int site.Params.foundingYear) }}
                                           <span
                                             class="counter-value active"
-                                            data-count="{{ .Params.overview_first_value }}"
-                                            >{{ .Params.overview_first_value }}</span
+                                            data-count="{{ $tenureYears }}"
+                                            >{{ $tenureYears }}</span
                                           >+
                                         </p>
                                       </div>
@@ -192,13 +186,13 @@
                               <div class="fl-module-content fl-node-content">
                                 <div class="fl-rich-text">
                                   <p>
-                                    We helped over
+                                    Rated
                                     <strong
                                       ><span style="color: #1a8cff;"
-                                        >20+ companies</span
+                                        >4.8/5 by 32 clients</span
                                       ></strong
                                     >
-                                    that went beyond their goals with our teams
+                                    - and most of them stay over 3 years
                                   </p>
                                 </div>
                               </div>
@@ -306,7 +300,8 @@
                               <div class="fl-module-content fl-node-content">
                                 <h2 class="fl-heading">
                                   <span class="fl-heading-text"
-                                    >We optimize technology</span
+                                    >Ruby on Rails and React, done by
+                                    specialists</span
                                   >
                                 </h2>
                               </div>
@@ -317,10 +312,20 @@
                               <div class="fl-module-content fl-node-content">
                                 <div class="fl-rich-text">
                                   <p>
-                                    From technical strategy and innovation to
-                                    talent acquisition and software development,
-                                    we help empower products and teams at any
-                                    stage.
+                                    Senior teams shipping and rescuing Ruby on
+                                    Rails and React products since 2011 -
+                                    test-driven, with weekly reports in plain
+                                    English. If your current dev shop is
+                                    failing, start with
+                                    <a
+                                      href="{{ relURL "services/emergency-cto-leadership/" }}"
+                                      >project rescue</a
+                                    >. For new builds, our
+                                    <a
+                                      href="{{ relURL "services/app-web-development/" }}"
+                                      >Ruby on Rails development services</a
+                                    >
+                                    take you from MVP to scale.
                                   </p>
                                 </div>
                               </div>
@@ -467,10 +472,10 @@
                                     <div class="pp-infobox-description">
                                       <div class="pp-description-wrap">
                                         <p>
-                                          Accelerate development, streamline
-                                          release cycles, and eliminate
-                                          roadblocks with fully-managed software
-                                          testing &amp; QA services.
+                                          Ship releases faster and catch
+                                          defects before your users do with
+                                          fully-managed software testing &amp;
+                                          QA services.
                                         </p>
                                       </div>
                                       <div
@@ -994,10 +999,10 @@
                                                 Without a repeatable system for
                                                 software development, it’s easy
                                                 to lose control over both costs
-                                                &amp; timeline. We provide
-                                                turnkey solutions that are
-                                                designed to be faster, cheaper,
-                                                and easier to manage.
+                                                &amp; timeline. We set up a
+                                                process you can see into and
+                                                manage - faster, cheaper, and
+                                                without surprises.
                                               </p>
                                             </div>
                                           </div>
@@ -1124,7 +1129,7 @@
                               <div
                                 class="fl-button-wrap-center fl-button-width-auto fl-button-center">
                                 <a
-                                  href="/contact-us/"
+                                  href="{{ relURL "contact-us/" }}"
                                   target="_self"
                                   class="fl-button">
                                   <span class="fl-button-text">Contact Us</span>

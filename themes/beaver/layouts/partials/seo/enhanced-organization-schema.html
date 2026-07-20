@@ -18,7 +18,7 @@
     "height": 72
   },
   "image": "https://jetthoughts.com/assets/images/jetthoughts-og-image.jpg",
-  "description": "Expert software development and technology consulting services with 18+ years of experience and 95% client retention rate.",
+  "description": "Expert software development and technology consulting services with {{ sub now.Year (int site.Params.foundingYear) }}+ years of experience and 95% client retention rate.",
   
   "foundingDate": "2011",
   "numberOfEmployees": {
@@ -82,8 +82,8 @@
   
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "25",
+    "ratingValue": "4.8",
+    "reviewCount": "32",
     "bestRating": "5",
     "worstRating": "1"
   }{{ with .Site.Params.testimonials }},
@@ -151,33 +151,8 @@
   
   "award": [
     "95% Client Retention Rate",
-    "18+ Years Industry Experience",
+    "{{ sub now.Year (int site.Params.foundingYear) }}+ Years Industry Experience",
     "540+ Published Articles"
   ]
-}
-</script>
-
-{{/* LocalBusiness Schema for local SEO */}}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "JetThoughts",
-  "url": "https://jetthoughts.com",
-  "telephone": "+1-754-216-9568",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "US",
-    "addressLocality": "Fort Lauderdale", 
-    "addressRegion": "FL"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "26.1224",
-    "longitude": "-80.1373"
-  },
-  "openingHours": "Mo-Fr 09:00-17:00",
-  "priceRange": "$$$",
-  "servesCuisine": "Software Development Services"
 }
 </script>
