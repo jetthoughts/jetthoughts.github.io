@@ -276,7 +276,7 @@ disableKinds = []
   url = "/contact-us/"
   weight = 20
 [[menu.company]]
-  name = "Free Consultation"
+  name = "Free Code Audit"
   url = "/free-consultation/"
   weight = 30
 [[menu.company]]

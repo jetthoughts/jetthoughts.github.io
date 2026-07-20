@@ -9,11 +9,12 @@
         <div class="fc-hero-inner">
           <header class="fc-intro">
             <h1 class="fl-heading">
-              <span class="fl-heading-text">Free Consultation</span>
+              <span class="fl-heading-text">Get a free code audit</span>
             </h1>
             <p class="fc-lede">
-              Get in touch with one of our experts to get a technical strategy
-              &amp; planning session for your project at no cost.
+              One senior developer spends 45 minutes reading your codebase and
+              emails you a one-page written assessment. No contract, no
+              follow-up call to book.
             </p>
           </header>
           <div class="fc-band">
@@ -23,12 +24,16 @@
                   <div class="pp-infolist-wrap">
                     <div class="pp-infolist layout-1">
                       <ul class="pp-list-items">
+                        {{/* What the audit delivers. The ICP doc (90.10 §7)
+                             makes naming the deliverable the answer to
+                             "all dev shops are the same"; the voice guide §4
+                             requires the CTA name what the reader receives. */}}
                         {{ range $i, $item := slice
-                          (printf "%d+ Years of Industry Experience" (sub now.Year (int site.Params.foundingYear)))
-                          "2 Years is Our Shortest Client Relationship"
-                          "Proprietary Talent Network"
-                          "Competitive Cost Structure"
-                          "Reliable Development Systems"
+                          "One senior developer, 45 minutes with your codebase"
+                          "A one-page assessment written in plain English"
+                          "The three fixes that would help your project most"
+                          "Yours to keep, whether or not you hire us"
+                          "We read your repository. We do not change anything in it."
                         }}
                           <li class="pp-list-item pp-list-item-{{ $i }}">
                             <div class="pp-list-item-content">
