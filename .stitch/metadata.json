@@ -37,6 +37,14 @@
       "width": 2560,
       "height": 7334,
       "title": "JetThoughts Homepage - Strategic Refinement"
+    },
+    "homepage-redesign-v4": {
+      "id": null,
+      "sourceScreen": null,
+      "width": 1280,
+      "height": 5620,
+      "title": "JetThoughts Homepage v4 - Obsidian Architect (local)",
+      "note": "Authored locally 2026-07-19 from v3 base after generate_screen_from_text failed twice (Pro + Flash timeouts, no screen materialized). HTML: .stitch/designs/homepage-redesign-v4.html"
     }
   },
   "metadata": {
