@@ -167,7 +167,8 @@ class MobileSiteTest < ApplicationSystemTestCase
     # Add more specific scoping for Talk to an Expert button
     find("a", text: "Talk to an Expert", match: :first, wait: 5).click
 
-    assert_text "Free Consultation"
+    assert_text "Get a free code audit"
+    assert_text "one-page written assessment"
     assert_stable_screenshot "free_consultation"
   end
 
