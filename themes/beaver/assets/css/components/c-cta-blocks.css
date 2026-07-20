@@ -29,52 +29,6 @@
   position: relative;
   padding: 60px 0;
 }
-
-/* CTA Column Group */
-.c-cta-blocks__column-group {
-  /* Inherits from FL-Builder .fl-col-group */
-}
-
-/* CTA Content Column */
-.c-cta-blocks__content-column {
-  /* Inherits from FL-Builder .fl-col */
-}
-
-/* CTA Heading Element */
-.c-cta-blocks__heading {
-  /* Extends existing .c-cta-section__heading styling */
-}
-
-/* CTA Description Element */
-.c-cta-blocks__description {
-  /* Extends existing .c-cta-section__description styling */
-}
-
-/* CTA Button Wrapper Element */
-.c-cta-blocks__button {
-  /* Extends existing .c-cta-section__button styling */
-}
-
-/* CTA Intro Text Element */
-.c-cta-blocks__intro-text {
-  /* Extends existing .c-contact-section__intro-text styling */
-}
-
-/* CTA Spacer Element */
-.c-cta-blocks__spacer {
-  /* Extends existing .c-contact-section__spacer styling */
-}
-
-/* Contact CTA Variant Modifier */
-.c-cta-blocks--contact {
-  /* Contact-specific styling (e.g., blue-border variant) */
-}
-
-/* Standard CTA Variant Modifier */
-.c-cta-blocks--standard {
-  /* Standard CTA styling (e.g., Talk to Expert variant) */
-}
-
 /* CTA Button Alignment - Header Contact Button */
 .fl-node-header-nav-contat-us-btn-nested .fl-button-wrap {
   text-align: right;

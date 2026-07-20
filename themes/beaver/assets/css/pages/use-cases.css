@@ -901,7 +901,6 @@ img.mfp-img {
 
   .fl-col-group.fl-col-group-medium-reversed:not(.fl-col-group-responsive-reversed) {
     display: unset;
-    display: unset;
     -webkit-flex-wrap: unset;
     flex-wrap: unset;
     flex-direction: unset;
@@ -1929,10 +1928,6 @@ img.mfp-img {
   .pp-tabs-style-5 .pp-tabs-label .pp-tab-label-inner:after {
     display: none;
   }
-
-  .pp-tabs-horizontal.pp-tabs-default .pp-tabs-label.pp-tab-active {
-  }
-
   .pp-tabs-style-8 .pp-tabs-label {
     margin: 0 !important;
   }

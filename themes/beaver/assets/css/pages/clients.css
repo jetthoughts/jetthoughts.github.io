@@ -945,7 +945,6 @@ img.mfp-img {
 
   .fl-col-group.fl-col-group-medium-reversed:not(.fl-col-group-responsive-reversed) {
     display: unset;
-    display: unset;
     -webkit-flex-wrap: unset;
     flex-wrap: unset;
     flex-direction: unset;
@@ -1895,7 +1894,6 @@ body .pp-post-feed-meta {
   margin-right: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  float: right;
   overflow: hidden;
   position: relative;
   height: 15px;
@@ -2275,38 +2273,10 @@ body .pp-post-feed-meta {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
-
-.clients-grid .pp-content-post .pp-post-title, .clients-grid .pp-content-post .pp-post-title a {
-}
-
-
-.clients-grid .pp-content-post:hover .pp-post-title, .clients-grid .pp-content-post:hover .pp-post-title a {
-}
-
-
 .clients-grid .pp-content-post .pp-post-content {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
-
-.clients-grid .pp-content-post:hover .pp-post-content {
-}
-
-
-.clients-grid .pp-post-event-calendar-date, .clients-grid .pp-post-event-calendar-date span {
-}
-
-
-.clients-grid .pp-post-event-calendar-venue, .clients-grid .pp-post-event-calendar-venue span.tribe-address {
-}
-
-
-.clients-grid .pp-post-event-calendar-cost, .clients-grid .pp-post-event-calendar-cost span.ticket-cost {
-}
-
-
 .clients-grid .pp-post-event-calendar-cost form {
   margin-top: 10px;
 }
@@ -2397,37 +2367,9 @@ body .pp-post-feed-meta {
 .clients-grid .pp-content-post .pp-post-meta {
   color: #606060;
 }
-
-
-.clients-grid .pp-content-post:hover .pp-post-meta {
-}
-
-
-.clients-grid .pp-content-post .pp-post-meta span {
-}
-
-
 .clients-grid .pp-content-post .pp-post-meta a {
   color: #606060;
 }
-
-
-.clients-grid .pp-content-post:hover .pp-post-meta a {
-}
-
-
-.clients-grid .pp-content-grid-post .pp-content-category-list, .clients-grid .pp-content-carousel-post .pp-content-category-list {
-}
-
-
-.clients-grid .pp-content-post.pp-grid-style-7 .pp-content-post-meta {
-}
-
-
-.clients-grid .pp-content-post.pp-grid-style-7:hover .pp-content-post-meta {
-}
-
-
 .clients-grid .pp-content-post-carousel .owl-theme .owl-dots .owl-dot span {
   opacity: 1;
   background: #666666;
@@ -2464,22 +2406,6 @@ body .pp-post-feed-meta {
 .clients-grid .pp-content-post-carousel .owl-nav button svg {
   height: 30px;
 }
-
-
-.clients-grid .pp-content-post-carousel .owl-nav button:hover {
-}
-.clients-grid .pp-content-post:hover {
-}
-
-
-.clients-grid .pp-content-post.pp-grid-style-7 .pp-content-body {
-}
-
-
-.clients-grid .pp-content-post.pp-grid-style-7:hover .pp-content-body {
-}
-
-
 .woocommerce .clients-grid .pp-content-post {
   margin-bottom: 2.5%;
 }
@@ -2514,10 +2440,6 @@ body .pp-post-feed-meta {
 .clients-grid .pp-content-post-grid.pp-filters-active .pp-content-grid-post {
   margin-right: 0;
 }
-.clients-grid .pp-content-post .pp-content-body {
-}
-
-
 .clients-grid .pp-content-post .star-rating {
   margin-left: 0;
 }
@@ -2595,10 +2517,6 @@ body .pp-post-feed-meta {
   .clients-grid.cg-grid-center-align .pp-content-post-grid {
     grid-template-columns: repeat(min(var(--items-count), var(--column-lg)), min(calc(100% / var(--items-count)), calc(100% / var(--column-lg))));
   }
-
-  .clients-grid .pp-content-post {
-  }
-
   .clients-grid .pp-grid-space {
     width: 2.5%;
   }
@@ -2609,10 +2527,6 @@ body .pp-post-feed-meta {
   .clients-grid.cg-grid-center-align .pp-content-post-grid {
     grid-template-columns: repeat(min(var(--items-count), var(--column-md)), min(calc(100% / var(--items-count)), calc(100% / var(--column-md))));
   }
-
-  .clients-grid .pp-content-post {
-  }
-
   .clients-grid .pp-grid-space {
     width: 2.5%;
   }
@@ -2623,10 +2537,6 @@ body .pp-post-feed-meta {
   .clients-grid.cg-grid-center-align .pp-content-post-grid {
     grid-template-columns: repeat(min(var(--items-count), var(--column-sm)), min(calc(100% / var(--items-count)), calc(100% / var(--column-sm))));
   }
-
-  .clients-grid .pp-content-post {
-  }
-
   .clients-grid .pp-grid-space {
     width: 2.5%;
   }
@@ -2748,38 +2658,10 @@ body .pp-post-feed-meta {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
-
-.clients-carousel .pp-content-post .pp-post-title, .clients-carousel .pp-content-post .pp-post-title a {
-}
-
-
-.clients-carousel .pp-content-post:hover .pp-post-title, .clients-carousel .pp-content-post:hover .pp-post-title a {
-}
-
-
 .clients-carousel .pp-content-post .pp-post-content {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
-
-.clients-carousel .pp-content-post:hover .pp-post-content {
-}
-
-
-.clients-carousel .pp-post-event-calendar-date, .clients-carousel .pp-post-event-calendar-date span {
-}
-
-
-.clients-carousel .pp-post-event-calendar-venue, .clients-carousel .pp-post-event-calendar-venue span.tribe-address {
-}
-
-
-.clients-carousel .pp-post-event-calendar-cost, .clients-carousel .pp-post-event-calendar-cost span.ticket-cost {
-}
-
-
 .clients-carousel .pp-post-event-calendar-cost form {
   margin-top: 10px;
 }
@@ -2870,37 +2752,9 @@ body .pp-post-feed-meta {
 .clients-carousel .pp-content-post .pp-post-meta {
   color: #606060;
 }
-
-
-.clients-carousel .pp-content-post:hover .pp-post-meta {
-}
-
-
-.clients-carousel .pp-content-post .pp-post-meta span {
-}
-
-
 .clients-carousel .pp-content-post .pp-post-meta a {
   color: #606060;
 }
-
-
-.clients-carousel .pp-content-post:hover .pp-post-meta a {
-}
-
-
-.clients-carousel .pp-content-grid-post .pp-content-category-list, .clients-carousel .pp-content-carousel-post .pp-content-category-list {
-}
-
-
-.clients-carousel .pp-content-post.pp-grid-style-7 .pp-content-post-meta {
-}
-
-
-.clients-carousel .pp-content-post.pp-grid-style-7:hover .pp-content-post-meta {
-}
-
-
 .clients-carousel .pp-content-post-carousel .owl-theme .owl-dots .owl-dot span {
   opacity: 1;
   background: var(--color-muted);
@@ -2936,24 +2790,6 @@ body .pp-post-feed-meta {
 
 .clients-carousel .pp-content-post-carousel .owl-nav button svg {
   height: 30px;
-}
-
-
-.clients-carousel .pp-content-post-carousel .owl-nav button:hover {
-}
-.clients-carousel .pp-content-post:hover {
-}
-
-
-.clients-carousel .pp-content-post.pp-grid-style-7 .pp-content-body {
-}
-
-
-.clients-carousel .pp-content-post.pp-grid-style-7:hover .pp-content-body {
-}
-
-
-.woocommerce .clients-carousel .pp-content-post {
 }
 .clients-carousel.cg-static-grid .pp-content-post.pp-content-grid-post {
   margin-right: 1%;
@@ -2994,12 +2830,6 @@ body .pp-post-feed-meta {
 .clients-carousel .pp-content-post-grid .pp-content-grid-post {
   margin-right: 0;
 }
-
-
-.clients-carousel .pp-content-post .pp-content-body {
-}
-
-
 .clients-carousel .pp-content-post .star-rating {
   margin-left: 0;
 }
