@@ -1,12 +1,22 @@
 - name: Ruby on Rails
   icon: technologies/ruby
-- name: Python
-  icon: technologies/python
-- name: React.js
+- name: Django
+  icon: technologies/django
+- name: Laravel
+  icon: technologies/laravel
+- name: Next.js
+  icon: technologies/nextjs
+- name: React
   icon: technologies/react
 - name: Vue.js
   icon: technologies/vue
-- name: React Native
-  icon: technologies/react
+- name: Hotwire / Turbo
+  icon: technologies/hotwire
+- name: TypeScript
+  icon: technologies/typescript
+- name: PostgreSQL
+  icon: technologies/postgresql
 - name: Node.js
   icon: technologies/node
+- name: Docker
+  icon: technologies/docker
