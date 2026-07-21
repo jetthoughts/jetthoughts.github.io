@@ -14,7 +14,7 @@ critic's verdict pasted VERBATIM), and sets the next card `Ready`.
 **You can finish this operation in a new session with zero context loss. Do this:**
 
 1. **Read order**: [`executive-summary.md`](executive-summary.md) (the one-page bet, Shape Up format) → this START HERE block → the ACTIVE SPRINT state → the **Incremental agent backlog** table → the specific card/T-task you're taking. Optionally skim [`strategy.md`](strategy.md) (the why) and [`operating-system.md`](../../business/operating-system.md) (weekly cadence).
-2. **Current state (2026-07-22)**: A0 (assumptions) ✓ · G0 (partner) ✓ · A2 offer draft ✓ · C0 kit draft ✓ · S0 spec ✓ · T1 taxonomy ✓ · T2 sourcing pipeline ✓ · **T4/T5 GROOMED** (`t4-t5-grooming.md`, 3-agent brainstorm + votes) — awaiting Paul's go before sourcing runs. **Next Ready: T8 (discovery kit, autonomous). T4/T5 execute on Paul's approval of the grooming.**
+2. **Current state (2026-07-22)**: A0 ✓ · G0 ✓ · A2 draft ✓ · C0 draft ✓ · S0 spec ✓ · T1 ✓ · T2 ✓ · T4/T5 groomed + **decomposed into atomic tasks P1-P9 in [`backlog.md`](backlog.md)** (approved to execute). **Next Ready: P1-P6 sourcing (parallel), P8 merge, P9 openers; T8 discovery kit in progress.** Agents run from `backlog.md`.
 3. **Take the next Ready task**, execute it end-to-end, run its LIGHT/HEAVY gate, paste the verdict, mark it Done, set the next Ready. **The agent does everything up to "hit send"** — sending + calls are Paul's (see Paul's desk).
 4. **State lives in files, not memory.** Update this runbook (statuses + handoff notes) and the output file named on the task. That's what the next session reads.
 
@@ -25,7 +25,8 @@ critic's verdict pasted VERBATIM), and sets the next card `Ready`.
 | `customer-profile-four-forces.md` | JTBD Customer Profile + Four Forces (push/pull/anxiety/habit) + find→channel→message map | ✓ done |
 | `icp-trigger-taxonomy.md` | T1 — 8 ranked observable buying triggers + venue map (= the Push force) | ✓ done |
 | `sourcing-pipeline.md` | T2 — per-trigger query recipes, lane split, verified venues, tool stack | ✓ done |
-| `t4-t5-grooming.md` | T4/T5 groomed design (3-agent brainstorm + votes: discovery, throughput, qualification) | ✓ groomed; awaiting Paul's go |
+| `../backlog.md` | **Atomic executable backlog P1-P9** — per-venue sourcing → merge → openers, seeded URLs | ✓ ready to run |
+| `t4-t5-grooming.md` | T4/T5 groomed design (3-agent brainstorm + votes: discovery, throughput, qualification) | ✓ done |
 | `voice-of-customer.md` | VoC swipe file keyed to Four Forces; **T4/T5 harvest verbatim lines here** | scaffold; harvest pending |
 | `offer-one-pager.md` | A2 — the Vibe Code Rescue offer (free audit → fixed rescue) | draft; needs price confirm + booking link |
 | `warm-intro-referral-kit.md` | C0 — target-list table + 3 outreach templates; **T3/T4/T5/T6 write rows here** | draft; list to be populated |
@@ -64,7 +65,9 @@ If a card handoff says "waiting on Paul" for anything NOT in this table, that's 
 
 ## Incremental agent backlog (T-tasks — one per session, no human needed)
 
-A future session takes the next `Ready` T-task, does it end-to-end (research/draft/source/prep),
+> **Atomic execution list → [`backlog.md`](backlog.md).** T4/T5 below are decomposed there into parallel-safe atomic tasks P1-P9 (per-venue sourcing → merge → openers), each seeded with verified URLs/handles. Agents run from `backlog.md`; this table stays as the strategic view.
+
+A future session takes the next `Ready` task, does it end-to-end (research/draft/source/prep),
 runs its LIGHT cold-eyes gate, writes the output to the named file, marks it `Done`, sets the next `Ready`.
 These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 session.
 
