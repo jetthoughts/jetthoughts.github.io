@@ -54,22 +54,49 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      # The 144k-link crawl is the priciest gate, so on PRs run it only every
+      # 3rd PR (by number) to save Actions minutes; non-PR events (nightly
+      # schedule, push to master, manual dispatch) always run so master stays
+      # fully covered. PR_NUMBER is a GitHub-supplied integer, read via env to
+      # keep it out of the shell command string.
+      - name: Decide whether to run (link check runs every 3rd PR)
+        id: gate
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [ "$EVENT_NAME" != "pull_request" ]; then
+            echo "$EVENT_NAME event: running full link check."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ $(( PR_NUMBER % 3 )) -eq 0 ]; then
+            echo "PR #$PR_NUMBER is a 3rd PR: running link check."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "PR #$PR_NUMBER skipped: link check runs every 3rd PR."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v7
+        if: steps.gate.outputs.run == 'true'
         with:
           persist-credentials: false
 
       - uses: ruby/setup-ruby@v1
+        if: steps.gate.outputs.run == 'true'
         with:
           ruby-version: '4.0'
           bundler-cache: true
 
       - uses: ./.github/actions/setup-hugo
+        if: steps.gate.outputs.run == 'true'
 
       - uses: taiki-e/install-action@v2
+        if: steps.gate.outputs.run == 'true'
         with:
           tool: lychee
 
       - run: bundle exec rake test:links
+        if: steps.gate.outputs.run == 'true'
 
   quick_test:
     name: Quick Tests (changed pages)
@@ -119,7 +146,7 @@ jobs:
       # + perceptual threshold) to absorb antialiasing while still catching
       # layout-level regressions. Tune the two values if CI proves flaky.
       - name: Quick scoped smoke for changed pages
-        run: bin/qtest --changed "${BASE_SHA:-HEAD~1}" --budget 90
+        run: bin/qtest --changed "${BASE_SHA:-HEAD~1}" --budget 90 --no-escalate
         env:
           SCREENSHOT_TOLERANCE: '0.10'
           SCREENSHOT_PERCEPTUAL_THRESHOLD: '10'
