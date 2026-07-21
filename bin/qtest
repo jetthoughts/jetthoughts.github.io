@@ -16,14 +16,10 @@
 #   bin/qtest --all                   # whole critical suite, prebuilt assets
 #   ... --no-build                    # reuse existing _dest/public-fast
 #   ... --budget SEC                  # wall budget (default 90)
-#   ... --no-escalate                 # site-wide change → homepage smoke, not --all
 #
 # CSS→page mapping mirrors docs/projects/2509-css-migration/css-bundle-ownership-map.md.
 # Site-wide files (skin, style.css, theme-main, 586, navigation, foundations/…)
-# escalate to --all: a scoped run cannot vouch for them. In CI --no-escalate
-# keeps the run inside the budget: a site-wide change smoke-tests the homepage
-# (the densest shared-chrome page) and the FULL coverage is left to the
-# docker/nightly gate, which the user does not want duplicated in CI.
+# escalate to --all: a scoped run cannot vouch for them.
 
 DEST = "_dest/public-fast"
 
@@ -59,8 +55,7 @@ COMPONENT_CONSUMERS = {
   "themes/beaver/assets/css/components/info-card.css" => CARD_PAGES,
   "themes/beaver/assets/css/components/cta-banner.css" => CTA_PAGES,
   "themes/beaver/layouts/partials/page/cta.html" => CTA_PAGES,
-  "themes/beaver/assets/css/components/header-cta.css" => %w[use-cases clients services],
-  "themes/beaver/layouts/partials/page/contact-form.html" => %w[free-consultation contact-us]
+  "themes/beaver/assets/css/components/header-cta.css" => %w[use-cases clients services]
 }.freeze
 
 def pages_for(file)
@@ -78,7 +73,6 @@ budget = 90
 build = true
 all = false
 changed = false
-no_escalate = false
 ref = nil
 pages = []
 
@@ -87,7 +81,6 @@ until args.empty?
   case (arg = args.shift)
   when "--no-build" then build = false
   when "--all" then all = true
-  when "--no-escalate" then no_escalate = true
   when "--budget" then budget = Integer(args.shift)
   when "--changed"
     changed = true
@@ -107,11 +100,7 @@ if changed
   files = `git diff --name-only HEAD~1..HEAD`.split("\n") if files.empty?
   files.each do |f|
     mapped = pages_for(f)
-    if mapped == :all && no_escalate
-      puts "qtest: '#{f}' is site-wide — smoke-testing homepage only " \
-        "(--no-escalate; full coverage runs in the docker/nightly gate)"
-      pages << "homepage"
-    elsif mapped == :all
+    if mapped == :all
       puts "qtest: '#{f}' is site-wide/unmapped — escalating to --all"
       all = true
     elsif mapped
