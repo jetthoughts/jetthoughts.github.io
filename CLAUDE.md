@@ -35,6 +35,8 @@ Always read these files before making changes. They define the project's archite
 
 Distilled operational knowledge lives in the OKF v0.1 bundle at `.okf/` (markdown + YAML frontmatter, one concept per file). **Consume it via progressive disclosure**: read `.okf/index.md` first, then follow links into only the concepts relevant to the task.
 
+**Use the OKF skills, don't hand-roll the format**: run the `/okf:okf` skill for all bundle work — `consume` to pull context, `produce` to add concepts, `maintain` to sync the bundle after a change — and `/okf:validate .okf --strict` to check conformance. The skills carry the canonical spec (one concept per file, required `type` frontmatter, reserved `index.md`/`log.md`, dated log entries); follow them rather than editing by hand.
+
 - `.okf/build/` — build pipeline, blocking test gates, template-PDF regeneration
 - `.okf/content/` — course structure, canonical numbers, voice rules, banned-strings ratchet
 - `.okf/design/` — mermaid/Caveat theme, house visual spec, cover pipeline, course typography
