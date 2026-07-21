@@ -1,0 +1,64 @@
+name: Broken Internal Links
+
+# On PRs, only crawl when a change could actually move an internal link:
+# content (blog/course/pages), templates, menu/baseURL config, the data
+# records rendered into links, or the checker config itself. A CSS/test/
+# workflow-only PR does not trigger this workflow at all. The non-PR events
+# carry no paths filter, so they always run and keep master fully covered.
+on:
+  pull_request:
+    paths:
+      - 'content/**'
+      - 'themes/**/layouts/**'
+      - 'config/**'
+      - 'data/**'
+      - 'lychee.toml'
+      - 'Rakefile'
+      # Build/runtime inputs: the crawl runs against a Hugo-built site using
+      # bundled tooling, so a change here can move generated links too.
+      - '.github/actions/setup-hugo/**'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+  push:
+    branches: [ master ]
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Sync articles"]
+    types:
+      - completed
+
+permissions:
+  contents: read
+
+concurrency:
+  group: link-check-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event.pull_request.number != '' }}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  link_check:
+    name: Broken Internal Links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+
+      - uses: ./.github/actions/setup-hugo
+
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: lychee
+
+      - run: bundle exec rake test:links

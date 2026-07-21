@@ -1,0 +1,22 @@
+# Config for `rake test:links` / `rake test:links_external`.
+# Only :links_external and CI hit the network - :links runs with --offline.
+
+timeout = 20
+retry_wait_time = 3
+max_retries = 3
+max_concurrency = 32
+
+user_agent = "Mozilla/5.0 (compatible; jetthoughts-linkcheck/1.0; +https://jetthoughts.com)"
+
+# jtway.co rate-limits aggressively (confirmed 2026-07-21 production sweep:
+# sent a 2m backoff, capped by lychee to 1m) - excluded rather than accepted
+# as a status code, since it isn't actually broken.
+#
+# services.jpg: not a real asset reference. It's example markup inside a CSS
+# comment in themes/beaver/assets/css/components/blocks/c-content.css that
+# gets inlined into every page's <style> block; lychee's link extraction
+# picks up the src= text from the comment even though no browser renders it.
+exclude = [
+  "^https?://jtway\\.co",
+  "services\\.jpg$",
+]

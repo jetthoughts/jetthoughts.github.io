@@ -1,3 +1,159 @@
 /* Homepage semantic hooks migration layer.
  * Future section-level styles should target .jt-home-* classes here.
  */
+
+/* Transparency artifact: the Friday report format.
+ * Loaded last in the homepage bundle, so plain single-class selectors win
+ * over legacy-theme-skin.css without needing !important or extra specificity.
+ */
+.jt-home-report {
+  background: #f7f7f8;
+  padding: 60px 20px;
+}
+
+.home-report-inner {
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+.home-report-intro {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.home-report-title {
+  color: var(--color-dark);
+  font-size: 32px;
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+
+.home-report-lede {
+  color: #4a4b4d;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.home-report-card {
+  background: #fff;
+  border: 1px solid #e2e3e5;
+  border-radius: var(--radius-default);
+  box-shadow: 0 2px 12px rgb(18 18 18 / 8%);
+  overflow: hidden;
+}
+
+.home-report-card-head {
+  align-items: baseline;
+  background: var(--color-dark);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  justify-content: space-between;
+  padding: 14px 24px;
+}
+
+.home-report-card-label {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.home-report-card-meta {
+  color: #b6b7b9;
+  font-size: 14px;
+}
+
+.home-report-rows {
+  margin: 0;
+  padding: 0;
+}
+
+.home-report-row {
+  border-bottom: 1px solid #ededef;
+  padding: 20px 24px;
+}
+
+.home-report-row:last-child {
+  border-bottom: 0;
+}
+
+.home-report-row-key {
+  border-left: 3px solid var(--color-muted);
+  color: var(--color-dark);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 8px;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+.home-report-row-key--shipped {
+  border-left-color: #1f9d55;
+}
+
+.home-report-row-key--blocked {
+  border-left-color: var(--color-ruby);
+}
+
+.home-report-row-key--next {
+  border-left-color: var(--color-primary);
+}
+
+.home-report-row-value {
+  color: #3c3d3f;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 13px;
+}
+
+.home-report-note {
+  color: #6c6d6f;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 16px 0 0;
+  text-align: center;
+}
+
+.home-report-cta {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
+.cta-report-link {
+  border-bottom: 2px solid var(--color-ruby);
+  color: var(--color-ruby);
+  font-size: 17px;
+  font-weight: 600;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+.cta-report-link:hover,
+.cta-report-link:focus {
+  border-bottom-color: var(--color-dark);
+  color: var(--color-dark);
+}
+
+@media (width <= 600px) {
+  .jt-home-report {
+    padding: 40px 16px;
+  }
+
+  .home-report-title {
+    font-size: 26px;
+  }
+
+  .home-report-lede {
+    font-size: 16px;
+  }
+
+  .home-report-card-head,
+  .home-report-row {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
