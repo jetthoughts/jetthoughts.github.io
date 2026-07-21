@@ -5,14 +5,12 @@ slug: "rails-performance-at-scale-10k-to-1m-users-roadmap"
 tags: ["rails", "performance", "scaling", "architecture", "optimization"]
 author: "Paul Keen"
 created_at: "2025-01-16T10:00:00Z"
-cover_image: "rails-scaling-roadmap.jpg"
+cover_image: "cover.jpg"
 canonical_url: "https://jetthoughts.com/blog/rails-performance-at-scale-10k-to-1m-users-roadmap/"
 metatags:
-  image: "rails-scaling-roadmap.jpg"
+  image: "cover.jpg"
   keywords: "Rails scaling, Rails performance optimization, Rails architecture patterns, Rails high traffic, Ruby performance"
 ---
-
-![Rails performance at scale: 10K to 1M users roadmap](rails-scaling-roadmap.jpg)
 
 Your Rails app handles 10K users fine. But at 50K, everything breaks. Here's the exact roadmap we've used to scale Rails applications from 10K to 1M users, complete with real metrics, code examples, and architecture decisions that actually work.
 
