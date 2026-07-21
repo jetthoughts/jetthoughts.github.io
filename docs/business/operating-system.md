@@ -1,6 +1,8 @@
 # JetThoughts Operating System (lean)
 
-**Purpose**: the smallest cadence that reliably ships the [Autumn strategy](strategy.md) - **1 Vibe Code Rescue client by Nov 30, 2026**.
+**Scope**: this is the **company** operating system - how JetThoughts runs across every opportunity, not just the current one. It is the durable cadence (accountability chart, quarterly OKR, rocks, weekly scorecard, issues, pipeline). The **active bet it currently drives** is the [Vibe Code Rescue validation project](../projects/2607-vibe-code-rescue/) (portfolio bet #1); when the next opportunity becomes active, the same OS runs it with a new OKR/rocks.
+**Company layer**: [`index.md`](index.md) (front door) · [`vision-mission.md`](vision-mission.md) (who we are) · [`opportunity-portfolio.md`](opportunity-portfolio.md) (the bets, and how we validate/kill/scale them).
+**Purpose**: the smallest cadence that reliably ships the current company objective - right now, **1 Vibe Code Rescue client by Nov 30, 2026** (the active portfolio bet).
 **Owner**: Paul Keen | **Created**: 2026-07-21 | **Review**: weekly
 **Model**: EOS-lite (accountability chart + quarterly OKR + weekly scorecard + rocks + issues), sized for a founder + white-label delivery + AI execution.
 
@@ -11,7 +13,7 @@
 **As of 2026-07-21**: foundation is set. A0 assumptions register ✓, G0 white-label partner ✓ (locked per CEO), offer/kit/booking drafts ✓, T1 trigger taxonomy ✓, T2 sourcing pipeline ✓.
 **Active sprint**: Rescue Demand Sprint — populate the prospect list (agent) so Paul can send + book calls.
 **Next agent work**: `T4/T5` (build the list) → `T6` dedupe → `T7` openers; `T8` discovery kit in parallel.
-**To execute**: open [`operation-runbook.md`](operation-runbook.md) → **▶ START HERE** block → take the next Ready task. That runbook is the shared state across sessions; this file is the weekly cadence over it.
+**To execute**: open [`operation-runbook.md`](../projects/2607-vibe-code-rescue/operation-runbook.md) → **▶ START HERE** block → take the next Ready task. That runbook is the shared state across sessions; this file is the weekly cadence over it.
 **Paul's desk (human-only)**: booking page (~5 min), confirm price band (default: audit free, rescue from $25K), review + send the outreach, take the calls, close. Optional: Gmail consent (warm lane), Apollo $79/mo + Hunter key (paid cold funnel).
 
 ---
@@ -81,7 +83,7 @@ Rolling list of the top blockers. Solve the highest-leverage one each week; don'
 Track each lead as a row: **Source -> Discovery call -> Audit sold -> Proposal -> Signed**.
 Stages: `Lead` -> `Call booked` -> `Audit sold` -> `Proposal out` -> `Won` / `Lost (reason)`.
 Keep it in a single sheet (or a section here) until volume justifies a real CRM.
-**Leads originate from** the populated target list in [`rescue-sprint/warm-intro-referral-kit.md`](rescue-sprint/warm-intro-referral-kit.md) (agent-built via runbook T4-T7); once Paul sends, each contacted row becomes a pipeline `Lead`.
+**Leads originate from** the populated target list in [`rescue-sprint/warm-intro-referral-kit.md`](../projects/2607-vibe-code-rescue/rescue-sprint/warm-intro-referral-kit.md) (agent-built via runbook T4-T7); once Paul sends, each contacted row becomes a pipeline `Lead`.
 
 ## 8. Tooling map
 
@@ -94,8 +96,8 @@ Keep it in a single sheet (or a section here) until volume justifies a real CRM.
 | Pipeline tracking | Sheet / this doc section 7 until CRM is justified |
 | OKR spine | `lark-okr` skill for structuring quarterly OKRs |
 | Weekly OS loop | `eos-lite` skill (`Skill(eos-lite) weekly`) — runs scorecard/OKR/rocks/issues/pipeline over this doc |
-| Step-by-step execution | [`operation-runbook.md`](operation-runbook.md) — ordered task cards + Incremental agent backlog; **▶ START HERE** for any fresh session |
-| Foundational premises | [`rescue-sprint/assumptions-register.md`](rescue-sprint/assumptions-register.md) — ICP/trigger/channel/pre-validation, voted, with kill-criteria (runbook rule 7) |
+| Step-by-step execution | [`operation-runbook.md`](../projects/2607-vibe-code-rescue/operation-runbook.md) — ordered task cards + Incremental agent backlog; **▶ START HERE** for any fresh session |
+| Foundational premises | [`rescue-sprint/assumptions-register.md`](../projects/2607-vibe-code-rescue/rescue-sprint/assumptions-register.md) — ICP/trigger/channel/pre-validation, voted, with kill-criteria (runbook rule 7) |
 | Sprint artifacts | `rescue-sprint/` — offer, warm-intro kit, booking spec, trigger taxonomy, sourcing pipeline (see runbook START HERE artifact index) |
 
 ## 9. Definition of "operating" (are we actually running the system?)
