@@ -17,6 +17,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  pull-requests: read  # link_check gate reads the PR file list via the API
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
@@ -54,25 +55,32 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      # The 144k-link crawl is the priciest gate, so on PRs run it only every
-      # 3rd PR (by number) to save Actions minutes; non-PR events (nightly
-      # schedule, push to master, manual dispatch) always run so master stays
-      # fully covered. PR_NUMBER is a GitHub-supplied integer, read via env to
-      # keep it out of the shell command string.
-      - name: Decide whether to run (link check runs every 3rd PR)
+      # The 144k-link crawl is the priciest gate, so on PRs run it only when a
+      # change could actually move an internal link: content (blog/course/
+      # pages), templates, menu/baseURL config, the data records rendered into
+      # links, or the checker config itself. A CSS/test/workflow-only PR skips
+      # it. Non-PR events (nightly schedule, push to master, manual dispatch)
+      # always run so master keeps full coverage. The PR file list comes from
+      # the API - cheaper than a full-history checkout just to diff.
+      - name: Decide whether to run (only when link-relevant files change)
         id: gate
         env:
           EVENT_NAME: ${{ github.event_name }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
         run: |
           if [ "$EVENT_NAME" != "pull_request" ]; then
             echo "$EVENT_NAME event: running full link check."
             echo "run=true" >> "$GITHUB_OUTPUT"
-          elif [ $(( PR_NUMBER % 3 )) -eq 0 ]; then
-            echo "PR #$PR_NUMBER is a 3rd PR: running link check."
+            exit 0
+          fi
+          files=$(gh api --paginate "repos/$REPO/pulls/$PR_NUMBER/files" --jq '.[].filename')
+          if printf '%s\n' "$files" | grep -qE '^(content/|themes/[^/]+/layouts/|config/|data/|lychee\.toml$|Rakefile$)'; then
+            echo "Link-relevant files changed: running link check."
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
-            echo "PR #$PR_NUMBER skipped: link check runs every 3rd PR."
+            echo "No link-relevant files changed: skipping link check."
             echo "run=false" >> "$GITHUB_OUTPUT"
           fi
 
