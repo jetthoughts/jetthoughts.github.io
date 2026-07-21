@@ -13,7 +13,7 @@ critic's verdict pasted VERBATIM), and sets the next card `Ready`.
 
 **You can finish this operation in a new session with zero context loss. Do this:**
 
-1. **Read order**: this START HERE block → the ACTIVE SPRINT state → the **Incremental agent backlog** table → the specific card/T-task you're taking. Optionally skim [`2026-autumn-client-acquisition-strategy.md`](2026-autumn-client-acquisition-strategy.md) (the why) and [`operating-system.md`](operating-system.md) (weekly cadence).
+1. **Read order**: [`2026-autumn-executive-summary.md`](2026-autumn-executive-summary.md) (the one-page bet, Shape Up format) → this START HERE block → the ACTIVE SPRINT state → the **Incremental agent backlog** table → the specific card/T-task you're taking. Optionally skim [`2026-autumn-client-acquisition-strategy.md`](2026-autumn-client-acquisition-strategy.md) (the why) and [`operating-system.md`](operating-system.md) (weekly cadence).
 2. **Current state (2026-07-21)**: A0 (assumptions) ✓ · G0 (partner) ✓ · A2 offer draft ✓ · C0 kit draft ✓ · S0 spec ✓ · T1 taxonomy ✓ · T2 sourcing pipeline ✓. **Next Ready: T4, T5 (build the prospect list), T8 (discovery kit).**
 3. **Take the next Ready task**, execute it end-to-end, run its LIGHT/HEAVY gate, paste the verdict, mark it Done, set the next Ready. **The agent does everything up to "hit send"** — sending + calls are Paul's (see Paul's desk).
 4. **State lives in files, not memory.** Update this runbook (statuses + handoff notes) and the output file named on the task. That's what the next session reads.
