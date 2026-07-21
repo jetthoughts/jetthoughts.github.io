@@ -48,3 +48,23 @@ jobs:
         env:
           PRECOMPILED_ASSETS: '1'
           HUGO_DEFAULT_PATH: _dest/public-test
+
+  link_check:
+    name: Broken Internal Links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+
+      - uses: ./.github/actions/setup-hugo
+
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: lychee
+
+      - run: bundle exec rake test:links
