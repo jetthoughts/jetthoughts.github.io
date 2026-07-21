@@ -3,7 +3,7 @@ type: Playbook
 title: Test gates and when they block commits
 description: bin/qtest --changed per micro-commit; bin/rake test:critical + bin/test AND bin/dtest at milestones and before every PR for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
-timestamp: 2026-07-19T00:00:00Z
+timestamp: 2026-07-21T00:00:00Z
 ---
 
 # The suites
@@ -39,3 +39,7 @@ components. The macOS full suite remains the only dedup-trap catcher
 - Docker runs via Colima; fresh worktrees need `bun install` first.
 - Tests must assert behavior shape (`q=\d+`, has `<picture>`), never tunable
   config values (exact quality/width numbers).
+- Visual regression is a LOCAL gate only. CI does NOT run screenshot diffs -
+  cross-OS pixel comparison is unusable (Alpine/musl baselines vs Ubuntu/glibc
+  CI diverge 3-28%), so `bin/test` + `bin/dtest` are the sole visual coverage.
+  What CI enforces (build, unit, link check) lives in [ci-gates.md](ci-gates.md).

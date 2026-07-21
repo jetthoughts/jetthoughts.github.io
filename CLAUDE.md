@@ -46,7 +46,7 @@ Distilled operational knowledge lives in the OKF v0.1 bundle at `.okf/` (markdow
 
 ## 🔍 Research Protocol (MANDATORY)
 
-**Session start**: Always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflows/flow-router.md`.
+**Session start**: Always read `@docs/workflows/BASE_HANDBOOK.md`, `@docs/workflows/flow-router.md`, and `@.okf/index.md` (the OKF knowledge bundle - load it up front to understand the build/test/CI/content situation, then follow its links into only the concepts relevant to the task).
 
 Prefer **skills** over agents. Use agents only when the user or the selected workflow explicitly requires them.
 
