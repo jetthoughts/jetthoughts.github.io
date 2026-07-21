@@ -68,6 +68,7 @@ GEM
       net-http (~> 0.5)
     ffi (1.17.4)
     ffi (1.17.4-arm64-darwin)
+    ffi (1.17.4-x86_64-linux-gnu)
     fiber-annotation (0.2.0)
     fiber-local (1.1.0)
       fiber-storage
@@ -111,6 +112,8 @@ GEM
       uri (>= 0.11.1)
     nio4r (2.7.5)
     nokogiri (1.19.3-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.3-x86_64-linux-gnu)
       racc (~> 1.4)
     ostruct (0.6.3)
     parallel (1.28.0)
@@ -206,6 +209,7 @@ GEM
 PLATFORMS
   arm64-darwin-23
   arm64-darwin-25
+  x86_64-linux
 
 DEPENDENCIES
   bigdecimal
