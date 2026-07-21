@@ -93,8 +93,13 @@ jobs:
 
       # The screenshot-diff :vips driver FFI-loads the libvips system library,
       # which the ubuntu runner lacks (macOS/the docker gate already have it).
+      # Cached across runs so the apt fetch only happens when the package set
+      # (or the version salt) changes.
       - name: Install libvips (ruby-vips runtime)
-        run: sudo apt-get update && sudo apt-get install -y libvips-dev
+        uses: awalsh128/cache-apt-pkgs-action@v1
+        with:
+          packages: libvips-dev
+          version: '1.0'
 
       # qtest runs ONLY the system tests for the pages this branch touched,
       # budget-capped to ~90s. The baselines come from the docker gate on a
