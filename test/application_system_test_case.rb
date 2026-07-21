@@ -47,18 +47,24 @@ class ApplicationSystemTestCase < Minitest::Test
   include CapybaraScreenshotDiff::Minitest::Assertions
   include NavigationHelpers
 
+  # Baselines are captured on one OS/font stack (the docker gate); a
+  # cross-environment run - CI on ubuntu vs those baselines - needs a looser
+  # tolerance to absorb antialiasing differences without disabling the
+  # comparison. Override with SCREENSHOT_TOLERANCE.
+  DEFAULT_TOLERANCE = ENV.fetch("SCREENSHOT_TOLERANCE", "0.02").to_f
+
   # Ruby hash-based configuration for screenshot sections
   SECTION_CONFIGS = {
-    "cta" => {tolerance: 0.02},
-    "cta-contact_us" => {tolerance: 0.02},
-    "clients" => {tolerance: 0.02},
-    "use-cases" => {tolerance: 0.02},
-    "technologies" => {tolerance: 0.02},
-    "testimonials" => {tolerance: 0.02},
-    "why-us" => {tolerance: 0.02}
+    "cta" => {tolerance: DEFAULT_TOLERANCE},
+    "cta-contact_us" => {tolerance: DEFAULT_TOLERANCE},
+    "clients" => {tolerance: DEFAULT_TOLERANCE},
+    "use-cases" => {tolerance: DEFAULT_TOLERANCE},
+    "technologies" => {tolerance: DEFAULT_TOLERANCE},
+    "testimonials" => {tolerance: DEFAULT_TOLERANCE},
+    "why-us" => {tolerance: DEFAULT_TOLERANCE}
   }.freeze
 
-  DEFAULT_SCREENSHOT_CONFIG = {tolerance: 0.02}.freeze
+  DEFAULT_SCREENSHOT_CONFIG = {tolerance: DEFAULT_TOLERANCE}.freeze
 
   private
 

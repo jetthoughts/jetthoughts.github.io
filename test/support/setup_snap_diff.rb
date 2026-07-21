@@ -16,7 +16,10 @@ Capybara::Screenshot.disable_animations = true
 Capybara::Screenshot.root = Dir.pwd
 
 Capybara::Screenshot::Diff.driver = :vips
-Capybara::Screenshot::Diff.perceptual_threshold = 2.0
+# Per-pixel color-distance leniency. Raise it (SCREENSHOT_PERCEPTUAL_THRESHOLD)
+# when comparing across OS/font stacks so antialiased edge pixels don't count
+# as differences (e.g. CI against docker-generated baselines).
+Capybara::Screenshot::Diff.perceptual_threshold = ENV.fetch("SCREENSHOT_PERCEPTUAL_THRESHOLD", "2.0").to_f
 Capybara::Screenshot::Diff.delayed = true
 
 if ENV["FORCE_SCREENSHOT_UPDATE"] == "true"

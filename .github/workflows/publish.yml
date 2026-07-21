@@ -70,3 +70,35 @@ jobs:
           tool: lychee
 
       - run: bundle exec rake test:links
+
+  quick_test:
+    name: Quick Tests (changed pages)
+    runs-on: ubuntu-latest
+    # Ceiling only: bin/qtest self-caps scoped work with --budget 90. A change
+    # that touches shared chrome/CSS escalates to the critical suite (~2 min).
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # Need the PR base commit reachable so qtest can diff the branch.
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+
+      - uses: ./.github/actions/setup-hugo
+
+      # qtest runs ONLY the system tests for the pages this branch touched,
+      # budget-capped to ~90s. The baselines come from the docker gate on a
+      # different OS/font stack, so the pixel comparison is loosened (tolerance
+      # + perceptual threshold) to absorb antialiasing while still catching
+      # layout-level regressions. Tune the two values if CI proves flaky.
+      - name: Quick scoped smoke for changed pages
+        run: bin/qtest --changed "${BASE_SHA:-HEAD~1}" --budget 90
+        env:
+          SCREENSHOT_TOLERANCE: '0.10'
+          SCREENSHOT_PERCEPTUAL_THRESHOLD: '10'
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
