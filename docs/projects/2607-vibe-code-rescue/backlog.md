@@ -66,8 +66,8 @@ Strategy/gates/Paul's desk live in [`operation-runbook.md`](operation-runbook.md
 | id | task | status |
 |---|---|---|
 | T3 | Gmail warm-source pass (Paul consent) → warm rows | Blocked-on-Paul (optional, non-blocking) |
-| T8 | Discovery kit (call script + audit template) | In progress (agent) |
-| T9 | Objection + FAQ + follow-up bank | Blocked on T8 |
+| T8 | Discovery kit (call script + audit template) | ✓ Done (`rescue-sprint/discovery-kit.md`) |
+| T9 | Objection + FAQ + follow-up bank → `rescue-sprint/objection-followup-bank.md` | **Ready** |
 
 ---
 
