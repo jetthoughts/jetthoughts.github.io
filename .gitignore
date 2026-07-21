@@ -141,3 +141,4 @@ docs/projects/**/*-verification-report.md
 .grepai/
 *.rvf
 *.rvf.lock
+kanban/
