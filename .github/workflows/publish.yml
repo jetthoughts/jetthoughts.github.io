@@ -101,6 +101,13 @@ jobs:
           packages: libvips-dev
           version: '1.0'
 
+      - name: Diagnose libvips availability
+        run: |
+          echo "--- apt vips packages ---"; apt list --installed 2>/dev/null | grep -i vips || echo "NONE"
+          echo "--- ldconfig vips ---"; ldconfig -p | grep -i vips || echo "NONE in ldconfig"
+          echo "--- ruby require vips ---"; bundle exec ruby -e 'begin; require "vips"; puts "VIPS OK #{Vips::VERSION}"; rescue Exception => e; puts "VIPS ERR #{e.class}: #{e.message}"; end'
+          echo "--- vips gem ---"; bundle show vips 2>&1 || echo "NOT in bundle"
+
       # qtest runs ONLY the system tests for the pages this branch touched,
       # budget-capped to ~90s. The baselines come from the docker gate on a
       # different OS/font stack, so the pixel comparison is loosened (tolerance
