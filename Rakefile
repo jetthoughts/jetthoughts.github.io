@@ -69,7 +69,7 @@ namespace :test do
     html_files = Dir.glob("#{dir}/**/*.html")
     abort "No HTML files found in #{dir} - did the build fail?" if html_files.empty?
     puts "lychee: scanning #{html_files.size} pages for broken internal links..."
-    sh("lychee", "--offline", "--no-progress", "--root-dir", File.expand_path(dir), *html_files)
+    sh("lychee", "--offline", "--no-progress", "--root-dir", File.expand_path(dir), "#{dir}/**/*.html")
   end
 
   # Same page set including external links. Non-blocking: third-party
@@ -81,7 +81,7 @@ namespace :test do
     html_files = Dir.glob("#{dir}/**/*.html")
     puts "lychee: scanning #{html_files.size} pages for broken links (internal + external)..."
     begin
-      sh("lychee", "--no-progress", "--root-dir", File.expand_path(dir), *html_files)
+      sh("lychee", "--no-progress", "--root-dir", File.expand_path(dir), "#{dir}/**/*.html")
     rescue RuntimeError => e
       puts "\nlychee reported failures (non-blocking): #{e.message}"
     end

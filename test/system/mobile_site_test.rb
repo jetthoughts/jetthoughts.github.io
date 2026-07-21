@@ -169,6 +169,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     assert_text "Get a free code audit"
     assert_text "one-page written assessment"
+    assert_button "Request my code audit"
     assert_stable_screenshot "free_consultation"
   end
 

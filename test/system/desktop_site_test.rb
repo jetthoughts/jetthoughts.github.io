@@ -282,6 +282,9 @@ class DesktopSiteTest < ApplicationSystemTestCase
     # invite them to talk (voice guide §4, ICP 90.10 §7).
     assert_text "Get a free code audit"
     assert_text "one-page written assessment"
+    # The submit button names the deliverable, not a generic "Request Consultation"
+    # (the formsubmitlabel front-matter override must reach the rendered button).
+    assert_button "Request my code audit"
     # Gravity Forms applies gf_browser_* classes at load time; linux
     # captures alternate between two stable states (~10px form shift),
     # so the form region is masked (precedent: blog/index .blog-post).
