@@ -24,5 +24,6 @@ gem "mutex_m", require: false
 
 # tools
 gem "standard", require: false
+gem "html-proofer", require: false
 
 gem "rake", "~> 13.3"
