@@ -23,6 +23,7 @@ just entering it. Rails is the winning rebuild stack, which is our home turf.
 - Rescue engagements run **$25K-$50K over 4-8 weeks**, keeping 30-50% of original code; specialists bill $100-300/hr.
 - A Rails-8 fractional CTO rebuilt a YC-backed SaaS's broken Vercel+Firebase MVP in **6 weeks for a fixed $40K** vs a $150K agency quote - our exact lane.
 - Research: Liu 2026 (arXiv:2603.28592) - 484,606 AI-introduced issues across 3,841 repos, 24.2% survive, security issues survive at 41.1%; tech debt rises 30-41% after AI tools.
+- Market size + full estimations (with labelled assumptions + confidence): [`10-19-research/market-analysis-2026.md`](10-19-research/market-analysis-2026.md). Headline: AI-app-builder market ~$4.7B/38% CAGR; ICP-fit US rescue pool in the thousands/yr; JT needs <1% of it.
 
 **Sources**: reptile.haus, foundra.ai, justinmckelvey.com, gmware.com, vibecoding.app, arxiv.org/abs/2603.28592
 

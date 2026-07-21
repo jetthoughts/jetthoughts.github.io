@@ -25,6 +25,8 @@ Four independent signals, not one hopeful reading:
 
 **What would change our mind**: the demand is for *rescue*, but the buyer might default to re-hiring the original shop or limping along rather than paying a new team. That is a switching-cost question, not a demand question - and it is exactly what the Anxiety and Habit forces in the customer profile, and the first ~10 discovery calls, are built to test.
 
+**Sizing (order of magnitude, full working in [`10-19-research/market-analysis-2026.md`](10-19-research/market-analysis-2026.md))**: the AI-app-builder market is ~$4.7B and 38% CAGR; Lovable alone has 8M+ users, 45.7% of them founders and ~80% non-technical, creating 200K+ projects a day; Apple took 235,800 new app submissions in Q1 2026, up 84% year over year. Two independent estimates put the US ICP-fit rescue pool in the **thousands of prospects a year** (a soft ~$225M/yr serviceable market - treat as scale, not a quotable figure). The point is the ratio: JetThoughts needs **one** client, which is well under 1% of that pool. Market size is not the constraint; sourcing and trust are.
+
 ## Appetite
 
 **One client. One window. Now through November 30, 2026.**
