@@ -149,13 +149,19 @@ jobs:
           bundle exec ruby -e 'require "vips"; puts "libvips #{Vips::VERSION} loaded"'
 
       # qtest runs ONLY the system tests for the pages this branch touched,
-      # budget-capped to ~90s. The baselines come from the docker gate on a
-      # different OS/font stack, so the pixel comparison is loosened (tolerance
-      # + perceptual threshold) to absorb antialiasing while still catching
-      # layout-level regressions. Tune the two values if CI proves flaky.
+      # budget-capped to ~90s. Cross-OS PIXEL diffing does not work here: the
+      # baselines are captured on the docker gate (Alpine/musl, aarch64) while
+      # CI runs Ubuntu (glibc, x86_64), so text renders differently enough that
+      # measured divergence ran 3-28% (mobile code blocks 28%, plain content
+      # pages up to 21%) - far above any tolerance that could still catch a
+      # real regression. So CI CAPTURES screenshots but does NOT fail on the
+      # diff (FORCE_SCREENSHOT_UPDATE). The FUNCTIONAL assertions in the same
+      # system tests still run and gate here: page renders, buttons/text
+      # present, no broken elements or JS errors. True visual regression stays
+      # with the same-OS gates run before merge - bin/test (macOS) + bin/dtest
+      # (docker-linux), both mandatory per CLAUDE.md.
       - name: Quick scoped smoke for changed pages
         run: bin/qtest --changed "${BASE_SHA:-HEAD~1}" --budget 90 --no-escalate
         env:
-          SCREENSHOT_TOLERANCE: '0.10'
-          SCREENSHOT_PERCEPTUAL_THRESHOLD: '10'
+          FORCE_SCREENSHOT_UPDATE: 'true'
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
