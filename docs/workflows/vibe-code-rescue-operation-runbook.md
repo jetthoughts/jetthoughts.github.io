@@ -22,7 +22,8 @@ critic's verdict pasted VERBATIM), and sets the next card `Ready`.
 | File | What it is | Status |
 |---|---|---|
 | `assumptions-register.md` | A0 — ICP/trigger/channel/pre-validation brainstormed→voted→kill-criteria | ✓ done |
-| `icp-trigger-taxonomy.md` | T1 — 8 ranked observable buying triggers + venue map | ✓ done |
+| `customer-profile-four-forces.md` | JTBD Customer Profile + Four Forces (push/pull/anxiety/habit) + find→channel→message map | ✓ done |
+| `icp-trigger-taxonomy.md` | T1 — 8 ranked observable buying triggers + venue map (= the Push force) | ✓ done |
 | `sourcing-pipeline.md` | T2 — per-trigger query recipes, lane split, verified venues, tool stack | ✓ done |
 | `offer-one-pager.md` | A2 — the Vibe Code Rescue offer (free audit → fixed rescue) | draft; needs price confirm + booking link |
 | `warm-intro-referral-kit.md` | C0 — target-list table + 3 outreach templates; **T3/T4/T5/T6 write rows here** | draft; list to be populated |
