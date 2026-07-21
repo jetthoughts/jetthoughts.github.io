@@ -91,22 +91,27 @@ jobs:
 
       - uses: ./.github/actions/setup-hugo
 
-      # The screenshot-diff :vips driver FFI-loads the libvips system library,
-      # which the ubuntu runner lacks (macOS/the docker gate already have it).
-      # Cached across runs so the apt fetch only happens when the package set
-      # (or the version salt) changes.
+      # The screenshot-diff :vips driver FFI-loads (dlopen) libvips.so.42 at
+      # runtime, which ships in the libvips42 RUNTIME package - not libvips-dev
+      # (headers only). The ubuntu runner lacks it (macOS/the docker gate have
+      # it). List libvips42 explicitly: the cache action does not resolve the
+      # transitive runtime dep, so libvips-dev alone left the .so.42 target of
+      # its symlink missing. Cached across runs; bump the version salt to
+      # invalidate the entry when the package set changes.
       - name: Install libvips (ruby-vips runtime)
         uses: awalsh128/cache-apt-pkgs-action@v1
         with:
-          packages: libvips-dev
-          version: '1.0'
+          packages: libvips42
+          version: '2.0'
 
-      - name: Diagnose libvips availability
+      # The cache action restores files without refreshing the linker cache,
+      # so register the freshly-placed libvips.so.42 for dlopen, then fail
+      # fast with the real LoadError if the FFI load still can't find it -
+      # snap_diff otherwise swallows it behind generic per-screenshot errors.
+      - name: Verify libvips loads
         run: |
-          echo "--- apt vips packages ---"; apt list --installed 2>/dev/null | grep -i vips || echo "NONE"
-          echo "--- ldconfig vips ---"; ldconfig -p | grep -i vips || echo "NONE in ldconfig"
-          echo "--- ruby require vips ---"; bundle exec ruby -e 'begin; require "vips"; puts "VIPS OK #{Vips::VERSION}"; rescue Exception => e; puts "VIPS ERR #{e.class}: #{e.message}"; end'
-          echo "--- vips gem ---"; bundle show vips 2>&1 || echo "NOT in bundle"
+          sudo ldconfig
+          bundle exec ruby -e 'require "vips"; puts "libvips #{Vips::VERSION} loaded"'
 
       # qtest runs ONLY the system tests for the pages this branch touched,
       # budget-capped to ~90s. The baselines come from the docker gate on a
