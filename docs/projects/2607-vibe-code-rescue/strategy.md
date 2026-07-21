@@ -2,8 +2,8 @@
 
 **Owner**: Paul Keen (CEO) | **Created**: 2026-07-21 | **Horizon**: land 1 client by Nov 30, 2026
 **Status**: 🔄 Active - the marketing/content restart plan of record
-**Executive summary (Shape Up pitch)**: [`2026-autumn-executive-summary.md`](2026-autumn-executive-summary.md) - read this first for the one-page bet.
-**Related**: [`operating-system.md`](operating-system.md) (how we run this weekly) · [`vibe-code-rescue-operation-runbook.md`](vibe-code-rescue-operation-runbook.md) (step-by-step task cards for separate sessions — **▶ START HERE** to execute) · 2510 content project [`GOAL-AT-A-GLANCE`](../projects/2510-seo-content-strategy/GOAL-AT-A-GLANCE.md) · ICP [`90.10`](../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md)
+**Executive summary (Shape Up pitch)**: [`executive-summary.md`](executive-summary.md) - read this first for the one-page bet.
+**Related**: [`operating-system.md`](operating-system.md) (how we run this weekly) · [`operation-runbook.md`](operation-runbook.md) (step-by-step task cards for separate sessions — **▶ START HERE** to execute) · 2510 content project [`GOAL-AT-A-GLANCE`](../2510-seo-content-strategy/GOAL-AT-A-GLANCE.md) · ICP [`90.10`](../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md)
 **Current state (2026-07-21)**: foundation set — assumptions register + white-label partner + offer/kit/booking drafts + trigger taxonomy + sourcing pipeline all done. Next agent work: build the prospect list (runbook T4/T5). To pick up work in any new session, open the runbook's **▶ START HERE** block.
 
 ---

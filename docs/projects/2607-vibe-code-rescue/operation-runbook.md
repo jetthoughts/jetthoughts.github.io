@@ -1,9 +1,9 @@
 # Vibe Code Rescue — Operation Runbook
 
 **Owner**: Paul Keen (CEO) | **Created**: 2026-07-21 | **Goal**: 1 signed rescue client by Nov 30, 2026
-**Parent strategy**: [`2026-autumn-client-acquisition-strategy.md`](2026-autumn-client-acquisition-strategy.md) · **OS**: [`operating-system.md`](operating-system.md)
+**Parent strategy**: [`strategy.md`](strategy.md) · **OS**: [`operating-system.md`](operating-system.md)
 **How to read this**: this file IS the shared state across separate sessions. A session reads
-[`BASE_HANDBOOK.md`](BASE_HANDBOOK.md) + [`flow-router.md`](flow-router.md), opens this runbook, takes the next
+[`BASE_HANDBOOK.md`](../../workflows/BASE_HANDBOOK.md) + [`flow-router.md`](../../workflows/flow-router.md), opens this runbook, takes the next
 `Ready` card, executes it, runs its cold-eyes gate, marks it `Done`, writes the handoff note (with the
 critic's verdict pasted VERBATIM), and sets the next card `Ready`.
 
@@ -13,7 +13,7 @@ critic's verdict pasted VERBATIM), and sets the next card `Ready`.
 
 **You can finish this operation in a new session with zero context loss. Do this:**
 
-1. **Read order**: [`2026-autumn-executive-summary.md`](2026-autumn-executive-summary.md) (the one-page bet, Shape Up format) → this START HERE block → the ACTIVE SPRINT state → the **Incremental agent backlog** table → the specific card/T-task you're taking. Optionally skim [`2026-autumn-client-acquisition-strategy.md`](2026-autumn-client-acquisition-strategy.md) (the why) and [`operating-system.md`](operating-system.md) (weekly cadence).
+1. **Read order**: [`executive-summary.md`](executive-summary.md) (the one-page bet, Shape Up format) → this START HERE block → the ACTIVE SPRINT state → the **Incremental agent backlog** table → the specific card/T-task you're taking. Optionally skim [`strategy.md`](strategy.md) (the why) and [`operating-system.md`](operating-system.md) (weekly cadence).
 2. **Current state (2026-07-21)**: A0 (assumptions) ✓ · G0 (partner) ✓ · A2 offer draft ✓ · C0 kit draft ✓ · S0 spec ✓ · T1 taxonomy ✓ · T2 sourcing pipeline ✓. **Next Ready: T4, T5 (build the prospect list), T8 (discovery kit).**
 3. **Take the next Ready task**, execute it end-to-end, run its LIGHT/HEAVY gate, paste the verdict, mark it Done, set the next Ready. **The agent does everything up to "hit send"** — sending + calls are Paul's (see Paul's desk).
 4. **State lives in files, not memory.** Update this runbook (statuses + handoff notes) and the output file named on the task. That's what the next session reads.

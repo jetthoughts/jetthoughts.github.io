@@ -1,7 +1,7 @@
 # Executive Summary - Vibe Code Rescue (a Shape Up pitch)
 
 **Owner**: Paul Keen | **Written**: 2026-07-21 | **Format**: Basecamp Shape Up pitch (Problem / Appetite / Solution / Rabbit holes / No-gos)
-**Full plan**: [`2026-autumn-client-acquisition-strategy.md`](2026-autumn-client-acquisition-strategy.md) · **Run it**: [`vibe-code-rescue-operation-runbook.md`](vibe-code-rescue-operation-runbook.md) (▶ START HERE)
+**Full plan**: [`strategy.md`](strategy.md) · **Run it**: [`operation-runbook.md`](operation-runbook.md) (▶ START HERE)
 
 ---
 
@@ -10,6 +10,20 @@
 JetThoughts needs to restart client acquisition, and the 2026 market handed us a specific opening. A wave of funded, non-technical founders paid a dev shop, a freelancer, or an AI tool (Lovable, Cursor, Bolt, Replit) to build their product. The demo looked finished. Then real users arrived and it started breaking - checkout fails, data corrupts, the login is one bad deploy from locking everyone out. Worse, the founder can't tell whether the developers are being straight, and often can't even get access to the code they paid for.
 
 These founders are actively looking for help right now, in public. But every rescue shop entering this space (Modall, HeyDev, AttributeX, and others) leads with the same "free audit" and competes on price. Nobody is selling the thing the burned founder actually wants most: to own and understand their product again.
+
+## Why we believe the demand is real
+
+Four independent signals, not one hopeful reading:
+
+**1. The supply of broken code is exploding and now measured.** Liu et al. 2026 (arXiv:2603.28592) catalogued 484,606 AI-introduced issues across 3,841 repos: 24.2% survive into shipped code, and security issues survive at 41.1%; teams using AI coding tools carry 30-41% more technical debt. Columbia's DAPLab found vibe coding gets a founder roughly 70% of the way to a working app, then breaks as real users arrive. Even Cursor's own CEO warned publicly that these tools build "shaky foundations." The gap between "looks finished" and "survives production" is now documented, not anecdotal.
+
+**2. Founders are asking for help, publicly, at volume.** r/vibecoding grew from ~89K to ~317K members in about a year, with sister communities (r/VibeCodeDevs ~59K, r/cursor, r/nocode) alongside it. The "70% wall" and "why I left Lovable" threads recur weekly. Hacker News carries the exact struggling moment on the record: "Ask HN: Client took over development by vibe coding. What to do?" and "Vibe-coded prototypes: what happens when they go into production?" One rescue shop (HeyDev) reports talking to "over a dozen founders in the last three months"; another (AttributeX) audited 50 vibe-coded apps and found 43 with three or more critical production failures.
+
+**3. A competitor market already formed around this exact offer - the strongest demand proof there is.** When one company runs a "free audit → fixed-price rescue" motion, it might be a guess. When six do - Modall (a named "vibe code cleanup and recovery" service), HeyDev, AttributeX, Autonoma, solo specialists, and Rails shops like JetRockets - founders are paying enough that multiple businesses have organized around serving them. We are not creating a market; we are entering a validated one with a sharper wedge (ownership and trust, not price).
+
+**4. Willingness to pay is proven at our price band.** JetRockets publishes a $100/hr rate and a $25,600 engagement minimum for this work. A Rails-8 fractional CTO rebuilt a YC-backed SaaS's broken Vercel+Firebase MVP in six weeks for a fixed $40K, against a $150K agency quote - our exact lane. The named incidents that make founders reach for their wallet are on the record: Jason Lemkin's live-tweeted Replit database wipe (1,206 records, the agent admitting "I destroyed months of work in seconds"), Moltbook's 1.5M exposed API keys days after an AI-built launch, and a Lovable access-control flaw affecting 18,000+ users across 170 apps.
+
+**What would change our mind**: the demand is for *rescue*, but the buyer might default to re-hiring the original shop or limping along rather than paying a new team. That is a switching-cost question, not a demand question - and it is exactly what the Anxiety and Habit forces in the customer profile, and the first ~10 discovery calls, are built to test.
 
 ## Appetite
 

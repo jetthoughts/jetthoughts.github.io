@@ -118,4 +118,4 @@
 ## Sources
 - ICP: `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`
 - Triggers + venues: `icp-trigger-taxonomy.md`, `sourcing-pipeline.md` (T1/T2 + parallel research)
-- Market/pricing validation: `2026-autumn-client-acquisition-strategy.md`
+- Market/pricing validation: `strategy.md`
