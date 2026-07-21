@@ -38,14 +38,14 @@ The pain making the status quo unbearable. **This is what we LISTEN for to find 
 ### PULL - of the new solution (drives change) - AMPLIFY
 What makes JetThoughts attractive. Our differentiators, not the generic "free audit" six competitors offer.
 - A senior engineer reads YOUR actual code and tells you the truth in plain English - free, no contract.
-- Fixed price, agreed up front ($25-50K) so the number can't creep.
+- Fixed price: Triage $2,500 (48h) / Rescue $7,500 (2-3w) / Foundation Reset $10K (4-6w). All agreed in writing up front.
 - **You own the code and every account at each milestone** - control handed back, not held.
 - Paul sits on every call as your fractional CTO and translates what the developers are doing into decisions you can make.
 
 ### ANXIETY - of the new solution (blocks change) - DISMANTLE
 The fears that stop Alex saying yes even with strong push+pull. **These are the objections T9 must defuse, with proof.**
 - "I got burned once - why won't this be another agency that overpromises?" → free audit first, zero contract; you judge us before paying anything.
-- "Is $25K real, or does it balloon like last time?" → fixed price agreed up front, in writing.
+- "Is $7,500 real, or does it balloon like last time?" → fixed price agreed up front, in writing. Triage at $2,500 lets them test us first.
 - "Will I understand any of it, or be in the dark again?" → plain-English, Paul on every call, ownership at each milestone.
 - "Can they even work on my code if the shop holds it?" → the audit surfaces this first (repo-access intake question); we help you get access.
 - "What if it's not salvageable and I wasted more money?" → we tell you salvage-vs-rebuild honestly, even when rebuild is the harder sale for us.

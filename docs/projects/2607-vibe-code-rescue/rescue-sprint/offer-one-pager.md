@@ -1,10 +1,10 @@
-> DRAFT - cold-eyes fixes applied; pending Paul's review + real [BOOKING_LINK] + final price-band confirm
+> DRAFT - A2 pricing confirmed (3-tier). Pending Paul's review + real [BOOKING_LINK]
 
 # Vibe Code Rescue
 
 **Your MVP looks finished but keeps breaking. We make it actually work - and hand you back a product you own and understand.**
 
-You paid a dev shop or an AI tool to build your app. The demo looked great. Then real people started using it, and things you thought were done stopped working. Now you're not sure what you actually have, and you can't tell whether one more round of fixes will help or just burn another month. We take over broken founder MVPs, rebuild the parts that can't hold up, and give you a fractional CTO who explains every decision in plain English.
+You paid a dev shop or an AI tool to build your app. The demo looked great. Then real people started using it, and things you thought were done stopped working. Now you're not sure what you actually have, and you can't tell whether one more round of fixes will help or just burn another month. We take over broken founder MVPs, fix the broken parts, and give you a fractional CTO who explains every decision in plain English.
 
 ## Is this you?
 
@@ -19,18 +19,39 @@ If you nodded at two of these, you're the founder we built this for.
 
 Book a call and one senior developer reads your actual codebase before you decide anything. On the call, we walk you through a one-page assessment in plain English: what's solid, what's fragile, the fixes that would help you most, and a straight answer on whether you should salvage what you have or rebuild the broken parts. You keep the write-up whether or not we work together. No contract, and no follow-up calls you didn't ask for.
 
-**Book your free Code Audit → [BOOKING_LINK]**
+**Book your free Code Audit -> [BOOKING_LINK]**
 
-## Step 2 - The Rescue engagement
+## Step 2 - Pick your rescue level
 
-If you decide to move forward, one senior team rebuilds the broken parts on Rails over 4 to 8 weeks for a fixed **$25K-$50K**, agreed up front so the number can't creep. We keep whatever code is worth keeping - usually 30 to 50 percent of what you have - and replace the rest. Real users can log in without landing in someone else's account, a real charge reaches your bank, and the data holds when two people use the app at the same time. You own the code and every account after each milestone, not at some vague "end."
+### Triage Sprint - $2,500 (48 hours)
 
-Sometimes propping up the old foundation costs more than starting clean. When the code you have can't carry the product you're describing, we'll tell you to rebuild instead of billing you to patch it - even though a salvage job would be the easier sale for us.
+Fix the top 3 things that are bleeding users right now. One senior engineer reads the code, patches the critical blockers, and sends you a plain-English health report. You see real results before committing more.
+
+**Good for**: "I just need the login/checkout/main feature to stop breaking."
+
+### Rescue - $7,500 (2-3 weeks)
+
+Fix everything that's broken, harden the security, stabilize auth and payments, and hand you back a production-ready app. You own the code and every account after each milestone. 30-day warranty included.
+
+**Good for**: "I want the whole thing working reliably for real users."
+
+### Foundation Reset - $10,000 (4-6 weeks)
+
+When the code can't hold the product you're describing, we build a new foundation on Rails - keeping your design, your data, and whatever code is worth keeping (usually 30-50%). Full test suite, 60-day warranty.
+
+**Good for**: "I've been told it needs a full rebuild, but I don't want to start from zero."
+
+---
+
+**All three levels include**:
+- Fixed price, agreed in writing before we start. The number doesn't creep.
+- Code and server ownership transferred at each milestone, not at some vague "end."
+- Paul sits on every call as your fractional CTO, translating what the developers are doing into decisions you can make.
 
 ## Why JetThoughts
 
-We've been shipping Ruby on Rails since 2011. Thirty-two clients rated us 4.8 out of 5, and most of them stayed with us for more than three years. Paul, our CEO, sits on every call as your fractional CTO and turns what the developers are doing into decisions you can actually make - so you stop guessing whether your team is telling you the truth.
+We've been shipping Ruby on Rails since 2011. We use AI-assisted development to move faster and keep costs honest - which is how we can offer a full rescue at $7,500 when traditional agencies quote $25K-$55K for the same work. Thirty-two clients rated us 4.8 out of 5, and most of them stayed with us for more than three years. Paul, our CEO, sits on every call as your fractional CTO and turns what the developers are doing into decisions you can actually make - so you stop guessing whether your team is telling you the truth.
 
 You've been burned once. The whole point of the free audit is that you find out where you stand first - with a senior engineer who has no reason to tell you anything but the truth.
 
-**Book your free Code Audit → [BOOKING_LINK]**
+**Book your free Code Audit -> [BOOKING_LINK]**

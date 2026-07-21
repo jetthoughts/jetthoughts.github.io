@@ -26,13 +26,13 @@ The 3-touch no-reply sequence lives at the bottom. It works for founders who boo
 
 ---
 
-### 2. "Is $25K real, or does it balloon like last time?"
+### 2. "Is $7,500 real, or does it balloon like last time?"
 
 **Force**: Anxiety (burned by scope creep before)
 
 **What NOT to say**: "We're different." (Every shop says that.)
 
-**What TO say**: "The price is fixed and agreed in writing before we start. If the scope changes - and sometimes it does once we open the code up - we stop, show you what we found, and you decide whether to adjust. The number doesn't creep without you knowing and agreeing."
+**What TO say**: "The price is fixed and agreed in writing before we start. If the scope changes - and sometimes it does once we open the code up - we stop, show you what we found, and you decide whether to adjust. The number doesn't creep without you knowing and agreeing. And if you just want to test the waters first, the triage sprint is $2,500 - you see real results before committing more."
 
 **Why it works**: It names the exact fear (creeping costs) and answers with a mechanism (written agreement + stop-and-ask). Not a promise, a process.
 
@@ -116,7 +116,7 @@ The 3-touch no-reply sequence lives at the bottom. It works for founders who boo
 
 **What NOT to say**: "We're cheaper." (Race to the bottom.)
 
-**What TO say**: "Before you sign anything, let one of our engineers read the code for free and tell you whether that $55K quote matches what's actually in there. Sometimes the code is worth saving and the quote is padded. Sometimes the code really is that bad and the quote is honest. Either way, you'll know before you spend."
+**What TO say**: "Before you sign anything, let one of our engineers read the code for free and tell you whether that $55K quote matches what's actually in there. Our rescue is $7,500 because we use AI-assisted development to move faster - same senior oversight, fraction of the cost. And if you just want proof first, the triage sprint is $2,500 and you'll see real fixes in 48 hours."
 
 **Why it works**: Doesn't dismiss the competitor quote. Positions the free audit as due diligence before any commitment, which is valuable regardless of who does the work.
 

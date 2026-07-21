@@ -75,8 +75,8 @@ Strategy/gates/Paul's desk live in [`operation-runbook.md`](operation-runbook.md
 
 > **Live status/flow is tracked in the kanban board** — `kanban-md list --compact --tag 2607` (board `jetthoughts.github.io`, tasks #1-#10). This file holds the task specs + verified seeds; the board holds status, claims, and dependencies (P8 gated on P1-P7, P9 on P8, P7 blocked on Paul). Copy-paste run prompts: `rescue-sprint/prospects/RUN.md`.
 
-- **Done**: P1 ✓ (7 ICP rows), P2 ✓ (6 rows), P3 ✓ (4 rows), P4 ✓ (10 rows), P5 ✓ (4 rows), P6 ✓ (5 rows), P7 ✓ (F5Bot 5 keywords live, awaiting digest), T9 ✓ (objection bank)
-- **Ready now**: P8 (merge — can run with P1-P7 done), P9 (openers, needs A2 price).
+- **Done**: P1 ✓ (7 ICP rows), P2 ✓ (6 rows), P3 ✓ (0 rows - thin), P4 ✓ (8 rows), P5 ✓ (1 row), P6 ✓ (3 rows), P7 ✓ (F5Bot live), P8 ✓ (25 deduped rows + VoC), T9 ✓ (objection bank)
+- **Ready now**: P9 (openers, needs A2 price).
 - **Then**: P8 (merge) → P9 (openers).
 - **Seeds** above were verified via `web_search` on 2026-07-22 — hand to the tasks, don't re-derive.
 - Update this table's status + the task's `done` line when a task completes; write the output to its named file.
