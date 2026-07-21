@@ -7,6 +7,7 @@ created_at: "2025-09-25T22:27:00Z"
 edited_at: "2025-09-25T22:27:00Z"
 draft: false
 tags: ["ruby", "performance", "async", "fibers", "falcon", "web-server", "concurrency"]
+slug: "falcon-web-server-async-ruby-production"
 canonical_url: "https://jetthoughts.com/blog/falcon-web-server-async-ruby-production/"
 cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--92P8r_Mn--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/socketry/falcon/master/assets/falcon.png"
 series: "Ruby Web Servers"
