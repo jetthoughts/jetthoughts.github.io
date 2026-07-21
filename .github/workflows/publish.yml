@@ -91,6 +91,11 @@ jobs:
 
       - uses: ./.github/actions/setup-hugo
 
+      # The screenshot-diff :vips driver FFI-loads the libvips system library,
+      # which the ubuntu runner lacks (macOS/the docker gate already have it).
+      - name: Install libvips (ruby-vips runtime)
+        run: sudo apt-get update && sudo apt-get install -y libvips-dev
+
       # qtest runs ONLY the system tests for the pages this branch touched,
       # budget-capped to ~90s. The baselines come from the docker gate on a
       # different OS/font stack, so the pixel comparison is loosened (tolerance
