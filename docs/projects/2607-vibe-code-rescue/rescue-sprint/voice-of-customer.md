@@ -81,22 +81,26 @@ While reading a thread to validate a prospect, copy any line that names a feelin
 | Force | Mirror phrase (founder's words) | Source tag |
 |---|---|---|
 | Push | "Bugs kept breaking parts of the app, and I had no visibility into what was happening." | `[VERBATIM-founder]` SpecBuildLab |
-| Push | "It would break. I'd paste the error back. We'd fix it. Repeat 200 times a day." | `[VERBATIM-founder]` SANICE_AI |
+| Push | "Repeat 200 times a day" - the deploy-break-paste-fix cycle | `[VERBATIM-founder]` SANICE_AI |
 | Push | "Vibe coding gave me a product. It also gave me a problem I couldn't fix." | `[VERBATIM-founder]` r/startups OP |
 | Push | "even the freelancer struggled to understand the logic and then just vanished." | `[VERBATIM-founder]` techPackets |
-| Push | "I spent $5k on a freelancer who used [AI Tool] to build it. It looks perfect but none of the actual API integrations work and they have ghosted me now that it's time to fix the database errors." | `[VERBATIM-founder]` r/nocode OP |
-| Push | "Am currently burned by devs who aren't professional and lacking how to build and execute." | `[VERBATIM-founder]` Afrikonnect |
+| Push | "$5k on a freelancer... none of the actual API integrations work and they have ghosted me" | `[VERBATIM-founder]` r/nocode OP |
+| Push | "Am currently burned by devs who aren't professional" | `[VERBATIM-founder]` Afrikonnect |
 | Pull | "I am looking for a technical co-founder so that we can start building in house." | `[VERBATIM-founder]` lucadeza |
 | Pull | "I am at the stage of moving away from Lovable and get to old good hand made code." | `[VERBATIM-founder]` Joy Adamson |
 | Anxiety | "Replit deleted my project. Not maliciously. Just... it happened." | `[VERBATIM-founder]` r/replit OP |
-| Anxiety | "It was like asking for insulation for my house, and the AI gave me marshmallows. I didn't notice until I tried to hang drywall, and by then it was too late." | `[VERBATIM-founder]` KaiaColban |
+| Anxiety | "The AI gave me marshmallows" - the demo works, the structure doesn't | `[VERBATIM-founder]` KaiaColban |
 | Habit | "AI gets you 80% of an app fast, but the last 20%-infrastructure, security, scaling-is an abyss for non-technical founders." | `[VERBATIM-founder]` r/Solopreneur OP |
 | Habit | "Vibe coding creates the illusion of progress. You describe the app, the tool writes the code, but you have no idea what it actually did." | `[VERBATIM-founder]` r/startups OP |
+| Push | "I'm a non-technical founder, and I'm stuck with my app" | `[VERBATIM-founder]` r/nocode OP |
+| Push | "I thought no-code would save me months - it actually made me more stuck" | `[VERBATIM-founder]` r/nocode OP |
+| Habit | "A house of cards" - 3 months of vibe coding without someone checking the foundation | `[VERBATIM-founder]` r/Solopreneur OP |
+| Anxiety | "They told me it was easier to burn the whole thing down and start over" | `[VERBATIM-founder]` r/cursor OP |
 
 ---
 
 ## Cold-eyes note
 
-**Updated from P1-P7 sourcing**: The phrase bank is now populated with real `[VERBATIM-founder]` quotes, not archetypes. Push is the strongest section (13 founder lines). Pull and Habit are the thinnest - more Pull lines ("I want to own my code," "I want someone to tell me the truth") would strengthen T7 openers. Anxiety lines are strong but skew toward "tool broke" rather than "shop burned me" - the Trigger-3 (ownership/hostage) founder language is underrepresented because those founders are hardest to find via open search.
+**Updated from P1-P7 sourcing + opener polish (2026-07-22)**: The phrase bank is now populated with real `[VERBATIM-founder]` quotes, not archetypes. Push is the strongest section (10 founder lines). Pull and Habit are the thinnest - more Pull lines ("I want to own my code," "I want someone to tell me the truth") would strengthen T7 openers. Anxiety lines are strong but skew toward "tool broke" rather than "shop burned me" - the Trigger-3 (ownership/hostage) founder language is underrepresented because those founders are hardest to find via open search.
 
-**For T7 openers**: Lead with Push words (their pain), add Pull wedge (our ownership differentiator), pre-empt one Anxiety (the "another agency will burn me" fear). The phrase bank has 12 usable mirror phrases across all four forces.
+**For T7 openers**: Lead with Push words (their pain), add Pull wedge (our ownership differentiator), pre-empt one Anxiety (the "another agency will burn me" fear). The phrase bank has 16 usable mirror phrases across all four forces.
