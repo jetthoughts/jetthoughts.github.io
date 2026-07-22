@@ -14,7 +14,7 @@
 **Active sprint**: Rescue Demand Sprint — populate the prospect list (agent) so Paul can send + book calls.
 **Next agent work**: `T4/T5` (build the list) → `T6` dedupe → `T7` openers; `T8` discovery kit in parallel.
 **To execute**: open [`operation-runbook.md`](../projects/2607-vibe-code-rescue/operation-runbook.md) → **▶ START HERE** block → take the next Ready task. That runbook is the shared state across sessions; this file is the weekly cadence over it.
-**Paul's desk (human-only)**: booking page (~5 min), confirm price band (default: audit free, rescue from $25K), review + send the outreach, take the calls, close. Optional: Gmail consent (warm lane), Apollo $79/mo + Hunter key (paid cold funnel).
+**Paul's desk (human-only)**: booking page (~5 min), confirm price band (✅ done: $2,500 triage / $7,500 rescue / $10,000 foundation reset), review + send the outreach, take the calls, close. Optional: Gmail consent (warm lane), Apollo $79/mo + Hunter key (paid cold funnel).
 
 ---
 
@@ -34,7 +34,7 @@ One person can hold several seats - but every seat has exactly one accountable o
 
 | Key Result | Target | Status |
 |---|---|---|
-| KR1 - Offer + white-label partner live | Rescue Audit priced, partner signed, landing CTA live | 🟡 partner signed ✓; offer drafted (price confirm pending); landing deferred |
+| KR1 - Offer + white-label partner live | Rescue Audit priced, partner signed, landing CTA live | 🟢 partner signed ✓; offer priced ✓ ($2,500 / $7,500 / $10,000); landing deferred |
 | KR2 - Discovery calls booked | 8-12 by Nov 15 | 🔲 |
 | KR3 - Audits delivered | 3-5 paid Rescue Audits | 🔲 |
 | KR4 - Rescue signed | **1 engagement by Nov 30** | 🔲 |
@@ -75,8 +75,8 @@ Rolling list of the top blockers. Solve the highest-leverage one each week; don'
 | # | Issue | Owner | Status |
 |---|---|---|---|
 | 1 | White-label delivery partner (runbook G0) | Paul | ✅ Resolved 2026-07-21 (locked per CEO). Standing validation: confirm a paid trial rescue hits the quality bar + a fallback partner is named before the first real signing. |
-| 2 | Prospect list not yet populated — Paul has nobody to send to until T4-T7 run | Claude | 🔲 Open — next agent work (runbook T4/T5) |
-| 3 | Price band unconfirmed — offer ships on a default ("audit free, rescue from $25K") until Paul confirms | Paul | 🔲 Open (non-blocking; default in place) |
+| 2 | Prospect list populated — 25 deduped rows merged in P8 | Claude | ✅ Resolved 2026-07-22 (P8 complete) |
+| 3 | Price band confirmed — A2 set at $2,500 triage / $7,500 rescue / $10,000 foundation reset | Paul | ✅ Resolved 2026-07-22 (A2 confirmed) |
 
 ## 7. Pipeline (simple funnel, no CRM needed yet)
 

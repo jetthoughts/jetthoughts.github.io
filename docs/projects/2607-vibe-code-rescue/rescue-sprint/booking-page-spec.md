@@ -1,10 +1,10 @@
 > DRAFT - cold-eyes fixes applied; ready for Paul to set up (~5 min)
 
-# Booking-Page Spec - Free Code Audit (Card S0)
+# Booking-Page Spec - Free Rescue Context Call (Card S0)
 
 **Owner**: Paul Keen | **Sprint**: Rescue Demand Sprint (2026-07-21) | **Card**: S0 (measurement prerequisite)
 **Path**: lean - external Cal.com or NeetoCal booking page, no site change. ~5 minutes to set up in Paul's own account.
-**Output**: one live booking URL that replaces every `[BOOKING_LINK]` placeholder across the offer one-pager and the warm-intro/referral kit.
+**Output**: one live booking URL that replaces every `[BOOKING_LINK]` placeholder across the offer one-pager and the warm-intro/referral kit. **Live URL**: https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar
 
 ---
 
@@ -22,11 +22,11 @@ Paul builds this once in his Cal.com or NeetoCal account.
 
 | Field | Value |
 |---|---|
-| **Event name** | Free Code Audit (45 min) |
+| **Event name** | Free Rescue Context Call (45 min) |
 | **Duration** | 45 minutes |
-| **Buffer** | 10 minutes after each call (write-up time for the one-page assessment) |
+| **Buffer** | 10 minutes after each call (notes/scheduling the async audit kickoff) |
 | **Location** | Video call (Google Meet / Zoom - whichever Paul already uses) |
-| **Availability** | Paul's real open blocks; cap at 2-3 slots/day so audits don't swamp delivery |
+| **Availability** | Paul's real open blocks; cap at 2-3 slots/day so calls don't swamp delivery |
 
 ### Intake questions (ask all five)
 
@@ -34,11 +34,11 @@ Paul builds this once in his Cal.com or NeetoCal account.
 2. **What did you build it with?** Dev shop, freelancer, offshore team, or an AI tool (Lovable, Cursor, Bolt, Replit)? Name it. - flags the AI-built builds this offer is aimed at.
 3. **What's breaking right now?** The symptom that made you book. - surfaces the pain and pre-qualifies the call.
 4. **Funding stage** - bootstrapped, pre-seed, seed, or Series A? - confirms budget fit (ICP-E is pre-seed to Series A).
-5. **Can you get access to the code?** Do you have it on GitHub/GitLab, or does the dev shop still hold it? - the audit needs read access to run; this pre-qualifies the call AND surfaces the "hostage" pain (ICP pain #13) before Paul spends 45 minutes on a call he can't deliver.
+5. **Can you get access to the code, task board, and dev chats?** Do you have admin rights on GitHub/GitLab, Jira/Linear, and Slack/Teams, or does the dev shop still hold them? - the async audit needs read-only access to all three; this pre-qualifies the call AND surfaces the "hostage" pain (ICP pain #13).
 
 ### Confirmation message copy
 
-> You're booked. Here's what happens: one of our senior engineers spends 45 minutes with you and your codebase, then sends you a one-page, plain-English assessment - what's solid and what to fix first. If you can, bring read access to your repo (GitHub, GitLab, wherever the code lives). Nothing else to prep. See you soon.
+> You're booked. Here's what happens: we spend 45 minutes understanding your situation and collecting read-only access to your code, task board, and dev chats. Then our team runs an intensive, AI-assisted audit offline and sends you a one-page, plain-English scorecard within 48 hours — what's solid, what's fragile, and whether to salvage or rebuild. If you can, bring read access to your repo (GitHub, GitLab, wherever the code lives). Nothing else to prep. See you soon.
 >
 > - Paul
 
@@ -46,6 +46,6 @@ Paul builds this once in his Cal.com or NeetoCal account.
 
 ## After the link is live
 
-- Paste the real booking URL over every `[BOOKING_LINK]` slot in `warm-intro-referral-kit.md` (the forwardable blurb) and in the offer one-pager.
+- ✅ Paste the real booking URL over every `[BOOKING_LINK]` slot in `warm-intro-referral-kit.md` (the forwardable blurb) and in the offer one-pager. Live URL: https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar.
 - Make the pipeline sheet the single source of truth, and link it from `operating-system.md` §7.
 - Define the attribution rule: a call booked through this link counts as a discovery call; tag its source (warm intro, referral, or LinkedIn) so the scorecard shows which channel fed it.

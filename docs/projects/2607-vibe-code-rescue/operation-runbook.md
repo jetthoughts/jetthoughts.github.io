@@ -14,7 +14,7 @@ critic's verdict pasted VERBATIM), and sets the next card `Ready`.
 **You can finish this operation in a new session with zero context loss. Do this:**
 
 1. **Read order**: [`executive-summary.md`](executive-summary.md) (the one-page bet, Shape Up format) → this START HERE block → the ACTIVE SPRINT state → the **Incremental agent backlog** table → the specific card/T-task you're taking. Optionally skim [`strategy.md`](strategy.md) (the why) and [`operating-system.md`](../../business/operating-system.md) (weekly cadence).
-2. **Current state (2026-07-22)**: A0 ✓ · G0 ✓ · A2 draft ✓ · C0 draft ✓ · S0 spec ✓ · T1 ✓ · T2 ✓ · T4/T5 groomed + **decomposed into atomic tasks P1-P9 in [`backlog.md`](backlog.md)** (approved to execute). **Next Ready: P1-P6 sourcing (parallel), P8 merge, P9 openers; T8 discovery kit in progress.** Agents run from `backlog.md`.
+2. **Current state (2026-07-22)**: A0 ✓ · G0 ✓ · A2 confirmed ✓ · C0 draft ✓ · S0 spec ✓ · T1 ✓ · T2 ✓ · T8 ✓ · T9 ✓ · P1-P7 sourcing ✓ · P8 merge ✓ · P9 openers ✓. **Next Ready: Paul reviews + sends the first 5 openers (SpecBuildLab, SANICE_AI, Joy Adamson, Afrikonnect, Saul_E).** Agents run from `backlog.md`.
 3. **Take the next Ready task**, execute it end-to-end, run its LIGHT/HEAVY gate, paste the verdict, mark it Done, set the next Ready. **The agent does everything up to "hit send"** — sending + calls are Paul's (see Paul's desk).
 4. **State lives in files, not memory.** Update this runbook (statuses + handoff notes) and the output file named on the task. That's what the next session reads.
 
@@ -31,9 +31,9 @@ critic's verdict pasted VERBATIM), and sets the next card `Ready`.
 | `offer-one-pager.md` | A2 — the Vibe Code Rescue offer (free audit → fixed rescue) | draft; needs price confirm + booking link |
 | `warm-intro-referral-kit.md` | C0 — target-list table + 3 outreach templates; **T3/T4/T5/T6 write rows here** | draft; list to be populated |
 | `booking-page-spec.md` | S0 — Cal.com/NeetoCal setup (Paul, ~5 min) | spec ready |
-| `outbound-openers.md` | T7 — per-target openers | not created yet |
-| `discovery-kit.md` | T8 — call script + audit deliverable template | not created yet |
-| `objection-followup-bank.md` | T9 — objections + follow-up sequence | not created yet |
+| `outbound-openers.md` | T7 — per-target openers | done (P9 complete; 25 openers ready for Paul) |
+| `discovery-kit.md` | T8 — call script + audit deliverable template | done (T8 complete) |
+| `objection-followup-bank.md` | T9 — objections + follow-up sequence | done (T9 complete) |
 
 ---
 
@@ -54,8 +54,8 @@ These are the only items that need Paul. Everything else an agent session does a
 
 | # | Item | Why only Paul | Blocks |
 |---|---|---|---|
-| P1 | Create the booking page in his own Cal.com/NeetoCal account (~5 min; spec in `booking-page-spec.md`) | Needs his calendar + login | S0 gate; every `[BOOKING_LINK]` |
-| P2 | Confirm the price band (default set: audit free, rescue from $25K) | Depends on partner margin only he knows | A2 final approval |
+| P1 | Create the booking page in his own Cal.com/NeetoCal account (~5 min; spec in `booking-page-spec.md`) | Needs his calendar + login | S0 gate; live URL: https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar |
+| P2 | Confirm the price band (default set: audit free, rescue from $25K) | Depends on partner margin only he knows | ✅ Done 2026-07-22 — A2 confirmed at $2,500 / $7,500 / $10,000 |
 | P3 | Review the agent-built target list + openers, then **hit send** from his own inbox/LinkedIn | The intros go out under his name/relationship | C0 send |
 | P4 | Take the discovery calls; run audits → proposals → close | The whole point; the human trust layer | D3 signing |
 
@@ -76,12 +76,12 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 | T1 | **Trigger taxonomy** — run the trigger research first-hand (`web_search` on ICP rescue-pain signals; don't wait on any prior ghost agent report — if none is on disk, generate it), then synthesize a ranked list of *detectable* ICP buying triggers (e.g. "posted about a dev shop ghosting them", "asking r/startups if their MVP is salvageable", "hiring a first eng after an agency build") with the observable signal + where it shows up | `rescue-sprint/icp-trigger-taxonomy.md` | **Done** (2026-07-21 — 8 ranked triggers + venue map + competitor note; PASS w/ 2 carried constraints) | — (self-contained) | LIGHT — refute "is each trigger actually observable by us, or a guess?" |
 | T2 | **Sourcing pipeline spec** — for each trigger: channel → exact search query/operator → validation rule → which template applies. Carries T1's 2 constraints (lane-split + trust/ownership differentiation) | `rescue-sprint/sourcing-pipeline.md` | **Done** (2026-07-21 — per-trigger query recipes + lane split + row schema; PASS w/ 2 carried constraints: weight reddit/IH site operators + read into threads; cap cold volume prefer warm) | T1 ✓ | LIGHT — refute "can a session run this query and get real people, not noise?" |
 | T3 | **Warm-source pass (Gmail)** — with Paul's one-time consent, mine his mailbox for past clients / founders / investor-adjacent contacts near the ICP; output candidate warm rows (name, last touch, why-ICP, best path). No sending. | append to `rescue-sprint/warm-intro-referral-kit.md` target list | Blocked (optional — needs Paul Gmail consent; chain does NOT block on it) | T2 ✓ + P-consent | LIGHT — refute "is each row genuinely warm + near-ICP?" |
-| T4 | **Cold-source pass A (web, fetchable)** — GROOMED in `t4-t5-grooming.md`. **IndieHackers-first** (fetch-free, run FIRST), then HN threads, X first-person, competitor-comment threads. Site-scoped queries → excerpt queue → `chrome-devtools` read-once-extract-all (validate+row+quotes in one visit). Rows → `cold-prospect-list.md`; verbatim founder quotes → `voice-of-customer.md` | `rescue-sprint/cold-prospect-list.md` + `voice-of-customer.md` | **Groomed — awaiting Paul's go** | T2 ✓ + grooming approval | LIGHT — refute "real ICP founder in a buying moment, traceable to a quoted sentence?" |
-| T5 | **Cold-source pass B (Reddit/community)** — GROOMED in `t4-t5-grooming.md`. r/replit, r/NoCode, r/Solopreneur, r/SaaS, r/startups, r/vibecoding. Reddit bodies not fetchable → **excerpt capture** (handle+URL+title) + **F5Bot** JSON/RSS feed (Paul's optional signup). Additive to T4, not load-bearing. Same output files | `rescue-sprint/cold-prospect-list.md` + `voice-of-customer.md` | **Groomed — awaiting Paul's go** | T2 ✓ + grooming approval | LIGHT — refute ICP fit + thread live/answerable; no supplier posts logged as leads |
-| T6 | **Validate + score + dedupe** — merge sources into one ranked list (warm-first), drop dupes/dead, score by trigger strength; target ~30 usable rows | finalized target list | Blocked | T4 + T5 required; T3 folded in **if** Paul gave Gmail consent (chain does NOT hard-block on consent) | LIGHT — refute "would Paul recognize these as worth his time?" |
-| T7 | **Per-target openers** — draft a personalized opener per row (right template: referral / warm-intro / forwardable / thread-reply), `[BOOKING_LINK]` placeholder, ready for Paul to review-and-send | `rescue-sprint/outbound-openers.md` | Blocked | T6, A2 | LIGHT (bulk/near-public → HEAVY if any becomes a mass template) |
+| T4 | **Cold-source pass A (web, fetchable)** — GROOMED in `t4-t5-grooming.md`. **IndieHackers-first** (fetch-free, run FIRST), then HN threads, X first-person, competitor-comment threads. Site-scoped queries → excerpt queue → `chrome-devtools` read-once-extract-all (validate+row+quotes in one visit). Rows → `cold-prospect-list.md`; verbatim founder quotes → `voice-of-customer.md` | `rescue-sprint/cold-prospect-list.md` + `voice-of-customer.md` | **Done** (P1-P3 + P6 complete) | T2 ✓ + grooming approval | LIGHT — refute "real ICP founder in a buying moment, traceable to a quoted sentence?" |
+| T5 | **Cold-source pass B (Reddit/community)** — GROOMED in `t4-t5-grooming.md`. r/replit, r/NoCode, r/Solopreneur, r/SaaS, r/startups, r/vibecoding. Reddit bodies not fetchable → **excerpt capture** (handle+URL+title) + **F5Bot** JSON/RSS feed (Paul's optional signup). Additive to T4, not load-bearing. Same output files | `rescue-sprint/cold-prospect-list.md` + `voice-of-customer.md` | **Done** (P4-P7 complete; F5Bot live) | T2 ✓ + grooming approval | LIGHT — refute ICP fit + thread live/answerable; no supplier posts logged as leads |
+| T6 | **Validate + score + dedupe** — merge sources into one ranked list (warm-first), drop dupes/dead, score by trigger strength; target ~30 usable rows | finalized target list | **Done** (P8 merge; 25 deduped rows) | T4 + T5 complete; T3 folded in **if** Paul gave Gmail consent (chain does NOT hard-block on consent) | LIGHT — refute "would Paul recognize these as worth his time?" |
+| T7 | **Per-target openers** — draft a personalized opener per row (right template: referral / warm-intro / forwardable / thread-reply), `[BOOKING_LINK]` placeholder, ready for Paul to review-and-send | `rescue-sprint/outbound-openers.md` | **Done** (P9 complete; 25 openers ready) | T6, A2 | LIGHT (bulk/near-public → HEAVY if any becomes a mass template) |
 | T8 | **Discovery kit** — call script + audit deliverable one-page template + 45-min agenda (Card D1 content), so Paul walks into calls with a script | `rescue-sprint/discovery-kit.md` | **Done** (2026-07-22 — 45-min agenda + SPIN/Four-Forces script + 1-page RAG scorecard/verdict template; devil's-advocate self-refute PASS, order-dependency noted) | A2 draft | HEAVY — devil's-advocate self-refute (verdict in-file §Cold-eyes) |
-| T9 | **Objection + FAQ + follow-up bank** — likely founder objections ("why not just re-hire the shop", "is $25K real"), answers, and a 3-touch no-reply follow-up sequence | `rescue-sprint/objection-followup-bank.md` | **Ready** | T8 ✓ | LIGHT — refute "does each answer hold up to a skeptical burned founder?" |
+| T9 | **Objection + FAQ + follow-up bank** — likely founder objections ("why not just re-hire the shop", "is $25K real"), answers, and a 3-touch no-reply follow-up sequence | `rescue-sprint/objection-followup-bank.md` | **Done** (T9 complete) | T8 ✓ | LIGHT — refute "does each answer hold up to a skeptical burned founder?" |
 
 **Next Ready T-task: T8** (autonomous, parallel off A2). T1+T2 Done (2026-07-21). **T4/T5 are GROOMED** (`t4-t5-grooming.md`) but held — the grooming HARD-GATE means no sourcing runs until Paul approves the design; on approval they execute → feed T6 dedupe → T7 openers. T3 (Gmail warm) is optional and waits only on Paul's consent.
 
@@ -144,18 +144,43 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 
 ## CARD S0 — Wire the booking link + pipeline source of truth  *(measurement prerequisite)*
 - **role**: Ops + Offer/Landing
-- **status**: In progress (2026-07-21 — Rescue Demand Sprint; lean path = external Cal.com/NeetoCal link, NO site change)
+- **status**: In progress (2026-07-22 — live NeetoCal URL provided; Paul to confirm setup via the checklist below)
 - **depends-on**: —
 - **skills**: `hugo`, `new-page.md`
 - **inputs**: `content/pages/free-consultation/index.md`, `themes/beaver/layouts/page/free-consultation.html`, `operating-system.md` §7
 - **steps**: embed a real booking widget (NeetoCal/Cal.com) on the consultation/landing page (today NeetoCal is copy-only); make the pipeline sheet the single source; define LinkedIn-reply → call attribution.
+- **Cal event setup checklist for Paul** (copy this into a new NeetoCal event):
+  - [ ] **Event name**: `Free Rescue Context Call (45 min)`
+  - [ ] **Duration**: `45 minutes`
+  - [ ] **Buffer after**: `10 minutes` (notes / async-audit kickoff)
+  - [ ] **Location**: `Video call` (Google Meet / Zoom — whichever Paul already uses)
+  - [ ] **Availability**: Paul's real open blocks; cap at `2-3 slots/day`
+  - [ ] **Intake questions** (ask all five):
+    1. Company name + website
+    2. What did you build it with? (dev shop, freelancer, AI tool?)
+    3. What's breaking right now?
+    4. Funding stage (bootstrapped / pre-seed / seed / Series A)
+    5. Can you get access to the code? (GitHub/GitLab, or does the dev shop still hold it?)
+  - [ ] **Event visibility**: set the event to **public/bookable** so anyone with the link can schedule.
+  - [ ] **Confirmation message** (paste this into NeetoCal):
+    > You're booked. Here's what happens: we spend 45 minutes understanding your situation and collecting read-only access to your code, task board, and dev chats. Then our team runs an intensive, AI-assisted audit offline and sends you a one-page, plain-English scorecard within 48 hours — what's solid, what's fragile, and whether to salvage or rebuild. If you can, bring read access to your repo (GitHub, GitLab, wherever the code lives). Nothing else to prep. See you soon.
+    >
+    > — Paul
+  - [ ] **Data-handling note** (add to the event description): "The Code Audit is read-only by default. We do not copy source code, secrets, customer data, or credentials unless you explicitly ask us to — and then only the minimum necessary." Full policy in `discovery-kit.md`.
+  - [ ] **Reminder emails** (set in NeetoCal):
+    - **24 hours before**: "Your Rescue Context Call is tomorrow. Please make sure you can share read-only access to your code repo, task board, and dev chats so we can run the AI-assisted audit. If that’s not set up yet, reply here and we’ll send the exact steps."
+    - **1 hour before**: "We’re on in an hour. Join the video link below. If you can’t get access ready, no problem — we’ll figure it out on the call."
+  - [ ] **Video-conferencing integration**: connect NeetoCal to Google Meet or Zoom so each booking auto-generates a call link.
+  - [ ] **Create a separate 30-min Proposal Call event** in NeetoCal for the follow-up after the Rescue Audit scorecard is delivered.
+  - [ ] **Verify the live URL appears in**: `offer-one-pager.md`, `outbound-openers.md`, and `warm-intro-referral-kit.md`.
+  - [ ] **Pipeline source of truth**: create/update the pipeline sheet and link it from `operating-system.md` §7 so "discovery calls booked" is auto-countable.
 - **definition-of-done**: a live booking link that makes "discovery calls booked" auto-countable; pipeline sheet exists and is linked from `operating-system.md` §7.
 - **cold-eyes gate**: LIGHT — refute "can we actually measure calls-booked end-to-end with this?"
 - **handoff note**: _(verbatim verdict)_
 
 ## CARD A2 — Define the Vibe Code Rescue offer  *(price gated on G0)*
 - **role**: Sales/Comms
-- **status**: In progress (2026-07-21 — G0 Done, pricing unblocked; Rescue Demand Sprint)
+- **status**: Done (2026-07-22 — A2 confirmed: 3-tier pricing at $2,500 / $7,500 / $10,000)
 - **depends-on**: G0 (for pricing only)
 - **skills**: `copywriting`, `reflexion-critique`
 - **inputs**: strategy doc; market pricing ($25-50K / 4-8wk / keep 30-50%); ICP `90.10`

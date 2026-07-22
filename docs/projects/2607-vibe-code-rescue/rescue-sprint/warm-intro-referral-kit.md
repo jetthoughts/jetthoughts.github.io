@@ -1,11 +1,11 @@
-> DRAFT - cold-eyes fixes applied; pending Paul's review + real [BOOKING_LINK]
+> DRAFT - cold-eyes fixes applied; booking link live.
 
 # Warm-Intro + Referral Kit (Card C0)
 
 **Owner**: Paul Keen | **Sprint**: Rescue Demand Sprint (2026-07-21) | **Card**: C0 (PRIMARY demand engine)
-**Goal**: Paul sends trusted intro + referral asks THIS WEEK so founders with broken MVPs book the Free Code Audit.
-**Offer these messages point to**: a free 45-minute Code Audit - one senior engineer reads the founder's codebase and sends back a one-page, plain-English assessment. No pitch, no contract.
-**Where the calls land**: the S0 booking link. Every `[BOOKING_LINK]` below gets replaced with the real Cal.com / NeetoCal URL once S0 is wired (see `booking-page-spec.md`).
+**Goal**: Paul sends trusted intro + referral asks THIS WEEK so founders with broken MVPs book the Free Rescue Context Call.
+**Offer these messages point to**: a free 45-minute Rescue Context Call - after the call our team runs an AI-assisted Rescue Audit on the founder's codebase, task board, and dev chats and sends back a one-page, plain-English scorecard. No pitch, no contract.
+**Where the calls land**: the live S0 booking link.
 
 ---
 
@@ -13,7 +13,7 @@
 
 1. Fill in the target list below with real names. The seeded rows are categories to jog your memory, not real people - overwrite them.
 2. Pick the right template per contact: a past client gets the **referral ask**; a network contact gets the **warm-intro request** plus the **forwardable blurb**.
-3. Swap every `[SQUARE-BRACKET]` slot and paste the live booking link over `[BOOKING_LINK]`.
+3. Swap every `[SQUARE-BRACKET]` slot.
 4. Log who you contacted and their reply in the Status column so the pipeline sheet stays honest.
 
 ---
@@ -47,7 +47,7 @@ Keep these editable and personal. They are notes from one founder to another, no
 >
 > Quick favor. We've started helping founders whose MVP was built by a dev shop or an AI tool like Lovable or Cursor, and it's now breaking on real users - security holes, no tests, code they can't read or don't own.
 >
-> Do you know anyone stuck like that right now? If so, I'll give them a free 45-minute code audit: one of our senior engineers reads their codebase and writes back a one-page, plain-English assessment. No pitch, no strings - just something useful for them.
+> Do you know anyone stuck like that right now? If so, I'll give them a free Rescue Context Call: one of our senior engineers reads their codebase and writes back a one-page, plain-English assessment. No pitch, no strings - just something useful for them.
 >
 > Happy to send you a line you can forward. Thanks either way, [NAME].
 >
@@ -59,7 +59,7 @@ Keep these editable and personal. They are notes from one founder to another, no
 >
 > I'm trying to reach founders who built their product with a dev shop or an AI coding tool, and it's now buggy or breaking as real users show up. You know a lot of people in [THEIR WORLD - e.g. the Austin startup scene] - anyone come to mind?
 >
-> If someone fits, could you forward them the short note below? We give them a free 45-minute code audit: a senior engineer reviews their codebase and hands back a one-page, plain-English read. No pitch.
+> If someone fits, could you forward them the short note below? We give them a free Rescue Context Call: a senior engineer reviews their codebase and hands back a one-page, plain-English read. No pitch.
 >
 > No worries if nobody comes to mind. Thanks, [NAME].
 >
@@ -67,7 +67,7 @@ Keep these editable and personal. They are notes from one founder to another, no
 
 ### C. Forwardable blurb - the contact pastes this to the founder
 
-> If your app was built by a dev shop or an AI tool like Lovable or Cursor and it's breaking now that real users are showing up, this might help. Paul at JetThoughts has been rescuing broken startup MVPs since 2011, and he's offering founders a free 45-minute code audit: a senior engineer reads your codebase and sends back a one-page, plain-English read on what to fix first - no pitch, no contract. You can grab a slot here: [BOOKING_LINK]
+> If your app was built by a dev shop or an AI tool like Lovable or Cursor and it's breaking now that real users are showing up, this might help. Paul at JetThoughts has been rescuing broken startup MVPs since 2011, and he's offering founders a free Rescue Context Call: a team runs your codebase and sends back a one-page, plain-English read on what to fix first - no pitch, no contract. You can grab a slot here: https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar
 
 ---
 

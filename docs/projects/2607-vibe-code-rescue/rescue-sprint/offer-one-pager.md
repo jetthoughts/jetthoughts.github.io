@@ -1,4 +1,4 @@
-> DRAFT - A2 pricing confirmed (3-tier). Pending Paul's review + real [BOOKING_LINK]
+> DRAFT - A2 pricing confirmed (3-tier). Booking link live.
 
 # Vibe Code Rescue
 
@@ -15,11 +15,11 @@ You paid a dev shop or an AI tool to build your app. The demo looked great. Then
 
 If you nodded at two of these, you're the founder we built this for.
 
-## Step 1 - The free Code Audit (45 minutes, yours to keep)
+## Step 1 - Free Rescue Context Call + AI-Intensive Audit (45 minutes + 48-hour scorecard)
 
-Book a call and one senior developer reads your actual codebase before you decide anything. On the call, we walk you through a one-page assessment in plain English: what's solid, what's fragile, the fixes that would help you most, and a straight answer on whether you should salvage what you have or rebuild the broken parts. You keep the write-up whether or not we work together. No contract, and no follow-up calls you didn't ask for.
+Book a 45-minute context call. We use that time to understand your business pain and collect read-only access to your code, task board, and dev chats. Then our team runs an intensive, AI-assisted technical due diligence offline. Within 48 hours you get a one-page, plain-English scorecard: what's solid, what's fragile, whether to salvage or rebuild, and the exact next step. You keep the scorecard whether or not we work together. No contract, and no follow-up calls you didn't ask for.
 
-**Book your free Code Audit -> [BOOKING_LINK]**
+**Book your free Rescue Context Call -> https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar**
 
 ## Step 2 - Pick your rescue level
 
@@ -54,4 +54,4 @@ We've been shipping Ruby on Rails since 2011. We use AI-assisted development to 
 
 You've been burned once. The whole point of the free audit is that you find out where you stand first - with a senior engineer who has no reason to tell you anything but the truth.
 
-**Book your free Code Audit -> [BOOKING_LINK]**
+**Book your free Code Audit -> https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar**

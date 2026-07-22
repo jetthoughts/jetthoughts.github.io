@@ -29,9 +29,9 @@ While reading a thread to validate a prospect, copy any line that names a feelin
 - `[VERBATIM-founder]` "I basically failed with another project where I got a freelance developer to build for me before truly validating the product / market." - Sam A, https://www.indiehackers.com/post/building-my-first-app-as-a-non-technical-founder-a309cb92c3
 - `[VERBATIM-founder]` "I have built my dream app, and as soon as I got beta testers on it, it totally broke and lovable can't fix it." - Joy Adamson, https://www.linkedin.com/posts/nico-casavecchia-2432b19b_i-vibe-coded-the-app-i-dreamed-about-for-activity-7424986945577013249-rizu
 - `[VERBATIM-founder]` "I've built 3 versions using AI. The last one was so complicated that when I hired someone to fix the 'vibe' bugs, they told me it was easier to burn the whole thing down and start over." - r/cursor OP, https://www.reddit.com/r/cursor/comments/1q1v99l/does_vibe_coding_hit_a_massive_wall_once_your/
-- `[VERBATIM-dev/team]` "instead of building new features, I'm constantly re-fixing things that were already working." - r/developersPak, "Vibe coding is breaking our app and I'm tired of it"
-- `[VERBATIM-dev/team]` "it's starting to feel like we're just building on sand." - same thread
-- `[VERBATIM-dev/team]` "The worst part is payments (Stripe). I'm not even fully confident about all the edge cases there... it just feels risky every time we touch it." - same thread
+- `[VERBATIM-dev/team]` "instead of building new features, I'm constantly re-fixing things that were already working." - r/developersPak, https://www.reddit.com/r/developersPak/comments/1sdzina/vibe_coding_is_breaking_our_app_and_im_tired_of_it/
+- `[VERBATIM-dev/team]` "it's starting to feel like we're just building on sand." - same thread, https://www.reddit.com/r/developersPak/comments/1sdzina/vibe_coding_is_breaking_our_app_and_im_tired_of_it/
+- `[VERBATIM-dev/team]` "The worst part is payments (Stripe). I'm not even fully confident about all the edge cases there... it just feels risky every time we touch it." - same thread, https://www.reddit.com/r/developersPak/comments/1sdzina/vibe_coding_is_breaking_our_app_and_im_tired_of_it/
 - `[VERBATIM-dev/team]` "he was able to prove out a viable business in a matter of a few months with no engineering background and no technical capability" - CharlieDigital (describing friend), https://news.ycombinator.com/item?id=44739556
 - `[VERBATIM-dev/team]` "Lovable is marketed to non developers, so their core users wouldn't understand a security flow if it flashed red" - firefoxd, https://news.ycombinator.com/item?id=47182659
 
@@ -83,8 +83,8 @@ While reading a thread to validate a prospect, copy any line that names a feelin
 | Push | "Bugs kept breaking parts of the app, and I had no visibility into what was happening." | `[VERBATIM-founder]` SpecBuildLab |
 | Push | "It would break. I'd paste the error back. We'd fix it. Repeat 200 times a day." | `[VERBATIM-founder]` SANICE_AI |
 | Push | "Vibe coding gave me a product. It also gave me a problem I couldn't fix." | `[VERBATIM-founder]` r/startups OP |
-| Push | "The freelancer struggled to understand the logic and then just vanished." | `[VERBATIM-founder]` techPackets |
-| Push | "I spent $5k on a freelancer... It looks perfect but none of the actual API integrations work and they have ghosted me now." | `[VERBATIM-founder]` r/nocode OP |
+| Push | "even the freelancer struggled to understand the logic and then just vanished." | `[VERBATIM-founder]` techPackets |
+| Push | "I spent $5k on a freelancer who used [AI Tool] to build it. It looks perfect but none of the actual API integrations work and they have ghosted me now that it's time to fix the database errors." | `[VERBATIM-founder]` r/nocode OP |
 | Push | "Am currently burned by devs who aren't professional and lacking how to build and execute." | `[VERBATIM-founder]` Afrikonnect |
 | Pull | "I am looking for a technical co-founder so that we can start building in house." | `[VERBATIM-founder]` lucadeza |
 | Pull | "I am at the stage of moving away from Lovable and get to old good hand made code." | `[VERBATIM-founder]` Joy Adamson |

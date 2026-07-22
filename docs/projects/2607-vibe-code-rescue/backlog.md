@@ -57,7 +57,7 @@ Strategy/gates/Paul's desk live in [`operation-runbook.md`](operation-runbook.md
 ## Stage 3 — Convert
 
 ### P9 · Per-target openers  → `rescue-sprint/outbound-openers.md`
-- **depends**: P8 + A2 (offer/price). **do**: one personalized opener per row (right template: referral / warm-intro / forwardable / thread-reply), mirror that row's VoC phrase, `[BOOKING_LINK]` placeholder. **done**: opener per row, ready for Paul to review+send (desk P3). LIGHT gate (HEAVY if any becomes a mass template).
+- **depends**: P8 + A2 (offer/price). **do**: one personalized opener per row (right template: referral / warm-intro / forwardable / thread-reply), mirror that row's VoC phrase, live booking link. **done**: opener per row, ready for Paul to review+send (desk P3). LIGHT gate (HEAVY if any becomes a mass template).
 
 ---
 
@@ -75,9 +75,8 @@ Strategy/gates/Paul's desk live in [`operation-runbook.md`](operation-runbook.md
 
 > **Live status/flow is tracked in the kanban board** — `kanban-md list --compact --tag 2607` (board `jetthoughts.github.io`, tasks #1-#10). This file holds the task specs + verified seeds; the board holds status, claims, and dependencies (P8 gated on P1-P7, P9 on P8, P7 blocked on Paul). Copy-paste run prompts: `rescue-sprint/prospects/RUN.md`.
 
-- **Done**: P1 ✓, P2 ✓, P3 ✓, P4 ✓, P5 ✓, P6 ✓, P7 ✓, P8 ✓ (25 deduped rows), P9 ✓ (25 openers), T9 ✓ (objection bank)
+- **Done**: P1 ✓, P2 ✓, P3 ✓, P4 ✓, P5 ✓, P6 ✓, P7 ✓ (F5Bot keywords live; awaiting first digest), P8 ✓ (25 deduped rows), P9 ✓ (25 openers), T9 ✓ (objection bank)
 - **A2 confirmed**: 3-tier pricing ($2,500 triage / $7,500 rescue / $10K foundation reset)
 - **Next**: Paul reviews + sends first 5 openers (SpecBuildLab, SANICE_AI, Joy Adamson, Afrikonnect, Saul_E)
-- **Then**: P8 (merge) → P9 (openers).
 - **Seeds** above were verified via `web_search` on 2026-07-22 — hand to the tasks, don't re-derive.
 - Update this table's status + the task's `done` line when a task completes; write the output to its named file.

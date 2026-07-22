@@ -2,7 +2,7 @@
 
 > P8 output. Merged from P1-P7 prospect files. Deduplicated by source URL (thread URL = join key). Scored by trigger strength. Rows from same thread with different handles are separate entries (different people, same venue).
 >
-> Sources: P1 IH comments (7), P2 IH posts (6), P3 HN (0), P4 Reddit (8), P5 X (1), P6 Competitor comments (3), P7 F5Bot (pending). **Total: 25 rows. Zero dupes found.**
+> Sources: P1 IH comments (7), P2 IH posts (6), P3 HN (0), P4 Reddit (8), P5 X (1), P6 Competitor comments (3), P7 F5Bot (keywords live; no digest yet). **Total: 25 rows. Zero dupes found.**
 >
 > Scoring: Trigger 1 (bugs/breaking) > Trigger 3 (ownership/hostage) > Trigger 7 (stuck/incomplete). Within each trigger, ICP > semi-ICP.
 
@@ -61,7 +61,7 @@
 | LinkedIn | 1 |
 | X/Twitter | 1 |
 | HN | 0 (dev-dominated, no founder voices) |
-| F5Bot | 0 (pending first digest) |
+| F5Bot | 0 (keywords live; awaiting first digest) |
 
 ### LIGHT gate: "Would Paul recognize these as worth his time?"
 
@@ -74,5 +74,5 @@
 - Semi-ICP rows (6) are founders who built with AI themselves, not paid a shop. They still need rescue but the trigger is different.
 
 ### Pending
-- P7 F5Bot digest: add matching rows when first email arrives
+- P7 F5Bot digest: add matching rows when the first digest arrives (keywords are already live)
 - Deduplication key: source URL. No duplicates found across P1-P7.
