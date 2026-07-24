@@ -1,14 +1,14 @@
 # Send Sheet — First 5 Openers
 
-> Paul: open each link, post the message below it, hit send. ~2 min each.
-> Messages 1-4 are **public thread-replies** (comment on their IH post — that's the design: it reads as a helpful reply, and IH DMs from strangers convert worse). Message 5 is a **LinkedIn DM** — see its routing note.
+> **Preferred path**: run the sends through a browser agent — paste `send-runner-prompt.md` (+ this sheet, for Comet) into Comet or Claude-in-Chrome. It pre-researches every prospect (post still live, author matches, situation unchanged), STOPS for Paul's approval, then sends and logs to `pipeline.md`.
+> Manual fallback: open each link, post the message below it. Messages 1-4 are **public thread-replies** (comment on their IH post — it reads as a helpful reply; IH DMs from strangers convert worse). Message 5 is a **LinkedIn DM** — see its routing note.
 > Stagger across days to avoid platform spam flags (see cadence below).
 
-## Pre-send gate (do these BEFORE Day 1)
+## Pre-send gate
 
-- [ ] **NeetoCal event confirmed** — the URL is live, but run the S0 checklist in `../operation-runbook.md` (event public/bookable, intake questions, confirmation message). Every message below hangs on this link working end-to-end.
-- [ ] **Tracking sheet ready** — `pipeline.md` (next to this file) has a row per send. No sheet = replies scatter across 3 inboxes and the sprint can't be measured.
-- [ ] **Message 5 routing fixed** — Joy Adamson's quote is a COMMENT on Nico Casavecchia's post; the link goes to Nico's post, not Joy. Open the post, find Joy's comment, and DM her from her profile.
+- [x] **Booking link confirmed** — Paul confirmed the NeetoCal link is live and working (2026-07-24).
+- [x] **Tracking sheet ready** — `pipeline.md` (next to this file), one row per send.
+- [ ] **Paul approves the send run** — the browser agent presents its GO/HOLD pre-research table and final copy; nothing is sent before "approve".
 
 ---
 
