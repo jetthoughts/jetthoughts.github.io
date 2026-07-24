@@ -45,7 +45,8 @@ end to end and produces the first case study.
 ## Strategy - 4 plays (all channels)
 
 1. **Productize the offer** - "Vibe Code Rescue": fixed-fee **Rescue Audit** (plain-English
-   scorecard + salvage-vs-rebuild verdict) -> fixed-price rescue ($25-50K, Rails). White-label
+   scorecard + salvage-vs-rebuild verdict) -> fixed-price rescue (3 tiers, A2-confirmed:
+   $2,500 triage / $7,500 rescue / $10,000 foundation reset; Rails). White-label
    delivers; Paul owns the relationship. This is the conversion engine.
 2. **Landing page -> booking machine** - rescue positioning already live (PR #385); add the
    offer, case-study proof, one "Book a Rescue Audit" CTA.

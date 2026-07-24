@@ -50,7 +50,7 @@
 
 **Paste this:**
 
-> "Am currently burned by devs who aren't professional" - I hear this a lot. The worst part isn't the bad code, it's not knowing whether the next developer will do the same thing.
+> "Am currently burned by devs who aren't professional" - I hear this a lot. After a burn like that, you have no way to tell whether the next developer will do the same thing.
 >
 > Let me have an engineer look at what you actually have and tell you the truth. 45 minutes, no contract, the write-up is yours to keep. You judge us by what we find, not by what we say.
 >

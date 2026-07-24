@@ -37,7 +37,7 @@ This is a fixed-time bet, not an open-ended growth program. We are not building 
 
 ## Solution
 
-**The offer.** A free 45-minute Code Audit - one senior engineer reads the founder's actual code and hands back a one-page, plain-English read on what's solid, what to fix, and whether to salvage or rebuild. No contract. If they move forward, a fixed-price Rails rescue ($25-50K, 4-8 weeks, keep 30-50% of the code), agreed up front so the number can't creep.
+**The offer.** A free 45-minute Code Audit - one senior engineer reads the founder's actual code and hands back a one-page, plain-English read on what's solid, what to fix, and whether to salvage or rebuild. No contract. If they move forward, a fixed-price Rails rescue (3 tiers, A2-confirmed: $2,500 triage / $7,500 rescue / $10,000 foundation reset), agreed up front so the number can't creep.
 
 **The wedge.** Not "we fix broken code" - that lane is crowded. Ours is **ownership and trust**: you own the code and every account at each milestone, and Paul sits on every call as your fractional CTO translating what the developers are doing into decisions you can make. Trust is the product; the rebuild is how we deliver it.
 
