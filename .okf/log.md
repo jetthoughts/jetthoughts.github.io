@@ -1,5 +1,10 @@
 # Bundle Update Log
 
+## 2026-07-24
+
+* **New concept**: [outbound-sprint](/workflows/outbound-sprint.md) - the 2607 rescue outbound machinery: browser-agent send runner (pre-research -> approval gate -> send -> log), daily reply monitor, pipeline.md ledger, local-only kanban convention, F5Bot/Gmail-forward routing gotchas.
+* **Update**: [review-swarm](/workflows/review-swarm.md) - multi-doc kit reviews need a cross-doc drift finder + link-routing check (Joy/Nico mis-route, stale pricing in narrative docs); late finders carry real findings (3 of 6 reported after first synthesis with 3 confirmed defects); idle agents' reports recoverable from subagent transcript jsonl.
+
 ## 2026-07-21
 
 * **New concept**: [ci-gates](/build/ci-gates.md) - what GitHub Actions enforces on a PR (build, unit, path-scoped broken-internal-link crawl via lychee in `link-check.yml`). Records that visual regression is intentionally NOT a CI gate: cross-OS pixel diffs (Alpine/musl baselines vs Ubuntu/glibc CI) diverge 3-28%, so `bin/test` + `bin/dtest` are the sole visual coverage (a CI screenshot job was built and removed in PR #386). Includes the libvips42-runtime gotcha for any future ruby-vips CI job.
