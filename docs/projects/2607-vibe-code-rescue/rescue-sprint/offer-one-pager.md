@@ -1,0 +1,57 @@
+> DRAFT - A2 pricing confirmed (3-tier). Booking link live.
+
+# Vibe Code Rescue
+
+**Your MVP looks finished but keeps breaking. We make it actually work - and hand you back a product you own and understand.**
+
+You paid a dev shop or an AI tool to build your app. The demo looked great. Then real people started using it, and things you thought were done stopped working. Now you're not sure what you actually have, and you can't tell whether one more round of fixes will help or just burn another month. We take over broken founder MVPs, fix the broken parts, and give you a fractional CTO who explains every decision in plain English.
+
+## Is this you?
+
+- You open the app for a new user and something that worked yesterday breaks today.
+- Your developers say they're "refactoring" or "on the architecture," but you still can't click through a working product.
+- You don't hold the keys - the code lives in someone else's GitHub and the server sits under their account.
+- Payments look fine in the demo, and you quietly wonder whether a real charge would ever reach your bank.
+
+If you nodded at two of these, you're the founder we built this for.
+
+## Step 1 - Free Rescue Context Call + AI-Intensive Audit (45 minutes + 48-hour scorecard)
+
+Book a 45-minute context call. We use that time to understand your business pain and collect read-only access to your code, task board, and dev chats. Then our team runs an intensive, AI-assisted technical due diligence offline. Within 48 hours you get a one-page, plain-English scorecard: what's solid, what's fragile, whether to salvage or rebuild, and the exact next step. You keep the scorecard whether or not we work together. No contract, and no follow-up calls you didn't ask for.
+
+**Book your free Rescue Context Call -> https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar**
+
+## Step 2 - Pick your rescue level
+
+### Triage Sprint - $2,500 (48 hours)
+
+Fix the top 3 things that are bleeding users right now. One senior engineer reads the code, patches the critical blockers, and sends you a plain-English health report. You see real results before committing more.
+
+**Good for**: "I just need the login/checkout/main feature to stop breaking."
+
+### Rescue - $7,500 (2-3 weeks)
+
+Fix everything that's broken, harden the security, stabilize auth and payments, and hand you back a production-ready app. You own the code and every account after each milestone. 30-day warranty included.
+
+**Good for**: "I want the whole thing working reliably for real users."
+
+### Foundation Reset - $10,000 (4-6 weeks)
+
+When the code can't hold the product you're describing, we build a new foundation on Rails - keeping your design, your data, and whatever code is worth keeping (usually 30-50%). Full test suite, 60-day warranty.
+
+**Good for**: "I've been told it needs a full rebuild, but I don't want to start from zero."
+
+---
+
+**All three levels include**:
+- Fixed price, agreed in writing before we start. The number doesn't creep.
+- Code and server ownership transferred at each milestone, not at some vague "end."
+- Paul sits on every call as your fractional CTO, translating what the developers are doing into decisions you can make.
+
+## Why JetThoughts
+
+We've been shipping Ruby on Rails since 2011. We use AI-assisted development to move faster and keep costs honest - which is how we can offer a full rescue at $7,500 when traditional agencies quote $25K-$55K for the same work. Thirty-two clients rated us 4.8 out of 5, and our average client relationship runs five years. Paul, our CEO, sits on every call as your fractional CTO and turns what the developers are doing into decisions you can actually make - so you stop guessing whether your team is telling you the truth.
+
+You've been burned once. The whole point of the free audit is that you find out where you stand first - with a senior engineer who has no reason to tell you anything but the truth.
+
+**Book your free Code Audit -> https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar**
