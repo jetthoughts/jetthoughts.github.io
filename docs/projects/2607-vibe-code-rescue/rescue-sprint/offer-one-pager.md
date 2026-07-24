@@ -50,7 +50,7 @@ When the code can't hold the product you're describing, we build a new foundatio
 
 ## Why JetThoughts
 
-We've been shipping Ruby on Rails since 2011. We use AI-assisted development to move faster and keep costs honest - which is how we can offer a full rescue at $7,500 when traditional agencies quote $25K-$55K for the same work. Thirty-two clients rated us 4.8 out of 5, and most of them stayed with us for more than three years. Paul, our CEO, sits on every call as your fractional CTO and turns what the developers are doing into decisions you can actually make - so you stop guessing whether your team is telling you the truth.
+We've been shipping Ruby on Rails since 2011. We use AI-assisted development to move faster and keep costs honest - which is how we can offer a full rescue at $7,500 when traditional agencies quote $25K-$55K for the same work. Thirty-two clients rated us 4.8 out of 5, and our average client relationship runs five years. Paul, our CEO, sits on every call as your fractional CTO and turns what the developers are doing into decisions you can actually make - so you stop guessing whether your team is telling you the truth.
 
 You've been burned once. The whole point of the free audit is that you find out where you stand first - with a senior engineer who has no reason to tell you anything but the truth.
 

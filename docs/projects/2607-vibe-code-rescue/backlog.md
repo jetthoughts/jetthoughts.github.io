@@ -57,7 +57,11 @@ Strategy/gates/Paul's desk live in [`operation-runbook.md`](operation-runbook.md
 ## Stage 3 — Convert
 
 ### P9 · Per-target openers  → `rescue-sprint/outbound-openers.md`
-- **depends**: P8 + A2 (offer/price). **do**: one personalized opener per row (right template: referral / warm-intro / forwardable / thread-reply), mirror that row's VoC phrase, live booking link. **done**: opener per row, ready for Paul to review+send (desk P3). LIGHT gate (HEAVY if any becomes a mass template).
+- **depends**: P8 + A2 (offer/price). **do**: one personalized opener per row (right template: referral / warm-intro / forwardable / thread-reply), mirror that row's VoC phrase, live booking link. **done**: opener per row, ready for Paul to review+send (desk P3); **every opener's link resolves to the named prospect's OWN post/profile** — if the quote is a comment on someone else's thread, the opener must say so and route to the commenter (this check would have caught the Joy Adamson/Nico mis-route). LIGHT gate (HEAVY if any becomes a mass template).
+
+### P10 · Pipeline tracking sheet  → `rescue-sprint/pipeline.md`
+- **do**: one row per send (opener # · handle · channel · action · sent date · replied · call booked · outcome) + weekly tally table; link it from `operating-system.md` §7 so "discovery calls booked" is countable.
+- **done**: sheet exists, first-batch rows pre-filled, Paul logs sends/replies in it; A0 kill-criteria (~20 touches / ~10 calls) evaluable from the sheet alone.
 
 ---
 
@@ -73,10 +77,10 @@ Strategy/gates/Paul's desk live in [`operation-runbook.md`](operation-runbook.md
 
 ## State
 
-> **Live status/flow is tracked in the kanban board** — `kanban-md list --compact --tag 2607` (board `jetthoughts.github.io`, tasks #1-#10). This file holds the task specs + verified seeds; the board holds status, claims, and dependencies (P8 gated on P1-P7, P9 on P8, P7 blocked on Paul). Copy-paste run prompts: `rescue-sprint/prospects/RUN.md`.
+> **Live status/flow is tracked in the kanban board** — `kanban-md list --compact --tag 2607` (board `jetthoughts.github.io`, tasks #1-#10). The board is local-only (`kanban/` is gitignored) — the **Done** list below is the committed status snapshot; keep it current. This file holds the task specs + verified seeds; the board holds status, claims, and dependencies (P8 gated on P1-P7, P9 on P8, P7 blocked on Paul). Copy-paste run prompts: `rescue-sprint/prospects/RUN.md`.
 
-- **Done**: P1 ✓, P2 ✓, P3 ✓, P4 ✓, P5 ✓, P6 ✓, P7 ✓ (F5Bot keywords live; awaiting first digest), P8 ✓ (25 deduped rows), P9 ✓ (25 openers), T9 ✓ (objection bank)
+- **Done**: P1 ✓, P2 ✓, P3 retired (0 rows — HN is dev-dominated, no founder voices; venue invalid for this ICP, do NOT re-run), P4 ✓, P5 ✓ (1 row — low-yield as predicted; don't re-run without a new seed), P6 ✓, P7 ✓ (F5Bot keywords live; awaiting first digest), P8 ✓ (25 deduped rows), P9 ✓ (25 openers), T9 ✓ (objection bank), P10 ✓ (pipeline sheet scaffolded)
 - **A2 confirmed**: 3-tier pricing ($2,500 triage / $7,500 rescue / $10K foundation reset)
-- **Next**: Paul reviews + sends first 5 openers (SpecBuildLab, SANICE_AI, Joy Adamson, Afrikonnect, Saul_E)
+- **Next**: pre-send gate, THEN send. Paul: (1) confirm the NeetoCal event via the S0 checklist in `operation-runbook.md` (event public/bookable, intake questions, confirmation message — the URL resolves but the setup checklist is unchecked); (2) fix Message 5 routing per `rescue-sprint/SEND-SHEET.md` (Joy Adamson is a commenter on Nico's post, DM via her profile); (3) then send the first 5 openers, logging each in `rescue-sprint/pipeline.md`.
 - **Seeds** above were verified via `web_search` on 2026-07-22 — hand to the tasks, don't re-derive.
 - Update this table's status + the task's `done` line when a task completes; write the output to its named file.

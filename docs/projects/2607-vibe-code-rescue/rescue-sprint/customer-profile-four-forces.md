@@ -49,7 +49,7 @@ The fears that stop Alex saying yes even with strong push+pull. **These are the 
 - "Will I understand any of it, or be in the dark again?" → plain-English, Paul on every call, ownership at each milestone.
 - "Can they even work on my code if the shop holds it?" → the audit surfaces this first (repo-access intake question); we help you get access.
 - "What if it's not salvageable and I wasted more money?" → we tell you salvage-vs-rebuild honestly, even when rebuild is the harder sale for us.
-> Dismantle with: the free audit (risk reversal), fixed price (certainty), milestone ownership (control), 4.8/5 from 32 clients + 3-year average relationships (proof), salvage-vs-rebuild honesty (trust).
+> Dismantle with: the free audit (risk reversal), fixed price (certainty), milestone ownership (control), 4.8/5 from 32 clients + 5-year average relationships (proof), salvage-vs-rebuild honesty (trust).
 
 ### HABIT - of the present (blocks change) - DISMANTLE
 The inertia keeping Alex stuck with the current shop / doing nothing.

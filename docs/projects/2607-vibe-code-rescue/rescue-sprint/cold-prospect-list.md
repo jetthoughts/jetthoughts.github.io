@@ -5,6 +5,8 @@
 > Sources: P1 IH comments (7), P2 IH posts (6), P3 HN (0), P4 Reddit (8), P5 X (1), P6 Competitor comments (3), P7 F5Bot (keywords live; no digest yet). **Total: 25 rows. Zero dupes found.**
 >
 > Scoring: Trigger 1 (bugs/breaking) > Trigger 3 (ownership/hostage) > Trigger 7 (stuck/incomplete). Within each trigger, ICP > semi-ICP.
+>
+> **Best path note**: `outbound-openers.md` supersedes this column — P9 chose **public thread-reply** for IH/Reddit rows (a helpful reply on their own post beats a cold DM) and DM only for LinkedIn/X. Follow the opener's header, not this column.
 
 ## Trigger 1 - Bugs / Breaking (11 rows)
 
@@ -12,7 +14,7 @@
 |---|---|---|---|---|---|
 | 1 | SpecBuildLab | https://www.indiehackers.com/post/what-i-learned-after-getting-stuck-building-my-first-no-code-app-in-lovable-ad0a54d71e | "Bugs kept breaking parts of the app, and I had no visibility into what was happening. I kept trying different prompts, hoping one would fix it." | ICP | IH DM |
 | 2 | SANICE_AI | https://www.indiehackers.com/post/i-cant-write-a-single-line-of-code-i-built-a-multi-ai-research-platform-anyway-here-s-what-6-weeks-looked-like-e8f052d54c | "I'd describe what I wanted. Claude would write the code. I'd deploy it. It would break. I'd paste the error back. We'd fix it. Repeat 200 times a day." | ICP | IH DM |
-| 3 | Joy Adamson | https://www.linkedin.com/posts/nico-casavecchia-2432b19b_i-vibe-coded-the-app-i-dreamed-about-for-activity-7424986945577013249-rizu | "I have built my dream app, and as soon as I got beta testers on it, it totally broke and lovable can't fix it... I am at the stage of moving away from Lovable and get to old good hand made code." | ICP | LinkedIn DM |
+| 3 | Joy Adamson | https://www.linkedin.com/posts/nico-casavecchia-2432b19b_i-vibe-coded-the-app-i-dreamed-about-for-activity-7424986945577013249-rizu | "I have built my dream app, and as soon as I got beta testers on it, it totally broke and lovable can't fix it... I am at the stage of moving away from Lovable and get to old good hand made code." | ICP | LinkedIn DM (quote is her COMMENT on Nico Casavecchia's post — DM via her profile, the URL is Nico's post) |
 | 4 | r/startups OP (1sgsq6o) | https://www.reddit.com/r/startups/comments/1sgsq6o/vibe_coding_gave_me_a_product_it_also_gave_me_a/ | "Vibe coding gave me a product. It also gave me a problem I couldn't fix." | ICP | Reddit DM |
 | 5 | r/replit OP (1pneqwa) | https://www.reddit.com/r/replit/comments/1pneqwa/replit_deleted_my_project_heres_what_i_learned/ | "Replit deleted my project. Not maliciously. Just... it happened." | ICP | Reddit DM |
 | 6 | r/replit OP (1ucjd4y) | https://www.reddit.com/r/replit/comments/1ucjd4y/broken/ | "Now it's just reached a point where it's completely broken and it gets stuck in this loop of Found it, Let me fix this, that didn't work" | ICP | Reddit DM |
@@ -35,8 +37,8 @@
 | # | handle/channel | source URL | why-ICP (verbatim quote) | verdict | best path |
 |---|---|---|---|---|---|
 | 15 | dianewilliams75 | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | "This is my current situation!" | ICP | IH DM |
-| 16 | 659ertramp | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | "I'm a trades professional (electrician) working on a practical AI-driven tool for contractors... I'm at the point where I need the right technical direction to bring the MVP to life without wasting time or money." | ICP | IH DM |
-| 17 | J_Jie556517 | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | "I'm a university professor with a field-tested methodology for intonation training looking for a technical partner." | ICP | IH DM |
+| 16 | 659ertramp | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | "I'm a trades professional (electrician) working on a practical AI-driven tool for contractors... I'm at the point where I need the right technical direction to bring the MVP to life without wasting time or money." | semi-ICP (pre-build/direction-seeking — may have no code to audit; send last, verify code exists) | IH DM |
+| 17 | J_Jie556517 | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | "I'm a university professor with a field-tested methodology for intonation training looking for a technical partner." | semi-ICP (partner-seeking, likely pre-build — audit offer may not fit; send last, verify code exists) | IH DM |
 | 18 | lucadeza | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | "I am a former professional athlete building an AI Powered B2B SaaS platform but non technical (currently using an agency). ... I am looking for a technical co-founder so that we can start building in house." | ICP | IH DM |
 | 19 | Abnrav | https://www.indiehackers.com/post/looking-to-connect-with-non-technical-founders-f88cafc2c2 | "I am a non-technical founder ... I had an app built ... my lack of knowledge and ingenuity have prevented it from catching on. ... At this point, funds have run dry and I have lost the limited support that I had. The app is in the App and Google Play stores but it is stagnant." | ICP | IH DM |
 | 20 | Sam A | https://www.indiehackers.com/post/building-my-first-app-as-a-non-technical-founder-a309cb92c3 | "I'll also write a post about how I basically failed with another project where I got a freelance developer to build for me before truly validating the product / market." | ICP | IH DM |

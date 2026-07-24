@@ -30,9 +30,9 @@
 >
 > https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar
 
-### 3. Joy Adamson (LinkedIn DM)
+### 3. Joy Adamson (LinkedIn DM — her quote is a COMMENT on Nico Casavecchia's post; open the post, find her comment, DM via her profile)
 
-> Hi Joy - I saw your post about the Lovable app breaking when beta testers arrived. "As soon as I got beta testers on it, it totally broke" is something we hear from founders every week.
+> Hi Joy - I saw your comment on Nico's vibe-coding post. "As soon as I got beta testers on it, it totally broke" is something we hear from founders every week.
 >
 > One of our engineers can look at the code and give you a plain-English verdict on what's worth keeping and what needs fixing. Takes 45 minutes, the write-up is yours whether or not we ever work together.
 >
