@@ -7,3 +7,4 @@
 * [CSS Maintainability Redesign](css-maintainability-plan.md) - approved plan for hand-editable CSS + FL-Builder retirement
 * [Visual Scroll Gate](visual-scroll-gate.md) - blocking pre-handback visual walk for content/visual changes
 * [Test Suite & Gates](testing.md) - Minitest structure, rake tasks, visual regression gate
+* [Outbound Sprint Machinery](outbound-sprint.md) - 2607 browser-agent send/monitor loop, pipeline ledger, board conventions, mail-routing gotchas
