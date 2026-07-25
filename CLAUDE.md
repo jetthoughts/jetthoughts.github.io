@@ -112,6 +112,7 @@ Follow official methodology from `/knowledge/`:
 
 ## 🚨 Behavioral Constraints
 
+- **Async-first communication (MANDATORY, all agents)**: written, discoverable artifacts are the default for every decision, finding, status change, and handoff — see `.agents/skills/async-first-communication/SKILL.md` for the canonical-surfaces table (docs/projects, runbook handoff notes, backlog State snapshot, pipeline ledgers, `.okf/` + log, PR disposition comments). Sync (calls, live approvals — Paul's desk) is the exception; its outcome is written back same-day. A task is not done until its state is readable by a cold session with zero questions. `AGENTS.md` carries the same SOP for non-Claude agents.
 - **Zero generic AI language**: All AI-sounding phrases flagged and rejected
 - **Zero unsupported claims**: All assertions must have citations
 - **Zero Hugo build breaks**: All content validated via `bin/hugo-build`

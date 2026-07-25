@@ -30,6 +30,8 @@ A 45-minute screen share is not enough to understand a broken MVP. The real valu
 
 The 45-minute call exists because a founder who got burned still needs to trust the person giving them the answer. Paul is that trust layer. The call is for context and access; the audit is for the technical truth.
 
+**Optional pre-call fast-track**: if the founder grants read-only access when booking (intake Q5 already asks), an agent runs a capped preliminary pass (~30 min: stack fingerprint, repo shape, test presence, obvious red flags — NOT the full audit) before the call. The call then opens with first findings instead of access logistics — a much stronger trust moment. Rules: never REQUIRED (a burned founder's trust bar is the wedge; asking for access before human contact can break it), only run after the booking is confirmed, NDA offer stands per the pre-call email, and the preliminary pass follows the same read-only/no-secrets contract below.
+
 ---
 
 ## Async due diligence scope

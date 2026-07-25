@@ -62,6 +62,8 @@ Green = hit target, Red = missed. Any red 2 weeks running becomes an Issue (sect
 
 ## 5. Meeting cadence
 
+> **Async-first rule**: meetings below are the exception, not the medium. All knowledge transfer defaults to written artifacts per `.agents/skills/async-first-communication/SKILL.md`; every meeting's outcome is written back into this file (scorecard/OKR/issues) same-day.
+
 - **Weekly ops review (~30 min)**: scorecard (5 min) -> rock progress (5 min) -> pipeline
   walk (10 min) -> IDS the top issues (10 min). Update the scorecard + OKR statuses in this file.
 - **Monthly strategy check (~45 min)**: is the wedge still right? adjust roadmap; refresh
