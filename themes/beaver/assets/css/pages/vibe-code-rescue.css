@@ -9,9 +9,21 @@
   background: var(--color-obsidian);
 }
 
+/* Metrics-matched fallback for Space Grotesk: while the webfont loads,
+   Arial renders at adjusted metrics so the swap does not shift layout
+   (kills the visible font-jump / CLS on load). */
+@font-face {
+  font-family: "Space Grotesk Fallback";
+  src: local("Arial");
+  size-adjust: 105.5%;
+  ascent-override: 93%;
+  descent-override: 27%;
+  line-gap-override: 0%;
+}
+
 .vcr-page {
   --vcr-chip-bg: rgba(28, 32, 38, 0.75);
-  --vcr-display: "Space Grotesk", var(--font-system-ui);
+  --vcr-display: "Space Grotesk", "Space Grotesk Fallback", var(--font-system-ui);
 
   background: var(--color-obsidian);
   color: var(--color-on-dark);
@@ -60,14 +72,15 @@
 
 /* ---------- Hero: the obsidian field ---------- */
 
-.vcr-hero {
+.vcr-page .vcr-hero {
   background:
     radial-gradient(ellipse 60% 50% at 15% 0%, rgba(204, 52, 45, 0.12), transparent),
     radial-gradient(ellipse 50% 40% at 90% 20%, rgba(168, 85, 247, 0.10), transparent),
     radial-gradient(rgba(204, 52, 45, 0.05) 1px, transparent 1px),
     linear-gradient(135deg, var(--color-obsidian) 0%, var(--color-obsidian-raise) 55%, var(--color-obsidian-violet) 100%);
   background-size: auto, auto, 48px 48px, auto;
-  padding: 72px 0 64px;
+  /* Generous top clearance: the site header band overlays the hero top. */
+  padding: 104px 0 64px;
 }
 
 .vcr-eyebrow {
@@ -180,11 +193,11 @@
   background: var(--vcr-chip-bg);
   border-radius: var(--radius-default);
   padding: 10px 16px;
-  border-left: 3px solid var(--color-ruby);
+  border: 1px solid rgba(204, 52, 45, 0.45);
 }
 
-.vcr-chip-purple { border-left-color: var(--color-neon-purple); }
-.vcr-chip-cyan { border-left-color: #7dd0fe; }
+.vcr-chip-purple { border-color: rgba(168, 85, 247, 0.45); }
+.vcr-chip-cyan { border-color: rgba(125, 208, 254, 0.4); }
 
 .vcr-chip-label {
   font-weight: 600;
@@ -259,6 +272,20 @@
 
 .vcr-quote {
   margin: 0;
+  position: relative;
+  padding-left: 34px;
+}
+
+.vcr-quote::before {
+  content: "\201C";
+  position: absolute;
+  left: 0;
+  top: -6px;
+  font-family: var(--vcr-display);
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 1;
+  color: var(--color-neon-purple);
 }
 
 .vcr-quote blockquote {
@@ -267,15 +294,13 @@
   font-size: 19px;
   line-height: 1.35;
   color: var(--color-on-dark);
-  border-left: 3px solid var(--color-neon-purple);
   margin: 0 0 8px;
-  padding: 2px 0 2px 18px;
+  padding: 0;
 }
 
 .vcr-quote figcaption {
   font-size: 14px;
   color: var(--color-label-dark);
-  padding-left: 21px;
 }
 
 /* ---------- Step 1 ---------- */
@@ -310,6 +335,9 @@
 
 .vcr-tier-featured {
   border-color: var(--color-ruby);
+  background:
+    linear-gradient(180deg, rgba(204, 52, 45, 0.08), rgba(204, 52, 45, 0.02) 40%),
+    var(--vcr-chip-bg);
 }
 
 .vcr-tier-name {
@@ -325,12 +353,8 @@
   font-weight: 800;
   font-size: 28px;
   letter-spacing: -0.02em;
-  color: var(--color-ruby);
-  margin: 0 0 16px;
-}
-
-.vcr-tier-featured .vcr-tier-price {
   color: #ff8a7a;
+  margin: 0 0 16px;
 }
 
 .vcr-tier-time {
@@ -417,8 +441,8 @@
     padding: 72px 0;
   }
 
-  .vcr-hero {
-    padding: 104px 0 88px;
+  .vcr-page .vcr-hero {
+    padding: 152px 0 88px;
   }
 
   .vcr-quotes .vcr-container {
