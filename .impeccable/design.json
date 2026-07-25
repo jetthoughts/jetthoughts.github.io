@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-26T00:30:00Z",
+  "title": "Design System: JetThoughts — JetVelocity",
+  "extensions": {
+    "colorMeta": {
+      "ruby": { "role": "primary", "displayName": "Ruby", "canonical": "#cc342d", "tonalRamp": ["oklch(20% 0.09 25)", "oklch(30% 0.13 25)", "oklch(40% 0.16 25)", "oklch(50% 0.19 25)", "oklch(55% 0.19 25)", "oklch(65% 0.15 25)", "oklch(80% 0.08 25)", "oklch(93% 0.03 25)"] },
+      "neon-purple": { "role": "secondary", "displayName": "Neon Purple", "canonical": "#a855f7", "tonalRamp": ["oklch(22% 0.12 300)", "oklch(32% 0.17 300)", "oklch(42% 0.21 300)", "oklch(52% 0.24 300)", "oklch(62% 0.24 300)", "oklch(72% 0.18 300)", "oklch(84% 0.10 300)", "oklch(94% 0.04 300)"] },
+      "obsidian-deep": { "role": "neutral", "displayName": "Obsidian Deep", "canonical": "#0a0e14", "tonalRamp": ["oklch(12% 0.01 250)", "oklch(18% 0.012 250)", "oklch(26% 0.014 250)", "oklch(36% 0.014 250)", "oklch(48% 0.012 250)", "oklch(62% 0.01 250)", "oklch(78% 0.008 250)", "oklch(92% 0.005 250)"] },
+      "legacy-blue": { "role": "neutral", "displayName": "Legacy Blue (incumbent light-page primary)", "canonical": "#1a8cff", "tonalRamp": ["oklch(25% 0.1 250)", "oklch(35% 0.13 250)", "oklch(45% 0.16 250)", "oklch(55% 0.18 250)", "oklch(65% 0.17 250)", "oklch(75% 0.12 250)", "oklch(85% 0.07 250)", "oklch(94% 0.03 250)"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#121212", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(58% 0 0)", "oklch(70% 0 0)", "oklch(82% 0 0)", "oklch(94% 0 0)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines on brand surfaces; one gradient phrase max." },
+      "label": { "displayName": "Label", "purpose": "Eyebrows, category slugs, chip labels — uppercase, wide tracking." },
+      "mono": { "displayName": "Mono Status", "purpose": "Status indicators and machine-flavored accents only." },
+      "body": { "displayName": "Body", "purpose": "All running text on both worlds." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-standard", "value": "all 0.2s ease-in-out", "purpose": "Button/state transitions (incumbent c-button)." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-gate", "value": "390px" },
+      { "name": "desktop-gate", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (light pages)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Incumbent BEM c-button--primary: legacy blue fill on light chrome.",
+      "html": "<button class=\"ds-btn-primary\">Book your free audit</button>",
+      "css": ".ds-btn-primary { display: inline-block; background-color: #1a8cff; color: #ffffff; font-size: 16px; line-height: 18px; padding: 12px 24px; border: none; border-radius: 4px; text-decoration: none; transition: all 0.2s ease-in-out; cursor: pointer; } .ds-btn-primary:hover { background-color: #0066cc; } .ds-btn-primary:active { position: relative; top: 1px; } .ds-btn-primary:focus-visible { outline: 2px solid #121212; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ruby Pill",
+      "kind": "chip",
+      "refersTo": "pill-ruby",
+      "description": "Filled ruby pill — year/ecosystem marker on brand surfaces; the CTA shape on obsidian.",
+      "html": "<span class=\"ds-pill-ruby\">Free Code Audit</span>",
+      "css": ".ds-pill-ruby { display: inline-block; background: #cc342d; color: #ffb4ab; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: -0.005em; padding: 8px 20px; border-radius: 999px; }"
+    },
+    {
+      "name": "Stat Chip",
+      "kind": "chip",
+      "refersTo": null,
+      "description": "Semi-transparent raised chip with colored left border; label whispers, value speaks.",
+      "html": "<span class=\"ds-chip\"><span class=\"ds-chip-label\">Clients rated</span><span class=\"ds-chip-value\">4.8 / 5</span></span>",
+      "css": ".ds-chip { display: inline-flex; flex-direction: column; gap: 2px; background: rgba(28, 32, 38, 0.75); border-left: 3px solid #cc342d; padding: 10px 16px; border-radius: 4px; } .ds-chip-label { font-family: Inter, system-ui, sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #969798; } .ds-chip-value { font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 16px; color: #dfe2eb; }"
+    },
+    {
+      "name": "Status Indicator",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Mono uppercase status with colored dot; bottom-right texture element on brand surfaces.",
+      "html": "<span class=\"ds-status\"><span class=\"ds-status-dot\"></span>AUDIT READY</span>",
+      "css": ".ds-status { display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #dfe2eb; } .ds-status-dot { width: 8px; height: 8px; border-radius: 999px; background: #22c55e; }"
+    },
+    {
+      "name": "Obsidian Hero Field",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The brand-surface backdrop: 135deg obsidian gradient with ruby grid-dot texture and ambient glows.",
+      "html": "<div class=\"ds-obsidian-field\"><h1 class=\"ds-hero\">Find out what you <span class=\"ds-hero-grad\">actually have</span></h1></div>",
+      "css": ".ds-obsidian-field { background: linear-gradient(135deg, #0a0e14 0%, #10141a 55%, #1a0a2e 100%); background-color: #0a0e14; padding: 48px 32px; background-image: radial-gradient(rgba(204, 52, 45, 0.05) 1px, transparent 1px); background-size: 48px 48px; } .ds-hero { font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.03em; color: #ffffff; margin: 0; } .ds-hero-grad { background: linear-gradient(90deg, #cc342d, #a855f7); -webkit-background-clip: text; background-clip: text; color: transparent; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Obsidian Engine",
+    "overview": "A dark technical blueprint: authoritative, precise, sophisticated. The brand surface is deep obsidian shading toward violet, lit by two inks — Ruby red (the JetThoughts mark) and neon purple — with engineering texture: grid-dot backdrops, stat chips, mono status indicators. The repository carries two coexisting layers: JetVelocity (brand world, normative for new brand/conversion surfaces) and the legacy light page chrome (BEM c-* components, being consolidated by the 2509 CSS migration).",
+    "keyCharacteristics": [
+      "Obsidian dark + ruby/purple dual-ink accents (brand surfaces)",
+      "Engineering texture: chips, pills, mono status dots, grid-dot backdrops",
+      "Space Grotesk 800 display over quiet system-ui body",
+      "Flat surfaces; depth via tone and glow, not shadow stacks",
+      "Light legacy chrome persists on existing pages — two worlds, never mixed mid-page"
+    ],
+    "rules": [
+      { "name": "The Ruby Ink Rule", "body": "Ruby #cc342d is the brand accent ink, used sparingly and structurally (pills, gradient starts, borders) — its rarity is its authority. It is never a background wash.", "section": "colors" },
+      { "name": "The Never-Pure-White Rule", "body": "On obsidian surfaces body text is #dfe2eb, never #ffffff — pure white is reserved for display headlines.", "section": "colors" },
+      { "name": "The One-Gradient-Word Rule", "body": "The ruby→purple gradient belongs to at most one emphasized display phrase per surface; everything else stays solid.", "section": "typography" }
+    ],
+    "dos": [
+      "Do use ruby (#cc342d) as the structural accent — pills, borders, gradient starts — on both worlds.",
+      "Do keep body text #dfe2eb on obsidian and #121212 on paper.",
+      "Do reuse the BEM c-* components on light pages and the chip/pill/status vocabulary on brand surfaces before inventing new patterns.",
+      "Do hold the two-ink limit: ruby leads, purple partners, cyan only as a tertiary informational accent."
+    ],
+    "donts": [
+      "Don't mix the worlds mid-page — a surface is either obsidian-brand or light-chrome.",
+      "Don't carry legacy blue (#1a8cff) onto obsidian surfaces.",
+      "Don't stack box-shadows for depth; use tone and glow.",
+      "Don't use pure white body text on dark, or gradient more than one display phrase per surface.",
+      "Don't invent a third accent hue; the palette is closed."
+    ]
+  }
+}
