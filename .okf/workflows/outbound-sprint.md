@@ -3,7 +3,7 @@ type: Playbook
 title: Outbound sprint machinery (2607 Vibe Code Rescue)
 description: How the browser-agent outreach loop runs - pre-validated sends, daily reply monitoring, the pipeline ledger, board conventions, and the mail-routing gotchas.
 tags: [outbound, sales, browser-agent, kanban]
-timestamp: 2026-07-24T00:00:00Z
+timestamp: 2026-07-25T00:00:00Z
 resource: docs/projects/2607-vibe-code-rescue/
 ---
 
@@ -41,6 +41,21 @@ resource: docs/projects/2607-vibe-code-rescue/
 - Every open card carries a `Requires:` line separating Paul-only inputs
   (logged-in browser, approvals, calls, warm-network picks) from
   agent-doable work, so agents never claim un-runnable cards.
+
+# Discovery-call tooling (2026-07-25)
+
+- Record + transcribe every call; Paul takes zero notes. Recommended:
+  **Fathom free tier** — unlimited recording/transcripts, bot-free Mac
+  desktop capture, MCP integration (agents pull transcripts directly).
+  Since Apr 2026 Google Meet flags bot-join recorders (Fireflies/Otter)
+  as security risks; a visible bot also reads as surveillance to a
+  burned founder. Fallback: Gemini "Take notes for me" (needs Workspace
+  Business Standard). Consent line lives in the playbook pre-call prep.
+- Transcript feeds three artifacts: audit brief (card #24), VoC
+  verbatim lines, objection-bank updates.
+- **Optional pre-call fast-track** (discovery-kit): capped ~30-min
+  preliminary repo pass when the founder grants access at booking —
+  call opens with findings, not logistics. Never required (trust bar).
 
 # Gotchas
 

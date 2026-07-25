@@ -42,7 +42,7 @@ Distilled operational knowledge lives in the OKF v0.1 bundle at `.okf/` (markdow
 - `.okf/design/` — mermaid/Caveat theme, house visual spec, cover pipeline, course typography
 - `.okf/workflows/` — render-verification recipes, review-swarm pattern
 
-**Maintain it as you work**: when you learn something durable (a new canon number, a root-cause fix, a workflow gotcha), update the affected concept file and its `timestamp`, refresh the section `index.md`, and append a dated entry to `.okf/log.md`. Validate with `/okf:validate .okf --strict` before committing bundle changes.
+**Maintain it as you work (ENFORCED, parallel by default)**: when you learn something durable (a new canon number, a root-cause fix, a workflow gotcha), update the affected concept file and its `timestamp`, refresh the section `index.md`, and append a dated entry to `.okf/log.md`. **Do NOT defer this to session end**: dispatch a background okf-maintainer agent (`/okf:okf maintain` scope) IN PARALLEL with the main work as soon as a durable learning lands, so bundle sync rides the same commit as the change it describes. Sessions that can't parallelize (tiny fixes) run maintain inline before the final commit. Fallback safety net: a scheduled weekly maintain pass (cron/`/loop`) that diffs recent commits against `.okf/log.md` and back-fills anything missed. Validate with `/okf:validate .okf --strict` before committing bundle changes. A session that shipped durable knowledge without an OKF entry is NOT done — same rule as async-first communication.
 
 ---
 
