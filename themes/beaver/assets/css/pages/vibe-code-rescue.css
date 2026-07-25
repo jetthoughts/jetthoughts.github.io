@@ -52,6 +52,12 @@
   color: #ffffff !important;
 }
 
+/* The mobile drawer (.navigation.-open) slides in with a WHITE panel —
+   restore the site's dark link color inside it. */
+.top-panel .navigation.-open a.link {
+  color: var(--color-dark) !important;
+}
+
 /* ---------- Hero: the obsidian field ---------- */
 
 .vcr-hero {
