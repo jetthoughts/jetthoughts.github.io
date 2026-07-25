@@ -124,7 +124,7 @@ The 3-touch no-reply sequence lives at the bottom. It works for founders who boo
 
 ## 3-touch no-reply follow-up sequence
 
-For founders who booked a call but went quiet, or who replied to an opener but didn't book. Space each touch 3-4 business days apart. Stop after three.
+For founders who booked a call but went quiet, or who replied to an opener but didn't book. Touch 1 goes out right after the silence; then leave roughly a week between touches (see the day ranges below). Stop after three.
 
 ### Touch 1 (day 0, right after the silence)
 
