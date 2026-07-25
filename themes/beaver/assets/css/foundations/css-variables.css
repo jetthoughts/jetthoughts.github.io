@@ -36,4 +36,16 @@
 
   /* Default corner radius (145 exact border-radius:4px occurrences). */
   --radius-default: 4px;
+
+  /* JetVelocity brand-surface (dark) tokens — canonical values from
+     DESIGN.md / .stitch/design.md ("The Obsidian Engine"). Extracted
+     2026-07-26 from pages/vibe-code-rescue.css so dark brand surfaces
+     (and site chrome rendered over them) resolve them anywhere. */
+  --color-obsidian: #0a0e14;
+  --color-obsidian-raise: #10141a;
+  --color-obsidian-violet: #1a0a2e;
+  --color-neon-purple: #a855f7;
+  --color-ruby-hover: #e04a42;
+  --color-on-dark: #dfe2eb;
+  --color-label-dark: #8f97a8;
 }

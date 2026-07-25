@@ -272,6 +272,19 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "contact_us"
   end
 
+  def test_vibe_code_rescue
+    visit "/services/vibe-code-rescue/"
+
+    # The rescue landing must lead with the founder's symptom, name the
+    # deliverable (48-hour scorecard), and show the confirmed tier pricing
+    # (A2 canon) with the NeetoCal booking CTA.
+    assert_text "Your MVP looks finished but keeps breaking"
+    assert_text "Is this you?"
+    assert_text "$7,500"
+    assert_link "Book your free Rescue Context Call"
+    assert_stable_screenshot "vibe_code_rescue"
+  end
+
   def test_free_consultation
     visit "/"
 

@@ -1,11 +1,13 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-26T00:30:00Z",
+  "generatedAt": "2026-07-26T01:20:00Z",
   "title": "Design System: JetThoughts — JetVelocity",
   "extensions": {
     "colorMeta": {
       "ruby": { "role": "primary", "displayName": "Ruby", "canonical": "#cc342d", "tonalRamp": ["oklch(20% 0.09 25)", "oklch(30% 0.13 25)", "oklch(40% 0.16 25)", "oklch(50% 0.19 25)", "oklch(55% 0.19 25)", "oklch(65% 0.15 25)", "oklch(80% 0.08 25)", "oklch(93% 0.03 25)"] },
       "neon-purple": { "role": "secondary", "displayName": "Neon Purple", "canonical": "#a855f7", "tonalRamp": ["oklch(22% 0.12 300)", "oklch(32% 0.17 300)", "oklch(42% 0.21 300)", "oklch(52% 0.24 300)", "oklch(62% 0.24 300)", "oklch(72% 0.18 300)", "oklch(84% 0.10 300)", "oklch(94% 0.04 300)"] },
+      "ruby-hover": { "role": "primary", "displayName": "Ruby Hover", "canonical": "#e04a42", "tonalRamp": [] },
+      "status-green": { "role": "secondary", "displayName": "Status Green", "canonical": "#22c55e", "tonalRamp": [] },
       "obsidian-deep": { "role": "neutral", "displayName": "Obsidian Deep", "canonical": "#0a0e14", "tonalRamp": ["oklch(12% 0.01 250)", "oklch(18% 0.012 250)", "oklch(26% 0.014 250)", "oklch(36% 0.014 250)", "oklch(48% 0.012 250)", "oklch(62% 0.01 250)", "oklch(78% 0.008 250)", "oklch(92% 0.005 250)"] },
       "legacy-blue": { "role": "neutral", "displayName": "Legacy Blue (incumbent light-page primary)", "canonical": "#1a8cff", "tonalRamp": ["oklch(25% 0.1 250)", "oklch(35% 0.13 250)", "oklch(45% 0.16 250)", "oklch(55% 0.18 250)", "oklch(65% 0.17 250)", "oklch(75% 0.12 250)", "oklch(85% 0.07 250)", "oklch(94% 0.03 250)"] },
       "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#121212", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(58% 0 0)", "oklch(70% 0 0)", "oklch(82% 0 0)", "oklch(94% 0 0)"] }

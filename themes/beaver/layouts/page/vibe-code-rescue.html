@@ -1,0 +1,125 @@
+{{ define "header" }}
+  {{- $resources := slice
+    (resources.Get "css/critical/base.css")
+    (resources.Get "css/pages/vibe-code-rescue.css")
+    (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+    (resources.Get "css/586.css")
+    (resources.Get "css/vendors/base-4.min.css")
+    (resources.Get "css/style.css")
+    (resources.Get "css/legacy-theme-skin.css")
+    (resources.Get "css/footer.css")
+  -}}
+  {{ partialCached "assets/css-processor.html" (dict "resources" $resources "bundleName" "vibe-code-rescue") "vibe-code-rescue" }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+{{ end }}
+
+{{ define "main" }}
+{{- $booking := "https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar" -}}
+<div id="fl-main-content" class="fl-page-content vcr-page" role="main">
+  <article>
+
+    <section class="vcr-hero">
+      <div class="vcr-container">
+        <p class="vcr-eyebrow">Vibe Code Rescue</p>
+        <h1 class="vcr-h1">Your MVP looks finished but keeps breaking.<br>
+          We make it <span class="vcr-grad">actually work</span> - and hand you back a product you own and understand.</h1>
+        <p class="vcr-lede">You paid a dev shop or an AI tool to build your app. The demo looked great. Then real people started using it, and things you thought were done stopped working. Now you're not sure what you actually have, and you can't tell whether one more round of fixes will help or just burn another month. We take over broken founder MVPs, fix the broken parts, and give you a fractional CTO who explains every decision in plain English.</p>
+        <div class="vcr-hero-actions">
+          <a class="vcr-cta" href="{{ $booking }}">Book your free Rescue Context Call</a>
+          <span class="vcr-status"><span class="vcr-status-dot"></span>NO CONTRACT &middot; SCORECARD IN 48H</span>
+        </div>
+        <ul class="vcr-chips" aria-label="JetThoughts track record">
+          <li class="vcr-chip vcr-chip-ruby"><span class="vcr-chip-label">Clients rated us</span><span class="vcr-chip-value">4.8 / 5</span></li>
+          <li class="vcr-chip vcr-chip-purple"><span class="vcr-chip-label">Average relationship</span><span class="vcr-chip-value">5 years</span></li>
+          <li class="vcr-chip vcr-chip-cyan"><span class="vcr-chip-label">Shipping Rails</span><span class="vcr-chip-value">since 2011</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="vcr-symptoms">
+      <div class="vcr-container">
+        <h2 class="vcr-h2">Is this you?</h2>
+        <ul class="vcr-symptom-list">
+          <li>You open the app for a new user and something that worked yesterday breaks today.</li>
+          <li>Your developers say they're "refactoring" or "on the architecture," but you still can't click through a working product.</li>
+          <li>You don't hold the keys - the code lives in someone else's GitHub and the server sits under their account.</li>
+          <li>Payments look fine in the demo, and you quietly wonder whether a real charge would ever reach your bank.</li>
+        </ul>
+        <p class="vcr-symptom-verdict">If you nodded at two of these, you're the founder we built this for.</p>
+      </div>
+    </section>
+
+    <section class="vcr-quotes" aria-label="What founders in this situation say">
+      <div class="vcr-container">
+        <figure class="vcr-quote">
+          <blockquote>&ldquo;Bugs kept breaking parts of the app, and I had no visibility into what was happening.&rdquo;</blockquote>
+          <figcaption>- founder, IndieHackers</figcaption>
+        </figure>
+        <figure class="vcr-quote">
+          <blockquote>&ldquo;Vibe coding gave me a product. It also gave me a problem I couldn't fix.&rdquo;</blockquote>
+          <figcaption>- founder, r/startups</figcaption>
+        </figure>
+        <figure class="vcr-quote">
+          <blockquote>&ldquo;They told me it was easier to burn the whole thing down and start over.&rdquo;</blockquote>
+          <figcaption>- founder, r/cursor</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="vcr-step1">
+      <div class="vcr-container">
+        <h2 class="vcr-h2">Step 1 - Free Rescue Context Call + AI-Intensive Audit</h2>
+        <p class="vcr-step1-sub">45 minutes + 48-hour scorecard</p>
+        <p>Book a 45-minute context call. We use that time to understand your business pain and collect read-only access to your code, task board, and dev chats. Then our team runs an intensive, AI-assisted technical due diligence offline. Within 48 hours you get a one-page, plain-English scorecard: what's solid, what's fragile, whether to salvage or rebuild, and the exact next step. You keep the scorecard whether or not we work together. No contract, and no follow-up calls you didn't ask for.</p>
+        <a class="vcr-cta" href="{{ $booking }}">Book your free Rescue Context Call</a>
+      </div>
+    </section>
+
+    <section class="vcr-tiers">
+      <div class="vcr-container">
+        <h2 class="vcr-h2">Step 2 - Pick your rescue level</h2>
+        <div class="vcr-tier-grid">
+          <div class="vcr-tier">
+            <h3 class="vcr-tier-name">Triage Sprint</h3>
+            <p class="vcr-tier-price">$2,500 <span class="vcr-tier-time">48 hours</span></p>
+            <p>Fix the top 3 things that are bleeding users right now. One senior engineer reads the code, patches the critical blockers, and sends you a plain-English health report. You see real results before committing more.</p>
+            <p class="vcr-tier-fit"><strong>Good for:</strong> "I just need the login/checkout/main feature to stop breaking."</p>
+          </div>
+          <div class="vcr-tier vcr-tier-featured">
+            <h3 class="vcr-tier-name">Rescue</h3>
+            <p class="vcr-tier-price">$7,500 <span class="vcr-tier-time">2-3 weeks</span></p>
+            <p>Fix everything that's broken, harden the security, stabilize auth and payments, and hand you back a production-ready app. You own the code and every account after each milestone. 30-day warranty included.</p>
+            <p class="vcr-tier-fit"><strong>Good for:</strong> "I want the whole thing working reliably for real users."</p>
+          </div>
+          <div class="vcr-tier">
+            <h3 class="vcr-tier-name">Foundation Reset</h3>
+            <p class="vcr-tier-price">$10,000 <span class="vcr-tier-time">4-6 weeks</span></p>
+            <p>When the code can't hold the product you're describing, we build a new foundation on Rails - keeping your design, your data, and whatever code is worth keeping (usually 30-50%). Full test suite, 60-day warranty.</p>
+            <p class="vcr-tier-fit"><strong>Good for:</strong> "I've been told it needs a full rebuild, but I don't want to start from zero."</p>
+          </div>
+        </div>
+        <ul class="vcr-includes">
+          <li>Fixed price, agreed in writing before we start. The number doesn't creep.</li>
+          <li>Code and server ownership transferred at each milestone, not at some vague "end."</li>
+          <li>Paul sits on every call as your fractional CTO, translating what the developers are doing into decisions you can make.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="vcr-why">
+      <div class="vcr-container">
+        <h2 class="vcr-h2">Why JetThoughts</h2>
+        <p>We've been shipping Ruby on Rails since 2011. We use AI-assisted development to move faster and keep costs honest - which is how we can offer a full rescue at $7,500 when traditional agencies quote $25K-$55K for the same work. Thirty-two clients rated us 4.8 out of 5, and our average client relationship runs five years. Paul, our CEO, sits on every call as your fractional CTO and turns what the developers are doing into decisions you can actually make - so you stop guessing whether your team is telling you the truth.</p>
+        <p>You've been burned once. The whole point of the free audit is that you find out where you stand first - with a senior engineer who has no reason to tell you anything but the truth.</p>
+        <div class="vcr-final">
+          <a class="vcr-cta" href="{{ $booking }}">Book your free Rescue Context Call</a>
+          <p class="vcr-final-note">The audit is read-only. We do not copy secrets, customer data, or credentials - ever. You keep the write-up either way.</p>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</div>
+{{ end }}

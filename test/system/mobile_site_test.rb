@@ -162,6 +162,15 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "contact_us"
   end
 
+  def test_vibe_code_rescue
+    visit "/services/vibe-code-rescue/"
+
+    assert_text "Your MVP looks finished but keeps breaking"
+    assert_text "$7,500"
+    assert_link "Book your free Rescue Context Call"
+    assert_stable_screenshot "vibe_code_rescue"
+  end
+
   def test_free_consultation
     visit "/"
     # Add more specific scoping for Talk to an Expert button
