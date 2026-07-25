@@ -25,11 +25,12 @@
   --vcr-chip-bg: rgba(28, 32, 38, 0.75);
   --vcr-display: "Space Grotesk", "Space Grotesk Fallback", var(--font-system-ui);
 
-  background: var(--color-obsidian);
   color: var(--color-on-dark);
   font-family: var(--font-system-ui);
-  font-size: 16px;
-  line-height: 1.6;
+  /* body-dark: 17px/1.65 — light-on-dark reads optically smaller, so the
+     dark-surface body sits one step above the 16px light-page body. */
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 .vcr-container {
@@ -89,15 +90,18 @@
   font-size: 13px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-ruby);
+  /* ruby-light: base ruby measures ~3.8:1 on obsidian at 13px (< AA 4.5). */
+  color: #ff8a7a;
   margin: 0 0 20px;
 }
 
 .vcr-h1 {
   font-family: var(--vcr-display);
   font-weight: 800;
-  font-size: clamp(1.9rem, 5.2vw, 3.1rem);
-  line-height: 1.12;
+  /* Tightened (option B): the 3.1rem cap ate the whole fold; 2.6rem lets
+     the lede + CTA rise above it on laptops. */
+  font-size: clamp(1.7rem, 4.4vw, 2.6rem);
+  line-height: 1.14;
   letter-spacing: -0.03em;
   color: #ffffff;
   margin: 0 0 24px;
@@ -111,9 +115,13 @@
 }
 
 .vcr-lede {
-  font-size: 18px;
+  font-size: 19px;
   color: var(--color-on-dark);
-  margin: 0 0 32px;
+  margin: 0 0 18px;
+}
+
+.vcr-lede:last-of-type {
+  margin-bottom: 32px;
 }
 
 .vcr-hero-actions {
@@ -374,10 +382,6 @@
 }
 
 .vcr-tier-fit {
-  color: var(--color-label-dark);
-}
-
-.vcr-tier-fit strong {
   color: var(--color-on-dark);
 }
 

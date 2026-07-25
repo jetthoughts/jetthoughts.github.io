@@ -20,7 +20,7 @@ colors:
 typography:
   display:
     fontFamily: "Space Grotesk, Space Grotesk Fallback, system-ui, sans-serif"
-    fontSize: "clamp(1.9rem, 5.2vw, 3.1rem)"
+    fontSize: "clamp(1.7rem, 4.4vw, 2.6rem)"
     fontWeight: 800
     letterSpacing: "-0.03em"
   headline:
@@ -43,7 +43,11 @@ typography:
     fontWeight: 700
   lede:
     fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
-    fontSize: "18px"
+    fontSize: "19px"
+  body-dark:
+    fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "17px"
+    lineHeight: 1.65
   label:
     fontFamily: "Inter, system-ui, sans-serif"
     fontSize: "13px"

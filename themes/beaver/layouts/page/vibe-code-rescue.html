@@ -25,13 +25,15 @@
         <p class="vcr-eyebrow">Vibe Code Rescue</p>
         <h1 class="vcr-h1">Your MVP looks finished but keeps breaking.<br>
           We make it <span class="vcr-grad">actually work</span> - and hand you back a product you own and understand.</h1>
-        <p class="vcr-lede">You paid a dev shop or an AI tool to build your app. The demo looked great. Then real people started using it, and things you thought were done stopped working. Now you're not sure what you actually have, and you can't tell whether one more round of fixes will help or just burn another month. We take over broken founder MVPs, fix the broken parts, and give you a fractional CTO who explains every decision in plain English.</p>
+        {{/* Verbatim one-pager copy; paragraph breaks at sentence boundaries only (readability, not rewording). */}}
+        <p class="vcr-lede">You paid a dev shop or an AI tool to build your app. The demo looked great. Then real people started using it, and things you thought were done stopped working.</p>
+        <p class="vcr-lede">Now you're not sure what you actually have, and you can't tell whether one more round of fixes will help or just burn another month. We take over broken founder MVPs, fix the broken parts, and give you a fractional CTO who explains every decision in plain English.</p>
         <div class="vcr-hero-actions">
           <a class="vcr-cta" href="{{ $booking }}">Book your free Rescue Context Call</a>
           <span class="vcr-status"><span class="vcr-status-dot"></span>NO CONTRACT &middot; SCORECARD IN 48H</span>
         </div>
         <ul class="vcr-chips" aria-label="JetThoughts track record">
-          <li class="vcr-chip vcr-chip-ruby"><span class="vcr-chip-label">Clients rated us</span><span class="vcr-chip-value">4.8 / 5</span></li>
+          <li class="vcr-chip"><span class="vcr-chip-label">Clients rated us</span><span class="vcr-chip-value">4.8 / 5</span></li>
           <li class="vcr-chip vcr-chip-purple"><span class="vcr-chip-label">Average relationship</span><span class="vcr-chip-value">5 years</span></li>
           <li class="vcr-chip vcr-chip-cyan"><span class="vcr-chip-label">Shipping Rails</span><span class="vcr-chip-value">since 2011</span></li>
         </ul>
@@ -51,6 +53,9 @@
       </div>
     </section>
 
+    {{/* Verbatim [VERBATIM-founder] quotes from
+         docs/projects/2607-vibe-code-rescue/rescue-sprint/voice-of-customer.md
+         (permitted by PRODUCT.md evidence policy; anonymized to venue). */}}
     <section class="vcr-quotes" aria-label="What founders in this situation say">
       <div class="vcr-container">
         <figure class="vcr-quote">
@@ -72,7 +77,9 @@
       <div class="vcr-container">
         <h2 class="vcr-h2">Step 1 - Free Rescue Context Call + AI-Intensive Audit</h2>
         <p class="vcr-step1-sub">45 minutes + 48-hour scorecard</p>
-        <p>Book a 45-minute context call. We use that time to understand your business pain and collect read-only access to your code, task board, and dev chats. Then our team runs an intensive, AI-assisted technical due diligence offline. Within 48 hours you get a one-page, plain-English scorecard: what's solid, what's fragile, whether to salvage or rebuild, and the exact next step. You keep the scorecard whether or not we work together. No contract, and no follow-up calls you didn't ask for.</p>
+        <p>Book a 45-minute context call. We use that time to understand your business pain and collect read-only access to your code, task board, and dev chats.</p>
+        <p>Then our team runs an intensive, AI-assisted technical due diligence offline. Within <strong>48 hours</strong> you get a <strong>one-page, plain-English scorecard</strong>: what's solid, what's fragile, whether to salvage or rebuild, and the exact next step.</p>
+        <p><strong>You keep the scorecard whether or not we work together.</strong> No contract, and no follow-up calls you didn't ask for.</p>
         <a class="vcr-cta" href="{{ $booking }}">Book your free Rescue Context Call</a>
       </div>
     </section>
@@ -111,7 +118,8 @@
     <section class="vcr-why">
       <div class="vcr-container">
         <h2 class="vcr-h2">Why JetThoughts</h2>
-        <p>We've been shipping Ruby on Rails since 2011. We use AI-assisted development to move faster and keep costs honest - which is how we can offer a full rescue at $7,500 when traditional agencies quote $25K-$55K for the same work. Thirty-two clients rated us 4.8 out of 5, and our average client relationship runs five years. Paul, our CEO, sits on every call as your fractional CTO and turns what the developers are doing into decisions you can actually make - so you stop guessing whether your team is telling you the truth.</p>
+        <p>We've been shipping Ruby on Rails since 2011. We use AI-assisted development to move faster and keep costs honest - which is how we can offer a full rescue at $7,500 when traditional agencies quote $25K-$55K for the same work.</p>
+        <p>Thirty-two clients rated us 4.8 out of 5, and our average client relationship runs five years. Paul, our CEO, sits on every call as your fractional CTO and turns what the developers are doing into decisions you can actually make - so you stop guessing whether your team is telling you the truth.</p>
         <p>You've been burned once. The whole point of the free audit is that you find out where you stand first - with a senior engineer who has no reason to tell you anything but the truth.</p>
         <div class="vcr-final">
           <a class="vcr-cta" href="{{ $booking }}">Book your free Rescue Context Call</a>
