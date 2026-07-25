@@ -36,7 +36,7 @@
 
 | # | handle/channel | source URL | why-ICP (verbatim quote) | verdict | best path |
 |---|---|---|---|---|---|
-| 15 | dianewilliams75 | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | "This is my current situation!" | ICP | IH DM |
+| 15 | dianewilliams75 | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | "This is my current situation!" | semi-ICP (quote is content-free — reacting to a help-offer thread; no evidence of a broken app; verify her actual situation before sending) | IH DM |
 | 16 | 659ertramp | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | "I'm a trades professional (electrician) working on a practical AI-driven tool for contractors... I'm at the point where I need the right technical direction to bring the MVP to life without wasting time or money." | semi-ICP (pre-build/direction-seeking — may have no code to audit; send last, verify code exists) | IH DM |
 | 17 | J_Jie556517 | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | "I'm a university professor with a field-tested methodology for intonation training looking for a technical partner." | semi-ICP (partner-seeking, likely pre-build — audit offer may not fit; send last, verify code exists) | IH DM |
 | 18 | lucadeza | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | "I am a former professional athlete building an AI Powered B2B SaaS platform but non technical (currently using an agency). ... I am looking for a technical co-founder so that we can start building in house." | ICP | IH DM |

@@ -71,7 +71,7 @@ See the full script, suggested questions, and objection handling in [`45-minute-
 
 ## Data handling and access safety
 
-The Rescue Audit is **read-only** by default. We look at your repo, task board, and chat history to understand the situation. We do not copy source code, secrets, customer data, or credentials into the write-up unless you explicitly ask us to — and then only the minimum necessary.
+The Rescue Audit is **read-only** by default. We look at your repo, task board, and chat history to understand the situation. We do not copy secrets, customer data, or credentials into the write-up — ever, even on request. If you explicitly ask us to include code in the write-up, we include only sanitized excerpts.
 
 - **Read-only access**: We ask for read-only access to the repo, task board, and sanitized/non-production environment where possible. You keep ownership of every account at all times.
 - **NDA**: We sign a mutual NDA before accessing sensitive artifacts.

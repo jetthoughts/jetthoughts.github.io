@@ -3,7 +3,7 @@
 **ONE-PAGE EXECUTIVE SUMMARY** - quick orientation for agents and stakeholders
 
 **Last Updated**: 2026-07-21
-**Status**: 🔄 NEXT ACTIVE PROJECT (marketing & content) - execution resuming
+**Status**: 🔄 Supporting workstream under portfolio bet #1 (Vibe Code Rescue) - execution resuming
 **Business plan of record**: content here feeds the [2026 Autumn Client Acquisition Strategy](../2607-vibe-code-rescue/strategy.md) (Vibe Code Rescue offer, 1 client by Nov 30), run via the [Operating System](../../business/operating-system.md).
 
 > **2026-07-21 reconcile note**: This overview previously described a 4-pillar

@@ -30,7 +30,7 @@ Send a short email immediately after booking:
 >
 > Please have handy:
 > - A link to your app / website.
-> - Admin access to your code repo (GitHub/GitLab) and hosting account (AWS/Vercel/etc.).
+> - Confirmation that you hold admin rights on your code repo (GitHub/GitLab) and hosting account (AWS/Vercel/etc.) - so you can add us as a read-only user on the call. We never take admin credentials.
 > - Access to your task board (Jira/Linear/Trello) and dev chat (Slack/Teams).
 >
 > We will send a mutual NDA before we look at anything sensitive.

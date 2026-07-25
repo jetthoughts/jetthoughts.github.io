@@ -130,7 +130,7 @@ For founders who booked a call but went quiet, or who replied to an opener but d
 
 **Subject / opener**: "Still happy to look at the code"
 
-> No pressure. The Code Audit slot is still yours if you want it - one of our senior engineers reads your actual codebase and you get a one-page write-up in plain English. It's yours whether or not we ever work together.
+> No pressure. The free Code Audit is still on the table if you want it - one of our senior engineers reads your actual codebase and you get a one-page write-up in plain English. It's yours whether or not we ever work together.
 >
 > If the timing isn't right, just say the word and I'll check back in a few weeks instead.
 

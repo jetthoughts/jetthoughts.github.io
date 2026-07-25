@@ -73,7 +73,7 @@ Agent writes these queries into `outbound-openers.md` for Paul to run in his own
 | template | thread-reply |
 | status | Not contacted |
 
-Rows land in `warm-intro-referral-kit.md` (warm) or a Cold section of the same file, so T6 can merge one list.
+Rows land in `warm-intro-referral-kit.md` (warm) or `cold-prospect-list.md` (cold), so T6 can merge one list.
 
 ---
 
@@ -123,4 +123,4 @@ Two research passes (ToolLandscape + CommunitySignals) corrected and enriched th
 
 ---
 
-## Next Ready: T4 (web cold), T5 (Reddit cold) - both agent-unattended, run now. T3 waits on Paul's Gmail consent (optional, non-blocking).
+## Status: sourcing COMPLETE (P1-P9 done 2026-07-22; this file's recipes fed them). Live state: `../backlog.md` State section. T3 (Gmail warm) remains optional, waiting on Paul's consent.

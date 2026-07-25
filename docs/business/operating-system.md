@@ -36,7 +36,7 @@ One person can hold several seats - but every seat has exactly one accountable o
 |---|---|---|
 | KR1 - Offer + white-label partner live | Rescue Audit priced, partner signed, landing CTA live | 🟢 partner signed ✓; offer priced ✓ ($2,500 / $7,500 / $10,000); landing deferred |
 | KR2 - Discovery calls booked | 8-12 by Nov 15 | 🔲 |
-| KR3 - Audits delivered | 3-5 paid Rescue Audits | 🔲 |
+| KR3 - Audits delivered | 3-5 free Rescue Audits (45-min call + 48h scorecard — the funnel entry; paid tiers follow) | 🔲 |
 | KR4 - Rescue signed | **1 engagement by Nov 30** | 🔲 |
 
 ## 3. Rocks (90-day priorities = roadmap milestones)

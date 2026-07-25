@@ -26,7 +26,7 @@
 
 > "Repeat 200 times a day" - I felt that. The deploy-break-paste-fix cycle with Claude is brutal because the AI doesn't remember what it broke last time.
 >
-> If you want a second pair of eyes on what you've got, book 45 minutes here and one of our engineers will map your codebase - what's solid, what's fragile, and whether to fix or rebuild. You keep the write-up either way.
+> If you want a second pair of eyes on what you've got, book 45 minutes here - our engineers take it from there and send you a write-up within 48 hours: what's solid, what's fragile, and whether to fix or rebuild. You keep it either way.
 >
 > https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar
 
@@ -42,7 +42,7 @@
 
 > "Vibe coding gave me a product. It also gave me a problem I couldn't fix." - this is exactly the pattern we built our rescue service around. AI tools are great for prototypes but the code they write often can't hold real users.
 >
-> We can map your codebase, task board, and dev chats in 45 minutes and tell you what's breaking and why. No jargon, the write-up is yours. Might save you another month of guessing.
+> Book 45 minutes, walk us through it, and we'll map your codebase, task board, and dev chats - you get a no-jargon write-up of what's breaking and why within 48 hours. It's yours either way. Might save you another month of guessing.
 >
 > https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar
 
@@ -58,7 +58,7 @@
 
 > That "Found it, Let me fix this, that didn't work" loop is the signature of AI-generated code hitting its limits. The AI doesn't have a mental model of the whole system, so each fix creates a new problem somewhere else.
 >
-> We can map what's solid vs what's sand in 45 minutes. Book a call, we run the code, you get a straight-answer write-up. Yours to keep.
+> Book a 45-minute call, we run the code after it, and you get a straight-answer write-up within 48 hours - what's solid vs what's sand. Yours to keep.
 >
 > https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar
 
@@ -74,7 +74,7 @@
 
 > "The AI gave me marshmallows" - that's the best description of AI-generated code I've seen. The demo works, the structure doesn't.
 >
-> If you're trying to figure out how much of what you built is worth keeping, book 45 minutes. We run the code and give you a plain-English verdict - salvage, fix, or rebuild. You keep the write-up either way.
+> If you're trying to figure out how much of what you built is worth keeping, book 45 minutes. We run the code after the call and send a plain-English verdict within 48 hours - salvage, fix, or rebuild. You keep the write-up either way.
 >
 > https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar
 
@@ -82,7 +82,7 @@
 
 > "They told me it was easier to burn the whole thing down and start over" - that's usually the lazy answer. Most AI-built apps have 30-50% worth keeping if someone knows where to look.
 >
-> We'll give you an honest read on what's salvageable and what isn't. 45 minutes, the write-up is yours whether or not you hire anyone. Might save you from paying $55K to rebuild something that didn't need rebuilding.
+> We'll give you an honest read on what's salvageable and what isn't. 45 minutes, the write-up is yours whether or not you hire anyone. Might save you from paying for a full rebuild of something that didn't need rebuilding.
 >
 > https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar
 

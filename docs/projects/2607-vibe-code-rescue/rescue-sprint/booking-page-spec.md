@@ -38,7 +38,7 @@ Paul builds this once in his Cal.com or NeetoCal account.
 
 ### Confirmation message copy
 
-> You're booked. Here's what happens: we spend 45 minutes understanding your situation and collecting read-only access to your code, task board, and dev chats. Then our team runs an intensive, AI-assisted audit offline and sends you a one-page, plain-English scorecard within 48 hours — what's solid, what's fragile, and whether to salvage or rebuild. If you can, bring read access to your repo (GitHub, GitLab, wherever the code lives). Nothing else to prep. See you soon.
+> You're booked. Here's what happens: we spend 45 minutes understanding your situation and collecting read-only access to your code, task board, and dev chats. Then our team runs an intensive, AI-assisted audit offline and sends you a one-page, plain-English scorecard within 48 hours — what's solid, what's fragile, and whether to salvage or rebuild. Please come with read-only access to your repo if you have it (GitHub, GitLab, wherever the code lives) — the 48-hour audit needs it. If the dev shop still holds the keys, come anyway: getting you access is part of what we sort out on the call. See you soon.
 >
 > - Paul
 

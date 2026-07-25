@@ -3,11 +3,14 @@
 > Seeded threads: `/post/looking-to-help-non-technical-founders-6e1d9b33ae` (68 comments) + `/post/im-non-technical-and-hit-the-month-3-wall-twice-here-s-the-system-i-built-that-fixed-it-no-github-required-f4a574c4cd` (3 comments, vendor OP skipped).
 
 ## Rows
+
+> **Verdict corrections (2026-07-24 review)**: `cold-prospect-list.md` is canonical — it downgraded dianewilliams75 (content-free quote), 659ertramp + J_Jie556517 (pre-build/partner-seeking) to semi-ICP with send-last holds. This file keeps the original P1 capture for provenance. Schema note: `best path` is assigned at P8/P9 (merge/opener) time, not at capture.
+
 | handle/channel | source URL | trigger# | why-ICP (verbatim quote) | verdict |
 |---|---|---|---|---|
-| dianewilliams75 | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | 7 | "This is my current situation!" | ICP |
-| 659ertramp | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | 7 | "I'm a trades professional (electrician) working on a practical AI-driven tool for contractors... I'm at the point where I need the right technical direction to bring the MVP to life without wasting time or money." | ICP |
-| J_Jie556517 | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | 7 | "I'm a university professor with a field-tested methodology for intonation training looking for a technical partner." | ICP |
+| dianewilliams75 | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | 7 | "This is my current situation!" | semi-ICP (downgraded — see note above) |
+| 659ertramp | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | 7 | "I'm a trades professional (electrician) working on a practical AI-driven tool for contractors... I'm at the point where I need the right technical direction to bring the MVP to life without wasting time or money." | semi-ICP (downgraded — see note above) |
+| J_Jie556517 | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | 7 | "I'm a university professor with a field-tested methodology for intonation training looking for a technical partner." | semi-ICP (downgraded — see note above) |
 | lucadeza | https://www.indiehackers.com/post/looking-to-help-non-technical-founders-6e1d9b33ae | 7 | "I am a former professional athlete building an AI Powered B2B SaaS platform but non technical (currently using an agency). ... I am looking for a technical co-founder so that we can start building in house." | ICP |
 | Abnrav | https://www.indiehackers.com/post/looking-to-connect-with-non-technical-founders-f88cafc2c2 | 7 | "I am a non-technical founder ... I had an app built ... my lack of knowledge and ingenuity have prevented it from catching on. ... At this point, funds have run dry and I have lost the limited support that I had. The app is in the App and Google Play stores but it is stagnant." | ICP |
 | Afrikonnect | https://www.indiehackers.com/post/looking-to-connect-with-non-technical-founders-f88cafc2c2 | 3 | "Am currently burned by devs who aren't professional and lacking how to build and execute." | ICP |
