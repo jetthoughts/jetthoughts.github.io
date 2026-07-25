@@ -60,7 +60,7 @@ end to end and produces the first case study.
 
 | Window | Focus | Client-getting milestone |
 |---|---|---|
-| **Aug** | Build the machine | Offer + price defined; white-label partner locked; landing CTA + 1 case study live; LinkedIn at 3-4/wk; paid pilot on rescue keywords |
+| **Aug** | Build the machine | Offer + price defined ✓ (2026-07-22); white-label partner locked ✓ (2026-07-21); landing CTA + 1 case study live; LinkedIn at 3-4/wk; paid pilot on rescue keywords |
 | **Sep** | Fill the funnel | Ship 5 Control posts + rescue SEO cluster; magnets live; 5-8 discovery calls booked |
 | **Oct** | Convert | Deliver first audits -> rescue proposals; first signing; publish our own rescue case study |
 | **Nov** | Compound | Referral + case-study loop; Q1 2027 pipeline full |
@@ -73,5 +73,5 @@ LinkedIn qualified replies/wk -> magnet email subs -> **discovery calls booked**
 ## Biggest risk
 
 The **white-label delivery partner**. The offer is only sellable if delivery quality and speed
-are guaranteed under our brand. **Lock that partner first (Aug)** or Paul cannot credibly sell
-in September.
+are guaranteed under our brand. Partner locked 2026-07-21 ✓ — residual risk: **validate the
+paid trial hits our quality bar, and name a fallback partner** before September selling ramps.

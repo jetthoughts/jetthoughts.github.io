@@ -101,6 +101,6 @@ While reading a thread to validate a prospect, copy any line that names a feelin
 
 ## Cold-eyes note
 
-**Updated from P1-P7 sourcing + opener polish (2026-07-22)**: The phrase bank is now populated with real `[VERBATIM-founder]` quotes, not archetypes. Push is the strongest section (10 founder lines). Pull and Habit are the thinnest - more Pull lines ("I want to own my code," "I want someone to tell me the truth") would strengthen T7 openers. Anxiety lines are strong but skew toward "tool broke" rather than "shop burned me" - the Trigger-3 (ownership/hostage) founder language is underrepresented because those founders are hardest to find via open search.
+**Updated from P1-P7 sourcing + opener polish (2026-07-22)**: The phrase bank is now populated with real `[VERBATIM-founder]` quotes, not archetypes. Push is the strongest section (13 founder lines). Pull and Habit are the thinnest - more Pull lines ("I want to own my code," "I want someone to tell me the truth") would strengthen T7 openers. Anxiety lines are strong but skew toward "tool broke" rather than "shop burned me" - the Trigger-3 (ownership/hostage) founder language is underrepresented because those founders are hardest to find via open search.
 
 **For T7 openers**: Lead with Push words (their pain), add Pull wedge (our ownership differentiator), pre-empt one Anxiety (the "another agency will burn me" fear). The phrase bank has 16 usable mirror phrases across all four forces.

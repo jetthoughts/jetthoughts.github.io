@@ -1,6 +1,6 @@
 # RUN — copy-paste prompts (one per backlog task)
 
-Each prompt is self-contained. Paste ONE into a fresh session. Stage-1 tasks (P1-P7) are parallel-safe — run any/all at once. P8 needs P1-P7; P9 needs P8 + price. Repo: `/Users/pftg/tmp/jetthoughts.github.io`.
+Each prompt is self-contained. Paste ONE into a fresh session. Stage-1 tasks (P1-P7) are parallel-safe — run any/all at once. P8 needs any subset of P1-P7 that produced rows (P7/F5Bot is additive, never blocks); P9 needs P8 + price. Repo: the current checkout root (`git rev-parse --show-toplevel`).
 
 **Wrapper (all P-tasks share this spine):**
 > Run task **{ID}** from `docs/projects/2607-vibe-code-rescue/backlog.md`. Read that task row + `rescue-sprint/t4-t5-grooming.md` Vote 3 (qualification) once, then do ONLY {ID}. Use its seeded URLs. Tools: `web_search` + `chrome-devtools` only (Reddit = excerpt-only, don't open thread bodies). Append rows + `## VoC` lines to `rescue-sprint/prospects/{FILE}`. Qualify hard: non-technical FOUNDER only — never a dev venting or a supplier advertising rescue; every why-ICP must be a verbatim quoted sentence + URL; log ZERO supplier/agency posts. Set {ID} status in `backlog.md` when done. Don't commit.

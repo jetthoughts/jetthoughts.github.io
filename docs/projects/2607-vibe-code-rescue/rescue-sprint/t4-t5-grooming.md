@@ -27,7 +27,7 @@ Options (QueryStrategist): **A** site-scoped operator sweep · **B** first-perso
 | Precision — surfaces a real handle (×3) | 5 | 3 | 4 |
 | Avoids SEO-article noise (×2) | 4 | 2 | 5 |
 | Coverage across venues (×2) | 3 | 5 | 2 |
-| **Weighted total** | **43** | **31** | **34** |
+| **Weighted total** | **44** | **32** | **35** |
 
 **Pick: A primary, C as the rescue-lane for Trigger 3 (ownership-hostage), B blended INTO A (add emotional first-person phrasing to a site-scoped query — never standalone).**
 
@@ -47,7 +47,7 @@ Options (VoCWorkflow): **A** read-once extract-all per candidate · **B** two-ph
 | Verbatim quotes possible (×3) | 5 | 5 | 1 |
 | Fewest handoffs (×2) | 5 | 3 | 5 |
 | Row/VoC can't drift (×2) | 5 | 3 | 2 |
-| **Weighted total** | **50** | **42** | **31** |
+| **Weighted total** | **50** | **42** | **32** |
 
 **Pick: A (read-once, extract-all), fed by B's excerpt-triage front-end.** web_search excerpts build a cheap URL queue; one `chrome-devtools` open per queued URL produces validate + row + quotes in a single visit. Excerpt-only (C) rejected as capture (truncated/paraphrased violates the verbatim rule) — used ONLY to build the queue.
 

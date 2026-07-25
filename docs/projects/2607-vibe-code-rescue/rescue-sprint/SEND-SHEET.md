@@ -36,7 +36,7 @@
 
 > "Repeat 200 times a day" - I felt that. The deploy-break-paste-fix cycle with Claude is brutal because the AI doesn't remember what it broke last time.
 >
-> If you want a second pair of eyes on what you've got, book 45 minutes here and one of our engineers will map your codebase - what's solid, what's fragile, and whether to fix or rebuild. You keep the write-up either way.
+> If you want a second pair of eyes on what you've got, book 45 minutes here - our engineers take it from there and send you a write-up within 48 hours: what's solid, what's fragile, and whether to fix or rebuild. You keep it either way.
 >
 > https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar
 

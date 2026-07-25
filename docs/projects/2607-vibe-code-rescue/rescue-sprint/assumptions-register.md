@@ -21,7 +21,7 @@
 |---|---|---|---|---|---|
 | A1 non-tech burned founder | 5 | 5 | 4 | 4 | **32** |
 | A2 technical scaling founder | 4 | 3 | 4 | 3 | 25 |
-| A3 VC/accelerator as buyer | 2 | 2 | 3 | 4 | 17 |
+| A3 VC/accelerator as buyer | 2 | 2 | 3 | 4 | 18 |
 
 **Pick: A1** — the non-technical burned founder. **Rationale**: highest pain acuity (they can't self-diagnose, so the free audit has unique value to them), decides alone under $50K, and the trust/ownership wedge lands hardest here. A3 (VCs) is kept as a *channel* (they refer A1), not the buyer.
 **Pre-validation test**: of the first 10 discovery calls, ≥6 must be non-technical founders with an outsourced/AI build already live and breaking. **Kill-criteria**: if ≥half of early qualified interest comes from technical founders or from pre-launch (no live app), re-open this vote — the ICP is drifting to A2.
@@ -39,8 +39,8 @@
 
 | Option | Volume (×1) | Urgency-to-pay (×2) | Fits our wedge trust+ownership (×2) | Differentiates from 6 competitors (×2) | Total /35 |
 |---|---|---|---|---|---|
-| B1 broke at scale | 5 | 4 | 3 | 2 | 26 |
-| B2 code hostage | 3 | 5 | 5 | 5 | **36 (cap 35→35)** |
+| B1 broke at scale | 5 | 4 | 3 | 2 | 23 |
+| B2 code hostage | 3 | 5 | 5 | 5 | **33** |
 | B3 evaluating a $25K contract | 3 | 4 | 4 | 4 | 27 |
 
 **Pick: B2 (ownership hostage) as the LEAD wedge, B1 as the volume top-of-funnel.** **Rationale**: every competitor leads with "your vibe-coded app is breaking" (B1) — it's saturated. B2 (you don't own/can't access your own code) is where JT's differentiator (ownership handed back at each milestone + Paul as trust layer) is unique and un-copied. B1 still fills the funnel by volume; B2 is what the offer/openers LEAD with.
@@ -62,8 +62,8 @@
 |---|---|---|---|---|---|
 | C1 warm + referral | 5 | 5 | 5 | 3 | **28** |
 | C2 cold community | 4 | 3 | 5 | 4 | 23 |
-| C3 paid cold funnel | 3 | 2 | 2 (needs Paul $79/mo) | 5 | 19 |
-| C4 inbound SEO | 1 | 4 | 3 | 5 | 17 |
+| C3 paid cold funnel | 3 | 2 | 2 (needs Paul $79/mo) | 5 | 17 |
+| C4 inbound SEO | 1 | 4 | 3 | 5 | 18 |
 
 **Pick: C1 primary (warm + referral), C2 secondary (agent-sourced cold community).** **Rationale**: warm converts fastest and carries the trust the burned ICP demands; C2 is the agent-unattended top-up that doesn't wait on Paul. C3 (paid) is a deliberate *later* upgrade once a channel proves reply interest (runbook rule 3). C4 (SEO) cannot rank by Nov 30 — Q1-2027 compounding only.
 **Pre-validation test**: warm channel must produce ≥3 booked calls before we invest setup time in C3. **Kill-criteria**: if 2 weeks of warm outreach yields 0 booked calls, the ICP-to-network fit is wrong — pause and re-open A + C before spending on paid.
@@ -83,7 +83,7 @@
 | Option | Filters time-wasters (×2) | Cheap to run (×2) | Surfaces the buying moment (×1) | Founder-friendly (not interrogating) (×1) | Total /30 |
 |---|---|---|---|---|---|
 | D1 symptom only | 2 | 5 | 4 | 5 | 23 |
-| D2 repo-access gate | 4 | 5 | 4 | 3 | 21 |
+| D2 repo-access gate | 4 | 5 | 4 | 3 | 25 |
 | D3 pre-qual checklist | 5 | 4 | 5 | 4 | **27** |
 | D4 stack fingerprint | 4 | 3 | 3 | 5 | 22 |
 

@@ -22,11 +22,11 @@
 
 Fill one row per person. Warm intros and past clients come first - they convert fastest. Add cold outbound only after you have worked the warm rows.
 
-| Name | Relationship to Paul | Their company / role | Why they're near the ICP | Best intro path | Status |
-|---|---|---|---|---|---|
-| _`<fill in>` - past client who referred before_ | Worked with us 3+ years; already sent us work | e.g. SaaS founder, still running the product we built | A happy past client who already refers us - founders trust a referral from a founder we delivered for | Direct email, reference the project | Not started |
-| _`<fill in>` - investor / angel_ | Backed us or co-invested; you talk quarterly | Angel / seed fund partner | Sees broken MVPs across the whole portfolio; can forward to a struggling founder | Direct DM, offer the audit as a portfolio favor | Not started |
-| _`<fill in>` - accelerator / program contact_ | Ran a batch you spoke at or mentored | Program director / partner | A cohort of early founders, several shipping shaky AI-built MVPs | Email the program lead, ask to share with the batch | Not started |
+| Name | Relationship to Paul | Their company / role | Why they're near the ICP | Best intro path | Last touch | Status |
+|---|---|---|---|---|---|---|
+| _`<fill in>` - past client who referred before_ | Worked with us 3+ years; already sent us work | e.g. SaaS founder, still running the product we built | A happy past client who already refers us - founders trust a referral from a founder we delivered for | Direct email, reference the project | | Not started |
+| _`<fill in>` - investor / angel_ | Backed us or co-invested; you talk quarterly | Angel / seed fund partner | Sees broken MVPs across the whole portfolio; can forward to a struggling founder | Direct DM, offer the audit as a portfolio favor | | Not started |
+| _`<fill in>` - accelerator / program contact_ | Ran a batch you spoke at or mentored | Program director / partner | A cohort of early founders, several shipping shaky AI-built MVPs | Email the program lead, ask to share with the batch | | Not started |
 | _`<fill in>` - founder friend on a cheap dev shop_ | Personal friend, non-technical, building now | Founder, 1-20 people | IS the ICP - hired an offshore team or freelancer and cannot tell if it's working | Text / call directly, no forwarding needed | Not started |
 | _`<fill in>` - no-code / vibe-coding community peer_ | Met in a Lovable / Cursor / Bolt community | Solo or small-team founder shipping with AI tools | Built the whole app with an AI tool; real users are starting to break it | DM in the community, then move to email | Not started |
 | _`<fill in>` - ex-colleague now at a startup_ | Worked together years ago; stayed in touch | Operator / product lead at a funded startup | Sits next to the dev team; feels the progress-mirage pain daily | LinkedIn message or email | Not started |

@@ -55,7 +55,7 @@ These are the only items that need Paul. Everything else an agent session does a
 | # | Item | Why only Paul | Blocks |
 |---|---|---|---|
 | P1 | Create the booking page in his own Cal.com/NeetoCal account (~5 min; spec in `booking-page-spec.md`) | Needs his calendar + login | S0 gate; live URL: https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar |
-| P2 | Confirm the price band (default set: audit free, rescue from $25K) | Depends on partner margin only he knows | ✅ Done 2026-07-22 — A2 confirmed at $2,500 / $7,500 / $10,000 |
+| P2 | Confirm the price band (audit free; tiered rescue pricing) | Depends on partner margin only he knows | ✅ Done 2026-07-22 — A2 confirmed at $2,500 / $7,500 / $10,000 |
 | P3 | Review the agent-built target list + openers, then **hit send** from his own inbox/LinkedIn | The intros go out under his name/relationship | C0 send |
 | P4 | Take the discovery calls; run audits → proposals → close | The whole point; the human trust layer | D3 signing |
 
@@ -81,7 +81,7 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 | T6 | **Validate + score + dedupe** — merge sources into one ranked list (warm-first), drop dupes/dead, score by trigger strength; target ~30 usable rows | finalized target list | **Done** (P8 merge; 25 deduped rows) | T4 + T5 complete; T3 folded in **if** Paul gave Gmail consent (chain does NOT hard-block on consent) | LIGHT — refute "would Paul recognize these as worth his time?" |
 | T7 | **Per-target openers** — draft a personalized opener per row (right template: referral / warm-intro / forwardable / thread-reply), `[BOOKING_LINK]` placeholder, ready for Paul to review-and-send | `rescue-sprint/outbound-openers.md` | **Done** (P9 complete; 25 openers ready) | T6, A2 | LIGHT (bulk/near-public → HEAVY if any becomes a mass template) |
 | T8 | **Discovery kit** — call script + audit deliverable one-page template + 45-min agenda (Card D1 content), so Paul walks into calls with a script | `rescue-sprint/discovery-kit.md` | **Done** (2026-07-22 — 45-min agenda + SPIN/Four-Forces script + 1-page RAG scorecard/verdict template; devil's-advocate self-refute PASS, order-dependency noted) | A2 draft | HEAVY — devil's-advocate self-refute (verdict in-file §Cold-eyes) |
-| T9 | **Objection + FAQ + follow-up bank** — likely founder objections ("why not just re-hire the shop", "is $25K real"), answers, and a 3-touch no-reply follow-up sequence | `rescue-sprint/objection-followup-bank.md` | **Done** (T9 complete) | T8 ✓ | LIGHT — refute "does each answer hold up to a skeptical burned founder?" |
+| T9 | **Objection + FAQ + follow-up bank** — likely founder objections ("why not just re-hire the shop", "is $7,500 real"), answers, and a 3-touch no-reply follow-up sequence | `rescue-sprint/objection-followup-bank.md` | **Done** (T9 complete) | T8 ✓ | LIGHT — refute "does each answer hold up to a skeptical burned founder?" |
 
 **Next Ready T-task: T8** (autonomous, parallel off A2). T1+T2 Done (2026-07-21). **T4/T5 are GROOMED** (`t4-t5-grooming.md`) but held — the grooming HARD-GATE means no sourcing runs until Paul approves the design; on approval they execute → feed T6 dedupe → T7 openers. T3 (Gmail warm) is optional and waits only on Paul's consent.
 
@@ -163,10 +163,10 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
     5. Can you get access to the code? (GitHub/GitLab, or does the dev shop still hold it?)
   - [ ] **Event visibility**: set the event to **public/bookable** so anyone with the link can schedule.
   - [ ] **Confirmation message** (paste this into NeetoCal):
-    > You're booked. Here's what happens: we spend 45 minutes understanding your situation and collecting read-only access to your code, task board, and dev chats. Then our team runs an intensive, AI-assisted audit offline and sends you a one-page, plain-English scorecard within 48 hours — what's solid, what's fragile, and whether to salvage or rebuild. If you can, bring read access to your repo (GitHub, GitLab, wherever the code lives). Nothing else to prep. See you soon.
+    > You're booked. Here's what happens: we spend 45 minutes understanding your situation and collecting read-only access to your code, task board, and dev chats. Then our team runs an intensive, AI-assisted audit offline and sends you a one-page, plain-English scorecard within 48 hours — what's solid, what's fragile, and whether to salvage or rebuild. Please come with read-only access to your repo if you have it (GitHub, GitLab, wherever the code lives) — the 48-hour audit needs it. If the dev shop still holds the keys, come anyway: getting you access is part of what we sort out on the call. See you soon.
     >
     > — Paul
-  - [ ] **Data-handling note** (add to the event description): "The Code Audit is read-only by default. We do not copy source code, secrets, customer data, or credentials unless you explicitly ask us to — and then only the minimum necessary." Full policy in `discovery-kit.md`.
+  - [ ] **Data-handling note** (add to the event description): "The Code Audit is read-only by default. We do not copy secrets, customer data, or credentials — ever. If you ask us to include code in the write-up, we include only sanitized excerpts." Full policy in `discovery-kit.md`.
   - [ ] **Reminder emails** (set in NeetoCal):
     - **24 hours before**: "Your Rescue Context Call is tomorrow. Please make sure you can share read-only access to your code repo, task board, and dev chats so we can run the AI-assisted audit. If that’s not set up yet, reply here and we’ll send the exact steps."
     - **1 hour before**: "We’re on in an hour. Join the video link below. If you can’t get access ready, no problem — we’ll figure it out on the call."
@@ -253,7 +253,7 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 
 ## CARD D1 — Discovery script + follow-up + audit deliverable template
 - **role**: Sales/Comms
-- **status**: Blocked
+- **status**: ✅ Done via T8/T9 (2026-07-22) — call script + one-page audit template live in `rescue-sprint/discovery-kit.md`, follow-up sequence in `rescue-sprint/objection-followup-bank.md`. Do not rebuild.
 - **depends-on**: A2
 - **skills**: `copywriting`, `reflexion-critique`
 - **definition-of-done**: call script, follow-up sequence, one-page audit deliverable template ready.
