@@ -99,7 +99,21 @@ FORCE_SCREENSHOT_UPDATE=true regenerates baselines (commit macos/ AND
 linux/ together). A failing screenshot run overwrites baselines — restore
 via `git checkout -- test/fixtures/screenshots` before rerunning.
 
-## Patterns that are deliberately NOT components (measured 2026-07-19)
+## 8. Design toolchain (skills, in build order — updated 2026-07-25)
+
+For any conversion/marketing page (landing pages especially), run the page through this skill stack on top of steps 1-7:
+
+| Phase | Skill | Role |
+|---|---|---|
+| Product/design context | `impeccable` (`init` → `document` → `shape <page>`) | One-time: capture `PRODUCT.md` (distill from ICP 90.10 + the offer doc, don't invent) and `DESIGN.md` (document the incumbent JetVelocity system from real CSS — obsidian dark, Ruby red #cc342d, neon purple, per `.stitch/design.md`). Then `shape` the page in **Persuade** mode. |
+| Structure & microcopy | `hugo` + `copywriting` | Site conventions; page copy comes verbatim from its source doc — copywriting is for CTA buttons/meta only |
+| Design execution | `impeccable` (new-work/refine commands) + `frontend-design` + `design-md` | Impeccable is the design engine; frontend-design as the anti-generic-UI second opinion |
+| In-browser iteration | `impeccable live` (needs dev server running) | Pick elements in the browser, generate variants — the "canvas iteration" loop |
+| Implementation discipline | `ponytail` (auto-enforced) | Reuse components, no bespoke CSS, no new deps |
+| Verification | `chrome-devtools` + `agent-skills:webperf` + `verify` | Step-7 gates + Core Web Vitals + visual scroll gate (`visual-scroll-gate.md`) |
+| Pre-PR review | `ponytail-review` + `code-review` + `impeccable critique`/`audit` + a11y/SEO agent pass | Over-engineering delete-list, correctness, scored design critique, accessibility, meta |
+
+Known trap: Stitch MCP `generate_screen_from_text` dies at the ~60s timeout — author HTML locally from `.stitch/design.md`, never generate screens via the MCP.
 
 - **Heroes**: cross-page intersection is 1 trivial rule - heroes are
   page-unique by design. Build yours under `.<name>-hero` with tokens;

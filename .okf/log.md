@@ -5,6 +5,7 @@
 * **Policy**: async-first communication is now repo SOP for all agents — skill at `.agents/skills/async-first-communication/SKILL.md`, exposed via AGENTS.md `<skills>` block + CLAUDE.md Behavioral Constraints + operating-system.md §5. OKF maintenance is now ENFORCED parallel-by-default (dispatch okf-maintainer alongside main work; weekly scheduled back-fill as safety net).
 * **Update**: [outbound-sprint](/workflows/outbound-sprint.md) - discovery-call tooling: Fathom free (bot-free capture + MCP; Google Meet flags bot-join recorders since Apr 2026), Gemini-notes fallback, consent line, transcript→3-artifacts pipeline, optional capped pre-call repo pass.
 * **Gotcha**: repo `.gitignore` line 28 ignores ALL dotfiles (`.*`) — any new dot-directory artifact (like `.agents/`) needs an explicit `!` negation or it silently never gets committed while docs point at it.
+* **Update**: `docs/workflows/new-page.md` §8 — design toolchain for conversion/marketing pages: impeccable (init→document→shape, Persuade mode) as the design engine + hugo/copywriting + frontend-design + impeccable live iteration + ponytail discipline + devtools/webperf gates + critique/audit pre-PR. Ponytail plugin installed and enforced globally (~/.claude/CLAUDE.md); impeccable skill installed. Board card #14 carries the same stack.
 
 ## 2026-07-24
 
