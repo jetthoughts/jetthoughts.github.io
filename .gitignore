@@ -26,6 +26,7 @@ hugo.linux
 # Other
 .DS_Store
 .*
+!.agents
 !.okf
 !.claude
 .claude/**/*.json

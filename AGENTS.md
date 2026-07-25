@@ -5,6 +5,8 @@ Session start: always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflo
 
 **Async-first communication (SOP for ALL agents):** written, discoverable artifacts are the default for every decision, finding, status change, and handoff — sync interaction is the exception and its outcome gets written back same-day. Full rules + canonical surfaces table: `.agents/skills/async-first-communication/SKILL.md`. A task is not done until its state is readable asynchronously.
 
+**OKF maintenance (ENFORCED, parallel by default):** durable learnings (canon numbers, root causes, workflow gotchas) go into `.okf/` — dispatch an okf-maintainer in parallel with the main work, not after it; the bundle update rides the same commit as the change. Weekly scheduled maintain pass back-fills misses. See CLAUDE.md OKF section for the full rule.
+
 <skills>
 - `.agents/skills/async-first-communication/SKILL.md` — async-first knowledge sharing SOP (default for ALL work)
 - `.agents/skills/kanban-based-development/SKILL.md` — autonomous, parallel-safe development on the shared kanban-md board
