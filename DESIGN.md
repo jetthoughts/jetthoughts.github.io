@@ -10,6 +10,8 @@ colors:
   ruby-pale: "#ffb4ab"
   neon-purple: "#a855f7"
   cyan-info: "#7dd0fe"
+  ruby-hover: "#e04a42"
+  status-green: "#22c55e"
   on-surface-dark: "#dfe2eb"
   ink: "#121212"
   muted: "#969798"
@@ -17,15 +19,46 @@ colors:
   paper: "#ffffff"
 typography:
   display:
-    fontFamily: "Space Grotesk, system-ui, sans-serif"
+    fontFamily: "Space Grotesk, Space Grotesk Fallback, system-ui, sans-serif"
+    fontSize: "clamp(1.7rem, 4.4vw, 2.6rem)"
     fontWeight: 800
     letterSpacing: "-0.03em"
+  headline:
+    fontFamily: "Space Grotesk, system-ui, sans-serif"
+    fontSize: "clamp(1.4rem, 3.4vw, 1.9rem)"
+    fontWeight: 700
+    letterSpacing: "-0.02em"
+  title:
+    fontFamily: "Space Grotesk, system-ui, sans-serif"
+    fontSize: "20px"
+    fontWeight: 700
+  stat:
+    fontFamily: "Space Grotesk, system-ui, sans-serif"
+    fontSize: "28px"
+    fontWeight: 800
+    letterSpacing: "-0.02em"
+  quote:
+    fontFamily: "Space Grotesk, system-ui, sans-serif"
+    fontSize: "19px"
+    fontWeight: 700
+  lede:
+    fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "19px"
+  body-dark:
+    fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "17px"
+    lineHeight: 1.65
   label:
     fontFamily: "Inter, system-ui, sans-serif"
+    fontSize: "13px"
     fontWeight: 600
     letterSpacing: "0.14em"
+  caption:
+    fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "14px"
   mono:
-    fontFamily: "JetBrains Mono, monospace"
+    fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+    fontSize: "13px"
     fontWeight: 600
     letterSpacing: "0.2em"
   body:

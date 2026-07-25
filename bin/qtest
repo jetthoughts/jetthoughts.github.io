@@ -40,6 +40,7 @@ PAGE_TESTS = {
   "course-single" => "course_chapter",
   "contact-us" => "contact_us",
   "free-consultation" => "free_consultation",
+  "vibe-code-rescue" => "vibe_code_rescue",
   "simple-page" => "privacy_policy",
   "not-found" => "not_found",
   "404" => "not_found"

@@ -99,21 +99,46 @@ FORCE_SCREENSHOT_UPDATE=true regenerates baselines (commit macos/ AND
 linux/ together). A failing screenshot run overwrites baselines — restore
 via `git checkout -- test/fixtures/screenshots` before rerunning.
 
-## 8. Design toolchain (skills, in build order — updated 2026-07-25)
+## 8. Design pipeline — impeccable as the engine, everything else as extensions (proven on vibe-code-rescue, 2026-07-26)
 
-For any conversion/marketing page (landing pages especially), run the page through this skill stack on top of steps 1-7:
+For any conversion/marketing page, **impeccable owns the design lifecycle**; the repo toolchain plugs in around it. Run in this order:
 
-| Phase | Skill | Role |
+### 8a. The impeccable spine
+
+| Stage | Command | What it produces |
 |---|---|---|
-| Product/design context | `impeccable` (`init` → `document` → `shape <page>`) | One-time: capture `PRODUCT.md` (distill from ICP 90.10 + the offer doc, don't invent) and `DESIGN.md` (document the incumbent JetVelocity system from real CSS — obsidian dark, Ruby red #cc342d, neon purple, per `.stitch/design.md`). Then `shape` the page in **Persuade** mode. |
-| Structure & microcopy | `hugo` + `copywriting` | Site conventions; page copy comes verbatim from its source doc — copywriting is for CTA buttons/meta only |
-| Design execution | `impeccable` (new-work/refine commands) + `frontend-design` + `design-md` | Impeccable is the design engine; frontend-design as the anti-generic-UI second opinion |
-| In-browser iteration | `impeccable live` (needs dev server running) | Pick elements in the browser, generate variants — the "canvas iteration" loop |
-| Implementation discipline | `ponytail` (auto-enforced) | Reuse components, no bespoke CSS, no new deps |
-| Verification | `chrome-devtools` + `agent-skills:webperf` + `verify` | Step-7 gates + Core Web Vitals + visual scroll gate (`visual-scroll-gate.md`) |
-| Pre-PR review | `ponytail-review` + `code-review` + `impeccable critique`/`audit` + a11y/SEO agent pass | Over-engineering delete-list, correctness, scored design critique, accessibility, meta |
+| Product truth (once per repo) | `/impeccable init` | `PRODUCT.md` — distilled from ICP 90.10 + offer docs, confirmed with Paul (users, success event, evidence policy). Never invent; every claim traces to canon. |
+| Design authority (once, refresh on drift) | `/impeccable document` | `DESIGN.md` (frontmatter tokens are NORMATIVE) + `.impeccable/design.json` sidecar. Captures BOTH layers: JetVelocity brand world + legacy light chrome, with named rules (Ruby Ink, One-Gradient-Word, two-worlds). |
+| Surface brief | `/impeccable shape <page>` | Persuade-mode brief; section order comes from the copy source doc, not invented. |
+| Build | craft-floor loaded → write layout+CSS | The design detector hook auto-runs on every UI edit — treat it as the inner review loop (it drove 21→5 findings on the first page). |
+| Iterate | `/impeccable live` (dev server) | In-browser element variants — the "canvas iteration" loop. |
+| Consolidate | `/impeccable extract` | Promote tokens/components used **3+ times with same intent** into `foundations/css-variables.css` / `components/`. One page's patterns stay page-local — premature abstraction is worse than duplication. |
+| Evaluate | `/impeccable critique` + `/impeccable audit` | Scored design review + a11y/perf/responsive checks before the PR. |
+
+**Detector disposition protocol**: every hook finding gets classified, never ignored silently. (a) Real drift → fix BOTH sides: align the page AND document the deliberate addition in DESIGN.md (ramp steps, new colors) — the detector validates against DESIGN.md frontmatter, so documenting IS the fix. (b) Committed-world signature (gradient hero word, chip left-borders, grid-dot texture, Space Grotesk) → leave the code, state the pinning rule, get Paul's explicit confirmation before persisting a config ignore.
+
+### 8b. Extensions around the spine
+
+| Phase | Tool | Role |
+|---|---|---|
+| Scaffold | `hugo` skill + §1-7 above | fl-shell, bundle slice, purge prefix, qtest map, tests |
+| Copy | source doc verbatim + `copywriting` | copy NEVER rewritten; copywriting only for CTA labels/meta |
+| Implementation discipline | `ponytail` (auto-enforced globally) | reuse-first ladder, no new deps, minimal diff |
+| Second opinion | `frontend-design` skill | anti-generic-UI pass when the design feels safe |
+| Render verification | `chrome-devtools` MCP on `_dest/public-dev` (static server) | console zero-errors, network zero-404s, screenshots 1280×800 + 390×844, **drive interactive states** — open the mobile drawer, hover the CTA; closed-state screenshots miss real bugs (white-drawer incident) |
+| Fast feedback loop | `bin/qtest <name>` after each change | Paul's preference: qtest for iteration speed; full `bin/test` + `bin/dtest` reserved for pre-PR |
+| Perf | `agent-skills:webperf` / lighthouse | mobile CWV green (the ICP arrives on a phone) |
+| Pre-PR review | `/ponytail-review` + `/code-review` | over-engineering delete-list + correctness on the diff |
+| Ship | ONE PR, screenshots + 4-criteria scores in description | never direct-to-master for template/CSS |
 
 Known trap: Stitch MCP `generate_screen_from_text` dies at the ~60s timeout — author HTML locally from `.stitch/design.md`, never generate screens via the MCP.
+
+### Dark (JetVelocity brand-surface) page traps — learned on vibe-code-rescue, 2026-07-26
+
+1. **White-wash override**: `legacy-theme-skin.css` paints `.fl-page-content` white AFTER your page slice — any section without its own background falls to white. Fix: `#fl-main-content.<your-page-class> { background: var(--color-obsidian) }` (id+class wins).
+2. **Site chrome sits OUTSIDE your page div** — page-scoped custom props don't resolve on the header. Brand-surface tokens now live at `:root` (`foundations/css-variables.css`: `--color-obsidian*`, `--color-neon-purple`, `--color-on-dark`, `--color-label-dark`, `--color-ruby-hover`) — use those, never page-scoped vars, for `.top-panel` overrides.
+3. **The `:not()`-chain anchor rule** (navigation.css, `#0066d6`) out-specifies normal page selectors — CTA/link recolors on dark pages need `!important` (repo precedent: navigation.css ruby buttons).
+4. **The mobile drawer is a WHITE panel** (`.navigation.-open`): if you lighten `.top-panel a.link` for a dark header, restore `var(--color-dark)` inside the open drawer — and VERIFY by actually opening the menu at 390×844; closed-state screenshots can't see it.
 
 - **Heroes**: cross-page intersection is 1 trivial rule - heroes are
   page-unique by design. Build yours under `.<name>-hero` with tokens;

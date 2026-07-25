@@ -26,6 +26,7 @@ zero FL-Builder export files remain in any slice.
 | single-use-cases | `use-cases/single.html` | pages/single-use-cases.css | 23.3K → 18.8K | migrated (R7) |
 | single-career | `careers/single.html` (partial `single-career-css-resources.html`) | pages/single-career.css | 22.0K → 18.8K | migrated (R3d) |
 | free-consultation | `page/free-consultation.html` (partial `free-consultation-css-resources.html`) | pages/free-consultation.css | 20.2K → 16.2K | migrated (R4b) |
+| vibe-code-rescue | `page/vibe-code-rescue.html` | pages/vibe-code-rescue.css | new 2026-07-26 | born semantic (no FL modules) |
 | about-us | `page/about.html` | pages/about-us.css | 19.4K → 15.0K | migrated (R5) |
 | course-single | `course/single.html` | pages/blog-single.css (shared) | 19.3K → 12.9K | migrated (R3b) |
 | blog-single | `single.html` | pages/blog-single.css | 19.3K → 12.9K | migrated (R3a) |
