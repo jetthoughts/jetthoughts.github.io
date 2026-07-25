@@ -16,6 +16,8 @@ The technical audit is now run **offline, after the call**. We use AI-assisted p
 
 ## Pre-call prep (Paul or assistant sends after booking)
 
+**Call tooling (so Paul takes zero notes)**: record + transcribe every call. Recommended: **Fathom free tier** (unlimited recording/transcripts, bot-free Mac desktop capture — as of Apr 2026 Google Meet flags bot-join recorders like Fireflies/Otter as security risks — and MCP integration so an agent can pull the transcript directly for the scorecard draft and VoC harvesting). Zero-new-tools fallback: Gemini "Take notes for me" if the Workspace plan has it (notes land in a Google Doc). Either way, open the call with the consent line: "I record these calls so I can be fully present instead of taking notes — the recording stays between us. OK with you?" The transcript feeds three async artifacts: the audit brief, verbatim `[VERBATIM-founder]` lines for `voice-of-customer.md`, and new objections for `objection-followup-bank.md`.
+
 Send a short email immediately after booking:
 
 > Subject: Your Free Rescue Audit — what to prepare
