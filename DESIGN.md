@@ -19,7 +19,7 @@ colors:
   paper: "#ffffff"
 typography:
   display:
-    fontFamily: "Space Grotesk, system-ui, sans-serif"
+    fontFamily: "Space Grotesk, Space Grotesk Fallback, system-ui, sans-serif"
     fontSize: "clamp(1.9rem, 5.2vw, 3.1rem)"
     fontWeight: 800
     letterSpacing: "-0.03em"
