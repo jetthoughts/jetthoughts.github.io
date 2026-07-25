@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 552" role="img" aria-labelledby="pl-title">
+  <title id="pl-title">The 15-item pre-launch checklist: 5 sections with their check counts flow into the final gate. 15/15 green ships it. 12-14 green fixes today. Under 12 green - do not ship yet.</title>
+  <desc>Five numbered section cards across the top: Section 1 Mobile (5 checks), Section 2 Payments (3 checks), Section 3 Auth and Access (3 checks), Section 4 Onboarding (2 checks), Section 5 The one-human smoke test (2 checks). Arrows from all five sections converge into the final gate below, which shows three verdict cards: green (15/15 - ship it), amber (12-14 - fix today), and red (under 12 - do not ship).</desc>
+  <defs>
+    <style>
+      .h       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title   { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub     { font-size: 15px; fill: #666; font-style: italic; }
+      .sec-num { font-size: 15px; font-weight: 700; fill: #fff; }
+      .sec-hd  { font-size: 18px; font-weight: 700; fill: #1a1a1a; }
+      .sec-sub { font-size: 13px; fill: #555; }
+      .label   { font-size: 12px; fill: #888; }
+      .verdict-hd { font-size: 22px; font-weight: 700; }
+      .verdict-g  { fill: #2e7d32; }
+      .verdict-a  { fill: #b8860b; }
+      .verdict-r  { fill: #cc342d; }
+      .verdict-tx { font-size: 15px; fill: #1a1a1a; }
+      .verdict-sm { font-size: 13px; fill: #555; }
+      .note    { font-size: 14px; fill: #666; font-style: italic; }
+      .card    { fill: #faf7f2; stroke: #555; stroke-width: 2; }
+      .card-g  { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .card-a  { fill: #fffbeb; stroke: #b8860b; stroke-width: 2.5; }
+      .card-r  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .numdot  { fill: #cc342d; }
+      .arrow   { stroke: #555; stroke-width: 2.25; fill: none; }
+      .chip    { fill: #ffffff; stroke: #ccc; stroke-width: 2; }
+    </style>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#555"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#2e7d32"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="34" text-anchor="middle" class="h title">The pre-launch checklist: 15 checks, 5 sections</text>
+  <text x="480" y="58" text-anchor="middle" class="h sub">Run these the day before you share your MVP URL. 20 minutes. Any red means fix before you share.</text>
+
+  <!-- ====== SECTION CARDS (top row) ====== -->
+
+  <!-- S1: Mobile -->
+  <g transform="translate(18, 80) rotate(-0.4 85 50)">
+    <rect width="170" height="100" rx="12" class="card"/>
+    <circle cx="22" cy="22" r="12" class="numdot"/>
+    <text x="22" y="27" text-anchor="middle" class="h sec-num">1</text>
+    <text x="44" y="28" class="h sec-hd">Mobile</text>
+    <text x="22" y="54" class="h sec-sub">Homepage loads, CTA</text>
+    <text x="22" y="72" class="h sec-sub">tappable, forms, text</text>
+    <text x="22" y="90" class="h sec-sub">readable, sign-up fits</text>
+    <!-- check count -->
+    <circle cx="148" cy="84" r="14" fill="#2e7d32"/>
+    <text x="148" y="89" text-anchor="middle" class="h sec-num">5</text>
+  </g>
+
+  <!-- S2: Payments -->
+  <g transform="translate(202, 80) rotate(0.3 85 50)">
+    <rect width="170" height="100" rx="12" class="card"/>
+    <circle cx="22" cy="22" r="12" class="numdot"/>
+    <text x="22" y="27" text-anchor="middle" class="h sec-num">2</text>
+    <text x="44" y="28" class="h sec-hd">Payments</text>
+    <text x="22" y="54" class="h sec-sub">Stripe LIVE mode,</text>
+    <text x="22" y="72" class="h sec-sub">real card clears,</text>
+    <text x="22" y="90" class="h sec-sub">receipt email arrives</text>
+    <circle cx="148" cy="84" r="14" fill="#2e7d32"/>
+    <text x="148" y="89" text-anchor="middle" class="h sec-num">3</text>
+  </g>
+
+  <!-- S3: Auth -->
+  <g transform="translate(386, 80) rotate(-0.5 85 50)">
+    <rect width="170" height="100" rx="12" class="card"/>
+    <circle cx="22" cy="22" r="12" class="numdot"/>
+    <text x="22" y="27" text-anchor="middle" class="h sec-num">3</text>
+    <text x="44" y="28" class="h sec-hd">Auth &amp; Access</text>
+    <text x="22" y="54" class="h sec-sub">New user sign-up,</text>
+    <text x="22" y="72" class="h sec-sub">sign back in,</text>
+    <text x="22" y="90" class="h sec-sub">password reset works</text>
+    <circle cx="148" cy="84" r="14" fill="#2e7d32"/>
+    <text x="148" y="89" text-anchor="middle" class="h sec-num">3</text>
+  </g>
+
+  <!-- S4: Onboarding -->
+  <g transform="translate(570, 80) rotate(0.4 85 50)">
+    <rect width="170" height="100" rx="12" class="card"/>
+    <circle cx="22" cy="22" r="12" class="numdot"/>
+    <text x="22" y="27" text-anchor="middle" class="h sec-num">4</text>
+    <text x="44" y="28" class="h sec-hd">Onboarding</text>
+    <text x="22" y="54" class="h sec-sub">First-run experience,</text>
+    <text x="22" y="72" class="h sec-sub">core workflow</text>
+    <text x="22" y="90" class="h sec-sub">end-to-end</text>
+    <circle cx="148" cy="84" r="14" fill="#2e7d32"/>
+    <text x="148" y="89" text-anchor="middle" class="h sec-num">2</text>
+  </g>
+
+  <!-- S5: Smoke test -->
+  <g transform="translate(754, 80) rotate(-0.3 85 50)">
+    <rect width="170" height="100" rx="12" class="card"/>
+    <circle cx="22" cy="22" r="12" class="numdot"/>
+    <text x="22" y="27" text-anchor="middle" class="h sec-num">5</text>
+    <text x="44" y="28" class="h sec-hd">One-human test</text>
+    <text x="22" y="54" class="h sec-sub">Stranger navigates</text>
+    <text x="22" y="72" class="h sec-sub">core flow, can name</text>
+    <text x="22" y="90" class="h sec-sub">product in 3 sec</text>
+    <circle cx="148" cy="84" r="14" fill="#2e7d32"/>
+    <text x="148" y="89" text-anchor="middle" class="h sec-num">2</text>
+  </g>
+
+  <!-- Convergence arrows from sections down to gate -->
+  <path d="M 103 184 C 103 210, 220 232, 260 260" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 287 184 C 287 212, 340 232, 370 258" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 471 184 C 471 208, 480 232, 480 258" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 655 184 C 655 212, 620 232, 590 260" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 839 184 C 839 210, 740 232, 700 258" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Total counter chip -->
+  <g transform="translate(420, 206)">
+    <rect width="120" height="32" rx="16" fill="#faf7f2" stroke="#555" stroke-width="2"/>
+    <text x="60" y="22" text-anchor="middle" class="h sec-hd" fill="#1a1a1a">15 checks total</text>
+  </g>
+
+  <!-- ====== FINAL GATE (bottom) ====== -->
+  <text x="480" y="284" text-anchor="middle" class="h sec-hd">Final gate: count your green lights</text>
+
+  <!-- Verdict 1: Green - Ship it -->
+  <g transform="translate(30, 304) rotate(-0.5 285 80)">
+    <rect width="570" height="76" rx="12" class="card-g"/>
+    <rect x="20" y="18" width="90" height="24" rx="12" fill="#2e7d32"/>
+    <text x="65" y="35" text-anchor="middle" class="h" font-size="14" font-weight="700" fill="#fff">15/15 green</text>
+    <text x="130" y="36" class="h verdict-hd verdict-g">Ship it.</text>
+    <text x="130" y="62" class="h verdict-tx">Share the URL with your Module 2 interview pool. The launch is ready.</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 315 384 C 315 404, 480 404, 480 420" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Verdict 2: Amber - Fix today -->
+  <g transform="translate(30, 428) rotate(0.3 285 74)">
+    <rect width="570" height="72" rx="12" class="card-a"/>
+    <rect x="20" y="16" width="90" height="24" rx="12" fill="#b8860b"/>
+    <text x="65" y="33" text-anchor="middle" class="h" font-size="14" font-weight="700" fill="#fff">12-14 green</text>
+    <text x="130" y="34" class="h verdict-hd verdict-a">Fix the red items today.</text>
+    <text x="130" y="58" class="h verdict-sm">They are the ones that will lose you early users. Retest and share tomorrow.</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 315 506 C 315 526, 480 526, 480 518" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Bottom: the two verdicts are shown stacked; the third (under 12) is a callout -->
+
+  <!-- Red callout card -->
+  <g transform="translate(640, 304) rotate(0.5 145 95)">
+    <rect width="290" height="190" rx="12" class="card-r"/>
+    <rect x="20" y="18" width="115" height="24" rx="12" fill="#cc342d"/>
+    <text x="77" y="35" text-anchor="middle" class="h" font-size="14" font-weight="700" fill="#fff">Under 12 green</text>
+    <text x="24" y="62" class="h verdict-hd verdict-r">Do not ship.</text>
+    <text x="24" y="90" class="h verdict-sm">Run the build phases again.</text>
+    <text x="24" y="112" class="h verdict-sm">Fix the core flow before</text>
+    <text x="24" y="134" class="h verdict-sm">anyone else sees it.</text>
+    <!-- icon -->
+    <text x="260" y="174" class="h" font-size="28" fill="#cc342d">&#x26D4;</text>
+  </g>
+
+  <!-- Bottom note -->
+  <g transform="translate(30, 512)">
+    <rect width="560" height="28" rx="8" fill="#fff8e0" stroke="#b8860b" stroke-width="2"/>
+    <text x="280" y="20" text-anchor="middle" class="h note">Merge the last 8 items into the five green lights from Lesson 4.4 - same gate, framed as a checklist.</text>
+  </g>
+</svg>
