@@ -115,6 +115,13 @@ For any conversion/marketing page (landing pages especially), run the page throu
 
 Known trap: Stitch MCP `generate_screen_from_text` dies at the ~60s timeout — author HTML locally from `.stitch/design.md`, never generate screens via the MCP.
 
+### Dark (JetVelocity brand-surface) page traps — learned on vibe-code-rescue, 2026-07-26
+
+1. **White-wash override**: `legacy-theme-skin.css` paints `.fl-page-content` white AFTER your page slice — any section without its own background falls to white. Fix: `#fl-main-content.<your-page-class> { background: var(--color-obsidian) }` (id+class wins).
+2. **Site chrome sits OUTSIDE your page div** — page-scoped custom props don't resolve on the header. Brand-surface tokens now live at `:root` (`foundations/css-variables.css`: `--color-obsidian*`, `--color-neon-purple`, `--color-on-dark`, `--color-label-dark`, `--color-ruby-hover`) — use those, never page-scoped vars, for `.top-panel` overrides.
+3. **The `:not()`-chain anchor rule** (navigation.css, `#0066d6`) out-specifies normal page selectors — CTA/link recolors on dark pages need `!important` (repo precedent: navigation.css ruby buttons).
+4. **The mobile drawer is a WHITE panel** (`.navigation.-open`): if you lighten `.top-panel a.link` for a dark header, restore `var(--color-dark)` inside the open drawer — and VERIFY by actually opening the menu at 390×844; closed-state screenshots can't see it.
+
 - **Heroes**: cross-page intersection is 1 trivial rule - heroes are
   page-unique by design. Build yours under `.<name>-hero` with tokens;
   copy the closest existing hero as a starting point.

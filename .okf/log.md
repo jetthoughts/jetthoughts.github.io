@@ -1,5 +1,10 @@
 # Bundle Update Log
 
+## 2026-07-26
+
+* **Milestone**: Vibe Code Rescue landing page built at `/services/vibe-code-rescue/` (branch `landing-vibe-code-rescue`, card #14) via the impeccable pipeline (init → document → build): PRODUCT.md + DESIGN.md + sidecar now exist at repo root as design authority. JetVelocity brand tokens extracted to `foundations/css-variables.css` `:root`.
+* **Gotchas** (recorded in `docs/workflows/new-page.md` §Dark-page traps): legacy-theme-skin whitewashes `.fl-page-content` after page slices; site chrome sits outside the page div so page-scoped vars don't reach the header; the `:not()`-chain anchor rule needs `!important` to beat; the mobile drawer is a white panel — drive the menu-open state at 390×844, closed-state screenshots can't see it.
+
 ## 2026-07-25
 
 * **Policy**: async-first communication is now repo SOP for all agents — skill at `.agents/skills/async-first-communication/SKILL.md`, exposed via AGENTS.md `<skills>` block + CLAUDE.md Behavioral Constraints + operating-system.md §5. OKF maintenance is now ENFORCED parallel-by-default (dispatch okf-maintainer alongside main work; weekly scheduled back-fill as safety net).
