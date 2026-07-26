@@ -7,7 +7,6 @@
       .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
       .sub    { font-size: 16px; fill: #666; font-style: italic; }
       .step   { font-size: 22px; font-weight: 700; fill: #1a1a1a; }
-      .stepsm { font-size: 15px; fill: #555; }
       .num    { font-size: 15px; font-weight: 700; fill: #fff; }
       .body   { font-size: 15px; fill: #1a1a1a; }
       .body-sm{ font-size: 13px; fill: #555; }
@@ -19,24 +18,15 @@
       .card   { fill: #faf7f2; stroke: #555; stroke-width: 2; }
       .card-inner { fill: #ffffff; stroke: #ccc; stroke-width: 2; }
       .card-a { fill: #fffbeb; stroke: #b8860b; stroke-width: 2; }
-      .card-g { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2; }
       .card-p { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2; }
       .numdot { fill: #cc342d; }
       .arrow  { stroke: #555; stroke-width: 2.25; fill: none; }
-      .arrow-g { stroke: #2e7d32; stroke-width: 2; fill: none; }
-      .arrow-a { stroke: #b8860b; stroke-width: 2; fill: none; }
       .track  { fill: #faf7f2; stroke: #aaa; stroke-width: 2; }
       .track-hd { font-size: 14px; font-weight: 700; fill: #555; }
       .track-cell { font-size: 13px; fill: #888; }
     </style>
     <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M 0 1 L 8 5 L 0 9 z" fill="#555"/>
-    </marker>
-    <marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#2e7d32"/>
-    </marker>
-    <marker id="aha" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#b8860b"/>
     </marker>
   </defs>
 
@@ -52,13 +42,13 @@
     <text x="24" y="29" text-anchor="middle" class="h num">1</text>
     <!-- Title row -->
     <text x="46" y="30" class="h step">Day 0</text>
-    <rect x="100" y="16" width="72" height="19" rx="9" fill="#cc342d" opacity="0.12"/>
-    <text x="136" y="30" text-anchor="middle" class="h tag tag-r">first message</text>
+    <rect x="112" y="15" width="96" height="20" rx="10" fill="#cc342d" opacity="0.12"/>
+    <text x="160" y="30" text-anchor="middle" class="h tag tag-r">first message</text>
     <!-- Inner card -->
     <rect x="20" y="52" width="230" height="62" rx="8" class="card-inner"/>
-    <text x="135" y="76" text-anchor="middle" class="h body">email or DM - subject line</text>
-    <text x="135" y="96" text-anchor="middle" class="h body-sm">names their exact words from</text>
-    <text x="135" y="112" text-anchor="middle" class="h body-sm">the post you found in Lesson 2.3</text>
+    <text x="135" y="74" text-anchor="middle" class="h body">email or DM - subject line</text>
+    <text x="135" y="92" text-anchor="middle" class="h body-sm">names their exact words from</text>
+    <text x="135" y="108" text-anchor="middle" class="h body-sm">the post you found in Lesson 2.3</text>
   </g>
 
   <!-- Arrow 1 → 2 -->
@@ -70,8 +60,8 @@
     <circle cx="24" cy="24" r="13" class="numdot"/>
     <text x="24" y="29" text-anchor="middle" class="h num">2</text>
     <text x="46" y="30" class="h step">Day 3</text>
-    <rect x="100" y="16" width="48" height="19" rx="9" fill="#b8860b" opacity="0.12"/>
-    <text x="124" y="30" text-anchor="middle" class="h tag tag-a">bump</text>
+    <rect x="112" y="15" width="52" height="20" rx="10" fill="#b8860b" opacity="0.12"/>
+    <text x="138" y="30" text-anchor="middle" class="h tag tag-a">bump</text>
     <!-- Two variant sub-cards -->
     <rect x="14" y="52" width="118" height="62" rx="8" class="card-p"/>
     <text x="73" y="70" text-anchor="middle" class="h body-sm" fill="#a855f7">first round</text>
@@ -92,13 +82,13 @@
     <circle cx="24" cy="24" r="13" class="numdot"/>
     <text x="24" y="29" text-anchor="middle" class="h num">3</text>
     <text x="46" y="30" class="h step">Day 7</text>
-    <rect x="100" y="16" width="60" height="19" rx="9" fill="#2e7d32" opacity="0.12"/>
-    <text x="130" y="30" text-anchor="middle" class="h tag tag-g">close</text>
+    <rect x="112" y="15" width="52" height="20" rx="10" fill="#2e7d32" opacity="0.12"/>
+    <text x="138" y="30" text-anchor="middle" class="h tag tag-g">close</text>
     <!-- Inner card -->
     <rect x="20" y="52" width="230" height="62" rx="8" class="card-inner"/>
-    <text x="135" y="76" text-anchor="middle" class="h body">last note - no pressure</text>
-    <text x="135" y="96" text-anchor="middle" class="h body-sm">"even two sentences by email</text>
-    <text x="135" y="112" text-anchor="middle" class="h body-sm">would genuinely help"</text>
+    <text x="135" y="74" text-anchor="middle" class="h body">last note - no pressure</text>
+    <text x="135" y="92" text-anchor="middle" class="h body-sm">"even two sentences by email</text>
+    <text x="135" y="108" text-anchor="middle" class="h body-sm">would genuinely help"</text>
   </g>
 
   <!-- ====== LINKEDIN DM VARIANT (below the main row) ====== -->
@@ -111,24 +101,24 @@
   <!-- ====== TRACKER ROW ====== -->
   <g transform="translate(28, 322)">
     <rect width="900" height="62" rx="10" class="track"/>
-    <text x="24" y="28" class="h track-hd">Tracking spreadsheet</text>
+    <text x="24" y="36" class="h track-hd">Tracking spreadsheet</text>
     <!-- 5 columns -->
-    <rect x="160" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
-    <text x="205" y="36" text-anchor="middle" class="h track-cell">Sent on</text>
+    <rect x="180" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+    <text x="225" y="36" text-anchor="middle" class="h track-cell">Sent on</text>
 
-    <rect x="260" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
-    <text x="305" y="36" text-anchor="middle" class="h track-cell">Bumped</text>
+    <rect x="280" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+    <text x="325" y="36" text-anchor="middle" class="h track-cell">Bumped</text>
 
-    <rect x="360" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
-    <text x="405" y="36" text-anchor="middle" class="h track-cell">Replied</text>
+    <rect x="380" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+    <text x="425" y="36" text-anchor="middle" class="h track-cell">Replied</text>
 
-    <rect x="460" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
-    <text x="505" y="36" text-anchor="middle" class="h track-cell">Booked</text>
+    <rect x="480" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+    <text x="525" y="36" text-anchor="middle" class="h track-cell">Booked</text>
 
-    <rect x="560" y="14" width="90" height="34" rx="6" fill="#f0f9f0" stroke="#2e7d32" stroke-width="1.5"/>
-    <text x="605" y="36" text-anchor="middle" class="h track-cell" fill="#2e7d32">✓ Done</text>
+    <rect x="580" y="14" width="90" height="34" rx="6" fill="#f0f9f0" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="625" y="36" text-anchor="middle" class="h track-cell" fill="#2e7d32">✓ Done</text>
 
-    <text x="680" y="36" class="h body-sm" fill="#888">stop sending when 10 are booked</text>
+    <text x="690" y="36" class="h body-sm" fill="#888">stop sending when 10 are booked</text>
   </g>
 
   <!-- ====== BOTTOM NOTE ====== -->

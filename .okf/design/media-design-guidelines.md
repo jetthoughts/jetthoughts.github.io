@@ -1,7 +1,7 @@
 ---
 type: Design System
 title: Course media design guidelines
-description: Compact baseline media-design spec for business courses — 6 sections covering objectives, media types, visual/UX standards, content specs, format specs, and sequencing. Applies to all course media: slides, videos, charts, templates, canvases, checklists.
+description: "Compact baseline media-design spec for business courses — 6 sections covering objectives, media types, visual/UX standards, content specs, format specs, and sequencing. External baseline only: the slides/video sections do not apply to this text-only course (see 30.03)."
 tags: [course, media, design, guidelines, visual-standards]
 timestamp: 2026-07-26T00:00:00Z
 ---
@@ -11,6 +11,15 @@ timestamp: 2026-07-26T00:00:00Z
 **Source:** External media-design research doc (2026-07-26). Applied to the
 Tech for Non-Technical Founders course via
 `docs/projects/2605-tech-for-non-technical-founders/10-19-research/10.06-media-design-recommendations.md`.
+
+---
+
+> **Scope caveat (2026-07-26):** this is the raw external baseline. The slide-deck
+> and video sections (§2 rows 1-2, §5 "Slides"/"Videos") do **NOT** apply to the
+> Tech for Non-Technical Founders course - the 30.03 format spec is text-only
+> ("Text-only with small graphs and images. No video."). See 10.06 for the
+> course-adapted version; only the chart/template/checklist and sequencing
+> guidance carries over.
 
 ---
 

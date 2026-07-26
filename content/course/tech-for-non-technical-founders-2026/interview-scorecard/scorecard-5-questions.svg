@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 432" role="img" aria-labelledby="sc-title">
   <title id="sc-title">The 5-question pass/fail check: score each question after the call. Pass means a specific story with date, tool, or number. Fail means vague generality or polite default.</title>
-  <desc>Five rows in a three-column layout. Left column: question number and label. Center column (green-tinted): PASS signal. Right column (red-tinted): FAIL signal. Q1: Specific story (date, time, tool, person, feeling) vs Vague generality ("I usually struggle with it"). Q2: Specific number with a unit ("2 hours every Tuesday") vs Unquantified ("It costs us time"). Q3: Named tool, hired person, custom workaround vs "Nothing yet - I've been meaning to." Q4: 7+ with a comparison to another priority vs 5-6 with no comparison, or polite-default 7. Q5: Names a specific person and their workaround vs "I'm the only one who deals with this." Bottom row shows the pass count tally.</desc>
+  <desc>Five rows in a three-column layout. Left column: question number and label. Center column (green-tinted): PASS signal. Right column (red-tinted): FAIL signal. Q1: Specific story (date, time, tool, person, feeling) vs Vague generality ("I usually struggle with it"). Q2: Specific number with a unit ("2 hours every Tuesday") vs Unquantified ("It costs us time"). Q3: Named tool, hired person, custom workaround vs "Nothing yet - I've been meaning to." Q4: 7+ with a comparison to another priority vs 5-6 with no comparison, or polite-default 7. Q5: Names a specific person and their workaround vs "I'm the only one who deals with this." Bottom row shows the pass count tally: 5/5 strong, 4/5 solid, 3/5 mixed, 2/5 or fewer weak (-2 to the score).</desc>
   <defs>
     <style>
       .h       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
@@ -9,8 +9,8 @@
       .colhead { font-size: 17px; font-weight: 700; fill: #1a1a1a; }
       .qnum    { font-size: 18px; font-weight: 700; fill: #cc342d; }
       .qtext   { font-size: 16px; font-weight: 700; fill: #1a1a1a; }
-      .pass    { font-size: 14px; fill: #1b5e20; }
-      .fail    { font-size: 14px; fill: #b3261e; }
+      .pass    { font-size: 13px; fill: #1b5e20; }
+      .fail    { font-size: 13px; fill: #b3261e; }
       .note    { font-size: 15px; fill: #555; font-style: italic; }
       .tally   { font-size: 18px; font-weight: 700; fill: #1a1a1a; }
       .box     { fill: #ffffff; stroke: #555; stroke-width: 2; }
@@ -36,13 +36,13 @@
   <text x="64"  y="139" class="h qnum">Q1</text>
   <text x="96"  y="139" class="h qtext">Past-behavior story</text>
   <text x="346" y="139" class="h pass">Specific - date, time, tool, person, feeling</text>
-  <text x="662" y="139" class="h fail">Vague generality - "I usually struggle with it"</text>
+  <text x="662" y="139" class="h fail">Vague - "I usually struggle with it"</text>
 
   <!-- Q2 -->
   <rect x="30" y="165" width="22" height="22" rx="4" class="box"/>
   <text x="64"  y="182" class="h qnum">Q2</text>
   <text x="96"  y="182" class="h qtext">Quantified cost</text>
-  <text x="346" y="182" class="h pass">Specific number with a unit - "2 hours every Tuesday"</text>
+  <text x="346" y="182" class="h pass">A number with a unit - "2 hrs every Tuesday"</text>
   <text x="662" y="182" class="h fail">Unquantified - "It costs us time"</text>
 
   <!-- Q3 -->
@@ -57,7 +57,7 @@
   <text x="64"  y="268" class="h qnum">Q4</text>
   <text x="96"  y="268" class="h qtext">Priority score</text>
   <text x="346" y="268" class="h pass">7+ with a comparison to another priority</text>
-  <text x="662" y="268" class="h fail">5-6 with no comparison, or polite-default 7</text>
+  <text x="662" y="268" class="h fail">No comparison, or polite-default 7</text>
 
   <!-- Q5 -->
   <rect x="30" y="294" width="22" height="22" rx="4" class="box"/>
@@ -74,7 +74,7 @@
   <!-- Tally rule -->
   <g transform="translate(320, 348)">
     <rect width="626" height="32" rx="8" fill="#faf7f2" stroke="#aaa" stroke-width="2"/>
-    <text x="14" y="22" class="h note">5/5 = strong signal · 4/5 = solid · 3/5 = mixed · 2/5 or fewer = weak - do not count this call</text>
+    <text x="14" y="22" class="h note" font-size="13">5/5 = strong · 4/5 = solid · 3/5 = mixed · 2/5 or fewer = weak (-2 to the score)</text>
   </g>
 
   <!-- Bottom callout -->

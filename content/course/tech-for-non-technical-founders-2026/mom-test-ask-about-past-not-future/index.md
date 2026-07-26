@@ -78,7 +78,7 @@ While the script runs, listen for three patterns. They do more work than the wor
 | **Workaround language** | "I've been meaning to..." "We hacked together..." "I pay [TOOL] $X for this." | The interviewee already spent time or money on a solution that doesn't fully work. That budget is the line item your product would replace. |
 | **Urgency language** | "Last week." "This morning." "I missed my kid's birthday because of this." | A problem that happened today is felt more sharply than one that happens "sometimes." Time-anchored urgency is the strongest signal in the set. |
 
-**Scoring the flags:** A passing call has 3 or more flags spread across the five answers. A failing call has 0 or 1 - the interviewee is being polite to you. Two flags is ambiguous; treat as a 5/10 default. This 1-10 score per call is what Lessons 2.4-2.6 count to make the build / pivot / kill decision, so score every call the same way.
+**Scoring the flags:** A passing call has 3 or more flags spread across the five answers. A failing call has 0 or 1 - the interviewee is being polite to you. Two flags is ambiguous; treat as a 5/10 default. This 1-10 score per call is what Lessons 2.4-2.6 count to make the build / pivot / kill decision, so score every call the same way. The printable [Interview Scorecard](/course/tech-for-non-technical-founders-2026/interview-scorecard/) runs this pass/fail check and flag tally after each call.
 
 ---
 

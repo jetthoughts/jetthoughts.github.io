@@ -20,6 +20,12 @@ tags:
   - course-companion
   - self-serve
 categories: ["Templates"]
+cover_image: cover.png
+metatags:
+  image: cover.png
+  og_title: "Pre-Launch Checklist: Ship Your MVP Without Regrets"
+  og_description: "A printable 15-item checklist to run the day before you share your MVP URL - mobile, payments, auth, onboarding, and the one-human smoke test."
+cover_image_alt: "JetThoughts template cover for the MVP pre-launch checklist"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/pre-launch-checklist/"
 related_posts: false
 ---
@@ -32,7 +38,7 @@ You validated the problem, wrote the brief, set up the stack, and shipped four b
 
 ![The pre-launch checklist: 5 sections (Mobile, Payments, Auth and Access, Onboarding, One-human smoke test) with 15 total checks flow into the final gate. 15/15 green ships it. 12-14 green fixes today. Under 12 green - do not ship yet.](pre-launch-gates.svg)
 
-Run these 15 checks in order. Each takes under 2 minutes. All 15 green means you can send the URL with confidence. Any red means fix it before you share - a single broken checkout flow at launch can lose 3 out of 5 early signups, and you may never know which ones they were.
+Run these 15 checks in order. Each takes under 2 minutes. All 15 green means you can send the URL with confidence. Any red means fix it before you share - a signup who hits a broken checkout on day one rarely comes back, and you may never know they were there.
 
 ---
 
@@ -94,7 +100,7 @@ Run these 15 checks in order. Each takes under 2 minutes. All 15 green means you
 | **12-14 green** | Fix the red items today. They are the ones that will lose you early users. |
 | **Under 12 green** | Do not ship yet. Run the build phases again (back to [Lesson 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)) and fix the core flow before anyone else sees it. |
 
-Merge the last 8 items (payments, auth, onboarding) into the [five green lights](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#the-five-green-lights) from Lesson 4.4 - they are the same gate, framed as a pre-launch checklist.
+Checks 6-13 (payments, auth, onboarding) are the [five green lights](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#the-five-green-lights) from Lesson 4.4, broken into per-item checks - if the lights were green there, these should pass here.
 
 ---
 

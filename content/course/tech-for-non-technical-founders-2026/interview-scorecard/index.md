@@ -20,6 +20,12 @@ tags:
   - course-companion
   - validation
 categories: ["Templates"]
+cover_image: cover.png
+metatags:
+  image: cover.png
+  og_title: "Mom Test Interview Scorecard: Score Each Call 1-10"
+  og_description: "A printable scorecard for your 10 Mom Test interviews - 5 pass/fail checks, 3 emotional flags, one 1-10 score per call."
+cover_image_alt: "JetThoughts template cover for the Mom Test interview scorecard"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/interview-scorecard/"
 related_posts: false
 ---
@@ -68,8 +74,6 @@ Listen for these in the answers. Tally each time one surfaces.
 | **Workaround** | "I've been meaning to..." "We hacked together..." "I pay [TOOL] $X for this." |
 | **Urgency** | "Last week." "This morning." "I missed my kid's birthday because of this." |
 
-**Total flags: ___ (>=3 = strong, 0-1 = polite, 2 = ambiguous)**
-
 **Total flags: ___**
 *(>=3 flags = strong signal. 0-1 = polite. 2 = ambiguous - treat as 5/10 default.)*
 
@@ -82,7 +86,9 @@ Listen for these in the answers. Tally each time one surfaces.
 **Adjustments:**
 - Q4 backed by comparison? Yes = +1 / No = -1
 - Pass count: 5/5 = +1, 4/5 = 0, 3/5 = -1, 2/5 = -2
-- Flags: >=3 = +1, 0-1 = -1
+- Flags: >=3 = +1, 2 = 0, 0-1 = -1
+
+**The cap (from [Lesson 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)):** no comparison behind Q4, or fewer than 3 flags? Anything above 5 rounds down to 5 - that is the polite-default score, not real urgency.
 
 **Final score: ___ / 10**
 
@@ -119,11 +125,6 @@ ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___
 **Strong signals (7+): ___ / 10**
 
 **Decision (from the [Synthesis page](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)):**
-- Build (7+ strong signals) - proceed to Lesson 2.6 prototype
-- Pivot (4-6 strong signals) - run 5 sharper interviews
-- Kill (fewer than 4) - return to Lesson 1.1
-
-**Decision (from [Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)):**
 - ☐ **Build** (7+ strong signals) - proceed to [Lesson 2.6 prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
 - ☐ **Pivot** (4-6 strong signals) - run 5 sharper interviews
 - ☐ **Kill** (fewer than 4) - return to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)

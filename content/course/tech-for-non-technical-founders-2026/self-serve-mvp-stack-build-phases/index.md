@@ -100,7 +100,7 @@ Three actions, in order. The first two cost $0.
 
 Look at the one feature you picked. Could you cut it in half again and still solve the validated problem? The smaller the first ship, the more likely it actually ships.
 
-> **Done:** a live MVP at a real URL with all five green lights lit - Stripe in live mode, custom domain wired, 1 fresh ICP user tested the paywall, zero red Console errors on signup + checkout, and a weekly demo recording exists.
+> **Done:** a live MVP at a real URL with all five green lights lit - Stripe in live mode, custom domain wired, 1 fresh ICP user tested the paywall, zero red Console errors on signup + checkout, and a weekly demo recording exists. The day before you share the URL with anyone new, run the printable [Pre-Launch Checklist](/course/tech-for-non-technical-founders-2026/pre-launch-checklist/) - it breaks these lights into 15 two-minute checks.
 >
 > **You have now:** the self-serve stack set up (4.3) + a live MVP at a real URL. Save the URL, the admin login, and the latest weekly demo recording in a `Live MVP` doc in your `Founder OS` folder, with every account in your own name (per [Lesson 4.2's Day-1 ownership audit](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)). Module 5 invites your Module 2 interviewees and your [Lesson 1.4 smoke-test email list](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) to this URL as the warm seed for your first 10-30 users. Paying customers are the next test.
 >
