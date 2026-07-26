@@ -4,14 +4,52 @@
 
 **Project ID**: 2605-tech-for-non-technical-founders
 **Created**: 2026-05-12
-**Last restructured**: 2026-07-09 (post-#345: course merged + live, M1 fully v2 with lessons 1.1-1.5, M2 v2 migration started)
-**Status**: 🟢 Course LIVE (PR #345) · 🟢 M1 v2 · 🟢 M2 v2 COMPLETE (PR #351 awaiting merge, lessons 2.1-2.6) · 🔲 M3-M5 pending
+**Last updated**: 2026-07-26 (media pilot shipped + media modernization backlog groomed)
+**Status**: 🟢 Course LIVE and CONTENT-COMPLETE on v2 · all 5 modules migrated (PRs #345/#351/#352/#353, deployed via #356) · review-clean (40.15 whole-course, 40.17 journey walk, 40.19 premium 54/60) · instrumented (GA4 funnel + Clarity) · 🔄 Active: external validation pilot + media modernization
 **Owner**: JT content team
 **Parent**: 2510-seo-content-strategy (extends, does not replace)
 
 ---
 
-## 🔀 STRATEGIC PIVOT (2026-06-07) — READ FIRST
+## 📍 WHERE WE ARE + NEXT ACTIONS (2026-07-26) — READ THIS FIRST
+
+**Stage: the course is DONE as an artifact; the open question is whether real
+readers complete it.** All 5 modules live on the v2 micro-lesson template
+(25 lessons + 5 Mia walkthroughs + quickstart/FAQ/glossary + ~30 companions),
+every review round closed, funnel instrumentation (GA4 events + Clarity) live,
+PDF pipeline + 5 printable worksheets shipped, and the 2026-07-26 media pilot
+added 7 hand-drawn SVGs + 2 new template pages (interview-scorecard,
+pre-launch-checklist) with covers. Building more content is NOT the priority;
+validating with real Sams is.
+
+**Next high-overview actions, in order:**
+
+1. **External validation pilot (P0, Sprint A #2)** - recruit 3-5 real
+   idea-stage founders, watch Clarity recordings, find where they stall.
+   Kit: `40-49-review/40.18-*pilot-kit*`. Blocked on Paul's desk only
+   (Clarity project + consent posture + budget + calendar); everything else
+   is agent-prepped. This gates almost everything downstream.
+2. **Media modernization waves (P1, agent-doable in parallel with
+   recruitment lag)** - groomed 2026-07-26 in TASK-TRACKER: Wave M1 = SVGs
+   for the 4 core lessons with zero inline visual; then decision-aid
+   retrofits, printable PDFs for the 3 pilot worksheets, mobile-legibility
+   investigation. Definition-of-done includes the visual scroll gate +
+   Comic Sans text budgets (the pilot's hard lesson).
+3. **Sprint D demand-driven fixes** - only what pilot recordings surface
+   (plus the pre-groomed 10.08 content-gap batch). Do not guess; the pilot
+   data decides.
+4. **Distribution prep** - blog funnel per 2510/20.07 + LinkedIn campaign.
+   Gated on the pilot confirming the course converts readers, not before.
+
+**For cold agents:** route via `PROJECT-INDEX.md`; live queue is
+`TASK-TRACKER.md` (top two sections); media inventory is
+`40-49-review/40.20-media-gap-audit-report.md`. The migration playbooks below
+and the pivot section following are HISTORICAL context - the migration is
+complete; do not start new module migrations.
+
+---
+
+## 🔀 STRATEGIC PIVOT (2026-06-07) — historical context (migration since completed)
 
 **v1 status**: Long-form course shipped end-to-end (5 modules · 18 chapters · 15 artifacts · 22+ iterations of Sam-loop polish). Live and functional.
 
@@ -22,8 +60,8 @@
 **Migration plan (see `TASK-TRACKER.md` "Course Migration Schedule")**:
 - ✅ **Phase 0 / Option C** (shipped 2026-06-07): Quickstart + FAQ + "What not to learn" + 6 Sam recommendations from 40.07
 - 🔄 **Phase 1** (iterating 2026-06-08+): 2 pilot lessons (1.2a, 1.2b) being iterated to ideal quality. Strategy: pilot-first, then scale. Phase 2 gated behind: (1) both pilots pass all 6 Sam-review tests, (2) 5-Sam real-founder validation confirms template, (3) 30.03 §7 QA passes, (4) iteration refinements documented.
-- 🔄 **Phase 2** (in flight): module-by-module migration. M1 ✅ live (PR #345, 1.1-1.5). M2 ✅ complete on PR #351 (2.1-2.6 incl. Synthesis as 2.5, walkthrough, ratchet validator). M3-M5 🔲.
-- 🔲 **Phase 3** (cross-cutting polish, gated): bridges + reflection + visual discipline + viral loop
+- ✅ **Phase 2** (COMPLETE 2026-07-10): module-by-module migration. M1 (PR #345, 1.1-1.5), M2 (PR #351, 2.1-2.6), M3 (PR #352), M4+M5 (PR #353), branch-aware nav (#354).
+- ✅ **Phase 3** (delivered via review rounds, closed with #356): whole-course 4-lens review (40.15), 44-page journey walk (40.17), 8-dimension premium swarm (40.19, 54/60), visual loop over 43 SVGs + 61 pages.
 
 **What we stopped**: Iter 17+ surgical loop on v1 long-form chapters. Each Iter-N round was catching diminishing-return defects. The structural format gap is solved by migration, not by line edits.
 
@@ -125,14 +163,15 @@ Each module has an **input** (what the reader brings from the previous module), 
 - Theme partial `course-prev-next.html` auto-renders nav from YAML
 - Course-chapter visibility filter excludes spine from `/blog/` index
 
-### 🔲 Open work (see TASK-TRACKER.md)
-- **P1**: Landing-page fast-path routing for founders further along, Founder Control Dashboard artifact, downloadable PDF templates, companion-post FAQ collection, rescue-path routing audit (Alex-targeted, not Sam-targeted)
-- **P2**: Skip-to-action anchor links, Module 2 encouragement callouts (Sam-first, not burn-trauma), TL;DR summaries, completion criteria per chapter, tighten practical proof
-- **P3**: Cover regen for ~30 companion posts, Wizard of Oz Concierge MVP, echo chamber warning (done in Ch 5.3), Loom outreach, Engineering as Marketing
+### 🔲 Open work (see TASK-TRACKER.md — the list above is superseded; current queues are)
+- **P0**: External validation pilot (Sprint A #2) — Paul's desk items only; kit ready
+- **P1**: Media modernization waves M1-M4 (groomed 2026-07-26, agent-doable)
+- **P2 demand-driven**: Sprint D (10.08 content-gap batch + whatever pilot recordings surface), media Wave M5
+- **Then**: distribution prep (blog funnel per 20.07 + LinkedIn campaign), gated on pilot signal
 
 ### Phase pipeline
-- LinkedIn promotion per post (Paul Keen voice) — ongoing
-- Course completion path tracking — pending analytics setup
+- LinkedIn promotion per post (Paul Keen voice) — gated on pilot signal
+- Course completion path tracking — ✅ instrumented (GA4 funnel events + Clarity, PR #356); awaiting real traffic
 - Quarterly refresh sweep for AI-era posts — Q1 2027 first refresh
 
 ---

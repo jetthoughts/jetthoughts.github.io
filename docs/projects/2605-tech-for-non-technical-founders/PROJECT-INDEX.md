@@ -1,8 +1,8 @@
 # Project 2605 - Master Index
 
 **Project**: Tech for Non-Technical Founders 2026
-**Status**: 🟢 Course LIVE (PR #345) · 🟢 M1-M3 live (PRs #345/#351/#352) · 🟢 M4+M5 v2 complete on branch modules-4-5-v2 (PR pending) · course fully on v2 template
-**Last Updated**: 2026-07-10 (M2 done: flattened 2.1-2.6 with Synthesis as 2.5, walkthrough, all review rounds closed, regression ratchet validator live - see 40.12/40.13/40.14)
+**Status**: 🟢 Course LIVE + CONTENT-COMPLETE on v2 (all 5 modules, PRs #345/#351/#352/#353, deployed via #356) · review-clean · instrumented (GA4 + Clarity) · 🔄 Active: external validation pilot + media modernization
+**Last Updated**: 2026-07-26 (media pilot: 7 SVGs + 2 template pages w/ covers, 40.20 gap audit, media backlog groomed in TASK-TRACKER)
 **Parent**: `../2510-seo-content-strategy/`
 
 This is the **single navigation hub** for the 2605 project. Read top-to-bottom on first visit.
@@ -14,7 +14,11 @@ This is the **single navigation hub** for the 2605 project. Read top-to-bottom o
 **The course is merged and live** (PR #345, squash 90216d2f): 5 modules, 24 spine chapters (count derives from `data/course_sequence.yaml` via the `course-stat` shortcode - never hardcode it), live at `/course/tech-for-non-technical-founders-2026/`. Module 1 is fully v2 (lessons **1.1-1.5**) with redesigned landing, covers, and four review rounds resolved.
 **Strategic pivot (2026-06-07)**: v2 (micro-learning format) is the next iteration based on `30.03-course-format-requirements-for-creators.md`. All 21 v1 chapters score 1.0-1.5/8 against the 8-part template (per 40.08 gap report). The 5 micro-lesson exploration drafts (Mom Test 3-lesson sequence + paid-pilot + mom-test-5-questions) were removed 2026-06-08 to start the migration from a clean slate; the **Quickstart and FAQ pages remain in `content/course/...`** as the v2 entry points already wired into the landing.
 
-**Currently in flight**: nothing - PR #351 (Module 2 complete) awaits merge. Next work stream: M3 migration, using M1+M2 lessons as the pattern and the ratchet discipline from 40.13 (every review fix adds its signature to data/course_banned_strings.yaml in the same commit).
+**Currently in flight (2026-07-26)**: the MIGRATION IS COMPLETE - all 5 modules are v2 (M3 via PR #352, M4+M5 via #353, sprints A+B+C via #356: GA4 funnel + Clarity, walkthrough heroes, TL;DR accent, PDF pipeline + 5 worksheets). Do NOT start new module migrations. The two active work streams are:
+1. **External validation pilot (P0)** - recruit 3-5 real Sams, watch Clarity recordings (kit at `40-49-review/40.18-*`; blocked on Paul's desk: Clarity project, consent, budget, calendar).
+2. **Media modernization (P1, agent-doable)** - groomed waves in `TASK-TRACKER.md` §"Media modernization backlog"; inventory in `40-49-review/40.20-media-gap-audit-report.md`. Wave M1 = SVGs for the 4 core lessons with zero inline visual. Every visual passes the scroll gate (`docs/workflows/visual-scroll-gate.md`) + Comic Sans text budgets BEFORE commit.
+
+Then Sprint D (demand-driven, pilot data decides) and distribution prep (blog funnel + LinkedIn), gated on pilot signal. High-overview stage summary: `GOAL-AT-A-GLANCE.md` §"WHERE WE ARE + NEXT ACTIONS".
 
 Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" section for the 4-phase rollout). Review docs in `40-49-review/`.
 
