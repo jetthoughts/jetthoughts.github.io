@@ -79,6 +79,12 @@
       "skillPath": "skills/humanizer/SKILL.md",
       "computedHash": "a3163eb79525b9c4f12a201d5d271735f01d5593a41a616050427400982b8360"
     },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "8e68c45ab038a3707795034a060b90098e08250ae60ad9987e9e73ec269aaf7e"
+    },
     "keyword-research": {
       "source": "Eronred/aso-skills",
       "sourceType": "github",
