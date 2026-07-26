@@ -5,6 +5,7 @@
 **Purpose**: capture the ICP's *verbatim* language while we source, so openers and copy mirror how founders actually talk (rapport = they hear their own head). Invented language reads as marketing; harvested language reads as understanding.
 **Framework**: keyed to the [Four Forces](customer-profile-four-forces.md) - Push (pain), Pull (desire/wish), Anxiety (fear), Habit (why stuck). T7 openers = their Push words + our Pull wedge + one Anxiety pre-empt.
 **Attribution rule**: tag each quote `[VERBATIM-founder]`, `[VERBATIM-dev/team]`, `[blog-paraphrase]`, or `[vendor]`. Only VERBATIM-founder quotes are safe to mirror as "their words." Keep the source link.
+**Recency rule (Paul, 2026-07-26): NONE.** Any comment, message, or post — however old — is valid here for learning the ICP's slang, phrasing, and emotional register; language doesn't expire. This is the deliberate opposite of the lead rule (`cold-prospect-list.md` rows must be ≤30 days verified). Threads dropped as stale leads are still harvested into this file in the same visit — see `t4-t5-grooming.md` §Lead vs. voice.
 
 ---
 

@@ -150,3 +150,16 @@ docs/90-99-content-strategy/.
 
 ## 2026-07-26 (3)
 - Correction to the correction: the doc is enforced guidelines/results, not research - moved again to docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/30.07-media-design-guidelines.md (the project's specs/requirements section, alongside 30.03-course-format-requirements-for-creators.md) rather than 10-19-research/. Rule refined: 10-19-research/ is for investigation/analysis docs; 30-39-architecture-design/ is for adopted, enforced specs - a doc that prescribes what creators must do belongs in the latter even if its origin was external research.
+
+## 2026-07-26 (4) - Sourcing quality gates + lead/VoC recency split
+Batch-1 send-run pre-research (send-runner-prompt Phase 1, via Claude-in-Chrome)
+found 3 of 5 curated openers unsendable (6-year-old post; 1-year-old comment
+mis-routed as a post; thread saturated by a competing "free" pitch). Root cause:
+recency was eyeballed from search excerpts, never verified by reading the thread
+timestamp. Fixes shipped: v2 qualification rubric (5 checks, hard capture-time
+gates) in rescue-sprint/t4-t5-grooming.md; Paul's policy split codified — leads
+must be verified ≤30 days (all venues, no exceptions), VoC quotes have no age
+limit and are harvested even from dropped-stale threads. SEND-SHEET now carries
+per-message GO/HOLD banners (batch-1 currently 0-for-5; Joy Adamson is the one
+Paul-override candidate). Board: #28 done, #29 (re-source v2) is the critical
+path. Updated: [outbound-sprint](/workflows/outbound-sprint.md).

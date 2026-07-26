@@ -2,8 +2,8 @@
 type: Playbook
 title: Outbound sprint machinery (2607 Vibe Code Rescue)
 description: How the browser-agent outreach loop runs - pre-validated sends, daily reply monitoring, the pipeline ledger, board conventions, and the mail-routing gotchas.
-tags: [outbound, sales, browser-agent, kanban]
-timestamp: 2026-07-25T00:00:00Z
+tags: [outbound, sales, browser-agent, kanban, sourcing]
+timestamp: 2026-07-26T00:00:00Z
 resource: docs/projects/2607-vibe-code-rescue/
 ---
 
@@ -32,6 +32,27 @@ resource: docs/projects/2607-vibe-code-rescue/
 - Every opener's link must route to the named prospect's own post/profile -
   a quote captured from a comment belongs to the commenter (see the
   link-routing check in [review-swarm](/workflows/review-swarm.md)).
+
+# Sourcing quality gates (2026-07-26, learned from a 60% batch failure)
+
+- **Verify timestamps at capture, not at send.** Batch-1 pre-research found
+  3 of 5 P8-scored "ready" rows unsendable: a 6-year-old post, a 1-year-old
+  comment mis-attributed as a post, and a thread already carrying a
+  competing "free" pitch. Root cause: the rubric said "recent, not dead"
+  but recency was eyeballed from search excerpts — nobody opened the thread
+  and read the date. Catching it at send-time wastes the whole downstream
+  chain (openers, scoring, sheet, approval loop).
+- **Lead vs. voice — two harvests, one visit (Paul's policy):** lead rows
+  need a **verified timestamp ≤30 days, all venues, no exceptions** (leads
+  expire; replying to a stale thread reads as scraper spam). **VoC quotes
+  have NO age limit** — any comment/message/post teaches the ICP's slang
+  and emotional register. A thread dropped as a stale lead is still
+  harvested into `voice-of-customer.md` before closing it.
+- The v2 rubric (5 checks: who / what / when-verified / where-routing /
+  thread-health) lives in `rescue-sprint/t4-t5-grooming.md` Vote 3;
+  `verified date` + `thread health` are mandatory admission columns for
+  the scored list. Quality over quota: 10-15 verified-fresh rows beat 25
+  padded ones.
 
 # Board conventions
 

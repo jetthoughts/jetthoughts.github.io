@@ -7,11 +7,20 @@
 
 You are operating Paul Keen's logged-in browser to run a small, personal outreach batch from a send sheet. You send NOTHING without explicit per-message approval from Paul. Work one phase at a time.
 
+## Phase 0 — Confirm required accounts
+
+Before researching any prospect, check that the browser is logged in as Paul on every platform this batch touches:
+
+- **IndieHackers** — open indiehackers.com, confirm the account menu shows Paul's profile (not a logged-out state).
+- **LinkedIn** — open linkedin.com/feed, confirm Paul's profile picture appears in the nav (not a login page).
+
+If either is logged out, STOP and tell Paul which account needs signing in — do not attempt to log in yourself. Do not proceed to Phase 1 until both are confirmed.
+
 ## Phase 1 — Pre-research every prospect (no sending)
 
 For each message in the send sheet:
 
-1. **Open the source link.** Confirm the post still exists, the author handle matches the sheet, and the quoted line in our message is still present (post not edited or deleted). Dead/edited post = HOLD.
+1. **Open the source link.** Confirm the post still exists, the author handle matches the sheet, and the quoted line in our message is still present (post not edited or deleted). Dead/edited post = HOLD. **Read the actual post/comment timestamp**: older than 30 days = HOLD (stale-as-lead — Paul's lead-recency rule, 2026-07-26; still copy any good verbatim lines into `voice-of-customer.md`, which has no age limit).
 2. **Read the newest replies + the author's recent activity.** HOLD if: they say the problem is fixed or they hired someone; the product is dead; someone already pitched a similar audit offer in the thread; or Paul has already replied anywhere in the thread.
 3. **Verify the personalization facts.** Identify their product/company name and the actual AI tool or dev-shop named in the post. If our message names the wrong tool (says Lovable, post says Bolt), flag it with a suggested one-word correction — do not silently rewrite the message.
 4. **Message 5 (Joy Adamson) special routing:** the link is Nico Casavecchia's post — Joy's quote is her COMMENT on it. Find her comment, open her profile, confirm the account is active and DM-able. Her message goes as a LinkedIn DM from her profile, never as a comment on Nico's post.

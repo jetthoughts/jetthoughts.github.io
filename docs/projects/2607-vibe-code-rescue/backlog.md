@@ -77,7 +77,30 @@ Strategy/gates/Paul's desk live in [`operation-runbook.md`](operation-runbook.md
 
 ## State
 
-> **Live status/flow is tracked in the kanban board** — `kanban-md list --compact --tag 2607` (board `jetthoughts.github.io`, tasks #1-#26: #11-#18 sprint-2, #19-#23 week-2, #24 booking→audit conversion, #25 batches 3+ [openers #9-#25], #26 warm-referral; #22 archived as duplicate of #15/#17). Every open card states its own inputs, done-criteria, and a `Requires:` line (Paul's browser/approval vs pure agent work) — any agent can take any unblocked card cold. The board is local-only (`kanban/` is gitignored) — the **Done** list below is the committed status snapshot; keep it current. This file holds the task specs + verified seeds; the board holds status, claims, and dependencies (P8 gated on P1-P7, P9 on P8, P7 blocked on Paul). Copy-paste run prompts: `rescue-sprint/prospects/RUN.md`.
+> **Live status/flow is tracked in the kanban board** — `kanban-md list --compact --tag 2607` (board `jetthoughts.github.io`, tasks #1-#29: #11-#18 sprint-2, #19-#23 week-2, #24 booking→audit conversion, #25 batches 3+ [openers #9-#25], #26 warm-referral, #28-#29 sourcing-quality retro (new 2026-07-26); #22 archived as duplicate of #15/#17). Every open card states its own inputs, done-criteria, and a `Requires:` line (Paul's browser/approval vs pure agent work) — any agent can take any unblocked card cold. The board is local-only (`kanban/` is gitignored) — the **Done** list below is the committed status snapshot; keep it current. This file holds the task specs + verified seeds; the board holds status, claims, and dependencies (P8 gated on P1-P7, P9 on P8, P7 blocked on Paul). Copy-paste run prompts: `rescue-sprint/prospects/RUN.md`.
+
+### ⚠ Sourcing-quality retrospective (2026-07-26)
+
+Batch-1 Phase-1 pre-research (send-runner-prompt.md, run against card #12's 5 openers) found **3 of 5 rows unsendable — a 60% failure rate** on a list P8 had already scored "ICP, ready":
+- **Afrikonnect** (row 12): quote is a comment **~1 year old**, on someone else's post — not Afrikonnect's own post. Thread already has 2 people publicly offering to help in that exact spot.
+- **Saul_E** (row 13): post is dated **2020-05-26 — over 6 years old**.
+- **SANICE_AI** (row 2): recent and correctly matched, but the 61-comment thread already contains a near-identical competing "free" pitch (a spam-patterned account that pivoted from a paid contest to "spearprotocol.com — free... just clarity" after being declined) — sending our audit offer into that thread reads as a third scraper.
+
+**Root cause**: `t4-t5-grooming.md` Vote-3 rubric already names a "When" check ("recent, not dead") — it was never enforced with a verified timestamp read; P1-P9 (2026-07-22) eyeballed recency from `web_search` excerpts instead of opening the thread and reading the actual date. There is also no rubric check at all for thread saturation (competing pitches already present).
+
+**This means the other 20 rows in `cold-prospect-list.md` (built the same day, same method) carry the same unverified risk** and should not be treated as send-ready until re-checked.
+
+**Filed**: #28 ✓ **DONE 2026-07-26** — v2 rubric live in `rescue-sprint/t4-t5-grooming.md` Vote 3 (5 checks; verified-timestamp ≤30-day window with venue caps, post|comment routing field, thread-health scan; `verified date` + `thread health` are now P8 admission-gate columns; cold-eyes v2 PASS, verdict in-file) → #29 (re-source v2 against the fixed rubric — next Ready). Directive from Paul (2026-07-26): prioritize finding **actual users with a real, current problem** over hitting a row-count quota; a shorter list of genuinely fresh, unsaturated rows beats a padded one.
+
+**Batch-1 status (updated 2026-07-26, flat lead-recency rule)**: **ALL 5 messages HOLD — zero sendable rows.** Paul's rule "leads = up to 1 month, no exceptions" flipped the two survivors too: SpecBuildLab (~9.5mo) and Joy Adamson (~5mo, flagged as Paul's one override candidate — still publicly unanswered). `SEND-SHEET.md` carries per-message ⛔HOLD banners so no runner can send anything. Card #12 is **blocked on #29's replacement rows** (or Paul's explicit Joy override).
+
+**Policy split (Paul, 2026-07-26) — recency gates leads, not voice**:
+- **Leads** (`cold-prospect-list.md`): verified **≤30 days, all venues, no exceptions**. Leads expire.
+- **VoC** (`voice-of-customer.md`): **no age limit** — any comment/message/post teaches the ICP's slang and emotional register. Stale-dropped lead threads are still harvested for VoC in the same visit (codified in `rescue-sprint/t4-t5-grooming.md` §Lead vs. voice).
+
+### ▶ Sprint 3 — Fresh-Leads Sprint (planned 2026-07-26)
+
+Sequence (WIP=1): **#29** re-source v2 (re-audit all 25 v1 rows with verified timestamps; drop stale/saturated **as leads** while harvesting their VoC; source new ≤30-day rows; IH-first, expand via F5Bot v2 keywords + X if thin — F5Bot swap is Paul's ~2-min unblock and is now **load-bearing**, not optional) → **P9-delta** openers for the new rows only (reuse `outbound-openers.md` templates) → **#12** batch-1 send (first ≤30-day verified rows, Paul approves) → **#20** daily reply-monitor. Batch-2/3 cards (#19, #25) depend on #29 — no more sends from the unverified v1 list.
 
 - **Done**: P1 ✓, P2 ✓, P3 retired (0 rows — HN is dev-dominated, no founder voices; venue invalid for this ICP, do NOT re-run), P4 ✓, P5 ✓ (1 row — low-yield as predicted; don't re-run without a new seed), P6 ✓, P7 ⚠ (email verified 2026-07-24 BUT v1 keywords produced zero mentions — composed phrases that never occur verbatim; **Paul: swap in the v2 keyword set from `rescue-sprint/prospects/p7-f5bot.md`** (~2 min), then digests arrive via the pftg.sof forward), P8 ✓ (25 deduped rows), P9 ✓ (25 openers), T9 ✓ (objection bank), P10 ✓ (pipeline sheet scaffolded)
 - **A2 confirmed**: 3-tier pricing ($2,500 triage / $7,500 rescue / $10K foundation reset)
