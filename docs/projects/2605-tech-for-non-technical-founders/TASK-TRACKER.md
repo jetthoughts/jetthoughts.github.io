@@ -1,6 +1,6 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-07-12 (PR #356 MERGED as ad1cb19c, deployed, production verified. It carried: Sprints A+B+C [GA4 funnel events + Clarity hook + pilot kit 40.18; walkthrough heroes/artifact trails + TL;DR accent + 21 cover badges; PDF pipeline + 5 printable worksheets], the 3-round PDF/SVG visual loop [43 SVGs + 61 pages exhaustively inspected, 13 SVGs repaired], the 8-dimension premium swarm review 40.19 [54/60 PREMIUM; all sub-premium findings fixed], and the reflection round [old-spine 6.x title ghosts, AI-block label leaks x4, org-chart mermaid -> decision table, Good/Bad callout accents + cascade bug].)
+**Last Updated**: 2026-07-26 (media pilot shipped + repaired: 7 SVGs on 4 pages, 2 new template pages with covers, 40.20 gap audit. Media modernization backlog groomed below. Previous: PR #356 MERGED as ad1cb19c, deployed, production verified. It carried: Sprints A+B+C [GA4 funnel events + Clarity hook + pilot kit 40.18; walkthrough heroes/artifact trails + TL;DR accent + 21 cover badges; PDF pipeline + 5 printable worksheets], the 3-round PDF/SVG visual loop [43 SVGs + 61 pages exhaustively inspected, 13 SVGs repaired], the 8-dimension premium swarm review 40.19 [54/60 PREMIUM; all sub-premium findings fixed], and the reflection round [old-spine 6.x title ghosts, AI-block label leaks x4, org-chart mermaid -> decision table, Good/Bad callout accents + cascade bug].)
 
 ## Active Phase: external validation pilot (real Sams, kit at 40-49-review/40.18-external-validation-pilot-kit.md; Paul actions: Clarity project + param, consent posture, budget, calendar) → distribution prep
 
@@ -34,6 +34,105 @@ Course is content-complete on the v2 template, journey-audited (40.17), and revi
 4. Whatever the pilot recordings surface (this replaces the vague "tighten practical proof" item)
 
 Then: distribution prep (blog funnel per 20.07 + LinkedIn campaign), gated on Sprint A instrumentation being live.
+
+---
+
+## Media modernization backlog (groomed 2026-07-26)
+
+**Goal:** every lesson earns its scroll - first-fold visual hook, decision-aid
+formats where the reader decides, one visual break per H2, printable artifacts
+where the reader acts on paper. Grounded in `40-49-review/40.20-media-gap-audit-report.md`
+(the inventory), `10-19-research/10.06-media-design-recommendations.md` (what
+formats apply - NO slides/video per 30.03), and `10-19-research/10.05-content-organization-patterns-2026.md`
+Part 2 (the cognitive-load rules the visuals must serve).
+
+**What already shipped (2026-07-26 pilot, commits 2e153bd6 + e112a3f1):** all
+three P0 assets - interview-scorecard page (+SVG +cover), pre-launch-checklist
+page (+SVG +cover), channel-fit canvas, 3 outreach-sequence SVGs; both new
+pages wired into `_index.md` + companion lessons 2.1/4.4.
+
+**Definition of done for EVERY item below (no exceptions):**
+1. House visual spec (`.okf/design/house-visual-spec.md`): paper tones, semantic
+   colors (red=action/anti-pattern, purple=alternate, green=money/success),
+   Caveat stack, labels INSIDE shapes.
+2. **Text budgets sized for Comic Sans MS**, not Caveat - SVGs render via `<img>`
+   where webfonts never load (~6.2px/char at 13px, ~8px/char at 16px bold; every
+   line ends >=10px before any rect edge/badge/divider). See memory
+   `project-svg-text-budget-comic-sans-fallback` - the pilot's first cut shipped
+   5 of 6 SVGs with overflow because budgets assumed Caveat.
+3. Visual scroll gate (docs/workflows/visual-scroll-gate.md) at 1280x800 AND
+   390x844 BEFORE commit - raw SVG URL + in-page. The banned-string ratchet does
+   NOT scan SVG internals; the gate is the only check that sees them.
+4. Informational only - if removing the visual loses nothing, don't ship it
+   (no decorative art, 10.05 CLT rule). Mermaid height <= ~1600px rendered.
+5. `bin/hugo-build` + `bin/rake test:critical` green; ONE PR per wave.
+
+**Sequencing: WIP=1, one wave at a time, each wave independently shippable.**
+
+### Wave M1 - P1 core-lesson visuals (~1 day) - START HERE
+
+The 4 core lessons with a cover but ZERO inline visual (40.20 §2, P1 rows).
+One informational SVG each, placed at the section where the reader decides/acts:
+
+| # | Lesson | Visual to create |
+|---|---|---|
+| 1 | `find-10-people-with-problem-outreach-2026` (2.4) | Outreach funnel strip: 30 names -> sent -> replied -> booked, with honest drop-rates - reuses the tracker-row motif from outreach-cadence.svg |
+| 2 | `first-ten-customers-outreach-message` (5.3) | 8-name network audit grid (who/last-contact/warm-intro-path) as fill-in worksheet |
+| 3 | `first-ten-customers-send-track` (5.4) | Send-day rhythm card: daily handful cadence + stop-at-10-booked gate |
+| 4 | `vibe-prd-template` (M3 companion) | One-page brief skeleton: 5 sections as labeled card stack, outcome-shaped vs feature-shaped cues |
+
+Skip (already adequate per 40.20): `mom-test-synthesis-build-pivot-kill` and
+`should-you-hire-2026-decision-tree` both carry Mermaid decision flowcharts.
+
+### Wave M2 - decision-aid + F-pattern retrofits (~1 day)
+
+Apply the 10.05 Part 2 rules to existing prose in the highest-traffic lessons:
+1. Sweep all core lessons for if-X-then-Y prose sections -> compact decision
+   table or labeled flowchart (pattern: M3's I4 "2 forks" retrofit).
+2. Sweep for 6+ identical-format bullets / 6+ single-format table rows ->
+   card grid or per-item icons (F-pattern give-up rule).
+3. "One visual break per H2" audit on the 10 longest lessons; fill gaps with
+   informational visuals only (a table or styled callout counts; bold leaders don't).
+4. Quick wins carried from the ICP backlog (still open): collapse
+   outreach-sequence-template 3x stacked variant blockquotes into single
+   blockquotes; de-stack + rebalance "$0 path" callouts in outbound +
+   self-serve-mvp per `feedback_budget_stance_free_and_paid_equal`.
+
+### Wave M3 - printable artifacts thin slice (~0.5 day)
+
+Extend the proven `bin/generate-template-pdfs` pipeline to the 3 new pilot
+assets: interview-scorecard, pre-launch-checklist, channel-fit canvas one-pager.
+These are the pages readers physically fill in - print is the native format.
+The remaining ~9 template PDFs stay gated on pilot download demand (standing
+Sprint C #3 rule - do not relitigate).
+
+### Wave M4 - worksheet mobile legibility (investigation, ~0.5 day)
+
+Dense 960-wide worksheet SVGs (channel-fit canvas, scorecard) render at ~7px
+text on a 390px phone - legal but illegible; Sam reads on phone (pilot
+screening criterion). Investigate ONE pattern on ONE worksheet: portrait-
+orientation variant (e.g. 700x900 viewBox) selected via `<picture>`/media
+query in the render hook, or taller stacked layout. Ship only if the pattern
+is cheap and reusable; otherwise document the ceiling in
+`.okf/design/house-visual-spec.md` and close.
+
+### Wave M5 - P2/P3 SVGs + module-end checklists (demand-driven, after pilot data)
+
+- 40.20 P2 list (5 lessons: fake-stripe case study, friday-demo, salvage-vs-
+  rebuild, sow-reading-guide, vibe-coding-ceiling-signals) and P3 list (3
+  Going Further pages) - only for pages Clarity shows real traffic on.
+- 40.20 §5 interaction gaps: module-end checklists for M1/M2/M3/M5 (M4 has
+  one), Do-This-Now-references-template-by-name audit, micro-reflection
+  wording sample audit.
+
+### Effectiveness measurement (rides every wave, not a wave itself)
+
+Sprint A instrumentation (GA4 + Clarity, shipped in #356) is live. For each
+page that gets a visual: note baseline scroll-depth/time-on-page the week
+before, re-check 2 weeks after. A visual that doesn't move scroll-through or
+reduce Clarity stall points on its section is a candidate for removal, not
+iteration (10.05: visuals that decorate cost parse time). Record per-wave
+before/after in this tracker when closing the wave.
 
 **🚀 What shipped 2026-07-09..10: Module 2 v2 complete (PR #351, 20 commits)**
 - ✅ All chapters on the M1 v2 template; numbering FLATTENED to 2.1-2.6 (letters retired; Synthesis is Lesson 2.5, in yaml prev/next). Chapter count derives 25 via course-stat.

@@ -56,7 +56,11 @@ Your 10 interview transcripts from [Module 2](/course/tech-for-non-technical-fou
 
 ## Score and pick
 
-Score each candidate channel 1-3 on four dimensions - price fit, buyer type, your honest time budget, and interview signal - for a total out of 12. **≥9/12 = commit to that channel.** 7-8/12 = run a 1-week pilot on your top two to break the tie; the higher reply rate wins. ≤6/12 = no channel fits yet; re-read your transcripts for missing signal before scaling outbound at all. The full scoring rubric and the 4-channel comparison (LinkedIn, cold email, community, social) live in the [deeper reference](/course/tech-for-non-technical-founders-2026/reference/channel-selection-full/).
+Score each candidate channel 1-3 on four dimensions - price fit, buyer type, your honest time budget, and interview signal - for a total out of 12.
+
+![Channel-fit canvas: score each candidate channel 1-3 on four dimensions. Five example channels with fill-in cells. Right side: 9+/12 commit, 7-8 pilot, 6 or less re-read transcripts.](channel-fit-canvas.svg)
+
+**≥9/12 = commit to that channel.** 7-8/12 = run a 1-week pilot on your top two to break the tie; the higher reply rate wins. ≤6/12 = no channel fits yet; re-read your transcripts for missing signal before scaling outbound at all. The full scoring rubric and the 4-channel comparison (LinkedIn, cold email, community, social) live in the [deeper reference](/course/tech-for-non-technical-founders-2026/reference/channel-selection-full/).
 
 ## Pressure-test with AI first
 

@@ -36,6 +36,10 @@ related_posts: false
 
 Everything below is copy-pasteable. Replace the `[BRACKETS]`, keep the shape. The rules that make these messages work - and what to do when they don't - live in [Lesson 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/); this page is the reference card.
 
+![The 3-message outreach cadence: Day 0 message names their exact words, Day 3 bump picks the honest variant, Day 7 close leaves the door open. A handful a day, by hand - a stagger beats a burst.](outreach-cadence.svg)
+
+![Four message channels ordered by reply rate: Waitlist signups (start here, highest reply rate), Email or DM (primary channel for the 30-name list), LinkedIn DM (when there's no email), Reddit comment (public threads with DMs closed). All use the same formula: name their exact words in the first line.](message-channels.svg)
+
 ## The Day-0 message (email or DM)
 
 > Subject: your post about [THEIR_EXACT_WORDS]
@@ -45,6 +49,8 @@ Everything below is copy-pasteable. Replace the `[BRACKETS]`, keep the shape. Th
 The whole message rests on the first line naming something they actually wrote. Send a handful a day, by hand, per the 2.4 cadence - a stagger beats a burst.
 
 ## The Day-3 bump - two variants, pick honestly
+
+![The Day-3 bump: pick your honest variant. Left fork (purple) for first research round - curiosity is the hook. Right fork (amber) for already interviewed - social proof with a true number only.](bump-decision.svg)
 
 > **If this is your first research round:**
 >

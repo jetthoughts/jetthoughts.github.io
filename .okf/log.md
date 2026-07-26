@@ -141,3 +141,12 @@ docs/90-99-content-strategy/.
 
 ## 2026-07-19 (2)
 - Live incident: visible skip-link site-wide - CI PurgeCSS cold-start race (no hugo_stats.json on first pass). Fixed: safelist sr-only/skip-link (#377) + structural warm-up guard in bin/hugo-build and _hugo.yml (#378). Phase C completed and closed (PRs #371-#376).
+
+## 2026-07-26
+- Media pilot shipped: 7 hand-drawn SVGs across 4 course pages (outreach-sequence-template x3, interview-scorecard, pre-launch-checklist, channel-selection channel-fit canvas) + 2 new template pages with JetVelocity covers, wired into _index.md template lists and companion lessons 2.1/4.4. New concept: design/media-design-guidelines.md (external baseline; slides/video sections marked not-applicable - course is text-only per 30.03). Gap audit: 40.20 in project 2605; P0 rows marked shipped. Lesson re-learned: run the visual scroll gate BEFORE committing SVGs - the first cut of all 6 SVGs shipped with text-overflow/misalignment defects that one Chrome pass caught.
+
+## 2026-07-26 (2)
+- Correction: the media-design-guidelines concept added earlier today was misplaced in .okf/design/ (a rendering-spec section) and duplicated raw external research that docs/projects/2605-.../10.06-media-design-recommendations.md already distills/adopts. Removed from OKF entirely and relocated as docs/projects/2605-tech-for-non-technical-founders/10-19-research/10.09-media-design-guidelines-external-baseline.md (source material, not an operational concept). Rule: raw external research belongs in docs/projects/<project>/10-19-research/, not .okf/ - OKF concepts are for durable operational knowledge distilled FROM research, not the research itself.
+
+## 2026-07-26 (3)
+- Correction to the correction: the doc is enforced guidelines/results, not research - moved again to docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/30.07-media-design-guidelines.md (the project's specs/requirements section, alongside 30.03-course-format-requirements-for-creators.md) rather than 10-19-research/. Rule refined: 10-19-research/ is for investigation/analysis docs; 30-39-architecture-design/ is for adopted, enforced specs - a doc that prescribes what creators must do belongs in the latter even if its origin was external research.

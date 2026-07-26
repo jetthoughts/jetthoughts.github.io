@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 382" role="img" aria-labelledby="bump-title">
+  <title id="bump-title">The Day-3 bump: two honest variants. Pick the one that matches your situation. Never claim conversations you have not had.</title>
+  <desc>A single "Send bump" card in the center flows down into two variant cards side by side. Left (purple, alternate path): "First research round" - curiosity about their post is the hook, no credentials needed. Right (amber, warning): "Already interviewed" - social proof with a true number only. A bottom rule notes: never claim conversations you have not had.</desc>
+  <defs>
+    <style>
+      .h       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title   { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub     { font-size: 15px; fill: #666; font-style: italic; }
+      .step    { font-size: 20px; font-weight: 700; fill: #1a1a1a; }
+      .var-tx  { font-size: 14px; fill: #555; }
+      .rule    { font-size: 16px; font-weight: 700; fill: #cc342d; }
+      .note    { font-size: 14px; fill: #666; font-style: italic; }
+      .num     { font-size: 15px; font-weight: 700; fill: #fff; }
+      .card    { fill: #faf7f2; stroke: #555; stroke-width: 2; }
+      .card-p  { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
+      .card-a  { fill: #fffbeb; stroke: #b8860b; stroke-width: 2.5; }
+      .card-r  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2; }
+      .numdot  { fill: #cc342d; }
+      .arrow-p { stroke: #a855f7; stroke-width: 2; fill: none; }
+      .arrow-a { stroke: #b8860b; stroke-width: 2; fill: none; }
+      .lbl-bg  { fill: #ffffff; stroke: none; }
+    </style>
+    <marker id="ahp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#a855f7"/>
+    </marker>
+    <marker id="aha" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#b8860b"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="34" text-anchor="middle" class="h title">The Day-3 bump: pick your honest variant</text>
+  <text x="480" y="58" text-anchor="middle" class="h sub">If the Day-0 message got no reply, send exactly one bump. Which one depends on where you really are.</text>
+
+  <!-- Center: send bump card -->
+  <g transform="translate(345, 82) rotate(-0.4 135 38)">
+    <rect width="270" height="76" rx="12" class="card"/>
+    <circle cx="24" cy="24" r="13" class="numdot"/>
+    <text x="24" y="29" text-anchor="middle" class="h num">2</text>
+    <text x="48" y="30" class="h step">Send a Day-3 bump</text>
+    <text x="48" y="56" class="h var-tx">No reply from Day 0? Bump once.</text>
+  </g>
+
+  <!-- Fork arrows -->
+  <path d="M 420 162 C 340 190, 195 215, 185 240" class="arrow-p" marker-end="url(#ahp)"/>
+  <path d="M 540 162 C 620 190, 765 215, 775 240" class="arrow-a" marker-end="url(#aha)"/>
+
+  <!-- Fork labels (paper pill behind each so the arrow does not strike through) -->
+  <rect x="218" y="194" width="84" height="20" rx="10" class="lbl-bg"/>
+  <text x="260" y="209" text-anchor="middle" class="h" font-size="13" fill="#a855f7" font-weight="700">first round?</text>
+  <rect x="658" y="194" width="88" height="20" rx="10" class="lbl-bg"/>
+  <text x="702" y="209" text-anchor="middle" class="h" font-size="13" fill="#b8860b" font-weight="700">interviewed?</text>
+
+  <!-- Left: First research round -->
+  <g transform="translate(28, 246) rotate(0.4 200 60)">
+    <rect width="400" height="100" rx="12" class="card-p"/>
+    <rect x="20" y="14" width="140" height="22" rx="11" fill="#a855f7"/>
+    <text x="90" y="30" text-anchor="middle" class="h" font-size="13" font-weight="700" fill="#fff">First research round</text>
+    <text x="20" y="52" class="h var-tx">"I'm at the start of this research and your</text>
+    <text x="20" y="70" class="h var-tx">experience is exactly the kind I want to learn from."</text>
+    <text x="20" y="90" class="h note">Curiosity is the hook. No credentials needed.</text>
+  </g>
+
+  <!-- Right: Already interviewed -->
+  <g transform="translate(532, 246) rotate(-0.5 200 60)">
+    <rect width="400" height="100" rx="12" class="card-a"/>
+    <rect x="20" y="14" width="160" height="22" rx="11" fill="#b8860b"/>
+    <text x="100" y="30" text-anchor="middle" class="h" font-size="13" font-weight="700" fill="#fff">Already interviewed</text>
+    <text x="20" y="52" class="h var-tx">"I've talked to [TRUE NUMBER] people - your</text>
+    <text x="20" y="70" class="h var-tx">situation is the one they kept pointing at."</text>
+    <text x="20" y="90" class="h note">Social proof with a true number only.</text>
+  </g>
+
+  <!-- Bottom rule -->
+  <g transform="translate(28, 352)">
+    <rect width="900" height="28" rx="14" class="card-r"/>
+    <text x="450" y="19" text-anchor="middle" class="h rule">Never claim conversations you have not had.</text>
+  </g>
+</svg>
