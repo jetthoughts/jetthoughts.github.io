@@ -114,7 +114,7 @@ screening criterion). Investigate ONE pattern on ONE worksheet: portrait-
 orientation variant (e.g. 700x900 viewBox) selected via `<picture>`/media
 query in the render hook, or taller stacked layout. Ship only if the pattern
 is cheap and reusable; otherwise document the ceiling in
-`.okf/design/media-design-guidelines.md` and close.
+`.okf/design/house-visual-spec.md` and close.
 
 ### Wave M5 - P2/P3 SVGs + module-end checklists (demand-driven, after pilot data)
 
