@@ -1,6 +1,6 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-07-26 (media pilot shipped + repaired: 7 SVGs on 4 pages, 2 new template pages with covers, 40.20 gap audit. Media modernization backlog groomed below. Previous: PR #356 MERGED as ad1cb19c, deployed, production verified. It carried: Sprints A+B+C [GA4 funnel events + Clarity hook + pilot kit 40.18; walkthrough heroes/artifact trails + TL;DR accent + 21 cover badges; PDF pipeline + 5 printable worksheets], the 3-round PDF/SVG visual loop [43 SVGs + 61 pages exhaustively inspected, 13 SVGs repaired], the 8-dimension premium swarm review 40.19 [54/60 PREMIUM; all sub-premium findings fixed], and the reflection round [old-spine 6.x title ghosts, AI-block label leaks x4, org-chart mermaid -> decision table, Good/Bad callout accents + cascade bug].)
+**Last Updated**: 2026-07-30 (strategy review vs Product Compass courses + Lenny corpus + 3-persona synthesis: NEW Wave C1 completion mechanics; delta-audit reprioritizations in M2/M5; DoD rules 6-7 added; public certificate REJECTED for stealth-stage ICP, private Founder OS pack instead. Previous: media pilot shipped + repaired: 7 SVGs on 4 pages, 2 new template pages with covers, 40.20 gap audit. Media modernization backlog groomed below. Previous: PR #356 MERGED as ad1cb19c, deployed, production verified. It carried: Sprints A+B+C [GA4 funnel events + Clarity hook + pilot kit 40.18; walkthrough heroes/artifact trails + TL;DR accent + 21 cover badges; PDF pipeline + 5 printable worksheets], the 3-round PDF/SVG visual loop [43 SVGs + 61 pages exhaustively inspected, 13 SVGs repaired], the 8-dimension premium swarm review 40.19 [54/60 PREMIUM; all sub-premium findings fixed], and the reflection round [old-spine 6.x title ghosts, AI-block label leaks x4, org-chart mermaid -> decision table, Good/Bad callout accents + cascade bug].)
 
 ## Active Phase: external validation pilot (real Sams, kit at 40-49-review/40.18-external-validation-pilot-kit.md; Paul actions: Clarity project + param, consent posture, budget, calendar) → distribution prep
 
@@ -66,8 +66,15 @@ pages wired into `_index.md` + companion lessons 2.1/4.4.
 4. Informational only - if removing the visual loses nothing, don't ship it
    (no decorative art, 10.05 CLT rule). Mermaid height <= ~1600px rendered.
 5. `bin/hugo-build` + `bin/rake test:critical` green; ONE PR per wave.
+6. **Words-per-visual <= ~600 on core lessons** (2026-07-30 delta audit: binary
+   has-SVG checks let 5,400-word single-SVG walls pass; density is the real gate).
+7. **Templates ship scaffolded, never blank** (worked-example fading: link the
+   FILLED Mia version first -> partial -> blank; 57-source research corpus:
+   blank forms stall novice founders who can't self-diagnose).
 
-**Sequencing: WIP=1, one wave at a time, each wave independently shippable.**
+**Sequencing: WIP=1, one wave at a time, each wave independently shippable.
+Order (2026-07-30): M1 -> C1 -> M2 -> M3 -> M4; M5 + Phase 2 gated on pilot
+data. None of it blocks or delays the P0 pilot (Paul's desk).**
 
 ### Wave M1 - P1 core-lesson visuals (~1 day) - START HERE
 
@@ -84,6 +91,45 @@ One informational SVG each, placed at the section where the reader decides/acts:
 Skip (already adequate per 40.20): `mom-test-synthesis-build-pivot-kill` and
 `should-you-hire-2026-decision-tree` both carry Mermaid decision flowcharts.
 
+### Wave C1 - completion mechanics (~1 day) - NEW 2026-07-30
+
+**State (2026-07-30):** items 1/2/3/5 SHIPPED in PR #390 (branch
+course-wave-c1-completion-mechanics; 4-eyes reviewed, all gates green).
+Item 4 (progress tracker) BLOCKED on the 30-min Clarity same-device check -
+Paul's Clarity access. Wave M1 (SVGs) not started: first agent attempt died
+on context overflow; respawn with a leaner prompt after this PR merges
+(WIP=1). Cold-session pickup: read PR #390 + this block, then run the
+Clarity check before building item 4.
+
+Grounded in the 2026-07-30 strategy review (Product Compass benchmark + Sam
+persona walk + pedagogy persona + 57-source NotebookLM corpus; plan file
+`iridescent-tinkering-parrot`). Core finding: the completion gap is progress
+MECHANICS, not media. All zero-ops (static/client-side only).
+
+1. **20-min first-win path**: overview + Lesson 1.1 open with a 15-20-min
+   happy path (fill the hypothesis sentence + find one matching Reddit
+   complaint); move the >=14/20 scoring rubric + "if this fails" branches
+   behind a `<details>` toggle. (Sam persona: "90-minute sprint" gets
+   deferred; rubric flips quick-win into assignment.)
+2. **Defer the overview tool-stack tables**: replace the ~15-tool wall on
+   how-this-course-works with "notebook + a landing-page builder; each tool
+   appears in the lesson that uses it". (Sam: "the scariest thing on the map".)
+3. **Implementation-intention line** at each module end: "When this week will
+   you do the worksheet? [day/time]" (Gollwitzer d~.65 on follow-through).
+4. **Progress tracker (GATED)**: first run the 30-min Clarity check - % of
+   returning readers on the same device. Cross-device dominant -> SKIP
+   (an empty tracker on device #2 demotivates). Same-device dominant ->
+   localStorage checkboxes on the module map + per-lesson "mark complete"
+   (goal-gradient). Pull Wave M5's module-end checklists INTO this item.
+5. **Living-document trust line**: visible "Updated <month year>" + 3-line
+   changelog on the overview (Product Compass pattern; zero recurring cost).
+
+REJECTED after persona review (do not relitigate without pilot data):
+public completion CERTIFICATE / LinkedIn badge - idea-stage Sams are stealthy
+("posting 'I'm validating an idea' invites questions I can't answer, tips off
+copycats"). The completion artifact is the private **Founder OS pack** (the 6
+artifacts bundled, investor-showable) - Phase 2, gated on pilot demand.
+
 ### Wave M2 - decision-aid + F-pattern retrofits (~1 day)
 
 Apply the 10.05 Part 2 rules to existing prose in the highest-traffic lessons:
@@ -97,6 +143,14 @@ Apply the 10.05 Part 2 rules to existing prose in the highest-traffic lessons:
    outreach-sequence-template 3x stacked variant blockquotes into single
    blockquotes; de-stack + rebalance "$0 path" callouts in outbound +
    self-serve-mvp per `feedback_budget_stance_free_and_paid_equal`.
+5. **Delta-audit reprioritizations (2026-07-30, promote to P1)**: (a)
+   `salvage-vs-rebuild-decision-tree` - a literal 6-question decision TREE
+   rendered as prose + tables, mermaid=0 (title promises a visual the page
+   lacks = trust cost); (b) `where-to-hire-developer-2026-map` - titled a MAP,
+   is 4-region/6-platform tables, zero visual. (c) Break the 4 worst
+   words-per-visual walls: hire-track-supplementary-reference (5,483w/1 SVG),
+   self-serve-stack-walkthrough (5,248w/1), customers-leaving-churn
+   (2,997w/1 mermaid), reference/outbound-full (2,851w/1).
 
 ### Wave M3 - printable artifacts thin slice (~0.5 day)
 
@@ -118,12 +172,25 @@ is cheap and reusable; otherwise document the ceiling in
 
 ### Wave M5 - P2/P3 SVGs + module-end checklists (demand-driven, after pilot data)
 
-- 40.20 P2 list (5 lessons: fake-stripe case study, friday-demo, salvage-vs-
-  rebuild, sow-reading-guide, vibe-coding-ceiling-signals) and P3 list (3
-  Going Further pages) - only for pages Clarity shows real traffic on.
-- 40.20 §5 interaction gaps: module-end checklists for M1/M2/M3/M5 (M4 has
-  one), Do-This-Now-references-template-by-name audit, micro-reflection
-  wording sample audit.
+- 40.20 P2 list (fake-stripe case study, friday-demo, sow-reading-guide,
+  vibe-coding-ceiling-signals; salvage-vs-rebuild PROMOTED to Wave M2 P1
+  2026-07-30) and P3 list (3 Going Further pages) - only for pages Clarity
+  shows real traffic on.
+- 40.20 §5 interaction gaps: module-end checklists for M1/M2/M3/M5 folded
+  into Wave C1 #4 (progress tracker); Do-This-Now-references-template-by-name
+  audit, micro-reflection wording sample audit remain here.
+- **Reference-tier gap (2026-07-30 delta audit - invisible to 40.20's
+  cover-based scan)**: 5 reference/*-full chapters at 1,800-2,500 words with
+  ZERO in-body visuals (mvp-build-phases-full, stack-tools-full,
+  find-10-people-full, persona-rehearsal-full, channel-selection-full);
+  19 of 80 pages missing covers (18 reference + faq + quickstart). True
+  zero-body-visual count course-wide = 17 pages, not 40.20's "1".
+  Demand-driven: only if Clarity shows reference traffic.
+- **Phase 2 (Paul-approval gate + pilot signal)**: Module-2 applied
+  checkpoint experiment ("score this practice interview" with instant
+  feedback - NOT a recall quiz; assessment-validity-checker skill reviews
+  questions before ship); private Founder OS pack completion artifact
+  (HTML->PNG/PDF via cover pipeline).
 
 ### Effectiveness measurement (rides every wave, not a wave itself)
 

@@ -163,3 +163,19 @@ limit and are harvested even from dropped-stale threads. SEND-SHEET now carries
 per-message GO/HOLD banners (batch-1 currently 0-for-5; Joy Adamson is the one
 Paul-override candidate). Board: #28 done, #29 (re-source v2) is the critical
 path. Updated: [outbound-sprint](/workflows/outbound-sprint.md).
+
+## 2026-07-30 - Course strategy review: completion mechanics beat more media
+Benchmarked the course against 4 Product Compass course pages (browser walk),
+the two Lenny-podcast skill repos, and a 57-source NotebookLM learning-research
+corpus, then ran a 3-persona synthesis (pedagogy / Sam-ICP / media-delta audit).
+Convergent finding: the completion gap is progress MECHANICS, not media - Wave
+C1 added to the TASK-TRACKER (20-min first-win path, tool-stack tables deferred
+to JIT, implementation-intention lines, Clarity-gated localStorage progress
+tracker, living-document trust line). Public completion certificate REJECTED:
+idea-stage Sams are stealthy and won't share "I'm validating an idea"; the
+Phase-2 completion artifact is the private Founder OS pack. Delta audit found
+40.20's cover-based scan blind to the reference tier (5 chapters 1.8-2.5k words,
+zero visuals; 19 pages coverless; true zero-body-visual count 17 not 1) and to
+density (5.4k-word single-SVG walls pass) - DoD now carries words-per-visual
+<=600 + worked-example fading (templates never ship blank). Updated:
+[course-structure](/content/course-structure.md), TASK-TRACKER waves, GOAL-AT-A-GLANCE.

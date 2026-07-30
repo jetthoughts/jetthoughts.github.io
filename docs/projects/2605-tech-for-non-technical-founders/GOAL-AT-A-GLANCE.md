@@ -4,7 +4,7 @@
 
 **Project ID**: 2605-tech-for-non-technical-founders
 **Created**: 2026-05-12
-**Last updated**: 2026-07-26 (media pilot shipped + media modernization backlog groomed)
+**Last updated**: 2026-07-30 (strategy review vs Product Compass + Lenny corpus: Wave C1 completion mechanics added, media backlog reprioritized by delta audit)
 **Status**: 🟢 Course LIVE and CONTENT-COMPLETE on v2 · all 5 modules migrated (PRs #345/#351/#352/#353, deployed via #356) · review-clean (40.15 whole-course, 40.17 journey walk, 40.19 premium 54/60) · instrumented (GA4 funnel + Clarity) · 🔄 Active: external validation pilot + media modernization
 **Owner**: JT content team
 **Parent**: 2510-seo-content-strategy (extends, does not replace)
@@ -29,15 +29,27 @@ validating with real Sams is.
    Kit: `40-49-review/40.18-*pilot-kit*`. Blocked on Paul's desk only
    (Clarity project + consent posture + budget + calendar); everything else
    is agent-prepped. This gates almost everything downstream.
-2. **Media modernization waves (P1, agent-doable in parallel with
-   recruitment lag)** - groomed 2026-07-26 in TASK-TRACKER: Wave M1 = SVGs
-   for the 4 core lessons with zero inline visual; then decision-aid
-   retrofits, printable PDFs for the 3 pilot worksheets, mobile-legibility
-   investigation. Definition-of-done includes the visual scroll gate +
-   Comic Sans text budgets (the pilot's hard lesson).
+2. **Media + completion waves (P1, agent-doable in parallel with
+   recruitment lag)** - order M1 -> C1 -> M2 -> M3 -> M4 in TASK-TRACKER:
+   Wave M1 = SVGs for the 4 core lessons with zero inline visual; **NEW Wave
+   C1 (2026-07-30) = completion mechanics** - 20-min first-win path on
+   overview/1.1, tool-stack tables deferred to just-in-time,
+   implementation-intention lines, Clarity-gated localStorage progress
+   tracker, living-document trust line. Then decision-aid retrofits (now
+   incl. the mis-titled salvage-vs-rebuild "tree" + where-to-hire "map" and
+   the 4 worst word-walls), printable PDFs (scaffolded: filled Mia example
+   first, never blank forms), mobile-legibility investigation.
+   Definition-of-done includes the visual scroll gate + Comic Sans text
+   budgets + words-per-visual <= ~600.
+   Rationale: 2026-07-30 review of Product Compass courses + 57-source
+   learning-research corpus + Sam/pedagogy persona synthesis - the
+   completion gap is progress mechanics, not media. Public certificate
+   REJECTED (stealth-stage ICP won't share); private Founder OS pack is the
+   Phase-2 completion artifact, gated on pilot demand.
 3. **Sprint D demand-driven fixes** - only what pilot recordings surface
-   (plus the pre-groomed 10.08 content-gap batch). Do not guess; the pilot
-   data decides.
+   (plus the pre-groomed 10.08 content-gap batch, the reference-tier
+   visual/cover gap, and the Module-2 applied-checkpoint experiment). Do not
+   guess; the pilot data decides.
 4. **Distribution prep** - blog funnel per 2510/20.07 + LinkedIn campaign.
    Gated on the pilot confirming the course converts readers, not before.
 

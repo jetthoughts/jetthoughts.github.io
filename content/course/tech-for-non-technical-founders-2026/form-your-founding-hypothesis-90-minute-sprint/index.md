@@ -73,7 +73,22 @@ Can't tell whether a blank is specific enough to bet on? The [validation tools f
 
 ---
 
-## How to Score Your Hypothesis
+## First Sitting: Write the Sentence (15-20 Minutes)
+
+You don't need a free evening for this - one sitting tonight, phone or laptop, is enough. Scoring comes later, in a separate sitting.
+
+> **Write:**
+>
+> 1. Open a blank note. Write the Mad Libs frame at the top.
+> 2. Fill each blank with the most specific noun you can. If a blank says "small businesses," rewrite it until it names one person in one industry.
+> 3. Find one real person complaining about your `[PROBLEM]` - search [Reddit](https://www.reddit.com/) or [G2 reviews](https://www.g2.com/) using the words you just wrote into the blank. Paste their exact quote under your sentence. One quote is enough for tonight. If ten minutes of searching turns up nobody complaining, write that down too - it's an early warning about the blank, and Module 2's interviews will settle it.
+> 4. Save the note to a Google Doc titled `Founding Hypothesis - [TODAY'S_DATE]`, inside a new Google Drive folder called `Founder OS` - every module adds an artifact to that folder, and by the course's end it is your evidence pack. You'll paste the sentence verbatim into Lessons 1.2, 1.4, and 1.5. Module 2 uses it too - to choose who you interview and what you ask about - but you never read it to an interviewee.
+
+The sentence exists, and one stranger's complaint sits under it. Close the laptop if you're done for tonight - the scoring pass reads better with fresh eyes anyway.
+
+---
+
+## Second Sitting: Score It (About 20 Minutes)
 
 Score each lens 1-5. Be honest - this is for you, not an investor deck.
 
@@ -84,21 +99,13 @@ Score each lens 1-5. Be honest - this is for you, not an investor deck.
 | **Growth** | How does the customer hear about you, and how many are there? |
 | **Money** | Do the unit economics work? (Would one customer bring in more than they cost to serve? Leave blank if pre-revenue.) |
 
----
-
-> **Write:**
->
-> 1. Open a blank note. Write the Mad Libs frame at the top.
-> 2. Fill each blank with the most specific noun you can. If a blank says "small businesses," rewrite it until it names one person in one industry.
-> 3. Score your sentence using the four lenses above.
-> 4. **Success check:** total ≥14/20 (or ≥11/15 if Money is blank) AND no lens below 2.
-> 5. Save the sentence to a Google Doc titled `Founding Hypothesis - [TODAY'S_DATE]`, inside a new Google Drive folder called `Founder OS` - every module adds an artifact to that folder, and by the course's end it is your evidence pack. You'll paste it verbatim into Lessons 1.2, 1.4, and 1.5. Module 2 uses it too - to choose who you interview and what you ask about - but you never read it to an interviewee.
+> **Success check:** total ≥14/20 (or ≥11/15 if Money is blank) AND no lens below 2. Write the score next to your sentence in the Founder OS doc.
 
 ---
 
 **If this fails: your sentence scores below 14 or has a lens at 1.**
 - **Why:** a blank is still a category, not a specific noun.
-- **Fix:** find a verbatim quote from a real person complaining about this problem ([Reddit](https://www.reddit.com/), [G2 reviews](https://www.g2.com/), or a conversation you had). The fastest way: the copy-paste research prompt in [Lesson 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) hands Perplexity your `[CUSTOMER]` and `[PROBLEM]` blanks and returns 5-8 sourced quotes. Replace your `[PROBLEM]` blank with their exact words. If you don't have a quote yet, leave the `[PROBLEM]` blank as a placeholder and complete 1.2 - you'll fill it after Module 2 interviews.
+- **Fix:** go back to the quote you pasted in the first sitting and collect two or three more like it ([Reddit](https://www.reddit.com/), [G2 reviews](https://www.g2.com/), or a conversation you had). The fastest way: the copy-paste research prompt in [Lesson 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) hands Perplexity your `[CUSTOMER]` and `[PROBLEM]` blanks and returns 5-8 sourced quotes. Replace your `[PROBLEM]` blank with their exact words. If the first sitting's search found nobody complaining, leave the `[PROBLEM]` blank as a placeholder and complete 1.2 - you'll fill it after Module 2 interviews.
 
 **If this fails: every blank is specific but the sentence still sounds generic.**
 - **Why:** you're writing in market-research language instead of customer language.
@@ -113,6 +120,8 @@ Read your sentence aloud to yourself. Which blank would you bet $100 is wrong? W
 > **Done:** Founding Hypothesis written, scored ≥14/20 (or ≥11/15 if pre-revenue), no lens below 2, saved.
 >
 > **You have now:** a one-sentence Founding Hypothesis with your riskiest assumption flagged (1.1). This is the seed for everything else in Module 1.
+>
+> **Before you close the doc:** if you already know which evening this week you'll build the landing page (1.2), drop a 90-minute block on your calendar now.
 >
 > **Next:** [1.2 · Build Your Smoke-Test Page with an AI Page Builder](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) - turns your hypothesis into a landing page that explains your offer to potential customers.
 >

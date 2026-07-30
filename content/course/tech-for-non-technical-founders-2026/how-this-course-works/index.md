@@ -36,6 +36,8 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 > **Calendar reality - full-time vs evening-only.** The per-module wall times below assume a founder with daytime availability. An evening-only founder (2-4 hr/week, the pattern this course is built for) typically needs 1.5-3x the calendar at each module. Build your plan against the evening-only band; finishing early is a bonus.
 
+> **Your first 20 minutes.** [Lesson 1.1's first sitting](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) takes 15-20 minutes: a blank note and your idea. Skim this map for orientation, then start there. Every tool below appears in the lesson that uses it, and most have free tiers.
+
 ---
 
 ## The Big Picture
@@ -216,6 +218,16 @@ If you're not at the idea stage - you're already building, or paying someone to 
 > **Done when:** You have read the full route and know which module to start with.
 > **Next click:** [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 > **If blocked:** If your idea is too vague to fill the hypothesis blanks, Lesson 1.1's "If this fails" section shows how to anchor the blanks with real customer complaints from Reddit and G2.
+
+---
+
+**Updated July 2026.** Recent changes:
+
+- Lesson 1.1 split into two short sittings - write first, score later
+- Hand-drawn diagrams added across all five modules
+- Printable worksheets shipping module by module
+
+This page tracks the live course.
 
 ---
 
