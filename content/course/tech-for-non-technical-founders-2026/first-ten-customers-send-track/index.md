@@ -49,6 +49,8 @@ The send sequence in one glance:
 2. Send the 15 warm messages a day or two later.
 3. Send the 20 cold messages once the first replies are in.
 
+![A send-day rhythm card - Day 1 champions and hot, Day 2-3 warm, Day 4+ cold, with a gate of 10+ replies logged and 3-5 demos booked](send-day-rhythm-card.svg)
+
 You will hear back from 15-25 of the 50 messages once replies settle. Expect far more replies than any cold list will ever give you - these are people who know you. It is the warmest outreach you will run.
 
 Add four tracking columns to your Sheet: Reply received (date), Reply sentiment (yes/maybe/no/silent), Demo booked (date), Pilot proposed (yes/no).

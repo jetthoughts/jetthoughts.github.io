@@ -52,6 +52,8 @@ Every message follows the same 4-part structure. What changes by bucket is the o
 | **Warm** | "Hey [NAME], have not caught up since [the last specific touchpoint]. Working on something I think you might have a take on." |
 | **Cold** | "Hey [NAME], a true one-line reference ('we were both in the Acme batch')." |
 
+![A fill-in worksheet with columns for name, last contact, and warm-intro path, plus an example row and 7 blank rows to audit your first 8 names before writing openers](network-audit-grid.svg)
+
 If no real reference exists for a cold-bucket name, move them to [Lesson 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) instead.
 
 **Part 2: One line on the problem, in their language.** Use the verbatim Q3 answers from your [Lesson 5.1 survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/). "I am building a tool that lets B2B marketers run an end-to-end attribution model without an analyst."
