@@ -131,6 +131,8 @@ Count your red flags. Be honest.
 | 3-4 | Orange zone | Start your exit plan. Secure code access, export your data, get a second opinion. Don't fire them yet - but be ready. Read our [guide to firing your dev shop safely](/blog/fire-dev-shop-guide/) |
 | 5+ | Red zone | You're paying for damage, not progress. Begin the transition now. The longer you wait, the more expensive the cleanup |
 
+> **If your scorecard landed in the orange or red zone, the next call isn't "fire or stay" - it's "salvage or rebuild."** A free lesson from our non-technical founder course turns that call into a structured thirty-minute decision with a 30/60/90 day plan attached. [Salvage vs Rebuild: 6-Question Decision Tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/).
+
 ## What to Do If You See 3+ Red Flags
 
 Don't panic, and don't send an angry email at midnight. Here's the sequence.

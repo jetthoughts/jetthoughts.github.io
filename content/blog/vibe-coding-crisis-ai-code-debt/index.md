@@ -64,6 +64,8 @@ A second person should read every pull request before it lands. Two developers [
 
 Your team should send you a [weekly report](/blog/how-know-what-your-team-doing-remote-startup/) showing what shipped and whether test coverage went up or down. Watch that ratio. If features climb while coverage drops, somebody is cutting corners. Ship small features often, not three-week sprints that end in a big reveal - the big reveal is where vibe-coded apps look impressive, because nobody has tested them with real users yet, and where [technical debt compounds fastest](/blog/fixing-slow-engineering-teams-an-extended/).
 
+> **These five signals have a course-lesson twin.** We wrote a companion piece for founders already building on Lovable or a similar tool - five architectural ceiling signals, and what it means when two of them fire for a month straight. Free, no sign-up: [Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/).
+
 ## You've already got one. What's next?
 
 If three or more of those signals describe your codebase, the next question isn't whether you have a vibe-coded app. Our companion post on [the generate-validate-kill workflow](/blog/vibe-coding-disposable-by-design/) walks through how to use vibe coding for what it's good at, plus the cost math on why founders who try to skip the rebuild end up paying twice.

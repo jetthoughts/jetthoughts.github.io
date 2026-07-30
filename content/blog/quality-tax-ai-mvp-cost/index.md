@@ -90,6 +90,8 @@ That process catches bugs cheaper than the alternatives. A bug caught in TDD cos
 
 A B2B fintech founder, post-Series-A in Q4 2025, had been quoted $42K by an AI-first shop for a 4-week MVP. She engaged us at $58K instead - same scope, 6 weeks, TDD and security pass included. Eight months on, her test coverage sits at 78%, she has added two engineers without a rewrite, and her only post-launch fix was a 6-hour rate-limiting issue in the third-party broker integration that no test could have caught at MVP scope. **Sticker price was 38% higher; her 12-month all-in came in 41% lower.**
 
+> **Disciplined AI usage is teachable, and we wrote the walkthrough down.** Our free course for non-technical founders covers the same tools-then-build sequence - Lovable, Supabase, Stripe - plus the pre-flight rules that keep AI output honest before you write a line of code. [The Self-Serve MVP Stack: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/).
+
 ## 7. When AI actually saves money
 
 AI saves money in two specific conditions, and we'll be direct about both.

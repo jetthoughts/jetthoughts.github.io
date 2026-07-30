@@ -73,6 +73,8 @@ These four guardrails don't prevent every failure. They turn "company death in 9
 
 This is the same operational discipline that powers [our remote XP practices post](/blog/async-remote-xp-practices/) - the boring infrastructure that makes small mistakes cheap to fix.
 
+> **The four config defaults above are exactly what a Friday audit is built to catch.** Our free founder course includes a 45-minute walkthrough for locking down who owns your code, cloud, and database before anyone else - human or agent - touches them. [Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/).
+
 ## The 7 questions to ask your dev shop this week
 
 Crane's incident thread ran past 1,000 comments because every founder reading it recognized something. You don't need to know what a "scoped token" is to ask the right question. Read these out loud on your next agency call:
