@@ -100,11 +100,14 @@ to master (squash d3e8595d; independent reviewer APPROVE on all 5 checks).
 erodes trust even with quiet-checkmark mitigations, and the pilot will
 observe real reader behavior directly; pedagogy voter dissented - engagement
 lift is real but recoverable post-pilot). Do not build before pilot data.
-**NEW P0 FINDING: Clarity was never configured** - the analytics partial
-ships the snippet but `microsoftClarity` is unset in config/, so ZERO
-session data exists. This blocks the pilot's recordings, not just item 4.
-Paul: create the project at clarity.microsoft.com, then set
-`microsoftClarity = "<project-id>"` under [params] in
+**Clarity: WAIVED by Paul (2026-07-30) - GA4 is the measurement stack for
+now.** (Background: the analytics partial ships the Clarity snippet but
+`microsoftClarity` is unset, so no session recordings exist. Paul decided
+GA4 funnel events are enough for the current stage.) Consequence for the
+pilot: no session recordings - stall diagnosis comes from GA4 funnel
+drop-offs + direct pilot-founder debriefs instead of watching replays. If
+recordings become wanted later: create the project at clarity.microsoft.com
+and set `microsoftClarity = "<project-id>"` under [params] in
 config/_default/hugo.toml (one line - partial already handles the rest).
 **Wave M1 SHIPPED** - PR #394 merged (squash d029db90): 4 hand-drawn SVGs
 (2.4 outreach-funnel-strip, 5.4 network-audit-grid, 5.5 send-day-rhythm-card,
