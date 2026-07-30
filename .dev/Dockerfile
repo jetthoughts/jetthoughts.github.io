@@ -1,36 +1,39 @@
-# Multi-stage Dockerfile for JetThoughts test environment
-ARG RUBY_VERSION=3.4
+# Multi-stage Dockerfile for JetThoughts test environment.
+#
+# Debian (glibc) base, NOT Alpine: this image records the canonical
+# test/fixtures/screenshots/linux/ baselines, and the old Alpine/musl
+# rendering diverged 3-28% from every glibc Linux (developer machines,
+# agent containers, CI runners) - see .okf/build/ci-gates.md. Chrome for
+# Testing is glibc-only, which also rules Alpine out.
+#
+# Rendering stack pins (change together, then re-record linux baselines
+# via FORCE_SCREENSHOT_UPDATE=true bin/dtest):
+#   - Chrome for Testing + matching chromedriver: .dev/cft-version
+#   - fontconfig: .dev/fonts.conf
+#   - fonts: fonts-noto-core, fonts-freefont-ttf, fonts-dejavu-core
+# bin/setup-test-env installs the identical stack on bare-metal Linux.
+ARG RUBY_VERSION=4.0
 
 #=============================================================================
-# Stage 1: Base image with common dependencies (parallel stage)
+# Stage 1: Node.js dependencies
 #=============================================================================
-FROM ruby:$RUBY_VERSION-alpine AS base
-RUN apk update && apk upgrade && \
-    apk add --no-cache \
-        build-base make g++ git \
-        libjpeg-turbo-dev vips-dev \
-        python3 pkgconfig
-
-#=============================================================================
-# Stage 2: Node.js dependencies (parallel with ruby-deps)
-#=============================================================================
-FROM oven/bun:1-alpine AS node-deps
+FROM oven/bun:1 AS node-deps
 WORKDIR /temp/dev
-RUN apk add --no-cache build-base python3 pkgconfig vips-dev
 COPY package.json bun.lockb ./
-# Enhanced cache mount with retry logic for network issues
 RUN --mount=type=cache,target=/root/.bun,sharing=locked \
-    bun install --frozen-lockfile --verbose
+    bun install --frozen-lockfile
 
 #=============================================================================
-# Stage 4: Final runtime image (optimized)
+# Stage 2: Final runtime image
 #=============================================================================
-FROM ruby:$RUBY_VERSION-alpine AS runtime
+FROM ruby:$RUBY_VERSION-slim AS runtime
 
 ENV \
     BUNDLE_JOBS=4 \
     BUNDLE_PATH=/opt/bundle \
     BUNDLE_RETRY=3 \
+    CHROME_BIN=/opt/cft/chrome-linux64/chrome \
+    CHROMEDRIVER_PATH=/opt/cft/chromedriver-linux64/chromedriver \
     DEBUG_COLORS=true \
     DISPLAY=:99 \
     DOCKER=true \
@@ -52,27 +55,47 @@ ENV \
     RUBY_YJIT_ENABLE=1 \
     TEST_SERVER_PORT=1314
 
-# Install all runtime dependencies in single layer with cache
-RUN apk update && apk upgrade && \
-    apk add --no-cache \
-        git \
-        libjpeg-turbo vips \
-        chromium chromium-chromedriver \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential git pkg-config curl ca-certificates unzip \
+        libjpeg62-turbo libvips42 \
         xvfb \
-        build-base make g++ git \
-        libjpeg-turbo-dev vips-dev \
-        python3 pkgconfig \
-        nss freetype ttf-freefont font-noto
+        fonts-noto-core fonts-freefont-ttf fonts-dejavu-core fontconfig \
+    # Chrome for Testing runtime libs. Debian's 64-bit time_t transition
+    # renamed several of these with a t64 suffix; resolve whichever name
+    # the base image's release actually ships.
+    && deps="" \
+    && for p in libasound2t64 libasound2 libatk-bridge2.0-0t64 libatk-bridge2.0-0 \
+                libatk1.0-0t64 libatk1.0-0 libcairo2 libcups2t64 libcups2 \
+                libdbus-1-3 libdrm2 libgbm1 libglib2.0-0t64 libglib2.0-0 \
+                libnspr4 libnss3 libpango-1.0-0 libx11-6 libxcb1 \
+                libxcomposite1 libxdamage1 libxext6 libxfixes3 \
+                libxkbcommon0 libxrandr2; do \
+          apt-cache show "$p" >/dev/null 2>&1 && deps="$deps $p"; \
+        done \
+    && apt-get install -y --no-install-recommends $deps \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy Bun binary for Node.js package management
+# Pinned Chrome for Testing + matching chromedriver (the rendering pin that
+# makes linux/ baselines reproducible - version in .dev/cft-version).
+COPY .dev/cft-version /tmp/cft-version
+RUN CFT=$(tr -d '[:space:]' < /tmp/cft-version) && mkdir -p /opt/cft && cd /opt/cft && \
+    curl -sSLO "https://storage.googleapis.com/chrome-for-testing-public/${CFT}/linux64/chrome-linux64.zip" && \
+    curl -sSLO "https://storage.googleapis.com/chrome-for-testing-public/${CFT}/linux64/chromedriver-linux64.zip" && \
+    unzip -q chrome-linux64.zip && unzip -q chromedriver-linux64.zip && \
+    rm chrome-linux64.zip chromedriver-linux64.zip && \
+    "$CHROME_BIN" --version && "$CHROMEDRIVER_PATH" --version
+
+# Deterministic font rendering (see .dev/fonts.conf header).
+COPY .dev/fonts.conf /etc/fonts/local.conf
+RUN fc-cache -f
+
+# Bun binary for Node.js package management
 COPY --from=node-deps /usr/local/bin/bun /usr/local/bin/
 
-# Set up application directory structure
 WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
 
-# Enhanced bundle install with optimized settings
 RUN --mount=type=cache,target=/usr/local/bundle/cache,sharing=locked \
     --mount=type=cache,target=/root/.bundle \
     echo "gem: --no-document" > /root/.gemrc && \
@@ -91,6 +114,5 @@ COPY --from=node-deps /temp/dev/node_modules ./node_modules
 COPY .dev/docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod a+r+x /docker-entrypoint.sh && git config --system --add safe.directory /app
 
-# Set entrypoint and default command
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["bin/test"]
