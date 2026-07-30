@@ -32,6 +32,8 @@ By Friday of week 4 you will know whether your dev team is shipping or stalling.
 
 > **7 questions, asked in order:** (1) What shipped? (2) What did the user do? (3) Where is it live for me? (4) What did we cut? (5) What's in review? (6) What's blocked? (7) What should I worry about next week?
 
+![The 15-minute Friday demo timeline - 7 questions in order, then the hard stop](friday-demo-timeline.svg)
+
 ## Why this exists
 
 Jira closing nine tickets in a week tells you cards moved, not that anything works. A feature can sit "behind a feature flag" for three weeks, throw a 500 on every click, and still show up as closed tickets and a confident status update - four months and $54K into a six-week MVP - because no one on the call has to open it in front of you. The seven questions above force that open. Asked in order, they turn a status call into four demos and four staging URLs you click yourself: what shipped, what the user can now do, where it is live for you, and what got cut to make room.
