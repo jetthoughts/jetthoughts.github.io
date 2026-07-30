@@ -122,7 +122,7 @@ The founders who asked "what's your rate?" first and skipped the rest? They hire
 
 If a shop can't give you direct answers to all five questions on the first call, you've already learned everything you need to know about how the engagement will go.
 
-> **Vetting solved, sourcing is next.** Our free founder course lays out onshore, nearshore, and offshore hiring side by side - pricing, time-to-hire, and where each option tends to work. No email, no login: [Where to Hire a Developer, 2026 Map](/course/tech-for-non-technical-founders-2026/where-to-hire-developer-2026-map/).
+> **Once you know what to ask, the next question is where to look.** Our free founder course lays out onshore, nearshore, and offshore hiring side by side - pricing, time-to-hire, and where each option tends to work. No email, no login: [Where to Hire a Developer, 2026 Map](/course/tech-for-non-technical-founders-2026/where-to-hire-developer-2026-map/).
 
 ---
 
