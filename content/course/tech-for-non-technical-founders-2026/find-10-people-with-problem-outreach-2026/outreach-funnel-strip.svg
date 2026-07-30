@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" role="img" aria-labelledby="funnel-title">
+  <title id="funnel-title">The honest outreach funnel - 30 sent messages down to booked calls</title>
+  <defs>
+    <style>
+      .heading    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .sub        { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .stage-num  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 34px; fill: #1a1a1a; font-weight: 700; }
+      .stage-label{ font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #1a1a1a; font-weight: 700; }
+      .drop       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #333; }
+      .warn-text  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #1a1a1a; }
+      .sent       { fill: #faf7f2; stroke: #1a1a1a; stroke-width: 2.5; }
+      .replied    { fill: #faf7f2; stroke: #1a1a1a; stroke-width: 2.5; }
+      .booked     { fill: #f0f9f0; stroke: #2f9e44; stroke-width: 3; }
+      .warn-box   { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
+      .arrow      { stroke: #333; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="500" y="32" class="heading" text-anchor="middle">The honest outreach funnel, one batch</text>
+  <text x="500" y="54" class="sub" text-anchor="middle">30 staggered by hand - not a single bulk-send.</text>
+
+  <!-- Sent -->
+  <rect x="30" y="75" width="230" height="140" rx="14" class="sent" transform="rotate(-0.3 145 145)"/>
+  <text x="145" y="130" class="stage-label" text-anchor="middle">SENT</text>
+  <text x="145" y="172" class="stage-num" text-anchor="middle">30</text>
+  <text x="145" y="198" class="drop" text-anchor="middle">by hand, staggered</text>
+
+  <path d="M 265 145 L 350 145" class="arrow"/>
+  <text x="307" y="130" class="drop" text-anchor="middle">20-30%</text>
+
+  <!-- Replied -->
+  <rect x="355" y="75" width="230" height="140" rx="14" class="replied" transform="rotate(0.3 470 145)"/>
+  <text x="470" y="130" class="stage-label" text-anchor="middle">REPLIED</text>
+  <text x="470" y="172" class="stage-num" text-anchor="middle">~7</text>
+  <text x="470" y="198" class="drop" text-anchor="middle">named post = replies</text>
+
+  <path d="M 590 145 L 675 145" class="arrow"/>
+  <text x="632" y="130" class="drop" text-anchor="middle">~50%+</text>
+
+  <!-- Booked -->
+  <rect x="680" y="75" width="230" height="140" rx="14" class="booked" transform="rotate(-0.3 795 145)"/>
+  <text x="795" y="130" class="stage-label" text-anchor="middle">BOOKED</text>
+  <text x="795" y="172" class="stage-num" text-anchor="middle">2-3</text>
+  <text x="795" y="198" class="drop" text-anchor="middle">stack batches to 10</text>
+
+  <!-- Warning callout -->
+  <rect x="60" y="245" width="880" height="70" rx="12" class="warn-box"/>
+  <text x="500" y="272" class="warn-text" text-anchor="middle" font-weight="700">Under 10% replies? The opener is too generic - rewrite it.</text>
+  <text x="500" y="296" class="warn-text" text-anchor="middle">10-20% is workable. 20-30% means the reference line is landing.</text>
+</svg>

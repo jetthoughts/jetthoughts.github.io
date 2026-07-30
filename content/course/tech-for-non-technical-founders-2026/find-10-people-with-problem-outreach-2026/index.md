@@ -77,6 +77,8 @@ Teresa Torres names three reasons a stranger turns down an interview ask, and th
 
 Work through the 30-name list first, then extend it with Part 1's second-degree searches until 10 interviews are booked - plan on 50-100 messages total. Target a reply rate of 20% or higher. Under 10% means your opener is too generic or you're in the wrong channel - rewrite the Day-0 message before sending more. 10-20% is workable: let the sequence run and tighten the subject line on the next batch. Of the replies who say yes, expect roughly half or more to actually show. If your show rate drops below 50%, add a 24-hour reminder message and confirm the meeting time the day before.
 
+![The honest outreach funnel for one batch of 30 - sent, replied at 20-30%, and 2-3 booked calls, with a warning callout for reply rates under 10%](outreach-funnel-strip.svg)
+
 ## Three tracks to 10 booked calls
 
 Cold outreach is the main track. Two others run alongside it when they fit:
