@@ -44,7 +44,6 @@ jobs:
         if: ${{ !inputs.update-baselines }}
         run: bundle exec rake test
         env:
-          SCREENSHOT_DRIVER: vips
           PRECOMPILED_ASSETS: '1'
           HUGO_DEFAULT_PATH: _dest/public-test
 
@@ -52,7 +51,6 @@ jobs:
         if: ${{ inputs.update-baselines }}
         run: FORCE_SCREENSHOT_UPDATE=true bundle exec rake test
         env:
-          SCREENSHOT_DRIVER: vips
           PRECOMPILED_ASSETS: '1'
           HUGO_DEFAULT_PATH: _dest/public-test
 
