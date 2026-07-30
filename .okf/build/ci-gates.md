@@ -4,7 +4,7 @@ title: CI gates (GitHub Actions)
 description: PR CI runs Hugo build, unit tests, and a path-scoped broken-internal-link crawl (lychee). Visual regression is deliberately NOT in CI - cross-OS pixel diffs are unusable; it stays on the local bin/test + bin/dtest gates.
 tags: [ci, github-actions, testing, link-check]
 resource: .github/workflows/link-check.yml
-timestamp: 2026-07-21T00:00:00Z
+timestamp: 2026-07-30T00:00:00Z
 ---
 
 # What CI enforces on a PR
@@ -15,7 +15,23 @@ timestamp: 2026-07-21T00:00:00Z
 | `Unit Tests` (`rake test:unit`) | `publish.yml` | Every push/PR - `test:critical` does NOT include the unit suite, so this is a separate gate |
 | `Broken Internal Links` (`rake test:links`, lychee) | `link-check.yml` | PRs only when link-relevant paths change; always on nightly schedule / push to master / manual |
 
-Three lean gates. See local pre-PR gates in [test-gates.md](test-gates.md).
+Plus two piggybacked on the unit_tests job: `bin/lint-css` (stylelint
+warning ratchet) and `test/unit/toolchain_pins_test.rb` (toolchain drift
+gate). See local pre-PR gates in [test-gates.md](test-gates.md).
+
+# Toolchain single source of truth
+
+`.mise.toml` pins hugo/bun/node/ruby (local install via `mise install`;
+`bin/setup` wraps it + doctor). CI copies of the pins live in
+`.github/actions/setup-hugo/action.yml` (hugo default, bun-version,
+node-version), workflow `ruby-version` inputs, and the `.dev/compose.yml`
+image tag; the drift test fails the build when any copy diverges - update
+them together. `_hugo.yml` must NOT carry its own pins (it calls the
+composite with `build: 'false'`); the drift test enforces that too.
+Gotchas: the Ruby pin must be an EXACT patch version - rbenv reads
+`.ruby-version` and never matches a fuzzy "4.0"; agent containers block
+`api.github.com` through the proxy, so `mise install` cannot fetch
+hugo/bun there (node works - nodejs.org is allowed).
 
 # link-check.yml path filter
 
