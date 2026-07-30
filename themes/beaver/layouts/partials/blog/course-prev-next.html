@@ -97,5 +97,12 @@
     {{- end }}
   </div>
   <p class="course-prev-next__glossary">Tripping on a term? <a href="{{ $base }}five-tech-words-stop-nodding-at/" data-course-event="glossary-click" data-course-label="{{ $slug }}">Five Tech Words to Stop Nodding At</a> - the course glossary.</p>
+  {{- $moduleEnds := slice "price-hypothesis-on-smoke-test-page" "clickable-prototype-validation-2-hour-lovable" "stop-specifying-features-start-outcomes" "vibe-coding-ceiling-signals" "outbound-without-sales-team" }}
+  {{- if in $moduleEnds $slug }}
+  <p class="course-prev-next__glossary">Know a founder sitting on an idea? <button type="button"
+      style="background:none;border:none;padding:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit"
+      data-course-event="copy-share-link" data-course-label="{{ $slug }}"
+      onclick="var b=this; navigator.clipboard.writeText('{{ site.BaseURL }}course/tech-for-non-technical-founders-2026/').then(function(){ b.textContent='Copied - paste it in a DM'; })">Copy the course link</button> to send them privately.</p>
+  {{- end }}
 </nav>
 {{- end -}}
