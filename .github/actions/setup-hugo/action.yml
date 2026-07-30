@@ -1,6 +1,8 @@
 ---
 name: 'Setup Hugo with caches'
-description: 'Install Hugo + Bun, cache dependencies and build artifacts'
+description: 'Install Hugo + Bun + Node, cache dependencies and build artifacts'
+# Toolchain pins here are the CI source of truth and must match .mise.toml -
+# test/unit/toolchain_pins_test.rb fails when they drift.
 inputs:
   hugo-version:
     description: 'Hugo version'
@@ -14,6 +16,9 @@ inputs:
   base-url:
     description: 'Hugo base URL (default: /)'
     default: '/'
+  build:
+    description: 'Run bin/hugo-build after setup (set "false" for callers with their own build steps, e.g. the Pages deploy)'
+    default: 'true'
 runs:
   using: 'composite'
   steps:
@@ -60,6 +65,7 @@ runs:
           ${{ runner.os }}-hugo-
 
     - name: Build Hugo site
+      if: ${{ inputs.build == 'true' }}
       run: PATH="./node_modules/.bin:$PATH" bin/hugo-build
       shell: bash
       env:

@@ -91,7 +91,7 @@ Publish a **free 5-module course that takes a non-technical founder from idea to
 
 **Positioning sentence**: A free competing curriculum to YC Startup School (free), Sophia Matveeva's Tech for Non-Technical Founders ($2,500-$3,500 one-time, verified 2026-05-22), Drew Falkman's Vibe Coding (~$1,000 Maven cohort, price gated/unverified), and the Kukoyi 2017 book — the only one that maps the full 5-module journey (form hypothesis + smoke-test → validate problem → write product brief → choose and run the build → close first paid pilot) without selling itself. Sequence matches Click's Foundation Sprint (lightweight Experiment before heavier Design Sprint prototype), Steve Blank Customer Development (Discovery before Validation), and the Mom Test (interviews-first for deep validation).
 
-**JT positioning** (Option C: Pure Lead Magnet, no selling): the course does NOT pitch JT services. Zero "book a Control Audit" CTAs, zero "schedule a consultation," zero service offers. Authorship credit stays at the footer ("Built by JetThoughts as part of the free curriculum"). Lead capture works via email-gated artifact downloads only. See `feedback_curriculum_is_pure_lead_magnet.md`.
+**JT positioning** (Option C: Pure Lead Magnet, no selling): the course does NOT pitch JT services. Zero "book a Control Audit" CTAs, zero "schedule a consultation," zero service offers. Authorship credit stays at the footer ("Built by JetThoughts as part of the free curriculum"). **Ungated-by-design (Paul, 2026-07-30): no email capture, no mail list - every lesson, template, and PDF is a direct link, and the landing's "No sign-up" chip is a deliberate trust position for the stealth-stage ICP. The reader->JT-lead bridge is deferred until after the pilot.** (Originally planned as email-gated artifact downloads; switched when the growth audit showed the gate contradicted the no-sign-up promise.) See `feedback_curriculum_is_pure_lead_magnet.md` and `20-29-strategy/20.12-course-growth-agent-runbook.md`.
 
 **Engineered for viral sharing (v1 long-form posts):** every post needs a contrarian hook, a quote-tweetable insight (140-280 chars), a specific tactic the reader can use this week, and a free downloadable artifact. See `feedback_curriculum_viral_shareability.md`. **v2 micro-lessons** follow 30.03 §2 template (1 visual max, 400-600w bands).
 
@@ -99,7 +99,7 @@ Publish a **free 5-module course that takes a non-technical founder from idea to
 
 ## 📊 KEY METRICS DASHBOARD
 
-Success metric: **share velocity + email captures + page-1 SEO** — NOT consultation bookings (course is a pure lead magnet, no service CTAs).
+Success metric: **GA4 funnel progression (landing -> 1.1 starts -> 1.4 gate -> pdf-downloads) + page-1 SEO** — NOT consultation bookings and NOT email captures (ungated-by-design, no mail list; course is a pure lead magnet, no service CTAs).
 
 | Metric | Baseline | 6-Month Target | Source of Truth |
 |---|---|---|---|
