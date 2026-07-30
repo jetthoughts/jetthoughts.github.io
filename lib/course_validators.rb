@@ -55,7 +55,7 @@ class CourseValidators
 
     course_chapters.each do |path|
       slug = File.basename(File.dirname(path))
-      body = File.read(path)
+      body = File.read(path, encoding: "bom|utf-8")
 
       # Find all "Lesson N.X" patterns in the body (not inside URLs or code blocks)
       body.scan(/Lesson\s+(\d+\.\d+)/) do |match|
@@ -89,7 +89,7 @@ class CourseValidators
     # Check SVG files for stale chapter references (recursive for nested course structure)
     Dir["#{COURSE_DIR}/**/*.svg"].each do |svg_path|
       slug = File.basename(File.dirname(svg_path))
-      content = File.read(svg_path)
+      content = File.read(svg_path, encoding: "bom|utf-8")
 
       content.scan(/Lesson\s+(\d+\.\d+)/) do |match|
         ref = match.first
@@ -140,7 +140,7 @@ class CourseValidators
       end
 
       # Check callout chapter number matches YAML module
-      body = File.read(path)
+      body = File.read(path, encoding: "bom|utf-8")
       callout_match = body.match(/> \*\*Module\s+(\d+) · Step (\d+) of (\d+)\*\*/)
       if callout_match
         step_num = callout_match[2]
@@ -171,7 +171,7 @@ class CourseValidators
 
     course_chapters.each do |path|
       slug = File.basename(File.dirname(path))
-      body = File.read(path)
+      body = File.read(path, encoding: "bom|utf-8")
 
       # Find INTERNAL /blog/X/ markdown links - i.e., `[text](/blog/X/)` form.
       # External URLs like `[text](https://example.com/blog/X/)` start with `https`
@@ -222,7 +222,7 @@ class CourseValidators
 
     course_chapters.each do |path|
       slug = File.basename(File.dirname(path))
-      body = File.read(path)
+      body = File.read(path, encoding: "bom|utf-8")
 
       # Find markdown tables by looking for separator rows
       body.scan(/^\|[- :|]+\|$/) do |separator|
@@ -257,7 +257,7 @@ class CourseValidators
 
   def check_disclaimer_consistency
     chapters = course_chapters
-    with = chapters.select { |p| File.read(p).include?(DISCLAIMER_MARKER) }
+    with = chapters.select { |p| File.read(p, encoding: "bom|utf-8").include?(DISCLAIMER_MARKER) }
     violations = []
     if with.any? && with.length < chapters.length
       slugs = with.map { |p| File.basename(File.dirname(p)) }
@@ -274,7 +274,7 @@ class CourseValidators
     violations = []
     course_chapters.each do |path|
       slug = File.basename(File.dirname(path))
-      count = strip_code_fences(File.read(path)).count("—")
+      count = strip_code_fences(File.read(path, encoding: "bom|utf-8")).count("—")
       violations << "#{slug}: #{count} em-dash(es) (—) in content - use '-' instead" if count.positive?
     end
     Result.new(name: "no-em-dash", passed: violations.empty?, violations: violations)
@@ -295,7 +295,7 @@ class CourseValidators
     violations = []
     course_chapters.each do |path|
       slug = File.basename(File.dirname(path))
-      body = File.read(path)
+      body = File.read(path, encoding: "bom|utf-8")
       COHORT_YEAR_PATTERNS.each do |re|
         body.scan(re) { |_| violations << "#{slug}: fabricated client-cohort year-stamp (matched /#{re.source}/)" }
       end
@@ -319,7 +319,7 @@ class CourseValidators
   end
 
   def parse_frontmatter(path)
-    content = File.read(path)
+    content = File.read(path, encoding: "bom|utf-8")
     if content =~ /\A---\s*\n(.*?)\n---\s*\n(.*)/m
       YAML.safe_load($1, permitted_classes: [Date, Time]) || {}
     else
@@ -364,7 +364,7 @@ class CourseValidators
       entries = YAML.load_file(ratchet_path).fetch("banned", [])
       course_chapters.each do |path|
         dir = File.basename(File.dirname(path))
-        body = File.read(path)
+        body = File.read(path, encoding: "bom|utf-8")
         entries.each do |e|
           next if e["scope"] && dir !~ Regexp.new(e["scope"])
           if body.include?(e["string"])

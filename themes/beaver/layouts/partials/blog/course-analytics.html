@@ -17,7 +17,8 @@
     if (!el || typeof window.gtag !== 'function') return;
     window.gtag('event', 'course_' + el.getAttribute('data-course-event').replace(/-/g, '_'), {
       course_label: el.getAttribute('data-course-label') || '',
-      link_url: el.getAttribute('href') || ''
+      link_url: el.getAttribute('href') || '',
+      transport_type: 'beacon'
     });
   }, { passive: true });
 </script>

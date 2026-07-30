@@ -11,6 +11,26 @@ require "support/setup_capybara"
 require "support/setup_snap_diff"
 require "support/hugo_helpers"
 
+# Every system-test run REWRITES the committed baseline PNGs in place
+# (snap_diff design: working tree = candidate, git HEAD = baseline). Starting
+# from dirty fixtures makes results unjudgeable and one `git add -A` away
+# from committing corrupted baselines - so refuse to run until they are
+# clean. Same guard bin/qtest has carried; this covers bin/test, bin/dtest,
+# and every rake test task. Degrades to a no-op where git is unavailable.
+unless ENV["ALLOW_DIRTY_SCREENSHOTS"]
+  dirty = `git status --porcelain test/fixtures/screenshots 2>/dev/null`.lines
+  if dirty.any?
+    warn "Screenshot fixtures are dirty (a previous run rewrote baselines):"
+    dirty.first(10).each { |l| warn "  #{l.strip}" }
+    warn "  ... and #{dirty.size - 10} more" if dirty.size > 10
+    warn ""
+    warn "Inspect diffs if a change was intentional, then either commit them"
+    warn "or restore: bin/rake test:screenshots:reset"
+    warn "(bypass once with ALLOW_DIRTY_SCREENSHOTS=1)"
+    abort
+  end
+end
+
 if ENV["TEST_SERVER_PORT"]
   test_port = ENV.fetch("TEST_SERVER_PORT", "1314").to_i
   Capybara.server_port = test_port

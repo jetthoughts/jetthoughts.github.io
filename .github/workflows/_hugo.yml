@@ -14,12 +14,6 @@ jobs:
       page_url: ${{ steps.pages.outputs.url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Hugo
-        uses: jetthoughts/actions-hugo@v3
-        with:
-          hugo-version: 0.164.0
-          extended: true
-
       - name: Checkout
         uses: actions/checkout@v7
         with:
@@ -29,48 +23,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
 
-      # Tier 1: Dependencies cache (changes infrequently)
-      - uses: actions/cache@v6
-        name: Cache dependencies
+      # Toolchain (Hugo/Bun/Node pins + caches) lives in the composite
+      # action - the single source of truth for CI versions. This job
+      # keeps its own build steps (minified Pages build to ./public),
+      # so setup only.
+      - uses: ./.github/actions/setup-hugo
         with:
-          path: |
-            ~/.bun/install/cache
-            node_modules
-          key: ${{ runner.os }}-deps-${{ hashFiles('**/bun.lockb', '**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-deps-
-
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: 1.3.13
-      - run: bun install --frozen-lockfile
-
-      # Hugo 0.164 loads Node tools through node:module registerHooks,
-      # which Bun does not implement — the old bun→node symlink now fails
-      # with "Export named 'registerHooks' not found". Use real Node 22
-      # (>=22.15 has registerHooks); the --permission flags Hugo passes are
-      # satisfied by [security.node.permissions] allowRead in hugo.toml.
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
-      # Tier 2a: Hugo image cache (survives CSS/HTML changes)
-      - uses: actions/cache@v6
-        name: Cache Hugo processed images
-        with:
-          path: resources/_gen/images
-          key: ${{ runner.os }}-hugo-images-${{ hashFiles('assets/**', 'content/**/*.jpg', 'content/**/*.jpeg', 'content/**/*.png', 'content/**/*.webp', 'content/**/*.gif', 'content/**/*.svg', 'static/**', 'themes/**/static/**', 'themes/**/assets/images/**') }}
-          restore-keys: |
-            ${{ runner.os }}-hugo-images-
-
-      # Tier 2b: Hugo asset cache (CSS/JS compilation, updates on theme/config changes)
-      - uses: actions/cache@v6
-        name: Cache Hugo asset compilation
-        with:
-          path: resources/_gen/assets
-          key: ${{ runner.os }}-hugo-assets-${{ hashFiles('themes/**', 'layouts/**', 'postcss.config.js', 'package.json', 'hugo.toml', 'hugo.dev.toml') }}
-          restore-keys: |
-            ${{ runner.os }}-hugo-assets-
+          build: 'false'
 
       # Warm-up pass: hugo_stats.json does not exist on a cold runner, so the
       # first build's PurgeCSS runs against absent/partial stats and can purge

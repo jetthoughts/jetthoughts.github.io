@@ -6,7 +6,7 @@
      Frontmatter and cover binaries cannot run shortcodes - use near numbers
      ("20+ chapters") there instead. */ -}}
 {{- $key := .Get 0 -}}
-{{- $data := site.Data.course_sequence -}}
+{{- $data := hugo.Data.course_sequence -}}
 {{- if eq $key "chapters" -}}
   {{- $n := 0 -}}
   {{- range $data.sequence -}}

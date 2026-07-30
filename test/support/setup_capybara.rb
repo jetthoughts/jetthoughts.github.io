@@ -51,8 +51,17 @@ CHROME_ARGS = {
   "use-mock-keychain" => nil
 }
 
+# Portability overrides for machines where Chrome/chromedriver are not on
+# PATH or not auto-discoverable (agent containers, custom installs):
+#   CHROME_BIN=/path/to/chrome            browser binary
+#   CHROMEDRIVER_PATH=/path/to/driver     matching chromedriver
+if ENV["CHROMEDRIVER_PATH"]
+  Selenium::WebDriver::Chrome::Service.driver_path = ENV["CHROMEDRIVER_PATH"]
+end
+
 def build_options_for(opts)
   options = Selenium::WebDriver::Chrome::Options.new
+  options.binary = ENV["CHROME_BIN"] if ENV["CHROME_BIN"]
 
   opts.each do |key, value|
     if value.nil?

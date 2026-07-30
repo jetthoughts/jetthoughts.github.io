@@ -2,7 +2,7 @@
 
 > Professional software development consultancy website built with Hugo, featuring automated content synchronization from dev.to and comprehensive CI/CD pipeline.
 
-[![Hugo](https://img.shields.io/badge/Hugo-0.147.9-ff4088.svg)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-Extended-ff4088.svg)](https://gohugo.io/)
 [![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-blue)](https://jetthoughts.com/)
 [![CI/CD](https://github.com/jetthoughts/jetthoughts.github.io/actions/workflows/publish.yml/badge.svg)](https://github.com/jetthoughts/jetthoughts.github.io/actions)
 
@@ -58,7 +58,7 @@ JetThoughts website is a sophisticated static site generator project that showca
 
 | Category | Technologies |
 |----------|-------------|
-| **Static Site Generator** | Hugo v0.147.9 Extended |
+| **Static Site Generator** | Hugo Extended (version pinned in `.mise.toml`) |
 | **Theme** | Custom "Beaver" theme |
 | **Languages** | HTML, CSS (PostCSS), JavaScript, Ruby |
 | **Package Managers** | Bun (Node.js), Bundler (Ruby) |
@@ -99,10 +99,14 @@ gem "simplecov"
 
 ### Prerequisites
 
-- **Hugo Extended** v0.147.9 or higher
-- **Bun** or Node.js v18+
-- **Ruby** 3.0+ with Bundler
+- **[mise](https://mise.jdx.dev)** — installs the pinned toolchain (Hugo Extended, Bun, Node, Ruby) from `.mise.toml`
+- **libvips** — screenshot-diff tests (`brew install vips` / `apt-get install libvips42`)
+- **Chrome or Chromium** — system tests (set `CHROME_BIN=/path/to/chrome` if not on PATH)
 - **Git** for version control
+
+Exact versions live in `.mise.toml` (mirrored in `.ruby-version`); CI pins are
+kept in sync by `test/unit/toolchain_pins_test.rb`. See [docs/SETUP.md](docs/SETUP.md)
+for the full walkthrough.
 
 ### Installation
 
@@ -117,18 +121,18 @@ cd jetthoughts.github.io
 bin/setup
 ```
 
-This will automatically:
-- Install Hugo if not present
-- Install Node.js dependencies via Bun
-- Install Ruby gems via Bundler
-- Set up pre-commit hooks
+This installs the pinned toolchain via mise, system libraries via
+Brewfile/apt, JS dependencies via Bun, and Ruby gems via Bundler — then runs
+a doctor that verifies each piece and prints a fix for anything missing.
 
 3. **Start the development server:**
 ```bash
-hugo server -D
+bin/dev
 ```
 
-Visit `http://localhost:1313` to view the site.
+Visit `http://localhost:1313` to view the site. (`bin/dev` wraps
+`hugo server` with the PATH and env the PostCSS pipeline needs — a bare
+`hugo server -D` will fail to build CSS.)
 
 ## 💻 Development
 
@@ -158,12 +162,14 @@ jetthoughts.github.io/
 
 | Command | Description |
 |---------|-------------|
-| `hugo server -D` | Start development server with drafts |
-| `hugo build` | Build production site |
-| `npm run test` | Run test suite |
+| `bin/dev` | Start development server with drafts |
+| `bin/hugo-build` | Build + validate site (course validators, PurgeCSS warm-up) |
+| `bin/test` | Run critical test suite (`bin/rake test:critical`) |
+| `bin/dtest` | Same suite in Linux/Docker (visual baselines CI-parity) |
+| `bin/lint-css` | Stylelint warning ratchet |
 | `bin/sync_with_devto` | Sync blog posts from dev.to |
 | `bin/surge/deploy` | Deploy to staging (surge.sh) |
-| `bin/setup` | Initial project setup |
+| `bin/setup` | Initial project setup + doctor |
 
 ### Environment Variables
 
@@ -187,13 +193,17 @@ The project includes comprehensive testing with multiple test types:
 ### Running Tests
 
 ```bash
-# Run all tests
-npm run test
+# Critical suite (system + visual regression)
+bin/test
 
-# Run specific test type
-ruby test/test_blog_sync.rb      # Unit tests
-ruby test/test_system.rb         # System tests
-ruby test/test_homepage.rb       # Homepage tests
+# Specific suites
+bin/rake test:unit          # Unit tests (validators, sync, templates)
+bin/rake test:system        # All system tests
+bin/rake test:critical      # Critical pages subset
+bin/dtest                   # Critical suite in Linux/Docker
+
+# Single test file
+bin/test test/system/desktop_site_test.rb
 ```
 
 ### Test Categories
@@ -308,7 +318,6 @@ Edit `hugo.toml` to modify navigation:
 | Document | Description |
 |----------|-------------|
 | [README.md](README.md) | Project overview and setup |
-| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Technical architecture details |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
 | [SETUP.md](docs/SETUP.md) | Detailed setup instructions |
 | [CI-CD.md](docs/ci-cd-pipeline-analysis.md) | CI/CD pipeline documentation |
@@ -333,7 +342,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Make your changes
-4. Run tests (`npm run test`)
+4. Run tests (`bin/test`)
 5. Commit changes (`git commit -m 'Add amazing feature'`)
 6. Push to branch (`git push origin feature/amazing-feature`)
 7. Open a Pull Request

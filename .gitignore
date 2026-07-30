@@ -35,6 +35,8 @@ hugo.linux
 !.stitch
 !.junie
 !.gitignore
+!.mise.toml
+!.ruby-version
 
 # SnapDiff runtime
 *.diff.png

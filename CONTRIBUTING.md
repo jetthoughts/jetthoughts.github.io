@@ -79,10 +79,10 @@ Follow our coding standards and test your changes:
 
 ```bash
 # Start development server
-hugo server -D
+bin/dev
 
 # Run tests before committing
-npm run test
+bin/test
 ```
 
 ### 4. Commit Changes
@@ -214,15 +214,15 @@ All changes must include appropriate tests:
 ### Running Tests
 
 ```bash
-# Full test suite
-npm run test
+# Critical suite (system + visual regression)
+bin/test
 
-# Specific tests
-ruby test/test_blog_sync.rb
-ruby test/test_system.rb
+# Specific suites
+bin/rake test:unit
+bin/rake test:system
 
-# Visual regression
-ruby test/test_homepage.rb
+# Linux/Docker parity run
+bin/dtest
 ```
 
 ### Writing Tests
@@ -280,14 +280,14 @@ docs: update README with new setup instructions
 style(css): consolidate spacing in fl-button selectors
 refactor(sync): improve dev.to API error handling
 test(homepage): add mobile viewport tests
-chore(deps): update Hugo to 0.147.9
+chore(deps): bump toolchain pins in .mise.toml
 ```
 
 ## 🔄 Pull Request Process
 
 ### Before Submitting
 
-- [ ] Tests pass locally (`npm run test`)
+- [ ] Tests pass locally (`bin/test`)
 - [ ] Code follows style guidelines
 - [ ] Documentation is updated
 - [ ] Commit messages follow convention
@@ -384,8 +384,8 @@ Closes #123
 ### Resources
 
 - [Hugo Documentation](https://gohugo.io/documentation/)
-- [Project Architecture](docs/ARCHITECTURE.md)
 - [Setup Guide](docs/SETUP.md)
+- [Docs Overview](docs/60.02-docs-overview-reference.md)
 
 ### Communication Channels
 
