@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-labelledby="presale-title">
+  <title id="presale-title">The $1 pre-sale flow, from button to proof</title>
+  <defs>
+    <style>
+      .heading      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .step-label   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 21px; fill: #1a1a1a; font-weight: 700; }
+      .step-rule    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #333; }
+      .step-note    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #444; font-style: italic; }
+      .money-line   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #15803d; font-weight: 700; }
+      .subtitle     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .step-button  { fill: #faf7f2; stroke: #1a1a1a; stroke-width: 2.5; }
+      .step-charge  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .step-promise { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
+      .step-proof   { fill: #faf7f2; stroke: #1a1a1a; stroke-width: 2.5; }
+      .callout      { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <text x="500" y="40" class="heading" text-anchor="middle">The $1 pre-sale flow</text>
+  <text x="500" y="68" class="subtitle" text-anchor="middle">A real $1 charge beats a free email signup - same visitors, sharper signal.</text>
+
+  <!-- Step 1: The button -->
+  <rect x="60" y="100" width="430" height="180" rx="14" class="step-button" transform="rotate(-0.3 275 190)"/>
+  <text x="275" y="134" class="step-label" text-anchor="middle">1. THE BUTTON</text>
+  <text x="275" y="168" class="step-rule" text-anchor="middle">"Reserve your spot - $1 today,</text>
+  <text x="275" y="192" class="step-rule" text-anchor="middle">refundable if we don't ship by [DATE]."</text>
+  <text x="275" y="222" class="step-note" text-anchor="middle">Same Stripe Payment Link setup as Lesson 1.5.</text>
+
+  <!-- Step 2: The charge -->
+  <rect x="510" y="100" width="430" height="180" rx="14" class="step-charge" transform="rotate(0.4 725 190)"/>
+  <text x="725" y="134" class="step-label" text-anchor="middle">2. THE CHARGE</text>
+  <text x="725" y="168" class="step-rule" text-anchor="middle">A real $1 Stripe charge - a wallet</text>
+  <text x="725" y="192" class="step-rule" text-anchor="middle">decision, not a free email click.</text>
+  <text x="725" y="222" class="step-note" text-anchor="middle">Conversion drops 3-5x - fewer clicks, truer signal.</text>
+
+  <!-- Step 3: The promise -->
+  <rect x="60" y="310" width="430" height="180" rx="14" class="step-promise" transform="rotate(0.3 275 400)"/>
+  <text x="275" y="344" class="step-label" text-anchor="middle">3. THE PROMISE</text>
+  <text x="275" y="378" class="step-rule" text-anchor="middle">Thank-you page promises a full refund</text>
+  <text x="275" y="402" class="step-rule" text-anchor="middle">within 7 days if we don't ship by [DATE].</text>
+  <text x="275" y="432" class="step-note" text-anchor="middle">Non-negotiable: refund every charge within 30 days.</text>
+
+  <!-- Step 4: What the click proved -->
+  <rect x="510" y="310" width="430" height="180" rx="14" class="step-proof" transform="rotate(-0.4 725 400)"/>
+  <text x="725" y="344" class="step-label" text-anchor="middle">4. WHAT THE CLICK PROVED</text>
+  <text x="725" y="378" class="step-rule" text-anchor="middle">0 sales: hypothesis or price is wrong.</text>
+  <text x="725" y="402" class="step-rule" text-anchor="middle">1-10 sales: iterate headline + targeting.</text>
+  <text x="725" y="432" class="money-line" text-anchor="middle">50+ sales: PMF signal - start building.</text>
+
+  <!-- Bottom callout -->
+  <rect x="80" y="520" width="840" height="65" rx="12" class="callout"/>
+  <text x="500" y="546" class="step-label" text-anchor="middle">The click proves demand. Not a business.</text>
+  <text x="500" y="572" class="step-note" text-anchor="middle">Retention (5.1) and unit economics are separate, later tests.</text>
+</svg>

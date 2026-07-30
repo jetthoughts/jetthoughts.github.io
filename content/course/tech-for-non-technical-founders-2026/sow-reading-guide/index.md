@@ -30,6 +30,8 @@ An annotated sample SOW that catches the 8 clauses agencies hope you skim.
 
 By the time you finish your second coffee you will know whether the 47-page Statement of Work in front of you carries 3-5 clauses that will cost you more than the price of the project. You will not have read a line of code or talked to a lawyer. You will have walked one sample SOW clause by clause, marked the flags, and written the questions the agency needs to answer before you sign.
 
+![The 8-clause SOW risk map - each clause and what it quietly costs](eight-clause-risk-map.svg)
+
 ## Why this exists
 
 One clause in a 47-page SOW decides whether you can withhold payment for work that does not run: the **milestone acceptance clause**. When it defines "delivered" as "deployed to staging" rather than "passing the acceptance criteria with production traffic," every milestone clears the moment code reaches a staging URL - even one that 500s on the second click. A general counsel reading the SOW the night before tends to catch the liability cap and the IP assignment and skim right past this line. Miss it, and three months in you can have paid for **four of five milestones** and been invoiced **$78K** for work nobody can use, with runway compressed from twelve months to seven. Most agencies are not malicious about SOW language; they start from a template that survived their last twelve clients, and the template has a few clauses that quietly favor the agency.
