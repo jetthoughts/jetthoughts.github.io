@@ -194,3 +194,17 @@ synchronous spawns or nudge-pings needed, budget ~2x expected wall time;
 spec numbers against page content (two catches this sprint); (4) 4-eyes critic
 rounds caught 5 real voice defects my own pass missed - keep as blocking gate.
 Updated: TASK-TRACKER wave states, [course-structure](/content/course-structure.md).
+
+## 2026-07-30 (3) - Waves M2 + M3 shipped, M4 closed; media modernization COMPLETE to pilot gate
+PR #395 (M2: salvage-vs-rebuild mermaid tree, where-to-hire region map SVG,
+hire-track trap-vs-redline table, self-serve mistakes grouped table; 4-eyes
+4/4 PASS) and PR #396 (M3: interview-scorecard + pre-launch-checklist PDFs +
+channel-fit-canvas landscape one-pager; portrait clip caught in review) both
+merged. M4 investigated + closed: portrait worksheet variants = single-source
+violation; phone answer is the M3 PDF link; ceiling in
+[house-visual-spec](/design/house-visual-spec.md). Board lesson: the
+words-per-visual audit metric can't see blockquote scripts/Bad-Good pairs -
+3 of 4 flagged word-walls were already healthy; assess per-H2 before
+building. All agent-doable media waves (M1-M4) are now DONE; M5 + Phase 2 +
+Sprint D are pilot-gated. The wave order M1->C1->M2->M3->M4 completed in one
+day (5 PRs: #390/#392/#394/#395/#396).

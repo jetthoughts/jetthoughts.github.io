@@ -185,6 +185,13 @@ Apply the 10.05 Part 2 rules to existing prose in the highest-traffic lessons:
 
 ### Wave M3 - printable artifacts thin slice (~0.5 day)
 
+**State (2026-07-30): SHIPPED** - PR #396 merged. interview-scorecard +
+pre-launch-checklist added to the PDF pipeline with on-page download links
+(scorecard links Mia's M2 walkthrough as the filled example);
+channel-fit-canvas.pdf via new CANVASES landscape-wrapper loop (portrait
+clipped the 960px canvas - caught in PDF review, MediaBox now 792x612).
+8/8 PDFs green. Remaining ~9 template PDFs stay demand-gated per Sprint C #3.
+
 Extend the proven `bin/generate-template-pdfs` pipeline to the 3 new pilot
 assets: interview-scorecard, pre-launch-checklist, channel-fit canvas one-pager.
 These are the pages readers physically fill in - print is the native format.
@@ -192,6 +199,15 @@ The remaining ~9 template PDFs stay gated on pilot download demand (standing
 Sprint C #3 rule - do not relitigate).
 
 ### Wave M4 - worksheet mobile legibility (investigation, ~0.5 day)
+
+**State (2026-07-30): INVESTIGATED + CLOSED (ceiling documented).** SVGs
+render as plain `<img>` in render-image.html; the portrait-variant pattern
+is ~10 template lines BUT needs a second hand-drawn variant per worksheet
+kept in sync by hand (single-source violation, drift risk) + double
+visual-regression gates for the theme change. Verdict: not worth it - the
+phone answer for fill-in worksheets is the Wave M3 print-ready PDF link.
+Ceiling documented in `.okf/design/house-visual-spec.md`. Revisit only if
+pilot recordings show phone readers pinch-zooming instead of downloading.
 
 Dense 960-wide worksheet SVGs (channel-fit canvas, scorecard) render at ~7px
 text on a 390px phone - legal but illegible; Sam reads on phone (pilot
