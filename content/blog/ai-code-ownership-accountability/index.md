@@ -76,6 +76,8 @@ Last clause, the one that closes the back door: source-handover obligation on te
 
 Expect a 30-minute call about the amendment. Expect the agency to ask for a 5-10% rate bump on the SBOM and handover clauses; they require operational changes on their side, and that's a fair ask. If they push back on all five, you've already learned what was missing from the original deal.
 
+> **The weekend audit below has a printable version.** Our free course includes a 12-item ownership checklist you can run alone, no engineer required, covering the same code, cloud, and database questions this post walks through. [GitHub, AWS, Database Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/).
+
 ## But Wait - You Trust Your Agency
 
 Sure. So did Jer Crane at [PocketOS](/blog/ai-agent-deleted-production-database-pocketos/), a live car-rental SaaS whose AI agent dropped the production database and the backups in nine seconds. His agency wasn't malicious. They just didn't gate the model the way the kernel gates a contributor. The diligence partner asks for a signature, not for trust. The kernel maintainers trust their contributors and still demand one. Without a paper trail, trust is just hope, and hope doesn't survive due diligence.
