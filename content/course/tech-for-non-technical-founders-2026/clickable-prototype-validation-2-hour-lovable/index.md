@@ -155,6 +155,8 @@ Catching a shape mismatch here costs one throwaway prototype. Catching it in Mod
 >
 > **Deeper reference:** [Full prototype build, session script, and Module 2 decision matrix](/course/tech-for-non-technical-founders-2026/reference/prototype-build-full/) - the screen-by-screen build, the worked example, the verbatim session script, the combined interview + prototype decision matrix, and the artifacts map.
 
+> **Module 2 closes here.** Before opening Module 3, you should have: (1) a Mom Test question list that reads past-tense and specific (Lesson 2.1), (2) a 30-name list of people you can name because you read what they posted (Lesson 2.3), (3) 10 scored Mom Test interview transcripts (Lesson 2.4), (4) a build / pivot / kill verdict - 7+ strong signals to build (Lesson 2.5), and (5) 5 scored prototype sessions with 4-5 passes and verbatim "describe in one sentence" vocabulary (this lesson). All five in your `Founder OS` folder. Missing one? Go back - Lesson 3.1 reads your validated problem statement into Section 1 and your prototype vocabulary into Section 3; a missing artifact means writing the brief from a guess.
+
 ---
 
 *See it in action: [Module 2 walkthrough: Mia interviews ten parents](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/)*
