@@ -316,7 +316,7 @@ bin/rake test:critical 2>&1 | tee test_validation_phase1.log
 
 ## 📚 Reference Documentation
 
-**Guardian Protocol**: `/Users/pftg/dev/jetthoughts.github.io/test/system/SCREENSHOT_GUARDIAN_PROTOCOL.md`
+**Guardian Protocol**: `SCREENSHOT_GUARDIAN_PROTOCOL.md` (this directory)
 
 **Test Files**:
 - Desktop tests: `test/system/desktop_site_test.rb`

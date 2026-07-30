@@ -1,5 +1,9 @@
 # Bundle Update Log
 
+## 2026-07-30 (Phase 5)
+
+* **Hygiene**: DevX Phase 5 - 9 orphaned agent-era markdown files (~108 KB, closed reference island, all frozen 2026-07-18) moved to `docs/projects/2509-css-migration/70-79-archives/agent-era/`: 3 from repo root (AGENT_COORDINATION_FAILURE_ANALYSIS, coordination, memory-bank) + 6 ALL-CAPS protocol docs from `test/system/`. Executable bits cleared on the two mode-0755 markdown files. Stale `/Users/pftg/...` absolute paths fixed in GEMINI.md/QWEN.md (live pointer files - they stay at root by CLI-tool convention, as do DESIGN.md/PRODUCT.md/AGENTS.md which are resolved at root by the impeccable skill's context.mjs). Rule of thumb: grep for inbound references before moving root docs - the load-bearing set is invisible to grep (tool conventions), so check `.agents/skills/impeccable/scripts/context.mjs` name lists too.
+
 ## 2026-07-30 (Phase 3)
 
 * **Update**: [test-gates](/build/test-gates.md) scope - DevX Phase 3: the qtest-only dirty-baseline guard now runs at system-test load (`test/application_system_test_case.rb`) for ALL runners (bin/test, bin/dtest, rake) - refuses to start on dirty `test/fixtures/screenshots`, companion `bin/rake test:screenshots:reset`, bypass `ALLOW_DIRTY_SCREENSHOTS=1`. Browser overrides `CHROME_BIN` + `CHROMEDRIVER_PATH` in `setup_capybara.rb` make the suite runnable in agent containers (proven: color_system test green against Playwright Chromium 141 + matching chromedriver). All 11 `File.read` sites in `lib/` now force `encoding: "bom|utf-8"` - validators no longer crash under non-UTF-8 locales (`LANG=C bin/validate-course` green).
