@@ -106,8 +106,16 @@ session data exists. This blocks the pilot's recordings, not just item 4.
 Paul: create the project at clarity.microsoft.com, then set
 `microsoftClarity = "<project-id>"` under [params] in
 config/_default/hugo.toml (one line - partial already handles the rest).
-Wave M1 (4 SVGs): designer agent running in worktree on branch
-course-wave-m1-core-svgs (leaner respawn after first attempt overflowed).
+**Wave M1 SHIPPED** - PR #394 merged (squash d029db90): 4 hand-drawn SVGs
+(2.4 outreach-funnel-strip, 5.4 network-audit-grid, 5.5 send-day-rhythm-card,
+M3 vibe-prd-skeleton), designer agent in worktree + team-lead visual walk of
+all 4 pages at 1280x800. Two backlog spec-wording errors corrected against
+page content (5.5 gate = "10+ replies, 3-5 demos booked", not
+"stop-at-10-booked"; grid rows are illustrative sizing). NEXT WAVE: M2
+(decision-aid retrofits incl. the promoted salvage-vs-rebuild +
+where-to-hire pages and the 4 word-walls). Known ceiling for Wave M4:
+network-audit-grid at 390px renders small - the worksheet mobile-legibility
+investigation owns it.
 
 Grounded in the 2026-07-30 strategy review (Product Compass benchmark + Sam
 persona walk + pedagogy persona + 57-source NotebookLM corpus; plan file

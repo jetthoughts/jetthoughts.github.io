@@ -179,3 +179,18 @@ zero visuals; 19 pages coverless; true zero-body-visual count 17 not 1) and to
 density (5.4k-word single-SVG walls pass) - DoD now carries words-per-visual
 <=600 + worked-example fading (templates never ship blank). Updated:
 [course-structure](/content/course-structure.md), TASK-TRACKER waves, GOAL-AT-A-GLANCE.
+
+## 2026-07-30 (2) - Waves C1 + M1 shipped; Clarity config gap; sprint retro
+PR #390 (1.1 two-sitting split + overview first-win path, 4-eyes reviewed) and
+PR #394 (4 hand-drawn SVGs for the visual-less core lessons, designer agent in
+worktree + team-lead browser walk) both merged. C1 progress tracker DEFERRED by
+2-1 team vote (Sam-ICP + operator over pedagogy) - pilot data decides. P0 gap
+found: `microsoftClarity` was never set in config, so the shipped Clarity
+snippet collects nothing - blocks pilot recordings; one-line fix documented in
+TASK-TRACKER. Retro learnings: (1) subagent SendMessage-to-main is unreliable -
+synchronous spawns or nudge-pings needed, budget ~2x expected wall time;
+(2) worktree isolation saved the shared checkout when the designer cd'd wrong;
+(3) groomed-backlog wording can drift from page reality - agents must verify
+spec numbers against page content (two catches this sprint); (4) 4-eyes critic
+rounds caught 5 real voice defects my own pass missed - keep as blocking gate.
+Updated: TASK-TRACKER wave states, [course-structure](/content/course-structure.md).
