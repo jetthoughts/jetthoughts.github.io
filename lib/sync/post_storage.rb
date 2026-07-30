@@ -26,7 +26,7 @@ module Sync
 
     def read_content(slug)
       return nil unless page_bundle_dir(slug).directory? && content_path(slug).file?
-      File.read(content_path(slug))
+      File.read(content_path(slug), encoding: "bom|utf-8")
     end
 
     def save_content(slug, content)

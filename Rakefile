@@ -49,6 +49,13 @@ namespace :test do
     t.pattern = "test/integration/**/*_test.rb"
   end
 
+  namespace :screenshots do
+    desc "Restore baseline PNGs rewritten by a test run (candidates live in the working tree; git HEAD is the baseline)"
+    task :reset do
+      sh "git checkout -- test/fixtures/screenshots"
+    end
+  end
+
   # Broken-link checks (2026-07-21: GA 404 spike audit). Coverage is total by
   # construction - every *.html the build emits is globbed from disk and
   # passed to lychee as an explicit input, so nothing is skipped the way a
