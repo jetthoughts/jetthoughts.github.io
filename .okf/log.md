@@ -1,5 +1,9 @@
 # Bundle Update Log
 
+## 2026-07-30 (Phase 5)
+
+* **Hygiene**: DevX Phase 5 - 9 orphaned agent-era markdown files (~108 KB, closed reference island, all frozen 2026-07-18) moved to `docs/projects/2509-css-migration/70-79-archives/agent-era/`: 3 from repo root (AGENT_COORDINATION_FAILURE_ANALYSIS, coordination, memory-bank) + 6 ALL-CAPS protocol docs from `test/system/`. Executable bits cleared on the two mode-0755 markdown files. Stale `/Users/pftg/...` absolute paths fixed in GEMINI.md/QWEN.md (live pointer files - they stay at root by CLI-tool convention, as do DESIGN.md/PRODUCT.md/AGENTS.md which are resolved at root by the impeccable skill's context.mjs). Rule of thumb: grep for inbound references before moving root docs - the load-bearing set is invisible to grep (tool conventions), so check `.agents/skills/impeccable/scripts/context.mjs` name lists too.
+
 ## 2026-07-26
 
 * **Milestone**: Vibe Code Rescue landing page built at `/services/vibe-code-rescue/` (branch `landing-vibe-code-rescue`, card #14) via the impeccable pipeline (init → document → build): PRODUCT.md + DESIGN.md + sidecar now exist at repo root as design authority. JetVelocity brand tokens extracted to `foundations/css-variables.css` `:root`.

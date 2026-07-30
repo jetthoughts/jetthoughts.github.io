@@ -8,7 +8,7 @@ Session start: always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflo
 
 **Voice (MANDATORY when writing):** Read `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`. Founder posts: Walling+Fishkin. Tech posts: thoughtbot style (tension-first, opinionated, code as evidence). Run stream-specific self-test.
 
-**Finding posts to reference:** Use claude-context MCP search: `Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "topic"`. Tag/slug index: `docs/blog-post-index.md`. Verify slugs: `ls content/blog/<slug>/index.md`.
+**Finding posts to reference:** Use claude-context MCP search: `Search the codebase at <repo root> for: "topic"`. Tag/slug index: `docs/blog-post-index.md`. Verify slugs: `ls content/blog/<slug>/index.md`.
 
 Prefer **skills** over agents. Use agents only when a task explicitly requires them.
 
