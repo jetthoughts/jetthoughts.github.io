@@ -228,3 +228,19 @@ words-per-visual audit metric can't see blockquote scripts/Bad-Good pairs -
 building. All agent-doable media waves (M1-M4) are now DONE; M5 + Phase 2 +
 Sprint D are pilot-gated. The wave order M1->C1->M2->M3->M4 completed in one
 day (5 PRs: #390/#392/#394/#395/#396).
+
+## 2026-07-30 (4) - Growth waves G1-G3 + M5 shipped; GA4 root cause fixed
+Growth runbook 20.12 created (agent-executable marketing plan; standing
+decisions: fully ungated, NO mail list, no selling, stealth ICP). Shipped:
+G1 docs-truth sweep + production GA4 verification which found the ROOT CAUSE
+of muted analytics - privacyCompliant=true defaulted consent to denied with
+no banner to ever grant it, AND click events lacked beacon transport. Fixed
+in PR #402 (consent granted for analytics_storage, ads stay denied, beacon
+added, plus the stealth-compatible copy-link button on 5 module-end
+lessons - both visual suites green after rebuilding the stale Docker test
+image from #391's gem bumps). PR #404: 10 evergreen blog posts now deep-link
+8 course lessons (was 0 of ~580). PR #398: 16 pilot-gated campaign briefs.
+PR #406: Wave M5 un-gated by Paul - 3 P2 SVGs (2 pages skipped as already
+covered) + module-end checklists M1/M2/M3/M5 + clean interaction audits.
+All wave branches cleaned. REMAINING: M5c reference-tier visuals + ~19
+covers, G2.2 SERP spot-check, post-deploy GA4 re-verification.
