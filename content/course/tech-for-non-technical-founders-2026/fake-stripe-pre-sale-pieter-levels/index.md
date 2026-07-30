@@ -32,6 +32,8 @@ The default [smoke test](/course/tech-for-non-technical-founders-2026/smoke-test
 
 This page is the companion writeup for that variant. Use it when an email-only signal isn't strong enough to commit to a build.
 
+![The $1 pre-sale flow - button, charge, refund promise, and what the click proved](dollar-presale-flow.svg)
+
 ## Email signup vs $1 refundable charge
 
 A waitlist captures curiosity (a free email costs the visitor nothing). A $1 charge captures a wallet decision. The same 100 visitors who would cheerfully give you an email might generate zero payment clicks - and that zero is the validated demand signal you actually need.
