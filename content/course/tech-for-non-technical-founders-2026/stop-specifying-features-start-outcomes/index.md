@@ -95,8 +95,6 @@ After Lessons 3.1-3.2 you have five artifacts. Each feeds a specific downstream 
 | **Audience-of-one fork** (AI agent / junior dev / senior team, from 3.1) | Lesson 4.1 build-path routing - decides whether the brief goes to Lovable or a contractor. |
 | **Quality-check verdict** (3.2 - did the peer answer cleanly?) | Checkpoint before Module 4. If the peer cannot answer cleanly, return here and rewrite Section 3 first. |
 
-> **Module 3 closes here.** Before opening Module 4 you should have: a one-page Product Brief with 5 sections filled in (3.1), Section 3 rewritten as outcome-shaped job stories that pass the peer test (this lesson), and a no-go list of 5-8 items - all in your `Founder OS` folder. If this lesson saved you a build-and-throwaway round, someone you know is about to hand a builder four vague words too - send them this free course page. Missing an artifact? Go back - Module 4 reads the brief into Lovable prompts, and a half-written brief produces a half-working MVP.
-
 ---
 
 > **Done:** every line of Section 3 is rewritten in the *When / I want / So I can* shape, and one quality-check pass (peer, AI, or the manual question) names nothing outside your Section 3 scope and no-go list.
@@ -108,6 +106,8 @@ After Lessons 3.1-3.2 you have five artifacts. Each feeds a specific downstream 
 > **If blocked:** see "If this fails" above.
 >
 > **Deeper reference:** [The second worked pair, the priced-out comparison, the full AI-reviewer protocol, and stack-ranking outcomes with real users](/course/tech-for-non-technical-founders-2026/reference/outcomes-not-features-full/)
+
+> **Module 3 closes here.** Before opening Module 4, you should have: (1) a one-page Product Brief with 5 sections filled in (Lesson 3.1), (2) Section 3 rewritten as outcome-shaped job stories in the *When / I want / So I can* form (this lesson), (3) a no-go list of 5-8 items (Lesson 3.1 Section 5), and (4) a passed quality-check verdict - a peer or AI reviewer names nothing outside your Section 3 scope and no-go list (this lesson). All four in your `Founder OS` folder. Missing one? Go back - Module 4 reads the brief into Lovable prompts, and a half-written brief produces a half-working MVP.
 
 ---
 

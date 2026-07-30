@@ -101,6 +101,8 @@ Open your Stripe dashboard. Write down the number of clicks vs. completed paymen
 >
 > **Variant:** [Fake-Stripe Pre-Sale (Pieter Levels style)](/course/tech-for-non-technical-founders-2026/fake-stripe-pre-sale-pieter-levels/) - a $1 refundable charge instead of a waitlist button, when you want the strongest pre-product demand signal. Includes refund and FTC compliance notes.
 
+> **Module 1 closes here.** Before opening Module 2, you should have: (1) a founding hypothesis scored 14+/20 across the four lenses (Lesson 1.1), (2) a live smoke-test page that passed the one-stranger clarity test (Lesson 1.2), (3) Clarity + GA4 tracking installed and verified (Lesson 1.3), (4) a go / iterate / kill read from 300 cold visitors (Lesson 1.4), and (5) a Stripe Payment Link live with a measured click-to-payment rate (this lesson). All five in your `Founder OS` folder. Missing one? Go back - Module 2 interviews ask real people about the hypothesis and price you just tested; walking in without a finished artifact means asking about a guess instead of a measured signal.
+
 ---
 
 *See it in action: [Module 1 walkthrough: Mia builds TutorMatch](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)*
