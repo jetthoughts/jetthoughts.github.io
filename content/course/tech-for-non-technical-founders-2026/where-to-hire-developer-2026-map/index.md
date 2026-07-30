@@ -46,6 +46,8 @@ If you find yourself comparing all four regions for an hour, you are negotiating
 
 Total time budget: 30 minutes alone, 30 minutes posting, 0 minutes second-guessing.
 
+![Where to hire in 2026: four region cards showing rate band, pick-when, and watch-out for Onshore US/EU, Nearshore LATAM, Tier-2 India, and Mass-market Upwork](hiring-region-map.svg)
+
 ## The 4 regions
 
 Walk the four rows in order. Circle the one your scope and budget land in, then move to the platform list.
