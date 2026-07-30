@@ -93,13 +93,21 @@ Skip (already adequate per 40.20): `mom-test-synthesis-build-pivot-kill` and
 
 ### Wave C1 - completion mechanics (~1 day) - NEW 2026-07-30
 
-**State (2026-07-30):** items 1/2/3/5 SHIPPED in PR #390 (branch
-course-wave-c1-completion-mechanics; 4-eyes reviewed, all gates green).
-Item 4 (progress tracker) BLOCKED on the 30-min Clarity same-device check -
-Paul's Clarity access. Wave M1 (SVGs) not started: first agent attempt died
-on context overflow; respawn with a leaner prompt after this PR merges
-(WIP=1). Cold-session pickup: read PR #390 + this block, then run the
-Clarity check before building item 4.
+**State (2026-07-30, post-merge):** items 1/2/3/5 SHIPPED - PR #390 MERGED
+to master (squash d3e8595d; independent reviewer APPROVE on all 5 checks).
+**Item 4 (progress tracker) DEFERRED to Sprint D by 2-1 team vote**
+(operator + Sam-ICP voters: per-browser marks vanishing on a second device
+erodes trust even with quiet-checkmark mitigations, and the pilot will
+observe real reader behavior directly; pedagogy voter dissented - engagement
+lift is real but recoverable post-pilot). Do not build before pilot data.
+**NEW P0 FINDING: Clarity was never configured** - the analytics partial
+ships the snippet but `microsoftClarity` is unset in config/, so ZERO
+session data exists. This blocks the pilot's recordings, not just item 4.
+Paul: create the project at clarity.microsoft.com, then set
+`microsoftClarity = "<project-id>"` under [params] in
+config/_default/hugo.toml (one line - partial already handles the rest).
+Wave M1 (4 SVGs): designer agent running in worktree on branch
+course-wave-m1-core-svgs (leaner respawn after first attempt overflowed).
 
 Grounded in the 2026-07-30 strategy review (Product Compass benchmark + Sam
 persona walk + pedagogy persona + 57-source NotebookLM corpus; plan file
