@@ -381,13 +381,15 @@ The bad pattern ships an MVP where any user with the right URL pattern can fake 
 
 ## Common mistakes (and how to avoid them)
 
-- **Skipping Row-Level Security in Supabase.** Every coach sees every coach's data the first time you forget. Enable RLS on every table the day you create it. Write the policies before you write the first row of seed data.
-- **Letting Lovable hold your domain.** Buy the domain on a registrar you control (Porkbun, Cloudflare, Namecheap). Point it at Lovable via DNS. If you cancel Lovable, your domain still points at whatever you put behind it next.
-- **Skipping the GitHub sync.** Lovable can sync to GitHub on every save. Set this up in the first session of Phase 1. The day you cancel the subscription is not the day to discover your code only lives inside Lovable's UI.
-- **Building 5 features instead of 1.** The phased plan ships ONE workflow end-to-end. The second feature comes after the first 5 ICP users have clicked through the first one. Skip this rule and you're the founder who spends 11 weeks on Lovable with 4 half-built features and no paid signups.
-- **Trusting the Stripe redirect instead of the webhook.** The webhook is the truth. The redirect is UX. Verify the webhook signature.
-- **Demoing only to friends.** Friends will be polite. The final Phase 4 demo must include at least 3 ICP prospects (not friends, not advisors, not your spouse). Their reaction is the data; everyone else is a warm-up.
-- **Iterating on imagined feedback.** When you finish Phase 4 and only 1 of 5 clicked, the temptation is to "improve the dashboard." Do not. Iterate on the metric that failed: the click rate (rewrite the cold message), the signup rate (rewrite the landing screen), or the paid rate (rethink the paywall position). Imagined improvements ship the same MVP forever.
+| | Mistake | The rule |
+|---|---|---|
+| **Ownership** | Skipping Row-Level Security in Supabase | Enable RLS on every table the day you create it - write the policies before the first row of seed data. Every coach sees every coach's data the first time you forget. |
+| | Letting Lovable hold your domain | Buy the domain on a registrar you control (Porkbun, Cloudflare, Namecheap) and point it at Lovable via DNS. If you cancel Lovable, the domain still points at whatever you put behind it next. |
+| | Skipping the GitHub sync | Turn on Lovable's sync-to-GitHub in the first session of Phase 1. The day you cancel the subscription is not the day to discover your code only lives inside Lovable's UI. |
+| **Scope** | Building 5 features instead of 1 | The phased plan ships ONE workflow end-to-end; the second feature comes after the first 5 ICP users click through the first. Skip this rule and you're the founder with 11 weeks on Lovable, 4 half-built features, and no paid signups. |
+| | Iterating on imagined feedback | When only 1 of 5 clicked, iterate on the metric that failed - click rate (rewrite the cold message), signup rate (rewrite the landing screen), or paid rate (rethink the paywall position). "Improving the dashboard" ships the same MVP forever. |
+| **Truth** | Trusting the Stripe redirect instead of the webhook | The webhook is the truth; the redirect is UX. Verify the webhook signature. |
+| | Demoing only to friends | The final Phase 4 demo needs at least 3 ICP prospects - not friends, advisors, or your spouse. Their reaction is the data; everyone else is a warm-up. |
 
 ## What to do after Phase 4
 

@@ -59,6 +59,32 @@ Score each question 1 or 0 and write one sentence of evidence next to it. The wh
 | Q5 | **Onboarding time** - if you hired a senior engineer Monday morning, would they ship one real pull request to staging by Friday? | There is a written README that gets a developer from `git clone` to a running local app in under two hours. | Onboarding needs "let me get on a call and walk you through it" - that is a knowledge silo, not a codebase. |
 | Q6 | **Customer signal** - are real users (not your team, not your investors, not friends doing favors) using the app every week, in volume that materially affects your business? | You can name 10+ paying or actively engaged weekly users by handle or company. | Usage is mostly the team and a few pilot accounts who have not logged in this month. |
 
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#faf7f2', 'primaryBorderColor':'#333', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart LR
+    Q1["Q1 - Bus factor"] --> SUM
+    Q2["Q2 - Test coverage signal"] --> SUM
+    Q3["Q3 - Database health"] --> SUM
+    Q4["Q4 - Architecture sanity"] --> SUM
+    Q5["Q5 - Onboarding time"] --> SUM
+    Q6["Q6 - Customer signal"] --> SUM
+    SUM["Add the six scores"] --> Keep["Score 5-6 - KEEP and harden"]
+    SUM --> Freeze["Score 3-4 - FREEZE and stabilize"]
+    SUM --> Rebuild["Score 0-2 - REBUILD core paths"]
+
+    classDef question fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
+    classDef sum fill:#faf7f2,stroke:#333,stroke-width:2.5px,color:#1a1a1a
+    classDef keep fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+    classDef freeze fill:#fffbe6,stroke:#d97706,stroke-width:2.5px,color:#1a1a1a
+    classDef rebuild fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
+
+    class Q1,Q2,Q3,Q4,Q5,Q6 question
+    class SUM sum
+    class Keep keep
+    class Freeze freeze
+    class Rebuild rebuild
+```
+
 ## The verdict
 
 Add up the scores.

@@ -274,6 +274,14 @@ Of the eight, milestone acceptance is where founders consistently lose the most 
 
 The fix is one paragraph. A milestone is delivered when (a) the acceptance criteria listed in Exhibit B pass in CI, (b) the Founder or her delegate has clicked the feature end-to-end on the staging URL, and (c) the Founder has signed off in writing within seven business days. The acceptance criteria belong in the SOW, not in a Slack message after the work is done. The five-day silent-acceptance window becomes a seven-day active-acceptance window. The invoice does not clear until the Founder signs.
 
+Side by side, the difference reads like this:
+
+| | The clause as agencies write it | Your redline |
+|---|---|---|
+| **Milestone trigger** | Code deployed to a staging URL | Exhibit B criteria pass in CI AND you click the feature end-to-end on staging |
+| **Acceptance window** | 5 days, silent - no reply means accepted | 7 business days, active - accepted only when you sign |
+| **Invoice clears** | On deploy | On your written sign-off |
+
 If the agency pushes back on this language, that is the conversation you want to have before signing, not after $78K has been wired.
 
 ### When the SOW is already signed
