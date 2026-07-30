@@ -44,6 +44,9 @@ jobs:
 
       - uses: ./.github/actions/setup-hugo
 
+      - name: CSS lint ratchet
+        run: bin/lint-css
+
       - run: bundle exec rake test:unit
         env:
           PRECOMPILED_ASSETS: '1'

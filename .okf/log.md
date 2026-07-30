@@ -4,9 +4,21 @@
 
 * **Update**: [test-gates](/build/test-gates.md) scope - DevX Phase 4: canonical visual rendering stack defined - `.dev/Dockerfile` moved ruby:3.4-alpine → ruby:4.0-slim (glibc; Alpine/musl was why linux baselines diverged 3-28% from every real Linux) with pinned Chrome for Testing + chromedriver (`.dev/cft-version` = 141.0.7390.37), deterministic fontconfig (`.dev/fonts.conf`: hintslight, grayscale AA, no embedded bitmaps), fonts-noto-core/freefont/dejavu. `bin/setup-test-env` installs the identical stack bare-metal (CfT cached under ~/.cache/jt-cft/<v>; `eval "$(bin/setup-test-env --print-env)"` exports CHROME_BIN/CHROMEDRIVER_PATH). Bare-metal verified green in an agent container. PENDING on a Docker-capable machine: build image, `FORCE_SCREENSHOT_UPDATE=true bin/dtest` once, commit re-recorded linux/ baselines in the same PR - until then linux/ baselines are still Alpine-rendered.
 
+## 2026-07-30 (Phase 5)
+
+* **Hygiene**: DevX Phase 5 - 9 orphaned agent-era markdown files (~108 KB, closed reference island, all frozen 2026-07-18) moved to `docs/projects/2509-css-migration/70-79-archives/agent-era/`: 3 from repo root (AGENT_COORDINATION_FAILURE_ANALYSIS, coordination, memory-bank) + 6 ALL-CAPS protocol docs from `test/system/`. Executable bits cleared on the two mode-0755 markdown files. Stale `/Users/pftg/...` absolute paths fixed in GEMINI.md/QWEN.md (live pointer files - they stay at root by CLI-tool convention, as do DESIGN.md/PRODUCT.md/AGENTS.md which are resolved at root by the impeccable skill's context.mjs). Rule of thumb: grep for inbound references before moving root docs - the load-bearing set is invisible to grep (tool conventions), so check `.agents/skills/impeccable/scripts/context.mjs` name lists too.
+
 ## 2026-07-30 (Phase 3)
 
 * **Update**: [test-gates](/build/test-gates.md) scope - DevX Phase 3: the qtest-only dirty-baseline guard now runs at system-test load (`test/application_system_test_case.rb`) for ALL runners (bin/test, bin/dtest, rake) - refuses to start on dirty `test/fixtures/screenshots`, companion `bin/rake test:screenshots:reset`, bypass `ALLOW_DIRTY_SCREENSHOTS=1`. Browser overrides `CHROME_BIN` + `CHROMEDRIVER_PATH` in `setup_capybara.rb` make the suite runnable in agent containers (proven: color_system test green against Playwright Chromium 141 + matching chromedriver). All 11 `File.read` sites in `lib/` now force `encoding: "bom|utf-8"` - validators no longer crash under non-UTF-8 locales (`LANG=C bin/validate-course` green).
+
+## 2026-07-30 (Phase 2)
+
+* **Update**: [ci-gates](/build/ci-gates.md) - DevX Phase 2: `.mise.toml` is now the toolchain single source of truth (hugo 0.164.0 / bun 1.3.13 / node 22 / ruby 4.0.6), enforced by `test/unit/toolchain_pins_test.rb` drift gate in CI. `_hugo.yml` de-duplicated onto the setup-hugo composite (new `build` input). `bin/setup` rewritten: mise install + brew/apt system libs + bun install + `bundle install` (previously missing!) + doctor with per-item fixes. Brewfile now system-libs-only (mise/vips/lychee). README/CONTRIBUTING corrected (Hugo badge was 17 minor versions stale, 3 fictional test commands, `hugo server -D` → `bin/dev`); `docs/SETUP.md` created (4 links already pointed at it). Gotchas: `.ruby-version` must be an exact patch (rbenv never matches fuzzy "4.0"); repo `.gitignore` ignores all dotfiles - `.mise.toml`/`.ruby-version` needed `!` negations.
+
+## 2026-07-30
+
+* **Update**: [test-gates](/build/test-gates.md) - DevX Phase 1: `bin/docked`/`bin/dc` shebangs fixed to bash (`set -o pipefail` is a bashism; dash rejected it, breaking `bin/dtest` on Linux hosts); new `bin/lint-css` stylelint ratchet (cap 377, wired into CI unit_tests job); dead `SCREENSHOT_DRIVER` env removed from test.yml (driver hardcoded `:vips` in setup_snap_diff.rb). Last 2 `site.Data` call sites migrated to `hugo.Data` (deprecation gone from build output); stale `package-lock.json` deleted (bun.lockb is the only lockfile). Agent-container caveat: Docker Hub blob CDN is 403 through the agent proxy, so dtest is unavailable there - use full-build HTML diff for template-neutrality proof.
 
 ## 2026-07-26
 

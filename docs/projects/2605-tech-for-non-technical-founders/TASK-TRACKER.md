@@ -220,7 +220,13 @@ query in the render hook, or taller stacked layout. Ship only if the pattern
 is cheap and reusable; otherwise document the ceiling in
 `.okf/design/house-visual-spec.md` and close.
 
-### Wave M5 - P2/P3 SVGs + module-end checklists (demand-driven, after pilot data)
+### Wave M5 - P2/P3 SVGs + module-end checklists (UN-GATED by Paul 2026-07-30 - execute now)
+
+**Gate change (Paul, 2026-07-30): all M-wave items lose their pilot gate -
+"no need to have pilot gated". Sprint D content-gap batch and Phase 2
+mechanics keep their gates (not M-waves).** Execution split: M5a = P2/P3
+SVGs; M5b = module-end checklists + interaction-gap audits; M5c =
+reference-tier visuals; covers batch last.
 
 - 40.20 P2 list (fake-stripe case study, friday-demo, sow-reading-guide,
   vibe-coding-ceiling-signals; salvage-vs-rebuild PROMOTED to Wave M2 P1

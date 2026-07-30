@@ -344,7 +344,7 @@ If you hit a problem, report BEFORE attempting a fix:
 | Know what to do next | `docs/projects/2509-css-migration/TASK-TRACKER.md` |
 | Understand CSS load order | `docs/projects/2509-css-migration/css-loading-order-analysis.md` |
 | See the duplication patterns | `docs/projects/2509-css-migration/10-19-analysis/10.06-fl-builder-duplication-analysis.md` |
-| Review testing protocol | `test/system/CSS_PROCESSING_TEST_PROTOCOL.md` |
+| Review testing protocol | `docs/projects/2509-css-migration/70-79-archives/agent-era/CSS_PROCESSING_TEST_PROTOCOL.md` |
 | Understand cascade constraints | `docs/projects/2509-css-migration/REVISED-CONSOLIDATION-PROCESS.md` |
 | Quick consolidation rules | `docs/workflows/css-consolidation.md` |
 | Campaign history (what worked) | `docs/CSS_CONSOLIDATION_CAMPAIGN_SUMMARY.md` |
