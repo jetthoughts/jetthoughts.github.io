@@ -609,6 +609,13 @@
   .fl-photo-img {
     max-width: 100%;
   }
+  /* Stacked hero columns: on desktop the CTA and the hero photo sit
+     side-by-side; below 860px they stack and nothing supplies a gap -
+     the photo starts at the button's bottom pixel (0px, measured at a
+     390px viewport). Breathing room for the stacked layout only. */
+  .home-hero-media {
+    margin-top: 28px;
+  }
   .home-hero-photo .fl-photo {
     text-align: left;
   }
