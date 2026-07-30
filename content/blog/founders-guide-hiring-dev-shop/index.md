@@ -30,6 +30,8 @@ We tracked the patterns in [47 Startups Failed the Same Way](/blog/47-startups-f
 
 Before you sign any contract, understand what "done" actually means. A working demo is not a shippable product. Ask the agency how they handle testing, code review, and security audits - and get specific answers, not reassurances.
 
+> **The decision you're about to make has a name.** JetThoughts runs a free, ungated course for non-technical founders, and lesson 4.1 walks through this exact fork - validate without code, self-serve, fractional CTO, or hire a team - with the five questions that tell you which path fits. [Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/).
+
 ## How to Evaluate
 
 Once you start working with an agency, most problems reveal themselves within the first few weeks - if you know where to look. We compiled the most common early signals in [8 Red Flags You Hired the Wrong Dev Shop](/blog/dev-shop-red-flags-checklist/). The short version: watch for agencies that avoid showing you the code, resist third-party audits, or cannot explain their architecture decisions in plain language.

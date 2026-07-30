@@ -141,6 +141,8 @@ Request a reference from a founder they've rescued - not their happiest client, 
 
 The first week tells you everything about the next six months. Did they send an [onboarding checklist](/blog/effective-project-onboarding-checklist-management-productivity/)? Set up a project board? Explain their [delivery flow](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/)?
 
+> **Before you sign with the next team, revisit whether "hire an agency" is even the right path.** JetThoughts' free course maps the fork between hiring, going self-serve, and bringing on a fractional CTO. [Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/).
+
 ## When NOT to fire
 
 A new team takes 4-8 weeks of ramp-up before they ship anything, during which your burn continues with zero output. Firing also stacks $5K-$15K of overhead before the next feature ships: code escrow, audit, transition oversight, contract negotiation. If your runway is under four months, your MVP launch is inside thirty days, or the only complaint you can articulate is founder frustration without a missed deliverable, the exit is usually the wrong move. Fix the spec or the communication first; if the next sprint with clear written goals still slips, then you have your answer in writing.
