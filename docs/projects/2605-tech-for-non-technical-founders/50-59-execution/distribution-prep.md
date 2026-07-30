@@ -83,7 +83,7 @@ For Sprint 1 (2605 net-new posts), LinkedIn promo follows the same pipeline — 
 
 ### Email newsletter (existing JT list)
 
-The JT newsletter goes out weekly. Each new course post is featured in the week's send. The artifact download (email-gated) feeds new subscribers into this list.
+The JT newsletter goes out weekly. Each new course post is featured in the week's send. (2026-07-30 correction: course artifacts are ungated-by-design with no course mail list - the newsletter is the existing JT list only; course downloads do NOT feed it.)
 
 Cadence: one course post per week in the newsletter (out of the 26 total, that's a 26-week feature plan; Sprint 1 takes the first 3 weeks).
 
@@ -152,8 +152,8 @@ Per post, log to a shared sheet:
 - Reddit share count + upvotes + comments per sub
 - Twitter retweets + likes + thread reads
 - Facebook reactions + shares per group
-- Email open rate + click-through to artifact download
-- Artifact download email captures (gated)
+- Email open rate + click-through to artifact download (existing JT newsletter only)
+- GA4 pdf-download events per artifact (ungated-by-design - no capture metric)
 
 Aggregate weekly. Target per `GOAL-AT-A-GLANCE.md`: ≥25 shares per post within 30 days of publish.
 

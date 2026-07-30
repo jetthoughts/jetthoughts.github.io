@@ -17,8 +17,14 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     {{ if site.Params.privacyCompliant }}
+      {{/* 2026-07-30 (Paul): analytics consent granted by default - the old
+           denied-by-default had no banner to ever grant it, so GA4 ran
+           permanently in cookieless-ping mode and the course funnel recorded
+           nothing. Ads storage stays denied (we run no ads). If a consent
+           banner ships later (e.g. Google Privacy & Messaging CMP), flip
+           analytics_storage back to 'denied' as the pre-consent default. */}}
       gtag('consent', 'default', {
-        'analytics_storage': 'denied',
+        'analytics_storage': 'granted',
         'ad_storage': 'denied'
       });
     {{ end }}

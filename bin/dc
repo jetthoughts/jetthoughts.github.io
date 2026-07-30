@@ -1,4 +1,5 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+# bash, not sh: `set -o pipefail` is a bashism - dash (Linux /bin/sh) rejects it
 
 set -euo pipefail
 
