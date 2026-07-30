@@ -4,7 +4,7 @@ description: 'Install Hugo + Bun, cache dependencies and build artifacts'
 inputs:
   hugo-version:
     description: 'Hugo version'
-    default: '0.161.1'
+    default: '0.164.0'
   environment:
     description: 'Hugo build environment'
     default: 'production'
@@ -38,15 +38,14 @@ runs:
     - run: bun install --frozen-lockfile
       shell: bash
 
-    # Use Bun as the "node" runtime for Hugo's PostCSS pipeline.
-    # Hugo 0.161+ runs Node tools with --permission flags; Bun ignores
-    # them. Symlink bun → node so Hugo's hardcoded "node" lookup finds bun.
-    - name: Use Bun as Node runtime for Hugo
-      shell: bash
-      run: |
-        mkdir -p "$HOME/.bun-as-node"
-        ln -sf "$(which bun)" "$HOME/.bun-as-node/node"
-        echo "$HOME/.bun-as-node" >> "$GITHUB_PATH"
+    # Hugo 0.164 loads Node tools through node:module registerHooks,
+    # which Bun does not implement — the old bun→node symlink now fails
+    # with "Export named 'registerHooks' not found". Use real Node 22
+    # (>=22.15 has registerHooks); the --permission flags Hugo passes are
+    # satisfied by [security.node.permissions] allowRead in hugo.toml.
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '22'
 
     - name: Cache Hugo build
       uses: actions/cache@v5
