@@ -24,7 +24,7 @@
 */}}
 {{ if eq (default true .Page.Params.course_nav) false }}{{ return }}{{ end }}
 {{- $slug := .Params.slug | default .File.BaseFileName -}}
-{{- $sequence := site.Data.course_sequence.sequence -}}
+{{- $sequence := hugo.Data.course_sequence.sequence -}}
 {{- $base := "/course/tech-for-non-technical-founders-2026/" -}}
 {{- $idx := -1 -}}
 {{- $entry := dict -}}

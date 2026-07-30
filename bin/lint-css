@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Stylelint warning ratchet. The backlog (all no-duplicate-selectors, severity
+# warning) is capped at MAX_WARNINGS; stylelint exits 2 above the cap. When you
+# fix duplicates, lower the cap in the same commit - it must only go down.
+set -euo pipefail
+
+MAX_WARNINGS=${MAX_WARNINGS:-377}
+
+cd "$(dirname "$0")/.."
+exec bun run lint:css --max-warnings "$MAX_WARNINGS"

@@ -1,5 +1,9 @@
 # Bundle Update Log
 
+## 2026-07-30
+
+* **Update**: [test-gates](/build/test-gates.md) - DevX Phase 1: `bin/docked`/`bin/dc` shebangs fixed to bash (`set -o pipefail` is a bashism; dash rejected it, breaking `bin/dtest` on Linux hosts); new `bin/lint-css` stylelint ratchet (cap 377, wired into CI unit_tests job); dead `SCREENSHOT_DRIVER` env removed from test.yml (driver hardcoded `:vips` in setup_snap_diff.rb). Last 2 `site.Data` call sites migrated to `hugo.Data` (deprecation gone from build output); stale `package-lock.json` deleted (bun.lockb is the only lockfile). Agent-container caveat: Docker Hub blob CDN is 403 through the agent proxy, so dtest is unavailable there - use full-build HTML diff for template-neutrality proof.
+
 ## 2026-07-26
 
 * **Milestone**: Vibe Code Rescue landing page built at `/services/vibe-code-rescue/` (branch `landing-vibe-code-rescue`, card #14) via the impeccable pipeline (init → document → build): PRODUCT.md + DESIGN.md + sidecar now exist at repo root as design authority. JetVelocity brand tokens extracted to `foundations/css-variables.css` `:root`.
