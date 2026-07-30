@@ -93,6 +93,14 @@ Skip (already adequate per 40.20): `mom-test-synthesis-build-pivot-kill` and
 
 ### Wave C1 - completion mechanics (~1 day) - NEW 2026-07-30
 
+**State (2026-07-30):** items 1/2/3/5 SHIPPED in PR #390 (branch
+course-wave-c1-completion-mechanics; 4-eyes reviewed, all gates green).
+Item 4 (progress tracker) BLOCKED on the 30-min Clarity same-device check -
+Paul's Clarity access. Wave M1 (SVGs) not started: first agent attempt died
+on context overflow; respawn with a leaner prompt after this PR merges
+(WIP=1). Cold-session pickup: read PR #390 + this block, then run the
+Clarity check before building item 4.
+
 Grounded in the 2026-07-30 strategy review (Product Compass benchmark + Sam
 persona walk + pedagogy persona + 57-source NotebookLM corpus; plan file
 `iridescent-tinkering-parrot`). Core finding: the completion gap is progress
