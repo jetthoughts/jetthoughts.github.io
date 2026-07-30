@@ -108,8 +108,8 @@ module.exports = {
     // (Optional) Uncomment if $var style variables are introduced later
     // postcssSimpleVars(),
 
-    // Always include nested CSS support
-    require("postcss-nested"),
+    // Always include nested CSS support (v8+ is ESM-only — unwrap .default)
+    require("postcss-nested").default || require("postcss-nested"),
 
     // Skip autoprefixer in development for faster processing
     isDevelopment ? null : require("autoprefixer"),

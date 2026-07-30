@@ -20,22 +20,22 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^8.0.0",
-    "autoprefixer": "^10.5.0",
-    "cssnano": "^8.0.1",
-    "lighthouse": "^13.3.0",
-    "markdownlint-cli": "^0.48.0",
-    "postcss": "^8.5.19",
+    "autoprefixer": "^10.5.4",
+    "cssnano": "^8.0.2",
+    "lighthouse": "^13.4.1",
+    "markdownlint-cli": "^0.49.1",
+    "postcss": "^8.5.25",
     "postcss-cli": "^11.0.1",
     "postcss-delete-duplicate-css": "^1.0.0",
     "postcss-extend-rule": "^4.0.0",
     "postcss-import": "^16.1.1",
     "postcss-mixins": "^12.1.2",
-    "postcss-nested": "^7.0.2",
-    "stylelint": "^17.14.0",
-    "surge": "^0.27.4"
+    "postcss-nested": "^8.0.0",
+    "stylelint": "^17.14.1",
+    "surge": "^0.40.2"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001793"
+    "caniuse-lite": "^1.0.30001806"
   },
   "engines": {
     "bun": ">=1.3"
