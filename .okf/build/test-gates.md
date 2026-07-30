@@ -3,7 +3,7 @@ type: Playbook
 title: Test gates and when they block commits
 description: bin/qtest --changed per micro-commit; bin/rake test:critical + bin/test AND bin/dtest at milestones and before every PR for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
-timestamp: 2026-07-21T00:00:00Z
+timestamp: 2026-07-30T00:00:00Z
 ---
 
 # The suites
@@ -37,6 +37,15 @@ components. The macOS full suite remains the only dedup-trap catcher
   does NOT include it (2026-07-17: a validator change shipped green locally,
   red in CI, because its unit fixture was never run).
 - Docker runs via Colima; fresh worktrees need `bun install` first.
+- `bin/docked`/`bin/dc` need bash, not sh: `set -o pipefail` is a bashism -
+  dash (Linux /bin/sh) rejected it and silently broke `bin/dtest` on every
+  Linux host until 2026-07-30 (shebangs fixed to bash). Remote/agent
+  containers additionally cannot pull Docker Hub base images through the
+  agent proxy (blob CDN 403) - there, prove template neutrality with a
+  full-build HTML diff instead of dtest.
+- Stylelint ratchet: `bin/lint-css` caps the no-duplicate-selectors warning
+  backlog (--max-warnings); CI runs it in the unit_tests job. Lower the cap
+  in the same commit that fixes duplicates - it only goes down.
 - Tests must assert behavior shape (`q=\d+`, has `<picture>`), never tunable
   config values (exact quality/width numbers).
 - Visual regression is a LOCAL gate only. CI does NOT run screenshot diffs -
