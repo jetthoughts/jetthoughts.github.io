@@ -1,5 +1,9 @@
 # Bundle Update Log
 
+## 2026-07-30 (Phase 2)
+
+* **Update**: [ci-gates](/build/ci-gates.md) - DevX Phase 2: `.mise.toml` is now the toolchain single source of truth (hugo 0.164.0 / bun 1.3.13 / node 22 / ruby 4.0.6), enforced by `test/unit/toolchain_pins_test.rb` drift gate in CI. `_hugo.yml` de-duplicated onto the setup-hugo composite (new `build` input). `bin/setup` rewritten: mise install + brew/apt system libs + bun install + `bundle install` (previously missing!) + doctor with per-item fixes. Brewfile now system-libs-only (mise/vips/lychee). README/CONTRIBUTING corrected (Hugo badge was 17 minor versions stale, 3 fictional test commands, `hugo server -D` → `bin/dev`); `docs/SETUP.md` created (4 links already pointed at it). Gotchas: `.ruby-version` must be an exact patch (rbenv never matches fuzzy "4.0"); repo `.gitignore` ignores all dotfiles - `.mise.toml`/`.ruby-version` needed `!` negations.
+
 ## 2026-07-26
 
 * **Milestone**: Vibe Code Rescue landing page built at `/services/vibe-code-rescue/` (branch `landing-vibe-code-rescue`, card #14) via the impeccable pipeline (init → document → build): PRODUCT.md + DESIGN.md + sidecar now exist at repo root as design authority. JetVelocity brand tokens extracted to `foundations/css-variables.css` `:root`.

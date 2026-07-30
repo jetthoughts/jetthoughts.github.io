@@ -1,8 +1,95 @@
 #!/usr/bin/env bash
+# One-shot dev environment setup + doctor.
+#
+# Toolchain (hugo/bun/node/ruby) is pinned in .mise.toml - mise is the
+# blessed installer. System libraries (libvips for screenshot diffs, lychee
+# for link checks) come from Brewfile on macOS / apt on Linux. Chrome (or
+# Chromium) is required for system tests; point CHROME_BIN at a custom
+# binary if it is not on PATH.
 
-set -euo pipefail
+set -uo pipefail
+cd "$(dirname "$0")/.."
 
-( (type brew >/dev/null 2>&1) && (brew bundle check || brew bundle --no-upgrade --no-lock) ) \
-  || (echo "*** Please install manually system dependencies: ***" && cat Brewfile)
+failures=0
+warnings=0
 
-bun install
+say()  { printf '%s\n' "$*"; }
+ok()   { say "  ok    $*"; }
+warn() { say "  WARN  $*"; warnings=$((warnings + 1)); }
+fail() { say "  FAIL  $*"; failures=$((failures + 1)); }
+
+# --- 1. Toolchain (mise) -----------------------------------------------------
+if type mise >/dev/null 2>&1; then
+  say "==> mise install (toolchain pins from .mise.toml)"
+  mise install || warn "mise install did not complete - versions may drift from .mise.toml"
+else
+  warn "mise not found - install it (https://mise.jdx.dev, 'brew install mise' or 'curl https://mise.run | sh') to get the pinned toolchain. Falling back to whatever hugo/bun/node/ruby are on PATH."
+fi
+
+# --- 2. System libraries -----------------------------------------------------
+if type brew >/dev/null 2>&1; then
+  say "==> brew bundle (system libraries)"
+  brew bundle check >/dev/null 2>&1 || brew bundle --no-upgrade || warn "brew bundle failed - install Brewfile entries manually"
+elif type apt-get >/dev/null 2>&1; then
+  say "==> Linux: checking system libraries"
+  if ! ldconfig -p 2>/dev/null | grep -q libvips; then
+    say "    installing libvips42 (screenshot diffs; sudo may prompt)"
+    sudo apt-get install -y --no-install-recommends libvips42 || warn "could not install libvips42 - screenshot tests will not run"
+  fi
+else
+  warn "no brew/apt found - install libvips manually for screenshot tests"
+fi
+
+# --- 3. Project dependencies -------------------------------------------------
+say "==> bun install"
+bun install || fail "bun install failed"
+
+say "==> bundle install"
+bundle install || fail "bundle install failed (Ruby gems - system tests and validators need these)"
+
+# --- 4. Doctor ---------------------------------------------------------------
+say ""
+say "==> Doctor (pins from .mise.toml)"
+
+pin() { sed -n "s/^$1 = \"\(.*\)\"/\1/p" .mise.toml; }
+
+check_tool() {
+  local name=$1 pin_version=$2 actual=$3
+  if [ -z "$actual" ]; then
+    fail "$name: not found on PATH (expected $pin_version). Fix: mise install"
+  elif [[ "$actual" == "$pin_version"* ]]; then
+    ok "$name $actual"
+  else
+    warn "$name $actual != pinned $pin_version (.mise.toml). Fix: mise install && mise use"
+  fi
+}
+
+check_tool hugo "$(pin hugo)" "$(hugo version 2>/dev/null | sed -n 's/^hugo v\([0-9.]*\).*/\1/p')"
+check_tool bun  "$(pin bun)"  "$(bun --version 2>/dev/null)"
+check_tool node "$(pin node)" "$(node --version 2>/dev/null | tr -d v)"
+check_tool ruby "$(pin ruby)" "$(ruby -e 'print RUBY_VERSION' 2>/dev/null)"
+
+if bundle exec ruby -e 'require "vips"' >/dev/null 2>&1; then
+  ok "libvips loads (screenshot diffs available)"
+else
+  warn "libvips not loadable - screenshot tests will error. Fix: 'brew install vips' / 'apt-get install libvips42', then bundle install"
+fi
+
+chrome_bin="${CHROME_BIN:-}"
+if [ -z "$chrome_bin" ]; then
+  for candidate in google-chrome google-chrome-stable chromium chromium-browser "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"; do
+    if type "$candidate" >/dev/null 2>&1 || [ -x "$candidate" ]; then chrome_bin=$candidate; break; fi
+  done
+fi
+if [ -n "$chrome_bin" ]; then
+  ok "chrome found: $chrome_bin"
+else
+  warn "no Chrome/Chromium found - system tests need one. Install Chrome, or set CHROME_BIN=/path/to/chrome"
+fi
+
+say ""
+if [ "$failures" -gt 0 ]; then
+  say "Setup finished with $failures failure(s), $warnings warning(s)."
+  exit 1
+fi
+say "Setup complete ($warnings warning(s)). Next: bin/dev to serve, bin/test to run tests. See docs/SETUP.md."
