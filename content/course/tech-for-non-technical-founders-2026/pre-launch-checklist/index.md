@@ -40,6 +40,8 @@ You validated the problem, wrote the brief, set up the stack, and shipped four b
 
 Run these 15 checks in order. Each takes under 2 minutes. All 15 green means you can send the URL with confidence. Any red means fix it before you share - a signup who hits a broken checkout on day one rarely comes back, and you may never know they were there.
 
+*Prefer paper? <a href="pre-launch-checklist.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
+
 ---
 
 ## Section 1: Mobile (5 checks)

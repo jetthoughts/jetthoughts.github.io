@@ -36,6 +36,8 @@ related_posts: false
 
 A call you do not score is a call you cannot count. This one-page scorecard replaces "I think that one went well" with a 1-10 number backed by pass/fail checks and emotional-flag counts. Fill one card per call, then transfer the 10 scores to the [Synthesis page](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) for the build / pivot / kill decision.
 
+*Prefer paper? <a href="interview-scorecard.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready. To see a filled card in action, read [Mia's Module 2 walkthrough](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/).*
+
 ---
 
 ## Per-call scorecard (one per interview)

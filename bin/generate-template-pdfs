@@ -36,6 +36,15 @@ SLUGS=(
   ownership-checklist
   validated-problem-statement-template
   first-paying-customer-operating-kit
+  interview-scorecard
+  pre-launch-checklist
+)
+
+# One-pager canvases: raw SVG assets printed straight to PDF (landscape via the
+# SVG's own aspect). Format: "<bundle-slug>/<svg-file>". The PDF lands in the
+# same bundle as <svg-basename>.pdf.
+CANVASES=(
+  "channel-selection-before-outbound/channel-fit-canvas.svg"
 )
 
 if [[ ! -x "${CHROME}" ]]; then
@@ -88,6 +97,54 @@ for slug in "${SLUGS[@]}"; do
     printf 'OK   %-40s %8d bytes\n' "${slug}.pdf" "${size}"
   else
     echo "FAILED to render: ${slug}" >&2
+    fail=1
+  fi
+done
+
+for canvas in "${CANVASES[@]}"; do
+  bundle="${canvas%%/*}"
+  svg_file="${canvas#*/}"
+  src="${CONTENT_DIR}/${bundle}/${svg_file}"
+  out="${CONTENT_DIR}/${bundle}/${svg_file%.svg}.pdf"
+
+  if [[ ! -f "${src}" ]]; then
+    echo "MISSING canvas SVG: ${src}" >&2
+    fail=1
+    continue
+  fi
+
+  # A raw 960px-wide SVG clips on portrait Letter (~816px printable). Wrap it
+  # in a one-line landscape page so the whole canvas fits on one sheet.
+  wrapper="$(mktemp -t canvas-XXXXXX).html"
+  cat > "${wrapper}" <<HTML
+<!doctype html><meta charset="utf-8">
+<style>@page { size: letter landscape; margin: 0.4in; } html,body { margin: 0; } img { width: 100%; }</style>
+<img src="file://${src}">
+HTML
+
+  profile="$(mktemp -d)"
+  "${CHROME}" \
+    --headless \
+    --disable-gpu \
+    --no-sandbox \
+    --user-data-dir="${profile}" \
+    --no-pdf-header-footer \
+    --virtual-time-budget=4000 \
+    --print-to-pdf="${out}" \
+    "file://${wrapper}" >/dev/null 2>&1 &
+  chrome_pid=$!
+  ( sleep "${RENDER_TIMEOUT}"; kill -9 "${chrome_pid}" 2>/dev/null ) &
+  watchdog_pid=$!
+  wait "${chrome_pid}" 2>/dev/null || true
+  kill "${watchdog_pid}" 2>/dev/null || true
+  wait "${watchdog_pid}" 2>/dev/null || true
+  rm -rf "${profile}" "${wrapper}"
+
+  if [[ -f "${out}" ]]; then
+    size=$(wc -c < "${out}")
+    printf 'OK   %-40s %8d bytes\n' "${svg_file%.svg}.pdf" "${size}"
+  else
+    echo "FAILED to render canvas: ${canvas}" >&2
     fail=1
   fi
 done
