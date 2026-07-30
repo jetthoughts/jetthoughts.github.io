@@ -148,6 +148,21 @@ artifacts bundled, investor-showable) - Phase 2, gated on pilot demand.
 
 ### Wave M2 - decision-aid + F-pattern retrofits (~1 day)
 
+**State (2026-07-30): SHIPPED** - branch course-wave-m2-decision-aids.
+Delivered: salvage-vs-rebuild mermaid decision tree (title finally kept its
+promise); where-to-hire 4-region hand-drawn map SVG; hire-track
+trap-vs-redline milestone table; self-serve-stack mistakes bullets ->
+grouped Ownership/Scope/Truth table. 4-eyes critic: 4/4 PASS (fact
+fidelity, AI-feel, voice, nothing-lost).
+**Stale items closed without work** (already fixed by earlier sprints):
+item 4's outreach-sequence blockquote collapse (done in the PR #351
+rewrite) and the "$0 path" callout de-stack (budget-stance fix already
+landed). **Audit-metric lesson**: the words-per-visual count can't see
+blockquote scripts/Bad-Good pairs as breaks - 3 of the 4 flagged
+"word walls" (churn, outbound-full, most of self-serve + hire-track
+sections) were already healthy at section level. Assess per-H2 before
+building; only 2 real gaps existed and both are now filled.
+
 Apply the 10.05 Part 2 rules to existing prose in the highest-traffic lessons:
 1. Sweep all core lessons for if-X-then-Y prose sections -> compact decision
    table or labeled flowchart (pattern: M3's I4 "2 forks" retrofit).
