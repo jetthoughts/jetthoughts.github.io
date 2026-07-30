@@ -129,6 +129,8 @@ The validation work survives the kill. User flows, edge cases the prototype expo
 
 Skipping the rebuild is the trap. The MVP works, the customers pay, the founder thinks: "I'll just keep iterating on this." Six months later the rebuild is happening anyway, only now the founder has runway pressure and ten production users who hit a new bug every time the team ships a fix.
 
+> **Rebuilding fresh needs a plan, not just resolve.** A free lesson in our founder course lays out the four build phases from a bare Lovable UI to a live Stripe checkout, with a demo at the end of each phase. [The Self-Serve MVP Stack: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/).
+
 ## Five questions to ask before you charge a paying customer
 
 Before you take real money for a vibe-coded app - whether you built it yourself or your shop did - run these questions on whoever shipped it.

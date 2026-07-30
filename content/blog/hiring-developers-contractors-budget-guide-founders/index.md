@@ -1824,6 +1824,8 @@ In the Maya scenario above, the founder spent $76K total after a $16K false star
 4. ✅ **Hire for communication as much as technical skill** (you'll talk daily)
 5. ✅ **Trust but verify** (code reviews, demos, milestone-based payments)
 
+> **This budget math has a free companion.** A lesson in our non-technical founder course compares onshore, nearshore, and Tier-2 offshore options against pricing and time-to-hire, so you can sanity-check the numbers above against your own runway. [Where to Hire a Developer, 2026 Map](/course/tech-for-non-technical-founders-2026/where-to-hire-developer-2026-map/).
+
 **Take Action Monday Morning**:
 1. Calculate true budget (subtract 15-20% for tools and contingency)
 2. Choose hiring model based on YOUR constraints
