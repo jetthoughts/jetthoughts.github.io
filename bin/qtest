@@ -42,6 +42,9 @@ PAGE_TESTS = {
   "free-consultation" => "free_consultation",
   "vibe-code-rescue" => "vibe_code_rescue",
   "simple-page" => "privacy_policy",
+  # critical/privacy-policy-critical.css maps by basename; alias it to the
+  # simple-page tests so a touch there doesn't abort as an unknown key
+  "privacy-policy" => "privacy_policy",
   "not-found" => "not_found",
   "404" => "not_found"
 }.freeze
@@ -121,13 +124,18 @@ unless all
 end
 
 # A failing/passing run REWRITES baselines - starting dirty makes results
-# unjudgeable and can silently commit a corrupted baseline.
-dirty = `git status --porcelain test/fixtures/screenshots`.lines.map(&:split).map(&:last)
-if dirty.any?
-  warn "qtest: screenshot fixtures are dirty - restore before running:"
-  dirty.first(10).each { |f| warn "  #{f}" }
-  warn "  git checkout -- test/fixtures/screenshots  # (after inspecting diffs)"
-  abort
+# unjudgeable and can silently commit a corrupted baseline. Same semantics
+# as the canonical guard in test/application_system_test_case.rb: honor the
+# ALLOW_DIRTY_SCREENSHOTS=1 bypass and point at the reset rake task.
+unless ENV["ALLOW_DIRTY_SCREENSHOTS"]
+  dirty = `git status --porcelain test/fixtures/screenshots`.lines.map(&:split).map(&:last)
+  if dirty.any?
+    warn "qtest: screenshot fixtures are dirty - restore before running:"
+    dirty.first(10).each { |f| warn "  #{f}" }
+    warn "  bin/rake test:screenshots:reset   # (after inspecting diffs)"
+    warn "  or bypass intentionally with ALLOW_DIRTY_SCREENSHOTS=1"
+    abort
+  end
 end
 
 if build
@@ -155,9 +163,6 @@ ok = true
 ok &= run_test("test/system/desktop_site_test.rb", "-n", regex)
 ok &= run_test("test/system/mobile_site_test.rb", "-n", regex)
 ok &= run_test("test/system/blog_special_content_test.rb") if pages.include?("blog-single")
-if pages.include?("careers") && File.file?("test/system/pages/careers_page_test.rb")
-  ok &= run_test("test/system/pages/careers_page_test.rb")
-end
 
 # cheap insurance: CSS wiring guard (no browser) + computed-style color vars
 ok &= run_test("test/unit/css_orphan_guard_test.rb")

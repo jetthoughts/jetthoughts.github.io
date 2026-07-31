@@ -165,7 +165,11 @@ jetthoughts.github.io/
 | `bin/dev` | Start development server with drafts |
 | `bin/hugo-build` | Build + validate site (course validators, PurgeCSS warm-up) |
 | `bin/test` | Run critical test suite (`bin/rake test:critical`) |
+| `bin/qtest` | Scoped visual gate for a changed CSS file/page (fast, budgeted) |
 | `bin/dtest` | Same suite in Linux/Docker (visual baselines CI-parity) |
+| `bin/dtest-all` | Full suite in Docker, detached (log in `tmp/dtest-all.log`) |
+| `bin/setup-test-env` | Install the pinned Chrome-for-Testing + fonts stack bare-metal |
+| `bin/rake test:screenshots:reset` | Restore overwritten screenshot baselines |
 | `bin/lint-css` | Stylelint warning ratchet |
 | `bin/sync_with_devto` | Sync blog posts from dev.to |
 | `bin/surge/deploy` | Deploy to staging (surge.sh) |
@@ -182,8 +186,10 @@ DEVTO_API_KEY=your_dev_to_api_key
 # Deployment
 SURGE_DOMAIN=your-staging-domain.surge.sh
 
-# Testing
-SELENIUM_BROWSER=chrome_headless
+# Testing (see docs/SETUP.md for the pinned-browser flow)
+CHROME_BIN=...             # optional: explicit Chrome binary for system tests
+CHROMEDRIVER_PATH=...      # optional: matching chromedriver
+ALLOW_DIRTY_SCREENSHOTS=1  # bypass the dirty-baseline guard intentionally
 ```
 
 ## 🧪 Testing
@@ -212,13 +218,6 @@ bin/test test/system/desktop_site_test.rb
 2. **System Tests** - Full browser automation tests
 3. **Visual Regression** - Screenshot comparison tests
 4. **Integration Tests** - API and external service tests
-
-### Coverage Reports
-
-Test coverage reports are generated automatically:
-```bash
-open coverage/index.html
-```
 
 ## 📦 Deployment
 
@@ -320,9 +319,8 @@ Edit `hugo.toml` to modify navigation:
 | [README.md](README.md) | Project overview and setup |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
 | [SETUP.md](docs/SETUP.md) | Detailed setup instructions |
-| [CI-CD.md](docs/ci-cd-pipeline-analysis.md) | CI/CD pipeline documentation |
-| [DEV-TO-INTEGRATION.md](docs/dev-to-integration-guide.md) | dev.to sync documentation |
-| [DOCS-OVERVIEW.md](docs/60.02-docs-overview-reference.md) | Documentation organization guide |
+| [CI-CD](docs/50-59-deployment-operations/50.02-ci-cd-pipeline-analysis-reference.md) | CI/CD pipeline documentation |
+| [DEV-TO-INTEGRATION](docs/80-89-integration-apis/80.01-dev-to-integration-how-to.md) | dev.to sync documentation |
 | [AGENT-GUIDANCE.md](docs/60.01-agent-guidance-reference.md) | Agent resource locations and guidelines |
 
 ### API Documentation
@@ -349,7 +347,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ## 📄 License
 
-This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. See the [LICENSE](LICENSE) file for details.
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ## 🙏 Acknowledgments
 

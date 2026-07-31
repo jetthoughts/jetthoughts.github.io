@@ -10,6 +10,8 @@ hugo --noBuildLock \
    --logLevel=warn \
    --baseURL="http://localhost:1314"
 
-# Now run the tests in Docker
+# Now run the tests in Docker. Args must go THROUGH bin/test - compose's
+# `run t <args>` replaces the container command entirely, so a bare .rb
+# path would be exec'd as the command itself (mirrors bin/dtest-all).
 echo "Running tests in Docker..."
-bin/docked --env PRECOMPILED_ASSETS=true --env TEST_SERVER_PORT=1314 t "$@"
+bin/docked --env PRECOMPILED_ASSETS=true --env TEST_SERVER_PORT=1314 t bin/test "$@"
