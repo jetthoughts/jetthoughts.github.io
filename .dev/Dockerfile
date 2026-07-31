@@ -56,6 +56,7 @@ ENV \
     TEST_SERVER_PORT=1314
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+        bash \
         build-essential git pkg-config curl ca-certificates unzip \
         libjpeg62-turbo libvips42 \
         xvfb \

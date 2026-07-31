@@ -24,6 +24,11 @@ services:
   # Interactive shell (optimized)
   sh:
     image: jetthoughts.com-test:1.0.0
+    # amd64, not the host arch: this image pins Chrome for Testing linux64
+    # (.dev/cft-version) and records the linux/ screenshot baselines that CI
+    # (ubuntu-latest = amd64) renders. Building/running arm64 downloads an
+    # amd64 chrome it can only exec under emulation and drifts pixels from CI.
+    platform: linux/amd64
     build:
       context: ../
       dockerfile: ./.dev/Dockerfile
@@ -42,6 +47,8 @@ services:
   # Test runner with optimized dependency management
   t:
     image: jetthoughts.com-test:1.0.0
+    # amd64 to match CI's rendering (see `sh` service note above).
+    platform: linux/amd64
     build:
       context: ../
       dockerfile: ./.dev/Dockerfile
