@@ -14,7 +14,7 @@ metatags:
   image: cover.png
   og_title: "Cheap Developers Are Expensive Without Review"
   og_description: "Cheap developers turn into expensive mistakes when nobody senior reads their code. A 20-minute pull request check plus ways to add review without a CTO salary."
-cover_image_alt: "Pull request list with zero reviewers highlighted, next to a fractional CTO review loop diagram"
+cover_image_alt: "Dark JetThoughts cover reading Cheap / Expensive / Without Review, with chips for the last-10-PRs check, author-plus-approver reviews, and a fractional CTO"
 canonical_url: "https://jetthoughts.com/blog/cheap-developers-expensive-without-cto-review/"
 ---
 
