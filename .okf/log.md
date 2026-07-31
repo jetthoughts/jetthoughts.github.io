@@ -371,3 +371,18 @@ PR #406: Wave M5 un-gated by Paul - 3 P2 SVGs (2 pages skipped as already
 covered) + module-end checklists M1/M2/M3/M5 + clean interaction audits.
 All wave branches cleaned. REMAINING: M5c reference-tier visuals + ~19
 covers, G2.2 SERP spot-check, post-deploy GA4 re-verification.
+
+## 2026-07-31 - bin/test port bug root-caused; restore-on-green baselines
+
+Host bin/test failed 49/49 screenshots while bin/dtest stayed green. Root
+cause: the R2 fast path built with baseURL=http://localhost:1314 while
+Capybara boots Puma on a random port (TEST_SERVER_PORT only set in
+Docker) - every stylesheet and clicked link hit a dead port. Fixed to
+baseURL "/" (matching CI/qtest/Hugo#precompile). Second fix: green runs
+of bin/test/bin/dtest/bin/qtest now auto-restore
+test/fixtures/screenshots (red runs keep candidates; re-records exempt
+via FORCE_SCREENSHOT_UPDATE), ending the dirty-fixture-guard deadlock
+after every passing dtest. Also: dtest reuses warm builds. Re-recorded
+12 genuinely-changed macos baselines (record mode had briefly saved
+Chrome ERR_CONNECTION_REFUSED pages as baselines - caught by brightness
+audit before commit). test-gates.md updated with both caveats.
