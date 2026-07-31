@@ -39,12 +39,14 @@ Before finalizing any post in the cluster:
 | Commit-author email domains vs the entity that signed the contract (subcontractor authorship chain) | `content/blog/dev-shop-contract-code-ownership/index.md` | - |
 | Cold-start deploy drill (clean laptop, runbook only, ship a one-word change) | `content/blog/switch-dev-shops-safely-transition-guide/index.md` | truck-factor check as secondary |
 | Action item carried across consecutive retros | `content/blog/retros-founder-transparency-tool/index.md` | - |
+| Inbox response-time measurement (timestamps on your last 5 bug reports vs first substantive reply) | `content/blog/dev-shop-sla-requirements-checklist/index.md` | - |
+| PR reviewer-name check (who approved the last 10 merged PRs; author + approver = healthy) | `content/blog/cheap-developers-expensive-without-cto-review/index.md` | - |
+| Feature-noun vs moment ratio in your own spec (mark feature nouns, look for a "moment + outcome" line) | `content/blog/asked-simple-admin-panel-built-spaceship/index.md` | - |
 
 ## Unused signals available for the next post
 
 | Available signal | Why it's useful | Sketch of how a post could lead with it |
 |-------------------|-----------------|------------------------------------------|
-| Pull-request size + reviewer-name distribution | Healthy teams have many small PRs reviewed by multiple people | "Pull one PR from this week and ask: who reviewed it, how long did review take, was anything pushed back" |
 | On-call rotation visibility (who answered the last 3 alerts, response times) | Maps to operational maturity | "If your team can't tell you who got the last 3am page, the on-call is theatrical" |
 | Customer support tickets tagged to the build that introduced them | Maps engineering output to customer pain | "Trace one open support ticket back to the commit that caused it" |
 | Cloud bill week-over-week, broken down by service | Maps engineering decisions to founder runway directly | "Which AWS service line grew the most this month, and why" |
