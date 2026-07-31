@@ -1,5 +1,18 @@
 # Bundle Update Log
 
+## 2026-07-31 (R2 Phase C)
+
+* **Update**: [test-gates](/build/test-gates.md) + [ci-gates](/build/ci-gates.md) - DevX R2
+  Phase C (inner loop): `bin/test` now builds ONCE via bin/hugo-build (PurgeCSS warm-up guard
+  included - hugo_helpers' bare `hugo` call could purge live classes on cold caches) to stable
+  `_dest/public-test`, exports PRECOMPILED_ASSETS, and mtime-skips the build when warm -
+  measured cold 2m19s -> warm 0.6s for single-file runs (previously EVERY single-file run paid
+  a full rebuild into one of 5 random dirs; rand(5) fan-out retired). CI: `hugo_stats.json` now
+  in the setup-hugo cache (was gitignored + uncached = ~52s warm-up double-build every run);
+  `_hugo.yml` warm-up exits early on cached stats; cache key fixed to hash `config/**` (old key
+  hashed nonexistent root hugo.toml, so config-only changes reused stale resources/_gen).
+  `test:critical` glob now recursive, matching test:system.
+
 ## 2026-07-31 (R2 Phase B2)
 
 * **Update**: [ci-gates](/build/ci-gates.md) scope - DevX R2 Phase B2: agent containers now
