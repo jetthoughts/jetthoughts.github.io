@@ -14,11 +14,11 @@ og_description: "How to switch development agencies without losing your code: th
 related_posts: false
 ---
 
-Sending the termination email is the last step in how to switch development agencies, not the first. People do it in the wrong order, usually on a Sunday night after one bad week, and spend the next two months paying a new team to rediscover things the old team knew.
+The termination email is the last step, not the first. Founders send it in the wrong order, usually on a Sunday night after one bad week, and then spend two months paying a new team to rediscover things the old team knew.
 
 You can survive losing the relationship. What costs you the quarter is losing the deploy process, the environment variables nobody wrote down, and the reason the payment retry logic has that odd 90-second delay.
 
-Here is the order that works, starting with a question that has nothing to do with the switch.
+The rest of this guide lays out how to switch development agencies in the order that actually protects those things, starting with a question that has nothing to do with the switch.
 
 ## Before you replace one shop with another
 
@@ -30,9 +30,7 @@ If the answer still comes back "hire a shop," keep reading. If it comes back "hi
 
 ## Week 1: take inventory while everyone is still friendly
 
-Do this before anybody suspects anything, because cooperation is a resource that expires.
-
-Open a spreadsheet with one row per system: source repository, cloud hosting, database, domain registrar, DNS, email sending, payment processor, error tracking, analytics, CI. For each one, write down the account owner's email address, whether you can log in yourself today, and who pays the bill. You will find two or three services you did not know existed, and at least one signed up under a developer's personal address.
+Do this while the current team still has every reason to help you, before anyone senses you are on the way out. Open a spreadsheet with one row per system: source repository, cloud hosting, database, domain registrar, DNS, email sending, payment processor, error tracking, analytics, CI. For each one, write down the account owner's email address, whether you can log in yourself today, and who pays the bill. It is common to turn up a service or two you did not know existed, and at least one signed up under a developer's personal address.
 
 Then check the ownership layer, which is separate from access. GitHub's docs on [transferring a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository) explain what actually moves and what does not; AWS documents the [root user](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-root-user.html) that sits above every IAM permission your agency may have granted you. Being an admin on someone else's organization is not ownership, and the difference only shows up on the day they stop answering.
 
@@ -40,9 +38,7 @@ Our [exit guide](/blog/fire-dev-shop-guide/) covers the securing sequence and th
 
 ## Week 2: run the cold-start drill
 
-Here is the single test that tells you whether a handover is real.
-
-Ask your current agency for a written runbook, then have someone who has never touched the project follow it on a clean laptop. Can that person clone the repository, get the app running locally, run the test suite, and deploy a one-word copy change to production using only the document? A contractor at an hourly rate can do this in a day, and the day is the cheapest money in this whole process.
+One test tells you whether a handover is real. Ask your current agency for a written runbook, then have someone who has never touched the project follow it on a clean laptop. Can that person clone the repository, get the app running locally, run the test suite, and deploy a one-word copy change to production using only the document? A contractor at an hourly rate can do this in a day, and the day is the cheapest money in this whole process.
 
 What comes back is usually a list of gaps rather than a green run: an undocumented environment variable, a database migration that only works if you run a seed script first, a deploy that requires a credential living in one developer's password manager. Every gap you find while the old team still answers Slack is a gap your new team does not pay to rediscover at a higher rate.
 
@@ -66,9 +62,7 @@ Ask one more question at the end of each call. "What would break first if traffi
 
 ## Week 4: what the new team needs on day one
 
-What separates a productive first week from a wasted one is preparation you finish before anyone starts.
-
-Have ready: repository access under your own organization, credentials in a shared vault, the runbook plus the gaps found in the cold-start drill, the two recordings, a written list of what is broken today, and the one business outcome you want in the first six weeks. That last item matters more than the rest combined, because a new team with no stated outcome will spend three weeks refactoring and show you nothing you can demo.
+Everything that makes the new team's first week productive gets prepared before they start. Have ready: repository access under your own organization, credentials in a shared vault, the runbook plus the gaps found in the cold-start drill, the two recordings, a written list of what is broken today, and the one business outcome you want in the first six weeks. That last item matters more than the rest combined, because a new team with no stated outcome will spend three weeks refactoring and show you nothing you can demo.
 
 Ask a candidate shop to describe their own first week before you sign. We wrote ours up in [how onboarding works at JetThoughts](/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/), and the [hire-track reference in the course](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) collects the interview screen, the SOW reading guide, and the fractional-CTO option in one place.
 
@@ -82,17 +76,13 @@ Location changes the price and the overlap hours, not the failure modes. The cou
 
 ## When switching is the wrong move
 
-Sometimes the shop is not the problem.
-
-Requirements that changed three times this quarter will hit a new team the same way, on a new invoice. You may also not have tested this team properly yet: a shop that has never been given a weekly written report to deliver against has never been given a clear target. Where the current developers are competent but slow, an [interim technical lead](/blog/when-your-startup-needs-emergency-cto-leadership/) working alongside them usually costs less than a full transition and buys the same visibility.
+Requirements that changed three times this quarter will hit a new team the same way, on a new invoice, which means the shop was never the whole problem. You may also not have tested this team properly yet: a shop that has never been given a weekly written report to deliver against has never been given a clear target. Where the current developers are competent but slow, an [interim technical lead](/blog/when-your-startup-needs-emergency-cto-leadership/) working alongside them usually costs less than a full transition and buys the same visibility.
 
 Switching also carries a real bill. Deloitte's [global outsourcing survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) found 70% of the executives it surveyed had pulled work back in-house over five years, and every one of those moves ate ramp time. Budget six to eight weeks of reduced output, overlap pay for two teams, and a new set of unknowns you will discover in month two.
 
 ## The one number to hold yourself to
 
-Pick the date your new team ships something a customer can use, and put it in the SOW.
-
-A discovery document does not count, and neither does a refactoring milestone. You want a small change your users can see, inside the first three weeks. If a shop calls that unrealistic before it has read a line of your code, cross it off the list and take the next call.
+One line in the SOW protects you more than the rest of the document put together: the date your new team ships something a customer can actually use. A discovery document does not count, and neither does a refactoring milestone. You want a small change your users can see, inside the first three weeks. If a shop calls that unrealistic before it has read a line of your code, cross it off the list and take the next call.
 
 ## Further reading
 
