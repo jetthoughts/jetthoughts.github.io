@@ -2,7 +2,7 @@
 title: "Switch Dev Shops Without Losing Progress"
 description: "How to switch development agencies without losing your code: the 30-day overlap, the cold-start deploy drill, and what the next team needs on day one."
 date: 2026-07-31
-draft: true
+draft: false
 author: "JetThoughts Team"
 slug: "switch-dev-shops-safely-transition-guide"
 keywords: "how to switch development agencies, change dev shop transition, switching software development companies"

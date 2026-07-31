@@ -2,7 +2,7 @@
 title: "Retros Are Your Transparency Tool"
 description: "Retros for non-technical founders: what a retrospective is, what the one-page summary should say, and why a repeated action item is your best warning sign."
 date: 2026-07-31
-draft: true
+draft: false
 author: "JetThoughts Team"
 slug: "retros-founder-transparency-tool"
 keywords: "retros for non-technical founders, sprint retrospective founder, dev team transparency tool"

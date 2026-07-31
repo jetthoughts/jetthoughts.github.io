@@ -1,8 +1,8 @@
 ---
 title: "Dev Shop Contract: Who Owns the Code?"
-description: "Under US copyright law your dev shop owns the code it writes until a signed clause says otherwise. Five clauses to check, plus one command to run first."
+description: "Under US copyright law the code your dev shop writes is not yours by default - a signed clause makes it yours. Five clauses to check, plus one command to run first."
 date: 2026-07-31
-draft: true
+draft: false
 author: "JetThoughts Team"
 slug: "dev-shop-contract-code-ownership"
 keywords: "dev shop contract code ownership, software development contract IP, work for hire developer agreement"
@@ -10,7 +10,7 @@ tags: ["startup", "founder", "dev-agency", "code-ownership", "outsourcing"]
 categories: ["Startup"]
 canonical_url: "https://jetthoughts.com/blog/dev-shop-contract-code-ownership/"
 og_title: "Dev Shop Contract: Who Owns the Code?"
-og_description: "Under US copyright law your dev shop owns the code it writes until a signed clause says otherwise. Five clauses to check, plus one command to run first."
+og_description: "Under US copyright law the code your dev shop writes is not yours by default - a signed clause makes it yours. Five clauses to check, plus one command to run first."
 cover_image: cover.png
 metatags:
   image: cover.png
