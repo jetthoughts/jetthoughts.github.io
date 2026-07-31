@@ -1,5 +1,23 @@
 # Bundle Update Log
 
+## 2026-07-31 (R3-1 harness truth)
+
+* **Update**: [test-gates](/build/test-gates.md) - all four test runners now
+  build through the shared `bin/build-if-stale` helper (routes via
+  bin/hugo-build's PurgeCSS warm-up guard, skips on warm trees); qtest shares
+  bin/test's `_dest/public-test` so micro-commit gates stop paying a ~26s
+  rebuild each run; `qtest --changed` now counts untracked files (was false
+  green exit 0 on a brand-new CSS file); bin/test honors preset
+  HUGO_DEFAULT_PATH + PRECOMPILED_ASSETS (was silently breaking bin/dtest by
+  pointing the container at the wrong tree). Removed the stale "CI does NOT
+  run screenshot diffs" claim (superseded by #413/#417). New gotcha recorded:
+  the `.gitignore` `.*` rule kept `.githooks/pre-push` out of the repo
+  entirely - the R2 pre-push guard existed only on one machine until the
+  `!.githooks` negation landed; check `git check-ignore -v` for any new root
+  dot-path. Guard tests added: bare `hugo --environment production` outside
+  hugo-build/build-if-stale, multi-file `ruby a_test.rb b_test.rb` (only the
+  first file executes), bin/test HUGO_DEFAULT_PATH contract.
+
 ## 2026-07-31 (visual gate truth fix)
 
 * **Update**: [ci-gates](/build/ci-gates.md) - first CI baseline-record run
