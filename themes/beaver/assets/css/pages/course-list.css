@@ -16,3 +16,24 @@
   word-wrap: break-word;
   hyphens: auto;
 }
+
+/* Course end-cap — quiet close above the global footer: promise line,
+   one Start CTA, and the copy-share-link pattern from module ends. */
+.blog .course-endcap {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 56px;
+  padding-top: 36px;
+  text-align: center;
+}
+.blog .course-endcap__promise {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #3a3f4a;
+  margin-bottom: 18px;
+}
+.blog .course-endcap__share {
+  font-size: 15px;
+  color: #5f6470;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
