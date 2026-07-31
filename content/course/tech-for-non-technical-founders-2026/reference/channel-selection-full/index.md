@@ -10,6 +10,8 @@ slug: channel-selection-full
 
 ---
 
+![A hand-drawn decision flow: a red interview evidence card feeds a red channel-fit score card totalling out of 12 across price point, buyer type, time budget and interview signal, then branches three ways - a green 9 or more card meaning clear pick and commit, a purple 7-8 card meaning 1-week pilot on your top 2 where the higher reply rate wins, and an amber 6 or less card meaning no strong fit, go back to the transcripts. The commit and pilot branches drop into a red commitment card: run a full send / reply / follow-up arc before any switch, checking reply rate over 5%, demos turning into paid conversations, and the right buyer.](channel-fit-decision.svg)
+
 ## The commitment rule, phase by phase
 
 Stick with one channel long enough to read the signal, not chase the algorithm. A cold-email sequence needs time to deliver, more time for replies to accumulate, and more time still before the "not now" replies reveal whether the non-replies are disinterest or bad timing.
