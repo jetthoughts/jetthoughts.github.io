@@ -4,6 +4,10 @@ description: "The complete build-path reference - the Airbnb validate-without-co
 date: 2026-05-13
 draft: false
 slug: hire-decision-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: The Build-vs-Hire Decision - All Four Build Paths in Depth, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 4.1 · Should You Hire?](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)** - the full Airbnb test walkthrough, each of the four build paths in depth, the shed-vs-house framing, and the Series-A off-ramp. Read the micro-lesson first for the five routing questions and the four paths; return here when you want the Airbnb test and the Series-A off-ramp in full.

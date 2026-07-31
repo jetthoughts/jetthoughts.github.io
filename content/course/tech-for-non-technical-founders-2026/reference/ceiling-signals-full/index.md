@@ -4,6 +4,10 @@ description: "The complete guide behind Lesson 4.5 - each of the 5 architectural
 date: 2026-05-13
 draft: false
 slug: ceiling-signals-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: The 5 Vibe-Coding Ceiling Signals - Symptom, Root Cause, Cost of Waiting, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 4.5 · Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)** - the deep version of each signal, the shed-house-skyscraper map, and the enterprise-buyer email template. Read the micro-lesson first for the monthly check and the decision rule; return here when a specific signal starts firing and you want the full picture before you route it.
