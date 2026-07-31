@@ -14,19 +14,19 @@ og_description: "Under US copyright law your dev shop owns the code it writes un
 related_posts: false
 ---
 
-Under US copyright law, whoever types the code owns it. Paying the invoice does not move that ownership to you, and a surprising number of agency contracts never do it properly either.
+Under US copyright law, whoever writes the code holds the copyright unless they are an employee of the agency or signed it away. Paying the invoice does not move that ownership to you, and a surprising number of agency contracts never do it properly either.
 
 Your dev shop contract is the only document that decides who owns the code, and paying every invoice on time does not change what it says. You can have a signed master services agreement and a product your customers open every morning, and still not have the legal right to hand that codebase to a different team next month.
 
 ## First, find out whose hands were on the keyboard
 
-Ask your agency for read access to the repository, clone it, and run this in the project folder:
+Ask your agency for read access to the repository, clone it (download your own copy), and run this in the project folder:
 
 ```bash
 git log --format='%ae' | sort | uniq -c | sort -rn
 ```
 
-Each line is an email address and the number of commits behind it. Read the domains. If your contract is signed by Acme Software LLC and half your commits come from three Gmail addresses and a domain you have never heard of, you have found the gap that matters more than any clause.
+Each line is an email address and the number of commits behind it - a commit is one saved change a developer made. Read the domains. If your contract is signed by Acme Software LLC and half your commits come from three Gmail addresses and a domain you have never heard of, you have found the gap that matters more than any clause.
 
 Agencies subcontract. That is normal and often fine. The problem starts when your contract says the agency assigns you everything it owns, and the agency never got a written assignment from the freelancer in another timezone who wrote your billing module.
 
@@ -38,7 +38,7 @@ One honest caveat about the command. If the agency squashed everything into a si
 
 Search your contract for the word "assign" and read the tense.
 
-"Contractor shall assign all right, title and interest" is a promise to do a thing later. Somebody still has to sign the paper, and if the relationship ends badly nobody signs anything. "Contractor hereby assigns" moves the copyright the moment the code exists, with no follow-up signature required. One word of difference, and your lawyer will fix it in ten minutes if you point at it.
+"Contractor shall assign all right, title and interest" is a promise to do a thing later. Somebody still has to sign the paper, and if the relationship ends badly nobody signs anything. "Contractor hereby assigns" moves the copyright the moment the code exists, with no follow-up signature required. One word of difference, and your lawyer will fix it in ten minutes if you point at it. Everything here describes US copyright law and what to look for before you call that lawyer; it is not legal advice, and contracts outside the US work differently.
 
 Then check the trigger. Plenty of MSAs assign ownership "upon completion of the Project" or "upon payment in full," which sounds fair until you try to leave in month seven of a twelve-month build and learn that the definition of completion belongs to the other side. Tie assignment to each accepted milestone instead: three months paid means three months of code is yours, whatever happens in month four.
 
@@ -54,7 +54,7 @@ Add a moral-rights waiver if any contributor sits in the EU, Canada, or Australi
 
 ## Clause 3: the accounts are in your name, not "available to you"
 
-"Client shall have access to all repositories and cloud infrastructure" reads fine until you notice it only promises a login someone else can revoke, not ownership of the account. What you want is that the GitHub organization, the AWS or Heroku root account, the domain registrar, and the production database all sit under an account your company owns, with the agency added as a member. Write it as a condition of the first invoice, not a nice-to-have.
+"Client shall have access to all repositories and cloud infrastructure" reads fine until you notice it only promises a login someone else can revoke, not ownership of the account. What you want is that the GitHub organization, the AWS or Heroku root account (the top-level login that can add or remove everyone else), the domain registrar, and the production database all sit under an account your company owns, with the agency added as a member. Write it as a condition of the first invoice, not a nice-to-have.
 
 Skip it and you learn the difference at the worst possible moment, usually the week you decide to leave. That is the mechanic behind the [outsourcing trap](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/): the damage rarely starts with bad code, it starts with who holds the keys.
 
