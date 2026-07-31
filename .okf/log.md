@@ -1,5 +1,14 @@
 # Bundle Update Log
 
+## 2026-07-31
+
+* **Update**: [test-gates](/build/test-gates.md) - new leading caveat: snap_diff
+  baselines are **git HEAD, not the working tree**, so un-committed "accepted"
+  baselines change nothing and an identical difference_level across runs means
+  a stale committed baseline (not a flaky render). Case study: #405's 28px
+  mobile hero gap merged with a "re-record on next run" note instead of updated
+  baselines; every later local run failed at 0.2747 until re-record+commit.
+
 ## 2026-07-30 (Phase 4)
 
 * **Update**: [test-gates](/build/test-gates.md) scope - DevX Phase 4: canonical visual rendering stack defined - `.dev/Dockerfile` moved ruby:3.4-alpine → ruby:4.0-slim (glibc; Alpine/musl was why linux baselines diverged 3-28% from every real Linux) with pinned Chrome for Testing + chromedriver (`.dev/cft-version` = 141.0.7390.37), deterministic fontconfig (`.dev/fonts.conf`: hintslight, grayscale AA, no embedded bitmaps), fonts-noto-core/freefont/dejavu. `bin/setup-test-env` installs the identical stack bare-metal (CfT cached under ~/.cache/jt-cft/<v>; `eval "$(bin/setup-test-env --print-env)"` exports CHROME_BIN/CHROMEDRIVER_PATH). Bare-metal verified green in an agent container. PENDING on a Docker-capable machine: build image, `FORCE_SCREENSHOT_UPDATE=true bin/dtest` once, commit re-recorded linux/ baselines in the same PR - until then linux/ baselines are still Alpine-rendered.

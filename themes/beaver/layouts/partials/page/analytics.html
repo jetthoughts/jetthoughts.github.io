@@ -3,11 +3,14 @@
        pilot). Enable by setting microsoftClarity = "<project-id>" under
        [params] in hugo.toml after creating the project at clarity.microsoft.com. -->
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "{{ site.Params.microsoftClarity }}");
+    // Skip localhost / LAN serving so local test runs never pollute recordings.
+    if (!/^(localhost|127\.|192\.168\.|0\.0\.0\.0)/.test(location.hostname)) {
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "{{ site.Params.microsoftClarity }}");
+    }
   </script>
 {{ end }}
 {{ if and (not hugo.IsServer) (site.Params.googleAnalytics) }}

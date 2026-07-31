@@ -49,7 +49,7 @@ Per-project PM health reports in `40-49-review/40.10-*.md`.
 
 **Key commands:**
 - `bin/hugo-build`
-- `bin/rake test:critical`
+- `bin/qtest --changed` (routine gate; `bin/rake test:critical` at milestones; `bin/test`+`bin/dtest` at PR prep only)
 - `bin/validate-course` (course projects only)
 
 <!-- lean-ctx-compression -->
