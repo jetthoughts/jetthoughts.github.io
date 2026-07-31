@@ -161,7 +161,10 @@ def run_test(file, *minitest_args)
 end
 
 if all
-  exec("bin/rake", "test:critical")
+  # Through bin/test, not rake directly: PRECOMPILED_ASSETS+HUGO_DEFAULT_PATH
+  # are already exported so it skips the build, and its restore-on-green keeps
+  # the baseline PNGs clean for the next run.
+  exec("bin/test")
 end
 
 frags = pages.map { |p| PAGE_TESTS.fetch(p) }.join("|")
@@ -194,6 +197,9 @@ if ok && elapsed.call < budget - 10
 end
 
 if ok
+  # Green run: rewritten baselines are within-tolerance noise - restore them so
+  # the dirty-fixture guard doesn't block the next run (same as bin/test).
+  system("git", "checkout", "--", "test/fixtures/screenshots") unless ENV["FORCE_SCREENSHOT_UPDATE"]
   puts "qtest: green in #{elapsed.call}s (scoped + random extras — run the FULL suites before PR merge)"
 else
   puts "qtest: FAILED (#{elapsed.call}s)"

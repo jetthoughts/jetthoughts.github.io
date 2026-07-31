@@ -40,3 +40,12 @@ if [ $# -eq 0 ]; then
 else
   bundle exec ruby -Itest "$@"
 fi
+
+# Green run: the in-place rewritten baseline PNGs are within-tolerance noise
+# (snap_diff design: working tree = candidate, git HEAD = baseline) - restore
+# them so the dirty-fixture guard doesn't block the next run. A red run exits
+# above (set -e) and keeps candidates + diffs for inspection. Skipped when
+# re-recording (FORCE_SCREENSHOT_UPDATE) and where git is absent (dtest container).
+if [ -z "${FORCE_SCREENSHOT_UPDATE:-}" ] && command -v git >/dev/null 2>&1; then
+  git checkout -- test/fixtures/screenshots 2>/dev/null || true
+fi
