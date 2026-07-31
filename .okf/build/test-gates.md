@@ -3,7 +3,7 @@ type: Playbook
 title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
-timestamp: 2026-07-31T15:00:00Z
+timestamp: 2026-07-31T19:30:00Z
 ---
 
 # The suites
@@ -47,9 +47,26 @@ extend it when adding components or critical files. The macOS full suite remains
   "Tasks: TOP => test:critical" in the tail (2026-07-31: cost two aborted-run
   investigations). With dtest the only path is the designed one: COMMIT the
   intended baselines first, then run on a clean tree.
-- The snapshot tool REWRITES baselines when a run passes. Never edit CSS
-  while a suite is running - a raced run once saved a corrupt baseline
-  missing its hero image. Catch with pixel-compare, restore via `git checkout`.
+- The snapshot tool REWRITES baselines when a run passes. Since 2026-07-31
+  a GREEN `bin/test`/`bin/dtest`/`bin/qtest` run auto-restores
+  `test/fixtures/screenshots` (skipped under `FORCE_SCREENSHOT_UPDATE`),
+  so passing runs no longer leave the tree dirty or arm the dirty-fixture
+  guard against the next run. A RED run still keeps candidates + diff
+  artifacts for inspection. Never edit CSS while a suite is running - a
+  raced run once saved a corrupt baseline missing its hero image.
+- Test builds MUST use `baseURL "/"` - enforced as `bin/build-if-stale`'s
+  default, which all four runners build through (CI's setup-hugo action
+  defaults to "/" independently). An absolute `http://localhost:1314` baseURL bakes
+  the port into every stylesheet link and internal href, but Capybara
+  boots Puma on a RANDOM port unless TEST_SERVER_PORT pins it - result is
+  all-CSS-refused half-styled screenshots (huge diffs on every page) and
+  click-navigation tests landing on ERR_CONNECTION_REFUSED
+  (2026-07-31: the R2 fast path shipped with the absolute URL; every host
+  bin/test run failed 49/49 while dtest stayed green because Docker sets
+  TEST_SERVER_PORT=1314). In record mode this silently saves Chrome
+  error pages as baselines - brightness-audit re-records before
+  committing (identical mean brightness across different pages = black
+  or error frames). Evidence + verification transcript: PR #424.
 - Visual failures are commit blockers, not warnings. Either fix the
   regression or update BOTH baseline dirs (macos/ and linux/) in the same
   commit with the intentional change.

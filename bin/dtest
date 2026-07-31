@@ -3,7 +3,7 @@
 set -euo pipefail
 
 echo "Building Hugo site for Docker tests (public-dtest)..."
-bin/build-if-stale _dest/public-dtest "http://localhost:1314"
+bin/build-if-stale _dest/public-dtest
 
 # Now run the tests in Docker. Args must go THROUGH bin/test - compose's
 # `run t <args>` replaces the container command entirely, so a bare .rb
@@ -13,3 +13,11 @@ bin/build-if-stale _dest/public-dtest "http://localhost:1314"
 echo "Running tests in Docker..."
 bin/docked --env PRECOMPILED_ASSETS=true --env TEST_SERVER_PORT=1314 \
   --env HUGO_DEFAULT_PATH=_dest/public-dtest t bin/test "$@"
+
+# Green run: the container rewrote the linux/ baselines through the bind mount
+# with sub-tolerance Rosetta pixel drift (~0.004%/run); restore so the host
+# dirty-fixture guard doesn't block the next bin/test/bin/qtest. Red runs exit
+# above (set -e) and keep candidates for inspection.
+if [ -z "${FORCE_SCREENSHOT_UPDATE:-}" ]; then
+  git checkout -- test/fixtures/screenshots
+fi

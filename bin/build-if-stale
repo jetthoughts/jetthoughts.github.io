@@ -14,7 +14,12 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 DEST="${1:?usage: bin/build-if-stale <dest> [base-url]}"
-BASE_URL="${2:-http://localhost:${TEST_SERVER_PORT:-1314}}"
+# Default is root-relative, NOT an absolute localhost URL: Capybara boots
+# Puma on a random port unless TEST_SERVER_PORT pins it (Docker only), so
+# absolute asset/link URLs baked at build time point at a dead port - all
+# CSS refused -> black screenshots, and click-navigation tests land on
+# ERR_CONNECTION_REFUSED. Same convention as CI's setup-hugo action.
+BASE_URL="${2:-/}"
 
 stale() {
   [ -f "$DEST/index.html" ] || return 0
