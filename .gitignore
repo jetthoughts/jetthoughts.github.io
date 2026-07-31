@@ -152,3 +152,5 @@ docs/projects/**/*-verification-report.md
 *.rvf
 *.rvf.lock
 kanban/
+.agents/
+.junie
