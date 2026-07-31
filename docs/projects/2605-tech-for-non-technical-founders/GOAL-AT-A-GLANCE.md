@@ -4,55 +4,76 @@
 
 **Project ID**: 2605-tech-for-non-technical-founders
 **Created**: 2026-05-12
-**Last updated**: 2026-07-30 EOD (9 PRs merged in one day: completion mechanics C1, media waves M1-M5a/b, growth waves G1-G3 per the 20.12 runbook, GA4 consent root-cause fix)
-**Status**: 🟢 Course LIVE and CONTENT-COMPLETE on v2 · all 5 modules migrated (PRs #345/#351/#352/#353, deployed via #356) · review-clean (40.15/40.17/40.19) · instrumented (GA4-only - Clarity waived 2026-07-30; consent fix in #402 unmutes the funnel) · completion mechanics + media waves + growth waves shipped · 🔄 Active: external validation pilot (recruitment = the one human item)
+**Last updated**: 2026-07-31 EOD (build phase CLOSED: PRs #407-#411, #416, #419, #421 - analytics, visuals, mechanics, landing fixes, and 6 campaign posts LIVE)
+**Status**: 🟢 BUILD COMPLETE + CAMPAIGN-READY · fully instrumented (GA4 + Clarity, production-verified) · 🔄 Active: Aug 1-14 launch window (campaign kit send-ready, pilot kit send-ready) · ⏳ First evidence read: Aug 14
 **Owner**: JT content team
 **Parent**: 2510-seo-content-strategy (extends, does not replace)
 
 ---
 
-## 📍 WHERE WE ARE + NEXT ACTIONS (2026-07-30 EOD) — READ THIS FIRST
+## 📍 WHERE WE ARE + NEXT ACTIONS (2026-07-31 EOD) — CEO SUMMARY, READ THIS FIRST
 
-**Stage: the course is DONE as an artifact AND polished for completion; the
-open question is whether real readers complete it.** All 5 modules live on
-the v2 micro-lesson template (25 lessons + 5 Mia walkthroughs +
-quickstart/FAQ/glossary + ~30 companions), every review round closed.
-2026-07-30 shipped NINE PRs in one day: Wave C1 completion mechanics (1.1
-two-sitting split, first-win path, trust changelog), media waves M1-M5a/b
-(hand-drawn SVGs for every visual-less core + P2 lesson, decision-tree +
-region-map for the mis-titled pages, 3 more printable PDFs incl. the
-landscape channel-fit canvas, module-end checklists M1/M2/M3/M5), and growth
-waves G1-G3 per `20-29-strategy/20.12-course-growth-agent-runbook.md`
-(ungated-by-design docs truth sweep, GA4 consent root-cause fix + beacon,
-copy-link referral button, 10 blog->course deep links, 16 pilot-gated
-campaign briefs). Standing decisions: Clarity WAIVED (GA4-only), fully
-ungated / NO mail list, no selling, stealth ICP (no public share mechanics),
-public certificate rejected. Building more content is NOT the priority;
-validating with real Sams is.
+**One sentence: the product is finished and promoted; the only thing it has
+never had is a real reader - the next two weeks buy that evidence.**
 
-**Next high-overview actions, in order:**
+### What we own today (the asset)
 
-1. **External validation pilot (P0)** - recruit 3-5 real idea-stage
-   founders per the `40-49-review/40.18-*pilot-kit*`. The ONLY human item:
-   recruitment + consent posture + budget + calendar. Stall diagnosis =
-   GA4 funnel drop-offs + founder debriefs (no session recordings - Clarity
-   waived). This gates everything in item 3.
-2. **Remaining agent queue (not gated)** - see TASK-TRACKER "Open queue":
-   M5c reference-tier visuals (5 chapters), ~19-cover batch, G2.2 SERP
-   spot-check, post-deploy GA4 re-verification (#402 must show 2xx collect
-   hits + course_pdf_download / course_copy_share_link landing).
-3. **Pilot-gated (do not start)** - campaign-brief execution (16 briefs
-   ready), Sprint D content-gap batch, Phase 2 (Module-2 applied checkpoint,
-   private Founder OS pack, localStorage progress tracker - deferred by 2-1
-   vote), reader->JT-lead bridge.
+A free, ungated 25-lesson course (81 pages, ~154k words, 100% cover art,
+94% of pages carry an informational visual) that takes an idea-stage
+non-technical founder from raw idea to first paying customer. Zero
+operating cost (static site, no cohorts, no email list, no video). Fully
+measured: GA4 funnel events + Clarity session recordings verified live in
+production. Six new blog posts + 10 retrofitted posts feed readers into it;
+a 2-week promotion calendar and a 5-founder pilot kit are written, reviewed,
+and waiting only on sends.
 
-**For cold agents:** route via `PROJECT-INDEX.md`; live queue is
-`TASK-TRACKER.md` (top two sections); media inventory is
-`40-49-review/40.20-media-gap-audit-report.md`. The migration playbooks below
-and the pivot section following are HISTORICAL context - the migration is
-complete; do not start new module migrations.
+### Why it exists (the business case)
 
----
+Option C pure lead magnet: zero selling inside the course; trust IS the
+product. The bridge to revenue is Option 3 (decided by panel, 20.13): the
+BLOG posts around the course link to matching JT services, and burned-founder
+("Alex") leads discovered during outreach route straight to the Rescue
+Context Call - the company's #1 success event. The course also compounds as
+SEO surface and sales credibility ("we wrote the book on this").
+
+### The honest risk
+
+Everything is validated by simulation only - personas, critics, panels. No
+real Sam has read a page. Craft is high; evidence is zero. Every dollar of
+further polish has lower expected value than one week of real-reader data.
+
+### Next 14 days (the plan of record)
+
+1. **Aug 1-14 - LAUNCH WINDOW (Paul sends, ~10 min/day):** 9 LinkedIn posts
+   in Paul's real register + 2 Reddit/IH pieces per the 50.02 calendar;
+   pilot DMs to candidates from the browser-sourced shortlist (50.03, due
+   Aug 4). Blocking: the $125 gift-card sign-off.
+2. **During window (agents):** daily reply drafting + thread monitoring;
+   L3 landing restructure ships (punch-list 40.21 is verified-ready);
+   V3-A visual pilot builds the A/B eye-test (ADR 30.09).
+3. **Aug 14 - FIRST EVIDENCE READ:** GA4 + Clarity vs the 50.01 baseline.
+   Decides: which mechanics live or die, whether reference depth earns its
+   98k words, where readers stall, and the V3 style rollout.
+
+### Opportunities on the table (post-evidence, in value order)
+
+- **Visual system v3** (ADR 30.09, accepted): consulting-grade exhibit
+  grammar + premium-editorial style, A/B piloted on M1 - the "world-class"
+  upgrade path, reversible by design.
+- **Rescue-lead harvest**: pilot sourcing doubles as Alex-lead discovery
+  routed to the rescue funnel at zero extra cost.
+- **Option 2 bridge** (locked behind red-lines): a journey-end services
+  note once GA4 shows a real finisher cohort - the highest-intent slice.
+- **Deferred briefs** (2 weak-fit topics) + Operating-Kit templates:
+  reopen only on demonstrated GA4 demand.
+- **Pilot -> testimonials**: 3-5 real completions become the first honest
+  social proof (currently the landing has none by policy).
+
+### Standing decisions (unchanged)
+
+Fully ungated / NO mail list · no selling in course body (no-backport rule)
+· stealth ICP, no public share mechanics · certificate rejected · no video
+(30.03) · canon numbers only · LinkedIn/Reddit = drafts, Paul sends.
 
 ## 🔀 STRATEGIC PIVOT (2026-06-07) — historical context (migration since completed)
 
