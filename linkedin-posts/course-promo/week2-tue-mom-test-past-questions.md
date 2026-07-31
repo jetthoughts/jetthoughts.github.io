@@ -1,0 +1,53 @@
+---
+week: 2
+day: tuesday
+author: paul-keen
+voice: personal-first-person
+campaign: course-promo
+module: 2
+pillar: friends-politely-lying
+hypothesis: H2
+icp_test: Do concrete question rewrites earn saves and "using this in my next interview" replies from idea-stage founders?
+cta: "If you've run customer interviews before: which question do you wish you could take back?"
+design: B
+design_file: linkedin-posts/course-promo/assets/week2-tue-past-not-future-sketch.png
+course_link_placement: first-comment
+utm_campaign: course-pilot-aug26
+utm_content: week2_tue_mom_test_past_questions
+status: draft
+notes: |
+  Opener archetype: conflict-led, per the week-2 row of docs/workflows/linkedin-course-promo-plan.md.
+  Give-away = 3 of the 5 Mom Test rewrites from Lesson 2.1, quoted from the actual lesson table
+  (content/course/.../mom-test-ask-about-past-not-future/index.md) - not paraphrased, so the post
+  and the lesson agree word-for-word. Fitzpatrick/The Mom Test credited by name, same as the lesson.
+  The three "becomes" lines are tactical content formatted as a list (same treatment as week-1
+  Tuesday's five-blank formula), not rhetorical parallelism - keep them as separate lines.
+  One antithesis kept at budget ("promise you anything" / "can only report") - do NOT add another.
+  Attachment TODO: sketch not yet produced - Format B napkin sketch, two speech bubbles,
+  future-question crossed out, past-question circled (per plan). Paul can post without it (Format D)
+  if the sketch is not ready; the post survives text-only.
+  AI score self-check 2026-07-31: 1/10 (one antithesis flip, Medium). List lines are content, not
+  prose parallelism; no em dashes; no credential stamps; no marketing CTA.
+---
+
+"Would you use this?" is a question that can only hurt you. Nearly everyone says yes, because a no to your face feels rude and a yes costs them nothing.
+
+The fix comes from Rob Fitzpatrick's Mom Test, and it's one move: ask about the past instead of the future. Three swaps I have founders make before their first interview:
+
+"Do you find [problem] frustrating?" becomes "Tell me about the last time [problem] happened."
+
+"Would you pay for a fix?" becomes "What have you already tried, paid, or built to deal with it?"
+
+"How important is this to you?" becomes "What did the workaround cost you last time - in time, money, or sanity?"
+
+People can promise you anything. What they actually did last month, they can only report. And if the answer to the last one is "nothing," that tells you more than ten enthusiastic yeses.
+
+If you've run customer interviews before: which question do you wish you could take back?
+
+---
+
+**First comment (Paul, immediately after posting):**
+
+All five swaps, with the pass and fail signal for each answer, are in Lesson 2.1 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_tue_mom_test_past_questions
+
+**Attachment:** `assets/week2-tue-past-not-future-sketch.png` (Format B napkin sketch, TODO - post text-only if not produced).
