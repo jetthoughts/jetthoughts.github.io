@@ -2,16 +2,14 @@
 
 set -euo pipefail
 
-echo "Building Hugo site for Docker tests (public-dtest) with optimizations..."
-hugo --noBuildLock \
-   --buildDrafts \
-   --environment production \
-   --destination=_dest/public-dtest \
-   --logLevel=warn \
-   --baseURL="http://localhost:1314"
+echo "Building Hugo site for Docker tests (public-dtest)..."
+bin/build-if-stale _dest/public-dtest "http://localhost:1314"
 
 # Now run the tests in Docker. Args must go THROUGH bin/test - compose's
 # `run t <args>` replaces the container command entirely, so a bare .rb
 # path would be exec'd as the command itself (mirrors bin/dtest-all).
+# HUGO_DEFAULT_PATH must be passed explicitly: bin/test honors it, and
+# PRECOMPILED_ASSETS stops the container (which has no hugo) from building.
 echo "Running tests in Docker..."
-bin/docked --env PRECOMPILED_ASSETS=true --env TEST_SERVER_PORT=1314 t bin/test "$@"
+bin/docked --env PRECOMPILED_ASSETS=true --env TEST_SERVER_PORT=1314 \
+  --env HUGO_DEFAULT_PATH=_dest/public-dtest t bin/test "$@"

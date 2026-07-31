@@ -39,4 +39,41 @@ class BinScriptsTest < Minitest::Test
     end
     assert_empty missing, "executable bin/ scripts without a shebang"
   end
+
+  # Production builds must route through bin/hugo-build: it carries the
+  # PurgeCSS cold-start warm-up guard (missing hugo_stats.json purges live
+  # classes - the 2026-07-19 .sr-only production incident). A bare
+  # `hugo --environment production` in any other runner silently skips it.
+  def test_no_bare_production_hugo_builds_outside_hugo_build
+    offenders = Dir.children(BIN_DIR).filter_map do |name|
+      next if %w[hugo-build build-if-stale].include?(name)
+      path = File.join(BIN_DIR, name)
+      next unless File.file?(path) && File.executable?(path)
+      body = File.read(path, encoding: "bom|utf-8")
+      invokes_hugo = body.match?(/system\(\s*["']hugo["']/) || body.match?(/^\s*hugo\s/)
+      production_env = body.match?(/--environment[",\s]+["']?production/)
+      path if invokes_hugo && production_env
+    end
+    assert_empty offenders,
+      "bin/ scripts invoking bare `hugo --environment production` - route through bin/hugo-build (or bin/build-if-stale)"
+  end
+
+  # `ruby file1.rb file2.rb` executes ONLY file1 (file2 becomes ARGV) -
+  # this silently disabled these very guards in the pre-push hook once.
+  def test_pre_push_hook_runs_each_test_file_separately
+    hook = File.expand_path("../../.githooks/pre-push", __dir__)
+    skip "no pre-push hook" unless File.file?(hook)
+    body = File.read(hook, encoding: "bom|utf-8")
+    refute_match(/ruby\s+(?:-\S+\s+)*\S+_test\.rb\s+\S+_test\.rb/, body,
+      "pre-push passes multiple test files to one ruby invocation - only the first runs")
+  end
+
+  # bin/test must honor a caller-provided HUGO_DEFAULT_PATH (bin/dtest points
+  # the container at _dest/public-dtest) - a hardcoded DEST silently tests
+  # the wrong tree.
+  def test_bin_test_honors_preset_hugo_default_path
+    body = File.read(File.join(BIN_DIR, "test"), encoding: "bom|utf-8")
+    assert_match(/DEST="\$\{HUGO_DEFAULT_PATH:-/, body,
+      "bin/test must default DEST from HUGO_DEFAULT_PATH")
+  end
 end
