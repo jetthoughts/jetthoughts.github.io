@@ -8,6 +8,9 @@
   margin-bottom: 0.75rem !important;
 }
 
+/* Brand display type - Space Grotesk on the hero H1 and section H2s only
+   (font link lives in layouts/course/list.html). Body text stays as-is.
+   Space Grotesk's heaviest cut is 700. */
 .blog h1.course-title {
   max-width: 43rem;
   margin-left: auto;
@@ -15,4 +18,62 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.blog .post-content h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Hero chips — 2+2 grid on phones instead of the lopsided 3+1 wrap.
+   First two chips take half a row each; the longer pair fills row two. */
+@media (max-width: 480px) {
+  .blog .course-chips li {
+    flex: 1 1 auto;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .blog .course-chips li:nth-child(-n+2) {
+    flex-basis: calc(50% - 4px);
+  }
+}
+
+/* Module-card resource rows — labeled stacked rows replace the single
+   run-on link paragraph. Line-height gives mobile tap spacing. */
+.blog .module-card__extras-row,
+.blog .single-content .module-card__extras p.module-card__extras-row {
+  font-size: 15px;
+  color: #5f6470;
+  line-height: 1.9;
+  margin: 0 0 6px;
+}
+.blog .module-card__extras-row:last-child {
+  margin-bottom: 0;
+}
+.blog .module-card__extras-row strong {
+  color: #3a3f4a;
+}
+
+/* Course end-cap — quiet close above the global footer: promise line,
+   one Start CTA, and the copy-share-link pattern from module ends. */
+.blog .course-endcap {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 56px;
+  padding-top: 36px;
+  text-align: center;
+}
+.blog .course-endcap__promise {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #3a3f4a;
+  margin-bottom: 18px;
+}
+.blog .course-endcap__share {
+  font-size: 15px;
+  color: #5f6470;
+  margin-top: 18px;
+  margin-bottom: 0;
 }
