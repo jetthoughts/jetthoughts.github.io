@@ -1,7 +1,7 @@
 # Proof-Signal Portfolio Map
 
 **Status:** Living document. Update on every new cluster post.
-**Last updated:** 2026-05-10
+**Last updated:** 2026-07-31
 
 ## Why this exists
 
@@ -36,6 +36,9 @@ Before finalizing any post in the cluster:
 | Cap-table math (slip translated to runway $/days) | `content/blog/scipab-tell-better-business-stories-startup-management/index.md` | — |
 | Dev shop red flags checklist (contract clauses, IP ownership, termination) | `content/blog/dev-shop-red-flags-checklist/index.md` | scipab links forward |
 | Weekly report from team (test coverage trend, what shipped) | `content/blog/how-know-what-your-team-doing-remote-startup/index.md` | scipab links forward |
+| Commit-author email domains vs the entity that signed the contract (subcontractor authorship chain) | `content/blog/dev-shop-contract-code-ownership/index.md` | - |
+| Cold-start deploy drill (clean laptop, runbook only, ship a one-word change) | `content/blog/switch-dev-shops-safely-transition-guide/index.md` | truck-factor check as secondary |
+| Action item carried across consecutive retros | `content/blog/retros-founder-transparency-tool/index.md` | - |
 
 ## Unused signals available for the next post
 
