@@ -1,4 +1,4 @@
-GATE: EXECUTE ONLY after the pilot confirms the course converts readers (GOAL-AT-A-GLANCE next-actions #4). Prep only.
+GATE: LIFTED but DEFERRED (coordinator call 2026-07-31): the brief self-scores WEAK course fit. Not in the Wave G execution set; revisit only if GA4 shows demand for the topic.
 
 # Brief: Technical Due Diligence in 2026
 

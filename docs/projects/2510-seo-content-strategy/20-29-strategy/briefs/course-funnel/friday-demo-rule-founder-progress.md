@@ -1,4 +1,4 @@
-GATE: EXECUTE ONLY after the pilot confirms the course converts readers (GOAL-AT-A-GLANCE next-actions #4). Prep only.
+GATE: LIFTED (Paul 2026-07-31 - pilot gate removed). NO EXECUTION NEEDED: this topic already ships as course content; brief kept for its internal-link plan and 20.07 housekeeping only.
 
 # Brief: The Friday Demo Rule (ABSORBED - no new post needed)
 

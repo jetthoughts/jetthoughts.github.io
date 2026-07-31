@@ -1,4 +1,4 @@
-GATE: EXECUTE ONLY after the pilot confirms the course converts readers (GOAL-AT-A-GLANCE next-actions #4). Prep only.
+GATE: LIFTED (Paul 2026-07-31 - pilot gate removed). EXECUTABLE: write via the full blog pipeline (docs/workflows/blog-pipeline.md), batched 3-5 per review cycle.
 
 # Brief: What SLAs to Require From Your Dev Shop
 
