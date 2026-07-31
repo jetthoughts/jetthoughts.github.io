@@ -31,6 +31,22 @@
   letter-spacing: -0.02em;
 }
 
+/* Module-card resource rows — labeled stacked rows replace the single
+   run-on link paragraph. Line-height gives mobile tap spacing. */
+.blog .module-card__extras-row,
+.blog .single-content .module-card__extras p.module-card__extras-row {
+  font-size: 15px;
+  color: #5f6470;
+  line-height: 1.9;
+  margin: 0 0 6px;
+}
+.blog .module-card__extras-row:last-child {
+  margin-bottom: 0;
+}
+.blog .module-card__extras-row strong {
+  color: #3a3f4a;
+}
+
 /* Course end-cap — quiet close above the global footer: promise line,
    one Start CTA, and the copy-share-link pattern from module ends. */
 .blog .course-endcap {
