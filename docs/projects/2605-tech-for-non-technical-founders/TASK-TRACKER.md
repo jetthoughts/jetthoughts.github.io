@@ -90,6 +90,19 @@ stays with Paul. Local cards (gitignored .devtool board) mirrored here:
   with removal-candidate verdicts; monthly register-B voice recalibration
   against real human posts.
 
+## Visual system v3 track (ADR 30.09, accepted 2026-07-31)
+
+Three-reviewer panel (design / Sam-ICP / feasibility) accepted with changes,
+all incorporated. Full spec: 30-39-architecture-design/30.09-adr-*.md.
+- **V3-A (start now, content-scoped):** v3 exhibit spec -> A/B exemplar
+  (hand-drawn-normalized vs flat-vector, both new-grammar) -> 4 M1 in-place
+  redesigns + rewritten alts -> eye-test doc -> PAUL'S STYLE CALL in the
+  ADR. Program map v1 drafted alongside, judged independently.
+- **V3-B (post-Aug-14):** new course-single.css + single.html wiring
+  (shared template - never mid-campaign; never touch shared blog CSS).
+- **Sprint Y normalization = the O1 fallback path**; its classify-first
+  audit runs in either outcome.
+
 ## Landing-page improvement track (scheduled 2026-07-31)
 
 Kanban cards live on the LOCAL board `.devtool/features/` (gitignored - VS
