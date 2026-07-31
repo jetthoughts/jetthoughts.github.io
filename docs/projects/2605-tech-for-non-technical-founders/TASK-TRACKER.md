@@ -75,17 +75,23 @@
 
 Paul's logged-in Chrome is now a proven agent surface (LinkedIn reads
 worked 2026-07-31; it is also the ONLY agent path to the login-walled GA4
-property UI and Clarity dashboard). Read-and-draft only - every send/post
-stays with Paul. Local cards (gitignored .devtool board) mirrored here:
+property UI and Clarity dashboard). Operating model (Paul 2026-07-31):
+AUTOMATED PIPELINE, HUMAN SEND - agents source, filter, personalize, and
+pre-fill each message in the open composer; Paul's only action is per-message
+review + the Send click. Agents never click Send. Local cards (gitignored
+.devtool board) mirrored here:
 
 - **B1 - pilot lead sourcing** (TODO, due Aug 4, card
   `browser-lead-sourcing-2026-07-31`): scout the 8 hunting grounds with the
   40.18 screener translated to observable post signals (filters + hard
   disqualifiers in 50.02); output 50.03 shortlist of 15-25 candidates with
-  evidence, DM-template mapping, and a separate Alex/rescue-leads section.
+  evidence, DM-template mapping, and a separate Alex/rescue-leads section;
+  then queue the sends - open each qualified candidate's DM thread and
+  pre-fill the personalized message for Paul's review-and-click.
 - **B2 - campaign monitoring** (BACKLOG, Aug 1-14, card
   `browser-campaign-monitoring-2026-08`): daily comment/thread reads with
-  drafted replies, ledger numbers, flagging Sam-pattern commenters into
+  replies pre-filled in-thread for Paul's review-and-click, ledger numbers,
+  flagging Sam-pattern commenters into
   50.03; Aug 14 GA4 + Clarity dashboard pull into 50.04 first-metrics-read
   with removal-candidate verdicts; monthly register-B voice recalibration
   against real human posts.

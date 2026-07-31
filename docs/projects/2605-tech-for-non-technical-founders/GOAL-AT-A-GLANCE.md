@@ -44,7 +44,8 @@ further polish has lower expected value than one week of real-reader data.
 
 ### Next 14 days (the plan of record)
 
-1. **Aug 1-14 - LAUNCH WINDOW (Paul sends, ~10 min/day):** 9 LinkedIn posts
+1. **Aug 1-14 - LAUNCH WINDOW (automated pipeline, human send - Paul
+   reviews each pre-filled message and clicks Send, ~10 min/day):** 9 LinkedIn posts
    in Paul's real register + 2 Reddit/IH pieces per the 50.02 calendar;
    pilot DMs to candidates from the browser-sourced shortlist (50.03, due
    Aug 4). Blocking: the $125 gift-card sign-off.
@@ -73,7 +74,8 @@ further polish has lower expected value than one week of real-reader data.
 
 Fully ungated / NO mail list · no selling in course body (no-backport rule)
 · stealth ICP, no public share mechanics · certificate rejected · no video
-(30.03) · canon numbers only · LinkedIn/Reddit = drafts, Paul sends.
+(30.03) · canon numbers only · outreach = agents prepare + pre-fill
+everything, Paul reviews each message and clicks Send (agents never click it).
 
 ## 🔀 STRATEGIC PIVOT (2026-06-07) — historical context (migration since completed)
 
