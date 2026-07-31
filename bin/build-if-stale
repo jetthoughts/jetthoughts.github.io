@@ -18,8 +18,11 @@ BASE_URL="${2:-http://localhost:${TEST_SERVER_PORT:-1314}}"
 
 stale() {
   [ -f "$DEST/index.html" ] || return 0
+  # Directories are probed too (no -type f): deleting a source file leaves
+  # nothing to be -newer, but it DOES bump the parent directory's mtime -
+  # without this, a deleted page could be served from a "warm" tree forever.
   newest_src=$(find content themes layouts config data assets static postcss.config.js package.json bun.lockb \
-    -type f -newer "$DEST/index.html" -print -quit 2>/dev/null || true)
+    -newer "$DEST/index.html" -print -quit 2>/dev/null || true)
   [ -n "$newest_src" ]
 }
 

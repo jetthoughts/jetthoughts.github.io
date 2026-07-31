@@ -49,6 +49,18 @@ namespace :test do
     t.pattern = "test/integration/**/*_test.rb"
   end
 
+  # Fast repo-shape guards (~2s): toolchain pin drift + bin-script portability.
+  # The pre-push hook's test entrypoint - one task, so the hook never falls
+  # into the `ruby file1.rb file2.rb` trap (only file1 executes).
+  Rake::TestTask.new(:guards) do |t|
+    t.libs << "test"
+    t.libs << "lib"
+    t.test_files = FileList[
+      "test/unit/toolchain_pins_test.rb",
+      "test/unit/bin_scripts_test.rb"
+    ]
+  end
+
   namespace :screenshots do
     desc "Restore baseline PNGs rewritten by a test run (candidates live in the working tree; git HEAD is the baseline)"
     task :reset do

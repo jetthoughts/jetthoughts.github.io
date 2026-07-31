@@ -60,10 +60,14 @@ class BinScriptsTest < Minitest::Test
 
   # `ruby file1.rb file2.rb` executes ONLY file1 (file2 becomes ARGV) -
   # this silently disabled these very guards in the pre-push hook once.
-  def test_pre_push_hook_runs_each_test_file_separately
+  # The hook must run them through the rake entrypoint, and must not fall
+  # back to the multi-file ruby pattern.
+  def test_pre_push_hook_runs_guards_via_rake_entrypoint
     hook = File.expand_path("../../.githooks/pre-push", __dir__)
-    skip "no pre-push hook" unless File.file?(hook)
+    assert File.file?(hook), ".githooks/pre-push missing - the .gitignore `.*` rule swallowed it once"
     body = File.read(hook, encoding: "bom|utf-8")
+    assert_match(%r{bin/rake test:guards}, body,
+      "pre-push must run the guard tests via `bin/rake test:guards`")
     refute_match(/ruby\s+(?:-\S+\s+)*\S+_test\.rb\s+\S+_test\.rb/, body,
       "pre-push passes multiple test files to one ruby invocation - only the first runs")
   end
