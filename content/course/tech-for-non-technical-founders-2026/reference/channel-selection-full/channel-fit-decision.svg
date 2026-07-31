@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 680" font-family='"Caveat", "Patrick Hand", "Comic Sans MS", cursive'>
+  <defs>
+    <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" seed="17"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+  <rect width="980" height="680" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="490" y="40" font-size="30" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Score the channel before you send message one</text>
+  <text x="490" y="66" font-size="19" text-anchor="middle" fill="#555">Interview evidence in, one committed channel out</text>
+
+  <!-- Interview evidence -->
+  <g filter="url(#rough)">
+    <rect x="240" y="90" width="500" height="90" rx="10" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  </g>
+  <text x="490" y="122" font-size="21" text-anchor="middle" fill="#cc342d" font-weight="bold">Interview evidence</text>
+  <text x="490" y="150" font-size="17" text-anchor="middle" fill="#1a1a1a">Pull the channel signals from your 10 transcripts</text>
+
+  <!-- Arrow -->
+  <line x1="490" y1="183" x2="490" y2="222" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="505" y="210" font-size="16" fill="#1a1a1a" font-style="italic">score each channel 1-3 per dimension</text>
+
+  <!-- Channel-fit score -->
+  <g filter="url(#rough)">
+    <rect x="240" y="227" width="500" height="100" rx="10" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  </g>
+  <text x="490" y="260" font-size="21" text-anchor="middle" fill="#cc342d" font-weight="bold">Channel-fit score - total out of 12</text>
+  <text x="490" y="288" font-size="17" text-anchor="middle" fill="#1a1a1a">Price point - buyer type - time budget - interview signal</text>
+  <text x="490" y="310" font-size="15" text-anchor="middle" fill="#555" font-style="italic">LinkedIn DM - cold email - community - social organic</text>
+
+  <!-- Branch arrows -->
+  <path d="M 380 330 L 180 385" fill="none" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="490" y1="330" x2="490" y2="385" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 600 330 L 800 385" fill="none" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 9+ commit -->
+  <g filter="url(#rough)">
+    <rect x="40" y="390" width="280" height="110" rx="10" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5"/>
+  </g>
+  <text x="180" y="425" font-size="21" text-anchor="middle" fill="#2e7d32" font-weight="bold">9 or more / 12</text>
+  <text x="180" y="453" font-size="16" text-anchor="middle" fill="#1a1a1a">Clear pick -</text>
+  <text x="180" y="475" font-size="16" text-anchor="middle" fill="#1a1a1a">commit to that channel</text>
+
+  <!-- 7-8 pilot -->
+  <g filter="url(#rough)">
+    <rect x="350" y="390" width="280" height="110" rx="10" fill="#fbe9ff" stroke="#8e24aa" stroke-width="2.5"/>
+  </g>
+  <text x="490" y="425" font-size="21" text-anchor="middle" fill="#8e24aa" font-weight="bold">7-8 / 12</text>
+  <text x="490" y="453" font-size="16" text-anchor="middle" fill="#1a1a1a">1-week pilot on your top 2 -</text>
+  <text x="490" y="475" font-size="16" text-anchor="middle" fill="#1a1a1a">higher reply rate wins</text>
+
+  <!-- 6 or less -->
+  <g filter="url(#rough)">
+    <rect x="660" y="390" width="280" height="110" rx="10" fill="#faf7f2" stroke="#a3621e" stroke-width="2.5"/>
+  </g>
+  <text x="800" y="425" font-size="21" text-anchor="middle" fill="#a3621e" font-weight="bold">6 or less / 12</text>
+  <text x="800" y="453" font-size="16" text-anchor="middle" fill="#1a1a1a">No strong fit - go back to</text>
+  <text x="800" y="475" font-size="16" text-anchor="middle" fill="#1a1a1a">the transcripts for missing signal</text>
+
+  <!-- Arrows into commitment -->
+  <line x1="180" y1="503" x2="180" y2="535" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="490" y1="503" x2="490" y2="535" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Commitment -->
+  <g filter="url(#rough)">
+    <rect x="140" y="540" width="700" height="95" rx="10" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  </g>
+  <text x="490" y="572" font-size="21" text-anchor="middle" fill="#cc342d" font-weight="bold">The commitment</text>
+  <text x="490" y="598" font-size="17" text-anchor="middle" fill="#1a1a1a">Run a full send / reply / follow-up arc before any switch</text>
+  <text x="490" y="620" font-size="15" text-anchor="middle" fill="#555" font-style="italic">Check: reply rate over 5% - demos turn into paid conversations - right buyer</text>
+
+  <!-- Footnote -->
+  <text x="490" y="665" font-size="19" text-anchor="middle" fill="#a3621e" font-style="italic">Call the channel dead after 2 quick replies and you just threw away the signal.</text>
+</svg>

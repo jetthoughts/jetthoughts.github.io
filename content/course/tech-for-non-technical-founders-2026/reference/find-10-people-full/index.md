@@ -10,6 +10,8 @@ slug: find-10-people-full
 
 ---
 
+![A hand-drawn funnel from channels to booked calls: a wide red card listing Reddit, LinkedIn, Slack / Discord, G2 / Capterra, X and referrals narrows through copy complaints verbatim into 30 real sentences plus 30 named people, then through a filter on six dimensions card, then via the 3-message sequence into a green 10 booked interviewees card. Two purple side boxes show the parallel smoke-test page track and the paid research-panel fallback, and an amber footnote carries the gate: fewer than 7 of 10 calls scoring 7+ means the problem is too weak.](channels-to-10-calls-funnel.svg)
+
 ## Where to Search: The Full Channel Walk
 
 The AI ICP map (from Lesson 2.3) names your specific communities. Here is how to work each channel type once you have the list. Read before you write a single message - you are collecting the exact words people use when their problem flares up, because those words become your subject lines in Lesson 2.4.
@@ -170,5 +172,3 @@ If fewer than 7 of 10 calls score >= 7, the problem is too weak for this ICP. Re
 ---
 
 *Built by [JetThoughts](https://jetthoughts.com) as a companion reference to the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) free curriculum.*
-</content>
-</invoke>
