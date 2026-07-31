@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# bash, not sh: `set -o pipefail` is a bashism - dash (Linux /bin/sh) rejects it
+#
+# Shared build-once helper for the test runners (bin/test, bin/qtest,
+# bin/dtest, bin/dtest-all). Builds through bin/hugo-build - which carries
+# the PurgeCSS cold-start warm-up guard a bare `hugo` call lacks (the
+# 2026-07-19 .sr-only incident class) - and skips entirely when the dest
+# is newer than every source tree (warm rerun).
+#
+#   bin/build-if-stale <dest> [base-url]     # build only if stale
+#   FORCE_BUILD=1 bin/build-if-stale <dest>  # always build
+
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+DEST="${1:?usage: bin/build-if-stale <dest> [base-url]}"
+BASE_URL="${2:-http://localhost:${TEST_SERVER_PORT:-1314}}"
+
+stale() {
+  [ -f "$DEST/index.html" ] || return 0
+  # Directories are probed too (no -type f): deleting a source file leaves
+  # nothing to be -newer, but it DOES bump the parent directory's mtime -
+  # without this, a deleted page could be served from a "warm" tree forever.
+  newest_src=$(find content themes layouts config data assets static postcss.config.js package.json bun.lockb \
+    -newer "$DEST/index.html" -print -quit 2>/dev/null || true)
+  [ -n "$newest_src" ]
+}
+
+if [ -n "${FORCE_BUILD:-}" ] || stale; then
+  echo "build-if-stale: building site to $DEST (bin/hugo-build)..."
+  ENVIRONMENT=production OUTPUT_DIR="$DEST" BASE_URL="$BASE_URL" BUILD_DRAFTS=1 bin/hugo-build
+else
+  echo "build-if-stale: reusing warm build at $DEST (FORCE_BUILD=1 to rebuild)"
+fi

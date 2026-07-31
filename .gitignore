@@ -37,6 +37,9 @@ hugo.linux
 !.stitch
 !.junie
 !.dev
+# project git hooks (bin/setup wires core.hooksPath here) - without this
+# negation the .* rule silently kept the pre-push guard out of the repo
+!.githooks
 !.gitignore
 !.mise.toml
 !.ruby-version

@@ -3,7 +3,7 @@ type: Playbook
 title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
-timestamp: 2026-07-31T00:00:00Z
+timestamp: 2026-07-31T15:00:00Z
 ---
 
 # The suites
@@ -73,7 +73,28 @@ extend it when adding components or critical files. The macOS full suite remains
   in the same commit that fixes duplicates - it only goes down.
 - Tests must assert behavior shape (`q=\d+`, has `<picture>`), never tunable
   config values (exact quality/width numbers).
-- Visual regression is a LOCAL gate only. CI does NOT run screenshot diffs -
-  cross-OS pixel comparison is unusable (Alpine/musl baselines vs Ubuntu/glibc
-  CI diverge 3-28%), so `bin/test` + `bin/dtest` are the sole visual coverage.
-  What CI enforces (build, unit, link check) lives in [ci-gates.md](ci-gates.md).
+- CI DOES run screenshot diffs since 2026-07-31 (PRs #413/#417): test.yml
+  installs the pinned rendering stack (bin/setup-test-env: CfT per
+  .dev/cft-version + fonts.conf) so the runner renders the same pixels as
+  the `linux/` baselines - the old Alpine/musl-vs-glibc 3-28% divergence
+  argument no longer applies (image is Debian/glibc since #403). The PR
+  gate is REPORT-ONLY during the soak week; details in
+  [ci-gates.md](ci-gates.md).
+- All four runners (test/qtest/dtest/dtest-all) build through
+  `bin/build-if-stale <dest>` - it routes via bin/hugo-build (PurgeCSS
+  cold-start warm-up guard; a bare `hugo` call can purge live classes on a
+  fresh clone) and skips on a warm tree. qtest and bin/test share
+  `_dest/public-test`, so a qtest right after a bin/test run costs 0s of
+  build. `FORCE_BUILD=1` (or bin/test `--build`) forces. The staleness
+  probe watches content/ themes/ layouts/ config/ data/ assets/ static/
+  postcss.config.js package.json bun.lockb.
+- `bin/qtest --changed` counts UNTRACKED files (git ls-files --others):
+  before 2026-07-31 a brand-new pages/foo.css produced "no visual-affecting
+  changes" and a false green exit 0.
+- The `.gitignore` `.*` rule silently keeps NEW dot-directories out of the
+  repo unless negated (`!.githooks`, `!.mise.toml`, `!.claude/settings.json`
+  all needed this). The R2 pre-push hook shipped bin/setup wiring for
+  `core.hooksPath .githooks` while the hook file itself never made it into
+  the repo - fresh clones had a hooksPath pointing at nothing. Adding any
+  root dotfile/dot-dir? Check `git check-ignore -v <path>` before assuming
+  it's tracked.

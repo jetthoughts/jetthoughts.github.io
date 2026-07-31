@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Pre-push guard: fast local mirror of the CI gates (<10s warm), so a push
+# that would fail publish.yml dies here instead of 3 minutes later in CI.
+# Installed by bin/setup via `git config core.hooksPath .githooks`.
+#
+#   SKIP_CHECKS=1 git push     # bypass once, intentionally
+set -euo pipefail
+cd "$(git rev-parse --show-toplevel)"
+
+if [ "${SKIP_CHECKS:-}" = "1" ]; then
+  echo "pre-push: SKIP_CHECKS=1 - skipping checks"
+  exit 0
+fi
+
+fail() { echo "pre-push: $1 failed - fix it or bypass once with SKIP_CHECKS=1 git push" >&2; exit 1; }
+
+echo "pre-push: CSS lint ratchet"
+bin/lint-css >/dev/null 2>&1 || fail "bin/lint-css (rerun it directly for the report)"
+
+echo "pre-push: course validators"
+bin/validate-course >/dev/null || fail "bin/validate-course"
+
+# One rake task, not `ruby file1.rb file2.rb` - the latter executes ONLY
+# file1 (file2 becomes ARGV) and silently skipped bin_scripts_test for a
+# while. bin_scripts_test guards this hook against regressing.
+echo "pre-push: guard tests (toolchain pins + bin scripts)"
+bin/rake test:guards >/dev/null 2>&1 \
+  || fail "guard tests (run: bin/rake test:guards)"
+
+echo "pre-push: all checks green"

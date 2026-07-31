@@ -20,9 +20,8 @@ DEST = "_dest/public-dtest-all"
 LOG = "tmp/dtest-all.log"
 
 puts "dtest-all: building snapshot to #{DEST} ..."
-system("hugo", "--noBuildLock", "--buildDrafts", "--environment", "production",
-  "--destination", DEST, "--logLevel", "warn",
-  "--baseURL", "http://localhost:1314") || abort("dtest-all: hugo build failed")
+# via bin/hugo-build (PurgeCSS cold-start warm-up guard) + staleness skip
+system("bin/build-if-stale", DEST, "http://localhost:1314") || abort("dtest-all: build failed")
 
 require "fileutils"
 FileUtils.mkdir_p("tmp")

@@ -21,7 +21,10 @@
 # Site-wide files (skin, style.css, theme-main, 586, navigation, foundations/…)
 # escalate to --all: a scoped run cannot vouch for them.
 
-DEST = "_dest/public-fast"
+# Shared with bin/test so one warm tree serves both gates (bin/build-if-stale
+# skips the rebuild when nothing changed - previously qtest rebuilt ~26s+ on
+# every single invocation into its own private _dest/public-fast).
+DEST = "_dest/public-test"
 
 PAGE_TESTS = {
   "homepage" => "homepage",
@@ -99,9 +102,13 @@ start = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 elapsed = -> { (Process.clock_gettime(Process::CLOCK_MONOTONIC) - start).round }
 
 if changed
+  # Untracked files count as changes: a brand-new pages/foo.css previously
+  # produced "no visual-affecting changes" and a false green exit 0.
+  untracked = `git ls-files --others --exclude-standard`.split("\n")
   files = `git diff --name-only #{ref}`.split("\n") if ref
   files = `git diff --name-only HEAD`.split("\n") if files.nil? || files.empty?
-  files = `git diff --name-only HEAD~1..HEAD`.split("\n") if files.empty?
+  files = `git diff --name-only HEAD~1..HEAD`.split("\n") if files.empty? && untracked.empty?
+  files = (files || []) + untracked
   files.each do |f|
     mapped = pages_for(f)
     if mapped == :all
@@ -139,9 +146,10 @@ unless ENV["ALLOW_DIRTY_SCREENSHOTS"]
 end
 
 if build
-  puts "qtest: building to #{DEST} ..."
-  system("hugo", "--baseURL", "/", "--environment", "production", "--buildDrafts",
-    "--noBuildLock", "--quiet", "--destination", DEST) || abort("qtest: hugo build failed")
+  # bin/build-if-stale routes through bin/hugo-build (PurgeCSS cold-start
+  # warm-up guard - a bare `hugo` call can purge live classes on a fresh
+  # clone) and no-ops on a warm tree.
+  system("bin/build-if-stale", DEST) || abort("qtest: build failed")
 end
 
 ENV["PRECOMPILED_ASSETS"] = "true"
