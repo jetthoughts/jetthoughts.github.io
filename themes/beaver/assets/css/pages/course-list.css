@@ -31,6 +31,19 @@
   letter-spacing: -0.02em;
 }
 
+/* Hero chips — 2+2 grid on phones instead of the lopsided 3+1 wrap.
+   First two chips take half a row each; the longer pair fills row two. */
+@media (max-width: 480px) {
+  .blog .course-chips li {
+    flex: 1 1 auto;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .blog .course-chips li:nth-child(-n+2) {
+    flex-basis: calc(50% - 4px);
+  }
+}
+
 /* Module-card resource rows — labeled stacked rows replace the single
    run-on link paragraph. Line-height gives mobile tap spacing. */
 .blog .module-card__extras-row,
