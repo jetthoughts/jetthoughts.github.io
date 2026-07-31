@@ -54,9 +54,7 @@ Add a moral-rights waiver if any contributor sits in the EU, Canada, or Australi
 
 ## Clause 3: the accounts are in your name, not "available to you"
 
-Access and ownership are different things, and contracts blur them on purpose.
-
-"Client shall have access to all repositories and cloud infrastructure" means you get a login that someone else can revoke. What you want is that the GitHub organization, the AWS or Heroku root account, the domain registrar, and the production database all sit under an account your company owns, with the agency added as a member. Write it as a condition of the first invoice, not a nice-to-have.
+"Client shall have access to all repositories and cloud infrastructure" reads fine until you notice it only promises a login someone else can revoke, not ownership of the account. What you want is that the GitHub organization, the AWS or Heroku root account, the domain registrar, and the production database all sit under an account your company owns, with the agency added as a member. Write it as a condition of the first invoice, not a nice-to-have.
 
 Skip it and you learn the difference at the worst possible moment, usually the week you decide to leave. That is the mechanic behind the [outsourcing trap](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/): the damage rarely starts with bad code, it starts with who holds the keys.
 
