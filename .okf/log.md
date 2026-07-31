@@ -1,5 +1,18 @@
 # Bundle Update Log
 
+## 2026-07-31 (R2 Phase B2)
+
+* **Update**: [ci-gates](/build/ci-gates.md) scope - DevX R2 Phase B2: agent containers now
+  self-bootstrap - checked-in `.claude/settings.json` SessionStart hook runs
+  `bin/agent-bootstrap` (bundle+bun install, libvips, pinned CfT stack via setup-test-env,
+  doctor; every step warns-and-continues on blocked network; log at /tmp/agent-bootstrap.log).
+  Sync code made Ruby>=3.3-compatible (three `it` block-params replaced with named params +
+  a missing `require "time"`) - `rake test:unit` now 275/275 green on the container's 3.3.6
+  (was 71 errors; agent sessions can finally run the unit gate). NEW pre-push guard
+  (`.githooks/pre-push`, installed by bin/setup via core.hooksPath): lint-css ratchet +
+  course validators + toolchain-pin/bin-script guard tests in ~5s; bypass SKIP_CHECKS=1.
+  Gotcha: `.claude/**/*.json` is gitignored - settings.json needed a `!` negation.
+
 ## 2026-07-31 (course waves + GA4 batching)
 
 * **Update**: 2605 course project shipped Waves 0/A-H in one day (PRs #407

@@ -24,8 +24,10 @@ class SyncTestCase < Minitest::Test
     @working_dir = setup_temp_dir
 
     @articles = []
-    @register = Sync::Source::Lookup.new.tap do
-      it.register(Sync::Sources::Test.new(@articles, "test"))
+    # named block param (not Ruby 3.4's `it`) so the suite runs on Ruby >= 3.3
+    # - agent containers and CI images without the 4.0.6 pin included
+    @register = Sync::Source::Lookup.new.tap do |lookup|
+      lookup.register(Sync::Sources::Test.new(@articles, "test"))
     end
 
     @app = create_app

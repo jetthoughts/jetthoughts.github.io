@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# Bootstrap for agent/remote containers (Claude web sessions, CI-like sandboxes).
+# Idempotent and network-tolerant: every step warns-and-continues so a blocked
+# proxy never wedges the session. Wired as the SessionStart hook in
+# .claude/settings.json; safe to run by hand any time.
+#
+# Known agent-container constraints (see docs/SETUP.md):
+# - api.github.com is blocked through the proxy -> mise cannot fetch hugo/bun.
+#   Sync code stays Ruby>=3.3-compatible so tests run on the container Ruby.
+# - storage.googleapis.com IS reachable -> pinned Chrome for Testing works.
+set -uo pipefail
+cd "$(dirname "$0")/.."
+
+log() { printf 'agent-bootstrap: %s\n' "$*"; }
+
+export LANG="${LANG:-C.UTF-8}" LC_ALL="${LC_ALL:-C.UTF-8}"
+
+log "bundle install"
+bundle install --quiet || log "WARN bundle install failed - Ruby tests/validators unavailable"
+
+log "bun install"
+bun install --frozen-lockfile >/dev/null 2>&1 || log "WARN bun install failed - PostCSS/lint unavailable"
+
+# libvips runtime for screenshot diffs (Debian/Ubuntu containers)
+if ! ruby -e 'require "vips"' >/dev/null 2>&1 && type apt-get >/dev/null 2>&1; then
+  log "installing libvips42"
+  (apt-get install -y --no-install-recommends libvips42 >/dev/null 2>&1 || sudo apt-get install -y --no-install-recommends libvips42 >/dev/null 2>&1) \
+    || log "WARN libvips install failed - screenshot comparisons will error"
+fi
+
+# Pinned rendering stack (Chrome for Testing + fonts). Downloads from
+# storage.googleapis.com; skips cleanly when unreachable.
+if [ "$(uname -s)" = "Linux" ]; then
+  log "pinned rendering stack (bin/setup-test-env)"
+  bin/setup-test-env >/dev/null 2>&1 || log "WARN setup-test-env failed - export CHROME_BIN manually if a browser exists"
+fi
+
+log "doctor summary"
+eval "$(bin/setup-test-env --print-env 2>/dev/null)" || true
+for probe in "hugo:$(hugo version 2>/dev/null | head -c 40)" \
+             "bun:$(bun --version 2>/dev/null)" \
+             "ruby:$(ruby -e 'print RUBY_VERSION' 2>/dev/null)" \
+             "chrome:${CHROME_BIN:-not-found}"; do
+  log "  $probe"
+done
+log "done - see docs/SETUP.md (Agent containers section) for constraints"

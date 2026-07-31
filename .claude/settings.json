@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bin/agent-bootstrap > /tmp/agent-bootstrap.log 2>&1 || true",
+            "timeout": 600
+          }
+        ]
+      }
+    ]
+  }
+}

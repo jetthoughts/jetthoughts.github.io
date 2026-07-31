@@ -196,6 +196,13 @@ Follow the Ruby Style Guide and use Standard gem:
 bundle exec standardrb --fix
 ```
 
+### Pre-push guard
+
+`bin/setup` installs a `pre-push` git hook (`.githooks/pre-push`) that runs
+the fast CI mirrors — CSS lint ratchet, course validators, toolchain-pin and
+bin-script guard tests (<10s warm) — so a push that would fail CI dies
+locally. Bypass once, intentionally: `SKIP_CHECKS=1 git push`.
+
 ## 🧪 Testing Guidelines
 
 ### Required Tests

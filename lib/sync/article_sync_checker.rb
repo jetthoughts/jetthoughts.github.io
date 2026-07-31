@@ -88,6 +88,6 @@ class ArticleSyncChecker
   end
 
   def duplicated?(slug)
-    @sync_status.values.compact.map { it[:slug] }.compact.uniq.include?(slug)
+    @sync_status.values.compact.map { |status| status[:slug] }.compact.uniq.include?(slug)
   end
 end

@@ -2,6 +2,7 @@
 
 require "ostruct"
 require "json"
+require "time" # Time#iso8601 - not transitively loaded on Ruby < 4.0
 
 class TestHttpClient
   USERNAME = "jetthoughts"
@@ -19,7 +20,7 @@ class TestHttpClient
   end
 
   def get_article(id)
-    result = @articles.find { id.to_s == (it["remote_id"] || it["id"]).to_s }
+    result = @articles.find { |article| id.to_s == (article["remote_id"] || article["id"]).to_s }
 
     if result
       OpenStruct.new(body: result.to_json, success?: true)

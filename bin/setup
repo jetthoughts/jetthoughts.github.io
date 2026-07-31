@@ -47,6 +47,14 @@ bun install || fail "bun install failed"
 say "==> bundle install"
 bundle install || fail "bundle install failed (Ruby gems - system tests and validators need these)"
 
+# --- 3b. Git hooks -----------------------------------------------------------
+# Pre-push guard (.githooks/pre-push): fast local mirror of the CI gates.
+# Bypass a single push with SKIP_CHECKS=1 git push.
+if [ "$(git config --get core.hooksPath || true)" != ".githooks" ]; then
+  say "==> git config core.hooksPath .githooks (pre-push guard)"
+  git config core.hooksPath .githooks || warn "could not set core.hooksPath - pre-push checks stay manual"
+fi
+
 # --- 4. Doctor ---------------------------------------------------------------
 say ""
 say "==> Doctor (pins from .mise.toml)"

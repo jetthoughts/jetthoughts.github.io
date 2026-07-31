@@ -72,6 +72,27 @@ bundle install   # Ruby gems (tests, validators, sync)
 | `bin/qtest --changed` | Fast scoped visual gate for CSS work |
 | `bin/lint-css` | Stylelint warning ratchet (cap only goes down) |
 
+## Agent containers / remote sessions
+
+Remote agent sessions (Claude web, sandboxes) bootstrap automatically: the
+checked-in `.claude/settings.json` runs **`bin/agent-bootstrap`** on session
+start (log: `/tmp/agent-bootstrap.log`). It is idempotent and safe to re-run
+by hand. Container constraints it works around:
+
+- `api.github.com` is blocked through the agent proxy, so `mise install`
+  cannot fetch hugo/bun there. Test code stays Ruby >= 3.3 compatible so the
+  suite runs on the container's Ruby even without the 4.0.6 pin.
+- `storage.googleapis.com` IS reachable, so the pinned Chrome for Testing
+  stack installs normally via `bin/setup-test-env`.
+- Set a UTF-8 locale (`LANG=C.UTF-8`) — the bootstrap exports one if unset.
+
+## Pre-push guard
+
+`bin/setup` wires `git config core.hooksPath .githooks`. The `pre-push` hook
+runs the fast CI mirrors (CSS lint ratchet, course validators, toolchain-pin
+and bin-script guard tests, <10s warm) so a failing push dies locally instead
+of in CI. Bypass once, intentionally: `SKIP_CHECKS=1 git push`.
+
 ## Visual regression baselines
 
 Screenshot baselines live in `test/fixtures/screenshots/{macos,linux}/` and
