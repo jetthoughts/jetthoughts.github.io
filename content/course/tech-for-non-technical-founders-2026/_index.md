@@ -47,7 +47,7 @@ New here? Read [How This Course Works](/course/tech-for-non-technical-founders-2
 
 ## Why this course exists
 
-The five mistakes below sink more first products than bad code does - we have watched each one play out in rescue projects since 2005. The course heads each one off:
+The five mistakes below sink more first products than bad code does - we have watched each one play out since 2011. The course heads each one off:
 
 <ul class="mistake-list">
   <li>Building an entire MVP (minimum viable product - the first working version) before verifying anyone will pay for it - Modules 1 and 2 show you what validation actually looks like before you spend a single dollar.</li>
@@ -213,4 +213,4 @@ If this course saved you from building something nobody wanted, send it to a fou
 
 ## Who built this
 
-Built by [JetThoughts](https://jetthoughts.com). We've run a Rails-first dev shop since 2005. The course is what we wish every founder had on their desk before the first build decision.
+Built by [JetThoughts](https://jetthoughts.com). We've run a Rails-first dev shop since 2011. The course is what we wish every founder had on their desk before the first build decision.
