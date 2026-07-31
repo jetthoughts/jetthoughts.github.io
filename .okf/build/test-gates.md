@@ -24,6 +24,13 @@ extend it when adding components or critical files. The macOS full suite remains
 
 # Hard-won caveats
 
+- **Content-only diffs skip the visual suites entirely** (Paul 2026-07-31).
+  A change touching ONLY markdown prose/frontmatter - no `themes/`, no
+  `layouts/`, no `*.css`, no inline HTML/SVG in a body - is gated by
+  `bin/hugo-build` (validators + ratchet) plus the rendered scroll gate on
+  the edited pages. qtest already self-reports "no visual-affecting changes"
+  for these. Decide from the actual diff, not the task name: one inline SVG
+  or one template touch re-arms the full gate.
 - snap_diff compares against **git HEAD, not the working tree** (working tree
   = candidate, HEAD = baseline). Consequences: (a) an un-committed "accepted"
   baseline changes NOTHING - the run still compares against HEAD and fails
