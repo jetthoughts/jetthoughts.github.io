@@ -1,5 +1,17 @@
 # Bundle Update Log
 
+## 2026-07-31 (visual gate truth fix)
+
+* **Update**: [ci-gates](/build/ci-gates.md) - first CI baseline-record run
+  ([run 30629929407](https://github.com/jetthoughts/jetthoughts.github.io/actions/runs/30629929407))
+  failed with 2 root causes, both now fixed: (1) CI test builds lacked `--buildDrafts`, so the draft
+  codeblock-styles fixture 404'd and the codeblock tests failed on EVERY visual run (incl. the
+  new PR gate - noisy-by-construction); test.yml now sets `BUILD_DRAFTS: '1'` on its setup-hugo
+  step. (2) snap_diff `fail_if_new` hard-errors on missing baselines under ENV["CI"], so record
+  mode could never create a FIRST baseline for pages added since the last recording
+  (vibe_code_rescue); record mode now disables fail_if_new too. Re-record dispatch after merge
+  closes the pending linux/ re-baseline.
+
 ## 2026-07-31 (R2 Phase C)
 
 * **Update**: [test-gates](/build/test-gates.md) + [ci-gates](/build/ci-gates.md) - DevX R2
