@@ -4,6 +4,10 @@ description: "Complete ad channel budgets, account setup timing, B2B budget alte
 date: 2026-05-13
 draft: false
 slug: smoke-test-channel-guide
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: Smoke Test Channel Guide - Budgets, Setup, and Benchmarks, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 1.4 · Run the Smoke Test and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)** - this page contains the full channel budget table, ad-account setup timing, B2B budget alternatives, and conversion benchmark sources. Read the micro-lesson first; return here for detailed channel planning.

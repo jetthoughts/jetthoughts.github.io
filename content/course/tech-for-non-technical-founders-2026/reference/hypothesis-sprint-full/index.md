@@ -4,6 +4,10 @@ description: "The complete Click/Jake Knapp Foundation Sprint methodology for wr
 date: 2026-05-13
 draft: false
 slug: hypothesis-sprint-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: The 6-Step Founding Hypothesis Sprint - A Falsifiable One-Sentence Hypothesis, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)** - the full 6-step sprint, 4-lens scoring methodology, AI research prompts, and worked examples. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.

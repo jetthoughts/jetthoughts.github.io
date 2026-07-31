@@ -4,6 +4,10 @@ description: "The complete clickable-prototype reference - why interviews miss s
 date: 2026-05-18
 draft: false
 slug: prototype-build-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: The Clickable Prototype - Build, Sessions, and Scoring Detail, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)** - the extended theory, the screen-by-screen build, a filled worked example, the full verbatim session script, the combined Module 2 decision matrix, and the artifacts map. Read the micro-lesson first for the minimum effective path; return here for the deep walkthrough.

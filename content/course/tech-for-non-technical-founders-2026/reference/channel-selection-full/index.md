@@ -4,6 +4,10 @@ description: "The complete channel-selection reference - the commitment-rule pha
 date: 2026-05-13
 draft: false
 slug: channel-selection-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: Channel Selection and Scoring - The Full Fill-In Worksheet, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 5.2 · Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)** - the commitment-rule phase table, how to read channel signals from your interview transcripts, the 4-dimension channel-fit scoring, the 4-channel comparison, the Engineering-as-Marketing side door, and the full fill-in worksheet. Read the micro-lesson first for the commitment rule and the ≥9/12 score; return here when you want the full worksheet and the four-channel comparison.

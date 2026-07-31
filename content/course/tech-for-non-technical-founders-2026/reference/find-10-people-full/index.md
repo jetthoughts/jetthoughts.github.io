@@ -4,6 +4,10 @@ description: "Complete channel-by-channel research walk, search-string galleries
 date: 2026-05-18
 draft: false
 slug: find-10-people-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: Find 10 People - Research, Channels, and Outreach Detail, with a document card on the right"
 ---
 
 > **Reference companion to Lessons [2.3 · Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) and [2.4 · What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)** - this page carries the detail both micro-lessons point to: the full channel-by-channel research walk, search-string galleries, list filters, the bad-first-draft teardown, the message psychology, the research-panel fallback, and the slow-path variants. Read the micro-lessons first; return here when you need depth on one step.

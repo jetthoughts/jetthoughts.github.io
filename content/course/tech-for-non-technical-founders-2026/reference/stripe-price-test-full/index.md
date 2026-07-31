@@ -4,6 +4,10 @@ description: "Complete Stripe Payment Link setup walkthrough, visit-to-Stripe-cl
 date: 2026-05-18
 draft: false
 slug: stripe-price-test-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: Stripe Price Test Guide - Payment Links, Thresholds, Tracking, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 1.5 · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)** - this page contains the full Stripe setup walkthrough with gotchas, click-vs-completion tracking table, detailed threshold bands, button copy patterns, and the Claude copy-generation prompt. Read the micro-lesson first; return here for deep pricing methodology.
