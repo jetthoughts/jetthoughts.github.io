@@ -32,7 +32,7 @@ notes: |
 
 "Everyone I show it to says they'd love it."
 
-Every time I hear that line from a founder, I ask the same follow-up: of everyone who saw it, how many have used it since? The pause that follows is usually the whole answer.
+When a founder tells me that, I ask how many of those people have used it since. The pause that follows is usually the whole answer.
 
 Nobody in that circle is lying to hurt anyone. They are friends, and trashing a friend's idea over coffee feels mean, so people don't. The kinder someone is to you, the less their "I'd totally use that" tells you.
 

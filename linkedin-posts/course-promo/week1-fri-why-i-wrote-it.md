@@ -18,9 +18,10 @@ status: draft
 notes: |
   Opener archetype: dialogue-led. This is the week's ONE body-link post (Friday exception in
   docs/workflows/linkedin-course-promo-plan.md).
-  BLOCKING: the triggering anecdote ("Back in May a founder asked me what she should read") is a
-  SYNTHETIC PLACEHOLDER - Paul must replace it with the real conversation that triggered the course
-  before status: scheduled. Keep the shape: someone asked for one link, there wasn't one.
+  RESOLVED 2026-07-31: invented "Back in May" founder removed - opener now leads with the quoted
+  question itself (dialogue-led archetype restored), honest recurrence, no invented person.
+  Paul-flagged slop cadence ("Founders keep asking me...:") removed same day. OPTIONAL: restore
+  the real triggering conversation if one exists.
   Attachment is a real screenshot of the live course page, red circle on Free / No sign-up chips.
   Multi-critic review 2026-07-12 (slop score 0/10): trimmed "because the founders who need it most
   are watching their runway" - two critics read it as savior-flavored justification; "free with no
@@ -32,11 +33,10 @@ notes: |
   Collapsed the advice list into one spoken line ("most of it some version of..."), kept only the
   module list as the enumeration and made it plainer; "signed paid pilot, a real customer paying
   real money" -> "your first paying customer"; split the 34-word opener. Opener anecdote and the
-  "tell me where it loses you" close judged genuinely human - keep verbatim (anecdote still a
-  BLOCKING placeholder, see above).
+  "tell me where it loses you" close judged genuinely human - keep verbatim (anecdote de-fabricated 2026-07-31, see above).
 ---
 
-Back in May a founder asked me what she should read before spending any money on her idea. I didn't have one link to send her. What I had was scattered blog posts and the same advice I'd repeated across a dozen calls, most of it some version of "find out if anyone will pay before you build".
+"What should I read before I spend any money on my idea?" I get asked that a lot, and for years I never had one link to send back. What I had was scattered blog posts and the same advice repeated across a dozen calls, most of it boiling down to "find out if anyone will pay before you build".
 
 So I spent the last two months writing the whole thing down. Five short modules, from a raw idea to your first paying customer, with the templates included - the demand test, the interview scripts, the one-page brief, a no-code build you own from day one, and how to ask for that first payment.
 
