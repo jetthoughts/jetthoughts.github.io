@@ -34,11 +34,21 @@ mise install    # reads .mise.toml, installs exact pinned versions
 | Dependency | Why | macOS | Debian/Ubuntu |
 |---|---|---|---|
 | libvips | screenshot-diff tests (`gem "vips"`) | `brew install vips` | `apt-get install libvips42` |
-| Chrome/Chromium | Capybara system tests | Chrome.app | `apt-get install chromium` |
+| Chrome (pinned) | Capybara system tests | Chrome.app | `bin/setup-test-env` (pinned Chrome for Testing + fonts) |
 | lychee | link checks (`rake test:links`) | `brew install lychee` | [releases](https://github.com/lycheeverse/lychee/releases) |
 
-If Chrome is not on PATH (CI containers, custom installs), point the tests at
-a binary with `CHROME_BIN=/path/to/chrome`.
+On Linux, don't use a random distro Chromium for visual tests — install the
+pinned rendering stack instead:
+
+```bash
+bin/setup-test-env                       # Chrome for Testing + chromedriver
+                                         # (version: .dev/cft-version) + Noto
+                                         # fonts + .dev/fonts.conf
+eval "$(bin/setup-test-env --print-env)" # exports CHROME_BIN/CHROMEDRIVER_PATH
+```
+
+For any other custom Chrome location, `CHROME_BIN=/path/to/chrome` (and
+optionally `CHROMEDRIVER_PATH`) point the tests at it.
 
 **Locale**: the course validators and tests read UTF-8 content; use a UTF-8
 locale (`LANG=C.UTF-8`) in minimal containers where none is set.
@@ -67,8 +77,12 @@ bundle install   # Ruby gems (tests, validators, sync)
 Screenshot baselines live in `test/fixtures/screenshots/{macos,linux}/` and
 are **rewritten in place by every test run** (working tree = candidate,
 git HEAD = baseline). After a run, restore them unless you intend to update
-them: `git checkout -- test/fixtures/screenshots/`. Baselines are only
-comparable on the rendering stack that recorded them — macOS captures on a
-Mac, `linux/` captures inside the `bin/dtest` Docker image. A bare-metal
-Linux run against `linux/` baselines produces font-rendering diffs that are
-environmental, not regressions.
+them: `bin/rake test:screenshots:reset` (a guard refuses to start system
+tests on dirty baselines; bypass intentionally with
+`ALLOW_DIRTY_SCREENSHOTS=1`). Baselines are only comparable on the rendering
+stack that recorded them — macOS captures on a Mac; `linux/` captures on the
+pinned glibc stack (Chrome for Testing `.dev/cft-version` + `.dev/fonts.conf`
++ Noto fonts), which both the `bin/dtest` Docker image and
+`bin/setup-test-env` provide. A bare-metal Linux run through
+`bin/setup-test-env` IS comparable to `linux/` baselines — unpinned distro
+Chromium is not.

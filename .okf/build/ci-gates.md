@@ -1,10 +1,10 @@
 ---
 type: Playbook
 title: CI gates (GitHub Actions)
-description: PR CI runs Hugo build, unit tests, and a path-scoped broken-internal-link crawl (lychee). Visual regression is deliberately NOT in CI - cross-OS pixel diffs are unusable; it stays on the local bin/test + bin/dtest gates.
+description: PR CI runs Hugo build, unit tests, and a path-scoped broken-internal-link crawl (lychee). Visual regression is not in CI yet - the old cross-OS blocker is gone (pinned glibc stack); re-introduction planned as DevX R2 Phase B.
 tags: [ci, github-actions, testing, link-check]
 resource: .github/workflows/link-check.yml
-timestamp: 2026-07-30T00:00:00Z
+timestamp: 2026-07-31T00:00:00Z
 ---
 
 # What CI enforces on a PR
@@ -41,11 +41,13 @@ A CSS/test/docs-only PR does not trigger it. Non-PR events carry no `paths` filt
 
 Caveat: with native `paths`, a filtered-out PR reports NO check (not a passing one). Fine unless `link_check` becomes a *required* status check - then add a skip-reporting companion job.
 
-# Visual regression is intentionally NOT a CI gate
+# Visual regression is NOT a CI gate today - but the historical blocker is gone
 
-A CI screenshot job (`quick_test` + `bin/qtest`) was built and removed in PR #386. Cross-OS pixel diffing is unusable: baselines are captured on the docker gate (Alpine/musl, aarch64) but CI runs Ubuntu (glibc, x86_64), and text renders differently enough that measured divergence ran **3-28%** (mobile code blocks 0.28, plain content pages up to 0.21) - far above any tolerance that still catches a real regression. Loosening tolerance to absorb it makes the gate blind; a same-container approach or a third Ubuntu baseline set costs more than it returns given two mandatory same-OS gates already cover it.
+A CI screenshot job (`quick_test` + `bin/qtest`) was built and removed in PR #386. At the time the divergence was unfixable: baselines were captured on the then-Alpine/musl docker image while CI runs Ubuntu (glibc), and text rendered differently enough that measured divergence ran **3-28%** (mobile code blocks 0.28, plain content pages up to 0.21) - far above any tolerance that still catches a real regression.
 
-Visual regression therefore stays on the local gates in [test-gates.md](test-gates.md): `bin/test` (macOS) + `bin/dtest` (docker-linux). CI catches build breakage, unit failures, and broken internal links only.
+**That premise no longer holds (DevX Phase 4, 2026-07-30):** the `.dev/Dockerfile` image moved to Debian/glibc with a pinned Chrome for Testing (`.dev/cft-version`) + deterministic fontconfig (`.dev/fonts.conf`) + pinned Noto fonts, and `bin/setup-test-env` installs the identical stack on any bare-metal glibc host - including GitHub's Ubuntu runners. A CI job that provisions via `bin/setup-test-env` renders the same pixels as the `linux/` baselines. Re-introduction of a CI visual gate (report-only first, then blocking after a soak) is planned as DevX R2 Phase B.
+
+Until that lands, visual regression stays on the local gates in [test-gates.md](test-gates.md): `bin/test` (macOS) + `bin/dtest` (docker-linux). CI catches build breakage, unit failures, and broken internal links only.
 
 # libvips gotcha (if a CI job ever needs ruby-vips again)
 

@@ -1,5 +1,21 @@
 # Bundle Update Log
 
+## 2026-07-31 (R2 Phase A)
+
+* **Update**: [ci-gates](/build/ci-gates.md) + [test-gates](/build/test-gates.md) - DevX R2
+  Phase A: bin/test, bin/dev, bin/build, bin/hive shebangs fixed sh→bash (dash exits 2 on
+  `set -o pipefail` before line one - the Phase 1 sweep caught only 2 of 6 scripts); NEW guard
+  `test/unit/bin_scripts_test.rb` fails CI on any sh-shebang script using pipefail/-E, and it
+  caught bin/hive on its first run. `bin/dtest` arg bug fixed (`t "$@"` replaced the container
+  command with a bare .rb path; now `t bin/test "$@"`, mirroring dtest-all). `bin/hugo-dev`
+  retired - it never exported HUGO_ENVIRONMENT so `rake dev` paid the full production
+  PurgeCSS+cssnano chain per rebuild; `rake dev` now runs `bin/dev`. qtest: `privacy-policy`
+  critical-CSS key added (was a hard abort), dead pages/careers test branch removed, dirty
+  guard now honors ALLOW_DIRTY_SCREENSHOTS and points at the reset task. ci-gates concept
+  updated: the Alpine/musl premise for excluding visual CI is obsolete (pinned glibc stack);
+  R2 Phase B plans the re-introduction. README/SETUP truth pass #2 (broken doc links,
+  fictional coverage section, dead SELENIUM_BROWSER env, setup-test-env now documented).
+
 ## 2026-07-31
 
 * **Update**: [test-gates](/build/test-gates.md) - new leading caveat: snap_diff
