@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" font-family='"Caveat", "Patrick Hand", "Comic Sans MS", cursive'>
+  <defs>
+    <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+  <rect width="980" height="640" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="490" y="40" font-size="30" text-anchor="middle" fill="#1a1a1a" font-weight="bold">From channels to 10 booked calls</text>
+  <text x="490" y="66" font-size="19" text-anchor="middle" fill="#555">The list narrows at every step - you want signal, not volume</text>
+
+  <!-- Stage 1: channels -->
+  <g filter="url(#rough)">
+    <rect x="50" y="90" width="600" height="90" rx="10" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  </g>
+  <text x="350" y="122" font-size="21" text-anchor="middle" fill="#cc342d" font-weight="bold">Search the channels</text>
+  <text x="350" y="150" font-size="17" text-anchor="middle" fill="#1a1a1a">Reddit - LinkedIn - Slack / Discord - G2 / Capterra - X - referrals</text>
+
+  <!-- Arrow 1 -->
+  <line x1="350" y1="183" x2="350" y2="222" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="365" y="210" font-size="16" fill="#1a1a1a" font-style="italic">copy complaints verbatim</text>
+
+  <!-- Stage 2: 30 names -->
+  <g filter="url(#rough)">
+    <rect x="100" y="227" width="500" height="80" rx="10" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  </g>
+  <text x="350" y="259" font-size="21" text-anchor="middle" fill="#cc342d" font-weight="bold">30 real sentences + 30 named people</text>
+  <text x="350" y="285" font-size="16" text-anchor="middle" fill="#555" font-style="italic">The exact wording becomes your subject lines</text>
+
+  <!-- Arrow 2 -->
+  <line x1="350" y1="310" x2="350" y2="349" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Stage 3: filter -->
+  <g filter="url(#rough)">
+    <rect x="150" y="354" width="400" height="90" rx="10" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  </g>
+  <text x="350" y="386" font-size="21" text-anchor="middle" fill="#cc342d" font-weight="bold">Filter on six dimensions</text>
+  <text x="350" y="412" font-size="16" text-anchor="middle" fill="#1a1a1a">Buyer OR user - one industry - one timezone</text>
+  <text x="350" y="432" font-size="15" text-anchor="middle" fill="#555" font-style="italic">Drop anyone outside the band</text>
+
+  <!-- Arrow 3 -->
+  <line x1="350" y1="447" x2="350" y2="486" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="365" y="474" font-size="16" fill="#1a1a1a" font-style="italic">3-message sequence (Lesson 2.4)</text>
+
+  <!-- Stage 4: booked calls -->
+  <g filter="url(#rough)">
+    <rect x="200" y="491" width="300" height="70" rx="10" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5"/>
+  </g>
+  <text x="350" y="522" font-size="21" text-anchor="middle" fill="#2e7d32" font-weight="bold">10 booked interviewees</text>
+  <text x="350" y="547" font-size="16" text-anchor="middle" fill="#555" font-style="italic">Score each call within 5 minutes</text>
+
+  <!-- Side track: smoke test -->
+  <g filter="url(#rough)">
+    <rect x="690" y="227" width="250" height="105" rx="10" fill="#fbe9ff" stroke="#8e24aa" stroke-width="2.5"/>
+  </g>
+  <text x="815" y="257" font-size="19" text-anchor="middle" fill="#8e24aa" font-weight="bold">Parallel track</text>
+  <text x="815" y="282" font-size="15" text-anchor="middle" fill="#1a1a1a">Smoke-test page - waitlist</text>
+  <text x="815" y="302" font-size="15" text-anchor="middle" fill="#1a1a1a">signups are the warmest opener</text>
+  <path d="M 815 336 L 815 525 L 505 525" fill="none" stroke="#8e24aa" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+
+  <!-- Side track: research panel -->
+  <g filter="url(#rough)">
+    <rect x="690" y="380" width="250" height="115" rx="10" fill="#fbe9ff" stroke="#8e24aa" stroke-width="2.5"/>
+  </g>
+  <text x="815" y="410" font-size="19" text-anchor="middle" fill="#8e24aa" font-weight="bold">Paid fallback</text>
+  <text x="815" y="435" font-size="15" text-anchor="middle" fill="#1a1a1a">Research panel - only when</text>
+  <text x="815" y="455" font-size="15" text-anchor="middle" fill="#1a1a1a">your ICP can't be reached cold</text>
+  <text x="815" y="478" font-size="14" text-anchor="middle" fill="#555" font-style="italic">User Interviews / Respondent</text>
+
+  <!-- Footnote -->
+  <text x="490" y="600" font-size="19" text-anchor="middle" fill="#a3621e" font-style="italic">Gate: fewer than 7 of 10 calls scoring 7+ means the problem is too weak for this ICP -</text>
+  <text x="490" y="623" font-size="19" text-anchor="middle" fill="#a3621e" font-style="italic">re-evaluate the ICP or the framing before booking another 10.</text>
+</svg>
