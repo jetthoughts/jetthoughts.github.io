@@ -18,11 +18,11 @@ cover_image_alt: "Pull request list with zero reviewers highlighted, next to a f
 canonical_url: "https://jetthoughts.com/blog/cheap-developers-expensive-without-cto-review/"
 ---
 
-Hiring a cheap developer is a reasonable decision. Hiring a cheap developer whose work nobody senior ever reads is how cheap developers become expensive mistakes - the kind you find out about in month four, when something breaks and the person who built it can't explain why.
+The cheap developer isn't the mistake. The mistake is that nobody senior ever reads what they merge - and you find that out in month four, when something breaks and the person who built it can't explain why.
 
 Maybe you hired a computer science student, or a freelancer a friend vouched for. The demos look fine, the invoices are small, and some quiet evening you catch yourself wondering whether the code behind the demo is as good as the price.
 
-This post gives you a 20-minute check you can run on your own project today, without reading a single line of code. After that: what senior review actually catches, and how to buy it without paying a full-time CTO (chief technology officer) salary.
+There is a 20-minute check you can run on the project today, without reading a single line of code - open the pull request list and see who approved the last ten changes.
 
 ## The rate you compared isn't the cost you're paying
 
@@ -40,7 +40,7 @@ You can check whether review is happening without understanding any code. Open y
 
 Two people per pull request is the healthy shape. You want to see approvals from someone other than the author, plus a few comments per change - and if you spot the occasional "changes requested," even better, because that means a reader pushed back and the code improved before it shipped. The unreviewed shape is just as recognizable: the author approved and merged their own work with zero comments anywhere, or there are no pull requests at all because changes go straight in.
 
-This isn't an exotic standard. [Google's published engineering guide](https://google.github.io/eng-practices/review/) has every change read by someone other than its author before it lands, and a [Microsoft Research study of code review](https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/) found teams use it to spread knowledge of the codebase (all the code that makes up your product) as much as to catch defects.
+This isn't an exotic standard. [Google's published engineering guide](https://google.github.io/eng-practices/review/) expects every change to be read by someone other than its author before it lands, and a [Microsoft Research study of code review](https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/) found teams use it to spread knowledge of the codebase (all the code that makes up your product) as much as to catch defects.
 
 GitHub will even [enforce review with a setting](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) - a checkbox that blocks merging until someone approves.
 
@@ -58,9 +58,9 @@ You can screen for the review gap before signing anyone. Ask a candidate, "who r
 
 ## Buying senior judgment without the senior salary
 
-A fractional CTO gives you a few hours a week of an experienced engineer's judgment - reviewing pull requests and vetoing risky designs - without the full-time salary. Search for "fractional CTO code review" and you'll find exactly this arrangement: keep the affordable developer for the building, add a senior reader for the judgment calls. A review retainer with an agency gets you the same result under a different contract.
+A fractional CTO (chief technology officer) gives you a few hours a week of an experienced engineer's judgment - reviewing pull requests and vetoing risky designs - without the full-time salary. Search for "fractional CTO code review" and you'll find exactly this arrangement: keep the affordable developer for the building, add a senior reader for the judgment calls. A review retainer with an agency gets you the same result under a different contract.
 
-Here's what the setup costs you, honestly. Every change now waits for a reviewer, so shipping slows by a day or two per change, and your cheap developer's rate is no longer the whole bill. Review also can't rescue foundational structure decisions that were wrong from the start - a reviewer who arrives in month six inherits choices they'd have vetoed in week one, so this works best when the reader is in place before the building starts.
+The setup has real costs. Every change now waits for a reviewer, so shipping typically slows by a day or two per change, and your cheap developer's rate is no longer the whole bill. Review also can't rescue foundational structure decisions that were wrong from the start - a reviewer who arrives in month six inherits choices they'd have vetoed in week one, so this works best when the reader is in place before the building starts.
 
 "But my developer will feel policed," you say. Good developers feel the opposite - review is how juniors get senior, and the ones who bristle at a second reader are telling you something. If the resistance goes as far as stalling on repository access, check it against the [dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/), because that pattern rarely travels alone.
 
@@ -83,5 +83,5 @@ For more on watching a team you can't technically evaluate, see [how to know wha
 - [Google Engineering Practices: How to do a code review](https://google.github.io/eng-practices/review/)
 - [Microsoft Research: Expectations, Outcomes, and Challenges of Modern Code Review](https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/)
 - [GitHub Docs: About protected branches and required reviews](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
-- [SmartBear: State of Code Review](https://smartbear.com/state-of-code-review/)
+- [SmartBear: State of Code Review](https://smartbear.com/state-of-software-quality/code-review/)
 - [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
