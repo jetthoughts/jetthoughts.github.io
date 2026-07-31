@@ -29,11 +29,16 @@
    the lever); one genuine gap fixed: /course/ section had NO _index.md so
    its snippet was site boilerplate - created with course-specific
    description. Runbook 20.12 is now fully complete.
-5. **Wave E - Sprint D content-gap batch** (un-gated): echo-chamber warning
-   2.3/5.3, Wizard-of-Oz path 4.3, Loom outreach 5.2/5.5,
-   Engineering-as-Marketing 5.2, Operating Kit 5 remaining templates,
-   manual-minimum audit 5.3/5.4. ("Whatever pilot recordings surface" stays
-   deferred - no recordings exist.)
+5. ✅ **Wave E SHIPPED** (PR #410, 2026-07-31): echo-chamber callouts in
+   2.3/5.3 + Concierge MVP path in 4.3 (fixes the glossary's dangling 4.3
+   pointer). 4 items closed done-as-stale with evidence: Loom already
+   canonical in 5.4/5.5; EaM deliberately reference-tier per 40.19;
+   manual-minimum paths already stated everywhere. **Operating Kit "5
+   remaining templates" CLOSED as invalid** (coordinator call, 2026-07-31,
+   per Paul's decide-don't-wait rule): no authoritative list exists in any
+   doc, and the kit page's reviewed framing says all 6 components are live
+   at their source lessons. Reopen ONLY if GA4 course_pdf_download data
+   shows demand for a specific missing template.
 6. **Wave F - Phase 2 mechanics** (un-gated): Module-2 applied checkpoint
    ("score this practice interview", assessment-validity review before ship);
    Founder OS pack completion artifact (private, HTML->Chrome pipeline);
