@@ -48,6 +48,8 @@ Lenny Rachitsky asked today's fastest-growing B2B companies (Figma, Stripe, Slac
 
 You are not asking friends to buy. You are asking them to be first to try something that solves a problem they already have, at a steep discount, while you fix the rough edges they catch.
 
+> **A friendly reply is not a validation signal.** People who know you will answer warmly whether or not the problem is real. The problem test already happened in [Module 2](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), with strangers who had no reason to be nice to you. On this list you are selling, so only two replies count as progress: a booked demo and a paid deposit. Log "sounds great, let me know when it launches" as a maybe.
+
 Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship strength, Last contact date. Fill 50 rows in one sitting before you send anything.
 
 | Bucket | How many | Definition |

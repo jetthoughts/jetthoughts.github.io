@@ -48,6 +48,8 @@ Three tools do the whole self-serve build, and each one has exactly one job. The
 
 If you completed Modules 1-3, your default Module 4 path is to build it yourself with Lovable (an AI app builder that turns a plain-English prompt into a working web app) + Supabase (managed database + login system) + Stripe (the service that charges the card). Hiring is a ceiling-signal trigger covered in the [supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/), not a parallel choice. You will not write code.
 
+> **Not ready to commit to the build? Run a Concierge MVP first.** Fake the automation by hand: collect customer requests through a [Tally](https://tally.so) form (a form builder), route them into an [Airtable](https://airtable.com) base (a spreadsheet-database hybrid) with [Zapier](https://zapier.com) or [Make](https://www.make.com) (tools that pass data between apps automatically), and do the work behind the scenes yourself. Your customer experiences what looks like a working product while you find out whether anyone wants it, before you spend weeks in Lovable. This is the "Wizard of Oz" pattern from [the course overview](/course/tech-for-non-technical-founders-2026/how-this-course-works/); when requests outgrow your hands, come back and build the real stack below.
+
 ## Three tools, three jobs
 
 | Tool | Job | Cost |

@@ -116,6 +116,8 @@ Ran the research prompt back in [Lesson 1.2](/course/tech-for-non-technical-foun
 
 When you're done you should have 30 real sentences and 30 named people. Don't paraphrase - the exact wording is the point, and it becomes your subject lines in Part 2. The per-channel walk (Reddit, LinkedIn, G2, Slack, Twitter, personal network), the Reddit karma rules, and the keyword-variation gallery live in the [full reference](/course/tech-for-non-technical-founders-2026/reference/find-10-people-full/).
 
+> **Watch for the echo chamber.** If your list starts filling with friends and fellow founders from startup communities, stop and go back to the search strings. People who know you will say the idea sounds great, because being nice costs them nothing. A real signal comes from a stranger who describes the problem in their own words and has no reason to spare your feelings.
+
 ## Build a list of 30 specific people
 
 Turn the 30 sentences into 30 names. Open each thread you saved, click each useful username, and copy four things into a spreadsheet: **Name** (theirs, not their company), **role + company** (one cell), **the post you'll reference** (paste the URL), and **one specific line they wrote** (the phrase you'll quote back).
