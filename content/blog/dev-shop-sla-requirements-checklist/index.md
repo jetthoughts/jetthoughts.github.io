@@ -2,7 +2,7 @@
 title: "What SLAs to Require From Your Dev Shop"
 description: "Five SLA requirements for your dev shop contract: response times, fix windows, uptime, a definition of done, and a penalty clause that actually bites."
 date: 2026-07-31
-draft: true
+draft: false
 author: "JetThoughts Team"
 slug: "dev-shop-sla-requirements-checklist"
 keywords: "software development SLA requirements, dev shop service level agreement, software vendor SLA checklist"

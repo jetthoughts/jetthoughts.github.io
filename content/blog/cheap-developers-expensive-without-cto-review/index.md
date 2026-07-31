@@ -3,7 +3,7 @@ title: "Cheap Developers Are Expensive Without Review"
 description: "Cheap developers turn into expensive mistakes when nobody senior reads their code. A 20-minute pull request check plus ways to add review without a CTO salary."
 date: 2026-07-31T08:00:00+00:00
 edited: 2026-07-31T08:00:00+00:00
-draft: true
+draft: false
 author: "JetThoughts Team"
 slug: "cheap-developers-expensive-without-cto-review"
 keywords: "cheap developer expensive mistakes, student freelancer developer risk, fractional cto code review"

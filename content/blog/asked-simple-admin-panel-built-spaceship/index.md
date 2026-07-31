@@ -2,7 +2,7 @@
 title: "Asked for an Admin Panel, Got a Spaceship"
 description: "You asked for a simple admin panel and got an over-engineered MVP. The feature-noun check to run on your own spec, and the 90-minute rewrite that stops it."
 date: 2026-07-31
-draft: true
+draft: false
 author: "JetThoughts Team"
 slug: "asked-simple-admin-panel-built-spaceship"
 keywords: "over engineered mvp founder, job stories vs user stories, dev shop scope creep"
