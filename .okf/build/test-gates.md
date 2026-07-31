@@ -66,7 +66,7 @@ extend it when adding components or critical files. The macOS full suite remains
   TEST_SERVER_PORT=1314). In record mode this silently saves Chrome
   error pages as baselines - brightness-audit re-records before
   committing (identical mean brightness across different pages = black
-  or error frames).
+  or error frames). Evidence + verification transcript: PR #424.
 - Visual failures are commit blockers, not warnings. Either fix the
   regression or update BOTH baseline dirs (macos/ and linux/) in the same
   commit with the intentional change.

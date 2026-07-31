@@ -372,7 +372,7 @@ covered) + module-end checklists M1/M2/M3/M5 + clean interaction audits.
 All wave branches cleaned. REMAINING: M5c reference-tier visuals + ~19
 covers, G2.2 SERP spot-check, post-deploy GA4 re-verification.
 
-## 2026-07-31 - bin/test port bug root-caused; restore-on-green baselines
+## 2026-07-31 - bin/test port bug root-caused; restore-on-green baselines (PR #424)
 
 Host bin/test failed 49/49 screenshots while bin/dtest stayed green. Root
 cause: the R2 fast path built with baseURL=http://localhost:1314 while
@@ -386,3 +386,7 @@ after every passing dtest. Also: dtest reuses warm builds. Re-recorded
 12 genuinely-changed macos baselines (record mode had briefly saved
 Chrome ERR_CONNECTION_REFUSED pages as baselines - caught by brightness
 audit before commit). test-gates.md updated with both caveats.
+Evidence: PR #424 (fix + verification transcript: host bin/test 34 runs
+0 failures in 5:01 vs 29F+2E in ~11min before; bin/dtest 34 runs 0
+failures; forced-red run preserved candidates). Code: bin/build-if-stale
+(BASE_URL default), bin/test / bin/dtest / bin/qtest (restore-on-green).
