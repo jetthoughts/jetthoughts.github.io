@@ -4,6 +4,10 @@ description: "The complete Mom Test reference - the five past-behavior questions
 date: 2026-05-13
 draft: false
 slug: mom-test-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: The Mom Test Technique - Five Past-Behavior Questions in Full, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 2.1 · The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)** - the full pass/fail walkthrough for each of the five questions, the interview flow, the score-and-recover routine, and the complete further-reading set. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.

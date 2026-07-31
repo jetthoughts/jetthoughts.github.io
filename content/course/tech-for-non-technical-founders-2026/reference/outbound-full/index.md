@@ -4,6 +4,10 @@ description: "The complete cold-outbound reference - Product Hunt vs Indie Hacke
 date: 2026-05-13
 draft: false
 slug: outbound-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: Cold Outbound Without a Sales Team - Scripts, Cadence, and Funnel Math, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 5.7 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)** - the Product Hunt data, the full tooling stack, domain warmup, the funnel math, filter and personalization detail, all three script variants, the stage cadence, and the no-reply diagnostic. Read the micro-lesson first for the six-stage pipeline and the four-line script; return here when your batch returns no replies and you need the diagnostic.

@@ -4,6 +4,10 @@ description: "The complete build guide behind Lesson 4.4 - the Lovable prompts, 
 date: 2026-05-18
 draft: false
 slug: mvp-build-phases-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: The Self-Serve MVP Build, Phase by Phase - Lovable, Supabase, and Stripe in Full, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 4.4 · The Self-Serve MVP Stack: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)** - the step-by-step version of the four build phases, plus the onramp that hands you off to Module 5. Read the micro-lesson first for the minimum effective path; return here when you want the full mechanics for the phase you are on.
