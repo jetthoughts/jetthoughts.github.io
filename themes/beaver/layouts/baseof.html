@@ -11,7 +11,12 @@
     {{ block "header" . }}{{ end }}
 
     {{ partialCached "page/favicons.html" . "favicons" }}
+    {{/* Analytics (GA4 + Clarity) load ONLY on the real production host -
+         local dev (localhost:1313), test builds (localhost:1314), and any
+         other baseURL never inject tracking. */}}
+    {{ if strings.Contains site.BaseURL "jetthoughts.com" }}
     {{ partial "page/analytics.html" . }}
+    {{ end }}
     {{ $favicon := resources.Get "/img/favicon/favicon.ico" | fingerprint "md5" }}
     <link rel="shortcut icon" href="{{ $favicon.Permalink }}" />
     <meta name="msapplication-TileColor" content="#00aba9" />

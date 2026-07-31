@@ -1,9 +1,9 @@
 ---
 type: Playbook
 title: Test gates and when they block commits
-description: bin/qtest --changed per micro-commit; bin/rake test:critical + bin/test AND bin/dtest at milestones and before every PR for themes/, layouts/, or CSS changes.
+description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
-timestamp: 2026-07-30T00:00:00Z
+timestamp: 2026-07-31T00:00:00Z
 ---
 
 # The suites
@@ -12,8 +12,8 @@ timestamp: 2026-07-30T00:00:00Z
 |---|---|---|
 | `bin/qtest --changed` | Scoped visual gate: builds once (~11s), runs ONLY affected pages' desktop+mobile screenshot tests (~2.5s each) + orphan guard + color-system check; site-wide/unmapped files auto-escalate to the full critical suite | Per micro-commit inside a sprint (~25-60s); NOT a substitute for the milestone/PR gates below |
 | `bin/rake test:critical` | Critical Minitest suite (46 runs / 84 screenshots) | At component/task milestones and before every commit outside sprint micro-commit trains |
-| `bin/test` | Visual regression on macOS host (baselines in `test/fixtures/screenshots/macos/`) | Any edit to `themes/`, `layouts/`, `*.css`, or post body HTML - at minimum per component milestone + branch head before PR |
-| `bin/dtest` | Same suite in Linux/Docker (baselines in `linux/`) - CI runs Linux | Same trigger as bin/test; skipping it ships green-locally / red-in-CI |
+| `bin/test` | Visual regression on macOS host (baselines in `test/fixtures/screenshots/macos/`) | ONCE at PR prep (branch head, before `gh pr create`) or on Paul's explicit confirmation - NOT per commit (Paul 2026-07-31: qtest is the routine gate) |
+| `bin/dtest` | Same suite in Linux/Docker (baselines in `linux/`) - CI runs Linux | Same trigger as bin/test; a PR must never open without this leg (green-locally / red-in-CI otherwise) |
 
 `bin/qtest` page keys mirror `themes/beaver/assets/css/pages/*.css` basenames;
 the changed-file→page map lives in the script itself - extend it when adding
@@ -22,6 +22,22 @@ components. The macOS full suite remains the only dedup-trap catcher
 
 # Hard-won caveats
 
+- snap_diff compares against **git HEAD, not the working tree** (working tree
+  = candidate, HEAD = baseline). Consequences: (a) an un-committed "accepted"
+  baseline changes NOTHING - the run still compares against HEAD and fails
+  identically; (b) the diagnosis tell for a stale committed baseline is an
+  IDENTICAL difference_level across runs (a flaky render would vary);
+  (c) a merged PR that shifts layout without re-recording baselines makes
+  every later local run red until someone re-records (2026-07-31: #405's
+  28px mobile hero gap shipped with a commit-message note instead of updated
+  baselines - cost a full false "bistable render" investigation). Re-record =
+  run the suite, keep the rewritten PNG, COMMIT it; only then can a rerun go
+  green.
+- `ALLOW_DIRTY_SCREENSHOTS=1` does NOT propagate into the bin/dtest Docker
+  container - the dirty-fixtures guard aborts inside the container with only
+  "Tasks: TOP => test:critical" in the tail (2026-07-31: cost two aborted-run
+  investigations). With dtest the only path is the designed one: COMMIT the
+  intended baselines first, then run on a clean tree.
 - The snapshot tool REWRITES baselines when a run passes. Never edit CSS
   while a suite is running - a raced run once saved a corrupt baseline
   missing its hero image. Catch with pixel-compare, restore via `git checkout`.

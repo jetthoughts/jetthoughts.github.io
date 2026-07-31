@@ -4,54 +4,47 @@
 
 **Project ID**: 2605-tech-for-non-technical-founders
 **Created**: 2026-05-12
-**Last updated**: 2026-07-30 (strategy review vs Product Compass + Lenny corpus: Wave C1 completion mechanics added, media backlog reprioritized by delta audit)
-**Status**: 🟢 Course LIVE and CONTENT-COMPLETE on v2 · all 5 modules migrated (PRs #345/#351/#352/#353, deployed via #356) · review-clean (40.15 whole-course, 40.17 journey walk, 40.19 premium 54/60) · instrumented (GA4 funnel + Clarity) · 🔄 Active: external validation pilot + media modernization
+**Last updated**: 2026-07-30 EOD (9 PRs merged in one day: completion mechanics C1, media waves M1-M5a/b, growth waves G1-G3 per the 20.12 runbook, GA4 consent root-cause fix)
+**Status**: 🟢 Course LIVE and CONTENT-COMPLETE on v2 · all 5 modules migrated (PRs #345/#351/#352/#353, deployed via #356) · review-clean (40.15/40.17/40.19) · instrumented (GA4-only - Clarity waived 2026-07-30; consent fix in #402 unmutes the funnel) · completion mechanics + media waves + growth waves shipped · 🔄 Active: external validation pilot (recruitment = the one human item)
 **Owner**: JT content team
 **Parent**: 2510-seo-content-strategy (extends, does not replace)
 
 ---
 
-## 📍 WHERE WE ARE + NEXT ACTIONS (2026-07-26) — READ THIS FIRST
+## 📍 WHERE WE ARE + NEXT ACTIONS (2026-07-30 EOD) — READ THIS FIRST
 
-**Stage: the course is DONE as an artifact; the open question is whether real
-readers complete it.** All 5 modules live on the v2 micro-lesson template
-(25 lessons + 5 Mia walkthroughs + quickstart/FAQ/glossary + ~30 companions),
-every review round closed, funnel instrumentation (GA4 events + Clarity) live,
-PDF pipeline + 5 printable worksheets shipped, and the 2026-07-26 media pilot
-added 7 hand-drawn SVGs + 2 new template pages (interview-scorecard,
-pre-launch-checklist) with covers. Building more content is NOT the priority;
+**Stage: the course is DONE as an artifact AND polished for completion; the
+open question is whether real readers complete it.** All 5 modules live on
+the v2 micro-lesson template (25 lessons + 5 Mia walkthroughs +
+quickstart/FAQ/glossary + ~30 companions), every review round closed.
+2026-07-30 shipped NINE PRs in one day: Wave C1 completion mechanics (1.1
+two-sitting split, first-win path, trust changelog), media waves M1-M5a/b
+(hand-drawn SVGs for every visual-less core + P2 lesson, decision-tree +
+region-map for the mis-titled pages, 3 more printable PDFs incl. the
+landscape channel-fit canvas, module-end checklists M1/M2/M3/M5), and growth
+waves G1-G3 per `20-29-strategy/20.12-course-growth-agent-runbook.md`
+(ungated-by-design docs truth sweep, GA4 consent root-cause fix + beacon,
+copy-link referral button, 10 blog->course deep links, 16 pilot-gated
+campaign briefs). Standing decisions: Clarity WAIVED (GA4-only), fully
+ungated / NO mail list, no selling, stealth ICP (no public share mechanics),
+public certificate rejected. Building more content is NOT the priority;
 validating with real Sams is.
 
 **Next high-overview actions, in order:**
 
-1. **External validation pilot (P0, Sprint A #2)** - recruit 3-5 real
-   idea-stage founders, watch Clarity recordings, find where they stall.
-   Kit: `40-49-review/40.18-*pilot-kit*`. Blocked on Paul's desk only
-   (Clarity project + consent posture + budget + calendar); everything else
-   is agent-prepped. This gates almost everything downstream.
-2. **Media + completion waves (P1, agent-doable in parallel with
-   recruitment lag)** - order M1 -> C1 -> M2 -> M3 -> M4 in TASK-TRACKER:
-   Wave M1 = SVGs for the 4 core lessons with zero inline visual; **NEW Wave
-   C1 (2026-07-30) = completion mechanics** - 20-min first-win path on
-   overview/1.1, tool-stack tables deferred to just-in-time,
-   implementation-intention lines, Clarity-gated localStorage progress
-   tracker, living-document trust line. Then decision-aid retrofits (now
-   incl. the mis-titled salvage-vs-rebuild "tree" + where-to-hire "map" and
-   the 4 worst word-walls), printable PDFs (scaffolded: filled Mia example
-   first, never blank forms), mobile-legibility investigation.
-   Definition-of-done includes the visual scroll gate + Comic Sans text
-   budgets + words-per-visual <= ~600.
-   Rationale: 2026-07-30 review of Product Compass courses + 57-source
-   learning-research corpus + Sam/pedagogy persona synthesis - the
-   completion gap is progress mechanics, not media. Public certificate
-   REJECTED (stealth-stage ICP won't share); private Founder OS pack is the
-   Phase-2 completion artifact, gated on pilot demand.
-3. **Sprint D demand-driven fixes** - only what pilot recordings surface
-   (plus the pre-groomed 10.08 content-gap batch, the reference-tier
-   visual/cover gap, and the Module-2 applied-checkpoint experiment). Do not
-   guess; the pilot data decides.
-4. **Distribution prep** - blog funnel per 2510/20.07 + LinkedIn campaign.
-   Gated on the pilot confirming the course converts readers, not before.
+1. **External validation pilot (P0)** - recruit 3-5 real idea-stage
+   founders per the `40-49-review/40.18-*pilot-kit*`. The ONLY human item:
+   recruitment + consent posture + budget + calendar. Stall diagnosis =
+   GA4 funnel drop-offs + founder debriefs (no session recordings - Clarity
+   waived). This gates everything in item 3.
+2. **Remaining agent queue (not gated)** - see TASK-TRACKER "Open queue":
+   M5c reference-tier visuals (5 chapters), ~19-cover batch, G2.2 SERP
+   spot-check, post-deploy GA4 re-verification (#402 must show 2xx collect
+   hits + course_pdf_download / course_copy_share_link landing).
+3. **Pilot-gated (do not start)** - campaign-brief execution (16 briefs
+   ready), Sprint D content-gap batch, Phase 2 (Module-2 applied checkpoint,
+   private Founder OS pack, localStorage progress tracker - deferred by 2-1
+   vote), reader->JT-lead bridge.
 
 **For cold agents:** route via `PROJECT-INDEX.md`; live queue is
 `TASK-TRACKER.md` (top two sections); media inventory is

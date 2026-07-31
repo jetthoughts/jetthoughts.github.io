@@ -1,8 +1,50 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-07-30 (strategy review vs Product Compass courses + Lenny corpus + 3-persona synthesis: NEW Wave C1 completion mechanics; delta-audit reprioritizations in M2/M5; DoD rules 6-7 added; public certificate REJECTED for stealth-stage ICP, private Founder OS pack instead. Previous: media pilot shipped + repaired: 7 SVGs on 4 pages, 2 new template pages with covers, 40.20 gap audit. Media modernization backlog groomed below. Previous: PR #356 MERGED as ad1cb19c, deployed, production verified. It carried: Sprints A+B+C [GA4 funnel events + Clarity hook + pilot kit 40.18; walkthrough heroes/artifact trails + TL;DR accent + 21 cover badges; PDF pipeline + 5 printable worksheets], the 3-round PDF/SVG visual loop [43 SVGs + 61 pages exhaustively inspected, 13 SVGs repaired], the 8-dimension premium swarm review 40.19 [54/60 PREMIUM; all sub-premium findings fixed], and the reflection round [old-spine 6.x title ghosts, AI-block label leaks x4, org-chart mermaid -> decision table, Good/Bad callout accents + cascade bug].)
+**Last Updated**: 2026-07-30 EOD (NINE PRs merged in one day: #390 C1 completion mechanics · #392/#394 M1 SVGs · #395 M2 decision aids · #396 M3 PDFs · #398 G3 campaign briefs · #402 GA4 root-cause fix + copy-link button · #404 blog->course links · #406 M5 SVGs+checklists. Media waves M1-M5a/b COMPLETE, M4 closed-with-ceiling; growth waves G1-G3 shipped per 20.12 runbook. Decisions: Clarity waived (GA4-only), fully ungated / NO mail list, analytics consent granted by default, certificate rejected for stealth ICP. Earlier same day: strategy review vs Product Compass + Lenny corpus + 3-persona synthesis; DoD rules 6-7. Previous: media pilot shipped + repaired: 7 SVGs on 4 pages, 2 new template pages with covers, 40.20 gap audit. Media modernization backlog groomed below. Previous: PR #356 MERGED as ad1cb19c, deployed, production verified. It carried: Sprints A+B+C [GA4 funnel events + Clarity hook + pilot kit 40.18; walkthrough heroes/artifact trails + TL;DR accent + 21 cover badges; PDF pipeline + 5 printable worksheets], the 3-round PDF/SVG visual loop [43 SVGs + 61 pages exhaustively inspected, 13 SVGs repaired], the 8-dimension premium swarm review 40.19 [54/60 PREMIUM; all sub-premium findings fixed], and the reflection round [old-spine 6.x title ghosts, AI-block label leaks x4, org-chart mermaid -> decision table, Good/Bad callout accents + cascade bug].)
 
-## Active Phase: external validation pilot (real Sams, kit at 40-49-review/40.18-external-validation-pilot-kit.md; Paul actions: Clarity project + param, consent posture, budget, calendar) → distribution prep
+## Active Phase: full backlog execution — PILOT GATE REMOVED (Paul, 2026-07-31: "plan all pilot-gated backlog, no need to wait for pilot recruitment"). Pilot recruitment stays on Paul's desk (kit 40.18) but blocks nothing. Measurement: GA4 consent fix shipped in #402; Clarity CONFIGURED (project xum05dgnec, waiver superseded); analytics excluded from local/test builds via baseURL gate.
+
+## Open queue (2026-07-31 - what a cold session picks up next, in order)
+
+0. **Ship branch `course-clarity-config`** (IN FLIGHT): Clarity param +
+   localhost guard + baseURL analytics gate + this docs sync + accepted mobile
+   homepage baselines (macOS AND Linux in same commit - theme change ⇒
+   bin/test + bin/dtest). One PR, CI green, squash-merge.
+1. **Wave A - post-deploy analytics verification** (browser): production
+   collect hits 2xx with consent granted; course_pdf_download +
+   course_copy_share_link land; Clarity loads on jetthoughts.com and NOT on
+   localhost. Fill both open tables in runbook 20.12. Outranks visuals -
+   Wave G traffic is pointless without verified measurement.
+2. **Wave B - M5c reference-tier visuals**: one informational SVG each for the
+   5 reference/*-full chapters with zero visuals (mvp-build-phases-full,
+   stack-tools-full, find-10-people-full, persona-rehearsal-full,
+   channel-selection-full); same M1/M5a designer recipe + DoD.
+3. **Wave C - covers batch**: ~19 pages missing cover.png (18 reference + faq
+   + quickstart) via the HTML->headless-Chrome cover pipeline
+   (.okf/design/cover-pipeline.md). ABSORBS Sprint B #7 (stale "Curriculum
+   NN/30" badge regen) so covers are touched once.
+4. **Wave D - G2.2 SERP spot-check** (browser): fill runbook 20.12's SERP
+   table, fix only metadata gaps found.
+5. **Wave E - Sprint D content-gap batch** (un-gated): echo-chamber warning
+   2.3/5.3, Wizard-of-Oz path 4.3, Loom outreach 5.2/5.5,
+   Engineering-as-Marketing 5.2, Operating Kit 5 remaining templates,
+   manual-minimum audit 5.3/5.4. ("Whatever pilot recordings surface" stays
+   deferred - no recordings exist.)
+6. **Wave F - Phase 2 mechanics** (un-gated): Module-2 applied checkpoint
+   ("score this practice interview", assessment-validity review before ship);
+   Founder OS pack completion artifact (private, HTML->Chrome pipeline);
+   localStorage progress tracker WITH the trust mitigations from the 2-1 vote
+   (quiet checkmarks, session-honest copy, no second-device guilt).
+7. **Wave G - campaign execution** (un-gated): flip the 16 briefs'
+   "EXECUTE ONLY after pilot" stamps to "un-gated by Paul 2026-07-31", then
+   execute - 15 blog-funnel posts via the full blog pipeline (batch 3-5 per
+   review cycle); LinkedIn = DRAFTS ONLY for Paul, never auto-posted. Runs
+   LAST so arriving readers hit the improved course.
+8. **Wave H - reader->JT-lead bridge**: un-gated from pilot but touches
+   Standing Decision 3 (no selling in course) - propose 2-3 design options to
+   Paul, build only the approved one.
+9. **Pilot recruitment** (PAUL, non-blocking): 3-5 real Sams per 40.18 kit -
+   still valuable for real behavior data.
 
 ## Groomed backlog (2026-07-11 grooming session)
 
@@ -220,13 +262,23 @@ query in the render hook, or taller stacked layout. Ship only if the pattern
 is cheap and reusable; otherwise document the ceiling in
 `.okf/design/house-visual-spec.md` and close.
 
-### Wave M5 - P2/P3 SVGs + module-end checklists (UN-GATED by Paul 2026-07-30 - execute now)
+### Wave M5 - P2/P3 SVGs + module-end checklists (M5a+M5b SHIPPED; M5c + covers remain)
 
-**Gate change (Paul, 2026-07-30): all M-wave items lose their pilot gate -
-"no need to have pilot gated". Sprint D content-gap batch and Phase 2
-mechanics keep their gates (not M-waves).** Execution split: M5a = P2/P3
-SVGs; M5b = module-end checklists + interaction-gap audits; M5c =
-reference-tier visuals; covers batch last.
+**Gate change (Paul, 2026-07-30): all M-wave items lost their pilot gate.
+Sprint D content-gap batch and Phase 2 mechanics keep their gates.**
+
+**State (2026-07-30 EOD): M5a + M5b SHIPPED in PR #406.**
+- M5a: 3 SVGs (fake-stripe $1-presale flow - agent corrected the backlog's
+  wrong "fake-door" framing against page reality; friday-demo 8-node
+  timeline; sow-reading-guide 8-clause risk map). SKIPPED with reason:
+  agency-uses-ai-follow-up-questions + customers-leaving-churn (both already
+  carry adequate decision visuals - backlog rows now moot).
+- M5b: module-end checklists added/reformed for M1/M2/M3/M5 on M4's model
+  form; Do-This-Now template-link audit = 0 violations (a prior wave closed
+  it); reflection-line audit = 0 exact duplicates (4-lesson "read X aloud"
+  soft pattern noted, acceptable).
+- REMAINING: M5c reference-tier visuals + the ~19-cover batch (see Open
+  queue at top).
 
 - 40.20 P2 list (fake-stripe case study, friday-demo, sow-reading-guide,
   vibe-coding-ceiling-signals; salvage-vs-rebuild PROMOTED to Wave M2 P1
@@ -247,6 +299,23 @@ reference-tier visuals; covers batch last.
   feedback - NOT a recall quiz; assessment-validity-checker skill reviews
   questions before ship); private Founder OS pack completion artifact
   (HTML->PNG/PDF via cover pipeline).
+
+## Growth waves G1-G3 (runbook: 20-29-strategy/20.12-course-growth-agent-runbook.md)
+
+**All three waves SHIPPED 2026-07-30** (agent specs + standing decisions live
+in the runbook - fully ungated, NO mail list, no selling, stealth ICP,
+campaigns pilot-gated):
+- **G1** (direct to master): docs-truth sweep removed every email-gated /
+  email-capture KPI claim; production GA4 verification found the muted-
+  analytics root cause (consent denied-by-default with no banner + missing
+  beacon transport).
+- **G2** (PRs #402 + #404): consent default -> granted for analytics_storage
+  (ads stay denied), beacon transport, copy-link referral button on 5
+  module-end lessons; 10 evergreen blog posts now deep-link 8 course lessons
+  (was 0 of ~580). G2.2 SERP spot-check still OPEN (see Open queue).
+- **G3** (PR #398): 16 pilot-gated campaign briefs (15 blog-funnel + 1
+  LinkedIn), incl. the finding that 7 topics in 2510's 20.07 plan were
+  already live as course chapters (statuses corrected in 20.07).
 
 ### Effectiveness measurement (rides every wave, not a wave itself)
 

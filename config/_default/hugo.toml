@@ -90,6 +90,10 @@ disableKinds = []
   googleAnalytics = "G-T1N27FC30F"
   privacyCompliant = true
 
+  # Microsoft Clarity session recordings (course validation pilot).
+  # Project created by Paul 2026-07-30; snippet lives in partials/page/analytics.html.
+  microsoftClarity = "xum05dgnec"
+
 [[params.testimonials]]
   name = "Bruno Wozniak"
   rating = 5
