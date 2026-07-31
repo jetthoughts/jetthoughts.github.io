@@ -1,7 +1,7 @@
 ---
 type: Playbook
 title: Test gates and when they block commits
-description: bin/qtest --changed per micro-commit; bin/rake test:critical + bin/test AND bin/dtest at milestones and before every PR for themes/, layouts/, or CSS changes.
+description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
 timestamp: 2026-07-31T00:00:00Z
 ---
