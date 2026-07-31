@@ -71,6 +71,25 @@
    audit of off-spec SVG fonts, mobile text-size floor, founder-os-pack
    cover). Pilot recruitment (PAUL): 3-5 real Sams per 40.18.
 
+## Browser-session track (claude-in-chrome, added 2026-07-31)
+
+Paul's logged-in Chrome is now a proven agent surface (LinkedIn reads
+worked 2026-07-31; it is also the ONLY agent path to the login-walled GA4
+property UI and Clarity dashboard). Read-and-draft only - every send/post
+stays with Paul. Local cards (gitignored .devtool board) mirrored here:
+
+- **B1 - pilot lead sourcing** (TODO, due Aug 4, card
+  `browser-lead-sourcing-2026-07-31`): scout the 8 hunting grounds with the
+  40.18 screener translated to observable post signals (filters + hard
+  disqualifiers in 50.02); output 50.03 shortlist of 15-25 candidates with
+  evidence, DM-template mapping, and a separate Alex/rescue-leads section.
+- **B2 - campaign monitoring** (BACKLOG, Aug 1-14, card
+  `browser-campaign-monitoring-2026-08`): daily comment/thread reads with
+  drafted replies, ledger numbers, flagging Sam-pattern commenters into
+  50.03; Aug 14 GA4 + Clarity dashboard pull into 50.04 first-metrics-read
+  with removal-candidate verdicts; monthly register-B voice recalibration
+  against real human posts.
+
 ## Landing-page improvement track (scheduled 2026-07-31)
 
 Kanban cards live on the LOCAL board `.devtool/features/` (gitignored - VS
