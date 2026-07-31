@@ -11,6 +11,10 @@ categories: ["Startup"]
 canonical_url: "https://jetthoughts.com/blog/switch-dev-shops-safely-transition-guide/"
 og_title: "Switch Dev Shops Without Losing Progress"
 og_description: "How to switch development agencies without losing your code: the 30-day overlap, the cold-start deploy drill, and what the next team needs on day one."
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "Dark JetThoughts cover reading Switch Dev Shops / Keep Progress, with chips for a 30-day overlap, a cold-start deploy drill, and day-one handover"
 related_posts: false
 ---
 

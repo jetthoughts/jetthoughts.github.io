@@ -11,6 +11,10 @@ categories: ["Startup"]
 canonical_url: "https://jetthoughts.com/blog/retros-founder-transparency-tool/"
 og_title: "Retros Are Your Transparency Tool"
 og_description: "Retros for non-technical founders: what a retrospective is, what the one-page summary should say, and why a repeated action item is your best warning sign."
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "Dark JetThoughts cover reading Retros Are Your Transparency Tool, with chips for a one-page summary, a repeated action item red flag, and every-sprint cadence"
 related_posts: false
 ---
 

@@ -11,6 +11,10 @@ categories: ["Startup"]
 canonical_url: "https://jetthoughts.com/blog/dev-shop-contract-code-ownership/"
 og_title: "Dev Shop Contract: Who Owns the Code?"
 og_description: "Under US copyright law your dev shop owns the code it writes until a signed clause says otherwise. Five clauses to check, plus one command to run first."
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "Dark JetThoughts cover reading Who Owns The Code / Five Clauses, with chips for copyright default, signed assignment, and one git command"
 related_posts: false
 ---
 
