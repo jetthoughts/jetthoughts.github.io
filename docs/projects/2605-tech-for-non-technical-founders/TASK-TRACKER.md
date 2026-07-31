@@ -39,25 +39,37 @@
    doc, and the kit page's reviewed framing says all 6 components are live
    at their source lessons. Reopen ONLY if GA4 course_pdf_download data
    shows demand for a specific missing template.
-6. **Wave F - Phase 2 mechanics** (IN REVIEW on `course-phase2-mechanics`,
-   2026-07-31): ALL THREE BUILT - (a) Module-2 checkpoint "Pressure-test
+6. ✅ **Wave F SHIPPED** (PR #411, merged + production-verified 2026-07-31 -
+   course_checkpoint_reveal fires live with q1-q6 labels): ALL THREE BUILT - (a) Module-2 checkpoint "Pressure-test
    your read" in 2.5 per spec 30.08 (6 details-reveals, per-question GA4
    labels, zero theme changes, validity-gated); (b) Founder OS pack page +
    printable PDF (founder-os-pack, wired from 5.7 + landing, no cert/share
    language; follow-up: needs a cover.png); (c) quiet localStorage visited
    checkmarks (course-visited.html partial, all 2-1-vote trust mitigations
    honored, verified in-browser: 1 visited lesson = exactly 1 quiet ✓, empty
-   storage = byte-identical page). Full visual pair at PR prep in progress.
-7. **Wave G - campaign execution** (un-gated): flip the 16 briefs'
-   "EXECUTE ONLY after pilot" stamps to "un-gated by Paul 2026-07-31", then
-   execute - 15 blog-funnel posts via the full blog pipeline (batch 3-5 per
-   review cycle); LinkedIn = DRAFTS ONLY for Paul, never auto-posted. Runs
-   LAST so arriving readers hit the improved course.
-8. **Wave H - reader->JT-lead bridge**: un-gated from pilot but touches
-   Standing Decision 3 (no selling in course) - propose 2-3 design options to
-   Paul, build only the approved one.
-9. **Pilot recruitment** (PAUL, non-blocking): 3-5 real Sams per 40.18 kit -
-   still valuable for real behavior data.
+   storage = byte-identical page). Full pair was 34/34 green on both platforms.
+7. **Wave G - campaign execution** (NEARLY CLOSED 2026-07-31): brief audit
+   found only 8 of 15 need posts (7 absorbed into course; 2 weak-fit
+   deferred on GA4 demand) - all 15 stamps flipped with categories.
+   ✅ Batch 1 LIVE (PR #419): contract-ownership, switch-dev-shops, retros -
+   dual adversarial critics, 2 accuracy fixes (one also corrected the LIVE
+   fire-dev-shop-guide Deloitte overstatement), covers incl. a chip that
+   repeated the fixed legal absolute (re-rendered).
+   ⏳ Batch 2 (sla-checklist, cheap-developers, admin-panel-spaceship):
+   written + critic-fixed on `blog-waveg-batch2`; covers agent in flight;
+   then publish gate -> draft:false -> ONE PR closes the wave.
+   LinkedIn brief: DRAFTS ONLY for Paul (untouched).
+8. ✅ **Wave H DECIDED + SHIPPING** (3-voter panel, 20.13): Option 3
+   (off-course bridge) rides the Wave G posts now live; Option 2 locked
+   behind all red-lines; no-backport rule standing.
+9. **NEXT UP - Sprint V remainder + X/Y** (plan file + this board):
+   (a) pilot-prep assets from kit 40.18 - Paul-voice outreach drafts +
+   channel shortlist + Clarity review runbook (agent-doable; Paul only
+   sends); (b) L3 landing restructure per the 40.21 punch-list (SHIP BEFORE
+   2026-08-14 so its effect window aligns with the first metrics read - see
+   50.01 week-0 baseline); (c) media normalization sprint (classify-first
+   audit of off-spec SVG fonts, mobile text-size floor, founder-os-pack
+   cover). Pilot recruitment (PAUL): 3-5 real Sams per 40.18.
 
 ## Landing-page improvement track (scheduled 2026-07-31)
 
