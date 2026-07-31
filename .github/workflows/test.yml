@@ -111,7 +111,15 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add test/fixtures/screenshots/
           git diff --staged --quiet || git commit -m "chore: update screenshot baselines [ci skip]"
-          git push
+          # The record run takes ~17 min - master routinely moves underneath it
+          # and a plain push gets rejected non-fast-forward (run 30632854418
+          # recorded everything, then lost it all at push). Baseline PNGs don't
+          # conflict with content commits, so rebase-and-retry is safe.
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            echo "push attempt $i failed, retrying..."
+            sleep 5
+          done
 
       - name: Upload screenshot report
         if: failure()
