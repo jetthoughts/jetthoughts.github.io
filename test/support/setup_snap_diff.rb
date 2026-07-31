@@ -21,4 +21,9 @@ Capybara::Screenshot::Diff.delayed = true
 
 if ENV["FORCE_SCREENSHOT_UPDATE"] == "true"
   Capybara::Screenshot::Diff.fail_on_difference = false
+  # Record mode must be able to create FIRST baselines for new pages: with
+  # ENV["CI"] set, snap_diff's fail_if_new defaults to hard-error, which made
+  # the CI re-record run fail on pages added since the last recording
+  # (2026-07-31: vibe_code_rescue had no linux/ baseline yet).
+  Capybara::Screenshot::Diff.fail_if_new = false
 end

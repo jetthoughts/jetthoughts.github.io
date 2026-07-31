@@ -61,7 +61,13 @@ jobs:
           ruby-version: '4.0'
           cache-apt-packages: true
 
+      # BUILD_DRAFTS: the codeblock-styles fixture the screenshot tests visit
+      # is a draft post; local runs build with --buildDrafts but bin/hugo-build
+      # only passes it when this env is set (2026-07-31: every CI visual run
+      # 404'd the fixture - "File not found: /blog/codeblock-styles-fixture/").
       - uses: ./.github/actions/setup-hugo
+        env:
+          BUILD_DRAFTS: '1'
 
       - name: Cache Chrome for Testing
         uses: actions/cache@v5
