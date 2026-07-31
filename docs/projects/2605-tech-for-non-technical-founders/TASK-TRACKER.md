@@ -83,6 +83,16 @@ cold session sees the work.
   L2.
 - Baseline to beat: UI/UX critique scored 25/36 (69%) on 2026-07-31; snapshot
   at `.impeccable/critique/2026-07-31T11-47-14Z__*.md`. Re-run after L3.
+- **Spun out of L1 (NOT course work)**: the detector's 3.4:1 white-on-#1a8cff
+  finding is the GLOBAL FOOTER "we're hiring" badge (`b.special`, 13.33px
+  bold), not the course CTAs - those compute ruby at 5.12:1 and pass. Real
+  sitewide WCAG AA failure; card
+  `footer-hiring-badge-contrast-a11y-2026-07-31`. Deliberately not bundled:
+  it churns ~50 baselines on both platforms and would collide with the
+  in-flight visual-CI work (#412/#413).
+- **Also spun out**: the "Free · 2026" chip is baked into `cover.png`
+  artwork, not markup - dating it out needs a cover-pipeline regeneration
+  pass, not a template edit.
 
 ## Groomed backlog (2026-07-11 grooming session)
 
