@@ -30,8 +30,11 @@ on:
       - 'postcss.config.js'
       - 'test/fixtures/screenshots/**'
       - 'test/system/**'
+      - 'test/support/**'
       - '.dev/cft-version'
       - '.dev/fonts.conf'
+      # the gate must test its own harness changes
+      - '.github/workflows/test.yml'
 
 permissions:
   contents: write
