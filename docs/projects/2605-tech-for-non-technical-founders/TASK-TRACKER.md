@@ -16,16 +16,19 @@
    course_copy_share_link (beacon, labeled); Clarity recording live.
    Results table in runbook 20.12. Known nit: pdf event's course_label empty
    (link_url carries the file).
-2. **Wave B - M5c reference-tier visuals**: one informational SVG each for the
-   5 reference/*-full chapters with zero visuals (mvp-build-phases-full,
-   stack-tools-full, find-10-people-full, persona-rehearsal-full,
-   channel-selection-full); same M1/M5a designer recipe + DoD.
-3. **Wave C - covers batch**: ~19 pages missing cover.png (18 reference + faq
-   + quickstart) via the HTML->headless-Chrome cover pipeline
-   (.okf/design/cover-pipeline.md). ABSORBS Sprint B #7 (stale "Curriculum
-   NN/30" badge regen) so covers are touched once.
-4. **Wave D - G2.2 SERP spot-check** (browser): fill runbook 20.12's SERP
-   table, fix only metadata gaps found.
+2. ✅ **Wave B SHIPPED** (PR #408, 2026-07-31): 5 informational SVGs for the
+   zero-visual reference chapters; scroll gate both viewports; one review
+   fix (Prompt 5 text-margin budget); bonus: stray </content> corruption
+   removed from find-10-people-full.
+3. ✅ **Wave C SHIPPED** (PR #409, 2026-07-31): 20 covers (18 reference +
+   faq + quickstart) via the cover pipeline. Sprint B #7 stale-badge audit:
+   premise INVALID - all 61 existing covers audited, no "NN/30" badge exists;
+   item CLOSED with nothing to regenerate.
+4. ✅ **Wave D DONE** (2026-07-31): SERP table filled in runbook 20.12.
+   Target phrases not in top 10 (course too new, no backlinks - Wave G is
+   the lever); one genuine gap fixed: /course/ section had NO _index.md so
+   its snippet was site boilerplate - created with course-specific
+   description. Runbook 20.12 is now fully complete.
 5. **Wave E - Sprint D content-gap batch** (un-gated): echo-chamber warning
    2.3/5.3, Wizard-of-Oz path 4.3, Loom outreach 5.2/5.5,
    Engineering-as-Marketing 5.2, Operating Kit 5 remaining templates,
