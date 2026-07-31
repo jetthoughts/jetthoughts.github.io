@@ -9,7 +9,10 @@ class Hugo
 
   def initialize(path: nil)
     base_path = path || ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test")
-    base_path = "#{base_path}-#{rand(5)}" unless ENV["PRECOMPILED_ASSETS"]
+    # Un-envved runs build to a stable local dir so warm reruns reuse the
+    # output (the old rand(5) bucket fan-out left up to 5 stale full site
+    # trees under _dest/ and hit a cold dir ~80% of the time).
+    base_path = "#{base_path}-local" unless ENV["PRECOMPILED_ASSETS"]
 
     @destination = Pathname.new(base_path).expand_path
   end

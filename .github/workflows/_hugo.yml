@@ -39,8 +39,15 @@ jobs:
       # generates complete stats; the [[build.cachebusters]] entry then makes
       # the real build reprocess every CSS bundle against them. Mirrors the
       # local "converged build x2" gate doctrine.
+      # Skipped when the composite's Hugo cache restored a non-empty
+      # hugo_stats.json (it is in the cache path list) - that saves ~52s on
+      # warm runs while keeping the cold-runner guard intact.
       - name: Warm up hugo_stats.json (PurgeCSS race guard)
         run: |
+          if [ -s hugo_stats.json ]; then
+            echo "hugo_stats.json restored from cache ($(wc -c < hugo_stats.json) bytes) - skipping warm-up"
+            exit 0
+          fi
           PATH="./node_modules/.bin:app/bin:$PATH" hugo \
             --gc \
             --baseURL "https://jetthoughts.com/" \

@@ -1,7 +1,43 @@
 #!/usr/bin/env bash
 # bash, not sh: `set -o pipefail` is a bashism - dash (Linux /bin/sh) rejects it
+#
+# Fast path: build ONCE through bin/hugo-build (which carries the PurgeCSS
+# cold-start warm-up guard the bare `hugo` call in hugo_helpers lacks) to a
+# stable dest, then run tests with PRECOMPILED_ASSETS so nothing rebuilds.
+# A warm rerun skips the build entirely via an mtime staleness check.
+#
+#   bin/test                 # critical suite
+#   bin/test path/to/x.rb    # single file (reuses the same prebuilt site)
+#   bin/test --build [...]   # force a rebuild first
 
 set -euo pipefail
+cd "$(dirname "$0")/.."
+
+DEST="_dest/public-test"
+BASE_URL="http://localhost:${TEST_SERVER_PORT:-1314}"
+
+force_build=""
+if [ "${1:-}" = "--build" ]; then
+  force_build=1
+  shift
+fi
+
+stale() {
+  [ -f "$DEST/index.html" ] || return 0
+  newest_src=$(find content themes layouts config data postcss.config.js \
+    -type f -newer "$DEST/index.html" -print -quit 2>/dev/null || true)
+  [ -n "$newest_src" ]
+}
+
+if [ -n "$force_build" ] || stale; then
+  echo "bin/test: building site to $DEST (bin/hugo-build)..."
+  ENVIRONMENT=production OUTPUT_DIR="$DEST" BASE_URL="$BASE_URL" BUILD_DRAFTS=1 bin/hugo-build
+else
+  echo "bin/test: reusing warm build at $DEST (force with --build)"
+fi
+
+export PRECOMPILED_ASSETS=1
+export HUGO_DEFAULT_PATH="$DEST"
 
 if [ $# -eq 0 ]; then
   bin/rake test:critical

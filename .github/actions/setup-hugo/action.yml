@@ -52,6 +52,11 @@ runs:
       with:
         node-version: '22'
 
+    # hugo_stats.json is cached deliberately: it is gitignored, and without it
+    # every run pays bin/hugo-build's ~52s PurgeCSS warm-up double-build. The
+    # key hashes config/** (the real config location - the old key hashed
+    # nonexistent root hugo.toml/hugo.dev.toml, so config-only changes reused
+    # a stale resources/_gen).
     - name: Cache Hugo build
       uses: actions/cache@v5
       with:
@@ -59,7 +64,8 @@ runs:
           /tmp/hugo_cache
           resources/_gen
           _dest
-        key: ${{ runner.os }}-hugo-${{ inputs.environment }}-${{ hashFiles('hugo.toml', 'hugo.dev.toml', 'postcss.config.js', 'package.json', '**/bun.lockb', 'themes/**', 'layouts/**', 'content/**') }}
+          hugo_stats.json
+        key: ${{ runner.os }}-hugo-${{ inputs.environment }}-${{ hashFiles('config/**', 'postcss.config.js', 'package.json', '**/bun.lockb', 'themes/**', 'layouts/**', 'content/**') }}
         restore-keys: |
           ${{ runner.os }}-hugo-${{ inputs.environment }}-
           ${{ runner.os }}-hugo-

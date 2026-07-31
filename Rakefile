@@ -33,7 +33,7 @@ namespace :test do
   Rake::TestTask.new(:critical) do |t|
     t.libs << "test"
     t.libs << "lib"
-    t.pattern = "test/system/*_test.rb"
+    t.pattern = "test/system/**/*_test.rb"
     t.options = "--name='#{CRITICAL_TESTS}'"
   end
 
