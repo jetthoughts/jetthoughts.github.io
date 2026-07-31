@@ -10,6 +10,8 @@ on:
     paths:
       - 'content/**'
       - 'themes/**/layouts/**'
+      # root-level template overrides move links just like theme layouts
+      - 'layouts/**'
       - 'config/**'
       - 'data/**'
       - 'lychee.toml'
@@ -43,6 +45,11 @@ defaults:
 jobs:
   link_check:
     name: Broken Internal Links
+    # Sync fan-out gate: "Sync articles" completes every 10 min during the
+    # day, but most runs commit nothing. For workflow_run events, only crawl
+    # when the sync actually pushed (master head moved past the sha the sync
+    # ran on). github.sha for workflow_run = current default-branch head.
+    if: ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_sha != github.sha) }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -55,7 +62,12 @@ jobs:
           ruby-version: '4.0'
           bundler-cache: true
 
+      # setup only - rake test:links runs its own production build via
+      # bin/hugo-build; the composite's default build made this job build
+      # the whole site TWICE and blow its 10-minute timeout on cold caches.
       - uses: ./.github/actions/setup-hugo
+        with:
+          build: 'false'
 
       - uses: taiki-e/install-action@v2
         with:
