@@ -49,7 +49,7 @@ A CI screenshot job (`quick_test` + `bin/qtest`) was built and removed in PR #38
 
 **Re-introduced (DevX R2 Phase B, 2026-07-31):** `test.yml` now runs the critical screenshot suite on `pull_request` (paths-filtered to visual surfaces), provisioned via `bin/setup-test-env` so runner pixels match `linux/` baselines. Currently REPORT-ONLY (`continue-on-error: true` - failures upload the snap_diff report and comment the PR); flip that flag off after a clean soak week to make it blocking. Record mode (`workflow_dispatch` + update-baselines) records on the same pinned stack. Local gates in [test-gates.md](test-gates.md) (`bin/test` macOS, `bin/dtest` docker-linux) remain the pre-PR discipline.
 
-Two gotchas the first record run hit (both fixed, keep in mind for any new CI test job):
+Two gotchas the first record run hit (both fixed; evidence: [run 30629929407](https://github.com/jetthoughts/jetthoughts.github.io/actions/runs/30629929407) - 104 screenshots compared clean, 4 test failures, commit step never ran). Keep in mind for any new CI test job:
 - **Draft fixtures**: screenshot tests visit the draft post `/blog/codeblock-styles-fixture/`; local builds pass `--buildDrafts` but `bin/hugo-build` only does so when `BUILD_DRAFTS` is set - test.yml sets `BUILD_DRAFTS: '1'` on its setup-hugo step. A CI test build without it 404s the fixture and fails the codeblock tests on every run.
 - **fail_if_new in CI**: snap_diff hard-errors on missing baselines when `ENV["CI"]` is set. Record mode (`FORCE_SCREENSHOT_UPDATE=true`) disables `fail_on_difference` AND `fail_if_new` (setup_snap_diff.rb) so pages added since the last recording can get their FIRST baseline.
 

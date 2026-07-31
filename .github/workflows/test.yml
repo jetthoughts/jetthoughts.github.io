@@ -64,7 +64,8 @@ jobs:
       # BUILD_DRAFTS: the codeblock-styles fixture the screenshot tests visit
       # is a draft post; local runs build with --buildDrafts but bin/hugo-build
       # only passes it when this env is set (2026-07-31: every CI visual run
-      # 404'd the fixture - "File not found: /blog/codeblock-styles-fixture/").
+      # 404'd the fixture - "File not found: /blog/codeblock-styles-fixture/";
+      # evidence: actions/runs/30629929407).
       - uses: ./.github/actions/setup-hugo
         env:
           BUILD_DRAFTS: '1'
