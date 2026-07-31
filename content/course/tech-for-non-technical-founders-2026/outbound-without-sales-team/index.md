@@ -111,7 +111,7 @@ The 30-message batch is not a one-time event. Run fresh batches until you have 2
 
 > **Done:** 30 cold messages are sent, replies are tracked in your spreadsheet, and 1-2 paid pilots are booked from the replies.
 >
-> **You have now:** the full arc in hand - a validated hypothesis, a signed problem statement, a one-page brief, a live MVP, and at least one paying customer, plus a repeatable cold-outbound motion for customers 11-20. That is the whole course: idea → validated problem → brief → live MVP → paying customer.
+> **You have now:** the full arc in hand - a validated hypothesis, a signed problem statement, a one-page brief, a live MVP, and at least one paying customer, plus a repeatable cold-outbound motion for customers 11-20. That is the whole course: idea → validated problem → brief → live MVP → paying customer. File the lot in your Founder OS folder - the [Founder OS pack index](/course/tech-for-non-technical-founders-2026/founder-os-pack/) is the printable cover sheet.
 >
 > **Next:** [Course landing page](/course/tech-for-non-technical-founders-2026/) - the core course is complete. When a problem shows up, the [Going further chapters](/course/tech-for-non-technical-founders-2026/#going-further-after-first-paying-customer) cover churn triage, pivot decisions, and hiring. Keep the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) open to keep the build honest as you ship past customer 10.
 >

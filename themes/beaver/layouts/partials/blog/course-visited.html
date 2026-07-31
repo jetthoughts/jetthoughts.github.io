@@ -1,0 +1,38 @@
+{{- /*
+  Quiet visited-lesson marks (Wave F item 3, trust-mitigated).
+
+  On a course lesson page: records the path into localStorage
+  key "jt-course-visited". On the landing page: appends a small
+  checkmark to module-map lesson links whose path is stored.
+
+  Deliberately quiet: no counters, no bars, no labels, and a visitor
+  with empty/blocked localStorage sees the page exactly as before.
+  All storage access is wrapped for private-mode exceptions.
+*/ -}}
+<script>
+  (function () {
+    var KEY = 'jt-course-visited';
+    var visited;
+    try {
+      visited = JSON.parse(localStorage.getItem(KEY)) || [];
+    } catch (e) {
+      return;
+    }
+    var links = document.querySelectorAll('.module-card__chapters a');
+    if (links.length) {
+      if (!visited.length) return;
+      Array.prototype.forEach.call(links, function (a) {
+        if (visited.indexOf(a.pathname) !== -1) {
+          a.appendChild(document.createTextNode(' ✓'));
+        }
+      });
+    } else if (window.location.pathname.indexOf('/course/') === 0) {
+      if (visited.indexOf(window.location.pathname) === -1) {
+        visited.push(window.location.pathname);
+        try {
+          localStorage.setItem(KEY, JSON.stringify(visited));
+        } catch (e) {}
+      }
+    }
+  })();
+</script>
