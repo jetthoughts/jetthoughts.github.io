@@ -6,15 +6,16 @@
 
 ## Open queue (2026-07-31 - what a cold session picks up next, in order)
 
-0. **Ship branch `course-clarity-config`** (IN FLIGHT): Clarity param +
-   localhost guard + baseURL analytics gate + this docs sync + accepted mobile
-   homepage baselines (macOS AND Linux in same commit - theme change ⇒
-   bin/test + bin/dtest). One PR, CI green, squash-merge.
-1. **Wave A - post-deploy analytics verification** (browser): production
-   collect hits 2xx with consent granted; course_pdf_download +
-   course_copy_share_link land; Clarity loads on jetthoughts.com and NOT on
-   localhost. Fill both open tables in runbook 20.12. Outranks visuals -
-   Wave G traffic is pointless without verified measurement.
+0. ✅ **Wave 0 SHIPPED** (PR #407, merged + deployed 2026-07-31): Clarity
+   xum05dgnec live, analytics excluded from local/test builds (baseURL gate),
+   both mobile homepage baselines re-recorded per #405's note, qtest-first
+   test policy codified (CLAUDE.md/AGENTS.md/OKF).
+1. ✅ **Wave A DONE** (2026-07-31, production via Chrome devtools): all
+   events 204 with consent granted (gcs=G101) - page_view, scroll,
+   course_pdf_download (beacon, survives PDF navigation),
+   course_copy_share_link (beacon, labeled); Clarity recording live.
+   Results table in runbook 20.12. Known nit: pdf event's course_label empty
+   (link_url carries the file).
 2. **Wave B - M5c reference-tier visuals**: one informational SVG each for the
    5 reference/*-full chapters with zero visuals (mvp-build-phases-full,
    stack-tools-full, find-10-people-full, persona-rehearsal-full,
