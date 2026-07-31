@@ -23,7 +23,7 @@ We've watched this scene replay across dozens of rescues. You hired a team. Wrot
 
 Founders who land on a guide like this have usually already decided. They're looking for permission and a checklist.
 
-[Deloitte surveyed 500+ executives](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) about their outsourcing relationships in 2024. **Seventy percent** had pulled work back in-house over the last five years. Seven out of ten. That's not a few unlucky founders - that's the industry.
+[Deloitte surveyed 500+ executives](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) about their outsourcing relationships in 2024. **Seventy percent** had brought at least some previously outsourced work back in-house over the last five years - selective moves, not wholesale reversals. Seven out of ten, walking part of it back. That's not a few unlucky founders.
 
 So this guide covers the exit - what to secure tonight, what your contract probably doesn't protect, and how to avoid repeating it with the next team.
 
