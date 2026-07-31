@@ -22,7 +22,7 @@ The output of one is a document you can read in ninety seconds without understan
 
 ## What a retro actually is
 
-A retrospective is a short meeting at the end of each work cycle where the team looks at how the last cycle went and picks one or two things to change.
+At the end of each work cycle the team spends half an hour on one question: how did the last stretch actually go, and what one or two things should change next time? That half hour is the retro.
 
 The [2020 Scrum Guide](https://scrumguides.org/scrum-guide.html) defines the event narrowly: the team inspects how the sprint went with regard to people, processes, and tools, identifies the assumptions that led them astray, and decides on the most helpful changes. [Scrum.org's plain-language version](https://www.scrum.org/resources/what-is-a-sprint-retrospective) is worth five minutes if you want the vocabulary before you raise it with your agency.
 
@@ -67,41 +67,31 @@ That last block is the whole reason to ask for the document.
 
 ## The one line that tells you the most
 
-Read the carried-over section first, then the rest.
-
-An action item that appears in three consecutive retros is a team that has diagnosed a problem, agreed on the fix, and cannot get to it. Sometimes that is your fault, because you keep adding scope on top. Sometimes it means the fix is much harder than they said in the room, which is worth a direct question. Either way it is a live signal you can act on this week without knowing what a flaky test is.
+Read the carried-over section before anything else. An action item that appears in three consecutive retros is a team that has diagnosed a problem, agreed on the fix, and cannot get to it. Sometimes that is your fault, because you keep adding scope on top. Sometimes the fix is much harder than they said in the room, which is worth a direct question. And sometimes the team simply lacks the authority to act: if their developers cannot spend two days on the test suite without a change order from their account manager, the same item will surface forever, which tells you the constraint sits in the commercial relationship rather than in engineering. Either way it is a live signal you can act on this week without knowing what a flaky test is.
 
 Notice that the sample above puts a task on the founder. A retro that never generates work for your side is a retro that has been sanitized before it reached you, and sanitized retros are the common failure mode rather than missing ones. Stefan Wolpers catalogued [twenty-one retrospective anti-patterns](https://age-of-product.com/sprint-retrospective-anti-patterns/) if you want to see how many ways this meeting can go quietly hollow.
 
 ## How to ask for it without starting a fight
 
-Send it as a request for a document, not a change to how they work.
-
-Something close to: "Do you run retrospectives at the end of each cycle? If so, could you send me a short written summary after each one - what went well, what slowed you down, what you're changing, and anything carried over? I don't need to attend." That phrasing gives them the format and takes the meeting off your calendar in the same sentence, and any team that already runs retros will say yes in under a minute.
+Frame it as a request for a document rather than a change to how they work. Something close to: "Do you run retrospectives at the end of each cycle? If so, could you send me a short written summary after each one - what went well, what slowed you down, what you're changing, and anything carried over? I don't need to attend." That phrasing gives them the format and takes the meeting off your calendar in the same sentence, and any team that already runs retros will say yes in under a minute.
 
 Watch what comes back. A team that has been running retros produces the first summary within a cycle, sometimes by forwarding one they already wrote. Teams that have not been running them either start, which is a win, or explain that their process is too lightweight for that, which is the answer you were fishing for. Refusal to write anything down at all belongs on the same list as the [other dev shop red flags](/blog/dev-shop-red-flags-checklist/).
 
 ## Where this fits with the demo
 
-A retro tells you how the work went. It does not tell you whether the software works, and a team can write a beautiful retrospective about a product that crashes on login.
+A team can write an honest, useful retrospective about a product that still crashes on login. The retro covers how the work went; it says nothing about whether the software actually runs, so it is only half of what you need.
 
 For that you need the other half: a fifteen-minute session where somebody clicks through the actual product in front of you. The [Friday demo rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) in the course covers the format and the questions to ask during it. Pair the two and you have process health on one page and working software on a screen, which between them close most of the gap that makes founders anxious between invoices.
 
+The habit is not free. An hour per cycle for the meeting, plus the work the team commits to, comes out of the same budget as features. Our own team runs a written retrospective at the end of every seven-day cycle, described in [async remote XP practices](/blog/async-remote-xp-practices/), and the fixes that come out of it regularly eat a day of the next cycle. It is part of why our client retention runs about 95%, and also why our velocity in any single week looks slower than a shop that skips it.
+
 Both of these are downstream of one habit: [knowing what your team is doing](/blog/how-know-what-your-team-doing-remote-startup/) through written artifacts rather than reassurance on calls.
-
-## What retros will not fix
-
-Writing a problem down does not give anyone permission to fix it.
-
-Teams that lack the authority to change their own process will produce polite summaries forever. If your agency's developers cannot decide to spend two days fixing the test suite without a change order from their account manager, the retro will keep surfacing the same item and nothing will move, which tells you the constraint sits in the commercial relationship rather than in engineering.
-
-The habit also costs real delivery time. An hour per cycle for the meeting, plus the work the team commits to, comes out of the same budget as features. Our own team runs a written retrospective at the end of every seven-day cycle, described in [async remote XP practices](/blog/async-remote-xp-practices/), and the fixes that come out of it regularly eat a day of the next cycle. That trade is why we have stayed with most clients for about five years, and it is also why our velocity in any single week looks slower than a shop that skips it.
 
 ## Start with one question this week
 
 On your next call, ask when the team last ran a retrospective and what came out of it.
 
-You will get a specific answer with a date and an action item, or you will get a pause. Both are information you did not have on Monday, and the second one is worth more.
+You will get a specific answer with a date and an action item, or you will get a pause while they reach for one. The pause tells you more than the tidy answer would have, and either way you know something this week that you did not know on Monday.
 
 ## Further reading
 
