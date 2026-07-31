@@ -4,6 +4,10 @@ description: "The complete self-serve stack reference - each tool in plain Engli
 date: 2026-05-18
 draft: false
 slug: stack-tools-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: The Self-Serve MVP Stack - Each Tool in Plain English, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 4.3 · The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)** - each tool in plain English, the throwaway-prototype-vs-production-MVP contrast, the two build-time AI audits, all 12 build rules, and the founder communities. Read the micro-lesson first for the tool boundaries and the 3 pre-flight rules; return here when you want the depth on any one tool or rule.

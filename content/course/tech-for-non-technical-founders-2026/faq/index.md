@@ -17,6 +17,8 @@ tags:
   - non-technical-founder
   - course-faq
 categories: ["Founders"]
+cover_image: cover.png
+cover_image_alt: "JetThoughts course cover: FAQ - Common Blockers and Questions, with a question-mark card on the right"
 metatags:
   image: cover.png
   og_title: "FAQ - From Idea to First Paying Customer"

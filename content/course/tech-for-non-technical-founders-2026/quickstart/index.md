@@ -17,6 +17,8 @@ tags:
   - non-technical-founder
   - course-quickstart
 categories: ["Founders"]
+cover_image: cover.png
+cover_image_alt: "JetThoughts course cover: Quickstart - 5 Modules, Core Lessons Only, with a lightning-bolt card on the right"
 metatags:
   image: cover.png
   og_title: "Quickstart - From Idea to First Paying Customer"
