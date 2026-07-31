@@ -45,9 +45,9 @@ Caveat: with native `paths`, a filtered-out PR reports NO check (not a passing o
 
 A CI screenshot job (`quick_test` + `bin/qtest`) was built and removed in PR #386. At the time the divergence was unfixable: baselines were captured on the then-Alpine/musl docker image while CI runs Ubuntu (glibc), and text rendered differently enough that measured divergence ran **3-28%** (mobile code blocks 0.28, plain content pages up to 0.21) - far above any tolerance that still catches a real regression.
 
-**That premise no longer holds (DevX Phase 4, 2026-07-30):** the `.dev/Dockerfile` image moved to Debian/glibc with a pinned Chrome for Testing (`.dev/cft-version`) + deterministic fontconfig (`.dev/fonts.conf`) + pinned Noto fonts, and `bin/setup-test-env` installs the identical stack on any bare-metal glibc host - including GitHub's Ubuntu runners. A CI job that provisions via `bin/setup-test-env` renders the same pixels as the `linux/` baselines. Re-introduction of a CI visual gate (report-only first, then blocking after a soak) is planned as DevX R2 Phase B.
+**That premise no longer holds (DevX Phase 4, 2026-07-30):** the `.dev/Dockerfile` image moved to Debian/glibc with a pinned Chrome for Testing (`.dev/cft-version`) + deterministic fontconfig (`.dev/fonts.conf`) + pinned Noto fonts, and `bin/setup-test-env` installs the identical stack on any bare-metal glibc host - including GitHub's Ubuntu runners.
 
-Until that lands, visual regression stays on the local gates in [test-gates.md](test-gates.md): `bin/test` (macOS) + `bin/dtest` (docker-linux). CI catches build breakage, unit failures, and broken internal links only.
+**Re-introduced (DevX R2 Phase B, 2026-07-31):** `test.yml` now runs the critical screenshot suite on `pull_request` (paths-filtered to visual surfaces), provisioned via `bin/setup-test-env` so runner pixels match `linux/` baselines. Currently REPORT-ONLY (`continue-on-error: true` - failures upload the snap_diff report and comment the PR); flip that flag off after a clean soak week to make it blocking. Record mode (`workflow_dispatch` + update-baselines) records on the same pinned stack. Local gates in [test-gates.md](test-gates.md) (`bin/test` macOS, `bin/dtest` docker-linux) remain the pre-PR discipline.
 
 # libvips gotcha (if a CI job ever needs ruby-vips again)
 

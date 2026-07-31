@@ -1,5 +1,19 @@
 # Bundle Update Log
 
+## 2026-07-31 (R2 Phase B)
+
+* **Update**: [ci-gates](/build/ci-gates.md) - the CI visual gate is BACK (report-only soak):
+  `test.yml` now provisions the pinned rendering stack via `bin/setup-test-env` (CfT from
+  `.dev/cft-version`, cached; fonts + fonts.conf) and exports CHROME_BIN/CHROMEDRIVER_PATH, so
+  runner pixels match `linux/` baselines. New `pull_request` trigger (paths-filtered to visual
+  surfaces) runs `test:critical` with `continue-on-error: true` - failures comment the snap_diff
+  report on the PR without blocking; flip that flag off after the soak week. Record mode is
+  workflow_dispatch-only, sets ALLOW_DIRTY_SCREENSHOTS=1 explicitly, and now records on the
+  pinned stack (previously it would have silently overwritten canonical baselines with
+  unpinned-runner-Chrome renders). Floating snap-diff composite refs pinned to the
+  Gemfile.lock SHA. Re-record baselines via workflow_dispatch update-baselines=true - this
+  also closes Round 1's pending linux/ re-baseline without a Docker-capable machine.
+
 ## 2026-07-31 (R2 Phase A)
 
 * **Update**: [ci-gates](/build/ci-gates.md) + [test-gates](/build/test-gates.md) - DevX R2
