@@ -69,7 +69,7 @@ Skip this course if you want to learn to code or hand off founder judgment to so
 
 ## Module map
 
-Read the modules in order. Each module's output is the next module's input, and each card's **"You leave with"** line names its output; together with the fill-in templates they total {{< course-stat artifacts >}} artifacts, which bundle into a single Google Drive folder - your **Founder OS** - that doubles as your decision log. If you ever raise, the same folder is the evidence pack investors fund. The [Founder OS pack index](/course/tech-for-non-technical-founders-2026/founder-os-pack/) is its printable cover sheet.
+Read the modules in order. Each module's output is the next module's input, and each card's **"You leave with"** line names its output; together with the fill-in templates they total {{< course-stat artifacts >}} artifacts, which bundle into a single Google Drive folder - your **Founder OS** - the decision log you'll lean on every time you have to choose what to build next (and if you ever raise, the same folder doubles as your evidence pack). The [Founder OS pack index](/course/tech-for-non-technical-founders-2026/founder-os-pack/) is its printable cover sheet.
 
 <div class="module-card" id="module-1">
   <span class="module-card__badge">Module 1</span>
@@ -87,7 +87,7 @@ Read the modules in order. Each module's output is the next module's input, and 
     <p class="module-card__extras-row"><strong>Optional reference:</strong> <a href="/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/">AI stress-test for the blanks</a></p>
     <p class="module-card__extras-row"><strong>See it in action:</strong> <a href="/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/">Mia builds TutorMatch - a full Module 1 walkthrough</a></p>
   </div>
-  <p class="module-card__leave"><strong>You leave with:</strong> a Founding Hypothesis, demand data from 300 cold strangers, and a price test - all collected before you've built anything.</p>
+  <p class="module-card__leave"><strong>You leave with:</strong> a Founding Hypothesis, demand data from cold strangers who have never heard of you, and a price test - all collected before you've built anything.</p>
 </div>
 
 <div class="module-card" id="module-2">
