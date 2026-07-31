@@ -14,6 +14,8 @@ This guide assumes you already ran Modules 1-3 (hypothesis, smoke test, 10 inter
 
 > **Calendar reality for the MVP build.** A full-time founder with daytime availability can hit the Phase 4 5-lights in 4-6 weeks. An evening-only founder (the 2-4 hr/week pattern this course is built for) typically needs 10-12 weeks for the same outputs. Phase 2 (Supabase wiring + RLS - Row-Level Security, the database rule that walls one customer's data off from another's) and Phase 3 (Stripe webhook - an automatic message Stripe sends your app when a payment lands - plus idempotency, the rule that says "if the same webhook fires twice, only act once") are where part-time founders lose the most calendar. Plan the 10-week version, not the 4-week version.
 
+![A hand-drawn map of the MVP build: four red phase cards - Phase 1 Lovable UI with prompts from the one-page brief, Phase 2 Supabase with tables plus RLS and real signup, Phase 3 Stripe with checkout, webhook and $1 test transactions, Phase 4 deploy plus 5 ICP users exiting on all five green lights - flowing into a green Onramp card that invites your 10 interviewees by name, with an amber footnote on the 4-6 week full-time vs 10-12 week evening-only calendar.](mvp-build-phases-map.svg)
+
 ## Phase 1 - write your prompts, set up Lovable, ship the UI
 
 Start by opening the one-page brief. The "what you're building" section becomes your first three Lovable prompts.
