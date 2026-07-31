@@ -26,6 +26,10 @@ on:
   pull_request:
     paths:
       - 'themes/**'
+      # root-level template/asset overrides change rendering just like
+      # their themes/ counterparts
+      - 'layouts/**'
+      - 'assets/**'
       - 'config/**'
       - 'postcss.config.js'
       - 'test/fixtures/screenshots/**'
@@ -55,9 +59,13 @@ jobs:
     continue-on-error: ${{ github.event_name == 'pull_request' }}
 
     steps:
+      # PR events use the default checkout (the PR *merge* commit): testing
+      # the head branch alone misses conflicts with the base and breaks on
+      # fork PRs (head_ref doesn't exist in this repo). Record dispatches
+      # check out the real branch ref so the baseline commit can be pushed.
       - uses: actions/checkout@v7
         with:
-          ref: ${{ github.head_ref || github.ref }}
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.ref || '' }}
 
       - uses: snap-diff/snap_diff-capybara/.github/actions/setup-ruby-and-dependencies@5ee298fbc3c1e070c78e3d83862ffd3228204214
         with:
@@ -95,18 +103,30 @@ jobs:
           PRECOMPILED_ASSETS: '1'
           HUGO_DEFAULT_PATH: _dest/public-test
 
+      # test:system, not the full `rake test`: recording only rewrites
+      # screenshot baselines, and a failing unit test used to abort the run
+      # AFTER 15+ min of recording, discarding every recorded PNG.
       - name: Record baselines
+        id: record
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.update-baselines }}
-        run: FORCE_SCREENSHOT_UPDATE=true bundle exec rake test
+        run: FORCE_SCREENSHOT_UPDATE=true bundle exec rake test:system
         env:
           PRECOMPILED_ASSETS: '1'
           HUGO_DEFAULT_PATH: _dest/public-test
           # Record mode intentionally dirties the fixtures as it runs.
           ALLOW_DIRTY_SCREENSHOTS: '1'
 
+      # always(): freshly recorded baselines must be committed even when a
+      # test failed mid-run (a red test does not invalidate the OTHER pages'
+      # recordings). Gated on the record step actually having run, and the
+      # commit is a no-op when nothing changed.
       - name: Commit updated baselines
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.update-baselines }}
+        if: ${{ always() && steps.record.outcome != 'skipped' && github.event_name == 'workflow_dispatch' && inputs.update-baselines }}
         run: |
+          if [ -z "$(git status --porcelain test/fixtures/screenshots)" ]; then
+            echo "no baseline changes recorded - nothing to commit"
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add test/fixtures/screenshots/

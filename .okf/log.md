@@ -1,5 +1,22 @@
 # Bundle Update Log
 
+## 2026-07-31 (R3-2 CI correctness + cost)
+
+* **Update**: [ci-gates](/build/ci-gates.md) - DevX R3-2: hugo_stats.json
+  moved to its own EXACT-key-only cache (restore-keys could restore stale
+  stats and re-open the PurgeCSS purge-live-classes incident class via
+  cache); `_dest` dropped from cache paths (~1-2 GB/job, evicted everything
+  else); sync fan-out gated (workflow_run jobs skip when the sync pushed
+  nothing - was ~84 no-op deploy+test cascades/day); link-check builds once
+  (composite `build: 'false'` - the double build blew its 10-min timeout on
+  cold caches, seen live on PR #422); test.yml checks out the PR merge
+  commit (head_ref tested the tip unmerged + broke fork PRs) and records
+  via `rake test:system` with an always()-gated porcelain-guarded commit
+  step (a red unit test used to discard 15+ min of recorded baselines).
+  Also: baseline re-record landed (2edb94d9) on the pinned stack - third
+  attempt, after #417 (drafts/fail_if_new) and #418 (push race + swallowed
+  retry failure).
+
 ## 2026-07-31 (R3-1 harness truth)
 
 * **Update**: [test-gates](/build/test-gates.md) - all four test runners now

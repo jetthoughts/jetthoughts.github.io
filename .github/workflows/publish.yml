@@ -26,12 +26,19 @@ defaults:
   run:
     shell: bash
 
+# Sync fan-out gate (both jobs): "Sync articles" completes every 10 min
+# during the day, but most runs commit nothing - deploying + testing an
+# unchanged tree ~84x/day is pure waste. For workflow_run events, run only
+# when the sync actually pushed (master head moved past the sha the sync ran
+# on). github.sha for workflow_run = current default-branch head.
 jobs:
   build_and_deploy:
+    if: ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_sha != github.sha) }}
     uses: ./.github/workflows/_hugo.yml
 
   unit_tests:
     name: Unit Tests
+    if: ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_sha != github.sha) }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

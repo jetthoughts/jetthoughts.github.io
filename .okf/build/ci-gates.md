@@ -1,10 +1,10 @@
 ---
 type: Playbook
 title: CI gates (GitHub Actions)
-description: PR CI runs Hugo build, unit tests, and a path-scoped broken-internal-link crawl (lychee). Visual regression is not in CI yet - the old cross-OS blocker is gone (pinned glibc stack); re-introduction planned as DevX R2 Phase B.
+description: PR CI runs Hugo build, unit tests, a path-scoped broken-internal-link crawl (lychee), and a report-only visual gate on the pinned rendering stack. Sync fan-out is gated - no-op sync runs deploy nothing.
 tags: [ci, github-actions, testing, link-check]
 resource: .github/workflows/link-check.yml
-timestamp: 2026-07-31T00:00:00Z
+timestamp: 2026-07-31T16:30:00Z
 ---
 
 # What CI enforces on a PR
@@ -52,6 +52,35 @@ A CI screenshot job (`quick_test` + `bin/qtest`) was built and removed in PR #38
 Two gotchas the first record run hit (both fixed; evidence: [run 30629929407](https://github.com/jetthoughts/jetthoughts.github.io/actions/runs/30629929407) - 104 screenshots compared clean, 4 test failures, commit step never ran). Keep in mind for any new CI test job:
 - **Draft fixtures**: screenshot tests visit the draft post `/blog/codeblock-styles-fixture/`; local builds pass `--buildDrafts` but `bin/hugo-build` only does so when `BUILD_DRAFTS` is set - test.yml sets `BUILD_DRAFTS: '1'` on its setup-hugo step. A CI test build without it 404s the fixture and fails the codeblock tests on every run.
 - **fail_if_new in CI**: snap_diff hard-errors on missing baselines when `ENV["CI"]` is set. Record mode (`FORCE_SCREENSHOT_UPDATE=true`) disables `fail_on_difference` AND `fail_if_new` (setup_snap_diff.rb) so pages added since the last recording can get their FIRST baseline.
+
+# R3-2 correctness + cost fixes (2026-07-31)
+
+- **hugo_stats.json cache is EXACT-key-only** (own cache entry in
+  setup-hugo, no restore-keys). The warm-up skip trusts any non-empty stats
+  file; a restore-keys partial hit could restore a STALE stats file from an
+  older tree and PurgeCSS would purge live classes (the .sr-only incident
+  class re-opened via cache). Exact hit = identical source tree = valid
+  stats; any change pays the ~52s warm-up instead. Never add restore-keys
+  back to that entry.
+- **`_dest` is not cached** - it uploaded ~1-2 GB/job and evicted every
+  other cache from the 10 GB repo quota; the build regenerates it anyway.
+- **Sync fan-out gate**: publish.yml + link-check.yml `workflow_run` jobs
+  run only when `github.event.workflow_run.head_sha != github.sha`
+  (for workflow_run events github.sha = current default-branch head; the
+  sync pushing a commit is exactly what moves them apart). "Sync articles"
+  fires every 10 min 8-21 UTC but usually commits nothing - that was ~84
+  no-op deploy+test cascades/day.
+- **link-check builds ONCE**: setup-hugo runs with `build: 'false'`;
+  `rake test:links` does its own production build. The double build blew
+  the job's 10-min timeout on cold caches (seen on PR #422).
+- **test.yml checks out the PR MERGE commit** (default checkout) for
+  pull_request events; only record dispatches check out the branch ref
+  (needed to push the baseline commit). head_ref checkout tested the tip
+  without the base merged and breaks fork PRs.
+- **Record commits survive red tests**: record runs `rake test:system`
+  only (a unit failure used to discard 15+ min of recording), and the
+  commit step is `always()`-gated + porcelain-guarded, so recorded PNGs
+  land even when one page's test fails.
 
 # libvips gotcha (if a CI job ever needs ruby-vips again)
 

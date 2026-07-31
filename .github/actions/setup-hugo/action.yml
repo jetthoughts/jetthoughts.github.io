@@ -52,19 +52,32 @@ runs:
       with:
         node-version: '22'
 
-    # hugo_stats.json is cached deliberately: it is gitignored, and without it
-    # every run pays bin/hugo-build's ~52s PurgeCSS warm-up double-build. The
-    # key hashes config/** (the real config location - the old key hashed
-    # nonexistent root hugo.toml/hugo.dev.toml, so config-only changes reused
-    # a stale resources/_gen).
+    # Two separate caches on purpose:
+    #
+    # 1. hugo_stats.json - EXACT key only, NO restore-keys. The warm-up skip
+    #    in _hugo.yml/bin/hugo-build trusts a non-empty stats file; a
+    #    restore-keys partial hit would restore a STALE stats file from an
+    #    older tree and PurgeCSS would purge classes that are live in THIS
+    #    tree (the 2026-07-19 .sr-only incident class). An exact hit means
+    #    the source tree is identical, so the stats are valid; any change
+    #    misses and pays the ~52s warm-up instead of risking a broken deploy.
+    - name: Cache hugo_stats.json (exact tree match only)
+      uses: actions/cache@v5
+      with:
+        path: hugo_stats.json
+        key: ${{ runner.os }}-hugo-stats-${{ inputs.environment }}-${{ hashFiles('config/**', 'postcss.config.js', 'package.json', '**/bun.lockb', 'themes/**', 'layouts/**', 'content/**') }}
+
+    # 2. Hugo's own caches - restore-keys are safe here (Hugo content-hashes
+    #    resources/_gen entries internally), and partial hits still save real
+    #    time. _dest is deliberately NOT cached: it uploaded ~1-2 GB per job,
+    #    evicting every other cache from the 10 GB repo quota, and the build
+    #    step regenerates it anyway.
     - name: Cache Hugo build
       uses: actions/cache@v5
       with:
         path: |
           /tmp/hugo_cache
           resources/_gen
-          _dest
-          hugo_stats.json
         key: ${{ runner.os }}-hugo-${{ inputs.environment }}-${{ hashFiles('config/**', 'postcss.config.js', 'package.json', '**/bun.lockb', 'themes/**', 'layouts/**', 'content/**') }}
         restore-keys: |
           ${{ runner.os }}-hugo-${{ inputs.environment }}-
