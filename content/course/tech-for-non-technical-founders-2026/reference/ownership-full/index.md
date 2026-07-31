@@ -4,6 +4,10 @@ description: "The complete ownership reference - the 2026 AI-contractor credenti
 date: 2026-05-13
 draft: false
 slug: ownership-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: Infrastructure Ownership - The Three-Step Recovery Sequence, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)** - the 2026 credential trap, the good-vs-bad walkthrough for the three items that fail most, the full recovery sequence, and the advanced hardening notes. Read the micro-lesson first for the 12-item audit and the Friday routine; return here when an item fails and you need the deep recovery detail.

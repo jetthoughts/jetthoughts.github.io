@@ -4,6 +4,10 @@ description: "The complete persona-rehearsal reference - the four follow-up prom
 date: 2026-05-18
 draft: false
 slug: persona-rehearsal-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: AI Persona Interview Rehearsal - Prompts, Rubric, and Objection Tracker, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 2.2 · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)** - the four follow-up prompts, the keep/revise/cut rubric, the full Objection Tracker, and the between-rounds reuse playbook. Read the micro-lesson first to run the core rehearsal; return here for the full prompt set and the deeper reuse patterns.

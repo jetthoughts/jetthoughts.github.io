@@ -4,6 +4,10 @@ description: "The complete paid-pilot reference - the six DPA clauses in detail,
 date: 2026-05-13
 draft: false
 slug: paid-pilot-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: The Paid Pilot Playbook - DPA Clauses, Pricing, and Scripts, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 5.6 · Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)** - the clause-by-clause DPA walkthrough, the full pricing-band math by sector, the Stripe Checkout flow, the conversation script with objection handling, and the honest exceptions. Read the micro-lesson first for the DPA template and the deposit math; return here when a prospect pushes back and you need the objection scripts.

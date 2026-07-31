@@ -4,6 +4,10 @@ description: "The complete Product Brief reference - a worked example and common
 date: 2026-05-18
 draft: false
 slug: product-brief-full
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover: The One-Page Product Brief - Worked Examples for All Five Sections, with a document card on the right"
 ---
 
 > **Reference companion to [Lesson 3.1 · The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)** - a worked example and common mistake for each of the five sections, the decision between a Vibe PRD and a traditional PRD, and when a paid cohort is worth it. Read the micro-lesson first for the five-section template and the do-this-now sitting; return here when you want the worked example for a section you are stuck on. The fillable form lives on the [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) page.
