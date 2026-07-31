@@ -32,6 +32,8 @@ hugo.linux
 !.claude
 .claude/**/*.json
 .claude/**/*.sh
+# the checked-in project hooks config (SessionStart -> bin/agent-bootstrap)
+!.claude/settings.json
 !.stitch
 !.junie
 !.dev
