@@ -39,11 +39,15 @@
    doc, and the kit page's reviewed framing says all 6 components are live
    at their source lessons. Reopen ONLY if GA4 course_pdf_download data
    shows demand for a specific missing template.
-6. **Wave F - Phase 2 mechanics** (un-gated): Module-2 applied checkpoint
-   ("score this practice interview", assessment-validity review before ship);
-   Founder OS pack completion artifact (private, HTML->Chrome pipeline);
-   localStorage progress tracker WITH the trust mitigations from the 2-1 vote
-   (quiet checkmarks, session-honest copy, no second-device guilt).
+6. **Wave F - Phase 2 mechanics** (IN REVIEW on `course-phase2-mechanics`,
+   2026-07-31): ALL THREE BUILT - (a) Module-2 checkpoint "Pressure-test
+   your read" in 2.5 per spec 30.08 (6 details-reveals, per-question GA4
+   labels, zero theme changes, validity-gated); (b) Founder OS pack page +
+   printable PDF (founder-os-pack, wired from 5.7 + landing, no cert/share
+   language; follow-up: needs a cover.png); (c) quiet localStorage visited
+   checkmarks (course-visited.html partial, all 2-1-vote trust mitigations
+   honored, verified in-browser: 1 visited lesson = exactly 1 quiet ✓, empty
+   storage = byte-identical page). Full visual pair at PR prep in progress.
 7. **Wave G - campaign execution** (un-gated): flip the 16 briefs'
    "EXECUTE ONLY after pilot" stamps to "un-gated by Paul 2026-07-31", then
    execute - 15 blog-funnel posts via the full blog pipeline (batch 3-5 per
@@ -54,6 +58,31 @@
    Paul, build only the approved one.
 9. **Pilot recruitment** (PAUL, non-blocking): 3-5 real Sams per 40.18 kit -
    still valuable for real behavior data.
+
+## Landing-page improvement track (scheduled 2026-07-31)
+
+Kanban cards live on the LOCAL board `.devtool/features/` (gitignored - VS
+Code kanban-markdown extension); this section is the committed mirror so a
+cold session sees the work.
+
+- **L1 - styling batch** (IN FLIGHT, branch `course-landing-critique-fixes`):
+  all 8 UI/UX critique findings - course-owned end-cap above the sales
+  footer, ruby AA CTAs (legacy blue failed at 3.4:1), Space Grotesk display,
+  BOTH "since 2005" tenure-canon violations -> 2011, intro decision-diet,
+  module link-run restructure, disclosure softening, year-chip/chip-wrap.
+- **L2 - content-architecture pre-review** (TODO, card
+  `landing-content-layout-critique-prereview-2026-07-31`): 3-4 independent
+  critics on section order; produces the punch-list; NO edits. Blocked by L1
+  (owns `_index.md`).
+- **L3 - content/layout restructure** (BACKLOG, card
+  `landing-content-layout-improvement-2026-07-31`): executes L2's punch-list.
+  Expected moves: relocate "Going further" (post-graduation content, 4
+  identical trigger tables) off the acquisition page; promote the
+  already-building route out of 89% scroll depth into the hero area; expand
+  the 32-word authorship footnote; break the 646-word prose tail. Blocked by
+  L2.
+- Baseline to beat: UI/UX critique scored 25/36 (69%) on 2026-07-31; snapshot
+  at `.impeccable/critique/2026-07-31T11-47-14Z__*.md`. Re-run after L3.
 
 ## Groomed backlog (2026-07-11 grooming session)
 
