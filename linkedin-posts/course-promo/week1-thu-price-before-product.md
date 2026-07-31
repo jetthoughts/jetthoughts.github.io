@@ -39,9 +39,7 @@ You can collect a hundred "sounds great" comments and still not have one person 
 
 There's a way to find out before you build anything. It's not exciting, but it works. Stripe lets you create a payment link in about ten minutes, and that button goes on a one-page site describing the thing you haven't built yet. Click it and you hit a real checkout. If someone actually pays, you refund them and tell them straight where the product is. A stranger you've never met pulling out a card is real in a way a nice comment isn't.
 
-I drew the sketch below while writing up this step: same $97 button, worded two ways. One leads with what the buyer gets, the other just makes clicking feel less scary. Same price either way.
-
-Have you ever put a price on something that didn't exist yet?
+The sketch below is the same $97 button worded two ways. One leads with what the buyer gets, the other just makes clicking feel less scary. Same price either way.
 
 ---
 

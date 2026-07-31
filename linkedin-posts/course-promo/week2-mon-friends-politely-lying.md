@@ -32,11 +32,11 @@ notes: |
 
 "Everyone I show it to says they'd love it."
 
-When a founder tells me that, I ask how many of those people have used it since. The pause that follows is usually the whole answer.
+Friends saying they'd love it is not demand. Colleagues saying it's clever is not demand. Your old boss promising he'd definitely pay is not demand. Demand is what someone did about the problem before you showed up - what they tried, what they paid for, what they duct-taped together in a spreadsheet at midnight.
 
-Nobody in that circle is lying to hurt anyone. They are friends, and trashing a friend's idea over coffee feels mean, so people don't. The kinder someone is to you, the less their "I'd totally use that" tells you.
+When a founder tells me everyone loves the idea, I ask how many of those people have used it since. The pause is usually the whole answer.
 
-The change that fixes it: stop showing the app and asking "would you use this." Ask strangers who have the problem to walk you through the last time it actually cost them something - money, hours, a lost customer. Past behavior is the one thing an interviewee can't be polite about.
+So ask strangers what the problem cost them the last time it showed up. Asking people who like you is checking whether your cooking is good by asking your mom.
 
 Anyone else collected a pile of compliments that never turned into a single user?
 

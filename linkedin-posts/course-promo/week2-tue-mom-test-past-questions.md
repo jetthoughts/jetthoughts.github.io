@@ -40,9 +40,7 @@ The fix comes from Rob Fitzpatrick's Mom Test, and it's one move: ask about the 
 
 "How important is this to you?" becomes "What did the workaround cost you last time - in time, money, or sanity?"
 
-People can promise you anything. What they actually did last month, they can only report. And if the answer to the last one is "nothing," that tells you more than ten enthusiastic yeses.
-
-If you've run customer interviews before: which question do you wish you could take back?
+People can promise you anything. What they actually did last month, they can only report. If the answer to the last swap is "nothing," that tells you more than ten enthusiastic yeses.
 
 ---
 

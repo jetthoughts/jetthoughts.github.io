@@ -35,11 +35,9 @@ The first thing I do with any new idea, mine included, is try to say it in one s
 
 If we help [customer] solve [problem] with [approach], they'll pick it over [what they do today] because [your edge].
 
-Vague words don't count. "Busy professionals" is not a customer. "Independent gym owners who chase no-shows by text every morning" is - because you can find those people and ask them what they actually do about it.
+Vague words don't count. "Busy professionals" is not a customer. "Independent gym owners who chase no-shows by text every morning" is a customer - you can find those people and ask what they do about no-shows today.
 
-If an idea has been sitting in your head for a while, set a timer for 90 minutes tonight and try to fill all five. Wherever you get stuck, that blank is the first thing to go find out, and it's way cheaper to answer now than after you build.
-
-Which blank did you get stuck on?
+If an idea has been sitting in your head for a while, set a timer for 90 minutes tonight and try to fill all five. Whatever blank you get stuck on is the first thing to go find out, and it's a lot cheaper to answer now than after you build.
 
 ---
 

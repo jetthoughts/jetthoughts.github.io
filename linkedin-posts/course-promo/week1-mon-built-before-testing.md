@@ -32,15 +32,11 @@ notes: |
   No flips remain - do NOT add one back in future edits.
 ---
 
-A few times a year I end up on a call with a founder who has put months of evenings and real savings into a product no stranger has ever been asked to pay for.
+Building doesn't test an idea. Eight months of evenings doesn't test an idea. Spending your savings doesn't test an idea. A product that demos beautifully doesn't test an idea. The only thing that tests an idea is a stranger deciding to pay for it.
 
-The walkthrough goes the same way each time. The product is usually good - I say so. Then I ask how many people in the target market saw a landing page before the building started, and the answer is that there was no landing page. Building feels like getting somewhere. Asking a stranger for money feels like begging. So people build.
+A few times a year I end up on a call with a founder who has the whole thing built and has never once asked a stranger for money. Building feels like getting somewhere. Asking feels like begging. So people build. I've done it myself.
 
-That's not lazy or dumb. It's just what everyone does. I've done it myself.
-
-The cheapest version of your product is a webpage with a price on it. Show it to strangers, not the friends who'll be nice about it. If nobody clicks, that page just saved you eight months of building. He's starting over now: same idea, but this time one page in front of 300 strangers before he writes any more code.
-
-If you've shipped something, did you build first, or check if anyone actually wanted it?
+The cheapest version of your product is a webpage with a price on it, shown to strangers - not to friends, who'll be nice about it. If nobody clicks, that page just saved you eight months.
 
 ---
 
