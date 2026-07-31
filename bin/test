@@ -13,7 +13,6 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-DEST="_dest/public-test"
 BASE_URL="http://localhost:${TEST_SERVER_PORT:-1314}"
 
 force_build=""
@@ -22,22 +21,30 @@ if [ "${1:-}" = "--build" ]; then
   shift
 fi
 
-stale() {
-  [ -f "$DEST/index.html" ] || return 0
-  newest_src=$(find content themes layouts config data postcss.config.js \
-    -type f -newer "$DEST/index.html" -print -quit 2>/dev/null || true)
-  [ -n "$newest_src" ]
-}
-
-if [ -n "$force_build" ] || stale; then
-  echo "bin/test: building site to $DEST (bin/hugo-build)..."
-  ENVIRONMENT=production OUTPUT_DIR="$DEST" BASE_URL="$BASE_URL" BUILD_DRAFTS=1 bin/hugo-build
+if [ -n "${PRECOMPILED_ASSETS:-}" ] && [ -n "${HUGO_DEFAULT_PATH:-}" ]; then
+  # Caller (bin/dtest) already built the site on the host and mounted it in;
+  # the test container has no hugo to (re)build with, so trust what we're given.
+  echo "bin/test: using caller-precompiled site at $HUGO_DEFAULT_PATH"
 else
-  echo "bin/test: reusing warm build at $DEST (force with --build)"
-fi
+  DEST="_dest/public-test"
 
-export PRECOMPILED_ASSETS=1
-export HUGO_DEFAULT_PATH="$DEST"
+  stale() {
+    [ -f "$DEST/index.html" ] || return 0
+    newest_src=$(find content themes layouts config data postcss.config.js \
+      -type f -newer "$DEST/index.html" -print -quit 2>/dev/null || true)
+    [ -n "$newest_src" ]
+  }
+
+  if [ -n "$force_build" ] || stale; then
+    echo "bin/test: building site to $DEST (bin/hugo-build)..."
+    ENVIRONMENT=production OUTPUT_DIR="$DEST" BASE_URL="$BASE_URL" BUILD_DRAFTS=1 bin/hugo-build
+  else
+    echo "bin/test: reusing warm build at $DEST (force with --build)"
+  fi
+
+  export PRECOMPILED_ASSETS=1
+  export HUGO_DEFAULT_PATH="$DEST"
+fi
 
 if [ $# -eq 0 ]; then
   bin/rake test:critical
