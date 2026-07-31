@@ -107,6 +107,66 @@ The good statement has a named industry, a dated sample, named workarounds with 
 
 The [Validated Problem Statement Template](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) is the artifact for this lesson. Print it, fill it in 30 minutes, get 2 signatures, and the problem-validation checkpoint is closed.
 
+## Pressure-test your read
+
+Before you trust your own scores, calibrate on someone else's interview. Below is a practice transcript - a founder with a crew-scheduling idea interviewing Dana, who runs a six-person landscaping company. Read each question the founder asked, decide whether you would keep it or cut it, then open the read to compare. No score, no grade - if you disagree with a verdict, re-read the linked rule and argue with the page.
+
+**Q1.** "Walk me through the last time two crews showed up to the same job. What happened that day?"
+
+<details>
+<summary data-course-event="checkpoint-reveal" data-course-label="q1">Reveal the read</summary>
+
+**Keep.** Anchored to a specific past event - Dana can only answer with what actually happened, not with politeness. This is the "tell me about the last time" pattern from [Lesson 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/).
+
+</details>
+
+**Q2.** "If an app planned the week's routes automatically, would you use it?"
+
+<details>
+<summary data-course-event="checkpoint-reveal" data-course-label="q2">Reveal the read</summary>
+
+**Cut.** Hypothetical future - saying yes costs Dana nothing, so the yes tells you nothing. Lesson 2.1's rewrite applies: ask what she has already tried, paid, or built to plan routes.
+
+</details>
+
+**Q3.** "We're building a tool that fixes this with one tap - beats the whiteboard, right?"
+
+<details>
+<summary data-course-event="checkpoint-reveal" data-course-label="q3">Reveal the read</summary>
+
+**Cut.** That's a pitch wearing a question mark. The moment Dana knows what you want to hear, every answer after it is polite-yes - the exact failure mode the [Lesson 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) script exists to prevent.
+
+</details>
+
+**Q4.** "What did that double-booked day cost you - money, hours, or the customer?"
+
+<details>
+<summary data-course-event="checkpoint-reveal" data-course-label="q4">Reveal the read</summary>
+
+**Keep.** It prices the problem from a real event. A cost Dana can name feeds the Q4 pain score and the cost line of your problem statement; a problem nobody can price usually rounds to KILL.
+
+</details>
+
+**Q5.** "What have you already tried or paid for to keep the schedule straight - can you show me?"
+
+<details>
+<summary data-course-event="checkpoint-reveal" data-course-label="q5">Reveal the read</summary>
+
+**Keep.** Past spend is the strongest signal in this course - the gate you're about to apply counts interviewees who have spent time or money on the problem. "Show me" beats "tell me": a spreadsheet on screen cannot be a polite lie.
+
+</details>
+
+**Q6.** "Do you think this is a good idea for a business like yours?"
+
+<details>
+<summary data-course-event="checkpoint-reveal" data-course-label="q6">Reveal the read</summary>
+
+**Cut.** Compliment fishing. Dana will be nice - the same echo-chamber mechanic you avoided when you skipped friends in [Lesson 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). Nice is not signal; count what she did, not what she thinks of you.
+
+</details>
+
+Three keeps, three cuts. If you called all six, your scoring instincts are calibrated - now go apply them to your own ten transcripts, where the wrong keeps are harder to spot because they're yours.
+
 > **If this fails:** the numbers won't settle - a call feels like both a 7 and a 5. **Why:** you're scoring the Q4 number alone, without the comparison test and the flag count. **Fix:** re-read [Lesson 2.1's scoring rubric](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - a 7 needs a comparison behind it plus 3+ emotional flags, or it rounds to 5.
 
 ---
