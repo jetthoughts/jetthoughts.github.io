@@ -8,6 +8,9 @@
   margin-bottom: 0.75rem !important;
 }
 
+/* Brand display type - Space Grotesk on the hero H1 and section H2s only
+   (font link lives in layouts/course/list.html). Body text stays as-is.
+   Space Grotesk's heaviest cut is 700. */
 .blog h1.course-title {
   max-width: 43rem;
   margin-left: auto;
@@ -15,12 +18,6 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
-}
-
-/* Brand display type — Space Grotesk on the hero H1 and section H2s only
-   (font link lives in layouts/course/list.html). Body text stays as-is.
-   Space Grotesk's heaviest cut is 700. */
-.blog h1.course-title {
   font-family: "Space Grotesk", system-ui, sans-serif;
   font-weight: 700;
   letter-spacing: -0.03em;
