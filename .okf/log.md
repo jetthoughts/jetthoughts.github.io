@@ -1,5 +1,18 @@
 # Bundle Update Log
 
+## 2026-07-31 (R2 Phase C)
+
+* **Update**: [test-gates](/build/test-gates.md) + [ci-gates](/build/ci-gates.md) - DevX R2
+  Phase C (inner loop): `bin/test` now builds ONCE via bin/hugo-build (PurgeCSS warm-up guard
+  included - hugo_helpers' bare `hugo` call could purge live classes on cold caches) to stable
+  `_dest/public-test`, exports PRECOMPILED_ASSETS, and mtime-skips the build when warm -
+  measured cold 2m19s -> warm 0.6s for single-file runs (previously EVERY single-file run paid
+  a full rebuild into one of 5 random dirs; rand(5) fan-out retired). CI: `hugo_stats.json` now
+  in the setup-hugo cache (was gitignored + uncached = ~52s warm-up double-build every run);
+  `_hugo.yml` warm-up exits early on cached stats; cache key fixed to hash `config/**` (old key
+  hashed nonexistent root hugo.toml, so config-only changes reused stale resources/_gen).
+  `test:critical` glob now recursive, matching test:system.
+
 ## 2026-07-31 (R2 Phase B2)
 
 * **Update**: [ci-gates](/build/ci-gates.md) scope - DevX R2 Phase B2: agent containers now
@@ -12,6 +25,21 @@
   (`.githooks/pre-push`, installed by bin/setup via core.hooksPath): lint-css ratchet +
   course validators + toolchain-pin/bin-script guard tests in ~5s; bypass SKIP_CHECKS=1.
   Gotcha: `.claude/**/*.json` is gitignored - settings.json needed a `!` negation.
+
+## 2026-07-31 (course waves + GA4 batching)
+
+* **Update**: 2605 course project shipped Waves 0/A-H in one day (PRs #407
+  Clarity + local-analytics exclusion, #408 five reference SVGs, #409 twenty
+  covers, #410 Sprint D gaps, #411 Phase 2 mechanics). Durable operational
+  learning worth keeping: **GA4 batches multiple events into one POST whose
+  QUERY STRING carries no `en=` param - the event names live in the REQUEST
+  BODY.** Verifying an event by reading the network list alone produces a
+  false "did not fire" (hit on the 2.5 checkpoint verification). Read the
+  request body. Recorded in runbook 20.12's verified-events table.
+* **Learning (process)**: audit a backlog item's premise before dispatching
+  work - 4 items this day were invalid or already-resolved (stale cover
+  badge, Operating Kit templates, 7 of 15 campaign briefs absorbed, the
+  "bistable render" that was a stale committed baseline).
 
 ## 2026-07-31 (R2 Phase B)
 
