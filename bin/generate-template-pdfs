@@ -38,6 +38,7 @@ SLUGS=(
   first-paying-customer-operating-kit
   interview-scorecard
   pre-launch-checklist
+  founder-os-pack
 )
 
 # One-pager canvases: raw SVG assets printed straight to PDF (landscape via the

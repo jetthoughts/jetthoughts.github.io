@@ -69,7 +69,7 @@ Skip this course if you want to learn to code or hand off founder judgment to so
 
 ## Module map
 
-Read the modules in order. Each module's output is the next module's input, and each card's **"You leave with"** line names its output; together with the fill-in templates they total {{< course-stat artifacts >}} artifacts, which bundle into a single Google Drive folder - your **Founder OS** - that doubles as your decision log. If you ever raise, the same folder is the evidence pack investors fund.
+Read the modules in order. Each module's output is the next module's input, and each card's **"You leave with"** line names its output; together with the fill-in templates they total {{< course-stat artifacts >}} artifacts, which bundle into a single Google Drive folder - your **Founder OS** - that doubles as your decision log. If you ever raise, the same folder is the evidence pack investors fund. The [Founder OS pack index](/course/tech-for-non-technical-founders-2026/founder-os-pack/) is its printable cover sheet.
 
 <div class="module-card" id="module-1">
   <span class="module-card__badge">Module 1</span>
