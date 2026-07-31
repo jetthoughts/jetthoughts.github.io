@@ -115,11 +115,19 @@ jobs:
           # and a plain push gets rejected non-fast-forward (run 30632854418
           # recorded everything, then lost it all at push). Baseline PNGs don't
           # conflict with content commits, so rebase-and-retry is safe.
+          pushed=0
           for i in 1 2 3; do
-            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            if git pull --rebase origin "${GITHUB_REF_NAME}" && git push; then
+              pushed=1
+              break
+            fi
             echo "push attempt $i failed, retrying..."
-            sleep 5
+            [ "$i" -lt 3 ] && sleep 5
           done
+          if [ "$pushed" -ne 1 ]; then
+            echo "::error::failed to push recorded baselines after 3 attempts"
+            exit 1
+          fi
 
       - name: Upload screenshot report
         if: failure()
