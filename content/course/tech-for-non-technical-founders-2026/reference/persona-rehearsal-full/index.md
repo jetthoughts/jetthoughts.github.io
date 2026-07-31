@@ -21,6 +21,8 @@ slug: persona-rehearsal-full
 
 Think of it as a trial attorney prepping cross-examination with a paralegal standing in as the witness. The paralegal can't give testimony, but the rehearsal finds the question that falls apart under any pressure at all.
 
+![A hand-drawn loop of four prompt cards: red Prompt 2 opening question test in character, purple Prompt 3 question diagnosis with break character for 30 seconds, red Prompt 4 objection surface back in character, and red Prompt 5 sharpening to past-anchored under 20 words. A dashed arrow loops back to repeat for each question across all 3 personas, then a keep / revise / cut arrow drops to two green deliverable cards - 5-7 solid questions and the top 3 objections for the Objection Tracker - with an amber footnote that the real gate stays 10 Mom Test interviews at 7+/10 strong signal.](persona-rehearsal-loop.svg)
+
 ## Run the rehearsal session
 
 Once the persona is set (Prompt 1 lives in [Lesson 2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)), run your draft questions. Here's the sequence.
