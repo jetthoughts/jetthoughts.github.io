@@ -12,12 +12,14 @@ timestamp: 2026-07-31T00:00:00Z
 |---|---|---|
 | `bin/qtest --changed` | Scoped visual gate: builds once (~11s), runs ONLY affected pages' desktop+mobile screenshot tests (~2.5s each) + orphan guard + color-system check; site-wide/unmapped files auto-escalate to the full critical suite | Per micro-commit inside a sprint (~25-60s); NOT a substitute for the milestone/PR gates below |
 | `bin/rake test:critical` | Critical Minitest suite (46 runs / 84 screenshots) | At component/task milestones and before every commit outside sprint micro-commit trains |
-| `bin/test` | Visual regression on macOS host (baselines in `test/fixtures/screenshots/macos/`) | ONCE at PR prep (branch head, before `gh pr create`) or on Paul's explicit confirmation - NOT per commit (Paul 2026-07-31: qtest is the routine gate) |
+| `bin/test` | Visual regression on the host (baselines in `macos/` on a Mac; on Linux, comparable to `linux/` when run through `bin/setup-test-env`'s pinned stack) | ONCE at PR prep (branch head, before `gh pr create`) or on Paul's explicit confirmation - NOT per commit (Paul 2026-07-31: qtest is the routine gate) |
 | `bin/dtest` | Same suite in Linux/Docker (baselines in `linux/`) - CI runs Linux | Same trigger as bin/test; a PR must never open without this leg (green-locally / red-in-CI otherwise) |
 
-`bin/qtest` page keys mirror `themes/beaver/assets/css/pages/*.css` basenames;
-the changed-file→page map lives in the script itself - extend it when adding
-components. The macOS full suite remains the only dedup-trap catcher
+`bin/qtest` page keys mirror `themes/beaver/assets/css/pages/*.css` basenames
+AND `critical/<name>-critical.css` basenames - the two sets differ (e.g.
+`privacy-policy-critical.css` needs its own key even though the page CSS key
+is `simple-page`); the changed-file→page map lives in the script itself -
+extend it when adding components or critical files. The macOS full suite remains the only dedup-trap catcher
 (Linux font resolution masks it) - never finish a component on qtest alone.
 
 # Hard-won caveats

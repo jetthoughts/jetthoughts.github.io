@@ -20,7 +20,7 @@ loads `lib/` onto `$LOAD_PATH`.
 | `rake test:critical` | `test/system/*_test.rb` | Fast required gate after every micro-change (<10 lines) |
 | `rake test:integration` | `test/integration/**/*_test.rb` | Integration tests |
 | `rake build` | — | Runs `bin/hugo-build` |
-| `rake dev` | — | Runs `bin/hugo-dev` |
+| `rake dev` | — | Runs `bin/dev` (dev-mode PostCSS; `bin/hugo-dev` retired - it ran the production PurgeCSS chain) |
 | `rake lighthouse[limit]` | — | Runs `bin/lighthouse` across crawled pages |
 
 Default rake task is `test:all`.

@@ -116,7 +116,10 @@ end
 
 desc "Run server (Hugo)"
 task :dev do
-  sh "./bin/hugo-dev"
+  # bin/dev (not the retired bin/hugo-dev): it exports HUGO_ENVIRONMENT so
+  # PostCSS actually runs in dev mode - the old script left it unset and paid
+  # the full PurgeCSS+cssnano production chain on every CSS rebuild.
+  sh "./bin/dev"
 end
 
 desc "Crawl site and run Lighthouse on each page (bin/lighthouse)"
