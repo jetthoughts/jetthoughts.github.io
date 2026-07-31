@@ -223,6 +223,7 @@ Each module has an **input** (what the reader brings from the previous module), 
 - **Course format spec (creators)**: `30-39-architecture-design/30.03-course-format-requirements-for-creators.md` — canonical micro-learning requirements, lesson template, gap analysis, migration guide
 - **Strategy**: `20-29-strategy/20.01-course-modules.md` + `20.02-positioning-vs-courses.md` + `20.10-sequence-decision-validate-vs-smoke-test.md`
 - **Open work**: `TASK-TRACKER.md` (single source of truth for all active tasks)
+- **OST + Impact Map (initiative→goal traceability)**: `20-29-strategy/20.14-ost-impact-map.md`
 - **Low-impact ideas**: `LOW-IMPACT-IDEAS-BANK.md` (deferred, dropped, and P3 ideas)
 - **External research**: `../../docs/_research/` (Russian-language market research)
 - **Voice**: `../../90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`
