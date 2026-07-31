@@ -17,6 +17,20 @@
   hyphens: auto;
 }
 
+/* Brand display type — Space Grotesk on the hero H1 and section H2s only
+   (font link lives in layouts/course/list.html). Body text stays as-is.
+   Space Grotesk's heaviest cut is 700. */
+.blog h1.course-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.blog .post-content h2 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 /* Course end-cap — quiet close above the global footer: promise line,
    one Start CTA, and the copy-share-link pattern from module ends. */
 .blog .course-endcap {

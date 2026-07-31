@@ -11,6 +11,15 @@
     (resources.Get "css/footer.css")
   -}}
   {{ partial "assets/css-processor.html" (dict "resources" $CSS "bundleName" "course-list" "context" .) }}
+
+  {{/* Display font for the course landing hero H1 + section H2s only.
+       Loaded here, not in baseof.html, mirroring the conditional Caveat
+       load for mermaid pages. Space Grotesk tops out at weight 700. */}}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap"
+    rel="stylesheet" />
 {{ end }}
 
 {{ define "main" }}
