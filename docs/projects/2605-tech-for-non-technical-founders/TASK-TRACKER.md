@@ -92,7 +92,8 @@
     opener/closer sweep — 5.1 triple-banned opener, 5.6 time-cut, 5 Going-
     Further vignettes, 3 cloned template closers, opener sentences ONLY;
     glosses for queues/SOC 2/GA4; 1.1 Success check promotes the stranger
-    read-aloud; fake-stripe 100-vs-300 label. **BINDING no-touch list (C6):**
+    read-aloud; fake-stripe 100-vs-300 label; kit:168 "20 years" -> align
+    with the since-2011 canon (l3-reviewer P3, pre-existing). **BINDING no-touch list (C6):**
     Mia M1 walkthrough, 2.5 Dana pressure-test, the three decision forks,
     1.4 exemplar structure, canon numbers, JT footer discipline.
 
