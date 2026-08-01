@@ -38,15 +38,13 @@ related_posts: false
 >
 > **Progress:** M5 · 2 of 7 · [OPTIONAL] - run this only if you don't yet know which channel your buyers actually use
 
+After this lesson you will be able to: **pick one outreach channel from your interview evidence and write a commitment statement you'll hold before scaling.**
+
 > **TL;DR:** Pick one channel from your interview evidence and commit for a full send/reply/follow-up arc. Channel-hopping is the most common newbie mistake - you can't read a signal you never let stabilize.
 
 The channel-flailing pattern: switch every 10 days - LinkedIn for two weeks, cold email for two weeks, a Slack community for two weeks, back to LinkedIn. Six weeks in, 8 conversations, zero paid pilots, and no idea which channel actually worked. The fix is rarely a smarter channel - it's committing to one from your interview evidence through a full send/reply/follow-up arc.
 
-After this lesson you will be able to: **pick one outreach channel from your interview evidence and write a commitment statement you'll hold before scaling.**
-
 ---
-
-![Pick one channel from your interview transcripts, score each candidate out of 12, then commit to one full send-reply-follow-up arc before you switch](channel-decision.svg)
 
 ## Commit before you read the signal
 

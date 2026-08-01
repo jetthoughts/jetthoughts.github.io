@@ -33,13 +33,13 @@ related_posts: false
 >
 > **Progress:** M5 · 4 of 7 · Results so far: 50 names in 4 buckets (5.3) - this page writes the 4 messages
 
+After this lesson you will be able to: **write 4 outreach message variants (one per bucket) and record a 90-second Loom that gets replies.**
+
 > **TL;DR:** One 4-part message with a different opener per bucket, plus one 90-second [Loom](https://www.loom.com) (a screen-recording tool - record your screen and voice, share a link). Keep it to 5-7 sentences. "Quick chat?" gets zero replies; a specific reference plus a Loom gets the meeting.
 
 ---
 
 The instinctive first message - "quick chat?" - gets zero replies. The message that works is 5-7 sentences with one specific reference, one line on the problem, and a Loom.
-
-After this lesson you will be able to: **write 4 outreach message variants (one per bucket) and record a 90-second Loom that gets replies.**
 
 ---
 

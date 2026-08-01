@@ -34,6 +34,8 @@ related_posts: false
 >
 > **Progress:** M5 · 3 of 7 · Results so far: your first users answered the 40% test (5.1) - this page builds the 50-name list for the first sales push
 
+After this lesson you will be able to: **build a 50-name list from people who already know you, sorted so you know exactly who to message first.**
+
 > **TL;DR:** Build a 50-name list from people who already know you, sorted into 4 buckets - champions, hot, warm, cold. Lenny Rachitsky's research on fast-growing B2B startups found the personal network was the number-one source of first customers. One focused sitting.
 
 ---
