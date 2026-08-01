@@ -953,6 +953,23 @@
   font-weight: 700;
 }
 
+/* Kit component grid — the operating-kit page's six template cards.
+   Reuses .module-card; two columns on desktop, one on mobile. */
+.blog .kit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+.blog .kit-grid .module-card {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .blog .kit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Mistake list — "Why this course exists": five ✗ items with the
    module that heads each mistake off. */
 .blog ul.mistake-list {
