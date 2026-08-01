@@ -71,7 +71,21 @@
    audit of off-spec SVG fonts, mobile text-size floor, founder-os-pack
    cover). Pilot recruitment (PAUL): 3-5 real Sams per 40.18.
 
-10. **[W2] Course v2-format consistency fix + deep audit — GROOMED
+10. **[W2] ✅ DONE 2026-08-01, merged as PR #431 (squash 82deeec7).**
+    Groomed re-audit → T1-T5 scaffold fixes (parallel worktrees) → T6
+    cross-file sweeps → T7 audit (9 fixes incl. the kit DPA-refund-half seam
+    defect + canon deposit-row sync) → T8 4-persona cold-eyes panel + 25-item
+    fix round + voice re-check. Panel: assessment spine / split routing / path
+    integrity all PASS, zero pages more-AI-after. Scroll gate: desktop clean
+    (25 pages); SVG "failures" proven non-defects (HTTP 200, lazy-load probe
+    artifact). Known issue → W4 (item 13): 390px mobile table overflow on 2
+    dense reference pages (fcto 4-col table; operating-kit pre-existing since
+    W1) - fix is course-single responsive-table CSS, campaign-frozen. hire-track
+    split shipped: new fractional-cto-sow-reference page. Two "20 years" →
+    since-2011. 20%-slot for this boundary: O5(a) OS-scoped restore-on-green
+    (shipped 9d45c8d1). GROOMED SCOPE (historical, executed):
+
+    **[W2] Course v2-format consistency fix + deep audit — GROOMED
     2026-08-01 (re-audited against tree @3d732e23; research:
     `40-49-review/40.22-v2-format-structural-audit-2026-08-01.md`; wave plan:
     `20-29-strategy/20.15-course-improvement-wave-plan-2026-08.md`; runbook:
