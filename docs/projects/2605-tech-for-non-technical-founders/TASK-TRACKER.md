@@ -144,6 +144,20 @@
     raise" asides may be softened during W2/W5 passes only where they read
     off-ICP, under surgical-edit rules.
 
+14. **[IDEA - review opportunity later, spans course + blog] Reader-mode
+    readability research** (Paul 2026-08-01): browsers' reader modes
+    (Chrome DevTools can toggle Reader Mode; Firefox/Safari have their own)
+    encode battle-tested readability defaults - measure line length,
+    font-size/line-height ratios, paragraph spacing, link treatment, content
+    width. Research pass: render 2-3 course lessons + 2-3 blog posts in
+    reader mode, screenshot-compare against our normal styles side by side,
+    extract the deltas that would improve reading XP (candidates: measure,
+    contrast, vertical rhythm, de-chrome), and propose which to adopt in
+    course-single/blog CSS. Deliverable: short findings doc with the
+    screenshot pairs + an adopt/skip table; NOT a restyle - feeds W4 (V3-B
+    course-single wiring) and any future blog typography pass. Cold-session
+    executable; no gate dependencies.
+
 ## Browser-session track (claude-in-chrome, added 2026-07-31)
 
 Paul's logged-in Chrome is now a proven agent surface (LinkedIn reads
