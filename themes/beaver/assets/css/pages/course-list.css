@@ -3,24 +3,21 @@
    were keyed to h1.fl-heading — same selectors and importance, loaded after
    style.css/single-post.css so the cascade resolves identically. */
 
-.blog article.single-content > header h1.course-title {
-  line-height: 1.15;
-  margin-bottom: 0.75rem !important;
-}
-
 /* Brand display type - Space Grotesk on the hero H1 and section H2s only
    (font link lives in layouts/course/list.html). Body text stays as-is.
-   Space Grotesk's heaviest cut is 700. */
+   Space Grotesk's heaviest cut is 700.
+   !important: style.css ships `.blog h1 { margin: 0 0 32px !important }`
+   (important shorthand), so the margin override must match importance. */
 .blog h1.course-title {
-  max-width: 43rem;
-  margin-left: auto;
-  margin-right: auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
   font-family: "Space Grotesk", system-ui, sans-serif;
   font-weight: 700;
+  font-size: clamp(44px, 5vw, 64px);
+  line-height: 1.05;
   letter-spacing: -0.03em;
+  margin: 0 0 20px !important;
 }
 .blog .post-content h2 {
   font-family: "Space Grotesk", system-ui, sans-serif;
@@ -350,88 +347,174 @@
   letter-spacing: -0.01em;
 }
 
-/* V3 Dark hero course-artifact card — obsidian island replacing the
-   cover figure; hero widens beyond the 720px article on desktop.
-   Separate revertable commit: drop this block + the list.html aside
-   to restore the cover hero. */
-.blog .course-hero-card {
-  position: relative;
+/* W1.5 (40.26 spec §§3-4) — full-bleed tinted hero band, two-column grid,
+   and the obsidian course-window card (replaces the V3 course-hero-card).
+   Tint = ruby at ~5% on white, never the demo's raw hue. */
+.course-landing .course-hero-band {
+  background: rgba(204, 52, 45, 0.05);
+  padding: 64px 24px 72px;
+}
+.course-landing .course-hero {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+/* style.css centers the hero text elements at 43rem via margin auto -
+   inside the band's left column they anchor left instead. */
+.course-landing .course-hero .course-hero-lede,
+.course-landing .course-hero .course-chips,
+.course-landing .course-hero .course-hero-note,
+.course-landing .course-hero .course-hero-ctas {
+  margin-left: 0;
+  margin-right: 0;
+}
+.course-landing .course-hero .course-hero-ctas {
+  margin-bottom: 0;
+}
+/* Spec §2: the secondary CTA is white with a hairline border - never
+   colored. Overrides the ruby-outline ghost from style.css. */
+.course-landing .course-hero-ctas a.cta-link--ghost {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #1a1a2e;
+  padding: 13px 27px;
+}
+.course-landing .course-hero-ctas a.cta-link--ghost:hover {
+  background: #f9fafb;
+  color: #1a1a2e;
+}
+.course-landing .course-hero-ctas a.cta-link--ghost:visited {
+  color: #1a1a2e;
+}
+
+/* Course-window card (spec §4): obsidian, radius 16, chrome bar with the
+   3 mac dots at 80%, mono eyebrow -> 2-line title -> mono meta. */
+.course-landing .course-window {
   overflow: hidden;
   background: #0d1117;
-  border-radius: 18px;
-  padding: 30px 28px;
-  margin: 20px 0 8px;
-  color: #e7e7ee;
-  box-shadow: 0 20px 50px rgba(13, 17, 23, 0.35);
-  text-align: left;
+  border: 1px solid #f3f4f6;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(13, 17, 23, 0.4);
+  margin: 40px auto 0;
+  max-width: 480px;
 }
-.blog .course-hero-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(280px 200px at 88% 112%, rgba(168, 85, 247, 0.22), transparent),
-    radial-gradient(300px 220px at 8% -12%, rgba(204, 52, 45, 0.32), transparent);
-  pointer-events: none;
+.course-landing .course-window__chrome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.blog .course-hero-card > * {
-  position: relative;
+.course-landing .course-window__chrome i {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }
-.blog .course-hero-card__eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+.course-landing .course-window__chrome i:nth-child(1) { background: rgba(255, 95, 86, 0.8); }
+.course-landing .course-window__chrome i:nth-child(2) { background: rgba(255, 189, 46, 0.8); }
+.course-landing .course-window__chrome i:nth-child(3) { background: rgba(39, 201, 63, 0.8); }
+.course-landing .course-window__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+}
+.course-landing .course-window__eyebrow {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #ff6b64;
-  margin: 0 0 8px;
+  margin: 0 0 14px;
 }
-.blog .course-hero-card__stats,
-.blog .single-content ul.course-hero-card__stats {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 0;
-  margin: 0 0 16px;
+.course-landing .course-window__title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 2.6vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0 0 18px;
 }
-.blog .course-hero-card__stats li,
-.blog .single-content ul.course-hero-card__stats li:not(:first-child) {
-  font-size: 13px;
-  font-weight: 600;
-  color: #e7e7ee;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 999px;
-  padding: 3px 10px;
+.course-landing .course-window__meta {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 14px;
+  color: #d1d5db;
   margin: 0;
 }
-.blog .course-hero-card__leave {
+.course-landing .course-window__leave {
   font-size: 14px;
   line-height: 1.6;
-  color: #b9b9c7;
-  margin: 0;
+  color: #9ca3af;
+  margin: 16px 0 0;
 }
 @media (min-width: 980px) {
-  .blog .course-hero {
-    width: min(1080px, calc(100vw - 48px));
-    margin-left: 50%;
-    transform: translateX(-50%);
+  .course-landing .course-hero {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 380px;
-    column-gap: 56px;
+    grid-template-columns: minmax(0, 1fr) 440px;
+    column-gap: 64px;
     align-items: center;
-    margin-bottom: 12px;
   }
-  .blog .course-hero h1.course-title,
-  .blog .course-hero .course-hero-lede,
-  .blog .course-hero .course-chips,
-  .blog .course-hero .course-hero-note {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .blog .course-hero-card {
+  .course-landing .course-window {
     margin: 0;
+    max-width: none;
   }
+  /* ~4/3 with the 48px chrome bar on the 440px column */
+  .course-landing .course-window__body {
+    min-height: 282px;
+  }
+}
+
+/* W1.5 content container — the article goes full width; a 3-track grid
+   centers a ~1080px middle column so section content aligns with the hero
+   columns. Prose keeps a ~720px reading measure anchored to the container's
+   left edge; component grids (mistakes, module map, NOT-cover) span the
+   full middle track. Bands (.course-band) break out full-bleed and re-apply
+   the same grid inside. */
+.course-landing article.single-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+.course-landing .post-content,
+.course-landing .course-band {
+  display: grid;
+  grid-template-columns: minmax(24px, 1fr) minmax(0, 1080px) minmax(24px, 1fr);
+}
+.course-landing .post-content > *,
+.course-landing .course-band > * {
+  grid-column: 2;
+}
+.course-landing .post-content > .course-band {
+  grid-column: 1 / -1;
+}
+.course-landing .post-content > p,
+.course-landing .post-content > ul:not(.mistake-list):not(.not-cover-list),
+.course-landing .post-content > details.not-cover-details,
+.course-landing .course-band > p {
+  max-width: 720px;
+}
+
+/* W1.5 endcap island (spec §10) — the article is full width now, so the
+   endcap constrains itself: max-w 896, radius 24, ruby glow top-right
+   half off-card. */
+.course-landing .course-endcap {
+  width: min(896px, calc(100% - 48px));
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 96px;
+  margin-bottom: 48px;
+  border-radius: 24px;
+  padding: 56px 40px 48px;
+}
+.course-landing .course-endcap::before {
+  left: auto;
+  right: -160px;
+  top: -140px;
+  width: 400px;
+  height: 400px;
+  transform: none;
+  background: radial-gradient(closest-side, rgba(204, 52, 45, 0.25), transparent);
 }
 
 /* V1.4b Hero chips + CTA polish, converged on the demo-1 component spec
