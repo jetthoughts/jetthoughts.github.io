@@ -10,9 +10,10 @@
     (resources.Get "css/footer.css")
   -}}
   {{ partialCached "assets/css-processor.html" (dict "resources" $resources "bundleName" "vibe-code-rescue") "vibe-code-rescue" }}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+  {{/* Self-hosted (2026-08-01): same Google woff2 binaries + unicode ranges,
+       served same-origin - no third-party round trips, hermetic tests. */}}
+  <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="/css/fonts-space-grotesk.css" rel="stylesheet">
 {{ end }}
 
 {{ define "main" }}
