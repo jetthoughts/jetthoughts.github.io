@@ -3,7 +3,7 @@ type: Playbook
 title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
-timestamp: 2026-08-01T10:00:00Z
+timestamp: 2026-08-01T11:30:00Z
 ---
 
 # The suites
@@ -35,14 +35,23 @@ extend it when adding components or critical files. The macOS full suite remains
   that may be absent is still a smell. Removing a mask/tolerance is safe once
   fonts settle (`document.fonts.ready` is in the choke point); the
   drift-overview procedure (read `snap_diff_report.html` heatmap, one mask at
-  a time, which masks to KEEP) lives in
-  [test-speed-research-todo](/workflows/test-speed-research-todo.md).
+  a time, which masks to KEEP) lives in the repo doc
+  `docs/workflows/test-speed-research-todo.md` (outside this bundle).
 - **Fonts + mermaid.js are self-hosted** (2026-08-01) - Caveat / Space Grotesk
   woff2 and `mermaid-11.15.0.min.js` served same-origin from
   `themes/beaver/static/`, not Google Fonts / jsdelivr. Visual tests are
   hermetic (zero third-party network); prod mermaid pages lose the CDN round
   trips. The vendored mermaid is sha384-identical to the old SRI pin - re-vendor
   (and re-record mermaid baselines) if bumping the version.
+- **Local `bin/dtest` is red ONLY on 7 mobile-codeblock screenshots**
+  (2026-08-01, verified across 3 runs byte-identical: bare 7.3 / html 5.46 /
+  js 4.34 / python 4.31 / text 4.08 / ruby 3.49 / md 3.57). This is
+  DETERMINISTIC amd64-emulation antialiasing (same pinned Docker fonts on both
+  sides - it's the QEMU-vs-native CPU math on Apple Silicon), NOT flaky and NOT
+  a regression. They are GREEN on CI-native amd64. mermaid used to be in this
+  set and is now GREEN after self-hosting the fonts. Trust CI for these 7; never
+  re-record them from local emulated Docker (would break green CI). Identical
+  diff_levels across runs = deterministic (a flaky render varies).
 - **Content-only diffs skip the visual suites entirely** (Paul 2026-07-31).
   A change touching ONLY markdown prose/frontmatter - no `themes/`, no
   `layouts/`, no `*.css`, no inline HTML/SVG in a body - is gated by
