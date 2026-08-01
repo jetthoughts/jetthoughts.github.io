@@ -44,6 +44,10 @@
             </ul>
           {{ end }}
 
+          {{ with .Params.hero_note }}
+            <p class="course-hero-note">{{ . | markdownify }}</p>
+          {{ end }}
+
           {{ if .Params.hero_primary_url }}
             <div class="course-hero-ctas">
               <a class="cta-link" href="{{ .Params.hero_primary_url }}" data-course-event="start-course">{{ .Params.hero_primary_text }}</a>
