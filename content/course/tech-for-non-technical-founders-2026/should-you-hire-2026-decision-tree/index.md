@@ -130,7 +130,7 @@ Which of the five answers are you least sure of? That one is where your build de
 >
 > **You have now:** a quality-checked one-page brief (3.2) + a build-path decision - validate / self-serve / fractional CTO / hire - saved in your `Founder OS` folder. The default is self-serve; the build itself is the next test.
 >
-> **Next:** [4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - locks ownership of the accounts before anything gets built on the path you just chose.
+> **Next:** every path locks ownership first - [4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/), before a line of code or a signed contract. Then the path you wrote at the top of the worksheet routes you: if you are **staying self-serve** (the default), keep building at [4.3 · The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) through 4.4 - the **fractional-CTO bridge** is the same self-serve build with a bought architecture review from the [Fractional CTO SOW reference](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/). If you are **hiring a team** (backend-heavy, or 12+ months of runway), start with the [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) and read its SOW before anyone builds. If Q1 came back **No**, step back and validate without code - re-run the [1.4 demand test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) as an Airbnb test before you spend runway.
 >
 > **If blocked:** see "If this fails" above.
 >
