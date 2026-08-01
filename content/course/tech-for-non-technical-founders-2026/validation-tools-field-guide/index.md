@@ -95,7 +95,7 @@ Two are free; none costs more than a month of Perplexity Pro. Run at least one b
 
 VenturusAI runs your business idea through three classic strategic frameworks - SWOT (Strengths, Weaknesses, Opportunities, Threats), PESTEL (Political, Economic, Social, Technological, Environmental, Legal forces), and Porter's Five Forces (Buyer Power, Supplier Power, Threat of Substitution, Competitive Rivalry, Threat of New Entrants). It also produces sections on target audience, marketing strategy, and financial estimates.
 
-Think of it as a free MBA student who reads your one-paragraph description and produces a structured critique in 30 seconds. The frameworks are academic; the output is practical when your input is.
+Think of it as a free MBA student who reads your one-paragraph description and produces a structured critique in 30 seconds. The frameworks are academic; the output is practical when your input is specific.
 
 ### What to prepare before you open it
 
