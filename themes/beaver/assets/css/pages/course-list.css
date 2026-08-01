@@ -173,6 +173,32 @@
   }
 }
 
+/* L5-condense (40.26) — NOT-cover exclusions as a tight two-col list;
+   the why-excluded explanations sit in one <details> below it. */
+.blog ul.not-cover-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 28px;
+  margin: 20px 0 16px;
+}
+.blog ul.not-cover-list li {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .blog ul.not-cover-list {
+    grid-template-columns: 1fr;
+  }
+}
+.blog .not-cover-details summary {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-ruby);
+}
+.blog .not-cover-details[open] summary {
+  margin-bottom: 10px;
+}
+
 /* V1.4 Eyebrow + headline scaffold — ruby uppercase tracked kicker
    above each section H2, keyed off the stable heading ids. */
 .blog h2#take-this-course-if::before,

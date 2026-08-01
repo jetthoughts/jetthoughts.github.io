@@ -77,15 +77,30 @@ The five mistakes below sink more first products than bad code does - we have wa
 
 ## What this course does NOT cover
 
-To save your time, here is what we intentionally exclude. None of these are needed for the promised result (idea → first paying customer):
+To save your time, here is what we intentionally exclude - none of it is needed for the promised result (idea → first paying customer):
 
-- **How to code.** The course assumes zero coding ability. [Lovable](https://lovable.dev) + [Supabase](https://supabase.com) + [Stripe](https://stripe.com) handle the technical side.
-- **How to hire a CTO or build an engineering team.** Hiring is covered as a build-path decision (Lesson 4.1), not as an org-design course.
-- **How to raise venture capital.** The course produces the artifacts investors want to see. It does not teach pitch decks or fundraising mechanics.
-- **How to manage a 20-person engineering team.** [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) + [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/) cover early-stage management; full org management is out of scope.
-- **Mobile-only or marketplace-only specifics.** Examples use SaaS + B2B + B2C patterns. Mobile apps and two-sided marketplaces have their own playbooks.
-- **Legal incorporation, taxes, IP filings.** Use a lawyer or a service like [Stripe Atlas](https://stripe.com/atlas), [Clerky](https://www.clerky.com/), or [Firstbase](https://www.firstbase.io/).
-- **SEO, content marketing, paid acquisition at scale.** Module 5 covers first-10-customers outbound. Scaling acquisition is a separate discipline.
+<ul class="not-cover-list">
+  <li>How to code</li>
+  <li>How to hire a CTO or build an engineering team</li>
+  <li>How to raise venture capital</li>
+  <li>How to manage a 20-person engineering team</li>
+  <li>Mobile-only or marketplace-only specifics</li>
+  <li>Legal incorporation, taxes, IP filings</li>
+  <li>SEO, content marketing, paid acquisition at scale</li>
+</ul>
+
+<details class="not-cover-details">
+  <summary>Why these are out</summary>
+  <ul>
+    <li><strong>How to code.</strong> The course assumes zero coding ability. <a href="https://lovable.dev">Lovable</a> + <a href="https://supabase.com">Supabase</a> + <a href="https://stripe.com">Stripe</a> handle the technical side.</li>
+    <li><strong>Hiring.</strong> Covered as a build-path decision (Lesson 4.1), not as an org-design course.</li>
+    <li><strong>Venture capital.</strong> The course produces the artifacts investors want to see. It does not teach pitch decks or fundraising mechanics.</li>
+    <li><strong>Managing a big team.</strong> <a href="/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/">Friday Demo Rule</a> + <a href="/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/">Weekly Dev Report</a> cover early-stage management; full org management is out of scope.</li>
+    <li><strong>Mobile / marketplace.</strong> Examples use SaaS + B2B + B2C patterns. Mobile apps and two-sided marketplaces have their own playbooks.</li>
+    <li><strong>Legal.</strong> Use a lawyer or a service like <a href="https://stripe.com/atlas">Stripe Atlas</a>, <a href="https://www.clerky.com/">Clerky</a>, or <a href="https://www.firstbase.io/">Firstbase</a>.</li>
+    <li><strong>Acquisition at scale.</strong> Module 5 covers first-10-customers outbound. Scaling acquisition is a separate discipline.</li>
+  </ul>
+</details>
 
 If you need something on this list, the course won't help with it.
 
