@@ -4,7 +4,9 @@ title: House in-post visual spec
 description: Hand-drawn SVG house style - paper tones, 2-2.5px strokes, semantic colors (green = money only), labels inside shapes.
 resource: .stitch/prompts/course-inpost-visual-prompt.md
 tags: [svg, design, course]
-timestamp: 2026-07-13T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-13T00:00:00Z
 ---
 
 # The spec in one table

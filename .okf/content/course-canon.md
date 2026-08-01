@@ -3,7 +3,9 @@ type: Reference
 title: Course canon numbers
 description: The single source of truth for every recurring number in the course; any chapter that contradicts these is defective.
 tags: [course, canon, consistency]
-timestamp: 2026-07-13T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-13T00:00:00Z
 ---
 
 # Canonical values

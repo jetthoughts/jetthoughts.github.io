@@ -3,8 +3,13 @@ type: Playbook
 title: Outbound sprint machinery (2607 Vibe Code Rescue)
 description: How the browser-agent outreach loop runs - pre-validated sends, daily reply monitoring, the pipeline ledger, board conventions, and the mail-routing gotchas.
 tags: [outbound, sales, browser-agent, kanban, sourcing]
-timestamp: 2026-07-26T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-26T00:00:00Z
 resource: docs/projects/2607-vibe-code-rescue/
+sources:
+  - resource: "/workflows/review-swarm.md"
+    title: "review-swarm"
 ---
 
 # The loop
@@ -87,10 +92,3 @@ resource: docs/projects/2607-vibe-code-rescue/
   (`from:f5bot.com`, `neetocal`), never by scanning that inbox.
 - Statusline/parallel sessions contend on `.git/index.lock` - transient;
   re-check before force-removing.
-
-# Citations
-
-- Project docs: `docs/projects/2607-vibe-code-rescue/` (backlog, runbook,
-  rescue-sprint kit).
-- Review that hardened the kit: 2026-07-24 six-finder audit (see
-  [review-swarm](/workflows/review-swarm.md) multi-doc section).

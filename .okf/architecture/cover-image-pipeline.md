@@ -3,7 +3,9 @@ type: Playbook
 title: Blog Cover Image Pipeline
 description: How a blog post's cover image is generated (JetVelocity design system), stored, and rendered as thumbnail vs og:image.
 tags: [images, seo, design, cdn]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-12T00:00:00Z
 ---
 
 # Overview

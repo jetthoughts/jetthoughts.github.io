@@ -4,7 +4,9 @@ title: Test Suite & Gates
 description: Minitest-based test suite structure and the mandatory test/visual-regression gates for HTML/CSS/template changes.
 resource: Rakefile
 tags: [testing, minitest, ci]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-12T00:00:00Z
 ---
 
 # Overview

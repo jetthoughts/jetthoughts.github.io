@@ -1,5 +1,19 @@
 # Bundle Update Log
 
+## 2026-08-01 (v0.2 migrate) - bundle-wide v0.1 -> v0.2 field migration
+
+* **Update**: ran the validator `--migrate` across `.okf/` (the skill-sanctioned
+  path for a whole v0.1 bundle - do not hand-edit). Mechanically converted every
+  legacy `timestamp` to `generated: { by: process:okf-migrate, at: <original> }`
+  (29 files) - an honest `process:` actor, NOT `human:`, so no fabricated review
+  tier; original dates preserved. Also folded the parseable `# Citations` link in
+  `architecture/css-pipeline.md` into `sources`. No external URLs dropped
+  (verified); the two dropped plain-text citations were `postcss.config.js`
+  (already the `resource`) and a repo doc path.
+* **Note**: 12 `# Citations` body lists remain (soft warnings) - their conversion
+  to `sources` is semantic, done migrate-as-touched. 31 log date-heading warnings
+  are the deliberate house-style suffixes on this append-only history.
+
 ## 2026-08-01 (v0.2) - bundle adopts OKF v0.2 provenance/trust/lifecycle
 
 * **Update**: [root index](/index.md) - `okf_version` bumped 0.1 -> 0.2; added a

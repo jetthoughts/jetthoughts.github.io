@@ -4,7 +4,9 @@ title: LinkedIn Post Pipeline — Paul Keen / JetThoughts
 description: Canonical voice reference and workflow for writing LinkedIn posts under Paul Keen's personal account, primarily for the ICP-E validation campaign.
 resource: docs/workflows/linkedin-post-pipeline.md
 tags: [content, linkedin, workflow, voice]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-12T00:00:00Z
 ---
 
 # Overview

@@ -4,7 +4,9 @@ title: CSS Maintainability Redesign (approved 2026-07-12)
 description: Approved plan superseding the original CSS-duplication-elimination goal; targets hand-editable, single-source CSS and FL-Builder retirement instead of raw line-count reduction.
 resource: docs/projects/2509-css-migration/2026-07-12-css-maintainability-redesign.md
 tags: [css, decision, migration]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-12T00:00:00Z
 ---
 
 # Overview

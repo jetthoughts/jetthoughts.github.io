@@ -4,7 +4,9 @@ title: Course structure (From Idea to First Paying Customer)
 description: 5-module linear spine defined in data/course_sequence.yaml, plus a non-linear Going Further set, per-module Mia walkthroughs, and template chapters.
 resource: content/course/tech-for-non-technical-founders-2026/
 tags: [course, structure, hugo]
-timestamp: 2026-07-17T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-17T00:00:00Z
 ---
 
 # The spine

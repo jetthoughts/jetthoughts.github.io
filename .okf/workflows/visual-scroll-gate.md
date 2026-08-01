@@ -4,7 +4,9 @@ title: Visual Scroll Gate
 description: Blocking pre-handback protocol requiring a full section-by-section visual walk of any new or edited content page at desktop and mobile viewports.
 resource: docs/workflows/visual-scroll-gate.md
 tags: [testing, visual-regression, chrome-devtools]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-12T00:00:00Z
 ---
 
 # Overview

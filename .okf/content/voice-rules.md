@@ -3,7 +3,9 @@ type: Style Guide
 title: Course voice rules (write for Sam)
 description: The reader is Sam, an idea-stage non-technical first-time founder; plain-words glossing, dash style, and the banned structural patterns.
 tags: [voice, style, course]
-timestamp: 2026-07-13T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-13T00:00:00Z
 ---
 
 Full guides: `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`

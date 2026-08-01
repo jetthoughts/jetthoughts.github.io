@@ -4,7 +4,9 @@ title: "ICP-E: Non-Technical Founder Hiring a Devshop"
 description: Primary website lead-gen ICP profile — "Alex," a burned non-technical founder — used to gate all content, blog, design, and marketing work.
 resource: docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md
 tags: [icp, content-strategy, marketing]
-timestamp: 2026-05-08T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-05-08T00:00:00Z
 ---
 
 # Overview

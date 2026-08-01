@@ -4,7 +4,9 @@ title: "Content Plan — Data-Driven Q3 2026"
 description: Active 3-stream content plan based on GSC performance data (Apr–Jul 2026). Rails technical deep-dives (2/week), snippet hygiene rewrites, founder content (every other week). Supersedes 20.07.
 resource: docs/projects/2510-seo-content-strategy/20-29-strategy/20.08-content-plan-data-driven-q3-2026.md
 tags: [content-strategy, seo, content-plan, blog]
-timestamp: 2026-07-19T18:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-19T18:00:00Z
 ---
 
 # Overview

@@ -4,7 +4,9 @@ title: Hugo build (bin/hugo-build)
 description: Canonical build + validation entry point; runs Hugo plus the course validators including the banned-strings ratchet.
 resource: bin/hugo-build
 tags: [build, hugo, validation]
-timestamp: 2026-07-19T12:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-19T12:00:00Z
 ---
 
 `bin/hugo-build` builds the site into `_dest/public-dev/` (repo-root
