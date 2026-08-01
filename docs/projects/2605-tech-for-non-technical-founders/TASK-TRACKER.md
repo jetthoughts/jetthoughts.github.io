@@ -159,6 +159,20 @@ concrete agent-sized tasks with acceptance criteria, drop/resize anything
 the previous wave made stale or already covered, and update the board item
 with the groomed scope (audit-premise rule: groomed items decay - verify
 the artifact, not the memory of it). Dispatch only from the groomed scope.
+**Skill enforcement (Paul 2026-08-01):** at every phase boundary, check the
+loaded skills list (global + project) and route through the matching skill
+instead of default behavior; agent prompts NAME the skills they must invoke.
+Flow map (extend when new skills land): retro → `/sprint-retrospective`
+(xp-practices family); grooming → backlog-grooming/refinement +
+`superpowers:brainstorming` when scope is open-ended; visual/UI work (W1.5,
+W3, W4) → `/impeccable` + stitch-design taste (+ stitch-loop only for
+variant exploration) + ux-principles; content audit/fixes (W2, W5) → the
+course-audit-checklist runbook + content cold-eyes personas +
+course-experience-reviewer agent + learn-with-coursera lens (W5 pathfinding
+especially); board updates → kanban-markdown conventions; md search → qmd
+first; every commit → `/okf:okf maintain`; coding posture everywhere →
+`/ponytail:ponytail ultra`. A wave dispatched without its flow's skills
+named in the agent brief is a process defect - catch it at grooming.
 Standing gates unchanged: W4 stays post-Aug-14 (campaign window), W3 contains
 PAUL'S STYLE CALL as a blocking decision point inside the wave, progress
 tracker stays gated on the Clarity check. Goal = wave plan 20.15 executed
