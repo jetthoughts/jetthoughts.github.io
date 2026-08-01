@@ -1,72 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="stackb-title">
-  <title id="stackb-title">Three tools, three boundaries. Lovable owns the UI: it renders the screens and sends form data down. Supabase owns the data and auth: it stores the users, rows and files and holds the login. Stripe owns the money: it charges the card and confirms who paid. Data flows left to right from Lovable to Supabase to Stripe, and a Stripe webhook loops back to Supabase to tell it the customer is paid.</title>
-  <desc>Three cards in a row. Left card Lovable, the UI layer, renders the screens and sends form data down. Middle card Supabase, the data and auth layer, stores users, rows and files and holds the login. Right card Stripe, drawn in green as the money layer, charges the card and confirms who paid. Arrows run left to right between the cards, and a dashed webhook arrow loops back from Stripe to Supabase captioned tells Supabase the customer is paid.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="stackb-title stackb-desc">
+  <title id="stackb-title">Three tools, one job each: Lovable draws the screens, Supabase stores the data and login, Stripe charges the card, and a Stripe webhook loops back to tell Supabase who paid.</title>
+  <desc id="stackb-desc">Three cards in a row. Left, Lovable, the UI layer - draws the screens and sends form data down. Middle, Supabase, the data and auth layer - stores your data and holds the login. Right, Stripe, drawn in green as the money layer - charges the card and confirms who paid. A "data" arrow runs from Lovable to Supabase, a "pay" arrow from Supabase to Stripe, and a dashed webhook arrow loops back from Stripe to Supabase to tell it the customer is paid. Basis: the self-serve MVP stack - Lovable UI, Supabase data, Stripe payments.</desc>
   <defs>
     <style>
-      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
-      .sub    { font-size: 17px; fill: #666; font-style: italic; }
-      .name   { font-size: 23px; font-weight: 700; fill: #1a1a1a; }
-      .role   { font-size: 16px; fill: #666; font-style: italic; }
-      .nameg  { fill: #2e7d32; }
-      .body   { font-size: 16px; fill: #1a1a1a; }
-      .cap    { font-size: 15px; fill: #666; font-style: italic; }
-      .card   { fill: #faf7f2; stroke: #555; stroke-width: 2; }
-      .card-g { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
-      .div    { stroke: #ccc; stroke-width: 1.5; }
-      .divg   { stroke: #a5d6a7; stroke-width: 1.5; }
-      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
-      .loop   { stroke: #888; stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
-      .tick   { font-size: 15px; font-weight: 700; fill: #2e7d32; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .mono  { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+      .title { font-size: 32px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .name  { font-size: 22px; font-weight: 700; fill: #121212; }
+      .nameg { font-size: 22px; font-weight: 700; fill: #2e7d32; }
+      .role  { font-size: 18px; font-weight: 400; fill: #555555; }
+      .body  { font-size: 18px; font-weight: 400; fill: #333333; }
+      .pill  { font-size: 18px; font-weight: 600; fill: #121212; }
+      .cap   { font-size: 18px; font-weight: 400; fill: #444444; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
-    <marker id="sb-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    <marker id="sb-tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
     </marker>
-    <marker id="sb-ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#888"/>
+    <marker id="sb-trig" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#8a8a8a"/>
     </marker>
   </defs>
 
-  <text x="480" y="38" text-anchor="middle" class="h title">Three tools, three boundaries</text>
-  <text x="480" y="64" text-anchor="middle" class="h sub">The buyer opens the staging URL - then each tool owns one job and nothing else.</text>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="420" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="404" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Lovable -->
-  <g transform="translate(30,96) rotate(-0.5 135 78)">
-    <rect width="270" height="156" rx="13" class="card"/>
-    <text x="20" y="40" class="h name">Lovable</text>
-    <text x="20" y="64" class="h role">the UI layer</text>
-    <line x1="16" y1="78" x2="254" y2="78" class="div"/>
-    <text x="20" y="106" class="h body">Renders the screens</text>
-    <text x="20" y="134" class="h body">Sends the form data down</text>
-  </g>
+  <!-- title block: action title + one message -->
+  <text x="360" y="48" text-anchor="middle" class="gk title">Three tools, one job each</text>
+  <text x="360" y="80" text-anchor="middle" class="gk msg">Each owns one job - a webhook loops the payment back</text>
 
-  <!-- Supabase -->
-  <g transform="translate(345,96) rotate(0.4 135 78)">
-    <rect width="270" height="156" rx="13" class="card"/>
-    <text x="20" y="40" class="h name">Supabase</text>
-    <text x="20" y="64" class="h role">the data + auth layer</text>
-    <line x1="16" y1="78" x2="254" y2="78" class="div"/>
-    <text x="20" y="106" class="h body">Stores the users, rows, files</text>
-    <text x="20" y="134" class="h body">Holds the login</text>
-  </g>
+  <!-- Lovable: UI layer (structure = stroked white card) -->
+  <rect x="24" y="104" width="192" height="168" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="42" y="146" class="mono name">Lovable</text>
+  <text x="42" y="172" class="sys role">the UI layer</text>
+  <line x1="42" y1="186" x2="198" y2="186" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="42" y="216" class="sys body">Draws the screens</text>
+  <text x="42" y="244" class="sys body">Sends form data</text>
 
-  <!-- Stripe (money = green) -->
-  <g transform="translate(660,96) rotate(-0.4 135 78)">
-    <rect width="270" height="156" rx="13" class="card-g"/>
-    <text x="20" y="40" class="h name nameg">Stripe</text>
-    <text x="20" y="64" class="h role">the money layer</text>
-    <line x1="16" y1="78" x2="254" y2="78" class="divg"/>
-    <text x="20" y="106" class="h body">Charges the card</text>
-    <text x="20" y="134" class="h body">Confirms who paid</text>
-  </g>
+  <!-- Supabase: data + auth layer -->
+  <rect x="264" y="104" width="192" height="168" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="282" y="146" class="mono name">Supabase</text>
+  <text x="282" y="172" class="sys role">data + auth layer</text>
+  <line x1="282" y1="186" x2="438" y2="186" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="282" y="216" class="sys body">Stores your data</text>
+  <text x="282" y="244" class="sys body">Holds the login</text>
 
-  <!-- forward arrows -->
-  <text x="322" y="164" text-anchor="middle" class="h cap">data</text>
-  <path d="M 302 174 L 343 174" class="arrow" marker-end="url(#sb-ah)"/>
-  <text x="637" y="164" text-anchor="middle" class="h cap">pay</text>
-  <path d="M 617 174 L 658 174" class="arrow" marker-end="url(#sb-ah)"/>
+  <!-- Stripe: money layer = green -->
+  <rect x="504" y="104" width="192" height="168" rx="4" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+  <text x="522" y="146" class="mono nameg">Stripe</text>
+  <text x="522" y="172" class="sys role">the money layer</text>
+  <line x1="522" y1="186" x2="678" y2="186" stroke="#bfe3c1" stroke-width="1.5"/>
+  <text x="522" y="216" class="sys body">Charges the card</text>
+  <text x="522" y="244" class="sys body">Confirms who paid</text>
 
-  <!-- webhook loop from Stripe back to Supabase -->
-  <path d="M 780 254 C 720 306, 560 306, 483 256" class="loop" marker-end="url(#sb-ahg)"/>
-  <text x="480" y="336" text-anchor="middle" class="h cap">Stripe webhook: tells Supabase the customer is paid.</text>
+  <!-- forward connectors with paper-tone pills centered on the line -->
+  <line x1="216" y1="188" x2="264" y2="188" stroke="#3a3a3a" stroke-width="2" marker-end="url(#sb-tri)"/>
+  <rect x="217" y="174" width="46" height="28" rx="6" fill="#faf7f2" stroke="#d8d8d8" stroke-width="1"/>
+  <text x="240" y="193" text-anchor="middle" class="gk pill">data</text>
+
+  <line x1="456" y1="188" x2="504" y2="188" stroke="#3a3a3a" stroke-width="2" marker-end="url(#sb-tri)"/>
+  <rect x="459" y="174" width="42" height="28" rx="6" fill="#faf7f2" stroke="#d8d8d8" stroke-width="1"/>
+  <text x="480" y="193" text-anchor="middle" class="gk pill">pay</text>
+
+  <!-- Stripe webhook loops back to Supabase (dashed = async return path) -->
+  <path d="M 600 272 C 600 322, 360 322, 360 274" fill="none" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#sb-trig)"/>
+  <text x="360" y="352" text-anchor="middle" class="sys cap">Stripe webhook - tells Supabase the customer is paid</text>
+
+  <!-- one basis line -->
+  <text x="360" y="398" text-anchor="middle" class="sys basis">Basis: the self-serve MVP stack - Lovable UI, Supabase data, Stripe payments</text>
 </svg>
