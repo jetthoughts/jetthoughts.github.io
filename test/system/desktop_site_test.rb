@@ -371,12 +371,12 @@ class DesktopSiteTest < ApplicationSystemTestCase
   end
 
   def test_visit_course_chapter_from_landing
-    # From the course landing, user opens Module 1's lesson list (closed
-    # <details> by default) and clicks into the first lesson.
+    # From the course landing, the module map lists each module's lessons
+    # inline (W1.6 removed the per-module <details> expanders), so the user
+    # clicks straight into the first lesson.
     visit "/course/tech-for-non-technical-founders-2026/"
 
     within ".post-content" do
-      find("#module-1 summary").click
       find("a", text: /Form Your Founding Hypothesis/, match: :first, visible: true).click
     end
 
