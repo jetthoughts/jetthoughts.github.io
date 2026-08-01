@@ -293,8 +293,19 @@ in full; the mandate ends when W5 closes or Paul redirects. Cold-session
 rule: any fresh session picks up at the first non-DONE wave with this
 mandate in force.
 
-15. **[SCHEDULED - next landing wave after W2, campaign-safe] Landing W1.6:
-    closer to the new shuffle reference + less text / better components**
+15. **[✅ DONE 2026-08-01, merged PR #432 (squash 2fd99e16), Paul "ship it"]
+    Landing W1.6:** converged on the new shuffle reference - expanders 7→0
+    (the named complaint, resolved), on-page text 1642→1302w (-21%), module
+    map flattened to scannable rows, NOT-cover → 2x2 scope cards, mistakes
+    grid bold titles; hero/section-rhythm kept from W1.5. New reference +
+    result committed (40.28 / 40.29). Honest dtest clean (7 known emulation
+    diffs only). CI baseline record dispatched (run 30716133805). **Accepted
+    tradeoff (Paul shipped over the flag): all 25 chapters visible inline
+    keeps the page ~2x the reference height; module-map compaction to
+    summaries+counts is a documented available lever if "too long" recurs -
+    NOT a defect, a taste option.**
+    _Original scope (executed):_ closer to the new shuffle reference + less
+    text / better components
     (Paul 2026-08-01). New target reference (supersedes demo 1 as the layout
     north star for this pass): `https://shuffle.dev/preview/b1a3fc8570aef0386cda8dbad53f3abc297a3d96?page=index.html&screen=top&iframe=1`
     (capture the full inner page - strip `&iframe=1` from the URL - and
