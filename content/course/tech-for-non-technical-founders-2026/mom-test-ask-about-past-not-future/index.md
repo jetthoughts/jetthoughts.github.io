@@ -107,7 +107,7 @@ Read your draft list aloud. Which question would let a polite stranger agree wit
 >
 > **You have now:** all Module 1 artifacts + a draft Mom Test question list (2.1). Sharpening and recruiting come next - the problem itself isn't validated until you run the 10 real interviews.
 >
-> **Next:** [2.2 · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/) - takes the draft list you just wrote and stress-tests each question against a simulated ICP before you spend a real interview slot on it.
+> **Next:** the core path continues at [2.3 · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - it turns your draft question list into a 30-name list of real people to interview. If your list still reads hypothetical or generic, run the optional [2.2 · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/) first - it stress-tests each question against a simulated ICP before you spend a real interview slot.
 >
 > **If blocked:** open the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) - it has the 5 questions verbatim with follow-ups.
 >
