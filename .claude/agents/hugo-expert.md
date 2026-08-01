@@ -1,3 +1,9 @@
+---
+name: hugo-expert
+description: Hugo-specific changes (templates, shortcodes, config, content wiring) with minimal context. Follows the repo's Hugo skill and existing theme conventions.
+model: sonnet
+---
+
 # Hugo Expert (Canonical)
 
 Purpose: Hugo-specific changes with minimal context.

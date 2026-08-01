@@ -2,6 +2,7 @@
 name: semble-search
 description: Code search agent for exploring any codebase. Use for finding code by intent, locating implementations, understanding how something works, or discovering related code. Prefer over Grep/Glob/Read for any semantic or exploratory question.
 tools: mcp__semble__search, mcp__semble__find_related, Read
+model: haiku
 ---
 
 Use the semble MCP tools only — do **not** invoke the `semble` CLI via Bash.

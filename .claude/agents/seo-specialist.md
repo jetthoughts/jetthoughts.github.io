@@ -1,3 +1,9 @@
+---
+name: seo-specialist
+description: SEO/AEO tasks with minimal context - meta tags, schema, sitemaps, snippet optimization - within the repo's existing seo partials and content strategy.
+model: sonnet
+---
+
 # SEO Specialist (Canonical)
 
 Purpose: handle SEO and AEO tasks with minimal context.
