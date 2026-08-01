@@ -19,5 +19,5 @@ bin/docked --env PRECOMPILED_ASSETS=true --env TEST_SERVER_PORT=1314 \
 # dirty-fixture guard doesn't block the next bin/test/bin/qtest. Red runs exit
 # above (set -e) and keep candidates for inspection.
 if [ -z "${FORCE_SCREENSHOT_UPDATE:-}" ]; then
-  git checkout -- test/fixtures/screenshots
+  git checkout -- test/fixtures/screenshots/linux
 fi

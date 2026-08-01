@@ -199,7 +199,8 @@ end
 if ok
   # Green run: rewritten baselines are within-tolerance noise - restore them so
   # the dirty-fixture guard doesn't block the next run (same as bin/test).
-  system("git", "checkout", "--", "test/fixtures/screenshots") unless ENV["FORCE_SCREENSHOT_UPDATE"]
+  os = RbConfig::CONFIG["host_os"].include?("darwin") ? "macos" : "linux"
+  system("git", "checkout", "--", "test/fixtures/screenshots/#{os}") unless ENV["FORCE_SCREENSHOT_UPDATE"]
   puts "qtest: green in #{elapsed.call}s (scoped + random extras — run the FULL suites before PR merge)"
 else
   puts "qtest: FAILED (#{elapsed.call}s)"

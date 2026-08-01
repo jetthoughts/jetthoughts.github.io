@@ -1,5 +1,12 @@
 # Bundle Update Log
 
+## 2026-08-01 (O5a) - restore-on-green now OS-scoped
+
+* **Update**: [build/test-gates.md](build/test-gates.md) - green runs restore
+  only the OS dir they wrote (macos/ vs linux/), unblocking parallel
+  test+dtest in one checkout (devx backlog O5(a); O5(b) worktree-compose
+  isolation still open).
+
 ## 2026-08-01 (W1 landing merge) - vacuous worktree-dtest caveat
 
 * **Update**: [build/test-gates.md](build/test-gates.md) - new caveat: `bin/dtest`

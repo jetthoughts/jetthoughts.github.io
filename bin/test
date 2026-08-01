@@ -59,5 +59,6 @@ fi
 # above (set -e) and keeps candidates + diffs for inspection. Skipped when
 # re-recording (FORCE_SCREENSHOT_UPDATE) and where git is absent (dtest container).
 if [ -z "${FORCE_SCREENSHOT_UPDATE:-}" ] && command -v git >/dev/null 2>&1; then
-  git checkout -- test/fixtures/screenshots 2>/dev/null || true
+  os=$([ "$(uname)" = "Darwin" ] && echo macos || echo linux)
+  git checkout -- "test/fixtures/screenshots/$os" 2>/dev/null || true
 fi

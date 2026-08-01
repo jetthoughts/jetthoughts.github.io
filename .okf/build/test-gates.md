@@ -4,7 +4,7 @@ title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
 status: stable
-generated: { by: claude/fable-5, at: 2026-08-01T14:30:00Z }
+generated: { by: claude/fable-5, at: 2026-08-01T18:00:00Z }
 verified: { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
 ---
 
@@ -93,8 +93,10 @@ extend it when adding components or critical files. The macOS full suite remains
   a red `bin/test` no longer blocks `bin/dtest`, so you can run the two legs
   independently while reviewing a macOS diff.
 - The snapshot tool REWRITES baselines when a run passes. Since 2026-07-31
-  a GREEN `bin/test`/`bin/dtest`/`bin/qtest` run auto-restores
-  `test/fixtures/screenshots` (skipped under `FORCE_SCREENSHOT_UPDATE`),
+  a GREEN `bin/test`/`bin/dtest`/`bin/qtest` run auto-restores the
+  OS-scoped baseline dir it wrote (`macos/` on the mac host, `linux/` for
+  the dtest leg - scoped 2026-08-01 so test and dtest can run in parallel
+  in one checkout; skipped under `FORCE_SCREENSHOT_UPDATE`),
   so passing runs no longer leave the tree dirty or arm the dirty-fixture
   guard against the next run. A RED run still keeps candidates + diff
   artifacts for inspection. Never edit CSS while a suite is running - a
