@@ -28,7 +28,8 @@
       class="single-content"
       style="max-width: 720px; margin:0 auto; padding-left:18px;padding-right:18px">
       <header class="course-hero">
-        <h1 class="course-title">{{ .Title }}</h1>
+        <div class="course-hero__main">
+          <h1 class="course-title">{{ .Title }}</h1>
 
           {{ with .Params.hero_lede }}
             <p class="course-hero-lede">{{ . | markdownify }}</p>
@@ -56,21 +57,28 @@
               {{ end }}
             </div>
           {{ end }}
+        </div>
 
-          {{/* Cover image */}}
-          {{ with .Resources.GetMatch "cover.*" }}
-            <figure class="post-cover-figure" style="margin: 1.25rem 0; max-width: 43rem;">
-              <img
-                class="post-cover"
-                src="{{ .RelPermalink }}"
-                alt="{{ $.Params.cover_image_alt | default $.Title }}"
-                width="{{ .Width }}"
-                height="{{ .Height }}"
-                loading="eager"
-                fetchpriority="high" />
-            </figure>
-          {{ end }}
-        </header>
+        {{/* L4-visual V3: dark course-artifact card - REPLACES the cover
+             figure in the hero (never both; og:image still uses cover.png
+             via frontmatter metatags). Stats from data/course_sequence.yaml,
+             same derivations as the course-stat shortcode. */}}
+        {{ $seq := hugo.Data.course_sequence }}
+        {{ $lessons := 0 }}
+        {{ range $seq.sequence }}{{ if ne .module "Overview" }}{{ $lessons = add $lessons 1 }}{{ end }}{{ end }}
+        {{ $mods := slice }}
+        {{ range $seq.sequence }}{{ $m := index (findRE `^Lesson (\d+)` .module 1) 0 }}{{ if and $m (not (in $mods $m)) }}{{ $mods = $mods | append $m }}{{ end }}{{ end }}
+        <aside class="course-hero-card" aria-label="Course summary">
+          <p class="course-hero-card__eyebrow">Free course</p>
+          <p class="course-hero-card__title">{{ .Title }}</p>
+          <ul class="course-hero-card__stats">
+            <li>{{ len $mods }} modules</li>
+            <li>{{ $lessons }} lessons</li>
+            <li>{{ $seq.stats.artifacts }} artifacts</li>
+          </ul>
+          <p class="course-hero-card__leave">You leave with a signed paid pilot - a real customer paying real money.</p>
+        </aside>
+      </header>
 
       <div class="post-content" itemprop="text">
         {{ .Content }}
