@@ -253,52 +253,27 @@
   }
 }
 
-/* V2.3 Module-card two-col — chapters left, leave-with panel right on
-   desktop; stacks back to one column below 768px. */
-@media (min-width: 768px) {
-  .blog .module-card {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 240px;
-    grid-template-areas:
-      "mbadge mbadge"
-      "mtitle mtitle"
-      "moutput moutput"
-      "mchapters mleave"
-      "mextras mextras";
-    column-gap: 24px;
-  }
-  .blog .module-card__badge { grid-area: mbadge; }
-  .blog .module-card h3 { grid-area: mtitle; }
-  .blog .module-card__output { grid-area: moutput; }
-  .blog .module-card ol.module-card__chapters { grid-area: mchapters; }
-  .blog .module-card__extras { grid-area: mextras; }
-  .blog .module-card__leave {
-    grid-area: mleave;
-    align-self: start;
-    margin-top: 0;
-  }
-
-  /* L4 fix (P3): modules 4 and 5 have the longest chapter lists, so the
-     shared "mchapters mleave" grid row grows to their height and
-     align-self:start just parks the leave panel at the top of that tall
-     row — the empty track below it still reads as a ~500px void.
-     Cheapest fix: collapse just these two cards back to one column so
-     the row height tracks the panel's own content, not the chapters'. */
-  .blog #module-4.module-card,
-  .blog #module-5.module-card {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "mbadge"
-      "mtitle"
-      "moutput"
-      "mchapters"
-      "mleave"
-      "mextras";
-  }
-  .blog #module-4 .module-card__leave,
-  .blog #module-5 .module-card__leave {
-    margin-top: 18px;
-  }
+/* L5-condense (40.26) — lesson lists live inside a native <details> per
+   card, closed by default; the V2.3 two-col grid is gone with them. */
+.blog .module-card__details {
+  margin: 14px 0 4px;
+}
+.blog .module-card__details summary {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-ruby);
+}
+.blog .module-card__details[open] summary {
+  margin-bottom: 10px;
+}
+.blog .module-card__details .module-card__router {
+  font-size: 15px;
+  color: #5f6470;
+  margin: 0 0 10px;
+}
+.blog .module-card__details ol.module-card__chapters {
+  margin-bottom: 12px;
 }
 
 /* V3 Dark hero course-artifact card — obsidian island replacing the
