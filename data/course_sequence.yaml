@@ -130,6 +130,20 @@ sequence:
     title: "4.1 · Should You Hire? The 2026 Decision Tree"
     module: "Lesson 4.1"
     goal: "Decide between self-serve, fractional CTO, or hired team via a 5-question matrix."
+    # Branch-aware strip (W5): the decision tree routes 4 ways but the linear
+    # Next funneled everyone to 4.2 with no fork surfaced. Ownership (4.2) is
+    # the shared first step; then the path you scored diverges - self-serve
+    # build vs the hire track. Mirrors the 2.5 build/pivot/kill routing.
+    branches:
+      - slug: github-aws-database-ownership-checklist
+        direction: "Every path - lock ownership first →"
+        title: "4.2 · Who Owns Your GitHub, AWS, and Database?"
+      - slug: self-serve-mvp-stack-lovable-supabase-stripe-2026
+        direction: "Then self-serve (the default) →"
+        title: "4.3 · The Self-Serve MVP Stack"
+      - slug: hire-track-supplementary-reference
+        direction: "Then hiring a team →"
+        title: "Hire-track reference - read the SOW first"
 
   - slug: github-aws-database-ownership-checklist
     title: "4.2 · Who Owns Your GitHub, AWS, and Database?"
@@ -189,6 +203,16 @@ sequence:
     title: "5.6 · Charge Before You Ship: The Paid Pilot Contract"
     module: "Lesson 5.6"
     goal: "Sign a Design Partner Agreement with a refundable Stripe deposit before writing new code."
+    # Branch-aware strip (W5): a signed deposit means persevere (continue M5);
+    # nobody signing after the warm list AND the 5.7 outbound pass means pivot.
+    # The linear Next only offered the persevere route. Mirrors the 2.5 pattern.
+    branches:
+      - slug: outbound-without-sales-team
+        direction: "Deposit cleared - keep selling →"
+        title: "5.7 · Going Outbound Without a Sales Team"
+      - slug: pivot-or-persevere-decision-framework
+        direction: "No one will sign after warm + outbound - pivot →"
+        title: "Pivot or Persevere: the decision framework"
 
   - slug: outbound-without-sales-team
     title: "5.7 · Going Outbound Without a Sales Team"
