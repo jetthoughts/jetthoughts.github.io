@@ -267,6 +267,28 @@ in full; the mandate ends when W5 closes or Paul redirects. Cold-session
 rule: any fresh session picks up at the first non-DONE wave with this
 mandate in force.
 
+15. **[SCHEDULED - next landing wave after W2, campaign-safe] Landing W1.6:
+    closer to the new shuffle reference + less text / better components**
+    (Paul 2026-08-01). New target reference (supersedes demo 1 as the layout
+    north star for this pass): `https://shuffle.dev/preview/b1a3fc8570aef0386cda8dbad53f3abc297a3d96?page=index.html&screen=top&iframe=1`
+    (capture the full inner page - strip `&iframe=1` from the URL - and
+    commit it as `40-49-review/40.28-reference-shuffle2-full.jpeg` first).
+    Goal: push the live landing MUCH closer to that reference AND cut on-page
+    text / reorganize into better components (this SUPERSEDES and completes
+    the W1.5 carry-over "too many expand-to-read-more" nit + the design
+    voter's link-density/eyebrow-economy nits). Approach: extract the new
+    reference's components (impeccable, live-DOM, into the design-system doc),
+    diff against our current landing, then a layout+content-density pass -
+    landing-owned files ONLY (layouts/course/list.html + course-list.css +
+    _index.md), no shared CSS/JS (campaign window). BLOCKING gate from the
+    W1 retro: full-page reference side-by-side at equal zoom before ship +
+    Paul's eyeball at PR (taste gate). Skills: /impeccable + stitch-design +
+    ux-principles; stitch-loop only if a structural variant is needed.
+    Runs as its own PR after W2 merges (WIP=1). NOTE: reducing text may mean
+    MOVING content off the landing (to lessons/kit/FAQ) not deleting it -
+    the landing attracts + drives the Start-Lesson click; depth lives one
+    click away.
+
 14. **[IDEA - review opportunity later, spans course + blog] Reader-mode
     readability research** (Paul 2026-08-01): browsers' reader modes
     (Chrome DevTools can toggle Reader Mode; Firefox/Safari have their own)
