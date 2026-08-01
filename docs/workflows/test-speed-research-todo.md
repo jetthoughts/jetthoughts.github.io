@@ -79,6 +79,34 @@ minutes.
   hamburger tests, so the menu-walk in page tests is redundant. Gate: unchanged
   baselines.
 
+## Removing a skip_area / tolerance bump — how to overview the drift
+
+The 2026-08-01 fix made skip_area masks cheap (`wait: 0`) but did NOT remove
+any. Now that `document.fonts.ready` + self-hosted fonts kill the font-swap
+race, many of the 27 skip_areas and 28 `tolerance: 0.03` bumps may be
+removable. Each removal UN-masks a region that then gets compared — so review
+the drift before keeping the removal:
+
+1. Remove the `skip_area` (or drop `tolerance: 0.03`) from the test.
+2. Run just that test: `bin/test test/system/<file>.rb -n <TestClass#method>`.
+3. Red? The un-masked region drifts. Open the auto-generated report:
+   `test/fixtures/screenshots/snap_diff_report.html` (written on any red run;
+   gitignored). It shows **original / candidate / annotated-diff / heatmap**
+   per failure — that's the drift overview.
+4. Decide from the heatmap:
+   - real regression → fix the code;
+   - render is correct, baseline just stale → re-record (macOS in-commit;
+     Linux via CI `workflow_dispatch` update-baselines, never locally);
+   - region still genuinely bimodal (e.g. non-font: form reflow, lazy media)
+     → restore the mask, it was earning its keep.
+5. Green twice on a clean tree = the mask/bump was pure font-swap scar tissue,
+   safe to drop.
+
+Do this one mask at a time — a batch removal turns one heatmap review into a
+haystack. Known non-font masks to KEEP: `.gform_wrapper` (Gravity Forms ~10px
+shift), `blockquote` on course/chapter (system-font, not a font-swap; verified
+2026-08-01), lazy `picture`/`img`.
+
 ## Guardrails (do not regress)
 
 - Refactoring must not shift a single baseline pixel — snap_diff compares
