@@ -45,7 +45,7 @@ After this lesson you will be able to: **write a one-page Product Brief that nam
 
 The Product Brief - some founders call it a **Vibe PRD** (PRD stands for Product Requirements Document) - is one side of paper. It names the user, the problem, the one workflow you are building, the one metric you will measure, and what you are explicitly NOT building.
 
-![One-page Vibe PRD template with five labeled sections: the problem, the user and their context, what you're building, success metric, what you're NOT building.](vibe-prd-template-visual.svg)
+![One-page Vibe PRD: five stacked section cards you fill in a single 90-minute sitting. 1 The problem - copy the validated problem statement verbatim. 2 The user and their context - who they are and the 60 seconds before and after. 3 What you're building - the smallest end-to-end thing in plain English. 4 Success metric - one number, unit, and timeframe plus the event that measures it. 5 What you're NOT building - 5-8 lines the builder would add unprompted; a longer no-go list means a cheaper build.](vibe-prd-template-visual.svg)
 
 ## The 5-section template
 
