@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="o2-title o2-desc">
+  <title id="o2-title">At 6% signups the demand is real: read your cold-traffic conversion rate against the kill, iterate, promising, strong and suspicious bands.</title>
+  <desc id="o2-desc">A horizontal signal meter. Under 3 percent conversion is kill or pivot (ruby). 3 to 6 percent is iterate the message (amber). 6 to 10 percent is promising (green). 10 to 20 percent is a strong signal (deep green). Over 20 percent is suspicious, verify with a second channel (gray). A ruby pointer marks the 6 percent go line where demand is real enough to start building. Basis: form submits divided by ad-campaign visits after 300 cold visitors on one channel.</desc>
+  <defs>
+    <style>
+      .gk   { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys  { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .label { font-size: 20px; font-weight: 600; fill: #ffffff; }
+      .annot { font-size: 18px; font-weight: 400; fill: #ffffff; }
+      .tick  { font-size: 20px; font-weight: 600; fill: #3a3a3a; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+      .ptr   { font-size: 20px; font-weight: 700; fill: #cc342d; }
+      .ptrsub{ font-size: 18px; font-weight: 400; fill: #444444; }
+    </style>
+    <clipPath id="o2-bar"><rect x="56" y="150" width="608" height="64" rx="4"/></clipPath>
+  </defs>
+
+  <!-- page tone + editorial card -->
+  <rect width="720" height="300" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="284" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">Your signup rate picks your move</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">Cold-traffic conversion, mapped to a decision</text>
+
+  <!-- hero reading: the 6% go line (ruby = the one actionable reading) -->
+  <g>
+    <text x="248" y="110" text-anchor="middle" class="gk ptr">6% = the go line</text>
+    <text x="248" y="130" text-anchor="middle" class="sys ptrsub">demand is real, start building</text>
+    <path d="M242,134 L254,134 L248,144 Z" fill="#cc342d"/>
+  </g>
+
+  <!-- meter track: DATA bands filled, no stroke, 4px outer radius via clip -->
+  <g clip-path="url(#o2-bar)">
+    <rect x="56"  y="150" width="96"  height="64" fill="#cc342d"/>
+    <rect x="152" y="150" width="96"  height="64" fill="#c47d16"/>
+    <rect x="248" y="150" width="128" height="64" fill="#3d9142"/>
+    <rect x="376" y="150" width="176" height="64" fill="#2e7d32"/>
+    <rect x="552" y="150" width="112" height="64" fill="#7d7d7d"/>
+  </g>
+
+  <!-- band labels: pct (label rung) + verdict (annotation rung), inside shape -->
+  <text x="104" y="180" text-anchor="middle" class="gk label">0-3%</text>
+  <text x="104" y="200" text-anchor="middle" class="sys annot">Kill / pivot</text>
+  <text x="200" y="180" text-anchor="middle" class="gk label">3-6%</text>
+  <text x="200" y="200" text-anchor="middle" class="sys annot">Iterate msg</text>
+  <text x="312" y="180" text-anchor="middle" class="gk label">6-10%</text>
+  <text x="312" y="200" text-anchor="middle" class="sys annot">Promising</text>
+  <text x="464" y="180" text-anchor="middle" class="gk label">10-20%</text>
+  <text x="464" y="200" text-anchor="middle" class="sys annot">Strong signal</text>
+  <text x="608" y="180" text-anchor="middle" class="gk label">20%+</text>
+  <text x="608" y="200" text-anchor="middle" class="sys annot">Suspicious?</text>
+
+  <!-- STRUCTURE: axis baseline + ticks, stroked ink, no fill -->
+  <line x1="56" y1="216" x2="664" y2="216" stroke="#3a3a3a" stroke-width="2"/>
+  <g stroke="#3a3a3a" stroke-width="2">
+    <line x1="56"  y1="216" x2="56"  y2="224"/>
+    <line x1="152" y1="216" x2="152" y2="224"/>
+    <line x1="376" y1="216" x2="376" y2="224"/>
+    <line x1="552" y1="216" x2="552" y2="224"/>
+  </g>
+  <text x="56"  y="242" text-anchor="middle" class="gk tick">0%</text>
+  <text x="152" y="242" text-anchor="middle" class="gk tick">3%</text>
+  <text x="376" y="242" text-anchor="middle" class="gk tick">10%</text>
+  <text x="552" y="242" text-anchor="middle" class="gk tick">20%</text>
+
+  <!-- the 6% go-line threshold: ruby, the hero action marker (structure, stroked) -->
+  <line x1="248" y1="146" x2="248" y2="228" stroke="#cc342d" stroke-width="2.5"/>
+  <text x="248" y="242" text-anchor="middle" class="gk tick" fill="#cc342d" font-weight="700">6%</text>
+
+  <!-- one basis line -->
+  <text x="360" y="278" text-anchor="middle" class="sys basis">Basis: form submits &#247; ad-campaign visits, 300 cold visitors, one channel</text>
+</svg>
