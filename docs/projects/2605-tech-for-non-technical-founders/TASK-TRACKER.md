@@ -144,6 +144,21 @@
     raise" asides may be softened during W2/W5 passes only where they read
     off-ICP, under surgical-edit rules.
 
+**CONTINUOUS-EXECUTION MANDATE (Paul 2026-08-01, standing):** after W1.5
+(landing demo-1 layout fix, branch `course-landing-demo1-layout`) ships, the
+manager runs ALL remaining waves end-to-end autonomously - W2 → W3 → W4 → W5
+per items 10-13 - without waiting for per-wave go-aheads. Between waves:
+run `/sprint-retrospective` (fallback: inline XP retro - what worked / what
+failed / what changes) and REVISE the next wave's scope from what the retro
+surfaces before dispatching it. Big/critical calls inside waves follow the
+CLAUDE.md voting-panel protocol; Paul's explicit words always override.
+Standing gates unchanged: W4 stays post-Aug-14 (campaign window), W3 contains
+PAUL'S STYLE CALL as a blocking decision point inside the wave, progress
+tracker stays gated on the Clarity check. Goal = wave plan 20.15 executed
+in full; the mandate ends when W5 closes or Paul redirects. Cold-session
+rule: any fresh session picks up at the first non-DONE wave with this
+mandate in force.
+
 14. **[IDEA - review opportunity later, spans course + blog] Reader-mode
     readability research** (Paul 2026-08-01): browsers' reader modes
     (Chrome DevTools can toggle Reader Mode; Firefox/Safari have their own)
