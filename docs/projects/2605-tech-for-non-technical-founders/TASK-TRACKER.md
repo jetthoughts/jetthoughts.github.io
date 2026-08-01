@@ -71,31 +71,93 @@
    audit of off-spec SVG fonts, mobile text-size floor, founder-os-pack
    cover). Pilot recruitment (PAUL): 3-5 real Sams per 40.18.
 
-10. **[W2] Course v2-format consistency fix + deep audit** (scheduled
-    2026-08-01, own session — research:
+10. **[W2] Course v2-format consistency fix + deep audit — GROOMED
+    2026-08-01 (re-audited against tree @3d732e23; research:
     `40-49-review/40.22-v2-format-structural-audit-2026-08-01.md`; wave plan:
-    `20-29-strategy/20.15-course-improvement-wave-plan-2026-08.md`).
-    Mechanical Phases 1-2 already run: 11 of 25 lessons deviate from the v2
-    scaffold (6 missing the outcome line, 5 missing "Success check", 2 with
-    two visuals) + 2 length flags (`hire-track-supplementary-reference` 5,558w,
-    `self-serve-stack-walkthrough` 4,508w). Scope (option C): (a) fix the 11
-    flagged lessons to scaffold — per-lesson, confirm each is a miss not an
-    intentional exception; (b) split/demote the over-length reference;
-    (c) run runbook Phases 3-6 + the content cold-eyes personas (ICP-Sam,
-    voice, slop, and the course-experience-reviewer agent - learning-
-    experience lens, mandatory per audit runbook) on edited chapters. Content-only edits → hugo-build + scroll
-    gate, no visual suite. Do after W1 (L3 ships before 2026-08-14).
-    **40.23 additions (convergent, pre-approved fixes):** $0-path co-equal at
-    top of 1.4's budget section (C1); tool-roster trim + AI-callout demotion
-    on how-this-course-works (C2); outcome lines restored ABOVE the TL;DR
-    (C3, 4-lens confirmed); systemic adjacent-callout sweep (C5); shape-tell
-    opener/closer sweep — 5.1 triple-banned opener, 5.6 time-cut, 5 Going-
-    Further vignettes, 3 cloned template closers, opener sentences ONLY;
-    glosses for queues/SOC 2/GA4; 1.1 Success check promotes the stranger
-    read-aloud; fake-stripe 100-vs-300 label; kit:168 "20 years" -> align
-    with the since-2011 canon (l3-reviewer P3, pre-existing). **BINDING no-touch list (C6):**
-    Mia M1 walkthrough, 2.5 Dana pressure-test, the three decision forks,
-    1.4 exemplar structure, canon numbers, JT footer discipline.
+    `20-29-strategy/20.15-course-improvement-wave-plan-2026-08.md`; runbook:
+    `docs/workflows/course-audit-checklist.md`).**
+
+    **Re-audit verdict (audit-premise rule, retro action item 2):** the 40.22
+    lists are STILL ACCURATE and the tree grew two new findings.
+    - Missing outcome line (6, unchanged): 2.5 mom-test-synthesis · 5.3
+      network-list · 5.6 paid-pilot · 4.4 build-phases · 4.3 lovable-stack ·
+      4.1 should-you-hire. **All six are TL;DR-block lessons** — the TL;DR
+      migration dropped the line; that confirms miss-not-exception and makes
+      C3 the fix vehicle.
+    - Missing "Success check" (5, unchanged): 2.6 clickable-prototype · 2.3
+      where-to-look · 2.4 what-to-say · 2.5 mom-test-synthesis · 1.3
+      wire-tracking.
+    - Double visual (2, unchanged): 5.2 channel-selection · 2.4 what-to-say.
+    - **NEW:** 2.3 and 2.4 have ZERO "If this fails" blocks (scaffold needs
+      >=1); 40.22 did not run that grep.
+    - **NEW (C3 scope grows):** 16 lessons carry a TL;DR; the 10 that have
+      the outcome line have it BELOW the TL;DR (1.3-position pattern). C3 =
+      6 adds + 10 repositions, all 16 TL;DR lessons.
+    - Closure slots, Input/Output/Progress, badges: 25/25 PASS — no scope.
+    - Length flags re-verified byte-identical: hire-track 5,558w /
+      stack-walkthrough 4,508w (flag-only, no cap).
+    - **Struck as stale:** landing C1 hero line (shipped in W1 PR #428).
+      NOTHING else from 40.23 shipped — verified in-tree: kit:168 "20 years"
+      still present (l3-reviewer queued it, never landed) AND a second real
+      instance at hire-track:194 ("20 years of rescue calls"); the Cagan "20
+      years" in reference/hire-decision-full:69 is a distinct concept — do
+      NOT "fix" it. 1.4 $0-path exists but trails the paid math (reposition
+      only); C2 roster, 1.1 stranger read-aloud, fake-stripe "same 100
+      visitors" (line 39) all still open. Phase-4 candidate for the sweep:
+      5.6 TL;DR says "refundable Stripe deposit" unqualified — canon splits
+      customer-cancel forfeit vs founder-cancel refund.
+
+    **Decomposed tasks (one owner, one file-set, AC, gate = hugo-build +
+    scroll gate on edited pages; content-only, no visual suite):**
+    - **W2-T1 (M1+M2, 8 files):** 1.1 Success check → stranger read-aloud;
+      1.3 add Success check; 1.4 $0-path co-equal at top of budget section;
+      2.3 add Success check + >=1 "If this fails" + outcome above TL;DR
+      reposition; 2.4 same + keep-or-merge call on funnel+mermaid double
+      visual (document the call); 2.5 add outcome above TL;DR + Success
+      check (build/pivot/kill 7+/4-6/<4 is the observable check) — Dana
+      pressure-test block is NO-TOUCH, edits land outside it; 2.6 add
+      Success check + reposition. AC: Phase-2 greps all pass on the 8 files;
+      no other lines changed.
+    - **W2-T2 (M4, 5 files):** 4.1/4.3/4.4 add outcome above TL;DR;
+      4.2/4.5 reposition outcome above TL;DR. AC: Phase-2 greps pass.
+    - **W2-T3 (M5, 7 files):** 5.3/5.6 add outcome above TL;DR;
+      5.1/5.4/5.5/5.7 reposition; 5.2 reposition + keep-or-merge call on
+      channel-decision + channel-fit-canvas double visual. AC: Phase-2
+      greps pass. (5.1/5.6 opener shape-tells belong to T6, not here.)
+    - **W2-T4 (2 files):** how-this-course-works C2 tool-roster trim +
+      AI-callout demotion; fake-stripe "100 visitors" → 300-visit canon
+      label. AC: canon table Phase-4 grep clean on both files.
+    - **W2-T5 (2 files + split):** hire-track split/demote (5,558w →
+      reference band or demote to non-reference) incl. its line-194 "20
+      years" → since-2011 canon; kit:168 same fix. AC: word-count command
+      shows every resulting page in band; `rg "20 years"` in course returns
+      ONLY the Cagan line; sequence yaml + inbound links updated if split.
+    - **W2-T6 (cross-file sweeps, ONE owner, runs AFTER T1-T5 merge):** C5
+      adjacent-callout sweep; shape-tell opener/closer sweep (5.1 opener,
+      5.6 time-cut, 5 Going-Further vignettes, 3 cloned template closers —
+      opener/closer sentences ONLY); glosses for queues/SOC 2/GA4 at first
+      mention. AC: one defect = one edit; banned-strings ratchet entries
+      added for prose fixes.
+    - **W2-T7 (audit, AFTER T6):** runbook Phases 3-6 full sweep on the
+      CURRENT tree (incl. the 5.6 "refundable" canon candidate); Phase-8
+      report format; surgical fixes only, escalate structure.
+    - **W2-T8 (AFTER T7):** cold-eyes persona pass on EDITED chapters only —
+      ICP-Sam, voice, slop, course-experience-reviewer (mandatory per
+      runbook). Convergent (>=2 critics) = fix; divergent = judgment note.
+
+    **Sequencing:** T1-T5 parallel (disjoint file sets, worktree isolation
+    per `feedback-workflow-writers-need-worktrees`); T6 serializes after
+    their merge (it crosses their files); T7 after T6 (audits of pages a
+    fixer then rewrites certify nothing — W1 retro); T8 last.
+    **BINDING no-touch list (C6, re-verified present):** Mia M1 walkthrough,
+    2.5 Dana pressure-test ("Pressure-test your read", line ~110), the three
+    decision forks, 1.4 exemplar structure, canon numbers, JT footer
+    discipline.
+    **20% capacity slot (this boundary):** devx O5(a) scoped restore-on-green
+    — 3 one-line edits, spec ready in
+    `docs/20-29-testing-qa/screenshot-testing/20.10-visual-suite-speed-research-reference.md`;
+    cheapest fully-specced item and it de-risks every future visual-suite
+    run (O6 ports is convenience; reader-mode is open-ended research).
 
 11. **[W1 — ✅ DONE 2026-08-01, merged as PR #428 (squash f5455dec)] Landing
     L2 → L3 → L4 → L5.** L1 = PR #416; L2 3-critic panel → contract 40.24;
