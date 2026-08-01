@@ -48,7 +48,7 @@ After this lesson you will be able to: **spot and repair pitch-shaped questions 
 
 The pattern: rehearsal tells you whether the question is broken; real interviews tell you whether the hypothesis is right. There's a second reason to rehearse - interviewing is a skill you build by doing it and getting feedback, not by reading about it. Teresa Torres' teams practice with mock interviews and a feedback loop before the questions ever reach a real customer; the clumsy run is where the learning happens ([Product Talk](https://www.producttalk.org/learning-to-interview-continuously/)). A Claude persona gives you that same loop without spending a real interviewee on a question you could have caught first.
 
-![The rehearsal flow at a glance: bring in your draft question list plus the Lesson 1.1 customer blank, run Prompts 1-2 to build 3 ICP personas and test each question in-character, Prompt 3 for Claude's out-of-character diagnosis, Prompts 4-5 to surface 3 objections and sharpen weak questions past-anchored, and leave with 5-7 sharpened questions plus an Objection Tracker for real interviews](rehearsal-loop.svg)
+![A left-to-right flow: input is your draft questions plus the Lesson 1.1 customer blank; step 1 (Prompts 1-2) has 3 personas answer each question in-character; step 2 (Prompt 3, marked ruby) is Claude's out-of-character diagnosis - where the learning happens; step 3 (Prompts 4-5) sharpens weak questions past-anchored; output is 5-7 sharpened questions plus an Objection Tracker for real interviews](rehearsal-loop.svg)
 
 ## Build 3 ICP personas in Claude
 
