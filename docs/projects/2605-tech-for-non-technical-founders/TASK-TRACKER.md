@@ -322,6 +322,20 @@ self-improvement + tech-debt.** The 20% slot is drawn at wave boundaries
 reader-mode item 14, skill/process tuning); debt work never preempts a wave
 in flight.
 
+**DESIGN-CALL METHOD (Paul 2026-08-01, standing):** (1) **Modern is the
+standing style preference** - flat-vector / clean-infographic / premium-
+editorial over hand-drawn/old-time (confirmed by the W3 O2 pick). (2)
+**Future style/taste calls: run a VOTING PANEL and DECIDE autonomously** -
+the autonomy grant now extends to taste/design, don't reflex-hold for Paul
+(W3 held because it was the first; next time panel → call, record it, Paul
+overrides if he disagrees). (3) **Ground design calls in evidence:** the
+competitor set Paul curated - `10-19-research/10.04-competitor-courses-2026-
+forum-validated.md` (+ `10.05-content-organization-patterns-2026.md`,
+`10.06-media-design-recommendations.md`) - AND fresh online research of how
+top modern courses/blogs (Product Compass, Lenny's, Reforge, Stripe/Linear-
+class sites) actually do it. A design panel brief cites the competitor doc +
+one online scan before scoring.
+
 **QUEUE-AND-SEQUENCE (Paul 2026-08-01, standing):** Paul's incoming requests
 are QUEUE INPUTS, not run-now orders - the manager decides sequencing AND
 timing against critical level + the active plan (triage verdict recorded per
