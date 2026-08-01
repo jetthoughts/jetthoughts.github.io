@@ -308,6 +308,10 @@ mandate in force.
     MOVING content off the landing (to lessons/kit/FAQ) not deleting it -
     the landing attracts + drives the Start-Lesson click; depth lives one
     click away.
+    **TRIAGE (Paul 2026-08-01): W1.6 runs NEXT, ahead of W3** - Paul scheduled
+    it "after W2", it's the live-campaign (Aug 1-14) acquisition surface, and
+    it answers direct customer-facing feedback; that outranks W3's campaign-
+    safe course-exhibit work by critical level. W3/W4/W5 shift one slot back.
 
 14. **[IDEA - review opportunity later, spans course + blog] Reader-mode
     readability research** (Paul 2026-08-01): browsers' reader modes
