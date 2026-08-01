@@ -10,9 +10,9 @@ timestamp: 2026-07-31T19:30:00Z
 
 | Command | What it is | When required |
 |---|---|---|
-| `bin/test --smoke` / `bin/rake test:smoke` | Smoke tier: 17 curated basics+bummers (homepage/blog-post/404/course renders + funnel forms + nav/hamburger + one mermaid), ~50s host / ~42s Docker. EXCLUDES the `_sections` sweeps and `test_codeblock_language_styles` (that one test = 196s / 44% of the suite and trips a snap_diff reporter bug). `bin/dtest --smoke` runs it in Docker (args pass through) | Sub-minute "did I break the basics" check during active work; NOT a milestone/PR gate |
+| `bin/test --smoke` / `bin/rake test:smoke` | Smoke tier: 17 curated basics+bummers (homepage/blog-post/404/course renders + funnel forms + nav/hamburger + one mermaid). `bin/dtest --smoke` runs it in Docker (args pass through) | Sub-minute "did I break the basics" check during active work; NOT a milestone/PR gate |
 | `bin/qtest --changed` | Scoped visual gate: builds once (~11s), runs ONLY affected pages' desktop+mobile screenshot tests (~2.5s each) + orphan guard + color-system check; site-wide/unmapped files auto-escalate to the full critical suite | Per micro-commit inside a sprint (~25-60s); NOT a substitute for the milestone/PR gates below |
-| `bin/rake test:critical` | Critical Minitest suite (46 runs / 84 screenshots) | At component/task milestones and before every commit outside sprint micro-commit trains |
+| `bin/rake test:critical` | Critical Minitest suite (34 runs / 53 screenshots), ~81s host / ~46s Docker since the 2026-08-01 skip_area fix | At component/task milestones and before every commit outside sprint micro-commit trains |
 | `bin/test` | Visual regression on the host (baselines in `macos/` on a Mac; on Linux, comparable to `linux/` when run through `bin/setup-test-env`'s pinned stack) | ONCE at PR prep (branch head, before `gh pr create`) or on Paul's explicit confirmation - NOT per commit (Paul 2026-07-31: qtest is the routine gate) |
 | `bin/dtest` | Same suite in Linux/Docker (baselines in `linux/`) - CI runs Linux | Same trigger as bin/test; a PR must never open without this leg (green-locally / red-in-CI otherwise) |
 

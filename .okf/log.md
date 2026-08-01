@@ -455,3 +455,36 @@ spike: docs/workflows/test-speed-research-todo.md (O1 kill the codeblock
 elephant, O2 process sharding, O3 Docker-vs-host, O4 direct-visit). Thread
 parallelism is out - Capybara.threadsafe=false + shared current_driver global.
 Code: Rakefile (SMOKE_TESTS + test:smoke), bin/test (--smoke flag).
+
+## 2026-08-01 - real elephant found (skip_area waits) + self-hosted fonts/mermaid
+
+The 196s codeblock elephant was NOT stability retries and NOT font swaps -
+instrumented probe showed the stable loop exits in 2x0.6s attempts; the ~10s
+per screenshot was the gem resolving skip_area CSS selectors via
+`all(selector, visible: true)`, where Capybara waits default_max_wait_time
+(5s) for EVERY selector with zero visible matches (`%w[picture img]` on the
+image-less codeblock fixture = 10.05s x 13 screenshots). Fix at the
+assert_screenshot choke point: pin `final_options[:wait] ||=
+Capybara.default_max_wait_time`, wrap assert_matches_screenshot in
+`Capybara.using_wait_time(0)`; plus a document.fonts.ready wait before
+capture (font-swap flakiness), and the 8 stability_time_limit:1 overrides in
+blog_special removed. Measured: blog_special 247s->34.9s, bin/test critical
+301s->81s (green x2, zero drift), bin/dtest critical ~6-7min->46s.
+Lesson: the "stability retries" theory survived two sessions and was wrong -
+one attempt-level probe killed it in minutes. Profile before believing.
+
+Same day: self-hosted Caveat + Space Grotesk + mermaid.min.js (was Google
+Fonts css2 + jsdelivr). Same woff2 binaries + unicode-ranges, sha384 of
+vendored mermaid IDENTICAL to the old SRI pin. Prod loses 2 preconnects +
+css2 + font + CDN js round trips on mermaid pages; visual tests are now
+hermetic (zero third-party network). Gate: 2 macOS mermaid baselines updated
+intentionally (font deterministically ready at mermaid.run() -> SVG measures
+~8% more compact; evaluated side by side, quality equivalent). Linux mermaid
+baselines need a CI workflow_dispatch update-baselines run after merge -
+never re-record locally (emulation drift).
+
+Hugo build (research, no changes): 11.4s memory-render; top template costs
+are _partials/img/generic.html (16.5s cumulative, 104 calls),
+clients/single (1.56s avg), img/hero-big + img/hero (~14s combined);
+css-inline is 100% cached. Follow-up lever if build speed matters:
+partialCached on stable img partials.
