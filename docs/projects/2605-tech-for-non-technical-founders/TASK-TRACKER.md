@@ -245,6 +245,12 @@ self-improvement + tech-debt.** The 20% slot is drawn at wave boundaries
 reader-mode item 14, skill/process tuning); debt work never preempts a wave
 in flight.
 
+**QUEUE-AND-SEQUENCE (Paul 2026-08-01, standing):** Paul's incoming requests
+are QUEUE INPUTS, not run-now orders - the manager decides sequencing AND
+timing against critical level + the active plan (triage verdict recorded per
+request). Paul steers by adding to the queue and by the taste gate at PR;
+he does not micromanage when each runs.
+
 **CONTINUOUS-EXECUTION MANDATE (Paul 2026-08-01, standing):** after W1.5
 (landing demo-1 layout fix - now DONE, see above), the
 manager runs ALL remaining waves end-to-end autonomously - W2 → W3 → W4 → W5
