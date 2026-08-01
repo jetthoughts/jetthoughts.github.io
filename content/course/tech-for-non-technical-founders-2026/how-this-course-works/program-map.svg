@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 848" role="img" aria-labelledby="pm-title pm-desc">
+  <title id="pm-title">The 5-module program map: from a rough idea to a signed paid pilot</title>
+  <desc id="pm-desc">A vertical spine links five numbered modules in order. Module 1 Hypothesis and Smoke Test produces a tested hypothesis and a live page that takes payment. Module 2 Validate the Problem produces 10 customer interviews and a validated problem statement. Module 3 Design from Evidence produces a one-page product brief in real customer words. Module 4 Build It Yourself produces a live MVP at a real URL with every account in your name. Module 5 First Paying Customer, shown in green, produces a signed paid pilot with a deposit in the bank. Each module's output is the next module's input.</desc>
+
+  <defs>
+    <style>
+      .h1 { font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #121212; }
+      .h2 { font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif; font-size: 24px; font-weight: 600; fill: #475569; }
+      .mod { font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif; font-size: 20px; font-weight: 600; fill: #121212; }
+      .badge { font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #ffffff; }
+      .deliv { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-size: 18px; fill: #334155; }
+      .basis { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-size: 17px; fill: #64748b; }
+    </style>
+  </defs>
+
+  <rect width="720" height="848" fill="#faf7f2"/>
+
+  <!-- Title block: action title + one message -->
+  <text x="24" y="52" class="h1">Five modules carry a rough idea</text>
+  <text x="24" y="90" class="h1">to a signed paid pilot</text>
+  <text x="24" y="130" class="h2">Each module's output is the next module's input.</text>
+  <line x1="24" y1="150" x2="696" y2="150" stroke="#e5e5e5" stroke-width="1"/>
+
+  <!-- Spine: the 5-module backbone (structure, stroked) -->
+  <line x1="48" y1="220" x2="48" y2="732" stroke="#121212" stroke-width="2"/>
+  <!-- Downward flow chevrons in the gaps -->
+  <polygon points="43,281 53,281 48,290" fill="#121212"/>
+  <polygon points="43,409 53,409 48,418" fill="#121212"/>
+  <polygon points="43,537 53,537 48,546" fill="#121212"/>
+  <polygon points="43,665 53,665 48,674" fill="#121212"/>
+
+  <!-- Module 1 -->
+  <rect x="84" y="168" width="612" height="104" rx="4" fill="#ffffff" stroke="#121212" stroke-width="2"/>
+  <circle cx="48" cy="220" r="22" fill="#475569"/>
+  <text x="48" y="228" class="badge" text-anchor="middle">1</text>
+  <text x="108" y="208" class="mod">Module 1 &#183; Hypothesis &amp; Smoke Test</text>
+  <text x="108" y="240" class="deliv">A tested hypothesis + a live page that takes payment</text>
+
+  <!-- Module 2 -->
+  <rect x="84" y="296" width="612" height="104" rx="4" fill="#ffffff" stroke="#121212" stroke-width="2"/>
+  <circle cx="48" cy="348" r="22" fill="#475569"/>
+  <text x="48" y="356" class="badge" text-anchor="middle">2</text>
+  <text x="108" y="336" class="mod">Module 2 &#183; Validate the Problem</text>
+  <text x="108" y="368" class="deliv">10 customer interviews + a validated problem statement</text>
+
+  <!-- Module 3 -->
+  <rect x="84" y="424" width="612" height="104" rx="4" fill="#ffffff" stroke="#121212" stroke-width="2"/>
+  <circle cx="48" cy="476" r="22" fill="#475569"/>
+  <text x="48" y="484" class="badge" text-anchor="middle">3</text>
+  <text x="108" y="464" class="mod">Module 3 &#183; Design from Evidence</text>
+  <text x="108" y="496" class="deliv">A one-page product brief in real customer words</text>
+
+  <!-- Module 4 -->
+  <rect x="84" y="552" width="612" height="104" rx="4" fill="#ffffff" stroke="#121212" stroke-width="2"/>
+  <circle cx="48" cy="604" r="22" fill="#475569"/>
+  <text x="48" y="612" class="badge" text-anchor="middle">4</text>
+  <text x="108" y="592" class="mod">Module 4 &#183; Build It Yourself</text>
+  <text x="108" y="624" class="deliv">A live MVP at a real URL - every account in your name</text>
+
+  <!-- Module 5: the money outcome (green = money only) -->
+  <rect x="84" y="680" width="612" height="104" rx="4" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="48" cy="732" r="22" fill="#16a34a"/>
+  <text x="48" y="740" class="badge" text-anchor="middle">5</text>
+  <text x="108" y="720" class="mod">Module 5 &#183; First Paying Customer</text>
+  <text x="108" y="752" class="deliv">A signed paid pilot with a deposit in the bank</text>
+
+  <!-- Basis line + version -->
+  <text x="24" y="820" class="basis">Basis: the course's 5-module spine - 20+ lessons, 6 artifacts.</text>
+  <text x="696" y="840" class="basis" text-anchor="end">v1.0 &#183; August 2026</text>
+</svg>

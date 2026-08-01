@@ -42,7 +42,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 ## The Big Picture
 
-![5-module pipeline: Module 1 Hypothesis & Smoke Test → Module 2 Validate the Problem → Module 3 Design from Evidence → Module 4 Build It Yourself → Module 5 First Paying Customer](module-pipeline.svg)
+![Program map: five modules on one spine, each output feeding the next input. Module 1 Hypothesis & Smoke Test produces a tested hypothesis and a live page that takes payment; Module 2 Validate the Problem produces 10 customer interviews and a validated problem statement; Module 3 Design from Evidence produces a one-page product brief in real customer words; Module 4 Build It Yourself produces a live MVP at a real URL with every account in your name; Module 5 First Paying Customer produces a signed paid pilot with a deposit in the bank.](program-map.svg)
 
 {{< course-stat modules >}} modules. {{< course-stat chapters >}} lessons. {{< course-stat artifacts >}} artifacts you can hand to an investor or a co-founder. Each module's output is the next module's input.
 
