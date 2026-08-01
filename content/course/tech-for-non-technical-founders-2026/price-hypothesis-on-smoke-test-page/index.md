@@ -71,6 +71,14 @@ Pick one pattern. Do not A/B test - 150 visits each on a $300 budget can't disti
 > 5. Paste the Payment Link URL on your CTA button. Below it, smaller text: "Not ready? Join the waitlist instead."
 > 6. **Success check:** your Stripe dashboard shows live-mode (not test-mode) and the button opens a real checkout page.
 
+## While Stripe verifies
+
+Verification takes 1-3 business days, and live payments won't work until it clears. You don't have to sit idle - build the whole button in test mode now, so the day Stripe clears you paste one link and launch.
+
+Stripe's test mode is on the moment you sign up. Create the Payment Link (step 2), wire the after-payment redirect (step 3), and run a test checkout on yourself with Stripe's test card `4242 4242 4242 4242` - it walks the full flow without charging anything. Add the refund line to your footer while you're in there, and everything but the live link is done.
+
+**Come back when your Stripe dashboard shows the account verified - the live-mode toggle stops being greyed out.** Flip the link to live mode, paste the live URL on your button, and re-run one checkout to confirm it charges for real.
+
 ## If Stripe or checkout stalls
 
 **If this fails: Stripe verification takes more than 3 days.**
