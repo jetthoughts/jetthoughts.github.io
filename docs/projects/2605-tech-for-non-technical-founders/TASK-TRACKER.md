@@ -71,8 +71,10 @@
    audit of off-spec SVG fonts, mobile text-size floor, founder-os-pack
    cover). Pilot recruitment (PAUL): 3-5 real Sams per 40.18.
 
-10. **Course v2-format consistency fix + deep audit** (scheduled 2026-08-01,
-    own session — research: `40-49-review/40.22-v2-format-structural-audit-2026-08-01.md`).
+10. **[W2] Course v2-format consistency fix + deep audit** (scheduled
+    2026-08-01, own session — research:
+    `40-49-review/40.22-v2-format-structural-audit-2026-08-01.md`; wave plan:
+    `20-29-strategy/20.15-course-improvement-wave-plan-2026-08.md`).
     Mechanical Phases 1-2 already run: 11 of 25 lessons deviate from the v2
     scaffold (6 missing the outcome line, 5 missing "Success check", 2 with
     two visuals) + 2 length flags (`hire-track-supplementary-reference` 5,558w,
@@ -81,8 +83,27 @@
     intentional exception; (b) split/demote the over-length reference;
     (c) run runbook Phases 3-6 + the content cold-eyes personas (ICP-Sam,
     voice, slop) on edited chapters. Content-only edits → hugo-build + scroll
-    gate gate, no visual suite. Blocks nothing; do after the metrics-window
-    items (9b L3 landing ships before 2026-08-14).
+    gate, no visual suite. Do after W1 (L3 ships before 2026-08-14).
+
+11. **[W1 — NEXT UP, deadline 2026-08-14] Landing L2 → L3** (wave plan 20.15;
+    research 40.21 + landing track below). **L1 MERGED as PR #416 → L2 is
+    UNBLOCKED.** L2: 3-4 independent critics on section order → punch-list,
+    NO edits. L3: execute punch-list surgically; re-run impeccable critique,
+    beat the 25/36 (69%) baseline. Scroll gate both viewports.
+
+12. **[W3] Visual V3-A** (wave plan 20.15; ADR 30.09): exhibit spec → A/B
+    exemplar → 4 M1 SVG redesigns + alts → eye-test doc → PAUL'S STYLE CALL
+    recorded in the ADR (blocks wider rollout). Program map v1 alongside;
+    Sprint-Y classify-first audit either way. Content-scoped = campaign-safe.
+
+13. **[W4, post-Aug-14] V3-B wiring + media P1** (wave plan 20.15): new
+    course-single.css + single.html; walkthrough visual hooks, 1.2/1.3/1.5
+    mid-body visuals, 5.7 mermaid horizontal, TL;DR accent. Full visual pair
+    at PR prep. THEN **[W5] completion mechanics + content strategy** (wave
+    plan 20.15): path-finder audit vs course_sequence.yaml, strengthen forks
+    2.5/4.1/5.6, compress the over-length Going Further set, verify Success
+    checks are observable-behavior measurable. Progress tracker stays GATED
+    on Paul's 30-min Clarity check.
 
 ## Browser-session track (claude-in-chrome, added 2026-07-31)
 
