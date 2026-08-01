@@ -152,6 +152,13 @@ run `/sprint-retrospective` (fallback: inline XP retro - what worked / what
 failed / what changes) and REVISE the next wave's scope from what the retro
 surfaces before dispatching it. Big/critical calls inside waves follow the
 CLAUDE.md voting-panel protocol; Paul's explicit words always override.
+Inter-wave sequence is fixed (XP practice, Paul 2026-08-01): retro FIRST,
+then a GROOMING pass on the next wave BEFORE dispatch - re-read the wave's
+board item + its source research, apply the retro's lessons, decompose into
+concrete agent-sized tasks with acceptance criteria, drop/resize anything
+the previous wave made stale or already covered, and update the board item
+with the groomed scope (audit-premise rule: groomed items decay - verify
+the artifact, not the memory of it). Dispatch only from the groomed scope.
 Standing gates unchanged: W4 stays post-Aug-14 (campaign window), W3 contains
 PAUL'S STYLE CALL as a blocking decision point inside the wave, progress
 tracker stays gated on the Clarity check. Goal = wave plan 20.15 executed
