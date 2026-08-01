@@ -455,6 +455,20 @@ mandate in force.
     side + Paul taste gate (W1 retro rule). Landing-owned files + (post-
     Aug-14) the title-render template only.
 
+17. **[NEXT — executable now, campaign-safe] M2-M5 SVG→O2 rollout** (Paul's
+    design-call method: modern/flat-vector; ADR 30.09 gate "follow the M1
+    pilot" now SATISFIED by W3 #433). Extend the proven O2 flat-vector system
+    (spec `.okf/design/house-visual-spec.md` v3 section; template =
+    the 5 shipped M1 SVGs) to Modules 2-5 (~76 SVGs). Sprint-Y found 4/5 M1
+    SVGs failed the ≥9px@390 mobile floor; the same hand-drawn grammar spans
+    M2-M5, so this fixes a confirmed course-wide legibility defect + delivers
+    consistency. Content-scoped (SVGs + alt rewrites = body edits, full gate
+    per lesson) - NO shared CSS, campaign-safe. Verification: rendered-review
+    + source-consistency (the pixel suite MASKS img, W3 lesson). Groom
+    per-module; honor a per-module Sprint-Y-style keep-as-is pass. Triaged
+    ahead of W5 (higher momentum/lower risk; W5's tracker is Clarity-gated)
+    and ahead of frozen W4.
+
 14. **[IDEA - review opportunity later, spans course + blog] Reader-mode
     readability research** (Paul 2026-08-01): browsers' reader modes
     (Chrome DevTools can toggle Reader Mode; Firefox/Safari have their own)
