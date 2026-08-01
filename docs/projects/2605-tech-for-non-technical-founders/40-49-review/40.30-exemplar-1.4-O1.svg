@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="o1-title o1-desc">
+  <title id="o1-title">At 6% signups the demand is real: read your cold-traffic conversion rate against the kill, iterate, promising, strong and suspicious bands.</title>
+  <desc id="o1-desc">A hand-drawn horizontal signal meter. Under 3 percent conversion is kill or pivot (ruby). 3 to 6 percent is iterate the message (amber). 6 to 10 percent is promising (green). 10 to 20 percent is a strong signal (deep green). Over 20 percent is suspicious, verify with a second channel (gray). A ruby pointer marks the 6 percent go line where demand is real enough to start building. Basis: form submits divided by ad-campaign visits after 300 cold visitors on one channel.</desc>
+  <defs>
+    <style>
+      .h     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title { font-size: 34px; font-weight: 700; fill: #1a1a1a; }
+      .msg   { font-size: 24px; font-weight: 700; fill: #555555; font-style: italic; }
+      .label { font-size: 22px; font-weight: 700; fill: #ffffff; }
+      .annot { font-size: 22px; font-weight: 700; fill: #ffffff; }
+      .tick  { font-size: 22px; font-weight: 700; fill: #333333; }
+      .basis { font-size: 20px; font-weight: 700; fill: #555555; }
+      .ptr   { font-size: 22px; font-weight: 700; fill: #cc342d; }
+      .ptrsub{ font-size: 22px; font-weight: 700; fill: #555555; }
+    </style>
+    <filter id="o1-rough" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <clipPath id="o1-bar"><rect x="56" y="150" width="608" height="64" rx="3"/></clipPath>
+  </defs>
+
+  <!-- warm paper -->
+  <rect width="720" height="300" fill="#faf7f2"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="h title">Your signup rate picks your move</text>
+  <text x="360" y="78" text-anchor="middle" class="h msg">Cold-traffic conversion, mapped to a decision</text>
+
+  <!-- hero reading: the 6% go line (ruby = the one actionable reading) -->
+  <g class="h">
+    <text x="248" y="110" text-anchor="middle" class="ptr">6% = the go line</text>
+    <text x="248" y="130" text-anchor="middle" class="ptrsub">demand is real, start building</text>
+    <path d="M240,133 C245,140 251,140 256,133" fill="none" stroke="#cc342d" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- meter track: DATA bands filled, no stroke, hand-drawn edges -->
+  <g clip-path="url(#o1-bar)" filter="url(#o1-rough)">
+    <rect x="56"  y="150" width="96"  height="64" fill="#cc342d"/>
+    <rect x="152" y="150" width="96"  height="64" fill="#c47d16"/>
+    <rect x="248" y="150" width="128" height="64" fill="#3d9142"/>
+    <rect x="376" y="150" width="176" height="64" fill="#2e7d32"/>
+    <rect x="552" y="150" width="112" height="64" fill="#7d7d7d"/>
+  </g>
+
+  <!-- band labels: pct (label rung) + verdict (annotation rung), inside shape -->
+  <g class="h">
+    <text x="104" y="181" text-anchor="middle" class="label">0-3%</text>
+    <text x="104" y="202" text-anchor="middle" class="annot">Kill / pivot</text>
+    <text x="200" y="181" text-anchor="middle" class="label">3-6%</text>
+    <text x="200" y="202" text-anchor="middle" class="annot">Iterate msg</text>
+    <text x="312" y="181" text-anchor="middle" class="label">6-10%</text>
+    <text x="312" y="202" text-anchor="middle" class="annot">Promising</text>
+    <text x="464" y="181" text-anchor="middle" class="label">10-20%</text>
+    <text x="464" y="202" text-anchor="middle" class="annot">Strong signal</text>
+    <text x="608" y="181" text-anchor="middle" class="label">20%+</text>
+    <text x="608" y="202" text-anchor="middle" class="annot">Suspicious?</text>
+  </g>
+
+  <!-- STRUCTURE: hand-drawn axis baseline + ticks -->
+  <g filter="url(#o1-rough)">
+    <line x1="56" y1="216" x2="664" y2="216" stroke="#333333" stroke-width="2.5" stroke-linecap="round"/>
+    <g stroke="#333333" stroke-width="2.5" stroke-linecap="round">
+      <line x1="56"  y1="216" x2="56"  y2="224"/>
+      <line x1="152" y1="216" x2="152" y2="224"/>
+      <line x1="376" y1="216" x2="376" y2="224"/>
+      <line x1="552" y1="216" x2="552" y2="224"/>
+    </g>
+  </g>
+  <g class="h">
+    <text x="56"  y="243" text-anchor="middle" class="tick">0%</text>
+    <text x="152" y="243" text-anchor="middle" class="tick">3%</text>
+    <text x="376" y="243" text-anchor="middle" class="tick">10%</text>
+    <text x="552" y="243" text-anchor="middle" class="tick">20%</text>
+  </g>
+
+  <!-- the 6% go-line threshold: ruby, the hero action marker -->
+  <line x1="248" y1="146" x2="248" y2="228" stroke="#cc342d" stroke-width="2.5" stroke-linecap="round" filter="url(#o1-rough)"/>
+  <text x="248" y="243" text-anchor="middle" class="h tick" fill="#cc342d">6%</text>
+
+  <!-- one basis line -->
+  <text x="360" y="278" text-anchor="middle" class="h basis">Basis: form submits &#247; ad-campaign visits, 300 cold visitors, one channel</text>
+</svg>
