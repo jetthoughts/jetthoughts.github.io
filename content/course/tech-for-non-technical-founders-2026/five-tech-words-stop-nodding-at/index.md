@@ -34,8 +34,6 @@ related_posts: false
 
 One word can hide a year in which nothing shipped. "Refactoring" means changing the structure of code without changing what the user sees, so when an agency uses it to narrate week after week, there is nothing user-visible to check it against, and "we're refactoring the order flow" can cover a stretch where production never moved. That is how the word runs up a bill: **$51K and a year of runway** can pass before a new fractional CTO reads the repo and finds nothing new since month three. The glossary below hands you, for each word, the one question the padded version cannot answer.
 
-Non-technical founders often learn engineering vocabulary under pressure, mid-meeting, with a bill on the table. The agency throws a word, the founder nods, the meeting moves on. By the time the founder figures out what the word actually meant, the next sprint is already approved.
-
 Below is the cheat sheet for the five words that hide the most invoices: refactoring, Docker, tech debt, MVP, architecture. For each you get a plain-English definition, the dishonest version your dev shop probably means when they say it, and one question you can ask in your next standup that the BS-version cannot answer.
 
 ![Jargon translator: what your dev shop says vs what it usually means, for refactoring, Docker, tech debt, MVP, and architecture](jargon-translator.svg)
