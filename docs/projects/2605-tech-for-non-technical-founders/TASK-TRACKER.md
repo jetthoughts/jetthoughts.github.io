@@ -330,6 +330,29 @@ mandate in force.
     it answers direct customer-facing feedback; that outranks W3's campaign-
     safe course-exhibit work by critical level. W3/W4/W5 shift one slot back.
 
+16. **[SCHEDULED - post-Aug-14 landing wave, after W4's window opens] Landing
+    full-migration to the shuffle2 reference** (Paul 2026-08-01, triaged
+    backlog by impact/effort). W1.6 (PR #432) closed the expander/text
+    complaint but the result (40.29) is still ~2x the reference (40.28)
+    height. Full match is a bigger restructure that needs campaign-frozen
+    changes, so it waits for the post-Aug-14 window (with W4). WHY not now:
+    (a) section restructure + a template edit (gradient H1) are frozen in
+    the Aug 1-14 campaign window; (b) the landing is already goal-serving
+    for the campaign - full pixel-match is polish, and the Aug-14 metrics
+    read tells us whether landing changes move conversion before investing.
+    **Gap punch-list (40.28 ref vs 40.29 result):** (1) omit/RELOCATE "Take
+    this course if" + "Who built this" off the landing (to how-this-course-
+    works / FAQ) - the single biggest height cut; (2) module map → compact
+    module summaries + chapter counts (chapters via lesson links), not all
+    25 inline (the lever from item 15); (3) gradient second-line H1 word -
+    needs layouts/course/list.html to own the title line-break (TEMPLATE,
+    post-Aug-14 safe); (4) mistakes grid 2-col → 3-col (needs the container/
+    reading-measure widened); (5) hero card labeled stat cells vs our meta
+    line; (6) NOT-cover dark band (requires a dark-zone-budget rebalance).
+    Skills: /impeccable + stitch-design + ux-principles; reference side-by-
+    side + Paul taste gate (W1 retro rule). Landing-owned files + (post-
+    Aug-14) the title-render template only.
+
 14. **[IDEA - review opportunity later, spans course + blog] Reader-mode
     readability research** (Paul 2026-08-01): browsers' reader modes
     (Chrome DevTools can toggle Reader Mode; Firefox/Safari have their own)
