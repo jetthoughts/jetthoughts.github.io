@@ -40,9 +40,7 @@ hero_secondary_text: "3-minute Quickstart"
 
 Five modules take you from that idea to a signed paid pilot: test demand with strangers, interview the people who respond, turn their words into a one-page brief, build the MVP yourself with no-code tools, and charge your first customer before you ship. The first checkpoint comes fast: two to three weeks in, at an evenings-and-weekends pace, you get a go/iterate/kill verdict on your **Founding Hypothesis** (the one-sentence version of your idea: who the customer is, what problem you solve, why they'd pick you) from real demand data instead of polite nods from friends.
 
-Two ways in: [Start Lesson 1.1 →](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) or [see the full syllabus ↓](#module-map).
-
-*Prefer a map before the first step? [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) (10 minutes) and the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) cover the route and the most common blockers.*
+Two ways in: [Start Lesson 1.1 →](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) or [see the full syllabus ↓](#module-map). *Prefer a map first? [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) (10 minutes) and the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) cover the route and the most common blockers.*
 
 ## Take this course if
 
@@ -106,7 +104,7 @@ If you need something on this list, the course won't help with it.
 
 ## Module map
 
-Read the modules in order. Each module's output is the next module's input, and each card's **"You leave with"** line names its output; together with the fill-in templates they total {{< course-stat artifacts >}} artifacts, which bundle into a single Google Drive folder - your **Founder OS** - the decision log you'll lean on every time you have to choose what to build next. The [Founder OS pack index](/course/tech-for-non-technical-founders-2026/founder-os-pack/) is its printable cover sheet.
+Read the modules in order - each module's output is the next module's input, and each card's **"You leave with"** line names its output. The artifacts bundle into a single Google Drive folder - your **Founder OS** ([printable pack index](/course/tech-for-non-technical-founders-2026/founder-os-pack/)).
 
 <div class="module-rail">
 
@@ -233,6 +231,4 @@ Once you've passed the Module 5 gate, the continuation chapters - churn triage, 
 
 ## Already started building?
 
-A side-path for readers who are further along. If you just have an idea or a half-built prototype you're tinkering with, skip to [Module 1](#module-1).
-
-If you are already typing, or paying someone an hourly rate to type for you, start with the ownership audit in [Lesson 4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - it carries the full pre-flight list to run before you approve any more work.
+If you just have an idea or a half-built prototype you're tinkering with, skip to [Module 1](#module-1). If you are already typing, or paying someone an hourly rate to type for you, start with the ownership audit in [Lesson 4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - it carries the full pre-flight list to run before you approve any more work.
