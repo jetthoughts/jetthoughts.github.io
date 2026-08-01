@@ -97,8 +97,11 @@
 }
 
 /* V1.2 Deliverable-first module cards — elevation, the leading
-   "Output:" strong restyled as a top-right badge, and the
-   "You leave with ✓" line promoted to a tinted panel. */
+   "Output:" strong restyled as a ruby lead-in on its own line, and the
+   "You leave with ✓" line promoted to a tinted panel.
+   L4 fix (P2): the strong used to be pinned top-right via
+   position:absolute, detached from the sentence it labels — read as a
+   broken data binding. Now it's an inline ruby lead-in, attached. */
 .blog .module-card {
   position: relative;
   border-radius: 14px;
@@ -106,18 +109,8 @@
   box-shadow: 0 6px 24px rgba(26, 26, 46, 0.07);
 }
 .blog .module-card__output > strong:first-of-type {
-  position: absolute;
-  top: 24px;
-  right: 26px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--color-ruby);
-  background: rgba(204, 52, 45, 0.07);
-  border: 1px solid rgba(204, 52, 45, 0.2);
-  border-radius: 999px;
-  padding: 2px 10px;
+  letter-spacing: 0.02em;
 }
 .blog .module-card__leave {
   background: #f2faf4;
@@ -166,6 +159,18 @@
   color: #9a9aac;
   margin-top: 18px;
   margin-bottom: 0;
+}
+
+/* L4 fix (P3): the endcap's own bottom padding (38px) plus the global
+   footer's top padding (130px, footer.css) are both pure black with no
+   visual seam, so mobile reads them as one ~170px dead gap. Scoped to
+   pages with a course-endcap only — collapses the footer's lead-in to
+   normal section spacing without touching the shared footer.css rule
+   every other page relies on. */
+@media (max-width: 768px) {
+  body:has(.course-endcap) .footer-component {
+    padding-top: 40px;
+  }
 }
 
 /* V1.4 Eyebrow + headline scaffold — ruby uppercase tracked kicker
@@ -271,6 +276,28 @@
     grid-area: mleave;
     align-self: start;
     margin-top: 0;
+  }
+
+  /* L4 fix (P3): modules 4 and 5 have the longest chapter lists, so the
+     shared "mchapters mleave" grid row grows to their height and
+     align-self:start just parks the leave panel at the top of that tall
+     row — the empty track below it still reads as a ~500px void.
+     Cheapest fix: collapse just these two cards back to one column so
+     the row height tracks the panel's own content, not the chapters'. */
+  .blog #module-4.module-card,
+  .blog #module-5.module-card {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "mbadge"
+      "mtitle"
+      "moutput"
+      "mchapters"
+      "mleave"
+      "mextras";
+  }
+  .blog #module-4 .module-card__leave,
+  .blog #module-5 .module-card__leave {
+    margin-top: 18px;
   }
 }
 
