@@ -98,10 +98,14 @@
 11. **[W1 — NEXT UP, deadline 2026-08-14] Landing L2 → L3** (wave plan 20.15;
     research 40.21 + landing track below; persona synthesis
     `40-49-review/40.23-four-persona-comprehensive-review-2026-08-01.md`).
-    **L1 MERGED as PR #416 → L2 is UNBLOCKED.** L2: 3-4 independent critics
-    on section order → punch-list, NO edits. L3: execute punch-list
-    surgically; re-run impeccable critique, beat the 25/36 (69%) baseline.
-    Scroll gate both viewports. **40.23 deltas (Paul APPROVED 2026-08-01):** the operating-kit restructure (40.23 C4: card-grid the 6 clone
+    **L1 MERGED as PR #416. L2 DONE 2026-08-01:** 3-critic panel (IA /
+    Sam-ICP / conversion, fable tier) converged 90% with 40.21; execution
+    contract = `40-49-review/40.24-landing-l3-punchlist-2026-08-01.md`
+    (target order, 7-anchor rules, N2 completer-link repoints, ~450w
+    preamble budget, authorship draft, gates). **L3 IN FLIGHT** on branch
+    course-landing-l3 per 40.24; re-run impeccable critique, beat the 25/36
+    (69%) baseline; scroll gate both viewports. Pre-merge (Paul/browser):
+    R3 Clarity+GA4 scroll-depth snapshot BEFORE deploy. **40.23 deltas (Paul APPROVED 2026-08-01):** the operating-kit restructure (40.23 C4: card-grid the 6 clone
     blocks, one "how to run it" section, v2 closure, single payoff label)
     rides WITH the Going-further move so it isn't rebuilt twice; add the
     hero "Free"-promise reconciliation line (40.23 C1) while _index is open.
