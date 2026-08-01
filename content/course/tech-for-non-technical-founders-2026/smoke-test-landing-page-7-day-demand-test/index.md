@@ -54,7 +54,7 @@ Two routes get you 300 cold visitors: the **$0 organic path** on the [full chann
 
 You will not have to figure out the ad on your own: the launch checklist below links a [step-by-step recipe for your channel](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) (7 settings, click by click) plus a copy-paste prompt that writes the ad copy and image concept for you.
 
-![Signal meter reading the smoke-test conversion rate: 0-3% kill or pivot, 3-6% iterate the message, 6-10% promising, 10-20% strong signal, over 20% suspicious - with the 6% go line marked](smoke-test-signal.svg)
+![A signal meter mapping cold-traffic conversion to a decision: 0-3% kill or pivot, 3-6% iterate the message, 6-10% promising, 10-20% strong signal, over 20% suspicious - with the 6% go line marked in ruby as the point where demand is real enough to start building](smoke-test-signal.svg)
 
 ## Launch and read the signal
 
