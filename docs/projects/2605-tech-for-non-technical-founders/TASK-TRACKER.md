@@ -162,6 +162,9 @@ the artifact, not the memory of it). Dispatch only from the groomed scope.
 **Skill enforcement (Paul 2026-08-01):** at every phase boundary, check the
 loaded skills list (global + project) and route through the matching skill
 instead of default behavior; agent prompts NAME the skills they must invoke.
+The whole wave cycle runs under `/xp-practices` as the umbrella discipline -
+small releases (one PR per wave), tests green before merge, sustainable
+pace (WIP=1 waves), 4-eyes on every change, retro-driven adaptation.
 Flow map (extend when new skills land): retro → `/sprint-retrospective`
 (xp-practices family); wave planning → `/agile-sprint-planning` or
 `/agile-product-owner`; grooming/breakdown → `/user-story-splitting` or
