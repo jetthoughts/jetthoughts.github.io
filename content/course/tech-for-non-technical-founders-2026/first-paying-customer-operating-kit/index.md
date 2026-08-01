@@ -93,6 +93,7 @@ DESIGN PARTNER AGREEMENT
 One-time deposit: $[500-6,000] (10-30% of year-one ACV).
 Paid via Stripe before pilot kickoff. Credited dollar-for-dollar toward year-one invoice on conversion.
 If Design Partner cancels before week 4: deposit forfeited.
+If Company cancels for any reason: 100% refund within 14 days.
 ```
 
 ### Bonus: the pilot kickoff call agenda (60-minute template)

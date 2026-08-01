@@ -39,7 +39,7 @@ related_posts: false
 
 After this lesson you will be able to: **turn a verbal yes into a signed one-page pilot agreement with a deposit paid before you build anything new.**
 
-> **TL;DR:** A verbal yes is not a paid pilot. A signed DPA (Design Partner Agreement - a one-page co-design pilot contract) with a refundable Stripe deposit is. Charge 10-30% of year-one ACV (annual contract value - what one customer pays in year one) before kickoff - it puts the CFO question on Week 0 instead of Week 8.
+> **TL;DR:** A verbal yes is not a paid pilot. A signed DPA (Design Partner Agreement - a one-page co-design pilot contract) with a Stripe deposit is - refunded 100% if you cancel, forfeited if the customer cancels early. Charge 10-30% of year-one ACV (annual contract value - what one customer pays in year one) before kickoff - it puts the CFO question on Week 0 instead of Week 8.
 
 ---
 

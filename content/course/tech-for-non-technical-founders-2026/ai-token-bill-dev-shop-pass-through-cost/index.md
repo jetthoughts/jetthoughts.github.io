@@ -67,7 +67,7 @@ That conversation is preventable in 20 minutes of contract reading and 10 minute
 
 Three line items make up almost every dev shop's AI bill in 2026. Memorize the ranges and you can spot a wrong invoice in 30 seconds.
 
-### Per-developer Cursor (or Copilot Enterprise) seat: $20-$60/mo
+### Per-developer Cursor (or Copilot Enterprise) seat: $20-$40/mo
 
 Cursor Pro is $20/month per seat ([Cursor pricing](https://cursor.com/pricing)). Cursor Business is $40/seat with admin controls and usage analytics. Cursor Ultra is $200/seat for heavy users. GitHub Copilot Enterprise sits at $39/seat ([GitHub Copilot pricing](https://github.com/features/copilot/plans)). Most agencies pick one - Cursor Business is the modal choice in 2026 because it bundles team admin and gives the agency owner a usage dashboard. This line is fixed and predictable. It should never surprise you.
 

@@ -43,7 +43,7 @@ After this lesson you will be able to: **send outreach that names something the 
 
 > **Read [Lesson 2.3 - Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) first.** It covers the ICP mapping, reading threads, and building the 30-name list. You need that list before the templates below will work - generic openers collapse to 1-5% reply rates.
 
-**How this chapter relates to Lesson 2.6:** this chapter recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Lesson 2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel.
+**How this lesson relates to Lesson 2.6:** this lesson recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Lesson 2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel.
 
 This is interview recruitment, not sales. You're asking for time and insight, not money - different message template, different channels, different reciprocity. Don't use the Lesson 5.7 cold-email script here; it scares interview subjects who don't yet know you have a product.
 

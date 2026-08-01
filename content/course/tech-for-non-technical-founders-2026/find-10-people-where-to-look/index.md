@@ -124,7 +124,7 @@ Turn the 30 sentences into 30 names. Open each thread you saved, click each usef
 
 Your Lesson 1.2 complaints each came with a thread URL - those posters are named leads with a known pain; enter them as the first rows (name, post URL, quoted line).
 
-**This is the most important step in the chapter.** A list of 30 individuals you can name - because you read what they wrote - replies far more often than a list of strangers a tool exported for you - the quoted line is the difference. Aim for 30 hand-picked people in one focused sitting, then filter the list on [six dimensions](/course/tech-for-non-technical-founders-2026/reference/find-10-people-full/#filter-the-list-six-dimensions) (buyer-or-user, company size, one industry, one timezone) so the calls are bookable.
+**This is the most important step in the lesson.** A list of 30 individuals you can name - because you read what they wrote - replies far more often than a list of strangers a tool exported for you - the quoted line is the difference. Aim for 30 hand-picked people in one focused sitting, then filter the list on [six dimensions](/course/tech-for-non-technical-founders-2026/reference/find-10-people-full/#filter-the-list-six-dimensions) (buyer-or-user, company size, one industry, one timezone) so the calls are bookable.
 
 > **Save the Apollo filter and whatever contacts your monthly export credits cover (a small monthly allowance on the free tier) to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Lesson 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
 

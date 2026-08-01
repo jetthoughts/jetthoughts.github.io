@@ -33,7 +33,7 @@ Module 3 was one evening and one lunch break: draft the brief, then try to break
 
 ## [Lesson 3.1: The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
 
-Section 1 took ninety seconds, because the lesson forbids writing it: she copied the problem paragraph from her validated problem statement word for word - parents of kids with learning differences, 8 of 10 with real past spend, the mother who "called eleven places in March," the $600 generic-center mistake.
+Section 1 took ninety seconds, because the lesson forbids writing it: she copied the problem paragraph from her validated problem statement word for word - parents of kids with learning differences, 8 of 10 with real past spend, the $600 generic-center mistake.
 
 Section 2 she wrote from memory of her own interviews: a parent at 9:30pm after the kids are asleep, a Facebook group thread in one tab and a search in the other, tired of opening tutor sites that all say "all subjects, all ages." Section 3 came out as one paragraph built on the parents' own words: *a web app where a parent searches by their kid's specific need, gets a short vetted list of tutor profiles - each with parent reviews, credentials, the session rate, and response time - and requests an intro call in one click.* The session rate on the profile was the prototype fail, promoted to a requirement.
 

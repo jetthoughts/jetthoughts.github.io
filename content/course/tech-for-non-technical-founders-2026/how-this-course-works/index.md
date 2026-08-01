@@ -139,7 +139,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 | 5.3 | Build the 50-name warm list, sorted into 4 outreach buckets | One spreadsheet |
 | 5.4 | Write the 4 bucket messages + a 90-second Loom | Loom |
 | 5.5 | Send in sequence, track replies, book demos | The same spreadsheet |
-| 5.6 | Sign a Design Partner Agreement - "DPA" (a short contract where a customer pays a deposit to test your product as a co-design partner; cheaper and faster than a full enterprise contract) - with a refundable deposit | DPA template + Stripe |
+| 5.6 | Sign a Design Partner Agreement - "DPA" (a short contract where a customer pays a deposit to test your product as a co-design partner; cheaper and faster than a full enterprise contract) - with a deposit (refunded in full if you cancel; forfeited if the customer cancels early) | DPA template + Stripe |
 | 5.7 (optional) | Go cold outbound: 30 filtered messages, book 1-2 pilots | LinkedIn Sales Navigator or manual |
 
 > → **Mia's Module 5:** sent her DPA to the warmest lead from her champion bucket - the $1,200 deposit cleared before she built anything new. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)
