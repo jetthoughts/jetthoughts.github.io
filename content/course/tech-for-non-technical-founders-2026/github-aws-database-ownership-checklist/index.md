@@ -37,6 +37,8 @@ related_posts: false
 >
 > **Progress:** M4 · 2 of 5 · Results so far: build path chosen (4.1) - this lesson locks ownership before anything gets built
 
+After this lesson you will be able to: **run a 12-item audit that confirms every credential - code, cloud, secrets, domain - sits under an email and a card you control, and start a recovery plan for any that don't.**
+
 > **TL;DR:** Before you hire anyone, run this 12-item audit. It takes 45 minutes. If you skip it, the story below is how it ends: the founder who spent 14 months before discovering the AWS root password was in someone else's Gmail.
 
 > **If you signed up for Lovable + Supabase + Stripe yourself (the default Path 2 from Lesson 4.1), here is your 5-minute self-check** - the rest of this lesson applies the day you hire a contractor:
@@ -52,8 +54,6 @@ related_posts: false
 ---
 
 The cheapest day to confirm you own your own infrastructure is Day 1, before you hand a credit card to a contractor. The most expensive day is month 14, when production breaks at 9pm and you cannot push a fix because the database password lives in someone else's inbox. In 2025, one founder learned this the hard way: fourteen months into a build, 1,800 paying clinics, a Stripe account in the founder's name - and the AWS root password sitting in the contractor's personal Gmail. It took three emails and six days to get the root account email changed.
-
-After this lesson you will be able to: **run a 12-item audit that confirms every credential - code, cloud, secrets, domain - sits under an email and a card you control, and start a recovery plan for any that don't.**
 
 *Ownership* means you control the GitHub org, the AWS root account, the domain registrar, and the production database. A Day-1 audit is what lets you switch contractors on Tuesday without losing access to your own codebase on Wednesday. Open the AWS console right now and click your account name in the top-right corner. Read the email address on the root user. Whose inbox does that land in tonight?
 

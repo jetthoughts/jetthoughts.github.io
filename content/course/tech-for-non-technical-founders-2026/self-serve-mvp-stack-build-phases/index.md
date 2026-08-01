@@ -38,6 +38,8 @@ related_posts: false
 >
 > **Progress:** M4 · 4 of 5 · Results so far: stack set up + pre-flight rules locked (4.3) - this lesson walks the 4 build phases to a live MVP
 
+After this lesson you will be able to: **walk the four build phases, demo each one to a real person, and put a live URL in front of five real users.**
+
 > **TL;DR:** Four build phases with one demo each. Phase 1 ships clickable UI. Phase 2 wires Supabase auth. Phase 3 connects Stripe checkout. Phase 4 deploys to 5 ICP users. Five green lights to exit. Ship the shed, not the skyscraper.
 
 ---

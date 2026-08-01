@@ -38,13 +38,13 @@ related_posts: false
 >
 > **Progress:** M4 · 5 of 5 · [OPTIONAL] - a recurring monthly check once your MVP is live; the core path continues at 5.1
 
+After this lesson you will be able to: **score five architectural signals each month and decide, on a dated rule, whether to stay self-serve, bridge to a fractional CTO, or hire a team.**
+
 > **TL;DR:** Five architectural signals that mean the self-serve stack is maxed out. Two firing for 4+ weeks = graduate to a fractional CTO or hire. Run this check monthly once your MVP is live.
 
 ---
 
 Your Lovable app is live and the first coaches are paying. The stack that got you here has a ceiling, and it shows up in your dashboard weeks before a customer feels it. This lesson is the monthly check that catches the ceiling early, while it is still a tuning problem and not a rebuild.
-
-After this lesson you will be able to: **score five architectural signals each month and decide, on a dated rule, whether to stay self-serve, bridge to a fractional CTO, or hire a team.**
 
 **Vibe Coding** is shipping a real product with AI-generated code from tools like [Lovable](https://lovable.dev), Cursor, or Bolt - no engineer, no dev shop, no months of build. The term was coined by Andrej Karpathy in early 2025; indie founder Pieter Levels made it famous in practice. Done right, it carries you to your first paying users. This lesson is about the moment the shed stops holding.
 
