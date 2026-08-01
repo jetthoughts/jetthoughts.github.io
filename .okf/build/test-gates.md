@@ -3,7 +3,7 @@ type: Playbook
 title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
-timestamp: 2026-07-31T19:30:00Z
+timestamp: 2026-08-01T10:00:00Z
 ---
 
 # The suites
@@ -25,6 +25,24 @@ extend it when adding components or critical files. The macOS full suite remains
 
 # Hard-won caveats
 
+- **A `skip_area` selector that matches NOTHING costs 5s per screenshot**
+  (2026-08-01). snap_diff resolves each mask via `all(sel, visible: true)`,
+  and Capybara waits `default_max_wait_time` (5s) on a zero-match selector.
+  A shared default like `skip_area: %w[picture img]` on an image-less page =
+  10s/shot; one test paid ~130s (44% of the suite) this way. Fixed at the
+  `assert_screenshot` choke point (`Capybara.using_wait_time(0)` + pinned
+  capture wait), so masks are cheap now - but adding a mask for an element
+  that may be absent is still a smell. Removing a mask/tolerance is safe once
+  fonts settle (`document.fonts.ready` is in the choke point); the
+  drift-overview procedure (read `snap_diff_report.html` heatmap, one mask at
+  a time, which masks to KEEP) lives in
+  [test-speed-research-todo](/workflows/test-speed-research-todo.md).
+- **Fonts + mermaid.js are self-hosted** (2026-08-01) - Caveat / Space Grotesk
+  woff2 and `mermaid-11.15.0.min.js` served same-origin from
+  `themes/beaver/static/`, not Google Fonts / jsdelivr. Visual tests are
+  hermetic (zero third-party network); prod mermaid pages lose the CDN round
+  trips. The vendored mermaid is sha384-identical to the old SRI pin - re-vendor
+  (and re-record mermaid baselines) if bumping the version.
 - **Content-only diffs skip the visual suites entirely** (Paul 2026-07-31).
   A change touching ONLY markdown prose/frontmatter - no `themes/`, no
   `layouts/`, no `*.css`, no inline HTML/SVG in a body - is gated by
