@@ -144,8 +144,27 @@
     raise" asides may be softened during W2/W5 passes only where they read
     off-ICP, under surgical-edit rules.
 
+**W1.5 ✅ DONE 2026-08-01, merged as PR #429 (squash c9da2ea9):** landing
+layout converged on demo 1 - full-bleed tinted hero band + two-col grid +
+obsidian course-window card (chrome dots, "Idea to First Paying Customer"),
+1080px centered container aligning all sections with the hero, section-band
+rhythm (#FAFAFA module-map band, endcap island), gray eyebrow economy.
+Honest dtest: expected-set-only reds (first attempt OOM-killed exit 137,
+discarded; full re-run clean). CI update-baselines dispatched (run
+30709991666). **Paul's post-ship verdict (2026-08-01): layout + section
+background colors GOOD; flagged "maybe too many expand-to-read-more
+components" - expander-density reduction (e.g. Module 1 lessons open by
+default, drop the NOT-cover "why" expander) is a TOP candidate for the next
+grooming pass.**
+
+**CAPACITY RULE (Paul 2026-08-01, standing): 80% feature delivery / 20%
+self-improvement + tech-debt.** The 20% slot is drawn at wave boundaries
+(retro → grooming picks ONE debt/improvement item per boundary: devx O5/O6,
+reader-mode item 14, skill/process tuning); debt work never preempts a wave
+in flight.
+
 **CONTINUOUS-EXECUTION MANDATE (Paul 2026-08-01, standing):** after W1.5
-(landing demo-1 layout fix, branch `course-landing-demo1-layout`) ships, the
+(landing demo-1 layout fix - now DONE, see above), the
 manager runs ALL remaining waves end-to-end autonomously - W2 → W3 → W4 → W5
 per items 10-13 - without waiting for per-wave go-aheads. Between waves:
 run `/sprint-retrospective` (fallback: inline XP retro - what worked / what
