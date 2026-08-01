@@ -1,38 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="framings-title">
-  <title id="framings-title">Same button, two framings side by side - an outcome-framed CTA and a risk-reduction-framed CTA, both showing the identical $97 price</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="framings-title framings-desc">
+  <title id="framings-title">Same $97, two ways to frame the button - pick one, never A/B test.</title>
+  <desc id="framings-desc">Two side-by-side cards show the same ruby waitlist button written two ways. The outcome framing reads "Stop spending 4 hours on reconciliation - $97" and anchors the price to the problem it replaces. The risk-reduction framing reads "Reserve your spot - $97, refundable for 30 days" and reduces first-touch risk. Both charge the identical $97. Basis: one smoke-test price, only the wording differs.</desc>
   <defs>
     <style>
-      .heading    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .note       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #444; font-style: italic; }
-      .card-label { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 22px; font-weight: 700; }
-      .cta-text   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #fff; font-weight: 700; }
-      .cta-price  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 19px; fill: #fff; font-weight: 700; }
-      .card-note  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
-      .callout    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #1a1a1a; font-weight: 600; }
-      .card-out   { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .card-risk  { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
-      .btn        { fill: #cc342d; stroke: #1a1a1a; stroke-width: 1.5; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .label { font-size: 20px; font-weight: 600; fill: #121212; }
+      .cta   { font-size: 17px; font-weight: 600; fill: #ffffff; }
+      .price { font-size: 19px; font-weight: 700; fill: #ffffff; }
+      .annot { font-size: 18px; font-weight: 400; fill: #555555; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
   </defs>
 
-  <text x="480" y="40" class="heading" text-anchor="middle">Same button, two framings</text>
-  <text x="480" y="66" class="note" text-anchor="middle">The price ($97) is identical on both. Pick one - do not A/B test.</text>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="300" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="284" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Left card: outcome framing -->
-  <rect x="32" y="90" width="430" height="185" rx="14" class="card-out" transform="rotate(-0.3 247 182)"/>
-  <text x="247" y="126" class="card-label" text-anchor="middle" fill="#cc342d">OUTCOME FRAMING</text>
-  <rect x="44" y="150" width="406" height="58" rx="29" class="btn" transform="rotate(0.2 247 179)"/>
-  <text x="247" y="186" class="cta-text" text-anchor="middle">Stop spending 4 hours on reconciliation - <tspan class="cta-price">$97</tspan></text>
-  <text x="247" y="248" class="card-note" text-anchor="middle">anchors the price to the problem it replaces</text>
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">Same $97, two ways to frame the button</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">Pick one framing; never A/B test a smoke test</text>
 
-  <!-- Right card: risk-reduction framing -->
-  <rect x="498" y="90" width="430" height="185" rx="14" class="card-risk" transform="rotate(0.3 713 182)"/>
-  <text x="713" y="126" class="card-label" text-anchor="middle" fill="#b8860b">RISK-REDUCTION FRAMING</text>
-  <rect x="510" y="150" width="406" height="58" rx="29" class="btn" transform="rotate(-0.2 713 179)"/>
-  <text x="713" y="186" class="cta-text" text-anchor="middle">Reserve your spot - <tspan class="cta-price">$97</tspan> refundable 30 days</text>
-  <text x="713" y="248" class="card-note" text-anchor="middle">reduces first-touch risk</text>
+  <!-- Left card: outcome framing (neutral structure) -->
+  <rect x="24" y="100" width="336" height="168" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="192" y="132" text-anchor="middle" class="gk label">OUTCOME FRAMING</text>
+  <rect x="40" y="146" width="304" height="70" rx="4" fill="#cc342d"/>
+  <text x="192" y="174" text-anchor="middle" class="gk cta">Stop spending 4 hours</text>
+  <text x="192" y="198" text-anchor="middle" class="gk price">on reconciliation - $97</text>
+  <text x="192" y="246" text-anchor="middle" class="sys annot">anchors price to what it replaces</text>
 
-  <!-- Bottom callout -->
-  <rect x="90" y="298" width="780" height="48" rx="12" fill="#fbe9ff" stroke="#a855f7" stroke-width="2"/>
-  <text x="480" y="328" class="callout" text-anchor="middle">Same $97 either way - the frame changes what the visitor feels, not what they pay.</text>
+  <!-- Right card: risk-reduction framing (neutral structure) -->
+  <rect x="372" y="100" width="336" height="168" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="540" y="132" text-anchor="middle" class="gk label">RISK-REDUCTION FRAMING</text>
+  <rect x="388" y="146" width="304" height="70" rx="4" fill="#cc342d"/>
+  <text x="540" y="174" text-anchor="middle" class="gk price">Reserve your spot - $97</text>
+  <text x="540" y="198" text-anchor="middle" class="gk cta">refundable for 30 days</text>
+  <text x="540" y="246" text-anchor="middle" class="sys annot">reduces first-touch risk</text>
+
+  <!-- one basis line -->
+  <text x="360" y="286" text-anchor="middle" class="sys basis">Basis: one smoke-test price of $97, only the wording differs</text>
 </svg>
