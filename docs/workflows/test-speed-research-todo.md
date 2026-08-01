@@ -1,17 +1,18 @@
 # Test-speed research TODO
 
-Scheduled spike (2026-08-01): make the visual suites fast without losing the
-signal. Measured findings below; open experiments at the bottom. Pick this up
-in a dedicated session — none of the open items are wired yet.
+Spike (2026-08-01): make the visual suites fast without losing the signal.
+**RESOLVED same day — root cause found and fixed** (see "The real dominant
+cost" below). Remaining open items at the bottom.
 
-## Measured baseline (host, macOS, `bin/test` warm build)
+## Measured (host, macOS, `bin/test` warm build)
 
-| Tier | Command | Tests | Wall | State |
-|---|---|---|---|---|
-| Full system | `bin/rake test:all` | 67 | ~450s (sum of per-test) | 1 error* |
-| Critical | `bin/test` | 34 | ~300s | green |
-| **Smoke (new)** | `bin/test --smoke` | 17 | **50.5s** | green |
-| Docker smoke | `bin/dtest --smoke` | 17 | **41.6s** | 1 stale-red (mermaid)† |
+| Tier | Command | Tests | Before | After fix | State |
+|---|---|---|---|---|---|
+| Full system | `bin/rake test:all` | 67 | ~450s | (not re-measured) | — |
+| Critical | `bin/test` | 34 | ~300s | **81s** (3.7x) | green x2, zero drift |
+| blog_special file | direct | 8 | ~247s | **34.9s** (7x) | green |
+| Smoke | `bin/test --smoke` | 17 | 50.5s | (inherits gains) | green |
+| Docker smoke | `bin/dtest --smoke` | 17 | 41.6s | (inherits gains) | 1 stale-red (mermaid)† |
 
 † Docker is ~18% faster than the host on the same 17 tests (41.6s vs 50.5s),
 confirming the "Docker is faster" report. The 1 failure is the known-stale
@@ -25,40 +26,52 @@ snap_diff Default reporter (`reporters/default.rb:25`, `String#[]` on a Symbol)
 whenever a delayed codeblock diff needs formatting. External-gem bug; do not
 monkeypatch. It only fires inside the codeblock elephant (below).
 
-## The dominant cost: one test is 44% of the suite
+## The real dominant cost (FIXED 2026-08-01): skip_area selector waits
 
-`test_codeblock_language_styles` (desktop + mobile) = **98.8s + 97.2s ≈ 196s**,
-44% of the full run. It loops 8 code-fence sections, each an
-`assert_stable_screenshot` (multi-capture stability wait) at ~12s/section. The
-next-slowest tests are ~12s (mermaid) and everything else averages ~4s.
+The elephant (`test_codeblock_language_styles`, 196s / 44% of the suite) was
+NOT stability retries and NOT font swaps. Instrumented probe (attempt-level
+timing inside `StableScreenshoter`) showed the stable loop exits in 2 attempts
+x 0.6s; the missing ~10s per screenshot was **`skip_area` CSS selector
+resolution**: the gem runs `session.all(selector, visible: true)` per
+selector, and Capybara waits `default_max_wait_time` (5s) for EVERY selector
+with zero visible matches. `skip_area: %w[picture img]` on the image-less
+codeblock fixture = 2 x 5s = 10.05s per screenshot, 13 screenshots in the
+file. Measured directly: `all('picture', visible: true)` 5.01s,
+`all('img', visible: true)` 5.03s, same call with `wait: 0` = 0.00s; the same
+screenshot with the mask 11.33s, without it 1.30s.
 
-Smoke tier deliberately excludes it. But for `test:critical` / `test:all` it is
-THE target. Open question O1 below.
+**Fix** (test/application_system_test_case.rb `assert_screenshot`): pin
+`final_options[:wait] ||= Capybara.default_max_wait_time` (the stability loop
+needs a real deadline — the gem rejects `stability_time_limit > wait`), then
+wrap `assert_matches_screenshot` in `Capybara.using_wait_time(0)`. Selectors
+that match still resolve instantly; missing ones no longer burn 5s each. Two
+companion changes in the same commit: a `document.fonts.ready` wait before
+capture (kills the font-swap race the suite masks with skip_areas/tolerances),
+and removal of the 8 now-pointless `stability_time_limit: 1` overrides in
+blog_special_content_test.rb.
 
-## Open experiments (not done)
+Lesson: profile before believing a hypothesis — the "stability retries" theory
+survived two sessions and was wrong; one instrumented probe killed it in
+minutes.
 
-- **O1 — kill the codeblock elephant.** Options, cheapest first:
-  (a) capture the 8 sections in ONE full-page screenshot instead of 8 stable
-  captures (loses per-section localisation on failure, but the page is static
-  text — no font-swap animation to stabilise against); (b) drop
-  `stability_time_limit` for these static blocks (they don't animate — the
-  stability retries are likely pure waste); (c) split into 8 separate test
-  methods so they parallelise (see O2) instead of running serially in one.
-  Measure each against unchanged baselines (refactor = zero pixel change).
-- **O2 — process-level parallelism.** Thread parallelism is OUT
-  (`Capybara.threadsafe = false`, shared `current_driver` global). Process
-  sharding is safe: each process boots its own random-port Puma + own Chrome,
-  every test writes a distinct baseline PNG. Sketch: extract critical/smoke test
-  names (qualified `Class#method` — minitest's `-n` regex matches `pos ===
-  "#{klass}##{m}"`, verified in minitest 6.0.6 `filter_runnable_methods`),
-  round-robin into N buckets by measured time, spawn N `ruby -Itest <files> -n
-  "/^(a|b|c)$/"`, wait-all, fail on any. `JOBS=1` in the dtest container (port
-  pin + ~2 emulated CPUs). Expected critical 300s → ~90-120s at N=4.
-- **O3 — Docker vs host.** User reports Docker is faster despite amd64
-  emulation. Confirm with the smoke number (TBD) and decide whether the routine
-  fast gate should run on Docker. Note: 10 Linux baselines (mermaid + codeblocks)
-  are stale-red right now — see memory `project-stale-linux-baselines-pending`;
-  re-record before trusting a Docker gate.
+## Open experiments
+
+- **O1 — codeblock elephant: DONE 2026-08-01** (see "The real dominant cost").
+  247s file → 34.9s. None of the originally sketched options (full-page
+  capture / stability removal / method split) was the answer — the cost was
+  skip_area selector waits.
+- **O2 — process-level parallelism: DEFERRED, priority dropped.** After the
+  skip_area fix the critical suite is 81s serial; sharding's remaining upside
+  is ~40-50s of wall for real coordination complexity. Revisit only if the
+  suite grows past ~3min again. (Design sketch preserved: qualified
+  `Class#method` minitest `-n` regexes, round-robin by measured time, own
+  Puma per process; `JOBS=1` in the dtest container — port pin + ~2 emulated
+  CPUs.)
+- **O3 — Docker vs host: CONFIRMED** (~18% faster on smoke, 41.6s vs 50.5s).
+  The 10 red Linux baselines are NOT stale — they are emulation drift: green
+  on CI-native amd64, red only under local Apple-Silicon emulation. Do NOT
+  re-record locally (would break green CI); trust CI for those 10. See memory
+  `project-stale-linux-baselines-pending`.
 - **O4 — direct-visit instead of menu-walk.** Several desktop tests reach their
   subject page via `visit "/"` + hover/click when a direct URL exists
   (`test_about_us`, `test_contact_us`, `test_free_consultation`, ...). Each pays
