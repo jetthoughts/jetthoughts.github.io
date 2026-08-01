@@ -94,7 +94,7 @@ Three actions, in order. The first two cost $0.
 2. **Pick ONE feature from your one-page brief's "what you're building" section.** Not three. One. The smallest workflow that solves the validated problem for one persona. Write it as: "build a [SCREEN] for [PERSONA] to [OUTCOME]."
 3. **Generate the UI in Lovable and demo it.** Iterate by chatting: rename, resize, reposition. Then show one human who has not read the brief and watch them try it without a tour.
 
-> **Success check:** a clickable UI on a public staging URL, and one person navigated the core screen without you explaining it. Nothing needs to persist yet - that is Phase 2.
+> **Phase 1 check:** a clickable UI on a public staging URL, and one person navigated the core screen without you explaining it. Nothing needs to persist yet - that is Phase 2.
 
 **If this fails: the person you demoed to needed a tour to understand the screen.**
 - **Why:** the design is carrying meaning that should be on the screen, so the prompt described a layout instead of a job.

@@ -108,7 +108,7 @@ Three actions. The first is tonight.
 2. **Score each of the 5 signals green / yellow / red, AND log Date first observed + Date last observed per signal.** Green = no symptom yet. Yellow = symptom in the last 30 days but recoverable. Red = symptom firing 4+ weeks AND you've patched it more than once. Keep it as a Notion table or a sheet: Signal | Status | Date first observed | Date last observed | Notes. Without dated windows you cannot tell "fired once this week" from "fired every week for two months," and the 4-week rule collapses.
 3. **If 2+ signals are red AND have been red for 4+ consecutive weeks, start the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#the-fractional-cto-bridge) THIS WEEK.** Not next month, not after the next sprint. The first call is usually free.
 
-> **Success check:** all 5 signals scored (green/yellow/red) with dated observation windows, and a recurring monthly calendar block titled "Vibe-coding 5-signal check."
+> **Success check:** all 5 signals scored (green/yellow/red) with dated observation windows, and a recurring monthly calendar block titled "Vibe-coding 5-signal check," and this month's verdict (stay / bridge / hire) written next to the score.
 
 **If this fails: every signal reads yellow and you cannot decide.**
 - **Why:** yellow with no dates is a guess, not a reading - you are scoring mood, not symptoms.

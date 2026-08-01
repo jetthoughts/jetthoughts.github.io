@@ -38,7 +38,7 @@ related_posts: false
 >
 > **Progress:** M4 · 3 of 5 · Results so far: build path = self-serve (4.1) + ownership locked (4.2) - this lesson sets up the stack and the pre-flight rules
 
-After this lesson you will be able to: **name which tool owns each job in your MVP - screens, data, payments - and lock the 3 pre-flight rules before you start the build.**
+After this lesson you will be able to: **name which tool owns each job in your MVP - screens, data, payments - and lock the 3 pre-flight rules.**
 
 > **TL;DR:** Lovable renders the screens, Supabase stores the data, Stripe charges the card. Three tools, three jobs. Lock 3 pre-flight rules before you open Lovable. All three tools have free tiers.
 

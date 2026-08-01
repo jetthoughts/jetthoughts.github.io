@@ -79,7 +79,7 @@ Work through the 30-name list first, then extend it with Part 1's second-degree 
 
 ![The honest outreach funnel for one batch of 30 - sent, replied at 20-30%, and 2-3 booked calls, with a warning callout for reply rates under 10%](outreach-funnel-strip.svg)
 
-**Success check:** every subject line in your sent folder names a post the person wrote, replies run 20% or better, and 2-3 calls from the batch are on your calendar.
+**Success check:** every subject line in your sent folder names a post the person wrote, replies run 20% or better, and 2-3 calls from the batch are on your calendar. Then stack batches until 10 calls are on the calendar - Done below fires at 10, not at the first batch.
 
 **If this fails: replies stall under 10% after the first batch.**
 - **Why:** the Day-0 message reads like a template - the first line doesn't prove you read their post.

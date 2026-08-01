@@ -38,7 +38,7 @@ related_posts: false
 >
 > **Progress:** M2 · 6 of 6 · Results so far: question list + 30-name list + 10 scored interviews + a build/pivot/kill verdict and validated problem statement
 
-After this lesson you will be able to: **watch 5 real customers try to use your solution before it exists - and score what they do, not what they say.**
+After this lesson you will be able to: **watch 5 real customers try to use your solution before it exists - and score the three behaviors that predict a real yes.**
 
 > **TL;DR:** Three throwaway screens, five silent-observation sessions. Watch whether users can navigate your solution without coaching - something interviews cannot tell you.
 

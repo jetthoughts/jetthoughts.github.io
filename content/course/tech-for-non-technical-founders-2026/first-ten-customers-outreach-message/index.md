@@ -73,7 +73,7 @@ If no real reference exists for a cold-bucket name, move them to [Lesson 5.7 col
 > 3. Record one 90-second Loom: 60 seconds product, 30 seconds you on camera. Use the Lesson 5.1 verbatims as your script.
 > 4. Fill in Part 4 with your Calendly link.
 > 5. Repeat the opener for your hot, warm, and cold buckets. Parts 2-4 stay the same for all 50.
-> 6. **Success check:** read the champion message aloud. Does it sound like something you'd actually say to that person? If it sounds like a template, the opener isn't specific enough.
+> 6. **Success check:** read the champion message aloud. Does it sound like something you'd actually say to that person? If it sounds like a template, the opener isn't specific enough. Full pass: all 4 variants drafted, with your Loom link playing.
 
 ---
 
