@@ -92,3 +92,46 @@ authorship line (`gray-400 small`, white link).
   island) — dark-as-island, never dark-as-theme.
 - Type scale: 12 uppercase eyebrows → 24 card titles → 36-44 section H2s →
   48-72 hero. Nothing between.
+
+---
+
+## Reference 2 — shuffle b1a3fc85 (W1.6, captured 2026-08-01)
+
+Second ideal reference from Paul (durable capture:
+`40.28-reference-shuffle2-full.jpeg`). Same JetVelocity token-map rules as
+above (never ship the raw hues). Mid-page components only. This reference is
+FLATTER and LESS text-heavy than the current landing — its lesson lists are
+shown inline, not behind expanders. It is the north star for W1.6's two named
+fixes: kill the expander density and cut on-page text.
+
+### R2.1 Numbered-mistake grid (3-col) — "Why this course exists"
+`THE REALITY CHECK` eyebrow → H2 → one lede line → a 3×2 grid of cards. Each
+card: ruby counter `01`-`05` (Space Grotesk 700) → **bold short title** →
+2-line gray description. The 6th cell is the dark CTA ("Ready to stop
+guessing? → Jump straight to syllabus"). **Convergence:** our `.mistake-list`
+already renders this grid + dark 6th cell; W1.6 adds the bold-title lead-in
+each card was missing (title = 2-4 word summary, description keeps its module
+deep link). REPLACES the run-on single-sentence mistake bullets.
+
+### R2.2 Flat module rows (no expander) — "The 5-Module Blueprint"
+`THE ROADMAP` eyebrow → H2 → one lede line → one wide card PER module, all
+equal, none grouped, none collapsed. Card structure: **head** (MODULE N
+kicker + title on the left, `Deliverable: …` on the right) → hairline →
+**body** two-column: left = `CHAPTERS` label + a flat numbered lesson list
+(`1.1` mono + title link); right = a light `YOU LEAVE WITH` panel (✓ + one
+sentence). **Convergence:** REPLACES our 5 `.module-card__details` expanders +
+the `Modules 3-5` `.module-group` expander (6 expanders → 0). Cut off-landing:
+per-lesson routers, optional-lesson skip-notes, template lists, per-module
+"Start Module N" buttons (all reachable on the lesson pages + the kit). Kept
+reachable: the numbered lesson links, the per-module "See it in action" Mia
+walkthrough link (one compact line), the module deliverable + glossary.
+
+### R2.3 Scope cards (2×2) — "What this course does NOT cover"
+`SCOPE RULES` eyebrow → H2 → lede → a 2×2 grid, each cell a card with a bold
+title + one-line "why it's out". Reference renders this dark; **we map it to
+LIGHT bordered cards** — the max-3-dark-zones budget (hero card + mistake CTA
+cell + endcap) is already spent, so a 4th dark band is out. **Convergence:**
+REPLACES our 7-item `.not-cover-list` + the `.not-cover-details` expander (7th
+expander → 0). Seven exclusions fold into 4 cards (hiring+managing merge;
+SEO/content/paid merge) + one residual line for mobile/marketplace + legal, so
+no fact is deleted — only relocated into fewer, denser components.

@@ -58,20 +58,15 @@
   }
 }
 
-/* Module-card resource rows — labeled stacked rows replace the single
-   run-on link paragraph. Line-height gives mobile tap spacing. */
-.blog .module-card__extras-row,
-.blog .single-content .module-card__extras p.module-card__extras-row {
-  font-size: 15px;
-  color: #5f6470;
-  line-height: 1.9;
-  margin: 0 0 6px;
-}
-.blog .module-card__extras-row:last-child {
-  margin-bottom: 0;
-}
-.blog .module-card__extras-row strong {
-  color: #3a3f4a;
+/* W1.6 (shuffle2 R2.1) — bold title lead-in on each mistake card so the
+   grid scans as title + description, not one run-on sentence. */
+.blog .mistake-list__title {
+  display: block;
+  margin-bottom: 4px;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a1a2e;
 }
 
 /* === L4-visual (40.25) — landing-only restyle. Bundle is exclusive to
@@ -119,29 +114,136 @@
    L4 fix (P2): the strong used to be pinned top-right via
    position:absolute, detached from the sentence it labels — read as a
    broken data binding. Now it's an inline ruby lead-in, attached. */
+/* W1.6 flat module rows (shuffle2 R2.2) — wide cards, chapters shown
+   inline (no expander). Head = heading left + deliverable right; body =
+   chapters left + a light "you leave with" panel right. */
 .blog .module-card {
   position: relative;
+  background: #ffffff;
   border-radius: 16px;
-  border-color: #ececf0;
+  border: 1px solid #ececf0;
   box-shadow: 0 6px 24px rgba(26, 26, 46, 0.07);
+  padding: 28px 30px;
+  margin: 0 0 20px;
+}
+.blog .module-card__head {
+  display: grid;
+  gap: 10px 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f2f4;
+  margin-bottom: 20px;
 }
 .blog .module-card__badge {
+  display: block;
   color: #9ca3af;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
-.blog .module-card__output {
-  background: rgba(204, 52, 45, 0.05);
-  border: 1px solid rgba(204, 52, 45, 0.16);
-  border-radius: 8px;
-  padding: 14px 16px;
+.blog .module-card__heading h3 {
+  /* override the shared `.blog h3:not(.post-title)` !important divider rule */
+  margin: 6px 0 0 !important;
+  border-top: none;
+  padding-top: 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.01em;
 }
-.blog .module-card__output > strong:first-of-type {
+.blog .module-card__deliverable {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #4b5563;
+}
+.blog .module-card__deliverable > strong:first-child {
   color: var(--color-ruby);
   letter-spacing: 0.02em;
 }
+.blog .module-card__body {
+  display: grid;
+  gap: 24px 40px;
+}
+.blog .module-card__lessons-label,
+.blog .module-card__leave-label {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+.blog ol.module-card__chapters {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.blog ol.module-card__chapters > li {
+  padding: 7px 0;
+  border-bottom: 1px solid #f5f6f7;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.blog ol.module-card__chapters > li:last-child {
+  border-bottom: none;
+}
+.blog .module-card__num {
+  display: inline-block;
+  min-width: 34px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 13px;
+  color: var(--color-ruby);
+}
+.blog .module-card__optional {
+  margin-left: 6px;
+  padding: 1px 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+  border: 1px solid #e5e7eb;
+  border-radius: 2px;
+}
+.blog .module-card__mia {
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: #5f6470;
+}
+.blog .module-card__mia strong {
+  color: #3a3f4a;
+}
 .blog .module-card__leave {
-  border-top: 1px solid #f3f4f6;
-  padding: 20px 0 0;
-  margin-top: 20px;
+  background: #fafafa;
+  border: 1px solid #eef0f2;
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+/* style.css:959 prefixes a green ✓ onto the old single-<p> .module-card__leave;
+   this bundle loads after it, so neutralize that inherited pseudo — the ruby
+   ✓ below sits on the sentence, the label owns the top of the panel. */
+.blog .module-card__leave::before {
+  content: none;
+}
+.blog .module-card__leave p:last-child {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #3a3f4a;
+}
+.blog .module-card__leave p:last-child::before {
+  content: "✓ ";
+  color: var(--color-ruby);
+  font-weight: 700;
+}
+@media (min-width: 780px) {
+  .blog .module-card__head {
+    grid-template-columns: minmax(0, 290px) minmax(0, 1fr);
+    align-items: start;
+  }
+  .blog .module-card__body {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+  }
 }
 
 /* V1.3 Dark closing endcap band — obsidian island with a soft ruby
@@ -194,30 +296,48 @@
   }
 }
 
-/* L5-condense (40.26) — NOT-cover exclusions as a tight two-col list;
-   the why-excluded explanations sit in one <details> below it. */
-.blog ul.not-cover-list {
+/* W1.6 scope cards (shuffle2 R2.3) — NOT-cover as a 2x2 light card grid +
+   one residual line, replacing the two-col list + the why-excluded
+   <details>. Light (not the reference's dark): the 3-dark-zone budget is
+   already spent on the hero card, mistake CTA, and endcap. */
+.blog .scope-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 4px 28px;
-  margin: 20px 0 16px;
+  gap: 16px;
+  margin: 24px 0 16px;
 }
-.blog ul.not-cover-list li {
+.blog .scope-card {
+  background: #f8f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+/* selector carries h3 + 2 classes so it outweighs the shared
+   `.blog h3:not(.post-title):first-of-type` !important divider rule */
+.blog .scope-card h3.scope-card__title {
+  margin: 0 0 8px !important;
+  border-top: none;
+  padding-top: 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+.blog .scope-card p {
   margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #5f6470;
+}
+.blog .scope-residual {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #5f6470;
 }
 @media (max-width: 600px) {
-  .blog ul.not-cover-list {
+  .blog .scope-grid {
     grid-template-columns: 1fr;
   }
-}
-.blog .not-cover-details summary {
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--color-ruby);
-}
-.blog .not-cover-details[open] summary {
-  margin-bottom: 10px;
 }
 
 /* V1.4 Eyebrow + headline scaffold — uppercase tracked kicker above each
@@ -300,73 +420,6 @@
     background: #ffffff;
     border: 4px solid #0d1117;
   }
-}
-
-/* L5-condense (40.26) — lesson lists live inside a native <details> per
-   card, closed by default; the V2.3 two-col grid is gone with them. */
-.blog .module-card__details {
-  margin: 14px 0 4px;
-}
-.blog .module-card__details summary {
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--color-ruby);
-}
-.blog .module-card__details[open] summary {
-  margin-bottom: 10px;
-}
-.blog .module-card__details .module-card__router {
-  font-size: 15px;
-  color: #5f6470;
-  margin: 0 0 10px;
-}
-.blog .module-card__details ol.module-card__chapters {
-  margin-bottom: 12px;
-}
-
-/* L5 amendment — modules 3-5 grouped behind one card-shaped summary
-   (demo 1 component #8: the card IS the summary of a native details). */
-.blog .module-group > summary {
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: #ffffff;
-  border: 1px solid #ececf0;
-  border-radius: 14px;
-  box-shadow: 0 6px 24px rgba(26, 26, 46, 0.07);
-  padding: 22px 26px;
-}
-.blog .module-group > summary::-webkit-details-marker {
-  display: none;
-}
-.blog .module-group > summary::marker {
-  content: "";
-}
-/* the site-wide summary::before "▸" — the group card carries its own
-   chevron on the right instead */
-.blog .module-group > summary::before {
-  content: none;
-}
-.blog .module-group > summary::after {
-  content: "▾";
-  margin-left: auto;
-  color: var(--color-ruby);
-  font-size: 18px;
-}
-.blog .module-group[open] > summary::after {
-  content: "▴";
-}
-.blog .module-group[open] > summary {
-  margin-bottom: 28px;
-}
-.blog .module-group__title {
-  font-family: "Space Grotesk", system-ui, sans-serif;
-  font-weight: 700;
-  font-size: 19px;
-  letter-spacing: -0.01em;
 }
 
 /* W1.5 (40.26 spec §§3-4) — full-bleed tinted hero band, two-column grid,
