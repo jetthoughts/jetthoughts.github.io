@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+#
+# devx O7c: catch course path drift at build time. Two checks per lesson under
+# content/course/tech-for-non-technical-founders-2026/:
+#   1. every in-body `Next:` link resolves to a real lesson page (no dead slug)
+#   2. for a lesson whose data/course_sequence.yaml branch marks a "Core path →"
+#      target, the in-body Next's core route (its FIRST link) names that same
+#      slug - the exact 2.1 drift where the prose Next funneled through the
+#      optional 2.2 while yaml routed the core path to 2.3.
+#
+# Report-only by default (exit 0 + list). COURSE_PATH_BLOCK=1 makes it exit 1.
+# Usage: bin/check-course-paths [--self-test]
+
+require "yaml"
+
+COURSE = "content/course/tech-for-non-technical-founders-2026"
+SEQ = "data/course_sequence.yaml"
+REPORT_ONLY = ENV.fetch("COURSE_PATH_BLOCK", "") != "1"
+
+# lesson slugs (first-link order) named on a page's `Next:` line
+def next_links(path)
+  line = File.readlines(path).find { |l| l.include?("**Next:**") }
+  line ? line.scan(%r{/course/[^/]+/([^/)]+)/?\)}).flatten : []
+end
+
+# slug => yaml "Core path" target slug, for lessons that declare one
+def core_targets(seq_file = SEQ)
+  YAML.load_file(seq_file)["sequence"].each_with_object({}) do |e, h|
+    b = (e["branches"] || []).find { |x| x["direction"].to_s.start_with?("Core path") }
+    h[e["slug"]] = b["slug"] if b
+  end
+end
+
+def check(course = COURSE, seq_file = SEQ)
+  core = core_targets(seq_file)
+  fails = []
+  Dir.glob(File.join(course, "*", "index.md")).sort.each do |path|
+    slug = File.basename(File.dirname(path))
+    links = next_links(path)
+    links.each { |s| fails << [slug, "dead Next link -> #{s}"] unless Dir.exist?(File.join(course, s)) }
+    if core[slug] && links.first != core[slug]
+      fails << [slug, "core route #{links.first.inspect} != yaml Core path #{core[slug].inspect}"]
+    end
+  end
+  fails
+end
+
+if ARGV.include?("--self-test")
+  line = "> **Next:** core continues at [2.3](/course/x/real-core/) - or optional [2.2](/course/x/optional/)."
+  links = line.scan(%r{/course/[^/]+/([^/)]+)/?\)}).flatten
+  raise "extract" unless links == %w[real-core optional]
+  raise "drift predicate" unless links.first != "optional"  # yaml core=optional => flagged
+  raise "clean predicate" if links.first != "real-core"     # yaml core=real-core => clean
+  live = check
+  raise "live tree drifted: #{live.inspect}" unless live.empty?
+  puts "self-test: ok (live tree clean)"
+  exit 0
+end
+
+fails = check
+if fails.empty?
+  puts "course-paths: all lessons resolve and match their yaml Core path"
+  exit 0
+end
+puts "course-paths: #{fails.size} drift(s):"
+fails.each { |slug, msg| puts "  #{slug}: #{msg}" }
+exit(REPORT_ONLY ? 0 : 1)
