@@ -16,6 +16,12 @@ Binding sources (read before starting; do not audit from memory):
 - Render gate: `docs/workflows/visual-scroll-gate.md` (the FULL protocol; Phase 6 below is a pointer, not a replacement)
 - Sequence/wiring: `data/course_sequence.yaml`
 
+Review panels (any multi-persona course review or change-planning session)
+MUST include the `course-experience-reviewer` agent (`.claude/agents/
+course-experience-reviewer.md`) — the learning-experience lens (diagnose →
+route by modality → path-find → honest celebration/transition), Paul
+2026-08-01. It reviews/plans; it never edits.
+
 ---
 
 ## Phase 0 - Setup

@@ -82,7 +82,8 @@
     flagged lessons to scaffold — per-lesson, confirm each is a miss not an
     intentional exception; (b) split/demote the over-length reference;
     (c) run runbook Phases 3-6 + the content cold-eyes personas (ICP-Sam,
-    voice, slop) on edited chapters. Content-only edits → hugo-build + scroll
+    voice, slop, and the course-experience-reviewer agent - learning-
+    experience lens, mandatory per audit runbook) on edited chapters. Content-only edits → hugo-build + scroll
     gate, no visual suite. Do after W1 (L3 ships before 2026-08-14).
     **40.23 additions (convergent, pre-approved fixes):** $0-path co-equal at
     top of 1.4's budget section (C1); tool-roster trim + AI-callout demotion
