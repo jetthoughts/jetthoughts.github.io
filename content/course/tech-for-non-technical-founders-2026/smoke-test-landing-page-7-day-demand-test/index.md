@@ -78,6 +78,14 @@ You will not have to figure out the ad on your own: the launch checklist below l
 
 **Success check:** you have a conversion rate from ≥300 cold visits AND a go/iterate/kill decision written down.
 
+## While the 5-7 days pass
+
+The ads run for 5-7 days before 300 visits land. Camping on the dashboard won't speed it up, and the number means nothing until the traffic is in. Use the wait to get a head start on Module 2.
+
+In [Lesson 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) you'll need a list of 30 people who have posted about the problem your page names - that list is what makes the interview outreach work. Start it now: open a spreadsheet and, in one sitting, write down 10-15 names you have seen complain about this problem - in a subreddit, a Slack group, wherever your customer hangs out - and paste the exact post next to each name. Module 2 opens with the slowest part already moving.
+
+**Come back when your campaign dashboard shows 300 landing-page views.** That is the wait over: read your conversion rate against the meter above, then start the price test.
+
 ## If the number looks wrong
 
 **If this fails: conversion is below 3%.**
