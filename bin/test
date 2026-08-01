@@ -30,6 +30,10 @@ rake_task="test:critical"
 if [ "${1:-}" = "--smoke" ]; then
   rake_task="test:smoke"
   shift
+  if [ $# -gt 0 ]; then
+    echo "bin/test: --smoke runs a fixed set; drop the file arg or drop --smoke" >&2
+    exit 2
+  fi
 fi
 
 if [ -n "${PRECOMPILED_ASSETS:-}" ]; then
