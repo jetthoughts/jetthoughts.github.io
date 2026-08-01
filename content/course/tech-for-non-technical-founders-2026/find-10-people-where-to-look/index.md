@@ -45,7 +45,7 @@ Your LinkedIn network is the comfortable place to start - and it books polite ca
 
 The full journey, top to bottom - this page covers the first three steps (map, read, list); [Part 2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers writing to each person and booking the 10 calls:
 
-![The find-10 journey as a left-to-right strip of six cards: your hypothesis from Lesson 1.1, then four numbered steps - step 1 AI ICP map paste into Claude, step 2 read where they complain, step 3 build the 30-name list, step 4 write each one personally - ending in 10 interviews booked on the calendar.](find10-journey.svg)
+![A left-to-right journey tracker on one line: your hypothesis from Lesson 1.1, then four steps - 1 Map (paste 3 lines into Claude), 2 Read where they complain (marked ruby, the move most founders skip), 3 List 30 named people, 4 Write naming their post - ending at 10 interviews booked on the calendar, marked green.](find10-journey.svg)
 
 > **Calendar reality + smoke-test gate before you start.** Full-time founder typically books 10 interviews across 2-4 calendar weeks; evening-only founder (2-4 hr/week) typically needs 6-8 calendar weeks - plan around the longer version. Your Lesson 1.2-1.4 smoke test should have cleared roughly 6%+ email conversion (the "Promising" band) or 5%+ Stripe-click on the Lesson 1.5 price-button variant. 3-6% is the "iterate the message" zone, not a green light. Below 3% means you have a demand-side problem - go back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank before booking interviews.
 

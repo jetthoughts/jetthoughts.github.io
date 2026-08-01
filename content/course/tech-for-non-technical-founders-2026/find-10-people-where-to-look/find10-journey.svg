@@ -1,91 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="find10-title">
-  <title id="find10-title">The find-10 journey: from your Lesson 1.1 hypothesis through four steps to ten booked interviews.</title>
-  <desc>A left-to-right strip of six cards. It starts with your hypothesis from Lesson 1.1, then runs four numbered steps: step 1 AI ICP map, paste your three sentences into Claude; step 2 read where they complain; step 3 build the 30-name list; step 4 write to each one personally. It ends with ten interviews booked on the calendar. Arrows connect each card to the next.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-labelledby="find10-title find10-desc">
+  <title id="find10-title">From your Lesson 1.1 hypothesis, four steps end in ten booked interviews.</title>
+  <desc id="find10-desc">A left-to-right journey tracker on one line. It starts at your hypothesis from Lesson 1.1, then runs four numbered steps: 1 Map - paste your three sentences into Claude; 2 Read - where they already complain (marked ruby, the move most founders skip); 3 List - 30 named people; 4 Write - name their post. It ends at ten interviews booked on the calendar, marked green. Basis: the find-10 outreach journey, hypothesis to booked calls.</desc>
   <defs>
     <style>
-      .h     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .title { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
-      .sub   { font-size: 16px; fill: #666; font-style: italic; }
-      .num   { font-size: 18px; font-weight: 700; fill: #fff; }
-      .ttl   { font-size: 18px; font-weight: 700; fill: #1a1a1a; }
-      .out   { font-size: 14px; fill: #555; font-style: italic; }
-      .role  { font-size: 14px; fill: #555; font-style: italic; }
-      .cstart { fill: #faf7f2; stroke: #999; stroke-width: 2.5; stroke-dasharray: 6 5; }
-      .cstep  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .cend   { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
-      .dstep  { fill: #cc342d; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 32px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 22px; font-weight: 600; fill: #4a4a4a; }
+      .step  { font-size: 20px; font-weight: 600; fill: #121212; }
+      .num   { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .cap   { font-size: 18px; font-weight: 400; fill: #444444; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
-    <marker id="fj" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#999"/>
+    <marker id="fj-tri" viewBox="0 0 9 7" refX="7" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
     </marker>
   </defs>
 
-  <!-- Header -->
-  <text x="480" y="34" text-anchor="middle" class="h title">The find-10 journey</text>
-  <text x="480" y="58" text-anchor="middle" class="h sub">Read where they already complain, then write to those specific people.</text>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="320" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="304" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Start: Hypothesis -->
-  <g transform="translate(8,90) rotate(-0.5 74 78)">
-    <rect width="148" height="150" rx="12" class="cstart"/>
-    <text x="74" y="58" text-anchor="middle" class="h ttl">Hypothesis</text>
-    <text x="74" y="80" text-anchor="middle" class="h ttl">from Lesson 1.1</text>
-    <text x="74" y="112" text-anchor="middle" class="h role">your starting</text>
-    <text x="74" y="130" text-anchor="middle" class="h role">bet</text>
-  </g>
+  <!-- title block: action title + one message -->
+  <text x="360" y="48" text-anchor="middle" class="gk title">Read where they complain, then write</text>
+  <text x="360" y="80" text-anchor="middle" class="gk msg">Hypothesis to ten booked interviews, in four steps</text>
 
-  <!-- Step 1 -->
-  <g transform="translate(168,90) rotate(0.5 74 78)">
-    <rect width="148" height="150" rx="12" class="cstep"/>
-    <circle cx="74" cy="30" r="15" class="dstep"/>
-    <text x="74" y="36" text-anchor="middle" class="h num">1</text>
-    <text x="74" y="72" text-anchor="middle" class="h ttl">AI ICP map</text>
-    <text x="74" y="106" text-anchor="middle" class="h out">paste into</text>
-    <text x="74" y="124" text-anchor="middle" class="h out">Claude</text>
-  </g>
+  <!-- connector line through the nodes (structure, stroked ink) -->
+  <line x1="80" y1="178" x2="632" y2="178" stroke="#3a3a3a" stroke-width="2" marker-end="url(#fj-tri)"/>
 
-  <!-- Step 2 -->
-  <g transform="translate(328,90) rotate(-0.4 74 78)">
-    <rect width="148" height="150" rx="12" class="cstep"/>
-    <circle cx="74" cy="30" r="15" class="dstep"/>
-    <text x="74" y="36" text-anchor="middle" class="h num">2</text>
-    <text x="74" y="72" text-anchor="middle" class="h ttl">Read the</text>
-    <text x="74" y="94" text-anchor="middle" class="h ttl">threads</text>
-    <text x="74" y="124" text-anchor="middle" class="h out">where they complain</text>
-  </g>
+  <!-- step titles (above) -->
+  <text x="80"  y="132" text-anchor="middle" class="gk step">Hypothesis</text>
+  <text x="192" y="132" text-anchor="middle" class="gk step">Map</text>
+  <text x="304" y="132" text-anchor="middle" class="gk step" fill="#cc342d">Read</text>
+  <text x="416" y="132" text-anchor="middle" class="gk step">List</text>
+  <text x="528" y="132" text-anchor="middle" class="gk step">Write</text>
+  <text x="640" y="132" text-anchor="middle" class="gk step">10 booked</text>
 
-  <!-- Step 3 -->
-  <g transform="translate(488,90) rotate(0.4 74 78)">
-    <rect width="148" height="150" rx="12" class="cstep"/>
-    <circle cx="74" cy="30" r="15" class="dstep"/>
-    <text x="74" y="36" text-anchor="middle" class="h num">3</text>
-    <text x="74" y="72" text-anchor="middle" class="h ttl">30-name</text>
-    <text x="74" y="94" text-anchor="middle" class="h ttl">list</text>
-    <text x="74" y="124" text-anchor="middle" class="h out">named people only</text>
-  </g>
+  <!-- nodes on the line -->
+  <circle cx="80"  cy="178" r="16" fill="#7d7d7d"/>
+  <circle cx="192" cy="178" r="16" fill="#3a3a3a"/><text x="192" y="184" text-anchor="middle" class="gk num">1</text>
+  <circle cx="304" cy="178" r="16" fill="#cc342d"/><text x="304" y="184" text-anchor="middle" class="gk num">2</text>
+  <circle cx="416" cy="178" r="16" fill="#3a3a3a"/><text x="416" y="184" text-anchor="middle" class="gk num">3</text>
+  <circle cx="528" cy="178" r="16" fill="#3a3a3a"/><text x="528" y="184" text-anchor="middle" class="gk num">4</text>
+  <circle cx="640" cy="178" r="16" fill="#2e7d32"/>
+  <path d="M632,178 l5,6 l11,-13" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- Step 4 -->
-  <g transform="translate(648,90) rotate(-0.5 74 78)">
-    <rect width="148" height="150" rx="12" class="cstep"/>
-    <circle cx="74" cy="30" r="15" class="dstep"/>
-    <text x="74" y="36" text-anchor="middle" class="h num">4</text>
-    <text x="74" y="72" text-anchor="middle" class="h ttl">Write each</text>
-    <text x="74" y="94" text-anchor="middle" class="h ttl">personally</text>
-    <text x="74" y="124" text-anchor="middle" class="h out">name their post</text>
-  </g>
+  <!-- captions (below, two lines each) -->
+  <text x="80"  y="214" text-anchor="middle" class="sys cap">your bet from</text>
+  <text x="80"  y="236" text-anchor="middle" class="sys cap">Lesson 1.1</text>
+  <text x="192" y="214" text-anchor="middle" class="sys cap">paste 3 lines</text>
+  <text x="192" y="236" text-anchor="middle" class="sys cap">into Claude</text>
+  <text x="304" y="214" text-anchor="middle" class="sys cap">where they</text>
+  <text x="304" y="236" text-anchor="middle" class="sys cap">complain</text>
+  <text x="416" y="214" text-anchor="middle" class="sys cap">30 named</text>
+  <text x="416" y="236" text-anchor="middle" class="sys cap">people</text>
+  <text x="528" y="214" text-anchor="middle" class="sys cap">name their</text>
+  <text x="528" y="236" text-anchor="middle" class="sys cap">post</text>
+  <text x="640" y="214" text-anchor="middle" class="sys cap">on the</text>
+  <text x="640" y="236" text-anchor="middle" class="sys cap">calendar</text>
 
-  <!-- End: 10 interviews -->
-  <g transform="translate(808,90) rotate(0.5 74 78)">
-    <rect width="148" height="150" rx="12" class="cend"/>
-    <text x="74" y="58" text-anchor="middle" class="h ttl">10 interviews</text>
-    <text x="74" y="80" text-anchor="middle" class="h ttl">booked</text>
-    <text x="74" y="112" text-anchor="middle" class="h role">on the</text>
-    <text x="74" y="130" text-anchor="middle" class="h role">calendar</text>
-  </g>
-
-  <!-- Arrows -->
-  <path d="M 158 165 L 166 165" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#fj)"/>
-  <path d="M 318 165 L 326 165" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#fj)"/>
-  <path d="M 478 165 L 486 165" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#fj)"/>
-  <path d="M 638 165 L 646 165" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#fj)"/>
-  <path d="M 798 165 L 806 165" stroke="#999" stroke-width="2.25" fill="none" marker-end="url(#fj)"/>
+  <!-- one basis line -->
+  <text x="360" y="298" text-anchor="middle" class="sys basis">Basis: the find-10 outreach journey - hypothesis to booked calls</text>
 </svg>
