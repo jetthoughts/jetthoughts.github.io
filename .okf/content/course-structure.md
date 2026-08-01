@@ -21,7 +21,10 @@ file. Never hardcode exact chapter counts in prose; use near numbers
 # Outside the spine
 
 - **Going Further set** (linked from the 5.7 closing callout): continuation
-  chapters (churn triage, pivot-or-persevere), the hire-track reference,
+  chapters (churn triage, pivot-or-persevere), the hire-track reference pair
+  (hire-track-supplementary-reference: find/stack/interview;
+  fractional-cto-sow-reference: FCTO bridge + SOW - split 2026-08-01 to fit
+  the 2,900 reference cap),
   demoted management chapters (engineering org chart, friday demo rule,
   three questions standup, weekly dev report), and the AI-in-production trio
   (agency AI questions → AI token bill → slopsquatting, badged Step 1-3 of 3).
