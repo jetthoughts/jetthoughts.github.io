@@ -549,3 +549,6 @@ ever come back black on a light-mode-recorded tree, the pin is
 Chrome 151 --headless=new; `--force-prefers-color-scheme=light` is not a
 real switch).
 
+
+## 2026-08-01 - Removed toolchain drift-gate unit tests (config-mirror anti-pattern)
+* **Remove**: `test/unit/toolchain_pins_test.rb` deleted in full. It was a config-mirror "drift gate" asserting `.mise.toml` version pins equal the literal pins in the setup-hugo action, `_hugo.yml`, `.dev/compose.yml`, and `.ruby-version`. `test_setup_hugo_action_matches_mise` red-built on a FALSE invariant: `.mise.toml` `node = "latest"` (devs want latest) vs CI `node-version: '22'` (pinned on purpose in #393) - a correct divergence, not drift. Tests config agreement, not behavior; violates FIRST + the CLAUDE.md "no fragile config assertions" rule. Comparing CI-vs-local node explicitly was considered and rejected as overkill (Paul). Refs cleaned: Rakefile `:guards` list, `.mise.toml` / setup-hugo `action.yml` header comments, README, `docs/SETUP.md`, this bundle's [ci-gates](/build/ci-gates.md). Pins still need manual sync when bumping - now by convention, not a gate.
