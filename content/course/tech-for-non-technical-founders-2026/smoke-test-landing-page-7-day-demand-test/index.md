@@ -46,7 +46,9 @@ Choose based on who your hypothesis names in the `[CUSTOMER]` blank. The dollar 
 
 ## Set your budget
 
-**Budget:** your channel's CPC × 300 visits, plus ~20% slack for ad iterations. On Meta that's $210-$570 in clicks - plan $250-$700 total; on LinkedIn, $1,650-$6,600 before slack. Not ready to spend? Start with the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/) - slower but real.
+Two routes get you 300 cold visitors: the **$0 organic path** on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/) - costs time instead of money, slower but real - or **paid ads**, done in 5-7 days. Pick by which you have more of this month, time or budget. If you're paying:
+
+**Budget:** your channel's CPC × 300 visits, plus ~20% slack for ad iterations. On Meta that's $210-$570 in clicks - plan $250-$700 total; on LinkedIn, $1,650-$6,600 before slack.
 
 **Start ad-account setup 2-3 days before launch.** First-time ad accounts can take 24-72 hours to approve. Meta is the slowest; Reddit clears same-day.
 

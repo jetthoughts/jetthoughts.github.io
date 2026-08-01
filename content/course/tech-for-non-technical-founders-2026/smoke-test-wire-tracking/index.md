@@ -77,6 +77,8 @@ Conversion rate = form submits ÷ page views. That is the number your hypothesis
 >
 > (One "custom code" field? That field is the head-tag - paste all snippets there.)
 
+**Success check:** three things are visible - your test visit as a Clarity recording, the same visit in GA4's Realtime report, and your test signup as a form-submit event. All three showing means 1.4's numbers will be readable.
+
 ## If the dashboard stays empty
 
 **If this fails: Clarity shows "No data yet" after 5 minutes.**
