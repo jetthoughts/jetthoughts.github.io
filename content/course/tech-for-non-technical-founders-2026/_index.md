@@ -103,6 +103,8 @@ To save your time, here is what we intentionally exclude - none of it is needed 
 
 If you need something on this list, the course won't help with it.
 
+<div class="course-band course-band--gray">
+
 ## Module map
 
 Read the modules in order - each module's output is the next module's input, and each card's **"You leave with"** line names its output. The artifacts bundle into a single Google Drive folder - your **Founder OS** ([printable pack index](/course/tech-for-non-technical-founders-2026/founder-os-pack/)).
@@ -231,6 +233,8 @@ Read the modules in order - each module's output is the next module's input, and
 </div>
 
 </details>
+
+</div>
 
 </div>
 
