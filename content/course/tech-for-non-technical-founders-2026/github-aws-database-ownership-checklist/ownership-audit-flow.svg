@@ -1,150 +1,139 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 562" role="img" aria-labelledby="oaf-title">
-  <title id="oaf-title">The Friday ownership audit: four checks - GitHub org owner, AWS root email with MFA, prod DB password access, and WHOIS ownership. Any failure routes to a matching fix, then a recovery plan starts that Friday. If the contractor cooperates within 7 days for code or 14 days for cloud, the audit passes: quarterly recurring block, email the investor or board. If not, retain a lawyer - $2K to $5K beats a stalled checkout.</title>
-  <desc>Four numbered check cards in a row. Card 1, Code: are you GitHub org Owner - pass if your email, not the agency's. Card 2, Cloud: is the AWS root email yours with MFA - pass if root sits on your domain with MFA on. Card 3, Secrets: can you read the prod DB password from your vault without asking - pass if you can pull it yourself, no asking. Card 4, Domain: does WHOIS show your name - pass if it shows your name and your renewal email. Below, one shared amber fix lane: if a check fails, fix it there - Code fix is Slack the lead engineer for org transfer; Cloud fix is self-serve email change or a 3-5 day AWS support recovery; Secrets fix is a Secrets Manager or 1Password vault this sprint; Domain fix is a registrar transfer with a 14-day buffer plus ICANN escalation if blocked. Every fix path converges on one card: recovery plan started that Friday. That leads to one question: did the contractor cooperate, 7 days for code or 14 days for cloud? Yes routes to a green card: audit clean, quarterly recurring block, email the investor or board. No routes to a red card: retain a lawyer, 2 to 5 thousand dollars beats a stalled checkout.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 764" role="img" aria-labelledby="oaf-title oaf-desc">
+  <title id="oaf-title">The Friday ownership audit: four checks - GitHub org owner, AWS root with MFA, prod DB password access, and WHOIS - any fail drops into one fix lane, starts a recovery clock, then forks on whether the contractor cooperates.</title>
+  <desc id="oaf-desc">Four check cards in a two-by-two grid. Code - are you the GitHub org Owner; pass if it is your email, not the agency's. Cloud - is the AWS root email yours with MFA; pass if root is on your domain with MFA on. Secrets - can you read the prod DB password solo; pass if it comes from your own vault with no asking. Domain - does WHOIS list your name; pass if it is your name and your renewal email. Any fail drops into one shared amber fix lane: Slack the lead for an org transfer, self-serve email change or AWS recovery, add a 1Password vault this sprint, registrar move plus ICANN if blocked. All fixes converge on one card: recovery plan started this Friday. That leads to one question - did the contractor cooperate, 7 days for code or 14 for cloud? Yes routes to a green card: audit clean, recheck quarterly, email the board. No routes to a ruby card: retain a lawyer, 2 to 5 thousand dollars beats a stalled exit.</desc>
   <defs>
     <style>
-      .h       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .title   { font-size: 26px; font-weight: 700; fill: #1a1a1a; }
-      .sub     { font-size: 16px; fill: #666; font-style: italic; }
-      .num     { font-size: 15px; font-weight: 700; fill: #fff; }
-      .step    { font-size: 19px; font-weight: 700; fill: #1a1a1a; }
-      .q       { font-size: 16px; fill: #1a1a1a; }
-      .pass    { font-size: 14px; fill: #666; font-style: italic; }
-      .lane    { font-size: 15px; font-style: italic; fill: #7a5c00; }
-      .fix     { font-size: 15px; fill: #6b5000; }
-      .body    { font-size: 16px; fill: #1a1a1a; }
-      .out     { font-size: 19px; font-weight: 700; }
-      .outg    { fill: #2e7d32; }
-      .outr    { fill: #cc342d; }
-      .elabel  { font-size: 15px; fill: #666; font-style: italic; }
-      .card    { fill: #faf7f2; stroke: #555; stroke-width: 2; }
-      .card-a  { fill: #fffbeb; stroke: #b8860b; stroke-width: 2.5; }
-      .card-g  { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
-      .card-r  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .numdot  { fill: #cc342d; }
-      .arrow   { stroke: #333; stroke-width: 2.25; fill: none; }
-      .divider { stroke: #b8860b; stroke-width: 1.5; stroke-dasharray: 4 4; opacity: 0.45; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .mono  { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+      .title { font-size: 30px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 22px; font-weight: 600; fill: #4a4a4a; }
+      .step  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .num   { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .q     { font-size: 18px; font-weight: 400; fill: #222222; }
+      .pass  { font-size: 18px; font-weight: 400; fill: #666666; }
+      .lane  { font-size: 20px; font-weight: 700; fill: #9a6a00; }
+      .fix   { font-size: 18px; font-weight: 400; fill: #6b5000; }
+      .node  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .sub   { font-size: 18px; font-weight: 400; fill: #555555; }
+      .outg  { font-size: 20px; font-weight: 700; fill: #2e7d32; }
+      .outr  { font-size: 20px; font-weight: 700; fill: #cc342d; }
+      .body  { font-size: 18px; font-weight: 400; fill: #333333; }
+      .elab  { font-size: 18px; font-weight: 700; fill: #555555; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
-    <marker id="oaf-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    <marker id="oaf-tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
     </marker>
   </defs>
 
-  <!-- Header -->
-  <text x="480" y="30" text-anchor="middle" class="h title">The Friday ownership audit</text>
-  <text x="480" y="52" text-anchor="middle" class="h sub">Friday afternoon, alone, credit card in hand - four checks, one fix lane, one recovery clock.</text>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="764" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="748" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Row of 4 check cards -->
-  <g transform="translate(30,70) rotate(-0.5 105 56)">
-    <rect width="210" height="112" rx="12" class="card"/>
-    <circle cx="24" cy="24" r="13" class="numdot"/>
-    <text x="24" y="29" text-anchor="middle" class="h num">1</text>
-    <text x="46" y="29" class="h step">Code</text>
-    <text x="18" y="54" class="h q">GitHub org Owner?</text>
-    <text x="18" y="76" class="h pass">Your email, not the</text>
-    <text x="18" y="94" class="h pass">agency's</text>
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">Four checks decide who owns your product</text>
+  <text x="360" y="76" text-anchor="middle" class="gk msg">Any fail - fix it in one lane, then start the recovery clock</text>
+
+  <!-- Check card 1: Code -->
+  <g transform="translate(24,100)">
+    <rect width="324" height="108" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="30" r="13" fill="#121212"/>
+    <text x="30" y="36" text-anchor="middle" class="gk num">1</text>
+    <text x="54" y="36" class="gk step">Code</text>
+    <text x="18" y="68" class="sys q">Are you the <tspan class="mono">GitHub</tspan> org Owner?</text>
+    <text x="18" y="94" class="sys pass">Pass: your email, not the agency</text>
   </g>
 
-  <g transform="translate(260,70) rotate(0.6 105 56)">
-    <rect width="210" height="112" rx="12" class="card"/>
-    <circle cx="24" cy="24" r="13" class="numdot"/>
-    <text x="24" y="29" text-anchor="middle" class="h num">2</text>
-    <text x="46" y="29" class="h step">Cloud</text>
-    <text x="18" y="54" class="h q">AWS root yours + MFA?</text>
-    <text x="18" y="76" class="h pass">Root on your domain,</text>
-    <text x="18" y="94" class="h pass">MFA on</text>
+  <!-- Check card 2: Cloud -->
+  <g transform="translate(372,100)">
+    <rect width="324" height="108" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="30" r="13" fill="#121212"/>
+    <text x="30" y="36" text-anchor="middle" class="gk num">2</text>
+    <text x="54" y="36" class="gk step">Cloud</text>
+    <text x="18" y="68" class="sys q">Is <tspan class="mono">AWS</tspan> root yours, with <tspan class="mono">MFA</tspan>?</text>
+    <text x="18" y="94" class="sys pass">Pass: root on your domain + MFA</text>
   </g>
 
-  <g transform="translate(490,70) rotate(-0.6 105 56)">
-    <rect width="210" height="112" rx="12" class="card"/>
-    <circle cx="24" cy="24" r="13" class="numdot"/>
-    <text x="24" y="29" text-anchor="middle" class="h num">3</text>
-    <text x="46" y="29" class="h step">Secrets</text>
-    <text x="18" y="54" class="h q">Read prod DB pw solo?</text>
-    <text x="18" y="76" class="h pass">From your vault,</text>
-    <text x="18" y="94" class="h pass">no asking</text>
+  <!-- Check card 3: Secrets -->
+  <g transform="translate(24,224)">
+    <rect width="324" height="108" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="30" r="13" fill="#121212"/>
+    <text x="30" y="36" text-anchor="middle" class="gk num">3</text>
+    <text x="54" y="36" class="gk step">Secrets</text>
+    <text x="18" y="68" class="sys q">Read the prod DB password solo?</text>
+    <text x="18" y="94" class="sys pass">Pass: from your vault, no asking</text>
   </g>
 
-  <g transform="translate(720,70) rotate(0.5 105 56)">
-    <rect width="210" height="112" rx="12" class="card"/>
-    <circle cx="24" cy="24" r="13" class="numdot"/>
-    <text x="24" y="29" text-anchor="middle" class="h num">4</text>
-    <text x="46" y="29" class="h step">Domain</text>
-    <text x="18" y="54" class="h q">WHOIS shows you?</text>
-    <text x="18" y="76" class="h pass">Your name + your</text>
-    <text x="18" y="94" class="h pass">renewal email</text>
+  <!-- Check card 4: Domain -->
+  <g transform="translate(372,224)">
+    <rect width="324" height="108" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="30" r="13" fill="#121212"/>
+    <text x="30" y="36" text-anchor="middle" class="gk num">4</text>
+    <text x="54" y="36" class="gk step">Domain</text>
+    <text x="18" y="68" class="sys q">Does <tspan class="mono">WHOIS</tspan> list your name?</text>
+    <text x="18" y="94" class="sys pass">Pass: your name + renewal email</text>
   </g>
 
-  <!-- Arrows: cards down to fix lane -->
-  <path d="M 135 182 L 135 212" class="arrow" marker-end="url(#oaf-ah)"/>
-  <path d="M 365 182 L 365 212" class="arrow" marker-end="url(#oaf-ah)"/>
-  <path d="M 595 182 L 595 212" class="arrow" marker-end="url(#oaf-ah)"/>
-  <path d="M 825 182 L 825 212" class="arrow" marker-end="url(#oaf-ah)"/>
+  <!-- arrow: grid down to fix lane -->
+  <line x1="360" y1="332" x2="360" y2="352" stroke="#3a3a3a" stroke-width="2" marker-end="url(#oaf-tri)"/>
 
-  <!-- Shared fix lane -->
-  <g transform="translate(30,212)">
-    <rect width="900" height="96" rx="14" class="card-a"/>
-    <text x="450" y="24" text-anchor="middle" class="h lane">If a check fails, fix it right here</text>
-    <line x1="220" y1="34" x2="220" y2="86" class="divider"/>
-    <line x1="450" y1="34" x2="450" y2="86" class="divider"/>
-    <line x1="680" y1="34" x2="680" y2="86" class="divider"/>
-
-    <text x="110" y="50" text-anchor="middle" class="h fix">Slack the lead</text>
-    <text x="110" y="68" text-anchor="middle" class="h fix">engineer for org</text>
-    <text x="110" y="86" text-anchor="middle" class="h fix">transfer</text>
-
-    <text x="335" y="50" text-anchor="middle" class="h fix">Self-serve email</text>
-    <text x="335" y="68" text-anchor="middle" class="h fix">change or 3-5 day</text>
-    <text x="335" y="86" text-anchor="middle" class="h fix">AWS recovery</text>
-
-    <text x="565" y="50" text-anchor="middle" class="h fix">Secrets Manager or</text>
-    <text x="565" y="68" text-anchor="middle" class="h fix">1Password vault</text>
-    <text x="565" y="86" text-anchor="middle" class="h fix">this sprint</text>
-
-    <text x="790" y="50" text-anchor="middle" class="h fix">Registrar transfer,</text>
-    <text x="790" y="68" text-anchor="middle" class="h fix">14-day buffer +</text>
-    <text x="790" y="86" text-anchor="middle" class="h fix">ICANN escalation</text>
+  <!-- shared fix lane (warning = amber) -->
+  <g transform="translate(24,356)">
+    <rect width="672" height="112" rx="4" fill="#fff8e6" stroke="#c47d16" stroke-width="2"/>
+    <text x="336" y="28" text-anchor="middle" class="gk lane">If a check fails, fix it right here</text>
+    <line x1="168" y1="42" x2="168" y2="102" stroke="#e2b866" stroke-width="1.5"/>
+    <line x1="336" y1="42" x2="336" y2="102" stroke="#e2b866" stroke-width="1.5"/>
+    <line x1="504" y1="42" x2="504" y2="102" stroke="#e2b866" stroke-width="1.5"/>
+    <text x="84" y="66" text-anchor="middle" class="sys fix">Slack the lead</text>
+    <text x="84" y="90" text-anchor="middle" class="sys fix">for org transfer</text>
+    <text x="252" y="66" text-anchor="middle" class="sys fix">Self-serve email</text>
+    <text x="252" y="90" text-anchor="middle" class="sys fix">or AWS recovery</text>
+    <text x="420" y="66" text-anchor="middle" class="sys fix">Add a 1Password</text>
+    <text x="420" y="90" text-anchor="middle" class="sys fix">vault this sprint</text>
+    <text x="588" y="66" text-anchor="middle" class="sys fix">Registrar move</text>
+    <text x="588" y="90" text-anchor="middle" class="sys fix">+ ICANN if stuck</text>
   </g>
 
-  <!-- Converging arrows: fix lane down to recovery card -->
-  <path d="M 135 308 C 195 328, 335 335, 452 340" class="arrow" marker-end="url(#oaf-ah)"/>
-  <path d="M 365 308 C 395 322, 428 330, 466 339" class="arrow" marker-end="url(#oaf-ah)"/>
-  <path d="M 595 308 C 565 322, 532 330, 494 339" class="arrow" marker-end="url(#oaf-ah)"/>
-  <path d="M 825 308 C 765 328, 625 335, 508 340" class="arrow" marker-end="url(#oaf-ah)"/>
+  <!-- arrow: fix lane down to recovery -->
+  <line x1="360" y1="468" x2="360" y2="490" stroke="#3a3a3a" stroke-width="2" marker-end="url(#oaf-tri)"/>
 
-  <!-- Recovery card -->
-  <g transform="translate(310,340) rotate(-0.4 170 26)">
-    <rect width="340" height="52" rx="12" class="card"/>
-    <text x="170" y="33" text-anchor="middle" class="h step">Recovery plan started this Friday</text>
+  <!-- recovery node -->
+  <g transform="translate(160,490)">
+    <rect width="400" height="52" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="200" y="33" text-anchor="middle" class="gk node">Recovery plan started this Friday</text>
   </g>
 
-  <!-- Arrow: recovery down to escalate question -->
-  <path d="M 480 392 L 480 410" class="arrow" marker-end="url(#oaf-ah)"/>
+  <!-- arrow: recovery down to question -->
+  <line x1="360" y1="542" x2="360" y2="564" stroke="#3a3a3a" stroke-width="2" marker-end="url(#oaf-tri)"/>
 
-  <!-- Escalate question card -->
-  <g transform="translate(250,410) rotate(0.4 230 34)">
-    <rect width="460" height="68" rx="12" class="card"/>
-    <text x="230" y="30" text-anchor="middle" class="h step">Did the contractor cooperate?</text>
-    <text x="230" y="52" text-anchor="middle" class="h pass">7 days for code &#183; 14 days for cloud</text>
+  <!-- escalation question -->
+  <g transform="translate(170,564)">
+    <rect width="380" height="66" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="190" y="30" text-anchor="middle" class="gk node">Did the contractor cooperate?</text>
+    <text x="190" y="54" text-anchor="middle" class="sys sub">7 days for code, 14 for cloud</text>
   </g>
 
-  <!-- Fork arrows to outcomes -->
-  <path d="M 340 478 C 300 492, 275 495, 258 500" class="arrow" marker-end="url(#oaf-ah)"/>
-  <path d="M 620 478 C 660 492, 685 495, 702 500" class="arrow" marker-end="url(#oaf-ah)"/>
-  <text x="120" y="497" class="h elabel">Yes</text>
-  <text x="800" y="497" class="h elabel">No</text>
+  <!-- fork arrows to the two outcomes -->
+  <path d="M 360 630 C 300 644, 240 648, 200 654" fill="none" stroke="#3a3a3a" stroke-width="2" marker-end="url(#oaf-tri)"/>
+  <path d="M 360 630 C 420 644, 480 648, 520 654" fill="none" stroke="#3a3a3a" stroke-width="2" marker-end="url(#oaf-tri)"/>
+  <text x="250" y="650" class="gk elab">Yes</text>
+  <text x="452" y="650" class="gk elab">No</text>
 
-  <!-- Outcome: pass (green) -->
-  <g transform="translate(40,500) rotate(0.4 215 26)">
-    <rect width="430" height="58" rx="12" class="card-g"/>
-    <text x="20" y="24" class="h out outg">Audit clean</text>
-    <text x="20" y="45" class="h body">Quarterly recurring block. Email investor / board.</text>
+  <!-- outcome: pass (success = green) -->
+  <g transform="translate(24,658)">
+    <rect width="324" height="66" rx="4" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+    <text x="18" y="30" class="gk outg">Audit clean</text>
+    <text x="18" y="54" class="sys body">Recheck quarterly; email board</text>
   </g>
 
-  <!-- Outcome: stall (red) -->
-  <g transform="translate(490,500) rotate(-0.4 215 26)">
-    <rect width="430" height="58" rx="12" class="card-r"/>
-    <text x="20" y="24" class="h out outr">Retain a lawyer</text>
-    <text x="20" y="45" class="h body">$2K-$5K beats a stalled checkout.</text>
+  <!-- outcome: stall (anti-pattern = ruby) -->
+  <g transform="translate(372,658)">
+    <rect width="324" height="66" rx="4" fill="#ffffff" stroke="#cc342d" stroke-width="2"/>
+    <text x="18" y="30" class="gk outr">Retain a lawyer</text>
+    <text x="18" y="54" class="sys body">$2K-$5K beats a stalled exit</text>
   </g>
+
+  <!-- one basis line -->
+  <text x="360" y="748" text-anchor="middle" class="sys basis">Basis: a Friday afternoon ownership audit - run it before the checkout stalls</text>
 </svg>
