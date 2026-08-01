@@ -57,23 +57,150 @@
   color: #3a3f4a;
 }
 
-/* Course end-cap — quiet close above the global footer: promise line,
-   one Start CTA, and the copy-share-link pattern from module ends. */
+/* === L4-visual (40.25) — landing-only restyle. Bundle is exclusive to
+   layouts/course/list.html, so nothing below leaks to other pages. === */
+
+/* V1.1 Numbered mistake-card grid — replaces the ✗ bullet list with
+   counter-numbered cards (01-05 in ruby). Copy untouched. */
+.blog ul.mistake-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  counter-reset: mistake;
+  margin: 24px 0;
+}
+.blog ul.mistake-list > li {
+  counter-increment: mistake;
+  background: #f8f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px 22px 18px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.blog ul.mistake-list > li::before {
+  content: "0" counter(mistake);
+  position: static;
+  display: block;
+  color: var(--color-ruby);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .blog ul.mistake-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* V1.2 Deliverable-first module cards — elevation, the leading
+   "Output:" strong restyled as a top-right badge, and the
+   "You leave with ✓" line promoted to a tinted panel. */
+.blog .module-card {
+  position: relative;
+  border-radius: 14px;
+  border-color: #ececf0;
+  box-shadow: 0 6px 24px rgba(26, 26, 46, 0.07);
+}
+.blog .module-card__output > strong:first-of-type {
+  position: absolute;
+  top: 24px;
+  right: 26px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ruby);
+  background: rgba(204, 52, 45, 0.07);
+  border: 1px solid rgba(204, 52, 45, 0.2);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+.blog .module-card__leave {
+  background: #f2faf4;
+  border: 1px solid #d3ecd9;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 18px;
+}
+
+/* V1.3 Dark closing endcap band — obsidian island with a soft ruby
+   radial glow behind the Start CTA (JetVelocity tokens). */
 .blog .course-endcap {
-  border-top: 1px solid #e5e7eb;
+  position: relative;
+  overflow: hidden;
+  background: #0d1117;
+  border-radius: 16px;
   margin-top: 56px;
-  padding-top: 36px;
+  padding: 44px 28px 38px;
   text-align: center;
+}
+.blog .course-endcap::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -160px;
+  width: 520px;
+  height: 340px;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(204, 52, 45, 0.32), transparent);
+  pointer-events: none;
+}
+.blog .course-endcap > * {
+  position: relative;
 }
 .blog .course-endcap__promise {
   font-size: 18px;
   line-height: 1.6;
-  color: #3a3f4a;
+  color: #e7e7ee;
   margin-bottom: 18px;
+}
+.blog .course-endcap__cta .cta-link {
+  box-shadow: 0 6px 18px rgba(204, 52, 45, 0.35);
 }
 .blog .course-endcap__share {
   font-size: 15px;
-  color: #5f6470;
+  color: #9a9aac;
   margin-top: 18px;
   margin-bottom: 0;
+}
+
+/* V1.4 Eyebrow + headline scaffold — ruby uppercase tracked kicker
+   above each section H2, keyed off the stable heading ids. */
+.blog h2#take-this-course-if::before,
+.blog h2#who-built-this::before,
+.blog h2#why-this-course-exists::before,
+.blog h2#what-this-course-does-not-cover::before,
+.blog h2#module-map::before,
+.blog h2#going-further-after-first-paying-customer::before,
+.blog h2#already-started-building::before {
+  display: block;
+  font-family: system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ruby);
+  margin-bottom: 6px;
+}
+.blog h2#take-this-course-if::before { content: "Who it's for"; }
+.blog h2#who-built-this::before { content: "The team"; }
+.blog h2#why-this-course-exists::before { content: "The problem"; }
+.blog h2#what-this-course-does-not-cover::before { content: "Scope"; }
+.blog h2#module-map::before { content: "The syllabus"; }
+.blog h2#going-further-after-first-paying-customer::before { content: "After module 5"; }
+.blog h2#already-started-building::before { content: "Side path"; }
+
+/* V1.4b Hero chips + CTA polish — "Free" chip picks up the ruby tint;
+   primary CTA gets a soft ruby shadow. */
+.blog .course-chips li:first-child {
+  color: var(--color-ruby);
+  background: rgba(204, 52, 45, 0.07);
+  border-color: rgba(204, 52, 45, 0.25);
+}
+.blog .course-hero-ctas .cta-link:not(.cta-link--ghost) {
+  box-shadow: 0 6px 18px rgba(204, 52, 45, 0.25);
 }
