@@ -105,7 +105,16 @@
     preamble budget, authorship draft, gates). **L3 IN FLIGHT** on branch
     course-landing-l3 per 40.24; re-run impeccable critique, beat the 25/36
     (69%) baseline; scroll gate both viewports. Pre-merge (Paul/browser):
-    R3 Clarity+GA4 scroll-depth snapshot BEFORE deploy. **40.23 deltas (Paul APPROVED 2026-08-01):** the operating-kit restructure (40.23 C4: card-grid the 6 clone
+    R3 Clarity+GA4 scroll-depth snapshot BEFORE deploy.
+    **L4-visual (Paul 2026-08-01, runs AFTER L3 lands, same branch):** UI/
+    presentability/conversion polish on the RESTRUCTURED page via impeccable
+    (rendered critique at 1280x800 + 390x844, live browser iteration) +
+    stitch-design taste (JetVelocity, .stitch/design.md) + stitch-loop only
+    if the critique shows a structural visual gap needing variant
+    exploration. Scope: landing-page-owned CSS/typography ONLY (campaign
+    window - no shared blog/template CSS churn); conversion lens = first-
+    visit reader starts Lesson 1.1. Gates: qtest per change, 4-criteria
+    visual score, beat 25/36 on the re-run. **40.23 deltas (Paul APPROVED 2026-08-01):** the operating-kit restructure (40.23 C4: card-grid the 6 clone
     blocks, one "how to run it" section, v2 closure, single payoff label)
     rides WITH the Going-further move so it isn't rebuilt twice; add the
     hero "Free"-promise reconciliation line (40.23 C1) while _index is open.
