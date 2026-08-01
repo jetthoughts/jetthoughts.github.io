@@ -61,7 +61,7 @@ Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship stre
 | Warm | 15 | Adjacent. Knew you 6-24 months ago. Reasonable bet they have the problem. |
 | Cold | 20 | Dormant LinkedIn 1st-degree. Unclear if they have the problem. |
 
-![The 4-bucket grid - how 50 names get sorted before the first message goes out](network-buckets.svg)
+![Four numbered buckets sorting 50 names by warmth - 5 champions, 10 hot, 15 warm, 20 cold - sent in that order, champions first](network-buckets.svg)
 
 > **First, count your network.** Filter your 1st-degree LinkedIn connections by your must-have segment from Lesson 5.1 (title + company size + industry).
 >

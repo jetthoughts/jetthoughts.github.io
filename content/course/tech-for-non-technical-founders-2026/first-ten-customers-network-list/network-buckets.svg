@@ -1,56 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-labelledby="bucket-title">
-  <title id="bucket-title">The 50-name network list sorted into 4 outreach buckets</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="bk-title bk-desc">
+  <title id="bk-title">Sort 50 names into four priority buckets and send in order, champions first.</title>
+  <desc id="bk-desc">Four numbered bucket cards. 1 Champions, 5 names - already complained to you about this problem. 2 Hot, 10 names - your must-have segment, knows you, last contact under six months. 3 Warm, 15 names - adjacent, knew you six to 24 months ago. 4 Cold, 20 names - dormant first-degree connections, unclear if they have the problem. A send-order strip reads champions, then hot, then warm, then cold, 50 names total. Basis: people who already know you - your Module 2 interviewees, smoke-test signups, and first-degree network.</desc>
   <defs>
     <style>
-      .heading       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .bucket-label  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 22px; fill: #1a1a1a; font-weight: 700; }
-      .bucket-num    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 38px; fill: #cc342d; font-weight: 700; }
-      .bucket-note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
-      .bucket-rule   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #1a1a1a; }
-      .champion      { fill: #fbe9ff; stroke: #a855f7; stroke-width: 3; }
-      .hot           { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .warm          { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
-      .cold          { fill: #f0f0f0; stroke: #666; stroke-width: 2; stroke-dasharray: 5 3; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 32px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .name  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .count { font-size: 20px; font-weight: 600; fill: #4a4a4a; }
+      .num   { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .def   { font-size: 18px; font-weight: 400; fill: #333333; }
+      .order { font-size: 20px; font-weight: 600; fill: #121212; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
   </defs>
 
-  <text x="500" y="40" class="heading" text-anchor="middle">The 50-name network list, sorted</text>
-  <text x="500" y="68" class="bucket-note" text-anchor="middle">Send Monday in this order. Champions before hot. Hot before warm. Cold is the last 20.</text>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="480" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="464" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Champion -->
-  <rect x="60" y="100" width="430" height="180" rx="14" class="champion" transform="rotate(-0.3 275 190)"/>
-  <text x="275" y="135" class="bucket-label" text-anchor="middle">CHAMPIONS (5)</text>
-  <text x="275" y="180" class="bucket-num" text-anchor="middle">5 names</text>
-  <text x="275" y="208" class="bucket-rule" text-anchor="middle">Already complained about this problem to you.</text>
-  <text x="275" y="232" class="bucket-rule" text-anchor="middle">Will pick up your call. Will refer 2 more.</text>
-  <text x="275" y="260" class="bucket-note" text-anchor="middle">Send Monday 9 AM. Personalized Loom each.</text>
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">Sort 50 names, champions first</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">Rank by who already knows you - send in this order</text>
 
-  <!-- Hot -->
-  <rect x="510" y="100" width="430" height="180" rx="14" class="hot" transform="rotate(0.4 725 190)"/>
-  <text x="725" y="135" class="bucket-label" text-anchor="middle">HOT (10)</text>
-  <text x="725" y="180" class="bucket-num" text-anchor="middle">10 names</text>
-  <text x="725" y="208" class="bucket-rule" text-anchor="middle">In the must-have segment from 5.1.</text>
-  <text x="725" y="232" class="bucket-rule" text-anchor="middle">Knows you personally (recent contact &lt;6 mo).</text>
-  <text x="725" y="260" class="bucket-note" text-anchor="middle">Send Monday afternoon. Loom + Calendly link.</text>
+  <!-- bucket cards: 2x2, neutral numbered (priority order) -->
+  <!-- 1 Champions (24,98) -->
+  <g>
+    <rect x="24" y="98" width="330" height="140" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="50" cy="128" r="14" fill="#121212"/>
+    <text x="50" y="134" text-anchor="middle" class="gk num">1</text>
+    <text x="76" y="135" class="gk name">Champions</text>
+    <text x="330" y="135" text-anchor="end" class="gk count">5 names</text>
+    <text x="40" y="176" class="sys def">Already complained to you</text>
+    <text x="40" y="200" class="sys def">about this exact problem.</text>
+  </g>
+  <!-- 2 Hot (366,98) -->
+  <g>
+    <rect x="366" y="98" width="330" height="140" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="392" cy="128" r="14" fill="#121212"/>
+    <text x="392" y="134" text-anchor="middle" class="gk num">2</text>
+    <text x="418" y="135" class="gk name">Hot</text>
+    <text x="672" y="135" text-anchor="end" class="gk count">10 names</text>
+    <text x="382" y="176" class="sys def">Must-have segment, knows you,</text>
+    <text x="382" y="200" class="sys def">last contact under 6 months.</text>
+  </g>
+  <!-- 3 Warm (24,250) -->
+  <g>
+    <rect x="24" y="250" width="330" height="140" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="50" cy="280" r="14" fill="#121212"/>
+    <text x="50" y="286" text-anchor="middle" class="gk num">3</text>
+    <text x="76" y="287" class="gk name">Warm</text>
+    <text x="330" y="287" text-anchor="end" class="gk count">15 names</text>
+    <text x="40" y="328" class="sys def">Adjacent. Knew you 6-24</text>
+    <text x="40" y="352" class="sys def">months ago.</text>
+  </g>
+  <!-- 4 Cold (366,250) -->
+  <g>
+    <rect x="366" y="250" width="330" height="140" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="392" cy="280" r="14" fill="#121212"/>
+    <text x="392" y="286" text-anchor="middle" class="gk num">4</text>
+    <text x="418" y="287" class="gk name">Cold</text>
+    <text x="672" y="287" text-anchor="end" class="gk count">20 names</text>
+    <text x="382" y="328" class="sys def">Dormant 1st-degree. Unclear</text>
+    <text x="382" y="352" class="sys def">if they have the problem.</text>
+  </g>
 
-  <!-- Warm -->
-  <rect x="60" y="310" width="430" height="180" rx="14" class="warm" transform="rotate(0.3 275 400)"/>
-  <text x="275" y="345" class="bucket-label" text-anchor="middle">WARM (15)</text>
-  <text x="275" y="390" class="bucket-num" text-anchor="middle">15 names</text>
-  <text x="275" y="418" class="bucket-rule" text-anchor="middle">Adjacent. Knew you 6-24 months ago.</text>
-  <text x="275" y="442" class="bucket-rule" text-anchor="middle">Reasonable bet they have the problem.</text>
-  <text x="275" y="470" class="bucket-note" text-anchor="middle">Send Tuesday. Template OK, name-personalized opener.</text>
+  <!-- send-order strip -->
+  <rect x="24" y="406" width="672" height="44" rx="4" fill="#faf7f2" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="360" y="434" text-anchor="middle" class="gk order">Send in order: Champions &#8594; Hot &#8594; Warm &#8594; Cold  ·  50 total</text>
 
-  <!-- Cold -->
-  <rect x="510" y="310" width="430" height="180" rx="14" class="cold" transform="rotate(-0.4 725 400)"/>
-  <text x="725" y="345" class="bucket-label" text-anchor="middle">COLD (20)</text>
-  <text x="725" y="390" class="bucket-num" text-anchor="middle">20 names</text>
-  <text x="725" y="418" class="bucket-rule" text-anchor="middle">Dormant LinkedIn 1st-degree.</text>
-  <text x="725" y="442" class="bucket-rule" text-anchor="middle">Unclear if they have the problem.</text>
-  <text x="725" y="470" class="bucket-note" text-anchor="middle">Send Thursday. Hold the bottom 5 for week 2.</text>
-
-  <!-- Bottom callout -->
-  <rect x="80" y="520" width="840" height="65" rx="12" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
-  <text x="500" y="546" class="bucket-label" text-anchor="middle">50 messages out by Friday EOD.</text>
-  <text x="500" y="572" class="bucket-note" text-anchor="middle">Founders consistently get 3-5 pilot conversations from this list. Champions deliver 60-70% of the early conversions.</text>
+  <!-- one basis line -->
+  <text x="360" y="466" text-anchor="middle" class="sys basis">Basis: people who already know you - your interviewees, signups, and network</text>
 </svg>
