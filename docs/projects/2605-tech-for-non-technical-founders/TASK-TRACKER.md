@@ -101,8 +101,7 @@
     **L1 MERGED as PR #416 → L2 is UNBLOCKED.** L2: 3-4 independent critics
     on section order → punch-list, NO edits. L3: execute punch-list
     surgically; re-run impeccable critique, beat the 25/36 (69%) baseline.
-    Scroll gate both viewports. **40.23 deltas (pending Paul's resequencing
-    OK):** the operating-kit restructure (40.23 C4: card-grid the 6 clone
+    Scroll gate both viewports. **40.23 deltas (Paul APPROVED 2026-08-01):** the operating-kit restructure (40.23 C4: card-grid the 6 clone
     blocks, one "how to run it" section, v2 closure, single payoff label)
     rides WITH the Going-further move so it isn't rebuilt twice; add the
     hero "Free"-promise reconciliation line (40.23 C1) while _index is open.
@@ -119,13 +118,14 @@
     plan 20.15): path-finder audit vs course_sequence.yaml, strengthen forks
     2.5/4.1/5.6, compress the over-length Going Further set, verify Success
     checks are observable-behavior measurable. Progress tracker stays GATED
-    on Paul's 30-min Clarity check. **40.23 centerpiece (GATED on Paul's
-    structural yes):** long-wait bridges at the 3 calendar-forced pauses
+    on Paul's 30-min Clarity check. **40.23 centerpiece (Paul APPROVED 2026-08-01):** long-wait bridges at the 3 calendar-forced pauses
     (M2 interview booking 2-4wks, 1.4 seven-day run, Stripe verification) -
     one parallel micro-action + explicit "come back when X" re-entry trigger
     each; pedagogy persona named this the single highest-leverage completion
-    change. Also pending Paul: keep/soften the investor-framing thread for
-    the stealth ICP (40.23 divergent list).
+    change. Investor-framing DECIDED (Paul 2026-08-01): the Founder OS pack
+    KEEPS its investor-showable framing; scattered lesson-body "if you ever
+    raise" asides may be softened during W2/W5 passes only where they read
+    off-ICP, under surgical-edit rules.
 
 ## Browser-session track (claude-in-chrome, added 2026-07-31)
 
