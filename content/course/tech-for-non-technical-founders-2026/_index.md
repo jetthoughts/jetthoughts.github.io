@@ -187,45 +187,13 @@ If you need something on this list, the course won't help with it.
 
 ## Going further (after first paying customer)
 
-These conditional chapters kick in once you've passed the Module 5 gate. Read each one only when its trigger fires.
-
-**Diagnose what's slowing growth**
-
-| Trigger | Continuation chapter |
-|---|---|
-| Customers leaving faster than you can replace them | [Churn Triage Before Acquisition](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/) |
-| A key metric flat for 2+ months | [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/) |
-| Hit the self-serve ceiling, time to hire your first engineer | [Hire Track Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) |
-
-**Working with a dev agency in the AI era**
-
-| Trigger | Continuation chapter |
-|---|---|
-| Before the discovery call | ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/) |
-| Surprise AI tokens on the invoice | [AI Token Bill](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/) |
-| Worried about AI supply-chain risk in the code they ship | [Slopsquatting](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/) |
-
-**Manage a hired team without writing code**
-
-| Trigger | Continuation chapter |
-|---|---|
-| Need a structure for who reports to whom | [Engineering Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) |
-| Want a weekly heartbeat to confirm something shipped | [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) |
-| Want a 3-question standup that catches problems early | [Three Standup Questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/) |
-| Need a plain-English weekly report from the team | [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/) |
+Once you've passed the Module 5 gate, the continuation chapters - churn triage, pivot-or-persevere, hiring, agency oversight - live with their read-this-when triggers in the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/#going-further-triggers).
 
 ## Already started building?
 
 A side-path for readers who are further along. If you just have an idea or a half-built prototype you're tinkering with, skip to [Module 1](#module-1).
 
-If you are already typing, or paying someone an hourly rate to type for you, run these steps before you approve any more work.
-
-1. Check who owns the GitHub, AWS, database, and domain accounts. If it's not you, fix that today. - [Ownership Audit](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
-2. Demand one Friday demo with working software only - no Jira tickets, no slides, no "almost done." - [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/)
-3. Require a plain-English weekly report: what shipped, what's blocked, what's next. - [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/)
-4. Stop specifying features. Quality-check your scope against actual user outcomes before the build gets out of hand. - [Stop Specifying Features](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
-5. If your build is stalled and you're not sure whether to fix it or start over, run the salvage-vs-rebuild decision tree first. - [Salvage vs Rebuild Decision Tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/)
-6. If your team is shipping AI features, check the vendor contract. Make sure per-question AI costs aren't passing through to your invoice. - ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/)
+If you are already typing, or paying someone an hourly rate to type for you, start with the ownership audit in [Lesson 4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - it carries the full pre-flight list to run before you approve any more work.
 
 ---
 

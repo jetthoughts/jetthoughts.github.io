@@ -132,7 +132,36 @@ One boundary before you start: the kit is not a substitute for a sales course or
 
 > **Done:** all four weeks are run and the week-4 outcomes above are in hand - segment picked, 50 messages sent, 1-2 pilots signed, cold batch tracked.
 >
-> **Next:** the [Going further chapters](/course/tech-for-non-technical-founders-2026/#going-further-after-first-paying-customer) - churn triage, pivot-or-persevere, and hiring, each with a read-this-when trigger.
+> **Next:** the [Going further triggers](#going-further-triggers) below - churn triage, pivot-or-persevere, and hiring, each with a read-this-when trigger.
+
+## Going further triggers
+
+The continuation chapters kick in once you've passed the Module 5 gate. Read each one only when its trigger fires.
+
+**Diagnose what's slowing growth**
+
+| Trigger | Continuation chapter |
+|---|---|
+| Customers leaving faster than you can replace them | [Churn Triage Before Acquisition](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/) |
+| A key metric flat for 2+ months | [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/) |
+| Hit the self-serve ceiling, time to hire your first engineer | [Hire Track Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) |
+
+**Working with a dev agency in the AI era**
+
+| Trigger | Continuation chapter |
+|---|---|
+| Before the discovery call | ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/) |
+| Surprise AI tokens on the invoice | [AI Token Bill](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/) |
+| Worried about AI supply-chain risk in the code they ship | [Slopsquatting](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/) |
+
+**Manage a hired team without writing code**
+
+| Trigger | Continuation chapter |
+|---|---|
+| Need a structure for who reports to whom | [Engineering Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) |
+| Want a weekly heartbeat to confirm something shipped | [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) |
+| Want a 3-question standup that catches problems early | [Three Standup Questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/) |
+| Need a plain-English weekly report from the team | [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/) |
 
 ## Built by
 

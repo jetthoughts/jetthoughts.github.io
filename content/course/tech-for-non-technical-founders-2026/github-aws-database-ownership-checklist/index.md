@@ -118,6 +118,18 @@ Whose inbox did the AWS root email land in tonight? If the honest answer is "I'm
 
 ---
 
+## Already mid-build with a contractor?
+
+A side-path for readers who came from the course landing's [Already started building?](/course/tech-for-non-technical-founders-2026/#already-started-building) fork - you are already typing, or paying someone an hourly rate to type for you. The ownership audit above is step one. Run these before you approve any more work:
+
+1. Demand one Friday demo with working software only - no Jira tickets, no slides, no "almost done." - [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/)
+2. Require a plain-English weekly report: what shipped, what's blocked, what's next. - [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/)
+3. Stop specifying features. Quality-check your scope against actual user outcomes before the build gets out of hand. - [Stop Specifying Features](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
+4. If your build is stalled and you're not sure whether to fix it or start over, run the salvage-vs-rebuild decision tree first. - [Salvage vs Rebuild Decision Tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/)
+5. If your team is shipping AI features, check the vendor contract. Make sure per-question AI costs aren't passing through to your invoice. - ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/)
+
+---
+
 *See it in action: [Module 4 walkthrough: Mia ships TutorMatch](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*
