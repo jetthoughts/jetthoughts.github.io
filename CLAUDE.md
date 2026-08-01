@@ -17,7 +17,7 @@ Always read these files before making changes. They define the project's archite
 | `@config/_default/hugo.toml` | ANY Hugo/site config change |
 | `@themes/beaver/layouts/blog/list.html` | Blog index/listing changes |
 | `@themes/beaver/layouts/partials/blog/img-cropped.html` | Blog thumbnail/cover image changes |
-| `@themes/beaver/layouts/partials/seo/enhanced-meta-tags.html` | SEO/og:image/meta tag changes |
+| `@layouts/partials/seo/enhanced-meta-tags.html` | SEO/og:image/meta tag changes (root-level override, not the theme copy) |
 | `@themes/beaver/layouts/partials/page/cover_image.html` | Blog post cover rendering |
 | `@.stitch/design.md` | Cover image generation |
 | `@docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` | ANY content, blog post, design, landing page, or marketing work |
@@ -89,7 +89,7 @@ Follow official methodology from `/knowledge/`:
 ### Visual Regression (MANDATORY for CSS/HTML changes)
 - **Tolerance**: 0.0 for refactoring (zero visual changes), ≤0.03 for new features only
 - **Protocol**: Capture baseline screenshots BEFORE changes → compare AFTER → block commit on any difference > 0% during refactoring
-- **Reference**: `docs/visual_testing_delegation_workflows.md`
+- **Reference**: `docs/20-29-testing-qa/screenshot-testing/20.02-screenshot-testing-workflow-tutorial.md`
 
 ### Chrome DevTools Validation (MANDATORY after HTML/CSS/JS changes)
 1. Start Hugo dev server, open page in Chrome DevTools
