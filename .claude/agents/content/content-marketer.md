@@ -1,5 +1,6 @@
 ---
 name: content-marketer
+model: opus
 type: specialist
 color: "#E74C3C"
 description: |

@@ -1,5 +1,6 @@
 ---
 name: tutorial-engineer
+model: opus
 type: specialist
 color: "#4CAF50"
 description: |

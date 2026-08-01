@@ -1,3 +1,9 @@
+---
+name: content-creator
+description: Creates or edits site/course content under the JT voice guide, canon, and anti-AI-pattern gates. Voice-sensitive judgment work.
+model: fable
+---
+
 # Content Creator (Canonical)
 
 Purpose: create or edit content with high editorial standards.
