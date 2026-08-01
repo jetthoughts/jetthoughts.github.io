@@ -84,12 +84,28 @@
     (c) run runbook Phases 3-6 + the content cold-eyes personas (ICP-Sam,
     voice, slop) on edited chapters. Content-only edits → hugo-build + scroll
     gate, no visual suite. Do after W1 (L3 ships before 2026-08-14).
+    **40.23 additions (convergent, pre-approved fixes):** $0-path co-equal at
+    top of 1.4's budget section (C1); tool-roster trim + AI-callout demotion
+    on how-this-course-works (C2); outcome lines restored ABOVE the TL;DR
+    (C3, 4-lens confirmed); systemic adjacent-callout sweep (C5); shape-tell
+    opener/closer sweep — 5.1 triple-banned opener, 5.6 time-cut, 5 Going-
+    Further vignettes, 3 cloned template closers, opener sentences ONLY;
+    glosses for queues/SOC 2/GA4; 1.1 Success check promotes the stranger
+    read-aloud; fake-stripe 100-vs-300 label. **BINDING no-touch list (C6):**
+    Mia M1 walkthrough, 2.5 Dana pressure-test, the three decision forks,
+    1.4 exemplar structure, canon numbers, JT footer discipline.
 
 11. **[W1 — NEXT UP, deadline 2026-08-14] Landing L2 → L3** (wave plan 20.15;
-    research 40.21 + landing track below). **L1 MERGED as PR #416 → L2 is
-    UNBLOCKED.** L2: 3-4 independent critics on section order → punch-list,
-    NO edits. L3: execute punch-list surgically; re-run impeccable critique,
-    beat the 25/36 (69%) baseline. Scroll gate both viewports.
+    research 40.21 + landing track below; persona synthesis
+    `40-49-review/40.23-four-persona-comprehensive-review-2026-08-01.md`).
+    **L1 MERGED as PR #416 → L2 is UNBLOCKED.** L2: 3-4 independent critics
+    on section order → punch-list, NO edits. L3: execute punch-list
+    surgically; re-run impeccable critique, beat the 25/36 (69%) baseline.
+    Scroll gate both viewports. **40.23 deltas (pending Paul's resequencing
+    OK):** the operating-kit restructure (40.23 C4: card-grid the 6 clone
+    blocks, one "how to run it" section, v2 closure, single payoff label)
+    rides WITH the Going-further move so it isn't rebuilt twice; add the
+    hero "Free"-promise reconciliation line (40.23 C1) while _index is open.
 
 12. **[W3] Visual V3-A** (wave plan 20.15; ADR 30.09): exhibit spec → A/B
     exemplar → 4 M1 SVG redesigns + alts → eye-test doc → PAUL'S STYLE CALL
@@ -103,7 +119,13 @@
     plan 20.15): path-finder audit vs course_sequence.yaml, strengthen forks
     2.5/4.1/5.6, compress the over-length Going Further set, verify Success
     checks are observable-behavior measurable. Progress tracker stays GATED
-    on Paul's 30-min Clarity check.
+    on Paul's 30-min Clarity check. **40.23 centerpiece (GATED on Paul's
+    structural yes):** long-wait bridges at the 3 calendar-forced pauses
+    (M2 interview booking 2-4wks, 1.4 seven-day run, Stripe verification) -
+    one parallel micro-action + explicit "come back when X" re-entry trigger
+    each; pedagogy persona named this the single highest-leverage completion
+    change. Also pending Paul: keep/soften the investor-framing thread for
+    the stealth ICP (40.23 divergent list).
 
 ## Browser-session track (claude-in-chrome, added 2026-07-31)
 
