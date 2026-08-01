@@ -38,7 +38,7 @@ hero_secondary_url: "/course/tech-for-non-technical-founders-2026/quickstart/"
 hero_secondary_text: "3-minute Quickstart"
 ---
 
-Five modules take you from that idea to a signed paid pilot: test demand with strangers, interview the people who respond, turn their words into a one-page brief, build the MVP yourself with no-code tools, and charge your first customer before you ship. The first checkpoint comes fast: two to three weeks in, at an evenings-and-weekends pace, you get a go/iterate/kill verdict on your **Founding Hypothesis** (the one-sentence version of your idea) from real demand data instead of polite nods from friends.
+Five modules take you from that idea to a signed paid pilot: test demand with strangers, interview the people who respond, turn their words into a one-page brief, build the MVP yourself with no-code tools, and charge your first customer before you ship. The first checkpoint comes fast: two to three weeks in, at an evenings-and-weekends pace, you get a go/iterate/kill verdict on your **Founding Hypothesis** (the one-sentence version of your idea: who the customer is, what problem you solve, why they'd pick you) from real demand data instead of polite nods from friends.
 
 Two ways in: [Start Lesson 1.1 →](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) or [see the full syllabus ↓](#module-map).
 
@@ -72,6 +72,7 @@ The five mistakes below sink more first products than bad code does - we have wa
   <li>Writing a 15-page feature wishlist instead of a one-page problem spec - <a href="/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/">Module 3</a> constrains scope to what matters to the customer.</li>
   <li>Believing you have to drop $50,000 on an engineering team to launch - <a href="/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/">Module 4</a> walks you through a self-serve stack you can run without writing code.</li>
   <li>Offering free pilots indefinitely because asking for money feels intimidating - <a href="/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/">Module 5</a> gives you the exact script to charge your first customer before you ship.</li>
+  <li class="mistake-list__cta">Each mistake maps to a module - <a href="#module-map">jump to the module map ↓</a></li>
 </ul>
 
 ## What this course does NOT cover
@@ -91,6 +92,8 @@ If you need something on this list, the course won't help with it.
 ## Module map
 
 Read the modules in order. Each module's output is the next module's input, and each card's **"You leave with"** line names its output; together with the fill-in templates they total {{< course-stat artifacts >}} artifacts, which bundle into a single Google Drive folder - your **Founder OS** - the decision log you'll lean on every time you have to choose what to build next. The [Founder OS pack index](/course/tech-for-non-technical-founders-2026/founder-os-pack/) is its printable cover sheet.
+
+<div class="module-rail">
 
 <div class="module-card" id="module-1">
   <span class="module-card__badge">Module 1</span>
@@ -185,6 +188,8 @@ Read the modules in order. Each module's output is the next module's input, and 
     <p class="module-card__extras-row"><strong>See it in action:</strong> <a href="/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/">Mia gets paid</a></p>
   </div>
   <p class="module-card__leave"><strong>You leave with:</strong> a signed paid pilot and your first dollar from a customer, not a favor.</p>
+</div>
+
 </div>
 
 ## Going further (after first paying customer)

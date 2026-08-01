@@ -194,6 +194,86 @@
 .blog h2#going-further-after-first-paying-customer::before { content: "After module 5"; }
 .blog h2#already-started-building::before { content: "Side path"; }
 
+/* V2.1 Mid-page CTA card — the 6th cell of the mistakes grid: dark
+   inverted door to the module map. No counter, no ✗. */
+.blog ul.mistake-list > li.mistake-list__cta {
+  counter-increment: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  background: #0d1117;
+  border-color: #0d1117;
+  color: #e7e7ee;
+  font-weight: 600;
+}
+.blog ul.mistake-list > li.mistake-list__cta::before {
+  content: none;
+}
+.blog ul.mistake-list > li.mistake-list__cta a {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.blog ul.mistake-list > li.mistake-list__cta a:hover {
+  color: #ff6b64 !important;
+}
+
+/* V2.2 Module-map timeline rail — vertical rail left of the cards on
+   wide viewports with a ruby node per card; hidden below 1000px where
+   there is no gutter for it. */
+@media (min-width: 1000px) {
+  .blog .module-rail {
+    position: relative;
+  }
+  .blog .module-rail::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: linear-gradient(rgba(204, 52, 45, 0.35), #e5e7eb);
+  }
+  .blog .module-rail .module-card::after {
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: 32px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid var(--color-ruby);
+  }
+}
+
+/* V2.3 Module-card two-col — chapters left, leave-with panel right on
+   desktop; stacks back to one column below 768px. */
+@media (min-width: 768px) {
+  .blog .module-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    grid-template-areas:
+      "mbadge mbadge"
+      "mtitle mtitle"
+      "moutput moutput"
+      "mchapters mleave"
+      "mextras mextras";
+    column-gap: 24px;
+  }
+  .blog .module-card__badge { grid-area: mbadge; }
+  .blog .module-card h3 { grid-area: mtitle; }
+  .blog .module-card__output { grid-area: moutput; }
+  .blog .module-card ol.module-card__chapters { grid-area: mchapters; }
+  .blog .module-card__extras { grid-area: mextras; }
+  .blog .module-card__leave {
+    grid-area: mleave;
+    align-self: start;
+    margin-top: 0;
+  }
+}
+
 /* V1.4b Hero chips + CTA polish — "Free" chip picks up the ruby tint;
    primary CTA gets a soft ruby shadow. */
 .blog .course-chips li:first-child {
