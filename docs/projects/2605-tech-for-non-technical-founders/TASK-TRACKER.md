@@ -199,7 +199,18 @@
     the same l3-reviewer exception; (g) 40.26 review JPEGs ~1.1MB - pruning
     candidate.
 
-12. **[W3] Visual V3-A** (wave plan 20.15; ADR 30.09). GROOMED 2026-08-01,
+12. **[W3] ✅ DONE 2026-08-01, merged PR #433 (squash 8a5f5643).** Module-1
+    visual pilot shipped: T1 wrote the v3 exhibit spec (grid/scale/measured
+    ≥9px floor formula/O1-O2 rubric); A/B exemplar → **Paul chose O2 flat-
+    vector** (recorded ADR 30.09); T5 redrew all 5 M1 SVGs to O2 - one
+    consistent template, fixing the 4-of-5 mobile-floor failures (signal SVG
+    5.7px→9.21px); T3 shipped program-map v1 (replaced the old 5.5px-phone
+    landscape diagram + removed the orphan); Sprint-Y audit (40.31). Honest
+    dtest clean (SVGs img-masked → no course baseline moved, no CI record).
+    20%-slot deferred to the W4 boundary (O8 worktree node_modules, the
+    friction that hit every W3 worker, is the frontrunner). **Deferred per
+    ADR:** M2-M5 ~76 SVGs roll to O2 in a later wave after this M1 pilot.
+    _Groomed scope (historical, executed):_ Visual V3-A (wave plan 20.15; ADR 30.09). GROOMED 2026-08-01,
     re-audited @cdcccd51. Content-scoped (SVGs + one .okf spec doc) =
     campaign-safe, NO shared CSS. Agents on Opus/Sonnet (Fable quota out,
     W1.6 retro).
