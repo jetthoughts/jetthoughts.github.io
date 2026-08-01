@@ -193,7 +193,13 @@
 13. **[W4, post-Aug-14] V3-B wiring + media P1** (wave plan 20.15): new
     course-single.css + single.html; walkthrough visual hooks, 1.2/1.3/1.5
     mid-body visuals, 5.7 mermaid horizontal, TL;DR accent. Full visual pair
-    at PR prep. THEN **[W5] completion mechanics + content strategy** (wave
+    at PR prep. **W2 INPUT (2026-08-01): responsive-table treatment** - add
+    `overflow-x:auto` scroll containers to course tables in course-single
+    CSS. W2 scroll gate found 390px mobile overflow on dense reference pages
+    (fractional-cto-sow-reference's 4-col Week/ships/ships/why-parallel table
+    25px; first-paying-customer-operating-kit 51px, pre-existing since W1
+    #428). Desktop clean; fix is shared CSS = frozen until this wave. The
+    course-wide fix here clears both + any sibling reference tables at once. THEN **[W5] completion mechanics + content strategy** (wave
     plan 20.15): path-finder audit vs course_sequence.yaml, strengthen forks
     2.5/4.1/5.6, compress the over-length Going Further set, verify Success
     checks are observable-behavior measurable. Progress tracker stays GATED
