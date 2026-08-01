@@ -390,3 +390,43 @@ Evidence: PR #424 (fix + verification transcript: host bin/test 34 runs
 0 failures in 5:01 vs 29F+2E in ~11min before; bin/dtest 34 runs 0
 failures; forced-red run preserved candidates). Code: bin/build-if-stale
 (BASE_URL default), bin/test / bin/dtest / bin/qtest (restore-on-green).
+
+## 2026-07-31 - warm-tree staleness trap + OS-scoped dirty guard
+
+bin/test was red and bin/dtest refused to start. Root cause was NOT a
+regression in either script: `_dest/public-test` had been built at 20:17
+with the pre-#424 absolute `localhost:1314` baseURL, and #424 landed at
+20:45 - but `bin/build-if-stale`'s `stale()` compares only content/theme
+SOURCE mtimes against `$DEST/index.html`, so the poisoned tree was judged
+warm forever. Every asset 404'd on Capybara's random Puma port; the 21:48
+run rewrote 49 macos baselines with black/unstyled renders (404.png = black
+canvas + inline-critical nav only; homepage/_footer.png = raw unstyled
+HTML). Those 49 dirty files then tripped the dirty-fixture guard, which
+globbed the WHOLE screenshots tree - and since the test container has git
+(`safe.directory /app`), macOS dirt aborted the Linux leg too.
+
+Fixes (2 one-liners + 1): `bin/build-if-stale` counts `bin/build-if-stale`
+and `bin/hugo-build` as sources; the guard in
+`test/application_system_test_case.rb` scopes to
+`test/fixtures/screenshots/#{Capybara::Screenshot::Os.name}`;
+`test/support/setup_snap_diff.rb` deletes a stale snap_diff_report.html at
+load (the reporter only writes on failures, so a green run otherwise leaves
+the previous red run's report describing diffs that no longer exist - it
+bit on the very first green run here).
+
+Verified: rebuilt tree emits root-relative `/css/...` with zero
+localhost:1314; warm rerun still short-circuits; `bin/test` 34 runs 0
+failures, 53 screenshots compared, tree auto-restored clean; with a
+deliberately dirtied macos baseline `bin/test` aborts while `bin/dtest`
+runs. Skipped as YAGNI: a `$BASE_URL` stamp file - no caller passes a
+different base URL to the same dest (test/qtest -> public-test at "/",
+dtest -> public-dtest at "/", dtest-all -> public-dtest-all absolute).
+
+Non-issue confirmed, not changed: this Mac is in Dark Mode and headless
+Chrome 151 reports `prefers-color-scheme: dark`, but the only dark-mode CSS
+is `themes/beaver/layouts/shortcodes/testimonial.html` and that shortcode
+has ZERO usages - the black canvas was purely missing CSS. If baselines
+ever come back black on a light-mode-recorded tree, the pin is
+`"blink-settings" => "preferredColorScheme=1"` in CHROME_ARGS (verified on
+Chrome 151 --headless=new; `--force-prefers-color-scheme=light` is not a
+real switch).

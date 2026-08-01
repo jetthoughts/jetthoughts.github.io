@@ -17,8 +17,14 @@ require "support/hugo_helpers"
 # from committing corrupted baselines - so refuse to run until they are
 # clean. Same guard bin/qtest has carried; this covers bin/test, bin/dtest,
 # and every rake test task. Degrades to a no-op where git is unavailable.
+#
+# Scoped to the OS dir this run actually writes (the same Os.name snap_diff
+# uses to build the path under add_os_path). The test container has git, so
+# an unscoped glob let dirty macos/ baselines abort the linux/ leg - bin/dtest
+# refusing to start on a Mac mid-review was never the intent.
 unless ENV["ALLOW_DIRTY_SCREENSHOTS"]
-  dirty = `git status --porcelain test/fixtures/screenshots 2>/dev/null`.lines
+  os_dir = "test/fixtures/screenshots/#{Capybara::Screenshot::Os.name}"
+  dirty = `git status --porcelain #{os_dir} 2>/dev/null`.lines
   if dirty.any?
     warn "Screenshot fixtures are dirty (a previous run rewrote baselines):"
     dirty.first(10).each { |l| warn "  #{l.strip}" }

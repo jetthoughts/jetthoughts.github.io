@@ -26,7 +26,12 @@ stale() {
   # Directories are probed too (no -type f): deleting a source file leaves
   # nothing to be -newer, but it DOES bump the parent directory's mtime -
   # without this, a deleted page could be served from a "warm" tree forever.
+  # The build scripts count as sources: 2026-07-31 #424 changed this script's
+  # default baseURL from an absolute localhost:1314 to "/", but every tree
+  # built before it stayed "warm" forever - bin/test kept rendering against
+  # dead asset URLs (black/unstyled screenshots) until someone rm -rf'd it.
   newest_src=$(find content themes layouts config data assets static postcss.config.js package.json bun.lockb \
+    bin/build-if-stale bin/hugo-build \
     -newer "$DEST/index.html" -print -quit 2>/dev/null || true)
   [ -n "$newest_src" ]
 }

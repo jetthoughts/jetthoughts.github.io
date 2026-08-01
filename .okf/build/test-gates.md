@@ -47,6 +47,13 @@ extend it when adding components or critical files. The macOS full suite remains
   "Tasks: TOP => test:critical" in the tail (2026-07-31: cost two aborted-run
   investigations). With dtest the only path is the designed one: COMMIT the
   intended baselines first, then run on a clean tree.
+- The dirty-fixtures guard is scoped to the OS dir the run writes
+  (`Capybara::Screenshot::Os.name` -> `macos/` on the host, `linux/` in the
+  container). Before that, dirty `macos/` candidates aborted the Linux leg -
+  the container HAS git (`.dev/Dockerfile` sets `safe.directory /app`), so an
+  unscoped glob saw the host's dirt and refused to start. Practical effect:
+  a red `bin/test` no longer blocks `bin/dtest`, so you can run the two legs
+  independently while reviewing a macOS diff.
 - The snapshot tool REWRITES baselines when a run passes. Since 2026-07-31
   a GREEN `bin/test`/`bin/dtest`/`bin/qtest` run auto-restores
   `test/fixtures/screenshots` (skipped under `FORCE_SCREENSHOT_UPDATE`),
@@ -67,6 +74,23 @@ extend it when adding components or critical files. The macOS full suite remains
   error pages as baselines - brightness-audit re-records before
   committing (identical mean brightness across different pages = black
   or error frames). Evidence + verification transcript: PR #424.
+- A warm `_dest/` tree survives a change to the build recipe itself.
+  `bin/build-if-stale`'s `stale()` only compares SOURCE mtimes against
+  `$DEST/index.html`, so when #424 changed the default baseURL (20:45) every
+  tree built before it (20:17) stayed "warm" - `bin/test` kept rendering
+  against dead `localhost:1314` asset URLs and rewrote 49 baselines with
+  black/unstyled garbage, then the dirty-fixture guard deadlocked both legs.
+  Fixed by adding `bin/build-if-stale bin/hugo-build` to the `find` list, so
+  a build-recipe change invalidates the tree. Diagnosis tell: `grep
+  localhost:1314 _dest/<tree>/404.html` returns hits; escape hatch is
+  `FORCE_BUILD=1` or `rm -rf` the tree.
+- The snap_diff HTML report at
+  `test/fixtures/screenshots/snap_diff_report.html` (gitignored) is written
+  automatically on any RED run - the gem auto-registers the reporter on
+  require and prints `Report: <path>` as the last stdout line. It shows
+  original / candidate / annotated-diff / heatmap per failure. It is deleted
+  at suite load, because the reporter only writes when failures exist and a
+  stale report otherwise describes diffs that no longer exist.
 - Visual failures are commit blockers, not warnings. Either fix the
   regression or update BOTH baseline dirs (macos/ and linux/) in the same
   commit with the intentional change.

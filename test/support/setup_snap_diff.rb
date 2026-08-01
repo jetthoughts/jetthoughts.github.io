@@ -9,6 +9,12 @@ require "capybara_screenshot_diff/minitest"
 require "capybara_screenshot_diff/reporters/html"
 
 Capybara::Screenshot.save_path = "test/fixtures/screenshots"
+
+# The HTML reporter only writes when a run HAS failures, so a green run would
+# otherwise leave the previous red run's report on disk - reviewing it shows
+# diffs that no longer exist. Drop it up front; every entry point (bin/test,
+# bin/qtest, bin/dtest, rake test:*) loads this file.
+File.delete("test/fixtures/screenshots/snap_diff_report.html") if File.exist?("test/fixtures/screenshots/snap_diff_report.html")
 Capybara::Screenshot.add_os_path = true
 Capybara::Screenshot.window_size = nil
 Capybara::Screenshot.stability_time_limit = ENV.fetch("SCREENSHOT_STABILITY_TIME", "0.1").to_f
