@@ -186,7 +186,7 @@
 - ✅ Added RESOLUTION OPTIONS for blocked files
 
 ### Files Created
-- ✅ `docs/CSS_TRACKING_MANIFEST.csv` - File processing status tracking
+- ✅ `docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/CSS_TRACKING_MANIFEST.csv` - File processing status tracking
 - ✅ `_runtime/css_consolidator.rb` - Advanced Ruby consolidation engine (8.7KB)
 - ✅ `_runtime/css_duplication_analyzer.rb` - Deep CSS analysis tool (6.5KB)
 - ✅ `_runtime/consolidation_run.log` - Swarm execution log

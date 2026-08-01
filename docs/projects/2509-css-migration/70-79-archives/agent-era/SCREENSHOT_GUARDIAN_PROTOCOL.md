@@ -345,7 +345,7 @@ blocking_communication_format:
 
 **Project Documentation**:
 - `/Users/pftg/dev/jetthoughts.github.io/CLAUDE.md` - Zero tolerance refactoring policies
-- `/Users/pftg/dev/jetthoughts.github.io/docs/60.06-test-format-requirements-reference.md` - Test format standards
+- `/Users/pftg/dev/jetthoughts.github.io/docs/60-69-project-management/60.06-test-format-requirements-reference.md` - Test format standards
 - `/Users/pftg/dev/jetthoughts.github.io/test/application_system_test_case.rb` - Screenshot configuration
 
 **Test Files**:

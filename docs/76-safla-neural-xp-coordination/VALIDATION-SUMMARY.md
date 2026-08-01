@@ -401,8 +401,8 @@ global_handbook_references:
   test_smell_prevention: "✅ /knowledge/25.04-test-smell-prevention-enforcement-protocols.md"
 
 jt_site_project_references:
-  agent_guidance: "✅ /projects/jt_site/docs/60.01-agent-guidance-reference.md"
-  tdd_enforcement: "✅ /projects/jt_site/docs/60.03-tdd-quality-enforcement.md"
+  agent_guidance: "✅ /projects/jt_site/docs/60-69-project-management/60.01-agent-guidance-reference.md"
+  tdd_enforcement: "✅ /projects/jt_site/docs/60-69-project-management/60.03-tdd-quality-enforcement.md"
   visual_testing: "✅ /projects/jt_site/docs/visual_testing_delegation_workflows.md"
   code_review_safla: "✅ /projects/jt_site/docs/75-safla-neural-code-review/README.md"
 

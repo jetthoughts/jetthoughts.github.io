@@ -9,7 +9,7 @@
 ### Start Next File
 ```bash
 # 1. Check current status
-cat docs/CSS_CONSOLIDATION_DASHBOARD.md
+cat docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/CSS_CONSOLIDATION_DASHBOARD.md
 
 # 2. Pick next file from High Priority list
 # (See Sprint Backlog below)
@@ -177,9 +177,9 @@ ruby /tmp/css_tracking_analysis.rb
 
 ## 🔗 Related Files
 
-- **Product Backlog**: `/Users/pftg/dev/jetthoughts.github.io/docs/CSS_CONSOLIDATION_PRODUCT_BACKLOG.md`
-- **Dashboard**: `/Users/pftg/dev/jetthoughts.github.io/docs/CSS_CONSOLIDATION_DASHBOARD.md`
-- **Tracking Manifest**: `/Users/pftg/dev/jetthoughts.github.io/docs/CSS_TRACKING_MANIFEST.csv`
+- **Product Backlog**: `/Users/pftg/dev/jetthoughts.github.io/docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/CSS_CONSOLIDATION_PRODUCT_BACKLOG.md`
+- **Dashboard**: `/Users/pftg/dev/jetthoughts.github.io/docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/CSS_CONSOLIDATION_DASHBOARD.md`
+- **Tracking Manifest**: `/Users/pftg/dev/jetthoughts.github.io/docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/CSS_TRACKING_MANIFEST.csv`
 - **Analysis Script**: `/tmp/css_tracking_analysis.rb`
 
 ---

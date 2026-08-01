@@ -1,5 +1,17 @@
 # JT_Site Documentation Hub
 
+## 🗂 Structure (Johnny Decimal — where a doc LIVES; routing rule in CLAUDE.md)
+
+| Area | Contents |
+|---|---|
+| `10-19-core-development/` … `90-99-content-strategy/` | Engineering/tech reference by domain (testing in `20-29-testing-qa/`, PM in `60-69-project-management/`, content in `90-99-content-strategy/`) |
+| `adr/` · `incidents/` · `design-system/` | Decisions · postmortems · design tokens |
+| `business/` | Company OS, vision, opportunity portfolio |
+| `projects/<YYMM-slug>/` | One folder per initiative (own JD sub-tree; superseded material under its `70-79-archives/`) |
+| `workflows/` | ONLY cross-cutting pipeline how-tos (blog/linkedin pipelines, flow-router, commands, BASE_HANDBOOK) — not a catch-all |
+
+New docs go into the matching area with `NN.NN-name-{reference|tutorial|how-to}.md` naming — never loose at `docs/` root (root was decluttered 66→28 files on 2026-08-01; the remaining loose files are legacy pending triage).
+
 ## 🎯 Authority Hierarchy
 
 1. **SUPREME AUTHORITY**: `/knowledge/` - Global standards (inherited via symbolic link)

@@ -284,10 +284,10 @@ bin/rake test:critical
 ### Reporting Commands
 ```bash
 # Generate progress report
-cat docs/CSS_CONSOLIDATION_DASHBOARD.md
+cat docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/CSS_CONSOLIDATION_DASHBOARD.md
 
 # View product backlog
-cat docs/CSS_CONSOLIDATION_PRODUCT_BACKLOG.md
+cat docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/CSS_CONSOLIDATION_PRODUCT_BACKLOG.md
 ```
 
 ---

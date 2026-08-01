@@ -200,11 +200,11 @@ test_smell_prevention:
 
 ```yaml
 agent_guidance:
-  reference: "/projects/jt_site/docs/60.01-agent-guidance-reference.md"
+  reference: "/projects/jt_site/docs/60-69-project-management/60.01-agent-guidance-reference.md"
   integration: "jt_site-specific agent behaviors, Hugo/JAMstack patterns"
 
 tdd_enforcement:
-  reference: "/projects/jt_site/docs/60.03-tdd-quality-enforcement.md"
+  reference: "/projects/jt_site/docs/60-69-project-management/60.03-tdd-quality-enforcement.md"
   integration: "Test quality validation for static site development"
 
 visual_testing:

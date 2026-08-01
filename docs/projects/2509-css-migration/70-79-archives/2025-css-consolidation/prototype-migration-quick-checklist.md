@@ -270,8 +270,8 @@ bin/rake test:critical
 
 ## Documents Reference
 
-- **Migration Plan**: `docs/prototype-about-us-critical-css-migration.md`
-- **Before/After Diff**: `docs/prototype-about-us-before-after-diff.md`
-- **This Checklist**: `docs/prototype-migration-quick-checklist.md`
+- **Migration Plan**: `docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/prototype-about-us-critical-css-migration.md`
+- **Before/After Diff**: `docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/prototype-about-us-before-after-diff.md`
+- **This Checklist**: `docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/prototype-migration-quick-checklist.md`
 - **Reference Template**: `themes/beaver/layouts/home.html` (already migrated)
 - **Target Template**: `themes/beaver/layouts/page/about.html` (to be migrated)
