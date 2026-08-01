@@ -163,8 +163,11 @@ the artifact, not the memory of it). Dispatch only from the groomed scope.
 loaded skills list (global + project) and route through the matching skill
 instead of default behavior; agent prompts NAME the skills they must invoke.
 Flow map (extend when new skills land): retro → `/sprint-retrospective`
-(xp-practices family); grooming → backlog-grooming/refinement +
-`superpowers:brainstorming` when scope is open-ended; visual/UI work (W1.5,
+(xp-practices family); wave planning → `/agile-sprint-planning` or
+`/agile-product-owner`; grooming/breakdown → `/user-story-splitting` or
+`/epic-breakdown-advisor` (+ `/user-story-mapping` when the wave touches a
+user journey, e.g. W5 path-finding) + `superpowers:brainstorming` when scope
+is open-ended; multi-agent wave coordination → `/agile-coordinator`; visual/UI work (W1.5,
 W3, W4) → `/impeccable` + stitch-design taste (+ stitch-loop only for
 variant exploration) + ux-principles; content audit/fixes (W2, W5) → the
 course-audit-checklist runbook + content cold-eyes personas +
