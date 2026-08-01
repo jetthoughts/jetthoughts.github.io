@@ -58,7 +58,7 @@ Same product, same buyer, one difference - when the money lands:
 
 Real money on the table before kickoff forces the internal budget conversation while nothing is riding on it yet. You are not asking for money - you are asking the customer to defend the spend internally. That defense is the test of whether the pilot is real.
 
-![Free pilot vs paid pilot - what skin in the game does](free-vs-paid-pilot.svg)
+![Two bars comparing convert-to-paying: free pilot about 12% in ruby, paid pilot about 65% in green - same product, buyer, and 8 weeks; deposit is $500+ (10-30% of year-one ACV), forfeited if the customer cancels early, 100% refunded if you cancel](free-vs-paid-pilot.svg)
 
 > **Course terminology: "first paying customer" = signed DPA + cleared deposit.** When the course says "first paying customer," it means the customer has signed the one-page DPA AND the Stripe deposit has cleared - real money in your account. Converting the pilot into a year-one contract is a separate event 6-10 weeks later, after the success criteria are met.
 

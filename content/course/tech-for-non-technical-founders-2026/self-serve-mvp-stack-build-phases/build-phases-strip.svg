@@ -1,81 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-labelledby="bps-title">
-  <title id="bps-title">Four build phases, then the five-green-lights gate. Phase 1 Lovable UI: screens click, nothing saved. Phase 2 Supabase and auth: a real signup persists. Phase 3 Stripe checkout: a one-dollar test charge clears. Phase 4 go live: five ICP users click. All five lights green - Stripe in live mode, custom domain wired, one fresh ICP user hit the paywall, zero JS errors on signup and checkout, a weekly demo recording exists - advances you to Module 5.</title>
-  <desc>Four numbered phase cards in a row - Phase 1 Lovable UI, Phase 2 Supabase and auth, Phase 3 Stripe checkout, Phase 4 go live - each with its demo line, joined by arrows. An arrow drops into a wide green gate card below listing the five exit lights: Stripe live, custom domain wired, one fresh ICP user hit the paywall, zero JS errors, weekly demo recording exists. All five green advances to Module 5.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 490" role="img" aria-labelledby="bps-title bps-desc">
+  <title id="bps-title">Four build phases, each proven by one demo, then a five-green-lights gate that advances you to Module 5.</title>
+  <desc id="bps-desc">Four numbered phase cards in a row. Phase 1 Lovable - screens click, nothing saved. Phase 2 Supabase - a real signup persists. Phase 3 Stripe - a one-dollar test charge flips the row to paid. Phase 4 go live - five ICP users hit the live URL. An arrow drops into a wide green gate card listing five exit lights: Stripe in live mode, custom domain wired, one fresh ICP user hit the paywall, zero JS errors at checkout, a weekly demo recording exists. Any light red means fix it first. All five green advances to Module 5. Basis: the self-serve MVP build - one demo is the proof of each phase.</desc>
   <defs>
     <style>
-      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
-      .sub    { font-size: 17px; fill: #666; font-style: italic; }
-      .ph     { font-size: 20px; font-weight: 700; fill: #1a1a1a; }
-      .demo   { font-size: 15px; fill: #555; }
-      .num    { font-size: 15px; font-weight: 700; fill: #fff; }
-      .gate   { font-size: 21px; font-weight: 700; fill: #2e7d32; }
-      .light  { font-size: 16px; fill: #1a1a1a; }
-      .card   { fill: #faf7f2; stroke: #555; stroke-width: 2; }
-      .card-g { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
-      .numdot { fill: #cc342d; }
-      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
-      .tick   { font-size: 16px; font-weight: 700; fill: #2e7d32; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .mono  { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+      .title { font-size: 32px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .ph    { font-size: 20px; font-weight: 700; fill: #121212; }
+      .phm   { font-size: 20px; font-weight: 700; fill: #121212; }
+      .num   { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .demo  { font-size: 18px; font-weight: 400; fill: #333333; }
+      .gate  { font-size: 20px; font-weight: 700; fill: #2e7d32; }
+      .light { font-size: 18px; font-weight: 400; fill: #222222; }
+      .note  { font-size: 18px; font-weight: 400; fill: #555555; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
-    <marker id="bp-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    <marker id="bp-tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
     </marker>
   </defs>
 
-  <text x="480" y="36" text-anchor="middle" class="h title">Four phases, then the five green lights</text>
-  <text x="480" y="62" text-anchor="middle" class="h sub">One demo per phase - the demo is the data, not the screens.</text>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="490" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="474" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Phase cards -->
-  <g transform="translate(24,86) rotate(-0.5 107 52)">
-    <rect width="214" height="104" rx="12" class="card"/>
-    <circle cx="26" cy="26" r="13" class="numdot"/>
-    <text x="26" y="31" text-anchor="middle" class="h num">1</text>
-    <text x="48" y="33" class="h ph">Lovable UI</text>
-    <text x="20" y="66" class="h demo">Screens click,</text>
-    <text x="20" y="88" class="h demo">nothing saved yet</text>
+  <!-- title block: action title + one message -->
+  <text x="360" y="48" text-anchor="middle" class="gk title">Four phases, then five green lights</text>
+  <text x="360" y="80" text-anchor="middle" class="gk msg">One demo per phase - the demo is the proof, not the screens</text>
+
+  <!-- Phase cards (structure = stroked white) -->
+  <g>
+    <rect x="24" y="104" width="156" height="132" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="46" cy="130" r="13" fill="#121212"/>
+    <text x="46" y="136" text-anchor="middle" class="gk num">1</text>
+    <text x="68" y="136" class="mono phm">Lovable</text>
+    <text x="40" y="176" class="sys demo">Screens click,</text>
+    <text x="40" y="202" class="sys demo">nothing saved</text>
   </g>
-  <g transform="translate(256,86) rotate(0.4 107 52)">
-    <rect width="214" height="104" rx="12" class="card"/>
-    <circle cx="26" cy="26" r="13" class="numdot"/>
-    <text x="26" y="31" text-anchor="middle" class="h num">2</text>
-    <text x="48" y="33" class="h ph">Supabase + auth</text>
-    <text x="20" y="66" class="h demo">A real signup</text>
-    <text x="20" y="88" class="h demo">persists on refresh</text>
+  <g>
+    <rect x="196" y="104" width="156" height="132" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="218" cy="130" r="13" fill="#121212"/>
+    <text x="218" y="136" text-anchor="middle" class="gk num">2</text>
+    <text x="240" y="136" class="mono phm">Supabase</text>
+    <text x="212" y="176" class="sys demo">A real signup</text>
+    <text x="212" y="202" class="sys demo">persists</text>
   </g>
-  <g transform="translate(488,86) rotate(-0.4 107 52)">
-    <rect width="214" height="104" rx="12" class="card"/>
-    <circle cx="26" cy="26" r="13" class="numdot"/>
-    <text x="26" y="31" text-anchor="middle" class="h num">3</text>
-    <text x="48" y="33" class="h ph">Stripe checkout</text>
-    <text x="20" y="66" class="h demo">A $1 test charge</text>
-    <text x="20" y="88" class="h demo">flips the row to paid</text>
+  <g>
+    <rect x="368" y="104" width="156" height="132" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="390" cy="130" r="13" fill="#121212"/>
+    <text x="390" y="136" text-anchor="middle" class="gk num">3</text>
+    <text x="412" y="136" class="mono phm">Stripe</text>
+    <text x="384" y="176" class="sys demo">$1 test charge</text>
+    <text x="384" y="202" class="sys demo">flips to paid</text>
   </g>
-  <g transform="translate(720,86) rotate(0.5 107 52)">
-    <rect width="214" height="104" rx="12" class="card"/>
-    <circle cx="26" cy="26" r="13" class="numdot"/>
-    <text x="26" y="31" text-anchor="middle" class="h num">4</text>
-    <text x="48" y="33" class="h ph">Go live</text>
-    <text x="20" y="66" class="h demo">5 ICP users click</text>
-    <text x="20" y="88" class="h demo">the live URL</text>
+  <g>
+    <rect x="540" y="104" width="156" height="132" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="562" cy="130" r="13" fill="#121212"/>
+    <text x="562" y="136" text-anchor="middle" class="gk num">4</text>
+    <text x="584" y="136" class="gk ph">Go live</text>
+    <text x="556" y="176" class="sys demo">5 ICP users</text>
+    <text x="556" y="202" class="sys demo">hit the live URL</text>
   </g>
 
   <!-- arrows between phases -->
-  <path d="M 240 138 L 254 138" class="arrow" marker-end="url(#bp-ah)"/>
-  <path d="M 472 138 L 486 138" class="arrow" marker-end="url(#bp-ah)"/>
-  <path d="M 704 138 L 718 138" class="arrow" marker-end="url(#bp-ah)"/>
+  <line x1="180" y1="170" x2="196" y2="170" stroke="#3a3a3a" stroke-width="2" marker-end="url(#bp-tri)"/>
+  <line x1="352" y1="170" x2="368" y2="170" stroke="#3a3a3a" stroke-width="2" marker-end="url(#bp-tri)"/>
+  <line x1="524" y1="170" x2="540" y2="170" stroke="#3a3a3a" stroke-width="2" marker-end="url(#bp-tri)"/>
 
-  <!-- drop arrow into the gate -->
-  <path d="M 480 192 L 480 246" class="arrow" marker-end="url(#bp-ah)"/>
+  <!-- drop into the gate -->
+  <line x1="360" y1="236" x2="360" y2="264" stroke="#3a3a3a" stroke-width="2" marker-end="url(#bp-tri)"/>
 
-  <!-- five-lights gate -->
-  <g transform="translate(40,250)">
-    <rect width="880" height="126" rx="13" class="card-g"/>
-    <text x="30" y="34" class="h gate">All 5 lights green &#8594; advance to Module 5</text>
-    <text x="30" y="66" class="h light"><tspan class="tick">&#10003;</tspan> Stripe in LIVE mode - a real card clears</text>
-    <text x="30" y="92" class="h light"><tspan class="tick">&#10003;</tspan> Custom domain wired (not .lovable.app)</text>
-    <text x="30" y="118" class="h light"><tspan class="tick">&#10003;</tspan> 1 fresh ICP user hit the paywall</text>
-    <text x="470" y="66" class="h light"><tspan class="tick">&#10003;</tspan> Zero JS errors on signup + checkout</text>
-    <text x="470" y="92" class="h light"><tspan class="tick">&#10003;</tspan> A weekly demo recording exists</text>
-    <text x="470" y="118" class="h demo">Any light red = fix it first, then re-check.</text>
-  </g>
+  <!-- five-lights gate: success milestone = green -->
+  <rect x="24" y="270" width="672" height="176" rx="4" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+  <text x="48" y="308" class="gk gate">All 5 lights green - advance to Module 5</text>
+
+  <text x="48" y="346" class="sys light"><tspan fill="#2e7d32" font-weight="700">&#10003;</tspan> Stripe in <tspan class="mono">LIVE</tspan> mode</text>
+  <text x="48" y="378" class="sys light"><tspan fill="#2e7d32" font-weight="700">&#10003;</tspan> Custom domain wired</text>
+  <text x="48" y="410" class="sys light"><tspan fill="#2e7d32" font-weight="700">&#10003;</tspan> Fresh ICP user hit the paywall</text>
+
+  <text x="392" y="346" class="sys light"><tspan fill="#2e7d32" font-weight="700">&#10003;</tspan> Zero JS errors at checkout</text>
+  <text x="392" y="378" class="sys light"><tspan fill="#2e7d32" font-weight="700">&#10003;</tspan> Weekly demo recording exists</text>
+  <text x="392" y="410" class="sys note">Any light red - fix it first, re-check.</text>
+
+  <!-- one basis line -->
+  <text x="360" y="470" text-anchor="middle" class="sys basis">Basis: the self-serve MVP build - one demo proves each phase</text>
 </svg>

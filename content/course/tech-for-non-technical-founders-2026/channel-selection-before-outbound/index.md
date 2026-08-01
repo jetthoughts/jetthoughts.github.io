@@ -56,7 +56,7 @@ Your 10 interview transcripts from [Module 2](/course/tech-for-non-technical-fou
 
 Score each candidate channel 1-3 on four dimensions - price fit, buyer type, your honest time budget, and interview signal - for a total out of 12.
 
-![Channel-fit canvas: score each candidate channel 1-3 on four dimensions. Five example channels with fill-in cells. Right side: 9+/12 commit, 7-8 pilot, 6 or less re-read transcripts.](channel-fit-canvas.svg)
+![Channel-fit rubric: score a candidate channel 1-3 on four dimensions - price fit, buyer type, time budget, interview signal - out of 12. 9+/12 commit, 7-8 pilot your top two, 6 or less re-read transcripts.](channel-fit-canvas.svg)
 
 *Prefer paper? <a href="channel-fit-canvas.pdf" data-course-event="pdf-download">Download the canvas PDF</a> and score it with a pen.*
 

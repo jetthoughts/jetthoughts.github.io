@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+#
+# devx O7: catch course exhibit SVGs whose smallest text renders below the
+# 9px mobile legibility floor at a 390px content width. The visual suite masks
+# <img>, so under-floor SVGs ship invisibly (the defect the M1-M5 O2 rollout
+# fixed). This is the build-time net that stops the next one.
+#
+# floor: rendered_px = font_viewBox * 390 / viewBox_width  >=  9
+#   => font_viewBox >= 9 * viewBox_width / 390
+#
+# Usage: bin/check-svg-floor [dir]   (default: content/course)
+# Report-only today (exit 0 with a burn-down list) because ~55 not-yet-converted
+# reference/continuation SVGs still fail. Flip REPORT_ONLY=false to make it a
+# blocking gate once the whole course is converted.
+
+REPORT_ONLY = ENV.fetch("SVG_FLOOR_BLOCK", "") != "1"
+FLOOR_PX = 9.0
+MOBILE_W = 390.0
+root = ARGV[0] || "content/course"
+
+fails = []
+Dir.glob(File.join(root, "**", "*.svg")).sort.each do |path|
+  svg = File.read(path)
+  vb = svg[/viewBox="[\d.\s]*?([\d.]+)\s+[\d.]+"/, 1] and w = vb.to_f
+  next unless w && w > 0
+  sizes = svg.scan(/font-size:?\s*["']?([\d.]+)/).flatten.map(&:to_f).reject(&:zero?)
+  next if sizes.empty?
+  min = sizes.min
+  rendered = min * MOBILE_W / w
+  fails << [path, min, w, rendered.round(2)] if rendered < FLOOR_PX
+end
+
+if fails.empty?
+  puts "svg-floor: all #{Dir.glob(File.join(root, '**', '*.svg')).size} SVGs clear the #{FLOOR_PX}px@#{MOBILE_W.to_i} floor"
+  exit 0
+end
+
+puts "svg-floor: #{fails.size} SVG(s) under the #{FLOOR_PX}px@#{MOBILE_W.to_i} floor:"
+fails.each { |p, min, w, r| puts format("  %6.2fpx  (min-font %g @ viewBox %g)  %s", r, min, w, p) }
+exit(REPORT_ONLY ? 0 : 1)

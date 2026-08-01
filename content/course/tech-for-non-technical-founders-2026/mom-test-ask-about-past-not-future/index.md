@@ -45,7 +45,7 @@ After this lesson you will be able to: **write interview questions that ask abou
 
 Rob Fitzpatrick's book [The Mom Test](https://www.momtestbook.com/) (2013) named the technique that prevents the polite-yes problem. The core idea: ask interviewees to recount what they actually did the last time the problem happened, not what they think they'd do about a product you describe to them.
 
-![Five Mom Test question cards stacked: last-time, cost, workaround, priority, buying committee. Each card shows the pass and fail signal.](mom-test-script.svg)
+![Five stacked question cards - last-time, cost, workaround, priority, buying-committee. Each names the question, the wording to read aloud, a green PASS tell for real demand, and a ruby FAIL tell for the polite noise to reject.](mom-test-script.svg)
 
 ## The 5 questions
 

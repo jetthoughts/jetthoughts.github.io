@@ -1,72 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="phih2-title">
-  <title id="phih2-title">Product Hunt 3.1% per launch event vs Indie Hackers 23.1% per engaged post - two separate metrics, not one axis.</title>
-  <desc>Two separate stat cards. Left, Product Hunt: 3.1% per launch event, 387 launches studied, 89% of founders would not launch again, shown as a single one-day spike. Right, Indie Hackers: 23.1% per engaged post, shown as sustained repeated engagement. Bottom note: Product Hunt is not bad - it is a one-day event in a job that needs sustained motion over a quarter.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="ph-title ph-desc">
+  <title id="ph-title">Product Hunt is a one-day event; the job needs sustained motion - two separate metrics, not one axis.</title>
+  <desc id="ph-desc">Two separate stat cards. Left, Product Hunt in ruby: 3.1 percent per launch event, 387 launches studied, 89 percent of founders would not launch again, drawn as a single one-day spike. Right, Indie Hackers in green: 23.1 percent per engaged post, written as engagement not a launch, drawn as sustained repeated motion. Note: Product Hunt is not bad - it is a one-day event in a job that needs sustained motion over a quarter. Basis: OpenHunts 2024 - 387 launches, 156 founders surveyed; separate metrics, shown separately.</desc>
   <defs>
     <style>
-      .h      { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
-      .title  { font-size: 27px; font-weight: bold; fill: #1a1a1a; }
-      .sub    { font-size: 15px; fill: #666; font-style: italic; }
-      .stamptx{ font-size: 16px; font-weight: bold; fill: #fff; }
-      .big-ph { font-size: 68px; font-weight: bold; fill: #cc342d; }
-      .big-ih { font-size: 68px; font-weight: bold; fill: #2e7d32; }
-      .metric { font-size: 19px; font-weight: bold; fill: #1a1a1a; }
-      .fact   { font-size: 15px; fill: #333; }
-      .motif  { font-size: 13px; fill: #888; font-style: italic; }
-      .note   { font-size: 18px; font-weight: bold; fill: #1a1a1a; }
-      .card-ph{ fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .card-ih{ fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 32px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .hdr   { font-size: 20px; font-weight: 700; }
+      .bigr  { font-size: 48px; font-weight: 700; fill: #cc342d; }
+      .bigg  { font-size: 48px; font-weight: 700; fill: #2e7d32; }
+      .unit  { font-size: 20px; font-weight: 600; fill: #121212; }
+      .fact  { font-size: 18px; font-weight: 400; fill: #333333; }
+      .motif { font-size: 17px; font-weight: 400; fill: #666666; }
+      .note  { font-size: 20px; font-weight: 600; fill: #121212; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
   </defs>
 
-  <rect width="960" height="420" fill="#ffffff"/>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="480" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="464" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <text x="480" y="36" text-anchor="middle" class="h title">Two channels. Two different jobs.</text>
-  <text x="480" y="60" text-anchor="middle" class="h sub">OpenHunts 2024 - 387 launches, 156 founders surveyed. Separate metrics, shown separately.</text>
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">Two channels, two different jobs</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">Product Hunt is a one-day event; the job needs motion</text>
 
-  <!-- ============ PRODUCT HUNT CARD ============ -->
-  <rect x="34" y="82" width="430" height="256" rx="14" class="card-ph" transform="rotate(-0.5 249 210)"/>
-
-  <rect x="58" y="102" width="176" height="30" rx="15" fill="#cc342d"/>
-  <text x="146" y="123" text-anchor="middle" class="h stamptx">PRODUCT HUNT</text>
-
-  <text x="58" y="212" class="h big-ph">3.1%</text>
-  <text x="58" y="240" class="h metric">per launch event</text>
-
-  <text x="58" y="278" class="h fact">387 launches studied</text>
-  <text x="58" y="304" class="h fact">89% said they would not launch again</text>
-
-  <!-- one-day spike motif: flat, one sharp spike, flat again -->
-  <g transform="translate(300,150)">
-    <polyline points="0,60 44,60 58,14 72,60 150,60" fill="none" stroke="#cc342d" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-    <line x1="0" y1="60" x2="150" y2="60" stroke="#cc342d" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.5"/>
-    <text x="75" y="82" text-anchor="middle" class="h motif">one-day spike</text>
+  <!-- Product Hunt card (ruby = the caution reading) -->
+  <rect x="24" y="98" width="330" height="262" rx="4" fill="#ffffff" stroke="#cc342d" stroke-width="2"/>
+  <text x="40" y="132" class="gk hdr" fill="#cc342d">Product Hunt</text>
+  <text x="40" y="196" class="gk bigr">3.1%</text>
+  <text x="40" y="224" class="gk unit">per launch event</text>
+  <text x="40" y="262" class="sys fact">387 launches studied</text>
+  <text x="40" y="290" class="sys fact">89% would not launch again</text>
+  <!-- one-day spike motif (structure = stroked) -->
+  <g transform="translate(40,308)">
+    <line x1="0" y1="34" x2="274" y2="34" stroke="#cccccc" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <polyline points="0,34 118,34 137,4 156,34 274,34" fill="none" stroke="#cc342d" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
   </g>
+  <text x="189" y="356" text-anchor="middle" class="sys motif">one-day spike</text>
 
-  <!-- ============ INDIE HACKERS CARD ============ -->
-  <rect x="496" y="82" width="430" height="256" rx="14" class="card-ih" transform="rotate(0.5 711 210)"/>
-
-  <rect x="520" y="102" width="176" height="30" rx="15" fill="#2e7d32"/>
-  <text x="608" y="123" text-anchor="middle" class="h stamptx">INDIE HACKERS</text>
-
-  <text x="520" y="212" class="h big-ih">23.1%</text>
-  <text x="520" y="240" class="h metric">per engaged post</text>
-
-  <text x="520" y="278" class="h fact">Written as engagement,</text>
-  <text x="520" y="304" class="h fact">not a launch announcement</text>
-
-  <!-- sustained-engagement motif: repeated steady bumps -->
-  <g transform="translate(762,150)">
-    <line x1="0" y1="60" x2="150" y2="60" stroke="#2e7d32" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.5"/>
-    <rect x="4"   y="30" width="16" height="30" rx="3" fill="#2e7d32"/>
-    <rect x="28"  y="24" width="16" height="36" rx="3" fill="#2e7d32"/>
-    <rect x="52"  y="28" width="16" height="32" rx="3" fill="#2e7d32"/>
-    <rect x="76"  y="20" width="16" height="40" rx="3" fill="#2e7d32"/>
-    <rect x="100" y="26" width="16" height="34" rx="3" fill="#2e7d32"/>
-    <rect x="124" y="18" width="16" height="42" rx="3" fill="#2e7d32"/>
-    <text x="75" y="82" text-anchor="middle" class="h motif">sustained motion</text>
+  <!-- Indie Hackers card (green = the fit reading) -->
+  <rect x="366" y="98" width="330" height="262" rx="4" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+  <text x="382" y="132" class="gk hdr" fill="#2e7d32">Indie Hackers</text>
+  <text x="382" y="196" class="gk bigg">23.1%</text>
+  <text x="382" y="224" class="gk unit">per engaged post</text>
+  <text x="382" y="262" class="sys fact">Written as engagement,</text>
+  <text x="382" y="290" class="sys fact">not a launch announcement</text>
+  <!-- sustained-motion motif (data = filled bars) -->
+  <g transform="translate(382,308)">
+    <line x1="0" y1="34" x2="274" y2="34" stroke="#cccccc" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <rect x="6"   y="16" width="20" height="18" fill="#2e7d32"/>
+    <rect x="52"  y="10" width="20" height="24" fill="#2e7d32"/>
+    <rect x="98"  y="14" width="20" height="20" fill="#2e7d32"/>
+    <rect x="144" y="6"  width="20" height="28" fill="#2e7d32"/>
+    <rect x="190" y="12" width="20" height="22" fill="#2e7d32"/>
+    <rect x="236" y="4"  width="20" height="30" fill="#2e7d32"/>
   </g>
+  <text x="531" y="356" text-anchor="middle" class="sys motif">sustained motion</text>
 
-  <!-- ============ BOTTOM TAKEAWAY ============ -->
-  <rect x="34" y="352" width="892" height="52" rx="12" fill="#fff8e0" stroke="#b8860b" stroke-width="2"/>
-  <text x="480" y="384" text-anchor="middle" class="h note">Product Hunt is not bad - it is a one-day event in a job that needs sustained motion over a quarter.</text>
+  <!-- takeaway note band -->
+  <rect x="24" y="376" width="672" height="60" rx="4" fill="#faf7f2" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="360" y="401" text-anchor="middle" class="gk note">Product Hunt is not bad - it is a one-day event.</text>
+  <text x="360" y="425" text-anchor="middle" class="sys fact">The job needs sustained motion over a quarter.</text>
+
+  <!-- one basis line -->
+  <text x="360" y="460" text-anchor="middle" class="sys basis">Basis: OpenHunts 2024 - 387 launches, 156 founders surveyed; separate metrics</text>
 </svg>
