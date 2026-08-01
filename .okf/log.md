@@ -1,5 +1,115 @@
 # Bundle Update Log
 
+## 2026-08-01 (v0.2 migrate) - bundle-wide v0.1 -> v0.2 field migration
+
+* **Update**: ran the validator `--migrate` across `.okf/` (the skill-sanctioned
+  path for a whole v0.1 bundle - do not hand-edit). Mechanically converted every
+  legacy `timestamp` to `generated: { by: process:okf-migrate, at: <original> }`
+  (29 files) - an honest `process:` actor, NOT `human:`, so no fabricated review
+  tier; original dates preserved. Also folded the parseable `# Citations` link in
+  `architecture/css-pipeline.md` into `sources`. No external URLs dropped
+  (verified); the two dropped plain-text citations were `postcss.config.js`
+  (already the `resource`) and a repo doc path.
+* **Note**: 12 `# Citations` body lists remain (soft warnings) - their conversion
+  to `sources` is semantic, done migrate-as-touched. 31 log date-heading warnings
+  are the deliberate house-style suffixes on this append-only history.
+
+## 2026-08-01 (v0.2) - bundle adopts OKF v0.2 provenance/trust/lifecycle
+
+* **Update**: [root index](/index.md) - `okf_version` bumped 0.1 -> 0.2; added a
+  conventions note for the new optional frontmatter families (`generated`,
+  `verified`, `status`, `stale_after`) and the actor convention
+  (`<producer>/<version>` / `human:<id>` / `process:<id>`).
+* **Update**: [test-gates](/build/test-gates.md) - migrated to v0.2 trust fields:
+  `status: stable`, `generated`/`verified` by `claude/fable-5` (the caveats were
+  empirically verified this session - dtest x3 byte-identical, bin/test x2 green).
+  Replaces the bare `timestamp`.
+* **Note**: the other 34 concepts keep v0.1-style frontmatter (still conformant
+  under v0.2); they migrate honestly as maintainers touch them. No back-stamping
+  of provenance nobody performed.
+
+## 2026-08-01 (later) - dtest drift verified, CI back to critical, PR #425 review
+
+* **Update**: [test-gates](/build/test-gates.md) - ran `bin/dtest` x3 to hunt
+  flakiness. All 3 runs BYTE-IDENTICAL: only 7 mobile-codeblock screenshots red,
+  same diff_levels every run = deterministic amd64-emulation antialiasing, NOT
+  flaky. mermaid is now GREEN (self-hosted fonts + fonts.ready + CI re-record
+  fixed the drift) - the earlier "10 stale linux baselines" narrows to 7, all
+  green on CI-native. Trust CI; do NOT re-record locally.
+* **Update**: CI reverted PR runs to `test:critical` (was briefly `test:smoke`) -
+  the skip_area fix already makes critical ~46s on CI, so full 34-test coverage
+  costs little; smoke stays the local/dispatch fast tier. `.github/workflows/test.yml`.
+* **Fix**: `bin/test --smoke <file>` now rejects trailing file args (exit 2,
+  fail-fast before build) instead of silently ignoring `--smoke` (CodeRabbit
+  PR #425). Rakefile `SMOKE_TESTS` unanchored `test_course_landing` kept
+  intentional (matches both mobile + desktop course-landing renders).
+* **Creation**: [snap-diff-upstream-issues](/docs/20-29-testing-qa/screenshot-testing/20.11-snap-diff-upstream-issues-reference.md)
+  - two paste-ready gem bug reports: `Reporters::Default#generate` TypeError when
+  `failed_by` is the `"missing_image"` String; skip_area zero-match 5s wait.
+* **Update**: [test-speed-research-todo](/docs/20-29-testing-qa/screenshot-testing/20.10-visual-suite-speed-research-reference.md) -
+  added the drift-overview procedure for removing a skip_area/tolerance mask
+  (read `snap_diff_report.html` heatmap, one mask at a time, which masks to KEEP).
+* **Update**: CLAUDE.md - onboard via `/okf:okf`, run `/okf:okf maintain` before
+  every commit, default coding posture `/ponytail:ponytail ultra`.
+
+## 2026-08-01 - smoke test tier + test-speed profiling
+
+Profiled the visual suites (`TESTOPTS=--verbose bin/test`). Finding: ONE test,
+`test_codeblock_language_styles` (desktop+mobile), is 98.8s+97.2s = ~196s = 44%
+of the full 67-test / ~450s run - it loops 8 code-fence sections each doing a
+multi-capture `assert_stable_screenshot`. It also errors in the snap_diff Default
+reporter (`reporters/default.rb:25`, Symbol into Integer via String#[]) whenever
+a delayed codeblock diff needs formatting - external-gem bug, not monkeypatched.
+
+Shipped a smoke tier: `test:smoke` rake task + `bin/test --smoke` flag (reuses
+the build + restore-on-green wrapper; `bin/dtest --smoke` passes through to the
+container). 17 curated basics+bummers, excludes the `_sections` sweeps and the
+codeblock elephant. Measured: host 50.5s green (17/17), Docker 41.6s (Docker
+~18% faster, confirming the "Docker is faster" report) with 1 known-stale
+failure (linux mermaid baseline diff_level 0.0693, byte-identical across runs -
+see project-stale-linux-baselines-pending, NOT a smoke defect). vs bin/test
+critical ~300s -> smoke is ~6x faster. Smoke is NOT a milestone/PR gate;
+test:critical + bin/dtest at PR prep stay the bar.
+
+Parallel-test execution (host process-sharding + Docker) deferred as a written
+spike: docs/docs/20-29-testing-qa/screenshot-testing/20.10-visual-suite-speed-research-reference.md (O1 kill the codeblock
+elephant, O2 process sharding, O3 Docker-vs-host, O4 direct-visit). Thread
+parallelism is out - Capybara.threadsafe=false + shared current_driver global.
+Code: Rakefile (SMOKE_TESTS + test:smoke), bin/test (--smoke flag).
+
+## 2026-08-01 - real elephant found (skip_area waits) + self-hosted fonts/mermaid
+
+The 196s codeblock elephant was NOT stability retries and NOT font swaps -
+instrumented probe showed the stable loop exits in 2x0.6s attempts; the ~10s
+per screenshot was the gem resolving skip_area CSS selectors via
+`all(selector, visible: true)`, where Capybara waits default_max_wait_time
+(5s) for EVERY selector with zero visible matches (`%w[picture img]` on the
+image-less codeblock fixture = 10.05s x 13 screenshots). Fix at the
+assert_screenshot choke point: pin `final_options[:wait] ||=
+Capybara.default_max_wait_time`, wrap assert_matches_screenshot in
+`Capybara.using_wait_time(0)`; plus a document.fonts.ready wait before
+capture (font-swap flakiness), and the 8 stability_time_limit:1 overrides in
+blog_special removed. Measured: blog_special 247s->34.9s, bin/test critical
+301s->81s (green x2, zero drift), bin/dtest critical ~6-7min->46s.
+Lesson: the "stability retries" theory survived two sessions and was wrong -
+one attempt-level probe killed it in minutes. Profile before believing.
+
+Same day: self-hosted Caveat + Space Grotesk + mermaid.min.js (was Google
+Fonts css2 + jsdelivr). Same woff2 binaries + unicode-ranges, sha384 of
+vendored mermaid IDENTICAL to the old SRI pin. Prod loses 2 preconnects +
+css2 + font + CDN js round trips on mermaid pages; visual tests are now
+hermetic (zero third-party network). Gate: 2 macOS mermaid baselines updated
+intentionally (font deterministically ready at mermaid.run() -> SVG measures
+~8% more compact; evaluated side by side, quality equivalent). Linux mermaid
+baselines need a CI workflow_dispatch update-baselines run after merge -
+never re-record locally (emulation drift).
+
+Hugo build (research, no changes): 11.4s memory-render; top template costs
+are _partials/img/generic.html (16.5s cumulative, 104 calls),
+clients/single (1.56s avg), img/hero-big + img/hero (~14s combined);
+css-inline is 100% cached. Follow-up lever if build speed matters:
+partialCached on stable img partials.
+
 ## 2026-07-31 (R3-2 CI correctness + cost)
 
 * **Update**: [ci-gates](/build/ci-gates.md) - DevX R3-2: hugo_stats.json
@@ -430,3 +540,4 @@ ever come back black on a light-mode-recorded tree, the pin is
 `"blink-settings" => "preferredColorScheme=1"` in CHROME_ARGS (verified on
 Chrome 151 --headless=new; `--force-prefers-color-scheme=light` is not a
 real switch).
+

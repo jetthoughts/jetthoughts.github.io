@@ -4,7 +4,12 @@ title: CSS Build Pipeline (PostCSS + per-bundle PurgeCSS)
 description: PostCSS pipeline that concatenates per-page CSS resource slices and purges unused rules per bundle before shipping.
 resource: postcss.config.js
 tags: [css, build, performance]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-12T00:00:00Z
+sources:
+  - resource: "/workflows/css-maintainability-plan.md"
+    title: "css-maintainability-plan"
 ---
 
 # Overview
@@ -42,9 +47,3 @@ ownership is tracked in
 - Extract whole rule sets; keep page-specific `.fl-node-{hash}`
   selectors in their original files.
 - Run `bin/rake test:critical` after each extraction.
-
-# Citations
-
-[1] `postcss.config.js`
-[2] `docs/workflows/css-consolidation.md`
-[3] [css-maintainability-plan](/workflows/css-maintainability-plan.md)

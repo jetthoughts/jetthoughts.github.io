@@ -320,8 +320,8 @@ memory_namespaces:
 - `/knowledge/50.01-global-file-management.md` - Anti-duplication standards
 
 ### **jt_site Specific Documentation**
-- `/projects/jt_site/docs/60.01-agent-guidance-reference.md` - jt_site agent guidance
-- `/projects/jt_site/docs/60.06-test-format-requirements-reference.md` - Test format requirements
+- `/projects/jt_site/docs/60-69-project-management/60.01-agent-guidance-reference.md` - jt_site agent guidance
+- `/projects/jt_site/docs/60-69-project-management/60.06-test-format-requirements-reference.md` - Test format requirements
 - `/projects/jt_site/docs/visual_testing_delegation_workflows.md` - Visual testing workflows
 
 ---

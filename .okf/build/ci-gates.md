@@ -4,7 +4,9 @@ title: CI gates (GitHub Actions)
 description: PR CI runs Hugo build, unit tests, a path-scoped broken-internal-link crawl (lychee), and a report-only visual gate on the pinned rendering stack. Sync fan-out is gated - no-op sync runs deploy nothing.
 tags: [ci, github-actions, testing, link-check]
 resource: .github/workflows/link-check.yml
-timestamp: 2026-07-31T16:30:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-31T16:30:00Z
 ---
 
 # What CI enforces on a PR

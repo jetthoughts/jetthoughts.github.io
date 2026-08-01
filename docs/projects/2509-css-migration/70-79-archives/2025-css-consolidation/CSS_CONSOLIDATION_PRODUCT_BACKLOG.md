@@ -243,8 +243,8 @@ Complete comprehensive consolidation of all remaining CSS files, achieving 100% 
 
 - **CSS Tracking Manifest**: `/tmp/css_tracking.csv`
 - **Visual Testing Workflows**: `/projects/jt_site/docs/visual_testing_delegation_workflows.md`
-- **TDD Enforcement**: `/projects/jt_site/docs/60.03-tdd-quality-enforcement.md`
-- **Test Format Requirements**: `/projects/jt_site/docs/60.06-test-format-requirements-reference.md`
+- **TDD Enforcement**: `/projects/jt_site/docs/60-69-project-management/60.03-tdd-quality-enforcement.md`
+- **Test Format Requirements**: `/projects/jt_site/docs/60-69-project-management/60.06-test-format-requirements-reference.md`
 - **Global TDD Methodology**: `/knowledge/20.01-tdd-methodology-reference.md`
 
 ---

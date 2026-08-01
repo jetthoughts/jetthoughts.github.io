@@ -4,7 +4,9 @@ title: Course template PDFs
 description: bin/generate-template-pdfs regenerates the downloadable course PDFs from built pages; run it after editing any template chapter.
 resource: bin/generate-template-pdfs
 tags: [build, pdf, course]
-timestamp: 2026-07-13T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-13T00:00:00Z
 ---
 
 The course offers downloadable PDF versions of its template chapters

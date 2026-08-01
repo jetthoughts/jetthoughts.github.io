@@ -100,10 +100,26 @@ class ApplicationSystemTestCase < Minitest::Test
   def assert_screenshot(name, **options)
     has_css?("body", wait: options.delete(:wait) || 2)
 
+    # Fonts settled before capture: a webfont swapping in mid-capture reflows
+    # text bimodally (the "font-swap race" this suite otherwise masks with
+    # skip_areas, 0.03 tolerances, and stability retries). fonts.ready
+    # resolves instantly once fonts are cached, so warm sessions pay ~0.
+    page.evaluate_async_script("var done = arguments[0]; document.fonts.ready.then(function() { done(true) })")
+
     section_config = screenshot_config_for(name)
     final_options = section_config.merge(options)
 
-    assert_matches_screenshot(name, **final_options)
+    # skip_area CSS selectors resolve via Capybara `all(sel, visible: true)`
+    # INSIDE the gem, which waits default_max_wait_time (5s) for EVERY selector
+    # with zero matches - `%w[picture img]` on an image-less page = 10s per
+    # screenshot (measured; it was 44% of the whole suite). Selectors that do
+    # match resolve instantly either way, so scope the implicit wait to 0 and
+    # pin the capture wait explicitly (the stability loop needs a real one -
+    # with wait=0 the gem rejects stability_time_limit > wait).
+    final_options[:wait] ||= Capybara.default_max_wait_time
+    Capybara.using_wait_time(0) do
+      assert_matches_screenshot(name, **final_options)
+    end
   end
 
   def screenshot_config_for(name)

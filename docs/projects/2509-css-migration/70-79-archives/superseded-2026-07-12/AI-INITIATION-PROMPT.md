@@ -347,8 +347,8 @@ If you hit a problem, report BEFORE attempting a fix:
 | Review testing protocol | `docs/projects/2509-css-migration/70-79-archives/agent-era/CSS_PROCESSING_TEST_PROTOCOL.md` |
 | Understand cascade constraints | `docs/projects/2509-css-migration/REVISED-CONSOLIDATION-PROCESS.md` |
 | Quick consolidation rules | `docs/workflows/css-consolidation.md` |
-| Campaign history (what worked) | `docs/CSS_CONSOLIDATION_CAMPAIGN_SUMMARY.md` |
-| Sprint backlog reference | `docs/CSS_CONSOLIDATION_QUICK_REFERENCE.md` |
+| Campaign history (what worked) | `docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/CSS_CONSOLIDATION_CAMPAIGN_SUMMARY.md` |
+| Sprint backlog reference | `docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/CSS_CONSOLIDATION_QUICK_REFERENCE.md` |
 
 ---
 

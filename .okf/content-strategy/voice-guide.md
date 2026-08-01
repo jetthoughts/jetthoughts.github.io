@@ -4,7 +4,9 @@ title: JetThoughts Voice Guide — ICP-E Content
 description: Canonical voice reference for all founder-facing content (blog, landing pages, emails, social) — tone spectrum, banned words, and anti-AI structural patterns.
 resource: docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md
 tags: [voice, content-strategy, writing]
-timestamp: 2026-04-11T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-04-11T00:00:00Z
 ---
 
 # Overview

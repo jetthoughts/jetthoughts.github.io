@@ -24,6 +24,18 @@ if [ "${1:-}" = "--build" ]; then
   shift
 fi
 
+# --smoke swaps the critical suite for the leaner smoke tier (~60s), reusing
+# the same build + restore-on-green wrapper. No test files may follow it.
+rake_task="test:critical"
+if [ "${1:-}" = "--smoke" ]; then
+  rake_task="test:smoke"
+  shift
+  if [ $# -gt 0 ]; then
+    echo "bin/test: --smoke runs a fixed set; drop the file arg or drop --smoke" >&2
+    exit 2
+  fi
+fi
+
 if [ -n "${PRECOMPILED_ASSETS:-}" ]; then
   # Caller (bin/dtest, CI) already built the site and pointed us at it;
   # the test container has no hugo to (re)build with, so trust what we're given.
@@ -36,7 +48,7 @@ export PRECOMPILED_ASSETS=1
 export HUGO_DEFAULT_PATH="$DEST"
 
 if [ $# -eq 0 ]; then
-  bin/rake test:critical
+  bin/rake "$rake_task"
 else
   bundle exec ruby -Itest "$@"
 fi

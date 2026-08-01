@@ -1,6 +1,9 @@
 # Claude Code Configuration — JetThoughts Blog
 
-**Type**: Hugo static site blog | **Build**: `bin/hugo-build` | **Test**: `bin/qtest --changed` (routine) / `bin/rake test:critical` (milestones)
+**Coding posture**: activate `/ponytail:ponytail ultra` at session start and hold it — radical KISS/YAGNI, deletion over addition, shortest working diff, naive over clever. Applies to every code/config change in this repo.
+
+**Type**: Hugo static site blog | **Build**: `bin/hugo-build`
+**Test**: `bin/qtest --changed` (per change — tests the pages your diff touches) / `bin/test --smoke` (fixed 17-test core net, ~50s / ~30s CI) / `bin/rake test:critical` (milestones) / `bin/test` + `bin/dtest` (PR prep). qtest and smoke are complementary, not redundant: qtest follows your diff, smoke is a constant basics check.
 **CSS**: PostCSS pipeline | **Content**: `content/blog/` (Markdown + Hugo frontmatter)
 
 ---
@@ -14,7 +17,7 @@ Always read these files before making changes. They define the project's archite
 | `@config/_default/hugo.toml` | ANY Hugo/site config change |
 | `@themes/beaver/layouts/blog/list.html` | Blog index/listing changes |
 | `@themes/beaver/layouts/partials/blog/img-cropped.html` | Blog thumbnail/cover image changes |
-| `@themes/beaver/layouts/partials/seo/enhanced-meta-tags.html` | SEO/og:image/meta tag changes |
+| `@layouts/partials/seo/enhanced-meta-tags.html` | SEO/og:image/meta tag changes (root-level override, not the theme copy) |
 | `@themes/beaver/layouts/partials/page/cover_image.html` | Blog post cover rendering |
 | `@.stitch/design.md` | Cover image generation |
 | `@docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` | ANY content, blog post, design, landing page, or marketing work |
@@ -48,26 +51,24 @@ Distilled operational knowledge lives in the OKF v0.1 bundle at `.okf/` (markdow
 
 ## 🔍 Research Protocol (MANDATORY)
 
-**Session start**: Always read `@docs/workflows/BASE_HANDBOOK.md`, `@docs/workflows/flow-router.md`, and `@.okf/index.md` (the OKF knowledge bundle - load it up front to understand the build/test/CI/content situation, then follow its links into only the concepts relevant to the task).
+**Session start (onboarding)**: Always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflows/flow-router.md`, and run **`/okf:okf`** (consume scope) to onboard from the `.okf/` bundle — it loads `index.md` and follows links into only the concepts the task needs. Don't hand-read the bundle when the skill does it correctly.
+
+**Before every commit**: run **`/okf:okf maintain`** to sync the bundle with what the commit changed (concept file + its `timestamp`, section `index.md`, dated `.okf/log.md` entry) so bundle sync rides the same commit. A commit that shipped durable knowledge without an OKF update is NOT done.
 
 Prefer **skills** over agents. Use agents only when the user or the selected workflow explicitly requires them.
 
-Always use claude-context MCP search **before** making changes:
+**Markdown search (docs/, content/, .okf/, knowledge/) — use `qmd` FIRST** (Paul 2026-08-01). The repo is indexed as qmd collection `jt-site` (run `qmd embed` after big doc batches to refresh vectors):
 
-1. `Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "[pattern]"`
-2. `Search the codebase at /Users/pftg/dev/jetthoughts.github.io/knowledge for: "[topic]"`
-3. `Get library docs for "[framework]"`
+1. Known words/titles/slugs → BM25: `qmd search "skip_area selector wait" -c jt-site -n 5`
+2. Conceptual/indirect recall → structured query (write the fields yourself): `qmd query $'intent: ...\nlex: exact anchor words\nvec: paraphrase concepts\nhyde: a plausible answer paragraph' -c jt-site`
+3. Then fetch full sources with `qmd get <path>` / `qmd multi-get "#id1,#id2"` — never answer from snippets alone.
 
-**Option 2 — DeepWiki** (when claude-context doesn't have enough context or for repo-level questions):
-- `ask_question` about `jetthoughts/jetthoughts.github.io` for AI-powered answers about the repo
-- `read_wiki_structure` / `read_wiki_contents` for browsing repo documentation
-
-**After:** use `rg`/`ls` for exact filenames, slugs, and fallback searches. For code/content patterns, use claude-context MCP semantic search first, then DeepWiki as fallback.
+**For CODE (templates/CSS/Ruby)**: claude-context MCP (`Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "[pattern]"`) or grepai/tokensave per the global search-tool table; DeepWiki (`ask_question` on `jetthoughts/jetthoughts.github.io`) for repo-level questions. **After:** `rg`/`ls` for exact filenames and fallbacks.
 
 ### Finding blog posts to reference (MANDATORY for content work)
-When writing a blog post and looking for internal links, **always use claude-context first**:
+When writing a blog post and looking for internal links, search with **qmd first**:
 ```
-Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "transparency weekly reports"
+qmd search "transparency weekly reports" -c jt-site -n 5
 ```
 For exact slug/tag lookups, see the post index at `docs/blog-post-index.md` (584 posts, 135 tags, process posts table).
 **Never guess slugs** — verify with `ls content/blog/<slug>/index.md` before linking.
@@ -84,7 +85,7 @@ Follow official methodology from `/knowledge/`:
 ### Visual Regression (MANDATORY for CSS/HTML changes)
 - **Tolerance**: 0.0 for refactoring (zero visual changes), ≤0.03 for new features only
 - **Protocol**: Capture baseline screenshots BEFORE changes → compare AFTER → block commit on any difference > 0% during refactoring
-- **Reference**: `docs/visual_testing_delegation_workflows.md`
+- **Reference**: `docs/20-29-testing-qa/screenshot-testing/20.02-screenshot-testing-workflow-tutorial.md`
 
 ### Chrome DevTools Validation (MANDATORY after HTML/CSS/JS changes)
 1. Start Hugo dev server, open page in Chrome DevTools
@@ -119,7 +120,13 @@ Follow official methodology from `/knowledge/`:
 - **Zero ad hoc test scripts**: Use repo-provided test commands: `bin/qtest --changed` (routine), `bin/rake test:critical` (milestones), `bin/test`/`bin/dtest` (PR prep only)
 - **No Python scripts for analysis**: Prefer `rg`, `sed`, `awk`, and shell tools
 - **Zero tolerance for duplicates**: No `*_refactored.*`, `*_new.*`, `*_backup.*` files
-- **New-doc locations (3 layers)**: (1) **company** things that persist across every opportunity — vision/mission, the operating system, the opportunity portfolio — live in `docs/business/`; (2) a **project** validating one opportunity/initiative gets its own `docs/projects/<YYMM-slug>/` folder (dated-slug convention: 2509/2510/2604/2605/2607); (3) reusable **process how-tos** go under `docs/workflows/`. Everything else edits an existing file. Do NOT put the business/OS under `docs/workflows/` (how-tos only) or collapse the company layer into a single project — the company OS runs ALL projects, and one bet is "Validating" at a time (flagged 2026-07-22: the Vibe Code Rescue OS first landed in workflows/, then wrongly nested the whole business inside project 2607; the company layer now lives in `docs/business/` with 2607 as portfolio bet #1).
+- **New-doc locations — pick the RIGHT home, `docs/workflows/` is NOT a catch-all** (Paul 2026-08-01: dev/tech docs kept getting dumped in workflows/). Decide in this order:
+  1. **Engineering / tech reference** (test strategy, architecture, security, deployment, CI, APIs, AI-intelligence) → the **Johnny Decimal** area, one per domain: `docs/10-19-core-development/`, `docs/20-29-testing-qa/` (with `performance-testing/`, `screenshot-testing/` subdirs), `docs/30-39-architecture-design/`, `docs/40-49-security-compliance/`, `docs/50-59-deployment-operations/`, `docs/60-69-project-management/`, `docs/70-79-ai-intelligence/` & `70-79-templates-boilerplates/`, `docs/80-89-integration-apis/`, `docs/90-99-content-strategy/`. File naming: `NN.NN-descriptive-name-{reference|tutorial|how-to}.md`; check the area's `README.md`/existing numbers before picking one.
+  2. **Company / OS** (vision, operating system, opportunity portfolio) → `docs/business/`.
+  3. **A project** validating one opportunity → its own `docs/projects/<YYMM-slug>/` (dated-slug: 2509/2510/2604/2605/2607).
+  4. **ADRs** → `docs/adr/`; **incidents/postmortems** → `docs/incidents/`; **design tokens/system** → `docs/design-system/`.
+  5. **`docs/workflows/`** is ONLY for **cross-cutting pipeline/process how-tos** that span domains (blog-pipeline, linkedin-pipeline, flow-router, commands, BASE_HANDBOOK) — NOT engineering reference, NOT research notes. If a doc belongs to one JD domain, it goes in that domain, not here.
+  Everything else edits an existing file. Do NOT put the business/OS under `docs/workflows/` or collapse the company layer into a single project — the company OS runs ALL projects, one bet is "Validating" at a time (flagged 2026-07-22: the Vibe Code Rescue OS first landed in workflows/, then wrongly nested the whole business inside project 2607; the company layer now lives in `docs/business/` with 2607 as portfolio bet #1).
 - **Reflection triggers**: User reports "code is bad" / "over-engineered" → HALT, 5-Why analysis, fix config, THEN proceed
 - **Mandatory self-critique on voice-sensitive content (BLOCKING)**: For any draft or revision of LinkedIn posts, blog posts, or marketing copy, invoke `reflexion-reflect` (Standard Path) BEFORE first handback. After user pushback on the same draft, escalate to `reflexion-critique` (multi-judge debate) per the LinkedIn pipeline §3 / blog pipeline equivalent. Solo iteration past first delivery consistently misses pattern-level tells (over-narration, cinematic beat-marking, shape-coded copywriting) — observed on the 2026-05-11 Monday Jira-not-progress post (5 user corrections after the AI rubric scored 0/10).
 - **Content-only changes SKIP the visual suites (Paul 2026-07-31: "we can flex tests if we change only content and no html/css changes")**: a change that touches ONLY markdown prose/frontmatter — no `themes/`, no `layouts/`, no `*.css`, no inline HTML/SVG in the body — needs `bin/hugo-build` (validators + banned-string ratchet) and the rendered scroll gate on the edited pages. It does NOT need `bin/qtest`, `bin/test`, or `bin/dtest`; qtest correctly reports "no visual-affecting changes" for these. The moment a diff touches a template, a stylesheet, or body HTML/SVG, the gate below applies in full — check the actual diff, not the intent.
@@ -144,68 +151,14 @@ Repo voice guides and workflow docs override generic writing, SEO, or humanizer 
 2. `docs/90-99-content-strategy/thoughtbot-style-analysis-2025-10-15.md` — thoughtbot patterns
 3. `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` — ICP-E profile
 
-**Zero tolerance AI patterns** — reject on sight:
-- Rule of three, signposting, bold inline-header lists, negative parallelism
-- Triple rhetorical questions, slogany closings, therapist voice, copula avoidance
-- Impersonal fragment stacking ("No tests. Open endpoints. Corrupted data.")
-- Noun stacking without human subject ("React + Rails, clean conventions, the demo sailed")
-- Sustained staccato (3+ consecutive short fragments = fake burstiness)
-- Command structure repetition (3+ paragraphs starting with imperatives)
-- Telling instead of showing ("the error handling was bad" → describe the specific failure mechanic)
-- Apologetic caveats ("every project is different", "it depends on the use case")
-- Fluffy AI narration (dramatic present-tense "The alerts fire correctly. Then someone upgrades..." - use specific past-tense practitioner stories instead)
-- Fake authority generalization ("We've seen this on every codebase" - use specific count: "The last three codebases we inherited...")
-- Timeline fabrication ("last year" without checking if the technology existed then)
-- Use `-` not `—` for all dashes in content
-- **The "who" test:** every sentence needs a person doing something
-- **The "show" test:** replace adjectives with concrete scenarios the reader can picture
-- **The "practitioner" test:** replace generalized scenarios with specific incidents (name the client, version, timeline, exact failure)
-- **The 90/10 rule:** ≥90% education, ≤10% promotion. Reader learns something useful even if they never contact us
-- **Trade-offs:** always acknowledge what the proposed solution fails to do or what it costs
-- See voice guide section "Banned structural patterns" for full list + fixes
-
-**Cross-post repetition gates (BLOCKING for cluster posts):**
-- Before finalizing any post in a topic cluster, run two scans:
-  1. **Anecdote scan** — search the cluster for any specific story this draft uses (named client, dollar amount, technical mechanic, exact incident). If the same story already anchors a sibling post, pick a different one. Caught 2026-05-09: the URL-ID/BOLA story appeared in both `vibe-coding-crisis-ai-code-debt` opener AND `47-startups-failed-same-coding-mistake` body. Caught 2026-05-10: the $40K + React+Rails dollar-anchor was repeated across the same cluster.
-  2. **Proof-signal scan** — verify the post's primary diagnostic signal (staging URL / test coverage / commit size / secrets storage / rollback drill / user-impact verification / contract clauses) isn't already the LEAD signal in another sibling. Distribute distinct signals across posts so each post owns one anchor. Caught 2026-05-10: scipab Path B initially used "staging URL" for the Situation question, exactly the LinkedIn Mon/Tue lead signal. Fixed to "Which users touched what shipped this week?" — user-impact verification, unused elsewhere in the cluster.
-- See `~/.claude/projects/-Users-pftg-dev-jetthoughts-github-io/memory/feedback_cross_post_signal_repetition.md` for the signal portfolio map. See `feedback_hook_bank_diversity.md` for opening-shape rotation (separate concern).
-
-**Slop detector + shape-tell critic both required:**
-- Sentence-level slop ≤25/100 is necessary but not sufficient. User has flagged "still feels AI" three times in 2026-05-09 / 2026-05-10 / 2026-05-28 sessions when slop detector passed.
-- After slop passes, spawn a shape-tell critic with this explicit pattern list: essay arc (hook → pivot → thesis → evidence → caveat → close), dual-source statistical opener, pivot sentences ("That's the experience of...", "Here's what's underneath...", "The bigger problem is..."), listicle scaffolding cloned 3+ times (Strong/Weak/Tips, 5-item lists repeated), "The..." paragraph-opener density >20%, slogany flips ("X works. Y doesn't.", "It looks Y. It isn't Z.", "The framework is a diagnostic, not a cure."), definitional cadence ("X is hypothesis-validation tooling."), "You're not throwing away X" reassurance tic.
-- **2026-05-28 additions (caught by 4-persona M1-M3 audit):** slogany reveal-twist flip ("X hadn't been Y - Z had been", "It's not about X. It's about Y.", "X wasn't Y - it was Z"); cost-stacked tri-list opener ("$X-$Y in A, N B, one of M C" - reads as workshop slide); cute aphoristic flourish closer ("polite noise", "the kind smile that costs you a year", "the helpful answer is the trap", "Everything else is your mom being nice"); anonymous-named-founder opener template repeated 3+ chapters in a row (Module 2 had Priya/Maya/ed-tech-founder/consumer-app-founder back-to-back); cinematic time-cut narration ("Nine months later: a product, a $62K dev invoice, zero paying customers"); fabricated cohort stats with no source ("4 of 5 real interviewees", "3-5× the rate", "30-45% reply rates").
-- **Opener-shape rotation gate (NEW):** when reviewing a multi-chapter sprint (3+ chapters in the same module), explicitly count the opener shape of each chapter. No 3+ consecutive chapters may share the same opener template (anonymous-founder vignette, year-stamp cohort, named-research-result, etc.). The 2026-05-28 Module 2 audit found 4 consecutive chapters opening with "A [adjective] founder we [verb]" - a regression nobody caught because single-chapter review can't see template repetition.
-- **Banned-pattern regression sweep (NEW):** every revision pass must run `grep -rn "## Why this matters\|Founders who\|Most founders\|Founders we worked with"` across edited chapters before handback. Patterns previously removed regress under time pressure - the 2026-05-28 audit found Case 25 banned heading restored in 3 of 9 chapters.
-- See `feedback_slop_detector_misses_shape_tells.md` and `feedback_voice_regression_m1_m3_2026_05_28.md` for the full pattern list. Run alongside the slop detector, not after.
-
-**dev.to import ICP gate:**
-- Posts synced from dev.to (`source: dev_to` in frontmatter) are auto-imported without an ICP filter. Before any dev.to-imported post is shipped or referenced, audit it against the JT ICP-E voice guide. If 80+/100 AI-feel or off-thesis (generic management/productivity content with no JT-rescue angle), either rewrite for the ICP or flip to `draft: true`. Caught 2026-05-10: scipab post (Dec 2024 dev.to import) was 92/100 AI-feel, orphan content. Rewrote as "SCIPAB for non-technical founders to interrogate their dev shop."
-
-**Markdown code fence: use `html` not `erb`:**
-- Hugo's Chroma syntax highlighter doesn't recognize `erb` as a lexer alias. Fences using ```erb render as plain `<pre><code>` without the Dracula wrapper — the theme's light foreground (`#f8f8f2`) on missing-background renders as invisible text. The `html` fence highlights HTML tags correctly while ERB `<%= %>` renders as plain text inside the dark block. 10 posts hit this bug before the 2026-05-10 fix; verified by HTML diff comparing the wrapper `<div class="highlight"><pre style="...">` (present for `html`/`ruby`) vs missing for `erb`.
-
-**Visual verification gate (BLOCKING for any new media element):**
-- After adding ANY new visual (Mermaid diagram, SVG infographic, image, table, chart, callout block, hero image), MUST verify via chrome-devtools MCP before declaring done. The "Screenshot taken" gate is necessary but not sufficient.
-- Take screenshots at BOTH desktop (1280×800) and mobile (390×844) viewports. The first-fold experience is what determines whether the visual wins the 3-second hook.
-- Score honestly from a user perspective against these 4 criteria — and write the scores in the commit message OR the user-facing report:
-  1. **Is it a great look?** — visual harmony, font legibility, color contrast, alignment, fits the brand
-  2. **Is it functional?** — info is readable without effort, doesn't require zooming, mobile renders, no overflow
-  3. **Would it make a person want to read more?** — earns the next scroll OR pushes the reader away with visual fatigue
-  4. **Is it helpful overall?** — orients vs overwhelms; teaches vs decorates; saves parse time vs costs it
-- Any "NO" or "MIXED" on criteria 3 or 4 = ROLLBACK or REDESIGN before commit. Don't ship visuals that fail user-perspective scoring just because they're technically rendering.
-- Verify the visual's POSITION on first-fold: at the typical laptop viewport (1280×800), does the new visual appear ABOVE the fold? If it doesn't, it cannot win the 3-second hook — relocate or accept it as a mid-page visual break (different acceptance criteria).
-- For Mermaid diagrams specifically: measure rendered height. If > 2× viewport height, the diagram is too tall — reader perceives it as a wall, not a hook. Caught 2026-05-19: my Hero Roadmap rendered at 1551px on mobile (2× viewport) and the cursive font's dash-strikethrough effect on phase labels degraded legibility further.
-- **Visual SCROLL gate (BLOCKING for any new/edited content page, not just new media)**: walk the FULL page section-by-section in chrome-devtools at 1280×800 AND 390×844, screenshot each scroll view, and actually inspect each screenshot before handback. Canonical protocol + per-view defect checklist + numeric probes: `docs/workflows/visual-scroll-gate.md`. Text validators cannot see rendered output — the 2026-07-10 Module 3 pass caught mermaid node clipping, SVG text crossing artwork borders, a stale cover badge on a freshly wired og:image, a wrong-direction "diagram above" reference, and a renumber leftover INSIDE an SVG, all invisible to the banned-string ratchet. One screenshot of the hero is NOT this gate.
-
-**Cognitive load + F-pattern rules (mandatory for long-form posts > 800 words):**
-- Research-grounded rules from `docs/projects/2605-tech-for-non-technical-founders/10-19-research/10.05-content-organization-patterns-2026.md` Part 2 (Gloria Mark / Pew 2026 / NN/g F-pattern / Sweller CLT). Pew 2026: 71% of readers scroll past within 3 seconds without a visual hook; Gloria Mark 2026: per-screen attention = 43s.
-- **First 3 seconds visual hook (hero rule):** every long-form post needs a visual within the first viewport - hero diagram, infographic, hero illustration, or a strong styled callout. Pure-text hero = guaranteed dropout for 71% of readers per Pew 2026. Decorative photography does NOT count.
-- **Repetitive parallel sections must NOT be 6+ identical bullets or 6+ identical table rows.** Module indexes, template lists, mistake lists, decision lists — break into a card grid OR add per-item icons. Single-column tables with 6+ rows and identical-format bullet lists with 6+ items both trigger the F-pattern "give up + vertical scan only" failure mode (NN/g eye-tracking).
-- **Decision-oriented sections use decision-aid format.** Anywhere the post asks "if X then Y" (rescue triage, decision trees, scoring tables, "should you...") render as flowchart/decision-table, not as a numbered list. Founder readers are in high cognitive load already; a flowchart cuts parse time vs. prose.
-- **Labels INSIDE diagrams, not beside them** (Sweller's split-attention effect). A labeled flowchart works. A flowchart followed by a 200-word "what this shows" paragraph increases cognitive load. If the diagram needs a separate explanation paragraph, fix the diagram - integrate the labels.
-- **No decorative visuals.** Stock photography of "happy founders at laptops," abstract gradients, generic icon arrays without informational content all violate the CLT integration rule. If removing the visual wouldn't lose information, the visual is decorative - delete it.
-- **One visual break per H2.** Plain prose blocks ≥3 H2s in a row = density problem; readers drop off. Acceptable visual breaks: diagram, table, code block, pull-quote callout, icon row. Mermaid diagrams count; bold paragraph leaders do NOT.
-- **Hand-drawn / Excalidraw-style sketches**: allowed when the sketch IS the diagram (informational); rejected when the sketch is decorative ornament beside a separate diagram. Per voice guide, prefer Mermaid + sketchy SVG over polished corporate infographics for the JT brand.
+**BLOCKING gates** — `blog-pipeline.md` enforces each; named here so none is skipped, detail lives in its canonical home (dedup, not duplicate):
+- **Voice / zero-tolerance AI patterns** — reject rule-of-three, signposting, negative parallelism, sustained staccato, telling-not-showing, apologetic caveats, fake-authority generalization, timeline fabrication; use `-` not `—`. The who/show/practitioner tests + the 90/10 rule + always-name-trade-offs. Full list + fixes: voice-guide "Banned structural patterns".
+- **Slop ≤25 + shape-tell critic** — slop score is necessary, NOT sufficient (user flagged "still feels AI" 3× when slop passed). After slop passes, run the shape-tell critic (essay-arc, pivot sentences, slogany flips, definitional cadence, 2026-05-28 reveal-twist / cost-stacked opener / cinematic time-cut / fabricated-cohort-stats tells). Full pattern lists: voice-guide + memories `feedback_slop_detector_misses_shape_tells.md`, `feedback_voice_regression_m1_m3_2026_05_28.md`. **Every revision runs the regression sweep before handback** (banned patterns regress under time pressure): `grep -rn "## Why this matters\|Founders who\|Most founders\|Founders we worked with"` across edited chapters, and count opener shapes — no 3+ consecutive chapters share an opener template.
+- **Cross-post repetition** (cluster posts) — anecdote scan + proof-signal scan so no story or diagnostic signal double-anchors sibling posts. Detail + the signal-portfolio map: blog-pipeline.md, memories `feedback_cross_post_signal_repetition.md` / `feedback_hook_bank_diversity.md`.
+- **New-media visual gate** — after ANY new visual, verify via chrome-devtools at 1280×800 AND 390×844 (not just "screenshot taken") and score 4 criteria: (1) great look, (2) functional/readable without zoom, (3) earns the next scroll, (4) helpful not decorative. Any NO on 3 or 4 = ROLLBACK/redesign; write the scores in the commit/report. Mermaid >2× viewport height = wall, not hook. Then the full page **scroll gate** (`docs/workflows/visual-scroll-gate.md`) — text validators can't see rendered output.
+- **Cognitive load / F-pattern** (posts >800w) — hero visual in the first fold (71% drop without one), decision-aid format for if-X-then-Y, labels INSIDE diagrams, one visual break per H2, no decorative visuals, no 6+ identical bullets/rows. Source: `docs/projects/2605-tech-for-non-technical-founders/10-19-research/10.05-content-organization-patterns-2026.md`.
+- **dev.to import ICP gate** — `source: dev_to` posts are auto-imported unfiltered; audit vs the ICP voice guide before shipping/referencing, `draft: true` if 80+/100 AI-feel. (blog-pipeline.md)
+- **Code fences: `html` not `erb`** — Hugo's Chroma has no `erb` lexer → the block renders as invisible light-on-missing-background text. (blog-pipeline.md)
 
 ---
 

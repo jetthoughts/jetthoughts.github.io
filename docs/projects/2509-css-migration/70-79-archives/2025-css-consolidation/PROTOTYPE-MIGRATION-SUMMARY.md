@@ -238,10 +238,10 @@ git commit -F commit-message.txt
 ## Files Created
 
 ### Prototype Documentation
-1. `docs/prototype-about-us-critical-css-migration.md` - Complete migration plan
-2. `docs/prototype-about-us-before-after-diff.md` - Detailed before/after comparison
-3. `docs/prototype-migration-quick-checklist.md` - Step-by-step implementation checklist
-4. `docs/PROTOTYPE-MIGRATION-SUMMARY.md` - This summary document
+1. `docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/prototype-about-us-critical-css-migration.md` - Complete migration plan
+2. `docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/prototype-about-us-before-after-diff.md` - Detailed before/after comparison
+3. `docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/prototype-migration-quick-checklist.md` - Step-by-step implementation checklist
+4. `docs/projects/2509-css-migration/70-79-archives/2025-css-consolidation/PROTOTYPE-MIGRATION-SUMMARY.md` - This summary document
 
 ### Templates Referenced
 - `themes/beaver/layouts/home.html` - Proven migration pattern (reference)

@@ -4,7 +4,9 @@ title: Course cover rebuild pipeline
 description: Covers are rebuilt as full HTML per .stitch/design.md rendered headless at 2400x1260; chip-composite for single-fact edits.
 resource: .stitch/design.md
 tags: [covers, design, stitch]
-timestamp: 2026-07-13T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-13T00:00:00Z
 ---
 
 Original covers were Stitch-made and their downloads are auth-gated, so the

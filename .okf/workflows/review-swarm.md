@@ -3,7 +3,9 @@ type: Playbook
 title: Two-critic review swarm
 description: The proven module-review loop - a design critic (full render walk) plus a content-canon critic, followed by verified fixer waves.
 tags: [swarm, review, process]
-timestamp: 2026-07-24T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-24T00:00:00Z
 ---
 
 # The loop

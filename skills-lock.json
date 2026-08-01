@@ -11,7 +11,7 @@
       "source": "agricidaniel/claude-blog",
       "sourceType": "github",
       "skillPath": "skills/blog/SKILL.md",
-      "computedHash": "ba20db5779472b6015175f1fdeb3fccc41d0e722c4f0e6ec92b9e8d6719875ba"
+      "computedHash": "98de009ecfcdb58fd1d62eae4ec6ebc13b6ff9eebb202ef8ca7ea20e37ffd8d6"
     },
     "blog-post": {
       "source": "mblode/agent-skills",
@@ -29,7 +29,7 @@
       "source": "gooseworks-ai/goose-skills",
       "sourceType": "github",
       "skillPath": "skills/competitive-intel/composites/competitor-intel/SKILL.md",
-      "computedHash": "1c46c1aba1c14bf421201b5f1f2585191fa5e785bb1c39f5c3088e5f95276542"
+      "computedHash": "af4bb4d4f3ec337dc62c328e5abaf10604f2d663485cc9de5210dfc56e28e15d"
     },
     "content-production": {
       "source": "borghei/claude-skills",
@@ -41,7 +41,7 @@
       "source": "guia-matthieu/clawfu-skills",
       "sourceType": "github",
       "skillPath": "skills/content/content-strategy/SKILL.md",
-      "computedHash": "a17bde6d815d2ecb30772e87b63978893c1e1fe02854dd216e564e8f1e6c4070"
+      "computedHash": "7052f6d7032d7460673978091ac6bd676cfad65cf8c8816ed5a6859db9ad5fa7"
     },
     "copy-editing": {
       "source": "borghei/claude-skills",
@@ -59,7 +59,7 @@
       "source": "manojbajaj95/claude-gtm-plugin",
       "sourceType": "github",
       "skillPath": "skills/copywriting-core/SKILL.md",
-      "computedHash": "9088b3efe63b86935a6a8584985d47231107c036da1e21e87bb7f4324cfee7a9"
+      "computedHash": "b6ff8cc4264a45d336cda8467d40d4b98d742554bb94a830e6a60328f764bf7c"
     },
     "critique": {
       "source": "neolabhq/context-engineering-kit",
@@ -83,25 +83,25 @@
       "source": "Mizoreww/awesome-claude-code-config",
       "sourceType": "github",
       "skillPath": "skills/humanizer/SKILL.md",
-      "computedHash": "a3163eb79525b9c4f12a201d5d271735f01d5593a41a616050427400982b8360"
+      "computedHash": "b691c6d1856a41f7cd98e18a292dc858a07086d38cb028512531b1dbea417efb"
     },
     "impeccable": {
       "source": "pbakaus/impeccable",
       "sourceType": "github",
       "skillPath": ".agents/skills/impeccable/SKILL.md",
-      "computedHash": "8e68c45ab038a3707795034a060b90098e08250ae60ad9987e9e73ec269aaf7e"
+      "computedHash": "49d27a2048ad44a8457fc78852a1b2e2d6935df23283197cce160cb6ea0b4211"
     },
     "keyword-research": {
       "source": "Eronred/aso-skills",
       "sourceType": "github",
       "skillPath": "skills/keyword-research/SKILL.md",
-      "computedHash": "fb938fd60bf6010efd127086fcb4391186c67afa06f34f474a6965850459046b"
+      "computedHash": "16189d57cc4e195b71ddc82445b3a16e8b2f9090669e01fb39e8c8d094f6a06c"
     },
     "lean-ctx": {
       "source": "yvgude/lean-ctx",
       "sourceType": "github",
       "skillPath": "skills/lean-ctx/SKILL.md",
-      "computedHash": "6f71b0eeb7c37e958998b683113026a33dc77a52d428f9992f7112d86de49042"
+      "computedHash": "ce53f21116e7bec44548baf127192b4c38edaff1f31f784b38037310378ee0ce"
     },
     "marketing-for-founders-saas-growth": {
       "source": "aradotso/marketing-skills",
@@ -113,25 +113,25 @@
       "source": "scaccogatto/okf-skills",
       "sourceType": "github",
       "skillPath": "skills/okf/SKILL.md",
-      "computedHash": "32fd95e03e73ed45bf996976a00cbd195353af3ef1b5d849c6d57075e7f47489"
+      "computedHash": "857acc32a681c40dbf2fa122e8f7c806ad3a0e65d271e072de8ad64de1082b24"
     },
     "pol-probe": {
       "source": "deanpeters/Product-Manager-Skills",
       "sourceType": "github",
       "skillPath": "skills/pol-probe/SKILL.md",
-      "computedHash": "f912c67d5c9194394928fd6738f5a0366e5607a90be6d870ef3331a522332547"
+      "computedHash": "dcf2623a5c4559960128fc0c4b3bbbfff05c8ce6454827baa702ee23f6df6e17"
     },
     "pol-probe-advisor": {
       "source": "deanpeters/Product-Manager-Skills",
       "sourceType": "github",
       "skillPath": "skills/pol-probe-advisor/SKILL.md",
-      "computedHash": "221132a0a767a2e07d40e90005e764005d25b90074994e59f7e667aedd56599b"
+      "computedHash": "6e4f210b34e1841ce878cd246d7b527da42146ce9020d8a9df782897f632e9dc"
     },
     "recommendation-canvas": {
       "source": "deanpeters/Product-Manager-Skills",
       "sourceType": "github",
       "skillPath": "skills/recommendation-canvas/SKILL.md",
-      "computedHash": "c4306bd0310c6d51028c5a637383ee607de8988108b1ccf696fe2523e6cc2956"
+      "computedHash": "bd6c0ed9ac75033baea1d8c52bdc1b9e2330ce2bf8c5b3acb6cb66ae58d05f41"
     },
     "reflect": {
       "source": "neolabhq/context-engineering-kit",
@@ -143,19 +143,19 @@
       "source": "omer-metin/skills-for-antigravity",
       "sourceType": "github",
       "skillPath": "skills/seo/SKILL.md",
-      "computedHash": "5cec77ff72ce9c99d2c1bf6046ada62dce69cf0aa02ac32ce85a67aa9807c29b"
+      "computedHash": "45f6e140a697feb93852d39550a2264c88b3ab3914d7d146a55b8ec76787bbc0"
     },
     "seo-aeo-audit": {
       "source": "diegosouzapw/awesome-omni-skill",
       "sourceType": "github",
       "skillPath": "skills/data-ai/seo-aeo-audit/SKILL.md",
-      "computedHash": "6e157f9dfc2edcaa465df672b9b5468392a769cfd0a5b187eb137fa365c56e44"
+      "computedHash": "6304d2175b1ab6aba8540e823924fbdcd97558c10a226d20a77a2f11af55979f"
     },
     "slop-detector": {
       "source": "athola/claude-night-market",
       "sourceType": "github",
       "skillPath": "plugins/scribe/skills/slop-detector/SKILL.md",
-      "computedHash": "21cdca498143daadcaf5bb250a6d0df5a04dfd8676b59d0d19ffaf638ef87920"
+      "computedHash": "5e38739f56d506877975bc4a964773ec3b82ef30dca2984e1b5d665a13697477"
     },
     "social-media-trends-research": {
       "source": "drshailesh88/integrated_content_os",
@@ -179,13 +179,13 @@
       "source": "scaccogatto/okf-skills",
       "sourceType": "github",
       "skillPath": "skills/validate/SKILL.md",
-      "computedHash": "fb6a412d9d80f5da4fff3e3557e1bc0007c4c6bada51d3f75acacccfc459d9a1"
+      "computedHash": "27d006ad62556db23f83dc87e69ed96ddb1f91d35994c08cae80a5ea4b94ea49"
     },
     "visualize": {
       "source": "scaccogatto/okf-skills",
       "sourceType": "github",
       "skillPath": "skills/visualize/SKILL.md",
-      "computedHash": "e44b9ea5c7f555ccd3a1b5d30d76e0165de50b55dc756d7a159ca39ee1feed26"
+      "computedHash": "499b7c2433e7d052cc17c8e71baa45e3b687a878772548cfa0ebfeaaa05bef5b"
     }
   }
 }

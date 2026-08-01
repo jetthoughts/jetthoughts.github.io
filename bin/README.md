@@ -14,11 +14,10 @@ contents of `bin/` — if you add or remove a script, update it here.
 ## Testing
 
 - `qtest [--changed|--all|page-keys]` - Fast scoped visual gate (~25-90s): only the screenshot tests for pages a change touches, plus random extras. The per-micro-commit gate
-- `test [file.rb]` - Full local suite (`rake test:critical`) or a single test file, against a warm prebuilt tree
-- `dtest [file.rb]` - Same as `test` but inside the Docker rendering container (Linux baselines)
+- `test [--smoke|file.rb]` - Local suite against a warm prebuilt tree: `rake test:critical` by default, the ~50s smoke tier with `--smoke`, or a single test file
+- `dtest [--smoke|file.rb]` - Same as `test` but inside the Docker rendering container (Linux baselines); args pass through
 - `dtest-all` - Whole suite (`rake test:all`) in Docker, detached; logs to `tmp/dtest-all.log`
 - `setup-test-env` - Install the pinned rendering stack (Chrome for Testing per `.dev/cft-version`, fonts, fontconfig); prints `CHROME_BIN`/`CHROMEDRIVER_PATH` with `--print-env`
-- `smoke` - Build + lint + dtest in one shot
 - `lighthouse` / `lighthouse-compare` - Performance benchmarks and run comparison
 - `lint-css` - Stylelint ratchet (warning count can only go down)
 - `validate-course` - Course content validators

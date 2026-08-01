@@ -3,7 +3,9 @@ type: Playbook
 title: Render verification (visual scroll gate)
 description: The working headless-Chrome capture, page-slicing, and SVG re-render recipes used to inspect every scroll view of a page.
 tags: [verification, chrome, screenshots]
-timestamp: 2026-07-13T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-13T00:00:00Z
 ---
 
 Text validators cannot see rendered output - mermaid clipping, SVG text

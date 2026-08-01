@@ -3,15 +3,18 @@ type: Playbook
 title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
-timestamp: 2026-07-31T19:30:00Z
+status: stable
+generated: { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
+verified: { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
 ---
 
 # The suites
 
 | Command | What it is | When required |
 |---|---|---|
+| `bin/test --smoke` / `bin/rake test:smoke` | Smoke tier: 17 curated basics+bummers (homepage/blog-post/404/course renders + funnel forms + nav/hamburger + one mermaid). `bin/dtest --smoke` runs it in Docker (args pass through) | Sub-minute "did I break the basics" check during active work; NOT a milestone/PR gate |
 | `bin/qtest --changed` | Scoped visual gate: builds once (~11s), runs ONLY affected pages' desktop+mobile screenshot tests (~2.5s each) + orphan guard + color-system check; site-wide/unmapped files auto-escalate to the full critical suite | Per micro-commit inside a sprint (~25-60s); NOT a substitute for the milestone/PR gates below |
-| `bin/rake test:critical` | Critical Minitest suite (46 runs / 84 screenshots) | At component/task milestones and before every commit outside sprint micro-commit trains |
+| `bin/rake test:critical` | Critical Minitest suite (34 runs / 53 screenshots), ~81s host / ~46s Docker since the 2026-08-01 skip_area fix | At component/task milestones and before every commit outside sprint micro-commit trains |
 | `bin/test` | Visual regression on the host (baselines in `macos/` on a Mac; on Linux, comparable to `linux/` when run through `bin/setup-test-env`'s pinned stack) | ONCE at PR prep (branch head, before `gh pr create`) or on Paul's explicit confirmation - NOT per commit (Paul 2026-07-31: qtest is the routine gate) |
 | `bin/dtest` | Same suite in Linux/Docker (baselines in `linux/`) - CI runs Linux | Same trigger as bin/test; a PR must never open without this leg (green-locally / red-in-CI otherwise) |
 
@@ -24,6 +27,33 @@ extend it when adding components or critical files. The macOS full suite remains
 
 # Hard-won caveats
 
+- **A `skip_area` selector that matches NOTHING costs 5s per screenshot**
+  (2026-08-01). snap_diff resolves each mask via `all(sel, visible: true)`,
+  and Capybara waits `default_max_wait_time` (5s) on a zero-match selector.
+  A shared default like `skip_area: %w[picture img]` on an image-less page =
+  10s/shot; one test paid ~130s (44% of the suite) this way. Fixed at the
+  `assert_screenshot` choke point (`Capybara.using_wait_time(0)` + pinned
+  capture wait), so masks are cheap now - but adding a mask for an element
+  that may be absent is still a smell. Removing a mask/tolerance is safe once
+  fonts settle (`document.fonts.ready` is in the choke point); the
+  drift-overview procedure (read `snap_diff_report.html` heatmap, one mask at
+  a time, which masks to KEEP) lives in the repo doc
+  `docs/20-29-testing-qa/screenshot-testing/20.10-visual-suite-speed-research-reference.md` (outside this bundle).
+- **Fonts + mermaid.js are self-hosted** (2026-08-01) - Caveat / Space Grotesk
+  woff2 and `mermaid-11.15.0.min.js` served same-origin from
+  `themes/beaver/static/`, not Google Fonts / jsdelivr. Visual tests are
+  hermetic (zero third-party network); prod mermaid pages lose the CDN round
+  trips. The vendored mermaid is sha384-identical to the old SRI pin - re-vendor
+  (and re-record mermaid baselines) if bumping the version.
+- **Local `bin/dtest` is red ONLY on 7 mobile-codeblock screenshots**
+  (2026-08-01, verified across 3 runs byte-identical: bare 7.3 / html 5.46 /
+  js 4.34 / python 4.31 / text 4.08 / ruby 3.49 / md 3.57). This is
+  DETERMINISTIC amd64-emulation antialiasing (same pinned Docker fonts on both
+  sides - it's the QEMU-vs-native CPU math on Apple Silicon), NOT flaky and NOT
+  a regression. They are GREEN on CI-native amd64. mermaid used to be in this
+  set and is now GREEN after self-hosting the fonts. Trust CI for these 7; never
+  re-record them from local emulated Docker (would break green CI). Identical
+  diff_levels across runs = deterministic (a flaky render varies).
 - **Content-only diffs skip the visual suites entirely** (Paul 2026-07-31).
   A change touching ONLY markdown prose/frontmatter - no `themes/`, no
   `layouts/`, no `*.css`, no inline HTML/SVG in a body - is gated by

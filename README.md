@@ -321,7 +321,7 @@ Edit `hugo.toml` to modify navigation:
 | [SETUP.md](docs/SETUP.md) | Detailed setup instructions |
 | [CI-CD](docs/50-59-deployment-operations/50.02-ci-cd-pipeline-analysis-reference.md) | CI/CD pipeline documentation |
 | [DEV-TO-INTEGRATION](docs/80-89-integration-apis/80.01-dev-to-integration-how-to.md) | dev.to sync documentation |
-| [AGENT-GUIDANCE.md](docs/60.01-agent-guidance-reference.md) | Agent resource locations and guidelines |
+| [AGENT-GUIDANCE.md](docs/60-69-project-management/60.01-agent-guidance-reference.md) | Agent resource locations and guidelines |
 
 ### API Documentation
 

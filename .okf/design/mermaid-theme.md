@@ -4,7 +4,9 @@ title: Mermaid house theme and the Caveat webfont fix
 description: Mermaid renders in Caveat handwritten cursive, loaded explicitly and awaited via document.fonts.ready; label metrics gotchas documented.
 resource: themes/beaver/layouts/baseof.html
 tags: [mermaid, fonts, design]
-timestamp: 2026-07-13T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-13T00:00:00Z
 ---
 
 # Root cause worth remembering

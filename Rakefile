@@ -37,6 +37,27 @@ namespace :test do
     t.options = "--name='#{CRITICAL_TESTS}'"
   end
 
+  # Smoke tier (~60s serial, less on Docker): the leanest gate that still
+  # catches a broken build. Basics (homepage/blog-post/404/course render) +
+  # bummers (the funnel forms, nav hover + mobile hamburger, and the one
+  # mermaid render that historically breaks). Deliberately EXCLUDES the
+  # per-section `_sections` sweeps and `test_codeblock_language_styles` - that
+  # single test is ~196s (44% of the suite) and trips a snap_diff reporter bug
+  # on any diff. Smoke is NOT a milestone gate: test:critical stays the pre-PR
+  # bar. Mermaid is desktop-only here (one render proves the surface).
+  SMOKE_TESTS =
+    "/test_homepage$|test_blog_post$|test_not_found$|test_course_landing|" \
+    "test_contact_us$|test_free_consultation$|test_services_menu$|" \
+    "test_top_bar_hamburger_menu$|test_vibe_code_rescue$|" \
+    "BlogSpecialContentDesktopTest#test_mermaid_post/"
+
+  Rake::TestTask.new(:smoke) do |t|
+    t.libs << "test"
+    t.libs << "lib"
+    t.pattern = "test/system/**/*_test.rb"
+    t.options = "--name='#{SMOKE_TESTS}'"
+  end
+
   Rake::TestTask.new(:system) do |t|
     t.libs << "test"
     t.libs << "lib"

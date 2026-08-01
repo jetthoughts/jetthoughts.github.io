@@ -100,15 +100,14 @@
            Chancery on macOS, varies elsewhere) - a per-visitor identity
            lottery caught by the 2026-07-12 M5 design review. Loaded only
            on pages that render mermaid. */}}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap"
-        rel="stylesheet" />
-      <script
-        src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js"
-        integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF"
-        crossorigin="anonymous"></script>
+      {{/* Self-hosted (2026-08-01): same Google woff2 binaries + unicode
+           ranges, served same-origin. Kills 2 preconnects + a css2 fetch +
+           a jsdelivr fetch per mermaid page, and makes the visual tests
+           hermetic (no third-party network inside test runs). The vendored
+           mermaid.min.js hash-matches the old SRI pin. */}}
+      <link rel="preload" href="/fonts/caveat-latin.woff2" as="font" type="font/woff2" crossorigin />
+      <link href="/css/fonts-caveat.css" rel="stylesheet" />
+      <script src="/js/vendor/mermaid-11.15.0.min.js"></script>
       <script>
         // useMaxWidth: true is Mermaid's default. SVGs scale to fit the
         // content column on desktop (no big empty space when diagrams

@@ -4,7 +4,9 @@ title: Enhanced SEO Meta Tags
 description: Hugo partial that generates per-section page titles, meta descriptions, robots/canonical/OpenGraph/Twitter tags, and its own resized og:image.
 resource: themes/beaver/layouts/partials/seo/enhanced-meta-tags.html
 tags: [seo, hugo, meta-tags]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-12T00:00:00Z
 ---
 
 # Overview

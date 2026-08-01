@@ -4,7 +4,9 @@ title: Banned-strings ratchet
 description: data/course_banned_strings.yaml pins every fixed prose defect so it cannot silently regress; entries can be scoped to a single page.
 resource: data/course_banned_strings.yaml
 tags: [validation, course, regression]
-timestamp: 2026-07-13T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-13T00:00:00Z
 ---
 
 When a review sprint fixes a prose defect (a wrong tool name, a banned

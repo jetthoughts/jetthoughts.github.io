@@ -4,7 +4,9 @@ title: Blog Index / Listing Page
 description: Hugo template rendering the JTWay blog index, tag pages, and post thumbnails.
 resource: themes/beaver/layouts/blog/list.html
 tags: [hugo, blog, layout]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-12T00:00:00Z
 ---
 
 # Overview

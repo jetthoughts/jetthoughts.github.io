@@ -4,7 +4,9 @@ title: Blog Post Pipeline (Idea to Published)
 description: Canonical end-to-end workflow for drafting, reviewing, and publishing a JetThoughts blog post — mandatory for any write/draft/schedule/publish request.
 resource: docs/workflows/blog-pipeline.md
 tags: [content, blog, workflow]
-timestamp: 2026-07-19T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-19T00:00:00Z
 ---
 
 # Overview

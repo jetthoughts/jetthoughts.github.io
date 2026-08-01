@@ -4,7 +4,9 @@ title: Course reading typography
 description: Course pages read at 20px/1.65 body scale (blog keeps 22.4px); overrides must mirror the full single-post.css selector chain or they silently lose.
 resource: themes/beaver/assets/css/style.css
 tags: [css, typography, course]
-timestamp: 2026-07-13T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-13T00:00:00Z
 ---
 
 # The scale (course pages only)

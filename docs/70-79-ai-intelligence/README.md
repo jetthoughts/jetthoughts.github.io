@@ -121,7 +121,7 @@ continuous_improvement:
 **Project-Specific**:
 - Test Format Requirements: `/docs/20-29-testing-qa/20.05-test-quality-guidelines-reference.md`
 - Visual Testing Workflows: `/docs/20-29-testing-qa/screenshot-testing/`
-- TDD Quality Enforcement: `/docs/60.03-tdd-quality-enforcement.md`
+- TDD Quality Enforcement: `/docs/60-69-project-management/60.03-tdd-quality-enforcement.md`
 
 ---
 

@@ -4,7 +4,9 @@ title: JetThoughts Hugo Site
 description: Hugo static site generator setup for the JetThoughts marketing site and blog (JTWay).
 resource: config/_default/hugo.toml
 tags: [hugo, build, config]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  by: process:okf-migrate
+  at: 2026-07-12T00:00:00Z
 ---
 
 # Overview
