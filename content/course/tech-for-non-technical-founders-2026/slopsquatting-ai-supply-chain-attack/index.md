@@ -144,7 +144,7 @@ Three actions. None require an engineer to start.
 
 - **Tonight: open your `Gemfile.lock` / `package-lock.json` / `requirements.txt` / `composer.lock`.** Read the package names out loud. Any name you cannot identify in 5 seconds, paste it into your registry's search (rubygems.org, pypi.org, npmjs.com). If the package has fewer than 1,000 downloads or was first published in the last 60 days, write its name on a list and ask your dev shop in writing why it is in your codebase. Save the email - it is the start of your audit.
 - **This week: drop the 20-line CI gate above into `.github/workflows/dependency-gate.yml`.** Open the PR yourself if your dev shop is slow. The merge protection takes 10 minutes to wire in GitHub repository settings. Reference the [GitHub/AWS/DB ownership checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/) for repository admin access if your name is not on the org owners list.
-- **Before any new SOW: paste the contract clause from this post into the addendum section.** If the agency strikes the clause, that is the audit finding. The [SOW reading guide](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow) covers the rest of the clauses you should be checking on the same pass.
+- **Before any new SOW: paste the contract clause from this post into the addendum section.** If the agency strikes the clause, that is the audit finding. The [SOW reading guide](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#reading-the-sow) covers the rest of the clauses you should be checking on the same pass.
 
 ## Wrapping the course
 

@@ -166,7 +166,7 @@ Three actions. In order.
 
 Related course posts:
 - ["We Use AI": 5 Follow-Up Questions for Your Agency](/course/tech-for-non-technical-founders-2026/agency-ai-five-questions/) - sister chapter; the 5-question script for AI theatre detection includes the cost question this post expands.
-- [Reading the SOW Clause by Clause](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow) - hire track contract reading guide; pair with the 3 AI clauses above when redlining your next SOW.
+- [Reading the SOW Clause by Clause](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#reading-the-sow) - hire track contract reading guide; pair with the 3 AI clauses above when redlining your next SOW.
 - [The Quality Tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) - the rebuild bill that arrives when AI-generated code meets production load nobody planned for.
 - [The Hidden Cost of Poor Vendor Management](/blog/hidden-cost-poor-development-vendor-management-fix/) - the broader pattern: surprise line items follow the contracts you did not read carefully.
 

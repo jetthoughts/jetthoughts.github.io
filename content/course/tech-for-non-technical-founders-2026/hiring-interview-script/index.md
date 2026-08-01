@@ -168,7 +168,7 @@ puts them in the [hire / maybe / no-hire] band].
 
 Three sentences. No more. The decision is in your gut by minute 28 of the call; the writing is just to lock it in before Friday's calendar fills with other meetings.
 
-If you booked a reference call, the next step is the [SOW reading guide](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow). The interview is the people screen. The SOW is the money screen. Both clear before you sign.
+If you booked a reference call, the next step is the [SOW reading guide](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#reading-the-sow). The interview is the people screen. The SOW is the money screen. Both clear before you sign.
 
 ## What to do after
 
