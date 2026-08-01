@@ -45,7 +45,7 @@ After this lesson you will be able to: **rewrite every feature noun in Section 3
 
 The Section 3 you fix here is the exact text Module 4 pastes into Lovable. It is not a rewrite for style - it is the check that decides whether the builder ships what you meant or a bigger thing you'll spend the quarter deleting.
 
-![A hand-drawn comparison: the simple three-button admin panel you asked for on the left, the absurdly complex 47-button control deck that got built on the right, connected by a red arrow labeled 10-week build, $15K](admin-panel-spaceship.svg)
+![A two-panel comparison. Left, "What you asked for" - a simple admin panel with three buttons: hide this post, ban this user, refund this charge; 3 buttons, 2 days of work. A ruby arrow labeled 10 weeks, $15,000 crosses to the right. Right, "What got built" outlined in ruby - a dense control deck of tab and button motifs tallying 5 tabs, 47 buttons, 1 role matrix, 12 feature flags, 1 AI co-pilot, of which only 2 get used.](admin-panel-spaceship.svg)
 
 ## Why feature briefs overbuild
 
