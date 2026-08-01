@@ -99,7 +99,7 @@ Design: Clean, minimal. Dark sidebar, white content area. [YOUR COLOR] accent. N
 
 Where the blanks come from: `[CUSTOMER]` is your `[CUSTOMER]` blank from Lesson 1.1; `[PRIMARY ACTION ...]` is the top workaround-replacing action from your Lesson 2.5 validated problem statement; `[FAKE DATA EXAMPLE]` is names and numbers pulled from your interview transcripts. Use the vocabulary you heard in interviews, not the words you use with other founders - if 7 of 10 interviewees called it "matching" and you call it "reconciliation," the prototype uses "matching."
 
-![Build the 3-screen prototype in three moves: open Lovable and paste the prompt template with placeholders filled, read the fake data out loud and change the vocabulary to match the words you heard in interviews, then test all three screens yourself as if you've never seen the idea - leaving with a prototype ready to share as a link to 5 interviewees](prototype-build-strip.svg)
+![A left-to-right flow: step 1 Paste (open Lovable) drop in the prompt template with placeholders filled; step 2 Reword (say it aloud) swap in the words you heard in interviews; step 3 Test (yourself) click all three screens as if new to the idea; the purple output card is the prototype ready to share as a link to 5 Mom Test interviewees - and the ruby reading warns to stop at three screens, since a fourth turns the prototype into the MVP](prototype-build-strip.svg)
 
 > **Deeper reference:** the [full build walkthrough](/course/tech-for-non-technical-founders-2026/reference/prototype-build-full/) has a filled-in worked example (a reconciliation tool for freelance bookkeepers), the Lovable free-tier onramp, and the screen-by-screen build detail.
 
