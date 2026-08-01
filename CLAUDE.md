@@ -51,7 +51,9 @@ Distilled operational knowledge lives in the OKF v0.1 bundle at `.okf/` (markdow
 
 ## 🔍 Research Protocol (MANDATORY)
 
-**Session start**: Always read `@docs/workflows/BASE_HANDBOOK.md`, `@docs/workflows/flow-router.md`, and `@.okf/index.md` (the OKF knowledge bundle - load it up front to understand the build/test/CI/content situation, then follow its links into only the concepts relevant to the task).
+**Session start (onboarding)**: Always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflows/flow-router.md`, and run **`/okf:okf`** (consume scope) to onboard from the `.okf/` bundle — it loads `index.md` and follows links into only the concepts the task needs. Don't hand-read the bundle when the skill does it correctly.
+
+**Before every commit**: run **`/okf:okf maintain`** to sync the bundle with what the commit changed (concept file + its `timestamp`, section `index.md`, dated `.okf/log.md` entry) so bundle sync rides the same commit. A commit that shipped durable knowledge without an OKF update is NOT done.
 
 Prefer **skills** over agents. Use agents only when the user or the selected workflow explicitly requires them.
 
