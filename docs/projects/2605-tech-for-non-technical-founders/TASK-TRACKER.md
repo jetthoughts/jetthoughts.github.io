@@ -455,8 +455,15 @@ mandate in force.
     side + Paul taste gate (W1 retro rule). Landing-owned files + (post-
     Aug-14) the title-render template only.
 
-17. **[NEXT — executable now, campaign-safe] M2-M5 SVG→O2 rollout — GROOMED
-    2026-08-01, re-audited @45ecea48** (Paul's design-call method:
+17. **[✅ DONE 2026-08-02, merged PR #434 (squash 133f8f4d)] M2-M5 SVG→O2
+    rollout.** All 17 M2-M5 numbered-lesson SVGs → O2 flat-vector (3 sub-waves
+    M2 / M3+M4 / M5); every one now clears the ≥9px@390 mobile floor (was
+    4.5-8px). Bonus: redraws removed 2 fabricated-cohort stats (5.3, 5.6).
+    20%-slot shipped: `bin/check-svg-floor` (O7b) build-time legibility gate
+    (report-only; confirms the 17+6 pass, enumerates 46 deferred). Honest
+    dtest 34/34 green. **→ item 18: deferred 46-SVG follow-on wave.**
+    _Groomed scope (historical, executed):_ M2-M5 SVG→O2 rollout — GROOMED
+    2026-08-01, re-audited @45ecea48 (Paul's design-call method:
     modern/flat-vector; ADR 30.09 gate "follow the M1 pilot" SATISFIED by W3
     #433). Extend the O2 flat-vector system (spec
     `.okf/design/house-visual-spec.md` v3 section; template = the 5 shipped M1
@@ -557,6 +564,14 @@ mandate in force.
 
     Triaged ahead of W5 (higher momentum/lower risk; W5 is Clarity-gated) and
     ahead of frozen W4.
+
+18. **[QUEUED - deferred SVG wave, campaign-safe, after W5 or interleaved]
+    Remaining 46 under-floor SVGs → O2** (burn-down from `bin/check-svg-floor`):
+    reference/continuation pages + the 5 Mia walkthroughs (incl. the
+    M1-walkthrough straggler W3 left). Same defect + same O2 template as the
+    M2-M5 rollout; content-scoped, campaign-safe. Run `bin/check-svg-floor`
+    for the live list; group by page-type sub-waves. When it hits zero, flip
+    the check to a blocking gate (SVG_FLOOR_BLOCK=1 in bin/hugo-build).
 
 14. **[IDEA - review opportunity later, spans course + blog] Reader-mode
     readability research** (Paul 2026-08-01): browsers' reader modes
