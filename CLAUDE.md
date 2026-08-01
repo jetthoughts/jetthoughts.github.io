@@ -57,22 +57,18 @@ Distilled operational knowledge lives in the OKF v0.1 bundle at `.okf/` (markdow
 
 Prefer **skills** over agents. Use agents only when the user or the selected workflow explicitly requires them.
 
-Always use claude-context MCP search **before** making changes:
+**Markdown search (docs/, content/, .okf/, knowledge/) — use `qmd` FIRST** (Paul 2026-08-01). The repo is indexed as qmd collection `jt-site` (run `qmd embed` after big doc batches to refresh vectors):
 
-1. `Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "[pattern]"`
-2. `Search the codebase at /Users/pftg/dev/jetthoughts.github.io/knowledge for: "[topic]"`
-3. `Get library docs for "[framework]"`
+1. Known words/titles/slugs → BM25: `qmd search "skip_area selector wait" -c jt-site -n 5`
+2. Conceptual/indirect recall → structured query (write the fields yourself): `qmd query $'intent: ...\nlex: exact anchor words\nvec: paraphrase concepts\nhyde: a plausible answer paragraph' -c jt-site`
+3. Then fetch full sources with `qmd get <path>` / `qmd multi-get "#id1,#id2"` — never answer from snippets alone.
 
-**Option 2 — DeepWiki** (when claude-context doesn't have enough context or for repo-level questions):
-- `ask_question` about `jetthoughts/jetthoughts.github.io` for AI-powered answers about the repo
-- `read_wiki_structure` / `read_wiki_contents` for browsing repo documentation
-
-**After:** use `rg`/`ls` for exact filenames, slugs, and fallback searches. For code/content patterns, use claude-context MCP semantic search first, then DeepWiki as fallback.
+**For CODE (templates/CSS/Ruby)**: claude-context MCP (`Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "[pattern]"`) or grepai/tokensave per the global search-tool table; DeepWiki (`ask_question` on `jetthoughts/jetthoughts.github.io`) for repo-level questions. **After:** `rg`/`ls` for exact filenames and fallbacks.
 
 ### Finding blog posts to reference (MANDATORY for content work)
-When writing a blog post and looking for internal links, **always use claude-context first**:
+When writing a blog post and looking for internal links, search with **qmd first**:
 ```
-Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "transparency weekly reports"
+qmd search "transparency weekly reports" -c jt-site -n 5
 ```
 For exact slug/tag lookups, see the post index at `docs/blog-post-index.md` (584 posts, 135 tags, process posts table).
 **Never guess slugs** — verify with `ls content/blog/<slug>/index.md` before linking.
