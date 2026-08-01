@@ -48,7 +48,7 @@ You validated the problem in Modules 1-3 and set up the stack in Lesson 4.3. Wha
 
 > → **Mia walked the four phases** over three weekends. Her spouse signed up in Phase 2. By Phase 4, five parents clicked through the live URL. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)
 
-![Four build phases, then the five-green-lights gate. Phase 1 Lovable UI - screens click, nothing saved. Phase 2 Supabase and auth - a real signup persists. Phase 3 Stripe checkout - a $1 test charge flips the row to paid. Phase 4 go live - 5 ICP users click the live URL. All five exit lights green advances you to Module 5.](build-phases-strip.svg)
+![Four build phases, each proven by one demo, then the five-green-lights gate. Phase 1 Lovable - screens click, nothing saved. Phase 2 Supabase - a real signup persists. Phase 3 Stripe - a $1 test charge flips the row to paid. Phase 4 go live - 5 ICP users hit the live URL. An arrow drops into a green gate listing five exit lights: Stripe in live mode, custom domain wired, one fresh ICP user hit the paywall, zero JS errors at checkout, a weekly demo recording exists. All five green advances you to Module 5.](build-phases-strip.svg)
 
 ## The ship plan
 
