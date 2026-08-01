@@ -57,7 +57,7 @@ The [messages](/course/tech-for-non-technical-founders-2026/first-ten-customers-
 
 The champion bucket produced the surprise. One of her demo calls was with the organizer of a regional parent group for learning differences - a woman who had spent years fielding "does anyone know a good tutor?" posts. She didn't want one account. She wanted TutorMatch for her member families.
 
-Mia's first instinct was to say yes and figure out payment later, which is precisely the free-pilot trap the lesson opens with. Instead she adapted the one-page Design Partner Agreement: an annual group plan for twenty member families at $2,400 - modest next to the $70-$120 those families already pay tutors per single session - with a $600 refundable deposit (25% of year one, inside the lesson's 10-30% band) through a Stripe payment link before she lifted a finger on the group onboarding. The organizer signed the same week - people who have waited years for a solved problem don't haggle over a refundable deposit.
+Mia's first instinct was to say yes and figure out payment later, which is precisely the free-pilot trap the lesson opens with. Instead she adapted the one-page Design Partner Agreement: an annual group plan for twenty member families at $2,400 - modest next to the $70-$120 those families already pay tutors per single session - with a $600 deposit (25% of year one, inside the lesson's 10-30% band) through a Stripe payment link before she lifted a finger on the group onboarding. The organizer signed the same week - people who have waited years for a solved problem don't haggle over a deposit.
 
 The deposit cleared a few days later - a small number, but the first money TutorMatch had earned from someone who found Mia through the product rather than through her.
 

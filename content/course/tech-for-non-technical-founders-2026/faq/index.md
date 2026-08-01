@@ -107,7 +107,7 @@ Your brief's Section 3 is feature-shaped. Go back to [Lesson 3.2](/course/tech-f
 
 **Q: I'm terrified of asking for money. How do I start?**
 
-The deposit is a test of whether the problem is real - not a test of whether you deserve to be paid. Send the [DPA template](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/#dpa-template) to your warmest lead first. A refundable deposit at kickoff is easier to ask for than a full-price sale. The [Lesson 5.6 chapter](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) has the exact contract template.
+The deposit is a test of whether the problem is real - not a test of whether you deserve to be paid. Send the [DPA template](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/#dpa-template) to your warmest lead first. A deposit at kickoff is easier to ask for than a full-price sale. The [Lesson 5.6 chapter](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) has the exact contract template.
 
 **Q: My personal network only has 5 names. What do I do?**
 
