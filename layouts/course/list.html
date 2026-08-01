@@ -18,15 +18,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=JetBrains+Mono:wght@600&display=swap"
     rel="stylesheet" />
 {{ end }}
 
 {{ define "main" }}
-  <div class="blog">
-    <article
-      class="single-content"
-      style="max-width: 720px; margin:0 auto; padding-left:18px;padding-right:18px">
+  <div class="blog course-landing">
+    {{/* W1.5: full-bleed tinted hero band (demo-1 layout). Left column =
+         H1 + lede + chips + CTA pair; right = the course-window card per
+         spec §4 (docs/design-system/course-landing-components-2026-08.md).
+         og:image still uses cover.png via frontmatter metatags. */}}
+    <section class="course-hero-band">
       <header class="course-hero">
         <div class="course-hero__main">
           <h1 class="course-title">{{ .Title }}</h1>
@@ -59,26 +61,29 @@
           {{ end }}
         </div>
 
-        {{/* L4-visual V3: dark course-artifact card - REPLACES the cover
-             figure in the hero (never both; og:image still uses cover.png
-             via frontmatter metatags). Stats from data/course_sequence.yaml,
-             same derivations as the course-stat shortcode. */}}
+        {{/* Stats from data/course_sequence.yaml, same derivations as the
+             course-stat shortcode. Card title = H1 minus "From" (sanctioned
+             demo-style variant, no new claims). */}}
         {{ $seq := hugo.Data.course_sequence }}
         {{ $lessons := 0 }}
         {{ range $seq.sequence }}{{ if ne .module "Overview" }}{{ $lessons = add $lessons 1 }}{{ end }}{{ end }}
         {{ $mods := slice }}
         {{ range $seq.sequence }}{{ $m := index (findRE `^Lesson (\d+)` .module 1) 0 }}{{ if and $m (not (in $mods $m)) }}{{ $mods = $mods | append $m }}{{ end }}{{ end }}
-        <aside class="course-hero-card" aria-label="Course summary">
-          <p class="course-hero-card__eyebrow">Free course</p>
-          <ul class="course-hero-card__stats">
-            <li>{{ len $mods }} modules</li>
-            <li>{{ $lessons }} lessons</li>
-            <li>{{ $seq.stats.artifacts }} artifacts</li>
-          </ul>
-          <p class="course-hero-card__leave">You leave with a signed paid pilot - a real customer paying real money.</p>
+        <aside class="course-window" aria-label="Course summary">
+          <div class="course-window__chrome" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </div>
+          <div class="course-window__body">
+            <p class="course-window__eyebrow">Free course</p>
+            <p class="course-window__title">Idea to<br />First Paying Customer</p>
+            <p class="course-window__meta">{{ len $mods }} modules · {{ $lessons }} lessons</p>
+            <p class="course-window__leave">You leave with a signed paid pilot - a real customer paying real money.</p>
+          </div>
         </aside>
       </header>
+    </section>
 
+    <article class="single-content">
       <div class="post-content" itemprop="text">
         {{ .Content }}
       </div>
