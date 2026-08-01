@@ -154,6 +154,12 @@ Read the modules in order - each module's output is the next module's input, and
   </div>
 </div>
 
+<details class="module-group">
+  <summary>
+    <span class="module-card__badge">Modules 3-5</span>
+    <span class="module-group__title">Design, build, first customer</span>
+  </summary>
+
 <div class="module-card" id="module-3">
   <span class="module-card__badge">Module 3</span>
   <h3>Design from Evidence</h3>
@@ -222,6 +228,8 @@ Read the modules in order - each module's output is the next module's input, and
     <p class="module-card__extras-row"><strong>See it in action:</strong> <a href="/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/">Mia gets paid</a></p>
   </div>
 </div>
+
+</details>
 
 </div>
 

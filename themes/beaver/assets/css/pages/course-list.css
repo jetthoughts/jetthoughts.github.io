@@ -302,6 +302,50 @@
   margin-bottom: 12px;
 }
 
+/* L5 amendment — modules 3-5 grouped behind one card-shaped summary
+   (demo 1 component #8: the card IS the summary of a native details). */
+.blog .module-group > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #ececf0;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(26, 26, 46, 0.07);
+  padding: 22px 26px;
+}
+.blog .module-group > summary::-webkit-details-marker {
+  display: none;
+}
+.blog .module-group > summary::marker {
+  content: "";
+}
+/* the site-wide summary::before "▸" — the group card carries its own
+   chevron on the right instead */
+.blog .module-group > summary::before {
+  content: none;
+}
+.blog .module-group > summary::after {
+  content: "▾";
+  margin-left: auto;
+  color: var(--color-ruby);
+  font-size: 18px;
+}
+.blog .module-group[open] > summary::after {
+  content: "▴";
+}
+.blog .module-group[open] > summary {
+  margin-bottom: 28px;
+}
+.blog .module-group__title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+}
+
 /* V3 Dark hero course-artifact card — obsidian island replacing the
    cover figure; hero widens beyond the 720px article on desktop.
    Separate revertable commit: drop this block + the list.html aside
