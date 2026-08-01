@@ -3,7 +3,9 @@ type: Playbook
 title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
-timestamp: 2026-08-01T11:30:00Z
+status: stable
+generated: { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
+verified: { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
 ---
 
 # The suites

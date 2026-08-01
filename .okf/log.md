@@ -1,5 +1,19 @@
 # Bundle Update Log
 
+## 2026-08-01 (v0.2) - bundle adopts OKF v0.2 provenance/trust/lifecycle
+
+* **Update**: [root index](/index.md) - `okf_version` bumped 0.1 -> 0.2; added a
+  conventions note for the new optional frontmatter families (`generated`,
+  `verified`, `status`, `stale_after`) and the actor convention
+  (`<producer>/<version>` / `human:<id>` / `process:<id>`).
+* **Update**: [test-gates](/build/test-gates.md) - migrated to v0.2 trust fields:
+  `status: stable`, `generated`/`verified` by `claude/fable-5` (the caveats were
+  empirically verified this session - dtest x3 byte-identical, bin/test x2 green).
+  Replaces the bare `timestamp`.
+* **Note**: the other 34 concepts keep v0.1-style frontmatter (still conformant
+  under v0.2); they migrate honestly as maintainers touch them. No back-stamping
+  of provenance nobody performed.
+
 ## 2026-08-01 (later) - dtest drift verified, CI back to critical, PR #425 review
 
 * **Update**: [test-gates](/build/test-gates.md) - ran `bin/dtest` x3 to hunt
