@@ -57,23 +57,406 @@
   color: #3a3f4a;
 }
 
-/* Course end-cap — quiet close above the global footer: promise line,
-   one Start CTA, and the copy-share-link pattern from module ends. */
+/* === L4-visual (40.25) — landing-only restyle. Bundle is exclusive to
+   layouts/course/list.html, so nothing below leaks to other pages. === */
+
+/* V1.1 Numbered mistake-card grid — replaces the ✗ bullet list with
+   counter-numbered cards (01-05 in ruby). Copy untouched. */
+.blog ul.mistake-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  counter-reset: mistake;
+  margin: 24px 0;
+}
+.blog ul.mistake-list > li {
+  counter-increment: mistake;
+  background: #f8f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px 22px 18px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.blog ul.mistake-list > li::before {
+  content: "0" counter(mistake);
+  position: static;
+  display: block;
+  color: var(--color-ruby);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .blog ul.mistake-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* V1.2 Deliverable-first module cards — elevation, the leading
+   "Output:" strong restyled as a ruby lead-in on its own line, and the
+   "You leave with ✓" line promoted to a tinted panel.
+   L4 fix (P2): the strong used to be pinned top-right via
+   position:absolute, detached from the sentence it labels — read as a
+   broken data binding. Now it's an inline ruby lead-in, attached. */
+.blog .module-card {
+  position: relative;
+  border-radius: 16px;
+  border-color: #ececf0;
+  box-shadow: 0 6px 24px rgba(26, 26, 46, 0.07);
+}
+.blog .module-card__badge {
+  color: #9ca3af;
+}
+.blog .module-card__output {
+  background: rgba(204, 52, 45, 0.05);
+  border: 1px solid rgba(204, 52, 45, 0.16);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.blog .module-card__output > strong:first-of-type {
+  color: var(--color-ruby);
+  letter-spacing: 0.02em;
+}
+.blog .module-card__leave {
+  border-top: 1px solid #f3f4f6;
+  padding: 20px 0 0;
+  margin-top: 20px;
+}
+
+/* V1.3 Dark closing endcap band — obsidian island with a soft ruby
+   radial glow behind the Start CTA (JetVelocity tokens). */
 .blog .course-endcap {
-  border-top: 1px solid #e5e7eb;
+  position: relative;
+  overflow: hidden;
+  background: #0d1117;
+  border-radius: 16px;
   margin-top: 56px;
-  padding-top: 36px;
+  padding: 44px 28px 38px;
   text-align: center;
+}
+.blog .course-endcap::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -160px;
+  width: 520px;
+  height: 340px;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(204, 52, 45, 0.32), transparent);
+  pointer-events: none;
+}
+.blog .course-endcap > * {
+  position: relative;
 }
 .blog .course-endcap__promise {
   font-size: 18px;
   line-height: 1.6;
-  color: #3a3f4a;
+  color: #e7e7ee;
   margin-bottom: 18px;
 }
 .blog .course-endcap__share {
   font-size: 15px;
-  color: #5f6470;
+  color: #9a9aac;
   margin-top: 18px;
   margin-bottom: 0;
+}
+
+/* L4 fix (P3): the endcap's own bottom padding (38px) plus the global
+   footer's top padding (130px, footer.css) are both pure black with no
+   visual seam, so mobile reads them as one ~170px dead gap. Scoped to
+   pages with a course-endcap only — collapses the footer's lead-in to
+   normal section spacing without touching the shared footer.css rule
+   every other page relies on. */
+@media (max-width: 768px) {
+  body:has(.course-endcap) .footer-component {
+    padding-top: 40px;
+  }
+}
+
+/* L5-condense (40.26) — NOT-cover exclusions as a tight two-col list;
+   the why-excluded explanations sit in one <details> below it. */
+.blog ul.not-cover-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 28px;
+  margin: 20px 0 16px;
+}
+.blog ul.not-cover-list li {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .blog ul.not-cover-list {
+    grid-template-columns: 1fr;
+  }
+}
+.blog .not-cover-details summary {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-ruby);
+}
+.blog .not-cover-details[open] summary {
+  margin-bottom: 10px;
+}
+
+/* V1.4 Eyebrow + headline scaffold — ruby uppercase tracked kicker
+   above each section H2, keyed off the stable heading ids. */
+.blog h2#take-this-course-if::before,
+.blog h2#who-built-this::before,
+.blog h2#why-this-course-exists::before,
+.blog h2#what-this-course-does-not-cover::before,
+.blog h2#module-map::before,
+.blog h2#going-further-after-first-paying-customer::before,
+.blog h2#already-started-building::before {
+  display: block;
+  font-family: system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ruby);
+  margin-bottom: 6px;
+}
+.blog h2#take-this-course-if::before { content: "Who it's for"; }
+.blog h2#who-built-this::before { content: "The team"; }
+.blog h2#why-this-course-exists::before { content: "The problem"; }
+.blog h2#what-this-course-does-not-cover::before { content: "Scope"; }
+.blog h2#module-map::before { content: "The syllabus"; }
+.blog h2#going-further-after-first-paying-customer::before { content: "After module 5"; }
+.blog h2#already-started-building::before { content: "Side path"; }
+
+/* V2.1 Mid-page CTA card — the 6th cell of the mistakes grid: dark
+   inverted door to the module map. No counter, no ✗. */
+.blog ul.mistake-list > li.mistake-list__cta {
+  counter-increment: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  background: #0d1117;
+  border-color: #0d1117;
+  color: #e7e7ee;
+  font-weight: 600;
+}
+.blog ul.mistake-list > li.mistake-list__cta::before {
+  content: none;
+}
+.blog ul.mistake-list > li.mistake-list__cta a {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.blog ul.mistake-list > li.mistake-list__cta a:hover {
+  color: #ff6b64 !important;
+}
+
+/* V2.2 Module-map timeline rail — vertical rail left of the cards on
+   wide viewports with a ruby node per card; hidden below 1000px where
+   there is no gutter for it. */
+@media (min-width: 1000px) {
+  .blog .module-rail {
+    position: relative;
+  }
+  .blog .module-rail::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    background: #e5e7eb;
+  }
+  .blog .module-rail .module-card::after {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 32px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 4px solid #0d1117;
+  }
+}
+
+/* L5-condense (40.26) — lesson lists live inside a native <details> per
+   card, closed by default; the V2.3 two-col grid is gone with them. */
+.blog .module-card__details {
+  margin: 14px 0 4px;
+}
+.blog .module-card__details summary {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-ruby);
+}
+.blog .module-card__details[open] summary {
+  margin-bottom: 10px;
+}
+.blog .module-card__details .module-card__router {
+  font-size: 15px;
+  color: #5f6470;
+  margin: 0 0 10px;
+}
+.blog .module-card__details ol.module-card__chapters {
+  margin-bottom: 12px;
+}
+
+/* L5 amendment — modules 3-5 grouped behind one card-shaped summary
+   (demo 1 component #8: the card IS the summary of a native details). */
+.blog .module-group > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #ececf0;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(26, 26, 46, 0.07);
+  padding: 22px 26px;
+}
+.blog .module-group > summary::-webkit-details-marker {
+  display: none;
+}
+.blog .module-group > summary::marker {
+  content: "";
+}
+/* the site-wide summary::before "▸" — the group card carries its own
+   chevron on the right instead */
+.blog .module-group > summary::before {
+  content: none;
+}
+.blog .module-group > summary::after {
+  content: "▾";
+  margin-left: auto;
+  color: var(--color-ruby);
+  font-size: 18px;
+}
+.blog .module-group[open] > summary::after {
+  content: "▴";
+}
+.blog .module-group[open] > summary {
+  margin-bottom: 28px;
+}
+.blog .module-group__title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+}
+
+/* V3 Dark hero course-artifact card — obsidian island replacing the
+   cover figure; hero widens beyond the 720px article on desktop.
+   Separate revertable commit: drop this block + the list.html aside
+   to restore the cover hero. */
+.blog .course-hero-card {
+  position: relative;
+  overflow: hidden;
+  background: #0d1117;
+  border-radius: 18px;
+  padding: 30px 28px;
+  margin: 20px 0 8px;
+  color: #e7e7ee;
+  box-shadow: 0 20px 50px rgba(13, 17, 23, 0.35);
+  text-align: left;
+}
+.blog .course-hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(280px 200px at 88% 112%, rgba(168, 85, 247, 0.22), transparent),
+    radial-gradient(300px 220px at 8% -12%, rgba(204, 52, 45, 0.32), transparent);
+  pointer-events: none;
+}
+.blog .course-hero-card > * {
+  position: relative;
+}
+.blog .course-hero-card__eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ff6b64;
+  margin: 0 0 8px;
+}
+.blog .course-hero-card__stats,
+.blog .single-content ul.course-hero-card__stats {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0 0 16px;
+}
+.blog .course-hero-card__stats li,
+.blog .single-content ul.course-hero-card__stats li:not(:first-child) {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e7e7ee;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin: 0;
+}
+.blog .course-hero-card__leave {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b9b9c7;
+  margin: 0;
+}
+@media (min-width: 980px) {
+  .blog .course-hero {
+    width: min(1080px, calc(100vw - 48px));
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    column-gap: 56px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .blog .course-hero h1.course-title,
+  .blog .course-hero .course-hero-lede,
+  .blog .course-hero .course-chips,
+  .blog .course-hero .course-hero-note {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .blog .course-hero-card {
+    margin: 0;
+  }
+}
+
+/* V1.4b Hero chips + CTA polish, converged on the demo-1 component spec
+   (docs/design-system/course-landing-components-2026-08.md #1 + #2). */
+.blog .course-chips li {
+  background: #f3f4f6;
+  border-radius: 2px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.blog .course-chips li:first-child {
+  color: var(--color-ruby);
+  background: rgba(204, 52, 45, 0.07);
+  border-color: rgba(204, 52, 45, 0.25);
+}
+.blog .course-hero-ctas .cta-link:not(.cta-link--ghost),
+.blog .course-endcap__cta .cta-link {
+  box-shadow: 0 4px 14px rgba(204, 52, 45, 0.39);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.blog .course-hero-ctas .cta-link:not(.cta-link--ghost):hover,
+.blog .course-endcap__cta .cta-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(204, 52, 45, 0.23);
 }

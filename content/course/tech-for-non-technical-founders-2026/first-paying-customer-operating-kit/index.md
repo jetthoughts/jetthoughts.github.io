@@ -36,8 +36,6 @@ Template companion to [Module 5 of the From Idea to First Paying Customer course
 
 *Prefer paper? <a href="first-paying-customer-operating-kit.pdf" data-course-event="pdf-download">Download the PDF</a> - same content, print-ready.*
 
-*From live MVP to signed paid pilot in 4 weeks - the templates Module 5 runs on.*
-
 ## What this kit covers
 
 Module 5 of this course runs seven lessons (5.1-5.7): the Sean Ellis 40% test, channel choice, the personal-network outreach arc, the paid-pilot contract, and the cold-outbound pipeline. The lessons carry these templates; this page is the index that points at each one.
@@ -46,33 +44,47 @@ Module 5 of this course runs seven lessons (5.1-5.7): the Sean Ellis 40% test, c
 
 ## The 6 components
 
-### 1. 50-name network list template (Google Sheets)
+<div class="kit-grid">
+<div class="module-card">
+<span class="module-card__badge">Component 1</span>
+<h3>50-name network list template</h3>
+<p class="module-card__output">The fill-in Google Sheet from <a href="/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/">Lesson 5.3</a>. Six columns plus four progress columns, pre-sorted by bucket: 5 champions on top, then 10 hot, 15 warm, 20 cold. Seed it with your 2.4 interviewees, 1.4 waitlist signups, and 2.3 30-name list before hunting LinkedIn.</p>
+<p class="module-card__leave"><strong>Payoff:</strong> turns a vague "I should reach out to people" instinct into 50 named messages going out by Friday EOD.</p>
+</div>
+<div class="module-card">
+<span class="module-card__badge">Component 2</span>
+<h3>Cold-email scripts (3 variants)</h3>
+<p class="module-card__output">The verbatim 4-line scripts in three sector versions: B2B SaaS inline in <a href="/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/">Lesson 5.7</a>, B2B services and B2C in the <a href="/course/tech-for-non-technical-founders-2026/reference/outbound-full/">outbound reference</a>. Each opens with one personalized reference and carries one currency anchor (deposit or beta price). Follow up with non-responders once only.</p>
+<p class="module-card__leave"><strong>Payoff:</strong> you spend 60-90 seconds per name on personalization, not 20 minutes deciding what to say.</p>
+</div>
+<div class="module-card">
+<span class="module-card__badge">Component 3</span>
+<h3>Design Partner Agreement template</h3>
+<p class="module-card__output">The one-page DPA from <a href="/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/#dpa-template">Lesson 5.6</a> - six sections plus signature block, plain English, no lawyer required for v1. Typical fills: $1,500 deposit for a B2B SaaS pilot, $5,000 for a B2B services pilot - both inside the 10-30% of year-one ACV band. The clause that carries the pilot, the deposit, is inline just below this grid.</p>
+<p class="module-card__leave"><strong>Payoff:</strong> makes the "we run paid pilots" conversation a 15-second handoff instead of a three-week back-and-forth.</p>
+</div>
+<div class="module-card">
+<span class="module-card__badge">Component 4</span>
+<h3>Stripe Checkout setup checklist</h3>
+<p class="module-card__output">Five steps to a working Stripe payment link, no engineer required - the setup walk lives in <a href="/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/">Lesson 5.6</a> with the framework detail in the <a href="/course/tech-for-non-technical-founders-2026/reference/paid-pilot-full/">paid-pilot reference</a>. Optional Rails / Django / Laravel snippets wire deposits into your app database after the first pilot ships.</p>
+<p class="module-card__leave"><strong>Payoff:</strong> 15-minute payment-link setup so the first deposit arrives Wednesday, not three weeks after kickoff.</p>
+</div>
+<div class="module-card">
+<span class="module-card__badge">Component 5</span>
+<h3>Sean Ellis 40% survey template</h3>
+<p class="module-card__output">The exact 5 questions, verbatim, in <a href="/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/">Lesson 5.1</a> - type them into Typeform, Tally, or a Google Form. The CSV scoring walk, including the per-segment must-have % formula, is in the <a href="/course/tech-for-non-technical-founders-2026/reference/must-have-survey-full/">survey reference</a>: pivot the Q1 column by the Q5 segment column and the per-segment number appears.</p>
+<p class="module-card__leave"><strong>Payoff:</strong> 24 hours from "I should run the test" to a scored result you can act on.</p>
+</div>
+<div class="module-card">
+<span class="module-card__badge">Component 6</span>
+<h3>The "First 10 Customers" tracker</h3>
+<p class="module-card__output">The Google Sheet tracker from <a href="/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/">Lesson 5.7</a> - columns for Name, Company, Bucket, Loom sent, Reply, Demo, DPA sent, Deposit, with color-coded bucket pills and filters like "Replied this week" and "Pilot landed this month."</p>
+<img src="kit-sample-row.svg" alt="Sample row from the First 10 Customers Google Sheet tracker">
+<p class="module-card__leave"><strong>Payoff:</strong> turns Friday afternoon into a 10-minute "what shipped this week" review instead of a 90-minute scroll through Gmail.</p>
+</div>
+</div>
 
-The fill-in spreadsheet from [Lesson 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Six columns - Name, Company, Role, Bucket, Relationship strength, Last contact date - plus four progress columns for tracking replies and demos. Pre-sorted by bucket: 5 champions on top, then 10 hot, 15 warm, 20 cold. Three blank rows in each bucket for week-2 additions. Seed it before hunting LinkedIn: your 2.4 interviewees, 1.4 waitlist signups, and 2.3 30-name list are the champions and hot rows already.
-
-In practice: turns a vague "I should reach out to people" instinct into 50 named messages going out by Friday EOD.
-
-### 2. Cold-email scripts (3 variants)
-
-The verbatim 4-line scripts: the B2B SaaS variant is inline in [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/); the services and B2C variants live in the [outbound reference](/course/tech-for-non-technical-founders-2026/reference/outbound-full/). Three sector-specific versions:
-
-- **B2B SaaS, shipped-MVP context** - the script for founders who shipped an MVP on Lovable + Supabase + Stripe and are selling to operators who flagged the same problem.
-- **B2B services** - for fractional CTOs, consultancies, and managed-services founders who sell time rather than license.
-- **B2C app** - for direct-to-user products where the Loom + claim-link motion replaces a Calendly call.
-
-Each script is 4-6 lines including the subject, opens with one specific personalized reference, and carries one currency anchor (deposit or beta price). Follow up with non-responders once only.
-
-Why it matters: removes the "what do I say in the email" friction so you spend 60-90 seconds per name on personalization, not 20 minutes.
-
-### 3. Design Partner Agreement template (one-page LOI + paid pilot)
-
-The one-page DPA from [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Six sections plus signature block. Plain English, mutual-edit document, no lawyer required for v1. Copy the block into Google Docs; export to PDF or import into DocuSign from there when a customer wants to print or e-sign.
-
-Typical fills: $1,500 deposit for a B2B SaaS pilot, $5,000 for a B2B services pilot - both inside the 10-30% of year-one ACV band.
-
-The outcome: makes the "we run paid pilots" conversation a 15-second handoff instead of a three-week back-and-forth.
-
-**The full six-section DPA template lives in [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/#dpa-template). The clause that carries the pilot is the deposit:**
+The deposit clause from component 3, verbatim - copy it into Google Docs and apply the $1,500 or $5,000 sector fill:
 
 ```text
 DESIGN PARTNER AGREEMENT
@@ -82,30 +94,6 @@ One-time deposit: $[500-6,000] (10-30% of year-one ACV).
 Paid via Stripe before pilot kickoff. Credited dollar-for-dollar toward year-one invoice on conversion.
 If Design Partner cancels before week 4: deposit forfeited.
 ```
-
-Copy it verbatim from [Lesson 5.6's DPA block](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/#dpa-template), then apply the $1,500 or $5,000 sector fills described above.
-
-### 4. Stripe Checkout setup checklist (Rails / Django / Laravel)
-
-Five steps to a working Stripe payment link, no engineer required - the setup walk lives in [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) with the framework detail in the [paid-pilot reference](/course/tech-for-non-technical-founders-2026/reference/paid-pilot-full/). Optional Rails / Django / Laravel snippets are for founders who want to wire deposits back into their app after the first pilot ships.
-
-The Rails snippet uses `Stripe::Checkout::Session.create` from the official `stripe` Ruby gem. The Django snippet uses `stripe.checkout.Session.create` from `stripe-python`. The Laravel snippet uses `Stripe\Checkout\Session::create()` from `stripe/stripe-php`. All three produce the same hosted checkout URL Stripe Payment Links produces; the difference is whether the deposit row gets logged in your app database in real time or you import the CSV at the end of the month.
-
-What it does: 15-minute payment-link setup so the first deposit arrives Wednesday, not three weeks after kickoff.
-
-### 5. Sean Ellis 40% survey template (5 questions, Typeform-import ready)
-
-The exact 5 questions, verbatim, are in [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - type them into Typeform, Tally, or a Google Form (five questions, two minutes to set up). The CSV scoring walk, including the per-segment must-have % formula, is in the [survey reference](/course/tech-for-non-technical-founders-2026/reference/must-have-survey-full/): pivot the Q1 column by the Q5 segment column and the per-segment number appears.
-
-Result: 24 hours from "I should run the test" to a scored result you can act on.
-
-### 6. The "First 10 Customers" Google Sheet tracker
-
-The tracker from [Lesson 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) - build it as a Google Sheet with these columns - Name, Company, Bucket, Loom sent, Reply, Demo, DPA sent, Deposit - with color-coded bucket pills (champion / hot / warm / cold) and date stamps on every progress column. Filters: "Replied this week," "Demo this week," "Pilot landed this month."
-
-![Sample row from the First 10 Customers Google Sheet tracker](kit-sample-row.svg)
-
-The payoff: turns Friday afternoon into a 10-minute "what shipped this week" review instead of a 90-minute scroll through Gmail.
 
 ### Bonus: the pilot kickoff call agenda (60-minute template)
 
@@ -124,39 +112,59 @@ The trap to avoid: skipping the kickoff and treating the deposit as the end-stat
 
 For your second pilot onwards, re-use this agenda as a Notion template - 90% of the call is identical across customers; only the success criteria + stakeholders change. The Friday demo cadence is the single biggest churn-prevention move you can make in the first 4 weeks: if your customer sees something new every Friday they are in for the long run, even if you ship small.
 
-## How to use the kit
+## How to run the kit
 
 The kit runs Monday-to-Friday for the four weeks of Module 5. The sequence:
 
-**Week 1 (must-have segment).** Run the Sean Ellis survey (template 5). Compute per-segment must-have %. Pick your target segment.
+**Week 1 (must-have segment).** Run the Sean Ellis survey (component 5). Compute per-segment must-have %. Pick your target segment.
 
-**Week 2 (personal network).** Fill the 50-name template (template 1), seeding it with your 2.4 interviewees, 1.4 waitlist signups, and 2.3 30-name list first. Record Loom. Send champion + hot Monday, warm Tuesday, cold Thursday.
+**Week 2 (personal network).** Fill the 50-name template (component 1), seeding it with your 2.4 interviewees, 1.4 waitlist signups, and 2.3 30-name list first. Record Loom. Send champion + hot Monday, warm Tuesday, cold Thursday.
 
-**Week 3 (paid pilot).** Send DPA (template 3) and Stripe link (template 4) to 1-2 warm leads who agreed to demos. Bank first deposit.
+**Week 3 (paid pilot).** Send DPA (component 3) and Stripe link (component 4) to 1-2 warm leads who agreed to demos. Bank first deposit.
 
-**Week 4 (cold outbound).** Filter 30 prospects in Apollo or Sales Navigator. Personalize 60-90 seconds each. Send the script (template 2). Track in the tracker (template 6).
+**Week 4 (cold outbound).** Filter 30 prospects in Apollo or Sales Navigator. Personalize 60-90 seconds each. Send the script (component 2). Track in the tracker (component 6).
 
 By Friday of week 4, you should have: a segment-isolated persona doc, 50 sent messages with 30+% reply rate, 1-2 signed paid pilots, and 30 cold-outbound prospects with 3-5 booked demos for week 5.
 
-## What this kit is not
+One boundary before you start: the kit is not a substitute for a sales course or a CRM. It will not teach the conversational mechanics of objection-handling, so if you have never run a customer call, read [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) and run 10 user calls first. It will not track touch counts past the first 30 customers the way HubSpot, Pipedrive, or Salesforce does - past 30, the Sheet breaks and you graduate to a real CRM. It also does not replace the must-have-segment test from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - if your overall must-have % from component 5 is under 25%, your pipeline will fill, the demos will go fine, and conversions will stall at the deposit conversation. Run the 40% test first; work the kit second.
 
-The kit is not a substitute for a sales course or a CRM. It will not teach the conversational mechanics of objection-handling, so if you have never run a customer call, read [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) and run 10 user calls first. It will not track touch counts past the first 30 customers the way HubSpot, Pipedrive, or Salesforce does - past 30, the Sheet breaks and you graduate to a real CRM. It also does not replace the must-have-segment test from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - if your overall must-have % from template 5 is under 25%, your pipeline will fill, the demos will go fine, and conversions will stall at the deposit conversation. Run the 40% test first; work the kit second.
+---
 
-## How to get the kit
+> **Done:** all four weeks are run and the week-4 outcomes above are in hand - segment picked, 50 messages sent, 1-2 pilots signed, cold batch tracked.
+>
+> **Next:** the [Going further triggers](#going-further-triggers) below - churn triage, pivot-or-persevere, and hiring, each with a read-this-when trigger.
 
-Every component is copy-pasteable from its linked lesson or reference page, and the DPA deposit clause is inline above. No mailing list, no funnel - just the links.
+## Going further triggers
 
-## Where this fits in the course
+The continuation chapters kick in once you've passed the Module 5 gate. Read each one only when its trigger fires.
 
-This kit is the template companion to Module 5 of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course - the module that lands the first paying customer right after the MVP ships. The lessons it serves:
+**Diagnose what's slowing growth**
 
-- 5.1 [Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - run the Sean Ellis 40% test against your 10-30 MVP users.
-- 5.3 [Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - 50-name list, 4 buckets; the [5.4 outreach message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/) and [5.5 send-and-track sequence](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) follow.
-- 5.6 [Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) - one-page Design Partner Agreement plus Stripe Checkout setup.
-- 5.7 [Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) - filtered cold outbound for customers 11-20.
+| Trigger | Continuation chapter |
+|---|---|
+| Customers leaving faster than you can replace them | [Churn Triage Before Acquisition](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/) |
+| A key metric flat for 2+ months | [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/) |
+| Hit the self-serve ceiling, time to hire your first engineer | [Hire Track Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) |
 
-Module 5 ends here. Every kit artifact is live in its linked lesson or reference page.
+**Working with a dev agency in the AI era**
+
+| Trigger | Continuation chapter |
+|---|---|
+| Before the discovery call | ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/) |
+| Surprise AI tokens on the invoice | [AI Token Bill](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/) |
+| Worried about AI supply-chain risk in the code they ship | [Slopsquatting](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/) |
+
+**Manage a hired team without writing code**
+
+| Trigger | Continuation chapter |
+|---|---|
+| Need a structure for who reports to whom | [Engineering Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) |
+| Want a weekly heartbeat to confirm something shipped | [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) |
+| Want a 3-question standup that catches problems early | [Three Standup Questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/) |
+| Need a plain-English weekly report from the team | [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/) |
 
 ## Built by
 
 [JetThoughts](https://jetthoughts.com), a Rails-first dev shop that has built alongside non-technical founders for 20 years. We published this course because the same five mistakes kept showing up in first calls with founders. The kit ships open for the same reason.
+
+*If this course saved you from building something nobody wanted, send it to a founder friend.*
