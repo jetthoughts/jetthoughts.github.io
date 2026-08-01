@@ -1,6 +1,9 @@
 # Claude Code Configuration — JetThoughts Blog
 
-**Type**: Hugo static site blog | **Build**: `bin/hugo-build` | **Test**: `bin/qtest --changed` (routine) / `bin/rake test:critical` (milestones)
+**Coding posture**: activate `/ponytail:ponytail ultra` at session start and hold it — radical KISS/YAGNI, deletion over addition, shortest working diff, naive over clever. Applies to every code/config change in this repo.
+
+**Type**: Hugo static site blog | **Build**: `bin/hugo-build`
+**Test**: `bin/qtest --changed` (per change — tests the pages your diff touches) / `bin/test --smoke` (fixed 17-test core net, ~50s / ~30s CI) / `bin/rake test:critical` (milestones) / `bin/test` + `bin/dtest` (PR prep). qtest and smoke are complementary, not redundant: qtest follows your diff, smoke is a constant basics check.
 **CSS**: PostCSS pipeline | **Content**: `content/blog/` (Markdown + Hugo frontmatter)
 
 ---
