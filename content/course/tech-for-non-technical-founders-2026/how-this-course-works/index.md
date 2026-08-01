@@ -59,7 +59,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 |---|---|---|
 | 1.1 | Write your Founding Hypothesis | Notebook + kitchen timer |
 | 1.2 | Build a smoke-test landing page | Mixo or Carrd (the 1.3 tracking step may need the builder's small paid tier) |
-| 1.3 | Wire tracking before traffic starts | Microsoft Clarity + GA4 |
+| 1.3 | Wire tracking before traffic starts | Microsoft Clarity + GA4 (free visitor-tracking tools) |
 | 1.4 | Run 300 cold visitors and read the signal | Ad platform of choice |
 | 1.5 | Add a Stripe price button to measure payment intent | Stripe Payment Links |
 

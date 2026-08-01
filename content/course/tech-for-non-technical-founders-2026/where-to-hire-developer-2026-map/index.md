@@ -56,7 +56,7 @@ Walk the four rows in order. Circle the one your scope and budget land in, then 
 
 | Region | Rate band & time to hire | Pick when | Watch out for |
 |---|---|---|---|
-| **Onshore (US / EU)** | $130K - $210K+/yr, 30-60 days | Regulated industry (HIPAA, SOC 2 with US data residency, fintech license), security clearance, or board-mandated US team | Low offer-acceptance rates and the worst cost-to-output ratio on the map |
+| **Onshore (US / EU)** | $130K - $210K+/yr, 30-60 days | Regulated industry (HIPAA, SOC 2 - the enterprise security audit - with US data residency, fintech license), security clearance, or board-mandated US team | Low offer-acceptance rates and the worst cost-to-output ratio on the map |
 | **Nearshore (LATAM)** | $45 - $100/hr ($90K - $200K annualized), 2-5 days | Real-time timezone overlap for pair programming, customer calls, or daily standups; US founder default in 2026 | Rates compressed in the top metros; English fluency varies by candidate - screen for it |
 | **Tier-2 India** | $15 - $70/hr ($30K - $140K annualized), 1-5 days | Backend-heavy work where async is acceptable (Jaipur, Kochi, Indore, Coimbatore - NOT Bangalore) | No 9am Pacific standups; async PR culture; build CLAUDE.md / coding-standards docs before the first PR |
 | **Mass-market (Upwork)** | $35 - $120/hr project-based, 1-3 days | Single landing page, logo, or one-off scraper - anything you'd ship and never touch again | You become the technical interviewer; no platform vetting; NOT for backend, payments, or auth |

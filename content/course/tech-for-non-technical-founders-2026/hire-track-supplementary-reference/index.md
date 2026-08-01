@@ -62,7 +62,7 @@ Pre-seed founders still hire on resume signals that stopped predicting outcomes 
 
 The 2026 hire decision is not "remote vs in office." It is which of four regions the role belongs to.
 
-**Onshore (US / EU) - $130K to $210K+ per year.** 30 to 60 day hire cycle. Pick this when the role demands it: regulated industry (HIPAA, SOC 2 with US-data-residency clauses, fintech with state licensing), security clearance, or a board mandate. Otherwise the cost-to-output ratio is the worst on the map.
+**Onshore (US / EU) - $130K to $210K+ per year.** 30 to 60 day hire cycle. Pick this when the role demands it: regulated industry (HIPAA, SOC 2 - the security audit big customers require before they buy - with US-data-residency clauses, fintech with state licensing), security clearance, or a board mandate. Otherwise the cost-to-output ratio is the worst on the map.
 
 **Nearshore (LATAM) - $45 to $100 per hour.** Equivalent to $90K to $200K per year. 2 to 5 day hire cycle. Full timezone overlap with US Pacific through Eastern. English fluency at the level needed for daily standups and Slack. The talent pool is dense in Argentina, Brazil, Mexico, and Colombia. The 2026 default for most US founders who do not have a regulated industry mandate.
 

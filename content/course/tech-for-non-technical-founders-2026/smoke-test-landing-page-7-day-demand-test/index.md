@@ -23,7 +23,7 @@ related_posts: false
 
 > **Module 1 · Lesson 1.4 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live landing page with Clarity + GA4 installed (from [Lesson 1.3](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/))
+> **Input:** a live landing page with Clarity + GA4 - the session-replay and visitor-count trackers - installed (from [Lesson 1.3](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/))
 >
 > **Output:** a go / iterate / kill decision on your hypothesis, backed by real demand signal
 >
