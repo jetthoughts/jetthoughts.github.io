@@ -104,20 +104,27 @@
    broken data binding. Now it's an inline ruby lead-in, attached. */
 .blog .module-card {
   position: relative;
-  border-radius: 14px;
+  border-radius: 16px;
   border-color: #ececf0;
   box-shadow: 0 6px 24px rgba(26, 26, 46, 0.07);
+}
+.blog .module-card__badge {
+  color: #9ca3af;
+}
+.blog .module-card__output {
+  background: rgba(204, 52, 45, 0.05);
+  border: 1px solid rgba(204, 52, 45, 0.16);
+  border-radius: 8px;
+  padding: 14px 16px;
 }
 .blog .module-card__output > strong:first-of-type {
   color: var(--color-ruby);
   letter-spacing: 0.02em;
 }
 .blog .module-card__leave {
-  background: #f2faf4;
-  border: 1px solid #d3ecd9;
-  border-radius: 10px;
-  padding: 14px 16px;
-  margin-top: 18px;
+  border-top: 1px solid #f3f4f6;
+  padding: 20px 0 0;
+  margin-top: 20px;
 }
 
 /* V1.3 Dark closing endcap band — obsidian island with a soft ruby
@@ -150,9 +157,6 @@
   line-height: 1.6;
   color: #e7e7ee;
   margin-bottom: 18px;
-}
-.blog .course-endcap__cta .cta-link {
-  box-shadow: 0 6px 18px rgba(204, 52, 45, 0.35);
 }
 .blog .course-endcap__share {
   font-size: 15px;
@@ -263,19 +267,19 @@
     left: -28px;
     top: 20px;
     bottom: 20px;
-    width: 2px;
-    background: linear-gradient(rgba(204, 52, 45, 0.35), #e5e7eb);
+    width: 1px;
+    background: #e5e7eb;
   }
   .blog .module-rail .module-card::after {
     content: "";
     position: absolute;
-    left: -33px;
+    left: -35px;
     top: 32px;
-    width: 8px;
-    height: 8px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background: #ffffff;
-    border: 3px solid var(--color-ruby);
+    border: 4px solid #0d1117;
   }
 }
 
@@ -381,15 +385,6 @@
   color: #ff6b64;
   margin: 0 0 8px;
 }
-.blog .course-hero-card__title {
-  font-family: "Space Grotesk", system-ui, sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  margin: 0 0 14px;
-}
 .blog .course-hero-card__stats,
 .blog .single-content ul.course-hero-card__stats {
   list-style: none;
@@ -439,13 +434,29 @@
   }
 }
 
-/* V1.4b Hero chips + CTA polish — "Free" chip picks up the ruby tint;
-   primary CTA gets a soft ruby shadow. */
+/* V1.4b Hero chips + CTA polish, converged on the demo-1 component spec
+   (docs/design-system/course-landing-components-2026-08.md #1 + #2). */
+.blog .course-chips li {
+  background: #f3f4f6;
+  border-radius: 2px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
 .blog .course-chips li:first-child {
   color: var(--color-ruby);
   background: rgba(204, 52, 45, 0.07);
   border-color: rgba(204, 52, 45, 0.25);
 }
-.blog .course-hero-ctas .cta-link:not(.cta-link--ghost) {
-  box-shadow: 0 6px 18px rgba(204, 52, 45, 0.25);
+.blog .course-hero-ctas .cta-link:not(.cta-link--ghost),
+.blog .course-endcap__cta .cta-link {
+  box-shadow: 0 4px 14px rgba(204, 52, 45, 0.39);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.blog .course-hero-ctas .cta-link:not(.cta-link--ghost):hover,
+.blog .course-endcap__cta .cta-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(204, 52, 45, 0.23);
 }

@@ -31,6 +31,7 @@ hero_chips:
   - "No sign-up"
   - "5 modules"
   - "Evenings & weekends pace"
+  - "First verdict in 2-3 weeks"
 hero_note: "Every lesson is free. Module 1's demand test runs on free channels or optional paid ads - your call."
 hero_primary_url: "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/"
 hero_primary_text: "Start Lesson 1.1 →"

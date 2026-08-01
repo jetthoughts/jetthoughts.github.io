@@ -70,7 +70,6 @@
         {{ range $seq.sequence }}{{ $m := index (findRE `^Lesson (\d+)` .module 1) 0 }}{{ if and $m (not (in $mods $m)) }}{{ $mods = $mods | append $m }}{{ end }}{{ end }}
         <aside class="course-hero-card" aria-label="Course summary">
           <p class="course-hero-card__eyebrow">Free course</p>
-          <p class="course-hero-card__title">{{ .Title }}</p>
           <ul class="course-hero-card__stats">
             <li>{{ len $mods }} modules</li>
             <li>{{ $lessons }} lessons</li>
