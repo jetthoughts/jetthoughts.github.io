@@ -43,7 +43,7 @@ After this lesson you will be able to: **run the 5-question Sean Ellis survey ag
 
 ---
 
-A founder's MVP goes live, 40 beta users poke at it, and the dashboard shows 0.4% conversion on $4,200 of Meta ads. That dashboard just told the founder what five phone calls would have said for free: most users never opened the app twice, and no ad budget turns that group into customers.
+Would your first users be disappointed if your product disappeared tomorrow? Five phone calls answer that for free - and if the honest answer is no, you have a product problem no ad budget can fix.
 
 ---
 

@@ -41,7 +41,7 @@ After this lesson you will be able to: **build a 30-name list of specific people
 
 > **TL;DR (Part 1 of 2):** Expand your one-sentence hypothesis from Lesson 1.1 into three sentences (a short step below), paste them into Claude, and get back the ICP profile (ICP = Ideal Customer Profile - the specific kind of person your hypothesis's [CUSTOMER] blank names) + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
 
-The instinctive first move is "I'll just message my LinkedIn network" - sixty polite DMs that produce 3 calls, two of them old colleagues being nice. The technique below replaces it: read where strangers already complain about your exact problem, then write back to those specific complainers. Same hypothesis, same hours, different place to look - and it fills a calendar with 10+ booked interviews instead of 2-3 polite ones.
+Your LinkedIn network is the comfortable place to start - and it books polite calls with old colleagues being nice, not interviews with strangers who live the problem. The technique below replaces it: read where strangers already complain about your exact problem, then write back to those specific complainers. Same hypothesis, same hours, different place to look - and it fills a calendar with 10+ booked interviews instead of 2-3 polite ones.
 
 The full journey, top to bottom - this page covers the first three steps (map, read, list); [Part 2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers writing to each person and booking the 10 calls:
 
