@@ -1,8 +1,7 @@
 # Single source of truth for toolchain versions (local dev via `mise install`,
 # https://mise.jdx.dev). CI reads its pins from .github/actions/setup-hugo/
-# action.yml and the workflow files; test/unit/toolchain_pins_test.rb fails
-# the build when any of them drift from the versions below - update them
-# together.
+# action.yml and the workflow files - keep them in sync with the versions
+# below when bumping.
 #
 # ruby is also mirrored in .ruby-version (rbenv / ruby/setup-ruby readers).
 

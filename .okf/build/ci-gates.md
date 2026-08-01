@@ -17,9 +17,8 @@ generated:
 | `Unit Tests` (`rake test:unit`) | `publish.yml` | Every push/PR - `test:critical` does NOT include the unit suite, so this is a separate gate |
 | `Broken Internal Links` (`rake test:links`, lychee) | `link-check.yml` | PRs only when link-relevant paths change; always on nightly schedule / push to master / manual |
 
-Plus two piggybacked on the unit_tests job: `bin/lint-css` (stylelint
-warning ratchet) and `test/unit/toolchain_pins_test.rb` (toolchain drift
-gate). See local pre-PR gates in [test-gates.md](test-gates.md).
+Plus `bin/lint-css` (stylelint warning ratchet) piggybacked on the
+unit_tests job. See local pre-PR gates in [test-gates.md](test-gates.md).
 
 # Toolchain single source of truth
 

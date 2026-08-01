@@ -104,9 +104,9 @@ gem "simplecov"
 - **Chrome or Chromium** — system tests (set `CHROME_BIN=/path/to/chrome` if not on PATH)
 - **Git** for version control
 
-Exact versions live in `.mise.toml` (mirrored in `.ruby-version`); CI pins are
-kept in sync by `test/unit/toolchain_pins_test.rb`. See [docs/SETUP.md](docs/SETUP.md)
-for the full walkthrough.
+Exact versions live in `.mise.toml` (mirrored in `.ruby-version`); CI carries
+its own copies of those pins - keep them in sync when bumping. See
+[docs/SETUP.md](docs/SETUP.md) for the full walkthrough.
 
 ### Installation
 

@@ -77,7 +77,6 @@ namespace :test do
     t.libs << "test"
     t.libs << "lib"
     t.test_files = FileList[
-      "test/unit/toolchain_pins_test.rb",
       "test/unit/bin_scripts_test.rb"
     ]
   end

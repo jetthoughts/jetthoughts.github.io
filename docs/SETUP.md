@@ -24,8 +24,8 @@ mise install    # reads .mise.toml, installs exact pinned versions
   users can `rbenv install $(cat .ruby-version)` instead of mise).
 - CI carries its own copies of the pins (composite action
   `.github/actions/setup-hugo/action.yml`, workflow `ruby-version` inputs,
-  `.dev/compose.yml` image tag). `test/unit/toolchain_pins_test.rb` fails the
-  build when any copy drifts from `.mise.toml` — update them together.
+  `.dev/compose.yml` image tag). Keep every copy in sync with `.mise.toml`
+  when bumping a version.
 - Do NOT install hugo/bun via Homebrew: brew's floating versions drift from
   CI. The Brewfile intentionally carries only system libraries.
 

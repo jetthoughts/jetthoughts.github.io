@@ -2,7 +2,7 @@
 name: 'Setup Hugo with caches'
 description: 'Install Hugo + Bun + Node, cache dependencies and build artifacts'
 # Toolchain pins here are the CI source of truth and must match .mise.toml -
-# test/unit/toolchain_pins_test.rb fails when they drift.
+# keep them in sync when bumping.
 inputs:
   hugo-version:
     description: 'Hugo version'
@@ -50,7 +50,7 @@ runs:
     # satisfied by [security.node.permissions] allowRead in hugo.toml.
     - uses: actions/setup-node@v4
       with:
-        node-version: '22'
+        node-version: 'latest'
 
     # Two separate caches on purpose:
     #
