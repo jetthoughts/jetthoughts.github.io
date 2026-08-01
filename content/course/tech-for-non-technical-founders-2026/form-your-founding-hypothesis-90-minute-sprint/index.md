@@ -67,7 +67,7 @@ Each blank is an assumption, and each assumption has a test waiting for it later
 - **`[COMPETITION]`**: what they currently use (a spreadsheet, a billing service, "doing nothing")
 - **`[DIFFERENTIATION]`**: why they'd switch - faster or cheaper, with numbers
 
-![5 blanks of the Mad Libs hypothesis sentence with a filled example below](hypothesis-mad-libs.svg)
+![The founding-hypothesis frame as five outlined blanks - customer, problem, approach, competition, differentiation - with the customer blank filled two ways to show specific beats vague: "small businesses" gets a shrug, "solo chiropractors" gets "that's me"](hypothesis-mad-libs.svg)
 
 Can't tell whether a blank is specific enough to bet on? The [validation tools field guide](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/) walks three AI tools that stress-test your five blanks in about ten minutes - a structured second opinion before you commit the sentence and start booking interviews.
 

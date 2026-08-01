@@ -1,46 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 190" role="img" aria-labelledby="madlibs-title">
-  <title id="madlibs-title">The founding-hypothesis Mad Libs sentence with five blanks: If we help [customer] solve [problem] with [approach], they'll choose it over [competition] because [differentiation].</title>
-  <desc>Five fill-in-the-blank pills stitched into one sentence. Three red pills name the customer, the problem, and the approach; two purple pills name the competition and the differentiation. Caption: five blanks, one sentence, no vagueness allowed.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-labelledby="madlibs-title madlibs-desc">
+  <title id="madlibs-title">Fill five specific blanks and the hypothesis becomes one testable sentence.</title>
+  <desc id="madlibs-desc">A fill-in-the-blank sentence with five outlined placeholder chips: customer, problem, approach, competition and differentiation, stitched by the connecting words "If we help ... solve ... with ..., they'll choose it over ... because ...". Below, the customer blank is filled two ways to show what specific means: the vague fill "small businesses" gets a shrug, the specific fill "solo chiropractors" (marked in ruby) gets "that's me". Basis: the founding-hypothesis frame from Click by Knapp and Zeratsky, 2025.</desc>
   <defs>
     <style>
-      .h    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .join { font-size: 21px; fill: #555; }
-      .pill { font-size: 20px; font-weight: 700; fill: #1a1a1a; }
-      .cap  { font-size: 18px; fill: #888; font-style: italic; }
-      .p-r  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2; stroke-linejoin: round; }
-      .p-p  { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2; stroke-linejoin: round; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .join  { font-size: 20px; font-weight: 400; fill: #121212; }
+      .blank { font-size: 20px; font-weight: 600; fill: #8a8a8a; }
+      .fill  { font-size: 20px; font-weight: 600; fill: #ffffff; }
+      .vague { font-size: 20px; font-weight: 600; fill: #8a8a8a; }
+      .annot { font-size: 18px; font-weight: 400; fill: #444444; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
   </defs>
 
-  <!-- Line 1: If we help [customer] solve [problem] with [approach] -->
-  <text x="18" y="54" class="h join">If we help</text>
-  <g transform="rotate(-0.8 202 47)">
-    <rect x="152" y="32" width="100" height="30" rx="8" class="p-r"/>
-    <text x="202" y="54" text-anchor="middle" class="h pill">customer</text>
-  </g>
-  <text x="266" y="54" class="h join">solve</text>
-  <g transform="rotate(0.7 378 47)">
-    <rect x="330" y="32" width="96" height="30" rx="8" class="p-r"/>
-    <text x="378" y="54" text-anchor="middle" class="h pill">problem</text>
-  </g>
-  <text x="440" y="54" class="h join">with</text>
-  <g transform="rotate(-0.6 553 47)">
-    <rect x="500" y="32" width="106" height="30" rx="8" class="p-r"/>
-    <text x="553" y="54" text-anchor="middle" class="h pill">approach</text>
-  </g>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="320" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="304" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Line 2: they'll choose it over [competition] because [differentiation] -->
-  <text x="18" y="114" class="h join">they'll choose it over</text>
-  <g transform="rotate(0.6 340 107)">
-    <rect x="280" y="92" width="120" height="30" rx="8" class="p-p"/>
-    <text x="340" y="114" text-anchor="middle" class="h pill">competition</text>
-  </g>
-  <text x="414" y="114" class="h join">because</text>
-  <g transform="rotate(-0.7 584 107)">
-    <rect x="516" y="92" width="136" height="30" rx="8" class="p-p"/>
-    <text x="584" y="114" text-anchor="middle" class="h pill">differentiation</text>
-  </g>
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">Five specific blanks, one testable sentence</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">Categories get a polite nod; specifics get pushback</text>
 
-  <!-- Caption -->
-  <text x="340" y="166" text-anchor="middle" class="h cap">Five blanks. One sentence. No vagueness allowed.</text>
+  <!-- Row 1: If we help [CUSTOMER] solve [PROBLEM] with [APPROACH] -->
+  <text x="40" y="134" class="gk join">If we help</text>
+  <rect x="140" y="113" width="118" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
+  <text x="199" y="134" text-anchor="middle" class="gk blank">CUSTOMER</text>
+  <text x="272" y="134" class="gk join">solve</text>
+  <rect x="326" y="113" width="106" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
+  <text x="379" y="134" text-anchor="middle" class="gk blank">PROBLEM</text>
+  <text x="444" y="134" class="gk join">with</text>
+  <rect x="492" y="113" width="122" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
+  <text x="553" y="134" text-anchor="middle" class="gk blank">APPROACH</text>
+
+  <!-- Row 2: they'll choose it over [COMPETITION] because [DIFFERENTIATION] -->
+  <text x="40" y="193" class="gk join">they'll choose it over</text>
+  <rect x="252" y="172" width="150" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
+  <text x="327" y="193" text-anchor="middle" class="gk blank">COMPETITION</text>
+  <text x="414" y="193" class="gk join">because</text>
+  <rect x="502" y="172" width="176" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
+  <text x="590" y="193" text-anchor="middle" class="gk blank">DIFFERENTIATION</text>
+
+  <!-- hero reading: the CUSTOMER blank filled two ways (ruby = the specific, actionable fill) -->
+  <line x1="40" y1="226" x2="680" y2="226" stroke="#ececec" stroke-width="1"/>
+  <text x="40" y="256" class="gk join" fill="#4a4a4a" font-size="18">Fill it vague:</text>
+  <rect x="158" y="238" width="176" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
+  <text x="246" y="259" text-anchor="middle" class="gk vague">small businesses</text>
+  <path d="M348,253 L372,253 M366,248 L374,253 L366,258" fill="none" stroke="#3a3a3a" stroke-width="2"/>
+  <rect x="384" y="238" width="196" height="30" rx="4" fill="#cc342d"/>
+  <text x="482" y="259" text-anchor="middle" class="gk fill">solo chiropractors</text>
+  <text x="592" y="259" class="sys annot" fill="#cc342d">= "that's me"</text>
+
+  <!-- one basis line -->
+  <text x="360" y="298" text-anchor="middle" class="sys basis">Basis: the founding-hypothesis frame from Click (Knapp &amp; Zeratsky, 2025)</text>
 </svg>
