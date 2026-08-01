@@ -37,6 +37,8 @@ related_posts: false
 >
 > **Progress:** M2 · 5 of 6 · Results so far: question list + 30-name list + 10 scored interviews - this page turns the scores into a decision
 
+After this lesson you will be able to: **turn your 10 interview transcripts into one written decision - build, pivot, or kill - backed by a one-page problem statement you can defend.**
+
 > **TL;DR:** Score 10 transcripts, count strong signals, make one of three calls. 90 minutes. The decision you avoid here costs you a quarter of build time later.
 
 > **You should be here AFTER your Lesson 2.3-2.4 interviews are done.** No 10 scored transcripts in hand? Return to [Lesson 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) for the technique, then [Lesson 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for recruitment. This is the synthesis pass - you cannot complete it without real interview data.
@@ -94,6 +96,8 @@ flowchart TD
 **4-6 strong signals: pivot.** Partial signal - usually an ICP problem, not a problem problem. Sharpen the ICP definition and run 5 more interviews against the narrower group. Those 5 interviews cost a week; a built MVP against a fuzzy ICP costs a quarter.
 
 **Below 4 strong signals: kill.** Strangers were polite. Note what you learned about the wrong ICP, framing, or trigger, then return to [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/), rewrite the weakest blank from your dead transcripts, and rebuild your list in [2.3 · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/).
+
+**Success check:** your strong-signal count is circled on the score column and it routes the call - 7 or more of 10 is build, 4-6 is pivot, under 4 is kill - and that word is written at the top of your one-page statement.
 
 ## What good looks like vs what bad looks like
 

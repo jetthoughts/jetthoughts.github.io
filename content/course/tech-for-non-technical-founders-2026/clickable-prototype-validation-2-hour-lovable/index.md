@@ -38,13 +38,13 @@ related_posts: false
 >
 > **Progress:** M2 · 6 of 6 · Results so far: question list + 30-name list + 10 scored interviews + a build/pivot/kill verdict and validated problem statement
 
+After this lesson you will be able to: **watch 5 real customers try to use your solution before it exists - and score what they do, not what they say.**
+
 > **TL;DR:** Three throwaway screens, five silent-observation sessions. Watch whether users can navigate your solution without coaching - something interviews cannot tell you.
 
 > **How this lesson relates to Lesson 2.3-2.4:** [Lesson 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) already booked and ran your 10 past-behavior Mom Test interviews. This lesson takes 5 of those 10 (the ones who scored 7+) and re-engages them for a 30-minute silent-observation session with a throwaway Lovable prototype. You are NOT recruiting fresh people; you are re-asking warm contacts for a different kind of time. Lesson 2.3-2.4 validated THE PROBLEM; Lesson 2.6 validates THE SOLUTION SHAPE.
 
 The [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) tells you whether the problem is real and felt. A clickable prototype tells you something the Mom Test cannot: whether the user knows what to do when you hand them a solution. Those signals do not measure the same thing.
-
-After this lesson you will be able to: **watch 5 real customers try to use your solution before it exists - and score what they do, not what they say.**
 
 One founder we advised ran 8 strong Mom Test interviews, then built a working app over several weeks - and when 5 interviewees logged in, several stalled on screen 2, unable to figure out which button to click next. Validating the problem had not validated whether the shape was navigable. A throwaway prototype in front of 5 subjects surfaces that in an afternoon. ([Full story](/course/tech-for-non-technical-founders-2026/reference/prototype-build-full/).)
 
@@ -142,6 +142,8 @@ Catching a shape mismatch here costs one throwaway prototype. Catching it in Mod
 | **1** | Open Lovable and paste this lesson's 3-screen prompt with every `[PLACEHOLDER]` filled in. Aim for a navigable prototype within ~10 exchanges; stop at 3 screens. | Throwaway 3-screen prototype with link |
 | **2** | Book 5 silent-observation sessions with interviewees who scored 7+ on the Mom Test. Send the prototype link 10 minutes before each call. | 5 sessions on the calendar |
 | **3** | Tally the pass count from 5 sessions. Copy the exact "describe in one sentence" answers into a doc - those words go into the [One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) verbatim. | Pass/fail count + verbatim vocabulary |
+
+**Success check:** 5 sessions are scored - each marked pass or fail against all three signals - and 5 verbatim "describe in one sentence" answers are copied word for word into your doc.
 
 ---
 
