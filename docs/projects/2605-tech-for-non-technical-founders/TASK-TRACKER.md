@@ -71,6 +71,19 @@
    audit of off-spec SVG fonts, mobile text-size floor, founder-os-pack
    cover). Pilot recruitment (PAUL): 3-5 real Sams per 40.18.
 
+10. **Course v2-format consistency fix + deep audit** (scheduled 2026-08-01,
+    own session — research: `40-49-review/40.22-v2-format-structural-audit-2026-08-01.md`).
+    Mechanical Phases 1-2 already run: 11 of 25 lessons deviate from the v2
+    scaffold (6 missing the outcome line, 5 missing "Success check", 2 with
+    two visuals) + 2 length flags (`hire-track-supplementary-reference` 5,558w,
+    `self-serve-stack-walkthrough` 4,508w). Scope (option C): (a) fix the 11
+    flagged lessons to scaffold — per-lesson, confirm each is a miss not an
+    intentional exception; (b) split/demote the over-length reference;
+    (c) run runbook Phases 3-6 + the content cold-eyes personas (ICP-Sam,
+    voice, slop) on edited chapters. Content-only edits → hugo-build + scroll
+    gate gate, no visual suite. Blocks nothing; do after the metrics-window
+    items (9b L3 landing ships before 2026-08-14).
+
 ## Browser-session track (claude-in-chrome, added 2026-07-31)
 
 Paul's logged-in Chrome is now a proven agent surface (LinkedIn reads
