@@ -1,64 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="gauge-title">
-  <title id="gauge-title">The Sean Ellis 40% gauge: the share of your first users who would be "very disappointed" without the product, with 40% as the pass line.</title>
-  <desc>A semicircular meter reading 0 to 100 percent of "very disappointed" survey answers. A bold red line marks the 40 percent threshold. The arc left of the line is amber (under 40 percent, a product problem); the arc right of the line is green (must-have segment, go sell). A needle points into the green zone.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="gauge-title gauge-desc">
+  <title id="gauge-title">At 40% very-disappointed the product is a must-have: read the share of your first users against the 40% line.</title>
+  <desc id="gauge-desc">A horizontal signal meter reading 0 to 100 percent of first users who answer "very disappointed" if the product vanished. Under 40 percent is amber - a product problem no ad budget fixes. 40 percent or more is green - a must-have user, go sell. A ruby line and pointer mark the 40 percent go line. Axis ticks at 0, 40, and 100 percent. Basis: share answering "very disappointed" to "How would you feel if you could no longer use it?", 10 to 30 recent users, the Sean Ellis test.</desc>
   <defs>
     <style>
-      .h        { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .q        { font-size: 26px; font-weight: 700; fill: #1a1a1a; }
-      .sub      { font-size: 17px; fill: #666; font-style: italic; }
-      .tick     { font-size: 17px; font-weight: 700; fill: #1a1a1a; }
-      .thr      { font-size: 22px; font-weight: 700; fill: #cc342d; }
-      .cardhd-a { font-size: 20px; font-weight: 700; fill: #b8860b; }
-      .cardhd-g { font-size: 20px; font-weight: 700; fill: #2e7d32; }
-      .cardln   { font-size: 15px; fill: #1a1a1a; }
-      .foot     { font-size: 16px; fill: #666; font-style: italic; }
-      .needlenote { font-size: 15px; fill: #2e7d32; font-weight: 700; }
-      .arc-a    { fill: none; stroke: #e0a92e; stroke-width: 54; }
-      .arc-g    { fill: none; stroke: #2e7d32; stroke-width: 54; }
-      .card-a   { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
-      .card-g   { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
-      .thrline  { stroke: #cc342d; stroke-width: 5; stroke-linecap: round; }
-      .needle   { stroke: #1a1a1a; stroke-width: 6; stroke-linecap: round; }
+      .gk   { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys  { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .label { font-size: 20px; font-weight: 600; fill: #ffffff; }
+      .annot { font-size: 18px; font-weight: 400; fill: #ffffff; }
+      .tick  { font-size: 20px; font-weight: 600; fill: #3a3a3a; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+      .ptr   { font-size: 20px; font-weight: 700; fill: #cc342d; }
+      .ptrsub{ font-size: 18px; font-weight: 400; fill: #444444; }
     </style>
+    <clipPath id="gauge-bar"><rect x="56" y="150" width="608" height="64" rx="4"/></clipPath>
   </defs>
 
-  <!-- Survey question header -->
-  <text x="480" y="40" text-anchor="middle" class="h q">"How would you feel if you could no longer use it?"</text>
-  <text x="480" y="66" text-anchor="middle" class="h sub">Gauge = % of your first 10-30 users who answer "very disappointed"</text>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="300" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="284" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Gauge arcs (semicircle, mid-radius 185, centre 480,350) -->
-  <path class="arc-a" d="M 295 350 A 185 185 0 0 1 422.83 174.05"/>
-  <path class="arc-g" d="M 422.83 174.05 A 185 185 0 0 1 665 350"/>
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">40% who'd miss it = a must-have</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">Survey your first users before you buy traffic</text>
 
-  <!-- 40% threshold line across the band -->
-  <line class="thrline" x1="433.65" y1="207.34" x2="411.4" y2="138.86"/>
-  <text x="398" y="126" text-anchor="middle" class="h thr">40%</text>
-  <text x="398" y="106" text-anchor="middle" class="h thr" font-size="16">THE LINE</text>
+  <!-- hero reading: the 40% go line (ruby = the one actionable reading) -->
+  <g>
+    <text x="299" y="110" text-anchor="middle" class="gk ptr">40% = the line</text>
+    <text x="299" y="130" text-anchor="middle" class="sys ptrsub">must-have, start selling</text>
+    <path d="M293,134 L305,134 L299,144 Z" fill="#cc342d"/>
+  </g>
 
-  <!-- Scale ticks -->
-  <text x="295" y="380" text-anchor="middle" class="h tick">0%</text>
-  <text x="665" y="380" text-anchor="middle" class="h tick">100%</text>
+  <!-- meter track: DATA bands filled, no stroke, 4px outer radius via clip -->
+  <g clip-path="url(#gauge-bar)">
+    <rect x="56"  y="150" width="243" height="64" fill="#c47d16"/>
+    <rect x="299" y="150" width="365" height="64" fill="#2e7d32"/>
+  </g>
 
-  <!-- Needle pointing into the green zone (~62%) -->
-  <line class="needle" x1="480" y1="350" x2="543.32" y2="190.08"/>
-  <circle cx="480" cy="350" r="13" fill="#1a1a1a"/>
+  <!-- band labels: pct (label rung) + verdict (annotation rung), inside shape -->
+  <text x="177" y="180" text-anchor="middle" class="gk label">Under 40%</text>
+  <text x="177" y="200" text-anchor="middle" class="sys annot">Product problem</text>
+  <text x="481" y="180" text-anchor="middle" class="gk label">40% or more</text>
+  <text x="481" y="200" text-anchor="middle" class="sys annot">Must-have user, go sell</text>
 
-  <!-- Amber caption card (left, under 40%) -->
-  <rect x="24" y="236" width="234" height="120" rx="14" class="card-a" transform="rotate(-0.6 141 296)"/>
-  <text x="141" y="266" text-anchor="middle" class="h cardhd-a">UNDER 40%</text>
-  <text x="141" y="292" text-anchor="middle" class="h cardln">Product problem,</text>
-  <text x="141" y="312" text-anchor="middle" class="h cardln">not a marketing one.</text>
-  <text x="141" y="336" text-anchor="middle" class="h cardln">More ads won't fix it -</text>
-  <text x="141" y="352" text-anchor="middle" class="h cardln">talk to the "very disappointed".</text>
+  <!-- STRUCTURE: axis baseline + ticks, stroked ink, no fill -->
+  <line x1="56" y1="216" x2="664" y2="216" stroke="#3a3a3a" stroke-width="2"/>
+  <g stroke="#3a3a3a" stroke-width="2">
+    <line x1="56"  y1="216" x2="56"  y2="224"/>
+    <line x1="664" y1="216" x2="664" y2="224"/>
+  </g>
+  <text x="56"  y="242" text-anchor="middle" class="gk tick">0%</text>
+  <text x="664" y="242" text-anchor="middle" class="gk tick">100%</text>
 
-  <!-- Green caption card (right, 40% or more) -->
-  <rect x="702" y="236" width="234" height="120" rx="14" class="card-g" transform="rotate(0.5 819 296)"/>
-  <text x="819" y="266" text-anchor="middle" class="h cardhd-g">40% OR MORE</text>
-  <text x="819" y="292" text-anchor="middle" class="h cardln">You have a must-have user.</text>
-  <text x="819" y="312" text-anchor="middle" class="h cardln">Outreach beats paid ads -</text>
-  <text x="819" y="336" text-anchor="middle" class="h cardln">go find more of them</text>
-  <text x="819" y="352" text-anchor="middle" class="h cardln">and start selling.</text>
+  <!-- the 40% go-line threshold: ruby, the hero action marker (structure, stroked) -->
+  <line x1="299" y1="146" x2="299" y2="228" stroke="#cc342d" stroke-width="2.5"/>
+  <text x="299" y="242" text-anchor="middle" class="gk tick" fill="#cc342d" font-weight="700">40%</text>
 
-  <!-- Footer -->
-  <text x="480" y="416" text-anchor="middle" class="h foot">Run the survey before you buy any ads - 5 questions, free on Typeform or Tally.</text>
+  <!-- one basis line -->
+  <text x="360" y="278" text-anchor="middle" class="sys basis">Basis: "very disappointed" share among 10-30 recent users - the Sean Ellis test</text>
 </svg>
