@@ -36,7 +36,7 @@ This page is the companion writeup for that variant. Use it when an email-only s
 
 ## Email signup vs $1 refundable charge
 
-A waitlist captures curiosity (a free email costs the visitor nothing). A $1 charge captures a wallet decision. The same 300 cold visitors who would cheerfully give you an email might generate zero payment clicks - and that zero is the validated demand signal you actually need.
+A waitlist captures curiosity - a free email costs the visitor nothing. Charging even $1 forces a wallet decision. The same 300 cold visitors who would cheerfully give you an email might generate zero payment clicks - and that zero is the validated demand signal you actually need.
 
 The conversion rate drops 3-5x compared to the email-only version. That is the point. The remaining converters are real demand, not curious clickers.
 

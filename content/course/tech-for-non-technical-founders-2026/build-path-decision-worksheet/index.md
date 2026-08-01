@@ -165,7 +165,7 @@ The good answer ties budget to runway and to the marketing test that proves the 
 - **Share the worksheet result with one peer or advisor in a 20-minute call.** Not three. One. Ask them: *"If the matrix said Path X, what would change your mind?"* Their first answer is the assumption you should pressure-test next. If they cannot name one, the matrix verdict holds.
 - **Schedule the first action for tomorrow morning.** Path 1: ship the Carrd page. Path 2: paste one-page brief into Lovable. Path 3: 3 LinkedIn outreach messages to Fractional CTOs in your industry. Path 4: read the SOW clause-by-clause with a printed pen, not in Google Docs. Calendar the action with a hard start time. The worksheet routes the decision; the calendar invite routes the work.
 
-Route this decision on advisor instinct instead of the worksheet and you sign a contract your own validation data did not support - the kind that runs over budget and lands you in the [salvage or rebuild decision tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/). The matrix is cheaper than the contract it prevents.
+Route this decision on advisor instinct instead of the worksheet and you sign a contract your own validation data did not support - the kind that runs over budget and lands you in the [salvage or rebuild decision tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/).
 
 If you want the doctrine in long form, the [Module 4 post](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) walks through the Airbnb test, the Rob Walling shed-vs-skyscraper warning, and the worked example for each of the four paths.
 
