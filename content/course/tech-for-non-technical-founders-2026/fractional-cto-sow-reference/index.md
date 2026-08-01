@@ -128,7 +128,7 @@ These five checks are what make the app safe to run for 47 paying customers on a
 
 *"Vendor shall be deemed to have delivered a milestone upon deployment to the Client-accessible staging environment."* That is the single most expensive sentence a founder will sign this year. It moves the trigger for a milestone payment from "the feature works for users" to "the agency pushed code to a URL." The [SOW Reading Guide](/course/tech-for-non-technical-founders-2026/sow-reading-guide/) opens with the case this clause produced: $78K invoiced for four of five milestones before anyone clicked the staging URL.
 
-The general counsel in that case had cleared the SOW the night before signing - caught the liability cap and the IP assignment, fixed both, and skimmed the milestone-acceptance clause three pages later. Generalist lawyers cover the catastrophic clauses. Agency templates leak money through the operational ones in between.
+The general counsel in that case caught the liability cap and the IP assignment - and skimmed the milestone-acceptance clause three pages later, the operational clause a generalist lawyer is trained to pass over.
 
 ### Eight clauses that quietly cost you money
 
