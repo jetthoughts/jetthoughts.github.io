@@ -316,7 +316,17 @@
 
 ---
 
-### W5 GROOMED SCOPE (re-audited 2026-08-02 @ current tree)
+### W5 ✅ DONE 2026-08-02, merged PR #435 (squash a35d6632)
+T1 long-wait bridges (3-persona cold-eyes caught a Stripe-trigger correctness
+bug + 2 banned patterns + a path-honesty gap, all fixed) · T2 path-finder fix
+(2.1→2.3 core route) + `bin/check-course-paths` gate (O7c) · T3 fork routing
+(4.1/5.6 diagnose→route, fork bodies untouched) · T4 Going Further compression
+(2 hard-over pages under band, reviewer SHIP, cuts removed 3 voice tells).
+Progress-completion tracker stays Clarity-gated (parked, Paul's desk).
+Content-only, honest dtest 34/34. **This closes wave plan 20.15's final
+planned wave.**
+
+### W5 GROOMED SCOPE (historical, executed; re-audited 2026-08-02 @ current tree)
 
 **Gate class: CONTENT-ONLY** (markdown prose/frontmatter, no `themes/`/`layouts/`/`*.css`/body-HTML). Per CLAUDE.md content-only rule: gate = `bin/hugo-build` (validators + banned-string ratchet) + rendered **scroll gate** on edited pages + **cold-eyes personas** (3-4) for voice-sensitive prose. NO `bin/qtest`/`bin/test`/`bin/dtest`. All editors bound by 40.23 **C6 no-touch list**: Mia M1 walkthrough, 2.5 Dana transcript, the 3 decision-fork *bodies* incl. 4.1 mermaid, 1.4 as v2 exemplar, canon numbers, 90/10 footer.
 
