@@ -96,11 +96,11 @@ Both tracks, the parallel-run logic, and the part-time founder's batch-send vari
 
 ## While the replies trickle in
 
-Booking 10 calls takes 2-4 weeks - messages go out, a few replies land, you send the next batch, more land. The calendar sits half-full for days at a stretch, and that is where momentum usually dies. Two things keep it moving.
+Booking 10 calls takes 2-4 weeks - messages go out, a few replies land, and you send the next batch. The calendar sits half-full for days at a stretch, and it's easy to stop pushing new messages out.
 
 Don't wait for all 10 before you start. The day a third call is booked, start running interviews with the [Lesson 2.1 script](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - early calls tell you fast whether your questions are landing, and you can fix them before the later ones. While the replies come in, set up the kit in one sitting: open the 2.1 five-question script, make a blank one-page notes doc you'll copy for each person, and put your 20-minute slots into your [NeetoCal](https://www.neeto.com/neetocal) link so booking is one click for them.
 
-**Come back when 3 calls are booked - and run them, don't hold for 10.** Keep the outreach batches going in the background until the calendar hits 10; the Done below still fires at 10.
+**Come back when 3 calls are booked - and run them, don't hold for 10.** Keep the outreach batches going in the background until the calendar hits 10. Evening-only, with a couple of hours a week? Run the calls first and resume outreach the week after.
 
 > **Done:** 10 interview calls are booked on your calendar and you have sent the first batch of outreach messages.
 >

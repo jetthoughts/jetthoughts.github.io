@@ -77,7 +77,7 @@ Verification takes 1-3 business days, and live payments won't work until it clea
 
 Stripe's test mode is on the moment you sign up. Create the Payment Link (step 2), wire the after-payment redirect (step 3), and run a test checkout on yourself with Stripe's test card `4242 4242 4242 4242` - it walks the full flow without charging anything. Add the refund line to your footer while you're in there, and everything but the live link is done.
 
-**Come back when your Stripe dashboard shows the account verified - the live-mode toggle stops being greyed out.** Flip the link to live mode, paste the live URL on your button, and re-run one checkout to confirm it charges for real.
+**Come back when Stripe emails you that your account is activated - the dashboard's "activate your account" prompt disappears.** Switch the link to live mode, paste the live URL on your button, and re-run one checkout to confirm it charges for real.
 
 ## If Stripe or checkout stalls
 

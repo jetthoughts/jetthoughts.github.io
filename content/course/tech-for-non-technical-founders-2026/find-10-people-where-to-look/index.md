@@ -53,7 +53,7 @@ One time-box: if you catch yourself on day three still polishing the list instea
 
 ## Before you start: write three sentences
 
-These are not new homework - they are your 1.1 Founding Hypothesis blanks, unpacked for people-hunting. Open your `Founding Hypothesis` doc, copy the sentence in, and expand two of its blanks into full sentences (the third - Business - is the one genuinely new line). Without them, every interview answer sounds encouraging and you can't tell confirm from kill:
+Started a few rows during the Lesson 1.4 wait? Pick up from those. These are not new homework - they are your 1.1 Founding Hypothesis blanks, unpacked for people-hunting. Open your `Founding Hypothesis` doc, copy the sentence in, and expand two of its blanks into full sentences (the third - Business - is the one genuinely new line). Without them, every interview answer sounds encouraging and you can't tell confirm from kill:
 
 | Profile | What to write | Bad vs Good |
 |---------|---------------|------------|

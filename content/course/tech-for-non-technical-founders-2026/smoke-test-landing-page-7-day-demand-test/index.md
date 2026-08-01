@@ -82,7 +82,13 @@ You will not have to figure out the ad on your own: the launch checklist below l
 
 The ads run for 5-7 days before 300 visits land. Camping on the dashboard won't speed it up, and the number means nothing until the traffic is in. Use the wait to get a head start on Module 2.
 
-In [Lesson 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) you'll need a list of 30 people who have posted about the problem your page names - that list is what makes the interview outreach work. Start it now: open a spreadsheet and, in one sitting, write down 10-15 names you have seen complain about this problem - in a subreddit, a Slack group, wherever your customer hangs out - and paste the exact post next to each name. Module 2 opens with the slowest part already moving.
+In [Lesson 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) you'll need a list of 30 people who have posted about the problem your page names - that list is what makes the interview outreach work. Start it now, in one sitting:
+
+- Open a spreadsheet.
+- Write down 10-15 names you have seen complain about this problem - in a subreddit (a Reddit topic forum), a Slack group, wherever your customer hangs out.
+- Paste the exact post next to each name.
+
+If your conversion comes back under 3%, you'll re-aim this list at the tightened hypothesis - the names still cost little. Above that, it's ready as-is, and Module 2 opens with its first task already half-done.
 
 **Come back when your campaign dashboard shows 300 landing-page views.** That is the wait over: read your conversion rate against the meter above, then start the price test.
 
