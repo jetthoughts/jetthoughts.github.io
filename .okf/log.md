@@ -1,5 +1,13 @@
 # Bundle Update Log
 
+## 2026-08-01 (W2 T7 escalation) - canon deposit row carries the cancel split
+
+* **Update**: [content/course-canon.md](content/course-canon.md) - deposit row
+  "$500+ refundable" was missing the customer-cancel-forfeit / founder-cancel-
+  100%-refund split that 5.6's DPA clause 3 and the audit-runbook table already
+  carry; the bare "refundable" phrasing caused 3 in-course drift instances
+  fixed in W2-T7 (e4850eaf). Row synced; floor and mechanism unchanged.
+
 ## 2026-08-01 (O5a) - restore-on-green now OS-scoped
 
 * **Update**: [build/test-gates.md](build/test-gates.md) - green runs restore

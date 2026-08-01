@@ -40,7 +40,7 @@ After this lesson you will be able to: **build a 50-name list from people who al
 
 ---
 
-Nearly every one of today's fastest-growing B2B startups got their first 10 customers from people who already knew the founder. Founders skip this step because it feels like begging. It's not. It's the highest-probability first sale you'll ever make.
+Nearly every one of today's fastest-growing B2B startups got their first 10 customers from people who already knew the founder. Founders skip this step because it feels like begging - and it's the highest-probability first sale you'll ever make.
 
 > → **Mia found 50 names** across LinkedIn, her old school contacts, and the parents' association. Five had already complained to her about the tutor search - those went straight into her champion bucket. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)
 
