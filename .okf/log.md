@@ -430,3 +430,28 @@ ever come back black on a light-mode-recorded tree, the pin is
 `"blink-settings" => "preferredColorScheme=1"` in CHROME_ARGS (verified on
 Chrome 151 --headless=new; `--force-prefers-color-scheme=light` is not a
 real switch).
+
+## 2026-08-01 - smoke test tier + test-speed profiling
+
+Profiled the visual suites (`TESTOPTS=--verbose bin/test`). Finding: ONE test,
+`test_codeblock_language_styles` (desktop+mobile), is 98.8s+97.2s = ~196s = 44%
+of the full 67-test / ~450s run - it loops 8 code-fence sections each doing a
+multi-capture `assert_stable_screenshot`. It also errors in the snap_diff Default
+reporter (`reporters/default.rb:25`, Symbol into Integer via String#[]) whenever
+a delayed codeblock diff needs formatting - external-gem bug, not monkeypatched.
+
+Shipped a smoke tier: `test:smoke` rake task + `bin/test --smoke` flag (reuses
+the build + restore-on-green wrapper; `bin/dtest --smoke` passes through to the
+container). 17 curated basics+bummers, excludes the `_sections` sweeps and the
+codeblock elephant. Measured: host 50.5s green (17/17), Docker 41.6s (Docker
+~18% faster, confirming the "Docker is faster" report) with 1 known-stale
+failure (linux mermaid baseline diff_level 0.0693, byte-identical across runs -
+see project-stale-linux-baselines-pending, NOT a smoke defect). vs bin/test
+critical ~300s -> smoke is ~6x faster. Smoke is NOT a milestone/PR gate;
+test:critical + bin/dtest at PR prep stay the bar.
+
+Parallel-test execution (host process-sharding + Docker) deferred as a written
+spike: docs/workflows/test-speed-research-todo.md (O1 kill the codeblock
+elephant, O2 process sharding, O3 Docker-vs-host, O4 direct-visit). Thread
+parallelism is out - Capybara.threadsafe=false + shared current_driver global.
+Code: Rakefile (SMOKE_TESTS + test:smoke), bin/test (--smoke flag).
