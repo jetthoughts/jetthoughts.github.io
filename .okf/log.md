@@ -580,3 +580,17 @@ untouched.
 
 ## 2026-08-01 - Removed toolchain drift-gate unit tests (config-mirror anti-pattern)
 * **Remove**: `test/unit/toolchain_pins_test.rb` deleted in full. It was a config-mirror "drift gate" asserting `.mise.toml` version pins equal the literal pins in the setup-hugo action, `_hugo.yml`, `.dev/compose.yml`, and `.ruby-version`. `test_setup_hugo_action_matches_mise` red-built on a FALSE invariant: `.mise.toml` `node = "latest"` (devs want latest) vs CI `node-version: '22'` (pinned on purpose in #393) - a correct divergence, not drift. Tests config agreement, not behavior; violates FIRST + the CLAUDE.md "no fragile config assertions" rule. Comparing CI-vs-local node explicitly was considered and rejected as overkill (Paul). Refs cleaned: Rakefile `:guards` list, `.mise.toml` / setup-hugo `action.yml` header comments, README, `docs/SETUP.md`, this bundle's [ci-gates](/build/ci-gates.md). Pins still need manual sync when bumping - now by convention, not a gate.
+
+## 2026-08-01 - W3-T1: v3 exhibit spec appended to house-visual-spec
+
+Added a `# v3 exhibit spec` section to `.okf/design/house-visual-spec.md`
+(hand-drawn spec untouched, O1 still needs it) covering the six components
+ADR 30.09 Phase A demanded: 12-col grid at a canonical 720 viewBox, 8px
+spacing scale, connector spec (2px orthogonal + 4px radius O2 / hand-curve
+O1), data-viz rules (fill=data / stroke=structure, ruby-for-signal,
+threshold-vs-band), aspect-ratio table (mobile-safe default 3:2), and the
+5-rung type scale. The >=9px @390px floor is a formula, not prose:
+`rendered = font_viewBox * 390/W_viewBox`; basis rung 17px @ W=720 renders
+9.21px. O1 bumps the floor x1.15 (basis 20px) for Caveat's small x-height.
+Includes the action-title/one-message/basis-line grammar and an O1-vs-O2
+scoring rubric so the T2 A/B pair scores both on the same axes.

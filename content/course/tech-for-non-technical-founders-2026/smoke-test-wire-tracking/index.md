@@ -63,7 +63,7 @@ The 3 numbers you will read in Lesson 1.4:
 
 Conversion rate = form submits ÷ page views. That is the number your hypothesis is judged against.
 
-![Three tracking snippets stacked vertically: Microsoft Clarity (heatmap icon), ad-platform pixel (target icon), GA4 (chart icon), with arrows pointing to a landing page wireframe showing where each snippet fires (page view, CTA click, form submit)](tracking-snippets.svg)
+![Three tracking snippets - Microsoft Clarity, an ad-platform pixel, and Google Analytics 4 - feeding into a landing page's head tag, which then emits three events shown in monospace where they fire: page_view at the headline, cta_click at the waitlist button, form_submit at the email field](tracking-snippets.svg)
 
 ## Install the tracking
 

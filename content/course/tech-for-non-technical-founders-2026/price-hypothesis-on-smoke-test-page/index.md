@@ -58,7 +58,7 @@ The copy matters more than the price number. Two framings we keep reaching for o
 
 Pick one pattern. Do not A/B test - 150 visits each on a $300 budget can't distinguish 4% from 5%. Ship one button copy.
 
-![Same button, two framings side by side - an outcome-framed CTA reading "Stop spending 4 hours on reconciliation - $97" and a risk-reduction-framed CTA reading "Reserve your spot - $97 refundable for 30 days", both showing the identical $97 price](stripe-payment-link.svg)
+![Two cards showing the same waitlist button written two ways - an outcome-framed CTA reading "Stop spending 4 hours on reconciliation - $97" and a risk-reduction-framed CTA reading "Reserve your spot - $97 refundable for 30 days" - both ruby buttons charging the identical $97](stripe-payment-link.svg)
 
 ## Add the Stripe button
 

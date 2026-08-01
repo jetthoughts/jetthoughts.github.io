@@ -1,75 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="tracking-title">
-  <title id="tracking-title">Three tracking snippets stacked on the left side - Microsoft Clarity, Ad-platform pixel, Google Analytics 4 - with arrows pointing to a landing page wireframe on the right showing page_view, cta_click, and form_submit events firing</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 405" role="img" aria-labelledby="tracking-title tracking-desc">
+  <title id="tracking-title">Three snippets pasted into the head tag let you read three events off the page.</title>
+  <desc id="tracking-desc">Three tool boxes on the left - Microsoft Clarity, an ad-platform pixel, and Google Analytics 4 - route into the head tag of a landing-page wireframe on the right. The page then emits three events, shown as monospace tokens where they fire: page_view at the headline, cta_click at the ruby waitlist button, and form_submit at the email field. Basis: three tracking snippets pasted once into the page's head tag.</desc>
   <defs>
     <style>
-      .heading   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .label     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 22px; fill: #cc342d; font-weight: 700; }
-      .sub       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #555; font-style: italic; }
-      .event     { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 16px; fill: #1a1a1a; }
-      .wf-text   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; }
-      .cta-text  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #fff; font-weight: 700; }
-      .clarity   { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
-      .pixel     { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .ga4       { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
-      .wireframe { fill: #fafafa; stroke: #1a1a1a; stroke-width: 2.5; }
-      .ph-block  { fill: #e8e8e8; stroke: none; }
-      .ph-cta    { fill: #cc342d; stroke: none; }
-      .arrow     { stroke: #1a1a1a; stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .mono  { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 17px; fill: #121212; }
+      .title { font-size: 30px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 22px; font-weight: 600; fill: #4a4a4a; }
+      .label { font-size: 20px; font-weight: 600; fill: #121212; }
+      .annot { font-size: 18px; font-weight: 400; fill: #555555; }
+      .cta   { font-size: 17px; font-weight: 700; fill: #ffffff; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
-    <marker id="arrowhead" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto">
-      <path d="M0,0 L12,6 L0,12 z" fill="#1a1a1a"/>
+    <marker id="tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
     </marker>
   </defs>
 
-  <text x="450" y="36" class="heading" text-anchor="middle">3 snippets in the head tag = 3 events you can read</text>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="405" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="389" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Left column: 3 snippet boxes -->
-  <rect x="50" y="80" width="260" height="90" rx="12" class="clarity" transform="rotate(-0.4 180 125)"/>
-  <text x="180" y="115" class="label" text-anchor="middle">Microsoft Clarity</text>
-  <text x="180" y="145" class="sub" text-anchor="middle">heatmaps + session replays</text>
+  <!-- title block: action title + one message -->
+  <text x="360" y="44" text-anchor="middle" class="gk title">Three snippets, three readable events</text>
+  <text x="360" y="74" text-anchor="middle" class="gk msg">One head-tag paste turns visits into numbers</text>
 
-  <rect x="50" y="200" width="260" height="90" rx="12" class="pixel" transform="rotate(0.3 180 245)"/>
-  <text x="180" y="235" class="label" text-anchor="middle">Ad-platform pixel</text>
-  <text x="180" y="265" class="sub" text-anchor="middle">Meta · LinkedIn · Reddit</text>
+  <!-- Left: three tool boxes (neutral structure, labels inside) -->
+  <rect x="40" y="112" width="250" height="72" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="165" y="145" text-anchor="middle" class="gk label">Microsoft Clarity</text>
+  <text x="165" y="168" text-anchor="middle" class="sys annot">session replays + heatmaps</text>
 
-  <rect x="50" y="320" width="260" height="90" rx="12" class="ga4" transform="rotate(-0.3 180 365)"/>
-  <text x="180" y="355" class="label" text-anchor="middle">Google Analytics 4</text>
-  <text x="180" y="385" class="sub" text-anchor="middle">page views · clicks · form submits</text>
+  <rect x="40" y="196" width="250" height="72" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="165" y="229" text-anchor="middle" class="gk label">Ad-platform pixel</text>
+  <text x="165" y="252" text-anchor="middle" class="sys annot">Meta / LinkedIn / Reddit</text>
 
-  <!-- Arrows from boxes to landing page -->
-  <path d="M 318 125 Q 420 125 525 145" class="arrow" marker-end="url(#arrowhead)"/>
-  <path d="M 318 245 Q 420 245 525 245" class="arrow" marker-end="url(#arrowhead)"/>
-  <path d="M 318 365 Q 420 365 525 345" class="arrow" marker-end="url(#arrowhead)"/>
+  <rect x="40" y="280" width="250" height="72" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="165" y="313" text-anchor="middle" class="gk label">Google Analytics 4</text>
+  <text x="165" y="336" text-anchor="middle" class="sys annot">views, clicks, form submits</text>
 
-  <!-- Right: landing page wireframe -->
-  <rect x="540" y="80" width="320" height="380" rx="14" class="wireframe" transform="rotate(0.2 700 270)"/>
+  <!-- orthogonal collector rail: three snippets converge into the head tag -->
+  <g stroke="#3a3a3a" stroke-width="2" fill="none">
+    <line x1="290" y1="148" x2="430" y2="148"/>
+    <line x1="290" y1="232" x2="430" y2="232"/>
+    <line x1="290" y1="316" x2="430" y2="316"/>
+    <line x1="430" y1="316" x2="430" y2="123"/>
+    <line x1="430" y1="123" x2="462" y2="123" marker-end="url(#tri)"/>
+  </g>
 
-  <!-- Headline placeholder -->
-  <rect x="565" y="105" width="270" height="36" rx="4" class="ph-cta"/>
-  <text x="700" y="129" class="cta-text" text-anchor="middle">Headline</text>
+  <!-- Right: landing-page wireframe -->
+  <rect x="470" y="104" width="210" height="280" rx="6" fill="#fcfcfc" stroke="#3a3a3a" stroke-width="2"/>
 
-  <!-- page_view marker -->
-  <text x="700" y="165" class="event" text-anchor="middle">→ page_view</text>
+  <!-- head tag = paste target -->
+  <rect x="486" y="112" width="178" height="24" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="1.5"/>
+  <text x="575" y="129" text-anchor="middle" class="mono">&lt;head&gt; tag</text>
 
-  <!-- Sub-headline placeholder -->
-  <rect x="565" y="180" width="270" height="22" rx="4" class="ph-block"/>
+  <!-- headline + page_view -->
+  <rect x="486" y="148" width="178" height="22" rx="3" fill="#e8e8e8"/>
+  <text x="575" y="192" text-anchor="middle" class="mono">&#8250; page_view</text>
 
-  <!-- Value props row -->
-  <rect x="565" y="215" width="60" height="50" rx="4" class="ph-block"/>
-  <rect x="635" y="215" width="60" height="50" rx="4" class="ph-block"/>
-  <rect x="705" y="215" width="60" height="50" rx="4" class="ph-block"/>
-  <rect x="775" y="215" width="60" height="50" rx="4" class="ph-block"/>
+  <!-- value props -->
+  <rect x="486" y="206" width="38" height="28" rx="3" fill="#e8e8e8"/>
+  <rect x="533" y="206" width="38" height="28" rx="3" fill="#e8e8e8"/>
+  <rect x="580" y="206" width="38" height="28" rx="3" fill="#e8e8e8"/>
+  <rect x="627" y="206" width="37" height="28" rx="3" fill="#e8e8e8"/>
 
-  <!-- CTA button -->
-  <rect x="615" y="290" width="170" height="44" rx="22" class="ph-cta"/>
-  <text x="700" y="319" class="cta-text" text-anchor="middle">Get on the waitlist</text>
+  <!-- CTA: ruby action, then cta_click -->
+  <rect x="506" y="248" width="138" height="34" rx="4" fill="#cc342d"/>
+  <text x="575" y="270" text-anchor="middle" class="gk cta">Join waitlist</text>
+  <text x="575" y="304" text-anchor="middle" class="mono">&#8250; cta_click</text>
 
-  <!-- cta_click marker -->
-  <text x="700" y="358" class="event" text-anchor="middle">→ cta_click</text>
+  <!-- email field + form_submit -->
+  <rect x="506" y="316" width="138" height="24" rx="3" fill="#e8e8e8"/>
+  <text x="575" y="366" text-anchor="middle" class="mono">&#8250; form_submit</text>
 
-  <!-- email field placeholder -->
-  <rect x="615" y="375" width="170" height="32" rx="4" class="ph-block"/>
-
-  <!-- form_submit marker -->
-  <text x="700" y="436" class="event" text-anchor="middle">→ form_submit</text>
+  <!-- one basis line -->
+  <text x="360" y="388" text-anchor="middle" class="sys basis">Basis: three tracking snippets pasted once into the page's head tag</text>
 </svg>

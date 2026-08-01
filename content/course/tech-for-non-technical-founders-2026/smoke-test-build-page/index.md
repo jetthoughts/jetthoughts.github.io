@@ -51,7 +51,7 @@ The page has four copy blocks that decide whether it converts:
 - The **3-4 value props** describe what the visitor gets, in their words. "Stop calling 8 tutoring centers" is an outcome a parent wants; "Calendar integration" is a feature they read as noise.
 - The **CTA + footer** is "Get on the waitlist" plus a "Coming soon" line in the footer. (**CTA** = call to action, the button you want the visitor to click.) Never use "Buy now" on this page: selling something that does not exist yet *without saying so* is false advertising. [Lesson 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) adds a price test the honest way - a clearly labeled founding-member pre-order with a visible refund promise.
 
-![Smoke-test page anatomy showing 4 labeled blocks - headline names customer plus outcome, sub-headline explains the mechanism, a row of 3-4 value props, and the CTA button with coming-soon footer line](page-anatomy.svg)
+![A smoke-test page as four stacked blocks - headline names the customer plus outcome, sub-headline explains the mechanism, a row of four value props, then the ruby call-to-action button "Get on the waitlist" with a coming-soon footer](page-anatomy.svg)
 
 ## Step 1: get 2-3 real customer quotes (10 minutes)
 

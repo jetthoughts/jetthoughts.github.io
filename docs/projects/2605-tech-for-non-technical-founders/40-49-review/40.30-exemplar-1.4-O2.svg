@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="signal-title signal-desc">
-  <title id="signal-title">At 6% signups the demand is real: read your cold-traffic conversion rate against the kill, iterate, promising, strong and suspicious bands.</title>
-  <desc id="signal-desc">A horizontal signal meter. Under 3 percent conversion is kill or pivot (ruby). 3 to 6 percent is iterate the message (amber). 6 to 10 percent is promising (green). 10 to 20 percent is a strong signal (deep green). Over 20 percent is suspicious, verify with a second channel (gray). A ruby pointer marks the 6 percent go line where demand is real enough to start building. Basis: form submits divided by page views after 300 cold visitors on one channel.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="o2-title o2-desc">
+  <title id="o2-title">At 6% signups the demand is real: read your cold-traffic conversion rate against the kill, iterate, promising, strong and suspicious bands.</title>
+  <desc id="o2-desc">A horizontal signal meter. Under 3 percent conversion is kill or pivot (ruby). 3 to 6 percent is iterate the message (amber). 6 to 10 percent is promising (green). 10 to 20 percent is a strong signal (deep green). Over 20 percent is suspicious, verify with a second channel (gray). A ruby pointer marks the 6 percent go line where demand is real enough to start building. Basis: form submits divided by ad-campaign visits after 300 cold visitors on one channel.</desc>
   <defs>
     <style>
       .gk   { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
@@ -14,7 +14,7 @@
       .ptr   { font-size: 20px; font-weight: 700; fill: #cc342d; }
       .ptrsub{ font-size: 18px; font-weight: 400; fill: #444444; }
     </style>
-    <clipPath id="signal-bar"><rect x="56" y="150" width="608" height="64" rx="4"/></clipPath>
+    <clipPath id="o2-bar"><rect x="56" y="150" width="608" height="64" rx="4"/></clipPath>
   </defs>
 
   <!-- page tone + editorial card -->
@@ -33,7 +33,7 @@
   </g>
 
   <!-- meter track: DATA bands filled, no stroke, 4px outer radius via clip -->
-  <g clip-path="url(#signal-bar)">
+  <g clip-path="url(#o2-bar)">
     <rect x="56"  y="150" width="96"  height="64" fill="#cc342d"/>
     <rect x="152" y="150" width="96"  height="64" fill="#c47d16"/>
     <rect x="248" y="150" width="128" height="64" fill="#3d9142"/>
@@ -71,5 +71,5 @@
   <text x="248" y="242" text-anchor="middle" class="gk tick" fill="#cc342d" font-weight="700">6%</text>
 
   <!-- one basis line -->
-  <text x="360" y="278" text-anchor="middle" class="sys basis">Basis: form submits &#247; page views, 300 cold visitors, one channel</text>
+  <text x="360" y="278" text-anchor="middle" class="sys basis">Basis: form submits &#247; ad-campaign visits, 300 cold visitors, one channel</text>
 </svg>
