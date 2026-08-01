@@ -165,6 +165,6 @@ The continuation chapters kick in once you've passed the Module 5 gate. Read eac
 
 ## Built by
 
-[JetThoughts](https://jetthoughts.com), a Rails-first dev shop that has built alongside non-technical founders for 20 years. We published this course because the same five mistakes kept showing up in first calls with founders. The kit ships open for the same reason.
+[JetThoughts](https://jetthoughts.com), a Rails-first dev shop that has built alongside non-technical founders since 2011. We published this course because the same five mistakes kept showing up in first calls with founders. The kit ships open for the same reason.
 
 *If this course saved you from building something nobody wanted, send it to a founder friend.*

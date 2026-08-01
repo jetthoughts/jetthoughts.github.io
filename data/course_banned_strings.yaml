@@ -364,3 +364,7 @@ banned:
     reason: "tenure canon is 'since 2011' (JetThoughts founded 2011); two landing-page violations found by the 2026-07-31 critique"
   - string: "rescue projects since"
     reason: "rescue framing is the website ICP (Alex), off-ICP for course bodies (Sam)"
+  - string: "20 years of rescue calls"
+    reason: "tenure canon is 'since 2011' (JetThoughts founded 2011); fixed 2026-08-01 hire-track stack section (W2-T5)"
+  - string: "founders for 20 years"
+    reason: "tenure canon is 'since 2011'; fixed 2026-08-01 first-paying-customer-operating-kit Built-by block (W2-T5). The Cagan 'spent 20 years criticizing' in reference/hire-decision-full is a distinct concept and stays"

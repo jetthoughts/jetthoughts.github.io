@@ -191,7 +191,7 @@ These five are the gap between "works in test mode for one founder clicking arou
 
 ## What stack to ask your hired team to use
 
-You are not picking the stack alone - your Fractional CTO or hired engineer makes the technical call. But you need the vocabulary to (a) have an informed conversation, (b) recognize when a contractor proposes the hipster-of-the-month stack that nobody can hire for in 6 months, and (c) push back without escalating to a holy war. The frame below is what we recommend out of 20 years of rescue calls.
+You are not picking the stack alone - your Fractional CTO or hired engineer makes the technical call. But you need the vocabulary to (a) have an informed conversation, (b) recognize when a contractor proposes the hipster-of-the-month stack that nobody can hire for in 6 months, and (c) push back without escalating to a holy war. The frame below is what we recommend out of rescue calls going back to 2011.
 
 ### Default: Rails (Ruby on Rails)
 
