@@ -1,5 +1,13 @@
 # Bundle Update Log
 
+## 2026-08-01 (W1 landing merge) - vacuous worktree-dtest caveat
+
+* **Update**: [build/test-gates.md](build/test-gates.md) - new caveat: `bin/dtest`
+  run from a git worktree passes vacuously (worktree `.git` pointer file is
+  outside the container mount → no baselines → everything records as "new");
+  the two tells and the detached-HEAD recipe for an honest Linux leg recorded.
+  Learned closing W1 (PR #428 merge gate).
+
 ## 2026-08-01 (v0.2 migrate) - bundle-wide v0.1 -> v0.2 field migration
 
 * **Update**: ran the validator `--migrate` across `.okf/` (the skill-sanctioned

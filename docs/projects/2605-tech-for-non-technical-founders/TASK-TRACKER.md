@@ -97,29 +97,31 @@
     Mia M1 walkthrough, 2.5 Dana pressure-test, the three decision forks,
     1.4 exemplar structure, canon numbers, JT footer discipline.
 
-11. **[W1 — NEXT UP, deadline 2026-08-14] Landing L2 → L3** (wave plan 20.15;
-    research 40.21 + landing track below; persona synthesis
-    `40-49-review/40.23-four-persona-comprehensive-review-2026-08-01.md`).
-    **L1 MERGED as PR #416. L2 DONE 2026-08-01:** 3-critic panel (IA /
-    Sam-ICP / conversion, fable tier) converged 90% with 40.21; execution
-    contract = `40-49-review/40.24-landing-l3-punchlist-2026-08-01.md`
-    (target order, 7-anchor rules, N2 completer-link repoints, ~450w
-    preamble budget, authorship draft, gates). **L3 IN FLIGHT** on branch
-    course-landing-l3 per 40.24; re-run impeccable critique, beat the 25/36
-    (69%) baseline; scroll gate both viewports. Pre-merge (Paul/browser):
-    R3 Clarity+GA4 scroll-depth snapshot BEFORE deploy.
-    **L4-visual (Paul 2026-08-01, runs AFTER L3 lands, same branch):** UI/
-    presentability/conversion polish on the RESTRUCTURED page via impeccable
-    (rendered critique at 1280x800 + 390x844, live browser iteration) +
-    stitch-design taste (JetVelocity, .stitch/design.md) + stitch-loop only
-    if the critique shows a structural visual gap needing variant
-    exploration. Scope: landing-page-owned CSS/typography ONLY (campaign
-    window - no shared blog/template CSS churn); conversion lens = first-
-    visit reader starts Lesson 1.1. Gates: qtest per change, 4-criteria
-    visual score, beat 25/36 on the re-run. **40.23 deltas (Paul APPROVED 2026-08-01):** the operating-kit restructure (40.23 C4: card-grid the 6 clone
-    blocks, one "how to run it" section, v2 closure, single payoff label)
-    rides WITH the Going-further move so it isn't rebuilt twice; add the
-    hero "Free"-promise reconciliation line (40.23 C1) while _index is open.
+11. **[W1 — ✅ DONE 2026-08-01, merged as PR #428 (squash f5455dec)] Landing
+    L2 → L3 → L4 → L5.** L1 = PR #416; L2 3-critic panel → contract 40.24;
+    L3 restructure executed + 4-eyes approved (kit card-grid rode along per
+    C4); L4 visual overlay from Paul's shuffle demos (brief 40.25), cold
+    re-critique **29/36 vs 25/36 baseline - beaten**; L5 density condense to
+    demo 1 (spec + side-by-side verdicts in `40-49-review/40.26-*`,
+    component spec `docs/design-system/course-landing-components-2026-08.md`;
+    default-visible words -40%, page 10k→6.9k px). Honest dtest from main
+    checkout: red ONLY on the expected set. Merge-gate panel: **3/3 SHIP,
+    zero blockers** (verdict + evidence on PR #428). R3 pre-merge Clarity
+    snapshot recorded on the PR: landing 45.08% avg scroll depth / 11.27s
+    active / 13 sessions (2026-07-19→08-01) - the BEFORE number; GA4 leg
+    documented-not-reached. Post-merge CI `update-baselines` dispatched for
+    the linux landing pair (run 30703840581).
+    **W1 carry-over nits (non-blocking, fold into W3/W4 visual waves):**
+    (a) inline ruby link density mid-page - demote some to gray/hover-ruby;
+    (b) ruby uppercase eyebrows on every section - candidate: gray, ruby
+    reserved for hero+CTAs; (c) hero fold visual weight vs demo poster hero
+    (deferred with section-band rhythm + 6.9k→5.1k height gap); (d) watch
+    GA4: hero Quickstart button siphoning primary Start clicks → demote to
+    text link; (e) printable-pack link in module-map intro = mid-funnel
+    exit candidate; (f) `.course-hero-note` (9 lines) landed in style.css
+    alongside the sanctioned `.kit-grid` - same risk profile, logged against
+    the same l3-reviewer exception; (g) 40.26 review JPEGs ~1.1MB - pruning
+    candidate.
 
 12. **[W3] Visual V3-A** (wave plan 20.15; ADR 30.09): exhibit spec → A/B
     exemplar → 4 M1 SVG redesigns + alts → eye-test doc → PAUL'S STYLE CALL

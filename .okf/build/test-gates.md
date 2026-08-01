@@ -4,7 +4,7 @@ title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
 status: stable
-generated: { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
+generated: { by: claude/fable-5, at: 2026-08-01T14:30:00Z }
 verified: { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
 ---
 
@@ -72,6 +72,14 @@ extend it when adding components or critical files. The macOS full suite remains
   baselines - cost a full false "bistable render" investigation). Re-record =
   run the suite, keep the rewritten PNG, COMMIT it; only then can a rerun go
   green.
+- `bin/dtest` from a git WORKTREE is VACUOUS-GREEN: the worktree's `.git` is
+  a pointer file to a directory outside the container mount, so git fails
+  inside the container, baselines resolve to nothing, and every screenshot
+  records as "new" - 34/34 passes with no `[snap_diff] ... compared` summary
+  line and none of the 7 always-red emulation diffs (the two tells). Honest
+  Linux leg for a branch held by a worktree: from the MAIN checkout,
+  `git checkout --detach <branch>` → `bin/dtest` → restore + checkout back
+  (2026-08-01, W1 merge gate).
 - `ALLOW_DIRTY_SCREENSHOTS=1` does NOT propagate into the bin/dtest Docker
   container - the dirty-fixtures guard aborts inside the container with only
   "Tasks: TOP => test:critical" in the tail (2026-07-31: cost two aborted-run
