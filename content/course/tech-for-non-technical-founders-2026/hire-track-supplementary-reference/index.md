@@ -36,6 +36,8 @@ related_posts: false
 
 ![The hire track as a left-to-right strip of four numbered cards: step 1 find your developers - pick a geography and two platforms; step 2 the Fractional CTO bridge - 5 hours a week of senior eyes at $400-600 a week; step 3 the interview screen - 7 questions where Q7 splits the pool; step 4 read the SOW - the milestone clause is the $78K line.](hire-track-map.svg)
 
+Steps 2 and 4 on the map now live on the companion page: [Fractional CTO Bridge & Reading the SOW](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/).
+
 ---
 
 ## Where to find developers in 2026

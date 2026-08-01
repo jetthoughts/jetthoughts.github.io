@@ -146,6 +146,7 @@ The continuation chapters kick in once you've passed the Module 5 gate. Read eac
 | Customers leaving faster than you can replace them | [Churn Triage Before Acquisition](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/) |
 | A key metric flat for 2+ months | [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/) |
 | Hit the self-serve ceiling, time to hire your first engineer | [Hire Track Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) |
+| About to hire a fractional CTO or sign a dev-shop SOW | [Fractional CTO Bridge & Reading the SOW](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/) |
 
 **Working with a dev agency in the AI era**
 

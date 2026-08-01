@@ -161,7 +161,7 @@ Four tools carry the whole linear path - the landing page, the checkout, the app
 | **Lovable** | AI app builder from text prompts | Clickable prototype (Module 2), MVP build (Module 4) | Free tier |
 | **Supabase** | Hosted Postgres + auth + realtime | MVP backend (Module 4) | Free tier |
 
-Every other tool the course mentions is optional - research helpers and alternate paths. Each one appears again, with setup steps, in the lesson that uses it.
+Every other tool appears in the lesson that uses it - the module tables above carry the per-lesson tools (Clarity + GA4 in 1.3, Loom in 5.4); the expander below collects the optional research helpers and alternate paths.
 
 <details>
 <summary>Optional research tools and alternate paths - 8 entries</summary>
