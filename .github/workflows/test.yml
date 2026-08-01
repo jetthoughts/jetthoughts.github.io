@@ -94,14 +94,11 @@ jobs:
           echo "CHROME_BIN=$CHROME_BIN" >> "$GITHUB_ENV"
           echo "CHROMEDRIVER_PATH=$CHROMEDRIVER_PATH" >> "$GITHUB_ENV"
 
-      # PRs run the SMOKE tier (17 basics+bummers, ~30s on CI) to stay under
-      # the CI minute budget; manual dispatch runs the full suite for
-      # master-coverage sweeps. Fuller coverage lives in the developer's local
-      # gates (bin/qtest --changed per change, bin/test critical at PR prep) -
-      # smoke on CI is the safety net, not the whole net.
+      # PRs run the critical subset (the visual gate); manual dispatch runs
+      # the full suite for master-coverage sweeps.
       - name: Run screenshot tests
         if: ${{ github.event_name == 'pull_request' || !inputs.update-baselines }}
-        run: bundle exec rake ${{ github.event_name == 'pull_request' && 'test:smoke' || 'test' }}
+        run: bundle exec rake ${{ github.event_name == 'pull_request' && 'test:critical' || 'test' }}
         env:
           PRECOMPILED_ASSETS: '1'
           HUGO_DEFAULT_PATH: _dest/public-test
