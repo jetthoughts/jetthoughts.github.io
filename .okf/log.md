@@ -43,10 +43,10 @@
   fail-fast before build) instead of silently ignoring `--smoke` (CodeRabbit
   PR #425). Rakefile `SMOKE_TESTS` unanchored `test_course_landing` kept
   intentional (matches both mobile + desktop course-landing renders).
-* **Creation**: [snap-diff-upstream-issues](/workflows/snap-diff-upstream-issues.md)
+* **Creation**: [snap-diff-upstream-issues](/docs/20-29-testing-qa/screenshot-testing/20.11-snap-diff-upstream-issues-reference.md)
   - two paste-ready gem bug reports: `Reporters::Default#generate` TypeError when
   `failed_by` is the `"missing_image"` String; skip_area zero-match 5s wait.
-* **Update**: [test-speed-research-todo](/workflows/test-speed-research-todo.md) -
+* **Update**: [test-speed-research-todo](/docs/20-29-testing-qa/screenshot-testing/20.10-visual-suite-speed-research-reference.md) -
   added the drift-overview procedure for removing a skip_area/tolerance mask
   (read `snap_diff_report.html` heatmap, one mask at a time, which masks to KEEP).
 * **Update**: CLAUDE.md - onboard via `/okf:okf`, run `/okf:okf maintain` before
@@ -72,7 +72,7 @@ critical ~300s -> smoke is ~6x faster. Smoke is NOT a milestone/PR gate;
 test:critical + bin/dtest at PR prep stay the bar.
 
 Parallel-test execution (host process-sharding + Docker) deferred as a written
-spike: docs/workflows/test-speed-research-todo.md (O1 kill the codeblock
+spike: docs/docs/20-29-testing-qa/screenshot-testing/20.10-visual-suite-speed-research-reference.md (O1 kill the codeblock
 elephant, O2 process sharding, O3 Docker-vs-host, O4 direct-visit). Thread
 parallelism is out - Capybara.threadsafe=false + shared current_driver global.
 Code: Rakefile (SMOKE_TESTS + test:smoke), bin/test (--smoke flag).

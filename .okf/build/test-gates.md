@@ -38,7 +38,7 @@ extend it when adding components or critical files. The macOS full suite remains
   fonts settle (`document.fonts.ready` is in the choke point); the
   drift-overview procedure (read `snap_diff_report.html` heatmap, one mask at
   a time, which masks to KEEP) lives in the repo doc
-  `docs/workflows/test-speed-research-todo.md` (outside this bundle).
+  `docs/20-29-testing-qa/screenshot-testing/20.10-visual-suite-speed-research-reference.md` (outside this bundle).
 - **Fonts + mermaid.js are self-hosted** (2026-08-01) - Caveat / Space Grotesk
   woff2 and `mermaid-11.15.0.min.js` served same-origin from
   `themes/beaver/static/`, not Google Fonts / jsdelivr. Visual tests are
