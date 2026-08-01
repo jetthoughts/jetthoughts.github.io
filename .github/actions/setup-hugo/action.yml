@@ -50,7 +50,7 @@ runs:
     # satisfied by [security.node.permissions] allowRead in hugo.toml.
     - uses: actions/setup-node@v4
       with:
-        node-version: '22'
+        node-version: 'latest'
 
     # Two separate caches on purpose:
     #
