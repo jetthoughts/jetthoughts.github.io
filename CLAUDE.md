@@ -155,68 +155,14 @@ Repo voice guides and workflow docs override generic writing, SEO, or humanizer 
 2. `docs/90-99-content-strategy/thoughtbot-style-analysis-2025-10-15.md` — thoughtbot patterns
 3. `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` — ICP-E profile
 
-**Zero tolerance AI patterns** — reject on sight:
-- Rule of three, signposting, bold inline-header lists, negative parallelism
-- Triple rhetorical questions, slogany closings, therapist voice, copula avoidance
-- Impersonal fragment stacking ("No tests. Open endpoints. Corrupted data.")
-- Noun stacking without human subject ("React + Rails, clean conventions, the demo sailed")
-- Sustained staccato (3+ consecutive short fragments = fake burstiness)
-- Command structure repetition (3+ paragraphs starting with imperatives)
-- Telling instead of showing ("the error handling was bad" → describe the specific failure mechanic)
-- Apologetic caveats ("every project is different", "it depends on the use case")
-- Fluffy AI narration (dramatic present-tense "The alerts fire correctly. Then someone upgrades..." - use specific past-tense practitioner stories instead)
-- Fake authority generalization ("We've seen this on every codebase" - use specific count: "The last three codebases we inherited...")
-- Timeline fabrication ("last year" without checking if the technology existed then)
-- Use `-` not `—` for all dashes in content
-- **The "who" test:** every sentence needs a person doing something
-- **The "show" test:** replace adjectives with concrete scenarios the reader can picture
-- **The "practitioner" test:** replace generalized scenarios with specific incidents (name the client, version, timeline, exact failure)
-- **The 90/10 rule:** ≥90% education, ≤10% promotion. Reader learns something useful even if they never contact us
-- **Trade-offs:** always acknowledge what the proposed solution fails to do or what it costs
-- See voice guide section "Banned structural patterns" for full list + fixes
-
-**Cross-post repetition gates (BLOCKING for cluster posts):**
-- Before finalizing any post in a topic cluster, run two scans:
-  1. **Anecdote scan** — search the cluster for any specific story this draft uses (named client, dollar amount, technical mechanic, exact incident). If the same story already anchors a sibling post, pick a different one. Caught 2026-05-09: the URL-ID/BOLA story appeared in both `vibe-coding-crisis-ai-code-debt` opener AND `47-startups-failed-same-coding-mistake` body. Caught 2026-05-10: the $40K + React+Rails dollar-anchor was repeated across the same cluster.
-  2. **Proof-signal scan** — verify the post's primary diagnostic signal (staging URL / test coverage / commit size / secrets storage / rollback drill / user-impact verification / contract clauses) isn't already the LEAD signal in another sibling. Distribute distinct signals across posts so each post owns one anchor. Caught 2026-05-10: scipab Path B initially used "staging URL" for the Situation question, exactly the LinkedIn Mon/Tue lead signal. Fixed to "Which users touched what shipped this week?" — user-impact verification, unused elsewhere in the cluster.
-- See `~/.claude/projects/-Users-pftg-dev-jetthoughts-github-io/memory/feedback_cross_post_signal_repetition.md` for the signal portfolio map. See `feedback_hook_bank_diversity.md` for opening-shape rotation (separate concern).
-
-**Slop detector + shape-tell critic both required:**
-- Sentence-level slop ≤25/100 is necessary but not sufficient. User has flagged "still feels AI" three times in 2026-05-09 / 2026-05-10 / 2026-05-28 sessions when slop detector passed.
-- After slop passes, spawn a shape-tell critic with this explicit pattern list: essay arc (hook → pivot → thesis → evidence → caveat → close), dual-source statistical opener, pivot sentences ("That's the experience of...", "Here's what's underneath...", "The bigger problem is..."), listicle scaffolding cloned 3+ times (Strong/Weak/Tips, 5-item lists repeated), "The..." paragraph-opener density >20%, slogany flips ("X works. Y doesn't.", "It looks Y. It isn't Z.", "The framework is a diagnostic, not a cure."), definitional cadence ("X is hypothesis-validation tooling."), "You're not throwing away X" reassurance tic.
-- **2026-05-28 additions (caught by 4-persona M1-M3 audit):** slogany reveal-twist flip ("X hadn't been Y - Z had been", "It's not about X. It's about Y.", "X wasn't Y - it was Z"); cost-stacked tri-list opener ("$X-$Y in A, N B, one of M C" - reads as workshop slide); cute aphoristic flourish closer ("polite noise", "the kind smile that costs you a year", "the helpful answer is the trap", "Everything else is your mom being nice"); anonymous-named-founder opener template repeated 3+ chapters in a row (Module 2 had Priya/Maya/ed-tech-founder/consumer-app-founder back-to-back); cinematic time-cut narration ("Nine months later: a product, a $62K dev invoice, zero paying customers"); fabricated cohort stats with no source ("4 of 5 real interviewees", "3-5× the rate", "30-45% reply rates").
-- **Opener-shape rotation gate (NEW):** when reviewing a multi-chapter sprint (3+ chapters in the same module), explicitly count the opener shape of each chapter. No 3+ consecutive chapters may share the same opener template (anonymous-founder vignette, year-stamp cohort, named-research-result, etc.). The 2026-05-28 Module 2 audit found 4 consecutive chapters opening with "A [adjective] founder we [verb]" - a regression nobody caught because single-chapter review can't see template repetition.
-- **Banned-pattern regression sweep (NEW):** every revision pass must run `grep -rn "## Why this matters\|Founders who\|Most founders\|Founders we worked with"` across edited chapters before handback. Patterns previously removed regress under time pressure - the 2026-05-28 audit found Case 25 banned heading restored in 3 of 9 chapters.
-- See `feedback_slop_detector_misses_shape_tells.md` and `feedback_voice_regression_m1_m3_2026_05_28.md` for the full pattern list. Run alongside the slop detector, not after.
-
-**dev.to import ICP gate:**
-- Posts synced from dev.to (`source: dev_to` in frontmatter) are auto-imported without an ICP filter. Before any dev.to-imported post is shipped or referenced, audit it against the JT ICP-E voice guide. If 80+/100 AI-feel or off-thesis (generic management/productivity content with no JT-rescue angle), either rewrite for the ICP or flip to `draft: true`. Caught 2026-05-10: scipab post (Dec 2024 dev.to import) was 92/100 AI-feel, orphan content. Rewrote as "SCIPAB for non-technical founders to interrogate their dev shop."
-
-**Markdown code fence: use `html` not `erb`:**
-- Hugo's Chroma syntax highlighter doesn't recognize `erb` as a lexer alias. Fences using ```erb render as plain `<pre><code>` without the Dracula wrapper — the theme's light foreground (`#f8f8f2`) on missing-background renders as invisible text. The `html` fence highlights HTML tags correctly while ERB `<%= %>` renders as plain text inside the dark block. 10 posts hit this bug before the 2026-05-10 fix; verified by HTML diff comparing the wrapper `<div class="highlight"><pre style="...">` (present for `html`/`ruby`) vs missing for `erb`.
-
-**Visual verification gate (BLOCKING for any new media element):**
-- After adding ANY new visual (Mermaid diagram, SVG infographic, image, table, chart, callout block, hero image), MUST verify via chrome-devtools MCP before declaring done. The "Screenshot taken" gate is necessary but not sufficient.
-- Take screenshots at BOTH desktop (1280×800) and mobile (390×844) viewports. The first-fold experience is what determines whether the visual wins the 3-second hook.
-- Score honestly from a user perspective against these 4 criteria — and write the scores in the commit message OR the user-facing report:
-  1. **Is it a great look?** — visual harmony, font legibility, color contrast, alignment, fits the brand
-  2. **Is it functional?** — info is readable without effort, doesn't require zooming, mobile renders, no overflow
-  3. **Would it make a person want to read more?** — earns the next scroll OR pushes the reader away with visual fatigue
-  4. **Is it helpful overall?** — orients vs overwhelms; teaches vs decorates; saves parse time vs costs it
-- Any "NO" or "MIXED" on criteria 3 or 4 = ROLLBACK or REDESIGN before commit. Don't ship visuals that fail user-perspective scoring just because they're technically rendering.
-- Verify the visual's POSITION on first-fold: at the typical laptop viewport (1280×800), does the new visual appear ABOVE the fold? If it doesn't, it cannot win the 3-second hook — relocate or accept it as a mid-page visual break (different acceptance criteria).
-- For Mermaid diagrams specifically: measure rendered height. If > 2× viewport height, the diagram is too tall — reader perceives it as a wall, not a hook. Caught 2026-05-19: my Hero Roadmap rendered at 1551px on mobile (2× viewport) and the cursive font's dash-strikethrough effect on phase labels degraded legibility further.
-- **Visual SCROLL gate (BLOCKING for any new/edited content page, not just new media)**: walk the FULL page section-by-section in chrome-devtools at 1280×800 AND 390×844, screenshot each scroll view, and actually inspect each screenshot before handback. Canonical protocol + per-view defect checklist + numeric probes: `docs/workflows/visual-scroll-gate.md`. Text validators cannot see rendered output — the 2026-07-10 Module 3 pass caught mermaid node clipping, SVG text crossing artwork borders, a stale cover badge on a freshly wired og:image, a wrong-direction "diagram above" reference, and a renumber leftover INSIDE an SVG, all invisible to the banned-string ratchet. One screenshot of the hero is NOT this gate.
-
-**Cognitive load + F-pattern rules (mandatory for long-form posts > 800 words):**
-- Research-grounded rules from `docs/projects/2605-tech-for-non-technical-founders/10-19-research/10.05-content-organization-patterns-2026.md` Part 2 (Gloria Mark / Pew 2026 / NN/g F-pattern / Sweller CLT). Pew 2026: 71% of readers scroll past within 3 seconds without a visual hook; Gloria Mark 2026: per-screen attention = 43s.
-- **First 3 seconds visual hook (hero rule):** every long-form post needs a visual within the first viewport - hero diagram, infographic, hero illustration, or a strong styled callout. Pure-text hero = guaranteed dropout for 71% of readers per Pew 2026. Decorative photography does NOT count.
-- **Repetitive parallel sections must NOT be 6+ identical bullets or 6+ identical table rows.** Module indexes, template lists, mistake lists, decision lists — break into a card grid OR add per-item icons. Single-column tables with 6+ rows and identical-format bullet lists with 6+ items both trigger the F-pattern "give up + vertical scan only" failure mode (NN/g eye-tracking).
-- **Decision-oriented sections use decision-aid format.** Anywhere the post asks "if X then Y" (rescue triage, decision trees, scoring tables, "should you...") render as flowchart/decision-table, not as a numbered list. Founder readers are in high cognitive load already; a flowchart cuts parse time vs. prose.
-- **Labels INSIDE diagrams, not beside them** (Sweller's split-attention effect). A labeled flowchart works. A flowchart followed by a 200-word "what this shows" paragraph increases cognitive load. If the diagram needs a separate explanation paragraph, fix the diagram - integrate the labels.
-- **No decorative visuals.** Stock photography of "happy founders at laptops," abstract gradients, generic icon arrays without informational content all violate the CLT integration rule. If removing the visual wouldn't lose information, the visual is decorative - delete it.
-- **One visual break per H2.** Plain prose blocks ≥3 H2s in a row = density problem; readers drop off. Acceptable visual breaks: diagram, table, code block, pull-quote callout, icon row. Mermaid diagrams count; bold paragraph leaders do NOT.
-- **Hand-drawn / Excalidraw-style sketches**: allowed when the sketch IS the diagram (informational); rejected when the sketch is decorative ornament beside a separate diagram. Per voice guide, prefer Mermaid + sketchy SVG over polished corporate infographics for the JT brand.
+**BLOCKING gates** — `blog-pipeline.md` enforces each; named here so none is skipped, detail lives in its canonical home (dedup, not duplicate):
+- **Voice / zero-tolerance AI patterns** — reject rule-of-three, signposting, negative parallelism, sustained staccato, telling-not-showing, apologetic caveats, fake-authority generalization, timeline fabrication; use `-` not `—`. The who/show/practitioner tests + the 90/10 rule + always-name-trade-offs. Full list + fixes: voice-guide "Banned structural patterns".
+- **Slop ≤25 + shape-tell critic** — slop score is necessary, NOT sufficient (user flagged "still feels AI" 3× when slop passed). After slop passes, run the shape-tell critic (essay-arc, pivot sentences, slogany flips, definitional cadence, 2026-05-28 reveal-twist / cost-stacked opener / cinematic time-cut / fabricated-cohort-stats tells). Full pattern lists: voice-guide + memories `feedback_slop_detector_misses_shape_tells.md`, `feedback_voice_regression_m1_m3_2026_05_28.md`. **Every revision runs the regression sweep before handback** (banned patterns regress under time pressure): `grep -rn "## Why this matters\|Founders who\|Most founders\|Founders we worked with"` across edited chapters, and count opener shapes — no 3+ consecutive chapters share an opener template.
+- **Cross-post repetition** (cluster posts) — anecdote scan + proof-signal scan so no story or diagnostic signal double-anchors sibling posts. Detail + the signal-portfolio map: blog-pipeline.md, memories `feedback_cross_post_signal_repetition.md` / `feedback_hook_bank_diversity.md`.
+- **New-media visual gate** — after ANY new visual, verify via chrome-devtools at 1280×800 AND 390×844 (not just "screenshot taken") and score 4 criteria: (1) great look, (2) functional/readable without zoom, (3) earns the next scroll, (4) helpful not decorative. Any NO on 3 or 4 = ROLLBACK/redesign; write the scores in the commit/report. Mermaid >2× viewport height = wall, not hook. Then the full page **scroll gate** (`docs/workflows/visual-scroll-gate.md`) — text validators can't see rendered output.
+- **Cognitive load / F-pattern** (posts >800w) — hero visual in the first fold (71% drop without one), decision-aid format for if-X-then-Y, labels INSIDE diagrams, one visual break per H2, no decorative visuals, no 6+ identical bullets/rows. Source: `docs/projects/2605-tech-for-non-technical-founders/10-19-research/10.05-content-organization-patterns-2026.md`.
+- **dev.to import ICP gate** — `source: dev_to` posts are auto-imported unfiltered; audit vs the ICP voice guide before shipping/referencing, `draft: true` if 80+/100 AI-feel. (blog-pipeline.md)
+- **Code fences: `html` not `erb`** — Hugo's Chroma has no `erb` lexer → the block renders as invisible light-on-missing-background text. (blog-pipeline.md)
 
 ---
 
