@@ -65,7 +65,7 @@ The fix was not a better Meta Ads brief. The fix was to stop the ads, run a 90-m
 
 Bucket holds **32 paying users at $29 / month**. Stop the ads. Run the 90-minute cohort triage. Decide: fix the product, change the segment, or kill the SKU.
 
-Module 5 (Lessons 5.1-5.7) teaches you how to land your first paying customers. This chapter covers what Module 5 does not - what to do when the customers you already have are leaving faster than the funnel can replace them. It is the chapter for the messy middle - the founder who hit Module 5 once, got customers, and watched them slip away faster than the spreadsheet predicted.
+Module 5 (Lessons 5.1-5.7) teaches you how to land your first paying customers. This chapter covers what Module 5 does not - what to do when the customers you already have are leaving faster than the funnel can replace them. It is the chapter for the messy middle: you hit Module 5, got customers, and watched them slip away faster than the spreadsheet predicted.
 
 The KISS rule for this chapter: if your churn is above 30% in a 30-day window, every dollar you spend on acquisition is wasted until you triage. Read on.
 
@@ -156,7 +156,7 @@ The most common founder failure mode at this triage step is to refuse to pick. T
 
 ## The Refund-the-Wrong-Segment Script
 
-Decision 2 is the hardest to execute because it requires telling 18 of your 30 paying customers, in writing, that you built the wrong product for their situation. The default response is to flinch at this step. They run an "improvement campaign" instead, hoping the wrong segment will start retaining if the product gets a few more features. It will not. The wrong segment never converts to the right segment.
+Decision 2 is the hardest to execute because it requires telling 18 of your 30 paying customers, in writing, that you built the wrong product for their situation. The default response is to flinch and run an "improvement campaign" instead, hoping the wrong segment starts retaining with a few more features. It will not - the wrong segment never converts to the right one.
 
 Refunds are cheaper than churn. If a wrong-segment user churns at month 2, you have collected $58 and lost $200 in CAC and ~$25 in support time - net negative. If you proactively refund their last 30 days at month 2, you have lost $58 plus the same $200 CAC, but you have gained a goodwill quote, a clean Stripe ledger, and 20 minutes of support time you would otherwise spend explaining why the product feels off. The math on a wrong-segment refund campaign is positive against the alternative of waiting for churn.
 
