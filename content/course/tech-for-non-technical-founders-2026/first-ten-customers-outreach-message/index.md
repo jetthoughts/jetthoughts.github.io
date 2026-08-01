@@ -33,13 +33,13 @@ related_posts: false
 >
 > **Progress:** M5 · 4 of 7 · Results so far: 50 names in 4 buckets (5.3) - this page writes the 4 messages
 
+After this lesson you will be able to: **write 4 outreach message variants (one per bucket) and record a 90-second Loom that gets replies.**
+
 > **TL;DR:** One 4-part message with a different opener per bucket, plus one 90-second [Loom](https://www.loom.com) (a screen-recording tool - record your screen and voice, share a link). Keep it to 5-7 sentences. "Quick chat?" gets zero replies; a specific reference plus a Loom gets the meeting.
 
 ---
 
 The instinctive first message - "quick chat?" - gets zero replies. The message that works is 5-7 sentences with one specific reference, one line on the problem, and a Loom.
-
-After this lesson you will be able to: **write 4 outreach message variants (one per bucket) and record a 90-second Loom that gets replies.**
 
 ---
 
@@ -73,7 +73,7 @@ If no real reference exists for a cold-bucket name, move them to [Lesson 5.7 col
 > 3. Record one 90-second Loom: 60 seconds product, 30 seconds you on camera. Use the Lesson 5.1 verbatims as your script.
 > 4. Fill in Part 4 with your Calendly link.
 > 5. Repeat the opener for your hot, warm, and cold buckets. Parts 2-4 stay the same for all 50.
-> 6. **Success check:** read the champion message aloud. Does it sound like something you'd actually say to that person? If it sounds like a template, the opener isn't specific enough.
+> 6. **Success check:** read the champion message aloud. Does it sound like something you'd actually say to that person? If it sounds like a template, the opener isn't specific enough. Full pass: all 4 variants drafted, with your Loom link playing.
 
 ---
 

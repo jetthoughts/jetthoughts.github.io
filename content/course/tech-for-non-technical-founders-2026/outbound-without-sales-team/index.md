@@ -37,13 +37,13 @@ related_posts: false
 >
 > **Progress:** M5 · 7 of 7 · [OPTIONAL] - the systematic cold path; run it only after the warm-network pass in 5.3-5.5
 
+After this lesson you will be able to: **book the demo calls that become your 1-2 paid pilots - from 30 filtered cold messages, after the warm-network pass.**
+
 > **TL;DR:** Once your network is exhausted, 30 filtered cold messages with a specific personalization per name put roughly one paid pilot in reach per batch - more as batches compound. Customers 11-20 come from cold outbound, not from launch events.
 
 ---
 
 Four paid pilots close from your personal network over six weeks, then the warm names run out at customer five. The default move is to book a launch coach or sign an ad-agency contract - six weeks and a few thousand dollars, neither designed for your B2B vertical. The four-line cold message below is what customer five answers in week three for under $40 of tooling.
-
-After this lesson you will be able to: **send 30 filtered cold messages and book 1-2 paid pilots after the warm-network pass.**
 
 > **Stop here if you have not exhausted your personal network.** This lesson covers cold outbound to strangers - it assumes you have already converted the people who know you through [Lesson 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
 >
@@ -119,7 +119,7 @@ The 30-message batch is not a one-time event. Run fresh batches until you have 2
 >
 > **Deeper reference:** [Product Hunt data, the full tooling stack, domain warmup, the funnel math, all three script variants, the stage cadence, and the no-reply diagnostic](/course/tech-for-non-technical-founders-2026/reference/outbound-full/)
 
-> **Module 5 closes here.** Before calling the course complete, you should have: (1) a passed Sean Ellis 40% must-have test against your early users (Lesson 5.1), (2) a 50-name network list sorted into 4 outreach buckets (Lesson 5.3), (3) 4 outreach message variants plus a 90-second Loom (Lesson 5.4), (4) at least one signed Design Partner Agreement with a refundable Stripe deposit (Lesson 5.6), and (5) a 30-message filtered cold-outbound batch sent with replies tracked once the network list ran dry (this lesson). All five in your `Founder OS` folder. Missing one? Go back - customer 11-20 depend on the same motion, and a broken step upstream (an untested must-have signal, an unsent batch, an unsigned DPA) breaks every batch that follows it.
+> **Module 5 closes here.** Before calling the course complete, you should have: (1) a passed Sean Ellis 40% must-have test against your early users (Lesson 5.1), (2) a 50-name network list sorted into 4 outreach buckets (Lesson 5.3), (3) 4 outreach message variants plus a 90-second Loom (Lesson 5.4), (4) at least one signed Design Partner Agreement with a Stripe deposit (Lesson 5.6), and (5) a 30-message filtered cold-outbound batch sent with replies tracked once the network list ran dry (this lesson). All five in your `Founder OS` folder. Missing one? Go back - customer 11-20 depend on the same motion, and a broken step upstream (an untested must-have signal, an unsent batch, an unsigned DPA) breaks every batch that follows it.
 
 ---
 

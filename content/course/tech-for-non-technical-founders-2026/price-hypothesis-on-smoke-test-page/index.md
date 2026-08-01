@@ -33,7 +33,7 @@ related_posts: false
 
 Your smoke test collected emails, and an email signup only tells you a stranger found the idea interesting. Whether they'd pay for it is a separate question - a person typing card details is making a different decision than a person typing an email address. This lesson adds a Stripe button so you can measure that second decision.
 
-After this lesson you will be able to: **find out whether strangers will pay for your offer - not just leave an email.**
+After this lesson you will be able to: **find out whether strangers will put a card down for your offer.**
 
 ## Set your price hypothesis
 
@@ -66,7 +66,7 @@ Pick one pattern. Do not A/B test - 150 visits each on a $300 budget can't disti
 >
 > 1. **Start Stripe verification tonight.** Sign up at [stripe.com](https://stripe.com). Stripe needs your bank account + tax ID before accepting live payments - usually 1-3 business days. Start the weekend before launch.
 > 2. Create a Payment Link. Dashboard → Payments → Payment Links → New link. Add a one-time product at your hypothesis price. Use one-time (not subscription) - "founding member" converts better on a pre-product page.
-> 3. Set the after-payment redirect. **Skip it** if you're in a hurry (Stripe shows its own confirmation). **Set it** if you want GA4 to count payment completions as page views: **Mixo** - redirect to your main page URL (GA4 counts the revisit; rougher but works). **Carrd** - create a hidden section at the bottom, redirect to its anchor URL (`yourpage.carrd.co/#thanks`). Other builders: redirect to any page or anchor on your site that GA4 can register.
+> 3. Set the after-payment redirect. **Skip it** if you're in a hurry (Stripe shows its own confirmation). **Set it** if you want GA4 (the Google Analytics tracker you installed in Lesson 1.3) to count payment completions as page views: **Mixo** - redirect to your main page URL (GA4 counts the revisit; rougher but works). **Carrd** - create a hidden section at the bottom, redirect to its anchor URL (`yourpage.carrd.co/#thanks`). Other builders: redirect to any page or anchor on your site that GA4 can register.
 > 4. Add a refund line in your page footer (not the Stripe checkout footer): "Full refund within 30 days if we don't ship." Standard pre-order disclosure - it keeps the offer honest and lowers click friction. (US readers: this is the FTC-friendly pattern; selling elsewhere, check your local pre-order rules.)
 > 5. Paste the Payment Link URL on your CTA button. Below it, smaller text: "Not ready? Join the waitlist instead."
 > 6. **Success check:** your Stripe dashboard shows live-mode (not test-mode) and the button opens a real checkout page.

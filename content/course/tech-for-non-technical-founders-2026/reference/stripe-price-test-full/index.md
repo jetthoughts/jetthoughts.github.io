@@ -28,7 +28,7 @@ You don't need a $62K invoice to learn this. An email signup costs the visitor n
 
 ## Full Stripe Payment Link Setup
 
-A Stripe Payment Link is a hosted checkout URL generated from your Stripe dashboard - no code, no integration, no webhooks. Stripe takes ~2.9% + $0.30 per transaction.
+A Stripe Payment Link is a hosted checkout URL generated from your Stripe dashboard - no code, no integration, no webhooks. Stripe takes a per-transaction card fee - see [Stripe pricing](https://stripe.com/pricing).
 
 | Step | Action | Where in Stripe |
 |---|---|---|

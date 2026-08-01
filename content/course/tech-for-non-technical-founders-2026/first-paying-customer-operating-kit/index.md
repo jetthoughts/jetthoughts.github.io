@@ -93,6 +93,7 @@ DESIGN PARTNER AGREEMENT
 One-time deposit: $[500-6,000] (10-30% of year-one ACV).
 Paid via Stripe before pilot kickoff. Credited dollar-for-dollar toward year-one invoice on conversion.
 If Design Partner cancels before week 4: deposit forfeited.
+If Company cancels for any reason: 100% refund within 14 days.
 ```
 
 ### Bonus: the pilot kickoff call agenda (60-minute template)
@@ -145,6 +146,7 @@ The continuation chapters kick in once you've passed the Module 5 gate. Read eac
 | Customers leaving faster than you can replace them | [Churn Triage Before Acquisition](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/) |
 | A key metric flat for 2+ months | [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/) |
 | Hit the self-serve ceiling, time to hire your first engineer | [Hire Track Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) |
+| About to hire a fractional CTO or sign a dev-shop SOW | [Fractional CTO Bridge & Reading the SOW](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/) |
 
 **Working with a dev agency in the AI era**
 
@@ -165,6 +167,6 @@ The continuation chapters kick in once you've passed the Module 5 gate. Read eac
 
 ## Built by
 
-[JetThoughts](https://jetthoughts.com), a Rails-first dev shop that has built alongside non-technical founders for 20 years. We published this course because the same five mistakes kept showing up in first calls with founders. The kit ships open for the same reason.
+[JetThoughts](https://jetthoughts.com), a Rails-first dev shop that has built alongside non-technical founders since 2011. We published this course because the same five mistakes kept showing up in first calls with founders. The kit ships open for the same reason.
 
 *If this course saved you from building something nobody wanted, send it to a founder friend.*

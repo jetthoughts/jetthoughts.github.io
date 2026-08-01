@@ -124,7 +124,7 @@ Total time budget: 30 minutes alone, 20 minutes with one peer, 0 minutes second-
 |---|---|---|---|
 | **1. Validate without code** | Q1 = No, OR Q3 = less than 4 months | Ship Carrd page + Stripe checkout + Notion FAQ. Send to your 30-name outreach list. | $0 - $300 in tools + optional $100-200 in paid ads |
 | **2. Self-serve build** ([Lesson 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) then [4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)) | Q1 yes, Q2 light or mid, and a senior engineer in your network (Q4 yes) at any budget - or Q5 = $0-$400/wk of your own time | Paste one-page brief into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
-| **3. Fractional CTO bridge** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge)) | Q1 yes, Q2 light or mid, no senior engineer (Q4 no), and Q5 = $1.6K-$4K or $5K-$30K/mo | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month |
+| **3. Fractional CTO bridge** ([Fractional CTO reference](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#the-fractional-cto-bridge)) | Q1 yes, Q2 light or mid, no senior engineer (Q4 no), and Q5 = $1.6K-$4K or $5K-$30K/mo | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month |
 | **4. Hire a team** ([hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)) | Q2 heavy (any budget), or Q5 = $30K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |
 
 **Failure mode to watch for each path** ->
@@ -165,7 +165,7 @@ The good answer ties budget to runway and to the marketing test that proves the 
 - **Share the worksheet result with one peer or advisor in a 20-minute call.** Not three. One. Ask them: *"If the matrix said Path X, what would change your mind?"* Their first answer is the assumption you should pressure-test next. If they cannot name one, the matrix verdict holds.
 - **Schedule the first action for tomorrow morning.** Path 1: ship the Carrd page. Path 2: paste one-page brief into Lovable. Path 3: 3 LinkedIn outreach messages to Fractional CTOs in your industry. Path 4: read the SOW clause-by-clause with a printed pen, not in Google Docs. Calendar the action with a hard start time. The worksheet routes the decision; the calendar invite routes the work.
 
-Skip this worksheet and route on advisor instinct and you're the founder who, six weeks later, signs a contract the data did not support and posts a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) when the build runs over budget. The matrix is cheaper than the contract it prevents.
+Route this decision on advisor instinct instead of the worksheet and you sign a contract your own validation data did not support - the kind that runs over budget and lands you in the [salvage or rebuild decision tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/).
 
 If you want the doctrine in long form, the [Module 4 post](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) walks through the Airbnb test, the Rob Walling shed-vs-skyscraper warning, and the worked example for each of the four paths.
 

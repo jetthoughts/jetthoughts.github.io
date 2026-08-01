@@ -68,7 +68,7 @@ Ask one more question at the end of each call. "What would break first if traffi
 
 Everything that makes the new team's first week productive gets prepared before they start. Have ready: repository access under your own organization, credentials in a shared vault, the runbook plus the gaps found in the cold-start drill, the two recordings, a written list of what is broken today, and the one business outcome you want in the first six weeks. That last item matters more than the rest combined, because a new team with no stated outcome will spend three weeks refactoring and show you nothing you can demo.
 
-Ask a candidate shop to describe their own first week before you sign. We wrote ours up in [how onboarding works at JetThoughts](/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/), and the [hire-track reference in the course](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) collects the interview screen, the SOW reading guide, and the fractional-CTO option in one place.
+Ask a candidate shop to describe their own first week before you sign. We wrote ours up in [how onboarding works at JetThoughts](/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/), and the [hire-track reference in the course](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) collects the interview screen; its [companion page](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/) covers the fractional-CTO option and reading the SOW.
 
 ## Choosing the next partner without repeating yourself
 

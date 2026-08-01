@@ -120,7 +120,7 @@ Per published vendor pricing:
 | First ship | Per-tool monthly fees | Lovable + Supabase entry paid tiers + a .com domain (~$10/yr) + Resend entry tier + Stripe per-transaction fees |
 | Post-launch | Scale-tier monthly fees | Lovable scale tier + Supabase paid tier + Resend/Sentry/monitoring paid tiers - check vendor pricing pages |
 
-The architectural ceiling tends to land at the post-launch tier - at roughly 5,000 users, route to [Lesson 4.5 · Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) or a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). A hire-a-team build is material monthly burn before revenue; this stack ships the same first 10 paying customers on a fraction of that.
+The architectural ceiling tends to land at the post-launch tier - at roughly 5,000 users, route to [Lesson 4.5 · Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) or a [Fractional CTO](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#the-fractional-cto-bridge). A hire-a-team build is material monthly burn before revenue; this stack ships the same first 10 paying customers on a fraction of that.
 
 ## When this path ends
 

@@ -55,7 +55,7 @@ The page has four copy blocks that decide whether it converts:
 
 ## Step 1: get 2-3 real customer quotes (10 minutes)
 
-The builder prompt in Step 2 has three slots for your customers' own words - they become your value props, and they are what makes the page sound like your customer instead of like marketing. Most first-timers don't have quotes yet, and that's expected: run this in [Perplexity](https://www.perplexity.ai/) (or any AI search engine) and keep the best 2-3 lines - and keep the source URLs too, because Lesson 2.3 reads these same threads to find the named people you'll interview. Already have real quotes from conversations? Skip straight to Step 2. Already ran the deeper research pass in the [full hypothesis sprint](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/)? Reuse those quotes here - don't search twice.
+The builder prompt in Step 2 has three slots for your customers' own words - they become your value props, and they are what makes the page sound like your customer instead of like marketing. If you don't have quotes yet, that's expected at this stage: run this in [Perplexity](https://www.perplexity.ai/) (or any AI search engine) and keep the best 2-3 lines - and keep the source URLs too, because Lesson 2.3 reads these same threads to find the named people you'll interview. Already have real quotes from conversations? Skip straight to Step 2. Already ran the deeper research pass in the [full hypothesis sprint](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/)? Reuse those quotes here - don't search twice.
 
 ```text
 Find real, verbatim complaints from [CUSTOMER] about [PROBLEM].

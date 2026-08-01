@@ -34,11 +34,13 @@ related_posts: false
 >
 > **Progress:** M5 · 3 of 7 · Results so far: your first users answered the 40% test (5.1) - this page builds the 50-name list for the first sales push
 
-> **TL;DR:** Build a 50-name list from people who already know you, sorted into 4 buckets - champions, hot, warm, cold. Lenny Rachitsky's research on fast-growing B2B startups found the personal network was the number-one source of first customers. One focused sitting.
+After this lesson you will be able to: **build a 50-name list from people who already know you, sorted so you know exactly who to message first.**
+
+> **TL;DR:** One focused sitting, one Google Sheet: 5 champions, 10 hot, 15 warm, 20 cold - champions are the ones who already complained to you about the problem. Research on fast-growing B2B startups (cited below) found the personal network was the number-one source of first customers.
 
 ---
 
-Nearly every one of today's fastest-growing B2B startups got their first 10 customers from people who already knew the founder. Founders skip this step because it feels like begging. It's not. It's the highest-probability first sale you'll ever make.
+The research below found the same pattern across today's fastest-growing B2B startups: the first 10 customers come from people who already knew the founder. Founders skip this step because it feels like begging - and it's the highest-probability first sale you'll ever make.
 
 > → **Mia found 50 names** across LinkedIn, her old school contacts, and the parents' association. Five had already complained to her about the tutor search - those went straight into her champion bucket. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)
 

@@ -36,6 +36,8 @@ related_posts: false
 >
 > **Progress:** M4 · 1 of 5 · Results so far: a quality-checked one-page brief (3.2) - this lesson decides who builds from it
 
+After this lesson you will be able to: **answer five questions and commit, in writing, to the smallest build path for your idea - before you spend a dollar on engineers.**
+
 > **TL;DR:** Default: self-serve with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger, not the first decision. Five questions route you to one of four build paths.
 
 ---
@@ -85,7 +87,7 @@ flowchart TD
 
 **Q1 ("problem validated?")** counts as yes only if you have 10+ Mom Test interviews with strong past-behavior signal in at least 7, a smoke test that cleared the 6%+ "Promising" band, and a Lesson 2.6 prototype run where 4 of 5 testers reached the right screen without coaching. LinkedIn likes don't count; "they said they would buy" doesn't count. Pre-orders and paid pilots come later in Module 5 - do not require them as this gate.
 
-**Q2 ("backend-heavy?")** means: does the app need users to see each other typing in real time (Google Docs / Slack behavior), or does it touch healthcare data, stored card numbers, or SOC 2 audits? If neither, the answer is almost certainly no - dashboards, forms, and single-user tools are not heavy.
+**Q2 ("backend-heavy?")** means: does the app need users to see each other typing in real time (Google Docs / Slack behavior), does it queue up heavy work in the background (processing big uploads or hours-long background jobs - a confirmation email doesn't count), or does it touch healthcare data, stored card numbers, or SOC 2 audits (the security certification big customers require before they buy)? If none of those, the answer is almost certainly no - dashboards, forms, and single-user tools are not heavy.
 
 **Q3 ("runway?")** is months of cash until you must show paying customers. Under 4 months routes to Validate regardless of Q1. 4-12 months keeps self-serve and fractional on the table; 12+ makes a team safe to consider.
 

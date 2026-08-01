@@ -67,7 +67,7 @@ That conversation is preventable in 20 minutes of contract reading and 10 minute
 
 Three line items make up almost every dev shop's AI bill in 2026. Memorize the ranges and you can spot a wrong invoice in 30 seconds.
 
-### Per-developer Cursor (or Copilot Enterprise) seat: $20-$60/mo
+### Per-developer Cursor (or Copilot Enterprise) seat: $20-$40/mo
 
 Cursor Pro is $20/month per seat ([Cursor pricing](https://cursor.com/pricing)). Cursor Business is $40/seat with admin controls and usage analytics. Cursor Ultra is $200/seat for heavy users. GitHub Copilot Enterprise sits at $39/seat ([GitHub Copilot pricing](https://github.com/features/copilot/plans)). Most agencies pick one - Cursor Business is the modal choice in 2026 because it bundles team admin and gives the agency owner a usage dashboard. This line is fixed and predictable. It should never surprise you.
 
@@ -166,7 +166,7 @@ Three actions. In order.
 
 Related course posts:
 - ["We Use AI": 5 Follow-Up Questions for Your Agency](/course/tech-for-non-technical-founders-2026/agency-ai-five-questions/) - sister chapter; the 5-question script for AI theatre detection includes the cost question this post expands.
-- [Reading the SOW Clause by Clause](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow) - hire track contract reading guide; pair with the 3 AI clauses above when redlining your next SOW.
+- [Reading the SOW Clause by Clause](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#reading-the-sow) - hire track contract reading guide; pair with the 3 AI clauses above when redlining your next SOW.
 - [The Quality Tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) - the rebuild bill that arrives when AI-generated code meets production load nobody planned for.
 - [The Hidden Cost of Poor Vendor Management](/blog/hidden-cost-poor-development-vendor-management-fix/) - the broader pattern: surprise line items follow the contracts you did not read carefully.
 

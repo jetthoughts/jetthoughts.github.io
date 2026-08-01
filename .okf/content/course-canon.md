@@ -19,7 +19,7 @@ generated:
 | Prototype test subjects | 5 interview subjects |
 | Sean Ellis must-have test | 40% - directional at ≥10 respondents, useful at 20+, sliceable at 30+ |
 | Cold reply bands | 3-8% realistic; <5% stop and diagnose · 5-10% continue · >10% accelerate |
-| Paid pilot deposit | $500+ refundable, via Stripe |
+| Paid pilot deposit | $500+ via Stripe; 10-30% of year-one ACV; customer-cancel = forfeit, founder-cancel = 100% refund (5.6 DPA clause 3) |
 | Tracking tool | Google Sheet - never Airtable |
 | AI token pass-through | disciplined $80-$120/dev/mo · undisciplined $300-$500; industry range $80-$300 |
 | Slopsquatting source | Lasso Security research March 2025; "slopsquatting" coined by Infosecurity Magazine April 2025 |

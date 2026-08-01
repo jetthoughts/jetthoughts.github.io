@@ -37,13 +37,13 @@ related_posts: false
 >
 > **Progress:** M5 · 1 of 7 · Results so far: live MVP with your first users on it (4.4) - this page tests whether they'd miss it before you spend on ads
 
+After this lesson you will be able to: **run the 5-question Sean Ellis survey against your earliest users and name the one segment worth selling to.**
+
 > **TL;DR:** Before you buy traffic, survey your earliest users. If fewer than 40% would be "very disappointed" if your product vanished, you have a product problem, not a marketing problem.
 
 ---
 
-A founder's MVP goes live, 40 beta users poke at it, and the dashboard shows 0.4% conversion on $4,200 of Meta ads. That dashboard just told the founder what five phone calls would have said for free: most users never opened the app twice, and no ad budget turns that group into customers.
-
-After this lesson you will be able to: **run the 5-question Sean Ellis survey against your earliest users and name the one segment worth selling to.**
+Would your first users be disappointed if your product disappeared tomorrow? Five phone calls answer that for free - and if the honest answer is no, you have a product problem no ad budget can fix.
 
 ---
 

@@ -282,7 +282,7 @@ The good no-go list names eight things a competent agent or junior might add. Ea
 - **Paste the brief into Lovable, Cursor, or your contractor's first kickoff doc - unchanged.** Do not edit it for the audience. The same one page goes to all three. If the agent or the contractor asks a question whose answer is in the brief, your brief failed; rewrite the section that confused them before you take a second pass at the build.
 - **Set a 30-day calendar reminder for the Section 4 metric.** The reminder fires whether or not you remember it. On day 30, open your analytics tool and read the conversion-completed count. Above the pass threshold = the brief was right and you build the next layer. Below = the brief was wrong somewhere, and you reread the page before adding anything.
 
-Skip the no-go list and you ship a working demo of a product nobody asked for. Six weeks later you're posting a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about an MVP you can't extend. The page is cheap. The build round you save by writing it is the expensive thing you avoid.
+Skip the no-go list and you ship a working demo of a product nobody asked for. When that demo hardens into an MVP you can't extend, the [salvage or rebuild decision tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) is where you end up.
 
 If you want the doctrine in long form, the [Lesson 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between one-page brief and traditional PRD, and the case for paying for a live cohort vs writing the page yourself for free.
 

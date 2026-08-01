@@ -37,11 +37,11 @@ related_posts: false
 >
 > **Progress:** M2 · 3 of 6 · Results so far: question list ready to run
 
-> **TL;DR (Part 1 of 2):** Expand your one-sentence hypothesis from Lesson 1.1 into three sentences (a short step below), paste them into Claude, and get back the ICP profile (ICP = Ideal Customer Profile - the specific kind of person your hypothesis's [CUSTOMER] blank names) + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
-
-The instinctive first move is "I'll just message my LinkedIn network" - sixty polite DMs that produce 3 calls, two of them old colleagues being nice. The technique below replaces it: read where strangers already complain about your exact problem, then write back to those specific complainers. Same hypothesis, same hours, different place to look - and it fills a calendar with 10+ booked interviews instead of 2-3 polite ones.
-
 After this lesson you will be able to: **build a 30-name list of specific people who already complained about your problem in public - people you can name because you read what they wrote.**
+
+> **TL;DR (Part 1 of 2):** Expand your one-sentence hypothesis from Lesson 1.1 into three sentences (a short step below), paste them into Claude, and get back the ICP profile (ICP = Ideal Customer Profile - the specific kind of person your hypothesis's [CUSTOMER] blank names) + exact communities + search strings. Work those communities with the search strings until 30 names are down. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
+
+Your LinkedIn network is the comfortable place to start - and it books polite calls with old colleagues being nice, not interviews with strangers who live the problem. The technique below replaces it: read where strangers already complain about your exact problem, then write back to those specific complainers. Same hypothesis, same hours, different place to look - and it fills a calendar with 10+ booked interviews instead of 2-3 polite ones.
 
 The full journey, top to bottom - this page covers the first three steps (map, read, list); [Part 2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers writing to each person and booking the 10 calls:
 
@@ -124,9 +124,15 @@ Turn the 30 sentences into 30 names. Open each thread you saved, click each usef
 
 Your Lesson 1.2 complaints each came with a thread URL - those posters are named leads with a known pain; enter them as the first rows (name, post URL, quoted line).
 
-**This is the most important step in the chapter.** A list of 30 individuals you can name - because you read what they wrote - replies far more often than a list of strangers a tool exported for you - the quoted line is the difference. Aim for 30 hand-picked people in one focused sitting, then filter the list on [six dimensions](/course/tech-for-non-technical-founders-2026/reference/find-10-people-full/#filter-the-list-six-dimensions) (buyer-or-user, company size, one industry, one timezone) so the calls are bookable.
+**This is the most important step in the lesson.** A list of 30 individuals you can name - because you read what they wrote - replies far more often than a list of strangers a tool exported for you - the quoted line is the difference. Aim for 30 hand-picked people in one focused sitting, then filter the list on [six dimensions](/course/tech-for-non-technical-founders-2026/reference/find-10-people-full/#filter-the-list-six-dimensions) (buyer-or-user, company size, one industry, one timezone) so the calls are bookable.
 
 > **Save the Apollo filter and whatever contacts your monthly export credits cover (a small monthly allowance on the free tier) to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Lesson 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
+
+**Success check:** pick three rows at random. Each has all four cells filled, the post URL opens, and the quoted line is their wording, not your paraphrase. If all three rows pass, the list is ready for Part 2.
+
+**If this fails: an hour of searching turns up 3 names, not 30.**
+- **Why:** you're searching in your product words; the people you're looking for complain in their workaround words.
+- **Fix:** search a related keyword ("boarding costs" instead of "pet sitter") - 30 minutes of keyword variation turns 3 names into 12.
 
 > **Done:** 30-name list is built in your spreadsheet with name, role+company, post URL, and one quoted line per row.
 >
@@ -134,7 +140,7 @@ Your Lesson 1.2 complaints each came with a thread URL - those posters are named
 >
 > **Next:** [2.4 · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - the message templates, cadence, and follow-up sequence for the list you just built.
 >
-> **If blocked:** If the AI returned "NOT FOUND" for every community, your hypothesis is too vague. Go back to Lesson 1.1 and rewrite the customer sentence with a specific role, company size, and the moment in their week when the pain happens. If your name list stops at 3 people, search a related keyword ("boarding costs" instead of "pet sitter") - 30 minutes of keyword variation turns 3 names into 12.
+> **If blocked:** see "If this fails" above. If the AI returned "NOT FOUND" for every community, your hypothesis is too vague. Go back to Lesson 1.1 and rewrite the customer sentence with a specific role, company size, and the moment in their week when the pain happens.
 >
 > **Deeper reference:** [Full channel walk + search-string galleries + list filters + Apollo backfill + monitoring tools + offline-vertical panels](/course/tech-for-non-technical-founders-2026/reference/find-10-people-full/)
 

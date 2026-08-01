@@ -38,6 +38,8 @@ related_posts: false
 >
 > **Progress:** M4 · 4 of 5 · Results so far: stack set up + pre-flight rules locked (4.3) - this lesson walks the 4 build phases to a live MVP
 
+After this lesson you will be able to: **walk the four build phases, demo each one to a real person, and put a live URL in front of five real users.**
+
 > **TL;DR:** Four build phases with one demo each. Phase 1 ships clickable UI. Phase 2 wires Supabase auth. Phase 3 connects Stripe checkout. Phase 4 deploys to 5 ICP users. Five green lights to exit. Ship the shed, not the skyscraper.
 
 ---
@@ -92,7 +94,7 @@ Three actions, in order. The first two cost $0.
 2. **Pick ONE feature from your one-page brief's "what you're building" section.** Not three. One. The smallest workflow that solves the validated problem for one persona. Write it as: "build a [SCREEN] for [PERSONA] to [OUTCOME]."
 3. **Generate the UI in Lovable and demo it.** Iterate by chatting: rename, resize, reposition. Then show one human who has not read the brief and watch them try it without a tour.
 
-> **Success check:** a clickable UI on a public staging URL, and one person navigated the core screen without you explaining it. Nothing needs to persist yet - that is Phase 2.
+> **Phase 1 check:** a clickable UI on a public staging URL, and one person navigated the core screen without you explaining it. Nothing needs to persist yet - that is Phase 2.
 
 **If this fails: the person you demoed to needed a tour to understand the screen.**
 - **Why:** the design is carrying meaning that should be on the screen, so the prompt described a layout instead of a job.

@@ -1,5 +1,13 @@
 # Bundle Update Log
 
+## 2026-08-01 (W2 T7 escalation) - canon deposit row carries the cancel split
+
+* **Update**: [content/course-canon.md](content/course-canon.md) - deposit row
+  "$500+ refundable" was missing the customer-cancel-forfeit / founder-cancel-
+  100%-refund split that 5.6's DPA clause 3 and the audit-runbook table already
+  carry; the bare "refundable" phrasing caused 3 in-course drift instances
+  fixed in W2-T7 (e4850eaf). Row synced; floor and mechanism unchanged.
+
 ## 2026-08-01 (O5a) - restore-on-green now OS-scoped
 
 * **Update**: [build/test-gates.md](build/test-gates.md) - green runs restore
@@ -556,6 +564,19 @@ ever come back black on a light-mode-recorded tree, the pin is
 Chrome 151 --headless=new; `--force-prefers-color-scheme=light` is not a
 real switch).
 
+
+## 2026-08-01 - W2-T5: hire-track reference split + since-2011 canon
+
+hire-track-supplementary-reference (5,558w, 2x the 2,900 reference cap)
+split at the contract seam: FCTO bridge + Reading the SOW moved whole to
+new companion `fractional-cto-sow-reference` (2,893w); find-developers,
+stack conversation, interview screen stay (2,890w). All anchored inbound
+links re-pointed (13 course pages + 2 blog posts), zero aliases. The only
+whole-section 2-page partition that fits the band - FCTO (2,132w) cannot
+share a page with the stack section. Two "20 years" tenure claims fixed
+to since-2011 canon (kit Built-by, hire-track stack intro); ratchet
+signatures added; Cagan "20 years" in hire-decision-full is distinct,
+untouched.
 
 ## 2026-08-01 - Removed toolchain drift-gate unit tests (config-mirror anti-pattern)
 * **Remove**: `test/unit/toolchain_pins_test.rb` deleted in full. It was a config-mirror "drift gate" asserting `.mise.toml` version pins equal the literal pins in the setup-hugo action, `_hugo.yml`, `.dev/compose.yml`, and `.ruby-version`. `test_setup_hugo_action_matches_mise` red-built on a FALSE invariant: `.mise.toml` `node = "latest"` (devs want latest) vs CI `node-version: '22'` (pinned on purpose in #393) - a correct divergence, not drift. Tests config agreement, not behavior; violates FIRST + the CLAUDE.md "no fragile config assertions" rule. Comparing CI-vs-local node explicitly was considered and rejected as overkill (Paul). Refs cleaned: Rakefile `:guards` list, `.mise.toml` / setup-hugo `action.yml` header comments, README, `docs/SETUP.md`, this bundle's [ci-gates](/build/ci-gates.md). Pins still need manual sync when bumping - now by convention, not a gate.

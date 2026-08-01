@@ -1,7 +1,7 @@
 ---
 title: "5.6 · Charge Before You Ship: The Paid Pilot Contract"
 aliases: ["/blog/paid-pilot-charge-before-ship/"]
-description: "A verbal yes is not a paid pilot. A refundable Stripe deposit signed before kickoff is. The one-page Design Partner Agreement and a Stripe Checkout setup."
+description: "A verbal yes is not a paid pilot. A Stripe deposit signed before kickoff is. The one-page Design Partner Agreement and a Stripe Checkout setup."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -23,7 +23,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "5.6 · Charge Before You Ship: The Paid Pilot Contract"
-  og_description: "A verbal yes is not a paid pilot. A refundable Stripe deposit signed before kickoff is. The one-page Design Partner Agreement and a Stripe Checkout setup."
+  og_description: "A verbal yes is not a paid pilot. A Stripe deposit signed before kickoff is. The one-page Design Partner Agreement and a Stripe Checkout setup."
 cover_image_alt: "JetThoughts blog cover showing a one-page Design Partner Agreement with the deposit clause highlighted"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/"
 related_posts: false
@@ -37,11 +37,13 @@ related_posts: false
 >
 > **Progress:** M5 · 6 of 7 · Results so far: demos booked from your warm list (5.3-5.5) - this page turns one into a signed pilot with money attached
 
-> **TL;DR:** A verbal yes is not a paid pilot. A signed DPA (Design Partner Agreement - a one-page co-design pilot contract) with a refundable Stripe deposit is. Charge 10-30% of year-one ACV (annual contract value - what one customer pays in year one) before kickoff - it puts the CFO question on Week 0 instead of Week 8.
+After this lesson you will be able to: **turn a verbal yes into a signed one-page pilot agreement with a deposit paid before you build anything new.**
+
+> **TL;DR:** A verbal yes is not a paid pilot. A signed DPA (Design Partner Agreement - a one-page co-design pilot contract) with a Stripe deposit is - refunded 100% if you cancel, forfeited if the customer cancels early. Charge 10-30% of year-one ACV (annual contract value - what one customer pays in year one) before kickoff - it puts the CFO question on Week 0 instead of Week 8.
 
 ---
 
-A free pilot feels collaborative: the customer says yes, you build for six weeks, and every Friday demo gets "this is great." Then Week 8 lands, you send the year-one contract, and the customer says "let me circle back to my CFO" - a CFO who never heard of you and never approved the pilot. A refundable Stripe deposit signed before kickoff is what turns that dead end into a formality.
+"Let me circle back to my CFO" - from a CFO who never heard of you and never approved the pilot - is how six weeks of enthusiastic free-pilot demos end. Nobody inside the customer's company ever had to approve a free pilot. A Stripe deposit signed before kickoff is what turns that dead end into a formality.
 
 > → **Mia sent her DPA** to a parent from her Module 2 interviews - someone who'd described paying $400/month for a tutor who didn't specialize. The $1,200 deposit cleared before she built anything new. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)
 
@@ -52,7 +54,7 @@ Same product, same buyer, one difference - when the money lands:
 | Variant | Setup | Result at Week 8 |
 |---|---|---|
 | **Free pilot** | Six weeks of free build, customer "loves it," a wall of enthusiastic Slack messages, year-one contract sent on day pilot ended | "We're going to revisit at the next budget cycle." There is no next budget cycle. |
-| **Paid pilot** | One-page Design Partner Agreement, $1,200 refundable deposit collected before any code ships | Year-one contract closes day one. |
+| **Paid pilot** | One-page Design Partner Agreement, $1,200 deposit collected before any code ships | Year-one contract closes day one. |
 
 Real money on the table before kickoff forces the internal budget conversation while nothing is riding on it yet. You are not asking for money - you are asking the customer to defend the spend internally. That defense is the test of whether the pilot is real.
 
@@ -159,7 +161,7 @@ Two annotated worked examples (a $1,500 B2B SaaS pilot and a $5,000 B2B services
 
 ---
 
-Send the DPA to your warmest lead first. Asking someone you know for a refundable deposit is the stall point - but the deposit is a test of whether the problem is real, not of whether you deserve to be paid. The second one is easier.
+Send the DPA to your warmest lead first. Asking someone you know for a deposit is the stall point - but the deposit is a test of whether the problem is real, not of whether you deserve to be paid. The second one is easier.
 
 ---
 

@@ -99,7 +99,7 @@ Score each lens 1-5. Be honest - this is for you, not an investor deck.
 | **Growth** | How does the customer hear about you, and how many are there? |
 | **Money** | Do the unit economics work? (Would one customer bring in more than they cost to serve? Leave blank if pre-revenue.) |
 
-> **Success check:** total ≥14/20 (or ≥11/15 if Money is blank) AND no lens below 2. Write the score next to your sentence in the Founder OS doc.
+> **Success check:** read your sentence to one person who has never heard the idea - they say "that's my problem" or "not me," not "sounds great." Then total your lenses: ≥14/20 (or ≥11/15 if Money is blank) AND no lens below 2. Write the score next to your sentence in the Founder OS doc.
 
 ---
 

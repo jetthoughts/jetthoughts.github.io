@@ -72,7 +72,7 @@ Check each artifact off as you file it. If one is missing, the lesson link is th
 ### ☐ 6. Signed paid pilot agreement
 
 - **Built in:** [Lesson 5.6 - Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
-- **What it is:** a signed DPA (Design Partner Agreement - a one-page co-design pilot contract) with the refundable Stripe deposit cleared in your account.
+- **What it is:** a signed DPA (Design Partner Agreement - a one-page co-design pilot contract) with the Stripe deposit cleared in your account.
 - **What a reader learns:** revenue. A customer paid real money before you shipped - the strongest single line in the folder.
 
 ---

@@ -44,7 +44,7 @@ It writes a query that ignores a join, or it adds a column to one screen but not
 
 *Illustrative composite based on patterns from real founder builds, not a single client story.* A fitness-coaching SaaS reaches 11,000 lines of Lovable-generated code with no foreign keys, every model named in the singular, and three customer accounts holding corrupted data because a webhook retried a Stripe charge update four times. The founder ships six features in month four and zero in months five and six, because every change surfaces something else that broke.
 
-**Cost of addressing now**: a 2-hour [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) schema review (roughly $160-$240 - two hours at the $80-$120/hour fractional band). They sketch the proper entity-relationship diagram, identify the joins your current schema is missing, and tell you whether the next 10 features fit on the current schema or need a redesign. If the verdict is "rebuild on a real ORM," route to [Reading the SOW](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow).
+**Cost of addressing now**: a 2-hour [Fractional CTO](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#the-fractional-cto-bridge) schema review (roughly $160-$240 - two hours at the $80-$120/hour fractional band). They sketch the proper entity-relationship diagram, identify the joins your current schema is missing, and tell you whether the next 10 features fit on the current schema or need a redesign. If the verdict is "rebuild on a real ORM," route to [Reading the SOW](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#reading-the-sow).
 
 ## Signal 3: Real-time features becoming non-negotiable (detectable: Week 4-8)
 
@@ -54,7 +54,7 @@ It writes a query that ignores a join, or it adds a column to one screen but not
 
 **Cost of leaving it alone**: the save-collision bug becomes a churn driver within a few months. Any customers who collaborate - coaches sharing clients, teams sharing accounts - lose work on a recurring basis, and each lost note erodes the trust that brought the user in. By the time real-time becomes a deal-breaker for a large customer, the rebuild estimate is the same one you would have gotten earlier; you have just spent the intervening months patching.
 
-**Cost of addressing now**: this signal routes directly to a hire-a-team decision, not a Fractional CTO bridge. Real-time done right needs an engineer who has shipped Action Cable on Rails or Channels on Django and knows the queue, broadcast, and reconnection edge cases. The [SOW reading guide](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow) walks the contract. Estimated rebuild on Rails: 6 to 10 weeks for one senior + one mid engineer.
+**Cost of addressing now**: this signal routes directly to a hire-a-team decision, not a Fractional CTO bridge. Real-time done right needs an engineer who has shipped Action Cable on Rails or Channels on Django and knows the queue, broadcast, and reconnection edge cases. The [SOW reading guide](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#reading-the-sow) walks the contract. Estimated rebuild on Rails: 6 to 10 weeks for one senior + one mid engineer.
 
 ## Signal 4: Auth complexity passing the email + OAuth ceiling (detectable: Week 6-10)
 

@@ -64,7 +64,7 @@ The setup has real costs. Every change now waits for a reviewer, so shipping typ
 
 "But my developer will feel policed," you say. Good developers feel the opposite - review is how juniors get senior, and the ones who bristle at a second reader are telling you something. If the resistance goes as far as stalling on repository access, check it against the [dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/), because that pattern rarely travels alone.
 
-If the fractional route is where you're headed, the course's [Hire Track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) maps how a fractional CTO fits alongside the hire itself - which decisions they own and which stay with you.
+If the fractional route is where you're headed, the course's [Fractional CTO reference](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#the-fractional-cto-bridge) maps how a fractional CTO fits alongside the hire itself - which decisions they own and which stay with you.
 
 ## When cheap plus review is still the wrong setup
 

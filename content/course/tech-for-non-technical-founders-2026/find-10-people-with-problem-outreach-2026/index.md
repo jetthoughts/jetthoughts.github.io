@@ -37,15 +37,15 @@ related_posts: false
 >
 > **Progress:** M2 · 4 of 6 · Results so far: question list + 30-name prospect list
 
+After this lesson you will be able to: **send outreach that names something the person actually wrote - and book 10 interviews from your 30-name list.**
+
 > **TL;DR:** Send 30 staggered messages referencing specific posts you read, using a 3-message sequence (Day 0 intro + Day 3 bump + Day 7 close). Reply rate runs 20-30% when each message names a specific post; 1-5% when it doesn't. Plan to extend the list once or twice before all 10 calls are booked.
 
 > **Read [Lesson 2.3 - Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) first.** It covers the ICP mapping, reading threads, and building the 30-name list. You need that list before the templates below will work - generic openers collapse to 1-5% reply rates.
 
-> **How this chapter relates to Lesson 2.6:** this chapter recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Lesson 2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel.
+**How this lesson relates to Lesson 2.6:** this lesson recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Lesson 2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel.
 
 This is interview recruitment, not sales. You're asking for time and insight, not money - different message template, different channels, different reciprocity. Don't use the Lesson 5.7 cold-email script here; it scares interview subjects who don't yet know you have a product.
-
-After this lesson you will be able to: **send outreach that names something the person actually wrote - and book 10 interviews from your 30-name list.**
 
 ## What to write so they don't ignore you
 
@@ -79,32 +79,15 @@ Work through the 30-name list first, then extend it with Part 1's second-degree 
 
 ![The honest outreach funnel for one batch of 30 - sent, replied at 20-30%, and 2-3 booked calls, with a warning callout for reply rates under 10%](outreach-funnel-strip.svg)
 
+**Success check:** every subject line in your sent folder names a post the person wrote, replies run 20% or better, and 2-3 calls from the batch are on your calendar. Then stack batches until 10 calls are on the calendar - Done below fires at 10, not at the first batch.
+
+**If this fails: replies stall under 10% after the first batch.**
+- **Why:** the Day-0 message reads like a template - the first line doesn't prove you read their post.
+- **Fix:** rewrite the subject line to quote their exact words and resend to the next 10 names only. Compare the two rates before working through the rest of the list.
+
 ## Three tracks to 10 booked calls
 
 Cold outreach is the main track. Two others run alongside it when they fit:
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart TD
-    A(["Start a focused block. 30-name list from Part 1."])
-    A --> B[Cold outreach track: 30 messages by hand]
-    A --> C[Research-panel track: only if cold can't reach the ICP]
-    A --> D[Smoke-test track: landing page from Lesson 1.2 + 1.3]
-    B --> E[10 interviews booked]
-    C --> E
-    D --> E
-    E --> F[Apply Mom Test script from Lesson 2.1]
-
-    classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
-    classDef track fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
-    classDef paid fill:#faf5ff,stroke:#a855f7,stroke-width:2px,color:#1a1a1a
-    classDef goal fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-
-    class A start
-    class B,D track
-    class C paid
-    class E,F goal
-```
 
 - **Research panel** - if your ICP can't be reached cold (a CFO at a regulated bank, an oncology nurse), a paid panel like [User Interviews](https://userinterviews.com) or [Respondent](https://respondent.io) books screened interviewees for a few hundred dollars. Use it only when replies run thin.
 - **Smoke-test landing page** - the page from [Lesson 1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) doubles as your warmest opener: *"You signed up for the waitlist on [PAGE] last Tuesday - up for a 20-minute call?"*
@@ -117,7 +100,7 @@ Both tracks, the parallel-run logic, and the part-time founder's batch-send vari
 >
 > **Next:** return to [2.1 · The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) to run the interviews using the 5-question script, then move to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score the transcripts. The [full reference](/course/tech-for-non-technical-founders-2026/reference/find-10-people-full/#what-happens-after-the-10-calls-are-booked) has the complete artifact chain from booked call to validated problem statement.
 >
-> **If blocked:** If your reply rate is under 10%, your Day-0 subject line is too generic. Rewrite it to reference a specific post you read by that person. If your ICP can't be reached cold, switch to a paid research panel (User Interviews or Respondent).
+> **If blocked:** see "If this fails" above. If your ICP can't be reached cold, switch to a paid research panel (User Interviews or Respondent).
 >
 > **Deeper reference:** [Message teardowns, the panel fallback, the slow-path variant, and the post-booking artifact chain](/course/tech-for-non-technical-founders-2026/reference/find-10-people-full/)
 

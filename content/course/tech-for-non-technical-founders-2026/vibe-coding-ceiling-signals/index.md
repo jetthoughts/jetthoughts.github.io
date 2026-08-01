@@ -38,13 +38,13 @@ related_posts: false
 >
 > **Progress:** M4 · 5 of 5 · [OPTIONAL] - a recurring monthly check once your MVP is live; the core path continues at 5.1
 
+After this lesson you will be able to: **score five architectural signals each month and decide, on a dated rule, whether to stay self-serve, bridge to a fractional CTO, or hire a team.**
+
 > **TL;DR:** Five architectural signals that mean the self-serve stack is maxed out. Two firing for 4+ weeks = graduate to a fractional CTO or hire. Run this check monthly once your MVP is live.
 
 ---
 
 Your Lovable app is live and the first coaches are paying. The stack that got you here has a ceiling, and it shows up in your dashboard weeks before a customer feels it. This lesson is the monthly check that catches the ceiling early, while it is still a tuning problem and not a rebuild.
-
-After this lesson you will be able to: **score five architectural signals each month and decide, on a dated rule, whether to stay self-serve, bridge to a fractional CTO, or hire a team.**
 
 **Vibe Coding** is shipping a real product with AI-generated code from tools like [Lovable](https://lovable.dev), Cursor, or Bolt - no engineer, no dev shop, no months of build. The term was coined by Andrej Karpathy in early 2025; indie founder Pieter Levels made it famous in practice. Done right, it carries you to your first paying users. This lesson is about the moment the shed stops holding.
 
@@ -97,8 +97,8 @@ flowchart TD
 ```
 
 - **Q1 No:** stay self-serve. The shed is holding. Re-score every two weeks. Being wrong costs you two weeks of lead time, which is recoverable.
-- **Q1 Yes + Q2 Yes:** graduate to the hire-a-team path. You have the runway to scope, hire, and onboard 1-2 engineers on Rails, Django, or Laravel. The [SOW reading guide](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow) is your starting page.
-- **Q1 Yes + Q2 No:** graduate to the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). Five hours a week of senior eyes for the next two to three months while you raise or grow into the runway for a hire.
+- **Q1 Yes + Q2 Yes:** graduate to the hire-a-team path. You have the runway to scope, hire, and onboard 1-2 engineers on Rails, Django, or Laravel. The [SOW reading guide](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#reading-the-sow) is your starting page.
+- **Q1 Yes + Q2 No:** graduate to the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#the-fractional-cto-bridge). Five hours a week of senior eyes for the next two to three months while you raise or grow into the runway for a hire.
 
 ## Do this now
 
@@ -106,9 +106,9 @@ Three actions. The first is tonight.
 
 1. **Open your Lovable + Supabase admin dashboard tonight.** Pull up the 30-day request error rate, the 30-day Stripe webhook retry log, the active user count, and last month's OpenAI / Anthropic invoice if you use one. Five minutes of dashboard time is the input to the scoreboard.
 2. **Score each of the 5 signals green / yellow / red, AND log Date first observed + Date last observed per signal.** Green = no symptom yet. Yellow = symptom in the last 30 days but recoverable. Red = symptom firing 4+ weeks AND you've patched it more than once. Keep it as a Notion table or a sheet: Signal | Status | Date first observed | Date last observed | Notes. Without dated windows you cannot tell "fired once this week" from "fired every week for two months," and the 4-week rule collapses.
-3. **If 2+ signals are red AND have been red for 4+ consecutive weeks, start the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) THIS WEEK.** Not next month, not after the next sprint. The first call is usually free.
+3. **If 2+ signals are red AND have been red for 4+ consecutive weeks, start the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#the-fractional-cto-bridge) THIS WEEK.** Not next month, not after the next sprint. The first call is usually free.
 
-> **Success check:** all 5 signals scored (green/yellow/red) with dated observation windows, and a recurring monthly calendar block titled "Vibe-coding 5-signal check."
+> **Success check:** all 5 signals scored (green/yellow/red) with dated observation windows, and a recurring monthly calendar block titled "Vibe-coding 5-signal check," and this month's verdict (stay / bridge / hire) written next to the score.
 
 **If this fails: every signal reads yellow and you cannot decide.**
 - **Why:** yellow with no dates is a guess, not a reading - you are scoring mood, not symptoms.

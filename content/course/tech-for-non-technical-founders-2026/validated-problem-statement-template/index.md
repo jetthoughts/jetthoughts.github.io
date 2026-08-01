@@ -191,7 +191,7 @@ Then walk the page through these four moves:
 - **If you landed in the PIVOT lane (4-6), pick the cleanest segment and run 5 sharper interviews using [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) again.** Don't rerun the same 10 - they've already given you their honest answer. New segment, new interviews, one week.
 - **If you landed in the KILL lane (fewer than 4), write a 200-word post-mortem to your future self.** What ICP did you pick wrong? What why-now did you assume that wasn't true? What workaround did you not learn about until interview 7? The post-mortem is the most valuable artifact from a kill round - it stops you from picking the same wrong target again next quarter. The [stop-AI-obsession validation post](/blog/stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap/) has the long version of the discipline.
 
-Skip the synthesis page and start prompting straight away and you're the founder who, six weeks later, posts a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about a working MVP nobody wants. The page is cheap. The build round you skip because of the page is the expensive thing you avoid.
+Start prompting without the synthesis page and you build a working MVP nobody wants - and the [salvage or rebuild decision tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) is where that build ends up.
 
 ---
 

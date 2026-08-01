@@ -33,13 +33,13 @@ related_posts: false
 >
 > **Progress:** M5 · 5 of 7 · Results so far: messages written (5.4) - this page sends, tracks, and reads the replies
 
+After this lesson you will be able to: **send 50 messages in the right sequence, track replies in a spreadsheet, and diagnose what a "no" actually means.**
+
 > **TL;DR:** Send champions first, cold last, and track every reply in your Sheet. Expect 15-25 replies from 50 messages. A "no" from a cold name is noise; a "no" from a champion is the most useful feedback in this course - always ask why.
 
 ---
 
 You have the list and the message. The order you send them in matters more than the message itself. Send champions first, cold last. And track every reply.
-
-After this lesson you will be able to: **send 50 messages in the right sequence, track replies in a spreadsheet, and diagnose what a "no" actually means.**
 
 ---
 

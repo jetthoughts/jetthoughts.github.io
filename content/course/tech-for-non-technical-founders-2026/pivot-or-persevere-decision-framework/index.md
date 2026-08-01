@@ -153,7 +153,7 @@ A Solution pivot routes you back to [Decide What's Next](/course/tech-for-non-te
 
 A Channel pivot or Revenue Model pivot routes you back to [Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) with the new channel or pricing model. The hypothesis stays intact; the go-to-market motion changes.
 
-A Technology pivot routes you to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the salvage-vs-rebuild decision. The customer-facing hypothesis is the same; the implementation needs to be re-platformed.
+A Technology pivot routes you to the [Fractional CTO bridge reference](/course/tech-for-non-technical-founders-2026/fractional-cto-sow-reference/#the-fractional-cto-bridge) for the salvage-vs-rebuild decision. The customer-facing hypothesis is the same; the implementation needs to be re-platformed.
 
 A persevere decision keeps you on whatever module you were on. Re-measure trigger conditions in 30 days.
 

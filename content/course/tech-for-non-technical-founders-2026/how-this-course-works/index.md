@@ -59,7 +59,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 |---|---|---|
 | 1.1 | Write your Founding Hypothesis | Notebook + kitchen timer |
 | 1.2 | Build a smoke-test landing page | Mixo or Carrd (the 1.3 tracking step may need the builder's small paid tier) |
-| 1.3 | Wire tracking before traffic starts | Microsoft Clarity + GA4 |
+| 1.3 | Wire tracking before traffic starts | Microsoft Clarity + GA4 (free visitor-tracking tools) |
 | 1.4 | Run 300 cold visitors and read the signal | Ad platform of choice |
 | 1.5 | Add a Stripe price button to measure payment intent | Stripe Payment Links |
 
@@ -67,7 +67,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 **Before you write the hypothesis:** spend 30 minutes with [Perplexity](https://www.perplexity.ai/) (an AI search engine that answers questions with cited sources). Ask it to find the top 5 user complaints about existing solutions in your niche, citing reviews from [G2](https://www.g2.com/) and [Capterra](https://www.capterra.com/) (the two big business-software review sites). Use the exact vocabulary from real complaints in your hypothesis blanks. If nobody is complaining about the problem anywhere online, the hypothesis is already in trouble.
 
-> **AI research layer (pre-hypothesis):** Perplexity + Trend Seeker (both have free tiers). Purpose: confirm people are actually searching for or complaining about the problem BEFORE you write a hypothesis about it. Verbatim quotes from Reddit and G2 feed directly into your landing page headline.
+Trend Seeker (free tier, in the optional tools list below) runs a similar sweep across Reddit and forums if you want a second source before you commit to the hypothesis.
 
 ---
 
@@ -88,7 +88,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 **The Mom Test is irreplaceable.** AI tools can tell you what people say online, but they cannot tell you whether a specific human will open their wallet. Without the interviews, you're building features for a problem nobody confirmed exists.
 
-> **After interviews, before the brief:** run your refined hypothesis through IdeaProof (free tier to start). Its multi-model ensemble stress-tests your business logic and catches legal, economic, and competitive blind spots you haven't considered.
+After the interviews and before the brief, you can run your refined hypothesis through IdeaProof (free tier to start); it stress-tests your business logic and catches legal, economic, and competitive blind spots you haven't considered.
 
 ---
 
@@ -139,7 +139,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 | 5.3 | Build the 50-name warm list, sorted into 4 outreach buckets | One spreadsheet |
 | 5.4 | Write the 4 bucket messages + a 90-second Loom | Loom |
 | 5.5 | Send in sequence, track replies, book demos | The same spreadsheet |
-| 5.6 | Sign a Design Partner Agreement - "DPA" (a short contract where a customer pays a deposit to test your product as a co-design partner; cheaper and faster than a full enterprise contract) - with a refundable deposit | DPA template + Stripe |
+| 5.6 | Sign a Design Partner Agreement - "DPA" (a short contract where a customer pays a deposit to test your product as a co-design partner; cheaper and faster than a full enterprise contract) - with a deposit (refunded in full if you cancel; forfeited if the customer cancels early) | DPA template + Stripe |
 | 5.7 (optional) | Go cold outbound: 30 filtered messages, book 1-2 pilots | LinkedIn Sales Navigator or manual |
 
 > → **Mia's Module 5:** sent her DPA to the warmest lead from her champion bucket - the $1,200 deposit cleared before she built anything new. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)
@@ -152,39 +152,29 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 
 ## The Tool Stack: When to Use What
 
-These are the tools the course references - AI research tools, no-code builders, and infrastructure. Most have free tiers sufficient for the validation stage. Tool pricing and free-tier limits change often; the Cost column tells you which tier to look for, and the tool's own pricing page is the source of truth on the day you sign up.
-
-<details>
-<summary>Pre-Hypothesis Research (before Module 1) - 3 tools</summary>
-
-| Tool | What It Does | When to Use | Cost |
-|---|---|---|---|
-| **Perplexity** | AI search engine that answers with cited sources, aggregates competitor complaints | Map the market, find what users hate about existing solutions | Free tier |
-| **Trend Seeker** | Semantic search across Reddit/forums for demand signals | Confirm people are actually searching for solutions to your problem | Free tier |
-| **Reddinbox** | Automated Reddit/Quora search for high-commercial-intent phrases | Find posts where people explicitly ask "how to automate X" or "sick of doing Y" | Setup required |
-
-</details>
-
-<details>
-<summary>Hypothesis Stress-Testing (during Module 2) - 3 tools</summary>
-
-| Tool | What It Does | When to Use | Cost |
-|---|---|---|---|
-| **ValidatorAI** | Dialog-based AI advisor, rates your idea and finds blind spots | Rapid "devil's advocate" feedback before interviews | Free tier |
-| **IdeaProof** | Multi-model ensemble cross-validates business logic | After Mom Test interviews, before writing the Product Brief | Free tier |
-| **Preuve AI** | Evidence-based idea scoring from live data sources, with citations | Before building, when you need a data-backed viability check | Free tier |
-
-</details>
-
-<details>
-<summary>Build & Launch (Modules 1, 4, 5) - 6 tools</summary>
+Four tools carry the whole linear path - the landing page, the checkout, the app builder, and the backend. Most have free tiers sufficient for the validation stage. Tool pricing and free-tier limits change often; the Cost column tells you which tier to look for, and the tool's own pricing page is the source of truth on the day you sign up.
 
 | Tool | What It Does | When to Use | Cost |
 |---|---|---|---|
 | **Mixo / Carrd** | One-page landing page builder | Smoke test (Module 1) | Free tier (subdomain) |
 | **Stripe Payment Links** | Hosted checkout without writing code | Price hypothesis test (Module 1), paid pilot deposit (Module 5) | Pay-as-you-go (per-transaction fee) |
-| **Lovable / Bolt.new** | AI app builder from text prompts | Clickable prototype (Module 2), MVP build (Module 4) | Free tier |
+| **Lovable** | AI app builder from text prompts | Clickable prototype (Module 2), MVP build (Module 4) | Free tier |
 | **Supabase** | Hosted Postgres + auth + realtime | MVP backend (Module 4) | Free tier |
+
+Every other tool appears in the lesson that uses it - the module tables above carry the per-lesson tools (Clarity + GA4 in 1.3, Loom in 5.4); the expander below collects the optional research helpers and alternate paths.
+
+<details>
+<summary>Optional research tools and alternate paths - 8 entries</summary>
+
+| Tool | What It Does | When to Use | Cost |
+|---|---|---|---|
+| **Perplexity** | AI search engine that answers with cited sources, aggregates competitor complaints | Map the market before Module 1, find what users hate about existing solutions | Free tier |
+| **Trend Seeker** | Semantic search across Reddit/forums for demand signals | Confirm people are actually searching for solutions to your problem | Free tier |
+| **Reddinbox** | Automated Reddit/Quora search for high-commercial-intent phrases | Find posts where people explicitly ask "how to automate X" or "sick of doing Y" | Setup required |
+| **ValidatorAI** | Dialog-based AI advisor, rates your idea and finds blind spots | Rapid "devil's advocate" feedback before interviews | Free tier |
+| **IdeaProof** | AI cross-check of your business logic | After Mom Test interviews, before writing the Product Brief | Free tier |
+| **Preuve AI** | Evidence-based idea scoring from live data sources, with citations | Before building, when you need a data-backed viability check | Free tier |
+| **Bolt.new** | AI app builder, an alternative to Lovable | Same jobs as Lovable, if you prefer it | Free tier |
 | **Tally + Zapier + Airtable** | "Wizard of Oz" no-code stack (a fake-it-till-you-make-it pattern: the customer thinks software is running, but you do the work by hand behind the scenes to test demand before you build the real thing) | Concierge MVP before committing to a code build (Module 4 alt path) | Free tiers |
 
 </details>
