@@ -199,10 +199,87 @@
     the same l3-reviewer exception; (g) 40.26 review JPEGs ~1.1MB - pruning
     candidate.
 
-12. **[W3] Visual V3-A** (wave plan 20.15; ADR 30.09): exhibit spec → A/B
-    exemplar → 4 M1 SVG redesigns + alts → eye-test doc → PAUL'S STYLE CALL
-    recorded in the ADR (blocks wider rollout). Program map v1 alongside;
-    Sprint-Y classify-first audit either way. Content-scoped = campaign-safe.
+12. **[W3] Visual V3-A** (wave plan 20.15; ADR 30.09). GROOMED 2026-08-01,
+    re-audited @cdcccd51. Content-scoped (SVGs + one .okf spec doc) =
+    campaign-safe, NO shared CSS. Agents on Opus/Sonnet (Fable quota out,
+    W1.6 retro).
+    **M1 visual inventory (verified — all 5 still OLD hand-drawn grammar,
+    none redesigned; W1/W2/W1.6 touched only landing + prose/tables, not
+    these; W2's 2.4 mermaid is Module 2, out of scope):** 1.1
+    `form-your-founding-hypothesis-90-minute-sprint/hypothesis-mad-libs.svg`,
+    1.2 `smoke-test-build-page/page-anatomy.svg`, 1.3
+    `smoke-test-wire-tracking/tracking-snippets.svg`, 1.4
+    `smoke-test-landing-page-7-day-demand-test/smoke-test-signal.svg`, 1.5
+    `price-hypothesis-on-smoke-test-page/stripe-payment-link.svg`. The
+    board's "4" = the 4 that go straight to the chosen style; a 5th is the
+    A/B exemplar rendered BOTH ways. All 5 land in the end.
+    **EXHIBIT SPEC VERDICT: must be WRITTEN, not assumed done.**
+    `.okf/design/house-visual-spec.md` (48 lines) is still the OLD hand-drawn
+    spec (Caveat/Comic-Sans, paper tones, 2-2.5px) — it has NONE of the 6
+    ADR-demanded v3 components (grid/column, spacing scale, connector spec,
+    data-viz rules, aspect-ratio, 5-rung type scale + ≥9px@390px floor).
+    Writing it is T1 and blocks the exemplar + redesigns.
+
+    **Decomposed, style-call-gated (owner / files / AC / gate):**
+    - **T1 Write v3 exhibit spec** (agent: content/design; files: append v3
+      section to `.okf/design/house-visual-spec.md` — do NOT delete the
+      hand-drawn spec, O1 still needs it). AC: all 6 components + 5-rung type
+      scale + measured ≥9px@390px floor + grammar (action title / one
+      message / basis line), covering BOTH O1-normalized and O2-flat so the
+      A/B has a rubric. Gate: `/okf:validate .okf --strict` + hugo-build.
+      **Blocks T2, T5.** Parallelizable-after: none (root).
+    - **T2 A/B exemplar pair** (agent: SVG; pick ONE M1 exhibit — recommend
+      1.4 `smoke-test-signal.svg`, a data-signal read that best exercises the
+      O2 data-viz rules where flat-vector most diverges from hand-drawn).
+      Render it BOTH ways (O1 hand-drawn-normalized + O2 flat-vector), both
+      carrying the new grammar+floor, into a comparison doc under
+      `40-49-review/` — NOT committed into the lesson. Gate: both variants
+      pass grammar checklist + measured floor; reference side-by-side at
+      equal zoom (W1 retro BLOCKING gate). Gated on T1.
+    - **T3 Program map v1** (Phase C, agent: SVG; new file into
+      `how-this-course-works/`, versioned "v1.0 — July 2026"). Judged
+      INDEPENDENTLY of the style call — does not gate and is not gated by it;
+      iterate regardless of O1/O2 outcome. Gate: hugo-build + scroll gate +
+      4-criteria new-media score. Parallel to T2 once T1 exists.
+    - **T4 Eye-test doc + hand to Paul** (agent: coordinator): assemble the
+      A/B pair (T2) + 3 before/after screenshot pairs → doc for Paul; record
+      the ask in the ADR. Gated on T2.
+    - **Sprint-Y classify-first audit** (agent: SVG/audit): identify any
+      intentional-mono / hand-drawn-on-purpose M1 elements BEFORE conversion.
+      Outcome-independent (runs in EITHER O1/O2 result) → **can run pre-call**
+      as prep, parallel to T2/T3. Output: a keep-as-is list feeding T5.
+
+    ⛔ **BLOCKING GATE — PAUL'S STYLE CALL** (O2 rollout / O1 normalization /
+    mix), recorded in ADR 30.09 within 3 days of the eye-test doc. Nothing
+    below starts until it lands.
+
+    - **T5 Redesign the remaining M1 SVGs in the CHOSEN style** (agent: SVG;
+      the 4 non-exemplar lessons + finalize the exemplar lesson's committed
+      SVG so all 5 carry the winning style). Same filenames, in-place,
+      **alt text rewritten to the new exhibit's message = body edit = FULL
+      visual gate, no content-only skip.** Honor the Sprint-Y keep-as-is
+      list. Gate PER FILE: `bin/qtest --changed` + scroll gate
+      (evidence-per-claim: HTTP status for asset checks, named element +
+      control measurement for overflow — W2 retro) + 4-criteria new-media
+      score written into the commit; `bin/test`+`bin/dtest` pair at PR prep.
+
+    **Autonomous-before-Paul (start now, WIP-respecting):** T1 → then T2 ‖ T3
+    ‖ Sprint-Y audit → T4 → HOLD. **Waits for the call:** T5 only.
+    **Parallelizable:** T2, T3, Sprint-Y audit (disjoint files, worktree
+    isolation per `feedback-workflow-writers-need-worktrees`). **Sequential:**
+    T1 before all; T4 after T2; T5 after the call.
+    **One PR for the wave** (spec + exemplar doc + program map + T5 redesigns
+    + ADR verdict ride the same branch). Skills: `/impeccable` +
+    stitch-design taste + ux-principles (stitch-loop only for variant
+    exploration); `/okf:okf maintain` every commit; `/ponytail:ponytail
+    ultra` posture. Verification checklist = ADR 30.09 "Verification".
+    **20% capacity slot (this boundary): devx O5(b) worktree-compose
+    isolation** — W3 runs the most parallel-worktree agents of any wave (T1
+    spec, T2 exemplar, T3 map, Sprint-Y audit concurrently) and W2's retro
+    already flagged worktree merge races (.okf/log.md union); per-worktree
+    compose isolation removes that class of race for this wave's own
+    execution. (Confirm O5(b) is specced enough at dispatch; if not, fall
+    back to O7 validator-net gap, which also bites hardest on a visual wave.)
 
 13. **[W4, post-Aug-14] V3-B wiring + media P1** (wave plan 20.15): new
     course-single.css + single.html; walkthrough visual hooks, 1.2/1.3/1.5
