@@ -455,19 +455,108 @@ mandate in force.
     side + Paul taste gate (W1 retro rule). Landing-owned files + (post-
     Aug-14) the title-render template only.
 
-17. **[NEXT — executable now, campaign-safe] M2-M5 SVG→O2 rollout** (Paul's
-    design-call method: modern/flat-vector; ADR 30.09 gate "follow the M1
-    pilot" now SATISFIED by W3 #433). Extend the proven O2 flat-vector system
-    (spec `.okf/design/house-visual-spec.md` v3 section; template =
-    the 5 shipped M1 SVGs) to Modules 2-5 (~76 SVGs). Sprint-Y found 4/5 M1
-    SVGs failed the ≥9px@390 mobile floor; the same hand-drawn grammar spans
-    M2-M5, so this fixes a confirmed course-wide legibility defect + delivers
-    consistency. Content-scoped (SVGs + alt rewrites = body edits, full gate
-    per lesson) - NO shared CSS, campaign-safe. Verification: rendered-review
-    + source-consistency (the pixel suite MASKS img, W3 lesson). Groom
-    per-module; honor a per-module Sprint-Y-style keep-as-is pass. Triaged
-    ahead of W5 (higher momentum/lower risk; W5's tracker is Clarity-gated)
-    and ahead of frozen W4.
+17. **[NEXT — executable now, campaign-safe] M2-M5 SVG→O2 rollout — GROOMED
+    2026-08-01, re-audited @45ecea48** (Paul's design-call method:
+    modern/flat-vector; ADR 30.09 gate "follow the M1 pilot" SATISFIED by W3
+    #433). Extend the O2 flat-vector system (spec
+    `.okf/design/house-visual-spec.md` v3 section; template = the 5 shipped M1
+    lesson SVGs, all FLAT/PASS) to the M2-M5 numbered lessons.
+
+    **Re-audit findings (floor = min font-size ≥ 9·viewBoxW/390, i.e. ≥9px@390):**
+    - Course carries **80 SVGs total.** Grammar split: **7 FLAT** (O2), **73
+      HAND-drawn** (Caveat/Patrick-Hand cursive). Floor: **6 PASS, 74 FAIL.**
+      The 6 PASS are all FLAT (5 M1 lessons + `how-this-course-works/program-map`).
+      **Every hand-drawn SVG fails the floor** (min font 10-18 vs required 21-24
+      on their 900-1000 viewBoxes). One FLAT-but-FAIL outlier: an email mock in
+      `reference/ownership-full/bad-vs-good-email.svg`.
+    - **Hypothesis CONFIRMED and broader than stated:** the defect is not "M2-M5"
+      — it is the *entire* hand-drawn corpus. 74/80 fail. But the "~76" figure in
+      the old scope conflated the whole-course backlog with the M2-M5 lesson spine.
+
+    **Right-sizing — "~76" REFUTED. True M2-M5 numbered-lesson scope = 17 SVGs**
+    (all HAND, all FAIL). The other ~57 are reference/continuation/global pages,
+    a separate wave — do NOT smuggle them in:
+    - **Tier A · M2-M5 lessons (THE WAVE) = 17 SVGs, 17/17 fail:**
+      - M2 (5): `mom-test-ask-about-past-not-future/mom-test-script`,
+        `ai-persona-pre-validation-mom-test-prep/rehearsal-loop`,
+        `find-10-people-where-to-look/find10-journey`,
+        `find-10-people-with-problem-outreach-2026/outreach-funnel-strip`,
+        `clickable-prototype-validation-2-hour-lovable/prototype-build-strip`.
+        (2.5 `mom-test-synthesis-build-pivot-kill` = mermaid, no SVG.)
+      - M3 (2): `one-page-product-brief-vibe-prd/vibe-prd-template-visual`,
+        `stop-specifying-features-start-outcomes/admin-panel-spaceship`.
+      - M4 (3): `github-aws-database-ownership-checklist/ownership-audit-flow`,
+        `self-serve-mvp-stack-lovable-supabase-stripe-2026/stack-boundaries`,
+        `self-serve-mvp-stack-build-phases/build-phases-strip`.
+        (4.1 `should-you-hire` + 4.5 `vibe-coding-ceiling-signals` = mermaid, no SVG.)
+      - M5 (7): `must-have-segment-pmf-test/sean-ellis-gauge`,
+        `channel-selection-before-outbound/channel-fit-canvas`,
+        `first-ten-customers-network-list/network-buckets`,
+        `first-ten-customers-outreach-message/network-audit-grid`,
+        `first-ten-customers-send-track/send-day-rhythm-card`,
+        `paid-pilot-charge-before-ship/free-vs-paid-pilot`,
+        `outbound-without-sales-team/ph-vs-ih`.
+      - W2-touched confirmed current: 2.4 now carries `outreach-funnel-strip.svg`
+        (hand/fail); 5.2 now carries `channel-fit-canvas.svg` (hand/fail). Both
+        still need conversion.
+    - **Mermaid in M2-M5 lessons (3, OUT of O2-SVG scope):** 2.5, 4.1, 4.5.
+      Theme-rendered (Caveat theme), font is render-CSS not authored-in-fence, so
+      the SVG floor check does not apply. Keep-as-is; flag only if render review
+      trips.
+    - **Tier B · M2-M5 walkthroughs (4, optional add-on):**
+      `module-{2,3,4,5}-walkthrough-mia/artifact-trail.svg` — all HAND/FAIL. Ride
+      the wave only if capacity allows; `module-1-walkthrough-mia/artifact-trail`
+      is the same defect (W3 converted M1 *lessons* only, not the M1 walkthrough)
+      — note as a straggler, fold into whichever sub-wave touches walkthroughs.
+    - **Tier C/D · reference + continuation/global (~55, DEFER to a follow-on
+      wave):** 19 `reference/*-full/` SVGs + ~36 continuation/supplementary/global
+      (friday-demo, weekly-report, pivot, hiring, sow, slopsquatting, faq,
+      quickstart, five-tech-words, etc.). Same grammar/defect, but not the numbered
+      spine — own wave, own PR.
+
+    **Decomposition — 3 sequential sub-waves, one branch, ONE bundled PR**
+    (bundled-PR rule; WIP=1 + one-owner-per-module for grammar consistency; files
+    are disjoint so parallel is *safe* but sequential keeps the 4-eyes gate clean):
+    - **SW-1 = M2 (5 SVGs)** — RUN FIRST.
+    - **SW-2 = M3+M4 (5 SVGs)** — merged; both are the "build" modules, 2+3 too
+      small to split.
+    - **SW-3 = M5 (7 SVGs)** — largest, the first-customer payoff tail.
+    - Each sub-wave, per SVG: (1) redraw to the O2 template (system-ui type, 5-rung
+      scale, grid W=720, connectors/data-viz per v3 spec), (2) clear the ≥9px@390
+      floor (min font ≥17 on a 720 viewBox), (3) rewrite the markdown `![alt]` AND
+      the SVG `<title>`/`<desc>`, (4) per-module Sprint-Y keep-as-is pass (preserve
+      mono tokens, ruby/green/amber semantics, intentional elements — classify
+      before redrawing).
+    - **Acceptance per SVG:** O2 template match + floor PASS + alt rewritten +
+      4-criteria rendered score (great look / readable-without-zoom / earns the
+      scroll / helpful-not-decorative).
+
+    **Gate (state it so no baseline churn panic):** `bin/hugo-build` +
+    `bin/qtest --changed` on edited lessons + rendered review at 1280×800 and
+    390×844. SVGs embed as `![alt](x.svg)` → `<img>`, and the pixel suite masks
+    img (`skip_area: %w[picture img]`, W3 lesson) → **NO baseline re-record
+    expected.** Content-scoped, NO shared CSS, campaign-safe. Full `bin/test` +
+    `bin/dtest` only at PR-prep.
+
+    **RUN M2 FIRST:** it is adjacent to the already-converted M1 — a reader
+    walking M1(O2)→M2(hand-drawn) hits the visible grammar seam immediately;
+    converting M2 restores an unbroken O2 run from the course entrance. Then
+    M3+M4, then M5.
+
+    **20%-slot pick = O7 validator-net gap (build-time SVG floor check).**
+    Justification: this 74-SVG defect shipped *because the only visual gate masks
+    img* — the pixel suite is structurally blind to it, and nothing else checks
+    font legibility. A ~15-line check (parse viewBox W + min font-size, assert
+    ≥9·W/390) wired into the hugo-build validator net turns "we eyeball the floor"
+    into an automated gate, catches every future under-floor SVG, and pays off
+    across the deferred Tier C/D backlog too — the root-cause, fix-it-once move.
+    (O5(b) worktree-compose isolation is NOT the 20%-slot but IS the standing
+    execution mechanic: the 3 committing sub-wave agents run in worktrees to avoid
+    racing the shared branch — per the workflow-writers-need-worktrees rule.
+    O8 already DONE.)
+
+    Triaged ahead of W5 (higher momentum/lower risk; W5 is Clarity-gated) and
+    ahead of frozen W4.
 
 14. **[IDEA - review opportunity later, spans course + blog] Reader-mode
     readability research** (Paul 2026-08-01): browsers' reader modes
