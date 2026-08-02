@@ -29,7 +29,7 @@ Module 3 was one evening and one lunch break: draft the brief, then try to break
 
 ---
 
-![Mia's Module 3 artifact trail - a one-page Product Brief, a no-go list, an outcome rewrite, and a passed quality check](artifact-trail.svg)
+![Mia's Module 3 artifact trail - fuzziness caught on paper, not in a build: a one-page Product Brief, a no-go list, an outcome rewrite, and a passed quality check](artifact-trail.svg)
 
 ## [Lesson 3.1: The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
 
