@@ -27,7 +27,7 @@ Mia entered Module 5 with a live product and a number that could embarrass her: 
 
 ---
 
-![Mia's Module 5 artifact trail - a 40% test niche, a warm 50-name list, a signed paid pilot, and a complete Founder OS](artifact-trail.svg)
+![Mia's Module 5 artifact trail - a notebook line to a stranger's money: a 55% must-have test, a warm 50-name list, a signed paid pilot, and a complete Founder OS](artifact-trail.svg)
 
 ## [Lesson 5.1: The 40% Test](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
 
