@@ -473,7 +473,7 @@ mandate in force.
     it answers direct customer-facing feedback; that outranks W3's campaign-
     safe course-exhibit work by critical level. W3/W4/W5 shift one slot back.
 
-16. **[SCHEDULED - post-Aug-14 landing wave, after W4's window opens] Landing
+16. **[UNFROZEN 2026-08-02 by Paul - RUNS NEXT WAVE, no Aug-14 wait] Landing
     full-migration to the shuffle2 reference** (Paul 2026-08-01, triaged
     backlog by impact/effort). W1.6 (PR #432) closed the expander/text
     complaint but the result (40.29) is still ~2x the reference (40.28)
@@ -732,7 +732,7 @@ mandate in force.
     Triaged after W5 or interleaved (W5 is Clarity-gated; this is content-only,
     lower-risk, higher-momentum). Own wave, own branch, own PR.
 
-14. **[IDEA - review opportunity later, spans course + blog] Reader-mode
+14. **[POSTPONED 2026-08-02 by Paul - revisit later, not blocking] Reader-mode
     readability research** (Paul 2026-08-01): browsers' reader modes
     (Chrome DevTools can toggle Reader Mode; Firefox/Safari have their own)
     encode battle-tested readability defaults - measure line length,
