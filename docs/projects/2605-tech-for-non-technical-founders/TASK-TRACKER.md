@@ -496,6 +496,90 @@ mandate in force.
     side + Paul taste gate (W1 retro rule). Landing-owned files + (post-
     Aug-14) the title-render template only.
 
+    _Groomed scope — GROOMED 2026-08-02, re-audited @662744c3 against live
+    `_index.md` + `list.html` + `course-list.css` (NOT the 40.29 JPEG alone).
+    Paul's design-call method governs (modern/flat-vector; panel-decide;
+    Paul taste gate at the PR render)._
+
+    **All 6 punch-list gaps STAND (verified in source):**
+    1. RELOCATE — `_index.md:46-62` still carries `## Take this course if`
+       (5 bullets) + `## Who built this` (2 paras); reference (40.28) has
+       neither. **Also off-reference:** `## Going further` (`:249`) +
+       `## Already started building?` (`:253`). Biggest height cut. Targets
+       exist: `how-this-course-works/index.md`, `faq/index.md`. Anchor care:
+       `#already-started-building` is cross-linked from `:56`; `#module-map`
+       from `:44`/`:74` — relocation MUST fix these + any inbound links.
+    2. MODULE COMPACTION — live renders all 5 modules × 25 chapters as flat
+       wide cards (W1.6 R2.2, already inline — chapters are NOT the bloat).
+       Reference is denser per-card: trim the `module-card__mia` "See it in
+       action" line + long deliverable glossaries, tighten padding. Overlaps
+       item-15 lever. CSS + light `_index.md` trim.
+    3. GRADIENT H1 — `list.html:34` renders `<h1>{{ .Title }}</h1>` plain.
+       The ONE template edit (unblocked). Split title so line 2 "Paying
+       Customer" gets a ruby→purple gradient span (spec §3 token-map);
+       frontmatter title untouched, one semantic `<h1>`.
+    4. MISTAKES 3-COL — `course-list.css:79` = `repeat(2,...)`. 6 `<li>`
+       (5 + dark CTA) → clean 3×2. Grid already spans the 1080px middle
+       track, so width fits. CHEAP CSS.
+    5. HERO STAT CELLS — `list.html:76-81` card body = eyebrow+title+meta
+       line+leave. Reference card has labeled stat cells (Methodology /
+       No-Code MVP · Validation Pace / 2-3 Weeks). Template markup + CSS.
+       **Copy needs Paul's taste gate** (spec §4: variant card copy is
+       Paul-approval-gated).
+    6. NOT-COVER DARK — `course-list.css:299-302` is deliberately LIGHT with
+       a documented 3-dark-zone budget (hero card + mistake CTA + endcap).
+       Reference is DARK **and has NO dark endcap island** (ends NOT-cover →
+       footer). True swap = trade the dark endcap for a dark NOT-cover, so
+       the calm 3-zone budget holds. DESIGN DECISION for the panel.
+    + SECTION REORDER: reference = Hero → mistakes → modules → NOT-cover;
+      current = Hero → mistakes → NOT-cover → modules (module-map + NOT-cover
+      are swapped). Panel call; moves an HTML block if adopted.
+
+    **Decomposed tasks (ONE sprint branch → ONE PR, per feature-branch rule):**
+    - **T1 · Content relocation** (Track A, content-care). Files: `_index.md`
+      (cut Take-if/Who-built + Going-further/Already-building), `how-this-
+      course-works/index.md` &/or `faq/index.md` (absorb), fix anchors. AC:
+      landing section set matches reference; no orphan anchors; no fact lost.
+      Gate: content-only → `bin/hugo-build` + scroll gate (per content-only
+      exemption) — pure prose cut, no HTML touched.
+    - **T2 · Gradient H1** (the ONE template edit). `list.html` + `course-
+      list.css`. Gate: qtest (hero-fold test) + side-by-side + Paul taste.
+    - **T3 · Mistakes 3-col.** `course-list.css` only. Gate: qtest + side-by-side.
+    - **T4 · Hero stat cells.** `list.html` + `course-list.css`; Paul copy
+      approval. Gate: qtest + side-by-side + Paul taste/copy.
+    - **T5 · NOT-cover dark + dark-zone rebalance.** `course-list.css` only;
+      executes the panel's budget ruling. Gate: qtest + side-by-side + Paul taste.
+    - **T6 · Module compaction.** `course-list.css` + light `_index.md` trim.
+      Gate: qtest + side-by-side.
+    - (Section reorder, if panel adopts, rides T1's branch as a follow-commit
+      with the FULL visual gate — it moves the module-map HTML block.)
+
+    **Sequencing:** PANEL first (pre-execution) → **T1 FIRST** (biggest cut,
+    cheapest gate, settles the section set the restyle targets) → restyle
+    bundle T2·T3·T4·T5·T6 on the same branch, qtest per commit, FULL
+    `bin/test`+`bin/dtest` at PR prep (both macos/ + linux/ baselines) →
+    ONE PR with reference side-by-side @ equal zoom → Paul taste gate.
+
+    **Panel = YES, run it BEFORE execution** (this is Paul's acquisition
+    surface + two real design forks: the dark-zone rebalance #6 and the
+    compaction depth #2 / whether to also cut Going-further+Already-building).
+    2-4 lenses scoring the proposed restructure vs 40.28 + competitors
+    (10.04/10.05): conversion/acquisition · visual-taste (/impeccable) ·
+    UX/cognitive-load · reference-fidelity. Decide autonomously (Paul
+    autonomy grant); Paul's taste gate at the PR render is final.
+
+    **20%-slot:** `bin/check-landing-parity` (report-only) — assert the
+    rendered landing's H2/section count ≤ a reference budget so the 2×-height
+    drift this item fixes can't silently regress. Matches the proven "fix the
+    gate, not the instance" pattern (check-svg-floor O7b / check-course-paths
+    O7c); flip to blocking once green. (Defer to O6 if that's the committed slot.)
+
+    **Campaign-safety:** Paul UNFROZE 2026-08-02, so the `list.html` template
+    edit (gradient H1, stat cells) is now in scope. ALL CSS stays in the
+    landing-owned `course-list.css` (loaded only via `list.html`, already
+    `.course-landing`-scoped) — NO shared blog CSS, NO `style.css`, NO shared
+    partials. Content stays in `_index.md` + the two relocation targets.
+
 17. **[✅ DONE 2026-08-02, merged PR #434 (squash 133f8f4d)] M2-M5 SVG→O2
     rollout.** All 17 M2-M5 numbered-lesson SVGs → O2 flat-vector (3 sub-waves
     M2 / M3+M4 / M5); every one now clears the ≥9px@390 mobile floor (was
