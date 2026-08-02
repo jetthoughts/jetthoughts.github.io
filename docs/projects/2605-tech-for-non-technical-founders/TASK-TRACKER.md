@@ -606,13 +606,131 @@ mandate in force.
     Triaged ahead of W5 (higher momentum/lower risk; W5 is Clarity-gated) and
     ahead of frozen W4.
 
-18. **[QUEUED - deferred SVG wave, campaign-safe, after W5 or interleaved]
-    Remaining 46 under-floor SVGs → O2** (burn-down from `bin/check-svg-floor`):
-    reference/continuation pages + the 5 Mia walkthroughs (incl. the
-    M1-walkthrough straggler W3 left). Same defect + same O2 template as the
-    M2-M5 rollout; content-scoped, campaign-safe. Run `bin/check-svg-floor`
-    for the live list; group by page-type sub-waves. When it hits zero, flip
-    the check to a blocking gate (SVG_FLOOR_BLOCK=1 in bin/hugo-build).
+18. **[GROOMED 2026-08-02, READY TO RUN - deferred SVG wave, campaign-safe,
+    after W5 or interleaved] Remaining 46 under-floor SVGs → O2 flat-vector.**
+    Extends the DECIDED O2 system (ADR 30.09 accepted 2026-07-31; W3 #433
+    satisfied the "follow M1 pilot" gate; #434 rolled M2-M5) to the rest of
+    the 80-SVG corpus — NO new Paul style call needed. Template = the 22
+    already-converted FLAT/PASS SVGs (5 M1 lessons + program-map + 17 M2-M5).
+    Spec: `.okf/design/house-visual-spec.md` "v3 exhibit spec" (W=720 grid,
+    5-rung scale, basis rung ≥17px so smallest text renders ≥9.21px@390).
+    Method: per-SVG Sprint-Y classify pass (40.31) — CONVERT generic styling,
+    KEEP-AS-IS meaning-bearing elements cited to a spec rule.
+
+    **Live list (re-run `ruby bin/check-svg-floor` before dispatch): 46 SVGs,
+    all under the 9px@390 floor (3.71-7.80px today).** Grouped by page-type,
+    counts sum to 46:
+
+    - **Group A · Mia walkthroughs (5)** — `module-{1,2,3,4,5}-walkthrough-mia/
+      artifact-trail.svg` (incl. the M1 straggler W3 left; W3 converted M1
+      *lessons* only). All HAND/FAIL (4.47-5.28px, vb 960). Files DIFFER
+      (module-specific content) but share ONE template/grammar → fastest batch,
+      one redraw pattern ×5. **Highest-linked pages** (walkthroughs are the
+      most-linked per earlier research) → RUN FIRST.
+    - **Group B · reference/*-full + smoke-test-channel-guide (11)** —
+      sprint-timeline, mom-test good-vs-bad-answers, must-have segment-isolation,
+      outbound stage-cadence, outcomes feature-vs-outcome, ownership bad-vs-good-
+      email + ownership-zones, product-brief good-vs-bad-prd, prototype-build
+      wireframe-strip, smoke-test channel-icp-matrix, stripe-price-test
+      price-test-flow. (The other ~8 reference/*-full SVGs already PASS — Wave B
+      shipped them FLAT.)
+    - **Group C1 · sales/outreach + friday-demo + first-customer + process
+      templates (15)** — outreach-sequence-template ×3 (bump-decision,
+      message-channels, outreach-cadence), friday-demo-template timeline,
+      friday-demo-rule ×3 (catching-the-lie, demo-rule, friday-loop),
+      first-paying-customer-operating-kit ×2 (kit-components, kit-sample-row),
+      fake-stripe dollar-presale-flow, three-questions daily-weekly-cadence,
+      self-serve-stack walkthrough-milestones, pre-launch-checklist
+      pre-launch-gates, vibe-prd-template vibe-prd-skeleton, validation-tools
+      tools-in-sequence.
+    - **Group C2 · hiring + scorecards + jargon + org/maps + global glue (15)**
+      — agency-ai-five-questions scorecard-at-a-glance, hiring-interview-script
+      scorecard-at-a-glance (DIFFERS from agency's — no convert-once shortcut),
+      interview-scorecard scorecard-5-questions, hire-track-map,
+      where-to-hire hiring-region-map, engineering-org-chart reviewer-attention,
+      five-tech-words ×3 (architecture-comparison, jargon-translator,
+      refactor-check), ai-token-bill invoice-loop, sow eight-clause-risk-map,
+      pivot ×2 (pivot-ledger, pivot-wheel), faq module-strip, quickstart
+      minimal-path. (No glossary SVG exists — confirmed.)
+
+    **Hard vs straightforward split (~18 hard / ~28 straightforward):**
+    - **HARD — wide viewBox 980-1000 needing node-reduction to W=720, or dense
+      tables/maps/matrices (redraw, not rescale):** the maps (hire-track-map,
+      hiring-region-map, sow eight-clause-risk-map), org chart (reviewer-
+      attention), matrix (channel-icp-matrix), and the two-column COMPARE
+      exhibits (good-vs-bad-answers, good-vs-bad-prd, feature-vs-outcome,
+      bad-vs-good-email, ownership-zones, architecture-comparison, kit-sample-row
+      [worst: 4.68px], kit-components, dollar-presale-flow, catching-the-lie,
+      demo-rule [worst overall: 3.71px], friday-demo-timeline, vibe-prd-skeleton).
+      Apply v3's "prefer fewer nodes at W=720 over more nodes at W=960" rule —
+      compare tables likely stack or shed nodes to hold the floor.
+    - **STRAIGHTFORWARD — single strip/timeline/cadence/loop/scorecard at vb
+      900-960, linear re-layout:** the 5 artifact-trails, both scorecards +
+      scorecard-5-questions, sprint-timeline, stage-cadence, wireframe-strip,
+      price-test-flow, module-strip, minimal-path, outreach ×3, friday-loop,
+      walkthrough-milestones, daily-weekly-cadence, pre-launch-gates,
+      tools-in-sequence, jargon-translator, refactor-check, pivot-ledger,
+      pivot-wheel, invoice-loop, segment-isolation.
+
+    **Do-NOT-convert / keep-as-is flags (per Sprint-Y 40.31 — NO wholesale
+    skips; element-level preserves apply course-wide):** mono tokens/event-names
+    stay mono; ruby=action/CTA, green=money/success, amber=warning semantics
+    survive the redraw; labels-INSIDE-shapes (Sweller) preserved. **Special:
+    `reference/ownership-full/bad-vs-good-email.svg` is already FLAT** (system
+    font, not cursive) but under-floor — it's a deliberate email-client mock.
+    Classify REVIEW→FLOOR-FIX (bump type / reduce nodes to 720, KEEP the inbox-
+    mock framing), NOT a full O2 redraw. (The 3 M2-M5-lesson mermaids 2.5/4.1/4.5
+    are theme-rendered, not in this 46 — no action.)
+
+    **Decomposition — 4 page-cohesive sub-waves, one branch, ONE bundled PR**
+    (WIP=1 + one-owner-per-group for grammar consistency; files disjoint so
+    parallel is *safe* but sequential keeps the 4-eyes gate clean; committing
+    agents run in **worktrees** per the workflow-writers-need-worktrees rule):
+    - **SW-1 = Group A walkthroughs (5)** — RUN FIRST (traffic + easiest).
+    - **SW-2 = Group B reference/*-full (11)**.
+    - **SW-3 = Group C1 templates (15)**.
+    - **SW-4 = Group C2 hiring/global (15)**.
+    - C1/C2 at 15 are the heaviest; an executing agent may split each into two
+      passes (multi-SVG pages — outreach ×3, friday-demo ×3, five-tech-words ×3,
+      kit ×2, pivot ×2 — are natural seams) if 15 in one sitting is too much.
+    - Per SVG: (1) redraw to O2 template (system-ui type, 5-rung scale, W=720
+      grid, connectors/data-viz per v3), (2) clear ≥9px@390 (min font ≥17 on a
+      720 viewBox; scale all rungs by W/720 if wider), (3) rewrite markdown
+      `![alt]` AND the SVG `<title>`/`<desc>`, (4) Sprint-Y keep-as-is pass.
+    - **Acceptance per SVG:** O2 template match + floor PASS + alt rewritten +
+      4-criteria rendered score (great look / readable-without-zoom / earns the
+      scroll / helpful-not-decorative).
+    - **Bundled-PR note:** default ONE PR for the 46-SVG wave (bundled-PR rule).
+      If the single review gets too large, the natural split is after SW-2
+      (walkthroughs+reference = 16 SVGs / PR-A; templates+hiring = 30 / PR-B) —
+      but hold to one PR unless Paul says otherwise.
+
+    **Gate (no baseline-churn panic):** `bin/hugo-build` + `bin/qtest --changed`
+    on edited lessons + rendered review at 1280×800 and 390×844. SVGs embed as
+    `![alt](x.svg)` → `<img>`; the pixel suite masks img (`skip_area:
+    %w[picture img]`, W3 lesson) → **NO baseline re-record expected.** Content-
+    scoped, NO shared CSS, campaign-safe. Full `bin/test` + `bin/dtest` only at
+    PR-prep.
+
+    **20%-slot pick = flip `bin/check-svg-floor` to a BLOCKING gate**
+    (`SVG_FLOOR_BLOCK=1` wired into `bin/hugo-build`), sequenced as the FINAL
+    sub-wave's payload AFTER all 46 convert and the check reports zero.
+    Justification: this is the capstone that gives the whole two-wave effort
+    (17 + 46 = the full hand-drawn corpus) its permanent teeth — the exact
+    "fix the gate, not the instance" root-cause move the M2-M5 retro celebrated
+    when it shipped the report-only check (O7b). ~2-line change (env default +
+    hugo-build wiring); permanently blocks any future under-floor SVG across all
+    80. Picked OVER O5(b) worktree-compose (that's a standing *execution
+    mechanic*, already in use here for the committing agents, not a deliverable —
+    and it's unspecced) and over literal-O7 (already closed by O7b). The
+    blocking-flip is what makes all this durable.
+
+    **Campaign-safety CONFIRMED:** every SVG is content-scoped (lives in one
+    lesson's `index.md` folder, self-contained inline styles), NO shared CSS, NO
+    template/layout changes → zero shared-surface risk to any live campaign.
+
+    Triaged after W5 or interleaved (W5 is Clarity-gated; this is content-only,
+    lower-risk, higher-momentum). Own wave, own branch, own PR.
 
 14. **[IDEA - review opportunity later, spans course + blog] Reader-mode
     readability research** (Paul 2026-08-01): browsers' reader modes
