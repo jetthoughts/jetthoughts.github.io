@@ -1,86 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-labelledby="m1-trail-title">
-  <title id="m1-trail-title">Mia's Module 1 artifact trail: Founding Hypothesis to smoke-test page to tracking to a 6.5% demand signal to 6 paying customers</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 732" role="img" aria-labelledby="m1-trail-title m1-trail-desc">
+  <title id="m1-trail-title">Five artifacts, zero product code: Mia's Module 1 trail runs Founding Hypothesis to smoke-test page to tracking to a 6.5% demand signal to $594 in pre-sales.</title>
+  <desc id="m1-trail-desc">A vertical trail of five artifact cards. 1.1 Founding Hypothesis scored 15 out of 20, one soft blank flagged. 1.2 Smoke-test page live at tutormatch.mixo.io, passed the 3-second test. 1.3 Tracking wired with Clarity, GA4 and Pixel, who is visiting verified. 1.4 Smoke test run returned a 6.5% demand signal over 300 visits. 1.5 Price test, the payoff, took 6 buyers at $99 each - $594 before any product. Basis: Mia's Module 1 deliverables, filed in her Founder OS.</desc>
   <defs>
     <style>
-      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #1a1a1a; font-weight: 700; }
-      .foot   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #666; font-style: italic; }
-      .chip   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #ffffff; font-weight: 700; }
-      .title  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
-      .big    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #cc342d; font-weight: 700; }
-      .gbig   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #2e7d32; font-weight: 700; }
-      .note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #555; }
-      .url    { font-family: "Courier New", monospace; font-size: 11px; fill: #0277bd; }
-      .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2; }
-      .pay    { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2.5; }
-      .chipbg { fill: #cc342d; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .mono  { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .pill  { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .name  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .note  { font-size: 18px; font-weight: 400; fill: #555555; }
+      .url   { font-size: 18px; font-weight: 400; fill: #0277bd; }
+      .metric{ font-size: 30px; font-weight: 700; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
-    <marker id="arw1" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6" fill="none" stroke="#999" stroke-width="1.6"/>
+    <marker id="m1-tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
     </marker>
   </defs>
 
-  <text x="480" y="38" class="h" text-anchor="middle">What Mia produced in Module 1</text>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="732" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="716" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Card 1: Hypothesis -->
-  <g transform="rotate(-0.4 98.5 182)">
-    <rect x="16" y="90" width="165" height="185" rx="12" class="card"/>
-    <rect x="65.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="98.5" y="118" class="chip" text-anchor="middle">1.1</text>
-    <text x="98.5" y="152" class="title" text-anchor="middle">Founding</text>
-    <text x="98.5" y="173" class="title" text-anchor="middle">Hypothesis</text>
-    <text x="98.5" y="216" class="big" text-anchor="middle">15 / 20</text>
-    <text x="98.5" y="252" class="note" text-anchor="middle">one soft blank flagged</text>
-  </g>
+  <!-- title block -->
+  <text x="360" y="50" text-anchor="middle" class="gk title">Five artifacts, zero product code</text>
+  <text x="360" y="82" text-anchor="middle" class="gk msg">Mia's Module 1 trail - hypothesis to $594 in pre-sales</text>
 
-  <!-- Card 2: Smoke-test page -->
-  <g transform="rotate(0.4 288.5 182)">
-    <rect x="206" y="90" width="165" height="185" rx="12" class="card"/>
-    <rect x="255.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="288.5" y="118" class="chip" text-anchor="middle">1.2</text>
-    <text x="288.5" y="152" class="title" text-anchor="middle">Smoke-test</text>
-    <text x="288.5" y="173" class="title" text-anchor="middle">page live</text>
-    <text x="288.5" y="212" class="url" text-anchor="middle">tutormatch.mixo.io</text>
-    <text x="288.5" y="250" class="note" text-anchor="middle">passed 3-second test</text>
+  <!-- Card 1: Founding Hypothesis -->
+  <g>
+    <rect x="24" y="104" width="672" height="104" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    <rect x="44" y="140" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="161" text-anchor="middle" class="gk pill">1.1</text>
+    <text x="156" y="148" class="gk name">Founding Hypothesis</text>
+    <text x="156" y="174" class="sys note">One soft blank flagged, rest specific</text>
+    <text x="684" y="168" text-anchor="end" class="gk metric" fill="#121212">15 / 20</text>
   </g>
+  <line x1="360" y1="210" x2="360" y2="222" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m1-tri)"/>
 
-  <!-- Card 3: Tracking -->
-  <g transform="rotate(-0.3 478.5 182)">
-    <rect x="396" y="90" width="165" height="185" rx="12" class="card"/>
-    <rect x="445.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="478.5" y="118" class="chip" text-anchor="middle">1.3</text>
-    <text x="478.5" y="152" class="title" text-anchor="middle">Tracking</text>
-    <text x="478.5" y="173" class="title" text-anchor="middle">wired</text>
-    <text x="478.5" y="214" class="note" text-anchor="middle">Clarity · GA4 · Pixel</text>
-    <text x="478.5" y="250" class="note" text-anchor="middle">who is visiting, verified</text>
+  <!-- Card 2: Smoke-test page live -->
+  <g>
+    <rect x="24" y="224" width="672" height="104" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    <rect x="44" y="260" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="281" text-anchor="middle" class="gk pill">1.2</text>
+    <text x="156" y="268" class="gk name">Smoke-test page live</text>
+    <text x="156" y="294" class="mono url">tutormatch.mixo.io</text>
+    <text x="684" y="288" text-anchor="end" class="sys note">Passed the 3-second test</text>
   </g>
+  <line x1="360" y1="330" x2="360" y2="342" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m1-tri)"/>
+
+  <!-- Card 3: Tracking wired -->
+  <g>
+    <rect x="24" y="344" width="672" height="104" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    <rect x="44" y="380" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="401" text-anchor="middle" class="gk pill">1.3</text>
+    <text x="156" y="388" class="gk name">Tracking wired</text>
+    <text x="156" y="414" class="sys note">Clarity, GA4, Pixel - who is visiting, verified</text>
+  </g>
+  <line x1="360" y1="450" x2="360" y2="462" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m1-tri)"/>
 
   <!-- Card 4: Smoke test run -->
-  <g transform="rotate(0.3 668.5 182)">
-    <rect x="586" y="90" width="165" height="185" rx="12" class="card"/>
-    <rect x="635.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="668.5" y="118" class="chip" text-anchor="middle">1.4</text>
-    <text x="668.5" y="152" class="title" text-anchor="middle">Smoke test</text>
-    <text x="668.5" y="173" class="title" text-anchor="middle">run</text>
-    <text x="668.5" y="216" class="gbig" text-anchor="middle">6.5%</text>
-    <text x="668.5" y="252" class="note" text-anchor="middle">300 visits · Promising</text>
+  <g>
+    <rect x="24" y="464" width="672" height="104" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    <rect x="44" y="500" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="521" text-anchor="middle" class="gk pill">1.4</text>
+    <text x="156" y="508" class="gk name">Smoke test run</text>
+    <text x="156" y="534" class="sys note">300 visits, Promising band</text>
+    <text x="684" y="528" text-anchor="end" class="gk metric" fill="#2e7d32">6.5%</text>
+  </g>
+  <line x1="360" y1="570" x2="360" y2="582" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m1-tri)"/>
+
+  <!-- Card 5: Price test (payoff, money = green) -->
+  <g>
+    <rect x="24" y="584" width="672" height="104" rx="6" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5"/>
+    <rect x="44" y="620" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="641" text-anchor="middle" class="gk pill">1.5</text>
+    <text x="156" y="628" class="gk name">Price test</text>
+    <text x="156" y="654" class="sys note">6 buyers at $99 each, before any product</text>
+    <text x="684" y="648" text-anchor="end" class="gk metric" fill="#2e7d32">$594</text>
   </g>
 
-  <!-- Card 5: Price test (payoff) -->
-  <g transform="rotate(-0.4 858.5 182)">
-    <rect x="776" y="90" width="165" height="185" rx="12" class="pay"/>
-    <rect x="825.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="858.5" y="118" class="chip" text-anchor="middle">1.5</text>
-    <text x="858.5" y="152" class="title" text-anchor="middle">Price test</text>
-    <text x="858.5" y="196" class="gbig" text-anchor="middle">6 buyers</text>
-    <text x="858.5" y="230" class="note" text-anchor="middle">$99 each</text>
-    <text x="858.5" y="250" class="note" text-anchor="middle">$594 before product</text>
-  </g>
-
-  <!-- Arrows -->
-  <line x1="184" y1="182" x2="203" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw1)"/>
-  <line x1="374" y1="182" x2="393" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw1)"/>
-  <line x1="564" y1="182" x2="583" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw1)"/>
-  <line x1="754" y1="182" x2="773" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw1)"/>
-
-  <text x="480" y="312" class="foot" text-anchor="middle">Five outputs, zero product code - each one filed in her Founder OS folder.</text>
+  <!-- one basis line -->
+  <text x="360" y="712" text-anchor="middle" class="sys basis">Basis: Mia's Module 1 deliverables, filed in her Founder OS</text>
 </svg>

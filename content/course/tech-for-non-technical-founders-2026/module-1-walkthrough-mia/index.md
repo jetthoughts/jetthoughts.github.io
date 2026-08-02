@@ -31,7 +31,7 @@ Tonight she was going to find out if anyone else cared.
 
 ---
 
-![Mia's Module 1 artifact trail - Founding Hypothesis, smoke-test page, tracking wired, a 6.5% demand signal, and six paying customers before any product code](artifact-trail.svg)
+![Mia's Module 1 artifact trail - five artifacts, zero product code: a Founding Hypothesis, a live smoke-test page, tracking wired, a 6.5% demand signal, and $594 in pre-sales from six buyers](artifact-trail.svg)
 
 ## [Lesson 1.1: Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 
