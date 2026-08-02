@@ -1,85 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-labelledby="m4-trail-title">
-  <title id="m4-trail-title">Mia's Module 4 artifact trail: a self-serve build-path decision to locked ownership to a live MVP to a security fix to a scheduled ceiling check</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 732" role="img" aria-labelledby="m4-trail-title m4-trail-desc">
+  <title id="m4-trail-title">A brief became a live product: Mia's Module 4 trail runs a self-serve build-path decision to locked ownership to a live MVP to a security fix to a scheduled ceiling check.</title>
+  <desc id="m4-trail-desc">A vertical trail of five artifact cards. 4.1 Build-path decision, self-serve, chosen on a worksheet not on fear. 4.2 Ownership locked, domain transferred out, accounts in her name. 4.3-4.4 Live MVP, the alternate-path payoff, built from her brief in 4 phases over 10 weeks on a domain she owns. 4.3-4.4 Security fix, an RLS hole caught on paper, not in prod. 4.5 Ceiling check set, a 30-day calendar block for the first run after launch. Basis: Mia's Module 4 deliverables, built on a domain she owns.</desc>
   <defs>
     <style>
-      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #1a1a1a; font-weight: 700; }
-      .foot   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #666; font-style: italic; }
-      .chip   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #ffffff; font-weight: 700; }
-      .title  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
-      .big    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 23px; fill: #cc342d; font-weight: 700; }
-      .pbig   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #a855f7; font-weight: 700; }
-      .note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #555; }
-      .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2; }
-      .pay    { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
-      .chipbg { fill: #cc342d; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .pill  { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .name  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .note  { font-size: 18px; font-weight: 400; fill: #555555; }
+      .metric{ font-size: 30px; font-weight: 700; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
-    <marker id="arw4" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6" fill="none" stroke="#999" stroke-width="1.6"/>
+    <marker id="m4-tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
     </marker>
   </defs>
 
-  <text x="480" y="38" class="h" text-anchor="middle">What Mia produced in Module 4</text>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="732" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="716" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block -->
+  <text x="360" y="50" text-anchor="middle" class="gk title">A brief became a live product</text>
+  <text x="360" y="82" text-anchor="middle" class="gk msg">Mia's Module 4 trail - decided by a worksheet, not a fear</text>
 
   <!-- Card 1: Build-path decision -->
-  <g transform="rotate(-0.4 98.5 182)">
-    <rect x="16" y="90" width="165" height="185" rx="12" class="card"/>
-    <rect x="65.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="98.5" y="118" class="chip" text-anchor="middle">4.1</text>
-    <text x="98.5" y="152" class="title" text-anchor="middle">Build-path</text>
-    <text x="98.5" y="173" class="title" text-anchor="middle">decision</text>
-    <text x="98.5" y="216" class="big" text-anchor="middle">Self-serve</text>
-    <text x="98.5" y="252" class="note" text-anchor="middle">worksheet, not fear</text>
+  <g>
+    <rect x="24" y="104" width="672" height="104" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    <rect x="44" y="140" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="161" text-anchor="middle" class="gk pill">4.1</text>
+    <text x="156" y="148" class="gk name">Build-path: self-serve</text>
+    <text x="156" y="174" class="sys note">Chosen on a worksheet, not on fear</text>
   </g>
+  <line x1="360" y1="210" x2="360" y2="222" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m4-tri)"/>
 
   <!-- Card 2: Ownership locked -->
-  <g transform="rotate(0.4 288.5 182)">
-    <rect x="206" y="90" width="165" height="185" rx="12" class="card"/>
-    <rect x="255.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="288.5" y="118" class="chip" text-anchor="middle">4.2</text>
-    <text x="288.5" y="152" class="title" text-anchor="middle">Ownership</text>
-    <text x="288.5" y="173" class="title" text-anchor="middle">locked</text>
-    <text x="288.5" y="214" class="note" text-anchor="middle">domain transferred out</text>
-    <text x="288.5" y="250" class="note" text-anchor="middle">accounts in her name</text>
+  <g>
+    <rect x="24" y="224" width="672" height="104" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    <rect x="44" y="260" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="281" text-anchor="middle" class="gk pill">4.2</text>
+    <text x="156" y="268" class="gk name">Ownership locked</text>
+    <text x="156" y="294" class="sys note">Domain transferred out, accounts in her name</text>
   </g>
+  <line x1="360" y1="330" x2="360" y2="342" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m4-tri)"/>
 
-  <!-- Card 3: Live MVP (payoff) -->
-  <g transform="rotate(-0.3 478.5 182)">
-    <rect x="396" y="90" width="165" height="185" rx="12" class="pay"/>
-    <rect x="441.5" y="100" width="74" height="26" rx="13" class="chipbg"/>
-    <text x="478.5" y="118" class="chip" text-anchor="middle">4.3-4.4</text>
-    <text x="478.5" y="155" class="pbig" text-anchor="middle">Live MVP</text>
-    <text x="478.5" y="196" class="note" text-anchor="middle">4 phases · 10 weeks</text>
-    <text x="478.5" y="216" class="note" text-anchor="middle">built from her brief</text>
-    <text x="478.5" y="250" class="note" text-anchor="middle">on a domain she owns</text>
+  <!-- Card 3: Live MVP (alternate-path payoff = purple) -->
+  <g>
+    <rect x="24" y="344" width="672" height="104" rx="6" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
+    <rect x="44" y="380" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="401" text-anchor="middle" class="gk pill">4.3-4.4</text>
+    <text x="156" y="388" class="gk name">Live MVP</text>
+    <text x="156" y="414" class="sys note">4 phases - built from her brief, domain she owns</text>
+    <text x="684" y="408" text-anchor="end" class="gk metric" fill="#a855f7">10 wks</text>
   </g>
+  <line x1="360" y1="450" x2="360" y2="462" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m4-tri)"/>
 
   <!-- Card 4: Security fix -->
-  <g transform="rotate(0.3 668.5 182)">
-    <rect x="586" y="90" width="165" height="185" rx="12" class="card"/>
-    <rect x="631.5" y="100" width="74" height="26" rx="13" class="chipbg"/>
-    <text x="668.5" y="118" class="chip" text-anchor="middle">4.3-4.4</text>
-    <text x="668.5" y="152" class="title" text-anchor="middle">Security</text>
-    <text x="668.5" y="173" class="title" text-anchor="middle">fix</text>
-    <text x="668.5" y="214" class="note" text-anchor="middle">RLS hole caught</text>
-    <text x="668.5" y="250" class="note" text-anchor="middle">on paper, not in prod</text>
+  <g>
+    <rect x="24" y="464" width="672" height="104" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    <rect x="44" y="500" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="521" text-anchor="middle" class="gk pill">4.3-4.4</text>
+    <text x="156" y="508" class="gk name">Security fix</text>
+    <text x="156" y="534" class="sys note">RLS hole caught on paper, not in prod</text>
+  </g>
+  <line x1="360" y1="570" x2="360" y2="582" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m4-tri)"/>
+
+  <!-- Card 5: Ceiling check set -->
+  <g>
+    <rect x="24" y="584" width="672" height="104" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    <rect x="44" y="620" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="641" text-anchor="middle" class="gk pill">4.5</text>
+    <text x="156" y="628" class="gk name">Ceiling check set</text>
+    <text x="156" y="654" class="sys note">30-day calendar block, first run after launch</text>
   </g>
 
-  <!-- Card 5: Ceiling check -->
-  <g transform="rotate(-0.4 858.5 182)">
-    <rect x="776" y="90" width="165" height="185" rx="12" class="card"/>
-    <rect x="825.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="858.5" y="118" class="chip" text-anchor="middle">4.5</text>
-    <text x="858.5" y="152" class="title" text-anchor="middle">Ceiling</text>
-    <text x="858.5" y="173" class="title" text-anchor="middle">check set</text>
-    <text x="858.5" y="214" class="note" text-anchor="middle">30-day calendar block</text>
-    <text x="858.5" y="250" class="note" text-anchor="middle">first run after launch</text>
-  </g>
-
-  <!-- Arrows -->
-  <line x1="184" y1="182" x2="203" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw4)"/>
-  <line x1="374" y1="182" x2="393" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw4)"/>
-  <line x1="564" y1="182" x2="583" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw4)"/>
-  <line x1="754" y1="182" x2="773" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw4)"/>
-
-  <text x="480" y="312" class="foot" text-anchor="middle">A one-page brief became a live product - decided by a worksheet, not by a fear.</text>
+  <!-- one basis line -->
+  <text x="360" y="712" text-anchor="middle" class="sys basis">Basis: Mia's Module 4 deliverables, built on a domain she owns</text>
 </svg>

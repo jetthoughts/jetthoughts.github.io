@@ -27,7 +27,7 @@ Mia arrived at Module 4 with a quality-checked one-page brief and a strong opini
 
 ---
 
-![Mia's Module 4 artifact trail - a self-serve build-path decision, locked ownership, a live MVP, a security fix, and a scheduled ceiling check](artifact-trail.svg)
+![Mia's Module 4 artifact trail - a brief became a live product: a self-serve build-path decision, locked ownership, a live MVP, a security fix, and a scheduled ceiling check](artifact-trail.svg)
 
 ## [Lesson 4.1: Should You Hire?](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
 
