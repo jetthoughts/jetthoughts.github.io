@@ -1,86 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-labelledby="m2-trail-title">
-  <title id="m2-trail-title">Mia's Module 2 artifact trail: a Mom-Test script to a 30-name list to 10 scored interviews to a BUILD verdict to a Money answer to prototype feedback</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 732" role="img" aria-labelledby="m2-trail-title m2-trail-desc">
+  <title id="m2-trail-title">Ten conversations became real evidence: Mia's Module 2 trail runs a Mom-Test script to a 30-name list to a BUILD verdict to a price to a clickable prototype.</title>
+  <desc id="m2-trail-desc">A vertical trail of five artifact cards. 2.1-2.2 Mom-Test script, 5 past-tense questions, no product mentioned. 2.3-2.4 30-name list turned into 10 booked calls in 2 weeks. 2.5 Ten scored transcripts returned a BUILD verdict, 8 of 10 cleared the gate. 2.5 Money answer of $70-120 per session from real receipts. 2.6 Clickable prototype, the alternate-path artifact, tested well with 4 of 5 and the price goes on the profile. Basis: Mia's Module 2 deliverables, 10 scored interviews.</desc>
   <defs>
     <style>
-      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #1a1a1a; font-weight: 700; }
-      .foot   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #666; font-style: italic; }
-      .chip   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #ffffff; font-weight: 700; }
-      .title  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
-      .big    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #cc342d; font-weight: 700; }
-      .gbig   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #2e7d32; font-weight: 700; }
-      .note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #555; }
-      .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2; }
-      .build  { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2.5; }
-      .pay    { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
-      .chipbg { fill: #cc342d; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .pill  { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .name  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .note  { font-size: 18px; font-weight: 400; fill: #555555; }
+      .metric{ font-size: 30px; font-weight: 700; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
-    <marker id="arw2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6" fill="none" stroke="#999" stroke-width="1.6"/>
+    <marker id="m2-tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
     </marker>
   </defs>
 
-  <text x="480" y="38" class="h" text-anchor="middle">What Mia produced in Module 2</text>
+  <!-- page tone + editorial card -->
+  <rect width="720" height="732" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="716" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block -->
+  <text x="360" y="50" text-anchor="middle" class="gk title">Ten conversations became evidence</text>
+  <text x="360" y="82" text-anchor="middle" class="gk msg">Mia's Module 2 trail - a script to a BUILD verdict</text>
 
   <!-- Card 1: Mom-Test script -->
-  <g transform="rotate(-0.4 98.5 182)">
-    <rect x="16" y="90" width="165" height="185" rx="12" class="card"/>
-    <rect x="61.5" y="100" width="74" height="26" rx="13" class="chipbg"/>
-    <text x="98.5" y="118" class="chip" text-anchor="middle">2.1-2.2</text>
-    <text x="98.5" y="152" class="title" text-anchor="middle">Mom-Test</text>
-    <text x="98.5" y="173" class="title" text-anchor="middle">script</text>
-    <text x="98.5" y="214" class="note" text-anchor="middle">5 past-tense Qs</text>
-    <text x="98.5" y="250" class="note" text-anchor="middle">no product mentioned</text>
+  <g>
+    <rect x="24" y="104" width="672" height="104" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    <rect x="44" y="140" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="161" text-anchor="middle" class="gk pill">2.1-2.2</text>
+    <text x="156" y="148" class="gk name">Mom-Test script</text>
+    <text x="156" y="174" class="sys note">5 past-tense questions, no product mentioned</text>
   </g>
+  <line x1="360" y1="210" x2="360" y2="222" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m2-tri)"/>
 
   <!-- Card 2: 30-name list -->
-  <g transform="rotate(0.4 288.5 182)">
-    <rect x="206" y="90" width="165" height="185" rx="12" class="card"/>
-    <rect x="251.5" y="100" width="74" height="26" rx="13" class="chipbg"/>
-    <text x="288.5" y="118" class="chip" text-anchor="middle">2.3-2.4</text>
-    <text x="288.5" y="152" class="title" text-anchor="middle">30-name</text>
-    <text x="288.5" y="173" class="title" text-anchor="middle">list</text>
-    <text x="288.5" y="216" class="big" text-anchor="middle">10 calls</text>
-    <text x="288.5" y="252" class="note" text-anchor="middle">booked in 2 weeks</text>
+  <g>
+    <rect x="24" y="224" width="672" height="104" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    <rect x="44" y="260" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="281" text-anchor="middle" class="gk pill">2.3-2.4</text>
+    <text x="156" y="268" class="gk name">30-name list</text>
+    <text x="156" y="294" class="sys note">Booked in 2 weeks</text>
+    <text x="684" y="288" text-anchor="end" class="gk metric" fill="#121212">10 calls</text>
+  </g>
+  <line x1="360" y1="330" x2="360" y2="342" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m2-tri)"/>
+
+  <!-- Card 3: 10 scored transcripts (BUILD verdict, success = green) -->
+  <g>
+    <rect x="24" y="344" width="672" height="104" rx="6" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5"/>
+    <rect x="44" y="380" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="401" text-anchor="middle" class="gk pill">2.5</text>
+    <text x="156" y="388" class="gk name">10 scored transcripts</text>
+    <text x="156" y="414" class="sys note">8 of 10 cleared the gate</text>
+    <text x="684" y="408" text-anchor="end" class="gk metric" fill="#2e7d32">BUILD</text>
+  </g>
+  <line x1="360" y1="450" x2="360" y2="462" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m2-tri)"/>
+
+  <!-- Card 4: Money answer (willingness to pay = green) -->
+  <g>
+    <rect x="24" y="464" width="672" height="104" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    <rect x="44" y="500" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="521" text-anchor="middle" class="gk pill">2.5</text>
+    <text x="156" y="508" class="gk name">Money answer</text>
+    <text x="156" y="534" class="sys note">Per session, from real receipts</text>
+    <text x="684" y="528" text-anchor="end" class="gk metric" fill="#2e7d32">$70-120</text>
+  </g>
+  <line x1="360" y1="570" x2="360" y2="582" stroke="#3a3a3a" stroke-width="2" marker-end="url(#m2-tri)"/>
+
+  <!-- Card 5: Clickable prototype (alternate path = purple) -->
+  <g>
+    <rect x="24" y="584" width="672" height="104" rx="6" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
+    <rect x="44" y="620" width="92" height="32" rx="6" fill="#121212"/>
+    <text x="90" y="641" text-anchor="middle" class="gk pill">2.6</text>
+    <text x="156" y="628" class="gk name">Clickable prototype</text>
+    <text x="156" y="654" class="sys note">Price goes on the profile</text>
+    <text x="684" y="648" text-anchor="end" class="gk metric" fill="#a855f7">4 of 5</text>
   </g>
 
-  <!-- Card 3: transcripts + BUILD -->
-  <g transform="rotate(-0.3 478.5 182)">
-    <rect x="396" y="90" width="165" height="185" rx="12" class="build"/>
-    <rect x="445.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="478.5" y="118" class="chip" text-anchor="middle">2.5</text>
-    <text x="478.5" y="152" class="title" text-anchor="middle">10 scored</text>
-    <text x="478.5" y="173" class="title" text-anchor="middle">transcripts</text>
-    <text x="478.5" y="216" class="gbig" text-anchor="middle">BUILD</text>
-    <text x="478.5" y="252" class="note" text-anchor="middle">8 of 10 cleared gate</text>
-  </g>
-
-  <!-- Card 4: Money answer -->
-  <g transform="rotate(0.3 668.5 182)">
-    <rect x="586" y="90" width="165" height="185" rx="12" class="build"/>
-    <rect x="635.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="668.5" y="118" class="chip" text-anchor="middle">2.5</text>
-    <text x="668.5" y="152" class="title" text-anchor="middle">Money</text>
-    <text x="668.5" y="173" class="title" text-anchor="middle">answer</text>
-    <text x="668.5" y="216" class="gbig" text-anchor="middle">$70-120</text>
-    <text x="668.5" y="252" class="note" text-anchor="middle">per session, receipts</text>
-  </g>
-
-  <!-- Card 5: Prototype (payoff) -->
-  <g transform="rotate(-0.4 858.5 182)">
-    <rect x="776" y="90" width="165" height="185" rx="12" class="pay"/>
-    <rect x="825.5" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="858.5" y="118" class="chip" text-anchor="middle">2.6</text>
-    <text x="858.5" y="152" class="title" text-anchor="middle">Clickable</text>
-    <text x="858.5" y="173" class="title" text-anchor="middle">prototype</text>
-    <text x="858.5" y="216" class="big" text-anchor="middle">4 of 5</text>
-    <text x="858.5" y="252" class="note" text-anchor="middle">price goes on profile</text>
-  </g>
-
-  <!-- Arrows -->
-  <line x1="184" y1="182" x2="203" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw2)"/>
-  <line x1="374" y1="182" x2="393" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw2)"/>
-  <line x1="564" y1="182" x2="583" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw2)"/>
-  <line x1="754" y1="182" x2="773" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw2)"/>
-
-  <text x="480" y="312" class="foot" text-anchor="middle">Ten real conversations turned two notebook questions into evidence.</text>
+  <!-- one basis line -->
+  <text x="360" y="712" text-anchor="middle" class="sys basis">Basis: Mia's Module 2 deliverables, 10 scored interviews</text>
 </svg>

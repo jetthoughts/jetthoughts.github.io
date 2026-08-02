@@ -29,7 +29,7 @@ Module 2 was where those questions stopped being notebook entries and became int
 
 ---
 
-![Mia's Module 2 artifact trail - a Mom-Test script, a 30-name list, ten scored interviews, a BUILD verdict, a Money answer, and prototype feedback](artifact-trail.svg)
+![Mia's Module 2 artifact trail - ten conversations became evidence: a Mom-Test script, a 30-name list, ten scored transcripts with a BUILD verdict, a $70-120 money answer, and a clickable prototype](artifact-trail.svg)
 
 ## [Lesson 2.1: The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
 
