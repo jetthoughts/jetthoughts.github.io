@@ -615,3 +615,29 @@ section, does not exist) to the paths that do exist under `content/services/`.
 
 E4 Kamal 2 multi-server taken as the next post instead - the six existing Kamal
 posts are all single-server and 2024-era, so it splits no ranking.
+
+## 2026-08-07 — E4 Kamal 2 multi-server published; technical posts need a source-verification critic
+
+Published `kamal-2-multi-server-deployment-complete-guide` (Q3 plan E4, PR #437).
+Taken ahead of the earlier-queued E3 and F1, both of which target keywords an
+existing long post already ranks for and are upgrade-in-place jobs instead.
+
+The durable lesson is about the review loop, not the topic. The standard
+3-persona loop (founder / SEO-slop / copy editor) passed a draft that still told
+readers to run migrations with bare `kamal app exec` from a `pre-deploy` hook.
+That resolves to the `latest` tag, and Kamal only moves `latest` after every host
+boots, so the hook would have run the release being replaced. Silent no-op
+migrations on every deploy.
+
+For developer-targeted posts, swap the ICP-E founder persona for a practitioner
+critic that verifies every claim against a PINNED upstream commit and reports
+file:line. That critic caught the migration bug plus a `--target`
+self-contradiction and a wrong `drain_timeout` default. The cold-eyes gate then
+caught a wrong claim about Sidekiq-Cron's dedup and a wrong date for kamal-proxy
+PR #124. Five factual defects total; voice review surfaces none of them.
+
+Two mechanical notes: cite as GitHub permalinks pinned to the released tag, since
+bare file:line rots. And per-diagram mermaid `%%init%%` headers copied from older
+posts OVERRIDE the house theme in `baseof.html` and silently shrink label text
+below the 20px house size - drop the override and fix legibility structurally,
+per the standing brand rule.

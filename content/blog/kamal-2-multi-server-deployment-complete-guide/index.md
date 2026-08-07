@@ -2,7 +2,7 @@
 title: "Kamal 2 Multi-Server Deployment Guide"
 description: "Deploy Rails across multiple servers with Kamal 2: roles, the load balancing gap, boot limit gotchas, the multi-host SSL error, and when one big box wins."
 date: 2026-08-07
-draft: true
+draft: false
 author: "JetThoughts"
 tags: ["rails", "kamal", "deployment", "devops", "production", "multi-server"]
 keywords: ["kamal multi-server deployment", "kamal multiple hosts", "kamal roles", "kamal 2 load balancing", "kamal boot limit", "kamal deploy multiple servers"]
@@ -12,7 +12,7 @@ slug: "kamal-2-multi-server-deployment-complete-guide"
 cover_image: "cover.png"
 metatags:
   image: cover.png
-cover_image_alt: "Dark technical cover for Kamal 2 Multi-Server Deployment. JetThoughts ENGINEERING brand mark, Ruby on Rails 2026 pill, low-poly ruby gem, stat chips for hosts, roles, and rolling boots, MULTI-SERVER status indicator."
+cover_image_alt: "Dark technical cover for Kamal 2 Multi-Server Deployment. JetThoughts ENGINEERING brand mark, Ruby on Rails 2026 pill, low-poly ruby gem, stat chips for hosts, roles, and rolling boot, MULTI-SERVER status indicator."
 ---
 
 Add a second host under `servers:` and run `kamal deploy`. If your proxy config has `ssl: true`, the deploy dies before Kamal opens a single SSH connection:
@@ -29,19 +29,17 @@ We assume a working single-server deploy. If you're starting from zero, [our Kam
 
 ## Kamal does not load-balance across hosts
 
-kamal-proxy routes traffic on the host it runs on. It has never heard of your other hosts.
+kamal-proxy routes traffic on the host it runs on, and only to containers on that host.
 
 During boot, every host runs its own kamal-proxy container, and each proxy gets exactly one target - the app container on that same host. You can watch it happen in `lib/kamal/cli/app/boot.rb`: each host captures its own container id and passes it to `kamal-proxy deploy --target <id>`. A second web host gives you a second, fully independent proxy that has never heard of the first.
 
-The proxy binary itself can do more. kamal-proxy gained round-robin across multiple targets in late 2024 ([issue #15](https://github.com/basecamp/kamal-proxy/issues/15), closed by [PR #124](https://github.com/basecamp/kamal-proxy/pull/124), explicitly aimed at multi-host Kamal). As of Kamal 2.12.0, that capability still isn't wired up. No `deploy.yml` key sets more than one target, and Kamal always passes a single [`--target=<container-id>:<port>`](https://github.com/basecamp/kamal/blob/v2.12.0/lib/kamal/configuration/proxy.rb#L97) per host.
+The proxy binary itself can do more. kamal-proxy gained round-robin across multiple targets in April 2025 ([issue #15](https://github.com/basecamp/kamal-proxy/issues/15), closed by [PR #124](https://github.com/basecamp/kamal-proxy/pull/124), explicitly aimed at multi-host Kamal). As of Kamal 2.12.0, that capability still isn't wired up. No `deploy.yml` key sets more than one target, and Kamal always passes a single [`--target=<container-id>:<port>`](https://github.com/basecamp/kamal/blob/v2.12.0/lib/kamal/configuration/proxy.rb#L97) per host.
 
 So traffic distribution is your job. In the order we reach for them:
 
 - A cloud load balancer (ALB, Hetzner LB, DigitalOcean LB) in front of the web hosts. This is what the kamal-proxy maintainer recommends in [discussion #142](https://github.com/basecamp/kamal-proxy/discussions/142): terminate TLS at the balancer, send plain HTTP to the hosts.
 - A small Caddy or HAProxy box you run yourself. Cheaper, and one more thing to patch.
 - DNS round-robin, if you can live with clients pinning to a dead host until the TTL expires.
-
-Kamal boots a proxy per host and stops there. The balancer in front is yours to run and pay for.
 
 ```mermaid
 flowchart LR
@@ -99,7 +97,7 @@ Once workers live on their own hosts, queue concurrency and retry behavior stop 
 
 ## What a multi-host deploy actually does
 
-`kamal deploy` builds the image once, pushes it, and pulls it on every app host before anything else happens. The Dockerfile side of that - multi-stage builds, layer caching - is in our [Rails 8 Docker production guide](/blog/rails-8-docker-deployment-production-guide/) and doesn't change at N hosts.
+`kamal deploy` builds the image once, pushes it, and pulls it on every app host before anything else happens. The Dockerfile side of that - multi-stage builds, layer caching - doesn't change at N hosts; [our Rails 8 Docker production guide](/blog/rails-8-docker-deployment-production-guide/) covers it.
 
 Next, Kamal stages assets and SSL certs onto every host in a separate pass. Only then does booting start, and one detail here saves you a confused hour: non-primary roles wait. Kamal creates a health barrier, and job hosts block until the first web container reports healthy - the log says `Waiting for the first healthy web container before booting job on 10.0.0.21...`. If that first web container never turns healthy, your job hosts never boot at all. The image gets tagged `latest` only after every host is up.
 
@@ -109,11 +107,11 @@ One more thing lives in exactly one place: the deploy lock, held over SSH on the
 
 ## When a deploy dies halfway through the fleet
 
-This is the question one host never makes you ask. Hosts 1 and 2 boot fine, host 3 never goes healthy, and the deploy raises.
+Hosts 1 and 2 boot fine, host 3 never goes healthy, and the deploy raises.
 
 Kamal does not roll back the hosts that already succeeded. They keep serving the new release while host 3 serves the old one, and your balancer keeps sending traffic to all three. Nothing in the tool notices the mismatch.
 
-What does happen is that `latest` never moves. The [tagging step runs after the boot loop finishes](https://github.com/basecamp/kamal/blob/v2.12.0/lib/kamal/cli/app.rb#L34), so a failed deploy leaves `latest` pointing at the release you were replacing - which is exactly why the migration hook above needs `$KAMAL_VERSION` rather than trusting `latest`.
+What does happen is that `latest` never moves. The [tagging step runs after the boot loop finishes](https://github.com/basecamp/kamal/blob/v2.12.0/lib/kamal/cli/app.rb#L34), so a failed deploy leaves `latest` pointing at the release you were replacing - which is exactly why the migration hook below needs `$KAMAL_VERSION` rather than trusting `latest`.
 
 Recovery is manual and you have to name the version:
 
@@ -131,7 +129,7 @@ By default Kamal boots all hosts in parallel. At two hosts that's usually fine. 
 ```yaml
 boot:
   limit: 1     # hosts per group - use an integer, see below
-  wait: 20     # seconds slept after each group
+  wait: 10     # seconds slept after each group
 ```
 
 The percentage form computes against the wrong denominator, and the docs don't mention it. [`Kamal::Configuration::Boot`](https://github.com/basecamp/kamal/blob/v2.12.0/lib/kamal/configuration/boot.rb#L8) counts all hosts including dedicated accessory hosts, while the boot groups [slice only app hosts](https://github.com/basecamp/kamal/blob/v2.12.0/lib/kamal/cli/app.rb#L365). With 4 web hosts and 2 accessory-only hosts, `limit: "50%"` boots 3 app hosts per group, not 2. Use an integer.
@@ -176,7 +174,7 @@ PRIVATE_KEY_PEM=$(cat certs/privkey.pem)
 
 Note these are secret names, not file paths. Renewal becomes your problem, and the docs are blunt that a missing or invalid cert fails the deploy.
 
-Or stay on one web host. Covered in the last section.
+Or stay on one web host - the case for that gets its own section below.
 
 ## Accessories on their own host
 
@@ -233,13 +231,13 @@ Don't add `--reuse` either: that execs into the currently running container, whi
 
 Recurring jobs survive the split. Every enqueue writes a row to `solid_queue_recurring_executions`, [unique-indexed on task key and run time](https://github.com/rails/solid_queue/blob/main/app/models/solid_queue/recurring_execution.rb), so three job hosts still fire your nightly billing run once.
 
-That guarantee holds "as long as you keep the jobs around" ([Solid Queue README](https://github.com/rails/solid_queue)) - `preserve_finished_jobs` must stay on, and pruning must be less aggressive than your schedule. To make it structural instead, give the scheduler its own role with `cmd: bin/jobs --only-recurring` on one host and `--skip-recurring` on the rest. Sidekiq-cron and cron-via-whenever have no such guard, and there a second job host genuinely double-fires.
+That guarantee holds "as long as you keep the jobs around" ([Solid Queue README](https://github.com/rails/solid_queue)) - `preserve_finished_jobs` must stay on, and pruning must be less aggressive than your schedule. To make it structural instead, give the scheduler its own role with `cmd: bin/jobs --only-recurring` on one host and `--skip-recurring` on the rest. A `whenever`-generated crontab has no such guard - it lives on each host and fires on each host, so a second job host genuinely double-fires. [Sidekiq-Cron](https://github.com/sidekiq-cron/sidekiq-cron) does coordinate: a Redis sorted set lets only the first process to ask enqueue a given run.
 
 Uploads on local disk do not. Kamal `volumes:` and accessory `directories:` are plain per-host bind mounts. An upload written by web-1 404s when the next request lands on web-2. Move Active Storage to S3, R2, or GCS before adding the second web host, not after the first support ticket.
 
 Assets skew mid-deploy. Kamal's `asset_path:` bridges old and new fingerprinted assets per host, built from that host's own containers. Behind a round-robin balancer with no sticky sessions, a browser can fetch HTML from an already-updated host and then request the new CSS from a host that hasn't updated yet. `boot: limit: 1` with a short `wait` shrinks the window; a CDN in front of assets removes it.
 
-Then there's the connection arithmetic. Total database connections scale as web hosts times Puma workers times threads, plus the same product for job hosts. Going from 1 web host to 3 triples the first term with zero config changes on the database side. Do that multiplication against your Postgres `max_connections` before the deploy, not after the `too many clients already` page.
+Then there's the connection arithmetic. Total database connections scale as web hosts times Puma workers times threads, plus the same product for job hosts. Going from 1 web host to 3 triples the first term with zero config changes on the database side. Run that multiplication against your Postgres `max_connections` while you're still editing `deploy.yml`. The failure mode if you skip it is a `too many clients already` page.
 
 Anything database-backed survives the split, Solid Cache and Solid Queue included, which is an underrated argument for the DB-backed stack we compared in [Solid Trifecta vs Redis](/blog/solid-trifecta-hybrid-redis-rails-8/). In-process memoization and host-local file caches don't. Cookie sessions need no stickiness. Action Cable is the exception, since each host holds its own WebSocket connections and needs a shared adapter like `solid_cable` or Redis.
 
@@ -260,11 +258,11 @@ Destinations split fleets by environment: `kamal deploy -d staging` merges `conf
 
 ## When multi-server is the wrong call
 
-Most Rails apps never need a second host. Look at what the single box keeps: `ssl: true` works with free renewal, the generated entrypoint migrates safely, Active Storage Disk works, assets never skew, there's no balancer to run or pay for, and the connection math stays put. A big modern VPS runs a lot of Rails - before adding hosts, check how much headroom per-host tuning buys you; [our Falcon production tuning post](/blog/falcon-web-server-production-tuning-benchmarks/) is that exercise for the web tier.
+Price what the single box gives you before you leave it: `ssl: true` works with free renewal, the generated entrypoint migrates safely, Active Storage Disk works, assets never skew, there's no balancer to run or pay for, and the connection math stays put. A big modern VPS runs a lot of Rails - before adding hosts, check how much headroom per-host tuning buys you; [our Falcon production tuning post](/blog/falcon-web-server-production-tuning-benchmarks/) is that exercise for the web tier.
 
 Two triggers justify the move. You can't tolerate a single host going down - kernel reboots alone force that conversation eventually. Or you've genuinely hit the ceiling of the biggest instance you can rent. Growth you haven't hit yet doesn't qualify, because scaling out later is a config change plus this post, not a rewrite.
 
-There's also a middle option we usually reach first: one large web host plus one job host. You get the separation that matters - worker deploys can't take down web serving, a leaking job process can't starve Puma, `stop_timeout` tuned per role - while keeping one web host. And one web host means `ssl: true` still works, migrations still run once, and no balancer appears on the bill.
+There's also a middle option: one large web host plus one job host. You get the separation that matters - worker deploys can't take down web serving, a leaking job process can't starve Puma, `stop_timeout` tuned per role - while keeping one web host. And one web host means `ssl: true` still works, migrations still run once, and no balancer appears on the bill.
 
 Add the second web host and the sharp edges show up. Add a job host and almost none of them do.
 

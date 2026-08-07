@@ -101,9 +101,29 @@ which does not exist. Real paths live in `content/services/` - `fractional-cto`,
 # Status (2026-08-07)
 
 Published from this plan: E1 Falcon (Jul 22), E2 Solid Queue (Jul 24), F2 Rails 8
-Auth Generator (Jul 29). E4 Kamal 2 multi-server written Aug 7 - taken ahead of
+Auth Generator (Jul 29). E4 Kamal 2 multi-server published Aug 7 (PR #437) - taken ahead of
 E3/F1 because all six existing Kamal posts are single-server and 2024-era, so it
 splits no ranking.
+
+# Technical posts need a source-verification pass, not just a voice pass (2026-08-07)
+
+The E4 draft went through the standard 3-persona loop and still carried a
+correctness bug that would have broken readers' deploys: it told them to run
+migrations from a `pre-deploy` hook with bare `kamal app exec`. That resolves to
+the `latest` tag, but Kamal only moves `latest` after every host boots - so the
+hook runs the release being replaced. The fix is `--version "$KAMAL_VERSION"`.
+
+The founder-persona critic cannot catch this class of defect, and the voice and
+SEO critics do not read source. For any developer-targeted post, replace the
+ICP-E founder persona with a practitioner critic that verifies every claim, flag,
+default, and error string against a PINNED upstream commit and reports file:line.
+On E4 that critic caught the migration bug, a self-contradiction about `--target`,
+and a wrong `drain_timeout` default; the cold-eyes gate then caught a wrong claim
+about Sidekiq-Cron's dedup behavior and a wrong date for kamal-proxy PR #124.
+Five factual defects, none of which voice review would ever surface.
+
+Cite technical claims as GitHub permalinks pinned to the released tag
+(`/blob/v2.12.0/...#L161`), not bare `file:line` - line numbers rot.
 
 # Citations
 
