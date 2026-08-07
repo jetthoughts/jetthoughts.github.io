@@ -44,6 +44,10 @@ Three streams:
   validation (zero banned words, zero em dashes, Hugo build clean).
 - **Bidirectional funnel**: every Rails post links to a founder post or
   service page; every founder post links to 2+ Rails posts.
+  **Exemption (Paul, 2026-08-07)**: deep-technical developer-targeted posts
+  drop the service link entirely - it lands on the wrong reader and costs
+  credibility with engineers. They still cross-link sibling technical posts.
+  Founder-stream posts keep the requirement in full.
 
 # Snippet hygiene rewrites (applied 2026-07-19)
 

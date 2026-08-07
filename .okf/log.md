@@ -641,3 +641,14 @@ bare file:line rots. And per-diagram mermaid `%%init%%` headers copied from olde
 posts OVERRIDE the house theme in `baseof.html` and silently shrink label text
 below the 20px house size - drop the override and fix legibility structurally,
 per the standing brand rule.
+
+## 2026-08-07 — service links dropped from deep-technical posts
+
+Paul's call on PR #437: developer-targeted technical posts no longer carry a
+service-page link. 20.08's bidirectional-funnel rule required one on every Rails
+post, but a fractional-CTO link at the end of a post about container ids and boot
+denominators reaches the wrong reader and costs more credibility with engineers
+than it returns. Those posts still cross-link sibling technical posts, which is
+what actually keeps readers on the site. Founder-stream posts keep the funnel
+requirement unchanged. Exemption recorded in 20.08 and applied to
+`kamal-2-multi-server-deployment-complete-guide`.

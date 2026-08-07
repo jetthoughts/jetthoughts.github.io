@@ -335,6 +335,6 @@ Plus the `pre-deploy` migration hook from above, and a load balancer in front of
 
 Versions move: everything here was verified against Kamal 2.12.0 (June 2026). The load-balancing gap in particular is the kind of thing a future release could close - check the [release notes](https://github.com/basecamp/kamal/releases) before treating it as permanent.
 
-*Single-server setup is covered in [Deploying Rails with Kamal](/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/), and CI wiring in [Kamal 2 with GitHub Actions](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/). We also do this as [fractional CTO work](/services/fractional-cto/).*
+*Single-server setup is covered in [Deploying Rails with Kamal](/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/), and CI wiring in [Kamal 2 with GitHub Actions](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/).*
 
 <!-- Reference cadence: thoughtbot -->
