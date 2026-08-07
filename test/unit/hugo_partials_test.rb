@@ -4,6 +4,10 @@ class HugoPartialsTest < BasePageTestCase
   # Unit tests for Hugo partial templates functionality and rendering
   # Tests rendered HTML output from public-test directory (no server required)
 
+  # Partials that only render on a post (share, article schema) need a real
+  # post, not the blog list page.
+  BLOG_POST = "blog/devtools-for-ai-agents/index.html"
+
   def test_header_partial_rendering
     doc = parse_html_file("index.html")
 
@@ -87,6 +91,8 @@ class HugoPartialsTest < BasePageTestCase
 
     # CSS processor partial results
     css_files = doc.css("head link[rel='stylesheet']")
+    refute_empty css_files, "Homepage should link processed stylesheets"
+
     css_files.each do |link|
       href = link["href"]
       next if href&.start_with?("http")
@@ -98,6 +104,8 @@ class HugoPartialsTest < BasePageTestCase
 
     # JavaScript files if any
     js_files = doc.css("script[src]").select { |s| !s["src"]&.start_with?("http") }
+    refute_empty js_files, "Homepage should load processed local scripts"
+
     js_files.each do |script|
       src = script["src"]
 
@@ -107,81 +115,67 @@ class HugoPartialsTest < BasePageTestCase
     end
   end
 
+  # Selected with "article, .post-item, .blog-posts article" - a list that
+  # omits `.blog-post`, the only class the blog index renders. It matched
+  # zero articles on every run and `if articles.any?` made that a pass. Same
+  # defect as list_template_test's date check.
   def test_blog_post_partials
-    # Skip if blog directory doesn't exist
-    return unless File.exist?(File.join(root_path, "blog/index.html"))
-
     doc = parse_html_file("blog/index.html")
 
-    # Blog listing partial structure
-    articles = doc.css("article, .post-item, .blog-posts article")
-    if articles.any?
-      # Test first few articles
-      articles.first(3).each do |article|
-        # Each post should have title
-        headings = article.css("h1, h2, h3, .title, .heading")
-        assert headings.any?, "Blog post should have heading"
+    articles = doc.css("article, .post-item, .blog-post, .blog-posts article")
+    refute_empty articles, "Blog index should render post entries"
 
-        # Publication date
-        dates = article.css("time, .date, .post-date")
-        assert dates.any?, "Blog post should show publication date"
-      end
+    articles.first(3).each do |article|
+      assert article.css("h1, h2, h3, .title, .heading").any?,
+        "Blog post should have heading"
+      assert article.css("time, .date, .post-date").any?,
+        "Blog post should show publication date"
     end
   end
 
+  # Checked index.html and about-us/index.html, neither of which renders
+  # blog/share.html - so `next if social_share.empty?` skipped both and the
+  # test asserted nothing on any run. The partial lives on blog posts.
   def test_social_sharing_partial
-    # Check on a specific page that likely has social sharing
-    pages_to_check = ["index.html", "about-us/index.html"]
+    doc = parse_html_file(BLOG_POST)
 
-    pages_to_check.each do |page|
-      next unless File.exist?(File.join(root_path, page))
+    social_share = doc.css(".social-share")
+    refute_empty social_share, "Blog post should render the social share partial"
 
-      doc = parse_html_file(page)
-      social_share = doc.css(".social-share")
+    social_links = social_share.css("a")
+    assert social_links.count >= 2, "Should have multiple social sharing options"
 
-      next if social_share.empty?
+    social_links.each do |link|
+      assert_equal "_blank", link["target"],
+        "Social links should open in new tab"
+      assert link["rel"]&.include?("noopener"),
+        "Social links should have security attributes"
 
-      # Social sharing links
-      social_links = social_share.css("a")
-      assert social_links.count >= 2, "Should have multiple social sharing options"
+      aria_label = link["aria-label"]
+      title = link["title"]
+      assert aria_label&.length&.positive? || title&.length&.positive?,
+        "Social links should have accessibility labels"
 
-      social_links.each do |link|
-        # Proper attributes for social sharing
-        assert_equal "_blank", link["target"],
-          "Social links should open in new tab"
-        assert link["rel"]&.include?("noopener"),
-          "Social links should have security attributes"
-
-        # Accessibility
-        aria_label = link["aria-label"]
-        title = link["title"]
-        assert aria_label&.length&.positive? || title&.length&.positive?,
-          "Social links should have accessibility labels"
-
-        # Should have SVG icons
-        assert link.css("svg").any?, "Social links should use SVG icons"
-      end
-      break # Test only the first page that has social sharing
+      assert link.css("svg").any?, "Social links should use SVG icons"
     end
   end
 
   def test_critical_css_partial
     doc = parse_html_file("index.html")
 
-    # Check for critical CSS inlined in head
+    # Check for critical CSS inlined in head. Losing the inline block is a
+    # first-paint regression, which is exactly what the old guard hid.
     inline_styles = doc.css("head style")
+    refute_empty inline_styles, "Homepage should inline its critical CSS"
 
-    if inline_styles.any?
-      # Critical CSS should be inlined
-      critical_css = inline_styles.first.text
+    critical_css = inline_styles.first.text
 
-      # Should contain basic layout and typography styles
-      assert critical_css.include?("body") || critical_css.include?("."),
-        "Critical CSS should contain actual CSS rules"
+    # Should contain basic layout and typography styles
+    assert critical_css.include?("body") || critical_css.include?("."),
+      "Critical CSS should contain actual CSS rules"
 
-      # Accept both formatted and minified CSS - Hugo may include readable critical styles
-      # This is acceptable as critical CSS serves different purposes
-    end
+    # Accept both formatted and minified CSS - Hugo may include readable
+    # critical styles; that serves a different purpose and is fine.
   end
 
   def test_favicon_partial
@@ -200,87 +194,53 @@ class HugoPartialsTest < BasePageTestCase
     assert doc.css("head meta[name='theme-color']").any?, "Should have theme color meta tag"
   end
 
-  def test_analytics_partial
-    doc = parse_html_file("index.html")
+  # test_analytics_partial removed 2026-08-07: page/analytics.html is
+  # environment-gated, so the test build emits no gtag script and both
+  # guards were permanently false. Its intent - "if analytics ships, it must
+  # carry consent handling" - is worth keeping, but it has to run against a
+  # production build to mean anything. Nothing here asserted that.
 
-    # Google Analytics or similar tracking
-    gtag_scripts = doc.css("script").select do |s|
-      s.text.include?("gtag") || s["src"]&.include?("googletagmanager")
-    end
-
-    if gtag_scripts.any?
-      # Should have proper privacy settings
-      analytics_script = gtag_scripts.find { |s| s.text.include?("gtag") }
-      if analytics_script
-        script_content = analytics_script.text
-
-        # Should have privacy-compliant settings
-        assert script_content.include?("consent") || script_content.include?("analytics_storage"),
-          "Analytics should include privacy consent handling"
-      end
-    end
-  end
-
+  # The `return unless File.exist?` and `if breadcrumb_script` guards both
+  # made a missing breadcrumb indistinguishable from a valid one.
   def test_breadcrumb_partial_json_ld
-    # Skip if about-us page doesn't exist
-    return unless File.exist?(File.join(root_path, "about-us/index.html"))
-
     doc = parse_html_file("about-us/index.html")
 
-    # Look for breadcrumb structured data
     json_ld_scripts = doc.css('script[type="application/ld+json"]')
     breadcrumb_script = json_ld_scripts.find { |s| s.text.include?("BreadcrumbList") }
+    refute_nil breadcrumb_script, "about-us should publish BreadcrumbList structured data"
 
-    if breadcrumb_script
-      breadcrumb_data = JSON.parse(breadcrumb_script.text)
+    breadcrumb_data = JSON.parse(breadcrumb_script.text)
 
-      assert_equal "BreadcrumbList", breadcrumb_data["@type"],
-        "Breadcrumb should have correct schema type"
+    assert_equal "BreadcrumbList", breadcrumb_data["@type"],
+      "Breadcrumb should have correct schema type"
 
-      items = breadcrumb_data["itemListElement"]
-      assert items.is_a?(Array) && items.count >= 1,
-        "Breadcrumb should have list items"
+    items = breadcrumb_data["itemListElement"]
+    assert items.is_a?(Array) && items.count >= 1,
+      "Breadcrumb should have list items"
 
-      # First item should be homepage
-      first_item = items.first
-      assert_equal "Home", first_item["name"],
-        "First breadcrumb item should be Home"
-    end
+    assert_equal "Home", items.first["name"],
+      "First breadcrumb item should be Home"
   end
 
+  # Walked three candidate pages and `next`ed past any that lacked the
+  # schema, so all three coming up empty read the same as one succeeding.
+  # A service page must publish it; assert against the canonical one.
   def test_service_schema_partial
-    # Check multiple potential service pages
-    service_pages = [
-      "services/fractional-cto/index.html",
-      "services/index.html",
-      "index.html"
-    ]
+    doc = parse_html_file("services/fractional-cto/index.html")
 
-    service_pages.each do |page|
-      next unless File.exist?(File.join(root_path, page))
-
-      doc = parse_html_file(page)
-
-      # Look for service-related structured data
-      json_ld_scripts = doc.css('script[type="application/ld+json"]')
-      service_script = json_ld_scripts.find do |s|
-        s.text.include?("Service") || s.text.include?("Organization")
-      end
-
-      next unless service_script
-
-      service_data = JSON.parse(service_script.text)
-
-      # Should have schema.org context
-      assert service_data["@context"]&.include?("schema.org"),
-        "Service schema should use schema.org context"
-
-      # Should have organization or service type
-      type = service_data["@type"]
-      assert ["Service", "Organization", "LocalBusiness"].include?(type),
-        "Should have appropriate schema type"
-      break # Test only the first page that has service schema
+    json_ld_scripts = doc.css('script[type="application/ld+json"]')
+    service_script = json_ld_scripts.find do |s|
+      s.text.include?("Service") || s.text.include?("Organization")
     end
+    refute_nil service_script, "Service page should publish Service/Organization schema"
+
+    service_data = JSON.parse(service_script.text)
+
+    assert service_data["@context"]&.include?("schema.org"),
+      "Service schema should use schema.org context"
+
+    assert ["Service", "Organization", "LocalBusiness"].include?(service_data["@type"]),
+      "Should have appropriate schema type"
   end
 
   def test_performance_partial_integration
@@ -290,28 +250,23 @@ class HugoPartialsTest < BasePageTestCase
 
     # Preload critical resources
     preload_links = doc.css("head link[rel='preload']")
+    refute_empty preload_links, "Homepage should preload critical resources"
+
     preload_links.each do |link|
-      as_attr = link["as"]
-      assert %w[style script font image].include?(as_attr),
+      assert %w[style script font image].include?(link["as"]),
         "Preload links should specify resource type"
     end
 
-    # DNS prefetch for external resources
-    prefetch_links = doc.css("head link[rel='preconnect'], head link[rel='dns-prefetch']")
-    prefetch_links.each do |link|
-      href = link["href"]
-      # Allow external URLs and protocol-relative URLs (starting with //)
-      valid_prefetch = href&.start_with?("http", "/", "//")
-      assert valid_prefetch,
-        "Prefetch should be for external domains or CDN paths, got: #{href}"
-    end
+    # The site emits no preconnect/dns-prefetch at all - fonts and mermaid
+    # are self-hosted - so the loop that used to sit here iterated an empty
+    # set. Assert the reason it is empty instead.
+    assert_empty doc.css("script[src^='http']").map { |s| s["src"] },
+      "Homepage should not load third-party scripts"
 
     # Service worker registration
     sw_scripts = doc.css("script").select { |s| s.text.include?("serviceWorker") }
-    if sw_scripts.any?
-      sw_script = sw_scripts.first.text
-      assert sw_script.include?("register"),
-        "Service worker should be registered"
-    end
+    refute_empty sw_scripts, "Homepage should register a service worker"
+    assert sw_scripts.first.text.include?("register"),
+      "Service worker should be registered"
   end
 end

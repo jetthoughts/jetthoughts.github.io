@@ -161,6 +161,7 @@ class TestimonialShortcodeTest < BasePageTestCase
     doc = parse_html_file("about-us/index.html")
 
     testimonials = doc.css(".pp-review-item")
+    refute_empty testimonials, "about-us should render testimonials"
 
     # All testimonials should have meaningful content from data
     testimonials.each_with_index do |testimonial, index|

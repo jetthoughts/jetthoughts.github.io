@@ -7,6 +7,9 @@ resource: .github/workflows/link-check.yml
 generated:
   by: process:okf-migrate
   at: 2026-07-31T16:30:00Z
+verified:
+  - by: claude/opus-5
+    at: 2026-08-07T00:00:00Z
 ---
 
 # What CI enforces on a PR
@@ -20,15 +23,57 @@ generated:
 Plus `bin/lint-css` (stylelint warning ratchet) piggybacked on the
 unit_tests job. See local pre-PR gates in [test-gates.md](test-gates.md).
 
+# Two more PR gates (added 2026-08-07)
+
+| Check | Workflow | Runs |
+|---|---|---|
+| `Asset Pipeline` (`rake test:integration`) | `publish.yml` | Every push/PR |
+| `rake test:html_proofer` | `link-check.yml` | Same trigger as `test:links`, same job, non-blocking |
+
+Both were dead before this: `test:integration` ran only inside `rake test` on
+push-to-master AND `skip`ped itself when the Hugo build failed (a broken build
+reported green with every test skipped - now `flunk`s with the build output);
+`test:html_proofer` was invoked by no workflow, hook, or script at all.
+
+**Job runtimes are cache-dependent - budget for the cold case** (measured
+2026-08-07 across three runs). `Broken Internal Links` ran 3.5 min on a warm
+resource cache and **10.7 min** right after master moved and invalidated it; at
+its old 10-minute timeout that run would have failed for no reason but cache
+state. `Asset Pipeline` runs ~10 min (two full Hugo builds; the
+dev-environment one cannot reuse the production-keyed `resources/_gen` cache),
+and `actions/checkout` on this repo was observed taking **7 min** on a slow
+runner - 17 min of wall clock against what was a 15-minute cap. Timeouts are
+now 15 and 25. Do not trim them back toward the observed average: a gate that
+flakes on timeout teaches people to ignore red, which costs more than the
+runner minutes.
+
+Two things to preserve when touching either:
+- **`test:links` and `test:html_proofer` share ONE rake invocation**
+  (`rake test:links test:html_proofer`). Both default to the same `OUTPUT_DIR`
+  and each triggers `build_for_linkcheck`, which is memoized per rake PROCESS.
+  Split them into two `run:` steps and the site builds twice - the exact
+  double-build that blew this job's timeout and forced `setup-hugo build: 'false'`.
+- **`test:integration` gets its own job**, not a step in `unit_tests`: it drives
+  two full Hugo builds of its own (~50s locally) and would push that job over
+  its timeout.
+
+Still local-only: **`rake test:guards`** runs in `.githooks/pre-push`; a PR
+pushed with `SKIP_CHECKS=1` never sees it.
+
+Full gap analysis with `lib/` coverage numbers and per-layer evidence:
+`docs/20-29-testing-qa/20.10-test-coverage-gap-analysis-reference.md`.
+
 # Toolchain single source of truth
 
 `.mise.toml` pins hugo/bun/node/ruby (local install via `mise install`;
 `bin/setup` wraps it + doctor). CI copies of the pins live in
 `.github/actions/setup-hugo/action.yml` (hugo default, bun-version,
 node-version), workflow `ruby-version` inputs, and the `.dev/compose.yml`
-image tag; the drift test fails the build when any copy diverges - update
-them together. `_hugo.yml` must NOT carry its own pins (it calls the
-composite with `build: 'false'`); the drift test enforces that too.
+image tag. **Nothing enforces this** since the drift gate
+(`test/unit/toolchain_pins_test.rb`) was deleted on 2026-08-01 as a
+config-mirror anti-pattern - the copies are synced by convention now, so
+update them in the same commit by hand. `_hugo.yml` must NOT carry its own
+pins (it calls the composite with `build: 'false'`), also by convention.
 Gotchas: the Ruby pin must be an EXACT patch version - rbenv reads
 `.ruby-version` and never matches a fuzzy "4.0"; agent containers block
 `api.github.com` through the proxy, so `mise install` cannot fetch

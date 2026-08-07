@@ -15,10 +15,13 @@ class SeoSchemaTest < BasePageTestCase
   ].freeze
 
   def test_schema_validation_on_affected_pages
-    AFFECTED_URLS.each do |file_path|
-      # Skip if file doesn't exist (some blog posts may not be published)
-      next unless File.exist?(File.join(root_path, file_path))
+    # These four URLs are here because Search Console flagged them. A
+    # `next unless File.exist?` used to pass silently over any that stopped
+    # being built - which is one of the ways a page loses its schema.
+    missing = AFFECTED_URLS.reject { |path| File.exist?(File.join(root_path, path)) }
+    assert_empty missing, "Search-Console-affected pages missing from the build"
 
+    AFFECTED_URLS.each do |file_path|
       doc = parse_html_file(file_path)
 
       # Find all JSON-LD scripts
@@ -28,10 +31,11 @@ class SeoSchemaTest < BasePageTestCase
       schema_scripts.each_with_index do |script, index|
         json_content = script.text.strip
 
-        # ARCHITECTURAL: Use skip instead of silent continue
-        if json_content.empty?
-          skip "Schema #{index} on #{file_path} is empty - might indicate template issue"
-        end
+        # Was `skip "... is empty - might indicate template issue"`. An empty
+        # JSON-LD block IS the template issue this test exists to catch, and
+        # skipping on it aborted the rest of the page's schemas too.
+        refute_empty json_content,
+          "Schema #{index} on #{file_path} is empty - the template emitted a blank ld+json block"
 
         # ARCHITECTURAL: Use strict validation method that fails fast
         parsed_json = assert_valid_json(json_content, "Schema #{index} on #{file_path}")
@@ -58,7 +62,8 @@ class SeoSchemaTest < BasePageTestCase
 
   def test_blog_article_schema_structure
     blog_file = "blog/implementing-instant-search-dynamic-forms-infinite/index.html"
-    return unless File.exist?(File.join(root_path, blog_file))
+    assert File.exist?(File.join(root_path, blog_file)),
+      "Fixture post #{blog_file} missing from the build"
 
     doc = parse_html_file(blog_file)
 
@@ -137,8 +142,6 @@ class SeoSchemaTest < BasePageTestCase
   def test_no_malformed_schema_strings
     # Test that we don't have the "string" error reported by Google Search Console
     AFFECTED_URLS.each do |file_path|
-      next unless File.exist?(File.join(root_path, file_path))
-
       doc = parse_html_file(file_path)
       page_html = doc.to_html
 
@@ -172,9 +175,10 @@ class SeoSchemaTest < BasePageTestCase
       }
     ]
 
-    test_cases.each do |test_case|
-      next unless File.exist?(File.join(root_path, test_case[:file]))
+    missing = test_cases.map { |c| c[:file] }.reject { |p| File.exist?(File.join(root_path, p)) }
+    assert_empty missing, "Schema fixture pages missing from the build"
 
+    test_cases.each do |test_case|
       doc = parse_html_file(test_case[:file])
 
       if test_case[:expected_type]

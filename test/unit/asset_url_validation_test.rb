@@ -30,9 +30,15 @@ class AssetUrlValidationTest < BasePageTestCase
     css_links = doc.css('link[rel="stylesheet"]')
     css_urls = css_links.map { |link| link["href"] }.compact
 
-    # Should contain relative URLs with fingerprinting for CSS
-    css_urls.any? do |url|
-      assert url.match?(/\/css\/.*?\.[a-f0-9]*?(\.min)?\.css/), "Should have fingerprinted CSS assets: #{url}"
+    # Was `css_urls.any? do |url| assert ... end`. Two defects in one line:
+    # `any?` short-circuits on the first truthy block result, and `assert`
+    # returns true - so only the FIRST stylesheet was ever checked. With an
+    # empty list it checked nothing at all.
+    refute_empty css_urls, "Page should link stylesheets"
+
+    css_urls.each do |url|
+      assert url.match?(/\/css\/.*?\.[a-f0-9]*?(\.min)?\.css/),
+        "Should have fingerprinted CSS assets: #{url}"
     end
   end
 

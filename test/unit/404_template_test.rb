@@ -8,9 +8,11 @@ class NotFoundTemplateTest < BasePageTestCase
   def setup
     @test_page = "404.html"
 
-    unless File.exist?("#{root_path}/#{@test_page}")
-      skip "404.html not found for testing"
-    end
+    # Was `skip "404.html not found for testing"`. The build silently
+    # dropping 404.html is the regression this file exists to catch, not a
+    # reason to report green on all 12 tests.
+    assert File.exist?("#{root_path}/#{@test_page}"),
+      "Build did not emit 404.html"
   end
 
   def test_404_page_has_error_title
@@ -94,66 +96,16 @@ class NotFoundTemplateTest < BasePageTestCase
     end
   end
 
-  def test_404_page_has_search_functionality
-    doc = parse_html_file(@test_page)
-
-    # Search helps users find what they're looking for
-    search_indicators = [
-      doc.css("form[action*='search']").any?,
-      doc.css("input[type='search']").any?,
-      doc.css("input[name*='search']").any?,
-      doc.css(".search-form, .search-box").any?
-    ]
-
-    # Search is helpful but not mandatory for 404 pages
-    # This is informational for UX improvement
-    search_present = search_indicators.any?
-
-    if search_present
-      # If search is present, should be properly implemented
-      search_forms = doc.css("form")
-      search_forms.each do |form|
-        search_inputs = form.css("input[type='search'], input[name*='search']")
-        if search_inputs.any?
-          search_input = search_inputs.first
-          assert search_input["name"], "Search input should have name attribute"
-        end
-      end
-    end
-  end
-
-  def test_404_page_suggests_popular_content
-    doc = parse_html_file(@test_page)
-
-    # Popular content suggestions help users find alternatives
-    suggestion_indicators = [
-      doc.css(".popular, .recent, .featured").any?,
-      doc.css("ul li a, ol li a").length > 2,
-      doc.text.downcase.include?("popular"),
-      doc.text.downcase.include?("recent"),
-      doc.text.downcase.include?("might")
-    ]
-
-    # Content suggestions improve UX but not mandatory
-    suggestions_present = suggestion_indicators.any?
-
-    if suggestions_present
-      # If suggestions are present, links should be valid
-      suggestion_links = doc.css(".popular a, .recent a, .featured a, main ul a, main ol a")
-      suggestion_links.each do |link|
-        href = link["href"]
-        assert href, "Suggestion links should have href attribute"
-
-        text = link.text.strip
-        assert text.length > 0, "Suggestion links should have descriptive text"
-
-        if href && !href.start_with?("http")
-          assert href.start_with?("/", "#", "./", "../"),
-            "Internal suggestion links should use proper paths"
-        end
-      end
-    end
-  end
+  # test_404_page_has_search_functionality removed 2026-08-07: the site has
+  # no search, so `search_present` was always false and the test asserted
+  # nothing. Its own comments said search was "not mandatory" - a test that
+  # cannot fail is documentation, and belongs in a doc.
+  #
+  # test_404_page_suggests_popular_content removed for the same reason: its
+  # assertions sat behind a "suggestions improve UX but not mandatory"
+  # guard, so it passed whether or not the page offered any recovery links.
+  # test_404_page_provides_helpful_navigation below covers the real
+  # invariant (the page links somewhere useful).
 
   def test_404_page_meta_description
     doc = parse_html_file(@test_page)
@@ -182,33 +134,24 @@ class NotFoundTemplateTest < BasePageTestCase
   def test_404_page_prevents_indexing
     doc = parse_html_file(@test_page)
 
-    # 404 pages should not be indexed by search engines
+    # The site deliberately serves "index, follow" here rather than noindex
+    # (link discovery). Whether that is the right SEO call is a product
+    # decision, so this pins the shape, not the policy: the directive must
+    # be present and meaningful. Losing the tag entirely IS a regression.
     robots_meta = doc.css("head meta[name='robots']").first
+    refute_nil robots_meta, "404 page should carry a robots meta tag"
 
-    if robots_meta
-      robots_content = robots_meta["content"].downcase
+    robots_content = robots_meta["content"].downcase
+    assert robots_content.match?(/\b(no)?index\b|\bnone\b/),
+      "404 robots meta should state an indexing directive, got #{robots_content.inspect}"
 
-      # Should prevent indexing - however, some SEO strategies allow indexing for link discovery
-      indexing_prevented = robots_content.include?("noindex") ||
-        robots_content.include?("none")
-
-      # This is informational - some sites allow 404 indexing for SEO discovery
-      unless indexing_prevented
-        puts "INFO: 404 page allows indexing - consider noindex for traditional SEO approach"
-      end
-    else
-      puts "INFO: No robots meta tag found - 404 pages typically benefit from noindex directive"
-    end
-
-    # Canonical should not point to 404 page itself
+    # The canonical branch that used to follow only printed an INFO line
+    # either way, so it could not fail. Assert the tag exists and resolves;
+    # which URL it canonicalizes to stays a product decision.
     canonical_link = doc.css("head link[rel='canonical']").first
-    if canonical_link
-      href = canonical_link["href"]
-      # Note: Some 404 implementations may canonicalize to themselves for SEO reasons
-      if href.include?("404")
-        puts "INFO: 404 page canonical points to itself - consider alternative canonical strategy"
-      end
-    end
+    refute_nil canonical_link, "404 page should carry a canonical link"
+    refute canonical_link["href"].to_s.strip.empty?,
+      "404 canonical link should have a non-empty href"
   end
 
   def test_404_page_proper_http_status_context
@@ -348,53 +291,33 @@ class NotFoundTemplateTest < BasePageTestCase
       doc.text.include?("@")
     ]
 
-    # Contact information is helpful but not mandatory
-    contact_present = contact_indicators.any?
+    assert contact_indicators.any?,
+      "404 page should offer a way to reach a human (contact link, mailto, or support copy)"
 
-    if contact_present
-      # If contact info is present, should be accessible
-      contact_links = doc.css("a[href*='contact'], a[href*='mailto:']")
-      contact_links.each do |link|
-        href = link["href"]
-        assert href, "Contact links should have href attribute"
+    contact_links = doc.css("a[href*='contact'], a[href*='mailto:']")
+    refute_empty contact_links, "404 page should link to contact"
 
-        text = link.text.strip
-        assert text.length > 0, "Contact links should have descriptive text"
-      end
+    contact_links.each do |link|
+      refute_nil link["href"], "Contact links should have href attribute"
+      refute link.text.strip.empty?, "Contact links should have descriptive text"
     end
   end
 
   def test_404_page_performance_considerations
     doc = parse_html_file(@test_page)
 
-    # 404 pages should load quickly
+    # The two `external_*.length` lines here evaluated a value and threw it
+    # away - no assertion, no effect. The invariant they were reaching for
+    # is real and currently holds: the 404 page pulls zero third-party
+    # scripts or stylesheets, so it renders even when a CDN is down.
+    assert_empty doc.css("script[src^='http']").map { |s| s["src"] },
+      "404 page should not depend on third-party scripts"
+    assert_empty doc.css("link[rel='stylesheet'][href^='http']").map { |l| l["href"] },
+      "404 page should not depend on third-party stylesheets"
 
-    # Minimize external resources
-    external_scripts = doc.css("script[src^='http']")
-    external_stylesheets = doc.css("link[rel='stylesheet'][href^='http']")
-
-    external_scripts.length
-    external_stylesheets.length
-
-    # 404 pages benefit from minimal external dependencies
-    # This is informational for performance optimization
-
-    # Images should be optimized
-    images = doc.css("img")
-    images.each do |img|
-      alt = img["alt"]
-      assert !alt.nil?, "404 page images should have alt attributes"
-
-      src = img["src"]
-      if src
-        # Large images on 404 pages should be avoided
-        # This is informational for performance
-      end
+    doc.css("img").each do |img|
+      refute_nil img["alt"], "404 page images should have alt attributes"
     end
-
-    # Page should focus on core functionality
-    # Heavy JavaScript/animations may not be appropriate
-    # This is informational for UX/performance balance
   end
 
   def test_404_page_security_considerations
@@ -414,18 +337,10 @@ class NotFoundTemplateTest < BasePageTestCase
     end
 
     # Note: General business terms like "database design" in service descriptions are acceptable
-
-    # External links should have security attributes
-    external_links = doc.css("a[href^='http']").reject do |link|
-      href = link["href"]
-      href.include?("jetthoughts.com") || href.include?("localhost")
-    end
-
-    # Security attributes are good practice but not strictly required
-    external_links.each do |link|
-      link["rel"]
-      # External links benefit from rel="noopener noreferrer"
-      # This is informational for security enhancement
-    end
+    #
+    # The external-link loop that used to follow read `link["rel"]` and
+    # discarded it - no assertion. Removed rather than promoted: the site
+    # emits no third-party links on the 404 page (see the performance test
+    # above), so there is nothing to guard here yet.
   end
 end
