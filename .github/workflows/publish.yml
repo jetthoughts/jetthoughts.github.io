@@ -58,3 +58,42 @@ jobs:
         env:
           PRECOMPILED_ASSETS: '1'
           HUGO_DEFAULT_PATH: _dest/public-test
+
+  # Asset-pipeline integration: dev vs prod branching in css-processor,
+  # css-inline, and js-processor (fingerprint/integrity/minify/crossorigin).
+  # Previously ran only inside `rake test` on push-to-master, so a PR could
+  # not see it - and it used to `skip` itself when a build failed, reporting
+  # green for the exact regression it guards (both fixed 2026-08-07).
+  #
+  # Its own job, not a step in unit_tests: it drives two full Hugo builds of
+  # its own and would put that job over its timeout.
+  integration_tests:
+    name: Asset Pipeline
+    if: ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_sha != github.sha) }}
+    runs-on: ubuntu-latest
+    # 25, measured, not guessed. The suite itself runs ~10 min (two full Hugo
+    # builds, and the dev-environment one cannot reuse the production-keyed
+    # resource cache), and `actions/checkout` on this repo has been observed
+    # taking 7 min on a slow runner - 17 min against a 15-minute cap. A gate
+    # that flakes on timeout is worse than no gate: it teaches people to
+    # ignore red. Headroom is cheaper than that.
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+
+      # build: 'false' - the suite runs its own dev and prod builds.
+      - uses: ./.github/actions/setup-hugo
+        with:
+          build: 'false'
+
+      # This suite shells out to `hugo build` directly (it needs the dev and
+      # prod builds side by side), so it does not inherit the PATH that
+      # bin/hugo-build sets for PostCSS - mirror it here.
+      - run: PATH="./node_modules/.bin:$PATH" bundle exec rake test:integration
+        env:
+          HUGO_CACHEDIR: /tmp/hugo_cache

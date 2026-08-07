@@ -5,29 +5,25 @@ class BaseofTemplateTest < BasePageTestCase
   # Validates security, accessibility, and architectural improvements
   # Implements TDD coverage per /knowledge/20.01-tdd-methodology-reference.md
 
-  def test_sri_integrity_implementation_for_mermaid
-    doc = parse_html_file("index.html")
+  # Mermaid loads only on pages that render a diagram, never on index.html.
+  MERMAID_PAGE = "blog/hidden-cost-poor-development-vendor-management-fix/index.html"
 
-    # Find Mermaid script tag
+  # Mermaid is self-hosted from themes/beaver/static/js/vendor (2026-08-01),
+  # which retires the jsdelivr CDN + SRI pin this test used to assert. It
+  # ran on index.html, which never loads mermaid at all, so the whole body
+  # sat inside a guard that was permanently false - and every assertion in
+  # it described the CDN implementation that no longer exists. Same security
+  # intent, current implementation: the script must be same-origin, so no
+  # third party can swap it.
+  def test_mermaid_script_is_self_hosted
+    doc = parse_html_file(MERMAID_PAGE)
+
     mermaid_scripts = doc.css("script[src*='mermaid']")
+    refute_empty mermaid_scripts, "Mermaid page should load the mermaid bundle"
 
-    if mermaid_scripts.any?
-      mermaid_script = mermaid_scripts.first
-      src = mermaid_script["src"]
-      integrity = mermaid_script["integrity"]
-      crossorigin = mermaid_script["crossorigin"]
-
-      # Validate SRI implementation per security requirements
-      assert src.include?("mermaid@11"), "Mermaid script should specify version 11"
-      refute_nil integrity, "Mermaid script must have integrity attribute for security"
-      assert integrity.start_with?("sha384-"), "Mermaid integrity must use SHA384 hash"
-      assert_equal "anonymous", crossorigin, "Mermaid script must have crossorigin=anonymous"
-
-      # Validate hash format
-      hash_part = integrity.gsub("sha384-", "")
-      assert_match(/^[A-Za-z0-9+\/]+=*$/, hash_part, "Integrity hash must be valid base64")
-      assert hash_part.length >= 64, "SHA384 hash must be sufficiently long"
-    end
+    src = mermaid_scripts.first["src"]
+    assert src.start_with?("/"), "Mermaid must be served same-origin, got #{src.inspect}"
+    refute_match %r{^https?://}, src, "Mermaid must not be loaded from a third-party CDN"
   end
 
   def test_no_hardcoded_inline_css_styles
@@ -53,24 +49,10 @@ class BaseofTemplateTest < BasePageTestCase
       "Previously hardcoded CSS (.logo-image-main, .skip-link, .sr-only) should be extracted to separate stylesheets"
   end
 
-  def test_logo_styles_in_external_css
-    # Validate that logo styles are properly loaded from theme-main.css
-    doc = parse_html_file("index.html")
-
-    # Check if logo element exists (indicating styles should be loaded)
-    logo_elements = doc.css(".logo-image-main")
-
-    if logo_elements.any?
-      # Should have external CSS that includes theme styles
-      css_links = doc.css("head link[rel='stylesheet']")
-      theme_css_loaded = css_links.any? do |link|
-        href = link["href"]
-        href && (href.include?("theme") || href.include?("main"))
-      end
-
-      assert theme_css_loaded, "Logo styles should be loaded from external theme CSS file"
-    end
-  end
+  # test_logo_styles_in_external_css removed 2026-08-07: it guarded every
+  # assertion behind `doc.css(".logo-image-main").any?`, and that class no
+  # longer exists anywhere in themes/ or layouts/. Zero assertions ran, and
+  # the test reported green.
 
   def test_accessibility_skip_link
     doc = parse_html_file("index.html")
@@ -87,10 +69,12 @@ class BaseofTemplateTest < BasePageTestCase
   def test_screen_reader_utilities_present
     doc = parse_html_file("index.html")
 
-    # Check for screen reader only elements
+    # Check for screen reader only elements. The presence assertion is the
+    # point: PurgeCSS dropped .sr-only from the production nav bundle once
+    # (2026-07-19), and an `each` over an empty set would have said nothing.
     sr_only_elements = doc.css(".sr-only")
+    refute_empty sr_only_elements, "Page should render screen-reader-only elements"
 
-    # Validate sr-only implementation if present
     sr_only_elements.each do |element|
       # Should have proper accessibility class
       assert element["class"].include?("sr-only"),
@@ -151,11 +135,11 @@ class BaseofTemplateTest < BasePageTestCase
 
     # Check robots meta tag
     robots_meta = doc.css("head meta[name='robots']").first
-    if robots_meta
-      robots_content = robots_meta["content"]
-      assert robots_content.include?("index") || robots_content.include?("noindex"),
-        "Robots meta should specify indexing directive"
-    end
+    refute_nil robots_meta, "Page should have a robots meta tag"
+
+    robots_content = robots_meta["content"]
+    assert robots_content.include?("index") || robots_content.include?("noindex"),
+      "Robots meta should specify indexing directive"
   end
 
   def test_open_graph_tags_present
@@ -181,18 +165,14 @@ class BaseofTemplateTest < BasePageTestCase
 
     # Validate Twitter Card implementation
     twitter_card = doc.css("head meta[name='twitter:card']").first
-    if twitter_card
-      card_type = twitter_card["content"]
-      assert ["summary", "summary_large_image"].include?(card_type),
-        "Twitter card should use appropriate card type"
-    end
+    refute_nil twitter_card, "Page should have a twitter:card meta tag"
+    assert ["summary", "summary_large_image"].include?(twitter_card["content"]),
+      "Twitter card should use appropriate card type"
 
     twitter_site = doc.css("head meta[name='twitter:site']").first
-    if twitter_site
-      site_handle = twitter_site["content"]
-      assert site_handle.start_with?("@"),
-        "Twitter site should include @ handle"
-    end
+    refute_nil twitter_site, "Page should have a twitter:site meta tag"
+    assert twitter_site["content"].start_with?("@"),
+      "Twitter site should include @ handle"
   end
 
   def test_service_worker_registration
@@ -203,38 +183,33 @@ class BaseofTemplateTest < BasePageTestCase
       script.text.include?("serviceWorker")
     end
 
-    if sw_scripts.any?
-      sw_script = sw_scripts.first
-      script_content = sw_script.text
+    refute_empty sw_scripts, "Page should register a service worker"
 
-      assert script_content.include?("navigator.serviceWorker"),
-        "Service worker should check for navigator support"
-      assert script_content.include?("register"),
-        "Service worker should call register method"
-      assert script_content.include?("/sw.js") || script_content.include?("sw.js"),
-        "Service worker should register sw.js file"
-    end
+    script_content = sw_scripts.first.text
+    assert script_content.include?("navigator.serviceWorker"),
+      "Service worker should check for navigator support"
+    assert script_content.include?("register"),
+      "Service worker should call register method"
+    assert script_content.include?("sw.js"),
+      "Service worker should register sw.js file"
   end
 
+  # Ran against index.html, which never loads mermaid - the guard was
+  # permanently false and no assertion ever executed. Points at a page that
+  # actually renders a diagram now.
   def test_mermaid_initialization_script
-    doc = parse_html_file("index.html")
+    doc = parse_html_file(MERMAID_PAGE)
 
-    # Check for Mermaid initialization when feature is enabled
     mermaid_scripts = doc.css("script").select do |script|
       script.text.include?("mermaid")
     end
+    refute_empty mermaid_scripts, "Mermaid page should carry mermaid scripts"
 
-    if mermaid_scripts.any?
-      init_script = mermaid_scripts.find do |script|
-        script.text.include?("initialize")
-      end
+    init_script = mermaid_scripts.find { |script| script.text.include?("initialize") }
+    refute_nil init_script, "Mermaid should have initialization script"
 
-      refute_nil init_script, "Mermaid should have initialization script"
-
-      init_content = init_script.text
-      assert init_content.include?("startOnLoad"),
-        "Mermaid should initialize with startOnLoad option"
-    end
+    assert init_script.text.include?("startOnLoad"),
+      "Mermaid should initialize with startOnLoad option"
   end
 
   def test_favicon_and_manifest_links
@@ -324,19 +299,12 @@ class BaseofTemplateTest < BasePageTestCase
 
     # Check for security-related meta tags
     xua_compatible = doc.css("head meta[http-equiv='X-UA-Compatible']").first
-    if xua_compatible
-      assert_equal "IE=edge", xua_compatible["content"],
-        "X-UA-Compatible should use IE=edge"
-    end
+    refute_nil xua_compatible, "Page should have an X-UA-Compatible meta tag"
+    assert_equal "IE=edge", xua_compatible["content"],
+      "X-UA-Compatible should use IE=edge"
 
-    # Check for referrer policy if implemented
-    referrer_policy = doc.css("head meta[name='referrer']").first
-    if referrer_policy
-      valid_policies = ["no-referrer", "no-referrer-when-downgrade", "origin",
-        "origin-when-cross-origin", "same-origin", "strict-origin",
-        "strict-origin-when-cross-origin", "unsafe-url"]
-      assert valid_policies.include?(referrer_policy["content"]),
-        "Referrer policy should use valid value"
-    end
+    # The referrer-policy branch that used to live here was dead: the site
+    # emits no <meta name="referrer">, so it asserted nothing. Add it back
+    # with a presence assertion if a referrer policy is ever shipped.
   end
 end

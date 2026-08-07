@@ -102,24 +102,14 @@ class HomeTemplateTest < BasePageTestCase
   def test_homepage_social_media_integration
     doc = parse_html_file("index.html")
 
-    # Check for social media links or sharing
+    # The homepage links out to four social profiles. The old guard meant
+    # dropping all four read the same as having them.
     social_links = doc.css("a[href*='facebook'], a[href*='twitter'], a[href*='linkedin'], a[href*='github']")
-    social_classes = doc.css(".social, .social-media, .social-links")
+    refute_empty social_links, "Homepage should link to the company social profiles"
 
-    # Social media is optional but if present should be properly implemented
-    if social_links.any? || social_classes.any?
-      social_links.each do |link|
-        href = link["href"]
-        assert href.start_with?("http"),
-          "Social media links should use full URLs"
-
-        # Should open in new tab/window for external links
-        link["target"]
-        if href.start_with?("http") && !href.include?("jetthoughts.com")
-          # External social links should ideally open in new tab
-          # This is a recommendation, not a strict requirement
-        end
-      end
+    social_links.each do |link|
+      assert link["href"].start_with?("http"),
+        "Social media links should use full URLs"
     end
   end
 
@@ -135,19 +125,11 @@ class HomeTemplateTest < BasePageTestCase
       assert !alt.nil?, "Images should have alt attributes"
     end
 
-    # Check for lazy loading on images
-    large_images = images.select { |img|
-      src = img["src"]
-      src && (src.include?("hero") || src.include?("banner") || src.include?("large"))
-    }
-
-    # Large images benefit from lazy loading (optional optimization)
-    if large_images.any?
-      large_images.any? { |img|
-        img["loading"] == "lazy" || img["data-src"]
-      }
-      # Note: Lazy loading is an optimization, not a requirement
-    end
+    # The lazy-loading block that used to follow computed `large_images.any?
+    # { ... }` and discarded the result - no assertion either way. Dropped
+    # rather than promoted: whether a given hero should be lazy-loaded is a
+    # per-image LCP decision, not an invariant. bin/lighthouse is the tool
+    # for that question.
   end
 
   def test_homepage_structured_data_organization
@@ -163,36 +145,22 @@ class HomeTemplateTest < BasePageTestCase
       false
     end
 
-    if organization_schemas.any?
-      org_data = JSON.parse(organization_schemas.first.text)
+    refute_empty organization_schemas, "Homepage should publish Organization schema"
 
-      assert_schema_context(org_data)
-      assert_schema_fields(org_data, "@type", "name")
-      assert_equal "Organization", org_data["@type"]
-      assert org_data["name"].length > 0, "Organization should have name"
+    org_data = JSON.parse(organization_schemas.first.text)
 
-      # Optional but recommended fields
-      if org_data["url"]
-        assert_valid_url(org_data["url"], "Organization URL should be valid")
-      end
-    end
+    assert_schema_context(org_data)
+    assert_schema_fields(org_data, "@type", "name")
+    assert_equal "Organization", org_data["@type"]
+    assert org_data["name"].length > 0, "Organization should have name"
+
+    refute_nil org_data["url"], "Organization schema should carry a url"
+    assert_valid_url(org_data["url"], "Organization URL should be valid")
   end
 
-  def test_homepage_breadcrumb_handling
-    doc = parse_html_file("index.html")
-
-    # Homepage typically doesn't need breadcrumbs, but if present should be minimal
-    breadcrumbs = doc.css(".breadcrumb, .breadcrumbs, nav[aria-label*='breadcrumb']")
-
-    if breadcrumbs.any?
-      # If breadcrumbs exist on homepage, should be simple
-      breadcrumb_links = breadcrumbs.css("a")
-
-      # Homepage breadcrumbs should be minimal (typically just "Home")
-      assert breadcrumb_links.length <= 2,
-        "Homepage breadcrumbs should be minimal"
-    end
-  end
+  # test_homepage_breadcrumb_handling removed 2026-08-07: it guarded on
+  # `.breadcrumb/.breadcrumbs` elements, which the homepage does not render
+  # (and should not - a homepage is the breadcrumb root). Zero assertions ran.
 
   def test_homepage_call_to_action_elements
     doc = parse_html_file("index.html")
@@ -227,9 +195,9 @@ class HomeTemplateTest < BasePageTestCase
     assert content.include?("width=device-width"),
       "Viewport should include device-width for mobile responsiveness"
 
-    # Check for responsive CSS classes (optional but common)
-    doc.css(".container, .row, .col, .mobile, .tablet, .desktop")
-    # Note: Responsive classes are optional as CSS frameworks vary
+    # A `doc.css(...)` line whose result was discarded used to sit here.
+    # Removed: which utility classes a CSS framework emits is not an
+    # invariant, and the visual suites cover responsive rendering.
   end
 
   def test_homepage_loading_performance_optimization
@@ -239,71 +207,32 @@ class HomeTemplateTest < BasePageTestCase
 
     # Preload critical resources
     preload_links = doc.css("head link[rel='preload']")
+    refute_empty preload_links, "Homepage should preload its critical CSS"
+
     preload_links.each do |link|
-      as_attr = link["as"]
-      assert as_attr, "Preload links should specify resource type with 'as' attribute"
+      refute_nil link["as"], "Preload links should specify resource type with 'as' attribute"
     end
 
-    # DNS prefetch for external resources
-    dns_prefetch = doc.css("head link[rel='dns-prefetch']")
-    preconnect = doc.css("head link[rel='preconnect']")
-
-    # External resources benefit from DNS optimization (optional)
-    external_resources = doc.css("script[src^='http'], link[href^='http']")
-    if external_resources.any? && (dns_prefetch.any? || preconnect.any?)
-      # Good practice: DNS optimization for external resources
-    end
+    # The DNS-prefetch block that used to follow had an empty `if` body - it
+    # asserted nothing whether or not the optimization was present. Replaced
+    # with the invariant that actually holds and matters: the homepage loads
+    # zero third-party scripts or stylesheets, which is why it needs no DNS
+    # optimization in the first place (fonts and mermaid are self-hosted).
+    assert_empty doc.css("script[src^='http']").map { |s| s["src"] },
+      "Homepage should not load third-party scripts"
+    assert_empty doc.css("link[rel='stylesheet'][href^='http']").map { |l| l["href"] },
+      "Homepage should not load third-party stylesheets"
   end
 
-  def test_homepage_security_headers_integration
-    doc = parse_html_file("index.html")
+  # test_homepage_security_headers_integration removed 2026-08-07: it guarded
+  # every assertion on a <meta http-equiv="Content-Security-Policy"> the site
+  # does not emit. CSP belongs in response headers, not a meta tag, so this
+  # would not be the place to assert it even once a policy ships.
 
-    # Check for Content Security Policy meta tag (if implemented)
-    csp_meta = doc.css("head meta[http-equiv='Content-Security-Policy']").first
-
-    if csp_meta
-      csp_content = csp_meta["content"]
-      assert csp_content.length > 10, "CSP should have meaningful policy"
-      assert csp_content.include?("default-src") || csp_content.include?("script-src"),
-        "CSP should include security directives"
-    end
-
-    # Check for other security-related meta tags
-    xframe_options = doc.css("head meta[http-equiv='X-Frame-Options']").first
-    if xframe_options
-      valid_values = ["DENY", "SAMEORIGIN"]
-      assert valid_values.include?(xframe_options["content"]),
-        "X-Frame-Options should use DENY or SAMEORIGIN"
-    end
-  end
-
-  def test_homepage_analytics_integration
-    doc = parse_html_file("index.html")
-
-    # Check for analytics integration (Google Analytics, etc.)
-    analytics_scripts = doc.css("script").select do |script|
-      content = script.text
-      src = script["src"]
-      content.include?("google-analytics") ||
-        content.include?("gtag") ||
-        content.include?("analytics") ||
-        (src && (src.include?("google-analytics") || src.include?("gtag")))
-    end
-
-    # Analytics is optional but if present should be properly configured
-    if analytics_scripts.any?
-      # Basic validation that analytics code exists
-      analytics_scripts.each do |script|
-        if script["src"]
-          assert script["src"].start_with?("http"),
-            "Analytics scripts should use proper URLs"
-        else
-          assert script.text.length > 20,
-            "Inline analytics scripts should have meaningful content"
-        end
-      end
-    end
-  end
+  # test_homepage_analytics_integration removed 2026-08-07: the test build
+  # emits no analytics script at all (page/analytics.html is environment
+  # gated), so the guard never opened. Asserting analytics in a test build
+  # would pin the wrong environment; leave it to the production build.
 
   def test_homepage_accessibility_landmarks
     doc = parse_html_file("index.html")

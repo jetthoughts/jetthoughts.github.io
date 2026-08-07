@@ -652,6 +652,184 @@ than it returns. Those posts still cross-link sibling technical posts, which is
 what actually keeps readers on the site. Founder-stream posts keep the funnel
 requirement unchanged. Exemption recorded in 20.08 and applied to
 `kamal-2-multi-server-deployment-complete-guide`.
+## 2026-08-07 - Test coverage gap analysis; two false-green mechanisms found
+
+Full audit written to
+`docs/20-29-testing-qa/20.10-test-coverage-gap-analysis-reference.md`.
+
+* **`lib/` is healthy**: 91.6% line coverage (716/782 relevant lines),
+  measured with SimpleCov over `test/unit/sync/**` +
+  `course_validators_test.rb` (103 runs, 207 assertions). Worst files are
+  network-error branches in `dev_to_article_fetcher` (67.9%) and
+  `sources/base` (75.0%). SimpleCov is in the Gemfile but `require`d
+  nowhere, so no coverage is collected in any run today - the measurement
+  needs a `RUBYOPT=-r<cov.rb>` shim.
+* **False green #1**: `test/integration/hugo_pipeline_test.rb:48-51` `skip`s
+  the whole asset-pipeline suite when the Hugo build fails - the exact
+  failure it guards. Should `flunk` with the build stderr.
+* **False green #2**: 42 conditional assertion guards across the unit tests
+  (`if robots_meta ... assert ... end`, e.g. `baseof_template_test.rb:153`,
+  `404_template_test.rb:186`). They pass when the element is absent, while
+  reading as "present and well-formed".
+* **`rake test:html_proofer` is invoked nowhere** (no workflow, hook, or
+  script); `rake test:integration` never gates a PR. Recorded in
+  [ci-gates](/build/ci-gates.md).
+* **ci-gates.md was stale**: it claimed a toolchain drift test "fails the
+  build when any copy diverges". That test was deleted 2026-08-01 (see
+  entry above) - pins are now synced by convention with zero enforcement.
+  Corrected. Same stale phrase removed from the Rakefile `:guards` comment.
+* **Validator scope boundary is measurable**: `CourseValidators` filters on
+  `course_chapter == true`, so 82 of 727 content pages are gated. Em-dash
+  files by scope: course 0/82, marketing 1/37, blog 208/607. The CLAUDE.md
+  `-` not `—` rule holds exactly where a validator enforces it. Blog needs
+  ratchet semantics (no NEW violations), not a hard fail on 208 legacy
+  dev.to imports.
+* **Untested money paths**: the contact/free-consultation form renders every
+  field `name` from `.Site.Params.forms.contact.*`; Hugo renders a missing
+  param as `""` with no error, the page stays pixel-identical, and leads
+  submit blank. `seo/faq-schema.html` ships on 10 service pages with zero
+  tests while article/breadcrumb/organization/service schemas each have one.
+* **`lib/sync/sources/sanity.rb`** (129 lines) is referenced by nothing
+  outside itself and loaded by no test - 0% covered, and it holds the
+  `sanity-ruby` gem dependency in place. Delete-or-test decision.
+
+## 2026-08-07 - Closed the two false-green mechanisms; wired the two dead CI gates
+
+Follow-through on the gap analysis logged above. `rake test:unit` 272 -> 285
+runs, 5723 -> 5935 assertions, still 0 failures.
+
+* **Integration suite fails loudly now**: `hugo_pipeline_test.rb` replaced its
+  two `*_ready?` predicates with `build_failure`, which returns nil or a
+  diagnostic and is `flunk`ed in `setup`. It distinguishes "hugo not on PATH"
+  from a real build error and prints the last 30 lines of build output.
+  Verified by shimming `hugo` to `/bin/false` - the suite fails instead of
+  skipping 11 tests into a green report.
+* **`rake test:integration` now gates PRs** as an `Asset Pipeline` job in
+  publish.yml, separate from `unit_tests` (it drives two Hugo builds of its
+  own, ~50s locally) with `setup-hugo build: 'false'`.
+* **`rake test:html_proofer` is finally invoked**: link-check.yml runs
+  `rake test:links test:html_proofer` as ONE rake invocation. `build_for_linkcheck`
+  is memoized per process so the pair shares a single production build - two
+  separate steps would each trigger their own build, which is exactly what blew
+  that job's timeout before (the reason the workflow passes `build: 'false'`).
+  Timeout 10 -> 15 min.
+* **Two schema test files were dead code**: `breadcrumb_schema_test.rb` and
+  `service_schema_test.rb` were commented out in full behind stale
+  "restore when <X> schema implemented in reverted HTML" TODOs. The build emits
+  both `BreadcrumbList` and `Service` today. Uncommented, 3 tests each, green.
+  Lesson: a test file existing is not coverage - grep for `def test_`, not for
+  the filename.
+* **New `test/unit/lead_forms_test.rb`**: the funnel forms' field `name`s come
+  from `[params.forms.*]`, and Hugo renders a missing param as `""` without
+  failing the build. RED-verified by renaming `first_name` in hugo.toml and
+  rebuilding - the test names the broken field id and the config key.
+* **New `test/unit/meta_tags/faq_schema_test.rb`** (6 tests) including a sweep
+  over every service page declaring `faqs` in frontmatter, so a template guard
+  that stops matching turns red instead of silently dropping rich results.
+* **Guard sweep, `baseof` + `404`**: presence assertions where the element
+  exists; dead branches deleted where it does not (`.logo-image-main` no longer
+  exists anywhere; no `meta[name=referrer]`; no search form). The mermaid SRI
+  test asserted the retired jsdelivr+SRI implementation while running against
+  index.html, which never loads mermaid - retargeted to a diagram page and
+  rewritten to assert same-origin, matching the self-hosting change.
+* **Test-env gotcha**: `parse_html_file` uses bare `File.read`, so on a
+  container with no `LANG` (`Encoding.default_external` = US-ASCII) Nokogiri
+  aborts with "FATAL: Invalid bytes in character encoding", every selector
+  returns empty, and 73 template tests fail for a non-template reason. Run the
+  suite under `LANG=C.UTF-8`.
+
+## 2026-08-07 - Guard sweep found a live bug the false-green was hiding
+
+Continued the conditional-assertion sweep into `list_template_test.rb` and
+`home_template_test.rb`. `rake test:unit` now 276 runs / 5967 assertions /
+0 failures (from 272 / 5723): the suite got SMALLER and checks MORE.
+
+* **Live bug, hidden for as long as the test existed**:
+  `test_list_page_date_information` selected post items with
+  `"article, .post, .post-item, .entry"`. The blog index renders `.blog-post`
+  and nothing else from that list, so the selector matched ZERO items on every
+  run - and `if items.any?` turned that into a pass. Both list tests now share
+  one `ITEM_SELECTOR` constant so the two cannot drift apart again. This is the
+  concrete argument for the sweep: a guard does not just fail to catch future
+  regressions, it hides present ones.
+* **`setup` skips are the same defect one level up**: `list_template_test`
+  skipped all 13 tests when no list page was found. The blog index vanishing IS
+  the regression. Now `refute_empty`.
+* **Classification rule that made the sweep tractable**: check the built page
+  first, then decide. Element present -> replace the guard with a presence
+  assertion. Element absent -> the branch is dead; delete it and record in
+  place what to assert if the feature ships. Deleted this round: filtering/
+  sorting, RSS head link, search, `.breadcrumb`/`.author`/`.category` elements,
+  homepage breadcrumbs, CSP meta, analytics (environment-gated out of the test
+  build).
+* **Discarded-value lines are a sibling smell**: `external_scripts.length +
+  external_stylesheets.length` and `large_images.any? { ... }` computed a value
+  and dropped it. Where an invariant was behind them it is now asserted - the
+  404 page, blog index, and homepage each load zero third-party scripts and
+  stylesheets, which is also why the site needs no dns-prefetch.
+* **Scan over-reports**: `.each` over a literal array, or over a collection the
+  test already asserted non-empty, always runs. 61 raw hits, 32 addressed;
+  the rest live in template_cleanup_validation (9), hugo_partials (8),
+  single_template (5), seo_schema (3) + singletons. Scan script is in
+  `docs/20-29-testing-qa/20.10-test-coverage-gap-analysis-reference.md` §5.
+
+## 2026-08-07 - Guard sweep complete: 61 candidates triaged, four live bugs found
+
+Finished the conditional-assertion sweep (single_template, hugo_partials,
+template_cleanup_validation, seo_schema, asset_url_validation,
+hugo_asset_validation, testimonial_shortcode). `rake test:unit` 275 runs /
+6086 assertions / 0 failures, from 272 / 5723 - assertions +363 while the
+test count went DOWN by 13. That ratio is the whole point of the exercise.
+
+**Four live bugs the guards were hiding** (a guard does not just miss future
+regressions, it hides present ones):
+
+1. **`single_template_test.rb` never tested a single page.** `@test_pages` led
+   with `"blog/index.html"` and `.first` picked it, so 376 lines nominally
+   covering `single.html` ran against the LIST page. Pinned to a real post via
+   `SINGLE_PAGE`. Retargeting immediately exposed bug 4.
+2. **Two item selectors omitted `.blog-post`** - the only class the blog index
+   renders. `test_list_page_date_information` and `test_blog_post_partials`
+   matched zero items on every run.
+3. **`css_urls.any? do |url| assert ... end`** in asset_url_validation:
+   `any?` short-circuits on the first truthy block result and `assert` returns
+   true, so only the FIRST stylesheet was ever checked.
+4. **Over-strict a11y rule**: image-only links were flagged as having no
+   accessible name. A link wrapping an image takes its name from the image
+   `alt` (WCAG 2.1 SC 1.1.1). Blog posts wrap YouTube thumbnails this way.
+
+**Skip-style guards are the same defect one level up** and are all gone:
+list_template skipped 13 tests with no list page; 404_template skipped 12 with
+no 404.html; template_cleanup_validation had 9 `next unless test_page_exists?`
++ 3 `return unless` (now one `assert_empty missing` in setup, helper deleted);
+seo_schema called `skip "Schema N is empty - might indicate template issue"` -
+an empty JSON-LD block IS that template issue.
+
+**Reusable rule for this class of work**: check the BUILT page first, then
+decide. Element present -> presence assertion. Element absent -> the branch is
+dead; delete it and record in place what to assert if the feature ships. Never
+promote a guard to an assertion without confirming the element exists, and
+never delete without confirming it does not.
+
+## 2026-08-07 - CI timeouts sized from measured cold-cache runs, not averages
+
+Three runs of the new gates produced hard numbers worth keeping:
+
+* `Broken Internal Links`: **3.5 min warm, 10.7 min cold** (right after master
+  moved and invalidated `resources/_gen`). At its original 10-minute timeout
+  the cold run would have gone red for nothing but cache state. Now 15.
+* `Asset Pipeline`: **~10 min** for the suite itself - two full Hugo builds,
+  and the dev-environment build cannot reuse the production-keyed resource
+  cache, so it reprocesses images. Plus `actions/checkout` measured at **7 min**
+  on one slow runner: 17 min of wall clock against a 15-minute cap. Now 25.
+
+**Rule**: size a CI timeout from the worst observed run plus headroom, never
+from the average. A gate that flakes on timeout is worse than no gate - it
+trains reviewers to ignore red, and the runner minutes it "saves" are trivial
+next to that. Diagnosis tell for this class: read the per-STEP timings in
+`list_workflow_jobs`, not just the job duration - the 7-minute checkout was
+invisible at job level and would have been misread as a slow test.
+
 
 ## 2026-08-07 — content plan re-review: pipeline-first revision (20.09)
 

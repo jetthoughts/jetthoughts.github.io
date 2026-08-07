@@ -72,19 +72,18 @@ class HugoAssetValidationTest < BasePageTestCase
     doc = parse_html_file("index.html")
 
     img_elements = doc.css("img[src*='.jpg'], img[src*='.png'], img[src*='.gif'], img[src*='.webp']")
+    refute_empty img_elements, "Homepage should render images"
 
-    if img_elements.any?
-      img_elements.each do |img|
-        src = img["src"]
-        next unless src
+    img_elements.each do |img|
+      src = img["src"]
+      next unless src
 
-        # Should use relative paths or correct localhost
-        if src.start_with?("http://", "https://")
-          uri = URI.parse(src)
-          assert_equal EXPECTED_HOST, uri.host, "Image should use correct host: #{src}"
-        else
-          assert src.start_with?("./", "/"), "Image should use relative path: #{src}"
-        end
+      # Should use relative paths or correct localhost
+      if src.start_with?("http://", "https://")
+        uri = URI.parse(src)
+        assert_equal EXPECTED_HOST, uri.host, "Image should use correct host: #{src}"
+      else
+        assert src.start_with?("./", "/"), "Image should use relative path: #{src}"
       end
     end
   end

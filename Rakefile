@@ -70,7 +70,7 @@ namespace :test do
     t.pattern = "test/integration/**/*_test.rb"
   end
 
-  # Fast repo-shape guards (~2s): toolchain pin drift + bin-script portability.
+  # Fast repo-shape guards (~2s): bin-script portability + hook wiring.
   # The pre-push hook's test entrypoint - one task, so the hook never falls
   # into the `ruby file1.rb file2.rb` trap (only file1 executes).
   Rake::TestTask.new(:guards) do |t|
@@ -97,8 +97,16 @@ namespace :test do
   # dev default) rather than depending on :build - config/development/hugo.toml
   # disables the taxonomy/term page kinds for build speed, which would make
   # every real /blog/tags/* link on the site look broken.
+  # Memoized per rake process so `rake test:links test:html_proofer` builds
+  # ONCE. Both tasks default to the same OUTPUT_DIR, and a second full
+  # production build in the same job is what blew link-check.yml's timeout
+  # on cold caches before (see the workflow's setup-hugo build: 'false').
   def build_for_linkcheck(dir)
+    @linkcheck_built ||= {}
+    return if @linkcheck_built[dir]
+
     sh({ "ENVIRONMENT" => "production", "OUTPUT_DIR" => dir }, "./bin/hugo-build")
+    @linkcheck_built[dir] = true
   end
 
   desc "Broken internal links (offline, blocking) via lychee"
