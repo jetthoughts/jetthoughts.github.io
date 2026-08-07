@@ -680,3 +680,38 @@ runs, 5723 -> 5935 assertions, still 0 failures.
   aborts with "FATAL: Invalid bytes in character encoding", every selector
   returns empty, and 73 template tests fail for a non-template reason. Run the
   suite under `LANG=C.UTF-8`.
+
+## 2026-08-07 - Guard sweep found a live bug the false-green was hiding
+
+Continued the conditional-assertion sweep into `list_template_test.rb` and
+`home_template_test.rb`. `rake test:unit` now 276 runs / 5967 assertions /
+0 failures (from 272 / 5723): the suite got SMALLER and checks MORE.
+
+* **Live bug, hidden for as long as the test existed**:
+  `test_list_page_date_information` selected post items with
+  `"article, .post, .post-item, .entry"`. The blog index renders `.blog-post`
+  and nothing else from that list, so the selector matched ZERO items on every
+  run - and `if items.any?` turned that into a pass. Both list tests now share
+  one `ITEM_SELECTOR` constant so the two cannot drift apart again. This is the
+  concrete argument for the sweep: a guard does not just fail to catch future
+  regressions, it hides present ones.
+* **`setup` skips are the same defect one level up**: `list_template_test`
+  skipped all 13 tests when no list page was found. The blog index vanishing IS
+  the regression. Now `refute_empty`.
+* **Classification rule that made the sweep tractable**: check the built page
+  first, then decide. Element present -> replace the guard with a presence
+  assertion. Element absent -> the branch is dead; delete it and record in
+  place what to assert if the feature ships. Deleted this round: filtering/
+  sorting, RSS head link, search, `.breadcrumb`/`.author`/`.category` elements,
+  homepage breadcrumbs, CSP meta, analytics (environment-gated out of the test
+  build).
+* **Discarded-value lines are a sibling smell**: `external_scripts.length +
+  external_stylesheets.length` and `large_images.any? { ... }` computed a value
+  and dropped it. Where an invariant was behind them it is now asserted - the
+  404 page, blog index, and homepage each load zero third-party scripts and
+  stylesheets, which is also why the site needs no dns-prefetch.
+* **Scan over-reports**: `.each` over a literal array, or over a collection the
+  test already asserted non-empty, always runs. 61 raw hits, 32 addressed;
+  the rest live in template_cleanup_validation (9), hugo_partials (8),
+  single_template (5), seo_schema (3) + singletons. Scan script is in
+  `docs/20-29-testing-qa/20.10-test-coverage-gap-analysis-reference.md` §5.
