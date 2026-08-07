@@ -6,7 +6,7 @@ resource: docs/projects/2510-seo-content-strategy/20-29-strategy/20.08-content-p
 tags: [content-strategy, seo, content-plan, blog]
 generated:
   by: process:okf-migrate
-  at: 2026-07-19T18:00:00Z
+  at: 2026-08-07T00:00:00Z
 ---
 
 # Overview
@@ -77,6 +77,33 @@ Three streams:
 3. Add TL;DR blocks to all 5 worst 0-CTR posts — **completed 2026-07-19**
 4. Consolidate 4 cannibalized Rails performance posts into 1 canonical — **done (existing)**: Hugo aliases from `ruby-on-rails-performance-optimization-patterns-2026` cover all 5 old URLs. jtway.co redirects added for missing Medium migration entries.
 5. Fix `/services/` page title (zero stack keywords, 202 impr, 0 clicks) — **done (existing)**: title already reads "Ruby on Rails & React Development Services | JetThoughts" with stack keywords and description including retention stat.
+
+# Before writing a queued row: check it is not already covered (2026-08-07)
+
+A row in the plan naming a NEW slug does not mean the topic is uncovered. Two
+Q3 rows target keywords an existing post already ranks for, so writing them as
+new posts would split the ranking - the exact Priority-3 cannibalization the
+same plan warns about:
+
+| Row | Existing post that owns it | Correct action |
+|---|---|---|
+| E3 `solid-cache-vs-redis-production-benchmarks` | `rails-8-solid-cache-performance-redis-migration` (908 lines) | Upgrade in place |
+| F1 `propshaft-migration-complete-guide-rails-8` | `propshaft-vs-sprockets-rails-8-asset-pipeline-migration` (1,523 lines, pos 12.8 / 8,832 impr) | Upgrade in place |
+
+Rule: before drafting any queued row, run `ls content/blog/ | grep -i <term>`
+and read anything that matches. If a post already covers the keyword, upgrade
+it and take the next row instead. Cheap check, expensive miss.
+
+Also corrected: the plan's funnel section named `/services/startup-cto-consulting/`,
+which does not exist. Real paths live in `content/services/` - `fractional-cto`,
+`technical-leadership-consulting`, `app-web-development`. Verify before linking.
+
+# Status (2026-08-07)
+
+Published from this plan: E1 Falcon (Jul 22), E2 Solid Queue (Jul 24), F2 Rails 8
+Auth Generator (Jul 29). E4 Kamal 2 multi-server written Aug 7 - taken ahead of
+E3/F1 because all six existing Kamal posts are single-server and 2024-era, so it
+splits no ranking.
 
 # Citations
 

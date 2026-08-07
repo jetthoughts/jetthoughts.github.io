@@ -594,3 +594,24 @@ threshold-vs-band), aspect-ratio table (mobile-safe default 3:2), and the
 9.21px. O1 bumps the floor x1.15 (basis 20px) for Caveat's small x-height.
 Includes the action-title/one-message/basis-line grammar and an O1-vs-O2
 scoring rubric so the T2 A/B pair scores both on the same axes.
+
+## 2026-08-07 — content plan of record corrected to 20.08; cannibalization guard added
+
+`docs/workflows/blog-pipeline.md` STEP 1 and `GOAL-AT-A-GLANCE.md` both still
+named 20.07 as the plan of record, four months after 20.08 superseded it.
+Following either literally picks from the wrong calendar. Both repointed at
+20.08; 20.07 is now described as the home of the founder-stream topic briefs
+only.
+
+Added the check that would have caught the real trap: a queued row naming a NEW
+slug is not proof the topic is uncovered. E3 (Solid Cache vs Redis) and F1
+(Propshaft migration) both target keywords an existing long post already ranks
+for - F1's target IS the page holding 8,832 impressions at position 12.8.
+Writing them as new posts splits the ranking. Both are upgrade-in-place; the
+rule now lives in `.okf/content-strategy/content-plan.md` and in STEP 1.
+
+Also corrected `/services/startup-cto-consulting/` (named in 20.08's funnel
+section, does not exist) to the paths that do exist under `content/services/`.
+
+E4 Kamal 2 multi-server taken as the next post instead - the six existing Kamal
+posts are all single-server and 2024-era, so it splits no ranking.
