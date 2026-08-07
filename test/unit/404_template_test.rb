@@ -8,9 +8,11 @@ class NotFoundTemplateTest < BasePageTestCase
   def setup
     @test_page = "404.html"
 
-    unless File.exist?("#{root_path}/#{@test_page}")
-      skip "404.html not found for testing"
-    end
+    # Was `skip "404.html not found for testing"`. The build silently
+    # dropping 404.html is the regression this file exists to catch, not a
+    # reason to report green on all 12 tests.
+    assert File.exist?("#{root_path}/#{@test_page}"),
+      "Build did not emit 404.html"
   end
 
   def test_404_page_has_error_title

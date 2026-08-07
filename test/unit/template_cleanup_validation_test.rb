@@ -22,8 +22,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
   end
 
   def test_homepage_renders_correctly
-    return unless test_page_exists?(:homepage)
-
     doc = parse_html_file(@test_pages[:homepage])
 
     # Basic HTML structure validation
@@ -49,8 +47,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
   end
 
   def test_blog_list_functionality
-    return unless test_page_exists?(:blog_list)
-
     doc = parse_html_file(@test_pages[:blog_list])
 
     # Blog list structure
@@ -82,8 +78,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
   end
 
   def test_404_page_structure
-    return unless test_page_exists?(:four_oh_four)
-
     doc = parse_html_file(@test_pages[:four_oh_four])
 
     # 404 page essentials
@@ -102,8 +96,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
   def test_template_asset_processing
     # Test that assets are properly processed across templates
     @test_pages.each do |page_name, file_path|
-      next unless test_page_exists?(page_name)
-
       doc = parse_html_file(file_path)
 
       # CSS files should be processed
@@ -132,8 +124,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
 
   def test_seo_meta_tags_integrity
     @test_pages.each do |page_name, file_path|
-      next unless test_page_exists?(page_name)
-
       doc = parse_html_file(file_path)
 
       # Essential SEO meta tags
@@ -156,8 +146,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
 
   def test_structured_data_schemas
     @test_pages.each do |page_name, file_path|
-      next unless test_page_exists?(page_name)
-
       doc = parse_html_file(file_path)
 
       # JSON-LD scripts
@@ -184,8 +172,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
 
   def test_navigation_structure
     @test_pages.each do |page_name, file_path|
-      next unless test_page_exists?(page_name)
-
       doc = parse_html_file(file_path)
 
       # Header navigation
@@ -210,8 +196,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
 
   def test_footer_integrity
     @test_pages.each do |page_name, file_path|
-      next unless test_page_exists?(page_name)
-
       doc = parse_html_file(file_path)
 
       # Footer structure
@@ -238,8 +222,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
     # by ensuring pages render completely without template error indicators
 
     @test_pages.each do |page_name, file_path|
-      next unless test_page_exists?(page_name)
-
       content = File.read(File.join(root_path, file_path))
 
       # Check for common Hugo template error indicators
@@ -260,8 +242,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
 
   def test_performance_indicators
     @test_pages.each do |page_name, file_path|
-      next unless test_page_exists?(page_name)
-
       doc = parse_html_file(file_path)
 
       # Performance best practices
@@ -289,8 +269,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
   def test_fl_node_removal_layout_preservation
     # Validates that FL-node class removal preserves essential layout structure
     @test_pages.each do |page_name, file_path|
-      next unless test_page_exists?(page_name)
-
       doc = parse_html_file(file_path)
 
       # Essential FL structural classes should remain (layout-critical)
@@ -327,8 +305,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
 
   def test_accessibility_basics
     @test_pages.each do |page_name, file_path|
-      next unless test_page_exists?(page_name)
-
       doc = parse_html_file(file_path)
 
       # Images should have alt attributes
@@ -362,13 +338,5 @@ class TemplateCleanupValidationTest < BasePageTestCase
         end
       end
     end
-  end
-
-  private
-
-  def test_page_exists?(page_key)
-    file_path = @test_pages[page_key]
-    full_path = File.join(root_path, file_path)
-    File.exist?(full_path)
   end
 end

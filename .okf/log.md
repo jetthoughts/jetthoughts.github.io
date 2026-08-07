@@ -715,3 +715,41 @@ Continued the conditional-assertion sweep into `list_template_test.rb` and
   the rest live in template_cleanup_validation (9), hugo_partials (8),
   single_template (5), seo_schema (3) + singletons. Scan script is in
   `docs/20-29-testing-qa/20.10-test-coverage-gap-analysis-reference.md` §5.
+
+## 2026-08-07 - Guard sweep complete: 61 candidates triaged, four live bugs found
+
+Finished the conditional-assertion sweep (single_template, hugo_partials,
+template_cleanup_validation, seo_schema, asset_url_validation,
+hugo_asset_validation, testimonial_shortcode). `rake test:unit` 275 runs /
+6086 assertions / 0 failures, from 272 / 5723 - assertions +363 while the
+test count went DOWN by 13. That ratio is the whole point of the exercise.
+
+**Four live bugs the guards were hiding** (a guard does not just miss future
+regressions, it hides present ones):
+
+1. **`single_template_test.rb` never tested a single page.** `@test_pages` led
+   with `"blog/index.html"` and `.first` picked it, so 376 lines nominally
+   covering `single.html` ran against the LIST page. Pinned to a real post via
+   `SINGLE_PAGE`. Retargeting immediately exposed bug 4.
+2. **Two item selectors omitted `.blog-post`** - the only class the blog index
+   renders. `test_list_page_date_information` and `test_blog_post_partials`
+   matched zero items on every run.
+3. **`css_urls.any? do |url| assert ... end`** in asset_url_validation:
+   `any?` short-circuits on the first truthy block result and `assert` returns
+   true, so only the FIRST stylesheet was ever checked.
+4. **Over-strict a11y rule**: image-only links were flagged as having no
+   accessible name. A link wrapping an image takes its name from the image
+   `alt` (WCAG 2.1 SC 1.1.1). Blog posts wrap YouTube thumbnails this way.
+
+**Skip-style guards are the same defect one level up** and are all gone:
+list_template skipped 13 tests with no list page; 404_template skipped 12 with
+no 404.html; template_cleanup_validation had 9 `next unless test_page_exists?`
++ 3 `return unless` (now one `assert_empty missing` in setup, helper deleted);
+seo_schema called `skip "Schema N is empty - might indicate template issue"` -
+an empty JSON-LD block IS that template issue.
+
+**Reusable rule for this class of work**: check the BUILT page first, then
+decide. Element present -> presence assertion. Element absent -> the branch is
+dead; delete it and record in place what to assert if the feature ships. Never
+promote a guard to an assertion without confirming the element exists, and
+never delete without confirming it does not.
