@@ -41,6 +41,44 @@ So traffic distribution is your job. In the order we reach for them:
 
 Kamal boots a proxy per host and stops there. The balancer in front is yours to run and pay for.
 
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#faf7f2', 'primaryBorderColor':'#555', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart LR
+    LB["Load balancer or DNS<br/>you run it, not Kamal&nbsp;"]
+
+    subgraph W1["web host 10.0.0.11"]
+        P1["kamal-proxy"] -->|"only target&nbsp;"| A1["app container<br/>on this host&nbsp;"]
+    end
+
+    subgraph W2["web host 10.0.0.12"]
+        P2["kamal-proxy"] -->|"only target&nbsp;"| A2["app container<br/>on this host&nbsp;"]
+    end
+
+    subgraph JH["job host 10.0.0.21"]
+        J["bin/jobs<br/>no proxy at all&nbsp;"]
+    end
+
+    subgraph DH["accessory host 10.0.0.31"]
+        DB["Postgres&nbsp;"]
+    end
+
+    LB --> P1
+    LB --> P2
+    A1 --> DB
+    A2 --> DB
+    J --> DB
+
+    classDef yours fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
+    classDef proxy fill:#f5e9ff,stroke:#7c3aed,stroke-width:2.5px,color:#1a1a1a
+    classDef app fill:#faf7f2,stroke:#555,stroke-width:2px,color:#1a1a1a
+    classDef store fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+
+    class LB yours
+    class P1,P2 proxy
+    class A1,A2,J app
+    class DB store
+```
+
 ## Splitting hosts into roles
 
 A bare array under `servers:` implicitly becomes the `web` role. Multi-server configs use the hash form:
