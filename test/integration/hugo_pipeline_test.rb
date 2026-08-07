@@ -15,7 +15,8 @@ require "fileutils"
 #         filenames, crossorigin=anonymous on script tags
 #
 # Builds run once per test class via class-level memoization (~7s each).
-# All tests skip if either build fails.
+# A failed build FAILS the suite (with the build output) rather than
+# skipping it - see build_failure below.
 
 HUGO_PROJECT_ROOT = File.expand_path("../..", __dir__)
 HUGO_DEV_DIR = "/tmp/hugo-test-dev"
@@ -24,31 +25,44 @@ HUGO_PROD_DIR = "/tmp/hugo-test-prod"
 class HugoPipelineIntegrationTest < Minitest::Test
   # -- One-time builds (class-level memoization) ---------------------------
 
-  def self.dev_ready?
-    @dev_ready ||= begin
-      FileUtils.rm_rf(HUGO_DEV_DIR)
-      system({ "HUGO_ENVIRONMENT" => "development", "BASE_URL" => "http://localhost:1313" },
-             "hugo build --noBuildLock --environment development --destination #{HUGO_DEV_DIR}",
-             chdir: HUGO_PROJECT_ROOT,
-             %i[out err] => "/dev/null")
-    end
-  end
+  # Returns nil when the build is usable, else a diagnostic string.
+  #
+  # This used to `skip` the whole suite on a failed build. That is a false
+  # green: the asset pipeline is exactly what a broken build takes down, so
+  # the one regression these tests exist to catch reported zero failures
+  # with every test skipped. Fail loudly, and print the build output - a
+  # bare "build failed" sends you back to reproduce it by hand.
+  def self.build_failure(environment, dir, base_url)
+    @build_failures ||= {}
+    return @build_failures[dir] if @build_failures.key?(dir)
 
-  def self.prod_ready?
-    @prod_ready ||= begin
-      FileUtils.rm_rf(HUGO_PROD_DIR)
-      system({ "HUGO_ENVIRONMENT" => "production", "BASE_URL" => "https://jetthoughts.com" },
-             "hugo build --noBuildLock --environment production --destination #{HUGO_PROD_DIR}",
-             chdir: HUGO_PROJECT_ROOT,
-             %i[out err] => "/dev/null")
-    end
+    FileUtils.rm_rf(dir)
+    log = "#{dir}.build.log"
+    ok = system({ "HUGO_ENVIRONMENT" => environment, "BASE_URL" => base_url },
+                "hugo build --noBuildLock --environment #{environment} --destination #{dir}",
+                chdir: HUGO_PROJECT_ROOT,
+                %i[out err] => log)
+    output = File.exist?(log) ? File.read(log, encoding: "bom|utf-8") : ""
+    FileUtils.rm_f(log)
+
+    @build_failures[dir] =
+      if ok.nil?
+        "`hugo` not found on PATH - install the pinned version (see .mise.toml) " \
+        "before running the integration suite"
+      elsif !ok
+        "#{environment} Hugo build failed:\n#{output.lines.last(30).join}"
+      elsif !Dir.exist?(dir)
+        "#{environment} Hugo build reported success but wrote nothing to #{dir}"
+      end
   end
 
   def setup
-    skip "Dev Hugo build failed or unavailable" unless self.class.dev_ready?
-    skip "Prod Hugo build failed or unavailable" unless self.class.prod_ready?
-    skip "Dev output missing" unless Dir.exist?(HUGO_DEV_DIR)
-    skip "Prod output missing" unless Dir.exist?(HUGO_PROD_DIR)
+    problems = [
+      self.class.build_failure("development", HUGO_DEV_DIR, "http://localhost:1313"),
+      self.class.build_failure("production", HUGO_PROD_DIR, "https://jetthoughts.com")
+    ].compact
+
+    flunk problems.join("\n\n") if problems.any?
   end
 
   # -- HTML output helpers -------------------------------------------------
@@ -115,8 +129,8 @@ class HugoPipelineIntegrationTest < Minitest::Test
     dev_file = dev_css_files.first
     prod_file = prod_css_files.first
 
-    skip "No dev CSS file found" unless dev_file
-    skip "No prod CSS file found" unless prod_file
+    refute_nil dev_file, "Dev build emitted no homepage CSS bundle"
+    refute_nil prod_file, "Prod build emitted no homepage CSS bundle"
 
     dev_size = File.size(dev_file)
     prod_size = File.size(prod_file)

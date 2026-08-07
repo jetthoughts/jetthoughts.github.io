@@ -23,19 +23,30 @@ verified:
 Plus `bin/lint-css` (stylelint warning ratchet) piggybacked on the
 unit_tests job. See local pre-PR gates in [test-gates.md](test-gates.md).
 
-# What does NOT gate a PR (2026-08-07 audit)
+# Two more PR gates (added 2026-08-07)
 
-- **`rake test:integration`** (asset-pipeline: fingerprint/integrity/minify)
-  runs only inside `rake test` on push-to-master, never on a PR. Worse, it
-  `skip`s itself when the Hugo build fails (`hugo_pipeline_test.rb:48-51`),
-  so a broken production build reports green with every test skipped.
-- **`rake test:html_proofer`** is invoked by NO workflow, hook, or script.
-  It exists in the Rakefile to catch missing image `src` files and malformed
-  hash fragments that lychee misses. Wire it into `link-check.yml` next to
-  `test:links`, or delete it - an uninvoked task reads as coverage that
-  does not exist.
-- **`rake test:guards`** runs in `.githooks/pre-push` only; a PR pushed with
-  `SKIP_CHECKS=1` never sees it.
+| Check | Workflow | Runs |
+|---|---|---|
+| `Asset Pipeline` (`rake test:integration`) | `publish.yml` | Every push/PR |
+| `rake test:html_proofer` | `link-check.yml` | Same trigger as `test:links`, same job, non-blocking |
+
+Both were dead before this: `test:integration` ran only inside `rake test` on
+push-to-master AND `skip`ped itself when the Hugo build failed (a broken build
+reported green with every test skipped - now `flunk`s with the build output);
+`test:html_proofer` was invoked by no workflow, hook, or script at all.
+
+Two things to preserve when touching either:
+- **`test:links` and `test:html_proofer` share ONE rake invocation**
+  (`rake test:links test:html_proofer`). Both default to the same `OUTPUT_DIR`
+  and each triggers `build_for_linkcheck`, which is memoized per rake PROCESS.
+  Split them into two `run:` steps and the site builds twice - the exact
+  double-build that blew this job's timeout and forced `setup-hugo build: 'false'`.
+- **`test:integration` gets its own job**, not a step in `unit_tests`: it drives
+  two full Hugo builds of its own (~50s locally) and would push that job over
+  its timeout.
+
+Still local-only: **`rake test:guards`** runs in `.githooks/pre-push`; a PR
+pushed with `SKIP_CHECKS=1` never sees it.
 
 Full gap analysis with `lib/` coverage numbers and per-layer evidence:
 `docs/20-29-testing-qa/20.10-test-coverage-gap-analysis-reference.md`.

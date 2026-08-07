@@ -635,3 +635,48 @@ Full audit written to
 * **`lib/sync/sources/sanity.rb`** (129 lines) is referenced by nothing
   outside itself and loaded by no test - 0% covered, and it holds the
   `sanity-ruby` gem dependency in place. Delete-or-test decision.
+
+## 2026-08-07 - Closed the two false-green mechanisms; wired the two dead CI gates
+
+Follow-through on the gap analysis logged above. `rake test:unit` 272 -> 285
+runs, 5723 -> 5935 assertions, still 0 failures.
+
+* **Integration suite fails loudly now**: `hugo_pipeline_test.rb` replaced its
+  two `*_ready?` predicates with `build_failure`, which returns nil or a
+  diagnostic and is `flunk`ed in `setup`. It distinguishes "hugo not on PATH"
+  from a real build error and prints the last 30 lines of build output.
+  Verified by shimming `hugo` to `/bin/false` - the suite fails instead of
+  skipping 11 tests into a green report.
+* **`rake test:integration` now gates PRs** as an `Asset Pipeline` job in
+  publish.yml, separate from `unit_tests` (it drives two Hugo builds of its
+  own, ~50s locally) with `setup-hugo build: 'false'`.
+* **`rake test:html_proofer` is finally invoked**: link-check.yml runs
+  `rake test:links test:html_proofer` as ONE rake invocation. `build_for_linkcheck`
+  is memoized per process so the pair shares a single production build - two
+  separate steps would each trigger their own build, which is exactly what blew
+  that job's timeout before (the reason the workflow passes `build: 'false'`).
+  Timeout 10 -> 15 min.
+* **Two schema test files were dead code**: `breadcrumb_schema_test.rb` and
+  `service_schema_test.rb` were commented out in full behind stale
+  "restore when <X> schema implemented in reverted HTML" TODOs. The build emits
+  both `BreadcrumbList` and `Service` today. Uncommented, 3 tests each, green.
+  Lesson: a test file existing is not coverage - grep for `def test_`, not for
+  the filename.
+* **New `test/unit/lead_forms_test.rb`**: the funnel forms' field `name`s come
+  from `[params.forms.*]`, and Hugo renders a missing param as `""` without
+  failing the build. RED-verified by renaming `first_name` in hugo.toml and
+  rebuilding - the test names the broken field id and the config key.
+* **New `test/unit/meta_tags/faq_schema_test.rb`** (6 tests) including a sweep
+  over every service page declaring `faqs` in frontmatter, so a template guard
+  that stops matching turns red instead of silently dropping rich results.
+* **Guard sweep, `baseof` + `404`**: presence assertions where the element
+  exists; dead branches deleted where it does not (`.logo-image-main` no longer
+  exists anywhere; no `meta[name=referrer]`; no search form). The mermaid SRI
+  test asserted the retired jsdelivr+SRI implementation while running against
+  index.html, which never loads mermaid - retargeted to a diagram page and
+  rewritten to assert same-origin, matching the self-hosting change.
+* **Test-env gotcha**: `parse_html_file` uses bare `File.read`, so on a
+  container with no `LANG` (`Encoding.default_external` = US-ASCII) Nokogiri
+  aborts with "FATAL: Invalid bytes in character encoding", every selector
+  returns empty, and 73 template tests fail for a non-template reason. Run the
+  suite under `LANG=C.UTF-8`.

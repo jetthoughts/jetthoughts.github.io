@@ -51,7 +51,9 @@ jobs:
     # ran on). github.sha for workflow_run = current default-branch head.
     if: ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_sha != github.sha) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # 15, not 10: html-proofer's image/fragment pass over the full page set
+    # runs after lychee inside the same job.
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
         with:
@@ -73,4 +75,13 @@ jobs:
         with:
           tool: lychee
 
-      - run: bundle exec rake test:links
+      # html-proofer catches what lychee does not: image src files that are
+      # referenced but missing from the build, and malformed hash fragments.
+      # The task existed in the Rakefile but was wired into no workflow,
+      # hook, or script - dead code reading as coverage (2026-08-07 audit).
+      # It is non-blocking by its own design; test:links stays blocking.
+      #
+      # ONE rake invocation, not two steps: build_for_linkcheck memoizes per
+      # process, so the pair shares a single production build. Two steps
+      # would build the whole site twice and blow the job timeout.
+      - run: bundle exec rake test:links test:html_proofer
