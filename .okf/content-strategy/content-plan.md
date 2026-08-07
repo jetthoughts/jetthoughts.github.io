@@ -37,11 +37,11 @@ Three streams:
 - **Snippet hygiene**: 5 worst 0-CTR pages had titles/metas rewritten
   (langgraph 44K impr, autogen-crewai 12.2K, crewai 11.7K, langchain-memory
   7.8K, laravel-11 19.2K). Projected +435 clicks/3mo.
-- **Phase 1 expanders (3 of 5 done)**: Falcon Production Tuning ✅, Solid
-  Queue Advanced Patterns ✅, Rails 8 Authentication Generator ✅, Solid
-  Cache Deep Dive 🔲, Kamal 2 Multi-Server 🔲 — extending the highest-click
-  posts. All 3 published posts passed blog pipeline validation (voice
-  self-test 10/10, zero banned words, zero em dashes, Hugo build clean).
+- **Phase 1 expanders (4 of 5 done)**: Falcon Production Tuning ✅, Solid
+  Queue Advanced Patterns ✅, Rails 8 Authentication Generator ✅, Kamal 2
+  Multi-Server ✅ (2026-08-07), Solid Cache Deep Dive ⛔ upgrade-in-place —
+  extending the highest-click posts. All published posts passed blog pipeline
+  validation (zero banned words, zero em dashes, Hugo build clean).
 - **Bidirectional funnel**: every Rails post links to a founder post or
   service page; every founder post links to 2+ Rails posts.
 
