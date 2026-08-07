@@ -10,9 +10,9 @@
 > multi-language AI SEO plan (Ruby/Python/Laravel/Elixir). That framing is
 > **superseded**. The project pivoted to **ICP-E rescue-founder positioning**
 > in April 2026. The live plan of record is
-> [`20-29-strategy/20.07-content-plan-icp-e-q2-2026.md`](20-29-strategy/20.07-content-plan-icp-e-q2-2026.md);
-> the old `20.04` AI rotation is archived and the `20.05` Rails 8.1 wave is
-> paused to Q3 2026.
+> [`20-29-strategy/20.08-content-plan-data-driven-q3-2026.md`](20-29-strategy/20.08-content-plan-data-driven-q3-2026.md);
+> `20.07` is superseded by it (kept for its topic briefs), the old `20.04` AI
+> rotation is archived and the `20.05` Rails 8.1 wave is paused to Q3 2026.
 
 ---
 
@@ -92,9 +92,9 @@ Package practical tools from the client research as downloadable magnets:
 ## 🧭 EXECUTION MODEL
 
 1. Read the ICP: [`90.10-icp-primary-website-target.md`](../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md)
-2. Pick the next `🔲 Planned` topic in [`20.07`](20-29-strategy/20.07-content-plan-icp-e-q2-2026.md)
+2. Pick the next unshipped topic in [`20.08`](20-29-strategy/20.08-content-plan-data-driven-q3-2026.md)
 3. Run the full blog pipeline (draft -> voice/slop/shape critics -> cover -> build -> visual gate)
-4. Update `20.07` status + commit SHA, then update [`TASK-TRACKER.md`](TASK-TRACKER.md)
+4. Update `20.08` status + commit SHA, then update [`TASK-TRACKER.md`](TASK-TRACKER.md)
 
 **Sequence:** validate hooks on LinkedIn -> ship the top-scoring Control posts ->
 build lead-magnet artifacts -> sustain 2-3/week rotation across all three streams.
@@ -103,7 +103,7 @@ build lead-magnet artifacts -> sustain 2-3/week rotation across all three stream
 
 ## 🔗 AUTHORITY DOCS
 
-- 📋 **Live plan of record**: [`20.07-content-plan-icp-e-q2-2026.md`](20-29-strategy/20.07-content-plan-icp-e-q2-2026.md)
+- 📋 **Live plan of record**: [`20.08-content-plan-data-driven-q3-2026.md`](20-29-strategy/20.08-content-plan-data-driven-q3-2026.md)
 - 🎯 **ICP profile**: [`90.10-icp-primary-website-target.md`](../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md)
 - 🗣️ **Voice guide**: [`90.11-voice-guide.md`](../../90-99-content-strategy/strategy-analysis/90.11-voice-guide.md)
 - 📊 **Status**: [`TASK-TRACKER.md`](TASK-TRACKER.md)
