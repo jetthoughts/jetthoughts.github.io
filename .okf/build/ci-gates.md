@@ -35,6 +35,18 @@ push-to-master AND `skip`ped itself when the Hugo build failed (a broken build
 reported green with every test skipped - now `flunk`s with the build output);
 `test:html_proofer` was invoked by no workflow, hook, or script at all.
 
+**Job runtimes are cache-dependent - budget for the cold case** (measured
+2026-08-07 across three runs). `Broken Internal Links` ran 3.5 min on a warm
+resource cache and **10.7 min** right after master moved and invalidated it; at
+its old 10-minute timeout that run would have failed for no reason but cache
+state. `Asset Pipeline` runs ~10 min (two full Hugo builds; the
+dev-environment one cannot reuse the production-keyed `resources/_gen` cache),
+and `actions/checkout` on this repo was observed taking **7 min** on a slow
+runner - 17 min of wall clock against what was a 15-minute cap. Timeouts are
+now 15 and 25. Do not trim them back toward the observed average: a gate that
+flakes on timeout teaches people to ignore red, which costs more than the
+runner minutes.
+
 Two things to preserve when touching either:
 - **`test:links` and `test:html_proofer` share ONE rake invocation**
   (`rake test:links test:html_proofer`). Both default to the same `OUTPUT_DIR`

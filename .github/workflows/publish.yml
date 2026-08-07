@@ -71,7 +71,13 @@ jobs:
     name: Asset Pipeline
     if: ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_sha != github.sha) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # 25, measured, not guessed. The suite itself runs ~10 min (two full Hugo
+    # builds, and the dev-environment one cannot reuse the production-keyed
+    # resource cache), and `actions/checkout` on this repo has been observed
+    # taking 7 min on a slow runner - 17 min against a 15-minute cap. A gate
+    # that flakes on timeout is worse than no gate: it teaches people to
+    # ignore red. Headroom is cheaper than that.
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v7
 

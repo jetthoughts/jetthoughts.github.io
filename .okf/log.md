@@ -810,3 +810,22 @@ decide. Element present -> presence assertion. Element absent -> the branch is
 dead; delete it and record in place what to assert if the feature ships. Never
 promote a guard to an assertion without confirming the element exists, and
 never delete without confirming it does not.
+
+## 2026-08-07 - CI timeouts sized from measured cold-cache runs, not averages
+
+Three runs of the new gates produced hard numbers worth keeping:
+
+* `Broken Internal Links`: **3.5 min warm, 10.7 min cold** (right after master
+  moved and invalidated `resources/_gen`). At its original 10-minute timeout
+  the cold run would have gone red for nothing but cache state. Now 15.
+* `Asset Pipeline`: **~10 min** for the suite itself - two full Hugo builds,
+  and the dev-environment build cannot reuse the production-keyed resource
+  cache, so it reprocesses images. Plus `actions/checkout` measured at **7 min**
+  on one slow runner: 17 min of wall clock against a 15-minute cap. Now 25.
+
+**Rule**: size a CI timeout from the worst observed run plus headroom, never
+from the average. A gate that flakes on timeout is worse than no gate - it
+trains reviewers to ignore red, and the runner minutes it "saves" are trivial
+next to that. Diagnosis tell for this class: read the per-STEP timings in
+`list_workflow_jobs`, not just the job duration - the 7-minute checkout was
+invisible at job level and would have been misread as a slow test.
