@@ -70,7 +70,7 @@ namespace :test do
     t.pattern = "test/integration/**/*_test.rb"
   end
 
-  # Fast repo-shape guards (~2s): toolchain pin drift + bin-script portability.
+  # Fast repo-shape guards (~2s): bin-script portability + hook wiring.
   # The pre-push hook's test entrypoint - one task, so the hook never falls
   # into the `ruby file1.rb file2.rb` trap (only file1 executes).
   Rake::TestTask.new(:guards) do |t|

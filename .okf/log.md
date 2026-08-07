@@ -594,3 +594,44 @@ threshold-vs-band), aspect-ratio table (mobile-safe default 3:2), and the
 9.21px. O1 bumps the floor x1.15 (basis 20px) for Caveat's small x-height.
 Includes the action-title/one-message/basis-line grammar and an O1-vs-O2
 scoring rubric so the T2 A/B pair scores both on the same axes.
+
+## 2026-08-07 - Test coverage gap analysis; two false-green mechanisms found
+
+Full audit written to
+`docs/20-29-testing-qa/20.10-test-coverage-gap-analysis-reference.md`.
+
+* **`lib/` is healthy**: 91.6% line coverage (716/782 relevant lines),
+  measured with SimpleCov over `test/unit/sync/**` +
+  `course_validators_test.rb` (103 runs, 207 assertions). Worst files are
+  network-error branches in `dev_to_article_fetcher` (67.9%) and
+  `sources/base` (75.0%). SimpleCov is in the Gemfile but `require`d
+  nowhere, so no coverage is collected in any run today - the measurement
+  needs a `RUBYOPT=-r<cov.rb>` shim.
+* **False green #1**: `test/integration/hugo_pipeline_test.rb:48-51` `skip`s
+  the whole asset-pipeline suite when the Hugo build fails - the exact
+  failure it guards. Should `flunk` with the build stderr.
+* **False green #2**: 42 conditional assertion guards across the unit tests
+  (`if robots_meta ... assert ... end`, e.g. `baseof_template_test.rb:153`,
+  `404_template_test.rb:186`). They pass when the element is absent, while
+  reading as "present and well-formed".
+* **`rake test:html_proofer` is invoked nowhere** (no workflow, hook, or
+  script); `rake test:integration` never gates a PR. Recorded in
+  [ci-gates](/build/ci-gates.md).
+* **ci-gates.md was stale**: it claimed a toolchain drift test "fails the
+  build when any copy diverges". That test was deleted 2026-08-01 (see
+  entry above) - pins are now synced by convention with zero enforcement.
+  Corrected. Same stale phrase removed from the Rakefile `:guards` comment.
+* **Validator scope boundary is measurable**: `CourseValidators` filters on
+  `course_chapter == true`, so 82 of 727 content pages are gated. Em-dash
+  files by scope: course 0/82, marketing 1/37, blog 208/607. The CLAUDE.md
+  `-` not `—` rule holds exactly where a validator enforces it. Blog needs
+  ratchet semantics (no NEW violations), not a hard fail on 208 legacy
+  dev.to imports.
+* **Untested money paths**: the contact/free-consultation form renders every
+  field `name` from `.Site.Params.forms.contact.*`; Hugo renders a missing
+  param as `""` with no error, the page stays pixel-identical, and leads
+  submit blank. `seo/faq-schema.html` ships on 10 service pages with zero
+  tests while article/breadcrumb/organization/service schemas each have one.
+* **`lib/sync/sources/sanity.rb`** (129 lines) is referenced by nothing
+  outside itself and loaded by no test - 0% covered, and it holds the
+  `sanity-ruby` gem dependency in place. Delete-or-test decision.

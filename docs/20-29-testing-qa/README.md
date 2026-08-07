@@ -15,6 +15,10 @@ This area contains all testing documentation, quality assurance procedures, and 
 - `20.01-test-optimization-overview-reference.md` - Overview of test optimization strategies
 - `test-optimization/` - Detailed optimization guides, caching strategies, and implementation
 
+### Coverage
+
+- `20.10-test-coverage-gap-analysis-reference.md` - measured coverage per layer, ranked gaps, and what not to bother testing
+
 ### Screenshot Testing
 
 - `20.02-screenshot-testing-workflow-tutorial.md` - Screenshot testing workflow and procedures
