@@ -1,13 +1,49 @@
 ---
 type: Reference
-title: "Content Plan — Data-Driven Q3 2026"
-description: Active 3-stream content plan based on GSC performance data (Apr–Jul 2026). Rails technical deep-dives (2/week), snippet hygiene rewrites, founder content (every other week). Supersedes 20.07.
-resource: docs/projects/2510-seo-content-strategy/20-29-strategy/20.08-content-plan-data-driven-q3-2026.md
+title: "Content Plan — Pipeline-First Revision (Aug 2026)"
+description: Pipeline-first content plan (20.09, Aug 2026). Content is gated on 2607 outreach being unblocked; capacity is ~6 posts/month; durable news swaps in, event news goes to LinkedIn. Retains 20.08's GSC baseline analysis.
+resource: docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md
 tags: [content-strategy, seo, content-plan, blog]
 generated:
   by: process:okf-migrate
   at: 2026-08-07T00:00:00Z
 ---
+
+# Plan of record (2026-08-07)
+
+`20.09-content-plan-revision-aug-2026.md` supersedes 20.08's allocation, cadence,
+and click projection. 20.08's GSC analysis below is still correct.
+
+**The governing rule now sits above the content plan.** 2607's rabbit-hole:
+"Never ship a content sprint while the outreach is stalled." Outreach IS stalled
+(`backlog.md:95` - all batch-1 messages HOLD, zero sendable rows), so P0 is
+unblocking the pipeline, not writing.
+
+**Four things 20.08 got wrong**, all verified 2026-08-07:
+1. Real capacity is ~6 posts/month, not 2-3/week. June 2026 produced ZERO posts.
+2. The 435-click snippet projection predates AI Overviews (~61% CTR loss on
+   informational SERPs). Re-baseline before spending on it.
+3. Seven queued rows duplicate posts already on disk; F2 already shipped and
+   created a 4-post Rails-8-authentication cluster.
+4. The Rails-post-to-rescue-client funnel is imagined. Paul's 2026-08-07 exemption
+   removed service links from technical posts, amputating the stated mechanism.
+
+**Biggest single win, needs no new content**: `/services/vibe-code-rescue/` - the
+conversion page for the company's only active bet - has ZERO inbound links from
+608 blog posts. Six rescue-adjacent posts (fire-dev-shop-guide,
+dev-shop-red-flags-checklist, hiring-dev-shop-questions, vibe-coding-crisis,
+quality-tax, 47-startups) each link to it zero times.
+
+# News policy: durable vs event (2026-08-07)
+
+One test: **will someone search this in six months?**
+- Durable (CVEs, releases, EOLs) -> blog, via SWAP against a queued row, never as
+  an added slot. Throughput is the binding constraint.
+- Event (incidents, drama, funding) -> LinkedIn only. Evidence: the PocketOS post
+  scored 48/50, ran the full pipeline, earned 1 click in 3 months.
+
+Version-current content incurs refresh debt - budget 1 refresh slot/month. Proof
+it compounds: the Kamal 1/Traefik post is now factually wrong and still ranking.
 
 # Overview
 

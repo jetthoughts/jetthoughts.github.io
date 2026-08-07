@@ -652,3 +652,29 @@ than it returns. Those posts still cross-link sibling technical posts, which is
 what actually keeps readers on the site. Founder-stream posts keep the funnel
 requirement unchanged. Exemption recorded in 20.08 and applied to
 `kamal-2-multi-server-deployment-complete-guide`.
+
+## 2026-08-07 — content plan re-review: pipeline-first revision (20.09)
+
+Four-agent re-review (market, SEO, competitor, goal-alignment) against the 2607
+bet. 20.09 supersedes 20.08's allocation, cadence, and click projection; 20.08's
+GSC analysis stands.
+
+The finding that reorders everything: 2607's own rabbit-hole says "never ship a
+content sprint while the outreach is stalled," and outreach IS stalled - all
+batch-1 messages HOLD, zero sendable rows, card #12 blocked on #29. Four Rails
+deep-dives shipped Jul 22 - Aug 7 anyway. Content is not the binding constraint;
+prospect sourcing is.
+
+Cheapest high-value fix, no new content: the rescue offer page has zero inbound
+links from 608 blog posts. Six pre-qualified rescue posts link to it zero times.
+
+Also corrected: real capacity is ~6 posts/month (June 2026 = zero posts), not the
+2-3/week the plan assumed; seven queued rows duplicate existing posts and F2
+already shipped into a 4-post auth cluster; the 435-click snippet projection
+predates AI Overviews.
+
+Market shifts: CVE-2026-66066 (Active Storage RCE, CVSS 9.5, Jul 29) is the rare
+durable+urgent+in-authority item - and patching Rails alone is NOT sufficient,
+libvips must go to >=8.13 and secrets must be rotated. "Vibe code rescue" is no
+longer an uncontested category: justinmckelvey.com (cited in our own strategy as
+proof the model works) now sells it at $25K-$50K under the same name.
