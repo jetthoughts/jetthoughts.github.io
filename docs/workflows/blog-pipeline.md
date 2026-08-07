@@ -8,8 +8,12 @@ Copy this prompt to write the next post:
 Write the next blog post following the full pipeline.
 
 STEP 1 — PICK TOPIC
-Read the content plan: docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md
-Find the next 🔲 Planned topic. Confirm the slug, primary keyword, and target publish date.
+Read the content plan: docs/projects/2510-seo-content-strategy/20-29-strategy/20.08-content-plan-data-driven-q3-2026.md
+Find the next unshipped topic. Confirm the slug, primary keyword, and target publish date.
+Verify no existing post already owns that keyword (`ls content/blog/ | grep -i <term>`) - several 20.08
+rows name a NEW slug for a topic an existing post already ranks for, and publishing both splits the
+ranking. If a post already covers it, upgrade that post instead and pick the next row.
+Topic briefs for older founder-stream topics still live in 20.07 (superseded as a schedule).
 
 STEP 2 — READ CONTEXT (mandatory, do not skip)
 Read these 3 files before writing anything:
@@ -410,7 +414,7 @@ STEP 7 — VALIDATE
   - All internal links work
 
 STEP 8 — UPDATE CONTENT PLAN
-Edit docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md:
+Edit docs/projects/2510-seo-content-strategy/20-29-strategy/20.08-content-plan-data-driven-q3-2026.md:
 - Change topic status from 🔲 Planned to ✅ Published
 - Add commit SHA
 - Update changelog
@@ -538,7 +542,8 @@ The quick start prompt above is the practical execution guide. Below is the full
 
 | File | Purpose |
 |---|---|
-| `docs/.../20.07-content-plan-icp-e-q2-2026.md` | What to write next + topic briefs |
+| `docs/.../20.08-content-plan-data-driven-q3-2026.md` | What to write next (plan of record) |
+| `docs/.../20.07-content-plan-icp-e-q2-2026.md` | Topic briefs for founder-stream topics (schedule superseded) |
 | `docs/.../90.10-icp-primary-website-target.md` | Who we write for (ICP-E) |
 | `docs/.../90.11-voice-guide.md` | **HOW we write** — tone, banned words, structural patterns, self-test |
 | `docs/blog-post-index.md` | **Post discovery** — 584 posts by tag, date, and practice category. Use for finding internal links. |

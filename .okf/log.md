@@ -595,6 +595,63 @@ threshold-vs-band), aspect-ratio table (mobile-safe default 3:2), and the
 Includes the action-title/one-message/basis-line grammar and an O1-vs-O2
 scoring rubric so the T2 A/B pair scores both on the same axes.
 
+## 2026-08-07 — content plan of record corrected to 20.08; cannibalization guard added
+
+`docs/workflows/blog-pipeline.md` STEP 1 and `GOAL-AT-A-GLANCE.md` both still
+named 20.07 as the plan of record, four months after 20.08 superseded it.
+Following either literally picks from the wrong calendar. Both repointed at
+20.08; 20.07 is now described as the home of the founder-stream topic briefs
+only.
+
+Added the check that would have caught the real trap: a queued row naming a NEW
+slug is not proof the topic is uncovered. E3 (Solid Cache vs Redis) and F1
+(Propshaft migration) both target keywords an existing long post already ranks
+for - F1's target IS the page holding 8,832 impressions at position 12.8.
+Writing them as new posts splits the ranking. Both are upgrade-in-place; the
+rule now lives in `.okf/content-strategy/content-plan.md` and in STEP 1.
+
+Also corrected `/services/startup-cto-consulting/` (named in 20.08's funnel
+section, does not exist) to the paths that do exist under `content/services/`.
+
+E4 Kamal 2 multi-server taken as the next post instead - the six existing Kamal
+posts are all single-server and 2024-era, so it splits no ranking.
+
+## 2026-08-07 — E4 Kamal 2 multi-server published; technical posts need a source-verification critic
+
+Published `kamal-2-multi-server-deployment-complete-guide` (Q3 plan E4, PR #437).
+Taken ahead of the earlier-queued E3 and F1, both of which target keywords an
+existing long post already ranks for and are upgrade-in-place jobs instead.
+
+The durable lesson is about the review loop, not the topic. The standard
+3-persona loop (founder / SEO-slop / copy editor) passed a draft that still told
+readers to run migrations with bare `kamal app exec` from a `pre-deploy` hook.
+That resolves to the `latest` tag, and Kamal only moves `latest` after every host
+boots, so the hook would have run the release being replaced. Silent no-op
+migrations on every deploy.
+
+For developer-targeted posts, swap the ICP-E founder persona for a practitioner
+critic that verifies every claim against a PINNED upstream commit and reports
+file:line. That critic caught the migration bug plus a `--target`
+self-contradiction and a wrong `drain_timeout` default. The cold-eyes gate then
+caught a wrong claim about Sidekiq-Cron's dedup and a wrong date for kamal-proxy
+PR #124. Five factual defects total; voice review surfaces none of them.
+
+Two mechanical notes: cite as GitHub permalinks pinned to the released tag, since
+bare file:line rots. And per-diagram mermaid `%%init%%` headers copied from older
+posts OVERRIDE the house theme in `baseof.html` and silently shrink label text
+below the 20px house size - drop the override and fix legibility structurally,
+per the standing brand rule.
+
+## 2026-08-07 — service links dropped from deep-technical posts
+
+Paul's call on PR #437: developer-targeted technical posts no longer carry a
+service-page link. 20.08's bidirectional-funnel rule required one on every Rails
+post, but a fractional-CTO link at the end of a post about container ids and boot
+denominators reaches the wrong reader and costs more credibility with engineers
+than it returns. Those posts still cross-link sibling technical posts, which is
+what actually keeps readers on the site. Founder-stream posts keep the funnel
+requirement unchanged. Exemption recorded in 20.08 and applied to
+`kamal-2-multi-server-deployment-complete-guide`.
 ## 2026-08-07 - Test coverage gap analysis; two false-green mechanisms found
 
 Full audit written to
