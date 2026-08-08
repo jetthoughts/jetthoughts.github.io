@@ -72,7 +72,7 @@ A typical AI-first quote for a B2B SaaS MVP lands at **$25K-$35K** for a 3-4 wee
 - Production debugging time the founder eats internally: 80-200 engineer-hours
 - **All-in cost (cash + internal): $60K-$90K, or 2-3x the original quote**
 
-Cash line items add $29K-$55K to a $30K starting point. Internal engineer hours add $15K-$35K at market rates. **The all-in cost of making an AI-built MVP production-ready lands at $60K-$90K, or 2x to 3x the original quote.**
+Cash line items add $29K-$55K to a $30K starting point. Internal engineer hours add $15K-$35K at market rates. **The all-in cost of making an AI-built MVP production-ready lands at $60K-$90K, or 2x to 3x the original quote.** That drift is the reason our [vibe code rescue](/services/vibe-code-rescue/) engagements quote a fixed price after the initial audit, so the remediation bill can't creep the way these line items did.
 
 The healthtech founder from the top of this post is the worked example. Her $28K Rails 8 MVP turned into $61K of remediation work over four months: $14K for the security pass, $19K rebuilding the test suite, $11K resolving three different implementations of the same appointment-conflict check, and $17K of tracked engineering hours her in-house engineer logged in Linear once we asked her to start tracking. **Her $28K MVP became an $89K MVP**, and the BAA letter from her HIPAA attorney demanded a 60-day breach timeline plus audit log retention proof - costs that never touched the engineering invoice.
 

@@ -106,7 +106,7 @@ What they delivered was a Rails app that pushed untested, unreviewed code straig
 
 A developer writing code produces 5-15 commits per day, each one tied to a specific change with a message that explains the reasoning. Pull requests get review comments from teammates, tests grow alongside the feature they cover, and you can trace any production bug back to the commit that introduced it. [A 2025 code quality analysis](https://www.qodo.ai/reports/state-of-ai-code-quality/) found that **AI-generated code produces 1.7x more defects when merged without human review**.
 
-If the git history looks like a robot wrote it, it probably did - or the shop skipped the review process to ship faster. Learn more about [AI-generated code risks](/blog/vibe-coding-crisis-ai-code-debt/) and how to spot them.
+If the git history looks like a robot wrote it, it probably did - or the shop skipped the review process to ship faster. Learn more about [AI-generated code risks](/blog/vibe-coding-crisis-ai-code-debt/) and how to spot them. And if you're reading this after already signing with one, our [vibe code rescue](/services/vibe-code-rescue/) service covers the cleanup.
 
 ## When These Questions Don't Apply
 

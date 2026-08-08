@@ -113,7 +113,7 @@ At this point, your dev shop knows how to build features but not how to build ma
 
 ### Month 18: the last window before rewrite
 
-If you're here, your options are limited. A rewrite buys you time, but the rewrite needs discipline or you repeat the pattern. This is where it's worth hiring a rescue-focused team to install the practices that prevent the 25-month timeline from repeating, with [our exit guide](/blog/fire-dev-shop-guide/) covering the contract side.
+If you're here, your options are limited. A rewrite buys you time, but the rewrite needs discipline or you repeat the pattern. This is where it's worth hiring a rescue-focused team to install the practices that prevent the 25-month timeline from repeating, with [our exit guide](/blog/fire-dev-shop-guide/) covering the contract side. For AI-built codebases, that engagement is our [vibe code rescue](/services/vibe-code-rescue/) - audit first, then a fixed-price repair plan.
 
 ## When to rewrite vs. rescue
 

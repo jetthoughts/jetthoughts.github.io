@@ -54,7 +54,7 @@ We worked with a fintech founder last year who couldn't figure out why customers
 
 Over four months those errors compounded across thousands of transactions. The founder found out when one of his users filed a complaint with their bank.
 
-Nothing about it made the news. There was no breach to report and no money technically stolen, just a quiet drift in a number that nobody had bothered to test. That's the more typical way vibe-coded apps fail in production - slowly and expensively, over enough time that the original developer is long gone by the time anyone notices.
+Nothing about it made the news. There was no breach to report and no money technically stolen, just a quiet drift in a number that nobody had bothered to test. That's the more typical way vibe-coded apps fail in production - slowly and expensively, over enough time that the original developer is long gone by the time anyone notices. That quiet, expensive failure mode is the one our [vibe code rescue](/services/vibe-code-rescue/) service was built around.
 
 ## How we ship AI-assisted code now
 
