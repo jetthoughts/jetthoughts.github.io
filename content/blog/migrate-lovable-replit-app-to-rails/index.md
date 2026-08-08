@@ -86,7 +86,7 @@ That dump has one hole in it: your users. Supabase stores accounts - emails and 
 
 Two restore traps follow from that split. Any `public`-schema foreign key that points at `auth.users` will error when you load `dump.sql` into a database with no `auth` schema - drop those constraints from the dump and re-add them against your new `users` table. And keep the exported `id` values: they're the UUIDs every other table references.
 
-Replit apps take the same route with fewer detours. Replit hands the app its own Postgres connection string as `DATABASE_URL`, so `pg_dump` runs against that one and the `--schema=public` filter stops mattering - there's no separate Supabase `auth` schema holding the accounts apart. Whatever table the agent wrote users into comes out with the rest of the dump, so neither restore trap above applies and the CSV export step is one you can skip.
+Replit apps take the same route with fewer detours. Replit hands the app its own Postgres connection string as `DATABASE_URL`, so `pg_dump` runs against that one and the `--schema=public` filter stops mattering - there's no separate Supabase `auth` schema holding the accounts apart. Whatever table the agent wrote users into comes out with the rest of the dump, so you can skip the CSV export and both restore traps above.
 
 Then translate it to Rails migrations. The tables map almost one-to-one; the friction is at the edges. Supabase uses UUID primary keys by default, so tell Rails the same instead of fighting it:
 
