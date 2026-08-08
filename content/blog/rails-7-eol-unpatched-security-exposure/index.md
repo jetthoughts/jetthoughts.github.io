@@ -89,14 +89,14 @@ Used as a bridge - six months of cover while the upgrade gets staffed - that's a
 
 ## Exit 3: remove the surface this CVE needs
 
-CVE-2026-66066 runs through variant processing in libvips. An app that stops feeding it can't be hit by this one:
+CVE-2026-66066 runs through variant processing in libvips. Two ways to take your app off that path:
 
 - Check whether you still need variants at all. Some apps carry `image_processing` from an old scaffold and never call `.variant` - dropping the gem ends the exposure and shortens the Gemfile.
 - If you do need variants, the advisory ships a workaround that runs on an unpatched gem, and swapping the image processor is the other lever. The [CVE writeup](/blog/rails-cve-2026-66066-active-storage-rce/) has both, with the library versions each one requires and the trade-off each one carries.
 
 This closes one CVE and leaves the branch where it was. The next unpatched critical could land in Action Pack or Active Record, and you can't delete those.
 
-This one ships in an afternoon and needs no budget line, which is why it goes first even when exit 1 is already funded.
+Either move ships in an afternoon and needs no budget line, which is why exit 3 goes first even when exit 1 is already funded.
 
 ## Exit 4: accept it and build walls
 
@@ -110,7 +110,7 @@ None of it changes what a SOC 2 auditor or an acquirer's diligence checklist see
 
 ## Which exit, which app
 
-Match each app from your fleet sweep to a row - a mixed portfolio usually lands in several.
+Match each app from your fleet sweep to a row - a mixed portfolio lands in several.
 
 | Situation | Move |
 |---|---|

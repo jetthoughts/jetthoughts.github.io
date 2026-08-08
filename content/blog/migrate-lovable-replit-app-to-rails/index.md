@@ -28,7 +28,7 @@ A researcher ran a version of that check across Lovable's own showcase in early 
 
 The honest answer to "how much of this transfers" depends on which part you're looking at, and the parts age very differently.
 
-Your database schema and the data in it are the durable part. Tables, columns, foreign keys, the actual rows your users created - that ports cleanly, because it's just Postgres underneath. The generated React front end is worth keeping more often than Rails developers like to admit; it renders, it's typed, and rebuilding pixel-perfect UI by hand is a poor use of a rescue budget.
+Your database schema and the data in it are the durable part. Tables, columns, foreign keys, the actual rows your users created - that ports cleanly, because it's just Postgres underneath. The generated React front end is often worth keeping: it renders, it's typed, and rebuilding pixel-perfect UI by hand is a poor use of a rescue budget.
 
 Auth and payments almost never survive. Not because the tools can't wire them up, but because "looks wired up" and "actually enforces the rule" are different states that look identical in a demo.
 
@@ -43,11 +43,11 @@ Here's how it usually splits:
 | Auth | Rarely | Stubbed, hardcoded, or missing session handling. |
 | Payments | Rarely | Stripe checkout exists; webhooks don't. |
 
-One decision drives everything else. If the schema is sane and the data is real, you're doing a backend transplant and keeping the UI - typically a two-to-four week job in our rescues. If the schema is a mess and the "logic" is a thin wrapper over AI-generated CRUD, you're rebuilding, and the old app is a spec, not a codebase.
+One decision drives everything else. If the schema is sane and the data is real, you're doing a backend transplant and keeping the UI. If the schema is a mess and the "logic" is a thin wrapper over AI-generated CRUD, you're rebuilding, and the old app is a spec, not a codebase.
 
 We wrote a longer field guide to that call in [the vibe coding crisis: AI code debt](/blog/vibe-coding-crisis-ai-code-debt/). Read the schema before you decide. Everything downstream forks here.
 
-This is also the point where you decide whether to run the migration yourself. If your team reads Postgres comfortably and has shipped auth before, keep going. If not, [our vibe code rescue service](/services/vibe-code-rescue/) exists for exactly this handoff - a 48-hour audit and a fixed-price plan.
+This is also the point where you decide whether to run the migration yourself. If your team reads Postgres comfortably and has shipped auth before, keep going. If not, [our vibe code rescue service](/services/vibe-code-rescue/) opens with a 48-hour audit and quotes a fixed price from it.
 
 ## What these tools actually generate
 
@@ -57,7 +57,7 @@ Lovable, Bolt, and Replit generate a real, ownable codebase. [Lovable ships a Re
 
 In all three, you can export the code and take the Postgres database with you.
 
-Base44 is the one to check carefully. It's a hosted platform ([Wix acquired it in June 2025](https://www.wix.com/press-room/home/post/wix-further-expands-into-vibe-coding-with-acquisition-of-base44-a-hyper-growth-startup-that-simplif)), and [its data export is per-collection CSV files](https://docs.base44.com/Building-your-app/Managing-your-app-data), not a Postgres dump - the auth and backend services keep running on Base44's infrastructure. You're not migrating a Base44 app so much as rebuilding its backend from the UI and the CSVs.
+Base44 is the one to check carefully. It's a hosted platform ([Wix acquired it in June 2025](https://www.wix.com/press-room/home/post/wix-further-expands-into-vibe-coding-with-acquisition-of-base44-a-hyper-growth-startup-that-simplif)), and [its data export is per-collection CSV files](https://docs.base44.com/Building-your-app/Managing-your-app-data), not a Postgres dump - the auth and backend services keep running on Base44's infrastructure. Migrating a Base44 app means rebuilding its backend from the UI and the CSVs.
 
 v0 is frontend-first - [it can scaffold Next.js route handlers and database integrations now](https://v0.app/docs/full-stack-apps), but the database and auth are still yours to bring, so there's less to export and less to untangle.
 
@@ -85,6 +85,8 @@ That dump has one hole in it: your users. Supabase stores accounts - emails and 
 
 Two restore traps follow from that split. Any `public`-schema foreign key that points at `auth.users` will error when you load `dump.sql` into a database with no `auth` schema - drop those constraints from the dump and re-add them against your new `users` table. And keep the exported `id` values: they're the UUIDs every other table references.
 
+Replit apps take the same route with fewer detours. Replit hands the app its own Postgres connection string as `DATABASE_URL`, so `pg_dump` runs against that one and the `--schema=public` filter stops mattering - there's no separate Supabase `auth` schema holding the accounts apart. Whatever table the agent wrote users into comes out with the rest of the dump, so neither restore trap above applies and the CSV export step is one you can skip.
+
 Then translate it to Rails migrations. The tables map almost one-to-one; the friction is at the edges. Supabase uses UUID primary keys by default, so tell Rails the same instead of fighting it:
 
 ```ruby
@@ -95,7 +97,7 @@ create_table :projects, id: :uuid do |t|
 end
 ```
 
-Watch two things. The foreign keys that pointed at `auth.users` get re-created here against your new `users` table - that seam is where the old auth hands off to the new one. And columns Supabase filled with `auth.uid()` defaults need a Rails-side equivalent, usually set in the model or controller.
+Watch two things. The foreign keys that pointed at `auth.users` get re-created here against your new `users` table - that seam is where the old auth hands off to the new one, and the `users` table itself arrives in the next section, with a UUID primary key you have to ask for. And columns Supabase filled with `auth.uid()` defaults need a Rails-side equivalent, usually set in the model or controller.
 
 Load the data with `psql` into your new database, run the app in a console, and confirm the counts match before you touch anything else.
 
@@ -113,21 +115,21 @@ bin/rails generate authentication
 
 That gives you a `User` model with `has_secure_password`, a `Session` model, sign-in and sign-out, and password reset wired to the mailer.
 
-Two edits before you run its migration. The generated `users` table uses a bigint primary key - change it to `id: :uuid`, or every foreign key you just migrated points at nothing. And the generator ships sign-in and password reset but no sign-up flow: fine for the rows you're importing, but new users can't register until you build that screen.
+Make two edits before you run its migration. The generated `users` table uses a bigint primary key - change it to `id: :uuid`, or every foreign key you just migrated points at nothing. And the generator ships sign-in and password reset but no sign-up flow: fine for the rows you're importing, but new users can't register until you build that screen.
 
 Now load the `auth_users.csv` you exported earlier. The `encrypted_password` column holds bcrypt hashes, and they move straight into `password_digest` because Rails uses bcrypt too - users keep their passwords and never notice. If any hashes are a format `has_secure_password` can't read, force a password reset on first login rather than trying to translate them.
 
-If you need OAuth, roles, or multi-tenancy beyond what the generator covers, that's the Devise conversation. We compared the [Rails 8 authentication generator against Devise](/blog/rails-8-authentication-generator-devise-migration/) for exactly this decision - most rescued MVPs start on the generator and add Devise only when a real requirement shows up.
+If you need OAuth, roles, or multi-tenancy beyond what the generator covers, that's the Devise conversation. We compared the [Rails 8 authentication generator against Devise](/blog/rails-8-authentication-generator-devise-migration/) for exactly this decision - start on the generator and reach for Devise when a real requirement shows up.
 
-The test that matters: log in as user A and try to read user B's data by guessing an ID. In the old app that curl worked. After the migration, the controller should refuse it, because now a scope like `current_user.projects.find(params[:id])` decides what's visible, not a policy nobody wrote.
+The test that matters: log in as user A and try to read user B's data by guessing an ID. In the old app that curl worked. After the migration, the controller should refuse it, because a scope like `current_user.projects.find(params[:id])` now decides what's visible.
 
 ## Payments: the webhooks nobody wired up
 
 Payments fail the same way auth does - the visible half works and the half that moves money doesn't.
 
-Vibe-coded apps reliably produce a working Stripe Checkout button. The customer gets redirected, pays, comes back.
+A Stripe Checkout button is a redirect to a page Stripe hosts, so the generated version works: the customer pays and comes back.
 
-What's missing is the webhook handler, the part where Stripe tells your server "that payment cleared, that subscription renewed, that card got declined." Without it, someone can pay and get nothing, or cancel and keep access, and your database never learns the difference. It's the least visible bug in the app and the one that quietly costs real money.
+What's missing is the webhook handler, the part where Stripe tells your server that a payment cleared or a subscription ended. Without it, someone can pay and get nothing, or cancel and keep access, and your database never learns the difference. It's the least visible bug in the app and the one that quietly costs real money.
 
 Rails handles the webhook as a plain controller action. The two rules that keep it honest: verify the signature so nobody can forge events, and make it idempotent because Stripe retries:
 
@@ -157,17 +159,17 @@ class StripeWebhooksController < ApplicationController
 end
 ```
 
-Skip idempotency and Stripe's retry will activate the same subscription twice - store the event id and check it before acting. This is also where a real test suite earns its cost, because you cannot manually click your way through "card declined on renewal after three successful months." The [quality tax of an AI-built MVP](/blog/quality-tax-ai-mvp-cost/) puts payments at the center for a reason.
+Skip idempotency and Stripe's retry will activate the same subscription twice - store the event id and check it before acting. The [quality tax of an AI-built MVP](/blog/quality-tax-ai-mvp-cost/) puts payments at the center for a reason. This is also where a real test suite earns its cost, because you cannot manually click your way through "card declined on renewal after three successful months."
 
 ## The front end: keep it or replace it
 
-Here the default advice is often wrong. The generated React works. It renders, it's typed, and your users already know it.
+Here the default advice is often wrong. The generated React works, and your users already know it.
 
-If you're keeping React, run Rails in API mode and point the front end at it. Swap the `@supabase/supabase-js` calls for `fetch` to your Rails endpoints, move auth to the session cookie your new backend issues, and delete the Supabase client. The UI doesn't change; its data source does.
+If you're keeping React, run Rails in API mode and point the front end at it. Swap the `@supabase/supabase-js` calls for `fetch` to your Rails endpoints, move auth to the session cookie your new backend issues, and delete the Supabase client. The UI keeps working against a new data source.
 
 One warning: if the SPA lives on a different domain than the Rails API, that session cookie means CORS and SameSite work - rack-cors plus `SameSite=None; Secure`, or serve both from one domain.
 
-If you'd rather consolidate to one framework and one deploy, Hotwire lets you rebuild the interface in server-rendered Rails without a separate frontend build. That's the right call when the team is Ruby-first and the React was mostly forms and tables - which, on a rescued MVP, it usually was. It's the wrong call when the front end is genuinely interactive and rewriting it burns weeks to remove a working thing.
+If you'd rather consolidate to one framework and one deploy, Hotwire lets you rebuild the interface in server-rendered Rails without a separate frontend build. That's the right call when the team is Ruby-first and the React was mostly forms and tables. It's the wrong call when the front end is genuinely interactive and rewriting it burns weeks to remove a working thing.
 
 Either way you now own a deployable app. [Our Rails 8 Docker production guide](/blog/rails-8-docker-deployment-production-guide/) covers containerizing it, and when one box stops being enough, [the Kamal 2 multi-server guide](/blog/kamal-2-multi-server-deployment-complete-guide/) takes it across hosts.
 
@@ -179,7 +181,7 @@ Skip it if the app is a static marketing site with a form. That's a landing page
 
 It's also the wrong move when the product is genuinely realtime-first - a live collaborative editor, a multiplayer canvas, a trading view where every millisecond of push latency shows. Rails does realtime, but a design built around it from day one may be better served elsewhere, and honesty here saves a painful second migration.
 
-The third reason to hold off: a team with zero Ruby experience and no runway to learn. A rescue that hands you a stack nobody can maintain has moved the problem, not solved it. The [pattern behind most failed rebuilds](/blog/47-startups-failed-same-coding-mistake/) is choosing the technology the team can't operate.
+The third reason to hold off: a team with zero Ruby experience and no runway to learn. A rescue that hands you a stack nobody can maintain just relocates the problem. One [pattern behind failed rebuilds](/blog/47-startups-failed-same-coding-mistake/) is choosing technology the team can't operate.
 
 Rails wins when you have data worth keeping, business logic worth enforcing on a server, and someone who can read Ruby - which describes most SaaS MVPs that outgrew their AI builder, but not all of them.
 
