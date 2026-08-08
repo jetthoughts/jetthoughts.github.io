@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — point-in-time validation report; CLAUDE.md bans committing report files.
+
 # Ruby Expert Deployment Validation Report
 
 **Comprehensive validation report for Ruby development standards deployment in JT Site project**

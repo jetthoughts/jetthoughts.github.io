@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — this is a Hugo site (`bin/hugo-build`); Jekyll patterns are from a prior generation.
+
 # Jekyll-Specific Ruby Patterns Reference
 
 **Comprehensive guide to Jekyll Ruby patterns for Hugo compatibility and migration support**

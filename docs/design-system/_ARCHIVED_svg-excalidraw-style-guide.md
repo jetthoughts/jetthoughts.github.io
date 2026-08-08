@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — superseded by the O2 flat-vector system: `.okf/design/house-visual-spec.md` "v3 exhibit spec" (ADR 30.09). The Excalidraw/hand-drawn look was replaced across the course corpus in W3/#434.
+
 # Excalidraw-Style SVG Guide — Course Visuals
 
 Canonical spec for all inline SVGs in the JetThoughts course. Follow these conventions when creating new SVGs. Existing SVGs that don't match should be migrated over time (see Migration Guide below).

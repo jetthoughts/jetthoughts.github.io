@@ -46,7 +46,7 @@ suites (`bin/test` + `bin/dtest`), and design improvements per JetVelocity
 ├── css-loading-order-analysis.md               # load-order reference (banner'd)
 ├── PROJECT-INDEX.md                            # this file
 └── 70-79-archives/
-    ├── superseded-2026-07-12/                  # the falsified Oct-2025 plan (36 docs + README why)
+    ├── superseded-2026-07-12-TOMBSTONE.md      # the falsified Oct-2025 plan (pruned 2026-08-08; recover via git history)
     ├── 70.01…70.03, HISTORICAL-SPRINT-DATA.md  # earlier archives
     └── legacy-css-migration-data/              # 2025-09 raw metrics
 ```

@@ -18,7 +18,7 @@
 - 📋 [Approved spec (authority)](2026-07-12-css-maintainability-redesign.md)
 - 🗺️ [Bundle ownership map + FL burn-down](css-bundle-ownership-map.md)
 - 📊 [Project Index](PROJECT-INDEX.md)
-- 📚 [Superseded Oct-2025 plan (archived)](70-79-archives/superseded-2026-07-12/README.md)
+- 📚 [Superseded Oct-2025 plan (pruned to tombstone)](70-79-archives/superseded-2026-07-12-TOMBSTONE.md)
 
 ---
 
@@ -392,7 +392,7 @@ already ships only its own FL subset — foundation extraction grows shipped byt
 WP3.1/WP3.2 also proposed `.scss` files in a Sass-less pipeline. WP3.3's Hugo
 enhancements (hugo_stats.json, PurgeCSS, safelists) already exist in production.
 The WP3.1-3.4 definitions are preserved in git history (commit 2388c437 and
-earlier) and the archived plan docs under `70-79-archives/superseded-2026-07-12/`.
+earlier) and the pruned Oct-2025 plan (tombstone: `70-79-archives/superseded-2026-07-12-TOMBSTONE.md`; full tree in git history).
 
 **Replaced by**: the strangler rewrite plan in
 [2026-07-12-css-maintainability-redesign.md](2026-07-12-css-maintainability-redesign.md).
@@ -900,7 +900,7 @@ Re-measure commands:
 ```
 Lines eliminated sprints 1-7: ~73,150 (orphan cleanup + consolidation + dedup)
 Old line-count targets (27,394-31,936) retired — methodology falsified;
-see 70-79-archives/superseded-2026-07-12/README.md
+see 70-79-archives/superseded-2026-07-12-TOMBSTONE.md
 ```
 
 ### Quality Metrics (Maintained Throughout)
@@ -981,7 +981,7 @@ fcp_metrics:
   R1…Rlast (FL burn-down 16→0, easiest first).
 - **Shipped**: `css-bundle-ownership-map.md` (Phase 0 item P0.3) — 19 bundles ×
   template × FL files × gzip from a converged production build; 36 superseded
-  Oct-2025 docs moved to `70-79-archives/superseded-2026-07-12/` (audited
+  Oct-2025 docs archived then pruned to `70-79-archives/superseded-2026-07-12-TOMBSTONE.md` (audited
   file-by-file by a read-only agent); PROJECT-INDEX rewritten;
   `css-loading-order-analysis.md` banner + CLAUDE.md pointer updated.
 - **Evidence basis**: PR #363 review (independent agent, SAFE-TO-MERGE) +

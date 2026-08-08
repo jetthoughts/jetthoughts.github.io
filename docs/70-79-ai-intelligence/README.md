@@ -24,22 +24,22 @@ This section documents AI intelligence systems for the jt_site project, includin
 ### 🎯 Tutorials (Learning-Oriented)
 
 **Getting Started**:
-- **[75.04 - SAFLA-Neural Getting Started Tutorial](75.04-safla-neural-getting-started-tutorial.md)** - 30-minute hands-on introduction to the SAFLA-neural system
+- **[75.04 - SAFLA-Neural Getting Started Tutorial](_ARCHIVED_75.04-safla-neural-getting-started-tutorial.md)** - 30-minute hands-on introduction to the SAFLA-neural system
 
 ### 📋 How-To Guides (Problem-Oriented)
 
 **Implementation & Operations**:
-- **[75.02 - SAFLA-Neural Implementation How-To](75.02-safla-neural-implementation-how-to.md)** - Step-by-step deployment guide for SAFLA-neural system
+- **[75.02 - SAFLA-Neural Implementation How-To](_ARCHIVED_75.02-safla-neural-implementation-how-to.md)** - Step-by-step deployment guide for SAFLA-neural system
 
 ### 📚 Reference (Information-Oriented)
 
 **System Specifications**:
-- **[75.01 - SAFLA-Neural Code Review System Reference](75.01-safla-neural-code-review-system-reference.md)** - Complete technical specification of SAFLA-neural architecture
+- **[75.01 - SAFLA-Neural Code Review System Reference](_ARCHIVED_75.01-safla-neural-code-review-system-reference.md)** - Complete technical specification of SAFLA-neural architecture
 
 ### 💡 Explanation (Understanding-Oriented)
 
 **Concepts & Architecture**:
-- **[75.03 - SAFLA-Neural Concepts Explanation](75.03-safla-neural-concepts-explanation.md)** - Why and how SAFLA-neural works, architectural decisions
+- **[75.03 - SAFLA-Neural Concepts Explanation](_ARCHIVED_75.03-safla-neural-concepts-explanation.md)** - Why and how SAFLA-neural works, architectural decisions
 
 ---
 
@@ -48,26 +48,26 @@ This section documents AI intelligence systems for the jt_site project, includin
 ### For New Users
 
 1. **Understand the System**:
-   - Read: [75.03 - Concepts Explanation](75.03-safla-neural-concepts-explanation.md)
+   - Read: [75.03 - Concepts Explanation](_ARCHIVED_75.03-safla-neural-concepts-explanation.md)
    - Time: 15-20 minutes
 
 2. **Get Hands-On**:
-   - Follow: [75.04 - Getting Started Tutorial](75.04-safla-neural-getting-started-tutorial.md)
+   - Follow: [75.04 - Getting Started Tutorial](_ARCHIVED_75.04-safla-neural-getting-started-tutorial.md)
    - Time: 30-45 minutes
 
 3. **Start Using for Real**:
-   - Reference: [75.01 - System Reference](75.01-safla-neural-code-review-system-reference.md)
+   - Reference: [75.01 - System Reference](_ARCHIVED_75.01-safla-neural-code-review-system-reference.md)
    - As needed
 
 ### For DevOps/Technical Leads
 
 1. **Deploy the System**:
-   - Follow: [75.02 - Implementation How-To](75.02-safla-neural-implementation-how-to.md)
+   - Follow: [75.02 - Implementation How-To](_ARCHIVED_75.02-safla-neural-implementation-how-to.md)
    - Time: 4-6 hours initial setup
 
 2. **Understand Architecture**:
-   - Read: [75.01 - System Reference](75.01-safla-neural-code-review-system-reference.md)
-   - Reference: [75.03 - Concepts Explanation](75.03-safla-neural-concepts-explanation.md)
+   - Read: [75.01 - System Reference](_ARCHIVED_75.01-safla-neural-code-review-system-reference.md)
+   - Reference: [75.03 - Concepts Explanation](_ARCHIVED_75.03-safla-neural-concepts-explanation.md)
 
 3. **Monitor & Optimize**:
    - Dashboard: `_runtime/safla-dashboard.html`
@@ -76,7 +76,7 @@ This section documents AI intelligence systems for the jt_site project, includin
 ### For Product Managers
 
 1. **Understand Business Value**:
-   - Read: [75.03 - Concepts Explanation](75.03-safla-neural-concepts-explanation.md) (Practical Implications section)
+   - Read: [75.03 - Concepts Explanation](_ARCHIVED_75.03-safla-neural-concepts-explanation.md) (Practical Implications section)
    - Time: 10 minutes
 
 2. **Track ROI**:
@@ -314,9 +314,9 @@ git_ci_integration:
 - **Office Hours**: Tuesdays 3pm (virtual)
 
 **Documentation**:
-- Start with: [Getting Started Tutorial](75.04-safla-neural-getting-started-tutorial.md)
-- Deep dive: [System Reference](75.01-safla-neural-code-review-system-reference.md)
-- Concepts: [Explanation Document](75.03-safla-neural-concepts-explanation.md)
+- Start with: [Getting Started Tutorial](_ARCHIVED_75.04-safla-neural-getting-started-tutorial.md)
+- Deep dive: [System Reference](_ARCHIVED_75.01-safla-neural-code-review-system-reference.md)
+- Concepts: [Explanation Document](_ARCHIVED_75.03-safla-neural-concepts-explanation.md)
 
 **System Health**:
 - Dashboard: `_runtime/safla-dashboard.html`

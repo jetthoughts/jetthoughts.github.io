@@ -1014,3 +1014,43 @@ real P0 in both boards, in place of the keyword ask.
 **Cadence canon**: LinkedIn Stream 0 total is 3-4 posts/week SHARED across
 campaigns (20.09 §7). Both campaign plans (icp-validation PAUSED 3/10 drafted;
 course-promo 9/~25 drafted) now say so - previously they claimed 5/wk each.
+
+## 2026-08-08 — Repo-wide simplification: config surface + docs estate (tranches 1-5)
+
+Follow-on from the business/ops consolidation, per Paul's "what else needs
+simplifying." Two audits, five tranches, all on PR #441's branch.
+
+**Removed with zero capability loss (~120 KB):** 132 byte-identical stub
+slash-commands (one md5 across all of .claude/commands/ — each was a roster
+entry every session paid for); .claude/agents/templates/ + content/ (claude-flow
+boilerplate whose hooks call an uninstalled binary); .claude/rules/ (575 lines
+of vendored Memoria docs mandating memory_* tools from an MCP configured
+nowhere); AGENTS.md lines 77-621 (the same rules concatenated verbatim).
+
+**Durable rules this sweep produced:**
+
+1. **Config documents only installed tools.** Three independent systems
+   (claude-flow, Memoria, kanban-md board) left instruction surface behind
+   after the tool itself was gone or never wired. Instructions for absent
+   tools are worse than none — they mandate impossible actions.
+2. **Supreme-authority claims must resolve.** docs/README.md declared a
+   /knowledge/ "SUPREME AUTHORITY" that is a symlink to Paul's Mac — dangling
+   in every container/CI session — plus three /projects/elital_* repos that
+   never existed here. Host-only resources must never be load-bearing policy.
+3. **A "latent" registration bug can hide in plain sight**: six agents listed
+   as Critical (keep) had no YAML frontmatter and never registered. A doc's
+   keep-list is not evidence the thing it keeps exists.
+4. **Indexes must be generated, not asserted.** blog-post-index claimed 584
+   posts against 607 actual; now `bin/generate-blog-index` regenerates it
+   (gotcha: File.read needs explicit UTF-8 in the container locale).
+5. **Trackers are queues, not journals.** 2605's tracker hit 1,628 lines,
+   ~72% closed history, items physically out of order — the archive-prefix
+   convention the project already had was the fix (slim tracker + _ARCHIVED_
+   history file).
+6. **Date-cohort archiving must check inbound links per-file**: the Oct-2025
+   sweep nearly archived a Russian-language research doc that 2605 cites as a
+   live June-2026 source.
+
+**Deferred (documented, not done):** the six duplicate 60.xx JD numbers in
+60-69-project-management + moving its four testing docs to 20-29 (M effort,
+inbound-link risk); .junie/ + GEMINI.md/QWEN.md mirrors (other tools' files).

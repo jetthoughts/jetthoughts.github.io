@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — the SAFLA "self-improving neural XP coordination" corpus (this dir + the 75.0x set) had zero inbound references from anywhere outside itself and describes claude-flow machinery that is not installed. History only.
+
 # Area 76: SAFLA Neural XP Coordination System
 
 **Documentation Type**: Navigation Hub (Diátaxis)
