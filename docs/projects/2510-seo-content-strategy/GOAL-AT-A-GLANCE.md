@@ -2,7 +2,7 @@
 
 **ONE-PAGE EXECUTIVE SUMMARY** - quick orientation for agents and stakeholders
 
-**Last Updated**: 2026-07-21
+**Last Updated**: 2026-08-07
 **Status**: 🔄 Supporting workstream under portfolio bet #1 (Vibe Code Rescue) - execution resuming
 **Business plan of record**: content here feeds the [2026 Autumn Client Acquisition Strategy](../2607-vibe-code-rescue/strategy.md) (Vibe Code Rescue offer, 1 client by Nov 30), run via the [Operating System](../../business/operating-system.md).
 
@@ -10,9 +10,10 @@
 > multi-language AI SEO plan (Ruby/Python/Laravel/Elixir). That framing is
 > **superseded**. The project pivoted to **ICP-E rescue-founder positioning**
 > in April 2026. The live plan of record is
-> [`20-29-strategy/20.08-content-plan-data-driven-q3-2026.md`](20-29-strategy/20.08-content-plan-data-driven-q3-2026.md);
-> `20.07` is superseded by it (kept for its topic briefs), the old `20.04` AI
-> rotation is archived and the `20.05` Rails 8.1 wave is paused to Q3 2026.
+> [`20-29-strategy/20.09-content-plan-revision-aug-2026.md`](20-29-strategy/20.09-content-plan-revision-aug-2026.md)
+> (2026-08-07). `20.08` holds the GSC baseline analysis but its allocation and
+> cadence are superseded; `20.07` is kept for its topic briefs; `20.04` is
+> archived and `20.05` is paused.
 
 ---
 
@@ -23,7 +24,7 @@ publishing content that speaks directly to a **non-technical founder who is
 losing control of (or already burned by) a dev shop**.
 
 - **Audience**: ICP-E - see [`90.10-icp-primary-website-target.md`](../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md)
-- **Approach**: 3-stream content rotation at **2-3 posts/week (~10/month)**
+- **Approach**: pipeline-first. Content is gated on 2607 outreach being unblocked; cadence is **~6 posts/month (measured capacity, not target)** - see 20.09
 - **Angle**: the "vibe coding" AI-code-debt crisis woven into every post (45% of AI-generated code carries OWASP vulnerabilities)
 - **Positioning shift**: not just *rescue* ("fire my dev shop") but **control-before-rescue** - founders who still have a team but feel progress, access, and ownership slipping
 
@@ -50,7 +51,8 @@ senior-review trade-offs, salvage-vs-rebuild decisions.
 | **Consultation bookings** | Primary business outcome | Founder audit/discovery calls |
 | **Organic sessions** | Growth trend | Sustained monthly growth vs ~5k baseline |
 | **Page-1 rescue-keyword rankings** | Low-competition capture | Rank within ~60 days of publish |
-| **Publishing cadence** | Execution health | 2-3/week held over the quarter |
+| **Discovery calls booked** | The bet's actual KPI | 8-12 by Nov 30 |
+| **Publishing cadence** | Execution health | ~6/month (measured capacity) |
 
 **Quality gates (non-negotiable, every post):** ICP-E voice-guide compliance
 ([`90.11-voice-guide.md`](../../90-99-content-strategy/strategy-analysis/90.11-voice-guide.md)),
@@ -92,18 +94,20 @@ Package practical tools from the client research as downloadable magnets:
 ## 🧭 EXECUTION MODEL
 
 1. Read the ICP: [`90.10-icp-primary-website-target.md`](../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md)
-2. Pick the next unshipped topic in [`20.08`](20-29-strategy/20.08-content-plan-data-driven-q3-2026.md)
+2. Check the P0 gate in [`20.09`](20-29-strategy/20.09-content-plan-revision-aug-2026.md) - if outreach is stalled, content halts. Then pick the next unshipped topic.
 3. Run the full blog pipeline (draft -> voice/slop/shape critics -> cover -> build -> visual gate)
-4. Update `20.08` status + commit SHA, then update [`TASK-TRACKER.md`](TASK-TRACKER.md)
+4. Update `20.09` status + commit SHA, then update [`TASK-TRACKER.md`](TASK-TRACKER.md)
 
-**Sequence:** validate hooks on LinkedIn -> ship the top-scoring Control posts ->
-build lead-magnet artifacts -> sustain 2-3/week rotation across all three streams.
+**Sequence (revised 2026-08-07):** unblock outreach (P0) -> wire existing posts to
+`/services/vibe-code-rescue/` (P1) -> stop cannibalizing rows (P2) -> durable-news
+and sales-enablement artifacts at ~6/month. Full ordering in
+[`20.09`](20-29-strategy/20.09-content-plan-revision-aug-2026.md).
 
 ---
 
 ## 🔗 AUTHORITY DOCS
 
-- 📋 **Live plan of record**: [`20.08-content-plan-data-driven-q3-2026.md`](20-29-strategy/20.08-content-plan-data-driven-q3-2026.md)
+- 📋 **Live plan of record**: [`20.09-content-plan-revision-aug-2026.md`](20-29-strategy/20.09-content-plan-revision-aug-2026.md)
 - 🎯 **ICP profile**: [`90.10-icp-primary-website-target.md`](../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md)
 - 🗣️ **Voice guide**: [`90.11-voice-guide.md`](../../90-99-content-strategy/strategy-analysis/90.11-voice-guide.md)
 - 📊 **Status**: [`TASK-TRACKER.md`](TASK-TRACKER.md)

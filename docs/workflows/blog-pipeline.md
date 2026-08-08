@@ -8,7 +8,9 @@ Copy this prompt to write the next post:
 Write the next blog post following the full pipeline.
 
 STEP 1 — PICK TOPIC
-Read the content plan: docs/projects/2510-seo-content-strategy/20-29-strategy/20.08-content-plan-data-driven-q3-2026.md
+Read the content plan: docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md
+FIRST check 20.09's P0 gate: if 2607 outreach is stalled, content HALTS - the bet forbids
+a content sprint while the pipeline is blocked. Verify before drafting anything.
 Find the next unshipped topic. Confirm the slug, primary keyword, and target publish date.
 Verify no existing post already owns that keyword (`ls content/blog/ | grep -i <term>`) - several 20.08
 rows name a NEW slug for a topic an existing post already ranks for, and publishing both splits the
@@ -414,7 +416,7 @@ STEP 7 — VALIDATE
   - All internal links work
 
 STEP 8 — UPDATE CONTENT PLAN
-Edit docs/projects/2510-seo-content-strategy/20-29-strategy/20.08-content-plan-data-driven-q3-2026.md:
+Edit docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md:
 - Change topic status from 🔲 Planned to ✅ Published
 - Add commit SHA
 - Update changelog
@@ -542,7 +544,8 @@ The quick start prompt above is the practical execution guide. Below is the full
 
 | File | Purpose |
 |---|---|
-| `docs/.../20.08-content-plan-data-driven-q3-2026.md` | What to write next (plan of record) |
+| `docs/.../20.09-content-plan-revision-aug-2026.md` | What to write next (plan of record) + the P0 outreach gate |
+| `docs/.../20.08-content-plan-data-driven-q3-2026.md` | GSC baseline analysis (allocation superseded) |
 | `docs/.../20.07-content-plan-icp-e-q2-2026.md` | Topic briefs for founder-stream topics (schedule superseded) |
 | `docs/.../90.10-icp-primary-website-target.md` | Who we write for (ICP-E) |
 | `docs/.../90.11-voice-guide.md` | **HOW we write** — tone, banned words, structural patterns, self-test |
