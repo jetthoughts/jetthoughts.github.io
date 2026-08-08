@@ -8,6 +8,10 @@ tags: ["rails", "authentication", "devise", "security", "rails8"]
 canonical_url: "https://jetthoughts.com/blog/rails-8-authentication-generator-devise-migration/"
 cover_image: "cover.png"
 slug: "rails-8-authentication-generator-devise-migration"
+aliases:
+  - /blog/rails-8-authentication-generator-complete-guide/
+  - /blog/rails-8-introducing-built-in-authentication-generator-ruby/
+  - /blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/
 author: "JetThoughts Team"
 metatags:
   image: cover.png
@@ -119,7 +123,7 @@ For teams struggling with Devise complexity and seeking to modernize their authe
 
 ## Understanding Rails 8's Built-In Authentication
 
-Rails 8 auth asks one question: what do you actually use? For most apps, the answer is surprisingly little. If you haven't read the [overview of Rails 8's authentication generator](/blog/rails-8-introducing-built-in-authentication-generator-ruby/), start there for the high-level picture.
+Rails 8 auth asks one question: what do you actually use? For most apps, the answer is surprisingly little.
 
 ### Core Philosophy: Convention Over Framework
 
@@ -137,7 +141,7 @@ $ rails generate authentication
 # - Migrations for users and sessions tables
 ```
 
-That's it. No complex configuration files, no mysterious modules, no hidden behaviors. The foundation builds on [authentication helpers introduced in Rails 7.1](/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/) -- `generates_token_for`, `authenticate_by`, and `normalizes` -- so the patterns will feel familiar if you've already adopted those.
+That's it. No complex configuration files, no mysterious modules, no hidden behaviors. The foundation builds on authentication helpers introduced in Rails 7.1 -- `generates_token_for`, `authenticate_by`, and `normalizes` -- so the patterns will feel familiar if you've already adopted those.
 
 ### Architecture: Simple and Transparent
 
@@ -220,6 +224,20 @@ end
 
 Transparent, understandable, and easy to customize. No hidden behaviors.
 
+The `find_by` + `authenticate` pair above works, but it runs two separate steps and leaks timing information: a lookup that misses returns instantly, one that hits and fails the password check takes slightly longer. `authenticate_by`, shipped in Rails 7.1, collapses both into one constant-time call:
+
+```ruby
+if (user = User.authenticate_by(email: params[:email], password: params[:password]))
+  session[:user_id] = user.id
+  redirect_to root_path, notice: "Signed in successfully"
+else
+  flash.now[:alert] = "Invalid email or password"
+  render :new, status: :unprocessable_entity
+end
+```
+
+Same outcome, no timing gap an attacker can use to enumerate valid emails. Prefer `authenticate_by` in new code; the `find_by` + `authenticate` pattern above still works and you'll see it in older codebases.
+
 #### Current User Pattern
 
 ```ruby
@@ -259,17 +277,12 @@ class PasswordsController < ApplicationController
     user = User.find_by(email: params[:email])
 
     if user
-      # Generate secure token using Rails 7.1+ generates_token_for
       token = user.generate_token_for(:password_reset)
-
-      # Send password reset email
       UserMailer.password_reset(user, token).deliver_later
-
-      redirect_to root_path, notice: "Password reset instructions sent"
-    else
-      flash.now[:alert] = "Email not found"
-      render :new, status: :unprocessable_entity
     end
+
+    # Same message whether the email exists or not -- see below
+    redirect_to root_path, notice: "Password reset instructions sent"
   end
 
   def edit
@@ -299,6 +312,8 @@ class PasswordsController < ApplicationController
   end
 end
 ```
+
+Two details worth getting right here. First, `create` above always redirects with the same message regardless of whether the email matched -- if you branch on "email not found," an attacker can enumerate your user base one request at a time. Second, `generates_token_for` signs the token against the user's password digest, so a token issued before a password change is invalid after it: someone who intercepts an old reset email can't reuse the link once the password has actually been reset.
 
 #### Email Confirmation
 
@@ -450,6 +465,12 @@ end
 ```
 
 #### Session Management and Device Tracking
+
+The default `session[:user_id]` approach stores a signed user ID in a cookie -- it works, but you can't revoke it. If a user's laptop is stolen or a password leaks, that cookie stays valid until it expires on its own. Moving sessions into a database table fixes this: the cookie holds a session token instead of a user ID, and logging a user out everywhere is a single `destroy_all` call:
+
+```ruby
+user.sessions.destroy_all # every device's cookie stops working on its next request
+```
 
 ```ruby
 # db/migrate/[timestamp]_create_sessions.rb
@@ -1036,6 +1057,8 @@ Rails.application.config.session_store :cookie_store,
   expire_after: 2.weeks           # Session expiration
 ```
 
+Two things break this quietly if you skip them. Without `config.force_ssl = true` in `config/environments/production.rb`, a `secure: true` cookie gets silently rejected the first time a request lands on plain HTTP. And `expire_after` counts from login, not from last activity -- a user who logs in and works for three hours gets logged out mid-session unless you also bump the cookie's expiry on each authenticated request (`before_action :refresh_session` that rewrites `cookies.signed.permanent[:session_token]` is enough).
+
 #### Password Strength Enforcement
 
 ```ruby
@@ -1332,6 +1355,6 @@ If you're starting fresh on Rails 8, skip Devise entirely. Run `rails generate a
 
 If you're migrating, start with Phase 1: audit your Devise usage and map it to Rails 8 equivalents. The password hashes are compatible -- that's the hardest part already solved. Run dual auth in production for at least two weeks before cutting over.
 
-For related reading: our [Argon2 migration guide](/blog/rails-argon2-has-secure-password-migration-guide/) covers upgrading password hashing beyond BCrypt, and the [Rails 8 authentication generator overview](/blog/rails-8-introducing-built-in-authentication-generator-ruby/) walks through the generated code in detail.
+For related reading: our [Argon2 migration guide](/blog/rails-argon2-has-secure-password-migration-guide/) covers upgrading password hashing beyond BCrypt.
 
 For teams undertaking auth migrations or needing security guidance, our [Rails development team](/services/app-web-development/) has done this migration three times in production -- we can help you avoid the sharp edges.

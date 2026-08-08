@@ -288,7 +288,7 @@ Be honest about when this isn't worth the effort:
 
 Start with the hybrid verifier and metrics. Ship it behind a feature flag if your team does staged rollouts. Monitor the BCrypt-to-Argon2 conversion rate daily; on the two production apps we have shipped this on so far, daily-active users had rotated within fourteen days, and weekly-active users by week six.
 
-If you're also modernizing your auth stack, the [Rails 8 authentication generator](/blog/rails-8-introducing-built-in-authentication-generator-ruby/) pairs well with this migration. And if you're hardening more than just passwords, our post on [authentication patterns in Rails 7.1](/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/) covers the broader picture.
+If you're also modernizing your auth stack, our [Rails 8 authentication generator guide](/blog/rails-8-authentication-generator-devise-migration/) covers the full migration from Devise, including the `normalizes`, `generates_token_for`, and `authenticate_by` helpers this migration builds on.
 
 For teams handling sensitive data, pair this with [encrypted data compression in Rails 8](/blog/ruby-on-rails-8-custom-compression-for-encrypted-data/) so the at-rest layer matches the new password discipline. And if you're containerizing your deploys, our [Rails 8 Docker production guide](/blog/rails-8-docker-deployment-production-guide/) covers how to handle migrations safely during rollout.
 
