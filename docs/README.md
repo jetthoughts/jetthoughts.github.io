@@ -6,176 +6,42 @@
 |---|---|
 | `10-19-core-development/` … `90-99-content-strategy/` | Engineering/tech reference by domain (testing in `20-29-testing-qa/`, PM in `60-69-project-management/`, content in `90-99-content-strategy/`) |
 | `adr/` · `incidents/` · `design-system/` | Decisions · postmortems · design tokens |
-| `business/` | Company OS, vision, opportunity portfolio |
+| `business/` | Company OS, vision, opportunity portfolio — the company layer ([`business/index.md`](business/index.md)) |
 | `projects/<YYMM-slug>/` | One folder per initiative (own JD sub-tree; superseded material under its `70-79-archives/`) |
-| `workflows/` | ONLY cross-cutting pipeline how-tos (blog/linkedin pipelines, flow-router, commands, BASE_HANDBOOK) — not a catch-all |
+| `workflows/` | ONLY cross-cutting pipeline how-tos (blog/linkedin pipelines, flow-router, BASE_HANDBOOK) — not a catch-all |
 
-New docs go into the matching area with `NN.NN-name-{reference|tutorial|how-to}.md` naming — never loose at `docs/` root (root was decluttered 66→28 files on 2026-08-01; the remaining loose files are legacy pending triage).
+New docs go into the matching area with `NN.NN-name-{reference|tutorial|how-to}.md` naming — never loose at `docs/` root.
 
-## 🎯 Authority Hierarchy
+## 🎯 Authority
 
-1. **SUPREME AUTHORITY**: `/knowledge/` - Global standards (inherited via symbolic link)
-   - Company-wide practices and universal patterns
-   - Cannot be overridden by project documentation
-   - Automatically propagated to all linked projects
+1. **`CLAUDE.md`** — the always-loaded policy file; its Critical Files table and behavioral constraints govern.
+2. **`docs/`** — this tree: project reference, plans of record, and the business layer.
+3. **`.okf/`** — the distilled operational-knowledge bundle (consume via the `/okf:okf` skill; `index.md` first).
 
-2. **SECONDARY AUTHORITY**: `docs/` - JT_Site project adaptations
-   - Project-specific implementations and decisions
-   - Must extend (not override) global standards
-   - Hugo, CSS, JavaScript, visual testing specifics
+*(Historical note, 2026-08-08: this file previously declared a `/knowledge/` "SUPREME AUTHORITY" inherited via symlink, plus cross-project references to `/projects/elital_*`. That symlink resolves only on Paul's host machine and the cross-project paths never existed in this repo — every rule that depended on them was unenforceable in container/CI sessions and has been removed. Host-only resources must never be load-bearing for repo policy.)*
 
-## 📚 Navigation Guide
+## 🔍 Research Protocol
 
-### **Global Standards** (Supreme Authority - Check FIRST)
-- **Universal Patterns**: Browse `/knowledge/` for company-wide standards
-- **TDD Methodology**: `/knowledge/20.01-tdd-methodology-reference.md`
-- **Security Standards**: `/knowledge/40.01-security-first-development.md`
-- **Agent Coordination**: `/knowledge/30.01-agent-coordination-patterns.md`
-- **Knowledge Management**: `/knowledge/60.01-johnny-decimal-reference.md`
+Markdown (docs/, content/, .okf/) → `qmd` first (collection `jt-site`); code (templates/CSS/Ruby) → claude-context MCP at the current repo root; exact filenames/slugs → `rg`/`ls`. Full protocol + examples: CLAUDE.md §Research Protocol.
 
-### **JT_Site Specifics** (Secondary Authority - Check SECOND)
-- **Project Adaptations**: Browse `docs/` for jt_site implementations
-- **Visual Testing**: Project-specific visual regression patterns
-- **Hugo Patterns**: Static site generation and CSS patterns
-- **Agent Configurations**: See `.claude/agents/` for jt_site agent configs
-- **Active Projects**: See `docs/projects/` for current work
+## 📝 Before creating a new doc
 
-### **Cross-Project Learning** (Tertiary Reference)
-- **AI Search Patterns**: `/projects/elital_search/docs/` for search implementations
-- **Sync Patterns**: `/projects/elital_sync/docs/` for synchronization
-- **Testing Tools**: `/projects/snap_diff-capybara/docs/` for visual testing
+1. Search first (qmd / Grep) — can an existing file take the change?
+2. Pick the area by CLAUDE.md's routing rule; check the area's `README.md` for the next free `NN.NN` number.
+3. Name it `NN.NN-descriptive-name-{reference|tutorial|how-to}.md` (Diátaxis type suffix).
+4. Never create `*_new.*`, `*_refactored.*`, `*_v2.*`, `*_copy.*` variants.
 
-## 🔍 Research Protocol (MANDATORY for ALL Agents)
+## 🛠️ Tech stack (orientation)
 
-### **Step-by-Step Search Sequence**
-```bash
-# Step 1: Global standards search (SUPREME AUTHORITY - check FIRST)
-claude-context search "[topic]" --path "/knowledge/"
+Hugo static site (`bin/hugo-build`) · PostCSS pipeline · vanilla JS (minimal) · Ruby test infra (Minitest + Capybara + snap_diff screenshot comparison) · GitHub Actions CI.
 
-# Step 2: JT_Site adaptations search (SECONDARY AUTHORITY - check SECOND)
-claude-context search "[topic]" --path "/projects/jt_site/docs/"
+## 🚀 Fresh-session entry points
 
-# Step 3: Cross-project pattern discovery (TERTIARY REFERENCE)
-claude-context search "[topic]" --path "/projects/"
-
-# Step 4: Cross-reference validation (MANDATORY)
-grep -r "knowledge/" /projects/jt_site/docs/  # Verify global references
-```
-
-### **Research Tools Hierarchy**
-1. **claude-context**: Codebase and handbook semantic search
-2. **context7**: Online framework documentation
-3. **package-search**: Dependencies and source code analysis
-4. **searxng/brave-search**: Current best practices validation
-
-## 📝 Before Creating New Documentation
-
-### **Pre-Creation Checklist**
-1. ✅ **Search Global Standards**: Check if pattern exists in `/knowledge/`
-2. ✅ **Search JT_Site Docs**: Check if pattern exists in `docs/`
-3. ✅ **Validate Need**: Confirm new doc is necessary (no duplication)
-4. ✅ **Plan Extension**: Determine how to extend (not override) global standards
-5. ✅ **Choose Classification**: Select appropriate Johnny Decimal area and Diátaxis type
-
-### **Naming Convention**
-```
-Format: XX.YY-descriptive-name-diataxis-type.md
-
-Examples:
-- 70.01-hugo-static-site-generation-reference.md
-- 71.05-css-visual-regression-testing-how-to.md
-- 72.08-capybara-test-patterns-tutorial.md
-```
-
-### **Required Cross-References**
-All docs MUST reference relevant global standards:
-```markdown
-**Global Reference**: `/knowledge/XX.YY-file-name.md` (Global [standard-type])
-**Project Adaptation**: This document extends global standards for JT_Site specifics
-```
-
-## 🛡️ Quality Awareness (Guidelines, NOT Enforcement)
-
-### **Anti-Duplication Awareness**
-Before adding files, consider:
-- 🔍 **Search First**: Use claude-context, Glob, Grep to find existing files
-- 📊 **Assess Reuse**: Can existing files accommodate your changes?
-- 🔧 **Restructure First**: Consider consolidating before creating new files
-- ❌ **Avoid Patterns**: `*_new.*`, `*_refactored.*`, `*_v2.*`, `*_copy.*`
-
-**Note**: These are guidelines for team awareness, NOT automated blocking. Use judgment.
-
-### **Test Quality (Behavioral Focus)**
-- 🎯 **Behavior Over Implementation**: Focus tests on business behavior, not internals
-- 🚫 **Avoid Test Smells**: Reference `/knowledge/25.04-test-smell-prevention-enforcement-protocols.md`
-- 📝 **Descriptive Assertions**: Use clear, descriptive failure messages
-- 🧪 **Test-First Development**: Write tests before implementation when appropriate
-
-**Note**: Guidelines are recommendations for better test quality, not rigid enforcement rules.
-
-## 🛠️ JT_Site Tech Stack
-
-### **Core Technologies**
-- **Static Site Generator**: Hugo
-- **Styling**: CSS, SCSS, Sass
-- **JavaScript**: Vanilla JS (minimal, progressive enhancement)
-- **Ruby**: Testing infrastructure and tooling
-
-### **Testing Stack**
-- **Integration Testing**: Capybara (browser automation)
-- **Test Framework**: Minitest
-- **Browser Driver**: Selenium WebDriver
-- **Visual Testing**: snap_diff-capybara (screenshot comparison)
-
-### **Development Workflow**
-- **Version Control**: Git
-- **CI/CD**: GitHub Actions
-- **Deployment**: Static hosting (GitHub Pages, Netlify, etc.)
-
-## 🚀 Quick Start for Agents
-
-### **New Agent Onboarding**
-1. **Read Global Knowledge**: Start with `/knowledge/KNOWLEDGE_INDEX.md`
-2. **Review JT_Site Docs**: Browse `docs/` for project-specific patterns
-3. **Understand Tech Stack**: Familiarize with Hugo, CSS, Capybara
-4. **Check Agent Configs**: Review `.claude/agents/` for existing agent patterns
-
-### **Before Any Implementation**
-1. **Research Global Standards**: Check global knowledge for established patterns
-2. **Research JT_Site Patterns**: Check project docs for adaptations
-3. **Validate Approach**: Ensure compliance with both global and project standards
-4. **Coordinate with Experts**: Spawn appropriate expert agents for guidance
-
-## 📋 Documentation Organization
-
-### **Johnny Decimal Areas (JT_Site)**
-```
-70-79: Static Site Generation & Hugo
-80-89: Visual Testing & Browser Automation
-90-99: Project-Specific Tooling & Scripts
-```
-
-### **Diátaxis Content Types**
-- **Tutorial**: Learning-oriented step-by-step guides
-- **How-To**: Problem-oriented solutions for specific tasks
-- **Explanation**: Understanding-oriented conceptual documentation
-- **Reference**: Information-oriented technical specifications
-
-## 🔗 Related Resources
-
-### **Global Handbooks**
-- **Master Index**: `/knowledge/KNOWLEDGE_INDEX.md` (99+ documents)
-- **TDD Standards**: `/knowledge/20.01-tdd-methodology-reference.md`
-- **Four-Eyes Principle**: `/knowledge/20.02-four-eyes-principle-global.md`
-- **Security-First**: `/knowledge/40.01-security-first-development.md`
-
-### **Cross-Project Resources**
-- **Autonomus AI Swarm**: Main project with comprehensive agent ecosystem
-- **Elital Search**: AI search patterns and CrewAI integration
-- **Snap Diff Capybara**: Visual regression testing tool (used by jt_site)
+- **Any task**: `docs/workflows/BASE_HANDBOOK.md` + `docs/workflows/flow-router.md`
+- **Outbound/sales/pipeline**: `docs/projects/2607-vibe-code-rescue/operation-runbook.md` ▶ START HERE
+- **Company numbers**: `docs/business/operating-system.md` §1
+- **Content**: `docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md` (check its P0 gate first)
 
 ---
 
-**Last Updated**: 2025-09-30
-**Authority Level**: Navigation Hub (references both Supreme and Secondary authorities)
-**Maintenance**: Update when significant documentation structure changes occur
+**Last Updated**: 2026-08-08 — phantom-authority layer removed; hub rewritten lean.
