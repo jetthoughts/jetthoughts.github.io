@@ -1,11 +1,11 @@
-> GROOMING — T4 (web cold) + T5 (Reddit/community cold). /brainstorming with voting, 3 sub-agents ideated (QueryStrategist, VoCWorkflow, ValidationDesigner). PENDING PAUL'S APPROVAL before any sourcing runs.
+> GROOMING — T4 (web cold) + T5 (Reddit/community cold). /brainstorming with voting, 3 sub-agents ideated (QueryStrategist, VoCWorkflow, ValidationDesigner). **APPROVED — sourcing ran and completed 2026-07-22.** The Vote 3 v2 rubric below remains the LIVE qualification gate for all re-verification (#29) and future sourcing; nothing in this file blocks on Paul.
 
 # T4/T5 Grooming — how a session builds the prospect list + harvests VoC
 
 **Created**: 2026-07-22 | **Revised**: 2026-07-26 (Vote 3 → v2 rubric, card #28 — verified recency + routing + thread-health hard gates after batch-1 60% failure) | **Owner**: agent-built | **Feeds**: T6 dedupe → T7 openers → C0 send (Paul's desk P3)
 **Inputs**: `sourcing-pipeline.md` (T2), `icp-trigger-taxonomy.md` (T1), `assumptions-register.md` (A0 D3), `voice-of-customer.md`, `customer-profile-four-forces.md`
 **Method**: 3 background sub-agents ideated approaches; scored below; picks + carried evidence become the groomed cards.
-**HARD-GATE**: this is the DESIGN. No actual sourcing (opening threads, writing rows) runs until Paul approves the design below.
+**Gate history**: the original design HARD-GATE (no sourcing until Paul approves) was satisfied 2026-07-22 and is closed. The live gate is the Vote 3 v2 qualification rubric itself — every row admitted to `cold-prospect-list.md` must clear its 5 checks.
 
 ---
 

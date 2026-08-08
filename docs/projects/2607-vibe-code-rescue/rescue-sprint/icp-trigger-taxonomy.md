@@ -88,7 +88,7 @@ Warm signals (someone Paul already knows shows one of these) always outrank cold
 
 ## Competitor note (so C0 openers don't sound like the other six rescue shops)
 
-The "broken vibe-coded MVP -> free audit -> fixed-price rescue" offer is already crowded: Modall (vibe code cleanup & recovery), HeyDev, AttributeX ("Get a Free Audit"), Autonoma, plus solo devs (Anton de Villiers) and Rails shops (JetRockets, public $100/hr and $25,600 minimum - confirms our $25K band). Our wedge is **Paul as the named fractional-CTO trust layer on every call** and **founder ownership handed back at each milestone** - not "we audit code." Openers must lead with the trust/ownership angle, not the audit mechanic every competitor already offers.
+The "broken vibe-coded MVP -> free audit -> fixed-price rescue" offer is already crowded: Modall (vibe code cleanup & recovery), HeyDev, AttributeX ("Get a Free Audit"), Autonoma, plus solo devs (Anton de Villiers) and Rails shops (JetRockets, public $100/hr and $25,600 minimum - a market-rate benchmark; note OUR band is $2,500/$7,500/$10,000, a deliberate undercut, per A2 2026-07-22). Our wedge is **Paul as the named fractional-CTO trust layer on every call** and **founder ownership handed back at each milestone** - not "we audit code." Openers must lead with the trust/ownership angle, not the audit mechanic every competitor already offers.
 
 ---
 

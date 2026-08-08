@@ -20,7 +20,7 @@ Session start: always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflo
 - **Tech posts**: Thoughtbot style. Open with tension not features. Own opinions. Code as narrative evidence. Honest tradeoffs.
 - Run the stream-specific self-test checklist before publishing.
 
-**Finding posts to reference (MANDATORY when writing blog posts):** Use claude-context MCP search first: `Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "topic keywords"`. For tag/slug lookups see `docs/blog-post-index.md`. Never guess slugs — verify with `ls content/blog/<slug>/index.md`.
+**Finding posts to reference (MANDATORY when writing blog posts):** Use claude-context MCP search first: `Search the codebase at <repo root> for: "topic keywords"` (current checkout root via `git rev-parse --show-toplevel`; never a hardcoded machine path). For tag/slug lookups see `docs/blog-post-index.md`. Never guess slugs — verify with `ls content/blog/<slug>/index.md`.
 
 Workflow references:
 - `docs/workflows/css-consolidation.md`
@@ -28,6 +28,15 @@ Workflow references:
 - `docs/workflows/cover-images.md` (canonical spec in `.stitch/design.md`)
 - `docs/workflows/commands.md`
 - `docs/workflows/agents.md`
+
+## Business & operations (company layer)
+
+The company itself — goal, OKR, rocks, weekly numbers, portfolio — lives in `docs/business/`:
+- `operating-system.md` — the weekly loop; §1 carries this week's real numbers (bound to the 2607 pipeline ledger)
+- `opportunity-portfolio.md` — the bets; one is Validating at a time (currently 2607 Vibe Code Rescue, 1 client by Nov 30)
+- Execution entry point for the active bet: `docs/projects/2607-vibe-code-rescue/operation-runbook.md` **▶ START HERE**
+
+Any outbound/sales/pipeline task starts from that runbook, not from memory.
 
 ## Projects
 

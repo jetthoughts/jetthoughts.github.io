@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — describes the abandoned 4-pillar multi-language plan (last real update 2025). Live plan of record: [`20-29-strategy/20.09-content-plan-revision-aug-2026.md`](20-29-strategy/20.09-content-plan-revision-aug-2026.md); orientation: [`GOAL-AT-A-GLANCE.md`](GOAL-AT-A-GLANCE.md). Kept for history only — do not act on anything below.
+
 # SEO Content Strategy Project 2510 - Master Index
 
 **Quick Start for Agents**: This is your ONE-STOP navigation hub for the SEO content strategy project.

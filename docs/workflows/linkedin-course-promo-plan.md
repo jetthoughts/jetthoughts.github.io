@@ -1,7 +1,8 @@
 # LinkedIn Course Promotion Plan — "From Idea to First Paying Customer"
 
 **Purpose:** Weekly LinkedIn promotion of the free course at `/course/tech-for-non-technical-founders-2026/`, posted as Paul Keen.
-**Cadence:** Up to 5 posts/week, one course module per week, 5-week core cycle, then evergreen rotation.
+**Status (2026-08-08):** 9 of ~25 drafts written (through week2-fri), none posted; the Aug-14 first-evidence read has not happened. Cadence when live fits inside 20.09 §7's **Stream 0 total of 3-4 posts/week shared with the ICP campaign** — the original "up to 5/week" is superseded (two live plans at 5/wk each would claim 10/wk against a 3-4/wk budget).
+**Cadence:** One course module per week, 5-week core cycle, then evergreen rotation — volume per the status line above.
 **Voice:** All rules in `docs/workflows/linkedin-post-pipeline.md` apply verbatim (story shape, 5 sentence tests, AI score ≤ 2/10, opener rotation, no em dashes). This file only adds the course-promo layer.
 **Save location for drafts:** `linkedin-posts/course-promo/week{N}-{day}-{slug}.md` (same frontmatter format as ICP campaign, plus `campaign: course-promo`).
 

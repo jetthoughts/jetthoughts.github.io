@@ -5,7 +5,7 @@
 **Part of**: JetThoughts business portfolio bet #1 (state: Validating) - governed by the company [operating system](../../business/operating-system.md); see the [business layer](../../business/index.md) + [portfolio](../../business/opportunity-portfolio.md). This project validates ONE opportunity; the company/vision/OS live in `docs/business/`.
 **Executive summary (Shape Up pitch)**: [`executive-summary.md`](executive-summary.md) - read this first for the one-page bet.
 **Related**: [`operating-system.md`](../../business/operating-system.md) (how we run this weekly) · [`operation-runbook.md`](operation-runbook.md) (step-by-step task cards for separate sessions — **▶ START HERE** to execute) · 2510 content project [`GOAL-AT-A-GLANCE`](../2510-seo-content-strategy/GOAL-AT-A-GLANCE.md) · ICP [`90.10`](../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md)
-**Current state (2026-07-21)**: foundation set — assumptions register + white-label partner + offer/kit/booking drafts + trigger taxonomy + sourcing pipeline all done. Next agent work: build the prospect list (runbook T4/T5). To pick up work in any new session, open the runbook's **▶ START HERE** block.
+**Current state**: this file is the durable WHY, not the state ledger — live state is the runbook's **▶ START HERE** block ([`operation-runbook.md`](operation-runbook.md)); weekly numbers are `operating-system.md` §1. Open those in any new session; do not act on dates in this file.
 
 ---
 
@@ -18,8 +18,11 @@ who explains everything in plain English.
 ## Why now (2026 market, validated 2026-07-21)
 
 The vibe-coding wave manufactured a wave of broken, funded MVPs. "Vibe code rescue" is now
-a named, fast-growing service category with a proven offer model - and competitors are only
-just entering it. Rails is the winning rebuild stack, which is our home turf.
+a named, fast-growing service category with a proven offer model. **Correction (2026-08-07,
+20.09 §10)**: the category is no longer early — page 1 for the term is fully occupied and a
+competitor uses the exact name as their page title/slug. The demand pool is real either way;
+whether to fight for the name or differentiate is an open decision on Paul's desk (OS §5).
+Rails is the winning rebuild stack, which is our home turf.
 
 - Rescue engagements run **$25K-$50K over 4-8 weeks**, keeping 30-50% of original code; specialists bill $100-300/hr.
 - A Rails-8 fractional CTO rebuilt a YC-backed SaaS's broken Vercel+Firebase MVP in **6 weeks for a fixed $40K** vs a $150K agency quote - our exact lane.
@@ -50,9 +53,10 @@ end to end and produces the first case study.
    delivers; Paul owns the relationship. This is the conversion engine.
 2. **Landing page -> booking machine** - rescue positioning already live (PR #385); add the
    offer, case-study proof, one "Book a Rescue Audit" CTA.
-3. **Demand-gen, all channels** - LinkedIn outbound (Paul, 3-4x/wk, control-before-rescue
-   hooks) for fast pipeline; 3-stream content engine + "vibe code rescue" SEO cluster for
-   compounding pipeline; paid (LinkedIn/Google) on rescue keywords to buy the Autumn window.
+3. **Demand-gen, three lanes summing to the KR** (revised 2026-08-08) - warm intros
+   (PRIMARY per A0 C1) + LinkedIn (agent drafts, Paul posts, 3-4x/wk total) + cold community
+   re-source as top-up. Content is support-only (20.09 pipeline-first); the SEO cluster and
+   paid pilot are cut/archived - paid waits on an organic reply signal.
 4. **Lead magnets** - audit scorecard, GitHub/AWS ownership checklist, salvage-vs-rebuild
    decision tree -> email capture -> audit CTA.
 
@@ -60,8 +64,8 @@ end to end and produces the first case study.
 
 | Window | Focus | Client-getting milestone |
 |---|---|---|
-| **Aug** | Build the machine | Offer + price defined ✓ (2026-07-22); white-label partner locked ✓ (2026-07-21); landing CTA + 1 case study live; LinkedIn at 3-4/wk; paid pilot on rescue keywords |
-| **Sep** | Fill the funnel | Ship 5 Control posts + rescue SEO cluster; magnets live; 5-8 discovery calls booked |
+| **Aug** | Build the machine + open the lanes | Offer + price defined ✓ (2026-07-22); partner locked ✓ (2026-07-21); warm list populated (Paul's ~10 names) + first sends; LinkedIn drafts flowing at 3-4/wk total; landing CTA live |
+| **Sep** | Fill the funnel | All three lanes active; **Sep 30 gate: ≥3 discovery calls booked, else pause and re-open A + C**; sales-enablement artifacts only as calls need them |
 | **Oct** | Convert | Deliver first audits -> rescue proposals; first signing; publish our own rescue case study |
 | **Nov** | Compound | Referral + case-study loop; Q1 2027 pipeline full |
 

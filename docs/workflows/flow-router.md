@@ -3,9 +3,10 @@
 Read this at session start to route tasks to the right workflow without explicit user notice.
 
 ## Routing Rules
-- LinkedIn post creation or edits, especially `linkedin-posts/**` → `@docs/workflows/linkedin-post-pipeline.md`
-- LinkedIn ICP validation campaign posts → `@docs/workflows/linkedin-post-pipeline.md` and `@docs/workflows/linkedin-icp-validation-plan.md`
-- Content creation or edits → `@docs/workflows/blog-pipeline.md` (mandatory)
+- **Outbound / sales / pipeline / prospect / discovery-call work (2607)** → `@docs/projects/2607-vibe-code-rescue/operation-runbook.md` **▶ START HERE** (the OS-designated entry point for any fresh session)
+- **Company-layer work (goal, OKR, rocks, portfolio, weekly numbers)** → `@docs/business/index.md` + `@docs/business/operating-system.md`
+- LinkedIn post creation or edits, especially `linkedin-posts/**` → `@docs/workflows/linkedin-post-pipeline.md` (it routes to the active campaign plan — check the campaign's status banner; the ICP campaign is currently PAUSED)
+- Content creation or edits → `@docs/workflows/blog-pipeline.md` (mandatory; its P0 gate can halt content entirely)
 - Cover image work → `docs/workflows/cover-images.md` and `.stitch/design.md`
 - Image/cover requests (even without content) → `@docs/workflows/cover-images.md` and `@.stitch/design.md`
 - HTML/CSS changes → `@docs/workflows/css-consolidation.md`

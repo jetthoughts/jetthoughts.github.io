@@ -8,38 +8,11 @@ Strategy/gates/Paul's desk live in [`operation-runbook.md`](operation-runbook.md
 
 ---
 
-## Stage 1 — Source (all `Ready`, parallel-safe)
+## Stage 1 — Source
 
-### P1 · IndieHackers comment-mine  → `prospects/p1-ih-comments.md`
-- **do**: open each thread in chrome-devtools, `take_snapshot`, read ALL comments, log self-identifying ICP commenters + verbatim.
-- **seeds**: `/post/looking-to-help-non-technical-founders-6e1d9b33ae` (68 comments — `dianewilliams75` "This is my current situation!"; `659ertramp` electrician; `J_Jie556517` professor) · `/post/im-non-technical-and-hit-the-month-3-wall-twice-here-s-the-system-i-built-that-fixed-it-no-github-required-f4a574c4cd` (mine commenters, OP is a vendor — skip OP).
-- **done**: ≥6 commenter rows + VoC; no OP/vendor logged as a lead.
+**P1-P6 are COMPLETE (2026-07-22) — specs removed; each `prospects/p*.md` file carries its own provenance.** Results: P1 8 rows · P2 7 · P3 **0 (HN retired — dev-dominated, do NOT re-run)** · P4 9 (excerpt-only, VoC-grade not lead-grade) · P5 2 (**low-yield, don't re-run without a new seed**) · P6 4. All rows merged by P8 and now **unverified pending #29** (see §Card #29 status).
 
-### P2 · IndieHackers founder posts  → `prospects/p2-ih-posts.md`
-- **do**: `web_search` `site:indiehackers.com` + (non-technical / Lovable / Bolt / stuck / broke); open promising posts, capture OP handle + URL + pain sentence.
-- **seeds**: `SpecBuildLab` (non-tech, Lovable, "bugs kept breaking… no visibility", cross-posted r/NoCode) · a non-tech iOS founder post (QueryStrategist).
-- **done**: ≥6 founder-post rows + VoC.
-
-### P3 · Hacker News threads  → `prospects/p3-hn.md`
-- **do**: open each verified thread in chrome-devtools, capture founder/commenter pain (proof-of-pain + any founder handle).
-- **seeds (verified IDs)**: `46713673` (stosssik, prototypes→production) · `47182659` (Lovable app exposed 18K users, 35 comments — `firefoxd` VoC) · `44739556` (vibe code is legacy code / Stripe-key stolen) · `44646151` (Replit wiped a codebase).
-- **done**: ≥4 rows/threads + strong Anxiety/Push VoC.
-
-### P4 · Reddit distress threads (excerpt-only)  → `prospects/p4-reddit.md`
-- **do**: `web_search` `site:reddit.com` across r/replit, r/NoCode, r/Solopreneur, r/SaaS, r/startups, r/vibecoding; capture sub + OP handle + URL + quote from the excerpt (do NOT try to open thread bodies).
-- **seeds**: r/replit `1hspre9` "Why is Replit so self-destructive" · r/startups `1lkp5p7` (non-tech founder, filter the agency-shill) — `Ajkrouse` "same boat… using Vibe Coding" · `jeancristof` (r/Solopreneur, 80/20 wall) · `Living-Pin5868` (r/replit — SUPPLIER, mine its commenters not the OP).
-- **done**: ≥8 rows + VoC; supplier OPs excluded.
-
-### P5 · X/Twitter first-person  → `prospects/p5-x.md`
-- **do**: `web_search` build-in-public distress (`"vibe coded" app broke can't fix founder`, `Replit app broke real users help`); capture handle + URL + quote.
-- **done**: ≥4 rows + VoC (secondary venue; low yield expected).
-
-### P6 · Competitor free-audit comment threads  → `prospects/p6-competitor-comments.md`
-- **do**: open competitor rescue posts' comment sections; log founders who self-identify in comments (Trigger-3 lane — grooming's proven failure means these founders are in COMMENTS, not open search).
-- **seeds**: heydev.us · modall.ca · attributex.ai · softdevdigital.com/blog/fix-vibe-coded-app · rockingtech.co.uk/products/platform-rescue · getautonoma.com/blog/vibe-coding-failures.
-- **done**: ≥3 commenter rows + VoC; NO competitor/author logged.
-
-### P7 · Date-filtered search sweep  → `prospects/p7-search-sweep.md`
+### P7 · Date-filtered search sweep  → `prospects/p7-search-sweep.md`  *(the LIVE sourcing method — blocked-on-tooling)*
 - **supersedes** the retired passive keyword monitor (see §Card #29 status for why it was structurally unfixable). Its doc is deleted; the keyword derivation it carried now lives in `prospects/p7-search-sweep.md` §3.
 - **do**: run the query bank in `prospects/p7-search-sweep.md` §3 — `site:` operators across reddit/IH/HN/x/lobste.rs crossed with the corpus-derived v2 keywords and `after:{TODAY-30}` (compute the date per §2, never eyeball). Open each non-Reddit candidate ONCE, read the real timestamp + all replies, fill `verified date` + `thread health`. **Reddit is excerpt-only (wrapper rule) and P7 lead rows require an opened-thread timestamp, so Reddit hits feed the excerpt queue + VoC only - never P7 lead rows (sweep doc §3.1).** Normalize URLs, then dedupe against `cold-prospect-list.md` by normalized thread URL (§5).
 - **needs**: a thread-opening tool (`chrome-devtools`) + a search surface that honours `site:`/`after:` — sanity-check per §4 before trusting a sweep.
@@ -47,23 +20,21 @@ Strategy/gates/Paul's desk live in [`operation-runbook.md`](operation-runbook.md
 
 ---
 
-## Stage 2 — Consolidate
+## Stage 2 — Consolidate  *(first run done 2026-07-22; spec kept — RE-RUNS for every #29 delta)*
 
 ### P8 · Merge + dedupe + score  → `rescue-sprint/cold-prospect-list.md` + fold VoC into `rescue-sprint/voice-of-customer.md`
-- **depends**: P1-P7 (any subset done; note which are pending).
+- **depends**: new verified rows from #29 (first run consumed P1-P7).
 - **do**: merge all `prospects/*.md` rows into one ranked list (warm-first if T3 ran), drop dupes (thread URL = key) + dead + supplier; score by trigger strength; target ~30 usable rows. Fold each file's `## VoC` lines into the four force sections + build the phrase bank (≥1 per force, `[VERBATIM-founder]` only).
 - **done**: ~30 deduped rows; VoC ≥5 founder lines each for Push/Pull, ≥3 for Anxiety/Habit; phrase bank non-empty. LIGHT gate: "would Paul recognize these as worth his time?"
 
 ---
 
-## Stage 3 — Convert
+## Stage 3 — Convert  *(first run done 2026-07-22; P9 spec kept — RE-RUNS as the openers-delta after #29)*
 
 ### P9 · Per-target openers  → `rescue-sprint/outbound-openers.md`
-- **depends**: P8 + A2 (offer/price). **do**: one personalized opener per row (right template: referral / warm-intro / forwardable / thread-reply), mirror that row's VoC phrase, live booking link. **done**: opener per row, ready for Paul to review+send (desk P3); **every opener's link resolves to the named prospect's OWN post/profile** — if the quote is a comment on someone else's thread, the opener must say so and route to the commenter (this check would have caught the Joy Adamson/Nico mis-route). LIGHT gate (HEAVY if any becomes a mass template).
+- **depends**: P8 re-run + A2 (offer/price — confirmed). **do**: one personalized opener per row (right template: referral / warm-intro / forwardable / thread-reply), mirror that row's VoC phrase, live booking link. **done**: opener per row, ready for Paul to review+send (desk P3); **every opener's link resolves to the named prospect's OWN post/profile** — if the quote is a comment on someone else's thread, the opener must say so and route to the commenter (this check would have caught the Joy Adamson/Nico mis-route). LIGHT gate (HEAVY if any becomes a mass template).
 
-### P10 · Pipeline tracking sheet  → `rescue-sprint/pipeline.md`
-- **do**: one row per send (opener # · handle · channel · action · sent date · replied · call booked · outcome) + weekly tally table; link it from `operating-system.md` §7 so "discovery calls booked" is countable.
-- **done**: sheet exists, first-batch rows pre-filled, Paul logs sends/replies in it; A0 kill-criteria (~20 touches / ~10 calls) evaluable from the sheet alone.
+### P10 · Pipeline tracking sheet — ✓ DONE (2026-07-24): `rescue-sprint/pipeline.md` exists, bound from `operating-system.md` §1; weekly tally filling started 2026-08-08. A0 kill-criteria evaluable from the sheet alone.
 
 ---
 
@@ -77,9 +48,9 @@ Strategy/gates/Paul's desk live in [`operation-runbook.md`](operation-runbook.md
 
 ---
 
-## State
+## State — THE card registry (2026-08-08)
 
-> **Live status/flow is tracked in the kanban board** — `kanban-md list --compact --tag 2607` (board `jetthoughts.github.io`, tasks #1-#29: #11-#18 sprint-2, #19-#23 week-2, #24 booking→audit conversion, #25 batches 3+ [openers #9-#25], #26 warm-referral, #28-#29 sourcing-quality retro (new 2026-07-26); #22 archived as duplicate of #15/#17). Every open card states its own inputs, done-criteria, and a `Requires:` line (Paul's browser/approval vs pure agent work) — any agent can take any unblocked card cold. The board is local-only (`kanban/` is gitignored) — the **Done** list below is the committed status snapshot; keep it current. This file holds the task specs + verified seeds; the board holds status, claims, and dependencies (P8 gated on P1-P7, P9 on P8, P7 blocked on Paul). Copy-paste run prompts: `rescue-sprint/prospects/RUN.md`.
+> **This section is the single committed source for card status.** (A local kanban board once tracked cards #1-#29 but was never committed and no longer exists — every reference to it is dead; do not look for it.) Card meanings that still matter: **#12** batch-1 send · **#19/#25** batches 2-3 · **#20** daily reply-monitor · **#28** sourcing-quality rubric fix (Done) · **#29** re-source v2 (the gate everything cold waits on — status below). Copy-paste run prompt for the live sourcing method: `rescue-sprint/prospects/RUN.md` (P7).
 
 ### ⚠ Sourcing-quality retrospective (2026-07-26)
 

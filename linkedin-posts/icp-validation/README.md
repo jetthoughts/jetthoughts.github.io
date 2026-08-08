@@ -2,8 +2,8 @@
 
 Drafts for the 2-week LinkedIn ICP validation campaign.
 
-**Plan:** `docs/workflows/linkedin-icp-validation-plan.md`
-**Cadence:** 5 posts/week, 10 posts total
+**Plan:** `docs/workflows/linkedin-icp-validation-plan.md` (check its status banner — campaign currently PAUSED)
+**Cadence:** per the plan's banner — within 20.09 §7's Stream 0 total of 3-4 posts/week, 10 posts total
 **Goal:** Validate whether LinkedIn surfaces non-technical founders with control-loss symptoms (progress mirage, missing access, requirements drift, etc.)
 
 ## File naming

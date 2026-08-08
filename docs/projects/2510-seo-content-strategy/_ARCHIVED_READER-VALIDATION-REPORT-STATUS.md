@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — describes the abandoned 4-pillar multi-language plan (last real update 2025). Live plan of record: [`20-29-strategy/20.09-content-plan-revision-aug-2026.md`](20-29-strategy/20.09-content-plan-revision-aug-2026.md); orientation: [`GOAL-AT-A-GLANCE.md`](GOAL-AT-A-GLANCE.md). Kept for history only — do not act on anything below.
+
 # Reader Validation Report: Ruby/Rails AI Integration Article - STATUS UPDATE
 
 **Report Date**: 2025-10-17

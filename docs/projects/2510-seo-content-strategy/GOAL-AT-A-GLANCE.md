@@ -30,17 +30,18 @@ losing control of (or already burned by) a dev shop**.
 
 ---
 
-## 📡 THE 3 STREAMS
+## 📡 THE STREAMS (20.09 §7 — owner; mirrored here for orientation only)
 
-| Stream | Audience | Purpose | Cadence |
+| Stream | Share | Purpose | Ranking matters? |
 |---|---|---|---|
-| 🧑‍💼 **Founders** (+ Control sub-stream) | Non-technical founder (ICP-E direct) | Direct lead generation | ~5/month |
-| 💎 **Rails** | CTOs, senior Rails devs | Technical authority | ~2/month |
-| 🤖 **AI** | Founders + CTOs | Vibe-coding crisis angle | ~3/month |
+| **Stream 0 — LinkedIn** | 3-4/wk | The only channel with days-scale feedback before Nov 30 | No |
+| **Sales enablement** | ~2/mo | Artifacts to *send a prospect* (audit scorecard, ownership checklist, rebuild-vs-refactor tool) | **No - this is the point** |
+| **Rails technical** | ~2/mo | Authority maintenance; upgrade-in-place first | Yes |
+| **Durable news** | swap-in | CVEs, EOLs, releases | Yes |
+| **Refresh** | 1/mo | Pay down version-decay debt | Protects existing |
 
-**Control sub-stream themes** (client-research driven): weekly demo protocol,
-GitHub/AWS/DB ownership, business-requirement translation, cheap-talent vs
-senior-review trade-offs, salvage-vs-rebuild decisions.
+Blog cadence sums to ~6/month (measured capacity). If this table and 20.09 §7
+ever disagree, 20.09 wins.
 
 ---
 
@@ -50,8 +51,8 @@ senior-review trade-offs, salvage-vs-rebuild decisions.
 |---|---|---|
 | **Consultation bookings** | Primary business outcome | Founder audit/discovery calls |
 | **Organic sessions** | Growth trend | Sustained monthly growth vs ~5k baseline |
-| **Page-1 rescue-keyword rankings** | Low-competition capture | Rank within ~60 days of publish |
-| **Discovery calls booked** | The bet's actual KPI | 8-12 by Nov 30 |
+| **Rescue-keyword rankings** | Long-horizon only: 6-12 months on a new cluster (20.09 §7); page 1 currently occupied. NOT a lever before Dec 1 | Track, don't chase |
+| **Discovery calls booked** | The bet's actual KPI - owned by [OS §3 KR2](../../business/operating-system.md), not this doc | see OS |
 | **Publishing cadence** | Execution health | ~6/month (measured capacity) |
 
 **Quality gates (non-negotiable, every post):** ICP-E voice-guide compliance
@@ -60,34 +61,14 @@ tested code, SEO checklist, full blog pipeline (`docs/workflows/blog-pipeline.md
 
 ---
 
-## 📈 CURRENT STATUS (2026-07-21)
+## 📈 CURRENT STATUS
 
-- **~14 ICP-E rotation posts live** (Apr-May 2026): rescue Founders posts
-  (`fire-dev-shop-guide`, `dev-shop-red-flags-checklist`, `hiring-dev-shop-questions`),
-  AI-crisis posts (`vibe-coding-crisis-ai-code-debt`, `47-startups-failed-same-coding-mistake`,
-  `quality-tax-ai-mvp-cost`, `ai-code-ownership-accountability`,
-  `ai-agent-deleted-production-database-pocketos`), and Rails authority posts
-  (`solid-trifecta-hybrid-redis-rails-8`, `rails-event-structured-logging-8-1`,
-  `rails-cve-2026-41316-founder-guide`, `claude-code-xp-team-workflow`, plus pre-plan Rails).
-- **LinkedIn ICP validation sprint** running to test control-before-rescue hooks
-  (Friday-demo, ownership checklist, over-engineered-MVP, cheap-devs, salvage-vs-rebuild)
-  as short-form before committing to full posts.
-- **Next up**: the 5 validated Control-stream posts (`friday-demo-rule-founder-progress`,
-  `github-aws-database-ownership-checklist`, `asked-simple-admin-panel-built-spaceship`,
-  `cheap-developers-expensive-without-cto-review`, `salvage-vs-rebuild-software-project`)
-  plus the founder lead-magnet artifacts below.
+This doc does not carry live status - two pointers do:
 
----
+- **What to work on next + the P0 gate**: [`20.09`](20-29-strategy/20.09-content-plan-revision-aug-2026.md) §P0-§6. If outreach is stalled, content halts - do not pick a topic before checking.
+- **Weekly numbers**: [`operating-system.md` §1](../../business/operating-system.md).
 
-## 🧲 LEAD-MAGNET ARTIFACTS (planned)
-
-Package practical tools from the client research as downloadable magnets:
-
-- GitHub/AWS/DB ownership checklist
-- Friday demo review script
-- Job Story template (requirement translation)
-- Salvage-vs-rebuild decision tree
-- Technical-audit scorecard
+(The old dated status block here instructed publishing the 5 queued Control posts - work 20.09 §4 explicitly cut or reframed. Deleted 2026-08-08 so no session acts on it. Sales-enablement artifacts are owned by 20.09 §7's stream row.)
 
 ---
 
@@ -96,7 +77,7 @@ Package practical tools from the client research as downloadable magnets:
 1. Read the ICP: [`90.10-icp-primary-website-target.md`](../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md)
 2. Check the P0 gate in [`20.09`](20-29-strategy/20.09-content-plan-revision-aug-2026.md) - if outreach is stalled, content halts. Then pick the next unshipped topic.
 3. Run the full blog pipeline (draft -> voice/slop/shape critics -> cover -> build -> visual gate)
-4. Update `20.09` status + commit SHA, then update [`TASK-TRACKER.md`](TASK-TRACKER.md)
+4. Update `20.09` status + commit SHA
 
 **Sequence (revised 2026-08-07):** unblock outreach (P0) -> wire existing posts to
 `/services/vibe-code-rescue/` (P1) -> stop cannibalizing rows (P2) -> durable-news
@@ -110,6 +91,7 @@ and sales-enablement artifacts at ~6/month. Full ordering in
 - 📋 **Live plan of record**: [`20.09-content-plan-revision-aug-2026.md`](20-29-strategy/20.09-content-plan-revision-aug-2026.md)
 - 🎯 **ICP profile**: [`90.10-icp-primary-website-target.md`](../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md)
 - 🗣️ **Voice guide**: [`90.11-voice-guide.md`](../../90-99-content-strategy/strategy-analysis/90.11-voice-guide.md)
-- 📊 **Status**: [`TASK-TRACKER.md`](TASK-TRACKER.md)
-- 🗂️ **Project index**: [`PROJECT-INDEX.md`](PROJECT-INDEX.md)
-- 🔁 **LinkedIn validation campaign**: `docs/workflows/linkedin-icp-validation-plan.md`
+- 📊 **Weekly numbers**: [`operating-system.md` §1](../../business/operating-system.md)
+- 🔁 **LinkedIn campaign** (paused, revivable): `docs/workflows/linkedin-icp-validation-plan.md`
+
+*(The old TASK-TRACKER / PROJECT-INDEX links pointed at 2025 docs for the abandoned 4-pillar plan - both archived 2026-08-08 with `_ARCHIVED_` prefixes.)*

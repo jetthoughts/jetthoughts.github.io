@@ -1,4 +1,4 @@
-> DRAFT - 2026-07-22. Playbook for the 45-minute Rescue Context Call. Pending Paul's review.
+> ✅ READY (2026-07-22) - the playbook Paul runs on a booked Rescue Context Call. Content-complete; awaiting Paul's read-through before his first call (a read, not a blocker - no work waits on it).
 
 # 45-Minute Session Playbook — Rescue Context Call
 
