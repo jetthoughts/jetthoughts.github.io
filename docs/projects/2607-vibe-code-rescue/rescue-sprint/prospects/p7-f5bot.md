@@ -1,3 +1,7 @@
+> ⛔ **RETIRED 2026-08-08. Superseded by [`p7-search-sweep.md`](p7-search-sweep.md).**
+> Two structural flaws, not fixable by better keywords: (1) F5Bot matches **literal substrings**, so composed phrases never fire - v1 matched 0 of our 25 hand-found posts; (2) it is **passive**, catching only mentions from setup-time forward, so it can never backfill the ≤30-day window card #29 needs on demand.
+> Kept for the v2 keyword derivation (§Keywords v2), which the replacement doc reuses. Do not run the F5Bot setup steps below.
+
 # P7 F5Bot setup + first pull - prospect rows + VoC
 > Output of backlog task P7. Qualify per t4-t5-grooming.md Vote 3. Every why-ICP must be a verbatim quoted sentence.
 > F5Bot account: logged in (Paul's credentials, NOT stored in any file).

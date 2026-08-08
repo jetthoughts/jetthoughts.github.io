@@ -21,7 +21,7 @@ Each prompt is self-contained. Paste ONE into a fresh session. Stage-1 tasks (P1
 
 **P6** — Run task P6 (competitor comment threads) per the wrapper. Open the seeded competitor rescue-post comment sections, log founders self-identifying in comments only. File: `prospects/p6-competitor-comments.md`. Target ≥3 rows.
 
-**P7** — Run task P7 (F5Bot). Log into F5Bot with Paul's account (creds passed in-session — NEVER write them to any file), add the seeded keywords scoped to Reddit+HN+Lobsters, pull the first JSON/RSS feed, log ICP matches to `prospects/p7-f5bot.md`. If not set up yet, mark Blocked-on-Paul and stop.
+**P7** — Run task P7 (date-filtered search sweep) per the wrapper. **F5Bot is RETIRED (2026-08-08) — do not run it.** Read `prospects/p7-search-sweep.md` §2-§5, compute `after:{TODAY-30}`, run the §3 query bank, dedupe by thread URL against `cold-prospect-list.md` first, then open each surviving candidate once to fill `verified date` + `thread health`. Append rows + VoC to `prospects/p7-search-sweep.md`. Needs `chrome-devtools` + a search surface that honours `site:`/`after:` (sanity-check per §4). Pad nothing — a short verified list beats a padded one.
 
 ## Stage 2 — merge
 
