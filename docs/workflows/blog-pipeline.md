@@ -32,7 +32,7 @@ STEP 3 — RESEARCH
 STEP 3b — FIND INTERNAL POSTS TO REFERENCE (MANDATORY)
 Before drafting, find 4+ existing JetThoughts posts to link from the new post.
 Use claude-context MCP search FIRST:
-  Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "topic keywords relevant to your post"
+  Search the codebase at <repo root> for: "topic keywords relevant to your post"
 For tag/slug lookups, read docs/blog-post-index.md (584 posts, 135 tags, process posts table).
 NEVER guess slugs — verify each with: ls content/blog/<slug>/index.md
 Collect at least 4 verified slugs before starting the draft.

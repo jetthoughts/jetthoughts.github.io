@@ -1,3 +1,5 @@
+> ⚠️ **Historical caveat (2026-08-08)**: references to `claude-flow`/`npx claude-flow` below describe a stack that is NOT installed in this repo (removed 2026-08-08). Read for the patterns, not the commands. Current agent strategy: `docs/workflows/agents.md`.
+
 # Agent MCP Tool Scenarios Guide: claude-context & serena Priority
 
 **Authority**: Claude-Flow Expert Configuration Enhancement
