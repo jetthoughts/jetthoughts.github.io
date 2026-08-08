@@ -1,6 +1,6 @@
 ---
 title: "Rails 7 End of Life: Pick Your Exit"
-description: "Rails 7.1 got no patch for CVE-2026-66066, a CVSSv4 9.5 pre-auth RCE. How to find every app of yours on a dead branch and pick between the four realistic exits."
+description: "Rails 7.1 got no patch for CVE-2026-66066, a CVSSv4 9.5 pre-auth RCE. How to find every app of yours on a dead branch and pick between four realistic exits."
 date: 2026-08-08
 draft: true
 author: "JetThoughts"
@@ -21,9 +21,11 @@ cover_image_alt: "Rails 7 end of life cover - no patch for CVE-2026-66066 on 7.1
 canonical_url: https://jetthoughts.com/blog/rails-7-eol-unpatched-security-exposure/
 ---
 
-On July 29 the Rails security team fixed a CVSSv4 9.5 vulnerability in Active Storage - an unauthenticated upload that reads files off your server and [escalates to code execution](https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm). Three branches got a patched release that day: 7.2, 8.0, and 8.1. Rails 7.1 and everything below it got nothing.
+On July 29 the Rails security team fixed a CVSSv4 9.5 vulnerability in Active Storage - an unauthenticated upload that reads files off your server and [escalates to code execution](https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm). Three branches got a patched release that day: 7.2, 8.0, and 8.1. One of those three, 7.2, stops getting security fixes tomorrow - upgrade to it for this patch and you buy a day. Rails 7.1 and everything below it got nothing.
 
-That's the concrete version of Rails 7 end of life. Rails 7.1 had [finished its security support period](https://rubyonrails.org/2025/10/29/new-rails-releases-and-end-of-support-announcement) by October 2025, so when CVE-2026-66066 landed, the backport list stopped at 7.2. If your app sits on 7.1 or lower and processes image variants, there's no version on your branch to bump to. The fix lives on branches you're not on.
+That's the concrete version of Rails 7 end of life. Rails 7.1 had [finished its security support period](https://rubyonrails.org/2025/10/29/new-rails-releases-and-end-of-support-announcement) by October 2025, so when CVE-2026-66066 landed, the backport list stopped at 7.2.
+
+If your app sits on 7.1 or lower and processes image variants, there's no version on your branch to bump to. The fix lives on branches you're not on.
 
 The CVE itself already has a [full writeup](/blog/rails-cve-2026-66066-active-storage-rce/): mechanism, detection inside a running app, the libvips 8.13 requirement, the secret rotation order. This post covers the problem that outlives this CVE. You're on an unsupported Rails, the next critical will skip you the same way, and there are four ways out.
 
@@ -31,9 +33,7 @@ The CVE itself already has a [full writeup](/blog/rails-cve-2026-66066-active-st
 
 The [maintenance policy](https://rubyonrails.org/maintenance) gives a minor series bug fixes for one year and security fixes for two, counted from the series' first release. 7.1 shipped on October 5, 2023. Its two years ran out, and the October 2025 announcement closed the series at 7.1.6 - final release, no successor.
 
-April already showed how this plays out in practice. [CVE-2026-41316](/blog/rails-cve-2026-41316-founder-guide/), the ERB/Marshal deserialization RCE, got backports for 7.2, 8.0, and 8.1 and nothing for 7.0 or 7.1. Two criticals in four months skipping the same versions is the policy running exactly as written, and it'll run the same way on the next advisory.
-
-Waiting doesn't improve your position.
+March already showed how this plays out in practice. [CVE-2026-41316](/blog/rails-cve-2026-41316-founder-guide/), the ERB/Marshal deserialization RCE, got backports for 7.2, 8.0, and 8.1 in the [March 23 release](https://rubyonrails.org/2026/3/23/Rails-Versions-7-2-3-1-8-0-4-1-and-8-1-2-1-have-been-released) and nothing for 7.0 or 7.1. Two criticals in four months skipping the same versions is the policy running exactly as written, and it'll run the same way on the next advisory.
 
 ## Find every app on a dead branch
 
@@ -44,7 +44,7 @@ Start with the lockfiles. Here's a loop that prints the resolved Rails version f
 ```bash
 for lock in */Gemfile.lock; do
   printf '%-32s %s\n' "${lock%/Gemfile.lock}" \
-    "$(awk '$1 == "rails" { gsub(/[()]/, "", $2); print $2; exit }' "$lock")"
+    "$(awk '$1 == "rails" && $2 ~ /^\([0-9]/ { gsub(/[()]/, "", $2); print $2; exit }' "$lock")"
 done
 ```
 
@@ -61,7 +61,7 @@ gem install bundler-audit
 bundle-audit check --update
 ```
 
-On a 7.1 app it flags GHSA-xr9x-r78c-5hrm with a solution list - 7.2.3.2, 8.0.5.1, 8.1.3.1 - containing no version you can reach without leaving the branch. That output pasted into a ticket is the shortest possible version of this post.
+On a 7.1 app it flags GHSA-xr9x-r78c-5hrm with a solution list - 7.2.3.2, 8.0.5.1, 8.1.3.1 - containing no version you can reach without leaving the branch. Paste that output into the ticket.
 
 Last, sort the EOL apps by whether this specific CVE can reach them. A fast signal is whether the app calls variant processing anywhere:
 
@@ -73,41 +73,40 @@ Apps that match and take uploads from people who aren't logged in are your P0s. 
 
 ## Exit 1: upgrade, and aim past 7.2
 
-Upgrading is the right answer for most apps, which is why it goes first.
+Upgrade if you can. It's the only exit that ends the problem instead of postponing it.
 
-Pick the target with the support clock in view. 7.2 is the smallest hop from 7.1 and the worst destination: its [security support ends August 9, 2026](https://rubyonrails.org/2025/10/29/new-rails-releases-and-end-of-support-announcement) - tomorrow, as this post goes out. 8.0 holds until November 7, 2026, three months away. The one target that buys real time is 8.1, with security fixes through October 2027.
+Pick the target with the support clock in view. 7.2 is the smallest hop from 7.1, but its [security support ends August 9, 2026](https://rubyonrails.org/2025/10/29/new-rails-releases-and-end-of-support-announcement), so on its own it trades one dead branch for another - the exception is pairing it with paid LTS coverage, covered in exit 2. 8.0 holds until November 7, 2026, three months away.
 
-How long the move takes is dominated by your app, not by Rails - test coverage decides most of it, and every pinned gem or private-API monkey patch adds its own detour. Plan in weeks. Treat any duration you read, anywhere, as planning guidance rather than a measured benchmark, because nobody has benchmarked your codebase.
+8.1 is the only hop that buys real time - security fixes run to October 2027. Budget the Ruby bump into the same plan: Rails 8 needs Ruby 3.2 or newer, and a 7.1 app often isn't there yet.
 
-The per-hop mechanics haven't changed since the Rails 6 era: update the Gemfile, run `rails app:update`, clear the deprecation list against the old version, keep the app deployable the whole way. Our [Rails 6-to-7 migration guide](/blog/rails-7-upgrade-guide-step-by-step-migration/) walks that sequence step by step; a 7.1-to-8.1 move repeats it for each version hop with a fresh deprecation list. If you're rebuilding images along the way, the [Rails 8 Docker production guide](/blog/rails-8-docker-deployment-production-guide/) covers pinning system libraries so a base-image rebuild doesn't quietly undo your work.
+How long the move takes is dominated by your app, not by Rails - test coverage decides most of it, and every pinned gem or private-API monkey patch adds its own detour. Plan in weeks.
+
+The per-hop mechanics haven't changed since the Rails 6 era: update the Gemfile, run `rails app:update`, clear the deprecation list against the old version, keep the app deployable the whole way. Our [Rails 6-to-7 migration guide](/blog/rails-7-upgrade-guide-step-by-step-migration/) walks that sequence step by step; a 7.1-to-8.1 move repeats it for each version hop with a fresh deprecation list.
+
+If you're rebuilding images along the way, the [Rails 8 Docker production guide](/blog/rails-8-docker-deployment-production-guide/) covers pinning system libraries so a base-image rebuild doesn't quietly undo your work.
 
 ## Exit 2: pay a vendor to patch a dead branch
 
-Two vendors do this today.
-
-[HeroDevs](https://www.herodevs.com/blog-posts/cve-2026-66066-rails-active-storage-arbitrary-file-read-and-rce) sells drop-in replacements for Rails 6.x, 7.0, and 7.1, and shipped a remediation for CVE-2026-66066 on those lines. [makandra's Rails LTS](https://railslts.com/en) covers the older series, 2.3 through 6.1, delivered as a Gemfile source swap.
+[HeroDevs](https://www.herodevs.com/blog-posts/cve-2026-66066-rails-active-storage-arbitrary-file-read-and-rce) sells drop-in replacements for Rails 6.x, 7.0, and 7.1, and shipped a remediation for CVE-2026-66066 on those lines. [makandra's Rails LTS](https://railslts.com/en) covers 2.3 through 6.1 plus a [7.2 LTS line](https://makandracards.com/railslts) that tracks the latest 7.2 release, delivered as a Gemfile source swap. For an app on 7.1 the practical pick is HeroDevs - makandra's coverage jumps from 6.1 to 7.2, so reaching its LTS means doing the 7.2 hop first and then paying to stay.
 
 Both sell what upstream stopped shipping: CVE fixes without a migration. Neither stops the rest of the ecosystem from moving on. Gem authors keep raising their minimum Rails, so you end up pinning dependencies at their last compatible release one by one, and each pin is one more thing the eventual upgrade has to unwind.
 
-Used as a bridge - six months of cover while the upgrade gets staffed - that's honest value. Settling in permanently just grows the bill for the migration you'll still run someday.
+Used as a bridge - six months of cover while the upgrade gets staffed - that's a fair trade. Settling in permanently just grows the bill for the migration you'll still run someday.
 
 ## Exit 3: remove the surface this CVE needs
 
 CVE-2026-66066 runs through variant processing in libvips. An app that stops feeding it can't be hit by this one:
 
 - Check whether you still need variants at all. Some apps carry `image_processing` from an old scaffold and never call `.variant` - dropping the gem ends the exposure and shortens the Gemfile.
-- With libvips 8.13 or newer on the box, the advisory's workaround applies to old gems too: set `VIPS_BLOCK_UNTRUSTED=1`, or call `Vips.block_untrusted(true)` from an initializer with `ruby-vips` 2.2.1+.
-- Switching `config.active_storage.variant_processor = :mini_magick` moves you off libvips entirely - onto ImageMagick, which carries its own long history of hostile-upload CVEs. Sideways, not up.
+- With libvips 8.13 or newer the advisory's block-untrusted workaround applies even on old gems, and switching processors is sideways rather than up - the [CVE writeup](/blog/rails-cve-2026-66066-active-storage-rce/) has both, with versions.
 
-The honest limit: this closes one CVE.
+This closes one CVE and leaves the branch where it was. The next unpatched critical could land in Action Pack or Active Record, and you can't delete those.
 
-The next unpatched critical on your branch could land in Action Pack or Active Record, and you can't delete those. Surface removal is the right same-day move while exit 1 or 2 gets arranged, and nothing more.
+Do it today while you staff the upgrade. It buys you this week, not this year.
 
 ## Exit 4: accept it and build walls
 
 Some teams will decide the risk is tolerable, usually for internal or low-value apps.
-
-Two things genuinely shrink it.
 
 Moving uploads behind authentication cuts the attacker pool from "anyone with the URL" to "people with accounts", and admin-only upload cuts it to staff. For this CVE that's a real reduction, since the exploit has to deliver a file into variant processing.
 
@@ -117,26 +116,22 @@ None of it changes what a SOC 2 auditor or an acquirer's diligence checklist see
 
 ## Which exit, which app
 
+Match each app from your fleet sweep to a row - a mixed portfolio usually lands in several.
+
 | Situation | Move |
 |---|---|
-| Public image uploads + variants, on 7.1 or below | Exit 3 today, exit 1 starting this sprint |
+| Public uploads + variants, 7.1 or below | Exit 3 today, exit 1 starting this sprint |
 | Revenue app, upgrade can't start this quarter | Exit 2 as the bridge, exit 1 on the calendar with a date |
-| App on 5.2 or 6.1, long life ahead, no upgrade budget | Exit 2, named as permanent in writing |
+| 5.2/6.1 app, long life, no budget | Exit 2, named as permanent in writing |
 | Internal tool behind SSO, no public uploads | Exit 4 now, fold exit 1 into next quarter's maintenance |
 | App with a real decommission date | Exit 4, with the date and the accepted risk written down |
 | Unauthenticated uploads you can't gate | Exit 1, and nothing else substitutes |
 
-## When staying on 7.1 is defensible
-
-Rare, but real. An app with a signed decommission date measured in months doesn't justify a migration; wall it off and let it die on schedule. The same goes for a tool that only talks to a VPN and stores nothing an attacker wants.
-
-Everything else trades one scheduled upgrade for re-running this whole assessment on every advisory - and advisories don't wait for your sprint boundaries, as two criticals in four months just demonstrated.
-
 ## Put the dates where you'll see them
 
-The next deadlines are already published. 8.0 security fixes end November 7, 2026; 8.1 bug fixes end October 10, 2026, with security fixes running to October 10, 2027. Treat them like TLS certificate expiries - calendar entries with owners, not facts you rediscover inside an advisory email.
+The support deadlines from exit 1 belong in the calendar, each with an owner - treat them like TLS certificate expiries, not facts you rediscover inside an advisory email.
 
-Start the upgrade before the date and it's scheduled work; start it after and you'll be reading a post like this one again, with a different CVE number at the top.
+Then open the ticket. The bundle-audit output from the fleet sweep is the body, and the [migration guide](/blog/rails-7-upgrade-guide-step-by-step-migration/) is the first link in it.
 
 ## Sources
 
