@@ -38,6 +38,7 @@ Here's how it usually splits:
 |---|---|---|
 | Database schema | Yes | It's Postgres. `pg_dump` and you're done. |
 | Data (rows) | Yes | Same export. Watch the auth foreign keys. |
+| Uploaded files | Yes | Separate job. They're in Storage, not the dump. |
 | Business logic | Sometimes | Read every line, port what's real, rewrite the rest. |
 | Front end (React) | Often | It renders. Point it at a new API. |
 | Auth | Rarely | Stubbed, hardcoded, or missing session handling. |
@@ -115,9 +116,9 @@ bin/rails generate authentication
 
 That gives you a `User` model with `has_secure_password`, a `Session` model, sign-in and sign-out, and password reset wired to the mailer.
 
-Make two edits before you run its migration. The generated `users` table uses a bigint primary key - change it to `id: :uuid`, or every foreign key you just migrated points at nothing. And the generator ships sign-in and password reset but no sign-up flow: fine for the rows you're importing, but new users can't register until you build that screen.
+Make two edits before you run its migration. The generated `users` table uses a bigint primary key - if your dump used UUIDs, change it to `id: :uuid`, or every foreign key you just migrated points at nothing. And the generator ships sign-in and password reset but no sign-up flow: fine for the rows you're importing, but new users can't register until you build that screen.
 
-Now load the `auth_users.csv` you exported earlier. The `encrypted_password` column holds bcrypt hashes, and they move straight into `password_digest` because Rails uses bcrypt too - users keep their passwords and never notice. If any hashes are a format `has_secure_password` can't read, force a password reset on first login rather than trying to translate them.
+Now load the accounts - from Supabase, that's the `auth_users.csv` you exported earlier. The `encrypted_password` column holds bcrypt hashes, and they move straight into `password_digest` because Rails uses bcrypt too - users keep their passwords and never notice. If any hashes are a format `has_secure_password` can't read, force a password reset on first login rather than trying to translate them.
 
 If you need OAuth, roles, or multi-tenancy beyond what the generator covers, that's the Devise conversation. We compared the [Rails 8 authentication generator against Devise](/blog/rails-8-authentication-generator-devise-migration/) for exactly this decision - start on the generator and reach for Devise when a real requirement shows up.
 
@@ -125,11 +126,11 @@ The test that matters: log in as user A and try to read user B's data by guessin
 
 ## Payments: the webhooks nobody wired up
 
-Payments fail the same way auth does - the visible half works and the half that moves money doesn't.
+Payments fail the same way auth does - the checkout flow is real and the accounting behind it was never built.
 
 A Stripe Checkout button is a redirect to a page Stripe hosts, so the generated version works: the customer pays and comes back.
 
-What's missing is the webhook handler, the part where Stripe tells your server that a payment cleared or a subscription ended. Without it, someone can pay and get nothing, or cancel and keep access, and your database never learns the difference. It's the least visible bug in the app and the one that quietly costs real money.
+What's missing is the webhook handler, the part where Stripe tells your server that a payment cleared or a subscription ended. Without it, someone can pay and get nothing, or cancel and keep access, and your database never learns the difference. Nothing in the UI shows the gap; it surfaces when someone reconciles the app against the Stripe dashboard.
 
 Rails handles the webhook as a plain controller action. The two rules that keep it honest: verify the signature so nobody can forge events, and make it idempotent because Stripe retries:
 
@@ -167,7 +168,7 @@ Here the default advice is often wrong. The generated React works, and your user
 
 If you're keeping React, run Rails in API mode and point the front end at it. Swap the `@supabase/supabase-js` calls for `fetch` to your Rails endpoints, move auth to the session cookie your new backend issues, and delete the Supabase client. The UI keeps working against a new data source.
 
-One warning: if the SPA lives on a different domain than the Rails API, that session cookie means CORS and SameSite work - rack-cors plus `SameSite=None; Secure`, or serve both from one domain.
+One warning: if the SPA lives on a different domain than the Rails API, that session cookie needs CORS and SameSite configuration - rack-cors plus `SameSite=None; Secure`, or serve both from one domain.
 
 If you'd rather consolidate to one framework and one deploy, Hotwire lets you rebuild the interface in server-rendered Rails without a separate frontend build. That's the right call when the team is Ruby-first and the React was mostly forms and tables. It's the wrong call when the front end is genuinely interactive and rewriting it burns weeks to remove a working thing.
 
@@ -183,7 +184,7 @@ It's also the wrong move when the product is genuinely realtime-first - a live c
 
 The third reason to hold off: a team with zero Ruby experience and no runway to learn. A rescue that hands you a stack nobody can maintain just relocates the problem. One [pattern behind failed rebuilds](/blog/47-startups-failed-same-coding-mistake/) is choosing technology the team can't operate.
 
-Rails wins when you have data worth keeping, business logic worth enforcing on a server, and someone who can read Ruby - which describes most SaaS MVPs that outgrew their AI builder, but not all of them.
+Rails wins when you have data worth keeping, business logic worth enforcing on a server, and someone who can read Ruby. Not every app that outgrew its AI builder clears that bar.
 
 The migration itself is boring in the good way. Start with the dump; everything else follows from what you find in it.
 
