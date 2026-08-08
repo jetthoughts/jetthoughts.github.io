@@ -92,19 +92,19 @@ Used as a bridge - six months of cover while the upgrade gets staffed - that's a
 CVE-2026-66066 runs through variant processing in libvips. An app that stops feeding it can't be hit by this one:
 
 - Check whether you still need variants at all. Some apps carry `image_processing` from an old scaffold and never call `.variant` - dropping the gem ends the exposure and shortens the Gemfile.
-- With libvips 8.13 or newer the advisory's block-untrusted workaround applies even on old gems, and switching processors is sideways rather than up - the [CVE writeup](/blog/rails-cve-2026-66066-active-storage-rce/) has both, with versions.
+- If you do need variants, the advisory ships a workaround that runs on an unpatched gem, and swapping the image processor is the other lever. The [CVE writeup](/blog/rails-cve-2026-66066-active-storage-rce/) has both, with the library versions each one requires and the trade-off each one carries.
 
 This closes one CVE and leaves the branch where it was. The next unpatched critical could land in Action Pack or Active Record, and you can't delete those.
 
-Do it today while you staff the upgrade. It buys you this week, not this year.
+This one ships in an afternoon and needs no budget line, which is why it goes first even when exit 1 is already funded.
 
 ## Exit 4: accept it and build walls
 
-Some teams will decide the risk is tolerable, usually for internal or low-value apps.
+For an internal tool or an app already scheduled for decommission, accepting the risk can be the honest call.
 
 Moving uploads behind authentication cuts the attacker pool from "anyone with the URL" to "people with accounts", and admin-only upload cuts it to staff. For this CVE that's a real reduction, since the exploit has to deliver a file into variant processing.
 
-A WAF helps less than its vendor says. The exploit is a correctly formed multipart upload whose hostile part is the image bytes themselves, so a ruleset inspecting request shapes has nothing to match on. Edge rules that restrict upload content types and rate-limit endpoints trim opportunistic scans; they won't stop a targeted attempt.
+A WAF is thin cover here. The exploit is a correctly formed multipart upload whose hostile part is the image bytes themselves, so a ruleset inspecting request shapes has nothing to match on. Edge rules that restrict upload content types and rate-limit endpoints trim opportunistic scans; they won't stop a targeted attempt.
 
 None of it changes what a SOC 2 auditor or an acquirer's diligence checklist sees: an EOL framework with a known unpatched critical. You can hold that position - expect to write the explanation memo more than once.
 
@@ -116,10 +116,9 @@ Match each app from your fleet sweep to a row - a mixed portfolio usually lands 
 |---|---|
 | Public uploads + variants, 7.1 or below | Exit 3 today, exit 1 starting this sprint |
 | Revenue app, upgrade can't start this quarter | Exit 2 as the bridge, exit 1 on the calendar with a date |
-| 5.2/6.1 app, long life, no budget | Exit 2, named as permanent in writing |
+| 5.2/6.1 app, long life, no budget | Exit 2, with the renewal cost budgeted year over year |
 | Internal tool behind SSO, no public uploads | Exit 4 now, fold exit 1 into next quarter's maintenance |
 | App with a real decommission date | Exit 4, with the date and the accepted risk written down |
-| Unauthenticated uploads you can't gate | Exit 1, and nothing else substitutes |
 
 ## Put the dates where you'll see them
 
