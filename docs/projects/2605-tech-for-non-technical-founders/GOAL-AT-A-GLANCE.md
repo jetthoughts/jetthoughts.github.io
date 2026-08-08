@@ -4,7 +4,7 @@
 
 **Project ID**: 2605-tech-for-non-technical-founders
 **Created**: 2026-05-12
-**Last updated**: 2026-07-31 EOD (build phase CLOSED: PRs #407-#411, #416, #419, #421 - analytics, visuals, mechanics, landing fixes, and 6 campaign posts LIVE)
+**Last updated**: 2026-08-08 (wave plan 20.15 CLOSED — W1-W5 merged; live queue slimmed into `TASK-TRACKER.md`, history in `_ARCHIVED_TASK-TRACKER-2026-07.md`)
 **Status**: 🟢 BUILD COMPLETE + CAMPAIGN-READY · fully instrumented (GA4 + Clarity, production-verified) · 🔄 Active: Aug 1-14 launch window (campaign kit send-ready, pilot kit send-ready) · ⏳ First evidence read: Aug 14
 **Owner**: JT content team
 **Parent**: 2510-seo-content-strategy (extends, does not replace)
@@ -227,7 +227,7 @@ Each module has an **input** (what the reader brings from the previous module), 
 - **Open work**: `TASK-TRACKER.md` (single source of truth for all active tasks)
 - **OST + Impact Map (initiative→goal traceability)**: `20-29-strategy/20.14-ost-impact-map.md`
 - **Low-impact ideas**: `LOW-IMPACT-IDEAS-BANK.md` (deferred, dropped, and P3 ideas)
-- **External research**: `../../docs/_research/` (Russian-language market research)
+- **External research**: `10-19-research/Валидация Бизнес-Идеи_ Система и Инструменты.md` (Russian-language market research, moved in-project 2026-08-08)
 - **Voice**: `../../90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`
 - **ICP (course design target):** Sam (first-timer non-technical founder, no burn history, no PM background). Definitive doc: `40-49-review/40.06-sam-customer-journey-report-2026-06.md`.
 - **ICP (website lead-gen):** Alex (burned founder). Defined in `../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`. NOT the course design target.

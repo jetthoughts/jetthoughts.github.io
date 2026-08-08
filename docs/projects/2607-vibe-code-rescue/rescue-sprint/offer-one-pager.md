@@ -1,4 +1,4 @@
-> DRAFT - A2 pricing confirmed (3-tier). Booking link live.
+> ✅ LIVE (A2 confirmed 2026-07-22) - 3-tier pricing final, booking link live. This is the offer of record; openers and the objection bank quote it.
 
 # Vibe Code Rescue
 

@@ -10,7 +10,7 @@
 
 ## Pre-writing reads (mandatory)
 
-1. `docs/workflows/linkedin-icp-validation-plan.md` — campaign hypotheses, content pillars, weekly plan
+1. The **active campaign plan** for the post you're writing — `linkedin-icp-validation-plan.md` (ICP campaign, currently PAUSED) or `linkedin-course-promo-plan.md` (course promo) — check its status banner first; campaign wiring below (save paths, sequence updates) applies only to a campaign that is actually live
 2. `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` — ICP-E definition, pain language, control-loss patterns
 3. `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` — voice formula, banned words, anti-AI structural patterns
 4. **This file** — LinkedIn-specific rules that override or extend the blog voice guide
@@ -147,7 +147,7 @@ The skeleton names 5 beats. The first-draft trap is to render each beat as its o
 
 Beat 1 ("specific recent encounter") most naturally produces a **dialogue-led** opener — "A founder pinged me last week..." Repeating this archetype across consecutive posts is itself an AI/LinkedIn tell, regardless of how spoken each individual post sounds. Three consecutive posts opening "A founder pinged me / Got a Slack from a founder / Talked to a founder" trains both readers and AI detectors to recognize the formula.
 
-**Before drafting, scan the last 2-3 posts in `linkedin-posts/icp-validation/` for opener archetype.** Pick a different one:
+**Before drafting, scan the last 2-3 posts in the active campaign's `linkedin-posts/<campaign>/` directory for opener archetype.** Pick a different one:
 
 | Archetype | Example opener |
 |---|---|
@@ -207,7 +207,7 @@ notes: |
 ## Save location
 
 ```
-linkedin-posts/icp-validation/week{N}-{day}-{slug}.md
+linkedin-posts/<campaign>/week{N}-{day}-{slug}.md   # <campaign> = icp-validation | course-promo (per the active plan's status banner)
 ```
 
 **Why outside `content/`:** The Hugo `content/social/linkedin/README.md` has frontmatter that renders as a published page. Drafts at repo root in `linkedin-posts/` stay out of the build, out of the public site, and out of search engine indexes.
@@ -364,5 +364,5 @@ When asked to write a LinkedIn post for Paul:
 - [ ] Run frontmatter-to-body consistency check (Editing methodology §4)
 - [ ] No marketing CTA, no JT mention, no website link
 - [ ] No "learned the hard way" framing, no credential stamps
-- [ ] Save under `linkedin-posts/icp-validation/<filename>.md` with frontmatter
-- [ ] Update plan status if the post is the next in sequence
+- [ ] Save under `linkedin-posts/<campaign>/<filename>.md` with frontmatter (campaign per its plan's status banner)
+- [ ] Update the campaign plan's status if the post is the next in sequence

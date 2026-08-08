@@ -14,9 +14,9 @@ critic's verdict pasted VERBATIM), and sets the next card `Ready`.
 **You can finish this operation in a new session with zero context loss. Do this:**
 
 1. **Read order**: [`executive-summary.md`](executive-summary.md) (the one-page bet, Shape Up format) → this START HERE block → the ACTIVE SPRINT state → the **Incremental agent backlog** table → the specific card/T-task you're taking. Optionally skim [`strategy.md`](strategy.md) (the why) and [`operating-system.md`](../../business/operating-system.md) (weekly cadence).
-2. **Current state (2026-08-08, Sprint 3 BLOCKED-ON-TOOLING)**: P9/P10 done; batch-1 pre-research exposed a sourcing quality gap (retro below). **#28 is DONE** — the v2.1 qualification rubric (verified timestamps **≤30 days flat, all venues**, post|comment routing, thread-health scan, lead-vs-VoC split) is live in `rescue-sprint/t4-t5-grooming.md` Vote 3. **Policy split (Paul)**: leads must be ≤1 month verified; **VoC has NO age limit** — any comment/message/post teaches ICP slang, and stale-dropped threads still get VoC-harvested in the same visit. **Batch-1 is now 0-for-5** — the flat rule flipped SpecBuildLab (~9.5mo) and Joy (~5mo, Paul's one override candidate) too; #12 is blocked on #29's replacements. Live board: `kanban-md list --compact --tag 2607`, cards #1-#29. **Next Ready: #29** (re-source v2 — re-audit all 25 v1 rows, dual-harvest leads+VoC, source fresh ≤30-day rows, expand channels if IH is thin). Then: openers-delta → #12 batch-1 send (Paul approves) → #20 daily reply-monitor. Booking link confirmed live. **Superseded 2026-08-08**: the passive keyword monitor that used to be #29's channel-expansion lane is retired, and the "~2 min keyword swap" is struck from Paul's desk — expansion now runs through `prospects/p7-search-sweep.md`. **#29 is BLOCKED-ON-TOOLING**, not on Paul: its sweep ran 2026-08-08 and returned zero rows because every thread-open hit `EGRESS_BLOCKED`. Agent-doable with zero Paul input once thread-open access is restored: #29 (re-source), #14 (landing page).
+2. **Current state (2026-08-08, Sprint 3 BLOCKED-ON-TOOLING)**: P9/P10 done; batch-1 pre-research exposed a sourcing quality gap (retro below). **#28 is DONE** — the v2.1 qualification rubric (verified timestamps **≤30 days flat, all venues**, post|comment routing, thread-health scan, lead-vs-VoC split) is live in `rescue-sprint/t4-t5-grooming.md` Vote 3. **Policy split (Paul)**: leads must be ≤1 month verified; **VoC has NO age limit** — any comment/message/post teaches ICP slang, and stale-dropped threads still get VoC-harvested in the same visit. **Batch-1 is now 0-for-5** — the flat rule flipped SpecBuildLab (~9.5mo) and Joy (~5mo, Paul's one override candidate) too; #12 is blocked on #29's replacements. **Card registry: [`backlog.md`](backlog.md) §State + §Card #29 status** (the old local kanban board was never committed and no longer exists — do not look for it). **Next Ready: #29** (re-source v2 — re-audit all 25 v1 rows, dual-harvest leads+VoC, source fresh ≤30-day rows, expand channels if IH is thin). Then: openers-delta → #12 batch-1 send (Paul approves) → #20 daily reply-monitor. Booking link confirmed live. **Superseded 2026-08-08**: the passive keyword monitor that used to be #29's channel-expansion lane is retired, and the "~2 min keyword swap" is struck from Paul's desk — expansion now runs through `prospects/p7-search-sweep.md`. **#29 is BLOCKED-ON-TOOLING**, not on Paul: its sweep ran 2026-08-08 and returned zero rows because every thread-open hit `EGRESS_BLOCKED`. Agent-doable with zero Paul input once thread-open access is restored: #29 (re-source), #14 (landing page).
 
-**⚠ Sourcing-quality retrospective (2026-07-26)** — read before trusting `cold-prospect-list.md` or sending further batches: Phase-1 pre-research on card #12's first 5 openers found **3 of 5 unsendable (60% failure)** — two stale (a comment ~1yr old on someone else's post; a post >6 years old) and one thread already saturated with a competing "free audit"-style pitch. Root cause: the grooming rubric (`t4-t5-grooming.md` Vote 3) already required "recent, not dead" but P1-P9 (2026-07-22) never verified it by opening the thread — recency was eyeballed from search excerpts. **Fixed 2026-07-26 (card #28)**: Vote 3 is now a 5-check rubric with hard capture-time gates — verified timestamp (≤30 days, venue caps), post|comment routing, thread-health scan — and `verified date` + `thread health` are mandatory admission columns for the scored list. **Treat all 25 rows in `cold-prospect-list.md` as unverified until #29 re-checks them.** Paul's directive: prioritize finding real, currently-active problems over hitting a row-count quota — a short list of genuinely fresh rows beats a padded stale one; expand beyond IndieHackers (the date-filtered sweep across Reddit/HN, X) if the 30-day window makes IH too thin.
+**⚠ Sourcing-quality retrospective (2026-07-26, short form)**: batch-1 pre-research found 3 of 5 openers unsendable (60% stale) because recency was eyeballed from excerpts, never verified in-thread. Fix = card #28's 5-check Vote 3 v2 rubric. **Treat all 25 rows in `cold-prospect-list.md` as unverified until #29 re-checks them.** Full retro (root cause, named misses, Paul's quality-over-quota directive): [`backlog.md`](backlog.md) §"Filed".
 3. **Take the next Ready task**, execute it end-to-end, run its LIGHT/HEAVY gate, paste the verdict, mark it Done, set the next Ready. **The agent does everything up to "hit send"** — sending + calls are Paul's (see Paul's desk).
 4. **State lives in files, not memory.** Update this runbook (statuses + handoff notes) and the output file named on the task. That's what the next session reads.
 
@@ -29,10 +29,12 @@ critic's verdict pasted VERBATIM), and sets the next card `Ready`.
 | `sourcing-pipeline.md` | T2 — per-trigger query recipes, lane split, verified venues, tool stack | ✓ done |
 | `../backlog.md` | **Atomic executable backlog P1-P9** — per-venue sourcing → merge → openers, seeded URLs | ✓ ready to run |
 | `t4-t5-grooming.md` | T4/T5 groomed design (3-agent brainstorm + votes: discovery, throughput, qualification) | ✓ done |
-| `voice-of-customer.md` | VoC swipe file keyed to Four Forces; **T4/T5 harvest verbatim lines here** | scaffold; harvest pending |
-| `offer-one-pager.md` | A2 — the Vibe Code Rescue offer (free audit → fixed rescue) | draft; needs price confirm + booking link |
-| `warm-intro-referral-kit.md` | C0 — target-list table + 3 outreach templates; **T3/T4/T5/T6 write rows here** | draft; list to be populated |
-| `booking-page-spec.md` | S0 — Cal.com/NeetoCal setup (Paul, ~5 min) | spec ready |
+| `voice-of-customer.md` | VoC swipe file keyed to Four Forces; stale-dropped leads still feed it (no age limit) | ✓ done — 27 quotes, all four forces PASS |
+| `offer-one-pager.md` | A2 — the Vibe Code Rescue offer (free audit → fixed rescue) | ✓ done — priced $2,500/$7,500/$10,000, live booking link |
+| `warm-intro-referral-kit.md` | C0 — target-list table + 3 outreach templates; **PRIMARY channel per A0 C1 vote** | templates done; **list EMPTY — blocked only on Paul (10 names or Gmail consent)** |
+| `booking-page-spec.md` | S0 — NeetoCal setup spec (fulfilled; link live 2026-07-24) | ✓ done — historical record |
+| `45-minute-session-playbook.md` | D1 — the call script Paul runs on a booked Rescue Context Call | done; awaiting Paul's read-through |
+| `send-runner-prompt.md` / `reply-monitor-prompt.md` | #12 send runner (pre-research → Paul approves → send → log) / #20 daily reply monitor | ready; dormant until first sends |
 | `outbound-openers.md` | T7 — per-target openers | done (P9 complete; 25 openers ready for Paul) |
 | `discovery-kit.md` | T8 — call script + audit deliverable template | done (T8 complete) |
 | `objection-followup-bank.md` | T9 — objections + follow-up sequence | done (T9 complete) |
@@ -94,7 +96,7 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 | T8 | **Discovery kit** — call script + audit deliverable one-page template + 45-min agenda (Card D1 content), so Paul walks into calls with a script | `rescue-sprint/discovery-kit.md` | **Done** (2026-07-22 — 45-min agenda + SPIN/Four-Forces script + 1-page RAG scorecard/verdict template; devil's-advocate self-refute PASS, order-dependency noted) | A2 draft | HEAVY — devil's-advocate self-refute (verdict in-file §Cold-eyes) |
 | T9 | **Objection + FAQ + follow-up bank** — likely founder objections ("why not just re-hire the shop", "is $7,500 real"), answers, and a 3-touch no-reply follow-up sequence | `rescue-sprint/objection-followup-bank.md` | **Done** (T9 complete) | T8 ✓ | LIGHT — refute "does each answer hold up to a skeptical burned founder?" |
 
-**Next Ready T-task: T8** (autonomous, parallel off A2). T1+T2 Done (2026-07-21). **T4/T5 are GROOMED** (`t4-t5-grooming.md`) but held — the grooming HARD-GATE means no sourcing runs until Paul approves the design; on approval they execute → feed T6 dedupe → T7 openers. T3 (Gmail warm) is optional and waits only on Paul's consent.
+**All T-tasks T1-T9 are Done except T3** (2026-08-08). T3 (warm-source pass) is the only open row — and it is now the **primary lane** per revised Rock 1: it waits only on Paul (Gmail consent, or simpler, ~10 names from memory into `warm-intro-referral-kit.md`). No grooming gate holds anything — sourcing ran and completed 2026-07-22; the Vote 3 v2 rubric governs *re-verification* (#29), not permission to run.
 
 ---
 
@@ -155,37 +157,10 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 
 ## CARD S0 — Wire the booking link + pipeline source of truth  *(measurement prerequisite)*
 - **role**: Ops + Offer/Landing
-- **status**: In progress (2026-07-22 — live NeetoCal URL provided; Paul to confirm setup via the checklist below)
+- **status**: Done (2026-07-24 — booking link live and confirmed by Paul; `rescue-sprint/pipeline.md` is the ledger, bound from `operating-system.md` §1)
 - **depends-on**: —
-- **skills**: `hugo`, `new-page.md`
-- **inputs**: `content/pages/free-consultation/index.md`, `themes/beaver/layouts/page/free-consultation.html`, `operating-system.md` §7
-- **steps**: embed a real booking widget (NeetoCal/Cal.com) on the consultation/landing page (today NeetoCal is copy-only); make the pipeline sheet the single source; define LinkedIn-reply → call attribution.
-- **Cal event setup checklist for Paul** (copy this into a new NeetoCal event):
-  - [ ] **Event name**: `Free Rescue Context Call (45 min)`
-  - [ ] **Duration**: `45 minutes`
-  - [ ] **Buffer after**: `10 minutes` (notes / async-audit kickoff)
-  - [ ] **Location**: `Video call` (Google Meet / Zoom — whichever Paul already uses)
-  - [ ] **Availability**: Paul's real open blocks; cap at `2-3 slots/day`
-  - [ ] **Intake questions** (ask all five):
-    1. Company name + website
-    2. What did you build it with? (dev shop, freelancer, AI tool?)
-    3. What's breaking right now?
-    4. Funding stage (bootstrapped / pre-seed / seed / Series A)
-    5. Can you get access to the code? (GitHub/GitLab, or does the dev shop still hold it?)
-  - [ ] **Event visibility**: set the event to **public/bookable** so anyone with the link can schedule.
-  - [ ] **Confirmation message** (paste this into NeetoCal):
-    > You're booked. Here's what happens: we spend 45 minutes understanding your situation and collecting read-only access to your code, task board, and dev chats. Then our team runs an intensive, AI-assisted audit offline and sends you a one-page, plain-English scorecard within 48 hours — what's solid, what's fragile, and whether to salvage or rebuild. Please come with read-only access to your repo if you have it (GitHub, GitLab, wherever the code lives) — the 48-hour audit needs it. If the dev shop still holds the keys, come anyway: getting you access is part of what we sort out on the call. See you soon.
-    >
-    > — Paul
-  - [ ] **Data-handling note** (add to the event description): "The Code Audit is read-only by default. We do not copy secrets, customer data, or credentials — ever. If you ask us to include code in the write-up, we include only sanitized excerpts." Full policy in `discovery-kit.md`.
-  - [ ] **Reminder emails** (set in NeetoCal):
-    - **24 hours before**: "Your Rescue Context Call is tomorrow. Please make sure you can share read-only access to your code repo, task board, and dev chats so we can run the AI-assisted audit. If that’s not set up yet, reply here and we’ll send the exact steps."
-    - **1 hour before**: "We’re on in an hour. Join the video link below. If you can’t get access ready, no problem — we’ll figure it out on the call."
-  - [ ] **Video-conferencing integration**: connect NeetoCal to Google Meet or Zoom so each booking auto-generates a call link.
-  - [ ] **Create a separate 30-min Proposal Call event** in NeetoCal for the follow-up after the Rescue Audit scorecard is delivered.
-  - [ ] **Verify the live URL appears in**: `offer-one-pager.md`, `outbound-openers.md`, and `warm-intro-referral-kit.md`.
-  - [ ] **Pipeline source of truth**: create/update the pipeline sheet and link it from `operating-system.md` §7 so "discovery calls booked" is auto-countable.
-- **definition-of-done**: a live booking link that makes "discovery calls booked" auto-countable; pipeline sheet exists and is linked from `operating-system.md` §7.
+- **record**: full event spec (intake questions, confirmation copy, reminders) lives in [`booking-page-spec.md`](rescue-sprint/booking-page-spec.md) — the single copy; do not restate it here. Live URL: see Paul's desk P1.
+- **definition-of-done**: a live booking link that makes "discovery calls booked" auto-countable; pipeline sheet exists and is linked from the OS. ✓
 - **cold-eyes gate**: LIGHT — refute "can we actually measure calls-booked end-to-end with this?"
 - **handoff note**: _(verbatim verdict)_
 
@@ -202,7 +177,7 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 
 ## CARD C0 — Paul's warm-intro + outbound target list  *(PRIMARY demand engine · human-path · counts)*
 - **role**: Sales/Comms (Paul-led; agent drafts list + messages)
-- **status**: In progress (2026-07-21 — Rescue Demand Sprint; PRIMARY bet)
+- **status**: In progress (2026-08-08 — split state: the COLD lane is built but 100% unverified + blocked-on-tooling (#29); the **WARM sub-lane — the A0 C1 primary pick — has never started**: `warm-intro-referral-kit.md`'s target list is empty and waits ONLY on Paul (~10 names from memory, or Gmail consent for T3). Warm needs no tooling unblock and is the fastest path to a sendable touch.)
 - **depends-on**: — (messages that quote price/offer wait on A2)
 - **skills**: `copywriting`, `linkedin-icp-validation-plan`
 - **inputs**: ICP `90.10`; existing network; control-loss pain phrases
@@ -222,9 +197,9 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 - **cold-eyes gate**: HEAVY — `review-swarm` + `visual-scroll-gate` + `bin/test` AND `bin/dtest`; verbatim verdict.
 - **handoff note**: _(verbatim verdict)_
 
-## CARD C1 — LinkedIn ICP validation sprint  *(fast pipeline)*
-- **role**: Lead-gen
-- **status**: Ready
+## CARD C1 — LinkedIn ICP validation sprint  *(fast pipeline · drafts-only lane)*
+- **role**: Lead-gen (agent drafts; **Paul posts** — nothing publishes without him)
+- **status**: Ready (drafts-only, per revised Rock 1: LinkedIn is one of the three demand lanes because the cold lane alone cannot reach KR2. Campaign state: 3 of 10 posts drafted, zero posted, zero data — see `linkedin-icp-validation-plan.md` status banner. Cadence when live: within 20.09 §7's 3-4/wk total.)
 - **depends-on**: — (S0 booking link strengthens CTA)
 - **skills**: `linkedin-post-pipeline` + `linkedin-icp-validation-plan`, `reflexion-reflect`
 - **inputs**: `linkedin-icp-validation-plan.md` (reply-keyword CTAs DEMO/ACCESS/REPORT/REPO/TRANSFER), voice guide `90.11`
@@ -246,7 +221,7 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 
 ## CARD C3 — "Vibe Code Rescue" SEO cluster  *(Q1 2027 pipeline · NOT critical path for Nov 30)*
 - **role**: Marketing/Content/SEO
-- **status**: Blocked (low priority; compounding, won't rank by Nov 30)
+- **status**: Archived (not critical path for Nov 30; 20.09 additionally found page 1 for the category term fully occupied — re-open only after the category-name decision on Paul's desk)
 - **depends-on**: A2
 - **skills**: `blog`, `social-media-trends-research`
 - **definition-of-done**: cluster planned + published over time; own the "vibe code rescue" keyword.
@@ -255,7 +230,7 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 
 ## CARD C4 — Paid pilot on rescue keywords  *(Paul-gated budget)*
 - **role**: Marketing/Paid
-- **status**: Blocked
+- **status**: Archived (rock cut 2026-08-07 per 20.09 — paid waits on an organic reply signal that does not yet exist)
 - **depends-on**: B1, A2
 - **steps**: small LinkedIn/Google pilot on rescue intent → B1; measure cost-per-call.
 - **definition-of-done**: pilot live; CPA measured in pipeline.
@@ -298,13 +273,14 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 
 ---
 
-## Sprint map (rocks → cards)
+## Sprint map (rocks → cards, aligned with `operating-system.md` §4, 2026-08-08)
 
-- **Rock 1 (Aug) offer+partner**: **G0** (gate), **S0**, **A2**, **C0** — the human critical path. Start here.
-- **Rock 2 (Aug) landing**: B1 (after A2/S0).
-- **Rock 3 (Aug→Sep) demand-gen**: C1 (now), C0 (now), C2 (1-2 support), C3 (deferred), C4 (paid, gated).
-- **Rock 4 (Oct) convert**: D1, D3, then B2 from the first real engagement.
-- **Ongoing**: OS-WEEKLY.
+- **Rock 1 (now) — demand flowing from three lanes, summing to KR2's 8-12 calls**: **C0 warm** (PRIMARY — Paul's ~10 names, no tooling needed) · **C1 LinkedIn** (drafts-only; Paul posts) · **#29 cold** (top-up; blocked-on-tooling). The cold lane alone maxes at ~2-3 calls — it cannot carry the KR.
+- **Rock 2 (Aug) landing**: B1 (after A2/S0 — both Done, so B1 is capacity-blocked only).
+- **Rock 3 (Aug→Sep) first send → first call**: #12 batch-1 (any lane that opens), then #20 reply-monitor; C2 stays support-only.
+- **Rock 4 (Oct) convert**: D3 with D1's kit, then B2 from the first real engagement.
+- **Mid-point gate (Sep 30)**: ≥3 discovery calls booked, else pause and re-open A + C (register wording).
+- **Ongoing**: OS-WEEKLY. Closed/archived: G0, A0, S0, A2, D1 (done) · C3, C4 (archived).
 
 ## Cold-eyes on this runbook (2026-07-21)
 

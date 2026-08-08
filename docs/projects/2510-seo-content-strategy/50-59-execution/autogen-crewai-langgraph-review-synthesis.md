@@ -1498,9 +1498,9 @@ This AutoGen vs CrewAI vs LangGraph comparison article represents a **significan
 
 ### Documents Consulted
 - ✅ Article source: `/content/blog/autogen-crewai-langgraph-ai-agent-frameworks-2025/index.md`
-- ✅ SEO analysis: `/docs/seo/langchain-crewai-seo-analysis-2025-10-16.md`
+- ✅ SEO analysis: `docs/projects/2510-seo-content-strategy/70-79-archives/seo-2025/langchain-crewai-seo-analysis-2025-10-16.md`
 - ✅ Reader validation framework: `/docs/projects/2510-seo-content-strategy/READER-VALIDATION-REPORT-STATUS.md`
-- ✅ Content style guide: `/docs/jetthoughts-content-style-guide.md` (referenced in validation report)
+- ✅ Content style guide: `/docs/90-99-content-strategy/_ARCHIVED_jetthoughts-content-style-guide.md` (referenced in validation report)
 
 ### Framework Official Documentation
 - AutoGen: https://github.com/microsoft/autogen

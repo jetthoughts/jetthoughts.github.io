@@ -24,7 +24,7 @@ Discipline: **one bet is Validating at a time.** Spreading the company across se
 
 | # | Opportunity | State | Project | Thesis (one line) | Kill-criteria (short) |
 |---|---|---|---|---|---|
-| 1 | **Vibe Code Rescue** | 🔵 **Validating** | [`2607-vibe-code-rescue`](../projects/2607-vibe-code-rescue/) | Funded non-technical founders will pay a fixed price to rescue a broken AI/dev-shop MVP and get ownership back. | 0 booked calls in 2 weeks of warm outreach → re-open the ICP bet ([assumptions register](../projects/2607-vibe-code-rescue/rescue-sprint/assumptions-register.md)). |
+| 1 | **Vibe Code Rescue** | 🔵 **Validating** | [`2607-vibe-code-rescue`](../projects/2607-vibe-code-rescue/) | Funded non-technical founders will pay a fixed price to rescue a broken AI/dev-shop MVP and get ownership back. | If 2 weeks of warm outreach yields 0 booked calls → **pause and re-open A + C** (ICP *and* channel), per the [assumptions register](../projects/2607-vibe-code-rescue/rescue-sprint/assumptions-register.md) C1. **Status: untestable — zero touches have ever been sent** (see [OS §1](operating-system.md)); the clock starts at first send. |
 
 **Parking lot (candidates, not resourced)**: none yet. Add a row here when a new wedge earns a one-page thesis; do NOT start validating it while bet #1 is still open.
 
@@ -32,7 +32,7 @@ Discipline: **one bet is Validating at a time.** Spreading the company across se
 
 ## Why Vibe Code Rescue is the active bet
 
-- **Timing**: the AI-app-builder wave (Lovable, Cursor, Bolt, Replit) manufactured a large, founder-heavy pool of broken, funded MVPs - measured, not guessed ([market analysis](../projects/2607-vibe-code-rescue/10-19-research/market-analysis-2026.md)).
+- **Timing**: the AI-app-builder wave (Lovable, Cursor, Bolt, Replit) manufactured a large, founder-heavy pool of broken, funded MVPs - measured, not guessed ([market analysis](../projects/2607-vibe-code-rescue/10-19-research/market-analysis-2026.md)). *Counter-evidence (2026-08-07, held honestly)*: the category is no longer early - page 1 for "vibe code rescue" is fully occupied and a competitor uses the exact name; and our $2.5-10K pricing deliberately undercuts the $25-50K market band, in tension with our own "cheap is expensive" thesis. Both are open decisions on Paul's desk (OS §5).
 - **Fit**: Rails rebuild is JT's home turf; the ownership/trust wedge is JT's durable positioning made concrete.
 - **Provability**: a single signed client proves the whole motion (demand → call → audit → signing) and produces the first case study - a clean validation gate.
 - **Reversibility**: delivered via a white-label partner, so the bet is testable without over-committing the firm.

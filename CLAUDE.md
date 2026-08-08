@@ -57,30 +57,29 @@ Distilled operational knowledge lives in the OKF v0.1 bundle at `.okf/` (markdow
 
 Prefer **skills** over agents. Use agents only when the user or the selected workflow explicitly requires them.
 
-**Markdown search (docs/, content/, .okf/, knowledge/) — use `qmd` FIRST** (Paul 2026-08-01). The repo is indexed as qmd collection `jt-site` (run `qmd embed` after big doc batches to refresh vectors):
+**Markdown search (docs/, content/, .okf/) — use `qmd` FIRST** (Paul 2026-08-01; `knowledge/` dropped from the target list 2026-08-08 — it's a host-only symlink that dangles in container sessions). The repo is indexed as qmd collection `jt-site` (run `qmd embed` after big doc batches to refresh vectors):
 
 1. Known words/titles/slugs → BM25: `qmd search "skip_area selector wait" -c jt-site -n 5`
 2. Conceptual/indirect recall → structured query (write the fields yourself): `qmd query $'intent: ...\nlex: exact anchor words\nvec: paraphrase concepts\nhyde: a plausible answer paragraph' -c jt-site`
 3. Then fetch full sources with `qmd get <path>` / `qmd multi-get "#id1,#id2"` — never answer from snippets alone.
 
-**For CODE (templates/CSS/Ruby)**: claude-context MCP (`Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "[pattern]"`) or grepai/tokensave per the global search-tool table; DeepWiki (`ask_question` on `jetthoughts/jetthoughts.github.io`) for repo-level questions. **After:** `rg`/`ls` for exact filenames and fallbacks.
+**For CODE (templates/CSS/Ruby)**: claude-context MCP (`Search the codebase at <repo root> for: "[pattern]"` — repo root via `git rev-parse --show-toplevel`, never a hardcoded machine path) or grepai/tokensave per the global search-tool table; DeepWiki (`ask_question` on `jetthoughts/jetthoughts.github.io`) for repo-level questions. **After:** `rg`/`ls` for exact filenames and fallbacks.
 
 ### Finding blog posts to reference (MANDATORY for content work)
 When writing a blog post and looking for internal links, search with **qmd first**:
 ```
 qmd search "transparency weekly reports" -c jt-site -n 5
 ```
-For exact slug/tag lookups, see the post index at `docs/blog-post-index.md` (584 posts, 135 tags, process posts table).
+For exact slug/tag lookups, see the post index at `docs/blog-post-index.md` (regenerate with `bin/generate-blog-index` after adding/removing posts — never trust its count if the date stamp is old).
 **Never guess slugs** — verify with `ls content/blog/<slug>/index.md` before linking.
 
 ## 🧪 TDD & Testing
 
-Follow official methodology from `/knowledge/`:
-- **TDD**: RED → GREEN → REFACTOR cycle. See `/knowledge/20.01-tdd-methodology-reference.md` and `/knowledge/20.11-tdd-agent-delegation-how-to.md`
-- **Test Quality**: Behavior-focused ONLY. Reject implementation/existence/config tests. See `/knowledge/25.04-test-smell-prevention-enforcement-protocols.md`
+- **TDD**: RED → GREEN → REFACTOR cycle. In-repo doctrine: `docs/20-29-testing-qa/` (anti-masking + false-green references) and `docs/incidents/25.0x` postmortems. (*Host-only*: the `/knowledge/` methodology bundle is a symlink that resolves only on Paul's machine — never depend on it in a container/CI session.)
+- **Test Quality**: Behavior-focused ONLY. Reject implementation/existence/config tests.
 - **Avoid fragile config assertions**: Don't hardcode tunable values (`q=90`, `w=360`, exact file sizes, specific dimensions, CSS property values). Assert the *shape* (`q=\d+`, has `<picture>`, src contains `wsrv.nl`), not the configuration. If a test breaks when you change a quality/size knob unrelated to behavior, the test is testing config, not behavior — relax the assertion.
 - **Framework**: Minitest (`test/system/`, `test/unit/`). NEVER create ad hoc `*.sh` test scripts
-- **Test Runner**: `bin/qtest --changed` after every micro-change (< 10 lines) — builds once, tests only affected pages, auto-escalates to the critical suite for site-wide files. `bin/rake test:critical` at milestones and PR prep.
+- **Test Runner**: see the header **Test** line — that is the single statement of the qtest/smoke/critical/full-pair matrix; don't restate it.
 
 ### Visual Regression (MANDATORY for CSS/HTML changes)
 - **Tolerance**: 0.0 for refactoring (zero visual changes), ≤0.03 for new features only
@@ -105,8 +104,7 @@ Follow official methodology from `/knowledge/`:
 - LinkedIn campaign: `docs/workflows/linkedin-icp-validation-plan.md`
 - Cover images: `docs/workflows/cover-images.md` (canonical spec remains `.stitch/design.md`)
 - Visual scroll gate (rendered-output QA): `docs/workflows/visual-scroll-gate.md`
-- **Content plan (active)**: `docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md`
-- Commands & hooks overview: `docs/workflows/commands.md`
+- **Content plan (active)**: `docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md` (20.07 is superseded — kept for its topic briefs only)
 - Agent strategy: `docs/workflows/agents.md`
 
 ---
@@ -135,9 +133,7 @@ Follow official methodology from `/knowledge/`:
 - **Feature-branch + ONE bundled PR per sprint (BLOCKING for HTML/CSS/template changes)**: Don't push HTML/CSS/template/layout changes directly to `master`. The pattern is: (1) `git checkout -b <sprint-name>`, (2) ship multiple related commits on the branch (one per fix is fine — easy to revert/cherry-pick), (3) run BOTH test gates green on each commit, (4) `git push -u origin <branch>`, (5) open ONE PR via `gh pr create` covering the full sprint with summary + per-commit description + visual evidence. **Bundle related work into one PR — don't split into many small PRs.** User flagged 2026-04-30: "let's have one big PR instead of small PR." A 5-commit sprint = 1 PR, not 5. **Sprint/wave work ALWAYS rides its sprint's PR (Paul 2026-08-01: "use PR for our current sprints")** — including the sprint's docs, board updates, and review artifacts, which ride the same branch as the code they describe. Direct-to-master remains acceptable only for NON-sprint changes: standalone content-only blog edits, commit-message-only fixes, standalone docs under `docs/`, and `CLAUDE.md` policy updates.
 - **Never commit coordinator/agent report files**: User flagged 2026-04-30: "do not commit report files like docs/projects/2604-typography-ux/sprint-7-coordinator-report.md." Sprint coordinators and verification agents often write a `*-coordinator-report.md` or `*-verification-report.md` summarizing what they shipped. These are working notes, not project documentation — keep them OUT of the repo. Write to `/tmp/` instead, OR write to `docs/` but `git restore --staged <report>.md` before committing the rest of the work. The findings/audit reports under `docs/projects/2604-typography-ux/findings-*.md` ARE legitimate project artifacts (cross-page consistency audit, mobile UX audit, etc.) — those stay. Coordinator reports about WHICH commits ran on WHICH date are session-internal and should not pollute the repo.
 - **Surgical edit discipline (BLOCKING for content edits)**: When the user flags ONE attribute (a price, a tool name, a year-stamp, a label, a callout), change ONLY the sentences containing that attribute. Do NOT rewrite, re-balance, or re-theme the surrounding page — name the page's thesis in one line first and confirm it is unchanged. If a fix seems to need touching >1 paragraph or the structure, STOP and ask before expanding scope. When correcting a stance the user called too far one way (e.g. "too free"), land at the documented middle — do NOT swing to the opposite extreme (the budget free→paid→balanced pendulum cost 4 round-trips on 2026-05-22). Before handback, grep your OWN replacement text for the exact pattern you just removed (year-stamp, banned word, hardcoded tool name, alias) — re-introducing the defect you are fixing is a blocking failure. On renames/cleanups default to LESS: remove old references and update them, never add alias/redirect bridges (zero tech debt); question inherited elements (routing blocks, disclaimers) proactively rather than preserving them until the user points. Scope critic/cold-eyes findings to a punch-list of surgical fixes, NOT license to rewrite the page.
-- **ICP-reader read-back (BLOCKING for course/content edits)**: Before handback, re-read the edited chapter top-to-bottom AS the course ICP — "Sam," the idea-stage non-technical first-timer, NOT the website lead-gen ICP "Alex the burned founder" (rescue/trauma framing is off-ICP for course bodies). Confirm: (1) every acronym/tool/term is glossed at FIRST mention (what it is, in plain words); (2) progressive disclosure — orientation blocks orient, they do NOT front-load thresholds/metrics/mechanics (those belong where the reader acts on them); (3) value-first tone, not sales; (4) visual rhythm — no two adjacent same-form callouts. See memory `feedback_minimal_edit_scope_no_page_bombing` and `feedback_icp_reader_readback_progressive_disclosure`.
-- **Write for Sam, not for Paul (BLOCKING for course content edits)**: When Paul corrects a phrase in fast operator-shorthand ("ICP", "apparatus", "resonate", "confirm demand"), DO NOT echo that wording into the lesson body. Translate to Sam-voice — plain English, observable behavior. Take initiative on wording — fix the underlying intent in Sam-voice, don't paste Paul-voice into the lesson. **When Paul flags the same line 2+ times across attempts, STOP iterating on phrasing — diagnose value-to-Sam.** Convergence check: "Could Sam read this and immediately tell a friend what's valuable to him?" If no, re-diagnose the value; do not re-phrase. The 1.2a Output line cost 6 iterations on 2026-06-11 because each pass optimized for surface (Paul's words / pattern consistency / simple phrasing / explicit grammar) instead of Sam-value. **Patterns that work for one lesson may not fit another** — 1.1 tests sentence resonance with target audience (fit); 1.2a tests page comprehension by any stranger (clarity); cloning 1.1's binary into 1.2a conflated two different test types. Drop the pattern when it doesn't fit. See `feedback_iterate_value_not_phrasing` memory + `feedback_write_for_sam_not_paul` if it exists.
-- **"Pilot" in 2605 course work = INTERNAL editorial template review, NOT external customer recruitment**: In any 2605 session, "pilot lessons" / "5-Sam validation pilot" / "validate the template" defaults to Paul-as-reviewer of the v2 micro-lesson template (currently 1.2a + 1.2b). External recruitment / Clarity install / outreach scripts are deferred to post-course-completion (kit lives at `docs/projects/2605-tech-for-non-technical-founders/40-49-review/_DEFERRED_external-validation-pilot-kit.md`). Confirmation signals for INTERNAL: 30.03 spec exists, 40.11 Sam simulation already done, "review them", "approve", "fan out template". Confirmation signals for EXTERNAL (rare, post-launch only): "recruit", "real founders", "Clarity recordings", "promote", "sell the course". Cost a 372-line external-customer-research kit side-quest on 2026-06-11 when I anchored on TASK-TRACKER's literal "recruit 3-5 real founders" without questioning the implicit reviewer.
+- **2605 course-editing policies (BLOCKING for any 2605 course/content edit)**: ICP-reader read-back (edit as "Sam", not "Alex"), Write-for-Sam-not-Paul (translate operator-shorthand; 2+ flags on one line → diagnose value, stop re-phrasing), and "Pilot" = INTERNAL template review (external kit is `40-49-review/40.18-external-validation-pilot-kit.md`, deferred post-launch). Full verbatim rules: `docs/projects/2605-tech-for-non-technical-founders/60-69-policies/60.01-course-editing-policies.md` — read it before touching course content.
 
 ### ✍️ Blog Post Pipeline (MANDATORY)
 
@@ -168,11 +164,8 @@ Repo voice guides and workflow docs override generic writing, SEO, or humanizer 
 | Command | Purpose |
 |---------|---------|
 | `bin/hugo-build` | Build + validate site |
-| `bin/qtest --changed` | Routine gate: affected pages only (~25-60s) |
-| `bin/rake test:critical` | Critical suite (milestones, PR prep) |
-| `bin/test` + `bin/dtest` | Full visual pair — PR prep or on confirmation only |
-| `Search the codebase at /knowledge/ for: "[topic]"` | Global standards |
-| `Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "[pattern]"` | Local patterns |
+| Test commands | See the header **Test** line (single source for qtest/smoke/critical/full-pair) |
+| `Search the codebase at <repo root> for: "[pattern]"` | Local patterns (claude-context MCP; repo root via `git rev-parse --show-toplevel`) |
 
 **Coverage**: Full codebase indexed (830+ files, 4,184+ semantic chunks)
 **Design System**: JetVelocity — obsidian dark, Ruby red (#cc342d), neon purple (#a855f7). See `.stitch/design.md`

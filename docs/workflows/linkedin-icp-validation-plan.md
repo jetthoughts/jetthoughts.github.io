@@ -1,8 +1,10 @@
 # LinkedIn ICP-E Validation Plan
 
+> **Status: PAUSED 2026-08-08** — 3 of 10 posts drafted, zero posted, zero data collected; the 2-week window never started. This plan is the **vehicle for the LinkedIn demand lane** in OS Rock 1 (agent drafts → Paul posts) and revives on Paul's go. When live, cadence fits inside 20.09 §7's **Stream 0 total of 3-4 posts/week** (shared with course-promo) — not the original 5/week. The hypotheses, hooks, and reply-keyword CTAs below remain the campaign design of record.
+
 **Purpose:** Validate whether LinkedIn can surface and qualify ICP-E: non-technical founders who feel stuck with a dev shop, freelancer, offshore team, or AI-heavy build they cannot evaluate.
-**Window:** 2 weeks
-**Cadence:** 5 posts/week, 10 posts total
+**Window:** 2 weeks from first post (clock starts when Paul posts #1)
+**Cadence:** see status banner — within the 3-4/wk Stream 0 total
 **Primary CTA:** ask for a practical artifact (`DEMO`, `ACCESS`, `REPORT`, `REPO`, `TRANSFER`) or reply with one concrete symptom. No calendar-link CTA in the post body.
 **Source docs:** `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`, `docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md`
 

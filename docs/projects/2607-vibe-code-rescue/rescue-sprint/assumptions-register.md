@@ -96,7 +96,7 @@
 
 | # | Assumption | Options → pick | Pre-validation / kill |
 |---|---|---|---|
-| E1 | **Offer = free 45-min audit → fixed $25-50K rescue** | free vs paid audit; fixed vs T&M → **free audit + fixed price** (removes the burned founder's #1 fear: another open-ended bill) | if free audits don't convert to paid proposals at all after ~5, test a paid ($ nominal) audit to filter tire-kickers |
+| E1 | **Offer = free 45-min audit → fixed-price rescue** (A2-confirmed 2026-07-22: $2,500 triage / $7,500 rescue / $10,000 foundation reset — a deliberate undercut of the $25-50K market band; the tension with our own "cheap is expensive" thesis is OS §5 Issue 4, Paul's call) | free vs paid audit; fixed vs T&M → **free audit + fixed price** (removes the burned founder's #1 fear: another open-ended bill) | if free audits don't convert to paid proposals at all after ~5, test a paid ($ nominal) audit to filter tire-kickers |
 | E2 | **Distribution = push (outbound/warm), not pull (SEO), for Nov 30** | push vs pull → **push** | SEO stays queued for Q1-2027; kill only if push proves it can't produce calls |
 | E3 | **Delivery via white-label partner, Paul as trust layer (G0)** | in-house vs white-label → **white-label + named fallback** | validated by a PAID TRIAL rescue before selling (G0 gate); kill/switch to fallback if trial misses the quality bar |
 | E4 | **Wedge vs competitors = ownership handback + named fractional CTO** | audit-quality vs price vs ownership/trust → **ownership + trust** (price is a race to the bottom against 6 shops) | if openers leading with ownership under-reply vs price/speed, re-open (ties to B) |

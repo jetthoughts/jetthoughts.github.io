@@ -1,5 +1,7 @@
 # Cold Prospect List - Merged + Deduplicated
 
+> ⚠ **ALL 25 ROWS UNVERIFIED (2026-07-26)** — batch-1 pre-research found 60% of its sample stale or saturated (recency was eyeballed from excerpts, never read in-thread). **No row here is send-ready until card #29 re-checks it against the Vote 3 v2 rubric** (`t4-t5-grooming.md`). Do not draft or send from these tables.
+>
 > P8 output. Merged from P1-P7 prospect files. Deduplicated by source URL (thread URL = join key). Scored by trigger strength. Rows from same thread with different handles are separate entries (different people, same venue).
 >
 > Sources: P1 IH comments (7), P2 IH posts (6), P3 HN (0), P4 Reddit (8), P5 X (1), P6 Competitor comments (3), P7 date-filtered sweep (0 - blocked on tooling). **Total: 25 rows. Zero dupes found.**
@@ -67,7 +69,7 @@
 
 ### LIGHT gate: "Would Paul recognize these as worth his time?"
 
-**Yes.** The 19 ICP rows are all non-technical founders who paid someone (shop/freelancer/AI tool) to build their app and are now having problems. The verbatim quotes are specific and painful. The Trigger 3 rows (ownership/hostage) are the rarest and most valuable - Saul_E's "$55K rebuild quote" and the ghosted freelancer ($5K + no API integrations) are exactly the ICP the rescue pitch targets.
+**SUPERSEDED 2026-07-26** — the original PASS ("Yes, the 19 ICP rows...") was issued on rows later found 60% stale/saturated in batch-1 pre-research (Saul_E's post turned out to be from 2020; Afrikonnect's quote was a year-old comment on someone else's thread). The gate re-runs as part of #29's re-verification; the ICP-fit *reasoning* stands, the row-level freshness does not.
 
 **Honest limitations:**
 - Most rows are from IndieHackers and Reddit. HN and X/Twitter yielded thin results (dev-dominated, auditor-heavy).

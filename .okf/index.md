@@ -23,6 +23,6 @@ NOT back-stamp `generated`/`verified` you didn't actually perform.
 * [Build & Test](build/) - build pipeline, validators, and the blocking test gates
 * [Content](content/) - course structure, canonical numbers, and voice rules
 * [Design](design/) - mermaid theme, house visual spec, covers, typography
-* [Workflows](workflows/) - render-verification recipes, review-swarm patterns, and the blog/LinkedIn/CSS/test pipelines
+* [Workflows](workflows/) - render-verification recipes, review-swarm patterns, the blog/LinkedIn/CSS/test pipelines, the visual scroll gate, and the 2607 outbound-sprint machinery
 * [Architecture](architecture/) - Hugo site, CSS build pipeline, blog templates, cover images, SEO meta tags
-* [Content Strategy](content-strategy/) - ICP profile and voice guide governing all founder-facing content
+* [Content Strategy](content-strategy/) - ICP profile, voice guide, and the pipeline-first content plan (20.09) governing all founder-facing content

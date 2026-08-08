@@ -1,8 +1,8 @@
-> DRAFT - cold-eyes fixes applied; booking link live.
+> 🔴 **PRIMARY CHANNEL (A0 C1 vote) — BLOCKED ONLY ON PAUL.** The warm lane needs no tooling unblock, no 30-day verification, no egress: it needs **~10 real names in the table below** (from memory, or via T3 Gmail consent). It is the fastest path from today to a sendable touch, and the kill-criteria clock cannot even start until it runs. Templates below are done and cold-eyes-fixed; booking link live.
 
 # Warm-Intro + Referral Kit (Card C0)
 
-**Owner**: Paul Keen | **Sprint**: Rescue Demand Sprint (2026-07-21) | **Card**: C0 (PRIMARY demand engine)
+**Owner**: Paul Keen | **Card**: C0 (PRIMARY demand engine — warm sub-lane, Rock 1)
 **Goal**: Paul sends trusted intro + referral asks THIS WEEK so founders with broken MVPs book the Free Rescue Context Call.
 **Offer these messages point to**: a free 45-minute Rescue Context Call - after the call our team runs an AI-assisted Rescue Audit on the founder's codebase, task board, and dev chats and sends back a one-page, plain-English scorecard. No pitch, no contract.
 **Where the calls land**: the live S0 booking link.

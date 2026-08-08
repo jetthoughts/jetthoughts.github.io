@@ -42,12 +42,19 @@ Source of truth: [`rescue-sprint/pipeline.md`](../projects/2607-vibe-code-rescue
 
 **Kill-criteria (from the assumptions register, evaluated here weekly - this is the "runs automatically via OS-WEEKLY" promise, made real):** C1 warm-channel test - 0 calls after 2 weeks of *actual sent* outreach → pause, re-open ICP/channel. Currently **untestable**, see §1. A0 ICP test - if ≥half of early interest is technical or pre-launch founders, re-open the ICP vote. Not yet evaluable - zero interest of any kind so far.
 
-## 4. Rocks (open only)
+## 4. Rocks (open only — realigned 2026-08-08 so the lanes SUM to KR2)
 
-1. **Unblock sourcing** (now) - card #29 needs `chrome-devtools` + egress to at least one of indiehackers.com / reddit.com. Nothing else on the board matters until this moves.
-2. **Landing page** (Aug) - card B1, Blocked on nothing but capacity; booking link already live standalone.
-3. **First send → first call** (Aug-Sep) - batch-1/2/3, gated entirely on Rock 1.
-4. **First audit → first signing** (Oct) - not started, gated on Rock 3.
+The arithmetic that forced the realignment: KR2 needs 8-12 calls; the cold lane at full success (10-15 verified rows, generous 20% reply-to-call) yields ~2-3. The cold lane cannot carry the KR alone — the voted-primary warm lane and LinkedIn must carry the rest, and both were idle.
+
+1. **Demand flowing from three lanes** (now):
+   - **Warm (PRIMARY, per A0 C1 vote)** - blocked ONLY on Paul: ~10 names from memory into `warm-intro-referral-kit.md` (or Gmail consent for T3). No tooling needed. Fastest path to a sendable touch.
+   - **LinkedIn Stream 0** - agent drafts, Paul posts, 3-4/wk total (20.09 §7); campaign vehicle is `linkedin-icp-validation-plan.md` (paused at 3/10 drafts, revivable on Paul's go).
+   - **Cold #29 (top-up)** - still BLOCKED-ON-TOOLING (`chrome-devtools` + egress to at least one of indiehackers.com / reddit.com). Worth unblocking; not the critical path anymore.
+2. **Landing page** (Aug) - card B1, blocked on nothing but capacity; booking link already live standalone.
+3. **First send → first call** (Aug-Sep) - batch-1 from whichever lane opens first, then the daily reply-monitor.
+4. **First audit → first signing** (Oct) - gated on Rock 3.
+
+**Mid-point gate — Sep 30: ≥3 discovery calls booked, else pause and re-open A + C** (register wording). This is the falsifiable checkpoint between now and Nov 30; it exists so a re-plan can still happen while there is time to re-plan.
 
 *Closed*: offer + partner locked (Jul 21). *Cut* (20.09, 2026-08-07): the paid-pilot rock - budget only matters once organic proves a reply signal, and the bet currently forbids a content sprint.
 
@@ -55,10 +62,10 @@ Source of truth: [`rescue-sprint/pipeline.md`](../projects/2607-vibe-code-rescue
 
 | # | Issue | Owner | Status |
 |---|---|---|---|
-| 1 | Sourcing BLOCKED-ON-TOOLING - #29's sweep can't open any thread to verify a timestamp | Infra/Paul | 🔴 Open since 2026-08-08 - see runbook §Card #29 |
-| 2 | Kill-criteria untestable, not "not fired" - 18 days, zero touches sent, so the C1 test has never actually run | Claude/Paul | 🔴 Open - ratify: is this a distribution defect (re-run once unblocked) or does it call the bet itself into question? |
-| 3 | Joy Adamson override - only survivor of batch-1, 5mo old, still publicly unanswered | Paul | 🟡 Open - 1-min decision, unresolved since ~2026-07-26 |
-| 4 | Pricing vs. thesis tension - JT undercuts at $7,500 against $25-55K competitors one week after publishing "cheap developers are expensive," which argues against its own thesis to a twice-shy founder | Paul | 🟡 Open - content flagged it (20.09 §10), not a content fix |
+| 1 | Sourcing BLOCKED-ON-TOOLING - #29's sweep can't open any thread to verify a timestamp | Infra/Paul | 🔴 Open since 2026-08-08 - see runbook §Card #29. Demoted from sole-blocker: the warm + LinkedIn lanes don't need it (Rock 1) |
+| 2 | Kill-criteria untestable AND the primary lane never started - 18 days, zero touches sent; the voted-primary warm channel has an empty target list. The cheapest unblock on the whole board is Paul's ~10 warm names | Paul | 🔴 Open - the C1 clock starts at first send |
+| 3 | Joy Adamson override - only survivor of batch-1, 5mo old, still publicly unanswered | Paul | 🟡 Open - **decide before first send** (she rides batch-1 or not at all) |
+| 4 | Pricing vs. thesis tension - JT undercuts at $7,500 against $25-55K competitors one week after publishing "cheap developers are expensive," which argues against its own thesis to a twice-shy founder. Related: the category name "vibe code rescue" is now a competitor's page title, page 1 occupied - fight for it or differentiate? | Paul | 🟡 Open - **decide both before first send** (openers and the landing quote the offer) |
 | 5 | vision-mission.md still stamped DRAFT, 18 days on, while other docs cite it as settled | Paul | 🟡 Open - 1-line decision: ship it or say what's wrong |
 
 *Resolved, moved to changelog*: white-label partner (Jul 21) · prospect list populated, P8 (Jul 22) · price band (Jul 22).

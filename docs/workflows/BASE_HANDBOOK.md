@@ -13,9 +13,12 @@ Use this as the shared boilerplate for agents and skills. Keep agent/skill files
 - If user says “code is bad” or “over-engineered”: HALT, perform 5-Why analysis, fix config, then proceed
 
 ## Research Protocol (Mandatory)
-1. `Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "[pattern]"`
-2. `Search the codebase at /Users/pftg/dev/jetthoughts.github.io/knowledge for: "[topic]"`
+1. `Search the codebase at <repo root> for: "[pattern]"` (use the current checkout root — `git rev-parse --show-toplevel`; do not hardcode a machine-specific path)
+2. `Search the codebase at <repo root>/knowledge for: "[topic]"`
 3. `Get library docs for "[framework]"`
+
+## Business layer (company state)
+The company goal/OKR/rocks/weekly numbers live in `docs/business/` (`operating-system.md` is the weekly loop); the active bet's execution entry point is `docs/projects/2607-vibe-code-rescue/operation-runbook.md` **▶ START HERE**.
 
 Use claude-context MCP semantic search first for code and content patterns. Use `rg`/`ls` for exact filenames, slugs, and fallback searches after semantic search.
 

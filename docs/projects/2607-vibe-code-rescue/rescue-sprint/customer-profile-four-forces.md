@@ -1,4 +1,4 @@
-> DRAFT - JTBD customer profile for the Vibe Code Rescue ICP, mapped to the Four Forces of Progress (Moesta/Spiek; Cast & Hue framing). Feeds A0 (assumptions), T1 (triggers), T7 (openers), T9 (objections).
+> ✅ IN USE - JTBD customer profile for the Vibe Code Rescue ICP, mapped to the Four Forces of Progress (Moesta/Spiek; Cast & Hue framing). Load-bearing substrate for A0 (assumptions), T1 (triggers), the shipped openers (T7/P9) and objection bank (T9).
 
 # Customer Profile + Four Forces - "Alex", the burned non-technical founder
 

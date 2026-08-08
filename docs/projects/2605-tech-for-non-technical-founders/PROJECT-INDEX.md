@@ -1,8 +1,8 @@
 # Project 2605 - Master Index
 
 **Project**: Tech for Non-Technical Founders 2026
-**Status**: 🟢 Course LIVE + CONTENT-COMPLETE on v2 (all 5 modules, PRs #345/#351/#352/#353, deployed via #356) · review-clean · instrumented (GA4 + Clarity) · 🔄 Active: external validation pilot + media modernization
-**Last Updated**: 2026-07-26 (media pilot: 7 SVGs + 2 template pages w/ covers, 40.20 gap audit, media backlog groomed in TASK-TRACKER)
+**Status**: 🟢 Course LIVE + v2 complete · wave plan 20.15 CLOSED (W1-W5 merged) · instrumented (GA4 + Clarity) · 🔄 Active: slim queue in TASK-TRACKER.md (item 16 landing migration runs next); Aug-14 metrics read pending. NOTE: "external validation pilot" is POST-LAUNCH only — in-session "pilot" = internal template review (see `60-69-policies/60.01-course-editing-policies.md`)
+**Last Updated**: 2026-08-08 (tracker slimmed to the live queue; full history in `_ARCHIVED_TASK-TRACKER-2026-07.md`)
 **Parent**: `../2510-seo-content-strategy/`
 
 This is the **single navigation hub** for the 2605 project. Read top-to-bottom on first visit.
@@ -107,7 +107,7 @@ Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" 
 | `10-19-research/10.05-content-organization-patterns-2026.md` | Gloria Mark / Pew 2026 / NN/g attention-span research; cognitive-load patterns for content structure |
 | `10-19-research/_ARCHIVED_10.06-icp-persona-course-walkthrough.md` | (ARCHIVED) Alex (burned founder) walkthrough. Use 40.06 for Sam. |
 | `10-19-research/_ARCHIVED_10.07-icp-sam-persona-course-walkthrough.md` | (ARCHIVED) — Superseded by 40.06 (Sam journey) + 40.07 (recommendations). |
-| `10-19-research/10.08-validation-tools-analysis-2026.md` | AI validation tools gap analysis & recommendations (June 2026). Sources: Russian-language market research (`docs/_research/`) + web research. Maps 6 gaps to course modules, ranks by ROI. |
+| `10-19-research/10.08-validation-tools-analysis-2026.md` | AI validation tools gap analysis & recommendations (June 2026). Sources: Russian-language market research (in-project: `10-19-research/`) + web research. Maps 6 gaps to course modules, ranks by ROI. |
 
 ### 💡 Ideas Bank
 

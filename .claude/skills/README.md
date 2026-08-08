@@ -1,9 +1,10 @@
 # Local Skill Profile for Codex
 
-This project uses global skills from:
-- `/Users/pftg/.agents/skills`
+Skills live in-repo, portable across environments (no machine-specific paths):
 
-This file pins the preferred skill routing for this repository.
+- `.agents/skills/` — repo-wide SOP skills (async-first-communication, kanban-md, impeccable)
+- `.skills/` — course-project skills (see `.skills/course-skills-map.md`)
+- Global/plugin skills load via each tool's own roster — invoke by name, never by absolute path.
 
 ## Primary Workflows
 

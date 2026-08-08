@@ -35,7 +35,7 @@ The $4.7B is *tool spend*, not rescue spend. The rescue market is the downstream
 ### Top-down [ESTIMATE]
 - Assume order-of-magnitude **1,000,000 net-new AI-built apps/year reach real users** in the US (conservative: Apple alone took ~940K submissions/year at the Q1-2026 run-rate; most are hobby, so we keep a fraction). **[ASSUMPTION]**
 - Apply a **live-and-breaking** filter of ~15% (apps that get real users AND hit production failures worth paying to fix - well below the 45-86% raw defect rates, to exclude hobby/abandoned). **[ASSUMPTION]** -> ~150,000 breaking apps.
-- Apply the **funded, non-technical, budget-holding ICP** filter of ~5% (pre-seed to Series A with $25K+ to spend). **[ASSUMPTION]** -> **~7,500 US ICP-fit rescue prospects/year**.
+- Apply the **funded, non-technical, budget-holding ICP** filter of ~5% (pre-seed to Series A with $25K+ to spend). **[ASSUMPTION — note: this filter predates the A2 price decision; our actual band is $2,500-$10,000, so the true reachable pool is LARGER than this figure by an unknown factor]** -> **~7,500 US ICP-fit rescue prospects/year (conservative)**.
 - At a $25-50K engagement (say $30K blended), that is a **~$225M/year serviceable US rescue market [ESTIMATE]** - order of magnitude, not precision.
 
 ### Bottom-up [ESTIMATE]
@@ -59,7 +59,7 @@ Both methods land in the **thousands of reachable ICP prospects per year** range
 | Fractional CTO retainer (solo) | $5,000-$15,000/mo | JetRockets FAQ (Groovy Web 2026 comparison) |
 | Proof point | YC SaaS broken MVP rebuilt in 6 weeks for fixed $40K vs a $150K agency quote | strategy.md |
 
-Our band ($25-50K) sits at the market floor-to-mid, consistent with published competitor minimums. We do not need to discount to be credible.
+**Superseded by A2 (2026-07-22)**: this analysis assumed we would price at the market band ($25-50K). The confirmed offer is $2,500/$7,500/$10,000 — a deliberate, deep undercut of every published competitor minimum above. The market-rate table stays as the benchmark; the open question is no longer "can we charge market rate" but whether undercutting reads as a risk signal to a twice-burned buyer (OS §5 Issue 4, Paul's call).
 
 ---
 

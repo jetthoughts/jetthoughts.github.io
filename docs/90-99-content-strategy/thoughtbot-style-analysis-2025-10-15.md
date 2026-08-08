@@ -628,7 +628,7 @@ Author bio + social links
 
 ### Project-Specific Adaptations
 - **Writing Guidelines**: `/docs/70-79-templates-boilerplates/70.08-content-writing-guidelines-reference.md`
-- **SEO Implementation**: `/docs/seo-optimization-implementation-guide.md`
+- **SEO Implementation**: `/docs/90-99-content-strategy/seo-optimization/seo-optimization-implementation-guide.md`
 - **SEO Audit**: `/docs/90-99-content-strategy/seo-optimization/90.09-emergency-cto-seo-audit-reference.md`
 
 ### Real-World Examples Analyzed

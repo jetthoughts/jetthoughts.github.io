@@ -974,3 +974,83 @@ user agent. Qualification requires a timestamp read from the *opened* thread, so
 **no sourcing method can produce a lead until thread-open access is restored**
 (`chrome-devtools` + egress to indiehackers.com / reddit.com). That is now the
 real P0 in both boards, in place of the keyword ask.
+
+## 2026-08-08 — Business/ops/sales/marketing doc-estate consolidation
+
+**Scope**: two exhaustive audits (2607: 31 files/3,053 lines; company layer +
+2510 + workflows + OKF) followed by a single cleanup pass. The estate measured
+~40% live / ~60% stale-or-duplicated 18 days after creation.
+
+**Durable lessons** (each caused a real defect this sweep fixed):
+
+1. **A state doc that references an uncommitted artifact is a time bomb.** The
+   runbook's entry point told every fresh session to read a kanban board that
+   was gitignored, never committed, and whose binary isn't installed - cards
+   #12-#29 were cited ~40 times across 6 files with no surviving definition.
+   Rule: state lives in COMMITTED files only; `backlog.md` §State is now the
+   sole card registry.
+2. **Phantom human gates outlive their approval.** Two files still said "no
+   sourcing until Paul approves" 18 days after sourcing ran - exactly the
+   mis-scope the runbook's own Paul's-desk rule forbids. Rule: when a gate is
+   satisfied, edit the gate line itself, not just the status table 80 lines
+   below it.
+3. **N agreeing copies don't prevent 2 disagreeing ones.** Pricing existed in
+   12 correct locations AND 2 stale $25-50K locations (assumptions-register E1,
+   trigger-taxonomy competitor note) - both feeding sales collateral. Rule: on
+   any canon change, grep for the OLD value, not just update the new one.
+4. **Roadmaps must sum.** KR2 needs 8-12 calls; the only lane being worked
+   maxes at ~2-3. Rocks now carry the arithmetic (three lanes: warm PRIMARY /
+   LinkedIn drafts / cold top-up) + a falsifiable Sep-30 midpoint gate.
+5. **Supersession must be stamped ON the superseded file.** 20.08 carried a
+   banner (the model); 20.07/20.04/20.05 didn't and 20.05 held three
+   contradictory states across three files. All banners added; 2510's three
+   2025 fossils (_ARCHIVED_ prefix) archived; GOAL-AT-A-GLANCE's dated status
+   block (which instructed work 20.09 prohibits) replaced with pointers.
+6. **Routers must route to the entry point the OS names.** No router sent
+   sessions to the runbook START HERE; flow-router/BASE_HANDBOOK/AGENTS.md now
+   carry business + outbound routes, and the dead /Users/pftg machine path is
+   gone.
+
+**Cadence canon**: LinkedIn Stream 0 total is 3-4 posts/week SHARED across
+campaigns (20.09 §7). Both campaign plans (icp-validation PAUSED 3/10 drafted;
+course-promo 9/~25 drafted) now say so - previously they claimed 5/wk each.
+
+## 2026-08-08 — Repo-wide simplification: config surface + docs estate (tranches 1-5)
+
+Follow-on from the business/ops consolidation, per Paul's "what else needs
+simplifying." Two audits, five tranches, all on PR #441's branch.
+
+**Removed with zero capability loss (~120 KB):** 132 byte-identical stub
+slash-commands (one md5 across all of .claude/commands/ — each was a roster
+entry every session paid for); .claude/agents/templates/ + content/ (claude-flow
+boilerplate whose hooks call an uninstalled binary); .claude/rules/ (575 lines
+of vendored Memoria docs mandating memory_* tools from an MCP configured
+nowhere); AGENTS.md lines 77-621 (the same rules concatenated verbatim).
+
+**Durable rules this sweep produced:**
+
+1. **Config documents only installed tools.** Three independent systems
+   (claude-flow, Memoria, kanban-md board) left instruction surface behind
+   after the tool itself was gone or never wired. Instructions for absent
+   tools are worse than none — they mandate impossible actions.
+2. **Supreme-authority claims must resolve.** docs/README.md declared a
+   /knowledge/ "SUPREME AUTHORITY" that is a symlink to Paul's Mac — dangling
+   in every container/CI session — plus three /projects/elital_* repos that
+   never existed here. Host-only resources must never be load-bearing policy.
+3. **A "latent" registration bug can hide in plain sight**: six agents listed
+   as Critical (keep) had no YAML frontmatter and never registered. A doc's
+   keep-list is not evidence the thing it keeps exists.
+4. **Indexes must be generated, not asserted.** blog-post-index claimed 584
+   posts against 607 actual; now `bin/generate-blog-index` regenerates it
+   (gotcha: File.read needs explicit UTF-8 in the container locale).
+5. **Trackers are queues, not journals.** 2605's tracker hit 1,628 lines,
+   ~72% closed history, items physically out of order — the archive-prefix
+   convention the project already had was the fix (slim tracker + _ARCHIVED_
+   history file).
+6. **Date-cohort archiving must check inbound links per-file**: the Oct-2025
+   sweep nearly archived a Russian-language research doc that 2605 cites as a
+   live June-2026 source.
+
+**Deferred (documented, not done):** the six duplicate 60.xx JD numbers in
+60-69-project-management + moving its four testing docs to 20-29 (M effort,
+inbound-link risk); .junie/ + GEMINI.md/QWEN.md mirrors (other tools' files).
