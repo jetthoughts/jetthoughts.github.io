@@ -68,7 +68,7 @@ But the developers who generated it never wrote tests, never handled errors, and
 
 The vibe coding shops skip tests entirely because the AI output "looks like it works." It does - until real users show up and everything breaks at once, leaving you paying emergency rates to fix code that should never have shipped.
 
-If your agency can't tell you their test coverage number, they might not have tests at all. And if they don't have tests but they're shipping fast, they're probably vibe coding - and you should be looking for an exit.
+If your agency can't tell you their test coverage number, they might not have tests at all. And if they don't have tests but they're shipping fast, they're probably vibe coding - and you should be looking for an exit. If you want a number rather than a suspicion, our [vibe code rescue](/services/vibe-code-rescue/) service starts with a 48-hour code audit that gives you one.
 
 ## 5. Can't Explain Technical Decisions in Plain English
 
