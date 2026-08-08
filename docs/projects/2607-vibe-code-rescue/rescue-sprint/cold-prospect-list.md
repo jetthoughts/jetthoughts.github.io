@@ -76,5 +76,5 @@
 - Semi-ICP rows (6) are founders who built with AI themselves, not paid a shop. They still need rescue but the trigger is different.
 
 ### Pending
-- P7 date-filtered sweep: add rows once the tooling unblock lands (`chrome-devtools` + egress to indiehackers.com/reddit.com) — see `backlog.md` §Card #29 status
+- P7 date-filtered sweep: add rows once the tooling unblock lands (`chrome-devtools` + egress to at least one of indiehackers.com or reddit.com) — see `backlog.md` §Card #29 status
 - Deduplication key: source URL. No duplicates found across P1-P7.

@@ -22,9 +22,9 @@ sources:
    for Paul's per-message approval, then send, then log. Nothing sends on
    silence.
 2. **Monitor** - each morning `rescue-sprint/reply-monitor-prompt.md`
-   sweeps IH notifications, LinkedIn, Reddit, and Gmail (`neetocal`),
-   classifies replies, drafts responses from the objection bank (marked
-   DRAFT - Paul sends), and updates the ledger.
+   sweeps IH notifications, LinkedIn, Reddit (once batch 2 is live), and
+   Gmail (`neetocal`), classifies replies, drafts responses from the
+   objection bank (marked DRAFT - Paul sends), and updates the ledger.
 3. **Measure** - `rescue-sprint/pipeline.md` is the single ledger (one row
    per touch + Friday tally). The A0 kill-criteria (~20 touches / ~10
    calls) are evaluated from it alone.
