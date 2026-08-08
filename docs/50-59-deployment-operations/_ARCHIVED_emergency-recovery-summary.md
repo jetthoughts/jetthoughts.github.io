@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — derivative summary of emergency-recovery-system.md (now in this same area); read the full doc instead.
+
 # 🚨 Emergency Recovery System - Implementation Summary
 
 **Emergency Recovery Specialist Report**

@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — superseded - 90-99-content-strategy/strategy-analysis/90.11-voice-guide.md is the canonical voice authority.
+
 # JetThoughts Content Writing Style Guide
 *Based on proven technical content writing best practices*
 

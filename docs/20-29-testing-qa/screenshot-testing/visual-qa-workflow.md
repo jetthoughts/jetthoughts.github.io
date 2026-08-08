@@ -498,7 +498,7 @@ end
 
 ## 📖 Integration References
 
-- **Validation Criteria**: `docs/visual-qa-criteria.md`
+- **Validation Criteria**: `docs/20-29-testing-qa/screenshot-testing/visual-qa-criteria.md`
 - **Main Validator**: `bin/visual-qa-validate`
 - **Test Infrastructure**: `bin/test + test/system/visual_quality_review_test.rb`
 - **Verification System**: `_verification/AGENT_UI_VERIFICATION_GUIDE.md`

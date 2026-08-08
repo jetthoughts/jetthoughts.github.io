@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — point-in-time report; CLAUDE.md bans committing report files - kept only as history.
+
 # Comprehensive Technical Debt Report - JetThoughts.com
 ## Hugo Static Site Technical Assessment & Remediation Strategy
 

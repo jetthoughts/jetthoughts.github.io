@@ -107,7 +107,7 @@ Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" 
 | `10-19-research/10.05-content-organization-patterns-2026.md` | Gloria Mark / Pew 2026 / NN/g attention-span research; cognitive-load patterns for content structure |
 | `10-19-research/_ARCHIVED_10.06-icp-persona-course-walkthrough.md` | (ARCHIVED) Alex (burned founder) walkthrough. Use 40.06 for Sam. |
 | `10-19-research/_ARCHIVED_10.07-icp-sam-persona-course-walkthrough.md` | (ARCHIVED) — Superseded by 40.06 (Sam journey) + 40.07 (recommendations). |
-| `10-19-research/10.08-validation-tools-analysis-2026.md` | AI validation tools gap analysis & recommendations (June 2026). Sources: Russian-language market research (`docs/_research/`) + web research. Maps 6 gaps to course modules, ranks by ROI. |
+| `10-19-research/10.08-validation-tools-analysis-2026.md` | AI validation tools gap analysis & recommendations (June 2026). Sources: Russian-language market research (in-project: `10-19-research/`) + web research. Maps 6 gaps to course modules, ranks by ROI. |
 
 ### 💡 Ideas Bank
 

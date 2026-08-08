@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — pre-2509 landing-page simplification task list; superseded by the 2509 strangler plan.
+
 # Landing Page Simplification Tasks
 
 Goal: simplify homepage layout/CSS architecture while preserving behavior and visual output.

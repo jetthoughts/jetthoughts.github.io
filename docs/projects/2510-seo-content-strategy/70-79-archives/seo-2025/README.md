@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — the October-2025 multi-language AI/LangChain SEO research cohort (seo-2025 + _runtime-2025 + _research-2025). Superseded twice: first by the Apr-2026 ICP-E pivot, then by the 20.09 pipeline-first plan. History only.
+
 # AI SEO Keyword Research - Documentation Index
 
 **Research Date**: 2025-10-16

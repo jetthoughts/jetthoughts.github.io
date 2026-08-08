@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — CSS Migration Master Plan, all phases complete; superseded by the plan of record docs/projects/2509-css-migration/2026-07-12-css-maintainability-redesign.md.
+
 # CSS Migration Master Plan & Task List
 
 *Comprehensive tracking document for legacy CSS to modern component architecture migration*

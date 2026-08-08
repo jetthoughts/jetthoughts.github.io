@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — superseded 2026-08-01 by qmd-first search (CLAUDE.md Research Protocol, collection jt-site).
+
 # Local Semantic Search Setup - jt_site
 
 **Cost Savings**: $200-$1000 annually (100% elimination of OpenAI API costs)

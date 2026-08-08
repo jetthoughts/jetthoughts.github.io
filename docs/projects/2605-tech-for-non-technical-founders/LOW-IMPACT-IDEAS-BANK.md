@@ -59,7 +59,7 @@
 - **DimeADozen**: ✅ Applied — Ch 1.1 specialized alternatives sidebar ($9 Starter report).
 - **Preuve AI**: ✅ Applied — Ch 1.1 specialized alternatives sidebar (free tier, 50+ live data sources with source linking).
 
-### From Russian-Language Research (`docs/_research/`)
+### From Russian-Language Research (`10-19-research/Валидация Бизнес-Идеи_ Система и Инструменты.md`)
 - **Build in Public**: Distribution channel via X/LinkedIn. Skip — requires founder personality fit, too niche.
 
 ---

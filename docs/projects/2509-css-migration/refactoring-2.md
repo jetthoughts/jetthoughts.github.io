@@ -208,7 +208,7 @@ Create `themes/beaver/assets/css/foundations/fl-row-foundation.css`:
  * and running full visual regression testing (bin/dtest).
  *
  * Created: 2026-07-07
- * Part of: docs/refactoring-2.md — CSS deduplication playbook
+ * Part of: docs/projects/2509-css-migration/refactoring-2.md — CSS deduplication playbook
  */
 
 .fl-row,
@@ -296,7 +296,7 @@ For each target rule block, wrap it exactly like this:
 ```css
 /* DUPLICATE: .fl-row structural rules already in compiled output via
    postcss-delete-duplicate-css + cssnano discardDuplicates.
-   Commented out 2026-07-07 during fl-row dedup (docs/refactoring-2.md).
+   Commented out 2026-07-07 during fl-row dedup (docs/projects/2509-css-migration/refactoring-2.md).
    Pending deletion after visual validation. */
 /*
 .fl-row, .fl-row-content {
@@ -759,9 +759,9 @@ Why this is the right first move:
 
 ## References
 
-- `docs/refactoring.md` — Incremental refactoring principles
+- `docs/projects/2509-css-migration/70-79-archives/_ARCHIVED_refactoring.md` — Incremental refactoring principles
 - `docs/projects/2509-css-migration/css-loading-order-analysis.md`
-- `docs/comprehensive-technical-debt-report.md`
+- `docs/70-79-ai-intelligence/_ARCHIVED_comprehensive-technical-debt-report.md`
 - PostCSS config: `postcss.config.js`
 - Safe precedent: Commit `863184421` — Markup extraction
 - Safe precedent: Commit `386e6ace7` — Additive dual-class migration

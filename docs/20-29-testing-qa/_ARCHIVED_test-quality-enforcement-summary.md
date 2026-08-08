@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — superseded by 60-69/60.03-tdd-quality-enforcement.md + 60.14 + 60.18 doctrine.
+
 # Test Quality Enforcement Summary
 
 ## 🎯 **QUICK REFERENCE FOR AGENTS**

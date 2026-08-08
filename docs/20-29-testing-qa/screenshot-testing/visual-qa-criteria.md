@@ -310,7 +310,7 @@ asset_optimization: "PostCSS + Hugo Pipes"
 - **Test Infrastructure**: `bin/test` - Existing test runner
 - **Screenshot System**: `test/system/visual_quality_review_test.rb`
 - **Verification Guide**: `_verification/AGENT_UI_VERIFICATION_GUIDE.md`
-- **Workflow Documentation**: `docs/visual-qa-workflow.md`
+- **Workflow Documentation**: `docs/20-29-testing-qa/screenshot-testing/visual-qa-workflow.md`
 
 ---
 

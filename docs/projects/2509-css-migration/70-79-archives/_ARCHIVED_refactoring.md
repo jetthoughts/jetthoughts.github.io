@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — 2026-04 refactoring proposal, never executed as written; FL burn-down now owned by 2509 (see refactoring-2.md there).
+
 # Incremental Refactoring Strategy for Coupled Layouts and CSS
 
 **Status**: Proposed strategy

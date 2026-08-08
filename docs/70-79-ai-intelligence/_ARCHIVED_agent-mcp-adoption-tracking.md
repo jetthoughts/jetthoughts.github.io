@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — adoption tracking for a finished MCP push.
+
 # Agent MCP Tool Adoption Tracking System
 
 **Authority**: Claude-Flow Expert Configuration Enhancement

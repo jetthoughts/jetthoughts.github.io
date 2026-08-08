@@ -201,7 +201,7 @@ mcp__claude-flow__memory_usage --action store \
 ## SUPPORT AND DOCUMENTATION
 
 ### Primary Documentation
-- **Usage Guide**: `docs/agent-mcp-tool-scenarios.md` (comprehensive scenarios)
+- **Usage Guide**: `docs/70-79-ai-intelligence/agent-mcp-tool-scenarios.md` (comprehensive scenarios)
 - **Tool Capabilities**: claude-context (830 files, 4,184 chunks), serena (symbol navigation)
 - **Integration Patterns**: Memory coordination, cross-agent research coordination
 

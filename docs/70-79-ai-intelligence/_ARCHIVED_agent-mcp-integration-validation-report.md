@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — validation report for a finished MCP push; report-file ban applies.
+
 # Agent MCP Integration Validation Report
 
 **Date**: December 19, 2024
