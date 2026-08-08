@@ -1,3 +1,5 @@
+> ⚠️ **ARCHIVED 2026-08-08** — stray Oct-2025 consolidation log from a top-level `projects/` dir that duplicated the project root; superseded by the 2509 strangler plan.
+
 # CSS Consolidation Execution Log
 
 ## Project Context

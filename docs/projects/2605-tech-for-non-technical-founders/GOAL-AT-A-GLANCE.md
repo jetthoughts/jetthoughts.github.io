@@ -4,7 +4,7 @@
 
 **Project ID**: 2605-tech-for-non-technical-founders
 **Created**: 2026-05-12
-**Last updated**: 2026-07-31 EOD (build phase CLOSED: PRs #407-#411, #416, #419, #421 - analytics, visuals, mechanics, landing fixes, and 6 campaign posts LIVE)
+**Last updated**: 2026-08-08 (wave plan 20.15 CLOSED — W1-W5 merged; live queue slimmed into `TASK-TRACKER.md`, history in `_ARCHIVED_TASK-TRACKER-2026-07.md`)
 **Status**: 🟢 BUILD COMPLETE + CAMPAIGN-READY · fully instrumented (GA4 + Clarity, production-verified) · 🔄 Active: Aug 1-14 launch window (campaign kit send-ready, pilot kit send-ready) · ⏳ First evidence read: Aug 14
 **Owner**: JT content team
 **Parent**: 2510-seo-content-strategy (extends, does not replace)

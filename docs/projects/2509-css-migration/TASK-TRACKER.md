@@ -840,6 +840,14 @@ rule-content normalization first (fold the override into one rule).
   per-bundle PurgeCSS-survival audit: DEFERRED to own sprints.
 - The 4 position-sensitive twin sets above: fold-then-dedup, own sprint.
 - jt-reviews-box swiper design restoration: POSTPONED (Paul) - see C2 note.
+- **Blog/course article column max-width (684px → wider?)** — inherited from
+  2604 at its closure (2026-08-08). The 684px column forces Mermaid LR ≥5
+  nodes to fail, SVG prose-text to clip, 5-col tables to overflow at 390px.
+  Investigate: deliberate readability choice (45-75 char line) or vestigial
+  theme value? Compare thoughtbot/Stripe Press widths; decide keep-684 (and
+  design within budget) or widen to 720-800px. Cross-cutting CSS = this
+  project owns it. Context: 2604 `findings-*.md` + memory
+  `feedback_684px_column_visual_constraints.md`.
 
 ## 🚨 BLOCKERS & RISKS
 

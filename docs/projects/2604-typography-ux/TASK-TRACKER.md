@@ -1,6 +1,13 @@
 # Task Tracker — 2604 Typography & UX
 
-**Last Updated**: 2026-07-21
+> ✅ **PROJECT CLOSED 2026-08-08.** Both remaining P2 items re-homed: the 684px
+> column-width question moved to 2509's Phase D backlog (cross-cutting CSS —
+> 2509 owns it); reader-mode readability research is owned by 2605 item 14
+> (POSTPONED by Paul 2026-08-02). The `findings-*.md` audits below remain the
+> project's durable output — protected artifacts per CLAUDE.md. Reopen only
+> with a new typography initiative.
+
+**Last Updated**: 2026-08-08 (closed)
 **Status legend**: Planned | In progress | Done | Paused | Dropped
 
 ---

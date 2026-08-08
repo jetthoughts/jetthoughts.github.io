@@ -1,7 +1,7 @@
 # CSS Migration Project 2509 - Master Index
 
-**Last Updated**: 2026-07-12
-**Project Status**: Phase 0 (safety scaffolding) of the maintainability plan
+**Last Updated**: 2026-08-08
+**Project Status**: ✅ Phase C COMPLETE (2026-07-19: C1 #371 · C2 #372 · C3 #374 · C4 #375 · C5 dedup) — Phase D backlog defined in TASK-TRACKER.md (all items currently DEFERRED/parked; includes the 684px column question inherited from 2604)
 **Current Goal**: Every style hand-editable, understood, single-source — FL export CSS retired page-by-page (16 files → 0)
 
 ---
