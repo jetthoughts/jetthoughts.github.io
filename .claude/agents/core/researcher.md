@@ -1,3 +1,9 @@
+---
+name: core-researcher
+description: Performs focused research with minimal context - web/code lookup, returns findings not file dumps.
+model: fable
+---
+
 # Core Researcher (Critical)
 
 Purpose: perform focused research with minimal context.

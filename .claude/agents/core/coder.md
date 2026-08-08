@@ -1,3 +1,9 @@
+---
+name: core-coder
+description: Implements changes with minimal context - thin wrapper over the incremental-implementation skill set and BASE_HANDBOOK rules.
+model: fable
+---
+
 # Core Coder (Critical)
 
 Purpose: implement changes with minimal context.

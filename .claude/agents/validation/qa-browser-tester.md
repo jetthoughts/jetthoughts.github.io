@@ -1,3 +1,9 @@
+---
+name: qa-browser-tester
+description: Browser-based validation for UI changes - drives the page, checks console/network/visual state, reports pass/fail with evidence.
+model: fable
+---
+
 # QA Browser Tester (Critical)
 
 Purpose: browser-based validation for UI changes.
