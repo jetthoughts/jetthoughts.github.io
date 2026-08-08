@@ -856,3 +856,43 @@ durable+urgent+in-authority item - and patching Rails alone is NOT sufficient,
 libvips must go to >=8.13 and secrets must be rotated. "Vibe code rescue" is no
 longer an uncontested category: justinmckelvey.com (cited in our own strategy as
 proof the model works) now sells it at $25K-$50K under the same name.
+
+## 2026-08-08 — 20.09 execution: funnel links, auth consolidation, CVE post; sourcing blocked
+
+Executed the 20.09 priority stack. Three of four landed.
+
+P1: /services/vibe-code-rescue/ now has inbound links from the six rescue-intent
+posts. It previously had zero from 608 posts.
+
+P2: the 4-post Rails-8-auth cluster consolidated to one canonical with three
+aliases. Merging also fixed a real bug the canonical carried - its password-reset
+action branched on "Email not found", leaking account existence.
+
+P3: first durable-news post shipped (CVE-2026-66066). The review loop caught four
+blockers; the load-bearing one inverted the post's thesis. The draft said the
+patched gem's guard silently no-ops on libvips < 8.13. The advisory says the
+opposite verbatim: "Active Storage will raise an exception during boot in such an
+unsecurable environment." It fails CLOSED. As drafted, the runbook (bump gem,
+deploy, fix libvips later) would crash a reader's app at boot on Ubuntu 22.04,
+which ships libvips 8.12.1. Runbook now lands libvips >= 8.13 first.
+
+Two review lessons worth keeping:
+1. The fact-check critic marked a date VERIFIED that does not exist in its cited
+   source (Rails 7.1 EOL "2025-10-01"; the announcement gives no date and is
+   itself published 2025-10-29). The cold-eyes gate caught it structurally - an
+   announcement cannot announce a date 28 days before its own publication - and
+   correctly routed it back instead of editing fact territory. Verifiers can
+   over-trust secondary sources; a structural reader catches the smell.
+2. Second consecutive technical post where voice-tuned review passed something
+   that would break a reader's production. The source-verifying practitioner
+   critic is now load-bearing, not optional, for developer-targeted posts.
+
+P0 sourcing: BLOCKED, and the diagnosis moved. F5Bot is retired - it matches
+literal substrings and is passive, so it can never backfill the <=30-day window
+card #29 needs. Its replacement (p7-search-sweep.md, ~30 site:+after: queries)
+produced zero rows because this environment cannot reach the venues: the search
+tool ignores site: and after: entirely (verified directly - a site:reddit.com
+query returns Substack and Goodreads), reddit hard-blocks the agent user agent,
+and thread opens return EGRESS_BLOCKED. Card #12's blocker is no longer a
+2-minute keyword swap; it is venue reachability, and the query bank needs a human
+browser.
