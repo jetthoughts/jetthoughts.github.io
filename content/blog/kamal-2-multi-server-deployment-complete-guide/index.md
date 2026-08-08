@@ -337,4 +337,3 @@ Versions move: everything here was verified against Kamal 2.12.0 (June 2026). Th
 
 *Single-server setup is covered in [Deploying Rails with Kamal](/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/), and CI wiring in [Kamal 2 with GitHub Actions](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/).*
 
-<!-- Reference cadence: thoughtbot -->

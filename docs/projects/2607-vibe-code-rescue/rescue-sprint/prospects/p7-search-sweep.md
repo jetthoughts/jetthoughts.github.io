@@ -26,7 +26,7 @@ The decisive point: card #29 needs rows verified inside a ≤30-day window **on 
 
 Google's `after:YYYY-MM-DD` is inclusive of the named date. Paul's rule is **leads = ≤30 days, no exceptions**.
 
-```
+```text
 WINDOW_START = TODAY - 30 days
 ```
 
@@ -57,9 +57,11 @@ Substitute `after:2026-07-09` wherever the bank below writes `after:{WINDOW_STAR
 
 Run each as-is in a Google-operator-honouring search surface. Replace the date token first.
 
-### 3.1 Reddit - highest founder density
+### 3.1 Reddit - highest founder density (excerpt queue + VoC only, never lead rows)
 
-```
+> Reddit is excerpt-only per the shared wrapper (`t4-t5-grooming.md` lane split), and a P7 lead row requires `verified date` read from the opened thread - so a Reddit candidate can never clear Vote 3 check 3 inside P7. Run these queries to feed the excerpt queue and VoC capture; Reddit leads are out of P7's scope.
+
+```text
 site:reddit.com "non-technical founder" ("broke" OR "broken" OR "stuck") after:{WINDOW_START}
 site:reddit.com "vibe coded" ("can't fix" OR "no idea how to fix") after:{WINDOW_START}
 site:reddit.com "lovable app" ("broke" OR "broken" OR "help") after:{WINDOW_START}
@@ -70,7 +72,7 @@ site:reddit.com ("bolt.new" OR "base44") ("stuck" OR "broke" OR "not technical")
 
 Sub-scoped variants (narrower, cleaner - run when the broad sweep floods):
 
-```
+```text
 site:reddit.com/r/replit "not technical" after:{WINDOW_START}
 site:reddit.com/r/nocode "non-technical founder" after:{WINDOW_START}
 site:reddit.com/r/vibecoding ("paid a developer" OR "hired someone") after:{WINDOW_START}
@@ -82,7 +84,7 @@ site:reddit.com/r/founder "dev shop" after:{WINDOW_START}
 
 ### 3.2 IndieHackers - run-first venue per grooming (real handles, low outreach hostility)
 
-```
+```text
 site:indiehackers.com "non-technical founder" ("stuck" OR "broke" OR "broken") after:{WINDOW_START}
 site:indiehackers.com "vibe coded" ("can't fix" OR "falling apart") after:{WINDOW_START}
 site:indiehackers.com ("lovable app" OR "replit app" OR "bolt.new") ("broke" OR "stuck") after:{WINDOW_START}
@@ -92,7 +94,7 @@ site:indiehackers.com "cursor" "not a developer" after:{WINDOW_START}
 
 ### 3.3 Hacker News
 
-```
+```text
 site:news.ycombinator.com "vibe coded" ("broke" OR "rewrite") after:{WINDOW_START}
 site:news.ycombinator.com ("lovable app" OR "replit app" OR "base44") after:{WINDOW_START}
 ```
@@ -101,7 +103,7 @@ site:news.ycombinator.com ("lovable app" OR "replit app" OR "base44") after:{WIN
 
 ### 3.4 X / Twitter
 
-```
+```text
 site:x.com "vibe coded" ("broke" OR "can't fix") after:{WINDOW_START}
 site:x.com "non-technical founder" ("lovable" OR "replit" OR "bolt.new") after:{WINDOW_START}
 site:x.com "dev shop" ghosted after:{WINDOW_START}
@@ -118,21 +120,15 @@ This is the one venue where `verified date` can be derived deterministically. Ev
 
 ### 3.5 Lobsters
 
-```
+```text
 site:lobste.rs "vibe coded" after:{WINDOW_START}
 ```
 
 Lowest-yield venue. Run last, or skip when time-boxed.
 
-### 3.6 Trigger-3 rescue lane (ownership/hostage)
+### 3.6 Trigger 3 (ownership/hostage) - no search lane
 
-Grooming proved open keyword search for Trigger 3 returns ~9/10 competitor SEO articles. Do **not** run bare Trigger-3 keywords. Instead, date-filter the *comment layer* of the competitor articles:
-
-```
-site:reddit.com ("free audit" OR "free code review") "non-technical founder" after:{WINDOW_START}
-```
-
-...then mine the commenters, never the OP. Same rule as P6.
+Grooming proved open keyword search for Trigger 3 returns ~9/10 competitor SEO articles, and no `site:` query reliably lands on competitor-article *comments* rather than an OP or an unrelated thread - logging an OP from such a query would violate Vote 3. This sweep therefore carries **no Trigger-3 lane**. Trigger-3 coverage stays with P6 (seeded competitor rescue-post comment sections, commenters only, never the OP).
 
 ---
 
@@ -142,7 +138,7 @@ Read these before trusting a zero-result sweep.
 
 1. **Index lag.** Google may not index a post for hours to days. A genuinely fresh distress post can be invisible to `after:` on the day it matters most. A zero-result sweep means "not indexed yet or not there" - it never means "nothing happened."
 2. **`after:` is unreliable per-site.** The operator filters on Google's *inferred* document date. Reddit and X pages are frequently re-crawled and re-dated, and IH listing pages carry no stable date, so `after:` silently drops valid results and admits stale ones. Treat it as a **noise reducer, never as the verification**. Vote 3 check 3 still requires a timestamp read from the opened thread.
-3. **Reddit is excerpt-only** per existing policy (`t4-t5-grooming.md` lane split). Bodies are not reliably fetchable; capture sub + handle + URL + the excerpt quote. Excerpt candidates enter the URL queue but **cannot enter the scored list** until one visit fills `verified date` + `thread health`.
+3. **Reddit is excerpt-only** per existing policy (`t4-t5-grooming.md` lane split), and P7 does not open Reddit threads - which means Reddit candidates can never fill `verified date` + `thread health` inside P7 and are **excluded from P7 lead rows by rule** (see §3.1). Capture sub + handle + URL + the excerpt quote for the excerpt queue and VoC only.
 4. **Search surfaces vary in operator support.** Some tools accept `site:`/`after:` as plain text and quietly ignore them, returning semantically similar SEO articles instead - see §6 for exactly this failure. Sanity-check every sweep: if results contain off-domain marketing pages, your operators are being dropped and the sweep is invalid.
 5. **Competitor SEO dominates the rescue keywords.** Six rescue shops own this vocabulary. Any result that reads like an article rather than a person is noise by default.
 6. **`site:` does not reach login-walled content.** Whatever needs auth stays invisible. That is a permanent coverage hole, not a tuning problem.
@@ -158,15 +154,15 @@ Read these before trusting a zero-result sweep.
 - Use `after:{TODAY-7}` for the Monday sweep once the pipeline is steady-state. Use the full `after:{TODAY-30}` only on a cold start or after a skipped week.
 - Do not run daily. Index lag means daily runs mostly re-return the same rows, and the venue-politeness cap from grooming (batch of 8-10, don't hammer one domain) still applies.
 
-**Dedupe - thread URL is the join key** (same rule as P8):
+**Dedupe - the normalized thread URL is the join key** (same rule as P8):
 
-1. Before logging any row, grep the merged list and every sibling file:
+1. Normalize the candidate URL FIRST - strip `?utm_*` params and trailing slashes, and rewrite `old.reddit.com` to `www.reddit.com`. The normalized form is what you grep for and what you log.
+2. Then grep the merged list and every sibling file for it:
    ```bash
    cd docs/projects/2607-vibe-code-rescue/rescue-sprint
-   rg -F "<candidate-url>" cold-prospect-list.md prospects/
+   rg -F "<normalized-url>" cold-prospect-list.md prospects/
    ```
-2. A hit anywhere = skip the row. Do not re-log under a different handle.
-3. Normalize first - strip `?utm_*`, trailing slashes, and `old.reddit.com` vs `www.reddit.com` before comparing.
+3. A hit anywhere = skip the row. Do not re-log under a different handle.
 4. Keep a `### Seen-and-skipped` list in this file with the reason (`already row 14` / `stale, VoC only` / `supplier`) so the next sweep does not re-adjudicate the same URL from scratch.
 5. Same thread, genuinely different commenter = a separate row, per P8's existing rule. Same person twice = one row.
 

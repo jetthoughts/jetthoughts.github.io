@@ -105,4 +105,3 @@ Cost on a small slice (one AC item, 50-100 lines of diff) runs $4-6 on Sonnet or
 
 Send us one sentence (which role your solo Claude Code agent keeps skipping - PM, designer, tech lead, QA, or critic panel) plus your repo URL. We'll reply with the actual `.claude/agents/<role>.md` file we run for that seat, plus a one-page note naming the next two seats to staff for your stack. [Reach us at /contact-us/](/contact-us/).
 
-<!-- Reference cadence: capability map (not how-to), 8-row team after squashing PM+BA+CustomerRep into PM, UX Researcher+UI/UX Designer into Designer, Tech Lead+Driver/Navigator into Tech Lead. Shape-Up-inspired pitches + JT 3-lens betting + XP delivery. Why team-mode beats solo-mode is load-bearing thesis. Low-friction CTA (one role -> rule file). -->

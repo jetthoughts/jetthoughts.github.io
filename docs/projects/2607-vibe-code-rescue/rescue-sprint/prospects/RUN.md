@@ -1,6 +1,6 @@
 # RUN — copy-paste prompts (one per backlog task)
 
-Each prompt is self-contained. Paste ONE into a fresh session. Stage-1 tasks (P1-P7) are parallel-safe — run any/all at once. P8 needs any subset of P1-P7 that produced rows (P7/F5Bot is additive, never blocks); P9 needs P8 + price. Repo: the current checkout root (`git rev-parse --show-toplevel`).
+Each prompt is self-contained. Paste ONE into a fresh session. Stage-1 tasks (P1-P7) are parallel-safe — run any/all at once. P8 needs any subset of P1-P7 that produced rows (P7's search sweep is additive, never blocks); P9 needs P8 + price. Repo: the current checkout root (`git rev-parse --show-toplevel`).
 
 **Wrapper (all P-tasks share this spine):**
 > Run task **{ID}** from `docs/projects/2607-vibe-code-rescue/backlog.md`. Read that task row + `rescue-sprint/t4-t5-grooming.md` Vote 3 (qualification) once, then do ONLY {ID}. Use its seeded URLs. Tools: `web_search` + `chrome-devtools` only (Reddit = excerpt-only, don't open thread bodies). Append rows + `## VoC` lines to `rescue-sprint/prospects/{FILE}`. Qualify hard: non-technical FOUNDER only — never a dev venting or a supplier advertising rescue; every why-ICP must be a verbatim quoted sentence + URL; log ZERO supplier/agency posts. Set {ID} status in `backlog.md` when done. Don't commit.
@@ -21,7 +21,7 @@ Each prompt is self-contained. Paste ONE into a fresh session. Stage-1 tasks (P1
 
 **P6** — Run task P6 (competitor comment threads) per the wrapper. Open the seeded competitor rescue-post comment sections, log founders self-identifying in comments only. File: `prospects/p6-competitor-comments.md`. Target ≥3 rows.
 
-**P7** — Run task P7 (date-filtered search sweep) per the wrapper. **F5Bot is RETIRED (2026-08-08) — do not run it.** Read `prospects/p7-search-sweep.md` §2-§5, compute `after:{TODAY-30}`, run the §3 query bank, dedupe by thread URL against `cold-prospect-list.md` first, then open each surviving candidate once to fill `verified date` + `thread health`. Append rows + VoC to `prospects/p7-search-sweep.md`. Needs `chrome-devtools` + a search surface that honours `site:`/`after:` (sanity-check per §4). Pad nothing — a short verified list beats a padded one.
+**P7** — Run task P7 (date-filtered search sweep) per the wrapper. **F5Bot is RETIRED (2026-08-08) — do not run it.** Read `prospects/p7-search-sweep.md` §2-§5, compute `after:{TODAY-30}`, run the §3 query bank, normalize + dedupe by thread URL against `cold-prospect-list.md` first, then open each surviving non-Reddit candidate once to fill `verified date` + `thread health`. **Reddit stays excerpt-only per the wrapper, and P7 lead rows require an opened-thread timestamp - so Reddit hits feed the excerpt queue and VoC only, never P7 lead rows.** Append rows + VoC to `prospects/p7-search-sweep.md`. Needs `chrome-devtools` + a search surface that honours `site:`/`after:` (sanity-check per §4). Pad nothing — a short verified list beats a padded one.
 
 ## Stage 2 — merge
 

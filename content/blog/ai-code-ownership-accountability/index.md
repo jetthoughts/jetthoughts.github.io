@@ -110,4 +110,3 @@ You don't have to fire anyone or switch agencies. The work fits on a postcard: a
 
 Torvalds didn't change the world. He codified what the kernel had been enforcing informally for a year - a human signature on every patch, AI or not. Your codebase runs the same rule whether your contract says so or not. Find out on a weekend audit, or find out from your diligence partner.
 
-<!-- Reference cadence: patio11 -->

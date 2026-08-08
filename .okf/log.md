@@ -890,9 +890,40 @@ Two review lessons worth keeping:
 P0 sourcing: BLOCKED, and the diagnosis moved. F5Bot is retired - it matches
 literal substrings and is passive, so it can never backfill the <=30-day window
 card #29 needs. Its replacement (p7-search-sweep.md, ~30 site:+after: queries)
-produced zero rows because this environment cannot reach the venues: the search
-tool ignores site: and after: entirely (verified directly - a site:reddit.com
-query returns Substack and Goodreads), reddit hard-blocks the agent user agent,
-and thread opens return EGRESS_BLOCKED. Card #12's blocker is no longer a
-2-minute keyword swap; it is venue reachability, and the query bank needs a human
-browser.
+produced zero rows for venue-specific reasons, in two distinct classes.
+Search-surface limits: bare site:reddit.com queries had the operator dropped
+(returned Substack and Goodreads), while the tool's native domain filter did
+return indiehackers.com and x.com URLs; after: filtering was ineffective
+everywhere tried (IH results dated 2025-07 came back). Venue access: reddit
+rejected the agent user agent outright (hard 400), and thread opens on IH, HN,
+old.reddit, and lobste.rs all returned EGRESS_BLOCKED - so IH was searchable but
+not openable, reddit neither. Card #12's blocker is no longer a 2-minute keyword
+swap; it is venue reachability (thread opening above all), and the query bank
+needs a human browser.
+
+## 2026-08-08 — 3-column markdown tables overflow at 390px; two posts shipped
+
+Published `rails-7-eol-unpatched-security-exposure` and
+`migrate-lovable-replit-app-to-rails`.
+
+**Durable layout finding.** A 3-column markdown table breaks the mobile scroll
+gate in this theme. Measured at 390px: the article container is 354px wide and
+tables render `table-layout: auto` with no `overflow-x` wrapper, so minimum
+content width wins. The migration post's 3 columns computed to 116+132+129 =
+377px and pushed documentSscrollWidth to 396. Trimming cell prose did NOT fix it
+- min-width is set by the longest unbreakable token per column, not by sentence
+length, and a first trim actually made it 1px worse. Collapsing to 2 columns
+fixed it: the sibling EOL post's 2-column table lands at exactly 354px.
+
+Rule: **2 columns maximum in blog tables**, or fold the extra column's value into
+the last cell in bold. Code blocks are unaffected - they already carry
+`overflow-x: auto` and stay inside the container. The systemic fix (wrapping
+tables in a scroll container in the theme) is a CSS change and would trigger the
+full visual regression pair, so it stays a content rule until someone takes that
+on deliberately.
+
+**Also swept**: `<!-- Reference cadence: <author> -->` was shipping in published
+HTML on five posts, three of them already live (kamal-2-multi-server,
+ai-code-ownership-accountability, claude-code-xp-team-workflow). It is internal
+review metadata from the writer brief. Removed sitewide; writers should report
+cadence in the handback, never in the file.

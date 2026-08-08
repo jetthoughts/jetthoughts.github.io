@@ -224,7 +224,7 @@ end
 
 Transparent, understandable, and easy to customize. No hidden behaviors.
 
-The `find_by` + `authenticate` pair above works, but it runs two separate steps and leaks timing information: a lookup that misses returns instantly, one that hits and fails the password check takes slightly longer. `authenticate_by`, shipped in Rails 7.1, collapses both into one constant-time call:
+The `find_by` + `authenticate` pair above works, but it runs two separate steps and leaks timing information: a lookup that misses returns instantly, one that hits and fails the password check takes slightly longer. `authenticate_by`, shipped in Rails 7.1, collapses both into one call that runs a password digest even when no record matches, so a miss no longer returns instantly:
 
 ```ruby
 if (user = User.authenticate_by(email: params[:email], password: params[:password]))
@@ -236,7 +236,7 @@ else
 end
 ```
 
-Same outcome, no timing gap an attacker can use to enumerate valid emails. Prefer `authenticate_by` in new code; the `find_by` + `authenticate` pattern above still works and you'll see it in older codebases.
+Same outcome, and the instant-return tell is gone. That mitigates timing-based email enumeration rather than eliminating it -- `authenticate_by` is not a constant-time guarantee -- but it closes the gap that matters most. Prefer `authenticate_by` in new code; the `find_by` + `authenticate` pattern above still works and you'll see it in older codebases.
 
 #### Current User Pattern
 
@@ -313,7 +313,7 @@ class PasswordsController < ApplicationController
 end
 ```
 
-Two details worth getting right here. First, `create` above always redirects with the same message regardless of whether the email matched -- if you branch on "email not found," an attacker can enumerate your user base one request at a time. Second, `generates_token_for` signs the token against the user's password digest, so a token issued before a password change is invalid after it: someone who intercepts an old reset email can't reuse the link once the password has actually been reset.
+Two details worth getting right here. First, `create` above always redirects with the same message regardless of whether the email matched -- if you branch on "email not found," an attacker can enumerate your user base one request at a time. Second, the `:password_reset` token defined earlier embeds the last ten characters of `password_digest` in its payload, so a token issued before a password change is invalid after it: someone who intercepts an old reset email can't reuse the link once the password has actually been reset. That property comes from the block you pass to `generates_token_for`, not from the API itself -- a token whose block returns nothing survives a password change.
 
 #### Email Confirmation
 

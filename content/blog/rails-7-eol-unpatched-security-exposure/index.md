@@ -2,7 +2,7 @@
 title: "Rails 7 End of Life: Pick Your Exit"
 description: "Rails 7.1 got no patch for CVE-2026-66066, a CVSSv4 9.5 pre-auth RCE. How to find every app of yours on a dead branch and pick between four realistic exits."
 date: 2026-08-08
-draft: true
+draft: false
 author: "JetThoughts"
 slug: "rails-7-eol-unpatched-security-exposure"
 keywords: "rails 7 end of life, rails 7.1 security support, rails eol, rails 7.1 no patch, rails lts, CVE-2026-66066, rails upgrade"
@@ -21,7 +21,7 @@ cover_image_alt: "Rails 7 end of life cover - no patch for CVE-2026-66066 on 7.1
 canonical_url: https://jetthoughts.com/blog/rails-7-eol-unpatched-security-exposure/
 ---
 
-On July 29 the Rails security team fixed a CVSSv4 9.5 vulnerability in Active Storage - an unauthenticated upload that reads files off your server and [escalates to code execution](https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm). Three branches got a patched release that day: 7.2, 8.0, and 8.1. One of those three, 7.2, reaches the end of its security support tomorrow - it carries the patch, and then upstream stops shipping it fixes. Rails 7.1 and everything below it got nothing.
+On July 29 the Rails security team fixed a CVSSv4 9.5 vulnerability in Active Storage - an unauthenticated upload that reads files off your server and [may enable code execution](https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm). Three branches got a patched release that day: 7.2, 8.0, and 8.1. One of those three, 7.2, reaches the end of its security support on August 9, 2026 - eleven days after carrying the patch, upstream stops shipping it fixes. Rails 7.1 and everything below it got nothing.
 
 That's the concrete version of Rails 7 end of life. Rails 7.1 had [finished its security support period](https://rubyonrails.org/2025/10/29/new-rails-releases-and-end-of-support-announcement) by October 2025, so when CVE-2026-66066 landed, the backport list stopped at 7.2.
 
@@ -39,26 +39,29 @@ March already showed how this plays out in practice. [CVE-2026-41316](/blog/rail
 
 One app is a one-minute check. The fleet is where the work hides - a dozen client apps under one agency contract, or repos you inherited that nobody has opened since 2024.
 
-Start with the lockfiles. Here's a loop that prints the resolved Rails version for every app under a directory:
+Start with the lockfiles. Here's a sweep that prints the resolved Rails version for every app under a directory, however deeply nested:
 
 ```bash
-for lock in */Gemfile.lock; do
-  printf '%-32s %s\n' "${lock%/Gemfile.lock}" \
+find . -name Gemfile.lock -not -path '*/vendor/*' | while read -r lock; do
+  printf '%-40s %s\n' "$(dirname "$lock")" \
     "$(awk '$1 == "rails" && $2 ~ /^\([0-9]/ { gsub(/[()]/, "", $2); print $2; exit }' "$lock")"
 done
 ```
 
-Anything starting 7.1, 7.0, or 6.x goes on the list. For repos you don't have cloned, GitHub code search runs the same sweep across an org:
+Anything starting 7.1, 7.0, or 6.x goes on the list. For repos you don't have cloned, GitHub code search runs the same sweep across an org - once per dead series:
 
 ```bash
-gh search code --owner your-org --filename Gemfile.lock '"rails (7.1"'
+for v in "6." "7.0" "7.1"; do
+  gh search code --owner your-org --filename Gemfile.lock "\"rails ($v\""
+done
 ```
 
-Then let [bundler-audit](https://github.com/rubysec/bundler-audit) tell each app which advisories hit its exact gem set:
+Then let [bundler-audit](https://github.com/rubysec/bundler-audit) tell each app which advisories hit its exact gem set - it reads the lockfile in the directory it runs from, so run it once per app:
 
 ```bash
 gem install bundler-audit
-bundle-audit check --update
+find . -name Gemfile.lock -not -path '*/vendor/*' \
+  -execdir bundle-audit check --update \;
 ```
 
 On a 7.1 app it flags GHSA-xr9x-r78c-5hrm with a solution list - 7.2.3.2, 8.0.5.1, 8.1.3.1 - containing no version you can reach without leaving the branch. Paste that output into the ticket.
@@ -136,4 +139,3 @@ Then open the ticket. The bundle-audit output from the fleet sweep is the body, 
 - [Rails LTS by makandra](https://railslts.com/en)
 - [bundler-audit](https://github.com/rubysec/bundler-audit)
 
-<!-- Reference cadence: thoughtbot -->
