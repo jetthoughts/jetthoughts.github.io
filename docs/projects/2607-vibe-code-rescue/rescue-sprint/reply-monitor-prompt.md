@@ -11,11 +11,11 @@ You are monitoring Paul Keen's inboxes for replies to a small outreach batch (pr
 1. **IndieHackers** — notifications + replies on the threads we posted in (permalinks are in the pipeline rows).
 2. **LinkedIn** — messaging inbox + any reaction/reply on the Joy Adamson DM.
 3. **Reddit** — message inbox + replies on our thread comments (only once batch 2 is live).
-4. **Gmail** — search `neetocal` (new bookings / reschedules) and `from:f5bot.com` (keyword digests).
+4. **Gmail** — search `neetocal` (new bookings / reschedules).
 
 ## Classify every new item
 
-`INTERESTED` (wants the audit/call) · `QUESTION` · `OBJECTION` · `NEGATIVE` · `BOOKING` (NeetoCal confirmation) · `F5BOT-MATCH` (new distress post worth qualifying).
+`INTERESTED` (wants the audit/call) · `QUESTION` · `OBJECTION` · `NEGATIVE` · `BOOKING` (NeetoCal confirmation).
 
 ## For QUESTION / OBJECTION
 

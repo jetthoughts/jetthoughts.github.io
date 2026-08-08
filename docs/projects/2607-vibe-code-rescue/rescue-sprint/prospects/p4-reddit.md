@@ -22,7 +22,7 @@
 - **1hspre9** (r/replit "Why is Replit so self-destructive") — not found in excerpt results; thread may have been removed or not indexed.
 
 ### Excerpt-only limitation note
-Reddit thread bodies are not reliably fetchable. All quotes above are from search engine excerpts/snippets only. Handle attribution is partial — some excerpts omit the OP handle. VoC quotes are truncated by snippet length. F5Bot (P7) would provide fuller Reddit coverage via JSON/RSS feed.
+Reddit thread bodies are not reliably fetchable. All quotes above are from search engine excerpts/snippets only. Handle attribution is partial — some excerpts omit the OP handle. VoC quotes are truncated by snippet length. Fuller Reddit coverage needs thread-open access, not a keyword feed — see `p7-search-sweep.md` §1.
 
 ## VoC (verbatim founder lines - force-tag Push/Pull/Anxiety/Habit + speaker tag + URL)
 - **[Push]** "Im a non technical founder, and im stuck with my app" - `[VERBATIM-founder]` r/nocode OP, https://www.reddit.com/r/nocode/comments/1tdaqs9/what_happens_when_nontechnical_people_try_to/

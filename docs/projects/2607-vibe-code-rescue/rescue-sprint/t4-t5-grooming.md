@@ -88,7 +88,7 @@ Operational rule: a thread `drop`ped for staleness or saturation is **not a wast
 | Task | Venues | Access | Method |
 |---|---|---|---|
 | **T4 — web cold (fetchable)** | **IndieHackers (run FIRST)**, Hacker News threads, X/Twitter first-person, competitor "free audit" comment threads (heydev/modall/attributex + the live competitor set) | `chrome-devtools` can open + read full post + comments | Read-once extract-all, site-scoped queries |
-| **T5 — Reddit / community (mostly un-openable)** | r/replit, r/NoCode, r/Solopreneur, r/SaaS, r/startups, r/vibecoding, r/founder | Reddit thread **bodies not reliably fetchable**; web_search misses ~70% of Reddit | Excerpt capture (handle + URL + title from the excerpt); **F5Bot feed** (Paul's optional 2-min signup) to un-blind Reddit via JSON/RSS |
+| **T5 — Reddit / community (mostly un-openable)** | r/replit, r/NoCode, r/Solopreneur, r/SaaS, r/startups, r/vibecoding, r/founder | Reddit thread **bodies not reliably fetchable**; web_search misses ~70% of Reddit | Excerpt capture (handle + URL + title from the excerpt). Un-blinding Reddit needs thread-open access; the keyword-feed route was tried and retired 2026-08-08 |
 
 IndieHackers is the clear run-first venue: real posts + handles in the excerpt, fetch-free, low outreach hostility.
 
@@ -133,7 +133,7 @@ VoC harvest lands in `voice-of-customer.md` (the four force sections) + the phra
 
 - `mcp__parallel__web_search` — `site:` operators + first-person phrasing → build the excerpt URL queue.
 - `chrome-devtools` (`new_page` / `take_snapshot` / `close_page`) — open IH/HN/X/competitor threads, read full post + comments, validate+row+quotes in one visit.
-- **F5Bot** (free; Paul's optional 2-min signup) — Reddit + HN + Lobsters keyword feed via JSON/RSS an agent CAN read; bypasses the Reddit fetch block without scraping.
+- **Date-filtered active search** (`prospects/p7-search-sweep.md`) — `site:` + `after:{TODAY-30}` query bank across Reddit/IH/HN/X/Lobsters. Replaced the passive keyword feed retired 2026-08-08; do not re-introduce a passive or substring-matching monitor.
 - **Not used**: `web_fetch` on Reddit (unreliable), Apollo/Hunter (paid, Paul's desk), Gmail (that's T3 warm lane, needs Paul's consent).
 
 ---
@@ -148,7 +148,7 @@ These are refinements of the **already-registered** A0 find-channel premise (war
 
 **Refute**: "Will a session running this produce 30 real ICP rows + verbatim founder quotes, not noise?"
 - Discovery pick is backed by a PROVEN probe (site-scoped IH beats keyword search; Trigger-3 keyword search fails) — not a guess. PASS.
-- **Objection that holds**: the ~30-row target leans on Reddit, which is the least-fetchable venue. Mitigation: IndieHackers (fetchable, run-first) + HN + X + competitor comments carry the fetchable load; Reddit contributes via excerpts + F5Bot, not as the primary. If F5Bot isn't set up, T5 yield drops — so **T4 (IndieHackers-first) is the load-bearing card; T5 is additive.**
+- **Objection that holds**: the ~30-row target leans on Reddit, which is the least-fetchable venue. Mitigation: IndieHackers (fetchable, run-first) + HN + X + competitor comments carry the fetchable load; Reddit contributes via excerpts, not as the primary — so **T4 (IndieHackers-first) is the load-bearing card; T5 is additive.**
 - **Objection that holds**: cold thread-replies at volume risk looking like the six competitor rescue shops. Mitigation carried from T2: cap cold volume, lead with trust/ownership, prefer warm (T3) + Paul's relationship.
 
 **Verdict**: PASS with two carried constraints (T4-IndieHackers-first is load-bearing, T5 additive; cap cold volume). Awaiting Paul's approval before execution.
@@ -159,8 +159,8 @@ These are refinements of the **already-registered** A0 find-channel premise (war
 
 **Refute**: "Will the v2 rubric actually prevent the batch-1 failure class, or is it more checklist theater?"
 - Each new gate traces to a **named failure it would have caught**: check 3 (verified timestamp) catches Saul_E-2020 and Afrikonnect-1yr; check 4 (post|comment routing) catches the Afrikonnect mis-label and the Joy/Nico routing risk; check 5 (thread health) catches SANICE_AI's saturated thread. Not speculative — each is a regression test against a real miss. PASS.
-- **Objection that holds**: the ≤30-day window will shrink IndieHackers yield hard — IH is lower-volume than Reddit, and most of the 25 v1 rows would fail it. Mitigation (already in card #29): re-audit keeps whatever survives verification, and channel expansion (F5Bot v2 keywords → live Reddit/HN feed; X first-person) fills the gap. If the verified-fresh list lands at 8-10 rows, that is acceptable per the quality-over-quota directive — but it makes the F5Bot keyword swap (Paul, ~2 min) genuinely load-bearing rather than optional.
+- **Objection that holds**: the ≤30-day window will shrink IndieHackers yield hard — IH is lower-volume than Reddit, and most of the 25 v1 rows would fail it. Mitigation (already in card #29): re-audit keeps whatever survives verification, and channel expansion (the date-filtered sweep across Reddit/HN; X first-person) fills the gap. If the verified-fresh list lands at 8-10 rows, that is acceptable per the quality-over-quota directive — but it makes the expansion lane genuinely load-bearing rather than optional, and since 2026-08-08 that lane is gated on thread-open tooling, not on a Paul action.
 - **Objection that holds**: "read ALL replies" (check 5) on 60+ comment threads costs real time per candidate. Accepted: one thorough visit per candidate is still cheaper than a burned send or a spam-flag on Paul's account; the read-once extract-all pick (Vote 2) already assumed one full visit per thread.
 - **Objection dismissed**: "the send-time Phase-1 pre-research already catches this, why duplicate?" — because batch-1 proved catching it at send-time wastes the whole downstream chain (openers written, scored, sheet built, Paul's approval loop entered for rows that were never viable). Catching at capture costs one timestamp read; catching at send costs a full cycle.
 
-**Verdict: PASS.** Carried constraint for #29: F5Bot keyword swap is now load-bearing for reaching even 10-15 rows inside the window — surface it to Paul as the one 2-minute unblock.
+**Verdict: PASS.** Carried constraint for #29: reaching even 10-15 rows inside the window depends on an expansion lane beyond IndieHackers. That lane was a passive keyword monitor when this was written; it was retired 2026-08-08 and replaced by the date-filtered sweep (`prospects/p7-search-sweep.md`). The constraint stands — **it is now a tooling unblock (thread-open access), not a 2-minute ask on Paul's desk.**
