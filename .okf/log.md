@@ -927,3 +927,50 @@ HTML on five posts, three of them already live (kamal-2-multi-server,
 ai-code-ownership-accountability, claude-code-xp-team-workflow). It is internal
 review metadata from the writer brief. Removed sitewide; writers should report
 cadence in the handback, never in the file.
+
+## 2026-08-08 — Passive keyword monitor purged from the sourcing machinery
+
+**Decision (Paul)**: remove F5Bot outright — "it's not working as you wanted."
+The tool was already marked retired on 2026-08-08, but the retirement was
+half-done: its doc survived as a "kept for the keyword derivation" stub, and two
+separate boards still carried *"paste the v2 keywords into F5Bot"* as a
+load-bearing 2-minute ask on Paul's desk (`operation-runbook.md` Sprint-3 header
+and `20.09` §P0). A dead blocker parked on the CEO's desk is worse than no
+blocker: it reads as the cheapest available unblock, so it displaces the real
+one.
+
+**Durable rule — two structural tests any sourcing tool must pass.** Neither is
+fixable by better keywords, and both killed this one:
+
+1. **Active, not passive.** A monitor only knows what arrived after it was
+   switched on, so it can never backfill a window. Card #29 needs rows verified
+   inside ≤30 days *on demand*; a passive feed cannot satisfy that by
+   construction.
+2. **Ranked retrieval, not literal substring matching.** Founders don't type our
+   phrasing. The v1 composed phrases (`vibe coded broke`) matched **0 of the 25
+   posts we had already found by hand**.
+
+Do not re-propose the class. Judge paid alternatives (RedReach, Buska, Syften,
+CommunityTracker) against those two tests *before* spending.
+
+**Keyword derivation preserved and re-verified**, moved into
+`prospects/p7-search-sweep.md` §3 with counts re-run across
+`voice-of-customer.md` + `cold-prospect-list.md`: `non-technical` 20×,
+`replit` 16×, `lovable` 8×, `cursor` 5×, `vibe coded` 2× (vs the gerund
+`vibe coding` 10×, rejected — it floods with commentary, not distress).
+
+**Finding surfaced by the move**: `dev shop` has **zero** corpus occurrences
+(`dev shop`/`devshop` 0, `agency` 1). It carries the Trigger-3
+ownership/hostage lane, and its only prior coverage argument *was* passive
+monitoring. So our second-strongest trigger now rides an unevidenced query term
+in a lane grooming already proved unfindable through open search. A zero return
+on it is a **lane gap to escalate**, not a quiet zero. `bolt.new`/`base44` are
+likewise unevidenced tool-name guesses — drop after two empty sweeps.
+
+**Correction to the board while here**: `#29` was described as agent-runnable.
+It is not — the replacement sweep ran on 2026-08-08 and returned zero rows
+because every thread-open hit `EGRESS_BLOCKED` and Reddit rejected the tool's
+user agent. Qualification requires a timestamp read from the *opened* thread, so
+**no sourcing method can produce a lead until thread-open access is restored**
+(`chrome-devtools` + egress to indiehackers.com / reddit.com). That is now the
+real P0 in both boards, in place of the keyword ask.

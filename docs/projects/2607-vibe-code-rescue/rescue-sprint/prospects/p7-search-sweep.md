@@ -1,24 +1,21 @@
 # P7 Date-filtered active search sweep - method + prospect rows + VoC
 
-> Replaces `p7-f5bot.md` (RETIRED 2026-08-08). Output of backlog card #29's sourcing lane.
+> The sole P7 sourcing method. Output of backlog card #29's sourcing lane.
 > Qualify per `t4-t5-grooming.md` **Vote 3 v2** (5 checks). Every why-ICP must be a verbatim quoted sentence + URL.
 > **Created**: 2026-08-08 | **Role**: the load-bearing expansion mechanism for the ≤30-day lead window.
 
 ---
 
-## 1. Why this replaces F5Bot
+## 1. The rule this method exists to satisfy
 
-F5Bot failed for two structural reasons, not bad luck or bad keywords:
+Card #29 needs rows verified inside a ≤30-day window **on demand**. Two properties follow, and any tool lacking either is disqualified:
 
-| F5Bot | Date-filtered active search |
-|---|---|
-| **Passive** - only catches mentions from setup-time forward. Cannot backfill. | **Active** - queries the index on demand, reaches backwards across whatever is indexed. |
-| Matches **literal substrings** only. v1's composed phrases (`vibe coded broke`) matched 0 of our 25 hand-found posts. | Ranked retrieval - partial and reordered matches still surface. |
-| Free tier caps at **5 keywords**, no RSS/JSON (paid only). | No keyword cap. Run as many query permutations as the window needs. |
-| **Email round-trip** - digest arrives on F5Bot's schedule, into Paul's inbox, then needs a human forward. | Agent runs it inline. Zero human hop. |
-| Recency is an accident of when you happened to set it up. | **Recency is a first-class filter** (`after:`), which is exactly what card #29's ≤30-day gate demands. |
+- **Active, not passive.** A monitor only knows what arrived after you switched it on, so it can never backfill a window. Search queries the index on demand and reaches backwards.
+- **Ranked retrieval, not literal matching.** Founders do not type our phrasing verbatim. A substring matcher fed composed phrases (`vibe coded broke`) returns nothing; ranked retrieval still surfaces partial and reordered matches.
 
-The decisive point: card #29 needs rows verified inside a ≤30-day window **on demand**. A passive monitor can never satisfy an on-demand backfill - it only knows what arrived after you turned it on. That mismatch is unfixable by better keywords.
+Recency must also be a first-class filter (`after:`), not an accident of setup time.
+
+_(Learned the expensive way: a passive substring monitor ran here from 2026-07-25 to 2026-08-08 and matched 0 of the 25 posts we had already found by hand. Neither flaw was fixable by better keywords - the mismatch was structural. Do not re-introduce one.)_
 
 ---
 
@@ -54,6 +51,20 @@ Substitute `after:2026-07-09` wherever the bank below writes `after:{WINDOW_STAR
 
 **Keyword set** (v2, derived from phrase counts in our own captured corpus - `voice-of-customer.md` + `cold-prospect-list.md`, not invented):
 `non-technical founder` · `vibe coded` · `lovable app` · `replit app` · `dev shop` · `bolt.new` · `cursor` · `base44`
+
+Derivation - what each term is grounded in (counts re-verified 2026-08-08 across both corpus files):
+
+| Keyword | Corpus evidence | Lane |
+|---|---|---|
+| `non-technical founder` | "non-technical" 20× - the ICP's literal self-identifier | all triggers |
+| `vibe coded` | 2× in the past-tense personal form ("I vibe coded my app and..."); the bare gerund `vibe coding` is commoner at 10× but floods with commentary, not distress | Trigger 1 |
+| `lovable app` | "lovable" 8× ("my Lovable app broke") | Trigger 1 |
+| `replit app` | "replit" 16× | Trigger 1 |
+| `cursor` | 5× | Trigger 1 |
+| `dev shop` | **none - 0 occurrences of `dev shop`/`devshop`, 1 of `agency`** | Trigger 3 |
+| `bolt.new`, `base44` | none - tool-name expansion by analogy with Lovable/Replit, not corpus-derived | Trigger 1 |
+
+**Watch the bottom three rows.** `dev shop` carries the Trigger-3 ownership/hostage lane. §3.6 already documents why: open keyword search for Trigger 3 mostly returns competitor SEO articles, not real threads, so P7 has no reliable *discovery* lane for it and Trigger-3 coverage stays with P6. `dev shop` still runs in the §3.1/3.2/3.4 query banks below as a cheap opportunistic catch, but a zero result on it is **expected, not a fresh signal** - do not read a zero here as new evidence. What changed 2026-08-08 is the coverage argument: Trigger 3's only *other* channel was passive monitoring, and that's retired. So if P6 (competitor comments) also runs dry over consecutive sprints, escalate then - Trigger 3 needs a different venue or re-testing as a premise. `bolt.new`/`base44` are cheap tool-name guesses with no corpus backing; drop them after two **valid** sweeps (one that actually reached an openable venue, per §4) return nothing - a tooling-blocked run doesn't count toward that.
 
 Run each as-is in a Google-operator-honouring search surface. Replace the date token first.
 
@@ -200,7 +211,7 @@ The method in §1-5 is sound and unchanged - it needs a runner with the tools gr
 - **A search surface that honours `site:` and `after:`** - verify with the §4 sanity check before trusting any sweep.
 - Egress access to `indiehackers.com` and `reddit.com` at minimum.
 
-Until at least one venue is openable, card #29 cannot produce verified-fresh rows by any method - this is a **blocked-on-tooling** state, not a "search harder" state. F5Bot's retirement is still correct: it was never going to deliver on-demand backfill either.
+Until at least one venue is openable, card #29 cannot produce verified-fresh rows by any method - this is a **blocked-on-tooling** state, not a "search harder" state. Note this does NOT reopen the retired passive monitor: it was never going to deliver on-demand backfill either, so the block is not an argument for going back.
 
 ---
 

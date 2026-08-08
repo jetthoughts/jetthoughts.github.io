@@ -2,7 +2,7 @@
 
 > P8 output. Merged from P1-P7 prospect files. Deduplicated by source URL (thread URL = join key). Scored by trigger strength. Rows from same thread with different handles are separate entries (different people, same venue).
 >
-> Sources: P1 IH comments (7), P2 IH posts (6), P3 HN (0), P4 Reddit (8), P5 X (1), P6 Competitor comments (3), P7 F5Bot (keywords live; no digest yet). **Total: 25 rows. Zero dupes found.**
+> Sources: P1 IH comments (7), P2 IH posts (6), P3 HN (0), P4 Reddit (8), P5 X (1), P6 Competitor comments (3), P7 date-filtered sweep (0 - blocked on tooling). **Total: 25 rows. Zero dupes found.**
 >
 > Scoring: Trigger 1 (bugs/breaking) > Trigger 3 (ownership/hostage) > Trigger 7 (stuck/incomplete). Within each trigger, ICP > semi-ICP.
 >
@@ -63,7 +63,7 @@
 | LinkedIn | 1 |
 | X/Twitter | 1 |
 | HN | 0 (dev-dominated, no founder voices) |
-| F5Bot | 0 (keywords live; awaiting first digest) |
+| P7 date-filtered sweep | 0 (method shipped 2026-08-08; sweep blocked on tooling/egress) |
 
 ### LIGHT gate: "Would Paul recognize these as worth his time?"
 
@@ -71,10 +71,10 @@
 
 **Honest limitations:**
 - Most rows are from IndieHackers and Reddit. HN and X/Twitter yielded thin results (dev-dominated, auditor-heavy).
-- Reddit handles are partial (excerpt-only, some OPs unnamed). F5Bot digest would improve Reddit coverage.
+- Reddit handles are partial (excerpt-only, some OPs unnamed). Improving Reddit coverage needs thread-open access, not another keyword feed.
 - No warm intro paths yet - all are cold outreach via platform DMs.
 - Semi-ICP rows (6) are founders who built with AI themselves, not paid a shop. They still need rescue but the trigger is different.
 
 ### Pending
-- P7 F5Bot digest: add matching rows when the first digest arrives (keywords are already live)
+- P7 date-filtered sweep: add rows once the tooling unblock lands (`chrome-devtools` + egress to at least one of indiehackers.com or reddit.com) — see `backlog.md` §Card #29 status
 - Deduplication key: source URL. No duplicates found across P1-P7.

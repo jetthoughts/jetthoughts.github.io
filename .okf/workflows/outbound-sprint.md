@@ -6,6 +6,7 @@ tags: [outbound, sales, browser-agent, kanban, sourcing]
 generated:
   by: process:okf-migrate
   at: 2026-07-26T00:00:00Z
+updated: 2026-08-08T00:00:00Z
 resource: docs/projects/2607-vibe-code-rescue/
 sources:
   - resource: "/workflows/review-swarm.md"
@@ -21,8 +22,8 @@ sources:
    for Paul's per-message approval, then send, then log. Nothing sends on
    silence.
 2. **Monitor** - each morning `rescue-sprint/reply-monitor-prompt.md`
-   sweeps IH notifications, LinkedIn, Reddit, and Gmail (`neetocal`,
-   `from:f5bot.com`), classifies replies, drafts responses from the
+   sweeps IH notifications, LinkedIn, Reddit (once batch 2 is live), and
+   Gmail (`neetocal`), classifies replies, drafts responses from the
    objection bank (marked DRAFT - Paul sends), and updates the ledger.
 3. **Measure** - `rescue-sprint/pipeline.md` is the single ledger (one row
    per touch + Friday tally). The A0 kill-criteria (~20 touches / ~10
@@ -85,10 +86,16 @@ sources:
 
 # Gotchas
 
-- **F5Bot sends nothing until the account email is verified** - the verify
-  email hid for 3 days (2026-07-21 to 07-24) because...
-- ...mail to `pftg.sof@gmail.com` is auto-labeled + archived in that
+- **Passive keyword monitors do not work for this sprint** (retired
+  2026-08-08 after a 2-week trial). Two structural flaws, neither tunable:
+  they match literal substrings, so composed founder phrasing never fires
+  (0 hits against 25 posts we found by hand), and they are passive, so they
+  can never backfill the ≤30-day lead window on demand. Sourcing uses
+  date-filtered active search instead
+  (`rescue-sprint/prospects/p7-search-sweep.md`). Do not re-propose the
+  class - judge any paid alternative against those two tests first.
+- **Mail to `pftg.sof@gmail.com`** is auto-labeled + archived in that
   mailbox and auto-forwarded to Paul's main inbox. Monitor by search query
-  (`from:f5bot.com`, `neetocal`), never by scanning that inbox.
+  (`neetocal`), never by scanning that inbox.
 - Statusline/parallel sessions contend on `.git/index.lock` - transient;
   re-check before force-removing.

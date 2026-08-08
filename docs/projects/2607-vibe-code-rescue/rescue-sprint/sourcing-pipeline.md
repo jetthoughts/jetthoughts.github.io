@@ -82,9 +82,10 @@ Rows land in `warm-intro-referral-kit.md` (warm) or `cold-prospect-list.md` (col
 Two research passes (ToolLandscape + CommunitySignals) corrected and enriched the recipes above. Adopt these:
 
 ### Fetchability reality (corrects the "site:reddit.com read-into-threads" plan)
-- **Reddit is NOT reliably fetchable by an agent** — research agents were blocked from loading reddit.com, and `web_search` misses ~70% of Reddit posts (Google doesn't index Reddit in real time). So web_search excerpts are a laggy, partial view of Reddit. **Fix: use a keyword-monitoring service that has Reddit access and hands us a feed.**
-  - **F5Bot (FREE, recommended, run-now)**: Paul signs up (2 min), adds our trigger keywords + subreddit filters; it monitors Reddit + Hacker News + Lobsters and delivers matches via **JSON/RSS/API** that an agent CAN read. This bypasses the fetch block without scraping. Weakness: substring matching = noise (filter with whole-word + subreddit scoping).
-  - **Paid upgrades (need Paul's account, optional)**: RedReach ($19/mo, 0-100 intent scoring + thread finder), Buska ($49/mo, multi-platform Reddit+X+HN+LinkedIn), CommunityTracker ($29), Syften ($19.95).
+- **Reddit is NOT reliably fetchable by an agent** — research agents were blocked from loading reddit.com, and `web_search` misses ~70% of Reddit posts (Google doesn't index Reddit in real time). So web_search excerpts are a laggy, partial view of Reddit.
+  - **Superseded fix (2026-07-21 → 2026-08-08): a free keyword-monitoring feed.** We tried it and retired it. A passive monitor only catches mentions from setup-time forward, so it can never backfill an on-demand window, and substring matching missed every composed phrase we fed it. **Do not re-propose this class of tool** — see `prospects/p7-search-sweep.md` §1.
+  - **Current fix**: **date-filtered active search** (`site:` + `after:{TODAY-30}`) per `prospects/p7-search-sweep.md`, plus thread-open access via `chrome-devtools` for the timestamp read that qualification requires.
+  - **Paid options (need Paul's account, still unevaluated)**: RedReach ($19/mo, 0-100 intent scoring + thread finder), Buska ($49/mo, multi-platform Reddit+X+HN+LinkedIn), CommunityTracker ($29), Syften ($19.95). Judge any of these against the two structural tests above before spending.
   - **Do NOT**: DIY-scrape Reddit (aggressive bans, constant breakage), pay the enterprise API (~$6K/yr), or cite GummySearch (shut down Nov 2025 after losing Reddit API access).
 - **Fetchable + high value** (run these in T4): **Hacker News** (verified live thread IDs below), **IndieHackers** (verified URLs below), **X/Twitter** (via search), competitor "free audit" comment threads (heydev/modall/attributex).
 

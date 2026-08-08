@@ -76,8 +76,8 @@ Warm signals (someone Paul already knows shows one of these) always outrank cold
 
 | Venue | What to watch for | Access |
 |---|---|---|
-| r/startups, r/SaaS, r/Entrepreneur, r/smallbusiness | triggers 1-7; highest volume | excerpt-only via web_search + F5Bot (thread bodies unfetchable by agents) |
-| r/webdev, r/cto, r/ExperiencedDevs, r/developersPak | triggers 1, 4, 8; more technical framing | excerpt-only via web_search + F5Bot |
+| r/startups, r/SaaS, r/Entrepreneur, r/smallbusiness | triggers 1-7; highest volume | excerpt-only via web_search (thread bodies unfetchable by agents) |
+| r/webdev, r/cto, r/ExperiencedDevs, r/developersPak | triggers 1, 4, 8; more technical framing | excerpt-only via web_search |
 | Indie Hackers | triggers 1, 5, 7; build-in-public | web (public) |
 | LinkedIn | triggers 2, 4, 5, 6; best for warm + hiring signals | manual (Paul's account, per Step 3 plan) |
 | X/Twitter build-in-public | trigger 1; fast but noisy | web search |

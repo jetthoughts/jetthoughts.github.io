@@ -15,6 +15,8 @@ Add a row when you send; don't pre-fill rows you haven't sent (batch 2 = openers
 
 ## Weekly tally (fill each Friday)
 
+> This table is what `operating-system.md` §1 reads. Fill this sheet first, then copy the numbers up - don't author them twice.
+
 | week of | touches | replies | calls booked | calls held | audits delivered | paid |
 |---|---|---|---|---|---|---|
-| | | | | | | |
+| 2026-08-08 | 0 | 0 | 0 | 0 | 0 | 0 |
