@@ -26,7 +26,7 @@ Source of truth: [`rescue-sprint/pipeline.md`](../projects/2607-vibe-code-rescue
 | Seat | Owner | Owns |
 |---|---|---|
 | **CEO / Sales / Trust layer** | Paul | Discovery calls, offer, pricing, founder relationship |
-| **Delivery** | White-label partner | The rescue build (Rails), under JT brand |
+| **Delivery** | JT engineers + white-label partner | The rescue build (Rails), under JT brand - both routes (CEO, 2026-08-09) |
 | **Marketing / Content / Ops** | Claude Code (+ Paul review) | Content, SEO, landing, pipeline tracking, this OS |
 
 ## 3. OKR (Q3→Q4 2026) + kill-check
@@ -68,6 +68,7 @@ The arithmetic that forced the realignment: KR2 needs 8-12 calls; the cold lane 
 | 3 | Joy Adamson override - only survivor of batch-1, 5mo old, still publicly unanswered | Paul | 🟡 Open - **decide before first send** (she rides batch-1 or not at all) |
 | 4 | Pricing vs. thesis tension - JT undercuts at $7,500 against $25-55K competitors one week after publishing "cheap developers are expensive," which argues against its own thesis to a twice-shy founder. Related: the category name "vibe code rescue" is now a competitor's page title, page 1 occupied - fight for it or differentiate? | Paul | 🟡 Open - **decide both before first send** (openers and the landing quote the offer) |
 | 5 | vision-mission.md still stamped DRAFT, 18 days on, while other docs cite it as settled | Paul | 🟡 Open - 1-line decision: ship it or say what's wrong |
+| 6 | G0 (partner lock) is marked Done on a CEO assertion, but its own definition-of-done is unmet - no paid trial rescue, no fallback partner named, and the cold-eyes handoff at runbook §G0 is still the empty placeholder. A2 pricing was confirmed off it anyway, which operating rule 1 forbids | Paul | 🟡 Open since 2026-08-09 - lower risk now that in-house is a second delivery route, but the gate is still open |
 
 *Resolved, moved to changelog*: white-label partner (Jul 21) · prospect list populated, P8 (Jul 22) · price band (Jul 22).
 

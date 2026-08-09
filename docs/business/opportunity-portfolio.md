@@ -35,6 +35,6 @@ Discipline: **one bet is Validating at a time.** Spreading the company across se
 - **Timing**: the AI-app-builder wave (Lovable, Cursor, Bolt, Replit) manufactured a large, founder-heavy pool of broken, funded MVPs - measured, not guessed ([market analysis](../projects/2607-vibe-code-rescue/10-19-research/market-analysis-2026.md)). *Counter-evidence (2026-08-07, held honestly)*: the category is no longer early - page 1 for "vibe code rescue" is fully occupied and a competitor uses the exact name; and our $2.5-10K pricing deliberately undercuts the $25-50K market band, in tension with our own "cheap is expensive" thesis. Both are open decisions on Paul's desk (OS §5).
 - **Fit**: Rails rebuild is JT's home turf; the ownership/trust wedge is JT's durable positioning made concrete.
 - **Provability**: a single signed client proves the whole motion (demand → call → audit → signing) and produces the first case study - a clean validation gate.
-- **Reversibility**: delivered via a white-label partner, so the bet is testable without over-committing the firm.
+- **Reversibility**: delivered by JT's own senior Rails engineers and a white-label partner (both routes, CEO 2026-08-09), so the bet is testable without over-committing the firm or depending on a single delivery channel.
 
 Full plan: [executive summary](../projects/2607-vibe-code-rescue/executive-summary.md) · [strategy](../projects/2607-vibe-code-rescue/strategy.md) · run it via the [operating system](operating-system.md).

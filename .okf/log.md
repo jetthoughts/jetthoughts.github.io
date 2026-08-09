@@ -1,5 +1,42 @@
 # Bundle Update Log
 
+## 2026-08-09 (CEO decisions) - delivery goes dual-route, client picture corrected
+
+* **Update**: no concept file changed - this is a business-layer decision, and the
+  bundle has no business section. Recording the durable rules here; the decisions
+  themselves live in `docs/business/` and `docs/projects/2607-vibe-code-rescue/`.
+* **Decision 1** - delivery runs through **both** JT's own senior Rails engineers
+  and the white-label partner (was: partner only). Accountability chart, E3, the
+  strategy risk section, and the exec-summary rabbit hole all updated.
+* **Decision 2** - the exec summary's "needs to restart client acquisition" opener
+  did not match the firm's actual position and is now "needs new clients." The
+  commercial detail behind that correction is deliberately not recorded here - this
+  repo is public; it lives in the private vault.
+
+**Durable rules:**
+1. **A single-threaded dependency the docs themselves flag as "the single point of
+   failure" is a design choice, not a fact - re-open it.** E3 picked white-label over
+   in-house in the register's *lighter-vote* tier: no options table, no scores, no
+   rationale, and a kill-criteria that could only route partner -> fallback partner,
+   never back in-house. The devil's-advocate pass reviewed A-D and never touched it.
+   The weakest-argued assumption was carrying the biggest named risk.
+2. **When the sales copy and the org chart disagree, one of them is lying to a
+   customer.** `offer-one-pager.md` grounded the $7,500 price in *JT's own*
+   AI-assisted development and promised "one senior engineer," while the chart
+   assigned the whole delivery seat to an unnamed third party. Reconcile these at
+   the point the price is set, not after a founder asks who is writing the code.
+3. **A gate marked Done on an assertion is an open gate.** G0's definition-of-done
+   (paid trial + fallback named + cold-eyes verdict pasted) was unmet, its handoff
+   note still the empty placeholder - yet A2 pricing was confirmed off it, which
+   operating rule 1 forbids. Logged as OS Issue 6 rather than silently re-scoped.
+4. **Stale facts propagate into strategy.** Several notes and the bet's own pitch
+   asserted a commercial position that was months out of date. Re-confirm the money
+   facts before a plan is built on top of them.
+5. **This repo is public - commercial figures belong in the private vault.** Revenue,
+   profit, rates, headcount, bench cost, and client-book size do not go in
+   `docs/`, `.okf/`, commit messages, or PR descriptions here. State the decision
+   and its reasoning; keep the numbers behind it private.
+
 ## 2026-08-01 (W2 T7 escalation) - canon deposit row carries the cancel split
 
 * **Update**: [content/course-canon.md](content/course-canon.md) - deposit row
