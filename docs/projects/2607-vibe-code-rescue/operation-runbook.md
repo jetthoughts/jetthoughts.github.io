@@ -146,7 +146,7 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 
 ## GATE G0 — Lock the white-label delivery partner  *(BLOCKING · human-path · counts)*
 - **role**: Partner-sourcing (Paul-led; a session drafts artifacts only)
-- **status**: Done (2026-07-21 — partner locked per CEO)
+- **status**: Done (2026-07-21 — partner locked per CEO). ⚠️ 2026-08-09: status left as Paul set it, but the definition-of-done below is **not** met — no paid trial, no fallback named, handoff note still empty — and A2 pricing was confirmed off this gate anyway, which operating rule 1 forbids. Logged as OS §5 Issue 6. Less load-bearing since delivery gained an in-house route (E3 revised), but still open.
 - **depends-on**: —
 - **skills**: criteria doc + vetting scorecard drafting; devil's-advocate critic
 - **inputs**: strategy doc "Biggest risk"; `operating-system.md` Issue #1

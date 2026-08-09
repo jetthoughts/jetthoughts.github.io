@@ -35,8 +35,9 @@ Rails is the winning rebuild stack, which is our home turf.
 
 Not a dev shop. **"We rescue founders from broken AI code - and hand back a product you
 own and understand."** Trust and transparency is the real product (ICP-E's #1 pain); the
-rebuild is delivered under our brand by a **white-label partner**, with **Paul as the
-fractional-CTO trust layer** on every call.
+rebuild is delivered under our brand by **JT's own senior Rails contractors and a white-label
+partner** (both routes, CEO 2026-08-09), with **Paul as the fractional-CTO trust layer** on
+every call.
 
 ## Goal
 
@@ -79,6 +80,9 @@ LinkedIn qualified replies/wk -> magnet email subs -> **discovery calls booked**
 
 ## Biggest risk
 
-The **white-label delivery partner**. The offer is only sellable if delivery quality and speed
-are guaranteed under our brand. Partner locked 2026-07-21 ✓ — residual risk: **validate the
-paid trial hits our quality bar, and name a fallback partner** before September selling ramps.
+**Delivery quality and speed under our brand.** De-risked 2026-08-09: delivery now runs through
+two routes — JT's own senior Rails contractors (three unallocated, zero bench cost) carry the
+first rescues, the white-label partner carries capacity beyond them. Partner locked 2026-07-21 ✓
+— residual risk on that leg: **validate the paid trial hits our quality bar, and name a fallback
+partner** before leaning on partner capacity. The gate that was supposed to prove this (G0) is
+still open on its own terms — see OS §5 Issue 6.

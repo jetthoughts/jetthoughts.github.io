@@ -7,7 +7,7 @@
 
 ## Problem
 
-JetThoughts needs to restart client acquisition, and the 2026 market handed us a specific opening. A wave of funded, non-technical founders paid a dev shop, a freelancer, or an AI tool (Lovable, Cursor, Bolt, Replit) to build their product. The demo looked finished. Then real users arrived and it started breaking - checkout fails, data corrupts, the login is one bad deploy from locking everyone out. Worse, the founder can't tell whether the developers are being straight, and often can't even get access to the code they paid for.
+JetThoughts needs new clients, and the 2026 market handed us a specific opening. (Not a restart from zero - CEO-confirmed 2026-08-09, two outstaffing contracts are still running at $18,400/mo revenue and $5,440/mo profit. What is missing is new-client acquisition and a service line that isn't hourly outstaffing.) A wave of funded, non-technical founders paid a dev shop, a freelancer, or an AI tool (Lovable, Cursor, Bolt, Replit) to build their product. The demo looked finished. Then real users arrived and it started breaking - checkout fails, data corrupts, the login is one bad deploy from locking everyone out. Worse, the founder can't tell whether the developers are being straight, and often can't even get access to the code they paid for.
 
 These founders are actively looking for help right now, in public. But every rescue shop entering this space (Modall, HeyDev, AttributeX, and others) leads with the same "free audit" and competes on price. Nobody is selling the thing the burned founder actually wants most: to own and understand their product again.
 
@@ -43,11 +43,11 @@ This is a fixed-time bet, not an open-ended growth program. We are not building 
 
 **How we find them.** We listen for the founder's own words of pain (the "Push" - our trigger taxonomy) in the venues where they post it, and lead with their words plus the ownership wedge, never a cold pitch. LinkedIn first (Paul posting agent-drafted control-loss stories, 3-4/wk - re-weighted 2026-08-08 when the warm-names premise fell); agent-sourced cold community threads (IndieHackers, Reddit, HN, X) second; the funnel-linked blog posts and booking link as the always-on inbound floor; past-client referral asks as optional upside.
 
-**Who does what.** A white-label partner builds the rescue under the JetThoughts brand, to our quality bar. Agents do all the prep - research, sourcing, drafting, the target list, the openers, the scripts. **Paul is reserved for the calls and the close.** A runbook plus an incremental task backlog holds the state so any session can pick up and execute without losing context.
+**Who does what.** The rescue is built under the JetThoughts brand, to our quality bar, through two routes (CEO 2026-08-09): JT's own senior Rails contractors - three unallocated at zero bench cost - and a white-label partner for capacity beyond them. Agents do all the prep - research, sourcing, drafting, the target list, the openers, the scripts. **Paul is reserved for the calls and the close.** A runbook plus an incremental task backlog holds the state so any session can pick up and execute without losing context.
 
 ## Rabbit holes
 
-- **The white-label partner is the single point of failure.** The offer is only sellable if delivery is guaranteed under our brand. Validate with a paid trial rescue and name a fallback partner before selling - do not sell on a handshake.
+- **Delivery has to be guaranteed, not assumed.** The offer is only sellable if delivery holds up under our brand. As of 2026-08-09 this is no longer single-threaded - in-house contractors carry the first rescues and the partner carries capacity - but the partner leg is still un-validated: run the paid trial rescue and name a fallback before leaning on it. Do not sell partner capacity on a handshake.
 - **Content is not pipeline.** Blog posts and SEO support conversations; they do not sign clients by November. The human-path steps (warm outreach, the call, the close) are what count. Never ship a content sprint while the outreach is stalled.
 - **The assumptions are bets, not facts.** Who the buyer is, which trigger leads, how we find them, how we pre-validate - each is registered with a kill-criteria that fires on the first ~10 calls. We follow the data, not the deck.
 - **Cold outreach at volume looks like spam.** Six competitors are already DM-ing distressed founders "free audit." We cap cold volume, lead with the founder's words and the ownership angle, and let warm channels carry the weight.
