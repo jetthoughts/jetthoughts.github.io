@@ -1054,3 +1054,36 @@ nowhere); AGENTS.md lines 77-621 (the same rules concatenated verbatim).
 **Deferred (documented, not done):** the six duplicate 60.xx JD numbers in
 60-69-project-management + moving its four testing docs to 20-29 (M effort,
 inbound-link risk); .junie/ + GEMINI.md/QWEN.md mirrors (other tools' files).
+
+## 2026-08-08 — Warm lane demoted: C1 premise partially falsified, lanes re-weighted
+
+Paul: "I would not be able to provide 10 warm names." The A0 C1 pick (warm =
+primary channel) leaned on an enumeration he can't produce - exactly the risk
+the register's devil's-advocate pre-registered ("C1 assumes Paul's network
+actually contains ICP-adjacent founders"). Handled per runbook rule 7: a dated
+ADDENDUM in the register's §C, not a silent rewrite.
+
+**New lane order** (mirrored in OS Rock 1, runbook C0/C1/sprint map, strategy,
+executive summary): LinkedIn PRIMARY (agent drafts, Paul posts 3-4/wk; posting
+packet ready - his total effort is copy/paste/post) → cold #29 load-bearing
+secondary (tooling unblock back on the critical path) → inbound floor LIVE
+(verified: all 6 founder-intent posts link to /services/vibe-code-rescue/,
+shipped in yesterday's 20.09 execution) → referral-ask OPTIONAL side lane
+(2-3 past clients; a referral source need not be the ICP; nothing gates on it).
+
+**Kill-criteria re-based** everywhere it appears (register, OS §1/§3,
+portfolio, executive summary): "2 weeks of warm outreach" → "2 weeks of active
+outreach across live lanes (LinkedIn posts and/or verified sends), 0 booked
+calls → pause, re-open A + C." Clock starts at first post or first send.
+
+**Durable rules:**
+1. **When a human says they can't do the ask, the ask is dead - re-plan the
+   lane, don't shrink the ask.** The F5Bot lesson generalized: a dead ask
+   parked on the CEO's desk displaces the real unblock.
+2. **A pre-registered risk firing is the register working.** The
+   devil's-advocate note made this a 30-minute re-weight instead of a crisis -
+   record premise changes as dated addenda so the vote history stays honest.
+3. **Distinguish the ask from its cheapest satisfiable form**: "10 warm ICP
+   names" was unsatisfiable; "2-3 past-client referral asks" survives because
+   a referral source need not be the ICP. Demote, don't delete, when a weaker
+   form retains value.

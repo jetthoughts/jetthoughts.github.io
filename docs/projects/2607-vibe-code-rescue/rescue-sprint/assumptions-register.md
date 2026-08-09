@@ -66,7 +66,16 @@
 | C4 inbound SEO | 1 | 4 | 3 | 5 | 18 |
 
 **Pick: C1 primary (warm + referral), C2 secondary (agent-sourced cold community).** **Rationale**: warm converts fastest and carries the trust the burned ICP demands; C2 is the agent-unattended top-up that doesn't wait on Paul. C3 (paid) is a deliberate *later* upgrade once a channel proves reply interest (runbook rule 3). C4 (SEO) cannot rank by Nov 30 — Q1-2027 compounding only.
-**Pre-validation test**: warm channel must produce ≥3 booked calls before we invest setup time in C3. **Kill-criteria**: if 2 weeks of warm outreach yields 0 booked calls, the ICP-to-network fit is wrong — pause and re-open A + C before spending on paid.
+
+> **ADDENDUM 2026-08-08 — C1 premise partially falsified; channel re-weight.** Paul: "I would not be able to provide 10 warm names." This confirms the pre-registered risk below (§Devil's-advocate: "C1 assumes Paul's network actually contains ICP-adjacent founders. If it doesn't... C1's speed advantage evaporates"). Re-weight, recorded per runbook rule 7:
+> - **Primary → LinkedIn** (Stream 0, agent drafts / Paul posts, 3-4/wk per 20.09 §7): days-scale feedback, reaches Paul's network passively without requiring him to enumerate anyone, drafts already exist.
+> - **Secondary → C2 cold community** (#29): re-promoted to load-bearing; its tooling unblock (thread-open access) returns to the critical path.
+> - **Live inbound floor**: 6 funnel-linked founder-intent posts → `/services/vibe-code-rescue/` + live booking link (verified 2026-08-08).
+> - **Warm demoted to an OPTIONAL referral-ask side lane**: 2-3 *past clients* as referral sources (a referral source need not be the ICP; JT has 32 clients at ~95% retention), or T3 Gmail consent, or skip. **Nothing gates on it.**
+>
+> **Kill-criteria (re-based, replaces the warm-only wording)**: if **2 weeks of active outreach across whatever lanes are live** (LinkedIn posts and/or verified sends) yields **0 booked calls**, pause and re-open A + C before spending on paid. The clock starts at the first post or first send, whichever lands first.
+
+**Pre-validation test**: the live lanes must produce ≥3 booked calls before we invest setup time in C3. **Kill-criteria**: see the 2026-08-08 addendum above — the original "2 weeks of warm outreach" wording is superseded (the warm lane may never run).
 
 ---
 
