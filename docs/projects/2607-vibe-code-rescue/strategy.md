@@ -53,10 +53,13 @@ end to end and produces the first case study.
    delivers; Paul owns the relationship. This is the conversion engine.
 2. **Landing page -> booking machine** - rescue positioning already live (PR #385); add the
    offer, case-study proof, one "Book a Rescue Audit" CTA.
-3. **Demand-gen, three lanes summing to the KR** (revised 2026-08-08) - warm intros
-   (PRIMARY per A0 C1) + LinkedIn (agent drafts, Paul posts, 3-4x/wk total) + cold community
-   re-source as top-up. Content is support-only (20.09 pipeline-first); the SEO cluster and
-   paid pilot are cut/archived - paid waits on an organic reply signal.
+3. **Demand-gen, lanes summing to the KR** (re-weighted 2026-08-08 after the warm-primary
+   premise was partially falsified - Paul cannot enumerate warm ICP names; register addendum) -
+   **LinkedIn primary** (agent drafts, Paul posts, 3-4x/wk total) + cold community re-source
+   (load-bearing secondary, gated on the tooling unblock) + live inbound (6 funnel-linked posts
+   + booking link) + optional past-client referral asks. Content is support-only (20.09
+   pipeline-first); the SEO cluster and paid pilot are cut/archived - paid waits on an organic
+   reply signal.
 4. **Lead magnets** - audit scorecard, GitHub/AWS ownership checklist, salvage-vs-rebuild
    decision tree -> email capture -> audit CTA.
 
@@ -64,7 +67,7 @@ end to end and produces the first case study.
 
 | Window | Focus | Client-getting milestone |
 |---|---|---|
-| **Aug** | Build the machine + open the lanes | Offer + price defined ✓ (2026-07-22); partner locked ✓ (2026-07-21); warm list populated (Paul's ~10 names) + first sends; LinkedIn drafts flowing at 3-4/wk total; landing CTA live |
+| **Aug** | Build the machine + open the lanes | Offer + price defined ✓ (2026-07-22); partner locked ✓ (2026-07-21); LinkedIn posting live (Paul posts #1 from the ready packet, then 3-4/wk); cold tooling unblocked → #29 re-source; landing CTA live; optional: 2-3 past-client referral asks |
 | **Sep** | Fill the funnel | All three lanes active; **Sep 30 gate: ≥3 discovery calls booked, else pause and re-open A + C**; sales-enablement artifacts only as calls need them |
 | **Oct** | Convert | Deliver first audits -> rescue proposals; first signing; publish our own rescue case study |
 | **Nov** | Compound | Referral + case-study loop; Q1 2027 pipeline full |

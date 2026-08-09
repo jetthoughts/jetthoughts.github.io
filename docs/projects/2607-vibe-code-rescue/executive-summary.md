@@ -33,7 +33,7 @@ Four independent signals, not one hopeful reading:
 
 This is a fixed-time bet, not an open-ended growth program. We are not building a pipeline machine or ranking in search. We are proving, end to end, that one motion works: a founder in pain finds us, books a free audit, and signs a fixed-price rescue. One signing produces the first case study and the confidence to scale in Q1 2027.
 
-**Circuit breaker**: if two weeks of warm outreach produce zero booked calls, we stop and re-open the ICP bet before spending another hour - the machine is wrong, not under-fed.
+**Circuit breaker** (re-based 2026-08-08, register C1 addendum): if two weeks of active outreach across the live lanes (LinkedIn posts and/or verified sends) produce zero booked calls, we stop and re-open the ICP *and* channel picks before spending another hour - the machine is wrong, not under-fed. The clock starts at the first post or first send.
 
 ## Solution
 
@@ -41,7 +41,7 @@ This is a fixed-time bet, not an open-ended growth program. We are not building 
 
 **The wedge.** Not "we fix broken code" - that lane is crowded. Ours is **ownership and trust**: you own the code and every account at each milestone, and Paul sits on every call as your fractional CTO translating what the developers are doing into decisions you can make. Trust is the product; the rebuild is how we deliver it.
 
-**How we find them.** We listen for the founder's own words of pain (the "Push" - our trigger taxonomy) in the venues where they post it, and lead with their words plus the ownership wedge, never a cold pitch. Warm intros and past-client referrals first (they convert fastest for a burned buyer); agent-sourced cold community threads (IndieHackers, Reddit, HN, X) second; Paul working the high-value manual signals on LinkedIn.
+**How we find them.** We listen for the founder's own words of pain (the "Push" - our trigger taxonomy) in the venues where they post it, and lead with their words plus the ownership wedge, never a cold pitch. LinkedIn first (Paul posting agent-drafted control-loss stories, 3-4/wk - re-weighted 2026-08-08 when the warm-names premise fell); agent-sourced cold community threads (IndieHackers, Reddit, HN, X) second; the funnel-linked blog posts and booking link as the always-on inbound floor; past-client referral asks as optional upside.
 
 **Who does what.** A white-label partner builds the rescue under the JetThoughts brand, to our quality bar. Agents do all the prep - research, sourcing, drafting, the target list, the openers, the scripts. **Paul is reserved for the calls and the close.** A runbook plus an incremental task backlog holds the state so any session can pick up and execute without losing context.
 

@@ -31,7 +31,7 @@ critic's verdict pasted VERBATIM), and sets the next card `Ready`.
 | `t4-t5-grooming.md` | T4/T5 groomed design (3-agent brainstorm + votes: discovery, throughput, qualification) | ✓ done |
 | `voice-of-customer.md` | VoC swipe file keyed to Four Forces; stale-dropped leads still feed it (no age limit) | ✓ done — 27 quotes, all four forces PASS |
 | `offer-one-pager.md` | A2 — the Vibe Code Rescue offer (free audit → fixed rescue) | ✓ done — priced $2,500/$7,500/$10,000, live booking link |
-| `warm-intro-referral-kit.md` | C0 — target-list table + 3 outreach templates; **PRIMARY channel per A0 C1 vote** | templates done; **list EMPTY — blocked only on Paul (10 names or Gmail consent)** |
+| `warm-intro-referral-kit.md` | C0 — referral-ask templates; **OPTIONAL side lane since 2026-08-08** (warm-primary premise falsified — register C1 addendum) | templates done; 2-3 past-client referral asks if Paul wants, or T3 Gmail consent, or skip — **nothing gates on this file** |
 | `booking-page-spec.md` | S0 — NeetoCal setup spec (fulfilled; link live 2026-07-24) | ✓ done — historical record |
 | `45-minute-session-playbook.md` | D1 — the call script Paul runs on a booked Rescue Context Call | done; awaiting Paul's read-through |
 | `send-runner-prompt.md` / `reply-monitor-prompt.md` | #12 send runner (pre-research → Paul approves → send → log) / #20 daily reply monitor | ready; dormant until first sends |
@@ -69,7 +69,7 @@ These are the only items that need Paul. Everything else an agent session does a
 |---|---|---|---|
 | P1 | Create the booking page in his own Cal.com/NeetoCal account (~5 min; spec in `booking-page-spec.md`) | Needs his calendar + login | S0 gate; live URL: https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar |
 | P2 | Confirm the price band (audit free; tiered rescue pricing) | Depends on partner margin only he knows | ✅ Done 2026-07-22 — A2 confirmed at $2,500 / $7,500 / $10,000 |
-| P3 | Review the agent-built target list + openers, then **hit send** from his own inbox/LinkedIn | The intros go out under his name/relationship | C0 send |
+| P3 | **Post LinkedIn ICP post #1** (`linkedin-posts/icp-validation/POSTING-PACKET.md` — copy, paste, post; ~2 min), then keep the 3-4/wk cadence from agent drafts. Later: review + send any verified openers from #29. Optional: 2-3 past-client referral asks from the kit | Posts and sends go out under his name/relationship | C1 activation; C0 send |
 | P4 | Take the discovery calls; run audits → proposals → close | The whole point; the human trust layer | D3 signing |
 
 If a card handoff says "waiting on Paul" for anything NOT in this table, that's a mis-scope — the agent should have done it.
@@ -96,7 +96,7 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 | T8 | **Discovery kit** — call script + audit deliverable one-page template + 45-min agenda (Card D1 content), so Paul walks into calls with a script | `rescue-sprint/discovery-kit.md` | **Done** (2026-07-22 — 45-min agenda + SPIN/Four-Forces script + 1-page RAG scorecard/verdict template; devil's-advocate self-refute PASS, order-dependency noted) | A2 draft | HEAVY — devil's-advocate self-refute (verdict in-file §Cold-eyes) |
 | T9 | **Objection + FAQ + follow-up bank** — likely founder objections ("why not just re-hire the shop", "is $7,500 real"), answers, and a 3-touch no-reply follow-up sequence | `rescue-sprint/objection-followup-bank.md` | **Done** (T9 complete) | T8 ✓ | LIGHT — refute "does each answer hold up to a skeptical burned founder?" |
 
-**All T-tasks T1-T9 are Done except T3** (2026-08-08). T3 (warm-source pass) is the only open row — and it is now the **primary lane** per revised Rock 1: it waits only on Paul (Gmail consent, or simpler, ~10 names from memory into `warm-intro-referral-kit.md`). No grooming gate holds anything — sourcing ran and completed 2026-07-22; the Vote 3 v2 rubric governs *re-verification* (#29), not permission to run.
+**All T-tasks T1-T9 are Done except T3** (2026-08-08). T3 (warm-source pass) stays open but **OPTIONAL** — the warm-primary premise was partially falsified 2026-08-08 (Paul cannot enumerate warm ICP names; register C1 addendum). The primary lane is now **LinkedIn** (posting packet ready — Paul copies, pastes, posts); cold #29 is the load-bearing secondary (gated on the tooling unblock). No grooming gate holds anything — sourcing ran and completed 2026-07-22; the Vote 3 v2 rubric governs *re-verification* (#29), not permission to run.
 
 ---
 
@@ -175,9 +175,9 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 - **cold-eyes gate**: HEAVY — `reflexion-critique` + devil's-advocate on price/positioning; verbatim verdict.
 - **handoff note**: _(verbatim verdict)_
 
-## CARD C0 — Paul's warm-intro + outbound target list  *(PRIMARY demand engine · human-path · counts)*
+## CARD C0 — Paul's outbound target list  *(demand engine · human-path · counts)*
 - **role**: Sales/Comms (Paul-led; agent drafts list + messages)
-- **status**: In progress (2026-08-08 — split state: the COLD lane is built but 100% unverified + blocked-on-tooling (#29); the **WARM sub-lane — the A0 C1 primary pick — has never started**: `warm-intro-referral-kit.md`'s target list is empty and waits ONLY on Paul (~10 names from memory, or Gmail consent for T3). Warm needs no tooling unblock and is the fastest path to a sendable touch.)
+- **status**: In progress (re-weighted 2026-08-08 — the warm-primary premise is partially falsified: Paul cannot enumerate warm ICP names [register C1 addendum]. The COLD lane is built but 100% unverified + blocked-on-tooling (#29, now the load-bearing sourcing path). The **WARM sub-lane is demoted to an OPTIONAL referral-ask**: 2-3 past clients via the kit templates, or T3 Gmail consent, or skip — nothing gates on it. The fastest path to a live touch is now C1: Paul posting LinkedIn #1 from the ready packet.)
 - **depends-on**: — (messages that quote price/offer wait on A2)
 - **skills**: `copywriting`, `linkedin-icp-validation-plan`
 - **inputs**: ICP `90.10`; existing network; control-loss pain phrases
@@ -275,7 +275,7 @@ These feed the C0/D1 cards without touching Paul's desk. Each is scoped to ≤1 
 
 ## Sprint map (rocks → cards, aligned with `operating-system.md` §4, 2026-08-08)
 
-- **Rock 1 (now) — demand flowing from three lanes, summing to KR2's 8-12 calls**: **C0 warm** (PRIMARY — Paul's ~10 names, no tooling needed) · **C1 LinkedIn** (drafts-only; Paul posts) · **#29 cold** (top-up; blocked-on-tooling). The cold lane alone maxes at ~2-3 calls — it cannot carry the KR.
+- **Rock 1 (now) — demand flowing from the live lanes, summing to KR2's 8-12 calls** (re-weighted 2026-08-08): **C1 LinkedIn** (PRIMARY — packet ready, Paul copies/pastes/posts) · **#29 cold** (load-bearing secondary; blocked-on-tooling) · **inbound floor** (6 funnel-linked posts + booking link, live) · **C0 referral-ask** (optional, 2-3 past clients, nothing gates on it). The cold lane alone maxes at ~2-3 calls — it cannot carry the KR.
 - **Rock 2 (Aug) landing**: B1 (after A2/S0 — both Done, so B1 is capacity-blocked only).
 - **Rock 3 (Aug→Sep) first send → first call**: #12 batch-1 (any lane that opens), then #20 reply-monitor; C2 stays support-only.
 - **Rock 4 (Oct) convert**: D3 with D1's kit, then B2 from the first real engagement.
