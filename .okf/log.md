@@ -1,5 +1,22 @@
 # Bundle Update Log
 
+## 2026-08-12 (item16 landing migration) - report-only gate family + parity net
+
+* **Update**: `.okf/build/test-gates.md` gains the REPORT-ONLY build-gate
+  family - `bin/check-svg-floor`, `bin/check-course-paths`, and the new
+  `bin/check-landing-parity` (item16 20%-slot). Each is standalone (not yet
+  wired into hugo-build/CI), carries `--self-test`, prints a burn-down +
+  exit 0, and flips to blocking via an env flag once its backlog is zero.
+* **Why parity**: item16 cut the course landing from ~2x the shuffle2
+  reference height by relocating 4 off-reference sections; the hero-fold
+  pixel suite can't see below-fold section growth, so the H2-count net is
+  the real guard against silent re-bloat.
+* **Coverage-gap confirmed from both sides**: item16's below-fold changes
+  (dark NOT-cover band, merged endcap, compacted module cards) produced
+  ZERO Linux dtest reds - only the hero-fold desktop/course/landing baseline
+  shifted (T2/T4). Below-fold visual work is gated by rendered chrome-devtools
+  review at 1280+390, never by the pixel suite.
+
 ## 2026-08-09 (CEO decisions) - delivery goes dual-route, client picture corrected
 
 * **Update**: no concept file changed - this is a business-layer decision, and the
