@@ -146,15 +146,15 @@
   border-radius: 16px;
   border: 1px solid #ececf0;
   box-shadow: 0 6px 24px rgba(26, 26, 46, 0.07);
-  padding: 28px 30px;
-  margin: 0 0 20px;
+  padding: 24px 26px;
+  margin: 0 0 16px;
 }
 .blog .module-card__head {
   display: grid;
   gap: 10px 40px;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #f1f2f4;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .blog .module-card__badge {
   display: block;
@@ -203,7 +203,7 @@
   list-style: none;
 }
 .blog ol.module-card__chapters > li {
-  padding: 7px 0;
+  padding: 5px 0;
   border-bottom: 1px solid #f5f6f7;
   font-size: 15px;
   line-height: 1.4;
@@ -211,12 +211,24 @@
 .blog ol.module-card__chapters > li:last-child {
   border-bottom: none;
 }
+/* item16 T6: chapter titles read as body text, not a wall of links -
+   ruby is reserved for hover + the deliverable/badges (taste guardrail).
+   !important beats the global `a:not(.btn)...` link-color rule, the same
+   way the module headings beat the shared h3 divider rule above. */
+.blog ol.module-card__chapters > li a {
+  color: #1f2937 !important;
+  text-decoration: none;
+}
+.blog ol.module-card__chapters > li a:hover {
+  color: var(--color-ruby) !important;
+  text-decoration: underline;
+}
 .blog .module-card__num {
   display: inline-block;
   min-width: 34px;
   font-family: "JetBrains Mono", ui-monospace, monospace;
   font-size: 13px;
-  color: var(--color-ruby);
+  color: #9ca3af;
 }
 .blog .module-card__optional {
   margin-left: 6px;
