@@ -1,78 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 212" role="img" aria-labelledby="faq-strip-title">
-  <title id="faq-strip-title">FAQ map: questions are grouped as General, then Module 1 Hypothesis and smoke test, Module 2 Validate the problem, Module 3 Design from evidence, Module 4 Build it yourself, and Module 5 First paying customer - in that order.</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-labelledby="faq-strip-title faq-strip-desc">
+  <title id="faq-strip-title">FAQ map: questions are grouped as General, then the five modules in order.</title>
+  <desc id="faq-strip-desc">Six navigation cards in a row: General (pace and order), Module 1 Hypothesis and smoke test, Module 2 Validate the problem, Module 3 Design from evidence, Module 4 Build it yourself, Module 5 First paying customer - in that order. Find your module below; questions are grouped in this order.</desc>
   <defs>
     <style>
-      .num    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 21px; font-weight: 700; }
-      .lab    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #1a1a1a; font-weight: 700; }
-      .glab   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #1a1a1a; font-weight: 700; }
-      .gsub   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #666; }
-      .cap    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #555; font-style: italic; }
-      .chip1  { fill: #eef2ff; stroke: #4f46e5; stroke-width: 2.5; }
-      .chip2  { fill: #ecfeff; stroke: #0891b2; stroke-width: 2.5; }
-      .chip3  { fill: #fffbeb; stroke: #d97706; stroke-width: 2.5; }
-      .chip4  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .chip5  { fill: #f0fdf4; stroke: #16a34a; stroke-width: 2.5; }
-      .n1 { fill: #4f46e5; } .n2 { fill: #0e7490; } .n3 { fill: #b45309; } .n4 { fill: #cc342d; } .n5 { fill: #15803d; }
-      .gen    { fill: #faf7f2; stroke: #1a1a1a; stroke-width: 2; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .num   { font-size: 20px; font-weight: 700; fill: #cc342d; }
+      .lab   { font-size: 18px; font-weight: 600; fill: #121212; }
+      .glab  { font-size: 18px; font-weight: 700; fill: #121212; }
+      .gsub  { font-size: 17px; font-weight: 400; fill: #666666; }
+      .cap   { font-size: 18px; font-weight: 400; fill: #555555; }
     </style>
-    <marker id="fa" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6" fill="none" stroke="#999" stroke-width="1.6"/>
+    <marker id="fa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#999999"/>
     </marker>
   </defs>
 
-  <!-- General (entry) -->
-  <g transform="rotate(-0.4 91.5 94)">
-    <rect x="24" y="44" width="135" height="100" rx="14" class="gen"/>
-    <text x="91.5" y="90" class="glab" text-anchor="middle">General</text>
-    <text x="91.5" y="112" class="gsub" text-anchor="middle">pace &amp; order</text>
-  </g>
+  <rect width="720" height="240" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="224" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
+  <!-- General -->
+  <g>
+    <rect x="20" y="44" width="102" height="110" rx="4" fill="#faf7f2" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="71" y="95" text-anchor="middle" class="gk glab">General</text>
+    <text x="71" y="118" text-anchor="middle" class="sys gsub">pace + order</text>
+  </g>
   <!-- M1 -->
-  <g transform="rotate(0.4 246.5 94)">
-    <rect x="179" y="44" width="135" height="100" rx="14" class="chip1"/>
-    <text x="246.5" y="78" class="num n1" text-anchor="middle">M1</text>
-    <text x="246.5" y="103" class="lab" text-anchor="middle">Hypothesis</text>
-    <text x="246.5" y="123" class="lab" text-anchor="middle">&amp; smoke test</text>
+  <g>
+    <rect x="134" y="44" width="102" height="110" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="185" y="80" text-anchor="middle" class="gk num">M1</text>
+    <text x="185" y="106" text-anchor="middle" class="gk lab">Hypothesis</text>
+    <text x="185" y="127" text-anchor="middle" class="gk lab">+ smoke test</text>
   </g>
-
   <!-- M2 -->
-  <g transform="rotate(-0.3 401.5 94)">
-    <rect x="334" y="44" width="135" height="100" rx="14" class="chip2"/>
-    <text x="401.5" y="78" class="num n2" text-anchor="middle">M2</text>
-    <text x="401.5" y="103" class="lab" text-anchor="middle">Validate</text>
-    <text x="401.5" y="123" class="lab" text-anchor="middle">the problem</text>
+  <g>
+    <rect x="248" y="44" width="102" height="110" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="299" y="80" text-anchor="middle" class="gk num">M2</text>
+    <text x="299" y="106" text-anchor="middle" class="gk lab">Validate</text>
+    <text x="299" y="127" text-anchor="middle" class="gk lab">the problem</text>
   </g>
-
   <!-- M3 -->
-  <g transform="rotate(0.3 556.5 94)">
-    <rect x="489" y="44" width="135" height="100" rx="14" class="chip3"/>
-    <text x="556.5" y="78" class="num n3" text-anchor="middle">M3</text>
-    <text x="556.5" y="103" class="lab" text-anchor="middle">Design from</text>
-    <text x="556.5" y="123" class="lab" text-anchor="middle">evidence</text>
+  <g>
+    <rect x="362" y="44" width="102" height="110" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="413" y="80" text-anchor="middle" class="gk num">M3</text>
+    <text x="413" y="106" text-anchor="middle" class="gk lab">Design from</text>
+    <text x="413" y="127" text-anchor="middle" class="gk lab">evidence</text>
   </g>
-
   <!-- M4 -->
-  <g transform="rotate(-0.3 711.5 94)">
-    <rect x="644" y="44" width="135" height="100" rx="14" class="chip4"/>
-    <text x="711.5" y="78" class="num n4" text-anchor="middle">M4</text>
-    <text x="711.5" y="103" class="lab" text-anchor="middle">Build it</text>
-    <text x="711.5" y="123" class="lab" text-anchor="middle">yourself</text>
+  <g>
+    <rect x="476" y="44" width="102" height="110" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="527" y="80" text-anchor="middle" class="gk num">M4</text>
+    <text x="527" y="106" text-anchor="middle" class="gk lab">Build it</text>
+    <text x="527" y="127" text-anchor="middle" class="gk lab">yourself</text>
   </g>
-
   <!-- M5 -->
-  <g transform="rotate(0.4 866.5 94)">
-    <rect x="799" y="44" width="135" height="100" rx="14" class="chip5"/>
-    <text x="866.5" y="78" class="num n5" text-anchor="middle">M5</text>
-    <text x="866.5" y="103" class="lab" text-anchor="middle">First paying</text>
-    <text x="866.5" y="123" class="lab" text-anchor="middle">customer</text>
+  <g>
+    <rect x="590" y="44" width="102" height="110" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="641" y="80" text-anchor="middle" class="gk num">M5</text>
+    <text x="641" y="106" text-anchor="middle" class="gk lab">First paying</text>
+    <text x="641" y="127" text-anchor="middle" class="gk lab">customer</text>
   </g>
 
   <!-- Arrows -->
-  <line x1="161" y1="94" x2="177" y2="94" stroke="#999" stroke-width="1.6" marker-end="url(#fa)"/>
-  <line x1="316" y1="94" x2="332" y2="94" stroke="#999" stroke-width="1.6" marker-end="url(#fa)"/>
-  <line x1="471" y1="94" x2="487" y2="94" stroke="#999" stroke-width="1.6" marker-end="url(#fa)"/>
-  <line x1="626" y1="94" x2="642" y2="94" stroke="#999" stroke-width="1.6" marker-end="url(#fa)"/>
-  <line x1="781" y1="94" x2="797" y2="94" stroke="#999" stroke-width="1.6" marker-end="url(#fa)"/>
+  <line x1="123" y1="99" x2="133" y2="99" stroke="#999999" stroke-width="2" marker-end="url(#fa)"/>
+  <line x1="237" y1="99" x2="247" y2="99" stroke="#999999" stroke-width="2" marker-end="url(#fa)"/>
+  <line x1="351" y1="99" x2="361" y2="99" stroke="#999999" stroke-width="2" marker-end="url(#fa)"/>
+  <line x1="465" y1="99" x2="475" y2="99" stroke="#999999" stroke-width="2" marker-end="url(#fa)"/>
+  <line x1="579" y1="99" x2="589" y2="99" stroke="#999999" stroke-width="2" marker-end="url(#fa)"/>
 
-  <text x="480" y="178" class="cap" text-anchor="middle">Find your module below - questions are grouped in this order.</text>
+  <text x="360" y="200" text-anchor="middle" class="sys cap">Find your module below - questions are grouped in this order.</text>
 </svg>
