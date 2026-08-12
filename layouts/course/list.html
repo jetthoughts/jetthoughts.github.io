@@ -76,8 +76,17 @@
           <div class="course-window__body">
             <p class="course-window__eyebrow">Free course</p>
             <p class="course-window__title">Idea to<br />First Paying Customer</p>
-            <p class="course-window__meta">{{ len $mods }} modules · {{ $lessons }} lessons</p>
-            <p class="course-window__leave">You leave with a signed paid pilot - a real customer paying real money.</p>
+            <div class="course-window__stats">
+              <div class="course-window__stat">
+                <p class="course-window__stat-label">Methodology</p>
+                <p class="course-window__stat-value">No-Code MVP</p>
+              </div>
+              <div class="course-window__stat">
+                <p class="course-window__stat-label">Validation Pace</p>
+                <p class="course-window__stat-value">2-3 Weeks</p>
+              </div>
+            </div>
+            <p class="course-window__leave">You leave with a signed paid pilot - a real customer paying real money. {{ len $mods }} modules, {{ $lessons }} lessons, all free.</p>
           </div>
         </aside>
       </header>

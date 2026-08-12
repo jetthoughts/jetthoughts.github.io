@@ -520,10 +520,28 @@
   color: #ffffff;
   margin: 0 0 18px;
 }
-.course-landing .course-window__meta {
+/* item16 T4: reference-style labeled stat cells replace the meta line */
+.course-landing .course-window__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 14px;
+}
+.course-landing .course-window__stat-label {
   font-family: "JetBrains Mono", ui-monospace, monospace;
-  font-size: 14px;
-  color: #d1d5db;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin: 0 0 4px;
+}
+.course-landing .course-window__stat-value {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #ffffff;
   margin: 0;
 }
 .course-landing .course-window__leave {
