@@ -44,6 +44,17 @@ if [ -f "$SCRIPT_DIR/validate-course" ]; then
   fi
 fi
 
+# Course exhibit SVGs must clear the 9px@390 mobile legibility floor.
+# Blocking since 2026-08-12 (item18 cleared the whole corpus to O2 flat-vector).
+if [ -f "$SCRIPT_DIR/check-svg-floor" ]; then
+  if ! SVG_FLOOR_BLOCK=1 "$SCRIPT_DIR/check-svg-floor"; then
+    echo ""
+    echo "❌ An exhibit SVG renders below the 9px@390 floor. Redraw it to the"
+    echo "   O2 spec (viewBox W=720, min font >=17) - see .okf/design/house-visual-spec.md."
+    exit 1
+  fi
+fi
+
 HUGO_ARGS=(hugo build --noBuildLock --environment "$ENVIRONMENT" --destination "$OUTPUT_DIR")
 [ -n "$BASE_URL" ] && HUGO_ARGS+=(--baseURL "$BASE_URL")
 [ -n "$BUILD_DRAFTS" ] && HUGO_ARGS+=(--buildDrafts)

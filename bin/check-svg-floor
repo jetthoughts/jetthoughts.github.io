@@ -10,9 +10,10 @@
 #   => font_viewBox >= 9 * viewBox_width / 390
 #
 # Usage: bin/check-svg-floor [dir]   (default: content/course)
-# Report-only today (exit 0 with a burn-down list) because ~55 not-yet-converted
-# reference/continuation SVGs still fail. Flip REPORT_ONLY=false to make it a
-# blocking gate once the whole course is converted.
+# BLOCKING since 2026-08-12: item18 converted the whole course SVG corpus to O2
+# flat-vector (74/80 under-floor → 0), so bin/hugo-build now runs this with
+# SVG_FLOOR_BLOCK=1 and fails the build on any regression. Run bare (no env
+# flag) for a report-only burn-down list.
 
 REPORT_ONLY = ENV.fetch("SVG_FLOOR_BLOCK", "") != "1"
 FLOOR_PX = 9.0
