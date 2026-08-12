@@ -120,7 +120,7 @@ Whose inbox did the AWS root email land in tonight? If the honest answer is "I'm
 
 ## Already mid-build with a contractor?
 
-A side-path for readers who came from the course landing's [Already started building?](/course/tech-for-non-technical-founders-2026/#already-started-building) fork - you are already typing, or paying someone an hourly rate to type for you. The ownership audit above is step one. Run these before you approve any more work:
+A side-path for readers who came from the course overview's [Already started building?](/course/tech-for-non-technical-founders-2026/how-this-course-works/#already-started-building) fork - you are already typing, or paying someone an hourly rate to type for you. The ownership audit above is step one. Run these before you approve any more work:
 
 1. Demand one Friday demo with working software only - no Jira tickets, no slides, no "almost done." - [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/)
 2. Require a plain-English weekly report: what shipped, what's blocked, what's next. - [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/)

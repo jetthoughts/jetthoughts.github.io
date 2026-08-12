@@ -4,7 +4,7 @@ title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
 status: stable
-generated: { by: claude/fable-5, at: 2026-08-01T18:00:00Z }
+generated: { by: claude/opus-4-8, at: 2026-08-12T20:20:00Z }
 verified: { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
 ---
 
@@ -179,3 +179,12 @@ extend it when adding components or critical files. The macOS full suite remains
   the repo - fresh clones had a hooksPath pointing at nothing. Adding any
   root dotfile/dot-dir? Check `git check-ignore -v <path>` before assuming
   it's tracked.
+- REPORT-ONLY build gates (each flips to blocking once its backlog hits
+  zero via an env flag): `bin/check-svg-floor` (`SVG_FLOOR_BLOCK=1`)
+  catches course SVGs whose smallest text renders <9px@390;
+  `bin/check-course-paths` (`COURSE_PATH_BLOCK=1`) catches lesson
+  `Next:`/branch drift vs `data/course_sequence.yaml`. Both are standalone
+  (NOT yet wired into hugo-build/CI), carry a `--self-test`, and print a
+  burn-down list + exit 0 until their env flag is set. (A landing-parity
+  variant was tried and dropped as redundant - YAGNI: a report-only gate
+  nobody wires in earns its keep only when it guards an active backlog.)

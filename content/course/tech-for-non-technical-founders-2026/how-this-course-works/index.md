@@ -40,6 +40,18 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 ---
 
+## Take this course if
+
+- You are a first-time founder with an idea
+- You want the fastest route from that idea to your first paying customer
+- You can read a [Stripe](https://stripe.com) invoice but not a GitHub commit
+- You have never systematically validated a business before
+- You might have tinkered with no-code tools, but you want a structured path instead of guessing
+
+Skip this course if you want to learn to code or hand off founder judgment to someone else. And if what you need most is cohort deadlines and peers, [YC Startup School](https://www.startupschool.org/) runs free - this course is the self-paced, artifact-first alternative.
+
+---
+
 ## The Big Picture
 
 ![Program map: five modules on one spine, each output feeding the next input. Module 1 Hypothesis & Smoke Test produces a tested hypothesis and a live page that takes payment; Module 2 Validate the Problem produces 10 customer interviews and a validated problem statement; Module 3 Design from Evidence produces a one-page product brief in real customer words; Module 4 Build It Yourself produces a live MVP at a real URL with every account in your name; Module 5 First Paying Customer produces a signed paid pilot with a deposit in the bank.](program-map.svg)
@@ -146,7 +158,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 
 **Important distinction:** your warm network is the right place to sell your first paid pilot, and the wrong place to validate the problem. Friends and other founders will tell you your idea is great because they're being polite. Only cold strangers who describe the problem in their own words and pay money produce a real signal.
 
-> **Going further:** After your first paid pilot, the course has continuation chapters for churn triage, pivot-or-persevere decisions, hiring, management (Friday Demo Rule, Weekly Dev Report), and AI-era topics (token bill auditing, slopsquatting, agency AI questions).
+> **Going further:** After your first paid pilot, the course has continuation chapters for churn triage, pivot-or-persevere decisions, hiring, agency oversight and management (Friday Demo Rule, Weekly Dev Report), and AI-era topics (token bill auditing, slopsquatting, agency AI questions). Once you've passed the Module 5 gate, they live with their read-this-when triggers in the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/#going-further-triggers).
 
 ---
 
@@ -203,11 +215,25 @@ If you fail a gate, the system requires you to go back, not forward. Failing at 
 
 Read the overview once. Then start at [Module 1, Lesson 1.1: Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Come back to this page when you need to see where you are in the full route.
 
-If you're not at the idea stage - you're already building, or paying someone to build for you - see the [Already started building?](/course/tech-for-non-technical-founders-2026/#already-started-building) section on the course landing page.
+If you're not at the idea stage - you're already building, or paying someone to build for you - see [Already started building?](#already-started-building) below.
 
 > **Done when:** You have read the full route and know which module to start with.
 > **Next click:** [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 > **If blocked:** If your idea is too vague to fill the hypothesis blanks, Lesson 1.1's "If this fails" section shows how to anchor the blanks with real customer complaints from Reddit and G2.
+
+---
+
+## Already started building?
+
+If you just have an idea or a half-built prototype you're tinkering with, skip to [Module 1](/course/tech-for-non-technical-founders-2026/#module-1). If you are already typing, or paying someone an hourly rate to type for you, start with the ownership audit in [Lesson 4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - it carries the full pre-flight list to run before you approve any more work.
+
+---
+
+## Who built this
+
+Built by [JetThoughts](https://jetthoughts.com). We've run a Rails-first dev shop since 2011, and we have sat on the receiving end of enough first builds gone wrong to know which mistakes repeat: a 15-page wishlist spec where a one-page brief should have been, or a GitHub account registered to a contractor who stopped replying. This course is the desk reference we wish those founders had before their first build decision.
+
+Why free? A founder who validates before building makes a better future client than one we meet mid-disaster, and there is nothing to buy inside the course.
 
 ---
 

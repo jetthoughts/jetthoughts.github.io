@@ -43,23 +43,7 @@ The first checkpoint comes fast: two to three weeks in, at an evenings-and-weeke
 
 Two ways in: [Start Lesson 1.1 →](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) or [see the full syllabus ↓](#module-map). *Prefer a map first? [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) (10 minutes) and the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) cover the route and the most common blockers.*
 
-## Take this course if
-
-- You are a first-time founder with an idea
-- You want the fastest route from that idea to your first paying customer
-- You can read a [Stripe](https://stripe.com) invoice but not a GitHub commit
-- You have never systematically validated a business before
-- You might have tinkered with no-code tools, but you want a structured path instead of guessing
-
-Skip this course if you want to learn to code or hand off founder judgment to someone else. And if what you need most is cohort deadlines and peers, [YC Startup School](https://www.startupschool.org/) runs free - this course is the self-paced, artifact-first alternative.
-
-Already building, or paying someone to build for you? Start at the [ownership audit in Lesson 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - the [side-path below](#already-started-building) explains the fork.
-
-## Who built this
-
-Built by [JetThoughts](https://jetthoughts.com). We've run a Rails-first dev shop since 2011, and we have sat on the receiving end of enough first builds gone wrong to know which mistakes repeat: a 15-page wishlist spec where a one-page brief should have been, or a GitHub account registered to a contractor who stopped replying. This course is the desk reference we wish those founders had before their first build decision.
-
-Why free? A founder who validates before building makes a better future client than one we meet mid-disaster, and there is nothing to buy inside the course.
+Already building, or paying someone to build for you? Start at the [ownership audit in Lesson 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - the [Already started building? side-path](/course/tech-for-non-technical-founders-2026/how-this-course-works/#already-started-building) explains the fork.
 
 ## Why this course exists
 
@@ -73,33 +57,6 @@ The five mistakes below sink more first products than bad code does - we have wa
   <li><strong class="mistake-list__title">Never charging.</strong> Offering free pilots indefinitely because asking for money feels intimidating - <a href="/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/">Module 5</a> gives you the exact script to charge your first customer before you ship.</li>
   <li class="mistake-list__cta">Each mistake maps to a module - <a href="#module-map">jump to the module map ↓</a></li>
 </ul>
-
-## What this course does NOT cover
-
-To save your time, here is what we intentionally exclude - none of it is needed for the promised result (idea → first paying customer):
-
-<div class="scope-grid">
-  <div class="scope-card">
-    <h3 class="scope-card__title">How to code</h3>
-    <p>The course assumes zero coding ability - <a href="https://lovable.dev">Lovable</a> + <a href="https://supabase.com">Supabase</a> + <a href="https://stripe.com">Stripe</a> handle the technical side.</p>
-  </div>
-  <div class="scope-card">
-    <h3 class="scope-card__title">Hiring &amp; managing a team</h3>
-    <p>Covered as a build-path decision in Lesson 4.1, not as org design; early-stage management lives in the <a href="/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/">Friday Demo Rule</a> + <a href="/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/">Weekly Dev Report</a>.</p>
-  </div>
-  <div class="scope-card">
-    <h3 class="scope-card__title">Raising venture capital</h3>
-    <p>The course produces the artifacts investors want to see. It does not teach pitch decks or fundraising mechanics.</p>
-  </div>
-  <div class="scope-card">
-    <h3 class="scope-card__title">Acquisition at scale</h3>
-    <p>Module 5 covers your first customers; SEO, content marketing, and paid acquisition at scale are a separate discipline.</p>
-  </div>
-</div>
-
-<p class="scope-residual">Also out of scope: mobile-only and marketplace-only specifics (they have their own playbooks), and legal incorporation, taxes, and IP filings - use a lawyer or a service like <a href="https://stripe.com/atlas">Stripe Atlas</a>, <a href="https://www.clerky.com/">Clerky</a>, or <a href="https://www.firstbase.io/">Firstbase</a>. If you need something on this list, the course won't help with it.</p>
-
-<div class="course-band course-band--gray">
 
 ## Module map
 
@@ -244,12 +201,32 @@ Read the modules in order - each module's output is the next module's input, and
 
 </div>
 
+<div class="course-band course-band--dark">
+
+## What this course does NOT cover
+
+To save your time, here is what we intentionally exclude - none of it is needed for the promised result (idea → first paying customer):
+
+<div class="scope-grid">
+  <div class="scope-card">
+    <h3 class="scope-card__title">How to code</h3>
+    <p>The course assumes zero coding ability - <a href="https://lovable.dev">Lovable</a> + <a href="https://supabase.com">Supabase</a> + <a href="https://stripe.com">Stripe</a> handle the technical side.</p>
+  </div>
+  <div class="scope-card">
+    <h3 class="scope-card__title">Hiring &amp; managing a team</h3>
+    <p>Covered as a build-path decision in Lesson 4.1, not as org design; early-stage management lives in the <a href="/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/">Friday Demo Rule</a> + <a href="/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/">Weekly Dev Report</a>.</p>
+  </div>
+  <div class="scope-card">
+    <h3 class="scope-card__title">Raising venture capital</h3>
+    <p>The course produces the artifacts investors want to see. It does not teach pitch decks or fundraising mechanics.</p>
+  </div>
+  <div class="scope-card">
+    <h3 class="scope-card__title">Acquisition at scale</h3>
+    <p>Module 5 covers your first customers; SEO, content marketing, and paid acquisition at scale are a separate discipline.</p>
+  </div>
 </div>
 
-## Going further (after first paying customer)
+<p class="scope-residual">Also out of scope: mobile-only and marketplace-only specifics (they have their own playbooks), and legal incorporation, taxes, and IP filings - use a lawyer or a service like <a href="https://stripe.com/atlas">Stripe Atlas</a>, <a href="https://www.clerky.com/">Clerky</a>, or <a href="https://www.firstbase.io/">Firstbase</a>. If you need something on this list, the course won't help with it.</p>
 
-Once you've passed the Module 5 gate, the continuation chapters - churn triage, pivot-or-persevere, hiring, agency oversight - live with their read-this-when triggers in the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/#going-further-triggers).
+</div>
 
-## Already started building?
-
-If you just have an idea or a half-built prototype you're tinkering with, skip to [Module 1](#module-1). If you are already typing, or paying someone an hourly rate to type for you, start with the ownership audit in [Lesson 4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - it carries the full pre-flight list to run before you approve any more work.

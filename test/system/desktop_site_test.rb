@@ -354,7 +354,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     visit "/course/tech-for-non-technical-founders-2026/"
 
     within "h1" do
-      assert_text "From Idea to First Paying Customer"
+      assert_text "From Idea to First Paying Customer", normalize_ws: true
     end
     assert_text "Why this course exists"
     assert_text "Module map"

@@ -1,5 +1,21 @@
 # Bundle Update Log
 
+## 2026-08-12 (item16 landing migration) - below-fold coverage gap confirmed
+
+* **Update**: `.okf/build/test-gates.md` documents the REPORT-ONLY build-gate
+  pair (`bin/check-svg-floor`, `bin/check-course-paths`) - standalone, each
+  with a `--self-test`, flipping to blocking via an env flag once its backlog
+  is zero.
+* **Coverage-gap confirmed from both sides**: item16's below-fold changes
+  (dark NOT-cover band, merged endcap, compacted module cards) produced
+  ZERO Linux dtest reds - only the hero-fold desktop/course/landing baseline
+  shifted (T2/T4). Below-fold visual work is gated by rendered chrome-devtools
+  review at 1280+390, never by the pixel suite.
+* **Dropped**: a `bin/check-landing-parity` report-only gate was tried as the
+  wave's 20%-slot and removed as redundant (Paul, YAGNI) - a report-only
+  gate nobody wires into hugo-build/CI doesn't earn its keep unless it guards
+  an active backlog the way svg-floor/course-paths do.
+
 ## 2026-08-09 (CEO decisions) - delivery goes dual-route, client picture corrected
 
 * **Update**: no concept file changed - this is a business-layer decision, and the

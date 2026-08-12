@@ -12,7 +12,7 @@ course_nav_prev:
   module: "Going further"
   title: "When Your Customers Are Leaving: Churn Triage"
 course_nav_next:
-  url: "/course/tech-for-non-technical-founders-2026/#going-further-after-first-paying-customer"
+  url: "/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/#going-further-triggers"
   module: "Going further"
   title: "All Going-further chapters"
 keywords:

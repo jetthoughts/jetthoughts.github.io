@@ -8,7 +8,7 @@ course_chapter: true
 author: "JetThoughts Team"
 slug: customers-leaving-churn-triage-not-acquisition
 course_nav_prev:
-  url: "/course/tech-for-non-technical-founders-2026/#going-further-after-first-paying-customer"
+  url: "/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/#going-further-triggers"
   module: "Going further"
   title: "All Going-further chapters"
 course_nav_next:
