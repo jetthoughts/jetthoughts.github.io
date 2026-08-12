@@ -1,78 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-labelledby="wf-title">
-  <title id="wf-title">A passing 3-screen prototype: Screen 1 entry point (fake file list + a Match transactions button) leads to Screen 2 core action (a Stripe-vs-QuickBooks match table where testers stall) leads to Screen 3 result (a summary card and Download report), which is where a passing tester lands without coaching.</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 424" role="img" aria-labelledby="wf-title wf-desc">
+  <title id="wf-title">A passing 3-screen prototype: entry point to core action to result, where a passing tester lands without coaching.</title>
+  <desc id="wf-desc">Three wireframed screens joined by arrows. Screen 1, entry point: a list of 3 CSV files with a Match transactions button - can they start? Screen 2, core action: a Stripe versus QuickBooks match table, 12 matched and 3 flagged, with an Approve matches button - where testers stall. Screen 3, result, highlighted green as the pass target: a summary card, 12 matched and 3 flagged, with a Download report button - can they name what it did? Pass means reaching Screen 3 uncoached. Basis: a 3-screen clickable prototype test.</desc>
   <defs>
     <style>
-      .heading { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 27px; fill: #1a1a1a; font-weight: 700; }
-      .stitle  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #cc342d; font-weight: 700; }
-      .stitleg { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #2e7d32; font-weight: 700; }
-      .box     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #333; }
-      .boxq    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #777; font-style: italic; }
-      .cta     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #fff; font-weight: 700; }
-      .anno    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #555; font-style: italic; }
-      .pass    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #2e7d32; font-weight: 700; }
-      .frame   { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .frameg  { fill: #f1f9f1; stroke: #2e7d32; stroke-width: 2.5; }
-      .bar     { fill: #ffffff; stroke: #e2b8b8; stroke-width: 1.5; }
-      .barg    { fill: #ffffff; stroke: #b6d9b6; stroke-width: 1.5; }
-      .ctabtn  { fill: #cc342d; stroke: none; }
-      .arrow   { stroke: #cc342d; stroke-width: 3; fill: none; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .head  { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .st    { font-size: 18px; font-weight: 700; fill: #121212; }
+      .stg   { font-size: 18px; font-weight: 700; fill: #2e7d32; }
+      .box   { font-size: 18px; font-weight: 400; fill: #333333; }
+      .boxq  { font-size: 17px; font-weight: 400; fill: #777777; font-style: italic; }
+      .cta   { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .anno  { font-size: 18px; font-weight: 400; fill: #555555; font-style: italic; }
+      .pass  { font-size: 18px; font-weight: 700; fill: #2e7d32; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
+    <marker id="wf-tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
+    </marker>
   </defs>
 
-  <text x="480" y="34" class="heading" text-anchor="middle">A passing 3-screen prototype, wireframed</text>
+  <rect width="720" height="424" fill="#faf7f2"/>
 
-  <!-- ============ PANEL 1 - Entry point ============ -->
-  <g transform="rotate(-0.4 159 173)">
-    <rect x="20" y="58" width="278" height="230" rx="14" class="frame"/>
-    <rect x="34" y="74" width="250" height="32" rx="7" class="bar"/>
-    <text x="159" y="96" class="stitle" text-anchor="middle">Screen 1 · Entry point</text>
-    <rect x="34" y="120" width="250" height="66" rx="8" class="bar"/>
-    <text x="159" y="145" class="box" text-anchor="middle">3 CSV files listed</text>
-    <text x="159" y="168" class="boxq" text-anchor="middle">(hard-coded fake data)</text>
-    <rect x="49" y="210" width="220" height="40" rx="20" class="ctabtn"/>
-    <text x="159" y="236" class="cta" text-anchor="middle">Match transactions</text>
-  </g>
-  <text x="159" y="312" class="anno" text-anchor="middle">First click - can they start?</text>
+  <text x="360" y="46" text-anchor="middle" class="gk head">A passing 3-screen prototype</text>
 
-  <!-- arrow 1 -->
-  <g>
-    <path d="M 303 173 L 330 173" class="arrow"/>
-    <path d="M 330 167 L 342 173 L 330 179 Z" fill="#cc342d"/>
-  </g>
+  <!-- Screen 1: Entry point (neutral) -->
+  <rect x="24" y="86" width="210" height="196" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2.5"/>
+  <rect x="38" y="102" width="182" height="30" rx="4" fill="#f4f1ec"/>
+  <text x="129" y="123" text-anchor="middle" class="gk st">1 - Entry point</text>
+  <rect x="38" y="144" width="182" height="60" rx="4" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="129" y="170" text-anchor="middle" class="sys box">3 CSV files listed</text>
+  <text x="129" y="192" text-anchor="middle" class="sys boxq">(fake data)</text>
+  <rect x="41" y="224" width="176" height="40" rx="4" fill="#cc342d"/>
+  <text x="129" y="250" text-anchor="middle" class="gk cta">Match transactions</text>
+  <text x="129" y="308" text-anchor="middle" class="sys anno">Can they start?</text>
 
-  <!-- ============ PANEL 2 - Core action ============ -->
-  <g transform="rotate(0.4 477 173)">
-    <rect x="338" y="58" width="278" height="230" rx="14" class="frame"/>
-    <rect x="352" y="74" width="250" height="32" rx="7" class="bar"/>
-    <text x="477" y="96" class="stitle" text-anchor="middle">Screen 2 · Core action</text>
-    <rect x="352" y="120" width="250" height="66" rx="8" class="bar"/>
-    <text x="477" y="145" class="box" text-anchor="middle">Stripe  vs  QuickBooks</text>
-    <text x="477" y="168" class="box" text-anchor="middle">12 matched · 3 flagged</text>
-    <rect x="367" y="210" width="220" height="40" rx="20" class="ctabtn"/>
-    <text x="477" y="236" class="cta" text-anchor="middle">Approve all matches</text>
-  </g>
-  <text x="477" y="312" class="anno" text-anchor="middle">Where testers stall</text>
+  <!-- Screen 2: Core action (neutral) -->
+  <rect x="255" y="86" width="210" height="196" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2.5"/>
+  <rect x="269" y="102" width="182" height="30" rx="4" fill="#f4f1ec"/>
+  <text x="360" y="123" text-anchor="middle" class="gk st">2 - Core action</text>
+  <rect x="269" y="144" width="182" height="60" rx="4" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="360" y="170" text-anchor="middle" class="sys box">Stripe vs QuickBooks</text>
+  <text x="360" y="192" text-anchor="middle" class="sys box">12 matched, 3 flagged</text>
+  <rect x="272" y="224" width="176" height="40" rx="4" fill="#cc342d"/>
+  <text x="360" y="250" text-anchor="middle" class="gk cta">Approve matches</text>
+  <text x="360" y="308" text-anchor="middle" class="sys anno">Where testers stall</text>
 
-  <!-- arrow 2 -->
-  <g>
-    <path d="M 621 173 L 648 173" class="arrow"/>
-    <path d="M 648 167 L 660 173 L 648 179 Z" fill="#cc342d"/>
-  </g>
+  <!-- Screen 3: Result (pass target - green) -->
+  <rect x="486" y="86" width="210" height="196" rx="4" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5"/>
+  <rect x="500" y="102" width="182" height="30" rx="4" fill="#e6f4e6"/>
+  <text x="591" y="123" text-anchor="middle" class="gk stg">3 - Result</text>
+  <rect x="500" y="144" width="182" height="60" rx="4" fill="#ffffff" stroke="#b6d9b6" stroke-width="1.5"/>
+  <text x="591" y="170" text-anchor="middle" class="sys box">Summary card</text>
+  <text x="591" y="192" text-anchor="middle" class="sys box">12 matched, 3 flagged</text>
+  <rect x="503" y="224" width="176" height="40" rx="4" fill="#cc342d"/>
+  <text x="591" y="250" text-anchor="middle" class="gk cta">Download report</text>
+  <text x="591" y="308" text-anchor="middle" class="sys anno">Can they name it?</text>
 
-  <!-- ============ PANEL 3 - Result (pass target) ============ -->
-  <g transform="rotate(-0.3 795 173)">
-    <rect x="656" y="58" width="278" height="230" rx="14" class="frameg"/>
-    <rect x="670" y="74" width="250" height="32" rx="7" class="barg"/>
-    <text x="795" y="96" class="stitleg" text-anchor="middle">Screen 3 · Result</text>
-    <rect x="670" y="120" width="250" height="66" rx="8" class="barg"/>
-    <text x="795" y="145" class="box" text-anchor="middle">Summary card</text>
-    <text x="795" y="168" class="box" text-anchor="middle">12 matched, 3 flagged</text>
-    <rect x="685" y="210" width="220" height="40" rx="20" class="ctabtn"/>
-    <text x="795" y="236" class="cta" text-anchor="middle">Download report</text>
-  </g>
-  <text x="795" y="312" class="anno" text-anchor="middle">Can they name what it did?</text>
+  <!-- Arrows -->
+  <path d="M 234 184 L 255 184" fill="none" stroke="#3a3a3a" stroke-width="2" marker-end="url(#wf-tri)"/>
+  <path d="M 465 184 L 486 184" fill="none" stroke="#3a3a3a" stroke-width="2" marker-end="url(#wf-tri)"/>
 
-  <!-- PASS marker on the right screen -->
-  <rect x="660" y="326" width="270" height="30" rx="15" fill="#eaf6ea" stroke="#2e7d32" stroke-width="2"/>
-  <text x="795" y="346" class="pass" text-anchor="middle">PASS = reaches here uncoached</text>
+  <!-- PASS marker: the takeaway -->
+  <rect x="180" y="328" width="360" height="34" rx="4" fill="#e6f4e6" stroke="#2e7d32" stroke-width="2"/>
+  <text x="360" y="351" text-anchor="middle" class="gk pass">PASS = tester reaches Screen 3 uncoached</text>
+
+  <text x="360" y="404" text-anchor="middle" class="sys basis">Basis: a 3-screen clickable prototype test</text>
 </svg>
