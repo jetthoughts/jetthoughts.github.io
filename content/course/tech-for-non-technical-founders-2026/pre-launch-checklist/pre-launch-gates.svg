@@ -1,149 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 552" role="img" aria-labelledby="pl-title">
-  <title id="pl-title">The 15-item pre-launch checklist: 5 sections with their check counts flow into the final gate. 15/15 green ships it. 12-14 green fixes today. Under 12 green - do not ship yet.</title>
-  <desc>Five numbered section cards across the top: Section 1 Mobile (5 checks), Section 2 Payments (3 checks), Section 3 Auth and Access (3 checks), Section 4 Onboarding (2 checks), Section 5 The one-human smoke test (2 checks). Arrows from all five sections converge into the final gate below, which shows three verdict cards: green (15/15 - ship it), amber (12-14 - fix today), and red (under 12 - do not ship).</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-labelledby="pl-title pl-desc">
+  <title id="pl-title">The 15-item pre-launch checklist: 5 sections flow into the final gate.</title>
+  <desc id="pl-desc">Five numbered section cards across the top with their check counts: 1 Mobile (5 checks), 2 Payments (3 checks), 3 Auth and Access (3 checks), 4 Onboarding (2 checks), 5 the one-human smoke test (2 checks). Arrows converge into the final gate below, which shows three verdicts: 15 of 15 green - ship it, share the URL with your Module 2 interview pool; 12 to 14 green (amber) - fix the red items today, retest and share tomorrow; under 12 green (ruby) - do not ship, run the build phases again before anyone sees it. Checks 6 to 13 are the five green lights from Lesson 4.4 as per-item checks.</desc>
   <defs>
     <style>
-      .h       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .title   { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
-      .sub     { font-size: 15px; fill: #666; font-style: italic; }
-      .sec-num { font-size: 15px; font-weight: 700; fill: #fff; }
-      .sec-hd  { font-size: 16px; font-weight: 700; fill: #1a1a1a; }
-      .sec-sub { font-size: 13px; fill: #555; }
-      .verdict-hd { font-size: 22px; font-weight: 700; }
-      .verdict-g  { fill: #2e7d32; }
-      .verdict-a  { fill: #b8860b; }
-      .verdict-r  { fill: #cc342d; }
-      .verdict-tx { font-size: 15px; fill: #1a1a1a; }
-      .verdict-sm { font-size: 13px; fill: #555; }
-      .note    { font-size: 14px; fill: #666; font-style: italic; }
-      .card    { fill: #faf7f2; stroke: #555; stroke-width: 2; }
-      .card-g  { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
-      .card-a  { fill: #fffbeb; stroke: #b8860b; stroke-width: 2.5; }
-      .card-r  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .numdot  { fill: #cc342d; }
-      .arrow   { stroke: #555; stroke-width: 2.25; fill: none; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 28px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 20px; font-weight: 600; fill: #4a4a4a; }
+      .snum  { font-size: 17px; font-weight: 700; fill: #ffffff; }
+      .shd   { font-size: 18px; font-weight: 700; fill: #121212; }
+      .gate  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .vhd   { font-size: 20px; font-weight: 700; }
+      .vtx   { font-size: 18px; font-weight: 400; fill: #333333; }
+      .badge { font-size: 17px; font-weight: 700; fill: #ffffff; }
+      .note  { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
-    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#555"/>
+    <marker id="pah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#888888"/>
     </marker>
   </defs>
 
-  <!-- Header -->
-  <text x="480" y="34" text-anchor="middle" class="h title">The pre-launch checklist: 15 checks, 5 sections</text>
-  <text x="480" y="58" text-anchor="middle" class="h sub">Run these the day before you share your MVP URL. 20 minutes. Any red means fix before you share.</text>
+  <rect width="720" height="540" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="524" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- ====== SECTION CARDS (top row) ====== -->
+  <text x="360" y="40" text-anchor="middle" class="gk title">Pre-launch: 15 checks, 5 sections</text>
+  <text x="360" y="66" text-anchor="middle" class="gk msg">Run the day before you share your MVP URL</text>
 
-  <!-- S1: Mobile -->
-  <g transform="translate(18, 80) rotate(-0.4 85 50)">
-    <rect width="170" height="100" rx="12" class="card"/>
-    <circle cx="22" cy="22" r="12" class="numdot"/>
-    <text x="22" y="27" text-anchor="middle" class="h sec-num">1</text>
-    <text x="44" y="28" class="h sec-hd">Mobile</text>
-    <text x="22" y="54" class="h sec-sub">Homepage, CTA tap,</text>
-    <text x="22" y="72" class="h sec-sub">forms, readable,</text>
-    <text x="22" y="90" class="h sec-sub">sign-up fits</text>
-    <!-- check count -->
-    <circle cx="148" cy="84" r="14" fill="#2e7d32"/>
-    <text x="148" y="89" text-anchor="middle" class="h sec-num">5</text>
+  <!-- Section cards -->
+  <g>
+    <rect x="24" y="90" width="126" height="104" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="46" cy="114" r="13" fill="#cc342d"/>
+    <text x="46" y="119" text-anchor="middle" class="gk snum">1</text>
+    <text x="66" y="120" class="gk shd">Mobile</text>
+    <circle cx="87" cy="164" r="17" fill="#2e7d32"/>
+    <text x="87" y="170" text-anchor="middle" class="gk snum">5</text>
+  </g>
+  <g>
+    <rect x="160" y="90" width="126" height="104" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="182" cy="114" r="13" fill="#cc342d"/>
+    <text x="182" y="119" text-anchor="middle" class="gk snum">2</text>
+    <text x="202" y="120" class="gk shd">Payments</text>
+    <circle cx="223" cy="164" r="17" fill="#2e7d32"/>
+    <text x="223" y="170" text-anchor="middle" class="gk snum">3</text>
+  </g>
+  <g>
+    <rect x="296" y="90" width="126" height="104" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="318" cy="114" r="13" fill="#cc342d"/>
+    <text x="318" y="119" text-anchor="middle" class="gk snum">3</text>
+    <text x="338" y="120" class="gk shd">Auth</text>
+    <circle cx="359" cy="164" r="17" fill="#2e7d32"/>
+    <text x="359" y="170" text-anchor="middle" class="gk snum">3</text>
+  </g>
+  <g>
+    <rect x="432" y="90" width="126" height="104" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="454" cy="114" r="13" fill="#cc342d"/>
+    <text x="454" y="119" text-anchor="middle" class="gk snum">4</text>
+    <text x="474" y="120" class="gk shd">Onboard</text>
+    <circle cx="495" cy="164" r="17" fill="#2e7d32"/>
+    <text x="495" y="170" text-anchor="middle" class="gk snum">2</text>
+  </g>
+  <g>
+    <rect x="568" y="90" width="126" height="104" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="590" cy="114" r="13" fill="#cc342d"/>
+    <text x="590" y="119" text-anchor="middle" class="gk snum">5</text>
+    <text x="610" y="120" class="gk shd">Smoke</text>
+    <circle cx="631" cy="164" r="17" fill="#2e7d32"/>
+    <text x="631" y="170" text-anchor="middle" class="gk snum">2</text>
   </g>
 
-  <!-- S2: Payments -->
-  <g transform="translate(202, 80) rotate(0.3 85 50)">
-    <rect width="170" height="100" rx="12" class="card"/>
-    <circle cx="22" cy="22" r="12" class="numdot"/>
-    <text x="22" y="27" text-anchor="middle" class="h sec-num">2</text>
-    <text x="44" y="28" class="h sec-hd">Payments</text>
-    <text x="22" y="54" class="h sec-sub">Stripe LIVE mode,</text>
-    <text x="22" y="72" class="h sec-sub">card clears,</text>
-    <text x="22" y="90" class="h sec-sub">receipt arrives</text>
-    <circle cx="148" cy="84" r="14" fill="#2e7d32"/>
-    <text x="148" y="89" text-anchor="middle" class="h sec-num">3</text>
+  <!-- Convergence arrows -->
+  <path d="M 87 194 C 87 214, 300 226, 350 244" stroke="#888888" stroke-width="2" fill="none" marker-end="url(#pah)"/>
+  <path d="M 223 194 C 223 216, 330 228, 360 244" stroke="#888888" stroke-width="2" fill="none" marker-end="url(#pah)"/>
+  <path d="M 359 194 L 360 244" stroke="#888888" stroke-width="2" fill="none" marker-end="url(#pah)"/>
+  <path d="M 495 194 C 495 216, 390 228, 370 244" stroke="#888888" stroke-width="2" fill="none" marker-end="url(#pah)"/>
+  <path d="M 631 194 C 631 214, 420 226, 372 244" stroke="#888888" stroke-width="2" fill="none" marker-end="url(#pah)"/>
+
+  <text x="360" y="272" text-anchor="middle" class="gk gate">Final gate: count your green lights</text>
+
+  <!-- Verdict: green ship -->
+  <g>
+    <rect x="40" y="286" width="640" height="66" rx="4" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5"/>
+    <rect x="58" y="306" width="96" height="28" rx="4" fill="#2e7d32"/>
+    <text x="106" y="325" text-anchor="middle" class="gk badge">15/15</text>
+    <text x="172" y="318" class="gk vhd" fill="#2e7d32">Ship it.</text>
+    <text x="172" y="342" class="sys vtx">Share the URL with your Module 2 interview pool.</text>
+  </g>
+  <!-- Verdict: amber fix -->
+  <g>
+    <rect x="40" y="362" width="640" height="66" rx="4" fill="#fffbeb" stroke="#b8860b" stroke-width="2.5"/>
+    <rect x="58" y="382" width="96" height="28" rx="4" fill="#b8860b"/>
+    <text x="106" y="401" text-anchor="middle" class="gk badge">12-14</text>
+    <text x="172" y="394" class="gk vhd" fill="#b8860b">Fix the red items today.</text>
+    <text x="172" y="418" class="sys vtx">These lose early users. Retest, share tomorrow.</text>
+  </g>
+  <!-- Verdict: ruby do not ship -->
+  <g>
+    <rect x="40" y="438" width="640" height="66" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+    <rect x="58" y="458" width="96" height="28" rx="4" fill="#cc342d"/>
+    <text x="106" y="477" text-anchor="middle" class="gk badge">Under 12</text>
+    <text x="172" y="470" class="gk vhd" fill="#cc342d">Do not ship.</text>
+    <text x="172" y="494" class="sys vtx">Run the build phases again before anyone sees it.</text>
   </g>
 
-  <!-- S3: Auth -->
-  <g transform="translate(386, 80) rotate(-0.5 85 50)">
-    <rect width="170" height="100" rx="12" class="card"/>
-    <circle cx="22" cy="22" r="12" class="numdot"/>
-    <text x="22" y="27" text-anchor="middle" class="h sec-num">3</text>
-    <text x="44" y="28" class="h sec-hd">Auth &amp; Access</text>
-    <text x="22" y="54" class="h sec-sub">New user sign-up,</text>
-    <text x="22" y="72" class="h sec-sub">sign back in,</text>
-    <text x="22" y="90" class="h sec-sub">reset works</text>
-    <circle cx="148" cy="84" r="14" fill="#2e7d32"/>
-    <text x="148" y="89" text-anchor="middle" class="h sec-num">3</text>
-  </g>
-
-  <!-- S4: Onboarding -->
-  <g transform="translate(570, 80) rotate(0.4 85 50)">
-    <rect width="170" height="100" rx="12" class="card"/>
-    <circle cx="22" cy="22" r="12" class="numdot"/>
-    <text x="22" y="27" text-anchor="middle" class="h sec-num">4</text>
-    <text x="44" y="28" class="h sec-hd">Onboarding</text>
-    <text x="22" y="54" class="h sec-sub">First-run experience,</text>
-    <text x="22" y="72" class="h sec-sub">core workflow</text>
-    <text x="22" y="90" class="h sec-sub">end-to-end</text>
-    <circle cx="148" cy="84" r="14" fill="#2e7d32"/>
-    <text x="148" y="89" text-anchor="middle" class="h sec-num">2</text>
-  </g>
-
-  <!-- S5: Smoke test -->
-  <g transform="translate(754, 80) rotate(-0.3 85 50)">
-    <rect width="170" height="100" rx="12" class="card"/>
-    <circle cx="22" cy="22" r="12" class="numdot"/>
-    <text x="22" y="27" text-anchor="middle" class="h sec-num">5</text>
-    <text x="44" y="28" class="h sec-hd">Smoke test</text>
-    <text x="22" y="54" class="h sec-sub">Stranger navigates</text>
-    <text x="22" y="72" class="h sec-sub">core flow, names</text>
-    <text x="22" y="90" class="h sec-sub">it in 3 sec</text>
-    <circle cx="148" cy="84" r="14" fill="#2e7d32"/>
-    <text x="148" y="89" text-anchor="middle" class="h sec-num">2</text>
-  </g>
-
-  <!-- Convergence arrows from sections down to the final gate title -->
-  <path d="M 103 184 C 103 210, 220 232, 260 260" class="arrow" marker-end="url(#ah)"/>
-  <path d="M 287 184 C 287 212, 340 232, 370 258" class="arrow" marker-end="url(#ah)"/>
-  <path d="M 471 184 C 471 208, 480 232, 480 258" class="arrow" marker-end="url(#ah)"/>
-  <path d="M 655 184 C 655 212, 620 232, 590 260" class="arrow" marker-end="url(#ah)"/>
-  <path d="M 839 184 C 839 210, 740 232, 700 258" class="arrow" marker-end="url(#ah)"/>
-
-  <!-- ====== FINAL GATE (bottom) ====== -->
-  <text x="480" y="284" text-anchor="middle" class="h sec-hd" font-size="18">Final gate: count your green lights</text>
-
-  <!-- Verdict 1: Green - Ship it -->
-  <g transform="translate(30, 304) rotate(-0.5 285 80)">
-    <rect width="570" height="76" rx="12" class="card-g"/>
-    <rect x="20" y="18" width="90" height="24" rx="12" fill="#2e7d32"/>
-    <text x="65" y="35" text-anchor="middle" class="h" font-size="14" font-weight="700" fill="#fff">15/15 green</text>
-    <text x="130" y="36" class="h verdict-hd verdict-g">Ship it.</text>
-    <text x="130" y="62" class="h verdict-tx">Share the URL with your Module 2 interview pool.</text>
-  </g>
-
-  <!-- Verdict 2: Amber - Fix today -->
-  <g transform="translate(30, 396) rotate(0.3 285 74)">
-    <rect width="570" height="72" rx="12" class="card-a"/>
-    <rect x="20" y="16" width="90" height="24" rx="12" fill="#b8860b"/>
-    <text x="65" y="33" text-anchor="middle" class="h" font-size="14" font-weight="700" fill="#fff">12-14 green</text>
-    <text x="130" y="34" class="h verdict-hd verdict-a">Fix the red items today.</text>
-    <text x="130" y="58" class="h verdict-sm">These are the checks that lose early users. Retest, share tomorrow.</text>
-  </g>
-
-  <!-- Red callout card -->
-  <g transform="translate(640, 304) rotate(0.5 145 95)">
-    <rect width="290" height="190" rx="12" class="card-r"/>
-    <rect x="20" y="18" width="115" height="24" rx="12" fill="#cc342d"/>
-    <text x="77" y="35" text-anchor="middle" class="h" font-size="14" font-weight="700" fill="#fff">Under 12 green</text>
-    <text x="24" y="62" class="h verdict-hd verdict-r">Do not ship.</text>
-    <text x="24" y="90" class="h verdict-sm">Run the build phases again.</text>
-    <text x="24" y="112" class="h verdict-sm">Fix the core flow before</text>
-    <text x="24" y="134" class="h verdict-sm">anyone else sees it.</text>
-    <!-- icon -->
-    <text x="244" y="172" class="h" font-size="26" fill="#cc342d">&#x26D4;</text>
-  </g>
-
-  <!-- Bottom note -->
-  <g transform="translate(30, 488)">
-    <rect width="570" height="30" rx="8" fill="#fff8e0" stroke="#b8860b" stroke-width="2"/>
-    <text x="285" y="20" text-anchor="middle" class="h note">Checks 6-13 = the five green lights from Lesson 4.4, as per-item checks.</text>
-  </g>
+  <text x="360" y="524" text-anchor="middle" class="sys note">Checks 6-13 = the five green lights from Lesson 4.4, as per-item checks.</text>
 </svg>

@@ -1,66 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="wm-title">
-  <title id="wm-title">The walkthrough phase by phase. Phase 1 Lovable UI, five sessions, demo a clickable staging URL. Phase 2 Supabase, five sessions, demo the first real signup. Phase 3 Stripe, five sessions, demo a one-dollar paid flow. Phase 4 go live, five sessions, demo five ICP users clicking. Twenty build sessions of about ninety minutes each - roughly ten weeks evenings-only or four weeks full-time.</title>
-  <desc>Four milestone cards on a timeline - Phase 1 Lovable UI, Phase 2 Supabase, Phase 3 Stripe, Phase 4 go live - each carrying a five-sessions chip and its demo checkpoint, joined by arrows. A note underneath reads roughly ten weeks evenings-only or four weeks full-time, the same twenty sessions either way.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="wm-title wm-desc">
+  <title id="wm-title">The walkthrough phase by phase: four milestones, one demo closes each.</title>
+  <desc id="wm-desc">Four milestone cards on a timeline. Phase 1 Lovable UI, five sessions, demo a clickable staging URL. Phase 2 Supabase plus auth, five sessions, demo the first real signup. Phase 3 Stripe checkout, five sessions, demo a one-dollar paid flow that clears. Phase 4 go live, five sessions, demo five ICP users clicking. Twenty build sessions of about ninety minutes each - roughly ten weeks evenings-only or four weeks full-time, the same twenty sessions either way.</desc>
   <defs>
     <style>
-      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
-      .sub    { font-size: 17px; fill: #666; font-style: italic; }
-      .ph     { font-size: 20px; font-weight: 700; fill: #1a1a1a; }
-      .demo   { font-size: 15px; fill: #555; }
-      .chip   { font-size: 14px; font-weight: 700; fill: #cc342d; }
-      .note   { font-size: 16px; fill: #666; font-style: italic; }
-      .card   { fill: #faf7f2; stroke: #555; stroke-width: 2; }
-      .chipbg { fill: #fff5f5; stroke: #cc342d; stroke-width: 1.5; }
-      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
-      .tick   { font-size: 15px; font-weight: 700; fill: #2e7d32; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 32px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 22px; font-weight: 600; fill: #4a4a4a; }
+      .ph    { font-size: 20px; font-weight: 700; fill: #121212; }
+      .phn   { font-size: 18px; font-weight: 700; fill: #121212; }
+      .chip  { font-size: 17px; font-weight: 700; fill: #cc342d; }
+      .demo  { font-size: 17px; font-weight: 400; fill: #555555; }
+      .note  { font-size: 18px; font-weight: 400; fill: #555555; }
     </style>
     <marker id="wm-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#999999"/>
     </marker>
   </defs>
 
-  <text x="480" y="36" text-anchor="middle" class="h title">The walkthrough, phase by phase</text>
-  <text x="480" y="62" text-anchor="middle" class="h sub">20 build sessions (~90 min each) - one demo closes each phase.</text>
+  <rect width="720" height="300" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="284" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Milestone cards -->
-  <g transform="translate(24,88) rotate(-0.5 100 60)">
-    <rect width="200" height="120" rx="12" class="card"/>
-    <text x="18" y="34" class="h ph">Phase 1</text>
-    <rect x="108" y="15" width="82" height="26" rx="13" class="chipbg"/>
-    <text x="149" y="34" text-anchor="middle" class="h chip">5 sessions</text>
-    <text x="18" y="62" class="h ph" style="font-size:17px;">Lovable UI</text>
-    <text x="18" y="96" class="h demo"><tspan class="tick">&#10003;</tspan> clickable staging URL</text>
+  <text x="360" y="40" text-anchor="middle" class="gk title">The walkthrough, phase by phase</text>
+  <text x="360" y="66" text-anchor="middle" class="gk msg">20 build sessions - one demo closes each phase</text>
+
+  <!-- Phase cards -->
+  <g>
+    <rect x="24" y="94" width="150" height="130" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="40" y="124" class="gk phn">Phase 1</text>
+    <rect x="88" y="106" width="72" height="24" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="1.5"/>
+    <text x="124" y="123" text-anchor="middle" class="gk chip">5 sessions</text>
+    <text x="40" y="156" class="gk ph">Lovable UI</text>
+    <text x="40" y="192" class="sys demo" fill="#2e7d32">&#10003; clickable</text>
+    <text x="40" y="212" class="sys demo" fill="#2e7d32">staging URL</text>
   </g>
-  <g transform="translate(261,88) rotate(0.4 100 60)">
-    <rect width="200" height="120" rx="12" class="card"/>
-    <text x="18" y="34" class="h ph">Phase 2</text>
-    <rect x="108" y="15" width="82" height="26" rx="13" class="chipbg"/>
-    <text x="149" y="34" text-anchor="middle" class="h chip">5 sessions</text>
-    <text x="18" y="62" class="h ph" style="font-size:17px;">Supabase + auth</text>
-    <text x="18" y="96" class="h demo"><tspan class="tick">&#10003;</tspan> first real signup</text>
+  <g>
+    <rect x="188" y="94" width="150" height="130" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="204" y="124" class="gk phn">Phase 2</text>
+    <rect x="252" y="106" width="72" height="24" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="1.5"/>
+    <text x="288" y="123" text-anchor="middle" class="gk chip">5 sessions</text>
+    <text x="204" y="156" class="gk ph">Supabase</text>
+    <text x="204" y="192" class="sys demo" fill="#2e7d32">&#10003; first real</text>
+    <text x="204" y="212" class="sys demo" fill="#2e7d32">signup</text>
   </g>
-  <g transform="translate(498,88) rotate(-0.4 100 60)">
-    <rect width="200" height="120" rx="12" class="card"/>
-    <text x="18" y="34" class="h ph">Phase 3</text>
-    <rect x="108" y="15" width="82" height="26" rx="13" class="chipbg"/>
-    <text x="149" y="34" text-anchor="middle" class="h chip">5 sessions</text>
-    <text x="18" y="62" class="h ph" style="font-size:17px;">Stripe checkout</text>
-    <text x="18" y="96" class="h demo"><tspan class="tick">&#10003;</tspan> $1 paid flow clears</text>
+  <g>
+    <rect x="352" y="94" width="150" height="130" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="368" y="124" class="gk phn">Phase 3</text>
+    <rect x="416" y="106" width="72" height="24" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="1.5"/>
+    <text x="452" y="123" text-anchor="middle" class="gk chip">5 sessions</text>
+    <text x="368" y="156" class="gk ph">Stripe</text>
+    <text x="368" y="192" class="sys demo" fill="#2e7d32">&#10003; $1 paid</text>
+    <text x="368" y="212" class="sys demo" fill="#2e7d32">flow clears</text>
   </g>
-  <g transform="translate(735,88) rotate(0.5 100 60)">
-    <rect width="200" height="120" rx="12" class="card"/>
-    <text x="18" y="34" class="h ph">Phase 4</text>
-    <rect x="108" y="15" width="82" height="26" rx="13" class="chipbg"/>
-    <text x="149" y="34" text-anchor="middle" class="h chip">5 sessions</text>
-    <text x="18" y="62" class="h ph" style="font-size:17px;">Go live</text>
-    <text x="18" y="96" class="h demo"><tspan class="tick">&#10003;</tspan> 5 ICP users click</text>
+  <g>
+    <rect x="516" y="94" width="150" height="130" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="532" y="124" class="gk phn">Phase 4</text>
+    <rect x="580" y="106" width="72" height="24" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="1.5"/>
+    <text x="616" y="123" text-anchor="middle" class="gk chip">5 sessions</text>
+    <text x="532" y="156" class="gk ph">Go live</text>
+    <text x="532" y="192" class="sys demo" fill="#2e7d32">&#10003; 5 ICP</text>
+    <text x="532" y="212" class="sys demo" fill="#2e7d32">users click</text>
   </g>
 
   <!-- timeline arrows -->
-  <path d="M 226 148 L 259 148" class="arrow" marker-end="url(#wm-ah)"/>
-  <path d="M 463 148 L 496 148" class="arrow" marker-end="url(#wm-ah)"/>
-  <path d="M 700 148 L 733 148" class="arrow" marker-end="url(#wm-ah)"/>
+  <path d="M 176 159 L 186 159" stroke="#999999" stroke-width="2.25" fill="none" marker-end="url(#wm-ah)"/>
+  <path d="M 340 159 L 350 159" stroke="#999999" stroke-width="2.25" fill="none" marker-end="url(#wm-ah)"/>
+  <path d="M 504 159 L 514 159" stroke="#999999" stroke-width="2.25" fill="none" marker-end="url(#wm-ah)"/>
 
-  <text x="480" y="284" text-anchor="middle" class="h note">~10 weeks evenings-only  -  ~4 weeks full-time  -  the same 20 sessions either way.</text>
+  <text x="360" y="264" text-anchor="middle" class="sys note">~10 weeks evenings-only  -  ~4 weeks full-time  -  same 20 sessions</text>
 </svg>
