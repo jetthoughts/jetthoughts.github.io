@@ -1,61 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" role="img" aria-labelledby="attn-title">
-  <title id="attn-title">PR reviewer attention math: 4 projects, 15 minutes per PR, what gets missed</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="ra-title ra-desc">
+  <title id="ra-title">PR reviewer attention math: one senior split across four projects, about 40 PRs a week, works out to roughly 15 minutes per PR - and what that misses.</title>
+  <desc id="ra-desc">A week strip shows four equal project blocks at 25 percent each: Client A, Client B, YOUR PROJECT in ruby, and Client D. The math: 10 hours a week on your repo divided by about 40 PRs equals 15 minutes per PR. Two cards compare what 15 minutes catches versus what it misses. Green Catches card: diff looks reasonable, CI passed green, style nits flagged, click approve. Ruby Misses card: auth regression in before_action, N+1 query in the dashboard, Stripe secret in the controller, coverage silently dropped 11 percent, a migration that locks the orders table. Closing line: "we trust the senior to catch issues" - the senior had 15 minutes and three other clients.</desc>
   <defs>
     <style>
-      .title    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
-      .label    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; }
-      .label-w  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #ffffff; font-weight: 700; }
-      .small    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #1a1a1a; }
-      .number   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #cc342d; font-weight: 700; }
-      .you-box     { fill: #cc342d; stroke: #1a1a1a; stroke-width: 2; }
-      .other-box   { fill: #e0e0e0; stroke: #1a1a1a; stroke-width: 2; }
-      .pr-good     { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2; stroke-linejoin: round; }
-      .pr-bad      { fill: #fff5f5; stroke: #cc342d; stroke-width: 2; stroke-linejoin: round; }
-      .arrow       { stroke: #1a1a1a; stroke-width: 2; stroke-linecap: round; fill: none; }
-      .quote       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 19px; fill: #cc342d; font-style: italic; }
+      .gk   { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys  { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+      .title { font-size: 30px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 22px; font-weight: 600; fill: #4a4a4a; }
+      .blk   { font-size: 18px; font-weight: 700; fill: #121212; }
+      .blkw  { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .math  { font-size: 20px; font-weight: 400; fill: #333333; }
+      .big   { font-size: 30px; font-weight: 700; fill: #cc342d; }
+      .cardh { font-size: 20px; font-weight: 700; fill: #121212; }
+      .ok    { font-size: 18px; font-weight: 400; fill: #1b5e20; }
+      .bad   { font-size: 18px; font-weight: 400; fill: #b3261e; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
   </defs>
 
-  <text x="500" y="35" class="title" text-anchor="middle">Your senior reviewer's week, by project</text>
+  <rect width="720" height="520" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="504" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <text x="60"  y="80" class="label">Mon</text>
-  <text x="280" y="80" class="label">Tue</text>
-  <text x="500" y="80" class="label">Wed</text>
-  <text x="720" y="80" class="label">Thu</text>
-  <text x="900" y="80" class="label">Fri</text>
+  <text x="360" y="46" text-anchor="middle" class="gk title">Your reviewer gets 15 minutes per PR</text>
+  <text x="360" y="76" text-anchor="middle" class="gk msg">One senior, four clients, about 40 PRs a week</text>
 
-  <rect x="50"  y="90" width="220" height="50" class="other-box"/>
-  <text x="160" y="120" class="label" text-anchor="middle">Client A · 25%</text>
+  <!-- Week strip: 4 equal project blocks -->
+  <g transform="translate(24,96)">
+    <rect x="0"   y="0" width="162" height="54" rx="4" fill="#e6e6e6" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="81"  y="33" text-anchor="middle" class="gk blk">Client A - 25%</text>
+    <rect x="170" y="0" width="162" height="54" rx="4" fill="#e6e6e6" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="251" y="33" text-anchor="middle" class="gk blk">Client B - 25%</text>
+    <rect x="340" y="0" width="162" height="54" rx="4" fill="#cc342d" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="421" y="27" text-anchor="middle" class="gk blkw">YOUR PROJECT</text>
+    <text x="421" y="46" text-anchor="middle" class="gk blkw" font-size="17">25%</text>
+    <rect x="510" y="0" width="162" height="54" rx="4" fill="#e6e6e6" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="591" y="33" text-anchor="middle" class="gk blk">Client D - 25%</text>
+  </g>
 
-  <rect x="270" y="90" width="220" height="50" class="other-box"/>
-  <text x="380" y="120" class="label" text-anchor="middle">Client B · 25%</text>
+  <!-- Math -->
+  <text x="360" y="188" text-anchor="middle" class="sys math">10 hrs/week on your repo  /  ~40 PRs  =</text>
+  <text x="360" y="224" text-anchor="middle" class="gk big">15 minutes per PR</text>
 
-  <rect x="490" y="90" width="220" height="50" class="you-box"/>
-  <text x="600" y="120" class="label-w" text-anchor="middle">YOUR PROJECT · 25%</text>
+  <!-- Catches (green) -->
+  <g transform="translate(24,252)">
+    <rect width="324" height="196" rx="4" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+    <text x="18" y="34" class="gk cardh">What 15 min catches</text>
+    <text x="18" y="72"  class="sys ok">+ Diff looks reasonable</text>
+    <text x="18" y="102" class="sys ok">+ CI passed green</text>
+    <text x="18" y="132" class="sys ok">+ Style nits flagged</text>
+    <text x="18" y="162" class="sys ok">+ Click approve</text>
+  </g>
 
-  <rect x="710" y="90" width="220" height="50" class="other-box"/>
-  <text x="820" y="120" class="label" text-anchor="middle">Client D · 25%</text>
+  <!-- Misses (ruby = anti-pattern) -->
+  <g transform="translate(372,252)">
+    <rect width="324" height="196" rx="4" fill="#ffffff" stroke="#cc342d" stroke-width="2"/>
+    <text x="18" y="34" class="gk cardh">What it misses</text>
+    <text x="18" y="68"  class="sys bad">- Auth regression in <tspan class="mono">before_action</tspan></text>
+    <text x="18" y="94"  class="sys bad">- N+1 query in the dashboard</text>
+    <text x="18" y="120" class="sys bad">- Stripe secret in the controller</text>
+    <text x="18" y="146" class="sys bad">- Coverage silently dropped 11%</text>
+    <text x="18" y="172" class="sys bad">- Migration locks the orders table</text>
+  </g>
 
-  <text x="500" y="180" class="label" text-anchor="middle">10 hours/week on your repo  ÷  ~40 PRs/week  =</text>
-  <text x="500" y="215" class="number" text-anchor="middle">15 minutes per PR</text>
-
-  <text x="500" y="260" class="label" text-anchor="middle">What 15 minutes catches vs what it misses:</text>
-
-  <rect x="100" y="275" width="240" height="115" rx="10" class="pr-good" transform="rotate(-0.5 220 332)"/>
-  <text x="220" y="305" class="label" text-anchor="middle">✓ Diff looks reasonable</text>
-  <text x="220" y="330" class="label" text-anchor="middle">✓ CI passed green</text>
-  <text x="220" y="355" class="label" text-anchor="middle">✓ Style nits flagged</text>
-  <text x="220" y="380" class="label" text-anchor="middle">✓ Click approve</text>
-
-  <rect x="660" y="275" width="240" height="115" rx="10" class="pr-bad" transform="rotate(0.4 780 332)"/>
-  <text x="780" y="300" class="small" text-anchor="middle">✗ Auth regression in before_action</text>
-  <text x="780" y="320" class="small" text-anchor="middle">✗ N+1 query in dashboard endpoint</text>
-  <text x="780" y="340" class="small" text-anchor="middle">✗ Stripe webhook secret in controller</text>
-  <text x="780" y="360" class="small" text-anchor="middle">✗ Test coverage silently dropped 11%</text>
-  <text x="780" y="380" class="small" text-anchor="middle">✗ Migration that locks orders table</text>
-
-  <path class="arrow" d="M 340 332 L 660 332"/>
-  <path class="arrow" d="M 655 326 L 660 332 L 655 338"/>
-
-  <text x="500" y="440" class="quote" text-anchor="middle">"We trust the senior to catch issues" - the senior had 15 minutes and three other clients.</text>
+  <text x="360" y="486" text-anchor="middle" class="sys basis">Basis: "we trust the senior to catch it" - the senior had 15 minutes and three other clients</text>
 </svg>
