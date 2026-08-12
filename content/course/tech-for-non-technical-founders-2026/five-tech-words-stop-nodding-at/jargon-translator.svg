@@ -1,65 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="jargon-title">
-  <title id="jargon-title">Jargon Translator: What Your Dev Shop Says vs What It Usually Means</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 600" role="img" aria-labelledby="jargon-title jargon-desc">
+  <title id="jargon-title">Jargon translator: what your dev shop says versus what it usually means.</title>
+  <desc id="jargon-desc">Five rows pairing a phrase with its translation. "We're refactoring the order flow" means rewriting code they shipped before, on your dime, calling it tidy-up. "We need a Docker upgrade" means something on the server broke and they can't reproduce it locally. "There's a lot of tech debt to pay down" means they wrote it badly - pay them to fix what you already paid them to write. "Let's just ship the MVP first" means the cheapest scope they can finish inside the budget you have left. "We need to fix the architecture" means they want resume-building tech the senior dev hasn't tried yet. Five words, five invoices - bring the question column to your next standup.</desc>
   <defs>
     <style>
-      .title { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .term  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 22px; fill: #1a1a1a; }
-      .mean  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #1a1a1a; }
-      .small { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; }
-      .box-l { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
-      .box-r { fill: #f5f0ff; stroke: #a855f7; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
-      .arrow { stroke: #1a1a1a; stroke-width: 2.5; stroke-linecap: round; fill: none; }
-      .caption { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #666; font-style: italic; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 22px; font-weight: 700; fill: #121212; letter-spacing: -0.3px; }
+      .term  { font-size: 18px; font-weight: 700; fill: #121212; }
+      .mean  { font-size: 18px; font-weight: 400; fill: #121212; }
+      .cap   { font-size: 18px; font-weight: 400; fill: #555555; }
     </style>
+    <marker id="jah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#121212"/>
+    </marker>
   </defs>
 
-  <text x="200" y="38" class="title" text-anchor="middle">WHAT THEY SAY</text>
-  <text x="700" y="38" class="title" text-anchor="middle">WHAT IT USUALLY MEANS</text>
+  <rect width="720" height="600" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="584" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <rect x="20" y="60" width="360" height="80" rx="10" class="box-l" transform="rotate(-0.5 200 100)"/>
-  <text x="200" y="95" class="term" text-anchor="middle">"We're refactoring</text>
-  <text x="200" y="120" class="term" text-anchor="middle">the order flow"</text>
-  <path class="arrow" d="M 390 100 L 510 100"/>
-  <path class="arrow" d="M 502 94 L 510 100 L 502 106"/>
-  <rect x="520" y="60" width="360" height="80" rx="10" class="box-r" transform="rotate(0.4 700 100)"/>
-  <text x="700" y="92" class="mean" text-anchor="middle">Rewriting code we shipped before,</text>
-  <text x="700" y="117" class="mean" text-anchor="middle">on your dime, calling it tidy-up</text>
+  <text x="186" y="46" text-anchor="middle" class="gk title">WHAT THEY SAY</text>
+  <text x="524" y="46" text-anchor="middle" class="gk title">WHAT IT MEANS</text>
 
-  <rect x="20" y="155" width="360" height="80" rx="10" class="box-l" transform="rotate(0.4 200 195)"/>
-  <text x="200" y="190" class="term" text-anchor="middle">"We need a</text>
-  <text x="200" y="215" class="term" text-anchor="middle">Docker upgrade"</text>
-  <path class="arrow" d="M 390 195 L 510 195"/>
-  <path class="arrow" d="M 502 189 L 510 195 L 502 201"/>
-  <rect x="520" y="155" width="360" height="80" rx="10" class="box-r" transform="rotate(-0.3 700 195)"/>
-  <text x="700" y="187" class="mean" text-anchor="middle">Something on the server broke;</text>
-  <text x="700" y="212" class="mean" text-anchor="middle">we can't reproduce locally</text>
+  <!-- Row 1 -->
+  <rect x="24" y="66" width="300" height="84" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <text x="174" y="102" text-anchor="middle" class="gk term">"We're refactoring</text>
+  <text x="174" y="126" text-anchor="middle" class="gk term">the order flow"</text>
+  <path d="M 330 108 L 388 108" stroke="#121212" stroke-width="2.5" fill="none" marker-end="url(#jah)"/>
+  <rect x="396" y="66" width="300" height="84" rx="4" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="546" y="102" text-anchor="middle" class="sys mean">Rewriting code they shipped,</text>
+  <text x="546" y="126" text-anchor="middle" class="sys mean">on your dime, called tidy-up</text>
 
-  <rect x="20" y="250" width="360" height="80" rx="10" class="box-l" transform="rotate(-0.4 200 290)"/>
-  <text x="200" y="285" class="term" text-anchor="middle">"There's a lot of</text>
-  <text x="200" y="310" class="term" text-anchor="middle">tech debt to pay down"</text>
-  <path class="arrow" d="M 390 290 L 510 290"/>
-  <path class="arrow" d="M 502 284 L 510 290 L 502 296"/>
-  <rect x="520" y="250" width="360" height="80" rx="10" class="box-r" transform="rotate(0.3 700 290)"/>
-  <text x="700" y="282" class="mean" text-anchor="middle">We wrote it badly. Pay us to fix</text>
-  <text x="700" y="307" class="mean" text-anchor="middle">what you already paid us to write</text>
+  <!-- Row 2 -->
+  <rect x="24" y="160" width="300" height="84" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <text x="174" y="196" text-anchor="middle" class="gk term">"We need a</text>
+  <text x="174" y="220" text-anchor="middle" class="gk term">Docker upgrade"</text>
+  <path d="M 330 202 L 388 202" stroke="#121212" stroke-width="2.5" fill="none" marker-end="url(#jah)"/>
+  <rect x="396" y="160" width="300" height="84" rx="4" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="546" y="196" text-anchor="middle" class="sys mean">Something on the server broke;</text>
+  <text x="546" y="220" text-anchor="middle" class="sys mean">can't reproduce it locally</text>
 
-  <rect x="20" y="345" width="360" height="80" rx="10" class="box-l" transform="rotate(0.4 200 385)"/>
-  <text x="200" y="380" class="term" text-anchor="middle">"Let's just ship</text>
-  <text x="200" y="405" class="term" text-anchor="middle">the MVP first"</text>
-  <path class="arrow" d="M 390 385 L 510 385"/>
-  <path class="arrow" d="M 502 379 L 510 385 L 502 391"/>
-  <rect x="520" y="345" width="360" height="80" rx="10" class="box-r" transform="rotate(-0.3 700 385)"/>
-  <text x="700" y="377" class="mean" text-anchor="middle">The cheapest scope we can finish</text>
-  <text x="700" y="402" class="mean" text-anchor="middle">inside the budget you have left</text>
+  <!-- Row 3 -->
+  <rect x="24" y="254" width="300" height="84" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <text x="174" y="290" text-anchor="middle" class="gk term">"Lots of tech debt</text>
+  <text x="174" y="314" text-anchor="middle" class="gk term">to pay down"</text>
+  <path d="M 330 296 L 388 296" stroke="#121212" stroke-width="2.5" fill="none" marker-end="url(#jah)"/>
+  <rect x="396" y="254" width="300" height="84" rx="4" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="546" y="290" text-anchor="middle" class="sys mean">We wrote it badly - pay to fix</text>
+  <text x="546" y="314" text-anchor="middle" class="sys mean">what you paid us to write</text>
 
-  <rect x="20" y="440" width="360" height="80" rx="10" class="box-l" transform="rotate(-0.3 200 480)"/>
-  <text x="200" y="475" class="term" text-anchor="middle">"We need to fix</text>
-  <text x="200" y="500" class="term" text-anchor="middle">the architecture"</text>
-  <path class="arrow" d="M 390 480 L 510 480"/>
-  <path class="arrow" d="M 502 474 L 510 480 L 502 486"/>
-  <rect x="520" y="440" width="360" height="80" rx="10" class="box-r" transform="rotate(0.4 700 480)"/>
-  <text x="700" y="472" class="mean" text-anchor="middle">We want resume-building tech</text>
-  <text x="700" y="497" class="mean" text-anchor="middle">the senior dev hasn't tried yet</text>
+  <!-- Row 4 -->
+  <rect x="24" y="348" width="300" height="84" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <text x="174" y="384" text-anchor="middle" class="gk term">"Let's just ship</text>
+  <text x="174" y="408" text-anchor="middle" class="gk term">the MVP first"</text>
+  <path d="M 330 390 L 388 390" stroke="#121212" stroke-width="2.5" fill="none" marker-end="url(#jah)"/>
+  <rect x="396" y="348" width="300" height="84" rx="4" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="546" y="384" text-anchor="middle" class="sys mean">The cheapest scope we finish</text>
+  <text x="546" y="408" text-anchor="middle" class="sys mean">inside the budget you have left</text>
 
-  <text x="450" y="575" class="caption" text-anchor="middle">Five words. Five invoices. Bring the question column to your next standup.</text>
+  <!-- Row 5 -->
+  <rect x="24" y="442" width="300" height="84" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <text x="174" y="478" text-anchor="middle" class="gk term">"We need to fix</text>
+  <text x="174" y="502" text-anchor="middle" class="gk term">the architecture"</text>
+  <path d="M 330 484 L 388 484" stroke="#121212" stroke-width="2.5" fill="none" marker-end="url(#jah)"/>
+  <rect x="396" y="442" width="300" height="84" rx="4" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="546" y="478" text-anchor="middle" class="sys mean">We want resume-building tech</text>
+  <text x="546" y="502" text-anchor="middle" class="sys mean">the senior dev hasn't tried</text>
+
+  <text x="360" y="562" text-anchor="middle" class="sys cap">Five words. Five invoices. Bring the questions to your next standup.</text>
 </svg>
