@@ -58,8 +58,6 @@ The five mistakes below sink more first products than bad code does - we have wa
   <li class="mistake-list__cta">Each mistake maps to a module - <a href="#module-map">jump to the module map ↓</a></li>
 </ul>
 
-<div class="course-band course-band--gray">
-
 ## Module map
 
 Read the modules in order - each module's output is the next module's input, and each card's **"You leave with"** line names its output. The artifacts bundle into a single Google Drive folder - your **Founder OS** ([printable pack index](/course/tech-for-non-technical-founders-2026/founder-os-pack/)).
@@ -203,7 +201,7 @@ Read the modules in order - each module's output is the next module's input, and
 
 </div>
 
-</div>
+<div class="course-band course-band--dark">
 
 ## What this course does NOT cover
 
@@ -229,4 +227,6 @@ To save your time, here is what we intentionally exclude - none of it is needed 
 </div>
 
 <p class="scope-residual">Also out of scope: mobile-only and marketplace-only specifics (they have their own playbooks), and legal incorporation, taxes, and IP filings - use a lawyer or a service like <a href="https://stripe.com/atlas">Stripe Atlas</a>, <a href="https://www.clerky.com/">Clerky</a>, or <a href="https://www.firstbase.io/">Firstbase</a>. If you need something on this list, the course won't help with it.</p>
+
+</div>
 

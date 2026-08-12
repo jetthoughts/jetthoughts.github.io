@@ -44,13 +44,28 @@
 /* W1.5 full-bleed gray band around the Module map section (spec: white ->
    #FAFAFA -> white -> dark endcap island). The band re-applies the content
    grid; its H2 drops the section top margin - the band padding owns it. */
-.course-landing .course-band--gray {
-  background: #fafafa;
+/* item16 T5: NOT-cover is now the page's single full-bleed contrast band -
+   dark, landing against the footer (modules moved back to white). */
+.course-landing .course-band--dark {
+  background: #0d1117;
   margin-top: 88px;
   padding: 72px 0 88px;
+  color: #d1d5db;
 }
-.course-landing .course-band--gray > h2 {
+.course-landing .course-band--dark > h2 {
   margin-top: 0;
+  color: #ffffff;
+}
+.course-landing .course-band--dark .scope-card {
+  background: #161b22;
+  border-color: #2d333b;
+}
+.course-landing .course-band--dark .scope-card h3.scope-card__title {
+  color: #ffffff;
+}
+.course-landing .course-band--dark .scope-card p,
+.course-landing .course-band--dark .scope-residual {
+  color: #9ca3af;
 }
 
 /* Hero chips — 2+2 grid on phones instead of the lopsided 3+1 wrap.
@@ -352,13 +367,9 @@
    section H2, keyed off the stable heading ids. W1.5 eyebrow economy:
    gray-400, ruby stays reserved for the hero-card eyebrow, CTAs, and the
    mistake numerals. */
-.blog h2#take-this-course-if::before,
-.blog h2#who-built-this::before,
 .blog h2#why-this-course-exists::before,
 .blog h2#what-this-course-does-not-cover::before,
-.blog h2#module-map::before,
-.blog h2#going-further-after-first-paying-customer::before,
-.blog h2#already-started-building::before {
+.blog h2#module-map::before {
   display: block;
   font-family: system-ui, sans-serif;
   font-size: 12px;
@@ -368,13 +379,9 @@
   color: #9ca3af;
   margin-bottom: 6px;
 }
-.blog h2#take-this-course-if::before { content: "Who it's for"; }
-.blog h2#who-built-this::before { content: "The team"; }
 .blog h2#why-this-course-exists::before { content: "The problem"; }
 .blog h2#what-this-course-does-not-cover::before { content: "Scope"; }
 .blog h2#module-map::before { content: "The syllabus"; }
-.blog h2#going-further-after-first-paying-customer::before { content: "After module 5"; }
-.blog h2#already-started-building::before { content: "Side path"; }
 
 /* V2.1 Mid-page CTA card — the 6th cell of the mistakes grid: dark
    inverted door to the module map. No counter, no ✗. */
@@ -577,6 +584,12 @@
   padding-left: 0;
   padding-right: 0;
 }
+/* item16 T5: page ends on the full-bleed dark endcap - drop the wrapper's
+   bottom breathing room so the dark base meets the footer with no light
+   seam (the dark band + endcap own the bottom spacing now). */
+.course-landing.blog {
+  padding-bottom: 0;
+}
 .course-landing .post-content,
 .course-landing .course-band {
   display: grid;
@@ -596,26 +609,31 @@
   max-width: 720px;
 }
 
-/* W1.5 endcap island (spec §10) — the article is full width now, so the
-   endcap constrains itself: max-w 896, radius 24, ruby glow top-right
-   half off-card. */
+/* item16 T5: the endcap is no longer a floating island — it's the CTA
+   footer of the dark NOT-cover band, flush above and below so the page
+   ends on one continuous dark base into the global footer (panel Fork-A
+   ruling: drop the island, keep the bottom CTA). */
 .course-landing .course-endcap {
-  width: min(896px, calc(100% - 48px));
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  padding: 8px 24px 72px;
+}
+.course-landing .course-endcap__promise,
+.course-landing .course-endcap__cta,
+.course-landing .course-endcap__share {
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 96px;
-  margin-bottom: 48px;
-  border-radius: 24px;
-  padding: 56px 40px 48px;
 }
 .course-landing .course-endcap::before {
-  left: auto;
-  right: -160px;
-  top: -140px;
-  width: 400px;
-  height: 400px;
-  transform: none;
-  background: radial-gradient(closest-side, rgba(204, 52, 45, 0.25), transparent);
+  left: 50%;
+  right: auto;
+  top: -120px;
+  width: 520px;
+  height: 320px;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(204, 52, 45, 0.22), transparent);
 }
 
 /* V1.4b Hero chips + CTA polish, converged on the demo-1 component spec
