@@ -1,72 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 648" role="img" aria-labelledby="wheel-title">
-  <title id="wheel-title">The 6 pivot types: customer, need, solution, technology, channel, revenue</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 580" role="img" aria-labelledby="pw-title pw-desc">
+  <title id="pw-title">Six pivot types branching from the same founding hypothesis: customer segment, customer need, solution, technology, channel, and revenue model - each keeps what works and replaces what does not.</title>
+  <desc id="pw-desc">A hub node reads Founding Hypothesis - 5 blanks, 1 is wrong - and branches into six pivot-type cards. 1 Customer Segment: right product, wrong customer - e.g. an SMB tool sold to enterprise. 2 Customer Need: right customer, wrong problem - e.g. dentists want billing, not scheduling. 3 Solution: right problem, wrong solution - e.g. a dashboard, not a workflow. 4 Technology: right solution, wrong stack - e.g. native, not Bubble. 5 Channel: right product, wrong distribution - e.g. product-led, not outbound. 6 Revenue Model: right product, wrong pricing - e.g. per-seat, not per-event.</desc>
   <defs>
     <style>
-      .heading       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .label         { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
-      .sublabel      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #444; font-style: italic; }
-      .center        { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 21px; fill: #fff; font-weight: 700; }
-      .center-sub    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #fff; font-style: italic; }
-      .spoke         { stroke: #1a1a1a; stroke-width: 2; fill: none; }
-      .pivot-1       { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .pivot-2       { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
-      .pivot-3       { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
-      .pivot-4       { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
-      .pivot-5       { fill: #e8f4f8; stroke: #0277bd; stroke-width: 2.5; }
-      .pivot-6       { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .gk   { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys  { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 30px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 22px; font-weight: 600; fill: #4a4a4a; }
+      .hub   { font-size: 22px; font-weight: 700; fill: #ffffff; }
+      .hubsub { font-size: 18px; font-weight: 400; fill: #e8e8e8; }
+      .plab  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .pbody { font-size: 18px; font-weight: 400; fill: #333333; }
+      .pex   { font-size: 17px; font-weight: 400; fill: #777777; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
+    <marker id="pw-tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
+    </marker>
   </defs>
 
-  <text x="450" y="36" class="heading" text-anchor="middle">Six pivot types branching from the same hypothesis</text>
-  <text x="450" y="64" class="sublabel" text-anchor="middle">Each spoke names what stays right and what changes - keep what works, replace what does not</text>
-  <g transform="translate(0,48)">
+  <rect width="720" height="580" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="564" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Center node -->
-  <circle cx="450" cy="320" r="62" fill="#1a1a1a" stroke="#cc342d" stroke-width="3"/>
-  <text x="450" y="305" class="center" text-anchor="middle">Founding</text>
-  <text x="450" y="330" class="center" text-anchor="middle">Hypothesis</text>
-  <text x="450" y="352" class="center-sub" text-anchor="middle">5 blanks - 1 right</text>
+  <text x="360" y="46" text-anchor="middle" class="gk title">Six pivot types from one hypothesis</text>
+  <text x="360" y="76" text-anchor="middle" class="gk msg">Keep what works, replace what does not</text>
 
-  <!-- Spoke 1: Customer Segment (top-left) -->
-  <line x1="416" y1="270" x2="200" y2="180" class="spoke"/>
-  <rect x="60" y="135" width="220" height="80" rx="10" class="pivot-1"/>
-  <text x="170" y="160" class="label" text-anchor="middle">1 - Customer Segment</text>
-  <text x="170" y="180" class="sublabel" text-anchor="middle">Right product, wrong customer</text>
-  <text x="170" y="200" class="sublabel" text-anchor="middle">e.g. SMB tool sold to enterprise</text>
+  <!-- Hub -->
+  <g transform="translate(220,94)">
+    <rect width="280" height="62" rx="4" fill="#121212"/>
+    <text x="140" y="30" text-anchor="middle" class="gk hub">Founding Hypothesis</text>
+    <text x="140" y="50" text-anchor="middle" class="sys hubsub">5 blanks - 1 is wrong</text>
+  </g>
+  <line x1="360" y1="156" x2="360" y2="176" stroke="#3a3a3a" stroke-width="2" marker-end="url(#pw-tri)"/>
 
-  <!-- Spoke 2: Customer Need (top) -->
-  <line x1="450" y1="258" x2="450" y2="120" class="spoke"/>
-  <rect x="340" y="40" width="220" height="80" rx="10" class="pivot-2"/>
-  <text x="450" y="65" class="label" text-anchor="middle">2 - Customer Need</text>
-  <text x="450" y="85" class="sublabel" text-anchor="middle">Right customer, wrong problem</text>
-  <text x="450" y="105" class="sublabel" text-anchor="middle">e.g. dentists, bill not schedule</text>
+  <!-- Grid of 6 pivot types -->
+  <!-- 1 -->
+  <g transform="translate(24,182)">
+    <rect width="324" height="104" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="18" y="34" class="gk plab">1 - Customer Segment</text>
+    <text x="18" y="64" class="sys pbody">Right product, wrong customer</text>
+    <text x="18" y="90" class="sys pex">e.g. SMB tool sold to enterprise</text>
+  </g>
+  <!-- 2 -->
+  <g transform="translate(372,182)">
+    <rect width="324" height="104" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="18" y="34" class="gk plab">2 - Customer Need</text>
+    <text x="18" y="64" class="sys pbody">Right customer, wrong problem</text>
+    <text x="18" y="90" class="sys pex">e.g. dentists want billing, not scheduling</text>
+  </g>
+  <!-- 3 -->
+  <g transform="translate(24,298)">
+    <rect width="324" height="104" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="18" y="34" class="gk plab">3 - Solution</text>
+    <text x="18" y="64" class="sys pbody">Right problem, wrong solution</text>
+    <text x="18" y="90" class="sys pex">e.g. a dashboard, not a workflow</text>
+  </g>
+  <!-- 4 -->
+  <g transform="translate(372,298)">
+    <rect width="324" height="104" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="18" y="34" class="gk plab">4 - Technology</text>
+    <text x="18" y="64" class="sys pbody">Right solution, wrong stack</text>
+    <text x="18" y="90" class="sys pex">e.g. native, not Bubble</text>
+  </g>
+  <!-- 5 -->
+  <g transform="translate(24,414)">
+    <rect width="324" height="104" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="18" y="34" class="gk plab">5 - Channel</text>
+    <text x="18" y="64" class="sys pbody">Right product, wrong distribution</text>
+    <text x="18" y="90" class="sys pex">e.g. product-led, not outbound</text>
+  </g>
+  <!-- 6 -->
+  <g transform="translate(372,414)">
+    <rect width="324" height="104" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="18" y="34" class="gk plab">6 - Revenue Model</text>
+    <text x="18" y="64" class="sys pbody">Right product, wrong pricing</text>
+    <text x="18" y="90" class="sys pex">e.g. per-seat, not per-event</text>
+  </g>
 
-  <!-- Spoke 3: Solution (top-right) -->
-  <line x1="484" y1="270" x2="700" y2="180" class="spoke"/>
-  <rect x="620" y="135" width="220" height="80" rx="10" class="pivot-3"/>
-  <text x="730" y="160" class="label" text-anchor="middle">3 - Solution</text>
-  <text x="730" y="180" class="sublabel" text-anchor="middle">Right problem, wrong solution</text>
-  <text x="730" y="200" class="sublabel" text-anchor="middle">e.g. dashboard, not workflow</text>
-
-  <!-- Spoke 4: Technology (bottom-right) -->
-  <line x1="484" y1="370" x2="700" y2="460" class="spoke"/>
-  <rect x="620" y="430" width="220" height="80" rx="10" class="pivot-4"/>
-  <text x="730" y="455" class="label" text-anchor="middle">4 - Technology</text>
-  <text x="730" y="475" class="sublabel" text-anchor="middle">Right solution, wrong stack</text>
-  <text x="730" y="495" class="sublabel" text-anchor="middle">e.g. native, not Bubble</text>
-
-  <!-- Spoke 5: Channel (bottom) -->
-  <line x1="450" y1="382" x2="450" y2="520" class="spoke"/>
-  <rect x="340" y="525" width="220" height="65" rx="10" class="pivot-5"/>
-  <text x="450" y="548" class="label" text-anchor="middle">5 - Channel</text>
-  <text x="450" y="567" class="sublabel" text-anchor="middle">Right product, wrong distribution</text>
-  <text x="450" y="585" class="sublabel" text-anchor="middle">e.g. PLG not outbound</text>
-
-  <!-- Spoke 6: Revenue Model (bottom-left) -->
-  <line x1="416" y1="370" x2="200" y2="460" class="spoke"/>
-  <rect x="60" y="430" width="220" height="80" rx="10" class="pivot-6"/>
-  <text x="170" y="455" class="label" text-anchor="middle">6 - Revenue Model</text>
-  <text x="170" y="475" class="sublabel" text-anchor="middle">Right product, wrong pricing</text>
-  <text x="170" y="495" class="sublabel" text-anchor="middle">e.g. seat, not per-event</text>
-</g>
+  <text x="360" y="548" text-anchor="middle" class="sys basis">Basis: one wrong blank in the hypothesis names which pivot you actually need</text>
 </svg>
