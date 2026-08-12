@@ -1,21 +1,20 @@
 # Bundle Update Log
 
-## 2026-08-12 (item16 landing migration) - report-only gate family + parity net
+## 2026-08-12 (item16 landing migration) - below-fold coverage gap confirmed
 
-* **Update**: `.okf/build/test-gates.md` gains the REPORT-ONLY build-gate
-  family - `bin/check-svg-floor`, `bin/check-course-paths`, and the new
-  `bin/check-landing-parity` (item16 20%-slot). Each is standalone (not yet
-  wired into hugo-build/CI), carries `--self-test`, prints a burn-down +
-  exit 0, and flips to blocking via an env flag once its backlog is zero.
-* **Why parity**: item16 cut the course landing from ~2x the shuffle2
-  reference height by relocating 4 off-reference sections; the hero-fold
-  pixel suite can't see below-fold section growth, so the H2-count net is
-  the real guard against silent re-bloat.
+* **Update**: `.okf/build/test-gates.md` documents the REPORT-ONLY build-gate
+  pair (`bin/check-svg-floor`, `bin/check-course-paths`) - standalone, each
+  with a `--self-test`, flipping to blocking via an env flag once its backlog
+  is zero.
 * **Coverage-gap confirmed from both sides**: item16's below-fold changes
   (dark NOT-cover band, merged endcap, compacted module cards) produced
   ZERO Linux dtest reds - only the hero-fold desktop/course/landing baseline
   shifted (T2/T4). Below-fold visual work is gated by rendered chrome-devtools
   review at 1280+390, never by the pixel suite.
+* **Dropped**: a `bin/check-landing-parity` report-only gate was tried as the
+  wave's 20%-slot and removed as redundant (Paul, YAGNI) - a report-only
+  gate nobody wires into hugo-build/CI doesn't earn its keep unless it guards
+  an active backlog the way svg-floor/course-paths do.
 
 ## 2026-08-09 (CEO decisions) - delivery goes dual-route, client picture corrected
 

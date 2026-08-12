@@ -179,15 +179,12 @@ extend it when adding components or critical files. The macOS full suite remains
   the repo - fresh clones had a hooksPath pointing at nothing. Adding any
   root dotfile/dot-dir? Check `git check-ignore -v <path>` before assuming
   it's tracked.
-- REPORT-ONLY build gates (a family, each flips to blocking once its
-  backlog hits zero via an env flag): `bin/check-svg-floor`
-  (`SVG_FLOOR_BLOCK=1`) catches course SVGs whose smallest text renders
-  <9px@390; `bin/check-course-paths` (`COURSE_PATH_BLOCK=1`) catches
-  lesson `Next:`/branch drift vs `data/course_sequence.yaml`;
-  `bin/check-landing-parity` (`LANDING_PARITY_BLOCK=1`, item16 20%-slot)
-  counts the course-landing body H2s against a 4-section reference budget
-  so the acquisition surface can't silently re-bloat past the shuffle2
-  reference (the hero-fold pixel suite can't see below-fold section
-  growth). All three are standalone (NOT yet wired into hugo-build/CI),
-  each carries a `--self-test`, and each prints a burn-down list + exit 0
-  until its env flag is set.
+- REPORT-ONLY build gates (each flips to blocking once its backlog hits
+  zero via an env flag): `bin/check-svg-floor` (`SVG_FLOOR_BLOCK=1`)
+  catches course SVGs whose smallest text renders <9px@390;
+  `bin/check-course-paths` (`COURSE_PATH_BLOCK=1`) catches lesson
+  `Next:`/branch drift vs `data/course_sequence.yaml`. Both are standalone
+  (NOT yet wired into hugo-build/CI), carry a `--self-test`, and print a
+  burn-down list + exit 0 until their env flag is set. (A landing-parity
+  variant was tried and dropped as redundant - YAGNI: a report-only gate
+  nobody wires in earns its keep only when it guards an active backlog.)
