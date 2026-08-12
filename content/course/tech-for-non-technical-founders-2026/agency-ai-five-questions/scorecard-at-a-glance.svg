@@ -1,66 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 388" role="img" aria-labelledby="scorecard-title">
-  <title id="scorecard-title">The five agency AI questions on one card: the pass signal beside the fail signal for each, scored 0 or 1</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 700" role="img" aria-labelledby="asc-title asc-desc">
+  <title id="asc-title">The five agency AI questions on one card: the pass signal and the fail signal for each, scored 1 or 0.</title>
+  <desc id="asc-desc">Five question cards, each with a green Pass line worth 1 point and a ruby Fail line worth 0. Q1 Workflow, ticket to code - Pass: names tools by version plus a real pull request; Fail: "Senior decides", no PR. Q2 Cost per dev per month and who pays - Pass: a dollar range plus pass-through in the SOW; Fail: "Included in the rate". Q3 Verify, reviewer checks - Pass: opens a real PR and names the checks; Fail: "We trust the model or CI". Q4 Slopsquatting defence - Pass: an allowlist or scanner and says the word; Fail: "Our devs know packages". Q5 Accountability - Pass: a dated incident and the root cause; Fail: "Never had one" or "not my job". A closing rule: a total of 2 or fewer out of 5 means do not sign, no matter how good the pitch.</desc>
   <defs>
     <style>
-      .title    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 27px; fill: #1a1a1a; font-weight: 700; }
-      .note     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
-      .colhead  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #1a1a1a; font-weight: 700; }
-      .qnum     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #cc342d; font-weight: 700; }
-      .qtext    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #1a1a1a; font-weight: 700; }
-      .pass     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #1b5e20; }
-      .fail     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #b3261e; }
-      .box      { fill: #ffffff; stroke: #1a1a1a; stroke-width: 2; }
+      .gk   { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys  { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 30px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 22px; font-weight: 600; fill: #4a4a4a; }
+      .qlab  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .num   { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .pass  { font-size: 18px; font-weight: 400; fill: #1b5e20; }
+      .fail  { font-size: 18px; font-weight: 400; fill: #b3261e; }
+      .rule  { font-size: 18px; font-weight: 700; fill: #cc342d; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
   </defs>
 
-  <text x="30" y="34" class="title">Score the call from this card</text>
-  <text x="30" y="57" class="note">Give 1 point when the answer lands on the Pass side, 0 when it lands on Fail. Full criteria below.</text>
+  <rect width="720" height="700" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="684" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Pass / Fail tinted columns -->
-  <rect x="348" y="72" width="300" height="262" rx="12" fill="#eafaea" stroke="#2e7d32" stroke-width="2"/>
-  <rect x="654" y="72" width="292" height="262" rx="12" fill="#fff2f2" stroke="#cc342d" stroke-width="2"/>
-
-  <!-- Column headers -->
-  <text x="60"  y="93" class="colhead">Question</text>
-  <text x="364" y="93" class="colhead" fill="#1b5e20">PASS = 1 point</text>
-  <text x="670" y="93" class="colhead" fill="#b3261e">FAIL = 0 points</text>
-  <line x1="30" y1="102" x2="946" y2="102" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="360" y="46" text-anchor="middle" class="gk title">Score the call from this card</text>
+  <text x="360" y="76" text-anchor="middle" class="gk msg">1 point for a Pass answer, 0 for a Fail - score in real time</text>
 
   <!-- Q1 -->
-  <rect x="30" y="118" width="22" height="22" rx="4" class="box"/>
-  <text x="64"  y="135" class="qnum">Q1</text>
-  <text x="98"  y="135" class="qtext">Workflow: ticket to code</text>
-  <text x="364" y="135" class="pass">Tools by version + a real PR</text>
-  <text x="670" y="135" class="fail">&#8220;Senior decides,&#8221; no PR</text>
+  <g transform="translate(24,100)">
+    <rect width="672" height="90" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="28" r="14" fill="#121212"/>
+    <text x="30" y="34" text-anchor="middle" class="gk num">1</text>
+    <text x="56" y="35" class="gk qlab">Workflow: ticket to code</text>
+    <text x="18" y="60" class="sys pass">Pass: tools by version + a real PR</text>
+    <text x="18" y="82" class="sys fail">Fail: "Senior decides", no PR</text>
+  </g>
 
   <!-- Q2 -->
-  <rect x="30" y="163" width="22" height="22" rx="4" class="box"/>
-  <text x="64"  y="180" class="qnum">Q2</text>
-  <text x="98"  y="180" class="qtext">Cost: $/dev/mo, who pays</text>
-  <text x="364" y="180" class="pass">$ range + pass-through in SOW</text>
-  <text x="670" y="180" class="fail">&#8220;Included in the rate&#8221;</text>
+  <g transform="translate(24,200)">
+    <rect width="672" height="90" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="28" r="14" fill="#121212"/>
+    <text x="30" y="34" text-anchor="middle" class="gk num">2</text>
+    <text x="56" y="35" class="gk qlab">Cost: $ per dev per month, who pays</text>
+    <text x="18" y="60" class="sys pass">Pass: a $ range + pass-through in the SOW</text>
+    <text x="18" y="82" class="sys fail">Fail: "Included in the rate"</text>
+  </g>
 
   <!-- Q3 -->
-  <rect x="30" y="208" width="22" height="22" rx="4" class="box"/>
-  <text x="64"  y="225" class="qnum">Q3</text>
-  <text x="98"  y="225" class="qtext">Verify: reviewer checks</text>
-  <text x="364" y="225" class="pass">Opens real PR, names checks</text>
-  <text x="670" y="225" class="fail">&#8220;We trust the model / CI&#8221;</text>
+  <g transform="translate(24,300)">
+    <rect width="672" height="90" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="28" r="14" fill="#121212"/>
+    <text x="30" y="34" text-anchor="middle" class="gk num">3</text>
+    <text x="56" y="35" class="gk qlab">Verify: reviewer checks</text>
+    <text x="18" y="60" class="sys pass">Pass: opens a real PR, names the checks</text>
+    <text x="18" y="82" class="sys fail">Fail: "We trust the model / CI"</text>
+  </g>
 
   <!-- Q4 -->
-  <rect x="30" y="253" width="22" height="22" rx="4" class="box"/>
-  <text x="64"  y="270" class="qnum">Q4</text>
-  <text x="98"  y="270" class="qtext">Slopsquatting defense</text>
-  <text x="364" y="270" class="pass">Allowlist/scanner + says word</text>
-  <text x="670" y="270" class="fail">&#8220;Our devs know packages&#8221;</text>
+  <g transform="translate(24,400)">
+    <rect width="672" height="90" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="28" r="14" fill="#121212"/>
+    <text x="30" y="34" text-anchor="middle" class="gk num">4</text>
+    <text x="56" y="35" class="gk qlab">Slopsquatting defence</text>
+    <text x="18" y="60" class="sys pass">Pass: an allowlist / scanner + says the word</text>
+    <text x="18" y="82" class="sys fail">Fail: "Our devs know packages"</text>
+  </g>
 
   <!-- Q5 -->
-  <rect x="30" y="298" width="22" height="22" rx="4" class="box"/>
-  <text x="64"  y="315" class="qnum">Q5</text>
-  <text x="98"  y="315" class="qtext">Accountability: owned it</text>
-  <text x="364" y="315" class="pass">Dated incident + root cause</text>
-  <text x="670" y="315" class="fail">&#8220;Never had one&#8221; / not my job</text>
+  <g transform="translate(24,500)">
+    <rect width="672" height="90" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="28" r="14" fill="#121212"/>
+    <text x="30" y="34" text-anchor="middle" class="gk num">5</text>
+    <text x="56" y="35" class="gk qlab">Accountability: owned it</text>
+    <text x="18" y="60" class="sys pass">Pass: a dated incident + the root cause</text>
+    <text x="18" y="82" class="sys fail">Fail: "Never had one" / "not my job"</text>
+  </g>
 
-  <line x1="30" y1="334" x2="946" y2="334" stroke="#1a1a1a" stroke-width="1.5"/>
-  <text x="30" y="368" class="note">Score in real time. A total of 2 or below out of 5 - do not sign, no matter how good the pitch.</text>
+  <text x="360" y="638" text-anchor="middle" class="sys rule">Total of 2 or fewer out of 5 - do not sign, no matter the pitch</text>
+  <text x="360" y="668" text-anchor="middle" class="sys basis">Basis: score in real time on the call, not from memory afterwards</text>
 </svg>

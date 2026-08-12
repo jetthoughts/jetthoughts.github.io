@@ -1,85 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 432" role="img" aria-labelledby="sc-title">
-  <title id="sc-title">The 5-question pass/fail check: score each question after the call. Pass means a specific story with date, tool, or number. Fail means vague generality or polite default.</title>
-  <desc>Five rows in a three-column layout. Left column: question number and label. Center column (green-tinted): PASS signal. Right column (red-tinted): FAIL signal. Q1: Specific story (date, time, tool, person, feeling) vs Vague generality ("I usually struggle with it"). Q2: Specific number with a unit ("2 hours every Tuesday") vs Unquantified ("It costs us time"). Q3: Named tool, hired person, custom workaround vs "Nothing yet - I've been meaning to." Q4: 7+ with a comparison to another priority vs 5-6 with no comparison, or polite-default 7. Q5: Names a specific person and their workaround vs "I'm the only one who deals with this." Bottom row shows the pass count tally: 5/5 strong, 4/5 solid, 3/5 mixed, 2/5 or fewer weak (-2 to the score).</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 712" role="img" aria-labelledby="sc-title sc-desc">
+  <title id="sc-title">The 5-question pass/fail check: score each question after the call. Pass means a specific story with a date, tool, or number. Fail means vague generality or a polite default.</title>
+  <desc id="sc-desc">Five question cards, each with a green Pass line and a ruby Fail line. Q1 Past-behaviour story - Pass: specific, with date, time, tool, person, feeling; Fail: vague, "I usually struggle with it". Q2 Quantified cost - Pass: a number with a unit, "2 hrs every Tuesday"; Fail: unquantified, "It costs us time". Q3 Past attempt - Pass: named tool, hired person, or custom workaround; Fail: "Nothing yet - I've been meaning to". Q4 Priority score - Pass: 7 or higher with a comparison to another priority; Fail: no comparison, or a polite-default 7. Q5 Buying committee - Pass: names a specific person and their workaround; Fail: "I'm the only one who deals with this". A tally card follows: pass count out of five - 5 strong, 4 solid, 3 mixed, 2 or fewer weak.</desc>
   <defs>
     <style>
-      .h       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .title   { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
-      .sub     { font-size: 15px; fill: #666; font-style: italic; }
-      .colhead { font-size: 17px; font-weight: 700; fill: #1a1a1a; }
-      .qnum    { font-size: 18px; font-weight: 700; fill: #cc342d; }
-      .qtext   { font-size: 16px; font-weight: 700; fill: #1a1a1a; }
-      .pass    { font-size: 13px; fill: #1b5e20; }
-      .fail    { font-size: 13px; fill: #b3261e; }
-      .note    { font-size: 15px; fill: #555; font-style: italic; }
-      .tally   { font-size: 18px; font-weight: 700; fill: #1a1a1a; }
-      .box     { fill: #ffffff; stroke: #555; stroke-width: 2; }
+      .gk   { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys  { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 30px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 22px; font-weight: 600; fill: #4a4a4a; }
+      .qlab  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .num   { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .pass  { font-size: 18px; font-weight: 400; fill: #1b5e20; }
+      .fail  { font-size: 18px; font-weight: 400; fill: #b3261e; }
+      .tally { font-size: 20px; font-weight: 700; fill: #121212; }
+      .scale { font-size: 18px; font-weight: 400; fill: #444444; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
     </style>
   </defs>
 
-  <!-- Header -->
-  <text x="30" y="34" class="h title">The 5-question pass/fail check</text>
-  <text x="30" y="58" class="h sub">Score each question within 5 minutes of hanging up, before your memory rounds up. Pass = specific. Fail = vague.</text>
+  <rect width="720" height="712" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="696" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
 
-  <!-- Tinted background columns -->
-  <rect x="330" y="76" width="310" height="258" rx="12" fill="#eafaea" stroke="#2e7d32" stroke-width="2"/>
-  <rect x="646" y="76" width="290" height="258" rx="12" fill="#fff2f2" stroke="#cc342d" stroke-width="2"/>
-
-  <!-- Column headers -->
-  <text x="44"  y="98" class="h colhead">Question</text>
-  <text x="346" y="98" class="h colhead" fill="#1b5e20">PASS signal</text>
-  <text x="662" y="98" class="h colhead" fill="#b3261e">FAIL signal</text>
-  <line x1="30" y1="108" x2="946" y2="108" stroke="#555" stroke-width="2"/>
+  <text x="360" y="46" text-anchor="middle" class="gk title">Pass means a specific story - vague is a fail</text>
+  <text x="360" y="76" text-anchor="middle" class="gk msg">Score each question within 5 minutes of hanging up</text>
 
   <!-- Q1 -->
-  <rect x="30" y="122" width="22" height="22" rx="4" class="box"/>
-  <text x="64"  y="139" class="h qnum">Q1</text>
-  <text x="96"  y="139" class="h qtext">Past-behavior story</text>
-  <text x="346" y="139" class="h pass">Specific - date, time, tool, person, feeling</text>
-  <text x="662" y="139" class="h fail">Vague - "I usually struggle with it"</text>
+  <g transform="translate(24,100)">
+    <rect width="672" height="98" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="30" r="14" fill="#121212"/>
+    <text x="30" y="36" text-anchor="middle" class="gk num">1</text>
+    <text x="56" y="37" class="gk qlab">Past-behaviour story</text>
+    <text x="18" y="66" class="sys pass">Pass: specific - date, time, tool, person, feeling</text>
+    <text x="18" y="90" class="sys fail">Fail: vague - "I usually struggle with it"</text>
+  </g>
 
   <!-- Q2 -->
-  <rect x="30" y="165" width="22" height="22" rx="4" class="box"/>
-  <text x="64"  y="182" class="h qnum">Q2</text>
-  <text x="96"  y="182" class="h qtext">Quantified cost</text>
-  <text x="346" y="182" class="h pass">A number with a unit - "2 hrs every Tuesday"</text>
-  <text x="662" y="182" class="h fail">Unquantified - "It costs us time"</text>
+  <g transform="translate(24,210)">
+    <rect width="672" height="98" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="30" r="14" fill="#121212"/>
+    <text x="30" y="36" text-anchor="middle" class="gk num">2</text>
+    <text x="56" y="37" class="gk qlab">Quantified cost</text>
+    <text x="18" y="66" class="sys pass">Pass: a number with a unit - "2 hrs every Tuesday"</text>
+    <text x="18" y="90" class="sys fail">Fail: unquantified - "It costs us time"</text>
+  </g>
 
   <!-- Q3 -->
-  <rect x="30" y="208" width="22" height="22" rx="4" class="box"/>
-  <text x="64"  y="225" class="h qnum">Q3</text>
-  <text x="96"  y="225" class="h qtext">Past attempt</text>
-  <text x="346" y="225" class="h pass">Named tool, hired person, custom workaround</text>
-  <text x="662" y="225" class="h fail">"Nothing yet - I've been meaning to"</text>
+  <g transform="translate(24,320)">
+    <rect width="672" height="98" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="30" r="14" fill="#121212"/>
+    <text x="30" y="36" text-anchor="middle" class="gk num">3</text>
+    <text x="56" y="37" class="gk qlab">Past attempt</text>
+    <text x="18" y="66" class="sys pass">Pass: named tool, hired person, or custom workaround</text>
+    <text x="18" y="90" class="sys fail">Fail: "Nothing yet - I've been meaning to"</text>
+  </g>
 
   <!-- Q4 -->
-  <rect x="30" y="251" width="22" height="22" rx="4" class="box"/>
-  <text x="64"  y="268" class="h qnum">Q4</text>
-  <text x="96"  y="268" class="h qtext">Priority score</text>
-  <text x="346" y="268" class="h pass">7+ with a comparison to another priority</text>
-  <text x="662" y="268" class="h fail">No comparison, or polite-default 7</text>
+  <g transform="translate(24,430)">
+    <rect width="672" height="98" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="30" r="14" fill="#121212"/>
+    <text x="30" y="36" text-anchor="middle" class="gk num">4</text>
+    <text x="56" y="37" class="gk qlab">Priority score</text>
+    <text x="18" y="66" class="sys pass">Pass: 7+ with a comparison to another priority</text>
+    <text x="18" y="90" class="sys fail">Fail: no comparison, or a polite-default 7</text>
+  </g>
 
   <!-- Q5 -->
-  <rect x="30" y="294" width="22" height="22" rx="4" class="box"/>
-  <text x="64"  y="311" class="h qnum">Q5</text>
-  <text x="96"  y="311" class="h qtext">Buying committee</text>
-  <text x="346" y="311" class="h pass">Names a specific person and their workaround</text>
-  <text x="662" y="311" class="h fail">"I'm the only one who deals with this"</text>
-
-  <line x1="30" y1="336" x2="946" y2="336" stroke="#555" stroke-width="2"/>
-
-  <!-- Tally row -->
-  <text x="30" y="366" class="h tally">Pass count (Q1-Q5): ___ / 5</text>
-
-  <!-- Tally rule -->
-  <g transform="translate(320, 348)">
-    <rect width="626" height="32" rx="8" fill="#faf7f2" stroke="#aaa" stroke-width="2"/>
-    <text x="14" y="22" class="h note" font-size="13">5/5 = strong · 4/5 = solid · 3/5 = mixed · 2/5 or fewer = weak (-2 to the score)</text>
+  <g transform="translate(24,540)">
+    <rect width="672" height="98" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="30" cy="30" r="14" fill="#121212"/>
+    <text x="30" y="36" text-anchor="middle" class="gk num">5</text>
+    <text x="56" y="37" class="gk qlab">Buying committee</text>
+    <text x="18" y="66" class="sys pass">Pass: names a specific person and their workaround</text>
+    <text x="18" y="90" class="sys fail">Fail: "I'm the only one who deals with this"</text>
   </g>
 
-  <!-- Bottom callout -->
-  <g transform="translate(30, 394)">
-    <rect width="900" height="26" rx="6" fill="#fff8e0" stroke="#b8860b" stroke-width="2"/>
-    <text x="450" y="19" text-anchor="middle" class="h note">Transfer all 10 pass counts to the Synthesis page for the build / pivot / kill decision.</text>
+  <!-- Tally -->
+  <g transform="translate(24,650)">
+    <rect width="672" height="40" rx="4" fill="#faf7f2" stroke="#c9c9c9" stroke-width="1.5"/>
+    <text x="18" y="27" class="gk tally">Pass count: ___ / 5</text>
+    <text x="200" y="27" class="sys scale">5 strong - 4 solid - 3 mixed - 2 or fewer weak</text>
   </g>
+
+  <text x="360" y="700" text-anchor="middle" class="sys basis">Basis: score right after the call, before memory rounds up</text>
 </svg>
