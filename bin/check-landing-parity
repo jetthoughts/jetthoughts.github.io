@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 #
 # devx (item16 20%-slot): guard the course landing against section-count
-# drift. The shuffle2 reference (40.28) is a 4-section page — hero,
+# drift. The shuffle2 reference (40.28) is a 4-section page - hero,
 # mistakes, module map, dark NOT-cover. Item 16 cut the landing from ~2x
 # that height by relocating 4 off-reference sections off the page. This is
 # the build-time net that stops them (or new ones) creeping back and
