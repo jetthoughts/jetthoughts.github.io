@@ -58,31 +58,6 @@ The five mistakes below sink more first products than bad code does - we have wa
   <li class="mistake-list__cta">Each mistake maps to a module - <a href="#module-map">jump to the module map ↓</a></li>
 </ul>
 
-## What this course does NOT cover
-
-To save your time, here is what we intentionally exclude - none of it is needed for the promised result (idea → first paying customer):
-
-<div class="scope-grid">
-  <div class="scope-card">
-    <h3 class="scope-card__title">How to code</h3>
-    <p>The course assumes zero coding ability - <a href="https://lovable.dev">Lovable</a> + <a href="https://supabase.com">Supabase</a> + <a href="https://stripe.com">Stripe</a> handle the technical side.</p>
-  </div>
-  <div class="scope-card">
-    <h3 class="scope-card__title">Hiring &amp; managing a team</h3>
-    <p>Covered as a build-path decision in Lesson 4.1, not as org design; early-stage management lives in the <a href="/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/">Friday Demo Rule</a> + <a href="/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/">Weekly Dev Report</a>.</p>
-  </div>
-  <div class="scope-card">
-    <h3 class="scope-card__title">Raising venture capital</h3>
-    <p>The course produces the artifacts investors want to see. It does not teach pitch decks or fundraising mechanics.</p>
-  </div>
-  <div class="scope-card">
-    <h3 class="scope-card__title">Acquisition at scale</h3>
-    <p>Module 5 covers your first customers; SEO, content marketing, and paid acquisition at scale are a separate discipline.</p>
-  </div>
-</div>
-
-<p class="scope-residual">Also out of scope: mobile-only and marketplace-only specifics (they have their own playbooks), and legal incorporation, taxes, and IP filings - use a lawyer or a service like <a href="https://stripe.com/atlas">Stripe Atlas</a>, <a href="https://www.clerky.com/">Clerky</a>, or <a href="https://www.firstbase.io/">Firstbase</a>. If you need something on this list, the course won't help with it.</p>
-
 <div class="course-band course-band--gray">
 
 ## Module map
@@ -229,4 +204,29 @@ Read the modules in order - each module's output is the next module's input, and
 </div>
 
 </div>
+
+## What this course does NOT cover
+
+To save your time, here is what we intentionally exclude - none of it is needed for the promised result (idea → first paying customer):
+
+<div class="scope-grid">
+  <div class="scope-card">
+    <h3 class="scope-card__title">How to code</h3>
+    <p>The course assumes zero coding ability - <a href="https://lovable.dev">Lovable</a> + <a href="https://supabase.com">Supabase</a> + <a href="https://stripe.com">Stripe</a> handle the technical side.</p>
+  </div>
+  <div class="scope-card">
+    <h3 class="scope-card__title">Hiring &amp; managing a team</h3>
+    <p>Covered as a build-path decision in Lesson 4.1, not as org design; early-stage management lives in the <a href="/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/">Friday Demo Rule</a> + <a href="/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/">Weekly Dev Report</a>.</p>
+  </div>
+  <div class="scope-card">
+    <h3 class="scope-card__title">Raising venture capital</h3>
+    <p>The course produces the artifacts investors want to see. It does not teach pitch decks or fundraising mechanics.</p>
+  </div>
+  <div class="scope-card">
+    <h3 class="scope-card__title">Acquisition at scale</h3>
+    <p>Module 5 covers your first customers; SEO, content marketing, and paid acquisition at scale are a separate discipline.</p>
+  </div>
+</div>
+
+<p class="scope-residual">Also out of scope: mobile-only and marketplace-only specifics (they have their own playbooks), and legal incorporation, taxes, and IP filings - use a lawyer or a service like <a href="https://stripe.com/atlas">Stripe Atlas</a>, <a href="https://www.clerky.com/">Clerky</a>, or <a href="https://www.firstbase.io/">Firstbase</a>. If you need something on this list, the course won't help with it.</p>
 
