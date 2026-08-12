@@ -31,7 +31,7 @@
     <section class="course-hero-band">
       <header class="course-hero">
         <div class="course-hero__main">
-          <h1 class="course-title">{{ .Title }}</h1>
+          <h1 class="course-title">{{ .Title | replaceRE `First Paying Customer` `<span class="course-title__grad">First Paying Customer</span>` | safeHTML }}</h1>
 
           {{ with .Params.hero_lede }}
             <p class="course-hero-lede">{{ . | markdownify }}</p>

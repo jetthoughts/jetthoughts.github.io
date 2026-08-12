@@ -61,7 +61,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/course/tech-for-non-technical-founders-2026/"
 
     within "h1" do
-      assert_text "From Idea to First Paying Customer"
+      assert_text "From Idea to First Paying Customer", normalize_ws: true
     end
 
     assert_stable_screenshot "course/landing", tolerance: 0.03, skip_area: %w[picture img]

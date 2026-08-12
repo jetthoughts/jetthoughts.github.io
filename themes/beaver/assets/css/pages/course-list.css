@@ -19,6 +19,14 @@
   letter-spacing: -0.03em;
   margin: 0 0 20px !important;
 }
+/* item16 T2: reference-style gradient second line (ruby → purple) */
+.blog h1.course-title .course-title__grad {
+  display: block;
+  background: linear-gradient(90deg, #cc342d, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 .blog .post-content h2 {
   font-family: "Space Grotesk", system-ui, sans-serif;
   font-weight: 700;
