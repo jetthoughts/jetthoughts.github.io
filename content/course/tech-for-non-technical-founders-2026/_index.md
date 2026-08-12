@@ -43,23 +43,7 @@ The first checkpoint comes fast: two to three weeks in, at an evenings-and-weeke
 
 Two ways in: [Start Lesson 1.1 →](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) or [see the full syllabus ↓](#module-map). *Prefer a map first? [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) (10 minutes) and the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) cover the route and the most common blockers.*
 
-## Take this course if
-
-- You are a first-time founder with an idea
-- You want the fastest route from that idea to your first paying customer
-- You can read a [Stripe](https://stripe.com) invoice but not a GitHub commit
-- You have never systematically validated a business before
-- You might have tinkered with no-code tools, but you want a structured path instead of guessing
-
-Skip this course if you want to learn to code or hand off founder judgment to someone else. And if what you need most is cohort deadlines and peers, [YC Startup School](https://www.startupschool.org/) runs free - this course is the self-paced, artifact-first alternative.
-
-Already building, or paying someone to build for you? Start at the [ownership audit in Lesson 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - the [side-path below](#already-started-building) explains the fork.
-
-## Who built this
-
-Built by [JetThoughts](https://jetthoughts.com). We've run a Rails-first dev shop since 2011, and we have sat on the receiving end of enough first builds gone wrong to know which mistakes repeat: a 15-page wishlist spec where a one-page brief should have been, or a GitHub account registered to a contractor who stopped replying. This course is the desk reference we wish those founders had before their first build decision.
-
-Why free? A founder who validates before building makes a better future client than one we meet mid-disaster, and there is nothing to buy inside the course.
+Already building, or paying someone to build for you? Start at the [ownership audit in Lesson 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - the [Already started building? side-path](/course/tech-for-non-technical-founders-2026/how-this-course-works/#already-started-building) explains the fork.
 
 ## Why this course exists
 
@@ -246,10 +230,3 @@ Read the modules in order - each module's output is the next module's input, and
 
 </div>
 
-## Going further (after first paying customer)
-
-Once you've passed the Module 5 gate, the continuation chapters - churn triage, pivot-or-persevere, hiring, agency oversight - live with their read-this-when triggers in the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/#going-further-triggers).
-
-## Already started building?
-
-If you just have an idea or a half-built prototype you're tinkering with, skip to [Module 1](#module-1). If you are already typing, or paying someone an hourly rate to type for you, start with the ownership audit in [Lesson 4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - it carries the full pre-flight list to run before you approve any more work.
