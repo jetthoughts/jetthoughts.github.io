@@ -76,7 +76,7 @@
    counter-numbered cards (01-05 in ruby). Copy untouched. */
 .blog ul.mistake-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   counter-reset: mistake;
   margin: 24px 0;
