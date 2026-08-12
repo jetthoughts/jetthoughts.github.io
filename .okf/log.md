@@ -1,5 +1,17 @@
 # Bundle Update Log
 
+## 2026-08-12 (item18) - course SVG corpus → O2, check-svg-floor now blocking
+
+* **Update**: item18 converted the entire course exhibit-SVG corpus to O2
+  flat-vector (74/80 under the 9px@390 mobile floor → 0) across 4 sub-waves.
+  `bin/check-svg-floor` **flipped from report-only to BLOCKING**: `bin/hugo-build`
+  now runs it with `SVG_FLOOR_BLOCK=1` and fails the build on any regression.
+  `.okf/build/test-gates.md` updated to reflect the flip.
+* **Pattern**: "fix the gate, not the instance" completed - the report-only net
+  that enumerated the backlog (SW-1..SW-4) is now the guard, so the defect
+  can't silently return. The pixel suite masks `<img>` SVGs, so this build gate
+  + rendered review are the only real coverage for exhibit legibility.
+
 ## 2026-08-12 (item16 landing migration) - below-fold coverage gap confirmed
 
 * **Update**: `.okf/build/test-gates.md` documents the REPORT-ONLY build-gate

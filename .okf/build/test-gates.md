@@ -179,12 +179,14 @@ extend it when adding components or critical files. The macOS full suite remains
   the repo - fresh clones had a hooksPath pointing at nothing. Adding any
   root dotfile/dot-dir? Check `git check-ignore -v <path>` before assuming
   it's tracked.
-- REPORT-ONLY build gates (each flips to blocking once its backlog hits
-  zero via an env flag): `bin/check-svg-floor` (`SVG_FLOOR_BLOCK=1`)
-  catches course SVGs whose smallest text renders <9px@390;
-  `bin/check-course-paths` (`COURSE_PATH_BLOCK=1`) catches lesson
-  `Next:`/branch drift vs `data/course_sequence.yaml`. Both are standalone
-  (NOT yet wired into hugo-build/CI), carry a `--self-test`, and print a
-  burn-down list + exit 0 until their env flag is set. (A landing-parity
-  variant was tried and dropped as redundant - YAGNI: a report-only gate
-  nobody wires in earns its keep only when it guards an active backlog.)
+- Build gates that started report-only and flip to blocking once their
+  backlog hits zero: `bin/check-svg-floor` catches course SVGs whose
+  smallest text renders <9px@390 - **now BLOCKING** (2026-08-12, item18
+  cleared the whole 80-SVG corpus to O2 flat-vector): `bin/hugo-build`
+  runs it with `SVG_FLOOR_BLOCK=1` and fails the build on any regression;
+  run bare for a report-only burn-down. `bin/check-course-paths`
+  (`COURSE_PATH_BLOCK=1`) catches lesson `Next:`/branch drift vs
+  `data/course_sequence.yaml` - still standalone/report-only (its backlog
+  isn't zero yet). Both carry a `--self-test`. (A landing-parity variant
+  was tried and dropped as redundant - YAGNI: a report-only gate nobody
+  wires in earns its keep only when it guards an active backlog.)
