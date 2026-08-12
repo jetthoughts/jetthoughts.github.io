@@ -1,91 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720" role="img" aria-labelledby="prd-compare-title">
-  <title id="prd-compare-title">Bad Vibe PRD vs Good Vibe PRD - side-by-side comparison of a vague brief and a specific one.</title>
-  <desc>A side-by-side comparison. Left card is the bad Vibe PRD: a single line saying "Build a CRM" with no persona, no context, no metric, no no-go list. Right card is the good Vibe PRD with the five sections filled in - named persona, 60-second user context, one paragraph of build scope, one success metric, a no-go list of five items.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 730" role="img" aria-labelledby="prd-title prd-desc">
+  <title id="prd-title">Bad Vibe PRD vs Good Vibe PRD - side-by-side comparison of a vague brief and a specific one.</title>
+  <desc id="prd-desc">A side-by-side comparison of two product briefs. Left, the bad Vibe PRD titled "Build a CRM": problem blank, a vague user paragraph, a vague build, success metric "lots of happy users", no-go list blank - so Lovable builds a settings page, 17 toggles and a dashboard, a quarter wasted on the wrong demo. Right, the good Vibe PRD, a Stripe-QuickBooks reconciler, all five sections filled: named pre-seed persona losing 6 hours a week, a 9pm Tuesday context, a one-paragraph build scope, one measurable success metric with the event conversion_completed, and a five-item no-go list - so it ships in 4 days and gets a real test in 30. Basis: the same feature request, written two ways.</desc>
   <defs>
     <style>
-      .sans { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; }
-      .hand { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .header { font-size: 34px; font-weight: bold; fill: #1a1a1a; }
-      .badtitle { font-size: 27px; font-weight: bold; fill: #cc342d; }
-      .goodtitle { font-size: 27px; font-weight: bold; fill: #2e7d32; }
-      .label { font-size: 21px; font-weight: bold; fill: #1a1a1a; }
-      .body { font-size: 18px; fill: #1a1a1a; }
-      .hint { font-size: 16px; fill: #777; font-style: italic; }
-      .card-bad  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .card-good { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
-      .stamp-bad { fill: #cc342d; }
-      .stamp-good { fill: #2e7d32; }
-      .stamptext { font-size: 19px; font-weight: bold; fill: #fff; }
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .mono  { font-family: "JetBrains Mono", "Menlo", monospace; font-size: 17px; fill: #121212; }
+      .header{ font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .stamp { font-size: 17px; font-weight: 700; fill: #ffffff; }
+      .bad   { font-size: 24px; font-weight: 700; fill: #cc342d; }
+      .good  { font-size: 24px; font-weight: 700; fill: #2e7d32; }
+      .label { font-size: 20px; font-weight: 600; fill: #121212; }
+      .body  { font-size: 18px; font-weight: 400; fill: #333333; }
+      .hint  { font-size: 17px; font-weight: 400; fill: #777777; }
     </style>
   </defs>
 
-  <rect width="980" height="720" fill="#fafafa"/>
+  <rect width="720" height="730" fill="#faf7f2"/>
 
-  <!-- Title -->
-  <text x="490" y="38" text-anchor="middle" class="hand header">Vibe PRD - Bad vs Good</text>
+  <text x="360" y="46" text-anchor="middle" class="gk header">Vibe PRD - Bad vs Good</text>
 
   <!-- BAD CARD -->
-  <rect x="40" y="60" width="440" height="610" rx="8" class="card-bad" transform="rotate(-0.5 260 365)"/>
-
-  <rect x="60" y="78" width="76" height="26" rx="13" class="stamp-bad"/>
-  <text x="98" y="96" text-anchor="middle" class="hand stamptext">BAD</text>
-
-  <text x="260" y="148" text-anchor="middle" class="hand badtitle">"Build a CRM"</text>
-
-  <text x="60" y="192" class="hand label">1. The problem</text>
-  <text x="60" y="212" class="sans body">(blank)</text>
-
-  <text x="60" y="254" class="hand label">2. The user + context</text>
-  <text x="60" y="274" class="sans body">"Founders need a better way to</text>
-  <text x="60" y="292" class="sans body">manage customer relationships."</text>
-
-  <text x="60" y="334" class="hand label">3. What you're building</text>
-  <text x="60" y="354" class="sans body">"A modern CRM with great UX,</text>
-  <text x="60" y="372" class="sans body">integrations, and AI features."</text>
-
-  <text x="60" y="414" class="hand label">4. Success metric</text>
-  <text x="60" y="434" class="sans body">"Lots of happy users."</text>
-
-  <text x="60" y="476" class="hand label">5. What you're NOT building</text>
-  <text x="60" y="496" class="sans body">(blank)</text>
-
-  <text x="60" y="556" class="sans hint">Result: Lovable builds a settings</text>
-  <text x="60" y="574" class="sans hint">page, 17 toggles, and a dashboard.</text>
-  <text x="60" y="592" class="sans hint">Nothing the persona actually does.</text>
-  <text x="60" y="610" class="sans hint">Quarter wasted on the wrong demo.</text>
+  <rect x="24" y="72" width="328" height="632" rx="4" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <rect x="44" y="88" width="70" height="26" rx="4" fill="#cc342d"/>
+  <text x="79" y="107" text-anchor="middle" class="gk stamp">BAD</text>
+  <text x="44" y="154" class="gk bad">"Build a CRM"</text>
+  <text x="44" y="192" class="gk label">1. The problem</text>
+  <text x="44" y="214" class="sys hint">(blank)</text>
+  <text x="44" y="286" class="gk label">2. The user + context</text>
+  <text x="44" y="308" class="sys body">"Founders need a better way</text>
+  <text x="44" y="328" class="sys body">to manage relationships."</text>
+  <text x="44" y="380" class="gk label">3. What you're building</text>
+  <text x="44" y="402" class="sys body">"A modern CRM with great UX,</text>
+  <text x="44" y="422" class="sys body">integrations, AI features."</text>
+  <text x="44" y="474" class="gk label">4. Success metric</text>
+  <text x="44" y="496" class="sys body">"Lots of happy users."</text>
+  <text x="44" y="568" class="gk label">5. What you're NOT building</text>
+  <text x="44" y="590" class="sys hint">(blank)</text>
+  <text x="44" y="640" class="sys hint">Result: Lovable ships a settings</text>
+  <text x="44" y="662" class="sys hint">page, 17 toggles, a dashboard.</text>
+  <text x="44" y="684" class="sys hint">Quarter wasted on the wrong demo.</text>
 
   <!-- GOOD CARD -->
-  <rect x="500" y="60" width="440" height="610" rx="8" class="card-good" transform="rotate(0.4 720 365)"/>
-
-  <rect x="520" y="78" width="76" height="26" rx="13" class="stamp-good"/>
-  <text x="558" y="96" text-anchor="middle" class="hand stamptext">GOOD</text>
-
-  <text x="720" y="148" text-anchor="middle" class="hand goodtitle">Stripe - QuickBooks reconciler</text>
-
-  <text x="520" y="192" class="hand label">1. The problem</text>
-  <text x="520" y="212" class="sans body">Pre-seed SaaS founders, 6 hrs/week</text>
-  <text x="520" y="230" class="sans body">on Stripe - QB reconciliation.</text>
-  <text x="520" y="248" class="sans body">8/10 confirmed, May 2026 sample.</text>
-
-  <text x="520" y="282" class="hand label">2. The user + context</text>
-  <text x="520" y="302" class="sans body">Founder, 9pm Tuesday, browser,</text>
-  <text x="520" y="320" class="sans body">Stripe + QB tabs open. Wants to</text>
-  <text x="520" y="338" class="sans body">be done in 10 min, not 40.</text>
-
-  <text x="520" y="372" class="hand label">3. What you're building</text>
-  <text x="520" y="392" class="sans body">Paste Stripe payout CSV. Get</text>
-  <text x="520" y="410" class="sans body">QB journal CSV back. USD only.</text>
-  <text x="520" y="428" class="sans body">Magic-link auth. No CSV stored.</text>
-
-  <text x="520" y="462" class="hand label">4. Success metric</text>
-  <text x="520" y="482" class="sans body">10 of first 20 signups convert</text>
-  <text x="520" y="500" class="sans body">1+ file in 30 days. Event:</text>
-  <text x="520" y="518" class="sans body">conversion_completed.</text>
-
-  <text x="520" y="552" class="hand label">5. What you're NOT building</text>
-  <text x="520" y="572" class="sans body">Multi-currency - multi-Stripe -</text>
-  <text x="520" y="590" class="sans body">auto-sync - settings page - roles</text>
-  <text x="520" y="608" class="sans body">- mobile beyond 1024px - marketing</text>
-  <text x="520" y="626" class="sans body">site beyond signup.</text>
-  <text x="520" y="652" class="sans hint">Result: 4-day ship. Real test in 30 days.</text>
+  <rect x="368" y="72" width="328" height="632" rx="4" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5"/>
+  <rect x="388" y="88" width="82" height="26" rx="4" fill="#2e7d32"/>
+  <text x="429" y="107" text-anchor="middle" class="gk stamp">GOOD</text>
+  <text x="388" y="154" class="gk good">Stripe-QB reconciler</text>
+  <text x="388" y="192" class="gk label">1. The problem</text>
+  <text x="388" y="214" class="sys body">Pre-seed SaaS founders lose</text>
+  <text x="388" y="234" class="sys body">6 hrs/week to Stripe-QB recon.</text>
+  <text x="388" y="254" class="sys body">8/10 confirmed, May 2026.</text>
+  <text x="388" y="286" class="gk label">2. The user + context</text>
+  <text x="388" y="308" class="sys body">Founder, 9pm Tuesday, Stripe</text>
+  <text x="388" y="328" class="sys body">+ QB tabs open. Wants 10 min,</text>
+  <text x="388" y="348" class="sys body">not 40.</text>
+  <text x="388" y="380" class="gk label">3. What you're building</text>
+  <text x="388" y="402" class="sys body">Paste Stripe payout CSV, get</text>
+  <text x="388" y="422" class="sys body">QB journal CSV back. USD only.</text>
+  <text x="388" y="442" class="sys body">Magic-link auth. No CSV stored.</text>
+  <text x="388" y="474" class="gk label">4. Success metric</text>
+  <text x="388" y="496" class="sys body">10 of first 20 convert 1+ file</text>
+  <text x="388" y="516" class="sys body">in 30 days. Event:</text>
+  <text x="388" y="538" class="mono">conversion_completed</text>
+  <text x="388" y="568" class="gk label">5. What you're NOT building</text>
+  <text x="388" y="590" class="sys body">Multi-currency, multi-Stripe,</text>
+  <text x="388" y="610" class="sys body">auto-sync, settings, roles,</text>
+  <text x="388" y="630" class="sys body">mobile, marketing site.</text>
+  <text x="388" y="684" class="sys hint">Result: 4-day ship. Real test in 30 days.</text>
 </svg>
