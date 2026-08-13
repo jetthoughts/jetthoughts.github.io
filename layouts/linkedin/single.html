@@ -66,7 +66,7 @@
 
   {{/* nav order = board order: chronological by effective date (posted||scheduled||proposed) */}}
   {{ $ordered := slice }}
-  {{ range (site.GetPage "/linkedin").RegularPagesRecursive }}
+  {{ range where (site.GetPage "/linkedin").RegularPagesRecursive "Params.status" "!=" nil }}
     {{ $ordered = $ordered | append (dict "p" . "k" (or .Params.posted_for .Params.scheduled_for .Params.proposed_for "9999")) }}
   {{ end }}
   {{ $ordered = sort $ordered "k" }}

@@ -1,3 +1,9 @@
+---
+build:
+  render: never
+  list: never
+---
+
 # Posting Packet — ICP post #1 (PULLED, being reworked)
 
 > **STATUS 2026-08-13: this jira-not-progress post was scheduled, then DELETED before publish** — Paul judged it AI slop (staged parable, no tactic, "So..." beat-marking). It exposed a broken doctrine in the pipeline ("story, not advice"), now corrected to **idea-first, deliver the point** (see `docs/workflows/linkedin-post-pipeline.md` + `linkedin-posts/README.md`). This post is a **rescue-lane** draft to be REVISED to the new shape, not reposted as-is. The first idea-first post that DID ship is the course-lane `course-promo/week1-thu-validate-before-build.md` (scheduled 3:30pm CEST 2026-08-13, text-only; image is the manual gap). The rescue-lane 2-week clock has NOT started.

@@ -1,3 +1,9 @@
+---
+build:
+  render: never
+  list: never
+---
+
 # LinkedIn ICP-E Validation Posts
 
 Drafts for the 2-week LinkedIn ICP validation campaign.

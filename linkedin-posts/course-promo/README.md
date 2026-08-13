@@ -1,3 +1,9 @@
+---
+build:
+  render: never
+  list: never
+---
+
 # LinkedIn Course-Promo Posts
 
 Drafts for the course-promotion campaign (posted as Paul Keen — nothing publishes without him).

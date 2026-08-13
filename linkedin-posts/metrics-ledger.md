@@ -1,3 +1,9 @@
+---
+build:
+  render: never
+  list: never
+---
+
 # LinkedIn metrics ledger — source of truth for post performance
 
 One row per **posted** post. Fill from LinkedIn analytics ~48-72h after posting,

@@ -1,3 +1,9 @@
+---
+build:
+  render: never
+  list: never
+---
+
 # LinkedIn content plan — rolling calendar
 
 **Cadence:** 2-3 posts/week, Tue-Thu, US-morning (9-11am ET = ~15-17 CEST).

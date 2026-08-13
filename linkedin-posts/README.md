@@ -1,3 +1,9 @@
+---
+build:
+  render: never
+  list: never
+---
+
 # LinkedIn Operating System — Paul Keen / JetThoughts
 
 How we run Paul's LinkedIn: two lanes, a slow cadence, one voice doctrine, and
@@ -176,3 +182,12 @@ the numbers.
 - `reference-examples.md` — transcribed good posts to emulate (add more over time).
 - `metrics-ledger.md` — per-post performance, the weekly review surface.
 - `course-promo/` , `icp-validation/` — the two lanes, each with `README.md`, drafts, `assets/`.
+
+**Posts vs internal docs (board distinction):** a *post* is any `.md` with a
+`status:` field; the board and prev/next nav filter on `status != nil`, so only
+posts appear. These operational docs (this README, `content-plan.md`,
+`metrics-ledger.md`, `reference-examples.md`, each lane `README.md`,
+`POSTING-PACKET.md`) carry `build: {render: never, list: never}` in their
+frontmatter so Hugo does not render them as pages at all. **Any new non-post `.md`
+you drop in `linkedin-posts/` MUST get that frontmatter**, or it will render as an
+orphan page under `/linkedin/`.

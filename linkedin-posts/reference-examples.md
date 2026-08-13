@@ -1,3 +1,9 @@
+---
+build:
+  render: never
+  list: never
+---
+
 # Reference examples — good LinkedIn posts to emulate
 
 Writers Paul rates. They all share one shape: **idea-first, plain sentences,
