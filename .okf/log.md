@@ -1,5 +1,29 @@
 # Bundle Update Log
 
+## 2026-08-13 (analytics goes live) - GA4 + GSC queryable from an agent session
+
+* **New**: `.okf/workflows/analytics-access.md` - the two local MCP servers
+  (`google-analytics` via ADC, `gsc` via its own Desktop OAuth client),
+  registered at Claude Code user scope so they load in every worktree.
+  Replaces hand-downloaded GSC CSV exports as the way to pull performance data.
+* **Property IDs pinned**, because both accounts carry overlapping properties
+  that return real-looking but wrong numbers: GA4 is **`328508492`** (not the
+  two blog properties), GSC is **`sc-domain:jetthoughts.com`** (not the
+  URL-prefix variants, which each cover only part of the traffic).
+* **Learning worth keeping**: the two servers CANNOT share one credential.
+  Google classes `webmasters*` as a sensitive scope and blocks gcloud's shared
+  built-in OAuth client from brokering it, so `gcloud auth
+  application-default login --scopes=...webmasters...` dies with "This app is
+  blocked" no matter how the project is configured. GA rides plain ADC;
+  GSC needs a self-owned Desktop client with the account as a Testing-mode
+  test user. Chasing this via ADC is a dead end - don't retry it.
+* **GSC data lags ~2-3 days** - query windows ending today read as zero-traffic
+  tails. Baseline recorded for future diffs: 142 clicks / 104,754 impressions /
+  0.14% CTR / position 18.1 over 2026-07-14..08-10, consistent with the 0.09%
+  CTR that `content-strategy/content-plan.md` was built from.
+* **Not in the repo**: all credential files live under `~/.config/` and
+  `~/Library/Application Support/`. Nothing was committed but the bundle.
+
 ## 2026-08-12 (item16 landing migration) - below-fold coverage gap confirmed
 
 * **Update**: `.okf/build/test-gates.md` documents the REPORT-ONLY build-gate
