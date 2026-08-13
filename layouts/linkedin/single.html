@@ -18,8 +18,8 @@
     h1 { font-size: 1.2rem; margin: .6rem 0 .3rem; overflow-wrap: anywhere; }
     .meta { font-size: .78rem; color: var(--muted); margin: 0 0 1.2rem; display: flex; flex-wrap: wrap; gap: .3rem .5rem; }
     .pill { background: #eceef1; border-radius: 4px; padding: .05rem .4rem; }
-    .cols { display: grid; grid-template-columns: 300px minmax(0,1fr) 290px; gap: 1.1rem; align-items: start; }
-    @media (max-width: 1000px) { .cols { grid-template-columns: 1fr; } .col-meta { position: static !important; } }
+    .cols { display: grid; grid-template-columns: 460px minmax(0,1fr); gap: 1.1rem; align-items: start; }
+    @media (max-width: 1000px) { .cols { grid-template-columns: 1fr; } }
     .block { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.05rem; margin-bottom: 1.1rem; }
     .body-text { white-space: pre-wrap; overflow-wrap: anywhere; }
     h2 { font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; margin: 0 0 .5rem; color: var(--muted); }
@@ -36,7 +36,7 @@
     .hint { font-size: .72rem; color: var(--muted); margin: .7rem 0 0; text-align: left; }
     .hint code { background: #eceef1; padding: .05rem .3rem; border-radius: 3px; word-break: break-all; }
     .no-img { color: #9aa0a8; font-size: .82rem; }
-    .col-meta { position: sticky; top: 1.25rem; }
+    .col-meta { grid-column: 1 / -1; margin-top: .1rem; }
     .panel { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: .9rem 1rem; font-size: .8rem; }
     .panel-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: .7rem; }
     .panel h3 { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0; }
@@ -98,7 +98,9 @@
           {{ if $visualRaw }}<div class="btn-row"><button class="copy-btn icon-only" id="copy-img" title="Copy image">{{ $copyIcon | safeHTML }}<span></span></button></div>{{ end }}
           <h2>Visual</h2>
           {{ if $visualRaw }}
-            <img id="post-img" src="/linkedin-assets/{{ $laneDir }}/{{ path.Base $visualRaw }}" alt="post visual" onerror="this.style.display='none';document.getElementById('noimg').style.display='block'" draggable="true" />
+            <a href="/linkedin-assets/{{ $laneDir }}/{{ path.Base $visualRaw }}" target="_blank" rel="noopener" title="Open full size in a new tab (drag the image to attach it)">
+              <img id="post-img" src="/linkedin-assets/{{ $laneDir }}/{{ path.Base $visualRaw }}" alt="post visual" onerror="this.style.display='none';document.getElementById('noimg').style.display='block'" draggable="true" />
+            </a>
             <p id="noimg" class="no-img" style="display:none">Image not found on disk.</p>
           {{ else }}
             <p class="no-img">No visual set for this post.</p>

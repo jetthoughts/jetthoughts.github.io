@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
+  <title id="t">A vibe-coded MVP gets rewritten, not refactored: it proved the idea, but turning it into the real product means starting the code over.</title>
+  <desc>An amber "Vibe-coded MVP - proved the idea" card forks two ways. A red dashed arrow goes up to a red "Refactor" card marked "you fight the old code". A blue arrow goes down to a green "Rewrite" card marked "production-ready". Basis: AI regenerates code, so one bug hides in five or six copies.</desc>
+  <defs>
+    <style>
+      .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
+      .title{ font-size: 30px; font-weight: 700; fill: #1a1a1a; }
+      .sub  { font-size: 24px; fill: #666; font-style: italic; }
+      .lbl  { font-size: 26px; font-weight: 700; }
+      .mvp-l{ font-size: 25px; font-weight: 700; fill: #d97706; }
+      .note { font-size: 18px; font-style: italic; }
+      .small{ font-size: 17px; fill: #666; font-style: italic; }
+      .basis{ font-size: 20px; fill: #666; font-style: italic; }
+      .amber{ fill: #fff7ed; stroke: #f59e0b; stroke-width: 2.5; }
+      .red  { fill: #fef2f2; stroke: #e5484d; stroke-width: 2.5; }
+      .green{ fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+    </style>
+    <filter id="ga" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#f59e0b" flood-opacity="0.45"/></filter>
+    <filter id="gr" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#e5484d" flood-opacity="0.45"/></filter>
+    <filter id="gg" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#2e7d32" flood-opacity="0.45"/></filter>
+    <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1 L8 5 L0 9 z" fill="#2b7fff"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1 L8 5 L0 9 z" fill="#e5484d"/></marker>
+  </defs>
+
+  <text x="360" y="46" text-anchor="middle" class="h title">A vibe-coded MVP is rewritten, not refactored</text>
+  <text x="360" y="76" text-anchor="middle" class="h sub">It proved the idea. The code still starts over.</text>
+
+  <!-- MVP node -->
+  <g transform="translate(40,196) rotate(-0.4 98 56)">
+    <rect width="196" height="112" rx="16" class="amber"/>
+    <text x="98" y="46" text-anchor="middle" class="h mvp-l" filter="url(#ga)">Vibe-coded</text>
+    <text x="98" y="74" text-anchor="middle" class="h mvp-l">MVP</text>
+    <text x="98" y="98" text-anchor="middle" class="h small">proved the idea</text>
+  </g>
+
+  <!-- fork: MVP -> refactor (red dashed, anti-pattern) -->
+  <path d="M240 232 C 320 206, 372 182, 440 172" fill="none" stroke="#e5484d" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#ar)"/>
+  <!-- fork: MVP -> rewrite (blue, the way) -->
+  <path d="M240 276 C 320 306, 372 336, 440 350" fill="none" stroke="#2b7fff" stroke-width="3.5" marker-end="url(#ab)"/>
+
+  <!-- Refactor card -->
+  <g transform="translate(442,120) rotate(0.5 119 48)">
+    <rect width="238" height="96" rx="16" class="red"/>
+    <text x="119" y="46" text-anchor="middle" class="h lbl" fill="#e5484d" filter="url(#gr)">Refactor</text>
+    <text x="119" y="74" text-anchor="middle" class="h note" fill="#b91c1c">you fight the old code</text>
+  </g>
+
+  <!-- Rewrite card -->
+  <g transform="translate(442,300) rotate(-0.5 119 48)">
+    <rect width="238" height="96" rx="16" class="green"/>
+    <text x="119" y="46" text-anchor="middle" class="h lbl" fill="#2e7d32" filter="url(#gg)">Rewrite</text>
+    <text x="119" y="74" text-anchor="middle" class="h note" fill="#2e7d32">production-ready</text>
+  </g>
+
+  <text x="360" y="456" text-anchor="middle" class="h basis">Why: AI regenerates code, so one bug hides in 5-6 copies.</text>
+</svg>
