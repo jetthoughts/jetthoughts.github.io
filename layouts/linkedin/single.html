@@ -5,50 +5,104 @@
   <title>{{ or .Title (humanize .File.BaseFileName) }} — LinkedIn preview (dev only)</title>
   <meta name="robots" content="noindex,nofollow" />
   <style>
-    body { font: 15px/1.5 -apple-system, sans-serif; margin: 0; padding: 1.5rem; max-width: 640px; background: #f4f4f6; color: #1a1a1a; }
-    a.back { font-size: 0.85rem; color: #555; }
-    h1 { font-size: 1.1rem; margin: 0.8rem 0 0.2rem; }
-    .meta { font-size: 0.8rem; color: #555; margin-bottom: 1rem; }
-    .post { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 1rem; white-space: pre-wrap; }
-    .post img { max-width: 100%; border-radius: 4px; margin-bottom: 0.75rem; display: block; }
-    h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 1.2rem 0 0.4rem; color: #555; }
-    .first-comment { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 1rem; white-space: pre-wrap; }
-    button { margin-top: 1rem; padding: 0.5rem 0.9rem; border: 1px solid #888; border-radius: 4px; background: #fff; cursor: pointer; font-size: 0.85rem; }
-    button:active { background: #eee; }
-    a.folder { font-size: 0.9rem; font-weight: 600; text-decoration: none; }
-    .path { font-size: 0.7rem; color: #999; word-break: break-all; }
+    :root { --line:#e3e3e8; --muted:#6b7280; --bg:#f6f7f9; --accent:#0a66c2; }
+    * { box-sizing: border-box; }
+    body { font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: var(--bg); color: #16181d; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+    a.back { font-size: .85rem; color: var(--muted); text-decoration: none; }
+    a.back:hover { color: var(--accent); }
+    h1 { font-size: 1.15rem; margin: .7rem 0 .25rem; overflow-wrap: anywhere; }
+    .meta { font-size: .78rem; color: var(--muted); margin: 0 0 1.25rem; display: flex; flex-wrap: wrap; gap: .3rem .5rem; }
+    .meta .pill { background: #eceef1; border-radius: 4px; padding: .05rem .4rem; }
+    h2 { font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; margin: 0 0 .5rem; color: var(--muted); }
+    .block { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.05rem; margin-bottom: 1.1rem; }
+    .block .body-text { white-space: pre-wrap; overflow-wrap: anywhere; }
+    .copy-btn { position: absolute; top: .55rem; right: .55rem; display: inline-flex; align-items: center; gap: .3rem; padding: .3rem .5rem; font-size: .74rem; color: var(--muted); background: #fff; border: 1px solid var(--line); border-radius: 7px; cursor: pointer; transition: all .12s; }
+    .copy-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .copy-btn.ok { color: #1f9d55; border-color: #1f9d55; }
+    .copy-btn svg { width: 14px; height: 14px; }
+    .img-block { text-align: center; }
+    .img-block img { max-width: 100%; border-radius: 8px; border: 1px solid var(--line); cursor: grab; }
+    .img-actions { display: flex; justify-content: center; gap: .5rem; margin-bottom: .75rem; }
+    .img-actions button { display: inline-flex; align-items: center; gap: .35rem; padding: .4rem .7rem; font-size: .8rem; color: #16181d; background: #fff; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
+    .img-actions button:hover { border-color: var(--accent); color: var(--accent); }
+    .img-actions button.ok { color: #1f9d55; border-color: #1f9d55; }
+    .hint { font-size: .74rem; color: var(--muted); margin: .7rem 0 0; }
+    .hint code { background: #eceef1; padding: .05rem .3rem; border-radius: 3px; }
   </style>
 </head>
 <body>
-  <a class="back" href="{{ "/linkedin/" | relURL }}">&larr; board</a>
-  <h1>{{ or .Title (humanize .File.BaseFileName) }}</h1>
-  <p class="meta">{{ or .Params.lane .Params.campaign "—" }} · {{ .Params.status }} · stage: {{ .Params.stage }}
-    {{- with .Params.scheduled_for }} · scheduled {{ . }}{{ end }}
-    {{- with .Params.posted_for }} · posted {{ . }}{{ end }}
-    {{- with .Params.proposed_for }} · proposed {{ . }}{{ end }}</p>
-  {{ $assetsDir := printf "%s/assets/" (path.Dir .File.Filename) }}
-  <p><a class="folder" href="file://{{ $assetsDir }}">📂 Open assets folder</a> <span class="path">{{ $assetsDir }}</span></p>
+  <div class="wrap">
+    <a class="back" href="{{ "/linkedin/" | relURL }}">&larr; board</a>
+    <h1>{{ or .Title (humanize .File.BaseFileName) }}</h1>
+    <p class="meta">
+      <span class="pill">{{ or .Params.lane .Params.campaign "—" }}</span>
+      <span class="pill">{{ .Params.status }}</span>
+      <span class="pill">stage: {{ .Params.stage }}</span>
+      {{ with .Params.scheduled_for }}<span class="pill">scheduled {{ . }}</span>{{ end }}
+      {{ with .Params.posted_for }}<span class="pill">posted {{ . }}</span>{{ end }}
+      {{ with .Params.proposed_for }}<span class="pill">proposed {{ . }}</span>{{ end }}
+    </p>
 
-  {{ $parts := split .File.Path "/" }}
-  {{ $laneDir := "" }}
-  {{ if ge (len $parts) 2 }}{{ $laneDir = index $parts 1 }}{{ end }}
-  {{ $visualRaw := "" }}
-  {{ with .Params.visual }}{{ $visualRaw = index (split . " ") 0 }}{{ end }}
-  {{ if not $visualRaw }}{{ $visualRaw = .Params.design_file }}{{ end }}
+    {{ $parts := split .File.Path "/" }}
+    {{ $laneDir := "" }}{{ if ge (len $parts) 2 }}{{ $laneDir = index $parts 1 }}{{ end }}
+    {{ $visualRaw := "" }}
+    {{ with .Params.visual }}{{ $visualRaw = index (split . " ") 0 }}{{ end }}
+    {{ if not $visualRaw }}{{ $visualRaw = .Params.design_file }}{{ end }}
+    {{ $assetsDir := printf "%s/assets/" (path.Dir .File.Filename) }}
 
-  <div class="post">
+    {{ $copyIcon := `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>` }}
+
+    <div class="block">
+      <button class="copy-btn" data-target="raw-body">{{ $copyIcon | safeHTML }}<span>Copy body</span></button>
+      <div class="body-text">{{ .RawContent }}</div>
+    </div>
+
     {{ if $visualRaw }}
-      <img src="/linkedin-assets/{{ $laneDir }}/{{ path.Base $visualRaw }}" alt="post visual" onerror="this.style.display='none'" />
+      <div class="block img-block">
+        <div class="img-actions">
+          <button id="copy-img">{{ $copyIcon | safeHTML }}<span>Copy image</span></button>
+          <button id="copy-path" data-path="{{ $assetsDir }}">{{ $copyIcon | safeHTML }}<span>Copy folder path</span></button>
+        </div>
+        <img id="post-img" src="/linkedin-assets/{{ $laneDir }}/{{ path.Base $visualRaw }}" alt="post visual" onerror="this.closest('.img-block').style.display='none'" draggable="true" />
+        <p class="hint">Click <strong>Copy image</strong>, then click into the LinkedIn composer and <strong>paste (Cmd+V)</strong> — or drag the image straight in. Folder: <code>{{ $assetsDir }}</code></p>
+      </div>
     {{ end }}
-    {{ .Content }}
+
+    {{ with .Params.first_comment }}
+      <div class="block">
+        <button class="copy-btn" data-target="raw-comment">{{ $copyIcon | safeHTML }}<span>Copy comment</span></button>
+        <h2>First comment</h2>
+        <div class="body-text">{{ . }}</div>
+      </div>
+      <textarea id="raw-comment" hidden>{{ . }}</textarea>
+    {{ end }}
+
+    <textarea id="raw-body" hidden>{{ .RawContent }}</textarea>
   </div>
 
-  {{ with .Params.first_comment }}
-    <h2>First comment</h2>
-    <div class="first-comment">{{ . }}</div>
-  {{ end }}
-
-  <button onclick="navigator.clipboard.writeText(document.getElementById('raw-body').value)">Copy body</button>
-  <textarea id="raw-body" style="display:none">{{ .RawContent }}</textarea>
+  <script>
+    function flash(btn, label) { var s = btn.querySelector('span'); var t = s.textContent; s.textContent = label; btn.classList.add('ok'); setTimeout(function(){ s.textContent = t; btn.classList.remove('ok'); }, 1400); }
+    document.querySelectorAll('.copy-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var el = document.getElementById(btn.dataset.target);
+        navigator.clipboard.writeText(el.value).then(function(){ flash(btn, 'Copied'); });
+      });
+    });
+    var copyImg = document.getElementById('copy-img');
+    if (copyImg) copyImg.addEventListener('click', async function(){
+      try {
+        var img = document.getElementById('post-img');
+        var res = await fetch(img.src);
+        var blob = await res.blob();
+        await navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
+        flash(copyImg, 'Copied — paste in composer');
+      } catch (e) { flash(copyImg, 'Copy failed - drag it instead'); }
+    });
+    var copyPath = document.getElementById('copy-path');
+    if (copyPath) copyPath.addEventListener('click', function(){
+      navigator.clipboard.writeText(copyPath.dataset.path).then(function(){ flash(copyPath, 'Path copied'); });
+    });
+  </script>
 </body>
 </html>
