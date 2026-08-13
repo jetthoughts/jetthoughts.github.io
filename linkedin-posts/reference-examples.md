@@ -71,5 +71,14 @@ Short, humble, concrete product updates in the first person. *"My Rails backup s
 - No cost-stacked drama ("six months and a big invoice later…").
 - No engagement-bait question standing in for a real point.
 - No stacked-clause 30-word sentences.
+- **No tidy lesson-wrap that editorializes the takeaway for the reader**
+  (Paul flagged 2026-08-13: "that reliability is the whole story for anyone
+  deciding whether to build with AI" - a marketer's bridge sentence, not his
+  voice). State the thing; don't explain to the reader why it matters to them.
+- **End on the real point, not a bait CTA.** Holub/Paolino often have NO closing
+  question - they land on the sharpest observation and stop. A closing question is
+  fine only when it's genuine, never as reflexive engagement bait. Paul's register:
+  blunt, concrete/technical (name the actual thing), first-person, opinionated,
+  a little against-the-grain - closer to Holub than to a LinkedIn "insight" post.
 
 See `docs/workflows/linkedin-post-pipeline.md` → "Post shape: idea-first, deliver the point".

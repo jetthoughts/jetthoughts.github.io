@@ -20,10 +20,10 @@ notes: |
   Text-first. Idea-first, no em dashes.
 ---
 
-What still surprises me in 2026: with all the AI tools around, founders are still getting burned by inexperienced vendors.
+Still surprises me in 2026: founders are getting burned by inexperienced vendors even now, with every AI tool sitting right there.
 
-I see it on almost every audit. A non-technical founder paid real money for something that came back half-working - when the same result was either a cheaper, cleaner build or something they didn't need to build yet at all. The tools to avoid this are right there, cheaper and faster than they've ever been.
+I see it on almost every audit. Someone paid real money for something that came back half-working, when the same thing was either a cleaner build for a fraction of the cost or didn't need building yet at all.
 
-The gap isn't the technology anymore. It's knowing what to ask for, and what not to pay for before you've proven anyone wants it.
+The tech stopped being the hard part a while ago. What's missing is someone telling the founder what not to pay for.
 
-If you've hired a vendor recently, what did you pay for that you later realised you didn't need?
+Every one of these was avoidable. That's the part that gets to me.

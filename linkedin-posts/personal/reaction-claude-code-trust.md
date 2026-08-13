@@ -21,12 +21,10 @@ notes: |
   Idea-first, no em dashes, one flat admission opener.
 ---
 
-I gave up on AI coding agents last year. They'd produce something impressive, then quietly change three unrelated things and break the app.
+I stopped using AI coding agents about a year ago. They'd write something that looked right, then quietly change three files I never touched and break the app.
 
-This year I trust them again - Claude Code specifically.
+Claude Code pulled me back. Not because it's smarter - because it's consistent. It makes the change I asked for and leaves the rest alone. I hand a whole workflow to sub-agents and the diffs hold together, run after run.
 
-What changed for me was consistency. It now makes the change I asked for and leaves the rest alone, run after run. I can hand a real workflow to a set of sub-agents and get back work that holds together, instead of a slot machine.
+That's the thing that matters once you're doing real work and not a demo. I don't need clever. I need to not babysit it.
 
-That reliability is the whole story for anyone deciding whether to build with AI. A tool that's brilliant most of the time and randomly destructive the rest isn't something you hand real work to. One that's consistent is. This year it crossed that line for me.
-
-If you've gone back to an AI tool you'd written off, what finally changed your mind?
+Still surprises me that consistency, not intelligence, is what made these finally usable.

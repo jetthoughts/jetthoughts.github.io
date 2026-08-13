@@ -24,12 +24,12 @@ notes: |
   One parallel line kept at the 1-per-post budget. Idea-first, no em dashes.
 ---
 
-I'm usually the skeptic in the room. When a non-technical founder walks me through their idea, my analytical side takes over and quietly says: this won't work.
+I'm usually the skeptic in the room. A non-technical founder walks me through their idea and my analytical side quietly says: this won't work.
 
-I'm wrong more often than that instinct likes to admit.
+I'm wrong more often than that instinct admits.
 
-Years ago I worked with BigBinary, a small Rails agency, and I was sure their model was a dead end - outstaffing felt like something the market would grow out of. Then they just kept going. More clients, their own suite of products, Sahil at Gumroad publicly crediting them with saving the company. The thing I'd quietly written off became one of the most respected shops in the Rails world, and staff augmentation turned into one of the fastest-growing parts of the industry, not a dying one.
+Years ago I worked with BigBinary, a small Rails agency, and I was sure their model was a dead end. Outstaffing felt like something the market would grow out of. Then they just kept going - more clients, their own suite of products, Sahil at Gumroad publicly crediting them with saving the company. The thing I'd written off is now one of the most respected shops in the Rails world, and outstaffing became one of the fastest-growing parts of the industry.
 
-Here's what I keep relearning: my analysis is good at judging what already exists. It's bad at judging how far someone's belief will carry a thing that doesn't exist yet.
+My read is only ever about what already exists. Founders are betting on what doesn't, and I keep underrating that bet.
 
-When did someone prove your confident "that won't work" completely wrong?
+I still catch myself deciding an idea won't work before the founder's finished talking. Trying to shut that voice up a bit earlier each time.
