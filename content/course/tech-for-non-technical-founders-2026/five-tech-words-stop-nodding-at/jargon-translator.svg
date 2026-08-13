@@ -1,65 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="jargon-title">
-  <title id="jargon-title">Jargon Translator: What Your Dev Shop Says vs What It Usually Means</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1010" role="img" aria-labelledby="jt-title">
+  <title id="jt-title">Jargon Translator: what your dev shop says vs what it usually means. Five phrases, each with its real meaning.</title>
+  <desc>A translation table. Left column, red, "What they say"; right column, blue, "What it means". Five rows: refactoring the order flow means rewriting code we shipped before, on your dime, called tidy-up. A Docker upgrade means something on the server broke and they can't reproduce it locally. Tech debt to pay down means we wrote it badly, pay us to fix what you already paid us to write. Ship the MVP first means the cheapest scope they can finish inside the budget you have left. Fix the architecture means they want resume-building tech the senior dev has not tried yet. Footer: five words, five invoices - take the meaning column to standup.</desc>
   <defs>
     <style>
-      .title { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .term  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 22px; fill: #1a1a1a; }
-      .mean  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #1a1a1a; }
-      .small { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; }
-      .box-l { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
-      .box-r { fill: #f5f0ff; stroke: #a855f7; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
-      .arrow { stroke: #1a1a1a; stroke-width: 2.5; stroke-linecap: round; fill: none; }
-      .caption { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #666; font-style: italic; }
+      .h    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .em   { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 30px; }
+      .title{ font-size: 48px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .sub  { font-size: 24px; fill: #667085; }
+      .hdrS { font-size: 27px; font-weight: 700; fill: #e5484d; letter-spacing: 1px; filter: url(#gR); }
+      .hdrM { font-size: 27px; font-weight: 700; fill: #2b7fff; letter-spacing: 1px; filter: url(#gB); }
+      .say  { font-size: 24px; font-weight: 700; fill: #b42318; }
+      .mean { font-size: 22px; fill: #175cd3; }
+      .pillS{ fill: #fff1f0; stroke: #f2635a; stroke-width: 2.5; filter: url(#soft); }
+      .pillM{ fill: #eff6ff; stroke: #6aa8ff; stroke-width: 2.5; filter: url(#soft); }
+      .foot { font-size: 22px; font-weight: 700; fill: #1a1a1a; }
     </style>
+    <filter id="soft" x="-8%" y="-8%" width="116%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
+    <filter id="gR" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#f2635a" flood-opacity="0.5"/></filter>
+    <filter id="gB" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2b7fff" flood-opacity="0.5"/></filter>
+    <marker id="ar" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#2b7fff"/>
+    </marker>
   </defs>
 
-  <text x="200" y="38" class="title" text-anchor="middle">WHAT THEY SAY</text>
-  <text x="700" y="38" class="title" text-anchor="middle">WHAT IT USUALLY MEANS</text>
+  <text x="360" y="58" text-anchor="middle" class="h title">The Jargon Translator</text>
+  <text x="360" y="94" text-anchor="middle" class="h sub">What your dev shop says vs what it usually means</text>
 
-  <rect x="20" y="60" width="360" height="80" rx="10" class="box-l" transform="rotate(-0.5 200 100)"/>
-  <text x="200" y="95" class="term" text-anchor="middle">"We're refactoring</text>
-  <text x="200" y="120" class="term" text-anchor="middle">the order flow"</text>
-  <path class="arrow" d="M 390 100 L 510 100"/>
-  <path class="arrow" d="M 502 94 L 510 100 L 502 106"/>
-  <rect x="520" y="60" width="360" height="80" rx="10" class="box-r" transform="rotate(0.4 700 100)"/>
-  <text x="700" y="92" class="mean" text-anchor="middle">Rewriting code we shipped before,</text>
-  <text x="700" y="117" class="mean" text-anchor="middle">on your dime, calling it tidy-up</text>
+  <text x="185" y="152" text-anchor="middle" class="h hdrS">WHAT THEY SAY</text>
+  <text x="540" y="152" text-anchor="middle" class="h hdrM">WHAT IT MEANS</text>
 
-  <rect x="20" y="155" width="360" height="80" rx="10" class="box-l" transform="rotate(0.4 200 195)"/>
-  <text x="200" y="190" class="term" text-anchor="middle">"We need a</text>
-  <text x="200" y="215" class="term" text-anchor="middle">Docker upgrade"</text>
-  <path class="arrow" d="M 390 195 L 510 195"/>
-  <path class="arrow" d="M 502 189 L 510 195 L 502 201"/>
-  <rect x="520" y="155" width="360" height="80" rx="10" class="box-r" transform="rotate(-0.3 700 195)"/>
-  <text x="700" y="187" class="mean" text-anchor="middle">Something on the server broke;</text>
-  <text x="700" y="212" class="mean" text-anchor="middle">we can't reproduce locally</text>
+  <g transform="translate(0,174) rotate(-0.5 360 64)">
+    <rect x="24" y="0" width="322" height="128" rx="18" class="pillS"/>
+    <text x="44" y="54" class="h say">"We're refactoring</text><text x="44" y="84" class="h say">the order flow"</text>
+    <path d="M 352 64 L 388 64" stroke="#2b7fff" stroke-width="3.5" fill="none" marker-end="url(#ar)"/>
+    <rect x="394" y="0" width="302" height="128" rx="18" class="pillM"/>
+    <text x="414" y="48" class="h mean">Rewriting code we shipped</text><text x="414" y="76" class="h mean">before, on your dime -</text><text x="414" y="104" class="h mean">called "tidy-up".</text>
+  </g>
+  <g transform="translate(0,320) rotate(0.5 360 64)">
+    <rect x="24" y="0" width="322" height="128" rx="18" class="pillS"/>
+    <text x="44" y="54" class="h say">"We need a</text><text x="44" y="84" class="h say">Docker upgrade"</text>
+    <path d="M 352 64 L 388 64" stroke="#2b7fff" stroke-width="3.5" fill="none" marker-end="url(#ar)"/>
+    <rect x="394" y="0" width="302" height="128" rx="18" class="pillM"/>
+    <text x="414" y="48" class="h mean">Something on the server</text><text x="414" y="76" class="h mean">broke; they can't</text><text x="414" y="104" class="h mean">reproduce it locally.</text>
+  </g>
+  <g transform="translate(0,466) rotate(-0.4 360 64)">
+    <rect x="24" y="0" width="322" height="128" rx="18" class="pillS"/>
+    <text x="44" y="54" class="h say">"Lots of tech debt</text><text x="44" y="84" class="h say">to pay down"</text>
+    <path d="M 352 64 L 388 64" stroke="#2b7fff" stroke-width="3.5" fill="none" marker-end="url(#ar)"/>
+    <rect x="394" y="0" width="302" height="128" rx="18" class="pillM"/>
+    <text x="414" y="48" class="h mean">We wrote it badly. Pay us</text><text x="414" y="76" class="h mean">to fix what you already</text><text x="414" y="104" class="h mean">paid us to write.</text>
+  </g>
+  <g transform="translate(0,612) rotate(0.4 360 64)">
+    <rect x="24" y="0" width="322" height="128" rx="18" class="pillS"/>
+    <text x="44" y="54" class="h say">"Let's just ship</text><text x="44" y="84" class="h say">the MVP first"</text>
+    <path d="M 352 64 L 388 64" stroke="#2b7fff" stroke-width="3.5" fill="none" marker-end="url(#ar)"/>
+    <rect x="394" y="0" width="302" height="128" rx="18" class="pillM"/>
+    <text x="414" y="48" class="h mean">The cheapest scope they</text><text x="414" y="76" class="h mean">can finish inside the</text><text x="414" y="104" class="h mean">budget you have left.</text>
+  </g>
+  <g transform="translate(0,758) rotate(-0.5 360 64)">
+    <rect x="24" y="0" width="322" height="128" rx="18" class="pillS"/>
+    <text x="44" y="54" class="h say">"We need to fix</text><text x="44" y="84" class="h say">the architecture"</text>
+    <path d="M 352 64 L 388 64" stroke="#2b7fff" stroke-width="3.5" fill="none" marker-end="url(#ar)"/>
+    <rect x="394" y="0" width="302" height="128" rx="18" class="pillM"/>
+    <text x="414" y="48" class="h mean">They want resume-building</text><text x="414" y="76" class="h mean">tech the senior dev</text><text x="414" y="104" class="h mean">hasn't tried yet.</text>
+  </g>
 
-  <rect x="20" y="250" width="360" height="80" rx="10" class="box-l" transform="rotate(-0.4 200 290)"/>
-  <text x="200" y="285" class="term" text-anchor="middle">"There's a lot of</text>
-  <text x="200" y="310" class="term" text-anchor="middle">tech debt to pay down"</text>
-  <path class="arrow" d="M 390 290 L 510 290"/>
-  <path class="arrow" d="M 502 284 L 510 290 L 502 296"/>
-  <rect x="520" y="250" width="360" height="80" rx="10" class="box-r" transform="rotate(0.3 700 290)"/>
-  <text x="700" y="282" class="mean" text-anchor="middle">We wrote it badly. Pay us to fix</text>
-  <text x="700" y="307" class="mean" text-anchor="middle">what you already paid us to write</text>
-
-  <rect x="20" y="345" width="360" height="80" rx="10" class="box-l" transform="rotate(0.4 200 385)"/>
-  <text x="200" y="380" class="term" text-anchor="middle">"Let's just ship</text>
-  <text x="200" y="405" class="term" text-anchor="middle">the MVP first"</text>
-  <path class="arrow" d="M 390 385 L 510 385"/>
-  <path class="arrow" d="M 502 379 L 510 385 L 502 391"/>
-  <rect x="520" y="345" width="360" height="80" rx="10" class="box-r" transform="rotate(-0.3 700 385)"/>
-  <text x="700" y="377" class="mean" text-anchor="middle">The cheapest scope we can finish</text>
-  <text x="700" y="402" class="mean" text-anchor="middle">inside the budget you have left</text>
-
-  <rect x="20" y="440" width="360" height="80" rx="10" class="box-l" transform="rotate(-0.3 200 480)"/>
-  <text x="200" y="475" class="term" text-anchor="middle">"We need to fix</text>
-  <text x="200" y="500" class="term" text-anchor="middle">the architecture"</text>
-  <path class="arrow" d="M 390 480 L 510 480"/>
-  <path class="arrow" d="M 502 474 L 510 480 L 502 486"/>
-  <rect x="520" y="440" width="360" height="80" rx="10" class="box-r" transform="rotate(0.4 700 480)"/>
-  <text x="700" y="472" class="mean" text-anchor="middle">We want resume-building tech</text>
-  <text x="700" y="497" class="mean" text-anchor="middle">the senior dev hasn't tried yet</text>
-
-  <text x="450" y="575" class="caption" text-anchor="middle">Five words. Five invoices. Bring the question column to your next standup.</text>
+  <text x="360" y="964" text-anchor="middle" class="h foot">Five words, five invoices - take the meaning column to standup.</text>
 </svg>
