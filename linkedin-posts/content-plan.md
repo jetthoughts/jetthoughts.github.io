@@ -14,8 +14,7 @@ Status legend: `draft` (old parable, needs revision) · `revised` (idea-first, r
 |---|---|---|---|---|
 | 2026-08-11 | Thu | course | `course-promo/week1-thu-validate-before-build` | **scheduled** (text; image added manually; first comment pending) |
 | 2026-08-18 | Tue | rescue | `icp-validation/week1-mon-jira-not-progress` (verify-progress) | **revised** ✓ idea-first + demo-rule visual; ready for pre-verify |
-| 2026-08-18 | Thu | course | `course-promo/week1-mon-built-before-testing` | **RETIRED** - duplicate of validate-before-build (shipped 08-13); use a distinct topic |
-| 2026-08-18 | Thu (alt) | course | `course-promo/week1-tue-founding-hypothesis` → revise to idea-first | draft (next) |
+| 2026-08-18 | Thu | course | `course-promo/week1-tue-founding-hypothesis` | **approved** ✓ idea-first + five-blank exhibit; ready to schedule |
 | 2026-08-25 | Tue | rescue | `icp-validation/week1-tue-staging-question` → revise | draft |
 | 2026-08-25 | Thu | course | `course-promo/week1-tue-founding-hypothesis` → revise | draft |
 | 2026-09-01 | Tue | rescue | `icp-validation/week1-wed-trust-signals-poll` → revise | draft |
@@ -31,7 +30,8 @@ All `draft` posts above were written under the OLD "story, not advice" parable d
 and MUST be revised to idea-first (`docs/workflows/linkedin-post-pipeline.md`) before
 scheduling. Run in **batches of 2-3 (one week's slots), Paul-gated per batch** - voice
 work at volume is where slop returns. Batch 1 = the 2026-08-18 pair (jira rescue +
-built-before-testing course).
+founding-hypothesis course). (`built-before-testing` deleted 2026-08-13 -
+duplicate of the shipped validate-before-build.)
 
 ## Per-post checklist
 
