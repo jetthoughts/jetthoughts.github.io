@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 740" role="img" aria-labelledby="il-title">
-  <title id="il-title">The month-2 invoice loop: sign the SOW with the 3 clauses, predict the bill (devs times avg AI cost times margin), then the invoice is a comparison. Within plus-or-minus 20 percent, pay it and mark the baseline. 20 percent or more over, demand the itemized breakdown - a hard ticket raises the budget alert, margin or padding gets pushed back citing Clause 1. Quarterly, re-predict from the usage dashboards under Clause 3.</title>
-  <desc>Three process steps - sign the SOW, predict the bill with devs times avg cost times margin, the invoice lands - flow into one decision: off by more than 20 percent? A green card, within 20 percent, pay it and mark the baseline. An amber card, 20 percent or more over, demand the breakdown: a check for a hard ticket that raises the budget alert, a cross for margin or padding that gets pushed back under Clause 1. Footer: quarterly, re-predict from the dashboards under Clause 3.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" role="img" aria-labelledby="il-title">
+  <title id="il-title">The month-2 invoice loop: sign the SOW, predict the bill, then the invoice is a comparison. Is it off by more than 20 percent? If no, within 20 percent, pay it and set the baseline. If yes, 20 percent or more over, demand the itemized breakdown - a hard ticket raises the budget alert, margin or padding gets pushed back citing Clause 1. Quarterly, re-predict from the usage dashboards under Clause 3.</title>
+  <desc>Three process chips - sign the SOW, predict the bill with devs times cost times margin, the invoice lands - lead to one decision: off by more than 20 percent? It forks two ways. Left, green, no: within 20 percent, pay it and set the baseline. Right, amber, yes: 20 percent or more over, demand the breakdown - a check for a hard ticket that raises the budget alert, a cross for margin or padding pushed back under Clause 1. Footer: quarterly, re-predict from the dashboards under Clause 3.</desc>
   <defs>
     <style>
       .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
@@ -11,55 +11,66 @@
       .numt { font-size: 22px; font-weight: 700; fill: #fff; }
       .ct   { font-size: 22px; font-weight: 700; fill: #2b7fff; }
       .cs   { font-size: 19px; fill: #667085; }
-      .gate { font-size: 38px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
-      .cardG{ fill: #f2fbf4; stroke: #57c06f; stroke-width: 2.5; filter: url(#soft); }
-      .cardA{ fill: #fffbeb; stroke: #e2b93b; stroke-width: 2.5; filter: url(#soft); }
-      .og { font-size: 26px; font-weight: 700; fill: #2e9e4f; filter: url(#gG); }
-      .oa { font-size: 26px; font-weight: 700; fill: #b8860b; filter: url(#gA); }
+      .gate { font-size: 36px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .cardG{ fill: #f2fbf4; stroke: #57c06f; stroke-width: 3; filter: url(#soft); }
+      .cardA{ fill: #fffbeb; stroke: #e2b93b; stroke-width: 3; filter: url(#soft); }
+      .yn { font-size: 24px; font-weight: 700; }
+      .og { font-size: 27px; font-weight: 700; fill: #2e9e4f; filter: url(#gG); }
+      .oa { font-size: 27px; font-weight: 700; fill: #b8860b; filter: url(#gA); }
       .body { font-size: 22px; fill: #1a1a1a; }
       .ok { font-size: 22px; font-weight: 700; fill: #2e9e4f; }
       .bad{ font-size: 22px; font-weight: 700; fill: #e5484d; }
       .foot { font-size: 21px; fill: #667085; font-style: italic; }
-      .arrow{ stroke: #2b7fff; stroke-width: 4; fill: none; }
+      .arG { stroke: #2e9e4f; stroke-width: 4; fill: none; }
+      .arA { stroke: #b8860b; stroke-width: 4; fill: none; }
+      .arB { stroke: #2b7fff; stroke-width: 4; fill: none; }
     </style>
-    <filter id="soft" x="-8%" y="-10%" width="116%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
-    <filter id="gG" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2e9e4f" flood-opacity="0.5"/></filter>
-    <filter id="gA" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#e2b93b" flood-opacity="0.55"/></filter>
-    <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#2b7fff"/></marker>
+    <filter id="soft" x="-10%" y="-12%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
+    <filter id="gG" x="-25%" y="-45%" width="150%" height="190%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2e9e4f" flood-opacity="0.5"/></filter>
+    <filter id="gA" x="-25%" y="-45%" width="150%" height="190%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#e2b93b" flood-opacity="0.55"/></filter>
+    <marker id="mB" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#2b7fff"/></marker>
+    <marker id="mG" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#2e9e4f"/></marker>
+    <marker id="mA" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#b8860b"/></marker>
   </defs>
 
   <text x="360" y="54" text-anchor="middle" class="h title">The Month-2 Invoice Loop</text>
-  <text x="360" y="90" text-anchor="middle" class="h sub">Predict first - the invoice becomes a comparison, not a surprise.</text>
+  <text x="360" y="90" text-anchor="middle" class="h sub">Predict first, and the invoice is a comparison - not a surprise.</text>
 
-  <!-- 3 process chips (narrower, no overflow) -->
-  <g transform="translate(0,118) rotate(-0.5 113 40)"><rect x="20" y="0" width="186" height="80" rx="14" class="chip"/>
+  <!-- 3 process chips -->
+  <g transform="translate(0,116) rotate(-0.5 113 40)"><rect x="20" y="0" width="186" height="80" rx="14" class="chip"/>
     <circle cx="46" cy="30" r="16" class="num"/><text x="46" y="38" text-anchor="middle" class="h numt">1</text>
     <text x="70" y="34" class="h ct">Sign SOW</text><text x="70" y="60" class="h cs">3 clauses</text></g>
-  <g transform="translate(0,118) rotate(0.5 329 40)"><rect x="236" y="0" width="186" height="80" rx="14" class="chip"/>
+  <g transform="translate(0,116) rotate(0.5 329 40)"><rect x="236" y="0" width="186" height="80" rx="14" class="chip"/>
     <circle cx="262" cy="30" r="16" class="num"/><text x="262" y="38" text-anchor="middle" class="h numt">2</text>
     <text x="286" y="34" class="h ct">Predict it</text><text x="286" y="60" class="h cs">&#215; cost &#215; margin</text></g>
-  <g transform="translate(0,118) rotate(-0.4 545 40)"><rect x="452" y="0" width="186" height="80" rx="14" class="chip"/>
+  <g transform="translate(0,116) rotate(-0.4 545 40)"><rect x="452" y="0" width="186" height="80" rx="14" class="chip"/>
     <circle cx="478" cy="30" r="16" class="num"/><text x="478" y="38" text-anchor="middle" class="h numt">3</text>
     <text x="502" y="34" class="h ct">Invoice</text><text x="502" y="60" class="h cs">compare it</text></g>
-  <path d="M 208 158 L 234 158" class="arrow" marker-end="url(#ab)"/>
-  <path d="M 424 158 L 450 158" class="arrow" marker-end="url(#ab)"/>
+  <path d="M 206 156 L 234 156" class="arB" marker-end="url(#mB)"/>
+  <path d="M 422 156 L 450 156" class="arB" marker-end="url(#mB)"/>
 
-  <!-- Hero decision -->
-  <text x="360" y="268" text-anchor="middle" class="h gate">Off by more than &#177;20%?</text>
-  <path d="M 250 286 C 190 312, 150 318, 138 340" class="arrow" marker-end="url(#ab)"/>
-  <path d="M 470 286 C 530 312, 570 318, 582 340" class="arrow" marker-end="url(#ab)"/>
+  <!-- Decision -->
+  <text x="360" y="256" text-anchor="middle" class="h gate">Off by more than &#177;20%?</text>
 
-  <!-- Within band -->
-  <g transform="rotate(0.3 360 402)"><rect x="40" y="344" width="640" height="116" rx="18" class="cardG"/>
-    <text x="64" y="388" class="h og">&#10003; Within &#177;20%: pay it</text>
-    <text x="64" y="424" class="h body">Pay the invoice, and mark it the baseline</text>
-    <text x="64" y="450" class="h body">for every month after.</text></g>
+  <!-- Fork: NO -> left/green, YES -> right/amber -->
+  <text x="150" y="300" text-anchor="middle" class="h yn" fill="#2e9e4f">NO</text>
+  <text x="570" y="300" text-anchor="middle" class="h yn" fill="#b8860b">YES</text>
+  <path d="M 300 274 C 220 292, 175 300, 165 322" class="arG" marker-end="url(#mG)"/>
+  <path d="M 420 274 C 500 292, 545 300, 555 322" class="arA" marker-end="url(#mA)"/>
 
-  <!-- Over band -->
-  <g transform="rotate(-0.3 360 566)"><rect x="40" y="480" width="640" height="150" rx="18" class="cardA"/>
-    <text x="64" y="524" class="h oa">&#10007; 20%+ over: demand the breakdown</text>
-    <text x="64" y="566" class="h body"><tspan class="ok">&#10003;</tspan> A hard ticket &#8594; raise the budget alert, carry on.</text>
-    <text x="64" y="604" class="h body"><tspan class="bad">&#10007;</tspan> Margin or padding &#8594; push back, cite Clause 1.</text></g>
+  <!-- Left: within -->
+  <rect x="26" y="326" width="320" height="196" rx="20" class="cardG"/>
+  <text x="186" y="372" text-anchor="middle" class="h og">&#10003; Within &#177;20%</text>
+  <text x="186" y="416" text-anchor="middle" class="h body">Pay it.</text>
+  <text x="186" y="450" text-anchor="middle" class="h body">Set the baseline for</text>
+  <text x="186" y="480" text-anchor="middle" class="h body">every month after.</text>
 
-  <text x="360" y="694" text-anchor="middle" class="h foot">Quarterly: re-predict from the usage dashboards (Clause 3).</text>
+  <!-- Right: over -->
+  <rect x="374" y="326" width="320" height="196" rx="20" class="cardA"/>
+  <text x="534" y="372" text-anchor="middle" class="h oa">&#10007; 20%+ over</text>
+  <text x="398" y="414" class="h body">Demand the breakdown:</text>
+  <text x="398" y="452" class="h body"><tspan class="ok">&#10003;</tspan> ticket &#8594; budget alert</text>
+  <text x="398" y="490" class="h body"><tspan class="bad">&#10007;</tspan> padding &#8594; cite Clause 1</text>
+
+  <text x="360" y="576" text-anchor="middle" class="h foot">Quarterly: re-predict from the dashboards (Clause 3).</text>
 </svg>
