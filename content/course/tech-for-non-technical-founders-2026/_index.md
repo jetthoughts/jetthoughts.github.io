@@ -41,9 +41,7 @@ hero_secondary_text: "3-minute Quickstart"
 
 The first checkpoint comes fast: two to three weeks in, at an evenings-and-weekends pace, you get a go/iterate/kill verdict on your **Founding Hypothesis** (the one-sentence version of your idea: who the customer is, what problem you solve, why they'd pick you) from real demand data instead of polite nods from friends.
 
-Two ways in: [Start Lesson 1.1 →](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) or [see the full syllabus ↓](#module-map). *Prefer a map first? [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) (10 minutes) and the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) cover the route and the most common blockers.*
-
-Already building, or paying someone to build for you? Start at the [ownership audit in Lesson 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - the [Already started building? side-path](/course/tech-for-non-technical-founders-2026/how-this-course-works/#already-started-building) explains the fork.
+<aside class="start-note"><strong>Already building, or paying someone to build for you?</strong> Start at the <a href="/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/">ownership audit in Lesson 4.2 →</a> - check you actually own your accounts, code, and data first.</aside>
 
 ## Why this course exists
 
@@ -60,7 +58,7 @@ The five mistakes below sink more first products than bad code does - we have wa
 
 ## Module map
 
-Read the modules in order - each module's output is the next module's input, and each card's **"You leave with"** line names its output. The artifacts bundle into a single Google Drive folder - your **Founder OS** ([printable pack index](/course/tech-for-non-technical-founders-2026/founder-os-pack/)).
+Read the modules in order - each module's output is the next module's input, and each card's **"You leave with"** line names its output. The artifacts bundle into a single Google Drive folder - your **Founder OS** ([printable pack index](/course/tech-for-non-technical-founders-2026/founder-os-pack/)). New here? [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) walks the whole route in 10 minutes, and the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) covers the most common blockers.
 
 <div class="module-rail">
 

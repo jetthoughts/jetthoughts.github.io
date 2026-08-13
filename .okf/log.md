@@ -1,5 +1,39 @@
 # Bundle Update Log
 
+## 2026-08-13 (visual gate) - a new component needs cold eyes, not the implementer's
+
+* **Update**: `docs/workflows/visual-scroll-gate.md` §Design-quality pass gains
+  item 7; `.okf/workflows/visual-scroll-gate.md` mirrors it.
+* **The finding**: the UI-gatekeeper rule was followed to the letter - screenshot
+  taken, read, judged "much better than before" - and the component was still
+  rejected on sight, later scoring 3/10 from a design critic. Two blind spots the
+  implementer cannot self-detect: the **wrong anchor** (better than the thing you
+  just replaced, when that was also bad) and **solving the symptom** (a
+  link-density complaint that was really "this element does not belong in this
+  slot" - a prettier wrong element still fails).
+* **The rule**: tweak to an existing pattern = self-review OK; a pattern NEW to
+  the page = one cold-eyes critic on the render before handback. Cheapest form:
+  render 2-3 variants, screenshot at 1280x800 + 390x844, let the owner pick from
+  images rather than prose - that took ~6 minutes and ended the debate.
+
+## 2026-08-13 (course landing) - the post-hero slot is not a router
+
+* **New concept**: `.okf/design/course-landing-components.md` - the landing's
+  composition rules (one loud element, 3 dark zones, soft-card dialect) plus a
+  ruling on the entry block.
+* **The finding**: a 3-row "Where to start" router table (`.start-router` `<dl>`)
+  shipped under the hero and was rejected on sight. Four independent critics
+  (ICP-reader, CRO, visual-design, IA) all recommended deleting it; a Codex
+  refutation pass then caught that "delete to prose" would ignore the stated
+  intent (a visual component) AND silently drop the page's only links to How
+  This Course Works and the FAQ. Only 2 of 6 router links were unique.
+* **The fix**: `.start-note` - one asymmetric callout carrying only the
+  already-building -> Lesson 4.2 fork (~79px desktop / 130px mobile, down from
+  ~200px). Wayfinding moved to the module-map intro. The first mistake card now
+  lands at y~643 instead of ~760 on desktop.
+* **Reusable rule**: before adding a navigational component to a landing page,
+  count how many times each destination is already reachable elsewhere on it.
+
 ## 2026-08-13 (first full SEO review) - the GA4 traffic number was never real
 
 * **Update**: `.okf/workflows/analytics-access.md` gains a "Reading the numbers"

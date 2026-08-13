@@ -674,3 +674,33 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(204, 52, 45, 0.23);
 }
+
+/* Entry fork - the one route the hero does not already cover: readers who
+   are mid-build or paying a shop. Bold lead-in + one link, so the hero
+   keeps the only "start" CTA and a minority branch stays subordinate.
+   Wayfinding (How This Course Works, FAQ) lives with the module map, where
+   the reader is actually choosing a route. */
+.blog .start-note {
+  max-width: 720px;
+  margin: 26px 0 8px;
+  padding: 14px 20px;
+  border-left: 4px solid var(--color-ruby);
+  border-radius: 0 12px 12px 0;
+  background: #f8f8fa;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.blog .start-note strong {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  color: #0d1117;
+}
+.blog .start-note a {
+  color: #1f2937 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #d1d5db;
+}
+.blog .start-note a:hover {
+  color: var(--color-ruby) !important;
+  text-decoration-color: currentColor;
+}
