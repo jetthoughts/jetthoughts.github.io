@@ -17,7 +17,7 @@
     .stage-head h2 { font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; margin: 0; }
     .stage-head .count { font-weight: 700; color: var(--accent); }
     .stage-head small { font-weight: normal; color: var(--muted); font-size: .74rem; }
-    .stage-now { --accent:#1f9d55; } .stage-next { --accent:#b8860b; } .stage-future { --accent:#8a8f98; }
+    .stage-onli { --accent:#1f9d55; } .stage-approved { --accent:#0a66c2; } .stage-review { --accent:#b8860b; } .stage-backlog { --accent:#8a8f98; }
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: .65rem; }
     .card { display: block; background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; padding: .65rem .75rem; text-decoration: none; color: inherit; min-width: 0; transition: box-shadow .12s, transform .12s; }
     .card:hover { box-shadow: 0 2px 10px rgba(0,0,0,.08); transform: translateY(-1px); }
@@ -39,9 +39,10 @@
     {{ $posts := where .RegularPagesRecursive "Params.status" "!=" nil }}
     {{ $scheduled := where $posts "Params.status" "scheduled" }}
     {{ $posted := first 5 (sort (where $posts "Params.status" "posted") "Params.posted_for" "desc") }}
-    {{ $now := $posted | append $scheduled }}
-    {{ $next := sort (where $posts "Params.stage" "next") "Params.proposed_for" }}
-    {{ $future := where $posts "Params.stage" "future" }}
+    {{ $onli := $posted | append $scheduled }}
+    {{ $approved := sort (where $posts "Params.status" "approved") "Params.proposed_for" }}
+    {{ $review := sort (where (where $posts "Params.status" "draft") "Params.stage" "next") "Params.proposed_for" }}
+    {{ $backlog := where (where $posts "Params.status" "draft") "Params.stage" "future" }}
 
     {{ define "cards" }}
       <div class="grid">
@@ -62,17 +63,21 @@
       </div>
     {{ end }}
 
-    <section class="stage stage-now">
-      <div class="stage-head"><h2>Now</h2><span class="count">{{ len $now }}</span><small>last 5 posted + all scheduled</small></div>
-      {{ template "cards" (dict "posts" $now) }}
+    <section class="stage stage-onli">
+      <div class="stage-head"><h2>On LinkedIn</h2><span class="count">{{ len $onli }}</span><small>scheduled or posted (image attached)</small></div>
+      {{ template "cards" (dict "posts" $onli) }}
     </section>
-    <section class="stage stage-next">
-      <div class="stage-head"><h2>Next</h2><span class="count">{{ len $next }}</span><small>revised &middot; awaiting your pre-verify</small></div>
-      {{ template "cards" (dict "posts" $next) }}
+    <section class="stage stage-approved">
+      <div class="stage-head"><h2>Approved &middot; ready to schedule</h2><span class="count">{{ len $approved }}</span><small>you approved &middot; not on LinkedIn yet</small></div>
+      {{ template "cards" (dict "posts" $approved) }}
     </section>
-    <section class="stage stage-future">
-      <div class="stage-head"><h2>Future</h2><span class="count">{{ len $future }}</span><small>backlog / retired</small></div>
-      {{ template "cards" (dict "posts" $future) }}
+    <section class="stage stage-review">
+      <div class="stage-head"><h2>Awaiting your pre-verify</h2><span class="count">{{ len $review }}</span><small>revised drafts</small></div>
+      {{ template "cards" (dict "posts" $review) }}
+    </section>
+    <section class="stage stage-backlog">
+      <div class="stage-head"><h2>Backlog</h2><span class="count">{{ len $backlog }}</span><small>not yet revised / retired</small></div>
+      {{ template "cards" (dict "posts" $backlog) }}
     </section>
   </div>
 </body>
