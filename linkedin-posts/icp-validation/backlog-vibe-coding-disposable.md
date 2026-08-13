@@ -41,12 +41,12 @@ notes: |
   credential stamps, no em dashes, no rule of three, no anaphora pairs.
 ---
 
-A vibe-coded MVP doesn't refactor into production code. You rewrite it from scratch. I've had that same request several times over the last few months, and the answer never changes.
+If you built your MVP by vibe-coding, you probably can't turn that code into the real product - you end up rewriting it from scratch.
 
-AI doesn't refactor when you ask for a fix. It generates fresh code. After a few months of patches the same broken logic lives in five or six different places in your codebase. The next fix patches one of them; the others still produce the bug. From your seat, "we fixed it" keeps turning into "wait, it's back" three days later.
+The reason is how the AI works. When you ask it to fix something, it doesn't edit your existing code, it writes new code. Do that for a few months and the same logic ends up copied in five or six places. You fix the bug in one of them and it still happens from the others, so a problem you thought was gone keeps coming back.
 
-I vibe-code on weekends too. Once the hypothesis lands, I throw the code out. Not because I'm pure about it. Because the alternative is paying for the same fix every couple of weeks for the rest of the product's life.
+I use vibe-coding too, for weekends and for testing an idea quickly. But once I know the idea works, I rewrite it properly. Otherwise I'm paying to fix the same bug again every couple of weeks.
 
-If you've been through one of these rebuilds, what did you keep, what did you throw away?
+If you've rebuilt a vibe-coded app, was any of the original code worth keeping?
 
 #ai #founders #vibecoding
