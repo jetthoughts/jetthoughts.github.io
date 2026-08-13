@@ -233,3 +233,23 @@ scale with the measured >=9px @390px floor formula - plus the exhibit
 grammar and the O1/O2 rubric. Nothing in the ADR's Phase-A spec requirement
 was left aspirational; the floor is a formula (basis 17px @ W=720 -> 9.21px)
 and every dimension is a number an SVG author can render from.
+
+## Refactoring.fm illustration style (2026-08-13, Paul - the new exhibit bar)
+
+Paul's north star for course exhibits: the refactoring.fm (Luca Rossi) illustration
+look (reference set: `docs/projects/2605-.../10-19-research/images/`). Redraw
+exhibits to THIS, not the muted #faf7f2 O2 cards:
+- **Clean white bg**, generous whitespace, minimal text, BIG labels.
+- **Big bold hand-drawn Caveat labels** with a **soft colored drop-shadow glow**
+  (SVG feDropShadow, the label's own colour, opacity ~0.5) so they pop.
+- **Saturated semantic per-element colours** (NOT muted): blue #2b7fff structure,
+  red #f2635a/#e5484d, green, amber, purple - each category its own colour.
+- **Soft tinted rounded pills** behind labels (very light tint of the label colour,
+  rx ~18) with a subtle grey drop-shadow for depth + a slight wobble rotation
+  (~0.4-0.6deg) for the hand-drawn feel.
+- **Bold blue connector arrows** (stroke ~3.5, blue arrowhead marker); purple
+  dashed arrows for callout annotations.
+- **NO emoji** (Paul 2026-08-13: "emojis look not so good, avoid them").
+- Legibility unchanged: min font >=20px Caveat, W=720, ZERO overflow (render-check
+  every one at 390 + desktop).
+Template exhibit: `five-tech-words-stop-nodding-at/jargon-translator.svg`.
