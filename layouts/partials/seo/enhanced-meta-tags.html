@@ -111,7 +111,8 @@
       {{- $resource := $page.Resources.Get . -}}
       {{- if $resource -}}
         {{- if site.Params.cdn.enabled -}}
-          {{- $image = partial "cdn/url" (dict "page" $page "resource" $resource "params" "w=1200&h=630&fit=cover&output=webp&q=85") -}}
+          {{/* og:image must be jpg/png - LinkedIn's crawler won't render WebP (Telegram/most do). Keep jpg for reliable social unfurl. */}}
+          {{- $image = partial "cdn/url" (dict "page" $page "resource" $resource "params" "w=1200&h=630&fit=cover&output=jpg&q=85") -}}
         {{- else -}}
           {{- $optimized := $resource.Resize "1200x630 jpg q90" -}}
           {{- $image = $optimized.Permalink -}}
