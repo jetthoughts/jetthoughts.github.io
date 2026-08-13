@@ -50,7 +50,7 @@ ever disagree, 20.09 wins.
 | Metric | Signal | Target |
 |---|---|---|
 | **Consultation bookings** | Primary business outcome | Founder audit/discovery calls |
-| **Organic sessions** | Growth trend | Sustained monthly growth vs ~5k baseline |
+| **Organic sessions** | Growth trend | Sustained monthly growth vs **~255 sessions/28d** baseline. The old "~5k" figure came from GA4, which is ~85-90% bot traffic - use GSC clicks + Bing/DDG, not GA4 "organic" ([seo-review-2026-08-13](seo-review-2026-08-13.md)) |
 | **Rescue-keyword rankings** | Long-horizon only: 6-12 months on a new cluster (20.09 §7); page 1 currently occupied. NOT a lever before Dec 1 | Track, don't chase |
 | **Discovery calls booked** | The bet's actual KPI - owned by [OS §3 KR2](../../business/operating-system.md), not this doc | see OS |
 | **Publishing cadence** | Execution health | ~6/month (measured capacity) |
