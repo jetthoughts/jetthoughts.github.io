@@ -6,7 +6,7 @@ resource: .stitch/prompts/course-inpost-visual-prompt.md
 tags: [svg, design, course]
 generated:
   by: process:okf-migrate
-  at: 2026-08-01T00:00:00Z
+  at: 2026-08-13T00:00:00Z
 ---
 
 # The spec in one table
@@ -258,6 +258,12 @@ exhibits to THIS, not the muted #faf7f2 O2 cards:
 - Legibility unchanged: min font >=20px Caveat, W=720, ZERO overflow (render-check
   every one at 390 + desktop).
 Template exhibit: `five-tech-words-stop-nodding-at/jargon-translator.svg`.
+
+**Consumed by LinkedIn post exhibits (2026-08-13):** `linkedin-posts/README.md`
+§"Every post carries a visual" applies this section to social cards - one
+purpose-built exhibit per post at viewBox 720×480, `rsvg-convert -w 1080` export,
+render-verified by viewing the PNG (edge-clipping is the recurring first-render
+defect). Vary the exhibit shape across sibling posts.
 
 ### Render-gate clunkiness checklist (2026-08-13 - itemize, don't vibe-check)
 

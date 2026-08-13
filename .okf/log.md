@@ -1,5 +1,30 @@
 # Bundle Update Log
 
+## 2026-08-13 (LinkedIn exhibits) - purpose-built post images consume the house spec
+
+* **Update**: `linkedin-posts/README.md` §"Every post carries a visual" rewritten
+  from "reuse a course SVG" to a purpose-built exhibit pipeline; cross-ref added
+  in `.okf/design/house-visual-spec.md`.
+* **The finding**: reusing a topic-adjacent course exhibit on a LinkedIn post
+  reads as "too much info" (Paul) - a course exhibit is built for a lesson's
+  density, not a scroll-stopping social card. The fix is one purpose-built
+  exhibit whose single message IS the post's thesis, authored to the
+  refactoring.fm house spec at **viewBox 720×480**, exported
+  `rsvg-convert -w 1080`, and **render-verified by viewing the PNG**.
+* **The recurring defect**: every hand-authored exhibit this session clipped its
+  title or a long row at the viewBox edge on first render (Caveat runs wider than
+  estimated, esp. bold). Cannot be caught without viewing the export - shorten
+  text or drop 1-2px, re-export, re-view. `xml:space="preserve"` stops
+  inter-`tspan` spaces collapsing.
+* **The rule**: vary exhibit SHAPE across sibling posts (contrast / fork /
+  swap-table / flow) so the feed isn't one repeated diagram - the same
+  cross-post-repetition discipline as anecdotes/openers.
+* **Board (dev-only) evolved**: `layouts/linkedin/single.html` → 2-col
+  image|body with the Details panel full-width at the bottom (frees width at
+  MBP-14), image column 460px, image is a click-to-open-new-tab link
+  (drag-to-attach preserved); prev/next nav now traverses in board order
+  (chronological by effective date), not Hugo section order.
+
 ## 2026-08-13 (visual gate) - a new component needs cold eyes, not the implementer's
 
 * **Update**: `docs/workflows/visual-scroll-gate.md` §Design-quality pass gains

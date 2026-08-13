@@ -43,10 +43,31 @@ lane per post, alternating.
 
 ## Every post carries a visual (Paul: "missed images")
 
-Each post gets one image in its lane's `assets/`. Reuse course exhibits (the
-refactoring.fm-style SVGs) exported to PNG via `rsvg-convert -w 1080 <svg> -o <png>`
-— they're on-brand and seed the course bridge without a link. Frontmatter records
-the path.
+Each post gets one image in its lane's `assets/`. Frontmatter records the path
+(`image: assets/<slug>.png`).
+
+**Prefer a purpose-built exhibit over a reused course SVG** (Paul 2026-08-13:
+reused exhibits carry "too much info" for the LinkedIn context). Build one
+exhibit whose single message IS the post's thesis:
+
+1. **Author the SVG** at `assets/<slug>.svg`, house style
+   (`.okf/design/house-visual-spec.md` → refactoring.fm section): clean white bg,
+   **viewBox 720×480 (3:2)**, big Caveat labels with a soft same-colour glow
+   (`feDropShadow`), saturated semantic colours (blue #2b7fff structure/arrows,
+   red #e5484d anti-pattern, green #2e7d32 money/success only, amber #f59e0b,
+   purple #a855f7), tinted pills, **no emoji**, one action title + one message +
+   one basis line, min font 20px Caveat.
+2. **Keep it to 2-3 nodes.** Vary the shape across sibling posts (contrast pair,
+   fork, swap-table, flow) so the feed isn't all one diagram.
+3. **Export:** `rsvg-convert -w 1080 assets/<slug>.svg -o assets/<slug>.png`.
+4. **Render-verify EVERY exhibit** by viewing the PNG: the #1 defect is **text
+   overflow clipping the viewBox edges** (long titles/rows). Fix by shortening
+   text or dropping 1-2px, re-export, re-view. `xml:space="preserve"` keeps
+   inter-`tspan` spaces from collapsing. Then run the 6-item clunkiness checklist
+   (house-visual-spec) before it ships.
+
+Keep the `.svg` source beside the `.png` so the exhibit is editable later.
+Reusing a topic-perfect course exhibit is still fine when one exists.
 
 > **Known tooling gap:** claude-in-chrome can schedule text but cannot drive
 > LinkedIn's native file-upload dialog. Until solved, the image is attached
