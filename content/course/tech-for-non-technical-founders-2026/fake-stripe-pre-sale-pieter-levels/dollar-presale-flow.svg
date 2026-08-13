@@ -1,54 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-labelledby="presale-title">
-  <title id="presale-title">The $1 pre-sale flow, from button to proof</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1000" role="img" aria-labelledby="dp-title">
+  <title id="dp-title">The $1 pre-sale flow, from button to proof. A real $1 charge beats a free email signup with the same visitors and a sharper signal. Step 1 the button: reserve your spot, $1 today, refundable if we don't ship by the date. Step 2 the charge: a real $1 Stripe charge is a wallet decision, conversion drops 3-5x but the signal is truer. Step 3 the promise: a full refund within 7 days if we don't ship, and refund every charge within 30 days. Step 4 what the click proved: 0 sales means the price or hypothesis is wrong, 1-10 sales means iterate headline and targeting, 50+ sales is a PMF signal to start building.</title>
+  <desc>A four-step vertical flow. 1, the button: reserve your spot, $1 today, refundable if we don't ship by the date, using the same Stripe Payment Link as Lesson 1.5. 2, the charge: a real $1 Stripe charge, a wallet decision not a free email click; conversion drops 3-5x but the signal is truer. 3, the promise: the thank-you page promises a full refund within 7 days if we don't ship, and every charge is refunded within 30 days. 4, what the click proved: 0 sales means price or hypothesis wrong, 1-10 sales means iterate headline and targeting, 50 or more sales is a product-market-fit signal to start building. Footer: the click proves demand, not a business.</desc>
   <defs>
     <style>
-      .heading      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .step-label   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 21px; fill: #1a1a1a; font-weight: 700; }
-      .step-rule    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #333; }
-      .step-note    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #444; font-style: italic; }
-      .money-line   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #15803d; font-weight: 700; }
-      .subtitle     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
-      .step-button  { fill: #faf7f2; stroke: #1a1a1a; stroke-width: 2.5; }
-      .step-charge  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
-      .step-promise { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
-      .step-proof   { fill: #faf7f2; stroke: #1a1a1a; stroke-width: 2.5; }
-      .callout      { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
+      .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title{ font-size: 46px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .sub  { font-size: 23px; fill: #667085; }
+      .card { fill: #f6f9ff; stroke: #6aa8ff; stroke-width: 2.5; filter: url(#soft); }
+      .num  { fill: #2b7fff; }
+      .numt { font-size: 26px; font-weight: 700; fill: #fff; }
+      .stept{ font-size: 26px; font-weight: 700; fill: #2b7fff; filter: url(#gB); }
+      .body { font-size: 22px; fill: #1a1a1a; }
+      .note { font-size: 20px; fill: #667085; font-style: italic; }
+      .o0 { font-size: 22px; font-weight: 700; fill: #b42318; }
+      .o1 { font-size: 22px; font-weight: 700; fill: #b8860b; }
+      .o5 { font-size: 22px; font-weight: 700; fill: #1a6b34; }
+      .foot { font-size: 24px; font-weight: 700; fill: #1a1a1a; }
+      .arrow{ stroke: #2b7fff; stroke-width: 3.5; fill: none; }
     </style>
+    <filter id="soft" x="-6%" y="-10%" width="112%" height="120%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
+    <filter id="gB" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2b7fff" flood-opacity="0.5"/></filter>
+    <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#2b7fff"/></marker>
   </defs>
 
-  <text x="500" y="40" class="heading" text-anchor="middle">The $1 pre-sale flow</text>
-  <text x="500" y="68" class="subtitle" text-anchor="middle">A real $1 charge beats a free email signup - same visitors, sharper signal.</text>
+  <text x="360" y="54" text-anchor="middle" class="h title">The $1 Pre-Sale Flow</text>
+  <text x="360" y="90" text-anchor="middle" class="h sub">A real $1 charge beats a free email signup - sharper signal.</text>
 
-  <!-- Step 1: The button -->
-  <rect x="60" y="100" width="430" height="180" rx="14" class="step-button" transform="rotate(-0.3 275 190)"/>
-  <text x="275" y="134" class="step-label" text-anchor="middle">1. THE BUTTON</text>
-  <text x="275" y="168" class="step-rule" text-anchor="middle">"Reserve your spot - $1 today,</text>
-  <text x="275" y="192" class="step-rule" text-anchor="middle">refundable if we don't ship by [DATE]."</text>
-  <text x="275" y="222" class="step-note" text-anchor="middle">Same Stripe Payment Link setup as Lesson 1.5.</text>
+  <!-- Step 1 -->
+  <g transform="translate(0,110)"><rect x="30" y="0" width="660" height="150" rx="18" class="card"/>
+    <circle cx="72" cy="46" r="24" class="num"/><text x="72" y="55" text-anchor="middle" class="h numt">1</text>
+    <text x="110" y="42" class="h stept">THE BUTTON</text>
+    <text x="110" y="82" class="h body">"Reserve your spot - $1 today, refundable if we don't ship."</text>
+    <text x="110" y="120" class="h note">Same Stripe Payment Link setup as Lesson 1.5.</text></g>
+  <path d="M 360 262 L 360 288" class="arrow" marker-end="url(#ab)"/>
 
-  <!-- Step 2: The charge -->
-  <rect x="510" y="100" width="430" height="180" rx="14" class="step-charge" transform="rotate(0.4 725 190)"/>
-  <text x="725" y="134" class="step-label" text-anchor="middle">2. THE CHARGE</text>
-  <text x="725" y="168" class="step-rule" text-anchor="middle">A real $1 Stripe charge - a wallet</text>
-  <text x="725" y="192" class="step-rule" text-anchor="middle">decision, not a free email click.</text>
-  <text x="725" y="222" class="step-note" text-anchor="middle">Conversion drops 3-5x - fewer clicks, truer signal.</text>
+  <!-- Step 2 -->
+  <g transform="translate(0,292)"><rect x="30" y="0" width="660" height="150" rx="18" class="card"/>
+    <circle cx="72" cy="46" r="24" class="num"/><text x="72" y="55" text-anchor="middle" class="h numt">2</text>
+    <text x="110" y="42" class="h stept">THE CHARGE</text>
+    <text x="110" y="82" class="h body">A real $1 Stripe charge - a wallet decision, not a free click.</text>
+    <text x="110" y="120" class="h note">Conversion drops 3-5x: fewer clicks, truer signal.</text></g>
+  <path d="M 360 444 L 360 470" class="arrow" marker-end="url(#ab)"/>
 
-  <!-- Step 3: The promise -->
-  <rect x="60" y="310" width="430" height="180" rx="14" class="step-promise" transform="rotate(0.3 275 400)"/>
-  <text x="275" y="344" class="step-label" text-anchor="middle">3. THE PROMISE</text>
-  <text x="275" y="378" class="step-rule" text-anchor="middle">Thank-you page promises a full refund</text>
-  <text x="275" y="402" class="step-rule" text-anchor="middle">within 7 days if we don't ship by [DATE].</text>
-  <text x="275" y="432" class="step-note" text-anchor="middle">Non-negotiable: refund every charge within 30 days.</text>
+  <!-- Step 3 -->
+  <g transform="translate(0,474)"><rect x="30" y="0" width="660" height="150" rx="18" class="card"/>
+    <circle cx="72" cy="46" r="24" class="num"/><text x="72" y="55" text-anchor="middle" class="h numt">3</text>
+    <text x="110" y="42" class="h stept">THE PROMISE</text>
+    <text x="110" y="82" class="h body">Full refund within 7 days if we don't ship by the date.</text>
+    <text x="110" y="120" class="h note">Non-negotiable: refund every charge within 30 days.</text></g>
+  <path d="M 360 626 L 360 652" class="arrow" marker-end="url(#ab)"/>
 
-  <!-- Step 4: What the click proved -->
-  <rect x="510" y="310" width="430" height="180" rx="14" class="step-proof" transform="rotate(-0.4 725 400)"/>
-  <text x="725" y="344" class="step-label" text-anchor="middle">4. WHAT THE CLICK PROVED</text>
-  <text x="725" y="378" class="step-rule" text-anchor="middle">0 sales: hypothesis or price is wrong.</text>
-  <text x="725" y="402" class="step-rule" text-anchor="middle">1-10 sales: iterate headline + targeting.</text>
-  <text x="725" y="432" class="money-line" text-anchor="middle">50+ sales: PMF signal - start building.</text>
+  <!-- Step 4 -->
+  <g transform="translate(0,656)"><rect x="30" y="0" width="660" height="212" rx="18" class="card"/>
+    <circle cx="72" cy="46" r="24" class="num"/><text x="72" y="55" text-anchor="middle" class="h numt">4</text>
+    <text x="110" y="42" class="h stept">WHAT THE CLICK PROVED</text>
+    <text x="60" y="92" class="h o0">0 sales &#8594; price or hypothesis is wrong.</text>
+    <text x="60" y="130" class="h o1">1-10 sales &#8594; iterate headline + targeting.</text>
+    <text x="60" y="168" class="h o5">50+ sales &#8594; PMF signal, start building.</text></g>
 
-  <!-- Bottom callout -->
-  <rect x="80" y="520" width="840" height="65" rx="12" class="callout"/>
-  <text x="500" y="546" class="step-label" text-anchor="middle">The click proves demand. Not a business.</text>
-  <text x="500" y="572" class="step-note" text-anchor="middle">Retention (5.1) and unit economics are separate, later tests.</text>
+  <text x="360" y="930" text-anchor="middle" class="h foot">The click proves demand - not a business (yet).</text>
 </svg>
