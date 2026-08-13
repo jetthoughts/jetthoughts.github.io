@@ -13,8 +13,9 @@ Status legend: `draft` (old parable, needs revision) · `revised` (idea-first, r
 | Week of | Slot | Lane | Post | Status |
 |---|---|---|---|---|
 | 2026-08-11 | Thu | course | `course-promo/week1-thu-validate-before-build` | **scheduled** (text; image added manually; first comment pending) |
-| 2026-08-18 | Tue | rescue | `icp-validation/week1-mon-jira-not-progress` → revise to idea-first | draft |
-| 2026-08-18 | Thu | course | `course-promo/week1-mon-built-before-testing` → revise (or merge w/ validate-before-build) | draft |
+| 2026-08-18 | Tue | rescue | `icp-validation/week1-mon-jira-not-progress` (verify-progress) | **revised** ✓ idea-first + demo-rule visual; ready for pre-verify |
+| 2026-08-18 | Thu | course | `course-promo/week1-mon-built-before-testing` | **RETIRED** - duplicate of validate-before-build (shipped 08-13); use a distinct topic |
+| 2026-08-18 | Thu (alt) | course | `course-promo/week1-tue-founding-hypothesis` → revise to idea-first | draft (next) |
 | 2026-08-25 | Tue | rescue | `icp-validation/week1-tue-staging-question` → revise | draft |
 | 2026-08-25 | Thu | course | `course-promo/week1-tue-founding-hypothesis` → revise | draft |
 | 2026-09-01 | Tue | rescue | `icp-validation/week1-wed-trust-signals-poll` → revise | draft |
