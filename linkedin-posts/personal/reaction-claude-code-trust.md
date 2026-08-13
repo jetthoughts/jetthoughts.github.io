@@ -21,8 +21,8 @@ notes: |
   Idea-first, no em dashes, one flat admission opener.
 ---
 
-I'd mostly given up on AI coding agents over the winter. Too much setup, and they kept ignoring what I asked - earlier versions of Opus included.
+I walked away from AI coding agents over the winter. Too much setup, and they kept ignoring half the instructions I gave them.
 
-The latest Opus with team mode turned that around. It does what I tell it now, and team mode replaced a bunch of the tools I used to stitch together myself. Run after run, no surprises.
+Claude Code pulled me back. Opus 4.5 and team mode cut most of the configuration, and it finally follows what I tell it. I hand a whole workflow to a team of agents and the diffs hold together, run after run.
 
-I don't need it to be clever. I just need to not babysit it.
+Consistency is boring, and it's the only thing I actually care about. I don't need clever. I need to not babysit it.
