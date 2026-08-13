@@ -21,8 +21,8 @@ notes: |
   Idea-first, no em dashes, one flat admission opener.
 ---
 
-I'd given up on AI coding agents over the winter. Too much setup, and they kept ignoring what I asked for.
+I'd mostly given up on AI coding agents over the winter. Too much setup, and they kept ignoring what I asked - earlier versions of Opus included.
 
-Claude Code changed that. It does what I tell it now and stops there. Run after run, no surprises.
+The latest Opus with team mode turned that around. It does what I tell it now, and team mode replaced a bunch of the tools I used to stitch together myself. Run after run, no surprises.
 
 I don't need it to be clever. I just need to not babysit it.
