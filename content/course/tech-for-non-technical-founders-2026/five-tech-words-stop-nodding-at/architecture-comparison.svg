@@ -1,60 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 780" role="img" aria-labelledby="ac-title">
-  <title id="ac-title">"We need to fix the architecture": a healthy Rails monolith - one clean stack of six pieces, shipped by one developer - versus an over-engineered microservice sprawl of nine services run by two platform engineers who ship zero features. DHH calls the left the one-person framework; the founders we rescue arrived from the right.</title>
-  <desc>Two columns of boxed components. Left, green, HEALTHY - a Rails monolith as a clean vertical stack: Rails monolith, Hotwire UI, ActiveRecord, Postgres, Sidekiq, Kamal deploy; one full-stack dev ships a feature idea-to-production. Right, red, OVER-ENGINEERED - a dense grid of nine services: React, Node API, Auth service, Elasticsearch, Kafka, a two-person platform team, a service mesh, three Redis clusters, Vault; two platform engineers ship zero features. Footer: the boring choice ships features, the exciting one ships plumbing; DHH calls the left the one-person framework.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 640" role="img" aria-labelledby="ac-title">
+  <title id="ac-title">"We need to fix the architecture": a healthy Rails monolith - one cohesive unit holding Hotwire, ActiveRecord, Postgres, Sidekiq and Kamal deploy, shipped by one developer - versus an over-engineered microservice sprawl of nine services wired into a tangle, run by two platform engineers who ship zero features. DHH calls the left the one-person framework.</title>
+  <desc>Left, green: one cohesive box, a Rails monolith, containing Hotwire UI, ActiveRecord, Postgres, Sidekiq and Kamal deploy - one repo, one full-stack dev ships a feature idea-to-production. Right, red: nine separate service boxes - React, Node API, Auth, Elasticsearch, Kafka, service mesh, three Redis clusters, Vault, and a platform team - wired together into a tangle of connections; two platform engineers ship zero features. The left is one simple unit; the right is a web nobody can hold in their head. Footer: the boring choice ships features, the exciting one ships plumbing; DHH calls the left the one-person framework.</desc>
   <defs>
     <style>
       .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
       .title{ font-size: 42px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
       .sub  { font-size: 23px; fill: #667085; }
-      .hg { font-size: 28px; font-weight: 700; fill: #2e9e4f; filter: url(#gG); }
-      .hr { font-size: 28px; font-weight: 700; fill: #e5484d; filter: url(#gR); }
-      .bxg{ fill: #eaf8ee; stroke: #57c06f; stroke-width: 2.5; }
-      .bxr{ fill: #fdecec; stroke: #f2635a; stroke-width: 2.5; }
-      .lg { font-size: 21px; font-weight: 700; fill: #1a6b34; }
-      .lr { font-size: 20px; font-weight: 700; fill: #b42318; }
+      .hg { font-size: 27px; font-weight: 700; fill: #2e9e4f; filter: url(#gG); }
+      .hr { font-size: 27px; font-weight: 700; fill: #e5484d; filter: url(#gR); }
+      .mono{ fill: #eafaef; stroke: #2e9e4f; stroke-width: 4; filter: url(#soft); }
+      .monoT{ font-size: 26px; font-weight: 700; fill: #1a6b34; }
+      .piece{ font-size: 21px; fill: #1a6b34; }
+      .svc { fill: #fdecec; stroke: #f2635a; stroke-width: 2.5; }
+      .svcT{ font-size: 18px; font-weight: 700; fill: #b42318; }
+      .wire{ stroke: #e59a97; stroke-width: 2; fill: none; }
       .resG { font-size: 22px; font-weight: 700; fill: #1a6b34; }
       .resR { font-size: 22px; font-weight: 700; fill: #b42318; }
       .foot { font-size: 22px; fill: #1a1a1a; }
       .foots{ font-size: 21px; fill: #667085; font-style: italic; }
     </style>
-    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#1a1a2e" flood-opacity="0.12"/></filter>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#1a1a2e" flood-opacity="0.12"/></filter>
     <filter id="gG" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2e9e4f" flood-opacity="0.5"/></filter>
     <filter id="gR" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#f2635a" flood-opacity="0.5"/></filter>
   </defs>
 
   <text x="360" y="52" text-anchor="middle" class="h title">"Fix the architecture"</text>
-  <text x="360" y="88" text-anchor="middle" class="h sub">Pre-Series-A - which stack ships features?</text>
+  <text x="360" y="88" text-anchor="middle" class="h sub">Pre-Series-A - which one ships features?</text>
 
-  <text x="186" y="146" text-anchor="middle" class="h hg">&#10003; HEALTHY</text>
-  <text x="534" y="146" text-anchor="middle" class="h hr">&#10007; OVER-ENGINEERED</text>
+  <text x="185" y="140" text-anchor="middle" class="h hg">&#10003; HEALTHY</text>
+  <text x="534" y="140" text-anchor="middle" class="h hr">&#10007; OVER-ENGINEERED</text>
 
-  <!-- Green: clean vertical monolith stack (6 boxes) -->
-  <g filter="url(#soft)">
-  <rect x="46" y="172" width="280" height="52" rx="12" class="bxg"/><text x="186" y="205" text-anchor="middle" class="h lg">Rails monolith</text>
-  <rect x="46" y="232" width="280" height="52" rx="12" class="bxg"/><text x="186" y="265" text-anchor="middle" class="h lg">Hotwire UI</text>
-  <rect x="46" y="292" width="280" height="52" rx="12" class="bxg"/><text x="186" y="325" text-anchor="middle" class="h lg">ActiveRecord</text>
-  <rect x="46" y="352" width="280" height="52" rx="12" class="bxg"/><text x="186" y="385" text-anchor="middle" class="h lg">Postgres</text>
-  <rect x="46" y="412" width="280" height="52" rx="12" class="bxg"/><text x="186" y="445" text-anchor="middle" class="h lg">Sidekiq</text>
-  <rect x="46" y="472" width="280" height="52" rx="12" class="bxg"/><text x="186" y="505" text-anchor="middle" class="h lg">Kamal deploy</text>
+  <!-- Green: ONE cohesive monolith box -->
+  <rect x="44" y="164" width="282" height="300" rx="22" class="mono"/>
+  <text x="185" y="208" text-anchor="middle" class="h monoT">Rails monolith</text>
+  <line x1="74" y1="224" x2="296" y2="224" stroke="#a7dcb6" stroke-width="2"/>
+  <text x="185" y="264" text-anchor="middle" class="h piece">Hotwire UI</text>
+  <text x="185" y="302" text-anchor="middle" class="h piece">ActiveRecord</text>
+  <text x="185" y="340" text-anchor="middle" class="h piece">Postgres</text>
+  <text x="185" y="378" text-anchor="middle" class="h piece">Sidekiq</text>
+  <text x="185" y="416" text-anchor="middle" class="h piece">Kamal deploy</text>
+  <text x="185" y="450" text-anchor="middle" class="h piece" font-style="italic" fill="#667085">one repo</text>
+
+  <!-- Red: tangled web of services -->
+  <!-- wires first (behind boxes) -->
+  <g class="wire">
+    <path d="M 452 208 L 610 200"/><path d="M 452 208 L 452 290"/><path d="M 610 200 L 636 288"/>
+    <path d="M 452 290 L 610 200"/><path d="M 452 290 L 540 348"/><path d="M 636 288 L 540 348"/>
+    <path d="M 540 348 L 452 410"/><path d="M 540 348 L 632 410"/><path d="M 452 410 L 632 410"/>
+    <path d="M 452 290 L 636 288"/><path d="M 610 200 L 540 348"/><path d="M 452 208 L 540 348"/>
+    <path d="M 632 410 L 636 288"/><path d="M 452 410 L 540 348"/>
   </g>
-  <text x="186" y="588" text-anchor="middle" class="h resG">1 dev ships a feature,</text>
-  <text x="186" y="616" text-anchor="middle" class="h resG">idea to production.</text>
-
-  <!-- Red: dense 2-col grid of 9 services -->
-  <g filter="url(#soft)">
-  <rect x="392" y="172" width="146" height="52" rx="12" class="bxr"/><text x="465" y="205" text-anchor="middle" class="h lr">React</text>
-  <rect x="548" y="172" width="146" height="52" rx="12" class="bxr"/><text x="621" y="205" text-anchor="middle" class="h lr">Node API</text>
-  <rect x="392" y="232" width="146" height="52" rx="12" class="bxr"/><text x="465" y="265" text-anchor="middle" class="h lr">Auth svc</text>
-  <rect x="548" y="232" width="146" height="52" rx="12" class="bxr"/><text x="621" y="265" text-anchor="middle" class="h lr">Elasticsearch</text>
-  <rect x="392" y="292" width="146" height="52" rx="12" class="bxr"/><text x="465" y="325" text-anchor="middle" class="h lr">Kafka</text>
-  <rect x="548" y="292" width="146" height="52" rx="12" class="bxr"/><text x="621" y="325" text-anchor="middle" class="h lr">Platform &#215;2</text>
-  <rect x="392" y="352" width="146" height="52" rx="12" class="bxr"/><text x="465" y="385" text-anchor="middle" class="h lr">Service mesh</text>
-  <rect x="548" y="352" width="146" height="52" rx="12" class="bxr"/><text x="621" y="385" text-anchor="middle" class="h lr">Redis &#215;3</text>
-  <rect x="470" y="412" width="146" height="52" rx="12" class="bxr"/><text x="543" y="445" text-anchor="middle" class="h lr">Vault</text>
+  <g>
+    <rect x="404" y="186" width="96" height="44" rx="11" class="svc"/><text x="452" y="214" text-anchor="middle" class="h svcT">React</text>
+    <rect x="562" y="178" width="96" height="44" rx="11" class="svc"/><text x="610" y="206" text-anchor="middle" class="h svcT">Node API</text>
+    <rect x="404" y="268" width="96" height="44" rx="11" class="svc"/><text x="452" y="296" text-anchor="middle" class="h svcT">Auth</text>
+    <rect x="588" y="266" width="100" height="44" rx="11" class="svc"/><text x="638" y="294" text-anchor="middle" class="h svcT">Elasticsearch</text>
+    <rect x="492" y="326" width="96" height="44" rx="11" class="svc"/><text x="540" y="354" text-anchor="middle" class="h svcT">Kafka</text>
+    <rect x="404" y="388" width="96" height="44" rx="11" class="svc"/><text x="452" y="416" text-anchor="middle" class="h svcT">Mesh</text>
+    <rect x="584" y="388" width="96" height="44" rx="11" class="svc"/><text x="632" y="416" text-anchor="middle" class="h svcT">Redis &#215;3</text>
+    <rect x="494" y="404" width="92" height="40" rx="11" class="svc"/><text x="540" y="430" text-anchor="middle" class="h svcT">Vault</text>
   </g>
-  <text x="543" y="588" text-anchor="middle" class="h resR">2 platform engineers,</text>
-  <text x="543" y="616" text-anchor="middle" class="h resR">0 features shipped.</text>
 
-  <text x="360" y="690" text-anchor="middle" class="h foot" font-weight="700">The boring choice ships features. The exciting one ships plumbing.</text>
-  <text x="360" y="726" text-anchor="middle" class="h foots">DHH calls the left "the one-person framework."</text>
+  <text x="185" y="516" text-anchor="middle" class="h resG">1 dev ships a feature.</text>
+  <text x="534" y="516" text-anchor="middle" class="h resR">2 engineers, 0 features.</text>
+
+  <text x="360" y="580" text-anchor="middle" class="h foot" font-weight="700">The boring choice ships features. The exciting one ships plumbing.</text>
+  <text x="360" y="614" text-anchor="middle" class="h foots">DHH calls the left "the one-person framework."</text>
 </svg>
