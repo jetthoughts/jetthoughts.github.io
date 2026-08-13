@@ -1164,3 +1164,62 @@ calls → pause, re-open A + C." Clock starts at first post or first send.
    names" was unsatisfiable; "2-3 past-client referral asks" survives because
    a referral source need not be the ICP. Demote, don't delete, when a weaker
    form retains value.
+
+## 2026-08-13 - Blog in-body visuals: a gate nothing enforced
+
+Audited the four posts published 2026-08-07/08 (Kamal multi-server, Lovable->Rails
+migration, Rails 7 EOL, CVE-2026-66066). The prose gates had all held: zero em
+dashes, zero bold inline-header lists, 2-8% paragraph cap breaks against the
+39-58% of the failed TDD/XP cluster, varied opener shapes, and every mechanical
+pre-publish check green.
+
+The gap was visuals. Three of four had none, and the archive said why: only 2
+posts in all of 2026 carried an in-body visual, while 25 of the 31 long posts
+published since 2026-04 carried none. CLAUDE.md's cognitive-load gate requires a
+hero visual over 800 words; nothing checked it, because
+`test/unit/diagram_rendering_test.rb` proves diagrams RENDER, not that posts HAVE
+them.
+
+**Durable rules:**
+1. **Text gates automate, visual gates rot.** Banned words and frontmatter shape
+   are greppable so they survive time pressure; "does this need a diagram" is
+   judgment and silently drops. Any gate stated only in prose will decay - give
+   it a ratchet script or expect it unenforced.
+2. **Ratchet over backfill.** 81 legacy posts are over the line and nobody is
+   backfilling them. `bin/check-post-visuals` fails only when the count RISES,
+   so new work is blocked while the backlog burns down at its own pace - same
+   shape as `bin/check-svg-floor`.
+3. **Read the OKF bundle before authoring diagrams, not after.** Skipping the
+   session-start consume meant shipping five diagrams with diamond decision
+   nodes, which `design/mermaid-theme.md` bans outright. Caught only on the
+   pre-commit maintain pass.
+4. **A cover chip is a claim with an expiry.** The Rails 7 EOL cover read "7.2
+   SUPPORT ENDS August 9, 2026" and the post was written in future tense; both
+   went stale four days after publishing. Date-bearing covers and prose need a
+   recheck whenever the date passes.
+5. **The gem never varies.** `.stitch/design.md` slot 4 is explicit - the
+   low-poly ruby is the brand throughline across ALL Ruby/Rails posts.
+   "Cover sameness" is the design working, not a defect.
+
+## 2026-08-13 - Mermaid rendered its own source as prose until fonts loaded
+
+Owner reported "images have &nbsp; on it" on the Rails 7 EOL post. Reproduced by
+stalling `document.fonts.ready`: `<div class="mermaid">` displays its raw source
+as article text - `flowchart TD R70["Rails 7.0 - ...&nbsp;"] ... classDef dead
+fill:#fff5f5,...` - because `baseof.html` defers `mermaid.run()` until fonts
+resolve and no CSS hid the div in the meantime. Fixed with one rule:
+`.mermaid:not([data-processed]) { display: none; }`.
+
+**Durable rules:**
+1. **The reported symptom is rarely the bug.** "`&nbsp;` in the image" was not an
+   entity-escaping bug - the entity decodes correctly once htmlLabels render it.
+   It was a flash-of-unrendered-source bug that happened to expose the entity.
+   Chasing the escaping would have produced a fix that changed nothing.
+2. **Deferring render needs a matching hide.** Any "wait for X, then swap the
+   DOM" pattern leaves the pre-swap content visible for the length of X. The
+   font-gated `mermaid.run()` was added to fix label CLIPPING and silently
+   created a worse visual defect on the slow path.
+3. **Site-wide and three months old.** It shipped with the first mermaid post in
+   May 2026 and nobody saw it, because it only bites on a slow font load - the
+   visual suite renders after fonts settle, so screenshots were always green.
+   A suite that waits for the happy path cannot see the unhappy one.
