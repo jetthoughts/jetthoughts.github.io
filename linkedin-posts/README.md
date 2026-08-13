@@ -115,6 +115,38 @@ body, but keep the source clean. `image` supersedes the older `visual` / `design
 fields (still read as fallbacks). `posted_url` is the canonical property for the
 live LinkedIn post URL — the board links to it once set.
 
+## Poll posts (canonical structure)
+
+Native LinkedIn polls follow ONE structure (reference: `first-move-poll`,
+`interview-count-poll`). Frontmatter carries `design: poll` and `image: ""`
+(polls show no image — the poll IS the visual). Body:
+
+```
+[framing para 1 — the idea-first claim, flat]
+
+[framing para 2 — argue it plainly]
+
+[framing para 3 — fold in the poll question + "Vote below" + a reply CTA]
+
+[optional hashtags — rescue lane yes, course lane usually none]
+
+---
+
+**Poll options (LinkedIn native poll, run 1 week):**
+
+1. Option one (≤30 chars)
+2. Option two
+3. Option three
+4. Option four
+```
+
+Everything after the `---` (the options list) is a reference for the poll
+widget — the board strips it from the copyable body, and the options are typed
+into LinkedIn's poll UI, not the post text. Do NOT use `## Post body` /
+`## Poll question` / `## Poll duration` / `## Hashtags` section headers (the old
+format) — the framing prose carries the question, the header line carries the
+duration.
+
 ## Link policy per lane (BLOCKING)
 
 - **Never a link in the post body** - LinkedIn throttles reach on external links, and JT voice bans in-body CTAs.
