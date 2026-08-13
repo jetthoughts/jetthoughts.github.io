@@ -7,6 +7,9 @@ tags: [content-strategy, seo, content-plan, blog]
 generated:
   by: process:okf-migrate
   at: 2026-08-07T00:00:00Z
+verified:
+  - by: claude/opus-5
+    at: 2026-08-13T09:56:20Z
 ---
 
 # Plan of record (2026-08-07)
@@ -23,6 +26,12 @@ unblocking the pipeline, not writing.
 1. Real capacity is ~6 posts/month, not 2-3/week. June 2026 produced ZERO posts.
 2. The 435-click snippet projection predates AI Overviews (~61% CTR loss on
    informational SERPs). Re-baseline before spending on it.
+   **Falsified 2026-08-13** - the rewrites shipped (langgraph, crewai, autogen,
+   `/services/`, homepage) and Google cut impressions instead of granting
+   clicks: `rails-testing-best-practices` 9,997 -> 2,231 impressions (-78%) for
+   +3 clicks; `langgraph-workflows` left the top 15 by impressions entirely;
+   `falcon-web-server` -85% impressions. Do not run a second rewrite wave on
+   this thesis.
 3. Seven queued rows duplicate posts already on disk; F2 already shipped and
    created a 4-post Rails-8-authentication cluster.
 4. The Rails-post-to-rescue-client funnel is imagined. Paul's 2026-08-07 exemption
@@ -33,6 +42,15 @@ conversion page for the company's only active bet - has ZERO inbound links from
 608 blog posts. Six rescue-adjacent posts (fire-dev-shop-guide,
 dev-shop-red-flags-checklist, hiring-dev-shop-questions, vibe-coding-crisis,
 quality-tax, 47-startups) each link to it zero times.
+
+**Status 2026-08-13**: linking is DONE - seven posts now point at
+`/services/vibe-code-rescue/` (the six above plus
+`migrate-lovable-replit-app-to-rails`), and the page is indexed (`PASS`,
+crawled 2026-07-31). It did not move the needle: **3 impressions, 0 clicks**.
+The linking posts have near-zero organic traffic themselves, so there is no
+equity to pass. Internal linking was necessary and is not sufficient; the
+constraint is that no rescue-intent page has search demand reaching it
+(`dev shop` query cluster: 99 impressions, 0 clicks over 90 days).
 
 # News policy: durable vs event (2026-08-07)
 
@@ -49,6 +67,9 @@ it compounds: the Kamal 1/Traefik post is now factually wrong and still ranking.
 
 Supersedes the ICP-E-focused [20.07 plan](https://github.com/jetthoughts/jetthoughts.github.io/blob/emdash/seo/docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md).
 Built from 3 months of GSC data (449 clicks, 478K impressions, 0.09% CTR).
+Those impressions are `sc-domain:`-wide and heavily polluted - read
+[analytics-access](/workflows/analytics-access.md) before deriving anything
+from that CTR.
 
 **Core finding**: Every click-driving page is technical Rails/Ruby/CSS content.
 Zero ICP-E founder posts rank in the top 50 pages by clicks. The old AI

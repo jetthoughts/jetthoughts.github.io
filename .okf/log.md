@@ -1,5 +1,41 @@
 # Bundle Update Log
 
+## 2026-08-13 (first full SEO review) - the GA4 traffic number was never real
+
+* **Update**: `.okf/workflows/analytics-access.md` gains a "Reading the numbers"
+  section. The servers went live yesterday; the first real review found both of
+  them return correct-but-misleading data unless corrected.
+* **The finding**: GA4 `328508492` reported **1,628 `google / organic` sessions**
+  for 2026-07-14..08-10; GSC reported **~130 clicks** for the same window. A 12x
+  gap is not lag - **~85-90% of GA4 traffic is bots**. The tell is engagement,
+  not volume: google/organic 11.8% @34s and direct 31% @21s, against
+  duckduckgo 68.8% @370s and bing 66.7% @425s. Corroborating: 94% of sessions
+  are `first_visit`, and there are 170 `scroll` events per 6,392 `page_view`s.
+  **Never quote a GA4 organic figure without diffing it against GSC clicks.**
+  Real search traffic is ~255 sessions/28d, not the ~5k GA4 implies - the
+  "~5k baseline" in `GOAL-AT-A-GLANCE.md` was corrected in the same commit.
+* **Second correction**: `sc-domain:` impressions are polluted. One page on a
+  different site under the same domain property (`elital.jetthoughts.com`'s
+  "upwork login" post) is **14,438 impressions / 2 clicks** = 14% of domain
+  impressions against 1.4% of clicks. Site-wide CTR from `sc-domain:` is not a
+  usable metric. Use the property for coverage questions; use the
+  `https://jetthoughts.com/` prefix property (or a `notContains elital` filter)
+  for performance ones. The yesterday-recorded "1,445 sessions / 7 days" and
+  "0.14% CTR" baselines are re-annotated in place rather than deleted.
+* **Update**: `.okf/content-strategy/content-plan.md` - two 20.08/20.09 claims
+  resolved against live data. (1) The **title-rewrite thesis is falsified**: the
+  rewrites shipped and Google cut impressions instead of granting clicks
+  (`rails-testing-best-practices` -78% impressions for +3 clicks;
+  `langgraph-workflows` left the top 15). Do not run wave 2. (2) The
+  "`/services/vibe-code-rescue/` has ZERO inbound links" item is **done** -
+  seven posts now link it and the page is indexed - and it changed nothing
+  (3 impressions, 0 clicks), because the linking posts have no traffic to pass.
+* **Live signal to track**: average position decayed 14.7 (Feb) -> 13.0 (Apr) ->
+  18.5 (Aug), monotonic across top pages. Track that, not CTR.
+* **Also true**: GA4 `keyEvents` = 0. Four `click` events in 28 days. No form
+  submit, no booking. "Did traffic convert" is unanswerable today.
+* Full analysis: `docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md`.
+
 ## 2026-08-13 (analytics goes live) - GA4 + GSC queryable from an agent session
 
 * **New**: `.okf/workflows/analytics-access.md` - the two local MCP servers

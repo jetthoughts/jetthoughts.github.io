@@ -9,6 +9,8 @@ generated:
 verified:
   - by: claude/opus-5
     at: 2026-08-13T00:00:00Z
+  - by: claude/opus-5
+    at: 2026-08-13T09:56:20Z
 status: stable
 sources:
   - resource: "/content-strategy/content-plan.md"
@@ -74,18 +76,74 @@ silently returns real-looking but wrong numbers.
 * **Servers registered mid-session are not usable in that session** - Claude
   Code must restart before their tools load.
 
+# Reading the numbers (added 2026-08-13 after the first full review)
+
+Both servers return data that is *technically* correct and *analytically*
+misleading unless these two corrections are applied first.
+
+## GA4 sessions are ~85-90% bots - always reconcile against GSC
+
+Property `328508492` reported **1,628 `google / organic` sessions** for
+2026-07-14..08-10. GSC reported **~130 Google clicks** for the same window.
+A 12x gap is not reporting lag; the GA4 number is bot traffic.
+
+The tell is engagement, not volume:
+
+| Source | Sessions | Engagement rate | Avg session |
+|---|---|---|---|
+| google / organic | 1,628 | **11.8%** | 34s |
+| duckduckgo / organic | 77 | 68.8% | 370s |
+| bing / organic | 48 | 66.7% | 425s |
+| (direct) / (none) | 4,071 | 31.0% | 21s |
+
+Humans arriving from search engage at ~67% (Bing, DDG - too small to be worth
+faking). Anything at 12-31% for 21-34 seconds is automated. Corroborating:
+`first_visit` 5,515 of 5,885 `session_start` (94% brand-new users) and 170
+`scroll` events against 6,392 `page_view`s.
+
+**Rule: never quote a GA4 organic-sessions figure without diffing it against
+GSC clicks for the same window.** Real search traffic is GSC clicks plus
+Bing/DDG sessions - about **255 sessions / 28d**, not the ~5k the GA4 number
+implies. The "1,445 sessions / last 7 days" figure recorded in this file at
+setup is that inflated number; treat it as a bot-volume datapoint, not traffic.
+
+## `sc-domain:` impressions are polluted - review on the prefix property
+
+One page on a different site under the same domain property -
+`elital.jetthoughts.com/blog/mastering-your-upwork-login...` - contributed
+**14,438 impressions and 2 clicks** in 28 days: 14% of all domain impressions
+against 1.4% of clicks. Site-wide CTR computed from `sc-domain:` is therefore
+not a usable metric, and the "six-figure impressions at 0.14%" shape is mostly
+that one post plus long-tail quoted-code queries (`"@@defaults = *args" ruby`)
+that can never convert.
+
+Use `sc-domain:jetthoughts.com` for *coverage* questions (what exists, what is
+indexed); use the `https://jetthoughts.com/` prefix property, or a
+`page notContains elital` filter, for any *performance* question.
+
+## There is no conversion tracking
+
+GA4 `keyEvents` = **0**. The full 28-day event inventory is `page_view`,
+`session_start`, `first_visit`, `user_engagement`, `scroll`, `click` (4 total),
+and 9 `course_*` events. No form submit, no contact-CTA click, no booking. Any
+question of the form "did traffic convert" is currently unanswerable from GA4.
+
 # Baseline at setup
 
-Recorded 2026-08-13 so later pulls have something to diff against.
+Recorded 2026-08-13 so later pulls have something to diff against. Read it with
+the corrections above.
 
 | Source | Window | Numbers |
 |---|---|---|
-| GA4 `328508492` | last 7 days | 1,445 sessions |
+| GA4 `328508492` | last 7 days | 1,445 sessions (**bot-inflated - not traffic**) |
 | GSC `sc-domain:jetthoughts.com` | 2026-07-14 .. 2026-08-10 | 142 clicks, 104,754 impressions, 0.14% CTR, avg position 18.1 |
+| GSC, excluding `elital.` | 2026-07-14 .. 2026-08-10 | ~122 clicks - the real site number |
 
 Top queries in that window: `jetthoughts` (10 clicks / 23 impressions),
 `rails install dependencies` (10/55), `langchain tutorial` (2/137),
-`datadog laravel` (1/12), `falcon ruby` (1/27). The shape - six-figure
-impressions converting at 0.14% from position 18 - is a visibility problem,
-not a relevance one, and matches the 0.09% CTR baseline
-[content-plan](/content-strategy/content-plan.md) was built from.
+`datadog laravel` (1/12), `falcon ruby` (1/27).
+
+**Trend worth tracking**: average position decayed 14.7 (Feb) -> 13.0 (Apr) ->
+18.5 (Aug), monotonic and independent across top pages. That decay, not CTR, is
+the live signal - site-wide CTR is unreliable for the reason above. Full
+analysis: `docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md`.
