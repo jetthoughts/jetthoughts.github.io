@@ -26,4 +26,4 @@ A non-technical founder shows me what they paid for, and it's barely running - f
 
 The money still gets spent the old way, on the old kind of work, by people who trusted the wrong vendor.
 
-I don't have a clean fix for it. It just still surprises me how avoidable most of it turns out to be.
+I don't have a clean fix for it. None of it needed to happen, and it keeps happening anyway.

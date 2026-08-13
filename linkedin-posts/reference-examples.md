@@ -75,6 +75,9 @@ Short, humble, concrete product updates in the first person. *"My Rails backup s
   (Paul flagged 2026-08-13: "that reliability is the whole story for anyone
   deciding whether to build with AI" - a marketer's bridge sentence, not his
   voice). State the thing; don't explain to the reader why it matters to them.
+- **Banned close crutches:** "Still surprises me…", "Turns out…", "That's the part
+  that gets to me" - stock emotional/meta closers (Paul flagged 2026-08-13). End on
+  the concrete point itself, flat.
 - **End on the real point, not a bait CTA.** Holub/Paolino often have NO closing
   question - they land on the sharpest observation and stop. A closing question is
   fine only when it's genuine, never as reflexive engagement bait. Paul's register:
