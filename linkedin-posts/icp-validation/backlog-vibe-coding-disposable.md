@@ -10,6 +10,7 @@ icp_test: Do founders who vibe-coded an MVP recognize the disposable-vs-producti
 cta: Open question - "If you've been through one of these rebuilds, what did you keep, what did you throw away?"
 utm_campaign: icp_validation_validation_vs_production
 utm_content: vibe_coding_disposable_by_design
+image: "assets/backlog-vibe-coding-disposable.png"
 status: draft
 stage: next
 proposed_for: "2026-08-26 15:30 CEST"
@@ -45,7 +46,7 @@ notes: |
 
 If you built your MVP by vibe-coding, you probably can't turn that code into the real product - you end up rewriting it from scratch.
 
-The reason is how the AI works. When you ask it to fix something, it doesn't edit your existing code, it writes new code. Do that for a few months and the same logic ends up copied in five or six places. You fix the bug in one of them and it still happens from the others, so a problem you thought was gone keeps coming back.
+When you ask the AI to fix something, it doesn't edit your existing code, it writes new code. Do that for a few months and the same logic ends up copied in five or six places. You fix the bug in one of them and it still happens from the others, so a problem you thought was gone keeps coming back.
 
 I use vibe-coding too, for weekends and for testing an idea quickly. But once I know the idea works, I rewrite it properly. Otherwise I'm paying to fix the same bug again every couple of weeks.
 

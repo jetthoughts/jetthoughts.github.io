@@ -42,12 +42,16 @@ notes: |
   Opener archetype: idea-led claim (was observation-led). REVISED 2026-08-13 to idea-first:
   body already idea-led and delivered the tactic in full; only added the closing peer question
   so the post ends on a real question, not a sketch caption.
+  De-AI'd 2026-08-13 (Paul ran an AI detector: 21.5%, "most likely human" but 3 phrases
+  highlighted). Reworded the flagged teaser cadence ("There's a way to find out... It's not
+  exciting, but it works" -> "The cheapest way to find out is a real checkout"), the "Same price
+  either way" fragment, and the close. Plainer, rougher, more specific.
 ---
 
 You can collect a hundred "sounds great" comments and still not have one person who'll actually pay.
 
-There's a way to find out before you build anything. It's not exciting, but it works. Stripe lets you create a payment link in about ten minutes, and that button goes on a one-page site describing the thing you haven't built yet. Click it and you hit a real checkout. If someone actually pays, you refund them and tell them straight where the product is. A stranger you've never met pulling out a card is real in a way a nice comment isn't.
+The cheapest way to find out is a real checkout. Make a Stripe payment link (about ten minutes of work), put it on a one-page site that describes the product you haven't built, and let people click a real pay button. If someone pays, refund them and tell them where the product actually is. A stranger pulling out a card tells you more than a hundred nice comments.
 
-The sketch below is the same $97 button worded two ways. One leads with what the buyer gets, the other just makes clicking feel less scary. Same price either way.
+The sketch below is the same $97 button worded two ways. One leads with what the buyer gets, the other just makes clicking feel less scary. The price doesn't change, only the wording.
 
-Have you ever put a price on something that didn't exist yet?
+If you're non-technical, have you ever charged for something before it existed?
