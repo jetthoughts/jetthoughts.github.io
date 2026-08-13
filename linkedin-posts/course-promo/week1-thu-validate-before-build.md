@@ -8,10 +8,17 @@ pillar: pre-validation
 hypothesis: course-thesis (validate demand before building)
 icp_test: does the idea-stage / about-to-hire founder engage with "test demand before you build"?
 cta: open question - how did you test demand before building?
-utm_campaign: icp_validation_pre_validation
+campaign: course-promo
+utm_campaign: course_promo_pre_validation
 utm_content: validate-before-build
-status: draft
-visual: dollar-presale-flow.svg (the $1 pre-sale flow - the M1 tactic in refactoring.fm style)
+status: scheduled
+scheduled_for: 2026-08-13
+visual: assets/week1-thu-validate-before-build.png (from dollar-presale-flow.svg, rsvg -w 1080)
+first_comment: |
+  If it helps, the $1 pre-sale version of this - the exact button and the refund promise - is a free lesson in the course, no signup:
+  https://jetthoughts.com/course/tech-for-non-technical-founders-2026/fake-stripe-pre-sale-pieter-levels/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_pre_validation&utm_content=validate_before_build
+tags: "#startups #founders #buildinpublic"
+dedup_note: overlaps course-promo/week1-mon-built-before-testing.md (demand-before-build) - keep this idea-first version as the model, revise/retire the older parable.
 notes: |
   Idea-first structure (Cutler/Rossi), NOT the old story-parable. Plain short
   sentences (Paul: "I write simpler"). Course lane = pre-validation (2605), the

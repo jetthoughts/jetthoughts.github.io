@@ -60,9 +60,20 @@ visual: assets/<slug>.png        # required - the image that ships with the post
 status: draft | scheduled | posted
 scheduled_for: <ISO date, if scheduled>
 posted_url: <LinkedIn URL, once posted>
+first_comment: |            # posted as the FIRST COMMENT right after publish (not the body)
+  <course lane: the ready comment incl. the UTM'd course link. rescue lane: usually empty.>
 notes: | <voice trade-offs, revision history>
 ---
 ```
+
+## Link policy per lane (BLOCKING)
+
+- **Never a link in the post body** - LinkedIn throttles reach on external links, and JT voice bans in-body CTAs.
+- **Course lane** → one UTM'd course link in the **first comment** (`first_comment` in frontmatter). Link the specific lesson that delivers on the post's promise. This is the arrival signal the metrics-ledger tracks.
+- **Rescue lane** → no link. Reply-CTA only (test ICP presence via replies, not clicks).
+- Hashtags: 2-3 max, relevant, at the end of the body. 0 is acceptable and on-trend. Never a wall of tags.
+
+**Posting the first comment:** claude-in-chrome CAN do this (typing a comment needs no file dialog) - after the post publishes, add the `first_comment` text via the assistant. Only the image attach is a manual gap.
 
 ## Analytics tracking — the ledger (proposed "better way")
 
@@ -94,6 +105,7 @@ the numbers.
 
 ## Files
 
+- `content-plan.md` — rolling 2-3/wk calendar, lane rotation, revision-wave queue.
 - `reference-examples.md` — transcribed good posts to emulate (add more over time).
 - `metrics-ledger.md` — per-post performance, the weekly review surface.
 - `course-promo/` , `icp-validation/` — the two lanes, each with `README.md`, drafts, `assets/`.
