@@ -1,5 +1,5 @@
 ---
-title: "What still surprises me on audits in 2026"
+title: "AI didn't stop founders getting sold bad software"
 lane: personal
 pillar: build-in-public
 author: paul-keen
