@@ -403,6 +403,12 @@ Before flipping draft: false or before any LinkedIn/external promotion drives tr
 6. dev.to import ICP gate (only if `source: dev_to`):
    - [ ] Audit the post against `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`. If 80+/100 AI-feel or off-thesis, rewrite for the ICP-E or flip to `draft: true`.
 
+7. In-body visual (BLOCKING for posts over 800 words):
+   - [ ] `ruby bin/check-post-visuals` exits 0. The floor is a ratchet - a new post with no diagram/image pushes the count over it and fails.
+   - [ ] Measure the diagram at 390px before committing: `renderedPx = minFontSize * (displayedWidth / viewBoxWidth)` must be >= 9 (same floor `bin/check-svg-floor` applies to course SVGs). Caught 2026-08-13: a first-draft LR flowchart measured 8.88px and was illegible on mobile.
+   - [ ] Width is driven by PARALLEL COLUMNS, not label length - mermaid wraps labels at ~200px. Three sibling nodes feeding one gate renders ~800px wide and fails the floor. Chain them vertically (`A --> B --> C`, or `~~~` for unconnected nodes) to stay under ~550px.
+   - [ ] The diagram earns its place: it shows something the surrounding prose and tables do NOT already state. A diagram restating an adjacent table is decorative - delete it.
+
 If any of the above checks fail, fix before proceeding to STEP 7.
 
 STEP 7 — VALIDATE
