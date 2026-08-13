@@ -24,27 +24,32 @@ Status legend: `draft` · `revised` (idea-first, ready) · `approved` · `schedu
 
 ## Schedule (pillar-tagged)
 
-| Week of | Slot | Pillar | Post | Link? | Status |
-|---|---|---|---|---|---|
-| 2026-08-11 | Thu | story/opinion | `course-promo/week1-thu-validate-before-build` | course | **posted** (text) |
-| 2026-08-18 | Tue | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ demo-rule visual |
-| 2026-08-18 | Thu | teach | `course-promo/week1-tue-founding-hypothesis` | course | **approved** ✓ five-blank exhibit |
-| 2026-08-25 | Tue | reaction (NEW) | `personal/reaction-claude-code-trust` | none | **drafted** ✓ (Paul review) |
-| 2026-08-25 | Thu | teach | `course-promo/week1-thu-price-before-product` | drop link? | revised ✓ |
-| 2026-09-01 | Tue | opinion | `icp-validation/week1-tue-staging-question` | blog (SCIPAB) | revised ✓ |
-| 2026-09-01 | Thu | build-in-public (NEW) | `personal/bip-vendors-still-burning-founders` | none | **drafted** ✓ (Paul review) |
-| 2026-09-08 | Tue | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
-| 2026-09-08 | Thu | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course | draft |
-| 2026-09-15 | Tue | story/mistakes (NEW) | *needs a better story* - BigBinary draft backlogged (Paul didn't like it); keep the "analysis vs conviction" angle | none | to source |
+Reordered 2026-08-13 (Paul) to **front-load pure-value/personal posts** so the new
+voice lands before any funnel; course links spaced to ~2 posts across the window.
 
-**Ratio check (this 9-post window):** ~6 value (teach/opinion/story/reaction/BIP),
-1 poll, 2 course-linked -> ~70/20/10. The two NEW slots (reaction + build-in-public)
-are what keep it from being all funnel.
+| Date | Pillar | Post | Link? | Status |
+|---|---|---|---|---|
+| Aug 11 Thu | story/opinion | `course-promo/week1-thu-validate-before-build` | course | **posted** (text) |
+| Aug 18 Tue | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ |
+| Aug 20 Thu | teach | `course-promo/week1-tue-founding-hypothesis` | course *(week's 1 promo)* | **approved** ✓ |
+| Aug 25 Tue | reaction | `personal/reaction-claude-code-trust` | none | drafted ✓ |
+| Aug 27 Thu | build-in-public | `personal/bip-vendors-still-burning-founders` | none | drafted ✓ |
+| Sep 1 Tue | reaction | `personal/reaction-vibe-coding-front-back` | none | drafted ✓ |
+| Sep 3 Thu | teach | `course-promo/week1-thu-price-before-product` | none *(link dropped)* | revised ✓ |
+| Sep 8 Tue | opinion | `icp-validation/week1-tue-staging-question` | blog (SCIPAB) | revised ✓ |
+| Sep 10 Thu | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
+| Sep 15 Tue | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | backlog - promote when ready |
 
-Value drafts still to slot (mostly teach/opinion - **drop the reflexive course link**
-on the 70%): friends-politely-lying, mom-test-past-questions, ten-interviews-recap,
-why-i-wrote-it (story/BIP), first-move-poll & interview-count-poll (polls),
-backlog-vibe-coding (opinion). All are idea-first and visual-ready.
+**Ratio (this 10-post window):** ~7 value (opinion/teach/reaction/BIP/story) + 1 poll
++ blog-link + **only 2 course links** (founding Aug 20, 40k Sep 15) -> ~70/20/10.
+**Aug 25 → Sep 3 is four straight no-link value posts** - that run is what makes the
+feed read as a person with takes, not a funnel.
+
+Value drafts still to slot (teach/opinion, **course link already dropped**):
+friends-politely-lying, mom-test-past-questions, ten-interviews-recap (all pure-value
+now); why-i-wrote-it (story/BIP - keeps its link, it's a promo); first-move-poll &
+interview-count-poll (polls); backlog-vibe-coding (opinion). All idea-first, visual-ready.
+Story slot needs a better mistakes case than the backlogged BigBinary draft.
 
 ## Per-post checklist
 

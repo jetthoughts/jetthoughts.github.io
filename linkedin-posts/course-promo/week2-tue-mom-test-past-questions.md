@@ -19,7 +19,7 @@ status: draft
 stage: next
 proposed_for: "2026-09-03 15:30 CEST"
 first_comment: |
-  All five swaps, with the pass and fail signal for each answer, are in Lesson 2.1 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_tue_mom_test_past_questions
+  (value post - no link; reply-CTA only. Dropped the course link 2026-08-13 to make this one of the free 70% - see content-pillars.md)
 image: "assets/week2-tue-mom-test-past-questions.png"
 notes: |
   Opener archetype: idea-led - opens with the flat claim that "Would you use this?" can only hurt you, then argues it.

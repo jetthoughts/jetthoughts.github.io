@@ -20,7 +20,7 @@ status: draft
 stage: next
 proposed_for: "2026-09-08 15:30 CEST"
 first_comment: |
-  Module 2 is free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_fri_ten_interviews_recap
+  (value post - no link; reply-CTA only. Dropped the course link 2026-08-13 to make this one of the free 70% - see content-pillars.md)
 image: "assets/week2-fri-ten-interviews-recap.png"
 notes: |
   Opener archetype: stat-led, per the week-2 row of docs/workflows/linkedin-course-promo-plan.md.

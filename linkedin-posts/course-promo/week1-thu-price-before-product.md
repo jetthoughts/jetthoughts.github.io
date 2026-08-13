@@ -17,9 +17,9 @@ utm_campaign: course_promo_module1
 utm_content: week1_thu_price_before_product
 status: draft
 stage: next
-proposed_for: "2026-08-25 15:30 CEST"
+proposed_for: "2026-09-03 15:30 CEST"
 first_comment: |
-  The chapter the sketch comes from, with the Stripe setup steps and the refund note wording, is free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_thu_price_before_product
+  (value post - no link; reply-CTA only. Dropped the course link 2026-08-13 to make this one of the free 70% - see content-pillars.md)
 image: "assets/week1-thu-price-before-product.png"
 notes: |
   Opener archetype: observation-led. Plan called for Format A (marked screenshot of a smoke-test
