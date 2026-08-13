@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-labelledby="dp-title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 916" role="img" aria-labelledby="dp-title">
   <title id="dp-title">The $1 pre-sale flow, from button to proof. A real $1 charge beats a free email signup with the same visitors and a sharper signal. 1 the button: reserve your spot, $1 now, refundable if we don't ship, same Stripe Payment Link as Lesson 1.5. 2 the charge: a real charge is a wallet decision, conversion drops 3-5x but the signal is truer. 3 the promise: a full refund within 7 days if we don't ship, every charge refunded within 30 days. 4 what it proved: 0 sales means price or hypothesis wrong, 1-10 sales means iterate headline and targeting, 50+ sales is a PMF signal to start building.</title>
   <desc>Four numbered steps. 1 the button: reserve your spot, $1 now, refundable if we don't ship; same Stripe Payment Link as Lesson 1.5. 2 the charge: a real charge is a wallet decision not a free email click; conversion drops 3-5x but the signal is truer. 3 the promise: a full refund within 7 days if we don't ship, and every charge refunded within 30 days. 4 what it proved: 0 sales means price or hypothesis wrong, 1-10 sales means iterate headline and targeting, 50 or more sales is a product-market-fit signal to start building. Footer: the click proves demand, not a business yet.</desc>
   <defs>
@@ -46,12 +46,12 @@
     <text x="128" y="118" class="h note">Every charge refunded within 30 days. Non-negotiable.</text></g>
 
   <!-- Step 4 -->
-  <g transform="translate(0,648)"><rect x="30" y="0" width="660" height="180" rx="20" class="card"/>
-    <circle cx="80" cy="50" r="28" class="num"/><text x="80" y="60" text-anchor="middle" class="h numt">4</text>
-    <text x="128" y="46" class="h stept">What the click proved</text>
-    <text x="72" y="90" class="h o0">0 sales &#8594; price or hypothesis is wrong.</text>
-    <text x="72" y="126" class="h o1">1-10 sales &#8594; iterate headline + targeting.</text>
-    <text x="72" y="162" class="h o5">50+ sales &#8594; PMF signal, start building.</text></g>
+  <g transform="translate(0,648)"><rect x="30" y="0" width="660" height="196" rx="20" class="card"/>
+    <circle cx="80" cy="46" r="28" class="num"/><text x="80" y="56" text-anchor="middle" class="h numt">4</text>
+    <text x="128" y="52" class="h stept">What the click proved</text>
+    <text x="128" y="98" class="h o0">0 sales &#8594; price or hypothesis is wrong.</text>
+    <text x="128" y="136" class="h o1">1-10 sales &#8594; iterate headline + targeting.</text>
+    <text x="128" y="174" class="h o5">50+ sales &#8594; PMF signal, start building.</text></g>
 
-  <text x="360" y="878" text-anchor="middle" class="h foot">The click proves demand - not a business (yet).</text>
+  <text x="360" y="894" text-anchor="middle" class="h foot">The click proves demand - not a business (yet).</text>
 </svg>
