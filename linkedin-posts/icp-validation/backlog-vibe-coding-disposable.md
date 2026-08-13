@@ -1,4 +1,5 @@
 ---
+title: "A vibe-coded MVP doesn't refactor - you rewrite it"
 week: 1-extra
 day: backlog
 author: paul-keen

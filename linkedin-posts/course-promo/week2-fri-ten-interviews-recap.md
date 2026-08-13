@@ -1,4 +1,5 @@
 ---
+title: "Ten interviews beat a weekend of coding"
 week: 2
 day: friday
 author: paul-keen

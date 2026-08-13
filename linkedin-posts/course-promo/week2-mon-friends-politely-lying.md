@@ -1,4 +1,5 @@
 ---
+title: "Your friends' 'I'd use it' isn't validation"
 week: 2
 day: monday
 author: paul-keen

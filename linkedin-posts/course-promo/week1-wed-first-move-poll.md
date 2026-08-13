@@ -1,4 +1,5 @@
 ---
+title: "Poll: the first move before building"
 week: 1
 day: wednesday
 author: paul-keen

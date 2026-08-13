@@ -24,7 +24,8 @@
     .card .title { font-weight: 600; display: block; margin-bottom: .3rem; overflow-wrap: anywhere; }
     .card .row { font-size: .76rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .3rem .5rem; }
     .card .pill { background: #f1f2f4; border-radius: 4px; padding: .05rem .35rem; white-space: nowrap; }
-    .card .date { color: var(--accent); font-weight: 600; white-space: nowrap; }
+    .card .date { display: inline-flex; align-items: baseline; gap: .3rem; margin-top: .5rem; font-size: .78rem; font-weight: 700; color: var(--accent); }
+    .card .date .dl { font-weight: 500; text-transform: uppercase; font-size: .6rem; letter-spacing: .04em; color: var(--muted); }
     .empty { color: #9aa0a8; font-size: .85rem; padding: .5rem 0; }
   </style>
 </head>
@@ -50,10 +51,12 @@
             <span class="row">
               <span class="pill">{{ or .Params.lane .Params.campaign "—" }}</span>
               <span class="pill">{{ .Params.status }}</span>
-              {{ with .Params.scheduled_for }}<span class="date">sched {{ . }}</span>{{ end }}
-              {{ with .Params.posted_for }}<span class="date">posted {{ . }}</span>{{ end }}
-              {{ with .Params.proposed_for }}<span class="date">proposed {{ . }}</span>{{ end }}
             </span>
+            {{ $d := "" }}{{ $dl := "" }}
+            {{ with .Params.posted_for }}{{ $d = index (split . " ") 0 }}{{ $dl = "posted" }}{{ end }}
+            {{ with .Params.scheduled_for }}{{ $d = index (split . " ") 0 }}{{ $dl = "scheduled" }}{{ end }}
+            {{ with .Params.proposed_for }}{{ $d = index (split . " ") 0 }}{{ $dl = "proposed" }}{{ end }}
+            {{ with $d }}<span class="date"><span class="dl">{{ $dl }}</span>{{ . }}</span>{{ end }}
           </a>
         {{ else }}<p class="empty">nothing here</p>{{ end }}
       </div>

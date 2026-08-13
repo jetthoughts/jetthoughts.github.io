@@ -1,4 +1,5 @@
 ---
+title: "The standup question that changes what you do"
 lane: rescue
 week: 1
 day: tuesday

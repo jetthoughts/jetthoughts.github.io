@@ -1,4 +1,5 @@
 ---
+title: "Write your idea as one testable sentence"
 week: 1
 day: tuesday
 author: paul-keen

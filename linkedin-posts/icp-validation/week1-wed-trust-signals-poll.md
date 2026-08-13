@@ -1,4 +1,5 @@
 ---
+title: "Poll: what proves your dev team is real"
 week: 1
 day: wednesday
 format: poll

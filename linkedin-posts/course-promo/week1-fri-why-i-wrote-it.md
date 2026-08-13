@@ -1,4 +1,5 @@
 ---
+title: "Why I wrote the free founder course"
 week: 1
 day: friday
 author: paul-keen

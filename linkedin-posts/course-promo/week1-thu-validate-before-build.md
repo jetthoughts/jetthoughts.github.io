@@ -1,4 +1,5 @@
 ---
+title: "Test demand before you hire a dev shop"
 week: 1
 day: thursday
 author: paul-keen

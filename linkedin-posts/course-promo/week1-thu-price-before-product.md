@@ -1,4 +1,5 @@
 ---
+title: "Put a price on it before you build it"
 week: 1
 day: thursday
 author: paul-keen

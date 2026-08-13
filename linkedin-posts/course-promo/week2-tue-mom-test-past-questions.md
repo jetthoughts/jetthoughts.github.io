@@ -1,4 +1,5 @@
 ---
+title: "Ask about the past, not the future"
 week: 2
 day: tuesday
 author: paul-keen
