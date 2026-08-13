@@ -119,11 +119,13 @@ the numbers.
 - **Comment links never unfurl on LinkedIn** - only body links generate a preview
   card. A first-comment link is a bare clickable link by design (the cost of keeping
   the link out of the reach-throttled body).
-- Separately, our `og:image` is currently **WebP**, which LinkedIn's crawler often
-  won't render - so body links / Slack / Twitter shares may also show no image.
-  **Fix pending:** change og:image output to jpg/png in
+- Separately, our `og:image` is **WebP**. **Telegram unfurls it fine** (confirmed by
+  Paul 2026-08-13) - WebP-friendly crawlers are OK. **LinkedIn is the holdout**: its
+  crawler won't render WebP, so a LinkedIn *body* link shows no preview card. The fix
+  is LinkedIn-targeted: emit a jpg/png og:image in
   `themes/beaver/layouts/partials/seo/enhanced-meta-tags.html` (or the root override).
-  Tracked as an engineering task.
+  Not a sitewide emergency (Telegram/most work); worth doing since LinkedIn is a key
+  channel. Tracked as an engineering task.
 
 ## Files
 
