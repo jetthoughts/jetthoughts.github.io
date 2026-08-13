@@ -13,6 +13,17 @@ with a real peer question.** Study the writers Paul rates: John Cutler
 (`johnpcutler`), Luca Rossi (`lucaronin`/refactoring.fm). Good examples transcribed
 in [`reference-examples.md`](reference-examples.md).
 
+## Active outreach + channels (Rock 1, reuse existing kits)
+
+Posts are inbound/passive; **outreach is the faster Rock-1 signal** (direct replies in days, not weeks). Do NOT rebuild - wire the kits that already exist:
+
+- **Course-lane outreach + 2nd channel:** `docs/projects/2605-.../50-59-execution/50.02-pilot-outreach-campaign-kit.md` - already has **Reddit (`r/startups`, `r/Entrepreneur`) + IndieHackers** value-first drafts with UTM'd course links. This IS probe #2 (the ICP-native channel).
+- **Rescue-lane cold-DM:** `docs/projects/2607-vibe-code-rescue/rescue-sprint/` - `outbound-openers.md`, `cold-prospect-list.md`, `SEND-SHEET.md`.
+
+**The rule (BLOCKING, same bar as posts): a reply, not a pitch.** Quote the prospect's specific post/comment in line 1, answer their actual question, and mention the free course only if it genuinely fits. No cold pitch, no slop, no "DM me". ~10 min/day.
+
+**Channel discipline: exactly two ponds, then scale the winner.** LinkedIn (posts + outreach) is warm/set-up but skews employed; idea-stage non-technical founders skew Reddit/IndieHackers - so run **LinkedIn + one ICP-native channel (Reddit/IH) in parallel**, read the `metrics-ledger` + reply quality over ~2 weeks, then pour into whichever pond actually engages. Don't spray 4 channels thin.
+
 ## The two lanes
 
 | Lane | Folder | Stage | ICP | Plan |
