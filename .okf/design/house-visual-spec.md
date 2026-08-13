@@ -250,6 +250,40 @@ exhibits to THIS, not the muted #faf7f2 O2 cards:
 - **Bold blue connector arrows** (stroke ~3.5, blue arrowhead marker); purple
   dashed arrows for callout annotations.
 - **NO emoji** (Paul 2026-08-13: "emojis look not so good, avoid them").
+- **Wobble is layout-dependent (2026-08-13 correction):** the ~0.4-0.6deg wobble
+  reads "hand-drawn/playful" in a **flow or vertical stack** - but in a **grid of
+  aligned cards it reads as MISALIGNMENT, not craft.** Drop the wobble in grids;
+  keep clean edges. (This exact rule caused the friday-demo-timeline clunkiness -
+  see the render-gate checklist below.)
 - Legibility unchanged: min font >=20px Caveat, W=720, ZERO overflow (render-check
   every one at 390 + desktop).
 Template exhibit: `five-tech-words-stop-nodding-at/jargon-translator.svg`.
+
+### Render-gate clunkiness checklist (2026-08-13 - itemize, don't vibe-check)
+
+**Why this exists (decision record):** friday-demo-timeline was render-verified at
+390, judged "legible + no overflow + on-style" -> stamped PASS -> handed back. Paul
+then caught 3 clunky defects that were all VISIBLE in that same screenshot: grid
+wobble reading as misalignment, a crowded odd-one-out STOP card, and hollow
+badge-to-label gaps. **Root cause: a legibility/overflow gate is structurally BLIND
+to composition.** Binary defect gates are necessary but NOT sufficient.
+
+**The rule:** after the binary gate (legible / no overflow / on-style) passes, run
+these 6 as an EXPLICIT ticked checklist - stance = "assume clunky, find 3 things to
+fix" (assuming PASS is why the 3 were missed). A render is not PASS until all 6 are
+ticked, not glanced:
+
+1. **Alignment** - repeated elements on a clean grid, or does wobble/offset read jagged?
+2. **Odd-one-out balance** - does the different cell (STOP, total row, hero) match its
+   siblings' internal rhythm, or crowd/diverge?
+3. **Whitespace / hollowness** - dead gaps inside boxes? content floating with no anchor?
+4. **Sibling consistency** - do all repeated cards share ONE internal layout (badge, label pos)?
+5. **Edge breathing room** - any text CROWDING the container edge (not overflow, just tight)?
+6. **Weight / emphasis** - is the one thing that should dominate actually dominant?
+
+**Backstop for batches:** a self-checklist still relies on the author's eye, which
+rationalizes its own choices as intentional. Before a PR merge, run one INDEPENDENT
+critic pass on the renders (impeccable `critique` or a fresh reviewer that didn't
+draw them) - the only reliable catch for author-blind clunkiness (matches the
+CLAUDE.md content cold-eyes gate). Per-exhibit: the 6-item checklist. Per-batch: the
+critic pass.
