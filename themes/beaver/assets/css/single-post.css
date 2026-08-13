@@ -232,6 +232,16 @@
   -webkit-overflow-scrolling: touch;
   margin: 1.5rem 0;
 }
+/* Until mermaid.js swaps in the SVG, the div renders its own SOURCE as article
+   prose - `flowchart TD R70["Rails 7.0 - ...&nbsp;"] ... classDef dead
+   fill:#fff5f5,...`. baseof.html defers mermaid.run() until
+   document.fonts.ready, so on a slow font load that wall of code is what the
+   reader gets; if Caveat never resolves it never goes away. Reported on the
+   Rails 7 EOL post 2026-08-13 as "images have &nbsp; on it".
+   mermaid sets data-processed on each node it renders. */
+.mermaid:not([data-processed]) {
+  display: none;
+}
 .mermaid svg {
   /* Keep natural width so labels stay legible; let .mermaid parent scroll
      horizontally on narrow viewports rather than squashing text. */

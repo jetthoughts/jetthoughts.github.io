@@ -7,6 +7,7 @@ tags: [mermaid, fonts, design]
 generated:
   by: process:okf-migrate
   at: 2026-07-13T00:00:00Z
+verified: { by: claude/opus-5, at: 2026-08-13T10:00:00Z }
 ---
 
 # Root cause worth remembering
@@ -32,6 +33,54 @@ last-character clipping. The fix in `baseof.html`:
 - Mermaid code fences render via
   `themes/beaver/layouts/_markup/render-codeblock-mermaid.html`, which sets
   `features.mermaid`.
+
+# The unrendered-source flash (fixed 2026-08-13)
+
+`<div class="mermaid">` renders its own SOURCE as article prose until
+mermaid.js swaps in the SVG - and because `baseof.html` defers `mermaid.run()`
+until `document.fonts.ready`, that window is as long as the Caveat load takes.
+If the font never resolves, the wall of `flowchart TD ... classDef dead
+fill:#fff5f5,...` never goes away.
+
+Reported by the owner as "images have `&nbsp;` on it" - the `&nbsp;` we append
+to labels is emitted by Hugo as `&amp;nbsp;`, so it sits in that raw text as a
+literal entity. The entity itself is FINE once rendered: htmlLabels is on, so
+mermaid decodes it to a trailing space. The bug was only ever the flash.
+
+Fix is one rule in `themes/beaver/assets/css/single-post.css` - mermaid stamps
+`data-processed` on each node it renders:
+
+```css
+.mermaid:not([data-processed]) { display: none; }
+```
+
+Trade-off accepted: if JS fails outright the diagram is absent rather than
+showing its source. Absent beats a wall of code in the middle of a paragraph.
+This was site-wide and pre-existing - it shipped with the first mermaid post in
+May 2026 and went unreported for three months because it only bites on a slow
+font load.
+
+# Mobile legibility: width comes from COLUMNS, not label length
+
+Mermaid wraps node labels at ~200px, so a long label never widens a diagram -
+the number of PARALLEL COLUMNS does. Three sibling nodes feeding one gate
+renders ~800px wide. Because the SVG scales to the content column, wide means
+small: `renderedPx = minFontSize * (displayedWidth / viewBoxWidth)`. At a
+390px viewport a 797px-wide diagram renders 8.88px text, under the 9px floor
+`bin/check-svg-floor` enforces for course SVGs.
+
+Measured 2026-08-13 while backfilling diagrams into the August blog cluster:
+
+| Shape | viewBox | rendered @390px |
+|---|---|---|
+| 3 siblings -> 1 gate (fan-in) | 797px | 8.88px - FAILS |
+| 2 columns (chain + branch) | 545px | 13.0px |
+| single vertical column | 272px | 20px (unscaled) |
+
+Fix by chaining vertically (`A --> B --> C`, or `~~~` for unconnected nodes),
+not by shrinking labels. Note the trade: a pure single column renders at full
+size on mobile but sits as a narrow ribbon in the 684px desktop content
+column. Two columns is usually the balance point.
 
 # Brand rule
 
