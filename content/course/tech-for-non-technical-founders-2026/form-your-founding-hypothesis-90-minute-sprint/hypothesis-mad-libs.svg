@@ -1,58 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-labelledby="madlibs-title madlibs-desc">
-  <title id="madlibs-title">Fill five specific blanks and the hypothesis becomes one testable sentence.</title>
-  <desc id="madlibs-desc">A fill-in-the-blank sentence with five outlined placeholder chips: customer, problem, approach, competition and differentiation, stitched by the connecting words "If we help ... solve ... with ..., they'll choose it over ... because ...". Below, the customer blank is filled two ways to show what specific means: the vague fill "small businesses" gets a shrug, the specific fill "solo chiropractors" (marked in ruby) gets "that's me". Basis: the founding-hypothesis frame from Click by Knapp and Zeratsky, 2025.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-labelledby="ml-title">
+  <title id="ml-title">Fill five specific blanks and the founding hypothesis becomes one testable sentence: if we help CUSTOMER solve PROBLEM with APPROACH, they'll choose it over COMPETITION because DIFFERENTIATION. Categories get a polite nod; specifics get pushback - "small businesses" gets a shrug, "solo chiropractors" gets "that's me". Basis: the founding-hypothesis frame from Click by Knapp and Zeratsky, 2025.</title>
+  <desc>A fill-in-the-blank sentence with five outlined placeholder chips - customer, problem, approach, competition, differentiation - stitched by connecting words: if we help CUSTOMER solve PROBLEM with APPROACH, they'll choose it over COMPETITION because DIFFERENTIATION. Below, the customer blank filled two ways: the vague fill "small businesses" gets a shrug; the specific fill "solo chiropractors", in ruby, gets "that's me". Basis: Click by Knapp and Zeratsky, 2025.</desc>
   <defs>
     <style>
-      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
-      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
-      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
-      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
-      .join  { font-size: 20px; font-weight: 400; fill: #121212; }
-      .blank { font-size: 20px; font-weight: 600; fill: #8a8a8a; }
-      .fill  { font-size: 20px; font-weight: 600; fill: #ffffff; }
-      .vague { font-size: 20px; font-weight: 600; fill: #8a8a8a; }
-      .annot { font-size: 18px; font-weight: 400; fill: #444444; }
-      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+      .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title{ font-size: 40px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .sub  { font-size: 23px; fill: #667085; }
+      .word { font-size: 27px; fill: #1a1a1a; }
+      .blank{ fill: #eef4ff; stroke: #2b7fff; stroke-width: 2.5; stroke-dasharray: 7 5; }
+      .blankt{ font-size: 22px; font-weight: 700; fill: #2b7fff; }
+      .lbl  { font-size: 23px; font-weight: 700; fill: #1a1a1a; }
+      .cvag { fill: #f2f4f7; stroke: #98a2b3; stroke-width: 2.5; }
+      .cvagt{ font-size: 23px; fill: #667085; }
+      .cspec{ fill: #fff1f0; stroke: #cc342d; stroke-width: 2.5; filter: url(#soft); }
+      .cspect{ font-size: 23px; font-weight: 700; fill: #cc342d; }
+      .react{ font-size: 24px; font-weight: 700; }
+      .foot { font-size: 20px; fill: #98a2b3; font-style: italic; }
     </style>
+    <filter id="soft" x="-10%" y="-14%" width="120%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#1a1a2e" flood-opacity="0.12"/></filter>
   </defs>
 
-  <!-- page tone + editorial card -->
-  <rect width="720" height="320" fill="#faf7f2"/>
-  <rect x="8" y="8" width="704" height="304" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+  <text x="360" y="52" text-anchor="middle" class="h title">Five blanks, one testable sentence</text>
+  <text x="360" y="88" text-anchor="middle" class="h sub">Categories get a polite nod - specifics get pushback.</text>
 
-  <!-- title block: action title + one message -->
-  <text x="360" y="46" text-anchor="middle" class="gk title">Five specific blanks, one testable sentence</text>
-  <text x="360" y="78" text-anchor="middle" class="gk msg">Categories get a polite nod; specifics get pushback</text>
+  <!-- The mad-libs sentence -->
+  <text x="30" y="168" class="h word">If we help</text>
+  <rect x="170" y="142" width="150" height="40" rx="12" class="blank"/><text x="245" y="170" text-anchor="middle" class="h blankt">CUSTOMER</text>
+  <text x="332" y="168" class="h word">solve</text>
+  <rect x="410" y="142" width="140" height="40" rx="12" class="blank"/><text x="480" y="170" text-anchor="middle" class="h blankt">PROBLEM</text>
 
-  <!-- Row 1: If we help [CUSTOMER] solve [PROBLEM] with [APPROACH] -->
-  <text x="40" y="134" class="gk join">If we help</text>
-  <rect x="140" y="113" width="118" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
-  <text x="199" y="134" text-anchor="middle" class="gk blank">CUSTOMER</text>
-  <text x="272" y="134" class="gk join">solve</text>
-  <rect x="326" y="113" width="106" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
-  <text x="379" y="134" text-anchor="middle" class="gk blank">PROBLEM</text>
-  <text x="444" y="134" class="gk join">with</text>
-  <rect x="492" y="113" width="122" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
-  <text x="553" y="134" text-anchor="middle" class="gk blank">APPROACH</text>
+  <text x="30" y="234" class="h word">with</text>
+  <rect x="96" y="208" width="150" height="40" rx="12" class="blank"/><text x="171" y="236" text-anchor="middle" class="h blankt">APPROACH</text>
+  <text x="258" y="234" class="h word">, they'll choose it over</text>
 
-  <!-- Row 2: they'll choose it over [COMPETITION] because [DIFFERENTIATION] -->
-  <text x="40" y="193" class="gk join">they'll choose it over</text>
-  <rect x="252" y="172" width="150" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
-  <text x="327" y="193" text-anchor="middle" class="gk blank">COMPETITION</text>
-  <text x="414" y="193" class="gk join">because</text>
-  <rect x="502" y="172" width="176" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
-  <text x="590" y="193" text-anchor="middle" class="gk blank">DIFFERENTIATION</text>
+  <rect x="30" y="274" width="184" height="40" rx="12" class="blank"/><text x="122" y="302" text-anchor="middle" class="h blankt">COMPETITION</text>
+  <text x="226" y="300" class="h word">because</text>
+  <rect x="344" y="274" width="208" height="40" rx="12" class="blank"/><text x="448" y="302" text-anchor="middle" class="h blankt">DIFFERENTIATION</text>
 
-  <!-- hero reading: the CUSTOMER blank filled two ways (ruby = the specific, actionable fill) -->
-  <line x1="40" y1="226" x2="680" y2="226" stroke="#ececec" stroke-width="1"/>
-  <text x="40" y="256" class="gk join" fill="#4a4a4a" font-size="18">Fill it vague:</text>
-  <rect x="158" y="238" width="176" height="30" rx="4" fill="#ffffff" stroke="#c8c8c8" stroke-width="2"/>
-  <text x="246" y="259" text-anchor="middle" class="gk vague">small businesses</text>
-  <path d="M348,253 L372,253 M366,248 L374,253 L366,258" fill="none" stroke="#3a3a3a" stroke-width="2"/>
-  <rect x="384" y="238" width="196" height="30" rx="4" fill="#cc342d"/>
-  <text x="482" y="259" text-anchor="middle" class="gk fill">solo chiropractors</text>
-  <text x="592" y="259" class="sys annot" fill="#cc342d">= "that's me"</text>
+  <!-- Contrast: vague vs specific (the CUSTOMER blank) -->
+  <line x1="40" y1="356" x2="680" y2="356" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="360" y="392" text-anchor="middle" class="h lbl">Fill the CUSTOMER blank:</text>
 
-  <!-- one basis line -->
-  <text x="360" y="298" text-anchor="middle" class="sys basis">Basis: the founding-hypothesis frame from Click (Knapp &amp; Zeratsky, 2025)</text>
+  <rect x="60" y="418" width="270" height="46" rx="14" class="cvag"/><text x="195" y="448" text-anchor="middle" class="h cvagt">small businesses</text>
+  <text x="352" y="448" class="h react" fill="#98a2b3">&#8594; a polite nod</text>
+
+  <rect x="60" y="480" width="270" height="46" rx="14" class="cspec"/><text x="195" y="510" text-anchor="middle" class="h cspect">solo chiropractors</text>
+  <text x="352" y="510" class="h react" fill="#2e9e4f">&#8594; "that's me!"</text>
+
+  <text x="690" y="548" text-anchor="end" class="h foot">Basis: Click (Knapp &amp; Zeratsky, 2025)</text>
 </svg>
