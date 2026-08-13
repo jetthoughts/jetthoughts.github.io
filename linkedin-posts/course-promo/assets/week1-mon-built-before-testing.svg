@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
+  <title id="t">Building isn't the test: months of evenings, savings spent, and a demo that wows all feel like progress but test nothing. Only a stranger paying tests the idea.</title>
+  <desc>A red panel lists three things that feel like progress - eight months of evenings, savings spent, a demo that wows - none of which test the idea. A blue arrow points to a green card: a stranger pays, the only real test. Basis: the cheapest test is a one-page site with a price, shown to strangers.</desc>
+  <defs>
+    <style>
+      .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
+      .title{ font-size: 30px; font-weight: 700; fill: #1a1a1a; }
+      .sub  { font-size: 23px; fill: #666; font-style: italic; }
+      .ph   { font-size: 22px; font-weight: 700; fill: #e5484d; }
+      .item { font-size: 21px; fill: #b91c1c; }
+      .win  { font-size: 26px; font-weight: 700; fill: #2e7d32; }
+      .wins { font-size: 19px; font-style: italic; fill: #2e7d32; }
+      .basis{ font-size: 20px; fill: #666; font-style: italic; }
+      .redp { fill: #fef2f2; stroke: #e5484d; stroke-width: 2.5; }
+      .grn  { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+    </style>
+    <filter id="gg" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#2e7d32" flood-opacity="0.45"/></filter>
+    <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1 L8 5 L0 9 z" fill="#2b7fff"/></marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" class="h title">Building isn't the test</text>
+  <text x="360" y="76" text-anchor="middle" class="h sub">Only a stranger paying tells you the idea is real.</text>
+
+  <!-- red panel: feels like progress -->
+  <rect x="46" y="130" width="300" height="196" rx="16" class="redp"/>
+  <text x="70" y="172" class="h ph">Feels like progress:</text>
+  <text x="74" y="212" class="h item">- 8 months of evenings</text>
+  <text x="74" y="248" class="h item">- your savings spent</text>
+  <text x="74" y="284" class="h item">- a demo that wows</text>
+
+  <path d="M356 228 L 404 228" fill="none" stroke="#2b7fff" stroke-width="3.5" marker-end="url(#ab)"/>
+
+  <!-- green: the real test -->
+  <rect x="416" y="176" width="258" height="104" rx="16" class="grn"/>
+  <text x="545" y="222" text-anchor="middle" class="h win" filter="url(#gg)">A stranger pays</text>
+  <text x="545" y="252" text-anchor="middle" class="h wins">the only real test</text>
+
+  <text x="360" y="452" text-anchor="middle" class="h basis">Cheapest test: a one-page site with a price, shown to strangers.</text>
+</svg>

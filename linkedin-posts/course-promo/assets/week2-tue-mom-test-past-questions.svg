@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
+  <title id="t">Ask about the past, not the future: three swaps that turn a polite yes into a real answer.</title>
+  <desc>Three question swaps. Future-tense questions (weak, red) become past-tense questions (real, green): "Would you use this?" becomes "When did this last happen?"; "Would you pay for it?" becomes "What did you pay to fix it?"; "How important is it?" becomes "What did the workaround cost?". Basis: people promise anything, but what they did last month they can only report.</desc>
+  <defs>
+    <style>
+      .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
+      .title{ font-size: 30px; font-weight: 700; fill: #1a1a1a; }
+      .sub  { font-size: 23px; fill: #666; font-style: italic; }
+      .colh { font-size: 18px; font-weight: 700; }
+      .qr   { font-size: 22px; fill: #e5484d; }
+      .qg   { font-size: 21px; fill: #2e7d32; font-weight: 700; }
+      .basis{ font-size: 20px; fill: #666; font-style: italic; }
+    </style>
+    <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1 L8 5 L0 9 z" fill="#2b7fff"/></marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" class="h title">Ask about the past, not the future</text>
+  <text x="360" y="76" text-anchor="middle" class="h sub">Three swaps before your first interview.</text>
+
+  <text x="284" y="126" text-anchor="end" class="h colh" fill="#e5484d">FUTURE - polite yes</text>
+  <text x="372" y="126" text-anchor="start" class="h colh" fill="#2e7d32">PAST - real answer</text>
+
+  <!-- row 1 -->
+  <text x="284" y="182" text-anchor="end" class="h qr">"Would you use this?"</text>
+  <path d="M300 175 L 360 175" fill="none" stroke="#2b7fff" stroke-width="3" marker-end="url(#ab)"/>
+  <text x="372" y="182" text-anchor="start" class="h qg">"When did this last happen?"</text>
+
+  <!-- row 2 -->
+  <text x="284" y="248" text-anchor="end" class="h qr">"Would you pay for it?"</text>
+  <path d="M300 241 L 360 241" fill="none" stroke="#2b7fff" stroke-width="3" marker-end="url(#ab)"/>
+  <text x="372" y="248" text-anchor="start" class="h qg">"What did you pay to fix it?"</text>
+
+  <!-- row 3 -->
+  <text x="284" y="314" text-anchor="end" class="h qr">"How important is it?"</text>
+  <path d="M300 307 L 360 307" fill="none" stroke="#2b7fff" stroke-width="3" marker-end="url(#ab)"/>
+  <text x="372" y="314" text-anchor="start" class="h qg">"What did the workaround cost?"</text>
+
+  <text x="360" y="452" text-anchor="middle" class="h basis">People promise anything - what they did last month, they can only report.</text>
+</svg>

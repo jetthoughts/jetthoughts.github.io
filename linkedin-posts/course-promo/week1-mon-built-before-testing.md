@@ -12,6 +12,7 @@ icp_test: Do idea-stage and just-built founders recognize the build-first-ask-ne
 cta: "If you've shipped something, did you build first, or check if anyone actually wanted it?"
 design: D
 design_file: none
+image: "assets/week1-mon-built-before-testing.png"
 course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_mon_built_before_testing

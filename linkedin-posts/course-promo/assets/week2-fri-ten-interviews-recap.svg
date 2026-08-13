@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
+  <title id="t">Ten interviews decide it: one weekend, zero code. Score each on the same bar and the pattern says keep going or kill it.</title>
+  <desc>A flow: ten past-tense interviews feed into scoring each on the same bar, which forks into two outcomes - a green "keep going" and a red "kill it". Basis: the pattern decides before you spend a cent on code.</desc>
+  <defs>
+    <style>
+      .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
+      .title{ font-size: 30px; font-weight: 700; fill: #1a1a1a; }
+      .sub  { font-size: 23px; fill: #666; font-style: italic; }
+      .nt   { font-size: 24px; font-weight: 700; }
+      .ns   { font-size: 18px; font-style: italic; fill: #666; }
+      .out  { font-size: 24px; font-weight: 700; }
+      .basis{ font-size: 20px; fill: #666; font-style: italic; }
+      .blue { fill: #eef4ff; stroke: #2b7fff; stroke-width: 2.5; }
+      .neut { fill: #faf7f2; stroke: #6b7280; stroke-width: 2.5; }
+      .grn  { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .red  { fill: #fef2f2; stroke: #e5484d; stroke-width: 2.5; }
+    </style>
+    <filter id="gg" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.2" flood-color="#2e7d32" flood-opacity="0.45"/></filter>
+    <filter id="grf" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.2" flood-color="#e5484d" flood-opacity="0.45"/></filter>
+    <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1 L8 5 L0 9 z" fill="#2b7fff"/></marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" class="h title">Ten interviews decide it</text>
+  <text x="360" y="76" text-anchor="middle" class="h sub">One weekend, zero code - enough to keep or kill.</text>
+
+  <!-- node: 10 interviews -->
+  <rect x="34" y="196" width="196" height="104" rx="16" class="blue"/>
+  <text x="132" y="240" text-anchor="middle" class="h nt" fill="#2b7fff">10 interviews</text>
+  <text x="132" y="268" text-anchor="middle" class="h ns">ask about the past</text>
+
+  <path d="M232 248 L 276 248" fill="none" stroke="#2b7fff" stroke-width="3.5" marker-end="url(#ab)"/>
+
+  <!-- node: score -->
+  <rect x="278" y="196" width="170" height="104" rx="16" class="neut"/>
+  <text x="363" y="240" text-anchor="middle" class="h nt" fill="#444">score on</text>
+  <text x="363" y="268" text-anchor="middle" class="h nt" fill="#444">one bar</text>
+
+  <!-- fork -->
+  <path d="M450 224 C 500 200, 520 176, 566 168" fill="none" stroke="#2e7d32" stroke-width="3.5" marker-end="url(#ab)"/>
+  <path d="M450 272 C 500 296, 520 320, 566 328" fill="none" stroke="#e5484d" stroke-width="3.5" marker-end="url(#ab)"/>
+
+  <rect x="568" y="122" width="120" height="86" rx="14" class="grn"/>
+  <text x="628" y="174" text-anchor="middle" class="h out" fill="#2e7d32" filter="url(#gg)">Keep going</text>
+
+  <rect x="568" y="292" width="120" height="86" rx="14" class="red"/>
+  <text x="628" y="344" text-anchor="middle" class="h out" fill="#e5484d" filter="url(#grf)">Kill it</text>
+
+  <text x="360" y="452" text-anchor="middle" class="h basis">The pattern decides - before you spend a cent on code.</text>
+</svg>
