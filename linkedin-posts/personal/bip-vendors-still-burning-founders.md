@@ -20,10 +20,10 @@ notes: |
   Text-first. Idea-first, no em dashes.
 ---
 
-Still surprises me in 2026: founders are getting burned by inexperienced vendors even now, with every AI tool sitting right there.
+AI was supposed to make it harder to sell founders bad software. Somehow it hasn't.
 
-I see it on almost every audit. Someone paid real money for something that came back half-working, when the same thing was either a cleaner build for a fraction of the cost or didn't need building yet at all.
+A non-technical founder shows me what they paid for, and it's barely running - features half-broken, held together with tape. Two years ago I'd have understood. Now the same thing could have been built cleaner with tools they could run themselves, or skipped entirely until someone actually wanted it.
 
-The tech stopped being the hard part a while ago. What's missing is someone telling the founder what not to pay for.
+The money still gets spent the old way, on the old kind of work, by people who trusted the wrong vendor.
 
-Every one of these was avoidable. That's the part that gets to me.
+I don't have a clean fix for it. It just still surprises me how avoidable most of it turns out to be.

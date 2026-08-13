@@ -25,6 +25,6 @@ I stopped using AI coding agents about a year ago. They'd write something that l
 
 Claude Code pulled me back. Not because it's smarter - because it's consistent. It makes the change I asked for and leaves the rest alone. I hand a whole workflow to sub-agents and the diffs hold together, run after run.
 
-That's the thing that matters once you're doing real work and not a demo. I don't need clever. I need to not babysit it.
+Consistency is boring, and it's the only thing I actually care about. I don't need clever. I need to not babysit it.
 
-Still surprises me that consistency, not intelligence, is what made these finally usable.
+Still surprises me that reliability, not intelligence, is what made these finally usable.

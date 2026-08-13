@@ -9,8 +9,8 @@ image: ""
 first_comment: |
   (value post - no link; reply-CTA only)
 status: draft
-stage: next
-proposed_for: "2026-09-15 15:30 CEST"
+stage: future
+proposed_for: ""
 notes: |
   Pillar: story / mistakes (the 70% value; NO course link - mistakes outperform
   wins on LinkedIn). From Paul's interview answer 2026-08-13: he's usually the
@@ -22,6 +22,9 @@ notes: |
   segment ($450B by 2030). Hard "10x" left out (Paul's private number, unverifiable
   publicly) - kept qualitative; Paul may add the multiple to own it.
   One parallel line kept at the 1-per-post budget. Idea-first, no em dashes.
+  BACKLOGGED 2026-08-13 (Paul: "do not like this story at all - need a better one").
+  Keep the BigBinary/being-wrong ANGLE (analysis vs a founder's conviction) but
+  find a stronger, more personal case before drafting. Do not schedule as-is.
 ---
 
 I'm usually the skeptic in the room. A non-technical founder walks me through their idea and my analytical side quietly says: this won't work.

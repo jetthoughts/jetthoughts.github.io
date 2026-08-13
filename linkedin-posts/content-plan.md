@@ -35,7 +35,7 @@ Status legend: `draft` · `revised` (idea-first, ready) · `approved` · `schedu
 | 2026-09-01 | Thu | build-in-public (NEW) | `personal/bip-vendors-still-burning-founders` | none | **drafted** ✓ (Paul review) |
 | 2026-09-08 | Tue | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
 | 2026-09-08 | Thu | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course | draft |
-| 2026-09-15 | Tue | story/mistakes (NEW) | `personal/story-wrong-about-bigbinary` | none | **drafted** ✓ (Paul review) |
+| 2026-09-15 | Tue | story/mistakes (NEW) | *needs a better story* - BigBinary draft backlogged (Paul didn't like it); keep the "analysis vs conviction" angle | none | to source |
 
 **Ratio check (this 9-post window):** ~6 value (teach/opinion/story/reaction/BIP),
 1 poll, 2 course-linked -> ~70/20/10. The two NEW slots (reaction + build-in-public)
