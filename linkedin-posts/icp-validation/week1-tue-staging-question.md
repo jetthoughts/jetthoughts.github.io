@@ -8,7 +8,8 @@ pillar: progress-visibility
 hypothesis: H2, H3
 opener_archetype: observation-led
 icp_test: does a founder recognize that "is it on track?" is reassurance, not information, and reply with their own standup question?
-visual: assets/week1-tue-staging-question.png (TBD - needs a rescue-lane exhibit or skip)
+image: "assets/week1-tue-staging-question.png"
+visual: assets/week1-tue-staging-question.png (weekly oversight cadence exhibit)
 status: draft
 stage: next
 proposed_for: "2026-08-20 15:30 CEST"

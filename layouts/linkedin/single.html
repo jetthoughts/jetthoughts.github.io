@@ -9,8 +9,12 @@
     * { box-sizing: border-box; }
     body { font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: var(--bg); color: #16181d; }
     .wrap { max-width: 1320px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+    .topnav { display: flex; justify-content: space-between; align-items: center; margin-bottom: .3rem; }
     a.back { font-size: .85rem; color: var(--muted); text-decoration: none; }
     a.back:hover { color: var(--accent); }
+    .pager { display: flex; gap: 1rem; font-size: .85rem; }
+    .pager a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .pager a:hover { text-decoration: underline; }
     h1 { font-size: 1.2rem; margin: .6rem 0 .3rem; overflow-wrap: anywhere; }
     .meta { font-size: .78rem; color: var(--muted); margin: 0 0 1.2rem; display: flex; flex-wrap: wrap; gap: .3rem .5rem; }
     .pill { background: #eceef1; border-radius: 4px; padding: .05rem .4rem; }
@@ -61,7 +65,13 @@
   {{ $copyIcon := `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>` }}
 
   <div class="wrap">
-    <a class="back" href="{{ "/linkedin/" | relURL }}">&larr; board</a>
+    <div class="topnav">
+      <a class="back" href="{{ "/linkedin/" | relURL }}">&larr; board</a>
+      <span class="pager">
+        {{ with .PrevInSection }}<a href="{{ .RelPermalink }}" title="{{ .Title }}">&larr; prev</a>{{ end }}
+        {{ with .NextInSection }}<a href="{{ .RelPermalink }}" title="{{ .Title }}">next &rarr;</a>{{ end }}
+      </span>
+    </div>
     <h1>{{ or .Title (humanize .File.BaseFileName) }}</h1>
     <p class="meta">
       <span class="pill">{{ or .Params.lane .Params.campaign "—" }}</span>

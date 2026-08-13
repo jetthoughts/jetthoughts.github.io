@@ -15,7 +15,7 @@ design_file: linkedin-posts/course-promo/assets/week1-tue-founding-hypothesis-sk
 course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_tue_founding_hypothesis
-status: draft
+status: approved
 stage: next
 proposed_for: "2026-08-19 15:30 CEST"
 first_comment: |
