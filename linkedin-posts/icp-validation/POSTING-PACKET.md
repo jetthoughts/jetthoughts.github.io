@@ -1,4 +1,6 @@
-# Posting Packet — ICP post #1 (ready to publish)
+# Posting Packet — ICP post #1 (SCHEDULED)
+
+> **STATUS: SCHEDULED on Paul's LinkedIn for Thu 2026-08-13, 3:30 PM CEST (9:30am ET, US-morning B2B peak)** — done via claude-in-chrome, verified in LinkedIn "Scheduled posts". The 2-week kill-criteria clock starts on publish (2026-08-13). Next: monitor replies/DMs for ICP symptom-language; agent drafts responses, Paul sends. `week1-tue`/`week1-wed` drafts already written for the 3-4/wk Stream 0 cadence.
 
 **For Paul. Total effort: copy the text block below, paste into LinkedIn, post.** Nothing else. This activates the campaign and starts the kill-criteria clock (register C1 addendum, 2026-08-08).
 
