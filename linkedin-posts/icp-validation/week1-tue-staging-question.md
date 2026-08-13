@@ -24,7 +24,7 @@ notes: |
 
 Most standup updates for non-technical founders don't tell you anything, and it's not because the team is lying.
 
-"Is it on track?" gets a yes almost every week. That yes almost never changes what you do next - and an answer that can't change your decision isn't worth much.
+"Is it on track?" gets a yes almost every week. That yes never changes what you do next. It's a reflex, not information.
 
 A question that does change something: don't ask if it's on track. Ask the team to name three real people on your support list who'd notice what shipped last sprint. Actual names, not personas or test accounts.
 

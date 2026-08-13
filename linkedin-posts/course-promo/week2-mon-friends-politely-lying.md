@@ -40,7 +40,7 @@ notes: |
 
 "Everyone I show it to says they'd love it."
 
-That line feels like proof, and it isn't. People who like you say kind things about your idea. It costs them nothing, and it tells you nothing about whether anyone actually needs the thing.
+That line feels like proof. It isn't. People who like you say nice things about your idea - it's free for them, and it proves nothing about whether anyone needs it.
 
 Demand is what someone already did about the problem before you showed up - what they tried on their own, what they were already paying to duct-tape around it.
 

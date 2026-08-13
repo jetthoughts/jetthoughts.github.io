@@ -54,4 +54,4 @@ The cheapest way to find out is a real checkout. Make a Stripe payment link (abo
 
 The sketch below is the same $97 button worded two ways. One leads with what the buyer gets, the other just makes clicking feel less scary. The price doesn't change, only the wording.
 
-If you're non-technical, have you ever charged for something before it existed?
+Have you ever charged for something before you built it?
