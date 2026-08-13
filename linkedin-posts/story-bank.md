@@ -60,13 +60,13 @@ the standup 3 questions + weekly demo cadence · salvage-vs-rebuild decision.
 We're thin on **build-in-public**, **fresh stories**, and **reaction** material.
 Ask these to stock the bank (one short answer each is enough for a post):
 
-1. A recent audit finding that surprised you? (build-in-public)
-2. A time you were wrong about a founder's idea, or changed your mind? (mistakes - these outperform wins)
+1. A recent audit finding that surprised you? (build-in-public) - **ANSWERED 2026-08-13:** even with AI this mature, founders still get burned by inexperienced vendors and waste money on work that could be built better or skipped entirely. Drafted `personal/bip-vendors-still-burning-founders`.
+2. A time you were wrong about a founder's idea, or changed your mind? (mistakes) - **ANSWERED 2026-08-13:** BigBinary - Paul thought outstaffing would die; it grew (his framing ~10x in 2-3 yrs). Grounded: Rails-only consultancy est. 2011, ~130 team, Neeto product suite, Gumroad's Sahil credits them; staff-aug became the fastest-growing IT segment. Drafted `personal/story-wrong-about-bigbinary`.
 3. The worst dev-shop situation you've walked into (anonymized)? (story)
 4. What do you actually say to a founder who insists on hiring devs before validating? (opinion)
 5. A no-code/AI build you did recently - what worked, what broke? (build-in-public)
 6. Which single founder question, when you ask it, most often reveals the truth? (teach)
-7. A tool or belief you changed your opinion on this year? (reaction)
+7. A tool or belief you changed your opinion on this year? (reaction) - **ANSWERED 2026-08-13:** Claude Code regained trust - multi-agent/sub-agents now produce consistent changes and follow his workflows; reliability is the line. Drafted `personal/reaction-claude-code-trust`.
 8. Why you built the course - the moment it clicked? (story / founding)
 
 **Workflow:** when drafting a value post and the bank has no real hook for it,

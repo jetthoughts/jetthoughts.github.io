@@ -29,12 +29,13 @@ Status legend: `draft` · `revised` (idea-first, ready) · `approved` · `schedu
 | 2026-08-11 | Thu | story/opinion | `course-promo/week1-thu-validate-before-build` | course | **posted** (text) |
 | 2026-08-18 | Tue | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ demo-rule visual |
 | 2026-08-18 | Thu | teach | `course-promo/week1-tue-founding-hypothesis` | course | **approved** ✓ five-blank exhibit |
-| 2026-08-25 | Tue | reaction (NEW) | *vibe-coding debate: front vs back* - draft from `trends.md` | none | to draft |
-| 2026-08-25 | Thu | teach | `course-promo/week1-thu-price-before-product` | course | revised ✓ |
+| 2026-08-25 | Tue | reaction (NEW) | `personal/reaction-claude-code-trust` | none | **drafted** ✓ (Paul review) |
+| 2026-08-25 | Thu | teach | `course-promo/week1-thu-price-before-product` | drop link? | revised ✓ |
 | 2026-09-01 | Tue | opinion | `icp-validation/week1-tue-staging-question` | blog (SCIPAB) | revised ✓ |
-| 2026-09-01 | Thu | build-in-public (NEW) | *a recent audit finding* - needs Paul interview (story-bank Q1/Q5) | none | to draft |
+| 2026-09-01 | Thu | build-in-public (NEW) | `personal/bip-vendors-still-burning-founders` | none | **drafted** ✓ (Paul review) |
 | 2026-09-08 | Tue | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
 | 2026-09-08 | Thu | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course | draft |
+| 2026-09-15 | Tue | story/mistakes (NEW) | `personal/story-wrong-about-bigbinary` | none | **drafted** ✓ (Paul review) |
 
 **Ratio check (this 9-post window):** ~6 value (teach/opinion/story/reaction/BIP),
 1 poll, 2 course-linked -> ~70/20/10. The two NEW slots (reaction + build-in-public)
