@@ -93,6 +93,21 @@
   CTR that `content-strategy/content-plan.md` was built from.
 * **Not in the repo**: all credential files live under `~/.config/` and
   `~/Library/Application Support/`. Nothing was committed but the bundle.
+## 2026-08-13 (exhibit clunkiness) - render-gate needs a composition pass
+
+* **Update**: `.okf/design/house-visual-spec.md` gains a **render-gate
+  clunkiness checklist** (6 items: alignment, odd-one-out balance, whitespace/
+  hollowness, sibling consistency, edge breathing room, weight/emphasis) plus a
+  per-batch independent-critic backstop.
+* **Wobble rule corrected**: the ~0.4-0.6deg hand-drawn wobble reads as craft
+  in a flow/stack but as MISALIGNMENT in a grid of aligned cards - drop it in
+  grids. This exact spec rule caused the friday-demo-timeline clunkiness.
+* **Root cause recorded**: a legibility/overflow gate is structurally BLIND to
+  composition. friday-demo-timeline passed the binary gate (legible/no-overflow/
+  on-style) with 3 clunky defects visible in the same screenshot; Paul caught
+  them. Binary gates necessary, not sufficient - stance "assume clunky, find 3"
+  is the lever. Redraw shipped on `course-svg-per-image-fixes` (7e87b1a7 draw,
+  c0df99a1 de-clunk).
 
 ## 2026-08-12 (item16 landing migration) - below-fold coverage gap confirmed
 
