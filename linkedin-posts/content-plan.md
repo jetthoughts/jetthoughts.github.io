@@ -36,8 +36,10 @@ built-before-testing course).
 
 - [ ] Revised to idea-first, self-score ≤2/10 + shape-tell critic
 - [ ] Visual exported to lane `assets/`
-- [ ] Scheduled for a Tue-Thu US-morning slot
 - [ ] `first_comment` staged (course lane: UTM'd course link)
-- [ ] Image attached (manual until upload gap solved)
-- [ ] First comment posted right after publish
+- [ ] **Image attached in the composer BEFORE scheduling** (can't add to a live post)
+- [ ] **Scheduled ≥24h ahead** for a Tue-Thu US-morning slot
+- [ ] **Paul pre-verified** in the 24h window
+- [ ] Published
+- [ ] First comment posted right after publish (assistant, via claude-in-chrome)
 - [ ] Metrics logged 48-72h later

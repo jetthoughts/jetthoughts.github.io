@@ -97,11 +97,33 @@ the numbers.
 
 1. Draft against the idea-first skeleton; self-score ≤2/10 (pipeline rubric) + the
    shape-tell critic.
-2. Export the visual to `assets/<slug>.png`.
-3. Paul (or claude-in-chrome for text) schedules for the next Tue-Thu US-morning slot.
-4. Attach the image (manual until the upload gap is solved).
-5. Reply to ICP comments within ~2h; route real conversations to DM.
-6. Log analytics 48-72h later in the ledger.
+2. Export the visual to `assets/<slug>.png`. **Attach the image at compose time,
+   BEFORE scheduling** - you cannot add an image to an already-published post
+   (LinkedIn allows text edits only). Scheduling text-first to "add the image
+   later" is how the 2026-08-13 post shipped imageless. (Until claude-in-chrome can
+   drive the native upload dialog, Paul attaches the PNG in the composer.)
+3. Stage the `first_comment` (course lane: UTM'd course link).
+4. **Schedule at least 24 HOURS ahead** (Paul rule 2026-08-13) - never same-day or
+   imminent. The 24h gap is Paul's **pre-verify window**: he reviews the queued post
+   (text, image, shape) before it goes live and can tweak or pull it. Pick the next
+   Tue-Thu US-morning slot that is ≥24h out.
+5. **Paul pre-verifies** within the window. Only then does it publish.
+6. **After it publishes, the assistant posts the `first_comment`** via claude-in-chrome
+   (typing a comment needs no file dialog - this IS automatable). Course link lives
+   here, not the body.
+7. Reply to ICP comments within ~2h; route real conversations to DM.
+8. Log analytics 48-72h later in the ledger.
+
+### Link unfurl (why the course link shows no preview card)
+
+- **Comment links never unfurl on LinkedIn** - only body links generate a preview
+  card. A first-comment link is a bare clickable link by design (the cost of keeping
+  the link out of the reach-throttled body).
+- Separately, our `og:image` is currently **WebP**, which LinkedIn's crawler often
+  won't render - so body links / Slack / Twitter shares may also show no image.
+  **Fix pending:** change og:image output to jpg/png in
+  `themes/beaver/layouts/partials/seo/enhanced-meta-tags.html` (or the root override).
+  Tracked as an engineering task.
 
 ## Files
 
