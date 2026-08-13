@@ -1,5 +1,23 @@
 # Bundle Update Log
 
+## 2026-08-13 (course landing) - the post-hero slot is not a router
+
+* **New concept**: `.okf/design/course-landing-components.md` - the landing's
+  composition rules (one loud element, 3 dark zones, soft-card dialect) plus a
+  ruling on the entry block.
+* **The finding**: a 3-row "Where to start" router table (`.start-router` `<dl>`)
+  shipped under the hero and was rejected on sight. Four independent critics
+  (ICP-reader, CRO, visual-design, IA) all recommended deleting it; a Codex
+  refutation pass then caught that "delete to prose" would ignore the stated
+  intent (a visual component) AND silently drop the page's only links to How
+  This Course Works and the FAQ. Only 2 of 6 router links were unique.
+* **The fix**: `.start-note` - one asymmetric callout carrying only the
+  already-building -> Lesson 4.2 fork (~79px desktop / 130px mobile, down from
+  ~200px). Wayfinding moved to the module-map intro. The first mistake card now
+  lands at y~643 instead of ~760 on desktop.
+* **Reusable rule**: before adding a navigational component to a landing page,
+  count how many times each destination is already reachable elsewhere on it.
+
 ## 2026-08-13 (first full SEO review) - the GA4 traffic number was never real
 
 * **Update**: `.okf/workflows/analytics-access.md` gains a "Reading the numbers"
