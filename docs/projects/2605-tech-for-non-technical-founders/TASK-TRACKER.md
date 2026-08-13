@@ -6,7 +6,7 @@
 
 ## ⏱ Next dated event
 
-**Aug-14 metrics read** — first evidence read of the GA4/Clarity campaign window against the week-0 baseline (`50-59-execution/50.01-week0-metrics-baseline.md`). It gates items 13 and the post-freeze window; nothing else waits on it.
+**Aug-14 metrics read — DONE 2026-08-13 (run a day early).** Full read: [`50-59-execution/50.02-aug14-metrics-read.md`](50-59-execution/50.02-aug14-metrics-read.md). Headline: NO course-landing lift vs pre-launch (84→75 sessions/14d, ~93% Direct, course absent from GSC top-25) and the interactive funnel is dead (`start_course`=1, checkpoint-reveal=4, pdf/copy-share/glossary=0 in 14 days). Gates: (1) blog→course bridge unproven — do NOT ship more Wave-G funnel posts on the current bridge design; (2) remove the unused mechanics per 50.01's standing removal rule; (3) item 13 (W4) should prioritise driving landers into M2-M3 (read-depth still healthy) over M4/M5 pages almost no one reaches. Next-campaign action: UTM-tag LinkedIn/newsletter course links so lift stops collapsing into Direct.
 
 ## Open queue (in execution order)
 
