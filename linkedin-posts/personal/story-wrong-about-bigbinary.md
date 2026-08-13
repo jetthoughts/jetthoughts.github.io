@@ -27,12 +27,12 @@ notes: |
   find a stronger, more personal case before drafting. Do not schedule as-is.
 ---
 
-I'm usually the skeptic in the room. A non-technical founder walks me through their idea and my analytical side quietly says: this won't work.
+When I worked with BigBinary, I was quietly sure their model wouldn't last.
 
-I'm wrong more often than that instinct admits.
+They were a small Rails agency doing outstaffing, and I had it filed under "dying business model." Smart people, wrong bet, I thought.
 
-Years ago I worked with BigBinary, a small Rails agency, and I was sure their model was a dead end. Outstaffing felt like something the market would grow out of. Then they just kept going - more clients, their own suite of products, Sahil at Gumroad publicly crediting them with saving the company. The thing I'd written off is now one of the most respected shops in the Rails world, and outstaffing became one of the fastest-growing parts of the industry.
+I was the one who got it wrong. They kept growing, built their own suite of products, and Gumroad's founder started publicly crediting them with keeping his company alive. Outstaffing didn't fade - it became one of the fastest-growing parts of the industry, and BigBinary is now one of the most respected shops in the Rails world.
 
-My read is only ever about what already exists. Founders are betting on what doesn't, and I keep underrating that bet.
+I do this more than I'd like to admit. A founder describes an idea, my analytical side runs the numbers, and I quietly decide it won't work. But my read is only ever about what already exists. The founder is betting on what doesn't, and that's the part I can't measure.
 
-I still catch myself deciding an idea won't work before the founder's finished talking. Trying to shut that voice up a bit earlier each time.
+I've stopped trusting that first "this won't work." It's usually just me being confident about the wrong thing.

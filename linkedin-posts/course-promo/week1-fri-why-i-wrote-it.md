@@ -45,7 +45,7 @@ notes: |
   policy. "tell me where it loses you" close kept verbatim - a real ask, not a sales CTA.
 ---
 
-Every non-technical founder I talk to wants the same thing: to know what to read before they spend money on an idea. The honest answer is short. Find out if someone will pay before you build. For years I had no single link to send them, just scattered blog posts and the same advice repeated across a dozen calls.
+Most non-technical founders want the same thing: to know what to read before they spend money on an idea. The honest answer is one line - find out if someone will pay before you build. For years I had no single link to send them, just scattered blog posts and the same advice repeated across a dozen calls.
 
 I spent the last two months writing it down. Five short modules, from a raw idea to your first paying customer, with the templates included: the demand test, the interview scripts, the one-page brief, a no-code build you own from day one, and how to ask for that first payment.
 

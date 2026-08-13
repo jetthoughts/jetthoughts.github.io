@@ -33,12 +33,12 @@ notes: |
   (the "ai rebuild" framing was factually wrong); utm updated to match.
 ---
 
-A founder showed me an MVP he'd paid $40k for. Three months of work from a team he found on Upwork.
+A founder showed me an MVP he'd paid $40k for. Three months of work from a team on Upwork.
 
-I've built products like his before - a marketplace for specialists - so I had a rough sense of what it should take. His worked, mostly. But he kept hitting it: an availability error here, something broken there. And every time, the same loop - message the freelancer, explain the problem, agree on a fix, then wait days for it to land.
+I've built products like his before, so I knew roughly what it should take. His mostly ran. But he kept hitting broken bits - an error here, a dead feature there - and every one meant the same loop: message the freelancer, explain it, agree a fix, wait days.
 
-What got to him wasn't really the money. It was paying for a working product and ending up with a part-time job chasing one. "I thought they'd hand me something that just worked," he told me. "Now I spend my week managing fixes I don't even understand."
+"I thought they'd hand me something that just worked," he told me. "Now I spend my week managing fixes I don't even understand."
 
-What I wish more non-technical founders knew early: at the idea stage, you don't have to sign up for that. Tools like Lovable, v0, and bolt.new let you put a working version in front of real users yourself, fast enough to learn whether anyone actually wants it before you write a big check. They're not magic, and a vague prompt gets you a mess, but for proving an idea they're more than enough.
+That's the trap I want non-technical founders to see coming. You can put a working version in front of real users yourself now, with Lovable or v0 or bolt.new, for almost nothing - and find out if anyone wants it before you hand anyone a big check.
 
-If you're non-technical and mid-build right now, how much of your week goes to chasing fixes instead of talking to customers?
+He paid $40k to end up as the unpaid project manager of his own product. It didn't have to go that way.
