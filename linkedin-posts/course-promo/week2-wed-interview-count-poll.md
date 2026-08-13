@@ -15,7 +15,7 @@ course_link_placement: first-comment
 utm_campaign: course-pilot-aug26
 utm_content: week2_wed_interview_count_poll
 status: draft
-stage: future
+stage: next
 opener_archetype: observation-led
 notes: |
   Opener archetype: observation-led. Idea-first framing (a flat claim about pre-build

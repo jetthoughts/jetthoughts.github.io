@@ -10,7 +10,7 @@ cta: Open question - "If you've been through one of these rebuilds, what did you
 utm_campaign: icp_validation_validation_vs_production
 utm_content: vibe_coding_disposable_by_design
 status: draft
-stage: future
+stage: next
 opener_archetype: idea-led
 notes: |
   REVISED 2026-08-13 to idea-first: opener was habit-led ("For the last
