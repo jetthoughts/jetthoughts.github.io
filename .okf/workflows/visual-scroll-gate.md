@@ -48,6 +48,15 @@ banned-string text ratchet).
 - **Visual verification gate** for any new media element: score
   against look/functional/scroll-earning/helpfulness; any NO/MIXED on
   the latter two = rollback or redesign before commit.
+- **Cold-eyes pass on a NEW component** (2026-08-13): a tweak to an
+  existing pattern may be self-reviewed; a pattern that did not exist on
+  the page before needs one independent critic on the render before
+  handback. The implementer cannot see two failure modes in their own
+  work - the wrong anchor ("better than the thing I just replaced" when
+  that was also bad) and solving the symptom (a legibility complaint that
+  was really a purpose problem, where a prettier wrong element still
+  fails). Cheapest form: render 2-3 variants and let the owner pick from
+  screenshots. Worked example: [course-landing entry fork](../design/course-landing-components.md).
 
 # Citations
 

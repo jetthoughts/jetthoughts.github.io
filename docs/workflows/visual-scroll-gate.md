@@ -79,6 +79,18 @@ goal is "premium", run a dedicated critic pass with these properties:
 6. Mermaid renders client-side: text validators never see it. Theme-level
    problems (edge weight, label chips, font-to-node ratio) repeat across
    every diagram - diagnose once at the theme, not per diagram.
+7. **NEW component: the implementer's own screenshot read is not the
+   gate** (2026-08-13 lesson). A *tweak* to an existing pattern you can
+   self-review; a pattern that did not exist on the page before needs ONE
+   cold-eyes critic on the render before handback. Two failure modes the
+   implementer cannot see in their own work: (a) the **wrong anchor** -
+   "better than before" is worthless when the before was also bad; anchor
+   on what good looks like, and on whether the component's PURPOSE fits
+   its slot, not on the thing you just replaced; (b) **solving the
+   symptom** - a legibility complaint can be a purpose problem wearing a
+   formatting costume, and a prettier version of the wrong element still
+   fails. Cheapest form: render 2-3 variants, screenshot each at 1280x800
+   and 390x844, and let the owner pick from images rather than from prose.
 
 ## Per-view checklist
 
