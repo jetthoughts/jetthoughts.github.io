@@ -1,62 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 940" role="img" aria-labelledby="dp-title">
-  <title id="dp-title">The $1 pre-sale flow, from button to proof. A real $1 charge beats a free email signup with the same visitors and a sharper signal. Step 1 the button: reserve your spot, $1 now, refundable if we don't ship, same Stripe Payment Link as Lesson 1.5. Step 2 the charge: a real charge is a wallet decision, conversion drops 3-5x but the signal is truer. Step 3 the promise: a full refund within 7 days if we don't ship, every charge refunded within 30 days. Step 4 what it proved: 0 sales means price or hypothesis wrong, 1-10 sales means iterate headline and targeting, 50+ sales is a PMF signal to start building.</title>
-  <desc>Four steps. 1 the button: reserve your spot, $1 now, refundable if we don't ship; same Stripe Payment Link as Lesson 1.5. 2 the charge: a real charge is a wallet decision not a free email click; conversion drops 3-5x but the signal is truer. 3 the promise: a full refund within 7 days if we don't ship, and every charge refunded within 30 days. 4 what it proved: 0 sales means price or hypothesis wrong, 1-10 sales means iterate headline and targeting, 50 or more sales is a product-market-fit signal to start building. Footer: the click proves demand, not a business yet.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-labelledby="dp-title">
+  <title id="dp-title">The $1 pre-sale flow, from button to proof. A real $1 charge beats a free email signup with the same visitors and a sharper signal. 1 the button: reserve your spot, $1 now, refundable if we don't ship, same Stripe Payment Link as Lesson 1.5. 2 the charge: a real charge is a wallet decision, conversion drops 3-5x but the signal is truer. 3 the promise: a full refund within 7 days if we don't ship, every charge refunded within 30 days. 4 what it proved: 0 sales means price or hypothesis wrong, 1-10 sales means iterate headline and targeting, 50+ sales is a PMF signal to start building.</title>
+  <desc>Four numbered steps. 1 the button: reserve your spot, $1 now, refundable if we don't ship; same Stripe Payment Link as Lesson 1.5. 2 the charge: a real charge is a wallet decision not a free email click; conversion drops 3-5x but the signal is truer. 3 the promise: a full refund within 7 days if we don't ship, and every charge refunded within 30 days. 4 what it proved: 0 sales means price or hypothesis wrong, 1-10 sales means iterate headline and targeting, 50 or more sales is a product-market-fit signal to start building. Footer: the click proves demand, not a business yet.</desc>
   <defs>
     <style>
       .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .title{ font-size: 46px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
-      .sub  { font-size: 23px; fill: #667085; }
+      .title{ font-size: 48px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .sub  { font-size: 24px; fill: #667085; }
       .card { fill: #f6f9ff; stroke: #6aa8ff; stroke-width: 2.5; filter: url(#soft); }
       .num  { fill: #2b7fff; }
-      .numt { font-size: 26px; font-weight: 700; fill: #fff; }
-      .stept{ font-size: 26px; font-weight: 700; fill: #2b7fff; filter: url(#gB); }
+      .numt { font-size: 28px; font-weight: 700; fill: #fff; }
+      .stept{ font-size: 27px; font-weight: 700; fill: #2b7fff; filter: url(#gB); }
       .body { font-size: 23px; fill: #1a1a1a; }
       .note { font-size: 20px; fill: #667085; font-style: italic; }
       .o0 { font-size: 23px; font-weight: 700; fill: #b42318; }
       .o1 { font-size: 23px; font-weight: 700; fill: #b8860b; }
       .o5 { font-size: 23px; font-weight: 700; fill: #1a6b34; }
       .foot { font-size: 24px; font-weight: 700; fill: #1a1a1a; }
-      .arrow{ stroke: #2b7fff; stroke-width: 4; fill: none; }
     </style>
     <filter id="soft" x="-6%" y="-10%" width="112%" height="120%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
     <filter id="gB" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2b7fff" flood-opacity="0.5"/></filter>
-    <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#2b7fff"/></marker>
   </defs>
 
-  <text x="360" y="54" text-anchor="middle" class="h title">The $1 Pre-Sale Flow</text>
-  <text x="360" y="90" text-anchor="middle" class="h sub">A real $1 charge beats a free email signup - sharper signal.</text>
+  <text x="360" y="58" text-anchor="middle" class="h title">The $1 Pre-Sale Flow</text>
+  <text x="360" y="96" text-anchor="middle" class="h sub">A real $1 charge beats a free email signup - sharper signal.</text>
 
   <!-- Step 1 -->
-  <g transform="translate(0,110)"><rect x="30" y="0" width="660" height="130" rx="18" class="card"/>
-    <circle cx="74" cy="46" r="26" class="num"/><text x="74" y="55" text-anchor="middle" class="h numt">1</text>
-    <text x="118" y="42" class="h stept">THE BUTTON</text>
-    <text x="118" y="80" class="h body">Reserve your spot: $1 now, refundable.</text>
-    <text x="118" y="112" class="h note">Same Stripe Payment Link as Lesson 1.5.</text></g>
-  <path d="M 360 242 L 360 268" class="arrow" marker-end="url(#ab)"/>
+  <g transform="translate(0,132)"><rect x="30" y="0" width="660" height="140" rx="20" class="card"/>
+    <circle cx="80" cy="50" r="28" class="num"/><text x="80" y="60" text-anchor="middle" class="h numt">1</text>
+    <text x="128" y="46" class="h stept">The button</text>
+    <text x="128" y="86" class="h body">Reserve your spot: $1 now, refundable.</text>
+    <text x="128" y="118" class="h note">Same Stripe Payment Link as Lesson 1.5.</text></g>
 
   <!-- Step 2 -->
-  <g transform="translate(0,272)"><rect x="30" y="0" width="660" height="130" rx="18" class="card"/>
-    <circle cx="74" cy="46" r="26" class="num"/><text x="74" y="55" text-anchor="middle" class="h numt">2</text>
-    <text x="118" y="42" class="h stept">THE CHARGE</text>
-    <text x="118" y="80" class="h body">A real charge, not a free email click.</text>
-    <text x="118" y="112" class="h note">Conversion drops 3-5x - but the signal is truer.</text></g>
-  <path d="M 360 404 L 360 430" class="arrow" marker-end="url(#ab)"/>
+  <g transform="translate(0,304)"><rect x="30" y="0" width="660" height="140" rx="20" class="card"/>
+    <circle cx="80" cy="50" r="28" class="num"/><text x="80" y="60" text-anchor="middle" class="h numt">2</text>
+    <text x="128" y="46" class="h stept">The charge</text>
+    <text x="128" y="86" class="h body">A real charge, not a free email click.</text>
+    <text x="128" y="118" class="h note">Conversion drops 3-5x - but the signal is truer.</text></g>
 
   <!-- Step 3 -->
-  <g transform="translate(0,434)"><rect x="30" y="0" width="660" height="130" rx="18" class="card"/>
-    <circle cx="74" cy="46" r="26" class="num"/><text x="74" y="55" text-anchor="middle" class="h numt">3</text>
-    <text x="118" y="42" class="h stept">THE PROMISE</text>
-    <text x="118" y="80" class="h body">Full refund within 7 days if we don't ship.</text>
-    <text x="118" y="112" class="h note">Every charge refunded within 30 days. Non-negotiable.</text></g>
-  <path d="M 360 566 L 360 592" class="arrow" marker-end="url(#ab)"/>
+  <g transform="translate(0,476)"><rect x="30" y="0" width="660" height="140" rx="20" class="card"/>
+    <circle cx="80" cy="50" r="28" class="num"/><text x="80" y="60" text-anchor="middle" class="h numt">3</text>
+    <text x="128" y="46" class="h stept">The promise</text>
+    <text x="128" y="86" class="h body">Full refund within 7 days if we don't ship.</text>
+    <text x="128" y="118" class="h note">Every charge refunded within 30 days. Non-negotiable.</text></g>
 
   <!-- Step 4 -->
-  <g transform="translate(0,596)"><rect x="30" y="0" width="660" height="190" rx="18" class="card"/>
-    <circle cx="74" cy="46" r="26" class="num"/><text x="74" y="55" text-anchor="middle" class="h numt">4</text>
-    <text x="118" y="42" class="h stept">WHAT THE CLICK PROVED</text>
-    <text x="70" y="86" class="h o0">0 sales &#8594; price or hypothesis is wrong.</text>
-    <text x="70" y="124" class="h o1">1-10 sales &#8594; iterate headline + targeting.</text>
-    <text x="70" y="162" class="h o5">50+ sales &#8594; PMF signal, start building.</text></g>
+  <g transform="translate(0,648)"><rect x="30" y="0" width="660" height="180" rx="20" class="card"/>
+    <circle cx="80" cy="50" r="28" class="num"/><text x="80" y="60" text-anchor="middle" class="h numt">4</text>
+    <text x="128" y="46" class="h stept">What the click proved</text>
+    <text x="72" y="90" class="h o0">0 sales &#8594; price or hypothesis is wrong.</text>
+    <text x="72" y="126" class="h o1">1-10 sales &#8594; iterate headline + targeting.</text>
+    <text x="72" y="162" class="h o5">50+ sales &#8594; PMF signal, start building.</text></g>
 
-  <text x="360" y="912" text-anchor="middle" class="h foot">The click proves demand - not a business (yet).</text>
+  <text x="360" y="878" text-anchor="middle" class="h foot">The click proves demand - not a business (yet).</text>
 </svg>
