@@ -20,7 +20,7 @@ stage: next
 proposed_for: "2026-09-01 15:30 CEST"
 first_comment: |
   The interview method she's using now is Module 2 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_mon_friends_politely_lying
-image: ""
+image: "assets/week2-mon-friends-politely-lying.png"
 notes: |
   Opener archetype: observation-led (name the line every founder says, then counter it - the Cutler
   move), per the week-2 row of docs/workflows/linkedin-course-promo-plan.md.

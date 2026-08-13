@@ -14,7 +14,7 @@ status: draft
 stage: next
 proposed_for: "2026-08-20 15:30 CEST"
 first_comment: |
-  (rescue lane: no link - reply-CTA only)
+  If you want more than one question to put to your dev shop, I wrote up six a non-technical founder can use: https://jetthoughts.com/blog/scipab-tell-better-business-stories-startup-management/?utm_source=linkedin&utm_medium=social&utm_campaign=rescue_staging_question
 notes: |
   REVISED 2026-08-13 to idea-first. Was parable-shaped (single-founder story +
   tactic buried as "she'll ask..."). Now: state the pattern flat, deliver the
