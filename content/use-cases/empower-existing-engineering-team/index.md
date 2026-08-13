@@ -1,7 +1,7 @@
 ---
 
 title: "Expert Engineering Solutions for Accelerated Software Development"
-description: "Empower your team with expert engineers: On-demand Rails/React developers, fractional CTO, no hiring hassle. Boost productivity instantly. Extend now ✓"
+description: "Add senior Rails and React engineers to your team in weeks - no hiring process, no management overhead. They ship inside your existing workflow ✓"
 headline: Extend Capabilities Without the Hassle
 excerpt: Build better software products faster and increase your engineering manpower without the need for more recruiting, training, onboarding, and management.
 slug: empower-existing-engineering-team
@@ -37,10 +37,10 @@ When a core development team is rushed or overworked, companies risk losing cont
 
 ## How we solve it
 
-The easiest & fastest way to grow software development capacity is by using a trusted technology partner that can deploy pre-trained developers on-demand without the need for additional supervision.
+Add senior Rails and React engineers without adding management overhead. They ship inside your existing process.
 
 Our team of experts are ready to deploy within weeks (not months), giving startups the ability to accelerate software development while maintaining control over their core engineering team.
 
 ## The results
 
-We&#8217;ve helped empower existing teams in a variety of situations, ranging from early-stage startups to mature enterprise companies. With access to on-demand engineering resources, you can help support your core team, increase their productivity, and make it easier for them to adapt as the environment changes.
+We&#8217;ve added engineers to teams at early-stage startups and at mature enterprise companies. With access to on-demand engineering resources, you can help support your core team, increase their productivity, and make it easier for them to adapt as the environment changes.

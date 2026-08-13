@@ -11,7 +11,7 @@ cover_image: service-app-web-development.jpg
 menu_custom:
   icon: submenu-web.svg
   title: App/Web Development
-  description: Whether you’re a startup building new products or an established business upgrading existing systems, we help deliver positive outcomes.
+  description: Rails and React builds, test-driven from the first commit. You own the code after every milestone.
 
 metatags:
   image: og-services-app-web-development.jpg
@@ -26,7 +26,7 @@ faqs:
   - question: "What's your development process?"
     answer: "We follow an agile development methodology with regular sprint cycles, continuous integration, and frequent client communication. Our process includes discovery and planning, design and prototyping, iterative development with weekly demos, testing and QA, deployment, and ongoing support."
   - question: "Can you work with our existing team or systems?"
-    answer: "Absolutely. We seamlessly integrate with existing development teams, work with legacy systems, and can augment your in-house capabilities. Our team acts as an extension of your organization, adapting to your processes, tools, and communication preferences. If you need to scale your team quickly, our [outsourced developer staffing](/services/outsourced-developer-staffing/) service can provide additional Ruby on Rails developers. We also ensure quality through our comprehensive [software QA testing services](/services/software-qa-cat/) integrated into the development process."
+    answer: "Absolutely. We join existing development teams and work with legacy systems, adapting to your processes, tools, and communication preferences. If you need to scale your team quickly, our [outsourced developer staffing](/services/outsourced-developer-staffing/) service can provide additional Ruby on Rails developers. We also ensure quality through our comprehensive [software QA testing services](/services/software-qa-cat/) integrated into the development process."
 
 overview:
   headline: From idea to production MVP in 8 weeks

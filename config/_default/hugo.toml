@@ -111,7 +111,7 @@ disableKinds = []
       parent = "services"
       identifier = "fractional-cto"
       title = "Fractional CTO"
-      name = "Get on-demand access to a CTO to help guide your technical vision, accelerate team-building, and improve development team operations."
+      name = "A senior engineer reviews your codebase and your team, then tells you in plain English what to fix first. $5K-$15K/month, starting in days."
       pageRef= "/services/fractional-cto/"
       weight = 1
 
@@ -119,7 +119,7 @@ disableKinds = []
       parent = "services"
       identifier = "fractional-product"
       title = "Fractional Product Management"
-      name = "Get on-demand access to a product expert to help design UX, plan & prioritize your roadmap, and manage development schedules."
+      name = "A product lead who runs your roadmap and writes the specs, so your developers stop guessing what to build next."
       pageRef= "/services/fractional-product-management/"
       weight = 2
 
@@ -127,7 +127,7 @@ disableKinds = []
       parent = "services"
       identifier = "app-web"
       title = "App/Web Development"
-      name = "Whether you’re a startup building new products or an established business upgrading existing systems, we help deliver positive outcomes."
+      name = "Rails and React builds, test-driven from the first commit. You own the code after every milestone."
       pageRef= "/services/app-web-development/"
       weight = 3
 
@@ -135,7 +135,7 @@ disableKinds = []
       parent = "services"
       identifier = "outsourced-developer"
       title = "Outsourced Developer Staffing"
-      name = "Increase your development capacity & reduce administrative workloads with pre-trained engineers that are ready to deploy within weeks."
+      name = "Senior Rails and React engineers join your team in weeks. They follow your process, and you keep control of the code."
       pageRef= "/services/outsourced-developer-staffing/"
       weight = 4
 
@@ -143,7 +143,7 @@ disableKinds = []
       parent = "services"
       identifier = "software-qa"
       title = "Software AQA & Testing"
-      name = "Accelerate development, streamline release cycles, and eliminate roadblocks with fully-managed software testing & QA services."
+      name = "We write the tests your app never had, then send you a bug report you can actually read - what broke and what it costs to fix."
       pageRef= "/services/software-qa-cat/"
       weight = 5
 
@@ -151,7 +151,7 @@ disableKinds = []
       parent = "services"
       identifier = "talent-recruiting"
       title = "Talent Recruiting & Training"
-      name = "Scale your development team & simplify the talent acquisition process with top-caliber candidates that are pre-vetted by our team."
+      name = "We screen Rails and React candidates the way we screen our own hires - take-home code and a live pairing session. You interview the short list."
       pageRef= "/services/talent-recruiting-training/"
       weight = 6
 
@@ -165,7 +165,7 @@ disableKinds = []
       parent = "usecases"
       identifier = "startup-mvp"
       title = "Startup MVP Prototyping & Development"
-      name = "Whether creating an interactive prototype to validate the user experience or building out a Minimum Viable Product (MVP) for initial customers, we help startups accelerate the path from idea to revenue."
+      name = "A clickable prototype you can test with real users, or a working MVP your first customers can pay for. You see a demo every week."
       pageRef= "/use-cases/startup-mvp-prototyping-development/"
       weight = 1
 
@@ -173,15 +173,15 @@ disableKinds = []
       parent = "usecases"
       identifier = "salvage-project"
       title = "Salvage an Existing Project"
-      name = "The sooner a software project is salvaged, the better chance it has of being a viable long-term investment. We can help transform your product, providing the visibility, clarity, and control you need to get your project on track."
+      name = "A senior engineer audits your codebase in 48 hours and writes you a recovery plan with costs attached."
       pageRef= "/use-cases/salvage-existing-project/"
       weight = 2
 
     [[menu.main]]
       parent = "usecases"
       identifier = "empower-team"
-      title = "Empower an Existing Engineering Team"
-      name = "The easiest & fastest way to grow software development capacity is by using a trusted technology partner that can deploy pre-trained developers on-demand without the need for additional supervision."
+      title = "Extend an Existing Engineering Team"
+      name = "Add senior Rails and React engineers without adding management overhead. They ship inside your existing process."
       pageRef= "/use-cases/empower-existing-engineering-team/"
       weight = 3
 
@@ -189,7 +189,7 @@ disableKinds = []
       parent = "usecases"
       identifier = "emergency-cto"
       title = "Emergency CTO Leadership"
-      name = "To maintain visibility, accountability, and control over technology outcomes when a critical team member leaves, companies need on-demand access to technical leadership to help keep the status quo for IT intact."
+      name = "Your lead developer just quit. We step in, take stock of what actually exists, and keep the product shipping."
       pageRef= "/use-cases/emergency-cto-leadership/"
       weight = 4
 
@@ -197,7 +197,7 @@ disableKinds = []
       parent = "usecases"
       identifier = "automate-product"
       title = "Automate Product QA & Testing"
-      name = "To enable faster product development while eliminating the risks of costly mistakes, companies need access to a reliable product testing & QA resource that can ensure quality at any scale."
+      name = "Automated tests that catch the break before your users do, plus a weekly report on what they caught."
       pageRef= "/use-cases/automate-product-qa-testing/"
       weight = 5
 
@@ -205,7 +205,7 @@ disableKinds = []
       parent = "usecases"
       identifier = "accelerate-dev"
       title = "Accelerate Development & Maximize Capacity"
-      name = "Our developers are ready to deploy within weeks (not months), giving companies the ability to accelerate their software development process while still maintaining control over engineering quality."
+      name = "Senior engineers start in weeks, not months. Every milestone ships with tests and a written progress report."
       pageRef= "/use-cases/accelerate-development-maximize-capacity/"
       weight = 6
 
