@@ -8,7 +8,7 @@ hypothesis: H1, H3
 opener_archetype: observation-led
 icp_test: does a founder already working with a dev shop recognize "the board isn't the product" and reply with their own version?
 visual: assets/week1-mon-jira-not-progress.png (demo-rule.svg - real demo vs Jira screenshot)
-status: draft
+status: approved
 first_comment: |
   (rescue lane: no link - reply-CTA only)
 notes: |
