@@ -19,6 +19,9 @@ status: draft
 stage: next
 proposed_for: "2026-09-09 15:30 CEST"
 opener_archetype: observation-led
+first_comment: |
+  If your honest vote was zero, the interview script I'd start with is free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-interview-script/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_wed_interview_count_poll
+image: ""
 notes: |
   Opener archetype: observation-led. Idea-first framing (a flat claim about pre-build
   interviews) before the poll question, per the corrected 2026-08-13 doctrine; poll options
@@ -48,9 +51,3 @@ I have a guess about where most honest answers land, and I want to see whether i
 2. 1-3
 3. 4-9
 4. 10 or more
-
-**First comment (Paul, immediately after posting):**
-
-If your honest vote was zero, the interview script I'd start with is free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-interview-script/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_wed_interview_count_poll
-
-**Attachment:** none (native poll).

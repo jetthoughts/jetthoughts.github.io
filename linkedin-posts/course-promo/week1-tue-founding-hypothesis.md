@@ -18,6 +18,9 @@ utm_content: week1_tue_founding_hypothesis
 status: draft
 stage: next
 proposed_for: "2026-08-19 15:30 CEST"
+first_comment: |
+  The 90-minute version of this exercise, with an AI stress-test for each blank, is Chapter 1.1 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_tue_founding_hypothesis
+image: "assets/week1-tue-founding-hypothesis-sketch.png"
 notes: |
   REVISED 2026-08-13 to idea-first (opener: habit-led "The first thing I do..." -> idea-led belief stated flat).
   Opener archetype: idea-led (belief stated flat). Give-away = the five-blank Founding Hypothesis sentence from
@@ -42,11 +45,3 @@ If we help [customer] solve [problem] with [approach], they'll pick it over [wha
 Vague words don't count. "Busy professionals" is not a customer. "Independent gym owners who chase no-shows by text every morning" is a customer - you can find those people and ask what they do about no-shows today.
 
 If an idea has been sitting in your head for a while, set a timer for 90 minutes tonight and try to fill all five. Whatever blank you get stuck on is the first thing to go find out, and it's a lot cheaper to answer now than after you build.
-
----
-
-**First comment (Paul, immediately after posting):**
-
-The 90-minute version of this exercise, with an AI stress-test for each blank, is Chapter 1.1 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_tue_founding_hypothesis
-
-**Attachment:** `assets/week1-tue-founding-hypothesis-sketch.png` (1080x1080 napkin sketch of the five-blank sentence).

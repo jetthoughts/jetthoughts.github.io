@@ -18,6 +18,9 @@ utm_content: week1_wed_first_move_poll
 status: draft
 stage: next
 proposed_for: "2026-08-27 15:30 CEST"
+first_comment: |
+  If your honest answer was option 1 or 2, the first module of a free course I wrote is about the cheaper order, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_wed_first_move_poll
+image: ""
 notes: |
   Opener archetype: idea-led (flat claim, then the poll question). Native LinkedIn poll, 1-week duration, 4 options.
   Deliberately different signal from the ICP-validation week-1 poll ("what makes you trust a dev
@@ -48,9 +51,3 @@ I have a guess about which one wins. I want to know whether it holds for everyon
 2. Asked friends and family
 3. Put up a landing page
 4. Talked to strangers with the problem
-
-**First comment (Paul, immediately after posting):**
-
-If your honest answer was option 1 or 2, the first module of a free course I wrote is about the cheaper order, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_wed_first_move_poll
-
-**Attachment:** none (native poll).

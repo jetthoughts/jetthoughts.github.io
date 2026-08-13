@@ -21,6 +21,7 @@ proposed_for: "2026-09-10 15:30 CEST"
 first_comment: |
   Free, no email gate:
   https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_fri_why_i_wrote_it
+image: "assets/week1-fri-course-page.png"
 notes: |
   Opener archetype: idea-led observation. This is a course-lane post; the course link lives in
   first_comment (not the body) per the course-lane policy in docs/workflows/linkedin-post-pipeline.md.
@@ -51,9 +52,3 @@ I spent the last two months writing it down. Five short modules, from a raw idea
 The whole thing is free, no email gate.
 
 This week's posts all came from Module 1. If you read the first chapter, tell me where it loses you. That's the feedback I actually need.
-
----
-
-**First comment:** carries the course link (Free, no email gate) - see `first_comment` in frontmatter. Course-lane posts keep the link out of the body.
-
-**Attachment:** `assets/week1-fri-course-page.png` (2560x1300 screenshot of the live course page, red hand-drawn circle on the "Free" and "No sign-up" chips).

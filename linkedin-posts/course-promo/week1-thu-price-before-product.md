@@ -18,6 +18,9 @@ utm_content: week1_thu_price_before_product
 status: draft
 stage: next
 proposed_for: "2026-08-25 15:30 CEST"
+first_comment: |
+  The chapter the sketch comes from, with the Stripe setup steps and the refund note wording, is free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_thu_price_before_product
+image: "assets/week1-thu-price-button-framings.png"
 notes: |
   Opener archetype: observation-led. Plan called for Format A (marked screenshot of a smoke-test
   page); no real smoke-test page exists to screenshot honestly, so this uses the course's own
@@ -48,11 +51,3 @@ There's a way to find out before you build anything. It's not exciting, but it w
 The sketch below is the same $97 button worded two ways. One leads with what the buyer gets, the other just makes clicking feel less scary. Same price either way.
 
 Have you ever put a price on something that didn't exist yet?
-
----
-
-**First comment (Paul, immediately after posting):**
-
-The chapter the sketch comes from, with the Stripe setup steps and the refund note wording, is free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_thu_price_before_product
-
-**Attachment:** `assets/week1-thu-price-button-framings.png` (1920x1006, course sketch "Same button, two framings").

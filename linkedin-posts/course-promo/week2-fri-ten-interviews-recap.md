@@ -19,6 +19,9 @@ utm_content: week2_fri_ten_interviews_recap
 status: draft
 stage: next
 proposed_for: "2026-09-08 15:30 CEST"
+first_comment: |
+  Module 2 is free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_fri_ten_interviews_recap
+image: ""
 notes: |
   Opener archetype: stat-led, per the week-2 row of docs/workflows/linkedin-course-promo-plan.md.
   "Ten interviews, one weekend of outreach, zero code" is the plan's own week-2 Friday hook, kept
@@ -43,11 +46,3 @@ Ask about the past, not the future. "Would you use this?" just buys you a polite
 Then make the ten conversations decide something. Score each one against the same bar, and let the pattern tell you whether to keep going or kill it - before you spend a cent on code.
 
 If you've run founder interviews - what question finally got someone past the polite version?
-
----
-
-**First comment (Paul, immediately after posting):**
-
-Module 2 is free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_fri_ten_interviews_recap
-
-**Attachment:** `assets/week2-fri-module2-card.png` (Format A screenshot of the Module 2 card, red circle - TODO, post text-only if not produced).

@@ -18,6 +18,9 @@ utm_content: week2_tue_mom_test_past_questions
 status: draft
 stage: next
 proposed_for: "2026-09-03 15:30 CEST"
+first_comment: |
+  All five swaps, with the pass and fail signal for each answer, are in Lesson 2.1 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_tue_mom_test_past_questions
+image: ""
 notes: |
   Opener archetype: idea-led - opens with the flat claim that "Would you use this?" can only hurt you, then argues it.
   REVISED 2026-08-13 to idea-first: body already delivered the tactic in full and led with the idea; no rewrite needed, kept as-is.
@@ -45,11 +48,3 @@ The fix comes from Rob Fitzpatrick's Mom Test, and it's one move: ask about the 
 "How important is this to you?" becomes "What did the workaround cost you last time - in time, money, or sanity?"
 
 People can promise you anything. What they actually did last month, they can only report. If the answer to the last swap is "nothing," that tells you more than ten enthusiastic yeses.
-
----
-
-**First comment (Paul, immediately after posting):**
-
-All five swaps, with the pass and fail signal for each answer, are in Lesson 2.1 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_tue_mom_test_past_questions
-
-**Attachment:** `assets/week2-tue-past-not-future-sketch.png` (Format B napkin sketch, TODO - post text-only if not produced).

@@ -59,6 +59,7 @@ the frontmatter** (single source, no double-authoring — see below).
 
 ```yaml
 ---
+title: "<short descriptive name>"   # shown on the review-board card (not the slug)
 lane: course | rescue
 week: 1
 day: thursday
@@ -67,15 +68,25 @@ pillar: <e.g. demand-before-build | progress-visibility>
 hypothesis: <which validation hypothesis>
 opener_archetype: idea-led | observation-led | question-led | stat-led | conflict-led
 icp_test: <one line - what this post tests>
-visual: assets/<slug>.png        # required - the image that ships with the post
-status: draft | scheduled | posted
-scheduled_for: <ISO date, if scheduled>
-posted_url: <LinkedIn URL, once posted>
-first_comment: |            # posted as the FIRST COMMENT right after publish (not the body)
-  <course lane: the ready comment incl. the UTM'd course link. rescue lane: usually empty.>
+image: assets/<slug>.png            # REQUIRED - clean path to the visual (just the path)
+first_comment: |                    # posted as the FIRST COMMENT after publish; NOT in the body
+  <course lane: the comment incl. the UTM'd course link. rescue lane: usually empty.>
+stage: now | next | future          # board column: now=on LinkedIn, next=awaiting pre-verify, future=backlog
+status: draft | approved | scheduled | posted
+proposed_for: "<date time CEST>"    # when it SHOULD be scheduled (next / approved)
+scheduled_for: "<date time CEST>"   # when it's scheduled on LinkedIn
+posted_for: "<date>"                # when it published
+posted_url: "<https://www.linkedin.com/... live post URL, once published>"
 notes: | <voice trade-offs, revision history>
 ---
 ```
+
+**The body is ONLY the post text.** No trailing `**First comment:**` / `**Attachment:**`
+authoring notes in the body — those belong in the `first_comment` and `image`
+fields. The review board strips anything after a `---` separator from the copyable
+body, but keep the source clean. `image` supersedes the older `visual` / `design_file`
+fields (still read as fallbacks). `posted_url` is the canonical property for the
+live LinkedIn post URL — the board links to it once set.
 
 ## Link policy per lane (BLOCKING)
 
