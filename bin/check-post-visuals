@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+#
+# CLAUDE.md's cognitive-load gate wants a hero visual in the first fold for
+# posts over 800 words. Nothing enforced it: diagram_rendering_test.rb checks
+# that diagrams RENDER, not that posts HAVE them. 25 of the 31 long posts
+# published since 2026-04 shipped with no visual at all.
+#
+# Ratchet, not a clean gate - 81 legacy posts are already over the line and
+# nobody is backfilling them. The count may only go down, so a new post
+# without a visual fails the build while the backlog burns off at its own pace.
+#
+# Usage: bin/check-post-visuals [dir]   (default: content/blog)
+#        POST_VISUALS_LIST=1 to print the full burn-down list.
+
+FLOOR = 78
+MIN_WORDS = 800
+root = ARGV[0] || "content/blog"
+
+fails = Dir.glob(File.join(root, "*", "index.md")).sort.filter_map do |path|
+  body = File.read(path).split(/^---$/, 3)[2].to_s
+  words = body.split.size
+  next if words < MIN_WORDS
+  next if body.match?(/^```mermaid|<svg|^!\[/)
+
+  [path, words]
+end
+
+if fails.size > FLOOR
+  puts "post-visuals: #{fails.size} posts over #{MIN_WORDS} words have no visual (floor #{FLOOR})."
+  puts "Add a diagram/image, or if you removed one deliberately, raise FLOOR with a reason."
+  fails.last(10).each { |p, w| puts format("  %5dw  %s", w, p) }
+  exit 1
+end
+
+puts "post-visuals: #{fails.size} of #{Dir.glob(File.join(root, '*', 'index.md')).size} posts lack a visual (floor #{FLOOR})"
+fails.each { |p, w| puts format("  %5dw  %s", w, p) } if ENV["POST_VISUALS_LIST"] == "1"
+puts "post-visuals: floor is loose, lower FLOOR to #{fails.size}" if fails.size < FLOOR

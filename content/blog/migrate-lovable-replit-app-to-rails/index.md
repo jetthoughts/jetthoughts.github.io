@@ -46,6 +46,32 @@ Here's how it usually splits:
 
 One decision drives everything else. If the schema is sane and the data is real, you're doing a backend transplant and keeping the UI. If the schema is a mess and the "logic" is a thin wrapper over AI-generated CRUD, you're rebuilding, and the old app is a spec, not a codebase.
 
+```mermaid
+flowchart TD
+    START["Dump the schema,<br/>read it before deciding&nbsp;"]
+    Q["Schema sane,<br/>data real?&nbsp;"]
+    T["Backend transplant:<br/>port schema and rows,<br/>point the React UI at Rails&nbsp;"]
+    R["Rebuild in Rails:<br/>load the rows, treat the<br/>old app as the spec&nbsp;"]
+    BOTH["Either way you rebuild<br/>auth and payments&nbsp;"]
+
+    START --> Q
+    Q -->|"yes&nbsp;"| T
+    Q -->|"no, it is thin CRUD&nbsp;"| R
+    T --> BOTH
+    R --> BOTH
+
+    classDef step fill:#faf7f2,stroke:#555,stroke-width:2px,color:#1a1a1a
+    classDef gate fill:#f5e9ff,stroke:#7c3aed,stroke-width:2.5px,color:#1a1a1a
+    classDef keep fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+    classDef redo fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
+
+    class START step
+    class Q gate
+    class T keep
+    class R redo
+    class BOTH redo
+```
+
 We wrote a longer field guide to that call in [the vibe coding crisis: AI code debt](/blog/vibe-coding-crisis-ai-code-debt/). Read the schema before you decide. Everything downstream forks here.
 
 This is also the point where you decide whether to run the migration yourself. If your team reads Postgres comfortably and has shipped auth before, keep going. If not, [our vibe code rescue service](/services/vibe-code-rescue/) opens with a 48-hour audit and quotes a fixed price from it.

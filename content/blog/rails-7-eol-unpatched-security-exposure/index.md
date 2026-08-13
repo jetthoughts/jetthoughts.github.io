@@ -21,11 +21,30 @@ cover_image_alt: "Rails 7 end of life cover - no patch for CVE-2026-66066 on 7.1
 canonical_url: https://jetthoughts.com/blog/rails-7-eol-unpatched-security-exposure/
 ---
 
-On July 29 the Rails security team fixed a CVSSv4 9.5 vulnerability in Active Storage - an unauthenticated upload that reads files off your server and [may enable code execution](https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm). Three branches got a patched release that day: 7.2, 8.0, and 8.1. One of those three, 7.2, reaches the end of its security support on August 9, 2026 - eleven days after carrying the patch, upstream stops shipping it fixes. Rails 7.1 and everything below it got nothing.
+On July 29 the Rails security team fixed a CVSSv4 9.5 vulnerability in Active Storage - an unauthenticated upload that reads files off your server and [may enable code execution](https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm). Three branches got a patched release that day: 7.2, 8.0, and 8.1. One of those three, 7.2, reached the end of its security support on August 9, 2026 - eleven days after carrying the patch, upstream stopped shipping it fixes. Rails 7.1 and everything below it got nothing.
 
 That's the concrete version of Rails 7 end of life. Rails 7.1 had [finished its security support period](https://rubyonrails.org/2025/10/29/new-rails-releases-and-end-of-support-announcement) by October 2025, so when CVE-2026-66066 landed, the backport list stopped at 7.2.
 
 If your app sits on 7.1 or lower and processes image variants, there's no version on your branch to bump to. The fix lives on branches you're not on.
+
+```mermaid
+flowchart TD
+    R70["Rails 7.0 - no patch, dead since Apr 2025&nbsp;"]
+    R71["Rails 7.1 - no patch, dead since Oct 2025&nbsp;"]
+    R72["Rails 7.2 - patched, then dead Aug 9, 2026&nbsp;"]
+    R80["Rails 8.0 - patched, supported to Nov 2026&nbsp;"]
+    R81["Rails 8.1 - patched, supported to Oct 2027&nbsp;"]
+
+    R70 ~~~ R71 ~~~ R72 ~~~ R80 ~~~ R81
+
+    classDef dead fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
+    classDef soon fill:#fffbe6,stroke:#bf8a00,stroke-width:2px,color:#1a1a1a
+    classDef live fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+
+    class R70,R71,R72 dead
+    class R80 soon
+    class R81 live
+```
 
 The CVE itself already has a [full writeup](/blog/rails-cve-2026-66066-active-storage-rce/): mechanism, detection inside a running app, the libvips 8.13 requirement, the secret rotation order. This post covers the problem that outlives this CVE. You're on an unsupported Rails, the next critical will skip you the same way, and there are four ways out.
 
@@ -72,7 +91,7 @@ Last, sort that list by whether this specific CVE can reach each app. The [CVE w
 
 Upgrade if you can. Every other exit on this list buys time and leaves the branch dead.
 
-Pick the target with the support clock in view. 7.2 is the smallest hop from 7.1, but its [security support ends August 9, 2026](https://rubyonrails.org/2025/10/29/new-rails-releases-and-end-of-support-announcement), so on its own it trades one dead branch for another; paired with the paid 7.2 LTS line in exit 2 it holds up. 8.0 holds until November 7, 2026, three months away.
+Pick the target with the support clock in view. 7.2 is the smallest hop from 7.1, but its [security support ended August 9, 2026](https://rubyonrails.org/2025/10/29/new-rails-releases-and-end-of-support-announcement), so on its own it now trades one dead branch for another; paired with the paid 7.2 LTS line in exit 2 it still holds up. 8.0 holds until November 7, 2026.
 
 8.1 is the only hop that buys real time - security fixes run to October 2027. Budget the Ruby bump into the same plan: Rails 8 needs Ruby 3.2 or newer, and a 7.1 app often isn't there yet.
 
@@ -122,6 +141,10 @@ Match each app from your fleet sweep to a row - a mixed portfolio lands in sever
 | 5.2/6.1 app, long life, no budget | Exit 2, with the renewal cost budgeted year over year |
 | Internal tool behind SSO, no public uploads | Exit 4 now, fold exit 1 into next quarter's maintenance |
 | App with a real decommission date | Exit 4, with the date and the accepted risk written down |
+
+One app you can match to a row yourself. A dozen of them across three dead branches, against a roadmap and a budget that are already committed, is a sequencing call someone senior has to make and then defend when it pushes a quarter of feature work.
+
+If nobody holds that seat today, it's the [fractional CTO](/services/fractional-cto/) work we get called into, and it starts with the same fleet sweep you just ran. Worth saying plainly: that engagement ranks the queue and owns the argument, it doesn't write your upgrade commits.
 
 ## Put the dates where you'll see them
 

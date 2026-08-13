@@ -17,6 +17,7 @@ verified: { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
 | `bin/rake test:critical` | Critical Minitest suite (34 runs / 53 screenshots), ~81s host / ~46s Docker since the 2026-08-01 skip_area fix | At component/task milestones and before every commit outside sprint micro-commit trains |
 | `bin/test` | Visual regression on the host (baselines in `macos/` on a Mac; on Linux, comparable to `linux/` when run through `bin/setup-test-env`'s pinned stack) | ONCE at PR prep (branch head, before `gh pr create`) or on Paul's explicit confirmation - NOT per commit (Paul 2026-07-31: qtest is the routine gate) |
 | `bin/dtest` | Same suite in Linux/Docker (baselines in `linux/`) - CI runs Linux | Same trigger as bin/test; a PR must never open without this leg (green-locally / red-in-CI otherwise) |
+| `bin/check-post-visuals` | Ratchet: counts blog posts over 800 words with no mermaid/SVG/image. Fails when the count exceeds `FLOOR` (78 as of 2026-08-13) | Before publishing any post. Added 2026-08-13 - `diagram_rendering_test.rb` only proves diagrams RENDER, nothing proved posts HAVE them, and 25 of the 31 long posts published since 2026-04 shipped with none |
 
 `bin/qtest` page keys mirror `themes/beaver/assets/css/pages/*.css` basenames
 AND `critical/<name>-critical.css` basenames - the two sets differ (e.g.

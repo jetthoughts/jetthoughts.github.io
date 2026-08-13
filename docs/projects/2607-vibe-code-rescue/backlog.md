@@ -45,6 +45,7 @@ Strategy/gates/Paul's desk live in [`operation-runbook.md`](operation-runbook.md
 | T3 | Gmail warm-source pass (Paul consent) → warm rows | Blocked-on-Paul (optional, non-blocking) |
 | T8 | Discovery kit (call script + audit template) | ✓ Done (`rescue-sprint/discovery-kit.md`) |
 | T9 | Objection + FAQ + follow-up bank → `rescue-sprint/objection-followup-bank.md` | **Ready** |
+| T10 | Split business/strategy docs out of the public repo - [#449](https://github.com/jetthoughts/jetthoughts.github.io/issues/449). Touches this project's `20-29-strategy/` files, so 2607 tracks it. | Blocked-on-Paul (org decision, not a refactor) |
 
 ---
 

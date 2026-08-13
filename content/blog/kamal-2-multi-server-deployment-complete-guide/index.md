@@ -101,6 +101,33 @@ Once workers live on their own hosts, queue concurrency and retry behavior stop 
 
 Next, Kamal stages assets and SSL certs onto every host in a separate pass. Only then does booting start, and one detail here saves you a confused hour: non-primary roles wait. Kamal creates a health barrier, and job hosts block until the first web container reports healthy - the log says `Waiting for the first healthy web container before booting job on 10.0.0.21...`. If that first web container never turns healthy, your job hosts never boot at all. The image gets tagged `latest` only after every host is up.
 
+```mermaid
+flowchart TD
+    B["Build image once,<br/>push to registry&nbsp;"]
+    P["Pull it on every app host&nbsp;"]
+    S["Stage assets and SSL certs<br/>on every host&nbsp;"]
+    W["Boot web hosts<br/>proxy polls /up for 30s&nbsp;"]
+    BAR["First web container<br/>healthy?&nbsp;"]
+    J["Boot job hosts<br/>no proxy, so Docker HEALTHCHECK<br/>or a 7s readiness_delay&nbsp;"]
+    STUCK["Job hosts never boot&nbsp;"]
+    TAG["Tag the image latest&nbsp;"]
+
+    B --> P --> S --> W --> BAR
+    BAR -->|"yes&nbsp;"| J
+    J --> TAG
+    BAR -->|"never&nbsp;"| STUCK
+
+    classDef step fill:#faf7f2,stroke:#555,stroke-width:2px,color:#1a1a1a
+    classDef gate fill:#f5e9ff,stroke:#7c3aed,stroke-width:2.5px,color:#1a1a1a
+    classDef bad fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
+    classDef ok fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+
+    class B,P,S,W,J step
+    class BAR gate
+    class STUCK bad
+    class TAG ok
+```
+
 Health checks also differ by role. Web containers get polled by kamal-proxy on `/up` once a second until `deploy_timeout` (default 30s). Job containers have no proxy, so Kamal uses the Docker `HEALTHCHECK` from your image - and if there isn't one, it waits `readiness_delay` (7 seconds) and declares victory. A worker that crashes at second 8 still counts as a successful deploy, which is worth fixing with a real `HEALTHCHECK` before you trust rolling deploys. When a deploy stalls on "target failed to become healthy", [we wrote a full debugging guide for that error](/blog/solving-kamals-target-failed-become-healthy/).
 
 One more thing lives in exactly one place: the deploy lock, held over SSH on the primary host only. If the primary host is down, you can't take the lock, which means you can't deploy the healthy hosts either. [2.12.0](https://github.com/basecamp/kamal/releases/tag/v2.12.0) added `--lock-wait` for the other lock problem - two CI runs racing each other - which pairs well with [deploying from GitHub Actions](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/).
