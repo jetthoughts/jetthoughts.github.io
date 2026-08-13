@@ -20,7 +20,7 @@ stage: next
 proposed_for: "2026-08-19 15:30 CEST"
 first_comment: |
   The 90-minute version of this exercise, with an AI stress-test for each blank, is Chapter 1.1 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_tue_founding_hypothesis
-image: "assets/week1-tue-founding-hypothesis-sketch.png"
+image: "assets/week1-tue-founding-hypothesis.png"
 notes: |
   REVISED 2026-08-13 to idea-first (opener: habit-led "The first thing I do..." -> idea-led belief stated flat).
   Opener archetype: idea-led (belief stated flat). Give-away = the five-blank Founding Hypothesis sentence from

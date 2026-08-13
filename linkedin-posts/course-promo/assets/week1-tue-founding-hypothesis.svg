@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
+  <title id="t">Your idea as one testable sentence: If we help [customer] solve [problem] with [approach], they'll pick it over [what they do today] because [your edge]. Vague words don't count.</title>
+  <desc>A cream card holds the founding-hypothesis sentence with five colour-coded blanks: customer (blue), problem (red), approach (amber), what they do today (purple), your edge (green). Below, a specificity example: "busy professionals" is rejected, "gym owners chasing no-shows" is accepted. Basis: whatever blank you get stuck on is the first thing to go find out.</desc>
+  <defs>
+    <style>
+      .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
+      .title{ font-size: 30px; font-weight: 700; fill: #1a1a1a; }
+      .sub  { font-size: 23px; fill: #666; font-style: italic; }
+      .sent { font-size: 29px; fill: #1a1a1a; }
+      .blank{ font-weight: 700; }
+      .ex   { font-size: 22px; }
+      .basis{ font-size: 20px; fill: #666; font-style: italic; }
+      .card { fill: #fffdf7; stroke: #e6ddc7; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <text x="360" y="46" text-anchor="middle" class="h title">Your idea as one testable sentence</text>
+  <text x="360" y="76" text-anchor="middle" class="h sub">Five blanks - vague words don't count.</text>
+
+  <rect x="36" y="104" width="648" height="212" rx="18" class="card"/>
+  <text x="360" y="168" text-anchor="middle" class="h sent">If we help <tspan class="blank" fill="#2b7fff">[customer]</tspan> solve <tspan class="blank" fill="#e5484d">[problem]</tspan></text>
+  <text x="360" y="216" text-anchor="middle" class="h sent">with <tspan class="blank" fill="#d97706">[approach]</tspan>, they'll pick it over</text>
+  <text x="360" y="264" text-anchor="middle" class="h sent"><tspan class="blank" fill="#a855f7">[what they do today]</tspan> because <tspan class="blank" fill="#2e7d32">[your edge]</tspan></text>
+
+  <text x="360" y="378" text-anchor="middle" class="h ex" xml:space="preserve"><tspan fill="#999">vague </tspan><tspan fill="#e5484d">"busy professionals"</tspan><tspan fill="#999"> - findable </tspan><tspan fill="#2e7d32">"gym owners chasing no-shows"</tspan></text>
+
+  <text x="360" y="452" text-anchor="middle" class="h basis">The blank you get stuck on is the first thing to go find out.</text>
+</svg>
