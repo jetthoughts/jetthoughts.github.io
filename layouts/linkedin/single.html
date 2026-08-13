@@ -76,8 +76,8 @@
     <div class="topnav">
       <a class="back" href="{{ "/linkedin/" | relURL }}">&larr; board</a>
       <span class="pager">
-        {{ if gt $idx 0 }}{{ $prev := (index $ordered (sub $idx 1)).p }}<a href="{{ $prev.RelPermalink }}" title="{{ $prev.Title }}">&larr; prev</a>{{ end }}
-        {{ if and (ge $idx 0) (lt $idx (sub (len $ordered) 1)) }}{{ $next := (index $ordered (add $idx 1)).p }}<a href="{{ $next.RelPermalink }}" title="{{ $next.Title }}">next &rarr;</a>{{ end }}
+        {{ if gt $idx 0 }}{{ $prev := (index $ordered (sub $idx 1)).p }}<a id="nav-prev" href="{{ $prev.RelPermalink }}" title="{{ $prev.Title }}">&larr; prev</a>{{ end }}
+        {{ if and (ge $idx 0) (lt $idx (sub (len $ordered) 1)) }}{{ $next := (index $ordered (add $idx 1)).p }}<a id="nav-next" href="{{ $next.RelPermalink }}" title="{{ $next.Title }}">next &rarr;</a>{{ end }}
       </span>
     </div>
     <h1>{{ or .Title (humanize .File.BaseFileName) }}</h1>
@@ -170,6 +170,12 @@
     var copyPath = document.getElementById('copy-path');
     if (copyPath) copyPath.addEventListener('click', function(){
       navigator.clipboard.writeText(copyPath.dataset.path).then(function(){ flash(copyPath, 'Copied'); });
+    });
+    // arrow keys page between posts (ignore while typing in a field)
+    document.addEventListener('keyup', function(e){
+      if (/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName) || e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.key === 'ArrowRight') { var n = document.getElementById('nav-next'); if (n) window.location.href = n.href; }
+      if (e.key === 'ArrowLeft')  { var p = document.getElementById('nav-prev'); if (p) window.location.href = p.href; }
     });
   </script>
 </body>
