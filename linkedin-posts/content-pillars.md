@@ -4,9 +4,13 @@ build:
   list: never
 ---
 
-# LinkedIn feed strategy — from promo machine to worth-following (PROPOSAL 2026-08-13)
+# LinkedIn feed strategy — from promo machine to worth-following
 
-**Status:** proposal, awaiting Paul's call before we restructure `content-plan.md`.
+**Status:** ADOPTED 2026-08-13 (Paul). 70-20-10 pillar mix is now how the feed is
+planned. Content sources: [`story-bank.md`](story-bank.md) (Paul's real cases +
+an interview backlog for gaps) and [`trends.md`](trends.md) (curation/reaction
+fuel, refreshed ~monthly). The plan ([`content-plan.md`](content-plan.md)) tracks
+the ratio per window.
 **Trigger:** Paul — "our feed shouldn't be just a sales/promotion machine; we
 should be interesting to follow."
 
@@ -82,9 +86,13 @@ the ratio across each ~2-week window:
 - Engage 10-15 min before posting, reply in the first 2 hours (algorithm + it's
   how Holub/Cutler actually grow).
 
-## Next step (Paul's call)
+## Rollout (in motion 2026-08-13)
 
-Adopt 70-20-10 pillars? If yes: I'll add the pillar column + ratio guide to
-`content-plan.md`, draft 2-3 *curation/build-in-public* posts (the missing
-pillars) so the next window isn't all funnel, and flag which queued drafts should
-lose their course link to become pure-value posts.
+1. `content-plan.md` gains a **pillar column** + a per-window 70-20-10 ratio check
+   (done).
+2. `story-bank.md` seeds real material and holds the **interview backlog** - when a
+   value post has no real hook, ask Paul before writing (never invent).
+3. `trends.md` seeds the **curation/reaction** pillar we did zero of; refresh ~monthly.
+4. Next: draft 2-3 curation/build-in-public posts from trends + story bank so the
+   next window isn't all funnel, and flag which queued drafts drop their course
+   link to become pure-value (the 70%).

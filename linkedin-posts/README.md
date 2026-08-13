@@ -37,8 +37,17 @@ Posts are inbound/passive; **outreach is the faster Rock-1 signal** (direct repl
 | **Course** (pre-validation) | `course-promo/` | idea-stage / about-to-build | validate demand *before* building | `docs/workflows/linkedin-course-promo-plan.md` |
 | **Rescue** (control-loss) | `icp-validation/` | already building, can't verify | founder stuck with a dev shop | `docs/workflows/linkedin-icp-validation-plan.md` |
 
-Both post from Paul's personal account. **Rotate between lanes** so the feed isn't
-all one stage. Assets (images) live in each lane's `assets/` folder.
+Both post from Paul's personal account. Assets (images) live in each lane's
+`assets/` folder.
+
+**Lanes are the TOPIC; the plan runs on PILLARS.** Adopted 2026-08-13: the feed is
+planned as a **70% value / 20% personal / 10% promo** mix, not lane-rotation - so
+it's worth following, not a promo machine. See
+[`content-pillars.md`](content-pillars.md) for the strategy,
+[`story-bank.md`](story-bank.md) for Paul's real cases + the interview backlog
+(value posts run on real material, never invented), and [`trends.md`](trends.md)
+for curation/reaction fuel. Most value posts carry NO course link - only the ~10%
+promo slot does.
 
 ## Cadence (2026-08-13, Paul)
 
@@ -210,7 +219,10 @@ the numbers.
 
 ## Files
 
-- `content-plan.md` — rolling 2-3/wk calendar, lane rotation, revision-wave queue.
+- `content-pillars.md` — the feed strategy: 70-20-10 value/personal/promo pillars.
+- `content-plan.md` — rolling 2-3/wk calendar, **pillar-tagged**, with the ratio check.
+- `story-bank.md` — Paul's real cases + convictions + the **interview backlog** (fill gaps here, never invent).
+- `trends.md` — monthly trend scan → curation/reaction post angles with JT's POV.
 - `reference-examples.md` — transcribed good posts to emulate (add more over time).
 - `metrics-ledger.md` — per-post performance, the weekly review surface.
 - `course-promo/` , `icp-validation/` — the two lanes, each with `README.md`, drafts, `assets/`.
