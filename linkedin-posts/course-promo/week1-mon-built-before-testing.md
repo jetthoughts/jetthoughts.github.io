@@ -15,6 +15,7 @@ course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_mon_built_before_testing
 status: draft
+stage: future
 notes: |
   Opener archetype: history-led (Tue=conflict-led, Wed=question-led, Thu=observation-led, Fri=dialogue-led).
   RESOLVED 2026-07-31: synthetic wedding-photographer anecdote de-fabricated into Paul's real

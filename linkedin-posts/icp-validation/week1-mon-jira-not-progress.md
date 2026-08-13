@@ -9,6 +9,7 @@ opener_archetype: observation-led
 icp_test: does a founder already working with a dev shop recognize "the board isn't the product" and reply with their own version?
 visual: assets/week1-mon-jira-not-progress.png (demo-rule.svg - real demo vs Jira screenshot)
 status: scheduled
+stage: now
 scheduled_for: 2026-08-18T15:30+02:00 (Tue 3:30pm CEST, WITH demo-rule image + tags)
 first_comment: |
   (rescue lane: no link - reply-CTA only)

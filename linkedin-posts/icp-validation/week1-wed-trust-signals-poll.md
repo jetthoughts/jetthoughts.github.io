@@ -12,6 +12,7 @@ utm_campaign: icp_validation_progress_visibility
 utm_content: trust_signals_poll
 opener_archetype: idea-led (claim about proof signals, not a bare question)
 status: draft
+stage: future
 notes: |
   Poll format - shorter body than narrative posts. Opener is idea-led: it
   states a claim about which proof signals actually mean something before

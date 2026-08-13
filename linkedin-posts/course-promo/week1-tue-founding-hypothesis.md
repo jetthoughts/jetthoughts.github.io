@@ -15,6 +15,7 @@ course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_tue_founding_hypothesis
 status: draft
+stage: future
 notes: |
   REVISED 2026-08-13 to idea-first (opener: habit-led "The first thing I do..." -> idea-led belief stated flat).
   Opener archetype: idea-led (belief stated flat). Give-away = the five-blank Founding Hypothesis sentence from
