@@ -34,7 +34,10 @@
     .no-img { color: #9aa0a8; font-size: .82rem; }
     .col-meta { position: sticky; top: 1.25rem; }
     .panel { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: .9rem 1rem; font-size: .8rem; }
-    .panel h3 { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0 0 .7rem; }
+    .panel-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: .7rem; }
+    .panel h3 { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0; }
+    .li-link { display: inline-flex; align-items: center; gap: .3rem; font-size: .78rem; font-weight: 600; color: #fff; background: var(--accent); padding: .25rem .6rem; border-radius: 7px; text-decoration: none; }
+    .li-link:hover { background: #084e97; }
     .field { margin-bottom: .7rem; }
     .field:last-child { margin-bottom: 0; }
     .field .k { font-size: .66rem; text-transform: uppercase; letter-spacing: .04em; color: #9aa0a8; margin-bottom: .1rem; }
@@ -67,20 +70,18 @@
       {{ with .Params.scheduled_for }}<span class="pill">scheduled {{ . }}</span>{{ end }}
       {{ with .Params.posted_for }}<span class="pill">posted {{ . }}</span>{{ end }}
       {{ with .Params.proposed_for }}<span class="pill">proposed {{ . }}</span>{{ end }}
+      {{ with .Params.posted_url }}{{ if hasPrefix . "http" }}<a class="li-link" href="{{ . }}" target="_blank" rel="noopener">View on LinkedIn &#8599;</a>{{ end }}{{ end }}
     </p>
 
     <div class="cols">
       <!-- LEFT: image -->
       <div class="col-img">
         <div class="block">
+          {{ if $visualRaw }}<div class="btn-row"><button class="copy-btn icon-only" id="copy-img" title="Copy image">{{ $copyIcon | safeHTML }}<span></span></button></div>{{ end }}
           <h2>Visual</h2>
           {{ if $visualRaw }}
             <img id="post-img" src="/linkedin-assets/{{ $laneDir }}/{{ path.Base $visualRaw }}" alt="post visual" onerror="this.style.display='none';document.getElementById('noimg').style.display='block'" draggable="true" />
             <p id="noimg" class="no-img" style="display:none">Image not found on disk.</p>
-            <div class="img-actions">
-              <button class="copy-btn" id="copy-img">{{ $copyIcon | safeHTML }}<span>Image</span></button>
-              <button class="copy-btn" id="copy-path" data-path="{{ $assetsDir }}">{{ $copyIcon | safeHTML }}<span>Path</span></button>
-            </div>
           {{ else }}
             <p class="no-img">No visual set for this post.</p>
           {{ end }}
@@ -108,7 +109,11 @@
       <!-- RIGHT: tech details -->
       <div class="col-meta">
         <div class="panel">
-          <h3>Details</h3>
+          <div class="panel-head">
+            <h3>Details</h3>
+            <button class="copy-btn icon-only" id="copy-path" data-path="{{ $assetsDir }}" title="Copy assets folder path">{{ $copyIcon | safeHTML }}<span></span></button>
+          </div>
+          {{ with .Params.posted_url }}{{ if hasPrefix . "http" }}<div class="field"><div class="k">LinkedIn</div><div class="v"><a href="{{ . }}" target="_blank" rel="noopener">View on LinkedIn &#8599;</a></div></div>{{ end }}{{ end }}
           {{ with .Params.notes }}<div class="field"><div class="k">notes</div><div class="v">{{ . | markdownify }}</div></div>{{ end }}
           {{ with $tail }}<div class="field"><div class="k">authoring (comment / attachment)</div><div class="v">{{ . | markdownify }}</div></div>{{ end }}
           {{ with .Params.icp_test }}<div class="field"><div class="k">ICP test</div><div class="v">{{ . | markdownify }}</div></div>{{ end }}
