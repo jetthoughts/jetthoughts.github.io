@@ -1,64 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 760" role="img" aria-labelledby="invloop-title">
-  <title id="invloop-title">The month-2 invoice loop: sign the SOW with the 3 clauses, predict the bill (devs times avg AI cost times margin), then the month-2 invoice is a comparison. If it is within plus-or-minus 20 percent, pay it and mark the baseline. If it is 20 percent or more over, demand the itemized breakdown - a hard ticket raises the budget alert, margin or padding gets pushed back citing Clause 1. Quarterly, re-predict from the usage dashboards under Clause 3.</title>
-  <desc>Three compact process chips - sign the SOW, predict the bill with devs times avg cost times margin, invoice lands - flow into one focal decision: off by more than 20 percent? A green card says within 20 percent, pay it and mark the baseline; an amber card says 20 percent or more over, demand the breakdown, with a check for a hard ticket raising the budget alert and a cross for margin or padding pushed back under Clause 1. A footnote: quarterly, re-predict from the dashboards under Clause 3.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 740" role="img" aria-labelledby="il-title">
+  <title id="il-title">The month-2 invoice loop: sign the SOW with the 3 clauses, predict the bill (devs times avg AI cost times margin), then the invoice is a comparison. Within plus-or-minus 20 percent, pay it and mark the baseline. 20 percent or more over, demand the itemized breakdown - a hard ticket raises the budget alert, margin or padding gets pushed back citing Clause 1. Quarterly, re-predict from the usage dashboards under Clause 3.</title>
+  <desc>Three process steps - sign the SOW, predict the bill with devs times avg cost times margin, the invoice lands - flow into one decision: off by more than 20 percent? A green card, within 20 percent, pay it and mark the baseline. An amber card, 20 percent or more over, demand the breakdown: a check for a hard ticket that raises the budget alert, a cross for margin or padding that gets pushed back under Clause 1. Footer: quarterly, re-predict from the dashboards under Clause 3.</desc>
   <defs>
     <style>
-      .h    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .title{ font-size: 42px; font-weight: 700; fill: #1a1a1a; }
-      .sub  { font-size: 23px; fill: #666; font-style: italic; }
-      .chip { fill: #faf7f2; stroke: #555; stroke-width: 2; }
-      .cnum { font-size: 22px; font-weight: 700; fill: #cc342d; }
-      .clab { font-size: 22px; font-weight: 700; fill: #1a1a1a; }
-      .gate { font-size: 32px; font-weight: 700; fill: #1a1a1a; }
-      .card-g { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
-      .card-a { fill: #fffbeb; stroke: #b8860b; stroke-width: 2.5; }
-      .outg { font-size: 26px; font-weight: 700; fill: #2e7d32; }
-      .outa { font-size: 26px; font-weight: 700; fill: #b8860b; }
+      .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title{ font-size: 44px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .sub  { font-size: 23px; fill: #667085; }
+      .chip { fill: #f6f9ff; stroke: #6aa8ff; stroke-width: 2.5; filter: url(#soft); }
+      .num  { fill: #2b7fff; }
+      .numt { font-size: 22px; font-weight: 700; fill: #fff; }
+      .ct   { font-size: 22px; font-weight: 700; fill: #2b7fff; }
+      .cs   { font-size: 19px; fill: #667085; }
+      .gate { font-size: 38px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .cardG{ fill: #f2fbf4; stroke: #57c06f; stroke-width: 2.5; filter: url(#soft); }
+      .cardA{ fill: #fffbeb; stroke: #e2b93b; stroke-width: 2.5; filter: url(#soft); }
+      .og { font-size: 26px; font-weight: 700; fill: #2e9e4f; filter: url(#gG); }
+      .oa { font-size: 26px; font-weight: 700; fill: #b8860b; filter: url(#gA); }
       .body { font-size: 22px; fill: #1a1a1a; }
-      .ok   { font-size: 22px; font-weight: 700; fill: #2e7d32; }
-      .bad  { font-size: 22px; font-weight: 700; fill: #cc342d; }
-      .note { font-size: 21px; fill: #666; font-style: italic; }
-      .arrow{ stroke: #333; stroke-width: 2.5; fill: none; }
+      .ok { font-size: 22px; font-weight: 700; fill: #2e9e4f; }
+      .bad{ font-size: 22px; font-weight: 700; fill: #e5484d; }
+      .foot { font-size: 21px; fill: #667085; font-style: italic; }
+      .arrow{ stroke: #2b7fff; stroke-width: 4; fill: none; }
     </style>
-    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
-    </marker>
+    <filter id="soft" x="-8%" y="-10%" width="116%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
+    <filter id="gG" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2e9e4f" flood-opacity="0.5"/></filter>
+    <filter id="gA" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#e2b93b" flood-opacity="0.55"/></filter>
+    <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#2b7fff"/></marker>
   </defs>
 
-  <text x="360" y="52" text-anchor="middle" class="h title">The month-2 invoice loop</text>
+  <text x="360" y="54" text-anchor="middle" class="h title">The Month-2 Invoice Loop</text>
   <text x="360" y="90" text-anchor="middle" class="h sub">Predict first - the invoice becomes a comparison, not a surprise.</text>
 
-  <!-- Compact process row (secondary) -->
-  <g transform="rotate(-0.4 122 152)"><rect x="24" y="122" width="196" height="60" rx="13" class="chip"/>
-    <text x="42" y="150" class="h cnum">1</text><text x="62" y="150" class="h clab">Sign the SOW</text>
-    <text x="42" y="172" class="h" font-size="18" fill="#666">with the 3 clauses</text></g>
-  <g transform="rotate(0.4 360 152)"><rect x="262" y="122" width="196" height="60" rx="13" class="chip"/>
-    <text x="280" y="150" class="h cnum">2</text><text x="300" y="150" class="h clab">Predict it</text>
-    <text x="280" y="172" class="h" font-size="18" fill="#666">devs &#215; cost &#215; margin</text></g>
-  <g transform="rotate(-0.3 598 152)"><rect x="500" y="122" width="196" height="60" rx="13" class="chip"/>
-    <text x="518" y="150" class="h cnum">3</text><text x="538" y="150" class="h clab">Invoice lands</text>
-    <text x="518" y="172" class="h" font-size="18" fill="#666">compare, don't react</text></g>
-  <path d="M 232 152 L 258 152" class="arrow" marker-end="url(#ah)"/>
-  <path d="M 470 152 L 496 152" class="arrow" marker-end="url(#ah)"/>
+  <!-- 3 process chips (narrower, no overflow) -->
+  <g transform="translate(0,118) rotate(-0.5 113 40)"><rect x="20" y="0" width="186" height="80" rx="14" class="chip"/>
+    <circle cx="46" cy="30" r="16" class="num"/><text x="46" y="38" text-anchor="middle" class="h numt">1</text>
+    <text x="70" y="34" class="h ct">Sign SOW</text><text x="70" y="60" class="h cs">3 clauses</text></g>
+  <g transform="translate(0,118) rotate(0.5 329 40)"><rect x="236" y="0" width="186" height="80" rx="14" class="chip"/>
+    <circle cx="262" cy="30" r="16" class="num"/><text x="262" y="38" text-anchor="middle" class="h numt">2</text>
+    <text x="286" y="34" class="h ct">Predict it</text><text x="286" y="60" class="h cs">&#215; cost &#215; margin</text></g>
+  <g transform="translate(0,118) rotate(-0.4 545 40)"><rect x="452" y="0" width="186" height="80" rx="14" class="chip"/>
+    <circle cx="478" cy="30" r="16" class="num"/><text x="478" y="38" text-anchor="middle" class="h numt">3</text>
+    <text x="502" y="34" class="h ct">Invoice</text><text x="502" y="60" class="h cs">compare it</text></g>
+  <path d="M 208 158 L 234 158" class="arrow" marker-end="url(#ab)"/>
+  <path d="M 424 158 L 450 158" class="arrow" marker-end="url(#ab)"/>
 
-  <!-- Focal decision (hero) -->
-  <text x="360" y="238" text-anchor="middle" class="h gate">Off by more than &#177;20%?</text>
-  <path d="M 250 252 C 190 276, 150 282, 138 300" class="arrow" marker-end="url(#ah)"/>
-  <path d="M 470 252 C 530 276, 570 282, 582 300" class="arrow" marker-end="url(#ah)"/>
+  <!-- Hero decision -->
+  <text x="360" y="268" text-anchor="middle" class="h gate">Off by more than &#177;20%?</text>
+  <path d="M 250 286 C 190 312, 150 318, 138 340" class="arrow" marker-end="url(#ab)"/>
+  <path d="M 470 286 C 530 312, 570 318, 582 340" class="arrow" marker-end="url(#ab)"/>
 
   <!-- Within band -->
-  <g transform="rotate(0.3 360 360)"><rect x="40" y="304" width="640" height="118" rx="14" class="card-g"/>
-    <text x="30" y="344" class="h outg">No - within &#177;20%: pay it</text>
-    <text x="30" y="378" class="h body">Pay the invoice, and mark it the baseline</text>
-    <text x="30" y="406" class="h body">for every month after.</text></g>
+  <g transform="rotate(0.3 360 402)"><rect x="40" y="344" width="640" height="116" rx="18" class="cardG"/>
+    <text x="64" y="388" class="h og">&#10003; Within &#177;20%: pay it</text>
+    <text x="64" y="424" class="h body">Pay the invoice, and mark it the baseline</text>
+    <text x="64" y="450" class="h body">for every month after.</text></g>
 
   <!-- Over band -->
-  <g transform="rotate(-0.3 360 560)"><rect x="40" y="446" width="640" height="212" rx="14" class="card-a"/>
-    <text x="30" y="488" class="h outa">Yes - 20%+ over: demand the breakdown</text>
-    <text x="30" y="528" class="h body"><tspan class="ok">&#10003;</tspan> A hard ticket &#8594; raise the budget alert</text>
-    <text x="54" y="558" class="h body">and carry on - that one is real.</text>
-    <text x="30" y="600" class="h body"><tspan class="bad">&#10007;</tspan> Margin or padding &#8594; push back, and</text>
-    <text x="54" y="630" class="h body">cite Clause 1 of the SOW.</text></g>
+  <g transform="rotate(-0.3 360 566)"><rect x="40" y="480" width="640" height="150" rx="18" class="cardA"/>
+    <text x="64" y="524" class="h oa">&#10007; 20%+ over: demand the breakdown</text>
+    <text x="64" y="566" class="h body"><tspan class="ok">&#10003;</tspan> A hard ticket &#8594; raise the budget alert, carry on.</text>
+    <text x="64" y="604" class="h body"><tspan class="bad">&#10007;</tspan> Margin or padding &#8594; push back, cite Clause 1.</text></g>
 
-  <text x="360" y="704" text-anchor="middle" class="h note">Quarterly: re-predict from the usage dashboards yourself (Clause 3).</text>
+  <text x="360" y="694" text-anchor="middle" class="h foot">Quarterly: re-predict from the usage dashboards (Clause 3).</text>
 </svg>
