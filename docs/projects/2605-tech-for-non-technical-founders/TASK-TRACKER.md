@@ -20,6 +20,8 @@
 
 ## Parked / postponed (not blocking, revisit on trigger)
 
+- **Course SVG mobile-style migration (report-only backlog, NOT a sweep).** `bin/check-svg-floor` (report-only advisory, NEVER blocking) lists old-style 900-1000-wide small-font exhibits that render illegibly at 390 — **36 candidates as of 2026-08-13** (run the script for the live list). These are the same family as `friday-demo-template/friday-demo-timeline.svg`, redrawn to the refactoring.fm 2-row-grid style on `course-svg-per-image-fixes` (PR #447, commit 7e87b1a7). **Policy (see [[feedback-legibility-fix-not-redesign]]): render-gate per image, NOT metric-gate — the floor list is a "go render + eyeball" candidate set, not 36 scheduled redraws** (many `reference/*-full/*` deep-dives are desktop-first + pinch-zoomable and may be fine as-is). Migrate opportunistically, one at a time with the taste gate, when a chapter is touched for another reason. Quick win when picked up: the 5 `module-{1-5}-walkthrough-mia/artifact-trail.svg` share one layout → one redraw pattern clears all 5. Do NOT batch-convert (that was item 18, ABANDONED).
+
 - **Item 14 — reader-mode readability research** (POSTPONED by Paul 2026-08-02; also tracked as the 2604 reader-mode item — 2605 owns it). Archive @L819.
 - **External validation pilot** — post-course-completion only; kit at `40-49-review/40.18-external-validation-pilot-kit.md`. "Pilot" in-session = INTERNAL template review (see editing policies).
 
