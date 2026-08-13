@@ -24,6 +24,29 @@
   MBP-14), image column 460px, image is a click-to-open-new-tab link
   (drag-to-attach preserved); prev/next nav now traverses in board order
   (chronological by effective date), not Hugo section order.
+## 2026-08-13 (build) - a failing audit tool is not a failing site
+
+* **Update**: `.okf/build/hugo-build.md` gains "Minified output has unquoted
+  attributes"; full write-up in
+  `docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md` §8.
+* **The finding**: a third-party AI-SEO tool scored the site 60/100 "Multiple
+  Organ Failure" and reported no canonical tags, no structured data, and
+  placeholder meta descriptions. **All false.** `minifyOutput = true` drops
+  quotes on space-free attribute values (`rel=canonical`,
+  `type=application/ld+json`), and the tool's regex parser requires quotes.
+  GSC confirms Google parses all of it correctly.
+* **The tell**: checks reading ATTRIBUTE VALUES failed; checks reading ELEMENT
+  CONTENT (title, H1) passed. Read the failure *shape* before the failure
+  *text* - that split is a parser artifact every time.
+* **The rule**: before acting on any external audit, run GSC
+  `inspect_url_enhanced`. It returns `user_canonical` plus the rich-results
+  verdict - Google reporting what it actually parsed - and settles it in one
+  call. Also note `config/test/hugo.toml` sets `minifyOutput = false`, so the
+  test suite is blind to minification regressions by construction.
+* **What was real**: the same audit's copy criticism. And what it missed
+  entirely - the site publishes fabricated review schema (invented "Technology
+  Executive" reviews + two contradictory ratings). Asking "is schema missing?"
+  never asks "is the schema honest?".
 
 ## 2026-08-13 (visual gate) - a new component needs cold eyes, not the implementer's
 

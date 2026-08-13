@@ -116,10 +116,13 @@ spending effort on rankings before Dec 1. So the list is measurement-first, then
 | **4** | **Investigate the homepage position drop** (9.1 → 20.9 since May). One look at what changed - it is the only page with real brand-intent conversion value. | 1h | Biggest single ranking loss on a page that matters. |
 | **5** | **Do NOT run title-rewrite wave 2.** Record the experiment as falsified. | 0 | Wave 1 cost real hours and returned impressions loss, not clicks. |
 | **6** | **Do NOT invest in the rescue keyword cluster before Dec 1.** Reaffirm 20.09 §7. | 0 | 99 impressions / 0 clicks over 90 days confirms the existing call. |
+| **7** | **Delete `comprehensive-service-schema.html:101-157`** - the fabricated reviews and the 4.9/23 rating. See §8.2. | 20 min | Policy + FTC exposure. A manual action applies domain-wide, so low service-page traffic does not reduce it. |
+| **8** | **Confirm `4.8 / 32` against the live Clutch profile**, then either link the rating to it or drop `aggregateRating`. | 20 min | `reviewCount: 32` has no source in the repo. See §8.2. |
+| **9** | **Add `[minify.tdewolff.html] keepQuotes = true`** to `config/_default/hugo.toml`. | 5 min | Cosmetic-for-third-party-tools only - see §8.1. **Not an SEO fix**; do not re-raise it as one. |
 
 ### What is explicitly *not* recommended
 - New content for SEO reasons. At ~5 clicks/day and declining positions, publishing volume is not the constraint.
-- Technical SEO work. Sitemap is clean (1,147 URLs, 0 errors), key pages return `PASS` on inspection, schema validates. This is not a crawlability problem.
+- Technical SEO work. Sitemap is clean (1,147 URLs, 0 errors), key pages return `PASS` on inspection, schema validates. This is not a crawlability problem. (Schema validates *structurally*; §8.2 found part of its **content** is fabricated. That is a policy risk, not an SEO one, and actions #7-#8 address it on those grounds.)
 - Chasing the position 13 → 20 decay with on-page fixes until #2 is done. Without trustworthy numbers there is no way to tell a fix from noise.
 
 ---
@@ -129,3 +132,82 @@ spending effort on rankings before Dec 1. So the list is measurement-first, then
 > Organic is ~5 clicks/day and positions slid 13 → 20 since April; the "5k sessions"
 > baseline is ~90% bot traffic and conversions are untracked. Fix measurement (2h),
 > then leave SEO alone until outreach is unblocked.
+
+---
+
+## 8. Third-party audit response (2026-08-13)
+
+A third-party AI-SEO tool (`lightsite.agent`) scored jetthoughts.com **60/100, "Multiple Organ
+Failure"**, against competitors at 39 and 100 (lower is better on its scale). Every claim was verified
+against the live site and against GSC. **Four of its five claims are false.** This section exists so the
+same investigation is never run twice.
+
+### 8.1 Claim-by-claim verdict
+
+| Audit claim | Verdict | Evidence |
+|---|---|---|
+| "There are no canonical tags" | **FALSE** | `rel=canonical` emitted on every page from `layouts/partials/seo/enhanced-meta-tags.html:71` via `themes/beaver/layouts/baseof.html:9`. GSC `inspect_url` returns a matching `user_canonical` on every URL tested. |
+| "Zero structured data on any page we crawled" | **FALSE** | Organization, Service, FAQPage, Article and BreadcrumbList all live. GSC rich results **PASS**, detected types `Breadcrumbs` + `Review snippets`. |
+| "Meta description is basically a shrug / lazy placeholder" | **FALSE** | Descriptions are specific and page-tailored throughout. |
+| "No canonical tag - duplicates haunt you" | **FALSE** | `www.jetthoughts.com` → 301 → apex; `http://` → 301 → `https://`. No duplicate-host drift. |
+| "Copy uses the exact same phrases as the agencies they claim to replace" | **TRUE** | Substantiated and expanded in `20.09` §11. |
+
+#### Root cause of the false negatives
+
+`config/_default/hugo.toml:65` sets `minifyOutput = true`. Hugo's minifier drops quotes on attribute
+values that contain no spaces:
+
+```
+rel=canonical                (not rel="canonical")
+name=description             (not name="description")
+type=application/ld+json     (not type="application/ld+json")
+```
+
+Every check the tool failed (M, C, SCHEMA) matches a **quoted attribute**. Every check it passed (T, H1)
+reads **element content**. That mapping is exact - its parser is regex-based and requires quotes. The
+output is valid HTML5 and Google parses it correctly, which GSC confirms.
+
+**Action #9 (`keepQuotes = true`) is a cosmetic hedge against naive third-party parsers, not an SEO fix.**
+The argument for it is commercial, not technical: JT sells technical credibility, and a prospect running
+any free audit tool currently sees "invisible to AI assistants". Cost is ~1-2% page weight.
+Note `config/test/hugo.toml:11` sets `minifyOutput = false`, so **the test suite cannot verify #9** - it
+needs a `hugo --environment production` build and a byte-size comparison (homepage baseline: 124,256 B).
+
+### 8.2 What the audit missed - fabricated review markup
+
+The audit asked only "is schema missing?", never "is the schema that exists honest?". It is not.
+
+`themes/beaver/layouts/partials/seo/comprehensive-service-schema.html:101-157` publishes, on all 12
+`/services/` pages:
+
+- `aggregateRating` of **4.9 / 23 reviews**
+- Two `Review` objects authored by **"Technology Executive" (CTO)** and **"Startup Founder" (CEO)** -
+  non-existent people, with `reviewBody` text generated per service via `printf`, hardcoded
+  `datePublished` of `2024-11-15` / `2024-10-22`, and 5/5 ratings.
+
+Separately, `themes/beaver/layouts/partials/seo/enhanced-organization-schema.html:83-88` emits a
+hardcoded `aggregateRating` of **4.8 / 32** site-wide across ~1,147 URLs. Service pages therefore
+publish **two contradictory ratings at once**.
+
+**Exposure**: Google's structured-data policy prohibits fake and self-serving reviews; a manual action
+strips rich results **domain-wide**, so §4's "service pages get 1 click / 90 days" does *not* reduce the
+risk. The FTC Rule on Consumer Reviews and Testimonials also covers fabricated testimonials. It further
+breaks this repo's own standing rule - *"Zero unsupported claims: all assertions must have citations."*
+
+`grep -rn aggregateRating test/` returns nothing, so action #7 is a pure deletion with no test to update.
+
+**Decision taken 2026-08-13 (Paul):** remove the fabricated block only; keep `4.8 / 32` and the real
+named-client reviews from `data/testimonials.yaml`.
+
+**Residual risk, recorded deliberately:** Google disallows self-serving review markup about the
+organization on the organization's own site regardless of whether the numbers are true. And
+`reviewCount: 32` has no provenance in the repo - the only source is `data/company.yaml:11`,
+*"Top-rated on Clutch.co (4.8/5 rating)"*, which carries a rating but **no count**. Action #8 resolves
+this; if Clutch shows a different count, JT is publishing a wrong number.
+
+### 8.3 Also unsourced (out of scope, logged)
+
+Same file, `additionalProperty` block: `Client Retention Rate 95%`, `Success Rate 92%`,
+`Years of Experience 13+` are published as schema `PropertyValue` with no cited source.
+`content/pages/about-us/index.md:27` claims *"95% client retention rate—highest in the industry for
+development agencies"* - a superlative with no source. Fold into action #8 when it runs.

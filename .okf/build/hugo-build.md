@@ -7,6 +7,7 @@ tags: [build, hugo, validation]
 generated:
   by: process:okf-migrate
   at: 2026-07-19T12:00:00Z
+timestamp: 2026-08-13T00:00:00Z
 ---
 
 `bin/hugo-build` builds the site into `_dest/public-dev/` (repo-root
@@ -41,3 +42,22 @@ safelist entries). Guards: bin/hugo-build runs a warm-up pass when
 production + stats missing; the deploy workflow has an explicit warm-up
 step. sr-only/skip-link also safelisted as defense-in-depth. Never
 trust a first cold production build's CSS.
+
+# Minified output has unquoted attributes (2026-08-13)
+
+`minifyOutput = true` makes Hugo drop quotes on attribute values with no
+spaces: `rel=canonical`, `name=description`, `type=application/ld+json`.
+Valid HTML5, and Google parses it correctly - but regex-based third-party
+SEO/AEO audit tools require quotes and report the site as missing canonical
+tags, meta descriptions, and structured data. All three are false.
+
+Diagnostic tell: checks reading ATTRIBUTE VALUES fail while checks reading
+ELEMENT CONTENT (title, H1) pass. That split means parser artifact, not site
+defect. Settle it in one call with GSC `inspect_url_enhanced`, which returns
+`user_canonical` and the rich-results verdict - Google reporting what it
+actually parsed.
+
+Note `config/test/hugo.toml` sets `minifyOutput = false`, so **the test suite
+never sees minified output** and cannot catch minification-related regressions;
+that needs a `hugo --environment production` build. Full write-up:
+`docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md` §8.
