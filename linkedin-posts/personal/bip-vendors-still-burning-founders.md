@@ -1,5 +1,5 @@
 ---
-title: "AI didn't stop founders getting sold bad software"
+title: "They paid thousands for what AI now does in a weekend"
 lane: personal
 pillar: build-in-public
 author: paul-keen
@@ -20,10 +20,10 @@ notes: |
   Text-first. Idea-first, no em dashes.
 ---
 
-AI was supposed to make it harder to sell founders bad software. Somehow it hasn't.
+A founder showed me the app they paid thousands for. It barely worked.
 
-A non-technical founder shows me what they paid for, and it's barely running - features half-broken, held together with tape. Two years ago I'd have understood. Now the same thing could have been built cleaner with tools they could run themselves, or skipped entirely until someone actually wanted it.
+In 2026, they didn't need to spend that money at all. Lovable, v0 and bolt.new build a working version in a weekend now - cheap enough to try, fast enough to see if anyone even wants it before you pay for a real build.
 
-The money still gets spent the old way, on the old kind of work, by people who trusted the wrong vendor.
+Instead they trusted the wrong vendor and got something half-broken. Months gone, savings gone.
 
-I don't have a clean fix for it. None of it needed to happen, and it keeps happening anyway.
+The easy path was right there. They just didn't know it existed.
