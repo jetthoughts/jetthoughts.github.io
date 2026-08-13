@@ -10,22 +10,29 @@ icp_test: Which proof signal do founders actually rely on? Comment elaboration r
 cta: Vote on poll, then comment what their team sends and whether it tells them anything
 utm_campaign: icp_validation_progress_visibility
 utm_content: trust_signals_poll
+opener_archetype: idea-led (claim about proof signals, not a bare question)
 status: draft
 notes: |
-  Poll format - shorter body than narrative posts. Hook archetype:
-  question-led (NOT dialogue-led - Mon and Tue both opened with a founder
-  anecdote, so Wed needs a different opener archetype per
-  feedback_hook_bank_diversity.md). For a poll, question-led is the
-  natural fit: the poll itself is the question. Options reflect 4 main
-  trust signals from the progress-visibility pillar. Poll duration 1 week
-  so results land before Friday review.
+  Poll format - shorter body than narrative posts. Opener is idea-led: it
+  states a claim about which proof signals actually mean something before
+  the poll asks the reader. Poll itself carries the question, so the framing
+  text does the arguing. Options reflect 4 main trust signals from the
+  progress-visibility pillar. Poll duration 1 week so results land before
+  Friday review.
+  REVISED 2026-08-13 to idea-first: opener now leads with a claim (a report
+  is not a working URL), argues it plainly, then hands off to the poll and a
+  real peer question. Poll question and options unchanged.
 ---
 
 ## Post body (text above the poll)
 
-For founders working with an external dev team or agency: which signal do you actually rely on to know they're shipping?
+Most founders judge an outside dev team by whatever the team chooses to send: closed tickets, a velocity chart, a standup update. All of it can be true while nothing you can actually open has shipped.
 
-Vote below, and if you've got 30 seconds - tell me what your team currently sends and whether it actually helps.
+The signal I trust is a URL I can click. If it opens and it works, the work is real. Everything else is a report about the work, not the work itself.
+
+I'm curious where other founders land.
+
+Vote below. And if you've got 30 seconds, tell me what your team sends you and whether it actually tells you anything.
 
 ## Poll question
 

@@ -16,7 +16,8 @@ utm_campaign: course_promo_module1
 utm_content: week1_tue_founding_hypothesis
 status: draft
 notes: |
-  Opener archetype: conflict-led. Give-away = the five-blank Founding Hypothesis sentence from
+  REVISED 2026-08-13 to idea-first (opener: habit-led "The first thing I do..." -> idea-led belief stated flat).
+  Opener archetype: idea-led (belief stated flat). Give-away = the five-blank Founding Hypothesis sentence from
   Chapter 1.1, complete in the post; the sketch carries the formula so the post survives without
   the click. Example niche deliberately differs from Monday's anecdote (repetition guard).
   Sketch source: assets/week1-tue-founding-hypothesis-sketch.svg (Caveat/cursive, course style).
@@ -31,7 +32,7 @@ notes: |
   2 judges). Gym-owner line judged the most human line of the week - keep verbatim in any edit.
 ---
 
-The first thing I do with any new idea, mine included, is try to say it in one sentence with five blanks:
+Any idea worth building should fit in one plain sentence. The one I use, mine included, has five blanks:
 
 If we help [customer] solve [problem] with [approach], they'll pick it over [what they do today] because [your edge].
 

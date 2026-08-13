@@ -10,7 +10,14 @@ cta: Open question - "If you've been through one of these rebuilds, what did you
 utm_campaign: icp_validation_validation_vs_production
 utm_content: vibe_coding_disposable_by_design
 status: draft
+opener_archetype: idea-led
 notes: |
+  REVISED 2026-08-13 to idea-first: opener was habit-led ("For the last
+  3 months I've gotten requests"); now leads with the idea flat ("A
+  vibe-coded MVP doesn't refactor into production code. You rewrite it
+  from scratch"), real detail kept as support. Body already delivered the
+  mechanism + real peer question - left unchanged.
+
   Off-pillar post activated from backlog. Not in the planned Week 1
   (Progress Visibility) or Week 2 (Ownership & Access) slots.
 
@@ -33,7 +40,7 @@ notes: |
   credential stamps, no em dashes, no rule of three, no anaphora pairs.
 ---
 
-For the last 3 months I've gotten several requests to turn vibe-coded MVPs into real production code. Every time, the answer comes back the same: rewrite from scratch.
+A vibe-coded MVP doesn't refactor into production code. You rewrite it from scratch. I've had that same request several times over the last few months, and the answer never changes.
 
 AI doesn't refactor when you ask for a fix. It generates fresh code. After a few months of patches the same broken logic lives in five or six different places in your codebase. The next fix patches one of them; the others still produce the bug. From your seat, "we fixed it" keeps turning into "wait, it's back" three days later.
 

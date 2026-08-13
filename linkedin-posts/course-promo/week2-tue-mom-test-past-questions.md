@@ -16,7 +16,8 @@ utm_campaign: course-pilot-aug26
 utm_content: week2_tue_mom_test_past_questions
 status: draft
 notes: |
-  Opener archetype: conflict-led, per the week-2 row of docs/workflows/linkedin-course-promo-plan.md.
+  Opener archetype: idea-led - opens with the flat claim that "Would you use this?" can only hurt you, then argues it.
+  REVISED 2026-08-13 to idea-first: body already delivered the tactic in full and led with the idea; no rewrite needed, kept as-is.
   Give-away = 3 of the 5 Mom Test rewrites from Lesson 2.1, quoted from the actual lesson table
   (content/course/.../mom-test-ask-about-past-not-future/index.md) - not paraphrased, so the post
   and the lesson agree word-for-word. Fitzpatrick/The Mom Test credited by name, same as the lesson.

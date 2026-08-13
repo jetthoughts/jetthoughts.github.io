@@ -15,22 +15,27 @@ course_link_placement: first-comment
 utm_campaign: course-pilot-aug26
 utm_content: week2_wed_interview_count_poll
 status: draft
+opener_archetype: observation-led
 notes: |
-  Opener archetype: question-led (poll default), per the week-2 row of
-  docs/workflows/linkedin-course-promo-plan.md. Native LinkedIn poll, 1-week duration, 4 options.
+  Opener archetype: observation-led. Idea-first framing (a flat claim about pre-build
+  interviews) before the poll question, per the corrected 2026-08-13 doctrine; poll options
+  unchanged. Native LinkedIn poll, 1-week duration, 4 options.
   Different signal from the week-1 poll (first move with a new idea); this one counts pre-build
   interviews. No "right answer" named in the body - same bias guard the week-1 poll review forced.
   Follow-up obligation: Paul owes the thread his guess + the spread summary after the poll closes
   (scheduled Aug 12 slot in 50.02 covers the WEEK-1 poll follow-up; this poll's follow-up lands
   the week after the campaign window).
   AI score self-check 2026-07-31: 0/10. No flips, no parallel stems, no em dashes, no marketing CTA.
+  REVISED 2026-08-13 to idea-first: opener changed from bare question-led to observation-led; poll options preserved.
 ---
 
-For everyone building something right now, or about to: how many potential customers did you sit down and interview before committing real money or months to it?
+How many real customers a founder talks to before building usually tells you more about where the product is headed than any early technical decision does.
 
-Chats with friends who already knew about the idea don't count. I mean conversations with people who have the problem and owe you nothing.
+By real I mean people who have the problem and owe you nothing. Friends who already knew about the idea, and were being kind, don't count. Neither does anyone who would feel bad voting against you.
 
-There's no right answer in the options, and I'm not going to argue with anyone's vote. I have a guess about where most honest answers land, and I want to see whether it holds outside the founders who end up on calls with me. I'll share my guess, and what tends to happen at each answer, once the votes are in.
+For anyone building something right now, or about to: how many of those conversations did you actually have before you committed real money or months?
+
+I have a guess about where most honest answers land, and I want to see whether it holds outside the founders who end up on calls with me. There is no right answer in the options, and I will not argue with anyone's vote. Once the votes are in, I will share my guess and what tends to happen at each number.
 
 ---
 

@@ -11,17 +11,19 @@ icp_test: Does a give-away framing (free, ungated, feedback-as-payment) drive co
 cta: "If you read the first chapter, tell me where it loses you; that's the feedback I actually need."
 design: A
 design_file: linkedin-posts/course-promo/assets/week1-fri-course-page.png
-course_link_placement: body-friday
+course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_fri_why_i_wrote_it
 status: draft
+first_comment: |
+  Free, no email gate:
+  https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_fri_why_i_wrote_it
 notes: |
-  Opener archetype: dialogue-led. This is the week's ONE body-link post (Friday exception in
-  docs/workflows/linkedin-course-promo-plan.md).
-  RESOLVED 2026-07-31: invented "Back in May" founder removed - opener now leads with the quoted
-  question itself (dialogue-led archetype restored), honest recurrence, no invented person.
-  Paul-flagged slop cadence ("Founders keep asking me...:") removed same day. OPTIONAL: restore
-  the real triggering conversation if one exists.
+  Opener archetype: idea-led observation. This is a course-lane post; the course link lives in
+  first_comment (not the body) per the course-lane policy in docs/workflows/linkedin-post-pipeline.md.
+  RESOLVED 2026-07-31: invented "Back in May" founder removed - opener now leads with the recurring
+  question itself, honest recurrence, no invented person.
+  Paul-flagged slop cadence ("Founders keep asking me...:") removed same day.
   Attachment is a real screenshot of the live course page, red circle on Free / No sign-up chips.
   Multi-critic review 2026-07-12 (slop score 0/10): trimmed "because the founders who need it most
   are watching their runway" - two critics read it as savior-flavored justification; "free with no
@@ -32,21 +34,23 @@ notes: |
   parallel lists (advice list + module list back-to-back) read as brochure, not Paul (all 3 judges).
   Collapsed the advice list into one spoken line ("most of it some version of..."), kept only the
   module list as the enumeration and made it plainer; "signed paid pilot, a real customer paying
-  real money" -> "your first paying customer"; split the 34-word opener. Opener anecdote and the
-  "tell me where it loses you" close judged genuinely human - keep verbatim (anecdote de-fabricated 2026-07-31, see above).
+  real money" -> "your first paying customer".
+  REVISED 2026-08-13 to idea-first: opener now leads with the recurring observation and states the
+  core belief (find out if anyone will pay before you build) flat, instead of opening on a quoted
+  question. Course link moved out of the body into first_comment per the course-lane no-body-link
+  policy. "tell me where it loses you" close kept verbatim - a real ask, not a sales CTA.
 ---
 
-"What should I read before I spend any money on my idea?" I get asked that a lot, and for years I never had one link to send back. What I had was scattered blog posts and the same advice repeated across a dozen calls, most of it boiling down to "find out if anyone will pay before you build".
+Every non-technical founder I talk to wants the same thing: to know what to read before they spend money on an idea. The honest answer is short. Find out if someone will pay before you build. For years I had no single link to send them, just scattered blog posts and the same advice repeated across a dozen calls.
 
-So I spent the last two months writing the whole thing down. Five short modules, from a raw idea to your first paying customer, with the templates included - the demand test, the interview scripts, the one-page brief, a no-code build you own from day one, and how to ask for that first payment.
+I spent the last two months writing it down. Five short modules, from a raw idea to your first paying customer, with the templates included: the demand test, the interview scripts, the one-page brief, a no-code build you own from day one, and how to ask for that first payment.
 
-It's free with no email gate:
-https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_fri_why_i_wrote_it
+The whole thing is free, no email gate.
 
-This week's posts all came from Module 1. If you read the first chapter, tell me where it loses you; that's the feedback I actually need.
+This week's posts all came from Module 1. If you read the first chapter, tell me where it loses you. That's the feedback I actually need.
 
 ---
 
-**First comment:** none needed (link is in the body under the Friday exception).
+**First comment:** carries the course link (Free, no email gate) - see `first_comment` in frontmatter. Course-lane posts keep the link out of the body.
 
 **Attachment:** `assets/week1-fri-course-page.png` (2560x1300 screenshot of the live course page, red hand-drawn circle on the "Free" and "No sign-up" chips).

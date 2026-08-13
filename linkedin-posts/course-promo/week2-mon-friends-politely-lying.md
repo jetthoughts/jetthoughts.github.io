@@ -16,8 +16,10 @@ utm_campaign: course-pilot-aug26
 utm_content: week2_mon_friends_politely_lying
 status: draft
 notes: |
-  Opener archetype: dialogue-led (Tue=conflict-led, Wed=question-led, Fri=stat-led), per the week-2
-  row of docs/workflows/linkedin-course-promo-plan.md.
+  Opener archetype: observation-led (name the line every founder says, then counter it - the Cutler
+  move), per the week-2 row of docs/workflows/linkedin-course-promo-plan.md.
+  REVISED 2026-08-13 to idea-first: killed the rule-of-three "X is not demand" parallelism and the
+  triple-fragment list; state the idea flat, deliver the ask-strangers tactic in full to the reader.
   RESOLVED 2026-07-31 (voice-critic finding): the synthetic June/eleven-friends anecdote was
   removed - the opener now states Paul's recurring real practice ("every time I hear that
   line... I ask") with no invented specifics. OPTIONAL upgrade: Paul may swap in one real
@@ -32,11 +34,11 @@ notes: |
 
 "Everyone I show it to says they'd love it."
 
-Friends saying they'd love it is not demand. Colleagues saying it's clever is not demand. Your old boss promising he'd definitely pay is not demand. Demand is what someone did about the problem before you showed up - what they tried, what they paid for, what they duct-taped together in a spreadsheet at midnight.
+That line feels like proof, and it isn't. People who like you say kind things about your idea. It costs them nothing, and it tells you nothing about whether anyone actually needs the thing.
 
-When a founder tells me everyone loves the idea, I ask how many of those people have used it since. The pause is usually the whole answer.
+Demand is what someone already did about the problem before you showed up - what they tried on their own, what they were already paying to duct-tape around it.
 
-So ask strangers what the problem cost them the last time it showed up. Asking people who like you is checking whether your cooking is good by asking your mom.
+So stop polling your fans. Ask a few strangers what the problem cost them the last time it hit them - the hours lost or the money spent. If they can't name a cost, there's nothing worth building yet. Checking demand by asking people who like you is like checking your cooking by asking your mom.
 
 Anyone else collected a pile of compliments that never turned into a single user?
 

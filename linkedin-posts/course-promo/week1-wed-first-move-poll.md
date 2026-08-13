@@ -16,7 +16,7 @@ utm_campaign: course_promo_module1
 utm_content: week1_wed_first_move_poll
 status: draft
 notes: |
-  Opener archetype: question-led (poll default). Native LinkedIn poll, 1-week duration, 4 options.
+  Opener archetype: idea-led (flat claim, then the poll question). Native LinkedIn poll, 1-week duration, 4 options.
   Deliberately different signal from the ICP-validation week-1 poll ("what makes you trust a dev
   team is working"), which tested vendor trust; this one tests the founder's own first move.
   Follow-up obligation: Paul owes the comment thread his guess + the pattern summary after the poll closes.
@@ -27,13 +27,15 @@ notes: |
   again (rubric ~1/10, ear 3/10). Only fix: split the 37-word "I'm asking because..." sentence and
   plained "what usually follows" -> "what usually happens after". "The people who end up on calls
   with me" judged a top human line of the campaign - protect verbatim.
+  REVISED 2026-08-13 to idea-first: flipped the question-led opener to a flat claim, moved the
+  question into para 2. Paras 2-3 kept near-verbatim (protected lines intact).
 ---
 
-For everyone who has ever had a business idea in the shower: what did you actually do first?
+The first move you make on a new business idea usually decides how much it costs you to find out whether it works.
 
-Not what a book says you should do. The thing you honestly did, or would do tomorrow if the idea felt real enough.
+What did you actually do first? Not what a book says you should do. The thing you honestly did, or would do tomorrow if the idea felt real enough.
 
-I'm asking because I have a guess about which one wins. I want to know whether it holds for everyone, or just for the people who end up on calls with me. I'll share my guess, and what usually happens after each answer, once the votes are in.
+I have a guess about which one wins. I want to know whether it holds for everyone, or just for the people who end up on calls with me. I'll share my guess, and what usually happens after each answer, once the votes are in.
 
 ---
 
