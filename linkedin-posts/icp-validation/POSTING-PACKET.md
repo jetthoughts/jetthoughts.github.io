@@ -1,6 +1,6 @@
-# Posting Packet — ICP post #1 (SCHEDULED)
+# Posting Packet — ICP post #1 (PULLED, being reworked)
 
-> **STATUS: SCHEDULED on Paul's LinkedIn for Thu 2026-08-13, 3:30 PM CEST (9:30am ET, US-morning B2B peak)** — done via claude-in-chrome, verified in LinkedIn "Scheduled posts". The 2-week kill-criteria clock starts on publish (2026-08-13). Next: monitor replies/DMs for ICP symptom-language; agent drafts responses, Paul sends. `week1-tue`/`week1-wed` drafts already written for the 3-4/wk Stream 0 cadence.
+> **STATUS 2026-08-13: this jira-not-progress post was scheduled, then DELETED before publish** — Paul judged it AI slop (staged parable, no tactic, "So..." beat-marking). It exposed a broken doctrine in the pipeline ("story, not advice"), now corrected to **idea-first, deliver the point** (see `docs/workflows/linkedin-post-pipeline.md` + `linkedin-posts/README.md`). This post is a **rescue-lane** draft to be REVISED to the new shape, not reposted as-is. The first idea-first post that DID ship is the course-lane `course-promo/week1-thu-validate-before-build.md` (scheduled 3:30pm CEST 2026-08-13, text-only; image is the manual gap). The rescue-lane 2-week clock has NOT started.
 
 **For Paul. Total effort: copy the text block below, paste into LinkedIn, post.** Nothing else. This activates the campaign and starts the kill-criteria clock (register C1 addendum, 2026-08-08).
 

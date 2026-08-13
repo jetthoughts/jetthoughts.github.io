@@ -107,41 +107,52 @@ Every line of every LinkedIn post must pass:
 
 ---
 
-## Post shape: story, not advice (BLOCKING)
+## Post shape: idea-first, deliver the point (BLOCKING)
 
-The single biggest tell that a post is sales/marketing is its **shape**, not its words. Marketing posts follow a predictable arc: hook → anecdote → generalization → solution → objection-handling → empowerment → CTA. That shape itself reads as marketing even when every individual word is fine.
+> **Doctrine corrected 2026-08-13.** The prior rule ("story, not advice" - force
+> every post into a single-encounter parable) *generated* the AI slop Paul rejected:
+> staged "a founder pinged me last Tuesday" openers, the tactic buried as the
+> founder's future action (zero takeaway), and "So... So..." connectors. It is
+> replaced below. Reference writers Paul rates: **John Cutler** (`johnpcutler`) and
+> **Luca Rossi** (`lucaronin`, refactoring.fm) - study their recent activity.
 
-Paul's posts must be **story-shaped**, not advice-shaped:
+The marketing tell is the **arc**, not advice itself. Sales posts run hook → anecdote → generalization → solution → objection-handling → empowerment → CTA. Drop the arc - do NOT hide the point inside a parable.
 
-| ❌ Advice shape (marketing) | ✅ Story shape (conversation) |
+**Write idea-first, like Cutler and Rossi:**
+- **Open with the idea, flat.** A belief, observation, or claim - not a staged encounter. Rossi: *"One of the dominant narratives in software today is that AI is making junior engineers redundant."* Cutler: *"'We want visibility' is stated as a universal need. But..."*
+- **Argue it plainly, then take a position.** Rossi: *"It goes like this... I believe this is a mistake."*
+- **Deliver the tactic in full.** Advice IS the value - give the actual move away. (Opposite of the old "hide the tactic inside what the founder will do next" rule.)
+- **Plain, short sentences.** No stacked sub-clauses. Paul: "I write simpler."
+- **Paragraph breaks are fine.** Cutler and Rossi use clear one-idea paragraphs. The old "don't separate the beats, add So-connectors" rule is **REVOKED** - it manufactured the beat-marking Paul flags as slop.
+- **Close with a real peer question.**
+
+| ❌ Old parable shape (now banned) | ✅ Idea-first shape |
 |---|---|
-| Open with a tagline ("Jira is not progress.") | Open with a specific recent encounter ("Founder showed me her sprint board last week.") |
-| Generalize the pattern in the middle ("This shows up in almost every team I look at...") | Stay inside the encounter, let the reader generalize |
-| Lift the tactical advice into a how-to section ("What works is asking for a URL...") | Embed the tactical move inside what the founder is going to do next ("She's going to try something this Friday: ...") |
-| Add an objection-handling bullet list ("- We're refactoring → ...") | Skip the objection list. If the post must address objections, fold them into one sentence inside the story |
-| Close with empowerment + question ("Any non-technical founder can do this. What's your story?") | Close with a single peer question ("Anyone else been in this version of it?") |
+| Staged encounter opener ("A founder pinged me last Tuesday...") | The idea, flat ("A lot of non-technical founders read a full board as proof of progress.") |
+| Bloat the encounter into a 4-paragraph screenplay with "So... So..." connectors | Argue the pattern in plain sentences |
+| Bury the tactic as the founder's future action; deliver no advice | Deliver the tactic directly - reader can use it today |
+| Manufactured specificity (14 tickets, since January, this Friday, ten minutes) | One real detail if you have it, else none - don't fabricate a tidy composite |
 
-**The shape test:** Read the post in your head. If it could appear unchanged in a "5 ways to spot a stalled dev team" newsletter, the shape is wrong. Rewrite as a recounted encounter, not as advice with a story decorating it.
-
-### Story-shape skeleton
+### Idea-first skeleton
 
 ```
-Beat 1 (1-2 lines): Specific recent encounter - concrete detail (number, day, role)
-Beat 2 (1-2 lines): The reveal moment in the encounter
-Beat 3 (1-2 lines): One line of opinion as observation, not slogan
-Beat 4 (1-2 lines): What the person in the story is going to do next
-Close (1 line):     Peer question - "anyone else been in this version of it?"
+Beat 1 (1 line):    The idea / belief / observation, flat - no staged encounter, no credential
+Beat 2 (1-2 lines): Restate it plainly, or show why it looks reasonable
+Beat 3 (1-2 lines): Your position, flat
+Beat 4 (3-5 lines): The tactic, delivered in full - the actual move the reader can make
+Beat 5 (1 line):    Why it matters
+Close (1 line):     Real peer question
 ```
 
-Length target: **120-180 words**. Story shape needs less transition scaffolding than the marketing arc, so posts run shorter.
+Length target: **120-160 words**. Plain sentences, one idea per paragraph.
 
-### First-draft warning: don't separate the beats into paragraphs
+### New slop tells (2026-08-13 - caught on the jira-not-progress + validate-before-build drafts)
 
-The skeleton names 5 beats. The first-draft trap is to render each beat as its own paragraph with no connector to the prior beat. That produces a list-of-points shape that reads as outline, not story — the post will fail the read-aloud fluency test even if every individual sentence is clean.
-
-**Fix at the writing stage:** drop in connectors at the seams as you draft. "So we hopped on a quick call." "And the thing is..." "Anyway, we agreed she'd try..." Real spoken stories don't pause for breath at every clean beat. Two paragraphs of flowing prose almost always beat 5 paragraphs of separated beats.
-
-**The Tuesday post lesson:** an initial 6-paragraph draft (one paragraph per beat, no connectors) was rewritten to 3 paragraphs by adding `so we hopped on a quick call`, `So we agreed she'd try a different one`, and `Beats three more sprints of...` — connectors that carry the listener forward. This is a writing-stage rule, not just an editing-stage fix.
+- **Manufactured single-encounter parable** - a too-clean composite founder story built to illustrate a lesson.
+- **"So... So... So..." beat-marking** / cinematic connectors ("So we hopped on a call") - screenplay reconstruction. (The old doctrine *mandated* these.)
+- **Cost-stacked time-cut** - "six months and a big invoice later, you still..." - manufactured drama.
+- **Stacked-clause long sentences** - one 30-word sentence with 3 sub-clauses. Break it up.
+- **Engagement-bait close as the only payload** ("Anyone else been in this version of it?") when the body delivered no value. The question is fine *after* real value; not as a substitute for it.
 
 ### Hook archetype rotation (Beat 1)
 
