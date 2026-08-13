@@ -1,53 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 780" role="img" aria-labelledby="dr-title">
-  <title id="dr-title">The Friday Demo Rule: 15 minutes, working software only, no slides or Jira screenshots. Allowed in the room: a real checkout on staging with a $1 test charge processed, order paid, webhook fired, receipt shown, and a real login. Not allowed: a Jira screenshot, a Figma frame, a slide deck, or a burndown chart. If a demo is not ready, say so on Wednesday.</title>
-  <desc>Two columns. Green, ALLOWED IN THE ROOM, Friday 4pm hard stop: the checkout on staging.acme.app, a $1 test charge processed, order 1284 marked paid, webhook fired, receipt shown live, a real login pasted once - working software you click through during the call. Red, NOT ALLOWED: a Jira screenshot with eleven done tickets, a Figma frame, a slide deck, a burndown chart. Footer: fifteen minutes, Loom or live, working software only; if a demo is not ready, say so on Wednesday.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" role="img" aria-labelledby="dr-title">
+  <title id="dr-title">The Friday Demo Rule: 15 minutes, working software only, no slides or Jira screenshots. Allowed in the room: the checkout on staging, a $1 test charge processed, order 1284 paid, webhook fired, receipt shown live, a real login. Not allowed: a Jira screenshot, a Figma frame, a slide deck, a burndown chart. If a demo is not ready, say so on Wednesday.</title>
+  <desc>Two columns of chips. Green, ALLOWED, working software: staging checkout, $1 test charge, order 1284 paid, webhook fired, receipt shown live, real login - you click along live. Red, NOT ALLOWED, theatre: a Jira screenshot, a Figma frame, a slide deck, a burndown chart. Footer: 15 minutes, Loom or live, working software only; if a demo is not ready, say so on Wednesday.</desc>
   <defs>
     <style>
       .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
-      .title{ font-size: 46px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .title{ font-size: 44px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
       .sub  { font-size: 22px; fill: #667085; }
-      .hg { font-size: 26px; font-weight: 700; fill: #2e9e4f; filter: url(#gG); }
-      .hr { font-size: 26px; font-weight: 700; fill: #e5484d; filter: url(#gR); }
+      .hg { font-size: 27px; font-weight: 700; fill: #2e9e4f; filter: url(#gG); }
+      .hr { font-size: 27px; font-weight: 700; fill: #e5484d; filter: url(#gR); }
       .tg { font-size: 20px; fill: #2e9e4f; }
-      .ig { font-size: 21px; fill: #1a6b34; }
-      .ir { font-size: 22px; fill: #b42318; }
-      .cardG{ fill: #f2fbf4; stroke: #57c06f; stroke-width: 2.5; filter: url(#soft); }
-      .cardR{ fill: #fff5f4; stroke: #f2635a; stroke-width: 2.5; filter: url(#soft); }
+      .tr { font-size: 20px; fill: #e5484d; }
+      .chipG{ fill: #eafaef; stroke: #57c06f; stroke-width: 2.5; filter: url(#soft); }
+      .chipR{ fill: #fdecec; stroke: #f2635a; stroke-width: 2.5; filter: url(#soft); }
+      .cg { font-size: 21px; font-weight: 700; fill: #1a6b34; }
+      .cr { font-size: 21px; font-weight: 700; fill: #b42318; }
       .resG { font-size: 22px; font-weight: 700; fill: #1a6b34; }
       .resR { font-size: 22px; font-weight: 700; fill: #b42318; }
       .foot { font-size: 23px; font-weight: 700; fill: #1a1a1a; }
     </style>
-    <filter id="soft" x="-8%" y="-6%" width="116%" height="116%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
+    <filter id="soft" x="-14%" y="-16%" width="128%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#1a1a2e" flood-opacity="0.12"/></filter>
     <filter id="gG" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2e9e4f" flood-opacity="0.5"/></filter>
     <filter id="gR" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#f2635a" flood-opacity="0.5"/></filter>
   </defs>
 
-  <text x="360" y="52" text-anchor="middle" class="h title">The Friday Demo Rule</text>
-  <text x="360" y="88" text-anchor="middle" class="h sub">15 min &#183; working software only &#183; Friday 4pm hard stop</text>
+  <text x="360" y="50" text-anchor="middle" class="h title">The Friday Demo Rule</text>
+  <text x="360" y="86" text-anchor="middle" class="h sub">15 min &#183; working software only &#183; Friday 4pm hard stop</text>
 
-  <!-- Allowed -->
-  <rect x="18" y="108" width="340" height="524" rx="20" class="cardG"/>
-  <text x="188" y="152" text-anchor="middle" class="h hg">&#10003; ALLOWED</text>
-  <text x="188" y="180" text-anchor="middle" class="h tg">working software</text>
-  <text x="46" y="230" class="h ig">staging.acme.app/checkout</text>
-  <text x="46" y="272" class="h ig">$1 test charge processed &#10003;</text>
-  <text x="46" y="314" class="h ig">order #1284 &#8594; paid</text>
-  <text x="46" y="356" class="h ig">webhook fired &#10003;</text>
-  <text x="46" y="398" class="h ig">receipt shown live</text>
-  <text x="46" y="440" class="h ig">real login (one paste)</text>
-  <text x="188" y="560" text-anchor="middle" class="h resG">You click everything</text>
-  <text x="188" y="590" text-anchor="middle" class="h resG">they show you.</text>
+  <text x="188" y="132" text-anchor="middle" class="h hg">&#10003; ALLOWED</text>
+  <text x="188" y="158" text-anchor="middle" class="h tg">working software</text>
+  <text x="534" y="132" text-anchor="middle" class="h hr">&#10007; NOT ALLOWED</text>
+  <text x="534" y="158" text-anchor="middle" class="h tr">theatre</text>
 
-  <!-- Not allowed -->
-  <rect x="378" y="108" width="324" height="524" rx="20" class="cardR"/>
-  <text x="540" y="152" text-anchor="middle" class="h hr">&#10007; NOT ALLOWED</text>
-  <text x="540" y="180" text-anchor="middle" class="h tg" fill="#e5484d">theatre</text>
-  <text x="404" y="238" class="h ir">Jira screenshot (Done &#215;11)</text>
-  <text x="404" y="290" class="h ir">Figma frame</text>
-  <text x="404" y="342" class="h ir">Slide deck</text>
-  <text x="404" y="394" class="h ir">Burndown chart</text>
-  <text x="540" y="560" text-anchor="middle" class="h resR">Not ready? Say so</text>
-  <text x="540" y="590" text-anchor="middle" class="h resR">on Wednesday.</text>
+  <!-- Green chips (6) -->
+  <g>
+    <rect x="30" y="178" width="316" height="46" rx="14" class="chipG"/><text x="50" y="207" class="h cg">&#10003; staging.acme/checkout</text>
+    <rect x="30" y="234" width="316" height="46" rx="14" class="chipG"/><text x="50" y="263" class="h cg">&#10003; $1 test charge processed</text>
+    <rect x="30" y="290" width="316" height="46" rx="14" class="chipG"/><text x="50" y="319" class="h cg">&#10003; order #1284 &#8594; paid</text>
+    <rect x="30" y="346" width="316" height="46" rx="14" class="chipG"/><text x="50" y="375" class="h cg">&#10003; webhook fired</text>
+    <rect x="30" y="402" width="316" height="46" rx="14" class="chipG"/><text x="50" y="431" class="h cg">&#10003; receipt shown live</text>
+    <rect x="30" y="458" width="316" height="46" rx="14" class="chipG"/><text x="50" y="487" class="h cg">&#10003; real login (one paste)</text>
+  </g>
+  <text x="188" y="548" text-anchor="middle" class="h resG">You click along, live.</text>
 
-  <text x="360" y="700" text-anchor="middle" class="h foot">15 minutes &#183; Loom or live &#183; working software only.</text>
+  <!-- Red chips (4, spaced to balance) -->
+  <g>
+    <rect x="374" y="178" width="316" height="64" rx="14" class="chipR"/><text x="394" y="217" class="h cr">&#10007; Jira screenshot &#183; 11 done</text>
+    <rect x="374" y="256" width="316" height="64" rx="14" class="chipR"/><text x="394" y="295" class="h cr">&#10007; Figma frame</text>
+    <rect x="374" y="334" width="316" height="64" rx="14" class="chipR"/><text x="394" y="373" class="h cr">&#10007; Slide deck</text>
+    <rect x="374" y="412" width="316" height="64" rx="14" class="chipR"/><text x="394" y="451" class="h cr">&#10007; Burndown chart</text>
+  </g>
+  <text x="534" y="548" text-anchor="middle" class="h resR">Not ready? Say so Wednesday.</text>
+
+  <text x="360" y="600" text-anchor="middle" class="h foot">15 minutes &#183; Loom or live &#183; working software only.</text>
 </svg>
