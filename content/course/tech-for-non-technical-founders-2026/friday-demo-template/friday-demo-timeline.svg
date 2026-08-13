@@ -1,75 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" role="img" aria-labelledby="demo-timeline-title">
-  <title id="demo-timeline-title">The 15-minute Friday demo: 7 questions in order, then the hard stop</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-labelledby="demo-timeline-title">
+  <title id="demo-timeline-title">The 15-minute Friday demo: 7 questions in the same order every week, then a hard stop.</title>
+  <desc>Seven numbered demo questions in a two-row grid, then a hard-stop card. 1 shipped, 2 what did a user do, 3 is it live here, 4 what got cut, 5 is it in review, 6 blocked on anything, 7 what worries you next - then STOP at 15 minutes, hard. Footer rules: working software only, no slides, no mockups; no Figma, no Jira screenshots; if a demo is not ready, say so Wednesday; you click the staging URL yourself, live, while they talk.</desc>
   <defs>
     <style>
-      .heading   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 27px; fill: #1a1a1a; font-weight: 700; }
-      .subtitle  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
-      .qnum      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #cc342d; font-weight: 700; }
-      .stopnum   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 20px; fill: #b8860b; font-weight: 700; }
-      .qlabel    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #1a1a1a; font-weight: 700; }
-      .chevron   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #999; }
-      .step      { fill: #faf7f2; stroke: #1a1a1a; stroke-width: 2; }
-      .stop      { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
-      .rule-label{ font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
-      .rule-note { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #444; font-style: italic; }
+      .h    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title{ font-size: 42px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .sub  { font-size: 22px; fill: #667085; }
+      .card { fill: #f2f7ff; stroke: #6aa8ff; stroke-width: 2.5; filter: url(#soft); }
+      .stop { fill: #fff6e6; stroke: #e2b93b; stroke-width: 2.5; filter: url(#soft); }
+      .num  { fill: #2b7fff; }
+      .numt { font-size: 26px; font-weight: 700; fill: #fff; }
+      .qlab { font-size: 22px; font-weight: 700; fill: #1a1a1a; }
+      .stopt{ font-size: 28px; font-weight: 700; fill: #b8860b; filter: url(#gA); }
+      .stopn{ font-size: 19px; font-weight: 700; fill: #8a6d1f; }
+      .foot { font-size: 24px; font-weight: 700; fill: #1a1a1a; }
+      .note { font-size: 19px; fill: #667085; }
     </style>
+    <filter id="soft" x="-8%" y="-10%" width="116%" height="128%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
+    <filter id="gA" x="-25%" y="-45%" width="150%" height="190%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#e2b93b" flood-opacity="0.55"/></filter>
   </defs>
 
-  <text x="500" y="34" class="heading" text-anchor="middle">The 15-minute Friday demo</text>
-  <text x="500" y="58" class="subtitle" text-anchor="middle">Same 7 questions, same order, every week - 4pm, hard stop.</text>
+  <text x="360" y="52" text-anchor="middle" class="h title">The 15-Minute Friday Demo</text>
+  <text x="360" y="88" text-anchor="middle" class="h sub">Same 7 questions, same order, every week - 4pm, hard stop.</text>
 
-  <!-- 7 questions -->
-  <rect x="40" y="90" width="99" height="110" rx="10" class="step" transform="rotate(-0.3 89.5 145)"/>
-  <text x="89.5" y="120" class="qnum" text-anchor="middle">Q1</text>
-  <text x="89.5" y="150" class="qlabel" text-anchor="middle">SHIPPED?</text>
+  <!-- Row 1: Q1-Q4 -->
+  <g transform="rotate(-0.4 101 177)"><rect x="22" y="118" width="158" height="118" rx="18" class="card"/>
+    <circle cx="101" cy="158" r="24" class="num"/><text x="101" y="167" text-anchor="middle" class="h numt">1</text>
+    <text x="101" y="212" text-anchor="middle" class="h qlab">SHIPPED?</text></g>
+  <g transform="rotate(0.4 273 177)"><rect x="194" y="118" width="158" height="118" rx="18" class="card"/>
+    <circle cx="273" cy="158" r="24" class="num"/><text x="273" y="167" text-anchor="middle" class="h numt">2</text>
+    <text x="273" y="212" text-anchor="middle" class="h qlab">USER DID?</text></g>
+  <g transform="rotate(-0.4 445 177)"><rect x="366" y="118" width="158" height="118" rx="18" class="card"/>
+    <circle cx="445" cy="158" r="24" class="num"/><text x="445" y="167" text-anchor="middle" class="h numt">3</text>
+    <text x="445" y="212" text-anchor="middle" class="h qlab">LIVE HERE?</text></g>
+  <g transform="rotate(0.4 617 177)"><rect x="538" y="118" width="158" height="118" rx="18" class="card"/>
+    <circle cx="617" cy="158" r="24" class="num"/><text x="617" y="167" text-anchor="middle" class="h numt">4</text>
+    <text x="617" y="212" text-anchor="middle" class="h qlab">WHAT CUT?</text></g>
 
-  <text x="148" y="150" class="chevron" text-anchor="middle">&#8250;</text>
+  <!-- Row 2: Q5-Q7 + STOP -->
+  <g transform="rotate(0.4 101 311)"><rect x="22" y="252" width="158" height="118" rx="18" class="card"/>
+    <circle cx="101" cy="292" r="24" class="num"/><text x="101" y="301" text-anchor="middle" class="h numt">5</text>
+    <text x="101" y="346" text-anchor="middle" class="h qlab">IN REVIEW?</text></g>
+  <g transform="rotate(-0.4 273 311)"><rect x="194" y="252" width="158" height="118" rx="18" class="card"/>
+    <circle cx="273" cy="292" r="24" class="num"/><text x="273" y="301" text-anchor="middle" class="h numt">6</text>
+    <text x="273" y="346" text-anchor="middle" class="h qlab">BLOCKED?</text></g>
+  <g transform="rotate(0.4 445 311)"><rect x="366" y="252" width="158" height="118" rx="18" class="card"/>
+    <circle cx="445" cy="292" r="24" class="num"/><text x="445" y="301" text-anchor="middle" class="h numt">7</text>
+    <text x="445" y="346" text-anchor="middle" class="h qlab">WORRY NEXT?</text></g>
+  <g transform="rotate(-0.4 617 311)"><rect x="538" y="252" width="158" height="118" rx="18" class="stop"/>
+    <text x="617" y="304" text-anchor="middle" class="h stopt">STOP</text>
+    <text x="617" y="338" text-anchor="middle" class="h stopn">15 MIN &#183; HARD</text></g>
 
-  <rect x="157" y="90" width="99" height="110" rx="10" class="step" transform="rotate(0.3 206.5 145)"/>
-  <text x="206.5" y="120" class="qnum" text-anchor="middle">Q2</text>
-  <text x="206.5" y="150" class="qlabel" text-anchor="middle">USER DID?</text>
-
-  <text x="265" y="150" class="chevron" text-anchor="middle">&#8250;</text>
-
-  <rect x="274" y="90" width="99" height="110" rx="10" class="step" transform="rotate(-0.3 323.5 145)"/>
-  <text x="323.5" y="120" class="qnum" text-anchor="middle">Q3</text>
-  <text x="323.5" y="150" class="qlabel" text-anchor="middle">LIVE HERE?</text>
-
-  <text x="382" y="150" class="chevron" text-anchor="middle">&#8250;</text>
-
-  <rect x="391" y="90" width="99" height="110" rx="10" class="step" transform="rotate(0.3 440.5 145)"/>
-  <text x="440.5" y="120" class="qnum" text-anchor="middle">Q4</text>
-  <text x="440.5" y="150" class="qlabel" text-anchor="middle">WHAT CUT?</text>
-
-  <text x="499" y="150" class="chevron" text-anchor="middle">&#8250;</text>
-
-  <rect x="508" y="90" width="99" height="110" rx="10" class="step" transform="rotate(-0.3 557.5 145)"/>
-  <text x="557.5" y="120" class="qnum" text-anchor="middle">Q5</text>
-  <text x="557.5" y="150" class="qlabel" text-anchor="middle">IN REVIEW?</text>
-
-  <text x="616" y="150" class="chevron" text-anchor="middle">&#8250;</text>
-
-  <rect x="625" y="90" width="99" height="110" rx="10" class="step" transform="rotate(0.3 674.5 145)"/>
-  <text x="674.5" y="120" class="qnum" text-anchor="middle">Q6</text>
-  <text x="674.5" y="150" class="qlabel" text-anchor="middle">BLOCKED?</text>
-
-  <text x="733" y="150" class="chevron" text-anchor="middle">&#8250;</text>
-
-  <rect x="742" y="90" width="99" height="110" rx="10" class="step" transform="rotate(-0.3 791.5 145)"/>
-  <text x="791.5" y="120" class="qnum" text-anchor="middle">Q7</text>
-  <text x="791.5" y="150" class="qlabel" text-anchor="middle">WORRY NEXT?</text>
-
-  <text x="850" y="150" class="chevron" text-anchor="middle">&#8250;</text>
-
-  <!-- hard stop -->
-  <rect x="859" y="90" width="99" height="110" rx="10" class="stop" transform="rotate(0.4 908.5 145)"/>
-  <text x="908.5" y="120" class="stopnum" text-anchor="middle">STOP</text>
-  <text x="908.5" y="150" class="qlabel" text-anchor="middle">15 MIN</text>
-  <text x="908.5" y="170" class="qlabel" text-anchor="middle">HARD</text>
-
-  <!-- hard rules footer -->
-  <rect x="50" y="240" width="900" height="90" rx="12" class="stop"/>
-  <text x="500" y="272" class="rule-label" text-anchor="middle">Working software only. No slides, no mockups.</text>
-  <text x="500" y="296" class="rule-note" text-anchor="middle">No Figma, no Jira screenshots. If a demo isn't ready, say so Wednesday.</text>
-  <text x="500" y="318" class="rule-note" text-anchor="middle">You click the staging URL yourself, live, while they talk.</text>
+  <!-- Hard-rules footer -->
+  <rect x="22" y="410" width="676" height="126" rx="16" class="stop"/>
+  <text x="360" y="452" text-anchor="middle" class="h foot">Working software only. No slides, no mockups.</text>
+  <text x="360" y="484" text-anchor="middle" class="h note">No Figma, no Jira screenshots. If a demo isn't ready, say so Wednesday.</text>
+  <text x="360" y="514" text-anchor="middle" class="h note">You click the staging URL yourself, live, while they talk.</text>
 </svg>
