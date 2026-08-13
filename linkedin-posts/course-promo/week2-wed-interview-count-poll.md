@@ -16,6 +16,7 @@ utm_campaign: course-pilot-aug26
 utm_content: week2_wed_interview_count_poll
 status: draft
 stage: next
+proposed_for: "2026-09-09 15:30 CEST"
 opener_archetype: observation-led
 notes: |
   Opener archetype: observation-led. Idea-first framing (a flat claim about pre-build

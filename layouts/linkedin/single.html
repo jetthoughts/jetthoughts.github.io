@@ -15,12 +15,19 @@
     .first-comment { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 1rem; white-space: pre-wrap; }
     button { margin-top: 1rem; padding: 0.5rem 0.9rem; border: 1px solid #888; border-radius: 4px; background: #fff; cursor: pointer; font-size: 0.85rem; }
     button:active { background: #eee; }
+    a.folder { font-size: 0.9rem; font-weight: 600; text-decoration: none; }
+    .path { font-size: 0.7rem; color: #999; word-break: break-all; }
   </style>
 </head>
 <body>
   <a class="back" href="{{ "/linkedin/" | relURL }}">&larr; board</a>
   <h1>{{ or .Title (humanize .File.BaseFileName) }}</h1>
-  <p class="meta">{{ or .Params.lane .Params.campaign "—" }} · {{ .Params.status }} · stage: {{ .Params.stage }}</p>
+  <p class="meta">{{ or .Params.lane .Params.campaign "—" }} · {{ .Params.status }} · stage: {{ .Params.stage }}
+    {{- with .Params.scheduled_for }} · scheduled {{ . }}{{ end }}
+    {{- with .Params.posted_for }} · posted {{ . }}{{ end }}
+    {{- with .Params.proposed_for }} · proposed {{ . }}{{ end }}</p>
+  {{ $assetsDir := printf "%s/assets/" (path.Dir .File.Filename) }}
+  <p><a class="folder" href="file://{{ $assetsDir }}">📂 Open assets folder</a> <span class="path">{{ $assetsDir }}</span></p>
 
   {{ $parts := split .File.Path "/" }}
   {{ $laneDir := "" }}

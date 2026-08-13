@@ -10,6 +10,7 @@ icp_test: does a founder recognize that "is it on track?" is reassurance, not in
 visual: assets/week1-tue-staging-question.png (TBD - needs a rescue-lane exhibit or skip)
 status: draft
 stage: next
+proposed_for: "2026-08-20 15:30 CEST"
 first_comment: |
   (rescue lane: no link - reply-CTA only)
 notes: |

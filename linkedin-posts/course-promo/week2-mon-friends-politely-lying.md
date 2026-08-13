@@ -16,6 +16,7 @@ utm_campaign: course-pilot-aug26
 utm_content: week2_mon_friends_politely_lying
 status: draft
 stage: next
+proposed_for: "2026-09-01 15:30 CEST"
 notes: |
   Opener archetype: observation-led (name the line every founder says, then counter it - the Cutler
   move), per the week-2 row of docs/workflows/linkedin-course-promo-plan.md.

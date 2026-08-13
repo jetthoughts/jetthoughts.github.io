@@ -16,6 +16,7 @@ utm_campaign: course_promo_module1
 utm_content: week1_wed_first_move_poll
 status: draft
 stage: next
+proposed_for: "2026-08-27 15:30 CEST"
 notes: |
   Opener archetype: idea-led (flat claim, then the poll question). Native LinkedIn poll, 1-week duration, 4 options.
   Deliberately different signal from the ICP-validation week-1 poll ("what makes you trust a dev

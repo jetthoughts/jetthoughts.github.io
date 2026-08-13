@@ -11,6 +11,7 @@ utm_campaign: icp_validation_validation_vs_production
 utm_content: vibe_coding_disposable_by_design
 status: draft
 stage: next
+proposed_for: "2026-08-26 15:30 CEST"
 opener_archetype: idea-led
 notes: |
   REVISED 2026-08-13 to idea-first: opener was habit-led ("For the last

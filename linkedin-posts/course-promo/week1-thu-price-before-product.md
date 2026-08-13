@@ -16,6 +16,7 @@ utm_campaign: course_promo_module1
 utm_content: week1_thu_price_before_product
 status: draft
 stage: next
+proposed_for: "2026-08-25 15:30 CEST"
 notes: |
   Opener archetype: observation-led. Plan called for Format A (marked screenshot of a smoke-test
   page); no real smoke-test page exists to screenshot honestly, so this uses the course's own

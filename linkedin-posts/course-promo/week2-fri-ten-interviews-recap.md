@@ -17,6 +17,7 @@ utm_campaign: course-pilot-aug26
 utm_content: week2_fri_ten_interviews_recap
 status: draft
 stage: next
+proposed_for: "2026-09-08 15:30 CEST"
 notes: |
   Opener archetype: stat-led, per the week-2 row of docs/workflows/linkedin-course-promo-plan.md.
   "Ten interviews, one weekend of outreach, zero code" is the plan's own week-2 Friday hook, kept

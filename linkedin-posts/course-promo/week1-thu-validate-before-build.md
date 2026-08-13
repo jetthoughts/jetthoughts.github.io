@@ -11,8 +11,9 @@ cta: open question - how did you test demand before building?
 campaign: course-promo
 utm_campaign: course_promo_pre_validation
 utm_content: validate-before-build
-status: scheduled
+status: posted
 stage: now
+posted_for: "2026-08-13"
 scheduled_for: 2026-08-13
 visual: assets/week1-thu-validate-before-build.png (from dollar-presale-flow.svg, rsvg -w 1080)
 first_comment: |

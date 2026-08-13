@@ -16,6 +16,7 @@ utm_campaign: course-pilot-aug26
 utm_content: week2_tue_mom_test_past_questions
 status: draft
 stage: next
+proposed_for: "2026-09-03 15:30 CEST"
 notes: |
   Opener archetype: idea-led - opens with the flat claim that "Would you use this?" can only hurt you, then argues it.
   REVISED 2026-08-13 to idea-first: body already delivered the tactic in full and led with the idea; no rewrite needed, kept as-is.

@@ -11,6 +11,7 @@
     .board { display: flex; gap: 1rem; align-items: flex-start; }
     .col { flex: 1; min-width: 0; background: #fff; border: 1px solid #ddd; border-radius: 6px; }
     .col h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 0; padding: 0.6rem 0.8rem; border-bottom: 1px solid #ddd; background: #eee; }
+    .col h2 small { font-weight: normal; text-transform: none; letter-spacing: 0; color: #888; font-size: 0.72rem; }
     .col ul { list-style: none; margin: 0; padding: 0.5rem; }
     .card { display: block; border: 1px solid #ddd; border-radius: 4px; padding: 0.6rem 0.7rem; margin-bottom: 0.5rem; text-decoration: none; color: inherit; background: #fafafa; }
     .card:hover { border-color: #888; }
@@ -22,26 +23,54 @@
 <body>
   <h1>LinkedIn Review Board <small>dev only — never appears in production</small></h1>
   {{ $posts := where .RegularPagesRecursive "Params.status" "!=" nil }}
+  {{ $scheduled := where $posts "Params.status" "scheduled" }}
+  {{ $posted := first 5 (sort (where $posts "Params.status" "posted") "Params.posted_for" "desc") }}
+  {{ $now := $posted | append $scheduled }}
+  {{ $next := sort (where $posts "Params.stage" "next") "Params.proposed_for" }}
+  {{ $future := where $posts "Params.stage" "future" }}
   <div class="board">
-    {{ range slice "now" "next" "future" }}
-      {{ $stageName := . }}
-      {{ $stagePosts := where $posts "Params.stage" $stageName }}
-      <div class="col">
-        <h2>{{ $stageName }} ({{ len $stagePosts }})</h2>
-        <ul>
-          {{ range $stagePosts }}
-            <li>
-              <a class="card" href="{{ .RelPermalink }}">
-                <span class="title">{{ or .Title (humanize .File.BaseFileName) }}</span>
-                <span class="meta">{{ or .Params.lane .Params.campaign "—" }} · {{ .Params.status }}</span>
-              </a>
-            </li>
-          {{ else }}
-            <li class="empty">nothing here</li>
-          {{ end }}
-        </ul>
-      </div>
-    {{ end }}
+    <div class="col">
+      <h2>now ({{ len $now }}) <small>last 5 posted + all scheduled</small></h2>
+      <ul>
+        {{ range $now }}
+          <li>
+            <a class="card" href="{{ .RelPermalink }}">
+              <span class="title">{{ or .Title (humanize .File.BaseFileName) }}</span>
+              <span class="meta">{{ or .Params.lane .Params.campaign "—" }} · {{ .Params.status }}
+                {{- with .Params.scheduled_for }} · scheduled {{ . }}{{ end }}
+                {{- with .Params.posted_for }} · posted {{ . }}{{ end }}</span>
+            </a>
+          </li>
+        {{ else }}<li class="empty">nothing here</li>{{ end }}
+      </ul>
+    </div>
+    <div class="col">
+      <h2>next ({{ len $next }}) <small>revised — awaiting pre-verify</small></h2>
+      <ul>
+        {{ range $next }}
+          <li>
+            <a class="card" href="{{ .RelPermalink }}">
+              <span class="title">{{ or .Title (humanize .File.BaseFileName) }}</span>
+              <span class="meta">{{ or .Params.lane .Params.campaign "—" }} · {{ .Params.status }}
+                {{- with .Params.proposed_for }} · <strong>proposed {{ . }}</strong>{{ else }} · propose date{{ end }}</span>
+            </a>
+          </li>
+        {{ else }}<li class="empty">nothing here</li>{{ end }}
+      </ul>
+    </div>
+    <div class="col">
+      <h2>future ({{ len $future }})</h2>
+      <ul>
+        {{ range $future }}
+          <li>
+            <a class="card" href="{{ .RelPermalink }}">
+              <span class="title">{{ or .Title (humanize .File.BaseFileName) }}</span>
+              <span class="meta">{{ or .Params.lane .Params.campaign "—" }} · {{ .Params.status }}</span>
+            </a>
+          </li>
+        {{ else }}<li class="empty">nothing here</li>{{ end }}
+      </ul>
+    </div>
   </div>
 </body>
 </html>
