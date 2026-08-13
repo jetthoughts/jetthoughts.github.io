@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 880" role="img" aria-labelledby="ac-title">
-  <title id="ac-title">Healthy Rails monolith vs an over-engineered microservice stack for a pre-Series-A startup. The simple stack on the left ships features with one developer; the complex stack on the right ships plumbing with two platform engineers and zero features.</title>
-  <desc>Two columns. Green, HEALTHY - a Rails monolith: one repo, Hotwire UI, ActiveRecord, Postgres, Sidekiq, Kamal deploy to Hetzner or Heroku; one full-stack dev ships a feature idea-to-production. Red, OVER-ENGINEERED: React frontend, Node API gateway, Auth microservice, Elasticsearch cluster, Kafka event bus, a platform team of two, a service mesh, three Redis clusters, Vault for secrets; two platform engineers ship zero features. Footer: pre-Series-A under one million revenue, the boring choice on the left ships features, the exciting choice on the right ships plumbing.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 810" role="img" aria-labelledby="ac-title">
+  <title id="ac-title">"We need to fix the architecture": a healthy Rails monolith vs an over-engineered microservice stack for a pre-Series-A startup. The simple stack on the left ships features with one developer; the complex stack on the right ships plumbing with two platform engineers and zero features. DHH calls the left the one-person framework; the founders we rescue arrived from the right.</title>
+  <desc>Two columns decoding the phrase "we need to fix the architecture". Green, HEALTHY - a Rails monolith: one repo, Hotwire UI, ActiveRecord, Postgres, Sidekiq, Kamal deploy to Hetzner; one full-stack dev ships a feature idea-to-production. Red, OVER-ENGINEERED: React frontend, Node API gateway, Auth microservice, Elasticsearch cluster, Kafka event bus, a platform team of two, a service mesh, three Redis clusters, Vault for secrets; two platform engineers ship zero features. Footer: pre-Series-A under one million revenue, the boring choice ships features, the exciting one ships plumbing; DHH calls the left the one-person framework.</desc>
   <defs>
     <style>
       .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
       .title{ font-size: 42px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
-      .sub  { font-size: 22px; fill: #667085; }
+      .sub  { font-size: 23px; fill: #667085; }
+      .subq { font-size: 24px; font-weight: 700; fill: #b8860b; }
       .hg { font-size: 28px; font-weight: 700; fill: #2e9e4f; filter: url(#gG); }
       .hr { font-size: 28px; font-weight: 700; fill: #e5484d; filter: url(#gR); }
       .ig { font-size: 21px; fill: #1a6b34; }
@@ -16,43 +17,45 @@
       .resR { font-size: 23px; font-weight: 700; fill: #b42318; }
       .foot { font-size: 22px; fill: #1a1a1a; }
       .footb{ font-weight: 700; }
+      .foots{ font-size: 21px; fill: #667085; font-style: italic; }
     </style>
     <filter id="soft" x="-6%" y="-4%" width="112%" height="112%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
     <filter id="gG" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2e9e4f" flood-opacity="0.5"/></filter>
     <filter id="gR" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#f2635a" flood-opacity="0.5"/></filter>
   </defs>
 
-  <text x="360" y="54" text-anchor="middle" class="h title">Healthy vs Over-engineered</text>
-  <text x="360" y="90" text-anchor="middle" class="h sub">Pre-Series-A, under $1M: which stack ships features?</text>
+  <text x="360" y="52" text-anchor="middle" class="h title">"Fix the architecture"</text>
+  <text x="360" y="88" text-anchor="middle" class="h sub">Pre-Series-A, under $1M - what those five words usually buy:</text>
 
   <!-- Left: healthy -->
-  <rect x="18" y="112" width="340" height="560" rx="20" class="cardG"/>
-  <text x="188" y="158" text-anchor="middle" class="h hg">&#10003; HEALTHY</text>
-  <text x="188" y="188" text-anchor="middle" class="h sub" fill="#2e9e4f">Rails monolith</text>
-  <text x="46" y="238" class="h ig">Rails monolith &#183; one repo</text>
+  <rect x="18" y="108" width="340" height="512" rx="20" class="cardG"/>
+  <text x="188" y="152" text-anchor="middle" class="h hg">&#10003; HEALTHY</text>
+  <text x="188" y="182" text-anchor="middle" class="h sub" fill="#2e9e4f">Rails monolith</text>
+  <text x="46" y="228" class="h ig">Rails monolith &#183; one repo</text>
   <text x="46" y="282" class="h ig">Hotwire UI (no SPA)</text>
-  <text x="46" y="326" class="h ig">ActiveRecord (logic)</text>
-  <text x="46" y="370" class="h ig">Postgres (one DB)</text>
-  <text x="46" y="414" class="h ig">Sidekiq (background jobs)</text>
-  <text x="46" y="458" class="h ig">Kamal deploy &#8594; Hetzner</text>
-  <text x="188" y="612" text-anchor="middle" class="h resG">1 dev ships a feature,</text>
-  <text x="188" y="642" text-anchor="middle" class="h resG">idea to production.</text>
+  <text x="46" y="336" class="h ig">ActiveRecord (logic)</text>
+  <text x="46" y="390" class="h ig">Postgres (one DB)</text>
+  <text x="46" y="444" class="h ig">Sidekiq (background jobs)</text>
+  <text x="46" y="498" class="h ig">Kamal deploy &#8594; Hetzner</text>
+  <text x="188" y="560" text-anchor="middle" class="h resG">1 dev ships a feature,</text>
+  <text x="188" y="590" text-anchor="middle" class="h resG">idea to production.</text>
 
-  <!-- Right: over-engineered (taller, more items) -->
-  <rect x="378" y="112" width="324" height="640" rx="20" class="cardR"/>
-  <text x="540" y="158" text-anchor="middle" class="h hr">&#10007; OVER-ENGINEERED</text>
-  <text x="404" y="204" class="h ir">React frontend</text>
-  <text x="404" y="242" class="h ir">Node API gateway</text>
-  <text x="404" y="280" class="h ir">Auth microservice</text>
-  <text x="404" y="318" class="h ir">Elasticsearch cluster</text>
-  <text x="404" y="356" class="h ir">Kafka event bus</text>
-  <text x="404" y="394" class="h ir">Platform team (2 FTE)</text>
-  <text x="404" y="432" class="h ir">Service mesh (Istio)</text>
-  <text x="404" y="470" class="h ir">Redis (3 clusters)</text>
-  <text x="404" y="508" class="h ir">Vault for secrets</text>
-  <text x="540" y="688" text-anchor="middle" class="h resR">2 platform engineers,</text>
-  <text x="540" y="718" text-anchor="middle" class="h resR">0 features shipped.</text>
+  <!-- Right: over-engineered (more items = taller) -->
+  <rect x="378" y="108" width="324" height="512" rx="20" class="cardR"/>
+  <text x="540" y="152" text-anchor="middle" class="h hr">&#10007; OVER-ENGINEERED</text>
+  <text x="404" y="196" class="h ir">React frontend</text>
+  <text x="404" y="232" class="h ir">Node API gateway</text>
+  <text x="404" y="268" class="h ir">Auth microservice</text>
+  <text x="404" y="304" class="h ir">Elasticsearch cluster</text>
+  <text x="404" y="340" class="h ir">Kafka event bus</text>
+  <text x="404" y="376" class="h ir">Platform team (2 FTE)</text>
+  <text x="404" y="412" class="h ir">Service mesh (Istio)</text>
+  <text x="404" y="448" class="h ir">Redis (3 clusters)</text>
+  <text x="404" y="484" class="h ir">Vault for secrets</text>
+  <text x="540" y="560" text-anchor="middle" class="h resR">2 platform engineers,</text>
+  <text x="540" y="590" text-anchor="middle" class="h resR">0 features shipped.</text>
 
-  <text x="360" y="800" text-anchor="middle" class="h foot"><tspan class="footb">The boring choice ships features.</tspan></text>
-  <text x="360" y="832" text-anchor="middle" class="h foot">The exciting one ships plumbing. We rescue the right.</text>
+  <text x="360" y="668" text-anchor="middle" class="h foot" font-weight="700">The boring choice ships features.</text>
+  <text x="360" y="700" text-anchor="middle" class="h foot" font-weight="700">The exciting one ships plumbing.</text>
+  <text x="360" y="740" text-anchor="middle" class="h foots">DHH calls the left "the one-person framework."</text>
 </svg>
