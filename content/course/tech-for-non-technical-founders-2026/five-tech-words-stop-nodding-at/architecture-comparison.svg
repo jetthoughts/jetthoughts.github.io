@@ -1,102 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-labelledby="arch-title">
-  <title id="arch-title">Healthy Rails monolith vs over-engineered microservice mess for a pre-Series-A startup</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 880" role="img" aria-labelledby="ac-title">
+  <title id="ac-title">Healthy Rails monolith vs an over-engineered microservice stack for a pre-Series-A startup. The simple stack on the left ships features with one developer; the complex stack on the right ships plumbing with two platform engineers and zero features.</title>
+  <desc>Two columns. Green, HEALTHY - a Rails monolith: one repo, Hotwire UI, ActiveRecord, Postgres, Sidekiq, Kamal deploy to Hetzner or Heroku; one full-stack dev ships a feature idea-to-production. Red, OVER-ENGINEERED: React frontend, Node API gateway, Auth microservice, Elasticsearch cluster, Kafka event bus, a platform team of two, a service mesh, three Redis clusters, Vault for secrets; two platform engineers ship zero features. Footer: pre-Series-A under one million revenue, the boring choice on the left ships features, the exciting choice on the right ships plumbing.</desc>
   <defs>
     <style>
-      .panel-title { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
-      .box-label   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #1a1a1a; }
-      .small-label { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #1a1a1a; }
-      .caption     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #666; font-style: italic; }
-      .good-box   { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; stroke-linejoin: round; }
-      .good-inner { fill: #ffffff; stroke: #2e7d32; stroke-width: 2;   stroke-linejoin: round; }
-      .bad-box    { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; stroke-linejoin: round; }
-      .arrow      { stroke: #999;  stroke-width: 1.5; stroke-linecap: round; fill: none; }
-      .check      { fill: #2e7d32; font-family: sans-serif; font-size: 38px; font-weight: 700; }
-      .x          { fill: #cc342d; font-family: sans-serif; font-size: 38px; font-weight: 700; }
+      .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title{ font-size: 42px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .sub  { font-size: 22px; fill: #667085; }
+      .hg { font-size: 28px; font-weight: 700; fill: #2e9e4f; filter: url(#gG); }
+      .hr { font-size: 28px; font-weight: 700; fill: #e5484d; filter: url(#gR); }
+      .ig { font-size: 21px; fill: #1a6b34; }
+      .ir { font-size: 21px; fill: #b42318; }
+      .cardG{ fill: #f2fbf4; stroke: #57c06f; stroke-width: 2.5; filter: url(#soft); }
+      .cardR{ fill: #fff5f4; stroke: #f2635a; stroke-width: 2.5; filter: url(#soft); }
+      .resG { font-size: 23px; font-weight: 700; fill: #1a6b34; }
+      .resR { font-size: 23px; font-weight: 700; fill: #b42318; }
+      .foot { font-size: 22px; fill: #1a1a1a; }
+      .footb{ font-weight: 700; }
     </style>
+    <filter id="soft" x="-6%" y="-4%" width="112%" height="112%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
+    <filter id="gG" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2e9e4f" flood-opacity="0.5"/></filter>
+    <filter id="gR" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#f2635a" flood-opacity="0.5"/></filter>
   </defs>
 
-  <text x="255" y="40" class="panel-title" text-anchor="middle">HEALTHY (Rails monolith)</text>
-  <text x="42"  y="44" class="check">✓</text>
+  <text x="360" y="54" text-anchor="middle" class="h title">Healthy vs Over-engineered</text>
+  <text x="360" y="90" text-anchor="middle" class="h sub">Pre-Series-A, under $1M: which stack ships features?</text>
 
-  <rect x="30" y="65" width="420" height="330" rx="14" class="good-box" transform="rotate(-0.3 240 230)"/>
-  <text x="240" y="93" class="box-label" text-anchor="middle">Rails monolith · one repo</text>
+  <!-- Left: healthy -->
+  <rect x="18" y="112" width="340" height="560" rx="20" class="cardG"/>
+  <text x="188" y="158" text-anchor="middle" class="h hg">&#10003; HEALTHY</text>
+  <text x="188" y="188" text-anchor="middle" class="h sub" fill="#2e9e4f">Rails monolith</text>
+  <text x="46" y="238" class="h ig">Rails monolith &#183; one repo</text>
+  <text x="46" y="282" class="h ig">Hotwire UI (no SPA)</text>
+  <text x="46" y="326" class="h ig">ActiveRecord (logic)</text>
+  <text x="46" y="370" class="h ig">Postgres (one DB)</text>
+  <text x="46" y="414" class="h ig">Sidekiq (background jobs)</text>
+  <text x="46" y="458" class="h ig">Kamal deploy &#8594; Hetzner</text>
+  <text x="188" y="612" text-anchor="middle" class="h resG">1 dev ships a feature,</text>
+  <text x="188" y="642" text-anchor="middle" class="h resG">idea to production.</text>
 
-  <rect x="55"  y="110" width="170" height="60" rx="8" class="good-inner" transform="rotate(0.4 140 140)"/>
-  <text x="140" y="133" class="small-label" text-anchor="middle">Hotwire UI</text>
-  <text x="140" y="153" class="small-label" text-anchor="middle">(no separate SPA)</text>
+  <!-- Right: over-engineered (taller, more items) -->
+  <rect x="378" y="112" width="324" height="640" rx="20" class="cardR"/>
+  <text x="540" y="158" text-anchor="middle" class="h hr">&#10007; OVER-ENGINEERED</text>
+  <text x="404" y="204" class="h ir">React frontend</text>
+  <text x="404" y="242" class="h ir">Node API gateway</text>
+  <text x="404" y="280" class="h ir">Auth microservice</text>
+  <text x="404" y="318" class="h ir">Elasticsearch cluster</text>
+  <text x="404" y="356" class="h ir">Kafka event bus</text>
+  <text x="404" y="394" class="h ir">Platform team (2 FTE)</text>
+  <text x="404" y="432" class="h ir">Service mesh (Istio)</text>
+  <text x="404" y="470" class="h ir">Redis (3 clusters)</text>
+  <text x="404" y="508" class="h ir">Vault for secrets</text>
+  <text x="540" y="688" text-anchor="middle" class="h resR">2 platform engineers,</text>
+  <text x="540" y="718" text-anchor="middle" class="h resR">0 features shipped.</text>
 
-  <rect x="245" y="110" width="170" height="60" rx="8" class="good-inner" transform="rotate(-0.3 330 140)"/>
-  <text x="330" y="133" class="small-label" text-anchor="middle">ActiveRecord</text>
-  <text x="330" y="153" class="small-label" text-anchor="middle">(business logic)</text>
-
-  <rect x="55"  y="190" width="170" height="60" rx="8" class="good-inner" transform="rotate(-0.2 140 220)"/>
-  <text x="140" y="213" class="small-label" text-anchor="middle">Postgres</text>
-  <text x="140" y="233" class="small-label" text-anchor="middle">(one DB)</text>
-
-  <rect x="245" y="190" width="170" height="60" rx="8" class="good-inner" transform="rotate(0.3 330 220)"/>
-  <text x="330" y="213" class="small-label" text-anchor="middle">Sidekiq</text>
-  <text x="330" y="233" class="small-label" text-anchor="middle">(background jobs)</text>
-
-  <rect x="150" y="270" width="180" height="60" rx="8" class="good-inner" transform="rotate(0.4 240 300)"/>
-  <text x="240" y="293" class="small-label" text-anchor="middle">Kamal deploy to</text>
-  <text x="240" y="313" class="small-label" text-anchor="middle">Hetzner / Heroku</text>
-
-  <text x="240" y="370" class="caption" text-anchor="middle">1 repo · 1 full-stack dev ships</text>
-  <text x="240" y="392" class="caption" text-anchor="middle">a feature idea-to-production</text>
-
-  <text x="758" y="40"  class="panel-title" text-anchor="middle">OVER-ENGINEERED</text>
-  <text x="596" y="44"  class="x">✗</text>
-
-  <rect x="500" y="80"  width="120" height="55" rx="8" class="bad-box" transform="rotate(-2 560 107)"/>
-  <text x="560" y="100" class="small-label" text-anchor="middle">React</text>
-  <text x="560" y="120" class="small-label" text-anchor="middle">frontend</text>
-
-  <rect x="650" y="70"  width="120" height="55" rx="8" class="bad-box" transform="rotate(1.5 710 97)"/>
-  <text x="710" y="90"  class="small-label" text-anchor="middle">Node API</text>
-  <text x="710" y="110" class="small-label" text-anchor="middle">gateway</text>
-
-  <rect x="810" y="80"  width="120" height="55" rx="8" class="bad-box" transform="rotate(-1 870 107)"/>
-  <text x="870" y="100" class="small-label" text-anchor="middle">Auth</text>
-  <text x="870" y="120" class="small-label" text-anchor="middle">microservice</text>
-
-  <rect x="500" y="170" width="120" height="55" rx="8" class="bad-box" transform="rotate(1.2 560 197)"/>
-  <text x="560" y="190" class="small-label" text-anchor="middle">Elasticsearch</text>
-  <text x="560" y="210" class="small-label" text-anchor="middle">cluster</text>
-
-  <rect x="650" y="180" width="120" height="55" rx="8" class="bad-box" transform="rotate(-1.5 710 207)"/>
-  <text x="710" y="200" class="small-label" text-anchor="middle">Kafka</text>
-  <text x="710" y="220" class="small-label" text-anchor="middle">event bus</text>
-
-  <rect x="810" y="170" width="120" height="55" rx="8" class="bad-box" transform="rotate(2 870 197)"/>
-  <text x="870" y="190" class="small-label" text-anchor="middle">"Platform team"</text>
-  <text x="870" y="210" class="small-label" text-anchor="middle">(2 FTE)</text>
-
-  <rect x="500" y="260" width="120" height="55" rx="8" class="bad-box" transform="rotate(-2 560 287)"/>
-  <text x="560" y="280" class="small-label" text-anchor="middle">Service mesh</text>
-  <text x="560" y="300" class="small-label" text-anchor="middle">(Istio)</text>
-
-  <rect x="650" y="270" width="120" height="55" rx="8" class="bad-box" transform="rotate(1.5 710 297)"/>
-  <text x="710" y="290" class="small-label" text-anchor="middle">Redis</text>
-  <text x="710" y="310" class="small-label" text-anchor="middle">(3 clusters)</text>
-
-  <rect x="810" y="260" width="120" height="55" rx="8" class="bad-box" transform="rotate(-1 870 287)"/>
-  <text x="870" y="280" class="small-label" text-anchor="middle">Vault for</text>
-  <text x="870" y="300" class="small-label" text-anchor="middle">secrets</text>
-
-  <path class="arrow" d="M 620 110 L 650 95"/>
-  <path class="arrow" d="M 770 100 L 810 110"/>
-  <path class="arrow" d="M 560 135 Q 620 160 710 180"/>
-  <path class="arrow" d="M 870 135 Q 800 160 770 175"/>
-  <path class="arrow" d="M 770 230 Q 800 250 810 270"/>
-  <path class="arrow" d="M 710 230 Q 640 250 560 260"/>
-  <path class="arrow" d="M 620 200 Q 640 240 650 270"/>
-  <path class="arrow" d="M 870 230 Q 800 280 770 300"/>
-
-  <text x="745" y="370" class="caption" text-anchor="middle">2 platform engineers · 0 features shipped</text>
-  <text x="745" y="392" class="caption" text-anchor="middle">"We need to fix the architecture"</text>
-
-  <line x1="480" y1="60" x2="480" y2="410" stroke="#cccccc" stroke-width="1" stroke-dasharray="4 4"/>
-
-  <text x="500" y="450" class="caption" text-anchor="middle">Pre-Series-A, &lt; $1M revenue: the boring choice on the left ships features. The exciting choice on the right ships plumbing.</text>
-  <text x="500" y="475" class="caption" text-anchor="middle">DHH calls the left "the one-person framework." Founders we rescue arrived from the right.</text>
+  <text x="360" y="800" text-anchor="middle" class="h foot"><tspan class="footb">The boring choice ships features.</tspan></text>
+  <text x="360" y="832" text-anchor="middle" class="h foot">The exciting one ships plumbing. We rescue the right.</text>
 </svg>
