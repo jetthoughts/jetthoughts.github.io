@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ or .Title (humanize .File.BaseFileName) }} — LinkedIn preview (dev only)</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    body { font: 15px/1.5 -apple-system, sans-serif; margin: 0; padding: 1.5rem; max-width: 640px; background: #f4f4f6; color: #1a1a1a; }
+    a.back { font-size: 0.85rem; color: #555; }
+    h1 { font-size: 1.1rem; margin: 0.8rem 0 0.2rem; }
+    .meta { font-size: 0.8rem; color: #555; margin-bottom: 1rem; }
+    .post { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 1rem; white-space: pre-wrap; }
+    .post img { max-width: 100%; border-radius: 4px; margin-bottom: 0.75rem; display: block; }
+    h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 1.2rem 0 0.4rem; color: #555; }
+    .first-comment { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 1rem; white-space: pre-wrap; }
+    button { margin-top: 1rem; padding: 0.5rem 0.9rem; border: 1px solid #888; border-radius: 4px; background: #fff; cursor: pointer; font-size: 0.85rem; }
+    button:active { background: #eee; }
+  </style>
+</head>
+<body>
+  <a class="back" href="{{ "/linkedin/" | relURL }}">&larr; board</a>
+  <h1>{{ or .Title (humanize .File.BaseFileName) }}</h1>
+  <p class="meta">{{ or .Params.lane .Params.campaign "—" }} · {{ .Params.status }} · stage: {{ .Params.stage }}</p>
+
+  {{ $parts := split .File.Path "/" }}
+  {{ $laneDir := "" }}
+  {{ if ge (len $parts) 2 }}{{ $laneDir = index $parts 1 }}{{ end }}
+  {{ $visualRaw := "" }}
+  {{ with .Params.visual }}{{ $visualRaw = index (split . " ") 0 }}{{ end }}
+  {{ if not $visualRaw }}{{ $visualRaw = .Params.design_file }}{{ end }}
+
+  <div class="post">
+    {{ if $visualRaw }}
+      <img src="/linkedin-assets/{{ $laneDir }}/{{ path.Base $visualRaw }}" alt="post visual" onerror="this.style.display='none'" />
+    {{ end }}
+    {{ .Content }}
+  </div>
+
+  {{ with .Params.first_comment }}
+    <h2>First comment</h2>
+    <div class="first-comment">{{ . }}</div>
+  {{ end }}
+
+  <button onclick="navigator.clipboard.writeText(document.getElementById('raw-body').value)">Copy body</button>
+  <textarea id="raw-body" style="display:none">{{ .RawContent }}</textarea>
+</body>
+</html>

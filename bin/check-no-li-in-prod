@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+# Report-only check: fails if a production Hugo build contains any
+# /linkedin/ review-board output. Standalone, wires into nothing.
+#
+# Usage:
+#   bin/check-no-li-in-prod                 # builds prod, then inspects it
+#   bin/check-no-li-in-prod --self-test      # asserts the checker itself works
+#   OUTPUT_DIR=_dest/public-prod bin/check-no-li-in-prod --skip-build  # inspect an existing build
+
+set -euo pipefail
+
+OUTPUT_DIR=${OUTPUT_DIR:-_dest/public-prod-check}
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+check_dir() {
+  local dir="$1"
+  # /social/linkedin/... is a pre-existing, unrelated content page and is
+  # NOT the review-board section - only /linkedin/ (root) is ours.
+  find "$dir" -path '*/linkedin/*' -not -path '*/social/linkedin/*' 2>/dev/null
+}
+
+if [ "${1:-}" = "--self-test" ]; then
+  tmp=$(mktemp -d)
+  mkdir -p "$tmp/linkedin/icp-validation"
+  echo "leak" > "$tmp/linkedin/icp-validation/index.html"
+  if [ -z "$(check_dir "$tmp")" ]; then
+    echo "❌ self-test FAILED: checker did not detect a planted /linkedin/ leak"
+    rm -rf "$tmp"
+    exit 1
+  fi
+  rm -rf "$tmp"
+  echo "✅ self-test passed: checker detects /linkedin/ leaks"
+  exit 0
+fi
+
+if [ "${1:-}" != "--skip-build" ]; then
+  echo "Building production ($OUTPUT_DIR)..."
+  (cd "$SCRIPT_DIR/.." && ENVIRONMENT=production OUTPUT_DIR="$OUTPUT_DIR" ./bin/hugo-build >/dev/null)
+fi
+
+FOUND=$(check_dir "$SCRIPT_DIR/../$OUTPUT_DIR")
+
+if [ -n "$FOUND" ]; then
+  echo "❌ FAIL: /linkedin/ review-board output found in production build:"
+  echo "$FOUND"
+  exit 1
+fi
+
+echo "✅ PASS: no /linkedin/ review-board output in $OUTPUT_DIR"
+exit 0

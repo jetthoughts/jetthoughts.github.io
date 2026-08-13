@@ -17,6 +17,41 @@ disableKinds = ["RSS", "sitemap", "robotsTXT", "taxonomy", "term"]
 # Skip expensive processing in development
 ignoreFiles = ["\\.min\\.css$", "\\.min\\.js$"]
 
+# DEV-ONLY: mount linkedin-posts/ as a content section for local pre-review.
+# Declaring [[module.mounts]] replaces Hugo's default mount set, so the
+# default mounts (content, static, layouts, data, assets, archetypes) must be
+# re-declared here or the rest of the dev site breaks. Production and
+# _default configs have NO [[module.mounts]] block, so this section never
+# exists outside `hugo server`/`hugo --environment development` builds.
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "archetypes"
+    target = "archetypes"
+  [[module.mounts]]
+    source = "linkedin-posts"
+    target = "content/linkedin"
+  [[module.mounts]]
+    source = "linkedin-posts/icp-validation/assets"
+    target = "static/linkedin-assets/icp-validation"
+  [[module.mounts]]
+    source = "linkedin-posts/course-promo/assets"
+    target = "static/linkedin-assets/course-promo"
+
 # Build optimizations for development speed
 [build]
   # Skip Hugo stats generation (not needed for PurgeCSS in dev)

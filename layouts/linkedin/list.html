@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>LinkedIn Review Board (dev only)</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    body { font: 14px/1.4 -apple-system, sans-serif; margin: 0; padding: 1.5rem; background: #f4f4f6; color: #1a1a1a; }
+    h1 { font-size: 1.25rem; margin: 0 0 1rem; }
+    h1 small { font-weight: normal; color: #a00; }
+    .board { display: flex; gap: 1rem; align-items: flex-start; }
+    .col { flex: 1; min-width: 0; background: #fff; border: 1px solid #ddd; border-radius: 6px; }
+    .col h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 0; padding: 0.6rem 0.8rem; border-bottom: 1px solid #ddd; background: #eee; }
+    .col ul { list-style: none; margin: 0; padding: 0.5rem; }
+    .card { display: block; border: 1px solid #ddd; border-radius: 4px; padding: 0.6rem 0.7rem; margin-bottom: 0.5rem; text-decoration: none; color: inherit; background: #fafafa; }
+    .card:hover { border-color: #888; }
+    .card .title { font-weight: 600; display: block; margin-bottom: 0.25rem; }
+    .card .meta { font-size: 0.8rem; color: #555; }
+    .empty { padding: 0.8rem; color: #888; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <h1>LinkedIn Review Board <small>dev only — never appears in production</small></h1>
+  {{ $posts := where .RegularPagesRecursive "Params.status" "!=" nil }}
+  <div class="board">
+    {{ range slice "now" "next" "future" }}
+      {{ $stageName := . }}
+      {{ $stagePosts := where $posts "Params.stage" $stageName }}
+      <div class="col">
+        <h2>{{ $stageName }} ({{ len $stagePosts }})</h2>
+        <ul>
+          {{ range $stagePosts }}
+            <li>
+              <a class="card" href="{{ .RelPermalink }}">
+                <span class="title">{{ or .Title (humanize .File.BaseFileName) }}</span>
+                <span class="meta">{{ or .Params.lane .Params.campaign "—" }} · {{ .Params.status }}</span>
+              </a>
+            </li>
+          {{ else }}
+            <li class="empty">nothing here</li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </div>
+</body>
+</html>
