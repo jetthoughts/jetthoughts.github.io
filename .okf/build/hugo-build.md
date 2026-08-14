@@ -61,3 +61,15 @@ Note `config/test/hugo.toml` sets `minifyOutput = false`, so **the test suite
 never sees minified output** and cannot catch minification-related regressions;
 that needs a `hugo --environment production` build. Full write-up:
 `docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md` §8.
+
+**Our own suite had the same defect** (2026-08-14). Turning `keepQuotes` on
+broke three tests in `test/integration/hugo_pipeline_test.rb` (the CI "Asset
+Pipeline" job) that matched unquoted attribute literals -
+`include?("crossorigin=anonymous")`, `rel=stylesheet`, `as=style`. The
+`integrity="sha256-..."` assertions kept passing because base64 forces quotes
+either way. Same tell as the audit tool: attribute-VALUE matches break,
+element-content matches survive. Fixed with an `attr(name, value)` helper
+matching either form - assert the shape, not the minifier setting. If you
+touch minify config, run `bundle exec ruby -Itest
+test/integration/hugo_pipeline_test.rb` (~12s local, ~568s on CI because it
+runs two full Hugo builds).
