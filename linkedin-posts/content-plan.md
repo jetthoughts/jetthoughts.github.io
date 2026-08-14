@@ -39,6 +39,7 @@ voice lands before any funnel; course links spaced to ~2 posts across the window
 | Sep 8 Tue | opinion | `icp-validation/week1-tue-staging-question` | blog (SCIPAB) | revised ✓ |
 | Sep 10 Thu | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
 | Sep 15 Tue | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | backlog - promote when ready |
+| Sep 17 Thu | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | drafted ✓ |
 
 **Ratio (this 10-post window):** ~7 value (opinion/teach/reaction/BIP/story) + 1 poll
 + blog-link + **only 2 course links** (founding Aug 20, 40k Sep 15) -> ~70/20/10.
