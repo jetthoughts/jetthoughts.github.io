@@ -54,8 +54,19 @@ class MarketingCopyTest < Minitest::Test
     "game-changer" => "voice guide §3 banned phrase",
     "synergy" => "voice guide §3 banned adjective",
     "holistic" => "voice guide §3 banned adjective",
-    "empower" => "voice guide §3 banned verb - 'your team can now ...'"
+    "empower" => "voice guide §3 banned verb - 'your team can now ...'",
+    # Factual ratchet, not a voice rule. The site published "4.8/5 by 32
+    # clients" / "Based on 32 client reviews" / reviewCount:32 while the live
+    # Clutch profile showed 9 (verified 2026-08-14). The count had no source
+    # anywhere in the repo. It survived a first fix pass because it was worded
+    # three different ways in three files - hence all three spellings here.
+    "32 client" => "false review count - Clutch shows 9, link the profile instead",
+    "by 32" => "false review count - Clutch shows 9, link the profile instead",
+    "thirty-two clients" => "false review count - Clutch shows 9, link the profile instead"
   }.freeze
+
+  # Surfaces that render the rating block but are not marketing prose pages.
+  EXTRA_SURFACES = ["themes/beaver/layouts/partials/page/testimonials.html"].freeze
 
   def test_marketing_surfaces_carry_no_banned_phrases
     violations = marketing_files.flat_map { |path| banned_phrases_in(path) }
@@ -67,7 +78,7 @@ class MarketingCopyTest < Minitest::Test
   end
 
   def test_every_declared_surface_matches_at_least_one_file
-    unmatched = SURFACES.reject { |pattern| Dir.glob(File.join(REPO_ROOT, pattern)).any? }
+    unmatched = (SURFACES + EXTRA_SURFACES).reject { |pattern| Dir.glob(File.join(REPO_ROOT, pattern)).any? }
 
     assert_empty unmatched,
       "Surface patterns match nothing on disk - a path moved and this guard " \
@@ -77,7 +88,10 @@ class MarketingCopyTest < Minitest::Test
   private
 
   def marketing_files
-    SURFACES.flat_map { |pattern| Dir.glob(File.join(REPO_ROOT, pattern)) }.uniq.select { |p| File.file?(p) }
+    (SURFACES + EXTRA_SURFACES)
+      .flat_map { |pattern| Dir.glob(File.join(REPO_ROOT, pattern)) }
+      .uniq
+      .select { |p| File.file?(p) }
   end
 
   # Machine identifiers, not reader-facing prose. A menu `identifier`, a
