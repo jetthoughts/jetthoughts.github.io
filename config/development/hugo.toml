@@ -51,6 +51,9 @@ ignoreFiles = ["\\.min\\.css$", "\\.min\\.js$"]
   [[module.mounts]]
     source = "linkedin-posts/course-promo/assets"
     target = "static/linkedin-assets/course-promo"
+  [[module.mounts]]
+    source = "linkedin-posts/personal/assets"
+    target = "static/linkedin-assets/personal"
 
 # Build optimizations for development speed
 [build]
