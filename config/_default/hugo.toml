@@ -63,6 +63,13 @@ disableKinds = []
 
 [minify]
   minifyOutput = true
+  # Regex-based third-party audit crawlers cannot match unquoted attributes
+  # (rel=canonical, name=description, type=application/ld+json), and report the
+  # site as missing canonical tags and structured data. Both are present and
+  # Google parses them fine - see seo-review-2026-08-13.md §8. This is a
+  # cosmetic hedge for those tools, NOT an SEO fix.
+  [minify.tdewolff.html]
+    keepQuotes = true
 
 [[redirects]]
   from = "/tags/:slug/"
