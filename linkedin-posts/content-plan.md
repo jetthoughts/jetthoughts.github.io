@@ -49,6 +49,7 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Oct 6 | opinion | `icp-validation/backlog-vibe-coding-disposable` | none | draft |
 | Oct 8 | poll | `course-promo/week2-wed-interview-count-poll` | none | draft |
 | Oct 13 | story/promo | `course-promo/week1-fri-why-i-wrote-it` | course *(promo)* | draft |
+| Oct 15 | opinion | `personal/opinion-permission-to-fix` | none | drafted ✓ |
 
 **Ratio:** across 18 posts, only **3 course links** (founding, 40k, why-i-wrote-it =
 ~15%) + 1 blog link; the rest is value/personal/poll. **Aug 25 → Sep 3 is four
