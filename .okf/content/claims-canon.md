@@ -27,7 +27,8 @@ sources:
 | Tenure phrasing | "since 2008" - **derive**, never hardcode | [^hugo-config] |
 | Years of experience | `now.Year - foundingYear` (18 in 2026) | [^hugo-config] |
 | Rating | **4.8/5 on Clutch**, with the profile linked | [^clutch] |
-| Review count | **State none.** Clutch shows 9 | [^clutch] |
+| Review count | **State none**, or "9 verified Clutch reviews" | [^clutch] |
+| Founder experience | 22+ years (first job 2004) - distinct from company tenure | [^founder] |
 | Client retention | ~95% | [^product-md] |
 | Average client relationship | 5 years | [^product-md] |
 | Developer experience | 8+ years average | [^product-md] |
@@ -52,6 +53,27 @@ it cannot go stale the way a transcribed count does.
 referral and assumptions docs and is plausible for an 18-year-old firm, though it
 has no in-repo source either. The old site copy "4.8/5 by 32 clients" conflated
 them, which is how an unsourced number passed as sourced.
+
+# Verified review counts (2026-08-14 audit)
+
+Every public review platform was checked. **The real total is 11 across three
+platforms** - not 32, on any reading.
+
+| Platform | Rating | Reviews |
+|---|---|---|
+| [Clutch](https://clutch.co/profile/jetthoughts) | 4.8 | **9** |
+| [GoodFirms](https://www.goodfirms.co/company/jetthoughts-llc) | 5.0 | 1 |
+| Google | 5.0 | 1 |
+| [Techreviewer](https://techreviewer.co/companies/jetthoughts) | score 5.0 | aggregates the above |
+
+Clutch is the one worth citing: 9 verified reviews is the deepest single source,
+and its sub-scores are public (Quality 4.9 · Schedule 4.9 · Cost 4.7 · Willing to
+Refer 5.0). GoodFirms and Google are single reviews - real, but too thin to lead
+with.
+
+**Clutch independently lists "Year founded: 2008"**, and its case studies span
+2008-2024. The review platform had the founding date right while our own site
+said 2011.
 
 **Never claim "20 years."** Founded 2008; the honest figure is 18 and rising.
 
@@ -87,3 +109,6 @@ following them would have re-introduced both.
 [^clutch]: <https://clutch.co/profile/jetthoughts> - 4.8/5 from 9 reviews,
     verified 2026-08-14.
 [^product-md]: `PRODUCT.md` §Evidence on Hand - the sourced-numbers-only policy.
+[^founder]: Paul Keen's first professional role was in 2004 (stated by Paul,
+    2026-08-14). Company tenure (2008) and founder experience (2004) are
+    separate claims - do not conflate them.

@@ -110,6 +110,10 @@ class MarketingCopyTest < Minitest::Test
   IDENTIFIER_LINE = /^\s*(identifier\s*=|slug:|url:|pageRef\s*=|aliases:|-\s*\/)/
 
   def banned_phrases_in(path)
+    per_line_hits(path) + wrapped_hits(path)
+  end
+
+  def per_line_hits(path)
     relative = path.sub("#{REPO_ROOT}/", "")
 
     File.readlines(path, encoding: "bom|utf-8").each_with_index.flat_map do |line, index|
@@ -123,6 +127,29 @@ class MarketingCopyTest < Minitest::Test
     end
   end
 
+  # Templates wrap prose across lines, so a banned phrase can straddle a line
+  # break and be invisible to line-by-line matching. careers.html rendered
+  # "Looking for a Team to Take You to the Next\nLevel?" - the live H1 said
+  # "next level" and this gate reported clean for a full day. Collapse
+  # whitespace across the whole file and check again; no line number is
+  # available for these, so report the file.
+  def wrapped_hits(path)
+    relative = path.sub("#{REPO_ROOT}/", "")
+
+    body = File.read(path, encoding: "bom|utf-8")
+      .lines
+      .reject { |line| line.match?(IDENTIFIER_LINE) }
+      .join(" ")
+    haystack = scrub(body).downcase.gsub(/\s+/, " ")
+
+    BANNED.filter_map do |phrase, reason|
+      next unless haystack.include?(phrase)
+      next if per_line_hits(path).any? { |hit| hit.include?(phrase.inspect) }
+
+      "#{relative} (wrapped across lines) #{phrase.inspect} - #{reason}"
+    end
+  end
+
   # Slugs, URLs and asset names legitimately keep banned words -
   # /use-cases/empower-existing-engineering-team/, the SVG
   # theme/world-class-training, and cover_image: empower-...jpg are
@@ -130,8 +157,18 @@ class MarketingCopyTest < Minitest::Test
   # churn, which buys nothing. Drop both shapes before matching: any token
   # containing a slash, and any token ending in an asset extension.
   ASSET_TOKEN = /\S+\.(?:jpe?g|png|svg|webp|gif|ico)\b/i
+  PATH_TOKEN = %r{/?[\w.-]+(?:/[\w.-]+)+/?}
 
+  # Order matters. Tags must go FIRST: a word glued to a closing tag
+  # ("Level?</span") contains a slash, and stripping slash-tokens wholesale
+  # deleted the word with it - which is how "Take You to the Next Level" hid
+  # from this gate while sitting in the careers <h1>.
   def scrub(line)
-    line.gsub(%r{\S*/\S*}, " ").gsub(ASSET_TOKEN, " ")
+    line
+      .gsub(/\{\{.*?\}\}/, " ")   # Hugo template expressions
+      .gsub(/<[^>]*>/, " ")       # HTML tags
+      .gsub(%r{\S*://\S*}, " ")   # absolute URLs
+      .gsub(PATH_TOKEN, " ")      # slugs and partial names (theme/world-class-training)
+      .gsub(ASSET_TOKEN, " ")
   end
 end

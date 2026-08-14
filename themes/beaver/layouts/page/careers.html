@@ -8,8 +8,7 @@
   <div
     id="fl-main-content"
     class="fl-page-content"
-    itemprop="mainContentOfPage"
-    role="main">
+    itemprop="mainContentOfPage">
     <div class="fl-content-full container">
       <div class="row">
         <div class="fl-content col-md-12">
@@ -41,8 +40,8 @@
                               <div class="fl-module-content fl-node-content">
                                 <h1 class="fl-heading">
                                   <span class="fl-heading-text"
-                                    >Looking for a Team to Take You to the Next
-                                    Level?</span
+                                    >Write Rails You Would Sign Your Name
+                                    To</span
                                   >
                                 </h1>
                               </div>
@@ -439,7 +438,7 @@
                                   <div
                                     class="fl-photo-content fl-photo-img-jpg">
                                     {{ $image := .Page.Resources.Get .Page.Params.testimonial.image }}
-                                    {{ $title := "John Doe" }}
+                                    {{ $title := .Page.Params.testimonial.name | default "JetThoughts team member" }}
                                     {{ partial "img/testimonial.html" (dict "image" $image "title" $title) }}
 
                                   </div>
