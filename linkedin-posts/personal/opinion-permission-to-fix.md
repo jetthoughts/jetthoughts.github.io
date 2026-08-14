@@ -5,7 +5,7 @@ pillar: opinion
 author: paul-keen
 voice: personal-first-person
 icp_test: Does the "stop waiting for a yes to fix your own problem" take land with founders/operators, and do they share where they've done it?
-image: ""
+image: "assets/opinion-permission-to-fix.jpg"
 first_comment: |
   (value post - no link; reply-CTA only)
 utm_campaign: ""

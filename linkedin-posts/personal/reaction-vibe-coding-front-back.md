@@ -5,7 +5,7 @@ pillar: reaction
 author: paul-keen
 voice: personal-first-person
 icp_test: Does the "front vs back" framing cut through the vibe-coding debate - do builders/founders agree or push back with their own line?
-image: ""
+image: "assets/reaction-vibe-coding-front-back.jpg"
 first_comment: |
   (value post - no link; reply-CTA only)
 utm_campaign: ""

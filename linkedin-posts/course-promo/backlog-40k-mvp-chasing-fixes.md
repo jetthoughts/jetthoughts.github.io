@@ -10,7 +10,7 @@ pillar: demand-before-build
 hypothesis: H1, H2
 opener_archetype: case-led
 icp_test: Do non-technical founders mid-build recognize the "chasing fixes instead of talking to customers" pain, and the validate-first alternative?
-image: ""
+image: "assets/backlog-40k-mvp-chasing-fixes.jpg"
 first_comment: |
   I put the "what to check before you hire (or skip) a dev shop" steps into a free course, no signup: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_validate_first&utm_content=backlog_40k_mvp_chasing_fixes
 utm_campaign: course_promo_validate_first

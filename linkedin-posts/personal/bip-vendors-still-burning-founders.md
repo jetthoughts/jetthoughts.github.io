@@ -5,7 +5,7 @@ pillar: build-in-public
 author: paul-keen
 voice: personal-first-person
 icp_test: Do non-technical founders recognize the "paid for something I didn't need yet" waste, and share their own?
-image: ""
+image: "assets/bip-vendors-still-burning-founders.jpg"
 first_comment: |
   (value post - no link; reply-CTA only)
 status: draft

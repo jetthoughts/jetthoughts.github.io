@@ -5,7 +5,7 @@ pillar: build-in-public
 author: paul-keen
 voice: personal-first-person
 icp_test: Does "AI makes custom workflow tools cheap - no excuses" land, and do builders/founders share the small tool they'd build?
-image: ""
+image: "assets/bip-build-your-own-tools-with-ai.jpg"
 first_comment: |
   (value post - no link; reply-CTA only)
 utm_campaign: ""
