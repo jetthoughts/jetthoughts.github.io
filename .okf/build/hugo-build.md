@@ -5,9 +5,8 @@ description: Canonical build + validation entry point; runs Hugo plus the course
 resource: bin/hugo-build
 tags: [build, hugo, validation]
 generated:
-  by: process:okf-migrate
-  at: 2026-07-19T12:00:00Z
-timestamp: 2026-08-13T00:00:00Z
+  by: claude/opus-5
+  at: 2026-08-14T00:00:00Z
 ---
 
 `bin/hugo-build` builds the site into `_dest/public-dev/` (repo-root

@@ -1,5 +1,32 @@
 # Bundle Update Log
 
+## 2026-08-14 (canon) - the founding year was wrong, and so was the instruction layer
+
+* **Update**: new concept [company claims canon](/content/claims-canon.md);
+  `content/index.md` refreshed; `build/hugo-build.md` migrated off the legacy
+  `timestamp` field to `generated`.
+* **The finding**: JetThoughts was founded **2008-09-01**, not 2011. The site
+  had carried 2011 for years, which also made every derived tenure claim three
+  short (a hardcoded "13+ years" in service schema matched *neither* year).
+  Two defects, not one: the canonical `foundingYear` param was wrong AND most
+  claims bypassed it with their own hardcoded copy, so fixing the param alone
+  would have left "since 2011" in eight places.
+* **The bigger finding**: the wrong year and the false "32 clients" review count
+  were baked into the **instruction layer** - `PRODUCT.md` canon,
+  `docs/business/vision-mission.md`, four 2607 rescue-sprint docs, and the 2605
+  outreach claims whitelist. One literally read *'Tenure claim is "since 2011"
+  (from `foundingYear = 2011` - verifiable)'*. It was neither. Anyone following
+  those docs would have re-introduced both.
+* **The rule**: when correcting a published fact, sweep the instruction layer,
+  not just the output layer. And derive - never hardcode - anything with a
+  canonical param behind it.
+* **Tooling note**: serena's `search_for_pattern` regex found seven files that
+  targeted greps missed. qmd was the wrong instrument for an exact-literal hunt
+  (semantic/BM25 over markdown returns topically-related docs, not literal
+  matches) - use qmd for "what do we say about X", serena for "find every
+  occurrence of this string". Recorded in [test gates](/build/test-gates.md)'s
+  sibling lesson about mechanical ratchets beating manual review.
+
 ## 2026-08-14 (claims) - the number nobody had a source for was wrong
 
 * **Update**: `.okf/build/test-gates.md` gains the 2% tolerance false-green and
