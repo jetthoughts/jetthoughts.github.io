@@ -22,6 +22,30 @@ links the course. Decoupling the give from the ask is what makes the ask land.
 
 Status legend: `draft` · `revised` (idea-first, ready) · `approved` · `scheduled` · `posted`.
 
+## Next actions (2026-08-14 handoff) - STOP BUILDING, START SENDING
+
+All LI work is on branch `linkedin-review-board` (**PR #455, not merged**). 19 posts
+drafted, illustrated (caricatures + exhibits), reordered. But the active bet (Vibe
+Code Rescue) is **RED: zero outreach touches ever sent** - the bottleneck is
+distribution, not demand, and 3+ weeks of finished content is *activity, not
+validation*. **Do NOT make more posts until the first batch is live.** In priority:
+
+1. **Schedule the ready LinkedIn run** - pre-verify founding-hypothesis (approved) →
+   claude-code → vendors → vibe-coding, schedule >=24h out. Assistant drives the
+   composer; Paul approves + attaches images. Starts UTM data.
+2. **Start the direct rescue outreach** (the real bottleneck, stuck ~18 days) - send
+   ~10 personalized touches from the 2607 kit (`outbound-openers.md` / SEND-SHEET).
+   This is what books calls; it starts the kill-criteria clock.
+3. **Resolve the 2 gating decisions** - pricing ($2.5-10K vs $25-50K) + category name
+   (page-one occupied, competitor on the exact name). They frame every outreach message.
+4. **Instrument** - log ICP replies in `metrics-ledger.md` / the 2607 pipeline sheet.
+
+**Open items:** a real "I was wrong" story to replace the deleted BigBinary
+(story-bank Q2); merge PR #455 once Paul has reviewed the board; the caricature tool
+now works (billing on; `GEMINI_API_KEY`/`GOOGLE_API_KEY` in `~/.claude/.env`,
+untracked - Paul may rotate). Status snapshot: `docs/business/operating-system.md` §1
+(RED) + the Aug-2026 investor update.
+
 ## Schedule (pillar-tagged)
 
 Reordered 2026-08-14 (Paul): front-load pure-value/personal posts; space the course
