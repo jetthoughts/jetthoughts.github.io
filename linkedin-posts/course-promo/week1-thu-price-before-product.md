@@ -17,9 +17,9 @@ utm_campaign: course_promo_module1
 utm_content: week1_thu_price_before_product
 status: draft
 stage: next
-proposed_for: "2026-08-25 15:30 CEST"
+proposed_for: "2026-09-03 15:30 CEST"
 first_comment: |
-  The chapter the sketch comes from, with the Stripe setup steps and the refund note wording, is free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_thu_price_before_product
+  (value post - no link; reply-CTA only. Dropped the course link 2026-08-13 to make this one of the free 70% - see content-pillars.md)
 image: "assets/week1-thu-price-before-product.png"
 notes: |
   Opener archetype: observation-led. Plan called for Format A (marked screenshot of a smoke-test
@@ -52,6 +52,4 @@ You can collect a hundred "sounds great" comments and still not have one person 
 
 The cheapest way to find out is a real checkout. Make a Stripe payment link (about ten minutes of work), put it on a one-page site that describes the product you haven't built, and let people click a real pay button. If someone pays, refund them and tell them where the product actually is. A stranger pulling out a card tells you more than a hundred nice comments.
 
-The sketch below is the same $97 button worded two ways. One leads with what the buyer gets, the other just makes clicking feel less scary. The price doesn't change, only the wording.
-
-If you're non-technical, have you ever charged for something before it existed?
+Have you ever charged for something before you built it?

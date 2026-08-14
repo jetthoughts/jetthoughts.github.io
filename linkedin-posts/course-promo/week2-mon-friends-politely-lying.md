@@ -17,9 +17,9 @@ utm_campaign: course-pilot-aug26
 utm_content: week2_mon_friends_politely_lying
 status: draft
 stage: next
-proposed_for: "2026-09-01 15:30 CEST"
+proposed_for: "2026-09-10 15:30 CEST"
 first_comment: |
-  The interview method she's using now is Module 2 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_mon_friends_politely_lying
+  (value post - no link; reply-CTA only. Dropped the course link 2026-08-13 to make this one of the free 70% - see content-pillars.md)
 image: "assets/week2-mon-friends-politely-lying.png"
 notes: |
   Opener archetype: observation-led (name the line every founder says, then counter it - the Cutler
@@ -40,7 +40,7 @@ notes: |
 
 "Everyone I show it to says they'd love it."
 
-That line feels like proof, and it isn't. People who like you say kind things about your idea. It costs them nothing, and it tells you nothing about whether anyone actually needs the thing.
+That's not proof of anything. People who like you say nice things about your idea for free, and it tells you nothing about whether anyone actually needs it.
 
 Demand is what someone already did about the problem before you showed up - what they tried on their own, what they were already paying to duct-tape around it.
 

@@ -22,29 +22,65 @@ links the course. Decoupling the give from the ask is what makes the ask land.
 
 Status legend: `draft` · `revised` (idea-first, ready) · `approved` · `scheduled` · `posted`.
 
+## Next actions (2026-08-14 handoff) - STOP BUILDING, START SENDING
+
+All LI work is on branch `linkedin-review-board` (**PR #455, not merged**). 19 posts
+drafted, illustrated (caricatures + exhibits), reordered. But the active bet (Vibe
+Code Rescue) is **RED: zero outreach touches ever sent** - the bottleneck is
+distribution, not demand, and 3+ weeks of finished content is *activity, not
+validation*. **Do NOT make more posts until the first batch is live.** In priority:
+
+1. **Schedule the ready LinkedIn run** - pre-verify founding-hypothesis (approved) →
+   claude-code → vendors → vibe-coding, schedule >=24h out. Assistant drives the
+   composer; Paul approves + attaches images. Starts UTM data.
+2. **Start the direct rescue outreach** (the real bottleneck, stuck ~18 days) - send
+   ~10 personalized touches from the 2607 kit (`outbound-openers.md` / SEND-SHEET).
+   This is what books calls; it starts the kill-criteria clock.
+3. **Resolve the 2 gating decisions** - pricing ($2.5-10K vs $25-50K) + category name
+   (page-one occupied, competitor on the exact name). They frame every outreach message.
+4. **Instrument** - log ICP replies in `metrics-ledger.md` / the 2607 pipeline sheet.
+
+**Open items:** a real "I was wrong" story to replace the deleted BigBinary
+(story-bank Q2); merge PR #455 once Paul has reviewed the board; the caricature tool
+now works (billing on; `GEMINI_API_KEY`/`GOOGLE_API_KEY` in `~/.claude/.env`,
+untracked - Paul may rotate). Status snapshot: `docs/business/operating-system.md` §1
+(RED) + the Aug-2026 investor update.
+
 ## Schedule (pillar-tagged)
 
-| Week of | Slot | Pillar | Post | Link? | Status |
-|---|---|---|---|---|---|
-| 2026-08-11 | Thu | story/opinion | `course-promo/week1-thu-validate-before-build` | course | **posted** (text) |
-| 2026-08-18 | Tue | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ demo-rule visual |
-| 2026-08-18 | Thu | teach | `course-promo/week1-tue-founding-hypothesis` | course | **approved** ✓ five-blank exhibit |
-| 2026-08-25 | Tue | reaction (NEW) | `personal/reaction-claude-code-trust` | none | **drafted** ✓ (Paul review) |
-| 2026-08-25 | Thu | teach | `course-promo/week1-thu-price-before-product` | drop link? | revised ✓ |
-| 2026-09-01 | Tue | opinion | `icp-validation/week1-tue-staging-question` | blog (SCIPAB) | revised ✓ |
-| 2026-09-01 | Thu | build-in-public (NEW) | `personal/bip-vendors-still-burning-founders` | none | **drafted** ✓ (Paul review) |
-| 2026-09-08 | Tue | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
-| 2026-09-08 | Thu | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course | draft |
-| 2026-09-15 | Tue | story/mistakes (NEW) | *needs a better story* - BigBinary draft backlogged (Paul didn't like it); keep the "analysis vs conviction" angle | none | to source |
+Reordered 2026-08-14 (Paul): front-load pure-value/personal posts; space the course
+links (~15%), the AI-tooling posts, and the repetitive clusters (progress-visibility:
+jira/staging/trust-signals; interview: friends/mom-test/ten-interviews). The board
+sorts by each post's `proposed_for`, so this table = the live board order.
 
-**Ratio check (this 9-post window):** ~6 value (teach/opinion/story/reaction/BIP),
-1 poll, 2 course-linked -> ~70/20/10. The two NEW slots (reaction + build-in-public)
-are what keep it from being all funnel.
+| Date | Pillar | Post | Link? | Status |
+|---|---|---|---|---|
+| Aug 13 | story/opinion | `course-promo/week1-thu-validate-before-build` | course | **posted** |
+| Aug 18 | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ |
+| Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **approved** ✓ |
+| Aug 25 | reaction | `personal/reaction-claude-code-trust` | none | drafted ✓ |
+| Aug 27 | build-in-public | `personal/bip-vendors-still-burning-founders` | none | drafted ✓ |
+| Sep 1 | reaction | `personal/reaction-vibe-coding-front-back` | none | drafted ✓ |
+| Sep 3 | teach | `course-promo/week1-thu-price-before-product` | none | revised ✓ |
+| Sep 8 | opinion | `icp-validation/week1-tue-staging-question` | blog | revised ✓ |
+| Sep 10 | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | revised ✓ |
+| Sep 15 | poll | `course-promo/week1-wed-first-move-poll` | none | draft |
+| Sep 17 | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | drafted ✓ |
+| Sep 22 | teach | `course-promo/week2-tue-mom-test-past-questions` | none | revised ✓ |
+| Sep 24 | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | draft |
+| Sep 29 | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
+| Oct 1 | teach | `course-promo/week2-fri-ten-interviews-recap` | none | revised ✓ |
+| Oct 6 | opinion | `icp-validation/backlog-vibe-coding-disposable` | none | draft |
+| Oct 8 | poll | `course-promo/week2-wed-interview-count-poll` | none | draft |
+| Oct 13 | story/promo | `course-promo/week1-fri-why-i-wrote-it` | course *(promo)* | draft |
+| Oct 15 | opinion | `personal/opinion-permission-to-fix` | none | drafted ✓ |
 
-Value drafts still to slot (mostly teach/opinion - **drop the reflexive course link**
-on the 70%): friends-politely-lying, mom-test-past-questions, ten-interviews-recap,
-why-i-wrote-it (story/BIP), first-move-poll & interview-count-poll (polls),
-backlog-vibe-coding (opinion). All are idea-first and visual-ready.
+**Ratio:** across 18 posts, only **3 course links** (founding, 40k, why-i-wrote-it =
+~15%) + 1 blog link; the rest is value/personal/poll. **Aug 25 → Sep 3 is four
+straight no-link posts** - the run that makes the feed read as a person with takes.
+
+**Still open:** a real "I was wrong about a founder/idea" story to replace the deleted
+BigBinary draft (story-bank Q2). Slot it when Paul has a case.
 
 ## Per-post checklist
 

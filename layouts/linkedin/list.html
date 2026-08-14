@@ -80,5 +80,16 @@
       {{ template "cards" (dict "posts" $backlog) }}
     </section>
   </div>
+  {{ $firstReview := "" }}
+  {{ if gt (len $review) 0 }}{{ $firstReview = (index $review 0).RelPermalink }}{{ else if gt (len $approved) 0 }}{{ $firstReview = (index $approved 0).RelPermalink }}{{ end }}
+  {{ with $firstReview }}
+  <script>
+    // ArrowRight from the board opens the first post awaiting pre-verify
+    document.addEventListener('keyup', function(e){
+      if (/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName) || e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.key === 'ArrowRight') window.location.href = '{{ . }}';
+    });
+  </script>
+  {{ end }}
 </body>
 </html>

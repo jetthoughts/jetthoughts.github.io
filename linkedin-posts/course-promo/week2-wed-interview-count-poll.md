@@ -17,7 +17,7 @@ utm_campaign: course-pilot-aug26
 utm_content: week2_wed_interview_count_poll
 status: draft
 stage: next
-proposed_for: "2026-09-09 15:30 CEST"
+proposed_for: "2026-10-08 15:30 CEST"
 opener_archetype: observation-led
 first_comment: |
   If your honest vote was zero, the interview script I'd start with is free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-interview-script/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_wed_interview_count_poll
@@ -35,13 +35,13 @@ notes: |
   REVISED 2026-08-13 to idea-first: opener changed from bare question-led to observation-led; poll options preserved.
 ---
 
-How many real customers a founder talks to before building usually tells you more about where the product is headed than any early technical decision does.
+The number of real customers you talk to before building tells you more about where the product is going than any early technical decision.
 
 By real I mean people who have the problem and owe you nothing. Friends who already knew about the idea, and were being kind, don't count. Neither does anyone who would feel bad voting against you.
 
 For anyone building something right now, or about to: how many of those conversations did you actually have before you committed real money or months?
 
-I have a guess about where most honest answers land, and I want to see whether it holds outside the founders who end up on calls with me. There is no right answer in the options, and I will not argue with anyone's vote. Once the votes are in, I will share my guess and what tends to happen at each number.
+I've got a guess about where most honest answers land, and I want to see if it holds outside my own bubble. No right answer here, and I won't argue with your vote. I'll share my guess, and what tends to happen at each number, once the votes are in.
 
 ---
 

@@ -29,7 +29,7 @@ notes: |
   cost-stacked time-cut, no "So...So..." beat-marking. AI self-score ~1/10.
 ---
 
-A lot of non-technical founders hire a dev shop before they know if anyone wants the product.
+A lot of founders hire a dev shop before they know if anyone wants the product.
 
 It feels like progress. You have a team, a timeline, a Figma, a plan.
 

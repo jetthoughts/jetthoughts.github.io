@@ -124,6 +124,52 @@ body, but keep the source clean. `image` supersedes the older `visual` / `design
 fields (still read as fallbacks). `posted_url` is the canonical property for the
 live LinkedIn post URL — the board links to it once set.
 
+## Image type by pillar (what image for what post)
+
+Grounded in the creators Paul rates: **Cutler/Rossi** lead with *diagrams and
+editorial illustrations*; **Holub** often runs *text-only* and lets the take carry;
+**Paolino** shows *real artifacts / screenshots*. Mapped to our pillars:
+
+| Pillar | Image | Why |
+|---|---|---|
+| **Teach** (framework/tactic) | house-style refactoring.fm **exhibit** (SVG, see above) | the framework made visual (Cutler/Rossi register) |
+| **Reaction / opinion / story** (personal) | a **New Yorker-style caricature** (editorial cartoon) | humour + humanity; a data-exhibit here reads as marketing |
+| **Build-in-public** | a caricature, or a **real screenshot** of the artifact | show the thing (Paolino register) |
+| **Poll** | the **poll itself** (no image) | the poll IS the visual; single images underperform text in 2026 |
+
+One image, landscape ~3:2. Never a stock photo, never a logo-slathered card. Text-only
+is always a valid choice for a blunt take (Holub) - a mediocre image hurts more than none.
+
+## Generating caricatures (the Art tool)
+
+Personal/opinion/story/build-in-public posts get a hand-drawn editorial cartoon via
+the `Art` skill (Nano Banana Pro / Gemini 3 Pro image). Needs a **billing-enabled**
+Google key in `~/.claude/.env` (`GOOGLE_API_KEY` + `GEMINI_API_KEY`) - the free tier
+has a hard image quota of 0.
+
+1. **Prompt** - one scene that IS the post's point, in this template:
+   > Single-panel New Yorker-style editorial cartoon, hand-drawn black linework,
+   > light cream background, minimal colour accent, **absolutely NO text / lettering /
+   > captions**. Scene: [the gag that illustrates the post]. Gestural imperfect
+   > linework, editorial sophistication, warm and human, gently satirical, not cutesy.
+2. **Generate** (lands in `~/Downloads` first):
+   ```
+   bun ~/.claude/skills/Art/Tools/Generate.ts --workflow=Comics \
+     --model nano-banana-pro --size 2K --aspect-ratio 3:2 \
+     --prompt "..." --output "$HOME/Downloads/<slug>.jpg"
+   ```
+   (Model returns JPEG - fine for a cartoon on cream.)
+3. **View + gate** - open the file and score the 4 new-media criteria (great look /
+   functional at a glance / earns the scroll / helpful not decorative); re-roll if it
+   misses. The model sometimes adds a clean sign word ("MANAGER", "ERROR") despite the
+   no-text rule - keep only if it's correct and sharpens the gag, else re-roll.
+4. **Wire in** - copy to `linkedin-posts/<lane>/assets/<slug>.jpg`, set
+   `image: "assets/<slug>.jpg"`. A NEW lane needs a dev-only mount in
+   `config/development/hugo.toml` (`linkedin-posts/<lane>/assets` ->
+   `static/linkedin-assets/<lane>`). Verify it serves 200 on the board.
+
+**Never commit the key** - it lives in `~/.claude/.env` (untracked, verified out of the repo).
+
 ## Poll posts (canonical structure)
 
 Native LinkedIn polls follow ONE structure (reference: `first-move-poll`,

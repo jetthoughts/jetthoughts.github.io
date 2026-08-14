@@ -18,7 +18,7 @@ utm_content: trust_signals_poll
 opener_archetype: idea-led
 status: draft
 stage: next
-proposed_for: "2026-09-02 15:30 CEST"
+proposed_for: "2026-09-29 15:30 CEST"
 notes: |
   Poll format - shorter body than narrative posts. Opener is idea-led: states a
   claim about which proof signals actually mean something before the poll asks.

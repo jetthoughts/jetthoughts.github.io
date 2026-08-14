@@ -36,6 +36,11 @@
     .hint { font-size: .72rem; color: var(--muted); margin: .7rem 0 0; text-align: left; }
     .hint code { background: #eceef1; padding: .05rem .3rem; border-radius: 3px; word-break: break-all; }
     .no-img { color: #9aa0a8; font-size: .82rem; }
+    .poll-preview { text-align: left; margin-top: .3rem; }
+    .poll-preview p { font-weight: 700; font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0 0 .7rem; }
+    .poll-preview ol { list-style: none; padding: 0; margin: 0; counter-reset: opt; }
+    .poll-preview li { counter-increment: opt; position: relative; border: 1.5px solid var(--accent); border-radius: 999px; padding: .55rem 1rem .55rem 2.1rem; margin-bottom: .55rem; font-size: .92rem; font-weight: 600; color: #16181d; }
+    .poll-preview li::before { content: counter(opt); position: absolute; left: .8rem; top: 50%; transform: translateY(-50%); font-size: .72rem; color: var(--accent); font-weight: 700; }
     .col-meta { grid-column: 1 / -1; margin-top: .1rem; }
     .panel { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: .9rem 1rem; font-size: .8rem; }
     .panel-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: .7rem; }
@@ -58,6 +63,7 @@
   {{ with .Params.image }}{{ $visualRaw = . }}{{ end }}
   {{ if not $visualRaw }}{{ with .Params.visual }}{{ $visualRaw = index (split . " ") 0 }}{{ end }}{{ end }}
   {{ if not $visualRaw }}{{ $visualRaw = .Params.design_file }}{{ end }}
+  {{ if eq $visualRaw "none" }}{{ $visualRaw = "" }}{{ end }}
   {{ $assetsDir := printf "%s/assets/" (path.Dir .File.Filename) }}
   {{ $chunks := split .RawContent "\n---\n" }}
   {{ $bodyRaw := trim (index $chunks 0) "\n \t" }}
@@ -96,12 +102,14 @@
       <div class="col-img">
         <div class="block">
           {{ if $visualRaw }}<div class="btn-row"><button class="copy-btn icon-only" id="copy-img" title="Copy image">{{ $copyIcon | safeHTML }}<span></span></button></div>{{ end }}
-          <h2>Visual</h2>
+          <h2>{{ if eq .Params.design "poll" }}Poll{{ else }}Visual{{ end }}</h2>
           {{ if $visualRaw }}
             <a href="/linkedin-assets/{{ $laneDir }}/{{ path.Base $visualRaw }}" target="_blank" rel="noopener" title="Open full size in a new tab (drag the image to attach it)">
               <img id="post-img" src="/linkedin-assets/{{ $laneDir }}/{{ path.Base $visualRaw }}" alt="post visual" onerror="this.style.display='none';document.getElementById('noimg').style.display='block'" draggable="true" />
             </a>
             <p id="noimg" class="no-img" style="display:none">Image not found on disk.</p>
+          {{ else if eq .Params.design "poll" }}
+            <div class="poll-preview">{{ $tail | markdownify }}</div>
           {{ else }}
             <p class="no-img">No visual set for this post.</p>
           {{ end }}
@@ -135,7 +143,7 @@
           </div>
           {{ with .Params.posted_url }}{{ if hasPrefix . "http" }}<div class="field"><div class="k">LinkedIn</div><div class="v"><a href="{{ . }}" target="_blank" rel="noopener">View on LinkedIn &#8599;</a></div></div>{{ end }}{{ end }}
           {{ with .Params.notes }}<div class="field"><div class="k">notes</div><div class="v">{{ . | markdownify }}</div></div>{{ end }}
-          {{ with $tail }}<div class="field"><div class="k">authoring (comment / attachment)</div><div class="v">{{ . | markdownify }}</div></div>{{ end }}
+          {{ with $tail }}{{ if ne $.Params.design "poll" }}<div class="field"><div class="k">authoring (comment / attachment)</div><div class="v">{{ . | markdownify }}</div></div>{{ end }}{{ end }}
           {{ with .Params.icp_test }}<div class="field"><div class="k">ICP test</div><div class="v">{{ . | markdownify }}</div></div>{{ end }}
           {{ with .Params.dedup_note }}<div class="field"><div class="k">dedup</div><div class="v">{{ . | markdownify }}</div></div>{{ end }}
           {{ with .Params.hypothesis }}<div class="field"><div class="k">hypothesis</div><div class="v">{{ . | markdownify }}</div></div>{{ end }}
@@ -176,6 +184,7 @@
       if (/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName) || e.metaKey || e.ctrlKey || e.altKey) return;
       if (e.key === 'ArrowRight') { var n = document.getElementById('nav-next'); if (n) window.location.href = n.href; }
       if (e.key === 'ArrowLeft')  { var p = document.getElementById('nav-prev'); if (p) window.location.href = p.href; }
+      if (e.key === 'ArrowUp')    { var b = document.querySelector('a.back'); if (b) window.location.href = b.href; }
     });
   </script>
 </body>

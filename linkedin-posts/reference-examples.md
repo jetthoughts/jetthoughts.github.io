@@ -75,6 +75,12 @@ Short, humble, concrete product updates in the first person. *"My Rails backup s
   (Paul flagged 2026-08-13: "that reliability is the whole story for anyone
   deciding whether to build with AI" - a marketer's bridge sentence, not his
   voice). State the thing; don't explain to the reader why it matters to them.
+- **No over-narrated blow-by-blow.** Influencers compress; they don't recap the
+  whole sequence (Paul flagged 2026-08-14: "an error here, a dead feature there -
+  and every one meant the same loop: message the freelancer, explain it, agree a
+  fix, wait days" reads as story-recap, not a take). Collapse an enumerated loop
+  into one blunt beat. Also drop soft-credential hedges ("roughly what it should
+  take" → "what it should cost").
 - **Banned close crutches:** "Still surprises me…", "Turns out…", "That's the part
   that gets to me" - stock emotional/meta closers (Paul flagged 2026-08-13). End on
   the concrete point itself, flat.

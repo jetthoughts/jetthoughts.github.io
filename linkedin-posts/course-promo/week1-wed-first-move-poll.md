@@ -17,7 +17,7 @@ utm_campaign: course_promo_module1
 utm_content: week1_wed_first_move_poll
 status: draft
 stage: next
-proposed_for: "2026-08-27 15:30 CEST"
+proposed_for: "2026-09-15 15:30 CEST"
 first_comment: |
   If your honest answer was option 1 or 2, the first module of a free course I wrote is about the cheaper order, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_wed_first_move_poll
 image: ""
@@ -41,7 +41,7 @@ The first move you make on a new business idea usually decides how much it costs
 
 What did you actually do first? Not what a book says you should do. The thing you honestly did, or would do tomorrow if the idea felt real enough.
 
-I have a guess about which one wins. I want to know whether it holds for everyone, or just for the people who end up on calls with me. I'll share my guess, and what usually happens after each answer, once the votes are in.
+I've got a guess about which one wins, but I want to see if it holds outside my own bubble. I'll share it, and what usually follows each answer, once the votes are in.
 
 ---
 
