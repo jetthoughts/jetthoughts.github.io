@@ -12,6 +12,16 @@ Full guides: `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md
 and the course-specific rules in `CLAUDE.md`. This concept records the
 rules that recur in review sprints.
 
+**Channel registers (Paul, 2026-08-14).** Each channel gets its own voice; all
+channels share the anti-slop core. Website is plain and load-bearing with every
+claim showing a mechanic or linking proof; blog teaches with worked examples;
+course is patient and second-person with first-mention glossing (this concept);
+LinkedIn is first-person and committed - Register B, hammering one idea. What
+never varies: the banned words, the banned structural patterns, the
+who/show/practitioner tests, and sourced numbers
+([claims canon](claims-canon.md)). A shorter register is not a licence to slop.
+Full table in 90.11 §1b.
+
 # Core rules
 
 - **Write for Sam, not Paul.** Sam is an idea-stage non-technical founder.
