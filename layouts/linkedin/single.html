@@ -184,6 +184,7 @@
       if (/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName) || e.metaKey || e.ctrlKey || e.altKey) return;
       if (e.key === 'ArrowRight') { var n = document.getElementById('nav-next'); if (n) window.location.href = n.href; }
       if (e.key === 'ArrowLeft')  { var p = document.getElementById('nav-prev'); if (p) window.location.href = p.href; }
+      if (e.key === 'ArrowUp')    { var b = document.querySelector('a.back'); if (b) window.location.href = b.href; }
     });
   </script>
 </body>
