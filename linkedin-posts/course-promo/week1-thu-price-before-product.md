@@ -52,6 +52,4 @@ You can collect a hundred "sounds great" comments and still not have one person 
 
 The cheapest way to find out is a real checkout. Make a Stripe payment link (about ten minutes of work), put it on a one-page site that describes the product you haven't built, and let people click a real pay button. If someone pays, refund them and tell them where the product actually is. A stranger pulling out a card tells you more than a hundred nice comments.
 
-The sketch below is the same $97 button worded two ways. One leads with what the buyer gets, the other just makes clicking feel less scary. The price doesn't change, only the wording.
-
 Have you ever charged for something before you built it?

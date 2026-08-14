@@ -1,37 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
-  <title id="t">Put a real price on it before you build: the same $97 button worded two ways - one leads with what the buyer gets, one lowers the fear. A stranger's card beats a hundred comments.</title>
-  <desc>Two identical green $97/month pay buttons. The left button reads "Cut no-shows in half" and leads with what the buyer gets. The right reads "Start your first month" and lowers the fear of clicking. Same price either way. Basis: a stranger pulling out a card beats a hundred "sounds great" comments.</desc>
+  <title id="t">What proves demand: a real payment, not a pile of nice comments. A hundred "sounds great" comments cost nothing; one stranger paying is a stranger's real money.</title>
+  <desc>Two cards. A red "A hundred comments" card - "sounds great", costs them nothing. A green "One payment" card - $97, card out, a stranger's real money. Basis: put a price on a one-page site, show strangers; only a payment counts.</desc>
   <defs>
     <style>
       .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
       .title{ font-size: 30px; font-weight: 700; fill: #1a1a1a; }
       .sub  { font-size: 23px; fill: #666; font-style: italic; }
-      .btn-t{ font-size: 23px; font-weight: 700; fill: #fff; }
-      .btn-p{ font-size: 20px; fill: #eafaea; }
-      .cap  { font-size: 19px; fill: #444; font-style: italic; }
-      .tie  { font-size: 21px; fill: #666; font-style: italic; }
+      .head { font-size: 26px; font-weight: 700; }
+      .mid  { font-size: 23px; fill: #1a1a1a; }
+      .note { font-size: 18px; font-style: italic; }
       .basis{ font-size: 20px; fill: #666; font-style: italic; }
-      .btn  { fill: #2e7d32; }
+      .red  { fill: #fef2f2; stroke: #e5484d; stroke-width: 2.5; }
+      .green{ fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
     </style>
-    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#2e7d32" flood-opacity="0.28"/></filter>
+    <filter id="gr" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#e5484d" flood-opacity="0.45"/></filter>
+    <filter id="gg" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#2e7d32" flood-opacity="0.45"/></filter>
   </defs>
 
-  <text x="360" y="44" text-anchor="middle" class="h title">Put a real price on it before you build</text>
-  <text x="360" y="76" text-anchor="middle" class="h sub">Same $97 button - the wording changes who clicks.</text>
+  <text x="360" y="44" text-anchor="middle" class="h title">What actually proves demand</text>
+  <text x="360" y="76" text-anchor="middle" class="h sub">A real payment, not a pile of nice comments.</text>
 
-  <!-- Button A: benefit-led -->
-  <rect x="64" y="150" width="258" height="86" rx="16" class="btn" filter="url(#sh)"/>
-  <text x="193" y="192" text-anchor="middle" class="h btn-t">Cut no-shows in half</text>
-  <text x="193" y="220" text-anchor="middle" class="h btn-p">$97 / month</text>
-  <text x="193" y="272" text-anchor="middle" class="h cap">leads with what they get</text>
+  <!-- comments card -->
+  <g transform="translate(0,0) rotate(-0.4 200 225)">
+    <rect x="50" y="120" width="300" height="204" rx="16" class="red"/>
+    <text x="200" y="172" text-anchor="middle" class="h head" fill="#e5484d" filter="url(#gr)">A hundred comments</text>
+    <text x="200" y="222" text-anchor="middle" class="h mid">"Sounds great!"</text>
+    <text x="200" y="268" text-anchor="middle" class="h note" fill="#b91c1c">costs them nothing</text>
+  </g>
 
-  <!-- Button B: low-friction -->
-  <rect x="398" y="150" width="258" height="86" rx="16" class="btn" filter="url(#sh)"/>
-  <text x="527" y="192" text-anchor="middle" class="h btn-t">Start your first month</text>
-  <text x="527" y="220" text-anchor="middle" class="h btn-p">$97 / month</text>
-  <text x="527" y="272" text-anchor="middle" class="h cap">makes the click feel safe</text>
+  <!-- payment card -->
+  <g transform="translate(0,0) rotate(0.4 520 225)">
+    <rect x="370" y="120" width="300" height="204" rx="16" class="green"/>
+    <text x="520" y="172" text-anchor="middle" class="h head" fill="#2e7d32" filter="url(#gg)">One payment</text>
+    <text x="520" y="222" text-anchor="middle" class="h mid">$97, card out</text>
+    <text x="520" y="268" text-anchor="middle" class="h note" fill="#2e7d32">a stranger's real money</text>
+  </g>
 
-  <text x="360" y="344" text-anchor="middle" class="h tie">Same $97 either way - only the words change.</text>
-
-  <text x="360" y="452" text-anchor="middle" class="h basis">A stranger's card beats a hundred "sounds great" comments.</text>
+  <text x="360" y="452" text-anchor="middle" class="h basis">Put a price on a one-page site, show strangers. Only a payment counts.</text>
 </svg>
