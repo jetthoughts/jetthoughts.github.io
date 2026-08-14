@@ -1,5 +1,27 @@
 # Bundle Update Log
 
+## 2026-08-14 (claims) - the number nobody had a source for was wrong
+
+* **Update**: `.okf/build/test-gates.md` gains the 2% tolerance false-green and
+  the `FORCE_SCREENSHOT_UPDATE` re-record trap;
+  `docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md` §8 actions
+  7-9 closed.
+* **The finding**: the site published "4.8/5 by 32 clients" and
+  `reviewCount: 32` in schema on ~1,147 URLs. `reviewCount` had **no source
+  anywhere in the repo** - `data/company.yaml:11` cites a Clutch rating with no
+  count. The live Clutch profile shows **4.8 from 9 reviews**. The rating was
+  right; the count was overstated ~3.5x. `data/course_banned_strings.yaml:65`
+  had already banned "4.8/5" in course content as a "volatile third-party
+  review score" - the course side learned this and the marketing side did not.
+* **The rule**: a number with no in-repo provenance is a defect, not a detail.
+  When a claims audit says "verify X", verify it before deciding what to do
+  with it - the earlier call to keep 32 was made assuming it was sourced.
+  Prefer a **linked** rating over a bigger unlinked one; the link is the proof.
+* **Also closed**: fabricated `Review` objects ("Technology Executive",
+  "Startup Founder") deleted from `comprehensive-service-schema.html`, and
+  `keepQuotes = true` added (verified in a production build; homepage
+  124,256 -> 125,988 bytes, +1.4%).
+
 ## 2026-08-13 (LinkedIn exhibits) - purpose-built post images consume the house spec
 
 * **Update**: `linkedin-posts/README.md` §"Every post carries a visual" rewritten

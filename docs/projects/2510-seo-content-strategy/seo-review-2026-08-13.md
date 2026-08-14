@@ -205,6 +205,33 @@ organization on the organization's own site regardless of whether the numbers ar
 *"Top-rated on Clutch.co (4.8/5 rating)"*, which carries a rating but **no count**. Action #8 resolves
 this; if Clutch shows a different count, JT is publishing a wrong number.
 
+### 8.2b Resolution (2026-08-14) - actions #7-#9 closed
+
+**Action #8 found a real defect.** The live Clutch profile shows **4.8 out of 5
+from 9 reviews**. The rating was correct; `reviewCount: 32` was overstated ~3.5x
+and was published in structured data on ~1,147 URLs. It is now `9` in
+`enhanced-organization-schema.html`, with the source URL and verification date in
+a comment. On the marketing pages the count is gone entirely and the rating links
+to the Clutch profile - a linked rating beats a bigger unlinked number, which is
+20.09 §11's thesis.
+
+Note `data/course_banned_strings.yaml:65` already bans "4.8/5" in course content
+as a *"volatile third-party review score"*. The course side had learned this; the
+marketing side had not.
+
+**Action #7** - `comprehensive-service-schema.html:101-157` deleted. Verified in a
+production build: `/services/fractional-cto/` now carries only the sourced 4.8/9,
+no invented authors, and no contradictory 4.9.
+
+**Action #9** - `keepQuotes = true` added. Verified against a production build:
+`rel="canonical"`, `name="description"`, `type="application/ld+json"` all quoted.
+Homepage 124,256 → 125,988 bytes (+1.4%).
+
+**Gate gap found while doing this**: the default screenshot tolerance is 2%
+(`test/application_system_test_case.rb:87`), so a four-word link change (~0.24% of
+the frame) passes without re-recording the baseline. A green visual suite means
+"no change larger than 2%", not "no change". Recorded in `.okf/build/test-gates.md`.
+
 ### 8.3 Also unsourced (out of scope, logged)
 
 Same file, `additionalProperty` block: `Client Retention Rate 95%`, `Success Rate 92%`,
