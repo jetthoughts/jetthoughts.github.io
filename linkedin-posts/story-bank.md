@@ -61,7 +61,7 @@ We're thin on **build-in-public**, **fresh stories**, and **reaction** material.
 Ask these to stock the bank (one short answer each is enough for a post):
 
 1. A recent audit finding that surprised you? (build-in-public) - **ANSWERED 2026-08-13:** even with AI this mature, founders still get burned by inexperienced vendors and waste money on work that could be built better or skipped entirely. Drafted `personal/bip-vendors-still-burning-founders`.
-2. A time you were wrong about a founder's idea, or changed your mind? (mistakes) - **ANSWERED 2026-08-13:** BigBinary - Paul thought outstaffing would die; it grew (his framing ~10x in 2-3 yrs). Grounded: Rails-only consultancy est. 2011, ~130 team, Neeto product suite, Gumroad's Sahil credits them; staff-aug became the fastest-growing IT segment. Drafted `personal/story-wrong-about-bigbinary`.
+2. A time you were wrong about a founder's idea, or changed your mind? (mistakes) - **STILL OPEN.** BigBinary was tried and REJECTED (Paul didn't want it, post deleted 2026-08-14). Need a different real case where Paul was confidently wrong and the founder/idea worked out. Ask Paul for a fresh one - do not re-draft BigBinary.
 3. The worst dev-shop situation you've walked into (anonymized)? (story)
 4. What do you actually say to a founder who insists on hiring devs before validating? (opinion)
 5. A no-code/AI build you did recently - what worked, what broke? (build-in-public)

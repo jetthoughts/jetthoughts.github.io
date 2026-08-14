@@ -49,7 +49,8 @@ Value drafts still to slot (teach/opinion, **course link already dropped**):
 friends-politely-lying, mom-test-past-questions, ten-interviews-recap (all pure-value
 now); why-i-wrote-it (story/BIP - keeps its link, it's a promo); first-move-poll &
 interview-count-poll (polls); backlog-vibe-coding (opinion). All idea-first, visual-ready.
-Story slot needs a better mistakes case than the backlogged BigBinary draft.
+Story slot is OPEN - needs a real "I was wrong about a founder/idea" case from Paul
+(BigBinary draft deleted 2026-08-14, Paul didn't want it). See story-bank Q2.
 
 ## Per-post checklist
 
