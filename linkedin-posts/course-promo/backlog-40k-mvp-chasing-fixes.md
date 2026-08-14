@@ -40,6 +40,6 @@ I've built the same kind of thing myself, so I knew what it should cost. His mos
 
 "I thought they'd hand me something that just worked," he told me. "Now I spend my week managing fixes I don't even understand."
 
-That's the trap I want non-technical founders to see coming. You can put a working version in front of real users yourself now, with Lovable or v0 or bolt.new, for almost nothing - and find out if anyone wants it before you hand anyone a big check.
+That's the trap I want founders to see coming. You can put a working version in front of real users yourself now, with Lovable or v0 or bolt.new, for almost nothing - and find out if anyone wants it before you hand anyone a big check.
 
 He paid $40k to end up as the unpaid project manager of his own product. It didn't have to go that way.

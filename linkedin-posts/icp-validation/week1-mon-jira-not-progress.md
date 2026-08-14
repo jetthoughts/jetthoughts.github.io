@@ -21,7 +21,7 @@ notes: |
   course lane's validate-before-build = test demand). AI self-score ~1/10.
 ---
 
-A lot of non-technical founders read a full Jira board as proof the product is moving.
+A lot of founders read a full Jira board as proof the product is moving.
 
 It looks fine. Tickets are closing, standups are clean, the team sounds busy.
 
