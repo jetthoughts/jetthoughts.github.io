@@ -1,5 +1,23 @@
 # Bundle Update Log
 
+## 2026-08-14 (LinkedIn caricatures) - image type by pillar; the Art-tool cartoon pipeline
+
+* **Update**: `linkedin-posts/README.md` gains "Image type by pillar" + "Generating
+  caricatures (the Art tool)".
+* **The split**: not every LinkedIn post wants a house-style *exhibit*. Teach posts
+  (frameworks) do - Cutler/Rossi register. But **personal / opinion / story /
+  reaction** posts want a **New Yorker-style caricature** (editorial cartoon): a
+  data-diagram on a personal take reads as marketing, the opposite of the goal. Polls
+  show the poll (no image). Text-only stays valid for a blunt Holub take.
+* **The tool**: the `Art` skill (`~/.claude/skills/Art`, Nano Banana Pro / Gemini 3
+  Pro image) generates the cartoons - `--workflow=Comics`, single-panel New Yorker
+  style, **no lettering**, output to `~/Downloads` first, view-and-gate, then wire in.
+  Needs a **billing-enabled** Google key in `~/.claude/.env` (free tier image quota =
+  0); the key is untracked, never in the repo. New lanes need a dev-only assets mount
+  in `config/development/hugo.toml`.
+* **Recurring model quirk**: it sometimes adds a clean sign word ("MANAGER", "ERROR")
+  despite the no-text prompt - keep only if correct and it sharpens the gag.
+
 ## 2026-08-13 (LinkedIn exhibits) - purpose-built post images consume the house spec
 
 * **Update**: `linkedin-posts/README.md` §"Every post carries a visual" rewritten
