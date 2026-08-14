@@ -119,6 +119,8 @@ spending effort on rankings before Dec 1. So the list is measurement-first, then
 | **7** | **Delete `comprehensive-service-schema.html:101-157`** - the fabricated reviews and the 4.9/23 rating. See §8.2. | 20 min | Policy + FTC exposure. A manual action applies domain-wide, so low service-page traffic does not reduce it. |
 | **8** | **Confirm `4.8 / 32` against the live Clutch profile**, then either link the rating to it or drop `aggregateRating`. | 20 min | `reviewCount: 32` has no source in the repo. See §8.2. |
 | **9** | **Add `[minify.tdewolff.html] keepQuotes = true`** to `config/_default/hugo.toml`. | 5 min | Cosmetic-for-third-party-tools only - see §8.1. **Not an SEO fix**; do not re-raise it as one. |
+| **10** | **Verify the four remaining unsourced numbers**: `Client Retention Rate 95%` and `Success Rate 92%` (service-schema `PropertyValue`, live on ~1,147 URLs), "40+ projects rescued", "32 clients served". | 1h | **4 of 8 published figures checked in this cycle were wrong.** At that rate assume ≥2 of these are too. Verification is cheap - the Clutch check took one call. Record in [claims canon](/.okf/content/claims-canon.md). |
+| **11** | **Point `marketing_copy_test` at rendered output** (`_dest/public-dev/**/*.html`) as a second pass. | 1h | Every late defect in the 2026-08-14 sweep was invisible to source matching - a partial outside the globs, a phrase wrapped across lines, and a nested `<main>` that only exists after compose. See `docs/20-29-testing-qa/20.10` §3b P0-4. |
 
 ### What is explicitly *not* recommended
 - New content for SEO reasons. At ~5 clicks/day and declining positions, publishing volume is not the constraint.

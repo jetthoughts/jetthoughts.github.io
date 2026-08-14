@@ -1,5 +1,29 @@
 # Bundle Update Log
 
+## 2026-08-14 (gates) - every late defect was invisible to source-level matching
+
+* **Update**: findings backlogged in `docs/20-29-testing-qa/20.10` §3b (P0-4,
+  P0-5, P0-6 + a ranked open list); claims-audit and rendered-output rows added
+  to `seo-review-2026-08-13.md` §6 as actions #10-#11.
+* **The finding**: a Lighthouse/snapshot sweep of the live site found three
+  defects the marketing ratchet had reported clean on - a false review count in
+  an unglobbed partial, "Take You to the Next Level" in the careers `<h1>`
+  (wrapped across two template lines), and a nested `<main>` that only exists
+  after `baseof` + page compose. Source-level gates could not see any of them.
+* **The compounding bug**: the ratchet's `scrub` helper stripped tokens
+  containing a slash, and `Level?</span` contains one, so it deleted the word
+  along with the tag. Strip template expressions and HTML tags BEFORE path
+  tokens.
+* **The contradiction**: `testimonial_shortcode_test` asserted the literal
+  careers `<h1>` copy that `marketing_copy_test` bans. Two gates cannot
+  disagree about the same string - the ratchet lost silently. Assert shape, not
+  marketing copy.
+* **The rule**: point text ratchets at RENDERED output, not source. Rendering
+  flattens wraps, resolves partials, and covers pages nobody remembered to
+  glob. One change closes the whole class.
+* **The base rate worth remembering**: 4 of 8 published figures checked this
+  cycle were wrong. Treat an unsourced number as a defect until verified.
+
 ## 2026-08-14 (canon) - the founding year was wrong, and so was the instruction layer
 
 * **Update**: new concept [company claims canon](/content/claims-canon.md);
