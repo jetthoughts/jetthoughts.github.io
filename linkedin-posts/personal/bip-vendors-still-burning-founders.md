@@ -20,10 +20,10 @@ notes: |
   Text-first. Idea-first, no em dashes.
 ---
 
-A founder showed me the app they paid thousands for. It barely worked.
+In 2026, a founder can build a working version of their idea in a weekend, for almost nothing. Plenty are still paying a vendor thousands for something that barely runs.
 
-In 2026, they didn't need to spend that money at all. Lovable, v0 and bolt.new build a working version in a weekend now - cheap enough to try, fast enough to see if anyone even wants it before you pay for a real build.
+Lovable, v0 and bolt.new do it - cheap enough to try, fast enough to see if anyone even wants it before you pay for a real build.
 
-Instead they trusted the wrong vendor and got something half-broken. Months gone, savings gone.
+It's hard to watch a founder hand over their savings and get back something half-broken. Months gone, and the whole thing was avoidable.
 
 The easy path was right there. They just didn't know it existed.
