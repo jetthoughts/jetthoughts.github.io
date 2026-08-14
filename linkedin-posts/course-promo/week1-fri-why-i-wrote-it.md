@@ -17,7 +17,7 @@ utm_campaign: course_promo_module1
 utm_content: week1_fri_why_i_wrote_it
 status: draft
 stage: next
-proposed_for: "2026-09-10 15:30 CEST"
+proposed_for: "2026-10-13 15:30 CEST"
 first_comment: |
   Free, no email gate:
   https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_fri_why_i_wrote_it

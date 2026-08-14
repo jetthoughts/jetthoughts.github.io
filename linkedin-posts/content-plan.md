@@ -24,34 +24,38 @@ Status legend: `draft` · `revised` (idea-first, ready) · `approved` · `schedu
 
 ## Schedule (pillar-tagged)
 
-Reordered 2026-08-13 (Paul) to **front-load pure-value/personal posts** so the new
-voice lands before any funnel; course links spaced to ~2 posts across the window.
+Reordered 2026-08-14 (Paul): front-load pure-value/personal posts; space the course
+links (~15%), the AI-tooling posts, and the repetitive clusters (progress-visibility:
+jira/staging/trust-signals; interview: friends/mom-test/ten-interviews). The board
+sorts by each post's `proposed_for`, so this table = the live board order.
 
 | Date | Pillar | Post | Link? | Status |
 |---|---|---|---|---|
-| Aug 11 Thu | story/opinion | `course-promo/week1-thu-validate-before-build` | course | **posted** (text) |
-| Aug 18 Tue | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ |
-| Aug 20 Thu | teach | `course-promo/week1-tue-founding-hypothesis` | course *(week's 1 promo)* | **approved** ✓ |
-| Aug 25 Tue | reaction | `personal/reaction-claude-code-trust` | none | drafted ✓ |
-| Aug 27 Thu | build-in-public | `personal/bip-vendors-still-burning-founders` | none | drafted ✓ |
-| Sep 1 Tue | reaction | `personal/reaction-vibe-coding-front-back` | none | drafted ✓ |
-| Sep 3 Thu | teach | `course-promo/week1-thu-price-before-product` | none *(link dropped)* | revised ✓ |
-| Sep 8 Tue | opinion | `icp-validation/week1-tue-staging-question` | blog (SCIPAB) | revised ✓ |
-| Sep 10 Thu | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
-| Sep 15 Tue | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | backlog - promote when ready |
-| Sep 17 Thu | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | drafted ✓ |
+| Aug 13 | story/opinion | `course-promo/week1-thu-validate-before-build` | course | **posted** |
+| Aug 18 | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ |
+| Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **approved** ✓ |
+| Aug 25 | reaction | `personal/reaction-claude-code-trust` | none | drafted ✓ |
+| Aug 27 | build-in-public | `personal/bip-vendors-still-burning-founders` | none | drafted ✓ |
+| Sep 1 | reaction | `personal/reaction-vibe-coding-front-back` | none | drafted ✓ |
+| Sep 3 | teach | `course-promo/week1-thu-price-before-product` | none | revised ✓ |
+| Sep 8 | opinion | `icp-validation/week1-tue-staging-question` | blog | revised ✓ |
+| Sep 10 | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | revised ✓ |
+| Sep 15 | poll | `course-promo/week1-wed-first-move-poll` | none | draft |
+| Sep 17 | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | drafted ✓ |
+| Sep 22 | teach | `course-promo/week2-tue-mom-test-past-questions` | none | revised ✓ |
+| Sep 24 | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | draft |
+| Sep 29 | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
+| Oct 1 | teach | `course-promo/week2-fri-ten-interviews-recap` | none | revised ✓ |
+| Oct 6 | opinion | `icp-validation/backlog-vibe-coding-disposable` | none | draft |
+| Oct 8 | poll | `course-promo/week2-wed-interview-count-poll` | none | draft |
+| Oct 13 | story/promo | `course-promo/week1-fri-why-i-wrote-it` | course *(promo)* | draft |
 
-**Ratio (this 10-post window):** ~7 value (opinion/teach/reaction/BIP/story) + 1 poll
-+ blog-link + **only 2 course links** (founding Aug 20, 40k Sep 15) -> ~70/20/10.
-**Aug 25 → Sep 3 is four straight no-link value posts** - that run is what makes the
-feed read as a person with takes, not a funnel.
+**Ratio:** across 18 posts, only **3 course links** (founding, 40k, why-i-wrote-it =
+~15%) + 1 blog link; the rest is value/personal/poll. **Aug 25 → Sep 3 is four
+straight no-link posts** - the run that makes the feed read as a person with takes.
 
-Value drafts still to slot (teach/opinion, **course link already dropped**):
-friends-politely-lying, mom-test-past-questions, ten-interviews-recap (all pure-value
-now); why-i-wrote-it (story/BIP - keeps its link, it's a promo); first-move-poll &
-interview-count-poll (polls); backlog-vibe-coding (opinion). All idea-first, visual-ready.
-Story slot is OPEN - needs a real "I was wrong about a founder/idea" case from Paul
-(BigBinary draft deleted 2026-08-14, Paul didn't want it). See story-bank Q2.
+**Still open:** a real "I was wrong about a founder/idea" story to replace the deleted
+BigBinary draft (story-bank Q2). Slot it when Paul has a case.
 
 ## Per-post checklist
 
