@@ -35,7 +35,7 @@ notes: |
 
 A founder showed me an MVP he'd paid $40k for. Three months of work from a team on Upwork.
 
-I've built products like his before, so I knew roughly what it should take. His mostly ran. But he kept hitting broken bits - an error here, a dead feature there - and every one meant the same loop: message the freelancer, explain it, agree a fix, wait days.
+I've built the same kind of thing myself, so I knew what it should cost. His mostly worked. The trouble was what happened when it didn't - he'd chase the freelancer for a fix and lose days waiting.
 
 "I thought they'd hand me something that just worked," he told me. "Now I spend my week managing fixes I don't even understand."
 
