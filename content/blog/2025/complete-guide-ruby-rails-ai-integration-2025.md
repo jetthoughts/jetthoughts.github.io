@@ -1187,4 +1187,4 @@ At JetThoughts, we've helped 200+ clients integrate AI into production Rails app
 
 ---
 
-**About the Author**: The JetThoughts team has 15+ years of Rails expertise and has deployed AI features for clients ranging from early-stage startups to Fortune 500 companies. We specialize in TDD, performance optimization, and production-grade AI integration.
+**About the Author**: The JetThoughts team has 18+ years of Rails expertise and has deployed AI features for clients ranging from early-stage startups to Fortune 500 companies. We specialize in TDD, performance optimization, and production-grade AI integration.

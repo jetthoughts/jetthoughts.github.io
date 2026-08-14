@@ -5,8 +5,8 @@ description: Canonical build + validation entry point; runs Hugo plus the course
 resource: bin/hugo-build
 tags: [build, hugo, validation]
 generated:
-  by: process:okf-migrate
-  at: 2026-07-19T12:00:00Z
+  by: claude/opus-5
+  at: 2026-08-14T00:00:00Z
 ---
 
 `bin/hugo-build` builds the site into `_dest/public-dev/` (repo-root
@@ -41,3 +41,34 @@ safelist entries). Guards: bin/hugo-build runs a warm-up pass when
 production + stats missing; the deploy workflow has an explicit warm-up
 step. sr-only/skip-link also safelisted as defense-in-depth. Never
 trust a first cold production build's CSS.
+
+# Minified output has unquoted attributes (2026-08-13)
+
+`minifyOutput = true` makes Hugo drop quotes on attribute values with no
+spaces: `rel=canonical`, `name=description`, `type=application/ld+json`.
+Valid HTML5, and Google parses it correctly - but regex-based third-party
+SEO/AEO audit tools require quotes and report the site as missing canonical
+tags, meta descriptions, and structured data. All three are false.
+
+Diagnostic tell: checks reading ATTRIBUTE VALUES fail while checks reading
+ELEMENT CONTENT (title, H1) pass. That split means parser artifact, not site
+defect. Settle it in one call with GSC `inspect_url_enhanced`, which returns
+`user_canonical` and the rich-results verdict - Google reporting what it
+actually parsed.
+
+Note `config/test/hugo.toml` sets `minifyOutput = false`, so **the test suite
+never sees minified output** and cannot catch minification-related regressions;
+that needs a `hugo --environment production` build. Full write-up:
+`docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md` §8.
+
+**Our own suite had the same defect** (2026-08-14). Turning `keepQuotes` on
+broke three tests in `test/integration/hugo_pipeline_test.rb` (the CI "Asset
+Pipeline" job) that matched unquoted attribute literals -
+`include?("crossorigin=anonymous")`, `rel=stylesheet`, `as=style`. The
+`integrity="sha256-..."` assertions kept passing because base64 forces quotes
+either way. Same tell as the audit tool: attribute-VALUE matches break,
+element-content matches survive. Fixed with an `attr(name, value)` helper
+matching either form - assert the shape, not the minifier setting. If you
+touch minify config, run `bundle exec ruby -Itest
+test/integration/hugo_pipeline_test.rb` (~12s local, ~568s on CI because it
+runs two full Hugo builds).

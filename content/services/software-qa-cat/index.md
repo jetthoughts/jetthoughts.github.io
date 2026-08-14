@@ -11,7 +11,7 @@ cover_image: service-software-qa-cat.jpg
 menu_custom:
   icon: submenu-software.svg
   title: Software QA &amp; CAT
-  description: Accelerate development, streamline release cycles, and eliminate roadblocks with fully-managed software testing &amp; QA services
+  description: We write the tests your app never had, then send you a bug report you can actually read - what broke and what it costs to fix
 
 metatags:
   image: og-services-software-qa-cat.jpg
@@ -24,7 +24,7 @@ faqs:
   - question: "What's your approach to QA for different project types?"
     answer: "We tailor our QA approach based on project needs: agile projects get continuous testing integration, legacy systems receive comprehensive regression testing, mobile apps get device-specific testing, and web applications receive cross-browser compatibility testing. Each project gets a customized QA strategy."
   - question: "How quickly can your QA team integrate with our development process?"
-    answer: "Our pre-trained QA team can integrate within 1-2 weeks. We adapt to your existing development workflows, tools, and processes while implementing industry best practices. Most clients see immediate improvements in bug detection and release quality within the first sprint. We work closely with our [app and web development](/services/app-web-development/) team to ensure seamless Ruby on Rails testing integration from the start of development."
+    answer: "Our pre-trained QA team can integrate within 1-2 weeks. We adapt to your existing development workflows, tools, and processes while implementing industry best practices. Most clients see immediate improvements in bug detection and release quality within the first sprint. We work closely with our [app and web development](/services/app-web-development/) team so Ruby on Rails testing is wired in from the start of development."
   - question: "Do you provide QA for both web and mobile applications?"
     answer: "Yes, we provide QA services for web applications, mobile apps (iOS and Android), APIs, and desktop applications. Our team has experience with responsive web testing, mobile device testing, API testing, and cross-platform compatibility validation."
 

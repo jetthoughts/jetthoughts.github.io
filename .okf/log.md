@@ -18,6 +18,79 @@
 * **Recurring model quirk**: it sometimes adds a clean sign word ("MANAGER", "ERROR")
   despite the no-text prompt - keep only if correct and it sharpens the gag.
 
+## 2026-08-14 (gates) - every late defect was invisible to source-level matching
+
+* **Update**: findings backlogged in `docs/20-29-testing-qa/20.10` §3b (P0-4,
+  P0-5, P0-6 + a ranked open list); claims-audit and rendered-output rows added
+  to `seo-review-2026-08-13.md` §6 as actions #10-#11.
+* **The finding**: a Lighthouse/snapshot sweep of the live site found three
+  defects the marketing ratchet had reported clean on - a false review count in
+  an unglobbed partial, "Take You to the Next Level" in the careers `<h1>`
+  (wrapped across two template lines), and a nested `<main>` that only exists
+  after `baseof` + page compose. Source-level gates could not see any of them.
+* **The compounding bug**: the ratchet's `scrub` helper stripped tokens
+  containing a slash, and `Level?</span` contains one, so it deleted the word
+  along with the tag. Strip template expressions and HTML tags BEFORE path
+  tokens.
+* **The contradiction**: `testimonial_shortcode_test` asserted the literal
+  careers `<h1>` copy that `marketing_copy_test` bans. Two gates cannot
+  disagree about the same string - the ratchet lost silently. Assert shape, not
+  marketing copy.
+* **The rule**: point text ratchets at RENDERED output, not source. Rendering
+  flattens wraps, resolves partials, and covers pages nobody remembered to
+  glob. One change closes the whole class.
+* **The base rate worth remembering**: 4 of 8 published figures checked this
+  cycle were wrong. Treat an unsourced number as a defect until verified.
+
+## 2026-08-14 (canon) - the founding year was wrong, and so was the instruction layer
+
+* **Update**: new concept [company claims canon](/content/claims-canon.md);
+  `content/index.md` refreshed; `build/hugo-build.md` migrated off the legacy
+  `timestamp` field to `generated`.
+* **The finding**: JetThoughts was founded **2008-09-01**, not 2011. The site
+  had carried 2011 for years, which also made every derived tenure claim three
+  short (a hardcoded "13+ years" in service schema matched *neither* year).
+  Two defects, not one: the canonical `foundingYear` param was wrong AND most
+  claims bypassed it with their own hardcoded copy, so fixing the param alone
+  would have left "since 2011" in eight places.
+* **The bigger finding**: the wrong year and the false "32 clients" review count
+  were baked into the **instruction layer** - `PRODUCT.md` canon,
+  `docs/business/vision-mission.md`, four 2607 rescue-sprint docs, and the 2605
+  outreach claims whitelist. One literally read *'Tenure claim is "since 2011"
+  (from `foundingYear = 2011` - verifiable)'*. It was neither. Anyone following
+  those docs would have re-introduced both.
+* **The rule**: when correcting a published fact, sweep the instruction layer,
+  not just the output layer. And derive - never hardcode - anything with a
+  canonical param behind it.
+* **Tooling note**: serena's `search_for_pattern` regex found seven files that
+  targeted greps missed. qmd was the wrong instrument for an exact-literal hunt
+  (semantic/BM25 over markdown returns topically-related docs, not literal
+  matches) - use qmd for "what do we say about X", serena for "find every
+  occurrence of this string". Recorded in [test gates](/build/test-gates.md)'s
+  sibling lesson about mechanical ratchets beating manual review.
+
+## 2026-08-14 (claims) - the number nobody had a source for was wrong
+
+* **Update**: `.okf/build/test-gates.md` gains the 2% tolerance false-green and
+  the `FORCE_SCREENSHOT_UPDATE` re-record trap;
+  `docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md` §8 actions
+  7-9 closed.
+* **The finding**: the site published "4.8/5 by 32 clients" and
+  `reviewCount: 32` in schema on ~1,147 URLs. `reviewCount` had **no source
+  anywhere in the repo** - `data/company.yaml:11` cites a Clutch rating with no
+  count. The live Clutch profile shows **4.8 from 9 reviews**. The rating was
+  right; the count was overstated ~3.5x. `data/course_banned_strings.yaml:65`
+  had already banned "4.8/5" in course content as a "volatile third-party
+  review score" - the course side learned this and the marketing side did not.
+* **The rule**: a number with no in-repo provenance is a defect, not a detail.
+  When a claims audit says "verify X", verify it before deciding what to do
+  with it - the earlier call to keep 32 was made assuming it was sourced.
+  Prefer a **linked** rating over a bigger unlinked one; the link is the proof.
+* **Also closed**: fabricated `Review` objects ("Technology Executive",
+  "Startup Founder") deleted from `comprehensive-service-schema.html`, and
+  `keepQuotes = true` added (verified in a production build; homepage
+  124,256 -> 125,988 bytes, +1.4%).
+
 ## 2026-08-13 (LinkedIn exhibits) - purpose-built post images consume the house spec
 
 * **Update**: `linkedin-posts/README.md` §"Every post carries a visual" rewritten
@@ -42,6 +115,29 @@
   MBP-14), image column 460px, image is a click-to-open-new-tab link
   (drag-to-attach preserved); prev/next nav now traverses in board order
   (chronological by effective date), not Hugo section order.
+## 2026-08-13 (build) - a failing audit tool is not a failing site
+
+* **Update**: `.okf/build/hugo-build.md` gains "Minified output has unquoted
+  attributes"; full write-up in
+  `docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md` §8.
+* **The finding**: a third-party AI-SEO tool scored the site 60/100 "Multiple
+  Organ Failure" and reported no canonical tags, no structured data, and
+  placeholder meta descriptions. **All false.** `minifyOutput = true` drops
+  quotes on space-free attribute values (`rel=canonical`,
+  `type=application/ld+json`), and the tool's regex parser requires quotes.
+  GSC confirms Google parses all of it correctly.
+* **The tell**: checks reading ATTRIBUTE VALUES failed; checks reading ELEMENT
+  CONTENT (title, H1) passed. Read the failure *shape* before the failure
+  *text* - that split is a parser artifact every time.
+* **The rule**: before acting on any external audit, run GSC
+  `inspect_url_enhanced`. It returns `user_canonical` plus the rich-results
+  verdict - Google reporting what it actually parsed - and settles it in one
+  call. Also note `config/test/hugo.toml` sets `minifyOutput = false`, so the
+  test suite is blind to minification regressions by construction.
+* **What was real**: the same audit's copy criticism. And what it missed
+  entirely - the site publishes fabricated review schema (invented "Technology
+  Executive" reviews + two contradictory ratings). Asking "is schema missing?"
+  never asks "is the schema honest?".
 
 ## 2026-08-13 (visual gate) - a new component needs cold eyes, not the implementer's
 

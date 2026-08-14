@@ -98,63 +98,6 @@
     "offerCount" "2"
     "availability" "https://schema.org/InStock"
   )
-  "aggregateRating" (dict
-    "@type" "AggregateRating"
-    "ratingValue" "4.9"
-    "reviewCount" "23"
-    "bestRating" "5"
-    "worstRating" "1"
-    "ratingExplanation" "Based on client testimonials and project success metrics from 2022-2024"
-  )
-  "review" (slice
-    (dict
-      "@type" "Review"
-      "@id" (printf "%s#review-1" .Permalink)
-      "itemReviewed" (dict
-        "@type" "Service"
-        "@id" (printf "%s#service" .Permalink)
-        "name" .Title
-      )
-      "reviewRating" (dict
-        "@type" "Rating"
-        "ratingValue" "5"
-        "bestRating" "5"
-        "worstRating" "1"
-      )
-      "author" (dict
-        "@type" "Person"
-        "name" "Technology Executive"
-        "jobTitle" "CTO"
-      )
-      "reviewBody" (printf "Exceptional %s that delivered measurable results and exceeded expectations. The team's expertise in Ruby on Rails and strategic guidance transformed our technical capabilities." (lower $serviceType))
-      "datePublished" "2024-11-15"
-      "publisher" (dict
-        "@type" "Organization"
-        "name" "Client Testimonials"
-      )
-    )
-    (dict
-      "@type" "Review"
-      "@id" (printf "%s#review-2" .Permalink)
-      "itemReviewed" (dict
-        "@type" "Service"
-        "@id" (printf "%s#service" .Permalink)
-        "name" .Title
-      )
-      "reviewRating" (dict
-        "@type" "Rating"
-        "ratingValue" "5"
-        "bestRating" "5"
-      )
-      "author" (dict
-        "@type" "Person"
-        "name" "Startup Founder"
-        "jobTitle" "CEO"
-      )
-      "reviewBody" (printf "JetThoughts %s helped us scale from a 3-person team to 15 engineers while maintaining code quality and team productivity. Outstanding results." $serviceType)
-      "datePublished" "2024-10-22"
-    )
-  )
 -}}
 
 {{/* Build conditional property values based on service type */}}
@@ -187,8 +130,8 @@
     (dict
       "@type" "PropertyValue"
       "name" "Years of Experience"
-      "value" "13+"
-      "description" "Combined team experience in technology consulting and development since 2011"
+      "value" (printf "%d+" (sub now.Year (int site.Params.foundingYear)))
+      "description" (printf "Combined team experience in technology consulting and development since %d" (int site.Params.foundingYear))
     )
     (dict
       "@type" "PropertyValue"

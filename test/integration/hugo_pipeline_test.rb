@@ -83,6 +83,20 @@ class HugoPipelineIntegrationTest < Minitest::Test
     Dir["#{HUGO_PROD_DIR}/css/#{pattern}"]
   end
 
+  # Matches an attribute whether or not the minifier quoted its value.
+  #
+  # tdewolff drops quotes on values with no special characters, so production
+  # HTML emitted `rel=stylesheet` / `crossorigin=anonymous` bare while
+  # `integrity="sha256-..."` stayed quoted (base64 contains / and +). Three
+  # tests here matched the bare form literally and broke the day
+  # `[minify.tdewolff.html] keepQuotes = true` was turned on - they were
+  # asserting a minifier setting, not the behaviour under test (SRI and
+  # crossorigin present on production assets). Per the repo's testing rule:
+  # assert the shape, not the configuration.
+  def attr(name, value)
+    /#{name}=["']?#{Regexp.escape(value)}["']?/
+  end
+
   # -- Tests: CSS integrity attributes ------------------------------------
   # css-processor.html adds integrity= to <link> tags ONLY in production
 
@@ -145,7 +159,7 @@ class HugoPipelineIntegrationTest < Minitest::Test
   def test_js_has_integrity_and_crossorigin_in_production
     assert prod_html.include?('integrity="sha256-'),
       "Prod should have integrity attributes on script tags"
-    assert prod_html.include?("crossorigin=anonymous"),
+    assert_match attr("crossorigin", "anonymous"), prod_html,
       "Prod should have crossorigin=anonymous on script tags"
   end
 
@@ -160,14 +174,14 @@ class HugoPipelineIntegrationTest < Minitest::Test
   # css-processor.html wraps integrity in the <link> tag
 
   def test_stylesheet_links_have_integrity_in_production
-    integrity_links = prod_html.scan(%r{<link[^>]*rel=stylesheet[^>]*integrity=[^>]*>})
+    integrity_links = prod_html.scan(/<link[^>]*#{attr("rel", "stylesheet")}[^>]*integrity=[^>]*>/)
 
     assert_operator integrity_links.length, :>=, 1,
       "Prod should have at least 1 link rel=stylesheet tag with integrity"
   end
 
   def test_preload_links_have_integrity_in_production
-    preload_links = prod_html.scan(%r{<link[^>]*rel=preload[^>]*as=style[^>]*integrity=[^>]*>})
+    preload_links = prod_html.scan(/<link[^>]*#{attr("rel", "preload")}[^>]*#{attr("as", "style")}[^>]*integrity=[^>]*>/)
 
     assert_operator preload_links.length, :>=, 1,
       "Prod should have at least 1 link rel=preload as=style with integrity"

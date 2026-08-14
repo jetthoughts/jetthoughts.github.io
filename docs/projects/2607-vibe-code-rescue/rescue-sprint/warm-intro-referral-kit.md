@@ -61,13 +61,13 @@ Keep these editable and personal. They are notes from one founder to another, no
 
 ### C. Forwardable blurb - the contact pastes this to the founder
 
-> If your app was built by a dev shop or an AI tool like Lovable or Cursor and it's breaking now that real users are showing up, this might help. Paul at JetThoughts has been rescuing broken startup MVPs since 2011, and he's offering founders a free Rescue Context Call: a team runs your codebase and sends back a one-page, plain-English read on what to fix first - no pitch, no contract. You can grab a slot here: https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar
+> If your app was built by a dev shop or an AI tool like Lovable or Cursor and it's breaking now that real users are showing up, this might help. Paul at JetThoughts has been rescuing broken startup MVPs since 2008, and he's offering founders a free Rescue Context Call: a team runs your codebase and sends back a one-page, plain-English read on what to fix first - no pitch, no contract. You can grab a slot here: https://jetthoughts.neetocal.com/free-code-audit-find-out-whats-actually-broken-before-you-spend-another-dollar
 
 ---
 
 ## Notes for Paul
 
 - The blurb is the one piece a busy contact will actually paste, so it carries the booking link. The two request templates hand the blurb over - they don't need the link themselves.
-- Tenure claim is **"since 2011"** (from `foundingYear = 2011` - verifiable). Do NOT use "20 years": JetThoughts was founded in 2011 (~15 years), and "20+ years of Rails delivery" isn't true or defensible. Other safe, sourced claims: "95% client retention", "5-year average client relationships", "developers average 8+ years experience". Don't add numbers we can't stand behind.
+- Tenure claim is **"since 2008"** (from `foundingYear = 2008` - verifiable; corrected 2026-08-14, this file previously said 2011). Do NOT use "20 years": JetThoughts was founded 2008-09-01 (~18 years), and "20+ years of Rails delivery" isn't true or defensible. Other safe, sourced claims: "95% client retention", "5-year average client relationships", "developers average 8+ years experience", "4.8/5 on Clutch" (link the profile; do NOT state a review count - "32" was unsourced and the real figure is 9). Don't add numbers we can't stand behind.
 - The `[SPECIFIC THING WE SHIPPED TOGETHER]` line in Template A only lands warm if you fill it with a real, specific memory. If nothing genuine comes to mind for that contact, delete the whole sentence - a mail-merged-sounding line kills the warm channel faster than no line at all.
 - If a founder replies with a real symptom ("I can't tell if they're making progress," "the repo is under their name"), that's a qualified lead - send them straight to the booking link and log it.

@@ -74,7 +74,7 @@ It's also the wrong tool when trust has already collapsed. A developer or shop t
 
 ## Where JetThoughts fits
 
-Our developers average 8+ years of experience, and we've been building Rails apps (Rails is the web technology we specialize in) since 2011 - long enough that every change we ship goes through the same review described above, because we've read too many inherited projects where it didn't happen. If you want the check done for you: a senior JetThoughts engineer reads your repository and sends a plain-English, one-page assessment of what your recent merges actually contain. [Start with the services page](https://jetthoughts.com/services/) - no pitch deck, just the read.
+Our developers average 8+ years of experience, and we've been building Rails apps (Rails is the web technology we specialize in) since 2008 - long enough that every change we ship goes through the same review described above, because we've read too many inherited projects where it didn't happen. If you want the check done for you: a senior JetThoughts engineer reads your repository and sends a plain-English, one-page assessment of what your recent merges actually contain. [Start with the services page](https://jetthoughts.com/services/) - no pitch deck, just the read.
 
 For more on watching a team you can't technically evaluate, see [how to know what your team is doing](/blog/how-know-what-your-team-doing-remote-startup/), and if your product is being built with AI coding tools, [the quality tax on AI-built apps](/blog/quality-tax-ai-mvp-cost/) covers the review gap from that angle.
 

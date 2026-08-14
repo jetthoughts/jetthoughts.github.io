@@ -20,7 +20,7 @@
   "image": "https://jetthoughts.com/assets/images/jetthoughts-og-image.jpg",
   "description": "Expert software development and technology consulting services with {{ sub now.Year (int site.Params.foundingYear) }}+ years of experience and 95% client retention rate.",
   
-  "foundingDate": "2011",
+  "foundingDate": "{{ site.Params.foundingDate }}",
   "numberOfEmployees": {
     "@type": "QuantitativeValue",
     "value": "15-50"
@@ -82,8 +82,11 @@
   
   "aggregateRating": {
     "@type": "AggregateRating",
+    {{/* Sourced from https://clutch.co/profile/jetthoughts - verified 2026-08-14.
+         reviewCount was "32" with no source anywhere in the repo; Clutch shows 9.
+         Re-check the live profile before changing either number. */}}
     "ratingValue": "4.8",
-    "reviewCount": "32",
+    "reviewCount": "9",
     "bestRating": "5",
     "worstRating": "1"
   }{{ with .Site.Params.testimonials }},

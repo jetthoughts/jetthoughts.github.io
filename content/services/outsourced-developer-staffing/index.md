@@ -23,7 +23,7 @@ faqs:
   - question: "What types of developers do you provide?"
     answer: "We provide full-stack developers, Ruby on Rails specialists, React and frontend developers, mobile developers (iOS/Android), DevOps engineers, QA engineers, and UI/UX designers. All developers have 3+ years of experience and are vetted for both technical skills and communication abilities."
   - question: "How do you ensure quality and communication?"
-    answer: "All our developers go through rigorous technical vetting, English proficiency testing, and cultural fit assessment. They follow agile development practices, provide regular progress updates, participate in daily standups, and integrate seamlessly with your existing team and workflows."
+    answer: "All our developers go through rigorous technical vetting, English proficiency testing, and cultural fit assessment. They follow agile development practices, provide regular progress updates, participate in daily standups, and work inside your existing team and workflows."
   - question: "What's included in your fully-managed staffing service?"
     answer: "Our service includes developer sourcing and vetting, skills assessment and matching, onboarding and training, project management oversight, performance monitoring, payroll and benefits administration, and ongoing support. You focus on your product while we handle all staffing complexities. For comprehensive team leadership, consider pairing with our [fractional CTO services](/services/fractional-cto/), and for finding the right long-term hires, our [technical talent recruiting](/services/talent-recruiting-training/) service offers permanent placement solutions."
 
