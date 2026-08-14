@@ -1,5 +1,27 @@
 # Bundle Update Log
 
+## 2026-08-14 (claims) - the number nobody had a source for was wrong
+
+* **Update**: `.okf/build/test-gates.md` gains the 2% tolerance false-green and
+  the `FORCE_SCREENSHOT_UPDATE` re-record trap;
+  `docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md` §8 actions
+  7-9 closed.
+* **The finding**: the site published "4.8/5 by 32 clients" and
+  `reviewCount: 32` in schema on ~1,147 URLs. `reviewCount` had **no source
+  anywhere in the repo** - `data/company.yaml:11` cites a Clutch rating with no
+  count. The live Clutch profile shows **4.8 from 9 reviews**. The rating was
+  right; the count was overstated ~3.5x. `data/course_banned_strings.yaml:65`
+  had already banned "4.8/5" in course content as a "volatile third-party
+  review score" - the course side learned this and the marketing side did not.
+* **The rule**: a number with no in-repo provenance is a defect, not a detail.
+  When a claims audit says "verify X", verify it before deciding what to do
+  with it - the earlier call to keep 32 was made assuming it was sourced.
+  Prefer a **linked** rating over a bigger unlinked one; the link is the proof.
+* **Also closed**: fabricated `Review` objects ("Technology Executive",
+  "Startup Founder") deleted from `comprehensive-service-schema.html`, and
+  `keepQuotes = true` added (verified in a production build; homepage
+  124,256 -> 125,988 bytes, +1.4%).
+
 ## 2026-08-13 (LinkedIn exhibits) - purpose-built post images consume the house spec
 
 * **Update**: `linkedin-posts/README.md` §"Every post carries a visual" rewritten
@@ -24,6 +46,29 @@
   MBP-14), image column 460px, image is a click-to-open-new-tab link
   (drag-to-attach preserved); prev/next nav now traverses in board order
   (chronological by effective date), not Hugo section order.
+## 2026-08-13 (build) - a failing audit tool is not a failing site
+
+* **Update**: `.okf/build/hugo-build.md` gains "Minified output has unquoted
+  attributes"; full write-up in
+  `docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md` §8.
+* **The finding**: a third-party AI-SEO tool scored the site 60/100 "Multiple
+  Organ Failure" and reported no canonical tags, no structured data, and
+  placeholder meta descriptions. **All false.** `minifyOutput = true` drops
+  quotes on space-free attribute values (`rel=canonical`,
+  `type=application/ld+json`), and the tool's regex parser requires quotes.
+  GSC confirms Google parses all of it correctly.
+* **The tell**: checks reading ATTRIBUTE VALUES failed; checks reading ELEMENT
+  CONTENT (title, H1) passed. Read the failure *shape* before the failure
+  *text* - that split is a parser artifact every time.
+* **The rule**: before acting on any external audit, run GSC
+  `inspect_url_enhanced`. It returns `user_canonical` plus the rich-results
+  verdict - Google reporting what it actually parsed - and settles it in one
+  call. Also note `config/test/hugo.toml` sets `minifyOutput = false`, so the
+  test suite is blind to minification regressions by construction.
+* **What was real**: the same audit's copy criticism. And what it missed
+  entirely - the site publishes fabricated review schema (invented "Technology
+  Executive" reviews + two contradictory ratings). Asking "is schema missing?"
+  never asks "is the schema honest?".
 
 ## 2026-08-13 (visual gate) - a new component needs cold eyes, not the implementer's
 

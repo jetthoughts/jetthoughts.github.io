@@ -11,7 +11,7 @@ cover_image: service-talent-recruiting-training.jpg
 menu_custom:
   icon: submenu-staffing.svg
   title: Talent Recruiting and Training
-  description: Scale your development team &amp; simplify the talent acquisition process with top-caliber candidates that are pre-vetted by our team.
+  description: We screen Rails and React candidates the way we screen our own hires - take-home code and a live pairing session. You interview the short list.
 
 metatags:
   image: og-services-talent-recruiting-training.jpg

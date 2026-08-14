@@ -39,7 +39,7 @@ While any team can build a high-quality product with enough time, very few can d
 How we solve it
 ---------------
 
-The fastest way to expand software engineering capacity is by using a trusted technology partner that can deploy pre-trained developers on-demand at any scale.
+The fastest way to expand software engineering capacity is to bring in senior engineers who already know the stack and can start at any scale.
 
 Our developers are ready to deploy within weeks (not months), giving companies the ability to accelerate their software development process while still maintaining control over engineering quality.
 

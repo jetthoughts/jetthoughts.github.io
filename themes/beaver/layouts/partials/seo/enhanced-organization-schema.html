@@ -82,8 +82,11 @@
   
   "aggregateRating": {
     "@type": "AggregateRating",
+    {{/* Sourced from https://clutch.co/profile/jetthoughts - verified 2026-08-14.
+         reviewCount was "32" with no source anywhere in the repo; Clutch shows 9.
+         Re-check the live profile before changing either number. */}}
     "ratingValue": "4.8",
-    "reviewCount": "32",
+    "reviewCount": "9",
     "bestRating": "5",
     "worstRating": "1"
   }{{ with .Site.Params.testimonials }},

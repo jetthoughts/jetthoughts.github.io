@@ -28,6 +28,23 @@ extend it when adding components or critical files. The macOS full suite remains
 
 # Hard-won caveats
 
+- **The 2% default tolerance hides small text/colour changes** (2026-08-14).
+  `DEFAULT_SCREENSHOT_CONFIG = {tolerance: 0.02}`
+  (`test/application_system_test_case.rb:87`). Turning a four-word phrase into
+  a link on the homepage changed ~0.24% of the frame, so the gate PASSED and
+  the baseline was never re-recorded - it still shows the pre-change render.
+  Consequence: a green visual suite does NOT mean "no visual change", only "no
+  change larger than 2% of the frame". For link/colour/short-text edits,
+  verify by reading the built HTML or the render, not by trusting green. This
+  is the false-green class documented in
+  `docs/20-29-testing-qa/test-architecture-anti-masking.md`.
+- **`FORCE_SCREENSHOT_UPDATE=1` re-records EVERYTHING** (2026-08-14). On
+  `bin/dtest` it also disables the `git checkout -- .../linux` guard that
+  normally discards sub-tolerance Rosetta drift, so a run rewrites all 45
+  Linux baselines rather than the few your change moved. Procedure: run it,
+  copy out only the baselines your change legitimately moved, `git checkout --
+  test/fixtures/screenshots/linux`, then copy your files back. On `bin/qtest`
+  the flag appears to be ignored entirely - the suite still compares.
 - **A `skip_area` selector that matches NOTHING costs 5s per screenshot**
   (2026-08-01). snap_diff resolves each mask via `all(sel, visible: true)`,
   and Capybara waits `default_max_wait_time` (5s) on a zero-match selector.
