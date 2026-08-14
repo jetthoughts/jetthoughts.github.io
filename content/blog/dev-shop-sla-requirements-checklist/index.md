@@ -86,7 +86,7 @@ Expect the price to move. Hard response numbers mean the shop is now selling you
 
 A resolution clock also creates a new incentive you should watch: a team racing a deadline is tempted to close the report with a shallow patch that makes the symptom disappear. An SLA measures speed, and nothing in it measures whether the code underneath stays healthy - that takes [someone technical reviewing the work weekly](/blog/code-quality-evaluation-non-technical-founders/), which is a separate job no clause replaces. And a few good small shops will simply decline hard fix guarantees, which is useful too: you learned how they handle commitments before signing instead of during an outage.
 
-If you can't tell whether slow replies are a service problem or a code problem, we do a free 45-minute code audit: one senior developer, your codebase, a written one-page assessment. We've worked in Rails since 2011 and 95% of our clients stay with us - numbers we're comfortable putting in a contract, which is rather the point of this post. [Get the audit](https://jetthoughts.com/contact-us/).
+If you can't tell whether slow replies are a service problem or a code problem, we do a free 45-minute code audit: one senior developer, your codebase, a written one-page assessment. We've worked in Rails since 2008 and 95% of our clients stay with us - numbers we're comfortable putting in a contract, which is rather the point of this post. [Get the audit](https://jetthoughts.com/contact-us/).
 
 Start with the inbox measurement tonight. It needs no lawyer, and by Friday you'll know which of the five clauses to fight for first.
 

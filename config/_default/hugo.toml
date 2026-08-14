@@ -87,8 +87,13 @@ disableKinds = []
 [params]
   email="info@jetthoughts.com"
   phone="+1 754 216 9568"
-  # Single source for tenure claims; matches foundingDate in organization schema.
-  foundingYear = 2011
+  # Single source for tenure claims. JetThoughts was founded 2008-09-01
+  # (corrected 2026-08-14 - the site had carried 2011 for years, which also
+  # made every derived "N+ years" claim three years short). Anything stating
+  # tenure must derive from this, not hardcode a year: `since {{ site.Params.foundingYear }}`
+  # or `{{ sub now.Year (int site.Params.foundingYear) }}+ years`.
+  foundingYear = 2008
+  foundingDate = "2008-09-01"
   description="JetThoughts's expert team of developers and consultants has helped clients launch highly tailored projects, and we'd love to help you, too."
   testimonials_heading = "Most clients stay over 3 years. Some stayed beyond 6."
   testimonials_description = "Don't just take our word for it. See what our clients say about our services."

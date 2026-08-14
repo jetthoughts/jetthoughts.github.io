@@ -17,7 +17,7 @@ metatags:
 founder_expertise:
   headline: Founded by Expert Rails Developers
   description: |
-    JetThoughts was founded in 2011 by **Paul Keen**, a seasoned Ruby on Rails developer and technical leader with 15+ years of experience building scalable web applications for startups and growing companies. Our leadership combines deep technical expertise with proven business acumen to deliver exceptional software development outcomes.
+    JetThoughts was founded in 2008 by **Paul Keen**, a seasoned Ruby on Rails developer and technical leader with 18+ years of experience building scalable web applications for startups and growing companies. Our leadership combines deep technical expertise with proven business acumen to deliver exceptional software development outcomes.
 
   team_leadership:
     - name: Technical Expertise

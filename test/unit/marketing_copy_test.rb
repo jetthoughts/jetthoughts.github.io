@@ -62,7 +62,17 @@ class MarketingCopyTest < Minitest::Test
     # three different ways in three files - hence all three spellings here.
     "32 client" => "false review count - Clutch shows 9, link the profile instead",
     "by 32" => "false review count - Clutch shows 9, link the profile instead",
-    "thirty-two clients" => "false review count - Clutch shows 9, link the profile instead"
+    "thirty-two clients" => "false review count - Clutch shows 9, link the profile instead",
+    # Same class: a wrong number that lived in many spellings across many files.
+    # JetThoughts was founded 2008-09-01; the site carried 2011 for years, which
+    # also made every derived "N+ years" claim three short. Derive tenure from
+    # site.Params.foundingYear - never hardcode the year (corrected 2026-08-14).
+    "since 2011" => "stale tenure - founded 2008-09-01; derive from site.Params.foundingYear",
+    "founded in 2011" => "stale tenure - founded 2008-09-01"
+    # Deliberately NOT banning "15+ years": it catches staff-experience claims
+    # ("our fractional CTOs average 15+ years of industry experience") that are
+    # independent of when the company was founded. Only company-tenure
+    # spellings belong here. A ban that cannot tell the two apart is noise.
   }.freeze
 
   # Surfaces that render the rating block but are not marketing prose pages.

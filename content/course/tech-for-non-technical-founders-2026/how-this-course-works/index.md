@@ -231,7 +231,7 @@ If you just have an idea or a half-built prototype you're tinkering with, skip t
 
 ## Who built this
 
-Built by [JetThoughts](https://jetthoughts.com). We've run a Rails-first dev shop since 2011, and we have sat on the receiving end of enough first builds gone wrong to know which mistakes repeat: a 15-page wishlist spec where a one-page brief should have been, or a GitHub account registered to a contractor who stopped replying. This course is the desk reference we wish those founders had before their first build decision.
+Built by [JetThoughts](https://jetthoughts.com). We've run a Rails-first dev shop since 2008, and we have sat on the receiving end of enough first builds gone wrong to know which mistakes repeat: a 15-page wishlist spec where a one-page brief should have been, or a GitHub account registered to a contractor who stopped replying. This course is the desk reference we wish those founders had before their first build decision.
 
 Why free? A founder who validates before building makes a better future client than one we meet mid-disaster, and there is nothing to buy inside the course.
 
