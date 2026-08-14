@@ -35,12 +35,13 @@ The visitor typically lands from a personal outreach reply, a Reddit/IndieHacker
 
 - **JetVelocity design system** (binding, canonical: `.stitch/design.md`): obsidian dark, Ruby red `#cc342d` as the brand accent ink, neon purple `#a855f7`. Ruby red is the accent, not decoration.
 - Voice: plain-English practitioner, Rob Walling directness + Rand Fishkin vulnerability for founder-facing copy; no therapist voice, no slogans.
-- Name/assets: JetThoughts, founded 2011 (tenure claim is "since 2011" — never "20 years").
+- Name/assets: JetThoughts, founded **2008-09-01** (tenure claim is "since 2008" — never "20 years"). Derive tenure from `site.Params.foundingYear`; never hardcode the year. Corrected 2026-08-14 — the site and these docs carried 2011 for years.
 
 ## Evidence on Hand
 
 Confirmed policy (2026-07-26): **sourced numbers only — nothing beyond these** on any marketing surface:
-- 4.8/5 rating from 32 clients · 5-year average client relationships · 95% client retention · shipping Rails since 2011 · developers average 8+ years experience.
+- 4.8/5 rating on [Clutch](https://clutch.co/profile/jetthoughts) · 5-year average client relationships · 95% client retention · shipping Rails since 2008 · developers average 8+ years experience.
+- **Do not state a review count.** "32 clients" was published for years with no source; the live Clutch profile shows 9 (verified 2026-08-14). Link the profile instead — a linked rating beats a bigger unlinked number.
 - **Real verbatim founder quotes** from `docs/projects/2607-vibe-code-rescue/rescue-sprint/voice-of-customer.md` are allowed, appropriately attributed/anonymized.
 - **Absence that must not be fabricated** (repo-derived): no completed Vibe-Code-Rescue case study of our own exists yet — first engagement's case study is an Oct 2026 milestone. Surfaces must not imply one. Market examples (e.g. the $40K YC rescue) are third-party evidence and must be labeled as such.
 

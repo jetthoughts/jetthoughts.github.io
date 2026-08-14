@@ -1,6 +1,6 @@
 ---
 title: "Ruby on Rails Development Cost Guide 2025: Complete Pricing Breakdown"
-description: "Discover Ruby on Rails development costs in 2025. Get detailed pricing for MVP, SaaS, and enterprise applications. Learn cost factors, team rates, and budget planning from JetThoughts' 15+ years of Rails expertise."
+description: "Discover Ruby on Rails development costs in 2025. Get detailed pricing for MVP, SaaS, and enterprise applications. Learn cost factors, team rates, and budget planning from JetThoughts' 18+ years of Rails expertise."
 slug: ruby-on-rails-development-cost-guide-2025
 author: Paul Keen
 created_at: '2025-01-12T10:00:00Z'
@@ -26,7 +26,7 @@ faqs:
     answer: "A Rails MVP typically takes 2-4 months and costs $15,000-$50,000, depending on features. This includes basic user authentication, core functionality, responsive design, and deployment. The rapid development capabilities of Rails make it ideal for quick market validation."
 ---
 
-Planning a Ruby on Rails project in 2025? Understanding development costs upfront is crucial for budget planning and making informed decisions. This comprehensive guide breaks down Rails development pricing, from simple MVPs to complex enterprise solutions, based on our 15+ years of experience delivering successful Rails projects at JetThoughts.
+Planning a Ruby on Rails project in 2025? Understanding development costs upfront is crucial for budget planning and making informed decisions. This comprehensive guide breaks down Rails development pricing, from simple MVPs to complex enterprise solutions, based on our 18+ years of experience delivering successful Rails projects at JetThoughts.
 
 ## Quick Cost Overview
 

@@ -130,8 +130,8 @@
     (dict
       "@type" "PropertyValue"
       "name" "Years of Experience"
-      "value" "13+"
-      "description" "Combined team experience in technology consulting and development since 2011"
+      "value" (printf "%d+" (sub now.Year (int site.Params.foundingYear)))
+      "description" (printf "Combined team experience in technology consulting and development since %d" (int site.Params.foundingYear))
     )
     (dict
       "@type" "PropertyValue"

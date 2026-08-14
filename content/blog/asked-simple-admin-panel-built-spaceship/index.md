@@ -80,7 +80,7 @@ Third, test the brief before sending it to a human. Paste it into Claude or Chat
 
 You don't have to switch shops to try any of this - the change is in the next spec you send. If you hand the same team a page with no blank spaces and the spaceship still shows up, that's a different problem, and [there's a separate guide for that conversation](/blog/fire-dev-shop-guide/).
 
-At JetThoughts we've been building Ruby on Rails apps (the web framework we work in) since 2011, and a steady share of that work is taking over projects where the spaceship already landed. If you're staring at one now, we do a free 45-minute code audit: one senior developer reads your codebase - all the code behind your product - and writes you a one-page assessment of what to keep and what to delete. No contract and no follow-up calls after.
+At JetThoughts we've been building Ruby on Rails apps (the web framework we work in) since 2008, and a steady share of that work is taking over projects where the spaceship already landed. If you're staring at one now, we do a free 45-minute code audit: one senior developer reads your codebase - all the code behind your product - and writes you a one-page assessment of what to keep and what to delete. No contract and no follow-up calls after.
 
 ## Further reading
 

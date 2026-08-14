@@ -1,7 +1,7 @@
 ---
 
 title: "Tech Talent Recruiting: 50% Less Turnover | JetThoughts"
-description: "Tech talent recruiting & training services. Find & develop Ruby developers, reduce turnover by 50%. Proven hiring process, 13+ years experience. Start hiring."
+description: "Tech talent recruiting & training services. Find & develop Ruby developers, reduce turnover by 50%. Proven hiring process, 18+ years experience. Start hiring."
 headline: Fully-managed recruiting for developers
 excerpt: Technical talent recruiting services to grow your engineering team faster. Eliminate recruiting workload with our specialized tech talent recruiting approach and access to pre-vetted Ruby developers and software development talent.
 slug: talent-recruiting-training

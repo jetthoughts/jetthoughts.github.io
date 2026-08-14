@@ -63,10 +63,17 @@ class TestimonialShortcodeTest < BasePageTestCase
   def test_careers_page_testimonial
     doc = parse_html_file("careers/index.html")
 
-    # The careers page should render successfully
+    # The careers page should render successfully. Assert the SHAPE - one
+    # non-empty h1 - not the exact wording. This previously pinned the literal
+    # copy "Looking for a Team to Take You to the Next", which made the test
+    # break on any headline edit and, worse, actively enforced a phrase the
+    # marketing_copy_test ratchet bans ("next level"). Two gates cannot
+    # disagree about the same string.
+    headings = doc.css("h1").map { |h| h.text.strip }.reject(&:empty?)
+    assert_equal 1, headings.length,
+      "Careers page should render exactly one non-empty h1, got: #{headings.inspect}"
+
     page_text = doc.text
-    assert page_text.include?("Looking for a Team to Take You to the Next"),
-      "Careers page should have expected heading"
 
     # Verify testimonial from frontmatter renders
     # Based on careers.html layout, testimonial content is in a specific section

@@ -55,7 +55,7 @@ Most startups attempt to hire full-time developers or engage traditional agencie
 
 ## Our Rapid MVP Development Solution
 
-With 13+ years of startup development experience, JetThoughts provides a proven rapid MVP development process that accelerates time-to-market while building scalable technical foundations:
+With 18+ years of startup development experience, JetThoughts provides a proven rapid MVP development process that accelerates time-to-market while building scalable technical foundations:
 
 **Week 1-2: Technical Discovery & Planning**
 - Fractional CTO conducts technical assessment and architecture planning
@@ -112,7 +112,7 @@ With 13+ years of startup development experience, JetThoughts provides a proven 
 
 We've helped startups across healthcare, education, SaaS, and e-commerce transform ideas into fundable, scalable products. Our combination of:
 
-- **Technical Expertise**: 13+ years Rails experience, 540+ published technical articles
+- **Technical Expertise**: 18+ years Rails experience, 540+ published technical articles
 - **Startup Focus**: Specialized processes for rapid MVP development and validation
 - **Fractional CTO Services**: Strategic guidance without full-time executive costs
 - **Proven Results**: 89% fundraising success, 95% client retention, 3x faster delivery

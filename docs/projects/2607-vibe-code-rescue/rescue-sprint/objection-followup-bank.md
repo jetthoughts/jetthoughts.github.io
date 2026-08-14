@@ -42,7 +42,7 @@ The 3-touch no-reply sequence lives at the bottom. It works for founders who boo
 
 **Force**: Anxiety (trust broken once, now allergic to promises)
 
-**What NOT to say**: "We have 4.8/5 from 32 clients." (Proof helps later, but leading with it sounds like every other pitch.)
+**What NOT to say**: "We have 4.8/5 from 32 clients." (Two problems: leading with proof sounds like every other pitch, and the count is wrong - Clutch shows 9. If proof comes up later, say "4.8/5 on Clutch" and link it.)
 
 **What TO say**: "I'd be surprised if you weren't skeptical. That's why the first step is free and the write-up is yours to keep - you judge us by what we actually find in your code, not by what we say about ourselves on a sales call. If the write-up doesn't feel honest, you walk away with a better understanding of your own app."
 

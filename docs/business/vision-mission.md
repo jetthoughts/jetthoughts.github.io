@@ -8,7 +8,7 @@
 
 ## What JetThoughts is
 
-A Ruby on Rails engineering firm, shipping production software since 2011. Verifiable track record: 4.8/5 from 32 clients, ~95% client retention, five-year average client relationships, developers averaging 8+ years of experience. We work with founders, not enterprises.
+A Ruby on Rails engineering firm, shipping production software since 2008. Verifiable track record: 4.8/5 on Clutch, ~95% client retention, five-year average client relationships, developers averaging 8+ years of experience. We work with founders, not enterprises.
 
 ## Mission
 
