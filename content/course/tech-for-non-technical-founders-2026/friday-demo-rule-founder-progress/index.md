@@ -103,6 +103,8 @@ By Friday of week 4, you will know whether your dev team is shipping or stalling
 
 ## Further reading
 
+- JetThoughts, [Retros Are Your Transparency Tool](/blog/retros-founder-transparency-tool/) - the third leg of the transparency stool: the standup proves work, the Friday demo shows working software, the retro shows process health.
+- JetThoughts, [How to make small, valuable async standups](/blog/how-make-small-valuable-async-standups-productivity-development/) - the daily companion practice; the demo is weekly, the standup keeps the week honest in between.
 - Atlassian, [Sprint Reviews and Demos](https://www.atlassian.com/agile/scrum/sprint-reviews) - the canonical reference on demo meetings and how they drift into status theatre when nobody asks for working software.
 - Eric Ries via Lean Startup Co., [What Is an MVP?](https://leanstartup.co/resources/articles/what-is-an-mvp/) - the validated-learning framing that makes "what did we cut?" a real product question.
 - Will Larson (via First Round Review), [Engineering leadership anti-patterns from Stripe, Uber, Carta](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) - on the pull request funnel as the load-bearing signal a Friday demo surfaces from outside the system.
