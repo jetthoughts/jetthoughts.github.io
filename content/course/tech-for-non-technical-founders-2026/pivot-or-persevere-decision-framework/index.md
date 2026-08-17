@@ -161,8 +161,6 @@ D. is on his third pivot now: the original hypothesis (audit prep), then month-e
 ## Further reading
 
 - Eric Ries, [*The Lean Startup*](https://theleanstartup.com/) - the canonical text on pivots, including all ten pivot types and the discovery-loop framing this chapter compresses.
-- Steve Blank, [The Customer Development Manifesto](https://steveblank.com/2009/08/31/the-customer-development-manifesto-reasons-for-the-revolution-part-1/) - the customer-development counterpart to Ries's pivot framework.
-- Patrick Vlaskovits and Brant Cooper, [*The Lean Entrepreneur*](https://leanentrepreneur.co/) - field-tested patterns for running discovery loops with limited resources.
 - Lenny Rachitsky, [The art of the pivot: how, why, and when to pivot](https://www.lennysnewsletter.com/p/the-art-of-the-pivot-part-2-how-why) - decision-criteria interviews with founders who pivoted and survived (and some who pivoted and did not).
 - Marty Cagan, [Continuous Discovery vs Continuous Pivots](https://www.svpg.com/continuous-discovery-vs-continuous-pivots/) - the senior product perspective on when persevere beats pivot.
 - Y Combinator, [All about pivoting](https://www.ycombinator.com/library/6p-all-about-pivoting) - the YC partner perspective on trigger conditions and signal strength.

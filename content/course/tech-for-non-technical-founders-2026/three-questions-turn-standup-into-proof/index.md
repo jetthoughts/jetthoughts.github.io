@@ -114,9 +114,5 @@ If most of the week's answers came back as fails, the problem is not the standup
 ## Further reading
 
 - Atlassian, [Daily Standup Meetings](https://www.atlassian.com/agile/scrum/standups) - the canonical reference on the three-question format and the failure modes it slides into.
-- Will Larson (via First Round Review), [Engineering leadership anti-patterns from Stripe, Uber, Carta](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) - on the pull request funnel as the load-bearing signal for engineering health.
-- Eric Ries via Lean Startup Co., [What Is an MVP?](https://leanstartup.co/resources/articles/what-is-an-mvp/) - the validated-learning framing that makes "what did we cut?" a real product question.
-- DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for full-stack developers shipping end-to-end.
-- Qodo, [State of AI Code Quality 2025](https://www.qodo.ai/reports/state-of-ai-code-quality/) - 1.7x more issues in AI-generated code; useful context for why PR review questions matter more in 2026.
 - Scrum Alliance, [Async Standups](https://resources.scrumalliance.org/Article/async-standups) - on running written standups when the team is distributed, with the same three-question backbone.
 - Martin Fowler, [It's Not Just Standing Up: Patterns for Daily Standup Meetings](https://martinfowler.com/articles/itsNotJustStandingUp.html) - a deep practitioner reference on what daily standups should produce and when they fail.

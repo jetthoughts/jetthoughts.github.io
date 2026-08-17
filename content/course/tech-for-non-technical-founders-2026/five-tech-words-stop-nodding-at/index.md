@@ -164,9 +164,6 @@ If your team's vocabulary makes you nervous, the next layer of the diagnostic is
 - Ward Cunningham via Martin Fowler, [Technical Debt](https://martinfowler.com/bliki/TechnicalDebt.html) - the original 1992 metaphor.
 - Eric Ries via Lean Startup Co., [What Is an MVP?](https://leanstartup.co/resources/articles/what-is-an-mvp/) - the validated-learning framing.
 - Docker, [What Is a Container Image?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/) - the official docs definition.
-- DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for keeping the architecture small.
-- Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - 45% of LLM-generated code shipped at least one exploitable flaw.
-- LitsLink, [Cost of Outsourcing Software Development](https://litslink.com/blog/cost-of-outsourcing-software-development) - 42% of developer time goes to technical debt.
 
 ---
 

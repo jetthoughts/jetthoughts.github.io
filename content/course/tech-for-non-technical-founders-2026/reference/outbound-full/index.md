@@ -186,10 +186,8 @@ You've completed the core 5-module course - hypothesis, smoke test + price, prob
 
 - OpenHunts, [Product Launch Statistics: Success Rates & Data](https://openhunts.com/blog/tech-product-launch-statistics-insights) - the primary source for the Product Hunt 3.1% vs Indie Hackers 23.1% per-engaged-post conversion data (387-launch 2024 study, 156 founders surveyed).
 - Lenny Rachitsky, [How to win your first 10 B2B customers](https://www.lennysnewsletter.com/p/how-to-win-your-first-10-b2b-customers) - the 7-step playbook from 100+ B2B founders, including the cold-outbound section.
-- Lenny Rachitsky, [How the biggest consumer apps got their first 1,000 users](https://www.lennysnewsletter.com/p/how-the-biggest-consumer-apps-got) - first-users tactics from Airbnb, Tinder, Etsy, Reddit and more.
 - Paul Graham, [Do Things That Don't Scale](http://paulgraham.com/ds.html) - the foundational text on manual customer recruitment, including the Stripe Collison-brothers cold-DM-and-install motion.
 - Y Combinator Library, [The Sales Playbook for Founders](https://www.ycombinator.com/library/Mo-the-sales-playbook-for-founders) - YC's playbook on founder-led sales, from first pilots to closed recurring revenue.
-- Sahil Bloom, [The Curiosity Chronicle](https://www.sahilbloom.com/newsletter) - his newsletter on early traction and the relationship-to-cold transition that closes the personal-network gap.
 
 ---
 
