@@ -1497,3 +1497,20 @@ no parallel state file) and appends an audit line to
    LinkedIn composer** (and the contenteditable has no a11y ref for form_input).
    Recipe updated: stage everything, Paul pastes; never chunk-retry a denied
    type action.
+
+## 2026-08-17 - GA property ID made unmissable; LinkedIn attribution trap
+
+Paul asked for the GA property to be recorded so sessions stop re-searching
+the account tree - the fact was already in `workflows/analytics-access.md`
+(`328508492`), but the session enumerated properties anyway. Fixes:
+
+1. **TL;DR line added at the top of "Which property to query"**: query
+   `328508492` directly, never enumerate first. Re-confirmed 2026-08-17:
+   LinkedIn/course sessions exist only there; `315618854` returns zero.
+2. **New trap**: LinkedIn clicks arrive as `linkedin.com / (referral)` with an
+   empty campaign even though staged first-comment links carry UTM. Query by
+   `sessionSource CONTAINS linkedin`, not campaign name, and audit the live
+   comment's link for lost UTM.
+3. First LI-post evidence (Aug 13 validate-before-build): ~4 clicks on post
+   day, including a 26-min read of the linked lesson and a 35-min homepage
+   session - low volume, high depth.
