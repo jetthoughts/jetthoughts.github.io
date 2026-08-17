@@ -152,7 +152,28 @@ docs/projects/**/*-verification-report.md
 *.rvf
 *.rvf.lock
 kanban/
-.agents/
+# .agents/ is a local skill workspace and stays untracked BY DEFAULT - except the
+# skills the tracked pipelines actually invoke. blog-pipeline.md's blocking gates
+# (slop-detector, humanizer, seo-aeo-audit) have to resolve for a container/CI
+# session, and CI can see neither ~/.claude/skills nor an untracked .agents/.
+# Git cannot re-include a file whose parent dir is excluded, hence the dir-first
+# negation below. Add a skill here only when a TRACKED doc invokes it.
+.agents/*
+!.agents/skills/
+.agents/skills/*
+!.agents/skills/async-first-communication/
+!.agents/skills/impeccable/
+!.agents/skills/kanban-md/
+!.agents/skills/slop-detector/
+!.agents/skills/humanizer/
+!.agents/skills/seo-aeo-audit/
+!.agents/skills/content-production/
+!.agents/skills/copy-editing/
+!.agents/skills/copywriting-core/
+!.agents/skills/content-strategy/
+!.agents/skills/social-media-trends-research/
+!.agents/skills/37signals-rails/
+!.agents/skills/stitch-loop/
 .junie
 
 # Ruflo local secrets and runtime data
