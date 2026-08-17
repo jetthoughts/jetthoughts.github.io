@@ -7,6 +7,7 @@ tags: [content, linkedin, workflow, voice]
 generated:
   by: process:okf-migrate
   at: 2026-07-12T00:00:00Z
+timestamp: 2026-08-17T00:00:00Z
 ---
 
 # Overview
@@ -36,6 +37,31 @@ any user pushback on the same draft, escalate to `reflexion-critique`
 (multi-judge debate). Solo iteration past first delivery has
 repeatedly missed pattern-level tells (over-narration, cinematic
 beat-marking, shape-coded copywriting).
+
+# Local review board + composer scheduling (2026-08-17)
+
+**Review = a link, not pasted text.** Run `bin/dev`, hand Paul
+`http://localhost:1313/linkedin/` (board) or
+`/linkedin/<lane>/<slug>/` (single post). Dev-only: the mount lives in
+`config/development/hugo.toml` (`linkedin-posts/` → `content/linkedin`);
+production builds never ship these pages.
+
+**Driving the native composer (claude-in-chrome):**
+
+- Focus the editor by clicking the *placeholder text* directly — a click
+  in the empty area below it does not focus and typing is silently lost.
+- Compose text = post **body + the frontmatter `cta` line** (the cta is
+  not stored in the body).
+- Image must be attached BEFORE scheduling; Paul attaches (file dialog
+  is not automatable).
+- Schedule dialog uses the account's local timezone (CEST for Paul);
+  date via calendar click, time via the field's dropdown.
+- The scheduled queue has **no direct URL**
+  (`/my-items/scheduled-posts/` 404s) — reach it via composer → clock
+  icon → "View all scheduled posts".
+- After scheduling: flip the post's frontmatter (`status: scheduled`,
+  `stage: now`, `scheduled_for`) and the `linkedin-posts/content-plan.md`
+  table row in the same commit.
 
 # Citations
 

@@ -1,5 +1,19 @@
 # Bundle Update Log
 
+## 2026-08-17 (LI review board preview + composer scheduling recipe)
+
+* **Trigger**: Paul asked for a standing rule — reviewing LI posts should hand
+  him a dev-server link, not pasted text. Same session scheduled the Aug-19
+  founding-hypothesis post via the native composer and hit the operational
+  gotchas worth keeping.
+* **Change**: `workflows/linkedin-post-pipeline.md` gained a "Local review
+  board + composer scheduling" section: `bin/dev` → `/linkedin/` board URLs
+  (dev-only mount in `config/development/hugo.toml`), composer focus/cta/image
+  gotchas, no-direct-URL scheduled queue, and the post-scheduling frontmatter
+  flip. Mirrors: `CLAUDE.md` pointer + `linkedin-posts/README.md` §Review board
+  (commit 5665c2d26). Also: PR #455 confirmed merged; stale "not merged" note
+  in `linkedin-posts/content-plan.md` corrected.
+
 ## 2026-08-17 (Lesson 4.4 promo-shell fix) - the micro/reference altitude rule
 
 * **Trigger**: Paul flagged 4.4 (self-serve-mvp-stack-build-phases) as "one big
