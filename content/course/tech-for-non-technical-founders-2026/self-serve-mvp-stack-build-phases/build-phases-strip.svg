@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 490" role="img" aria-labelledby="bps-title bps-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="490" viewBox="0 0 720 490" role="img" aria-labelledby="bps-title bps-desc">
   <title id="bps-title">Four build phases, each proven by one demo, then a five-green-lights gate that advances you to Module 5.</title>
   <desc id="bps-desc">Four numbered phase cards in a row. Phase 1 Lovable - screens click, nothing saved. Phase 2 Supabase - a real signup persists. Phase 3 Stripe - a one-dollar test charge flips the row to paid. Phase 4 go live - five ICP users hit the live URL. An arrow drops into a wide green gate card listing five exit lights: Stripe in live mode, custom domain wired, one fresh ICP user hit the paywall, zero JS errors at checkout, a weekly demo recording exists. Any light red means fix it first. All five green advances to Module 5. Basis: the self-serve MVP build - one demo is the proof of each phase.</desc>
   <defs>
@@ -11,11 +11,11 @@
       .ph    { font-size: 20px; font-weight: 700; fill: #121212; }
       .phm   { font-size: 20px; font-weight: 700; fill: #121212; }
       .num   { font-size: 18px; font-weight: 700; fill: #ffffff; }
-      .demo  { font-size: 18px; font-weight: 400; fill: #333333; }
+      .demo  { font-size: 20px; font-weight: 400; fill: #333333; }
       .gate  { font-size: 20px; font-weight: 700; fill: #2e7d32; }
-      .light { font-size: 18px; font-weight: 400; fill: #222222; }
-      .note  { font-size: 18px; font-weight: 400; fill: #555555; }
-      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+      .light { font-size: 20px; font-weight: 400; fill: #222222; }
+      .note  { font-size: 20px; font-weight: 400; fill: #555555; }
+      .basis { font-size: 19px; font-weight: 400; fill: #555555; }
     </style>
     <marker id="bp-tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
       <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>

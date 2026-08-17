@@ -43,7 +43,7 @@ The ownership audit was twenty minutes of green checkmarks - solo self-serve fou
 
 ---
 
-## [Lessons 4.3 and 4.4: The Build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
+## [Lesson 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) and [Lesson 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/): The Build
 
 Setup first: Lovable, Supabase, Stripe, all on her accounts, pre-flight rules read twice. Then she pasted Section 3 of her brief - the outcome-shaped one, with the hand-curated shortlist line - into Lovable, exactly as written in Module 3.
 

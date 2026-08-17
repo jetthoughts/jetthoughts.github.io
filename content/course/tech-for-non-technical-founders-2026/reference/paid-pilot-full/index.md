@@ -10,32 +10,44 @@ metatags:
 cover_image_alt: "JetThoughts course cover: The Paid Pilot Playbook - DPA Clauses, Pricing, and Scripts, with a document card on the right"
 ---
 
-> **Reference companion to [Lesson 5.6 · Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)** - the clause-by-clause DPA walkthrough, the full pricing-band math by sector, the Stripe Checkout flow, the conversation script with objection handling, and the honest exceptions. Read the micro-lesson first for the DPA template and the deposit math; return here when a prospect pushes back and you need the objection scripts.
+Charge for pilots. The deposit is 10-30% of projected year-one contract value, $500 minimum, paid before kickoff, credited toward year one on conversion - and refunded 100% if you cannot deliver. The contract that carries it is a one-page DPA (Design Partner Agreement - a short co-design pilot contract, not an MSA). This page holds [the pricing math](#the-pricing-math-in-full), [the ask script, and the objection handling](#the-conversation-script) in full.
+
+> **Companion to [Lesson 5.6 · Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)**, part of the free [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum - the copy-paste one-page DPA template and the five-minute deposit math live in the micro-lesson.
 
 ---
 
 ## The six DPA clauses in detail
 
-A few clauses deserve more detail than the table in Lesson 5.6 can hold.
+A few clauses deserve more detail than the [micro-lesson's summary table](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) can hold.
 
-The **scope of pilot** section is where new founders over-spec. Keep it to three outcomes the customer wants and two specific use cases; anything outside that list stays out of scope until conversion. The list also anchors the Friday demos - if a demo does not advance one of the three outcomes, the demo is off-scope and you say so. Friday cadence comes from the [Friday demo lesson](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/).
+### Scope of pilot
 
-The **pilot fee and deposit** clause is what makes everything else work. The deposit lands at 10-30% of projected year-one annual contract value (ACV), paid via Stripe before pilot kickoff and credited dollar-for-dollar against the year-one invoice on conversion. If the customer cancels before week 4, they forfeit the deposit (their commitment). If the founder cancels for any reason, the founder refunds 100% (your commitment). Pricing math is below.
+This is where new founders over-spec. Keep it to three outcomes the customer wants and two specific use cases; anything outside that list stays out of scope until conversion. The list also anchors the Friday demos - if a demo does not advance one of the three outcomes, the demo is off-scope and you say so. Friday cadence comes from the [Friday demo lesson](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/).
 
-The **success criteria** clause is what makes the DPA a real contract instead of a handshake. Pick three measurable outcomes the pilot is supposed to produce (for example, hours saved per week, errors avoided per month, or revenue lifted per quarter), worded in the customer's verbatim language from the [Lesson 5.5 replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
+### Pilot fee and deposit
+
+The clause that makes everything else work. The deposit lands at 10-30% of projected year-one annual contract value (ACV), paid via Stripe before pilot kickoff and credited dollar-for-dollar against the year-one invoice on conversion. If the customer cancels before week 4, they forfeit the deposit (their commitment). If the founder cancels for any reason, the founder refunds 100% (your commitment). Pricing math is below.
+
+### Success criteria
+
+The clause that makes the DPA a real contract instead of a handshake. Pick three measurable outcomes the pilot is supposed to produce (for example, hours saved per week, errors avoided per month, or revenue lifted per quarter), worded in the customer's verbatim language from the [replies to your first outreach emails](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
 
 If two of three are hit by week 6, the year-one contract auto-converts unless the customer opts out in writing. If fewer than two are hit, both parties walk and the founder retains the deposit as paid consideration for the pilot work.
 
-The **conversion terms** clause is what the CFO actually approves in week 0. State the year-one price in dollars (never "TBD"), billing cadence (annual or monthly), auto-conversion versus opt-in (auto-conversion recommended), and a 30-day notice period after year one. These numbers are why the deposit can be defended internally before kickoff.
+### Conversion terms
 
-**Data, IP, and termination** is the shortest section: customer keeps their data, founder keeps the product IP, either party can exit at 30 days written notice during the pilot, and the customer's data stays exportable for 90 days after termination. v1 needs no further detail.
+What the CFO actually approves in week 0. State the year-one price in dollars (never "TBD"), billing cadence (annual or monthly), auto-conversion versus opt-in (auto-conversion recommended), and a 30-day notice period after year one. These numbers are why the deposit can be defended internally before kickoff.
+
+### Data, IP, and termination
+
+The shortest section: customer keeps their data, founder keeps the product IP, either party can exit at 30 days written notice during the pilot, and the customer's data stays exportable for 90 days after termination. v1 needs no further detail.
 
 Signature block at the bottom - DocuSign, HelloSign, or PDF-and-email-confirmation, whichever the customer prefers.
 
 > **What happens AFTER the deposit clears (the pilot is not the contract).** The signed DPA + cleared deposit kicks off a 6-8 week working relationship. Three things happen each Friday:
 >
-> 1. **Demo the one workflow** from the DPA Section 1 scope - the customer watches you click through it, no slides.
-> 2. **Read the success criteria aloud** (DPA Section 4) and ask "are we on track for X by week 6?" - the customer either says yes, says no, or names a blocker.
+> 1. **Demo the one workflow** from the DPA's scope section - the customer watches you click through it, no slides.
+> 2. **Read the success criteria aloud** (the DPA's success-criteria section) and ask "are we on track for X by week 6?" - the customer either says yes, says no, or names a blocker.
 > 3. **Write down what is NOT working** in shared Slack or email by Friday 5pm - if you skip this, week-3 frustrations turn into week-6 surprises.
 >
 > Two failure modes to watch: the customer goes quiet by week 4 (re-engage with a written status email naming all 3 success criteria), or the success criteria turn out to be wrong (rewrite them with the customer in week 3, do not wait for week 6). The full Friday-demo discipline is in [The Friday Demo Rule lesson](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) - read that BEFORE the first Friday call.
@@ -68,7 +80,7 @@ The pilot fee is not separate revenue. It is "year-one ACV, pre-paid." The custo
 
 ## The Stripe Checkout flow
 
-The five-minute Stripe path is in [the lesson](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Here is the full flow, and the record-keeping option for later.
+The five-minute Stripe path is in the [companion micro-lesson](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Here is the full flow:
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'actorFontSize':'22px', 'messageFontSize':'19px', 'noteFontSize':'17px', 'actorFontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'messageFontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'noteFontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -86,11 +98,10 @@ sequenceDiagram
     Founder->>Customer: Pilot kickoff scheduled
 ```
 
-If you do want to wire the payment into a Rails app for record-keeping later, the Stripe Ruby gem (`gem 'stripe'`) takes a `Stripe::Checkout::Session.create` call to generate the same URL programmatically. Django uses `stripe.checkout.Session.create` via the `stripe-python` package. Laravel uses `Stripe\Checkout\Session::create()` from `stripe/stripe-php`. All three produce the same hosted URL. Do not build this until after your first paid pilot ships.
 
 ## The conversation script
 
-You have a warm lead from [Lesson 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) who booked a 20-minute demo, the demo went well, and they said something close to "yes, I would love to try this with my team." The default first-time-founder move is to soften here. The 15-second script that does not soften:
+You have a warm lead from your [outreach list](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) who booked a 20-minute demo, the demo went well, and they said something close to "yes, I would love to try this with my team." The default first-time-founder move is to soften here. The 15-second script that does not soften:
 
 > "Glad it resonates. Quick word on how I am setting up pilots - I am running them as paid design partnerships, so the customer has skin in the game and I have a real signal. The deposit is [$500-$6K], credited toward year one on conversion. Refunded in full if I cannot deliver on the success criteria. Want me to send the one-pager?"
 
@@ -127,7 +138,7 @@ The five responses below show up once you start talking to enterprise buyers or 
 
 *Means:* Testing your refund promise without saying so directly.
 
-*Say back:* "If I do not hit two of the three success criteria you and I write into the DPA, you get a 100% refund within 14 days and we walk - no negotiation. The DPA names this in section 5. Want me to walk you through how the success criteria get written so you are comfortable they are measurable?"
+*Say back:* "If I do not hit two of the three success criteria you and I write into the DPA, you get a 100% refund within 14 days and we walk - no negotiation. The DPA's refund clause names this. Want me to walk you through how the success criteria get written so you are comfortable they are measurable?"
 
 **"Can I get exclusivity in my vertical?"**
 
@@ -141,7 +152,7 @@ The paid pilot is the default, but it has three honest exceptions.
 
 | Exception | When it applies | Substitute approach |
 |---|---|---|
-| **Champion conversion** | A champion from Lesson 5.3 offers free pilot + co-marketing case study + Loom testimonial. Trade: your work now for their case study + testimonial (your conversion assets for the next 10 customers). | Limit to 1-2 champions out of first 10 pilots. Only when case study is contractually committed. Case study must ship within 60 days. |
+| **Champion conversion** | A champion - an early supporter inside a target company, from your [network mapping](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - offers free pilot + co-marketing case study + Loom testimonial. Trade: your work now for their case study + testimonial (your conversion assets for the next 10 customers). | Limit to 1-2 champions out of first 10 pilots. Only when case study is contractually committed. Case study must ship within 60 days. |
 | **True early-MVP (30% built)** | Your MVP is genuinely unfinished. Paid pilot misrepresents what you can deliver in 6-8 weeks. | Run free pilot honestly, ship to the agreed scope, turn second customer into the paid pilot. The honesty signal is commitment of a different kind. |
 | **Pre-investment-grade product** | Your product is 12 months from differentiability. Customer is buying relationship, not product. | Follow the Paul Graham ["Do Things That Don't Scale"](http://paulgraham.com/ds.html) Stripe Collison playbook. Paid pilot returns once product is actually doing the job. |
 

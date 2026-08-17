@@ -123,6 +123,10 @@
   text-decoration: none;
   color: var(--color-primary);
   visibility: hidden;
+  /* zero-width: the # never forces a line wrap; it paints past the right edge instead */
+  display: inline-block;
+  width: 0;
+  white-space: nowrap;
 }
 .heading-component:hover>.heading-self-link {
   visibility: visible;

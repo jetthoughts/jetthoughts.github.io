@@ -58,8 +58,12 @@ SQL or card numbers it crossed the line; if a micro defers a required step
 ("the real steps are over there") it became a promo shell. Each fact gets ONE
 home - duplicated paragraphs (e.g. a handoff protocol in both files) and
 circular deferrals ("detail is in the other page", both directions) are
-defects. Lesson 4.4 shipped as a shell this way (4x same reference link,
-promise restated 6x, phases 2-4 untaught in place) - fixed 2026-08-17 by
-giving every phase the do/demo/if-fails block in the micro.
+defects. Importance does not buy micro-lesson space: even a critical topic
+(e.g. RLS/security) gets one clause + the word "critical" + a guide pointer
+in the overview - the nuance (why, self-tests) lives in the reference
+(Paul 2026-08-17: "not when we fight for place"). Lesson 4.4 shipped as a
+shell this way (4x same reference link, promise restated 6x, phases 2-4
+untaught in place) - fixed 2026-08-17 by giving every phase the
+do/demo/if-fails block in the micro.
 
 All chapter facts must agree with the [course canon](/content/course-canon.md).
