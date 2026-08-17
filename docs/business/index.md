@@ -2,6 +2,10 @@
 
 This folder is the **company**, not any single project. It holds the durable things that persist across every opportunity we pursue. Individual bets (like validating the Vibe Code Rescue opportunity) live under [`docs/projects/`](../projects/) and are governed by what's here.
 
+> **Ownership split (2026-08-14).** Identity/positioning and the bets are owned in the vault
+> (`jt-business-os` in `~/Documents/pkm`); `operating-system.md` and this index stay owned here, because the weekly numbers
+> live beside the tooling that produces them in `rescue-sprint/pipeline.md`.
+
 ## The three company documents
 
 | File | What it is |
