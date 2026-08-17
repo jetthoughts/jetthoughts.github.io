@@ -1,5 +1,25 @@
 # Bundle Update Log
 
+## 2026-08-17 (bet status) - Vibe Code Rescue Parked, Nov 30 suspended
+
+* **Parked until September 2026** (Paul). The vault frontmatter
+  (`state: postponed`) was correct and every "Validating" claim was stale - the
+  reverse of what the audit assumed. Fixed in the vault body,
+  `opportunity-portfolio.md`, `AGENTS.md` (which was routing agents into the
+  bet via "active bet ▶ START HERE") and `2607/strategy.md`.
+* **No bet is in Validating, by design.** Do not promote a candidate to keep
+  the slot warm.
+* **Nov 30 target SUSPENDED, not rescheduled.** KR1 was green (offer, partner,
+  pricing, booking link) while KR2-KR4 sat at zero and zero touches were ever
+  sent across four unparked weeks - the deadline was never the binding
+  constraint, execution was. A new date now would attach a schedule to unscoped
+  work. Set the target at the September restart instead.
+* **The Sep 30 mid-point gate is suspended and must be RE-SET, not dropped** -
+  it would have fired "≥3 calls else re-open ICP + channel" against a bet that
+  restarts *in* September, and it is what makes a re-plan falsifiable.
+* ~9 remaining "Nov 30" strings in `docs/projects/2607-*` and `2510-*` are
+  stale-by-decision; they get rewritten once, at restart, in one pass.
+
 ## 2026-08-17 (company-layer ownership settled) - vault vs repo vs canon
 
 * **New concept**: `workflows/company-layer-ownership.md` - the three-surface

@@ -48,9 +48,20 @@ Aligned 2026-08-17: `AGENTS.md`, `docs/workflows/BASE_HANDBOOK.md`,
 `.agents/skills/async-first-communication/SKILL.md`. If a new doc tells an
 agent where company work lives, it must match this table.
 
-Still open: `jt-vibe-code-rescue.md` frontmatter says `state: postponed` while
-its body and `docs/business/opportunity-portfolio.md` both say **Validating**.
-Left for Paul - only he knows which is true.
+**Resolved 2026-08-17**: the frontmatter was right. Vibe Code Rescue is
+**Parked, postponed until September 2026** - the body and the repo portfolio
+were the stale side, and both now say Parked. This is the worked example of the
+ownership rule: the vault held the truth about bet status, and the repo was the
+mirror that had drifted. When the two disagree, the vault wins for status.
+
+Consequence, recorded in `docs/business/operating-system.md`: **no bet is in
+Validating** (intended - do not promote a candidate to fill the slot), and the
+**Nov 30 target is suspended, not rescheduled**. The evidence for suspending
+rather than moving it: KR1 was green while KR2-KR4 sat at zero and no outreach
+was ever sent, so the deadline was never the binding constraint. The new target
+is set at the September restart, together with a re-set of the Sep 30 mid-point
+gate (which must be re-set, not dropped - it is what makes a re-plan
+falsifiable).
 
 # Skills: we track only our own
 
