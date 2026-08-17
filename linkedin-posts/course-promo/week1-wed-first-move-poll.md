@@ -17,7 +17,7 @@ utm_campaign: course_promo_module1
 utm_content: week1_wed_first_move_poll
 status: approved
 stage: next
-proposed_for: "2026-09-23 15:30 CEST"
+proposed_for: "2026-09-23 17:00 CEST"
 first_comment: |
   If your honest answer was option 1 or 2, the first module of a free course I wrote is about the cheaper order, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_wed_first_move_poll
 image: ""

@@ -11,7 +11,7 @@ first_comment: |
   (value post - no link; reply-CTA only)
 status: approved
 stage: next
-proposed_for: "2026-09-01 15:30 CEST"
+proposed_for: "2026-09-01 17:00 CEST"
 notes: |
   Pillar: build-in-public (the 70% value; NO course link). From Paul's interview
   answer 2026-08-13: what surprises him is that even with AI this mature, founders

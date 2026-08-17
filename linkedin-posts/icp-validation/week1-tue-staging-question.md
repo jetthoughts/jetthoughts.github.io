@@ -12,7 +12,7 @@ image: "assets/week1-tue-staging-question.png"
 visual: assets/week1-tue-staging-question.png (weekly oversight cadence exhibit)
 status: draft
 stage: next
-proposed_for: "2026-10-15 15:30 CEST"
+proposed_for: "2026-10-15 17:00 CEST"
 first_comment: |
   If you want more than one question to put to your dev shop, I wrote up six a founder can use: https://jetthoughts.com/blog/scipab-tell-better-business-stories-startup-management/?utm_source=linkedin&utm_medium=social&utm_campaign=rescue_staging_question
 notes: |

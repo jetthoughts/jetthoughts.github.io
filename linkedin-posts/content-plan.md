@@ -6,7 +6,11 @@ build:
 
 # LinkedIn content plan — rolling calendar
 
-**Cadence:** 2-3 posts/week, Tue-Thu, US-morning (9-11am ET = ~15-17 CEST).
+**Cadence:** 2-3 posts/week in **Tue+Wed pairs at 17:00 CEST (11:00 ET)** -
+Tue-Thu are the top days in every 2026 study (Wed strongest / "comment day"),
+and 11am ET opens Sprout's 2026 B2B peak (Tue-Thu 11am-5pm ET, 2B engagements)
+while landing in Buffer's after-work window (3-8pm local, 4.8M posts) for
+European readers. Two consecutive days OK; never three.
 
 **Plan by PILLAR, not just lane** (adopted 2026-08-13, see `content-pillars.md`):
 hold roughly **70% value / 20% personal / 10% promo** across each ~2-week window,
@@ -58,15 +62,15 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Aug 13 | story/opinion | `course-promo/week1-thu-validate-before-build` | course | **posted** |
 | Aug 18 | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ |
 | Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **scheduled** ✓ |
-| Aug 25 | reaction | `personal/reaction-claude-code-trust` | none | **approved** (Paul, board 2026-08-17) |
-| Aug 27 | opinion | `course-promo/sidepath-status-meetings-friday-demo` | course *(1st comment)* | **approved** (Paul, board 2026-08-17) |
-| Sep 1 | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved** (Paul, board 2026-08-17, post-swarm rewrite) - image decision still open (caricature mocks founder/vendor, see frontmatter notes) |
-| Sep 3 | teach | `course-promo/week1-thu-price-before-product` | none | **approved** (Paul, board 2026-08-17) |
-| Sep 8 | reaction | `personal/reaction-vibe-coding-front-back` | none | **approved** (Paul, board 2026-08-17) |
-| Sep 10 | opinion | `personal/opinion-permission-to-fix` | none | **approved** (Paul, board 2026-08-17; pulled forward from Oct 15) |
-| Sep 15 | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | revised ✓ |
-| Sep 23 | poll | `course-promo/week1-wed-first-move-poll` | none | draft |
-| Sep 17 | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | drafted ✓ |
+| Aug 25 Tue | reaction | `personal/reaction-claude-code-trust` | none | **approved** (Paul, board 2026-08-17) |
+| Aug 26 Wed | opinion | `course-promo/sidepath-status-meetings-friday-demo` | course *(1st comment)* | **approved** (Paul, board 2026-08-17) |
+| Sep 1 Tue | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved** (Paul, board 2026-08-17, post-swarm rewrite) - image decision still open (caricature mocks founder/vendor, see frontmatter notes) |
+| Sep 2 Wed | teach | `course-promo/week1-thu-price-before-product` | none | **approved** (Paul, board 2026-08-17) |
+| Sep 8 Tue | reaction | `personal/reaction-vibe-coding-front-back` | none | **approved** (Paul, board 2026-08-17) |
+| Sep 9 Wed | opinion | `personal/opinion-permission-to-fix` | none | **approved** (Paul, board 2026-08-17; pulled forward from Oct 15) |
+| Sep 15 Tue | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | **approved** (Paul, board 2026-08-17) |
+| Sep 16 Wed | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | **approved** (Paul, board 2026-08-17; hook shortened same day) |
+| Sep 23 Wed | poll | `course-promo/week1-wed-first-move-poll` | none | **approved** (Paul, board 2026-08-17; polls ride the +1/week budget) |
 | Sep 22 | teach | `course-promo/week2-tue-mom-test-past-questions` | none | revised ✓ |
 | Sep 24 | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | draft |
 | Sep 29 | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
@@ -79,9 +83,9 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 **Ratio:** across 19 posts, **4 course links** (founding, status-meetings
 1st-comment, 40k, why-i-wrote-it = ~20%) + 1 blog link; the rest is
 value/personal/poll. **Sep 1 → Sep 10 is four straight no-link posts** - the run
-that makes the feed read as a person with takes. Cadence: max 2 full posts/week
-(Tue/Thu-ish), never consecutive days (re-flowed 2026-08-17 after a 3-in-a-row
-slipped in); polls ride on top per the ~1/week budget.
+that makes the feed read as a person with takes. Cadence per the header rule:
+Tue+Wed pairs at 17:00 CEST, two in a row OK, never three (re-flowed twice
+2026-08-17); polls ride on top per the ~1/week budget.
 
 **Still open:** a real "I was wrong about a founder/idea" story to replace the deleted
 BigBinary draft (story-bank Q2). Slot it when Paul has a case.

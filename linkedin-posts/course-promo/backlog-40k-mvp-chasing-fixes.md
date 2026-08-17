@@ -17,7 +17,7 @@ utm_campaign: course_promo_validate_first
 utm_content: backlog_40k_mvp_chasing_fixes
 status: draft
 stage: next
-proposed_for: "2026-09-24 15:30 CEST"
+proposed_for: "2026-09-24 17:00 CEST"
 notes: |
   REAL case Paul reviewed 2026-08 (NOT fabricated): a founder's $40k / 3-month Upwork MVP.
   CORRECTIONS 2026-08-13 (Paul), 3 things:
