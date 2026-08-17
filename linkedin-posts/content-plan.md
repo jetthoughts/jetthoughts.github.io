@@ -60,7 +60,7 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **scheduled** ✓ |
 | Aug 25 | reaction | `personal/reaction-claude-code-trust` | none | **approved** (Paul, board 2026-08-17) |
 | Aug 26 | opinion | `course-promo/sidepath-status-meetings-friday-demo` | course *(1st comment)* | **approved** (Paul, board 2026-08-17) |
-| Aug 27 | build-in-public | `personal/bip-vendors-still-burning-founders` | none | draft - REWRITTEN post-swarm 2026-08-17 (was 7/10 slop); needs Paul re-read + image decision (caricature mocks founder/vendor, see frontmatter notes) |
+| Aug 27 | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved** (Paul, board 2026-08-17, post-swarm rewrite) - image decision still open (caricature mocks founder/vendor, see frontmatter notes) |
 | Sep 1 | reaction | `personal/reaction-vibe-coding-front-back` | none | **approved** (Paul, board 2026-08-17) |
 | Sep 3 | teach | `course-promo/week1-thu-price-before-product` | none | **approved** (Paul, board 2026-08-17) |
 | Sep 8 | opinion | `icp-validation/week1-tue-staging-question` | blog | revised ✓ |
