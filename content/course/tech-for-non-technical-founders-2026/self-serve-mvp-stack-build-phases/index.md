@@ -40,17 +40,15 @@ related_posts: false
 
 After this lesson you will be able to: **walk the four build phases, demo each one to a real person, and put a live URL in front of five real users.**
 
----
+![Four build phases, each proven by one demo, then a green gate of five exit lights. Phase 1 Lovable - screens click, nothing saved. Phase 2 Supabase - a real signup persists. Phase 3 Stripe - a $1 test charge flips the row to paid. Phase 4 go live - 5 ICP users hit the live URL.](build-phases-strip.svg)
 
-You validated the problem in Modules 1-3 and set up the stack in Lesson 4.3. What you do not have yet is a URL a stranger can pay on. Budget the calendar honestly before you start: a full-time founder gets there in 4-6 weeks; at 2-4 hours a week, plan 10-12. Phases 2 and 3 are where part-time founders lose the most calendar.
+Budget the calendar honestly before you start: a full-time founder gets there in 4-6 weeks; at 2-4 hours a week, plan 10-12. Phases 2 and 3 are where part-time founders lose the most calendar.
 
 > → **Mia walked the four phases** over three weekends. Her spouse signed up in Phase 2. By Phase 4, five parents clicked through the live URL. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)
 
-![Four build phases, each proven by one demo, then a green gate of five exit lights. Phase 1 Lovable - screens click, nothing saved. Phase 2 Supabase - a real signup persists. Phase 3 Stripe - a $1 test charge flips the row to paid. Phase 4 go live - 5 ICP users hit the live URL.](build-phases-strip.svg)
-
 ## The ship plan
 
-Each phase below ends with one demo to one human who has not seen the build. When you start a phase, open that phase's section in the [full build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/) - it holds the exact mechanics (the Lovable prompt examples, the first Supabase table walkthrough, the Stripe test flow, the domain switch) so this page does not have to.
+Each phase below ends with one demo to one human who has not seen the build. When you start a phase, open its section in the full build guide - it holds the exact mechanics so this page does not have to: [the Lovable prompt examples](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-1---write-your-prompts-set-up-lovable-ship-the-ui), [the first Supabase table walkthrough](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-2---set-up-supabase-connect-real-signup-works), [the Stripe test flow](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-3---add-stripe-wire-checkout-1-test-transactions), and [the domain switch + cold-DM template](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-4---deploy-send-to-5-icp-users-iterate-from-the-data).
 
 ### Phase 1 - Lovable: ship the clickable UI
 
@@ -66,7 +64,7 @@ Create your three or four core tables in Supabase, and check **Enable Row-Level 
 
 > **Phase 2 demo:** your spouse signs up on the staging URL and you watch the row appear in Supabase in real time.
 
-**Before Phase 3, two checks.** First, run the RLS self-test from the [full build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/) - it is copy-paste verification with an AI assistant, not programming. Second, hand the URL to one tester with zero coaching; if they cannot reach the core action, go back to [Lesson 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) - a paywall on top of a workflow nobody can navigate just adds friction to a broken loop.
+**Before Phase 3, two checks.** First, run the [RLS self-test from the full build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-2---set-up-supabase-connect-real-signup-works) - it is copy-paste verification with an AI assistant, not programming. Second, hand the URL to one tester with zero coaching; if they cannot reach the core action, go back to [Lesson 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) - a paywall on top of a workflow nobody can navigate just adds friction to a broken loop.
 
 ### Phase 3 - Stripe: one product, one price, $1 test
 
@@ -84,7 +82,7 @@ Buy a domain (roughly $10/year for a .com - never let a tool hold your domain), 
 
 **Read the failure shape before touching the product.** 0 of 5 click - the message is wrong, not the product. 5 click, 0 sign up - the landing screen is wrong. 5 sign up, 0 pay - the paywall position or the price is wrong.
 
-> **Bridge from Lesson 2.6 vocabulary.** Before you describe a button label, a column header, or a screen title, open your Lesson 2.6 vocabulary doc (the verbatim words your 5 prototype subjects used in the closing "describe in one sentence" question). If 4 of 5 said "match" and not "reconcile," the button label is **"Match transactions,"** not "Reconcile." The vocabulary your prototype subjects passed is the only user-tested language you have; the production MVP is the one place where using it has revenue consequences.
+> **Bridge from [Lesson 2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) vocabulary.** Before you describe a button label, a column header, or a screen title, open your Lesson 2.6 vocabulary doc (the verbatim words your 5 prototype subjects used in the closing "describe in one sentence" question). If 4 of 5 said "match" and not "reconcile," the button label is **"Match transactions,"** not "Reconcile." The vocabulary your prototype subjects passed is the only user-tested language you have; the production MVP is the one place where using it has revenue consequences.
 
 ## The five green lights
 
@@ -92,7 +90,7 @@ The MVP is "done" only when ALL five lights are green. Without them, you either 
 
 1. **Stripe in LIVE mode** and a real card clears the paywall at least once.
 2. **Custom domain wired** (not a `.lovable.app` subdomain) - the URL you send must be yours.
-3. **At least 1 ICP user who was NOT in your Lesson 2.3-2.4 interviews** reached the paywall on the live URL.
+3. **At least 1 ICP user who was NOT in your [Lesson 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) interviews** reached the paywall on the live URL.
 4. **Zero red errors in the browser Console** on the sign-up + checkout flow (press F12, click through like a user, check the Console tab).
 5. **A weekly demo recording exists** for the last week of build (a Loom or screen-record proving the cadence held to the end).
 
@@ -104,7 +102,7 @@ Lovable + Supabase + Stripe is the shed: one workflow, one persona, one happy pa
 
 ## Module 5 handoff: invite your interviewees by name
 
-The 5 cold prospects from Phase 4 are the demand-signal check. The 10 people you ran through Lesson 2.3-2.4 are the warm pool that becomes your first real users - the ones who told you the problem was real, in their own words. They are not on your MVP yet, and they will not show up unless you invite them by name.
+The 5 cold prospects from Phase 4 are the demand-signal check. The 10 people you ran through [Lesson 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) are the warm pool that becomes your first real users - the ones who told you the problem was real, in their own words. They are not on your MVP yet, and they will not show up unless you invite them by name.
 
 Open your Lesson 2.3-2.4 interview list. For each of the 10, write a 3-line personal note: the workaround they described, the staging URL of the workflow that now replaces it, and one question they answered that the MVP now responds to. Send it as a [Loom](https://www.loom.com) or a personal LinkedIn DM, not a generic email blast. Expect 4-6 to create accounts and 1-2 to become candidates for the [Lesson 5.1 Sean Ellis 40% survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) once you have 10-30 users total. Skip this step and you ship a working URL into an empty users table.
 
