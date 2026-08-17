@@ -39,7 +39,11 @@ course_nav: false
 
 What were you actually shown on your last status call? Pull up your notes and read what is on them: a burndown chart, a screenshot of a Jira board with eleven cards in "Done", a Figma frame the designer updated overnight, a verbal summary that opened with "good progress this week." Count how many of those are things you could click. On a call that costs a founder **$31K a month**, the honest count is often zero - a full status meeting that showed no working software at all.
 
-The fix is one Slack message, sent that night: *"From now on we run a 15-minute Friday demo. Loom or live, your choice. Working software only. I want to click everything you show me."* Send it, and the answer arrives fast: by Friday of week 3, the developers who were coasting surface, and the checkout flow you have tracked for six weeks turns out to be three Postman requests in a Notion doc and a Stripe sandbox key in someone's `.env`. You find that out in fifteen minutes, on a recorded call, with no fight.
+The fix is one Slack message, sent that night:
+
+> *"From now on we run a 15-minute Friday demo. Loom or live, your choice. Working software only. I want to click everything you show me."*
+
+Send it, and the answer arrives fast: by Friday of week 3, the developers who were coasting surface, and the checkout flow you have tracked for six weeks turns out to be three Postman requests in a Notion doc and a Stripe sandbox key in someone's `.env`. You find that out in fifteen minutes, on a recorded call, with no fight.
 
 ## Why most weekly status calls fail
 
@@ -69,7 +73,7 @@ The full Monday-morning Slack template lives in the [Friday Demo Template](/cour
 6. **What is blocked, and on whom?** Named person, the answer the team needs from you, the deadline.
 7. **What is the one thing I should worry about for next week?** Not a status update - the actual thing keeping the lead up at night.
 
-The order matters. Question 1 sets the frame: working software, not process. Question 4 catches over-engineering and quiet descopes. Question 7 surfaces real risk before it shows up as a missed sprint. The full template page has the copy-paste Slack message, the hard rules, and the "what to do during the call" section - bookmark it.
+The order matters. Question 1 sets the frame: working software, not process. Question 4 catches over-engineering and quiet descopes. Question 7 surfaces real risk before it shows up as a missed sprint.
 
 ## What good looks like vs what bad looks like
 
@@ -92,8 +96,8 @@ If the four-week score lands at 2 of 4 or fewer, run the [Org Chart audit](/cour
 Three actions, in order:
 
 1. **Block 15 minutes on your calendar this Friday at 4pm.** Title it "Friday Demo - Working Software Only." Add your team. No agenda doc - the agenda is the seven questions, and they are the same every week.
-2. **Check your last four weekly status calls in your notes app.** Out of those four calls, how many produced a staging URL you actually clicked from your own laptop within 24 hours of the call? If the answer is zero or one, the problem is not your team's effort - it is that the format never asked them for working software. The Friday demo asks for it every week.
-3. **Download the [Friday Demo Template](/course/tech-for-non-technical-founders-2026/friday-demo-template/) and send to your team Monday morning.** The template page has the copy-paste Slack message, the seven questions in order, the hard rules, and the "what good vs bad looks like" examples for each question. Do not paraphrase the rules - paste them. Teams respect the hard structure more than a polite request they can ignore.
+2. **Check your last four weekly status calls in your notes app.** How many produced a staging URL you actually clicked within 24 hours? Zero or one means the format never asked for working software - not that your team lacks effort.
+3. **Send the [Friday Demo Template](/course/tech-for-non-technical-founders-2026/friday-demo-template/) to your team Monday morning.** Do not paraphrase the rules - paste them. Teams respect the hard structure more than a polite request they can ignore.
 
 By Friday of week 4, you will know whether your dev team is shipping or stalling, and you will not have read a line of code.
 

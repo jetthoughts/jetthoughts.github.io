@@ -82,7 +82,11 @@ Do not add a sixth question. Do not soften Q1 to "How disappointed would you be"
 
 ## Score it
 
-Export the CSV. Compute the "very disappointed" share, excluding "no longer use it" answers (they are churned users, not should-be-paying users). Pull three numbers: **overall must-have %**, **per-segment must-have %** (slice by job title and company size - one segment is almost always higher than the average, and that is your must-have segment), and **three verbatim Q2-Q3 quotes** from that segment. Those quotes are your persona, your ad copy, and your cold-email opener for Lesson 5.3.
+Export the CSV. Compute the "very disappointed" share, excluding "no longer use it" answers (they are churned users, not should-be-paying users). Pull three numbers:
+
+- **Overall must-have %**
+- **Per-segment must-have %** - slice by job title and company size; one segment is almost always higher than the average, and that is your must-have segment
+- **Three verbatim Q2-Q3 quotes** from that segment - your persona, your ad copy, and your cold-email opener for Lesson 5.3
 
 Lay this segment beside the persona in your [Lesson 2.5 validated problem statement](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). If real usage points at a different segment than the interviews did, that is a real correction - write the delta down; don't keep two personas.
 

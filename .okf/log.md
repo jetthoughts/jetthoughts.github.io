@@ -1,5 +1,16 @@
 # Bundle Update Log
 
+## 2026-08-17 (no-text-bricks rule) - break walls by content type
+
+* **Trigger**: Paul flagged 5.1's 9-line "The 40% test, in one paragraph"
+  section as a "big brick"; the friday-demo page had three more plus the
+  template-contents description repeated 3x.
+* **Rule** (`content/voice-rules.md`): no paragraph over ~5 rendered lines.
+  Quotable artifact → blockquote; enumeration-in-prose → list; if-X-then-Y
+  → table; what the adjacent exhibit shows gets one prose sentence. A
+  heading apologizing for the wall ("...in one paragraph") marks the brick.
+* Also mirrored in CLAUDE.md's cognitive-load gate line.
+
 ## 2026-08-17 (LI review board preview + composer scheduling recipe)
 
 * **Trigger**: Paul asked for a standing rule — reviewing LI posts should hand
