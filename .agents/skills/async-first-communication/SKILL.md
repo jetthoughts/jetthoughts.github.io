@@ -31,7 +31,8 @@ the work. A task is not done until its state is readable asynchronously.
 | Outreach / funnel events | the project ledger (e.g. `rescue-sprint/pipeline.md`) — one row per event |
 | Durable how-to / gotcha / root cause | `.okf/` concept file + dated `log.md` entry; reusable process → `docs/workflows/` |
 | Review findings + dispositions | PR comments (one summary disposition comment; resolve threads with reasons) |
-| Company-level policy / cadence | `docs/business/` |
+| Company-level cadence / weekly numbers | `docs/business/operating-system.md` |
+| Company identity, positioning, bet status | vault (`jt-business-os`), mirrored to `docs/business/` |
 | Session-internal scratch | `/tmp/` — never committed |
 
 ## Practices
