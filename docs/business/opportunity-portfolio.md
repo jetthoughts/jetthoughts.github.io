@@ -29,7 +29,16 @@ Discipline: **one bet is Validating at a time.** Spreading the company across se
 
 | # | Opportunity | State | Project | Thesis (one line) | Kill-criteria (short) |
 |---|---|---|---|---|---|
-| 1 | **Vibe Code Rescue** | 🔵 **Validating** | [`2607-vibe-code-rescue`](../projects/2607-vibe-code-rescue/) | Funded non-technical founders will pay a fixed price to rescue a broken AI/dev-shop MVP and get ownership back. | If 2 weeks of **active outreach across live lanes** (LinkedIn posts and/or verified sends) yields 0 booked calls → **pause and re-open A + C** (ICP *and* channel), per the [assumptions register](../projects/2607-vibe-code-rescue/rescue-sprint/assumptions-register.md) C1 addendum (2026-08-08 — re-based after the warm lane was demoted). **Status: untestable — the clock starts at the first post or first send**, neither of which has happened (see [OS §1](operating-system.md)). |
+| 1 | **Vibe Code Rescue** | ⏸️ **Parked** (resume Sep 2026) | [`2607-vibe-code-rescue`](../projects/2607-vibe-code-rescue/) | Funded non-technical founders will pay a fixed price to rescue a broken AI/dev-shop MVP and get ownership back. | If 2 weeks of **active outreach across live lanes** (LinkedIn posts and/or verified sends) yields 0 booked calls → **pause and re-open A + C** (ICP *and* channel), per the [assumptions register](../projects/2607-vibe-code-rescue/rescue-sprint/assumptions-register.md) C1 addendum (2026-08-08 — re-based after the warm lane was demoted). **Status: untestable — the clock starts at the first post or first send**, neither of which has happened (see [OS §1](operating-system.md)). |
+
+> **Parked reason (2026-08-17, Paul):** Vibe Code Rescue is postponed until
+> **September 2026**. The Parked state requires a documented reason so we do not
+> re-litigate it - this is it. **No bet is in Validating while it is parked**,
+> which is the intended state, not a gap to fill: do not promote a candidate to
+> Validating just to keep the slot warm.
+>
+> Canonical status lives in the vault note `jt-vibe-code-rescue` (`~/Documents/pkm`);
+> this row mirrors it.
 
 **Parking lot (candidates, not resourced)**: none yet. Add a row here when a new wedge earns a one-page thesis; do NOT start validating it while bet #1 is still open.
 
