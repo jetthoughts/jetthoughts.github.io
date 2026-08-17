@@ -47,10 +47,12 @@ beat-marking, shape-coded copywriting).
 production builds never ship these pages.
 
 **Board approvals (2026-08-17):** `bin/dev` auto-starts the `bin/li-review`
-sidecar (port 1315); each post page gets Approve/Reject buttons (keys
-`a`/`r`) that rewrite the post's frontmatter `status:` and append to
-`linkedin-posts/decisions.log`. Frontmatter stays the single status source -
-the agent tracks decisions from there, no chat round-trip.
+sidecar on **hugo port + 1000**; buttons target the sidecar of the server the
+page came from, so parallel sessions each write to their own checkout.
+Approve (key `a`, hidden once approved) writes `status: approved`; Postpone
+(key `p`) writes `status: postponed` + `stage: backlog`. Decisions land in
+frontmatter (single status source) + `linkedin-posts/decisions.log`
+(gitignored) - the agent tracks from there, no chat round-trip.
 
 **Composer fill can be permission-blocked:** the harness classifier may deny
 typing a post body into the composer, and LinkedIn's contenteditable exposes

@@ -34,13 +34,20 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PATH="$SCRIPT_DIR/../node_modules/.bin:$PATH"
 export PATH
 
-# LinkedIn review-board approvals: Approve/Reject buttons on /linkedin/ pages
-# post to this sidecar (port 1315). Lives and dies with the dev server.
+# LinkedIn review-board approvals: buttons on /linkedin/ pages hit a sidecar
+# on (hugo port + 1000), so parallel sessions on different ports each talk to
+# their own checkout's sidecar. Lives and dies with the dev server.
+HUGO_PORT=1313
+args=("$@")
+for ((i = 0; i < ${#args[@]}; i++)); do
+  [[ "${args[i]}" == "--port" ]] && HUGO_PORT="${args[i + 1]}"
+  [[ "${args[i]}" == --port=* ]] && HUGO_PORT="${args[i]#--port=}"
+done
 if command -v ruby >/dev/null 2>&1; then
-  "$SCRIPT_DIR/li-review" & LI_REVIEW_PID=$!
+  PORT=$((HUGO_PORT + 1000)) "$SCRIPT_DIR/li-review" & LI_REVIEW_PID=$!
   trap 'kill "$LI_REVIEW_PID" 2>/dev/null' EXIT
 else
-  echo "⚠️  ruby not found - /linkedin/ board Approve/Reject buttons disabled"
+  echo "⚠️  ruby not found - /linkedin/ board Approve/Postpone buttons disabled"
 fi
 
 hugo server \

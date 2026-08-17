@@ -90,13 +90,18 @@ Reusing a topic-perfect course exhibit is still fine when one exists.
 
 ## Board approvals (`bin/li-review`)
 
-Each post page on the dev board has **Approve / Reject** buttons (keys `a` / `r`).
-They hit a local sidecar that `bin/dev` starts and stops automatically (port
-1315, override with `PORT=`; nothing extra to run). A decision rewrites the post's frontmatter
-`status:` line (single source of truth, no separate state file) and appends an
-audit line to `linkedin-posts/decisions.log`. The page redirects back and shows
-the new status pill. Localhost-only, dev-only; the agent reads approvals straight
-from frontmatter/log, so board decisions need no chat round-trip.
+Each post page on the dev board has decision buttons: **Approve** (key `a`,
+shown only while the post is not yet approved - approval is the required
+gate) and **Postpone** (key `p`, moves the post to the backlog: writes
+`status: postponed` + `stage: backlog`). They hit a local sidecar that
+`bin/dev` starts and stops automatically on **hugo port + 1000** (1313→2313,
+1314→2314, ...), and the buttons target the sidecar of the server they were
+loaded from - so parallel dev sessions on different ports each write to their
+own checkout. A decision rewrites the post's frontmatter `status:` line
+(single source of truth, no separate state file) and appends an audit line to
+`linkedin-posts/decisions.log` (gitignored - local decision trail). The page
+redirects back and shows the new status pill. Localhost-only, dev-only; the
+agent reads decisions straight from frontmatter/log, no chat round-trip.
 
 ## Frontmatter schema v2
 

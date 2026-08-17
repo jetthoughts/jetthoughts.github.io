@@ -9,7 +9,7 @@ icp_test: Do non-technical founders recognize the "paid for something I didn't n
 image: "assets/bip-vendors-still-burning-founders.jpg"
 first_comment: |
   (value post - no link; reply-CTA only)
-status: draft
+status: approved
 stage: next
 proposed_for: "2026-08-27 15:30 CEST"
 notes: |

@@ -103,8 +103,8 @@
       {{ with .Params.posted_url }}{{ if hasPrefix . "http" }}<a class="li-link" href="{{ . }}" target="_blank" rel="noopener">View on LinkedIn &#8599;</a>{{ end }}{{ end }}
       {{ $decidePost := printf "%s/%s" $laneDir (path.Base .File.Path) }}
       <span class="decide">
-        <a id="btn-approve" class="approve" href="http://localhost:1315/decide?post={{ $decidePost }}&amp;status=approved" title="Approve (a) - writes status: approved into the draft">Approve</a>
-        <a id="btn-reject" class="reject" href="http://localhost:1315/decide?post={{ $decidePost }}&amp;status=rejected" title="Reject (r) - writes status: rejected into the draft">Reject</a>
+        {{ if ne .Params.status "approved" }}<a id="btn-approve" class="approve" data-post="{{ $decidePost }}" data-status="approved" href="#" title="Approve (a) - writes status: approved into the draft">Approve</a>{{ end }}
+        {{ if ne .Params.stage "backlog" }}<a id="btn-postpone" class="reject" data-post="{{ $decidePost }}" data-status="postponed" href="#" title="Postpone (p) - writes status: postponed + stage: backlog">Postpone</a>{{ end }}
       </span>
     </p>
 
@@ -169,6 +169,15 @@
   </div>
 
   <script>
+    // Decide buttons target THIS server's sidecar: hugo port + 1000, so parallel
+    // dev sessions on different ports each write to their own checkout.
+    (function(){
+      var port = (parseInt(location.port, 10) || 1313) + 1000;
+      document.querySelectorAll('.decide a[data-post]').forEach(function(a){
+        a.href = 'http://' + location.hostname + ':' + port + '/decide?post=' + encodeURIComponent(a.dataset.post) +
+                 '&status=' + a.dataset.status + '&back=' + encodeURIComponent(location.href);
+      });
+    })();
     function flash(btn, label) { var s = btn.querySelector('span'); var t = s.textContent; s.textContent = label; btn.classList.add('ok'); setTimeout(function(){ s.textContent = t; btn.classList.remove('ok'); }, 1400); }
     document.querySelectorAll('.copy-btn[data-target]').forEach(function(btn){
       btn.addEventListener('click', function(){
@@ -197,7 +206,7 @@
       if (e.key === 'ArrowLeft')  { var p = document.getElementById('nav-prev'); if (p) window.location.href = p.href; }
       if (e.key === 'ArrowUp')    { var b = document.querySelector('a.back'); if (b) window.location.href = b.href; }
       if (e.key === 'a') { var ap = document.getElementById('btn-approve'); if (ap) window.location.href = ap.href; }
-      if (e.key === 'r') { var rj = document.getElementById('btn-reject'); if (rj) window.location.href = rj.href; }
+      if (e.key === 'p') { var pp = document.getElementById('btn-postpone'); if (pp) window.location.href = pp.href; }
     });
   </script>
 </body>

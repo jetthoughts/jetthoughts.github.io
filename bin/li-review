@@ -9,8 +9,8 @@ require 'socket'
 require 'uri'
 
 ROOT = File.expand_path('../linkedin-posts', __dir__)
-PORT = Integer(ENV.fetch('PORT', '1315'))
-ALLOWED = %w[approved rejected].freeze
+PORT = Integer(ENV.fetch('PORT', '2313')) # convention: hugo port + 1000 (bin/dev passes it)
+ALLOWED = %w[approved postponed].freeze
 
 def respond(sock, code, headers = {}, body = '')
   reason = { 200 => 'OK', 303 => 'See Other', 400 => 'Bad Request', 404 => 'Not Found' }.fetch(code)
@@ -53,12 +53,19 @@ loop do
       respond(sock, 400, {}, "no `status:` line in #{post}")
       next
     end
+    text.sub!(/^stage: .*$/, 'stage: backlog') if status == 'postponed'
     File.write(file, text)
     File.open(File.join(ROOT, 'decisions.log'), 'a') do |f|
       f.puts "#{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')} #{status} #{post} via board"
     end
 
-    respond(sock, 303, { 'Location' => headers['referer'] || '/' })
+    # Cross-origin Referer is stripped to the bare origin by default browser
+    # policy, so the board passes its own absolute URL back via ?back=
+    # (hugo server rewrites .Permalink to the actual serving port).
+    back = q['back'].to_s
+    back = "http:#{back}" if back.start_with?('//') # hugo dev .Permalink is protocol-relative
+    back = 'http://localhost:1313/linkedin/' unless back.match?(%r{\Ahttp://(localhost|127\.0\.0\.1):\d+/[\w/.-]*\z})
+    respond(sock, 303, { 'Location' => back })
   rescue StandardError => e
     begin respond(sock, 400, {}, e.message) rescue IOError; end
   ensure
