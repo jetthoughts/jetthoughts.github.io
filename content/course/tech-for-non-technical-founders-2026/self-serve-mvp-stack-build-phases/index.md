@@ -60,7 +60,9 @@ Pick ONE feature from your one-page brief's "what you're building" section - the
 
 ### Phase 2 - Supabase: real signup, walled data
 
-Create your three or four core tables in Supabase ([first-table walkthrough](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-2---set-up-supabase-connect-real-signup-works)), and check **Enable Row-Level Security** on each table BEFORE adding columns. That checkbox is the load-bearing click: [RLS](https://supabase.com/docs/guides/database/postgres/row-level-security) is the database rule that walls one customer's data off from another's, and skipping it is the most common security hole in vibe-coded MVPs. Then install the Supabase integration inside Lovable and wire the signup screen to it.
+Create your three or four core tables in Supabase ([first-table walkthrough](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-2---set-up-supabase-connect-real-signup-works)), and check **Enable Row-Level Security** on each table BEFORE adding columns. Then install the Supabase integration inside Lovable and wire the signup screen to it.
+
+> **Why that checkbox:** [RLS](https://supabase.com/docs/guides/database/postgres/row-level-security) walls one customer's data off from another's - skipping it is the most common security hole in vibe-coded MVPs.
 
 > **Phase 2 demo:** your spouse signs up on the staging URL and you watch the row appear in Supabase in real time.
 
