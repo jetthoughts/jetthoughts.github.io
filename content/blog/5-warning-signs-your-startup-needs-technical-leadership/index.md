@@ -16,7 +16,7 @@ cover_image: 5-warning-signs-cover.jpg
 metatags:
   image: 5-warning-signs-og.jpg
   title: "5 Warning Signs Your Startup Needs Technical Leadership"
-  description: "After working with 50+ startups, these warning signs predict technical crises 6 months early. Ignore them at your own risk. Real stories, proven frameworks."
+  description: "These warning signs predict technical crises 6 months early. Ignore them at your own risk. Real stories, proven frameworks."
   keywords: "fractional CTO services, emergency CTO leadership, technical debt prevention, startup technical leadership, when to hire CTO, development crisis management"
 slug: 5-warning-signs-your-startup-needs-technical-leadership
 author: Paul Keen
@@ -37,7 +37,7 @@ Last month, I watched a Series A-bound startup implode in real time. Not because
 
 The CTO had been working 90-hour weeks for eight months, the engineering team was in quiet revolt, and what should have been a two-week integration took four months. By the time they called me, they'd lost three senior engineers, their lead investor was asking uncomfortable questions, and their "quick fix" had become a $2M problem.
 
-Here's the thing: **every single warning sign was visible six months earlier**. I've now helped 50+ startups navigate technical leadership challenges, and the patterns are eerily consistent. The companies that thrive are the ones that recognize these warning signs early and act on them. The ones that don't... well, you probably never heard of them.
+Here's the thing: **every single warning sign was visible six months earlier**. I've helped startups navigate technical leadership challenges, and the patterns are eerily consistent. The companies that thrive are the ones that recognize these warning signs early and act on them. The ones that don't... well, you probably never heard of them.
 
 ## Warning Sign #1: Simple Changes Take Exponentially Longer
 
@@ -226,7 +226,7 @@ If you're seeing multiple warning signs, the time to act is now, not when you're
 
 ---
 
-*Are you seeing these warning signs in your startup? I've helped 50+ companies navigate technical leadership challenges, and I've learned that the companies who act early consistently outperform those who wait for crisis. [Let's have a conversation about your technical leadership needs](/services/fractional-cto/) and create a plan that turns your technology into a competitive advantage instead of a constant source of stress.*
+*Are you seeing these warning signs in your startup? I've helped companies navigate technical leadership challenges, and I've learned that the companies who act early consistently outperform those who wait for crisis. [Let's have a conversation about your technical leadership needs](/services/fractional-cto/) and create a plan that turns your technology into a competitive advantage instead of a constant source of stress.*
 
 ## Frequently Asked Questions
 

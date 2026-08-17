@@ -21,7 +21,7 @@ You've built your first LLM-powered feature. It works beautifully in development
 
 ## Our Approach: From Prevention to Production Monitoring
 
-We've built LLM applications handling millions of AI-powered interactions for fintech platforms, customer support systems, and content generation tools. The hard truth? Traditional testing approaches break down completely when your "function" is a probabilistic neural network.
+We've built LLM applications handling production traffic for fintech platforms, customer support systems, and content generation tools. The hard truth? Traditional testing approaches break down completely when your "function" is a probabilistic neural network.
 
 The good news? You *can* build confidence in LLM applications through a layered testing and monitoring strategy. It just requires rethinking what "testing" means for non-deterministic systems.
 

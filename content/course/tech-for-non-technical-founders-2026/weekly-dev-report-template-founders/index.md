@@ -35,7 +35,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 >
 > **Output:** a one-page weekly report template you demand from your team every Monday
 
-**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
+**For later.** This chapter is for founders with a hired team. Still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)? Bookmark it for when you graduate.
 
 Open your inbox on a Monday morning. Two reports landed over the weekend from two different teams.
 
@@ -142,10 +142,7 @@ The bad report leans on soft verbs, passive voice, and unnamed actors because it
 ## Further reading
 
 - Atlassian, [How to Write an Effective Project Status Report](https://www.atlassian.com/work-management/project-management/status-reports) - the canonical reference on what status reports are for and where they fail.
-- DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for one full-stack developer shipping a feature end-to-end, which is why the five-section report fits on one page.
 - Marty Cagan, [Product Status Reports](https://www.svpg.com/product-status-reports/) - on why traditional status reports tell you nothing about whether the product is moving and what to ask for instead.
-- Will Larson via First Round Review, [Engineering leadership anti-patterns from Stripe, Uber, Carta](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) - on the pull request funnel as the load-bearing signal in any status format.
 - Wes Kao, [How I give the right amount of context](https://newsletter.weskao.com/p/how-i-give-the-right-amount-of-context) - a practitioner reference on the discipline of writing one short, useful update a week.
-- Eric Ries via Lean Startup Co., [What Is an MVP?](https://leanstartup.co/resources/articles/what-is-an-mvp/) - the validated-learning framing that makes "what did we cut?" a real product question, not a comfort question.
 
 Built by JetThoughts as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.

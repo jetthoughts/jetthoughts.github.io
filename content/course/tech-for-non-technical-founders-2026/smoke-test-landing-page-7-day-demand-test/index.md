@@ -27,13 +27,11 @@ related_posts: false
 >
 > **Output:** a go / iterate / kill decision on your hypothesis, backed by real demand signal
 >
-> **Progress:** M1 · 4 of 5 · Results so far: hypothesis sentence + live landing page + Clarity + GA4 installed
+> **Progress:** M1 · 4 of 5
 
 ---
 
 You have a live page and tracking installed. Now you need cold strangers to see it - people with no reason to be polite to you, which rules out friends and your LinkedIn network. A stranger who hands over an email address is voting with something real; a friend saying "sounds great" is voting with kindness.
-
-After this lesson you will be able to: **make a go / iterate / kill decision on your hypothesis based on what 300 cold strangers do with your page.**
 
 ## Pick your channel
 

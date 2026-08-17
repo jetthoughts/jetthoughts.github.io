@@ -71,16 +71,19 @@ The real gate is a clean peer QA (human or AI) where the answer stays inside you
 
 ## Optional: stack-rank features with real users
 
-After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. If you need to know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, not rate everything "very important." Paste your 5-7 outcome statements, send the link to your [Lesson 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) interviewees, and the forced-choice format surfaces real priorities that a 1-10 rating scale hides. The output is a ranked list backed by pairwise win rates, not averaged scores. Use this before handing the brief to Lovable or a contractor - it prevents the "build everything because everything scored 8/10" trap.
+After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. To know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, rather than rating everything "very important."
+
+1. Paste your 5-7 outcome statements.
+2. Send the link to your [interviewees](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/).
+3. Read the ranked list, backed by pairwise win rates rather than averaged scores.
+
+Do this before handing the brief to Lovable or a contractor. It prevents the "build everything because everything scored 8/10" trap.
 
 ## Further reading
 
 - Alan Klement, [*When Coffee and Kale Compete*](https://web.archive.org/web/20230319130354/https://www.whencoffeeandkalecompete.com/) - the book that introduced the *When / I want / So I can* shape under the name "Job Stories" in 2013. The framework is worth chasing once your team is bigger than two; the shape is worth using tomorrow.
 - Marty Cagan, [Product vs Feature Teams](https://www.svpg.com/product-vs-feature-teams/) - the canonical essay on why product teams (chartered with outcomes) ship better than feature teams (chartered with feature lists).
-- Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - 45% of LLM-generated code shipped at least one exploitable security flaw. Vague briefs amplify the rate.
-- DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for keeping the architecture small enough that one developer can ship outcomes end-to-end.
 - Basecamp / Ryan Singer, [Shape Up - Appetite vs Estimate](https://basecamp.com/shapeup/1.2-chapter-03) - the chapter on writing pitches that fix the appetite first, so the build collapses to fit.
-- Tom Kerwin, [JTBD Job Stories vs User Stories](https://web.archive.org/web/20240819160036/https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27) - the 2013 Klement piece on Medium that popularised the shape, for readers who want the original 1,500 words.
 - Y Combinator, [Startup School: How to Write a Product Spec](https://www.ycombinator.com/library/) - YC's distilled take on specs that ship versus specs that sit.
 
 ---

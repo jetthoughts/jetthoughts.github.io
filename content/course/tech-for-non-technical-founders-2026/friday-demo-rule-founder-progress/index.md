@@ -35,11 +35,15 @@ course_nav: false
 >
 > **Output:** a weekly Friday ritual that surfaces fake progress within 4 weeks
 >
-**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
+**For later.** This chapter is for founders with a hired team. Still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)? Bookmark it for when you graduate.
 
 What were you actually shown on your last status call? Pull up your notes and read what is on them: a burndown chart, a screenshot of a Jira board with eleven cards in "Done", a Figma frame the designer updated overnight, a verbal summary that opened with "good progress this week." Count how many of those are things you could click. On a call that costs a founder **$31K a month**, the honest count is often zero - a full status meeting that showed no working software at all.
 
-The fix is one Slack message, sent that night: *"From now on we run a 15-minute Friday demo. Loom or live, your choice. Working software only. I want to click everything you show me."* Send it, and the answer arrives fast: by Friday of week 3, the developers who were coasting surface, and the checkout flow you have tracked for six weeks turns out to be three Postman requests in a Notion doc and a Stripe sandbox key in someone's `.env`. You find that out in fifteen minutes, on a recorded call, with no fight.
+The fix is one Slack message, sent that night:
+
+> *"From now on we run a 15-minute Friday demo. Loom or live, your choice. Working software only. I want to click everything you show me."*
+
+Send it, and the answer arrives fast: by Friday of week 3, the developers who were coasting surface, and the checkout flow you have tracked for six weeks turns out to be three Postman requests in a Notion doc and a Stripe sandbox key in someone's `.env`. You find that out in fifteen minutes, on a recorded call, with no fight.
 
 ## Why most weekly status calls fail
 
@@ -69,7 +73,7 @@ The full Monday-morning Slack template lives in the [Friday Demo Template](/cour
 6. **What is blocked, and on whom?** Named person, the answer the team needs from you, the deadline.
 7. **What is the one thing I should worry about for next week?** Not a status update - the actual thing keeping the lead up at night.
 
-The order matters. Question 1 sets the frame: working software, not process. Question 4 catches over-engineering and quiet descopes. Question 7 surfaces real risk before it shows up as a missed sprint. The full template page has the copy-paste Slack message, the hard rules, and the "what to do during the call" section - bookmark it.
+The order matters. Question 1 sets the frame: working software, not process. Question 4 catches over-engineering and quiet descopes. Question 7 surfaces real risk before it shows up as a missed sprint.
 
 ## What good looks like vs what bad looks like
 
@@ -92,19 +96,16 @@ If the four-week score lands at 2 of 4 or fewer, run the [Org Chart audit](/cour
 Three actions, in order:
 
 1. **Block 15 minutes on your calendar this Friday at 4pm.** Title it "Friday Demo - Working Software Only." Add your team. No agenda doc - the agenda is the seven questions, and they are the same every week.
-2. **Check your last four weekly status calls in your notes app.** Out of those four calls, how many produced a staging URL you actually clicked from your own laptop within 24 hours of the call? If the answer is zero or one, the problem is not your team's effort - it is that the format never asked them for working software. The Friday demo asks for it every week.
-3. **Download the [Friday Demo Template](/course/tech-for-non-technical-founders-2026/friday-demo-template/) and send to your team Monday morning.** The template page has the copy-paste Slack message, the seven questions in order, the hard rules, and the "what good vs bad looks like" examples for each question. Do not paraphrase the rules - paste them. Teams respect the hard structure more than a polite request they can ignore.
+2. **Check your last four weekly status calls in your notes app.** How many produced a staging URL you actually clicked within 24 hours? Zero or one means the format never asked for working software - not that your team lacks effort.
+3. **Send the [Friday Demo Template](/course/tech-for-non-technical-founders-2026/friday-demo-template/) to your team Monday morning.** Do not paraphrase the rules - paste them. Teams respect the hard structure more than a polite request they can ignore.
 
 By Friday of week 4, you will know whether your dev team is shipping or stalling, and you will not have read a line of code.
 
 ## Further reading
 
-- Atlassian, [Sprint Reviews and Demos](https://www.atlassian.com/agile/scrum/sprint-reviews) - the canonical reference on demo meetings and how they drift into status theatre when nobody asks for working software.
-- Eric Ries via Lean Startup Co., [What Is an MVP?](https://leanstartup.co/resources/articles/what-is-an-mvp/) - the validated-learning framing that makes "what did we cut?" a real product question.
-- Will Larson (via First Round Review), [Engineering leadership anti-patterns from Stripe, Uber, Carta](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) - on the pull request funnel as the load-bearing signal a Friday demo surfaces from outside the system.
-- DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for full-stack developers shipping end-to-end and demoing in one Loom.
-- Martin Fowler, [It's Not Just Standing Up: Patterns for Daily Standup Meetings](https://martinfowler.com/articles/itsNotJustStandingUp.html) - a deep practitioner reference on the pattern of meetings that produce visible working software vs the ones that produce status updates.
-- Atlassian, [Definition of Done](https://www.atlassian.com/agile/project-management/definition-of-done) - the "is it actually done" reference that aligns with the Friday demo's working-software-only rule.
+- JetThoughts, [Retros Are Your Transparency Tool](/blog/retros-founder-transparency-tool/) - the third leg of the transparency stool: the standup proves work, the Friday demo shows working software, the retro shows process health.
+- JetThoughts, [How to make small, valuable async standups](/blog/how-make-small-valuable-async-standups-productivity-development/) - the daily companion practice; the demo is weekly, the standup keeps the week honest in between.
+- Atlassian, [Definition of Done](https://www.atlassian.com/agile/project-management/definition-of-done) - the "is it actually done" reference behind the working-software-only rule.
 
 ---
 

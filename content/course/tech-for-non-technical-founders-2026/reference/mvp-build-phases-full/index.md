@@ -127,10 +127,8 @@ The [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/
 - [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/) - day-by-day version of the build plan; print before Phase 1
 - Y Combinator, [Startup School Library + 2026 Founder Resources](https://www.ycombinator.com/library/) - the YC stance on validating without code
 - Rob Walling, [Vibe Coding interview on Creator Science](https://podcast.creatorscience.com/rob-walling/) - the shed vs skyscraper analogy
-- Lovable, [Pricing tiers](https://lovable.dev/pricing) and [community Discord](https://lovable.dev/community)
 - Supabase, [Row-Level Security guide](https://supabase.com/docs/guides/database/postgres/row-level-security)
 - Stripe, [Checkout quickstart](https://docs.stripe.com/checkout/quickstart) and [Pricing page](https://stripe.com/pricing)
-- Drew Falkman, "Vibe Coding Data-Enabled AI Apps" on Maven
 
 ---
 

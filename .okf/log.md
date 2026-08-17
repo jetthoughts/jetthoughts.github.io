@@ -1,5 +1,32 @@
 # Bundle Update Log
 
+## 2026-08-17 (editorial sweep + claims ratchet) - PR #458 session wrap
+
+* **Course-wide sweep** applied the PR-#457 rules everywhere: 22 objective
+  lines + 13 TL;DRs cut (2 glossaries relocated first), 18 Progress tails
+  trimmed, 7 "Supplementary content" notices -> plain "For later.".
+* **Shell audit**: 16/18 reference pairs healthy; 2 flagged for owner
+  decision (2.2 rehearsal prompts, 1.4 campaign build) - in PR #458 body.
+* **New rule** in `content/voice-rules.md`: Further reading = 3-4 on-topic
+  items max, inline-cited sources never repeat, own posts lead.
+* **Claims-canon recurrence caught live**: "seventeen years" in the
+  red-flags blog post AND "17 years" hardcoded in blog/list.html (the
+  ratchet's SURFACES excluded blog chrome). Fixed: template now derives
+  tenure from foundingYear; `test/unit/marketing_copy_test.rb` gains the
+  two stale-tenure spellings AND the blog-chrome glob - the same
+  three-spellings lesson as reviewCount-32 (2026-08-14).
+
+## 2026-08-17 (no-text-bricks rule) - break walls by content type
+
+* **Trigger**: Paul flagged 5.1's 9-line "The 40% test, in one paragraph"
+  section as a "big brick"; the friday-demo page had three more plus the
+  template-contents description repeated 3x.
+* **Rule** (`content/voice-rules.md`): no paragraph over ~5 rendered lines.
+  Quotable artifact → blockquote; enumeration-in-prose → list; if-X-then-Y
+  → table; what the adjacent exhibit shows gets one prose sentence. A
+  heading apologizing for the wall ("...in one paragraph") marks the brick.
+* Also mirrored in CLAUDE.md's cognitive-load gate line.
+
 ## 2026-08-17 (LI review board preview + composer scheduling recipe)
 
 * **Trigger**: Paul asked for a standing rule — reviewing LI posts should hand

@@ -99,7 +99,7 @@ Ask the deployment question too: can they push a change in under 10 minutes? A m
 
 Then look at structure. Is the code organized into logical pieces, or is everything crammed into one giant file?
 
-This costs $500-$2,000. Skipping it costs $50,000 when you have to rebuild from scratch. In the last 40+ rescue projects we've taken on over seventeen years, **91% had under 5% test coverage** and 73% had no way to deploy without manual intervention. The average founder had already spent $80K-$200K before they called us.
+This costs $500-$2,000. Skipping it costs $50,000 when you have to rebuild from scratch. In the rescue projects we've taken on since 2008, most arrived with **almost no test coverage** and no way to deploy without manual steps. Founders were typically deep into six figures of spend before they called us.
 
 Can't find someone today? Start here:
 

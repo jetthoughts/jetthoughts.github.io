@@ -1,6 +1,11 @@
 # JetThoughts - Opportunity Portfolio
 
 **Owner**: Paul Keen (CEO) | **Scope**: company-level | **Updated**: 2026-07-22
+> **Owned by the vault** (2026-08-14). JT's bets are Projects under the `opp-jt-service-revenue`
+> Opportunity in `~/Documents/pkm`; this table reflects that spine rather than defining a second one. Maintaining
+> two portfolios is how the vault's recommended sequence and this repo's dated bet drifted apart.
+> Canonical: `jt-business-os`. The state machine below stays here — it is JT's convention, and the repo uses it.
+
 **What this is**: the bets JetThoughts is making to grow, which one is active, and how we decide to validate, kill, or scale each. Every bet becomes a project under [`docs/projects/`](../projects/) and is run by the [operating system](operating-system.md).
 
 ---

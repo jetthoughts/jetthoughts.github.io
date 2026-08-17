@@ -27,13 +27,11 @@ related_posts: false
 >
 > **Output:** a price hypothesis with a measured click-to-payment signal
 >
-> **Progress:** M1 · 5 of 5 · Results so far: hypothesis sentence + live landing page + tracking installed + conversion data
+> **Progress:** M1 · 5 of 5
 
 ---
 
 Your smoke test collected emails, and an email signup only tells you a stranger found the idea interesting. Whether they'd pay for it is a separate question - a person typing card details is making a different decision than a person typing an email address. This lesson adds a Stripe button so you can measure that second decision.
-
-After this lesson you will be able to: **find out whether strangers will put a card down for your offer.**
 
 ## Set your price hypothesis
 

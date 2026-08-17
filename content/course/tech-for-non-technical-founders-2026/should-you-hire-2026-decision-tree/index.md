@@ -34,11 +34,7 @@ related_posts: false
 >
 > **Output:** a 4-way build-path decision (validate / self-serve / fractional-CTO / hire) written at the top of the [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/)
 >
-> **Progress:** M4 · 1 of 5 · Results so far: a quality-checked one-page brief (3.2) - this lesson decides who builds from it
-
-After this lesson you will be able to: **answer five questions and commit, in writing, to the smallest build path for your idea - before you spend a dollar on engineers.**
-
-> **TL;DR:** Default: self-serve with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger, not the first decision. Five questions route you to one of four build paths.
+> **Progress:** M4 · 1 of 5
 
 ---
 
@@ -48,7 +44,15 @@ Hiring engineers before a single paying customer is confirmed is the most common
 
 Self-serve with Lovable (an AI app builder that turns a plain-English prompt into a working web app), Supabase (the database that stores what the app records), and Stripe (the service that takes the payments) is the default for a non-technical founder in 2026. Hiring - whether a full team or a Fractional CTO (a part-time senior engineer who owns architecture but doesn't write the code) - is what you do when you hit a specific ceiling signal, not the first decision after the brief.
 
-By the time you reach this lesson you have already run three validation signals: the [Lesson 1.4 smoke test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) proved strangers click, the [Lesson 2.4 Mom Test interviews](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (using the [Lesson 2.1 technique](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)) proved the problem is real and felt, and the [Lesson 2.6 prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) proved users can navigate the solution without coaching. The [Lesson 3.1 brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) documents what to build. This lesson decides HOW.
+By the time you reach this lesson you have already run three validation signals:
+
+| Signal | What it proved |
+|---|---|
+| [Smoke test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (1.4) | Strangers click |
+| [Mom Test interviews](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (2.4, using the [2.1 technique](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)) | The problem is real and felt |
+| [Clickable prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) (2.6) | Users navigate the solution without coaching |
+
+The [Lesson 3.1 brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) documents what to build. This lesson decides HOW.
 
 ## The 5 questions that route you
 

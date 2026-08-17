@@ -37,7 +37,7 @@ course_nav: false
 >
 > **Output:** monthly AI cost predicted within ±20% + 3 contract clauses you add to the next SOW (statement of work)
 
-**Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
+**For later.** This matters once you have shipped (Module 4+) and your product uses AI in production - bookmark it and come back.
 
 A founder posted in r/SaaS last month: **"Our dev shop just sent the month-2 invoice. There's a $1,860 line called 'AI Services - passthrough.' We never agreed to this. The contract is for $14K/month flat. What is going on?"** The replies told her what the line was. None of them told her how to predict it for month 3.
 
@@ -156,10 +156,6 @@ Three actions. In order.
 
 ## Further reading
 
-- [Anthropic API pricing](https://www.anthropic.com/pricing) - the canonical Sonnet, Opus, and Haiku per-million-token rates. Read the input vs output split; it is where most invoice surprises live.
-- [OpenAI API pricing](https://openai.com/api/pricing/) - the gpt-4o, o3, and o1 per-token rates. Note the cached input rates if your team uses prompt caching aggressively.
-- [Cursor pricing](https://cursor.com/pricing) - Pro, Business, and Ultra tiers. Business is the modal agency choice in 2026.
-- [GitHub Copilot pricing](https://github.com/features/copilot/plans) - Individual, Business, Enterprise. The fallback for teams that have not switched to Claude Code.
 - The Pragmatic Engineer, [Software engineering with LLMs in 2025: reality check](https://newsletter.pragmaticengineer.com/p/software-engineering-with-llms-in-2025) - per-developer spend ranges from a survey of senior engineers, useful for sanity-checking the numbers above.
 - Simon Willison, [LLM pricing calculator](https://simonwillison.net/2025/Apr/10/llm-pricing-calculator/) - running cost comparison across models with public token-cost ranges.
 - Latent Space, [The Rise of the AI Engineer](https://www.latent.space/p/ai-engineer) - which model and tool combinations large engineering orgs settle on, with cost commentary.

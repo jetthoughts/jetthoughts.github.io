@@ -35,13 +35,11 @@ related_posts: false
 >
 > **Output:** a one-page Product Brief (Vibe PRD) you can hand to [Lovable](https://lovable.dev) (an AI app builder that turns a plain-English prompt into a working web app) or a hired team
 >
-> **Progress:** M3 · 1 of 2 · Results so far: a validated problem statement (2.5) + a prototype pass/fail with user vocabulary (2.6) - this page turns them into the one page Module 4 builds from
+> **Progress:** M3 · 1 of 2
 
 ---
 
 Hand an AI agent or a junior a vague brief and they fill every blank from training data - the busiest big-company version of whatever you half-described. One page, five sections, written in one focused sitting, is how you forbid that before the build starts.
-
-After this lesson you will be able to: **write a one-page Product Brief that names the user, the one problem, the one workflow, the one metric, and everything you are NOT building - so an AI agent or a hired junior builds only what you asked for.**
 
 The Product Brief - some founders call it a **Vibe PRD** (PRD stands for Product Requirements Document) - is one side of paper. It names the user, the problem, the one workflow you are building, the one metric you will measure, and what you are explicitly NOT building.
 

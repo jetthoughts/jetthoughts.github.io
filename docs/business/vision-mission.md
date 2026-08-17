@@ -1,3 +1,7 @@
+> **Owned by the vault** (2026-08-14). Identity and positioning are durable and channel-independent —
+> the same positioning must serve a book, jetthoughts.com, or any next channel, so it cannot live
+> only in this repo. Canonical: `jt-business-os` in `~/Documents/pkm`. Edit there, reflect here.
+>
 > DRAFT - company identity for Paul to review. Grounded in verifiable JT facts; keep claims defensible.
 
 # JetThoughts - Vision, Mission, Positioning

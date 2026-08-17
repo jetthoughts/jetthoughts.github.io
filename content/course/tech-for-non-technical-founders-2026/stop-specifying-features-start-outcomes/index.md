@@ -35,13 +35,11 @@ related_posts: false
 >
 > **Output:** a one-page Product Brief rewritten so engineers and AI agents stop overengineering
 >
-> **Progress:** M3 · 2 of 2 · Results so far: one-page brief drafted (3.1) - this page stress-tests Section 3 before Module 4 builds from it
+> **Progress:** M3 · 2 of 2
 
 ---
 
 Send a builder four words - "build a simple admin panel" - and you get back 47 buttons, role permissions, an audit log, and an AI co-pilot nobody asked for. This lesson is the 20-minute rewrite that makes the builder ship the three buttons you actually meant, not the spaceship.
-
-After this lesson you will be able to: **rewrite every feature noun in Section 3 of your brief as an outcome-shaped job story - so the builder has no blanks left to fill with a 47-button spaceship.**
 
 The Section 3 you fix here is the exact text Module 4 pastes into Lovable. It is not a rewrite for style - it is the check that decides whether the builder ships what you meant or a bigger thing you'll spend the quarter deleting.
 

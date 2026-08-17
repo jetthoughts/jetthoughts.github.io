@@ -35,11 +35,7 @@ related_posts: false
 >
 > **Output:** a written must-have-user persona with 3 verbatim quotes and one named segment to target
 >
-> **Progress:** M5 · 1 of 7 · Results so far: live MVP with your first users on it (4.4) - this page tests whether they'd miss it before you spend on ads
-
-After this lesson you will be able to: **run the 5-question Sean Ellis survey against your earliest users and name the one segment worth selling to.**
-
-> **TL;DR:** Before you buy traffic, survey your earliest users. If fewer than 40% would be "very disappointed" if your product vanished, you have a product problem, not a marketing problem.
+> **Progress:** M5 · 1 of 7
 
 ---
 
@@ -47,9 +43,17 @@ Would your first users be disappointed if your product disappeared tomorrow? Fiv
 
 ---
 
-## The 40% test, in one paragraph
+## The 40% test
 
-Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite, and kept seeing the same dividing line between products that ignited and products that needed life support. He surveyed each product's existing users with one load-bearing question: "How would you feel if you could no longer use [PRODUCT]?" The answer is one of four: very disappointed, somewhat disappointed, not disappointed, no longer use it. If at least 40% said "very disappointed," the product could almost always grow on outbound and word of mouth alone. Under 40%, growth stalled until the product changed. Ellis explained the cutoff and wording on [Lenny Rachitsky's podcast](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis).
+Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite, and kept seeing the same dividing line between products that ignited and products that needed life support ([his explanation of the cutoff and wording](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis)).
+
+The test is one question to your existing users:
+
+> **"How would you feel if you could no longer use [PRODUCT]?"**
+>
+> Answers: very disappointed / somewhat disappointed / not disappointed / no longer use it.
+
+At least 40% "very disappointed" and the product could almost always grow on outbound and word of mouth alone. Under 40%, growth stalled until the product changed.
 
 ![Horizontal signal meter of the share of first users answering very disappointed: amber under the 40% line means product problem, green at 40% or more means a must-have user](sean-ellis-gauge.svg)
 
@@ -78,7 +82,11 @@ Do not add a sixth question. Do not soften Q1 to "How disappointed would you be"
 
 ## Score it
 
-Export the CSV. Compute the "very disappointed" share, excluding "no longer use it" answers (they are churned users, not should-be-paying users). Pull three numbers: **overall must-have %**, **per-segment must-have %** (slice by job title and company size - one segment is almost always higher than the average, and that is your must-have segment), and **three verbatim Q2-Q3 quotes** from that segment. Those quotes are your persona, your ad copy, and your cold-email opener for Lesson 5.3.
+Export the CSV. Compute the "very disappointed" share, excluding "no longer use it" answers (they are churned users, not should-be-paying users). Pull three numbers:
+
+- **Overall must-have %**
+- **Per-segment must-have %** - slice by job title and company size; one segment is almost always higher than the average, and that is your must-have segment
+- **Three verbatim Q2-Q3 quotes** from that segment - your persona, your ad copy, and your cold-email opener for Lesson 5.3
 
 Lay this segment beside the persona in your [Lesson 2.5 validated problem statement](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). If real usage points at a different segment than the interviews did, that is a real correction - write the delta down; don't keep two personas.
 
@@ -113,8 +121,6 @@ Treat the answer as a stop sign, not a market-research instrument. Under 40% mea
 
 The full survey template (Typeform-import format, the per-segment scoring spreadsheet, and the persona-writeup template) ships in [the First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).
 
-> **Deeper reference:** [The full must-have survey walkthrough](/course/tech-for-non-technical-founders-2026/reference/must-have-survey-full/) - who to survey and who to strip, the send email, the per-segment scoring math, the decision tree, the under-40% diagnostic table, and the read-by-count guide.
-
 > **Done:** you have run the 5-question Sean Ellis survey, computed the overall and per-segment must-have %, and have 3 verbatim Q2-Q3 quotes from your top segment.
 >
 > **You have now:** a live MVP (4.4) + a written must-have-user persona with 3 verbatim quotes and one named segment (5.1). You know whether your earliest users would miss the product, and which segment to sell to - but you have not reached out to anyone yet.
@@ -122,6 +128,8 @@ The full survey template (Typeform-import format, the per-segment scoring spread
 > **Next:** the core path continues at [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - it turns the named segment into the first 50 people you will message. If you are not sure where your buyers actually spend their time, read the optional [5.2 · channel selection](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/) first.
 >
 > **If blocked:** if under 10 users responded, your sample is too small to read. Book 5-10 more user sessions using the Lesson 2.3-2.4 outreach playbook and re-run the survey.
+>
+> **Deeper reference:** [The full must-have survey walkthrough](/course/tech-for-non-technical-founders-2026/reference/must-have-survey-full/) - who to survey, the send email, the scoring math, and the under-40% diagnostics.
 
 ---
 

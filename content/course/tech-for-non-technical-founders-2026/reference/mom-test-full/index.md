@@ -133,8 +133,6 @@ Fake the convergence to start building anyway, and you join the long line of pos
 - Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library) - YC's distilled rules for the same conversation, free and 20 minutes.
 - Steve Blank, [The Four Steps to the Epiphany - Customer Discovery](https://steveblank.com/category/customer-development/) - the original customer-development methodology Fitzpatrick's script sits inside.
 - Teresa Torres, [Continuous Discovery Habits](https://www.producttalk.org/continuous-discovery-habits/) - what these interviews become after the validation phase, when you run them weekly forever.
-- Teresa Torres, [Customer Interviews (Product Talk)](https://www.producttalk.org/customer-interviews/) - the story-based method behind Q1: collect specific past stories and excavate them, because people overestimate what they typically do.
-- Teresa Torres, [Learning to Interview Continuously (Product Talk)](https://www.producttalk.org/learning-to-interview-continuously/) - how interviewers actually get good: anchor to specific moments, redirect general claims to concrete activities, and leave space for silence.
 
 ---
 

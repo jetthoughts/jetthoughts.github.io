@@ -38,10 +38,6 @@ related_posts: false
 >
 > **Progress:** M4 · 5 of 5 · [OPTIONAL] - a recurring monthly check once your MVP is live; the core path continues at 5.1
 
-After this lesson you will be able to: **score five architectural signals each month and decide, on a dated rule, whether to stay self-serve, bridge to a fractional CTO, or hire a team.**
-
-> **TL;DR:** Five architectural signals that mean the self-serve stack is maxed out. Two firing for 4+ weeks = graduate to a fractional CTO or hire. Run this check monthly once your MVP is live.
-
 ---
 
 Your Lovable app is live and the first coaches are paying. The stack that got you here has a ceiling, and it shows up in your dashboard weeks before a customer feels it. This lesson is the monthly check that catches the ceiling early, while it is still a tuning problem and not a rebuild.

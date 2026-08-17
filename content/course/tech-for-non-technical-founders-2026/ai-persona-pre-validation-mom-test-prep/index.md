@@ -36,15 +36,13 @@ related_posts: false
 >
 > **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Lesson 2.3-2.4 recruitment and real interviews
 >
-> **Progress:** M2 · 2 of 6 · Results so far: draft question list · Interviewed customers before? Skip straight to [Lesson 2.3: Find 10 People](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - 2.1 is the core
+> **Progress:** M2 · 2 of 6 · Interviewed customers before? Skip straight to [Lesson 2.3: Find 10 People](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - 2.1 is the core
 >
 > **Cost:** $0 (free tier on Claude or ChatGPT)
 
 ---
 
 You drafted 5-8 Mom Test questions in Lesson 2.1. Before you spend one of your ~10 scarce interview slots on a question like "Would you use a tool like this?" - which generates a polite "sounds great" from anyone and teaches you nothing - run the list past a Claude persona that matches your ICP. A free rehearsal catches the broken question at your desk instead of on call 5 of 10.
-
-After this lesson you will be able to: **spot and repair pitch-shaped questions before they cost you a real interview slot.**
 
 The pattern: rehearsal tells you whether the question is broken; real interviews tell you whether the hypothesis is right. There's a second reason to rehearse - interviewing is a skill you build by doing it and getting feedback, not by reading about it. Teresa Torres' teams practice with mock interviews and a feedback loop before the questions ever reach a real customer; the clumsy run is where the learning happens ([Product Talk](https://www.producttalk.org/learning-to-interview-continuously/)). A Claude persona gives you that same loop without spending a real interviewee on a question you could have caught first.
 
@@ -88,7 +86,7 @@ Build 3 distinct personas before you start - not 3 variations of the same person
 
 ## Run the rehearsal
 
-Once the persona is set, run your draft questions through four follow-up prompts (the full text of each is in the [persona-rehearsal reference](/course/tech-for-non-technical-founders-2026/reference/persona-rehearsal-full/)):
+Once the persona is set, run your draft questions through four follow-up prompts. Open the [persona-rehearsal reference](/course/tech-for-non-technical-founders-2026/reference/persona-rehearsal-full/) beside this page - it carries the verbatim text of Prompts 2-5, so you paste rather than retype. Here is what each one is for:
 
 1. **Prompt 2 - Ask** each draft question in-character. The persona answers as a busy professional would.
 2. **Prompt 3 - Diagnose:** tell Claude to break character and assess whether that question would produce useful data on a real call. Read the diagnosis, not the polite in-character answer - Claude is trained to be helpful, so a coherent answer is not proof the question works.

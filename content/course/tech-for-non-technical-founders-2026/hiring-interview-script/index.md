@@ -58,7 +58,18 @@ A standard 60-minute behavioural interview clears the candidate who names the ri
 
 Send the seven questions in writing 24 hours before the call with one sentence: *"We will work through these together on Tuesday; please come prepared."* Do not soften it. Candidates who decline to prepare are telling you the answer to the interview before it starts.
 
-Run the call on a 30-minute Zoom block. Five minutes for intro and role context, twenty for the seven questions (about three minutes each), five for their questions and a close. Score Pass / Fail in real time on the scorecard at the bottom of this page. Add the three sub-scores within five minutes of hanging up - not Friday, not next week. Specificity, system judgment, communication. Above 7 = book the reference call before you close the laptop. Below 5 = polite-no email by tomorrow morning.
+Run the call on a 30-minute Zoom block:
+
+- **0-5 min:** intro and role context
+- **5-25 min:** the seven questions, about three minutes each
+- **25-30 min:** their questions, then close
+
+Score Pass / Fail in real time on the scorecard at the bottom of this page, and add the three sub-scores - specificity, system judgment, communication - within five minutes of hanging up. Not Friday, not next week.
+
+| Total score | Do this |
+|---|---|
+| Above 7 | Book the reference call before you close the laptop |
+| Below 5 | Polite-no email by tomorrow morning |
 
 If a candidate refuses to share their screen for Q3 or Q7, that is a Fail on both questions automatically. The interview is over. End on time anyway, send the polite-no, move on.
 

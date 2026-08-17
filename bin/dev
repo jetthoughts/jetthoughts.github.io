@@ -11,7 +11,7 @@ trap 'exit 130' INT
 trap 'exit 143' TERM
 
 echo "🚀 Starting Hugo development server with simplified configuration"
-echo "📍 Server will be available at: http://localhost:1313"
+echo "📍 Server will be available at: http://localhost:${PORT:-1313}"
 echo "⚙️  Using Hugo's standard environment cascade:"
 echo "    - config/_default/hugo.toml (base configuration)"
 echo "    - config/development/hugo.toml (development overrides)"
@@ -34,17 +34,21 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PATH="$SCRIPT_DIR/../node_modules/.bin:$PATH"
 export PATH
 
-# LinkedIn review-board approvals: buttons on /linkedin/ pages hit a sidecar
-# on (hugo port + 1000), so parallel sessions on different ports each talk to
-# their own checkout's sidecar. Lives and dies with the dev server.
-HUGO_PORT=1313
+# Port: 1313 by default for humans; AI sessions pass PORT (or --port via
+# args) to get an isolated server, so concurrent sessions don't collide.
+PORT="${PORT:-1313}"
 args=("$@")
 for ((i = 0; i < ${#args[@]}; i++)); do
-  [[ "${args[i]}" == "--port" ]] && HUGO_PORT="${args[i + 1]}"
-  [[ "${args[i]}" == --port=* ]] && HUGO_PORT="${args[i]#--port=}"
+  [[ "${args[i]}" == "--port" ]] && PORT="${args[i + 1]}"
+  [[ "${args[i]}" == --port=* ]] && PORT="${args[i]#--port=}"
 done
+
+# LinkedIn review-board approvals: buttons on /linkedin/ pages hit a sidecar
+# on (hugo port + 1000), so parallel sessions on different ports each talk to
+# their own checkout's sidecar. Lives and dies with the dev server (no exec:
+# the EXIT trap must outlive hugo to reap the sidecar).
 if command -v ruby >/dev/null 2>&1; then
-  PORT=$((HUGO_PORT + 1000)) "$SCRIPT_DIR/li-review" & LI_REVIEW_PID=$!
+  PORT=$((PORT + 1000)) "$SCRIPT_DIR/li-review" & LI_REVIEW_PID=$!
   trap 'kill "$LI_REVIEW_PID" 2>/dev/null' EXIT
 else
   echo "⚠️  ruby not found - /linkedin/ board Approve/Postpone buttons disabled"
@@ -52,7 +56,7 @@ fi
 
 hugo server \
   --bind 0.0.0.0 \
-  --port 1313 \
+  --port "$PORT" \
   --renderToMemory \
   --noHTTPCache \
   "$@"
