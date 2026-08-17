@@ -237,7 +237,11 @@ In Supabase Edge Functions, create one function `create-checkout` that calls `st
 
 Create a second Supabase Edge Function `stripe-webhook` that listens for `checkout.session.completed` events and updates `coaches.subscription_status = 'active'` for the coach in `client_reference_id`. Add the webhook URL to Stripe's developer dashboard.
 
-Two settings make or break this function. First, turn OFF "Verify JWT" for `stripe-webhook` (in Supabase: Edge Functions -> your function -> Settings). Supabase rejects callers without a Supabase login by default, and Stripe doesn't have one - leave the toggle on and every delivery bounces with a 401 before your code runs. Second, because that makes the URL publicly callable, the function must check Stripe's signature before trusting anything: verify the `Stripe-Signature` header against your webhook signing secret (the `whsec_...` value) on the raw request body. Ask your AI assistant for "a Supabase Edge Function that verifies a Stripe webhook signature" and it will produce this pattern; the point is to know both settings exist.
+Two settings make or break this function.
+
+**1. Turn OFF "Verify JWT"** for `stripe-webhook` (in Supabase: Edge Functions -> your function -> Settings). Supabase rejects callers without a Supabase login by default, and Stripe doesn't have one - leave the toggle on and every delivery bounces with a 401 before your code runs.
+
+**2. Verify Stripe's signature.** Because turning off JWT makes the URL publicly callable, the function must check the signature before trusting anything: verify the `Stripe-Signature` header against your webhook signing secret (the `whsec_...` value) on the raw request body. Ask your AI assistant for "a Supabase Edge Function that verifies a Stripe webhook signature" and it will produce this pattern; the point is to know both settings exist.
 
 To test it without leaving your browser (this course's no-terminal path): in the Stripe Dashboard, go to Developers -> Webhooks -> click your endpoint -> **Send test event**, choose `checkout.session.completed`, and send it. Watch the row in Supabase flip from `trial` to `active`. The cleanest test, though, is the real thing: run one $1 test checkout through your own signup flow in Session 4 and confirm the row flips then.
 
@@ -267,7 +271,18 @@ The single most common Phase 3 stall: you trigger a Stripe test charge, the dash
 | 4 | The right event subscription isn't selected in Stripe | You created the webhook endpoint but only subscribed to `payment_intent.*` events, not `checkout.session.completed` | Stripe dashboard → Webhooks → your endpoint → "Listen to" → ensure `checkout.session.completed` is checked. Stripe defaults to a curated subset; this event is sometimes off by default |
 | 5 | Logs show the function returned 200, row updated, but the UI still shows "trial" | Your frontend is caching the old subscription status | Hard-refresh the page (Cmd+Shift+R). If status is correct after refresh, the issue is Lovable's data-fetch caching - add a 30-second refetch interval on the dashboard query, or refetch on focus |
 
-If none of the 5 rows match: paste the Stripe event payload and your Edge Function code into Claude / ChatGPT with the prompt "this Stripe webhook handler isn't updating my Supabase row - what am I missing?" - the AI will spot the gap 80% of the time. Redact first: delete the customer's name, email, and address lines from the payload, and never paste your secret keys (`sk_...`, `whsec_...`) - the AI doesn't need any of that to find the bug. For the remaining 20%, the [Stripe webhooks documentation](https://docs.stripe.com/webhooks) covers the long-tail signature, replay, and idempotency cases.
+If none of the 5 rows match, paste the Stripe event payload and your Edge Function code into Claude or ChatGPT with this prompt:
+
+```text
+This Stripe webhook handler isn't updating my Supabase row - what am I missing?
+```
+
+Redact before you paste:
+
+- delete the customer's name, email, and address lines from the payload
+- never paste secret keys (`sk_...`, `whsec_...`)
+
+The AI doesn't need any of that to find the bug. If it still comes up empty, the [Stripe webhooks documentation](https://docs.stripe.com/webhooks) covers the long-tail signature, replay, and idempotency cases.
 
 > **Idempotency reminder**: every webhook handler must be safe to fire twice on the same event. Stripe retries on any non-2xx response (network blip, timeout, deploy mid-call) and the second hit must not double-charge or double-update. Keep a `stripe_events` table whose `event_id` column has a UNIQUE constraint, and INSERT the incoming event's ID as the handler's first step - if the insert fails because the ID is already there, return 200 immediately without re-running the update logic. One atomic insert beats a check-then-write, which two simultaneous retries can slip past together. This is one extra table; it prevents the support ticket that says "I got charged twice."
 

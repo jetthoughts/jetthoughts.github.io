@@ -1116,7 +1116,7 @@ Don't wait until month 9 to discover quality problems. Start tracking these indi
 
 ## Need Help Evaluating Your Development Team?
 
-JetThoughts has performed code quality assessments for 50+ startups, helping non-technical founders understand their technical risk and implement sustainable development practices.
+JetThoughts performs code quality assessments for startups, helping non-technical founders understand their technical risk and implement sustainable development practices.
 
 **Our Code Quality Assessment Includes**:
 - Technical debt analysis and cost projection
@@ -1129,4 +1129,4 @@ JetThoughts has performed code quality assessments for 50+ startups, helping non
 
 ---
 
-*About JetThoughts: We're a Rails consulting agency specializing in helping non-technical founders evaluate and improve development team quality. Our assessments have helped founders avoid $2M+ in technical debt costs across 50+ startups.*
+*About JetThoughts: We're a Rails consulting agency specializing in helping non-technical founders evaluate and improve development team quality. Our assessments help founders avoid expensive technical debt.*

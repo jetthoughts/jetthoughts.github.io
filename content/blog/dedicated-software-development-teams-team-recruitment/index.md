@@ -73,7 +73,7 @@ We are Developers who helped to grow successful products. We offer a fully manag
 
 * Our engineers worked together as a team on different projects so the onboarding is shortened significantly
 
-* By Integrating **transparency**, **flexibility**, and **work culture** into our internal processes during the past 15 years, we’ve developed our own **unique framework** for the remote distributed teams.
+* By Integrating **transparency**, **flexibility**, and **work culture** into our internal processes during the years since 2008, we’ve developed our own **unique framework** for the remote distributed teams.
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 
 > If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

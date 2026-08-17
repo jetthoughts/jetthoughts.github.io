@@ -20,7 +20,7 @@ metatags:
   image: cover.png
 slug: ai-forces-what-rails-teams-already
 ---
-I found [this discussion](https://www.youtube.com/watch?v=c_w0LaFahxk) last week and it crystallized something that's been percolating in the industry for months. Not because it was novel—we've been running small, empowered teams at [JetThoughts](https://jetthoughts.com) for 17 years - but because AI is finally forcing the broader tech industry to confront what we figured out early: bureaucratic overhead kills velocity more than any technical constraint.
+I found [this discussion](https://www.youtube.com/watch?v=c_w0LaFahxk) last week and it crystallized something that's been percolating in the industry for months. Not because it was novel - we've been running small, empowered teams at [JetThoughts](https://jetthoughts.com) since 2008 - but because AI is finally forcing the broader tech industry to confront what we figured out early: bureaucratic overhead kills velocity more than any technical constraint.
 
 The shift isn't really about AI writing code. It's about AI making the cost of organizational complexity impossible to ignore.
 
@@ -230,7 +230,7 @@ If your team is considering how to integrate AI into development workflow, the t
 
 The teams that benefit most from AI aren't those with the best engineers. They're teams with the least organizational friction.
 
-We've been running that experiment for 13 years. The results are consistent: small teams with clear constraints, transparent communication, and built-in quality ship faster than large teams with flexibility, hierarchical communication, and separate quality processes.
+We've been running that experiment since 2008. The results are consistent: small teams with clear constraints, transparent communication, and built-in quality ship faster than large teams with flexibility, hierarchical communication, and separate quality processes.
 
 AI just makes the gap bigger.
 

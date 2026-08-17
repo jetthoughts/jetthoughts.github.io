@@ -138,7 +138,11 @@ For the full 8-clause table - what each clause should say, the red-flag wording,
 
 Of the eight, milestone acceptance is where founders consistently lose the most money, and it is the clause your general counsel is the most likely to skim.
 
-The fix is one paragraph. A milestone is delivered when (a) the acceptance criteria listed in Exhibit B pass in CI, (b) the Founder or her delegate has clicked the feature end-to-end on the staging URL, and (c) the Founder has signed off in writing within seven business days. The acceptance criteria belong in the SOW, not in a Slack message after the work is done. The five-day silent-acceptance window becomes a seven-day active-acceptance window. The invoice does not clear until the Founder signs.
+The fix is one paragraph. Paste this into your redline:
+
+> A milestone is delivered when (a) the acceptance criteria listed in Exhibit B pass in CI, (b) the Founder or her delegate has clicked the feature end-to-end on the staging URL, and (c) the Founder has signed off in writing within seven business days.
+
+The acceptance criteria belong in the SOW, not in a Slack message after the work is done. The five-day silent-acceptance window becomes a seven-day active-acceptance window. The invoice does not clear until the Founder signs.
 
 Side by side, the difference reads like this:
 
