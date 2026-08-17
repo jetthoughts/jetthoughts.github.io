@@ -46,11 +46,13 @@ Budget the calendar honestly before you start: a full-time founder gets there in
 
 ## The ship plan
 
-Each phase below ends with one demo to one human who has not seen the build. When you start a phase, open its section in the full build guide - it holds the exact mechanics so this page does not have to: [the Lovable prompt examples](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-1---write-your-prompts-set-up-lovable-ship-the-ui), [the first Supabase table walkthrough](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-2---set-up-supabase-connect-real-signup-works), [the Stripe test flow](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-3---add-stripe-wire-checkout-1-test-transactions), and [the domain switch + cold-DM template](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-4---deploy-send-to-5-icp-users-iterate-from-the-data).
+Each phase below ends with one demo to one human who has not seen the build.
+
+> **Companion:** the [full build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/) walks every phase step by step - each phase below links its exact section when you need it.
 
 ### Phase 1 - Lovable: ship the clickable UI
 
-Pick ONE feature from your one-page brief's "what you're building" section - the smallest workflow that solves the validated problem for one persona. Could you cut it in half and still solve the problem? Then cut it. Write the prompt as **"build a [SCREEN] for [PERSONA] to [OUTCOME]"** and let Lovable generate the screens. Iterate by chatting with it: rename a button, move a section. No backend yet; nothing persists, and that is fine.
+Pick ONE feature from your one-page brief's "what you're building" section - the smallest workflow that solves the validated problem for one persona. Could you cut it in half and still solve the problem? Then cut it. Write the prompt as **"build a [SCREEN] for [PERSONA] to [OUTCOME]"** ([prompt examples](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-1---write-your-prompts-set-up-lovable-ship-the-ui)) and let Lovable generate the screens. Iterate by chatting with it: rename a button, move a section. No backend yet; nothing persists, and that is fine.
 
 > **Phase 1 demo:** one person who has not read the brief navigates the core screen without a tour.
 
@@ -58,15 +60,15 @@ Pick ONE feature from your one-page brief's "what you're building" section - the
 
 ### Phase 2 - Supabase: real signup, walled data
 
-Create your three or four core tables in Supabase, and check **Enable Row-Level Security** on each table BEFORE adding columns. That checkbox is the load-bearing click: [RLS](https://supabase.com/docs/guides/database/postgres/row-level-security) is the database rule that walls one customer's data off from another's, and skipping it is the most common security hole in vibe-coded MVPs. Then install the Supabase integration inside Lovable and wire the signup screen to it.
+Create your three or four core tables in Supabase ([first-table walkthrough](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-2---set-up-supabase-connect-real-signup-works)), and check **Enable Row-Level Security** on each table BEFORE adding columns. That checkbox is the load-bearing click: [RLS](https://supabase.com/docs/guides/database/postgres/row-level-security) is the database rule that walls one customer's data off from another's, and skipping it is the most common security hole in vibe-coded MVPs. Then install the Supabase integration inside Lovable and wire the signup screen to it.
 
 > **Phase 2 demo:** your spouse signs up on the staging URL and you watch the row appear in Supabase in real time.
 
-**Before Phase 3, two checks.** First, run the [RLS self-test from the full build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-2---set-up-supabase-connect-real-signup-works) - it is copy-paste verification with an AI assistant, not programming. Second, hand the URL to one tester with zero coaching; if they cannot reach the core action, go back to [Lesson 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) - a paywall on top of a workflow nobody can navigate just adds friction to a broken loop.
+**Before Phase 3, two checks.** First, run the RLS self-test (in the same guide section) - it is copy-paste verification with an AI assistant, not programming. Second, hand the URL to one tester with zero coaching; if they cannot reach the core action, go back to [Lesson 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) - a paywall on top of a workflow nobody can navigate just adds friction to a broken loop.
 
 ### Phase 3 - Stripe: one product, one price, $1 test
 
-Build one product at one price - the price your [Lesson 1.5 smoke test](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) validated, not a guess. Use [Stripe Checkout](https://docs.stripe.com/checkout/quickstart) in test mode, and wire the webhook (the automatic message Stripe sends your app when a payment lands) to flip your user's row to paid. Run $1 test transactions until the flip is boring.
+Build one product at one price - the price your [Lesson 1.5 smoke test](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) validated, not a guess. Use [Stripe Checkout](https://docs.stripe.com/checkout/quickstart) in test mode, and wire the webhook (the automatic message Stripe sends your app when a payment lands) to flip your user's row to paid. Run $1 test transactions ([the full test flow](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-3---add-stripe-wire-checkout-1-test-transactions)) until the flip is boring.
 
 > **Phase 3 demo:** you sign up as a fake user, pay $1 in test mode, land on the paid view, and the row in Supabase says paid.
 
@@ -74,7 +76,7 @@ Build one product at one price - the price your [Lesson 1.5 smoke test](/course/
 
 ### Phase 4 - go live: domain, live mode, 5 real users
 
-Buy a domain (roughly $10/year for a .com - never let a tool hold your domain), point it at the app, and switch Stripe to live mode. Then send a 3-line personal note to 5 ICP prospects from your [Module 2 outreach list](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/): the workaround they described, the URL that now replaces it, "honest reactions only."
+Buy a domain (roughly $10/year for a .com - never let a tool hold your domain), point it at the app, and switch Stripe to live mode. Then send a 3-line personal note ([word-for-word template](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-4---deploy-send-to-5-icp-users-iterate-from-the-data)) to 5 ICP prospects from your [Module 2 outreach list](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/): the workaround they described, the URL that now replaces it, "honest reactions only."
 
 > **Phase 4 demo:** five click sessions from real ICP users, logged.
 
