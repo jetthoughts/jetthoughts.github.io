@@ -120,7 +120,7 @@ Send it as a [Loom](https://www.loom.com) or a personal LinkedIn DM, not a gener
 
 Start Phase 1 tonight. **The first two actions cost $0.**
 
-1. **Confirm the Lesson 4.3 set-up held:** Lovable + Supabase free-tier accounts exist and GitHub sync is on (pre-flight rule 3). If you skipped it, do it now on [lovable.dev](https://lovable.dev) and [supabase.com](https://supabase.com).
+1. **Confirm the [Lesson 4.3 set-up](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) held:** Lovable + Supabase free-tier accounts exist and GitHub sync is on. If you skipped it, do it now on [lovable.dev](https://lovable.dev) and [supabase.com](https://supabase.com).
 2. **Write your Phase 1 prompt** - one feature, "build a [SCREEN] for [PERSONA] to [OUTCOME]."
 3. **Generate the UI and run the Phase 1 demo** with one human who has not read the brief.
 
