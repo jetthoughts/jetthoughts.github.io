@@ -1608,3 +1608,25 @@ causes this session, each with its own fix (details in
    SVGs at authoring time (Caveat data-URI injected so mmdc measures
    correctly); render hook embeds them and skips mermaid.js. Opt-in per
    page, zero CI footprint.
+
+## 2026-08-17 - Content rewrite pipeline: hub posts, scannability pendulum, humanizer merge
+
+Three durable learnings from the vendor-post rewrite + lovable-guide session:
+
+1. **Hub-post pattern**: when a listicle rots (fabricated stats, wrong
+   persona), the rewrite target is the CLUSTER HUB - own the taxonomy and
+   the lifecycle map, link each phase to the specialist post/lesson that
+   owns the checklist depth. Run the claims audit + cluster/signal map
+   agents BEFORE writing; the do-not-reuse list prevents double-anchoring
+   sibling stats (Deloitte/Qodo/LitsLink were already triple-anchored).
+2. **The scannability pendulum**: "too many lists" -> all-prose overshoots.
+   The stable middle: bold lead-in taxonomy paragraphs + varied-phrase H3
+   anchors + ONE hero exhibit in the first fold + one closing action list.
+   Slop-critic fixes (de-quarteting bold labels) must be re-checked against
+   the F-pattern gate on the RENDERED page - the two gates pull opposite
+   directions and both are blocking.
+3. **Voice guide §3 now carries the humanizer cross-check additions**
+   (2026-08-17 subsection): ~18 extra AI-vocabulary words, false ranges,
+   -ing tails, synonym cycling, vague authority, generic positive
+   conclusions, chatbot artifacts, straight-quotes rule. Sweep rewrites
+   against the MERGED list, not just the original §3.
