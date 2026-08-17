@@ -229,6 +229,22 @@ the numbers.
 4. The `icp_replies` count, not impressions, decides whether the campaign is
    validating (per each lane's plan kill-criteria).
 
+## Review board (local preview) — ALWAYS give Paul the link
+
+When asked to review/check LI posts, start the dev server and hand back the URL —
+don't paste post text into chat:
+
+```
+bin/dev          # http://localhost:1313
+```
+
+- **Board (all posts by stage):** http://localhost:1313/linkedin/
+- **Single post:** `http://localhost:1313/linkedin/<lane>/<slug>/`
+  (e.g. `/linkedin/course-promo/week1-tue-founding-hypothesis/`)
+
+Dev-only: `config/development/hugo.toml` mounts `linkedin-posts/` as `content/linkedin`;
+production has no such mount, so these pages never ship.
+
 ## Posting workflow
 
 1. Draft against the idea-first skeleton; self-score ≤2/10 (pipeline rubric) + the

@@ -100,7 +100,7 @@ For exact slug/tag lookups, see the post index at `docs/blog-post-index.md` (reg
 - **New page (paved path)**: `docs/workflows/new-page.md` - starter template, component reuse, slice recipe, traps
 - CSS consolidation rules: `docs/workflows/css-consolidation.md`
 - Blog pipeline: `docs/workflows/blog-pipeline.md`
-- LinkedIn pipeline: `docs/workflows/linkedin-post-pipeline.md` (Paul Keen voice rules, AI score rubric, save-location convention)
+- LinkedIn pipeline: `docs/workflows/linkedin-post-pipeline.md` (Paul Keen voice rules, AI score rubric, save-location convention). **Reviewing LI posts: run `bin/dev` and give Paul the board link http://localhost:1313/linkedin/ (dev-only mount)** — per-post: `/linkedin/<lane>/<slug>/`; details in `linkedin-posts/README.md` §Review board
 - LinkedIn campaign: `docs/workflows/linkedin-icp-validation-plan.md`
 - Cover images: `docs/workflows/cover-images.md` (canonical spec remains `.stitch/design.md`)
 - Visual scroll gate (rendered-output QA): `docs/workflows/visual-scroll-gate.md`

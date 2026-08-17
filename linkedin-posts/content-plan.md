@@ -24,7 +24,7 @@ Status legend: `draft` · `revised` (idea-first, ready) · `approved` · `schedu
 
 ## Next actions (2026-08-14 handoff) - STOP BUILDING, START SENDING
 
-All LI work is on branch `linkedin-review-board` (**PR #455, not merged**). 19 posts
+All LI work landed on master (**PR #455 merged 2026-08-17**). 19 posts
 drafted, illustrated (caricatures + exhibits), reordered. But the active bet (Vibe
 Code Rescue) is **RED: zero outreach touches ever sent** - the bottleneck is
 distribution, not demand, and 3+ weeks of finished content is *activity, not
@@ -41,7 +41,7 @@ validation*. **Do NOT make more posts until the first batch is live.** In priori
 4. **Instrument** - log ICP replies in `metrics-ledger.md` / the 2607 pipeline sheet.
 
 **Open items:** a real "I was wrong" story to replace the deleted BigBinary
-(story-bank Q2); merge PR #455 once Paul has reviewed the board; the caricature tool
+(story-bank Q2); the caricature tool
 now works (billing on; `GEMINI_API_KEY`/`GOOGLE_API_KEY` in `~/.claude/.env`,
 untracked - Paul may rotate). Status snapshot: `docs/business/operating-system.md` §1
 (RED) + the Aug-2026 investor update.
