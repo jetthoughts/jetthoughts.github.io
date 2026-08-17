@@ -1478,3 +1478,22 @@ resolve and no CSS hid the div in the meantime. Fixed with one rule:
    May 2026 and nobody saw it, because it only bites on a slow font load - the
    visual suite renders after fonts settle, so screenshots were always green.
    A suite that waits for the happy path cannot see the unhappy one.
+
+## 2026-08-17 - Board approvals: one-click decisions land in frontmatter
+
+Paul asked for approvals from the LinkedIn review board with locally tracked
+decisions. Shipped: Approve/Reject buttons (keys `a`/`r`) on each
+`/linkedin/<lane>/<slug>/` page, backed by `bin/li-review` - a stdlib-Ruby
+sidecar that `bin/dev` starts/stops automatically (port 1315). A decision
+rewrites the post's frontmatter `status:` (kept as the single status source;
+no parallel state file) and appends an audit line to
+`linkedin-posts/decisions.log`, then 303s back to the page.
+
+1. **Constraint from Paul: nothing to run besides `bin/dev`.** First cut was a
+   separately-started sidecar; folded into `bin/dev` (dropped its `exec` so an
+   EXIT trap can reap the child). Hugo alone cannot accept writes - a sidecar
+   is the minimum honest write path for a static dev server.
+2. **Same session: the harness classifier can DENY typing a post body into the
+   LinkedIn composer** (and the contenteditable has no a11y ref for form_input).
+   Recipe updated: stage everything, Paul pastes; never chunk-retry a denied
+   type action.

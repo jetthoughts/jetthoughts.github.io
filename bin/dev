@@ -34,7 +34,16 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PATH="$SCRIPT_DIR/../node_modules/.bin:$PATH"
 export PATH
 
-exec hugo server \
+# LinkedIn review-board approvals: Approve/Reject buttons on /linkedin/ pages
+# post to this sidecar (port 1315). Lives and dies with the dev server.
+if command -v ruby >/dev/null 2>&1; then
+  "$SCRIPT_DIR/li-review" & LI_REVIEW_PID=$!
+  trap 'kill "$LI_REVIEW_PID" 2>/dev/null' EXIT
+else
+  echo "⚠️  ruby not found - /linkedin/ board Approve/Reject buttons disabled"
+fi
+
+hugo server \
   --bind 0.0.0.0 \
   --port 1313 \
   --renderToMemory \

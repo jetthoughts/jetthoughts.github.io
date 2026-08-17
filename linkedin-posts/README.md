@@ -88,6 +88,16 @@ Reusing a topic-perfect course exhibit is still fine when one exists.
 > LinkedIn's native file-upload dialog. Until solved, the image is attached
 > manually by Paul (or dropped in a fresh composer). Track the fix in the backlog.
 
+## Board approvals (`bin/li-review`)
+
+Each post page on the dev board has **Approve / Reject** buttons (keys `a` / `r`).
+They hit a local sidecar that `bin/dev` starts and stops automatically (port
+1315, override with `PORT=`; nothing extra to run). A decision rewrites the post's frontmatter
+`status:` line (single source of truth, no separate state file) and appends an
+audit line to `linkedin-posts/decisions.log`. The page redirects back and shows
+the new status pill. Localhost-only, dev-only; the agent reads approvals straight
+from frontmatter/log, so board decisions need no chat round-trip.
+
 ## Frontmatter schema v2
 
 Lifecycle + pointers in frontmatter; **performance data lives in the ledger, not
