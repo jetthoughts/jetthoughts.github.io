@@ -2,16 +2,28 @@
 
 > **Ownership (settled 2026-08-17):** this file is **repo-owned and edited here** - the weekly loop, the OKR (§3), the rocks (§4), and the weekly numbers (§1) all live in this repo, beside the pipeline tooling that feeds them. Identity, positioning, and bet *status* are owned in the vault (`jt-business-os`, `~/Documents/pkm`) and mirrored into `vision-mission.md` / `opportunity-portfolio.md`. Company FACTS stay canon in `.okf/content/claims-canon.md`.
 
-> **⏸️ The bet this loop serves is PARKED until September 2026** (Paul,
-> 2026-08-17 - see [`opportunity-portfolio.md`](opportunity-portfolio.md)). The
-> objective, OKR (§3), rocks (§4) and weekly numbers (§1) below still describe
-> the pre-park plan. **Open question for Paul: does "1 client by Nov 30" survive
-> a September restart, or does the target move?** Until that is answered, treat
-> §1-§4 as the plan on resume, not as this week's commitments - and do not log
-> RED weekly numbers against a bet nobody is working.
+> **⏸️ PARKED until September 2026** (Paul, 2026-08-17 - see
+> [`opportunity-portfolio.md`](opportunity-portfolio.md)).
+>
+> **The Nov 30 target is SUSPENDED, not moved.** Decided 2026-08-17 on the
+> evidence in §3: KR1 went green (offer priced, partner signed, booking link
+> live) while KR2/KR3/KR4 sat at **0** and the weekly table logged zeros through
+> 2026-08-08 with 2 sends against a ~6/mo target. The date was never the binding
+> constraint - execution was. Nov 30 was set on 2026-07-21 for work that then did
+> not start, so replacing it with another arbitrary date today would repeat the
+> same mistake on a longer runway.
+>
+> **The new target gets set at the September restart, from a re-scoped first
+> move** - not before. Until then: §1-§4 describe the pre-park plan, they are not
+> this week's commitments, and **nothing logs RED weekly numbers against a bet
+> nobody is working**. Every "Nov 30" still written in §3, in
+> `docs/projects/2607-*` and in `2510-*` is stale-by-decision and gets rewritten
+> once at restart, in one pass, against the new scope.
+>
+> To reverse: delete this block and the objective below resumes as written.
 
 **Scope**: the **company** operating system - how JetThoughts runs across every opportunity, not just the current one. **Company layer**: [`index.md`](index.md) (front door) · [`vision-mission.md`](vision-mission.md) (who we are, still DRAFT) · [`opportunity-portfolio.md`](opportunity-portfolio.md) (the bets).
-**Purpose**: the smallest cadence that reliably ships the current objective - **1 Vibe Code Rescue client by Nov 30, 2026**.
+**Purpose**: the smallest cadence that reliably ships the current objective - **1 Vibe Code Rescue client** (target date SUSPENDED while parked; reset at the September restart).
 **Owner**: Paul Keen | **Created**: 2026-07-21 | **Review**: weekly, in §1 below - no separate ritual
 **State**: this file does NOT duplicate the runbook's fresh-session state. For "what do I do right now," open [`operation-runbook.md`](../projects/2607-vibe-code-rescue/operation-runbook.md) → START HERE. This file is the numbers layer over it.
 
@@ -46,9 +58,9 @@ Source of truth: [`rescue-sprint/pipeline.md`](../projects/2607-vibe-code-rescue
 | KR | Target | Status |
 |---|---|---|
 | KR1 - Offer + partner live | Priced, partner signed, landing CTA live | 🟢 partner ✓, priced ✓ ($2,500/$7,500/$10,000), booking link live ✓; full landing page still Blocked (card B1) |
-| KR2 - Discovery calls booked | 8-12 by Nov 30 | 🔴 0. (Mid-Nov is an internal trend checkpoint, not a separate deadline - both KRs share one date now.) |
+| KR2 - Discovery calls booked | 8-12 (date suspended) | 🔴 0. Date suspended with the park - see the banner above. |
 | KR3 - Audits delivered | 3-5 free Rescue Audits | 🔴 0 - blocked behind KR2 |
-| KR4 - Rescue signed | 1 by Nov 30 | 🔴 0 - blocked behind KR3 |
+| KR4 - Rescue signed | 1 (date suspended) | 🔴 0 - blocked behind KR3 |
 
 **Kill-criteria (from the assumptions register, evaluated here weekly - this is the "runs automatically via OS-WEEKLY" promise, made real):** C1 test (re-based 2026-08-08) - 0 calls after 2 weeks of *active outreach across live lanes* (LinkedIn posts and/or verified sends) → pause, re-open A + C. Currently **untestable** - the clock hasn't started, see §1. A0 ICP test - if ≥half of early interest is technical or pre-launch founders, re-open the ICP vote. Not yet evaluable - zero interest of any kind so far.
 
@@ -65,7 +77,7 @@ The arithmetic that forced the realignment: KR2 needs 8-12 calls; the cold lane 
 3. **First send → first call** (Aug-Sep) - batch-1 from whichever lane opens first, then the daily reply-monitor.
 4. **First audit → first signing** (Oct) - gated on Rock 3.
 
-**Mid-point gate — Sep 30: ≥3 discovery calls booked, else pause and re-open A + C** (register wording). This is the falsifiable checkpoint between now and Nov 30; it exists so a re-plan can still happen while there is time to re-plan.
+**Mid-point gate — SUSPENDED.** The register wording ("Sep 30: ≥3 discovery calls booked, else pause and re-open A + C") assumed outreach running from August. The bet restarts *in* September, so a Sep 30 call-count gate would fire against a bet that had days to work. Re-set this gate with the new target at the restart - it is the falsifiable checkpoint that makes a re-plan possible, so it must survive the reset, not be dropped.
 
 *Closed*: offer + partner locked (Jul 21). *Cut* (20.09, 2026-08-07): the paid-pilot rock - budget only matters once organic proves a reply signal, and the bet currently forbids a content sprint.
 
