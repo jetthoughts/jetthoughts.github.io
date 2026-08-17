@@ -148,7 +148,16 @@
           // clips trailing characters. border-radius is safe (non-metric).
           themeCSS: '.edgePaths path { stroke-width: 2.25px; } .edgeLabel { border-radius: 6px; }'
         });
-        document.fonts.ready.then(function () {
+        // fonts.ready alone is not enough: it resolves when the fonts
+        // REQUESTED so far settle, and the hidden .mermaid source may never
+        // request Caveat - mermaid then measures with the fallback and the
+        // late Caveat repaint shifts every glyph (the recurring screenshot
+        // flake + clipped-label defect). fonts.load() forces the fetch.
+        Promise.all([
+          document.fonts.load("20px Caveat"),
+          document.fonts.load("20px 'Patrick Hand'"),
+          document.fonts.ready
+        ]).then(function () {
           mermaid.run();
         });
       </script>
