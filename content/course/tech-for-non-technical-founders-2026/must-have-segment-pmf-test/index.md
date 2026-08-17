@@ -43,9 +43,17 @@ Would your first users be disappointed if your product disappeared tomorrow? Fiv
 
 ---
 
-## The 40% test, in one paragraph
+## The 40% test
 
-Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite, and kept seeing the same dividing line between products that ignited and products that needed life support. He surveyed each product's existing users with one load-bearing question: "How would you feel if you could no longer use [PRODUCT]?" The answer is one of four: very disappointed, somewhat disappointed, not disappointed, no longer use it. If at least 40% said "very disappointed," the product could almost always grow on outbound and word of mouth alone. Under 40%, growth stalled until the product changed. Ellis explained the cutoff and wording on [Lenny Rachitsky's podcast](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis).
+Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite, and kept seeing the same dividing line between products that ignited and products that needed life support ([his explanation of the cutoff and wording](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis)).
+
+The test is one question to your existing users:
+
+> **"How would you feel if you could no longer use [PRODUCT]?"**
+>
+> Answers: very disappointed / somewhat disappointed / not disappointed / no longer use it.
+
+At least 40% "very disappointed" and the product could almost always grow on outbound and word of mouth alone. Under 40%, growth stalled until the product changed.
 
 ![Horizontal signal meter of the share of first users answering very disappointed: amber under the 40% line means product problem, green at 40% or more means a must-have user](sean-ellis-gauge.svg)
 
