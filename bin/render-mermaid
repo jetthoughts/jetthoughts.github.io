@@ -1,0 +1,81 @@
+#!/usr/bin/env ruby
+# Pre-render mermaid fences to SVG at AUTHORING time (mermaid flake prevention #3).
+#
+# Usage: bin/render-mermaid content/blog/<slug> [more pages...]
+#
+# For each ```mermaid fence in the page's index.md this renders
+# mermaid-<hash8>.svg into the page bundle via bunx @mermaid-js/mermaid-cli.
+# The render hook (themes/beaver/layouts/_markup/render-codeblock-mermaid.html)
+# embeds the SVG when present - that page then ships no mermaid.js and has zero
+# render-time nondeterminism. Pages without pre-rendered SVGs keep the runtime
+# fallback unchanged. CI never runs this: SVGs are committed like any exhibit.
+#
+# ponytail: authoring-time tool, not a build step - keeps puppeteer out of CI.
+
+require "digest"
+require "json"
+require "base64"
+require "tmpdir"
+
+ROOT = File.expand_path("..", __dir__)
+
+# Keep in sync with mermaid.initialize() in themes/beaver/layouts/baseof.html.
+CONFIG = {
+  theme: "base",
+  themeVariables: {
+    fontFamily: "'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive",
+    fontSize: "20px",
+    primaryColor: "#fff5f5",
+    primaryBorderColor: "#cc342d",
+    primaryTextColor: "#1a1a1a",
+    lineColor: "#333",
+    edgeLabelBackground: "#faf7f2"
+  },
+  flowchart: { nodeSpacing: 45, rankSpacing: 55, padding: 14 },
+  themeCSS: ".edgePaths path { stroke-width: 2.25px; } .edgeLabel { border-radius: 6px; }"
+}.freeze
+
+# mmdc measures text in its own headless chromium, which has no Caveat -
+# inject the repo's woff2 as a data URI so node boxes are measured with the
+# same font the site renders with (the exact race #1 fixed in the browser).
+def fonts_css
+  woff = Base64.strict_encode64(File.binread(File.join(ROOT, "themes/beaver/static/fonts/caveat-latin.woff2")))
+  "@font-face { font-family: 'Caveat'; src: url(data:font/woff2;base64,#{woff}) format('woff2'); }"
+end
+
+pages = ARGV
+abort "usage: bin/render-mermaid content/blog/<slug> [more pages...]" if pages.empty?
+
+Dir.mktmpdir do |tmp|
+  config = File.join(tmp, "mermaid.json")
+  File.write(config, JSON.pretty_generate(CONFIG))
+  css = File.join(tmp, "fonts.css")
+  File.write(css, fonts_css)
+
+  pages.each do |page|
+    md = File.directory?(page) ? File.join(page, "index.md") : page
+    abort "#{md}: not found (pre-rendering needs a page bundle with index.md)" unless File.file?(md)
+    dir = File.dirname(md)
+    fences = File.read(md).scan(/^```mermaid\s*\n(.*?)^```\s*$/m).flatten
+    puts "#{md}: #{fences.size} mermaid fence(s)"
+    fences.each do |inner|
+      # hash8 must match the render hook: md5 of the whitespace-trimmed fence body
+      hash = Digest::MD5.hexdigest(inner.strip)[0, 8]
+      out = File.join(dir, "mermaid-#{hash}.svg")
+      if File.file?(out)
+        puts "  #{File.basename(out)} up to date"
+        next
+      end
+      src = File.join(tmp, "#{hash}.mmd")
+      File.write(src, inner)
+      system("bunx", "-p", "@mermaid-js/mermaid-cli", "mmdc",
+             "-i", src, "-o", out, "-c", config, "-C", css, "-b", "transparent",
+             exception: true)
+      # The injected @font-face rides into the SVG (~70KB of base64). It was
+      # only needed for MEASUREMENT inside mmdc's chromium - the page serves
+      # Caveat itself, so strip it before committing.
+      File.write(out, File.read(out).sub(/@font-face \{ font-family: 'Caveat';[^}]*\}/, ""))
+      puts "  rendered #{File.basename(out)}"
+    end
+  end
+end

@@ -5,9 +5,11 @@ description: Mermaid renders in Caveat handwritten cursive, loaded explicitly an
 resource: themes/beaver/layouts/baseof.html
 tags: [mermaid, fonts, design]
 generated:
-  by: process:okf-migrate
-  at: 2026-07-13T00:00:00Z
-verified: { by: claude/opus-5, at: 2026-08-13T10:00:00Z }
+  by: claude/fable-5
+  at: 2026-08-17T16:00:00Z
+verified:
+  - by: claude/opus-5
+    at: 2026-08-13T10:00:00Z
 ---
 
 # Root cause worth remembering
@@ -21,6 +23,36 @@ last-character clipping. The fix in `baseof.html`:
 2. `startOnLoad: false` and `document.fonts.ready.then(() => mermaid.run())`.
 3. Font stack `'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive` - mirrors
    the in-post SVGs' fallback.
+
+# Flake prevention, three layers (2026-08-17)
+
+The `mermaid_post` screenshot flake family is closed from three sides:
+
+1. **Page (root cause):** `document.fonts.ready` alone resolves when the
+   fonts *requested so far* settle - the hidden `.mermaid` source may never
+   request Caveat, so mermaid measured with the fallback and the late Caveat
+   repaint shifted every glyph. `baseof.html` now `Promise.all`s explicit
+   `document.fonts.load("20px Caveat")` (+ Patrick Hand) with `fonts.ready`
+   before `mermaid.run()`.
+2. **Test:** `blog_special_content_test.rb` waits for
+   `div.mermaid[data-processed] svg` AND asserts
+   `document.fonts.check("20px Caveat")` before capturing - the screenshot
+   can only be taken in the same state the baseline was recorded in.
+3. **Authoring-time pre-render (opt-in per page):** `bin/render-mermaid
+   content/blog/<slug>` renders each fence to `mermaid-<hash8>.svg` in the
+   page bundle via `bunx @mermaid-js/mermaid-cli` (theme config duplicated
+   in the script - keep in sync with `baseof.html`; Caveat injected as a
+   data-URI so mmdc MEASURES with the real font). The render hook embeds the
+   SVG when present (`data-prerendered`), ships no mermaid.js for that page,
+   and falls back to runtime mermaid otherwise. hash8 = md5 of the
+   whitespace-trimmed fence body on BOTH sides. CI never runs the tool -
+   SVGs are committed like any exhibit.
+
+**Diagnosing a red `mermaid_post` check:** identical `difference_level`
+across runs = stale baseline (a content/CSS change upstream), NOT flake -
+download the CI run's `screenshots-report-full` artifact, eyeball the
+heatmap, and commit the CI-rendered capture as the linux baseline. Never
+re-record linux baselines from local emulated Docker.
 
 # Theming gotchas
 

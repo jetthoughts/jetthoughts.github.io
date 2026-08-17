@@ -5,8 +5,11 @@ class BaseofTemplateTest < BasePageTestCase
   # Validates security, accessibility, and architectural improvements
   # Implements TDD coverage per /knowledge/20.01-tdd-methodology-reference.md
 
-  # Mermaid loads only on pages that render a diagram, never on index.html.
-  MERMAID_PAGE = "blog/hidden-cost-poor-development-vendor-management-fix/index.html"
+  # Mermaid loads only on pages that render a diagram AT RUNTIME, never on
+  # index.html. Pages whose diagrams were pre-rendered by bin/render-mermaid
+  # ship the SVG inline and NO mermaid.js (fonts only) - assert both paths.
+  MERMAID_PAGE = "blog/rails-7-eol-unpatched-security-exposure/index.html"
+  PRERENDERED_MERMAID_PAGE = "blog/hidden-cost-poor-development-vendor-management-fix/index.html"
 
   # Mermaid is self-hosted from themes/beaver/static/js/vendor (2026-08-01),
   # which retires the jsdelivr CDN + SRI pin this test used to assert. It
@@ -24,6 +27,19 @@ class BaseofTemplateTest < BasePageTestCase
     src = mermaid_scripts.first["src"]
     assert src.start_with?("/"), "Mermaid must be served same-origin, got #{src.inspect}"
     refute_match %r{^https?://}, src, "Mermaid must not be loaded from a third-party CDN"
+  end
+
+  def test_prerendered_mermaid_page_ships_svg_without_mermaid_js
+    doc = parse_html_file(PRERENDERED_MERMAID_PAGE)
+
+    prerendered = doc.css("div.mermaid[data-prerendered] svg")
+    refute_empty prerendered, "Pre-rendered page should embed the SVG inline"
+
+    assert_empty doc.css("script[src*='mermaid']"),
+      "Pre-rendered page must not ship mermaid.js"
+
+    caveat = doc.css("link[href*='fonts-caveat']")
+    refute_empty caveat, "Pre-rendered page still needs the Caveat stylesheet for the SVG labels"
   end
 
   def test_no_hardcoded_inline_css_styles
