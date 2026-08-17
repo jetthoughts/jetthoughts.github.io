@@ -121,8 +121,6 @@ Treat the answer as a stop sign, not a market-research instrument. Under 40% mea
 
 The full survey template (Typeform-import format, the per-segment scoring spreadsheet, and the persona-writeup template) ships in [the First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).
 
-> **Deeper reference:** [The full must-have survey walkthrough](/course/tech-for-non-technical-founders-2026/reference/must-have-survey-full/) - who to survey and who to strip, the send email, the per-segment scoring math, the decision tree, the under-40% diagnostic table, and the read-by-count guide.
-
 > **Done:** you have run the 5-question Sean Ellis survey, computed the overall and per-segment must-have %, and have 3 verbatim Q2-Q3 quotes from your top segment.
 >
 > **You have now:** a live MVP (4.4) + a written must-have-user persona with 3 verbatim quotes and one named segment (5.1). You know whether your earliest users would miss the product, and which segment to sell to - but you have not reached out to anyone yet.
@@ -130,6 +128,8 @@ The full survey template (Typeform-import format, the per-segment scoring spread
 > **Next:** the core path continues at [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - it turns the named segment into the first 50 people you will message. If you are not sure where your buyers actually spend their time, read the optional [5.2 · channel selection](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/) first.
 >
 > **If blocked:** if under 10 users responded, your sample is too small to read. Book 5-10 more user sessions using the Lesson 2.3-2.4 outreach playbook and re-run the survey.
+>
+> **Deeper reference:** [The full must-have survey walkthrough](/course/tech-for-non-technical-founders-2026/reference/must-have-survey-full/) - who to survey, the send email, the scoring math, and the under-40% diagnostics.
 
 ---
 

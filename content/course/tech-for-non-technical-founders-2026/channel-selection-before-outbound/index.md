@@ -103,8 +103,6 @@ The decision matters more than the channel itself. Committing to one channel and
 
 The first place to apply this is your personal network in [Lesson 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Once that is exhausted, [going outbound without a sales team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) covers running the channel you just chose: the filter, the script, the Calendly-to-Stripe pipeline, and what the reply rate actually means.
 
-> **Deeper reference:** [The full channel-selection walkthrough and worksheet](/course/tech-for-non-technical-founders-2026/reference/channel-selection-full/) - the commitment-rule phase table, reading signals from transcripts, the 4-dimension scoring, the 4-channel comparison, the Engineering-as-Marketing side door, and the fill-in worksheet.
-
 > **Done:** you scored your candidate channels, chose one at ≥9/12, and wrote your commitment statement (channel name + why + evaluation criteria).
 >
 > **You have now:** a committed channel (5.2) chosen from your interview evidence. The 50-name list to run it on is next.
@@ -112,6 +110,8 @@ The first place to apply this is your personal network in [Lesson 5.3](/course/t
 > **Next:** [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - the personal-network list you'll run this channel on first.
 >
 > **If blocked:** If no channel scores ≥9/12, your interview transcripts are missing channel signal. Re-read the transcripts looking for "how do you find tools like this" and "what tools do you use every day" - the answers are already in there.
+>
+> **Deeper reference:** [The full channel-selection walkthrough and worksheet](/course/tech-for-non-technical-founders-2026/reference/channel-selection-full/) - the scoring rubric in depth, the 4-channel comparison, and the fill-in worksheet.
 
 ---
 
