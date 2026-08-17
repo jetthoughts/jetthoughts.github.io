@@ -16,7 +16,7 @@ cover_image_alt: "JetThoughts course cover: The Self-Serve MVP Build, Phase by P
 
 This guide assumes you already ran Modules 1-3 (hypothesis, smoke test, 10 interviews, one-page brief) and read [Lesson 4.3: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Lesson 4.3 covers what each tool does, the 3 pre-flight rules, and the AI critic block; the $0 budget path, the full 12 build rules, the Module 2 prototype vs the Module 4 MVP distinction, and communities live in the [stack-and-tools reference](/course/tech-for-non-technical-founders-2026/reference/stack-tools-full/). The phases below reference those concepts without re-explaining them. Skip straight here without validation and the build ships into the silence Modules 1-3 were designed to prevent.
 
-> **Calendar reality for the MVP build.** A full-time founder with daytime availability can hit the Phase 4 5-lights in 4-6 weeks. An evening-only founder (the 2-4 hr/week pattern this course is built for) typically needs 10-12 weeks for the same outputs. Phase 2 (Supabase wiring + RLS - Row-Level Security, the database rule that walls one customer's data off from another's) and Phase 3 (Stripe webhook - an automatic message Stripe sends your app when a payment lands - plus idempotency, the rule that says "if the same webhook fires twice, only act once") are where part-time founders lose the most calendar. Plan the 10-week version, not the 4-week version.
+> **Calendar reality:** plan the 10-12-week evening-only version, not the 4-6-week full-time one ([Lesson 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) has the breakdown). Phases 2 and 3 are where part-time founders lose the most calendar.
 
 ![A hand-drawn map of the MVP build: four red phase cards - Phase 1 Lovable UI with prompts from the one-page brief, Phase 2 Supabase with tables plus RLS and real signup, Phase 3 Stripe with checkout, webhook and $1 test transactions, Phase 4 deploy plus 5 ICP users exiting on all five green lights - flowing into a green Onramp card that invites your 10 interviewees by name, with an amber footnote on the 4-6 week full-time vs 10-12 week evening-only calendar.](mvp-build-phases-map.svg)
 
@@ -75,23 +75,15 @@ Switch Stripe out of test mode. Buy a domain (roughly $10/year for a .com on [Po
 
 > "Hey [NAME] - the workflow you described recently (logging client check-ins by hand on a spreadsheet) is now a tool. Quick first-use, $29/month after a trial window. URL: [STAGING_URL]. Honest reactions only."
 
-Watch what happens. If 0 of 5 click, the cold message is wrong, not the product (yet). If 5 click and 0 sign up, the landing screen is wrong, not the product. If 5 sign up and 0 pay, the paywall position or the price is wrong. Each failure shape tells you what to fix next. The demo is the data, not the screens.
+Watch what happens. [Lesson 4.4's Phase 4 block](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) maps each failure shape (no clicks, no signups, no payments) to the next fix. The demo is the data, not the screens.
 
-> **Phase 4 exit criteria - the five green lights.** The MVP is "done" only when all five gates are green: Stripe in LIVE mode with a real card cleared, a custom domain wired, at least 1 fresh ICP user (not from your Lesson 2.3-2.4 interviews) reaching the paywall, zero red errors in the browser Console on the sign-up + checkout flow, and a final-week demo recording. [Lesson 4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#the-five-green-lights) lists each light with its exact check. Advance to Module 5 only when all five are green; if any are red, the MVP is NOT ready for the 10-30 users Module 5 needs - fix the red light first, then re-check.
+> **Phase 4 exit criteria - the five green lights.** [Lesson 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#the-five-green-lights) lists each light with its exact check. Advance to Module 5 only when all five are green; a red light means the MVP is not ready for the 10-30 users Module 5 needs.
 
-> **Pre-flight before M5.1: book up to 10 user sessions.** The onramp phase's 4-6 accounts are not enough for M5.1's Sean Ellis 40% test (under 10 respondents = noise, not signal). Before you start Module 5, book a second small invite wave: 5-10 more sessions from your Lesson 2.3-2.4 interviewee list, your community connections, or a fresh micro-batch of cold DMs. Aim for 10-30 active users by the time M5.1's survey ships - 5.1 treats 10 as directional-only and 20+ as a useful read. Without this pre-flight, you will run the 40% test on 5 people, get an ambiguous result, and falsely conclude you have a product problem when you really have a sample-size problem.
+> **Pre-flight before M5.1: book up to 10 user sessions.** The onramp phase typically yields 4-6 accounts - not enough for M5.1's Sean Ellis 40% test (under 10 respondents = noise, not signal). Before you start Module 5, book a second small invite wave: 5-10 more sessions from your Lesson 2.3-2.4 interviewee list, your community connections, or a fresh micro-batch of cold DMs. Aim for 10-30 active users by the time M5.1's survey ships - 5.1 treats 10 as directional-only and 20+ as a useful read. Without this pre-flight, you will run the 40% test on 5 people, get an ambiguous result, and falsely conclude you have a product problem when you really have a sample-size problem.
 
 ## Onramp phase - Module 5 handoff: invite your Module 2 interviewees onto the live MVP
 
-The build phases above are the BUILD container. The onramp phase is the Module-5 handoff - the step that turns a live staging URL into a live users table. The five cold prospects from Phase 4 are the demand-signal check. The 10 interviewees you ran through Lesson 2.3-2.4 are the warm pool that becomes your first real users - the ones who told you the problem was real, in their own words, recently. They are not on your MVP yet. They will not show up unless you invite them by name.
-
-Open your Lesson 2.3-2.4 interview list. For each of the 10 names, write a 3-line personalized note: the workaround they described in their interview, the staging URL of the workflow that now replaces it, and one specific question they answered that the MVP now responds to.
-
-Send it as a [Loom](https://www.loom.com) (Loom is a short-form screen-recording tool - the recipient watches you click through the product in their browser, no install) or a personal LinkedIn DM, not a generic email blast.
-
-Expect 4-6 of the 10 to create accounts; 2-3 of those to actually log in and click around; 1-2 to become candidates for the [Lesson 5.1 Sean Ellis 40% survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) once you have 10-30 users total. "Create an account" is not "pay" - paid conversion happens in Module 5.
-
-This is the step that closes the gap between Module 4 (MVP shipped) and Module 5 (first paying customer). Without it, you ship a working URL into the silence of a Supabase users table with zero rows. The Module 2 interviewees are the closest 10 people in the world to your ICP - they spent 30 minutes telling you their version of the problem. Inviting them by name is the cheapest first-10-users acquisition the course will name.
+The build phases above are the BUILD container; the onramp turns the live staging URL into a live users table. The invite wave itself - the 3-line personal note to each of your 10 Lesson 2.3-2.4 interviewees - is a required course step and lives in [Lesson 4.4's Module 5 handoff](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#module-5-handoff-invite-your-interviewees-by-name), with the note recipe and the honest conversion expectations. "Create an account" is not "pay" - paid conversion happens in Module 5.
 
 If you need more than 10 users on the MVP before running Lesson 5.1's survey, the recruitment playbook in [Lesson 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) is the same one you use to find them - the message changes from "30 minutes of your time" to "try the live tool for a week, free."
 
@@ -108,7 +100,7 @@ If you need more than 10 users on the MVP before running Lesson 5.1's survey, th
 | AI inference costs pennies per request | AI inference at scale (daily cost >$10) |
 | Three core integrations (Lovable/Supabase/Stripe) | Many third-party APIs beyond the three |
 
-Be honest about the trade-off. This stack cannot host every business. It can host yours through the first 10 paying customers, which is the only data point that earns you the right to argue about the next architecture.
+Be honest about the trade-off. This stack cannot host every business; the first 10 paying customers are the data point that earns the next architecture argument.
 
 ## What the stack actually costs
 

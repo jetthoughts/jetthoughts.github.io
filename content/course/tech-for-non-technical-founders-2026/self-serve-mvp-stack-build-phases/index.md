@@ -30,39 +30,61 @@ related_posts: false
 
 > **Module 4 · Lesson 4.4 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Companion pair: read [Lesson 4.3 · Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) first** - it covers why these three tools, what each one does, the 3 pre-flight rules, and the AI critic block; the full 12 build rules and founder communities are in the [stack-and-tools reference](/course/tech-for-non-technical-founders-2026/reference/stack-tools-full/). The phases below reference those concepts without re-explaining them.
+> **Read [Lesson 4.3 · Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) first** - it sets up the three tools and the pre-flight rules this lesson builds with.
 >
-> **Input:** the self-serve stack set up plus the pre-flight rules from [Lesson 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + your one-page brief from Module 3
+> **Input:** the stack from Lesson 4.3 + your one-page brief from Module 3
 >
 > **Output:** a live MVP at a real URL that real users can click
 >
-> **Progress:** M4 · 4 of 5 · Results so far: stack set up + pre-flight rules locked (4.3) - this lesson walks the 4 build phases to a live MVP
+> **Progress:** M4 · 4 of 5
 
 After this lesson you will be able to: **walk the four build phases, demo each one to a real person, and put a live URL in front of five real users.**
 
-> **TL;DR:** Four build phases with one demo each. Phase 1 ships clickable UI. Phase 2 wires Supabase auth. Phase 3 connects Stripe checkout. Phase 4 deploys to 5 ICP users. Five green lights to exit. Ship the shed, not the skyscraper.
-
 ---
 
-You validated the problem in Modules 1-3 and set up the stack in Lesson 4.3. What you do not have yet is a URL a stranger can pay on. This lesson is the build plan that gets you there - four phases, each ending in one working demo to one human who has not seen the build.
+You validated the problem in Modules 1-3 and set up the stack in Lesson 4.3. What you do not have yet is a URL a stranger can pay on. Budget the calendar honestly before you start: a full-time founder gets there in 4-6 weeks; at 2-4 hours a week, plan 10-12. Phases 2 and 3 are where part-time founders lose the most calendar.
 
 > → **Mia walked the four phases** over three weekends. Her spouse signed up in Phase 2. By Phase 4, five parents clicked through the live URL. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)
 
-![Four build phases, each proven by one demo, then the five-green-lights gate. Phase 1 Lovable - screens click, nothing saved. Phase 2 Supabase - a real signup persists. Phase 3 Stripe - a $1 test charge flips the row to paid. Phase 4 go live - 5 ICP users hit the live URL. An arrow drops into a green gate listing five exit lights: Stripe in live mode, custom domain wired, one fresh ICP user hit the paywall, zero JS errors at checkout, a weekly demo recording exists. All five green advances you to Module 5.](build-phases-strip.svg)
+![Four build phases, each proven by one demo, then a green gate of five exit lights. Phase 1 Lovable - screens click, nothing saved. Phase 2 Supabase - a real signup persists. Phase 3 Stripe - a $1 test charge flips the row to paid. Phase 4 go live - 5 ICP users hit the live URL.](build-phases-strip.svg)
 
 ## The ship plan
 
-Four build phases, plus an onramp phase that hands you off to Module 5. Each phase ends with one demo to one human (a friend, an advisor, your spouse - someone who has not seen the build). The build ends with five real ICP users on the staging URL; the onramp brings the rest of your Lesson 2.3-2.4 interview pool onto the product.
+Each phase below ends with one demo to one human who has not seen the build. When you start a phase, open that phase's section in the [full build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/) - it holds the exact mechanics (the Lovable prompt examples, the first Supabase table walkthrough, the Stripe test flow, the domain switch) so this page does not have to.
 
-1. **Phase 1 - Lovable, the UI.** No backend yet. *Demo:* screens click, no data persists.
-2. **Phase 2 - Supabase + auth.** Real signup works. Enable [Row-Level Security](https://supabase.com/docs/guides/database/postgres/row-level-security) (RLS - the database rule that walls one customer's data off from another's) from the first table. *Demo:* your spouse signs up, a row appears in Supabase in real time.
-3. **Phase 3 - Stripe + checkout.** Build one product (your monthly plan) at one price - the price your [Lesson 1.5 smoke test](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) validated, not a guess. Run $1 test transactions until the webhook (the automatic message Stripe sends your app when a payment lands) flips your row to paid.
-4. **Phase 4 - staging URL + 5 ICP users.** Custom domain, Stripe live. Log 5 click sessions, then iterate from real signal.
-5. **Onramp phase - Module 5 handoff.** Invite the 10 Lesson 2.3-2.4 interviewees by name. Hand off to Module 5 with a populated users table, not an empty one.
+### Phase 1 - Lovable: ship the clickable UI
 
-The [full build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/) walks each phase step-by-step - the Lovable prompts, the first Supabase table, the RLS self-test, the Stripe test cards, and the domain switch.
+Pick ONE feature from your one-page brief's "what you're building" section - the smallest workflow that solves the validated problem for one persona. Could you cut it in half and still solve the problem? Then cut it. Write the prompt as **"build a [SCREEN] for [PERSONA] to [OUTCOME]"** and let Lovable generate the screens. Iterate by chatting with it: rename a button, move a section. No backend yet; nothing persists, and that is fine.
 
-> **Bridge from Lesson 2.6 vocabulary (the most useful paste in the course).** Before you describe a button label, a column header, or a screen title, open your Lesson 2.6 vocabulary doc (the verbatim words your 5 prototype subjects used in the closing "describe in one sentence" question). If 4 of 5 said "match" and not "reconcile," the button label is **"Match transactions,"** not "Reconcile." If 3 of 5 said "client" and 2 said "patient," **use the most-repeated term**. The vocabulary your prototype subjects passed is the only user-tested language you have; the production MVP is the one place where using it has revenue consequences.
+> **Phase 1 demo:** one person who has not read the brief navigates the core screen without a tour.
+
+**If they needed a tour:** the prompt described a layout instead of a job. Rewrite it around the one job the screen does ("log this week's check-in"), regenerate, and demo again. If two testers stall on the first screen, the workflow shape is wrong - revisit [Lesson 3.2 outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) before you touch Stripe.
+
+### Phase 2 - Supabase: real signup, walled data
+
+Create your three or four core tables in Supabase, and check **Enable Row-Level Security** on each table BEFORE adding columns. That checkbox is the load-bearing click: [RLS](https://supabase.com/docs/guides/database/postgres/row-level-security) is the database rule that walls one customer's data off from another's, and skipping it is the most common security hole in vibe-coded MVPs. Then install the Supabase integration inside Lovable and wire the signup screen to it.
+
+> **Phase 2 demo:** your spouse signs up on the staging URL and you watch the row appear in Supabase in real time.
+
+**Before Phase 3, two checks.** First, run the RLS self-test from the [full build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/) - it is copy-paste verification with an AI assistant, not programming. Second, hand the URL to one tester with zero coaching; if they cannot reach the core action, go back to [Lesson 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) - a paywall on top of a workflow nobody can navigate just adds friction to a broken loop.
+
+### Phase 3 - Stripe: one product, one price, $1 test
+
+Build one product at one price - the price your [Lesson 1.5 smoke test](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) validated, not a guess. Use [Stripe Checkout](https://docs.stripe.com/checkout/quickstart) in test mode, and wire the webhook (the automatic message Stripe sends your app when a payment lands) to flip your user's row to paid. Run $1 test transactions until the flip is boring.
+
+> **Phase 3 demo:** you sign up as a fake user, pay $1 in test mode, land on the paid view, and the row in Supabase says paid.
+
+**If the row never flips:** the webhook is the failure point, not the checkout. Use Stripe's [test card numbers](https://docs.stripe.com/testing) to walk the failure cases (declined card, 3D Secure) until the happy path and the failures both behave.
+
+### Phase 4 - go live: domain, live mode, 5 real users
+
+Buy a domain (roughly $10/year for a .com - never let a tool hold your domain), point it at the app, and switch Stripe to live mode. Then send a 3-line personal note to 5 ICP prospects from your [Module 2 outreach list](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/): the workaround they described, the URL that now replaces it, "honest reactions only."
+
+> **Phase 4 demo:** five click sessions from real ICP users, logged.
+
+**Read the failure shape before touching the product.** 0 of 5 click - the message is wrong, not the product. 5 click, 0 sign up - the landing screen is wrong. 5 sign up, 0 pay - the paywall position or the price is wrong.
+
+> **Bridge from Lesson 2.6 vocabulary.** Before you describe a button label, a column header, or a screen title, open your Lesson 2.6 vocabulary doc (the verbatim words your 5 prototype subjects used in the closing "describe in one sentence" question). If 4 of 5 said "match" and not "reconcile," the button label is **"Match transactions,"** not "Reconcile." The vocabulary your prototype subjects passed is the only user-tested language you have; the production MVP is the one place where using it has revenue consequences.
 
 ## The five green lights
 
@@ -74,43 +96,35 @@ The MVP is "done" only when ALL five lights are green. Without them, you either 
 4. **Zero red errors in the browser Console** on the sign-up + checkout flow (press F12, click through like a user, check the Console tab).
 5. **A weekly demo recording exists** for the last week of build (a Loom or screen-record proving the cadence held to the end).
 
-Advance to Module 5 only when all five are green. If any are red, fix the red light first before you move on - a red gate hands Module 5 an MVP real users cannot touch.
+Advance to Module 5 only when all five are green. If any are red, fix the red light first.
 
 ## Ship the shed, not the skyscraper
 
-Lovable + Supabase + Stripe is the shed: one workflow, one persona, one happy path, three integrations. It cannot host every business - but it can host yours through the first 10 paying customers, which is the only data point that earns you the right to argue about the next architecture. The [full build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/) has the in-the-envelope / out-of-the-envelope table and what the stack costs at each tier.
+Lovable + Supabase + Stripe is the shed: one workflow, one persona, one happy path, three integrations. It cannot host every business - but it can host yours through the first 10 paying customers, which is the only data point that earns you the right to argue about the next architecture.
 
 ## Module 5 handoff: invite your interviewees by name
 
 The 5 cold prospects from Phase 4 are the demand-signal check. The 10 people you ran through Lesson 2.3-2.4 are the warm pool that becomes your first real users - the ones who told you the problem was real, in their own words. They are not on your MVP yet, and they will not show up unless you invite them by name.
 
-Open your Lesson 2.3-2.4 interview list. For each of the 10, write a 3-line personal note: the workaround they described, the staging URL of the workflow that now replaces it, and one question they answered that the MVP now responds to. Send it as a [Loom](https://www.loom.com) or a personal LinkedIn DM, not a generic email blast. Expect 4-6 to create accounts and 1-2 to become candidates for the [Lesson 5.1 Sean Ellis 40% survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) once you have 10-30 users total. This is the step that turns a working URL into a users table with rows in it.
+Open your Lesson 2.3-2.4 interview list. For each of the 10, write a 3-line personal note: the workaround they described, the staging URL of the workflow that now replaces it, and one question they answered that the MVP now responds to. Send it as a [Loom](https://www.loom.com) or a personal LinkedIn DM, not a generic email blast. Expect 4-6 to create accounts and 1-2 to become candidates for the [Lesson 5.1 Sean Ellis 40% survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) once you have 10-30 users total. Skip this step and you ship a working URL into an empty users table.
 
 ## Do this now
 
-Three actions, in order. The first two cost $0.
+Start Phase 1 tonight. The first two actions cost $0.
 
 1. **Sign up for the Lovable + Supabase free tiers** on [lovable.dev](https://lovable.dev) and [supabase.com](https://supabase.com), then connect GitHub sync inside Lovable so your code survives a cancelled subscription.
-2. **Pick ONE feature from your one-page brief's "what you're building" section.** Not three. One. The smallest workflow that solves the validated problem for one persona. Write it as: "build a [SCREEN] for [PERSONA] to [OUTCOME]."
-3. **Generate the UI in Lovable and demo it.** Iterate by chatting: rename, resize, reposition. Then show one human who has not read the brief and watch them try it without a tour.
+2. **Write your Phase 1 prompt** - one feature, "build a [SCREEN] for [PERSONA] to [OUTCOME]."
+3. **Generate the UI and run the Phase 1 demo** with one human who has not read the brief.
 
-> **Phase 1 check:** a clickable UI on a public staging URL, and one person navigated the core screen without you explaining it. Nothing needs to persist yet - that is Phase 2.
-
-**If this fails: the person you demoed to needed a tour to understand the screen.**
-- **Why:** the design is carrying meaning that should be on the screen, so the prompt described a layout instead of a job.
-- **Fix:** rewrite the Lovable prompt around the one job the screen does ("log this week's check-in"), regenerate, and demo again. If two testers stall on the first screen, the workflow shape is wrong - revisit [Lesson 3.2 outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) before adding Stripe.
-
-Look at the one feature you picked. Could you cut it in half again and still solve the validated problem? The smaller the first ship, the more likely it actually ships.
-
-> **Done:** a live MVP at a real URL with all five green lights lit - Stripe in live mode, custom domain wired, 1 fresh ICP user tested the paywall, zero red Console errors on signup + checkout, and a weekly demo recording exists. The day before you share the URL with anyone new, run the printable [Pre-Launch Checklist](/course/tech-for-non-technical-founders-2026/pre-launch-checklist/) - it breaks these lights into 15 two-minute checks.
+> **Done:** a live MVP at a real URL with all five green lights lit (the list above). The day before you share the URL with anyone new, run the printable [Pre-Launch Checklist](/course/tech-for-non-technical-founders-2026/pre-launch-checklist/) - it breaks the lights into 15 two-minute checks.
 >
 > **You have now:** the self-serve stack set up (4.3) + a live MVP at a real URL. Save the URL, the admin login, and the latest weekly demo recording in a `Live MVP` doc in your `Founder OS` folder, with every account in your own name (per [Lesson 4.2's Day-1 ownership audit](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)). Module 5 invites your Module 2 interviewees and your [Lesson 1.4 smoke-test email list](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) to this URL as the warm seed for your first 10-30 users. Paying customers are the next test.
 >
 > **Next:** [5.1 · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - it runs the Sean Ellis 40% test on the users this MVP collects. Bookmark [4.5 · Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) as the optional monthly check to run once the stack starts to strain.
 >
-> **If blocked:** see "If this fails" above, or open the [full build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/) - it has the per-phase recovery steps and the free help channels from Lesson 4.3.
+> **If blocked:** each phase above carries its own failure branch - start there.
 >
-> **Deeper reference:** [The full 4-phase build guide - Lovable prompts, first Supabase table + RLS self-test, Stripe test flow, the 5-lights detail, the shed envelope, cost tiers, and the pre-Module-5 invite wave](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/)
+> **Deeper reference:** [The full 4-phase build guide](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/) - the exact mechanics for every phase, the shed envelope table, and cost tiers.
 
 ---
 

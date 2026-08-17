@@ -7,6 +7,9 @@ tags: [course, structure, hugo]
 generated:
   by: process:okf-migrate
   at: 2026-07-17T00:00:00Z
+verified:
+  by: claude-opus/4.8
+  at: 2026-08-17T00:00:00Z
 ---
 
 # The spine
@@ -44,5 +47,19 @@ file. Never hardcode exact chapter counts in prose; use near numbers
   the v2 micro-lesson format - no v1 long-form lessons remain.
 - **Floating glossary**: five-tech-words-stop-nodding-at, reachable from every
   chapter, not in the linear order.
+
+# Micro-lesson vs reference: the altitude rule
+
+Split the pair by **learner action, not content volume**. The micro-lesson
+carries everything the learner must DO plus how to verify it (per phase/step:
+action → demo check → if-fails); the reference carries exact mechanics only
+(SQL, prompt text, test-card numbers, cost tables). If a micro block contains
+SQL or card numbers it crossed the line; if a micro defers a required step
+("the real steps are over there") it became a promo shell. Each fact gets ONE
+home - duplicated paragraphs (e.g. a handoff protocol in both files) and
+circular deferrals ("detail is in the other page", both directions) are
+defects. Lesson 4.4 shipped as a shell this way (4x same reference link,
+promise restated 6x, phases 2-4 untaught in place) - fixed 2026-08-17 by
+giving every phase the do/demo/if-fails block in the micro.
 
 All chapter facts must agree with the [course canon](/content/course-canon.md).

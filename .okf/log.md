@@ -1,5 +1,22 @@
 # Bundle Update Log
 
+## 2026-08-17 (Lesson 4.4 promo-shell fix) - the micro/reference altitude rule
+
+* **Trigger**: Paul flagged 4.4 (self-serve-mvp-stack-build-phases) as "one big
+  promo before the movie" - 4x links to the same reference, promise restated 6x,
+  green lights enumerated 3x, Phases 2-4 untaught in place. 4-critic panel
+  confirmed (~70% shell); root cause: the micro/reference split was made by
+  content VOLUME, not learner ACTION, so the mechanics moved out while the
+  lesson kept its full ambition.
+* **Fix**: full symmetric do → demo → if-fails blocks for all 4 phases (at
+  altitude - SQL/prompts/test-cards stay reference-only), promise stack → 1,
+  green lights listed once (4.4 owns them), reference links 4→3, Module 5
+  handoff deduplicated (4.4 canonical, reference points back), failure-shape
+  triage MOVED from reference into 4.4 (decision aid = micro modality).
+* **Concept**: `content/course-structure.md` gains "Micro-lesson vs reference:
+  the altitude rule" - split by learner action; each fact one home; circular
+  deferrals are defects.
+
 ## 2026-08-14 (LinkedIn caricatures) - image type by pillar; the Art-tool cartoon pipeline
 
 * **Update**: `linkedin-posts/README.md` gains "Image type by pillar" + "Generating
