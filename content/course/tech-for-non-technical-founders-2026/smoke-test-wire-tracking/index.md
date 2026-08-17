@@ -30,13 +30,11 @@ related_posts: false
 >
 > **Output:** you can watch a recording of any visit and read the three numbers that judge your page (views, clicks, signups) - the evidence 1.4's go / iterate / kill call runs on
 >
-> **Progress:** M1 · 3 of 5 · Results so far: hypothesis sentence + live landing page
+> **Progress:** M1 · 3 of 5
 
 ---
 
 Run a smoke test without tracking and you get hundreds of clicks, a handful of signups, and no way to tell whether the offer is wrong or the form is broken. A session replay would have caught the broken form on visitor one. The fix is installing tracking before traffic starts.
-
-After this lesson you will be able to: **install Clarity and GA4 on your landing page so you can see who visits and what they click before traffic starts.**
 
 ## The two tools you need
 

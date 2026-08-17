@@ -30,13 +30,11 @@ related_posts: false
 >
 > **Output:** a live landing page that explains your offer to potential customers
 >
-> **Progress:** M1 · 2 of 5 · Results so far: hypothesis sentence
+> **Progress:** M1 · 2 of 5
 
 ---
 
 "Just validate it" is the advice everyone gives without showing the how. This lesson turns your hypothesis into a landing page that does the explaining - so strangers get your idea without you in the room.
-
-After this lesson you will be able to: **publish a landing page so clear that strangers grasp your idea in 3 seconds.**
 
 ## What the page is made of
 

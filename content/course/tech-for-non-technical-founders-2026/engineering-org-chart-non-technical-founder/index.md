@@ -38,7 +38,7 @@ course_nav: false
 >
 > **Read this if**: you've signed an SOW with a dev shop OR you're paying for "a team of N" without seeing the GitHub handles of who reviews your PRs each week.
 
-**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
+**For later.** This chapter is for founders with a hired team. Still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)? Bookmark it for when you graduate.
 
 Marina, a FinTech founder I worked with in Q1 2026, had been billing **$44K a month for "a team of four."** Three months in, her new fractional CTO asked who had written the last twelve pull requests. The answer: one senior reviewer who signed off most weeks, two mid-level shippers, and three rotating juniors paid by a sub-contracted shop she had never heard of. She had been paying senior rates for code one junior wrote and another junior reviewed.
 
@@ -48,7 +48,9 @@ The agency had not lied, exactly. The kickoff deck just did not say which names 
 
 ## What an org chart hides
 
-The vibe-coding wave made the org chart even fuzzier. Agencies that pitch "AI-augmented teams" route work through three layers: a senior who runs the demo, a mid-level who prompts Cursor or Claude Code, and a junior who reviews whatever falls out. The labor cost dropped; the bill rate did not. [TechTIQ Solutions' 2026 staff augmentation report](https://techtiqsolutions.com/it-staff-augmentation-cost-breakdown-and-pricing-models/) flags that hidden costs add 15-30% on top of base rates, with 10-18% already going to vendor margin. The shops we rescue in 2026 are charging the same and paying less, with the gap going to subcontracted juniors and AI tooling the founder never approved as a line item.
+The vibe-coding wave made the org chart even fuzzier. Agencies that pitch "AI-augmented teams" route work through three layers: a senior who runs the demo, a mid-level who prompts Cursor or Claude Code, and a junior who reviews whatever falls out. The labor cost dropped; the bill rate did not.
+
+[TechTIQ Solutions' 2026 staff augmentation report](https://techtiqsolutions.com/it-staff-augmentation-cost-breakdown-and-pricing-models/) flags that hidden costs add 15-30% on top of base rates, with 10-18% already going to vendor margin. The shops we rescue in 2026 are charging the same and paying less, with the gap going to subcontracted juniors and AI tooling the founder never approved as a line item.
 
 **What the kickoff deck said vs who actually shipped your PRs:**
 
@@ -73,7 +75,9 @@ The kickoff deck almost always shows a tidy stack. From the top:
 - **A quarter of a project manager.** Shared across three or four projects. Their Slack is yours on Mondays and Wednesdays, gone the rest of the week.
 - **A tenth of a CTO.** The founder of the agency, "available for escalation," which means available if you escalate loudly enough.
 
-That is a 4.35-person team on the spreadsheet, billed as five. The Rails version works when the senior actually reviews - she catches the `before_action` that bypasses auth, the missing Sidekiq retry, the migration that locks the orders table. It collapses when the senior is on three other projects and the juniors are reviewing each other. [Our MVP team-structure note](/blog/our-mvp-team-structure-startup-management/) describes the alternative: two full-stack developers and one frontend, with a product owner in your meetings, not three others'.
+That is a 4.35-person team on the spreadsheet, billed as five. The structure works when the senior actually reviews - she catches the `before_action` that bypasses auth, the missing Sidekiq retry, the migration that locks the orders table. It collapses when the senior is on three other projects and the juniors are reviewing each other.
+
+[Our MVP team-structure note](/blog/our-mvp-team-structure-startup-management/) describes the alternative: two full-stack developers and one frontend, with a product owner in your meetings, not three others'.
 
 ## The questions that surface the real org chart
 
@@ -120,21 +124,20 @@ Run the six on your next status call, in order. Every answer in the right column
 
 ## What to do tomorrow
 
-Email your agency tonight. One line: "Please send me the current org chart with names, roles, and FTE (full-time equivalent) allocation for everyone touching my code this month. Include any subcontracted resources." Forward the response to your fractional CTO or developer-friend - if you do not have one, [our note on fractional CTO ROI](/blog/fractional-cto-vs-full-time-cto-complete-comparison-2025/) explains the shape. Cross-check against [our dev-shop red flags checklist](/blog/dev-shop-red-flags-checklist/) and the [non-technical founder checklist](/blog/checklist-for-non-tech-founder-agile/). If the reply has fewer named humans than the kickoff deck promised, the deck was the pitch and the reply is the truth.
+Email your agency tonight. One line:
+
+> "Please send me the current org chart with names, roles, and FTE (full-time equivalent) allocation for everyone touching my code this month. Include any subcontracted resources."
+
+Forward the response to your fractional CTO or developer-friend - if you do not have one, [our note on fractional CTO ROI](/blog/fractional-cto-vs-full-time-cto-complete-comparison-2025/) explains the shape. Cross-check against [our dev-shop red flags checklist](/blog/dev-shop-red-flags-checklist/). If the reply has fewer named humans than the kickoff deck promised, the deck was the pitch and the reply is the truth.
 
 ## When the org chart shows you've got a problem
 
-If the answers came back vague, contradictory, or missing, that is the signal. The fix is putting numbers next to the names before the next agency conversation: how many PRs each reviewer touched last month, how many days the senior was actually on your project, which juniors shipped which features. Cross-reference the [eight red flags checklist](/blog/dev-shop-red-flags-checklist/) and the [15-minute team-health assessment](/blog/how-to-assess-engineering-team-health-15-minutes-non-technical-founder/) to know what good looks like.
+If the answers came back vague, contradictory, or missing, that is the signal. The fix is putting numbers next to the names before the next agency conversation: how many PRs each reviewer touched last month, how many days the senior was actually on your project, which juniors shipped which features.
 
 ## Further reading
 
-- DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for shipping with a small team.
-- DHH, [The Majestic Monolith](https://signalvnoise.com/svn3/the-majestic-monolith/) - why Basecamp ran on one codebase since 2003.
+- JetThoughts, [15-minute engineering team health check](/blog/how-to-assess-engineering-team-health-15-minutes-non-technical-founder/) - the same audit as a repeatable quarter-hour routine.
 - AWS Executive Insights, [Amazon's Two-Pizza Teams](https://aws.amazon.com/executive-insights/content/amazon-two-pizza-team/) - Bezos' rule on team size and what it actually optimised for.
-- Jason Yip, [My critique of "the Spotify Model"](https://jchyip.medium.com/my-critique-of-the-spotify-model-part-1-197d335ef7af) - an ex-Spotify coach explaining what the model is and is not.
-- Agile Pain Relief, [The Spotify Model of Scaling - Spotify doesn't use it, neither should you](https://agilepainrelief.com/blog/the-spotify-model-of-scaling-spotify-doesnt-use-it-neither-should-you/) - the broader agile-community position on cargo-culted squad structures.
-- Will Larson (interviewed by First Round Review), [Engineering leadership anti-patterns from Stripe, Uber, Carta](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) - on review processes and the PR funnel as the productivity signal.
-- TechTIQ Solutions, [IT Staff Augmentation Cost Breakdown 2026](https://techtiqsolutions.com/it-staff-augmentation-cost-breakdown-and-pricing-models/) - hidden costs of staff-augmented teams.
-- DataToBiz, [The Strategic Advantage of Subcontracting in IT Staff Augmentation](https://www.datatobiz.com/blog/subcontracting-in-it-staff-augmentation/) - plain description of the subcontracting layers founders rarely see.
+- Jason Yip, [My critique of "the Spotify Model"](https://jchyip.medium.com/my-critique-of-the-spotify-model-part-1-197d335ef7af) - an ex-Spotify coach on why copied org charts don't transfer.
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

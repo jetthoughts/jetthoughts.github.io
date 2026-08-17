@@ -35,7 +35,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 >
 > **Output:** a weekly oversight rhythm where the daily standup answers "did anything ship?"
 
-**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
+**For later.** This chapter is for founders with a hired team. Still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)? Bookmark it for when you graduate.
 
 *"Yesterday I worked on the order flow. Today I am continuing the order flow."* That sentence can repeat every morning for nine weeks on a **$25K/month** project before anyone clocks that two of the three developers are reading out the same Jira ticket name each day. **Forty-seven standups in**, the ticket has not moved columns in seven weeks - and a founder can sit on every one of those calls, take notes, and nod, because the standup format never asks the question that would catch it. The three questions below are that question, split into three.
 

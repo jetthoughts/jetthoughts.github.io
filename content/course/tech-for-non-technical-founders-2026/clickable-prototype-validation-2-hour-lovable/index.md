@@ -36,11 +36,7 @@ related_posts: false
 >
 > **Output:** 5 of them watched navigating a throwaway clickable prototype, with pass/fail per session
 >
-> **Progress:** M2 · 6 of 6 · Results so far: question list + 30-name list + 10 scored interviews + a build/pivot/kill verdict and validated problem statement
-
-After this lesson you will be able to: **watch 5 real customers try to use your solution before it exists - and score the three behaviors that predict a real yes.**
-
-> **TL;DR:** Three throwaway screens, five silent-observation sessions. Watch whether users can navigate your solution without coaching - something interviews cannot tell you.
+> **Progress:** M2 · 6 of 6
 
 > **How this lesson relates to Lesson 2.3-2.4:** [Lesson 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) already booked and ran your 10 past-behavior Mom Test interviews. This lesson takes 5 of those 10 (the ones who scored 7+) and re-engages them for a 30-minute silent-observation session with a throwaway Lovable prototype. You are NOT recruiting fresh people; you are re-asking warm contacts for a different kind of time. Lesson 2.3-2.4 validated THE PROBLEM; Lesson 2.6 validates THE SOLUTION SHAPE.
 

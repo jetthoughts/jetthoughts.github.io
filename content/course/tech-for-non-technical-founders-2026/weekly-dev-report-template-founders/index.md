@@ -35,7 +35,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 >
 > **Output:** a one-page weekly report template you demand from your team every Monday
 
-**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
+**For later.** This chapter is for founders with a hired team. Still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)? Bookmark it for when you graduate.
 
 Open your inbox on a Monday morning. Two reports landed over the weekend from two different teams.
 

@@ -35,11 +35,7 @@ related_posts: false
 >
 > **Output:** a Day-1 audit confirming you own your code, cloud, and domain before the build starts (or a recovery plan if you don't)
 >
-> **Progress:** M4 · 2 of 5 · Results so far: build path chosen (4.1) - this lesson locks ownership before anything gets built
-
-After this lesson you will be able to: **run a 12-item audit that confirms every credential - code, cloud, secrets, domain - sits under an email and a card you control, and start a recovery plan for any that don't.**
-
-> **TL;DR:** Before you hire anyone, run this 12-item audit. It takes 45 minutes. If you skip it, the story below is how it ends: the founder who spent 14 months before discovering the AWS root password was in someone else's Gmail.
+> **Progress:** M4 · 2 of 5
 
 > **If you signed up for Lovable + Supabase + Stripe yourself (the default Path 2 from Lesson 4.1), here is your 5-minute self-check** - the rest of this lesson applies the day you hire a contractor:
 >

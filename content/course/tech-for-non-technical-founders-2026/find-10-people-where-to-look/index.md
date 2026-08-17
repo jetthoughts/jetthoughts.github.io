@@ -35,11 +35,7 @@ related_posts: false
 >
 > **Output:** a 30-name list of specific people you can name because you read what they wrote, ready for the outreach templates in [Lesson 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
 >
-> **Progress:** M2 · 3 of 6 · Results so far: question list ready to run
-
-After this lesson you will be able to: **build a 30-name list of specific people who already complained about your problem in public - people you can name because you read what they wrote.**
-
-> **TL;DR (Part 1 of 2):** Expand your one-sentence hypothesis from Lesson 1.1 into three sentences (a short step below), paste them into Claude, and get back the ICP profile (ICP = Ideal Customer Profile - the specific kind of person your hypothesis's [CUSTOMER] blank names) + exact communities + search strings. Work those communities with the search strings until 30 names are down. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
+> **Progress:** M2 · 3 of 6
 
 Your LinkedIn network is the comfortable place to start - and it books polite calls with old colleagues being nice, not interviews with strangers who live the problem. The technique below replaces it: read where strangers already complain about your exact problem, then write back to those specific complainers. Same hypothesis, same hours, different place to look - and it fills a calendar with 10+ booked interviews instead of 2-3 polite ones.
 
@@ -65,7 +61,7 @@ If you can't write all three on a single napkin, do that first.
 
 ## Translate the hypothesis into an ICP map
 
-The 2026 shortcut: AI does the part that used to take a week of research. You hand it your three sentences plus two competitor URLs; it returns the ICP profile, the exact places those people post, and the search strings to find named individuals.
+The 2026 shortcut: AI does the part that used to take a week of research. You hand it your three sentences plus two competitor URLs; it returns the ICP profile (ICP = Ideal Customer Profile - the specific kind of person your hypothesis's [CUSTOMER] blank names), the exact places those people post, and the search strings to find named individuals.
 
 Ran the Lesson 1.2 research prompt? Paste 2-3 of those sourced complaints into the prompt as seed pains - they sharpen the search strings better than the hypothesis alone.
 

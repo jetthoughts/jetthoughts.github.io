@@ -34,11 +34,7 @@ related_posts: false
 >
 > **Output:** a 4-way build-path decision (validate / self-serve / fractional-CTO / hire) written at the top of the [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/)
 >
-> **Progress:** M4 · 1 of 5 · Results so far: a quality-checked one-page brief (3.2) - this lesson decides who builds from it
-
-After this lesson you will be able to: **answer five questions and commit, in writing, to the smallest build path for your idea - before you spend a dollar on engineers.**
-
-> **TL;DR:** Default: self-serve with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger, not the first decision. Five questions route you to one of four build paths.
+> **Progress:** M4 · 1 of 5
 
 ---
 

@@ -6,6 +6,9 @@ tags: [voice, style, course]
 generated:
   by: process:okf-migrate
   at: 2026-07-13T00:00:00Z
+verified:
+  by: claude-opus/4.8
+  at: 2026-08-17T00:00:00Z
 ---
 
 Full guides: `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`
@@ -35,6 +38,18 @@ Full table in 90.11 §1b.
 - **Progressive disclosure**: orientation blocks orient; thresholds and
   mechanics belong where the reader acts on them.
 - **Callout rhythm**: no two adjacent same-form callouts.
+- **No text bricks (Paul 2026-08-17)**: no paragraph over ~5 rendered lines.
+  Break by content type - a quotable artifact (survey question, Slack
+  message, script) becomes a blockquote; an enumeration-in-prose ("pull
+  three numbers: X, Y, Z") becomes a list; if-X-then-Y becomes a table; a
+  fact the adjacent exhibit already shows visually gets ONE prose sentence,
+  not a re-description. Tell: a heading apologizing for the wall ("...in
+  one paragraph") marks the brick. First caught on 5.1's 9-line 40%-test
+  paragraph and friday-demo's opener pair.
+- **Further reading: critical-only (Paul 2026-08-17)**: 3-4 items max, all
+  directly on the page's topic; a source already cited inline in the body
+  never repeats in the list (each fact one home); own blog posts lead when
+  they exist.
 
 # Banned structural patterns (reject on sight)
 

@@ -35,7 +35,11 @@ class MarketingCopyTest < Minitest::Test
     "content/services/**/*.md",
     "content/use-cases/**/*.md",
     "themes/beaver/layouts/home.html",
-    "themes/beaver/layouts/page/*.html"
+    "themes/beaver/layouts/page/*.html",
+    # Blog CHROME (list hero, section furniture) is a marketing surface even
+    # though blog POST content is excluded - the stale "17 years" tenure lived
+    # in blog/list.html for months because this glob was missing (2026-08-17).
+    "themes/beaver/layouts/blog/*.html"
   ].freeze
 
   BANNED = {
@@ -68,7 +72,13 @@ class MarketingCopyTest < Minitest::Test
     # also made every derived "N+ years" claim three short. Derive tenure from
     # site.Params.foundingYear - never hardcode the year (corrected 2026-08-14).
     "since 2011" => "stale tenure - founded 2008-09-01; derive from site.Params.foundingYear",
-    "founded in 2011" => "stale tenure - founded 2008-09-01"
+    "founded in 2011" => "stale tenure - founded 2008-09-01",
+    # Same class again (found live 2026-08-17 in blog/list.html AND a blog
+    # post): a hardcoded tenure goes stale every January. Company tenure is
+    # 18 in 2026 and rising - any hardcoded "17 years" spelling is either
+    # already wrong or about to be. Derive or say "since 2008".
+    "seventeen years" => "stale tenure - derive from site.Params.foundingYear or say 'since 2008'",
+    "17 years of" => "stale tenure - derive from site.Params.foundingYear or say 'since 2008'"
     # Deliberately NOT banning "15+ years": it catches staff-experience claims
     # ("our fractional CTOs average 15+ years of industry experience") that are
     # independent of when the company was founded. Only company-tenure

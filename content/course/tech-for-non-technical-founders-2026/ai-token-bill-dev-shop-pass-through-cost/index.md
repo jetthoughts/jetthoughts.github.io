@@ -37,7 +37,7 @@ course_nav: false
 >
 > **Output:** monthly AI cost predicted within ±20% + 3 contract clauses you add to the next SOW (statement of work)
 
-**Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
+**For later.** This matters once you have shipped (Module 4+) and your product uses AI in production - bookmark it and come back.
 
 A founder posted in r/SaaS last month: **"Our dev shop just sent the month-2 invoice. There's a $1,860 line called 'AI Services - passthrough.' We never agreed to this. The contract is for $14K/month flat. What is going on?"** The replies told her what the line was. None of them told her how to predict it for month 3.
 

@@ -32,11 +32,7 @@ related_posts: false
 >
 > **Output:** 50 names sorted into 4 outreach buckets
 >
-> **Progress:** M5 · 3 of 7 · Results so far: your first users answered the 40% test (5.1) - this page builds the 50-name list for the first sales push
-
-After this lesson you will be able to: **build a 50-name list from people who already know you, sorted so you know exactly who to message first.**
-
-> **TL;DR:** One focused sitting, one Google Sheet: 5 champions, 10 hot, 15 warm, 20 cold - champions are the ones who already complained to you about the problem. Research on fast-growing B2B startups (cited below) found the personal network was the number-one source of first customers.
+> **Progress:** M5 · 3 of 7
 
 ---
 

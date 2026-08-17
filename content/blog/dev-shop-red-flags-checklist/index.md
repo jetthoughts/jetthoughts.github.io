@@ -18,29 +18,29 @@ canonical_url: "https://jetthoughts.com/blog/dev-shop-red-flags-checklist/"
 related_posts: false
 ---
 
-Most dev-shop disasters don't start with a missed deadline. They start with a Friday update that says "making progress" three weeks in a row while your launch slips.
+Dev-shop disasters usually start quietly: a Friday update that says "making progress" three weeks in a row while your launch slips.
 
 You hired a team and wrote them a check. Weeks pass, maybe months, and the updates sound fine. Then one day you realize **you've spent $40K and you can't demo a single working feature to your investors.** If you're looking for confirmation that something's wrong with your dev shop, this is it.
 
-The [Standish Group's CHAOS report](https://www.projectsmart.co.uk/white-papers/chaos-report.pdf) tracks software project outcomes every year. In 2024: 19% of projects failed outright, and another 47% came in late, over budget, or missing features. **That's two-thirds.** For startups with outsourced agencies, the numbers run worse.
+The [Standish Group's CHAOS research](https://www.projectsmart.co.uk/white-papers/chaos-report.pdf) has tracked software project outcomes for decades: roughly 19% of projects fail outright, and another 47% come in late, over budget, or missing features. **That's two-thirds.**
 
-We've spent seventeen years cleaning up after agencies. Eight warning signs surface again and again - if you recognize three or more, you've got a problem, and five means an emergency.
+We've been cleaning up after agencies since 2008. Eight warning signs surface again and again - if you recognize three or more, you've got a problem, and five means an emergency.
 
 ## 1. No Git Access for You
 
 Git is the system developers use to store and track every code change. Think of it like Google Docs version history, but for software. You should have read access to it, always.
 
-"But I can't read code," you say. Doesn't matter - your next hire can, and so can a technical advisor or [fractional CTO](/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/). You own this code because you paid for it. If they won't let you see it, [ask yourself why](/blog/how-know-what-your-team-doing-remote-startup/). What are they protecting? And from whom?
+"But I can't read code," you say. Doesn't matter - your next hire can, and so can a technical advisor or fractional CTO. You own this code because you paid for it. If they won't let you see it, ask yourself why. What are they protecting? And from whom? ([What a transparent remote team looks like](/blog/how-know-what-your-team-doing-remote-startup/) is the baseline to compare against.)
 
-A founder on [r/startups](https://www.reddit.com/r/startups/) put it bluntly: "I asked for repo access and they said 'we'll transfer everything at the end.' There was no end. They ghosted." Your code should live in a GitHub organization you own from day one, not theirs.
+The pattern founders describe on r/startups: they ask for repo access, hear "we'll transfer everything at the end" - and the end never comes. Your code should live in a GitHub organization you own from day one, not theirs.
 
 ## 2. "We'll Show You When It's Done"
 
 This is the big one. A healthy team shows you working software every one to two weeks - not a slide deck or a Figma mockup, but something you can click and watch things happen.
 
-When your agency only shows you the finished product, you've lost the chance to catch misunderstandings before they get expensive to fix.
+When your agency only shows you the finished product, you've lost the chance to catch misunderstandings - a signup flow built for the wrong user, a price hardcoded in the wrong currency - while they are still cheap to fix.
 
-Good teams send [plain-English async standups](/blog/how-make-small-valuable-async-standups-productivity-development/) daily and a one-page summary every Friday covering what shipped, what's blocked, and what's next - all in plain English. If you're guessing whether progress is real, it isn't.
+Good teams send [plain-English async standups](/blog/how-make-small-valuable-async-standups-productivity-development/) daily and a one-page summary every Friday covering what shipped, what's blocked, and what's next.
 
 ## 3. Estimates That Keep Growing
 
@@ -54,9 +54,9 @@ Budget creep usually means the team didn't plan or test properly. And now they d
 
 If your agency skips one thing, this is the one that kills you.
 
-They're tiny programs that check whether your software works correctly. Every time a developer changes something, these tests run automatically and report back: "yes, everything still works" or "no, you just broke checkout." Without them, nobody knows what's broken until a real user finds it - maybe your biggest customer, maybe on launch day.
+Automated tests are tiny programs that check whether your software works correctly. Every time a developer changes something, these tests run automatically and report back: "yes, everything still works" or "no, you just broke checkout." Without them, nobody knows what's broken until a real user finds it - maybe your biggest customer, maybe on launch day.
 
-A healthy codebase has **70%+ test coverage**. Ask your agency for the number. If they hedge or change the subject, the answer is close to zero.
+We hold our own projects to **70%+ test coverage**. Whatever your agency's bar is, ask for the number. If they hedge or change the subject, the answer is close to zero.
 
 We screwed this up early in our own history - our team took over a project once and assumed the existing tests were solid. They weren't - they were decorative, passing every time because they didn't actually test anything. Now we [write tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), every time. It's slower on day one but dramatically faster by month two.
 
@@ -64,11 +64,11 @@ We screwed this up early in our own history - our team took over a project once 
 
 The rise of ["vibe coding"](/blog/vibe-coding-crisis-ai-code-debt/) - agencies using AI to generate 90%+ of the codebase - has made this red flag catastrophic. AI-generated code looks clean, with good variable names and consistent formatting that reads like a textbook.
 
-But the developers who generated it never wrote tests, never handled errors, and never checked edge cases. [Qodo's 2025 report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI-generated code produces **1.7x more issues** than human-written code. And when [Veracode tested over 100 LLMs](https://www.veracode.com/blog/genai-code-security-report/), their researchers discovered that 45% of the generated code contained exploitable security flaws.
+But the developers who generated it wrote no tests, skipped error handling, and left the edge cases unchecked. [Qodo's 2025 report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI-generated code produces **1.7x more issues** than human-written code. And when [Veracode tested over 100 LLMs](https://www.veracode.com/blog/genai-code-security-report/), their researchers discovered that 45% of the generated code contained exploitable security flaws.
 
 The vibe coding shops skip tests entirely because the AI output "looks like it works." It does - until real users show up and everything breaks at once, leaving you paying emergency rates to fix code that should never have shipped.
 
-If your agency can't tell you their test coverage number, they might not have tests at all. And if they don't have tests but they're shipping fast, they're probably vibe coding - and you should be looking for an exit. If you want more than a suspicion, our [vibe code rescue](/services/vibe-code-rescue/) service starts with a 48-hour code audit: a one-page, plain-English scorecard of what's solid, what's fragile, and whether to salvage or rebuild.
+If your agency can't tell you their test coverage number, they might not have tests at all. And if they don't have tests but they're shipping fast, they're probably vibe coding - and you should be looking for an exit.
 
 ## 5. Can't Explain Technical Decisions in Plain English
 
@@ -86,7 +86,7 @@ If the answer involves panic, you have a bus factor of one. (Industry term for "
 
 Good teams practice [structured onboarding](/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/) and pair programming so knowledge spreads across at least two or three people. Their developers document decisions where you can find them, and someone who didn't write the code [reviews every change](/blog/ai-powered-code-reviews-transforming-development-workflows/). If one person leaves, the project slows down but it doesn't stop.
 
-A founder on Indie Hackers shared: "My agency's senior dev left. The other two couldn't explain half the codebase. I was paying three people's salaries for one person's output." That's the cost of concentrating all knowledge in a single head.
+The bus-factor bill shows up in the stories founders tell on Indie Hackers: the agency's senior dev leaves, the remaining two can't explain half the codebase, and three salaries keep buying one person's output. That's the cost of concentrating all knowledge in a single head.
 
 ## 7. They Blame the Previous Team and Push for a Rewrite
 
@@ -94,7 +94,11 @@ A founder on Indie Hackers shared: "My agency's senior dev left. The other two c
 
 Sometimes that's true. But we've watched founders pay for two full rewrites by two different agencies, each one trashing the work that came before. The codebase didn't improve either time because neither team enforced testing or code review - they just rewrote the same problems in a different style.
 
-A good team opens an inherited codebase and says "here's what's working, here's what needs fixing, and here's the cost of each option." They give you a repair estimate alongside a rewrite estimate and explain the trade-offs honestly. A bad team skips the diagnosis entirely because a rewrite is easier to sell - and it resets the clock on accountability. If everything is new code, nobody can blame them for the old bugs, at least not for six months.
+A good team opens an inherited codebase and says:
+
+> "Here's what's working, here's what needs fixing, and here's the cost of each option."
+
+They give you a repair estimate alongside a rewrite estimate and explain the trade-offs honestly. Skipping the diagnosis is the tell: a rewrite is easier to sell, and it resets the clock on accountability - if everything is new code, nobody can blame them for the old bugs, at least not for six months.
 
 When your agency's first move is "throw it all away and let us rebuild," ask them to show you the specific technical problems that make a rescue impossible. If they can't name them, they're selling you a fresh start they haven't earned.
 
@@ -102,23 +106,29 @@ When your agency's first move is "throw it all away and let us rebuild," ask the
 
 The invoice arrives **$4K over the monthly retainer** with a one-line explanation about "infrastructure issues." Nobody flagged anything in the weekly update. Nobody asked you to approve overage spend before they incurred it.
 
-Good teams track hours per task and share them weekly so you know exactly where money goes, and you see overages coming before they arrive. [Deloitte's 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) found that **70% of executives had pulled outsourced work back in-house** - budget unpredictability was a top driver.
+Good teams track hours per task and share them weekly so you know exactly where money goes, and you see overages coming before they arrive. [Deloitte's 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) found that **70% of executives had pulled outsourced work back in-house** - with budget unpredictability among the cited drivers.
 
 The bigger problem is what the invoice tells you about the relationship: someone on their team made a decision to keep you in the dark until the bill landed.
 
 ---
 
-We've cleaned up after 40+ failed dev shop engagements. The pattern is consistent: test coverage in the single digits, no clear code-ownership clause in the contract, and a spend that has already crossed six figures by the time the founder calls.
+We've cleaned up after dozens of failed dev-shop engagements, and the recent ones all look the same: test coverage in the single digits, no code-ownership clause in the contract, and six figures already spent by the time the founder calls.
 
-If three or more of these sound familiar, we do a free 45-minute code audit. One senior developer looks at your codebase and writes a one-page assessment: test coverage, security risks, architecture quality. No contract, and no follow-up calls unless you ask. [Get an honest audit](https://jetthoughts.com/contact-us/).
+If three or more of these sound familiar, we do a free 45-minute code audit. One senior developer looks at your codebase and writes a one-page assessment: test coverage, security risks, architecture quality. No contract, and no follow-up calls unless you ask. [Get an honest audit](/contact-us/).
 
 ---
 
 ## Green Flags Worth Checking
 
-Not every agency is bad. The good ones give you repo access from day one and show working software every week or two. Their developers [write tests before code](/blog/why-how-use-tdd-main-tips-testing/) as a default, and they document decisions where you can find them.
+Not every agency is bad. The good ones:
 
-A written update arrives every Friday covering what shipped, what's blocked, and what's next. Their estimates include a range with a risk list: "8-12 weeks, with these three things that could push it to 14." At least two people understand every part of the system, and invoices match expectations because the team told you what they'd cost before they cost it.
+- give you repo access from day one
+- show working software every week or two
+- [write test-first by default](/blog/why-how-use-tdd-main-tips-testing/) and document decisions where you can find them
+- send a written Friday update: shipped, blocked, next
+- estimate in ranges with a named risk list: "8-12 weeks, with these three things that could push it to 14"
+- keep at least two people fluent in every part of the system
+- flag overages before they happen, so invoices match expectations
 
 ## The Scorecard
 
@@ -128,10 +138,10 @@ Count your red flags. Be honest.
 |-----------|--------------|------------|
 | 0-1 | Normal friction | Set clearer expectations and revisit in 30 days |
 | 2 | Yellow zone | Have a direct conversation with specific examples. Set measurable goals: "repo access by Friday, weekly written update by Monday, test coverage number by end of month." If they can't hit those basic asks, you have your answer |
-| 3-4 | Orange zone | Start your exit plan. Secure code access, export your data, get a second opinion. Don't fire them yet - but be ready. Read our [guide to firing your dev shop safely](/blog/fire-dev-shop-guide/) |
+| 3-4 | Orange zone | Start your exit plan. Secure code access, export your data, get a second opinion. Don't fire them yet - but be ready |
 | 5+ | Red zone | You're paying for damage, not progress. Begin the transition now. The longer you wait, the more expensive the cleanup |
 
-> **If your scorecard landed in the orange or red zone, the next call isn't "fire or stay" - it's "salvage or rebuild."** A free lesson from our non-technical founder course turns that call into a structured thirty-minute decision with a 30/60/90 day plan attached. [Salvage vs Rebuild: 6-Question Decision Tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/).
+> **If your scorecard landed in the orange or red zone, the next call isn't "fire or stay" - it's "salvage or rebuild."** The free [Salvage vs Rebuild: 6-Question Decision Tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) lesson walks that decision.
 
 ## What to Do If You See 3+ Red Flags
 
@@ -143,19 +153,4 @@ This week, get a second opinion. Hire a freelance senior developer or [fractiona
 
 Within 30 days, make a decision. Either set measurable improvement targets (repo access, weekly reports, test coverage number) with a hard deadline, or begin the exit. Our [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers the mechanics, and if you need someone to manage the transition, the [5 warning signs you need technical leadership](/blog/5-warning-signs-your-startup-needs-technical-leadership/) will help you decide.
 
-Before you hire the next team, don't fall into the [outsourcing trap](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/) twice. Ask for a sample weekly report, a real test coverage number, and a contract with milestone-based code ownership. **Those three requests filter out 80% of bad agencies.**
-
-If you're evaluating your current team or vetting the next one:
-
-- [Code quality signals for non-technical founders](/blog/code-quality-evaluation-non-technical-founders/)
-- [What real daily standups look like](/blog/how-make-small-valuable-async-standups-productivity-development/)
-- [Structured onboarding vs chaos](/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/)
-
-## Further Reading
-
-- [Standish Group CHAOS Report](https://www.projectsmart.co.uk/white-papers/chaos-report.pdf) - 19% failure rate, 47% challenged; two-thirds of projects don't finish as planned
-- [Deloitte 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) - 70% of executives pulled outsourced work back in-house
-- [Qodo: State of AI Code Quality in 2025](https://www.qodo.ai/reports/state-of-ai-code-quality/) - AI-generated code produces 1.7x more issues than human-written code
-- [LitsLink: Cost of Outsourcing Software Development](https://litslink.com/blog/cost-of-outsourcing-software-development) - 42% of developer time goes to technical debt
-- [Clutch: State of Software Development](https://clutch.co/resources/state-of-software-development) - survey data on outsourcing challenges and budget overruns
-- [Veracode GenAI Code Security Report](https://www.veracode.com/blog/genai-code-security-report/) - 45% of AI-generated code contains exploitable vulnerabilities
+Before you hire the next team, don't fall into the [outsourcing trap](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/) twice. Ask for a sample weekly report, a real test coverage number, and a contract with milestone-based code ownership - in our rescues, these are the three requests bad agencies refuse.

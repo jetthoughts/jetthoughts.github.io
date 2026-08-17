@@ -38,10 +38,6 @@ related_posts: false
 >
 > **Progress:** M5 · 2 of 7 · [OPTIONAL] - run this only if you don't yet know which channel your buyers actually use
 
-After this lesson you will be able to: **pick one outreach channel from your interview evidence and write a commitment statement you'll hold before scaling.**
-
-> **TL;DR:** Score each candidate channel 1-3 on four dimensions, out of 12: 9+ commits you to a full send/reply/follow-up arc, 7-8 runs a 1-week two-channel pilot, 6 or less sends you back to the transcripts. Channel-hopping is the most common newbie mistake - you can't read a signal you never let stabilize.
-
 The channel-flailing pattern: switch every 10 days - LinkedIn for two weeks, cold email for two weeks, a Slack community for two weeks, back to LinkedIn. Six weeks in, 8 conversations, zero paid pilots, and no idea which channel actually worked. The fix is rarely a smarter channel - it's committing to one from your interview evidence through a full send/reply/follow-up arc.
 
 ---
@@ -107,8 +103,6 @@ The decision matters more than the channel itself. Committing to one channel and
 
 The first place to apply this is your personal network in [Lesson 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Once that is exhausted, [going outbound without a sales team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) covers running the channel you just chose: the filter, the script, the Calendly-to-Stripe pipeline, and what the reply rate actually means.
 
-> **Deeper reference:** [The full channel-selection walkthrough and worksheet](/course/tech-for-non-technical-founders-2026/reference/channel-selection-full/) - the commitment-rule phase table, reading signals from transcripts, the 4-dimension scoring, the 4-channel comparison, the Engineering-as-Marketing side door, and the fill-in worksheet.
-
 > **Done:** you scored your candidate channels, chose one at ≥9/12, and wrote your commitment statement (channel name + why + evaluation criteria).
 >
 > **You have now:** a committed channel (5.2) chosen from your interview evidence. The 50-name list to run it on is next.
@@ -116,6 +110,8 @@ The first place to apply this is your personal network in [Lesson 5.3](/course/t
 > **Next:** [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - the personal-network list you'll run this channel on first.
 >
 > **If blocked:** If no channel scores ≥9/12, your interview transcripts are missing channel signal. Re-read the transcripts looking for "how do you find tools like this" and "what tools do you use every day" - the answers are already in there.
+>
+> **Deeper reference:** [The full channel-selection walkthrough and worksheet](/course/tech-for-non-technical-founders-2026/reference/channel-selection-full/) - the scoring rubric in depth, the 4-channel comparison, and the fill-in worksheet.
 
 ---
 

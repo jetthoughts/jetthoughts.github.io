@@ -36,7 +36,7 @@ course_nav: false
 >
 > **Output:** a 30-minute interrogation that catches AI theatre before you sign
 
-**Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
+**For later.** This matters once you have shipped (Module 4+) and your product uses AI in production - bookmark it and come back.
 
 The agency's pitch deck said the weekly retainer was $14,200. The pitch deck also said "every PR ships with an `Assisted-by:` footer naming the human reviewer; AI direction is a first-class part of our delivery."
 

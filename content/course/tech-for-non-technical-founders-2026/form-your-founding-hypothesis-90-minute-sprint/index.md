@@ -27,13 +27,11 @@ related_posts: false
 >
 > **Output:** your idea rewritten as a one-sentence bet - your strategic advantage stated plainly, your riskiest assumptions exposed as five blanks you'll test against cold strangers (1.2-1.5) and in Module 2's ten interviews
 >
-> **Progress:** M1 · 1 of 5 · Results so far: none yet - this is the start
+> **Progress:** M1 · 1 of 5
 
 ---
 
 You've told five people about your idea. They all said "that sounds great" - which told you nothing. This lesson replaces polite nods with a single sentence you can actually test.
-
-After this lesson you will be able to: **write a single sentence about your idea that a stranger reads and either says "that's my problem" or "not me" - instead of "sounds great."**
 
 ---
 

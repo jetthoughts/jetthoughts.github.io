@@ -35,11 +35,7 @@ related_posts: false
 >
 > **Output:** a build / pivot / kill decision + a one-page validated problem statement
 >
-> **Progress:** M2 · 5 of 6 · Results so far: question list + 30-name list + 10 scored interviews - this page turns the scores into a decision
-
-After this lesson you will be able to: **turn your 10 interview transcripts into one written decision - build, pivot, or kill - backed by a one-page problem statement you can defend.**
-
-> **TL;DR:** Score 10 transcripts, count strong signals, make one of three calls. 90 minutes. The decision you avoid here costs you a quarter of build time later.
+> **Progress:** M2 · 5 of 6
 
 **You should be here AFTER your Lesson 2.3-2.4 interviews are done.** No 10 scored transcripts in hand? Return to [Lesson 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) for the technique, then [Lesson 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for recruitment. This is the synthesis pass - you cannot complete it without real interview data.
 
