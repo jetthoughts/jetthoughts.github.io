@@ -165,6 +165,9 @@ kanban/
 !.agents/skills/impeccable/
 !.agents/skills/kanban-md/
 !.agents/skills/slop-detector/
+# slop-detector loads 18 module files; the global `modules/` rule (line 114)
+# would swallow them and ship a gate that loads nothing.
+!.agents/skills/slop-detector/modules/
 !.agents/skills/humanizer/
 !.agents/skills/seo-aeo-audit/
 !.agents/skills/content-production/
