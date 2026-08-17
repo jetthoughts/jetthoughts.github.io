@@ -59,13 +59,13 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Aug 18 | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ |
 | Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **scheduled** ✓ |
 | Aug 25 | reaction | `personal/reaction-claude-code-trust` | none | **approved** (Paul, board 2026-08-17) |
-| Aug 26 | opinion | `course-promo/sidepath-status-meetings-friday-demo` | course *(1st comment)* | **approved** (Paul, board 2026-08-17) |
-| Aug 27 | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved** (Paul, board 2026-08-17, post-swarm rewrite) - image decision still open (caricature mocks founder/vendor, see frontmatter notes) |
-| Sep 1 | teach | `course-promo/week1-thu-price-before-product` | none | **approved** (Paul, board 2026-08-17) |
-| Sep 3 | reaction | `personal/reaction-vibe-coding-front-back` | none | **approved** (Paul, board 2026-08-17) |
-| Sep 8 | opinion | `personal/opinion-permission-to-fix` | none | **approved** (Paul, board 2026-08-17; pulled forward from Oct 15) |
-| Sep 10 | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | revised ✓ |
-| Sep 15 | poll | `course-promo/week1-wed-first-move-poll` | none | draft |
+| Aug 27 | opinion | `course-promo/sidepath-status-meetings-friday-demo` | course *(1st comment)* | **approved** (Paul, board 2026-08-17) |
+| Sep 1 | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved** (Paul, board 2026-08-17, post-swarm rewrite) - image decision still open (caricature mocks founder/vendor, see frontmatter notes) |
+| Sep 3 | teach | `course-promo/week1-thu-price-before-product` | none | **approved** (Paul, board 2026-08-17) |
+| Sep 8 | reaction | `personal/reaction-vibe-coding-front-back` | none | **approved** (Paul, board 2026-08-17) |
+| Sep 10 | opinion | `personal/opinion-permission-to-fix` | none | **approved** (Paul, board 2026-08-17; pulled forward from Oct 15) |
+| Sep 15 | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | revised ✓ |
+| Sep 23 | poll | `course-promo/week1-wed-first-move-poll` | none | draft |
 | Sep 17 | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | drafted ✓ |
 | Sep 22 | teach | `course-promo/week2-tue-mom-test-past-questions` | none | revised ✓ |
 | Sep 24 | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | draft |
@@ -76,9 +76,12 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Oct 13 | story/promo | `course-promo/week1-fri-why-i-wrote-it` | course *(promo)* | draft |
 | Oct 15 | opinion | `icp-validation/week1-tue-staging-question` | blog | revised ✓ (moved from Sep 8 - spaces the progress-visibility cluster further from Aug 18/26) |
 
-**Ratio:** across 18 posts, only **3 course links** (founding, 40k, why-i-wrote-it =
-~15%) + 1 blog link; the rest is value/personal/poll. **Aug 25 → Sep 3 is four
-straight no-link posts** - the run that makes the feed read as a person with takes.
+**Ratio:** across 19 posts, **4 course links** (founding, status-meetings
+1st-comment, 40k, why-i-wrote-it = ~20%) + 1 blog link; the rest is
+value/personal/poll. **Sep 1 → Sep 10 is four straight no-link posts** - the run
+that makes the feed read as a person with takes. Cadence: max 2 full posts/week
+(Tue/Thu-ish), never consecutive days (re-flowed 2026-08-17 after a 3-in-a-row
+slipped in); polls ride on top per the ~1/week budget.
 
 **Still open:** a real "I was wrong about a founder/idea" story to replace the deleted
 BigBinary draft (story-bank Q2). Slot it when Paul has a case.

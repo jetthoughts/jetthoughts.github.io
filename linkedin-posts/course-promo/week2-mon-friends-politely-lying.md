@@ -15,9 +15,9 @@ design_file: none
 course_link_placement: first-comment
 utm_campaign: course-pilot-aug26
 utm_content: week2_mon_friends_politely_lying
-status: draft
+status: approved
 stage: next
-proposed_for: "2026-09-10 15:30 CEST"
+proposed_for: "2026-09-15 15:30 CEST"
 first_comment: |
   (value post - no link; reply-CTA only. Dropped the course link 2026-08-13 to make this one of the free 70% - see content-pillars.md)
 image: "assets/week2-mon-friends-politely-lying.png"
