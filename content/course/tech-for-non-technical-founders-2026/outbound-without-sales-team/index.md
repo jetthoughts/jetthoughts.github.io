@@ -37,10 +37,6 @@ related_posts: false
 >
 > **Progress:** M5 · 7 of 7 · [OPTIONAL] - the systematic cold path; run it only after the warm-network pass in 5.3-5.5
 
-After this lesson you will be able to: **book the demo calls that become your 1-2 paid pilots - from 30 filtered cold messages, after the warm-network pass.**
-
-> **TL;DR:** Once your network is exhausted, 30 filtered cold messages with a specific personalization per name put roughly one paid pilot in reach per batch - more as batches compound. Customers 11-20 come from cold outbound, not from launch events.
-
 ---
 
 Four paid pilots close from your personal network over six weeks, then the warm names run out at customer five. The default move is to book a launch coach or sign an ad-agency contract - six weeks and a few thousand dollars, neither designed for your B2B vertical. The four-line cold message below is what customer five answers in week three for under $40 of tooling.

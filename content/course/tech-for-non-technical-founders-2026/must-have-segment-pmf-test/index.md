@@ -35,11 +35,7 @@ related_posts: false
 >
 > **Output:** a written must-have-user persona with 3 verbatim quotes and one named segment to target
 >
-> **Progress:** M5 · 1 of 7 · Results so far: live MVP with your first users on it (4.4) - this page tests whether they'd miss it before you spend on ads
-
-After this lesson you will be able to: **run the 5-question Sean Ellis survey against your earliest users and name the one segment worth selling to.**
-
-> **TL;DR:** Before you buy traffic, survey your earliest users. If fewer than 40% would be "very disappointed" if your product vanished, you have a product problem, not a marketing problem.
+> **Progress:** M5 · 1 of 7
 
 ---
 

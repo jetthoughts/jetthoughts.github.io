@@ -35,7 +35,7 @@ course_nav: false
 >
 > **Output:** a weekly Friday ritual that surfaces fake progress within 4 weeks
 >
-**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
+**For later.** This chapter is for founders with a hired team. Still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)? Bookmark it for when you graduate.
 
 What were you actually shown on your last status call? Pull up your notes and read what is on them: a burndown chart, a screenshot of a Jira board with eleven cards in "Done", a Figma frame the designer updated overnight, a verbal summary that opened with "good progress this week." Count how many of those are things you could click. On a call that costs a founder **$31K a month**, the honest count is often zero - a full status meeting that showed no working software at all.
 

@@ -38,7 +38,7 @@ course_nav: false
 >
 > **Output:** a one-paragraph contract clause + a CI gate that blocks hallucinated dependencies before merge
 
-**Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
+**For later.** This matters once you have shipped (Module 4+) and your product uses AI in production - bookmark it and come back.
 
 In March 2025, [Lasso Security published findings](https://www.lasso.security/blog/ai-package-hallucinations) that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers registered those names and waited. By the time the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) named the technique "slopsquatting" in April 2025, security teams had already logged the first installs of the proof-of-concept packages on real production systems. You paid $34K for an MVP. The most expensive line in the codebase was free. It was the one a model invented and a developer typed into a `Gemfile` without checking that the gem existed.
 

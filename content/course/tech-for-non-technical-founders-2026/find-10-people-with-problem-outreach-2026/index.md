@@ -35,11 +35,7 @@ related_posts: false
 >
 > **Output:** 10 interview calls booked and the first outreach batch sent - you'll run the calls with the Lesson 2.1 script, then score them in Lesson 2.5
 >
-> **Progress:** M2 · 4 of 6 · Results so far: question list + 30-name prospect list
-
-After this lesson you will be able to: **send outreach that names something the person actually wrote - and book 10 interviews from your 30-name list.**
-
-> **TL;DR:** Send 30 staggered messages referencing specific posts you read, using a 3-message sequence (Day 0 intro + Day 3 bump + Day 7 close). Reply rate runs 20-30% when each message names a specific post; 1-5% when it doesn't. Plan to extend the list once or twice before all 10 calls are booked.
+> **Progress:** M2 · 4 of 6
 
 > **Read [Lesson 2.3 - Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) first.** It covers the ICP mapping, reading threads, and building the 30-name list. You need that list before the templates below will work - generic openers collapse to 1-5% reply rates.
 

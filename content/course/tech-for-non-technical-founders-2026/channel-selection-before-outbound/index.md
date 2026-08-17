@@ -38,10 +38,6 @@ related_posts: false
 >
 > **Progress:** M5 · 2 of 7 · [OPTIONAL] - run this only if you don't yet know which channel your buyers actually use
 
-After this lesson you will be able to: **pick one outreach channel from your interview evidence and write a commitment statement you'll hold before scaling.**
-
-> **TL;DR:** Score each candidate channel 1-3 on four dimensions, out of 12: 9+ commits you to a full send/reply/follow-up arc, 7-8 runs a 1-week two-channel pilot, 6 or less sends you back to the transcripts. Channel-hopping is the most common newbie mistake - you can't read a signal you never let stabilize.
-
 The channel-flailing pattern: switch every 10 days - LinkedIn for two weeks, cold email for two weeks, a Slack community for two weeks, back to LinkedIn. Six weeks in, 8 conversations, zero paid pilots, and no idea which channel actually worked. The fix is rarely a smarter channel - it's committing to one from your interview evidence through a full send/reply/follow-up arc.
 
 ---

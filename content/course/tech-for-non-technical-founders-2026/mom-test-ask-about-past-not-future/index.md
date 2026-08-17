@@ -35,13 +35,11 @@ related_posts: false
 >
 > **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Lesson 2.2 and then run in real interviews after Lesson 2.3-2.4 recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
 >
-> **Progress:** M2 · 1 of 6 · Results so far: all Module 1 artifacts - Module 2 starts here
+> **Progress:** M2 · 1 of 6
 
 ---
 
 Run ten interviews where the only question is "would you pay for this?" and you'll close the week with a stack of yeses and an empty launch. The technique below switches every question to the past tense - what did you do last time, what did it cost, show me the spreadsheet - because whoever paid in the past keeps paying, and whoever did nothing will keep doing nothing no matter what they promise you over coffee.
-
-After this lesson you will be able to: **write interview questions that ask about past behavior - so the answers tell you what people actually did, not what they would politely promise.**
 
 Rob Fitzpatrick's book [The Mom Test](https://www.momtestbook.com/) (2013) named the technique that prevents the polite-yes problem. The core idea: ask interviewees to recount what they actually did the last time the problem happened, not what they think they'd do about a product you describe to them.
 
