@@ -194,8 +194,6 @@ You walk out of this chapter holding one of three artifacts: a fix-the-product p
 - Lenny Rachitsky, [How to know if you've got product-market fit](https://www.lennysnewsletter.com/p/how-to-know-if-youve-got-productmarket) - the Sean Ellis must-have-user framing the segment slice in this chapter operationalizes.
 - ProfitWell / Paddle, [How to calculate and reduce revenue churn](https://www.paddle.com/resources/revenue-churn) - the unit-economics math that explains why refunds beat churn for wrong-segment customers.
 - Rahul Vohra, [How Superhuman built an engine to find product-market fit](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/) - segment-isolation playbook layered on top of the 40% test.
-- Lenny Rachitsky, [What is good retention](https://www.lennysnewsletter.com/p/what-is-good-retention-issue-29) - the B2B SaaS retention floors used in the 90-minute cohort questions.
-- Steve Blank, [The Customer Development Manifesto](https://steveblank.com/2009/08/31/the-customer-development-manifesto-reasons-for-the-revolution-part-1/) - the foundational framing for "fire the wrong customer before adding more."
 
 ---
 

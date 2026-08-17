@@ -166,8 +166,6 @@ Once you have closed 2-3 paid pilots and want to layer on contract rigor, read t
 - SaaStr, [Should you charge for a pilot?](https://www.saastr.com/we-are-a-b2b-saas-startup-and-want-to-develop-our-product-in-pilots-with-customers-should-we-charge-for-the-pilots-and-how-much/) - Jason Lemkin's case for charging and the conversion-rate data behind the recommendation.
 - Ash Rust, [Startup Sales: How to Get Pilot Customers to Pay](https://medium.com/sharp-spear/startup-sales-how-to-get-pilot-customers-to-pay-7a9b7a48eedf) - tactical conversation script and pricing-band data from investor Ash Rust.
 - Steve Blank, [The Four Steps to the Epiphany](https://steveblank.com/four-steps-35/) - the foundational text on Customer Validation; Blank argues paid pilots are how you separate real demand from polite enthusiasm.
-- Stripe, [Payment Links documentation](https://stripe.com/docs/payment-links) - the official Stripe Checkout setup. 15-minute integration with no engineering work required.
-- Lenny Rachitsky, [How to win your first 10 B2B customers](https://www.lennysnewsletter.com/p/how-to-win-your-first-10-b2b-customers) - the 7-step playbook including the design-partner pricing model from B2B founders.
 
 ---
 

@@ -22,7 +22,15 @@ Boring is what you want for an MVP. The boring path lets one non-technical found
 
 ![A hand-drawn layer diagram of the self-serve stack: a red Lovable card labeled the UI layer, an arrow reading reads / writes rows down to a blue Supabase card labeled the data layer with Postgres, auth, storage and row-level security, then user hits the paywall down to a green Stripe card labeled the money layer, with a dashed green webhook arrow looping from Stripe back into Supabase to flip subscription status to active, a gray GitHub backup box synced from Lovable on day 1, and an amber footnote warning not to let one tool do another tool's job.](stack-layer-boundaries.svg)
 
-How much demand evidence you already have decides the path. With enough of it, you open Lovable and build. Without it, a $0 Concierge MVP - a no-code "Wizard of Oz" where you fake the automation by hand behind the curtain - gets you more evidence before you commit to Lovable code. Wire up Tally (free form) → Zapier or Make.com (free routing) → Airtable or Notion (free storage): the customer fills the Tally form, Zapier drops the row in Airtable, and you process it by hand. To the customer it looks automated, so you validate willingness-to-pay before writing code. The trade-off is that you run it by hand, which makes it a stepping stone, not a replacement. Either way, the Lovable + Supabase + Stripe stack is what ships in [Lesson 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/).
+How much demand evidence you already have decides the path. With enough of it, you open Lovable and build. Without it, a $0 Concierge MVP gets you more evidence first - a no-code "Wizard of Oz" where you fake the automation by hand behind the curtain:
+
+```text
+Tally (free form) -> Zapier or Make.com (free routing) -> Airtable or Notion (free storage)
+```
+
+The customer fills the Tally form, Zapier drops the row in Airtable, and you process it by hand. To the customer it looks automated, so you validate willingness-to-pay before writing code. The trade-off: you run it by hand, which makes it a stepping stone, not a replacement.
+
+Either way, the Lovable + Supabase + Stripe stack is what ships in [Lesson 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/).
 
 ## M2 prototype vs M4 MVP - different artifacts, different rigor
 
@@ -135,9 +143,6 @@ None of these is JetThoughts. None of them sells you a service. They are the fou
 - [Lesson 4.4: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) - the companion lesson: 4 build phases, exit criteria, shed-vs-skyscraper, and the architectural ceiling
 - Y Combinator, [Startup School Library + 2026 Founder Resources](https://www.ycombinator.com/library/) - the YC stance on validating without code and the changing role of the technical co-founder
 - Rob Walling, [Vibe Coding interview on Creator Science](https://podcast.creatorscience.com/rob-walling/) - the shed vs skyscraper analogy that frames the architectural ceiling. 35-minute listen.
-- Lovable, [Pricing tiers](https://lovable.dev/pricing) and [community Discord](https://lovable.dev/community)
-- Supabase, [Pricing tiers](https://supabase.com/pricing) and [Row-Level Security guide](https://supabase.com/docs/guides/database/postgres/row-level-security)
-- Stripe, [Checkout quickstart](https://docs.stripe.com/checkout/quickstart) and [Pricing page](https://stripe.com/pricing)
 - DHH, [The One-Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318)
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/)
 

@@ -127,7 +127,13 @@ The kit runs Monday-to-Friday for the four weeks of Module 5. The sequence:
 
 By Friday of week 4, you should have: a segment-isolated persona doc, 50 sent messages with 30+% reply rate, 1-2 signed paid pilots, and 30 cold-outbound prospects with 3-5 booked demos for week 5.
 
-One boundary before you start: the kit is not a substitute for a sales course or a CRM. It will not teach the conversational mechanics of objection-handling, so if you have never run a customer call, read [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) and run 10 user calls first. It will not track touch counts past the first 30 customers the way HubSpot, Pipedrive, or Salesforce does - past 30, the Sheet breaks and you graduate to a real CRM. It also does not replace the must-have-segment test from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - if your overall must-have % from component 5 is under 25%, your pipeline will fill, the demos will go fine, and conversions will stall at the deposit conversation. Run the 40% test first; work the kit second.
+One boundary before you start: the kit is not a substitute for a sales course or a CRM. Three things it will not do:
+
+- **Teach the conversational mechanics of objection-handling.** Never run a customer call? Read [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) and run 10 user calls first.
+- **Track touch counts past your first 30 customers** the way HubSpot, Pipedrive, or Salesforce does. Past 30, the Sheet breaks and you graduate to a real CRM.
+- **Replace the must-have-segment test** from [Lesson 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/). If your overall must-have % is under 25%, your pipeline will fill, the demos will go fine, and conversions will stall at the deposit conversation.
+
+Run the 40% test first; work the kit second.
 
 ---
 

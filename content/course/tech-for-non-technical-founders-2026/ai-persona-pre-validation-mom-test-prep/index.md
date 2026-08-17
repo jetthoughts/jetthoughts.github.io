@@ -86,7 +86,7 @@ Build 3 distinct personas before you start - not 3 variations of the same person
 
 ## Run the rehearsal
 
-Once the persona is set, run your draft questions through four follow-up prompts (the full text of each is in the [persona-rehearsal reference](/course/tech-for-non-technical-founders-2026/reference/persona-rehearsal-full/)):
+Once the persona is set, run your draft questions through four follow-up prompts. Open the [persona-rehearsal reference](/course/tech-for-non-technical-founders-2026/reference/persona-rehearsal-full/) beside this page - it carries the verbatim text of Prompts 2-5, so you paste rather than retype. Here is what each one is for:
 
 1. **Prompt 2 - Ask** each draft question in-character. The persona answers as a busy professional would.
 2. **Prompt 3 - Diagnose:** tell Claude to break character and assess whether that question would produce useful data on a real call. Read the diagnosis, not the polite in-character answer - Claude is trained to be helpful, so a coherent answer is not proof the question works.

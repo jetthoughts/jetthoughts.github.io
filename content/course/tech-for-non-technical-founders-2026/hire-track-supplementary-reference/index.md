@@ -103,7 +103,13 @@ You are not picking the stack alone - your Fractional CTO or hired engineer make
 
 ### Default: Rails (Ruby on Rails)
 
-Rails is the JetThoughts default and the Indie Hackers / DHH / Pieter Levels community standard. The reasoning is empirical, not religious: Rails ships fast, one engineer can operate the full stack end-to-end, the conventions are tight enough that the next engineer you hire reads the codebase in a day, and the deployment story (Heroku, Fly.io, Render) costs $7-$50/month at pre-seed scale. Basecamp ([DHH's *One-Person Framework* essay](https://world.hey.com/dhh/the-one-person-framework-711e6318)) is the case study: two decades of products on a Rails monolith run by a famously small team, and Shopify serves millions of merchants on one Rails monolith. At your scale (47-5,000 paying users) one Rails engineer can ship + operate the whole thing.
+Rails is the JetThoughts default and the Indie Hackers / DHH / Pieter Levels community standard. The reasoning is empirical, not religious:
+
+- Rails ships fast, and one engineer can operate the full stack end-to-end.
+- The conventions are tight enough that the next engineer you hire reads the codebase in a day.
+- Deployment (Heroku, Fly.io, Render) costs $7-$50/month at pre-seed scale.
+
+Basecamp ([DHH's *One-Person Framework* essay](https://world.hey.com/dhh/the-one-person-framework-711e6318)) is the case study - two decades of products on a Rails monolith run by a famously small team - and Shopify serves millions of merchants on one Rails monolith. At your scale (47-5,000 paying users) one Rails engineer can ship and operate the whole thing.
 
 **Why Rails wins for the non-technical founder's hired team:** the hire pool is deep (15+ years of Rails engineers), the framework opinions are tight (less time arguing about conventions, more time shipping), background jobs / email / file uploads / authentication / payment / admin / search are all batteries-included rather than 12 separate npm packages, and the Rails community produced the rescue patterns we see work in production (Pundit for authorization, Devise for auth, Sidekiq for jobs, ActiveAdmin for staff tools).
 

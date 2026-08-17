@@ -85,7 +85,14 @@ After the rehearsal, you have two deliverables.
 
 **The sharpened question list.** Take your original questions, apply the revisions from Prompt 5, cut the ones flagged in Prompt 4. You should end the session with 5-7 solid questions where you started with 5-8 loose ones. That's the list you take into [booking real interviews with the full outreach stack](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 
-**The top 3 objections to test in real interviews.** Prompt 4 will surface 3-5 things that make your persona want to end the conversation. Pick the 3 that appeared across at least 2 of your 3 personas. These are the objections you're listening for in real interviews - not discovering them for the first time, but noticing whether and how they show up. Hearing an objection in rehearsal also does something quieter: when a real person raises it, you've already sat with it, so you take notes instead of getting defensive and pitching to win them back. There's a difference between a real customer who raises objection #2 early (strong signal that the objection is real) and one who never raises it at all (either it's not real for this person, or your questions didn't give them space to surface it).
+**The top 3 objections to test in real interviews.** Prompt 4 will surface 3-5 things that make your persona want to end the conversation. Pick the 3 that appeared across at least 2 of your 3 personas.
+
+These are the objections you're listening for in real interviews - not discovering for the first time, but noticing whether and how they show up. Rehearsal does something quieter too: when a real person raises the objection, you've already sat with it, so you take notes instead of getting defensive and pitching to win them back.
+
+What the two outcomes tell you:
+
+- **Raises objection #2 early** - strong signal the objection is real.
+- **Never raises it at all** - either it isn't real for this person, or your questions didn't give them space to surface it.
 
 **Objection Tracker** - fill this in after the rehearsal, before your first real interview:
 
