@@ -31,8 +31,8 @@ Workflow references:
 
 The company's weekly loop — goal, OKR, rocks, weekly numbers — lives in `docs/business/operating-system.md` and is edited here. **Identity, positioning, and bet status are owned in the vault** (`jt-business-os`, `~/Documents/pkm`); `docs/business/vision-mission.md` and `opportunity-portfolio.md` mirror it, so read the vault note before changing either. Company FACTS (founding date, tenure, ratings) stay canon in `.okf/content/claims-canon.md` regardless.
 - `operating-system.md` — the weekly loop; §1 carries this week's real numbers (bound to the 2607 pipeline ledger)
-- `opportunity-portfolio.md` — the bets; one is Validating at a time (currently 2607 Vibe Code Rescue, 1 client by Nov 30)
-- Execution entry point for the active bet: `docs/projects/2607-vibe-code-rescue/operation-runbook.md` **▶ START HERE**
+- `opportunity-portfolio.md` — the bets; one is Validating at a time. **Right now none is: 2607 Vibe Code Rescue is Parked until Sep 2026.** Canonical status lives in the vault note `jt-vibe-code-rescue`.
+- Execution entry point for 2607 (parked until Sep 2026, resume here): `docs/projects/2607-vibe-code-rescue/operation-runbook.md`
 
 Any outbound/sales/pipeline task starts from that runbook, not from memory.
 

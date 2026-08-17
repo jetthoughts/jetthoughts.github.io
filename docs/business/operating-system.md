@@ -2,6 +2,14 @@
 
 > **Ownership (settled 2026-08-17):** this file is **repo-owned and edited here** - the weekly loop, the OKR (§3), the rocks (§4), and the weekly numbers (§1) all live in this repo, beside the pipeline tooling that feeds them. Identity, positioning, and bet *status* are owned in the vault (`jt-business-os`, `~/Documents/pkm`) and mirrored into `vision-mission.md` / `opportunity-portfolio.md`. Company FACTS stay canon in `.okf/content/claims-canon.md`.
 
+> **⏸️ The bet this loop serves is PARKED until September 2026** (Paul,
+> 2026-08-17 - see [`opportunity-portfolio.md`](opportunity-portfolio.md)). The
+> objective, OKR (§3), rocks (§4) and weekly numbers (§1) below still describe
+> the pre-park plan. **Open question for Paul: does "1 client by Nov 30" survive
+> a September restart, or does the target move?** Until that is answered, treat
+> §1-§4 as the plan on resume, not as this week's commitments - and do not log
+> RED weekly numbers against a bet nobody is working.
+
 **Scope**: the **company** operating system - how JetThoughts runs across every opportunity, not just the current one. **Company layer**: [`index.md`](index.md) (front door) · [`vision-mission.md`](vision-mission.md) (who we are, still DRAFT) · [`opportunity-portfolio.md`](opportunity-portfolio.md) (the bets).
 **Purpose**: the smallest cadence that reliably ships the current objective - **1 Vibe Code Rescue client by Nov 30, 2026**.
 **Owner**: Paul Keen | **Created**: 2026-07-21 | **Review**: weekly, in §1 below - no separate ritual
