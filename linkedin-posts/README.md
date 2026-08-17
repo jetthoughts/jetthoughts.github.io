@@ -88,6 +88,24 @@ Reusing a topic-perfect course exhibit is still fine when one exists.
 > LinkedIn's native file-upload dialog. Until solved, the image is attached
 > manually by Paul (or dropped in a fresh composer). Track the fix in the backlog.
 
+## Board approvals (`bin/li-review`)
+
+Each post page on the dev board has decision buttons: **Approve** (key `a`,
+shown only while the post is not yet approved - approval is the required
+gate) and **Postpone** (key `p`, moves the post to the backlog: writes
+`status: postponed` + `stage: backlog`). A backlogged post shows a single
+**To pre-verify** button instead (key `a`): it returns the post to the
+review queue (`status: draft` + `stage: next`) - backlog items re-enter
+through pre-verify, never straight to approved. They hit a local sidecar that
+`bin/dev` starts and stops automatically on **hugo port + 1000** (1313→2313,
+1314→2314, ...), and the buttons target the sidecar of the server they were
+loaded from - so parallel dev sessions on different ports each write to their
+own checkout. A decision rewrites the post's frontmatter `status:` line
+(single source of truth, no separate state file) and appends an audit line to
+`linkedin-posts/decisions.log` (gitignored - local decision trail). The page
+redirects back and shows the new status pill. Localhost-only, dev-only; the
+agent reads decisions straight from frontmatter/log, no chat round-trip.
+
 ## Frontmatter schema v2
 
 Lifecycle + pointers in frontmatter; **performance data lives in the ledger, not

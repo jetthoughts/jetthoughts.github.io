@@ -7,7 +7,7 @@ tags: [content, linkedin, workflow, voice]
 generated:
   by: process:okf-migrate
   at: 2026-07-12T00:00:00Z
-timestamp: 2026-08-17T00:00:00Z
+timestamp: 2026-08-17T13:20:00Z
 ---
 
 # Overview
@@ -45,6 +45,23 @@ beat-marking, shape-coded copywriting).
 `/linkedin/<lane>/<slug>/` (single post). Dev-only: the mount lives in
 `config/development/hugo.toml` (`linkedin-posts/` → `content/linkedin`);
 production builds never ship these pages.
+
+**Board approvals (2026-08-17):** `bin/dev` auto-starts the `bin/li-review`
+sidecar on **hugo port + 1000**; buttons target the sidecar of the server the
+page came from, so parallel sessions each write to their own checkout.
+Approve (key `a`, hidden once approved) writes `status: approved`; Postpone
+(key `p`) writes `status: postponed` + `stage: backlog`; a backlogged post
+offers only "To pre-verify" (requeue -> `status: draft` + `stage: next`) so
+backlog items re-enter via review, never straight to approved. The board's
+Backlog section is a catch-all - no status value can hide a post. Decisions land in
+frontmatter (single status source) + `linkedin-posts/decisions.log`
+(gitignored) - the agent tracks from there, no chat round-trip.
+
+**Composer fill can be permission-blocked:** the harness classifier may deny
+typing a post body into the composer, and LinkedIn's contenteditable exposes
+no ref for form_input. Stage everything (draft, plan row, review link), leave
+the composer open, hand Paul the body to paste. Do not chunk-retry the denied
+type action.
 
 **Driving the native composer (claude-in-chrome):**
 

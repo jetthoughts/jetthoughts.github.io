@@ -10,9 +10,9 @@ first_comment: |
   (value post - no link; reply-CTA only)
 utm_campaign: ""
 utm_content: reaction_vibe_coding_front_back
-status: draft
+status: approved
 stage: next
-proposed_for: "2026-09-01 15:30 CEST"
+proposed_for: "2026-09-08 17:00 CEST"
 notes: |
   Pillar: reaction (the 70% value; NO course link). From trends.md 2026-08 scan:
   the vibe-coding debate (believers vs critics; Karpathy coined it). Paul's POV

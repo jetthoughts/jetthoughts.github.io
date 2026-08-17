@@ -1,0 +1,76 @@
+#!/usr/bin/env ruby
+# Dev-only sidecar for the LinkedIn review board (layouts/linkedin/).
+# The board's Approve/Reject buttons hit GET /decide?post=<lane>/<file>.md&status=...;
+# this rewrites the post's frontmatter `status:` line (the single source of truth)
+# and appends an audit line to linkedin-posts/decisions.log, then redirects back.
+# ponytail: naive single-threaded HTTP loop, binds 127.0.0.1 only - one reviewer, dev only.
+
+require 'socket'
+require 'uri'
+
+ROOT = File.expand_path('../linkedin-posts', __dir__)
+PORT = Integer(ENV.fetch('PORT', '2313')) # convention: hugo port + 1000 (bin/dev passes it)
+ALLOWED = %w[approved postponed requeue].freeze
+
+def respond(sock, code, headers = {}, body = '')
+  reason = { 200 => 'OK', 303 => 'See Other', 400 => 'Bad Request', 404 => 'Not Found' }.fetch(code)
+  sock.print "HTTP/1.1 #{code} #{reason}\r\n"
+  headers.merge('Content-Length' => body.bytesize, 'Connection' => 'close')
+         .each { |k, v| sock.print "#{k}: #{v}\r\n" }
+  sock.print "\r\n#{body}"
+end
+
+server = TCPServer.new('127.0.0.1', PORT)
+puts "li-review: http://127.0.0.1:#{PORT}/decide (posts root: #{ROOT})"
+
+loop do
+  sock = server.accept
+  begin
+    request = sock.gets or next
+    headers = {}
+    while (line = sock.gets) && line != "\r\n"
+      k, v = line.split(': ', 2)
+      headers[k.downcase] = v&.strip
+    end
+
+    meth, target, = request.split(' ')
+    uri = URI.parse(target.to_s)
+    if meth != 'GET' || uri.path != '/decide'
+      respond(sock, 404, {}, 'not found')
+      next
+    end
+
+    q = URI.decode_www_form(uri.query.to_s).to_h
+    post, status = q['post'], q['status']
+    file = File.join(ROOT, post.to_s)
+    unless ALLOWED.include?(status) && post.to_s.match?(%r{\A[\w-]+/[\w.-]+\.md\z}) && File.file?(file)
+      respond(sock, 400, {}, "bad request: post=#{post.inspect} status=#{status.inspect}")
+      next
+    end
+
+    text = File.read(file)
+    new_status = status == 'requeue' ? 'draft' : status # requeue = back to the pre-verify queue
+    unless text.sub!(/^status: .*$/, "status: #{new_status}")
+      respond(sock, 400, {}, "no `status:` line in #{post}")
+      next
+    end
+    text.sub!(/^stage: .*$/, 'stage: backlog') if status == 'postponed'
+    text.sub!(/^stage: .*$/, 'stage: next') if status == 'requeue'
+    File.write(file, text)
+    File.open(File.join(ROOT, 'decisions.log'), 'a') do |f|
+      f.puts "#{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')} #{status} #{post} via board"
+    end
+
+    # Cross-origin Referer is stripped to the bare origin by default browser
+    # policy, so the board passes its own absolute URL back via ?back=
+    # (hugo server rewrites .Permalink to the actual serving port).
+    back = q['back'].to_s
+    back = "http:#{back}" if back.start_with?('//') # hugo dev .Permalink is protocol-relative
+    back = 'http://localhost:1313/linkedin/' unless back.match?(%r{\Ahttp://(localhost|127\.0\.0\.1):\d+/[\w/.-]*\z})
+    respond(sock, 303, { 'Location' => back })
+  rescue StandardError => e
+    begin respond(sock, 400, {}, e.message) rescue IOError; end
+  ensure
+    sock.close
+  end
+end

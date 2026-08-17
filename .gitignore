@@ -181,3 +181,4 @@ kanban/
 .claude-flow/logs/
 .claude-flow/sessions/
 .claude/worktrees/
+linkedin-posts/decisions.log

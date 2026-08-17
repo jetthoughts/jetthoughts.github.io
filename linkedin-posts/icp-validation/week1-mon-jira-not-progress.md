@@ -21,7 +21,7 @@ notes: |
   course lane's validate-before-build = test demand). AI self-score ~1/10.
 ---
 
-A lot of founders read a full Jira board as proof the product is moving.
+A full Jira board isn't proof the product is moving.
 
 It looks fine. Tickets are closing, standups are clean, the team sounds busy.
 
@@ -31,6 +31,6 @@ The check I'd run: don't ask how the sprint went. Ask for one link where this we
 
 This works even if you can't read a line of code. You're just using the product like a customer would.
 
-If you're non-technical and working with a dev shop, how do you check what actually shipped?
+How do you check what your dev shop actually shipped that week?
 
 #startups #founders #productmanagement
