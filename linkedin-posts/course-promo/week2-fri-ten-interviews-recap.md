@@ -16,7 +16,7 @@ course_link_placement: first-comment
 opener_archetype: stat-led
 utm_campaign: course-pilot-aug26
 utm_content: week2_fri_ten_interviews_recap
-status: draft
+status: approved
 stage: next
 proposed_for: "2026-10-01 17:00 CEST"
 first_comment: |

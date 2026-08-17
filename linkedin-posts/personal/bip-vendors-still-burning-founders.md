@@ -11,7 +11,7 @@ first_comment: |
   (value post - no link; reply-CTA only)
 status: approved
 stage: next
-proposed_for: "2026-09-01 17:00 CEST"
+proposed_for: "2026-09-02 17:00 CEST"
 notes: |
   Pillar: build-in-public (the 70% value; NO course link). From Paul's interview
   answer 2026-08-13: what surprises him is that even with AI this mature, founders
@@ -44,4 +44,4 @@ Nobody tells founders this. Vendors have no reason to, and the tools moved faste
 
 So, no judgment if you paid for a build you didn't need yet. Most people around you would have signed the same contract.
 
-If that was you: what did the vendor tell you before you signed? That part never gets written down, and it's what would help the next founder.
+What did the vendor tell you before you signed? That part never gets written down, and it's what would help the next founder.

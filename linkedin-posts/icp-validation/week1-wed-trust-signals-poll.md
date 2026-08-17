@@ -16,7 +16,7 @@ first_comment: |
 utm_campaign: icp_validation_progress_visibility
 utm_content: trust_signals_poll
 opener_archetype: idea-led
-status: draft
+status: approved
 stage: next
 proposed_for: "2026-09-29 17:00 CEST"
 notes: |

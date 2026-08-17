@@ -10,7 +10,7 @@ opener_archetype: observation-led
 icp_test: does a founder recognize that "is it on track?" is reassurance, not information, and reply with their own standup question?
 image: "assets/week1-tue-staging-question.png"
 visual: assets/week1-tue-staging-question.png (weekly oversight cadence exhibit)
-status: draft
+status: approved
 stage: next
 proposed_for: "2026-10-15 17:00 CEST"
 first_comment: |

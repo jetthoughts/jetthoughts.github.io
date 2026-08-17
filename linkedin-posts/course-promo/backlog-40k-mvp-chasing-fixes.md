@@ -15,7 +15,7 @@ first_comment: |
   I put the "what to check before you hire (or skip) a dev shop" steps into a free course, no signup: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_validate_first&utm_content=backlog_40k_mvp_chasing_fixes
 utm_campaign: course_promo_validate_first
 utm_content: backlog_40k_mvp_chasing_fixes
-status: draft
+status: approved
 stage: next
 proposed_for: "2026-09-24 17:00 CEST"
 notes: |

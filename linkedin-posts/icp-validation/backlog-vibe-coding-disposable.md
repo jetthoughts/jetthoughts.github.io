@@ -11,7 +11,7 @@ cta: Open question - "If you've been through one of these rebuilds, what did you
 utm_campaign: icp_validation_validation_vs_production
 utm_content: vibe_coding_disposable_by_design
 image: "assets/backlog-vibe-coding-disposable.png"
-status: draft
+status: approved
 stage: next
 proposed_for: "2026-10-06 17:00 CEST"
 opener_archetype: idea-led

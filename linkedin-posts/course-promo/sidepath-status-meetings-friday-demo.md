@@ -11,7 +11,7 @@ design: B
 design_file: linkedin-posts/course-promo/assets/sidepath-status-meetings-friday-demo.png
 image: "assets/sidepath-status-meetings-friday-demo.png"
 first_comment: |
-  I wrote the whole ritual down, including the 7 questions the team answers. Free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_friday_demo&utm_content=status-meetings-friday-demo
+  The full ritual is written up as a course chapter, the 7 questions included - nothing to sign up for: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_friday_demo&utm_content=status-meetings-friday-demo
 status: approved
 stage: next
 proposed_for: "2026-08-26 17:00 CEST"
@@ -45,11 +45,11 @@ notes: |
 
 Every few weeks my feed decides the weekly status meeting has to die.
 
-The complaint is fair. Most status calls I sit in are a slide deck and a narrated board. The lead picks what you see and summarizes the week. You leave knowing the team was busy, and not much else. Nobody enjoys that hour, on either side of it.
+The complaint is fair. Most status calls I sit in are a slide deck and a narrated board. The lead picks what you see and summarizes the week. You leave with a narrated week and not much else. Nobody enjoys that hour, on either side of it.
 
 I'd keep the meeting and change what's allowed on the screen.
 
-The version I run is 15 minutes every Friday, and the update lands before the call, not on it. The team sends a written summary the night before: what shipped, the links, and a Loom walking through it. Working software is the only thing that counts - slides and boards stay out, and "almost done" doesn't make the screen. I open every link and try it myself before we talk, so the 15 minutes go to questions everyone already prepared. When the 15 minutes are up, we stop.
+The version I run is 15 minutes every Friday, and the update lands before the call, not on it. The team sends a written summary the night before: what shipped, the links, and a Loom walking through it. Working software is the only thing that counts - slides and boards stay out, and "almost done" doesn't make the screen. By the time we talk, everyone has read it and clicked around, so the 15 minutes go to prepared questions. When the 15 minutes are up, we stop.
 
 Some weeks there's nothing clickable to send. That silence is the real update, and it arrives Thursday night instead of two more weeks of "good progress".
 

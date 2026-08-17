@@ -15,7 +15,7 @@ design_file: linkedin-posts/course-promo/assets/week2-tue-past-not-future-sketch
 course_link_placement: first-comment
 utm_campaign: course-pilot-aug26
 utm_content: week2_tue_mom_test_past_questions
-status: draft
+status: approved
 stage: next
 proposed_for: "2026-09-22 17:00 CEST"
 first_comment: |
