@@ -38,7 +38,15 @@ One clause in a 47-page SOW decides whether you can withhold payment for work th
 
 ## How to use it
 
-Read this **the night before you sign, alone**, with a printed SOW, a yellow highlighter, and 90 minutes blocked. Bring the SOW, your [one-page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and [outcome-shaped feature list](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) from Lessons 3.1-3.2 (that pair is your scope Exhibit - the agency's Exhibit A must match it line for line), and this guide. Walk every clause against the 8 flags below; when a flag fires, write the question for the agency in the margin. Type all the questions into one email and send it before you sign anything. A working agency answers in writing and signs the redline. If your general counsel cleared the SOW already, run this anyway - generalist attorneys catch the IP and liability paragraphs and skim the operational ones, and the 8 clauses below are where the operational money lives.
+Read this **the night before you sign, alone**, with 90 minutes blocked. Bring:
+
+- the printed SOW and a yellow highlighter
+- your [one-page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and [outcome-shaped feature list](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) from Lessons 3.1-3.2 - that pair is your scope Exhibit, and the agency's Exhibit A must match it line for line
+- this guide
+
+Walk every clause against the 8 flags below. When a flag fires, write the question for the agency in the margin. Type all the questions into one email and send it before you sign anything - a working agency answers in writing and signs the redline.
+
+If your general counsel cleared the SOW already, run this anyway. Generalist attorneys catch the IP and liability paragraphs and skim the operational ones, and the 8 clauses below are where the operational money lives.
 
 > **The 8-clause SOW scoreboard** - use this as a pre-flight checklist; details below:
 >

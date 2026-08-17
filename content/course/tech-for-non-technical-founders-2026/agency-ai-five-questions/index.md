@@ -30,7 +30,13 @@ Five questions that catch AI theatre in 30 minutes - hand them to your next agen
 
 By the end of one Tuesday discovery call you will know whether the agency claiming "we use AI to ship 3x faster" can describe what their developers do with Cursor on a Wednesday morning, or whether the AI talk is a slide. Five questions, sent in writing 24 hours before the call, scored 0 or 1 in real time. Three failed questions is a walkaway.
 
-Two failures hide behind the "AI-native" pitch, and both cost real money. The first is where the AI-written code lands. An agency moving fast with Cursor commits secrets straight into the repo - an OpenAI API key, a Stripe live key, a database password sitting in plaintext at line 14 of `config/database.yml`, on a GitHub repo that defaults to public. The second is the token bill. An agency that never priced its own AI usage runs up charges it cannot attribute - **$4,800 of OpenAI spend in 30 days** with no project tags and no per-developer breakdown, quietly passed through on top of the $34K four-week MVP. The five questions below surface both inside the first 20 minutes of a discovery call, before you sign.
+Two failures hide behind the "AI-native" pitch, and both cost real money.
+
+**Where the AI-written code lands.** An agency moving fast with Cursor commits secrets straight into the repo - an OpenAI API key, a Stripe live key, a database password sitting in plaintext at line 14 of `config/database.yml`, on a GitHub repo that defaults to public.
+
+**The token bill.** An agency that never priced its own AI usage runs up charges it cannot attribute - **$4,800 of OpenAI spend in 30 days** with no project tags and no per-developer breakdown, quietly passed through on top of the $34K four-week MVP.
+
+The five questions below surface both inside the first 20 minutes of a discovery call, before you sign.
 
 Most agencies in 2026 are not malicious about AI. They adopted Cursor in a hurry, never wrote down a workflow, and never priced the token bill. The damage is the same either way.
 

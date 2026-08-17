@@ -71,7 +71,13 @@ The real gate is a clean peer QA (human or AI) where the answer stays inside you
 
 ## Optional: stack-rank features with real users
 
-After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. If you need to know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, not rate everything "very important." Paste your 5-7 outcome statements, send the link to your [Lesson 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) interviewees, and the forced-choice format surfaces real priorities that a 1-10 rating scale hides. The output is a ranked list backed by pairwise win rates, not averaged scores. Use this before handing the brief to Lovable or a contractor - it prevents the "build everything because everything scored 8/10" trap.
+After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. To know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, rather than rating everything "very important."
+
+1. Paste your 5-7 outcome statements.
+2. Send the link to your [interviewees](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/).
+3. Read the ranked list, backed by pairwise win rates rather than averaged scores.
+
+Do this before handing the brief to Lovable or a contractor. It prevents the "build everything because everything scored 8/10" trap.
 
 ## Further reading
 

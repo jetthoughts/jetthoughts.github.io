@@ -40,13 +40,25 @@ course_nav: false
 
 **For later.** This matters once you have shipped (Module 4+) and your product uses AI in production - bookmark it and come back.
 
-In March 2025, [Lasso Security published findings](https://www.lasso.security/blog/ai-package-hallucinations) that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers registered those names and waited. By the time the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) named the technique "slopsquatting" in April 2025, security teams had already logged the first installs of the proof-of-concept packages on real production systems. You paid $34K for an MVP. The most expensive line in the codebase was free. It was the one a model invented and a developer typed into a `Gemfile` without checking that the gem existed.
+In March 2025, [Lasso Security published findings](https://www.lasso.security/blog/ai-package-hallucinations) that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers registered those names and waited. By the time the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) named the technique "slopsquatting" in April 2025, security teams had already logged the first installs of the proof-of-concept packages on real production systems.
+
+You paid $34K for an MVP. The most expensive line in the codebase was free - the one a model invented and a developer typed into a `Gemfile` without checking that the gem existed.
 
 ![A hand-drawn diagram of the slopsquatting attack chain in five steps: AI hallucinates a package name, attacker watches public prompt logs, attacker registers the name on Rubygems / PyPI / npm with a malicious payload, developer installs without review, damage runs in production. Annotated with the Lasso Security 11-day reproduction window.](attack-chain.svg)
 
 ## What slopsquatting is
 
-LLMs invent package names that sound plausible but do not exist. The original [Lasso Security research from March 2025](https://www.lasso.security/blog/ai-package-hallucinations) tested GPT-4, Claude, and the open-source Code Llama against thousands of common developer prompts. About 5.2% of GPT-4's package suggestions and 21.7% of Code Llama's were hallucinated. [Snyk's slopsquatting write-up](https://snyk.io/articles/slopsquatting-mitigation-strategies/) cites follow-up research putting the overall rate at roughly one in five AI-suggested packages across models. Attackers then register the most-suggested hallucinated names as squatted packages, sometimes with a malicious payload (data exfiltration, credential theft, persistence backdoor), sometimes empty until a real victim shows up. Rubygems, PyPI, npm, Composer, and crates.io all have the same exposure. The attack does not need a 0day (a secret, unpatched vulnerability) - just a developer who trusts a model without checking.
+LLMs invent package names that sound plausible but do not exist. The original [Lasso Security research from March 2025](https://www.lasso.security/blog/ai-package-hallucinations) tested GPT-4, Claude, and the open-source Code Llama against thousands of common developer prompts:
+
+| Model | Package suggestions that were hallucinated |
+|---|---|
+| GPT-4 | ~5.2% |
+| Code Llama | ~21.7% |
+| Across models (follow-up research) | roughly 1 in 5, per [Snyk's slopsquatting write-up](https://snyk.io/articles/slopsquatting-mitigation-strategies/) |
+
+Attackers register the most-suggested hallucinated names as squatted packages - sometimes with a malicious payload (data exfiltration, credential theft, persistence backdoor), sometimes empty until a real victim shows up.
+
+Rubygems, PyPI, npm, Composer, and crates.io all have the same exposure. The attack does not need a 0day (a secret, unpatched vulnerability) - just a developer who trusts a model without checking.
 
 ![A hand-drawn comparison table across three stacks - Rails/Ruby, Django/Python, and Laravel/npm. Each row shows the plausible-sounding package name an AI model hallucinated (active_support_extras_helper, requestz, react-toastify-fork) next to the real package it was confused with (active_record_extra, requests, react-toastify). All three hallucinated names were registered by Lasso researchers as proof-of-concept in April 2025.](hallucinated-vs-real.svg)
 

@@ -30,7 +30,14 @@ Figma's first customer 11-20 cohort reportedly came from cold DMs to influential
 
 You run the whole pipeline in six stages with off-the-shelf tools - no engineer, no $1,200/month sales stack, no Salesforce.
 
-The tooling is a volume choice, and both versions ship the same 30-message batch. The $0 stack - Apollo's free tier (Apollo is a B2B contact database that finds prospects' names and work emails; its free tier is credit-based - check the current allowance), a Google Sheet, a Gmail mail-merge add-on (sends the same email to many recipients at once, free), Loom, and Calendly - covers every stage; you enrich the list by hand in the sheet, which costs your time. The paid version swaps the manual enrichment for automation through Smartlead or Apollo's paid tiers, which costs money and pays off once you're sending 100+ messages a week and the hand-enrichment is the bottleneck. At this 30-message volume, either works - pick by whether your scarcer resource is hours or dollars.
+The tooling is a volume choice, and both versions ship the same 30-message batch.
+
+| Stack | What it is | What it costs |
+|---|---|---|
+| **$0** | Apollo's free tier (a B2B contact database that finds prospects' names and work emails; the free tier is credit-based - check the current allowance), a Google Sheet, a Gmail mail-merge add-on (sends one email to many recipients, free), Loom, and Calendly. Covers every stage. | Your time - you enrich the list by hand in the sheet |
+| **Paid** | Swaps manual enrichment for automation through Smartlead or Apollo's paid tiers | Money. Pays off once you're sending 100+ messages a week and hand-enrichment is the bottleneck |
+
+At this 30-message volume either works. Pick by whether your scarcer resource is hours or dollars.
 
 The five tools and their 2026 pricing:
 
@@ -169,7 +176,11 @@ A 30-message batch with zero replies is rare and almost always indicates a filte
 
 ## Advanced (optional sidebar)
 
-Once you have closed 5-10 paid pilots from cold outbound and want to layer on sales-system rigor, read First Round Review's [sales article collection](https://review.firstround.com/articles/sales/), Sahil Bloom's [Curiosity Chronicle newsletter](https://www.sahilbloom.com/newsletter), and the [Y Combinator library on founder-led sales](https://www.ycombinator.com/library/Mo-the-sales-playbook-for-founders). Once you cross customer 30, the sales playbooks designed for solo founders give way to operator manuals: Mark Roberge's *The Sales Acceleration Formula* for hiring your first AE (account executive - a dedicated salesperson), Mike Weinberg's *New Sales. Simplified.* for the manager handbook. The main path gets you from customer 11 to customer 20. The advanced versions matter after that.
+The main path gets you from customer 11 to customer 20. Two upgrades matter after that:
+
+**After 5-10 paid pilots from cold outbound**, layer on sales-system rigor: First Round Review's [sales article collection](https://review.firstround.com/articles/sales/) and the [Y Combinator library on founder-led sales](https://www.ycombinator.com/library/Mo-the-sales-playbook-for-founders).
+
+**Past customer 30**, the solo-founder playbooks give way to operator manuals: Mark Roberge's *The Sales Acceleration Formula* for hiring your first AE (account executive - a dedicated salesperson), Mike Weinberg's *New Sales. Simplified.* for the manager handbook.
 
 ## Going further (after your first paying customer)
 
