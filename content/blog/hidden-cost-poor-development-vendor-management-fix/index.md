@@ -12,7 +12,11 @@ canonical_url: https://jetthoughts.com/blog/hidden-cost-poor-development-vendor-
 slug: hidden-cost-poor-development-vendor-management-fix
 ---
 
-A dev-shop engagement keeps two ledgers. The visible one is the invoice, and founders negotiate it hard. The hidden one starts filling up the first week the project slips: the hours you spend chasing status, the launch that moves a quarter while payroll keeps running, the emergency rates you pay a second team to understand what the first team built. We have been taking over troubled vendor projects since 2008, and the same four lines keep showing up - nobody is surprised by the invoice; the hours, the slips, and the second team's bill are the surprise.
+A dev-shop engagement keeps two ledgers. The visible one is the invoice, and founders negotiate it hard. The hidden one starts filling up the first week the project slips: the hours you spend chasing status, the launch that moves a quarter while payroll keeps running, the emergency rates you pay a second team to understand what the first team built.
+
+![The two ledgers of a dev-shop engagement: the visible ledger is the invoice you negotiate; the hidden ledger holds your own hours, the stalled launch, the knowledge premium, and paying twice - and it is where the budget actually breaks](two-ledgers.svg)
+
+We have been taking over troubled vendor projects since 2008, and the same four lines keep showing up - nobody is surprised by the invoice; the hours, the slips, and the second team's bill are the surprise.
 
 The scale is well documented. The [Standish Group's CHAOS research](https://www.projectsmart.co.uk/white-papers/chaos-report.pdf) has tracked project outcomes for decades: roughly two-thirds of software projects come in late, over budget, missing features, or not at all. What the research can't show you is where your money goes when it happens to you. That's the hidden ledger, and it has four recurring lines.
 
@@ -59,13 +63,21 @@ graph LR
 
 Vendor management breaks into four smaller skills, applied in order, and each has a moment where the fix is cheap and a later moment where the same fix is far more expensive. The diagram is the map; here is what each phase is for, with the deep checklist linked where it lives.
 
+### Selection happens before the contract
+
 Selection goes wrong when "what does done look like" gets decided after the contract instead of before it - every undefined requirement becomes a change order later. Decide the acceptance criteria, then shop. The [five questions that expose how a dev shop actually operates](/blog/hiring-dev-shop-questions/) and the [interview script from the course](/course/tech-for-non-technical-founders-2026/hiring-interview-script/) do the heavy lifting here.
 
-The contract shapes behavior for months after anyone stops reading it. The two clauses that matter most: payment tied to working software rather than time, and ownership of code and accounts in your name from day one - not escrowed, not "transferred at the end," which is exactly when a soured relationship makes transfer expensive. The [code ownership clauses](/blog/dev-shop-contract-code-ownership/) and [SLA requirements](/blog/dev-shop-sla-requirements-checklist/) posts carry the specific language.
+### Two contract clauses do most of the work
 
-During development, remember that status meetings reward narration; demos reward software. The single highest-leverage change in a running engagement is replacing the weekly status call with a short demo of working software you click yourself - the [Friday demo rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) is the full ritual, and [three standup questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/) apply the same idea daily. You don't need to read code to run either.
+The contract shapes behavior for months after anyone stops reading it. What matters most: payment tied to working software rather than time, and ownership of code and accounts in your name from day one - not escrowed, not "transferred at the end," which is exactly when a soured relationship makes transfer expensive. The [code ownership clauses](/blog/dev-shop-contract-code-ownership/) and [SLA requirements](/blog/dev-shop-sla-requirements-checklist/) posts carry the specific language.
 
-And capture the knowledge as you go, because every engagement ends - well or badly. Documentation the vendor writes while building, walkthroughs your team attends, and accounts you already own make the ending an ordinary handover on your terms. The [safe transition guide](/blog/switch-dev-shops-safely-transition-guide/) shows what exit-ready looks like in practice.
+### Replace status meetings with demos
+
+Status meetings reward narration; demos reward software. The single highest-leverage change in a running engagement is replacing the weekly status call with a short demo of working software you click yourself - the [Friday demo rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) is the full ritual, and [three standup questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/) apply the same idea daily. You don't need to read code to run either.
+
+### Stay exit-ready from month one
+
+Every engagement ends - well or badly. Documentation the vendor writes while building, walkthroughs your team attends, and accounts you already own make the ending an ordinary handover on your terms. The [safe transition guide](/blog/switch-dev-shops-safely-transition-guide/) shows what exit-ready looks like in practice.
 
 ## Already in a bad engagement?
 
