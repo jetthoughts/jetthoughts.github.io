@@ -38,8 +38,6 @@ related_posts: false
 >
 > **Progress:** M4 · 4 of 5
 
-After this lesson you will be able to: **walk the four build phases, demo each one to a real person, and put a live URL in front of five real users.**
-
 ![Four build phases, each proven by one demo, then a green gate of five exit lights. Phase 1 Lovable - screens click, nothing saved. Phase 2 Supabase - a real signup persists. Phase 3 Stripe - a $1 test charge flips the row to paid. Phase 4 go live - 5 ICP users hit the live URL.](build-phases-strip.svg)
 
 Budget the calendar honestly before you start: a full-time founder gets there in 4-6 weeks; at 2-4 hours a week, plan 10-12. Phases 2 and 3 are where part-time founders lose the most calendar.
