@@ -38,7 +38,12 @@ Full table in 90.11 §1b.
 - **Progressive disclosure**: orientation blocks orient; thresholds and
   mechanics belong where the reader acts on them.
 - **Callout rhythm**: no two adjacent same-form callouts.
-- **No text bricks (Paul 2026-08-17)**: no paragraph over ~5 rendered lines.
+- **No text bricks (Paul 2026-08-17; threshold calibrated 2026-08-17 after a
+  course-wide audit)**: a brick is a paragraph over **~700 source chars**
+  (~8+ rendered lines). An earlier ~400-char draft of this rule flagged ~300
+  paragraphs course-wide - i.e. it flagged normal prose. Use 700 as the
+  action line; 400-700 is only worth touching when the paragraph is ALSO
+  hiding a structure (a copy-paste artifact, an enumeration, an if-X-then-Y).
   Break by content type - a quotable artifact (survey question, Slack
   message, script) becomes a blockquote; an enumeration-in-prose ("pull
   three numbers: X, Y, Z") becomes a list; if-X-then-Y becomes a table; a
@@ -49,7 +54,9 @@ Full table in 90.11 §1b.
 - **Further reading: critical-only (Paul 2026-08-17)**: 3-4 items max, all
   directly on the page's topic; a source already cited inline in the body
   never repeats in the list (each fact one home); own blog posts lead when
-  they exist.
+  they exist. **Scope: external SOURCES only.** Course-navigation links to
+  sibling lessons are not sources and do not count against the cap or the
+  no-repeat rule - a page may legitimately point at the lesson it upgrades.
 
 # Banned structural patterns (reject on sight)
 
