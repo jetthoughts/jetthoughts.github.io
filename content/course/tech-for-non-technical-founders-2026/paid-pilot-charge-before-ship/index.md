@@ -35,13 +35,7 @@ related_posts: false
 >
 > **Output:** 1 signed paid pilot before any new code ships
 >
-> **Progress:** M5 · 6 of 7 · Results so far: demos booked from your warm list (5.3-5.5) - this page turns one into a signed pilot with money attached
-
-After this lesson you will be able to: **turn a verbal yes into a signed one-page pilot agreement with a deposit paid before you build anything new.**
-
-> **TL;DR:** A verbal yes is not a paid pilot. A signed DPA (Design Partner Agreement - a one-page co-design pilot contract) with a Stripe deposit is - refunded 100% if you cancel, forfeited if the customer cancels early. Charge 10-30% of year-one ACV (annual contract value - what one customer pays in year one) before kickoff - it puts the CFO question on Week 0 instead of Week 8.
-
----
+> **Progress:** M5 · 6 of 7
 
 "Let me circle back to my CFO" - from a CFO who never heard of you and never approved the pilot - is how six weeks of enthusiastic free-pilot demos end. Nobody inside the customer's company ever had to approve a free pilot. A Stripe deposit signed before kickoff is what turns that dead end into a formality.
 
@@ -58,9 +52,9 @@ Same product, same buyer, one difference - when the money lands:
 
 Real money on the table before kickoff forces the internal budget conversation while nothing is riding on it yet. You are not asking for money - you are asking the customer to defend the spend internally. That defense is the test of whether the pilot is real.
 
-![Two bars comparing convert-to-paying: free pilot about 12% in ruby, paid pilot about 65% in green - same product, buyer, and 8 weeks; deposit is $500+ (10-30% of year-one ACV), forfeited if the customer cancels early, 100% refunded if you cancel](free-vs-paid-pilot.svg)
+![Bar chart: free pilots convert about 12% to paying, paid pilots about 65% - same product, same buyer, same 8 weeks](free-vs-paid-pilot.svg)
 
-> **Course terminology: "first paying customer" = signed DPA + cleared deposit.** When the course says "first paying customer," it means the customer has signed the one-page DPA AND the Stripe deposit has cleared - real money in your account. Converting the pilot into a year-one contract is a separate event 6-10 weeks later, after the success criteria are met.
+When the course says "first paying customer," it means a signed DPA (Design Partner Agreement) AND a cleared Stripe deposit - real money in your account. Converting the pilot into a year-one contract is a separate event 6-10 weeks later, after the success criteria are met.
 
 The DPA is a one-page letter of intent that names the customer as a design partner, defines the pilot scope, sets the deposit, and converts to year-one on success. It is mutual-edit, plain English, and v1 needs no lawyer. Six sections plus signatures:
 
@@ -137,43 +131,50 @@ _________________________  Date: __________
 
 Two annotated worked examples (a $1,500 B2B SaaS pilot and a $5,000 B2B services pilot) plus DocuSign-importable + PDF formats are in [The First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) - a free reference for the same template with sector-specific fills.
 
-**The deposit number:** take the monthly price you tested in [Lesson 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) and multiply by 12 for year-one ACV. A $97/month hypothesis → $1,164 ACV. Your deposit is 10-30% of that, with a **$500 floor** - below $500 it stops working as a commitment device. When 10% of ACV is under $300, charge the first month's revenue upfront instead. The full band table by sector, the $10K procurement ceiling, and the Stripe Checkout flow are in the [full reference](/course/tech-for-non-technical-founders-2026/reference/paid-pilot-full/).
+**The deposit number:** take the monthly price you tested in [Lesson 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) and multiply by 12 for year-one ACV. A $97/month hypothesis → $1,164 ACV. Your deposit is 10-30% of that, with a **$500 floor** - below $500 it stops working as a commitment device. (Very low ACV? The [full pricing bands](/course/tech-for-non-technical-founders-2026/reference/paid-pilot-full/#the-pricing-math-in-full) have the first-month-upfront variant.)
 
 ---
 
 > **Do this now:**
 >
 > 1. Copy the [DPA template above](#dpa-template) into a Google Doc. Fill the 6 bracketed sections.
-> 2. Take your [Lesson 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) price × 12 for ACV. Set the deposit at 10-30%, never below $500.
+> 2. Take your smoke-test price × 12 for ACV. Set the deposit at 10-30%, never below $500.
 > 3. In [Stripe](https://dashboard.stripe.com/login): Products → create "[Product] - Design Partner Pilot" → add a one-time price for the deposit → hit "Payment link". Stripe generates a hosted checkout URL. No webhook, no code.
-> 4. Send the DPA + Stripe link to 1-2 warm leads from Lesson 5.5 who booked demos recently.
+> 4. Send the DPA + Stripe link to 1-2 warm leads who booked demos recently.
 > 5. **Success check:** one lead replies "send the one-pager" or signs, and your first deposit clears in your Stripe account. That is the first paying customer.
 
 ---
 
 **If this fails: the customer says "can we start free and convert later?"**
 - **Why:** the deposit scares them, but they're still interested - this is hedging, not a no.
-- **Fix:** reframe the deposit as *year-one ACV prepaid*, not added cost. The $500 sits in this month's accounting and gains a CFO check now; free pilots lose that approval in Week 8.
+- **Fix:** reframe the deposit as *year-one ACV prepaid*, not added cost.
 
 **If this fails: the customer says "we do not do paid pilots."**
 - **Why:** they're not in your must-have segment - wrong buyer profile.
-- **Fix:** thank them and move to the next warm lead. They're not disqualified, just not your customer yet.
+- **Fix:** thank them and move to the next warm lead.
+
+**If this fails: they go quiet after you send it.**
+- **Why:** "let me think about it" turning into silence is the most common outcome - a warm lead going cold.
+- **Fix:** check back once; no reply after that means move to the next lead. The [objection scripts](/course/tech-for-non-technical-founders-2026/reference/paid-pilot-full/#the-conversation-script) cover the spoken versions.
 
 ---
 
-Send the DPA to your warmest lead first. Asking someone you know for a deposit is the stall point - but the deposit is a test of whether the problem is real, not of whether you deserve to be paid. The second one is easier.
+Send the DPA to your warmest lead first. Asking someone you know for a deposit is the stall point - the deposit tests whether the problem is real. The second ask is easier.
 
 ---
 
 > **Done:** one DPA is signed and the Stripe deposit has cleared in your account.
 >
-> **You have now:** a signed Design Partner Agreement + a cleared deposit (5.6), sitting alongside your validated problem statement, Product Brief, and live MVP in the `Founder OS` folder. That completes the folder - the artifact investors fund. Converting this pilot into a year-one contract is the next test, 6-8 weeks out.
+> **You have now:** a signed Design Partner Agreement + a cleared deposit, sitting alongside your validated problem statement, Product Brief, and live MVP in the `Founder OS` folder. That completes the folder - the artifact investors fund. Converting this pilot into a year-one contract is the next test, 6-8 weeks out.
 >
-> **Next:** the fork here is persevere or pivot. If a **deposit cleared**, that is the core course complete - from a one-sentence hypothesis to a stranger's money in your account. Keep selling: [5.7 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) when your warm list runs dry, or the [Going further chapters](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/#going-further-triggers) once your pilot converts. The [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) keeps the build honest through the pilot. If **no one will put money down** after the warm list and the 5.7 outbound pass, the signal is the segment, not the pitch - work [Pivot or Persevere: The Decision Framework](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/) before you build more.
+> **Next:** the fork here is persevere or pivot.
+>
+> - **Deposit cleared:** the core course is complete - from a one-sentence hypothesis to a stranger's money in your account. Keep selling with [5.7 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) when your warm list runs dry; the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) keeps the build honest through the pilot.
+> - **No one will put money down** after the warm list and the 5.7 outbound pass: the signal is the segment, not the pitch - work [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/) before you build more.
 >
 > **If blocked:** see "If this fails" above. If you do not have warm demos yet, your work is still in [Lesson 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - the DPA is the wrong sprint for an empty pipeline.
 >
-> **Deeper reference:** [The six DPA clauses in detail, the full pricing bands, the Stripe flow, and the conversation script with objection handling](/course/tech-for-non-technical-founders-2026/reference/paid-pilot-full/)
+> **Deeper reference:** [The full paid-pilot playbook](/course/tech-for-non-technical-founders-2026/reference/paid-pilot-full/)
 
 ---
 
