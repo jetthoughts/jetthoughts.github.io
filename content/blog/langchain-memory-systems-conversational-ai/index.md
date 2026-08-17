@@ -877,7 +877,7 @@ Get our production-ready LangChain memory system repository with:
 
 **Need expert help building conversational AI?**
 
-At JetThoughts, we've built production AI systems that handle millions of conversations with sophisticated memory management. We know the patterns that scale and the pitfalls to avoid.
+At JetThoughts, we've built production AI systems in production with sophisticated memory management. We know the patterns that scale and the pitfalls to avoid.
 
 Our conversational AI services include:
 - LangChain memory architecture design with Python

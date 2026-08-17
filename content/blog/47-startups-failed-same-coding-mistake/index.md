@@ -81,7 +81,7 @@ Two of these signals means you're on the timeline. Four means you have at most s
 
 ## What we see in rescue engagements
 
-We've taken over projects from failed dev shops for over a decade. The shape matches the Inc.com audit in roughly thirty-five of the last forty rescues. The five that didn't usually had a single technical co-founder who'd quietly enforced testing despite the dev shop's best efforts. Most of the rest landed with us after the founder had already spent $80K-$200K with the original team.
+We've taken over projects from failed dev shops for over a decade. The shape matches the Inc.com audit in most of the rescues we take on. The exceptions usually had a single technical co-founder who'd quietly enforced testing despite the dev shop's best efforts. Most of the rest landed with us after the founder had already spent $80K-$200K with the original team.
 
 We screwed this up early in our own history too. Our team took over a project once and assumed the existing tests were solid. They were decorative, passing every time because they didn't actually test anything. We rebuilt the suite from scratch and lost the first sprint. Now we read commit history before we agree to a rescue.
 

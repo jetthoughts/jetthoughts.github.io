@@ -42,7 +42,7 @@ Here's what separates high-performing developers from those who plateau early, s
 
 ## The Hidden Success Pattern: Mindset Over Methods
 
-Last year, we analyzed career trajectories of developers across 50+ companies, from early-stage startups to FAANG giants. The data revealed something surprising:
+Across the teams we work with, the same career pattern shows up from early-stage startups to FAANG giants. The data revealed something surprising:
 
 - **67% of developers who reached senior roles within 3 years** demonstrated what psychologists call a "growth mindset"
 - **Only 23% of developers stuck in junior roles for 5+ years** showed these same mindset characteristics

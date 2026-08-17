@@ -14,7 +14,7 @@ slug: hidden-cost-poor-development-vendor-management-fix
 
 Last month, a PE-backed SaaS company called me with an emergency. Their development vendor had just delivered a "complete" platform rebuild—except nothing worked. Six months and $800,000 later, they faced starting over. The hidden costs? Another $1.2 million in lost revenue, team rebuilds, and emergency fixes.
 
-This isn't unusual. In my 18 years helping companies manage development vendors, I've seen the same expensive mistakes repeated across hundreds of projects. The difference between vendor success and failure isn't luck—it's systematic management.
+This isn't unusual. Helping companies manage development vendors since 2008, I've seen the same expensive mistakes repeat. The difference between vendor success and failure isn't luck - it's systematic management.
 
 ## The $2M Mistake: Why Vendor Management Failures Cost More Than You Think
 
@@ -229,7 +229,7 @@ graph LR
     style D fill:#fff3e0
 ```
 
-After analyzing successful vendor relationships across 200+ projects, I've identified the management framework that consistently delivers results.
+After years of analyzing vendor relationships, I've identified the management framework that consistently delivers results.
 
 ### Phase 1: Strategic Vendor Selection
 
@@ -478,4 +478,4 @@ Your next vendor engagement doesn't have to repeat the expensive mistakes of the
 
 The question isn't whether you can afford to improve your vendor management—it's whether you can afford not to.
 
-*Ready to transform your development vendor relationships? Our team has helped 200+ companies implement systematic vendor management, reducing costs by an average of 45% while improving delivery speed by 60%. Schedule a consultation to discuss your specific vendor management challenges and develop a customized improvement plan.*
+*Ready to transform your development vendor relationships? Our team helps companies implement systematic vendor management. Schedule a consultation to discuss your specific vendor management challenges and develop a customized improvement plan.*

@@ -1633,7 +1633,7 @@ Choose engagement model:
 
 **Need expert guidance on your technical leadership decision?**
 
-JetThoughts has provided fractional CTO services to 50+ startups from pre-seed to Series B, delivering average ROI of 225% within 12 months. Our fractional CTOs have led technical teams at companies you know, and we specialize in pragmatic technical leadership that accelerates your product development without burning runway.
+JetThoughts provides fractional CTO services to startups from pre-seed to Series B. Our fractional CTOs have led technical teams at companies you know, and we specialize in pragmatic technical leadership that accelerates your product development without burning runway.
 
 [**Book a free 30-minute ROI consultation**](/contact-us) to:
 - Calculate specific ROI for your startup
@@ -1643,4 +1643,4 @@ JetThoughts has provided fractional CTO services to 50+ startups from pre-seed t
 
 ---
 
-*About JetThoughts: We're a Rails consulting agency specializing in fractional CTO services, technical leadership, and startup engineering team development. Our fractional CTOs have led engineering at VC-backed startups and have guided 50+ companies through technical scaling from pre-seed to Series B.*
+*About JetThoughts: We're a Rails consulting agency specializing in fractional CTO services, technical leadership, and startup engineering team development. Our fractional CTOs have led engineering at VC-backed startups and have guided startups through technical scaling from pre-seed to Series B.*

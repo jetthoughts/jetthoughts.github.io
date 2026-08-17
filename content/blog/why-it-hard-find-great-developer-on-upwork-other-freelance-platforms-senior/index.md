@@ -56,7 +56,7 @@ Agencies have a stable process of recruiting developers, they check all technica
 
 **Remember — great developers are hard to come by. If you want to hire one, be sure to start by looking in the right places.**
 
-***Here in [JetThoughts](https://www.jetthoughts.com/), we spend a lot of time finding and interviewing developers to find the best Ruby on Rails contributors for you. The training process (which we created) has been built for 15 years to deliver a stable code and the best communication practice for a remote team.***
+***Here in [JetThoughts](https://www.jetthoughts.com/), we spend a lot of time finding and interviewing developers to find the best Ruby on Rails contributors for you. The training process (which we created) has been refined since 2008 to deliver a stable code and the best communication practice for a remote team.***
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 
