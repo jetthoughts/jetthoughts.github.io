@@ -514,6 +514,14 @@ Skills are invoked via `/skill-name`. Agents are spawned via the Agent tool.
 
 ### Skill descriptions
 
+> **These are per-machine prerequisites, not repo code.** Every skill below is
+> vendored/marketplace software installed in your own skill directory - we
+> deliberately do not commit third-party skills to this repo (policy, 2026-08-17).
+> Consequence: a container or CI session that lacks them cannot run these gates,
+> so the gates are enforced by the agent running this pipeline, not by CI. If a
+> gate matters enough to be blocking, the durable fix is to write our own skill
+> for it, not to vendor someone else's.
+
 | Skill | When to use |
 |---|---|
 | `/slop-detector` | After drafting — detects AI-generated content markers (banned words, parallel structure, filler transitions) |

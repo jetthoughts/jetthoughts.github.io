@@ -152,31 +152,24 @@ docs/projects/**/*-verification-report.md
 *.rvf
 *.rvf.lock
 kanban/
-# .agents/ is a local skill workspace and stays untracked BY DEFAULT - except the
-# skills the tracked pipelines actually invoke. blog-pipeline.md's blocking gates
-# (slop-detector, humanizer, seo-aeo-audit) have to resolve for a container/CI
-# session, and CI can see neither ~/.claude/skills nor an untracked .agents/.
-# Git cannot re-include a file whose parent dir is excluded, hence the dir-first
-# negation below. Add a skill here only when a TRACKED doc invokes it.
+# .agents/ is a local skill workspace and stays untracked.
+#
+# POLICY (Paul 2026-08-17): we track only OUR OWN skills. Vendored /
+# marketplace skills (anything carrying an upstream version, or with no
+# JetThoughts-specific content) are installed per-machine, never committed
+# here - we are not taking on maintenance of third-party code we did not
+# write and cannot patch upstream.
+#
+# Git cannot re-include a file whose parent dir is excluded, hence the
+# dir-first negation. Add a skill below ONLY if we authored it.
 .agents/*
 !.agents/skills/
 .agents/skills/*
 !.agents/skills/async-first-communication/
+# Pre-existing vendored exceptions, tracked before this policy - see
+# .okf/workflows/company-layer-ownership.md for the pending decision.
 !.agents/skills/impeccable/
 !.agents/skills/kanban-md/
-!.agents/skills/slop-detector/
-# slop-detector loads 18 module files; the global `modules/` rule (line 114)
-# would swallow them and ship a gate that loads nothing.
-!.agents/skills/slop-detector/modules/
-!.agents/skills/humanizer/
-!.agents/skills/seo-aeo-audit/
-!.agents/skills/content-production/
-!.agents/skills/copy-editing/
-!.agents/skills/copywriting-core/
-!.agents/skills/content-strategy/
-!.agents/skills/social-media-trends-research/
-!.agents/skills/37signals-rails/
-!.agents/skills/stitch-loop/
 .junie
 
 # Ruflo local secrets and runtime data

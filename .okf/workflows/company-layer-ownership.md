@@ -51,3 +51,22 @@ agent where company work lives, it must match this table.
 Still open: `jt-vibe-code-rescue.md` frontmatter says `state: postponed` while
 its body and `docs/business/opportunity-portfolio.md` both say **Validating**.
 Left for Paul - only he knows which is true.
+
+# Skills: we track only our own
+
+Policy, 2026-08-17: `.agents/skills/` is a local workspace. **Only skills we
+authored get committed** - a skill qualifies if it carries JetThoughts-specific
+content (our voice guide, our pipelines, our paths). Vendored/marketplace
+skills carry an upstream version and no JT content; they are installed
+per-machine and never committed, because we will not maintain third-party code
+we did not write and cannot patch upstream.
+
+Ours today: `async-first-communication`. Pre-existing vendored exceptions
+tracked before this policy: `impeccable`, `kanban-md` - decide whether to
+untrack them (`impeccable` has inbound references from four 2605 docs).
+
+The consequence to keep honest: `blog-pipeline.md` names `slop-detector`,
+`humanizer` and `seo-aeo-audit` as BLOCKING gates, and all three are vendored.
+They therefore cannot run in a container/CI session, and the pipeline doc now
+says so out loud. Making a gate genuinely blocking means writing our own skill
+for it - not vendoring someone else's.
