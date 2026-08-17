@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
+  <title id="t">The update lands before the call: the team sends a summary, links, and a Loom on Thursday night, everyone clicks first, and the Friday call is 15 minutes of prepared questions - replacing an hour of narrated slides.</title>
+  <desc>A red struck-through card reads "The old status call - an hour of narrated slides". Below it, a blue card "Thursday night - summary + links + Loom" flows via a blue arrow labeled "everyone clicks first" into a green card "Friday, 15 min - prepared questions only". Basis: working software only; nothing to send is also the update.</desc>
+  <defs>
+    <style>
+      .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
+      .title{ font-size: 30px; font-weight: 700; fill: #1a1a1a; }
+      .sub  { font-size: 24px; fill: #666; font-style: italic; }
+      .lbl  { font-size: 26px; font-weight: 700; }
+      .note { font-size: 18px; font-style: italic; }
+      .flow { font-size: 18px; fill: #2b7fff; font-style: italic; }
+      .basis{ font-size: 20px; fill: #666; font-style: italic; }
+      .red  { fill: #fef2f2; stroke: #e5484d; stroke-width: 2.5; stroke-dasharray: 8 5; }
+      .blue { fill: #eff6ff; stroke: #2b7fff; stroke-width: 2.5; }
+      .green{ fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+    </style>
+    <filter id="gr" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#e5484d" flood-opacity="0.45"/></filter>
+    <filter id="gb" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#2b7fff" flood-opacity="0.45"/></filter>
+    <filter id="gg" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#2e7d32" flood-opacity="0.45"/></filter>
+    <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1 L8 5 L0 9 z" fill="#2b7fff"/></marker>
+  </defs>
+
+  <text x="360" y="46" text-anchor="middle" class="h title">The update lands before the call</text>
+  <text x="360" y="76" text-anchor="middle" class="h sub">async first: the meeting stops being the report</text>
+
+  <!-- old way: struck through -->
+  <g transform="translate(196,112) rotate(0.5 164 48)">
+    <rect width="328" height="96" rx="16" class="red"/>
+    <text x="164" y="42" text-anchor="middle" class="h lbl" fill="#e5484d" filter="url(#gr)">The old status call</text>
+    <text x="164" y="72" text-anchor="middle" class="h note" fill="#b91c1c">an hour of narrated slides</text>
+    <line x1="14" y1="84" x2="314" y2="12" stroke="#e5484d" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- new flow: Thursday night -> Friday -->
+  <g transform="translate(48,300) rotate(-0.5 128 55)">
+    <rect width="256" height="110" rx="16" class="blue"/>
+    <text x="128" y="46" text-anchor="middle" class="h lbl" fill="#2b7fff" filter="url(#gb)">Thursday night</text>
+    <text x="128" y="78" text-anchor="middle" class="h note" fill="#1d4ed8">summary + links + Loom</text>
+  </g>
+
+  <path d="M310 355 C 350 355, 372 355, 408 355" fill="none" stroke="#2b7fff" stroke-width="3.5" marker-end="url(#ab)"/>
+  <text x="360" y="282" text-anchor="middle" class="h flow">everyone clicks first</text>
+
+  <g transform="translate(416,300) rotate(0.5 128 55)">
+    <rect width="256" height="110" rx="16" class="green"/>
+    <text x="128" y="46" text-anchor="middle" class="h lbl" fill="#2e7d32" filter="url(#gg)">Friday, 15 min</text>
+    <text x="128" y="78" text-anchor="middle" class="h note" fill="#2e7d32">prepared questions only</text>
+  </g>
+
+  <text x="360" y="456" text-anchor="middle" class="h basis">Working software only. Nothing to send? That is the update.</text>
+</svg>

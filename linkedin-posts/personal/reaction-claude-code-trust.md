@@ -8,7 +8,7 @@ icp_test: Does "reliability is the line" resonate - do builders/founders share t
 image: "assets/reaction-claude-code-trust.jpg"
 first_comment: |
   (value post - no link; reply-CTA only)
-status: draft
+status: approved
 stage: next
 proposed_for: "2026-08-25 15:30 CEST"
 notes: |

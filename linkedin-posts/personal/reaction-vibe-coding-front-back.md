@@ -10,7 +10,7 @@ first_comment: |
   (value post - no link; reply-CTA only)
 utm_campaign: ""
 utm_content: reaction_vibe_coding_front_back
-status: draft
+status: approved
 stage: next
 proposed_for: "2026-09-01 15:30 CEST"
 notes: |
