@@ -16,10 +16,15 @@
   blog posts. Corrected in the vault; guard added to the CLAUDE.md banner.
 * **Routers aligned**: AGENTS.md, BASE_HANDBOOK, flow-router (split in two),
   CLAUDE.md, 2607/strategy.md, async-first SKILL.
-* **Also**: 10 pipeline-critical skills tracked in git (blog-pipeline's
-  blocking gates could not resolve in CI from either location) - including a
-  nested negation for slop-detector's 18 `modules/` files, which the global
-  `modules/` ignore rule would otherwise have swallowed.
+* **Skills policy (final state - an earlier attempt in this same branch was
+  rolled back)**: we track ONLY skills we authored. 10 pipeline skills were
+  briefly vendored into git to close a CI gap, then removed - of 13 tracked
+  skills only `async-first-communication` had any JT content; the rest carried
+  upstream versions. **Consequence a cold session must act on:** `slop-detector`,
+  `humanizer` and `seo-aeo-audit` are BLOCKING gates in `blog-pipeline.md` and
+  are per-machine prerequisites - install them in your own skill directory, they
+  will NOT arrive with the repo, and CI cannot enforce them. Making a gate truly
+  blocking means writing our own skill for it.
 
 ## 2026-08-17 (editorial sweep + claims ratchet) - PR #458 session wrap
 

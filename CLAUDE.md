@@ -10,7 +10,7 @@
 >
 > Read the vault note before changing positioning or bet status. Verified by `bin/check-repo-links` in the vault.
 >
-> **Company FACTS are NOT vault-owned.** Founding date, tenure, ratings, review counts, retention — every claim in `@.okf/content/claims-canon.md` — stay canon in THIS repo, enforced by `test/unit/marketing_copy_test.rb`. Never copy a company number out of a vault note into published copy. As of 2026-08-17 `jt-business-os.md` still carries "since 2011" and "4.8/5 from 32 clients"; both are BANNED strings here (canon: founded 2008-09-01, no review count). The vault decides what we're doing; the canon decides what we're allowed to say.
+> **Company FACTS are NOT vault-owned.** Founding date, tenure, ratings, review counts, retention — every claim in `@.okf/content/claims-canon.md` — stay canon in THIS repo, enforced by `test/unit/marketing_copy_test.rb`. Never copy a company number out of a vault note into published copy. On 2026-08-17 `jt-business-os.md` was found carrying "since 2011" and "4.8/5 from 32 clients" - both BANNED strings here (canon: founded 2008-09-01, no review count) - and was corrected the same day. Re-check the vault whenever you quote a company number from it. The vault decides what we're doing; the canon decides what we're allowed to say.
 
 
 **Type**: Hugo static site blog | **Build**: `bin/hugo-build`

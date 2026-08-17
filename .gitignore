@@ -166,10 +166,11 @@ kanban/
 !.agents/skills/
 .agents/skills/*
 !.agents/skills/async-first-communication/
-# Pre-existing vendored exceptions, tracked before this policy - see
-# .okf/workflows/company-layer-ownership.md for the pending decision.
-!.agents/skills/impeccable/
-!.agents/skills/kanban-md/
+# NO negation for impeccable/kanban-md on purpose. Both were tracked before
+# this policy and STAY tracked (git keeps tracked files tracked even when
+# ignored) - but un-ignoring the directories would expose every new file an
+# upstream reinstall drops in, so `git add -A` could sweep thousands of
+# vendored lines back in. That happened once on this branch already.
 .junie
 
 # Ruflo local secrets and runtime data
