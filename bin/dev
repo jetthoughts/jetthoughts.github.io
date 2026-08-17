@@ -1,62 +1,27 @@
 #!/usr/bin/env bash
-# bash, not sh: `set -o pipefail` is a bashism - dash (Linux /bin/sh) rejects it
-
-# Simplified Hugo Development Server
-# Uses Hugo's idiomatic config/_default/ + config/development/ pattern
-
+# Hugo dev server + LinkedIn review-board sidecar (bin/li-review).
+# PORT picks the server port (default 1313 for humans; AI sessions set their
+# own to avoid collisions). The sidecar always rides PORT+1000.
 set -euo pipefail
 
-# Signal forwarding for proper shutdown handling
-trap 'exit 130' INT
-trap 'exit 143' TERM
-
-echo "🚀 Starting Hugo development server with simplified configuration"
-echo "📍 Server will be available at: http://localhost:${PORT:-1313}"
-echo "⚙️  Using Hugo's standard environment cascade:"
-echo "    - config/_default/hugo.toml (base configuration)"
-echo "    - config/development/hugo.toml (development overrides)"
-echo ""
-
-# Hugo automatically:
-# - Uses 'development' environment with `hugo server`
-# - Enables buildDrafts, buildExpired, buildFuture
-# - Applies development config overrides
-# - Optimizes for fast rebuilds
-
-# Set HUGO_ENVIRONMENT for PostCSS (postcss.config.js checks this to
-# skip PurgeCSS, cssnano, and other expensive plugins in dev mode).
-# Hugo does not automatically export this env var to Node child processes.
+# postcss.config.js checks this to skip PurgeCSS/cssnano in dev; Hugo doesn't
+# export it to Node children on its own.
 export HUGO_ENVIRONMENT="development"
 
-# Add node_modules/.bin to PATH for npm CLI tools. Hugo 0.161+ node
-# permission flags are handled by [security.node.permissions] in hugo.toml.
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PATH="$SCRIPT_DIR/../node_modules/.bin:$PATH"
 export PATH
 
-# Port: 1313 by default for humans; AI sessions pass PORT (or --port via
-# args) to get an isolated server, so concurrent sessions don't collide.
 PORT="${PORT:-1313}"
-args=("$@")
-for ((i = 0; i < ${#args[@]}; i++)); do
-  [[ "${args[i]}" == "--port" ]] && PORT="${args[i + 1]}"
-  [[ "${args[i]}" == --port=* ]] && PORT="${args[i]#--port=}"
-done
+echo "🚀 Hugo dev: http://localhost:$PORT (board sidecar on $((PORT + 1000)))"
 
-# LinkedIn review-board approvals: buttons on /linkedin/ pages hit a sidecar
-# on (hugo port + 1000), so parallel sessions on different ports each talk to
-# their own checkout's sidecar. Lives and dies with the dev server (no exec:
-# the EXIT trap must outlive hugo to reap the sidecar).
-if command -v ruby >/dev/null 2>&1; then
-  PORT=$((PORT + 1000)) "$SCRIPT_DIR/li-review" & LI_REVIEW_PID=$!
-  trap 'kill "$LI_REVIEW_PID" 2>/dev/null' EXIT
-else
-  echo "⚠️  ruby not found - /linkedin/ board Approve/Postpone buttons disabled"
-fi
+PORT=$((PORT + 1000)) "$SCRIPT_DIR/li-review" & LI_PID=$!
+# Hugo runs in the background so INT/TERM sent to this pid reach it via the
+# traps (a foreground child would defer traps until it exits on its own).
+hugo server --bind 0.0.0.0 --port "$PORT" --renderToMemory --noHTTPCache "$@" & HUGO_PID=$!
 
-hugo server \
-  --bind 0.0.0.0 \
-  --port "$PORT" \
-  --renderToMemory \
-  --noHTTPCache \
-  "$@"
+cleanup() { kill "$LI_PID" "$HUGO_PID" 2>/dev/null || true; }
+trap cleanup EXIT
+trap 'cleanup; exit 130' INT
+trap 'cleanup; exit 143' TERM
+wait "$HUGO_PID"

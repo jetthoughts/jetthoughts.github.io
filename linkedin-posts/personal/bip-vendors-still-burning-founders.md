@@ -7,6 +7,7 @@ author: paul-keen
 voice: personal-first-person
 icp_test: Do non-technical founders recognize the "paid for something I didn't need yet" waste, and share their own?
 image: "assets/bip-vendors-still-burning-founders.jpg"
+image_blocked: "DO NOT ATTACH the current caricature - it mocks the founder (doddering old man) and the vendor (smirking con-man), contradicting the post's no-judgment framing. Regenerate per notes before scheduling, or post text-only (Format D)."
 first_comment: |
   (value post - no link; reply-CTA only)
 status: approved

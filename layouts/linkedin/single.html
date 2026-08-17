@@ -103,6 +103,9 @@
       {{ with .Params.posted_url }}{{ if hasPrefix . "http" }}<a class="li-link" href="{{ . }}" target="_blank" rel="noopener">View on LinkedIn &#8599;</a>{{ end }}{{ end }}
       {{ $decidePost := printf "%s/%s" $laneDir (path.Base .File.Path) }}
       {{ $inBacklog := or (eq .Params.stage "backlog") (eq .Params.stage "future") }}
+      {{/* terminal states: the post lives on LinkedIn - board decisions would
+           desync the local record from the external one. No buttons. */}}
+      {{ if not (in (slice "scheduled" "posted") .Params.status) }}
       <span class="decide">
         {{ if $inBacklog }}
           <a id="btn-requeue" class="approve" data-post="{{ $decidePost }}" data-status="requeue" href="#" title="Send back to the pre-verify queue (a) - writes status: draft + stage: next">To pre-verify</a>
@@ -111,6 +114,7 @@
           <a id="btn-postpone" class="reject" data-post="{{ $decidePost }}" data-status="postponed" href="#" title="Postpone (p) - writes status: postponed + stage: backlog">Postpone</a>
         {{ end }}
       </span>
+      {{ end }}
     </p>
 
     <div class="cols">

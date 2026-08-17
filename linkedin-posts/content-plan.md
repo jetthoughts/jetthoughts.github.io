@@ -7,11 +7,14 @@ build:
 # LinkedIn content plan — rolling calendar
 
 **Cadence (Paul 2026-08-17):** 2 posts/week at 17:00 CEST (11:00 ET).
-**Wednesday every week** (the strongest day in every 2026 study), plus a
-second slot **rotating Tue one week, Thu the next**. 11am ET opens Sprout's
-2026 B2B peak (Tue-Thu 11am-5pm ET, 2B engagements) and lands in Buffer's
-after-work window (3-8pm local, 4.8M posts) for European readers. Polls ride
-the +1/week budget, preferring Wednesdays.
+**Wednesday every week** (the strongest single day in the major 2026 studies),
+plus a second slot **rotating Tue one week, Thu the next**. 11am ET opens
+Sprout's 2026 B2B peak (Tue-Thu 11am-5pm ET, ~2B engagements across 307K
+profiles, Nov 2025-Feb 2026:
+<https://sproutsocial.com/insights/best-times-to-post-on-linkedin/>) and lands
+in Buffer's after-work window (3-8pm local, 4.8M-post analysis:
+<https://buffer.com/resources/best-time-to-post-on-linkedin/>) for European
+readers. Polls ride the +1/week budget, preferring Wednesdays.
 
 **Plan by PILLAR, not just lane** (adopted 2026-08-13, see `content-pillars.md`):
 hold roughly **70% value / 20% personal / 10% promo** across each ~2-week window,
@@ -72,7 +75,7 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Sep 16 Wed | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | **approved** (Paul, board 2026-08-17) |
 | Sep 17 Thu | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | **approved** (Paul, board 2026-08-17; hook shortened same day) |
 | Sep 23 Wed | poll | `course-promo/week1-wed-first-move-poll` | none | **approved** (Paul, board 2026-08-17; +1/week budget; link moved to the post-close follow-up comment per balance audit) |
-| Sep 22 | teach | `course-promo/week2-tue-mom-test-past-questions` | none | revised ✓ - **re-slot to Oct when approved**: as dated it makes Sep 16/22/23 a three-post interview/validation run (2026-08-17 balance audit) |
+| Oct 7 Wed | teach | `course-promo/week2-tue-mom-test-past-questions` | none | **approved** (Paul, board 2026-08-17) - re-slotted Sep 22 -> Oct 7 per balance audit (Sep 16/22/23 would have been a three-post interview run); space `ten-interviews-recap` (Oct 1, draft) further out if it gets approved |
 | Sep 24 | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | draft |
 | Sep 29 | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
 | Oct 1 | teach | `course-promo/week2-fri-ten-interviews-recap` | none | revised ✓ |
