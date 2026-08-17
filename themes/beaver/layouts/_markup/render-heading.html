@@ -1,4 +1,4 @@
-{{- if eq .Page.Section "blog" -}}
+{{- if in (slice "blog" "course") .Page.Section -}}
 <h{{ .Level }} id="{{ .Anchor | safeURL }}" class="heading-component">{{ .Text | safeHTML }} <a href="#{{ .Anchor | safeURL }}" class="heading-self-link" aria-label="Link to {{ .Text | plainify }}" title="Link to this section">#</a></h{{ .Level }}>
 {{- else -}}
 <h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}</h{{ .Level }}>

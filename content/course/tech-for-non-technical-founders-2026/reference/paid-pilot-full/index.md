@@ -20,17 +20,27 @@ Charge for pilots. The deposit is 10-30% of projected year-one contract value, $
 
 A few clauses deserve more detail than the [micro-lesson's summary table](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) can hold.
 
-The **scope of pilot** section is where new founders over-spec. Keep it to three outcomes the customer wants and two specific use cases; anything outside that list stays out of scope until conversion. The list also anchors the Friday demos - if a demo does not advance one of the three outcomes, the demo is off-scope and you say so. Friday cadence comes from the [Friday demo lesson](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/).
+### Scope of pilot
 
-The **pilot fee and deposit** clause is what makes everything else work. The deposit lands at 10-30% of projected year-one annual contract value (ACV), paid via Stripe before pilot kickoff and credited dollar-for-dollar against the year-one invoice on conversion. If the customer cancels before week 4, they forfeit the deposit (their commitment). If the founder cancels for any reason, the founder refunds 100% (your commitment). Pricing math is below.
+This is where new founders over-spec. Keep it to three outcomes the customer wants and two specific use cases; anything outside that list stays out of scope until conversion. The list also anchors the Friday demos - if a demo does not advance one of the three outcomes, the demo is off-scope and you say so. Friday cadence comes from the [Friday demo lesson](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/).
 
-The **success criteria** clause is what makes the DPA a real contract instead of a handshake. Pick three measurable outcomes the pilot is supposed to produce (for example, hours saved per week, errors avoided per month, or revenue lifted per quarter), worded in the customer's verbatim language from the [replies to your first outreach emails](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
+### Pilot fee and deposit
+
+The clause that makes everything else work. The deposit lands at 10-30% of projected year-one annual contract value (ACV), paid via Stripe before pilot kickoff and credited dollar-for-dollar against the year-one invoice on conversion. If the customer cancels before week 4, they forfeit the deposit (their commitment). If the founder cancels for any reason, the founder refunds 100% (your commitment). Pricing math is below.
+
+### Success criteria
+
+The clause that makes the DPA a real contract instead of a handshake. Pick three measurable outcomes the pilot is supposed to produce (for example, hours saved per week, errors avoided per month, or revenue lifted per quarter), worded in the customer's verbatim language from the [replies to your first outreach emails](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
 
 If two of three are hit by week 6, the year-one contract auto-converts unless the customer opts out in writing. If fewer than two are hit, both parties walk and the founder retains the deposit as paid consideration for the pilot work.
 
-The **conversion terms** clause is what the CFO actually approves in week 0. State the year-one price in dollars (never "TBD"), billing cadence (annual or monthly), auto-conversion versus opt-in (auto-conversion recommended), and a 30-day notice period after year one. These numbers are why the deposit can be defended internally before kickoff.
+### Conversion terms
 
-**Data, IP, and termination** is the shortest section: customer keeps their data, founder keeps the product IP, either party can exit at 30 days written notice during the pilot, and the customer's data stays exportable for 90 days after termination. v1 needs no further detail.
+What the CFO actually approves in week 0. State the year-one price in dollars (never "TBD"), billing cadence (annual or monthly), auto-conversion versus opt-in (auto-conversion recommended), and a 30-day notice period after year one. These numbers are why the deposit can be defended internally before kickoff.
+
+### Data, IP, and termination
+
+The shortest section: customer keeps their data, founder keeps the product IP, either party can exit at 30 days written notice during the pilot, and the customer's data stays exportable for 90 days after termination. v1 needs no further detail.
 
 Signature block at the bottom - DocuSign, HelloSign, or PDF-and-email-confirmation, whichever the customer prefers.
 
@@ -70,7 +80,7 @@ The pilot fee is not separate revenue. It is "year-one ACV, pre-paid." The custo
 
 ## The Stripe Checkout flow
 
-The five-minute Stripe path is in the [companion micro-lesson](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Here is the full flow, and the record-keeping option for later.
+The five-minute Stripe path is in the [companion micro-lesson](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Here is the full flow:
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'actorFontSize':'22px', 'messageFontSize':'19px', 'noteFontSize':'17px', 'actorFontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'messageFontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'noteFontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -88,7 +98,6 @@ sequenceDiagram
     Founder->>Customer: Pilot kickoff scheduled
 ```
 
-If you do want to wire the payment into a Rails app for record-keeping later, the Stripe Ruby gem (`gem 'stripe'`) takes a `Stripe::Checkout::Session.create` call to generate the same URL programmatically. Django uses `stripe.checkout.Session.create` via the `stripe-python` package. Laravel uses `Stripe\Checkout\Session::create()` from `stripe/stripe-php`. All three produce the same hosted URL. Do not build this until after your first paid pilot ships.
 
 ## The conversation script
 
