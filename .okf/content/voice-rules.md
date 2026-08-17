@@ -46,6 +46,10 @@ Full table in 90.11 §1b.
   not a re-description. Tell: a heading apologizing for the wall ("...in
   one paragraph") marks the brick. First caught on 5.1's 9-line 40%-test
   paragraph and friday-demo's opener pair.
+- **Further reading: critical-only (Paul 2026-08-17)**: 3-4 items max, all
+  directly on the page's topic; a source already cited inline in the body
+  never repeats in the list (each fact one home); own blog posts lead when
+  they exist.
 
 # Banned structural patterns (reject on sight)
 
