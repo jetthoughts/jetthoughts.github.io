@@ -15,14 +15,9 @@ metatags:
 cover_image_alt: "Dark technical cover for migrating a Lovable or Replit app to Rails. JetThoughts ENGINEERING brand mark, Ruby on Rails 2026 pill, low-poly ruby gem, stat chips for schema, auth, and payments, MIGRATE status indicator."
 ---
 
-Before you migrate a Lovable app to Rails, open the network tab on the app you have today. You'll usually find the Supabase URL and a key labeled `anon` sitting in the client bundle. That key is meant to be public. What makes it dangerous is what's behind it: if row-level security was never turned on, that key reads the whole table.
+The prototype did its job. You described the app, Lovable or Replit built it, real users are in it - and now something is pushing you toward a production stack: paying customers you can't risk, a security scare, or features the tool keeps mangling. The first question of the migration is also the one that sets the budget: what do you get to keep?
 
-```bash
-curl 'https://<project>.supabase.co/rest/v1/profiles?select=*' \
-  -H "apikey: <anon-key-from-the-bundle>"
-```
-
-A researcher ran a version of that check across Lovable's own showcase in early 2025 and found [303 endpoints on 170 projects returning data to anyone with the public key](https://www.superblocks.com/blog/lovable-vulnerabilities) - emails, addresses, in some cases API keys. The finding became [CVE-2025-48757](https://nvd.nist.gov/vuln/detail/CVE-2025-48757) in May 2025, a record the vendor disputes and one the NVD scopes to Lovable-generated sites through April 15, 2025. So read the scan as context rather than a verdict on today's Lovable. What it demonstrates is what a missing row-level security policy looks like from the outside, and that part applies to any Supabase-backed app. If you're reading this, you probably already know your app has a problem like it, and you're deciding whether to move to production-grade Rails or keep patching.
+More than you fear, and less than you hope. The database and its data move cleanly, the React front end often comes along, and the two trust-critical pieces - who can see what, and who paid for what - are rebuilds. This guide walks the whole path: what transfers, how to get the data out, and how to rebuild the parts you shouldn't keep.
 
 ## First figure out what to keep
 
@@ -168,7 +163,14 @@ Edge functions are the last thing to export. Any Deno functions the tool wrote (
 
 ## Rebuild the auth they faked
 
-Auth bites hardest, so budget for it honestly. Behind the open endpoints from the intro, nothing was enforcing who-can-see-what - the RLS policies meant to do it were never written.
+Auth bites hardest, so budget for it honestly - and it's worth seeing the problem with your own eyes before you rebuild. Open the network tab on the app you have today. You'll usually find the Supabase URL and a key labeled `anon` sitting in the client bundle. That key is meant to be public. What makes it dangerous is what's behind it: if row-level security was never turned on, that key reads the whole table.
+
+```bash
+curl 'https://<project>.supabase.co/rest/v1/profiles?select=*' \
+  -H "apikey: <anon-key-from-the-bundle>"
+```
+
+A researcher ran a version of that check across Lovable's own showcase in early 2025 and found [303 endpoints on 170 projects returning data to anyone with the public key](https://www.superblocks.com/blog/lovable-vulnerabilities) - emails, addresses, in some cases API keys. The finding became [CVE-2025-48757](https://nvd.nist.gov/vuln/detail/CVE-2025-48757) in May 2025, a record the vendor disputes and one the NVD scopes to Lovable-generated sites through April 15, 2025 - so read it as context rather than a verdict on today's Lovable. What it demonstrates is what a missing row-level security policy looks like from the outside, and that applies to any Supabase-backed app: nothing was enforcing who-can-see-what, because the RLS policies meant to do it were never written.
 
 Rails moves that enforcement to the server, which is where a founder can actually reason about it. Rails 8 ships a built-in authentication generator - no gem required for the common case:
 
