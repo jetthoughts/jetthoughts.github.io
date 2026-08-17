@@ -50,7 +50,10 @@ production builds never ship these pages.
 sidecar on **hugo port + 1000**; buttons target the sidecar of the server the
 page came from, so parallel sessions each write to their own checkout.
 Approve (key `a`, hidden once approved) writes `status: approved`; Postpone
-(key `p`) writes `status: postponed` + `stage: backlog`. Decisions land in
+(key `p`) writes `status: postponed` + `stage: backlog`; a backlogged post
+offers only "To pre-verify" (requeue -> `status: draft` + `stage: next`) so
+backlog items re-enter via review, never straight to approved. The board's
+Backlog section is a catch-all - no status value can hide a post. Decisions land in
 frontmatter (single status source) + `linkedin-posts/decisions.log`
 (gitignored) - the agent tracks from there, no chat round-trip.
 

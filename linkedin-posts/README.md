@@ -93,7 +93,10 @@ Reusing a topic-perfect course exhibit is still fine when one exists.
 Each post page on the dev board has decision buttons: **Approve** (key `a`,
 shown only while the post is not yet approved - approval is the required
 gate) and **Postpone** (key `p`, moves the post to the backlog: writes
-`status: postponed` + `stage: backlog`). They hit a local sidecar that
+`status: postponed` + `stage: backlog`). A backlogged post shows a single
+**To pre-verify** button instead (key `a`): it returns the post to the
+review queue (`status: draft` + `stage: next`) - backlog items re-enter
+through pre-verify, never straight to approved. They hit a local sidecar that
 `bin/dev` starts and stops automatically on **hugo port + 1000** (1313→2313,
 1314→2314, ...), and the buttons target the sidecar of the server they were
 loaded from - so parallel dev sessions on different ports each write to their

@@ -10,9 +10,9 @@ first_comment: |
   (value post - no link; reply-CTA only)
 utm_campaign: ""
 utm_content: opinion_permission_to_fix
-status: draft
+status: approved
 stage: next
-proposed_for: "2026-10-15 15:30 CEST"
+proposed_for: "2026-09-08 15:30 CEST"
 notes: |
   Pillar: opinion (the 70% value; NO course link). From Paul 2026-08-14: teams that
   sit in pain waiting for approval to fix their own problems - you don't need a yes

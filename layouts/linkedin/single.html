@@ -102,9 +102,14 @@
       {{ with .Params.proposed_for }}<span class="pill">proposed {{ . }}</span>{{ end }}
       {{ with .Params.posted_url }}{{ if hasPrefix . "http" }}<a class="li-link" href="{{ . }}" target="_blank" rel="noopener">View on LinkedIn &#8599;</a>{{ end }}{{ end }}
       {{ $decidePost := printf "%s/%s" $laneDir (path.Base .File.Path) }}
+      {{ $inBacklog := or (eq .Params.stage "backlog") (eq .Params.stage "future") }}
       <span class="decide">
-        {{ if ne .Params.status "approved" }}<a id="btn-approve" class="approve" data-post="{{ $decidePost }}" data-status="approved" href="#" title="Approve (a) - writes status: approved into the draft">Approve</a>{{ end }}
-        {{ if ne .Params.stage "backlog" }}<a id="btn-postpone" class="reject" data-post="{{ $decidePost }}" data-status="postponed" href="#" title="Postpone (p) - writes status: postponed + stage: backlog">Postpone</a>{{ end }}
+        {{ if $inBacklog }}
+          <a id="btn-requeue" class="approve" data-post="{{ $decidePost }}" data-status="requeue" href="#" title="Send back to the pre-verify queue (a) - writes status: draft + stage: next">To pre-verify</a>
+        {{ else }}
+          {{ if ne .Params.status "approved" }}<a id="btn-approve" class="approve" data-post="{{ $decidePost }}" data-status="approved" href="#" title="Approve (a) - writes status: approved into the draft">Approve</a>{{ end }}
+          <a id="btn-postpone" class="reject" data-post="{{ $decidePost }}" data-status="postponed" href="#" title="Postpone (p) - writes status: postponed + stage: backlog">Postpone</a>
+        {{ end }}
       </span>
     </p>
 
@@ -205,7 +210,7 @@
       if (e.key === 'ArrowRight') { var n = document.getElementById('nav-next'); if (n) window.location.href = n.href; }
       if (e.key === 'ArrowLeft')  { var p = document.getElementById('nav-prev'); if (p) window.location.href = p.href; }
       if (e.key === 'ArrowUp')    { var b = document.querySelector('a.back'); if (b) window.location.href = b.href; }
-      if (e.key === 'a') { var ap = document.getElementById('btn-approve'); if (ap) window.location.href = ap.href; }
+      if (e.key === 'a') { var ap = document.getElementById('btn-approve') || document.getElementById('btn-requeue'); if (ap) window.location.href = ap.href; }
       if (e.key === 'p') { var pp = document.getElementById('btn-postpone'); if (pp) window.location.href = pp.href; }
     });
   </script>

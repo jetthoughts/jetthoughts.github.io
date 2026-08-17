@@ -61,9 +61,9 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Aug 25 | reaction | `personal/reaction-claude-code-trust` | none | **approved** (Paul, board 2026-08-17) |
 | Aug 26 | opinion | `course-promo/sidepath-status-meetings-friday-demo` | course *(1st comment)* | **approved** (Paul, board 2026-08-17) |
 | Aug 27 | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved** (Paul, board 2026-08-17, post-swarm rewrite) - image decision still open (caricature mocks founder/vendor, see frontmatter notes) |
-| Sep 1 | reaction | `personal/reaction-vibe-coding-front-back` | none | **approved** (Paul, board 2026-08-17) |
-| Sep 3 | teach | `course-promo/week1-thu-price-before-product` | none | **approved** (Paul, board 2026-08-17) |
-| Sep 8 | opinion | `icp-validation/week1-tue-staging-question` | blog | revised ✓ |
+| Sep 1 | teach | `course-promo/week1-thu-price-before-product` | none | **approved** (Paul, board 2026-08-17) |
+| Sep 3 | reaction | `personal/reaction-vibe-coding-front-back` | none | **approved** (Paul, board 2026-08-17) |
+| Sep 8 | opinion | `personal/opinion-permission-to-fix` | none | **approved** (Paul, board 2026-08-17; pulled forward from Oct 15) |
 | Sep 10 | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | revised ✓ |
 | Sep 15 | poll | `course-promo/week1-wed-first-move-poll` | none | draft |
 | Sep 17 | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | drafted ✓ |
@@ -74,7 +74,7 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Oct 6 | opinion | `icp-validation/backlog-vibe-coding-disposable` | none | draft |
 | Oct 8 | poll | `course-promo/week2-wed-interview-count-poll` | none | draft |
 | Oct 13 | story/promo | `course-promo/week1-fri-why-i-wrote-it` | course *(promo)* | draft |
-| Oct 15 | opinion | `personal/opinion-permission-to-fix` | none | drafted ✓ |
+| Oct 15 | opinion | `icp-validation/week1-tue-staging-question` | blog | revised ✓ (moved from Sep 8 - spaces the progress-visibility cluster further from Aug 18/26) |
 
 **Ratio:** across 18 posts, only **3 course links** (founding, 40k, why-i-wrote-it =
 ~15%) + 1 blog link; the rest is value/personal/poll. **Aug 25 → Sep 3 is four

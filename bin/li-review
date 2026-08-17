@@ -10,7 +10,7 @@ require 'uri'
 
 ROOT = File.expand_path('../linkedin-posts', __dir__)
 PORT = Integer(ENV.fetch('PORT', '2313')) # convention: hugo port + 1000 (bin/dev passes it)
-ALLOWED = %w[approved postponed].freeze
+ALLOWED = %w[approved postponed requeue].freeze
 
 def respond(sock, code, headers = {}, body = '')
   reason = { 200 => 'OK', 303 => 'See Other', 400 => 'Bad Request', 404 => 'Not Found' }.fetch(code)
@@ -49,11 +49,13 @@ loop do
     end
 
     text = File.read(file)
-    unless text.sub!(/^status: .*$/, "status: #{status}")
+    new_status = status == 'requeue' ? 'draft' : status # requeue = back to the pre-verify queue
+    unless text.sub!(/^status: .*$/, "status: #{new_status}")
       respond(sock, 400, {}, "no `status:` line in #{post}")
       next
     end
     text.sub!(/^stage: .*$/, 'stage: backlog') if status == 'postponed'
+    text.sub!(/^stage: .*$/, 'stage: next') if status == 'requeue'
     File.write(file, text)
     File.open(File.join(ROOT, 'decisions.log'), 'a') do |f|
       f.puts "#{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')} #{status} #{post} via board"
