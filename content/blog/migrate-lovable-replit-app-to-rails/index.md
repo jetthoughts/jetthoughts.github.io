@@ -22,7 +22,7 @@ curl 'https://<project>.supabase.co/rest/v1/profiles?select=*' \
   -H "apikey: <anon-key-from-the-bundle>"
 ```
 
-A researcher ran a version of that check across Lovable's own showcase in early 2025 and found [303 endpoints on 170 projects returning data to anyone with the public key](https://www.superblocks.com/blog/lovable-vulnerabilities) - emails, addresses, in some cases API keys. The finding became [CVE-2025-48757](https://nvd.nist.gov/vuln/detail/CVE-2025-48757) in May 2025, a record the vendor disputes and one the NVD scopes to Lovable-generated sites through April 15, 2025. So read the scan as context, not a verdict on today's Lovable. What it demonstrates is what a missing row-level security policy looks like from the outside, and that part applies to any Supabase-backed app. If you're reading this, you probably already know your app has a problem like it, and you're deciding whether to move to production-grade Rails or keep patching.
+A researcher ran a version of that check across Lovable's own showcase in early 2025 and found [303 endpoints on 170 projects returning data to anyone with the public key](https://www.superblocks.com/blog/lovable-vulnerabilities) - emails, addresses, in some cases API keys. The finding became [CVE-2025-48757](https://nvd.nist.gov/vuln/detail/CVE-2025-48757) in May 2025, a record the vendor disputes and one the NVD scopes to Lovable-generated sites through April 15, 2025. So read the scan as context rather than a verdict on today's Lovable. What it demonstrates is what a missing row-level security policy looks like from the outside, and that part applies to any Supabase-backed app. If you're reading this, you probably already know your app has a problem like it, and you're deciding whether to move to production-grade Rails or keep patching.
 
 ## First figure out what to keep
 
@@ -30,7 +30,7 @@ The honest answer to "how much of this transfers" depends on which part you're l
 
 Your database schema and the data in it are the durable part. Tables, columns, foreign keys, the actual rows your users created - that ports cleanly, because it's just Postgres underneath. The generated React front end is often worth keeping: it renders, it's typed, and rebuilding pixel-perfect UI by hand is a poor use of a rescue budget.
 
-Auth and payments almost never survive. Not because the tools can't wire them up, but because "looks wired up" and "actually enforces the rule" are different states that look identical in a demo.
+Auth and payments almost never survive. The tools can wire them up, but "looks wired up" and "actually enforces the rule" are different states, and they look identical in a demo.
 
 Here's how it usually splits:
 
@@ -40,11 +40,14 @@ Here's how it usually splits:
 | Data (rows) | **Transfers.** Same export. Watch the auth foreign keys. |
 | Uploaded files | **Transfers separately.** They're in Storage, not the dump. |
 | Business logic | **Sometimes.** Read every line, port what's real. |
+| Edge functions (Deno) | **Port.** They become Rails controller actions or jobs. |
 | Front end (React) | **Often.** It renders. Point it at a new API. |
 | Auth | **Rarely.** Stubbed or hardcoded, with no real sessions. |
 | Payments | **Rarely.** Stripe checkout exists; webhooks don't. |
 
 One decision drives everything else. If the schema is sane and the data is real, you're doing a backend transplant and keeping the UI. If the schema is a mess and the "logic" is a thin wrapper over AI-generated CRUD, you're rebuilding, and the old app is a spec, not a codebase.
+
+"Sane" is checkable in ten minutes without a database background. Open `schema.sql` (the dump command that produces it is in the next section) and look for real foreign keys - `REFERENCES` lines connecting tables - and typed columns a human would name, like `due_date date`, instead of grab-bag `jsonb` blobs carrying half the data model. Then check for near-duplicate tables (`projects`, `projects_new`, `projects_v2` left behind by regeneration runs), and peek at the Supabase table editor for row counts that look like your actual users, not seed data. Two or more misses and you're on the rebuild branch - the schema is telling you the logic behind it was regenerated CRUD.
 
 ```mermaid
 flowchart TD
@@ -135,9 +138,33 @@ end
 
 Watch two things. The foreign keys that pointed at `auth.users` get re-created here against your new `users` table - that seam is where the old auth hands off to the new one, and the `users` table itself arrives in the next section, with a UUID primary key you have to ask for. And columns Supabase filled with `auth.uid()` defaults need a Rails-side equivalent, usually set in the model or controller.
 
-Load `data.sql` with `psql` once the migrations have built the schema and the users are imported, then run the app in a console and confirm the counts match before you touch anything else.
+Loading runs in the order the foreign keys point: accounts first, then everything that references them. Import the users with `insert_all`, which writes the bcrypt hashes straight into `password_digest` without fighting model validations:
 
-Files are a separate export. Lovable apps lean on Supabase Storage for uploads - avatars, attachments, anything users added through the UI - and none of it is in the SQL dump. Pull each bucket down with the Supabase CLI or a script against the Storage API, move the files into Active Storage or straight to S3, and rewrite the stored URLs as you load the rows. Skip this step and the rescued app boots with every image broken.
+```ruby
+# bin/rails runner import_users.rb
+require "csv"
+rows = CSV.read("auth_users.csv", headers: true).map do |r|
+  { id: r["id"], email: r["email"],
+    password_digest: r["encrypted_password"],
+    created_at: r["created_at"], updated_at: Time.current }
+end
+User.insert_all(rows)
+```
+
+Then load the data dump in one transaction, with triggers and foreign-key checks relaxed so the dump's internal insert order can't fight you:
+
+```bash
+psql "$DATABASE_URL" --single-transaction \
+  --set=ON_ERROR_STOP=on \
+  -c "SET session_replication_role = replica;" \
+  -f data.sql
+```
+
+Finish with the cheapest proof the transplant took: `bin/rails runner 'puts User.count; puts Project.count'` and compare against the table counts the Supabase dashboard showed you. Matching counts before you touch anything else turns every later bug from "did the data survive?" into "what did I wire wrong?" - a much better class of problem. If they don't match, compare the table lists first: a table the dump skipped is far more common than lost rows.
+
+Files are a separate export. Lovable apps lean on [Supabase Storage](https://supabase.com/docs/guides/storage) for uploads - avatars, attachments, anything users added through the UI - and none of it is in the SQL dump. Pull each bucket down with the Supabase CLI or a script against the Storage API, move the files into Active Storage or straight to S3, and rewrite the stored URLs as you load the rows. Skip this step and the rescued app boots with every image broken.
+
+Edge functions are the last thing to export. Any Deno functions the tool wrote (Lovable keeps them in `supabase/functions/`) carry real business logic often enough that each one deserves a read. They port as Rails controller actions when they answered requests, and as jobs when they ran on a schedule or reacted to events.
 
 ## Rebuild the auth they faked
 
@@ -153,7 +180,9 @@ That gives you a `User` model with `has_secure_password`, a `Session` model, sig
 
 Make two edits before you run its migration. The generated `users` table uses a bigint primary key - if your dump used UUIDs, change it to `id: :uuid`, or every foreign key you just migrated points at nothing. And the generator ships sign-in and password reset but no sign-up flow: fine for the rows you're importing, but new users can't register until you build that screen.
 
-Now load the accounts - from Supabase, that's the `auth_users.csv` you exported earlier. The `encrypted_password` column holds bcrypt hashes, and they move straight into `password_digest` because Rails uses bcrypt too - users keep their passwords and never notice. If any hashes are a format `has_secure_password` can't read, force a password reset on first login rather than trying to translate them.
+Now load the accounts - from Supabase, that's the `auth_users.csv` you exported earlier, and the `insert_all` script above does the import. The `encrypted_password` column holds bcrypt hashes, and they move straight into `password_digest` because Rails uses bcrypt too - users keep their passwords and never notice. If any hashes are a format `has_secure_password` can't read, force a password reset on first login rather than trying to translate them.
+
+One subset needs different handling: anyone who signed in with Google or GitHub has no password hash at all - `encrypted_password` is empty for them. A reset email is the wrong fix for a password that never existed. Wire the same provider into Rails with OmniAuth when you reach the Devise decision below, and match the accounts by email - the imported `id` keeps all their rows attached in the meantime.
 
 If you need OAuth, roles, or multi-tenancy beyond what the generator covers, that's the Devise conversation. We compared the [Rails 8 authentication generator against Devise](/blog/rails-8-authentication-generator-devise-migration/) for exactly this decision - start on the generator and reach for Devise when a real requirement shows up.
 
@@ -164,6 +193,8 @@ The test that matters: log in as user A and try to read user B's data by guessin
 Payments fail the same way auth does - the checkout flow is real and the accounting behind it was never built.
 
 A Stripe Checkout button is a redirect to a page Stripe hosts, so the generated version works: the customer pays and comes back.
+
+The Stripe side of the ledger survives the migration untouched - the account and its customers and subscriptions live with Stripe, not in your app, so nothing needs exporting. What the new Rails app brings is a webhook endpoint to register and a signing secret in credentials. Test the whole loop locally with `stripe listen --forward-to localhost:3000/stripe_webhooks` before production ever sees it.
 
 What's missing is the webhook handler, the part where Stripe tells your server that a payment cleared or a subscription ended. Without it, someone can pay and get nothing, or cancel and keep access, and your database never learns the difference. Nothing in the UI shows the gap; it surfaces when someone reconciles the app against the Stripe dashboard.
 
@@ -232,6 +263,10 @@ The `same_site: :none, secure: true` pair and the CORS block exist only because 
 If you'd rather consolidate to one framework and one deploy, Hotwire lets you rebuild the interface in server-rendered Rails without a separate frontend build. That's the right call when the team is Ruby-first and the React was mostly forms and tables. It's the wrong call when the front end is genuinely interactive and rewriting it burns weeks to remove a working thing.
 
 Either way you now own a deployable app. [Our Rails 8 Docker production guide](/blog/rails-8-docker-deployment-production-guide/) covers containerizing it, and when one box stops being enough, [the Kamal 2 multi-server guide](/blog/kamal-2-multi-server-deployment-complete-guide/) takes it across hosts.
+
+## Cutover: take a fresh dump
+
+The dumps you migrated with go stale the moment you take them - users keep creating rows in the old app while you build against a copy. Treat the switch as its own step. Put the old app into read-only mode, or pick your quietest hour and accept a few minutes of downtime. Take a fresh `data.sql` and `auth_users.csv`, load them with the same commands as the practice run, re-sync any Storage uploads from the interim weeks, and only then point the domain at the Rails app. Keep the Supabase project alive but idle for a couple of weeks afterwards: it is your rollback and your audit trail if anyone reports a missing row. Because you already loaded the stale dump once, the real cutover is a rerun, not a first attempt.
 
 ## When not to migrate to Rails
 
