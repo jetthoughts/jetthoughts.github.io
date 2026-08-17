@@ -19,6 +19,18 @@ module CodeblockFixtureSections
   def codeblock_fixture_sections
     SECTIONS
   end
+
+  # The mermaid pixels depend on Caveat; fonts load lazily, so poll until the
+  # font is actually usable instead of asserting a race.
+  def wait_for_caveat(timeout: 10)
+    deadline = Time.now + timeout
+    page.evaluate_script('document.fonts.load("20px Caveat")')
+    until page.evaluate_script('document.fonts.check("20px Caveat")')
+      raise "Caveat not loaded within #{timeout}s - capture would use a fallback font" if Time.now > deadline
+
+      sleep 0.2
+    end
+  end
 end
 
 class BlogSpecialContentDesktopTest < ApplicationSystemTestCase
@@ -33,12 +45,12 @@ class BlogSpecialContentDesktopTest < ApplicationSystemTestCase
   def test_mermaid_post
     visit "/blog/hidden-cost-poor-development-vendor-management-fix/"
 
-    # The <svg> appears only after baseof forces the webfonts to load and
-    # mermaid.run() marks the node data-processed - so waiting on BOTH here
-    # guarantees the diagram was measured and painted with the final font.
+    # Pre-rendered pages ship the <svg> in the HTML (data-prerendered);
+    # runtime pages get it only after fonts load and mermaid.run() marks the
+    # node data-processed. Either way the pixels depend on Caveat, so wait
+    # for the font itself before capturing.
     assert_css "div.mermaid[data-processed] svg", minimum: 1, wait: 10
-    assert page.evaluate_script('document.fonts.check("20px Caveat")'),
-      "Caveat not loaded at screenshot time - mermaid measured with a fallback font"
+    wait_for_caveat
 
     scroll_to(find("div.mermaid"))
     assert_stable_screenshot "blog/special/mermaid_post", tolerance: 0.03,
@@ -93,12 +105,12 @@ class BlogSpecialContentMobileTest < ApplicationSystemTestCase
   def test_mermaid_post
     visit "/blog/hidden-cost-poor-development-vendor-management-fix/"
 
-    # The <svg> appears only after baseof forces the webfonts to load and
-    # mermaid.run() marks the node data-processed - so waiting on BOTH here
-    # guarantees the diagram was measured and painted with the final font.
+    # Pre-rendered pages ship the <svg> in the HTML (data-prerendered);
+    # runtime pages get it only after fonts load and mermaid.run() marks the
+    # node data-processed. Either way the pixels depend on Caveat, so wait
+    # for the font itself before capturing.
     assert_css "div.mermaid[data-processed] svg", minimum: 1, wait: 10
-    assert page.evaluate_script('document.fonts.check("20px Caveat")'),
-      "Caveat not loaded at screenshot time - mermaid measured with a fallback font"
+    wait_for_caveat
 
     scroll_to(find("div.mermaid"))
     assert_stable_screenshot "blog/special/mermaid_post", tolerance: 0.03,

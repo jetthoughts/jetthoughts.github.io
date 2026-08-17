@@ -1541,3 +1541,24 @@ the account tree - the fact was already in `workflows/analytics-access.md`
 3. First LI-post evidence (Aug 13 validate-before-build): ~4 clicks on post
    day, including a 26-min read of the linked lesson and a 35-min homepage
    session - low volume, high depth.
+
+## 2026-08-17 - mermaid_post: three-layer flake prevention + the stale-baseline tell
+
+The recurring `mermaid_post` screenshot failures resolved into TWO distinct
+causes this session, each with its own fix (details in
+[mermaid-theme](design/mermaid-theme.md) §Flake prevention):
+
+1. **The race (real flake):** fonts.ready does not force-request Caveat;
+   mermaid could measure with the fallback. Fixed in baseof
+   (explicit `fonts.load` before `mermaid.run`) + the test now asserts
+   `fonts.check("20px Caveat")` and `[data-processed]` before capture.
+2. **The stale baseline (not flake):** PR #457's heading-anchor CSS +
+   an upstream de-fabrication edit ("200+ projects" dropped from the post
+   opener) shifted text; linux baselines were left for CI on purpose.
+   Tell: byte-identical difference_level across runs. Fix: accept the CI
+   run's own captures (`screenshots-report-full` artifact) as baselines
+   after eyeballing the heatmap; macos legs re-recorded locally.
+3. **Pre-render option:** `bin/render-mermaid` renders fences to committed
+   SVGs at authoring time (Caveat data-URI injected so mmdc measures
+   correctly); render hook embeds them and skips mermaid.js. Opt-in per
+   page, zero CI footprint.

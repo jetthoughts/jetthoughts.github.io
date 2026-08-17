@@ -1,4 +1,13 @@
+{{- /* Pre-rendered SVG (bin/render-mermaid, authoring time) wins: zero
+     render-time nondeterminism and no mermaid.js shipped for this page.
+     hash8 must match the script: md5 of the whitespace-trimmed fence body. */ -}}
+{{- $svg := .Page.Resources.Get (printf "mermaid-%s.svg" (substr (md5 (trim .Inner "\n\r\t ")) 0 8)) -}}
+{{- with $svg -}}
+<div class="mermaid" data-processed="true" data-prerendered="true">{{ .Content | safeHTML }}</div>
+{{- $.Page.Store.Set "features.mermaid-font" true -}}
+{{- else -}}
 <div class="mermaid">
   {{- .Inner | htmlEscape | safeHTML -}}
 </div>
 {{- .Page.Store.Set "features.mermaid" true -}}
+{{- end -}}
