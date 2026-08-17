@@ -31,11 +31,19 @@ the work. A task is not done until its state is readable asynchronously.
 | Outreach / funnel events | the project ledger (e.g. `rescue-sprint/pipeline.md`) — one row per event |
 | Durable how-to / gotcha / root cause | `.okf/` concept file + dated `log.md` entry; reusable process → `docs/workflows/` |
 | Review findings + dispositions | PR comments (one summary disposition comment; resolve threads with reasons) |
-| Company-level policy / cadence | `docs/business/` |
+| Company goal / OKR / rocks / weekly numbers | `docs/business/operating-system.md` |
+| Company identity, positioning, bet status | vault (`jt-business-os`), mirrored to `docs/business/` |
 | Session-internal scratch | `/tmp/` — never committed |
 
 ## Practices
 
+- **Write daily.** The default rhythm is one written update per working day -
+  that is what keeps a cold session (or a teammate) able to pick the work up.
+  Newcomers who cannot hold a daily rhythm yet write **at least weekly, with
+  proportionally more detail**: a week of silence needs the decisions, the
+  dead ends, and the current state, not a one-line summary. Frequency can flex;
+  reconstructability cannot. (This is the *writing* rhythm - unrelated to the
+  weekly numbers loop in `operating-system.md` §1, which is a metric review.)
 - **Prefer shared artifacts over direct messages.** Answer a question by
   updating the doc that should have answered it, then link the doc.
 - **Every handoff is written.** An agent finishing a task updates the card

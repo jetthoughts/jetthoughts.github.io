@@ -152,7 +152,25 @@ docs/projects/**/*-verification-report.md
 *.rvf
 *.rvf.lock
 kanban/
-.agents/
+# .agents/ is a local skill workspace and stays untracked.
+#
+# POLICY (Paul 2026-08-17): we track only OUR OWN skills. Vendored /
+# marketplace skills (anything carrying an upstream version, or with no
+# JetThoughts-specific content) are installed per-machine, never committed
+# here - we are not taking on maintenance of third-party code we did not
+# write and cannot patch upstream.
+#
+# Git cannot re-include a file whose parent dir is excluded, hence the
+# dir-first negation. Add a skill below ONLY if we authored it.
+.agents/*
+!.agents/skills/
+.agents/skills/*
+!.agents/skills/async-first-communication/
+# NO negation for impeccable/kanban-md on purpose. Both were tracked before
+# this policy and STAY tracked (git keeps tracked files tracked even when
+# ignored) - but un-ignoring the directories would expose every new file an
+# upstream reinstall drops in, so `git add -A` could sweep thousands of
+# vendored lines back in. That happened once on this branch already.
 .junie
 
 # Ruflo local secrets and runtime data

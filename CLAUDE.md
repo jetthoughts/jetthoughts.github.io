@@ -4,10 +4,13 @@
 
 > **Head lives in the vault:** [[jt-business-os]] / [[jt-vibe-code-rescue]] — `~/Documents/pkm`
 >
-> Business goals, decisions, and bet status are owned in the vault — **not** in `docs/business/`.
+> **Identity, positioning, and bet status** are owned in the vault — **not** in `docs/business/`.
+> The **weekly loop stays in this repo**: `docs/business/operating-system.md` (goal, OKR §3, rocks §4, weekly numbers §1) is edited here, beside the pipeline tooling that feeds it (narrow split, settled 2026-08-17).
 > Do not create a parallel opportunity portfolio here. Working papers under `docs/projects/` stay put.
 >
-> Read the vault note before changing goals or status here. Verified by `bin/check-repo-links` in the vault.
+> Read the vault note before changing positioning or bet status. Verified by `bin/check-repo-links` in the vault.
+>
+> **Company FACTS are NOT vault-owned.** Founding date, tenure, ratings, review counts, retention — every claim in `@.okf/content/claims-canon.md` — stay canon in THIS repo, enforced by `test/unit/marketing_copy_test.rb`. Never copy a company number out of a vault note into published copy. On 2026-08-17 `jt-business-os.md` was found carrying "since 2011" and "4.8/5 from 32 clients" - both BANNED strings here (canon: founded 2008-09-01, no review count) - and was corrected the same day. Re-check the vault whenever you quote a company number from it. The vault decides what we're doing; the canon decides what we're allowed to say.
 
 
 **Type**: Hugo static site blog | **Build**: `bin/hugo-build`
@@ -130,7 +133,7 @@ For exact slug/tag lookups, see the post index at `docs/blog-post-index.md` (reg
 - **Zero tolerance for duplicates**: No `*_refactored.*`, `*_new.*`, `*_backup.*` files
 - **New-doc locations — pick the RIGHT home, `docs/workflows/` is NOT a catch-all** (Paul 2026-08-01: dev/tech docs kept getting dumped in workflows/). Decide in this order:
   1. **Engineering / tech reference** (test strategy, architecture, security, deployment, CI, APIs, AI-intelligence) → the **Johnny Decimal** area, one per domain: `docs/10-19-core-development/`, `docs/20-29-testing-qa/` (with `performance-testing/`, `screenshot-testing/` subdirs), `docs/30-39-architecture-design/`, `docs/40-49-security-compliance/`, `docs/50-59-deployment-operations/`, `docs/60-69-project-management/`, `docs/70-79-ai-intelligence/` & `70-79-templates-boilerplates/`, `docs/80-89-integration-apis/`, `docs/90-99-content-strategy/`. File naming: `NN.NN-descriptive-name-{reference|tutorial|how-to}.md`; check the area's `README.md`/existing numbers before picking one.
-  2. **Company / OS** (vision, operating system, opportunity portfolio) → `docs/business/`.
+  2. **Company / OS** → the weekly loop (operating system: goal, OKR, rocks, numbers) is edited in `docs/business/operating-system.md`; vision/positioning and the opportunity portfolio are **vault-owned** (`jt-business-os`) and only mirrored into `docs/business/` - see the banner at the top of this file.
   3. **A project** validating one opportunity → its own `docs/projects/<YYMM-slug>/` (dated-slug: 2509/2510/2604/2605/2607).
   4. **ADRs** → `docs/adr/`; **incidents/postmortems** → `docs/incidents/`; **design tokens/system** → `docs/design-system/`.
   5. **`docs/workflows/`** is ONLY for **cross-cutting pipeline/process how-tos** that span domains (blog-pipeline, linkedin-pipeline, flow-router, commands, BASE_HANDBOOK) — NOT engineering reference, NOT research notes. If a doc belongs to one JD domain, it goes in that domain, not here.

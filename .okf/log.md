@@ -1,5 +1,31 @@
 # Bundle Update Log
 
+## 2026-08-17 (company-layer ownership settled) - vault vs repo vs canon
+
+* **New concept**: `workflows/company-layer-ownership.md` - the three-surface
+  split. Vault owns identity/positioning/bet status; the repo owns the weekly
+  loop (`operating-system.md` incl. OKR §3 and rocks §4); `claims-canon.md`
+  owns company facts.
+* **Why narrow, not broad**: the 2607 runbook/backlog/pipeline/booking-page
+  specs all bind to `operating-system.md` §1/§7 - moving the OKR to the vault
+  would break those bindings.
+* **The load-bearing carve-out**: the vault's Positioning line carried "since
+  2011" and "4.8/5 from 32 clients", both BANNED in
+  `test/unit/marketing_copy_test.rb`. Its "edit here, reflect in the repo"
+  flow would have laundered them back days after they were removed from 13
+  blog posts. Corrected in the vault; guard added to the CLAUDE.md banner.
+* **Routers aligned**: AGENTS.md, BASE_HANDBOOK, flow-router (split in two),
+  CLAUDE.md, 2607/strategy.md, async-first SKILL.
+* **Skills policy (final state - an earlier attempt in this same branch was
+  rolled back)**: we track ONLY skills we authored. 10 pipeline skills were
+  briefly vendored into git to close a CI gap, then removed - of 13 tracked
+  skills only `async-first-communication` had any JT content; the rest carried
+  upstream versions. **Consequence a cold session must act on:** `slop-detector`,
+  `humanizer` and `seo-aeo-audit` are BLOCKING gates in `blog-pipeline.md` and
+  are per-machine prerequisites - install them in your own skill directory, they
+  will NOT arrive with the repo, and CI cannot enforce them. Making a gate truly
+  blocking means writing our own skill for it.
+
 ## 2026-08-17 (editorial sweep + claims ratchet) - PR #458 session wrap
 
 * **Course-wide sweep** applied the PR-#457 rules everywhere: 22 objective
