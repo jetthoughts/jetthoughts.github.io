@@ -60,13 +60,11 @@ Pick ONE feature from your one-page brief's "what you're building" section - the
 
 ### Phase 2 - Supabase: real signup, walled data
 
-Create your three or four core tables in Supabase ([first-table walkthrough](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-2---set-up-supabase-connect-real-signup-works)), and check **Enable Row-Level Security** on each table BEFORE adding columns. Then install the Supabase integration inside Lovable and wire the signup screen to it.
-
-> **Why that checkbox:** [RLS](https://supabase.com/docs/guides/database/postgres/row-level-security) walls one customer's data off from another's - skipping it is the most common security hole in vibe-coded MVPs.
+Create your three or four core tables in Supabase ([first-table walkthrough](/course/tech-for-non-technical-founders-2026/reference/mvp-build-phases-full/#phase-2---set-up-supabase-connect-real-signup-works)) with **Row-Level Security enabled on each** - critical; the guide covers the why and the self-test. Then install the Supabase integration inside Lovable and wire the signup screen to it.
 
 > **Phase 2 demo:** your spouse signs up on the staging URL and you watch the row appear in Supabase in real time.
 
-**Before Phase 3, two checks.** First, run the RLS self-test (in the same guide section) - it is copy-paste verification with an AI assistant, not programming. Second, hand the URL to one tester with zero coaching; if they cannot reach the core action, go back to [Lesson 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) - a paywall on top of a workflow nobody can navigate just adds friction to a broken loop.
+**Before Phase 3:** hand the URL to one tester with zero coaching; if they cannot reach the core action, go back to [Lesson 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) - a paywall on top of a workflow nobody can navigate just adds friction to a broken loop.
 
 ### Phase 3 - Stripe: one product, one price, $1 test
 
