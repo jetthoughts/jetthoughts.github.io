@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
+  <title id="t">Two prices for a first version: a dev-shop build costs five figures over months and barely runs, while an AI app builder costs subscription money for one weekend and is yours to test. Nobody tells founders about the second column.</title>
+  <desc>Contrast pair: a red "Dev shop" card (five figures, months, barely runs) beside a green "AI app builder" card (subscription money, one weekend, yours to test), separated by a hand-drawn "or". Basis line: the gap isn't tech - it's information.</desc>
+  <defs>
+    <style>
+      .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
+      .title{ font-size: 32px; font-weight: 700; fill: #1a1a1a; }
+      .sub  { font-size: 24px; fill: #666; font-style: italic; }
+      .lbl  { font-size: 30px; font-weight: 700; }
+      .row  { font-size: 24px; }
+      .or   { font-size: 28px; font-weight: 700; fill: #2b7fff; }
+      .basis{ font-size: 22px; fill: #666; font-style: italic; }
+      .red  { fill: #fef2f2; stroke: #e5484d; stroke-width: 2.5; }
+      .green{ fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+    </style>
+    <filter id="gr" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#e5484d" flood-opacity="0.45"/></filter>
+    <filter id="gg" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#2e7d32" flood-opacity="0.45"/></filter>
+  </defs>
+
+  <text x="360" y="52" text-anchor="middle" class="h title">Two prices for a first version</text>
+  <text x="360" y="86" text-anchor="middle" class="h sub">nobody tells founders about the second one</text>
+
+  <!-- Dev shop card -->
+  <g transform="translate(48,140) rotate(-0.5 140 115)">
+    <rect width="280" height="230" rx="18" class="red"/>
+    <text x="140" y="52" text-anchor="middle" class="h lbl" fill="#e5484d" filter="url(#gr)">Dev shop</text>
+    <text x="140" y="110" text-anchor="middle" class="h row" fill="#b91c1c">five figures</text>
+    <text x="140" y="152" text-anchor="middle" class="h row" fill="#b91c1c">months of waiting</text>
+    <text x="140" y="194" text-anchor="middle" class="h row" fill="#b91c1c">barely runs</text>
+  </g>
+
+  <text x="360" y="262" text-anchor="middle" class="h or">or</text>
+
+  <!-- AI app builder card -->
+  <g transform="translate(392,140) rotate(0.5 140 115)">
+    <rect width="280" height="230" rx="18" class="green"/>
+    <text x="140" y="52" text-anchor="middle" class="h lbl" fill="#2e7d32" filter="url(#gg)">AI app builder</text>
+    <text x="140" y="110" text-anchor="middle" class="h row" fill="#2e7d32">subscription money</text>
+    <text x="140" y="152" text-anchor="middle" class="h row" fill="#2e7d32">one weekend</text>
+    <text x="140" y="194" text-anchor="middle" class="h row" fill="#2e7d32">yours to test</text>
+  </g>
+
+  <text x="360" y="440" text-anchor="middle" class="h basis">The gap isn't tech - it's information.</text>
+</svg>

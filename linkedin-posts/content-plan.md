@@ -68,7 +68,7 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **scheduled** ✓ |
 | Aug 25 Tue | reaction | `personal/reaction-claude-code-trust` | none | **approved** (Paul, board 2026-08-17) |
 | Aug 26 Wed | opinion | `course-promo/sidepath-status-meetings-friday-demo` | course *(1st comment)* | **approved** (Paul, board 2026-08-17) |
-| Sep 2 Wed | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved** (Paul, board 2026-08-17, post-swarm rewrite) - image decision still open (caricature mocks founder/vendor, see frontmatter notes) |
+| Sep 2 Wed | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved** (Paul, board 2026-08-17, post-swarm rewrite; caricature regenerated same day - no open items) |
 | Sep 3 Thu | teach | `course-promo/week1-thu-price-before-product` | none | **approved** (Paul, board 2026-08-17) |
 | Sep 8 Tue | reaction | `personal/reaction-vibe-coding-front-back` | none | **approved** (Paul, board 2026-08-17) |
 | Sep 9 Wed | opinion | `personal/opinion-permission-to-fix` | none | **approved** (Paul, board 2026-08-17; pulled forward from Oct 15) |

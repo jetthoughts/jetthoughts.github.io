@@ -6,8 +6,7 @@ pillar: build-in-public
 author: paul-keen
 voice: personal-first-person
 icp_test: Do non-technical founders recognize the "paid for something I didn't need yet" waste, and share their own?
-image: "assets/bip-vendors-still-burning-founders.jpg"
-image_blocked: "DO NOT ATTACH the current caricature - it mocks the founder (doddering old man) and the vendor (smirking con-man), contradicting the post's no-judgment framing. Regenerate per notes before scheduling, or post text-only (Format D)."
+image: "assets/bip-vendors-still-burning-founders.png"
 first_comment: |
   (value post - no link; reply-CTA only)
 status: approved
@@ -30,11 +29,16 @@ notes: |
   anchored validate-before-build Aug 13 + reaction-vibe-coding Sep 1, per
   cross-post scan); opener flipped to personal-witness (Aug 26 neighbor is
   observation-led; also kills the "AI matured" premise echo with Aug 25).
-  OPEN ISSUE - IMAGE (cold-eyes, blocking call for Paul): the caricature shows
-  a smirking con-man vendor fleecing a doddering elderly founder; contradicts
-  the constructive framing, condescends to the ICP, and reads as fraud (not
-  inexperience) to the agency audience. Recommend regenerating: earnest-but-
-  overwhelmed young vendor, founder not elderly/naive, robot unchanged.
+  IMAGE v3 2026-08-17: Paul rejected the regenerated caricature too - the
+  three-actor scene (founder paying + vendor's broken laptop + robot) needed
+  decoding ("I'm not following why the woman gives money..."). Lesson:
+  narrative cartoons make the reader reconstruct causality; exhibits state
+  it. Replaced with a house-style contrast-pair exhibit (720x480 SVG ->
+  1080px PNG, refactoring.fm look): "Two prices for a first version" -
+  red Dev shop card (five figures / months / barely runs) vs green AI app
+  builder card (subscription money / one weekend / yours to test), basis
+  line mirrors the post's "The gap isn't tech - it's information." Labels
+  match the body's qualitative claims - no invented dollar figures.
 ---
 
 It's hard to watch a founder hand over five figures and months of runway for a build that barely runs.
