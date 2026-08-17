@@ -15,9 +15,9 @@ design_file: none
 course_link_placement: first-comment
 utm_campaign: course-pilot-aug26
 utm_content: week2_wed_interview_count_poll
-status: draft
+status: approved
 stage: next
-proposed_for: "2026-10-08 15:30 CEST"
+proposed_for: "2026-10-08 17:00 CEST"
 opener_archetype: observation-led
 first_comment: |
   If your honest vote was zero, the interview script I'd start with is free, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-interview-script/?utm_source=linkedin&utm_medium=social&utm_campaign=course-pilot-aug26&utm_content=week2_wed_interview_count_poll

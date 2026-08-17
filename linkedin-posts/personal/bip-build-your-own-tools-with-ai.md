@@ -10,9 +10,9 @@ first_comment: |
   (value post - no link; reply-CTA only)
 utm_campaign: ""
 utm_content: bip_build_your_own_tools_with_ai
-status: draft
+status: approved
 stage: next
-proposed_for: "2026-09-17 15:30 CEST"
+proposed_for: "2026-09-17 17:00 CEST"
 notes: |
   Pillar: build-in-public (the 70% value; NO course link). From Paul's real work
   2026-08-14: he needed a simple way to review AI output, so he had the AI build him
@@ -21,13 +21,16 @@ notes: |
   the LinkedIn post review board (kanban) built this session. Point: AI is cheap
   enough now to build the small tools around your own workflow - no excuses. Blunt
   register, concrete, self-referential, ends on an actionable point (no bait CTA).
+  Paul 2026-08-17: hook was too long - now one line leading with the fascinating
+  part (simplified his operation in no time with AI); file-digging context moved
+  into para 2, "half an hour" de-duplicated.
 ---
 
-I stopped digging through files to review what my AI agents build. I had them build me a small tool for it instead.
+Half an hour with AI removed a chore I did every single day.
 
-It's a little review board. An agent finishes something, drops it in, and asks for my take. I see it laid out properly and leave feedback in one place - no more hunting through folders to work out what changed.
+I was digging through files to review what my AI agents build. So I had them build me a little review board instead: an agent finishes something, drops it in, and asks for my take. I see the work laid out properly and leave feedback in one place.
 
-Half an hour to build. It paid that back on day one.
+It paid for itself on day one.
 
 AI isn't only for the product you're selling. It's cheap enough now to build the small tools around your own workflow - the ones no vendor would ever bother making for you. The board I use to review these very LinkedIn posts is one of them.
 

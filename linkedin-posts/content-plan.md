@@ -6,7 +6,15 @@ build:
 
 # LinkedIn content plan — rolling calendar
 
-**Cadence:** 2-3 posts/week, Tue-Thu, US-morning (9-11am ET = ~15-17 CEST).
+**Cadence (Paul 2026-08-17):** 2 posts/week at 17:00 CEST (11:00 ET).
+**Wednesday every week** (the strongest single day in the major 2026 studies),
+plus a second slot **rotating Tue one week, Thu the next**. 11am ET opens
+Sprout's 2026 B2B peak (Tue-Thu 11am-5pm ET, ~2B engagements across 307K
+profiles, Nov 2025-Feb 2026:
+<https://sproutsocial.com/insights/best-times-to-post-on-linkedin/>) and lands
+in Buffer's after-work window (3-8pm local, 4.8M-post analysis:
+<https://buffer.com/resources/best-time-to-post-on-linkedin/>) for European
+readers. Polls ride the +1/week budget, preferring Wednesdays.
 
 **Plan by PILLAR, not just lane** (adopted 2026-08-13, see `content-pillars.md`):
 hold roughly **70% value / 20% personal / 10% promo** across each ~2-week window,
@@ -58,26 +66,30 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Aug 13 | story/opinion | `course-promo/week1-thu-validate-before-build` | course | **posted** |
 | Aug 18 | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ |
 | Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **scheduled** ✓ |
-| Aug 25 | reaction | `personal/reaction-claude-code-trust` | none | drafted ✓ |
-| Aug 27 | build-in-public | `personal/bip-vendors-still-burning-founders` | none | drafted ✓ |
-| Sep 1 | reaction | `personal/reaction-vibe-coding-front-back` | none | drafted ✓ |
-| Sep 3 | teach | `course-promo/week1-thu-price-before-product` | none | revised ✓ |
-| Sep 8 | opinion | `icp-validation/week1-tue-staging-question` | blog | revised ✓ |
-| Sep 10 | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | revised ✓ |
-| Sep 15 | poll | `course-promo/week1-wed-first-move-poll` | none | draft |
-| Sep 17 | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | drafted ✓ |
-| Sep 22 | teach | `course-promo/week2-tue-mom-test-past-questions` | none | revised ✓ |
+| Aug 25 Tue | reaction | `personal/reaction-claude-code-trust` | none | **approved** (Paul, board 2026-08-17) |
+| Aug 26 Wed | opinion | `course-promo/sidepath-status-meetings-friday-demo` | course *(1st comment)* | **approved** (Paul, board 2026-08-17) |
+| Sep 2 Wed | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved** (Paul, board 2026-08-17, post-swarm rewrite) - image decision still open (caricature mocks founder/vendor, see frontmatter notes) |
+| Sep 3 Thu | teach | `course-promo/week1-thu-price-before-product` | none | **approved** (Paul, board 2026-08-17) |
+| Sep 8 Tue | reaction | `personal/reaction-vibe-coding-front-back` | none | **approved** (Paul, board 2026-08-17) |
+| Sep 9 Wed | opinion | `personal/opinion-permission-to-fix` | none | **approved** (Paul, board 2026-08-17; pulled forward from Oct 15) |
+| Sep 16 Wed | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | **approved** (Paul, board 2026-08-17) |
+| Sep 17 Thu | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | **approved** (Paul, board 2026-08-17; hook shortened same day) |
+| Sep 23 Wed | poll | `course-promo/week1-wed-first-move-poll` | none | **approved** (Paul, board 2026-08-17; +1/week budget; link moved to the post-close follow-up comment per balance audit) |
+| Oct 7 Wed | teach | `course-promo/week2-tue-mom-test-past-questions` | none | **approved** (Paul, board 2026-08-17) - re-slotted Sep 22 -> Oct 7 per balance audit (Sep 16/22/23 would have been a three-post interview run); space `ten-interviews-recap` (Oct 1, draft) further out if it gets approved |
 | Sep 24 | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | draft |
 | Sep 29 | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
 | Oct 1 | teach | `course-promo/week2-fri-ten-interviews-recap` | none | revised ✓ |
 | Oct 6 | opinion | `icp-validation/backlog-vibe-coding-disposable` | none | draft |
 | Oct 8 | poll | `course-promo/week2-wed-interview-count-poll` | none | draft |
 | Oct 13 | story/promo | `course-promo/week1-fri-why-i-wrote-it` | course *(promo)* | draft |
-| Oct 15 | opinion | `personal/opinion-permission-to-fix` | none | drafted ✓ |
+| Oct 15 | opinion | `icp-validation/week1-tue-staging-question` | blog | revised ✓ (moved from Sep 8 - spaces the progress-visibility cluster further from Aug 18/26) |
 
-**Ratio:** across 18 posts, only **3 course links** (founding, 40k, why-i-wrote-it =
-~15%) + 1 blog link; the rest is value/personal/poll. **Aug 25 → Sep 3 is four
-straight no-link posts** - the run that makes the feed read as a person with takes.
+**Ratio:** across 19 posts, **4 course links** (founding, status-meetings
+1st-comment, 40k, why-i-wrote-it = ~20%) + 1 blog link; the rest is
+value/personal/poll. **Sep 1 → Sep 10 is four straight no-link posts** - the run
+that makes the feed read as a person with takes. Cadence per the header rule:
+Tue+Wed pairs at 17:00 CEST, two in a row OK, never three (re-flowed twice
+2026-08-17); polls ride on top per the ~1/week budget.
 
 **Still open:** a real "I was wrong about a founder/idea" story to replace the deleted
 BigBinary draft (story-bank Q2). Slot it when Paul has a case.

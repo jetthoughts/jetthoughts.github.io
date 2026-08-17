@@ -42,7 +42,12 @@
     {{ $onli := $posted | append $scheduled }}
     {{ $approved := sort (where $posts "Params.status" "approved") "Params.proposed_for" }}
     {{ $review := sort (where (where $posts "Params.status" "draft") "Params.stage" "next") "Params.proposed_for" }}
-    {{ $backlog := where (where $posts "Params.status" "draft") "Params.stage" "future" }}
+    {{/* catch-all: anything not bucketed above (postponed, future, retired,
+         unknown statuses) lands here instead of silently vanishing. Complement
+         against ALL posted pages, not the first-5 shown in On LinkedIn, so
+         older published posts never leak into Backlog. */}}
+    {{ $allPosted := where $posts "Params.status" "posted" }}
+    {{ $backlog := complement $scheduled $allPosted $approved $review $posts }}
 
     {{ define "cards" }}
       <div class="grid">
@@ -76,7 +81,7 @@
       {{ template "cards" (dict "posts" $review) }}
     </section>
     <section class="stage stage-backlog">
-      <div class="stage-head"><h2>Backlog</h2><span class="count">{{ len $backlog }}</span><small>not yet revised / retired</small></div>
+      <div class="stage-head"><h2>Backlog</h2><span class="count">{{ len $backlog }}</span><small>postponed / not yet revised / retired</small></div>
       {{ template "cards" (dict "posts" $backlog) }}
     </section>
   </div>

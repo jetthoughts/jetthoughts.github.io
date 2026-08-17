@@ -10,9 +10,9 @@ first_comment: |
   (value post - no link; reply-CTA only)
 utm_campaign: ""
 utm_content: opinion_permission_to_fix
-status: draft
+status: approved
 stage: next
-proposed_for: "2026-10-15 15:30 CEST"
+proposed_for: "2026-09-09 17:00 CEST"
 notes: |
   Pillar: opinion (the 70% value; NO course link). From Paul 2026-08-14: teams that
   sit in pain waiting for approval to fix their own problems - you don't need a yes
@@ -21,7 +21,7 @@ notes: |
   Blunt Holub-register flat conviction, ends on the point, no bait CTA, no em dashes.
 ---
 
-Most struggling teams are waiting for someone to give them permission to stop struggling.
+Plenty of struggling teams are waiting for someone to give them permission to stop struggling.
 
 They know what's broken. They've known for weeks. But they sit with it, hoping someone above them says "yes, go fix that" - as if the pain isn't reason enough.
 

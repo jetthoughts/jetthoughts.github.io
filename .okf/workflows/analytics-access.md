@@ -11,6 +11,8 @@ verified:
     at: 2026-08-13T00:00:00Z
   - by: claude/opus-5
     at: 2026-08-13T09:56:20Z
+  - by: claude/fable-5
+    at: 2026-08-17T14:30:00Z
 status: stable
 sources:
   - resource: "/content-strategy/content-plan.md"
@@ -39,12 +41,24 @@ must never be committed - this repo is public.
 
 # Which property to query
 
+**TL;DR: GA4 property `328508492`. Do not enumerate properties first - query
+this one directly.**
+
 Both accounts carry several overlapping properties. Picking the wrong one
 silently returns real-looking but wrong numbers.
 
 * **GA4** - account `10749382` (JetThoughts). The site is property
   **`328508492`** ("Home Page - GA4"). `315618854` ("Blog - GA4") and
   `332322607` ("jetthoughts-blog") are separate and are NOT the site total.
+  Re-confirmed 2026-08-17: LinkedIn/course-page sessions appear ONLY on
+  `328508492`; the same query against `315618854` returns zero rows.
+* **LinkedIn attribution trap (2026-08-17):** clicks from LinkedIn land as
+  `linkedin.com / (referral)` with an empty campaign even when the staged
+  first-comment link carries UTM - either the live comment was posted with a
+  bare link or readers arrive via the profile. Before concluding "no campaign
+  traffic", query by `sessionSource CONTAINS linkedin`, not by
+  `sessionCampaignName`; and verify the live comment's link actually kept its
+  UTM.
 * **Search Console** - use **`sc-domain:jetthoughts.com`**. The URL-prefix
   properties (`https://jetthoughts.com/`, `https://www.jetthoughts.com/`) each
   cover only part of the traffic. `jtway.co`, `elital.jetthoughts.com`, and

@@ -8,9 +8,9 @@ icp_test: Does "reliability is the line" resonate - do builders/founders share t
 image: "assets/reaction-claude-code-trust.jpg"
 first_comment: |
   (value post - no link; reply-CTA only)
-status: draft
+status: approved
 stage: next
-proposed_for: "2026-08-25 15:30 CEST"
+proposed_for: "2026-08-25 17:00 CEST"
 notes: |
   Pillar: reaction (the 70% value; NO course link). From Paul's interview answer
   2026-08-13: Claude Code regained his trust this year - multi-agent/sub-agents now
