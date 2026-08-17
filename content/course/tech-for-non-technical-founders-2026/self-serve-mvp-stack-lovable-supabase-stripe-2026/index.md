@@ -36,13 +36,7 @@ related_posts: false
 >
 > **Output:** the 3 pre-flight rules locked in and tool boundaries clear, ready to start the build in [Lesson 4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
 >
-> **Progress:** M4 · 3 of 5 · Results so far: build path = self-serve (4.1) + ownership locked (4.2) - this lesson sets up the stack and the pre-flight rules
-
-After this lesson you will be able to: **name which tool owns each job in your MVP - screens, data, payments - and lock the 3 pre-flight rules.**
-
-> **TL;DR:** Lovable renders the screens, Supabase stores the data, Stripe charges the card. Three tools, three jobs. Lock 3 pre-flight rules before you open Lovable. All three tools have free tiers.
-
----
+> **Progress:** M4 · 3 of 5
 
 Three tools do the whole self-serve build, and each one has exactly one job. The trap is opening Lovable before you know where its job ends and Supabase's begins - that is how a founder ends up with auth hand-rolled in the UI layer and payment state scattered across three places. Get the boundaries and three pre-flight rules right first, and the build in Lesson 4.4 stays inside the shed.
 
@@ -64,7 +58,7 @@ The buyer opens the staging URL (the live web address where your work-in-progres
 
 ![Three tools, one job each. Lovable is the UI layer - it draws the screens and sends form data down. Supabase is the data and auth layer - it stores your data and holds the login. Stripe, drawn in green as the money layer, charges the card and confirms who paid. A data arrow runs Lovable to Supabase, a pay arrow Supabase to Stripe, and a dashed Stripe webhook loops back to Supabase to tell it the customer is paid.](stack-boundaries.svg)
 
-These three became the dominant self-serve path because all three were built AI-first, their documentation is exhaustive, and the integrations between them are templated to the point of being boring. Boring is what you want for an MVP: it lets one non-technical founder ship the full loop - signup, paid onboarding, the one feature that solves the validated problem - without ever opening a terminal. The [full stack-and-tools reference](/course/tech-for-non-technical-founders-2026/reference/stack-tools-full/) has the plain-English deep dive on each tool, the M2-prototype-vs-M4-MVP contrast, all 12 build rules, and the founder communities that replace a co-founder.
+These three became the dominant self-serve path because all three were built AI-first, their documentation is exhaustive, and the integrations between them are templated to the point of being boring. Boring is what you want for an MVP: it lets one non-technical founder ship the full loop - signup, paid onboarding, the one feature that solves the validated problem - without ever opening a terminal. The [full stack-and-tools reference](/course/tech-for-non-technical-founders-2026/reference/stack-tools-full/) has the plain-English deep dive on each tool.
 
 ## The 3 pre-flight rules - true before you open Lovable
 

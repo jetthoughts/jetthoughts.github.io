@@ -42,7 +42,7 @@ related_posts: false
 
 Budget the calendar honestly before you start: a full-time founder gets there in 4-6 weeks; at 2-4 hours a week, plan 10-12. Phases 2 and 3 are where part-time founders lose the most calendar.
 
-> → **Mia walked the four phases** over three weekends. Her spouse signed up in Phase 2. By Phase 4, five parents clicked through the live URL. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)
+> → **Mia walked the four phases** in nine build evenings across ten calendar weeks - and the Phase 2 AI audit caught a Lovable-default policy that let one parent read another's rows. [Full walkthrough →](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/)
 
 ## The ship plan
 
@@ -108,7 +108,7 @@ Open your Lesson 2.3-2.4 interview list. For each of the 10, write a 3-line pers
 
 Start Phase 1 tonight. The first two actions cost $0.
 
-1. **Sign up for the Lovable + Supabase free tiers** on [lovable.dev](https://lovable.dev) and [supabase.com](https://supabase.com), then connect GitHub sync inside Lovable so your code survives a cancelled subscription.
+1. **Confirm the Lesson 4.3 set-up held:** Lovable + Supabase free-tier accounts exist and GitHub sync is on (pre-flight rule 3). If you skipped it, do it now on [lovable.dev](https://lovable.dev) and [supabase.com](https://supabase.com).
 2. **Write your Phase 1 prompt** - one feature, "build a [SCREEN] for [PERSONA] to [OUTCOME]."
 3. **Generate the UI and run the Phase 1 demo** with one human who has not read the brief.
 
