@@ -15,9 +15,9 @@ design_file: linkedin-posts/course-promo/assets/week1-tue-founding-hypothesis-sk
 course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_tue_founding_hypothesis
-status: approved
-stage: next
-proposed_for: "2026-08-19 15:30 CEST"
+status: scheduled
+stage: now
+scheduled_for: "2026-08-19 15:30 CEST"
 first_comment: |
   The 90-minute version of this exercise, with an AI stress-test for each blank, is Chapter 1.1 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_tue_founding_hypothesis
 image: "assets/week1-tue-founding-hypothesis.png"
@@ -36,12 +36,13 @@ notes: |
   "your first research question" -> "the first thing to go find out" (course-author vocab leak);
   "Which blank fights you the hardest?" -> "Which blank did you get stuck on?" (cute personification,
   2 judges). Gym-owner line judged the most human line of the week - keep verbatim in any edit.
+  2026-08-17 Paul: dropped the second "is a customer" (redundant echo of the prev sentence).
 ---
 
 Any idea worth building should fit in one plain sentence. The one I use, mine included, has five blanks:
 
 If we help [customer] solve [problem] with [approach], they'll pick it over [what they do today] because [your edge].
 
-Vague words don't count. "Busy professionals" is not a customer. "Independent gym owners who chase no-shows by text every morning" is a customer - you can find those people and ask what they do about no-shows today.
+Vague words don't count. "Busy professionals" is not a customer. "Independent gym owners who chase no-shows by text every morning" - you can find those people and ask what they do about no-shows today.
 
 If an idea has been sitting in your head for a while, set a timer for 90 minutes tonight and try to fill all five. Whatever blank you get stuck on is the first thing to go find out, and it's a lot cheaper to answer now than after you build.

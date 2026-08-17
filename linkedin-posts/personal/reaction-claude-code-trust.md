@@ -25,6 +25,6 @@ notes: |
 
 I walked away from AI coding agents over the winter. Too much setup, and they kept ignoring half the instructions I gave them.
 
-Claude Code pulled me back. Opus 4.5 and team mode cut most of the configuration, and it finally follows what I tell it. I hand a whole workflow to a team of agents and the diffs hold together, run after run.
+Claude Code pulled me back. Opus model and team mode cut most of the configuration, and it finally follows what I tell it. I hand a whole workflow to a team of agents and the diffs hold together, run after run.
 
 Consistency is boring, and it's the only thing I actually care about. I don't need clever. I need to not babysit it.

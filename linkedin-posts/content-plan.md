@@ -57,7 +57,7 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 |---|---|---|---|---|
 | Aug 13 | story/opinion | `course-promo/week1-thu-validate-before-build` | course | **posted** |
 | Aug 18 | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ |
-| Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **approved** ✓ |
+| Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **scheduled** ✓ |
 | Aug 25 | reaction | `personal/reaction-claude-code-trust` | none | drafted ✓ |
 | Aug 27 | build-in-public | `personal/bip-vendors-still-burning-founders` | none | drafted ✓ |
 | Sep 1 | reaction | `personal/reaction-vibe-coding-front-back` | none | drafted ✓ |
