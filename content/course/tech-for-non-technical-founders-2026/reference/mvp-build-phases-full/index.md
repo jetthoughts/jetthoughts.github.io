@@ -14,7 +14,7 @@ cover_image_alt: "JetThoughts course cover: The Self-Serve MVP Build, Phase by P
 
 ---
 
-This guide assumes you already ran Modules 1-3 (hypothesis, smoke test, 10 interviews, one-page brief) and read [Lesson 4.3: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Lesson 4.3 covers what each tool does, the 3 pre-flight rules, and the AI critic block; the $0 budget path, the full 12 build rules, the Module 2 prototype vs the Module 4 MVP distinction, and communities live in the [stack-and-tools reference](/course/tech-for-non-technical-founders-2026/reference/stack-tools-full/). The phases below reference those concepts without re-explaining them. Skip straight here without validation and the build ships into the silence Modules 1-3 were designed to prevent.
+This guide picks up where [Lesson 4.3 · Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) leaves off - stack set up, pre-flight rules locked, idea validated in Modules 1-3. Skip the validation and you ship into silence.
 
 > **Calendar reality:** plan the 10-12-week evening-only version, not the 4-6-week full-time one ([Lesson 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) has the breakdown). Phases 2 and 3 are where part-time founders lose the most calendar.
 
