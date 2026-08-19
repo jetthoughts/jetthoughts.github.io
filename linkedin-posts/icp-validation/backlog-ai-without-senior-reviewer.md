@@ -9,6 +9,8 @@ icp_test: Does the supervisor-must-outrank-the-AI trap land with founders buildi
 cta: Open question asking who on the founder's side outranks the AI
 utm_campaign: icp_validation_technical_oversight
 utm_content: ai-without-senior-reviewer
+image: "assets/backlog-ai-without-senior-reviewer.png"
+visual: assets/backlog-ai-without-senior-reviewer.png (judgment-ladder exhibit - supervisor above the AI, cheap hire below it)
 status: draft
 notes: |
   LinkedIn is the PRIMARY surface for this idea, not the blog. GSC 90d: the whole
@@ -74,6 +76,28 @@ notes: |
   credential stamp, no em dashes, no CTA, no JT mention, no links. No cold-eyes
   panel re-run: Paul's notes were length and clarity of thesis, not a voice
   failure, so the second-pushback panel trigger did not fire.
+
+  EXHIBIT (2026-08-19). Purpose-built, house style, viewBox 720x480, rsvg -w 1080.
+  Shape is a judgment LADDER, deliberately varied from siblings (the nearest,
+  friends-politely-lying, is a contrast pair). Three rungs carry the whole thesis at
+  a glance: supervisor above the AI, the AI as the bar, the cheap hire below it.
+
+  Render-verified by viewing the PNG, then the 6-item clunkiness checklist:
+  - FIXED alignment: first pass alternated tilt -0.4/+0.4/-0.4. That reads as
+    hand-drawn on a side-by-side PAIR but as a zigzag on a VERTICAL stack. All three
+    now share -0.3.
+  - FIXED hollowness: a dead band sat between the bottom card and the basis line.
+    Cards re-spaced to 108/212/316, axis extended to match.
+  - ACCEPTED, not fixed: "The AI" is a short head in a wide card, so the middle rung
+    is quieter than its neighbours. That is correct here - it is the neutral
+    reference bar between two human rows, and padding it to match would be filler.
+  - Sibling consistency, edge breathing room, weight/emphasis: pass.
+
+  FONT NOTE for Paul: Caveat is NOT installed on this machine, so the exhibit falls
+  through to Comic Sans MS. The committed sibling exhibits render identically, so
+  this matches the existing feed rather than diverging from it - but the house spec
+  asks for Caveat, and no exhibit exported here will honour it until the font is
+  installed.
 ---
 
 AI writes better code than most of the freelancers you'll find on Upwork. That part is real.
