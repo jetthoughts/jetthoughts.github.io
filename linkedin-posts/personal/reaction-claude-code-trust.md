@@ -47,6 +47,33 @@ notes: |
   The point is now carried by the concrete instead - couldn't predict it, diffs
   hold run after run, check behind. Shown, not announced.
 
+  ✅ PAUL'S OWN DRAFT, 2026-08-19 - this body is his, not a rewrite of mine. He sent
+  the version he would write and it replaced the assistant draft wholesale. Only the
+  English was cleaned (he writes ESL; typos and article/tense fixes). NOTHING was
+  re-framed, re-structured or "improved" back toward the previous version.
+
+  What his draft carried that mine had invented away - all of it kept:
+  - "cancelled my AI subscriptions" - a concrete ACTION. Mine said "walked away",
+    which is a summary of an action, not the action.
+  - The agents "making excuses" for not following the workflows. Vivid, specific,
+    and I had nothing like it.
+  - The real payoff is ECONOMIC: burned tokens and hit rate limits with nothing to
+    show for it. My draft's thesis was abstract predictability. His is what actually
+    costs him money and sleep.
+  - "sleep at night" - his image, kept verbatim in sense.
+
+  One phrase needed interpretation: "to stop reach limit junkies" is ambiguous
+  between Paul-as-junkie and agents-as-junkies. Resolved toward the agents, because
+  his own closing line blames the agents for spending tokens and hitting limits.
+  PAUL: if you meant your own habit, say so and I will flip it back.
+
+  Structurally his opener is Paolino's move from reference-examples ("say the real
+  thing you did, plainly"), not Rossi's narrative-counter that I had imposed. Still
+  an influencer shape, just a different one - and it incidentally resolves the
+  flagged clash where slots 1 and 2 both opened on a flat claim about AI.
+
+  Superseded below, kept for the record:
+
   NEGATIVE PARALLELISM removed 2026-08-19 (Paul asked whether "X, not A, but B" is
   slop - it is, and by name). voice-guide 90.11:223 bans it outright: `"It's not X
   - it's Y" / "Not just A, but B"` -> "Pick one framing and commit." The revoice
@@ -79,10 +106,10 @@ notes: |
   is a consequence of ranking by decay, not of this rewrite - flagging, not fixing.
 ---
 
-The argument about AI coding agents is stuck on whether they're smart enough. That was never what decided it for me.
+Last winter I cancelled my AI subscriptions on purpose. The agents burned through every rate limit, and I still had to rebuild their whole context each time.
 
-I walked away from them over the winter because I couldn't predict what they'd do. Too much setup, and they ignored half the instructions I gave them.
+One thing brought me back: Opus family models and team mode.
 
-Claude Code brought me back. Opus and team mode cut most of the configuration, and it does what I tell it. I hand a whole workflow to a team of agents and the diffs hold together, run after run.
+It stopped making excuses for not following our workflows, and it runs consistent loops without me installing extra tools.
 
-I don't need a genius I have to check behind.
+Now I sleep at night, because it won't spend a pile of tokens hitting the limit with nothing to show for it.
