@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
-  <title id="t">Two prices for a first version: a dev-shop build costs five figures over months and barely runs, while an AI app builder costs subscription money for one weekend and is yours to test. Nobody tells founders about the second column.</title>
-  <desc>Contrast pair: a red "Dev shop" card (five figures, months, barely runs) beside a green "AI app builder" card (subscription money, one weekend, yours to test), separated by a hand-drawn "or". Basis line: the gap is information.</desc>
+  <title id="t">Two prices for a first version: a dev-shop build costs $40k over months and barely runs, while an AI app builder costs about $200 for one weekend and is yours to test. Nobody tells founders about the second column.</title>
+  <desc>Contrast pair: a red "Dev shop" card ($40k, months, barely runs) beside a green "AI app builder" card (about $200, one weekend, yours to test), separated by a hand-drawn "or". Basis line: the gap is information.</desc>
   <defs>
     <style>
       .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
@@ -24,7 +24,7 @@
   <g transform="translate(48,140) rotate(-0.5 140 115)">
     <rect width="280" height="230" rx="18" class="red"/>
     <text x="140" y="52" text-anchor="middle" class="h lbl" fill="#e5484d" filter="url(#gr)">Dev shop</text>
-    <text x="140" y="110" text-anchor="middle" class="h row" fill="#b91c1c">five figures</text>
+    <text x="140" y="110" text-anchor="middle" class="h row" fill="#b91c1c">$40k</text>
     <text x="140" y="152" text-anchor="middle" class="h row" fill="#b91c1c">months of waiting</text>
     <text x="140" y="194" text-anchor="middle" class="h row" fill="#b91c1c">barely runs</text>
   </g>
@@ -35,7 +35,7 @@
   <g transform="translate(392,140) rotate(0.5 140 115)">
     <rect width="280" height="230" rx="18" class="green"/>
     <text x="140" y="52" text-anchor="middle" class="h lbl" fill="#2e7d32" filter="url(#gg)">AI app builder</text>
-    <text x="140" y="110" text-anchor="middle" class="h row" fill="#2e7d32">subscription money</text>
+    <text x="140" y="110" text-anchor="middle" class="h row" fill="#2e7d32">$200</text>
     <text x="140" y="152" text-anchor="middle" class="h row" fill="#2e7d32">one weekend</text>
     <text x="140" y="194" text-anchor="middle" class="h row" fill="#2e7d32">yours to test</text>
   </g>

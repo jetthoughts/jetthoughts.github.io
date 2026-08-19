@@ -73,6 +73,26 @@ The validation plan offers artifact CTAs ("Comment DEMO and I'll send the script
 
 **Engagement loop replacement:** Open with anecdote → state conviction → give the tactical content → close with a peer question that invites founders to share their own experience. Founders who self-identify in the comments are still the ICP signal — earned through conversation, not gated by an artifact.
 
+### Gloss by mechanic, not by parenthetical (Paul liked this, 2026-08-19)
+
+When a post names a tool or term the ICP may not know, explain it with **a plain
+second sentence describing what it does**, not a parenthetical definition and not a
+simile.
+
+| ✅ Paul flagged this as the version that worked | ❌ What it replaced |
+|---|---|
+| "That same first version is now a weekend with Lovable or v0. **You describe what you want and it builds it.** Even on the priciest models, $200 covers it." | "AI app builders like Lovable or v0 cost about as much as a streaming subscription: you describe the app in plain words and get something you can click, without hiring anyone." |
+
+Three things the good version does: names the concrete thing in a short declarative,
+gives the mechanic as its own plain sentence, and **replaces the simile with the real
+number**. A simile ("costs about as much as a streaming subscription") is what you
+write when you don't have the figure - if the figure exists, use it.
+
+Note this differs from the course rule in `.okf/content/voice-rules.md` ("gloss at
+first mention with a plain-words parenthetical"), which is correct for the course's
+patient second-person register. LinkedIn is shorter and first-person: a parenthetical
+reads as a footnote, a mechanic sentence reads as speech.
+
 ### Voice formula
 
 JetThoughts blog voice: 70% Walling directness + 30% Fishkin vulnerability.

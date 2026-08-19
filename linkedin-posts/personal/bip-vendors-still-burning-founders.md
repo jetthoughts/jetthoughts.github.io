@@ -35,10 +35,14 @@ notes: |
   narrative cartoons make the reader reconstruct causality; exhibits state
   it. Replaced with a house-style contrast-pair exhibit (720x480 SVG ->
   1080px PNG, refactoring.fm look): "Two prices for a first version" -
-  red Dev shop card (five figures / months / barely runs) vs green AI app
-  builder card (subscription money / one weekend / yours to test), basis
-  line mirrors the post's "The gap isn't tech - it's information." Labels
-  match the body's qualitative claims - no invented dollar figures.
+  red Dev shop card vs green AI app
+  builder card, basis line mirrors the post's closing claim.
+  CARDS RE-LABELLED 2026-08-19 with Paul's real figures: "$40k" and "$200"
+  replace "five figures" and "subscription money". The original note said "no
+  invented dollar figures" - correct at the time, since neither number existed in
+  repo canon. Both now come from Paul (the founder's bill, and his cost to build
+  the same thing on the priciest models), so the exhibit states them outright and
+  the 200x gap is visible without reading the post.
   $40k SHARED WITH slot 10 ON PURPOSE (settled 2026-08-19, Paul overruled the
   assistant). Same founder appears in course-promo/backlog-40k-mvp-chasing-fixes
   (Sep 24). The assistant first stripped the figure to "five figures" citing the
@@ -59,12 +63,12 @@ notes: |
 
 Non-technical founders who paid for an MVP that barely runs keep turning up in my network. The last one had spent $40k.
 
-What changed is that the first rough version of most app ideas is now a weekend of work. AI app builders like Lovable or v0 cost about as much as a streaming subscription: you describe the app in plain words and get something you can click, without hiring anyone.
+That same first version is now a weekend with Lovable or v0. You describe what you want and it builds it. Even on the priciest models, $200 covers it.
 
-That gets you far enough to find out whether anyone wants it. Putting it in front of paying customers still needs someone who knows what they're reading.
+That gets you far enough to find out whether anyone wants it. Putting it in front of paying customers needs someone who can read the code.
 
-Nobody tells founders this. Vendors have no reason to, and the tools moved faster than the advice around them. The gap is information.
+Nobody tells founders this. The vendor has no reason to, and the tools moved faster than anyone giving advice. The gap is information.
 
-If you paid for a build you didn't need yet, most people around you would have signed the same contract.
+If you already paid for one, most people around you would have signed the same contract.
 
 What did the vendor tell you before you signed? That part never gets written down.
