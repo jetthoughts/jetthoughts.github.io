@@ -47,6 +47,32 @@ notes: |
   The point is now carried by the concrete instead - couldn't predict it, diffs
   hold run after run, check behind. Shown, not announced.
 
+  INFLUENCER MOVES APPLIED 2026-08-19 (Paul: "now apply the influencers voices on
+  it") - applied ON his draft, not instead of it. Every fact, noun and image is
+  still his. Three changes, each traceable to reference-examples.md:
+
+  1. ADDED the Holub move - flat contrarian conviction - which his draft lacked.
+     The doc says Paul's register is "blunt, concrete/technical, first-person,
+     opinionated, a little against-the-grain, closer to Holub than to a LinkedIn
+     insight post". His draft was blunt, concrete and first-person but took no
+     position on anything. New line, built only from his own material: "An agent
+     that spends your tokens and gets nowhere is worse than no agent." That is the
+     against-the-grain bit - the public argument is about capability, his objection
+     is economic.
+  2. COMPRESSED the return beat. "One thing brought me back: Opus family models and
+     team mode." + "It stopped making excuses..." was a throat-clear followed by
+     the point. Merged to "Opus family models and team mode brought me back."
+     reference-examples: "Influencers compress; they don't recap the whole sequence."
+  3. TIGHTENED the grievance. "and I still had to rebuild" -> "and still made me
+     rebuild" - one clause, agents stay the subject doing the damage.
+
+  DELIBERATELY KEPT, against a stricter Holub reading: "Now I sleep at night". Holub
+  and Paolino usually land flat on the sharpest observation, and a purist pass would
+  cut an emotional closer. It stays because it is PAUL'S line and it is concrete
+  (a consequence, not a feeling-word), and because the conviction line now carries
+  the flat-landing job. PAUL: if you want the Holub ending, delete that last
+  sentence and the post ends on "...without me installing extra tools."
+
   ✅ PAUL'S OWN DRAFT, 2026-08-19 - this body is his, not a rewrite of mine. He sent
   the version he would write and it replaced the assistant draft wholesale. Only the
   English was cleaned (he writes ESL; typos and article/tense fixes). NOTHING was
@@ -106,10 +132,10 @@ notes: |
   is a consequence of ranking by decay, not of this rewrite - flagging, not fixing.
 ---
 
-Last winter I cancelled my AI subscriptions on purpose. The agents burned through every rate limit, and I still had to rebuild their whole context each time.
+Last winter I cancelled my AI subscriptions on purpose. The agents burned through every rate limit and still made me rebuild their whole context each time.
 
-One thing brought me back: Opus family models and team mode.
+An agent that spends your tokens and gets nowhere is worse than no agent.
 
-It stopped making excuses for not following our workflows, and it runs consistent loops without me installing extra tools.
+Opus family models and team mode brought me back. It stopped making excuses for not following our workflows, and it runs consistent loops without me installing extra tools.
 
 Now I sleep at night, because it won't spend a pile of tokens hitting the limit with nothing to show for it.
