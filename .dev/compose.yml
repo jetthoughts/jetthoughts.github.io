@@ -63,7 +63,8 @@ services:
       HUGO_CACHEDIR: "/tmp/hugo_cache_dtest"
       CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
       RUBY_THREAD_VM_STACK_SIZE: 1048576
-    mem_limit: 2g
+    # Chrome 152 needs >2g under amd64 emulation (OOM "tab crashed" at 2g).
+    mem_limit: 4g
     cpus: '4.0'
     ulimits:
       memlock:

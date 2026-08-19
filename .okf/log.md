@@ -1,5 +1,26 @@
 # Bundle Update Log
 
+## 2026-08-19 (CfT bump) - Chrome for Testing 141→152 + linux baselines re-recorded
+
+* **Chrome for Testing bumped** `.dev/cft-version` 141.0.7390.37 →
+  152.0.7977.54 (latest stable). Linux baselines re-recorded for the new
+  rendering stack (91/135 changed, rest byte-identical).
+* **Zero visual drift across 11 Chrome majors**: the critical suite passed
+  0-drift against the OLD 141 baselines before re-recording - `.dev/fonts.conf`
+  (hintslight + grayscale AA + no embedded bitmaps) keeps text rendering stable
+  across Chrome versions. This is the pre-verify signal that a CfT bump is
+  visually safe to re-record.
+* **Gotcha — Chrome 152 OOMs the 2g `t` service**: "tab crashed" (renderer
+  process killed) on 3 heavy pages (mermaid, codeblock-language-styles, blog
+  pagination) during the full critical suite at `mem_limit: 2g`; each passed in
+  isolation. Chrome 152 is hungrier than 141 under amd64 emulation. Fix: raise
+  the `t` service `mem_limit` 2g→4g (`.dev/compose.yml`). CI is unaffected -
+  it runs on the GitHub runner's memory, not compose.
+* **Rebuild the test image after the CfT change** (`.dev/Dockerfile` downloads
+  the pinned CfT + matching chromedriver at build time), then re-record via
+  `FORCE_SCREENSHOT_UPDATE=true` against `bin/rake test:system` in the
+  container - NOT `bin/dtest` alone, which only re-records the critical subset.
+
 ## 2026-08-19 (dependency upgrade) - full dep bump: JS/Ruby/Hugo/Bun/Actions
 
 * **Toolchain pins bumped** hugo 0.164.0→0.165.0, bun 1.3.13→1.3.14 across the
