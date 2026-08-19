@@ -39,6 +39,16 @@ notes: |
   builder card (subscription money / one weekend / yours to test), basis
   line mirrors the post's "The gap isn't tech - it's information." Labels
   match the body's qualitative claims - no invented dollar figures.
+  ⚠️ ANECDOTE COLLISION (2026-08-19, unresolved - needs Paul). $40k anchors TWO
+  approved posts: personal/bip-vendors-still-burning-founders (slot 3, Sep 2) and
+  course-promo/backlog-40k-mvp-chasing-fixes (slot 10, Sep 24). Both also cite
+  Lovable/v0 and the same broken-MVP shape; slot 10 repeats the figure as its
+  closing line. Three weeks apart on one feed a reader sees one story twice - the
+  double-anchoring the cross-post repetition gate exists to catch. Paul wrote the
+  slot-3 opener and said "another" founder, so it may genuinely be a second case.
+  Resolutions if not: give slot 3 that founder's real number, drop the figure from
+  slot 3, or de-anchor slot 10 at its own revoice pass (its point is the unpaid-PM
+  trap, not the price).
 ---
 
 In 2026 I met another non-technical founder who had spent $40k on a broken MVP.

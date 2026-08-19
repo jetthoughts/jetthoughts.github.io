@@ -1661,3 +1661,40 @@ Three durable learnings from the vendor-post rewrite + lovable-guide session:
 
 GA4 deliberately not pulled - §5 establishes ~85-90% bot traffic and
 `keyEvents = 0`, so it returns noise until instrumentation lands.
+
+## 2026-08-19 — LinkedIn voice: plain English promoted, attribution test adopted
+
+1. **Plain English is now the FIRST voice gate** (voice-guide §0, mirrored in
+   `content/voice-rules.md`). Three tests: say it out loud to one person; one idea
+   per phrase; every claim true. The middle test is the expensive one - **two ideas
+   welded into one phrase pass every mechanical gate we own** (word count,
+   banned-word greps, dash checks, slop score), so only a domain reader catches
+   them. Consequent rule: check claims against domain knowledge FIRST, voice gates
+   second. Four rounds were burned doing it the other way round.
+2. **Attribution test - the one exception to the negative-parallelism ban**
+   (Paul chose this over keeping the ban absolute). `X is not Y; it is Z` is legal
+   only when the text NAMES WHO holds the negated belief within one sentence.
+   Holub earns it ("There are many programmers who don't seem to get that");
+   invented strawmen do not. Worded mechanically on purpose - "is this a real
+   belief?" is unenforceable, "is there a named population?" is checkable in two
+   seconds. Synced across 90.11 §3, `content/voice-rules.md`, and the LinkedIn AI
+   score rubric.
+3. **Imitation docs endorse everything in the sample.** `reference-examples.md`
+   models writers to copy; one quote carried a construction another doc banned, and
+   an agent told to "match the reference file" reproduces it. The file now says
+   copy the NAMED MOVE, not every property of the quote. General hazard for any
+   copy-this doc.
+4. **Rules with no trigger never fire.** Two cases in one session: the LI preview
+   link existed in `linkedin-posts/README.md` but fired only on "review" requests,
+   not on create/update; and `story-bank.md` says "before drafting, pull from here,
+   else interview Paul" but was **absent from the pipeline's mandatory reads and
+   20-item checklist**. Both now wired into the checklist. When a rule is being
+   broken, check whether it is reachable from the workflow before rewriting it.
+5. **Author's raw material beats assistant abstraction, decisively.** Every
+   invented framing in `reaction-claude-code-trust` was deleted once Paul wrote
+   four lines himself; the correct move was to drop the assistant thesis, not merge
+   it with his. Now a BLOCKING checklist step: source specifics before drafting.
+6. **Text gates cannot see exhibits.** The banned "The gap isn't tech - it's
+   information" was removed from the vendors post body and kept shipping inside the
+   post's SVG for the rest of the session. Sweep artwork text whenever a body
+   phrase is banned or changed.

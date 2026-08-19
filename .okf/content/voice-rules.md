@@ -70,7 +70,9 @@ Full table in 90.11 §1b.
 
 # Banned structural patterns (reject on sight)
 
-Slogany reveal-twist flips ("X wasn't Y - it was Z"), cinematic time-cut
+Slogany reveal-twist flips ("X wasn't Y - it was Z") **unless the text names WHO
+holds the negated belief within one sentence of it** (the attribution test, 90.11
+§3, Paul 2026-08-19 - no named population, no negation), cinematic time-cut
 narration, anonymous-founder-vignette openers repeated 3+ chapters in a row,
 aphoristic flourish closers, fabricated cohort stats without a source,
 `## Why this matters` headings, "Founders who / Most founders / Founders we

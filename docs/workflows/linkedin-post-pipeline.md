@@ -14,6 +14,8 @@
 2. `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` — ICP-E definition, pain language, control-loss patterns
 3. `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` — voice formula, banned words, anti-AI structural patterns
 4. **This file** — LinkedIn-specific rules that override or extend the blog voice guide
+5. `linkedin-posts/story-bank.md` — Paul's real cases, convictions, and the interview backlog. Value-pillar posts run on real material or they do not get drafted.
+6. `linkedin-posts/reference-examples.md` — the writers Paul rates, with the moves to copy. Copy the named move only, not every property the quote happens to carry; the Holub entry flags a construction that is legal only under voice-guide §3's attribution test.
 
 If this file conflicts with a generic writing, SEO, or humanizer skill, this file wins for LinkedIn drafts.
 
@@ -90,7 +92,7 @@ These all come from the main voice guide but get violated most often in short Li
 | Slogany meta-opener | "I keep relearning this." | (Delete or replace with concrete observation) |
 | Triple rhetorical questions | "Why? How? What now?" | One real question, anchored to the reader's situation |
 | Impersonal fragment stacking (3+) | "No tests. Open endpoints. Corrupted data." | Add a human subject or merge into one sentence |
-| Tweetable negative-positive flip | "X isn't Y. X is Z." | Use sparingly — once per post max |
+| Tweetable negative-positive flip | "X isn't Y. X is Z." | Use sparingly — once per post max, **and only if it passes the attribution test** (voice-guide 90.11 §3): the text must name WHO holds the negated belief within one sentence of it. No named population, no negation. |
 | Generic LinkedIn close | "Curious to hear your thoughts!" | Specific provocation tied to the post topic |
 | Em dashes | `—` | `-` (always) |
 | Fake authority count | "We've seen this 50 times" | Tenure ("17 years") or specific case ("last week") |
@@ -244,7 +246,7 @@ For each "high"-severity flag below, +2. For each "medium," +1.
 | Em dash anywhere in body | High |
 | Signposting ("three things will...", "here's the thing") | Medium |
 | Slogany meta-opener / aphoristic close | Medium |
-| Tweetable negative-positive flip > 1 in post | Medium |
+| Tweetable negative-positive flip > 1 in post, or any flip failing the attribution test (90.11 §3) | Medium |
 | 3+ consecutive impersonal fragments | Medium |
 | "We've seen this 50 times" / fabricated count | Medium |
 
@@ -361,7 +363,8 @@ This caught a real bug in Monday's draft where the `cta:` field went out of sync
 
 When asked to write a LinkedIn post for Paul:
 
-- [ ] Read the 4 mandatory pre-writing files
+- [ ] Read the mandatory pre-writing files
+- [ ] **(BLOCKING) Source the specifics BEFORE drafting.** Pull the anecdote, number or incident from `story-bank.md`. If the post needs a detail that isn't there, **ask Paul first** and add his answer to the bank. Do not draft an abstraction as a placeholder and hope the real detail arrives in review. That cost ~6 correction rounds on 2026-08-19 (`reaction-claude-code-trust`, `backlog-ai-without-senior-reviewer`); both posts only worked once Paul wrote the material himself, and everything invented to stand in for it was deleted.
 - [ ] Identify which week/day in the validation plan
 - [ ] Identify which hypothesis the post tests
 - [ ] Scan last 2-3 posts for opener archetype; pick a different one
