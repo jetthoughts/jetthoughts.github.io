@@ -77,7 +77,12 @@ pins (it calls the composite with `build: 'false'`), also by convention.
 Gotchas: the Ruby pin must be an EXACT patch version - rbenv reads
 `.ruby-version` and never matches a fuzzy "4.0"; agent containers block
 `api.github.com` through the proxy, so `mise install` cannot fetch
-hugo/bun there (node works - nodejs.org is allowed).
+hugo/bun there (node works - nodejs.org is allowed). `bin/dc build` fails on
+ARM Macs (`bin/dc` pins DOCKER_DEFAULT_PLATFORM=arm64 vs the amd64 test
+services) - rebuild the test image with
+`docker build -t jetthoughts.com-test:1.0.0 --platform linux/amd64 -f .dev/Dockerfile .`
+after any Gemfile.lock/bun.lockb change (the image bakes gems into an
+anonymous /opt/bundle volume).
 
 # link-check.yml path filter
 

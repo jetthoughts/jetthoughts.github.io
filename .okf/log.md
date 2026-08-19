@@ -1,5 +1,30 @@
 # Bundle Update Log
 
+## 2026-08-19 (dependency upgrade) - full dep bump: JS/Ruby/Hugo/Bun/Actions
+
+* **Toolchain pins bumped** hugo 0.164.0→0.165.0, bun 1.3.13→1.3.14 across the
+  three synced copies (`.mise.toml`, `.github/actions/setup-hugo/action.yml`,
+  `.dev/compose.yml` image tag). ruby 4.0.6 and node "latest" were already current.
+* **JS** `bun update --latest`: postcss-import 16→17 (major), cssnano 8.0.6,
+  postcss 8.5.26, postcss-nested 8.0.1, surge 0.43.1, caniuse-lite 1.0.30001809.
+* **Ruby** `bundle update`: selenium-webdriver 4.47, simplecov 1.1.1, rack 3.2.7,
+  rubyzip 3.5.0, zeitwerk 2.8.3, pdf-reader 2.16.0, plus async/json/io-event.
+* **GitHub Actions**: setup-node@v4→v7, cache@v5→v6 (setup-hugo composite),
+  taiki-e/install-action@v2.85.4→v2.86.3. checkout/configure-pages/upload-pages/
+  deploy-pages/setup-bun/setup-ruby already at their latest majors.
+* **Gotcha — `bin/dc build` fails on ARM Macs**: `bin/dc` hard-codes
+  `DOCKER_DEFAULT_PLATFORM=linux/arm64/v8` while the `.dev/compose.yml` test
+  services pin `platform: linux/amd64`, so compose rejects the build
+  ("build.platforms does not support value set by DOCKER_DEFAULT_PLATFORM").
+  Rebuild the test image directly instead:
+  `docker build -t jetthoughts.com-test:1.0.0 --platform linux/amd64 -f .dev/Dockerfile .`
+  This is required after ANY Gemfile.lock/bun.lockb change — the image bakes
+  gems at `/opt/bundle` in an anonymous volume, so a stale image silently runs
+  old gems against the new lockfile.
+* **Zero visual drift**: postcss-import@17 + hugo 0.165 produced no macOS or
+  linux baseline shifts — all gates green (critical 53 shots, dtest 34, unit
+  278, integration 11, smoke 17).
+
 ## 2026-08-17 (bet status) - Vibe Code Rescue Parked, Nov 30 suspended
 
 * **Parked until September 2026** (Paul). The vault frontmatter

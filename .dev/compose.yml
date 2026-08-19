@@ -6,7 +6,7 @@ services:
   hugo:
     # reg-node-git flavor: the dart-sass variant was discontinued upstream
     # after 0.161.1, and this site's CSS pipeline is PostCSS-only (no SCSS).
-    image: hugomods/hugo:debian-reg-node-git-non-root-0.164.0
+    image: hugomods/hugo:debian-reg-node-git-non-root-0.165.0
     working_dir: /app
     volumes:
       - ..:/app:delegated
