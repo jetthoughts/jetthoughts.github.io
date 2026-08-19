@@ -377,3 +377,4 @@ When asked to write a LinkedIn post for Paul:
 - [ ] No "learned the hard way" framing, no credential stamps
 - [ ] Save under `linkedin-posts/<campaign>/<filename>.md` with frontmatter (campaign per its plan's status banner)
 - [ ] Update the campaign plan's status if the post is the next in sequence
+- [ ] **(BLOCKING) End the handback with the preview link** - `http://localhost:<port>/linkedin/<lane>/<slug>/` on your own session port, never 1313. Applies to every CREATE **and** every UPDATE, not just when Paul asks to "review" - a reframe or a one-line edit still ships with the link. Details: `linkedin-posts/README.md` §Review board. Never paste the post body into chat instead of the link.
