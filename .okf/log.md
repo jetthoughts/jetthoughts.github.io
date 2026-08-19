@@ -1630,3 +1630,34 @@ Three durable learnings from the vendor-post rewrite + lovable-guide session:
    -ing tails, synonym cycling, vague authority, generic positive
    conclusions, chatbot artifacts, straight-quotes rule. Sweep rewrites
    against the MERGED list, not just the original §3.
+## 2026-08-19 — GSC re-baseline closes 20.09 §10 Q1; fractional-CTO cluster is cannibalised
+
+90d GSC pull (2026-05-21 → 08-18, `sc-domain:jetthoughts.com`): 433 clicks /
+438,152 impressions / 0.10% CTR / position 16.4. **Confirms `seo-review-2026-08-13`
+§1-§5 and changes no recommendation in §6.**
+
+1. **The "blocking" open question was phantom.** 20.09 §10 Q1 held a full re-plan
+   on a "fresh GSC export" that "is not in the repo". The MCP serves the data
+   live - already documented in `/workflows/analytics-access.md` since 08-13, so
+   the plan was gated on a constraint that had already been removed. *Check
+   whether a documented blocker still exists before treating it as one.*
+2. **Founder/ICP-E demand is absent, not underserved.** 27 "founder" queries ≈100
+   impressions / 0 clicks; the six 20.09 §3 P1 posts 176 / 0; all "vibe" queries
+   165 / 0; course 60+ URLs ~800 / 2 - all at good positions (5-13). Answers
+   20.09 §8's October re-check early: zero.
+3. **NEW - fractional-CTO cannibalization.** Nine pages compete. Google's chosen
+   result for the head term `fractional cto` (333 impr) is a 159-line 2024 diary
+   post at position 73, not either service page; three long-form siblings
+   (~2,900 lines) got zero impressions in 90 days. Same defect 20.09 §4 caught on
+   Rails 8 auth, in a cluster nobody audited. **Generalisation: when one split
+   cluster is found, audit the others - don't fix only the flagged instance.**
+4. **Deliberately NOT scheduled.** ~570 impressions/90d at position 43-52; a
+   perfect fix is ~15-30 clicks/quarter. Not pipeline before Dec 1. A satisfying
+   root cause is not by itself a reason to spend the hours - first-pass read this
+   session over-recommended it and was corrected against §4/§6.
+5. Pricing contradiction logged for the action-#10 sweep: `/services/fractional-cto/`
+   says $5K-$15K/mo, `/services/fractional-cto-cost/` says $5,000-$25,000/month;
+   neither in `claims-canon`.
+
+GA4 deliberately not pulled - §5 establishes ~85-90% bot traffic and
+`keyEvents = 0`, so it returns noise until instrumentation lands.
