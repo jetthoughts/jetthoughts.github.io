@@ -1,4 +1,5 @@
 ---
+thesis: AI agents earned their cost back for me only when they stopped burning tokens on the wrong work - an agent that spends your money and gets nowhere is worse than no agent.
 title: "The AI tool I gave up on, then came back to"
 lane: personal
 pillar: reaction

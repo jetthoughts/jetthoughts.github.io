@@ -1,4 +1,5 @@
 ---
+thesis: AI now beats the cheap freelancer pool, which is exactly why hiring from that pool to supervise it leaves nobody who can catch it.
 week: backlog
 day: unscheduled
 author: paul-keen

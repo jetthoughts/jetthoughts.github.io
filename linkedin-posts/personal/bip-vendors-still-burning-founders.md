@@ -1,4 +1,5 @@
 ---
+thesis: Founders still pay five figures for a first version that is not production grade, when $200 of AI buys the same non-production app and tests the idea.
 title: "Nobody tells founders the first version got cheap"
 opener_archetype: personal-witness-led
 lane: personal
@@ -54,6 +55,15 @@ notes: |
   What actually must not repeat is the STORY, not the number: slot 3 uses the
   founder as the latest instance of a pattern, slot 10 narrates his unpaid-PM
   trap. Different arguments, same evidence, three weeks apart.
+
+  THESIS PASS 2026-08-19 - one paragraph flagged, KEPT with reason. "If you already
+  paid a dev shop, most people around you would have signed the same contract."
+  does not serve the thesis (which is about price) and does not contradict it - the
+  gate's cut-or-fix case. It stays because it serves the ASK rather than the
+  argument: the 4-critic swarm added it on 2026-08-17 because icp_test cannot fire
+  without one, and asking "what were you quoted" straight after revealing $200
+  invites a confession of being overcharged, so this line makes answering safe.
+  Do not cut it on a mechanical thesis pass - the exception is deliberate.
 
   CLOSE REPLACED 2026-08-19 (Paul: "I'm not following those last lines, how are
   they related to the post idea?"). He was right and the answer is that they were
