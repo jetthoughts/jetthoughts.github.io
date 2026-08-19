@@ -1700,12 +1700,19 @@ GA4 deliberately not pulled - §5 establishes ~85-90% bot traffic and
    looks like a missing file, not a wrong cwd. Rule added to CLAUDE.md: absolute
    paths, or `cd <repo root> && cmd` in one call, or pass dirs to the tool. If a
    file you know exists reports missing, run `pwd` first.
-7. **One fact, one home - across posts, not just within one.** $40k anchored two
-   approved posts three weeks apart; Paul confirmed it was the same founder and
-   "another" meant the pattern recurs, not a second person. Split by precision:
-   the earlier post owns the RECURRENCE at "five figures", the later one owns the
-   specific $40k founder it is named for. When two posts need the same story, give
-   each a different altitude rather than repeating the anchor.
+7. **CORRECTED - do NOT strip a concrete number to avoid cross-post repetition.**
+   This entry first recorded the opposite and Paul overruled it same-day. $40k
+   appears in two approved posts (same founder, three weeks apart). The assistant
+   stripped it to "five figures" citing the cross-post repetition gate; Paul: "why
+   we cannot use $40k?". The gate is for CLUSTER posts competing on one topic, not
+   for two different arguments drawing on one real case. Stripping the number made
+   the post vaguer, which contradicts learning 5 above. Paul's real cases are
+   finite - one-story-one-post starves the pipeline. **What must not repeat is the
+   STORY, not the number:** one post uses the founder as the latest instance of a
+   pattern, the other narrates his unpaid-PM trap.
+   Also: never let a time window imply a count Paul has not claimed. "I met another
+   one this year" in mid-August implies one case per half-year and undersells him;
+   "the last one" gives recency without a rate.
 8. **Text gates cannot see exhibits.** The banned "The gap isn't tech - it's
    information" was removed from the vendors post body and kept shipping inside the
    post's SVG for the rest of the session. Sweep artwork text whenever a body

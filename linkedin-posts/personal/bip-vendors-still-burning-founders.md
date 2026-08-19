@@ -39,18 +39,25 @@ notes: |
   builder card (subscription money / one weekend / yours to test), basis
   line mirrors the post's "The gap isn't tech - it's information." Labels
   match the body's qualitative claims - no invented dollar figures.
-  ✅ ANECDOTE COLLISION RESOLVED 2026-08-19. Paul confirmed it is the SAME founder
-  as course-promo/backlog-40k-mvp-chasing-fixes (slot 10, Sep 24); by "another" he
-  meant the PATTERN recurs in his network, not a second person. So slot 3 could not
-  keep "another founder who had spent $40k" - it read as a new case and re-told slot
-  10's anchor three weeks early.
-  Split: slot 3 owns the RECURRENCE at five-figure precision ("keep turning up in my
-  network... I met another one this year"), slot 10 keeps the $40k founder and the
-  unpaid-PM story it is named for. One fact, one home. The exhibit already said
-  "five figures", so body and artwork now agree.
+  $40k SHARED WITH slot 10 ON PURPOSE (settled 2026-08-19, Paul overruled the
+  assistant). Same founder appears in course-promo/backlog-40k-mvp-chasing-fixes
+  (Sep 24). The assistant first stripped the figure to "five figures" citing the
+  cross-post repetition gate; Paul: "why we cannot use $40k?" - and he was right.
+  That gate is for CLUSTER posts competing on one topic, not for two different
+  arguments drawing on one real case. Stripping it made the post vaguer, which
+  fights the session's main lesson that Paul's concrete specifics beat abstractions.
+  Paul's real cases are also finite - one-story-one-post starves the pipeline.
+  What actually must not repeat is the STORY, not the number: slot 3 uses the
+  founder as the latest instance of a pattern, slot 10 narrates his unpaid-PM
+  trap. Different arguments, same evidence, three weeks apart.
+
+  NO COUNT IN THE OPENER (Paul, 2026-08-19). An earlier draft said "I met another
+  one this year" - in mid-August that implies one case per half-year and undersells
+  how often he sees this. "The last one" carries recency without implying a rate.
+  General rule: never let a time window imply a count Paul has not claimed.
 ---
 
-Non-technical founders who paid five figures for an MVP that barely runs keep turning up in my network. I met another one this year.
+Non-technical founders who paid for an MVP that barely runs keep turning up in my network. The last one had spent $40k.
 
 What changed is that the first rough version of most app ideas is now a weekend of work. AI app builders like Lovable or v0 cost about as much as a streaming subscription: you describe the app in plain words and get something you can click, without hiring anyone.
 

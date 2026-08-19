@@ -32,16 +32,13 @@ notes: |
       working product and getting "a part-time job chasing one".
   Number stays soft; course plug in first comment. Renamed from backlog-40k-mvp-ai-rebuild
   (the "ai rebuild" framing was factually wrong); utm updated to match.
-  ⚠️ ANECDOTE COLLISION (2026-08-19, unresolved - needs Paul). $40k anchors TWO
-  approved posts: personal/bip-vendors-still-burning-founders (slot 3, Sep 2) and
-  course-promo/backlog-40k-mvp-chasing-fixes (slot 10, Sep 24). Both also cite
-  Lovable/v0 and the same broken-MVP shape; slot 10 repeats the figure as its
-  closing line. Three weeks apart on one feed a reader sees one story twice - the
-  double-anchoring the cross-post repetition gate exists to catch. Paul wrote the
-  slot-3 opener and said "another" founder, so it may genuinely be a second case.
-  Resolutions if not: give slot 3 that founder's real number, drop the figure from
-  slot 3, or de-anchor slot 10 at its own revoice pass (its point is the unpaid-PM
-  trap, not the price).
+  $40k SHARED WITH personal/bip-vendors-still-burning-founders (Sep 2) ON PURPOSE
+  (settled 2026-08-19, Paul). Same founder. Sharing the figure is fine - the gate
+  against repetition is for cluster posts competing on one topic, not two arguments
+  using one real case. What must stay distinct is the STORY: that post uses him as
+  the latest instance of a recurring pattern, THIS post narrates his unpaid-PM trap
+  and is named for the figure. Keep the narration here; do not let the other post
+  grow into a retelling.
 ---
 
 A founder showed me an MVP he'd paid $40k for. Three months of work from a team on Upwork.
