@@ -14,7 +14,7 @@ first_comment: |
   The full ritual is written up as a course chapter, the 7 questions included - nothing to sign up for: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_friday_demo&utm_content=status-meetings-friday-demo
 status: approved
 stage: next
-proposed_for: "2026-08-26 17:00 CEST"
+proposed_for: "2026-10-07 17:00 CEST"
 notes: |
   Side-path post (course-promo plan, Week 6+ "Already started building?" family).
   Requested by Paul 2026-08-17. Angle: the kill-the-status-meeting discourse is

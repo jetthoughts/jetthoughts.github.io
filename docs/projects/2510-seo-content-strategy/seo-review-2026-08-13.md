@@ -240,3 +240,122 @@ Same file, `additionalProperty` block: `Client Retention Rate 95%`, `Success Rat
 `Years of Experience 13+` are published as schema `PropertyValue` with no cited source.
 `content/pages/about-us/index.md:27` claims *"95% client retention rate—highest in the industry for
 development agencies"* - a superlative with no source. Fold into action #8 when it runs.
+
+---
+
+## 9. GSC re-baseline (2026-08-19) — closes 20.09 §10 Q1
+
+**Window**: 2026-05-21 → 2026-08-18 (90d), `sc-domain:jetthoughts.com`, WEB.
+**Why**: [`20.09 §10 Q1`](20-29-strategy/20.09-content-plan-revision-aug-2026.md)
+blocks a full re-plan on a fresh GSC pull ("the export is not in the repo"). Pulled
+live via the GSC MCP; no export file needed. **20.09 §10 Q1 is closed.**
+
+GA4 was not pulled — §5 above already establishes it is ~85-90% bots with
+`keyEvents = 0`. Reconnecting GA4 returns noise until actions #1 and #2 land.
+Do not block a re-plan on it.
+
+### 9.1 Totals (re-baseline figures)
+
+| Metric | 90d | vs §2 (28d, to Aug 10) |
+|---|---|---|
+| Clicks | 433 | ~4.8/day — consistent |
+| Impressions | 438,152 | — |
+| CTR | 0.10% | 0.13% |
+| Avg position | 16.4 | 18.5 |
+
+**Confirms, does not change, §1-§5.** Position decay, impression pollution,
+invisible commercial pages, and the zero-click founder cluster all reproduce on the
+90-day window. No recommendation in §6 changes. Specifically re-confirmed:
+
+- **Junk impressions are worse than §2 measured.** Four pages carry 147,005
+  impressions (34% of total) for 22 clicks (5%): `elital…/upwork-login` (56,605/8),
+  `langgraph-workflows` (40,853/3), `self-promote-on-reddit` (28,268/7),
+  `laravel-11-migration` (21,279/4). Action #3 stands and is now the largest
+  single distortion in the dataset.
+- **Founder/ICP-E demand does not exist at usable volume.** All 27 queries
+  containing "founder": ~100 impressions, **0 clicks**. The six 20.09 §3 P1 posts:
+  176 impressions, **0 clicks**. All "vibe" queries: 165 impressions, 0 clicks.
+  Course (60+ URLs): ~800 impressions, 2 clicks, at *good* positions (5-13).
+  Action #6 stands.
+- **20.09 §8's October founder-post re-check can be resolved now: zero.** Positions
+  are fine; the search volume is not there. This is a demand finding, not a quality
+  one, and it is the evidence base for §7's "sales enablement need not rank".
+
+### 9.2 NEW — the fractional-CTO cluster is cannibalised, and Google picked the worst page
+
+§4 records `/services/fractional-cto-cost/` at position 48.2 but not *why*. The
+query×page breakdown gives the mechanism.
+
+For the head term **`fractional cto` (333 impressions, the highest-volume commercial
+query on the site)** Google's chosen page is:
+
+> `blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management`
+> — a **159-line 2024 diary post** about someone's first two weeks. Position **73.1**.
+
+Not the service page. Not the cost page. That same diary post is the chosen result
+for ~15 further head-term variants (`fractional cto meaning` pos 89.1, `fractional
+ctos` pos 80.4, `fractional cto for startups` pos 75.8, `fractional cto reading`
+pos 48.2, …). Its totals: **625 impressions, 0 clicks, avg position 61.9.**
+
+Nine pages compete on the term. The split Google has settled on:
+
+| Query shape | Page it serves | Impr | Pos |
+|---|---|---|---|
+| head (`fractional cto`, `…meaning`, `…for startups`) | 2024 diary post (159 ln) | 625 | 61.9 |
+| commercial (`…services`, `…companies`, geo) | `/services/fractional-cto/` (54 ln) | 528 | 15.8 |
+| cost (`…cost`, `…rates`, `…hourly rate`) | `/services/fractional-cto-cost/` (229 ln) | 237 | 48.2 |
+
+**Three long-form posts in the cluster returned zero impressions in 90 days:**
+
+| Post | Lines | Note |
+|---|---|---|
+| `fractional-cto-roi-calculator-startup-decision-framework` | 1,646 | frontmatter `keywords` leads with **"fractional cto cost"** — the exact primary of the 229-line service page |
+| `fractional-vs-full-time-cto-cost-benefit-analysis-growing-companies` | 737 | near-duplicate of the row below; both claim "60-80% savings" |
+| `fractional-cto-vs-full-time-cto-complete-comparison-2025` | 560 | near-duplicate of the row above |
+
+~2,900 lines Google does not surface at all. This is the same defect 20.09 §4
+caught on Rails 8 authentication, in a cluster nobody audited.
+
+### 9.3 NEW — contradictory fractional-CTO pricing, unsourced
+
+| Page | Published figure |
+|---|---|
+| `content/services/fractional-cto/index.md` (title + body) | **$5K-$15K/mo** |
+| `content/services/fractional-cto-cost/index.md` (description) | **$5,000-$25,000/month** |
+
+Different ceilings on two pages about the same service. Neither figure appears in
+[`claims-canon.md`](/.okf/content/claims-canon.md). Per CLAUDE.md a published number
+with no in-repo source is a defect. **Fold into action #10** (the unsourced-numbers
+sweep) — which number is correct is Paul's call, not a content fix.
+
+### 9.4 Recommendation — do NOT act on 9.2 before Dec 1
+
+9.2 is a real, cheap, deletion-shaped fix, and it is still the wrong thing to do now.
+
+The whole addressable prize is ~570 impressions/90d of cost/rate intent at position
+43-52. A *perfect* consolidation landing at position 10 yields roughly 15-30
+clicks/quarter. That is not pipeline, and §6's logic ("measurement-first, then
+stop") applies unchanged. Chasing it before action #2 also means grading the fix
+against numbers §1 already declared untrustworthy.
+
+**Logged as ready-to-execute for whenever SEO reopens** (post-Dec 1, or if the bet
+resolves early). When it runs, the shape is consolidation, not writing:
+
+1. Make `/services/fractional-cto/` canonical for the head term.
+2. 301 the 2024 diary post into it; merge anything unique first.
+3. Resolve ROI-calculator vs `/services/fractional-cto-cost/` — one owns "cost".
+4. Merge the two near-duplicate vs-full-time posts into one.
+
+Correction to this session's first-pass read, recorded so it is not repeated: 9.2
+was initially surfaced as "fix the fractional-CTO pages before writing anything
+else." Against §4 and §6 that was an over-recommendation — the cluster is invisible
+*and* low-value, and finding a satisfying root cause is not by itself a reason to
+spend the hours before Dec 1.
+
+### 9.5 Minor — AI-assistant-shaped queries are appearing
+
+Conversational strings now surface real impressions: `i need to find a fractional
+cto to help align my product roadmap.` (5 impr, pos 21.8), `list companies offering
+fractional cto services with their pricing.` (5), `show me the best fractional cto
+providers for a growing startup.` (1). Volume is negligible; logged only as early
+evidence for 20.09 §10's AI-Overviews concern. **Not** a reason to act.

@@ -10,6 +10,8 @@ generated:
 verified:
   - by: claude/opus-5
     at: 2026-08-13T09:56:20Z
+  - by: claude/opus-5
+    at: 2026-08-19T00:00:00Z
 ---
 
 # Plan of record (2026-08-07)
@@ -51,6 +53,38 @@ The linking posts have near-zero organic traffic themselves, so there is no
 equity to pass. Internal linking was necessary and is not sufficient; the
 constraint is that no rescue-intent page has search demand reaching it
 (`dev shop` query cluster: 99 impressions, 0 clicks over 90 days).
+
+# GSC re-baseline (2026-08-19): 20.09 §10 Q1 closed, plan unchanged
+
+90d pull (2026-05-21 → 08-18): 433 clicks, 438,152 impressions, 0.10% CTR,
+position 16.4. **Confirms the plan; revises nothing.** 20.09 §10 Q1 listed a
+"fresh GSC export" as blocking a re-plan - it never was, the MCP pulls live
+(see [analytics-access](/workflows/analytics-access.md)).
+
+Two Tier-2 questions are answerable early:
+- **Founder-post clicks = 0.** All 27 "founder" queries ≈100 impressions/0 clicks;
+  the six §3 P1 posts 176 impressions/0 clicks; all "vibe" queries 165/0; course
+  (60+ URLs) ~800/2 - at *good* positions (5-13). A demand finding, not a quality
+  one. It is the evidence for §7's "sales enablement need not rank".
+- **The fractional-CTO cluster has the §4 cannibalization defect.** Nine pages
+  compete; Google's chosen page for the head term `fractional cto` (333 impr, the
+  site's highest-volume commercial query) is a **159-line 2024 diary post**
+  (`fractional-cto-comprehensive-review-of-first-two-weeks…`) at **position 73**,
+  not either service page. Three long-form siblings (1,646 + 737 + 560 lines,
+  ~2,900 total) returned **zero impressions in 90 days**; the 1,646-line ROI
+  calculator targets keyword "fractional cto cost", the exact primary of
+  `/services/fractional-cto-cost/`.
+
+**Do NOT fix it before Dec 1.** The whole prize is ~570 impressions/90d at
+position 43-52; a perfect consolidation yields ~15-30 clicks/quarter. Not
+pipeline. Logged ready-to-execute (consolidate, don't write) in
+[`seo-review-2026-08-13.md` §9.4](https://github.com/jetthoughts/jetthoughts.github.io/blob/master/docs/projects/2510-seo-content-strategy/seo-review-2026-08-13.md).
+Generalises §4: **audit a cluster before assuming only the flagged one is split** -
+Rails 8 auth was caught, fractional-CTO ran unaudited for two years.
+
+Also logged for the claims sweep: `/services/fractional-cto/` publishes
+**$5K-$15K/mo** while `/services/fractional-cto-cost/` publishes
+**$5,000-$25,000/month**. Neither is in [claims-canon](/content/claims-canon.md).
 
 # News policy: durable vs event (2026-08-07)
 

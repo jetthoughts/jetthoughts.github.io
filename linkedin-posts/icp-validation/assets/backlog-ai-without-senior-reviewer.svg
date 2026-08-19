@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
+  <title id="t">A supervisor has to outrank the machine. AI already beats the pool you hire from cheap, so hiring below that line leaves nobody who can catch it.</title>
+  <desc>Three stacked cards on a rising judgment axis. Top, blue: someone who can overrule the AI - what supervision needs. Middle, amber: the AI - the bar it already set. Bottom, red: a cheap Upwork hire - the pool the AI beats. Basis: hire below that line and nobody can catch what it gets wrong.</desc>
+  <defs>
+    <style>
+      .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
+      .title{ font-size: 30px; font-weight: 700; fill: #1a1a1a; }
+      .sub  { font-size: 23px; fill: #666; font-style: italic; }
+      .head { font-size: 25px; font-weight: 700; }
+      .note { font-size: 18px; font-style: italic; }
+      .axis { font-size: 20px; fill: #2b7fff; font-style: italic; }
+      .basis{ font-size: 20px; fill: #666; font-style: italic; }
+      .blue { fill: #eff6ff; stroke: #2b7fff; stroke-width: 2.5; }
+      .amber{ fill: #fffbeb; stroke: #f59e0b; stroke-width: 2.5; }
+      .red  { fill: #fef2f2; stroke: #e5484d; stroke-width: 2.5; }
+    </style>
+    <filter id="gb" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#2b7fff" flood-opacity="0.45"/></filter>
+    <filter id="ga" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#f59e0b" flood-opacity="0.45"/></filter>
+    <filter id="gr" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#e5484d" flood-opacity="0.45"/></filter>
+    <marker id="up" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b7fff"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" class="h title">A supervisor has to outrank the machine</text>
+  <text x="360" y="76" text-anchor="middle" class="h sub">AI already beats the pool you hire from cheap.</text>
+
+  <!-- rising judgment axis -->
+  <line x1="152" y1="400" x2="152" y2="106" stroke="#2b7fff" stroke-width="2.5" marker-end="url(#up)"/>
+  <text x="132" y="245" text-anchor="middle" class="h axis" transform="rotate(-90 132 245)">judgment</text>
+
+  <!-- what supervision needs -->
+  <g transform="rotate(-0.3 415 149)">
+    <rect x="220" y="108" width="390" height="82" rx="16" class="blue"/>
+    <text x="415" y="142" text-anchor="middle" class="h head" fill="#2b7fff" filter="url(#gb)">Can overrule the AI</text>
+    <text x="415" y="170" text-anchor="middle" class="h note" fill="#1d4ed8">what supervision actually needs</text>
+  </g>
+
+  <!-- the machine -->
+  <g transform="rotate(-0.3 415 249)">
+    <rect x="220" y="212" width="390" height="82" rx="16" class="amber"/>
+    <text x="415" y="246" text-anchor="middle" class="h head" fill="#b45309" filter="url(#ga)">The AI</text>
+    <text x="415" y="274" text-anchor="middle" class="h note" fill="#b45309">the bar it already set</text>
+  </g>
+
+  <!-- the pool founders shop in -->
+  <g transform="rotate(-0.3 415 349)">
+    <rect x="220" y="316" width="390" height="82" rx="16" class="red"/>
+    <text x="415" y="350" text-anchor="middle" class="h head" fill="#e5484d" filter="url(#gr)">Cheap Upwork hire</text>
+    <text x="415" y="378" text-anchor="middle" class="h note" fill="#b91c1c">the pool the AI beats</text>
+  </g>
+
+  <text x="360" y="452" text-anchor="middle" class="h basis">Hire below that line and nobody can catch what it gets wrong.</text>
+</svg>

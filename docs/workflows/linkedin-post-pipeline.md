@@ -14,6 +14,8 @@
 2. `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` — ICP-E definition, pain language, control-loss patterns
 3. `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` — voice formula, banned words, anti-AI structural patterns
 4. **This file** — LinkedIn-specific rules that override or extend the blog voice guide
+5. `linkedin-posts/story-bank.md` — Paul's real cases, convictions, and the interview backlog. Value-pillar posts run on real material or they do not get drafted.
+6. `linkedin-posts/reference-examples.md` — the writers Paul rates, with the moves to copy. Copy the named move only, not every property the quote happens to carry; the Holub entry flags a construction that is legal only under voice-guide §3's attribution test.
 
 If this file conflicts with a generic writing, SEO, or humanizer skill, this file wins for LinkedIn drafts.
 
@@ -71,6 +73,26 @@ The validation plan offers artifact CTAs ("Comment DEMO and I'll send the script
 
 **Engagement loop replacement:** Open with anecdote → state conviction → give the tactical content → close with a peer question that invites founders to share their own experience. Founders who self-identify in the comments are still the ICP signal — earned through conversation, not gated by an artifact.
 
+### Gloss by mechanic, not by parenthetical (Paul liked this, 2026-08-19)
+
+When a post names a tool or term the ICP may not know, explain it with **a plain
+second sentence describing what it does**, not a parenthetical definition and not a
+simile.
+
+| ✅ Paul flagged this as the version that worked | ❌ What it replaced |
+|---|---|
+| "That same first version is now a weekend with Lovable or v0. **You describe what you want and it builds it.** Even on the priciest models, $200 covers it." | "AI app builders like Lovable or v0 cost about as much as a streaming subscription: you describe the app in plain words and get something you can click, without hiring anyone." |
+
+Three things the good version does: names the concrete thing in a short declarative,
+gives the mechanic as its own plain sentence, and **replaces the simile with the real
+number**. A simile ("costs about as much as a streaming subscription") is what you
+write when you don't have the figure - if the figure exists, use it.
+
+Note this differs from the course rule in `.okf/content/voice-rules.md` ("gloss at
+first mention with a plain-words parenthetical"), which is correct for the course's
+patient second-person register. LinkedIn is shorter and first-person: a parenthetical
+reads as a footnote, a mechanic sentence reads as speech.
+
 ### Voice formula
 
 JetThoughts blog voice: 70% Walling directness + 30% Fishkin vulnerability.
@@ -90,7 +112,7 @@ These all come from the main voice guide but get violated most often in short Li
 | Slogany meta-opener | "I keep relearning this." | (Delete or replace with concrete observation) |
 | Triple rhetorical questions | "Why? How? What now?" | One real question, anchored to the reader's situation |
 | Impersonal fragment stacking (3+) | "No tests. Open endpoints. Corrupted data." | Add a human subject or merge into one sentence |
-| Tweetable negative-positive flip | "X isn't Y. X is Z." | Use sparingly — once per post max |
+| Tweetable negative-positive flip | "X isn't Y. X is Z." | Use sparingly — once per post max, **and only if it passes the attribution test** (voice-guide 90.11 §3): the text must name WHO holds the negated belief within one sentence of it. No named population, no negation. |
 | Generic LinkedIn close | "Curious to hear your thoughts!" | Specific provocation tied to the post topic |
 | Em dashes | `—` | `-` (always) |
 | Fake authority count | "We've seen this 50 times" | Tenure ("17 years") or specific case ("last week") |
@@ -244,7 +266,7 @@ For each "high"-severity flag below, +2. For each "medium," +1.
 | Em dash anywhere in body | High |
 | Signposting ("three things will...", "here's the thing") | Medium |
 | Slogany meta-opener / aphoristic close | Medium |
-| Tweetable negative-positive flip > 1 in post | Medium |
+| Tweetable negative-positive flip > 1 in post, or any flip failing the attribution test (90.11 §3) | Medium |
 | 3+ consecutive impersonal fragments | Medium |
 | "We've seen this 50 times" / fabricated count | Medium |
 
@@ -361,7 +383,8 @@ This caught a real bug in Monday's draft where the `cta:` field went out of sync
 
 When asked to write a LinkedIn post for Paul:
 
-- [ ] Read the 4 mandatory pre-writing files
+- [ ] Read the mandatory pre-writing files
+- [ ] **(BLOCKING) Source the specifics BEFORE drafting.** Pull the anecdote, number or incident from `story-bank.md`. If the post needs a detail that isn't there, **ask Paul first** and add his answer to the bank. Do not draft an abstraction as a placeholder and hope the real detail arrives in review. That cost ~6 correction rounds on 2026-08-19 (`reaction-claude-code-trust`, `backlog-ai-without-senior-reviewer`); both posts only worked once Paul wrote the material himself, and everything invented to stand in for it was deleted.
 - [ ] Identify which week/day in the validation plan
 - [ ] Identify which hypothesis the post tests
 - [ ] Scan last 2-3 posts for opener archetype; pick a different one
@@ -373,7 +396,9 @@ When asked to write a LinkedIn post for Paul:
 - [ ] If campaign post or first in sequence: spawn multi-critic review (Editing methodology §3)
 - [ ] If the user flags the same draft as "AI", "sales-y", "fluffy", or "not human" a SECOND time, spawn multi-critic review (Editing methodology §3) BEFORE iterating again. Solo revision past the second user pushback consistently misses pattern-level tells (cinematic beat-marking, omniscient framing, copywriter shape) that single-pass review keeps missing — observed on the 2026-05-11 Monday Jira-not-progress post, which needed 5 solo passes after the AI rubric scored 0/10.
 - [ ] Run frontmatter-to-body consistency check (Editing methodology §4)
+- [ ] **(BLOCKING) Thesis pass - run on the FIRST draft and on EVERY revision.** Write the post's argument as one sentence in the frontmatter (`thesis:`). Then read each paragraph and ask only: *does this serve that sentence, or contradict it?* Cut or fix anything that does neither. **Re-run after any rewrite** - a close or a caveat that fitted the OLD thesis survives every voice gate (well-written, unbanned, on-brand) and is simply about a different post. Four of Paul's 2026-08-19 corrections were this exact defect: a welded complaint, a caveat contradicting the post's own argument, a self-contradiction ("non-working" vs "good enough to test"), and an orphaned closing question that fitted the pre-rewrite thesis.
 - [ ] No marketing CTA, no JT mention, no website link
 - [ ] No "learned the hard way" framing, no credential stamps
 - [ ] Save under `linkedin-posts/<campaign>/<filename>.md` with frontmatter (campaign per its plan's status banner)
 - [ ] Update the campaign plan's status if the post is the next in sequence
+- [ ] **(BLOCKING) End the handback with the preview link** - `http://localhost:<port>/linkedin/<lane>/<slug>/` on your own session port, never 1313. Applies to every CREATE **and** every UPDATE, not just when Paul asks to "review" - a reframe or a one-line edit still ships with the link. Details: `linkedin-posts/README.md` §Review board. Never paste the post body into chat instead of the link.
