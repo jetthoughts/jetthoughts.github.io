@@ -47,7 +47,28 @@ notes: |
   The point is now carried by the concrete instead - couldn't predict it, diffs
   hold run after run, check behind. Shown, not announced.
 
-  102 words, up from 75 - the Rossi opener costs a sentence the redemption arc did
+  NEGATIVE PARALLELISM removed 2026-08-19 (Paul asked whether "X, not A, but B" is
+  slop - it is, and by name). voice-guide 90.11:223 bans it outright: `"It's not X
+  - it's Y" / "Not just A, but B"` -> "Pick one framing and commit." The revoice
+  above shipped "not because the code was bad but because I couldn't predict it",
+  which is that family exactly. Now committed to one framing: "because I couldn't
+  predict what they'd do."
+
+  It was also REDUNDANT, which is the better reason to cut it: the opener already
+  negates the code-quality assumption ("stuck on whether they're smart enough. That
+  was never what decided it for me"), so the middle paragraph was re-negating a
+  belief the post had already dismissed a line earlier.
+
+  ⚠️ UNRESOLVED DOC CONFLICT for Paul: `reference-examples.md` quotes Holub
+  approvingly using this very construction - "Product work is not a distraction
+  from the work; it is the work." So the voice guide bans a shape the reference
+  file models. Suggested resolution (Paul's call, not applied): the shape earns its
+  place only when the negated half is a belief the READER actually holds - Holub
+  negates a live assumption, slop negates a strawman for rhythm. Either the guide
+  carries that exception or reference-examples notes that line is quoted for the
+  conviction, not the construction.
+
+  97 words, up from 75 - the Rossi opener costs a sentence the redemption arc did
   not need. Still short for the feed. Kept every concrete technical noun
   (Opus, team mode, diffs, workflow) - that specificity IS Paul's register per the
   reference doc, closer to Holub than to a LinkedIn insight post.
@@ -60,7 +81,7 @@ notes: |
 
 The argument about AI coding agents is stuck on whether they're smart enough. That was never what decided it for me.
 
-I walked away from them over the winter, not because the code was bad but because I couldn't predict it. Too much setup, and they ignored half the instructions I gave them.
+I walked away from them over the winter because I couldn't predict what they'd do. Too much setup, and they ignored half the instructions I gave them.
 
 Claude Code brought me back. Opus and team mode cut most of the configuration, and it does what I tell it. I hand a whole workflow to a team of agents and the diffs hold together, run after run.
 
