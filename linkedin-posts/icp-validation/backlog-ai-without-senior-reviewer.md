@@ -5,8 +5,8 @@ author: paul-keen
 voice: personal-first-person
 pillar: technical-oversight
 hypothesis: H1, H2
-icp_test: Does a pro-AI framing ("AI beats the freelancer you'd have hired, which is exactly why it needs a supervisor") pull founders who are building with AI - as distinct from backlog-vibe-coding-disposable, which tests rewrite-cost pain?
-cta: Open question asking who checks the work when the founder is the only person on their side
+icp_test: Does the supervisor-must-outrank-the-AI trap land with founders building with AI - i.e. that the cheap pool AI already beats is therefore the pool that cannot supervise it? Distinct from backlog-vibe-coding-disposable, which tests rewrite-cost pain.
+cta: Open question asking who on the founder's side outranks the AI
 utm_campaign: icp_validation_technical_oversight
 utm_content: ai-without-senior-reviewer
 status: draft
@@ -53,16 +53,35 @@ notes: |
   - Restored Beat 5 (the reflect pass cut it and never replaced it) and closed on
     the one-person-on-your-side case the ICP reader raised.
 
+  REVISION 2026-08-19 (Paul: "need to shorter" + the thesis was not landing).
+  163 -> 127 words. The missing link in the argument was the SUPERIORITY step: the
+  earlier draft said AI beats Upwork freelancers and separately that it needs
+  supervision, but never joined them. Joined now, and it is the whole post: a
+  supervisor only works if they outrank the thing supervised, so the cheap pool the
+  AI already beats is by definition the pool that cannot supervise it. Hiring cheap
+  to "run the AI" is self-defeating, not merely cheap.
+
+  Dropped in the cut: the slow-contractor-warns-you-for-free mechanism and the
+  you-don't-need-to-read-the-code beat. Both were good lines; neither served the
+  superiority thesis, and length was the binding constraint. Recoverable from git
+  if the trap framing tests worse than the no-warning-signal framing.
+
+  Upwork is now load-bearing, not decorative - the trap does not exist without it.
+  That weakens the earlier option to swap it for "cheap contractors": the post can
+  still work, but it loses the specific pool-overlap that makes the argument bite.
+
   AI self-score: 0/10. Zero tweetable flips, no rule-of-three, no signposting, no
-  credential stamp, no em dashes, no CTA, no JT mention, no links.
+  credential stamp, no em dashes, no CTA, no JT mention, no links. No cold-eyes
+  panel re-run: Paul's notes were length and clarity of thesis, not a voice
+  failure, so the second-pushback panel trigger did not fire.
 ---
 
-AI writes better code than most of the freelancers founders hire off Upwork. It doesn't go quiet on you, and it doesn't hand back something half-finished.
+AI writes better code than most of the freelancers you'll find on Upwork. That part is real.
 
-That is what makes it risky with nobody checking it. A contractor out of his depth warns you for free: the work slows down and you start asking questions. The AI never slows down. It works at the same speed whether the choice was right or wrong, so nothing tells you to look.
+But it still needs supervision, and supervision only works if the supervisor is better than the thing being supervised. Otherwise they just approve whatever came out.
 
-Ask to see the last thing your developer pushed back on. Not whether they review the AI's work, everyone says yes to that. Ask them to name one thing it wrote that they disagreed with, and what they did instead. Someone supervising has a specific answer ready. If it stays general, the AI is going straight into your product.
+That's the hard part. The people who can out-judge the AI aren't the ones bidding cheap on Upwork, because that's the pool the AI already beats. So hiring a cheap developer to run the AI leaves you with nobody who can catch it.
 
-You don't need to read the code to find out whether anyone else has.
+Ask your developer to name the last thing the AI got wrong that they caught, and what they did instead. No answer means the AI is the senior one on your project.
 
-If you're the only person on your side, who checks it?
+Who on your side is better than the AI?
