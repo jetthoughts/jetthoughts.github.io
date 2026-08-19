@@ -103,7 +103,7 @@ notes: |
 
 AI writes better code than most of the freelancers you'll find on Upwork.
 
-But it still needs supervision, and supervision only works if the supervisor is better than the thing being supervised. Otherwise they just approve whatever came out.
+But the supervisor should be better than the AI. Otherwise they just approve whatever came out.
 
 The people who can out-judge the AI are not the ones bidding at the cheap end of Upwork. Hiring there to run the AI leaves you with nobody who can catch it.
 

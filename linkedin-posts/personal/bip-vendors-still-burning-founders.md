@@ -41,9 +41,9 @@ notes: |
   match the body's qualitative claims - no invented dollar figures.
 ---
 
-It's hard to watch a founder hand over five figures and months of runway for a build that barely runs.
+In 2026 I met another non-technical founder who had spent $40k on a broken MVP.
 
-It still happens constantly, and what changed in 2026 is that the first rough version of most app ideas is now a weekend of work. AI app builders like Lovable or v0 cost about as much as a streaming subscription: you describe the app in plain words and get something you can click, without hiring anyone.
+What changed is that the first rough version of most app ideas is now a weekend of work. AI app builders like Lovable or v0 cost about as much as a streaming subscription: you describe the app in plain words and get something you can click, without hiring anyone.
 
 That gets you far enough to find out whether anyone wants it. Putting it in front of paying customers still needs someone who knows what they're reading.
 
