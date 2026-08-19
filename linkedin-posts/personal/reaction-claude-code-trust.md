@@ -66,12 +66,42 @@ notes: |
   3. TIGHTENED the grievance. "and I still had to rebuild" -> "and still made me
      rebuild" - one clause, agents stay the subject doing the damage.
 
-  DELIBERATELY KEPT, against a stricter Holub reading: "Now I sleep at night". Holub
-  and Paolino usually land flat on the sharpest observation, and a purist pass would
-  cut an emotional closer. It stays because it is PAUL'S line and it is concrete
-  (a consequence, not a feeling-word), and because the conviction line now carries
-  the flat-landing job. PAUL: if you want the Holub ending, delete that last
-  sentence and the post ends on "...without me installing extra tools."
+  CLOSER FIXED 2026-08-19, two corrections from Paul, both accepted:
+
+  1. "Now I sleep at night" was a FACTUAL OVERCLAIM. It implies he did not sleep
+     before. His words: "I have slept before too, but now without worrying, so I
+     sleep good." The change is the worry, not the sleeping. Now "Now I sleep well".
+     This is the manufactured-drama family the voice guide bans - it borrows an
+     insomnia image the author never had, for effect.
+  2. "a pile of tokens hitting the limit" welded TWO different complaints into one
+     phrase: burning tokens on nothing, and being cut off mid-run by the limit.
+     Paul: "too much confusions... I'd stick with pile of tokens." Kept the waste,
+     dropped the interruption.
+
+  Structural bonus from (2): the post no longer says "limit" twice. The grievance
+  paragraph owns the rate-limit complaint, the closer owns the waste complaint.
+  Each idea is stated once, in one place.
+
+  STRICT HOLUB PASS APPLIED 2026-08-19, superseding both corrections above. Paul:
+  "i'd stick with Holub and rewrite/remove if they would." The sleep closer is gone.
+
+  Deleting it alone was NOT the right move - that lands the post on "...without me
+  installing extra tools", a feature detail and the flattest line in the piece.
+  reference-examples says Holub and Paolino "land on the sharpest observation and
+  stop", so the conviction moved from the middle to the end and the post now closes
+  on it. Three beats: grievance, resolution, conviction. No question, no emotional
+  wrap, no lesson addressed to the reader.
+
+  Cost of the move, accepted: the conviction explains why he LEFT, so sitting after
+  the came-back beat it reads as a standing principle rather than his reasoning at
+  the time. That is the correct register for Holub anyway - a claim about agents in
+  general, not a report of what he was thinking.
+
+  Paul's two closer corrections ("sleep well" not "sleep at night"; drop the limit
+  clause, keep the token waste) are preserved in git one commit back if the closer
+  ever returns. They were right and would apply again.
+
+  68 words, down from 90.
 
   ✅ PAUL'S OWN DRAFT, 2026-08-19 - this body is his, not a rewrite of mine. He sent
   the version he would write and it replaced the assistant draft wholesale. Only the
@@ -134,8 +164,6 @@ notes: |
 
 Last winter I cancelled my AI subscriptions on purpose. The agents burned through every rate limit and still made me rebuild their whole context each time.
 
-An agent that spends your tokens and gets nowhere is worse than no agent.
-
 Opus family models and team mode brought me back. It stopped making excuses for not following our workflows, and it runs consistent loops without me installing extra tools.
 
-Now I sleep at night, because it won't spend a pile of tokens hitting the limit with nothing to show for it.
+An agent that spends your tokens and gets nowhere is worse than no agent.
