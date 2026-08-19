@@ -39,19 +39,18 @@ notes: |
   builder card (subscription money / one weekend / yours to test), basis
   line mirrors the post's "The gap isn't tech - it's information." Labels
   match the body's qualitative claims - no invented dollar figures.
-  ⚠️ ANECDOTE COLLISION (2026-08-19, unresolved - needs Paul). $40k anchors TWO
-  approved posts: personal/bip-vendors-still-burning-founders (slot 3, Sep 2) and
-  course-promo/backlog-40k-mvp-chasing-fixes (slot 10, Sep 24). Both also cite
-  Lovable/v0 and the same broken-MVP shape; slot 10 repeats the figure as its
-  closing line. Three weeks apart on one feed a reader sees one story twice - the
-  double-anchoring the cross-post repetition gate exists to catch. Paul wrote the
-  slot-3 opener and said "another" founder, so it may genuinely be a second case.
-  Resolutions if not: give slot 3 that founder's real number, drop the figure from
-  slot 3, or de-anchor slot 10 at its own revoice pass (its point is the unpaid-PM
-  trap, not the price).
+  ✅ ANECDOTE COLLISION RESOLVED 2026-08-19. Paul confirmed it is the SAME founder
+  as course-promo/backlog-40k-mvp-chasing-fixes (slot 10, Sep 24); by "another" he
+  meant the PATTERN recurs in his network, not a second person. So slot 3 could not
+  keep "another founder who had spent $40k" - it read as a new case and re-told slot
+  10's anchor three weeks early.
+  Split: slot 3 owns the RECURRENCE at five-figure precision ("keep turning up in my
+  network... I met another one this year"), slot 10 keeps the $40k founder and the
+  unpaid-PM story it is named for. One fact, one home. The exhibit already said
+  "five figures", so body and artwork now agree.
 ---
 
-In 2026 I met another non-technical founder who had spent $40k on a broken MVP.
+Non-technical founders who paid five figures for an MVP that barely runs keep turning up in my network. I met another one this year.
 
 What changed is that the first rough version of most app ideas is now a weekend of work. AI app builders like Lovable or v0 cost about as much as a streaming subscription: you describe the app in plain words and get something you can click, without hiring anyone.
 
