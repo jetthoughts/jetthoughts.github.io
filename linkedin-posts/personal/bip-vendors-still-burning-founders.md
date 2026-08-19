@@ -81,8 +81,8 @@ That same first version is now a weekend with Lovable or v0. You describe what y
 
 You get the same non-working app. It is good enough to test the idea, and you save about $39k.
 
-Nobody tells founders this. The vendor has no reason to, and the tools moved faster than anyone giving advice. The gap is information.
+Nobody tells founders this. The vendor has no reason to, and the tools got cheap faster than the advice caught up.
 
-If you already paid for one, most people around you would have signed the same contract.
+If you already paid a dev shop, most people around you would have signed the same contract.
 
 What did the vendor tell you before you signed? That part never gets written down.
