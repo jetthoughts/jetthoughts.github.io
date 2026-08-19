@@ -55,6 +55,20 @@ notes: |
   founder as the latest instance of a pattern, slot 10 narrates his unpaid-PM
   trap. Different arguments, same evidence, three weeks apart.
 
+  PARAGRAPH 3 IS THE THESIS (Paul, 2026-08-19) - do not soften it again. The
+  assistant had written "Putting it in front of paying customers needs someone who
+  can read the code", added to resolve a contradiction with the Aug 26 supervisor
+  post. Paul: redundant, and it conflicts with the actual idea. His point is that
+  BOTH versions are non-working - the $40k dev-shop build barely ran either - so
+  implying the paid route bought you a code reader is false to his own story and
+  blunts the punch. Now: "You get the same non-working app. It is good enough to
+  test the idea, and you save about $39k."
+
+  This resolves the Aug 26 contradiction BETTER than the sentence it replaced. That
+  post says AI output needs a supervisor who outranks it; this post now explicitly
+  disclaims the AI build as non-working and scopes it to testing the idea. No
+  hiring advice in either direction, and the stages no longer overlap.
+
   NO COUNT IN THE OPENER (Paul, 2026-08-19). An earlier draft said "I met another
   one this year" - in mid-August that implies one case per half-year and undersells
   how often he sees this. "The last one" carries recency without implying a rate.
@@ -65,7 +79,7 @@ Non-technical founders who paid for an MVP that barely runs keep turning up in m
 
 That same first version is now a weekend with Lovable or v0. You describe what you want and it builds it. Even on the priciest models, $200 covers it.
 
-That gets you far enough to find out whether anyone wants it. Putting it in front of paying customers needs someone who can read the code.
+You get the same non-working app. It is good enough to test the idea, and you save about $39k.
 
 Nobody tells founders this. The vendor has no reason to, and the tools moved faster than anyone giving advice. The gap is information.
 
