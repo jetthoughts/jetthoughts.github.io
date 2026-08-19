@@ -11,7 +11,8 @@ utm_campaign: icp_validation_technical_oversight
 utm_content: ai-without-senior-reviewer
 image: "assets/backlog-ai-without-senior-reviewer.png"
 visual: assets/backlog-ai-without-senior-reviewer.png (judgment-ladder exhibit - supervisor above the AI, cheap hire below it)
-status: draft
+proposed_for: "2026-10-21 17:00 CEST"
+status: approved
 notes: |
   LinkedIn is the PRIMARY surface for this idea, not the blog. GSC 90d: the whole
   AI-supervision cluster sits at ~62 impressions / 0 clicks with zero "ai code"
