@@ -43,10 +43,12 @@ notes: |
 
 It's hard to watch a founder hand over five figures and months of runway for a build that barely runs.
 
-It still happens constantly, and what changed in 2026 is that the first rough version of most app ideas is now a weekend of work. AI app builders like Lovable or v0 cost about as much as a streaming subscription: you describe the app in plain English, and no developer is needed.
+It still happens constantly, and what changed in 2026 is that the first rough version of most app ideas is now a weekend of work. AI app builders like Lovable or v0 cost about as much as a streaming subscription: you describe the app in plain words and get something you can click, without hiring anyone.
 
-Nobody tells founders this. Vendors have no reason to, and the tools moved faster than the advice around them. The gap isn't tech, it's information.
+That gets you far enough to find out whether anyone wants it. Putting it in front of paying customers still needs someone who knows what they're reading.
 
-So, no judgment if you paid for a build you didn't need yet. Most people around you would have signed the same contract.
+Nobody tells founders this. Vendors have no reason to, and the tools moved faster than the advice around them. The gap is information.
 
-What did the vendor tell you before you signed? That part never gets written down, and it's what would help the next founder.
+If you paid for a build you didn't need yet, most people around you would have signed the same contract.
+
+What did the vendor tell you before you signed? That part never gets written down.

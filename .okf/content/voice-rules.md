@@ -8,12 +8,22 @@ generated:
   at: 2026-07-13T00:00:00Z
 verified:
   by: claude-opus/4.8
-  at: 2026-08-17T00:00:00Z
+  at: 2026-08-19T00:00:00Z
 ---
 
 Full guides: `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`
 and the course-specific rules in `CLAUDE.md`. This concept records the
 rules that recur in review sprints.
+
+**Plain English is the FIRST gate, above every rule below (Paul, 2026-08-19).**
+Voice-guide §0 is canonical; the short form: a sentence the reader has to decode
+has already failed. Three tests - would you say it out loud to one person; does
+every phrase carry exactly one idea; is every claim in it true. The middle test is
+the expensive one, because **two ideas welded into one phrase pass every mechanical
+gate we have** (word count, banned-word greps, dash checks, slop score) and only a
+domain reader catches them. Consequence for review order: check claims against
+domain knowledge FIRST, then run voice gates on what survives - four rounds were
+burned on `reaction-claude-code-trust` doing it the other way round.
 
 **Channel registers (Paul, 2026-08-14).** Each channel gets its own voice; all
 channels share the anti-slop core. Website is plain and load-bearing with every

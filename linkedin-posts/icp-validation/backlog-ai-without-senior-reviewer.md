@@ -101,12 +101,10 @@ notes: |
   installed.
 ---
 
-AI writes better code than most of the freelancers you'll find on Upwork. That part is real.
+AI writes better code than most of the freelancers you'll find on Upwork.
 
 But it still needs supervision, and supervision only works if the supervisor is better than the thing being supervised. Otherwise they just approve whatever came out.
 
-That's the hard part. The people who can out-judge the AI aren't the ones bidding cheap on Upwork, because that's the pool the AI already beats. So hiring a cheap developer to run the AI leaves you with nobody who can catch it.
+The people who can out-judge the AI are not the ones bidding at the cheap end of Upwork. Hiring there to run the AI leaves you with nobody who can catch it.
 
 Ask your developer to name the last thing the AI got wrong that they caught, and what they did instead. No answer means the AI is the senior one on your project.
-
-Who on your side is better than the AI?
