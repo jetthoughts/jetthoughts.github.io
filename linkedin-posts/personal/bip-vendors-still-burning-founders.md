@@ -55,6 +55,27 @@ notes: |
   founder as the latest instance of a pattern, slot 10 narrates his unpaid-PM
   trap. Different arguments, same evidence, three weeks apart.
 
+  CLOSE REPLACED 2026-08-19 (Paul: "I'm not following those last lines, how are
+  they related to the post idea?"). He was right and the answer is that they were
+  ORPHANED. "What did the vendor tell you before you signed? That part never gets
+  written down." fitted the post's ORIGINAL thesis - vendor accountability, the
+  2026-08-17 4-critic version. This post is now a price revelation, so the question
+  reached the topic only via a two-step (the pitch is where the not-telling happens)
+  that no reader will make. Replaced with "What were you quoted for your first
+  version?" - genuine, directly on-thesis, trivially answerable, and it surfaces
+  exactly the datum worth knowing: whether founders are still being quoted five
+  figures.
+
+  De-shaming line KEPT. The 4-critic swarm added it because the icp_test could not
+  fire without an ask, and it does more work now than before: asking someone what
+  they were quoted, straight after revealing the $200 figure, invites them to
+  confess being overcharged. The line makes answering safe.
+
+  LESSON: when a post's thesis is rewritten, re-check the CLOSE against the new
+  thesis, not just the body. A close that fitted the old argument survives every
+  voice gate - it is well-written, unbanned, on-brand - and is simply about a
+  different post.
+
   PARAGRAPH 3 IS THE THESIS (Paul, 2026-08-19) - do not soften it again. The
   assistant had written "Putting it in front of paying customers needs someone who
   can read the code", added to resolve a contradiction with the Aug 26 supervisor
@@ -79,10 +100,10 @@ Non-technical founders who paid for an MVP that barely runs keep turning up in m
 
 That same first version is now a weekend with Lovable or v0. You describe what you want and it builds it. Even on the priciest models, $200 covers it.
 
-You get the same non-working app. It is good enough to test the idea, and you save about $39k.
+You get the same non-production app, but it's good enough to test the idea, and you save about $39k.
 
 Nobody tells founders this. The vendor has no reason to, and the tools got cheap faster than the advice caught up.
 
 If you already paid a dev shop, most people around you would have signed the same contract.
 
-What did the vendor tell you before you signed? That part never gets written down.
+What were you quoted for your first version?
