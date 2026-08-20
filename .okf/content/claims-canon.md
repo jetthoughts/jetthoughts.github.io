@@ -6,7 +6,7 @@ tags: [claims, canon, consistency, marketing, trust]
 status: stable
 generated:
   by: claude/opus-5
-  at: 2026-08-14T00:00:00Z
+  at: 2026-08-20T00:00:00Z
 sources:
   - id: hugo-config
     resource: config/_default/hugo.toml
@@ -89,6 +89,16 @@ grep):
   names, `content/services`, `content/use-cases`, `content/pages`, the home and
   page templates, the shared testimonials partial) and bans the stale tenure and
   false-count spellings.
+- The same file runs a SECOND pass over **built HTML** (2026-08-20, closes
+  20.10 §3b P0-4). Source globbing cannot see a figure inside an unglobbed
+  partial, a phrase wrapped across two template lines, or markup that only
+  exists after compose - all three shipped on 2026-08-14. The rendered pass
+  walks blog + course + services under the suite's own Hugo build, skips dev.to
+  imports (derived from `source: dev_to` frontmatter - their stats belong to
+  their original authors) and paginated list views (double-counts). It is a
+  REGRESSION ratchet, not a cleanup gate: baseline 40, fails when the count
+  rises. It immediately surfaced 25 hits invisible to source - the deferred
+  `content/clients` excerpts syndicated onto every services page.
 - Deliberately **not** banned: "15+ years". It cannot distinguish company tenure
   from staff experience ("our fractional CTOs average 15+ years") and
   false-positives immediately. A ban that cannot tell those apart is noise.

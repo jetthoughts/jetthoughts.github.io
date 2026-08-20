@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "support/hugo_helpers"
 
 # Marketing-copy voice guard.
 #
@@ -105,7 +106,97 @@ class MarketingCopyTest < Minitest::Test
       "went silently blind: #{unmatched.join(", ")}"
   end
 
+  # ---- Second pass: the SAME banned list, over BUILT HTML (20.10 §3b P0-4) ----
+  #
+  # The pass above reads source, so three whole classes of defect are invisible
+  # to it - all three shipped on 2026-08-14: a false figure in a partial no glob
+  # covered, a banned phrase wrapped across two template lines, and markup that
+  # only exists after compose. Rendering resolves partials, flattens wraps, and
+  # includes every page whether or not someone remembered a glob.
+  #
+  # Scope is blog + course + services: the pages a prospect reads. dev.to
+  # imports are excluded - they carry third-party stats belonging to their
+  # original authors and are governed by the separate dev.to ICP gate, not this
+  # ratchet. The excluded set is DERIVED from `source: dev_to` frontmatter, so
+  # it tracks the imports instead of rotting as a hand-typed list.
+  RENDERED_GLOBS = %w[blog/**/*.html course/**/*.html services/**/*.html].freeze
+
+  # Paginated list views (/blog/page/7/, /blog/tags/startup/page/4/) only
+  # re-print excerpts from posts this pass already counts, so every hit on them
+  # is a double-count of a defect that has a real home. They also made the
+  # baseline depend on the build: bin/hugo-build emits no tag pagination, so the
+  # same tree scored 48 there and 60 under the suite's own build. Dropping them
+  # gives 40 in both. Page 1 (/blog/) is NOT paginated and stays covered - the
+  # stale "17 years" tenure lived in exactly that chrome.
+  PAGINATED_VIEW = %r{/page/\d+/}
+
+  # RATCHET, not a cleanup gate: fails only when the count goes UP. 40 violations
+  # on the tree of 2026-08-20, and 25 of those are one defect syndicated - the
+  # deferred content/clients excerpts ("to the next level") and a testimonial
+  # saying "seamlessly", pulled onto every services page by a partial no source
+  # glob covers. That is precisely the class this pass exists to see. Clearing
+  # them is a content task (20.10 §3b "Still open" #2), not this gate's job.
+  # Lower this number when that lands.
+  RENDERED_BASELINE = 40
+
+  def test_rendered_pages_do_not_regress_on_banned_phrases
+    violations = rendered_files.flat_map { |path| rendered_hits(path) }.sort
+
+    assert_operator violations.size, :<=, RENDERED_BASELINE,
+      "Banned phrases in BUILT HTML went up (baseline #{RENDERED_BASELINE}, " \
+      "now #{violations.size}). Rendered output is what a prospect actually " \
+      "reads - fix the source that produced these:\n  " + violations.join("\n  ")
+  end
+
   private
+
+  def rendered_root
+    @rendered_root ||= Hugo.instance.precompile.destination_path
+  end
+
+  def rendered_files
+    files = RENDERED_GLOBS.flat_map { |g| Dir.glob(File.join(rendered_root, g)) }
+
+    assert files.any?, "No built HTML under #{rendered_root} - this gate would " \
+      "pass by finding nothing. Run bin/hugo-build."
+
+    files.reject { |path| path.match?(PAGINATED_VIEW) || devto_import?(path) }
+  end
+
+  def devto_import?(path)
+    relative = path.sub("#{rendered_root}/", "")
+    return false unless relative.start_with?("blog/")
+
+    devto_slugs.include?(relative.split("/")[1])
+  end
+
+  # Frontmatter lives in the first few lines; bound the read so 689 posts stay cheap.
+  def devto_slugs
+    @devto_slugs ||= Dir.glob(File.join(REPO_ROOT, "content/blog/*/index.md")).filter_map { |post|
+      File.basename(File.dirname(post)) if File.foreach(post).first(60).any? { |l| l.start_with?("source: dev_to") }
+    }.to_set
+  end
+
+  # No line-by-line pass here: collapsing the whole document is what makes
+  # wrapped prose visible in the first place, and in generated output a page
+  # path points somewhere more useful than a line number.
+  #
+  # The noise removal differs from source's `scrub` on purpose. Slugs and asset
+  # names live in attributes, so tag-stripping already takes them out and only
+  # <script>/<style> bodies survive it. Dropping those two blocks does the job
+  # of source's three token regexes, finds the identical 40 hits, and costs
+  # 0.9s instead of 6.4s over the same 1,178 pages.
+  def rendered_hits(path)
+    relative = path.sub("#{rendered_root}/", "")
+    haystack = File.read(path, encoding: "bom|utf-8")
+      .gsub(%r{<(script|style)\b.*?</\1>}mi, " ")
+      .gsub(/<[^>]*>/, " ")
+      .downcase.gsub(/\s+/, " ")
+
+    BANNED.filter_map do |phrase, reason|
+      "#{relative} #{phrase.inspect} - #{reason}" if haystack.include?(phrase)
+    end
+  end
 
   def marketing_files
     (SURFACES + EXTRA_SURFACES)

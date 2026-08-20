@@ -1871,3 +1871,37 @@ copy (pre-2026-08-14 canon numbers) because the PR screenshot gate is
 `continue-on-error` during the soak and a text ratchet can't see a frozen
 PNG. Detail: `.okf/build/test-gates.md` (local dtest drift), `.okf/build/ci-gates.md`
 (CI record gotchas + stale-baseline drift).
+
+## 2026-08-20 - Marketing ratchet now reads BUILT HTML, closing 20.10 §3b P0-4
+
+`test/unit/marketing_copy_test.rb` gained a second pass over the rendered site
+(blog + course + services) using the same `BANNED` hash - one list, two inputs.
+Source globbing was structurally blind to three defect classes that all shipped
+on 2026-08-14: a false figure in a partial no glob covered, a phrase wrapped
+across two template lines, and markup that exists only after compose.
+
+Findings worth carrying forward:
+
+- The pass found **40** violations on a tree whose source pass was green, and
+  **25 of them are one defect syndicated**: `content/clients` case-study
+  excerpts ("to the next level") and a testimonial saying "seamlessly", pulled
+  onto every `/services/*` page by a partial. Exactly the class source could
+  not see. Baselined, NOT fixed - that is a content task (20.10 §3b #2).
+- A rendered baseline is **build-dependent** unless you say otherwise. The same
+  tree scored 48 under `bin/hugo-build` and 60 under the suite's own build,
+  because the latter emits tag pagination. Paginated views only re-print
+  excerpts already counted on the source post, so excluding `**/page/N/`
+  removes the double-count AND makes the number 40 in both builds.
+- dev.to imports (529 posts, `source: dev_to`) are excluded - third-party stats
+  belong to their original authors and have their own ICP gate. The exclusion
+  is derived from frontmatter, not hand-typed, and it is not cosmetic: 94 of
+  those built pages carry a banned word.
+- Rendered HTML wants DIFFERENT noise removal than source. Source's `scrub`
+  needs three token regexes for slugs and asset names; in rendered output those
+  live in attributes that tag-stripping already removes, so dropping
+  `<script>`/`<style>` blocks then tags finds the identical 40 hits at 0.9s
+  instead of 6.4s over 1,178 pages. Whole-pass cost: **0.58s** on a warm build.
+- Point unit tests at the right build. Running `rake test:unit` against
+  `_dest/public-dev` produced 8 unrelated failures (relative canonical URLs,
+  self-hosted mermaid path) that vanish against `_dest/public-test-local`.
+  A red unit suite may mean a wrong `HUGO_DEFAULT_PATH`, not a regression.
