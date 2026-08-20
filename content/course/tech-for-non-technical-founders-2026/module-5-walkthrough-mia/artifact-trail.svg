@@ -1,73 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-labelledby="m5-trail-title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" role="img" aria-labelledby="m5-trail-title">
   <title id="m5-trail-title">Mia's Module 5 artifact trail: a 40% test niche to a warm 50-name list to a signed paid pilot to a complete Founder OS</title>
+  <desc>Four numbered cards in two rows. Row one: 5.1 the 40% test, scoring 55% in her must-have niche; 5.3-5.5 a warm 50-name list that drew 22 replies and 9 booked demos. Row two: 5.6 a signed pilot, a Design Partner Agreement with the deposit cleared via Stripe, the first money from the product; 5.1-5.6 the Founder OS complete, hypothesis through signed pilot, the full evidence pack.</desc>
   <defs>
     <style>
-      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #1a1a1a; font-weight: 700; }
-      .foot   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 16px; fill: #666; font-style: italic; }
-      .chip   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #ffffff; font-weight: 700; }
-      .title  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 19px; fill: #1a1a1a; font-weight: 700; }
-      .big    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 27px; fill: #cc342d; font-weight: 700; }
-      .pbig   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 25px; fill: #1a1a1a; font-weight: 700; }
-      .note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #555; }
-      .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2; }
-      .pay    { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 29px; fill: #1a1a1a; font-weight: 700; }
+      .foot   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #666; font-style: italic; }
+      .chip   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #ffffff; font-weight: 700; }
+      .title  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 23px; fill: #1a1a1a; font-weight: 700; }
+      .big    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 30px; fill: #cc342d; font-weight: 700; }
+      .pbig   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 30px; fill: #1a1a1a; font-weight: 700; }
+      .note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #555; }
+      .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2.2; }
+      .pay    { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.8; }
       .chipbg { fill: #cc342d; }
     </style>
-    <marker id="arw5" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6" fill="none" stroke="#999" stroke-width="1.6"/>
+    <marker id="arw5" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6" fill="none" stroke="#999" stroke-width="1.8"/>
     </marker>
   </defs>
 
-  <text x="480" y="38" class="h" text-anchor="middle">What Mia produced in Module 5</text>
+  <text x="360" y="40" class="h" text-anchor="middle">What Mia produced in Module 5</text>
 
-  <!-- Card 1: 40% test -->
-  <g transform="rotate(-0.4 120 182)">
-    <rect x="16" y="90" width="208" height="185" rx="12" class="card"/>
-    <rect x="87" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="120" y="118" class="chip" text-anchor="middle">5.1</text>
-    <text x="120" y="153" class="title" text-anchor="middle">40%</text>
-    <text x="120" y="175" class="title" text-anchor="middle">test</text>
-    <text x="120" y="218" class="big" text-anchor="middle">55%</text>
-    <text x="120" y="252" class="note" text-anchor="middle">in her must-have niche</text>
+  <!-- Row 1 -->
+  <!-- Card 5.1 the 40% test -->
+  <g transform="rotate(-0.4 195 182)">
+    <rect x="45" y="75" width="300" height="215" rx="14" class="card"/>
+    <rect x="162" y="88" width="66" height="28" rx="14" class="chipbg"/>
+    <text x="195" y="108" class="chip" text-anchor="middle">5.1</text>
+    <text x="195" y="146" class="title" text-anchor="middle">40%</text>
+    <text x="195" y="172" class="title" text-anchor="middle">test</text>
+    <text x="195" y="218" class="big" text-anchor="middle">55%</text>
+    <text x="195" y="260" class="note" text-anchor="middle">in her must-have niche</text>
   </g>
 
-  <!-- Card 2: Warm 50 list -->
-  <g transform="rotate(0.4 360 182)">
-    <rect x="256" y="90" width="208" height="185" rx="12" class="card"/>
-    <rect x="313" y="100" width="94" height="26" rx="13" class="chipbg"/>
-    <text x="360" y="118" class="chip" text-anchor="middle">5.3-5.5</text>
-    <text x="360" y="153" class="title" text-anchor="middle">Warm 50</text>
-    <text x="360" y="175" class="title" text-anchor="middle">list</text>
-    <text x="360" y="218" class="big" text-anchor="middle">22 replies</text>
-    <text x="360" y="252" class="note" text-anchor="middle">9 demos booked</text>
+  <!-- Card 5.3-5.5 warm 50 list -->
+  <g transform="rotate(0.4 525 182)">
+    <rect x="375" y="75" width="300" height="215" rx="14" class="card"/>
+    <rect x="479" y="88" width="92" height="28" rx="14" class="chipbg"/>
+    <text x="525" y="108" class="chip" text-anchor="middle">5.3-5.5</text>
+    <text x="525" y="146" class="title" text-anchor="middle">Warm 50</text>
+    <text x="525" y="172" class="title" text-anchor="middle">list</text>
+    <text x="525" y="218" class="big" text-anchor="middle">22 replies</text>
+    <text x="525" y="260" class="note" text-anchor="middle">9 demos booked</text>
   </g>
 
-  <!-- Card 3: Signed pilot (payoff) -->
-  <g transform="rotate(-0.3 600 182)">
-    <rect x="496" y="90" width="208" height="185" rx="12" class="pay"/>
-    <rect x="567" y="100" width="66" height="26" rx="13" class="chipbg"/>
-    <text x="600" y="118" class="chip" text-anchor="middle">5.6</text>
-    <text x="600" y="155" class="pbig" text-anchor="middle">Signed pilot</text>
-    <text x="600" y="198" class="note" text-anchor="middle">Design Partner Agreement</text>
-    <text x="600" y="222" class="note" text-anchor="middle">deposit cleared via Stripe</text>
-    <text x="600" y="252" class="note" text-anchor="middle">first money from the product</text>
+  <!-- in-row arrow -->
+  <line x1="349" y1="182" x2="371" y2="182" stroke="#999" stroke-width="1.8" marker-end="url(#arw5)"/>
+
+  <!-- wrap arrow down to row 2 -->
+  <path d="M 660 296 C 660 318, 400 314, 160 322" fill="none" stroke="#999" stroke-width="1.8" marker-end="url(#arw5)"/>
+
+  <!-- Row 2 -->
+  <!-- Card 5.6 signed pilot (payoff) -->
+  <g transform="rotate(0.3 195 442)">
+    <rect x="45" y="335" width="300" height="215" rx="14" class="pay"/>
+    <rect x="162" y="348" width="66" height="28" rx="14" class="chipbg"/>
+    <text x="195" y="368" class="chip" text-anchor="middle">5.6</text>
+    <text x="195" y="412" class="pbig" text-anchor="middle">Signed pilot</text>
+    <text x="195" y="456" class="note" text-anchor="middle">Design Partner Agreement</text>
+    <text x="195" y="484" class="note" text-anchor="middle">deposit cleared via Stripe</text>
+    <text x="195" y="512" class="note" text-anchor="middle">first money from the product</text>
   </g>
 
-  <!-- Card 4: Founder OS -->
-  <g transform="rotate(0.4 840 182)">
-    <rect x="736" y="90" width="208" height="185" rx="12" class="card"/>
-    <rect x="793" y="100" width="94" height="26" rx="13" class="chipbg"/>
-    <text x="840" y="118" class="chip" text-anchor="middle">5.1-5.6</text>
-    <text x="840" y="153" class="title" text-anchor="middle">Founder OS</text>
-    <text x="840" y="175" class="title" text-anchor="middle">complete</text>
-    <text x="840" y="216" class="note" text-anchor="middle">hypothesis to signed pilot</text>
-    <text x="840" y="250" class="note" text-anchor="middle">the full evidence pack</text>
+  <!-- Card 5.1-5.6 Founder OS -->
+  <g transform="rotate(-0.4 525 442)">
+    <rect x="375" y="335" width="300" height="215" rx="14" class="card"/>
+    <rect x="479" y="348" width="92" height="28" rx="14" class="chipbg"/>
+    <text x="525" y="368" class="chip" text-anchor="middle">5.1-5.6</text>
+    <text x="525" y="406" class="title" text-anchor="middle">Founder OS</text>
+    <text x="525" y="432" class="title" text-anchor="middle">complete</text>
+    <text x="525" y="474" class="note" text-anchor="middle">hypothesis to signed pilot</text>
+    <text x="525" y="516" class="note" text-anchor="middle">the full evidence pack</text>
   </g>
 
-  <!-- Arrows -->
-  <line x1="227" y1="182" x2="251" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw5)"/>
-  <line x1="467" y1="182" x2="491" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw5)"/>
-  <line x1="707" y1="182" x2="731" y2="182" stroke="#999" stroke-width="1.6" marker-end="url(#arw5)"/>
+  <line x1="349" y1="442" x2="371" y2="442" stroke="#999" stroke-width="1.8" marker-end="url(#arw5)"/>
 
-  <text x="480" y="312" class="foot" text-anchor="middle">From a notebook sentence to a stranger's money - the whole pack, traceable.</text>
+  <text x="360" y="595" class="foot" text-anchor="middle">From a notebook sentence to a stranger's money - the whole pack, traceable.</text>
 </svg>
