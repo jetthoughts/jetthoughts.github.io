@@ -54,6 +54,35 @@ referral and assumptions docs and is plausible for an 18-year-old firm, though i
 has no in-repo source either. The old site copy "4.8/5 by 32 clients" conflated
 them, which is how an unsourced number passed as sourced.
 
+**A testimonial is a person, not copy - and a data file can silently outrank
+your curation.** On 2026-08-20 `data/testimonials.yaml` was found carrying four
+synthetic testimonials (Sarah Chen / TechStart Solutions, David Rodriguez /
+EcomMega, Maria Gonzalez / HealthTech Innovations, Alex Thompson / EduPlatform)
+with placeholder-shaped company names and unsourced round metrics, rendering on
+the live homepage, /clients, /about-us and /use-cases. `config/_default/hugo.toml`
+had already been curated down to the single real testimonial (Bruno Wozniak /
+PubNative) - but `partials/page/testimonials.html` reads the DATA FILE first and
+only falls back to site params, so the curation never reached the visible page.
+Structured data was clean; the visible copy was not.
+
+Three rules follow:
+
+1. Every testimonial must name a real, attributable person, and every metric
+   attached to one must trace to a source. Bruno's own `results` block was
+   dropped in the same pass - three round percentages that appear nowhere in his
+   quote. A fabricated testimonial is an FTC exposure, not a style problem.
+2. When a `data/` file and a config param feed the same surface, check WHICH ONE
+   WINS before believing a curation held. Cleaning the config is not cleaning
+   the page.
+3. Case-study prose needs the same test. `fractional-cto-roi-calculator` ran five
+   full-name founders with direct quotes under "Real Founder Stories ... from
+   JetThoughts clients", no anonymisation disclaimer, and said "three stories"
+   while showing five. Its sibling `infrastructure-spending-evaluation` already
+   used the honest form ("names changed, numbers accurate") - copy that form.
+   **Open question for Paul:** "Sarah Chen" appears both in the purged synthetic
+   testimonials and in that live post, so either both came from one invented
+   batch or a real client's name leaked into placeholder copy.
+
 # Verified review counts (2026-08-14 audit)
 
 Every public review platform was checked. **The real total is 11 across three
