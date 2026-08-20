@@ -265,16 +265,14 @@ $ bundle exec falcon host
 
 ### Rails Integration
 
-For Rails applications, Falcon works as a drop-in replacement for Puma:
+For Rails applications, Falcon works as a drop-in replacement for Puma, and it configures the one setting that matters on your behalf. Its [Railtie](https://github.com/socketry/falcon/blob/main/lib/falcon/railtie.rb) sets this unconditionally at boot:
 
 ```ruby
-# config/application.rb
-Rails.application.configure do
-  # Scope per-request state (CurrentAttributes, AR connection leases)
-  # to the fiber rather than the thread. Required under Falcon.
-  config.active_support.isolation_level = :fiber
-end
+# what Falcon's Railtie already does for you - you do not add this
+config.active_support.isolation_level = :fiber
 ```
+
+That scopes per-request state - `CurrentAttributes`, ActiveRecord connection leases - to the fiber rather than the thread. Size `pool:` in `config/database.yml` against the concurrency you expect; that one is your job.
 
 Configure Falcon for Rails:
 
