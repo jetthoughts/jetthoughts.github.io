@@ -61,7 +61,7 @@ VCR.configure do |c|
 end
 ```
 
-That first line means no test can quietly reach a paid API; a request with no cassette raises instead of dialing out.
+That first line is VCR's default, and it is worth writing down anyway: no test can quietly reach a paid API, because a request with no cassette raises instead of dialing out. Setting it explicitly means nobody flips it while chasing a red build.
 
 Filtering only on `ENV["OPENROUTER_API_KEY"]` misses a key that arrived some other way, hardcoded on a branch, pasted into a fixture, or exported in a teammate's shell. So the scrubbing also matches shapes: `sk-or-v1-` plus 64 hex, `sk-ant-` plus 95 characters, `AIza` plus 35, and the three-segment `Bearer` JWT.
 
@@ -69,13 +69,13 @@ Cassette names come from the test class name through a small concern (`name.unde
 
 ## The model went away and no test noticed
 
-On August 16 every LLM feature in production started erroring at once: candidate scoring, query expansion, filter evaluation, reflection, job-description analysis.
+A separate morning, every LLM feature in production started erroring at once: candidate scoring, query expansion, filter evaluation, reflection, job-description analysis.
 
-I ran the smallest thing the gem has, `.ask("say ok")` with no schema and no tools ([the basics](/blog/rubyllm-rails-getting-started/) if you haven't used it), and back came a deprecation notice where the answer should have been. A registry refresh confirmed it: the provider had retired the model our agents ran on.
+I ran the smallest thing the gem has, `.ask("say ok")` with no schema and no tools ([the basics](/blog/rubyllm-rails-getting-started/) if you haven't used it), and back came a deprecation notice where the answer should have been. Whether the model was being retired or quietly substituted, the effect was the same: nothing in our code had changed, and every agent was talking to something that no longer answered the way it used to.
 
-No test could have caught that, because every AI test in the suite replays a cassette recorded while the model still existed.
+No test could have caught that, because every AI test in the suite replays a cassette recorded back when the model still answered.
 
-The replacement cost more per token and had a shorter context window, with no like-for-like tier to step across to. Nothing in our code was wrong. The afternoon went into re-tuning prompts for the shorter window and re-recording cassettes.
+The model we moved to cost more per token and had a shorter context window, with no like-for-like tier to step across to. Nothing in our code was wrong. The afternoon went into re-tuning prompts for the shorter window and re-recording cassettes.
 
 A cassette is a recording of a conversation that is no longer happening. Nothing in the suite tells you when the recording has gone stale, so re-recording has to sit on somebody's calendar. Catching a retirement while it happens belongs to [monitoring](/blog/testing-monitoring-llm-applications-production/).
 
@@ -85,11 +85,13 @@ The third incident is the one a test could have owned. A deploy wrapped each sco
 
 Deleting the wrapper took a minute. I wanted the test that fails the next time someone re-adds it.
 
-Counting busy connections in the pool cannot see this. Transactional tests call `pin_connection!`, which pins one shared connection for the whole test (`connection_pool.rb:366`), so every checkout inside the test hands back that same connection and the busy count never moves.
+Counting busy connections in the pool cannot see this. Transactional tests call `pin_connection!`, which pins one shared connection for the whole test (`connection_adapters/abstract/connection_pool.rb:366`), so every checkout inside the test hands back that same connection and the busy count never moves.
 
-`ActiveRecord::Base.connection_pool.active_connection?` survives the pinning. It's public API, [documented](https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html) at `connection_pool.rb:419`, and it returns `connection_lease.connection`: the connection for the current execution context, or nil.
+`ActiveRecord::Base.connection_pool.active_connection?` asks a different question: does the current execution context hold a lease? It's public API, [documented](https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html) at `connection_pool.rb:419`, and it returns `connection_lease.connection` - a connection object, or nil.
 
 Two caveats the Rails docs state right there. It only sees connections taken through `lease_connection` or `with_connection`, never `checkout`. And it hands back a connection object rather than a boolean, which is why the assertion below reads `assert_nil` instead of `assert_not`.
+
+A third caveat the docs don't state, and the one that cost me an afternoon: transactional fixtures populate that lease during setup. `test_fixtures.rb:201-204` calls `pin_connection!` and then `lease_connection` on every fixture pool, which sets the lease and marks it sticky, so `active_connection?` returns a live adapter before your test body runs a single line. Assert on it as-is and the test is red on a clean codebase. Drop the fixture's lease first - the transaction stays open, only the lease clears.
 
 Every strategy here gets swapped through config rather than by stubbing gem internals ([fakes over mocks](https://martinfowler.com/articles/mocksArentStubs.html)), so the test setup does `RAG.scorer = RAG::FakeCandidateScorer`. The fake is where we hang the observation.
 
@@ -105,6 +107,9 @@ def score(candidate, role)
 end
 
 # test/rag/scoring_test.rb
+ActiveRecord::Base.connection_pool.release_connection  # drop the fixture's lease
+run_scoring_step
+
 assert_nil scorer.calls.first[:leased_connection]
 ```
 
