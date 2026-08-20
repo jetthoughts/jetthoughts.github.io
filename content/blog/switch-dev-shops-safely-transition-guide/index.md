@@ -24,6 +24,14 @@ You can survive losing the relationship. What costs you the quarter is losing th
 
 The rest of this guide lays out how to switch development agencies in the order that actually protects those things, starting with a question that has nothing to do with the switch.
 
+```mermaid
+flowchart TD
+    W1["Week 1 - Inventory every system<br/>while everyone is still friendly"] --> W2["Week 2 - Cold-start deploy drill<br/>+ truck-factor check"]
+    W2 --> W3["Week 3 - Record what<br/>the code can't tell"]
+    W3 --> W4["Week 4 - Day-one pack<br/>for the new team"]
+    W4 --> T["Only now:<br/>the termination email"]
+```
+
 ## Before you replace one shop with another
 
 Run the build-path question again before you sign anything.
@@ -94,6 +102,14 @@ Location changes the price and the overlap hours, not the failure modes. The cou
 ## When switching is the wrong move
 
 Requirements that changed three times this quarter will hit a new team the same way, on a new invoice, which means the shop was never the whole problem. You may also not have tested this team properly yet: a shop that has never been given a weekly written report to deliver against has never been given a clear target. Where the current developers are competent but slow, an [interim technical lead](/blog/when-your-startup-needs-emergency-cto-leadership/) working alongside them usually costs less than a full transition and buys the same visibility.
+
+```mermaid
+flowchart LR
+    C1["Requirements changed<br/>3x this quarter"] --> R1["Fix scope first -<br/>a new shop gets<br/>the same whiplash"]
+    C2["Never given a weekly<br/>written target"] --> R2["Test this team first -<br/>one outcome,<br/>weekly report"]
+    C3["Competent<br/>but slow"] --> R3["Interim tech lead<br/>alongside them -<br/>cheaper than switching"]
+    C4["None of<br/>the above"] --> R4["Switch - run the<br/>30-day overlap"]
+```
 
 Switching also carries a real bill. Deloitte's [global outsourcing survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) found 70% of the executives it surveyed had brought at least some previously outsourced work back in-house over five years - selective moves, not wholesale reversals. Budget six to eight weeks of reduced output, overlap pay for two teams, and a new set of unknowns you will discover in month two.
 
