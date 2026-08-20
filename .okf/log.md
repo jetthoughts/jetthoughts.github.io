@@ -1134,3 +1134,105 @@ measured 4.7 MB / 1.1s bare blobless vs 1.70 GiB, with
 `git log -1 -- <post>/index.md` still returning the right date in 0.02s and
 zero blobs fetched, so GitInfo is unaffected. Mitigation, not cure; the real
 floor is 625 MB of images in git, which is a separate LFS/CDN decision.
+## 2026-08-20 - #1a8cff IS the logo; a mark colour is not a UI accent
+
+Lane A stopped mid-codemod rather than recolour brand assets, and the reason
+it gave turned out to correct the ADR: after deleting --color-primary the only
+#1a8cff left in built output was SVG assets, including the logo. Verified -
+logo-dark.svg contains exactly one hex value, #1a8cff. So the token was
+EXTRACTED FROM THE MARK, not invented, and ADR-0003's "appears in no brand
+definition" was overstated (true of the documented design system, false of the
+actual logo).
+
+The decision survives with a sharper reason: a mark colour is not a UI accent.
+The logo identifies, the accent directs. Promoting the mark's blue to
+"primary" is exactly what produced blue bands, blue tags and blue links on a
+ruby site. The three logo files stay blue and are OUT OF SCOPE for every
+design-system phase - not deferred, out of scope; changing a mark is a brand
+decision.
+
+Two things worth carrying forward. **SVG assets cannot read CSS custom
+properties**, so ~29 hardcoded icons are invisible to token work and a
+site-wide recolour must sweep them separately or strand them on the old
+palette - 20.02 measured CSS references and literals and never counted SVG
+assets, a gap in the plan not in the execution. And the agent-design lesson:
+the brief told Lane A to resolve consumers BY ROLE, and the role table had no
+row for brand assets - so it halted and asked instead of inventing a row. A
+role table is also a permission boundary; anything without a row is a question,
+not a judgement call.
+
+## 2026-08-20 - "Same class of fight" is not "same cause"; body links decided
+
+Two corrections to my own Phase 1a plan, both found by the agent executing it
+rather than by me writing it.
+
+**The success signal was unfalsifiable in the dangerous direction.** 20.02 said
+"delete all 55 !important workarounds" as the proof 1a.3 worked. 55 counted
+every !important in four files; only ~19 are anchor-attributable. The rest are
+@media print rules and legacy heading-margin fights, so chasing the number
+would have deleted print styles to hit it. The trap is worth naming because it
+will recur: blog-single.css's own comment says its fights are the "same class
+of fight as the #0066d6 anchor rule - both die in Phase 1a". Same CLASS,
+different CAUSE. A metric derived from a comment's phrasing rather than from
+the cause it names is a metric that rewards damage.
+
+**#0066d6 was an accessibility fix, not just a specificity monster.** It
+replaced --color-primary in Sprint #2 because #1a8cff measured 3.37:1 and
+failed AA. I had been describing it purely as a late-cascade monster, which
+would have licensed replacing it with anything non-blue. Retiring it means
+landing the replacement at AA or better.
+
+**Body links decided: --ink-900 text, --color-ruby underline.** Not ruby text -
+ruby is the action colour, and a body full of ruby links stops links being
+distinguishable from buttons. WCAG 1.4.1 requires more than colour to mark a
+link, so the underline carries the affordance and the text stays calm for
+long-form reading. Recorded in design/site-palette.md with a do-not-simplify
+note, since the obvious "tidy-up" is to make it a coloured link again.
+
+Also verified by eye, which settled a sequencing question: with 1a.2 alone the
+services page shows ruby icons beside blue card titles - visibly incoherent, so
+1a.2 and 1a.3 ship as separate commits in ONE PR. And the blue logo against
+ruby accents reads as intended: it identifies rather than competing.
+
+## 2026-08-20 - The white-wash trap, and why four review agents died
+
+Two durable findings from the 3-lane redesign swarm.
+
+**Computed style, not source, proves the paint.** Two sections of the new
+/friday-report/ page computed to background-color rgba(0,0,0,0) - the white
+behind them was legacy-theme-skin.css's hardcoded .fl-page-content, which
+ships after the page slice and wins on cascade order. Zero visual delta today
+because both are #ffffff, which is exactly why it would have sat there
+undetected; it detonates the moment a --surface token moves off white, leaving
+a half-recoloured page caused by a file nobody touched. Recorded in
+architecture/css-pipeline.md with the detection method and the id+class fix
+from new-page.md. Same family as the uppercase #1A8CFF that survived a
+case-sensitive sweep: verification resting on grep alone verifies the wrong
+artifact.
+
+**Review agents failed 4 of 6, and brief size looks causal.** Every failure was
+a Fable credit limit; work agents survived because they carried an explicit
+opus override while the reviewers they spawned inherited the default. The
+asymmetry is the real hazard - work completes and reports success while its
+gate quietly does not run. The lane that dispatched four of them noticed the
+three that died had long briefs and the one that returned a verdict had the
+tightest. A credit limit is consumption-based, so a longer prompt burns budget
+faster, which makes the sprawling thorough-looking brief LESS likely to produce
+a review. Rules recorded in workflows/review-swarm.md: dead reviewer is not a
+passed review; idle is ambiguous so ask for the verdict; pass model opus
+explicitly; a coordinator closing a leg itself must say so and invite
+contradiction.
+
+## 2026-08-20 - GA4 key-event toggles closed by another session; not retroactive
+
+#508 un-marked `page_view` as a key event and #495 marked `contact_cta_click`,
+closing the Phase 0.1 GA4 items I had been reporting as blocked on a browser
+channel. Synced 2608's plan and README, which still described the polluted
+state as current.
+
+The caveat that survives the fix is the part worth carrying: **un-marking is
+not retroactive.** The ~4,063 historical page-view "key events" stay in the
+data, so any before/after read spanning 2026-08-13 to 08-20 compares a polluted
+before against a clean after. Date-bound every keyEvents query, or read the
+underlying event names rather than the aggregate. A fix that changes only
+future collection is not a fix to the series you are about to analyse.

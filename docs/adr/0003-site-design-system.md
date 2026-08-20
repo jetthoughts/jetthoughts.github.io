@@ -32,13 +32,26 @@ The result is roughly four visual languages stacked page by page. Measured
 | Spacing tokens defined | 2 | `foundations/css-variables.css` |
 | Screenshot baselines | 143 macOS / 135 Linux | `test/fixtures/screenshots/` |
 
-`--color-primary: #1a8cff` is the root cause of the incoherence. It is *named*
-primary but appears in no brand definition — `.stitch/design.md` names ruby
-`#cc342d` and neon purple `#a855f7`, never blue. Its own definition comment
-records that 279 literal occurrences existed before the token did; it was
-codified to describe shipped rendering, not to express a design intent. It is
-why the homepage carries blue divider bands, why blog tags are blue, and why
-links are blue on a red-branded site.
+`--color-primary: #1a8cff` is the root cause of the incoherence — but not for
+the reason first written here. **Correction, 2026-08-20:** an earlier draft
+claimed the token "appears in no brand definition". It appears in no
+*documented design system* (`.stitch/design.md` names ruby `#cc342d` and neon
+purple `#a855f7`, never blue) — but `#1a8cff` is the **only colour in the
+JetThoughts logo**, so the token was extracted from the brand mark, not
+invented. Found by grepping `themes/beaver/assets/img/icons/logo-dark.svg`,
+which contains exactly that one hex value.
+
+The decision is unchanged, and the sharper statement is this: **a mark colour
+is not a UI accent.** The logo identifies; the accent directs. Promoting the
+mark's blue to `--color-primary` is what put blue divider bands on the
+homepage, blue tags on the blog and blue links on a ruby-branded site. Its own
+definition comment records 279 literal occurrences existing before the token
+did — it was codified to describe shipped rendering, not to express intent.
+
+**The logo therefore stays blue and is out of scope for every design-system
+phase** — not deferred, out of scope. A blue mark alongside a ruby UI accent is
+a coherent, ordinary pattern. Changing it is a brand decision, and a separate
+one.
 
 Two spacing tokens (`--spacing-sm`, `--spacing-md`) means every section invented
 its own padding, which is why the section rhythm reads as bolted-together
@@ -131,7 +144,7 @@ Tiebreak, recorded last because it should not decide the question: light is
 also the cheaper path, since the blog already shipped light.
 
 **Consequence:** Phase 1a is unblocked — and with it the deletion of
-`--color-primary` / the late-cascade `#0066d6` anchor rule, which retires every
+`--color-primary` / the late-cascade `#0066d6` anchor rule (itself an AA fix — see 20.02), which retires every
 scoped `!important` workaround the blog currently carries.
 
 ## Decision

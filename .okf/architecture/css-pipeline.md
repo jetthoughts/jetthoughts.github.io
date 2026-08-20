@@ -56,6 +56,33 @@ rule are deleted in Phase 1a.2/1a.3. Until then, three page files carry scoped
 `!important` workarounds against that rule — retiring all of them is the
 phase's success signal.
 
+# The white-wash trap: computed style, not source, proves the paint
+
+Found 2026-08-20 while building `/friday-report/`. Two sections that *looked*
+tokenised computed to `background-color: rgba(0,0,0,0)` — the white behind them
+was `legacy-theme-skin.css`'s hardcoded `.fl-page-content`, which ships AFTER
+the page slice and therefore wins on cascade order even where specificity ties.
+
+**Why it is invisible and therefore dangerous:** both resolve to `#ffffff`
+today, so there is zero visual delta and nothing to see in a screenshot diff.
+The bomb goes off the moment a surface token moves off white — sections
+genuinely painted by the legacy skin stay white while properly-tokenised
+sections follow the token, producing a half-recoloured page caused by a file
+nobody touched. ADR-0003 specifies three light surfaces, so this WILL be
+exercised.
+
+**Detection:** read *computed* `background-color`, not source. A source grep
+proves what the CSS says; only computed style proves what the browser does.
+Anything computing to `rgba(0,0,0,0)` where a `--surface*` token is expected is
+a latent instance.
+
+**Fix:** the `id+class` selector form prescribed in
+`docs/workflows/new-page.md` for this exact trap. Do **not** reach for
+`!important` — that adds to the pile Phase 1a is retiring.
+
+Same family as the uppercase `#1A8CFF` that survived a case-sensitive sweep:
+verification that rests on grep alone is verification of the wrong artifact.
+
 # Legacy liability: FL-Builder export CSS
 
 A large portion of shipped CSS (~75K lines at audit time) is

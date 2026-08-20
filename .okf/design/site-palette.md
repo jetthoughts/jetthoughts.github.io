@@ -50,6 +50,28 @@ the zero-delta promotion pattern.
 | Surfaces | `--surface{,-raised,-sunken}` | `#ffffff` / `#faf7f3` / `#f2ece4` |
 | Dark surface | `--surface-ink`, `--color-obsidian*` | `#14110f`, JetVelocity obsidian family |
 
+# Body links: ink text, ruby underline
+
+Decided 2026-08-20 (2608 Phase 1a.3). Body content links are `--ink-900` text
+with a `--color-ruby` underline (~2px, ~3px offset); hover deepens the text to
+`--ruby-700` and the underline to full ruby.
+
+**Not ruby text.** Ruby is the *action* colour. A post body full of ruby links
+stops links being distinguishable from buttons — the accent loses its meaning
+when everything wears it.
+
+**The underline is the affordance, not decoration.** WCAG 1.4.1 requires body
+links to be distinguishable by more than colour, so the underline was always
+carrying that load. Once it does so explicitly, the text colour is free to stay
+calm, which is what long-form reading wants.
+
+**Do not "simplify" this back to a coloured link.** The colour it replaced,
+`#0066d6`, was itself an accessibility fix: it displaced `--color-primary`
+`#1a8cff` in Sprint #2 because the brand blue measured **3.37:1** and failed
+AA (`#0066d6` is 4.78:1). Phase 1a.3 retires that rule for its late-cascade
+specificity, NOT for its colour choice — any replacement must land at AA or
+better. `--ink-900` on white clears it comfortably.
+
 # Where dark is still deliberate
 
 Light is the default, not a monopoly. Three surfaces keep dark **by design** —
@@ -63,9 +85,24 @@ anything else going dark is a defect:
 
 # Deprecations in progress
 
-`--color-primary` (`#1a8cff`) is named "primary" and appears in no brand
-definition; it and the late-cascade `#0066d6` anchor rule die in 2608 Phase
-1a.2/1a.3. Until then several page files carry scoped `!important` workarounds
+`--color-primary` (`#1a8cff`) is named "primary" and dies in 2608 Phase 1a.2,
+along with the late-cascade `#0066d6` anchor rule in 1a.3.
+
+**It is the logo's colour, and that is the point, not a reason to keep it.**
+`themes/beaver/assets/img/icons/logo-dark.svg` contains exactly one hex value:
+`#1a8cff`. The token was extracted from the brand mark. **A mark colour is not
+a UI accent** — the logo identifies, the accent directs — and promoting it to
+"primary" is what put blue bands, blue tags and blue links on a ruby site.
+
+**The three logo files stay blue and are OUT OF SCOPE for every design-system
+phase** (not deferred — out of scope). A blue mark with a ruby UI accent is an
+ordinary, coherent pattern; changing the mark is a brand decision.
+
+**Trap: SVG assets cannot read CSS custom properties.** ~29 theme and submenu
+icons under `themes/beaver/assets/img/icons/theme/` and
+`content/services/*/submenu-*.svg` carry hardcoded fills, so they are invisible
+to token work — deleting a token does not touch them, and a site-wide recolour
+must sweep them separately or they are left stranded on the old palette. Until then several page files carry scoped `!important` workarounds
 against that rule — **retiring all of them is the phase's success signal**: if
 they cannot all go, the replacement link colours are wrong, not the
 workarounds.

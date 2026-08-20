@@ -56,6 +56,35 @@ counts, claims, links), add two finder angles a per-doc review cannot cover:
   COMMENT routes to the commenter, not the thread author (the Joy/Nico
   mis-route survived three docs).
 
+# Reviewers die silently, and the brief size looks causal (2026-08-20)
+
+In one 3-lane swarm, **six** review agents were dispatched and **four died
+before reporting**, every one with "You've reached your Fable 5 limit". The
+work agents were fine — they carried an explicit `model: opus` override; the
+reviewers they spawned inherited the session default.
+
+**The asymmetry is the danger, not the failures.** Work completes and reports
+success; the thing that checks it quietly does not run. A lane can plausibly
+report "done" having self-reviewed a 213-site codemod. Rules that follow:
+
+* **A dead reviewer is not a passed review.** A lane whose gate agent dies
+  reports *blocked-on-review*, never complete.
+* **An idle reviewer is ambiguous** — "available" reads the same whether it
+  finished, never started, or died. Ask for the verdict explicitly; never
+  infer it from a status flag.
+* **Pass `model: opus` explicitly on every spawned agent**, reviewers included.
+* **The coordinator can close a leg itself** rather than stall the wave — but
+  then it is reviewing work it also integrates, so say so and invite
+  contradiction from any later reviewer.
+
+**Brief size appears to be the mechanism, not luck.** The lane that dispatched
+four reviewers observed that the three which died had long briefs and the one
+that returned a full verdict had the tightest, most concrete one. A credit
+limit is consumption-based, so a longer prompt burns the budget faster — which
+makes the sprawling, thorough-looking brief the *less* likely one to produce a
+review at all. Write reviewer briefs short and concrete: what to read, what
+verdict format, and the two or three specific things to attack.
+
 # Known failure modes
 
 - Agents often go idle WITHOUT sending their report - nudge via SendMessage,

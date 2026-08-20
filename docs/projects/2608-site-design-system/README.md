@@ -25,9 +25,11 @@ mobile; and a lead conversion event exists so the next change can be measured.
   bands, blue tags and blue links on a red brand.
 - Two spacing tokens exist, so every section invented its own padding.
 - The homepage is 10,394px with six background switches and six primary CTAs.
-- There is **no conversion event on the site**, and since 2026-08-13 `page_view`
-  has been marked a key event — so GA4 now reports 4,063 "key events" that count
-  page views. Nothing shipped today can be evaluated.
+- There **was** no conversion event on the site, and `page_view` had been
+  marked a key event since 2026-08-13, so GA4 reported ~4,063 "key events" that
+  counted page views. Phase 0.1 shipped the events (#489) and the GA4 toggles
+  were closed 2026-08-20 (#495, #508). **Un-marking is not retroactive** — the
+  polluted figures stay in history, so date-bound any `keyEvents` query.
 - **Two pages already implement the system independently** — the course page and
   `/services/vibe-code-rescue/`. They agree on structure (proof in fold 1, one
   repeated CTA, artifacts not stock photos, ~4,300px, no blue) and disagree on
