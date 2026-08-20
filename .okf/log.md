@@ -2174,3 +2174,22 @@ cross-batch sweep to `content/voice-rules.md`. Also: critic-tech caught that
 ruby_llm 1.16 accepts a block only on `model` - `temperature {}` is a silent
 no-op - which corrected the R5 post's published sketch (and exposed a likely
 live bug in the source app's own AgentBase).
+
+## 2026-08-20 - First LinkedIn metrics read: reach without replies
+
+Filled the first three `metrics-ledger.md` rows from LinkedIn's own
+post-analytics pages: 680 impressions, 1 reaction, 0 genuine comments,
+**0 `icp_replies`** (the one comment is Paul's own first-comment link).
+Account reach is climbing (+18% w/w), so reach is the less likely cause of
+the silence. Not a kill signal - 3 of the required 10 rows per lane, and
+impressions are an order of magnitude below the 3,000 attribution floor.
+
+Three durable findings, recorded in `workflows/linkedin-post-pipeline.md`:
+(1) `status: scheduled` never gets flipped on publish and no draft carried
+a `posted_url` - the activity id can't be derived from a slug, so a missing
+one costs a manual feed scroll later; (2) `icp_profile_views` is unreadable
+on a lapsed-Premium account, so it records `n/a`, not `0`; (3) the rescue
+lane can't satisfy the arrival override at all - reply-CTA only, no link,
+no UTM, no session. Also fixed `layouts/linkedin/list.html`, where three
+sequential `with` blocks made the LEAST advanced date win, labelling posted
+cards "scheduled".

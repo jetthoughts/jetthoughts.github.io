@@ -7,7 +7,7 @@ tags: [content, linkedin, workflow, voice]
 generated:
   by: process:okf-migrate
   at: 2026-07-12T00:00:00Z
-timestamp: 2026-08-17T13:20:00Z
+timestamp: 2026-08-20T00:00:00Z
 ---
 
 # Overview
@@ -79,6 +79,31 @@ type action.
 - After scheduling: flip the post's frontmatter (`status: scheduled`,
   `stage: now`, `scheduled_for`) and the `linkedin-posts/content-plan.md`
   table row in the same commit.
+
+# Closing the loop on publish (2026-08-20)
+
+`status: scheduled` is a promise, not a record — the scheduler fires with
+no callback into the repo. The first metrics read found two of three
+drafts still marked `scheduled` although both had published on time, and
+no draft carried a `posted_url` at all.
+
+On the day a post goes live: flip `status` → `posted`, add `posted_for`,
+add **`posted_url`** (`/feed/update/urn:li:activity:<id>/`), and open its
+`metrics-ledger.md` row with metric cells blank. Keep `scheduled_for` —
+the gap to `posted_for` is the only record of slippage.
+
+`posted_url` is load-bearing, not bookkeeping: the analytics page is the
+same activity id under `/analytics/post-summary/`, and that id **cannot be
+derived from the slug**. Without it, a later read means scrolling the
+profile activity feed and matching post text by hand.
+
+Two reading caveats found the same day: **`icp_profile_views` is not
+readable** on this account (raw per-post viewer counts show, but the
+titles behind them need Premium, which is lapsed) — record `n/a`, never
+`0`. And the **rescue lane cannot satisfy the plan's arrival override** by
+construction: it ships reply-CTA only with no link, so it emits no UTM and
+generates no campaign session however well it performs. It is decidable on
+`icp_replies` alone; its zero arrivals are not a signal.
 
 # Citations
 

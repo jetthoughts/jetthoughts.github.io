@@ -248,10 +248,35 @@ cta: <description of the open-question close>
 utm_campaign: icp_validation_<pillar>
 utm_content: <slug-for-this-post>
 status: draft | scheduled | posted
+posted_for: "YYYY-MM-DD"        # once live
+posted_url: https://www.linkedin.com/feed/update/urn:li:activity:<id>/   # once live
 notes: |
   <free text - voice trade-offs, format choices, why patterns were broken>
 ---
 ```
+
+### Closing the loop the day a post goes live (added 2026-08-20)
+
+`scheduled` is a promise, not a record. On 2026-08-20 the first metrics read found
+**two of three drafts still marked `scheduled` although both had published on
+time**, and **not one draft carried a `posted_url`**. Nothing was lost, but the
+repo could not tell a live post from a pending one, and a ledger row had no route
+back to the post it described.
+
+The day a post publishes, in the same pass:
+
+1. Flip `status: scheduled` -> `status: posted` and add `posted_for`.
+2. Add **`posted_url`** - the canonical `/feed/update/urn:li:activity:<id>/` link.
+   Its analytics page is that same id under `/analytics/post-summary/`, and the
+   activity id **cannot be derived from the slug**; if you skip this, recovering it
+   later means scrolling the profile activity feed and matching post text by hand.
+3. Add the row to [`linkedin-posts/metrics-ledger.md`](../../linkedin-posts/metrics-ledger.md)
+   with `posted` filled and metric cells blank. A blank row is the signal that the
+   48-72h read is still owed.
+
+Keep `scheduled_for` - the gap between it and `posted_for` is the only record of
+posting slippage. The board card labels itself from the furthest-along date it
+finds, so a posted card reads "posted" once step 1 lands.
 
 ---
 
