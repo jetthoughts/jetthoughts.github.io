@@ -2357,3 +2357,20 @@ Phase 1a written up (20.02) with the surface measured rather than estimated:
 !important workarounds across four files that exist ONLY until that anchor rule
 dies. Success signal for the phase is exactly that - if all 55 can't go, the
 replacement isn't right yet.
+
+## 2026-08-20 - Token layer documented; Phase 1a.1 promoted the light palette
+
+The css-pipeline concept had no token layer at all - a real gap, since
+`foundations/css-variables.css` is the one file loaded inline in every bundle
+and is therefore the only place a site-wide colour change can start. Phase
+1a.1 made that concrete by promoting the light Rescue Room palette there
+(ADR-0003 resolved LIGHT), so the concept now documents the file, its
+contents, and the pattern worth reusing:
+
+**Zero-delta promotion.** Move tokens in their own commit, keep the old names
+as aliases with identical values, verify nothing renders differently - then
+the NEXT commit, which deletes a token and repoints consumers, is a value
+change rather than a rename, and its diff is about colour roles only. 1a.1
+verified this rather than assuming it: computed values checked in the browser,
+53 screenshots compared, zero baseline churn, course suite green (it shares
+single-post.css, so the dedup had to leave it untouched).
