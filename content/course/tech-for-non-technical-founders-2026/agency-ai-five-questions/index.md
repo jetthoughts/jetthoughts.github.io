@@ -70,7 +70,7 @@ Keep this card open during the call - the pass signal sits beside the fail signa
 
 **Pass:** A per-developer dollar range ($80 to $300 per month in Anthropic and OpenAI API usage on top of the $20-40 Cursor seat; undisciplined agent-loop users can hit $500 - the [AI Token Bill lesson](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/) has the full bands), a pass-through model written into the SOW, and a sample invoice line-item they will email after the call. They have a budget alert on the API account.
 
-**Fail:** "It is included in the rate." "We don't track it that closely." "We absorb the AI costs." Sign without this number and you get a surprise five-figure OpenAI charge in month two - the $4,800 line in the opening story was that number two weeks before the founder caught it.
+**Fail:** "It is included in the rate." "We don't track it that closely." "We absorb the AI costs." Sign without this number and you get a surprise five-figure OpenAI charge in month two - the $4,800 line in the scenario above was that number two weeks before the founder caught it.
 
 **Score:** 1 if they give a per-developer dollar range and a written pass-through policy. 0 otherwise.
 
@@ -78,7 +78,7 @@ Keep this card open during the call - the pass signal sits beside the fail signa
 
 > "When AI generates a 200-line PR, what does your senior reviewer actually check? Walk me through one PR you reviewed last week and tell me what you looked for."
 
-**Pass:** The reviewer pulls up an actual PR on screenshare. Does the diff match the ticket spec, line by line? Any hardcoded secrets, API keys, or database passwords (the agency in the opening story would have caught the `database.yml` problem here)? Are the tests genuine, written by the developer first as failing specs (the team's TDD discipline shows here), or AI-generated to pass after the fact? Did the AI introduce new gems or pip packages, and do they exist on Rubygems / PyPI and pass the team's allowlist?
+**Pass:** The reviewer pulls up an actual PR on screenshare. Does the diff match the ticket spec, line by line? Any hardcoded secrets, API keys, or database passwords (the agency in the scenario above would have caught the `database.yml` problem here)? Are the tests genuine, written by the developer first as failing specs (the team's TDD discipline shows here), or AI-generated to pass after the fact? Did the AI introduce new gems or pip packages, and do they exist on Rubygems / PyPI and pass the team's allowlist?
 
 **Fail:** "We trust the model." "Cursor catches most issues." "We have automated checks in CI." A team that trusts the model will ship the SQL injection vector in [Veracode's 45% of AI-generated code](/blog/ai-code-ownership-accountability/) into your production database.
 

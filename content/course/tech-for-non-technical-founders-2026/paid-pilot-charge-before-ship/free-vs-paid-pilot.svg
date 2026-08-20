@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="fp-title fp-desc">
   <title id="fp-title">A paid deposit converts far more pilots than a free one - same product, buyer, and eight weeks.</title>
-  <desc id="fp-desc">A two-bar comparison of the share of pilots that convert to paying. The free pilot bar is short in ruby - about 12 percent convert. The paid pilot bar is tall in green - about 65 percent convert. Same product, same buyer, same eight weeks; the deposit is the only change. Deposit terms: $500 or more, 10 to 30 percent of year-one ACV, charged before kickoff. If the customer cancels early the deposit is forfeited; if you cancel you refund 100 percent. Basis: illustrative convert-to-paying rates; the deposit is the only variable, not the product or the buyer.</desc>
+  <desc id="fp-desc">A two-bar comparison of the share of pilots that convert to paying. The free pilot bar is short in ruby - most free pilots ghost. The paid pilot bar is tall in green - most paid pilots convert. Same product, same buyer, same eight weeks; the deposit is the only change. Deposit terms: $500 or more, 10 to 30 percent of year-one ACV, charged before kickoff. If the customer cancels early the deposit is forfeited; if you cancel you refund 100 percent. Basis: the direction of the effect, not a measured rate; the deposit is the only variable, not the product or the buyer.</desc>
   <defs>
     <style>
       .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
@@ -26,14 +26,14 @@
   <text x="360" y="78" text-anchor="middle" class="gk msg">Same product, buyer, and 8 weeks - the deposit is the change</text>
 
   <!-- DATA bars: filled semantic, no stroke. baseline y=336, 100% = 200px (y136..336) -->
-  <!-- free 12% -> h=24 (top 312), ruby = anti-pattern -->
+  <!-- free: short bar h=24 (top 312), ruby = anti-pattern -->
   <rect x="190" y="312" width="140" height="24" fill="#cc342d"/>
-  <!-- paid 65% -> h=130 (top 206), green = money -->
+  <!-- paid: tall bar h=130 (top 206), green = money -->
   <rect x="390" y="206" width="140" height="130" fill="#2e7d32"/>
 
   <!-- value labels above bars (annotation rung) -->
-  <text x="260" y="300" text-anchor="middle" class="gk valr">12%</text>
-  <text x="460" y="196" text-anchor="middle" class="gk valg">65%</text>
+  <text x="260" y="300" text-anchor="middle" class="gk valr">most ghost</text>
+  <text x="460" y="196" text-anchor="middle" class="gk valg">most convert</text>
 
   <!-- STRUCTURE: single baseline axis, stroked ink -->
   <line x1="150" y1="336" x2="570" y2="336" stroke="#3a3a3a" stroke-width="2"/>
@@ -50,5 +50,5 @@
   <text x="40" y="440" class="sys note">Customer cancels early: forfeited.  You cancel: 100% refund.</text>
 
   <!-- one basis line -->
-  <text x="360" y="464" text-anchor="middle" class="sys basis">Basis: illustrative convert-to-paying rates - the deposit is the only variable</text>
+  <text x="360" y="464" text-anchor="middle" class="sys basis">Direction of the effect, not a measured rate - the deposit is the only variable</text>
 </svg>

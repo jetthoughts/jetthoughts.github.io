@@ -52,7 +52,7 @@ Same product, same buyer, one difference - when the money lands:
 
 Real money on the table before kickoff forces the internal budget conversation while nothing is riding on it yet. You are not asking for money - you are asking the customer to defend the spend internally. That defense is the test of whether the pilot is real.
 
-![Bar chart: free pilots convert about 12% to paying, paid pilots about 65% - same product, same buyer, same 8 weeks](free-vs-paid-pilot.svg)
+![Bar chart: most free pilots ghost, most paid pilots convert to paying - same product, same buyer, same 8 weeks, the deposit is the only variable](free-vs-paid-pilot.svg)
 
 When the course says "first paying customer," it means a signed DPA (Design Partner Agreement) AND a cleared Stripe deposit - real money in your account. Converting the pilot into a year-one contract is a separate event 6-10 weeks later, after the success criteria are met.
 

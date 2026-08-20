@@ -118,7 +118,7 @@ Joel Spolsky called the full-rewrite trap "[the single worst strategic mistake](
 > Bad: "I will run this myself. A 30-minute review costs $400 and I am already over budget."
 > Good: "I scored a 2. I am sending the doc to one fractional CTO for a $400 review on Monday, before I sign anything else."
 
-The founder in the opening story spent $7,500 on three consultants over nine weeks asking the same question three different ways. One 30-minute paid review by someone who is not selling you the rebuild costs less than $500 and resolves it in a week.
+The expensive version of this is three consultants over nine weeks, each asked the same question a different way, each quoting for the rebuild they would run. One 30-minute paid review by someone who is not selling you the rebuild costs less than $500 and resolves it in a week.
 
 ## What to do after
 

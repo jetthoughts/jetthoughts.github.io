@@ -91,7 +91,7 @@ In Rails terms:
 
 Eric Ries, who popularised the term in The Lean Startup, defines MVP as [the version of a new product that lets a team collect the maximum amount of validated learning about customers with the least effort](https://leanstartup.co/resources/articles/what-is-an-mvp/). Validated learning is the point - an MVP that nobody uses taught you nothing. Coming from an agency, the term usually means "the cheapest scope we can finish inside the budget you have left, even if it does not test the business question you actually need answered."
 
-The cleanest way to feel the difference is to look at two specs for the same MVP - the one a real product team writes and the one an agency writes when nobody asks Q4. A B2B HealthTech founder we shipped for in Q2 2025 had both on her desk:
+The cleanest way to feel the difference is to look at two specs for the same MVP - the one a real product team writes and the one an agency writes when nobody asks Q4. A B2B HealthTech founder had both on her desk:
 
 **Real MVP spec (one engineer, six working days, $14K):**
 - One Rails controller (`OnboardingsController`)
@@ -105,6 +105,8 @@ The cleanest way to feel the difference is to look at two specs for the same MVP
 - Microservices split: signup service + billing service + notification service
 - Two-week "foundations sprint" before any user-facing code
 - The business question: never specified - JT covers this exact failure mode in [our Quality Tax post](/blog/quality-tax-ai-mvp-cost/) on AI-built MVPs costing 2-3x the promised savings
+
+*Illustrative composite based on patterns from real founder builds, not a single client story.*
 
 If the spec your team handed you reads like the second one:
 
