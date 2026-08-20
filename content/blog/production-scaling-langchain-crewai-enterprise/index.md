@@ -2721,7 +2721,7 @@ The third month is deployment and scale: a production Dockerfile, Kubernetes wit
 
 After launch, the recurring work is post-mortem reviews on incidents, monthly cost analysis with model-selection adjustments, quarterly security audits, and an annual architecture review. None of it's glamorous; all of it compounds.
 
-## Further reading
+## Sources
 
 Official documentation worth bookmarking: [LangChain](https://python.langchain.com/docs/), [LangGraph](https://langchain-ai.github.io/langgraph/), [CrewAI](https://docs.crewai.com/), [FastAPI](https://fastapi.tiangolo.com/), and the [Kubernetes production patterns guide](https://kubernetes.io/docs/concepts/).
 

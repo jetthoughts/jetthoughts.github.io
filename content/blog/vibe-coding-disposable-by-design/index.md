@@ -161,7 +161,7 @@ Use vibe coding to validate the hypothesis, then throw the implementation away a
 
 If you've vibe-coded an MVP and you're getting nervous about it, [we read your codebase and send back a one-page assessment](https://jetthoughts.com/contact-us/) - test coverage, security risks, a salvage-vs-rebuild verdict. No pitch on the call. We've done this on 40+ rescue engagements and the answer is usually clearer than founders expect.
 
-## Further reading
+## Sources
 
 - [Andrej Karpathy's original "vibe coding" tweet](https://x.com/karpathy/status/1886192184808149383) - February 2025
 - [Tom's Hardware on Replit's database deletion](https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-coding-platform-goes-rogue-during-code-freeze-and-deletes-entire-company-database-replit-ceo-apologizes-after-ai-engine-says-it-made-a-catastrophic-error-in-judgment-and-destroyed-all-production-data)

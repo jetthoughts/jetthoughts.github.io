@@ -151,7 +151,7 @@ The new monthly Redis bill landed at $120, a 75% cut. The hybrid approach let us
 
 If you're planning a Solid stack migration, these are the companion pieces: our [Solid Cache benchmarks and migration steps](/blog/rails-8-solid-cache-performance-redis-migration/) cover the cache move in detail, and the [Solid Queue vs Sidekiq comparison](/blog/solid-queue-vs-sidekiq-complete-comparison/) digs into the architectural differences. For the deployment side, [Kamal in Rails 8](/blog/kamal-integration-in-rails-8-by-default-ruby/) and the [Docker production guide](/blog/rails-8-docker-deployment-production-guide/) round out the stack.
 
-## Further reading
+## Sources
 
 - [37signals: Solid Cache - a disk-backed Rails cache](https://dev.37signals.com/solid-cache/) - architecture and production results from Basecamp/HEY
 - [37signals: Introducing Solid Queue](https://dev.37signals.com/introducing-solid-queue/) - database-backed Active Job backend

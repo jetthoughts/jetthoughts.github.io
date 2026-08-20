@@ -216,7 +216,7 @@ We audit shutdown signal handling, queue isolation, and resume safety on product
 
 ---
 
-**Further reading:**
+## Sources
 
 - [Rails 8.1 Release Announcement - rubyonrails.org](https://rubyonrails.org/2025/10/22/rails-8-1)
 - [ActiveJob::Continuation API Reference - api.rubyonrails.org](https://api.rubyonrails.org/classes/ActiveJob/Continuation.html)

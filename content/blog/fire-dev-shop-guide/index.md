@@ -173,7 +173,7 @@ We've been writing about the practices that prevent these disasters. The ones th
 - [Our onboarding checklist](/blog/effective-project-onboarding-checklist-management-productivity/) - day one, no chaos
 - [Red flags in big PRs](/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/) - why we split anything over 500 lines
 
-## Further reading
+## Sources
 
 - [Deloitte 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) - 70% of executives insourced previously outsourced work
 - [CISQ: The Cost of Poor Software Quality](https://www.clouddatainsights.com/the-cost-of-poor-software-quality-is-higher-than-ever/) - $2.41 trillion annual cost in the US

@@ -102,6 +102,6 @@ Our developers average 8+ years of experience, and we've been building Rails app
 
 For more on watching a team you can't technically evaluate, see [how to know what your team is doing](/blog/how-know-what-your-team-doing-remote-startup/), and if your product is being built with AI coding tools, [the quality tax on AI-built apps](/blog/quality-tax-ai-mvp-cost/) covers the review gap from that angle.
 
-## Further reading
+## Sources
 
 - [SmartBear: State of Code Review](https://smartbear.com/state-of-software-quality/code-review/)
