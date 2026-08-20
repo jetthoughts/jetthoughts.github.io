@@ -268,16 +268,11 @@ $ bundle exec falcon host
 For Rails applications, Falcon works as a drop-in replacement for Puma:
 
 ```ruby
-# config/environments/production.rb
+# config/application.rb
 Rails.application.configure do
-  # Enable async features
-  config.allow_concurrency = true
-
-  # Use fibers for isolation (Rails 7+)
+  # Scope per-request state (CurrentAttributes, AR connection leases)
+  # to the fiber rather than the thread. Required under Falcon.
   config.active_support.isolation_level = :fiber
-
-  # Optimize for async workloads
-  config.active_record.async_query_executor = :fiber_pool
 end
 ```
 
