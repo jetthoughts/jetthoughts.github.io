@@ -235,6 +235,32 @@ GSC click count - about 5/day - not GA4's organic session count, which ran
 4x-28x inflated across those two windows. **Never report a change in the Direct
 or Organic Search rows without reconciling against GSC first.**
 
+### Pending GA4-UI setup (no API exists for either - browser required)
+
+Both are blocked on a working browser session, not on a decision. Neither the
+Data API nor the Admin API can do them: **GA4 Explorations have no API at all.**
+
+**1. Un-mark `page_view` as a key event.** Admin -> Data display -> Events ->
+Key events tab -> click the filled star next to `page_view`. This is the single
+highest-value GA4 change outstanding: until it lands, `keyEvents` counts ~4,000
+page views and every conversion figure on the property is unusable, including
+the `contact_cta_click` marked on 2026-08-20. Reversible - re-star to undo.
+
+**2. Two saved Explorations**, so the CLI reports have UI equivalents:
+
+| Exploration | Dimensions | Metrics |
+|---|---|---|
+| *Campaign performance* | `sessionCampaignName`, `sessionManualAdContent`, `landingPage` | `sessions`, `engagedSessions`, `keyEvents` |
+| *Site health* | `sessionDefaultChannelGroup`, `landingPage` | `sessions`, `engagedSessions`, engagement rate |
+
+Explore -> Blank -> drag dimensions to Rows, metrics to Values -> Share so the
+whole property sees them, not just the creator.
+
+Whoever builds them: put the **bot caveat in the exploration's own name or a
+text annotation**, e.g. "Site health (Direct/Organic are bot-inflated - check
+GSC)". A saved report that silently repeats the 86%-collapse trap is worse than
+no report, because a saved report gets trusted.
+
 ### Marking a key event is an agent-doable UI task, not an Admin-API task
 
 Recorded because the opposite was asserted twice in one session. The read-only
