@@ -37,13 +37,21 @@ mobile; and a lead conversion event exists so the next change can be measured.
 
 ## Current state
 
+**Re-sequenced 2026-08-20 (Paul): BLOG FIRST** — confirm engagement on the
+surface where the humans already land before touching chrome or money pages.
+Tokens scope into the blog bundles first, promote site-wide later. Blog
+engagement baseline (Clarity, bot-filtered): **25.2% avg scroll depth / 26.3s
+engagement** vs site avg 33–40% / 28–34s.
+
 | Phase | What | Gate | Status |
 |---|---|---|---|
-| 0 | Instrumentation + baseline tooling | events verified firing | **not started** |
-| 1a | Style-only recolour | A + B + C | blocked on 0 |
-| 1b | Spatial chrome | A (weighted) + B + C | blocked on 1a |
-| 2 | Page bundles ×5 | A + B + C, GSC guardrail on 2.1 | blocked on 1b |
-| 3 | Content: real numbers, sample report | A + cold-eyes review | parallel from 2 |
+| 0 (slim) | record-baselines wrapper, blog scroll/CTA events, coverage check | events verified firing | **not started** |
+| 2.1 | `blog-list` restyle | A + B + C | blocked on 0-slim |
+| 2.2 | `blog-single` restyle (+2.3 course, shared CSS) | A + B + C | after 2.1 |
+| — | **Engagement read written up** (28d Clarity pre/post) | written, with numbers | gates everything below |
+| 1a/1b | Site-wide chrome (recolour, then spatial) | A + B + C | after the read |
+| 2.4/2.5 | homepage, single-service | A + B + C, GSC gate on homepage | after the read |
+| 3 | Content: real numbers, sample report | A + cold-eyes review | parallel |
 
 Gates per ADR-0004: **A** qualitative (Clarity recordings, screenshots, visual
 suites), **B** guardrails with declared rollback thresholds, **C** reversibility.
