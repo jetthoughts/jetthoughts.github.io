@@ -1,6 +1,29 @@
 # Bundle Update Log
 
-## 2026-08-20 (ownership inverted) - vault owns ALL operations, repo is growth/marketing only
+## 2026-08-20 (#29 re-source closed) - the v1 list is dead, and VERBATIM tags recorded intent, not verification
+
+* **The whole 25-row v1 cold list is closed: 19 verified-and-dropped, 6
+  unreachable, 0 send-ready.** Three sweeps across four venues produced zero
+  verified-fresh rows. IH's recent stream is a launch board where ICP pain
+  language is spoken by competitor rescue shops; HN retired; X
+  supplier-dominated; Reddit - where the ICP actually talks - is closed to
+  curl, to RSS listings (429), AND to automation Chrome (CAPTCHA then network
+  block). The cold-public-sourcing premise is tested-and-failed, not
+  under-tooled. September decision: retire the lane or buy Reddit API access
+  as a priced decision.
+* **A misquote propagated into 5 files including the opener that would have
+  been SENT.** Row 4 was logged as "a problem I couldn't fix"; the founder
+  wrote "a problem I'm still paying for" - the logged phrase appears nowhere
+  in his thread. A second quote was truncated past its buying moment. 2 of 4
+  re-read quotes were wrong: `[VERBATIM-*]` tags had been recording capture
+  INTENT, not verification. Rule: a quote is only VERBATIM after an in-thread
+  re-read at citation time; un-re-read v1 quotes are now flagged unconfirmed
+  in voice-of-customer.md. This defect passes every staleness check and
+  surfaces in front of the prospect.
+* Durable positives: verification costs ~1 page load/row; Reddit thread `.rss`
+  gives exact timestamps (rate-limited ~4 req) but listings 429 = no discovery
+  lane; `dateModified` != `datePublished` (row 8's trap). Route table:
+  `p7-search-sweep.md` §8.
 
 * **Paul's directive** supersedes the 2026-08-17 narrow split: the vault
   (`~/Documents/pkm`) now owns the entire operating loop, not just
