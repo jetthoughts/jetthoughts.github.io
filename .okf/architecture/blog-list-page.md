@@ -10,7 +10,7 @@ generated:
 verified:
   - by: claude/opus-5
     at: 2026-08-20T00:00:00Z
-timestamp: 2026-08-20T23:20:00Z
+timestamp: 2026-08-20T23:11:35Z
 ---
 
 # Overview

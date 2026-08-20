@@ -6,12 +6,12 @@ tags: [testing, visual-regression, gates]
 status: stable
 generated: { by: claude/opus-4-8, at: 2026-08-12T20:20:00Z }
 verified:
-  - { by: claude/opus-5, at: 2026-08-20T22:50:00Z }
+  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
-  - { by: claude/opus-5, at: 2026-08-20T21:45:00Z }
-  - { by: claude/opus-5, at: 2026-08-20T22:00:00Z }
-timestamp: 2026-08-20T22:50:00Z
+  - { by: claude/opus-5, at: 2026-08-20T22:27:35Z }
+  - { by: claude/opus-5, at: 2026-08-20T22:27:35Z }
+timestamp: 2026-08-20T23:11:35Z
 ---
 
 # The suites

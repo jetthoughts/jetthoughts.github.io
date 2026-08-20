@@ -6,9 +6,9 @@ tags: [analytics, ga4, search-console, mcp, seo, tooling]
 generated:
   by: claude/opus-5
   at: 2026-08-13T00:00:00Z
-timestamp: 2026-08-20T23:28:00Z
+timestamp: 2026-08-20T23:44:03Z
 verified:
-  - { by: claude/opus-5, at: 2026-08-20T22:50:00Z }
+  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - by: claude/opus-5
     at: 2026-08-13T00:00:00Z
   - by: claude/opus-5
