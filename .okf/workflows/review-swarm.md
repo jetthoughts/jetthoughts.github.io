@@ -7,9 +7,9 @@ generated:
   by: process:okf-migrate
   at: 2026-07-24T00:00:00Z
 verified:
-  - { by: claude/opus-5, at: 2026-08-21T00:50:00Z }
-  - { by: claude/opus-5, at: 2026-08-21T00:10:00Z }
-timestamp: 2026-08-21T00:50:00Z
+  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
+  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
+timestamp: 2026-08-20T23:44:03Z
 ---
 
 # The loop
@@ -135,3 +135,28 @@ verdict format, and the two or three specific things to attack.
   Both overstatements this session were in comments, not code, and one had
   already propagated into two `.okf/` files before review caught it. Grep
   your own explanation for numbers you did not measure.
+- **A correction is an edit, and it can break what the file already held**
+  (2026-08-21). Three review rounds on one docs PR found real defects every
+  time, and the third round's findings were largely defects the FIRST TWO
+  ROUNDS' FIXES INTRODUCED. Adding "phase status comes from git" left an older
+  sentence four lines away still saying status lives in the plan doc; adding a
+  corrected click figure left the superseded one earlier in the same file. The
+  correcting mindset is "am I now right here", which does not look sideways at
+  the invariants the document already carried. After correcting a claim, re-read
+  the WHOLE file, not the paragraph.
+
+- **Sweep a corrected metric through the canonical summaries, not just its home**
+  (2026-08-21). A figure was fixed in two specs and a measurement record while
+  the project README and the plan's own justification still presented the
+  superseded value as current - and those are what a cold session reads FIRST.
+  A number lives in more places than the document that owns it. `grep -rn` the
+  old value across docs and the bundle, and treat every surviving hit as stale
+  unless it is explicitly framed as retracted history.
+
+- **Docs review converges slowly - budget more than one round** (2026-08-21).
+  Three rounds returned 8, 7 and 9 findings on a documentation-only PR, and
+  none were cosmetic: a residual that would have reintroduced a known
+  regression, an alias inventory that would have broken live CSS, an arithmetic
+  error in a measurement plan, an overstated bot multiplier. Prose has no
+  compiler and no test, so the ONLY gate is a reader who checks claims against
+  the tree. One clean round is the signal to stop; one round is not.

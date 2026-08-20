@@ -6,9 +6,9 @@ tags: [analytics, ga4, search-console, mcp, seo, tooling]
 generated:
   by: claude/opus-5
   at: 2026-08-13T00:00:00Z
-timestamp: 2026-08-21T00:50:00Z
+timestamp: 2026-08-20T23:44:03Z
 verified:
-  - { by: claude/opus-5, at: 2026-08-21T00:50:00Z }
+  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - by: claude/opus-5
     at: 2026-08-13T00:00:00Z
   - by: claude/opus-5
@@ -171,11 +171,24 @@ swing**. Session-weighted across all 743 sessions: **44.31% scroll /
 
 Two rules fall out. **Session-weight across every window** rather than
 averaging the windows or picking one. And **check whether a window straddles
-a deploy** - the low window contained the 08-20 rebuild ship (17:35 and
-20:16), so the honest pre-ship baseline is the clean 08-06 -> 08-17 stretch
-(451 sessions, 56.4% / 40.1s). Same family as the GA4-vs-GSC reconciliation
-above: a flattering or alarming number survives by being quoted rather than
-recomputed.
+a deploy**. The low window is BELIEVED to contain the 08-20 rebuild ship - both
+PRs merged inside it - so the pre-ship baseline is provisionally the clean
+08-06 -> 08-17 stretch (451 sessions, 56.4% / 40.1s). **That conclusion is
+conditional on a deployment record nobody has read yet** (see the paragraph
+below); if the deploy landed after 08-20 the low window is clean and its 292
+sessions come back. Same family as the GA4-vs-GSC reconciliation above: a
+flattering or alarming number survives by being quoted rather than recomputed.
+
+**Cut the window on the DEPLOY, not the MERGE** (2026-08-21, caught in review).
+The first version of that correction used the merge timestamps of #487 and #494
+as proof the window was contaminated. A merge is not a release: GitHub Pages
+publishes from a separate workflow run that can lag, fail, or be re-run, so the
+content a visitor saw at a given hour is a question about the DEPLOYMENT record,
+not about `git log`. This cuts both ways - it can wrongly condemn a usable
+window as easily as it can wrongly bless a contaminated one. Read the Pages
+deployment for the ship time, and if you cannot, mark the window
+**contaminated-pending-confirmation** with the restore condition written down
+rather than deciding on the merge time.
 
 **A near-miss worth keeping, because it is this same rule failing one step
 deeper.** The first write-up of this claimed Clarity's per-page numbers

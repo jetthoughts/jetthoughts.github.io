@@ -3,6 +3,32 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+## 2026-08-21 - what three review rounds taught, lifted from the PR into concepts
+
+#519 took three Codex rounds (8, 7, 9 findings). None cosmetic. The durable
+part is not the individual fixes - those shipped with the PR - but why a
+docs-only change needed three passes.
+
+* `workflows/review-swarm.md` - **a correction is an edit, and it can break
+  what the file already held.** Round three's findings were largely defects
+  that rounds one and two INTRODUCED: adding "phase status comes from git" left
+  a sentence four lines away still routing to the plan doc; adding a corrected
+  click figure left the superseded one earlier in the same file. The correcting
+  mindset asks "am I right here now" and does not look sideways. Re-read the
+  whole file, not the paragraph. Plus: **sweep a corrected metric through the
+  canonical summaries** (the README and the plan's own justification still
+  carried the superseded figure, and those are read FIRST), and **budget more
+  than one review round for docs** - prose has no compiler, so a reader
+  checking claims against the tree is the only gate there is.
+
+* `workflows/analytics-access.md` - **cut a measurement window on the DEPLOY,
+  not the MERGE.** The first correction used #487/#494 merge timestamps as
+  proof a Clarity window was contaminated. A merge is not a release: Pages
+  publishes from a separate run that can lag, fail or be re-run. This cuts both
+  ways - it can condemn a usable window as easily as bless a contaminated one.
+  Read the deployment record; if you cannot, mark the window
+  contaminated-pending-confirmation with the restore condition written down.
+
 ## 2026-08-21 - the Hugo trap behind the analytics finding, lifted from spec to bundle
 
 The Codex round fixed the 2608 specs. One of its findings was a durable CODE

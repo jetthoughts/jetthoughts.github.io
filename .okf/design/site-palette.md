@@ -7,7 +7,7 @@ tags: [design, palette, css, tokens, adr]
 generated:
   by: claude/opus-5
   at: 2026-08-20T00:00:00Z
-timestamp: 2026-08-21T01:20:00Z
+timestamp: 2026-08-20T23:11:35Z
 ---
 
 # Resolved: LIGHT (ADR-0003, 2026-08-20)
