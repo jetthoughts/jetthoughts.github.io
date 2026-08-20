@@ -1161,3 +1161,32 @@ Also verified by eye, which settled a sequencing question: with 1a.2 alone the
 services page shows ruby icons beside blue card titles - visibly incoherent, so
 1a.2 and 1a.3 ship as separate commits in ONE PR. And the blue logo against
 ruby accents reads as intended: it identifies rather than competing.
+
+## 2026-08-20 - The white-wash trap, and why four review agents died
+
+Two durable findings from the 3-lane redesign swarm.
+
+**Computed style, not source, proves the paint.** Two sections of the new
+/friday-report/ page computed to background-color rgba(0,0,0,0) - the white
+behind them was legacy-theme-skin.css's hardcoded .fl-page-content, which
+ships after the page slice and wins on cascade order. Zero visual delta today
+because both are #ffffff, which is exactly why it would have sat there
+undetected; it detonates the moment a --surface token moves off white, leaving
+a half-recoloured page caused by a file nobody touched. Recorded in
+architecture/css-pipeline.md with the detection method and the id+class fix
+from new-page.md. Same family as the uppercase #1A8CFF that survived a
+case-sensitive sweep: verification resting on grep alone verifies the wrong
+artifact.
+
+**Review agents failed 4 of 6, and brief size looks causal.** Every failure was
+a Fable credit limit; work agents survived because they carried an explicit
+opus override while the reviewers they spawned inherited the default. The
+asymmetry is the real hazard - work completes and reports success while its
+gate quietly does not run. The lane that dispatched four of them noticed the
+three that died had long briefs and the one that returned a verdict had the
+tightest. A credit limit is consumption-based, so a longer prompt burns budget
+faster, which makes the sprawling thorough-looking brief LESS likely to produce
+a review. Rules recorded in workflows/review-swarm.md: dead reviewer is not a
+passed review; idle is ambiguous so ask for the verdict; pass model opus
+explicitly; a coordinator closing a leg itself must say so and invite
+contradiction.
