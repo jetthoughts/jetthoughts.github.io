@@ -7,8 +7,8 @@ tags: [design, rollout, sequencing, decision, adr]
 status: stable
 generated:
   by: claude/opus-5
-  at: 2026-08-21T00:30:00Z
-timestamp: 2026-08-21T00:50:00Z
+  at: 2026-08-20T22:30:00Z
+timestamp: 2026-08-20T22:50:00Z
 ---
 
 # Why this concept exists

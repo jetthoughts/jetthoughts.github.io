@@ -7,9 +7,9 @@ generated:
   by: process:okf-migrate
   at: 2026-07-24T00:00:00Z
 verified:
-  - { by: claude/opus-5, at: 2026-08-21T00:50:00Z }
-  - { by: claude/opus-5, at: 2026-08-21T00:10:00Z }
-timestamp: 2026-08-21T01:50:00Z
+  - { by: claude/opus-5, at: 2026-08-20T22:50:00Z }
+  - { by: claude/opus-5, at: 2026-08-20T22:10:00Z }
+timestamp: 2026-08-20T23:18:00Z
 ---
 
 # The loop

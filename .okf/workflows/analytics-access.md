@@ -6,9 +6,9 @@ tags: [analytics, ga4, search-console, mcp, seo, tooling]
 generated:
   by: claude/opus-5
   at: 2026-08-13T00:00:00Z
-timestamp: 2026-08-21T01:50:00Z
+timestamp: 2026-08-20T23:18:00Z
 verified:
-  - { by: claude/opus-5, at: 2026-08-21T00:50:00Z }
+  - { by: claude/opus-5, at: 2026-08-20T22:50:00Z }
   - by: claude/opus-5
     at: 2026-08-13T00:00:00Z
   - by: claude/opus-5
@@ -171,9 +171,12 @@ swing**. Session-weighted across all 743 sessions: **44.31% scroll /
 
 Two rules fall out. **Session-weight across every window** rather than
 averaging the windows or picking one. And **check whether a window straddles
-a deploy** - the low window contained the 08-20 rebuild ship, so the honest
-pre-ship baseline is the clean 08-06 -> 08-17 stretch (451 sessions,
-56.4% / 40.1s). Same family as the GA4-vs-GSC reconciliation above: a
+a deploy**. The low window is BELIEVED to contain the 08-20 rebuild ship - both
+PRs merged inside it - so the pre-ship baseline is provisionally the clean
+08-06 -> 08-17 stretch (451 sessions, 56.4% / 40.1s). **That conclusion is
+conditional on a deployment record nobody has read yet** (see the paragraph
+below); if the deploy landed after 08-20 the low window is clean and its 292
+sessions come back. Same family as the GA4-vs-GSC reconciliation above: a
 flattering or alarming number survives by being quoted rather than recomputed.
 
 **Cut the window on the DEPLOY, not the MERGE** (2026-08-21, caught in review).

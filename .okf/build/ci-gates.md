@@ -13,7 +13,7 @@ verified:
   - by: claude/sonnet-5
     at: 2026-08-20T00:00:00Z
   - by: claude/opus-5
-    at: 2026-08-21T00:00:00Z
+    at: 2026-08-20T22:00:00Z
 ---
 
 # What CI enforces on a PR
