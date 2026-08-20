@@ -23,6 +23,22 @@ NOT back-stamp `generated`/`verified` you didn't actually perform.
 * [Build & Test](build/) - build pipeline, validators, and the blocking test gates
 * [Content](content/) - course structure, canonical numbers, and voice rules
 * [Design](design/) - mermaid theme, house visual spec, covers, typography
-* [Workflows](workflows/) - render-verification recipes, review-swarm patterns, the blog/LinkedIn/CSS/test pipelines, the visual scroll gate, and the 2607 outbound-sprint machinery
+* [Workflows](workflows/) - render-verification recipes, review-swarm patterns, the blog/LinkedIn/CSS pipelines, the visual scroll gate, and the 2607 outbound-sprint machinery
 * [Architecture](architecture/) - Hugo site, CSS build pipeline, blog templates, cover images, SEO meta tags
 * [Content Strategy](content-strategy/) - ICP profile, voice guide, and the pipeline-first content plan (20.09) governing all founder-facing content
+
+# What belongs in this bundle
+
+Rule, learned the hard way on 2026-07-26 (one concept was relocated twice):
+
+* **`.okf/` holds durable operational knowledge distilled FROM research** - not
+  the research itself, and not a copy of a doc that lives elsewhere. A concept
+  that is a verbatim copy of a repo doc should be a pointer (see
+  [architecture/](architecture/)).
+* **Raw external research** belongs in `docs/projects/<project>/10-19-research/`
+  (investigation and analysis).
+* **Adopted, enforced specs** belong in `docs/projects/<project>/30-39-architecture-design/` -
+  a doc that prescribes what creators MUST do goes here even when its origin
+  was external research.
+* **`log.md` records what changed, not what is true.** If a log entry's detail
+  still matters six weeks later, lift it into a concept; the log gets squashed.
