@@ -2331,3 +2331,29 @@ extends it past tools to interfaces: exhaust the UI before declaring blocked.
 Still genuinely open and now correctly owned by 2608 Phase 0.1, not Paul:
 `page_view` is still marked a key event, so 4,063 page views read as
 conversions and bury any real one.
+
+## 2026-08-20 - Palette resolved: LIGHT, and Phase 1a is written
+
+Ran a lightning demo instead of arguing taste. The peer set decided it: every
+services company reviewed ships light (thoughtbot, Test Double - a Rails
+consultancy selling to technical buyers - and Basecamp, where dark is a user
+preference rather than the brand), and the decisive signal is Linear, the
+poster child for dark product aesthetics, shipping a LIGHT marketing site.
+Dark marketing belongs to products bought by developers evaluating a tool;
+light belongs to services bought on trust. The literature supplies the
+mechanism: light reads as more open/trustworthy, dark "weakens a trusting
+emotional connection", and light holds a comprehension edge at SMALL font
+sizes - our exact case, since our humans are on phones.
+
+The dark case was real and lost on a distinction worth keeping: our best page
+(/services/vibe-code-rescue/) is obsidian, but its quality is STRUCTURAL, not
+chromatic - proof chips in fold one, one repeated CTA, artifact cards, ~4,300px
+- and every one of those already shipped in the light blog. Dark stays in three
+places by design: cover art, one proof band per page, and vibe-code-rescue as a
+dark-variant campaign page.
+
+Phase 1a written up (20.02) with the surface measured rather than estimated:
+161 var(--color-primary) + 52 literals, 8 #0066d6 rule sites, and 55 scoped
+!important workarounds across four files that exist ONLY until that anchor rule
+dies. Success signal for the phase is exactly that - if all 55 can't go, the
+replacement isn't right yet.
