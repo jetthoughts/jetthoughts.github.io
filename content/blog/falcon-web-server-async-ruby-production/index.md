@@ -1,5 +1,4 @@
 ---
-dev_to_id: 1
 title: "Falcon Web Server: Async Ruby in Production"
 description: "Falcon async web server for Ruby: Master fiber-based concurrency, benchmark vs Puma/Unicorn, deploy in production. Scale Rails apps, handle concurrent connections, boost performance ✓"
 date: 2025-09-25
@@ -8,8 +7,10 @@ edited_at: "2025-09-25T22:27:00Z"
 draft: false
 tags: ["ruby", "performance", "async", "fibers", "falcon", "web-server", "concurrency"]
 slug: "falcon-web-server-async-ruby-production"
+aliases: ["/blog/falcon-web-server-async-ruby-in-production/"]
 canonical_url: "https://jetthoughts.com/blog/falcon-web-server-async-ruby-production/"
-cover_image: cover.png
+cover_image: "cover.png"
+cover_image_alt: "Falcon, the fiber-based async Rack server for Ruby, running a Rails app in production"
 series: "Ruby Web Servers"
 metatags:
   image: cover.png
