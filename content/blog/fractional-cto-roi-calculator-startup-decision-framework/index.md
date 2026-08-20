@@ -966,9 +966,9 @@ Result: Extended runway from 12 months to 21 months, enabling Series A at strong
 
 **Key Takeaway**: Position fractional CTO as evidence of your strategic capital allocation, not a cost-cutting measure. Investors respect founders who extend runway without sacrificing quality.
 
-## Real Founder Stories: How Fractional CTOs Saved Companies
+## Founder Stories: How Fractional CTOs Saved Companies
 
-Numbers and frameworks help, but nothing beats hearing from founders who faced the same decisions you're facing right now. Here are three stories from JetThoughts clients who used fractional CTO engagements to navigate critical moments.
+Numbers and frameworks help, but nothing beats hearing how founders handled the same decisions you are facing right now. The five stories below are composites drawn from fractional-CTO engagements - names, companies and identifying details changed, and the figures are illustrative of the pattern rather than a single client's books.
 
 ### Story 1: "Our Fractional CTO Prevented a $400K Architecture Mistake"
 
