@@ -3,12 +3,20 @@
    Structure copied from pages/vibe-code-rescue.css (proof chips in fold one,
    one repeated CTA, artifact card, one dark band) minus its obsidian field. */
 
+/* id+class beats legacy-theme-skin's later-cascade .fl-page-content white
+   (new-page.md "white-wash override"). Same value today, but the disclaimer
+   and how-to-read sections carry no background of their own - without this
+   they'd stay hardcoded white if --surface ever moves off #ffffff, while the
+   rest of the page followed the token. */
+#fl-main-content.friday-page {
+  background: var(--surface);
+}
+
 .friday-page {
   color: var(--ink-700);
   font-family: var(--font-system-ui);
   font-size: 17px;
   line-height: 1.65;
-  background: var(--surface);
 }
 
 .friday-container {
