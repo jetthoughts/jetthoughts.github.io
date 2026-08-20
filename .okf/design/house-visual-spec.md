@@ -35,12 +35,19 @@ for it in the same breath - artwork loads above the fold, body text does not.
 # Fit text for the fallback font, not Caveat (2026-08-20)
 
 Hand SVGs load via `<img>`, where the Caveat webfont never applies - the
-browser renders the `cursive` fallback (Comic Sans-class), which runs
-~30% WIDER than Caveat. Both retros-post exhibits clipped on first render
-because strings were sized for Caveat metrics. Budget ~0.55em average
-glyph width per character at a given font-size when fitting strings to
-boxes, and render-verify before commit - the mermaid pipeline dodges this
-by embedding the woff2, hand SVGs don't.
+browser renders the `cursive` fallback (Comic Sans-class), which is WIDER
+than Caveat. Both retros-post exhibits clipped on first render because
+strings were sized for Caveat metrics. The mermaid pipeline dodges this by
+embedding the woff2; hand SVGs don't.
+
+**Measure, don't budget.** Open the `.svg` URL directly and call
+`getComputedTextLength()` on the text nodes. A character-count estimate is
+not good enough in either direction: the first version of this rule said
+~0.55em/char, and measurement during the C2.2 redraws (2026-08-20) put the
+real fallback at **~0.47em for lowercase prose**, rising to ~0.63em for
+short bold caps. That pessimism cost real quality - a footer was shortened
+on the arithmetic, then measured at 637px of an available 720 and restored
+verbatim. Fit by measurement, then render-verify at 390px before commit.
 
 # Exemplars
 

@@ -1957,3 +1957,26 @@ Two rules, both now binding:
 Corollary for review design: an implementer's self-critique cannot clear a
 voice gate, and the reason is now concrete rather than theoretical - the
 self-critics inherited the implementer's assumption that the body WAS the post.
+
+## 2026-08-20 — C2.2: the SVG floor was right this time, and an em-budget I invented was wrong
+
+1. **The mobile-legibility floor earns its keep when you render first.** Item 18
+   was abandoned in Aug because a 9px floor forced redesigns of exhibits that
+   were better before ([[feedback-legibility-fix-not-redesign]]). The five
+   `artifact-trail.svg` walkthrough images are the opposite case: rendered on a
+   real phone, their sub-labels were 4.5-5.3px and genuinely unreadable, not
+   merely small. Redraw was warranted, all five now clear the floor, and all
+   five read better. The policy that saved this - render-gate per image, never
+   metric-gate - is what let both calls be correct.
+2. **The fix was geometric, not typographic.** Dropping viewBox width
+   960 -> 720 raises the display scale at 390px from 0.41 to 0.54, which does
+   most of the work; font bumps finish it. Re-flowing 5-across into 3+2 (or 2x2
+   for the 4-card modules) is what makes the narrower viewBox possible.
+3. **I published a wrong number and an agent caught it.** The fallback-font rule
+   I wrote this morning said "budget ~0.55em/char". Measured against the real
+   standalone-SVG font context it is ~0.47em for lowercase prose. The pessimism
+   was not harmless: it caused a footer to be shortened unnecessarily before
+   measurement restored it. Rule corrected to **measure with
+   `getComputedTextLength()` on the .svg URL** rather than budget by character
+   count. Lesson generalises past SVG: a plausible constant published as
+   guidance gets applied by everyone downstream, so measure before writing one.
