@@ -129,6 +129,14 @@
             {{ end }}
           </div>
         {{ end }}
+
+        {{/* Article-end audit CTA - the reader who finished a rescue-adjacent
+             post is the warmest visitor the site has, and this was the one
+             surface with no conversion path (2608 phase 2.2). Course
+             chapters keep their own arrival actions instead. */}}
+        {{ if ne .Params.course_chapter true }}
+          {{ partial "blog/cta-band.html" . }}
+        {{ end }}
       </article>
 
       <div class="single-content single-post-wrapper">
