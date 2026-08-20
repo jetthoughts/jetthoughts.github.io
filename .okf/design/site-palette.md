@@ -63,9 +63,24 @@ anything else going dark is a defect:
 
 # Deprecations in progress
 
-`--color-primary` (`#1a8cff`) is named "primary" and appears in no brand
-definition; it and the late-cascade `#0066d6` anchor rule die in 2608 Phase
-1a.2/1a.3. Until then several page files carry scoped `!important` workarounds
+`--color-primary` (`#1a8cff`) is named "primary" and dies in 2608 Phase 1a.2,
+along with the late-cascade `#0066d6` anchor rule in 1a.3.
+
+**It is the logo's colour, and that is the point, not a reason to keep it.**
+`themes/beaver/assets/img/icons/logo-dark.svg` contains exactly one hex value:
+`#1a8cff`. The token was extracted from the brand mark. **A mark colour is not
+a UI accent** — the logo identifies, the accent directs — and promoting it to
+"primary" is what put blue bands, blue tags and blue links on a ruby site.
+
+**The three logo files stay blue and are OUT OF SCOPE for every design-system
+phase** (not deferred — out of scope). A blue mark with a ruby UI accent is an
+ordinary, coherent pattern; changing the mark is a brand decision.
+
+**Trap: SVG assets cannot read CSS custom properties.** ~29 theme and submenu
+icons under `themes/beaver/assets/img/icons/theme/` and
+`content/services/*/submenu-*.svg` carry hardcoded fills, so they are invisible
+to token work — deleting a token does not touch them, and a site-wide recolour
+must sweep them separately or they are left stranded on the old palette. Until then several page files carry scoped `!important` workarounds
 against that rule — **retiring all of them is the phase's success signal**: if
 they cannot all go, the replacement link colours are wrong, not the
 workarounds.
