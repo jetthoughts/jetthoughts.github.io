@@ -2,6 +2,54 @@
 
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
+## 2026-08-21 - The course's "good positions" were an artifact; GA4 UI setup closed out
+
+**Course discovery diagnosed, and the inherited premise is retracted.** Two
+reads (Aug-14, Aug-20) recorded "course 60+ URLs at good positions (5-13)",
+which reads as a CTR problem. Live GSC says otherwise: GA4-style position is
+averaged over impressions, so the best-looking course rows are the emptiest -
+`form-your-founding-hypothesis` reports position 3.0 on ONE impression. Of the
+six queries GSC will name across all course pages in 28 days (62 impressions),
+57 come from `"stripe / collison" anti-reference` and
+`dashboard.stripe.com/screenshare`; the four real queries total five
+impressions at positions 42-97. The one course page with a real high-volume
+target sits at position 26.6/32.6 over 90 days. Meanwhile the domain ranks fine
+for Ruby/Rails/AI queries. **Topical authority, not CTR, not indexation** -
+which is also why the falsified title/meta experiment could never have worked.
+Retracted the stale clause in all three places carrying it. Full diagnosis:
+2605 `50-59-execution/50.05-course-discovery-diagnosis-2026-08-21.md`.
+
+The asymmetry worth acting on: AI Assistant delivered 34 sessions at 79%
+engagement in the window against 2 from the LinkedIn course campaign, and the
+course landing is the 15th most-landed page on the site without ranking for
+anything. LLM retrieval matches on content, not on the domain authority the
+course lacks.
+
+**All four GA4-UI items done** (see [analytics-access](/workflows/analytics-access.md)):
+`page_view` un-marked as a key event, two shared Explorations, a Reports
+snapshot dashboard (the property had never had one), and a red bot-caveat
+annotation. New traps recorded there: un-marking a key event is **not
+retroactive**, annotation descriptions cap at 150 chars and truncate mid-word,
+and the annotation date field fills its END slot when you type into it.
+
+**Artifact-trail palette pass was 1 file, not 5.** The C2.2 follow-up assumed
+green was landing on non-money cards across the five module trails. Rendering
+all five side by side showed four already follow one learnable rule - exactly
+one tinted card per trail, the module payoff, green when it is money and purple
+when it is not. Only M2 broke it, tinting three of five. Green big-text on
+BUILD/PASS was left alone: the spec's short line says "money only" but its own
+table says "money/success outcomes", and it reads consistently in every trail.
+*Render the set before believing a spec-vs-artifact complaint - the complaint
+was half right and the fix was 1/5 the size.* Also renamed `.pay` -> `.done` in
+the three purple trails, where the name was lying; hashes identical before and
+after.
+
+**Two "defects" that were not defects.** M2's duplicate `2.5` chips and M3's
+3.1/3.1/3.2/3.2 look like copy-paste bugs and are correct: lesson 2.5 produces
+both the BUILD verdict and the money answer, and module 3 has two lessons with
+two artifacts each. Verified against each walkthrough's own lesson links before
+"fixing" anything.
+
 
 ## 2026-08-20 - Bundle compaction: the log was 37% of the bundle, and two concepts were copies
 
