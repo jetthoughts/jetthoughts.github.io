@@ -21,7 +21,7 @@ metatags:
 
 `ruby_llm` 1.16.0 ships `chat.rb`, `agent.rb`, `embedding.rb`, `cost.rb`, a model registry and an ActiveRecord integration. `langchainrb` 0.19.5 ships `vectorsearch/`, `chunker/`, `loader.rb`, `output_parsers/` and `evals/`.
 
-`ruby_llm` talks to models; `langchainrb` finds the documents first and then hands them to a model. Most of the rest follows from which of those you need.
+`ruby_llm` talks to models. `langchainrb` finds your documents first, then hands them to a model. Work out which of those you need and the rest of the choice gets easy.
 
 ```mermaid
 flowchart TD
@@ -41,11 +41,11 @@ flowchart TD
 | Vector search | no | 9 backends |
 | Document loading + chunking | no | yes |
 
-Raw HTTP is the third option and it is not in that table, because every cell would read "you write it". Its section is below.
+There is a third option, plain HTTP, and it is not in the table because every cell would say "you write it". It gets its own section further down.
 
-Providers are a tie at thirteen each, so that row settles nothing.
+Both ship thirteen providers, so that row will not help you choose.
 
-Neither gem promises you a quiet upgrade, either. `langchainrb` at 0.19.5 makes no compatibility guarantee at all, and `ruby_llm` is past 1.0 but has shipped four schema upgrades inside minor releases - it ships `upgrade_to_v1_7`, `v1_9`, `v1_10` and `v1_14` generators to run them, plus an `acts_as_legacy` shim keeping the pre-1.7 API alive. Budget for migrations on either.
+Neither one gives you upgrades for free. `langchainrb` is on 0.19.5, so it makes no promise about breaking your code. `ruby_llm` is past 1.0, but four of its minor releases changed the database schema - it ships `upgrade_to_v1_7`, `v1_9`, `v1_10` and `v1_14` generators to migrate you, and an `acts_as_legacy` shim so the old API keeps working. Expect migrations either way.
 
 ## The Rails gap
 
@@ -60,47 +60,40 @@ chat = Chat.create!(model: "claude-sonnet-4-5")
 chat.ask("Summarise this ticket")   # persisted, with messages
 ```
 
-langchainrb's Rails story lives in a second gem, `langchainrb_rails` 0.1.12, and it is worth opening rather than guessing at from the version number. It ships four generators - `pgvector`, `pinecone`, `chroma` and `prompt` - plus an ActiveRecord hook and a Railtie.
+For langchainrb you need a second gem, `langchainrb_rails`, currently on 0.1.12. It also ships four generators - `pgvector`, `pinecone`, `chroma` and `prompt` - plus an ActiveRecord hook and a Railtie.
 
-Look at what those generators are for. `ruby_llm`'s scaffold a conversation; `langchainrb_rails`' scaffold a vector store. Both gems brought their own centre of gravity into Rails, and neither is trying to cover the other's ground.
+Now compare what those generators build. `ruby_llm` sets up a conversation. `langchainrb_rails` sets up a vector store. Each gem brought the thing it is good at into Rails, and neither one tried to do the other's job.
 
 ## Cost tracking, by token class
 
 `ruby_llm`'s `Cost` object breaks spend down by token class - input, output, `cache_read`, `cache_write`, and `thinking`. Cached prompts and reasoning tokens bill at different rates from ordinary completion tokens.
 
-That matters when a bill moves and you need to know which call changed. A single total tells you spend went up; a per-class breakdown tells you a prompt edit stopped your prompts hitting cache.
+This matters when your bill goes up and you need to know why. One total only tells you that you spent more. The breakdown can tell you that a prompt you edited stopped hitting the cache.
 
-langchainrb gives you the counts but not the money - `prompt_tokens`, `completion_tokens` and `total_tokens` on every response, and running totals on `Assistant`. It has no notion of price, or of the cache and thinking classes that bill differently. You supply the price table and the arithmetic.
+langchainrb counts tokens but does not price them. You get `prompt_tokens`, `completion_tokens` and `total_tokens` on every response, and running totals on `Assistant`. There is no price list in the gem, and no separate figure for cached or thinking tokens. You add those yourself.
 
 ## When langchainrb wins
 
-If the job is answering from your own documents, langchainrb ships what you would otherwise assemble by hand: loaders, chunkers, output parsers, an evals module, and vector search that already speaks pgvector, with eight other backends behind it if you outgrow it.
+If you are answering questions from your own documents, langchainrb already has the parts. Loaders to read the files, chunkers to split them, output parsers, an evals module, and vector search that works with pgvector out of the box - plus eight other backends if you ever move off it.
 
-Reaching for `ruby_llm` and then hand-rolling chunking and a pgvector wrapper is how you end up maintaining a worse copy of a gem that already exists. Our [LangChain in Ruby guide](/blog/getting-started-langchain-ruby-complete-guide/) covers that path in depth.
+Pick `ruby_llm` instead and you will write the chunking and the pgvector wrapper yourself. That is a lot of work to end up with a worse version of a gem you could have installed. Our [LangChain in Ruby guide](/blog/getting-started-langchain-ruby-complete-guide/) walks through that setup.
 
 ## When raw HTTP wins
 
-You are making one call to one provider, and you have no plans to add a second. A `Net::HTTP` POST against the endpoint is about fifteen lines with no upgrade path to worry about.
+You are making one call, to one provider, and you do not plan to add another. A `Net::HTTP` POST to the endpoint is about fifteen lines, and there is no gem upgrade to worry about later.
 
-What you keep writing yourself is the boring layer: retries, streaming chunk parsing, token accounting, and a provider swap that touches every call site. Ship it for one feature. Do not build a product's model layer on it.
+What you write yourself is the dull but necessary part: retries, parsing streamed chunks, counting tokens, and changing provider later by editing every place you call one. That is fine for a single feature. It is a bad foundation for a product.
 
 ## Using both
 
-They compose. langchainrb handles retrieval, `ruby_llm` handles the conversation and the cost accounting.
+You can run both, and plenty of apps do. langchainrb finds the documents, `ruby_llm` runs the conversation and tracks what it costs.
 
-Let one gem own the model call. If both build requests to the same provider you get two retry policies and two streaming parsers, and when the payload shape changes you debug both.
+One rule keeps that tidy: only one gem should make the actual model call. If both are building their own requests to the same provider, you have two sets of retry rules and two streaming parsers, and when the request format changes you get to debug both.
 
-That failure is quieter than it sounds. We moved all nine schemas in one pipeline onto a different schema library, and every request body changed shape - [all 1549 tests stayed green](/blog/debugging-rubyllm-agents-rails/), because VCR's default matcher is `[:method, :uri]` and neither of those changed. A second gem constructing its own requests doubles the surface where that can happen.
+That kind of change is easy to miss. We moved all nine schemas in one pipeline onto a different schema library, so every request body we sent changed shape - and [all 1549 tests stayed green](/blog/debugging-rubyllm-agents-rails/), because VCR matches on method and URI, and neither of those changed. Add a second gem building its own requests and there are twice as many places for that to hide.
 
-Put an eval harness in front of it early. [Scoring agent output](/blog/evaluating-rubyllm-agents-rails/) is what tells you whether a retrieval change helped or hurt. Without one, you tune a chunk size and grade the result by reading four answers and deciding they look better.
+Add something that scores the answers early. [Checking agent output](/blog/evaluating-rubyllm-agents-rails/) is how you find out whether a change to your retrieval helped. Without it you tweak a chunk size, read four answers, decide they look better, and ship.
 
-## Sources
-
-- [ruby_llm on GitHub](https://github.com/crmne/ruby_llm) - source, changelog, provider list
-- [ruby_llm documentation](https://rubyllm.com/) - guides and the Rails integration
-- [langchainrb on GitHub](https://github.com/patterns-ai-core/langchainrb) - source and the vectorsearch modules
-- [langchainrb_rails](https://github.com/patterns-ai-core/langchainrb_rails) - the Rails companion gem
-- [RubyGems: ruby_llm](https://rubygems.org/gems/ruby_llm) - released versions
-- [RubyGems: langchainrb](https://rubygems.org/gems/langchainrb) - released versions
+Everything above comes from reading [ruby_llm](https://github.com/crmne/ruby_llm) 1.16.0 and [langchainrb](https://github.com/patterns-ai-core/langchainrb) 0.19.5. Both move quickly, so check the version you are actually installing before you take any of these counts as current.
 
 <!-- Reference cadence: thoughtbot -->

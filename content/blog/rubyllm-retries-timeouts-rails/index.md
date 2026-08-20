@@ -19,15 +19,15 @@ metatags:
   twitter_description: "Faraday will not retry a POST. RubyLLM adds it back, then honors Retry-After with no ceiling. Both are defensible; neither is obvious from your app code."
 ---
 
-One line in `ruby_llm` and one option it never sets decide how your app behaves when a provider is having a bad day, and neither is visible from your own code.
+When a provider starts failing, two things decide what your app does. One is a line in `ruby_llm`. The other is a setting `ruby_llm` never touches. You will not find either by reading your own code.
 
-The line is in `connection.rb`:
+Here is the line, in `connection.rb`:
 
 ```ruby
 methods: Faraday::Retry::Middleware::IDEMPOTENT_METHODS + [:post],
 ```
 
-Faraday's list is `delete get head options put`. POST is absent by design, because a retried POST can do the thing twice. `ruby_llm` adds it back, and it has to - every chat completion is a POST, so a gem that respected Faraday's default would never retry a single completion.
+Faraday's list is `delete get head options put`. POST is missing on purpose, because sending a POST twice can do the thing twice. `ruby_llm` puts it back, and it has no choice - every chat completion is a POST, so sticking to Faraday's list would mean never retrying a completion at all.
 
 ## What actually triggers a retry
 
@@ -39,9 +39,9 @@ Nine conditions, from `connection.rb`:
 | Provider | `RateLimitError`, `ServerError`, `ServiceUnavailableError`, `OverloadedError` |
 | Protocol | `Faraday::RetriableResponse` - dormant, see below |
 
-A 400 for a malformed request is not there, and should not be. Neither is an auth failure. Those are yours to fix, and retrying them just spends three round trips confirming it.
+A 400 for a bad request is not on that list, and should not be. Nor is a failed API key. Those are yours to fix, and retrying them just burns three round trips telling you so.
 
-The ninth is listed but never fires. `Faraday::RetriableResponse` is only raised for statuses in `retry_statuses`, and `ruby_llm` never sets that option, so it defaults to empty. Source-true, behaviour-inert.
+The ninth one never actually fires. `Faraday::RetriableResponse` only gets raised for statuses you put in `retry_statuses`, and `ruby_llm` never sets that option, so the list is empty. It is in the code, but nothing reaches it.
 
 The defaults around them:
 
@@ -52,15 +52,15 @@ retry_backoff_factor     2
 retry_interval_randomness 0.5
 ```
 
-Three retries at roughly 0.1s, 0.2s and 0.4s, with jitter. That schedule is built for a dropped connection, and for a dropped connection it is right.
+Three retries, at roughly 0.1s, 0.2s and 0.4s, with a little jitter. Those gaps are sized for a dropped connection, and for a dropped connection they are about right.
 
 ## The 429 case
 
-A 429 is in the retry list, and rate limits do not clear in 0.4 seconds.
+A 429 is on the retry list too, and a rate limit does not clear in 0.4 seconds.
 
-They do not have to. `faraday-retry` reads `Retry-After` and the rate-limit reset header, takes whichever is larger, and waits that long instead of using its own backoff. So a provider that says "come back in 30 seconds" gets 30 seconds, not 0.4.
+It does not have to. `faraday-retry` looks for `Retry-After` and the rate-limit reset header, takes the bigger of the two, and waits that long instead of using its own timings. A provider that says "come back in 30 seconds" gets 30 seconds.
 
-That is correct behaviour, and it is what you want a client to do. It also has no ceiling:
+That is the right thing to do, and you would want a client to do it. What it does not have is an upper limit:
 
 ```ruby
 def max_interval
@@ -68,9 +68,9 @@ def max_interval
 end
 ```
 
-`Float::MAX`. `ruby_llm` does not set `max_interval`, so the guard that would abandon an over-long wait never fires. A provider returning `Retry-After: 300` parks that call for five minutes, and it can do it three times.
+`Float::MAX`. `ruby_llm` never sets `max_interval`, so the check that would give up on a very long wait can never trigger. If a provider sends back `Retry-After: 300`, that call sits there for five minutes. Then it can do it twice more.
 
-Inside a Sidekiq job that is fine. Inside a Rails request, one rate-limited call can hold a web worker for longer than your load balancer will wait, and the failure your users see is a timeout with no LLM error in it.
+In a Sidekiq job, fine. In a web request, one rate-limited call can hold a worker longer than your load balancer is willing to wait. Your users get a timeout, and there is no LLM error anywhere in it to explain why.
 
 ```mermaid
 flowchart TD
@@ -92,33 +92,28 @@ end
 
 Two retries instead of three drops one attempt and one wait from the worst case. The other knob worth knowing is `request_timeout`, which `RubyLLM.configure` does expose and which defaults to **300 seconds**. It bounds how long a single attempt can hang, not how long the gem sleeps between them.
 
-Those are different ceilings, and with the defaults they stack: four attempts at up to 300 seconds each, plus up to three `Retry-After` waits in between. The honest worst case is well over half an hour, not the five minutes a single `Retry-After: 300` suggests.
+Those two limits cover different things, and they add up. With the defaults you can get four attempts of up to 300 seconds each, plus up to three `Retry-After` waits in between. That is over half an hour in the worst case, not the five minutes one `Retry-After: 300` might suggest.
 
-What would cap the sleeping is `max_interval`, and `RubyLLM.configure` does not expose it. Which is the argument for keeping the call off the request path rather than tuning your way out.
+The setting that would cap the waiting is `max_interval`, and `RubyLLM.configure` does not give you access to it. Which is really an argument for getting the call out of the web request instead of trying to tune it.
 
-A job is not a free pass either. In [our own fan-out](/blog/multi-agent-llm-rails-rubyllm/), a scoring call wrapped in `with_connection` held a database connection for the length of the model's reply, and fifteen fibers starved a pool of ten. Moving a slow call off the request path only helps if it stops holding the resources it does not use.
+Moving it to a job is not a free pass either. In [our own fan-out](/blog/multi-agent-llm-rails-rubyllm/), a scoring call wrapped in `with_connection` held a database connection for as long as the model took to reply, and fifteen fibers drained a pool of ten. Getting a slow call out of the request only helps if it also stops holding things it is not using.
 
 ## The retried POST is a real trade
 
-Retrying a POST means a request that succeeded server-side but lost its response gets sent again. You are billed twice and, for anything non-deterministic, you may get two different completions.
+Sometimes a request works on the provider's side and the response gets lost on the way back. Retrying sends it again. You pay for both, and if the call is not deterministic you can get two different answers.
 
-`ruby_llm` takes that trade deliberately, and for chat completions it is the right one - a failed request usually produced nothing. It stops being right the moment your call has a side effect: a tool call that writes a row, an agent step that sends mail. Those want idempotency keys or a job with its own dedupe.
+`ruby_llm` makes that trade on purpose, and for a chat completion it is the right call - a request that failed usually produced nothing to pay for. It stops being right as soon as your call does something: a tool that writes a row, an agent step that sends an email. For those you want an idempotency key, or a job that checks whether it already ran.
 
 ## What none of this covers
 
-Retries handle a provider that is down. They do nothing about a provider that is up and answering differently than it did last week - [a model stopped answering the way it used to](/blog/debugging-rubyllm-agents-rails/) and every VCR cassette still replayed green.
+Retries deal with a provider that is down. They do nothing about a provider that is up and answering differently than it did last week. That happened to us: [the model stopped answering the way it used to](/blog/debugging-rubyllm-agents-rails/), and every VCR cassette still replayed green.
 
-They also do nothing about spend. A large prompt that times out after the provider already served it gets billed for every attempt, up to four with the defaults, and the gem's own `Cost` object is what tells you which token class grew - the [difference between RubyLLM and langchainrb](/blog/rubyllm-vs-langchainrb-rails-llm-stack/) is partly that langchainrb gives you counts and leaves the money to you.
+They do nothing about the bill, either. If a big prompt times out after the provider has already generated the answer, you pay for each attempt - up to four with the defaults. The `Cost` object is what shows you which kind of token grew, and that is one of the [differences between RubyLLM and langchainrb](/blog/rubyllm-vs-langchainrb-rails-llm-stack/): langchainrb counts tokens and leaves the pricing to you.
 
-For the outbound side of this - limiting how many calls you make at once rather than what happens when one fails - [fibers and Falcon](/blog/fibers-async-ruby-llm-streaming-rails/) is the other half.
+This post is about what happens when a call fails. Limiting how many you make at once is the other half of the problem, and that lives in [fibers and Falcon](/blog/fibers-async-ruby-llm-streaming-rails/).
 
-## Sources
+All of this is from [`connection.rb`](https://github.com/crmne/ruby_llm/blob/main/lib/ruby_llm/connection.rb) in ruby_llm 1.16.0 and [faraday-retry](https://github.com/lostisland/faraday-retry) 2.4.0. Check the versions you have installed before trusting the numbers.
 
-- [ruby_llm connection.rb](https://github.com/crmne/ruby_llm/blob/main/lib/ruby_llm/connection.rb) - the retry setup and exception list
-- [ruby_llm configuration](https://rubyllm.com/configuration/) - the options exposed on `RubyLLM.configure`
-- [faraday-retry](https://github.com/lostisland/faraday-retry) - `IDEMPOTENT_METHODS`, `Retry-After` handling, `max_interval`
-- [Faraday middleware docs](https://lostisland.github.io/faraday/#/middleware/included/retry) - how the retry middleware composes
-
-Whether a given provider actually sends `Retry-After` or a rate-limit reset header on a 429 is worth checking against your own provider's docs before you rely on the wait being bounded by anything sensible. The behaviour above is the client's; the header is theirs.
+One thing to confirm on your side: whether your provider actually sends `Retry-After` or a rate-limit reset header on a 429. Everything above describes what the client does with that header. Sending it is up to them.
 
 <!-- Reference cadence: thoughtbot -->
