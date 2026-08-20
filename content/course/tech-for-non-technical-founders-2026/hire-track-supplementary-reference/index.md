@@ -82,15 +82,14 @@ The 2026 hire decision is not "remote vs in office." It is which of four regions
 | Anything needing live timezone overlap for daily standups | Nearshore (LATAM) | Full US Pacific-to-Eastern overlap; English fluency for standups and Slack |
 | A single point task - logo, landing page, one-off scraper | Upwork | Self-vetting marketplace; non-load-bearing work only |
 
-### Six platforms ranked
+### Five platforms ranked
 
-The hiring market for AI-Augmented Developers in 2026 lives across six platforms. Pick two based on your geography decision above. Post the role on both, and do not waste a Friday on a tour of all six.
+The hiring market for AI-Augmented Developers in 2026 lives across five platforms. Pick two based on your geography decision above. Post the role on both, and do not waste a Friday on a tour of all five.
 
-- **[Toptal Fractional Executives](https://www.toptal.com/fractional/cto)** - Senior + screened, 3-5 day hire cycle, $90-$200/hr. Best for Senior fractional roles where the cost of a wrong hire would dwarf the platform markup.
+- **[Toptal](https://www.toptal.com/developers/cto)** - Senior + screened, 3-5 day hire cycle, $90-$200/hr. Best for Senior fractional roles where the cost of a wrong hire would dwarf the platform markup.
 - **[Bolster](https://www.bolster.com/on-demand-hiring)** - the largest curated fractional executive marketplace. Strong for fractional CTO and VP Engineering.
 - **[LatHire](https://www.lathire.com/)** - LATAM nearshore developers, full-time and contract. Pre-screens for English fluency and engineering depth.
-- **[AI People Agency](https://aipeople.agency/)** - AI-native engineer screening. Sub-48-hour candidate slates for AI Integration Engineer and AI Quality Engineer roles.
-- **[Seedium](https://seedium.io/)** - AI-first software agency. Project work via SOW, not headcount.
+- **[JetThoughts](/services/outsourced-developer-staffing/)** - the team behind this course. Pre-vetted senior Rails engineers who work AI-augmented with every line reviewed before merge, as ongoing staffing or project work via SOW.
 - **[Upwork](https://www.upwork.com/)** - mass-market freelance for point tasks only.
 
 **Job description that screens for the right signal:** Five lines: (1) 5-10 years engineering, (2) daily Cursor or Claude Code or Aider user, (3) shipped Rails / Django / Laravel apps to production, (4) reviewed AI-generated code in pull request, (5) can articulate where the model is wrong. Skip "5+ years of React and Node." Skip "Big Tech experience preferred." Both screens filter against the wrong signal in 2026.

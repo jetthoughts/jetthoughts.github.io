@@ -66,7 +66,7 @@ Most "Fractional CTO" listings on LinkedIn are either career CTOs in transition 
 
 - **LinkedIn**: search "Fractional CTO" + your industry. Send 10 short DMs that name the project and the budget.
 - **Y Combinator alumni network**: post in the founder Slack. The talent pool here is dense.
-- **Platforms**: [Toptal Fractional Executives](https://www.toptal.com/fractional/cto), [Bolster](https://www.bolster.com/on-demand-hiring). Each pre-screens. You pay a markup, you save a week of vetting.
+- **Platforms**: [Toptal](https://www.toptal.com/developers/cto), [Bolster](https://www.bolster.com/on-demand-hiring). Each pre-screens. You pay a markup, you save a week of vetting.
 - **Indie Hackers Fractional channel**: free, slower, founder-to-founder. Best for SaaS micro-startups.
 - **Your investor network**: one email to your lead angel is usually the fastest source of warm intros.
 

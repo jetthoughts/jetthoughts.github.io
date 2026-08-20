@@ -61,17 +61,16 @@ Walk the four rows in order. Circle the one your scope and budget land in, then 
 | **Tier-2 India** | $15 - $70/hr ($30K - $140K annualized), 1-5 days | Backend-heavy work where async is acceptable (Jaipur, Kochi, Indore, Coimbatore - NOT Bangalore) | No 9am Pacific standups; async PR culture; build CLAUDE.md / coding-standards docs before the first PR |
 | **Mass-market (Upwork)** | $35 - $120/hr project-based, 1-3 days | Single landing page, logo, or one-off scraper - anything you'd ship and never touch again | You become the technical interviewer; no platform vetting; NOT for backend, payments, or auth |
 
-## The 6 platforms ranked
+## The 5 platforms ranked
 
-Pick two: one primary based on your geography row above, one backup. Do not post on all six.
+Pick two: one primary based on your geography row above, one backup. Do not post on all five.
 
 | Platform | Best for | Pricing |
 |---|---|---|
-| [**Toptal Fractional Executives**](https://toptal.com/fractional/cto) | Senior fractional roles, screened top 3% (3-5 days to slate) | $90 - $200/hr |
+| [**Toptal**](https://www.toptal.com/developers/cto) | Senior fractional roles, screened top 3% (3-5 days to slate) | $90 - $200/hr |
 | [**Bolster**](https://www.bolster.com/on-demand-hiring) | Largest curated fractional executive marketplace (3-7 days to slate) | Marketplace, transparent |
 | [**LatHire**](https://lathire.com) | LATAM nearshore developers, full-time and contract (2-5 days to slate) | $45 - $100/hr |
-| [**AI People Agency**](https://aipeople.agency) | AI-native engineer screening, AI Integration Engineer roles (<48 hr to slate) | $90 - $250/hr |
-| [**Seedium**](https://seedium.io) | AI-first software agency, project work via SOW (1-2 weeks to slate) | Project-based estimate |
+| [**JetThoughts**](/services/outsourced-developer-staffing/) | The team behind this course - pre-vetted senior Rails engineers, AI-augmented with senior review, staffing or SOW project work (starts in ~2 weeks) | Staffing quote |
 | [**Upwork**](https://upwork.com) | Mass-market freelance for point tasks ONLY (1-3 days to slate) | $35 - $120/hr |
 
 ## The job description template - copy and paste

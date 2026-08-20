@@ -1,7 +1,7 @@
 ---
 
 title: "MVP Development Services for Startups | Ship in 8 Weeks | JetThoughts"
-description: "MVP development services for startups - from idea to production in 8 weeks. Ruby on Rails experts with 17 years experience. Test-driven, transparent, milestone billing."
+description: "MVP development services for startups - from idea to production in 8 weeks. Ruby on Rails experts since 2008. Test-driven, transparent, milestone billing."
 headline: MVP Development Services for Startups
 excerpt: Build your MVP with a team that ships production-ready code in 8 weeks. We use Ruby on Rails, test-driven development, and weekly reporting so you always know what you're paying for. No vibe coding, no AI-generated shortcuts - real engineers who take responsibility for what ships.
 slug: app-web-development
