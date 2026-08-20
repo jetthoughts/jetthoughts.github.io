@@ -679,7 +679,7 @@ div.fancybox-container {
   transition: all .3s ease-in-out;
 }
 .cs-cases .pp-content-post:hover {
-  border-color: #428AF7 !important;
+  border-color: var(--color-ruby) !important;
 }
 .cs-cases .pp-content-grid-post-image {
   padding: 0;
@@ -713,7 +713,7 @@ div.fancybox-container {
   padding: 7px 15px;
   background-color: var(--ruby-100) !important;
   border-radius: 21px;
-  color: var(--color-ruby);
+  color: var(--ruby-700);
   transition: all 0.3s ease-in-out;
   margin-bottom: 8px;
 }

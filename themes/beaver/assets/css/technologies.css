@@ -7,6 +7,14 @@
     font-weight: 600;
 }
 
+/* On the .white variant this eyebrow sits on the near-black band, where
+   --color-ruby #cc342d measures 4.10:1 and misses AA. --color-ruby-hover
+   #e04a42 is the lighter ruby and clears it. Ruby needs a lighter tone on
+   dark and a darker one on light - same role, two values. */
+.technologies-component.white .subheading {
+    color: var(--color-ruby-hover);
+}
+
 .technologies-component .header {
     text-align: center;
     padding-top: 130px;

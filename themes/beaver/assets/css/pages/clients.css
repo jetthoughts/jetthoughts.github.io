@@ -3621,7 +3621,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 
 .clients-grid .pp-content-post:hover {
-  border-color: #428AF7 !important;
+  border-color: var(--color-ruby) !important;
 }
 .clients-grid .pp-content-grid-post-text {
   padding: 28px 0 30px 0;
@@ -3636,7 +3636,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   padding: 7px 15px;
   background-color: var(--ruby-100) !important;
   border-radius: 21px;
-  color: var(--color-ruby);
+  color: var(--ruby-700);
   transition: all 0.3s ease-in-out;
   margin-bottom: 8px;
 }
@@ -3660,7 +3660,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 
 .clients-carousel .pp-content-post:hover {
-  border-color: #428AF7 !important;
+  border-color: var(--color-ruby) !important;
 }
 .clients-carousel .pp-content-grid-post-text {
   padding: 28px 0 30px 0;
@@ -3675,7 +3675,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   padding: 7px 15px;
   background-color: var(--ruby-100) !important;
   border-radius: 21px;
-  color: var(--color-ruby);
+  color: var(--ruby-700);
   transition: all 0.3s ease-in-out;
   margin-bottom: 8px;
 }

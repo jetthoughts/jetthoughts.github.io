@@ -3572,7 +3572,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 
 .service-clients-grid .pp-content-post:hover {
-  border-color: #428AF7 !important;
+  border-color: var(--color-ruby) !important;
 }
 
 
@@ -3618,7 +3618,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   padding: 7px 15px;
   background-color: var(--ruby-100) !important;
   border-radius: 21px;
-  color: var(--color-ruby);
+  color: var(--ruby-700);
   transition: all 0.3s ease-in-out;
   margin-bottom: 8px;
 }
