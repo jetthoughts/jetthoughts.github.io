@@ -1676,3 +1676,30 @@ Three durable learnings from the vendor-post rewrite + lovable-guide session:
    -ing tails, synonym cycling, vague authority, generic positive
    conclusions, chatbot artifacts, straight-quotes rule. Sweep rewrites
    against the MERGED list, not just the original §3.
+
+## 2026-08-20 - CfT 141->152 bump: local dtest re-record on ARM Mac planted false CI drift
+
+The rule already existed in this bundle - test-gates.md has carried "never
+re-record them from local emulated Docker (would break green CI)" since
+2026-08-01, with the exact 7 fixtures and their diff levels - and it was
+violated anyway. The knowledge was not the gap; the enforcement was. Record
+Linux screenshot baselines in CI, never locally via `bin/dtest` on an ARM
+Mac. `.dev/compose.yml` runs the test services as `platform:
+linux/amd64` - on Apple Silicon that's QEMU-emulated Chrome, not native, and
+the file's own comment already warns this drifts pixels from CI. Commit
+5a2a36d8 bumped Chrome for Testing 141->152 and re-recorded 91/135 Linux
+baselines locally; CI then failed `test_codeblock_language_styles` on 7 of 8
+sections (tolerance 0.03, breached by a near-uniform whole-page sub-pixel
+delta, invisible but over threshold). Re-recording the SAME baselines
+through CI reproduced master's Chrome-141 baselines byte-for-byte - Chrome
+152 renders identically here, and the local emulated recording was the sole
+source of drift. Verified clean after the CI record: 356 runs, 6329
+assertions, 0 failures. Two operational gotchas: the bot's baseline commit
+carries `[ci skip]` so the PR shows "no checks reported" until a real push
+re-triggers the gate; and record mode has no accept/reject step, so screen
+the overwritten baselines by per-file byte-size delta and eyeball only the
+outliers. Separately confirmed: stale Linux baselines can carry banned
+copy (pre-2026-08-14 canon numbers) because the PR screenshot gate is
+`continue-on-error` during the soak and a text ratchet can't see a frozen
+PNG. Detail: `.okf/build/test-gates.md` (local dtest drift), `.okf/build/ci-gates.md`
+(CI record gotchas + stale-baseline drift).
