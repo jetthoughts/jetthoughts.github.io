@@ -780,7 +780,7 @@ config.middleware.use PerformanceMonitor if Rails.env.production?
 
 ## Real-World Use Cases
 
-Three patterns where Falcon's fiber model genuinely changes the architecture, with code you can adapt.
+Three patterns where Falcon's fiber model changes the architecture, with code you can adapt.
 
 ### High-Concurrency API Server
 
