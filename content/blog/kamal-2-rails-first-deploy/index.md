@@ -1,6 +1,6 @@
 ---
 title: "Kamal 2: Your First Rails Deploy"
-description: "What kamal init actually creates in Kamal 2, where secrets live now that .env is gone, how to size the box, and what to do when the first deploy stalls."
+description: "Porting a Kamal 1 config to Kamal 2 fails on unknown key: traefik. Here is what each dead key became, and what a working first deploy on one server looks like."
 date: 2025-01-15
 lastmod: 2026-08-20
 draft: false
@@ -14,16 +14,20 @@ cover_image_alt: "Dark technical cover reading Kamal 2 Your First Rails Deploy, 
 metatags:
   image: cover.png
   og_title: "Kamal 2: Your First Rails Deploy"
-  og_description: "What kamal init actually creates in Kamal 2, where secrets live now that .env is gone, how to size the box, and what to do when the first deploy stalls."
+  og_description: "Porting a Kamal 1 config to Kamal 2 fails on unknown key: traefik. Here is what each dead key became, and what a working first deploy on one server looks like."
   twitter_title: "Kamal 2: Your First Rails Deploy"
-  twitter_description: "Traefik is gone, .env is gone, and the build runs on your laptop. The Kamal 2 first deploy, with the parts the old guides get wrong."
+  twitter_description: "Your old Kamal config dies on unknown key: traefik. Here is the mapping to Kamal 2, and a first deploy that works."
 ---
 
-Most Kamal guides you'll find were written for Kamal 1, and Kamal 2 moved the three things those guides talk about most.
+Kamal 2 moved the pieces that most published Kamal tutorials spend their time on. Copy one of those configs forward and the deploy stops before it opens an SSH connection:
 
-Traefik is gone. `.env` is gone. Paste a `traefik:` block into a Kamal 2 `config/deploy.yml` and nothing warns you - the key sits there doing nothing while your SSL never comes up.
+```
+ERROR (Kamal::ConfigurationError): unknown key: traefik
+```
 
-This walks a first deploy onto one server against Kamal 2.12, with the moved parts called out where they bite.
+Kamal validates every top-level key, so a stale config fails at once instead of misbehaving quietly. That part is a gift. The catch is that the error names what died without naming its replacement, and `traefik` is only the first key you'll hit.
+
+This walks a first deploy onto one server against Kamal 2.12, with each moved piece mapped to what replaced it.
 
 ## What `kamal init` actually creates
 
@@ -53,7 +57,7 @@ Rails 8 ships Kamal in new apps already, so `kamal init` may be redundant for yo
 
 ## Secrets moved to `.kamal/secrets`
 
-This is the change that breaks the most copied-from-a-blog setups. `.kamal/secrets` is built to be committed, because it holds *references*, not values:
+`.kamal/secrets` is built to be committed, because it holds *references* rather than values:
 
 ```bash
 # .kamal/secrets
@@ -124,11 +128,17 @@ proxy:
     timeout: 3
 ```
 
-A top-level `healthcheck:` block with `port:` and `max_attempts:` is Kamal 1 syntax. Kamal won't reject it, which is exactly what makes it annoying to debug.
+A top-level `healthcheck:` block with `port:` and `max_attempts:` is Kamal 1 syntax, and it earns you the same treatment as `traefik:`:
+
+```
+ERROR (Kamal::ConfigurationError): unknown key: healthcheck
+```
+
+Useful property to lean on while you port a config: if your `deploy.yml` validates on your machine, every key in it is real for your version. Work through the errors one at a time and Kamal will name each dead key for you.
 
 ## Sizing the box
 
-The question I get most is how much RAM the server needs, and the honest answer is that Kamal publishes no minimum because it can't - your app decides that.
+Kamal publishes no minimum RAM figure, and it can't - your app decides that number, not the deploy tool.
 
 What Kamal does decide is *where the build happens*, and that's the part people size wrong. `builder.local` defaults to `true`, so `docker build` runs on your laptop and Kamal pushes the finished image to your registry. Your server pulls it.
 
@@ -150,7 +160,7 @@ First time out, you want `setup`, not `deploy`:
 bundle exec kamal setup
 ```
 
-`setup` bootstraps the servers, starts accessories, pushes the env, then deploys. Every deploy after that is `kamal deploy`, and once servers are already bootstrapped, `kamal redeploy` skips the setup work.
+`setup` installs Docker on the servers, then runs a deploy with accessories booted. Every deploy after that is `kamal deploy`, and once servers are already bootstrapped, `kamal redeploy` skips the bootstrap and proxy work.
 
 ```mermaid
 flowchart TD
@@ -163,27 +173,27 @@ That local-build step is why a slow home connection hurts a Kamal deploy more th
 
 ## When the first deploy stalls
 
-Almost everyone's first failure is a health check that never goes green, and the error names the target rather than the cause. We wrote up [that specific error and how to read it](/blog/solving-kamals-target-failed-become-healthy/) separately, because it has more causes than fit here.
+A health check that never goes green is the failure we see most on first deploys, and the error names the target rather than the cause. We wrote up [that specific error and how to read it](/blog/solving-kamals-target-failed-become-healthy/) separately, because it has more causes than fit here.
 
 Three commands do most of the diagnosis:
 
 ```bash
 bundle exec kamal app logs -f      # application output
 bundle exec kamal proxy logs       # kamal-proxy, formerly where you'd read Traefik
-bundle exec kamal config           # the merged config, secrets included
+bundle exec kamal config           # roles, hosts, image, builder, accessories
 ```
 
-Reach for `kamal config` when the file looks right but the deploy disagrees. It prints what Kamal actually resolved, which is where a mistyped secret name shows up.
+One caveat on `kamal config`, because its own help text oversells it. The command prints a redacted subset - roles, hosts, resolved image and version, builder, accessories - and leaves out `env` and `proxy` entirely. Mistype a secret name and `kamal config` still exits 0 with unchanged output, so it will not confirm your secrets wiring. Its job is telling you which hosts and image a deploy resolved to.
 
-There's also `kamal docs proxy` - the gem ships its own configuration reference offline, so you can check a key without leaving the terminal.
+There's also `kamal docs proxy` - the gem ships its configuration reference offline, so you can check a key without leaving the terminal.
 
 ## Rolling back
 
 ```bash
-bundle exec kamal rollback [VERSION]
+bundle exec kamal rollback 9f8a2c1
 ```
 
-Kamal keeps previous images on the server, so a rollback is a container swap rather than a rebuild. Run `kamal app containers` to see which versions are still around.
+Rollback is a container swap, not a rebuild, and it takes a real version rather than a placeholder. Kamal checks that a *container* still exists for the version you named, which is the constraint that catches people: `kamal prune` keeps only the last five containers by default, so five deploys after a bad one, that version is no longer a rollback target. Run `kamal app containers` to see what's actually still there.
 
 Worth knowing before you need it: rollback swaps the code, not your database. A deploy that ran a destructive migration doesn't become safe because you rolled the container back.
 
@@ -195,7 +205,7 @@ Don't hand-edit your way across. Kamal ships the migration:
 bundle exec kamal upgrade
 ```
 
-It replaces Traefik with kamal-proxy and restarts accessories, prompting before each. Clear one thing out first: Kamal 2 refuses configs carrying `pre-traefik-reboot` or `post-traefik-reboot` hooks, so delete those files or config validation stops you.
+It confirms once, then replaces Traefik with kamal-proxy and restarts accessories. Rename two files before you run it: Kamal 2 refuses any config carrying `pre-traefik-reboot` or `post-traefik-reboot` hooks, and the error tells you what it wants - "these should be renamed to (pre|post)-proxy-reboot". Rename them rather than deleting; the hooks themselves still run.
 
 ## When Kamal is the wrong call
 
