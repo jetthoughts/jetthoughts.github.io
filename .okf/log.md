@@ -3,6 +3,33 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+## 2026-08-21 - the Hugo trap behind the analytics finding, lifted from spec to bundle
+
+The Codex round fixed the 2608 specs. One of its findings was a durable CODE
+fact that was left sitting in a project doc where template work would never
+find it.
+
+* `architecture/hugo-site.md` - **a permalink rewrite does NOT change
+  `.Section` or `.Kind`.** The taxonomy is declared `tag = "tags"` and only
+  `[permalinks.term]` rewrites the URL, so a page served at
+  `/blog/tags/rails/` still has `.Section == "tags"`. Every
+  `eq .Section "blog"` condition therefore MISSES tag pages while reading as
+  though it covers them - the URL says blog, the page object does not. A
+  proposed analytics gate was written exactly this way.
+* `architecture/blog-list-page.md` - the same drift in a second form. That
+  concept already records the index and tag templates drifting apart in MARKUP
+  and being unified by shared partials. Unifying markup did NOT unify
+  PREDICATES: a `.Section` guard added anywhere still covers one and skips the
+  other. Also noted the inline `!important` H1 styles still at `list.html:51,70`.
+* `design/site-palette.md` - two fixes. `--color-primary` no longer "dies in
+  1a.2"; it is GONE as of #518, and the seven surviving matches are comments
+  recording what each rule replaced, which a careless grep reads as survival.
+  And the `--rr-*` alias deprecation was missing entirely: it now names the
+  three live consumers and the rule that matters - **verify by grep at deletion
+  time, never against a written inventory.** That inventory was wrong twice in
+  one review, and `single-post.css` is in the COURSE bundle, so an early
+  deletion breaks blog and course together.
+
 ## 2026-08-21 - Codex review killed a claim I had already published
 
 All eight findings verified against the tree; all eight valid. The one that

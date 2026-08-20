@@ -7,7 +7,7 @@ tags: [design, palette, css, tokens, adr]
 generated:
   by: claude/opus-5
   at: 2026-08-20T00:00:00Z
-timestamp: 2026-08-20T00:00:00Z
+timestamp: 2026-08-21T01:20:00Z
 ---
 
 # Resolved: LIGHT (ADR-0003, 2026-08-20)
@@ -85,11 +85,29 @@ anything else going dark is a defect:
 
 # Deprecations in progress
 
-`--color-primary` (`#1a8cff`) is named "primary" and dies in 2608 Phase 1a.2,
-along with the late-cascade `#0066d6` anchor rule in 1a.3. WHEN those phases
-run relative to everything else is a separate decision - see the
-[rollout sequence](/workflows/site-redesign-rollout.md); the blog bundles ship
-before the site-wide chrome, so tokens land in blog CSS first.
+`--color-primary` (`#1a8cff`) **is gone as of 2026-08-21** — deleted in Phase
+1a.2 along with the late-cascade `#0066d6` anchor rule in 1a.3, both shipped
+in PR #518. The only surviving matches in `themes/beaver/assets/css/` are
+seven COMMENTS recording what each rule replaced (`/* was
+var(--color-primary) */`); a grep that counts them reads as if the token
+survived. Grep for `var(--color-primary` with the opening paren and read the
+hits before concluding a token is still live.
+
+## The `--rr-*` aliases die next, in 1a.4 — verify by grep, never by list
+
+Phase 1a.1 promoted the Rescue Room tokens into
+`foundations/css-variables.css:110-116` as `--rr-*` aliases marked
+DELETE-in-1a.4. They are consumed in three files as of 2026-08-21:
+`pages/blog-list.css`, `single-post.css`, and `pages/blog-single.css`.
+
+**Do not delete the alias block against a written inventory.** A spec's list
+of consumers was wrong twice in one review (2026-08-21): it omitted a live
+line and named a file carrying zero references. `single-post.css` is the one
+that makes this dangerous — its `--rr-*` declarations set CTA and tag colour
+and background, and that file is a member of the COURSE bundle too, so
+deleting the aliases early breaks styling on blog AND course. Re-run
+`grep -rn 'var(--rr-' themes/beaver/assets/css/` at the moment of deletion and
+believe the output, not the doc.
 
 **It is the logo's colour, and that is the point, not a reason to keep it.**
 `themes/beaver/assets/img/icons/logo-dark.svg` contains exactly one hex value:
