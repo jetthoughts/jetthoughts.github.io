@@ -1355,8 +1355,8 @@ For 90% of Rails applications, **pgvector is the right choice**. Start here, upg
 
 **JetThoughts Guides**:
 - [Complete Guide to Ruby on Rails AI Integration 2025](/blog/2025/complete-guide-ruby-rails-ai-integration-2025/) - OpenAI/Anthropic integration patterns
-- [Building RAG Systems with Ruby](/blog/rag-ruby-rails-tutorial/) - Retrieval-Augmented Generation tutorial (coming soon)
-- [Rails Performance Monitoring](/blog/rails-performance-monitoring/) - APM setup for production apps
+- [Building RAG Applications with Rails and pgvector](/blog/building-rag-applications-rails-pgvector/) - Retrieval-Augmented Generation tutorial
+- [Rails Performance Monitoring](/blog/rails-performance-monitoring-complete-guide/) - APM setup for production apps
 
 **Community Examples**:
 - JetThoughts pgvector Example App - Complete working Rails 7 application
