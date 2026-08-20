@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" role="img" aria-labelledby="avd-title">
-  <title id="avd-title">The copyright follows the signature, not the invoice. Two paths side by side. Left, in red - no signed assignment: you pay every invoice, the developer who typed it keeps the copyright, and you cannot hand it over. Right, in purple - the contract says hereby assigns and it is signed: the code gets written, the copyright is yours at that same moment, and you can move it anywhere. Footer: this describes US copyright law, Circular 30, and is not legal advice.</title>
+  <title id="avd-title">The copyright follows the signature, not the invoice. Two paths side by side. Left, in red - no signed assignment: you pay every invoice, whoever typed it may still hold the copyright, and you cannot hand it over. Right, in purple - the contract says hereby assigns and it is signed: the code gets written, the copyright is yours at that same moment, and you can move it anywhere. Footer: this describes US copyright law, Circular 30, and is not legal advice.</title>
   <desc>Hand-drawn two-column contrast: the default outcome when no assignment is signed, against the outcome when a present assignment clause is signed.</desc>
   <defs>
     <marker id="avd-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -26,20 +26,20 @@
   <!-- left: no assignment -->
   <rect x="36" y="96" width="316" height="304" rx="10" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
   <rect x="52" y="114" width="284" height="46" rx="10" fill="#cc342d"/>
-  <text class="h head" x="194" y="145" text-anchor="middle">No signed assignment</text>
+  <text class="h head" x="194" y="145" text-anchor="middle">no signed assignment</text>
   <text class="h step" x="194" y="196" text-anchor="middle">you pay every invoice</text>
-  <path d="M 194 212 C 190 224, 198 232, 194 246" fill="none" stroke="#cc342d" stroke-width="2.5" marker-end="url(#avd-r)"/>
-  <text class="h step" x="194" y="278" text-anchor="middle">the developer who typed</text>
-  <text class="h step" x="194" y="303" text-anchor="middle">it keeps the copyright</text>
+  <path d="M 194 214 C 190 228, 198 242, 194 256" fill="none" stroke="#cc342d" stroke-width="2.5" marker-end="url(#avd-r)"/>
+  <text class="h step" x="194" y="278" text-anchor="middle">whoever typed it may</text>
+  <text class="h step" x="194" y="303" text-anchor="middle">still hold the copyright</text>
   <rect x="52" y="322" width="284" height="56" rx="12" fill="#ffffff" stroke="#cc342d" stroke-width="2.5"/>
   <text class="h outr" x="194" y="358" text-anchor="middle">you cannot hand it over</text>
 
   <!-- right: present assignment -->
   <rect x="368" y="96" width="316" height="304" rx="10" fill="#fbe9ff" stroke="#7c3aed" stroke-width="2.5"/>
   <rect x="384" y="114" width="284" height="46" rx="10" fill="#7c3aed"/>
-  <text class="h head" x="526" y="145" text-anchor="middle">hereby assigns - signed</text>
+  <text class="h head" x="526" y="145" text-anchor="middle">"hereby assigns", signed</text>
   <text class="h step" x="526" y="196" text-anchor="middle">the code gets written</text>
-  <path d="M 526 212 C 522 224, 530 232, 526 246" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#avd-p)"/>
+  <path d="M 526 214 C 522 228, 530 242, 526 256" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#avd-p)"/>
   <text class="h step" x="526" y="278" text-anchor="middle">the copyright is yours</text>
   <text class="h step" x="526" y="303" text-anchor="middle">at that same moment</text>
   <rect x="384" y="322" width="284" height="56" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>

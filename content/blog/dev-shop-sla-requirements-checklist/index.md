@@ -26,7 +26,7 @@ Here are the five software development SLA requirements worth writing into your 
 
 The first one looks like this on paper - three severity levels, three reply deadlines:
 
-![Severity decides the reply clock: three stacked rows. Severity 1, in red - the app is down, or nobody can pay you - a person replies within 2 business hours. Severity 2, in amber - a feature broke, but there is a workaround - reply within 8 business hours. Severity 3, in grey - typos and cosmetic glitches - reply within 2 business days. Footer: these are fair asks, and you name your own timezone for business hours](severity-reply-clock.svg)
+![Put three numbers in the contract - how fast they reply depends on how bad it is. Three stacked rows. Severity 1, in red - the app is down, or nobody can pay you - reply in 2 business hours. Severity 2, in amber - a feature broke, but there is a workaround - reply in 8 business hours. Severity 3, in grey - typos and cosmetic glitches - reply in 2 business days. Footer: these are fair asks, and you name your own timezone for business hours](severity-reply-clock.svg)
 
 ## First, measure the service you're getting now
 
