@@ -15,7 +15,7 @@ The design-system rollout (ADR-0003) asks for an experiment before each big
 change. Three constraints decide what that can actually mean, and the first one
 is decisive.
 
-### 1. Real traffic is ~9 human sessions/day, not ~300
+### 1. Real traffic is ~10 human sessions/day, not ~300
 
 `.okf/workflows/analytics-access.md` (2026-08-13) establishes that **GA4
 property `328508492` is 85–90% bot traffic**, and that the correct reading is
@@ -25,24 +25,42 @@ volume: `google / organic` engages at 11.8% for 34s, while DDG and Bing — too
 small to be worth faking — engage at ~67% for 6–7 minutes.
 
 A raw pull for the 56 days to 2026-08-19 reports 16,617 sessions (≈297/day),
-of which 11,482 are Direct. Corrected per that concept, the real figure is on
-the order of **9–15 human sessions/day site-wide.**
+of which 11,482 are Direct.
 
-**Any sample-size table built on the raw number is wrong by a factor of ~20.**
+Measured directly, 2026-08-20, GSC prefix property `https://jetthoughts.com/`,
+28 days to 2026-08-20:
+
+| Device | Impressions | Clicks | CTR | Avg position |
+|---|---|---|---|---|
+| Desktop | 94,364 | 103 | 0.11% | 20.5 |
+| Mobile | 6,262 | 41 | 0.65% | 16.6 |
+| Tablet | 98 | 1 | 1.02% | 30.6 |
+| **Total** | **100,724** | **145** | | |
+
+**145 Google clicks in 28 days — 5.2/day.** Adding Bing + DuckDuckGo sessions
+(~125/28d ≈ 4.5/day) gives **~9.7 human sessions/day site-wide.**
+
+**Any sample-size table built on the raw GA4 number is wrong by a factor of
+~30.**
+
+Note the device split: mobile is 6% of impressions but 28% of clicks, at 6× the
+CTR and a better average position. The humans who actually arrive are
+disproportionately on mobile, which is why Gate A weights the 390px review at
+least as heavily as desktop.
 
 ### 2. At that volume, no A/B test can reach power
 
-Sample size per arm at α=0.05, power=0.80, n ≈ 16·p(1−p)/δ², against ~12 real
+Sample size per arm at α=0.05, power=0.80, n ≈ 16·p(1−p)/δ², against ~9.7 real
 sessions/day:
 
 | Metric | Baseline | Effect | Sessions needed | Days |
 |---|---|---|---|---|
-| Blog index → post CTR | 30% | +20% rel. | 1,866 | **155** |
-| Scroll-to-CTA reach | 25% | +20% rel. | 2,400 | **200** |
-| Lead conversion | 1% | +50% rel. | 12,672 | **~3 years** |
+| Blog index → post CTR | 30% | +20% rel. | 1,866 | **192** |
+| Scroll-to-CTA reach | 25% | +20% rel. | 2,400 | **247** |
+| Lead conversion | 1% | +50% rel. | 12,672 | **~3.6 years** |
 
 Even the cheapest engagement test — high base rate, generous effect size —
-takes five months. The rollout has six big changes. **A/B testing is not
+takes over six months. The rollout has six big changes. **A/B testing is not
 available on this site at this traffic, for any metric, at any phase.** That is
 an arithmetic fact, not a preference.
 
@@ -88,6 +106,11 @@ Runs first, and is the gate that actually catches problems at this scale:
 - **Prototype review** against the built previews before code is written.
 - The repo's existing **visual scroll gate** and both screenshot legs
   (`bin/test` + `bin/dtest`).
+- **Mobile reviewed at least as hard as desktop.** Per the device split above,
+  mobile is 6% of impressions but 28% of clicks at 6× the CTR — the humans who
+  arrive skew mobile, while the desktop impression count is long-tail queries
+  that never convert. A change that reads well at 1440px and poorly at 390px is
+  a regression for the traffic that matters.
 
 ### Gate B — Guardrails with declared rollback thresholds (every big change)
 
@@ -158,7 +181,7 @@ infrastructure is building a machine that cannot produce an answer.
 ## Alternatives considered
 
 **A/B test every big change, as originally requested.** Rejected on the
-arithmetic in constraint 2: 155 days for the cheapest viable metric, ~3 years
+arithmetic in constraint 2: 192 days for the cheapest viable metric, ~3.6 years
 for lead conversion, against six changes.
 
 **A/B on raw GA4 numbers (~300 sessions/day), which would make an 8-day test

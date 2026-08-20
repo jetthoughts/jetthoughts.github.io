@@ -51,16 +51,57 @@ Every style on the site is now hand-editable and single-source, and the
 ownership map answers "which pages does this file affect?" in under a minute.
 This work was not possible before that; it is cheap now.
 
-### Why not a rebrand
+### Two pages already solved this — and they disagree on one thing
 
-The course page (`/course/tech-for-non-technical-founders-2026/`, shipped 2026)
-already implements the proposed language independently: a warm blush hero
-surface, ruby as the only accent, a dark **artifact** card instead of a stock
-photograph, a real metadata chip row, a primary/secondary CTA pair, and no blue.
-The newest page on the site converged on this system without being told to.
+The two newest pages on the site both arrived at the same system independently,
+without being told to:
 
-That makes this an **extraction and propagation** job, not a redesign. The logo,
-the ruby, the display face and the cover system are all unchanged.
+| | `/course/tech-for-non-technical-founders-2026/` | `/services/vibe-code-rescue/` |
+|---|---|---|
+| Page background | **light** (blush hero, white body) | **dark** (obsidian gradient) |
+| Accent | ruby only | ruby **+ neon purple** gradient |
+| Proof in fold 1 | chip row | chip row, canon figures |
+| CTAs | one primary + one secondary | one action, repeated 3× |
+| Imagery | dark artifact card | none — text and cards only |
+| Page height | — | **4,347px** |
+| `--color-primary` | not used | not used |
+
+They agree on everything that matters structurally: proof in the first fold from
+`claims-canon.md`, one repeated call to action rather than six competing ones,
+artifacts or nothing instead of stock photography, a self-diagnosis section that
+lets the reader place themselves ("Is this you?" / the module path), a page
+around 4,300px, and no blue anywhere.
+
+`pages/vibe-code-rescue.css` is 460 lines, fully token-driven
+(`--color-obsidian`, `--color-on-dark`, `--color-ruby`, `--color-neon-purple`),
+born semantic with no FL modules — the cleanest stylesheet in the repo. The
+obsidian tokens in `foundations/css-variables.css` were extracted *from* it on
+2026-07-26. It also carries an `!important` workaround at lines 58–71 to beat
+"a late-cascade generic anchor color (#0066d6) that ships after page slices" —
+independent evidence for the blue deletion below.
+
+**So this ADR is not proposing a new language.** The system exists, is shipped
+twice, and is already tokenised. What is missing is that the other seventeen
+bundles never got it. That makes this **extraction and propagation**, not a
+redesign — logo, ruby, display face and the cover system all unchanged.
+
+### The one open decision: light or dark
+
+The two reference pages differ on page background, and this ADR does **not**
+settle it. Both readings are defensible:
+
+- **Light** — the course page is written for the ICP most explicitly (a
+  non-technical founder), and light chrome reads calmer and less "for
+  developers" to an anxious buyer.
+- **Dark** — `/services/vibe-code-rescue/` is the landing page for the live
+  Validating bet, it is the strongest page on the site, and dark unifies site
+  chrome with the blog cover system for the first time.
+
+Everything else in this ADR is palette-independent: the scales, the section
+rhythm, the proof placement, the CTA hierarchy and the blue deletion all hold
+either way. **Paul decides the palette; the rest ships regardless.** The
+prototype currently shows the light reading, and a dark variant is a token swap
+against the same components, not a second design.
 
 ## Decision
 
@@ -69,8 +110,10 @@ Adopt one design system for site chrome, defined as tokens in
 `navigation` bundle) and shared components in `components.css`.
 
 1. **One accent.** Ruby `#cc342d` is the only accent. `--color-primary` is
-   deleted. Neon purple stays in `.stitch/design.md` for cover images and never
-   appears in site chrome.
+   deleted. Neon purple is the **secondary** accent, used sparingly as a
+   gradient partner to ruby and for small marks — the role it already plays on
+   `/services/vibe-code-rescue/` and in the cover system. It is never a
+   standalone brand colour.
 2. **One neutral ramp, warm.** `ink-900/700/500/300` + `line`, replacing cool
    `#121212` / `#969798`.
 3. **Three light surfaces plus one dark.** Sections alternate between two light

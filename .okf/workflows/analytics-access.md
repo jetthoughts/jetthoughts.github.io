@@ -156,15 +156,24 @@ this property without listing the events behind the number.** Fix queued as
 
 ## No A/B test can reach power here — do not design one
 
-Falls directly out of the bot correction above. Real human traffic is ~255
-sessions / 28 days ≈ **9–15/day**, not the ~300/day the raw GA4 number implies.
+Falls directly out of the bot correction above. Measured 2026-08-20 on the
+prefix property, 28 days: **145 Google clicks (5.2/day)** — desktop 103 /
+mobile 41 / tablet 1. Plus Bing+DDG (~4.5/day) that is **~9.7 human
+sessions/day**, against the ~300/day the raw GA4 number implies.
+
 Sample size per arm at α=0.05, power 0.80, n ≈ 16·p(1−p)/δ²:
 
-| Metric | Baseline | Effect | Sessions | Days at ~12/day |
+| Metric | Baseline | Effect | Sessions | Days at ~9.7/day |
 |---|---|---|---|---|
-| Blog index → post CTR | 30% | +20% rel. | 1,866 | **155** |
-| Scroll-to-CTA reach | 25% | +20% rel. | 2,400 | **200** |
-| Lead conversion | 1% | +50% rel. | 12,672 | **~3 years** |
+| Blog index → post CTR | 30% | +20% rel. | 1,866 | **192** |
+| Scroll-to-CTA reach | 25% | +20% rel. | 2,400 | **247** |
+| Lead conversion | 1% | +50% rel. | 12,672 | **~3.6 years** |
+
+**Device split is the other finding worth carrying:** desktop is 94% of
+impressions (94,364) but 0.11% CTR; mobile is 6% (6,262) at 0.65% CTR and a
+better average position (16.6 vs 20.5). Desktop impressions are long-tail
+queries that never convert; the humans who actually arrive skew mobile. Weight
+mobile at least as heavily as desktop in any design or content review.
 
 Even the cheapest engagement metric needs five months. **A/B testing is not
 available on this site** — the trap is sizing a test on the raw GA4 figure,

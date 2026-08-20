@@ -2046,13 +2046,16 @@ coherent state.
 
 The request was "A/B test before each big change". It cannot be met, and the
 reason is already in `.okf/workflows/analytics-access.md`: GA4 is 85–90% bots,
-so real traffic is ~9–15 human sessions/day, not the ~300/day a raw pull
-reports. At that volume the cheapest viable engagement test needs 155 days and
-lead conversion needs ~3 years. ADR-0004 records this plus the replacement
-gates (qualitative / guardrails / reversibility) and a ~200 sessions-a-day
+so real traffic is ~9.7 human sessions/day (145 GSC clicks in 28 days plus
+Bing/DDG), not the ~300/day a raw pull reports. The cheapest engagement test
+needs 192 days; lead conversion ~3.6 years. ADR-0004 records this plus the
+replacement gates (qualitative / guardrails / reversibility) and a ~200/day
 revisit threshold. Also found: `keyEvents` is no longer 0 — `page_view` has
 been marked a key event since the 08-13 audit, so GA4 now reports 4,063 "key
-events" that count page views. Worse than the zero it replaced.
+events" that count page views. Worse than the zero it replaced. And the device
+split is worth carrying into design work: desktop is 94% of impressions at
+0.11% CTR, mobile 6% at 0.65% and a better average position — the humans who
+actually arrive skew mobile, so mobile review outranks desktop.
 
 Process note: the raw GA4 numbers were pulled before reading the OKF concept
 that explains how to read them, and the first draft of ADR-0004 was sized on

@@ -28,8 +28,12 @@ mobile; and a lead conversion event exists so the next change can be measured.
 - There is **no conversion event on the site**, and since 2026-08-13 `page_view`
   has been marked a key event — so GA4 now reports 4,063 "key events" that count
   page views. Nothing shipped today can be evaluated.
-- The course page already implements the proposed system independently — this is
-  extraction, not a rebrand.
+- **Two pages already implement the system independently** — the course page and
+  `/services/vibe-code-rescue/`. They agree on structure (proof in fold 1, one
+  repeated CTA, artifacts not stock photos, ~4,300px, no blue) and disagree on
+  one thing: light vs dark background. This is extraction, not a rebrand.
+- **Open decision, blocks Phase 1a only:** which palette. See open question 0 in
+  the plan.
 
 ## Current state
 
@@ -43,8 +47,8 @@ mobile; and a lead conversion event exists so the next change can be measured.
 
 Gates per ADR-0004: **A** qualitative (Clarity recordings, screenshots, visual
 suites), **B** guardrails with declared rollback thresholds, **C** reversibility.
-**No phase is A/B tested** — at ~9–15 real human sessions/day the cheapest
-viable test needs 155 days.
+**No phase is A/B tested** — at ~9.7 real human sessions/day (measured, not
+estimated) the cheapest viable test needs 192 days.
 
 ## Working notes
 
