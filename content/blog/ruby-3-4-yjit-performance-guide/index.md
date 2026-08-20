@@ -112,7 +112,7 @@ Watch the trap here: a `config/initializers/` enable runs for rake tasks and `ra
 
 Test suites are a judgment call. Spec processes are short-lived and restart constantly, so the warmup often costs more than the speedup returns; if CI time matters, benchmark one run with YJIT disabled before assuming the default helps you there.
 
-And on genuinely memory-starved containers, do the arithmetic first. The JIT's headroom has to come from somewhere, and an OOM-killed worker is slower than interpreted Ruby. CPU spent inside Ruby is also worth auditing before you tune the compiler that runs it - [compression settings on encrypted columns](/blog/ruby-on-rails-8-custom-compression-for-encrypted-data/) are a classic example of cores burning where no JIT flag fixes anything.
+And on memory-starved containers, do the arithmetic first. The JIT's headroom has to come from somewhere, and an OOM-killed worker is slower than interpreted Ruby. CPU spent inside Ruby is also worth auditing before you tune the compiler that runs it - [compression settings on encrypted columns](/blog/ruby-on-rails-8-custom-compression-for-encrypted-data/) are a classic example of cores burning where no JIT flag fixes anything.
 
 ## The short version
 

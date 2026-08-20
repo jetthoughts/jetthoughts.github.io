@@ -116,7 +116,7 @@ flowchart TD
     D --> F["Falcon:<br/>a fiber per stream"]
 ```
 
-Do the division before the migration. Your ceiling is workers times threads, so 3 workers at 3 threads holds 9 concurrent streams, and if your product peaks at 5 people chatting at once, Puma serves them today with zero new operational surface. Raising `RAILS_MAX_THREADS` on an I/O-parked endpoint buys more headroom cheaply, since [Puma's own docs note that blocking I/O is the case where extra MRI threads genuinely run in parallel](https://github.com/puma/puma).
+Do the division before the migration. Your ceiling is workers times threads, so 3 workers at 3 threads holds 9 concurrent streams, and if your product peaks at 5 people chatting at once, Puma serves them today with zero new operational surface. Raising `RAILS_MAX_THREADS` on an I/O-parked endpoint buys more headroom cheaply, since [Puma's own docs note that blocking I/O is the case where extra MRI threads really do run in parallel](https://github.com/puma/puma).
 
 Or sidestep the question entirely: move the LLM call into a background job and broadcast chunks over Turbo Streams, so no HTTP request stays open at all. The job is a dozen lines - [the RubyLLM post shows it in full](/blog/rubyllm-rails-getting-started/#streaming-into-a-turbo-view).
 
