@@ -133,9 +133,21 @@ Consequences for how to react:
   stall anyway (run 32414801788, 10 min on `--depth=1`). The one job that
   cannot go shallow is the one that must not: `enableGitInfo` in
   `config/_default/hugo.toml` needs commit history to resolve `.Lastmod`.
+
+* **Do not copy `filter: blob:none` into the other workflows.** `_hugo.yml`
+  is the ONLY job that sets `fetch-depth: 0`, and the filter's whole win is
+  skipping *historical* blobs. Every other checkout — `test.yml:66`,
+  `publish.yml:45` and `:82`, `link-check.yml`, `sync-and-publish.yml`,
+  `process-issue-zip.yml` — runs at the default depth 1, where there is no
+  history to skip and git must still materialise every blob at HEAD to
+  populate the working tree. Adding the filter there buys nothing and risks
+  a slower lazy per-blob fetch. Their 7-minute checkouts are the content
+  weight below, not a missing flag (established 2026-08-20 while triaging a
+  checkout-stalled Unit Tests job on PR #511).
 * **The deeper fix is the content weight**, not the checkout flags: 625 MB of
   images in git is the floor every job pays. Moving them to LFS or
-  CDN-only would be a separate, larger decision.
+  CDN-only would be a separate, larger decision — and it is the only lever
+  left for the depth-1 jobs.
 
 [actions/checkout#2441]: https://github.com/actions/checkout/issues/2441
 

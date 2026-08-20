@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Site-wide og:image fallback (553 pages, mostly blog posts - measured
+       2026-08-20 against the rendered build). JetVelocity
+       "Obsidian Engine" per .stitch/design.md. Deliberately a BRAND PLATE, not
+       a campaign card - it stands in under arbitrary technical posts, so a
+       positioning pitch would read as an ad there. Figures are canon-only
+       (.okf/content/claims-canon.md): Clutch 4.8/5 with no review count,
+       5-year average relationship, founded 2008.
+
+       Regenerate (verified byte-identical, md5 ecd26681b0c591a68d1315d5d578d05c):
+         rsvg-convert -w 1200 -h 630 -o /tmp/og.png .stitch/og-default.svg
+         magick /tmp/og.png -quality 88 static/assets/images/og-default.jpg
+
+       Source lives here, NOT next to the jpg, so the canon figures stay
+       greppable - a text ratchet cannot read them inside a binary. NOT in
+       .stitch/designs/, which is gitignored. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="45%" stop-color="#10141a"/>
+      <stop offset="100%" stop-color="#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cc342d"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <radialGradient id="glowRuby" cx="0.15" cy="0.25" r="0.55">
+      <stop offset="0%" stop-color="#cc342d" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#cc342d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple" cx="0.85" cy="0.75" r="0.5">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glowRuby)"/>
+  <rect width="1200" height="630" fill="url(#glowPurple)"/>
+
+  <!-- faceted ruby: table, crown, pavilion -->
+  <g transform="translate(915, 205) scale(1.55)">
+    <path d="M30 0 L110 0 L112 42 L28 42 Z"   fill="#e8564c"/>
+    <path d="M30 0 L28 42 L0 42 Z"            fill="#c2332c"/>
+    <path d="M110 0 L140 42 L112 42 Z"        fill="#c2332c"/>
+    <path d="M0 42 L28 42 L70 150 Z"          fill="#a82a24"/>
+    <path d="M28 42 L112 42 L70 150 Z"        fill="#cc342d"/>
+    <path d="M112 42 L140 42 L70 150 Z"       fill="#7d1c18"/>
+    <path d="M30 0 L110 0 L140 42 L70 150 L0 42 Z"
+          fill="none" stroke="#ff9a8c" stroke-opacity="0.35" stroke-width="1.5"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="80" y="176" font-family="Poppins, 'Space Grotesk', Helvetica, Arial, sans-serif"
+        font-size="86" font-weight="800" fill="#ffffff" letter-spacing="-3">JetThoughts</text>
+  <text x="82" y="218" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17"
+        font-weight="600" fill="#8f97a8" letter-spacing="4">RUBY ON RAILS &#183; REACT &#183; FRACTIONAL CTO</text>
+
+  <rect x="82" y="262" width="132" height="5" rx="2.5" fill="url(#accent)"/>
+
+  <!-- what we do; descriptive, works under any page -->
+  <text x="80" y="352" font-family="Poppins, 'Space Grotesk', Helvetica, Arial, sans-serif"
+        font-size="46" font-weight="600" fill="#dfe2eb" letter-spacing="-1">We build, rescue, and stabilize</text>
+  <text x="80" y="410" font-family="Poppins, 'Space Grotesk', Helvetica, Arial, sans-serif"
+        font-size="46" font-weight="600" fill="#dfe2eb" letter-spacing="-1">Rails and React products.</text>
+
+  <!-- proof chips: canon only -->
+  <g font-family="Inter, Helvetica, Arial, sans-serif">
+    <rect x="80" y="506" width="250" height="62" rx="8" fill="#1c2026" fill-opacity="0.75"/>
+    <rect x="80" y="506" width="3" height="62" fill="#cc342d"/>
+    <text x="102" y="532" font-size="13" font-weight="600" fill="#8f97a8" letter-spacing="2">RATED ON CLUTCH</text>
+    <text x="102" y="556" font-size="19" font-weight="700" fill="#dfe2eb">4.8 / 5</text>
+
+    <rect x="350" y="506" width="290" height="62" rx="8" fill="#1c2026" fill-opacity="0.75"/>
+    <rect x="350" y="506" width="3" height="62" fill="#a855f7"/>
+    <text x="372" y="532" font-size="13" font-weight="600" fill="#8f97a8" letter-spacing="2">AVERAGE CLIENT STAYS</text>
+    <text x="372" y="556" font-size="19" font-weight="700" fill="#dfe2eb">5 years</text>
+
+    <rect x="660" y="506" width="250" height="62" rx="8" fill="#1c2026" fill-opacity="0.75"/>
+    <rect x="660" y="506" width="3" height="62" fill="#7dd0fe"/>
+    <text x="682" y="532" font-size="13" font-weight="600" fill="#8f97a8" letter-spacing="2">SHIPPING RAILS</text>
+    <text x="682" y="556" font-size="19" font-weight="700" fill="#dfe2eb">since 2008</text>
+  </g>
+</svg>

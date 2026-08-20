@@ -42,6 +42,102 @@ root. Every other screenshot in this repo lives under `docs/projects/<project>/`
 Removed in #514. Binary at the repo root is the kind of thing the next session
 copies because it looks sanctioned.
 
+## 2026-08-20 - maintain pass 2: a claim I wrote was wrong in three files
+
+Review found "a fixed attribute sequence silently skipped 480 tag pages"
+false - measured, 0 pages were missed entirely; what was dropped was the
+content-first SECOND tag on those pages, losing one distinct image. The
+wrong number had already propagated from the test comment into
+`build/test-gates.md` and this log. All three corrected. Lesson lifted to
+[workflows/review-swarm.md](workflows/review-swarm.md): brief critics to
+return measurements, and scrutinise the prose describing a fix as hard as
+the fix. Also dropped a `CGI.unescape` that was a no-op on every url in the
+build and could only misfire (it decodes `+` as a space, a form rule that is
+wrong for paths).
+
+## 2026-08-20 - maintain pass: two concepts corrected against the code
+
+* `architecture/seo-meta-tags.md` `resource:` and its citation pointed at
+  `themes/beaver/layouts/partials/seo/enhanced-meta-tags.html` - a path that
+  DOES NOT EXIST (that dir holds only schema partials). Repointed at the
+  live root-level override `layouts/partials/seo/enhanced-meta-tags.html`.
+  Also corrected `.Resize "1200x630 webp q85"` -> `jpg q90` (WebP unfurls
+  blank on LinkedIn), and documented the site-default fallback + its test.
+* `build/test-gates.md` gained the `--cleanDestinationDir` caveat lifted out
+  of the entry below, per this bundle's own rule that log.md records what
+  changed and concepts record what is true.
+## 2026-08-20 - 553 pages previewed blank on social; the tests that should have caught it asserted the wrong thing
+
+**The site-wide `og:image` fallback pointed at a file nobody ever uploaded.**
+`layouts/partials/seo/enhanced-meta-tags.html:129` defaults to
+`https://jetthoughts.com/assets/images/og-default.jpg`; `static/assets/`
+did not exist. 553 pages - overwhelmingly blog posts without cover art -
+rendered a social card that 404'd, so every LinkedIn and Slack share of them
+previewed blank. Nothing on the site links an `og:image`, which is why it
+survived: it is the one asset class no crawler, no link-checker, and no
+reader ever exercises.
+
+**Why the existing gate could not see it.**
+`test/unit/meta_tags/meta_tags_test.rb:136-149` asserts the tag EXISTS and
+that width/height are `1200`/`630`. Both passed throughout. That is an
+existence-plus-config assertion of exactly the kind CLAUDE.md rejects: it
+describes the markup, never the thing the markup points at. New
+`test/unit/og_image_resolves_test.rb` sweeps RENDERED HTML for every
+`og:image`/`twitter:image` and resolves each SAME-ORIGIN path against the
+build. Same principle as the rendered-output rule for text ratchets.
+Off-origin CDN URLs (`wsrv.nl?url=raw.githubusercontent.com/...`) are
+deliberately not followed: `enhanced-meta-tags.html` only emits them inside
+`{{- if $resource -}}`, so the build already guarantees the source resource
+exists, and what is left is a publish-time network question.
+
+**A rendered-output sweep can look thorough and check almost nothing.**
+The first version matched `property="..." content="..."` as a FIXED
+attribute sequence. Two facts collapsed that to a single URL checked out of
+1297 tag matches: 682 of 683 distinct values are off-origin CDN URLs that
+fell through the same-origin filter, and the two theme partials
+(`themes/beaver/layouts/blog/list.html:23`,
+`themes/beaver/layouts/partials/page/cover_image.html:3,:11`) write
+`content=` BEFORE `property=`, dropping the content-first tag on 480 pages
+(they still matched via their property-first tag - what was lost was one whole
+distinct image, not the pages). The
+test was `File.exist?` on one path wearing a 1757-file glob. It passed RED
+and GREEN honestly, because the one path it checked was the defect under
+repair - a reproduction test can be genuinely red for the right reason and
+still cover nothing else. Match whole `<meta>` tags and extract `content`
+separately; count the DISTINCT URLs a sweep actually resolves before
+trusting its breadth.
+
+**What this test structurally cannot catch.** If a page resource is
+missing, Hugo does not emit a dangling `og:image` - the `{{ if . }}` /
+`{{ with }}` guards drop the tag entirely, so the page silently ships with
+NO social image. Deleting `content/blog/og-blog.jpg` (480 tag pages) proved
+this: the sweep stayed green because the reference vanished rather than
+broke. Dangling-reference and missing-tag are two different defects; this
+gate covers only the first.
+
+**The false GREEN worth remembering.** After writing the test I deleted the
+JPG to confirm RED - and it stayed green through three attempts. First
+diagnosis (warm tree, build skipped) was WRONG: `bin/build-if-stale` detects
+deletions correctly. The tree rebuilt every time and still served the file,
+because no local build path passes `--cleanDestinationDir`. Rule lifted to
+[build/test-gates.md](build/test-gates.md) - it is not a log fact, it
+governs every rendered-output test from here on.
+
+**Fix:** a branded 1200x630 brand plate at `static/assets/images/og-default.jpg`
+(JetVelocity obsidian/ruby per `.stitch/design.md`, canon figures only). It is
+deliberately NOT the campaign pitch the first draft carried - a fallback
+stands in under arbitrary technical posts, where "Your dev shop stopped
+delivering" over a Puma-config article reads as an ad rather than an article.
+
+**CI, adjacent:** clarified in `build/ci-gates.md` that `filter: blob:none`
+must NOT be copied into the other five workflows. `_hugo.yml` is the only job
+setting `fetch-depth: 0`, and the filter's entire win is skipping historical
+blobs; the rest run at depth 1, where there is no history to skip and git
+must still materialise every blob at HEAD. Their slow checkouts are the
+625 MB of images in the tree, not a missing flag.
+
+Touched: `build/ci-gates.md`.
+
 ## 2026-08-21 - The course's "good positions" were an artifact; GA4 UI setup closed out
 
 **Course discovery diagnosed, and the inherited premise is retracted.** Two

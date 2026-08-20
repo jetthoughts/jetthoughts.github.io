@@ -6,6 +6,9 @@ tags: [swarm, review, process]
 generated:
   by: process:okf-migrate
   at: 2026-07-24T00:00:00Z
+verified:
+  - { by: claude/opus-5, at: 2026-08-21T00:10:00Z }
+timestamp: 2026-08-21T00:10:00Z
 ---
 
 # The loop
@@ -101,3 +104,17 @@ verdict format, and the two or three specific things to attack.
 - Fixer geometry claims (SVG sizes, clipping fixed) must be re-verified by
   your own re-render - one wave shipped a wording truncation nobody saw.
 - Parallel sessions contend on .git/index.lock - wait-loop before git ops.
+- **Brief critics to return MEASUREMENTS, not verdicts** (2026-08-20). Two
+  consecutive reviewers on one small test each found a claim that passed
+  self-review twice, and in both cases the decisive artifact was a COUNT:
+  "this sweep resolves 1 distinct url, not 683" killed a test that looked
+  thorough, and "0 pages were missed entirely" killed the comment written
+  to describe the fix. Ask for the number that would be different if the
+  claim were false. A critic who returns an opinion can be argued with; a
+  critic who returns a count cannot.
+- **Claims ABOUT a fix need the same scrutiny as the fix** (2026-08-20). A
+  corrected defect ships with prose describing it - a comment, a concept, a
+  log entry - and that prose is written at the moment of least skepticism.
+  Both overstatements this session were in comments, not code, and one had
+  already propagated into two `.okf/` files before review caught it. Grep
+  your own explanation for numbers you did not measure.
