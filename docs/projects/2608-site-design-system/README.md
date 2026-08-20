@@ -46,8 +46,8 @@ engagement** vs site avg 33–40% / 28–34s.
 | Phase | What | Gate | Status |
 |---|---|---|---|
 | 0 (slim) | record-baselines wrapper, blog scroll/CTA events, coverage check | events verified firing | **not started** |
-| 2.1 | `blog-list` restyle | A + B + C | blocked on 0-slim |
-| 2.2 | `blog-single` restyle (+2.3 course, shared CSS) | A + B + C | after 2.1 |
+| 2.1 | `blog-list` restyle + tag pages | A + B + C | **shipped 2026-08-20** (PR pending) |
+| 2.2 | posts: article-end CTA, ink tags (measure/full-bleed/code-ink deferred to 1a) | A + B + C | **shipped 2026-08-20** (PR pending) |
 | — | **Engagement read written up** (28d Clarity pre/post) | written, with numbers | gates everything below |
 | 1a/1b | Site-wide chrome (recolour, then spatial) | A + B + C | after the read |
 | 2.4/2.5 | homepage, single-service | A + B + C, GSC gate on homepage | after the read |

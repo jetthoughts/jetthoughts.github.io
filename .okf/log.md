@@ -2088,3 +2088,28 @@ post; unmasked it would break the baseline weekly). Also re-learned: the
 dirty-fixture guard diffs against git HEAD - staging an accepted PNG changes
 nothing; commit it, then re-run.
 Detail: docs/projects/2608-site-design-system/20-29-strategy/20.01-rollout-plan.md
+
+## 2026-08-20 - Blog 2.1+2.2 complete: tag pages consolidated, article-end CTA, date contract
+
+Tag pages joined the index shell via three shared partials (blog/post-row,
+blog/filters, blog/cta-band) after months of drift (target=_blank cards,
+hashtag tags, H1 "Blog" on every tag). Codex review of the consolidation
+returned FAIL with two majors, both real: the /tags/ taxonomy root was
+rendering TERM objects as post cards (now a tag index by count), and 20
+published dev.to posts carried only created_at, dating as 0001-01-01 under
+ByDate - fixed at the root with [frontmatter] date = ["date","created_at",...]
+so ordering and display unify across index/tags/RSS/sitemap. Posts gained an
+article-end audit CTA (the one surface with no conversion path); rr- tokens
+and .blog-cta moved to single-post.css, a member of all three blog bundles -
+one definition site. The #0066d6 late-cascade anchor rule now has a THIRD
+page fighting it with scoped !important; Phase 1a should delete it.
+
+Process notes worth keeping: dev disableKinds hid the taxonomy 404s until
+filter pills made tag links primary navigation - when a dev-only kind gets
+promoted to navigation, re-enable the kind the same commit. And the mobile
+_pagination baseline froze pre-rebuild CSS on its first record (record raced
+the postcss rebuild) - when a just-recorded baseline disagrees with the
+reviewed rendered state, suspect the race before suspecting the render.
+Linux baselines recorded through the CI dispatch both times, per the earlier
+ARM-drift lesson.
+Detail: docs/projects/2608-site-design-system/20-29-strategy/20.01-rollout-plan.md
