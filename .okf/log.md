@@ -1805,9 +1805,11 @@ delta, invisible but over threshold). Re-recording the SAME baselines
 through CI reproduced master's Chrome-141 baselines byte-for-byte - Chrome
 152 renders identically here, and the local emulated recording was the sole
 source of drift. Verified clean after the CI record: 356 runs, 6329
-assertions, 0 failures. Two operational gotchas: the bot's baseline commit
-carries `[ci skip]` so the PR shows "no checks reported" until a real push
-re-triggers the gate; and record mode has no accept/reject step, so screen
+assertions, 0 failures. Two operational gotchas: a PR can show "no checks
+reported" for two different reasons - a `[ci skip]` head commit, or (silently,
+and the actual blocker here) an UNMERGEABLE PR, since pull_request runs need a
+merge ref GitHub cannot compute; check `mergeable_state` before blaming
+skip-ci. And record mode has no accept/reject step, so screen
 the overwritten baselines by per-file byte-size delta and eyeball only the
 outliers. Separately confirmed: stale Linux baselines can carry banned
 copy (pre-2026-08-14 canon numbers) because the PR screenshot gate is
