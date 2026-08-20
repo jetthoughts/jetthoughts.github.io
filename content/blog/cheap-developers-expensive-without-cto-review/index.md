@@ -22,7 +22,31 @@ The cheap developer isn't the mistake. The mistake is that nobody senior ever re
 
 Maybe you hired a computer science student, or a freelancer a friend vouched for. The demos look fine, the invoices are small, and some quiet evening you catch yourself wondering whether the code behind the demo is as good as the price.
 
-There is a 20-minute check you can run on the project today, without reading a single line of code - open the pull request list and see who approved the last ten changes.
+There is a 20-minute check you can run on the project today, without reading a single line of code - open the pull request list and see who approved the last ten changes. That one habit is the whole fork:
+
+```mermaid
+flowchart TD
+    accTitle: One habit forks the cost of a cheap developer
+    accDescr { A cheap developer ships features that demo fine. From there the path splits. Left, in red: nobody senior reads what gets merged, and by month four it breaks and you pay a second time. Right, in purple: a senior reads every pull request, and the risky change gets caught before it ships. }
+    S["A cheap developer ships<br/>features that demo fine&nbsp;"]
+    N["Nobody senior reads<br/>what gets merged&nbsp;"]
+    R["A senior reads every<br/>pull request&nbsp;"]
+    B["Month four - it breaks,<br/>and you pay a second time&nbsp;"]
+    C["The risky change gets<br/>caught before it ships&nbsp;"]
+
+    S --> N
+    S --> R
+    N --> B
+    R --> C
+
+    classDef base fill:#faf7f2,stroke:#555,stroke-width:2px,color:#1a1a1a
+    classDef bad fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
+    classDef ok fill:#f5e9ff,stroke:#7c3aed,stroke-width:2.5px,color:#1a1a1a
+
+    class S base
+    class N,B bad
+    class R,C ok
+```
 
 ## The rate you compared isn't the cost you're paying
 
