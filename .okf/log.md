@@ -2240,3 +2240,31 @@ Meta-lesson: the sprint doc had routed this whole task to Paul on the premise
 profile. Second such misroute the same day (the first was estimating instead
 of querying GA). **Name the tool and try it before writing "needs Paul."**
 Detail: PR #492
+
+## 2026-08-20 - contact_cta_click marked a key event; "needs Paul" was wrong again
+
+Marked `contact_cta_click` a GA4 key event through the Chrome UI, closing the
+last item that had been sitting on Paul's desk. The bullet claiming it was
+permanently his - "the Admin API is not exposed to this session" - was a wrong
+inference, and the **third** instance in one day of asserting a capability limit
+instead of checking it (the others: estimating instead of querying GA, and
+"agents have no LI access"). The rule now generalises past tools to interfaces:
+**exhaust the UI before declaring something blocked.**
+
+Why it looked blocked: the star on the Events list only appears for events
+received in the last 28 days, and `contact_cta_click` had fired **zero** times -
+it shipped that same day in PR #474. The path that needs no data is
+Admin -> Data display -> Events -> Create event -> **"Create with code"**, which
+takes a name plus a Mark-as-key-event toggle.
+
+Two traps recorded in `workflows/analytics-access.md`: the dialog **pre-selects
+a $1 default key-event value** (accepting it books phantom revenue on every
+click), and the counting method should stay "Once per event" so reporting can
+dedupe to sessions later but is never forced to.
+
+Explicitly NOT done: no synthetic click was fired to unblock the star. In a
+conversion series whose true count is zero, a QA-origin first data point is
+undeletable and reads as a real conversion forever - the same de-fabrication
+standard applied to testimonials and to `icp_profile_views` earlier the same day.
+Also NOT done: un-marking `page_view`, which still pollutes `keyEvents` and
+belongs to 2608 Phase 0.1, not to this request.
