@@ -48,24 +48,7 @@ Ask for a one-page summary after each retro. Skip the raw notes, and skip the in
 
 Here is the shape of a useful one:
 
-```text
-Cycle 34 retro summary - 2026-07-24
-
-What went well
-- Payment retry fix shipped Tuesday, no rollbacks.
-- New staging environment cut deploy time from 22 min to 6 min.
-
-What slowed us down
-- Waited 4 days on API credentials from the client side.
-- Two of six days lost to a flaky test suite on the checkout flow.
-
-Changes we're making
-1. Quarantine the flaky checkout tests by Friday (owner: Dana).
-2. One named person on the client side for credential requests (owner: founder).
-
-Carried over from last cycle
-- Flaky checkout tests. Third cycle in a row.
-```
+![The one-page retro summary, annotated: four blocks - what went well, what slowed us down, changes we're making with named owners, and a red-flagged carried-over block - with margin notes saying to read the carried-over block first, that the same item on its third cycle is your loudest warning sign, and that a task on your side means the retro isn't sanitized](retro-summary-annotated.svg)
 
 That last block is the whole reason to ask for the document.
 
@@ -96,6 +79,8 @@ Watch what comes back. A team that has been running retros produces the first su
 A team can write an honest, useful retrospective about a product that still crashes on login. The retro covers how the work went; it says nothing about whether the software actually runs, so it is only half of what you need.
 
 For that you need the other half: a fifteen-minute session where somebody clicks through the actual product in front of you. The [Friday demo rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) in the course covers the format and the questions to ask during it. Pair the two and you have process health on one page and working software on a screen, which between them close most of the gap that makes founders anxious between invoices.
+
+![Process on one page, product on a screen: a retro card - one page per cycle on how the work went - plus a Friday demo card - fifteen minutes of clicking through the live product - converging on one result: between invoices, nothing left to guess](retro-plus-demo.svg)
 
 The habit is not free. An hour per cycle for the meeting, plus the work the team commits to, comes out of the same budget as features. Our own team runs a written retrospective at the end of every seven-day cycle, described in [async remote XP practices](/blog/async-remote-xp-practices/), and the fixes that come out of it regularly eat a day of the next cycle. It is part of why our client retention runs about 95%, and also why our velocity in any single week looks slower than a shop that skips it.
 
