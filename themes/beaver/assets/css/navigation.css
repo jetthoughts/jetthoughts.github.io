@@ -558,12 +558,22 @@ a.action-button:hover {
   }
 }
 
-/* Site-wide brand link color. Body content links inherit this everywhere
-   links aren't styled by a more specific class (.btn, .fl-button, .cta-link,
-   menu items). 4.78:1 WCAG AA on white background.
-   :not() chain raises specificity above the per-bundle `a { color: var(--color-ruby) }`
-   rules so this wins regardless of cascade order. */
-a:not(.btn):not(.btn-primary):not(.fl-button):not([class^="cta"]):not(.menu-opener):not(.menu-close):not(.navigation .link):not(.footer-component a) {
+/* Site-wide link colour, at ELEMENT specificity (0,0,1) so anything with a
+   class beats it naturally.
+
+   This replaces an `a:not(.btn):not(.btn-primary):not(.fl-button)
+   :not([class^="cta"]):not(.menu-opener):not(.menu-close):not(.navigation .link)
+   :not(.footer-component a)` chain — 2608 Phase 1a.3. That chain existed to
+   out-rank the Bootstrap-reboot `a { color: #007bff }` copied into eight
+   critical/ bundles that load after this file. Raising specificity to beat
+   them made this rule unbeatable by ordinary page CSS too, which is why
+   three page files had to fight it with scoped !important.
+
+   Fixed at the cause instead: those eight reboot rules now resolve --link as
+   well, so all bare `a` rules agree and no specificity contest is left to
+   win. Do not reintroduce a :not() chain here — if a link needs a different
+   colour, give it a class. */
+a {
   color: var(--link);
   text-decoration-color: var(--link-underline);
 }

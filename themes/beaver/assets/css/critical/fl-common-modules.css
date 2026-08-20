@@ -463,7 +463,7 @@ strong {
   font-weight: bolder;
 }
 a {
-  color: #007bff;
+  color: var(--link); /* was Bootstrap-reboot #007bff, masked by the old anchor rule */
   text-decoration: none;
   background-color: transparent;
 }
