@@ -71,13 +71,23 @@ That last block is the whole reason to ask for the document.
 
 ## The one line that tells you the most
 
-Read the carried-over section before anything else. An action item that appears in three consecutive retros is a team that has diagnosed a problem, agreed on the fix, and cannot get to it. Sometimes that is your fault, because you keep adding scope on top. Sometimes the fix is much harder than they said in the room, which is worth a direct question. And sometimes the team simply lacks the authority to act: if their developers cannot spend two days on the test suite without a change order from their account manager, the same item will surface forever, which tells you the constraint sits in the commercial relationship rather than in engineering. Either way it is a live signal you can act on this week without knowing what a flaky test is.
+Read the carried-over section before anything else. An action item that appears in three consecutive retros is a team that has diagnosed a problem, agreed on the fix, and cannot get to it.
+
+- Sometimes that is your fault, because you keep adding scope on top.
+- Sometimes the fix is much harder than they said in the room, which is worth a direct question.
+- And sometimes the team simply lacks the authority to act: if their developers cannot spend two days on the test suite without a change order from their account manager, the same item will surface forever, which tells you the constraint sits in the commercial relationship rather than in engineering.
+
+Either way it is a live signal you can act on this week without knowing what a flaky test is.
 
 Notice that the sample above puts a task on the founder. A retro that never generates work for your side is a retro that has been sanitized before it reached you, and sanitized retros are the common failure mode rather than missing ones. Stefan Wolpers catalogued [twenty-one retrospective anti-patterns](https://age-of-product.com/sprint-retrospective-anti-patterns/) if you want to see how many ways this meeting can go quietly hollow.
 
 ## How to ask for it without starting a fight
 
-Frame it as a request for a document rather than a change to how they work. Something close to: "Do you run retrospectives at the end of each cycle? If so, could you send me a short written summary after each one - what went well, what slowed you down, what you're changing, and anything carried over? I don't need to attend." That phrasing gives them the format and takes the meeting off your calendar in the same sentence, and any team that already runs retros will say yes in under a minute.
+Frame it as a request for a document rather than a change to how they work. Something close to:
+
+> "Do you run retrospectives at the end of each cycle? If so, could you send me a short written summary after each one - what went well, what slowed you down, what you're changing, and anything carried over? I don't need to attend."
+
+That phrasing gives them the format and takes the meeting off your calendar in the same sentence, and any team that already runs retros will say yes in under a minute.
 
 Watch what comes back. A team that has been running retros produces the first summary within a cycle, sometimes by forwarding one they already wrote. Teams that have not been running them either start, which is a win, or explain that their process is too lightweight for that, which is the answer you were fishing for. Refusal to write anything down at all belongs on the same list as the [other dev shop red flags](/blog/dev-shop-red-flags-checklist/).
 
@@ -96,11 +106,3 @@ Both of these are downstream of one habit: [knowing what your team is doing](/bl
 On your next call, ask when the team last ran a retrospective and what came out of it.
 
 You will get a specific answer with a date and an action item, or you will get a pause while they reach for one. The pause tells you more than the tidy answer would have, and either way you know something this week that you did not know on Monday.
-
-## Further reading
-
-- [The 2020 Scrum Guide](https://scrumguides.org/scrum-guide.html)
-- [Scrum.org: what is a sprint retrospective](https://www.scrum.org/resources/what-is-a-sprint-retrospective)
-- [Tannenbaum & Cerasoli, "Do team and individual debriefs enhance performance? A meta-analysis"](https://pubmed.ncbi.nlm.nih.gov/23516804/)
-- [The same meta-analysis in *Human Factors*](https://journals.sagepub.com/doi/abs/10.1177/0018720812448394)
-- [Stefan Wolpers: 21 sprint retrospective anti-patterns](https://age-of-product.com/sprint-retrospective-anti-patterns/)

@@ -65,7 +65,7 @@ The per-question detail below explains the failure modes each question catches, 
 
 ### Q1: "Show me the staging URL of what shipped yesterday."
 
-The question catches the **progress mirage** - tickets moving on Jira while nothing reaches a place the founder can click. Pain #12 in [our ICP profile](/blog/checklist-for-non-tech-founder-agile/) and the single most common signal across our 40+ rescues.
+The question catches the **progress mirage** - tickets moving on Jira while nothing reaches a place the founder can click. Pain #12 in [our ICP profile](/blog/checklist-for-non-tech-founder-agile/) and the single most common signal across our rescue engagements.
 
 **Pass.** A clickable URL with a specific route. "It is live at `staging.acme.app/checkout/v2`. Use `demo@example.com / example-pass-123`. The Stripe webhook fires on test card `4242 4242 4242 4242`." You should be able to click it during the call and reach the screen the developer described.
 
@@ -81,7 +81,7 @@ The question catches **rubber-stamp reviews** and **bus factor of one** - the fa
 
 **Fail.** "We trust each other's work." / "The CI caught the issues." / "Everyone reviews their own when the others are busy." First answer means there is no review. Second answer is a fundamental misunderstanding of what CI does - CI catches syntax errors and broken tests, not security gaps, not architectural drift, not the migration that locks the orders table at peak hours. Third answer is the [bus factor of one](/blog/dev-shop-red-flags-checklist/) JT's red-flags checklist warns about.
 
-**Follow-up if fail.** Ask: "How many reviewers approved code on my repo last week, and what is the average time from PR open to merge?" The first number wants to be at least two distinct humans, ideally three. The second number wants to be under two days. A FinTech founder ran this check in Q1 2026 and found one reviewer had approved 38 of the last 41 PRs, with an average time-to-merge of nineteen minutes. That is not review; that is a rubber stamp with a typing delay.
+**Follow-up if fail.** Ask: "How many reviewers approved code on my repo last week, and what is the average time from PR open to merge?" The first number wants to be at least two distinct humans, ideally three. The second number wants to be under two days. If one reviewer approved 38 of the last 41 PRs with an average time-to-merge of nineteen minutes, that is not review - that is a rubber stamp with a typing delay.
 
 ### Q3: "What did we cut, descope, or postpone yesterday to ship that?"
 
@@ -113,6 +113,4 @@ If most of the week's answers came back as fails, the problem is not the standup
 
 ## Further reading
 
-- Atlassian, [Daily Standup Meetings](https://www.atlassian.com/agile/scrum/standups) - the canonical reference on the three-question format and the failure modes it slides into.
-- Scrum Alliance, [Async Standups](https://resources.scrumalliance.org/Article/async-standups) - on running written standups when the team is distributed, with the same three-question backbone.
 - Martin Fowler, [It's Not Just Standing Up: Patterns for Daily Standup Meetings](https://martinfowler.com/articles/itsNotJustStandingUp.html) - a deep practitioner reference on what daily standups should produce and when they fail.

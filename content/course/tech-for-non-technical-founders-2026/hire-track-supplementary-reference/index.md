@@ -99,7 +99,7 @@ The hiring market for AI-Augmented Developers in 2026 lives across six platforms
 
 ## What stack to ask your hired team to use
 
-You are not picking the stack alone - your Fractional CTO or hired engineer makes the technical call. But you need the vocabulary to (a) have an informed conversation, (b) recognize when a contractor proposes the hipster-of-the-month stack that nobody can hire for in 6 months, and (c) push back without escalating to a holy war. The frame below is what we recommend out of rescue calls going back to 2011.
+You are not picking the stack alone - your Fractional CTO or hired engineer makes the technical call. But you need the vocabulary to (a) have an informed conversation, (b) recognize when a contractor proposes the hipster-of-the-month stack that nobody can hire for in 6 months, and (c) push back without escalating to a holy war. The frame below is what we recommend out of rescue calls since 2008.
 
 ### Default: Rails (Ruby on Rails)
 
@@ -111,7 +111,12 @@ Rails is the JetThoughts default and the Indie Hackers / DHH / Pieter Levels com
 
 Basecamp ([DHH's *One-Person Framework* essay](https://world.hey.com/dhh/the-one-person-framework-711e6318)) is the case study - two decades of products on a Rails monolith run by a famously small team - and Shopify serves millions of merchants on one Rails monolith. At your scale (47-5,000 paying users) one Rails engineer can ship and operate the whole thing.
 
-**Why Rails wins for the non-technical founder's hired team:** the hire pool is deep (15+ years of Rails engineers), the framework opinions are tight (less time arguing about conventions, more time shipping), background jobs / email / file uploads / authentication / payment / admin / search are all batteries-included rather than 12 separate npm packages, and the Rails community produced the rescue patterns we see work in production (Pundit for authorization, Devise for auth, Sidekiq for jobs, ActiveAdmin for staff tools).
+**Why Rails wins for the non-technical founder's hired team:**
+
+- The hire pool is deep - 15+ years of Rails engineers.
+- The framework opinions are tight - less time arguing about conventions, more time shipping.
+- Background jobs / email / file uploads / authentication / payment / admin / search are all batteries-included rather than 12 separate npm packages.
+- The Rails community produced the rescue patterns we see work in production (Pundit for authorization, Devise for auth, Sidekiq for jobs, ActiveAdmin for staff tools).
 
 ### Acceptable alternatives, with caveats
 
@@ -145,7 +150,7 @@ The Indie Hackers community spent the last decade learning what one-person and t
 
 ## Interviews that catch AI theater
 
-Every engineer claims AI fluency on a 2026 resume. Most are typing prompts, accepting suggestions, and pushing the diff to PR. Veracode measured what that produces: 45% of LLM-generated code shipped at least one exploitable security flaw. The market split into two populations behind the same resume language. The 80% run AI theater - they accept the model's first suggestion, never disagree, and never check the dependency. The 20% direct the model - they read the diff, reject most of it, and catch the hallucinated package before it merges.
+Every engineer claims AI fluency on a 2026 resume. Most are typing prompts, accepting suggestions, and pushing the diff to PR. Veracode measured what that produces: 45% of LLM-generated code shipped at least one exploitable security flaw. The market split into two populations behind the same resume language. One group runs AI theater - they accept the model's first suggestion, never disagree, and never check the dependency. The other directs the model - they read the diff, reject most of it, and catch the hallucinated package before it merges.
 
 For the verbatim 7-question script + per-question Pass/Fail rubric + scoring sheet, see the [Hiring Interview Script](/course/tech-for-non-technical-founders-2026/hiring-interview-script/) template. Below is the brief on when and why to use it.
 

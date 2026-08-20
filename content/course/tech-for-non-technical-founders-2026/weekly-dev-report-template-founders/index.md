@@ -141,7 +141,6 @@ The bad report leans on soft verbs, passive voice, and unnamed actors because it
 
 ## Further reading
 
-- Atlassian, [How to Write an Effective Project Status Report](https://www.atlassian.com/work-management/project-management/status-reports) - the canonical reference on what status reports are for and where they fail.
 - Marty Cagan, [Product Status Reports](https://www.svpg.com/product-status-reports/) - on why traditional status reports tell you nothing about whether the product is moving and what to ask for instead.
 - Wes Kao, [How I give the right amount of context](https://newsletter.weskao.com/p/how-i-give-the-right-amount-of-context) - a practitioner reference on the discipline of writing one short, useful update a week.
 

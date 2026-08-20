@@ -34,7 +34,9 @@ Keep the five examples handy. You'll want them in the room when the sales lead s
 
 ## Requirement 1: first response in hours, split by severity
 
-The clause you want reads something like: "Severity 1 incidents receive a first response from an engineer within 2 business hours. Severity 2 within 8 business hours. Severity 3 within 2 business days."
+The clause you want reads something like:
+
+> "Severity 1 incidents receive a first response from an engineer within 2 business hours. Severity 2 within 8 business hours. Severity 3 within 2 business days."
 
 A severity level is just a ranking of how bad the problem is: level 1 means the app is down or customers can't pay you, level 2 means a feature is broken but users can work around it, and level 3 covers typos and cosmetic glitches. Atlassian publishes a plain-English [severity scale](https://www.atlassian.com/incident-management/kpis/severity-levels) you can copy into the contract so both sides rank problems the same way.
 
@@ -89,11 +91,3 @@ A resolution clock also creates a new incentive you should watch: a team racing 
 If you can't tell whether slow replies are a service problem or a code problem, we do a free 45-minute code audit: one senior developer, your codebase, a written one-page assessment. We've worked in Rails since 2008 and 95% of our clients stay with us - numbers we're comfortable putting in a contract, which is rather the point of this post. [Get the audit](https://jetthoughts.com/contact-us/).
 
 Start with the inbox measurement tonight. It needs no lawyer, and by Friday you'll know which of the five clauses to fight for first.
-
-## Further reading
-
-- [Google SRE Book: Service Level Objectives](https://sre.google/sre-book/service-level-objectives/)
-- [AWS Compute Service Level Agreement](https://aws.amazon.com/compute/sla/)
-- [Atlassian: SLAs - what they are and how to manage them](https://www.atlassian.com/itsm/service-request-management/slas)
-- [Atlassian: Understanding incident severity levels](https://www.atlassian.com/incident-management/kpis/severity-levels)
-- [Stripe's public status page](https://status.stripe.com/)

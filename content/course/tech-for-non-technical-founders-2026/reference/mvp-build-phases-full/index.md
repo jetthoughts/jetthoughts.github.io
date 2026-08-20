@@ -126,9 +126,6 @@ The [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/
 - [Stack & Tools reference](/course/tech-for-non-technical-founders-2026/reference/stack-tools-full/) - each tool in depth, the M2-vs-M4 contrast, all 12 build rules, and the founder communities
 - [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/) - day-by-day version of the build plan; print before Phase 1
 - Y Combinator, [Startup School Library + 2026 Founder Resources](https://www.ycombinator.com/library/) - the YC stance on validating without code
-- Rob Walling, [Vibe Coding interview on Creator Science](https://podcast.creatorscience.com/rob-walling/) - the shed vs skyscraper analogy
-- Supabase, [Row-Level Security guide](https://supabase.com/docs/guides/database/postgres/row-level-security)
-- Stripe, [Checkout quickstart](https://docs.stripe.com/checkout/quickstart) and [Pricing page](https://stripe.com/pricing)
 
 ---
 

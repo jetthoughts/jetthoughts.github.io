@@ -331,7 +331,7 @@ The data picks the next week. Do not iterate on what you imagine; iterate on wha
 
 ## Sample Lovable prompts (verbatim, copy-paste)
 
-Five prompts that ship 80% of a typical pre-seed B2B SaaS MVP. Adapt the persona/object names to your domain.
+Five prompts that ship most of a typical pre-seed B2B SaaS MVP. Adapt the persona/object names to your domain.
 
 ```text
 Prompt 1 (signup):
@@ -384,7 +384,7 @@ The bad answer is over-modeled for an imagined future scale. The good answer fit
 
 > Good: *"Build a dashboard for a fitness coach. Top bar: coach name + log out. Left sidebar: list of clients with green/red status badges based on last check-in date. Main pane shows the selected client's detail and a check-in form. Save button shows a toast on success."*
 
-The bad prompt forces Lovable to guess at a hundred details, half of which will be wrong, and you spend two days undoing them. The good prompt is the screenshot-in-words from your PRD. Lovable does the right thing on the first try about 80% of the time when the prompt is this specific.
+The bad prompt forces Lovable to guess at a hundred details, half of which will be wrong, and you spend two days undoing them. The good prompt is the screenshot-in-words from your PRD. Lovable does the right thing on the first try when the prompt is this specific.
 
 **Stripe webhook handling**
 

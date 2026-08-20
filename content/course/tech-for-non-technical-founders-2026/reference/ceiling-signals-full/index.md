@@ -112,7 +112,6 @@ The [Salvage vs Rebuild decision tree](/course/tech-for-non-technical-founders-2
 
 ## Further reading
 
-- Rob Walling, [Vibe Coding interview on Creator Science](https://podcast.creatorscience.com/rob-walling/) - the shed-vs-skyscraper analogy that frames every architectural ceiling decision. 35-minute listen.
 - Supabase, [Realtime documentation](https://supabase.com/docs/guides/realtime) and [Row-Level Security guide](https://supabase.com/docs/guides/database/postgres/row-level-security) - the official boundary between what Supabase serves well and where the data-model and real-time signals begin.
 - OpenAI, [Rate limits documentation](https://platform.openai.com/docs/guides/rate-limits) - the per-tier request and token caps that drive the AI-inference signal once your traffic crosses a threshold.
 - Vanta, [SOC2 readiness for early-stage SaaS](https://www.vanta.com/collection/soc-2/soc-2-compliance-checklist) - the audit-surface checklist a founder usually meets for the first time when an enterprise customer asks for a SOC2 letter.

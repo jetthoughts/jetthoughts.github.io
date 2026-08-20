@@ -22,6 +22,8 @@ A founder came to us after nine months of building. She'd run her smoke-test pag
 
 She moved into building. By month nine she had shipped a working product and spent $62K on developer time - and had zero paying customers. On her first sales call the prospect asked whether the tool was really $49/month: she had assumed her landing page price was obvious, but most of the people who had given her an email had read the page as a free signup. The 48 emails had measured curiosity, and she had read them as commitment.
 
+*Illustrative composite based on patterns from real founder builds, not a single client story.*
+
 You don't need a $62K invoice to learn this. An email signup costs the visitor nothing; a Stripe click costs them the moment of entering a card number. Those two signals are not measuring the same thing.
 
 ---

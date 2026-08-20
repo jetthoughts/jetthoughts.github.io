@@ -118,7 +118,14 @@ A pivot is not a restart. Treat it as one and you burn the most runway, because 
 
 ![The pivot ledger - a 4-column table showing what you keep and what you replace](pivot-ledger.svg)
 
-The ledger above is the template. Print it before you declare the pivot and walk every row. The evidence you keep: the validated problem statements that survived the interviews (or the disconfirmed ones - both are evidence), the customer relationships from your [Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) outreach (your most valuable B2B asset at this stage), the cohort retention numbers from the churn triage, and your domain expertise. The hypothesis sentence, landing page copy, and ad creative get rewritten. The MVP code depends - auth and billing usually survive; the core workflow gets rebuilt around the new hypothesis.
+The ledger above is the template. Print it before you declare the pivot and walk every row. The evidence you keep:
+
+- The validated problem statements that survived the interviews (or the disconfirmed ones - both are evidence)
+- The customer relationships from your [Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) outreach (your most valuable B2B asset at this stage)
+- The cohort retention numbers from the churn triage
+- Your domain expertise
+
+The hypothesis sentence, landing page copy, and ad creative get rewritten. The MVP code depends - auth and billing usually survive; the core workflow gets rebuilt around the new hypothesis.
 
 A second founder we rode shotgun with - Anika, running a vertical SaaS for clinical-trial coordinators - ran the ledger move on a Customer Need pivot (segment still right). She kept her 287-person coordinator contact list, her Stripe integration and auth flow from the Lovable build, her pricing model ($240/month per seat), and four of her eleven validated problem statements from her [Mom Test interviews](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - the ones about consent-form reconciliation, not scheduling. She rewrote the hypothesis sentence and the landing page headline around consent-form reconciliation. Two weeks later she had a smoke-test page live, an outreach script aimed at the same 287 contacts with the new pitch, and four warm meetings booked. The pivot took 14 days because she kept everything that survived.
 

@@ -115,7 +115,15 @@ The 30-message batch is not a one-time event. Run fresh batches until you have 2
 >
 > **Deeper reference:** [Product Hunt data, the full tooling stack, domain warmup, the funnel math, all three script variants, the stage cadence, and the no-reply diagnostic](/course/tech-for-non-technical-founders-2026/reference/outbound-full/)
 
-> **Module 5 closes here.** Before calling the course complete, you should have: (1) a passed Sean Ellis 40% must-have test against your early users (Lesson 5.1), (2) a 50-name network list sorted into 4 outreach buckets (Lesson 5.3), (3) 4 outreach message variants plus a 90-second Loom (Lesson 5.4), (4) at least one signed Design Partner Agreement with a Stripe deposit (Lesson 5.6), and (5) a 30-message filtered cold-outbound batch sent with replies tracked once the network list ran dry (this lesson). All five in your `Founder OS` folder. Missing one? Go back - customer 11-20 depend on the same motion, and a broken step upstream (an untested must-have signal, an unsent batch, an unsigned DPA) breaks every batch that follows it.
+> **Module 5 closes here.** Before calling the course complete, you should have:
+>
+> 1. A passed Sean Ellis 40% must-have test against your early users (Lesson 5.1)
+> 2. A 50-name network list sorted into 4 outreach buckets (Lesson 5.3)
+> 3. 4 outreach message variants plus a 90-second Loom (Lesson 5.4)
+> 4. At least one signed Design Partner Agreement with a Stripe deposit (Lesson 5.6)
+> 5. A 30-message filtered cold-outbound batch sent with replies tracked once the network list ran dry (this lesson)
+>
+> All five in your `Founder OS` folder. Missing one? Go back - customer 11-20 depend on the same motion, and a broken step upstream (an untested must-have signal, an unsent batch, an unsigned DPA) breaks every batch that follows it.
 
 ---
 

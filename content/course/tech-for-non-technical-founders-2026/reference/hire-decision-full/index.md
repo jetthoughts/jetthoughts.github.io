@@ -102,7 +102,6 @@ Before you commit to building, you decide which building you are putting up. A s
 
 ## Further reading
 
-- Paul Graham, [*Do Things That Don't Scale*](https://paulgraham.com/ds.html) - the YC essay that named the Airbnb-style validation pattern. The first section is the Airbnb story; the rest is the manual that founders skip.
 - Paul Graham, [*The Airbnbs*](https://www.paulgraham.com/airbnbs.html) - PG's own short note on the Airbnb founders' early experiments. 6-minute read.
 - Sophia Matveeva, [*The Non-Technical Founder's Guide to Hiring*](https://www.amazon.com/Non-Technical-Founders-Guide-Hiring-Product-ebook/dp/B0B7WRLBZF) - the long-form companion to this lesson. Heavy on hiring, light on the validate-without-code path that comes first.
 - Y Combinator, [Startup School: Customer Discovery](https://www.ycombinator.com/library/) - YC's distilled take on validating before building. The Path 1 reading list.
