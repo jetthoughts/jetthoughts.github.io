@@ -94,9 +94,11 @@ namespace :test do
   # single-URL or sitemap-only scan would skip.
   #
   # These build with ENVIRONMENT=production (not the top-level :build task's
-  # dev default) rather than depending on :build - config/development/hugo.toml
-  # disables the taxonomy/term page kinds for build speed, which would make
-  # every real /blog/tags/* link on the site look broken.
+  # dev default) rather than depending on :build - the dev config mounts
+  # linkedin-posts/ (drafts that must not be link-checked) and uses
+  # relativeURLs, either of which would skew the scan. (Historical: dev also
+  # used to disable taxonomy/term kinds; re-enabled 2026-08-20 for the blog
+  # filter pills, but the production build here stays right regardless.)
   # Memoized per rake process so `rake test:links test:html_proofer` builds
   # ONCE. Both tasks default to the same OUTPUT_DIR, and a second full
   # production build in the same job is what blew link-check.yml's timeout

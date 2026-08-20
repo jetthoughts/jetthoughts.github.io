@@ -1,0 +1,19 @@
+{{- /* Curated ICP filter pills — shared by the blog index and tag pages.
+     Curated, not top-by-count: dev.to imports skew raw counts toward
+     generic dev tags. All six tag pages verified live (2026-08-20).
+     Context: the current list page (used for aria-current). */ -}}
+{{- $pills := slice
+  (dict "name" "All" "href" "/blog/")
+  (dict "name" "Rails" "href" "/blog/tags/rails/")
+  (dict "name" "Ruby" "href" "/blog/tags/ruby/")
+  (dict "name" "Security" "href" "/blog/tags/security/")
+  (dict "name" "Startup" "href" "/blog/tags/startup/")
+  (dict "name" "Hiring" "href" "/blog/tags/hiring/")
+  (dict "name" "AI" "href" "/blog/tags/ai/")
+-}}
+<nav class="blog-filters" aria-label="Browse by topic">
+  {{- $current := .RelPermalink -}}
+  {{- range $pills }}
+    <a href="{{ .href }}"{{ if eq $current .href }} aria-current="page"{{ end }}>{{ .name }}</a>
+  {{- end }}
+</nav>

@@ -1,0 +1,23 @@
+{{- /* One blog listing row — shared by blog/list.html (index) and list.html
+     (tag pages) so the two views cannot drift apart again (they did:
+     tag pages kept hashtag tags, target=_blank and no reading time for
+     months after the index moved on). Context: the post page. */ -}}
+<a class="link" href="{{ .RelPermalink }}">
+  <div class="blog-post">
+    <div class="post-image">
+      {{ partial "blog/img-cropped.html" (dict "Page" . "width" 220 "height" 116) }}
+    </div>
+    <div class="post-content">
+      <h2 class="post-title">{{ .Title }}</h2>
+      <div class="post-meta">
+        {{ if .Date }}
+          <span class="post-date">{{ dateFormat "Jan 2, 2006" .Date }} · {{ .ReadingTime }} min read</span>
+        {{ end }}
+        {{ with .Params.tags }}
+          <div class="post-tags-card">{{ range $i, $t := . }}{{ if $i }}<span class="post-tags-sep">,</span> {{ end }}<a href="/blog/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>
+        {{ end }}
+      </div>
+      <div class="post-description">{{ .Params.description }}</div>
+    </div>
+  </div>
+</a>
