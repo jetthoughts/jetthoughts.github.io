@@ -3,8 +3,8 @@
 Read this at session start to route tasks to the right workflow without explicit user notice.
 
 ## Routing Rules
-- **Outbound / sales / pipeline / prospect / discovery-call work (2607)** → `@docs/projects/2607-vibe-code-rescue/operation-runbook.md` **▶ START HERE** (the OS-designated entry point for any fresh session)
-- **Weekly loop (goal, OKR, rocks, weekly numbers)** → `@docs/business/index.md` + `@docs/business/operating-system.md` - edited in the repo
+- **Outbound / sales / pipeline / prospect / discovery-call work (2607)** → vault `~/Documents/pkm/jt-vcr-runbook.md` **▶ START HERE** (moved 2026-08-20; bet PARKED until Sep 2026; campaign artifacts stay in `docs/projects/2607-vibe-code-rescue/`)
+- **Weekly loop (goal, OKR, rocks, weekly numbers)** → vault `~/Documents/pkm/jt-operations.md` (moved 2026-08-20; vault = operations, repo = growth/marketing). Host-only — out of scope in container/CI sessions.
 - **Identity, positioning, bet status** → the vault note `jt-business-os` (`~/Documents/pkm`) FIRST, then reflect into the `docs/business/` mirror
 - LinkedIn post creation or edits, especially `linkedin-posts/**` → `@docs/workflows/linkedin-post-pipeline.md` (it routes to the active campaign plan — check the campaign's status banner; the ICP campaign is currently PAUSED)
 - Content creation or edits → `@docs/workflows/blog-pipeline.md` (mandatory; its P0 gate can halt content entirely)

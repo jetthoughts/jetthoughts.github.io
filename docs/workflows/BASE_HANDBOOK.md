@@ -18,7 +18,7 @@ Use this as the shared boilerplate for agents and skills. Keep agent/skill files
 3. `Get library docs for "[framework]"`
 
 ## Business layer (company state)
-The company goal/OKR/rocks/weekly numbers live in `docs/business/operating-system.md` (the weekly loop, edited here); identity, positioning and bet status are owned in the vault (`jt-business-os`) and only mirrored into `docs/business/`; the active bet's execution entry point is `docs/projects/2607-vibe-code-rescue/operation-runbook.md` **▶ START HERE**.
+**All operations live in the vault** (`~/Documents/pkm`, host-only; Paul 2026-08-20): goal/OKR/rocks/weekly numbers in `jt-operations.md`, identity/positioning/bet status in `jt-business-os.md`, the bet's execution entry point in `jt-vcr-runbook.md` **▶ START HERE**. This repo carries growth/marketing campaigns only; `docs/business/` holds pointer stubs.
 
 Use claude-context MCP semantic search first for code and content patterns. Use `rg`/`ls` for exact filenames, slugs, and fallback searches after semantic search.
 

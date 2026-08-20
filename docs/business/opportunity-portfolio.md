@@ -6,7 +6,7 @@
 > two portfolios is how the vault's recommended sequence and this repo's dated bet drifted apart.
 > Canonical: `jt-business-os`. The state machine below stays here — it is JT's convention, and the repo uses it.
 
-**What this is**: the bets JetThoughts is making to grow, which one is active, and how we decide to validate, kill, or scale each. Every bet becomes a project under [`docs/projects/`](../projects/) and is run by the [operating system](operating-system.md).
+**What this is**: the bets JetThoughts is making to grow, which one is active, and how we decide to validate, kill, or scale each. Every bet becomes a project under [`docs/projects/`](../projects/) and is run by the operating system (vault `jt-operations` since 2026-08-20).
 
 ---
 
@@ -29,7 +29,7 @@ Discipline: **one bet is Validating at a time.** Spreading the company across se
 
 | # | Opportunity | State | Project | Thesis (one line) | Kill-criteria (short) |
 |---|---|---|---|---|---|
-| 1 | **Vibe Code Rescue** | ⏸️ **Parked** (resume Sep 2026) | [`2607-vibe-code-rescue`](../projects/2607-vibe-code-rescue/) | Funded non-technical founders will pay a fixed price to rescue a broken AI/dev-shop MVP and get ownership back. | If 2 weeks of **active outreach across live lanes** (LinkedIn posts and/or verified sends) yields 0 booked calls → **pause and re-open A + C** (ICP *and* channel), per the [assumptions register](../projects/2607-vibe-code-rescue/rescue-sprint/assumptions-register.md) C1 addendum (2026-08-08 — re-based after the warm lane was demoted). **Status: untestable — the clock starts at the first post or first send**, neither of which has happened (see [OS §1](operating-system.md)). |
+| 1 | **Vibe Code Rescue** | ⏸️ **Parked** (resume Sep 2026) | [`2607-vibe-code-rescue`](../projects/2607-vibe-code-rescue/) | Funded non-technical founders will pay a fixed price to rescue a broken AI/dev-shop MVP and get ownership back. | If 2 weeks of **active outreach across live lanes** (LinkedIn posts and/or verified sends) yields 0 booked calls → **pause and re-open A + C** (ICP *and* channel), per the assumptions register (vault `jt-vcr-assumptions`) C1 addendum (2026-08-08 — re-based after the warm lane was demoted). **Status: untestable — the clock starts at the first post or first send**, neither of which has happened (see vault `jt-operations` §1). |
 
 > **Parked reason (2026-08-17, Paul):** Vibe Code Rescue is postponed until
 > **September 2026**. The Parked state requires a documented reason so we do not
@@ -51,4 +51,4 @@ Discipline: **one bet is Validating at a time.** Spreading the company across se
 - **Provability**: a single signed client proves the whole motion (demand → call → audit → signing) and produces the first case study - a clean validation gate.
 - **Reversibility**: delivered by JT's own senior Rails engineers and a white-label partner (both routes, CEO 2026-08-09), so the bet is testable without over-committing the firm or depending on a single delivery channel.
 
-Full plan: [executive summary](../projects/2607-vibe-code-rescue/executive-summary.md) · [strategy](../projects/2607-vibe-code-rescue/strategy.md) · run it via the [operating system](operating-system.md).
+Full plan: [executive summary](../projects/2607-vibe-code-rescue/executive-summary.md) · [strategy](../projects/2607-vibe-code-rescue/strategy.md) · run it via the operating system (vault `jt-operations`).

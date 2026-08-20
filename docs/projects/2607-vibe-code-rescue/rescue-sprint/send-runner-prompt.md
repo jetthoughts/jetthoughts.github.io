@@ -41,6 +41,6 @@ Show the table and the final copy of each GO message. Then stop and wait for Pau
 
 ## Phase 4 — Log
 
-For every send, output a filled `pipeline.md` row: `opener # · handle · channel · action · sent date · permalink`. If you can write files (Claude-in-Chrome + repo session), append the rows to `docs/projects/2607-vibe-code-rescue/rescue-sprint/pipeline.md`; otherwise output them for Paul to paste.
+For every send, output a filled pipeline row: `opener # · handle · channel · action · sent date · permalink`. The ledger is the vault file `~/Documents/pkm/jt-vcr-pipeline.md` (moved 2026-08-20 — the repo copy is a stub; never log rows there). If you can write to the vault, append the rows; otherwise output them for Paul to paste.
 
 Report anything unusual (login walls, spam warnings, UI blockers) instead of working around it.
