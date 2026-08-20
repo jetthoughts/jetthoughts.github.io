@@ -6,6 +6,35 @@ on:
 env:
   HUGO_ENVIRONMENT: production
 
+  # Stalled-fetch guard (actions/checkout#2441). Measured across the last 40
+  # publish runs on 2026-08-20: 137 of 170 checkout steps finished in 12-19s,
+  # but 13 hung with ZERO fetch output until the job cap killed them. The bad
+  # durations cluster on 599s and 899s - which ARE the 10- and 15-minute
+  # timeout-minutes values, so those steps never finished slowly, they never
+  # finished at all. Evidence: run 32407671265 logs `git fetch` at 19:15:42
+  # and the very next line is "The operation was canceled" at 19:30:41.
+  # It is NOT a size problem - a healthy checkout of this repo is 12s, and
+  # run 32414801788 hung for 10 min on an already-shallow `--depth=1` fetch.
+  #
+  # These two make git abort a transfer that has moved <1 KB/s for 30s,
+  # turning the silent hang into an error - and actions/checkout already
+  # retries a FAILED fetch 3 times (src/git-command-manager.ts wraps fetch
+  # in retryHelper). So a stall costs ~30s and self-heals instead of
+  # burning the job. A real transfer never trips it; even an awful link
+  # beats 1 KB/s.
+  #
+  # Passed as GIT_CONFIG_* env, NOT `git config --global`: checkout
+  # overrides HOME before it runs git ("Temporarily overriding HOME=..." in
+  # its own log), so a global config set by an earlier step is invisible to
+  # it. Reusable workflows do not inherit the caller's env, and neither do
+  # sibling workflow files - every workflow that checks out carries its own
+  # copy, pointing back here.
+  GIT_CONFIG_COUNT: '2'
+  GIT_CONFIG_KEY_0: http.lowSpeedLimit
+  GIT_CONFIG_VALUE_0: '1000'
+  GIT_CONFIG_KEY_1: http.lowSpeedTime
+  GIT_CONFIG_VALUE_1: '30'
+
 
 jobs:
   build:
@@ -34,7 +63,15 @@ jobs:
           # right commit date in 0.02s with zero blobs fetched.
           #
           # This is a MITIGATION, not a cure - it cuts what we ask for, it
-          # cannot fix an upstream stall. Keep the re-run rule.
+          # cannot fix an upstream stall. The stall itself is handled by the
+          # GIT_CONFIG_* low-speed guard in this file's `env:` block, which
+          # makes a hung fetch fail fast so checkout retries it; the manual
+          # re-run rule stays as the last resort.
+          #
+          # fetch-depth: 0 is NOT reducible to a shallow fetch here -
+          # enableGitInfo (config/_default/hugo.toml) needs the commit
+          # history to resolve .Lastmod. Every OTHER job in this repo
+          # already checks out at the default --depth=1.
           fetch-depth: 0
           filter: blob:none
 

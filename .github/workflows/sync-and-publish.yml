@@ -22,6 +22,19 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  # Stalled-fetch guard (actions/checkout#2441): abort a fetch that has moved
+  # <1 KB/s for 30s, so checkout's built-in 3x retry can recover instead of
+  # the step hanging silently until the job cap kills it. Measurements and
+  # full rationale live in .github/workflows/_hugo.yml. GIT_CONFIG_* env
+  # rather than `git config --global`, because checkout overrides HOME before
+  # it runs git - a global config from an earlier step never reaches it.
+  GIT_CONFIG_COUNT: '2'
+  GIT_CONFIG_KEY_0: http.lowSpeedLimit
+  GIT_CONFIG_VALUE_0: '1000'
+  GIT_CONFIG_KEY_1: http.lowSpeedTime
+  GIT_CONFIG_VALUE_1: '30'
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   run_sync:
