@@ -54,7 +54,7 @@ The production setup is its own post. We've covered [Falcon's benchmarks, config
 
 Less than you'd expect. The fiber scheduler hooks Ruby's own I/O, so `Net::HTTP`, and everything built on it, yields automatically inside Falcon. The `pg` driver has cooperated with the fiber scheduler since version 1.3. Your models, controllers, and service objects don't know the difference.
 
-Per-request state has to be scoped to the fiber rather than the thread, and you almost certainly get that for free: [Falcon ships a Railtie](https://github.com/socketry/falcon/blob/main/lib/falcon/railtie.rb) that sets it for you.
+Per-request state has to be scoped to the fiber rather than the thread, and you almost certainly get that for free: [Falcon ships a Railtie](https://github.com/socketry/falcon/blob/v0.57.0/lib/falcon/railtie.rb) that sets it for you.
 
 ```ruby
 # what Falcon's Railtie already does on your behalf
