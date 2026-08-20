@@ -20,6 +20,8 @@ related_posts: false
 
 Somewhere in your sent folder is the message that started it: "we just need a simple admin panel so I can see who signed up." What came back two months later had login roles for a staff you don't have, an audit log (a record of who changed what), a settings page with four tabs, and a chart nobody asked for. And the invoice covered all of it.
 
+![The blanks get filled by someone else. Top card, what you sent: we just need a simple admin panel, so I can see who signed up - with simple admin panel highlighted in amber and marked as three words with no moment and no finish line. An arrow leads down through a note reading: the blanks fill with whatever the last client got. Bottom card, in red, what came back two months later: login roles for a staff you do not have, an audit log, a settings page with four tabs, and a chart nobody asked for - none of which helps you send Monday's update](blanks-get-filled.svg)
+
 This is usually the moment you start wondering whether the shop is milking you. Usually they aren't: an over-engineered MVP - MVP meaning minimum viable product, the first small version of your app - is the default result of a vague request, because the blank spaces in your spec (the written description of what to build) get filled by someone else's imagination, and you pay for what they imagined.
 
 You can fix this from your side of the table, without learning to code. There's a fifteen-minute check you can run tonight on the last thing you sent your team, and a rewrite that takes about ninety minutes before your next request goes out.

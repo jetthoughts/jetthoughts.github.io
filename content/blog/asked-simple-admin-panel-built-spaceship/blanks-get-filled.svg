@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 570" role="img" aria-labelledby="bgf-title">
+  <title id="bgf-title">The blanks get filled by someone else. Top card, what you sent: we just need a simple admin panel, so I can see who signed up - with simple admin panel highlighted in amber and marked as three words with no moment and no finish line. An arrow leads down through a note reading: the blanks fill with whatever the last client got. Bottom card, in red, what came back two months later: login roles for staff you do not have, an audit log, a settings page with four tabs, and a chart nobody asked for.</title>
+  <desc>Hand-drawn before-and-after: the founder's original one-line request with its vague phrase highlighted, an arrow through the mechanism that fills the gap, and the four unrequested features that arrived instead.</desc>
+  <defs>
+    <marker id="bgf-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="#cc342d" stroke-width="2"/>
+    </marker>
+  </defs>
+  <style>
+    .h { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+    .title { font-size: 34px; font-weight: 700; fill: #1a1a1a; }
+    .sub { font-size: 22px; fill: #667085; }
+    .cardhead { font-size: 22px; font-weight: 700; fill: #1a1a1a; }
+    .quote { font-size: 24px; fill: #333333; }
+    .note { font-size: 20px; fill: #b45309; }
+    .pill { font-size: 21px; font-weight: 700; fill: #cc342d; }
+    .item { font-size: 21px; fill: #333333; }
+  </style>
+
+  <text class="h title" x="36" y="44">The blanks get filled by someone else</text>
+  <text class="h sub" x="36" y="74">and the invoice covers what they imagined</text>
+
+  <!-- what you sent -->
+  <rect x="36" y="96" width="648" height="170" rx="10" fill="#faf7f2" stroke="#4a4a4a" stroke-width="2.5"/>
+  <text class="h cardhead" x="56" y="128">What you sent</text>
+  <line x1="56" y1="140" x2="664" y2="140" stroke="#c9c2b8" stroke-width="2"/>
+  <text class="h quote" x="56" y="176">we just need a</text>
+  <rect x="52" y="188" width="236" height="34" rx="6" fill="#fffbe6" stroke="#b45309" stroke-width="2"/>
+  <text class="h quote" x="62" y="213">simple admin panel</text>
+  <text class="h note" x="304" y="213">3 words, no moment, no finish line</text>
+  <text class="h quote" x="56" y="252">so I can see who signed up</text>
+
+  <path d="M 360 266 L 360 286" fill="none" stroke="#cc342d" stroke-width="2.5" marker-end="url(#bgf-arr)"/>
+  <rect x="76" y="292" width="568" height="46" rx="23" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <text class="h pill" x="360" y="322" text-anchor="middle">the blanks fill with whatever the last client got</text>
+  <path d="M 360 338 L 360 358" fill="none" stroke="#cc342d" stroke-width="2.5" marker-end="url(#bgf-arr)"/>
+
+  <!-- what came back -->
+  <rect x="36" y="364" width="648" height="186" rx="10" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <text class="h cardhead" x="56" y="396" fill="#cc342d">What came back, two months later</text>
+  <line x1="56" y1="408" x2="664" y2="408" stroke="#e8b5b2" stroke-width="2"/>
+  <text class="h item" x="56" y="440">- login roles for a staff you do not have</text>
+  <text class="h item" x="56" y="466">- an audit log</text>
+  <text class="h item" x="56" y="492">- a settings page with four tabs</text>
+  <text class="h item" x="56" y="518">- a chart nobody asked for</text>
+  <text class="h note" x="470" y="466" fill="#cc342d">none of it helps you</text>
+  <text class="h note" x="470" y="490" fill="#cc342d">send Monday's update</text>
+</svg>
