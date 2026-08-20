@@ -22,7 +22,7 @@ Before you swap web servers, though, it's worth doing the arithmetic. On plenty 
 
 ## Three threads, thirty-second streams
 
-Rails 7.2 [dropped Puma's default thread count from 5 to 3](https://guides.rubyonrails.org/7_2_release_notes.html) per worker, because on CPU-bound request cycles more threads mostly meant more GVL contention and worse latency. For classic CRUD traffic that was the right call. A request that finishes in 80ms releases its thread 12 times a second, so 3 threads go a long way.
+A new Rails 8.1 app ships Puma with 3 threads per worker - a default [Rails cut from 5 back in 7.2](https://guides.rubyonrails.org/7_2_release_notes.html), because on CPU-bound request cycles more threads mostly meant more GVL contention and worse latency. For classic CRUD traffic that was the right call. A request that finishes in 80ms releases its thread 12 times a second, so 3 threads go a long way.
 
 A chat endpoint breaks that assumption. Stream a reply for 30 seconds and the thread is gone for 30 seconds.
 

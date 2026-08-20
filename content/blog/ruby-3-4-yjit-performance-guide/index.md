@@ -26,7 +26,7 @@ If you're mid-upgrade, that combination reads as a contradiction. Sorting it out
 
 ## You may already be running YJIT
 
-Since [Rails 7.2, YJIT is switched on by default](https://rubyonrails.org/2024/8/10/Rails-7-2-0-has-been-released) whenever the app boots on Ruby 3.3 or newer. The change is [a one-line initializer inside the framework defaults](https://github.com/rails/rails/pull/49947), which means it arrived silently for anyone who upgraded and ran `load_defaults "7.2"`.
+Every Rails 8 app has YJIT on out of the box whenever it boots on Ruby 3.3 or newer - the default [arrived back in Rails 7.2](https://rubyonrails.org/2024/8/10/Rails-7-2-0-has-been-released) as [a one-line initializer inside the framework defaults](https://github.com/rails/rails/pull/49947), and it lands silently for anyone who upgrades and runs `load_defaults` at 7.2 or later.
 
 So before tuning anything, check:
 
@@ -34,7 +34,7 @@ So before tuning anything, check:
 bin/rails runner 'puts RubyVM::YJIT.enabled?'
 ```
 
-If that prints `false` on Ruby 3.3+, the usual culprit is an app upgraded from an older Rails that never adopted the 7.2 framework defaults. Set `config.yjit = true` in `config/application.rb`, or enable it late in boot:
+If that prints `false` on Ruby 3.3+, the usual culprit is an app that climbed to Rails 8 through upgrades without ever adopting the newer framework defaults. Set `config.yjit = true` in `config/application.rb`, or enable it late in boot:
 
 ```ruby
 # config/initializers/enable_yjit.rb
