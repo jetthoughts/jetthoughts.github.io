@@ -1,5 +1,4 @@
 ---
-dev_to_id: 1
 title: "Falcon Web Server: Async Ruby in Production"
 description: "Falcon async web server for Ruby: Master fiber-based concurrency, benchmark vs Puma/Unicorn, deploy in production. Scale Rails apps, handle concurrent connections, boost performance ✓"
 date: 2025-09-25
@@ -8,8 +7,10 @@ edited_at: "2025-09-25T22:27:00Z"
 draft: false
 tags: ["ruby", "performance", "async", "fibers", "falcon", "web-server", "concurrency"]
 slug: "falcon-web-server-async-ruby-production"
+aliases: ["/blog/falcon-web-server-async-ruby-in-production/"]
 canonical_url: "https://jetthoughts.com/blog/falcon-web-server-async-ruby-production/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--92P8r_Mn--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/socketry/falcon/master/assets/falcon.png"
+cover_image: "cover.png"
+cover_image_alt: "Falcon, the fiber-based async Rack server for Ruby, running a Rails app in production"
 series: "Ruby Web Servers"
 metatags:
   image: cover.png
@@ -27,7 +28,7 @@ bundle install
 bundle exec falcon serve --bind http://0.0.0.0:3000
 ```
 
-For Rails, add `gem 'falcon'` to the production group, then point your process manager at `bundle exec falcon --config config/falcon.rb serve`. A minimal `config/falcon.rb` is in the [Rails Integration](#rails-integration) section below.
+For Rails, add `gem 'falcon'` to the production group, then point your process manager at `bundle exec falcon host`, which reads a `falcon.rb` service file from the application root. A minimal one is in the [Rails Integration](#rails-integration) section below.
 
 The rest of this post covers architecture, benchmarks against Puma and Unicorn, production configuration (systemd, Docker, Kubernetes), migration steps, and monitoring.
 
@@ -259,32 +260,27 @@ $ falcon serve
 $ falcon serve --bind http://0.0.0.0:3000
 
 # Custom configuration
-$ falcon --config config/falcon.rb serve
+$ bundle exec falcon host
 ```
 
 ### Rails Integration
 
-For Rails applications, Falcon works as a drop-in replacement for Puma:
+For Rails applications, Falcon works as a drop-in replacement for Puma, and it configures the setting most migration guides tell you to add. Its [Railtie](https://github.com/socketry/falcon/blob/v0.57.0/lib/falcon/railtie.rb) sets this whenever Falcon is loaded:
 
 ```ruby
-# config/environments/production.rb
-Rails.application.configure do
-  # Enable async features
-  config.allow_concurrency = true
-
-  # Use fibers for isolation (Rails 7+)
-  config.active_support.isolation_level = :fiber
-
-  # Optimize for async workloads
-  config.active_record.async_query_executor = :fiber_pool
-end
+# Falcon's Railtie sets this for you wherever the gem is loaded
+config.active_support.isolation_level = :fiber
 ```
+
+That scopes per-request state - `CurrentAttributes`, ActiveRecord connection leases - to the fiber rather than the thread. One caveat if you keep `falcon` in the production group only: in development the Railtie never loads, so the isolation level stays `:thread` there.
+
+The setting that is your job is `pool:` in `config/database.yml`, sized against the concurrency you expect rather than a thread count.
 
 Configure Falcon for Rails:
 
 ```ruby
 # config/falcon.rb
-#!/usr/bin/env falcon serve --config
+#!/usr/bin/env falcon-host
 
 load :rack
 
@@ -363,7 +359,7 @@ Running Falcon in production requires careful configuration for optimal performa
 
 ```ruby
 # config/falcon.rb
-#!/usr/bin/env falcon serve --config
+#!/usr/bin/env falcon-host
 
 load :rack
 
@@ -445,7 +441,7 @@ WorkingDirectory=/var/www/myapp
 Environment=RAILS_ENV=production
 EnvironmentFile=/var/www/myapp/.env.production
 
-ExecStart=/usr/local/bin/bundle exec falcon --config config/falcon.rb serve
+ExecStart=/usr/local/bin/bundle exec falcon host
 ExecReload=/bin/kill -USR2 $MAINPID
 
 Restart=always
@@ -511,7 +507,7 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
   CMD curl -f http://localhost:3000/health || exit 1
 
 # Start server
-CMD ["bundle", "exec", "falcon", "--config", "config/falcon.rb", "serve"]
+CMD ["bundle", "exec", "falcon", "host"]
 ```
 
 ### Kubernetes Deployment
@@ -700,7 +696,7 @@ If Puma isn't queueing, there is nothing here to fix. Pull the request-queue-tim
 
 ## Real-World Use Cases
 
-Three patterns where Falcon's fiber model genuinely changes the architecture, with code you can adapt.
+Three patterns where Falcon's fiber model changes the architecture, with code you can adapt.
 
 ### High-Concurrency API Server
 

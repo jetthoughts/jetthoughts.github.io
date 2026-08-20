@@ -418,17 +418,14 @@
 /* ==================================================================
    Rescue Room shared pieces (moved from pages/blog-list.css 2026-08-20).
    single-post.css is a member of the blog-list, blog-single and
-   course-single bundles, so these serve all three surfaces from one
-   definition site. Tokens: SCOPED on purpose (blog-first, 20.01 plan) -
-   promote to foundations/css-variables.css in Phase 1a, then delete.
+   course-single bundles, so these serve all three surfaces.
+
+   The token :root block that lived here was PROMOTED to
+   foundations/css-variables.css in Phase 1a.1 (2026-08-20) - that file
+   loads inline site-wide, so the other 17 bundles can now resolve them
+   too. The `rr-` names survive there as aliases; the consumers below
+   move to the canonical names in 1a.4.
    ================================================================== */
-:root {
-  --rr-ink-900: #14110f;
-  --rr-ink-700: #3d3733;
-  --rr-ink-500: #6b625c;
-  --rr-line: #e7e1d9;
-  --rr-surface-raised: #faf7f3;
-}
 
 /* Audit CTA band - blog index (before pagination) and post pages
    (after tags). Rendered by partials/blog/cta-band.html. */

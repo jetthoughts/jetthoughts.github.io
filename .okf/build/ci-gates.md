@@ -170,3 +170,21 @@ Two more, hit re-recording Linux baselines from CI on 2026-08-20 (see [test-gate
 # libvips gotcha (if a CI job ever needs ruby-vips again)
 
 ruby-vips' `:vips` driver `dlopen`s `libvips.so.42` at runtime, which ships in the **libvips42** runtime package - NOT `libvips-dev` (headers only). Install `libvips42` + run `ldconfig`. snap_diff swallows the real `LoadError` behind generic per-screenshot errors, so verify the load explicitly (`ruby -e 'require "vips"'`).
+
+# Diagnosing a slow or timing-out job
+
+Read the **per-STEP** timings via `list_workflow_jobs`, not just the job
+duration. The 7-minute `actions/checkout` above was invisible at job level and
+would have been misread as a slow test suite (2026-08-07).
+
+# Agent containers self-bootstrap
+
+A checked-in `.claude/settings.json` SessionStart hook runs `bin/agent-bootstrap`
+(bundle + bun install, libvips, the pinned CfT stack via `bin/setup-test-env`,
+doctor), every step warning-and-continuing on blocked network; log at
+`/tmp/agent-bootstrap.log`. A pre-push guard (`.githooks/pre-push`, installed by
+`bin/setup` via `core.hooksPath`) runs the lint-css ratchet, course validators,
+and toolchain-pin guards in ~5s; bypass with `SKIP_CHECKS=1`. Gotcha:
+`.claude/**/*.json` is gitignored - `settings.json` needed a `!` negation, and
+the same `.*` rule once kept `.githooks/pre-push` out of the repo entirely.
+

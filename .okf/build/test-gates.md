@@ -29,6 +29,30 @@ is `simple-page`); the changed-file→page map lives in the script itself -
 extend it when adding components or critical files. The macOS full suite remains the only dedup-trap catcher
 (Linux font resolution masks it) - never finish a component on qtest alone.
 
+# Tolerance policy
+
+**0.0 for refactors** (a refactor must move zero pixels), **<=0.03 for
+genuinely new features**. This is the policy for what you ACCEPT, distinct from
+the mechanical defaults: `DEFAULT_SCREENSHOT_CONFIG` is 0.02
+(`test/application_system_test_case.rb:87`) and individual calls may pin their
+own (e.g. 0.03 at `test/system/blog_special_content_test.rb:136`).
+
+# Rake tasks and suite layout
+
+Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
+`test/test_helper.rb` sets `SYNC_ENV=test`, a fake `DEVTO_API_KEY`, and puts
+`lib/` on `$LOAD_PATH`. Default rake task is `test:all`.
+
+| Rake task | Pattern | Use |
+|---|---|---|
+| `rake test` / `rake test:all` | `test/**/*_test.rb` | Full suite |
+| `rake test:unit` | `test/unit/**/*_test.rb` | Unit tests - required for any `lib/` change; `test:critical` does NOT include it |
+| `rake test:critical` | `test/system/*_test.rb` | The milestone gate above |
+| `rake test:integration` | `test/integration/**/*_test.rb` | Integration tests |
+| `rake build` | - | Runs `bin/hugo-build` |
+| `rake dev` | - | Runs `bin/dev` (dev-mode PostCSS; `bin/hugo-dev` retired - it ran the production PurgeCSS chain) |
+| `rake lighthouse[limit]` | - | Runs `bin/lighthouse` across crawled pages |
+
 # Hard-won caveats
 
 - **The 2% default tolerance hides small text/colour changes** (2026-08-14).
@@ -241,3 +265,6 @@ extend it when adding components or critical files. The macOS full suite remains
   burn-down list + exit 0 until their env flag is set. (A landing-parity
   variant was tried and dropped as redundant - YAGNI: a report-only gate
   nobody wires in earns its keep only when it guards an active backlog.)
+- Running a suite with multiple files - `ruby a_test.rb b_test.rb` - silently
+  executes only the FIRST file. A guard test covers this (2026-07-31, R3-1);
+  use rake tasks or `-n` filters, never a multi-file ruby invocation.

@@ -84,3 +84,43 @@ The consequence to keep honest: `blog-pipeline.md` names `slop-detector`,
 They therefore cannot run in a container/CI session, and the pipeline doc now
 says so out loud. Making a gate genuinely blocking means writing our own skill
 for it - not vendoring someone else's.
+
+# Business-layer decision rules (lifted from the log, 2026-08-20)
+
+These were recorded in `log.md` on 2026-08-09 and 2026-08-08 because the bundle
+had no business section. They belong here.
+
+**This repo is public - commercial figures belong in the private vault.**
+Revenue, profit, rates, headcount, bench cost, and client-book size do not go in
+`docs/`, `.okf/`, commit messages, or PR descriptions. State the decision and
+its reasoning; keep the numbers behind it private. (Company FACTS that we DO
+publish are a separate matter - they are canon, see
+[claims-canon](/content/claims-canon.md).)
+
+- **A single-threaded dependency the docs themselves flag as "the single point
+  of failure" is a design choice, not a fact - re-open it.** 2026-08-09: the
+  white-label-only delivery route was picked in the register's lighter-vote
+  tier (no options table, no scores) and carried the biggest named risk;
+  delivery now runs dual-route (JT's own senior Rails engineers AND the
+  partner). The weakest-argued assumption is where to look first.
+- **When the sales copy and the org chart disagree, one of them is lying to a
+  customer.** The offer one-pager grounded its price in JT's own AI-assisted
+  development and promised "one senior engineer" while the chart assigned the
+  whole delivery seat to a third party. Reconcile at the point the price is
+  set.
+- **A gate marked Done on an assertion is an open gate.** G0's
+  definition-of-done was unmet with an empty handoff note, yet pricing was
+  confirmed off it. Log it as an issue rather than silently re-scoping.
+- **Stale money facts propagate into strategy.** Re-confirm the commercial
+  position before building a plan on it.
+- **When a human says they can't do the ask, the ask is dead - re-plan the
+  lane, don't shrink the ask.** 2026-08-08: "I would not be able to provide 10
+  warm names" demoted the warm lane from primary. A dead ask parked on the
+  CEO's desk displaces the real unblock.
+- **A pre-registered risk firing is the register working.** Record premise
+  changes as dated addenda in the assumptions register, never as a silent
+  rewrite, so the vote history stays honest.
+- **Distinguish the ask from its cheapest satisfiable form.** "10 warm ICP
+  names" was unsatisfiable; "2-3 past-client referral asks" survives because a
+  referral source need not be the ICP. Demote, don't delete, when a weaker form
+  retains value.

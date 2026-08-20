@@ -31,20 +31,20 @@ RubyLLM ships an [`Agent` class](https://rubyllm.com/agents/): instructions, an 
 
 ```ruby
 class AgentBase < RubyLLM::Agent
-  class_attribute :model_name, default: AgentConfig.default_model
-
-  model { self.class.model_name }
+  model ENV.fetch("LLM_MODEL"), provider: ENV.fetch("LLM_PROVIDER")
   temperature 0.2
 end
 ```
 
 Twenty-one lines, in the real file.
 
-The lazy block is the point: `model` accepts a block that resolves at call time, so pointing an agent at a different model is a class-attribute assignment that takes effect without reloading anything. Temperature gets no such block - the gem treats it as a static value, so subclasses that need a different one declare it directly.
+Read the gem source before you reach for a block here. In `ruby_llm` 1.16.0 only `instructions`, `tools`, and `schema` take one. `model` is `def model(model_id = nil, **options)`, and a block form leaves `model_id` as `nil`, so the method assigns an empty hash to `@chat_kwargs` - it wipes the model and provider you thought you were setting, and the agent quietly falls back to the configured default. `temperature` ignores a block harmlessly. Declare both as plain values.
+
+Subclasses that need their own settings redeclare them, and `Agent.inherited` copies the parent's down to every child that doesn't.
 
 Eight agents subclass it - a scorer, a reflector, a query expander, a scrubber, four more. Every one has the same shape: an instructions heredoc, a [Schematist](https://rubygems.org/gems/schematist) schema for structured output, and one public method that builds a prompt and returns `ask(prompt).content`. When a new step needs an agent, the diff is one small file.
 
-Deploys don't trust the gem's live model list. A pinned registry in `config/ruby_llm/models.json`, loaded with `RubyLLM.models.load_from_json!`, means the models we reference exist on every boot, whether or not the registry upstream changed overnight. Dev and test run `qwen3:0.6b` on Ollama, a model small enough to answer in milliseconds on a laptop; production runs a large hosted model, and no agent code knows the difference.
+Deploys don't trust the gem's live model list. A pinned registry in `config/ruby_llm/models.json`, loaded with `RubyLLM.models.load_from_json!`, means the models we reference exist on every boot, whether or not the registry upstream changed overnight. Dev and test run `qwen3:0.6b` on Ollama - 523MB, small enough to sit on a laptop; production runs a large hosted model, and no agent code knows the difference.
 
 Retries live in gem config too: `request_timeout 300`, `max_retries 10`, a 1.5x backoff. There is no hand-rolled retry loop anywhere in the eight agents, which is eight places a subtle retry bug can't live.
 
