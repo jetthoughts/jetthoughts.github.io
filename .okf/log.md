@@ -1027,7 +1027,7 @@ predicts future calls, the token table, and - importantly - the three surfaces
 where dark stays deliberate, so a future session doesn't "fix" the blog covers
 or the vibe-code-rescue campaign page into light.
 
-## 2026-08-20 - CI checkout STALLS (three times); re-run, don't raise the cap
+## 2026-08-20 - CI checkout stalls: UPSTREAM (checkout#2441), mitigated with blob:none
 
 Three CI failures in one session - Unit Tests at exactly 10m twice,
 build_and_deploy/build at 15m1s - every one inside
@@ -1039,3 +1039,15 @@ HANG, not slowness. A cap cannot rescue a step that never progresses, so the
 response is re-run-and-verify, and raising the timeout again would only make
 each failure cost longer. Rule added with the log-check to confirm it before
 re-running, so nobody re-runs a job that actually failed for real.
+
+ROOT CAUSE FOUND (same day, on Paul's hunch that a checkout upgrade was at
+fault - he was right that it was the action, wrong about it being our
+version): actions/checkout#2441, open since 2026-05-19, silent stalls of
+15-25 min on EU runners killed by timeout-minutes. Not our config, not
+fixable by us. What IS ours is how much we ask for: a 1.70 GiB pack and a
+625 MB content/ tree (1,576 images) downloaded by every job. _hugo.yml needs
+fetch-depth: 0 for enableGitInfo, so it now also sets filter: blob:none -
+measured 4.7 MB / 1.1s bare blobless vs 1.70 GiB, with
+`git log -1 -- <post>/index.md` still returning the right date in 0.02s and
+zero blobs fetched, so GitInfo is unaffected. Mitigation, not cure; the real
+floor is 625 MB of images in git, which is a separate LFS/CDN decision.

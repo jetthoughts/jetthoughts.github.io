@@ -17,7 +17,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
+          # fetch-depth: 0 is REQUIRED - hugo.toml sets enableGitInfo, and
+          # .Lastmod feeds article:modified_time and schema dateModified.
+          # But this repo's pack is 1.70 GiB, and since 2026-05-19 EU runners
+          # have been stalling silently inside "Fetching the repository"
+          # (actions/checkout#2441, still open upstream) - three such stalls
+          # in one session on 2026-08-20, all killed by timeout-minutes, all
+          # cleared by a plain re-run.
+          #
+          # filter: blob:none = blobless clone. Commits and trees come down
+          # in full (so GitInfo still resolves every path), and HISTORICAL
+          # file contents are skipped; the working tree's own blobs are
+          # fetched once during checkout. Measured 2026-08-20: bare blobless
+          # clone 4.7 MB in 1.1s vs a 1.70 GiB pack, and
+          # `git log -1 -- content/blog/<post>/index.md` still returned the
+          # right commit date in 0.02s with zero blobs fetched.
+          #
+          # This is a MITIGATION, not a cure - it cuts what we ask for, it
+          # cannot fix an upstream stall. Keep the re-run rule.
           fetch-depth: 0
+          filter: blob:none
 
       - name: Setup Pages
         id: pages

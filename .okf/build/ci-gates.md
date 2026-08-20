@@ -49,21 +49,41 @@ now 15 and 25. Do not trim them back toward the observed average: a gate that
 flakes on timeout teaches people to ignore red, which costs more than the
 runner minutes.
 
-**Slow is not the same as stalled — check which before raising a timeout**
-(2026-08-20, three occurrences in one session). `Unit Tests` failed at exactly
-10m twice and `build_and_deploy / build` at 15m1s, every one of them inside
-`##[group]Fetching the repository` and ending `##[error]The operation was
-canceled.` — i.e. they hit the cap, they did not run long and finish. Each
-plain `gh run rerun <id> --failed` then completed the SAME job in **2-3
-minutes**.
+**Slow is not the same as stalled — and the stall is UPSTREAM** (2026-08-20).
+Three failures in one session — `Unit Tests` at exactly 10m twice,
+`build_and_deploy / build` at 15m1s — every one inside
+`##[group]Fetching the repository`, ending `##[error]The operation was
+canceled.`, and every one cleared by a plain `gh run rerun <id> --failed`
+completing the SAME job in 2-3 minutes.
 
-So the failure mode is a checkout **hang**, not the documented slowness, and
-the right response is re-run-and-verify rather than another timeout raise —
-raising the cap cannot fix a step that never progresses, and would only make
-each failure cost longer. Confirm before re-running by pulling the job log
-(`gh api repos/<owner>/<repo>/actions/jobs/<job_id>/logs`) and looking for that
-group/error pair; if the job actually got past checkout, it is a real failure
-and a re-run is the wrong move.
+Root cause is **not** our config and not the 7-minute slowness documented
+above: since **2026-05-19** `actions/checkout` has been stalling silently on
+**EU runners** — [actions/checkout#2441], open and unresolved, symptom
+described upstream as silent stalls of 15-25 minutes killed by
+`timeout-minutes`. That is our signature exactly.
+
+Consequences for how to react:
+
+* **Re-run; do not raise the cap.** A timeout cannot rescue a step that never
+  progresses — raising it only makes each failure cost longer. Confirm first
+  by pulling the job log
+  (`gh api repos/<owner>/<repo>/actions/jobs/<job_id>/logs`) and looking for
+  that group/error pair. If the job got PAST checkout, it is a real failure and
+  a re-run is the wrong move.
+* **Shrink what we ask for.** We cannot fix upstream, only reduce exposure.
+  This repo is a heavy ask: **1.70 GiB pack**, and `content/` alone is
+  **625 MB across 1,576 images**, downloaded by every job regardless of depth.
+  `_hugo.yml` needs `fetch-depth: 0` (enableGitInfo → `.Lastmod` →
+  `article:modified_time` + schema `dateModified`), so it now also sets
+  **`filter: blob:none`** — commits and trees in full, historical blobs
+  skipped. Measured: bare blobless clone **4.7 MB in 1.1s** vs the 1.70 GiB
+  pack, and `git log -1 -- content/blog/<post>/index.md` still returned the
+  correct date in **0.02s with zero blobs fetched**, so GitInfo is unaffected.
+* **The deeper fix is the content weight**, not the checkout flags: 625 MB of
+  images in git is the floor every job pays. Moving them to LFS or
+  CDN-only would be a separate, larger decision.
+
+[actions/checkout#2441]: https://github.com/actions/checkout/issues/2441
 
 Two things to preserve when touching either:
 - **`test:links` and `test:html_proofer` share ONE rake invocation**
