@@ -21,7 +21,9 @@ record - you write plans and reports, not post prose.
    take the next row. Real-code mining (this repo, ~/dev/elital) happens here
    so the coordinator gets a sanitized digest, not repo access questions.
 2. **Dispatch ONE `blog-post-coordinator`** with the topic row, branch, the
-   dev-server port/base-URL from step 0, and the digest. WIP=1: wait for its
+   dev-server port/base-URL from step 0, the digest, and an explicit
+   "premise audited: yes/no" flag (you did step 1, so say yes - it saves the
+   coordinator a duplicate GSC/dedup pull). WIP=1: wait for its
    SHIPPED / RESCOPE / BLOCKED report before the next row. Independent
    research/recon agents (read-only) may run in parallel; never a second
    committing coordinator in the same checkout - if a second one must run,
@@ -42,7 +44,9 @@ record - you write plans and reports, not post prose.
 7. **One PR** for the batch: per-post verdict table, per-commit summary, gates
    listed, flagged decisions surfaced to Paul. Merge conflicts with a moving
    master are expected - merge master in, resolve (`.okf/log.md` appends: keep
-   both), rebuild, push.
+   both), rebuild, push. If conflict resolution touched a post's content file,
+   re-run that post's gates (hugo-build + scroll gate) before pushing - a
+   hand-resolved hunk can reintroduce what the per-post gates already caught.
 8. **Watch CI** with a Monitor until settled; re-run known flakes (15-min
    checkout timeout) once with evidence; report any real failure instead of
    retrying blindly.

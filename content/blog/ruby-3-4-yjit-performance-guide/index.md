@@ -47,7 +47,7 @@ Plenty of upgrade checklists end right here: it was already on.
 
 ## What YJIT is worth in 2026
 
-On the official benchmark suite at [speed.ruby-lang.org](https://speed.ruby-lang.org/), current YJIT runs the headline benchmarks at roughly 2x interpreter speed, and `railsbench` at about 2.2x. The same dashboard shows YJIT on the 4.x line beating YJIT 3.4.7 by 8.4% geomean, with railsbench 17.1% faster, so the 3.4 to 4.0 upgrade is itself a performance change even if you touch nothing else.
+On the official benchmark suite at [speed.ruby-lang.org](https://speed.ruby-lang.org/) (numbers as of August 2026 - it's a live dashboard, so expect drift), current YJIT runs the headline benchmarks at roughly 2x interpreter speed, and `railsbench` at about 2.2x. The same dashboard shows YJIT on the 4.x line beating YJIT 3.4.7 by 8.4% geomean, with railsbench 17.1% faster, so the 3.4 to 4.0 upgrade is itself a performance change even if you touch nothing else.
 
 The benchmark says 2x; your app may measure a single-digit gain. Both numbers are honest. Railsbench is CPU-bound Ruby; your checkout endpoint spends most of its time waiting on Postgres and Stripe, and no JIT speeds up waiting. The Rails team's own framing when they made YJIT the default was [15-25% latency improvement](https://rubyonrails.org/2024/8/10/Rails-7-2-0-has-been-released) on real applications. The win lands on Ruby-heavy paths like serialization and view rendering, not on I/O.
 

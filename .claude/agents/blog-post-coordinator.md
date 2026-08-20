@@ -33,8 +33,10 @@ before asking anyone.
    cut-test, diagram earns-its-place. Synthesize; apply fixes yourself
    (surgical edit discipline). **Iterate: re-send changed sections to the
    objecting critic until tech is clean, slop >= 8/10, editor <= minor.**
-4. **Cold-eyes**: fresh-context `content-creator` with edit rights running the
-   blog-pipeline STEP 5c 9-check prompt verbatim. Loop 5c (not the panel) until
+4. **Cold-eyes**: fresh-context reviewer of a DIFFERENT agent type than the
+   writer - use `core-reviewer` with edit rights (never the writer's own
+   `content-creator` type; same-type fresh context still shares the writer's
+   default tells) - running the blog-pipeline STEP 5c 9-check prompt verbatim. Loop 5c (not the panel) until
    PUBLISH-READY. (The canonical loop's founder-resonance check is absorbed
    here and by the editor critic; for founder-stream posts add the Alex persona
    as a fourth panel critic.)
