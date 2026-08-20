@@ -3,6 +3,41 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+## 2026-08-21 - Codex review killed a claim I had already published
+
+All eight findings verified against the tree; all eight valid. The one that
+matters reached the bundle before review caught it.
+
+**`workflows/analytics-access.md` corrected - the "Clarity disagrees with
+itself" claim was a denominator mismatch.** The write-up said per-page numbers
+contradict the aggregate "for an identical window and page-set" (~9% vs 25.56%,
+"~3x"). They are NOT the same page-set: ~9% was session-weighted over the TOP
+TEN pages, 25.56% covers EVERY `/blog/` page. The omitted long tail can account
+for the whole gap. Nothing was demonstrated, and per-post analysis was never
+ruled out - it needs the full page rows retrieved.
+
+The violation is that the section states "state the denominator" as its rule,
+and the mismatch was written INTO it. Recorded in the concept as a worked
+near-miss rather than deleted, because the shape recurs: the API returns a
+top-N subset by default and the aggregate on request, so comparing them is the
+most available thing to do.
+
+Other findings fixed in the 2608 specs (not bundle concepts): a `--rr-*` alias
+inventory that omitted a live consumer and named a file with zero references -
+deleting the aliases on it would have broken CTA/tag styling on blog AND course;
+an analytics gate using `eq .Section "blog"` that cannot match tag pages
+(`config/_default/hugo.toml:37-41` rewrites the term PERMALINK but the taxonomy
+is `tag = "tags"`, so `.Section` is `tags`); inline `!important` H1 styles left
+in `themes/beaver/layouts/list.html:51,70`; and advice to probe three
+`!important`s for removal that fight legacy heading-margin rules, not the
+retired anchor rule - `20.02:69-81` records that distinction and removing them
+would restore a title-alignment regression.
+
+Also recorded, not silently ignored: the macOS-only gate KNOWINGLY departs from
+`CLAUDE.md:148`. The override is Paul's (CI unreliable, 2026-08-21) and its cost
+- master's Linux job red until one batched dispatch - is now stated in the spec
+rather than left for a reader to discover.
+
 ## 2026-08-21 - the deferred pass, and two of my own claims corrected
 
 Ran the pass queued on #516 once that PR merged (it could not run earlier: the

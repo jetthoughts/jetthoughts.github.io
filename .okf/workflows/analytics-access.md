@@ -169,10 +169,22 @@ a deploy** - the low window contained the 08-20 rebuild ship (17:35 and
 above: a flattering or alarming number survives by being quoted rather than
 recomputed.
 
-Also unreliable: Clarity's PER-PAGE scroll numbers contradict its own
-aggregate for an identical window and page-set (0-2% on top posts vs 25.56%
-aggregate, ~3x). Per-post scroll comparison is not currently obtainable -
-record that as a gap rather than substituting an estimate.
+**A near-miss worth keeping, because it is this same rule failing one step
+deeper.** The first write-up of this claimed Clarity's per-page numbers
+"contradict its own aggregate for an identical window and page-set" - 0-2% on
+top posts vs a 25.56% aggregate, "~3x". Review (Codex, 2026-08-21) killed it:
+the ~9% figure was session-weighted over the TOP TEN pages only, and the
+25.56% aggregate covers EVERY `/blog/` page. Two different populations. The
+omitted long tail can account for the whole gap, so no disagreement was
+demonstrated and per-post analysis was never ruled out - it just needs the
+full page set retrieved.
+
+The rule this section states is "state the denominator", and the violation
+was writing a denominator-mismatch INTO the section warning against it.
+Comparing a top-N subset against an all-rows aggregate is the most available
+way to do it, because the API returns the subset by default and the aggregate
+on request. Before concluding two figures disagree, confirm they cover the
+same rows.
 
 ## There is no conversion tracking
 
