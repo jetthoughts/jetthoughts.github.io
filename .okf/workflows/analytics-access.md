@@ -154,6 +154,39 @@ not check the event behind it. **Never quote `keyEvents` or "conversions" from
 this property without listing the events behind the number.** Fix queued as
 2608 Phase 0.1 (un-mark `page_view`, add `generate_lead` on form submit).
 
+**Update 2026-08-20 (later) — `contact_cta_click` is now marked a key event.**
+Done through the GA4 UI in Chrome. `page_view` is **still marked**, so the
+caveat above stands in full: until it is un-marked, any real contact-CTA
+conversion is buried under thousands of page-view "conversions". Un-marking
+`page_view` was deliberately **not** done here - it changes how a headline
+metric reads and belongs to 2608 Phase 0.1, not to this request.
+
+### Marking a key event is an agent-doable UI task, not an Admin-API task
+
+Recorded because the opposite was asserted twice in one session. The read-only
+Data API cannot mark key events, and it is tempting to conclude the job needs
+Paul. It does not:
+
+**Admin → Data display → Events → Create event → "Create with code"** takes an
+event name plus a **Mark as key event** toggle, and needs **no already-received
+data**. The star on the Events list is the path that requires data - which is
+why this looked blocked: `contact_cta_click` had fired zero times, having
+shipped the same day.
+
+Two traps in that dialog:
+
+- It **pre-selects a $1 default key-event value.** Accept it and every click
+  books phantom revenue. Choose "Don't set a default key event value" unless
+  the event genuinely carries money.
+- Counting method defaults to **"Once per event"** (GA4's recommendation). Keep
+  it for intent metrics: per-event preserves the raw signal and reporting can
+  dedupe to sessions later, but it cannot un-dedupe.
+
+**Do not fire a synthetic event to unblock the star.** For a conversion whose
+true count is zero, a QA-origin first data point is undeletable and reads as a
+real conversion forever. Wait for real traffic, or use the create-with-code
+path above, which needs no data at all.
+
 ## No A/B test can reach power here — do not design one
 
 Falls directly out of the bot correction above. Measured 2026-08-20 on the
