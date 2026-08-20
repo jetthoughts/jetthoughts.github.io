@@ -34,6 +34,35 @@
   color: var(--rr-ink-500);
 }
 
+/* Pagination: the bare "Next" rendered orphaned bottom-left under a
+   centered CTA band (Paul, 2026-08-20). Center it in blog listings. */
+.blog-index .pagination {
+  justify-content: center;
+  margin: 28px 0 8px;
+}
+
+/* Taxonomy root (/tags/): tag index reuses the pill styles + a count */
+.blog-tag-index {
+  margin-top: 4px;
+}
+
+.blog-tag-index .blog-tag-count {
+  opacity: 0.6;
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+/* Tag pages: "Blog" as an eyebrow above the tag-name H1 */
+.blog-eyebrow {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ruby);
+  margin-bottom: 6px;
+}
+
 /* --- Filters: curated ICP tags, static links ------------------------ */
 .blog-filters {
   display: flex;

@@ -50,19 +50,7 @@
             Rails, AI, and the questions burned founders ask before signing again.
           </p>
 
-          {{/* Curated ICP filters, not top-by-count: dev.to imports skew raw
-               counts toward generic dev tags. All six verified live. */}}
-          <nav class="blog-filters" aria-label="Browse by topic">
-            {{/* aria-current only on /blog/ itself — announcing it as the
-                 current page from /blog/page/2/ misleads assistive tech */}}
-            <a href="/blog/"{{ if eq .RelPermalink "/blog/" }} aria-current="page"{{ end }}>All</a>
-            <a href="/blog/tags/rails/">Rails</a>
-            <a href="/blog/tags/ruby/">Ruby</a>
-            <a href="/blog/tags/security/">Security</a>
-            <a href="/blog/tags/startup/">Startup</a>
-            <a href="/blog/tags/hiring/">Hiring</a>
-            <a href="/blog/tags/ai/">AI</a>
-          </nav>
+          {{ partial "blog/filters.html" . }}
 
           {{ $pag := .Paginate (where .Pages "Params.course_chapter" "!=" true).ByDate.Reverse }}
           {{ $posts := $pag.Pages }}
@@ -91,33 +79,10 @@
           {{ end }}
 
           {{ range $posts }}
-            <a class="link" href="{{ .RelPermalink }}">
-              <div class="blog-post">
-                <div class="post-image">
-                  {{ partial "blog/img-cropped.html" (dict "Page" . "width" 220 "height" 116) }}
-                </div>
-                <div class="post-content">
-                  <h2 class="post-title">{{ .Title }}</h2>
-                  <div class="post-meta">
-                    {{ if .Date }}
-                      <span class="post-date">{{ dateFormat "Jan 2, 2006" .Date }} · {{ .ReadingTime }} min read</span>
-                    {{ end }}
-                    {{ with .Params.tags }}
-                      <div class="post-tags-card">{{ range $i, $t := . }}{{ if $i }}<span class="post-tags-sep">,</span> {{ end }}<a href="/blog/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>
-                    {{ end }}
-                  </div>
-                  <div class="post-description">{{ .Params.description }}</div>
-                </div>
-              </div>
-            </a>
+            {{ partial "blog/post-row.html" . }}
           {{ end }}
 
-          <div class="blog-cta">
-            <h2>Reading this because something is going wrong?</h2>
-            <p>A free code audit gives you a written assessment of your codebase in plain English.</p>
-            <a class="blog-cta-btn" href="{{ relURL "free-consultation/" }}">Get a Free Code Audit</a>
-            <p class="blog-cta-note">Rated <a href="https://clutch.co/profile/jetthoughts" rel="noopener" target="_blank">4.8/5 on Clutch</a> · you keep the write-up either way</p>
-          </div>
+          {{ partial "blog/cta-band.html" . }}
 
           {{ partial "pagination" . }}
         </div>
