@@ -54,12 +54,14 @@ The production setup is its own post. We've covered [Falcon's benchmarks, config
 
 Less than you'd expect. The fiber scheduler hooks Ruby's own I/O, so `Net::HTTP`, and everything built on it, yields automatically inside Falcon. The `pg` driver has cooperated with the fiber scheduler since version 1.3. Your models, controllers, and service objects don't know the difference.
 
-Two settings matter: isolate per-request state by fiber instead of by thread, and raise `pool:` in `config/database.yml` to match the concurrency you actually expect. The first one is a single line:
+Per-request state has to be scoped to the fiber rather than the thread, and you almost certainly get that for free: [Falcon ships a Railtie](https://github.com/socketry/falcon/blob/main/lib/falcon/railtie.rb) that sets it for you.
 
 ```ruby
-# config/application.rb
+# what Falcon's Railtie already does on your behalf
 config.active_support.isolation_level = :fiber
 ```
+
+The setting you do have to think about is `pool:` in `config/database.yml`, sized against the concurrency you actually expect rather than a thread count.
 
 Here's a streaming endpoint using [RubyLLM](https://rubyllm.com/streaming), whose `ask` method yields chunks as they arrive:
 
@@ -126,7 +128,7 @@ Falcon's costs are real too. Some gems assume thread-local state and thread-size
 
 ## Where to start
 
-Measure your peak concurrent streams for a week. If the number stays under workers times threads, raise a thread count and move on. Past that ceiling, prototype one streaming endpoint on Falcon in staging with `isolation_level = :fiber` set, and watch the database pool, since that's the first thing the extra concurrency exhausts.
+Measure your peak concurrent streams for a week. If the number stays under workers times threads, raise a thread count and move on. Past that ceiling, prototype one streaming endpoint on Falcon in staging and watch the database pool, since that's the first thing the extra concurrency exhausts.
 
 If you're adding LLM features to a Rails app and want someone who has shipped this stack in production to look at your traffic profile first, [our Rails team does that assessment](/services/app-web-development/) before any migration work starts.
 
