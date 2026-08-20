@@ -2174,3 +2174,22 @@ cross-batch sweep to `content/voice-rules.md`. Also: critic-tech caught that
 ruby_llm 1.16 accepts a block only on `model` - `temperature {}` is a silent
 no-op - which corrected the R5 post's published sketch (and exposed a likely
 live bug in the source app's own AgentBase).
+## 2026-08-20 - Phase 0 swarm: instrumentation + record-baselines (PR #489, draft)
+
+Two worktree-isolated agents built 2608 Phase 0 in parallel: GA4 conversion
+instrumentation (generate_lead one-shot on data-lead-form submits, cta_click
+with location=hero/section/blog-index/tag-index/article-end, scroll_depth
+25/50/75/90 on blog posts - named to dodge enhanced measurement's built-in
+90% scroll) and bin/record-baselines (keep-globs, restore-the-rest, --dry-run,
+--linux prints the CI dispatch per the ARM-drift rule). Review chain earned
+its keep: coordinator 4-eyes caught untracked-created baselines crashing the
+restore under set -e; codex added two majors on top - a red test run skipped
+the restore pass entirely, and non-z porcelain parsing broke on space paths
+and whole-new directories. A wrapper whose one job is "leave the tree
+reconciled" failed exactly that job in three ways before review.
+
+Standing coordination note: master frozen for this session (Paul: another
+agent owns it) - PR #489 is DRAFT until cleared. Known red handed to the
+master owner: macos/desktop/homepage/_clients.png is stale on master itself
+(Jul 21 record, card order changed since; fails on clean master).
+Detail: PR #489, docs/projects/2608-site-design-system/20-29-strategy/20.01-rollout-plan.md
