@@ -214,10 +214,23 @@ table, which is the most likely real-world failure.
 > available at n=1: read *who* is commenting - engineers and agency owners
 > means the audience or the packaging is wrong, not the message.
 >
-> **Arrival override.** >= 2 GA4 sessions carrying `utm_campaign=icp_validation_*`
-> (or the course-promo equivalent) during the window overrides a KILL. An
-> arrival outranks a reply. The campaign UTM is what isolates campaign traffic
-> from baseline profile/bio traffic - do not substitute channel attribution.
+> **Arrival override.** >= 3 GA4 sessions carrying `utm_campaign=icp_validation_*`
+> (or the course-promo equivalent) that are BOTH `engagedSessions` AND view more
+> than one page. An arrival outranks a reply - but a click is not an arrival.
+> The campaign UTM is what isolates campaign traffic from baseline profile/bio
+> traffic; do not substitute channel attribution.
+>
+> *Recalibrated 2026-08-20 against real data, hours after being written.* The
+> first draft said ">= 2 sessions". The one campaign post published to date
+> (`week1-thu-validate-before-build`) had already produced **exactly 2 sessions**
+> - landing on the right course page via LinkedIn's first-comment link, but with
+> **1 page per session, 0s average duration, 1 of 2 engaged**. The threshold
+> would have fired on two bounces from a single post, making the campaign
+> unkillable again - the precise bug this criterion exists to fix. The panel had
+> predicted the opposite (a "stretch" at 3-6 clicks over 8 posts); the observed
+> rate is ~2 sessions/post, roughly 5x higher. Check the override with one query:
+> sessions + engagedSessions + screenPageViewsPerSession, filtered on
+> `sessionCampaignName`.
 >
 > **Validity gate.** No branch is a valid verdict unless founder / CEO / owner
 > appears in LinkedIn's top-3 viewer job titles on at least half the rows. Note

@@ -95,15 +95,44 @@ Source: `docs/workflows/linkedin-course-promo-plan.md` § "Measurement" →
 
 ---
 
+## 3b. GA side - ALREADY FILLED (2026-08-20, no Paul input needed)
+
+The arrival half of this read comes from GA4, not LinkedIn, so it is filled in.
+Property `328508492`, 2026-08-01 → 08-19. Only one campaign post has published
+(`week1-thu-validate-before-build`, 2026-08-13,
+`utm_campaign=course_promo_pre_validation`).
+
+| Measure | Value | Read |
+|---|---:|---|
+| Campaign-UTM sessions | **2** | Both landed on the linked page, `.../fake-stripe-pre-sale-pieter-levels/`, arriving with `trk=public_post_comment-text` - i.e. via the first-comment link exactly as designed. The mechanism works. |
+| Engaged sessions | **1** of 2 | Engagement rate 0.50 |
+| Pages per session | **1.0** | Nobody moved past the landing page into the course |
+| Avg session duration | **0s** | Clicks, not reads |
+| Other LinkedIn traffic | 5 sessions / 1 user, `linkedin.com` referral, no campaign UTM | Baseline profile/bio traffic - correctly excluded from the campaign count |
+
+**What this says:** the click-through path is wired correctly and people do click
+the first-comment link. What it has not yet produced is a single engaged read.
+n=1 post, so this is a mechanism check, not a verdict on the message.
+
+**Course funnel, same window** (was `start_course`=1 and glossary=0 at the Aug-14
+read): `course_checkpoint_reveal` 4, `course_start_course` 3, `course_branch_click`
+2, `course_glossary_click` 1. Marginal movement, still near-floor.
+
+`contact_cta_click` does not appear yet - it shipped 2026-08-20, after this
+window. First data expected in the next read.
+
+---
+
 ## 4. Verdict
 
-**BLANK - fill only after §1 numbers are in the ledger.**
+**BLANK for the LinkedIn half - fill only after §1 numbers are in the ledger.**
 
-The rule, from `metrics-ledger.md` § "Kill-criteria tie-in":
-
-> Each lane's plan has a 2-week kill criterion. Evaluate it against the `icp_replies`
-> column here, not impressions. Near-zero icp_replies across a lane's posts = the
-> message/segment isn't landing (revisit before spending more reach).
+The rule now lives in
+[`docs/workflows/linkedin-icp-validation-plan.md`](../docs/workflows/linkedin-icp-validation-plan.md)
+§ "Kill criterion" (written 2026-08-20; before that date neither lane plan had
+one, despite the ledger claiming both did). Evaluate **per lane at 10 filled
+rows**, on `icp_replies`, never impressions - and remember that a row with empty
+metric cells does not count toward the ten.
 
 So: evaluate **per lane**, on `icp_replies` only. Impressions and reactions are
 context, never the verdict. A lane with high impressions and near-zero
