@@ -26,7 +26,7 @@ overview:
     - name: The Problem
       value: You raised funding, you need React work shipped, and you can't read the code yourself. The last shop quoted by the hour, sent vague Jira updates, and disappeared when bugs hit production. Your investors want a working demo. You don't know if the existing code can be saved or if you're throwing money at a rewrite that's already needed.
     - name: How We're Different
-      value: Two senior engineers review every pull request before it merges. We send a one-page report every Friday in plain English - what shipped, what broke, what's next. Code ownership transfers to your GitHub and your cloud accounts on day one, not at the end. Every contract has a termination clause, so if we miss two milestones, you walk with the code and no penalty.
+      value: Two senior engineers review every pull request before it merges. We send a one-page report every Friday in plain English - what shipped, what broke, what's next. Code ownership transfers to your GitHub and your cloud accounts on day one, not at the end. Every contract has a termination clause, so if we miss two milestones, you walk with the code and no penalty. Our [SOW reading guide](/course/tech-for-non-technical-founders-2026/sow-reading-guide/) shows the exact clause to look for in any contract.
     - name: What You Get
       value: A production React app or a rescued one, 70%+ test coverage, weekly demos that prove progress instead of describing it, and a codebase your next CTO won't ask you to throw away. If we can't ship what we promised, you get the work to date and your money back for what didn't ship.
   outcome:

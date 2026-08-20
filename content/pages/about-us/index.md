@@ -24,10 +24,10 @@ founder_expertise:
       value: "Our leadership team averages 12+ years of industry experience, with specializations in Ruby on Rails, React, startup MVP development, and fractional CTO services. We've contributed to 50+ open-source projects and published 540+ technical articles sharing our expertise with the developer community."
 
     - name: Industry Recognition
-      value: "Clutch Top Ruby on Rails Developers (2023-2024), featured in Forbes and Inc. Magazine for technical leadership, with 95% of clients continuing past their first engagement."
+      value: "Rated 4.8/5 on Clutch (clutch.co/profile/jetthoughts), with 95% of clients continuing past their first engagement and client relationships averaging five years."
 
     - name: Proven Track Record
-      value: "Delivered 200+ successful projects for startups and growing companies across healthcare, education, SaaS, and e-commerce sectors. Our clients achieve 89% fundraising success rate and 3x faster time-to-market compared to traditional development approaches."
+      value: "Since 2008 we have shipped production software for startups and growing companies across healthcare, education, SaaS, and e-commerce sectors - MVPs in 8-12 weeks where traditional agencies quote 24."
 
 about_us_block1:
   headline: Our Mission

@@ -190,7 +190,7 @@
                                       data-node="dfqgrol9zs2j">
                                       <div class="fl-module-content">
                                         <div class="fl-rich-text">
-                                          <p>{{ .value }}</p>
+                                          <p>{{ .value | markdownify }}</p>
                                         </div>
                                       </div>
                                     </div>
@@ -224,6 +224,11 @@
                         class="fl-col-group fl-col-group-custom-width"
                         data-node="28twkcfhlqbp">
                         {{ range .Page.Params.overview.outcome }}
+                          {{/* tenure derives from foundingYear (claims canon) — frontmatter values rot */}}
+                          {{ $statValue := .value }}
+                          {{ if eq .name "Years of Industry Experience" }}
+                            {{ $statValue = sub now.Year (int site.Params.foundingYear) }}
+                          {{ end }}
                           <div
                             class="fl-col service-stat fl-col-small fl-col-small-custom-width"
                             data-node="26tqf1ykpsiv">
@@ -236,8 +241,8 @@
                                     <p>
                                       <span
                                         class="counter-value active"
-                                        data-count="{{ .value }}"
-                                        >{{ .value }}</span
+                                        data-count="{{ $statValue }}"
+                                        >{{ $statValue }}</span
                                       >+
                                     </p>
                                   </div>
