@@ -44,9 +44,18 @@ mobile; and a lead conversion event exists so the next change can be measured.
 
 **Re-sequenced 2026-08-20 (Paul): BLOG FIRST** — confirm engagement on the
 surface where the humans already land before touching chrome or money pages.
-Tokens scope into the blog bundles first, promote site-wide later. Blog
-engagement baseline (Clarity, bot-filtered): **25.2% avg scroll depth / 26.3s
-engagement** vs site avg 33–40% / 28–34s.
+Tokens scope into the blog bundles first, promote site-wide later.
+
+**Blog engagement baseline, corrected 2026-08-21** (Clarity, bot-filtered):
+**56.4% avg scroll depth / 40.1s engagement over 451 sessions**, clean pre-ship
+window 08-06 → 08-17. The **25.2% / 26.3s** figure previously quoted here was
+ONE 3-day window of five, the lowest, and straddles the 08-20 ship - it is NOT
+the baseline and does not support "visitors leave in the first quarter". Full
+record: [40.01](40-49-measurement/40.01-blog-engagement-baseline.md).
+
+The durable reason for blog-first is traffic share, not an engagement deficit:
+the blog draws **105 GSC clicks / 28d - 77% of the site's entire Google
+traffic**.
 
 | Phase | What | Gate | Status |
 |---|---|---|---|

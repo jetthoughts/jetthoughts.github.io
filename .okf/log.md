@@ -3,6 +3,107 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+## 2026-08-21 - the Hugo trap behind the analytics finding, lifted from spec to bundle
+
+The Codex round fixed the 2608 specs. One of its findings was a durable CODE
+fact that was left sitting in a project doc where template work would never
+find it.
+
+* `architecture/hugo-site.md` - **a permalink rewrite does NOT change
+  `.Section` or `.Kind`.** The taxonomy is declared `tag = "tags"` and only
+  `[permalinks.term]` rewrites the URL, so a page served at
+  `/blog/tags/rails/` still has `.Section == "tags"`. Every
+  `eq .Section "blog"` condition therefore MISSES tag pages while reading as
+  though it covers them - the URL says blog, the page object does not. A
+  proposed analytics gate was written exactly this way.
+* `architecture/blog-list-page.md` - the same drift in a second form. That
+  concept already records the index and tag templates drifting apart in MARKUP
+  and being unified by shared partials. Unifying markup did NOT unify
+  PREDICATES: a `.Section` guard added anywhere still covers one and skips the
+  other. Also noted the inline `!important` H1 styles still at `list.html:51,70`.
+* `design/site-palette.md` - two fixes. `--color-primary` no longer "dies in
+  1a.2"; it is GONE as of #518, and the seven surviving matches are comments
+  recording what each rule replaced, which a careless grep reads as survival.
+  And the `--rr-*` alias deprecation was missing entirely: it now names the
+  three live consumers and the rule that matters - **verify by grep at deletion
+  time, never against a written inventory.** That inventory was wrong twice in
+  one review, and `single-post.css` is in the COURSE bundle, so an early
+  deletion breaks blog and course together.
+
+## 2026-08-21 - Codex review killed a claim I had already published
+
+All eight findings verified against the tree; all eight valid. The one that
+matters reached the bundle before review caught it.
+
+**`workflows/analytics-access.md` corrected - the "Clarity disagrees with
+itself" claim was a denominator mismatch.** The write-up said per-page numbers
+contradict the aggregate "for an identical window and page-set" (~9% vs 25.56%,
+"~3x"). They are NOT the same page-set: ~9% was session-weighted over the TOP
+TEN pages, 25.56% covers EVERY `/blog/` page. The omitted long tail can account
+for the whole gap. Nothing was demonstrated, and per-post analysis was never
+ruled out - it needs the full page rows retrieved.
+
+The violation is that the section states "state the denominator" as its rule,
+and the mismatch was written INTO it. Recorded in the concept as a worked
+near-miss rather than deleted, because the shape recurs: the API returns a
+top-N subset by default and the aggregate on request, so comparing them is the
+most available thing to do.
+
+Other findings fixed in the 2608 specs (not bundle concepts): a `--rr-*` alias
+inventory that omitted a live consumer and named a file with zero references -
+deleting the aliases on it would have broken CTA/tag styling on blog AND course;
+an analytics gate using `eq .Section "blog"` that cannot match tag pages
+(`config/_default/hugo.toml:37-41` rewrites the term PERMALINK but the taxonomy
+is `tag = "tags"`, so `.Section` is `tags`); inline `!important` H1 styles left
+in `themes/beaver/layouts/list.html:51,70`; and advice to probe three
+`!important`s for removal that fight legacy heading-margin rules, not the
+retired anchor rule - `20.02:69-81` records that distinction and removing them
+would restore a title-alignment regression.
+
+Also recorded, not silently ignored: the macOS-only gate KNOWINGLY departs from
+`CLAUDE.md:148`. The override is Paul's (CI unreliable, 2026-08-21) and its cost
+- master's Linux job red until one batched dispatch - is now stated in the spec
+rather than left for a reader to discover.
+
+## 2026-08-21 - the deferred pass, and two of my own claims corrected
+
+Ran the pass queued on #516 once that PR merged (it could not run earlier: the
+session was checked out on #518, where this bundle state did not exist).
+
+**Corrections to `workflows/site-redesign-rollout.md`, written four passes ago:**
+
+* The engagement figure. The concept repeated the plan's "25.2% scroll / 26.3s
+  vs a 32.9-40.3% site average". Measured: that is ONE 3-day Clarity window of
+  five and the lowest, the windows swing 2.9x, and session-weighted across 743
+  sessions the blog is at **44.31% / 34.97s** - at or above the average it was
+  said to trail. It also straddles the 08-20 deploy; the clean pre-ship figure
+  is 08-06->08-17, 451 sessions, 56.4% / 40.1s. Blog-first still holds, on a
+  better fact: GSC puts the blog at 77% of the site's Google traffic.
+* The course coupling. The concept repeated 20.01's "2.2 couples the course
+  page". True of the FILE, false of the SELECTORS: `course/single.html:55` has
+  no `.post-article` and all 15 styled rules are `.post-article`-prefixed.
+  DECOUPLED - 2.3 need not follow 2.2. The genuinely shared file is
+  `single-post.css`, which also drives `bin/generate-template-pdfs`.
+
+Both were inherited from the plan doc without independent verification, which
+is the same failure the new "check phase status against GIT, not the plan
+table" rule now names: Phase 2.1 and 2.2 had ALREADY SHIPPED (#487, #494, both
+2026-08-20) while the plan still listed them pending, and a status answer was
+given from the table.
+
+**Added:**
+
+* `build/test-gates.md` - a `skip_area` mask blinds a gate STRUCTURALLY where
+  tolerance blinds it statistically: all four blog-index screenshots mask
+  `.post-feature`, which IS the feature slot, so the index content area has
+  never been gated. Plus the local-gates-are-authority policy with its stated
+  Linux debt, and "quote the compared COUNT, not just 0 failures".
+* `workflows/analytics-access.md` - `/blog/` fires no `scroll_depth` at all
+  (`page/analytics.html:72` gates on `.IsPage`), and the 3-day-window trap with
+  the session-weighting and straddles-a-deploy rules.
+* `workflows/review-swarm.md` - non-colliding agents can still collide with an
+  unmerged branch, and never switch branches under a running agent.
+
 ## 2026-08-21 - new concept: the rollout SEQUENCE was undiscoverable
 
 `design/site-palette.md` carried the palette decision, but nothing in the

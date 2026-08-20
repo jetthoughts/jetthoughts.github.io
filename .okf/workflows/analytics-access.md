@@ -6,7 +6,9 @@ tags: [analytics, ga4, search-console, mcp, seo, tooling]
 generated:
   by: claude/opus-5
   at: 2026-08-13T00:00:00Z
+timestamp: 2026-08-21T00:50:00Z
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T00:50:00Z }
   - by: claude/opus-5
     at: 2026-08-13T00:00:00Z
   - by: claude/opus-5
@@ -136,6 +138,61 @@ that can never convert.
 Use `sc-domain:jetthoughts.com` for *coverage* questions (what exists, what is
 indexed); use the `https://jetthoughts.com/` prefix property, or a
 `page notContains elital` filter, for any *performance* question.
+
+## `/blog/` fires no `scroll_depth` - GA4 cannot see the blog index
+
+`themes/beaver/layouts/partials/page/analytics.html:72` gates the scroll
+milestones on `{{ if and .IsPage (eq .Section "blog") }}`. `.IsPage` is FALSE
+for list pages, so individual posts emit `scroll_depth` and `/blog/` emits
+nothing. Found 2026-08-21 while baselining the blog rebuild.
+
+Consequence, stated precisely (narrowed 2026-08-21 after review): what `/blog/`
+loses is the CUSTOM 25/50/75/90 milestone set. If GA4 enhanced measurement is
+enabled on the property, its BUILT-IN `scroll` event (fires once at 90%) is
+unaffected by this template gate and may still be available - **verify in the
+property before assuming either way; it was not verified here.** So the honest
+statement is "missing intermediate milestones", not "no scroll data": discarding
+a usable 90% signal because a doc said GA4 sees nothing would be its own error.
+
+Clarity is unaffected regardless - it measures client-side without site
+instrumentation - and remains the richer index-scroll source. What still holds:
+never answer an index-engagement question from the CUSTOM milestones; they have
+no data there, which reads identically to zero engagement.
+
+## A 3-day window is not a baseline - recompute before quoting
+
+Clarity caps a query at 3 days, which quietly invites quoting one window as
+if it were the period. On 2026-08-21 the figure driving the whole blog-first
+strategy - "25.2% scroll / 26.3s vs a 32.9-40.3% site average" - turned out
+to be ONE window of five, and the lowest. The five windows over
+2026-08-06 -> 08-20 ran 29.89 / 51.13 / 75.11 / 50.91 / 25.56%: a **2.9x
+swing**. Session-weighted across all 743 sessions: **44.31% scroll /
+34.97s** - at or above the average it was said to trail.
+
+Two rules fall out. **Session-weight across every window** rather than
+averaging the windows or picking one. And **check whether a window straddles
+a deploy** - the low window contained the 08-20 rebuild ship (17:35 and
+20:16), so the honest pre-ship baseline is the clean 08-06 -> 08-17 stretch
+(451 sessions, 56.4% / 40.1s). Same family as the GA4-vs-GSC reconciliation
+above: a flattering or alarming number survives by being quoted rather than
+recomputed.
+
+**A near-miss worth keeping, because it is this same rule failing one step
+deeper.** The first write-up of this claimed Clarity's per-page numbers
+"contradict its own aggregate for an identical window and page-set" - 0-2% on
+top posts vs a 25.56% aggregate, "~3x". Review (Codex, 2026-08-21) killed it:
+the ~9% figure was session-weighted over the TOP TEN pages only, and the
+25.56% aggregate covers EVERY `/blog/` page. Two different populations. The
+omitted long tail can account for the whole gap, so no disagreement was
+demonstrated and per-post analysis was never ruled out - it just needs the
+full page set retrieved.
+
+The rule this section states is "state the denominator", and the violation
+was writing a denominator-mismatch INTO the section warning against it.
+Comparing a top-N subset against an all-rows aggregate is the most available
+way to do it, because the API returns the subset by default and the aggregate
+on request. Before concluding two figures disagree, confirm they cover the
+same rows.
 
 ## There is no conversion tracking
 

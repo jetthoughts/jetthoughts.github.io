@@ -10,7 +10,7 @@ generated:
 verified:
   - by: claude/opus-5
     at: 2026-08-20T00:00:00Z
-timestamp: 2026-08-20T00:00:00Z
+timestamp: 2026-08-21T01:20:00Z
 ---
 
 # Overview
@@ -37,6 +37,17 @@ Tag pages render from a SEPARATE template — `themes/beaver/layouts/list.html`
 (kind `term`) — which drifted from the index for months (hashtag tags,
 `target="_blank"` cards, no reading time) because both carried their own copy
 of the row markup. Three partials are now the single source for both:
+
+**The drift has a second, quieter form: template CONDITIONS.** Those tag pages
+have `.Section == "tags"`, not `"blog"`, despite their `/blog/tags/` URL — see
+[hugo-site](/architecture/hugo-site.md). So a `eq .Section "blog"` guard added
+anywhere (analytics, meta tags, CSS class hooks) silently covers the index and
+skips the term pages. Unifying the markup did not unify the predicates; check
+both kinds in rendered output whenever you add one.
+
+Still outstanding on this template: `list.html:51` and `:70` carry inline
+`style="margin: 0!important;padding: 0!important"` on both taxonomy H1
+variants, which no stylesheet rule can override.
 
 | Partial | Renders |
 |---|---|

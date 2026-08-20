@@ -4,6 +4,9 @@ title: JetThoughts Hugo Site
 description: Hugo static site generator setup for the JetThoughts marketing site and blog (JTWay).
 resource: config/_default/hugo.toml
 tags: [hugo, build, config]
+timestamp: 2026-08-21T01:20:00Z
+verified:
+  - { by: claude/opus-5, at: 2026-08-21T01:20:00Z }
 generated:
   by: process:okf-migrate
   at: 2026-07-12T00:00:00Z
@@ -21,6 +24,19 @@ Key config choices (`config/_default/hugo.toml`):
 - `baseURL = "https://jetthoughts.com/"`, `theme = "beaver"`.
 - Permalinks: pages at `/:slug/`, blog posts at `/blog/:slug/`, tag
   taxonomy at `/blog/tags/:slug/`.
+
+  **A permalink rewrite does NOT change `.Section` or `.Kind`** (2026-08-21,
+  caught in review before it shipped). The taxonomy is declared
+  `tag = "tags"` and only `[permalinks.term]` rewrites the URL, so a page
+  served at `/blog/tags/rails/` still has `.Section == "tags"` and
+  `.Kind == "term"`. Any template condition of the form
+  `eq .Section "blog"` therefore MISSES every tag page while looking like it
+  covers them - the URL says blog, the page object does not. A proposed
+  analytics gate was written this way and would have shipped instrumentation
+  that silently skipped the pages it named. Gate on `.Kind`
+  (`term`/`taxonomy`) or on the section the taxonomy actually belongs to, and
+  verify BOTH page kinds in the rendered output rather than reasoning from
+  the URL.
 - `[build] writeStats = true` — Hugo writes `hugo_stats.json`, which
   PostCSS/PurgeCSS reads to know which CSS classes are actually used
   on the page (see [css-pipeline](/architecture/css-pipeline.md)).

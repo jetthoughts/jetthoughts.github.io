@@ -7,8 +7,9 @@ generated:
   by: process:okf-migrate
   at: 2026-07-24T00:00:00Z
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T00:50:00Z }
   - { by: claude/opus-5, at: 2026-08-21T00:10:00Z }
-timestamp: 2026-08-21T00:10:00Z
+timestamp: 2026-08-21T00:50:00Z
 ---
 
 # The loop
@@ -104,6 +105,22 @@ verdict format, and the two or three specific things to attack.
 - Fixer geometry claims (SVG sizes, clipping fixed) must be re-verified by
   your own re-render - one wave shipped a wording truncation nobody saw.
 - Parallel sessions contend on .git/index.lock - wait-loop before git ops.
+- **Non-colliding agents can still collide with an UNMERGED BRANCH**
+  (2026-08-21). Fan-out safety is normally reasoned about between agents -
+  give each its own file and they cannot fight. That is necessary and not
+  sufficient. On 2026-08-21 three doc-writing agents were safe against each
+  other AND against PR #518, but CSS agents would not have been: #518 was
+  rewriting the very bundles a blog-rebuild lane would have edited, so every
+  line they wrote would have been rebased over a 194-file recolour. Before
+  fanning out, check what is IN FLIGHT, not just what the agents own.
+- **Brief agents with the branch state, not just the task** (2026-08-21).
+  Agents dispatched into a worktree inherit whatever is checked out. Two
+  correctly reported that a concept "does not exist in this worktree" because
+  it lived on an unmerged branch - right observation, and only harmless
+  because they flagged it instead of inventing around it. Tell an agent which
+  branch it is on and what is missing there, or it will reason confidently
+  from a partial tree. Do NOT switch branches under a running agent: it
+  silently changes the files it is mid-read of, and nothing errors.
 - **Brief critics to return MEASUREMENTS, not verdicts** (2026-08-20). Two
   consecutive reviewers on one small test each found a claim that passed
   self-review twice, and in both cases the decisive artifact was a COUNT:
