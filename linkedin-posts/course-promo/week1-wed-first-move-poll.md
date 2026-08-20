@@ -9,13 +9,14 @@ module: 1
 pillar: demand-before-build
 hypothesis: H3, H4
 icp_test: Which first move do idea-stage founders actually default to, and do build-first voters self-identify in comments?
-cta: "I'll share my guess, and what usually happens after each answer, once the votes are in."
+cta: "Vote below - once the votes are in I'll post what usually happens after each answer."
 design: poll
 design_file: none
 course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_wed_first_move_poll
 status: approved
+revised: idea-first 2026-08-20
 stage: next
 proposed_for: "2026-09-23 17:00 CEST"
 first_comment: |
@@ -38,13 +39,26 @@ notes: |
   with me" judged a top human line of the campaign - protect verbatim.
   REVISED 2026-08-13 to idea-first: flipped the question-led opener to a flat claim, moved the
   question into para 2. Paras 2-3 kept near-verbatim (protected lines intact).
+  REVISED 2026-08-20 (C1.1 idea-first sweep): the opener was still a stacked-clause abstraction
+  ("usually decides how much it costs you to find out whether it works") - tightened to one flat
+  claim with a concrete stake ("what it costs you to find out you were wrong"). Added "Vote below"
+  per the README poll structure; cta: field re-synced to the new close. Para 2 kept verbatim
+  (honest-answer framing) - deliberately no hint at which option is "right", the 2026-07-12 ICP-critic
+  finding still holds.
+  Cold-eyes round 2026-08-20 (AI-feel + ICP-reader critics, convergent): the first tightening still
+  read as a subject-less pull-quote carrying two ideas ("decides what it costs you to find out you
+  were wrong") - the ICP reader re-read it, which on a phone means a scroll. Cut to one idea
+  ("sets what it costs you to be wrong") and dropped the "So:" beat-marker opening para 2.
+  OPEN FLAG for Paul, not fixed here: the ICP reader could not place a napkin drawing in option 1
+  ("Started building or sketching it"). Poll options were settled by the 2026-07-12 3-critic round,
+  so left alone - but if the vote split looks noisy, that option is the suspect.
 ---
 
-The first move you make on a new business idea usually decides how much it costs you to find out whether it works.
+Your first move on a new idea sets what it costs you to be wrong.
 
 What did you actually do first? Not what a book says you should do. The thing you honestly did, or would do tomorrow if the idea felt real enough.
 
-I've got a guess about which one wins, but I want to see if it holds outside my own bubble. I'll share it, and what usually follows each answer, once the votes are in.
+I have a guess about which one wins, and I want to see if it holds outside my own bubble. Vote below - once the votes are in I'll post what usually happens after each answer.
 
 ---
 
