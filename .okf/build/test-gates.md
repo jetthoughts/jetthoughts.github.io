@@ -5,7 +5,9 @@ description: bin/qtest --changed is the routine gate; bin/rake test:critical at 
 tags: [testing, visual-regression, gates]
 status: stable
 generated: { by: claude/opus-4-8, at: 2026-08-12T20:20:00Z }
-verified: { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
+verified:
+  - { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
+  - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
 ---
 
 # The suites
@@ -72,6 +74,21 @@ extend it when adding components or critical files. The macOS full suite remains
   set and is now GREEN after self-hosting the fonts. Trust CI for these 7; never
   re-record them from local emulated Docker (would break green CI). Identical
   diff_levels across runs = deterministic (a flaky render varies).
+- **Rule VIOLATED, then re-confirmed 2026-08-20.** Commit 5a2a36d8 (CfT
+  141->152) re-recorded 91 of 135 Linux baselines from local `bin/dtest` -
+  exactly what the bullet above forbids - and CI went red on the same 7
+  fixtures at the same magnitudes, precisely as that bullet predicts.
+  Re-recording through CI instead
+  (`gh workflow run test.yml --ref <branch> -f screenshots=true -f update-baselines=true`)
+  reproduced master's pre-existing Chrome-141 baselines byte-for-byte for 7
+  of 8 codeblock fixtures - so Chrome 152 renders identically to 141 here and
+  the re-record was never needed at all. Full suite green after the CI
+  record: 356 runs, 6329 assertions, 0 failures (run 32347402944). Note the
+  governing tolerance for these is **0.03**, set per-call at
+  `test/system/blog_special_content_test.rb:136` - NOT the 0.02
+  `DEFAULT_SCREENSHOT_CONFIG` in `test/application_system_test_case.rb:87`,
+  which only applies when a call omits an explicit tolerance.
+
 - **Content-only diffs skip the visual suites entirely** (Paul 2026-07-31).
   A change touching ONLY markdown prose/frontmatter - no `themes/`, no
   `layouts/`, no `*.css`, no inline HTML/SVG in a body - is gated by

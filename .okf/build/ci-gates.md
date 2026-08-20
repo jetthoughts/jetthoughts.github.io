@@ -10,6 +10,8 @@ generated:
 verified:
   - by: claude/opus-5
     at: 2026-08-07T00:00:00Z
+  - by: claude/sonnet-5
+    at: 2026-08-20T00:00:00Z
 ---
 
 # What CI enforces on a PR
@@ -77,7 +79,12 @@ pins (it calls the composite with `build: 'false'`), also by convention.
 Gotchas: the Ruby pin must be an EXACT patch version - rbenv reads
 `.ruby-version` and never matches a fuzzy "4.0"; agent containers block
 `api.github.com` through the proxy, so `mise install` cannot fetch
-hugo/bun there (node works - nodejs.org is allowed).
+hugo/bun there (node works - nodejs.org is allowed). `bin/dc build` fails on
+ARM Macs (`bin/dc` pins DOCKER_DEFAULT_PLATFORM=arm64 vs the amd64 test
+services) - rebuild the test image with
+`docker build -t jetthoughts.com-test:1.0.0 --platform linux/amd64 -f .dev/Dockerfile .`
+after any Gemfile.lock/bun.lockb change (the image bakes gems into an
+anonymous /opt/bundle volume).
 
 # link-check.yml path filter
 
@@ -98,6 +105,12 @@ A CI screenshot job (`quick_test` + `bin/qtest`) was built and removed in PR #38
 Two gotchas the first record run hit (both fixed; evidence: [run 30629929407](https://github.com/jetthoughts/jetthoughts.github.io/actions/runs/30629929407) - 104 screenshots compared clean, 4 test failures, commit step never ran). Keep in mind for any new CI test job:
 - **Draft fixtures**: screenshot tests visit the draft post `/blog/codeblock-styles-fixture/`; local builds pass `--buildDrafts` but `bin/hugo-build` only does so when `BUILD_DRAFTS` is set - test.yml sets `BUILD_DRAFTS: '1'` on its setup-hugo step. A CI test build without it 404s the fixture and fails the codeblock tests on every run.
 - **fail_if_new in CI**: snap_diff hard-errors on missing baselines when `ENV["CI"]` is set. Record mode (`FORCE_SCREENSHOT_UPDATE=true`) disables `fail_on_difference` AND `fail_if_new` (setup_snap_diff.rb) so pages added since the last recording can get their FIRST baseline.
+
+Two more, hit re-recording Linux baselines from CI on 2026-08-20 (see [test-gates.md](test-gates.md) for why CI, not local `bin/dtest`, is the only honest place to record them):
+- **"no checks reported" has TWO causes - check `mergeable_state` FIRST**: (a) the bot's baseline commit carries `[ci skip]`, so a record dispatch leaves the PR with no new run; (b) far more silent, an UNMERGEABLE PR produces ZERO checks at all - `pull_request` runs are built against a merge ref GitHub cannot compute, so it creates nothing rather than erroring. On 2026-08-20 (b) was the real blocker and (a) was wrongly blamed for 25 minutes; `gh api repos/OWNER/REPO/pulls/N --jq .mergeable_state` returned `dirty`. A baseline record takes ~20 min while master keeps moving, and the record commit plus any `.okf/log.md` edit conflicts easily - merge master and the checks appear. Never read missing checks as "still running" or "passing."
+- **Record mode has no accept/reject gate**: `FORCE_SCREENSHOT_UPDATE=true` overwrites every baseline blind, with no diff review before the commit. Screen the result by per-file byte-size delta and visually inspect only the outliers - sub-pixel noise lands under ~1.2%, real content changes stand out (2026-08-20: mermaid_post +21%/+24%, nav/use_cases -10%).
+
+**Stale Linux baselines drift silently on master** while the PR screenshot gate stays `continue-on-error` (report-only, see below) - two live examples found 2026-08-20: PR #470 updated only the `macos/` mermaid baselines and left `linux/` stale; and `linux/desktop/nav/use_cases.png` was still encoding copy banned by `.okf/content/claims-canon.md` ("Rated 4.8/5 by 32 clients", "2011") that was corrected on the live site on 2026-08-14 - the LIVE SITE was correct, only the frozen PNG carried the stale wording, which is why the banned-string ratchet (a text grep) never caught it. A frozen baseline PNG is not covered by any text validator.
 
 # R3-2 correctness + cost fixes (2026-07-31)
 

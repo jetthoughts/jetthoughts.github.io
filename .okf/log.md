@@ -18,6 +18,57 @@
 * Updated: `workflows/company-layer-ownership.md` (re-settled),
   `workflows/outbound-sprint.md` (ledger pointer), CLAUDE.md/AGENTS.md banners,
   flow-router, BASE_HANDBOOK, docs/README, docs/business/*.
+## 2026-08-19 (CfT bump) - Chrome for Testing 141→152 + linux baselines re-recorded
+
+* **Chrome for Testing bumped** `.dev/cft-version` 141.0.7390.37 →
+  152.0.7977.54 (latest stable). Linux baselines re-recorded for the new
+  rendering stack (91/135 changed, rest byte-identical).
+* **Zero visual drift across 11 Chrome majors**: the critical suite passed
+  0-drift against the OLD 141 baselines before re-recording - `.dev/fonts.conf`
+  (hintslight + grayscale AA + no embedded bitmaps) keeps text rendering stable
+  across Chrome versions. This is the pre-verify signal that a CfT bump is
+  visually safe to re-record.
+* **Gotcha — Chrome 152 OOMs the 2g `t` service**: "tab crashed" (renderer
+  process killed) on 3 heavy pages (mermaid, codeblock-language-styles, blog
+  pagination) during the full critical suite at `mem_limit: 2g`; each passed in
+  isolation. Chrome 152 is hungrier than 141 under amd64 emulation. Fix: raise
+  the `t` service `mem_limit` 2g→4g (`.dev/compose.yml`). CI is unaffected -
+  it runs on the GitHub runner's memory, not compose.
+* **Rebuild the test image after the CfT change** (`.dev/Dockerfile` downloads
+  the pinned CfT + matching chromedriver at build time), then re-record via
+  `FORCE_SCREENSHOT_UPDATE=true` against `bin/rake test:system` in the
+  container - NOT `bin/dtest` alone, which only re-records the critical subset.
+* **Corrected 2026-08-20**: the local re-record described above drifted from
+  CI - `.dev/compose.yml` runs amd64 Chrome under QEMU on Apple Silicon - and
+  turned 7 codeblock fixtures red in CI. The "0-drift vs the OLD 141
+  baselines" reading was right: Chrome 152 needed no re-record at all.
+  Record linux baselines via the `update-baselines` workflow dispatch, never
+  locally. See the 2026-08-20 entry at the end of this log.
+
+## 2026-08-19 (dependency upgrade) - full dep bump: JS/Ruby/Hugo/Bun/Actions
+
+* **Toolchain pins bumped** hugo 0.164.0→0.165.0, bun 1.3.13→1.3.14 across the
+  three synced copies (`.mise.toml`, `.github/actions/setup-hugo/action.yml`,
+  `.dev/compose.yml` image tag). ruby 4.0.6 and node "latest" were already current.
+* **JS** `bun update --latest`: postcss-import 16→17 (major), cssnano 8.0.6,
+  postcss 8.5.26, postcss-nested 8.0.1, surge 0.43.1, caniuse-lite 1.0.30001809.
+* **Ruby** `bundle update`: selenium-webdriver 4.47, simplecov 1.1.1, rack 3.2.7,
+  rubyzip 3.5.0, zeitwerk 2.8.3, pdf-reader 2.16.0, plus async/json/io-event.
+* **GitHub Actions**: setup-node@v4→v7, cache@v5→v6 (setup-hugo composite),
+  taiki-e/install-action@v2.85.4→v2.86.3. checkout/configure-pages/upload-pages/
+  deploy-pages/setup-bun/setup-ruby already at their latest majors.
+* **Gotcha — `bin/dc build` fails on ARM Macs**: `bin/dc` hard-codes
+  `DOCKER_DEFAULT_PLATFORM=linux/arm64/v8` while the `.dev/compose.yml` test
+  services pin `platform: linux/amd64`, so compose rejects the build
+  ("build.platforms does not support value set by DOCKER_DEFAULT_PLATFORM").
+  Rebuild the test image directly instead:
+  `docker build -t jetthoughts.com-test:1.0.0 --platform linux/amd64 -f .dev/Dockerfile .`
+  This is required after ANY Gemfile.lock/bun.lockb change — the image bakes
+  gems at `/opt/bundle` in an anonymous volume, so a stale image silently runs
+  old gems against the new lockfile.
+* **Zero visual drift**: postcss-import@17 + hugo 0.165 produced no macOS or
+  linux baseline shifts — all gates green (critical 53 shots, dtest 34, unit
+  278, integration 11, smoke 17).
 
 ## 2026-08-17 (bet status) - Vibe Code Rescue Parked, Nov 30 suspended
 
@@ -1736,3 +1787,32 @@ GA4 deliberately not pulled - §5 establishes ~85-90% bot traffic and
    information" was removed from the vendors post body and kept shipping inside the
    post's SVG for the rest of the session. Sweep artwork text whenever a body
    phrase is banned or changed.
+
+## 2026-08-20 - CfT 141->152 bump: local dtest re-record on ARM Mac planted false CI drift
+
+The rule already existed in this bundle - test-gates.md has carried "never
+re-record them from local emulated Docker (would break green CI)" since
+2026-08-01, with the exact 7 fixtures and their diff levels - and it was
+violated anyway. The knowledge was not the gap; the enforcement was. Record
+Linux screenshot baselines in CI, never locally via `bin/dtest` on an ARM
+Mac. `.dev/compose.yml` runs the test services as `platform:
+linux/amd64` - on Apple Silicon that's QEMU-emulated Chrome, not native, and
+the file's own comment already warns this drifts pixels from CI. Commit
+5a2a36d8 bumped Chrome for Testing 141->152 and re-recorded 91/135 Linux
+baselines locally; CI then failed `test_codeblock_language_styles` on 7 of 8
+sections (tolerance 0.03, breached by a near-uniform whole-page sub-pixel
+delta, invisible but over threshold). Re-recording the SAME baselines
+through CI reproduced master's Chrome-141 baselines byte-for-byte - Chrome
+152 renders identically here, and the local emulated recording was the sole
+source of drift. Verified clean after the CI record: 356 runs, 6329
+assertions, 0 failures. Two operational gotchas: a PR can show "no checks
+reported" for two different reasons - a `[ci skip]` head commit, or (silently,
+and the actual blocker here) an UNMERGEABLE PR, since pull_request runs need a
+merge ref GitHub cannot compute; check `mergeable_state` before blaming
+skip-ci. And record mode has no accept/reject step, so screen
+the overwritten baselines by per-file byte-size delta and eyeball only the
+outliers. Separately confirmed: stale Linux baselines can carry banned
+copy (pre-2026-08-14 canon numbers) because the PR screenshot gate is
+`continue-on-error` during the soak and a text ratchet can't see a frozen
+PNG. Detail: `.okf/build/test-gates.md` (local dtest drift), `.okf/build/ci-gates.md`
+(CI record gotchas + stale-baseline drift).
