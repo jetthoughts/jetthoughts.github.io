@@ -9,8 +9,8 @@ verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
-  - { by: claude/opus-5, at: 2026-08-20T22:27:35Z }
-  - { by: claude/opus-5, at: 2026-08-20T22:27:35Z }
+  - { by: claude/opus-5, at: 2026-08-20T21:43:35Z }
+  - { by: claude/opus-5, at: 2026-08-20T21:47:30Z }
 timestamp: 2026-08-20T23:11:35Z
 ---
 
