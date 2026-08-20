@@ -2311,3 +2311,23 @@ lands in several merges, the marker has to name the LAST one that changes the
 thing being measured - and the tell that it's stale is the doc still
 describing its own scope in the old phase language ("the before for phases
 2.1+2.2" when the pivot had already made it the before for the whole blog).
+
+## 2026-08-20 - I parked GA4 work on Paul twice; the UI was always reachable
+
+PR #495 (another session) marked `contact_cta_click` a key event through the
+GA4 UI and recorded the path. That falsifies something I told Paul twice today
+and wrote into 2608 twice: that the key-event toggles were "console-only,
+yours". They are agent-doable - Admin -> Data display -> Events -> Create
+event -> "Create with code" needs no API and no already-received data. Both
+claims corrected in the plan and README.
+
+The generalisable failure is not about GA4. I inferred a capability limit from
+the tool I happened to reach for (the read-only Data API) and reported it as a
+property of the task. A parked item is a gate that never opens, so the cost is
+not a wrong sentence - it is work that silently stops. Same shape as the
+already-recorded rule about checking tool reach before routing to Paul; this
+extends it past tools to interfaces: exhaust the UI before declaring blocked.
+
+Still genuinely open and now correctly owned by 2608 Phase 0.1, not Paul:
+`page_view` is still marked a key event, so 4,063 page views read as
+conversions and bury any real one.
