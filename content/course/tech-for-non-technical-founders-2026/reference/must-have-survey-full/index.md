@@ -121,9 +121,7 @@ Under 40% means you have a product problem, not a marketing problem, and the Q2-
 ## Further reading
 
 - Lenny Rachitsky, [The original growth hacker, Sean Ellis, on the 40% test](https://www.lennysnewsletter.com/p/the-original-growth-hacker-sean-ellis) - the original 40% framing, with Sean's own commentary on what the number means and does not mean.
-- Sean Ellis and Morgan Brown, [*Hacking Growth*](https://hackinggrowth.org/) - the book that explains the survey-driven north-star approach Ellis built at Dropbox, LogMeIn, and Eventbrite.
 - Lenny Rachitsky, [How to win your first 10 B2B customers](https://www.lennysnewsletter.com/p/how-to-win-your-first-10-b2b-customers) - companion piece that maps the must-have-user concept to the first-ten-customer playbook.
-- Rahul Vohra, [How Superhuman built an engine to find product-market fit](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/) - the segment-isolation playbook layered on top of the 40% test.
 
 ---
 

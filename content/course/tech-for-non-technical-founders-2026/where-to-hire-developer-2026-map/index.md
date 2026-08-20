@@ -1,7 +1,7 @@
 ---
 title: "Where to Hire Developer 2026 Map"
 aliases: ["/blog/where-to-hire-developer-2026-map/"]
-description: "Side-by-side comparison of onshore / nearshore / Tier-2 offshore hiring options for 2026. Pricing, time-to-hire, when to use each."
+description: "Side-by-side comparison of onshore / nearshore / Ukraine offshore hiring options for 2026. Pricing, time-to-hire, when to use each."
 date: 2026-05-18
 draft: false
 course_chapter: true
@@ -10,7 +10,7 @@ slug: where-to-hire-developer-2026-map
 keywords:
   - where hire developer 2026 map
   - onshore nearshore offshore comparison
-  - tier 2 india engineering hub
+  - ukraine rails engineering hub
   - founder developer hiring template
   - AI augmented developer job description
 tags:
@@ -31,12 +31,12 @@ Template companion to the [Hire Track Supplementary Reference](/course/tech-for-
 > **Geography quick-pick** (cost x timezone fit):
 > - **Onshore** (US / UK): high cost, timezone-aligned, fast ramp
 > - **LATAM** (Mexico, Colombia, Argentina): mid cost, timezone-aligned
-> - **Tier-2 India** (Jaipur, Kochi, Indore, Coimbatore): low cost, async-only
+> - **Ukraine** (Kyiv, Lviv, Kharkiv) - **the default**: low cost, deep Rails bench, EU hours with US-East morning overlap
 > - **Upwork / freelance**: variable, task-based, no commitment
 
 ## Why this exists
 
-The Monday you decide to hire, the map matters more than the job post. Pay $185K base for a San Francisco Senior pitched as "AI-native" and you can still ship one feature every three weeks - a strong coder who has never opened Cursor for a real ship and reviews every contractor PR as if it were a junior's. Walk the same map instead and the arithmetic changes: a Coimbatore Rails engineer at $42 an hour clears a 3-day take-home, ships two features by the following sprint, and has a hallucinated Stripe webhook caught in PR review before it merges - a replacement that costs 22% of the original burn. That map was not on one founder's desk in February. It is on yours now.
+The Monday you decide to hire, the map matters more than the job post. Pay $185K base for a San Francisco Senior pitched as "AI-native" and you can still ship one feature every three weeks - a strong coder who has never opened Cursor for a real ship and reviews every contractor PR as if it were a junior's. Walk the same map instead and the arithmetic changes: a Lviv Rails engineer at $42 an hour clears a 3-day take-home, ships two features by the following sprint, and has a hallucinated Stripe webhook caught in PR review before it merges - a replacement that costs 22% of the original burn. That map was not on one founder's desk in February. It is on yours now.
 
 ## How to use this
 
@@ -46,7 +46,7 @@ If you find yourself comparing all four regions for an hour, you are negotiating
 
 Total time budget: 30 minutes alone, 30 minutes posting, 0 minutes second-guessing.
 
-![Where to hire in 2026: four region cards showing rate band, pick-when, and watch-out for Onshore US/EU, Nearshore LATAM, Tier-2 India, and Mass-market Upwork](hiring-region-map.svg)
+![Where to hire in 2026: four region cards showing rate band, pick-when, and watch-out for Onshore US/EU, Nearshore LATAM, Ukraine, and Mass-market Upwork](hiring-region-map.svg)
 
 ## The 4 regions
 
@@ -57,21 +57,20 @@ Walk the four rows in order. Circle the one your scope and budget land in, then 
 | Region | Rate band & time to hire | Pick when | Watch out for |
 |---|---|---|---|
 | **Onshore (US / EU)** | $130K - $210K+/yr, 30-60 days | Regulated industry (HIPAA, SOC 2 - the enterprise security audit - with US data residency, fintech license), security clearance, or board-mandated US team | Low offer-acceptance rates and the worst cost-to-output ratio on the map |
-| **Nearshore (LATAM)** | $45 - $100/hr ($90K - $200K annualized), 2-5 days | Real-time timezone overlap for pair programming, customer calls, or daily standups; US founder default in 2026 | Rates compressed in the top metros; English fluency varies by candidate - screen for it |
-| **Tier-2 India** | $15 - $70/hr ($30K - $140K annualized), 1-5 days | Backend-heavy work where async is acceptable (Jaipur, Kochi, Indore, Coimbatore - NOT Bangalore) | No 9am Pacific standups; async PR culture; build CLAUDE.md / coding-standards docs before the first PR |
+| **Nearshore (LATAM)** | $45 - $100/hr ($90K - $200K annualized), 2-5 days | Full-day real-time overlap for pair programming, customer calls, or daily standups | Rates compressed in the top metros; English fluency varies by candidate - screen for it |
+| **Ukraine** | $30 - $70/hr ($60K - $140K annualized), 1-5 days | **The 2026 default**: backend-heavy Rails work at the lowest band that still overlaps your morning (Kyiv, Lviv, Kharkiv) - the bench JetThoughts itself hires from | Kyiv afternoon = US-East morning, so plan live standups then; async PR culture the rest of the day; build CLAUDE.md / coding-standards docs before the first PR |
 | **Mass-market (Upwork)** | $35 - $120/hr project-based, 1-3 days | Single landing page, logo, or one-off scraper - anything you'd ship and never touch again | You become the technical interviewer; no platform vetting; NOT for backend, payments, or auth |
 
-## The 6 platforms ranked
+## The 5 platforms ranked
 
-Pick two: one primary based on your geography row above, one backup. Do not post on all six.
+Pick two: one primary based on your geography row above, one backup. Do not post on all five.
 
 | Platform | Best for | Pricing |
 |---|---|---|
-| [**Toptal Fractional Executives**](https://toptal.com/fractional/cto) | Senior fractional roles, screened top 3% (3-5 days to slate) | $90 - $200/hr |
+| [**Toptal**](https://www.toptal.com/developers/cto) | Senior fractional roles, screened top 3% (3-5 days to slate) | $90 - $200/hr |
 | [**Bolster**](https://www.bolster.com/on-demand-hiring) | Largest curated fractional executive marketplace (3-7 days to slate) | Marketplace, transparent |
 | [**LatHire**](https://lathire.com) | LATAM nearshore developers, full-time and contract (2-5 days to slate) | $45 - $100/hr |
-| [**AI People Agency**](https://aipeople.agency) | AI-native engineer screening, AI Integration Engineer roles (<48 hr to slate) | $90 - $250/hr |
-| [**Seedium**](https://seedium.io) | AI-first software agency, project work via SOW (1-2 weeks to slate) | Project-based estimate |
+| [**JetThoughts**](/services/outsourced-developer-staffing/) | The team behind this course - pre-vetted senior Rails engineers, AI-augmented with senior review, staffing or SOW project work (starts in ~2 weeks) | Staffing quote |
 | [**Upwork**](https://upwork.com) | Mass-market freelance for point tasks ONLY (1-3 days to slate) | $35 - $120/hr |
 
 ## The job description template - copy and paste
@@ -87,7 +86,7 @@ We are hiring a Senior Engineer to ship the [your product
 type, e.g. multi-tenant Rails SaaS for [your industry]]
 backend that our one-page brief calls for. The role is
 fractional or full-time, [your geography preference: LATAM
-nearshore / Tier-2 India / US onshore].
+nearshore / Ukraine / US onshore].
 
 WHAT WE NEED YOU TO DO
 
@@ -121,7 +120,7 @@ COMPENSATION
 
 [Pick the band that matches your geography row above.
 Examples:
-- Tier-2 India: $30 - $50 USD per hour, 30-40 hrs/wk.
+- Ukraine: $35 - $55 USD per hour, 30-40 hrs/wk.
 - LATAM nearshore: $60 - $90 USD per hour, 30-40 hrs/wk.
 - US onshore Senior: $130K - $180K base + equity.]
 
@@ -174,7 +173,7 @@ The good review reads the dependency manifest as carefully as the application co
 
 ## What to do tomorrow
 
-1. **Write your geography choice and your two platforms at the top of a fresh Notion doc.** One line: *"Region: [Tier-2 India / LATAM nearshore / US onshore]. Platforms: [PRIMARY] + [BACKUP]. Posted on [DATE]. First slate by [DEADLINE]."*
+1. **Write your geography choice and your two platforms at the top of a fresh Notion doc.** One line: *"Region: [Ukraine / LATAM nearshore / US onshore]. Platforms: [PRIMARY] + [BACKUP]. Posted on [DATE]. First slate by [DEADLINE]."*
 2. **Schedule 5 intro calls in the same week.** Not three. Not ten. Five gives you a comparison and a rolling shortlist. Each call is 30 minutes. Use the [7-question hiring interview script](/course/tech-for-non-technical-founders-2026/hiring-interview-script/).
 3. **Take the shortlist of 3-5 candidates to the [hiring interview](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#interviews-that-catch-ai-theater).** That section covers the deep-dive interview that catches AI theater. This map gets you to the shortlist; that post gets you to the hire.
 

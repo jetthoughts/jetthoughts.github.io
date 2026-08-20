@@ -80,8 +80,4 @@ For more on watching a team you can't technically evaluate, see [how to know wha
 
 ## Further reading
 
-- [Google Engineering Practices: How to do a code review](https://google.github.io/eng-practices/review/)
-- [Microsoft Research: Expectations, Outcomes, and Challenges of Modern Code Review](https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/)
-- [GitHub Docs: About protected branches and required reviews](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
 - [SmartBear: State of Code Review](https://smartbear.com/state-of-software-quality/code-review/)
-- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)

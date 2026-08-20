@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="rpd-title">
+  <title id="rpd-title">Process on one page, product on a screen. Two cards side by side: the retro - one page per cycle covering how the work went - and the Friday demo - fifteen minutes of clicking through the live product. Together they leave nothing to guess between invoices.</title>
+  <desc>Two hand-drawn cards joined by a plus sign, with arrows meeting at a green result pill reading: between invoices, nothing left to guess.</desc>
+  <style>
+    .h { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+    .title { font-size: 34px; font-weight: 700; fill: #1a1a1a; }
+    .cardhead { font-size: 26px; font-weight: 700; fill: #1a1a1a; }
+    .line { font-size: 21px; fill: #333; }
+    .mut { font-size: 21px; fill: #667085; }
+    .plus { font-size: 40px; font-weight: 700; fill: #1a1a1a; }
+    .result { font-size: 25px; font-weight: 700; fill: #15803d; }
+  </style>
+
+  <text class="h title" x="36" y="42">Retro + demo: the two halves</text>
+
+  <!-- retro card -->
+  <rect x="36" y="66" width="310" height="164" rx="8" fill="#faf7f2" stroke="#4a4a4a" stroke-width="2.5"/>
+  <text class="h cardhead" x="56" y="102">The retro</text>
+  <text class="h line" x="56" y="132">one page per cycle</text>
+  <text class="h line" x="56" y="158">how the work went:</text>
+  <text class="h mut" x="56" y="184">slowdowns + carry-overs</text>
+
+  <!-- plus -->
+  <text class="h plus" x="348" y="162">+</text>
+
+  <!-- demo card -->
+  <rect x="374" y="66" width="310" height="164" rx="8" fill="#fbe9ff" stroke="#4a4a4a" stroke-width="2.5"/>
+  <text class="h cardhead" x="394" y="102">The Friday demo</text>
+  <text class="h line" x="394" y="132">15 minutes per week</text>
+  <text class="h line" x="394" y="158">does the software run:</text>
+  <text class="h mut" x="394" y="184">click through it live</text>
+
+  <!-- converging arrows -->
+  <path d="M 190 232 C 200 258, 250 274, 300 278" fill="none" stroke="#4a4a4a" stroke-width="2.5"/>
+  <path d="M 530 232 C 520 258, 470 274, 420 278" fill="none" stroke="#4a4a4a" stroke-width="2.5"/>
+
+  <!-- result pill -->
+  <rect x="210" y="262" width="300" height="48" rx="24" fill="#f0f9f0" stroke="#22c55e" stroke-width="2.5"/>
+  <text class="h result" x="360" y="294" text-anchor="middle">nothing left to guess</text>
+</svg>

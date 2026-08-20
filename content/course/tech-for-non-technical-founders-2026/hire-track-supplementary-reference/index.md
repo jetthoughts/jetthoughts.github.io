@@ -66,9 +66,9 @@ The 2026 hire decision is not "remote vs in office." It is which of four regions
 
 **Onshore (US / EU) - $130K to $210K+ per year.** 30 to 60 day hire cycle. Pick this when the role demands it: regulated industry (HIPAA, SOC 2 - the security audit big customers require before they buy - with US-data-residency clauses, fintech with state licensing), security clearance, or a board mandate. Otherwise the cost-to-output ratio is the worst on the map.
 
-**Nearshore (LATAM) - $45 to $100 per hour.** Equivalent to $90K to $200K per year. 2 to 5 day hire cycle. Full timezone overlap with US Pacific through Eastern. English fluency at the level needed for daily standups and Slack. The talent pool is dense in Argentina, Brazil, Mexico, and Colombia. The 2026 default for most US founders who do not have a regulated industry mandate.
+**Nearshore (LATAM) - $45 to $100 per hour.** Equivalent to $90K to $200K per year. 2 to 5 day hire cycle. Full timezone overlap with US Pacific through Eastern. English fluency at the level needed for daily standups and Slack. The talent pool is dense in Argentina, Brazil, Mexico, and Colombia. Pick it when you need full-day real-time overlap, not just mornings.
 
-**Tier-2 offshore India - $15 to $70 per hour.** Equivalent to $30K to $140K per year. 1 to 5 day hire cycle. The structural shift is away from overheated Bangalore (rates compressed by global hyperscaler offices) toward Tier-2 cities: Jaipur, Kochi, Indore, Coimbatore. Senior engineers with seven to ten years of production ships in these cities accept rates 20% to 30% below Bangalore because the local cost-of-living is lower. The catch: async-first culture. You will not get standups at 9am Pacific. You will get pull requests merged overnight, code reviewed against your CLAUDE.md by morning, and a Slack thread with answers to your async questions before you finish coffee. Pick this for backend-heavy work where async is acceptable.
+**Offshore Ukraine - $30 to $70 per hour.** Equivalent to $60K to $140K per year. 1 to 5 day hire cycle. Ukraine has been a Rails outsourcing hub since the late 2000s - it is the bench JetThoughts itself hires from - so senior engineers with seven to ten years of production Rails ships are a screening call away rather than a lottery ticket. The timezone works for a US founder instead of against you: Kyiv afternoon is US-East morning, so standups at 9am Eastern are live, and the rest of the day runs async - pull requests merged overnight, code reviewed against your CLAUDE.md by morning, a Slack thread answered before you finish coffee. This is the 2026 default: backend-heavy Rails work at the lowest rate band that still overlaps your morning.
 
 **Mass-market (Upwork) - $35 to $120 per hour.** Self-vetting required: the marketplace does no quality screen, you become the technical interviewer. Acceptable for point tasks only - a single landing page, a logo, a one-off web scraper. Anything load-bearing (payments, auth, multi-tenant data, a third-party integration with retry logic) belongs on one of the three professional platforms above, not Upwork.
 
@@ -77,20 +77,19 @@ The 2026 hire decision is not "remote vs in office." It is which of four regions
 | If your build is... | Route to | Why |
 |---|---|---|
 | In a regulated industry (HIPAA / SOC 2 / fintech), or your budget sits in the onshore band above | Onshore (US / EU) | Compliance, data-residency, or a board mandate justifies the highest cost-to-output ratio on the map |
-| Backend-heavy, async is fine, and you want the lowest rate band above | Tier-2 India - Jaipur, Kochi, Indore, Coimbatore (not Bangalore) | Senior engineers accept 20-30% below Bangalore; PRs merge overnight against your CLAUDE.md |
+| Backend-heavy, async is fine, and you want the lowest rate band above | Ukraine - Kyiv, Lviv, Kharkiv | Deep Rails bench since the late 2000s; Kyiv afternoon = US-East morning, so standups are live and PRs still merge overnight against your CLAUDE.md |
 | Backend-heavy, async is fine, at the mid rate band above | Nearshore (LATAM) | Same async workflow, shorter hire cycle, closer timezone overlap |
 | Anything needing live timezone overlap for daily standups | Nearshore (LATAM) | Full US Pacific-to-Eastern overlap; English fluency for standups and Slack |
 | A single point task - logo, landing page, one-off scraper | Upwork | Self-vetting marketplace; non-load-bearing work only |
 
-### Six platforms ranked
+### Five platforms ranked
 
-The hiring market for AI-Augmented Developers in 2026 lives across six platforms. Pick two based on your geography decision above. Post the role on both, and do not waste a Friday on a tour of all six.
+The hiring market for AI-Augmented Developers in 2026 lives across five platforms. Pick two based on your geography decision above. Post the role on both, and do not waste a Friday on a tour of all five.
 
-- **[Toptal Fractional Executives](https://www.toptal.com/fractional/cto)** - Senior + screened, 3-5 day hire cycle, $90-$200/hr. Best for Senior fractional roles where the cost of a wrong hire would dwarf the platform markup.
+- **[Toptal](https://www.toptal.com/developers/cto)** - Senior + screened, 3-5 day hire cycle, $90-$200/hr. Best for Senior fractional roles where the cost of a wrong hire would dwarf the platform markup.
 - **[Bolster](https://www.bolster.com/on-demand-hiring)** - the largest curated fractional executive marketplace. Strong for fractional CTO and VP Engineering.
 - **[LatHire](https://www.lathire.com/)** - LATAM nearshore developers, full-time and contract. Pre-screens for English fluency and engineering depth.
-- **[AI People Agency](https://aipeople.agency/)** - AI-native engineer screening. Sub-48-hour candidate slates for AI Integration Engineer and AI Quality Engineer roles.
-- **[Seedium](https://seedium.io/)** - AI-first software agency. Project work via SOW, not headcount.
+- **[JetThoughts](/services/outsourced-developer-staffing/)** - the team behind this course. Pre-vetted senior Rails engineers who work AI-augmented with every line reviewed before merge, as ongoing staffing or project work via SOW.
 - **[Upwork](https://www.upwork.com/)** - mass-market freelance for point tasks only.
 
 **Job description that screens for the right signal:** Five lines: (1) 5-10 years engineering, (2) daily Cursor or Claude Code or Aider user, (3) shipped Rails / Django / Laravel apps to production, (4) reviewed AI-generated code in pull request, (5) can articulate where the model is wrong. Skip "5+ years of React and Node." Skip "Big Tech experience preferred." Both screens filter against the wrong signal in 2026.
@@ -99,7 +98,7 @@ The hiring market for AI-Augmented Developers in 2026 lives across six platforms
 
 ## What stack to ask your hired team to use
 
-You are not picking the stack alone - your Fractional CTO or hired engineer makes the technical call. But you need the vocabulary to (a) have an informed conversation, (b) recognize when a contractor proposes the hipster-of-the-month stack that nobody can hire for in 6 months, and (c) push back without escalating to a holy war. The frame below is what we recommend out of rescue calls going back to 2011.
+You are not picking the stack alone - your Fractional CTO or hired engineer makes the technical call. But you need the vocabulary to (a) have an informed conversation, (b) recognize when a contractor proposes the hipster-of-the-month stack that nobody can hire for in 6 months, and (c) push back without escalating to a holy war. The frame below is what we recommend out of rescue calls since 2008.
 
 ### Default: Rails (Ruby on Rails)
 
@@ -111,7 +110,12 @@ Rails is the JetThoughts default and the Indie Hackers / DHH / Pieter Levels com
 
 Basecamp ([DHH's *One-Person Framework* essay](https://world.hey.com/dhh/the-one-person-framework-711e6318)) is the case study - two decades of products on a Rails monolith run by a famously small team - and Shopify serves millions of merchants on one Rails monolith. At your scale (47-5,000 paying users) one Rails engineer can ship and operate the whole thing.
 
-**Why Rails wins for the non-technical founder's hired team:** the hire pool is deep (15+ years of Rails engineers), the framework opinions are tight (less time arguing about conventions, more time shipping), background jobs / email / file uploads / authentication / payment / admin / search are all batteries-included rather than 12 separate npm packages, and the Rails community produced the rescue patterns we see work in production (Pundit for authorization, Devise for auth, Sidekiq for jobs, ActiveAdmin for staff tools).
+**Why Rails wins for the non-technical founder's hired team:**
+
+- The hire pool is deep - 15+ years of Rails engineers.
+- The framework opinions are tight - less time arguing about conventions, more time shipping.
+- Background jobs / email / file uploads / authentication / payment / admin / search are all batteries-included rather than 12 separate npm packages.
+- The Rails community produced the rescue patterns we see work in production (Pundit for authorization, Devise for auth, Sidekiq for jobs, ActiveAdmin for staff tools).
 
 ### Acceptable alternatives, with caveats
 
@@ -145,7 +149,7 @@ The Indie Hackers community spent the last decade learning what one-person and t
 
 ## Interviews that catch AI theater
 
-Every engineer claims AI fluency on a 2026 resume. Most are typing prompts, accepting suggestions, and pushing the diff to PR. Veracode measured what that produces: 45% of LLM-generated code shipped at least one exploitable security flaw. The market split into two populations behind the same resume language. The 80% run AI theater - they accept the model's first suggestion, never disagree, and never check the dependency. The 20% direct the model - they read the diff, reject most of it, and catch the hallucinated package before it merges.
+Every engineer claims AI fluency on a 2026 resume. Most are typing prompts, accepting suggestions, and pushing the diff to PR. Veracode measured what that produces: 45% of LLM-generated code shipped at least one exploitable security flaw. The market split into two populations behind the same resume language. One group runs AI theater - they accept the model's first suggestion, never disagree, and never check the dependency. The other directs the model - they read the diff, reject most of it, and catch the hallucinated package before it merges.
 
 For the verbatim 7-question script + per-question Pass/Fail rubric + scoring sheet, see the [Hiring Interview Script](/course/tech-for-non-technical-founders-2026/hiring-interview-script/) template. Below is the brief on when and why to use it.
 

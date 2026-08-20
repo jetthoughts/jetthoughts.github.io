@@ -169,9 +169,7 @@ If fewer than 7 of 10 calls score >= 7, the problem is too weak for this ICP. Re
 - Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the past-behavior interview technique you'll run on every call this list books.
 - Y Combinator, [Talking to Users (Startup Library)](https://www.ycombinator.com/library) - the canonical YC essay on why this conversation has to happen.
 - Teresa Torres, [Customer Interviews (Product Talk)](https://www.producttalk.org/customer-interviews/) - why strangers say yes or no to an interview ask.
-- [Apollo](https://www.apollo.io/) - contact database for filtering by role + industry + company size when the hand-picked list runs thin.
 - [Clay](https://www.clay.com/) - list enrichment with email verification, useful once you're past 5 paying customers.
-- [User Interviews](https://www.userinterviews.com/) and [Respondent](https://respondent.io) - research panels for ICPs that cannot be reached cold.
 
 ---
 

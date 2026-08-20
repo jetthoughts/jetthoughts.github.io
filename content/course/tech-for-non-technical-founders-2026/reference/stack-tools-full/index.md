@@ -141,7 +141,6 @@ None of these is JetThoughts. None of them sells you a service. They are the fou
 ## Further reading
 
 - [Lesson 4.4: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) - the companion lesson: 4 build phases, exit criteria, shed-vs-skyscraper, and the architectural ceiling
-- Y Combinator, [Startup School Library + 2026 Founder Resources](https://www.ycombinator.com/library/) - the YC stance on validating without code and the changing role of the technical co-founder
 - Rob Walling, [Vibe Coding interview on Creator Science](https://podcast.creatorscience.com/rob-walling/) - the shed vs skyscraper analogy that frames the architectural ceiling. 35-minute listen.
 - DHH, [The One-Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318)
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/)

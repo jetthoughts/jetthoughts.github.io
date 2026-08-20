@@ -24,6 +24,14 @@ You can survive losing the relationship. What costs you the quarter is losing th
 
 The rest of this guide lays out how to switch development agencies in the order that actually protects those things, starting with a question that has nothing to do with the switch.
 
+```mermaid
+flowchart TD
+    W1["Week 1 - Inventory every system<br/>while everyone is still friendly"] --> W2["Week 2 - Cold-start deploy drill<br/>+ truck-factor check"]
+    W2 --> W3["Week 3 - Record what<br/>the code can't tell"]
+    W3 --> W4["Week 4 - Day-one pack<br/>for the new team"]
+    W4 --> T["Only now:<br/>the termination email"]
+```
+
 ## Before you replace one shop with another
 
 Run the build-path question again before you sign anything.
@@ -34,7 +42,20 @@ If the answer still comes back "hire a shop," keep reading. If it comes back "hi
 
 ## Week 1: take inventory while everyone is still friendly
 
-Do this while the current team still has every reason to help you, before anyone senses you are on the way out. Open a spreadsheet with one row per system: source repository, cloud hosting, database, domain registrar, DNS, email sending, payment processor, error tracking, analytics, and CI (the service that runs automated checks every time code changes). For each one, write down the account owner's email address, whether you can log in yourself today, and who pays the bill. It is common to turn up a service or two you did not know existed, and at least one signed up under a developer's personal address.
+Do this while the current team still has every reason to help you, before anyone senses you are on the way out. Open a spreadsheet with one row per system:
+
+- source repository
+- cloud hosting
+- database
+- domain registrar
+- DNS
+- email sending
+- payment processor
+- error tracking
+- analytics
+- CI (the service that runs automated checks every time code changes)
+
+For each one, write down the account owner's email address, whether you can log in yourself today, and who pays the bill. It is common to turn up a service or two you did not know existed, and at least one signed up under a developer's personal address.
 
 Then check the ownership layer, which is separate from access. GitHub's docs on [transferring a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository) explain what actually moves and what does not; AWS documents the [root user](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-root-user.html) that sits above every individual permission your agency may have granted you. Being an admin on someone else's organization is not ownership, and the difference only shows up on the day they stop answering.
 
@@ -82,17 +103,16 @@ Location changes the price and the overlap hours, not the failure modes. The cou
 
 Requirements that changed three times this quarter will hit a new team the same way, on a new invoice, which means the shop was never the whole problem. You may also not have tested this team properly yet: a shop that has never been given a weekly written report to deliver against has never been given a clear target. Where the current developers are competent but slow, an [interim technical lead](/blog/when-your-startup-needs-emergency-cto-leadership/) working alongside them usually costs less than a full transition and buys the same visibility.
 
+```mermaid
+flowchart LR
+    C1["Requirements changed<br/>3x this quarter"] --> R1["Fix scope first -<br/>a new shop gets<br/>the same whiplash"]
+    C2["Never given a weekly<br/>written target"] --> R2["Test this team first -<br/>one outcome,<br/>weekly report"]
+    C3["Competent<br/>but slow"] --> R3["Interim tech lead<br/>alongside them -<br/>cheaper than switching"]
+    C4["None of<br/>the above"] --> R4["Switch - run the<br/>30-day overlap"]
+```
+
 Switching also carries a real bill. Deloitte's [global outsourcing survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) found 70% of the executives it surveyed had brought at least some previously outsourced work back in-house over five years - selective moves, not wholesale reversals. Budget six to eight weeks of reduced output, overlap pay for two teams, and a new set of unknowns you will discover in month two.
 
 ## The one number to hold yourself to
 
 One line in the SOW protects you more than the rest of the document put together: the date your new team ships something a customer can actually use. A discovery document does not count, and neither does a refactoring milestone. You want a small change your users can see, inside the first three weeks. If a shop calls that unrealistic before it has read a line of your code, cross it off the list and take the next call.
-
-## Further reading
-
-- [DORA: documentation quality as a capability](https://dora.dev/capabilities/documentation-quality/)
-- [A novel approach for estimating truck factors (Avelino et al.)](https://arxiv.org/abs/1604.06766)
-- [Truck Factor measurement tool (UFMG ASERG)](https://github.com/aserg-ufmg/Truck-Factor)
-- [GitHub: transferring a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository)
-- [AWS: managing the root user on an account](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-root-user.html)
-- [Deloitte global outsourcing survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html)

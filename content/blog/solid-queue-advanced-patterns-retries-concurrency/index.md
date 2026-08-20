@@ -317,7 +317,7 @@ We learned this the hard way. A client migrated from Sidekiq to Solid Queue in A
 
 ## When Solid Queue isn't enough
 
-Solid Queue replaces Sidekiq for 80% of Rails apps. The 20% where it doesn't:
+Solid Queue replaces Sidekiq for most Rails apps. The cases where it doesn't:
 
 **You process more than 500,000 jobs/hour.** PostgreSQL's `SELECT ... FOR UPDATE SKIP LOCKED` works at scale, but at some point Redis's pub/sub delivers lower latency and higher throughput. The exact crossover depends on your database hardware, but we've seen performance degradation start around 500K jobs/hour on standard RDS instances.
 

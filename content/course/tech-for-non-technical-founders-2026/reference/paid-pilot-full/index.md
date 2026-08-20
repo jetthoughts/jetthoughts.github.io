@@ -158,7 +158,7 @@ The paid pilot is the default, but it has three honest exceptions.
 
 ## Advanced (optional sidebar)
 
-Once you have closed 2-3 paid pilots and want to layer on contract rigor, read the [Common Paper Design Partner Agreement template](https://commonpaper.com/standards/design-partner-agreement/) (a vetted v2 LOI widely used by YC companies), [SaaStr's "Should we charge for pilots"](https://www.saastr.com/we-are-a-b2b-saas-startup-and-want-to-develop-our-product-in-pilots-with-customers-should-we-charge-for-the-pilots-and-how-much/) (Jason Lemkin's thirty-second answer is yes, always), and Ash Rust's ["Startup Sales: How to Get Pilot Customers to Pay"](https://medium.com/sharp-spear/startup-sales-how-to-get-pilot-customers-to-pay-7a9b7a48eedf) for the conversation tactics. The one-page DPA in the lesson is enough through your first 10 pilots. The advanced versions matter once you start hearing the words "procurement" and "MSA" (master service agreement - a long formal contract) in pilot conversations.
+The one-page DPA in the lesson is enough through your first 10 pilots. The advanced versions - in the Further reading below - matter once you start hearing the words "procurement" and "MSA" (master service agreement - a long formal contract) in pilot conversations.
 
 ## Further reading
 

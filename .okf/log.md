@@ -1810,6 +1810,39 @@ GA4 deliberately not pulled - §5 establishes ~85-90% bot traffic and
    post's SVG for the rest of the session. Sweep artwork text whenever a body
    phrase is banned or changed.
 
+## 2026-08-20 — Aug-20 analytics read: contact CTA instrumented, dead-click calibration, title-pass veto held
+
+1. **`contact_cta_click` GA4 event shipped** (seo-review-2026-08-13 §6 #1, its
+   top open item). Delegated listener in
+   `themes/beaver/layouts/partials/page/analytics.html` inside the GA block —
+   catches every `a[href*="/contact-us"]` site-wide, no per-template wiring.
+   Pending 1-click GA4-admin step (Paul): mark it a key event.
+2. **Clarity "dead clicks" on plain paragraphs are reading behavior, not
+   defects.** `reference/paid-pilot-full/` was the site's #1 dead-click page
+   (17/7d); recordings show clicks on the opening prose paragraph, traffic part
+   internal Clarity-replay, part genuine ChatGPT referrals. Calibration: a
+   dead-click hotspot is only actionable when the clicked element LOOKS
+   interactive. Recorded in the 2605 tracker so nobody "fixes" it later.
+3. **Before any title/meta/CTR work, check seo-review-2026-08-13 §6 first.**
+   Item #5 records title rewrites as a falsified experiment (wave 1 lost
+   impressions). An approved plan step (course SERP CTR pass) was dropped
+   mid-execution on this evidence — premise-audit beat plan-momentum.
+4. Course arrival reality (28d): ~12 Google organic, ~7 ChatGPT/Perplexity,
+   ~4 LinkedIn. AI-assistant channel runs 94% engagement — AEO works; search
+   CTR does not. All 16 LinkedIn drafts already carry full UTM tags.
+
+## 2026-08-20 — Hand-SVG exhibits: the fallback-font width trap; blog visual pass begins
+
+1. **`<img>`-loaded hand SVGs render the cursive FALLBACK, not Caveat** - it
+   runs ~30% wider, so strings fitted to Caveat metrics clip. Rule added to
+   [house-visual-spec](design/house-visual-spec.md): fit for ~0.55em/char and
+   render-verify. Mermaid SVGs are immune (woff2 embedded by bin/render-mermaid).
+2. Wave G blog posts shipped text-only; Paul flagged reader-attention risk.
+   switch-dev-shops got mermaid timeline + decision cards (LR timelines fail
+   at 390px - use TD), retros got two non-mermaid hand exhibits per
+   /impeccable. Course pages: broken Toptal path fixed
+   (toptal.com/developers/cto is canonical), competitor listings (AI People
+   Agency, Seedium) replaced with JetThoughts entries.
 ## 2026-08-20 - CfT 141->152 bump: local dtest re-record on ARM Mac planted false CI drift
 
 The rule already existed in this bundle - test-gates.md has carried "never

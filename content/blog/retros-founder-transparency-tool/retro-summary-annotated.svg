@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-labelledby="rsa-title">
+  <title id="rsa-title">The one-page retro summary, annotated. A document card shows four blocks: what went well, what slowed us down, changes we're making with named owners, and carried over from last cycle. Margin notes say: read the carried-over block first; the same item on its third cycle is your loudest warning sign; and a task on your side means the retro was not sanitized.</title>
+  <desc>Hand-drawn document mock of a cycle retro summary with the carried-over block tinted red and three handwritten margin annotations pointing at the blocks that matter.</desc>
+  <defs>
+    <marker id="rsa-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="#cc342d" stroke-width="2"/>
+    </marker>
+    <marker id="rsa-arr-p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="#7c3aed" stroke-width="2"/>
+    </marker>
+  </defs>
+  <style>
+    .h { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+    .title { font-size: 34px; font-weight: 700; fill: #1a1a1a; }
+    .sub { font-size: 22px; fill: #667085; }
+    .dochead { font-size: 22px; font-weight: 700; fill: #1a1a1a; }
+    .blockhead { font-size: 21px; font-weight: 700; fill: #1a1a1a; }
+    .line { font-size: 20px; fill: #333; }
+    .ann-r { font-size: 23px; font-weight: 700; fill: #cc342d; }
+    .ann-r2 { font-size: 20px; fill: #cc342d; }
+    .ann-p { font-size: 20px; fill: #7c3aed; }
+  </style>
+
+  <text class="h title" x="36" y="42">The one-page retro summary</text>
+  <text class="h sub" x="36" y="70">ninety seconds to read - no code required</text>
+
+  <!-- document card -->
+  <rect x="36" y="88" width="410" height="446" rx="8" fill="#faf7f2" stroke="#4a4a4a" stroke-width="2.5"/>
+  <text class="h dochead" x="56" y="120">Cycle 34 retro - 2026-07-24</text>
+  <line x1="56" y1="132" x2="426" y2="132" stroke="#c9c2b8" stroke-width="2"/>
+
+  <!-- went well -->
+  <text class="h blockhead" x="56" y="162">What went well</text>
+  <text class="h line" x="68" y="187">- retry fix live, no rollbacks</text>
+  <text class="h line" x="68" y="211">- deploys: 22 min to 6 min</text>
+
+  <!-- slowed down -->
+  <text class="h blockhead" x="56" y="247">What slowed us down</text>
+  <text class="h line" x="68" y="272">- 4 days on API credentials</text>
+  <text class="h line" x="68" y="296">- 2 of 6 days: flaky tests</text>
+
+  <!-- changes -->
+  <text class="h blockhead" x="56" y="332">Changes we're making</text>
+  <text class="h line" x="68" y="357">1. quarantine tests - Dana</text>
+  <text class="h line" x="68" y="381">2. credential contact - YOU</text>
+
+  <!-- carried over -->
+  <rect x="50" y="402" width="382" height="112" rx="8" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <text class="h blockhead" x="66" y="436" fill="#cc342d">Carried over from last cycle</text>
+  <text class="h line" x="78" y="464">- flaky checkout tests.</text>
+  <text class="h line" x="78" y="492" font-weight="700">Third cycle in a row.</text>
+
+  <!-- annotations -->
+  <text class="h ann-p" x="478" y="342">a task on YOUR side =</text>
+  <text class="h ann-p" x="478" y="366">the retro isn't sanitized</text>
+  <path d="M 476 374 C 458 382, 448 382, 420 378" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#rsa-arr-p)"/>
+
+  <text class="h ann-r" x="474" y="428" transform="rotate(-2 474 428)">read this block FIRST</text>
+  <path d="M 472 436 C 456 448, 448 452, 438 452" fill="none" stroke="#cc342d" stroke-width="2.5" marker-end="url(#rsa-arr)"/>
+
+  <text class="h ann-r2" x="474" y="482">same item, third cycle -</text>
+  <text class="h ann-r2" x="474" y="506">your loudest warning sign</text>
+  <path d="M 472 494 C 456 496, 448 494, 438 490" fill="none" stroke="#cc342d" stroke-width="2.5" marker-end="url(#rsa-arr)"/>
+</svg>

@@ -33,5 +33,15 @@
     {{ end }}
     gtag('js', new Date());
     gtag('config', '{{ site.Params.googleAnalytics }}');
+    {{/* Conversion event (seo-review-2026-08-13 §6 #1): any click through to the
+         contact page. Mark contact_cta_click as a key event in GA4 admin. */}}
+    document.addEventListener('click', function (e) {
+      var el = e.target && e.target.closest ? e.target.closest('a[href*="/contact-us"]') : null;
+      if (!el) return;
+      gtag('event', 'contact_cta_click', {
+        link_url: el.getAttribute('href') || '',
+        transport_type: 'beacon'
+      });
+    }, { passive: true });
   </script>
 {{ end }}

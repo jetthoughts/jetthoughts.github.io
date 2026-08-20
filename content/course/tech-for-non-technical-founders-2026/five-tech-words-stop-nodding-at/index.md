@@ -40,7 +40,7 @@ Below is the cheat sheet for the five words that hide the most invoices: refacto
 
 ## Why these five words now
 
-The vibe-coding wave made jargon worse. Agencies now stack three vocabularies on top of each other - the old enterprise one (microservices, Docker, refactoring), the AI one (agents, prompts, RAG, MCP), and the no-code one (workflows, automations, integrations). Founders walk into status meetings and hear words from all three at once. The money is not lost on vocabulary - it is lost when a founder nods at a word the agency is using to mean something else. Veracode's 2025 study found 45% of LLM-generated code shipped at least one exploitable security flaw, and that kind of failure hides perfectly inside the word "refactoring" when nobody asks what was changed.
+The vibe-coding wave made jargon worse. Agencies now stack three vocabularies on top of each other - the old enterprise one (microservices, Docker, refactoring), the AI one (agents, prompts, RAG, MCP), and the no-code one (workflows, automations, integrations). Founders walk into status meetings and hear words from all three at once. The money is lost when a founder nods at a word the agency is using to mean something else. Veracode's 2025 study found 45% of LLM-generated code shipped at least one exploitable security flaw, and that kind of failure hides perfectly inside the word "refactoring" when nobody asks what was changed.
 
 ## The Five Words
 
@@ -50,7 +50,7 @@ Changing the structure of code without changing what it does for the user. Marti
 
 > **🔍 BS-detection question:** *"Show me the user-facing thing that worked yesterday and still works today, but is now built on the new code."* A real refactor leaves at least one feature exactly as the user saw it. "We are still wiring it back up" means somebody is rewriting on your dime and calling it a tidy-up.
 
-In Rails terms, a real refactor splits a 400-line `OrdersController` into three smaller controllers while the Stripe webhook still hits the same URL and the test suite stays green. JT caps each refactor commit at [three lines of production code](/blog/refactor-step-tdd-three-line-discipline-ruby/) for that reason. A SaaS founder was billed $9K in Q4 2025 for a "checkout refactor" that turned out to be one merge commit of 3,800 lines, no tests, and the Stripe webhook secret hard-coded into the controller. The checkout broke on stage at her board demo.
+In Rails terms, a real refactor splits a 400-line `OrdersController` into three smaller controllers while the Stripe webhook still hits the same URL and the test suite stays green. JT caps each refactor commit at [three lines of production code](/blog/refactor-step-tdd-three-line-discipline-ruby/) for that reason. A SaaS founder was billed $9K in Q4 2025 for a "checkout refactor" that turned out to be one merge commit of 3,800 lines, no tests, and the Stripe webhook secret hard-coded into the controller. The checkout broke on stage at her board demo. *Illustrative composite based on patterns from real founder builds, not a single client story.*
 
 ![Refactoring real versus fake: one messy 400-line OrdersController either splits into small Cart, Checkout, and Receipt controllers behind the same Stripe webhook with tests still green (real refactor), or gets rewritten into a 3,800-line v2 with the Stripe secret hard-coded that broke checkout at the board demo and cost a $9K invoice (fake refactor)](refactor-check.svg)
 
@@ -85,7 +85,7 @@ In Rails terms:
 >
 > **Unhealthy tech debt** sounds like "there is a lot of legacy in this codebase" - a feeling the team is asking you to fund.
 
-[LitsLink reports developers spend 42% of their time on technical debt and maintenance](https://litslink.com/blog/cost-of-outsourcing-software-development), and the founders we work with rarely see that line on an invoice. They see features taking twice as long as last quarter for no reason anyone can name. JT's [60-day playbook for slow engineering teams](/blog/fixing-slow-engineering-teams-an-extended/) starts by making that line visible.
+[LitsLink reports developers spend 42% of their time on technical debt and maintenance](https://litslink.com/blog/cost-of-outsourcing-software-development), and that line rarely shows up on the founder's invoice. What does show up is features taking twice as long as last quarter for no reason anyone can name. JT's [60-day playbook for slow engineering teams](/blog/fixing-slow-engineering-teams-an-extended/) starts by making that line visible.
 
 ### 🚀 4. MVP
 
@@ -163,13 +163,6 @@ The five words above are dev-shop jargon - vocabulary you'll hit in Modules 4-5 
 Print the five BS-detection questions and bring one to your next standup - whichever word your team uses most. The texture of the answer (specific or evasive) tells you what you need to know in under thirty seconds. Forward this post to your fractional CTO or a developer-friend and ask: "Are these the right five words for me to be skeptical of, given my project?" Their list might swap one - either way, the conversation is the win.
 
 If your team's vocabulary makes you nervous, the next layer of the diagnostic is the [eight red flags checklist](/blog/dev-shop-red-flags-checklist/) and the [vibe-coding signals review](/blog/vibe-coding-crisis-ai-code-debt/) - same diagnostic, sharper edges. Want the same five-question shape applied to your weekly status meeting? See the [SCIPAB six-question script](/blog/scipab-tell-better-business-stories-startup-management/).
-
-## Further reading
-
-- Martin Fowler, [Definition of Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) - the canonical source on what refactoring is and is not.
-- Ward Cunningham via Martin Fowler, [Technical Debt](https://martinfowler.com/bliki/TechnicalDebt.html) - the original 1992 metaphor.
-- Eric Ries via Lean Startup Co., [What Is an MVP?](https://leanstartup.co/resources/articles/what-is-an-mvp/) - the validated-learning framing.
-- Docker, [What Is a Container Image?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/) - the official docs definition.
 
 ---
 

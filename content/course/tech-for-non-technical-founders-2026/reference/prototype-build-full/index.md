@@ -201,7 +201,6 @@ After finishing Lesson 2.1-2.6, you have five artifacts. Each one feeds a specif
 - Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the problem-signal validation this prototype session builds on.
 - Steve Krug, [Don't Make Me Think](https://sensible.com/dont-make-me-think/) - the thinking-aloud usability test that the silent-observation session above is adapted from.
 - Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library) - how the prototype observation fits into the broader customer-discovery arc.
-- [Lovable](https://lovable.dev) - the AI builder used in this chapter's throwaway prompt-to-prototype workflow.
 
 ---
 
