@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" role="img" aria-labelledby="avd-title">
+  <title id="avd-title">The copyright follows the signature, not the invoice. Two paths side by side. Left, in red - no signed assignment: you pay every invoice, whoever typed it may still hold the copyright, and you cannot hand it over. Right, in purple - the contract says hereby assigns and it is signed: the code gets written, the copyright is yours at that same moment, and you can move it anywhere. Footer: this describes US copyright law, Circular 30, and is not legal advice.</title>
+  <desc>Hand-drawn two-column contrast: the default outcome when no assignment is signed, against the outcome when a present assignment clause is signed.</desc>
+  <defs>
+    <marker id="avd-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="#cc342d" stroke-width="2"/>
+    </marker>
+    <marker id="avd-p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="#7c3aed" stroke-width="2"/>
+    </marker>
+  </defs>
+  <style>
+    .h { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+    .title { font-size: 34px; font-weight: 700; fill: #1a1a1a; }
+    .sub { font-size: 22px; fill: #667085; }
+    .head { font-size: 23px; font-weight: 700; fill: #ffffff; }
+    .step { font-size: 21px; fill: #333333; }
+    .outr { font-size: 21px; font-weight: 700; fill: #cc342d; }
+    .outp { font-size: 21px; font-weight: 700; fill: #7c3aed; }
+    .basis { font-size: 20px; fill: #667085; }
+  </style>
+
+  <text class="h title" x="36" y="44">The copyright follows the signature</text>
+  <text class="h sub" x="36" y="74">an invoice does not transfer it</text>
+
+  <!-- left: no assignment -->
+  <rect x="36" y="96" width="316" height="304" rx="10" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <rect x="52" y="114" width="284" height="46" rx="10" fill="#cc342d"/>
+  <text class="h head" x="194" y="145" text-anchor="middle">no signed assignment</text>
+  <text class="h step" x="194" y="196" text-anchor="middle">you pay every invoice</text>
+  <path d="M 194 214 C 190 228, 198 242, 194 256" fill="none" stroke="#cc342d" stroke-width="2.5" marker-end="url(#avd-r)"/>
+  <text class="h step" x="194" y="278" text-anchor="middle">whoever typed it may</text>
+  <text class="h step" x="194" y="303" text-anchor="middle">still hold the copyright</text>
+  <rect x="52" y="322" width="284" height="56" rx="12" fill="#ffffff" stroke="#cc342d" stroke-width="2.5"/>
+  <text class="h outr" x="194" y="358" text-anchor="middle">you cannot hand it over</text>
+
+  <!-- right: present assignment -->
+  <rect x="368" y="96" width="316" height="304" rx="10" fill="#fbe9ff" stroke="#7c3aed" stroke-width="2.5"/>
+  <rect x="384" y="114" width="284" height="46" rx="10" fill="#7c3aed"/>
+  <text class="h head" x="526" y="145" text-anchor="middle">"hereby assigns", signed</text>
+  <text class="h step" x="526" y="196" text-anchor="middle">the code gets written</text>
+  <path d="M 526 214 C 522 228, 530 242, 526 256" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#avd-p)"/>
+  <text class="h step" x="526" y="278" text-anchor="middle">the copyright is yours</text>
+  <text class="h step" x="526" y="303" text-anchor="middle">at that same moment</text>
+  <rect x="384" y="322" width="284" height="56" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text class="h outp" x="526" y="358" text-anchor="middle">you can move it anywhere</text>
+
+  <text class="h basis" x="36" y="440">US copyright law - Circular 30. Not legal advice.</text>
+</svg>

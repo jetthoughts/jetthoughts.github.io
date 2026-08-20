@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
-  <title id="t">A compliment isn't demand: demand is what they already did about the problem. A friend's "I'd totally use it" costs nothing; a stranger already losing hours to the problem is real.</title>
-  <desc>Two cards. A red "Compliment" card holds a friend saying "I'd totally use it" - costs them nothing. A green "Demand" card holds a stranger saying "I lose 3 hrs a week to this" - already paying the cost. Basis: if they can't name a cost in hours or money, there's nothing to build yet.</desc>
+  <title id="t">Ask the people who don't like you. A friend says "I'd totally use it" and it is free for them to say. A stranger is already complaining about the problem in public, where you can go and read it.</title>
+  <desc>Two cards. A red "Someone who likes you" card holds a friend saying "I'd totally use it" - being nice to you is free. A green "A stranger with the problem" card holds someone already complaining about it in public. Basis: search the problem the way they would type it, plus reddit, and read the last week before you talk to anyone.</desc>
   <defs>
     <style>
       .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
       .title{ font-size: 30px; font-weight: 700; fill: #1a1a1a; }
       .sub  { font-size: 23px; fill: #666; font-style: italic; }
-      .head { font-size: 25px; font-weight: 700; }
+      .head { font-size: 24px; font-weight: 700; }
       .quote{ font-size: 22px; fill: #1a1a1a; }
       .note { font-size: 18px; font-style: italic; }
       .basis{ font-size: 20px; fill: #666; font-style: italic; }
@@ -17,24 +17,25 @@
     <filter id="gg" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#2e7d32" flood-opacity="0.45"/></filter>
   </defs>
 
-  <text x="360" y="44" text-anchor="middle" class="h title">A compliment isn't demand</text>
-  <text x="360" y="76" text-anchor="middle" class="h sub">Demand is what they already did about the problem.</text>
+  <text x="360" y="44" text-anchor="middle" class="h title">Ask the people who don't like you</text>
+  <text x="360" y="76" text-anchor="middle" class="h sub">Same question, two very different answers.</text>
 
-  <!-- Compliment card -->
+  <!-- Friend card -->
   <g transform="translate(0,0) rotate(-0.4 200 225)">
     <rect x="50" y="120" width="300" height="206" rx="16" class="red"/>
-    <text x="200" y="170" text-anchor="middle" class="h head" fill="#e5484d" filter="url(#gr)">Compliment</text>
+    <text x="200" y="168" text-anchor="middle" class="h head" fill="#e5484d" filter="url(#gr)">Someone who likes you</text>
     <text x="200" y="222" text-anchor="middle" class="h quote">"I'd totally use it"</text>
-    <text x="200" y="268" text-anchor="middle" class="h note" fill="#b91c1c">a friend - costs them nothing</text>
+    <text x="200" y="268" text-anchor="middle" class="h note" fill="#b91c1c">being nice to you is free</text>
   </g>
 
-  <!-- Demand card -->
+  <!-- Stranger card -->
   <g transform="translate(0,0) rotate(0.4 520 225)">
     <rect x="370" y="120" width="300" height="206" rx="16" class="green"/>
-    <text x="520" y="170" text-anchor="middle" class="h head" fill="#2e7d32" filter="url(#gg)">Demand</text>
-    <text x="520" y="222" text-anchor="middle" class="h quote">"I lose 3 hrs a week to this"</text>
-    <text x="520" y="268" text-anchor="middle" class="h note" fill="#2e7d32">a stranger - already paying</text>
+    <text x="520" y="168" text-anchor="middle" class="h head" fill="#2e7d32" filter="url(#gg)">A stranger with it</text>
+    <text x="520" y="222" text-anchor="middle" class="h quote">already complaining,</text>
+    <text x="520" y="250" text-anchor="middle" class="h quote">in public, today</text>
+    <text x="520" y="292" text-anchor="middle" class="h note" fill="#2e7d32">you can go and read it</text>
   </g>
 
-  <text x="360" y="452" text-anchor="middle" class="h basis">Can't name a cost in hours or money? Nothing to build yet.</text>
+  <text x="360" y="452" text-anchor="middle" class="h basis">Search it the way they'd type it + "reddit". Read the last week.</text>
 </svg>

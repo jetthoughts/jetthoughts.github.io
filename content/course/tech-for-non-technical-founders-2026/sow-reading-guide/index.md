@@ -135,7 +135,7 @@ The [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers what a clean te
 
 | <span style="color:#cc342d">**Bad wording**</span> | <span style="color:#2e7d32">**Good wording**</span> |
 |---|---|
-| "Vendor warrants that the Deliverables shall conform to the specifications for thirty (30) days following Delivery." | Anchor the warranty to **production launch**: "The warranty period begins on the date the Deliverables are first served to live, paying users in production, and runs for 90 days thereafter." Define "warranted bug" plainly: anything that blocks a user from completing a flow listed in Exhibit A. The opening-story founder lost three weeks of warranty coverage because three milestones were "delivered" to staging but never reached production. |
+| "Vendor warrants that the Deliverables shall conform to the specifications for thirty (30) days following Delivery." | Anchor the warranty to **production launch**: "The warranty period begins on the date the Deliverables are first served to live, paying users in production, and runs for 90 days thereafter." Define "warranted bug" plainly: anything that blocks a user from completing a flow listed in Exhibit A. In the scenario above, three weeks of warranty coverage are lost because three milestones were "delivered" to staging but never reached production. |
 
 **Flag:** Warranty starts at "Delivery" rather than "Launch to Production Users." Windows under 60 days. No definition of warranted bug versus "new feature request."
 
@@ -173,7 +173,7 @@ The [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers what a clean te
 
 - **Send the agency one email with all your fired-flag questions, in writing.** Numbered list, every question tied to a clause. If they want to discuss it on a call, fine - the answers come back in writing afterwards.
 
-- **Get a one-call review from a contract lawyer who has reviewed at least 3 dev-shop SOWs**, typically $300-$600 for 60 minutes plus a one-page redline. Generalist business attorneys catch the IP and liability paragraphs and miss the operational ones. Ask specifically: "Do clauses 2, 3, 5, 6, and 7 favor the vendor?" The founder in the opening story would have saved $78K for $400.
+- **Get a one-call review from a contract lawyer who has reviewed at least 3 dev-shop SOWs**, typically $300-$600 for 60 minutes plus a one-page redline. Generalist business attorneys catch the IP and liability paragraphs and miss the operational ones. Ask specifically: "Do clauses 2, 3, 5, 6, and 7 favor the vendor?" In the scenario above, $400 of review would have prevented the $78K.
 
 - **Save the redlined SOW + questions email + answers email together** in one folder, with the date in the filename. If a dispute lands in mediation eighteen months from now, this folder is the entire record.
 

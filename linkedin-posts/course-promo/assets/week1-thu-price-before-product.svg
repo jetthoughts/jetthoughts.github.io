@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="t">
   <title id="t">What proves demand: a real payment, not a pile of nice comments. A hundred "sounds great" comments cost nothing; one stranger paying is a stranger's real money.</title>
-  <desc>Two cards. A red "A hundred comments" card - "sounds great", costs them nothing. A green "One payment" card - $97, card out, a stranger's real money. Basis: put a price on a one-page site, show strangers; only a payment counts.</desc>
+  <desc>Two cards. A red "A hundred comments" card - "sounds great", which is free to say and means nothing. A green "One payment" card - $97, card out, a stranger's real money. Basis: put a price on a one-page site, show strangers; only a payment counts.</desc>
   <defs>
     <style>
       .h    { font-family: "Caveat","Patrick Hand","Comic Sans MS",cursive; }
@@ -25,7 +25,7 @@
     <rect x="50" y="120" width="300" height="204" rx="16" class="red"/>
     <text x="200" y="172" text-anchor="middle" class="h head" fill="#e5484d" filter="url(#gr)">A hundred comments</text>
     <text x="200" y="222" text-anchor="middle" class="h mid">"Sounds great!"</text>
-    <text x="200" y="268" text-anchor="middle" class="h note" fill="#b91c1c">costs them nothing</text>
+    <text x="200" y="268" text-anchor="middle" class="h note" fill="#b91c1c">free to say, means nothing</text>
   </g>
 
   <!-- payment card -->

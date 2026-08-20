@@ -16,6 +16,7 @@ course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_fri_why_i_wrote_it
 status: approved
+revised: idea-first 2026-08-20
 stage: next
 proposed_for: "2026-10-21 17:00 CEST"
 first_comment: |
@@ -43,12 +44,31 @@ notes: |
   core belief (find out if anyone will pay before you build) flat, instead of opening on a quoted
   question. Course link moved out of the body into first_comment per the course-lane no-body-link
   policy. "tell me where it loses you" close kept verbatim - a real ask, not a sales CTA.
+  REVISED 2026-08-20 (C1.1 idea-first sweep): two defects. (1) The opener led with "Most founders" -
+  a zero-tolerance banned generalization - and the 60-word stacked-clause sentence behind it. Replaced
+  with a flat first-person history line (history-led archetype, distinct from the wed poll's claim-led
+  and the mon quote-led openers). (2) Cross-post: the opener restated the demand-before-build thesis
+  that week1-thu-validate-before-build already owns as its whole argument. Cut - this post's job per
+  its icp_test is the give-away (free, ungated, feedback-as-payment), so the thesis restatement was
+  double-anchoring a sibling's signal. "The whole thing is free, no email gate" kept exactly (ICP-critic
+  protected words); no justification added after it - the 2026-07-12 panel trimmed that once already.
+  Cold-eyes round 2026-08-20 (AI-feel + ICP-reader critics, convergent on the same paragraph): the
+  module list was a 50-word stacked sentence of four "the <noun>" stems, and every one of those nouns
+  was jargon to the ICP reader ("interview scripts" read as job interviews; "one-page brief" as the
+  14-page brief his dev shop took). Glossed by mechanic per the pipeline's gloss-by-mechanic rule
+  (what to ask someone who has the problem / a one-page brief you hand to whoever builds it) and
+  varied the stems. Pulled "you own from day one" out of the list into its own sentence - the ICP
+  reader named it the single most relevant line in the batch (his old shop kept his accounts and code)
+  and it was buried mid-list as a spec item.
+  KNOWN trade-off, not a defect: the ICP reader wants a tappable link in the body ("you tell me to read
+  chapter one and give me nothing to tap"). The link policy is BLOCKING - course-lane links live in
+  first_comment because LinkedIn throttles body links. Cost accepted knowingly.
 ---
 
-Most founders want the same thing: to know what to read before they spend money on an idea. The honest answer is one line - find out if someone will pay before you build. For years I had no single link to send them, just scattered blog posts and the same advice repeated across a dozen calls.
+For years I had nothing to send a non-technical founder who asked what to read before spending money on an idea. Just scattered blog posts and the same advice repeated on a lot of calls.
 
-I spent the last two months writing it down. Five short modules, from a raw idea to your first paying customer, with the templates included: the demand test, the interview scripts, the one-page brief, a no-code build you own from day one, and how to ask for that first payment.
+I finally wrote it down in one place. Every chapter is a 10-minute read with one thing to do after it.
 
-The whole thing is free, no email gate.
+The part I'd point you to first: whoever builds your first version, the accounts and the code stay in your name from day one. I have watched too many founders find out in month six that the repo, the AWS account and the domain were all under someone else's login.
 
-This week's posts all came from Module 1. If you read the first chapter, tell me where it loses you. That's the feedback I actually need.
+The whole thing is free, no email gate, and nobody calls you afterwards. Read a chapter and tell me where it loses you.
