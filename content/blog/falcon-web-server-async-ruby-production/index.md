@@ -594,11 +594,11 @@ grep -rn "thread_variable_set\|thread_variable_get" app lib config
 # 2. Fiber-local storage - fine for request state, dead as a cache
 grep -rn "Thread\.current\[" app lib config
 
-# 3. Blocking syscalls
-grep -rnE "Open3|Process\.spawn|system\(|%x\(" app lib config
+# 3. C extensions that do their own I/O - read the Gemfile, not just your code
+grep -rn "require" Gemfile
 ```
 
-Start with hit 1. It is the one that costs you data.
+Start with hit 1. It is the one that costs you data, and run it across your gems too: the leak below comes from library code, which `app lib config` will never show you.
 
 Ruby [documents `Thread#[]` as fiber-local](https://docs.ruby-lang.org/en/master/Thread.html): "Each fiber has its own bucket for Thread#[] storage." The method that writes to thread-wide storage is `thread_variable_set`.
 
@@ -608,11 +608,11 @@ Hit 2 fails the other way. `Thread.current[:cache]` written as a process-lifetim
 
 Nothing raises an error. The memo rebuilds on every request, so the hit rate sits at zero and p95 drifts up.
 
-Hit 3 blocks the whole worker. Ruby's scheduler intercepts the IO layer through hooks like `io_read`, `io_wait`, `kernel_sleep` and `address_resolve`, but a C extension issuing a blocking syscall directly walks around all of them, and every fiber in that worker waits for it to return.
+Hit 3 is the one people get wrong in both directions. Shelling out is fine: Falcon's `Async::Scheduler` implements `process_wait`, so `Open3.capture2`, `system` and backticks all yield. Three concurrent one-second shell-outs finish in about a second, not three.
 
-`process_wait` is optional in the scheduler interface. Without it, the docs say, "Process::Status.wait will behave as a blocking method" - so check yours before assuming `Open3.capture2` yields.
+What actually stops the worker is a C extension issuing a blocking syscall directly. Ruby's scheduler intercepts the I/O layer through hooks like `io_read`, `io_wait`, `kernel_sleep` and `address_resolve`, and native code that bypasses them takes every fiber in the process down with it until it returns.
 
-The greps miss C extensions you didn't write. Read the Gemfile for anything that talks to a socket or the filesystem from C - image processing and PDF gems are the usual suspects, native database drivers less often.
+That is why hit 3 greps the Gemfile rather than your code. Image processing and PDF gems are the usual suspects; native database drivers less often. `process_wait` is optional in the scheduler interface generally - on a scheduler that omits it the docs say "Process::Status.wait will behave as a blocking method" - but Falcon's implements it.
 
 ### Swap the server
 
@@ -636,6 +636,11 @@ hostname = File.basename(__dir__)
 service hostname do
 	include Falcon::Environment::Rack
 
+	# Load the app before forking, the way Puma's preload_app! does -
+	# leave it out and your RSS-per-worker comparison measures the
+	# missing preload rather than the server.
+	preload "config/environment"
+
 	port {ENV.fetch("PORT", 3000).to_i}
 
 	endpoint do
@@ -647,11 +652,11 @@ service hostname do
 end
 ```
 
-The root placement is load-bearing twice over. `hostname` derives from the directory the file sits in, so a copy under `config/` names your service "config", and [`falcon host`](https://socketry.github.io/falcon/guides/deployment/) reads `falcon.rb` from the application directory and takes no path argument.
+The root placement is load-bearing: `hostname` derives from the directory the file sits in, so a copy under `config/` names your service "config". [`falcon host`](https://socketry.github.io/falcon/guides/deployment/) defaults to `falcon.rb` in the application directory, and accepts other paths if you pass them.
 
 Development runs on `bundle exec falcon serve --bind http://localhost:3000`. Production is `bundle exec falcon host`, which the guide calls "the recommended way to deploy Falcon in production" - `falcon serve` is "not designed for deployment".
 
-There is no `threads min, max` in Falcon and no directive that replaces it. `count` sets worker processes and defaults to `Etc.nprocessors`; Falcon's Heroku example lowers it to `count ENV.fetch("WEB_CONCURRENCY", 1).to_i` for a shared dyno, where this post's systemd example earlier uses 4.
+There is no `threads min, max` in Falcon and no directive that replaces it. `count` sets worker processes and defaults to `Etc.nprocessors`; Falcon's Heroku example lowers it to `count ENV.fetch("WEB_CONCURRENCY", 1).to_i` for a shared dyno. Read the env file before trusting the fallback in the config - the deployment earlier on this page looks like 4 and actually runs 8, because `.env.production` sets `WEB_CONCURRENCY`.
 
 ### Size the connection pool
 
@@ -665,7 +670,7 @@ A slow query is not the only way to exhaust it. We starved a pool by wrapping a 
 
 ### The isolation level you don't have to set
 
-Rails reads `config.active_support.isolation_level` to decide whether `CurrentAttributes` and connection leasing key off the thread or the fiber. Falcon ships a [Railtie](https://github.com/socketry/falcon/blob/v0.57.0/lib/falcon/railtie.rb) that sets it to `:fiber`, and the [guide](https://socketry.github.io/falcon/guides/rails-integration/) is explicit: "Falcon will automatically set the isolation level to fibers as Falcon provides the appropriate Railtie".
+Rails reads `config.active_support.isolation_level` to decide whether `CurrentAttributes` and connection leasing key off the thread or the fiber. Falcon ships a [Railtie](https://github.com/socketry/falcon/blob/v0.57.0/lib/falcon/railtie.rb) that sets it to `:fiber`, and the [guide](https://socketry.github.io/falcon/guides/rails-integration/) is explicit: "it will automatically set the isolation level to fibers as Falcon provides the appropriate Railtie".
 
 Setting it by hand is harmless, just redundant.
 
