@@ -49,6 +49,10 @@
          generate_lead as a key event in GA4 admin. */}}
     document.addEventListener('submit', function (e) {
       if (!(e.target && e.target.hasAttribute && e.target.hasAttribute('data-lead-form'))) return;
+      // One-shot per pageview: the form targets _blank, so it stays filled
+      // and a double-submit would double-count the lead.
+      if (e.target.hasAttribute('data-lead-sent')) return;
+      e.target.setAttribute('data-lead-sent', '1');
       gtag('event', 'generate_lead', {
         transport_type: 'beacon'
       });

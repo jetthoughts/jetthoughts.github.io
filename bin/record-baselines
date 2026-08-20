@@ -56,15 +56,23 @@ if [ -n "$dirty" ] && [ "$dry_run" = false ]; then
   exit 1
 fi
 
+rake_status=0
 if [ "$dry_run" = true ]; then
   echo "record-baselines: --dry-run — using the currently dirty files as the simulated record set"
 else
   echo "record-baselines: FORCE_SCREENSHOT_UPDATE=true bin/rake test:system"
-  FORCE_SCREENSHOT_UPDATE=true bin/rake test:system
+  # Don't let a red test skip the restore pass: record mode rewrites files
+  # as it runs, and an unrelated failure must still leave a reconciled tree.
+  FORCE_SCREENSHOT_UPDATE=true bin/rake test:system || rake_status=$?
 fi
 
+# -z: NUL-delimited, immune to git's C-quoting of paths with spaces.
+# --untracked-files=all: a record run that creates a whole new directory of
+# baselines must be enumerated file-by-file, not as one '?? dir/' entry.
+# NOTE: keep-globs use bash `case` matching, where `*` crosses `/` —
+# `macos/*` keeps EVERYTHING under macos/. Be as specific as you mean.
 kept=() restored=()
-while IFS= read -r line; do
+while IFS= read -r -d '' line; do
   [ -z "$line" ] && continue
   status="${line:0:2}"
   f="${line:3}"
@@ -79,15 +87,19 @@ while IFS= read -r line; do
     kept+=("$f")
   else
     restored+=("$f")
-    # A record run can CREATE baselines (new test) - untracked files can't
-    # be `git checkout --`ed (pathspec error would kill us under set -e).
+    # Created baselines can't be `git checkout --`ed (untracked).
     if [ "$status" = "??" ]; then
       rm -f "$f"
     else
       git checkout -- "$f"
     fi
   fi
-done < <(git status --porcelain "$SCREENSHOTS")
+done < <(git status --porcelain -z --untracked-files=all "$SCREENSHOTS")
 
 echo "record-baselines: kept ${#kept[@]}, restored ${#restored[@]}"
 git status --porcelain "$SCREENSHOTS"
+
+if [ "$rake_status" -ne 0 ]; then
+  echo "record-baselines: test run exited $rake_status (tree reconciled anyway)" >&2
+fi
+exit "$rake_status"
