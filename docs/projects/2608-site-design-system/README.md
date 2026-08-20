@@ -48,7 +48,8 @@ engagement** vs site avg 33–40% / 28–34s.
 | 0 (slim) | record-baselines wrapper, blog scroll/CTA events, coverage, baseline doc | events verified firing | **PR #489** (GA4 admin steps manual) |
 | 2.1 | `blog-list` restyle + tag pages | A + B + C | **shipped 2026-08-20** (PR pending) |
 | 2.2 | posts: article-end CTA, ink tags (measure/full-bleed/code-ink deferred to 1a) | A + B + C | **shipped 2026-08-20** (PR pending) |
-| — | **Engagement read written up** (28d, due 2026-09-17, protocol in [40.01](40-49-measurement/40.01-blog-engagement-baseline.md)) | written, with numbers | gates everything below |
+| 2.2b | **Whole-blog rebuild** (post template: full-bleed cover, ink code blocks, meta-above-title; mobile covers on lists) | A + C | **in progress** (Paul 2026-08-20: no measure gates) |
+| — | Whole-blog measure (28d after rebuild deploys, [40.01](40-49-measurement/40.01-blog-engagement-baseline.md) protocol) | informational | after rebuild |
 | 1a/1b | Site-wide chrome (recolour, then spatial) | A + B + C | after the read |
 | 2.4/2.5 | homepage, single-service | A + B + C, GSC gate on homepage | after the read |
 | 3 | Content: real numbers, sample report | A + cold-eyes review | parallel |
