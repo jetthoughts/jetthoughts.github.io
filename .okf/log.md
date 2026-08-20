@@ -2295,3 +2295,19 @@ mobileWidth/mobileSizes/loading params), `architecture/blog-list-page.md`
 (shared partials + the dev-kind, date-fallback and string-tags traps),
 `build/test-gates.md` (bin/record-baselines replaces the manual re-record).
 
+## 2026-08-20 - Blog rebuild fully merged; measurement clock re-pointed
+
+All three blog merges landed: `f80de8088` (index + tag pages), `f3f9353b6`
+(Phase 0 instrumentation + bin/record-baselines) and `e1fa5409d` (the post
+template rebuild). 40.01's ship marker still named the FIRST of those as the
+after-clock trigger, which would have started the 28-day window against a
+blog that was still two-thirds old - the exact error the whole-blog pivot was
+meant to avoid. Re-pointed at `e1fa5409d`, and the read date is now derived
+from the actual deploy rather than pinned to a guessed 2026-09-17, since a
+delayed deploy shifts the window rather than shortening it.
+
+Worth generalising: a "ship marker" written mid-sprint ages badly. When work
+lands in several merges, the marker has to name the LAST one that changes the
+thing being measured - and the tell that it's stale is the doc still
+describing its own scope in the old phase language ("the before for phases
+2.1+2.2" when the pivot had already made it the before for the whole blog).
