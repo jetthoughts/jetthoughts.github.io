@@ -2405,3 +2405,23 @@ page+query rows at all.** So the inherited plan action "course SERP CTR pass
 defect to fix, it is an audience mismatch - we rank for things our buyers never
 search, and there are no course impressions to convert. Fixing CTR here would
 buy more Laravel developers.
+
+## 2026-08-20 - bin/site-report; the "86% organic collapse" that never happened
+
+Added `bin/site-report` (channel mix / landing pages / course funnel, 28d vs
+prior 28d) so site performance is one command and the property's three traps are
+handled rather than re-discovered: engagement rate shown as the bot filter, no
+conversions column while `page_view` is a key event, and the course funnel kept
+in its own section because at 5 `course_start_course` events it vanishes inside
+any site-wide average.
+
+The finding that justifies the script: GA4 reported **Organic Search 4,190 ->
+600** across consecutive 28-day windows - an apparent **86% collapse**. GSC over
+the same 56 days was **flat at ~5 clicks/day** (~150 prior, ~140 current). The
+swing was bots reclassifying. Read cold, that number would have triggered an
+emergency SEO response to a problem that does not exist. GA4's organic session
+count ran 4x-28x above real Google clicks across those windows.
+
+Channel truth on this property, by engagement rate: Direct 46% and Unassigned 7%
+are crawlers; AI Assistant 79% and Organic Social 87% are people. The honest
+scale of the site is ~5 Google clicks/day plus ~34 AI-assistant sessions/28d.

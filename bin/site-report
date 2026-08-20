@@ -1,0 +1,146 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+#
+# "How is the site actually doing" in one command.
+#
+# Deliberately NOT a mirror of GA4's default reports. Three things on this
+# property make the stock reports actively misleading, and each is handled here:
+#
+#   1. GA4 sessions are heavily bot-inflated (see .okf/workflows/analytics-access.md).
+#      Engagement rate per channel is the honest cut - bots do not engage.
+#   2. `page_view` is marked a key event, so "key events" counts page views.
+#      This report refuses to print a conversions column until that is fixed.
+#   3. Search traffic is developer traffic, not ICP traffic. Landing pages are
+#      shown so the audience mismatch stays visible instead of averaging away.
+#
+# Usage:
+#   bin/site-report            # last 28 days vs the prior 28
+#   bin/site-report 7          # last 7 vs prior 7
+#
+# Auth: gcloud ADC, same as bin/campaign-metrics.
+# (The ~12 lines of query boilerplate are duplicated from that script on
+# purpose - two small scripts beat two scripts plus a shared lib.)
+
+require "json"
+require "net/http"
+require "uri"
+
+PROPERTY = "328508492"
+days = (ARGV[0] || "28").to_i
+
+token = `gcloud auth application-default print-access-token 2>/dev/null`.strip
+abort "No gcloud ADC token. Run: gcloud auth application-default login" if token.empty?
+
+def query(token, body)
+  uri = URI("https://analyticsdata.googleapis.com/v1beta/properties/#{PROPERTY}:runReport")
+  req = Net::HTTP::Post.new(uri, "Authorization" => "Bearer #{token}", "Content-Type" => "application/json")
+  req.body = JSON.dump(body)
+  res = Net::HTTP.start(uri.host, uri.port, use_ssl: true) { |http| http.request(req) }
+  abort "GA4 API #{res.code}: #{res.body}" unless res.code == "200"
+  JSON.parse(res.body)
+end
+
+def rows_of(report)
+  (report["rows"] || []).map { |r|
+    { dims: r["dimensionValues"].map { |v| v["value"] },
+      mets: r["metricValues"].map { |v| v["value"] } }
+  }
+end
+
+cur = [{ "startDate" => "#{days}daysAgo", "endDate" => "today" }]
+vs  = [{ "startDate" => "#{days}daysAgo", "endDate" => "today" },
+       { "startDate" => "#{days * 2}daysAgo", "endDate" => "#{days + 1}daysAgo" }]
+
+puts "GA4 #{PROPERTY} - site performance, last #{days} days (vs prior #{days})"
+puts
+
+# --- 1. Channel mix -----------------------------------------------------------
+# Engagement rate is the bot filter. A channel with many sessions and a low
+# engagement rate is crawlers; one with few sessions and a high rate is people.
+puts "== WHERE TRAFFIC COMES FROM (engagement rate is the bot filter)"
+puts
+ch = rows_of(query(token, {
+  "dateRanges" => vs,
+  "dimensions" => [{ "name" => "sessionDefaultChannelGroup" }],
+  "metrics" => [{ "name" => "sessions" }, { "name" => "engagedSessions" }],
+  "orderBys" => [{ "desc" => true, "metric" => { "metricName" => "sessions" } }],
+  "limit" => 20
+}))
+# Two date ranges come back as separate rows tagged by dateRange; fold them.
+now, prev = Hash.new(0), Hash.new(0)
+ch.each do |r|
+  bucket = r[:dims].last == "date_range_0" ? now : prev
+  bucket[r[:dims][0]] = { s: r[:mets][0].to_i, e: r[:mets][1].to_i }
+end
+fmt = "%-26s %8s %10s %8s %12s"
+puts format(fmt, "CHANNEL", "SESSIONS", "ENGAGED", "ENG%", "PRIOR SESS")
+puts "-" * 68
+now.sort_by { |_, v| -v[:s] }.each do |name, v|
+  rate = v[:s].zero? ? 0 : (100.0 * v[:e] / v[:s])
+  was = prev.dig(name, :s) || 0
+  puts format(fmt, name[0, 26], v[:s], v[:e], format("%.0f%%", rate), was)
+end
+puts
+puts "  CAUTION - do not read a swing in Direct or Organic Search as real traffic."
+puts "  Both are bot-dominated on this property. Verified 2026-08-20: GA4 showed"
+puts "  Organic Search 4,190 -> 600 across consecutive 28d windows, an apparent 86%"
+puts "  collapse, while GSC clicks were FLAT at ~5/day over the same 56 days (~150"
+puts "  then, ~140 now). The swing was bots reclassifying, nothing else. Real Google"
+puts "  traffic is the GSC click count - roughly 5/day - not the number above."
+puts "  Reconcile against GSC before reporting any change in these two rows."
+
+# --- 2. Landing pages ---------------------------------------------------------
+puts
+puts "== WHAT PEOPLE ACTUALLY LAND ON (engaged sessions, so bots drop out)"
+puts
+lp = rows_of(query(token, {
+  "dateRanges" => cur,
+  "dimensions" => [{ "name" => "landingPage" }],
+  "metrics" => [{ "name" => "engagedSessions" }, { "name" => "sessions" }],
+  "orderBys" => [{ "desc" => true, "metric" => { "metricName" => "engagedSessions" } }],
+  "limit" => 15
+}))
+puts format("%-62s %9s %9s", "LANDING PAGE", "ENGAGED", "SESSIONS")
+puts "-" * 82
+lp.each { |r| puts format("%-62s %9s %9s", r[:dims][0][0, 62], r[:mets][0], r[:mets][1]) }
+
+# --- 3. Course funnel ---------------------------------------------------------
+# The ICP asset. Kept as its own section because it is small enough to vanish
+# inside a site-wide average, which is exactly how "the funnel is dead" got
+# missed for weeks.
+puts
+puts "== COURSE FUNNEL (the ICP asset - small numbers are the point, not noise)"
+puts
+ev = rows_of(query(token, {
+  "dateRanges" => cur,
+  "dimensions" => [{ "name" => "eventName" }],
+  "metrics" => [{ "name" => "eventCount" }],
+  "dimensionFilter" => {
+    "filter" => { "fieldName" => "eventName",
+                  "stringFilter" => { "matchType" => "BEGINS_WITH", "value" => "course_" } }
+  },
+  "orderBys" => [{ "desc" => true, "metric" => { "metricName" => "eventCount" } }],
+  "limit" => 20
+}))
+if ev.empty?
+  puts "  No course_* events fired in this window."
+else
+  ev.each { |r| puts format("  %-40s %6s", r[:dims][0], r[:mets][0]) }
+end
+
+cta = rows_of(query(token, {
+  "dateRanges" => cur,
+  "dimensions" => [{ "name" => "eventName" }],
+  "metrics" => [{ "name" => "eventCount" }],
+  "dimensionFilter" => {
+    "filter" => { "fieldName" => "eventName",
+                  "stringFilter" => { "matchType" => "EXACT", "value" => "contact_cta_click" } }
+  }
+}))
+puts
+puts "  contact_cta_click: #{cta.empty? ? 0 : cta[0][:mets][0]}   (marked a key event 2026-08-20)"
+
+puts
+puts "NOTE: no conversions column here on purpose - `page_view` is still marked a"
+puts "key event, so GA4's own keyEvents/conversions figures count page views. Un-mark"
+puts "it (2608 Phase 0.1) before trusting any conversion number on this property."

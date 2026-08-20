@@ -208,6 +208,33 @@ Standing finding from its first run (28d to 2026-08-20): **`(ai-assistant)` is
 order of magnitude bigger an arrival channel than the campaign we are measuring,
 including 2 sessions that landed directly on `/contact-us`.
 
+### `bin/site-report` - "how is the site doing" without the traps
+
+```
+bin/site-report        # last 28 days vs the prior 28
+bin/site-report 7
+```
+
+Deliberately **not** a mirror of GA4's default reports, because three properties
+of this account make the stock views actively misleading. Each is handled:
+
+1. **Channel mix is shown with engagement rate**, which is the bot filter - bots
+   do not engage. Direct at 46% and Unassigned at 7% are crawlers; AI Assistant
+   at 79% and Organic Social at 87% are people.
+2. **No conversions column at all**, by design, while `page_view` is a key event.
+3. **Course funnel gets its own section**, because at 5 `course_start_course`
+   events it vanishes inside any site-wide average - which is exactly how "the
+   funnel is dead" went unnoticed for weeks.
+
+**The caution it prints is the most valuable line in it.** On 2026-08-20 GA4
+showed **Organic Search 4,190 -> 600** across consecutive 28-day windows: an
+apparent **86% collapse** that would panic anyone reading it cold. GSC over the
+same 56 days was **flat at ~5 clicks/day** (~150 prior, ~140 current). The swing
+was bots reclassifying and nothing else. Real Google traffic on this site is the
+GSC click count - about 5/day - not GA4's organic session count, which ran
+4x-28x inflated across those two windows. **Never report a change in the Direct
+or Organic Search rows without reconciling against GSC first.**
+
 ### Marking a key event is an agent-doable UI task, not an Admin-API task
 
 Recorded because the opposite was asserted twice in one session. The read-only
