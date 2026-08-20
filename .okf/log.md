@@ -1980,3 +1980,32 @@ self-critics inherited the implementer's assumption that the body WAS the post.
    `getComputedTextLength()` on the .svg URL** rather than budget by character
    count. Lesson generalises past SVG: a plausible constant published as
    guidance gets applied by everyone downstream, so measure before writing one.
+
+## 2026-08-20 — Query before estimating; two smaller gaps found the same way
+
+1. **Do not estimate what an available tool can measure.** A 3-lens panel sized
+   the LinkedIn first-comment click rate at "3-6 clicks over 8 posts, a genuine
+   stretch", and a kill-criterion override shipped on that estimate as ">= 2
+   campaign-UTM sessions". One GA query hours later showed the single published
+   campaign post had ALREADY produced exactly 2 sessions - roughly 5x the
+   estimated rate - so the override would have fired at threshold off one post
+   and made the campaign unkillable, the precise bug it existed to prevent.
+   Worse, both sessions were 1 page / 0s duration: clicks, not arrivals.
+   Override corrected to ">= 3 sessions that are engaged AND view >1 page".
+   The generalised rule: a plausible constant, once published as guidance, gets
+   applied downstream without re-derivation. Measure first. Paul's one-line
+   correction that day - "you have access to GA" - is the whole lesson.
+   Division of labour that follows: GA4 property 328508492 gives per-post UTM
+   arrivals, engagement, pages/session and funnel events, so an agent fills
+   those. Only LinkedIn-native counts (impressions, reactions, comments,
+   reposts, DMs, viewer job titles) need Paul.
+2. **The visual suite does not cover the testimonial carousel.** Removing four
+   of five testimonials from the homepage, /clients, /about-us and /use-cases
+   moved ZERO screenshots across 53 comparisons. Either the section sits below
+   the captured fold or only the first slide renders. A content change on four
+   live pages passing a green visual suite is a coverage gap, not a pass -
+   queue it with the other rendered-output gaps in 20.10.
+3. **A fresh agent worktree has no `node_modules`.** `bin/dev` dies on a missing
+   postcss binary until `bun install` runs. Put that line in the brief of any
+   agent spawned with `isolation: worktree` that needs a dev server, or it burns
+   its first tool calls rediscovering it.
