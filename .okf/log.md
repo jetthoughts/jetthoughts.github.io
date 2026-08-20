@@ -69,6 +69,28 @@
 * **Zero visual drift**: postcss-import@17 + hugo 0.165 produced no macOS or
   linux baseline shifts — all gates green (critical 53 shots, dtest 34, unit
   278, integration 11, smoke 17).
+## 2026-08-20 (P4 proof wiring + fabrication purge) - claims hide where text ratchets can't see
+
+* **Fabricated claims hid in two surfaces the banned-strings ratchet never
+  scans**: (1) *unrendered frontmatter* - emergency-cto-leadership carried 76
+  lines of fake credentials (CISSP, Harvard/Stanford training, invented
+  conferences, two fictional case studies) referenced by zero templates; (2)
+  *JSON-LD schema partials* - fake awards ("Forbes '30 CTOs to Watch' 2023"),
+  invented success-rate/team-size properties, and a fabricated street address
+  ("1234 Technology Blvd" + geo coords) served to Google as structured facts.
+  Both purged (PR #475). Lesson: a claims sweep must read frontmatter and
+  `partials/seo/*` too, not just rendered prose.
+* **`markdownify` strips the outer `<p>` for single-paragraph values** - the
+  services overview needed `<p>{{ .value | markdownify }}</p>` to keep the
+  `.fl-rich-text p` CSS working. Caught by the pre-commit reviewer, verified
+  by scratch build.
+* **Tenure now computed in the template** (`services/single.html`) from
+  `site.Params.foundingYear` for the "Years of Industry Experience" stat - six
+  pages had rotted to a hardcoded 17. The canon rule ("derive, never
+  hardcode") now has template enforcement on that stat.
+* Queued for a later canon sweep: `content/pages/clients/index.md:3` "540+
+  projects delivered" (mutated claim - 540+ is the articles count); the stat
+  template's "+" suffix rendering "95+" for percentage stats.
 
 ## 2026-08-17 (bet status) - Vibe Code Rescue Parked, Nov 30 suspended
 

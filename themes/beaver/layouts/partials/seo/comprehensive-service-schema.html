@@ -100,23 +100,9 @@
   )
 -}}
 
-{{/* Build conditional property values based on service type */}}
-{{- $projectDuration := "3-6 months" -}}
-{{- $successRate := "92%" -}}
-{{- $responseTime := "24 hours" -}}
-{{- $teamSize := "2-4 consultants" -}}
-
-{{- if in .Title "CTO" -}}
-  {{- $projectDuration = "6-12 months" -}}
-  {{- $successRate = "95%" -}}
-{{- else if in .Title "Emergency" -}}
-  {{- $projectDuration = "2-8 weeks" -}}
-  {{- $successRate = "87%" -}}
-  {{- $responseTime = "48 hours" -}}
-  {{- $teamSize = "3-5 experts" -}}
-{{- else if in .Title "Development" -}}
-  {{- $teamSize = "5-10 developers" -}}
-{{- end -}}
+{{/* Response time is the published offer promise; other per-service metrics were
+     unsourced and removed per claims canon (no number without an in-repo source) */}}
+{{- $responseTime := cond (in .Title "Emergency") "48 hours" "24 hours" -}}
 
 {{- $serviceSchema = merge $serviceSchema (dict
   "additionalProperty" (slice
@@ -135,27 +121,9 @@
     )
     (dict
       "@type" "PropertyValue"
-      "name" "Average Project Duration"
-      "value" $projectDuration
-      "description" (printf "Typical engagement timeline for %s projects" (lower $serviceType))
-    )
-    (dict
-      "@type" "PropertyValue"
-      "name" "Success Rate"
-      "value" $successRate
-      "description" "Project success rate based on defined client objectives and deliverable completion"
-    )
-    (dict
-      "@type" "PropertyValue"
       "name" "Response Time"
       "value" $responseTime
       "description" "Initial consultation and project assessment response time"
-    )
-    (dict
-      "@type" "PropertyValue"
-      "name" "Team Size"
-      "value" $teamSize
-      "description" (printf "Typical team size assigned to %s projects" (lower $serviceType))
     )
   )
   "knowsAbout" (slice
@@ -169,11 +137,6 @@
     $serviceType
   )
   "slogan" "Technology leadership that scales with your growth"
-  "award" (slice
-    "Clutch Top Technology Consultant 2024"
-    "Inc. Magazine Technology Leadership Award"
-    "Featured in Forbes '30 CTOs to Watch' 2023"
-  )
 ) -}}
 
 {{/* Primary Service Schema using jsonify */}}
