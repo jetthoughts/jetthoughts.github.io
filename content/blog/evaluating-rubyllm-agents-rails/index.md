@@ -113,7 +113,9 @@ end
 
 Setting `config.default_model = "qwen3:0.6b"` and stopping there does not work. A bare model id goes through the gem's registry, `qwen3:0.6b` is not in it, and `Chat` raises `ModelNotFoundError`. Naming the provider makes the gem ask that provider instead, and because Ollama reports itself as local, the registry lookup is skipped rather than failed. Name a hosted provider and an unknown id still raises.
 
-The `temperature 0.0` above has to be a literal. `instructions`, `tools`, `schema`, `params`, and `headers` all accept a lazy block; `temperature` and `model` take a plain value ([`agent.rb`](https://github.com/crmne/ruby_llm/blob/1.16.0/lib/ruby_llm/agent.rb) at 1.16). The two fail differently, and the difference matters. A block handed to `temperature` is ignored and the literal stands. A block handed to `model` leaves `model_id` as `nil`, so the method assigns an empty hash to `@chat_kwargs` and wipes the model and provider the class inherited - the agent then runs on whatever `config.default_model` is, which in production is not the local model you thought you had pinned.
+The `temperature 0.0` above has to be a literal. `instructions`, `tools`, `schema`, `params`, and `headers` all accept a lazy block; `temperature` and `model` take a plain value ([`agent.rb`](https://github.com/crmne/ruby_llm/blob/1.16.0/lib/ruby_llm/agent.rb) at 1.16). A block handed to `temperature` is ignored and the literal stands.
+
+`model` is the one that bites. It assigns `@chat_kwargs` unconditionally, so a bare block form - which passes no `model_id` and no options - assigns an empty hash and wipes the model and provider the class inherited. The agent then runs on whatever `config.default_model` is, which in production is not the local model you thought you had pinned.
 
 Even pinned, a 0.6b model wanders, so be clear about what the local loop proves. It exercises the plumbing: schema parsing, log writes, loop termination. Ranking quality gets judged by replaying the golden set against the production model. The local loop catches those three in CI, without a hosted call anywhere.
 
