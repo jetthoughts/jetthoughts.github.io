@@ -155,7 +155,7 @@
 }
 
 .blog .link:hover .post-title,
-.blog .link:focus-visible .post-title { color: #0066d6; }
+.blog .link:focus-visible .post-title { color: var(--link); }
 
 .blog code {
   background: #f4f4f5;
@@ -196,7 +196,7 @@
 .blog li a,
 .blog td a,
 .single-post-content a {
-  color: #0066d6;
+  color: var(--link);
   text-decoration: none;
   font-weight: 400;
 }
@@ -469,17 +469,17 @@
 
 /* Links: WCAG AA contrast (#0066d6 = 4.78:1 on white) + visible underline */
 .blog p a, .blog li a, .blog td a {
-  color: #0066d6;
+  color: var(--link);
   text-decoration: underline;
-  text-decoration-color: rgba(0,102,214,0.7);
+  text-decoration-color: var(--link-underline);
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
 .blog p a:hover, .blog li a:hover, .blog td a:hover {
-  text-decoration-color: rgba(0,102,214,1);
+  text-decoration-color: var(--color-ruby);
 }
 .blog p a:visited, .blog li a:visited, .blog td a:visited {
-  color: #0a4f9a;
+  color: var(--link-visited);
 }
 
 /* Brand-colored blockquotes — true callout treatment (background + padding + radius) */

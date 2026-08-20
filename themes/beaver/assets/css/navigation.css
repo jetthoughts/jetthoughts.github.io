@@ -564,6 +564,6 @@ a.action-button:hover {
    :not() chain raises specificity above the per-bundle `a { color: var(--color-ruby) }`
    rules so this wins regardless of cascade order. */
 a:not(.btn):not(.btn-primary):not(.fl-button):not([class^="cta"]):not(.menu-opener):not(.menu-close):not(.navigation .link):not(.footer-component a) {
-  color: #0066d6;
-  text-decoration-color: rgba(0, 102, 214, 0.7);
+  color: var(--link);
+  text-decoration-color: var(--link-underline);
 }
