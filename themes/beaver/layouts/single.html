@@ -55,11 +55,20 @@
           <h1 class="post-title">{{ .Title }}</h1>
 
           {{/* Dek: the description doubles as the article lead - EXCEPT when
-               it's a dev.to import's auto-truncated copy of the opening
-               paragraph (tell: trailing "..."), which would print the first
-               sentence twice back to back. */}}
+               it just repeats the opening paragraph, which dev.to imports do
+               (529 of 607 posts). Two tells, because the trailing-"..." one
+               alone missed a post whose description matched the opening
+               verbatim (Codex P2, 2026-08-20): the "..." suffix, and the
+               opening of the body matching the opening of the description
+               after curly-apostrophe normalisation. */}}
           {{ with .Params.description }}
-            {{ if not (strings.HasSuffix (trim . " ") "...") }}
+            {{ $desc := trim . " " }}
+            {{ $norm := replace $desc "’" "'" }}
+            {{ $head := substr $norm 0 60 }}
+            {{ $body := replace (trim $.Plain " ") "’" "'" }}
+            {{ if and
+                 (not (strings.HasSuffix $desc "..."))
+                 (not (and (gt (len $norm) 60) (strings.HasPrefix $body $head))) }}
               <p class="post-lead">{{ . }}</p>
             {{ end }}
           {{ end }}
@@ -87,7 +96,7 @@
                 class="post-cover"
                 src="{{ $src960 }}"
                 srcset="{{ $src640 }} 640w, {{ $src960 }} 960w, {{ $src1920 }} 1920w"
-                sizes="(max-width: 940px) 100vw, 900px"
+                sizes="(max-width: 900px) calc(100vw - 36px), 864px"
                 alt="{{ $.Params.cover_image_alt | default $.Title }}"
                 width="{{ .Width }}"
                 height="{{ .Height }}"
@@ -102,7 +111,7 @@
                 class="post-cover"
                 src="{{ $w960.Permalink }}"
                 srcset="{{ $w640.Permalink }} 640w, {{ $w960.Permalink }} 960w, {{ $w1920.Permalink }} 1920w"
-                sizes="(max-width: 940px) 100vw, 900px"
+                sizes="(max-width: 900px) calc(100vw - 36px), 864px"
                 alt="{{ $.Params.cover_image_alt | default $.Title }}"
                 width="{{ $w960.Width }}"
                 height="{{ $w960.Height }}"

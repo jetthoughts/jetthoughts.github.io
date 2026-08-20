@@ -14,11 +14,18 @@
 
 {{ if $image }}
 {{ $retinaW := mul $.width 2 }}
-{{/* Optional mobileWidth: CSS pixels the image renders at on <=860px
-     viewports. Historically hardcoded to 80 (160w retina) - which is why
-     mobile covers were hidden: a full-width cover from a 160w source is
-     blurry. Callers that show covers on mobile pass their real size. */}}
+{{/* Optional mobileWidth / mobileSizes: the <=860px rendering.
+     mobileWidth is the LARGEST css px the slot ever reaches there (drives
+     the srcset candidate at 2x); mobileSizes is what goes in the sizes
+     attribute and may be a vw expression, since a full-width cover is
+     ~320px on a phone and ~784px on a 860px tablet - one fixed px value
+     is wrong at both ends (Codex P1, 2026-08-20). Defaults reproduce the
+     historical 80px/160w thumbnail exactly for callers that pass neither.
+     Optional loading: the feature cover is the first mobile visual, so it
+     opts out of lazy. */}}
 {{ $mobileCss := $.mobileWidth | default 80 }}
+{{ $mobileSizes := $.mobileSizes | default (printf "%dpx" $mobileCss) }}
+{{ $loading := $.loading | default "lazy" }}
 
 {{ if site.Params.cdn.enabled }}
 {{ $mobileW := mul $mobileCss 2 }}
@@ -27,8 +34,8 @@
 {{ $jpgDesktop := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=jpg&q=80" $retinaW)) }}
 {{ $jpgMobile := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=jpg&q=80" $mobileW)) }}
 <picture>
-  <source type="image/webp" srcset="{{ $webpMobile }} {{ $mobileW }}w, {{ $webpDesktop }} {{ $retinaW }}w" sizes="(max-width: 860px) {{ $mobileCss }}px, {{ $.width }}px">
-  <img alt='{{ $page.Title }}' src="{{ $jpgDesktop }}" srcset="{{ $jpgMobile }} {{ $mobileW }}w, {{ $jpgDesktop }} {{ $retinaW }}w" sizes="(max-width: 860px) {{ $mobileCss }}px, {{ $.width }}px" width="{{ $.width }}" height="{{ $.height }}" loading="lazy" decoding="async">
+  <source type="image/webp" srcset="{{ $webpMobile }} {{ $mobileW }}w, {{ $webpDesktop }} {{ $retinaW }}w" sizes="(max-width: 860px) {{ $mobileSizes }}, {{ $.width }}px">
+  <img alt='{{ $page.Title }}' src="{{ $jpgDesktop }}" srcset="{{ $jpgMobile }} {{ $mobileW }}w, {{ $jpgDesktop }} {{ $retinaW }}w" sizes="(max-width: 860px) {{ $mobileSizes }}, {{ $.width }}px" width="{{ $.width }}" height="{{ $.height }}" loading="{{ $loading }}" decoding="async">
 </picture>
 {{ else }}
 {{/* Aspect-preserving resize at 2× retina (or the mobile retina width if
@@ -38,7 +45,7 @@
 {{ if gt (mul $mobileCss 2) $resizeW }}{{ $resizeW = mul $mobileCss 2 }}{{ end }}
 {{ $resized := $image.Resize (printf "%dx jpg q90" $resizeW) }}
 <picture>
-  <img alt='{{ $page.Title }}' src="{{ $resized.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}" loading="lazy" decoding="async">
+  <img alt='{{ $page.Title }}' src="{{ $resized.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}" loading="{{ $loading }}" decoding="async">
 </picture>
 {{ end }}
 
