@@ -40,22 +40,43 @@
 
   <div class="blog">
     <div class="single-post-row">
-      <article
-        class="single-content"
-        style="max-width: 720px; margin:0 auto; padding-left:18px;padding-right:18px">
+      {{/* .post-article scopes the Rescue Room post treatment to BLOG posts
+           only - course/single.html shares .blog + single-post.css, and its
+           chapters must not shift (C3 owns course visuals). Article is wide
+           (cover breathes to 900px); text blocks cap at the prose measure. */}}
+      <article class="single-content post-article">
         <header>
+          {{/* Date + reading time above the title (Rescue Room prototype):
+               the two facts a returning reader checks before committing. */}}
+          <div class="post-meta-top">
+            {{ if .Date }}{{ dateFormat "Jan 2, 2006" .Date }} · {{ .ReadingTime }} min read{{ end }}
+          </div>
+
           <h1 class="post-title">{{ .Title }}</h1>
+
+          {{/* Dek: the description doubles as the article lead - EXCEPT when
+               it just repeats the opening paragraph, which dev.to imports do
+               (529 of 607 posts). Two tells, because the trailing-"..." one
+               alone missed a post whose description matched the opening
+               verbatim (Codex P2, 2026-08-20): the "..." suffix, and the
+               opening of the body matching the opening of the description
+               after curly-apostrophe normalisation. */}}
+          {{ with .Params.description }}
+            {{ $desc := trim . " " }}
+            {{ $norm := replace $desc "’" "'" }}
+            {{ $head := substr $norm 0 60 }}
+            {{ $body := replace (trim $.Plain " ") "’" "'" }}
+            {{ if and
+                 (not (strings.HasSuffix $desc "..."))
+                 (not (and (gt (len $norm) 60) (strings.HasPrefix $body $head))) }}
+              <p class="post-lead">{{ . }}</p>
+            {{ end }}
+          {{ end }}
 
           {{/* Author byline + date - trust signal for non-technical readers */}}
           <div class="post-meta-byline">
             {{ with .Params.author }}
               By {{ if or (eq . "JetThoughts") (eq . "JetThoughts Team") }}JetThoughts Team{{ else }}{{ . }}{{ end }}
-            {{ end }}
-            {{ if .Date }}
-              {{ with .Params.author }} - {{ end }}{{ dateFormat "January 2, 2006" .Date }}
-            {{ end }}
-            {{ with .ReadingTime }}
-              - {{ . }} min read
             {{ end }}
           </div>
 
@@ -66,7 +87,7 @@
                keeps founders reading at 11pm. */}}
           {{ with .Resources.GetMatch "cover.*" }}
             <style>.post-cover-figure { display: block; }</style>
-            <figure class="post-cover-figure" style="margin: 0 0 1.25rem; max-width: 43rem;">
+            <figure class="post-cover-figure">
             {{ if site.Params.cdn.enabled }}
               {{ $src640  := partial "cdn/url" (dict "page" $ "resource" . "params" "w=640&output=webp&q=85") }}
               {{ $src960  := partial "cdn/url" (dict "page" $ "resource" . "params" "w=960&output=webp&q=85") }}
@@ -75,7 +96,7 @@
                 class="post-cover"
                 src="{{ $src960 }}"
                 srcset="{{ $src640 }} 640w, {{ $src960 }} 960w, {{ $src1920 }} 1920w"
-                sizes="(max-width: 688px) 100vw, 688px"
+                sizes="(max-width: 900px) calc(100vw - 36px), 864px"
                 alt="{{ $.Params.cover_image_alt | default $.Title }}"
                 width="{{ .Width }}"
                 height="{{ .Height }}"
@@ -90,7 +111,7 @@
                 class="post-cover"
                 src="{{ $w960.Permalink }}"
                 srcset="{{ $w640.Permalink }} 640w, {{ $w960.Permalink }} 960w, {{ $w1920.Permalink }} 1920w"
-                sizes="(max-width: 688px) 100vw, 688px"
+                sizes="(max-width: 900px) calc(100vw - 36px), 864px"
                 alt="{{ $.Params.cover_image_alt | default $.Title }}"
                 width="{{ $w960.Width }}"
                 height="{{ $w960.Height }}"
@@ -105,9 +126,7 @@
           {{ end }}
         </header>
 
-        <div
-          class="fl-rich-text c-content-block__text"
-          style="max-width: 43rem;">
+        <div class="fl-rich-text c-content-block__text post-prose">
           {{ .Content }}
         </div>
 

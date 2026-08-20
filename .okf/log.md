@@ -2240,3 +2240,29 @@ Meta-lesson: the sprint doc had routed this whole task to Paul on the premise
 profile. Second such misroute the same day (the first was estimating instead
 of querying GA). **Name the tool and try it before writing "needs Paul."**
 Detail: PR #492
+
+## 2026-08-20 - Whole-blog rebuild: post template, responsive mobile covers
+
+Paul retired the per-phase measurement gates ("rebuild the whole blog, and we
+will use measure based on the whole blog"), so 2.2b rebuilt the post template
+in one pass: date · reading time above the title, description promoted to a
+dek, cover breaking wide of the text column, code blocks on the system ink
+instead of Chroma dracula's gray. All scoped to a new `.post-article` class -
+course chapters share `.blog`, `single-post.css` AND `blog-single.css`, so
+scope discipline is the only thing keeping C3's visuals still.
+
+Two bugs worth remembering, both mine, neither caught by a test:
+
+`68ch` shared across elements is THREE different measures, not one - `ch` is
+font-relative per element, so a 12px meta line got ~480px, the H1 ~1900px and
+the prose something else again. Use px for a shared measure.
+
+And the reason list covers had been hidden on mobile (a 160w source) came back
+in a new form: I restored them with a FIXED 430px slot while the CSS renders
+them full-width to 860px, so tablets got sources at ~half the pixels needed.
+Codex BLOCKed it. A stacked cover is ~320px on a phone and ~784px on an 860px
+tablet - a single px value is wrong at both ends, and `sizes` needs a `vw`
+expression. Detail: `architecture/cover-image-pipeline.md` (the new
+mobileWidth/mobileSizes/loading params), `architecture/blog-list-page.md`
+(shared partials + the dev-kind, date-fallback and string-tags traps),
+`build/test-gates.md` (bin/record-baselines replaces the manual re-record).

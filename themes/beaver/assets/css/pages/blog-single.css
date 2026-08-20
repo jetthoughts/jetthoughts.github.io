@@ -15,3 +15,79 @@
   line-height: 1.15;
   margin-bottom: 0.75rem !important;
 }
+
+/* Post pages: center the title in the wide article. !important because the
+   legacy heading margins in style.css win the cascade against any sane
+   specificity here (same class of fight as the #0066d6 anchor rule -
+   both die in Phase 1a). */
+.blog .post-article h1.post-title {
+  max-width: 680px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ==================================================================
+   Rescue Room post treatment (2608 whole-blog rebuild, 2026-08-20).
+   Scoped to .post-article: single.html blog posts ONLY. course/single.html
+   shares this bundle + .blog, and C3 owns course visuals - nothing here
+   may reach a course chapter.
+   ================================================================== */
+
+/* Wide article: the cover breathes to 900px; text caps at the measure. */
+.post-article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.post-article .post-meta-top,
+.post-article .post-title,
+.post-article .post-lead,
+.post-article .post-meta-byline,
+.post-article .post-prose,
+.post-article .post-tags {
+  /* Fixed px, NOT ch: ch is font-relative PER ELEMENT, so a shared 68ch
+     gave the 12px meta line ~480px, the H1 ~1900px and the prose a third
+     width - three different "measures" on one page. 680px = ~68ch at the
+     17px body size, applied uniformly. */
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Date · reading time above the title */
+.post-article .post-meta-top {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rr-ink-500);
+  margin-bottom: 10px;
+}
+
+/* Dek: the description doubles as the article lead */
+.post-article .post-lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--rr-ink-500);
+  margin: 0.25rem auto 0.75rem;
+}
+
+/* Full-bleed(ish) cover: full article width, wider than the prose column */
+.post-article .post-cover-figure {
+  margin: 1.25rem 0 2rem;
+  width: 100%;
+}
+
+/* Code blocks on the system's dark ink, not Chroma dracula's #282a36 -
+   the page's dark moments (cover art, code) come from one palette.
+   !important beats the inline background Chroma emits with noClasses. */
+.post-article .highlight pre,
+.post-article .post-prose > pre {
+  background-color: var(--rr-ink-900) !important;
+}
+
+.post-article .highlight {
+  background: transparent !important;
+}

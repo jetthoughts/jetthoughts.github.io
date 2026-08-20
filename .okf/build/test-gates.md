@@ -52,10 +52,19 @@ extend it when adding components or critical files. The macOS full suite remains
 - **`FORCE_SCREENSHOT_UPDATE=1` re-records EVERYTHING** (2026-08-14). On
   `bin/dtest` it also disables the `git checkout -- .../linux` guard that
   normally discards sub-tolerance Rosetta drift, so a run rewrites all 45
-  Linux baselines rather than the few your change moved. Procedure: run it,
-  copy out only the baselines your change legitimately moved, `git checkout --
-  test/fixtures/screenshots/linux`, then copy your files back. On `bin/qtest`
+  Linux baselines rather than the few your change moved. On `bin/qtest`
   the flag appears to be ignored entirely - the suite still compares.
+
+  **Use `bin/record-baselines <glob>...` instead of doing this by hand**
+  (shipped 2026-08-20, PR #489; the manual dance had been done 3x). It runs
+  the record, then restores every baseline NOT matching your globs -
+  including `rm`ing ones the run CREATED - and reconciles the tree even when
+  the test run exits red. `--dry-run` previews the keep/restore split;
+  `--linux` refuses to record locally and prints the CI dispatch instead
+  (`gh workflow run test.yml --ref <branch> -f update-baselines=true`),
+  because local ARM Docker records plant false drift. Globs use bash `case`
+  matching, so `*` crosses `/`: `macos/*/blog/**` keeps every blog baseline
+  on both viewports. First at-scale run: 69 tests, kept 29 / restored 44.
 - **A `skip_area` selector that matches NOTHING costs 5s per screenshot**
   (2026-08-01). snap_diff resolves each mask via `all(sel, visible: true)`,
   and Capybara waits `default_max_wait_time` (5s) on a zero-match selector.

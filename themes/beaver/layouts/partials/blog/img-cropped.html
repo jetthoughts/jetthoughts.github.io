@@ -14,23 +14,38 @@
 
 {{ if $image }}
 {{ $retinaW := mul $.width 2 }}
+{{/* Optional mobileWidth / mobileSizes: the <=860px rendering.
+     mobileWidth is the LARGEST css px the slot ever reaches there (drives
+     the srcset candidate at 2x); mobileSizes is what goes in the sizes
+     attribute and may be a vw expression, since a full-width cover is
+     ~320px on a phone and ~784px on a 860px tablet - one fixed px value
+     is wrong at both ends (Codex P1, 2026-08-20). Defaults reproduce the
+     historical 80px/160w thumbnail exactly for callers that pass neither.
+     Optional loading: the feature cover is the first mobile visual, so it
+     opts out of lazy. */}}
+{{ $mobileCss := $.mobileWidth | default 80 }}
+{{ $mobileSizes := $.mobileSizes | default (printf "%dpx" $mobileCss) }}
+{{ $loading := $.loading | default "lazy" }}
 
 {{ if site.Params.cdn.enabled }}
-{{ $mobileW := 160 }}{{/* 80px × 2 retina */}}
+{{ $mobileW := mul $mobileCss 2 }}
 {{ $webpDesktop := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=webp&q=80" $retinaW)) }}
 {{ $webpMobile := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=webp&q=80" $mobileW)) }}
 {{ $jpgDesktop := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=jpg&q=80" $retinaW)) }}
 {{ $jpgMobile := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=jpg&q=80" $mobileW)) }}
 <picture>
-  <source type="image/webp" srcset="{{ $webpMobile }} {{ $mobileW }}w, {{ $webpDesktop }} {{ $retinaW }}w" sizes="(max-width: 860px) 80px, {{ $.width }}px">
-  <img alt='{{ $page.Title }}' src="{{ $jpgDesktop }}" srcset="{{ $jpgMobile }} {{ $mobileW }}w, {{ $jpgDesktop }} {{ $retinaW }}w" sizes="(max-width: 860px) 80px, {{ $.width }}px" width="{{ $.width }}" height="{{ $.height }}" loading="lazy" decoding="async">
+  <source type="image/webp" srcset="{{ $webpMobile }} {{ $mobileW }}w, {{ $webpDesktop }} {{ $retinaW }}w" sizes="(max-width: 860px) {{ $mobileSizes }}, {{ $.width }}px">
+  <img alt='{{ $page.Title }}' src="{{ $jpgDesktop }}" srcset="{{ $jpgMobile }} {{ $mobileW }}w, {{ $jpgDesktop }} {{ $retinaW }}w" sizes="(max-width: 860px) {{ $mobileSizes }}, {{ $.width }}px" width="{{ $.width }}" height="{{ $.height }}" loading="{{ $loading }}" decoding="async">
 </picture>
 {{ else }}
-{{/* Aspect-preserving resize at 2× retina. CSS uses object-fit: contain
-    with a dark background to letterbox inside the thumbnail container. */}}
-{{ $resized := $image.Resize (printf "%dx jpg q90" $retinaW) }}
+{{/* Aspect-preserving resize at 2× retina (or the mobile retina width if
+    that's larger - a full-width mobile cover needs more pixels than a
+    220px desktop slot). CSS letterboxes via object-fit: contain. */}}
+{{ $resizeW := $retinaW }}
+{{ if gt (mul $mobileCss 2) $resizeW }}{{ $resizeW = mul $mobileCss 2 }}{{ end }}
+{{ $resized := $image.Resize (printf "%dx jpg q90" $resizeW) }}
 <picture>
-  <img alt='{{ $page.Title }}' src="{{ $resized.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}" loading="lazy" decoding="async">
+  <img alt='{{ $page.Title }}' src="{{ $resized.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}" loading="{{ $loading }}" decoding="async">
 </picture>
 {{ end }}
 
