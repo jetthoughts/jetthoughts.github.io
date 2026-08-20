@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="readmore-arrow">
     <defs>
         <style>
-            .aar,.bar,.car,.ear{fill:none;}.aar,.bar{stroke:#1a8cff;}.bar{stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7px;}.car{opacity:0;}.dar{stroke:none;}
+            .aar,.bar,.car,.ear{fill:none;}.aar,.bar{stroke:#cc342d;}.bar{stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7px;}.car{opacity:0;}.dar{stroke:none;}
         </style>
     </defs>
     <g transform="translate(-160 -2848)">

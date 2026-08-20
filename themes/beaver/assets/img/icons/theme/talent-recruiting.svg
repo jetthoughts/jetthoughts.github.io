@@ -2,7 +2,7 @@
     <defs>
         <style>.a {
             fill: none;
-            stroke: #1a8cff;
+            stroke: #cc342d;
             stroke-linecap: round;
             stroke-width: 1.5px;
             stroke-linejoin: round
@@ -19,7 +19,7 @@
         <circle class="a" cx="4.094" cy="4.094" r="4.094" transform="translate(3.619)"/>
         <path class="a" d="M0 13.166a7 7 0 0 1 4.644-2.482l3.069 6.9 3.07-6.9a7 7 0 0 1 5.066 3.048"/>
         <path transform="translate(7.713 10.68)"
-              style="stroke-linejoin:bevel;fill:none;stroke:#1a8cff;stroke-linecap:round;stroke-width:1.5px"
+              style="stroke-linejoin:bevel;fill:none;stroke:#cc342d;stroke-linecap:round;stroke-width:1.5px"
               d="M0 0h3.069"/>
     </g>
     <path class="a"

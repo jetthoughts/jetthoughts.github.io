@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="34.539" height="37.559" viewBox="0 0 34.539 37.559">
     <defs>
         <style>
-            .a,.b,.c{fill:none;}.a,.b,.c,.d{stroke:#1a8cff;stroke-linecap:round;stroke-width:2px;}.a,.c,.d{stroke-linejoin:round;}.b{stroke-linejoin:bevel;}.c{stroke-dasharray:5;}.d{fill:#fff;}
+            .a,.b,.c{fill:none;}.a,.b,.c,.d{stroke:#cc342d;stroke-linecap:round;stroke-width:2px;}.a,.c,.d{stroke-linejoin:round;}.b{stroke-linejoin:bevel;}.c{stroke-dasharray:5;}.d{fill:#fff;}
         </style>
     </defs>
     <g transform="translate(-1.996 -1.275)">

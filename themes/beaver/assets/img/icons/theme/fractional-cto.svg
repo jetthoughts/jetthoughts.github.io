@@ -2,7 +2,7 @@
     <defs>
         <style>.a, .b {
             fill: none;
-            stroke: #1a8cff;
+            stroke: #cc342d;
             stroke-linecap: round;
             stroke-width: 1.5px
         }

@@ -4,8 +4,8 @@
 	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
-	.st1{fill:none;stroke:#1A8CFF;}
-	.st2{fill:none;stroke:#1A8CFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:none;stroke:#cc342d;}
+	.st2{fill:none;stroke:#cc342d;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 </style>
 <g>
 	<path class="st0" d="M30,0L30,0c16.6,0,30,13.4,30,30l0,0c0,16.6-13.4,30-30,30l0,0C13.4,60,0,46.6,0,30l0,0C0,13.4,13.4,0,30,0z"
