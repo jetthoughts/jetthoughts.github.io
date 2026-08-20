@@ -23,6 +23,19 @@ Triple-confirms the Aug-14 diagnosis - **arrival, not content**:
 
 **Aug-17 editorial work (tracked outside this file, folded in here):** PRs #457/#458/#460/#461 - M4 cluster consolidation, course typography rules, course-wide editorial sweep + claims-canon sweep, no-bricks/reading-list rules. Remaining-work ledger: `docs/90-99-content-strategy/90.20-brick-and-claims-audit-2026-08-17-reference.md` (course tail CLOSED there 2026-08-17).
 
+## ⏱ Decision 2026-08-21 - course arrival narrowed to ONE channel
+
+Paul, after the discovery diagnosis ([`50-59-execution/50.05`](50-59-execution/50.05-course-discovery-diagnosis-2026-08-21.md)):
+
+- **Course SEO + AEO: CLOSED, not deferred.** The course does not rank, and the
+  cause is domain topical authority, not the pages. The "good positions (5-13)"
+  figure quoted in the Aug-14 and Aug-20 reads is an averaging artifact and is
+  retracted. AEO is not the escape hatch either - the course took **4 of ~62**
+  AI-assistant sessions over 60 days.
+- **LinkedIn: the arrival test, and it has barely run** - 3 posted of 19
+  planned. Sliced into task cards **LI-0 … LI-D** in
+  `linkedin-posts/content-plan.md` for **separate sessions**; not this queue.
+
 ## ⏱ Next sprints - GROOMED 2026-08-20
 
 The queue below is groomed into agent-executable task cards in
