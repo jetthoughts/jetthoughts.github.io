@@ -37,42 +37,83 @@
 {{ define "main" }}
   <div class="blog-index-page">
     <div class="blog">
-      <div
-        class="blog-index"
-        style="max-width: 720px; margin:0 auto; padding-left:18px;padding-right:18px">
-              <div>
-                <h1
-                  class="fl-heading"
-                  style="margin: 0!important;padding: 0!important">
-                  Blog
-                </h1>
+      <div class="blog-index">
+        <div>
+          <h1
+            class="fl-heading"
+            style="margin: 0!important;padding: 0!important">
+            Blog
+          </h1>
 
-                <p>
-                  Founder-tested patterns from {{ sub now.Year (int site.Params.foundingYear) }}+ years of rescue engagements.
-                  Rails, AI, and the questions burned founders ask before signing again.
-                </p>
+          <p class="blog-lead">
+            Founder-tested patterns from {{ sub now.Year (int site.Params.foundingYear) }}+ years of rescue engagements.
+            Rails, AI, and the questions burned founders ask before signing again.
+          </p>
 
-                {{ range (.Paginate (where .Pages "Params.course_chapter" "!=" true).ByDate.Reverse).Pages }}
-                  <a class="link" href="{{ .RelPermalink }}">
-                    <div class="blog-post">
-                      <div class="post-image">
-                        {{ partial "blog/img-cropped.html" (dict "Page" . "width" 180 "height" 180) }}
-                      </div>
-                      <div class="post-content">
-                        <h2 class="post-title">{{ .Title }}</h2>
-                        <div class="post-meta">
-                          {{ if .Date }}
-                            <span class="post-date">{{ dateFormat "Jan 2, 2006" .Date }}</span>
-                          {{ end }}
-                          {{ with .Params.tags }}
-                            <div class="post-tags-card">{{ range $i, $t := . }}{{ if $i }}<span class="post-tags-sep">,</span> {{ end }}<a href="/blog/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>
-                          {{ end }}
-                        </div>
-                        <div class="post-description">{{ .Params.description }}</div>
-                      </div>
+          {{/* Curated ICP filters, not top-by-count: dev.to imports skew raw
+               counts toward generic dev tags. All six verified live. */}}
+          <nav class="blog-filters" aria-label="Browse by topic">
+            <a href="/blog/" aria-current="page">All</a>
+            <a href="/blog/tags/rails/">Rails</a>
+            <a href="/blog/tags/ruby/">Ruby</a>
+            <a href="/blog/tags/security/">Security</a>
+            <a href="/blog/tags/startup/">Startup</a>
+            <a href="/blog/tags/hiring/">Hiring</a>
+            <a href="/blog/tags/ai/">AI</a>
+          </nav>
+
+          {{ $pag := .Paginate (where .Pages "Params.course_chapter" "!=" true).ByDate.Reverse }}
+          {{ $posts := $pag.Pages }}
+
+          {{ if eq $pag.PageNumber 1 }}
+            {{ with index $posts 0 }}
+              <a class="link" href="{{ .RelPermalink }}">
+                <div class="post-feature">
+                  <div class="post-content">
+                    <span class="post-eyebrow">Latest</span>
+                    <h2 class="post-title">{{ .Title }}</h2>
+                    <div class="post-description">{{ .Params.description }}</div>
+                    <div class="post-meta">
+                      {{ if .Date }}<span class="post-date">{{ dateFormat "Jan 2, 2006" .Date }} · {{ .ReadingTime }} min read</span>{{ end }}
                     </div>
-                  </a>
-                {{ end }}
+                  </div>
+                  <div class="post-image">
+                    {{ partial "blog/img-cropped.html" (dict "Page" . "width" 440 "height" 231) }}
+                  </div>
+                </div>
+              </a>
+            {{ end }}
+            {{ $posts = after 1 $posts }}
+          {{ end }}
+
+          {{ range $posts }}
+            <a class="link" href="{{ .RelPermalink }}">
+              <div class="blog-post">
+                <div class="post-image">
+                  {{ partial "blog/img-cropped.html" (dict "Page" . "width" 220 "height" 116) }}
+                </div>
+                <div class="post-content">
+                  <h2 class="post-title">{{ .Title }}</h2>
+                  <div class="post-meta">
+                    {{ if .Date }}
+                      <span class="post-date">{{ dateFormat "Jan 2, 2006" .Date }} · {{ .ReadingTime }} min read</span>
+                    {{ end }}
+                    {{ with .Params.tags }}
+                      <div class="post-tags-card">{{ range $i, $t := . }}{{ if $i }}<span class="post-tags-sep">,</span> {{ end }}<a href="/blog/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>
+                    {{ end }}
+                  </div>
+                  <div class="post-description">{{ .Params.description }}</div>
+                </div>
+              </div>
+            </a>
+          {{ end }}
+
+          <div class="blog-cta">
+            <h2>Reading this because something is going wrong?</h2>
+            <p>A free code audit gives you a written assessment of your codebase in plain English.</p>
+            <a class="blog-cta-btn" href="{{ relURL "free-consultation/" }}">Get a Free Code Audit</a>
+            <p class="blog-cta-note">Rated <a href="https://clutch.co/profile/jetthoughts" rel="noopener" target="_blank">4.8/5 on Clutch</a> · you keep the write-up either way</p>
+          </div>
 
           {{ partial "pagination" . }}
         </div>

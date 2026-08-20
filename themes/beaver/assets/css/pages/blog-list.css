@@ -1,42 +1,143 @@
-/* Semantic blog index/listing card styles — ported from the retired
-   homepage-layout.css block (was rows 2608-2678) when homepage-layout.css
-   + services-layout.css were dropped from the blog-list bundle. Card
-   layout only; .blog typography, .post-tags*, and .blog-index live in the
-   retained style.css + single-post.css. The two source .post-title
-   declarations (1.5em then 1.15em) are merged to their computed winner. */
+/* Blog index/listing — Rescue Room restyle (2608 phase 2.1, blog-first).
+   Shared by blog/list.html (index, with feature slot + filters) and
+   list.html (tag pages, rows only). Replaces the homepage-layout.css port;
+   the old 180×180 letterboxed square thumb becomes a 1200:630 landscape
+   cover slot, matching the cover art's native ratio (no letterbox). */
 
-/* Preserves the generic .fl-row-content-wrap{padding:20px} the blog
-   column sat in (dropped with homepage-layout.css). All FOUR sides: the
-   horizontal 20px is invisible on desktop (centered max-width absorbs
-   it) but real on mobile, where it stacks with the inner 18px gutter. */
+/* Rescue Room tokens — SCOPED to this bundle on purpose (blog-first
+   sequencing, 20.01 plan): promote to foundations/css-variables.css in
+   Phase 1a, then delete this block. Brand ruby comes from the existing
+   --color-ruby; these add the warm ink ramp + surfaces. */
+:root {
+  --rr-ink-900: #14110f;
+  --rr-ink-700: #3d3733;
+  --rr-ink-500: #6b625c;
+  --rr-line: #e7e1d9;
+  --rr-surface-raised: #faf7f3;
+}
+
 .blog-index-page {
   padding: 20px;
 }
 
+/* Widened from the 720px single column (inline style, removed): container
+   holds the F-pattern left edge, text measure is capped per element. */
+.blog-index {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.blog-index .blog-lead {
+  max-width: 62ch;
+  color: var(--rr-ink-500);
+}
+
+/* --- Filters: curated ICP tags, static links ------------------------ */
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 28px;
+}
+
+/* !important on the colors below (filters, card tags, CTA) beats the
+   late-cascade generic anchor rule
+   a:not(.btn):not(...):not(...) { color:#0066d6 } — ~8 class-levels of
+   specificity, ships after page slices. Same workaround, same reason as
+   pages/vibe-code-rescue.css. Delete the !importants in Phase 1a when
+   that rule dies (2608 plan). */
+.blog-filters a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--rr-ink-500) !important;
+  background: var(--rr-surface-raised);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.blog-filters a:hover {
+  color: var(--color-ruby) !important;
+}
+
+.blog-filters a[aria-current="page"] {
+  color: #fff !important;
+  background: var(--color-ruby);
+}
+
+/* --- Feature slot: newest post, page 1 only ------------------------- */
+.post-feature {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  background: var(--rr-surface-raised);
+  border-radius: 16px;
+  padding: 36px;
+  margin-bottom: 40px;
+}
+
+.post-feature .post-eyebrow {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ruby);
+  margin-bottom: 10px;
+}
+
+.post-feature .post-title {
+  font-size: 1.6em;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+.post-feature .post-description {
+  font-size: 1em;
+  color: var(--rr-ink-700);
+}
+
+.post-feature .post-image {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  aspect-ratio: 1200 / 630;
+  border-radius: 12px;
+}
+
+/* --- List rows ------------------------------------------------------ */
 .blog-post {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 32px;
+  padding: 28px 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--rr-line);
 }
 
 .post-image {
-  margin-right: 20px;
-  min-width: 180px;
-  width: 180px;
-  height: 180px;
+  margin-right: 24px;
+  min-width: 220px;
+  width: 220px;
+  aspect-ratio: 1200 / 630;
+  height: auto;
   overflow: hidden;
   background: #10141a;
-  border-radius: 8px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.post-image img {
+.post-image img,
+.post-image picture {
   width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -56,7 +157,7 @@
 .post-meta {
   margin-top: 10px;
   font-size: 0.9em;
-  color: #666;
+  color: var(--rr-ink-500);
 }
 
 .post-meta .post-tags,
@@ -67,12 +168,75 @@
 .post-description {
   font-size: 0.85em;
   line-height: 1.5;
-  color: #555;
+  color: var(--rr-ink-500);
   margin-top: 6px;
+  max-width: 68ch;
+}
+
+/* Card tags: ink, ruby on hover (see the !important note above) */
+.blog .post-tags-card a {
+  color: var(--rr-ink-500) !important;
+}
+
+.blog .post-tags-card a:hover {
+  color: var(--color-ruby) !important;
+}
+
+/* --- CTA band before pagination ------------------------------------- */
+.blog-cta {
+  text-align: center;
+  background: var(--rr-surface-raised);
+  border-radius: 16px;
+  padding: 40px 24px;
+  margin: 48px 0 8px;
+}
+
+.blog-cta h2 {
+  font-size: 1.25em;
+  margin: 0 0 8px;
+  color: var(--rr-ink-900);
+}
+
+.blog-cta p {
+  font-size: 0.9em;
+  color: var(--rr-ink-500);
+  max-width: 46ch;
+  margin: 0 auto 20px;
+}
+
+.blog-cta .blog-cta-btn {
+  display: inline-block;
+  background: var(--color-ruby);
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  border-radius: 6px;
+  padding: 13px 24px;
+}
+
+.blog-cta .blog-cta-btn:hover {
+  background: var(--color-ruby-hover);
+}
+
+.blog-cta .blog-cta-note {
+  font-size: 0.8em;
+  color: var(--rr-ink-500);
+  margin: 14px auto 0;
+}
+
+.blog-cta .blog-cta-note a {
+  color: var(--rr-ink-900) !important;
 }
 
 @media (max-width: 860px) {
+  /* Covers hidden on mobile ON PURPOSE: img-cropped.html's CDN srcset
+     serves 160w on ≤860px viewports — full-width mobile covers would
+     render blurry. Revisit if/when the partial grows a mobile size param. */
   .post-image { display: none; }
+  .post-feature .post-image { display: none; }
+  .post-feature { grid-template-columns: 1fr; padding: 24px 20px; gap: 0; }
   .post-title { font-size: 1em; }
+  .post-feature .post-title { font-size: 1.3em; }
   .post-meta .post-tags { display: none; }
+  .blog-cta .blog-cta-btn { display: block; }
 }
