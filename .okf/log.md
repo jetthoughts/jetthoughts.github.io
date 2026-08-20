@@ -1008,3 +1008,21 @@ GA4 deliberately not pulled - §5 establishes ~85-90% bot traffic and
 
 * Update: taste anchor established at `.stitch/course-taste-design.md` - Stitch-skill DESIGN.md encoding the cou...
 
+
+## 2026-08-20 - Site palette concept added; compaction verified non-lossy
+
+Checked today's knowledge against the #504 bundle compaction (359KB -> 191KB)
+before adding anything: the token layer, the img-cropped mobileWidth params,
+the blog-list traps, record-baselines and the GA browser-channel distinction
+all survived IN CONCEPTS rather than only in the log, which is the outcome the
+compaction was aiming for.
+
+One real gap remained, and it was in the section a cold session reads first
+for visual questions: `design/` had NO site-palette concept. house-visual-spec
+is in-post SVG artwork and cover-pipeline is covers, so "what palette does the
+site use?" resolved to nothing there - the LIGHT decision lived only in
+docs/adr/0003 and, since the previous pass, architecture/css-pipeline. Added
+design/site-palette.md with the decision, the audience-shaped reasoning that
+predicts future calls, the token table, and - importantly - the three surfaces
+where dark stays deliberate, so a future session doesn't "fix" the blog covers
+or the vibe-code-rescue campaign page into light.

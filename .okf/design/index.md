@@ -1,5 +1,6 @@
 # Design
 
+* [Site chrome palette](site-palette.md) - LIGHT resolved (ADR-0003), the ruby/ink/surface tokens, and the three places dark is still deliberate
 * [Mermaid theme](mermaid-theme.md) - the Caveat webfont root-cause fix and the theming gotchas
 * [House visual spec](house-visual-spec.md) - paper tones, semantic colors, hand-drawn identity
 * [Cover pipeline](cover-pipeline.md) - rebuilding course covers from the design spec
