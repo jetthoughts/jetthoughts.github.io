@@ -50,14 +50,14 @@
 /* Override Bootstrap defaults to match site brand */
 .page-link {
   font-size: 1rem;
-  color: var(--color-primary);
+  color: var(--color-ruby);
   border-radius: 6px;
   border-color: #e0e0e0;
 }
 
 .page-link:hover,
 .page-link:focus {
-  color: #007af4;
+  color: var(--ruby-700);
   border-color: #e0e0e0;
-  box-shadow: 0 0 0 0.25rem rgba(26, 140, 255, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(204, 52, 45, 0.25);
 }

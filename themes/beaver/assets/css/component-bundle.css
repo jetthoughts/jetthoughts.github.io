@@ -139,7 +139,7 @@
   .pp-toggle-none
   li.focus
   .pp-menu-toggle:before {
-  border-color: var(--color-primary);
+  border-color: var(--color-ruby);
 }
 
 .fl-node-menu
@@ -166,7 +166,7 @@
   li
   a:focus
   .pp-menu-toggle:before {
-  border-color: var(--color-primary);
+  border-color: var(--color-ruby);
 }
 
 .fl-node-menu .menu > li > a:hover,
@@ -175,7 +175,7 @@
 .fl-node-menu .menu > li.focus > .pp-has-submenu-container > a,
 .fl-node-menu .menu > li.current-menu-item > a,
 .fl-node-menu .menu > li.current-menu-item > .pp-has-submenu-container > a {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 .fl-node-menu
@@ -210,7 +210,7 @@
   li.current-menu-item
   > .pp-has-submenu-container
   .pp-menu-toggle:before {
-  border-color: var(--color-primary);
+  border-color: var(--color-ruby);
 }
 
 .fl-node-menu .menu .pp-has-submenu .sub-menu {
@@ -263,7 +263,7 @@
 .fl-node-menu .sub-menu > li.current-menu-item > a,
 .fl-node-menu .sub-menu > li.current-menu-item > .pp-has-submenu-container > a {
 
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 .fl-node-menu
@@ -291,7 +291,7 @@
   .sub-menu
   li:hover
   .pp-menu-toggle:before {
-  border-color: var(--color-primary);
+  border-color: var(--color-ruby);
 }
 
 .fl-node-menu .pp-advanced-menu .pp-menu-toggle:before {

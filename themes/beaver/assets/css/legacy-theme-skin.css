@@ -67,7 +67,7 @@ h4 {
   letter-spacing: 0px
 }
 a:hover, a:focus {
-  color: var(--color-primary)
+  color: var(--color-ruby)
 }
 
 blockquote {
@@ -401,7 +401,7 @@ a img.alignnone {
 }
 .fl-page .fl-module span.onsale {
   color: #fff;
-  background: var(--color-primary);
+  background: var(--color-ruby);
   font-size: 13px;
   font-weight: normal;
   left: 10px;
@@ -448,14 +448,14 @@ a img.alignnone {
   padding: 6px 12px
 }
 a.fl-button, a.fl-button:visited {
-  background: var(--color-primary);
+  background: var(--color-ruby);
   color: #fff;
-  border: 1px solid #006ddc
+  border: 1px solid var(--ruby-700)
 }
 
 a.fl-button:hover, .fl-builder-content a.fl-button:hover {
   color: #fff;
-  background: #007af4
+  background: var(--color-ruby-hover)
 }
 
 a.fl-button *, a.fl-button:visited * {
@@ -468,18 +468,18 @@ a.fl-button:hover * {
 
 a.fl-button:hover, a.button:hover {
   color: #fff;
-  background-color: #007af4;
-  border: 1px solid #006ddc
+  background-color: var(--color-ruby-hover);
+  border: 1px solid var(--ruby-700)
 }
 button, input[type=button], input[type=submit] {
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   color: #fff;
   font-size: 18px;
   line-height: 1.45;
   padding: 6px 12px;
   font-weight: normal;
   text-shadow: none;
-  border: 1px solid #006ddc;
+  border: 1px solid var(--ruby-700);
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -489,16 +489,16 @@ button, input[type=button], input[type=submit] {
 }
 
 button:hover, input[type=button]:hover, input[type=submit]:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   color: #fff;
-  border: 1px solid #006ddc;
+  border: 1px solid var(--ruby-700);
   text-decoration: none
 }
 
 button:active, input[type=button]:active, input[type=submit]:active, button:focus, input[type=button]:focus, input[type=submit]:focus {
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   color: #fff;
-  border: 1px solid #006ddc;
+  border: 1px solid var(--ruby-700);
   outline: none;
   position: relative
 }
@@ -590,11 +590,11 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
   }
 
   .fl-page-nav .navbar-nav li > a:hover, .fl-page-nav .navbar-nav li > a:focus {
-    color: var(--color-primary)
+    color: var(--color-ruby)
   }
 
   .fl-page-nav .navbar-nav li.current-menu-ancestor > a, .fl-page-nav .navbar-nav li.current-menu-parent > a, .fl-page-nav .navbar-nav li.current-menu-item > a {
-    color: var(--color-primary)
+    color: var(--color-ruby)
   }
 
   .fl-page-nav .navbar-nav li.current-menu-item ~ li.current-menu-item > a {
@@ -1280,7 +1280,7 @@ ul.wp-block-latest-posts.alignwide, ul.wp-block-latest-posts.alignfull, ul.wp-bl
 }
 .fl-page button:visited, .fl-responsive-preview-content button:visited, .fl-button-lightbox-content button:visited, .fl-page input[type=button], .fl-responsive-preview-content input[type=button], .fl-button-lightbox-content input[type=button], .fl-page input[type=submit], .fl-responsive-preview-content input[type=submit], .fl-button-lightbox-content input[type=submit], .fl-page a.fl-button, .fl-responsive-preview-content a.fl-button, .fl-button-lightbox-content a.fl-button, .fl-page a.fl-button:visited, .fl-responsive-preview-content a.fl-button:visited, .fl-button-lightbox-content a.fl-button:visited, .fl-page a.button, .fl-responsive-preview-content a.button, .fl-button-lightbox-content a.button, .fl-page a.button:visited, .fl-responsive-preview-content a.button:visited, .fl-button-lightbox-content a.button:visited, .fl-page button.button, .fl-responsive-preview-content button.button, .fl-button-lightbox-content button.button, .fl-page button.button:visited, .fl-responsive-preview-content button.button:visited, .fl-button-lightbox-content button.button:visited, .fl-page .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle, .fl-responsive-preview-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle, .fl-button-lightbox-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle, .fl-page .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:visited, .fl-responsive-preview-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:visited, .fl-button-lightbox-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:visited {
   color: #fff;
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 18px;
@@ -1299,7 +1299,7 @@ ul.wp-block-latest-posts.alignwide, ul.wp-block-latest-posts.alignfull, ul.wp-bl
 .fl-page input[type=button]:hover, .fl-responsive-preview-content input[type=button]:hover, .fl-button-lightbox-content input[type=button]:hover, .fl-page input[type=submit]:hover, .fl-responsive-preview-content input[type=submit]:hover, .fl-button-lightbox-content input[type=submit]:hover, .fl-page a.fl-button:hover, .fl-responsive-preview-content a.fl-button:hover, .fl-button-lightbox-content a.fl-button:hover, .fl-page a.button:hover, .fl-responsive-preview-content a.button:hover, .fl-button-lightbox-content a.button:hover, .fl-page button.button:hover, .fl-responsive-preview-content button.button:hover, .fl-button-lightbox-content button.button:hover, .fl-page .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:hover, .fl-responsive-preview-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:hover, .fl-button-lightbox-content .fl-page-nav-toggle-button .fl-page-nav .navbar-toggle:hover {
   color: #fff;
   border-color: #121212; /* KEEP LITERAL: dedup-twin of the identical .fl-page fl-button rule in critical/*.css (kept literal there too) */
-  background-color: #007af4;
+  background-color: var(--color-ruby-hover);
   border-style: none;
   border-width: 1px;
   border-radius: 25px
