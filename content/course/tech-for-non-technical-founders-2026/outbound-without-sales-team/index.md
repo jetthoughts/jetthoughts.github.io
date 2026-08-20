@@ -33,7 +33,7 @@ related_posts: false
 >
 > **Input:** network exhausted, ~10 customers in from [Lesson 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) and [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 >
-> **Output:** 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared once replies mature
+> **Output:** 30 cold messages sent, 2-3 demo calls booked, 1-2 paid pilots cleared once replies mature
 >
 > **Progress:** M5 · 7 of 7 · [OPTIONAL] - the systematic cold path; run it only after the warm-network pass in 5.3-5.5
 
@@ -69,13 +69,13 @@ flowchart TD
     accDescr {
       A four-stage funnel. 30 messages sent, one custom opener each, narrow to
       1-4 replies - and 0-1 replies on batch 1 is normal, not a failure. The
-      replies narrow to demo calls booked on a 15-minute Calendly slot, and
+      replies narrow to 2-3 demo calls booked on a 15-minute Calendly slot, and
       those narrow to 1-2 paid pilots with a design partner agreement signed
       and a deposit taken.
     }
     Sent["30 messages sent<br/>one custom opener each"]
     Replies["1-4 replies<br/>0-1 on batch 1 is normal, not a failure"]
-    Demos["Demo calls booked<br/>15-minute Calendly slot"]
+    Demos["2-3 demo calls booked<br/>15-minute Calendly slot"]
     Pilots["1-2 paid pilots<br/>DPA signed, deposit taken"]
 
     Sent --> Replies --> Demos --> Pilots
