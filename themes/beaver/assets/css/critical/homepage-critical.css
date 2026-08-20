@@ -1321,7 +1321,7 @@ img {
   margin: 0 auto;
 }
 .fl-page-content {
-  background-color: #fff;
+  background-color: var(--surface);
 }
 .fl-content {
   margin: 20px 0;

@@ -376,7 +376,7 @@ img {
 }
 
 .fl-page-content {
-  background-color: #fff
+  background-color: var(--surface)
 }
 
 .fl-content, .fl-sidebar {
