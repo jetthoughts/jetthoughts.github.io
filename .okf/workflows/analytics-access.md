@@ -235,31 +235,50 @@ GSC click count - about 5/day - not GA4's organic session count, which ran
 4x-28x inflated across those two windows. **Never report a change in the Direct
 or Organic Search rows without reconciling against GSC first.**
 
-### Pending GA4-UI setup (no API exists for either - browser required)
+### GA4-UI setup - ALL DONE 2026-08-21 (browser; no API exists for any of it)
 
-Both are blocked on a working browser session, not on a decision. Neither the
-Data API nor the Admin API can do them: **GA4 Explorations have no API at all.**
+Neither the Data API nor the Admin API can do these: **GA4 Explorations have no
+API at all.** All four were done through the UI in Chrome.
 
-**1. Un-mark `page_view` as a key event.** Admin -> Data display -> Events ->
-Key events tab -> click the filled star next to `page_view`. This is the single
-highest-value GA4 change outstanding: until it lands, `keyEvents` counts ~4,000
-page views and every conversion figure on the property is unusable, including
-the `contact_cta_click` marked on 2026-08-20. Reversible - re-star to undo.
+**1. `page_view` un-marked as a key event. ✅** Admin -> Data display -> Events
+-> Key events tab -> click the filled star -> confirm "Yes, unmark the key
+event". The list drops from 4 rows to 3 and a toast confirms. Until this landed,
+`keyEvents` counted ~4,000 page views and every conversion figure on the
+property was unusable. Reversible - re-star to undo.
 
-**2. Two saved Explorations**, so the CLI reports have UI equivalents:
+**Caveat that outlives the fix:** un-marking is **not retroactive**. Key events
+are stamped at processing time, so any window that includes data before
+2026-08-21 still counts `page_view` in `keyEvents` - the Campaign-performance
+exploration read 4,063 immediately after the change. Only windows starting
+2026-08-21 give a clean conversion count.
+
+**2. Two saved Explorations. ✅** Both built, named with the caveat, and shared
+to the whole property (read-only):
 
 | Exploration | Dimensions | Metrics |
 |---|---|---|
-| *Campaign performance* | `sessionCampaignName`, `sessionManualAdContent`, `landingPage` | `sessions`, `engagedSessions`, `keyEvents` |
-| *Site health* | `sessionDefaultChannelGroup`, `landingPage` | `sessions`, `engagedSessions`, engagement rate |
+| *Campaign performance (our UTMs only - "(direct)" rows are bots, check GSC)* | `sessionCampaignName`, `sessionManualAdContent`, `landingPage` | `sessions`, `engagedSessions`, `keyEvents` |
+| *Site health (Direct/Organic are bot-inflated - trust engagement rate, check GSC)* | `sessionDefaultChannelGroup`, `landingPage` | `sessions`, `engagedSessions`, engagement rate |
 
-Explore -> Blank -> drag dimensions to Rows, metrics to Values -> Share so the
-whole property sees them, not just the creator.
+Build path: Explore -> Blank -> `+` on DIMENSIONS/METRICS to add via the search
+picker -> then **"Drop or select dimension/metric"** in ROWS and VALUES, which
+opens a pick-list. Use that, not drag-and-drop - selecting is reliable and
+dragging in a screenshot loop is not.
 
-Whoever builds them: put the **bot caveat in the exploration's own name or a
-text annotation**, e.g. "Site health (Direct/Organic are bot-inflated - check
-GSC)". A saved report that silently repeats the 86%-collapse trap is worse than
-no report, because a saved report gets trusted.
+**3. Reports snapshot dashboard. ✅** The property had **never had one
+configured** - clicking Reports landed on a template chooser. Set to the **User
+behavior** template. Deliberately NOT "Marketing performance": that template
+leads on channel attribution and conversions, the two numbers this property is
+worst at, so it would have institutionalised the bot trap on the landing screen.
+
+**4. A red property annotation carries the caveat. ✅** Title "READ ME: Direct +
+Organic here are bot-inflated", dated 2026-08-21. It exists because the snapshot
+still leads with "Active users 9K" and "15s average engagement" - both
+bot-inflated - and a saved report that silently repeats the 86%-collapse trap is
+worse than no report, because a saved report gets trusted. Annotation
+description caps at **150 chars** and truncates mid-word without warning; the
+date field is a range with two slots and typing into it fills the END slot, so
+click the left slot explicitly.
 
 ### Marking a key event is an agent-doable UI task, not an Admin-API task
 

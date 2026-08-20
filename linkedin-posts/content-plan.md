@@ -30,7 +30,95 @@ links the course. Decoupling the give from the ask is what makes the ask land.
 
 Status legend: `draft` · `revised` (idea-first, ready) · `approved` · `scheduled` · `posted`.
 
-## Next actions (2026-08-14 handoff) - STOP BUILDING, START SENDING
+## Next actions (2026-08-21) - LinkedIn is now the ONLY unblocked arrival test
+
+**Decision of record, Paul 2026-08-21.** The course-discovery diagnosis
+(`docs/projects/2605-tech-for-non-technical-founders/50-59-execution/50.05-course-discovery-diagnosis-2026-08-21.md`)
+closed two of the three candidate channels for course arrival:
+
+- **Google: structurally blocked.** The course does not rank. The "positions
+  5-13" reading was an averaging artifact of 1-3-impression rows; the one course
+  page with a real keyword sits at position 26-33. Cause is domain topical
+  authority - jetthoughts.com is classified as a Ruby/Rails/AI-engineering
+  domain and every real ranking it holds is a dev query. Not fixable by
+  course-side content work. **Course SEO/AEO is CLOSED, not deferred.**
+- **AI assistants: real, but not for the course.** 60-day pull: ~62
+  AI-assistant sessions, of which the course got **4**. The top cited page is
+  `/careers/junior-ruby-on-rails-developer` (17). Same topical gravity as
+  Google. An earlier read that framed the course as "winning in AEO" was
+  quoting a channel-wide engagement figure and is corrected here.
+- **LinkedIn: the only channel where course arrival is NOT gated by domain
+  topical authority** - you post to a personal audience, no ranking involved.
+  And it has barely run: 3 posted of 19 planned, one of those pulled. **2
+  sessions is not a verdict on a campaign that never ran.**
+
+So the campaign gets a fair run before any verdict. Work is sliced into
+independent task cards below **for separate sessions to pick up** - this session
+scheduled them, it is not executing them.
+
+### Backlog for separate sessions (take ONE card, do not combine)
+
+Each card = its own branch cut from `origin/master`, its own PR, worktree
+isolation ([[feedback-workflow-writers-need-worktrees]]). Cards touch disjoint
+files, so two sessions can run concurrently without colliding - **except LI-0,
+which must land first** because the others depend on knowing the true status.
+
+Shared rules for every card: doctrine is `docs/workflows/linkedin-post-pipeline.md`
+(idea-first, deliver the point) + `linkedin-posts/README.md` +
+`reference-examples.md`; voice is Register B committed hammering, no
+beat-marking ([[feedback-register-b-fried-style]]). Revise the **body only** -
+frontmatter v2 and the UTM links are already correct, do not touch them. Run
+`reflexion-reflect`, then a 2-critic cold-eyes pass (AI-feel + voice-enforcer),
+fix convergent findings, then set `revised: idea-first <date>` in frontmatter.
+**Posting stays Paul-gated - never set `scheduled_for` or schedule a composer.**
+End the handback with the preview link(s)
+`http://localhost:<your session port>/linkedin/<lane>/<slug>/`.
+
+**LI-0 - Reconcile the status record (do FIRST, ~20 min).**
+This table's Status column and the files' frontmatter disagree. Frontmatter is
+the artifact and wins; the table was last touched 2026-08-17, the revisions
+landed 2026-08-20. Confirmed `revised: idea-first 2026-08-20` in frontmatter:
+`week1-fri-why-i-wrote-it`, `week1-wed-first-move-poll`,
+`week2-mon-friends-politely-lying`. The table instead marks
+`week1-wed-trust-signals-poll`, `week2-fri-ten-interviews-recap` and
+`week1-tue-staging-question` "revised ✓" with **no frontmatter marker** - read
+those three and decide whether they were revised under an older pass or never
+were, then make table and frontmatter agree. Deliverable: one source of truth,
+plus a note saying which way each of the three resolved.
+Verify with: `grep -rn "^status:\|^revised:" linkedin-posts/*/`
+
+**LI-A - course-promo revision batch 1 (3 posts).**
+`week1-thu-price-before-product`, `sidepath-status-meetings-friday-demo`,
+`backlog-40k-mvp-chasing-fixes`. These are the earliest-slotted unrevised
+course-promo posts (Aug 26 - Sep 24), so they are the ones a live cadence hits
+first.
+
+**LI-B - course-promo revision batch 2 (3 posts).**
+`week2-tue-mom-test-past-questions`, `week2-wed-interview-count-poll`,
+`week2-fri-ten-interviews-recap` (the last only if LI-0 finds it unrevised).
+Watch the interview-cluster spacing the balance audit already fixed - revise the
+bodies, do not re-slot the dates.
+
+**LI-C - icp-validation revision batch (4 posts).**
+`week1-tue-staging-question` (if LI-0 finds it unrevised),
+`week1-wed-trust-signals-poll` (same), `backlog-vibe-coding-disposable`,
+`backlog-ai-without-senior-reviewer`. This lane carries the H1-H5 hypotheses in
+`docs/workflows/linkedin-icp-validation-plan.md` - keep the reply-CTA design,
+it is testing ICP *presence*, which is upstream of arrival.
+
+**LI-D - run the cadence and read it (needs Paul, blocked on A-C).**
+Once a lane has a revised backlog, run 2 posts/week per the header rule and fill
+`metrics-ledger.md` per post within 48-72h. Agents CAN read LinkedIn post
+analytics directly through the Chrome extension (see the 2026-08-20 correction
+in 50.03 C1.3) - do not route the numbers to Paul. Verdict against the lane
+kill-criteria after 5 posting days.
+
+**Not in scope for any card:** the `personal/` lane (6 drafts, separate purpose -
+not course arrival), and anything touching course SEO, titles, meta, or schema.
+
+---
+
+## Superseded: Next actions (2026-08-14 handoff) - STOP BUILDING, START SENDING
 
 All LI work landed on master (**PR #455 merged 2026-08-17**). 19 posts
 drafted, illustrated (caricatures + exhibits), reordered. But the active bet (Vibe

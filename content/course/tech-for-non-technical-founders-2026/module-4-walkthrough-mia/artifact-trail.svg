@@ -11,7 +11,7 @@
       .pbig   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 30px; fill: #a855f7; font-weight: 700; }
       .note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #555; }
       .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2.2; }
-      .pay    { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.8; }
+      .done   { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.8; }
       .chipbg { fill: #cc342d; }
     </style>
     <marker id="arw4" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
@@ -46,7 +46,7 @@
 
   <!-- Card 4.3-4.4 live MVP (payoff) -->
   <g transform="rotate(-0.3 598 182)">
-    <rect x="491" y="75" width="214" height="215" rx="14" class="pay"/>
+    <rect x="491" y="75" width="214" height="215" rx="14" class="done"/>
     <rect x="552" y="88" width="92" height="28" rx="14" class="chipbg"/>
     <text x="598" y="108" class="chip" text-anchor="middle">4.3-4.4</text>
     <text x="598" y="152" class="pbig" text-anchor="middle">Live MVP</text>

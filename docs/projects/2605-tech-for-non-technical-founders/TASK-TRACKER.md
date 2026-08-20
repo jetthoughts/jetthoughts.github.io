@@ -12,7 +12,7 @@
 
 Triple-confirms the Aug-14 diagnosis - **arrival, not content**:
 
-- **GSC**: course 60+ URLs at good positions (5-13), ~800 impressions, **2 clicks** over 28-90d. Course index has zero query data. Do NOT respond with a title/meta CTR pass - seo-review-2026-08-13 §6 #5 recorded title rewrites as a falsified experiment (wave 1 lost impressions).
+- **GSC**: course 60+ URLs, ~800 impressions, **2 clicks** over 28-90d. Course index has zero query data. Do NOT respond with a title/meta CTR pass - seo-review-2026-08-13 §6 #5 recorded title rewrites as a falsified experiment (wave 1 lost impressions). ⚠️ **The "good positions (5-13)" reading that used to sit in this line is RETRACTED** - it is an averaging artifact of 1-3-impression rows, and the one course page with a real keyword sits at position 26-33. Full diagnosis: [`50-59-execution/50.05-course-discovery-diagnosis-2026-08-21.md`](50-59-execution/50.05-course-discovery-diagnosis-2026-08-21.md).
 - **GA** (property 328508492): Aug 13-15 Direct spike (~5.1k sessions/7d) is crawler noise hitting course URLs (~709 direct "users" on /course/ landings). Real humans ≈ 220/wk. Real course arrivals 28d: ~12 Google organic, ~7 ChatGPT/Perplexity, ~4 LinkedIn. AI-assistant channel: 94% engagement - AEO is quietly working.
 - **Clarity**: `reference/paid-pilot-full/` is the site's #1 dead-click page (17/7d) - verified NOT a defect: clicks land on the plain opening paragraph (reading/copy behavior), traffic is part internal review, part genuine ChatGPT referrals. No fix; recorded here so nobody "fixes" it later.
 - **Actions shipped 2026-08-20** (branch `course-arrival-actions-2026-08-20`): `contact_cta_click` GA4 event site-wide (seo-review §6 #1, its top open item - Paul: mark it a key event in GA4 admin, 1 click); course-fix sweep (course pages + last-10 blog posts) via swarm per Paul's request.
@@ -22,6 +22,19 @@ Triple-confirms the Aug-14 diagnosis - **arrival, not content**:
 **Aug-20 course-fix sweep (swarm, Paul's request):** 5 audit shards over all 84 course pages + last-10 blog posts, calibrated on 90.20; ~30 surgical fixes applied across 26 files (further-reading trims to the ≤4-external cap with inline-duplicate removal, 4 brick→list/blockquote conversions, "going back to 2011"→"since 2008", de-fabricated 80/20 + "80% of Rails apps" + "40+ rescues" stats, 2 banned-pattern rephrasings, composite disclaimer added to the five-tech-words anecdotes). **3 findings held for Paul (fabricated-fact class, judgment needed):** (1) `five-tech-words` l.94 "B2B HealthTech founder we shipped for in Q2 2025" - direct client claim with precise numbers, no source: cite the real engagement or convert to disclaimed composite; (2) `sow-reading-guide` l.138/176 - "$78K for $400" presented as a real founder's fact but the opener is a hypothetical: de-story or disclaim; (3) `paid-pilot-charge-before-ship` l.55 - the 12%-vs-65% conversion bar chart SVG carries unsourced stats inside artwork (text gates can't see exhibits).
 
 **Aug-17 editorial work (tracked outside this file, folded in here):** PRs #457/#458/#460/#461 - M4 cluster consolidation, course typography rules, course-wide editorial sweep + claims-canon sweep, no-bricks/reading-list rules. Remaining-work ledger: `docs/90-99-content-strategy/90.20-brick-and-claims-audit-2026-08-17-reference.md` (course tail CLOSED there 2026-08-17).
+
+## ⏱ Decision 2026-08-21 - course arrival narrowed to ONE channel
+
+Paul, after the discovery diagnosis ([`50-59-execution/50.05`](50-59-execution/50.05-course-discovery-diagnosis-2026-08-21.md)):
+
+- **Course SEO + AEO: CLOSED, not deferred.** The course does not rank, and the
+  cause is domain topical authority, not the pages. The "good positions (5-13)"
+  figure quoted in the Aug-14 and Aug-20 reads is an averaging artifact and is
+  retracted. AEO is not the escape hatch either - the course took **4 of ~62**
+  AI-assistant sessions over 60 days.
+- **LinkedIn: the arrival test, and it has barely run** - 3 posted of 19
+  planned. Sliced into task cards **LI-0 … LI-D** in
+  `linkedin-posts/content-plan.md` for **separate sessions**; not this queue.
 
 ## ⏱ Next sprints - GROOMED 2026-08-20
 
