@@ -23,6 +23,15 @@ generated:
 | Labels | INSIDE shapes (Sweller split-attention rule); never bare diamonds |
 | Dashes | "-" only, including inside artwork |
 
+# The shipped artifact is the PNG, not the SVG (2026-08-20)
+
+LinkedIn assets and the review board serve `assets/<slug>.png`, not the source
+SVG. Editing the SVG alone renders correctly in your editor and still ships the
+old text. Always re-export:
+`rsvg-convert -w 1440 -o <slug>.png <slug>.svg`, then hard-reload to confirm.
+And whenever a phrase is banned or changed in a body, grep the page's artwork
+for it in the same breath - artwork loads above the fold, body text does not.
+
 # Fit text for the fallback font, not Caveat (2026-08-20)
 
 Hand SVGs load via `<img>`, where the Caveat webfont never applies - the

@@ -1905,3 +1905,32 @@ Findings worth carrying forward:
   `_dest/public-dev` produced 8 unrelated failures (relative canonical URLs,
   self-hosted mermaid path) that vanish against `_dest/public-test-local`.
   A red unit suite may mean a wrong `HUGO_DEFAULT_PATH`, not a regression.
+
+## 2026-08-20 — The exhibit trap has TWO layers: the SVG and its PNG export
+
+The 2026-08-19 learning ("text gates cannot see exhibits") recurred today in a
+worse form, and the recurrence teaches the sharper rule.
+
+A LinkedIn draft's notes recorded removing two banned constructions from the
+body. Both were still rendering in the post's attached visual - "A compliment
+isn't demand" (negative parallelism) as a 30px title, and a definitional-cadence
+subtitle - plus a neighbouring post's payload the de-dup had supposedly moved.
+Three reviewers (implementer + its own two self-critics) read the markdown and
+never opened the asset. Only an INDEPENDENT cold-eyes critic did.
+
+Two rules, both now binding:
+
+1. **When you remove a phrase from a body, grep the page's artwork for it in the
+   same breath.** `linkedin-posts/**/assets/*.svg`, `content/**/*.svg`. The
+   image loads ABOVE the fold on LinkedIn; the body text does not. A banned
+   construction in artwork is the most visible place it can possibly ship.
+2. **Fixing the SVG is not fixing the exhibit.** The LI board and the shipped
+   post both serve a **PNG export** (`assets/<slug>.png`), not the source SVG.
+   An SVG-only fix renders correctly in review and still ships the old text.
+   Re-export with `rsvg-convert -w 1440 -o <slug>.png <slug>.svg` and reload
+   with cache disabled to confirm. Same shape as the mermaid pre-render rule:
+   the committed artifact, not the source, is what the reader sees.
+
+Corollary for review design: an implementer's self-critique cannot clear a
+voice gate, and the reason is now concrete rather than theoretical - the
+self-critics inherited the implementer's assumption that the body WAS the post.
