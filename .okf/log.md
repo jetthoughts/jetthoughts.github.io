@@ -2,6 +2,19 @@
 
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
+
+## 2026-08-21 - maintain pass 3: three rules the og:image PR taught, lifted
+
+* `build/test-gates.md` - the `.gitignore` bullet now covers SUBdirectories
+  of a tracked dot-dir (`.stitch/*.md` tracked, `.stitch/designs/` ignored),
+  and records that `git add <path>` ERRORS on an ignored path while
+  `git add -A` silently omits it. Staging by explicit path is the safer
+  default whenever a commit's value depends on a specific file landing.
+* `architecture/seo-meta-tags.md` - added the og-plate regeneration recipe
+  and the md5 proving the SVG is the source of record, not an approximation.
+* `index.md` - when two sessions verify one concept concurrently, a rebase
+  conflict on `verified:` is resolved by keeping BOTH entries. Dropping one
+  falsifies the provenance the field exists to carry.
 ## 2026-08-21 - Two gate lessons from merging six PRs: the stall masks, the local red lies
 
 Both are sharpenings of rules the bundle already had, and both came from the

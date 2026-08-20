@@ -55,7 +55,18 @@ campaign pitch: a fallback stands in under arbitrary technical posts, where
 sales copy over a Puma-config article reads as an ad. Any figure on it is
 bound by [claims-canon](/content/claims-canon.md), and because those figures
 live inside a binary, **no text ratchet can see them** - the generator source
-is kept in-repo so they stay greppable.
+is kept in-repo so they stay greppable:
+
+```
+# .stitch/og-default.svg  (NOT .stitch/designs/, which is gitignored)
+rsvg-convert -w 1200 -h 630 -o /tmp/og.png .stitch/og-default.svg
+magick /tmp/og.png -quality 88 static/assets/images/og-default.jpg
+```
+
+Verified byte-identical to the committed jpg (`md5
+ecd26681b0c591a68d1315d5d578d05c`), so the SVG is the source of record rather
+than an approximation of it - a canon change is edited there and re-rendered,
+never painted onto the jpg.
 
 Guarded since 2026-08-20 by `test/unit/og_image_resolves_test.rb`, which
 resolves every same-origin `og:image`/`twitter:image` in RENDERED output

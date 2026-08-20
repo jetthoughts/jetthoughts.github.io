@@ -312,6 +312,12 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   the repo - fresh clones had a hooksPath pointing at nothing. Adding any
   root dotfile/dot-dir? Check `git check-ignore -v <path>` before assuming
   it's tracked.
+  Same rule bites SUBdirectories of a tracked dot-dir: `.stitch/*.md` is
+  tracked but `.stitch/designs/` is ignored, so a source file placed there
+  is invisible (2026-08-20, the og:image plate source). **`git add <path>`
+  ERRORS on an ignored path; `git add -A` just silently omits it** - which
+  is the case for staging by explicit path when a commit's value depends on
+  a specific file actually landing.
 - REPORT-ONLY build gates (each flips to blocking once its backlog hits
   zero via an env flag): `bin/check-svg-floor` (`SVG_FLOOR_BLOCK=1`)
   catches course SVGs whose smallest text renders <9px@390;
