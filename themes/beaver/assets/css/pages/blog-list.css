@@ -108,6 +108,7 @@
   height: auto;
   aspect-ratio: 1200 / 630;
   border-radius: 12px;
+  margin-right: 0; /* the row margin would eat the card's right padding */
 }
 
 /* --- List rows ------------------------------------------------------ */
@@ -137,7 +138,11 @@
 .post-image picture {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* contain, not cover: 515 of 596 local covers are NOT 1200:630 (27 square,
+     7 portrait) and a centered landscape crop beheads their titles. For
+     ratio-matched covers contain and cover render identically; legacy ratios
+     letterbox on the dark slot background instead of cropping. */
+  object-fit: contain;
   display: block;
 }
 
@@ -191,9 +196,14 @@
   margin: 48px 0 8px;
 }
 
-.blog-cta h2 {
+/* .blog scope + !important margin: must beat style.css's
+   `.blog h2:not(.post-title)` (29px / margin 48px 0 16px !important),
+   which otherwise wins on specificity and blows up the band's rhythm. */
+.blog .blog-cta h2 {
   font-size: 1.25em;
-  margin: 0 0 8px;
+  line-height: 1.3;
+  letter-spacing: normal;
+  margin: 0 0 8px !important;
   color: var(--rr-ink-900);
 }
 

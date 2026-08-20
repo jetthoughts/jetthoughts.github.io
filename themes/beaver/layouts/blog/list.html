@@ -53,7 +53,9 @@
           {{/* Curated ICP filters, not top-by-count: dev.to imports skew raw
                counts toward generic dev tags. All six verified live. */}}
           <nav class="blog-filters" aria-label="Browse by topic">
-            <a href="/blog/" aria-current="page">All</a>
+            {{/* aria-current only on /blog/ itself — announcing it as the
+                 current page from /blog/page/2/ misleads assistive tech */}}
+            <a href="/blog/"{{ if eq .RelPermalink "/blog/" }} aria-current="page"{{ end }}>All</a>
             <a href="/blog/tags/rails/">Rails</a>
             <a href="/blog/tags/ruby/">Ruby</a>
             <a href="/blog/tags/security/">Security</a>
@@ -66,7 +68,9 @@
           {{ $posts := $pag.Pages }}
 
           {{ if eq $pag.PageNumber 1 }}
-            {{ with index $posts 0 }}
+            {{/* range first 1, not `index $posts 0`: index errors on an
+                 empty slice before `with` can guard it */}}
+            {{ range first 1 $posts }}
               <a class="link" href="{{ .RelPermalink }}">
                 <div class="post-feature">
                   <div class="post-content">
