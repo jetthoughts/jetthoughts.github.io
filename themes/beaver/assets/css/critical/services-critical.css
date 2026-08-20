@@ -173,7 +173,7 @@
 /* Hero Text Module */
 .fl-builder-content .services-eyebrow .fl-module-content .fl-rich-text,
 .fl-builder-content .services-eyebrow .fl-module-content .fl-rich-text * {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 .fl-builder-content .services-eyebrow .fl-rich-text,
 .fl-builder-content .services-eyebrow .fl-rich-text *:not(b, strong) {
@@ -258,7 +258,7 @@
 .services-card-cto .pp-infobox .pp-more-link,
 .services-card-webdev .pp-infobox .pp-more-link,
 .services-card-qa .pp-infobox .pp-more-link {
-  color: var(--color-primary);
+  color: var(--color-ruby);
   background-color: rgba(255, 0, 0, 0);
   text-decoration: none;
   text-align: center;
@@ -268,7 +268,7 @@
 .services-card-webdev .pp-infobox .pp-more-link .pp-button-icon,
 .services-card-qa .pp-infobox .pp-more-link .pp-button-icon {
   font-size: 22px;
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 .services-card-cto .pp-infobox .pp-more-link .pp-button-icon-right,
 .services-card-webdev .pp-infobox .pp-more-link .pp-button-icon-right,

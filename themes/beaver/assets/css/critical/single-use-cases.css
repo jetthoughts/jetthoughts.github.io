@@ -810,7 +810,7 @@ body:not(.single-fl-theme-layout)
   display: block;
   width: 100%;
   height: 40px;
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -881,7 +881,7 @@ header ul.menu > li > ul.sub-menu > li > a .menu-image {
   }
 }
 header ul.menu > li.current-page-ancestor > .pp-has-submenu-container > a {
-  color: var(--color-primary) !important;
+  color: var(--color-ruby) !important;
 }
 header
   ul.menu
@@ -889,7 +889,7 @@ header
   > .pp-has-submenu-container
   > a
   .pp-menu-toggle::before {
-  border-color: var(--color-primary);
+  border-color: var(--color-ruby);
 }
 @media (min-width: 861px) {
   header ul.menu > li:last-child {
@@ -1175,23 +1175,23 @@ img {
 }
 a.fl-button,
 a.fl-button:visited {
-  background: var(--color-primary);
+  background: var(--color-ruby);
   color: #fff;
-  border: 1px solid #006ddc;
+  border: 1px solid var(--ruby-700);
 }
 a.fl-button *,
 a.fl-button:visited * {
   color: #fff;
 }
 button {
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   color: #fff;
   font-size: 18px;
   line-height: 1.45;
   padding: 6px 12px;
   font-weight: 400;
   text-shadow: none;
-  border: 1px solid #006ddc;
+  border: 1px solid var(--ruby-700);
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -1264,7 +1264,7 @@ button {
 .fl-page a.fl-button,
 .fl-page a.fl-button:visited {
   color: #fff;
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 18px;
