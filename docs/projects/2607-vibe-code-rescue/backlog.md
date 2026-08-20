@@ -74,7 +74,7 @@ Batch-1 Phase-1 pre-research (send-runner-prompt.md, run against card #12's 5 op
 - **Unblock needed**: `chrome-devtools` (the tool grooming Vote 2 actually names) plus egress to `indiehackers.com` and `reddit.com`. Until one venue is openable, #29 cannot produce verified-fresh rows by **any** method.
 - **#12 remains blocked** — still zero sendable rows, unchanged since 2026-07-26.
 
-### Card #29 handoff — **UNBLOCKED 2026-08-20 (tooling). Sweep ran from a host session: 6 v1 rows re-audited (all dropped), 0 fresh verified rows, 6 new VoC founder lines.**
+### Card #29 handoff — **UNBLOCKED 2026-08-20 (tooling). Re-audit COMPLETE for every openable row: 15 verified, all 15 dropped, 10 Reddit rows unverifiable. 0 fresh verified rows, 6 new VoC founder lines.**
 
 Run artifacts: `rescue-sprint/prospects/p7-search-sweep.md` §7 (method + full log + Seen-and-skipped), `rescue-sprint/cold-prospect-list.md` §Re-audit log, `rescue-sprint/voice-of-customer.md` (+6 `[VERBATIM-founder]`, +2 `[vendor]`).
 
@@ -82,7 +82,13 @@ Run artifacts: `rescue-sprint/prospects/p7-search-sweep.md` §7 (method + full l
 
 **2. The missing recency lane exists.** IH listing pages are client-rendered so there is no browsable "newest" feed, but IH's own search runs on Algolia and one index is `discussions_createdTimestamp_desc`. Query it for discovery, then open each hit to verify. Exact call in `p7-search-sweep.md` §7a. Pair it with domain-filtered `WebSearch` for precision — relevance-ranked search is stale-biased (10 candidates returned 1 inside the window), the Algolia index is fresh but loose.
 
-**3. Re-audit: 6 of 6 dropped, no false alarms.** SpecBuildLab 2025-10-09 (316d) · SANICE_AI 2026-04-12 (130d, and the competing free pitch is genuinely in-thread) · Joy Adamson ~2026-02-05 comment (~196d, still publicly unanswered) · Afrikonnect ~1yr comment on someone else's post · Saul_E 2020-05-26 (~6.2yr) · Abnrav ~1yr comment, verified free in Afrikonnect's visit. Every failure the 2026-07-26 retro named was real.
+**3. Re-audit COMPLETE — 15 of 15 openable rows dropped, no false alarms, and the v1 list is now closed.**
+- *Pass 1 (batch-1's five, plus one free)*: SpecBuildLab 2025-10-09 (316d) · SANICE_AI 2026-04-12 (130d, and the competing free pitch is genuinely in-thread) · Joy Adamson ~2026-02-05 comment (~196d, still publicly unanswered) · Afrikonnect ~1yr comment on someone else's post · Saul_E 2020-05-26 (~6.2yr) · Abnrav ~1yr comment, verified free in Afrikonnect's visit.
+- *Pass 2 (the 9 remaining openable rows, 6 page loads)*: eddwardpark 2026-06-12 (69d — the narrowest miss on the list) · KaiaColban 2025-09-06 (348d) · dianewilliams75 / 659ertramp / J_Jie556517 / lucadeza, all 7-10 month comments on one host thread that also carries **5 competing free-help pitches**, so they were saturated as well as stale · Sam A 2020-03-16 (~6.4yr) · techPackets 2022-08-27 (~4yr) · @markgadala 2025-03-20 (518d, snowflake-derived).
+- **Tally: 15 verified and dropped · 10 Reddit rows unverifiable · 0 send-ready.** Every failure the 2026-07-26 retro named was real, and none of the 15 was a false alarm.
+- **Two things worth carrying forward.** `dateModified` is not a post date — row 8 shows a 2026-02-26 edit on a 2025-09-06 post, exactly the number an excerpt pass mistakes for freshness. And verification is cheap: 15 rows cost ~15 page loads, against a list that was logged as "ICP, ready" on eyeballed excerpts and then carried openers, a scored sheet and Paul's approval loop before anyone noticed.
+- **Pass 2 added no VoC.** All 5 threads were harvested; their good lines were already in the file, and the one fresh-looking candidate was a dev-sourcing vendor pitching his own agency (`[vendor]`, not admitted).
+- **The 10 Reddit rows are not a queue.** They are unverifiable by any method available today. They unblock only under option (a) below; if that decision never comes, retire them rather than leave them looking like pending work.
 
 **4. Zero fresh rows, and this time it is a venue finding, not a tooling one.** 21 keyword queries, 5 domain-filtered searches, 4 HN date-filtered queries, 10 date-probes, **23 threads opened in full**. IndieHackers' ≤30-day stream is a launch/promo board: everything in-window is a launch announcement, a success retrospective, a supplier pitch, or a co-founder-wanted ad. Where distress language does appear fresh, a competitor rescue shop is speaking it as content marketing (forgex.systems ×2, StackRadar, QAura, FixBrokenApp, TatePrograms) and the comment sections are other vendors. HN re-confirmed P3's retirement — every in-window hit was a developer discussing AI code quality.
 
@@ -97,12 +103,12 @@ Run artifacts: `rescue-sprint/prospects/p7-search-sweep.md` §7 (method + full l
 
 **6. Next — the venue premise needs testing, not more keywords.** Two sweeps have now returned 0 from the open venues. The grooming cold-eyes already warned IH is low-volume and that the expansion lane is load-bearing; that lane is now proven open and still empty. Before a third identical sweep, one of these:
 - **(a) Get Reddit openable** — it is the one venue where this ICP demonstrably posts (10 of the 25 v1 rows came from it via excerpts). A logged-in browser session or a Reddit API credential turns the single largest coverage hole into the primary lane. **Highest expected value; needs a Paul decision on account/credential use.**
-- **(b) Close out the v1 list cheaply** — the 9 remaining non-Reddit rows are all openable and rows 15-18 share one thread, so it is 6 page loads to finish the re-audit and retire the unverified list for good.
+- ~~**(b) Close out the v1 list cheaply**~~ — **DONE 2026-08-20**, 6 page loads, all 9 dropped. The v1 list no longer carries any unverified row worth checking.
 - **(c) Re-test the cold-public-sourcing premise itself** — if the fresh distressed founder is not publicly posting anywhere reachable, the ≤30-day cold lane may be structurally low-yield, and T3 (warm Gmail pass, blocked-on-Paul) becomes the higher-value path rather than the optional one.
 
 **#12 stays blocked** — still zero sendable rows.
 
-**Batch-1 status (updated 2026-07-26, flat lead-recency rule)**: **ALL 5 messages HOLD — zero sendable rows.** Paul's rule "leads = up to 1 month, no exceptions" flipped the two survivors too: SpecBuildLab (~9.5mo) and Joy Adamson (~5mo, flagged as Paul's one override candidate — still publicly unanswered). `SEND-SHEET.md` carries per-message ⛔HOLD banners so no runner can send anything. Card #12 is **blocked on #29's replacement rows** (or Paul's explicit Joy override).
+**Batch-1 status (updated 2026-07-26, flat lead-recency rule)**: **ALL 5 messages HOLD — zero sendable rows.** Paul's rule "leads = up to 1 month, no exceptions" flipped the two survivors too: SpecBuildLab and Joy Adamson (the latter flagged as Paul's one override candidate — still publicly unanswered). **Ages verified in-thread 2026-08-20**, replacing the 2026-07-26 estimates: SpecBuildLab **2025-10-09 (316 days)**, Joy Adamson **~2026-02-05 (~196 days)** — both older than the estimates suggested. `SEND-SHEET.md` carries per-message ⛔HOLD banners so no runner can send anything. Card #12 is **blocked on #29's replacement rows** (or Paul's explicit Joy override).
 
 **Policy split (Paul, 2026-07-26) — recency gates leads, not voice**:
 - **Leads** (`cold-prospect-list.md`): verified **≤30 days, all venues, no exceptions**. Leads expire.

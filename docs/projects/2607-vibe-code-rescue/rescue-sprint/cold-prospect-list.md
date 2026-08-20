@@ -1,6 +1,6 @@
 # Cold Prospect List - Merged + Deduplicated
 
-> ⚠ **6 OF 25 ROWS NOW RE-AUDITED (2026-08-20) — ALL 6 DROPPED AS LEADS. The other 19 remain UNVERIFIED.** Card #29's first real re-audit pass opened each thread and read the actual timestamp; every row checked failed the flat ≤30-day rule, several by years. **No row in this file is send-ready.** Do not draft or send from these tables. Verdicts in §Re-audit log below; method + full run log in `prospects/p7-search-sweep.md` §7.
+> ⚠ **RE-AUDIT COMPLETE FOR EVERY OPENABLE ROW (2026-08-20). 15 of 25 verified, ALL 15 DROPPED AS LEADS. The remaining 10 are Reddit and cannot be verified at all.** Every openable thread was opened and its real timestamp read; not one row cleared the flat ≤30-day rule — the youngest miss is 69 days, the oldest 6.4 years. **This file now contains zero send-ready rows and no path to one without new sourcing.** Do not draft or send from these tables. Verdicts in §Re-audit log below; method + full run log in `prospects/p7-search-sweep.md` §7.
 >
 > ⚠ **Original warning (2026-07-26)** — batch-1 pre-research found 60% of its sample stale or saturated (recency was eyeballed from excerpts, never read in-thread). The re-audit above turned that 60% into 100% for the rows checked.
 >
@@ -101,6 +101,34 @@ Method: each thread opened once, `datePublished` read from the page (IH ships JS
 
 **Confirmed**: all three failures the 2026-07-26 retro named were real, and reading the timestamp took one page load each. Nothing in this sample was a false alarm.
 
+### Pass 2 — the 9 remaining openable rows (same day, 6 page loads)
+
+| # | handle | verified date (read in-thread) | age | post\|comment | thread health | verdict |
+|---|---|---|---|---|---|---|
+| 7 | eddwardpark | 2026-06-12 | 69 days | post | clean | **DROP as lead** — stale. The narrowest miss on the whole list |
+| 8 | KaiaColban | 2025-09-06 (`dateModified` 2026-02-26 is an edit, not the post date) | 348 days | post | clean | **DROP as lead** — stale |
+| 15 | dianewilliams75 | comment "10 months ago" (host post 2025-10-28) | ~10 months | **comment** on someone else's post | **saturated** — 5 free-help / DM offers in-thread | **DROP as lead** — stale + saturated |
+| 16 | 659ertramp | comment "9 months ago" | ~9 months | **comment** | as above | **DROP as lead** |
+| 17 | J_Jie556517 | comment "7 months ago" | ~7 months | **comment** | as above | **DROP as lead** |
+| 18 | lucadeza | comment "10 months ago" | ~10 months | **comment** | as above | **DROP as lead** |
+| 20 | Sam A | 2020-03-16 | ~6 years 5 months | post | long dead | **DROP as lead** — stale by six years |
+| 21 | techPackets | 2022-08-27 | ~4 years | post | long dead | **DROP as lead** — stale |
+| 25 | @markgadala | 2025-03-20 (snowflake-derived from the status ID) | 518 days | post | n/a | **DROP as lead** — stale |
+
+**Two things this pass settled.** The host thread behind rows 15-18 is itself a help-offer post carrying five competing free-help pitches, so all four rows were saturated as well as stale — check 5 would have caught them even if the dates had held. And `dateModified` is not a post date: row 8 shows a 2026-02-26 edit on a 2025-09-06 post, which is exactly the kind of number an excerpt-based pass mistakes for freshness.
+
+**VoC**: all 5 threads harvested, **zero new `[VERBATIM-founder]` lines admitted.** Their good quotes were already captured in the original P8 pass, and the one fresh-looking candidate ("I found international devs who were so much cheaper") turned out to be a dev-sourcing vendor pitching his own agency — tagged `[vendor]`, not admitted.
+
 **VoC**: every dropped thread was harvested before closing, per the lead-vs-voice split. Rows 1/2/12/13 quotes were already in `voice-of-customer.md`; no new lines came from the re-audit itself (the 6 new founder lines came from the fresh-sourcing pass — see `prospects/p7-search-sweep.md` §7).
 
-**Still unverified (19 rows)**: 4-11, 14-18, 20-25. **Ten are Reddit** (4, 5, 6, 9, 10, 11, 14, 22, 23, 24) — still un-openable, so they cannot be verified by any available method and cannot become leads. **The nine non-Reddit rows** (7, 8, 15, 16, 17, 18, 20, 21, 25) are all openable now, and rows 15-18 share a single thread URL, so closing out the entire remainder of the v1 list costs **six page loads**. Do that first in the next pass.
+### Final tally
+
+| | Count | Rows |
+|---|---|---|
+| **Verified and dropped as leads** | **15** | 1, 2, 3, 7, 8, 12, 13, 15-21, 25 |
+| **Unverifiable — Reddit, un-openable** | **10** | 4, 5, 6, 9, 10, 11, 14, 22, 23, 24 |
+| **Send-ready** | **0** | — |
+
+**The v1 list is closed.** Every row that could be checked was checked, and every one failed. The 10 Reddit rows are not pending work — they are unverifiable by any method available today, so they cannot become leads and should not be re-adjudicated. They unblock only if Paul approves Reddit account or API access (`backlog.md` §Card #29, option (a)); if that never happens, the honest move is to retire them rather than leave them looking like a queue.
+
+**Verification is cheap; excerpts are not.** Fifteen rows cost about fifteen page loads. The same fifteen rows were logged in 2026-07-22 as "ICP, ready" on eyeballed excerpt dates, then carried five openers, a scored sheet and Paul's approval loop before batch-1 pre-research caught the first three. Read the date at capture.
