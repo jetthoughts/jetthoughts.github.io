@@ -1,5 +1,24 @@
 # Bundle Update Log
 
+## 2026-08-20 (ownership inverted) - vault owns ALL operations, repo is growth/marketing only
+
+* **Paul's directive** supersedes the 2026-08-17 narrow split: the vault
+  (`~/Documents/pkm`) now owns the entire operating loop, not just
+  positioning/bet status. Migrated to vault notes: `jt-operations`
+  (was `docs/business/operating-system.md`), `jt-vcr-pipeline` (the only copy
+  of the numbers), `jt-vcr-runbook`, `jt-vcr-assumptions`. Repo files replaced
+  by pointer stubs; full pre-move content in git history.
+* **The 2026-08-17 binding argument was answered by moving the bindings too**:
+  pipeline + runbook + register migrated in the same pass, so the weekly loop
+  still reads from one place - the vault.
+* **Unchanged**: claims canon stays repo-owned and test-enforced; campaign
+  artifacts (openers, kits, specs, VoC, landing, posts) stay under
+  `docs/projects/2607-*`; the vault is host-only, so container/CI sessions
+  treat operations as out of scope.
+* Updated: `workflows/company-layer-ownership.md` (re-settled),
+  `workflows/outbound-sprint.md` (ledger pointer), CLAUDE.md/AGENTS.md banners,
+  flow-router, BASE_HANDBOOK, docs/README, docs/business/*.
+
 ## 2026-08-17 (bet status) - Vibe Code Rescue Parked, Nov 30 suspended
 
 * **Parked until September 2026** (Paul). The vault frontmatter

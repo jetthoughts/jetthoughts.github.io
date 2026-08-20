@@ -1,11 +1,11 @@
 ---
 type: Ownership Contract
 title: Company-layer ownership - vault vs repo vs claims canon
-description: Which surface owns identity/positioning/bet status, which owns the weekly operating loop, and which owns company facts. Settled 2026-08-17 after the two banners disagreed.
+description: The vault owns ALL operations (identity, bets, weekly loop, pipeline, runbook, assumptions); the repo owns growth/marketing campaigns; the claims canon owns company facts. Re-settled 2026-08-20, superseding the 2026-08-17 narrow split.
 tags: [ownership, business, vault, claims-canon]
 generated:
-  by: claude-opus/4.8
-  at: 2026-08-17T00:00:00Z
+  by: claude-fable/5
+  at: 2026-08-20T00:00:00Z
 ---
 
 Three surfaces, three jobs. Getting these confused is what produced the
@@ -13,20 +13,23 @@ Three surfaces, three jobs. Getting these confused is what produced the
 
 | Surface | Owns | Examples |
 |---|---|---|
-| **Vault** (`jt-business-os`, `jt-vibe-code-rescue` in `~/Documents/pkm`) | Identity, positioning, bets and bet **status** | "what we're doing and why" |
-| **This repo** (`docs/business/operating-system.md`) | The **weekly operating loop** | goal, OKR (§3), rocks (§4), weekly numbers (§1) |
+| **Vault** (`~/Documents/pkm`: `jt-business-os`, `jt-operations`, `jt-vibe-code-rescue`, `jt-vcr-pipeline`, `jt-vcr-runbook`, `jt-vcr-assumptions`) | Identity, positioning, bets and bet **status**, AND the **entire operating loop** — goal, OKR, rocks, issues, weekly numbers, runbook, kill-criteria | "what we're doing, why, and this week's numbers" |
+| **This repo** | **Growth/marketing campaigns** | blog, SEO, LinkedIn drafts, landing pages, course, outreach copy/kits, all tooling/tests |
 | **Claims canon** (`.okf/content/claims-canon.md`) | Company **facts** | founding date, tenure, ratings, retention |
 
-The one-line test: **the vault decides what we're doing; the canon decides
-what we're allowed to say; the repo runs the week.**
+The one-line test: **the vault decides what we're doing and runs the week;
+the canon decides what we're allowed to say; the repo ships the campaigns.**
 
-# Why the weekly loop is repo-owned (the narrow split)
+# History: the narrow split (2026-08-17 → 2026-08-20)
 
-The broad alternative - move OKR and rocks to the vault, leave only numbers
-here - was rejected 2026-08-17. The 2607 runbook, backlog, pipeline ledger
-and booking-page spec all bind to `operating-system.md` §1/§7. Splitting the
-OKR from the numbers that measure it breaks those bindings and makes the
-weekly loop read from two places.
+On 2026-08-17 the weekly loop was deliberately kept repo-owned because the
+2607 runbook, backlog, pipeline ledger and booking-page spec all bound to
+`operating-system.md` §1/§7. On 2026-08-20 Paul inverted this: the vault owns
+operations wholesale, and the bindings moved WITH the loop — pipeline, runbook
+and assumptions register migrated to the vault in the same pass, so the weekly
+loop still reads from one place (the vault). The repo files are pointer stubs;
+full pre-move content is in git history. The vault is host-only: container/CI
+sessions treat operations as out of scope.
 
 # Facts are never vault-owned
 
@@ -54,7 +57,7 @@ were the stale side, and both now say Parked. This is the worked example of the
 ownership rule: the vault held the truth about bet status, and the repo was the
 mirror that had drifted. When the two disagree, the vault wins for status.
 
-Consequence, recorded in `docs/business/operating-system.md`: **no bet is in
+Consequence, recorded in vault `jt-operations`: **no bet is in
 Validating** (intended - do not promote a candidate to fill the slot), and the
 **Nov 30 target is suspended, not rescheduled**. The evidence for suspending
 rather than moving it: KR1 was green while KR2-KR4 sat at zero and no outreach
