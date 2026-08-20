@@ -413,3 +413,87 @@
     height: auto;
   }
 }
+
+
+/* ==================================================================
+   Rescue Room shared pieces (moved from pages/blog-list.css 2026-08-20).
+   single-post.css is a member of the blog-list, blog-single and
+   course-single bundles, so these serve all three surfaces from one
+   definition site. Tokens: SCOPED on purpose (blog-first, 20.01 plan) -
+   promote to foundations/css-variables.css in Phase 1a, then delete.
+   ================================================================== */
+:root {
+  --rr-ink-900: #14110f;
+  --rr-ink-700: #3d3733;
+  --rr-ink-500: #6b625c;
+  --rr-line: #e7e1d9;
+  --rr-surface-raised: #faf7f3;
+}
+
+/* Audit CTA band - blog index (before pagination) and post pages
+   (after tags). Rendered by partials/blog/cta-band.html. */
+.blog-cta {
+  text-align: center;
+  background: var(--rr-surface-raised);
+  border-radius: 16px;
+  padding: 40px 24px;
+  margin: 48px 0 8px;
+}
+
+/* .blog scope + !important margin: must beat style.css's
+   `.blog h2:not(.post-title)` (29px / margin 48px 0 16px !important),
+   which otherwise wins on specificity and blows up the band's rhythm. */
+.blog .blog-cta h2 {
+  font-size: 1.25em;
+  line-height: 1.3;
+  letter-spacing: normal;
+  margin: 0 0 8px !important;
+  color: var(--rr-ink-900);
+}
+
+.blog-cta p {
+  font-size: 0.9em;
+  color: var(--rr-ink-500);
+  max-width: 46ch;
+  margin: 0 auto 20px;
+}
+
+.blog-cta .blog-cta-btn {
+  display: inline-block;
+  background: var(--color-ruby);
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  border-radius: 6px;
+  padding: 13px 24px;
+}
+
+.blog-cta .blog-cta-btn:hover {
+  background: var(--color-ruby-hover);
+}
+
+.blog-cta .blog-cta-note {
+  font-size: 0.8em;
+  color: var(--rr-ink-500);
+  margin: 14px auto 0;
+}
+
+.blog-cta .blog-cta-note a {
+  color: var(--rr-ink-900) !important;
+}
+
+
+@media (max-width: 860px) {
+  .blog-cta .blog-cta-btn { display: block; }
+}
+
+/* Post-bottom "Filed under" tags: ink, not the late-cascade #0066d6
+   anchor blue (same monster + same !important workaround as
+   pages/blog-list.css / vibe-code-rescue.css; delete in Phase 1a). */
+.blog .post-tags a {
+  color: var(--rr-ink-500) !important;
+}
+
+.blog .post-tags a:hover {
+  color: var(--color-ruby) !important;
+}

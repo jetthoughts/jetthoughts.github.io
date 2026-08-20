@@ -39,59 +39,55 @@
 {{ define "main" }}
   <div class="blog-index-page">
     <div class="blog">
-      <div
-        style="max-width: 960px; margin:0 auto; padding-left:18px;padding-right:18px">
-              <div style="max-width: 43rem;">
-                <h1
-                  class="fl-heading"
-                  style="margin: 0!important;padding: 0!important">
-                  Blog
-                </h1>
+      <div class="blog-index">
+        <div>
+          {{ if eq .Kind "taxonomy" }}
+            {{/* Taxonomy root (/tags/): .Pages are TERM pages, not posts —
+                 feeding them into post rows renders garbage cards. Render a
+                 tag index instead, most-covered first. */}}
+            <span class="blog-eyebrow">Blog</span>
+            <h1
+              class="fl-heading"
+              style="margin: 0!important;padding: 0!important">
+              Browse by tag
+            </h1>
 
-                <p>
-                  Browse through our blog page filled with updated information
-                  and the latest tips to help you achieve your goals.
-                </p>
+            <p class="blog-lead">
+              Every topic we've written about, most-covered first.
+            </p>
 
-                <br />
+            <div class="blog-filters blog-tag-index">
+              {{ range .Data.Terms.ByCount }}
+                <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="blog-tag-count">{{ .Count }}</span></a>
+              {{ end }}
+            </div>
+          {{ else }}
+            {{ $filtered := where .Pages "Params.course_chapter" "!=" true }}
 
-                {{ range (.Paginate (.Pages.ByParam "created_at").Reverse).Pages }}
-                  <a
-                    class="link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="{{ .RelPermalink }}">
-                    <div class="blog-post">
-                      <div class="post-image">
-                        {{ partial "blog/img-cropped.html" (dict "Page" . "width" 180 "height" 180) }}
-                      </div>
-                      <div class="post-content">
-                        <h2 class="post-title">{{ .Title }}</h2>
-                        <div class="post-meta">
-                          <div class="post-tags">
-                            {{ with .Params.tags }}
-                              {{ range . }}
-                                <a href="/blog/tags/{{ . | urlize }}/"
-                                  >#{{ . }}</a
-                                >
-                              {{ end }}
-                            {{ end }}
-                          </div>
-                          {{ if .Params.created_at }}
-                            <span class="post-date"
-                              >{{ dateFormat "Jan 2, 2006" .Params.created_at }}</span
-                            >
-                          {{ end }}
-                        </div>
-                        <div>{{ .Params.description }}</div>
-                      </div>
-                    </div>
-                  </a>
-                {{ end }}
+            <span class="blog-eyebrow">Blog</span>
+            <h1
+              class="fl-heading"
+              style="margin: 0!important;padding: 0!important">
+              {{ .Title }}
+            </h1>
 
-        {{ partial "pagination.html" . }}
+            <p class="blog-lead">
+              {{ len $filtered }} {{ if eq (len $filtered) 1 }}post{{ else }}posts{{ end }} tagged
+              <em>{{ .Title | lower }}</em> — the same founder-tested patterns, filtered.
+            </p>
+
+            {{ partial "blog/filters.html" . }}
+
+            {{ range (.Paginate $filtered.ByDate.Reverse).Pages }}
+              {{ partial "blog/post-row.html" . }}
+            {{ end }}
+
+            {{ partial "blog/cta-band.html" . }}
+
+            {{ partial "pagination.html" . }}
+          {{ end }}
+        </div>
       </div>
     </div>
   </div>
-</div>
 {{ end }}

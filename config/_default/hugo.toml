@@ -23,6 +23,13 @@ disableKinds = []
   style = "dracula"
   tabWidth = 4
 
+# .Date falls back to the dev.to import field: 20 published, tagged posts
+# carry only created_at, so under Hugo's default resolution they date as
+# 0001-01-01 - sinking to the end of every ByDate list and rendering no date.
+# Order stays date-first, so posts with both fields are unaffected.
+[frontmatter]
+  date = ["date", "created_at", "publishDate", "lastmod"]
+
 [permalinks]
   pages = "/:slug/"
   blog = "/blog/:slug/"

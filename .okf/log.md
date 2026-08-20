@@ -2032,3 +2032,84 @@ Also settled: `bin/qtest --changed` rotates random extra pages per run, so two
 consecutive runs cover different sets. A green qtest is not "these pages are
 fine", it is "the pages it happened to pick are fine". `bin/test` is the
 constant net.
+## 2026-08-20 — Site design system proposed; A/B testing ruled out on arithmetic
+
+Proposed one design system for site chrome (ADR-0003 "Rescue Room") after
+measuring the incoherence: `--color-primary: #1a8cff` is named primary but
+appears in no brand definition, with 161 `var()` references (~140 painting
+visibly) and 52 literals; two spacing tokens total; homepage 10,394px with six
+background switches and six primary CTAs. The course page already implements
+the proposed language independently, which makes this extraction rather than a
+rebrand. Rollout is the FL-burn-down strangler, sequenced by whether layout
+moves — recolour and spatial split into separate PRs so reverting one leaves a
+coherent state.
+
+The request was "A/B test before each big change". It cannot be met, and the
+reason is already in `.okf/workflows/analytics-access.md`: GA4 is 85–90% bots,
+so real traffic is ~9.7 human sessions/day (145 GSC clicks in 28 days plus
+Bing/DDG), not the ~300/day a raw pull reports. The cheapest engagement test
+needs 192 days; lead conversion ~3.6 years. ADR-0004 records this plus the
+replacement gates (qualitative / guardrails / reversibility) and a ~200/day
+revisit threshold. Also found: `keyEvents` is no longer 0 — `page_view` has
+been marked a key event since the 08-13 audit, so GA4 now reports 4,063 "key
+events" that count page views. Worse than the zero it replaced. And the device
+split is worth carrying into design work: desktop is 94% of impressions at
+0.11% CTR, mobile 6% at 0.65% and a better average position — the humans who
+actually arrive skew mobile, so mobile review outranks desktop.
+
+Process note: the raw GA4 numbers were pulled before reading the OKF concept
+that explains how to read them, and the first draft of ADR-0004 was sized on
+bot traffic. The concept existed and said so. Read `.okf/` for the domain
+before querying it, not after.
+Detail: `docs/adr/0003-site-design-system.md`, `docs/adr/0004-static-site-experimentation.md`,
+`docs/projects/2608-site-design-system/`, `.okf/workflows/analytics-access.md`.
+
+## 2026-08-20 - Blog-first: index restyled; the feature-slot mask lesson
+
+Paul re-sequenced 2608 to blog-first - confirm engagement where the humans
+already land before touching chrome or money pages. Clarity baseline
+(bot-filtered): blog pages 25.2% avg scroll depth / 26.3s engagement vs site
+avg 33-40% / 28-34s. Phase 2.1 shipped: feature slot for the newest post,
+curated ICP filter pills (rails/ruby/security/startup/hiring/ai - verified
+live in prod; top-by-count would surface dev.to noise), 1200:630 landscape
+covers replacing the letterboxed 180x180 squares, reading time on every row,
+CTA band with Clutch note. Tokens scoped into blog-list.css under an rr-
+prefix for Phase 1a promotion. The late-cascade #0066d6 anchor monster
+(a:not(...)x7, ~8 class-levels) forced the same scoped !important workaround
+vibe-code-rescue.css documents; a third page fighting it strengthens the
+Phase 1a case for deleting it.
+
+Testing lesson worth keeping: a NEW content-churning region needs a skip_area
+mask THE SAME COMMIT it ships. The feature slot escaped the existing
+.blog-post mask, and its lazy cover raced the snapshot - baselines
+re-recorded differently on consecutive runs. Masking .post-feature fixed
+determinism AND the future churn (the slot rotates with every published
+post; unmasked it would break the baseline weekly). Also re-learned: the
+dirty-fixture guard diffs against git HEAD - staging an accepted PNG changes
+nothing; commit it, then re-run.
+Detail: docs/projects/2608-site-design-system/20-29-strategy/20.01-rollout-plan.md
+
+## 2026-08-20 - Blog 2.1+2.2 complete: tag pages consolidated, article-end CTA, date contract
+
+Tag pages joined the index shell via three shared partials (blog/post-row,
+blog/filters, blog/cta-band) after months of drift (target=_blank cards,
+hashtag tags, H1 "Blog" on every tag). Codex review of the consolidation
+returned FAIL with two majors, both real: the /tags/ taxonomy root was
+rendering TERM objects as post cards (now a tag index by count), and 20
+published dev.to posts carried only created_at, dating as 0001-01-01 under
+ByDate - fixed at the root with [frontmatter] date = ["date","created_at",...]
+so ordering and display unify across index/tags/RSS/sitemap. Posts gained an
+article-end audit CTA (the one surface with no conversion path); rr- tokens
+and .blog-cta moved to single-post.css, a member of all three blog bundles -
+one definition site. The #0066d6 late-cascade anchor rule now has a THIRD
+page fighting it with scoped !important; Phase 1a should delete it.
+
+Process notes worth keeping: dev disableKinds hid the taxonomy 404s until
+filter pills made tag links primary navigation - when a dev-only kind gets
+promoted to navigation, re-enable the kind the same commit. And the mobile
+_pagination baseline froze pre-rebuild CSS on its first record (record raced
+the postcss rebuild) - when a just-recorded baseline disagrees with the
+reviewed rendered state, suspect the race before suspecting the render.
+Linux baselines recorded through the CI dispatch both times, per the earlier
+ARM-drift lesson.
+Detail: docs/projects/2608-site-design-system/20-29-strategy/20.01-rollout-plan.md

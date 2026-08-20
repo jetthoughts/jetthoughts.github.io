@@ -4,3 +4,5 @@
 
 - `0001-css-component-simplification.md`
 - `0002-css-validation-checklist.md` (renamed 2026-08-08; was a second `0001-`)
+- `0003-site-design-system.md` — one design system for site chrome ("Rescue Room")
+- `0004-static-site-experimentation.md` — what gets A/B tested, what cannot be, what replaces it
