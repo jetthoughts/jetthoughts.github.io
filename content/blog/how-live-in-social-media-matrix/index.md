@@ -5,7 +5,8 @@ remote_id: 2181492
 dev_to_id: 2181492
 dev_to_url: https://dev.to/jetthoughts/how-to-live-in-the-social-media-matrix-35d0
 title: How To Live In The Social Media Matrix
-description: In today’s digital age, we find ourselves entangled in a web of social media that often feels like a...
+description: "In today’s digital age, we find ourselves entangled in a web of social media that often feels like a modern-day Matrix."
+seo_override: true
 created_at: '2024-12-30T08:32:44Z'
 edited_at: '2025-01-30T03:16:16Z'
 draft: false

@@ -5,7 +5,8 @@ remote_id: 1852622
 dev_to_id: 1852622
 dev_to_url: https://dev.to/jetthoughts/how-to-create-a-technical-post-in-a-short-time-4i53
 title: How to create a technical post in a short time
-description: After reading thousands of posts, it's time to share a workflow that will help those who are creating...
+description: "After reading thousands of posts, it’s time to share a workflow that will help those who are creating amazing things to blog more easily and often."
+seo_override: true
 created_at: '2024-05-14T12:36:24Z'
 edited_at: '2024-11-26T16:05:32Z'
 draft: false

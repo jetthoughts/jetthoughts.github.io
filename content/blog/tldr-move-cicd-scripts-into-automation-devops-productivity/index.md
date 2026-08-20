@@ -5,7 +5,8 @@ remote_id: 1205643
 dev_to_id: 1205643
 dev_to_url: https://dev.to/jetthoughts/tldr-move-cicd-scripts-into-automation-373c
 title: 'TL;DR: Move CI/CD scripts into .automation'
-description: Today our /bin folder has become overwhelmed with different development tools and scripts.  We put...
+description: "Today our /bin folder has become overwhelmed with different development tools and scripts."
+seo_override: true
 created_at: '2022-09-28T16:13:54Z'
 edited_at: '2024-11-25T15:40:31Z'
 date: 2022-09-28

@@ -5,7 +5,8 @@ remote_id: 1853605
 dev_to_id: 1853605
 dev_to_url: https://dev.to/jetthoughts/git-minimum-for-effective-project-development-2ce1
 title: Git minimum for effective project development
-description: For beginners who are not familiar with Git or GitFlow, we grabbed the most common commands to be...
+description: "For beginners who are not familiar with Git or GitFlow, we grabbed the most common commands to be effective from the first day."
+seo_override: true
 date: 2024-05-15
 created_at: '2024-05-15T07:29:21Z'
 edited_at: '2024-12-06T11:38:39Z'

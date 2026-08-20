@@ -5,7 +5,8 @@ remote_id: 1852747
 dev_to_id: 1852747
 dev_to_url: https://dev.to/jetthoughts/a-practical-guide-to-writing-introductions-4d5k
 title: A Practical Guide To Writing Introductions
-description: Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It...
+description: "Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It simply summarises the main points of your article."
+seo_override: true
 created_at: '2024-05-14T14:14:26Z'
 edited_at: '2024-11-26T16:05:10Z'
 draft: false

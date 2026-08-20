@@ -5,7 +5,8 @@ remote_id: 1877579
 dev_to_id: 1877579
 dev_to_url: https://dev.to/jetthoughts/how-to-learn-ruby-4pib
 title: How to Learn Ruby
-description: Starting to learn a new programming language or a new framework every person faces a problem — what...
+description: "Starting to learn a new programming language or a new framework every person faces a problem — what should I start studying with?"
+seo_override: true
 created_at: '2024-06-05T06:15:06Z'
 edited_at: '2024-11-25T15:35:29Z'
 date: 2024-06-05

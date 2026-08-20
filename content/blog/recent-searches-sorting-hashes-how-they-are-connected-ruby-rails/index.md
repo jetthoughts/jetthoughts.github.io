@@ -5,7 +5,8 @@ remote_id: 1879395
 dev_to_id: 1879395
 dev_to_url: https://dev.to/jetthoughts/recent-searches-sorting-hashes-how-they-are-connected-4965
 title: 'Recent Searches & Sorting Hashes: How They are Connected'
-description: In one of the applications, that we are developing, we needed to implement the storing of 10 last...
+description: "In one of the applications, that we are developing, we needed to implement the storing of 10 last user search requests."
+seo_override: true
 date: 2024-06-06
 created_at: '2024-06-06T15:55:49Z'
 edited_at: '2024-11-26T16:02:35Z'

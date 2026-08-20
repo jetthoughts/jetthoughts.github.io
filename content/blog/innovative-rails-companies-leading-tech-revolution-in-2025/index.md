@@ -5,7 +5,8 @@ remote_id: 2244342
 dev_to_id: 2244342
 dev_to_url: https://dev.to/jetthoughts/innovative-rails-companies-leading-the-tech-revolution-in-2025-44gi
 title: Innovative Rails Companies Leading the Tech Revolution in 2025
-description: In 2025, the rail industry is buzzing with innovation, and it's the rails companies at the forefront...
+description: "In 2025, the rail industry is buzzing with innovation, and it's the rails companies at the forefront who are making waves."
+seo_override: true
 created_at: '2025-01-27T11:24:35Z'
 edited_at: '2025-01-30T02:36:38Z'
 date: 2025-01-27

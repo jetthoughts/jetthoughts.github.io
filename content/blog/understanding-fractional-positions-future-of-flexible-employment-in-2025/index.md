@@ -5,7 +5,8 @@ remote_id: 2244362
 dev_to_id: 2244362
 dev_to_url: https://dev.to/jetthoughts/understanding-fractional-positions-the-future-of-flexible-employment-in-2025-4c80
 title: 'Understanding Fractional Positions: The Future of Flexible Employment in 2025'
-description: Fractional positions are changing how we work, giving both companies and workers more flexibility. In...
+description: "Fractional positions are changing how we work, giving both companies and workers more flexibility. In 2025, this trend is expected to grow even more."
+seo_override: true
 created_at: '2025-01-27T11:32:03Z'
 edited_at: '2025-01-30T02:35:59Z'
 draft: false

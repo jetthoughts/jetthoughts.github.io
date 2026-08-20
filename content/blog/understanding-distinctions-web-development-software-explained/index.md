@@ -5,7 +5,8 @@ remote_id: 2223826
 dev_to_id: 2223826
 dev_to_url: https://dev.to/jetthoughts/understanding-the-distinctions-web-development-and-software-development-explained-4eh3
 title: 'Understanding the Distinctions: Web Development and Software Development Explained'
-description: When it comes to tech careers, web development and software development often get tossed around like...
+description: "When it comes to tech careers, web development and software development often get tossed around like they're the same thing. But they're not."
+seo_override: true
 created_at: '2025-01-19T06:45:24Z'
 edited_at: '2025-01-30T02:42:37Z'
 date: 2025-01-19

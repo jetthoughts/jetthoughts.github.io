@@ -5,7 +5,8 @@ remote_id: 2193530
 dev_to_id: 2193530
 dev_to_url: https://dev.to/jetthoughts/weekly-ruby-roundup-highlights-from-ruby-4-1435
 title: 'Weekly Ruby Roundup: Highlights from Ruby #4'
-description: This week in the Ruby community was bustling with activity, featuring a variety of articles and...
+description: "This week in the Ruby community was bustling with activity, featuring a variety of articles and announcements that cater to developers and enthusiasts alike."
+seo_override: true
 created_at: '2025-01-07T18:42:25Z'
 edited_at: '2025-01-30T02:49:57Z'
 draft: false

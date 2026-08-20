@@ -5,7 +5,8 @@ remote_id: 2180768
 dev_to_id: 2180768
 dev_to_url: https://dev.to/jetthoughts/innovative-ruby-on-rails-projects-to-boost-your-development-skills-in-2024-1je9
 title: Innovative Ruby on Rails Projects to Boost Your Development Skills in 2024
-description: Ruby on Rails, often just called Rails, is a popular framework for building web applications. If...
+description: "Ruby on Rails, often just called Rails, is a popular framework for building web applications."
+seo_override: true
 created_at: '2024-12-29T17:47:43Z'
 edited_at: '2025-01-30T03:16:52Z'
 draft: false

@@ -5,7 +5,8 @@ remote_id: 2170904
 dev_to_id: 2170904
 dev_to_url: https://dev.to/jetthoughts/mastering-rails-with-react-a-comprehensive-guide-for-2024-363j
 title: 'Mastering Rails with React: A Comprehensive Guide for 2024'
-description: If you're looking to mix the power of Rails with the flexibility of React, this guide is for you....
+description: "If you're looking to mix the power of Rails with the flexibility of React, this guide is for you."
+seo_override: true
 created_at: '2024-12-23T11:17:03Z'
 edited_at: '2025-01-30T03:23:52Z'
 date: 2024-12-23

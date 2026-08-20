@@ -5,7 +5,8 @@ remote_id: 2248179
 dev_to_id: 2248179
 dev_to_url: https://dev.to/jetthoughts/unlocking-success-how-a-software-engineer-can-build-a-thriving-business-in-2025-6d8
 title: 'Unlocking Success: How a Software Engineer Can Build a Thriving Business in 2025'
-description: Thinking about starting your own business as a software engineer in 2025? You're not alone. Many are...
+description: "Thinking about starting your own business as a software engineer in 2025? You're not alone. Many are turning their coding skills into successful ventures."
+seo_override: true
 created_at: '2025-01-29T11:53:25Z'
 date: 2025-01-29
 edited_at: '2025-01-30T02:32:25Z'

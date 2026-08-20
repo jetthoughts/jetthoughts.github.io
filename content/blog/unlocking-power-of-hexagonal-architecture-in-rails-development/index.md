@@ -5,7 +5,8 @@ remote_id: 2187802
 dev_to_id: 2187802
 dev_to_url: https://dev.to/jetthoughts/unlocking-the-power-of-hexagonal-architecture-in-rails-development-1ehh
 title: Unlocking the Power of Hexagonal Architecture in Rails Development
-description: Last night, Fito and I watched Alistair Cockburn's Hexagonal Architecture talk from the Tech...
+description: "Last night, Fito and I watched Alistair Cockburn's Hexagonal Architecture talk from the Tech Excellence Conference."
+seo_override: true
 created_at: '2025-01-03T16:47:24Z'
 edited_at: '2025-01-30T02:53:46Z'
 draft: false

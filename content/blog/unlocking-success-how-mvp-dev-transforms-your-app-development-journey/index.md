@@ -5,7 +5,8 @@ remote_id: 2165048
 dev_to_id: 2165048
 dev_to_url: https://dev.to/jetthoughts/unlocking-success-how-mvp-dev-transforms-your-app-development-journey-48ig
 title: 'Unlocking Success: How MVP Dev Transforms Your App Development Journey'
-description: So you're thinking about building an app, huh? It's a big journey, but there's a way to make it...
+description: "So you're thinking about building an app, huh? It's a big journey, but there's a way to make it smoother and smarter. Enter MVP dev."
+seo_override: true
 created_at: '2024-12-19T11:15:06Z'
 edited_at: '2024-12-19T11:26:11Z'
 draft: false

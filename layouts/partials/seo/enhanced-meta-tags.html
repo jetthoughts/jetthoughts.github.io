@@ -7,19 +7,25 @@
 {{- $titleSuffix := " | JetThoughts" -}}
 {{- $maxTitleLength := 60 -}}
 
+{{/* Truncate EXACTLY once. The old code cut a post title to 45, appended
+     " | JetThoughts Blog" (19 chars) for 64, then cut the result again at
+     60 - so any title of 42+ chars shipped an ellipsis AFTER the brand:
+     "How we configure Simplecov for our Ruby on | JetThoughts…".
+     454 of 614 posts were over 45 chars on 2026-08-21, and both of the
+     page-1 posts we were fixing rendered that way at 0.86% CTR.
+     Post titles now carry no brand suffix and get the whole 60; Google
+     appends the site name itself when it wants one. */}}
 {{- if eq .Section "blog" -}}
   {{- if .IsSection -}}
     {{- $title = "Expert Software Development Blog - 540+ Articles | JT" -}}
   {{- else -}}
-    {{- $blogTitle := .Title | truncate 45 "" -}}
-    {{- $title = printf "%s | JetThoughts Blog" $blogTitle -}}
+    {{- $title = .Title | truncate $maxTitleLength "" -}}
   {{- end -}}
 {{- else -}}
   {{- $title = printf "%s%s" .Title $titleSuffix -}}
-{{- end -}}
-
-{{- if gt (len $title) $maxTitleLength -}}
-  {{- $title = $title | truncate $maxTitleLength "…" -}}
+  {{- if gt (len $title) $maxTitleLength -}}
+    {{- $title = $title | truncate $maxTitleLength "…" -}}
+  {{- end -}}
 {{- end -}}
 
 <title>{{ $title }}</title>

@@ -5,7 +5,8 @@ remote_id: 1853571
 dev_to_id: 1853571
 dev_to_url: https://dev.to/jetthoughts/feature-branches-and-where-to-find-them-46a7
 title: Feature Branches and Where to Find Them
-description: Here we want to go through the feature branch process, show what downsides this approach may have...
+description: "Here we want to go through the feature branch process, show what downsides this approach may have and share why it causes us pain."
+seo_override: true
 created_at: '2024-05-15T07:17:21Z'
 edited_at: '2024-12-06T11:38:00Z'
 date: 2024-05-15
