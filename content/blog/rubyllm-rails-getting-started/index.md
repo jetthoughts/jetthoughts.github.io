@@ -21,11 +21,11 @@ metatags:
 
 Adding a second LLM provider is where the wrapper class dies. The OpenAI client you wrote in an afternoon buries its text under `choices[0].message.content`; Anthropic shapes its responses differently and streams differently, so your service object grows a case statement and then a retry matrix. Six months in, you're maintaining a worse version of a gem that already exists.
 
-[RubyLLM](https://rubyllm.com) gives Rails one interface for all of it. `RubyLLM.chat` speaks to OpenAI, Anthropic, Gemini, Ollama, and any OpenAI-compatible endpoint through the same handful of methods, and the whole thing rests on [three dependencies: Faraday, Zeitwerk, and Marcel](https://github.com/crmne/ruby_llm).
+[RubyLLM](https://rubyllm.com) gives Rails one interface for all of it. `RubyLLM.chat` speaks to OpenAI, Anthropic, Gemini, Ollama, and any OpenAI-compatible endpoint through the same handful of methods, and [the dependency list stays deliberately light](https://github.com/crmne/ruby_llm): Faraday and its plugins for HTTP, Zeitwerk, Marcel, and a few small support gems - no ML stack riding along.
 
 The gem sits at [version 1.16.0 as we write this](https://rubygems.org/gems/ruby_llm) - and there are still jobs where we'd skip it entirely.
 
-## One interface, three dependencies
+## One interface, a light dependency list
 
 Install is a Gemfile line; Ruby 3.1.3 or newer is required, per the gemspec.
 
