@@ -5,7 +5,11 @@
 <a class="link" href="{{ .RelPermalink }}">
   <div class="blog-post">
     <div class="post-image">
-      {{ partial "blog/img-cropped.html" (dict "Page" . "width" 220 "height" 116) }}
+      {{/* mobileWidth 784 = the widest the stacked cover gets (860px
+           breakpoint - 20px page padding x2 - 18px index padding x2);
+           mobileSizes is the vw expression matching that box at every
+           smaller width. */}}
+      {{ partial "blog/img-cropped.html" (dict "Page" . "width" 220 "height" 116 "mobileWidth" 784 "mobileSizes" "calc(100vw - 76px)") }}
     </div>
     <div class="post-content">
       <h2 class="post-title">{{ .Title }}</h2>

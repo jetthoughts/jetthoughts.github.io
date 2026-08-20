@@ -70,7 +70,9 @@
                     </div>
                   </div>
                   <div class="post-image">
-                    {{ partial "blog/img-cropped.html" (dict "Page" . "width" 440 "height" 231) }}
+                    {{/* Feature: also loses the card's 20px padding x2 on
+                         mobile, and it's the FIRST visual there - eager. */}}
+                    {{ partial "blog/img-cropped.html" (dict "Page" . "width" 440 "height" 231 "mobileWidth" 744 "mobileSizes" "calc(100vw - 116px)" "loading" "eager") }}
                   </div>
                 </div>
               </a>
