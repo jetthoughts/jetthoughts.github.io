@@ -2009,3 +2009,26 @@ self-critics inherited the implementer's assumption that the body WAS the post.
    postcss binary until `bun install` runs. Put that line in the brief of any
    agent spawned with `isolation: worktree` that needs a dev server, or it burns
    its first tool calls rediscovering it.
+
+## 2026-08-20 (correction) — the visual suite DOES cover testimonials
+
+Earlier today I logged "the visual suite does not cover the testimonial
+carousel" because removing four of five testimonials moved zero of 53
+screenshots. **That conclusion was wrong.** Replacing them with three real
+Clutch reviews moved four baselines with real diffs - `nav/use_cases` 6.2%,
+`services/fractional-cto/_overview` 10.8%, `_testimonials` 2.4%, and
+`mobile/about_us` 7.1%. Four separate pages render `data/testimonials.yaml`
+and the suite sees all of them.
+
+Why the first change showed nothing is still unexplained, and that is the part
+worth carrying: **a zero-diff run is not proof of coverage.** Two plausible
+causes - a baseline already refreshed by an earlier run in the same session
+(the stale-baseline trap in reverse), or the carousel showing only slide one so
+removing slides 2-5 changed nothing visible while adding differently-sized ones
+did. Either way, prove coverage by making a change you EXPECT to move a pixel
+and watching it fail, not by observing a pass.
+
+Also settled: `bin/qtest --changed` rotates random extra pages per run, so two
+consecutive runs cover different sets. A green qtest is not "these pages are
+fine", it is "the pages it happened to pick are fine". `bin/test` is the
+constant net.
