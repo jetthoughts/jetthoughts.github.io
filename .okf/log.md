@@ -3,6 +3,24 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+## 2026-08-21 - new concept: the rollout SEQUENCE was undiscoverable
+
+`design/site-palette.md` carried the palette decision, but nothing in the
+bundle carried the ORDER it ships in. A session consuming `.okf/` after
+Phase 1a.3 would reasonably do 1a.4 next - and that is the wrong order:
+Paul re-sequenced 2026-08-20 to run the BLOG before the site-wide chrome.
+
+New [workflows/site-redesign-rollout.md](workflows/site-redesign-rollout.md)
+distils the three rules that decide sequence (order by whether LAYOUT MOVES
+not by size; no A/B exists at this traffic so reversibility substitutes for
+statistical confidence; blog first because that is where the humans are), the
+cost blog-first accepts on purpose (token definitions move twice - duplicate
+tokens mid-rollout are the plan working, not a mistake), and the gates that
+block regardless (2.4's GSC keyword gate; 2.2 coupling the course page).
+
+Live phase status deliberately NOT copied - it rots; the plan doc under
+`resource:` owns it. Cross-linked from site-palette.
+
 ## 2026-08-21 - maintain pass 3: three rules the og:image PR taught, lifted
 
 * `build/test-gates.md` - the `.gitignore` bullet now covers SUBdirectories
