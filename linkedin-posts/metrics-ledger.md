@@ -13,9 +13,16 @@ then update at 7 days. This is the weekly review surface (Fri). Frontmatter carr
 **The signal that matters is `icp_replies`** — comments or DMs in ICP symptom
 language, not impressions. Impressions are reach; icp_replies are validation.
 
+`slug` is the draft's filename without `.md`, so every row resolves to
+`linkedin-posts/<course-promo|icp-validation>/<slug>.md` and to the board page
+`/linkedin/<lane-folder>/<slug>/`. Rows exist for `scheduled` posts too - a
+scheduled post with an empty `posted` cell has not been confirmed live yet.
+
 | posted | slug | lane | opener | impressions | reactions | comments | reposts | profile views | icp_replies | what to reuse |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 2026-08-13 | validate-before-build | course | idea-led | | | | | | | *(first idea-first post; log after 48-72h)* |
+| 2026-08-13 | week1-thu-validate-before-build | course | idea-led | | | | | | | *(first idea-first post; log after 48-72h)* |
+| | week1-mon-jira-not-progress | rescue | observation-led | | | | | | | *(scheduled 2026-08-18 15:30 CEST; fill `posted` when it goes live)* |
+| | week1-tue-founding-hypothesis | course | | | | | | | | *(scheduled 2026-08-19 15:30 CEST; no `opener_archetype` in frontmatter)* |
 
 ## How to read a post's analytics
 
