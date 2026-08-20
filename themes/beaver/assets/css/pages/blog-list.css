@@ -210,12 +210,19 @@
 }
 
 @media (max-width: 860px) {
-  /* Covers hidden on mobile ON PURPOSE: img-cropped.html's CDN srcset
-     serves 160w on ≤860px viewports — full-width mobile covers would
-     render blurry. Revisit if/when the partial grows a mobile size param. */
-  .post-image { display: none; }
-  .post-feature .post-image { display: none; }
-  .post-feature { grid-template-columns: 1fr; padding: 24px 20px; gap: 0; }
+  /* Covers SHOWN on mobile since the whole-blog rebuild (2026-08-20):
+     img-cropped.html grew a mobileWidth param, so the srcset now serves
+     860w on small viewports instead of the old 160w blur. Rows and the
+     feature stack the cover full-width above the text (prototype). */
+  .blog-post { flex-direction: column; }
+  .post-image {
+    width: 100%;
+    min-width: 0;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  .post-feature { grid-template-columns: 1fr; padding: 24px 20px; gap: 20px; }
+  .post-feature .post-image { order: -1; }
   .post-title { font-size: 1em; }
   .post-feature .post-title { font-size: 1.3em; }
   .post-meta .post-tags { display: none; }
