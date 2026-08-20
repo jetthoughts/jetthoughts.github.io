@@ -79,9 +79,24 @@ Three rules follow:
    JetThoughts clients", no anonymisation disclaimer, and said "three stories"
    while showing five. Its sibling `infrastructure-spending-evaluation` already
    used the honest form ("names changed, numbers accurate") - copy that form.
-   **Open question for Paul:** "Sarah Chen" appears both in the purged synthetic
-   testimonials and in that live post, so either both came from one invented
-   batch or a real client's name leaked into placeholder copy.
+   **RESOLVED 2026-08-20 - Paul: "remove she is not real."** "Sarah Chen"
+   appeared both in the purged synthetic testimonials and in that live post, and
+   is confirmed fabricated. The whole five-founder section was removed, along
+   with its two false claims ("Real Founder Stories ... from JetThoughts
+   clients" and "these aren't hypothetical scenarios - they're real situations
+   from JetThoughts clients in the past 24 months"). The useful patterns were
+   kept as an unattributed list that says plainly we have no completed case
+   study to publish yet.
+
+   The `infrastructure-spending-evaluation` post was corrected in the same pass.
+   Its "real stories from our clients (names changed, numbers accurate)" form
+   had looked like the honest convention - but the confirmed fabrication next
+   door makes an unverifiable "numbers accurate" assertion the same defect,
+   just better dressed. Relabelled as illustrative composites.
+
+   **The rule this leaves:** a disclaimer that asserts MORE than you can verify
+   is not a fix. "Names changed, numbers accurate" claims real provenance; if
+   nobody can produce the client, say "illustrative composite" instead.
 
 # Verified review counts (2026-08-14 audit)
 

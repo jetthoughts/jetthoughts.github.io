@@ -966,139 +966,17 @@ Result: Extended runway from 12 months to 21 months, enabling Series A at strong
 
 **Key Takeaway**: Position fractional CTO as evidence of your strategic capital allocation, not a cost-cutting measure. Investors respect founders who extend runway without sacrificing quality.
 
-## Founder Stories: How Fractional CTOs Saved Companies
+## What Fractional CTOs Actually Change
 
-Numbers and frameworks help, but nothing beats hearing how founders handled the same decisions you are facing right now. The five stories below are composites drawn from fractional-CTO engagements - names, companies and identifying details changed, and the figures are illustrative of the pattern rather than a single client's books.
+Across fractional engagements the same five patterns come up. None of these is a
+client story: we have no completed case study of our own to publish yet, and an
+invented one would be worth less to you than nothing.
 
-### Story 1: "Our Fractional CTO Prevented a $400K Architecture Mistake"
-
-**Founder**: Sarah Chen, CEO of HealthTech SaaS (Pre-Seed)
-**Team**: 5 developers, non-technical founder
-**Challenge**: Team wanted to build microservices architecture "to scale"
-
-**The Situation** (Month 6 Post-Funding):
-> "Our senior engineer pitched microservices as 'modern architecture' and said our monolith wouldn't scale. I'm non-technical—I trusted the recommendation. We were about to commit 4 months of engineering time to the rewrite.
->
-> I brought in a fractional CTO for a second opinion. Within one week, he identified the real problem wasn't architecture—it was database query optimization and missing caching. He showed me that microservices with a 5-person team would 3x our complexity and slow feature velocity 50%.
->
-> We spent 2 weeks optimizing the monolith instead of 4 months rewriting. Application performance improved 10x. We avoided a $400K mistake—the cost of the rewrite plus 6 months of lost product velocity."
-
-**Cost of Fractional CTO**:
-- Project-based: $25K for architecture review + 2 months advisory
-- **ROI**: Prevented $400K mistake = 1,500% ROI
-
-**Lesson**: "I learned that 'modern' doesn't mean 'right for your stage.' Our fractional CTO had seen this pattern 20 times—teams chasing complexity instead of solving the actual problem. Worth every penny."
-
-### Story 2: "How Fractional CTO Saved Our Series A From Technical Due Diligence Failure"
-
-**Founder**: Marcus Thompson, CEO of FinTech Startup (Seed Stage)
-**Team**: 8 developers, technical founder (now CEO)
-**Challenge**: Series A investors asking hard technical questions founder couldn't answer confidently
-
-**The Situation** (4 Months Before Fundraise):
-> "I'm a developer-turned-CEO. I built the first version of our product but haven't written code in 18 months. When we started Series A conversations, investors asked questions I couldn't answer confidently:
-> - 'How does your architecture scale to 100x users?'
-> - 'What's your security posture for SOC 2 compliance?'
-> - 'How do you prevent technical debt while moving fast?'
->
-> I knew our architecture was solid, but I couldn't articulate it at the level investors expected. One investor said, 'You need a technical leader at the table for these conversations.'
->
-> I hired a fractional CTO 2 months before our lead investor technical diligence. He prepared:
-> - Technical deck with architecture diagrams and scaling plan
-> - Security audit and compliance roadmap
-> - Technical debt register with mitigation timeline
-> - Detailed answers to every investor technical question
->
-> He joined 3 investor meetings and technical due diligence sessions. Investors specifically cited 'strong technical leadership' as a reason they invested."
-
-**Cost of Fractional CTO**:
-- Project-based: $30K for fundraising technical preparation (6 weeks)
-- **Outcome**: Closed $3M Series A, investors comfortable with technical story
-- **ROI**: Prevented deal delay or unfavorable terms = immeasurable value
-
-**Lesson**: "I thought my technical background was enough. It wasn't. Investors want to see experienced technical leadership who's scaled companies before. Our fractional CTO gave us that credibility. The fundraise closed 2 weeks faster than projected."
-
-### Story 3: "From Fractional to Full-Time: Our CTO Journey"
-
-**Founder**: Jennifer Martinez, CEO of E-Commerce Platform (Seed Stage)
-**Team**: Initially 4 developers, grew to 12 during fractional engagement
-**Challenge**: Needed technical leadership but wasn't sure what to look for in a CTO
-
-**The Situation** (Seed Round):
-> "We raised $2M seed round with no CTO. Investors asked, 'Who's your technical leader?' I said, 'We'll hire one soon.' But I had no idea what a good CTO looked like—I'd never worked with one.
->
-> Instead of rushing to hire, I engaged a fractional CTO for 18 months. He worked 15 hours/week, led our architecture decisions, helped hire 8 engineers, and prepared our Series A technical story.
->
-> 12 months in, he asked if I'd consider him for the full-time CTO role when we hit Series A. By then, I'd worked with him for a year—I knew his technical judgment, his leadership style, his culture fit. When we closed $8M Series A, the decision was obvious.
->
-> He transitioned to full-time CTO at month 18. Zero onboarding time, zero cultural risk, zero wrong-hire risk. Best hiring decision I've ever made."
-
-**Cost of Fractional CTO**:
-- Part-time retainer: 18 months @ $15K/month = $270K
-- **Conversion**: Full-time CTO with proven fit, smooth transition
-- **ROI**: Avoided $250K+ wrong-hire risk, zero onboarding friction
-
-**Lesson**: "Fractional-to-full-time is 'try before you buy' for the most important executive hire you'll make. I could never have evaluated CTO candidates without working with one first. Now I know exactly what good technical leadership looks like."
-
-### Story 4: "Our Fractional CTO Helped Us Survive CTO Departure"
-
-**Founder**: David Park, CEO of Logistics SaaS (Series A)
-**Team**: 15 developers, full-time CTO unexpectedly resigned
-**Challenge**: Critical product launch in 3 months, 6-month CTO hiring timeline
-
-**The Situation** (CTO Resignation):
-> "Our full-time CTO gave 2 weeks notice—personal reasons, no warning. We had a major product launch in 3 months tied to our biggest customer contract ($2M ARR). Engineering team was in panic mode.
->
-> I knew CTO hiring takes 4-6 months. I couldn't afford to delay the launch—customer would walk. I engaged a fractional CTO within 5 days—20 hours/week, high-touch engagement.
->
-> First 2 weeks, he stabilized the team—took over architecture decisions, unblocked 6 stalled projects, 1:1s with every engineer. He prevented 3 key engineers from leaving who were worried about leadership vacuum.
->
-> Next 3 months, he led the product launch while I recruited his full-time replacement. Launch shipped on time, handled 3x expected traffic, zero critical incidents. Customer renewed for $3M/year.
->
-> By month 5, we hired an excellent full-time CTO. Our fractional CTO ran a 4-week overlap transition, then rolled off. Seamless handoff."
-
-**Cost of Fractional CTO**:
-- Emergency engagement: 6 months @ $20K/month = $120K
-- **Outcome**: Prevented $2M customer churn, hired strong full-time CTO
-- **ROI**: Prevented catastrophic business impact = 1,567% ROI
-
-**Lesson**: "Fractional CTO is insurance for exactly these moments—when you need immediate leadership without 4-6 month hiring timelines. I keep the relationship warm now in case we ever need it again. Best crisis decision I've made."
-
-### Story 5: "How Fractional CTO Taught Me to Be a Better Technical CEO"
-
-**Founder**: Emma Rodriguez, CEO of DevTools Startup (Pre-Seed)
-**Team**: Solo founder, no engineering team yet
-**Challenge**: Technical founder overwhelmed by technology choices, needed sounding board
-
-**The Situation** (Pre-Product):
-> "I'm a strong developer but first-time founder. I was paralyzed by technology choices—which database? which framework? cloud vs on-prem? I read 100 blog posts and got more confused.
->
-> I hired a fractional CTO on advisory basis—6 hours/month, $4K/month. Every month, 90-minute strategic session where I brought my hardest technical questions.
->
-> He didn't tell me what to do. He asked questions that forced me to clarify my requirements, understand tradeoffs, and make confident decisions. After 6 months:
-> - I'd made every major technical decision with confidence
-> - I'd hired my first 3 engineers (he reviewed my job descriptions and sat in interviews)
-> - I'd launched MVP with architecture that scaled to Series A
->
-> Most valuable: I learned how to think strategically about technology, not just tactically. When I raised seed round, investors were impressed by my technical maturity."
-
-**Cost of Fractional CTO**:
-- Advisory: 9 months @ $4K/month = $36K
-- **Outcome**: Confident technical decision-making, strong technical foundation
-- **ROI**: Prevented $100K+ in wrong technology choices = 278% ROI
-
-**Lesson**: "Fractional CTO as coach/advisor is underrated. I didn't need someone to build the product—I needed someone to teach me how to think like a CTO. By the time I raised seed, I was a better technical leader. That skillset is worth 10x the cost."
-
----
-
-**Common Themes Across These Stories**:
-1. **Speed**: Fractional CTOs start immediately (1-2 weeks vs 3-6 months full-time hiring)
-2. **Risk Mitigation**: Proven expertise prevents costly mistakes
-3. **Flexibility**: Can scale up (full-time conversion) or down (project-based → advisory)
-4. **Try-Before-Buy**: Working together de-risks the most important executive hire
-5. **Crisis Management**: Perfect for bridging gaps during leadership transitions
-
-These aren't hypothetical scenarios—they're real situations from JetThoughts clients in the past 24 months. Your situation likely fits one of these patterns.
+1. **Speed.** A fractional CTO starts in 1-2 weeks. A full-time hire takes 3-6 months.
+2. **Risk mitigation.** The expensive architecture decisions get a second opinion before they are made, not after.
+3. **Flexibility.** The engagement scales up toward full-time or down to advisory without a severance conversation.
+4. **Try-before-buy.** Working together de-risks the most consequential executive hire you will make.
+5. **Crisis cover.** It bridges a CTO departure without a six-month gap in technical leadership.
 
 ## 5 Red Flags When Interviewing Fractional CTOs
 
