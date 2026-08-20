@@ -594,11 +594,11 @@ grep -rn "thread_variable_set\|thread_variable_get" app lib config
 # 2. Fiber-local storage - fine for request state, dead as a cache
 grep -rn "Thread\.current\[" app lib config
 
-# 3. C extensions that do their own I/O - read the Gemfile, not just your code
-grep -rn "require" Gemfile
+# 3. Gems with native extensions - the code the greps above cannot see
+bundle exec ruby -e 'Gem::Specification.select { |s| s.extensions.any? }.each { |s| puts s.name }'
 ```
 
-Start with hit 1. It is the one that costs you data, and run it across your gems too: the leak below comes from library code, which `app lib config` will never show you.
+Start with hit 1. It is the one that costs you data, and check your gems as well as your own code - the leak below comes from library code, which `app lib config` will never show you. Same command as hit 3, then read the ones that talk to sockets or files.
 
 Ruby [documents `Thread#[]` as fiber-local](https://docs.ruby-lang.org/en/master/Thread.html): "Each fiber has its own bucket for Thread#[] storage." The method that writes to thread-wide storage is `thread_variable_set`.
 
@@ -612,7 +612,7 @@ Hit 3 is the one people get wrong in both directions. Shelling out is fine: Falc
 
 What actually stops the worker is a C extension issuing a blocking syscall directly. Ruby's scheduler intercepts the I/O layer through hooks like `io_read`, `io_wait`, `kernel_sleep` and `address_resolve`, and native code that bypasses them takes every fiber in the process down with it until it returns.
 
-That is why hit 3 greps the Gemfile rather than your code. Image processing and PDF gems are the usual suspects; native database drivers less often. `process_wait` is optional in the scheduler interface generally - on a scheduler that omits it the docs say "Process::Status.wait will behave as a blocking method" - but Falcon's implements it.
+That is why hit 3 asks the installed gems which ones ship extensions rather than grepping your own code, and why it asks Bundler instead of reading the Gemfile: `require:` in a Gemfile is an auto-require flag and says nothing about native code. Image processing and PDF gems are the usual suspects; native database drivers less often. `process_wait` is optional in the scheduler interface generally - on a scheduler that omits it the docs say "Process::Status.wait will behave as a blocking method" - but the async gem's implements it.
 
 ### Swap the server
 
@@ -652,11 +652,11 @@ service hostname do
 end
 ```
 
-The root placement is load-bearing: `hostname` derives from the directory the file sits in, so a copy under `config/` names your service "config". [`falcon host`](https://socketry.github.io/falcon/guides/deployment/) defaults to `falcon.rb` in the application directory, and accepts other paths if you pass them.
+The root placement is load-bearing twice over. `hostname` derives from the directory the file sits in, so a copy under `config/` names your service "config". And relative paths resolve against that same directory, so a misplaced `falcon.rb` sends both `preload` and `config.ru` looking one level too deep. [`falcon host`](https://socketry.github.io/falcon/guides/deployment/) defaults to `falcon.rb` in the application directory, and accepts other paths if you pass them.
 
 Development runs on `bundle exec falcon serve --bind http://localhost:3000`. Production is `bundle exec falcon host`, which the guide calls "the recommended way to deploy Falcon in production" - `falcon serve` is "not designed for deployment".
 
-There is no `threads min, max` in Falcon and no directive that replaces it. `count` sets worker processes and defaults to `Etc.nprocessors`; Falcon's Heroku example lowers it to `count ENV.fetch("WEB_CONCURRENCY", 1).to_i` for a shared dyno. Read the env file before trusting the fallback in the config - the deployment earlier on this page looks like 4 and actually runs 8, because `.env.production` sets `WEB_CONCURRENCY`.
+There is no `threads min, max` in Falcon and no directive that replaces it. `count` sets worker processes and defaults to `Etc.nprocessors`; Falcon's Heroku example lowers it to `count ENV.fetch("WEB_CONCURRENCY", 1).to_i` for a shared dyno. Read the env file before trusting the fallback in the config: a deployment whose config says 4 runs 8 the moment an `EnvironmentFile` sets `WEB_CONCURRENCY`.
 
 ### Size the connection pool
 
@@ -681,6 +681,8 @@ It matters where that Railtie never loads: a bare Rack app, or a boot path that 
 Move one instance to Falcon and leave the rest on Puma. Same image, same share of traffic, one line changed in the process manager.
 
 Then compare that box against a Puma box carrying similar load: p95 latency, RSS per worker, 5xx rate, and the count of `ActiveRecord::ConnectionTimeoutError` in your logs. Read the delta against Puma under matched traffic; the absolute numbers will not tell you much on their own.
+
+Before you trust the memory column, confirm the preload actually ran. Falcon rescues a failed `preload` and carries on with a warning, and the path resolves against the directory holding `falcon.rb`, so a misplaced config gives you unpreloaded workers and a normal-looking boot. Grep the startup log for `Preloading config/environment` and for `Service preload failed`.
 
 Write the rollback trigger down before you deploy.
 
