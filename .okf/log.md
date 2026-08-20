@@ -1190,3 +1190,17 @@ a review. Rules recorded in workflows/review-swarm.md: dead reviewer is not a
 passed review; idle is ambiguous so ask for the verdict; pass model opus
 explicitly; a coordinator closing a leg itself must say so and invite
 contradiction.
+
+## 2026-08-20 - GA4 key-event toggles closed by another session; not retroactive
+
+#508 un-marked `page_view` as a key event and #495 marked `contact_cta_click`,
+closing the Phase 0.1 GA4 items I had been reporting as blocked on a browser
+channel. Synced 2608's plan and README, which still described the polluted
+state as current.
+
+The caveat that survives the fix is the part worth carrying: **un-marking is
+not retroactive.** The ~4,063 historical page-view "key events" stay in the
+data, so any before/after read spanning 2026-08-13 to 08-20 compares a polluted
+before against a clean after. Date-bound every keyEvents query, or read the
+underlying event names rather than the aggregate. A fix that changes only
+future collection is not a fix to the series you are about to analyse.
