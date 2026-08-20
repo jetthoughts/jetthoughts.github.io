@@ -87,6 +87,8 @@ Stripe's test mode is on the moment you sign up. Create the Payment Link (step 2
 - **Why:** the checkout page is killing intent - price felt different in context, or the checkout page itself adds friction.
 - **Fix:** track both click (page → Stripe) and completion (Stripe → thank-you). 60 clicks with 3 completions = the checkout is killing intent. 6 clicks with 3 completions = half of clickers bought - promising, but 6 clicks is too small a sample to call; keep the test running until you have 20+ clicks before trusting the ratio. Same completion count, opposite diagnosis. The [full price test guide](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/) has the detailed threshold table.
 
+![Two dot fields, one dot per click. Left - 60 clicks: 3 green dots paid, 57 gray clicked without paying, 5% completed, verdict "Checkout is killing intent". Right - 6 clicks: 3 green paid and 3 gray, 50% completed, sitting inside 20 dashed empty slots not yet clicked, verdict "Too few clicks to call it" with the note that 20 clicks is the minimum before the ratio means anything](clicks-vs-payments.svg)
+
 ---
 
 Open your Stripe dashboard. Write down the number of clicks vs. completed payments. Which number is lower than you expected? That gap is your pricing research question for Module 2 interviews.
