@@ -16,7 +16,7 @@ metatags:
   og_title: "Debugging RubyLLM Agents in Rails"
   og_description: "What a green Rails suite actually asserts when the thing under test is a hosted model: VCR matches on method and URI only, and the model can be retired."
   twitter_title: "Debugging RubyLLM Agents in Rails"
-  twitter_description: "VCR matches on method and URI only, a retired model took out five features at once, and the one connection observable a pinned test cannot flatten."
+  twitter_description: "VCR matches on method and URI only, a hosted model stopped answering the way it used to and took out five features at once, and the one connection observable a pinned test cannot flatten."
 ---
 
 Debugging RubyLLM agents in Rails keeps landing me on the same question: what is a green test suite actually asserting when the thing under test lives on someone else's server?
