@@ -10,7 +10,7 @@
       .gbig   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 30px; fill: #2e7d32; font-weight: 700; }
       .note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #555; }
       .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2.2; }
-      .pay    { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.8; }
+      .done   { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.8; }
       .chipbg { fill: #cc342d; }
     </style>
     <marker id="arw3" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
@@ -63,7 +63,7 @@
 
   <!-- Card 3.2 Quality check (payoff) -->
   <g transform="rotate(-0.4 525 442)">
-    <rect x="375" y="335" width="300" height="215" rx="14" class="pay"/>
+    <rect x="375" y="335" width="300" height="215" rx="14" class="done"/>
     <rect x="492" y="348" width="66" height="28" rx="14" class="chipbg"/>
     <text x="525" y="368" class="chip" text-anchor="middle">3.2</text>
     <text x="525" y="406" class="title" text-anchor="middle">Quality</text>
