@@ -273,7 +273,7 @@ first deploy myself once I've read the diff.
 
 The last line matters. Let the agent do the editing and the validating, then read the diff before anything touches a server - `kamal upgrade` restarts accessories on real infrastructure, and that's a decision worth making yourself.
 
-Further reading:
+## Sources
 
 - [Kamal documentation](https://kamal-deploy.org/) - official guides and the full configuration reference
 - [Kamal on GitHub](https://github.com/basecamp/kamal) - source, changelog, and the 2.x release notes
