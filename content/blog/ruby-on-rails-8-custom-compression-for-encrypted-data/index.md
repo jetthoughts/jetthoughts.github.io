@@ -6,6 +6,7 @@ dev_to_id: 2086252
 dev_to_url: https://dev.to/jetthoughts/ruby-on-rails-8-custom-compression-for-encrypted-data-48n5
 title: 'Ruby on Rails 8: Custom Compression for Encrypted Data'
 description: "In Ruby on Rails 8, ActiveRecord’s encryption features are more flexible than ever. You can now set a custom compression algorithm for encrypted attributes."
+seo_override: true
 date: 2024-11-08
 created_at: '2024-11-08T08:48:36Z'
 edited_at: '2024-11-25T15:42:09Z'

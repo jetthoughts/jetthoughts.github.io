@@ -6,6 +6,7 @@ dev_to_id: 1966362
 dev_to_url: https://dev.to/jetthoughts/automating-ssl-certificate-generation-with-traefik-and-kamal-a-step-by-step-guide-27a3
 title: 'Automating SSL Certificate Generation with Traefik and Kamal: A Step-by-Step Guide'
 description: "In this guide, we'll explore how to configure Traefik with Kamal to automatically obtain and manage SSL certificates for your Ruby on Rails application."
+seo_override: true
 created_at: '2024-08-20T09:22:37Z'
 edited_at: '2024-11-25T15:32:37Z'
 draft: false

@@ -6,6 +6,7 @@ dev_to_id: 1877570
 dev_to_url: https://dev.to/jetthoughts/the-simplest-way-to-automate-delivery-of-your-react-native-application-1e6o
 title: The simplest way to automate delivery of your React Native Application
 description: "Delivering mobile application’s updates is not as simple as in the case of a web application."
+seo_override: true
 created_at: '2024-06-05T06:08:07Z'
 edited_at: '2025-02-21T11:12:25Z'
 date: 2024-06-05

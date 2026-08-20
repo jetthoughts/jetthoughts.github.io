@@ -6,6 +6,7 @@ dev_to_id: 1852752
 dev_to_url: https://dev.to/jetthoughts/regular-automatic-dependencies-update-with-circleci-1ihf
 title: Regular automatic dependencies update with CircleCI
 description: "Resolving the auto-upgrade issue will allow having edge gems versions with little to no effort. How could you achieve this with CI (specifically CircleCI)?"
+seo_override: true
 created_at: '2024-05-14T14:18:44Z'
 edited_at: '2024-11-26T16:05:04Z'
 draft: false

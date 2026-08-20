@@ -6,6 +6,7 @@ dev_to_id: 1454204
 dev_to_url: https://dev.to/jetthoughts/how-a-large-transaction-can-be-a-source-of-db-deadlocks-and-how-this-can-be-fixed-39lg
 title: How a large transaction can be a source of DB deadlocks and how this can be fixed.
 description: "Recently in a project, we encountered the fact that sometimes we had a DB Deadlocks error."
+seo_override: true
 created_at: '2023-05-01T17:46:03Z'
 edited_at: '2024-11-25T15:40:08Z'
 date: 2023-05-01

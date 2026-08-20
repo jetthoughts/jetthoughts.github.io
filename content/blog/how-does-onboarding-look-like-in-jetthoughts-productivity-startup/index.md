@@ -6,6 +6,7 @@ dev_to_id: 1853524
 dev_to_url: https://dev.to/jetthoughts/how-does-the-onboarding-look-like-in-jetthoughts-21ld
 title: How does the onboarding look like in JetThoughts?
 description: "This is an onboarding checklist replication built relying on my own experience in JetThoughts."
+seo_override: true
 created_at: '2024-05-15T06:29:43Z'
 date: 2024-05-15
 edited_at: '2024-11-26T16:04:45Z'

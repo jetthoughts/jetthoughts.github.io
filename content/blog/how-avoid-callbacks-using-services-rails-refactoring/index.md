@@ -6,6 +6,7 @@ dev_to_id: 1198201
 dev_to_url: https://dev.to/jetthoughts/how-to-avoid-callbacks-using-services-p7l
 title: How to avoid callbacks using services.
 description: "Often, programmers abuse callbacks, not fully understanding that their code will ultimately be confusing and non-obvious."
+seo_override: true
 created_at: '2022-09-20T13:23:18Z'
 edited_at: '2024-11-25T15:40:39Z'
 draft: false

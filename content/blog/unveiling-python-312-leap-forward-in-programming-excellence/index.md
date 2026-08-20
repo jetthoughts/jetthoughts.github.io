@@ -6,6 +6,7 @@ dev_to_id: 2167570
 dev_to_url: https://dev.to/jetthoughts/unveiling-python-312-a-leap-forward-in-programming-excellence-47bb
 title: 'Unveiling Python 3.12: A Leap Forward in Programming Excellence'
 description: "The Python Software Foundation has officially released Python 3.12 on October 2, 2023, introducing a host of new features and performance enhancements."
+seo_override: true
 created_at: '2024-12-20T22:58:43Z'
 edited_at: '2025-01-30T03:27:29Z'
 draft: false

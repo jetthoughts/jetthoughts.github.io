@@ -6,6 +6,7 @@ dev_to_id: 1698810
 dev_to_url: https://dev.to/jetthoughts/stimulus-keyboard-event-filter-4370
 title: Stimulus Keyboard Event Filter
 description: "In the last update of Stimulus v3.2.2, the ability to filter the event by PageDown and PageUp keys was added."
+seo_override: true
 created_at: '2023-12-15T11:11:52Z'
 edited_at: '2024-11-25T15:39:41Z'
 draft: false

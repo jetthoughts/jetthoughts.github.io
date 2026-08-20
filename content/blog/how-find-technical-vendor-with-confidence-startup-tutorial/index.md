@@ -6,6 +6,7 @@ dev_to_id: 2163209
 dev_to_url: https://dev.to/jetthoughts/how-to-find-technical-vendor-with-confidence-435n
 title: How to find technical vendor with confidence
 description: "Finding the right tech vendor can feel like a wild ride. One minute you're confident, the next you're second-guessing every decision."
+seo_override: true
 created_at: '2024-12-18T13:26:24Z'
 edited_at: '2024-12-18T14:08:11Z'
 draft: false

@@ -6,6 +6,7 @@ dev_to_id: 2014071
 dev_to_url: https://dev.to/jetthoughts/direct-upload-with-rails-dropzonejs-52bh
 title: Direct Upload with Rails & Dropzone.js
 description: "Configuring direct file uploads in Rails is now easier than ever. In this article, I'll show you how to create a file upload component in Rails 7."
+seo_override: true
 created_at: '2024-09-25T08:37:13Z'
 edited_at: '2024-11-25T15:32:17Z'
 date: 2024-09-25

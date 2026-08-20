@@ -6,6 +6,7 @@ dev_to_id: 1877574
 dev_to_url: https://dev.to/jetthoughts/how-to-get-remote-teams-to-high-perform-555g
 title: How to Get Remote Teams to High Perform
 description: "Raise your hand in case you feel confused about project progress. How often do you ask about the current status in Slack?"
+seo_override: true
 created_at: '2024-06-05T06:10:52Z'
 edited_at: '2024-11-26T16:03:21Z'
 date: 2024-06-05

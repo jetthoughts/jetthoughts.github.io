@@ -6,6 +6,7 @@ dev_to_id: 2182000
 dev_to_url: https://dev.to/jetthoughts/jason-meller-welcomes-1password-to-the-rails-foundation-29p8
 title: Jason Meller Welcomes 1Password to the Rails Foundation
 description: "In a significant move for both the Rails community and 1Password, Jason Meller announced that 1Password has officially joined the Rails Foundation."
+seo_override: true
 created_at: '2024-12-30T15:06:54Z'
 edited_at: '2025-01-30T03:15:16Z'
 date: 2024-12-30

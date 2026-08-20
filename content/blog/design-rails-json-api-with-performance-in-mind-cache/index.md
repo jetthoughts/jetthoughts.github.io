@@ -6,6 +6,7 @@ dev_to_id: 1852749
 dev_to_url: https://dev.to/jetthoughts/design-rails-json-api-with-performance-in-mind-6g8
 title: Design Rails JSON API with performance in mind
 description: "Caching can reduce load time and increase the throughput of your API endpoints without in-depth optimization."
+seo_override: true
 created_at: '2024-05-14T14:16:46Z'
 edited_at: '2024-11-26T16:05:07Z'
 draft: false

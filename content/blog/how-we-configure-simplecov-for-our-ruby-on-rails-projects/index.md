@@ -6,6 +6,7 @@ dev_to_id: 1673284
 dev_to_url: https://dev.to/jetthoughts/how-we-configure-simplecov-for-our-ruby-on-rails-projects-3hlp
 title: "How to Configure SimpleCov in Rails"
 description: "A working SimpleCov config for Rails, line by line: what each setting does, which filters actually matter, and why your coverage number moves when you add one."
+seo_override: true
 date: 2023-11-21
 created_at: '2023-11-21T07:40:02Z'
 edited_at: '2024-11-25T15:39:48Z'

@@ -70,7 +70,9 @@ Now compare what those generators build. `ruby_llm` sets up a conversation. `lan
 
 This matters when your bill goes up and you need to know why. One total only tells you that you spent more. The breakdown can tell you that a prompt you edited stopped hitting the cache.
 
-langchainrb counts tokens but does not price them. You get `prompt_tokens`, `completion_tokens` and `total_tokens` on every response, and running totals on `Assistant`. There is no price list in the gem, and no separate figure for cached or thinking tokens. You add those yourself.
+langchainrb counts tokens but does not price them. On the mainstream adapters you get `prompt_tokens`, `completion_tokens` and `total_tokens`, plus running totals on `Assistant`. Not on all of them, though - the Hugging Face, llama.cpp and Replicate responses never override those methods, so they inherit the base class and raise `NotImplementedError`.
+
+Where the counts do arrive, there is still no price list in the gem, and no separate figure for cached or thinking tokens. You add those yourself.
 
 ## When langchainrb wins
 

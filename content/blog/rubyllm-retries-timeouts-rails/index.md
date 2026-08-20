@@ -102,7 +102,11 @@ Moving it to a job is not a free pass either. In [our own fan-out](/blog/multi-a
 
 Sometimes a request works on the provider's side and the response gets lost on the way back. Retrying sends it again. You pay for both, and if the call is not deterministic you can get two different answers.
 
-`ruby_llm` makes that trade on purpose, and for a chat completion it is the right call - a request that failed usually produced nothing to pay for. It stops being right as soon as your call does something: a tool that writes a row, an agent step that sends an email. For those you want an idempotency key, or a job that checks whether it already ran.
+`ruby_llm` makes that trade on purpose, and for a chat completion it is the right call - a request that failed usually produced nothing to pay for.
+
+Worth being precise about what this retry can and cannot duplicate, because it is easy to over-read. It wraps the HTTP request only. Your tools run afterwards, in `handle_tool_calls`, once a response has actually come back. So a lost response can charge you twice for the same completion, but it cannot write your row twice or send your email twice - the first attempt never got far enough to run them.
+
+Duplicate side effects are a real problem, but they come from retrying the job or the agent step around this call, not from the middleware inside it. That is where idempotency keys belong.
 
 ## What none of this covers
 

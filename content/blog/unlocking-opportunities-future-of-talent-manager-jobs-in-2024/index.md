@@ -6,6 +6,7 @@ dev_to_id: 2164821
 dev_to_url: https://dev.to/jetthoughts/unlocking-opportunities-the-future-of-talent-manager-jobs-in-2024-o52
 title: 'Unlocking Opportunities: The Future of Talent Manager Jobs in 2024'
 description: "Hey there! So, looking into the future, 2024 is shaping up to be a wild ride for talent manager jobs."
+seo_override: true
 created_at: '2024-12-19T10:10:43Z'
 edited_at: '2024-12-19T11:07:52Z'
 date: 2024-12-19

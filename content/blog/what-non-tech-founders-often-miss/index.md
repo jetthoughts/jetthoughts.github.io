@@ -6,6 +6,7 @@ dev_to_id: 2110985
 dev_to_url: https://dev.to/jetthoughts/what-non-tech-founders-often-miss-f1k
 title: What Non-Tech Founders Often Miss
 description: "I have worked with many non-technical founders. They often make the same mistakes, which wastes time and money. They mean well, but problems happen."
+seo_override: true
 created_at: '2024-11-18T17:23:57Z'
 edited_at: '2024-12-12T12:16:29Z'
 date: 2024-11-18

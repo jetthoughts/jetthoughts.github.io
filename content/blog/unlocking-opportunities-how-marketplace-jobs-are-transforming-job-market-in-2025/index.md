@@ -6,6 +6,7 @@ dev_to_id: 2203781
 dev_to_url: https://dev.to/jetthoughts/unlocking-opportunities-how-marketplace-jobs-are-transforming-the-job-market-in-2025-1dg
 title: 'Unlocking Opportunities: How Marketplace Jobs Are Transforming the Job Market in 2025'
 description: "Marketplace jobs are really shaking things up in 2025. They're not like your typical 9-to-5 gigs."
+seo_override: true
 created_at: '2025-01-13T11:23:24Z'
 edited_at: '2025-01-30T02:46:20Z'
 draft: false
