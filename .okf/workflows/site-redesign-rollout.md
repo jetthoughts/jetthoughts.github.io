@@ -7,7 +7,7 @@ tags: [design, rollout, sequencing, decision, adr]
 status: stable
 generated:
   by: claude/opus-5
-  at: 2026-08-20T23:28:00Z
+  at: 2026-08-20T22:30:00Z
 timestamp: 2026-08-20T23:28:00Z
 ---
 

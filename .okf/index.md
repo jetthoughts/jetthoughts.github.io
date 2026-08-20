@@ -23,12 +23,19 @@ verification really happened, and dropping one falsifies the provenance the
 field exists to carry (2026-08-20, `build/test-gates.md`).
 
 **Stamp actual UTC - take it from `date -u`, never compose it** (2026-08-20).
-Fourteen stamps across eight concepts were written as local time carrying a `Z`
+Eighteen stamps across nine concepts were written as local time carrying a `Z`
 suffix, putting them ~2h in the future. That is not cosmetic HERE of all
 places: the conflict rule above resolves by taking the LATER timestamp, so a
 future-dated stamp silently outranks a genuinely newer edit from a concurrent
 session. The session clock displays local time; `Z` means UTC. Run `date -u`
 and paste the result.
+
+**Repair by CONVERTING each stamp, not by flattening them to one value.** The
+first repair attempt normalised every affected stamp to the sweep time, which
+fixed the future-dating and destroyed the thing `verified:` exists for: three
+distinct checks became three identical entries, losing their order. Convert with
+the offset the stamp was WRITTEN at (recoverable from the session or the
+commit), or mark it unknown - never overwrite history with now.
 
 # Sections
 
