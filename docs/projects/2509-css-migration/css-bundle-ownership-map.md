@@ -35,6 +35,7 @@ zero FL-Builder export files remain in any slice.
 | course-list | `layouts/course/list.html` (repo root, NOT in theme) | pages/course-list.css | 17.6K → 14.6K² | migrated (R1) |
 | privacy-policy | `page/single.html` (generic pages) | pages/simple-page.css | 17.1K → 14.6K | migrated (R1) |
 | not_found | `404.html` | — (404.css, dynamic-404.css) | 16.2K → 16.2K | no-FL |
+| friday-report | `page/friday-report.html` | pages/friday-report.css | new 2026-08-20 | born semantic (no FL modules; one `#fl-main-content` specificity override against legacy-theme-skin) |
 | pagination | `list.html` (second bundle) | — (pagination.css only) | 0.2K → 0.2K | no-FL |
 
 ¹ careers was a byte-identical verbatim move (3086-layout2 had zero dead
