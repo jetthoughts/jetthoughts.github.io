@@ -1,5 +1,29 @@
 # Bundle Update Log
 
+## 2026-08-20 (YJIT refresh) - the fabricated-claims purge never reached the blog archive
+
+* **A page at position 9.5 was inventing client work.**
+  `ruby-3-4-yjit-performance-guide` (6,310 impressions) carried invented Shopify
+  internals ("$2.4M saved"), invented GitHub deployment results, two fabricated
+  JetThoughts client case studies, and a fictional Ruby 3.5/3.6/4.0 roadmap.
+  Rewritten in place as the Ruby 4.0 YJIT-vs-ZJIT guide with every claim
+  sourced. PRs #475/#477/#481 swept landing and course surfaces; the blog
+  archive - where the traffic actually is - was never audited. Purge continues
+  highest-impression-first. Recorded in
+  [claims-canon](/content/claims-canon.md).
+* **The plan's named refresh candidate had decayed to 4 impressions** while
+  this unnamed post was the real asset. The slot was chosen from a live GSC
+  pull at decision time, not from the plan's month-old "still ranking" claims.
+  Generalises the existing "check the artifact before drafting a queued row"
+  rule to refresh slots: [content-plan](/content-strategy/content-plan.md).
+* **Flat-file posts sit outside two toolchains at once.**
+  `content/blog/2025/*.md` is missed by `bin/check-post-visuals` (globs
+  `content/blog/*/index.md`) and by page-bundle tooling (pre-rendered mermaid,
+  local covers). Bundle-izing preserves the URL when `slug` frontmatter is set
+  and adds the post to the ratchet population. `FLOOR` ratcheted 78 -> 72 on
+  the script's own "floor is loose" prompt.
+  [test-gates](/build/test-gates.md).
+
 ## 2026-08-20 (#29 re-source closed) - the v1 list is dead, and VERBATIM tags recorded intent, not verification
 
 * **The whole 25-row v1 cold list is closed: 19 verified-and-dropped, 6

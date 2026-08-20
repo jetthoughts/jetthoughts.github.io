@@ -12,6 +12,7 @@ verified:
     at: 2026-08-13T09:56:20Z
   - by: claude/opus-5
     at: 2026-08-19T00:00:00Z
+timestamp: 2026-08-20T00:00:00Z
 ---
 
 # Plan of record (2026-08-07)
@@ -96,6 +97,15 @@ One test: **will someone search this in six months?**
 
 Version-current content incurs refresh debt - budget 1 refresh slot/month. Proof
 it compounds: the Kamal 1/Traefik post is now factually wrong and still ranking.
+
+**Pick the refresh slot from live GSC, not from the plan (2026-08-20).** The
+plan's own "still ranking" assertions decay within weeks. The August slot was
+decided on a live pull at decision time: the row the plan named had fallen to 4
+impressions, while `ruby-3-4-yjit-performance-guide` - unnamed anywhere in the
+plan - was carrying 6,310 impressions at position 9.5 and turned out to be full
+of fabricated claims (see [claims-canon](/content/claims-canon.md)). Same rule
+as §"before writing a queued row": check the artifact, not the plan's memory of
+it. The MCP pulls live - [analytics-access](/workflows/analytics-access.md).
 
 # Overview
 

@@ -8,6 +8,7 @@ generated: { by: claude/opus-4-8, at: 2026-08-12T20:20:00Z }
 verified:
   - { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
+timestamp: 2026-08-20T00:00:00Z
 ---
 
 # The suites
@@ -19,7 +20,7 @@ verified:
 | `bin/rake test:critical` | Critical Minitest suite (34 runs / 53 screenshots), ~81s host / ~46s Docker since the 2026-08-01 skip_area fix | At component/task milestones and before every commit outside sprint micro-commit trains |
 | `bin/test` | Visual regression on the host (baselines in `macos/` on a Mac; on Linux, comparable to `linux/` when run through `bin/setup-test-env`'s pinned stack) | ONCE at PR prep (branch head, before `gh pr create`) or on Paul's explicit confirmation - NOT per commit (Paul 2026-07-31: qtest is the routine gate) |
 | `bin/dtest` | Same suite in Linux/Docker (baselines in `linux/`) - CI runs Linux | Same trigger as bin/test; a PR must never open without this leg (green-locally / red-in-CI otherwise) |
-| `bin/check-post-visuals` | Ratchet: counts blog posts over 800 words with no mermaid/SVG/image. Fails when the count exceeds `FLOOR` (78 as of 2026-08-13) | Before publishing any post. Added 2026-08-13 - `diagram_rendering_test.rb` only proves diagrams RENDER, nothing proved posts HAVE them, and 25 of the 31 long posts published since 2026-04 shipped with none |
+| `bin/check-post-visuals` | Ratchet: counts blog posts over 800 words with no mermaid/SVG/image. Fails when the count exceeds `FLOOR` (**72** as of 2026-08-20, down from 78) | Before publishing any post. Added 2026-08-13 - `diagram_rendering_test.rb` only proves diagrams RENDER, nothing proved posts HAVE them, and 25 of the 31 long posts published since 2026-04 shipped with none |
 
 `bin/qtest` page keys mirror `themes/beaver/assets/css/pages/*.css` basenames
 AND `critical/<name>-critical.css` basenames - the two sets differ (e.g.
@@ -40,6 +41,14 @@ extend it when adding components or critical files. The macOS full suite remains
   verify by reading the built HTML or the render, not by trusting green. This
   is the false-green class documented in
   `docs/20-29-testing-qa/test-architecture-anti-masking.md`.
+- **Flat-file posts are invisible to the visuals ratchet** (2026-08-20).
+  `bin/check-post-visuals` globs `content/blog/*/index.md`, so a post living as
+  a flat file (`content/blog/2025/<slug>.md`) is outside the ratchet population
+  AND outside page-bundle tooling - no pre-rendered mermaid, no local cover.
+  Converting one to a bundle preserves its URL as long as the `slug`
+  frontmatter is set, and adds it to the ratchet. The script self-reports slack
+  (`post-visuals: floor is loose, lower FLOOR to N`) - obey it: `FLOOR` dropped
+  78 -> 72 on 2026-08-20 on the script's own prompt.
 - **`FORCE_SCREENSHOT_UPDATE=1` re-records EVERYTHING** (2026-08-14). On
   `bin/dtest` it also disables the `git checkout -- .../linux` guard that
   normally discards sub-tolerance Rosetta drift, so a run rewrites all 45
