@@ -2237,13 +2237,13 @@ body .pp-post-feed-meta {
 
 .clients-grid .pp-content-grid-pagination li a.page-numbers, .clients-grid .pp-content-grid-pagination li span.page-numbers {
   background-color: rgba(255, 255, 255, 0);
-  color: var(--color-primary);
+  color: var(--color-ruby);
   margin-right: 5px;
 }
 
 
 .clients-grid .pp-content-grid-pagination li a.page-numbers:hover, .clients-grid .pp-content-grid-pagination li span.current, .clients-grid .pp-content-grid-pagination li span[aria-current] {
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   color: #ffffff;
 }
 
@@ -2256,7 +2256,7 @@ body .pp-post-feed-meta {
 
 .clients-grid .pp-content-grid-load-more a {
   background-color: rgba(255, 255, 255, 0);
-  color: var(--color-primary);
+  color: var(--color-ruby);
   text-align: center;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -2264,7 +2264,7 @@ body .pp-post-feed-meta {
 
 
 .clients-grid .pp-content-grid-load-more a:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   color: #ffffff;
 }
 
@@ -2559,7 +2559,7 @@ body .pp-post-feed-meta {
   border-style: solid;
   border-width: 0;
   background-clip: border-box;
-  border-color: var(--color-primary);
+  border-color: var(--color-ruby);
   border-top-width: 1px;
   border-right-width: 1px;
   border-bottom-width: 1px;
@@ -2766,7 +2766,7 @@ body .pp-post-feed-meta {
 
 
 .clients-carousel .pp-content-post-carousel .owl-theme .owl-dots .owl-dot.active span, .clients-carousel .pp-content-post-carousel .owl-theme .owl-dots .owl-dot:hover span {
-  background: var(--color-primary);
+  background: var(--color-ruby);
   opacity: 1;
   box-shadow: none;
 }
@@ -3203,7 +3203,7 @@ img.mfp-img {
 
 
 .fl-builder-content .clients-cta-divider .fl-module-content .fl-rich-text, .fl-builder-content .clients-cta-divider .fl-module-content .fl-rich-text * {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 
@@ -3634,9 +3634,9 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   font-weight: bold;
   display: inline-block;
   padding: 7px 15px;
-  background-color: rgba(26, 140, 255, 0.1) !important;
+  background-color: var(--ruby-100) !important;
   border-radius: 21px;
-  color: var(--color-primary);
+  color: var(--color-ruby);
   transition: all 0.3s ease-in-out;
   margin-bottom: 8px;
 }
@@ -3673,9 +3673,9 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   font-weight: bold;
   display: inline-block;
   padding: 7px 15px;
-  background-color: rgba(26, 140, 255, 0.1) !important;
+  background-color: var(--ruby-100) !important;
   border-radius: 21px;
-  color: var(--color-primary);
+  color: var(--color-ruby);
   transition: all 0.3s ease-in-out;
   margin-bottom: 8px;
 }

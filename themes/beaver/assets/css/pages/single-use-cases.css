@@ -879,7 +879,7 @@ img.mfp-img {
 
 
 .fl-builder-content .use-case-outcomes-col a:hover {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 
@@ -1232,7 +1232,7 @@ img.mfp-img {
 
 
 .fl-builder-content .use-case-clients-eyebrow .fl-module-content .fl-rich-text, .fl-builder-content .use-case-clients-eyebrow .fl-module-content .fl-rich-text * {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 
@@ -3011,7 +3011,7 @@ body .pp-post-feed-meta {
 
 
 .fl-builder-content .cta-banner-eyebrow .fl-module-content .fl-rich-text, .fl-builder-content .cta-banner-eyebrow .fl-module-content .fl-rich-text * {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 
@@ -3433,9 +3433,9 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   font-weight: bold;
   display: inline-block;
   padding: 7px 15px;
-  background-color: rgba(26, 140, 255, 0.1) !important;
+  background-color: var(--ruby-100) !important;
   border-radius: 21px;
-  color: var(--color-primary);
+  color: var(--color-ruby);
   transition: all 0.3s ease-in-out;
   margin-bottom: 8px;
 }

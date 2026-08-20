@@ -204,7 +204,7 @@
   color: #ffffff;
 }
 .fl-builder-content .cs-meta-col a:hover {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 .cs-more-col {
   width: 100%;
@@ -620,7 +620,7 @@ div.fancybox-container {
   }
 }
 .fl-builder-content .cs-cta-empty .fl-module-content .fl-rich-text, .fl-builder-content .cs-cta-empty .fl-module-content .fl-rich-text * {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 .fl-builder-content .cs-cta-empty .fl-rich-text, .fl-builder-content .cs-cta-empty .fl-rich-text *:not(b, strong) {
   font-weight: 600;
@@ -711,9 +711,9 @@ div.fancybox-container {
   font-weight: bold;
   display: inline-block;
   padding: 7px 15px;
-  background-color: rgba(26, 140, 255, 0.1) !important;
+  background-color: var(--ruby-100) !important;
   border-radius: 21px;
-  color: var(--color-primary);
+  color: var(--color-ruby);
   transition: all 0.3s ease-in-out;
   margin-bottom: 8px;
 }
