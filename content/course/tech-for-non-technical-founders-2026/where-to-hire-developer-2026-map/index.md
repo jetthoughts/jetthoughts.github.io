@@ -31,7 +31,7 @@ Template companion to the [Hire Track Supplementary Reference](/course/tech-for-
 > **Geography quick-pick** (cost x timezone fit):
 > - **Onshore** (US / UK): high cost, timezone-aligned, fast ramp
 > - **LATAM** (Mexico, Colombia, Argentina): mid cost, timezone-aligned
-> - **Ukraine** (Kyiv, Lviv, Kharkiv): low cost, deep Rails bench, EU hours with US-East morning overlap
+> - **Ukraine** (Kyiv, Lviv, Kharkiv) - **the default**: low cost, deep Rails bench, EU hours with US-East morning overlap
 > - **Upwork / freelance**: variable, task-based, no commitment
 
 ## Why this exists
@@ -57,8 +57,8 @@ Walk the four rows in order. Circle the one your scope and budget land in, then 
 | Region | Rate band & time to hire | Pick when | Watch out for |
 |---|---|---|---|
 | **Onshore (US / EU)** | $130K - $210K+/yr, 30-60 days | Regulated industry (HIPAA, SOC 2 - the enterprise security audit - with US data residency, fintech license), security clearance, or board-mandated US team | Low offer-acceptance rates and the worst cost-to-output ratio on the map |
-| **Nearshore (LATAM)** | $45 - $100/hr ($90K - $200K annualized), 2-5 days | Real-time timezone overlap for pair programming, customer calls, or daily standups; US founder default in 2026 | Rates compressed in the top metros; English fluency varies by candidate - screen for it |
-| **Ukraine** | $30 - $70/hr ($60K - $140K annualized), 1-5 days | Backend-heavy Rails work at the lowest band that still overlaps your morning (Kyiv, Lviv, Kharkiv) - the bench JetThoughts itself hires from | Kyiv afternoon = US-East morning, so plan live standups then; async PR culture the rest of the day; build CLAUDE.md / coding-standards docs before the first PR |
+| **Nearshore (LATAM)** | $45 - $100/hr ($90K - $200K annualized), 2-5 days | Full-day real-time overlap for pair programming, customer calls, or daily standups | Rates compressed in the top metros; English fluency varies by candidate - screen for it |
+| **Ukraine** | $30 - $70/hr ($60K - $140K annualized), 1-5 days | **The 2026 default**: backend-heavy Rails work at the lowest band that still overlaps your morning (Kyiv, Lviv, Kharkiv) - the bench JetThoughts itself hires from | Kyiv afternoon = US-East morning, so plan live standups then; async PR culture the rest of the day; build CLAUDE.md / coding-standards docs before the first PR |
 | **Mass-market (Upwork)** | $35 - $120/hr project-based, 1-3 days | Single landing page, logo, or one-off scraper - anything you'd ship and never touch again | You become the technical interviewer; no platform vetting; NOT for backend, payments, or auth |
 
 ## The 5 platforms ranked
