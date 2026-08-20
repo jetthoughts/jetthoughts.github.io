@@ -1,0 +1,47 @@
+/* Course single-page styles - loaded ONLY by layouts/course/single.html.
+   Extracted from the site-wide style.css (W4/V3-B, 2026-08-20): these rules
+   can only ever match a course page, so shipping them to every blog and
+   marketing visitor was dead weight in the global sheet.
+
+   What does NOT belong here: the bq-tldr / bq-good / bq-bad callout accents.
+   They are driven by the render-blockquote hook, which any page can trigger,
+   so they stay global even though only the course uses them today. Extract on
+   the selector's guarantee, not on current usage. */
+
+/* Course reading typography - course pages only (body.section-course).
+   Lessons run 3-5K words; the site-wide 22.4px body stretches them past
+   15K px tall and shows barely two paragraphs per screen (Gloria Mark:
+   ~43s attention per screen). 20px/1.65 keeps the approachable size while
+   fitting ~30% more per screen, restores H3 contrast (26/20 = 1.3x) so
+   scanning landmarks work, and drops callouts a step (19px) so they read
+   as asides, not more wall. Blog pages keep the site-wide scale. */
+/* Selectors mirror single-post.css's `.blog article.single-content
+   .fl-rich-text p` (0,3,2) - anything weaker silently loses to it. Keep the
+   `.section-course` prefix even though this file is course-only: dropping it
+   would lower specificity and hand the win back to single-post.css. */
+/* The container is listed alongside p/li because the blog scale in
+   single-post.css sets `.blog article.single-content .fl-rich-text` itself
+   (added by the 2608 design-system work, PR #487). Without matching it here,
+   bare text directly inside .fl-rich-text - anything not wrapped in a p or li -
+   would fall back to the blog size on a course page. */
+.section-course .blog article.single-content .fl-rich-text,
+.section-course .blog article.single-content .fl-rich-text p,
+.section-course .blog article.single-content .fl-rich-text li {
+  font-size: 20px;
+  line-height: 1.65;
+}
+.section-course .blog article.single-content .fl-rich-text li {
+  margin-bottom: 12px;
+}
+.section-course .blog article.single-content .fl-rich-text blockquote p {
+  font-size: 19px;
+  line-height: 1.6;
+}
+.section-course .blog article.single-content .fl-rich-text .ws-card p,
+.section-course .blog article.single-content .fl-rich-text .ws-card ul.ws-checks li {
+  font-size: 17px;
+  line-height: 1.55;
+}
+.section-course .blog article.single-content .fl-rich-text .ws-route p {
+  font-size: 16.5px;
+}

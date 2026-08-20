@@ -100,6 +100,32 @@ A CI screenshot job (`quick_test` + `bin/qtest`) was built and removed in PR #38
 
 **That premise no longer holds (DevX Phase 4, 2026-07-30):** the `.dev/Dockerfile` image moved to Debian/glibc with a pinned Chrome for Testing (`.dev/cft-version`) + deterministic fontconfig (`.dev/fonts.conf`) + pinned Noto fonts, and `bin/setup-test-env` installs the identical stack on any bare-metal glibc host - including GitHub's Ubuntu runners.
 
+**Dispatch record mode on YOUR BRANCH, never on master (2026-08-20).** The
+record job **commits the baselines it produces** - as `github-actions[bot]`,
+message `chore: update screenshot baselines [ci skip]`. Whatever ref you
+dispatch is the ref it writes to, because the checkout step uses
+`${{ github.event_name == 'workflow_dispatch' && github.ref || '' }}`.
+
+So this:
+
+```bash
+gh workflow run test.yml --ref master -f screenshots=true -f update-baselines=true   # WRONG
+```
+
+pushes ~40 changed baseline PNGs straight to master with no PR and no review -
+which happened on 2026-08-20 and violates the repo's branch+PR rule. Screenshot
+baselines are not an exception to that rule: they are the artifact class that
+can carry banned copy invisibly, since a text ratchet cannot read a PNG.
+
+Do this instead:
+
+```bash
+gh workflow run test.yml --ref <your-branch> -f screenshots=true -f update-baselines=true
+```
+
+The bot commits to your branch, the baselines ride the PR that needed them, and
+a reviewer sees the pixels change alongside the change that moved them.
+
 **Re-introduced (DevX R2 Phase B, 2026-07-31):** `test.yml` now runs the critical screenshot suite on `pull_request` (paths-filtered to visual surfaces), provisioned via `bin/setup-test-env` so runner pixels match `linux/` baselines. Currently REPORT-ONLY (`continue-on-error: true` - failures upload the snap_diff report and comment the PR); flip that flag off after a clean soak week to make it blocking. Record mode (`workflow_dispatch` + update-baselines) records on the same pinned stack. Local gates in [test-gates.md](test-gates.md) (`bin/test` macOS, `bin/dtest` docker-linux) remain the pre-PR discipline.
 
 Two gotchas the first record run hit (both fixed; evidence: [run 30629929407](https://github.com/jetthoughts/jetthoughts.github.io/actions/runs/30629929407) - 104 screenshots compared clean, 4 test failures, commit step never ran). Keep in mind for any new CI test job:

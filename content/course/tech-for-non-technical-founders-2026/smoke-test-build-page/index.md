@@ -108,6 +108,10 @@ The page must pass this test: a stranger can say who it is for and what it does
 in 3 seconds. No pricing, no FAQ, no testimonials. Never write "Buy now."
 ```
 
+The draft that comes back is a starting point. Two blocks always need your hand on them:
+
+![Two columns comparing an AI builder's first draft with the version you ship. Headline row - the draft reads "Smart Solutions for Modern Businesses"; the rewrite reads "Solo chiropractors: resubmit denied claims in 30 seconds". Value-prop row - the draft reads "Calendar integration"; the rewrite reads "Stop re-typing the same denied claim". The draft cards carry a ruby edge marking the block to replace](draft-vs-rewrite.svg)
+
 ## Build the page
 
 > **Build:**
