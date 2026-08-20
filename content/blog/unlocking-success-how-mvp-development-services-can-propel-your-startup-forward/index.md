@@ -5,7 +5,7 @@ remote_id: 2202855
 dev_to_id: 2202855
 dev_to_url: https://dev.to/jetthoughts/unlocking-success-how-mvp-development-services-can-propel-your-startup-forward-39ak
 title: 'Unlocking Success: How MVP Development Services Can Propel Your Startup Forward'
-description: Starting a new business is no small feat, and having a solid plan can make all the difference. One...
+description: "Starting a new business is no small feat, and having a solid plan can make all the difference."
 created_at: '2025-01-13T03:18:13Z'
 edited_at: '2025-01-30T02:47:00Z'
 date: 2025-01-13

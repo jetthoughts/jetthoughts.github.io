@@ -5,7 +5,7 @@ remote_id: 2164820
 dev_to_id: 2164820
 dev_to_url: https://dev.to/jetthoughts/essential-recruitment-tips-for-recruiters-to-attract-top-talent-in-2024-2phf
 title: Essential Recruitment Tips for Recruiters to Attract Top Talent in 2024
-description: Recruiting top talent in 2024 is no walk in the park. The job market's competitive, and recruiters...
+description: "Recruiting top talent in 2024 is no walk in the park. The job market's competitive, and recruiters need to be on their toes."
 created_at: '2024-12-19T10:10:21Z'
 edited_at: '2024-12-19T11:07:55Z'
 draft: false

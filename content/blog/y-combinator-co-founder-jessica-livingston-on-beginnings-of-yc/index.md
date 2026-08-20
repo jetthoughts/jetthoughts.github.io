@@ -5,7 +5,7 @@ remote_id: 2234058
 dev_to_id: 2234058
 dev_to_url: https://dev.to/jetthoughts/y-combinator-co-founder-jessica-livingston-on-the-beginnings-of-yc-3kp
 title: Y Combinator Co-Founder Jessica Livingston on the Beginnings of YC
-description: In the early days of startup culture, there was a significant gap in funding options for...
+description: "In the early days of startup culture, there was a significant gap in funding options for entrepreneurs."
 created_at: '2025-01-22T18:37:25Z'
 edited_at: '2025-01-30T02:40:26Z'
 date: 2025-01-22

@@ -5,7 +5,7 @@ remote_id: 1877642
 dev_to_id: 1877642
 dev_to_url: https://dev.to/jetthoughts/simultaneous-work-on-the-feature-for-frontend-and-backend-developers-1463
 title: Simultaneous work on the feature for frontend and backend developers
-description: Simultaneous work on the feature for frontend and backend developers   How do split features...
+description: "How do split features on static and backend for 2 developers to prevent blockers? What no-time solution we could use for small projects?"
 date: 2024-06-05
 created_at: '2024-06-05T06:43:35Z'
 edited_at: '2024-11-26T16:02:54Z'

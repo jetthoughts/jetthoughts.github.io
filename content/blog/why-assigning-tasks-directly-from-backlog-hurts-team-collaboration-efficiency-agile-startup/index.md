@@ -5,7 +5,7 @@ remote_id: 2017433
 dev_to_id: 2017433
 dev_to_url: https://dev.to/jetthoughts/why-assigning-tasks-directly-from-the-backlog-hurts-team-collaboration-and-efficiency-2mbm
 title: Why Assigning Tasks Directly from the Backlog Hurts Team Collaboration and Efficiency
-description: In the fast-paced world of startups, poor task management can cripple team productivity and drain...
+description: "In the fast-paced world of startups, poor task management can cripple team productivity and drain profits."
 created_at: '2024-09-27T14:45:43Z'
 edited_at: '2024-11-25T15:32:08Z'
 date: 2024-09-27

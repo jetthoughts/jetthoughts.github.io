@@ -5,7 +5,7 @@ remote_id: 1851499
 dev_to_id: 1851499
 dev_to_url: https://dev.to/jetthoughts/new-asserts-for-testing-stopped-streams-after-ruby-on-rails-71-542b
 title: New asserts for testing stopped streams after Ruby on Rails 7.1.
-description: Previously, developers encountered a significant challenge verifying if streams ceased operation...
+description: "Previously, developers encountered a significant challenge verifying if streams ceased operation correctly."
 created_at: '2024-05-13T15:10:06Z'
 edited_at: '2024-11-25T15:39:17Z'
 draft: false

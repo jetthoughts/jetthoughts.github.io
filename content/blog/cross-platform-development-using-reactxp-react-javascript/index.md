@@ -5,7 +5,7 @@ remote_id: 1853624
 dev_to_id: 1853624
 dev_to_url: https://dev.to/jetthoughts/cross-platform-development-using-reactxp-3poc
 title: Cross-platform development using ReactXP
-description: Cross-platform development using ReactXP   Startups with limited resources trying to reduce...
+description: "Startups with limited resources trying to reduce cost on delivering their apps to both web and mobile platforms."
 created_at: '2024-05-15T07:48:27Z'
 edited_at: '2024-11-26T16:04:05Z'
 draft: false

@@ -5,7 +5,7 @@ remote_id: 1877556
 dev_to_id: 1877556
 dev_to_url: https://dev.to/jetthoughts/mock-everything-is-a-good-way-to-sink-2ha
 title: Mock Everything Is a Good Way to Sink
-description: Have you found a lot of code with mocks and stubs? But how do you feel about it? When I see...
+description: "Have you found a lot of code with mocks and stubs? But how do you feel about it? When I see mocks/stubs, I am always looking for the way to remove them."
 created_at: '2024-06-05T05:52:47Z'
 date: 2024-06-05
 edited_at: '2024-11-26T16:03:35Z'

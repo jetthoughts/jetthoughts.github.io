@@ -5,7 +5,7 @@ remote_id: 2166555
 dev_to_id: 2166555
 dev_to_url: https://dev.to/jetthoughts/essential-strategies-for-building-a-high-performance-software-development-team-in-2024-5dg
 title: Essential Strategies for Building a High-Performance Software Development Team in 2024
-description: Building a top-notch software development team in 2024 isn't just about having the right tech skills....
+description: "Building a top-notch software development team in 2024 isn't just about having the right tech skills."
 created_at: '2024-12-20T08:32:43Z'
 edited_at: '2025-01-30T03:29:00Z'
 draft: false

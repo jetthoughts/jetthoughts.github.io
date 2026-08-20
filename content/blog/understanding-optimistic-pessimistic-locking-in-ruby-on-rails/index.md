@@ -5,7 +5,7 @@ remote_id: 2187281
 dev_to_id: 2187281
 dev_to_url: https://dev.to/jetthoughts/understanding-optimistic-and-pessimistic-locking-in-ruby-on-rails-2fo
 title: Understanding Optimistic and Pessimistic Locking in Ruby on Rails
-description: When several people touch a database simultaneously, software conflicts can occur when more than one...
+description: "When several people touch a database simultaneously, software conflicts can occur when more than one user tries to update the same record."
 created_at: '2025-01-03T10:10:53Z'
 edited_at: '2025-01-04T08:17:35Z'
 draft: false

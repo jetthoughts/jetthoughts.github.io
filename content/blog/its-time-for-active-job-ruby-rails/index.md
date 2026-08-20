@@ -5,7 +5,7 @@ remote_id: 1880305
 dev_to_id: 1880305
 dev_to_url: https://dev.to/jetthoughts/its-time-for-active-job-eph
 title: It's Time For Active Job
-description: It's Time For Active Job     Recently we have upgraded one of our own projects to Rails 4.2....
+description: "Recently we have upgraded one of our own projects to Rails 4.2. New minor version contains many improvements of old features and adds some new ones."
 created_at: '2024-06-07T11:47:31Z'
 edited_at: '2024-11-25T15:34:09Z'
 draft: false

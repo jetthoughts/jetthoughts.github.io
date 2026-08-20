@@ -5,7 +5,7 @@ remote_id: 1144505
 dev_to_id: 1144505
 dev_to_url: https://dev.to/jetthoughts/how-to-setup-default-values-for-attributes-in-ruby-on-rails-l8m
 title: How To Setup Default Values For Attributes In Ruby On Rails
-description: Have you ever thought setting default values for attributes in Ruby on Rails could be...
+description: "Have you ever thought setting default values for attributes in Ruby on Rails could be problematic?"
 created_at: '2022-07-19T06:01:04Z'
 edited_at: '2024-11-25T15:41:00Z'
 draft: false

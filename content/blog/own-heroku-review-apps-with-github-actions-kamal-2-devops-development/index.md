@@ -5,7 +5,7 @@ remote_id: 2053767
 dev_to_id: 2053767
 dev_to_url: https://dev.to/jetthoughts/own-heroku-review-apps-with-github-actions-and-kamal-2-407n
 title: Own Heroku Review Apps with GitHub Actions and Kamal 2
-description: Continuous delivery is vital in modern software development. It ensures that code changes are...
+description: "Continuous delivery is vital in modern software development. It ensures that code changes are released quickly and reliably."
 created_at: '2024-10-23T14:23:22Z'
 edited_at: '2024-11-25T15:31:50Z'
 date: 2024-10-23

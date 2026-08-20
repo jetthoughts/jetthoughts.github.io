@@ -5,7 +5,7 @@ remote_id: 1880211
 dev_to_id: 1880211
 dev_to_url: https://dev.to/jetthoughts/effortless-code-conventions-review-for-pull-request-changes-4p4k
 title: Effortless Code Conventions Review for Pull Request Changes
-description: Reliably arranged source code helps hackability. You can filter code speedier if its organizing is...
+description: "Reliably arranged source code helps hackability. You can filter code speedier if its organizing is predictable."
 created_at: '2024-06-07T10:03:27Z'
 edited_at: '2024-12-06T11:37:28Z'
 draft: false

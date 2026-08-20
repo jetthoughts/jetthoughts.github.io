@@ -5,7 +5,7 @@ remote_id: 1739418
 dev_to_id: 1739418
 dev_to_url: https://dev.to/jetthoughts/anonymous-block-argument-in-ruby-bp1
 title: Anonymous block argument in Ruby
-description: In the Ruby programming language, it is possible to use default block parameters instead of...
+description: "In the Ruby programming language, it is possible to use default block parameters instead of variables."
 created_at: '2024-01-23T20:09:24Z'
 edited_at: '2024-11-25T15:39:39Z'
 date: 2024-01-23

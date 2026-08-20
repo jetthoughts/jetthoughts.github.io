@@ -5,7 +5,7 @@ remote_id: 2358784
 dev_to_id: 2358784
 dev_to_url: https://dev.to/jetthoughts/implementing-instant-search-dynamic-forms-and-infinite-scroll-with-hotwire-and-turbo-in-rails-18p
 title: Implementing Instant Search, Dynamic Forms, and Infinite Scroll with Hotwire and Turbo in Rails
-description: Despite Hotwire's growing popularity, many developers struggle with implementing it correctly. Common...
+description: "Despite Hotwire's growing popularity, many developers struggle with implementing it correctly."
 created_at: '2025-03-26T20:00:54Z'
 edited_at: '2025-03-29T11:44:47Z'
 date: 2025-03-26

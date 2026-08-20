@@ -5,7 +5,7 @@ remote_id: 1212480
 dev_to_id: 1212480
 dev_to_url: https://dev.to/jetthoughts/custom-templates-for-rails-scaffolding-4ge0
 title: Custom templates for Rails scaffolding
-description: Rails has a very handy tool for rapid development called scaffolding. Often programmers ignore it,...
+description: "Rails has a very handy tool for rapid development called scaffolding. Often programmers ignore it, because some things have to be written by hand anyway."
 date: 2022-10-06
 created_at: '2022-10-06T09:10:00Z'
 edited_at: '2024-11-25T15:40:26Z'

@@ -5,7 +5,7 @@ remote_id: 1852568
 dev_to_id: 1852568
 dev_to_url: https://dev.to/jetthoughts/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-2b97
 title: Collecting JavaScript code coverage with Capybara in Ruby on Rails application
-description: Having JavaScript code covered by Capybara system tests, can we utilize them for the code...
+description: "We want to be sure that all code responsible for key user journey scenarios of our app is covered with tests."
 created_at: '2024-05-14T11:32:21Z'
 edited_at: '2024-11-26T16:05:54Z'
 date: 2024-05-14

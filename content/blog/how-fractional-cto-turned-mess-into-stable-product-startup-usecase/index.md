@@ -5,7 +5,7 @@ remote_id: 2012759
 dev_to_id: 2012759
 dev_to_url: https://dev.to/jetthoughts/how-a-fractional-cto-turned-a-mess-into-a-stable-product-488e
 title: How a Fractional CTO Turned a Mess into a Stable Product
-description: Are bugs pushing your customers away?  Maybe your app breaks at the worst times. Maybe its design...
+description: "Maybe your app breaks at the worst times. Maybe its design confuses users. These problems aren't rare."
 created_at: '2024-09-24T12:34:01Z'
 edited_at: '2024-11-25T15:32:22Z'
 date: 2024-09-24

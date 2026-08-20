@@ -5,7 +5,7 @@ remote_id: 2024297
 dev_to_id: 2024297
 dev_to_url: https://dev.to/jetthoughts/why-your-form-submission-fails-hotwire-cloudflare-and-missing-validation-messages-1a3o
 title: 'Why Your Form Submission Fails: Hotwire/Turbo 1.x, Cloudflare, and Missing Validation Messages'
-description: Recently, we encountered a bug in our application. A user reported that after submitting a form,...
+description: "Recently, we encountered a bug in our application. A user reported that after submitting a form, nothing happened."
 created_at: '2024-10-03T12:16:04Z'
 edited_at: '2024-11-25T15:32:00Z'
 draft: false

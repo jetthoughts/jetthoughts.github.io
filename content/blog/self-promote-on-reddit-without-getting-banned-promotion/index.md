@@ -5,7 +5,7 @@ remote_id: 1880466
 dev_to_id: 1880466
 dev_to_url: https://dev.to/jetthoughts/self-promote-on-reddit-without-getting-banned-3pm2
 title: Self-promote on Reddit without getting banned
-description: We are happy to share our experience on important aspects of starting self-promoting posts on Reddit....
+description: "We are happy to share our experience on important aspects of starting self-promoting posts on Reddit. What do you need for it? What are the steps?"
 created_at: '2024-06-07T13:31:24Z'
 date: 2024-06-07
 edited_at: '2024-11-26T16:02:00Z'

@@ -5,7 +5,7 @@ remote_id: 2102152
 dev_to_id: 2102152
 dev_to_url: https://dev.to/jetthoughts/minitest-advantages-simple-testing-for-rails-projects-4467
 title: 'Minitest Advantages: Simple Testing for Rails Projects'
-description: Minitest and RSpec are great testing tools for Ruby on Rails, each with its style, strengths, and...
+description: "Minitest and RSpec are great testing tools for Ruby on Rails, each with its style, strengths, and weaknesses."
 created_at: '2024-11-13T08:47:37Z'
 edited_at: '2024-11-25T15:42:16Z'
 draft: false
