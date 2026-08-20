@@ -22,7 +22,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/blog/"
 
     # Use stable method due to consistency improvements
-    assert_stable_screenshot "blog/index", skip_area: [".blog-post"]
+    assert_stable_screenshot "blog/index", skip_area: [".blog-post", ".post-feature"]
   end
 
   def test_blog_index_pagination
@@ -30,7 +30,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     scroll_to find("#pagination")
 
-    assert_stable_screenshot "blog/index/_pagination", skip_area: [".blog-post"], tolerance: 0.03
+    assert_stable_screenshot "blog/index/_pagination", skip_area: [".blog-post", ".post-feature"], tolerance: 0.03
   end
 
   def test_visit_blog_post

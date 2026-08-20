@@ -37,42 +37,52 @@
 {{ define "main" }}
   <div class="blog-index-page">
     <div class="blog">
-      <div
-        class="blog-index"
-        style="max-width: 720px; margin:0 auto; padding-left:18px;padding-right:18px">
-              <div>
-                <h1
-                  class="fl-heading"
-                  style="margin: 0!important;padding: 0!important">
-                  Blog
-                </h1>
+      <div class="blog-index">
+        <div>
+          <h1
+            class="fl-heading"
+            style="margin: 0!important;padding: 0!important">
+            Blog
+          </h1>
 
-                <p>
-                  Founder-tested patterns from {{ sub now.Year (int site.Params.foundingYear) }}+ years of rescue engagements.
-                  Rails, AI, and the questions burned founders ask before signing again.
-                </p>
+          <p class="blog-lead">
+            Founder-tested patterns from {{ sub now.Year (int site.Params.foundingYear) }}+ years of rescue engagements.
+            Rails, AI, and the questions burned founders ask before signing again.
+          </p>
 
-                {{ range (.Paginate (where .Pages "Params.course_chapter" "!=" true).ByDate.Reverse).Pages }}
-                  <a class="link" href="{{ .RelPermalink }}">
-                    <div class="blog-post">
-                      <div class="post-image">
-                        {{ partial "blog/img-cropped.html" (dict "Page" . "width" 180 "height" 180) }}
-                      </div>
-                      <div class="post-content">
-                        <h2 class="post-title">{{ .Title }}</h2>
-                        <div class="post-meta">
-                          {{ if .Date }}
-                            <span class="post-date">{{ dateFormat "Jan 2, 2006" .Date }}</span>
-                          {{ end }}
-                          {{ with .Params.tags }}
-                            <div class="post-tags-card">{{ range $i, $t := . }}{{ if $i }}<span class="post-tags-sep">,</span> {{ end }}<a href="/blog/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>
-                          {{ end }}
-                        </div>
-                        <div class="post-description">{{ .Params.description }}</div>
-                      </div>
+          {{ partial "blog/filters.html" . }}
+
+          {{ $pag := .Paginate (where .Pages "Params.course_chapter" "!=" true).ByDate.Reverse }}
+          {{ $posts := $pag.Pages }}
+
+          {{ if eq $pag.PageNumber 1 }}
+            {{/* range first 1, not `index $posts 0`: index errors on an
+                 empty slice before `with` can guard it */}}
+            {{ range first 1 $posts }}
+              <a class="link" href="{{ .RelPermalink }}">
+                <div class="post-feature">
+                  <div class="post-content">
+                    <span class="post-eyebrow">Latest</span>
+                    <h2 class="post-title">{{ .Title }}</h2>
+                    <div class="post-description">{{ .Params.description }}</div>
+                    <div class="post-meta">
+                      {{ if .Date }}<span class="post-date">{{ dateFormat "Jan 2, 2006" .Date }} · {{ .ReadingTime }} min read</span>{{ end }}
                     </div>
-                  </a>
-                {{ end }}
+                  </div>
+                  <div class="post-image">
+                    {{ partial "blog/img-cropped.html" (dict "Page" . "width" 440 "height" 231) }}
+                  </div>
+                </div>
+              </a>
+            {{ end }}
+            {{ $posts = after 1 $posts }}
+          {{ end }}
+
+          {{ range $posts }}
+            {{ partial "blog/post-row.html" . }}
+          {{ end }}
+
+          {{ partial "blog/cta-band.html" . }}
 
           {{ partial "pagination" . }}
         </div>

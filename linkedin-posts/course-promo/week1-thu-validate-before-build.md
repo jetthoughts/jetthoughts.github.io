@@ -20,7 +20,9 @@ visual: assets/week1-thu-validate-before-build.png (from dollar-presale-flow.svg
 first_comment: |
   If it helps, the $1 pre-sale version of this - the exact button and the refund promise - is a free lesson in the course, no signup:
   https://jetthoughts.com/course/tech-for-non-technical-founders-2026/fake-stripe-pre-sale-pieter-levels/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_pre_validation&utm_content=validate_before_build
-tags: "#startups #founders #buildinpublic"
+# hashtags (not `tags:` — that key joins Hugo's site taxonomy via the dev-only
+# mount and a space-separated string breaks every /blog/tags/ page render)
+hashtags: "#startups #founders #buildinpublic"
 dedup_note: overlaps course-promo/week1-mon-built-before-testing.md (demand-before-build) - keep this idea-first version as the model, revise/retire the older parable.
 notes: |
   Idea-first structure (Cutler/Rossi), NOT the old story-parable. Plain short
