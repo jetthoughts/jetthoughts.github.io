@@ -44,7 +44,7 @@ context[:agent_logs][iteration]["reflector"] = {
 
 `used_queries` shows whether iteration two explored new ground or re-ran iteration one with a synonym. `candidates_count` tells you whether retrieval starved before scoring ever got a chance. The decision and the reflector's reasoning, cut at 200 characters, say why the run ended - enough to read intent, short enough to scan a hundred iterations without paging.
 
-The metrics row came first and this column landed the next day, which is the honest order of operations: we stored what runs produced before we stored how they got there.
+The metrics row came first, which is the honest order of operations: we stored what runs produced before we stored how they got there.
 
 Ask the model a month later why a run stopped and it has no idea; it never saw the run. The funnel numbers and the labeled cases both read back out of this column.
 
@@ -113,7 +113,7 @@ end
 
 Setting `config.default_model = "qwen3:0.6b"` and stopping there does not work. A bare model id goes through the gem's registry, `qwen3:0.6b` is not in it, and `Chat` raises `ModelNotFoundError`. Naming the provider makes the gem ask that provider instead, and because Ollama reports itself as local, the registry lookup is skipped rather than failed. Name a hosted provider and an unknown id still raises.
 
-The `temperature 0.0` above has to be a literal. `instructions`, `tools`, `schema`, `params`, and `headers` all accept a lazy block; `temperature` and `model` take a plain value, and a block handed to either is dropped without a warning ([`agent.rb`](https://github.com/crmne/ruby_llm/blob/v1.16.0/lib/ruby_llm/agent.rb) at 1.16). A block there does nothing and tells you nothing.
+The `temperature 0.0` above has to be a literal. `instructions`, `tools`, `schema`, `params`, and `headers` all accept a lazy block; `temperature` and `model` take a plain value ([`agent.rb`](https://github.com/crmne/ruby_llm/blob/1.16.0/lib/ruby_llm/agent.rb) at 1.16). The two fail differently, and the difference matters. A block handed to `temperature` is ignored and the literal stands. A block handed to `model` leaves `model_id` as `nil`, so the method assigns an empty hash to `@chat_kwargs` and wipes the model and provider the class inherited - the agent then runs on whatever `config.default_model` is, which in production is not the local model you thought you had pinned.
 
 Even pinned, a 0.6b model wanders, so be clear about what the local loop proves. It exercises the plumbing: schema parsing, log writes, loop termination. Ranking quality gets judged by replaying the golden set against the production model. The local loop catches those three in CI, without a hosted call anywhere.
 
