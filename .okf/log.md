@@ -2193,3 +2193,18 @@ agent owns it) - PR #489 is DRAFT until cleared. Known red handed to the
 master owner: macos/desktop/homepage/_clients.png is stale on master itself
 (Jul 21 record, card order changed since; fails on clean master).
 Detail: PR #489, docs/projects/2608-site-design-system/20-29-strategy/20.01-rollout-plan.md
+
+## 2026-08-20 - Blog engagement baseline: 3-day Clarity windows swing 25-75%
+
+Phase 0.4 hardened before the read could be corrupted by it: blog scroll
+depth measured 75.1% / 50.9% / 25.2% across three consecutive 3-day Clarity
+windows (Aug 12-20, 70-220 sessions each). At this traffic the metric is
+dominated by WHICH posts got traffic, not by design - a single-window
+pre/post read is noise dressed as a result. Protocol locked in 2608 40.01:
+28-day windows, session-weighted (before = ~46.0% scroll / 35.3s over
+Aug 12-20), segmented by top-trafficked posts, read due 2026-09-17. Clarity's
+API accepts explicit historical date ranges (verified) - not just
+"last 3 days". Tag pages also got their missing screenshot coverage
+(phase 0.3 gap: primary navigation with no baseline), recorded via
+bin/record-baselines' first real outing - kept 1, restored 0, both legs.
+Detail: docs/projects/2608-site-design-system/40-49-measurement/40.01-blog-engagement-baseline.md
