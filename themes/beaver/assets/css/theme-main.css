@@ -1,12 +1,12 @@
 /* affects pages: blog-list + free-consultation bundles - see docs/projects/2509-css-migration/css-bundle-ownership-map.md
    Legacy shared layer (Phase C4 strangler target) - verify with bin/qtest before editing. */
 :root {
-  --jt-primary-color: var(--color-primary);
+  --jt-primary-color: var(--color-ruby);
   --jt-text-color: #121212; /* KEEP LITERAL (value side): shadow token - repointing to var(--color-dark) is a deliberate follow-up decision, not a mechanical swap */
-  --jt-primary: var(--color-primary);
+  --jt-primary: var(--color-ruby);
   --jt-text-primary: #121212; /* KEEP LITERAL (value side): shadow token - repointing to var(--color-dark) is a deliberate follow-up decision, not a mechanical swap */
-  --jt-primary-dark: #0066cc;
-  --jt-primary-hover: #007af4;
+  --jt-primary-dark: var(--ruby-700);
+  --jt-primary-hover: var(--color-ruby-hover);
   --jt-white: #ffffff;
   --jt-text-secondary: #7e7e7e;
 }
@@ -517,7 +517,7 @@ a img.alignnone {
 }
 .fl-page .fl-module span.onsale {
   color: #fff;
-  background: var(--color-primary);
+  background: var(--color-ruby);
   font-size: 13px;
   font-weight: normal;
   left: 10px;
@@ -587,15 +587,15 @@ a img.alignnone {
 }
 a.fl-button,
 a.fl-button:visited {
-  background: var(--color-primary);
+  background: var(--color-ruby);
   color: #fff;
-  border: 1px solid #006ddc;
+  border: 1px solid var(--ruby-700);
 }
 
 a.fl-button:hover,
 .fl-builder-content a.fl-button:hover {
   color: #fff;
-  background: #007af4;
+  background: var(--color-ruby-hover);
 }
 
 a.fl-button *,
@@ -610,8 +610,8 @@ a.fl-button:hover * {
 a.fl-button:hover,
 a.button:hover {
   color: #fff;
-  background-color: #007af4;
-  border: 1px solid #006ddc;
+  background-color: var(--color-ruby-hover);
+  border: 1px solid var(--ruby-700);
 }
 button,
 input[type="button"],
@@ -623,7 +623,7 @@ input[type="submit"] {
   padding: 6px 12px;
   font-weight: normal;
   text-shadow: none;
-  border: 1px solid #006ddc;
+  border: 1px solid var(--ruby-700);
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -637,7 +637,7 @@ input[type="button"]:hover,
 input[type="submit"]:hover {
   background-color: transparent; /* was undefined var(--color-primary) = initial */
   color: #fff;
-  border: 1px solid #006ddc;
+  border: 1px solid var(--ruby-700);
   text-decoration: none;
 }
 
@@ -649,7 +649,7 @@ input[type="button"]:focus,
 input[type="submit"]:focus {
   background-color: transparent; /* was undefined var(--color-primary) = initial */
   color: #fff;
-  border: 1px solid #006ddc;
+  border: 1px solid var(--ruby-700);
   outline: none;
   position: relative;
 }
@@ -819,13 +819,13 @@ textarea:focus {
 
   .fl-page-nav .navbar-nav li > a:hover,
   .fl-page-nav .navbar-nav li > a:focus {
-    color: var(--color-primary);
+    color: var(--color-ruby);
   }
 
   .fl-page-nav .navbar-nav li.current-menu-ancestor > a,
   .fl-page-nav .navbar-nav li.current-menu-parent > a,
   .fl-page-nav .navbar-nav li.current-menu-item > a {
-    color: var(--color-primary);
+    color: var(--color-ruby);
   }
 
   .fl-page-nav .navbar-nav li.current-menu-item ~ li.current-menu-item > a {
@@ -1860,7 +1860,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .fl-page-nav
   .navbar-toggle:visited {
   color: #fff;
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   font-family:
     system-ui,
     -apple-system,
@@ -1948,7 +1948,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .navbar-toggle:hover {
   color: #fff;
   border-color: #121212; /* KEEP LITERAL: border is style:none (invisible); var() here changes the minifier border shorthand/longhand merge product across bundles */
-  background-color: #007af4;
+  background-color: var(--color-ruby-hover);
   border-style: none;
   border-width: 1px;
   border-radius: 25px;
@@ -2240,7 +2240,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-ruby);
   outline-offset: 2px;
 }
 
@@ -2250,7 +2250,7 @@ input[type="button"]:focus-visible,
 input[type="submit"]:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(26, 140, 255, 0.5);
+  box-shadow: 0 0 0 4px rgba(204, 52, 45, 0.5);
 }
 
 /* Form Control Focus Styles */
@@ -2266,7 +2266,7 @@ input[type="number"]:focus-visible,
 input[type="search"]:focus-visible,
 input[type="url"]:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-ruby);
   outline-offset: 1px;
   border-color: currentColor; /* was undefined var(--color-primary) = initial */
 }
