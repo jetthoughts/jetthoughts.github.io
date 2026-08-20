@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+# bin/record-baselines — accept ONLY the screenshot baselines you asked for
+# from a re-record run, restoring everything else FORCE_SCREENSHOT_UPDATE
+# rewrote. Automates the manual dance done by hand 3x on 2026-08-14 (copy
+# out changed files, git checkout -- the rest, restore the copies).
+#
+# Usage:
+#   bin/record-baselines <path-or-glob>...       # record on macOS host
+#   TEST=test/system/foo_test.rb bin/record-baselines macos/desktop/blog/index.png
+#   bin/record-baselines --dry-run <path-or-glob>...   # show keep/restore, no test run
+#   bin/record-baselines --linux <path-or-glob>...     # print the CI dispatch command instead
+#
+# Paths/globs are relative to test/fixtures/screenshots/, e.g.
+#   macos/desktop/blog/index.png
+#   macos/*/blog/*
+#
+# TEST= / TESTOPTS= pass through to `bin/rake test:system` unchanged (export
+# them before calling this script) so you can record from one test file.
+
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+SCREENSHOTS=test/fixtures/screenshots
+
+if [ "${1:-}" = "--linux" ]; then
+  shift
+  branch=$(git rev-parse --abbrev-ref HEAD)
+  echo "record-baselines: local ARM Docker records plant false drift on Linux"
+  echo "baselines (documented 2026-08-20) — dispatching CI instead runs on the"
+  echo "same architecture the baselines were recorded for. Run:"
+  echo ""
+  echo "  gh workflow run test.yml --ref $branch -f update-baselines=true"
+  exit 0
+fi
+
+dry_run=false
+if [ "${1:-}" = "--dry-run" ]; then
+  dry_run=true
+  shift
+fi
+
+if [ "$#" -eq 0 ]; then
+  echo "usage: bin/record-baselines [--linux|--dry-run] <path-or-glob>..." >&2
+  exit 1
+fi
+
+keep_globs=("$@")
+
+# Same dirty-fixture guard as bin/qtest / test/application_system_test_case.rb.
+# --dry-run is exempt: it inspects whatever is already dirty as its demo set.
+dirty=$(git status --porcelain "$SCREENSHOTS")
+if [ -n "$dirty" ] && [ "$dry_run" = false ]; then
+  echo "record-baselines: screenshot fixtures are dirty — commit or reset first:" >&2
+  echo "$dirty" | head -10 >&2
+  echo "  bin/rake test:screenshots:reset" >&2
+  exit 1
+fi
+
+if [ "$dry_run" = true ]; then
+  echo "record-baselines: --dry-run — using the currently dirty files as the simulated record set"
+else
+  echo "record-baselines: FORCE_SCREENSHOT_UPDATE=true bin/rake test:system"
+  FORCE_SCREENSHOT_UPDATE=true bin/rake test:system
+fi
+
+kept=() restored=()
+while IFS= read -r f; do
+  [ -z "$f" ] && continue
+  rel="${f#"$SCREENSHOTS"/}"
+  match=false
+  for g in "${keep_globs[@]}"; do
+    case "$rel" in
+      $g) match=true; break ;;
+    esac
+  done
+  if [ "$match" = true ]; then
+    kept+=("$f")
+  else
+    restored+=("$f")
+    git checkout -- "$f"
+  fi
+done < <(git status --porcelain "$SCREENSHOTS" | cut -c4-)
+
+echo "record-baselines: kept ${#kept[@]}, restored ${#restored[@]}"
+git status --porcelain "$SCREENSHOTS"
