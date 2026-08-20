@@ -39,9 +39,11 @@ ORDER the decision ships in, which is a separate call and the one a session
 gets wrong. Reading only the palette concept, the obvious next move after
 Phase 1a.3 is 1a.4 - and that is the wrong order (see blog-first below).
 
-Live phase status lives in the plan doc under `resource:`, not here; a state
-snapshot in a concept rots within days. What is recorded here is the reasoning
-that outlives any particular phase.
+**Phase status comes from GIT, not from any document** - see the section below.
+Neither this concept nor the plan doc is a status source: the plan records what
+was DECIDED and went stale (it listed 2.1/2.2 pending after both shipped), and
+a state snapshot in a concept rots within days. What is recorded here is the
+reasoning that outlives any particular phase.
 
 # Three rules that decide sequence
 
@@ -62,7 +64,8 @@ are A (qualitative), B (guardrails with declared rollback thresholds), C
 whose case is coherence.
 
 **3. Blog before site-wide chrome** (Paul, 2026-08-20). That is where the
-humans already are - the ~145 GSC clicks/28d land overwhelmingly on posts - and
+humans already are - the 105 GSC clicks/28d (measured 2026-08-21; the plan's
+~145 was superseded) land overwhelmingly on posts - and
 the blog bundles do not touch the money pages. It also has the clearest
 engagement problem to move.
 

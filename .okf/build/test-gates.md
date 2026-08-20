@@ -243,9 +243,14 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   (2026-08-21). All four blog-index screenshots mask BOTH `.blog-post` and
   `.post-feature` (`test/system/desktop_site_test.rb:34,42`,
   `test/system/mobile_site_test.rb:25,33`) - and `.post-feature` IS the
-  feature slot the blog index was rebuilt around. The index's entire content
-  area has never been visually gated. Phase 2.1 and 2.2 shipped through that
-  hole on 2026-08-20 and nobody noticed for a day.
+  feature slot the blog index was rebuilt around.
+
+  **Scope it precisely** (narrowed 2026-08-21 after review - the first draft
+  said "the entire content area" and "2.1 and 2.2 shipped through that hole",
+  both overstated). The masks hide the LISTING ROWS and the FEATURE SLOT only;
+  the lead, filters, CTA band and pagination on that page remain covered. And
+  the POST template has 24 dedicated baselines of its own, so Phase 2.2 was
+  never unguarded. What went unseen is Phase 2.1's rows and feature slot.
 
   This is strictly worse than the 2% tolerance trap above: tolerance is a
   STATISTICAL blindness that a big enough change defeats, a mask is a

@@ -146,10 +146,18 @@ milestones on `{{ if and .IsPage (eq .Section "blog") }}`. `.IsPage` is FALSE
 for list pages, so individual posts emit `scroll_depth` and `/blog/` emits
 nothing. Found 2026-08-21 while baselining the blog rebuild.
 
-Consequence: for the blog INDEX, Clarity is the only instrument that sees
-scroll at all - it measures client-side without site instrumentation, so it
-is unaffected. Never answer an index-engagement question from GA4; it has no
-data, which reads identically to zero engagement.
+Consequence, stated precisely (narrowed 2026-08-21 after review): what `/blog/`
+loses is the CUSTOM 25/50/75/90 milestone set. If GA4 enhanced measurement is
+enabled on the property, its BUILT-IN `scroll` event (fires once at 90%) is
+unaffected by this template gate and may still be available - **verify in the
+property before assuming either way; it was not verified here.** So the honest
+statement is "missing intermediate milestones", not "no scroll data": discarding
+a usable 90% signal because a doc said GA4 sees nothing would be its own error.
+
+Clarity is unaffected regardless - it measures client-side without site
+instrumentation - and remains the richer index-scroll source. What still holds:
+never answer an index-engagement question from the CUSTOM milestones; they have
+no data there, which reads identically to zero engagement.
 
 ## A 3-day window is not a baseline - recompute before quoting
 
