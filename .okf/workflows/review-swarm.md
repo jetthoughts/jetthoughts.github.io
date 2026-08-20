@@ -9,7 +9,7 @@ generated:
 verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-20T23:44:03Z
+timestamp: 2026-08-20T23:52:10Z
 ---
 
 # The loop
@@ -37,6 +37,24 @@ cover, wall-shaped diagrams). Adjudicate critic conflicts against the
 anchor text, not majority vote: taste-e's red-metric ruling beat
 taste-a's recolor suggestion because the anchor names Ruby as the brand
 accent ink.
+
+**Route design review through `/stitch-design`** (Paul, 2026-08-21). Stitch
+holds the house visual system, so it reviews a change against the DESIGN
+SYSTEM rather than against taste - which is what a generic critic gives you,
+and why generic critics keep suggesting recolours the anchor text already
+ruled out. It is also the consult for a CRITICAL call that is genuinely
+unclear: get its input before deciding, not instead of deciding. The
+decide-don't-wait rule still holds - stitch informs the call, it does not
+own it, and it is never a reason to park a decision.
+
+It complements rather than replaces the rendered gates. Baselines and the
+scroll gate check what SHIPPED; stitch checks what was INTENDED. A change can
+be pixel-identical to its baseline and still wrong against the system, and a
+stitch-approved design can still ship broken - both passes are needed and
+neither substitutes.
+
+Scope its output like any critic's: a punch-list of surgical fixes, not a
+licence to redesign a working page.
 
 # Mechanical runbook
 

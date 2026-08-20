@@ -3,6 +3,25 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+## 2026-08-21 - design review has a route: /stitch-design
+
+* `workflows/review-swarm.md` + `design/index.md` - **design review routes
+  through `/stitch-design`** (Paul, 2026-08-21). It reviews against the DESIGN
+  SYSTEM rather than against taste, which is what a generic critic gives and why
+  generic critics keep proposing recolours the anchor text already ruled out. It
+  is also the consult for a critical call that is genuinely unclear - input
+  before deciding, not instead of deciding; decide-don't-wait still holds.
+
+  Recorded with two boundaries, because both are easy to get wrong: it
+  COMPLEMENTS the rendered gates rather than replacing them (baselines check
+  what shipped, stitch checks what was intended - a change can match its
+  baseline exactly and still be wrong against the system), and its output is
+  scoped like any critic's, a punch-list rather than a licence to redesign.
+
+Deliberately NOT recorded: that a parallel PR currently owns the Linux baseline
+re-record. The accepted-debt POLICY is already in `build/test-gates.md`; who
+holds the work this hour is a state snapshot and would rot within days.
+
 ## 2026-08-21 - what three review rounds taught, lifted from the PR into concepts
 
 #519 took three Codex rounds (8, 7, 9 findings). None cosmetic. The durable
