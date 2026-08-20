@@ -7,8 +7,8 @@ generated:
   by: process:okf-migrate
   at: 2026-07-13T00:00:00Z
 verified:
-  by: claude-opus/4.8
-  at: 2026-08-19T00:00:00Z
+  by: claude-fable/5
+  at: 2026-08-20T00:00:00Z
 ---
 
 Full guides: `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`
@@ -80,6 +80,18 @@ worked with", dual-source statistical openers, sustained staccato.
 
 Sentence-level slop scoring is necessary but NOT sufficient - shape-tell
 review (essay arc, pivot sentences, cloned scaffolding) runs alongside it.
+
+**Same-day-cluster tells (2026-08-20, 4-post batch review).** When several posts
+ship in one batch, a second sweep runs ACROSS them, because per-post review can't
+see cluster fingerprints: (1) shared intensifier stamping - "genuinely" appeared in
+all four posts of the 2026-08-20 batch; (2) a shared metaphor family - the
+"X earns Y" economics figure appeared 5x across the batch (earn their keep / pays
+rent / earns it / earn attention); cap at one per post; (3) verbatim phrase reuse
+("covers that half of the build" word-for-word in two siblings); (4) meta-narration
+templates ("X deserves its own paragraph" / "deserves more attention than it
+gets"); (5) cloned CTA tails ("does exactly that" / "builds exactly this").
+Sweep: grep the batch for the day's pet intensifiers and repeated 4+-word phrases
+before the PR.
 
 Regression sweep before any handback:
 

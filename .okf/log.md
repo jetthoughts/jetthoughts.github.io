@@ -2004,3 +2004,14 @@ self-critics inherited the implementer's assumption that the body WAS the post.
    `getComputedTextLength()` on the .svg URL** rather than budget by character
    count. Lesson generalises past SVG: a plausible constant published as
    guidance gets applied by everyone downstream, so measure before writing one.
+
+## 2026-08-20 - Same-day-cluster voice tells (4-post AI+Rails batch)
+
+Shipping four posts in one day exposed a review gap: per-post critics pass a
+post while the BATCH carries fingerprints - a shared intensifier ("genuinely"
+in all four), a shared metaphor family ("X earns Y" 5x), verbatim phrase reuse
+between siblings, meta-narration templates, and cloned CTA tails. Added the
+cross-batch sweep to `content/voice-rules.md`. Also: critic-tech caught that
+ruby_llm 1.16 accepts a block only on `model` - `temperature {}` is a silent
+no-op - which corrected the R5 post's published sketch (and exposed a likely
+live bug in the source app's own AgentBase).
