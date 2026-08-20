@@ -211,6 +211,24 @@ The campaign tests 5 hypotheses (see validation plan). Not every post needs to t
 
 Without H5, the validation plan loses one mechanic. The trade-off was made consciously on 2026-05-09 in favor of authentic posting.
 
+## Applied-AI short insights + comment engagement (Paul, 2026-08-20)
+
+Two standing additions to the cadence:
+
+1. **Short-insight posts on the applied-AI wedge** are a recurring post type
+   (personal lane, build-in-public pillar): one concrete observation from
+   Paul's actual AI-assisted operation (an agent decision, a review catch, a
+   tool built), ~100-150 words, peer-question close. Same voice gates as every
+   post; specifics must come from real session/work material, never invented.
+   First instance: `linkedin-posts/personal/bip-agents-cancelled-own-backlog.md`.
+2. **Comment engagement rides every posting day**: alongside the post, Paul
+   (or an agent drafting for his review) engages substantively in **1-2
+   relevant threads** (founders posting about dev-shop pain, broken AI builds,
+   hiring dilemmas). Rationale (Paul): comments generate more inbound than
+   posts alone. Draft rules for comments = same voice gates, no links, no
+   pitch; add value in the thread's own terms. Agents may pre-select threads
+   and draft comments; posting stays with Paul.
+
 ---
 
 ## Frontmatter format
