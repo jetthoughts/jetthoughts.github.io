@@ -47,14 +47,14 @@
 
 /* Primary Button Variant - Only color differences remain */
 .c-button--primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   color: #ffffff;
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-ruby);
 }
 
 .c-button--primary:hover {
-  background-color: #0066cc;
-  border-color: #0066cc;
+  background-color: var(--color-ruby-hover);
+  border-color: var(--color-ruby-hover);
   color: #ffffff;
 }
 
@@ -73,13 +73,13 @@
 /* Tertiary Button Variant - Only color differences remain */
 .c-button--tertiary {
   background-color: transparent;
-  color: var(--color-primary);
+  color: var(--color-ruby);
   border: 2px solid transparent;
 }
 
 .c-button--tertiary:hover {
-  background-color: rgba(26, 140, 255, 0.1);
-  color: #0066cc;
+  background-color: var(--ruby-100);
+  color: var(--ruby-700);
 }
 
 /* Mobile Touch Target Size Enhancement (iOS/Android best practices) */
