@@ -5,7 +5,8 @@ remote_id: 2167580
 dev_to_id: 2167580
 dev_to_url: https://dev.to/jetthoughts/mastering-link-creation-in-rails-best-practices-unveiled-4eea
 title: 'Mastering Link Creation in Rails: Best Practices Unveiled'
-description: In the world of Ruby on Rails, creating URLs efficiently is crucial for developers. A recent...
+description: "In the world of Ruby on Rails, creating URLs efficiently is crucial for developers."
+seo_override: true
 created_at: '2024-12-20T23:08:46Z'
 edited_at: '2025-01-30T03:26:59Z'
 draft: false

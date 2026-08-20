@@ -5,7 +5,8 @@ remote_id: 1880474
 dev_to_id: 1880474
 dev_to_url: https://dev.to/jetthoughts/reduce-concurrent-requests-by-redux-saga-effects-1559
 title: Reduce concurrent requests by Redux-Saga Effects
-description: Are you familiar with the situation when the user clicks on a Load Data button 2 consecutive times at...
+description: "Then this blog post is for you. In this post, we do not dive into what the Redux-Saga is and how it works."
+seo_override: true
 created_at: '2024-06-07T13:41:39Z'
 edited_at: '2024-11-26T16:01:54Z'
 date: "2024-06-07"

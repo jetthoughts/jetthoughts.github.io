@@ -5,7 +5,8 @@ remote_id: 2171786
 dev_to_id: 2171786
 dev_to_url: https://dev.to/jetthoughts/how-to-influence-decision-makers-1h5j
 title: How To Influence Decision Makers
-description: In today's fast-paced world, the ability to influence decision-makers is crucial for anyone looking...
+description: "Dalton Caldwell and Michael Seibel share valuable insights on how to effectively persuade those in power and create favorable outcomes."
+seo_override: true
 created_at: '2024-12-23T23:16:44Z'
 edited_at: '2025-01-30T03:23:20Z'
 draft: false

@@ -5,7 +5,8 @@ remote_id: 2235400
 dev_to_id: 2235400
 dev_to_url: https://dev.to/jetthoughts/the-essential-skills-every-rails-engineer-needs-to-succeed-in-2025-10i6
 title: The Essential Skills Every Rails Engineer Needs to Succeed in 2025
-description: Being a Rails engineer in 2025 means being ready for a constantly changing tech world. Rails is still...
+description: "Being a Rails engineer in 2025 means being ready for a constantly changing tech world."
+seo_override: true
 created_at: '2025-01-23T08:49:36Z'
 edited_at: '2025-01-30T02:39:44Z'
 draft: false

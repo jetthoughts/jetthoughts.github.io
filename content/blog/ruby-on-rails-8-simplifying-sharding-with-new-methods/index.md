@@ -5,7 +5,8 @@ remote_id: 2086267
 dev_to_id: 2086267
 dev_to_url: https://dev.to/jetthoughts/ruby-on-rails-8-simplifying-sharding-with-new-methods-48m9
 title: 'Ruby on Rails 8: Simplifying Sharding with New Methods'
-description: Ruby on Rails 8 brings helpful updates for working with sharded databases. The new methods...
+description: "Ruby on Rails 8 brings helpful updates for working with sharded databases."
+seo_override: true
 created_at: '2024-11-08T08:57:16Z'
 edited_at: '2024-11-25T15:42:04Z'
 date: 2024-11-08

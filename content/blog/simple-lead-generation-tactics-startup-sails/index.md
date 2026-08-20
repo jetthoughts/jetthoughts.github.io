@@ -5,7 +5,8 @@ remote_id: 1852632
 dev_to_id: 1852632
 dev_to_url: https://dev.to/jetthoughts/simple-lead-generation-tactics-11np
 title: Simple Lead Generation Tactics
-description: How to build the Lead Generation workflow? Which tools should be used?  In JetThoughts, we build...
+description: "How to build the Lead Generation workflow? Which tools should be used?"
+seo_override: true
 created_at: '2024-05-14T12:48:39Z'
 edited_at: '2024-11-26T16:05:25Z'
 date: 2024-05-14

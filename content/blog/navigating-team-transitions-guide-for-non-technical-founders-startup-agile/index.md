@@ -5,7 +5,8 @@ remote_id: 1941092
 dev_to_id: 1941092
 dev_to_url: https://dev.to/jetthoughts/navigating-team-transitions-a-guide-for-non-technical-founders-1m60
 title: 'Navigating Team Transitions: A Guide for Non-Technical Founders'
-description: Change can be challenging, especially when it involves individuals. Replacing a team is always a...
+description: "Change can be challenging, especially when it involves individuals."
+seo_override: true
 created_at: '2024-07-30T10:47:52Z'
 edited_at: '2024-11-25T15:33:06Z'
 date: 2024-07-30

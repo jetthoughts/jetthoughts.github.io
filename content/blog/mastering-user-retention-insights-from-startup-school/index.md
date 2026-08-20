@@ -5,7 +5,8 @@ remote_id: 2184395
 dev_to_id: 2184395
 dev_to_url: https://dev.to/jetthoughts/mastering-user-retention-insights-from-startup-school-fl0
 title: 'Mastering User Retention: Insights from Startup School'
-description: In the world of startups, understanding user retention is crucial for success. In a recent episode of...
+description: "In the world of startups, understanding user retention is crucial for success."
+seo_override: true
 created_at: '2025-01-01T11:41:43Z'
 edited_at: '2025-01-30T02:56:30Z'
 draft: false

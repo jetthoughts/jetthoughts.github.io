@@ -5,7 +5,8 @@ remote_id: 1189342
 dev_to_id: 1189342
 dev_to_url: https://dev.to/jetthoughts/incremental-lint-fixes-by-github-actions-38o8
 title: Incremental lint fixes by GitHub Actions
-description: How do you apply new lint rules to the legacy project with active development? Have you added...
+description: "How do you apply new lint rules to the legacy project with active development?"
+seo_override: true
 created_at: '2022-09-09T18:50:36Z'
 date: 2022-09-09
 edited_at: '2024-11-25T15:40:41Z'

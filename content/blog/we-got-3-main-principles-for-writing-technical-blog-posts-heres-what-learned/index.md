@@ -5,7 +5,8 @@ remote_id: 1852579
 dev_to_id: 1852579
 dev_to_url: https://dev.to/jetthoughts/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-we-learned-5g39
 title: We got 3 main principles for writing Technical Blog posts. Here's what we learned.
-description: After 100 articles of the research on how to write Technical Blog post simple and quickly, without...
+description: "Learn with us how to improve your post’s readability! What is Angle? It’s the laser-focused main point of your content."
+seo_override: true
 created_at: '2024-05-14T11:40:41Z'
 edited_at: '2024-11-26T16:05:50Z'
 date: 2024-05-14

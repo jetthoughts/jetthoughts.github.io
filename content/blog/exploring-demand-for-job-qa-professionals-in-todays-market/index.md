@@ -5,7 +5,8 @@ remote_id: 2164898
 dev_to_id: 2164898
 dev_to_url: https://dev.to/jetthoughts/exploring-the-demand-for-a-job-for-qa-professionals-in-todays-market-5508
 title: Exploring the Demand for a Job for QA Professionals in Today's Market
-description: Quality Assurance (QA) jobs are seriously on the rise these days. With tech becoming such a huge part...
+description: "Quality Assurance (QA) jobs are seriously on the rise these days."
+seo_override: true
 created_at: '2024-12-19T10:35:40Z'
 edited_at: '2024-12-19T11:07:47Z'
 draft: false

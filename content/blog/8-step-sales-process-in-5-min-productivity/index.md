@@ -5,7 +5,8 @@ remote_id: 1853531
 dev_to_id: 1853531
 dev_to_url: https://dev.to/jetthoughts/8-step-sales-process-in-5-min-581g
 title: 8-Step Sales Process in 5 min
-description: The essential part of Sales Planning is to clearly see which steps you as a sales rep should cover in...
+description: "Here it’s important to decide what your ICP(Ideal Client Profile) is and where you can find people who look like it in the most efficient way."
+seo_override: true
 created_at: '2024-05-15T06:34:55Z'
 edited_at: '2024-11-26T16:04:43Z'
 draft: false
