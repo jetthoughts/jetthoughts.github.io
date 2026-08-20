@@ -217,6 +217,62 @@ Skip Kamal entirely if you want zero infrastructure ownership. Somebody on your 
 
 For deploys triggered on push rather than from your laptop, [wire it into GitHub Actions](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/) - and if you want per-PR environments, [review apps work the same way](/blog/own-heroku-review-apps-with-github-actions-kamal-2-devops-development/).
 
+## Hand the port to an agent
+
+The migration is mechanical, and `kamal config` gives an agent something most refactors don't: a validator that fails loudly on every key it doesn't recognise. That turns the port into a loop the agent can close on its own.
+
+One caveat worth stating up front. Most Kamal material an agent absorbed during training describes Kamal 1, so it will reach for `traefik:` and `.env` on instinct - and some published guides contain keys like `strategy: blue_green` that Kamal has never had. The prompt below is built to stop the agent trusting its own recall.
+
+```
+Port this Rails app's Kamal config from Kamal 1 to Kamal 2 (target: 2.12).
+
+Ground rules:
+- Do NOT rely on your training data for Kamal syntax. Much of it predates
+  Kamal 2 and will steer you wrong.
+- `bundle exec kamal config` is your verification loop. It validates every
+  top-level key and raises Kamal::ConfigurationError: unknown key: <name>
+  on anything that isn't real. Run it after each edit. Do not declare the
+  port finished until it exits 0.
+- `bundle exec kamal docs <section>` (proxy, builder, env, accessories,
+  boot, registry) is the offline reference that ships with the installed
+  gem. Check it there rather than guessing. If a key you want isn't in
+  those docs, it does not exist - do not invent one.
+
+Changes to make in config/deploy.yml:
+- Replace the `traefik:` block with `proxy:`. On a single web server,
+  `ssl: true` plus `host: <domain>` is the whole TLS setup; kamal-proxy
+  handles Let's Encrypt itself. Carry the domain over from the old
+  certificatesresolvers args. Drop the acme/letsencrypt volume and args.
+- Move any top-level `healthcheck:` under `proxy:`, and convert its keys:
+  Kamal 2 takes path/interval/timeout. `port` and `max_attempts` are gone.
+- Convert `env:` to the clear/secret split. Plain values go under `clear:`.
+  Anything sensitive becomes a NAME under `secret:`, resolved from
+  .kamal/secrets.
+
+Secrets:
+- Create .kamal/secrets if it's missing (`bundle exec kamal init` writes a
+  template). It holds references, never values - each line reads an env var
+  or shells out, e.g. RAILS_MASTER_KEY=$(cat config/master.key).
+- Migrate the NAMES from the old .env / .env.erb. Do not copy any real
+  credential into the repo, and do not delete the old .env until I confirm
+  the values are stored elsewhere. Tell me which names you moved.
+
+Hooks:
+- If .kamal/hooks/pre-traefik-reboot or post-traefik-reboot exist, RENAME
+  them to (pre|post)-proxy-reboot. Kamal 2 refuses to run while the old
+  names are present. Keep the file contents as they are.
+
+When `kamal config` exits 0, stop and report:
+1. every key you removed, and what replaced it
+2. the secret names you migrated
+3. anything you could not map, with the kamal docs section you checked
+
+Do not run `kamal deploy`, `kamal setup`, or `kamal upgrade`. I'll run the
+first deploy myself once I've read the diff.
+```
+
+The last line matters. Let the agent do the editing and the validating, then read the diff before anything touches a server - `kamal upgrade` restarts accessories on real infrastructure, and that's a decision worth making yourself.
+
 Further reading:
 
 - [Kamal documentation](https://kamal-deploy.org/) - official guides and the full configuration reference
