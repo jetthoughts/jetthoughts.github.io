@@ -23,6 +23,16 @@ Triple-confirms the Aug-14 diagnosis - **arrival, not content**:
 
 **Aug-17 editorial work (tracked outside this file, folded in here):** PRs #457/#458/#460/#461 - M4 cluster consolidation, course typography rules, course-wide editorial sweep + claims-canon sweep, no-bricks/reading-list rules. Remaining-work ledger: `docs/90-99-content-strategy/90.20-brick-and-claims-audit-2026-08-17-reference.md` (course tail CLOSED there 2026-08-17).
 
+## ⏱ Next sprints - GROOMED 2026-08-20
+
+The queue below is groomed into agent-executable task cards in
+[`50-59-execution/50.03-course-sprints-2026-08-groomed.md`](50-59-execution/50.03-course-sprints-2026-08-groomed.md):
+**C1 Arrival wave** (LI draft revisions, fabricated-fact decisions, campaign-read scaffold) →
+**C2 Reader-experience visuals** (4 Wave-G posts + the 5 artifact-trail SVGs) →
+**C3 W4 media/template wave** (item 13: overflow containers, V3-B wiring, mid-body visuals);
+**C0 blog text ratchet** runs parallel-safe. A cold session starts at that doc's
+"How to execute" header - no coordinator context needed.
+
 ## Open queue (in execution order)
 
 0. **Sprint "Prove ICP Arrival" (validation) — ACTIVE, set 2026-08-13.** Manager panel (growth + learning + lean lenses, `/brainstorm`+vote) UNANIMOUS: with no traffic lift (84→75 sessions/14d, ~93% Direct, course absent from GSC) AND a dead funnel (start_course=1, mechanics=0), the constraint is **arrival/reach, not polish**. **Audit correction (premise was stale):** the campaign for this is ALREADY BUILT and READY — `linkedin-posts/icp-validation/POSTING-PACKET.md`, 10 posts drafted, zero posted, UTM scheme defined (`utm_campaign=icp_validation_<pillar>`), **▶ 2026-08-13 UPDATE:** the rescue-lane jira post was scheduled then PULLED (Paul: AI slop). It exposed the pipeline's broken "story, not advice" doctrine → corrected to **idea-first, deliver the point** (`linkedin-post-pipeline.md` + new `linkedin-posts/README.md` LI operating system: 2 lanes course/rescue, 2-3 posts/wk, frontmatter v2, `metrics-ledger.md`, `reference-examples.md` from Cutler/Rossi/Holub/Paolino). First idea-first post SHIPPED: course-lane `course-promo/week1-thu-validate-before-build.md`, scheduled 3:30pm CEST (text-only; image = manual gap). **Next wave: revise the ~10 existing lane drafts to the new doctrine, 2-3/wk, Paul-gated.** Post #1 is a **reply-CTA** post (validates ICP *presence*/language on LinkedIn, H1-H5), which is the correct **cheapest FIRST test** — upstream of course *arrival*. **Step 2 (backlog, manager-prepped): UTM'd course-link posts** to test click-through/arrival, drafted only if step-1 engagement appears (contradicts H5's no-link-CTA design, so gated on step-1 signal). **Manager autonomous work while Paul-gated:** verify packet still valid post-Aug-14 (✅ story post evergreen, passed 5 critic passes), prep step-2 arrival posts + the 5-day measurement/kill-criteria read. **Panel parked, data-justified:** rest of W4 (item 13) dead-mechanic removal → opportunistic; 36-image SVG migration → opportunistic; item 7 → BLOCKED by gate #1.
