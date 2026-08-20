@@ -1008,3 +1008,46 @@ GA4 deliberately not pulled - §5 establishes ~85-90% bot traffic and
 
 * Update: taste anchor established at `.stitch/course-taste-design.md` - Stitch-skill DESIGN.md encoding the cou...
 
+
+## 2026-08-20 - Site palette concept added; compaction verified non-lossy
+
+Checked today's knowledge against the #504 bundle compaction (359KB -> 191KB)
+before adding anything: the token layer, the img-cropped mobileWidth params,
+the blog-list traps, record-baselines and the GA browser-channel distinction
+all survived IN CONCEPTS rather than only in the log, which is the outcome the
+compaction was aiming for.
+
+One real gap remained, and it was in the section a cold session reads first
+for visual questions: `design/` had NO site-palette concept. house-visual-spec
+is in-post SVG artwork and cover-pipeline is covers, so "what palette does the
+site use?" resolved to nothing there - the LIGHT decision lived only in
+docs/adr/0003 and, since the previous pass, architecture/css-pipeline. Added
+design/site-palette.md with the decision, the audience-shaped reasoning that
+predicts future calls, the token table, and - importantly - the three surfaces
+where dark stays deliberate, so a future session doesn't "fix" the blog covers
+or the vibe-code-rescue campaign page into light.
+
+## 2026-08-20 - CI checkout stalls: UPSTREAM (checkout#2441), mitigated with blob:none
+
+Three CI failures in one session - Unit Tests at exactly 10m twice,
+build_and_deploy/build at 15m1s - every one inside
+`##[group]Fetching the repository` ending `The operation was canceled.` Each
+plain re-run completed the same job in 2-3 minutes. ci-gates already documented
+checkout being SLOW (7 min observed) and the timeouts raised to 15/25 because
+of it; what it lacked is the distinction that matters operationally: this is a
+HANG, not slowness. A cap cannot rescue a step that never progresses, so the
+response is re-run-and-verify, and raising the timeout again would only make
+each failure cost longer. Rule added with the log-check to confirm it before
+re-running, so nobody re-runs a job that actually failed for real.
+
+ROOT CAUSE FOUND (same day, on Paul's hunch that a checkout upgrade was at
+fault - he was right that it was the action, wrong about it being our
+version): actions/checkout#2441, open since 2026-05-19, silent stalls of
+15-25 min on EU runners killed by timeout-minutes. Not our config, not
+fixable by us. What IS ours is how much we ask for: a 1.70 GiB pack and a
+625 MB content/ tree (1,576 images) downloaded by every job. _hugo.yml needs
+fetch-depth: 0 for enableGitInfo, so it now also sets filter: blob:none -
+measured 4.7 MB / 1.1s bare blobless vs 1.70 GiB, with
+`git log -1 -- <post>/index.md` still returning the right date in 0.02s and
+zero blobs fetched, so GitInfo is unaffected. Mitigation, not cure; the real
+floor is 625 MB of images in git, which is a separate LFS/CDN decision.
