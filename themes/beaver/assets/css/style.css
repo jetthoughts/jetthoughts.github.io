@@ -700,35 +700,9 @@
   .blog .ws-card { padding: 16px 14px; }
 }
 
-/* Course reading typography — course pages only (body.section-course).
-   Lessons run 3-5K words; the site-wide 22.4px body stretches them past
-   15K px tall and shows barely two paragraphs per screen (Gloria Mark:
-   ~43s attention per screen). 20px/1.65 keeps the approachable size while
-   fitting ~30% more per screen, restores H3 contrast (26/20 = 1.3x) so
-   scanning landmarks work, and drops callouts a step (19px) so they read
-   as asides, not more wall. Blog pages keep the site-wide scale. */
-/* Selectors mirror single-post.css's `.blog article.single-content
-   .fl-rich-text p` (0,3,2) - anything weaker silently loses to it. */
-.section-course .blog article.single-content .fl-rich-text p,
-.section-course .blog article.single-content .fl-rich-text li {
-  font-size: 20px;
-  line-height: 1.65;
-}
-.section-course .blog article.single-content .fl-rich-text li {
-  margin-bottom: 12px;
-}
-.section-course .blog article.single-content .fl-rich-text blockquote p {
-  font-size: 19px;
-  line-height: 1.6;
-}
-.section-course .blog article.single-content .fl-rich-text .ws-card p,
-.section-course .blog article.single-content .fl-rich-text .ws-card ul.ws-checks li {
-  font-size: 17px;
-  line-height: 1.55;
-}
-.section-course .blog article.single-content .fl-rich-text .ws-route p {
-  font-size: 16.5px;
-}
+/* Course reading typography moved to css/pages/course-single.css (2026-08-20,
+   W4/V3-B). Those `.section-course` selectors can only match a course page, so
+   they no longer ship in the global sheet. Loaded by layouts/course/single.html. */
 
 /* Details/summary — collapsible tool-stack accordion.
    Summary looks like a clickable heading, details body has standard spacing. */

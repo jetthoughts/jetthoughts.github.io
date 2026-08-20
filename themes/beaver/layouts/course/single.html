@@ -9,8 +9,11 @@
     (resources.Get "css/legacy-theme-skin.css")
     (resources.Get "css/single-post.css")
     (resources.Get "css/pages/blog-single.css")
+    (resources.Get "css/pages/course-single.css")
     (resources.Get "css/footer.css")
   }}
+  {{/* course-single.css must stay AFTER single-post.css above: the course
+       reading scale overrides its body type. */}}
 
   {{ partial "assets/css-processor.html" (dict
     "resources" $cssFiles
