@@ -64,30 +64,28 @@
   margin: 24px 0 28px;
 }
 
-/* !important on the colors below (filters, card tags, CTA) beats the
-   late-cascade generic anchor rule
-   a:not(.btn):not(...):not(...) { color:#0066d6 } — ~8 class-levels of
-   specificity, ships after page slices. Same workaround, same reason as
-   pages/vibe-code-rescue.css. Delete the !importants in Phase 1a when
-   that rule dies (2608 plan). */
+/* These colours used to carry !important to out-rank the late-cascade
+   a:not(...)x8 { color:#0066d6 } rule. That rule was retired in 2608
+   Phase 1a.3 and the site-wide link rule is now plain `a`, so these class
+   selectors win on ordinary specificity. */
 .blog-filters a {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--rr-ink-500) !important;
+  color: var(--rr-ink-500);
   background: var(--rr-surface-raised);
   border-radius: 999px;
   padding: 5px 12px;
 }
 
 .blog-filters a:hover {
-  color: var(--color-ruby) !important;
+  color: var(--color-ruby);
 }
 
 .blog-filters a[aria-current="page"] {
-  color: #fff !important;
+  color: #fff;
   background: var(--color-ruby);
 }
 
@@ -202,11 +200,11 @@
 
 /* Card tags: ink, ruby on hover (see the !important note above) */
 .blog .post-tags-card a {
-  color: var(--rr-ink-500) !important;
+  color: var(--rr-ink-500);
 }
 
 .blog .post-tags-card a:hover {
-  color: var(--color-ruby) !important;
+  color: var(--color-ruby);
 }
 
 @media (max-width: 860px) {

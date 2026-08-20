@@ -54,21 +54,22 @@
   fill: #ffffff;
 }
 
-/* !important mirrors navigation.css's own precedent for out-ranking the
-   late-cascade generic anchor color (#0066d6) that ships after page slices.
+/* Header links on the obsidian band. These used to need !important to
+   out-rank the late-cascade #0066d6 anchor rule; that rule was retired in
+   2608 Phase 1a.3, so the class selector is enough.
    --color-on-dark resolves here because the brand tokens are :root-level. */
 .top-panel a.link {
-  color: var(--color-on-dark) !important;
+  color: var(--color-on-dark);
 }
 
 .top-panel a.link:hover {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 /* The mobile drawer (.navigation.-open) slides in with a WHITE panel —
    restore the site's dark link color inside it. */
 .top-panel .navigation.-open a.link {
-  color: var(--color-dark) !important;
+  color: var(--color-dark);
 }
 
 /* ---------- Hero: the obsidian field ---------- */
@@ -137,7 +138,7 @@
 .vcr-page a.vcr-cta {
   display: inline-block;
   background: var(--color-ruby);
-  color: #ffffff !important;
+  color: #ffffff;
   font-family: var(--vcr-display);
   font-weight: 700;
   font-size: 16px;
