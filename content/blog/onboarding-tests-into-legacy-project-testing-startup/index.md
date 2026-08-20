@@ -147,7 +147,7 @@ Train your system to do simple actions like form filling and submitting.
 
 * Explicit test input and output will help the next developers to learn the context.
 
-* Check more from [Tips for writing readable system tests in Rails](https://jtway.co/best-tips-for-writing-integration-tests-in-rails-d1f56081f249?source=friends_link&sk=c616b62faabd053cc56fdaffb5f2c832).
+* Check more from [Tips for writing readable system tests in Rails](/blog/tips-for-writing-readable-system-tests-in-rails-capybara-ruby/).
 
 Do not forget to have deterministic tests first
 
@@ -158,4 +158,3 @@ Avoid any hacks and tricks. You will get the first results from the first commit
 Invest in the small wins, and you will find yourselves in a satisfied and stressless environment.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

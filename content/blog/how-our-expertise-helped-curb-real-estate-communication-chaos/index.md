@@ -69,4 +69,3 @@ We designed a non-trivial algorithm for finding the best routes so agents can pl
 With all of this in mind — and with a powerful, custom messaging solution on the market — we’re confident that if you asked [*Elliot Koolik](https://www.linkedin.com/in/elliotkoolik/)* again about his #1 job complaint, inefficient communication would no longer be his answer.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

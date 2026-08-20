@@ -1,6 +1,6 @@
 ---
 title: "JetThoughts: Transforming Real Estate Communication with Agent Inbox"
-excerpt: To take real estate communication to the next level, Agent Inbox hired us to build the right platform, deliver a market-ready solution, and help the team grow.
+excerpt: Agent Inbox hired us to build their real-estate communication platform, get it market-ready, and grow the team around it.
 date: 2022-12-17T08:30:34+00:00
 slug: agent-inbox
 description: "Discover how JetThoughts partnered with Agent Inbox to develop a market-ready software solution in just 60 days. Learn about the challenges faced, solutions provided, and the impressive results achieved, including rapid user growth and enhanced team capabilities."

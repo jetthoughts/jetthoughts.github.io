@@ -137,7 +137,7 @@ Across our last few migrations, the typical post-migration shape looks like this
 
 We moved fragment and API response caching to Solid Cache. Cache size went from 2GB (limited by Redis memory) to roughly 50GB on disk. Average read latency increased from 0.3ms to 1.1ms; nobody noticed. P95 page load actually improved because the cache hit rate climbed from 68% to 91% with the larger cache footprint.
 
-Solid Queue took over email delivery, report generation, and scheduled cleanup at 200 jobs/minute steady. [Active Job Continuations](/blog/rails-8-1-active-job-continuations-background-jobs/) made the long-running nightly import deploy-safe for the first time.
+Solid Queue took over email delivery, report generation, and scheduled cleanup at 200 jobs/minute steady. [Active Job Continuations](/blog/rails-8-1-active-job-continuations-end-lost-background-jobs/) made the long-running nightly import deploy-safe for the first time.
 
 Sidekiq stayed for the payment webhook queue (needs sub-second latency) and the real-time inventory sync (2,000 jobs/minute bursts during peak hours). Redis also stayed for Action Cable, where 1,200 concurrent WebSocket connections power the admin dashboard.
 

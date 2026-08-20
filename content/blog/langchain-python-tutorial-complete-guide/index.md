@@ -2024,9 +2024,7 @@ Building production AI features is complex. JetThoughts specializes in Python/Dj
 ---
 
 **What to Read Next**:
-- [LangChain vs LlamaIndex: Complete Comparison 2025](/blog/langchain-vs-llamaindex-comparison/) (Coming Soon)
-- [Building RAG Applications with Python and pgvector](/blog/rag-implementation-python-pgvector/) (Coming Soon)
-- [Django AI Integration: Production Patterns and Best Practices](/blog/django-ai-integration-patterns/) (Coming Soon)
+- [Building RAG Applications with Python and pgvector](/blog/building-rag-applications-rails-pgvector/)
 
 Have questions about LangChain Python? Drop a comment below or reach out on [Twitter](https://twitter.com/jetthoughts)!
 

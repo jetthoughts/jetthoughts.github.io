@@ -83,4 +83,3 @@ end
 ## Conclusion
 
 This configuration allowed us to reduce and in most cases completely drop time on the assets compilation in tests.
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co) and [trending tech stories](https://jtway.co/trending).

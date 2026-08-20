@@ -42,7 +42,7 @@ Readers who can’t understand your content well probably won’t keep reading f
 
 Create understandable content by using short paragraphs and subheadings, presenting ideas in a logical order, using examples, avoiding difficult words, writing for a target audience, and testing readability.
 
-Read more here [https://jtway.co/how-to-write-the-right-content-for-your-article-e5075ad0274f](https://jtway.co/how-to-write-the-right-content-for-your-article-e5075ad0274f)
+Read more here [/blog/how-write-right-content-for-your-article-blogging-posting/](/blog/how-write-right-content-for-your-article-blogging-posting/)
 
 ## Time-effective
 
@@ -54,8 +54,6 @@ Authors front-load because it solves a lot of problems. Chiefly, this is because
 
 The reader doesn’t necessarily want to know all the background information that led to the decision. He or she likely wants to know “how does this information affect me?” and this principle should answer this question every time.
 
-Read more here [https://jtway.co/we-investigated-100-articles-on-writing-technical-blog-posts-heres-what-we-learned-26afaf986f07](https://jtway.co/we-investigated-100-articles-on-writing-technical-blog-posts-heres-what-we-learned-26afaf986f07)
+Read more here [/blog/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned/](/blog/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned/)
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
-
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

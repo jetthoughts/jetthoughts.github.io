@@ -229,7 +229,7 @@ For apps still on Rails 7.x, the monotonic subscribe API exists but the payload 
 
 We've moved four production Rails apps from regex-based log monitoring to event subscriptions over the last eight months. Three were on Datadog, one on New Relic. The pattern was consistent: the setup ran between half a day and two days per app depending on how many custom parsers we had to untangle, and false-positive alerts dropped noticeably in the weeks following - **we measured roughly 60% fewer across the four apps**, though the improvement varied by how noisy the original regex parsers were. The apps weren't more reliable. The monitoring just stopped misreading log output from normal Rails behavior.
 
-The [Active Job Continuations work in Rails 8.1](/blog/rails-8-1-active-job-continuations-background-jobs/) uses the same instrumentation layer for job lifecycle events. If you're already subscribing to `perform.active_job`, the event shape improvements in 8.1 apply there too.
+The [Active Job Continuations work in Rails 8.1](/blog/rails-8-1-active-job-continuations-end-lost-background-jobs/) uses the same instrumentation layer for job lifecycle events. If you're already subscribing to `perform.active_job`, the event shape improvements in 8.1 apply there too.
 
 For teams using the [Solid Trifecta instead of Redis](/blog/solid-trifecta-hybrid-redis-rails-8/), Solid Queue emits its own `ActiveSupport::Notifications` events for job enqueuing, execution, and failure - subscribable through the same API, no separate polling loop required.
 

@@ -97,4 +97,3 @@ Anyway, self-promotion on Reddit is a great approach to make your posts more pop
 Good luck!
 
 **Oleh** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/oleh-barchuk-0b9813192/) or [GitHub](https://github.com/phoenixixixix).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

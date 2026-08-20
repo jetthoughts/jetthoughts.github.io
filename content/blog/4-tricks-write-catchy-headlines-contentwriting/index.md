@@ -72,4 +72,3 @@ What makes a headline good is it’s a formula. Every content marketer has one o
 * *‘Get rid of [problem] once and for all’*formula: Who wouldn’t want to permanently get rid of an annoying problem that they’re faced with on a daily basis? When you write your headlines with this strategy in mind, you’ll captivate your audience from start to finish, because they want to know the secret, too.
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

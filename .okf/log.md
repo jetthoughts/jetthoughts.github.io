@@ -2175,16 +2175,57 @@ ruby_llm 1.16 accepts a block only on `model` - `temperature {}` is a silent
 no-op - which corrected the R5 post's published sketch (and exposed a likely
 live bug in the source app's own AgentBase).
 
-## 2026-08-20 - First LinkedIn metrics read: reach without replies
+## 2026-08-20 - Phase 0 swarm: instrumentation + record-baselines (PR #489, draft)
+
+Two worktree-isolated agents built 2608 Phase 0 in parallel: GA4 conversion
+instrumentation (generate_lead one-shot on data-lead-form submits, cta_click
+with location=hero/section/blog-index/tag-index/article-end, scroll_depth
+25/50/75/90 on blog posts - named to dodge enhanced measurement's built-in
+90% scroll) and bin/record-baselines (keep-globs, restore-the-rest, --dry-run,
+--linux prints the CI dispatch per the ARM-drift rule). Review chain earned
+its keep: coordinator 4-eyes caught untracked-created baselines crashing the
+restore under set -e; codex added two majors on top - a red test run skipped
+the restore pass entirely, and non-z porcelain parsing broke on space paths
+and whole-new directories. A wrapper whose one job is "leave the tree
+reconciled" failed exactly that job in three ways before review.
+
+Standing coordination note: master frozen for this session (Paul: another
+agent owns it) - PR #489 is DRAFT until cleared. Known red handed to the
+master owner: macos/desktop/homepage/_clients.png is stale on master itself
+(Jul 21 record, card order changed since; fails on clean master).
+Detail: PR #489, docs/projects/2608-site-design-system/20-29-strategy/20.01-rollout-plan.md
+
+## 2026-08-20 - Blog engagement baseline: 3-day Clarity windows swing 25-75%
+
+Phase 0.4 hardened before the read could be corrupted by it: blog scroll
+depth measured 75.1% / 50.9% / 25.2% across three consecutive 3-day Clarity
+windows (Aug 12-20, 70-220 sessions each). At this traffic the metric is
+dominated by WHICH posts got traffic, not by design - a single-window
+pre/post read is noise dressed as a result. Protocol locked in 2608 40.01:
+28-day windows, session-weighted (before = ~46.0% scroll / 35.3s over
+Aug 12-20), segmented by top-trafficked posts, read due 2026-09-17. Clarity's
+API accepts explicit historical date ranges (verified) - not just
+"last 3 days". Tag pages also got their missing screenshot coverage
+(phase 0.3 gap: primary navigation with no baseline), recorded via
+bin/record-baselines' first real outing - kept 1, restored 0, both legs.
+Detail: docs/projects/2608-site-design-system/40-49-measurement/40.01-blog-engagement-baseline.md
+
+## 2026-08-20 - First LinkedIn metrics read: 12,872 followers, ~190 reach/post
 
 Filled the first three `metrics-ledger.md` rows from LinkedIn's own
 post-analytics pages: 680 impressions, 1 reaction, 0 genuine comments,
 **0 `icp_replies`** (the one comment is Paul's own first-comment link).
-Account reach is climbing (+18% w/w), so reach is the less likely cause of
-the silence. Not a kill signal - 3 of the required 10 rows per lane, and
-impressions are an order of magnitude below the 3,000 attribution floor.
 
-Three durable findings, recorded in `workflows/linkedin-post-pipeline.md`:
+The account dashboard is the decisive number: **12,872 followers, 705 post
+impressions in 7 days** - about **1.5% follower reach per post**. Impressions
+trend up (+18% w/w) but from a floor that low, "rising" describes the slope,
+not the reach. That is the kill criterion's INCONCLUSIVE shape - no
+distribution means the hypotheses were never tested - so the ledger now says
+explicitly **do not rewrite hooks on this evidence**. Not a kill signal
+either: 3 of 10 rows per lane, impressions an order of magnitude below the
+3,000 attribution floor.
+
+Process findings, recorded in `workflows/linkedin-post-pipeline.md`:
 (1) `status: scheduled` never gets flipped on publish and no draft carried
 a `posted_url` - the activity id can't be derived from a slug, so a missing
 one costs a manual feed scroll later; (2) `icp_profile_views` is unreadable
@@ -2193,3 +2234,9 @@ lane can't satisfy the arrival override at all - reply-CTA only, no link,
 no UTM, no session. Also fixed `layouts/linkedin/list.html`, where three
 sequential `with` blocks made the LEAST advanced date win, labelling posted
 cards "scheduled".
+
+Meta-lesson: the sprint doc had routed this whole task to Paul on the premise
+*"agents have no LI access"* - false, claude-in-chrome reads his signed-in
+profile. Second such misroute the same day (the first was estimating instead
+of querying GA). **Name the tool and try it before writing "needs Paul."**
+Detail: PR #492

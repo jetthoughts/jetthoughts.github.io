@@ -53,7 +53,7 @@ In [JetThoughts](https://www.jetthoughts.com) we built a checklist which brings 
 
 ### 2. Daily Standups
 
-* You should always keep track of how things are going, it’s highly recommended to conduct [daily standups](https://jtway.co/a-typical-day-at-jetthoughts-460b84eeb9c6). 10–15 minutes to spend talking over plans for the day getting feedback from every team member would save you tons of time figuring out what went wrong by not having this routine in your habit list.
+* You should always keep track of how things are going, it’s highly recommended to conduct [daily standups](/blog/typical-day-at-jetthoughts-agile-remote/). 10–15 minutes to spend talking over plans for the day getting feedback from every team member would save you tons of time figuring out what went wrong by not having this routine in your habit list.
 
 * Get a chatting solution like Slack or Discord, etc. where your team would provide you with daily reports chatting on what was done, problems raised, solutions chosen and so on. All communications should be public and easily accessible for transparency and a better understanding of who is doing what.
 
@@ -111,7 +111,7 @@ We highly recommend using these methodologies in your company for product delive
 
 ### 9. Every task should be tested in the real environment
 
-* [Make sure](https://jtway.co/prepare-the-pull-request-before-asking-to-review-42df362a5c8e) you have a staging which is filled with real data and is as close to the original app as it’s possible
+* [Make sure](/blog/prepare-pull-request-before-asking-review-git-pullrequest/) you have a staging which is filled with real data and is as close to the original app as it’s possible
 
 * If not, make sure devs adds a screencast where they touch on tested features to check on
 
@@ -126,4 +126,3 @@ We highly recommend using these methodologies in your company for product delive
 That’s the basic flow that allows you as a founder and/or a project manager to deal with development.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

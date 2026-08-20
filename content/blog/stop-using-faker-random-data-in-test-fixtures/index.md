@@ -123,7 +123,6 @@ Using a **Constant**to get the pre-defined title:
 Using Sequences and Constants it is easier for us to determine and repeat the failing test.
 
 **Oleh** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/oleh-barchuk-0b9813192/) or [GitHub](https://github.com/phoenixixixix).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
 
 **References:**
 

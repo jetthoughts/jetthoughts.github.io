@@ -76,7 +76,6 @@ Check out useful links if you want to be advanced in this theme:
 
 * [https://leankit.com/learn/kanban/benefits-of-wip-limits/](https://leankit.com/learn/kanban/benefits-of-wip-limits/)
 
-* [https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899](https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899)
+* [/blog/checklist-for-non-tech-founder-agile/](/blog/checklist-for-non-tech-founder-agile/)
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

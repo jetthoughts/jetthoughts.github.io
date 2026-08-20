@@ -42,7 +42,7 @@ If you plan to send messages and emails manually that are too customized, then I
 [Josh Braun](https://www.linkedin.com/in/josh-braun/)
 [Alex Berman](https://youtube.com/playlist?list=PLtkcfOqeArMa9-nmJR8wxAOfSU4kzYpBj)
 
-In case you are sending slightly personalized messages, use automation tools such as Expandi(for Linkedin), [Lemlist](https://www.lemlist.com/)(for e-mails), and many others, I shared more options in my recent article [here](https://jtway.co/the-ultimate-guide-to-the-sales-onboarding-in-it-companies-6e8b4a4a473).
+In case you are sending slightly personalized messages, use automation tools such as Expandi(for Linkedin), [Lemlist](https://www.lemlist.com/)(for e-mails), and many others, I shared more options in my recent article [here](/blog/ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration/).
 
 ## Sales Qualification
 
@@ -137,4 +137,3 @@ Instead of complaining about not having enough sales, ask yourself “Who are th
 You see, your potential clients as everybody else, trust people they know more than they trust strangers who offer them their services. Make sure you are using the referral opportunity to the fullest.
 
 **Victoria Sakurova** is a Business Development Specialist at [JetThoughts](https://www.jetthoughts.com/). Follow her on [Linkedin](https://www.linkedin.com/in/victoriasakurova/).*
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

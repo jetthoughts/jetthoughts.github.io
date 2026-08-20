@@ -166,4 +166,3 @@ Using Jest in pair with Enzyme will give you coverage of the individual componen
 For integration tests, you can use already discovered solutions, as well as new ones that are more convenient to use but for which you need to do additional configuration. Detox is built from the ground up to support React Native projects as well as pure native ones. Appium supports app automation across a variety of platforms, like iOS, Android, Windows, and Mac.
 
 **Ilya Novohatskyi**is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/ilya-novohatskyi-a61644114/) or [GitHub](https://github.com/sweatC).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

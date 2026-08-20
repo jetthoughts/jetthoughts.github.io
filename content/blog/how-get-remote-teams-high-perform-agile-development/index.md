@@ -62,7 +62,7 @@ Several lists will help you to be on the same page: *Roadmap*, *Backlog*, *Ready
 
 ### Make it right by following
 
-* [Delivery Flow for Distributed Remote Teams](https://jtway.co/delivery-flow-for-distributed-remote-teams-5218828b0d1a)
+* [Delivery Flow for Distributed Remote Teams](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/)
 
 * [Manage priorities and visualize progress with a lightweight process](https://thoughtbot.com/playbook/planning/manage-priorities-with-a-lightweight-process)
 
@@ -129,4 +129,3 @@ In the post we covered such techniques:
 * Monthly Retrospectives & Regular Feedback
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

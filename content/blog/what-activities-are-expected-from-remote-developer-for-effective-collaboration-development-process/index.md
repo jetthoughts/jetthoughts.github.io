@@ -25,7 +25,7 @@ slug: what-activities-are-expected-from-remote-developer-for-effective-collabora
 
 ![Photo by [Roman Synkevych](https://unsplash.com/@synkevych?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](file_0.jpeg)
 
-In [JetThoughts](https://www.jetthoughts.com/), the usual working environment contains the GitHub repository with the Kanban board and some rules described in the article [“Delivery Flow for Distributed Remote Teams”](https://jtway.co/delivery-flow-for-distributed-remote-teams-5218828b0d1a).
+In [JetThoughts](https://www.jetthoughts.com/), the usual working environment contains the GitHub repository with the Kanban board and some rules described in the article [“Delivery Flow for Distributed Remote Teams”](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/).
 
 Here are three main stages of working with the issue:
 
@@ -51,7 +51,7 @@ According to the prioritization, the developer should start investigating the to
 
 ### 3. Polishing stage
 
-How to prepare the PR we discussed in [“Prepare the Pull Request before asking to Review”](https://jtway.co/prepare-the-pull-request-before-asking-to-review-bc95fc39eb11). Here are the key points:
+How to prepare the PR we discussed in [“Prepare the Pull Request before asking to Review”](/blog/prepare-pull-request-before-asking-review-git-pullrequest/). Here are the key points:
 
 * **All automated checks passed**
 
@@ -70,4 +70,3 @@ How to prepare the PR we discussed in [“Prepare the Pull Request before asking
 > *This is the full cycle of actions that are expected from the developer, especially working remotely. Compliance with these rules will help to build trust with the customer, and also to avoid questions about what the employee is doing from management.*
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

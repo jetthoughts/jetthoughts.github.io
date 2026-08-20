@@ -51,7 +51,7 @@ The development of a new product or big feature requires the frontend and backen
 
  2. All merges will require code to be ready for production.
 
- 3. One other requirement from *Continuous Delivery*, [new changes should be pre-verified before merging into the trunk](https://jtway.co/make-master-stable-again-b15c9ff3b129).
+ 3. One other requirement from *Continuous Delivery*, [new changes should be pre-verified before merging into the trunk](/blog/heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup/).
 
 If we will merge only static code, then the customers will get no working *UI*.
 
@@ -70,4 +70,3 @@ In our *Continuous Delivery* implementation, we use a lot of rebases to sync cod
 Alternative to long-lived branches is *Feature Flags*. But we need some tiny/limited versions of it, prefer to use conventions for internal use instead of complex *UI* to manage it and support flexibilities, what features to show, and to whom.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

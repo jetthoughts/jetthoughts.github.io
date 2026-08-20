@@ -106,4 +106,3 @@ Here are my 2 favorite takeaways from the Sales courses I watched that will help
 Make sure you cover all the steps and only then start measuring your new sales reps’ success rates.
 
 ***Victoria Sakurova **is a Business Development Specialist at [JetThoughts](https://www.jetthoughts.com/). Follow her on [Linkedin](https://www.linkedin.com/in/victoriasakurova/).*
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

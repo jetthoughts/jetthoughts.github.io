@@ -105,7 +105,7 @@ One part will be left and merged in the current issue. Another (Left) part from 
 
 ## Developer have reached WIP Limits
 
-There is a good introduction what can Developer do while he reached limits in [What to do for the developer when the WIP limit is reached](https://jtway.co/what-to-do-for-the-developer-when-the-wip-limit-is-reached-d28694676364)
+There is a good introduction what can Developer do while he reached limits in [What to do for the developer when the WIP limit is reached](/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban/)
 
 When Developer provided 2 PRs for review, he could not start a new one. Instead, he should help others to push their issues through the flow by:
 
@@ -147,7 +147,6 @@ If you find yourself in a situation where you have to violate the workflow, you 
 
 * [4 BENEFITS OF WIP LIMITS](https://leankit.com/learn/kanban/benefits-of-wip-limits/)
 
-* [Checklist for the non-tech founder](https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899)
+* [Checklist for the non-tech founder](/blog/checklist-for-non-tech-founder-agile/)
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

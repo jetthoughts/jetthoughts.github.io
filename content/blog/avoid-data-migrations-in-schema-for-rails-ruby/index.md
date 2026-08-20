@@ -50,9 +50,9 @@ But you can also do this without gems by following a simple convention.
 
 ![One-off data migration rake task](file_1.png)
 
- 1. Add Service to migrate data. More details about Services you can find on [How to use a Transaction Script (aka Service Objects) in Ruby on Rails](https://jtway.co/how-to-use-a-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example-161b7e228942?source=friends_link&sk=6b96a97ea4ec3ab4fa62e6e27fb39e9e).
+ 1. Add Service to migrate data. More details about Services you can find on [How to use a Transaction Script (aka Service Objects) in Ruby on Rails](/blog/how-use-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example/).
 
- 2. (Optional) If you are using [the TDD way](https://jtway.co/why-and-how-to-use-tdd-main-tips-976b3a6edebb), you should also add tests for it. Ensure that this migration does not corrupt production data.
+ 2. (Optional) If you are using [the TDD way](/blog/why-how-use-tdd-main-tips-testing/), you should also add tests for it. Ensure that this migration does not corrupt production data.
 
  3. Create a one-off rake task with the timestamp. The timestamp will simplify finding unrelated tasks and cleaning them up.
 
