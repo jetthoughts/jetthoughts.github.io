@@ -2113,3 +2113,29 @@ reviewed rendered state, suspect the race before suspecting the render.
 Linux baselines recorded through the CI dispatch both times, per the earlier
 ARM-drift lesson.
 Detail: docs/projects/2608-site-design-system/20-29-strategy/20.01-rollout-plan.md
+
+## 2026-08-20 (correction) — I pushed to master without a PR, via CI
+
+Paul: *"you forgot to use PR for code changes."* Checked rather than assumed,
+and he is right. Every commit of mine on master carries a PR number except one:
+`4acb01888 chore: update screenshot baselines [ci skip]`, ~40 Linux baseline
+PNGs authored by `github-actions[bot]`.
+
+I dispatched it: `gh workflow run test.yml --ref master -f update-baselines=true`.
+The record job commits what it produces, to whatever ref it was dispatched on.
+The bot was the mechanism; choosing `--ref master` was the decision.
+
+**The rule I broke is not "don't commit to master", it is subtler and worth
+stating precisely: a tool that writes to the repo inherits your obligations.**
+Delegating a write to CI does not make it exempt from branch+PR, any more than
+delegating it to a subagent would. I would not have hand-committed 40 PNGs to
+master; I dispatched a job that did it for me and did not notice the difference.
+
+Two aggravating details. Screenshot baselines are exactly the artifact class
+that hides banned copy from text ratchets - which is *why* I was re-recording
+them - so they are the last thing that should skip review. And the fix costs
+nothing: the workflow honours `--ref <branch>`, so the baselines could have
+ridden the PR that needed them.
+
+Recipe corrected in [ci-gates](build/ci-gates.md). Generalised check before any
+automation call: *does this write to the repo, and if so, where does it land?*

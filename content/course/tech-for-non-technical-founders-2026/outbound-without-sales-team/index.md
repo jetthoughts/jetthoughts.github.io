@@ -33,7 +33,7 @@ related_posts: false
 >
 > **Input:** network exhausted, ~10 customers in from [Lesson 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) and [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 >
-> **Output:** 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared once replies mature
+> **Output:** 30 cold messages sent, 2-3 demo calls booked, 1-2 paid pilots cleared once replies mature
 >
 > **Progress:** M5 · 7 of 7 · [OPTIONAL] - the systematic cold path; run it only after the warm-network pass in 5.3-5.5
 
@@ -59,6 +59,34 @@ Run the whole pipeline in six stages with off-the-shelf tools - no engineer, no 
 4. **Send** - LinkedIn DM or 4-line email. One personalized opener + the same body for everyone.
 5. **Calendly** - 15-min demo slot, auto-confirm. No back-and-forth scheduling.
 6. **Stripe** - DPA + deposit from [Lesson 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Money on the table before you start work.
+
+What one batch of 30 returns, end to end:
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, Comic Sans MS, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#1a1a1a', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart TD
+    accTitle: What one 30-message cold batch returns
+    accDescr {
+      A four-stage funnel. 30 messages sent, one custom opener each, narrow to
+      1-4 replies - and 0-1 replies on batch 1 is normal, not a failure. The
+      replies narrow to 2-3 demo calls booked on a 15-minute Calendly slot, and
+      those narrow to 1-2 paid pilots with a design partner agreement signed
+      and a deposit taken.
+    }
+    Sent["30 messages sent<br/>one custom opener each"]
+    Replies["1-4 replies<br/>0-1 on batch 1 is normal, not a failure"]
+    Demos["2-3 demo calls booked<br/>15-minute Calendly slot"]
+    Pilots["1-2 paid pilots<br/>DPA signed, deposit taken"]
+
+    Sent --> Replies --> Demos --> Pilots
+
+    classDef step fill:#faf7f2,stroke:#3a3a3a,stroke-width:2px,color:#1a1a1a
+    classDef warn fill:#fffbe6,stroke:#bf8a00,stroke-width:2.5px,color:#1a1a1a
+    classDef money fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+    class Sent,Demos step
+    class Replies warn
+    class Pilots money
+```
 
 The message is four lines: a specific reference earns the open, one sentence on what you built, one specific ask with friction removed, one currency anchor. Anything longer reduces the reply rate. The B2B SaaS variant:
 
