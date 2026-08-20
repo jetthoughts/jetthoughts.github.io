@@ -235,7 +235,7 @@ If your suite is too slow for TCR or your inherited code keeps blocking the Core
 
 [Talk to us about your codebase](/contact-us/).
 
-## Further reading
+## Sources
 
 - [Arlo Belshee, "The Core 6 Refactorings"](https://arlobelshee.com/the-core-6-refactorings/) - the six moves every safe refactor is built from
 - [Kent Beck, "test && commit || revert"](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) - the auto-revert discipline that enforces tiny steps

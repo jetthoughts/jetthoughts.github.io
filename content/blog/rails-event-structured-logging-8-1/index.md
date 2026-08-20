@@ -255,7 +255,7 @@ If you're running [Rails 8 on Docker in production](/blog/rails-8-docker-deploym
 
 See also the [Ruby on Rails performance patterns we documented last quarter](/blog/ruby-on-rails-performance-optimization-patterns-2026/) - event-driven instrumentation is most valuable when you already know which operations are slow and want to track them at sub-request granularity.
 
-## Further reading
+## Sources
 
 - Rails 8.1 Beta 1 release announcement - official changelog covering notification improvements
 - [ActiveSupport::Notifications API reference](https://edgeapi.rubyonrails.org/classes/ActiveSupport/Notifications.html) - full docs for `subscribe`, `monotonic_subscribe`, and the `Event` object

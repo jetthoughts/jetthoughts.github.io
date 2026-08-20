@@ -74,7 +74,7 @@ Want to skip the self-audit? [We'll read your codebase and send back a one-page 
 
 If you'd rather run the questions on your team yourself, the [red flags checklist for dev shops](/blog/dev-shop-red-flags-checklist/) gives you the specific things to ask this week.
 
-## Further reading
+## Sources
 
 - [Vibe Coding Is Disposable. Stop Shipping It.](/blog/vibe-coding-disposable-by-design/) - companion post covering the generate-validate-kill workflow and rebuild cost math
 - [Andrej Karpathy's original "vibe coding" post](https://x.com/karpathy/status/1886192184808149383) - February 2025

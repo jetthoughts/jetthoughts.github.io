@@ -127,7 +127,7 @@ If the request payloads are the thing you actually care about, put `:body` into 
 
 If several agents run per request in your Rails app and nobody can name which one changed last Tuesday, [that untangling is what our team gets hired for](/services/app-web-development/).
 
-Further reading:
+## Sources
 
 - [VCR default cassette options](https://benoittgt.github.io/vcr/#/configuration/default_cassette_options) - `match_requests_on` and the rest of the cassette defaults
 - [VCR on GitHub](https://github.com/vcr/vcr) - source, including `request_matcher_registry.rb`

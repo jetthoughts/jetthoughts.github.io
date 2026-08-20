@@ -120,7 +120,7 @@ Check `RubyVM::YJIT.enabled?` before changing anything, because Rails has probab
 
 If you want a second pair of eyes on a Rails app whose response times stopped making sense, our [Rails development team](/services/app-web-development/) does this work: profiling first, JIT flags only when the profile says Ruby CPU is the bottleneck.
 
-**Further reading:**
+## Sources
 
 - [Ruby 4.0.0 release notes](https://www.ruby-lang.org/en/news/2025/12/25/ruby-4-0-0-released/) - the primary source for what changed
 - [ZJIT launch post on Rails at Scale](https://railsatscale.com/2025-12-24-launch-zjit/) - architecture and roadmap from the team building it

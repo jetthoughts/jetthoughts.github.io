@@ -207,7 +207,7 @@ If you're holding a Rails codebase you can't change without breaking, we run a f
 
 [Talk to us about your codebase](/contact-us/).
 
-## Further reading
+## Sources
 
 - [Sandi Metz, *99 Bottles of OOP*](https://sandimetz.com/99bottles) - Shameless Green and the Flocking Rules
 - [Kent Beck, *Tidy First?* (2023)](https://tidyfirst.substack.com/) - structural vs behavioral changes

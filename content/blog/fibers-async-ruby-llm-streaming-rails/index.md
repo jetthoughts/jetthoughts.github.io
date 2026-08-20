@@ -132,7 +132,7 @@ Measure your peak concurrent streams for a week. If the number stays under worke
 
 If you're adding LLM features to a Rails app and want someone who has shipped this stack in production to look at your traffic profile first, [our Rails team does that assessment](/services/app-web-development/) before any migration work starts.
 
-**Further reading:**
+## Sources
 
 - [Falcon](https://github.com/socketry/falcon) - the fiber-per-request server itself
 - [async](https://github.com/socketry/async) - the concurrency framework underneath it

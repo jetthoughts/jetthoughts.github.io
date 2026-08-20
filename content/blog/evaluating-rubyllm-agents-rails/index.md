@@ -129,7 +129,7 @@ Start with the schema, because it's one gem and an afternoon. Then add the one c
 
 If your Rails app already runs LLM agents and nobody can say whether last month's prompt change made them better or worse, that's the [work we get called into](/services/app-web-development/), and the trail is where we start.
 
-Further reading:
+## Sources
 
 - [RubyLLM agents guide](https://rubyllm.com/agents/) - the `Agent` class: instructions, schemas, tools
 - [RubyLLM configuration guide](https://rubyllm.com/configuration/) - provider endpoints, timeouts, retries
