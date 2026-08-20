@@ -8,6 +8,46 @@
 
 ---
 
+## ⛔ BLOCKED ON ARRIVAL, not "deferred" (relabelled 2026-08-21)
+
+**Read this before picking anything below.** A roadmap audit on 2026-08-21 found
+that eight items in this bank are gated on reader/GA4 data, and at current
+traffic **that data cannot be produced**. The 28-day funnel is
+`start_course` **5**, checkpoint-reveal **4**, branch-click **2**, glossary
+**1**. You cannot derive a Carrd-fallback rate, a finisher cohort, or
+"demonstrated GA4 demand" from five course starts.
+
+They had been carried as "deferred" across multiple sessions, which reads as
+*ready when we get to it*. They are not. They are **waiting on course arrival**,
+and course arrival is a distribution problem being tested on one channel
+(LinkedIn, cards LI-0..LI-D in `linkedin-posts/content-plan.md`). Google and AEO
+were both closed for the course on 2026-08-21 - see
+[`50-59-execution/50.05-course-discovery-diagnosis-2026-08-21.md`](50-59-execution/50.05-course-discovery-diagnosis-2026-08-21.md).
+
+| Item | Its trigger | Reachable today? |
+|---|---|---|
+| Ch 2.2 AI Personas → optional sidebar | "revisit after reader data" | No |
+| Ch 2.4 silent-observation resistance | "needs user testing data" | No |
+| Lesson 1.2a split by builder path | Carrd-fallback rate from analytics | No |
+| Template "when you need this" timing guide | reader data (structural change) | No |
+| Deferred briefs + Operating-Kit templates | "demonstrated GA4 demand" | No |
+| Option 2 services bridge | GA4 shows "a real finisher cohort" | No |
+| Post-ship retrospective (40.02) | 2+ weeks of live data | No |
+| Pilot → testimonials | 3-5 real completions | No |
+
+**Do not attempt to unblock these by lowering the bar** - shipping a structural
+change on 5 sessions of data is guessing with extra steps, and the original
+deferrals were right to demand evidence. Revisit when a channel puts sustained
+readers into Modules 1-3.
+
+**Still genuinely actionable** (needs no reader data): the vendor-pricing
+verification pass, now scheduled as **Sprint C4** in
+[`50-59-execution/50.03`](50-59-execution/50.03-course-sprints-2026-08-groomed.md),
+and the 31 SVG floor candidates (opportunistic, render-gate per image, never
+batch).
+
+---
+
 ## Applied (moved to course chapters)
 
 | Idea | Where Applied | Date |
