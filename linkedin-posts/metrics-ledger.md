@@ -105,6 +105,14 @@ primary metrics but the ledger had nowhere to record either):
 
 ## How to read a post's analytics
 
+**GA4 side: run `bin/campaign-metrics`** (add a day count for other windows). It
+prints our UTM campaigns separately from everything else GA4 tags as a campaign,
+and prints the arrival-override *inputs* without pretending to a verdict. Do not
+hand-compose a Data API call for this - that is how the first read got estimated
+instead of measured. Details and caveats: `.okf/workflows/analytics-access.md`.
+
+**LinkedIn side:**
+
 1. Open the post → "View analytics" (or the impressions count under it).
 2. Log impressions, reactions, comments, reposts, and profile-view delta.
 3. **icp_replies:** read every comment and DM. A reply counts as ONE qualifying

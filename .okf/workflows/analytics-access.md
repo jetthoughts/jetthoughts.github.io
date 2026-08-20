@@ -177,6 +177,37 @@ genuinely out of reach for that session and the honest report names *that*
 Paul's". Never sign in to reach it - entering credentials is prohibited, and
 the block is the channel, not the task.
 
+### `bin/campaign-metrics` - the weekly campaign read in one command
+
+```
+bin/campaign-metrics        # last 28 days
+bin/campaign-metrics 7      # last 7
+```
+
+Auth is the same gcloud ADC the `google-analytics` MCP uses; no new deps. It
+exists because every campaign read previously meant hand-composing a Data API
+call and re-deriving which dimensions isolate campaign traffic - which is how the
+2026-08-20 read got **estimated instead of measured, ~5x off**. The number was
+always reachable; it just was not cheap enough to reach.
+
+Three things it encodes so nobody re-derives them wrong:
+
+- **Our campaigns are separated from everything else GA4 tags as a campaign.**
+  `(ai-assistant)` is a GA4-assigned pseudo-campaign, not ours. Counting it as
+  campaign arrival is exactly how a kill criterion reads as MET when nobody
+  clicked one of our links - the first cut of this script did that.
+- **It prints the arrival-override inputs but refuses to print a verdict.** The
+  override needs sessions that are *both* engaged *and* multi-page, and that is
+  not derivable from row aggregates: a row of 4 sessions at 1.5 pages/session
+  does not say how many individual sessions were multi-page. Inputs, not verdict.
+- **It warns while `page_view` is still a key event**, because until then the
+  KEYEV column counts page views and must never be quoted as conversions.
+
+Standing finding from its first run (28d to 2026-08-20): **`(ai-assistant)` is
+36 sessions vs 2 from our LinkedIn campaigns** - AI assistants are currently an
+order of magnitude bigger an arrival channel than the campaign we are measuring,
+including 2 sessions that landed directly on `/contact-us`.
+
 ### Marking a key event is an agent-doable UI task, not an Admin-API task
 
 Recorded because the opposite was asserted twice in one session. The read-only

@@ -1,0 +1,128 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+#
+# One command for "how are our campaigns doing" - the weekly LinkedIn/course
+# read that feeds linkedin-posts/metrics-ledger.md.
+#
+# Before this existed, every campaign read meant hand-composing a GA4 Data API
+# call and re-deriving which dimensions isolate campaign traffic. That is how
+# the 2026-08-20 read got estimated instead of measured (~5x off) - the number
+# was reachable, just not cheap enough to reach. This makes it one command.
+#
+# Usage:
+#   bin/campaign-metrics             # last 28 days
+#   bin/campaign-metrics 7           # last 7 days
+#
+# Auth: gcloud Application Default Credentials, the same ones the
+# `google-analytics` MCP server uses. If it 401s, run:
+#   gcloud auth application-default login
+
+require "json"
+require "net/http"
+require "uri"
+
+PROPERTY = "328508492" # JetThoughts / "Home Page - GA4" (see .okf/workflows/analytics-access.md)
+days = (ARGV[0] || "28").to_i
+
+token = `gcloud auth application-default print-access-token 2>/dev/null`.strip
+abort "No gcloud ADC token. Run: gcloud auth application-default login" if token.empty?
+
+def query(token, body)
+  uri = URI("https://analyticsdata.googleapis.com/v1beta/properties/#{PROPERTY}:runReport")
+  req = Net::HTTP::Post.new(uri, "Authorization" => "Bearer #{token}", "Content-Type" => "application/json")
+  req.body = JSON.dump(body)
+  res = Net::HTTP.start(uri.host, uri.port, use_ssl: true) { |http| http.request(req) }
+  abort "GA4 API #{res.code}: #{res.body}" unless res.code == "200"
+  JSON.parse(res.body)
+end
+
+range = [{ "startDate" => "#{days}daysAgo", "endDate" => "today" }]
+
+# Campaign traffic only. Excluding the three pseudo-campaigns GA4 assigns to
+# non-campaign traffic is what separates "our posts worked" from baseline.
+report = query(token, {
+  "dateRanges" => range,
+  "dimensions" => [{ "name" => "sessionCampaignName" }, { "name" => "sessionManualAdContent" }, { "name" => "landingPage" }],
+  "metrics" => [{ "name" => "sessions" }, { "name" => "engagedSessions" }, { "name" => "keyEvents" }, { "name" => "screenPageViewsPerSession" }],
+  "dimensionFilter" => {
+    "notExpression" => {
+      "filter" => {
+        "fieldName" => "sessionCampaignName",
+        "inListFilter" => { "values" => ["(not set)", "(direct)", "(organic)", "(referral)"] }
+      }
+    }
+  },
+  "orderBys" => [{ "desc" => true, "metric" => { "metricName" => "sessions" } }],
+  "limit" => 50
+})
+
+rows = (report["rows"] || []).map { |r|
+  {
+    campaign: r["dimensionValues"][0]["value"],
+    content: r["dimensionValues"][1]["value"],
+    landing: r["dimensionValues"][2]["value"],
+    sessions: r["metricValues"][0]["value"].to_i,
+    engaged: r["metricValues"][1]["value"].to_i,
+    key: r["metricValues"][2]["value"].to_i,
+    pages: r["metricValues"][3]["value"].to_f
+  }
+}
+
+# Our deliberate UTM campaigns vs everything else GA4 tags as a campaign.
+# `(ai-assistant)` in particular is a GA4-assigned pseudo-campaign, NOT ours -
+# counting it as campaign arrival is how a kill criterion gets read as MET when
+# no one clicked one of our links.
+OURS = /course_promo|icp_validation/
+ours, other = rows.partition { |r| r[:campaign] =~ OURS }
+
+FMT = "%-32s %-24s %-34s %6s %5s %6s %8s"
+
+def table(rows)
+  puts format(FMT, "CAMPAIGN", "CONTENT", "LANDING PAGE", "SESS", "ENG", "KEYEV", "PAGES/S")
+  puts "-" * 146
+  t = Hash.new(0)
+  rows.each do |r|
+    t[:s] += r[:sessions]; t[:e] += r[:engaged]; t[:k] += r[:key]
+    puts format(FMT, r[:campaign][0, 32], r[:content][0, 24], r[:landing][0, 34],
+                r[:sessions], r[:engaged], r[:key], format("%.1f", r[:pages]))
+  end
+  puts "-" * 146
+  puts format(FMT, "TOTAL", "", "", t[:s], t[:e], t[:k], "")
+  t
+end
+
+puts "GA4 #{PROPERTY} - last #{days} days"
+puts
+puts "== OUR CAMPAIGNS (course_promo* / icp_validation*) - this feeds the ledger"
+puts
+if ours.empty?
+  puts "  No sessions from our UTM campaigns in this window."
+  puts "  A UTM'd link has to be CLICKED for a row to appear - zero means no campaign"
+  puts "  clicks, not a broken query. Verify the posted links carry utm_campaign."
+  ours_totals = Hash.new(0)
+else
+  ours_totals = table(ours)
+end
+
+unless other.empty?
+  puts
+  puts "== OTHER CAMPAIGN-TAGGED TRAFFIC (context only - NOT ours, do not log)"
+  puts
+  table(other)
+end
+
+puts
+puts "Arrival override inputs (our campaigns only): #{ours_totals[:s]} sessions, " \
+     "#{ours_totals[:e]} engaged."
+puts "The override needs >=3 sessions that are BOTH engaged AND >1 page. That cannot"
+puts "be read off these row aggregates - a row of 4 sessions at 1.5 pages/session does"
+puts "not say how many individual sessions were multi-page. Treat the numbers above as"
+puts "the inputs, not the verdict; the criterion is in"
+puts "docs/workflows/linkedin-icp-validation-plan.md."
+
+if ours_totals[:k].positive? || other.sum { |r| r[:key] }.positive?
+  puts
+  puts "WARNING: `page_view` is still marked a key event on this property, so KEYEV"
+  puts "above counts page views, not conversions. Do not quote it as conversions until"
+  puts "that is un-marked (2608 Phase 0.1). See .okf/workflows/analytics-access.md."
+end

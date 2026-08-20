@@ -2374,3 +2374,34 @@ change rather than a rename, and its diff is about colour roles only. 1a.1
 verified this rather than assuming it: computed values checked in the browser,
 53 screenshots compared, zero baseline churn, course suite green (it shares
 single-post.css, so the dedup had to leave it untouched).
+
+## 2026-08-20 - bin/campaign-metrics; the SERP footprint is aimed at the wrong reader
+
+Added `bin/campaign-metrics` (gcloud ADC + Data API, no new deps) so the weekly
+campaign read is one command. It exists because hand-composing the query is how
+the 2026-08-20 read got estimated instead of measured, ~5x off. Its first cut
+had the same class of bug in miniature: it counted GA4's `(ai-assistant)`
+pseudo-campaign as campaign arrival and reported the kill criterion MET when
+nobody had clicked one of our links. Now it separates our UTM campaigns from
+everything else, and prints the arrival-override INPUTS while refusing a verdict
+(sessions both-engaged-and-multi-page is not derivable from row aggregates).
+
+Two findings from the same pull:
+
+**AI assistants out-deliver the LinkedIn campaign by 18x.** 28 days:
+`(ai-assistant)` 36 sessions vs 2 from course_promo, including 2 landing
+straight on `/contact-us`. The channel nobody is working beats the one being
+measured.
+
+**The site's whole search footprint is aimed at developers, not the ICP.** GSC
+28d: every top query is a dev query, and the high-impression pages convert at
+0.1-0.3% at positions 9-16 because they rank for hyper-long-tail debugging
+strings - `automate-your-deployments-with-kamal-2` takes hundreds of impressions
+for literal **git commit SHAs**, `change-inputs-placeholder-color` for ~30
+"css placeholder color" variants, `building-an-effective-dev-team` for the head
+term "dev team" at position 20. **Zero `/course/` URLs appear in the top 200
+page+query rows at all.** So the inherited plan action "course SERP CTR pass
+(titles + meta descriptions)" rests on a false premise: this is not a title
+defect to fix, it is an audience mismatch - we rank for things our buyers never
+search, and there are no course impressions to convert. Fixing CTR here would
+buy more Laravel developers.
