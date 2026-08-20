@@ -3,6 +3,45 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+## 2026-08-21 - the deferred pass, and two of my own claims corrected
+
+Ran the pass queued on #516 once that PR merged (it could not run earlier: the
+session was checked out on #518, where this bundle state did not exist).
+
+**Corrections to `workflows/site-redesign-rollout.md`, written four passes ago:**
+
+* The engagement figure. The concept repeated the plan's "25.2% scroll / 26.3s
+  vs a 32.9-40.3% site average". Measured: that is ONE 3-day Clarity window of
+  five and the lowest, the windows swing 2.9x, and session-weighted across 743
+  sessions the blog is at **44.31% / 34.97s** - at or above the average it was
+  said to trail. It also straddles the 08-20 deploy; the clean pre-ship figure
+  is 08-06->08-17, 451 sessions, 56.4% / 40.1s. Blog-first still holds, on a
+  better fact: GSC puts the blog at 77% of the site's Google traffic.
+* The course coupling. The concept repeated 20.01's "2.2 couples the course
+  page". True of the FILE, false of the SELECTORS: `course/single.html:55` has
+  no `.post-article` and all 15 styled rules are `.post-article`-prefixed.
+  DECOUPLED - 2.3 need not follow 2.2. The genuinely shared file is
+  `single-post.css`, which also drives `bin/generate-template-pdfs`.
+
+Both were inherited from the plan doc without independent verification, which
+is the same failure the new "check phase status against GIT, not the plan
+table" rule now names: Phase 2.1 and 2.2 had ALREADY SHIPPED (#487, #494, both
+2026-08-20) while the plan still listed them pending, and a status answer was
+given from the table.
+
+**Added:**
+
+* `build/test-gates.md` - a `skip_area` mask blinds a gate STRUCTURALLY where
+  tolerance blinds it statistically: all four blog-index screenshots mask
+  `.post-feature`, which IS the feature slot, so the index content area has
+  never been gated. Plus the local-gates-are-authority policy with its stated
+  Linux debt, and "quote the compared COUNT, not just 0 failures".
+* `workflows/analytics-access.md` - `/blog/` fires no `scroll_depth` at all
+  (`page/analytics.html:72` gates on `.IsPage`), and the 3-day-window trap with
+  the session-weighting and straddles-a-deploy rules.
+* `workflows/review-swarm.md` - non-colliding agents can still collide with an
+  unmerged branch, and never switch branches under a running agent.
+
 ## 2026-08-21 - new concept: the rollout SEQUENCE was undiscoverable
 
 `design/site-palette.md` carried the palette decision, but nothing in the

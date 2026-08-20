@@ -6,11 +6,12 @@ tags: [testing, visual-regression, gates]
 status: stable
 generated: { by: claude/opus-4-8, at: 2026-08-12T20:20:00Z }
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T00:50:00Z }
   - { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
   - { by: claude/opus-5, at: 2026-08-20T23:45:00Z }
   - { by: claude/opus-5, at: 2026-08-21T00:00:00Z }
-timestamp: 2026-08-21T00:00:00Z
+timestamp: 2026-08-21T00:50:00Z
 ---
 
 # The suites
@@ -237,6 +238,44 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   `_dest/public-test-local`. Clear the dest dir before trusting a RED, the
   same way a screenshot baseline must be COMMITTED before trusting a
   re-record (both are "the assertion is right, the input is stale").
+
+- **A `skip_area` mask can blind a gate completely, at any tolerance**
+  (2026-08-21). All four blog-index screenshots mask BOTH `.blog-post` and
+  `.post-feature` (`test/system/desktop_site_test.rb:34,42`,
+  `test/system/mobile_site_test.rb:25,33`) - and `.post-feature` IS the
+  feature slot the blog index was rebuilt around. The index's entire content
+  area has never been visually gated. Phase 2.1 and 2.2 shipped through that
+  hole on 2026-08-20 and nobody noticed for a day.
+
+  This is strictly worse than the 2% tolerance trap above: tolerance is a
+  STATISTICAL blindness that a big enough change defeats, a mask is a
+  STRUCTURAL one that no change defeats. Masks are usually added for a good
+  reason (post content churns as posts are added, so unmasked baselines would
+  never settle) - but a mask over a COMPONENT rather than over dynamic TEXT
+  silently removes it from coverage forever. When adding one, mask the
+  smallest volatile region, and grep the mask list before trusting a green
+  run on a component you just changed.
+
+- **Local gates are the merge authority while CI is unreliable** (Paul,
+  2026-08-21: "use local tests for now, CI is under attack is not reliable").
+  CI checks become informational; gate on `bin/rake test:unit` +
+  `bin/hugo-build` + `bin/qtest --changed`, plus the macOS `bin/test` leg for
+  visual work, and quote those results in the PR. **macOS only** - never cite
+  `dtest` from a worktree (vacuous-green, above).
+
+  The consequence must be stated, not hidden: work that moves Linux baselines
+  ships on macOS evidence, so **master's Linux screenshot job goes red and
+  stays red** until one batched CI dispatch re-records. That is accepted,
+  written-down debt - PR #518 carries it - and it is cleared by CI, never by
+  recording locally. Say so in the PR rather than letting a reader assume
+  both legs were run.
+
+- **Quote the compared COUNT, not just "0 failures"** (2026-08-21). A suite
+  that compared nothing and a suite that compared everything both print
+  `0 failures`. The distinguishing line is
+  `[snap_diff] N screenshots compared, no failures.` - cite the N. #518 cites
+  `53 screenshots compared`, which is what makes its green legible as
+  evidence rather than as an absence of errors.
 
 - **A rendered-output sweep can look thorough and check almost nothing**
   (2026-08-20). Count the DISTINCT values a sweep actually resolves before
