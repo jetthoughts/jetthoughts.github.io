@@ -44,12 +44,27 @@ cold session should not have to rediscover:
   titles behind it sit behind Premium, which is lapsed ("Reactivate Premium"). The
   column is `n/a` rather than `0` - absent data, not a zero result.
 
-**What the numbers say: reach works, replies do not exist yet.** 680 impressions
-across three posts, 1 reaction, 0 genuine comments, 0 DMs, so **0 `icp_replies`**.
-The single comment on `validate-before-build` is Paul's own first-comment link and
-fails the SELF clause. Account-level reach is rising (704 impressions in the last 7
-days, +18% vs the prior 7; daily cumulative Aug 14->20: 83, 154, 205, 258, 402, 613,
-704), which makes reach the *less* likely explanation for the silence.
+**What the numbers say: 0 replies, and reach is the prime suspect.** 680
+impressions across three posts, 1 reaction, 0 genuine comments, 0 DMs, so **0
+`icp_replies`**. The single comment on `validate-before-build` is Paul's own
+first-comment link and fails the SELF clause.
+
+The account-level read (LinkedIn `/dashboard/`, 2026-08-20) is the most
+decision-relevant number here: **12,872 followers, 705 post impressions in 7
+days.** Two posts in that window reached roughly 190 people each - about **1.5%
+of the follower list**. Impressions are trending up (+18% w/w; daily cumulative
+Aug 14->20: 83, 154, 205, 258, 402, 613, 705) but from a floor that low, "rising"
+describes the slope, not the reach. Also on the dashboard: 303 profile viewers in
+90 days (+9%), 333 search appearances Aug 11-17.
+
+Read that against the kill criterion before concluding anything about the
+message. Its INCONCLUSIVE branch exists for exactly this shape - *"the account
+had no distribution, so the hypotheses were never tested."* A 1.5% follower-reach
+rate means these posts have not yet been shown to enough of the right people for
+silence to mean rejection. **Do not rewrite hooks on this evidence.** If the
+pattern holds at 10 rows, the criterion routes to an ICP-native channel with the
+hooks unchanged - and the distribution problem, not the copy, is what to work on
+in the meantime.
 
 `reply_protocol_run` is `no` on all three - there were no vague-but-promising
 comments to clarify, so the protocol had nothing to act on. That is a real reading,
