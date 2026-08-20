@@ -27,7 +27,7 @@ bundle install
 bundle exec falcon serve --bind http://0.0.0.0:3000
 ```
 
-For Rails, add `gem 'falcon'` to the production group, then point your process manager at `bundle exec falcon --config config/falcon.rb serve`. A minimal `config/falcon.rb` is in the [Rails Integration](#rails-integration) section below.
+For Rails, add `gem 'falcon'` to the production group, then point your process manager at `bundle exec falcon host`, which reads a `falcon.rb` service file from the application root. A minimal one is in the [Rails Integration](#rails-integration) section below.
 
 The rest of this post covers architecture, benchmarks against Puma and Unicorn, production configuration (systemd, Docker, Kubernetes), migration steps, and monitoring.
 
@@ -259,7 +259,7 @@ $ falcon serve
 $ falcon serve --bind http://0.0.0.0:3000
 
 # Custom configuration
-$ falcon --config config/falcon.rb serve
+$ bundle exec falcon host
 ```
 
 ### Rails Integration
@@ -284,7 +284,7 @@ Configure Falcon for Rails:
 
 ```ruby
 # config/falcon.rb
-#!/usr/bin/env falcon serve --config
+#!/usr/bin/env falcon-host
 
 load :rack
 
@@ -363,7 +363,7 @@ Running Falcon in production requires careful configuration for optimal performa
 
 ```ruby
 # config/falcon.rb
-#!/usr/bin/env falcon serve --config
+#!/usr/bin/env falcon-host
 
 load :rack
 
@@ -445,7 +445,7 @@ WorkingDirectory=/var/www/myapp
 Environment=RAILS_ENV=production
 EnvironmentFile=/var/www/myapp/.env.production
 
-ExecStart=/usr/local/bin/bundle exec falcon --config config/falcon.rb serve
+ExecStart=/usr/local/bin/bundle exec falcon host
 ExecReload=/bin/kill -USR2 $MAINPID
 
 Restart=always
@@ -511,7 +511,7 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
   CMD curl -f http://localhost:3000/health || exit 1
 
 # Start server
-CMD ["bundle", "exec", "falcon", "--config", "config/falcon.rb", "serve"]
+CMD ["bundle", "exec", "falcon", "host"]
 ```
 
 ### Kubernetes Deployment
@@ -657,7 +657,7 @@ ab -n 1000 -c 50 http://localhost:9292/
 
 ```ruby
 # config/falcon.rb for staging
-#!/usr/bin/env falcon serve --config
+#!/usr/bin/env falcon-host
 
 load :rack
 
@@ -709,7 +709,7 @@ environment ENV.fetch("RAILS_ENV", "development")
 preload_app!
 
 # After: config/falcon.rb
-#!/usr/bin/env falcon serve --config
+#!/usr/bin/env falcon-host
 
 load :rack
 
@@ -734,7 +734,7 @@ timeout 30
 preload_app true
 
 # After: config/falcon.rb
-#!/usr/bin/env falcon serve --config
+#!/usr/bin/env falcon-host
 
 load :rack
 
