@@ -67,6 +67,20 @@ Full table in 90.11 §1b.
   they exist. **Scope: external SOURCES only.** Course-navigation links to
   sibling lessons are not sources and do not count against the cap or the
   no-repeat rule - a page may legitimately point at the lesson it upgrades.
+- **2 columns maximum in blog tables (2026-08-08)** - or fold the third
+  column's value into the last cell in bold. A 3-column markdown table breaks
+  the mobile scroll gate in this theme: at 390px the article container is
+  354px and tables render `table-layout: auto` with no `overflow-x` wrapper,
+  so minimum content width wins (a migration post's 3 columns computed to
+  116+132+129 = 377px, scrollWidth 396). Trimming cell prose does NOT fix it -
+  min-width is set by the longest unbreakable token per column, not sentence
+  length, and one trim made it 1px worse. Code blocks are unaffected (they
+  carry `overflow-x: auto`). The systemic fix (a scroll wrapper in the theme)
+  is a CSS change that arms the full visual pair, so this stays a content rule
+  until someone takes that on deliberately.
+- **Internal review metadata never ships**: `<!-- Reference cadence: ... -->`
+  from the writer brief reached published HTML on five posts. Report cadence
+  in the handback, never in the file.
 
 # Banned structural patterns (reject on sight)
 

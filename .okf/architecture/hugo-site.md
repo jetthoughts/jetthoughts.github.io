@@ -37,7 +37,7 @@ Key config choices (`config/_default/hugo.toml`):
 |---|---|
 | `bin/hugo-build` | Production/dev build. Sets `HUGO_ENVIRONMENT` so `postcss.config.js` can skip PurgeCSS/cssnano in dev mode. Runs `bin/validate-course` first if present. |
 | `bin/rake test:critical` | Runs `test/system/*_test.rb` — the fast required gate after any change. |
-| `bin/test` / `bin/dtest` | Visual regression on macOS host / Linux Docker respectively — see [visual-scroll-gate](/workflows/visual-scroll-gate.md) and [testing](/workflows/testing.md). |
+| `bin/test` / `bin/dtest` | Visual regression on macOS host / Linux Docker respectively — see [visual-scroll-gate](/workflows/visual-scroll-gate.md) and [test-gates](/build/test-gates.md). |
 
 # Citations
 
