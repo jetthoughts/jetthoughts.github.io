@@ -2,7 +2,7 @@
 
 **ADR-0003**
 **Date:** 2026-08-20
-**Status:** Proposed
+**Status:** Accepted (palette resolved 2026-08-20)
 
 ## Title
 
@@ -85,23 +85,54 @@ twice, and is already tokenised. What is missing is that the other seventeen
 bundles never got it. That makes this **extraction and propagation**, not a
 redesign — logo, ruby, display face and the cover system all unchanged.
 
-### The one open decision: light or dark
+### Palette: LIGHT — resolved 2026-08-20 (Paul)
 
-The two reference pages differ on page background, and this ADR does **not**
-settle it. Both readings are defensible:
+The two reference pages disagreed on page background, and this ADR originally
+left it open. **Resolved: light**, decided on a lightning demo of the peer set
+plus the readability/trust literature.
 
-- **Light** — the course page is written for the ICP most explicitly (a
-  non-technical founder), and light chrome reads calmer and less "for
-  developers" to an anxious buyer.
-- **Dark** — `/services/vibe-code-rescue/` is the landing page for the live
-  Validating bet, it is the strongest page on the site, and dark unifies site
-  chrome with the blog cover system for the first time.
+**The split is audience-shaped, not taste-shaped.** Dark marketing belongs to
+products bought by *developers evaluating a tool*; light belongs to services
+bought on *trust*. Every services peer reviewed is light — thoughtbot,
+Test Double (a Rails consultancy selling to technical buyers, still light),
+Basecamp (light default, dark merely a user preference) — and the decisive
+signal is **Linear**, the poster child for dark product aesthetics, shipping a
+*light* marketing site. Dark is where you work; light is where you decide.
+Vercel runs both, and its buyer is a developer.
 
-Everything else in this ADR is palette-independent: the scales, the section
-rhythm, the proof placement, the CTA hierarchy and the blue deletion all hold
-either way. **Paul decides the palette; the rest ships regardless.** The
-prototype currently shows the light reading, and a dark variant is a token swap
-against the same components, not a second design.
+The mechanism is documented, not just fashionable: users read light-mode sites
+as more trustworthy and open, dark "weakens a trusting emotional connection",
+and light holds a comprehension edge **at small font sizes** — which is our
+exact case, because our humans are on phones (28% of GSC clicks from 6% of
+impressions).
+
+**The dark case, and why it lost.** `/services/vibe-code-rescue/` is the best
+page on the site and it is obsidian. But its quality is **structural, not
+chromatic** — proof chips in fold one, one repeated CTA, artifact cards instead
+of stock photography, ~4,300px. Every one of those is palette-independent and
+every one already shipped in the *light* blog. Dark also unifies chrome with
+the cover system, which is real, but it buys visual tidiness with the one thing
+an anxious, burned founder is shopping for.
+
+### Where dark deliberately stays
+
+Light is the default, not a monopoly. Three surfaces keep it:
+
+1. **Blog cover art** — obsidian, unchanged. It reads precisely *because* it is
+   now the only dark thing on the page.
+2. **One dark band per page**, spent on the strongest proof (already specified
+   above).
+3. **`/services/vibe-code-rescue/`** keeps its dark treatment as a **campaign
+   landing page** — a dark variant of the same tokens and components, not a
+   second design system. The system governs chrome and shared components; a bet
+   landing page may run the dark variant.
+
+Tiebreak, recorded last because it should not decide the question: light is
+also the cheaper path, since the blog already shipped light.
+
+**Consequence:** Phase 1a is unblocked — and with it the deletion of
+`--color-primary` / the late-cascade `#0066d6` anchor rule, which retires every
+scoped `!important` workaround the blog currently carries.
 
 ## Decision
 

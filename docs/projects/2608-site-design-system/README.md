@@ -32,8 +32,11 @@ mobile; and a lead conversion event exists so the next change can be measured.
   `/services/vibe-code-rescue/`. They agree on structure (proof in fold 1, one
   repeated CTA, artifacts not stock photos, ~4,300px, no blue) and disagree on
   one thing: light vs dark background. This is extraction, not a rebrand.
-- **Open decision, blocks Phase 1a only:** which palette. See open question 0 in
-  the plan.
+- **Palette resolved 2026-08-20: LIGHT** (Paul, on a lightning demo of the peer
+  set — every services peer is light, and even Linear ships a light marketing
+  site). Dark stays in three places: blog cover art, one dark proof band per
+  page, and `/services/vibe-code-rescue/` as a dark-variant campaign page.
+  Phase 1a is unblocked — see [20.02](20-29-strategy/20.02-phase-1a-plan.md).
 
 ## Current state
 
@@ -46,11 +49,12 @@ engagement** vs site avg 33–40% / 28–34s.
 | Phase | What | Gate | Status |
 |---|---|---|---|
 | 0 (slim) | record-baselines wrapper, blog scroll/CTA events, coverage, baseline doc | events verified firing | **merged #489**; GA4 key-event toggles are agent-doable via the GA4 UI (see #495), not Paul's |
-| 2.1 | `blog-list` restyle + tag pages | A + B + C | **shipped 2026-08-20** (PR pending) |
-| 2.2 | posts: article-end CTA, ink tags (measure/full-bleed/code-ink deferred to 1a) | A + B + C | **shipped 2026-08-20** (PR pending) |
-| 2.2b | **Whole-blog rebuild** (post template: full-bleed cover, ink code blocks, meta-above-title; mobile covers on lists) | A + C | **in progress** (Paul 2026-08-20: no measure gates) |
+| 2.1 | `blog-list` restyle + tag pages | A + B + C | **merged #487** |
+| 2.2 | posts: article-end CTA, ink tags | A + B + C | **merged #487/#489** |
+| 2.2b | Whole-blog rebuild: post header, ink code, wide + responsive mobile covers | A + C | **merged #494** |
 | — | Whole-blog measure (28d after rebuild deploys, [40.01](40-49-measurement/40.01-blog-engagement-baseline.md) protocol) | informational | after rebuild |
-| 1a/1b | Site-wide chrome (recolour, then spatial) | A + B + C | after the read |
+| **1a** | Site-wide recolour: token promotion, `--color-primary` deletion, retire the `#0066d6` rule (+55 `!important`s) | A + B + C | **ready** — [20.02](20-29-strategy/20.02-phase-1a-plan.md) |
+| 1b | Spatial chrome (dead fold, nav 7→5, space scale) | A + B + C | after 1a |
 | 2.4/2.5 | homepage, single-service | A + B + C, GSC gate on homepage | after the read |
 | 3 | Content: real numbers, sample report | A + cold-eyes review | parallel |
 
