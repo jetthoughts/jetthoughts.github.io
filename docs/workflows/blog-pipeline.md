@@ -436,6 +436,55 @@ Commit message format:
   N external citations. Primary keyword in first 100 words.
 ```
 
+## Batch mode — write the next N posts without stops (validated 2026-08-20, PR #488)
+
+Paste this to run a multi-post sprint. It layers three batch-proven practices on the
+per-post pipeline above: the live-GSC premise audit, real-code mining, and the
+same-day-cluster sweep.
+
+```
+Write the next N blog posts end-to-end, no stops between posts. Feature branch,
+one PR for the batch, full pipeline per docs/workflows/blog-pipeline.md.
+
+PER POST:
+1. PICK from the 20.09 groomed queue - audit the premise first: pull live GSC
+   for the topic and run the dedup check; on collision, upgrade-in-place or
+   rescope, record the verdict in the plan, take the next row.
+2. RESEARCH primary sources only (official docs, release notes, gem source -
+   fetch, don't recall). Mine our real codebases for first-hand war stories,
+   sanitized (shapes and lessons yes; prompts, model IDs, proprietary numbers
+   no). Zero fabricated clients, stats, or quotes. Frame the latest framework/
+   language versions as the present; older versions only as cited history.
+3. WRITE via a content-creator agent with the full packet (voice guide 90.11,
+   cadence anchor from blog-writer-reference-samples.md, STEP 4-4d rules,
+   verified internal links). Two-pass write.
+4. REVIEW with three parallel critics - tech (fetch every source, verify every
+   claim and every line of copyable code), slop/SEO, copy editor. Iterate until
+   tech is clean, slop >=8/10, editor <=minor.
+5. COLD-EYES fresh-context 9-check gate with edit rights; require PUBLISH-READY.
+6. SHIP: stitch cover (render + visually inspect), pre-rendered mermaid clearing
+   the 9px/390px floor, bin/hugo-build + bin/check-post-visuals green, browser
+   scroll gate desktop+mobile with zero console errors/404s, commit with the
+   reviewer verdicts quoted.
+
+AFTER THE LAST POST: run the same-day-cluster sweep from
+.okf/content/voice-rules.md across the whole batch (shared intensifiers,
+metaphor families, verbatim phrases, cloned CTAs); update plan statuses; okf
+maintain; push and open ONE PR with a per-post verdict table; watch CI and
+clear flakes.
+
+STOPS: only if the queue runs dry after rescopes, or a post fails a gate twice -
+record why in the plan and continue with the next. Hand back with a localhost
+review link per post.
+```
+
+Why these three additions are load-bearing (evidence from the 2026-08-20 batch):
+the premise audit redirected the refresh slot from a 4-impression page to a
+6,310-impression page carrying live fabrications; the real-code mining produced
+the batch's best material (a commit-documented production outage); and the
+cluster sweep caught fingerprints all four per-post reviews passed (one shared
+intensifier in all four posts, one metaphor family used 5x).
+
 ## Pipeline phases (reference)
 
 | Phase | What | Gate |
