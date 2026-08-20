@@ -1,5 +1,23 @@
 # Bundle Update Log
 
+## 2026-08-20 (ownership inverted) - vault owns ALL operations, repo is growth/marketing only
+
+* **Paul's directive** supersedes the 2026-08-17 narrow split: the vault
+  (`~/Documents/pkm`) now owns the entire operating loop, not just
+  positioning/bet status. Migrated to vault notes: `jt-operations`
+  (was `docs/business/operating-system.md`), `jt-vcr-pipeline` (the only copy
+  of the numbers), `jt-vcr-runbook`, `jt-vcr-assumptions`. Repo files replaced
+  by pointer stubs; full pre-move content in git history.
+* **The 2026-08-17 binding argument was answered by moving the bindings too**:
+  pipeline + runbook + register migrated in the same pass, so the weekly loop
+  still reads from one place - the vault.
+* **Unchanged**: claims canon stays repo-owned and test-enforced; campaign
+  artifacts (openers, kits, specs, VoC, landing, posts) stay under
+  `docs/projects/2607-*`; the vault is host-only, so container/CI sessions
+  treat operations as out of scope.
+* Updated: `workflows/company-layer-ownership.md` (re-settled),
+  `workflows/outbound-sprint.md` (ledger pointer), CLAUDE.md/AGENTS.md banners,
+  flow-router, BASE_HANDBOOK, docs/README, docs/business/*.
 ## 2026-08-19 (CfT bump) - Chrome for Testing 141→152 + linux baselines re-recorded
 
 * **Chrome for Testing bumped** `.dev/cft-version` 141.0.7390.37 →
@@ -20,6 +38,12 @@
   the pinned CfT + matching chromedriver at build time), then re-record via
   `FORCE_SCREENSHOT_UPDATE=true` against `bin/rake test:system` in the
   container - NOT `bin/dtest` alone, which only re-records the critical subset.
+* **Corrected 2026-08-20**: the local re-record described above drifted from
+  CI - `.dev/compose.yml` runs amd64 Chrome under QEMU on Apple Silicon - and
+  turned 7 codeblock fixtures red in CI. The "0-drift vs the OLD 141
+  baselines" reading was right: Chrome 152 needed no re-record at all.
+  Record linux baselines via the `update-baselines` workflow dispatch, never
+  locally. See the 2026-08-20 entry at the end of this log.
 
 ## 2026-08-19 (dependency upgrade) - full dep bump: JS/Ruby/Hugo/Bun/Actions
 
@@ -1676,6 +1700,93 @@ Three durable learnings from the vendor-post rewrite + lovable-guide session:
    -ing tails, synonym cycling, vague authority, generic positive
    conclusions, chatbot artifacts, straight-quotes rule. Sweep rewrites
    against the MERGED list, not just the original §3.
+## 2026-08-19 — GSC re-baseline closes 20.09 §10 Q1; fractional-CTO cluster is cannibalised
+
+90d GSC pull (2026-05-21 → 08-18, `sc-domain:jetthoughts.com`): 433 clicks /
+438,152 impressions / 0.10% CTR / position 16.4. **Confirms `seo-review-2026-08-13`
+§1-§5 and changes no recommendation in §6.**
+
+1. **The "blocking" open question was phantom.** 20.09 §10 Q1 held a full re-plan
+   on a "fresh GSC export" that "is not in the repo". The MCP serves the data
+   live - already documented in `/workflows/analytics-access.md` since 08-13, so
+   the plan was gated on a constraint that had already been removed. *Check
+   whether a documented blocker still exists before treating it as one.*
+2. **Founder/ICP-E demand is absent, not underserved.** 27 "founder" queries ≈100
+   impressions / 0 clicks; the six 20.09 §3 P1 posts 176 / 0; all "vibe" queries
+   165 / 0; course 60+ URLs ~800 / 2 - all at good positions (5-13). Answers
+   20.09 §8's October re-check early: zero.
+3. **NEW - fractional-CTO cannibalization.** Nine pages compete. Google's chosen
+   result for the head term `fractional cto` (333 impr) is a 159-line 2024 diary
+   post at position 73, not either service page; three long-form siblings
+   (~2,900 lines) got zero impressions in 90 days. Same defect 20.09 §4 caught on
+   Rails 8 auth, in a cluster nobody audited. **Generalisation: when one split
+   cluster is found, audit the others - don't fix only the flagged instance.**
+4. **Deliberately NOT scheduled.** ~570 impressions/90d at position 43-52; a
+   perfect fix is ~15-30 clicks/quarter. Not pipeline before Dec 1. A satisfying
+   root cause is not by itself a reason to spend the hours - first-pass read this
+   session over-recommended it and was corrected against §4/§6.
+5. Pricing contradiction logged for the action-#10 sweep: `/services/fractional-cto/`
+   says $5K-$15K/mo, `/services/fractional-cto-cost/` says $5,000-$25,000/month;
+   neither in `claims-canon`.
+
+GA4 deliberately not pulled - §5 establishes ~85-90% bot traffic and
+`keyEvents = 0`, so it returns noise until instrumentation lands.
+
+## 2026-08-19 — LinkedIn voice: plain English promoted, attribution test adopted
+
+1. **Plain English is now the FIRST voice gate** (voice-guide §0, mirrored in
+   `content/voice-rules.md`). Three tests: say it out loud to one person; one idea
+   per phrase; every claim true. The middle test is the expensive one - **two ideas
+   welded into one phrase pass every mechanical gate we own** (word count,
+   banned-word greps, dash checks, slop score), so only a domain reader catches
+   them. Consequent rule: check claims against domain knowledge FIRST, voice gates
+   second. Four rounds were burned doing it the other way round.
+2. **Attribution test - the one exception to the negative-parallelism ban**
+   (Paul chose this over keeping the ban absolute). `X is not Y; it is Z` is legal
+   only when the text NAMES WHO holds the negated belief within one sentence.
+   Holub earns it ("There are many programmers who don't seem to get that");
+   invented strawmen do not. Worded mechanically on purpose - "is this a real
+   belief?" is unenforceable, "is there a named population?" is checkable in two
+   seconds. Synced across 90.11 §3, `content/voice-rules.md`, and the LinkedIn AI
+   score rubric.
+3. **Imitation docs endorse everything in the sample.** `reference-examples.md`
+   models writers to copy; one quote carried a construction another doc banned, and
+   an agent told to "match the reference file" reproduces it. The file now says
+   copy the NAMED MOVE, not every property of the quote. General hazard for any
+   copy-this doc.
+4. **Rules with no trigger never fire.** Two cases in one session: the LI preview
+   link existed in `linkedin-posts/README.md` but fired only on "review" requests,
+   not on create/update; and `story-bank.md` says "before drafting, pull from here,
+   else interview Paul" but was **absent from the pipeline's mandatory reads and
+   20-item checklist**. Both now wired into the checklist. When a rule is being
+   broken, check whether it is reachable from the workflow before rewriting it.
+5. **Author's raw material beats assistant abstraction, decisively.** Every
+   invented framing in `reaction-claude-code-trust` was deleted once Paul wrote
+   four lines himself; the correct move was to drop the assistant thesis, not merge
+   it with his. Now a BLOCKING checklist step: source specifics before drafting.
+6. **Working directory persists between Bash calls.** A bare `cd content` made a
+   later `content/_index.md` grep report "No such file or directory" - a file that
+   exists. Same again with `.okf/design/`. The failure mode is nasty because it
+   looks like a missing file, not a wrong cwd. Rule added to CLAUDE.md: absolute
+   paths, or `cd <repo root> && cmd` in one call, or pass dirs to the tool. If a
+   file you know exists reports missing, run `pwd` first.
+7. **CORRECTED - do NOT strip a concrete number to avoid cross-post repetition.**
+   This entry first recorded the opposite and Paul overruled it same-day. $40k
+   appears in two approved posts (same founder, three weeks apart). The assistant
+   stripped it to "five figures" citing the cross-post repetition gate; Paul: "why
+   we cannot use $40k?". The gate is for CLUSTER posts competing on one topic, not
+   for two different arguments drawing on one real case. Stripping the number made
+   the post vaguer, which contradicts learning 5 above. Paul's real cases are
+   finite - one-story-one-post starves the pipeline. **What must not repeat is the
+   STORY, not the number:** one post uses the founder as the latest instance of a
+   pattern, the other narrates his unpaid-PM trap.
+   Also: never let a time window imply a count Paul has not claimed. "I met another
+   one this year" in mid-August implies one case per half-year and undersells him;
+   "the last one" gives recency without a rate.
+8. **Text gates cannot see exhibits.** The banned "The gap isn't tech - it's
+   information" was removed from the vendors post body and kept shipping inside the
+   post's SVG for the rest of the session. Sweep artwork text whenever a body
+   phrase is banned or changed.
 
 ## 2026-08-20 - CfT 141->152 bump: local dtest re-record on ARM Mac planted false CI drift
 

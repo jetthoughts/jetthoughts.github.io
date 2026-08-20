@@ -32,6 +32,13 @@ notes: |
       working product and getting "a part-time job chasing one".
   Number stays soft; course plug in first comment. Renamed from backlog-40k-mvp-ai-rebuild
   (the "ai rebuild" framing was factually wrong); utm updated to match.
+  $40k SHARED WITH personal/bip-vendors-still-burning-founders (Sep 2) ON PURPOSE
+  (settled 2026-08-19, Paul). Same founder. Sharing the figure is fine - the gate
+  against repetition is for cluster posts competing on one topic, not two arguments
+  using one real case. What must stay distinct is the STORY: that post uses him as
+  the latest instance of a recurring pattern, THIS post narrates his unpaid-PM trap
+  and is named for the figure. Keep the narration here; do not let the other post
+  grow into a retelling.
 ---
 
 A founder showed me an MVP he'd paid $40k for. Three months of work from a team on Upwork.

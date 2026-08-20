@@ -17,7 +17,7 @@ utm_campaign: course-pilot-aug26
 utm_content: week2_tue_mom_test_past_questions
 status: approved
 stage: next
-proposed_for: "2026-10-07 17:00 CEST"
+proposed_for: "2026-10-06 17:00 CEST"
 first_comment: |
   (value post - no link; reply-CTA only. Dropped the course link 2026-08-13 to make this one of the free 70% - see content-pillars.md)
 image: "assets/week2-tue-mom-test-past-questions.png"

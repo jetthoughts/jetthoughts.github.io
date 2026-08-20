@@ -13,7 +13,7 @@ utm_content: vibe_coding_disposable_by_design
 image: "assets/backlog-vibe-coding-disposable.png"
 status: approved
 stage: next
-proposed_for: "2026-10-06 17:00 CEST"
+proposed_for: "2026-09-03 17:00 CEST"
 opener_archetype: idea-led
 notes: |
   REVISED 2026-08-13 to idea-first: opener was habit-led ("For the last

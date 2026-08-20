@@ -25,7 +25,7 @@ sources:
    sweeps IH notifications, LinkedIn, Reddit (once batch 2 is live), and
    Gmail (`neetocal`), classifies replies, drafts responses from the
    objection bank (marked DRAFT - Paul sends), and updates the ledger.
-3. **Measure** - `rescue-sprint/pipeline.md` is the single ledger (one row
+3. **Measure** - vault `~/Documents/pkm/jt-vcr-pipeline.md` is the single ledger (moved 2026-08-20; one row
    per touch + Friday tally). The A0 kill-criteria (~20 touches / ~10
    calls) are evaluated from it alone.
 

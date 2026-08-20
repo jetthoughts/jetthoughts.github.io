@@ -54,6 +54,24 @@ Also plain first-person experience: *"I've found that using TDD as part of my pr
 
 **The move:** state the conviction flat and a little against-the-grain, back it in plain sentences. Short. Opinionated. No hedging, no parable.
 
+> ⚠️ **This quote is the ONE legal use of a construction we otherwise ban**
+> (Paul, 2026-08-19). *"…is not a distraction from the work; it is the work"* is
+> `X is not Y; it is Z` - normally banned negative parallelism under
+> [voice-guide 90.11](../docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md)
+> §3. It is legal here because Holub **attributes the negated belief to a named
+> population in the very next sentence**: "There are many programmers who don't
+> seem to get that."
+>
+> **The attribution test (90.11 §3):** the shape is permitted only when the text
+> names WHO holds the belief being negated, within one sentence of the negation.
+> No named population, no negation - you invented a strawman to knock down. Copy
+> the move only with the attribution attached; the attribution is not decoration,
+> it is the thing that makes the sentence honest.
+>
+> **General rule for this file:** an imitation example endorses every property of
+> the sample, including ones another doc forbids. When you copy from here, copy
+> the named move - not everything else the quote happens to contain.
+
 ---
 
 ## Carmine Paolino (`carminepaolino`) — plain build-in-public

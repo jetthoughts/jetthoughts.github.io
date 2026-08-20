@@ -38,8 +38,8 @@ Hugo static site (`bin/hugo-build`) · PostCSS pipeline · vanilla JS (minimal) 
 ## 🚀 Fresh-session entry points
 
 - **Any task**: `docs/workflows/BASE_HANDBOOK.md` + `docs/workflows/flow-router.md`
-- **Outbound/sales/pipeline**: `docs/projects/2607-vibe-code-rescue/operation-runbook.md` ▶ START HERE
-- **Company numbers**: `docs/business/operating-system.md` §1
+- **Outbound/sales/pipeline**: vault `~/Documents/pkm/jt-vcr-runbook.md` ▶ START HERE (moved 2026-08-20; campaign artifacts stay in `docs/projects/2607-vibe-code-rescue/`)
+- **Company numbers**: vault `~/Documents/pkm/jt-operations.md` §1 (host-only)
 - **Content**: `docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md` (check its P0 gate first)
 
 ---

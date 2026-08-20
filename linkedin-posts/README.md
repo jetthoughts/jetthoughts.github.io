@@ -249,16 +249,28 @@ the numbers.
 
 ## Review board (local preview) — ALWAYS give Paul the link
 
-When asked to review/check LI posts, start the dev server and hand back the URL —
-don't paste post text into chat:
+**Trigger (widened 2026-08-19): every time you CREATE or UPDATE a post, not only
+when asked to "review" one.** A reframe, a line edit, a frontmatter change - each
+one ends with the preview link in the handback. The old wording fired only on an
+explicit review request, so two rewrites of
+`icp-validation/backlog-ai-without-senior-reviewer.md` shipped with no link and
+Paul had to ask for the rule. Hand back the URL - don't paste post text into chat.
+
+**Port: never hardcode 1313.** That is Paul's default and may already be running
+his own server. Start your own once per session and reuse that port in every link:
 
 ```
-bin/dev          # http://localhost:1313
+PORT=$((20000 + RANDOM % 20000)) bin/dev     # remember the port for the session
 ```
 
-- **Board (all posts by stage):** http://localhost:1313/linkedin/
-- **Single post:** `http://localhost:1313/linkedin/<lane>/<slug>/`
-  (e.g. `/linkedin/course-promo/week1-tue-founding-hypothesis/`)
+- **Board (all posts by stage):** `http://localhost:<port>/linkedin/`
+- **Single post:** `http://localhost:<port>/linkedin/<lane>/<slug>/`
+  (e.g. `/linkedin/icp-validation/backlog-ai-without-senior-reviewer/`)
+
+The `<lane>` is the campaign directory name. The mount is dev-only
+(`config/development/hugo.toml` maps `linkedin-posts` → `content/linkedin`), so
+these URLs exist locally and never on the public site. If the post was already
+open in a tab, say hard-refresh.
 
 Dev-only: `config/development/hugo.toml` mounts `linkedin-posts/` as `content/linkedin`;
 production has no such mount, so these pages never ship.

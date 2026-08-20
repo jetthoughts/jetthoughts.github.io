@@ -1,4 +1,5 @@
 ---
+thesis: Founders still pay five figures for a first version that is not production grade, when $200 of AI buys the same non-production app and tests the idea.
 title: "Nobody tells founders the first version got cheap"
 opener_archetype: personal-witness-led
 lane: personal
@@ -35,18 +36,84 @@ notes: |
   narrative cartoons make the reader reconstruct causality; exhibits state
   it. Replaced with a house-style contrast-pair exhibit (720x480 SVG ->
   1080px PNG, refactoring.fm look): "Two prices for a first version" -
-  red Dev shop card (five figures / months / barely runs) vs green AI app
-  builder card (subscription money / one weekend / yours to test), basis
-  line mirrors the post's "The gap isn't tech - it's information." Labels
-  match the body's qualitative claims - no invented dollar figures.
+  red Dev shop card vs green AI app
+  builder card, basis line mirrors the post's closing claim.
+  CARDS RE-LABELLED 2026-08-19 with Paul's real figures: "$40k" and "$200"
+  replace "five figures" and "subscription money". The original note said "no
+  invented dollar figures" - correct at the time, since neither number existed in
+  repo canon. Both now come from Paul (the founder's bill, and his cost to build
+  the same thing on the priciest models), so the exhibit states them outright and
+  the 200x gap is visible without reading the post.
+  $40k SHARED WITH slot 10 ON PURPOSE (settled 2026-08-19, Paul overruled the
+  assistant). Same founder appears in course-promo/backlog-40k-mvp-chasing-fixes
+  (Sep 24). The assistant first stripped the figure to "five figures" citing the
+  cross-post repetition gate; Paul: "why we cannot use $40k?" - and he was right.
+  That gate is for CLUSTER posts competing on one topic, not for two different
+  arguments drawing on one real case. Stripping it made the post vaguer, which
+  fights the session's main lesson that Paul's concrete specifics beat abstractions.
+  Paul's real cases are also finite - one-story-one-post starves the pipeline.
+  What actually must not repeat is the STORY, not the number: slot 3 uses the
+  founder as the latest instance of a pattern, slot 10 narrates his unpaid-PM
+  trap. Different arguments, same evidence, three weeks apart.
+
+  THESIS PASS 2026-08-19 - one paragraph flagged, KEPT with reason. "If you already
+  paid a dev shop, most people around you would have signed the same contract."
+  does not serve the thesis (which is about price) and does not contradict it - the
+  gate's cut-or-fix case. It stays because it serves the ASK rather than the
+  argument: the 4-critic swarm added it on 2026-08-17 because icp_test cannot fire
+  without one, and asking "what were you quoted" straight after revealing $200
+  invites a confession of being overcharged, so this line makes answering safe.
+  Do not cut it on a mechanical thesis pass - the exception is deliberate.
+
+  CLOSE REPLACED 2026-08-19 (Paul: "I'm not following those last lines, how are
+  they related to the post idea?"). He was right and the answer is that they were
+  ORPHANED. "What did the vendor tell you before you signed? That part never gets
+  written down." fitted the post's ORIGINAL thesis - vendor accountability, the
+  2026-08-17 4-critic version. This post is now a price revelation, so the question
+  reached the topic only via a two-step (the pitch is where the not-telling happens)
+  that no reader will make. Replaced with "What were you quoted for your first
+  version?" - genuine, directly on-thesis, trivially answerable, and it surfaces
+  exactly the datum worth knowing: whether founders are still being quoted five
+  figures.
+
+  De-shaming line KEPT. The 4-critic swarm added it because the icp_test could not
+  fire without an ask, and it does more work now than before: asking someone what
+  they were quoted, straight after revealing the $200 figure, invites them to
+  confess being overcharged. The line makes answering safe.
+
+  LESSON: when a post's thesis is rewritten, re-check the CLOSE against the new
+  thesis, not just the body. A close that fitted the old argument survives every
+  voice gate - it is well-written, unbanned, on-brand - and is simply about a
+  different post.
+
+  PARAGRAPH 3 IS THE THESIS (Paul, 2026-08-19) - do not soften it again. The
+  assistant had written "Putting it in front of paying customers needs someone who
+  can read the code", added to resolve a contradiction with the Aug 26 supervisor
+  post. Paul: redundant, and it conflicts with the actual idea. His point is that
+  BOTH versions are non-working - the $40k dev-shop build barely ran either - so
+  implying the paid route bought you a code reader is false to his own story and
+  blunts the punch. Now: "You get the same non-working app. It is good enough to
+  test the idea, and you save about $39k."
+
+  This resolves the Aug 26 contradiction BETTER than the sentence it replaced. That
+  post says AI output needs a supervisor who outranks it; this post now explicitly
+  disclaims the AI build as non-working and scopes it to testing the idea. No
+  hiring advice in either direction, and the stages no longer overlap.
+
+  NO COUNT IN THE OPENER (Paul, 2026-08-19). An earlier draft said "I met another
+  one this year" - in mid-August that implies one case per half-year and undersells
+  how often he sees this. "The last one" carries recency without implying a rate.
+  General rule: never let a time window imply a count Paul has not claimed.
 ---
 
-It's hard to watch a founder hand over five figures and months of runway for a build that barely runs.
+Non-technical founders who paid for an MVP that barely runs keep turning up in my network. The last one had spent $40k.
 
-It still happens constantly, and what changed in 2026 is that the first rough version of most app ideas is now a weekend of work. AI app builders like Lovable or v0 cost about as much as a streaming subscription: you describe the app in plain English, and no developer is needed.
+That same first version is now a weekend with Lovable or v0. You describe what you want and it builds it. Even on the priciest models, $200 covers it.
 
-Nobody tells founders this. Vendors have no reason to, and the tools moved faster than the advice around them. The gap isn't tech, it's information.
+You get the same non-production app, but it's good enough to test the idea, and you save about $39k.
 
-So, no judgment if you paid for a build you didn't need yet. Most people around you would have signed the same contract.
+Nobody tells founders this. The vendor has no reason to, and the tools got cheap faster than the advice caught up.
 
-What did the vendor tell you before you signed? That part never gets written down, and it's what would help the next founder.
+If you already paid a dev shop, most people around you would have signed the same contract.
+
+What were you quoted for your first version?
