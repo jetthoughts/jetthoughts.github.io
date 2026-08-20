@@ -104,4 +104,3 @@ For that just wrap response rendering with [stale?](https://apidock.com/rails/Ac
 Caching is a great way to increase the performance of your API. But it also adds an extra layer of complexity and a responsibility to keep the cache fresh and consistent.
 
 **Dmitry Tsvetkov** *is a Software Engineer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) or [GitHub](https://github.com/vlaew).*
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

@@ -247,4 +247,3 @@ ITCSS doesn’t force you to use certain naming conventions. It doesn’t force 
 Thank you for reading my article, and let’s make something pretty using it.
 
 **Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

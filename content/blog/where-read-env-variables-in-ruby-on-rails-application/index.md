@@ -51,4 +51,3 @@ The configuration of the current working environment can be arranged in the *con
 By following this rule you can avoid problems with the implicit dependencies and your application behavior will be expected.
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

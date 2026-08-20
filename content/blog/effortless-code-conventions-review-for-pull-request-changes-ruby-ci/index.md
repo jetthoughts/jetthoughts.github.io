@@ -144,4 +144,3 @@ Let’s remove the waste of time for trivial problems and spend it on codding!
 [Contact us](https://jetthoughts.com/contact-us/) to find out more about how we work. We’re excited to help you — as always, we’d love to hear what you think!
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

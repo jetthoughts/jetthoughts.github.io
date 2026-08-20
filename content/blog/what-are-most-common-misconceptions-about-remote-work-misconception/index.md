@@ -48,7 +48,7 @@ Here in [JetThoughts](https://www.jetthoughts.com/), we have:
 
  5. Strategies
 
-Check our previous article about **[A typical day at JetThoughts](https://jtway.co/a-typical-day-at-jetthoughts-460b84eeb9c6)**
+Check our previous article about **[A typical day at JetThoughts](/blog/typical-day-at-jetthoughts-agile-remote/)**
 
 ## Remote employees should be available 24/7
 
@@ -71,4 +71,3 @@ Besides, you can meet somebody new and make friends.
 Furthermore, in [JetThoughts](https://www.jetthoughts.com/), we chat every day, using Discord. Team members who are from the same city, can meet and work together. We also try to minimize situations in which people are left alone, and we strive to support each other in the distance. So, we frequently do video conferencing.
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

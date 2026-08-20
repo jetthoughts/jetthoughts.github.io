@@ -195,4 +195,3 @@ Docker is a powerful tool to use in your development process. It can make starti
 If your dev shop doesn't run tests in CI at all, Docker config is the least of your problems. Our [dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/) covers the warning signs that separate reliable teams from ones cutting corners.
 
 **Dmitry Tsvetkov** *is a Software Engineer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) or [GitHub](https://github.com/vlaew).*
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

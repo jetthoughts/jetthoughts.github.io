@@ -23,7 +23,7 @@ slug: video-player-with-react-native-part-1-expo-reactnative
 ---
 ![](file_0.jpeg)
 
-Nowadays there are [plenty of solutions](https://medium.freecodecamp.org/a-deeply-detailed-but-never-definitive-guide-to-mobile-development-architecture-6b01ce3b1528) to build an application for a mobile platform. If we are talking about the technology that feels native (uses native UI components), our company has successful experience in [building React Native applications](https://jtway.co/the-simplest-way-to-automate-delivery-of-your-react-native-application-f37f2c71eb1d). And now we decided to check other similar solutions that are built on top of React Native.
+Nowadays there are [plenty of solutions](https://medium.freecodecamp.org/a-deeply-detailed-but-never-definitive-guide-to-mobile-development-architecture-6b01ce3b1528) to build an application for a mobile platform. If we are talking about the technology that feels native (uses native UI components), our company has successful experience in [building React Native applications](/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/). And now we decided to check other similar solutions that are built on top of React Native.
 
 We are going to review it in a series of two articles. This is the first one, where we will touch on [Expo](https://expo.io/). Expo is quite popular and is even recommended in [Getting Started guide for React Native](https://facebook.github.io/react-native/docs/getting-started.html). But it differs a lot. Here we will go through the process of building an app with Expo and then make technology comparison based on the results.
 
@@ -283,4 +283,3 @@ Our company has got React Native experience and set up good process/pipelines fo
 In the next article, we will explore another cross-platform technology — [*ReactXP](https://microsoft.github.io/reactxp/)*. Stay tuned!
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

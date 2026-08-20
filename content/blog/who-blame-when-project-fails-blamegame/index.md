@@ -43,4 +43,3 @@ He ensures that the Product Backlog items are transparent & clearly expressed an
 Remember every project is teamwork and it is the coordination among leaders and other team members which determines the success of the project.
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

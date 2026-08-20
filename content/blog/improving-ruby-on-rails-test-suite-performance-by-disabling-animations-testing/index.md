@@ -72,4 +72,4 @@ If you’re experiencing issues with failing tests or slow test execution times,
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 
-We recommend reading our [latest](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending) if you enjoyed this story.
+We recommend reading our [latest](/blog/) and [trending tech stories](/blog/) if you enjoyed this story.

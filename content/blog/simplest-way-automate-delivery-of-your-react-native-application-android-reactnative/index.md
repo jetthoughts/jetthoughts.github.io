@@ -330,4 +330,3 @@ Stay tuned!
  4. [Fabric Integration for React Native on Android](http://blog.mojotech.com/fabric-integration-for-react-native-on-android/)
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

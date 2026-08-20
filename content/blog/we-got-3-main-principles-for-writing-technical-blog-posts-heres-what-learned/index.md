@@ -79,9 +79,8 @@ The main principles of this rule:
 
 * Amount of used lists and number of points in the list 3
 
-Here is an example from our previous article [https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899](https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899)
+Here is an example from our previous article [/blog/checklist-for-non-tech-founder-agile/](/blog/checklist-for-non-tech-founder-agile/)
 
 ![](file_2.jpeg)
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

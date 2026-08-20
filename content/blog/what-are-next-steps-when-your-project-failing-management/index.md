@@ -25,7 +25,7 @@ So what are you supposed to do?
 ## **Step 1** ##
 Stop blaming! This is unlikely to be helpful, despite being very tempting. The truth is, project success depends on each and every team member. Every single person’s motivation and proficiency matter. All projects are like a Boat where a leader will show the direction, motivate the team members, and provide them with positive energy from time to time to make sure that all team members remain committed towards a single goal of achieving the project completion milestones.
 
-More you can find here <https://jtway.co/who-is-to-blame-when-a-project-fails-595d683da73d>
+More you can find here </blog/who-blame-when-project-fails-blamegame/>
 
 ## **Step 2** ##
 Find out why your project is failing. Communication is key in moving forwards following a project failure as feedback is an important aspect of your review process. Identifying past mistakes is a great way of improving work in the future.

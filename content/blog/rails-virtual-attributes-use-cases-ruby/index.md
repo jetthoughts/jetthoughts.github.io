@@ -204,4 +204,3 @@ AI-generated Rails code almost never uses virtual attributes - it creates databa
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 
 **Roman Tershak** is a Software Engineer at **[JetThoughts](https://www.jetthoughts.com)**. Follow him on[](https://twitter.com/ChrisKeathley)[LinkedIn](https://www.linkedin.com/in/roman-tershak-0b3958103/) *or [GitHub](https://github.com/rtershak).*
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

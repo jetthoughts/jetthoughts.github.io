@@ -84,4 +84,3 @@ Laser Focus will make sure that our solution will provide the best experience fo
 Applying those the most common Lean / Kanban practices will give you and the **team satisfaction in 2 weeks** already.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

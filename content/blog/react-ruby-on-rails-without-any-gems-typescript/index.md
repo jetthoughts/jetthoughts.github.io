@@ -199,4 +199,3 @@ Webpacker might be confusing for the first time, especially if you don't have an
 And the most important advantage, in my opinion, is lack of any dependency but Rails itself.
 
 **Dmitriy Savin ***is a Software Engineer at [JetThoughts](https://www.jetthoughts.com). Follow him on [*LinkedIn](https://www.linkedin.com/in/dmitriy-savin-b63783bb/) *or [GitHub](https://github.com/askel4dd).*
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
