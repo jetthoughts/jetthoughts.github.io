@@ -442,6 +442,13 @@ Paste this to run a multi-post sprint. It layers three batch-proven practices on
 per-post pipeline above: the live-GSC premise audit, real-code mining, and the
 same-day-cluster sweep.
 
+**Agent form (preferred):** spawn `blog-batch-orchestrator` (outer loop: queue →
+premise audit → dispatch → batch gates → PR → CI watch) which runs one
+`blog-post-coordinator` per post (inner loop: writer → 3 critics → cold-eyes →
+ship gates, iterating until PUBLISH-READY or 2 failed rounds). Both are defined
+in `.claude/agents/`. Shortest invocation: *"Spawn blog-batch-orchestrator, N=4."*
+The prompt below is the inline equivalent for sessions without the agent registry.
+
 ```
 Write the next N blog posts end-to-end, no stops between posts. Feature branch,
 one PR for the batch, full pipeline per docs/workflows/blog-pipeline.md.
