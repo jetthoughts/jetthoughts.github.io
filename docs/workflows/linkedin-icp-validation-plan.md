@@ -113,7 +113,15 @@ Example reply:
 
 ### Quantitative
 
-| Metric | Target | Why It Matters |
+**These are aspirations, NOT gates** (relabelled 2026-08-20). They were sized
+for 5 posts/week to a founder-heavy audience. At 2-3 Paul-gated posts/week to
+the current following they are arithmetically unreachable - 3+ qualified
+comments/week implies ~24 over 8 posts from a channel that produced ~4 course
+arrivals in 28 days. Wired as a gate they fire "fail" on post #2, forever. The
+only gate is the kill criterion under Weekly Review. Do not quote this table as
+evidence of failure.
+
+| Metric | Aspiration | Why It Matters |
 |---|---:|---|
 | Average engagement rate | 4-6% | Matches B2B LinkedIn benchmark in tracking docs |
 | Qualified comments | 3+/week | Public proof the pain language lands |
@@ -166,7 +174,79 @@ Every Friday, update a simple table:
 | 1 |  |  |  |  |  |
 | 2 |  |  |  |  |  |
 
-Decision rules:
+### Kill criterion (added 2026-08-20)
+
+Before this existed the campaign could not fail - it could only continue.
+`metrics-ledger.md` asserted "each lane's plan has a 2-week kill criterion";
+neither plan had one. The rules below it are *steering* rules, not stop
+conditions. Set by a 3-lens panel (growth / lean-validation / ICP); the
+reasoning and the two split decisions are recorded in
+`docs/projects/2605-tech-for-non-technical-founders/50-59-execution/50.04-kill-criterion-panel-2026-08-20.md`.
+
+**The unit is posts, not weeks.** At 2-3 Paul-gated posts/week across two
+lanes, a 2-week window is 4-6 posts - nothing is decidable at that n, which is
+why the criterion the ledger claimed existed was never buildable.
+
+**The window has not started until posts are live and their ledger rows are
+filled.** A row with empty metric cells does not count toward the n. Missing
+data means the window has not run - never that it failed. This is the single
+most important clause here: it blocks a verdict being declared off an empty
+table, which is the most likely real-world failure.
+
+> **Kill criterion, per lane.** Evaluate when a lane has **10 rows in
+> `linkedin-posts/metrics-ledger.md` with a filled `posted` date AND filled
+> metric cells**. Not on a calendar date. Sum three existing columns across
+> those ten rows:
+>
+> - **`icp_replies` >= 3 → CONTINUE.** The channel is live; steer with the
+>   decision rules below.
+> - **`icp_replies` <= 2 AND `impressions` >= 3,000 → KILL the broadcast
+>   lane.** Enough people saw it and almost nobody answered in ICP language.
+> - **`icp_replies` <= 2 AND `impressions` < 3,000 → INCONCLUSIVE, kill on
+>   reach not message.** The account had no distribution, so the hypotheses
+>   were never tested. Move the same hooks to an ICP-native channel
+>   (Reddit / IndieHackers) unchanged and re-run the count there. Do **not**
+>   rewrite hooks and do **not** feed this into the ICP doc or the blog plan.
+>
+> **Mandatory review at 6 filled rows** (no kill authority): total `comments`
+> ÷ total `impressions` × 1000. Below ~1.0, re-angle the hooks now rather than
+> spending four more posts on a shape that produces silence. Faster still,
+> available at n=1: read *who* is commenting - engineers and agency owners
+> means the audience or the packaging is wrong, not the message.
+>
+> **Arrival override.** >= 2 GA4 sessions carrying `utm_campaign=icp_validation_*`
+> (or the course-promo equivalent) during the window overrides a KILL. An
+> arrival outranks a reply. The campaign UTM is what isolates campaign traffic
+> from baseline profile/bio traffic - do not substitute channel attribution.
+>
+> **Validity gate.** No branch is a valid verdict unless founder / CEO / owner
+> appears in LinkedIn's top-3 viewer job titles on at least half the rows. Note
+> the top-3 in that row's `what to reuse` cell when logging.
+>
+> **An `icp_reply` you cannot quote did not happen.** Paste the person's actual
+> words into `what to reuse` when you count one.
+>
+> **This kills the channel, not the ICP.** Never edit
+> `90.10-icp-primary-website-target.md` on the strength of a LinkedIn zero.
+> What dies is "LinkedIn with Paul's current audience", which is a distribution
+> fact, not an audience fact.
+
+**The campaign can also fail by never running.** If a lane has not reached 10
+published, logged rows within **8 weeks of its first `posted` date**, stop it -
+not because the message failed, but because the pipeline cannot produce a
+decidable test at the available throughput. That is a resourcing verdict and it
+needs no engagement data. It is also the only clause that can fire today: 16
+drafts exist, 3 are out, zero are logged.
+
+**On a kill, the next action is already in this repo:** set `stage: future` on
+every unposted draft (do not delete - they are reusable as Reddit/IH comment
+material and blog hooks), then open
+`docs/projects/2607-vibe-code-rescue/rescue-sprint/SEND-SHEET.md` and send the
+first five, and/or the Reddit/IH drafts in
+`docs/projects/2605-tech-for-non-technical-founders/50-59-execution/50.02-pilot-outreach-campaign-kit.md`.
+LinkedIn as a 1:1 DM surface survives a kill; LinkedIn as a megaphone does not.
+
+Decision rules (steering, not stop conditions):
 
 - If one pillar produces 50%+ of qualified comments/DMs, move the next blog post toward that pillar.
 - If a post gets high likes but no founder comments, treat it as awareness, not ICP validation.

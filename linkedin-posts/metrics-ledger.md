@@ -62,8 +62,18 @@ primary metrics but the ledger had nowhere to record either):
 4. Weekly: which opener archetype / lane / topic produced icp_replies? Reuse the
    winners in the next 2-3 drafts; retire the shapes that only got impressions.
 
-## Kill-criteria tie-in
+## Kill criterion
 
-Each lane's plan has a 2-week kill criterion. Evaluate it against the `icp_replies`
-column here, not impressions. Near-zero icp_replies across a lane's posts = the
-message/segment isn't landing (revisit before spending more reach).
+The criterion lives in
+[`docs/workflows/linkedin-icp-validation-plan.md`](../docs/workflows/linkedin-icp-validation-plan.md)
+§ "Kill criterion" - read it there, it is the single source.
+
+Corrected 2026-08-20: this section previously claimed "each lane's plan has a
+2-week kill criterion". Neither plan had one, and a 2-week window was never
+buildable at 2-3 posts/week. The criterion is now counted in **posts, not
+weeks**, and evaluated per lane at **10 filled rows** of this table.
+
+The clause that matters most when you sit down to read this ledger: **a row
+with empty metric cells does not count toward the ten.** Missing data means the
+window has not run, never that it failed. Do not write a verdict off an empty
+table.
