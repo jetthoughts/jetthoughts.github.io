@@ -4,8 +4,8 @@ source: dev_to
 remote_id: 1673284
 dev_to_id: 1673284
 dev_to_url: https://dev.to/jetthoughts/how-we-configure-simplecov-for-our-ruby-on-rails-projects-3hlp
-title: How we configure Simplecov for our Ruby on Rails projects.
-description: Here's a step-by-step guide to setting up simplecov with explanations of what each part of the code...
+title: "How to Configure SimpleCov in Rails"
+description: "A working SimpleCov config for Rails, line by line: what each setting does, which filters actually matter, and why your coverage number moves when you add one."
 date: 2023-11-21
 created_at: '2023-11-21T07:40:02Z'
 edited_at: '2024-11-25T15:39:48Z'
