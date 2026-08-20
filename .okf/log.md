@@ -2174,6 +2174,7 @@ cross-batch sweep to `content/voice-rules.md`. Also: critic-tech caught that
 ruby_llm 1.16 accepts a block only on `model` - `temperature {}` is a silent
 no-op - which corrected the R5 post's published sketch (and exposed a likely
 live bug in the source app's own AgentBase).
+
 ## 2026-08-20 - Phase 0 swarm: instrumentation + record-baselines (PR #489, draft)
 
 Two worktree-isolated agents built 2608 Phase 0 in parallel: GA4 conversion
@@ -2208,3 +2209,34 @@ API accepts explicit historical date ranges (verified) - not just
 (phase 0.3 gap: primary navigation with no baseline), recorded via
 bin/record-baselines' first real outing - kept 1, restored 0, both legs.
 Detail: docs/projects/2608-site-design-system/40-49-measurement/40.01-blog-engagement-baseline.md
+
+## 2026-08-20 - First LinkedIn metrics read: 12,872 followers, ~190 reach/post
+
+Filled the first three `metrics-ledger.md` rows from LinkedIn's own
+post-analytics pages: 680 impressions, 1 reaction, 0 genuine comments,
+**0 `icp_replies`** (the one comment is Paul's own first-comment link).
+
+The account dashboard is the decisive number: **12,872 followers, 705 post
+impressions in 7 days** - about **1.5% follower reach per post**. Impressions
+trend up (+18% w/w) but from a floor that low, "rising" describes the slope,
+not the reach. That is the kill criterion's INCONCLUSIVE shape - no
+distribution means the hypotheses were never tested - so the ledger now says
+explicitly **do not rewrite hooks on this evidence**. Not a kill signal
+either: 3 of 10 rows per lane, impressions an order of magnitude below the
+3,000 attribution floor.
+
+Process findings, recorded in `workflows/linkedin-post-pipeline.md`:
+(1) `status: scheduled` never gets flipped on publish and no draft carried
+a `posted_url` - the activity id can't be derived from a slug, so a missing
+one costs a manual feed scroll later; (2) `icp_profile_views` is unreadable
+on a lapsed-Premium account, so it records `n/a`, not `0`; (3) the rescue
+lane can't satisfy the arrival override at all - reply-CTA only, no link,
+no UTM, no session. Also fixed `layouts/linkedin/list.html`, where three
+sequential `with` blocks made the LEAST advanced date win, labelling posted
+cards "scheduled".
+
+Meta-lesson: the sprint doc had routed this whole task to Paul on the premise
+*"agents have no LI access"* - false, claude-in-chrome reads his signed-in
+profile. Second such misroute the same day (the first was estimating instead
+of querying GA). **Name the tool and try it before writing "needs Paul."**
+Detail: PR #492

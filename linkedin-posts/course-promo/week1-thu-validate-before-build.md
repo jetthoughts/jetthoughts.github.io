@@ -16,6 +16,8 @@ status: posted
 stage: now
 posted_for: "2026-08-13"
 scheduled_for: 2026-08-13
+posted_url: https://www.linkedin.com/feed/update/urn:li:activity:7493660214790029312/
+opener_archetype: idea-led
 visual: assets/week1-thu-validate-before-build.png (from dollar-presale-flow.svg, rsvg -w 1080)
 first_comment: |
   If it helps, the $1 pre-sale version of this - the exact button and the refund promise - is a free lesson in the course, no signup:

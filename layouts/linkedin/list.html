@@ -59,9 +59,10 @@
               <span class="pill">{{ .Params.status }}</span>
             </span>
             {{ $d := "" }}{{ $dl := "" }}
-            {{ with .Params.posted_for }}{{ $d = index (split . " ") 0 }}{{ $dl = "posted" }}{{ end }}
-            {{ with .Params.scheduled_for }}{{ $d = index (split . " ") 0 }}{{ $dl = "scheduled" }}{{ end }}
+            {{/* least-advanced first: a post carrying several of these shows the furthest it got */}}
             {{ with .Params.proposed_for }}{{ $d = index (split . " ") 0 }}{{ $dl = "proposed" }}{{ end }}
+            {{ with .Params.scheduled_for }}{{ $d = index (split . " ") 0 }}{{ $dl = "scheduled" }}{{ end }}
+            {{ with .Params.posted_for }}{{ $d = index (split . " ") 0 }}{{ $dl = "posted" }}{{ end }}
             {{ with $d }}<span class="date"><span class="dl">{{ $dl }}</span>{{ . }}</span>{{ end }}
           </a>
         {{ else }}<p class="empty">nothing here</p>{{ end }}

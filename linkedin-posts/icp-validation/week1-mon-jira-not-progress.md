@@ -9,9 +9,11 @@ hypothesis: H1, H3
 opener_archetype: observation-led
 icp_test: does a founder already working with a dev shop recognize "the board isn't the product" and reply with their own version?
 visual: assets/week1-mon-jira-not-progress.png (demo-rule.svg - real demo vs Jira screenshot)
-status: scheduled
+status: posted
 stage: now
 scheduled_for: "2026-08-18 15:30 CEST"
+posted_for: "2026-08-18"
+posted_url: https://www.linkedin.com/feed/update/urn:li:activity:7495472102683332608/
 first_comment: |
   (rescue lane: no link - reply-CTA only)
 notes: |
