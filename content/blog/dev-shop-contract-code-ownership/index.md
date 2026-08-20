@@ -22,6 +22,10 @@ Under US copyright law, whoever writes the code holds the copyright unless they 
 
 Your dev shop contract is the only document that decides who owns the code, and paying every invoice on time does not change what it says. You can have a signed master services agreement and a product your customers open every morning, and still not have the legal right to hand that codebase to a different team next month.
 
+Two contracts, two different endings:
+
+![The copyright follows the signature, not the invoice. Two paths side by side. Left, in red - no signed assignment: you pay every invoice, the developer who typed it keeps the copyright, and you cannot hand it over. Right, in purple - the contract says hereby assigns and it is signed: the code gets written, the copyright is yours at that same moment, and you can move it anywhere. Footer: this describes US copyright law, Circular 30, and is not legal advice](assignment-vs-default.svg)
+
 ## First, find out whose hands were on the keyboard
 
 Ask your agency for read access to the repository, clone it (download your own copy), and run this in the project folder:
