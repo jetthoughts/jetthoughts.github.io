@@ -60,7 +60,7 @@ const purgecss = createPurgeCss({
       // card refinements) was silently purged because pp-swiper/pp-review
       // runtime classes had no shield. Restored deliberately.
       /^pp-swiper/, /^pp-review/,
-      /^notfound-/, /^use-case-/, /^services-/, /^service-/, /^about-/, /^home-/, /^careers-/, /^vcr-/,
+      /^notfound-/, /^use-case-/, /^services-/, /^service-/, /^about-/, /^home-/, /^careers-/, /^vcr-/, /^friday-/, /^cta-friday/,
       // Brand CTA buttons — preserve any selector mentioning these classes.
       // Standard safelist didn't catch tag+class compound selectors like
       // `a.fl-button` on CI (produced blue pills instead of Ruby red).

@@ -1,0 +1,157 @@
+{{ define "header" }}
+  {{- $resources := slice
+    (resources.Get "css/critical/base.css")
+    (resources.Get "css/pages/friday-report.css")
+    (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+    (resources.Get "css/586.css")
+    (resources.Get "css/vendors/base-4.min.css")
+    (resources.Get "css/style.css")
+    (resources.Get "css/legacy-theme-skin.css")
+    (resources.Get "css/footer.css")
+  -}}
+  {{ partialCached "assets/css-processor.html" (dict "resources" $resources "bundleName" "friday-report") "friday-report" }}
+{{ end }}
+
+{{ define "main" }}
+{{- $audit := relURL "free-consultation/" -}}
+<div id="fl-main-content" class="fl-page-content friday-page" role="main">
+  <article>
+
+    <section class="friday-hero">
+      <div class="friday-container">
+        <p class="friday-eyebrow">How we report</p>
+        <h1 class="friday-h1">The Friday report you get every week</h1>
+        <p class="friday-lede">Your last agency sent you a burndown chart and an invite to a board you couldn't read. We send one page of plain English, in the body of the email, every Friday.</p>
+        <p class="friday-lede">Below is the whole thing, start to finish, so you know what lands in your inbox before you hire anyone.</p>
+        <div class="friday-hero-actions">
+          <a class="cta-friday" href="{{ $audit }}">Get a free code audit</a>
+        </div>
+        <ul class="friday-chips" aria-label="JetThoughts track record">
+          <li class="friday-chip">
+            <span class="friday-chip-label">Rated on Clutch</span>
+            <span class="friday-chip-value"><a href="https://clutch.co/profile/jetthoughts" target="_blank" rel="noopener">4.8 / 5</a></span>
+          </li>
+          <li class="friday-chip">
+            <span class="friday-chip-label">Average client stays</span>
+            <span class="friday-chip-value">5 years</span>
+          </li>
+          <li class="friday-chip">
+            <span class="friday-chip-label">Shipping Rails</span>
+            <span class="friday-chip-value">since {{ site.Params.foundingYear }}</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {{/* Honesty gate (claims-canon.md, testimonial purge of 2026-08-20): we have
+         no redacted client report cleared for publication, so this example is a
+         composite of the FORMAT and says so twice - here, and inside the card
+         itself. Never relabel it as a real engagement without a named source. */}}
+    <section class="friday-disclaimer" aria-labelledby="friday-disclaimer-title">
+      <div class="friday-container">
+        <div class="friday-disclaimer-box">
+          <p class="friday-disclaimer-title" id="friday-disclaimer-title">This is a composite example, not a real client's report</p>
+          <p class="friday-disclaimer-body">No client is named here, and none of these details belong to anyone's project. We built it out of the format we send, so you can read a whole one end to end.</p>
+          <p class="friday-disclaimer-body">A real report carries a link you can click yourself, and the name of the person who owes you an answer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="friday-sample" aria-labelledby="friday-sample-title">
+      <div class="friday-container">
+        <h2 class="friday-h2" id="friday-sample-title">The report, in full</h2>
+
+        <div class="friday-card">
+          <div class="friday-card-head">
+            <p class="friday-card-meta"><span class="friday-card-key">From</span> your developer</p>
+            <p class="friday-card-meta"><span class="friday-card-key">Subject</span> Week 6 - Friday report</p>
+            <p class="friday-card-tag">Composite example</p>
+          </div>
+
+          <div class="friday-card-body">
+            <section class="friday-block friday-block--shipped">
+              <h3 class="friday-block-title">What shipped</h3>
+              <p>Customers can pay with Apple Pay at checkout. It's on staging now - your private copy of the app, safe to poke at. Sign in as demo@yourapp.test and try it on your phone, it takes about a minute.</p>
+              <p>The card form on desktop works exactly as it did before. Nothing you had already approved has moved.</p>
+            </section>
+
+            <section class="friday-block friday-block--slipped">
+              <h3 class="friday-block-title">What slipped, and why</h3>
+              <p>The order-history screen isn't done. Halfway through we found that refunds were never being recorded anywhere, so the screen would have shown your customers the wrong totals.</p>
+              <p>We stopped and fixed the recording first. That cost three days, and it pushes order history into next week.</p>
+            </section>
+
+            <section class="friday-block friday-block--next">
+              <h3 class="friday-block-title">What's next</h3>
+              <p>Order history, finishing what we started. Two developers, four days, done by Thursday.</p>
+              <p>Email receipts come after that. If you'd rather we did receipts first, say so before Monday and we'll swap them.</p>
+            </section>
+
+            <section class="friday-block friday-block--you">
+              <h3 class="friday-block-title">What we need from you</h3>
+              <p>Your Stripe live keys, by Tuesday. Payments can't go live without them, and every day past Tuesday moves the launch date by a day.</p>
+              <p>Hit reply and we'll send you a secure link to paste them into. Don't email us the keys themselves.</p>
+            </section>
+          </div>
+
+          <p class="friday-card-foot">Reply to this email with anything that isn't clear. You won't be asked to open a ticket.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="friday-howto" aria-labelledby="friday-howto-title">
+      <div class="friday-container">
+        <h2 class="friday-h2" id="friday-howto-title">What each part is for</h2>
+        <dl class="friday-rows">
+          <div class="friday-row">
+            <dt class="friday-row-key">What shipped</dt>
+            <dd class="friday-row-value">Always names something you can click yourself. If you can't go and try it, we don't call it shipped.</dd>
+          </div>
+          <div class="friday-row">
+            <dt class="friday-row-key">What slipped, and why</dt>
+            <dd class="friday-row-value">Says why, in enough detail that you could argue with it. Weeks where nothing slips are rare, and a report that never has this section is hiding something.</dd>
+          </div>
+          <div class="friday-row">
+            <dt class="friday-row-key">What's next</dt>
+            <dd class="friday-row-value">Named people and a number of days, sent before the work starts, so you can reorder it while reordering is still free.</dd>
+          </div>
+          <div class="friday-row">
+            <dt class="friday-row-key">What we need from you</dt>
+            <dd class="friday-row-value">Carries the only deadline on your side. Usually an access key or a decision - something nobody else can give us.</dd>
+          </div>
+        </dl>
+        <p class="friday-howto-note">You won't get a burndown chart, and nobody will invite you to a board you'd have to learn to read. If a week of work can't be explained in four short paragraphs, the problem is with the work.</p>
+      </div>
+    </section>
+
+    {{/* The one dark band on this page (ADR-0003), spent on the strongest proof. */}}
+    <section class="friday-own" aria-labelledby="friday-own-title">
+      <div class="friday-container">
+        <h2 class="friday-h2 friday-h2--dark" id="friday-own-title">You own the code after every milestone</h2>
+        {{/* Sourced phrasing only: "You own the code and every account after each
+             milestone" (page/vibe-code-rescue.html:102) and "not at some vague end"
+             (:114). An earlier draft said the server "sits on your card from the
+             first milestone" - a billing claim with no in-repo source. Canon rule:
+             a number or claim with no in-repo source is a defect, not a detail. */}}
+        <p>A weekly report is only worth reading if you can act on it. You own the code and every account after each milestone, handed over then and there, not at some vague end.</p>
+        <p>So if a Friday report tells you something you don't like, you can stop and walk out with everything.</p>
+        <div class="friday-own-actions">
+          <a class="cta-friday cta-friday--dark" href="{{ $audit }}">Get a free code audit</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="friday-final" aria-labelledby="friday-final-title">
+      <div class="friday-container">
+        <h2 class="friday-h2" id="friday-final-title">Want one of these about your own codebase?</h2>
+        <p>The free code audit ends in the same kind of one-pager: which parts of your code are solid and which are fragile, plus the three fixes that would help most.</p>
+        <p>One senior developer reads your code and writes it - no sales call in between. You keep the write-up whether or not we work together.</p>
+        <div class="friday-final-actions">
+          <a class="cta-friday" href="{{ $audit }}">Get a free code audit</a>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</div>
+{{ end }}
