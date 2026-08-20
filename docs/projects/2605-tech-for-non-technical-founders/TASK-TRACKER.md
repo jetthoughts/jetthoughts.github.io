@@ -1,12 +1,25 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-08-08 | **Status**: course v2 COMPLETE and live; wave plan 20.15 CLOSED (W1-W5 merged: PRs #428 #431 #432 #433 #434 #435); GA4 + Clarity measuring; **Aug 1-14 campaign freeze holds** (no template/section-structure changes until the Aug-14 metrics read).
+**Last Updated**: 2026-08-20 | **Status**: course v2 COMPLETE and live; wave plan 20.15 CLOSED (W1-W5 merged: PRs #428 #431 #432 #433 #434 #435); GA4 + Clarity measuring; Aug-14 freeze lifted (metrics read done 2026-08-13).
 **History**: everything shipped through 2026-08-02 — groomed scopes, retrospectives, closed waves — lives in [`_ARCHIVED_TASK-TRACKER-2026-07.md`](_ARCHIVED_TASK-TRACKER-2026-07.md) (item line-numbers preserved in its banner). This file is ONLY the live queue.
 **Editing policies (BLOCKING)**: [`60-69-policies/60.01-course-editing-policies.md`](60-69-policies/60.01-course-editing-policies.md) — read before touching course content.
 
 ## ⏱ Next dated event
 
 **Aug-14 metrics read — DONE 2026-08-13 (run a day early).** Full read: [`50-59-execution/50.02-aug14-metrics-read.md`](50-59-execution/50.02-aug14-metrics-read.md). Headline: NO course-landing lift vs pre-launch (84→75 sessions/14d, ~93% Direct, course absent from GSC top-25) and the interactive funnel is dead (`start_course`=1, checkpoint-reveal=4, pdf/copy-share/glossary=0 in 14 days). Gates: (1) blog→course bridge unproven — do NOT ship more Wave-G funnel posts on the current bridge design; (2) remove the unused mechanics per 50.01's standing removal rule; (3) item 13 (W4) should prioritise driving landers into M2-M3 (read-depth still healthy) over M4/M5 pages almost no one reaches. Next-campaign action: UTM-tag LinkedIn/newsletter course links so lift stops collapsing into Direct.
+
+## ⏱ Aug-20 analytics read (GA + GSC + Clarity, live pull)
+
+Triple-confirms the Aug-14 diagnosis - **arrival, not content**:
+
+- **GSC**: course 60+ URLs at good positions (5-13), ~800 impressions, **2 clicks** over 28-90d. Course index has zero query data. Do NOT respond with a title/meta CTR pass - seo-review-2026-08-13 §6 #5 recorded title rewrites as a falsified experiment (wave 1 lost impressions).
+- **GA** (property 328508492): Aug 13-15 Direct spike (~5.1k sessions/7d) is crawler noise hitting course URLs (~709 direct "users" on /course/ landings). Real humans ≈ 220/wk. Real course arrivals 28d: ~12 Google organic, ~7 ChatGPT/Perplexity, ~4 LinkedIn. AI-assistant channel: 94% engagement - AEO is quietly working.
+- **Clarity**: `reference/paid-pilot-full/` is the site's #1 dead-click page (17/7d) - verified NOT a defect: clicks land on the plain opening paragraph (reading/copy behavior), traffic is part internal review, part genuine ChatGPT referrals. No fix; recorded here so nobody "fixes" it later.
+- **Actions shipped 2026-08-20** (branch `course-arrival-actions-2026-08-20`): `contact_cta_click` GA4 event site-wide (seo-review §6 #1, its top open item - Paul: mark it a key event in GA4 admin, 1 click); course-fix sweep (course pages + last-10 blog posts) via swarm per Paul's request.
+- **Already done, no action**: every course link in all 16 LinkedIn drafts carries full UTM tags (the Aug-14 "next-campaign action" landed with the LI ops work).
+- **Still open, needs Paul**: `linkedin-posts/metrics-ledger.md` row for the 2026-08-13 post - all metric cells empty, past the 48-72h window. Cheapest highest-leverage item for the sprint's kill-criteria.
+
+**Aug-17 editorial work (tracked outside this file, folded in here):** PRs #457/#458/#460/#461 - M4 cluster consolidation, course typography rules, course-wide editorial sweep + claims-canon sweep, no-bricks/reading-list rules. Remaining-work ledger: `docs/90-99-content-strategy/90.20-brick-and-claims-audit-2026-08-17-reference.md` (course tail CLOSED there 2026-08-17).
 
 ## Open queue (in execution order)
 
