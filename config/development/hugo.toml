@@ -11,8 +11,11 @@ buildFuture = true
 relativeURLs = true
 
 # Disable resource-intensive features for faster builds
-# Note: Keeping "section" enabled so blog index pages work in development
-disableKinds = ["RSS", "sitemap", "robotsTXT", "taxonomy", "term"]
+# Note: Keeping "section" enabled so blog index pages work in development.
+# 2026-08-20: "taxonomy" and "term" re-enabled — the blog-index filter pills
+# and card tags link to /blog/tags/* as primary navigation now, and with the
+# kinds disabled every tag link 404s on the dev server while working in prod.
+disableKinds = ["RSS", "sitemap", "robotsTXT"]
 
 # Skip expensive processing in development
 ignoreFiles = ["\\.min\\.css$", "\\.min\\.js$"]
