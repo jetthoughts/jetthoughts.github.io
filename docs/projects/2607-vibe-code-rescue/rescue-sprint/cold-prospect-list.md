@@ -1,6 +1,8 @@
 # Cold Prospect List - Merged + Deduplicated
 
-> ⚠ **ALL 25 ROWS UNVERIFIED (2026-07-26)** — batch-1 pre-research found 60% of its sample stale or saturated (recency was eyeballed from excerpts, never read in-thread). **No row here is send-ready until card #29 re-checks it against the Vote 3 v2 rubric** (`t4-t5-grooming.md`). Do not draft or send from these tables.
+> ⚠ **6 OF 25 ROWS NOW RE-AUDITED (2026-08-20) — ALL 6 DROPPED AS LEADS. The other 19 remain UNVERIFIED.** Card #29's first real re-audit pass opened each thread and read the actual timestamp; every row checked failed the flat ≤30-day rule, several by years. **No row in this file is send-ready.** Do not draft or send from these tables. Verdicts in §Re-audit log below; method + full run log in `prospects/p7-search-sweep.md` §7.
+>
+> ⚠ **Original warning (2026-07-26)** — batch-1 pre-research found 60% of its sample stale or saturated (recency was eyeballed from excerpts, never read in-thread). The re-audit above turned that 60% into 100% for the rows checked.
 >
 > P8 output. Merged from P1-P7 prospect files. Deduplicated by source URL (thread URL = join key). Scored by trigger strength. Rows from same thread with different handles are separate entries (different people, same venue).
 >
@@ -65,7 +67,8 @@
 | LinkedIn | 1 |
 | X/Twitter | 1 |
 | HN | 0 (dev-dominated, no founder voices) |
-| P7 date-filtered sweep | 0 (method shipped 2026-08-08; sweep blocked on tooling/egress) |
+| P7 date-filtered sweep | 0 (method shipped 2026-08-08 blocked on tooling; re-run 2026-08-20 with tooling unblocked — 23 threads opened, still 0 qualified rows) |
+| Re-audited and dropped as leads (2026-08-20) | 6 of 25 |
 
 ### LIGHT gate: "Would Paul recognize these as worth his time?"
 
@@ -78,5 +81,26 @@
 - Semi-ICP rows (6) are founders who built with AI themselves, not paid a shop. They still need rescue but the trigger is different.
 
 ### Pending
-- P7 date-filtered sweep: add rows once the tooling unblock lands (`chrome-devtools` + egress to at least one of indiehackers.com or reddit.com) — see `backlog.md` §Card #29 status
+- ~~P7 date-filtered sweep: add rows once the tooling unblock lands~~ — **tooling unblocked 2026-08-20**; IndieHackers, LinkedIn, X and HN all open from a host session and IH has a date-sorted search index (`prospects/p7-search-sweep.md` §7a). The sweep still returned **0 qualified rows** — the blocker is now the venue mix, not the tooling. Reddit remains closed.
 - Deduplication key: source URL. No duplicates found across P1-P7.
+
+---
+
+## Re-audit log — card #29, 2026-08-20
+
+Method: each thread opened once, `datePublished` read from the page (IH ships JSON-LD; LinkedIn renders public posts logged-out), all replies read for thread health. Vote 3 v2, flat ≤30-day lead window, `WINDOW_START = 2026-07-21`.
+
+| # | handle | verified date (read in-thread) | age | post\|comment | thread health | verdict |
+|---|---|---|---|---|---|---|
+| 1 | SpecBuildLab | 2025-10-09 | 316 days | post | clean (3 comments, no competing pitch) | **DROP as lead** — stale |
+| 2 | SANICE_AI | 2026-04-12 | 130 days | post | **saturated** — the spearprotocol.com "free… just clarity" pitch is in-thread as the retro described, and SANICE_AI now replies to nearly every commenter pitching his own free tool | **DROP as lead** — stale + saturated + OP now behaves as a supplier |
+| 3 | Joy Adamson | ~2026-02-05/06 (comment, "6mo"; host post 2026-02-05) | ~196 days | **comment** on Nico Casavecchia's post | clean — her "how can I get help?" is still publicly unanswered | **DROP as lead** — stale. Paul's standing override candidate, but 6.5 months is far outside any window |
+| 12 | Afrikonnect | comment "a year ago" (host post 2025-07-29) | ~1 year | **comment** on someone else's post | thread has other help-offers in the same spot | **DROP as lead** — stale + comment mis-routed in v1 (row was logged as if Afrikonnect authored the post) |
+| 13 | Saul_E | 2020-05-26 | ~6 years 3 months | post | 87 comments, long dead | **DROP as lead** — stale by six years |
+| 19 | Abnrav | comment "a year ago" (same host post as row 12) | ~1 year | **comment** on someone else's post | as above | **DROP as lead** — stale. Verified for free in row 12's visit |
+
+**Confirmed**: all three failures the 2026-07-26 retro named were real, and reading the timestamp took one page load each. Nothing in this sample was a false alarm.
+
+**VoC**: every dropped thread was harvested before closing, per the lead-vs-voice split. Rows 1/2/12/13 quotes were already in `voice-of-customer.md`; no new lines came from the re-audit itself (the 6 new founder lines came from the fresh-sourcing pass — see `prospects/p7-search-sweep.md` §7).
+
+**Still unverified (19 rows)**: 4-11, 14-18, 20-25. **Ten are Reddit** (4, 5, 6, 9, 10, 11, 14, 22, 23, 24) — still un-openable, so they cannot be verified by any available method and cannot become leads. **The nine non-Reddit rows** (7, 8, 15, 16, 17, 18, 20, 21, 25) are all openable now, and rows 15-18 share a single thread URL, so closing out the entire remainder of the v1 list costs **six page loads**. Do that first in the next pass.

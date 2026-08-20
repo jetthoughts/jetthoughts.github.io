@@ -34,7 +34,7 @@ date -u -d '30 days ago' +%Y-%m-%d      # GNU/Linux
 date -u -v-30d +%Y-%m-%d                # macOS/BSD
 ```
 
-Worked example for this run:
+Worked example (2026-08-08 run - recompute, never copy):
 
 | Anchor | Value |
 |---|---|
@@ -181,6 +181,8 @@ Read these before trusting a zero-result sweep.
 
 ## 6. Run log - 2026-08-08 (first execution)
 
+> **SUPERSEDED 2026-08-20 — read §7 first.** The "blocked-on-tooling" verdict below was true of that *environment*, not of the venues. From a host session IndieHackers, LinkedIn, X and the HN Algolia API all open fine, and IH ships a date-sorted search index that gives the sweep a real recency lane. §6 is kept as the record of what a blocked runner sees; do not re-derive its conclusions.
+
 **Result: ZERO qualified lead rows. The sweep could not be executed as designed in this environment.**
 
 This is a tooling failure, not a finding about the market. Recorded in full so the next session does not repeat it.
@@ -215,12 +217,67 @@ Until at least one venue is openable, card #29 cannot produce verified-fresh row
 
 ---
 
+## 7. Run log - 2026-08-20 (second execution, host session)
+
+**Result: the tooling block is broken. 23 threads opened and date-verified, 0 qualified lead rows, 6 new `[VERBATIM-founder]` VoC lines.**
+
+Window: `TODAY=2026-08-20`, `WINDOW_START=2026-07-21` (computed per §2).
+
+### 7a. What changed - venues are open, and IH has a date-sorted index
+
+Every §6 access failure was environmental. From a host session:
+
+| Venue | Status 2026-08-20 | How |
+|---|---|---|
+| **indiehackers.com** | **Open + date-verifiable** | Post pages are server-rendered (fastboot). Each carries JSON-LD `"datePublished"`, and the rendered body includes the full post, every comment, and each comment's relative age. `curl \| pandoc -f html -t plain` reads the whole thread. |
+| **linkedin.com** (public post) | **Open** | Public activity URLs render post + comments + `datePublished` logged-out. |
+| **x.com** (single status) | Open, metadata only | `og:description` carries the text; exact date still comes from the §3.4 snowflake trick. |
+| **news.ycombinator.com** | Open (Algolia API) | `hn.algolia.com/api/v1/search_by_date` + `numericFilters=created_at_i>{epoch}` is genuinely date-sorted. |
+| **reddit.com** | **Still closed** | `/new.json` 403s; `www.reddit.com/r/*/new/` returns a ~8KB interstitial, not content. Reddit stays excerpt-only - §3.1 and §4.3 stand unchanged. |
+
+**The load-bearing find: IH listing pages are client-rendered (a 21,899-byte shell every time), so there is no browsable "newest" feed - but IH's own search is Algolia, and one of its indexes is sorted by recency.** That is the missing recency lane §4.2 said `after:` could never be:
+
+```bash
+curl -sS -X POST "https://N86T1R3OWZ-dsn.algolia.net/1/indexes/discussions_createdTimestamp_desc/query" \
+  -H "X-Algolia-API-Key: 5140dac5e87f47346abbda1a34ee70c3" \
+  -H "X-Algolia-Application-Id: N86T1R3OWZ" \
+  -H "Content-Type: application/json" \
+  -d '{"query":"lovable","hitsPerPage":40,"numericFilters":["createdTimestamp>'"$WIN_MS"'"]}'
+```
+
+App id + search-only key are the ones IH ships in its own page HTML for its own search box; this is a read-only public search, same as typing in the site's search field. Records carry `createdTimestamp`, `title`, `body`, `usernames`, `numComments`. **Discovery only** - the index holds posts (`itemType: post|new-post`) and **no comments**, and Vote 3 check 3 still requires the timestamp read from the opened thread. Keyword matching is loose (a query for `hired a developer` returns "I got tired of…"), so treat it as a recency-sorted firehose to be filtered by eye, not as precision search.
+
+**Use `WebSearch` with a domain filter for precision and this index for recency.** Neither alone is enough: domain-filtered search is relevance-ranked and therefore stale-biased (10 candidates → 1 inside the window), the Algolia index is fresh but imprecise.
+
+### 7b. What was run
+
+- IH date-sorted sweep across 21 keyword queries (the §3 v2 set plus `hired a developer`, `agency ghosted`, `app broke`, `everything broke`, `paid an agency`, `my developer`, `technical co-founder`, `please help`, `I'm freaking out`, `rebuild my app`, `freelancer disappeared`).
+- 4 domain-filtered `WebSearch` passes on indiehackers.com, 1 on x.com.
+- HN Algolia date-filtered on 4 trigger phrases.
+- 10 IH candidates date-probed (cheap `datePublished` read); **23 threads opened in full** - 5 batch-1 re-audits + 18 fresh candidates.
+
+### 7c. Why zero rows, and why that is a finding this time
+
+Not a tooling failure. **IndieHackers' ≤30-day stream is a launch/promo board, not a distress board.** Of everything in-window, essentially all of it is one of four shapes: a launch announcement, a success retrospective, a supplier/agency pitch, or a co-founder-wanted ad. The fresh distressed non-technical founder - live app, breaking, out of their depth - is not posting there.
+
+Where the distress language *does* appear in-window, it is being spoken by the wrong person: competitor rescue shops writing content marketing about founders (`forgex.systems` twice, `StackRadar`, `QAura`, `FixBrokenApp`, `TatePrograms`), and their comment sections are other vendors talking shop, not founders. The P6 comment-mining lane was checked on the biggest such thread (`i-audited-an-app-built-100-with-ai`, 87 comments): the three most recent commenters are all suppliers, one of them pitching a "quick free look" - exactly the check-5 saturation pattern.
+
+Closest miss, recorded so the next pass does not re-adjudicate it: **Fallet Sébastien / JourX** (`https://www.indiehackers.com/post/1vb5UrAjNLmhuZK2gsXG`, verified 2026-07-22, post, thread health clean). He **clears all 5 Vote-3 checks** - non-technical ("Je ne suis pas développeur de formation"), paid a dev team that walked, 29 days old, own post, one non-competing comment. He fails the *buying-moment* test instead: he already rebuilt it himself in Flutter, shipped end of June, and his post is a celebration asking how others persevered. An audit pitch into that lands as an insult. **Logged as drop-as-lead, flagged as a Paul override candidate** if Paul reads the "solo non-technical founder now maintaining a live money app alone" angle as the control-before-disaster JTBD rather than a rescue.
+
+### 7d. What this means for the venue mix
+
+The ≤30-day rule is not what is starving the list - the venue is. IH is openable, verifiable, and ICP-adjacent, but its fresh supply of distressed founders is close to zero, and P3 already retired HN for the same reason (re-confirmed here: every in-window HN hit was a developer discussing AI code quality). **Reddit is where this ICP actually posts and it is the one venue still closed.** Two consecutive sweeps have now produced 0 rows from the open venues. Before a third sweep repeats it, the venue premise deserves re-testing rather than more keywords - see the handoff note in `backlog.md` §Card #29.
+
+`bolt.new` / `base44` have now had **one** valid sweep (§3 says drop them after two) - both returned nothing but supplier posts.
+
+---
+
 ## Rows
 
 | handle/channel | source URL | verified date | post\|comment | trigger# | why-ICP (verbatim quote) | verdict | thread health | best path |
 |---|---|---|---|---|---|---|---|---|
 
-*(No rows. Zero candidates cleared Vote 3 - see §6. Nothing was padded, inferred, or carried over from the v1 list.)*
+*(No rows. Zero candidates cleared Vote 3 **and** the buying-moment test - see §6 for the 2026-08-08 run, §7 for 2026-08-20. Nothing was padded, inferred, or carried over from the v1 list.)*
 
 ### Seen-and-skipped (do not re-adjudicate)
 
@@ -235,9 +292,37 @@ Until at least one venue is openable, card #29 cannot produce verified-fresh row
 | x.com/leojr94_/status/1970481417009443229 | Supplier/acquirer ("we are taking over"). Derived date 2025-09-23. |
 | x.com/GergelyOrosz/status/1946783581570736362 | Commentator, not founder. Derived date 2025-07-20. |
 
+**Added 2026-08-20** (all opened and date-verified this run - do not re-open):
+
+| URL | Verified date | Reason dropped |
+|---|---|---|
+| indiehackers.com/post/1vb5UrAjNLmhuZK2gsXG | 2026-07-22 | **Closest miss.** Clears all 5 Vote-3 checks; fails buying moment (already self-rebuilt, celebrating). Paul override candidate. VoC harvested. |
+| indiehackers.com/post/AlLW4CL2TvOyVVCVvv0o | 2026-07-29 | In-window non-coder founder, but self-diagnosing and technically capable (writes codebase-walking tests). No buying moment. VoC harvested. |
+| indiehackers.com/post/IpSET57EAOk7EBXLudSc | 2026-08-13 | **Supplier** - StackRadar, dependency-monitoring vendor. Commenters are vendors too. |
+| indiehackers.com/post/18af60a20a | 2026-08-10 | **Direct competitor** - forgex.systems rescue/retainer pitch. Commenters: one acquirer, one marketer. |
+| indiehackers.com/post/4a6ab2fbdd | 2026-08-07 | **Direct competitor** - forgex.systems again. All 6 commenters are engineers/AppSec practitioners. |
+| indiehackers.com/post/4eebc7b055 | 2026-08-17 | **Supplier** - Zarek launch-automation vendor. |
+| indiehackers.com/post/g35D5aH1Rpq3DYDpoJfa | 2026-08-19 | **Supplier** - ChromolyDB AI-tooling vendor. |
+| indiehackers.com/post/i-audited-an-app-built-100-with-ai-heres-what-i-found-8f43280e54 | 2026-06-09 | **Competitor** (QAura). P6 comment lane checked: 3 most recent commenters all suppliers, one pitching a free look. Saturated. |
+| indiehackers.com/post/c033357318 | 2026-08-17 | Pre-build. Nothing built, nothing broken; offering equity, not cash. |
+| indiehackers.com/post/cec7a5ca9e | 2026-08-11 | Advisor thought-leadership *about* non-technical founders, not a founder in trouble. |
+| indiehackers.com/post/qBLhMB3d01U1tyXk9PbN | 2026-08-01 | Success story - 10-yr PM shipped an iPhone app. No breakage. |
+| indiehackers.com/post/Zoo7sGAIQJewMqSxl9jv | 2026-08-05 | Success story - travel site built solo on Odoo. No breakage. |
+| indiehackers.com/post/aYbvUDpekRcSAJMM7eDn | 2026-07-30 | Success story - non-technical founder shipped a working SaaS. Commenters are advisors. |
+| indiehackers.com/post/N7L4Er6Dxyk7wZ4M9UYF | 2026-08-19 | First-app hobby project going *well*; asking for design feedback. No budget, no burn. |
+| indiehackers.com/post/K4Ok8tEpzPbvjXlXc1wF | 2026-08-01 | Content/promo post about AI workflow. |
+| indiehackers.com/post/Qq3XVFaa5oEUmJBTv22m | 2026-07-27 | Physician-founder promoting a live product, seeking pilot partners. No distress. |
+| indiehackers.com/post/26sBJuonmiiete1IvCrT | 2026-08-03 | Book excerpt / content promo. |
+| indiehackers.com/post/6a4d9bd878 | 2026-08-17 | Solo founder stuck on **marketing**, builds it herself. Not ICP-E. |
+| x.com/LearnAI_MJ/status/1832547955922096434 | 2024-09-07 (snowflake) | Right voice ("non-coder… don't know how to debug") but 2yr stale, and the page served no `og:description` so the quote could not be verified word-for-word. **Not admitted to VoC.** |
+| x.com/talraviv/status/1886547529350721540 | 2025-02-03 | PM who codes. Not ICP, stale. |
+| x.com/JpKayobotsi/status/2062046966566011290 | 2026-06-03 | Commentator. Stale. |
+
 ## VoC (verbatim founder lines - force-tag Push/Pull/Anxiety/Habit + speaker tag + URL)
 
-**Zero `[VERBATIM-founder]` lines captured this run.** VoC has no age limit, so a stale thread would still have been harvested - but no thread could be opened, and the verbatim rule ("word-for-word, zero paraphrase") cannot be met from a search-result summary.
+**2026-08-20 run: 6 `[VERBATIM-founder]` lines captured** (2 Push, 3 Anxiety, 1 Habit) plus 2 `[vendor]` lines, all read word-for-word from opened pages. Folded into `voice-of-customer.md` in the same visit per the lead-vs-voice rule; the drop-as-lead threads that produced them are listed in Seen-and-skipped above.
+
+**2026-08-08 run: zero `[VERBATIM-founder]` lines captured.** VoC has no age limit, so a stale thread would still have been harvested - but no thread could be opened, and the verbatim rule ("word-for-word, zero paraphrase") cannot be met from a search-result summary.
 
 The following surfaced as quoted strings in search-result titles. They are **not admitted to `voice-of-customer.md`** - all are non-founder speakers, and none is confirmed word-for-word against the source page. Listed only so the next session does not re-derive them:
 

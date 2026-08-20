@@ -35,8 +35,10 @@ While reading a thread to validate a prospect, copy any line that names a feelin
 - `[VERBATIM-dev/team]` "The worst part is payments (Stripe). I'm not even fully confident about all the edge cases there... it just feels risky every time we touch it." - same thread, https://www.reddit.com/r/developersPak/comments/1sdzina/vibe_coding_is_breaking_our_app_and_im_tired_of_it/
 - `[VERBATIM-dev/team]` "he was able to prove out a viable business in a matter of a few months with no engineering background and no technical capability" - CharlieDigital (describing friend), https://news.ycombinator.com/item?id=44739556
 - `[VERBATIM-dev/team]` "Lovable is marketed to non developers, so their core users wouldn't understand a security flow if it flashed red" - firefoxd, https://news.ycombinator.com/item?id=47182659
+- `[VERBATIM-founder]` "Je ne suis pas développeur de formation. Avant d'y arriver, j'ai essayé un outil no-code qui a plafonné, payé une équipe de développeurs qui a fini par abandonner le projet en pleine phase IA, tenté une version HTML qui n'a pas tenu la route" - Fallet Sébastien (JourX), https://www.indiehackers.com/post/1vb5UrAjNLmhuZK2gsXG *(FR; "I'm not a developer by training. Before getting here I tried a no-code tool that hit a ceiling, paid a dev team that ended up abandoning the project mid-AI-phase, tried an HTML version that didn't hold up." The only in-window Trigger-3 founder voice found on 2026-08-20 - a paid team walking out mid-project, in the founder's own words.)*
+- `[vendor]` "I cannot hold an AI tool accountable if data leaks in a legal application. If I am working with an actual engineer who understands the infrastructure I can hold someone responsible." - a **competitor relaying their own client's words** (forgex.systems), https://www.indiehackers.com/post/18af60a20a. Not promotable to the phrase bank: the speaker is the vendor, not the founder, and the quote is unverifiable at source.
 
-**Count**: 13 `[VERBATIM-founder]` Push lines (target: 5+). **PASS.**
+**Count**: 14 `[VERBATIM-founder]` Push lines (target: 5+). **PASS.**
 
 ## PULL - desire / wish (what they say they want - our offer must echo this)
 
@@ -60,9 +62,15 @@ While reading a thread to validate a prospect, copy any line that names a feelin
 - `[VERBATIM-dev/team]` "the hacker got a hold of his Stripe key and issued every customer a refund" - CharlieDigital (describing friend), https://news.ycombinator.com/item?id=44739556
 - `[VERBATIM-dev/team]` "They've fallen for Replit's 'anyone can code with AI' sales pitch, and an empty production database is the result." - HN commenter (describing victim), https://news.ycombinator.com/item?id=44646151
 - `[VERBATIM-dev/team]` "Vibe coding democratized shipping without democratizing the accountability. The 18,000 users absorbed the downside of a risk they didn't know they were taking." - melecas, https://news.ycombinator.com/item?id=47182659
+- `[VERBATIM-founder, AI-built not shop-burned]` "Tests assert what you thought to assert. Local behaviour isn't production behaviour. And something that fails silently looks identical to something that works." - elitmarket26, https://www.indiehackers.com/post/AlLW4CL2TvOyVVCVvv0o
+- `[VERBATIM-founder, AI-built not shop-burned]` "The test suite is 78 files and 1,838 assertions. It was green. The product was live. And a feature I'd shipped at launch ... had never worked once." - elitmarket26, same URL. His own three-word summary: "Tested, covered, dead."
+- `[VERBATIM-founder, AI-built not shop-burned]` "the site had been live for weeks with no analytics installed at all. No GA4, no Plausible, not even a Search Console tag. Every visitor up to that point is unrecoverable." - elitmarket26, same URL
+- `[vendor]` "most founders don't realize what's in their stack until it's almost too late. Either something gets attacked, engineers finally look at it and say 'wtf, we need a few weeks to clean this up,' or an enterprise customer starts asking for security and compliance proof. Then it suddenly becomes an 'oh fuck' situation." - Martins Sipenko (StackRadar vendor), https://www.indiehackers.com/post/IpSET57EAOk7EBXLudSc
 - `[gap]` **Need more [VERBATIM-founder] switching fears**: "how do I know you won't burn me like the last shop," "is a rebuild going to cost even more," "I don't want to start over." More sourcing or call transcripts to fill.
 
-**Count**: 5 `[VERBATIM-founder]` Anxiety lines + 1 incident + 3 dev/team. **PASS** (target: 3+ founder lines).
+**Count**: 8 `[VERBATIM-founder]` Anxiety lines + 1 incident + 3 dev/team + 1 vendor. **PASS** (target: 3+ founder lines).
+
+> Tag note (2026-08-20): the three elitmarket26 lines carry `[VERBATIM-founder, AI-built not shop-burned]` because he directs AI rather than paying a shop, and he is technically fluent enough to write his own regression tests. The *language* is first-rate ICP-E anxiety - silent failure, invisible breakage - but T7 must not mirror him as a burned-by-a-devshop founder. Same compound-tag convention as the existing `[VERBATIM-founder, incident]` line.
 
 ## HABIT - why they stay stuck (name it to break it)
 
@@ -71,9 +79,10 @@ While reading a thread to validate a prospect, copy any line that names a feelin
 - `[VERBATIM-founder]` "I can build any web app quickly, but once it's done, I lose motivation... because I spent 3 months building and the product is a house of cards." - r/Solopreneur OP, https://www.reddit.com/r/Solopreneur/comments/1nhcc72/at_40_and_5_years_stuck_in_this_buildabandon/
 - `[VERBATIM-founder]` "At every step they are like 'you can't do this, you can't do that. Hey, use Zapier!' Man, I am done." - techPackets, https://www.indiehackers.com/post/i-am-frustrated-with-no-code-i-am-done-14a7ce60cb
 - `[VERBATIM-dev/team]` "They got MVPs working. Then everything broke when real users showed up." - Alex Turnbull (observer), https://www.linkedin.com/posts/goncaloborrega_the-vibe-coding-crash-isnt-an-indictment-activity-7405239626283737088-taN8
+- `[VERBATIM-founder]` "j'ai fini par tout reconstruire seul, en Flutter, sur trois ans." - Fallet Sébastien (JourX), https://www.indiehackers.com/post/1vb5UrAjNLmhuZK2gsXG *(FR; "I ended up rebuilding the whole thing alone, in Flutter, over three years." The cost of the do-it-yourself default after a team walks out, priced in years.)*
 - `[gap]` **Need more [VERBATIM-founder] habit lines**: "one more sprint and it'll be fine," "I've already spent so much," "I don't have time to deal with this." More sourcing or call transcripts to fill.
 
-**Count**: 4 `[VERBATIM-founder]` Habit lines (target: 3+). **PASS.**
+**Count**: 5 `[VERBATIM-founder]` Habit lines (target: 3+). **PASS.**
 
 ---
 
@@ -97,6 +106,8 @@ While reading a thread to validate a prospect, copy any line that names a feelin
 | Push | "I thought no-code would save me months - it actually made me more stuck" | `[VERBATIM-founder]` r/nocode OP |
 | Habit | "A house of cards" - 3 months of vibe coding without someone checking the foundation | `[VERBATIM-founder]` r/Solopreneur OP |
 | Anxiety | "They told me it was easier to burn the whole thing down and start over" | `[VERBATIM-founder]` r/cursor OP |
+| Anxiety | "Something that fails silently looks identical to something that works." | `[VERBATIM-founder, AI-built]` elitmarket26 |
+| Push | "Payé une équipe de développeurs qui a fini par abandonner le projet en pleine phase IA" - a paid team walking out mid-build (FR; French-language prospects only) | `[VERBATIM-founder]` Fallet Sébastien |
 
 ---
 
@@ -104,4 +115,8 @@ While reading a thread to validate a prospect, copy any line that names a feelin
 
 **Updated from P1-P7 sourcing + opener polish (2026-07-22)**: The phrase bank is now populated with real `[VERBATIM-founder]` quotes, not archetypes. Push is the strongest section (13 founder lines). Pull and Habit are the thinnest - more Pull lines ("I want to own my code," "I want someone to tell me the truth") would strengthen T7 openers. Anxiety lines are strong but skew toward "tool broke" rather than "shop burned me" - the Trigger-3 (ownership/hostage) founder language is underrepresented because those founders are hardest to find via open search.
 
-**For T7 openers**: Lead with Push words (their pain), add Pull wedge (our ownership differentiator), pre-empt one Anxiety (the "another agency will burn me" fear). The phrase bank has 16 usable mirror phrases across all four forces.
+**For T7 openers**: Lead with Push words (their pain), add Pull wedge (our ownership differentiator), pre-empt one Anxiety (the "another agency will burn me" fear). The phrase bank has 18 usable mirror phrases across all four forces.
+
+**Updated 2026-08-20 (card #29 re-source sweep)**: +6 `[VERBATIM-founder]` lines from 23 opened threads, all from threads that were **dropped as leads** - the lead-vs-voice split working exactly as designed. Two things the sweep sharpened:
+- **Pull is still the thinnest force and the sweep did not move it.** Every new line landed in Push, Anxiety, or Habit. Founders in public describe what broke; they do not write down what they want instead. Pull ("I want to own my code," "I want someone to tell me the truth") looks unreachable by public sourcing - it needs call transcripts or warm-intro interviews, not another sweep. Treat the `[gap]` note under PULL as a research task, not a sourcing backlog item.
+- **Trigger-3 language stays scarce, and its one new line is French.** The only in-window founder describing a paid team walking out was writing in French, which makes it unusable as a mirror phrase for an English-speaking prospect. The 2026-07-22 cold-eyes note that Trigger-3 founder language is underrepresented is unchanged and now has a second data point behind it.
