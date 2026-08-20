@@ -7,8 +7,8 @@ tags: [design, rollout, sequencing, decision, adr]
 status: stable
 generated:
   by: claude/opus-5
-  at: 2026-08-20T22:30:00Z
-timestamp: 2026-08-20T22:50:00Z
+  at: 2026-08-20T23:28:00Z
+timestamp: 2026-08-20T23:28:00Z
 ---
 
 # Why this concept exists
@@ -75,7 +75,9 @@ ONE 3-day Clarity window of five, and the lowest; the windows swing 2.9x
 (29.89 / 51.13 / 75.11 / 50.91 / 25.56%). Session-weighted over all 743
 bot-filtered sessions the blog sits at **44.31% scroll / 34.97s** - at or above
 the average it was said to trail. The low window also straddles the 08-20
-deploy, so the clean pre-ship baseline is 08-06 -> 08-17: 451 sessions,
+deploy - PROVISIONALLY, on merge times only; no Pages deployment record has
+been read - so the pre-ship baseline is provisionally 08-06 -> 08-17: 451
+sessions,
 **56.4% / 40.1s**.
 
 Blog-first remains right, but on a different fact than the one written down:

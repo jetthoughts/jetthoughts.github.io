@@ -47,8 +47,10 @@ surface where the humans already land before touching chrome or money pages.
 Tokens scope into the blog bundles first, promote site-wide later.
 
 **Blog engagement baseline, corrected 2026-08-21** (Clarity, bot-filtered):
-**56.4% avg scroll depth / 40.1s engagement over 451 sessions**, clean pre-ship
-window 08-06 → 08-17. The **25.2% / 26.3s** figure previously quoted here was
+**56.4% avg scroll depth / 40.1s engagement over 451 sessions**, pre-ship
+window 08-06 → 08-17. **Provisional**: the 08-18→20 window is excluded on MERGE
+times, not a confirmed Pages deploy - if the deploy landed after 08-20 those 292
+sessions come back. The **25.2% / 26.3s** figure previously quoted here was
 ONE 3-day window of five, the lowest, and straddles the 08-20 ship - it is NOT
 the baseline and does not support "visitors leave in the first quarter". Full
 record: [40.01](40-49-measurement/40.01-blog-engagement-baseline.md).
