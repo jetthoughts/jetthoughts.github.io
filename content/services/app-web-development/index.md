@@ -34,7 +34,7 @@ overview:
     - name: The Problem
       value: You raised funding and need a working product. Hiring a full-time team takes months. Most dev shops ship fast with AI-generated code and no tests - then your first real users break everything. You end up paying twice - once to build, once to fix.
     - name: How We’re Different
-      value: We write tests before code, review every pull request with two engineers, and send you a plain-English report every Friday. You own the code from day one. No lock-in, no surprises, milestone billing so you only pay for working software.
+      value: We write tests before code, review every pull request with two engineers, and send you a plain-English report every Friday. You own the code from day one - verify it yourself with our [code ownership checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/). No lock-in, no surprises, milestone billing so you only pay for working software.
     - name: What You Get
       value: A production-ready MVP in 8 weeks, built with Ruby on Rails by senior engineers averaging 8 years of experience. Test coverage above 70%, weekly demos, and a codebase your next CTO won’t need to rewrite.
   outcome:

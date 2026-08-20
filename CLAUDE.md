@@ -4,9 +4,8 @@
 
 > **Head lives in the vault:** [[jt-business-os]] / [[jt-vibe-code-rescue]] — `~/Documents/pkm`
 >
-> **Identity, positioning, and bet status** are owned in the vault — **not** in `docs/business/`.
-> The **weekly loop stays in this repo**: `docs/business/operating-system.md` (goal, OKR §3, rocks §4, weekly numbers §1) is edited here, beside the pipeline tooling that feeds it (narrow split, settled 2026-08-17).
-> Do not create a parallel opportunity portfolio here. Working papers under `docs/projects/` stay put.
+> **The vault owns OPERATIONS; this repo is growth/marketing campaigns only** (Paul, 2026-08-20 — supersedes the 2026-08-17 narrow split). Identity, positioning, bet status, the weekly loop (`jt-operations`), pipeline numbers (`jt-vcr-pipeline`), the bet runbook (`jt-vcr-runbook`) and assumptions register (`jt-vcr-assumptions`) all live in the vault. `docs/business/operating-system.md` and the 2607 runbook/pipeline/register files are pointer stubs.
+> This repo keeps: blog, SEO, LinkedIn drafts, landing pages, the course, outreach copy/kits, and all tooling/tests. Do not create a parallel opportunity portfolio or scorecard here. Campaign working papers under `docs/projects/` stay put.
 >
 > Read the vault note before changing positioning or bet status. Verified by `bin/check-repo-links` in the vault.
 >
@@ -134,7 +133,7 @@ For exact slug/tag lookups, see the post index at `docs/blog-post-index.md` (reg
 - **Zero tolerance for duplicates**: No `*_refactored.*`, `*_new.*`, `*_backup.*` files
 - **New-doc locations — pick the RIGHT home, `docs/workflows/` is NOT a catch-all** (Paul 2026-08-01: dev/tech docs kept getting dumped in workflows/). Decide in this order:
   1. **Engineering / tech reference** (test strategy, architecture, security, deployment, CI, APIs, AI-intelligence) → the **Johnny Decimal** area, one per domain: `docs/10-19-core-development/`, `docs/20-29-testing-qa/` (with `performance-testing/`, `screenshot-testing/` subdirs), `docs/30-39-architecture-design/`, `docs/40-49-security-compliance/`, `docs/50-59-deployment-operations/`, `docs/60-69-project-management/`, `docs/70-79-ai-intelligence/` & `70-79-templates-boilerplates/`, `docs/80-89-integration-apis/`, `docs/90-99-content-strategy/`. File naming: `NN.NN-descriptive-name-{reference|tutorial|how-to}.md`; check the area's `README.md`/existing numbers before picking one.
-  2. **Company / OS** → the weekly loop (operating system: goal, OKR, rocks, numbers) is edited in `docs/business/operating-system.md`; vision/positioning and the opportunity portfolio are **vault-owned** (`jt-business-os`) and only mirrored into `docs/business/` - see the banner at the top of this file.
+  2. **Company / OS** → **vault-owned** (`jt-business-os` / `jt-operations`, `~/Documents/pkm`) since 2026-08-20; `docs/business/` holds only pointer stubs and mirrors - see the banner at the top of this file. Do not create operations docs in this repo.
   3. **A project** validating one opportunity → its own `docs/projects/<YYMM-slug>/` (dated-slug: 2509/2510/2604/2605/2607).
   4. **ADRs** → `docs/adr/`; **incidents/postmortems** → `docs/incidents/`; **design tokens/system** → `docs/design-system/`.
   5. **`docs/workflows/`** is ONLY for **cross-cutting pipeline/process how-tos** that span domains (blog-pipeline, linkedin-pipeline, flow-router, commands, BASE_HANDBOOK) — NOT engineering reference, NOT research notes. If a doc belongs to one JD domain, it goes in that domain, not here.

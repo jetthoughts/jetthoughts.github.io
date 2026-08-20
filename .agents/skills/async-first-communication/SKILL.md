@@ -28,10 +28,10 @@ the work. A task is not done until its state is readable asynchronously.
 | Decision / groomed design / vote | the project's docs (`docs/projects/<id>/`), with rationale |
 | Task status + claims + handoffs | kanban board (`kanban-md`, local) AND the committed snapshot (project `backlog.md` State section) |
 | Operational state across sessions | the project runbook (statuses + handoff notes pasted VERBATIM) |
-| Outreach / funnel events | the project ledger (e.g. `rescue-sprint/pipeline.md`) — one row per event |
+| Outreach / funnel events | the vault ledger `~/Documents/pkm/jt-vcr-pipeline.md` (host-only; moved 2026-08-20) — one row per event |
 | Durable how-to / gotcha / root cause | `.okf/` concept file + dated `log.md` entry; reusable process → `docs/workflows/` |
 | Review findings + dispositions | PR comments (one summary disposition comment; resolve threads with reasons) |
-| Company goal / OKR / rocks / weekly numbers | `docs/business/operating-system.md` |
+| Company goal / OKR / rocks / weekly numbers | vault `~/Documents/pkm/jt-operations.md` (host-only; moved 2026-08-20) |
 | Company identity, positioning, bet status | vault (`jt-business-os`), mirrored to `docs/business/` |
 | Session-internal scratch | `/tmp/` — never committed |
 
@@ -43,7 +43,7 @@ the work. A task is not done until its state is readable asynchronously.
   proportionally more detail**: a week of silence needs the decisions, the
   dead ends, and the current state, not a one-line summary. Frequency can flex;
   reconstructability cannot. (This is the *writing* rhythm - unrelated to the
-  weekly numbers loop in `operating-system.md` §1, which is a metric review.)
+  weekly numbers loop in the vault's `jt-operations.md` §1, which is a metric review.)
 - **Prefer shared artifacts over direct messages.** Answer a question by
   updating the doc that should have answered it, then link the doc.
 - **Every handoff is written.** An agent finishing a task updates the card

@@ -1,6 +1,6 @@
 # Workflows
 
-* [Company-layer ownership](company-layer-ownership.md) - vault owns positioning/bet status, repo owns the weekly loop, claims canon owns the facts
+* [Company-layer ownership](company-layer-ownership.md) - vault owns ALL operations (loop, pipeline, runbook; re-settled 2026-08-20), repo owns growth/marketing campaigns, claims canon owns the facts
 * [Render verification](render-verification.md) - headless Chrome + slicing recipes for the visual scroll gate
 * [Review swarm](review-swarm.md) - the two-critic review pattern and its failure modes
 * [Blog Post Pipeline](blog-pipeline.md) - mandatory end-to-end workflow for writing/publishing blog posts

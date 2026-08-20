@@ -6,7 +6,7 @@ description: 'Install Hugo + Bun + Node, cache dependencies and build artifacts'
 inputs:
   hugo-version:
     description: 'Hugo version'
-    default: '0.164.0'
+    default: '0.165.0'
   environment:
     description: 'Hugo build environment'
     default: 'production'
@@ -29,10 +29,10 @@ runs:
 
     - uses: oven-sh/setup-bun@v2
       with:
-        bun-version: 1.3.13
+        bun-version: 1.3.14
 
     - name: Cache Bun dependencies
-      uses: actions/cache@v5
+      uses: actions/cache@v6
       with:
         path: |
           ~/.bun/install/cache
@@ -48,7 +48,7 @@ runs:
     # with "Export named 'registerHooks' not found". Use real Node 22
     # (>=22.15 has registerHooks); the --permission flags Hugo passes are
     # satisfied by [security.node.permissions] allowRead in hugo.toml.
-    - uses: actions/setup-node@v4
+    - uses: actions/setup-node@v7
       with:
         node-version: 'latest'
 
@@ -62,7 +62,7 @@ runs:
     #    the source tree is identical, so the stats are valid; any change
     #    misses and pays the ~52s warm-up instead of risking a broken deploy.
     - name: Cache hugo_stats.json (exact tree match only)
-      uses: actions/cache@v5
+      uses: actions/cache@v6
       with:
         path: hugo_stats.json
         key: ${{ runner.os }}-hugo-stats-${{ inputs.environment }}-${{ hashFiles('config/**', 'postcss.config.js', 'package.json', '**/bun.lockb', 'themes/**', 'layouts/**', 'content/**') }}
@@ -73,7 +73,7 @@ runs:
     #    evicting every other cache from the 10 GB repo quota, and the build
     #    step regenerates it anyway.
     - name: Cache Hugo build
-      uses: actions/cache@v5
+      uses: actions/cache@v6
       with:
         path: |
           /tmp/hugo_cache

@@ -71,7 +71,7 @@ jobs:
         with:
           build: 'false'
 
-      - uses: taiki-e/install-action@v2.85.4
+      - uses: taiki-e/install-action@v2.86.3
         with:
           tool: lychee
 
