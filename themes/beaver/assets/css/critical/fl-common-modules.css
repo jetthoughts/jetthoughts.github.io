@@ -463,7 +463,7 @@ strong {
   font-weight: bolder;
 }
 a {
-  color: #007bff;
+  color: inherit; /* was Bootstrap-reboot #007bff, masked by the old anchor rule; inherit so links stay legible on any ground - see navigation.css */
   text-decoration: none;
   background-color: transparent;
 }
@@ -605,7 +605,7 @@ img {
   margin: 0 auto;
 }
 .fl-page-content {
-  background-color: #fff;
+  background-color: var(--surface);
 }
 .fl-content {
   margin: 20px 0;
@@ -618,23 +618,23 @@ img {
 }
 a.fl-button,
 a.fl-button:visited {
-  background: var(--color-primary);
+  background: var(--color-ruby);
   color: #fff;
-  border: 1px solid #006ddc;
+  border: 1px solid var(--ruby-700);
 }
 a.fl-button *,
 a.fl-button:visited * {
   color: #fff;
 }
 button {
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   color: #fff;
   font-size: 18px;
   line-height: 1.45;
   padding: 6px 12px;
   font-weight: 400;
   text-shadow: none;
-  border: 1px solid #006ddc;
+  border: 1px solid var(--ruby-700);
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -707,7 +707,7 @@ button {
 .fl-page a.fl-button,
 .fl-page a.fl-button:visited {
   color: #fff;
-  background-color: var(--color-primary);
+  background-color: var(--color-ruby);
   font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 18px;

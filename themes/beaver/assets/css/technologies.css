@@ -3,14 +3,35 @@
 }
 
 .technologies-component .subheading {
-    color: var(--color-primary);
+    color: var(--color-ruby);
     font-weight: 600;
+}
+
+/* On the .white variant this eyebrow sits on the near-black band, where
+   --color-ruby #cc342d measures 4.10:1 and misses AA. --color-ruby-hover
+   #e04a42 is the lighter ruby and clears it. Ruby needs a lighter tone on
+   dark and a darker one on light - same role, two values. */
+.technologies-component.white .subheading {
+    color: var(--color-ruby-hover);
 }
 
 .technologies-component .header {
     text-align: center;
     padding-top: 130px;
     padding-bottom: 60px;
+}
+
+/* Inline prose link in .description. It has no class of its own, so it
+   inherits the surrounding text colour - which keeps it legible on BOTH the
+   light variant and the .white variant over the near-black band. The
+   underline is what marks it as a link (WCAG 1.4.1); the reboot's
+   `a { text-decoration: none }` would otherwise leave it indistinguishable
+   from the sentence around it. */
+.technologies-component .description a {
+    text-decoration: underline;
+    text-decoration-color: var(--color-ruby);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
 }
 
 .technologies-component .heading {

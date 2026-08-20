@@ -427,7 +427,7 @@
 /* Pattern 38: Hero Text Animation Type Writer */
 .c-hero-sections__text--typewriter {
   overflow: hidden;
-  border-right: 2px solid var(--jt-primary, var(--color-primary));
+  border-right: 2px solid var(--jt-primary, var(--color-ruby));
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.1em;
@@ -441,7 +441,7 @@
 
 @keyframes heroCursor {
   from, to { border-color: transparent; }
-  50% { border-color: var(--jt-primary, var(--color-primary)); }
+  50% { border-color: var(--jt-primary, var(--color-ruby)); }
 }
 
 /* Pattern 39: Hero Shape Layer Integration */
@@ -487,13 +487,13 @@
 .c-hero-sections__badge {
   display: inline-block;
   padding: 8px 16px;
-  background: rgba(26, 140, 255, 0.1);
-  color: var(--jt-primary, var(--color-primary));
+  background: rgba(204, 52, 45, 0.1);
+  color: var(--ruby-700);
   border-radius: 50px;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 20px;
-  border: 1px solid rgba(26, 140, 255, 0.2);
+  border: 1px solid rgba(204, 52, 45, 0.2);
 }
 
 /* Pattern 42: Hero Stats/Numbers Display */
@@ -510,7 +510,7 @@
 .c-hero-sections__stat-number {
   font-size: 48px;
   font-weight: 800;
-  color: var(--jt-primary, var(--color-primary));
+  color: var(--jt-primary, var(--color-ruby));
   display: block;
   line-height: 1;
 }
@@ -580,7 +580,7 @@
 }
 
 .c-hero-sections__breadcrumb a:hover {
-  color: var(--jt-primary, var(--color-primary));
+  color: var(--jt-primary, var(--color-ruby));
 }
 
 .c-hero-sections__breadcrumb-separator {
@@ -626,8 +626,8 @@
 /* Pattern 47: Hero Media Overlay Blend */
 .c-hero-sections--blend-overlay .c-hero-sections__overlay {
   background: linear-gradient(135deg,
-    rgba(26, 140, 255, 0.8) 0%,
-    rgba(17, 82, 147, 0.9) 100%);
+    rgba(204, 52, 45, 0.8) 0%,
+    rgba(158, 38, 32, 0.9) 100%);
   mix-blend-mode: multiply;
 }
 
@@ -817,8 +817,8 @@
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(26, 140, 255, 0.8) 0%,
-    rgba(17, 82, 147, 0.6) 50%,
+    rgba(204, 52, 45, 0.8) 0%,
+    rgba(158, 38, 32, 0.6) 50%,
     rgba(0, 0, 0, 0.4) 100%
   );
   z-index: 1;
@@ -991,7 +991,7 @@
   height: 80px;
   border: none;
   border-radius: 50%;
-  background: rgba(26, 140, 255, 0.9);
+  background: rgba(204, 52, 45, 0.9);
   color: white;
   font-size: 24px;
   cursor: pointer;
@@ -1002,7 +1002,7 @@
 }
 
 .c-hero-sections__video-play-btn:hover {
-  background: rgba(26, 140, 255, 1);
+  background: rgba(204, 52, 45, 1);
   transform: translate(-50%, -50%) scale(1.1);
 }
 
@@ -1080,7 +1080,7 @@
 }
 
 .c-hero-sections__media-retry-btn {
-  background: rgba(26, 140, 255, 0.8);
+  background: rgba(204, 52, 45, 0.8);
   color: white;
   border: none;
   padding: 8px 16px;
@@ -1091,7 +1091,7 @@
 }
 
 .c-hero-sections__media-retry-btn:hover {
-  background: rgba(26, 140, 255, 1);
+  background: rgba(204, 52, 45, 1);
 }
 
 /* ==========================================================================

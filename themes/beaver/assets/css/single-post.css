@@ -121,7 +121,7 @@
 
 .heading-component .heading-self-link {
   text-decoration: none;
-  color: var(--color-primary);
+  color: var(--color-ruby);
   visibility: hidden;
   /* zero-width: the # never forces a line wrap; it paints past the right edge instead */
   display: inline-block;
@@ -458,9 +458,9 @@
 .blog-cta .blog-cta-btn {
   display: inline-block;
   background: var(--color-ruby);
-  color: #fff !important;
+  color: #fff;
   font-weight: 600;
-  text-decoration: none !important;
+  text-decoration: none;
   border-radius: 6px;
   padding: 13px 24px;
 }
@@ -476,7 +476,7 @@
 }
 
 .blog-cta .blog-cta-note a {
-  color: var(--rr-ink-900) !important;
+  color: var(--rr-ink-900);
 }
 
 
@@ -484,13 +484,13 @@
   .blog-cta .blog-cta-btn { display: block; }
 }
 
-/* Post-bottom "Filed under" tags: ink, not the late-cascade #0066d6
-   anchor blue (same monster + same !important workaround as
-   pages/blog-list.css / vibe-code-rescue.css; delete in Phase 1a). */
+/* Post-bottom "Filed under" tags: ink, not link colour. The !important that
+   used to be needed here died with the a:not(...)x8 anchor rule in 2608
+   Phase 1a.3. */
 .blog .post-tags a {
-  color: var(--rr-ink-500) !important;
+  color: var(--rr-ink-500);
 }
 
 .blog .post-tags a:hover {
-  color: var(--color-ruby) !important;
+  color: var(--color-ruby);
 }

@@ -10,13 +10,6 @@
      Name approved by Paul 2026-07-11. */
   --color-ruby: #cc342d;
 
-  /* Brand blue (279 literal occurrences at extraction time). First DEFINED
-     2026-07-12 (WP1.1): consumers existed for years but the token never had
-     a definition — the six rule groups that were live-but-invalid were
-     codified to their shipped rendering (inherit/transparent/currentColor)
-     before this definition landed, so defining it changes nothing. */
-  --color-primary: #1a8cff;
-
   /* Primary dark text/border color (JetVelocity obsidian dark).
      Canonical home of the token. */
   --color-dark: #121212;
@@ -84,6 +77,34 @@
   --ruby-700: #9e2620;  /* pressed / text-on-light where AA needs more */
   --ruby-100: #fbeae8;  /* tint background */
   --ruby-050: #fdf5f4;  /* hero blush (course page, campaign heroes) */
+
+  /* Body-link role (2608 Phase 1a.3). Introduced at the CURRENT shipped
+     values so adding them renders identically — the same zero-delta trick
+     1a.1 used, which turns the colour decision into a one-line value change
+     with its own screenshot review rather than a change tangled up in the
+     specificity surgery.
+
+     These replace the late-cascade
+       a:not(.btn):not(...)x8 { color: #0066d6 }
+     rule in navigation.css. That rule was NOT merely a specificity monster:
+     Sprint #2 introduced #0066d6 (4.78:1) precisely because --color-primary
+     #1a8cff was 3.37:1 and failed WCAG AA. Whatever replaces it must clear
+     AA too — the delivery mechanism was the defect, not the intent.
+
+     DECIDED 2026-08-20: ink text, ruby underline. NOT ruby text — ruby is
+     the ACTION colour, and a post body full of ruby links stops readers
+     distinguishing a link from a button. The underline, not the colour, is
+     what satisfies WCAG 1.4.1 (links distinguishable by more than colour),
+     so the text colour is free to stay calm and ruby stays reserved for
+     "act here". Reversible in one declaration.
+
+     Contrast: --ink-900 #14110f on white is 18.7:1 — far above the 4.5:1
+     AA floor, and an improvement on the 4.78:1 the blue delivered.
+     --ruby-700 #9e2620 on white is 7.6:1. */
+  --link:         var(--ink-900);
+  --link-hover:   var(--ruby-700);
+  --link-visited: var(--ink-700);
+  --link-underline: var(--color-ruby);
 
   /* Aliases: the blog shipped against these names. Kept so 1a.1 renders
      identically; DELETE in 1a.4 once the three page files consume the

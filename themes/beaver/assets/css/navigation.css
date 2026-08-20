@@ -65,7 +65,7 @@ body {
 
 /* Brand the FL-builder CTA buttons (homepage hero, about-us footer, etc.).
    The legacy rule .fl-page a.fl-button (specificity 0,2,1) lives in per-page
-   bundles (about-us.css, homepage.css) and paints these blue (var(--color-primary)) with
+   bundles (about-us.css, homepage.css) and paints these with the brand accent (var(--color-ruby)) and
    25px pill radius. !important here unifies them with .btn.btn-primary brand
    styling site-wide. */
 a.fl-button,
@@ -391,7 +391,7 @@ a.action-button:hover {
 }
 
 .navigation .sub-item:hover .sub-name {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 .navigation .sub-text {
@@ -409,12 +409,12 @@ a.action-button:hover {
   }
 
   .navigation .item:hover .link {
-    color: var(--color-primary);
+    color: var(--color-ruby);
   }
 
   .navigation .item:hover .arrow {
     transform: rotate(225deg);
-    border-color: var(--color-primary);
+    border-color: var(--color-ruby);
   }
 }
 
@@ -558,12 +558,34 @@ a.action-button:hover {
   }
 }
 
-/* Site-wide brand link color. Body content links inherit this everywhere
-   links aren't styled by a more specific class (.btn, .fl-button, .cta-link,
-   menu items). 4.78:1 WCAG AA on white background.
-   :not() chain raises specificity above the per-bundle `a { color: var(--color-primary) }`
-   rules so this wins regardless of cascade order. */
-a:not(.btn):not(.btn-primary):not(.fl-button):not([class^="cta"]):not(.menu-opener):not(.menu-close):not(.navigation .link):not(.footer-component a) {
-  color: #0066d6;
-  text-decoration-color: rgba(0, 102, 214, 0.7);
+/* Site-wide link colour, at ELEMENT specificity (0,0,1) so anything with a
+   class beats it naturally.
+
+   This replaces an `a:not(.btn):not(.btn-primary):not(.fl-button)
+   :not([class^="cta"]):not(.menu-opener):not(.menu-close):not(.navigation .link)
+   :not(.footer-component a)` chain — 2608 Phase 1a.3. That chain existed to
+   out-rank the Bootstrap-reboot `a { color: #007bff }` copied into eight
+   critical/ bundles that load after this file. Raising specificity to beat
+   them made this rule unbeatable by ordinary page CSS too, which is why
+   three page files had to fight it with scoped !important.
+
+   Fixed at the cause instead: those eight reboot rules now resolve --link as
+   well, so all bare `a` rules agree and no specificity contest is left to
+   win. Do not reintroduce a :not() chain here — if a link needs a different
+   colour, give it a class.
+
+   WHY `inherit` AND NOT `var(--link)`: a bare <a> can sit on ANY ground.
+   Pinning one colour site-wide is what made the old rule paint #0066d6 onto
+   dark bands, and pinning --ink-900 there instead measured 1.03:1 — an
+   invisible link — on the homepage dark row, the dark case-study cards and
+   the vibe-code-rescue obsidian band. Inheriting means an unclassed link
+   takes the colour of the text around it, so it is legible on every surface
+   by construction and no dark section needs its own override.
+
+   Link-ness is then carried by the UNDERLINE, not the colour, which is what
+   WCAG 1.4.1 asks for anyway — see the prose link rules in style.css, which
+   apply --link plus the ruby underline where a link sits in body copy. */
+a {
+  color: inherit;
+  text-decoration-color: var(--link-underline);
 }

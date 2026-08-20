@@ -727,7 +727,7 @@
 
 
 .fl-builder-content .cta-banner-eyebrow .fl-module-content .fl-rich-text, .fl-builder-content .cta-banner-eyebrow .fl-module-content .fl-rich-text * {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 
@@ -1115,7 +1115,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 
 .home-clients-grid .pp-content-post:hover {
-  border-color: #428AF7 !important;
+  border-color: var(--color-ruby) !important;
 }
 
 
@@ -3041,7 +3041,7 @@ img.mfp-img {
 
 
 .fl-builder-content .home-services-eyebrow .fl-module-content .fl-rich-text, .fl-builder-content .home-services-eyebrow .fl-module-content .fl-rich-text * {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 
@@ -3424,7 +3424,7 @@ img.mfp-img {
   }
 }
 .fl-builder-content .home-clients-eyebrow .fl-module-content .fl-rich-text, .fl-builder-content .home-clients-eyebrow .fl-module-content .fl-rich-text * {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 
@@ -5042,7 +5042,7 @@ body .pp-post-feed-meta {
 
 
 .fl-builder-content .home-why-us-eyebrow .fl-module-content .fl-rich-text, .fl-builder-content .home-why-us-eyebrow .fl-module-content .fl-rich-text * {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 
@@ -6747,7 +6747,7 @@ body .pp-post-feed-meta {
 
 
 .fl-builder-content .cta-banner-eyebrow .fl-module-content .fl-rich-text, .fl-builder-content .cta-banner-eyebrow .fl-module-content .fl-rich-text * {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 
@@ -7135,7 +7135,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 
 .home-clients-grid .pp-content-post:hover {
-  border-color: #428AF7 !important;
+  border-color: var(--color-ruby) !important;
 }
 
 
@@ -7284,7 +7284,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 
 .home-service-card .pp-infobox .pp-more-link:hover {
-  color: var(--color-primary);
+  color: var(--color-ruby);
   background-color: rgba(255, 0, 0, 0);
 }
 
@@ -7298,7 +7298,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 
 .home-service-card .pp-infobox .pp-more-link:hover .pp-button-icon {
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 

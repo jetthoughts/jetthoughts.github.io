@@ -3055,7 +3055,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 
 .services-card .pp-infobox .pp-more-link {
-  color: var(--color-primary);
+  color: var(--color-ruby);
   background-color: rgba(255, 0, 0, 0);
   text-decoration: none;
   text-align: center;
@@ -3065,7 +3065,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 
 .services-card .pp-infobox .pp-more-link:hover {
-  color: #007af4;
+  color: var(--ruby-700);
   background-color: rgba(255, 0, 0, 0);
 }
 
@@ -3073,13 +3073,13 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 .services-card .pp-infobox .pp-more-link .pp-button-icon {
   font-size: 22px;
-  color: var(--color-primary);
+  color: var(--color-ruby);
 }
 
 
 
 .services-card .pp-infobox .pp-more-link:hover .pp-button-icon {
-  color: #007af4;
+  color: var(--ruby-700);
 }
 
 

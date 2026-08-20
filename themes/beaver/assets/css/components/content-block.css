@@ -63,7 +63,6 @@
 .c-content-block--text-right { text-align: right; }
 
 /* Color modifiers - from most common brand patterns */
-.c-content-block--color-primary { color: var(--color-primary); }
 .c-content-block--color-dark { color: var(--color-dark); }
 .c-content-block--color-light { color: #ffffff; }
 .c-content-block--color-muted { color: var(--color-muted); }
@@ -114,7 +113,7 @@
  * Common in eyebrow text, labels, and highlights
  */
 .c-content-block--eyebrow {
-  color: var(--color-primary);
+  color: var(--color-ruby);
   font-weight: 600;
 }
 

@@ -155,7 +155,7 @@
 }
 
 .blog .link:hover .post-title,
-.blog .link:focus-visible .post-title { color: #0066d6; }
+.blog .link:focus-visible .post-title { color: var(--link); }
 
 .blog code {
   background: #f4f4f5;
@@ -190,13 +190,13 @@
 }
 
 /* Links: visible brand blue with hover underline (WCAG AA contrast)
-   #0066d6 = 4.78:1 on white. Sprint #2 promoted this from old var(--color-primary)
+   Sprint #2 promoted this from old var(--color-primary)
    which was 3.37:1 (WCAG fail). */
 .blog p a,
 .blog li a,
 .blog td a,
 .single-post-content a {
-  color: #0066d6;
+  color: var(--link);
   text-decoration: none;
   font-weight: 400;
 }
@@ -467,19 +467,33 @@
   hyphens: auto;
 }
 
-/* Links: WCAG AA contrast (#0066d6 = 4.78:1 on white) + visible underline */
+/* Body prose links: --link with a ruby underline (2608 Phase 1a.3). The
+   underline, not the colour, is what makes these distinguishable. */
 .blog p a, .blog li a, .blog td a {
-  color: #0066d6;
+  color: var(--link);
   text-decoration: underline;
-  text-decoration-color: rgba(0,102,214,0.7);
+  text-decoration-color: var(--link-underline);
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
 .blog p a:hover, .blog li a:hover, .blog td a:hover {
-  text-decoration-color: rgba(0,102,214,1);
+  text-decoration-color: var(--color-ruby);
 }
 .blog p a:visited, .blog li a:visited, .blog td a:visited {
-  color: #0a4f9a;
+  color: var(--link-visited);
+}
+
+/* The same treatment for NON-blog body copy. .fl-rich-text p is the
+   FL-builder prose container, so this reaches marketing-page paragraphs
+   without touching nav, footer or buttons - none of which live inside it.
+   Colour is left to inherit so these stay legible on dark bands too; the
+   underline alone carries link-ness (WCAG 1.4.1), which is what the
+   reboot's `a { text-decoration: none }` was quietly removing. */
+.fl-rich-text p a {
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 /* Brand-colored blockquotes — true callout treatment (background + padding + radius) */

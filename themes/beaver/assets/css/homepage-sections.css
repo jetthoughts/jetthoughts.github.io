@@ -99,7 +99,7 @@
 }
 
 .home-report-row-key--next {
-  border-left-color: var(--color-primary);
+  border-left-color: var(--ink-500);
 }
 
 .home-report-row-value {
