@@ -49,6 +49,22 @@ now 15 and 25. Do not trim them back toward the observed average: a gate that
 flakes on timeout teaches people to ignore red, which costs more than the
 runner minutes.
 
+**Slow is not the same as stalled — check which before raising a timeout**
+(2026-08-20, three occurrences in one session). `Unit Tests` failed at exactly
+10m twice and `build_and_deploy / build` at 15m1s, every one of them inside
+`##[group]Fetching the repository` and ending `##[error]The operation was
+canceled.` — i.e. they hit the cap, they did not run long and finish. Each
+plain `gh run rerun <id> --failed` then completed the SAME job in **2-3
+minutes**.
+
+So the failure mode is a checkout **hang**, not the documented slowness, and
+the right response is re-run-and-verify rather than another timeout raise —
+raising the cap cannot fix a step that never progresses, and would only make
+each failure cost longer. Confirm before re-running by pulling the job log
+(`gh api repos/<owner>/<repo>/actions/jobs/<job_id>/logs`) and looking for that
+group/error pair; if the job actually got past checkout, it is a real failure
+and a re-run is the wrong move.
+
 Two things to preserve when touching either:
 - **`test:links` and `test:html_proofer` share ONE rake invocation**
   (`rake test:links test:html_proofer`). Both default to the same `OUTPUT_DIR`

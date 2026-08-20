@@ -1026,3 +1026,16 @@ design/site-palette.md with the decision, the audience-shaped reasoning that
 predicts future calls, the token table, and - importantly - the three surfaces
 where dark stays deliberate, so a future session doesn't "fix" the blog covers
 or the vibe-code-rescue campaign page into light.
+
+## 2026-08-20 - CI checkout STALLS (three times); re-run, don't raise the cap
+
+Three CI failures in one session - Unit Tests at exactly 10m twice,
+build_and_deploy/build at 15m1s - every one inside
+`##[group]Fetching the repository` ending `The operation was canceled.` Each
+plain re-run completed the same job in 2-3 minutes. ci-gates already documented
+checkout being SLOW (7 min observed) and the timeouts raised to 15/25 because
+of it; what it lacked is the distinction that matters operationally: this is a
+HANG, not slowness. A cap cannot rescue a step that never progresses, so the
+response is re-run-and-verify, and raising the timeout again would only make
+each failure cost longer. Rule added with the log-check to confirm it before
+re-running, so nobody re-runs a job that actually failed for real.
