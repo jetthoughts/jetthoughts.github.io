@@ -44,6 +44,7 @@ PAGE_TESTS = {
   "contact-us" => "contact_us",
   "free-consultation" => "free_consultation",
   "vibe-code-rescue" => "vibe_code_rescue",
+  "friday-report" => "friday_report",
   "simple-page" => "privacy_policy",
   # critical/privacy-policy-critical.css maps by basename; alias it to the
   # simple-page tests so a touch there doesn't abort as an unknown key

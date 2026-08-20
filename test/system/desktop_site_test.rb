@@ -294,6 +294,28 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "vibe_code_rescue"
   end
 
+  def test_friday_report
+    visit "/friday-report/"
+
+    # The page exists to SHOW the artifact the homepage and the rescue page
+    # promise, so the four report blocks must render verbatim.
+    assert_text "The Friday report you get every week"
+    assert_text "What shipped"
+    assert_text "What slipped, and why"
+    assert_text "What we need from you"
+
+    # Honesty gate: we have no publishable client report, so the example must
+    # never render without saying it is a composite (claims-canon.md).
+    assert_text "This is a composite example, not a real client's report"
+
+    # One repeated CTA, pointing at the audit - the CTAs elsewhere on the site
+    # promised a report, this one has to promise the next step.
+    assert_link "Get a free code audit", minimum: 2
+
+    # No screenshot baseline yet: the 2608 site-wide recolour is mid-flight and
+    # would churn it immediately. Record with the bundle's first visual PR.
+  end
+
   def test_free_consultation
     visit "/"
 

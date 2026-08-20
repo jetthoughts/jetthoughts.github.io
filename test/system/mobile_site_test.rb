@@ -179,6 +179,19 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "vibe_code_rescue"
   end
 
+  def test_friday_report
+    visit "/friday-report/"
+
+    # The ICP reads this on a phone: the artifact and the honesty label must
+    # both survive the narrow column, not just the desktop layout.
+    assert_text "The Friday report you get every week"
+    assert_text "What slipped, and why"
+    assert_text "This is a composite example, not a real client's report"
+    assert_link "Get a free code audit", minimum: 2
+
+    # No screenshot baseline yet - see the desktop test for why.
+  end
+
   def test_free_consultation
     visit "/"
     # Add more specific scoping for Talk to an Expert button
