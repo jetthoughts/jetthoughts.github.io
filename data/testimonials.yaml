@@ -6,34 +6,51 @@
 # file is NOT a place for illustrative or composite entries - a fabricated
 # testimonial is an FTC exposure, not a style problem.
 #
-# 2026-08-20 purge: four entries were removed (Sarah Chen / TechStart Solutions,
-# David Rodriguez / EcomMega, Maria Gonzalez / HealthTech Innovations,
-# Alex Thompson / EduPlatform). They were added in "Start content marketing"
-# (#244) with placeholder-shaped company names and unsourced round metrics
-# ("Secured $2M Series A", "300% improvement in page load speeds", "99.8%
-# uptime"), and they rendered on four live pages because this data file
-# overrides the curated single testimonial in hugo.toml. Same defect class the
-# schema purges of 2026-08-14 and #475 removed from structured data; this was
-# the visible-copy half nobody had swept.
+# SOURCE OF EVERY ENTRY BELOW: the verified Clutch profile,
+# https://clutch.co/profile/jetthoughts (4.8/5 across 9 reviews; Quality 4.9,
+# Schedule 4.9, Cost 4.7, Willing to Refer 5.0). Each quote is verbatim from a
+# review Clutch marks "Verified" - their process confirms the reviewer's
+# identity. Attribution matches exactly what Clutch displays: where the reviewer
+# chose to be listed by role and company rather than by name, we do the same and
+# do NOT invent a name.
 #
-# Bruno's quote is real - corroborated by the curated entry in
-# config/_default/hugo.toml (which feeds the Review schema) and a live LinkedIn
-# profile. His `results` block was dropped in the same pass: the three
-# percentages appear nowhere in his quote and trace to no source. Restore them
-# only with a citation.
+# Adding an entry? Pull it from Clutch, keep the wording verbatim, and set
+# `source_url`. If you cannot point at the review, it does not go in this file.
 #
-# To restore anything removed here: git show 464f2f523:data/testimonials.yaml
+# 2026-08-20: four fabricated entries were removed (Sarah Chen / TechStart
+# Solutions, David Rodriguez / EcomMega, Maria Gonzalez / HealthTech
+# Innovations, Alex Thompson / EduPlatform) - placeholder-shaped companies,
+# unsourced round metrics, live on four pages. Paul confirmed they were
+# invented. Restore path for the old file: git show 464f2f523:data/testimonials.yaml
 
 testimonials:
   - name: "Bruno Wozniak"
-    rating: 5
+    rating: 4.5
     title: "Director of Engineering"
     company: "PubNative"
-    industry: "AdTech"
-    project_type: "Platform Development"
-    engagement_duration: "18 months"
-    team_size: "5 developers"
+    industry: "Advertising & marketing"
+    project_type: "Web Application Development"
     description: "Usually, in my experience, contractors are either highly talented but lacking in communication skills or vice versa. Guys from JetThoughts got the best of both worlds. They implemented easy ways to manage the flow of a distributed team and support high-quality code and development overall. Their team was also detailed and precise, helping us to find problems before they appear. We knew exactly what was happening and where we were going the whole time."
-    technologies: ["Ruby on Rails", "React", "PostgreSQL", "AWS"]
+    technologies: ["Ruby on Rails", "React", "Angular", "AWS"]
     location: "Berlin, Germany"
     linkedin: "https://www.linkedin.com/in/bruno-wozniak/"
+    source_url: "https://clutch.co/profile/jetthoughts"
+    source_note: "Clutch verified review, 2019-11-26"
+
+  - rating: 5
+    title: "CEO"
+    company: "Shaparency"
+    industry: "Digital board & governance platform"
+    project_type: "Staff Augmentation"
+    description: "Great - we communicate on Slack, have sprint calls and work like a normal team. What I found most impressive is the high quality of work and work ethic."
+    source_url: "https://clutch.co/profile/jetthoughts"
+    source_note: "Clutch verified review, 2020-10-06. Reviewer listed by role only."
+
+  - rating: 4.5
+    title: "CTO"
+    company: "Student Professional Development Organization"
+    industry: "Education"
+    project_type: "Software Development"
+    description: "I value most the selection of the specialists, so that we didn't waste time trying to figure out the proper candidate among the list of names. Each person suggested was really the person professionally suitable for us."
+    source_url: "https://clutch.co/profile/jetthoughts"
+    source_note: "Clutch verified review, 2020-07-13. Reviewer listed by role only."
