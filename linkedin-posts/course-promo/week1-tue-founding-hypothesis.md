@@ -15,9 +15,12 @@ design_file: linkedin-posts/course-promo/assets/week1-tue-founding-hypothesis-sk
 course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_tue_founding_hypothesis
-status: scheduled
+status: posted
 stage: now
 scheduled_for: "2026-08-19 15:30 CEST"
+posted_for: "2026-08-19"
+posted_url: https://www.linkedin.com/feed/update/urn:li:activity:7495834525386788864/
+opener_archetype: framework-led
 first_comment: |
   The 90-minute version of this exercise, with an AI stress-test for each blank, is Chapter 1.1 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_tue_founding_hypothesis
 image: "assets/week1-tue-founding-hypothesis.png"
