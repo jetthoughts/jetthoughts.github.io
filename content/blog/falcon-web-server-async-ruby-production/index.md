@@ -579,210 +579,117 @@ spec:
 
 ## Migration from Puma/Unicorn
 
-Migrating from traditional Ruby web servers to Falcon requires understanding the differences and planning the transition carefully.
+Falcon 0.57 will boot a Rails app that Puma was serving, from the same Gemfile plus one gem and one config file. Keeping it up under real traffic takes longer, because a few things that were safe under threads stop being safe once a hundred fibers share one thread.
 
-### Pre-Migration Checklist
+Whether the switch is worth making is a different question, and [the fibers post](/blog/fibers-async-ruby-llm-streaming-rails/) works through the workers x threads arithmetic behind it. Assume you already said yes; the last part of this section covers the cases where you shouldn't.
 
-**Code Compatibility Assessment**:
+### Grep for the things that break
 
-```ruby
-# Check for thread-unsafe code that needs updating
-# These patterns might need attention:
-
-# 1. Global variables (should be fine)
-$global_config = { timeout: 30 }
-
-# 2. Class variables (should be fine - single thread per process)
-class UserService
-  @@cache = {}  # OK in Falcon
-end
-
-# 3. Instance variables in controllers (should be fine)
-class UsersController < ApplicationController
-  def show
-    @user = User.find(params[:id])  # OK - fiber-local
-  end
-end
-
-# 4. Shared state between requests (review these)
-class RequestCounter
-  def self.increment
-    @count ||= 0
-    @count += 1  # This is actually safe in Falcon
-  end
-end
-```
-
-**Database Configuration**:
-
-```ruby
-# config/database.yml
-production:
-  # Increase pool size for fiber concurrency
-  pool: <%= ENV.fetch("DATABASE_POOL_SIZE", 25) %>
-
-  # Enable async query execution (Rails 7+)
-  async: true
-
-  # Connection management
-  checkout_timeout: 5
-  reaping_frequency: 10
-
-  # Standard PostgreSQL config
-  adapter: postgresql
-  host: <%= ENV.fetch("DATABASE_HOST") %>
-  database: <%= ENV.fetch("DATABASE_NAME") %>
-```
-
-### Step-by-Step Migration Guide
-
-**Phase 1: Development Environment**
+Run these against `app`, `lib`, and `config` before you touch any server config:
 
 ```bash
-# 1. Add Falcon to Gemfile
-echo 'gem "falcon"' >> Gemfile
-bundle install
+# 1. True thread-local storage - shared by every fiber in the worker
+grep -rn "thread_variable_set\|thread_variable_get" app lib config
 
-# 2. Test basic functionality
-falcon serve
+# 2. Fiber-local storage - fine for request state, dead as a cache
+grep -rn "Thread\.current\[" app lib config
 
-# 3. Run your test suite
-bundle exec rake test
-
-# 4. Load test with realistic traffic
-ab -n 1000 -c 50 http://localhost:9292/
+# 3. Blocking syscalls
+grep -rnE "Open3|Process\.spawn|system\(|%x\(" app lib config
 ```
 
-**Phase 2: Staging Environment**
+Start with hit 1. It is the one that costs you data.
+
+Ruby [documents `Thread#[]` as fiber-local](https://docs.ruby-lang.org/en/master/Thread.html): "Each fiber has its own bucket for Thread#[] storage." The method that writes to thread-wide storage is `thread_variable_set`.
+
+Say a gem stashes the current tenant with `Thread.thread_variable_set(:tenant, id)`. Under Puma one thread served one request end to end, so the value it read back was always its own. Falcon runs request A and request B on the same thread: A sets tenant 1, yields on a query, B starts and sets tenant 2, then A resumes and reads tenant 2.
+
+Hit 2 fails the other way. `Thread.current[:cache]` written as a process-lifetime memo now rebuilds once per fiber, which means once per request.
+
+Nothing raises an error. The memo rebuilds on every request, so the hit rate sits at zero and p95 drifts up.
+
+Hit 3 blocks the whole worker. Ruby's scheduler intercepts the IO layer through hooks like `io_read`, `io_wait`, `kernel_sleep` and `address_resolve`, but a C extension issuing a blocking syscall directly walks around all of them, and every fiber in that worker waits for it to return.
+
+`process_wait` is optional in the scheduler interface. Without it, the docs say, "Process::Status.wait will behave as a blocking method" - so check yours before assuming `Open3.capture2` yields.
+
+The greps miss C extensions you didn't write. Read the Gemfile for anything that talks to a socket or the filesystem from C - image processing and PDF gems are the usual suspects, native database drivers less often.
+
+### Swap the server
 
 ```ruby
-# config/falcon.rb for staging
-#!/usr/bin/env falcon serve --config
+# Gemfile
+gem "puma"    # unchanged - this is your rollback
+gem "falcon"
+```
 
-load :rack
+The [official guide](https://socketry.github.io/falcon/guides/rails-integration/) says to "perhaps remove gem 'puma' once you are satisfied" - that comes after the canary has held, not now.
 
-rack ENV.fetch('APP_HOST', 'staging.myapp.com'), :self_signed_tls do
-  append preload "config/environment"
-  count ENV.fetch('WEB_CONCURRENCY', 2).to_i
+Falcon's [Rails guide](https://socketry.github.io/falcon/guides/rails-integration/) uses a `service` block. Older `load :rack` configs still circulate, but this is the current shape, and it lives at the application root rather than under `config/`:
 
-  # Logging for debugging
-  append do |app|
-    Rack::Logger.new(app)
-  end
+```ruby
+#!/usr/bin/env falcon-host
+# falcon.rb
+require "falcon/environment/rack"
+
+hostname = File.basename(__dir__)
+
+service hostname do
+	include Falcon::Environment::Rack
+
+	port {ENV.fetch("PORT", 3000).to_i}
+
+	endpoint do
+		# HTTP/1.1 because a proxy in front of this app terminates TLS
+		Async::HTTP::Endpoint
+			.parse("http://0.0.0.0:#{port}")
+			.with(protocol: Async::HTTP::Protocol::HTTP11)
+	end
 end
 ```
 
-**Phase 3: Production Deployment**
+The root placement is load-bearing twice over. `hostname` derives from the directory the file sits in, so a copy under `config/` names your service "config", and [`falcon host`](https://socketry.github.io/falcon/guides/deployment/) reads `falcon.rb` from the application directory and takes no path argument.
 
-Use a blue-green deployment strategy:
+Development runs on `bundle exec falcon serve --bind http://localhost:3000`. Production is `bundle exec falcon host`, which the guide calls "the recommended way to deploy Falcon in production" - `falcon serve` is "not designed for deployment".
 
-```bash
-# 1. Deploy Falcon to green environment
-kubectl apply -f k8s/falcon-green.yaml
+There is no `threads min, max` in Falcon and no directive that replaces it. `count` sets worker processes and defaults to `Etc.nprocessors`; Falcon's Heroku example lowers it to `count ENV.fetch("WEB_CONCURRENCY", 1).to_i` for a shared dyno, where this post's systemd example earlier uses 4.
 
-# 2. Verify health and performance
-kubectl get pods -l app=myapp-falcon-green
-curl -f https://green.myapp.com/health
+### Size the connection pool
 
-# 3. Gradually shift traffic
-# Update load balancer to send 10% traffic to green
-# Monitor metrics and error rates
-# Gradually increase to 100%
+Nothing in that config bounds how many fibers a worker will take on. Per-worker concurrency is bounded by your database pool and by available memory, so the ceiling you control lives in `config/database.yml`.
 
-# 4. Complete the switch
-kubectl apply -f k8s/falcon-production.yaml
-```
+`ActiveRecord::ConnectionTimeoutError` is how you find out you got it wrong. The [Rails docs](https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html) put it plainly: "If all connections are leased and the pool is at capacity ... an ActiveRecord::ConnectionTimeoutError exception will be raised." Default `pool` is 5.
 
-### Configuration Mapping
+Raise it alongside `checkout_timeout`, using the sizing formula in [the tuning post](/blog/falcon-web-server-production-tuning-benchmarks/) rather than guessing.
 
-**From Puma to Falcon**:
+A slow query is not the only way to exhaust it. We starved a pool by wrapping a multi-second LLM call in `with_connection`, which holds a connection for the whole block even when the block issues no queries at all - [that outage is written up here](/blog/multi-agent-llm-rails-rubyllm/).
 
-```ruby
-# Before: config/puma.rb
-workers ENV.fetch("WEB_CONCURRENCY", 4)
-threads_count = ENV.fetch("RAILS_MAX_THREADS", 5)
-threads threads_count, threads_count
+### The isolation level you don't have to set
 
-port ENV.fetch("PORT", 3000)
-environment ENV.fetch("RAILS_ENV", "development")
+Rails reads `config.active_support.isolation_level` to decide whether `CurrentAttributes` and connection leasing key off the thread or the fiber. Falcon ships a [Railtie](https://github.com/socketry/falcon/blob/v0.57.0/lib/falcon/railtie.rb) that sets it to `:fiber`, and the [guide](https://socketry.github.io/falcon/guides/rails-integration/) is explicit: "Falcon will automatically set the isolation level to fibers as Falcon provides the appropriate Railtie".
 
-preload_app!
+Setting it by hand is harmless, just redundant.
 
-# After: config/falcon.rb
-#!/usr/bin/env falcon serve --config
+It matters where that Railtie never loads: a bare Rack app, or a boot path that skips Rails' engine hooks. Per-request state then keys off the thread, every fiber in the worker shares one bucket, and the tenant leak from the audit shows up in code you wrote yourself.
 
-load :rack
+### Canary one instance
 
-port = ENV.fetch("PORT", 3000)
-workers = ENV.fetch("WEB_CONCURRENCY", 4)
+Move one instance to Falcon and leave the rest on Puma. Same image, same share of traffic, one line changed in the process manager.
 
-rack ENV.fetch("HOSTNAME", "localhost") do
-  endpoint Async::HTTP::Endpoint.parse("http://0.0.0.0:#{port}")
-  count workers
+Then compare that box against a Puma box carrying similar load: p95 latency, RSS per worker, 5xx rate, and the count of `ActiveRecord::ConnectionTimeoutError` in your logs. Read the delta against Puma under matched traffic; the absolute numbers will not tell you much on their own.
 
-  append preload "config/environment"
-end
-```
+Write the rollback trigger down before you deploy.
 
-**From Unicorn to Falcon**:
+A trigger you can defend: any `ConnectionTimeoutError` at all, or p95 sitting above the Puma baseline for an hour. Reverting means pointing the process manager back at Puma and restarting, which is why the gem stays in the Gemfile.
 
-```ruby
-# Before: config/unicorn.rb
-worker_processes ENV.fetch("WEB_CONCURRENCY", 4).to_i
-listen ENV.fetch("PORT", 3000), :tcp_nopush => true
-timeout 30
-preload_app true
+[The tuning post](/blog/falcon-web-server-production-tuning-benchmarks/) walks through a real rollback, including the shell-out that forced it.
 
-# After: config/falcon.rb
-#!/usr/bin/env falcon serve --config
+### When to stay on Puma
 
-load :rack
+Skip it if your app is CPU-bound. Fibers help a worker that spends its time waiting; a worker pegged on JSON serialization is already busy, and a new server just moves that work around.
 
-workers = ENV.fetch("WEB_CONCURRENCY", 4).to_i
-port = ENV.fetch("PORT", 3000)
+Same answer if a hot endpoint shells out or leans on a C extension doing its own blocking I/O and that work can't move to a background job. One such call on a busy path can cost you more tail latency than Puma did, because Puma still had other threads to run.
 
-rack ENV.fetch("HOSTNAME", "localhost") do
-  endpoint Async::HTTP::Endpoint.parse("http://0.0.0.0:#{port}")
-  count workers
-
-  # Falcon handles timeouts differently - requests yield during I/O
-  # No explicit timeout needed as fibers are cooperative
-
-  append preload "config/environment"
-end
-```
-
-### Performance Verification
-
-Monitor these metrics during migration:
-
-```ruby
-# Add monitoring middleware
-class PerformanceMonitor
-  def initialize(app)
-    @app = app
-  end
-
-  def call(env)
-    start_time = Time.now
-
-    status, headers, response = @app.call(env)
-
-    duration = Time.now - start_time
-
-    # Log performance metrics
-    Rails.logger.info(
-      "PERF: #{env['REQUEST_METHOD']} #{env['PATH_INFO']} " \
-      "#{status} #{duration.round(3)}s"
-    )
-
-    [status, headers, response]
-  end
-end
-
-# config/application.rb
-config.middleware.use PerformanceMonitor if Rails.env.production?
-```
+If Puma isn't queueing, there is nothing here to fix. Pull the request-queue-time metric your APM already collects, look at the last month, and decide from that.
 
 ## Real-World Use Cases
 
