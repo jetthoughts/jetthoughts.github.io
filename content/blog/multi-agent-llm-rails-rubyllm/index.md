@@ -172,7 +172,7 @@ Add the loop when a second pass over the data is worth paying for. Before the fi
 
 If you're composing LLM agents into a Rails product, our [app and web development team](/services/app-web-development/) has shipped this exact pipeline - outage and all.
 
-Further reading:
+## Further reading
 
 - [RubyLLM agents guide](https://rubyllm.com/agents/) - instructions, schemas, and the `Agent` class
 - [RubyLLM async guide](https://rubyllm.com/async/) - fiber-safe usage and rate limiting

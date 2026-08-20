@@ -186,7 +186,7 @@ Test it like any HTTP dependency. Stub `RubyLLM.chat` at the boundary in unit te
 
 If you're adding AI features to a Rails product and want a team that has shipped the whole loop in production - persistence, streaming, and the boring parts included - our [app and web development team](/services/app-web-development/) does exactly that.
 
-Further reading:
+## Further reading
 
 - [RubyLLM documentation](https://rubyllm.com) - the guides are short and current
 - [Rails integration guide](https://rubyllm.com/rails/) - generator, `acts_as_chat`, broadcasting
