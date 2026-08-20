@@ -796,8 +796,11 @@ automation call: *does this write to the repo, and if so, where does it land?*
    whether a documented blocker still exists before treating it as one.*
 2. **Founder/ICP-E demand is absent, not underserved.** 27 "founder" queries ≈100
    impressions / 0 clicks; the six 20.09 §3 P1 posts 176 / 0; all "vibe" queries
-   165 / 0; course 60+ URLs ~800 / 2 - all at good positions (5-13). Answers
-   20.09 §8's October re-check early: zero.
+   165 / 0; course 60+ URLs ~800 / 2. Answers 20.09 §8's October re-check early:
+   zero. (2026-08-21 correction: the "all at good positions (5-13)" clause was
+   an averaging artifact of 1-3-impression rows and is retracted - the finding
+   it qualified, absent demand, is if anything stronger. See 2605
+   `50.05-course-discovery-diagnosis-2026-08-21.md`.)
 3. **NEW - fractional-CTO cannibalization.** Nine pages compete. Google's chosen
    result for the head term `fractional cto` (333 impr) is a 159-line 2024 diary
    post at position 73, not either service page; three long-form siblings
