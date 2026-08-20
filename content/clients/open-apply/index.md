@@ -15,7 +15,7 @@ client:
   logo_white_version: case-study-open-apply.webp
   name: Open Apply
   app_name: Open Apply
-  website: https://jtway.co/how-we-helped-an-existing-product-debug-grow-and-gain-more-satisfied-customers-38e17b084ac9
+  website: /blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/
   industry: Technology
   locations: United States
   timeline: 2+ Years

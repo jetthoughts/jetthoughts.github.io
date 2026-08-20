@@ -130,14 +130,19 @@ class MarketingCopyTest < Minitest::Test
   # stale "17 years" tenure lived in exactly that chrome.
   PAGINATED_VIEW = %r{/page/\d+/}
 
-  # RATCHET, not a cleanup gate: fails only when the count goes UP. 40 violations
-  # on the tree of 2026-08-20, and 25 of those are one defect syndicated - the
-  # deferred content/clients excerpts ("to the next level") and a testimonial
-  # saying "seamlessly", pulled onto every services page by a partial no source
-  # glob covers. That is precisely the class this pass exists to see. Clearing
-  # them is a content task (20.10 §3b "Still open" #2), not this gate's job.
-  # Lower this number when that lands.
-  RENDERED_BASELINE = 40
+  # RATCHET, not a cleanup gate: fails only when the count goes UP.
+  #
+  # 40 -> 14 on 2026-08-20. The pass was introduced at 40, and 25 of those were
+  # ONE defect syndicated: two content/clients excerpts ("to the next level")
+  # pulled onto all 12 services pages by a partial no source glob covers, plus a
+  # testimonial saying "seamlessly" (removed with the fabricated testimonials the
+  # same day). Rewriting two excerpt lines cleared 26 hits across the conversion
+  # pages - which is the whole argument for reading RENDERED output: source
+  # matching sees two files, the reader sees twelve.
+  #
+  # The remaining 14 live in individual post bodies. Tighten this number every
+  # time a batch is cleared; a ratchet left slack lets the win regress silently.
+  RENDERED_BASELINE = 14
 
   def test_rendered_pages_do_not_regress_on_banned_phrases
     violations = rendered_files.flat_map { |path| rendered_hits(path) }.sort

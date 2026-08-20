@@ -25,7 +25,7 @@ slug: how-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby
 
 ![](file_0.png)
 
-In [the first part](https://jtway.co/how-to-avoid-n-1-and-keep-your-ruby-on-rails-controller-clean-b8589c8c6d39), we considered the solution with extracting logic to the separate class and implementing the Facade pattern. SQL views are another way for solving the N+1 problem when finding the average value in Ruby on Rails application.
+In [the first part](/blog/how-avoid-n-1-keep-your-ruby-on-rails-controller-clean/), we considered the solution with extracting logic to the separate class and implementing the Facade pattern. SQL views are another way for solving the N+1 problem when finding the average value in Ruby on Rails application.
 
 ### The Problem Setup
 
@@ -117,4 +117,3 @@ the query for getting average rates of all films will look like:
 * Control when the cache needs to be refreshed
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

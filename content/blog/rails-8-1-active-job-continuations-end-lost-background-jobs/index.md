@@ -12,7 +12,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
 cover_image_alt: "JetThoughts blog cover for Active Job Continuations in Rails 8.1 - minimalist dark design with Ruby-to-purple gradient headline"
-canonical_url: https://jetthoughts.com/blog/rails-8-1-active-job-continuations-background-jobs/
+canonical_url: https://jetthoughts.com/blog/rails-8-1-active-job-continuations-end-lost-background-jobs/
 related_posts: false
 ---
 

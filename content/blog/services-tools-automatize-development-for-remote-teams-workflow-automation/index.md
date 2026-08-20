@@ -39,21 +39,21 @@ To generate pull request from the issue we use the **Hub** command-line utility:
 
 ### Kanban board by GitHub Projects
 
-To provide a “flexible” approach to software development, we follow the Agile methodology. To monitor the current progress and see the tasks for the near future, we have chosen the implementation of the Kanban board inside the GitHub (**GitHub Projects**). [Delivery Flow for Distributed Remote Teams](https://jtway.co/delivery-flow-for-distributed-remote-teams-5218828b0d1a).
+To provide a “flexible” approach to software development, we follow the Agile methodology. To monitor the current progress and see the tasks for the near future, we have chosen the implementation of the Kanban board inside the GitHub (**GitHub Projects**). [Delivery Flow for Distributed Remote Teams](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/).
 
 ### Continuous Integration by CircleCI
 
 To avoid bugs on production, and ensure the code compliance with the requirements set in our team, we use the **CircleCI**. It allows us to set up verification and code deploying flexibly.
 
-Due to close integration with GitHub, we can see the results of the tasks right on the Pull Request page. See more: [Deploying Jekyll to GitHub Pages with CircleCI 2.0](https://jtway.co/deploying-jekyll-to-github-pages-with-circleci-2-0-3eb69324bc6e)
+Due to close integration with GitHub, we can see the results of the tasks right on the Pull Request page. See more: [Deploying Jekyll to GitHub Pages with CircleCI 2.0](/blog/deploying-jekyll-github-pages-with-circleci-20/)
 
 ### Infrastructure by Heroku
 
 From hosting, we wanted to get: simple environment setup, integration with GitHub, the ability to install libraries that are used in gems quickly, the ability to scale.
 
-**Heroku** meets all our requirements: [How to Setup a Project That Can Host Up to 1000 Users for Free.](https://jtway.co/how-to-setup-a-project-that-can-host-up-to-1000-users-for-free-ab59ad3edaf1)
+**Heroku** meets all our requirements: [How to Setup a Project That Can Host Up to 1000 Users for Free.](/blog/how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup/)
 
-Using Heroku, we also solve the problem of isolated verification. It is essential to be able to test the functionality before it gets to production. Heroku uses the **Heroku App Review** for these purposes. Read here: [Heroku Reviews Apps prevent delivering bugs on production.](https://jtway.co/make-master-stable-again-b15c9ff3b129)
+Using Heroku, we also solve the problem of isolated verification. It is essential to be able to test the functionality before it gets to production. Heroku uses the **Heroku App Review** for these purposes. Read here: [Heroku Reviews Apps prevent delivering bugs on production.](/blog/heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup/)
 
 ## Monitoring code quality
 
@@ -63,7 +63,7 @@ Using Heroku, we also solve the problem of isolated verification. It is essentia
 
 Following our workflow, we forbid the merging code that is not covered by tests. To automate these checks, we use **Codecov**. For each branch, it measures test coverage, and if the percentage of code covered has decreased, then the branch will not be merged.
 
-The Сodecov also generates reports on which we can see the most vulnerable parts of the system for changes. It allows measure even JavaScript code coverage: [Collecting JavaScript code coverage with Capybara in Ruby on Rails application](https://jtway.co/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-d0cb83a86a90).
+The Сodecov also generates reports on which we can see the most vulnerable parts of the system for changes. It allows measure even JavaScript code coverage: [Collecting JavaScript code coverage with Capybara in Ruby on Rails application](/blog/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-testing/).
 
 ### Updating 3rd party dependencies by **Dependabot**
 
@@ -106,4 +106,3 @@ We developed a gem [jt_tools](https://github.com/jetthoughts/jt_tools) that will
 You will have everything pre-setup and ready for use.
 
 **Dmitry Gorodnichy***is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/gorodnichy/)* *or [GitHub](https://github.com/dgorodnichy).*
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

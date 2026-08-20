@@ -1675,9 +1675,6 @@ Building production AI features with Elixir requires expertise. JetThoughts spec
 ---
 
 **What to Read Next**:
-- [Phoenix LiveView AI Streaming: Complete Guide](/blog/phoenix-liveview-ai-streaming/) (Coming Soon)
-- [Elixir GenServer AI Agents: Distributed Systems](/blog/elixir-genserver-ai-agents/) (Coming Soon)
-- [Livebook AI Tutorial: Interactive Machine Learning](/blog/livebook-ai-tutorial/) (Coming Soon)
 
 Have questions about Elixir AI integration? Drop a comment below or reach out on [Twitter](https://twitter.com/jetthoughts)!
 

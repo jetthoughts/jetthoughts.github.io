@@ -44,4 +44,3 @@ We are so thankful for the support we’ve received on our Clutch profile, and i
 **Adam Cisco ***is the Key Account Project Manager at [JetThoughts](http://jetthoughts.com/). Follow him on [*LinkedIn](https://www.linkedin.com/in/ad-cis/)*.*
 
 *This article was created featuring Emily Clark and the Clutch team! Thanks for your support!*
-> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

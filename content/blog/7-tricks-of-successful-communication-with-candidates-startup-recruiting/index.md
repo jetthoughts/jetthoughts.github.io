@@ -62,5 +62,3 @@ In fact, if a recruiter doesn’t interest his candidates from the beginning, he
 Good luck!
 
 ***Viktoriia **is a Recruiter at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/viktoriia-tsvyk-5a6647222/).*
-
-*If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

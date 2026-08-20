@@ -25,7 +25,7 @@ slug: how-know-what-your-team-doing-remote-startup
 
 What techniques do you use to work with the team in an async, remote environment? How to collaborate effectively within the distributed team located in different timezones and deliver tangible results on top of that?
 
-In [JetThoughts](https://www.jetthoughts.com/), we got some common tactics we use when dealing with clients. They were built having [these tips](https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899) in mind.
+In [JetThoughts](https://www.jetthoughts.com/), we got some common tactics we use when dealing with clients. They were built having [these tips](/blog/checklist-for-non-tech-founder-agile/) in mind.
 
 > # It’s vital to built trust and rapport with the client, so here are some best practices on how to achieve that
 
@@ -61,4 +61,3 @@ Ideally, product owners or their representatives should be involved in the check
 > # This cheat-sheet will help you with managing your project even without prior experience and will help you to get a better understanding of how it works in practice
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

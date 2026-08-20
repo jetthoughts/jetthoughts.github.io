@@ -36,7 +36,7 @@ Ideally, you should be able to have a shareable live environment with only chang
 
 This practice is well known, but development team might have some objections to add it: setup a new staging instance or build and deploy is very time consuming procedure or cause a mess during the process.
 
-I would agree with them in case there are some real issues to implement it. But, nowadays, we have a lot of tools, like [Kubernetes](https://jtway.co/tagged/kubernetes) and [Docker](https://jtway.co/tagged/docker), which reduce the complexity of isolated testing environment creation. And it’s time to clean up a technical debt in both delivery and development process as it is crucially important.
+I would agree with them in case there are some real issues to implement it. But, nowadays, we have a lot of tools, like [Kubernetes](/blog/tags/kubernetes/) and [Docker](/blog/tags/docker/), which reduce the complexity of isolated testing environment creation. And it’s time to clean up a technical debt in both delivery and development process as it is crucially important.
 
 ## Here comes Heroku Review Apps
 >
@@ -95,7 +95,6 @@ And finally we got improved customers’ and clients’ satisfaction and appreci
 
 * [Review Apps Guide](https://devcenter.heroku.com/articles/github-integration-review-apps)
 
-* [The simplest way to automate delivery of your React Native Application](https://jtway.co/the-simplest-way-to-automate-delivery-of-your-react-native-application-f37f2c71eb1d)
+* [The simplest way to automate delivery of your React Native Application](/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/)
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

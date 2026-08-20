@@ -112,4 +112,3 @@ Now when you go to the page you will not waste time downloading all pictures tha
 Web sites today have become much more complex and diverse. But despite this, they can still boot in less than one second. Just adhere to the described optimization steps.
 
 **Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

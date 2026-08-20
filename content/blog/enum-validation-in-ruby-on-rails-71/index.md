@@ -69,4 +69,3 @@ We also can send additional rules to validation. For example: validate: { allow_
 By leveraging the [new enum validation feature in Rails 7.1](https://github.com/rails/rails/pull/49100), developers can ensure the integrity of enum attributes, streamline validation processes, and enhance the overall robustness of Rails applications.
 
 **Paul Keen** is an Open-Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

@@ -18,7 +18,7 @@ tags:
 canonical_url: https://jetthoughts.com/blog/how-vertically-center-an-element-without-flex-css-html/
 slug: how-vertically-center-an-element-without-flex-css-html
 ---
-How vertically center with Flex you can view [Vertical align with a full screen across Tailwind CSS](https://jtway.co/vertical-align-with-a-full-screen-across-tailwind-css-5c6ad91c3e4f)
+How vertically center with Flex you can view [Vertical align with a full screen across Tailwind CSS](/blog/vertical-align-with-full-screen-across-tailwind-css-jetthoughts/)
 
 ```html
 <div class="outer">

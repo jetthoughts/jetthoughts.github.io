@@ -148,4 +148,3 @@ The general rule of thumb for picking a name for a predicate method: it should b
 Of course, there may be methods that don’t fit into any of these four categories, and we did not cover class methods here at all, but in general, it’s all the same: the name should make sense and it should contain just the right amount of context to be clear — not more and not less.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

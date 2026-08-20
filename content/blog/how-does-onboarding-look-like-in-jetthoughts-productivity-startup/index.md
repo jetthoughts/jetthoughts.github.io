@@ -24,9 +24,9 @@ slug: how-does-onboarding-look-like-in-jetthoughts-productivity-startup
 
 ## How does the onboarding look like in JetThoughts?
 
-*This is an [onboarding checklist](https://jtway.co/effective-project-onboarding-checklist-87b95fce256b) replication built relying on my own experience in [**JetThoughts](https://www.jetthoughts.com/)**. We created our process, which could be less stressful and more enjoyable at the same time.*
+*This is an [onboarding checklist](/blog/effective-project-onboarding-checklist-management-productivity/) replication built relying on my own experience in [**JetThoughts](https://www.jetthoughts.com/)**. We created our process, which could be less stressful and more enjoyable at the same time.*
 
-*If you follow these onboarding strategies thoroughly, you will grow both successful and happy employees. Here’s the [article](https://jtway.co/effective-project-onboarding-checklist-87b95fce256b) which I was relying on.*
+*If you follow these onboarding strategies thoroughly, you will grow both successful and happy employees. Here’s the [article](/blog/effective-project-onboarding-checklist-management-productivity/) which I was relying on.*
 
 ![Photo by [Toa Heftiba](https://unsplash.com/photos/_UIVmIBB3JU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/helping-hand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 
@@ -91,4 +91,3 @@ When you work remotely, you want to have some kind of a standup meeting regularl
 Good luck with growing out your teams and successfully onboarding your new employees. It may require a bit of trial and error to nail down the best process for your organization, but it is time and effort well spent to make sure you set the right tone with new employees.
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

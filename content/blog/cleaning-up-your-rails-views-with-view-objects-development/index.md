@@ -156,6 +156,5 @@ The main pros of using this solution are:
 * Test *View Objects* logic is as easy as test ruby classes. As in decorators solution, you can feed *View Objects* with stubs to increase the tests speed.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
 
 *Image courtesy of Vectorolie/FreeDigitalPhotos.net*

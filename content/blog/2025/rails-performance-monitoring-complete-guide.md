@@ -751,4 +751,4 @@ Remember, performance monitoring is not a one-time setup but an ongoing process 
 
 ---
 
-*Want to learn more about Rails performance? Check out our other guides on [Rails Caching Strategies](/blog/rails-caching-strategies/) and [Database Optimization Techniques](/blog/rails-database-optimization/).*
+*Want to learn more about Rails performance? See [Ruby on Rails performance optimization patterns](/blog/ruby-on-rails-performance-optimization-patterns-2026/), which covers caching and database query optimization.*

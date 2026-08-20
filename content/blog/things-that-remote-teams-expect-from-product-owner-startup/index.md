@@ -98,4 +98,3 @@ Here is the list of responsibilities when it comes to real, every day tasks of t
 We can see that the product owner is an essential element in the team’s flexible development process. He is the one who coordinates the developers’ actions, communicates with the customer, identifies the main needs of the product, and is responsible for the final version of the product.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

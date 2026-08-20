@@ -23,7 +23,7 @@ slug: effective-project-onboarding-checklist-management-productivity
 ---
 To avoid the onboarding slip and remove expectations and misunderstandings, the **[JetThoughts](https://www.jetthoughts.com)** team defined a checklist of items to clarify. We will discuss how to start the project, but we won't discuss the onboarding process.
 
-We assume all the developers are familiar with the principles described in our [article](https://jtway.co/a-typical-day-at-jetthoughts-460b84eeb9c6). The checklist should give information about the project and define some rules and conventions. Let's take a closer look at each of those.
+We assume all the developers are familiar with the principles described in our [article](/blog/typical-day-at-jetthoughts-agile-remote/). The checklist should give information about the project and define some rules and conventions. Let's take a closer look at each of those.
 
 ![Photo by [Web Donut](https://unsplash.com/photos/eSzWOpp1rgw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/collections/203782/in-transit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 

@@ -206,4 +206,3 @@ To get detailed changes info per file for each commit:
 There are a lot of useful Git commands. And we can reach the goal in different ways using different commands. This article is showing our own way polished by the knowledge of our teammates. Feel free to find the approach that will suit your needs. Good luck in gitting :)!
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

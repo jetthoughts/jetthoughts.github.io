@@ -82,4 +82,3 @@ defined? is Ruby’s reserved word to check if expression is currently defined. 
 To sum up, ||= is too good to forget about it, but when doing memoization, just think if the result may be boolean or nil, and if yes, use defined?.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

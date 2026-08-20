@@ -11,7 +11,7 @@
       .gbig   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 30px; fill: #2e7d32; font-weight: 700; }
       .note   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 18px; fill: #555; }
       .card   { fill: #fffdf8; stroke: #1a1a1a; stroke-width: 2.2; }
-      .build  { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2.8; }
+      .build  { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.8; }
       .pay    { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.8; }
       .chipbg { fill: #cc342d; }
     </style>

@@ -168,4 +168,3 @@ You can change the configuration above to do great things using CircleCI. Rememb
 ## Conclusion
 
 That’s it, from now on when you commit to develop branch it will automatically run its tests and on success, it will deploy your website to GitHub Pages!
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co) and [trending tech stories](https://jtway.co/trending).*

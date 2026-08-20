@@ -26,7 +26,7 @@ How to build the Lead Generation workflow? Which tools should be used?
 
 In [JetThoughts](https://www.jetthoughts.com), we build our own process, which could be easily maintained by one person and scalable at the same time, allowing to attract more and more leads.
 
-In our [previous article](https://jtway.co/5-free-tools-to-make-the-sales-process-easier-9e1368d41bf0), we talked about the tools which help to generate leads, and this is a second part where we will touch on the process we built around these tools to get the lead generation automated and easily trackable. We are using different channels like [LinkedIn](https://www.linkedin.com/), [Angel.co](http://angel.co/), [Behance](https://www.behance.net/), [Dribble](https://dribbble.com/) etc. to take the leads data.
+In our [previous article](/blog/5-free-tools-make-sales-process-easier-leadgeneration/), we talked about the tools which help to generate leads, and this is a second part where we will touch on the process we built around these tools to get the lead generation automated and easily trackable. We are using different channels like [LinkedIn](https://www.linkedin.com/), [Angel.co](http://angel.co/), [Behance](https://www.behance.net/), [Dribble](https://dribbble.com/) etc. to take the leads data.
 
 To get the work email of the lead you’d like to reach out to, there are two things to find out — the person’s first and last name and his/her company website. To guess the email, you’d need to put that data into [hunter.io](https://hunter.io/) (it gives you 100 searches/month for free)
 
@@ -67,4 +67,3 @@ Now, you are ready to send your first cold email. *Yet Another Mail Merge* would
 Good luck with your first email campaign! If you have any questions — feel free to comment and ask.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

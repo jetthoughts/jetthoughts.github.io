@@ -49,4 +49,3 @@ We understand that sometimes you can actually really forget about the ending of 
 
 Given the potential pitfalls, if you are considering using the Trial period with us for your next hire, feel free to contact us and discuss further.
 > *Ruslana is a Sales&Marketing Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).*
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

@@ -163,11 +163,10 @@ That is it! You now have a free, GitHub Pages hosted website using Jekyll and Fo
 ## GitHub Pages and CircleCI
 
 You can use any other convenient way to deploy your site, but I think the easiest way is to place the site on GitHub and make auto-deploy with CircleCI.
-How to do it? I have already described this in my [post](https://jtway.co/deploying-jekyll-to-github-pages-with-circleci-2-0-3eb69324bc6e).
+How to do it? I have already described this in my [post](/blog/deploying-jekyll-github-pages-with-circleci-20/).
 
 ## Conclusion
 
 I hope this simple guide to creating and setting up a free website will help you. Good luck!
 
 **Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

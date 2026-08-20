@@ -29,7 +29,7 @@ For novice authors who are going to share their thoughts with public through the
 
 Every post has a **title.**A thing that indicates what the article is about and distinguishes it from other articles. After making a research about a thing you want to describe you need to think about the title of your own post. For this, compose a few variants, about 4–5 and try to find one that matches best.
 
-A good [JTWay](https://jtway.co/) post title has the five following characteristics:
+A good [JTWay](/blog/) post title has the five following characteristics:
 
 * **Recognizability** — The title is a name of the subject that someone familiar with, although not necessarily an expert in, the subject area will recognize.
 
@@ -103,7 +103,6 @@ Each article has a footer part which includes your name and external links.
 
 **[EXAMPLE]** At the end of this article, you can find a texted template:
 
-![[Roman Tershak’s](https://jtway.co/@rtershak) footer for an article about [cheap tests](https://jtway.co/cheap-tests-with-ghost-inspector-838140bdd4cc)](file_2.png)
+![[Roman Tershak’s](https://jtway.co/@rtershak) footer for an article about [cheap tests](/blog/cheap-tests-with-ghost-inspector-webdev-legacy/)](file_2.png)
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
