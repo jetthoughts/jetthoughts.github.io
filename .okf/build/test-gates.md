@@ -8,7 +8,8 @@ generated: { by: claude/opus-4-8, at: 2026-08-12T20:20:00Z }
 verified:
   - { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
-timestamp: 2026-08-20T00:00:00Z
+  - { by: claude/opus-5, at: 2026-08-21T00:00:00Z }
+timestamp: 2026-08-21T00:00:00Z
 ---
 
 # The suites
@@ -149,6 +150,20 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   baselines - cost a full false "bistable render" investigation). Re-record =
   run the suite, keep the rewritten PNG, COMMIT it; only then can a rerun go
   green.
+- **A local visual red cannot condemn a branch until you have run the same
+  thing on master** (2026-08-21). Verifying PR #511 (template/CSS class),
+  `bin/qtest --changed` went red pointing at `services/fractional-cto`
+  baselines - a page the PR never touched. The plausible story was that its
+  `postcss.config.js` edit had shifted CSS site-wide; it had not, because that
+  edit only ADDS purgecss safelist entries and safelisting more can only
+  preserve more CSS, never remove any. The decisive check was the same system
+  test on clean `origin/master` on the macOS host: **34 runs, 6 failures, 8 of
+  77 screenshots mismatched** - the suite is red on master here, so a local red
+  said nothing about the branch. The run also rewrites two of those baselines
+  mid-run and then fails its own dirty-check, so repeated
+  `git checkout -- test/fixtures/screenshots/` never converges. Reproduce on
+  master first; if master is red the same way, fall back to CI's native-Linux
+  `Screenshot Tests` (which passed #511 in 16m15s while local was red).
 - `bin/dtest` from a git WORKTREE is VACUOUS-GREEN: the worktree's `.git` is
   a pointer file to a directory outside the container mount, so git fails
   inside the container, baselines resolve to nothing, and every screenshot
