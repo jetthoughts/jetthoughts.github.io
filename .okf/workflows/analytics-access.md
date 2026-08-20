@@ -177,6 +177,90 @@ genuinely out of reach for that session and the honest report names *that*
 Paul's". Never sign in to reach it - entering credentials is prohibited, and
 the block is the channel, not the task.
 
+### `bin/campaign-metrics` - the weekly campaign read in one command
+
+```
+bin/campaign-metrics        # last 28 days
+bin/campaign-metrics 7      # last 7
+```
+
+Auth is the same gcloud ADC the `google-analytics` MCP uses; no new deps. It
+exists because every campaign read previously meant hand-composing a Data API
+call and re-deriving which dimensions isolate campaign traffic - which is how the
+2026-08-20 read got **estimated instead of measured, ~5x off**. The number was
+always reachable; it just was not cheap enough to reach.
+
+Three things it encodes so nobody re-derives them wrong:
+
+- **Our campaigns are separated from everything else GA4 tags as a campaign.**
+  `(ai-assistant)` is a GA4-assigned pseudo-campaign, not ours. Counting it as
+  campaign arrival is exactly how a kill criterion reads as MET when nobody
+  clicked one of our links - the first cut of this script did that.
+- **It prints the arrival-override inputs but refuses to print a verdict.** The
+  override needs sessions that are *both* engaged *and* multi-page, and that is
+  not derivable from row aggregates: a row of 4 sessions at 1.5 pages/session
+  does not say how many individual sessions were multi-page. Inputs, not verdict.
+- **It warns while `page_view` is still a key event**, because until then the
+  KEYEV column counts page views and must never be quoted as conversions.
+
+Standing finding from its first run (28d to 2026-08-20): **`(ai-assistant)` is
+36 sessions vs 2 from our LinkedIn campaigns** - AI assistants are currently an
+order of magnitude bigger an arrival channel than the campaign we are measuring,
+including 2 sessions that landed directly on `/contact-us`.
+
+### `bin/site-report` - "how is the site doing" without the traps
+
+```
+bin/site-report        # last 28 days vs the prior 28
+bin/site-report 7
+```
+
+Deliberately **not** a mirror of GA4's default reports, because three properties
+of this account make the stock views actively misleading. Each is handled:
+
+1. **Channel mix is shown with engagement rate**, which is the bot filter - bots
+   do not engage. Direct at 46% and Unassigned at 7% are crawlers; AI Assistant
+   at 79% and Organic Social at 87% are people.
+2. **No conversions column at all**, by design, while `page_view` is a key event.
+3. **Course funnel gets its own section**, because at 5 `course_start_course`
+   events it vanishes inside any site-wide average - which is exactly how "the
+   funnel is dead" went unnoticed for weeks.
+
+**The caution it prints is the most valuable line in it.** On 2026-08-20 GA4
+showed **Organic Search 4,190 -> 600** across consecutive 28-day windows: an
+apparent **86% collapse** that would panic anyone reading it cold. GSC over the
+same 56 days was **flat at ~5 clicks/day** (~150 prior, ~140 current). The swing
+was bots reclassifying and nothing else. Real Google traffic on this site is the
+GSC click count - about 5/day - not GA4's organic session count, which ran
+4x-28x inflated across those two windows. **Never report a change in the Direct
+or Organic Search rows without reconciling against GSC first.**
+
+### Pending GA4-UI setup (no API exists for either - browser required)
+
+Both are blocked on a working browser session, not on a decision. Neither the
+Data API nor the Admin API can do them: **GA4 Explorations have no API at all.**
+
+**1. Un-mark `page_view` as a key event.** Admin -> Data display -> Events ->
+Key events tab -> click the filled star next to `page_view`. This is the single
+highest-value GA4 change outstanding: until it lands, `keyEvents` counts ~4,000
+page views and every conversion figure on the property is unusable, including
+the `contact_cta_click` marked on 2026-08-20. Reversible - re-star to undo.
+
+**2. Two saved Explorations**, so the CLI reports have UI equivalents:
+
+| Exploration | Dimensions | Metrics |
+|---|---|---|
+| *Campaign performance* | `sessionCampaignName`, `sessionManualAdContent`, `landingPage` | `sessions`, `engagedSessions`, `keyEvents` |
+| *Site health* | `sessionDefaultChannelGroup`, `landingPage` | `sessions`, `engagedSessions`, engagement rate |
+
+Explore -> Blank -> drag dimensions to Rows, metrics to Values -> Share so the
+whole property sees them, not just the creator.
+
+Whoever builds them: put the **bot caveat in the exploration's own name or a
+text annotation**, e.g. "Site health (Direct/Organic are bot-inflated - check
+GSC)". A saved report that silently repeats the 86%-collapse trap is worse than
+no report, because a saved report gets trusted.
+
 ### Marking a key event is an agent-doable UI task, not an Admin-API task
 
 Recorded because the opposite was asserted twice in one session. The read-only
