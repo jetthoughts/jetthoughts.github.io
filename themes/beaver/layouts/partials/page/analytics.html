@@ -43,5 +43,49 @@
         transport_type: 'beacon'
       });
     }, { passive: true });
+    {{/* Conversion event (2608 phase 0.1): contact / free-consultation form
+         submit. The form posts to an external service (data-lead-form on
+         partials/page/contact-form.html), so hook the submit event. Mark
+         generate_lead as a key event in GA4 admin. */}}
+    document.addEventListener('submit', function (e) {
+      if (!(e.target && e.target.hasAttribute && e.target.hasAttribute('data-lead-form'))) return;
+      gtag('event', 'generate_lead', {
+        transport_type: 'beacon'
+      });
+    }, true);
+    {{/* CTA clicks (2608 phase 0.1): any element carrying data-cta-location
+         (hero / section / blog-index / tag-index / article-end) reports which
+         CTA earned the click. */}}
+    document.addEventListener('click', function (e) {
+      var el = e.target && e.target.closest ? e.target.closest('[data-cta-location]') : null;
+      if (!el) return;
+      gtag('event', 'cta_click', {
+        location: el.getAttribute('data-cta-location'),
+        link_url: el.getAttribute('href') || '',
+        transport_type: 'beacon'
+      });
+    }, { passive: true });
+    {{ if and .IsPage (eq .Section "blog") }}
+      {{/* Scroll-depth milestones on blog posts (2608 phase 0.1). GA4 enhanced
+           measurement only records 90%; this adds the 25/50/75 read-depth
+           curve. Each milestone fires once per page view (marks are consumed),
+           and the listener removes itself after the last one. */}}
+      (function () {
+        var marks = [25, 50, 75, 90];
+        function depth() {
+          var max = document.documentElement.scrollHeight - window.innerHeight;
+          if (max <= 0) return;
+          var pct = (window.scrollY / max) * 100;
+          while (marks.length && pct >= marks[0]) {
+            gtag('event', 'scroll_depth', {
+              percent_scrolled: marks.shift(),
+              transport_type: 'beacon'
+            });
+          }
+          if (!marks.length) window.removeEventListener('scroll', depth);
+        }
+        window.addEventListener('scroll', depth, { passive: true });
+      })();
+    {{ end }}
   </script>
 {{ end }}
