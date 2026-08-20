@@ -42,6 +42,15 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "blog/index/_pagination", skip_area: [".blog-post", ".post-feature"], tolerance: 0.03
   end
 
+  def test_blog_tag_page
+    visit "/blog/tags/rails/"
+
+    # Rows churn as posts get (re)tagged; the lead carries the live post
+    # count. Chrome under test: eyebrow, tag-name H1, filter pills with the
+    # active-pill state.
+    assert_stable_screenshot "blog/tag", skip_area: [".blog-post", ".blog-lead"]
+  end
+
   def test_visit_blog_post
     visit "/"
     within_top_bar { click_on "Blog" }
