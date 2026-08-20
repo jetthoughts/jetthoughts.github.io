@@ -61,10 +61,10 @@ notes: |
 
 "Everyone I show it to says they'd love it."
 
-That's not proof of anything. You showed it to people who like you, and saying something nice costs them nothing.
+That's not proof of anything. You showed it to people who like you, and being nice to you is free.
 
-Strangers with the problem have no reason to be kind to you, and they're already complaining about it somewhere public. Search the problem in your own words plus "reddit" or "forum", and read a week of whatever comes back before you talk to anyone. You'll pick up the words they use for it, and find out whether any of them have already paid for something to work around it.
+Strangers with the problem have no reason to be kind. Most of them are already complaining about it somewhere public. Search it the way they'd type it, plus "reddit" or "forum" - literally "clinic scheduling double booked reddit" - and read the last week of what comes back before you talk to anyone. You'll pick up the exact words they use for it, which is what you'll need on the call anyway.
 
-If that search turns up nobody, you're guessing about a problem you can't find anyone having.
+If that search turns up nobody, try two more wordings before you conclude anything; the problem might be real and just not discussed in public. If it still turns up nobody, you're guessing about a problem you can't find anyone having, and the next move is finding five of those people to ask directly.
 
 Anyone else collected a pile of compliments that never turned into a single user?

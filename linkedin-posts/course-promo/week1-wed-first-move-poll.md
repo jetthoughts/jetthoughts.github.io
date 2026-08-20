@@ -54,9 +54,9 @@ notes: |
   so left alone - but if the vote split looks noisy, that option is the suspect.
 ---
 
-Your first move on a new idea sets what it costs you to be wrong.
+Some founders spend six months finding out an idea was wrong. Some spend an afternoon. The difference is what they did first.
 
-What did you actually do first? Not what a book says you should do. The thing you honestly did, or would do tomorrow if the idea felt real enough.
+So: what did you actually do first - not the version you'd give on a podcast, the thing you honestly did, or would do tomorrow if the idea felt real enough?
 
 I have a guess about which one wins, and I want to see if it holds outside my own bubble. Vote below - once the votes are in I'll post what usually happens after each answer.
 
@@ -64,7 +64,7 @@ I have a guess about which one wins, and I want to see if it holds outside my ow
 
 **Poll options (LinkedIn native poll, run 1 week):**
 
-1. Started building or sketching it
+1. Started building it, or sketched the screens
 2. Asked friends and family
 3. Put up a landing page
 4. Talked to strangers with the problem

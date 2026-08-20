@@ -65,10 +65,10 @@ notes: |
   first_comment because LinkedIn throttles body links. Cost accepted knowingly.
 ---
 
-For years I had nothing to send a non-technical founder who asked what to read before spending money on an idea. Just scattered blog posts and the same advice repeated across a dozen calls.
+For years I had nothing to send a non-technical founder who asked what to read before spending money on an idea. Just scattered blog posts and the same advice repeated on a lot of calls.
 
-I spent the last two months writing it down in one place. Five short modules, from a raw idea to your first paying customer. The templates are in there: what to ask someone who has the problem, a one-page brief you hand to whoever builds it, and the wording for asking that first payment. One module walks through building a first version without hiring anyone, with the accounts and the code in your name from day one.
+I finally wrote it down in one place. Every chapter is a 10-minute read with one thing to do after it.
 
-The whole thing is free, no email gate.
+The part I'd point you to first: whoever builds your first version, the accounts and the code stay in your name from day one. I have watched too many founders find out in month six that the repo, the AWS account and the domain were all under someone else's login.
 
-This week's posts all came from Module 1. If you read the first chapter, tell me where it loses you. That's the feedback I actually need.
+The whole thing is free, no email gate, and nobody calls you afterwards. Read a chapter and tell me where it loses you.
