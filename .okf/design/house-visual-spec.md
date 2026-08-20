@@ -23,6 +23,16 @@ generated:
 | Labels | INSIDE shapes (Sweller split-attention rule); never bare diamonds |
 | Dashes | "-" only, including inside artwork |
 
+# Fit text for the fallback font, not Caveat (2026-08-20)
+
+Hand SVGs load via `<img>`, where the Caveat webfont never applies - the
+browser renders the `cursive` fallback (Comic Sans-class), which runs
+~30% WIDER than Caveat. Both retros-post exhibits clipped on first render
+because strings were sized for Caveat metrics. Budget ~0.55em average
+glyph width per character at a given font-size when fitting strings to
+boxes, and render-verify before commit - the mermaid pipeline dodges this
+by embedding the woff2, hand SVGs don't.
+
 # Exemplars
 
 `invoice-loop.svg` (ai-token-bill) and `network-buckets.svg` are the
