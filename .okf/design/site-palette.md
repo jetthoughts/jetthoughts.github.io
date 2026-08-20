@@ -86,7 +86,10 @@ anything else going dark is a defect:
 # Deprecations in progress
 
 `--color-primary` (`#1a8cff`) is named "primary" and dies in 2608 Phase 1a.2,
-along with the late-cascade `#0066d6` anchor rule in 1a.3.
+along with the late-cascade `#0066d6` anchor rule in 1a.3. WHEN those phases
+run relative to everything else is a separate decision - see the
+[rollout sequence](/workflows/site-redesign-rollout.md); the blog bundles ship
+before the site-wide chrome, so tokens land in blog CSS first.
 
 **It is the logo's colour, and that is the point, not a reason to keep it.**
 `themes/beaver/assets/img/icons/logo-dark.svg` contains exactly one hex value:

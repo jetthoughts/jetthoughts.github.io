@@ -16,7 +16,11 @@ frontmatter: `generated: { by: <actor>, at: <iso> }`, `verified: [{ by, at }]`,
 human-reviewed trust tier. These are OPTIONAL and added honestly by whoever
 touches a concept; absence never invalidates it (§11). Legacy concepts still
 carrying only `timestamp` remain conformant and migrate as they're edited — do
-NOT back-stamp `generated`/`verified` you didn't actually perform.
+NOT back-stamp `generated`/`verified` you didn't actually perform. When two
+sessions verify the same concept concurrently and a rebase conflicts on the
+`verified:` array, keep BOTH entries and take the later `timestamp` - each
+verification really happened, and dropping one falsifies the provenance the
+field exists to carry (2026-08-20, `build/test-gates.md`).
 
 # Sections
 

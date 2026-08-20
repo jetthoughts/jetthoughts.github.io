@@ -8,6 +8,7 @@ generated: { by: claude/opus-4-8, at: 2026-08-12T20:20:00Z }
 verified:
   - { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
+  - { by: claude/opus-5, at: 2026-08-20T23:45:00Z }
   - { by: claude/opus-5, at: 2026-08-21T00:00:00Z }
 timestamp: 2026-08-21T00:00:00Z
 ---
@@ -216,6 +217,46 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   a build-recipe change invalidates the tree. Diagnosis tell: `grep
   localhost:1314 _dest/<tree>/404.html` returns hits; escape hatch is
   `FORCE_BUILD=1` or `rm -rf` the tree.
+
+- **No local build path passes `--cleanDestinationDir`, so DELETED sources
+  keep serving from the dest tree forever** (2026-08-20). `bin/hugo-build:47`
+  builds with `hugo build --noBuildLock --environment <env> --destination
+  <dir>` and `Hugo#precompile` (`test/support/hugo_helpers.rb:24-38`) with a
+  bare `hugo --destination <dir>`; only the CI Pages build
+  (`.github/workflows/_hugo.yml:82`) cleans. Hugo does not remove outputs
+  whose source is gone, so an orphaned page or asset persists in every local
+  `_dest/` tree until someone `rm -rf`s it. Note this is NOT the staleness
+  probe failing - `bin/build-if-stale` handles deletions correctly (it
+  probes DIRECTORIES, whose mtime a delete bumps). The tree is genuinely
+  rebuilt and STILL serves the deleted file, which is why the usual
+  "did it rebuild?" reflex diagnoses it wrong.
+
+  Consequence for any rendered-output test: **deleting a source file to
+  prove a test goes RED proves nothing.** On 2026-08-20 a new og:image test
+  stayed green through three delete-and-rerun attempts against a stale
+  `_dest/public-test-local`. Clear the dest dir before trusting a RED, the
+  same way a screenshot baseline must be COMMITTED before trusting a
+  re-record (both are "the assertion is right, the input is stale").
+
+- **A rendered-output sweep can look thorough and check almost nothing**
+  (2026-08-20). Count the DISTINCT values a sweep actually resolves before
+  trusting its breadth - a glob over 1757 files is not coverage. The first
+  `og_image_resolves_test.rb` matched `property="..." content="..."` as a
+  FIXED attribute sequence. Two facts collapsed 1297 tag matches to ONE url
+  checked: most values are off-origin CDN urls that fell through the
+  same-origin filter, and the theme partials
+  (`themes/beaver/layouts/blog/list.html:23`,
+  `themes/beaver/layouts/partials/page/cover_image.html:3,:11`) write
+  `content=` BEFORE `property=`, so the content-first tag on 480 pages was
+  dropped. Those pages still matched via their property-first tag, which is
+  why nothing looked wrong - what was lost was one whole distinct image.
+  Match whole tags and extract the attribute separately.
+
+  The trap underneath: **a reproduction test can be honestly RED for the
+  right reason and still cover nothing else.** RED->GREEN passed cleanly
+  because the single path the sweep reached WAS the defect under repair.
+  Coverage and correctness are independent; proving the second says
+  nothing about the first.
 - The snap_diff HTML report at
   `test/fixtures/screenshots/snap_diff_report.html` (gitignored) is written
   automatically on any RED run - the gem auto-registers the reporter on
@@ -271,6 +312,12 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   the repo - fresh clones had a hooksPath pointing at nothing. Adding any
   root dotfile/dot-dir? Check `git check-ignore -v <path>` before assuming
   it's tracked.
+  Same rule bites SUBdirectories of a tracked dot-dir: `.stitch/*.md` is
+  tracked but `.stitch/designs/` is ignored, so a source file placed there
+  is invisible (2026-08-20, the og:image plate source). **`git add <path>`
+  ERRORS on an ignored path; `git add -A` just silently omits it** - which
+  is the case for staging by explicit path when a commit's value depends on
+  a specific file actually landing.
 - REPORT-ONLY build gates (each flips to blocking once its backlog hits
   zero via an env flag): `bin/check-svg-floor` (`SVG_FLOOR_BLOCK=1`)
   catches course SVGs whose smallest text renders <9px@390;
