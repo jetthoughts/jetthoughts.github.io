@@ -24,6 +24,10 @@ Harsh? Pull up your agreement and check. An SLA (service level agreement) is the
 
 Here are the five software development SLA requirements worth writing into your next agreement. For each one: the clause in plain English, a fair number to ask for, and the loophole shops use to slide out of it.
 
+The first one looks like this on paper - three severity levels, three reply deadlines:
+
+![Severity decides the reply clock: three stacked rows. Severity 1, in red - the app is down, or nobody can pay you - a person replies within 2 business hours. Severity 2, in amber - a feature broke, but there is a workaround - reply within 8 business hours. Severity 3, in grey - typos and cosmetic glitches - reply within 2 business days. Footer: these are fair asks, and you name your own timezone for business hours](severity-reply-clock.svg)
+
 ## First, measure the service you're getting now
 
 Search your email and Slack for the last five bugs you reported to your team. Note two timestamps for each: when you hit send, and when a human replied with something substantive - what's broken, how bad it is, when a fix lands. "Thanks, we'll look into it" doesn't count as a reply.
