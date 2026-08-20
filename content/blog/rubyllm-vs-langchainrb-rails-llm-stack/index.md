@@ -25,10 +25,8 @@ metatags:
 
 ```mermaid
 flowchart TD
-    A["Retrieving from<br/>your own docs?"] -->|yes| B["langchainrb"]
-    A -->|no| C["Persisted chats,<br/>or a 2nd provider?"]
-    C -->|no| D["raw HTTP"]
-    C -->|yes| E["ruby_llm"]
+    A["Searching your own<br/>documents?<br/>langchainrb"] --> B["No, but you want saved<br/>chats or a 2nd provider?<br/>ruby_llm"]
+    B --> C["Neither. One call,<br/>one provider.<br/>raw HTTP"]
 ```
 
 ## What each one ships
@@ -41,7 +39,7 @@ flowchart TD
 | Vector search | no | 9 backends |
 | Document loading + chunking | no | yes |
 
-There is a third option, plain HTTP, and it is not in the table because every cell would say "you write it". It gets its own section further down.
+There is a third option, raw HTTP, and it is not in the table because every cell would say "you write it". It gets its own section further down.
 
 Both ship thirteen providers, so that row will not help you choose.
 

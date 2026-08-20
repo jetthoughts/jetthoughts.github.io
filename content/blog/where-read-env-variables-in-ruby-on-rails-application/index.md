@@ -5,7 +5,8 @@ remote_id: 1852612
 dev_to_id: 1852612
 dev_to_url: https://dev.to/jetthoughts/where-to-read-env-variables-in-ruby-on-rails-application-2j3l
 title: Where to read ENV variables in Ruby on Rails application
-description: The ENV variables should not be used outside the config folder. This rule will allow the...
+description: "What if the project has too many dependencies from the environment variables?"
+seo_override: true
 created_at: '2024-05-14T12:25:22Z'
 edited_at: '2024-11-26T16:05:40Z'
 date: "2024-05-14"

@@ -5,7 +5,8 @@ remote_id: 2165141
 dev_to_id: 2165141
 dev_to_url: https://dev.to/jetthoughts/exploring-opportunities-top-companies-hiring-international-employees-in-2024-2c9m
 title: 'Exploring Opportunities: Top Companies Hiring International Employees in 2024'
-description: In 2024, the job market is buzzing with opportunities for international talent. Companies are more...
+description: "In 2024, the job market is buzzing with opportunities for international talent."
+seo_override: true
 created_at: '2024-12-19T12:06:23Z'
 edited_at: '2024-12-19T12:19:41Z'
 draft: false

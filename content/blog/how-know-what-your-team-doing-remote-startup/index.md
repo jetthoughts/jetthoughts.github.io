@@ -5,7 +5,8 @@ remote_id: 1853575
 dev_to_id: 1853575
 dev_to_url: https://dev.to/jetthoughts/how-to-know-what-your-team-is-doing-23go
 title: How to know what your team is doing?
-description: What techniques do you use to work with the team in an async, remote environment? How to...
+description: "What techniques do you use to work with the team in an async, remote environment?"
+seo_override: true
 created_at: '2024-05-15T07:19:53Z'
 date: 2024-05-15
 edited_at: '2024-11-26T16:04:23Z'

@@ -5,7 +5,8 @@ remote_id: 2214216
 dev_to_id: 2214216
 dev_to_url: https://dev.to/jetthoughts/how-yc-was-created-with-jessica-livingston-3a0j
 title: How YC Was Created With Jessica Livingston
-description: In a recent conversation at the Lightcone podcast, Jessica Livingston, one of the co-founders of Y...
+description: "Her stories reflect the passion and determination that fueled the creation of YC back in 2005."
+seo_override: true
 created_at: '2025-01-16T09:07:24Z'
 date: 2025-01-16
 edited_at: '2025-01-30T02:44:23Z'

@@ -5,7 +5,8 @@ remote_id: 399009
 dev_to_id: 399009
 dev_to_url: https://dev.to/jetthoughts/how-to-use-a-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example-3ll8
 title: How to use a Transaction Script(aka Service Objects) in Ruby on Rails. Simple example
-description: The logic of small applications can be present as a series of transactions. Using the Transaction...
+description: "The logic of small applications can be present as a series of transactions."
+seo_override: true
 date: 2020-07-15
 created_at: '2020-07-15T15:47:10Z'
 edited_at: '2024-11-25T15:41:59Z'

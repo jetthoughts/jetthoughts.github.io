@@ -5,7 +5,8 @@ remote_id: 2184627
 dev_to_id: 2184627
 dev_to_url: https://dev.to/jetthoughts/unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25-3088
 title: 'Unveiling Ghost Engineering: Insights from Breaking Change Podcast v25'
-description: In the latest episode of the Breaking Change podcast, host Justin Searls dives into the intriguing...
+description: "Ghost engineering refers to the practice of creating systems and processes that operate seamlessly in the background, often without direct user interaction."
+seo_override: true
 created_at: '2025-01-01T15:56:43Z'
 edited_at: '2025-01-30T02:55:42Z'
 draft: false

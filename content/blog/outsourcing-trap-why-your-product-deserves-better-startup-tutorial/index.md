@@ -5,7 +5,8 @@ remote_id: 2202253
 dev_to_id: 2202253
 dev_to_url: https://dev.to/jetthoughts/the-outsourcing-trap-why-your-product-deserves-better-46i8
 title: 'The Outsourcing Trap: Why Your Product Deserves Better'
-description: Here's my twenty years of battling bullshit practices in software development consulting. Every...
+description: "Here's my twenty years of battling bullshit practices in software development consulting."
+seo_override: true
 created_at: '2025-01-12T19:47:16Z'
 edited_at: '2025-01-22T22:10:42Z'
 draft: false

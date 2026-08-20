@@ -5,7 +5,8 @@ remote_id: 2191163
 dev_to_id: 2191163
 dev_to_url: https://dev.to/jetthoughts/unlocking-opportunities-the-rise-of-part-time-executive-roles-in-todays-job-market-4b20
 title: 'Unlocking Opportunities: The Rise of Part Time Executive Roles in Today''s Job Market'
-description: Part-time executive roles are becoming a big thing in today's job market. More and more executives...
+description: "Part-time executive roles are becoming a big thing in today's job market."
+seo_override: true
 created_at: '2025-01-06T11:23:15Z'
 edited_at: '2025-01-30T02:51:28Z'
 date: 2025-01-06

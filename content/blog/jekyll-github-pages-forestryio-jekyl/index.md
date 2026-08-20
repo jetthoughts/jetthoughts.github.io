@@ -5,7 +5,8 @@ remote_id: 1880471
 dev_to_id: 1880471
 dev_to_url: https://dev.to/jetthoughts/jekyll-github-pages-forestryio-3f24
 title: Jekyll + GitHub Pages + Forestry.io
-description: I’ve recently migrated the jetthoughts.com website on Jekyll to Forestry.io. I’d like to share my...
+description: "I’ve recently migrated the jetthoughts.com website on Jekyll to Forestry.io."
+seo_override: true
 created_at: '2024-06-07T13:36:24Z'
 edited_at: '2024-11-26T16:01:56Z'
 date: 2024-06-07

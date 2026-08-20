@@ -5,7 +5,8 @@ remote_id: 2240087
 dev_to_id: 2240087
 dev_to_url: https://dev.to/jetthoughts/how-to-convert-customers-with-cold-emails-startup-school-996
 title: How To Convert Customers With Cold Emails | Startup School
-description: In the world of startups, cold emailing can be a game changer. Whether you're looking to boost...
+description: "In the world of startups, cold emailing can be a game changer."
+seo_override: true
 created_at: '2025-01-25T11:38:14Z'
 edited_at: '2025-01-30T02:37:45Z'
 date: 2025-01-25

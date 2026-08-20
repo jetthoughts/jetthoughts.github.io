@@ -5,7 +5,8 @@ remote_id: 2170884
 dev_to_id: 2170884
 dev_to_url: https://dev.to/jetthoughts/unlocking-opportunities-how-fractional-jobs-are-redefining-the-future-of-work-6fo
 title: 'Unlocking Opportunities: How Fractional Jobs Are Redefining the Future of Work'
-description: Fractional jobs are shaking up the way we think about work. Instead of the usual 9-to-5 grind, more...
+description: "Fractional jobs are shaking up the way we think about work."
+seo_override: true
 created_at: '2024-12-23T11:07:43Z'
 edited_at: '2025-01-30T03:24:34Z'
 date: 2024-12-23

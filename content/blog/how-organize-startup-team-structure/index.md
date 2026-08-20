@@ -5,7 +5,8 @@ remote_id: 2164756
 dev_to_id: 2164756
 dev_to_url: https://dev.to/jetthoughts/how-to-organize-a-startup-team-structure-48c3
 title: How to Organize a Startup Team Structure
-description: Starting a business is exciting, but organizing your team is a whole different ball game. You've got...
+description: "Starting a business is exciting, but organizing your team is a whole different ball game."
+seo_override: true
 created_at: '2024-12-19T09:41:02Z'
 edited_at: '2024-12-19T10:08:19Z'
 draft: false
