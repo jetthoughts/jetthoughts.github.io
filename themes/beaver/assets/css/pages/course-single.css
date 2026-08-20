@@ -19,6 +19,12 @@
    .fl-rich-text p` (0,3,2) - anything weaker silently loses to it. Keep the
    `.section-course` prefix even though this file is course-only: dropping it
    would lower specificity and hand the win back to single-post.css. */
+/* The container is listed alongside p/li because the blog scale in
+   single-post.css sets `.blog article.single-content .fl-rich-text` itself
+   (added by the 2608 design-system work, PR #487). Without matching it here,
+   bare text directly inside .fl-rich-text - anything not wrapped in a p or li -
+   would fall back to the blog size on a course page. */
+.section-course .blog article.single-content .fl-rich-text,
 .section-course .blog article.single-content .fl-rich-text p,
 .section-course .blog article.single-content .fl-rich-text li {
   font-size: 20px;
