@@ -2425,3 +2425,26 @@ count ran 4x-28x above real Google clicks across those windows.
 Channel truth on this property, by engagement rate: Direct 46% and Unassigned 7%
 are crawlers; AI Assistant 79% and Organic Social 87% are people. The honest
 scale of the site is ~5 Google clicks/day plus ~34 AI-assistant sessions/28d.
+
+## 2026-08-20 - Rebase, not merge, when master moves under an open PR
+
+Paul: *"instead of merging master we use rebase."* Three PRs in one day had
+picked up merge commits, and the cost was visible on #500 - its diff showed the
+entire whole-blog rebuild until it was rebased, after which it showed the 5
+files it actually changes. A merge commit makes a PR unreviewable by burying the
+author's own change in someone else's.
+
+`git rebase origin/master` then `git push --force-with-lease`, with a backup tag
+first since rebase rewrites history.
+
+The trap that cost two aborted attempts here: this branch had been cut from
+ANOTHER feature branch that had since squash-merged. Squashing changes the
+patch-id, so git cannot detect the duplicate - it replays the already-merged
+commits and they conflict with their own merged content, and rebasing onto an
+earlier base then drags in master's commits too. Do not fight it:
+`git reset --hard origin/master` and cherry-pick only your own commits. Better,
+cut branches from `origin/master` rather than from whatever is checked out.
+
+Standing papercut, now written down: `.okf/log.md` is a single append-only file
+every concurrent session writes to, so it conflicts on essentially every
+parallel PR. Every resolution today was "keep both sides".
