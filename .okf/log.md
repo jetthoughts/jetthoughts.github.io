@@ -51,6 +51,38 @@ two artifacts each. Verified against each walkthrough's own lesson links before
 "fixing" anything.
 
 
+## 2026-08-20 - Three publishing gates, all learned from claims we shipped wrong
+
+Added to [blog-pipeline](workflows/blog-pipeline.md), because all three are
+gates rather than background:
+
+1. **Technical claims must be executed, not read.** Every wrong technical
+   claim shipped this day came from reading source and inferring behaviour.
+   The Kamal 2 guide (#506) opened by asserting a stale `traefik:` key sits
+   in `deploy.yml` doing nothing; `kamal config` answers
+   `ERROR (Kamal::ConfigurationError): unknown key: traefik`. The bad
+   inference came from `Validator::Configuration#allow_extensions? => true`,
+   which governs YAML extension keys and not arbitrary config keys. Same
+   post told readers to find a mistyped secret with `kamal config`, but
+   `Configuration#to_h` emits no `env` and no `proxy`, so it exits 0
+   unchanged - the gem's own stale `desc` string was inherited untested.
+   A reviewer who ran the command falsified an opening thesis that
+   source-reading passes had approved.
+
+2. **Frontmatter is published copy.** #509 shipped live: the body was
+   softened to "whether the model was being retired or quietly
+   substituted" while `twitter_description` still asserted "a retired
+   model took out five features at once". The softening reached the prose
+   and not the metatags, so the page kept the claim the edit existed to
+   remove. Diff meta against body before merge.
+
+3. **Citation lists use `## Sources`.** 4 posts already used it; 16 had
+   drifted across `## Further reading`, a bare `Further reading:`
+   paragraph, and a bold `**Further reading:**` line (#510). The bold
+   variant survived the first survey because the grep only matched the
+   other two - a partial sweep reads as a finished one. Internal links
+   belong in body prose or the theme's `Read next`, not in this list.
+
 ## 2026-08-20 - Bundle compaction: the log was 37% of the bundle, and two concepts were copies
 
 Re-reviewed every file for size. The bundle was 359KB; 52% of it was two
