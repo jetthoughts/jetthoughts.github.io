@@ -1128,3 +1128,36 @@ the brief told Lane A to resolve consumers BY ROLE, and the role table had no
 row for brand assets - so it halted and asked instead of inventing a row. A
 role table is also a permission boundary; anything without a row is a question,
 not a judgement call.
+
+## 2026-08-20 - "Same class of fight" is not "same cause"; body links decided
+
+Two corrections to my own Phase 1a plan, both found by the agent executing it
+rather than by me writing it.
+
+**The success signal was unfalsifiable in the dangerous direction.** 20.02 said
+"delete all 55 !important workarounds" as the proof 1a.3 worked. 55 counted
+every !important in four files; only ~19 are anchor-attributable. The rest are
+@media print rules and legacy heading-margin fights, so chasing the number
+would have deleted print styles to hit it. The trap is worth naming because it
+will recur: blog-single.css's own comment says its fights are the "same class
+of fight as the #0066d6 anchor rule - both die in Phase 1a". Same CLASS,
+different CAUSE. A metric derived from a comment's phrasing rather than from
+the cause it names is a metric that rewards damage.
+
+**#0066d6 was an accessibility fix, not just a specificity monster.** It
+replaced --color-primary in Sprint #2 because #1a8cff measured 3.37:1 and
+failed AA. I had been describing it purely as a late-cascade monster, which
+would have licensed replacing it with anything non-blue. Retiring it means
+landing the replacement at AA or better.
+
+**Body links decided: --ink-900 text, --color-ruby underline.** Not ruby text -
+ruby is the action colour, and a body full of ruby links stops links being
+distinguishable from buttons. WCAG 1.4.1 requires more than colour to mark a
+link, so the underline carries the affordance and the text stays calm for
+long-form reading. Recorded in design/site-palette.md with a do-not-simplify
+note, since the obvious "tidy-up" is to make it a coloured link again.
+
+Also verified by eye, which settled a sequencing question: with 1a.2 alone the
+services page shows ruby icons beside blue card titles - visibly incoherent, so
+1a.2 and 1a.3 ship as separate commits in ONE PR. And the blue logo against
+ruby accents reads as intended: it identifies rather than competing.

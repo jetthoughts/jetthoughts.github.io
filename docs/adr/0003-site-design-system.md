@@ -144,7 +144,7 @@ Tiebreak, recorded last because it should not decide the question: light is
 also the cheaper path, since the blog already shipped light.
 
 **Consequence:** Phase 1a is unblocked — and with it the deletion of
-`--color-primary` / the late-cascade `#0066d6` anchor rule, which retires every
+`--color-primary` / the late-cascade `#0066d6` anchor rule (itself an AA fix — see 20.02), which retires every
 scoped `!important` workaround the blog currently carries.
 
 ## Decision

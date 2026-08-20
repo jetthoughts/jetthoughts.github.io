@@ -50,6 +50,28 @@ the zero-delta promotion pattern.
 | Surfaces | `--surface{,-raised,-sunken}` | `#ffffff` / `#faf7f3` / `#f2ece4` |
 | Dark surface | `--surface-ink`, `--color-obsidian*` | `#14110f`, JetVelocity obsidian family |
 
+# Body links: ink text, ruby underline
+
+Decided 2026-08-20 (2608 Phase 1a.3). Body content links are `--ink-900` text
+with a `--color-ruby` underline (~2px, ~3px offset); hover deepens the text to
+`--ruby-700` and the underline to full ruby.
+
+**Not ruby text.** Ruby is the *action* colour. A post body full of ruby links
+stops links being distinguishable from buttons — the accent loses its meaning
+when everything wears it.
+
+**The underline is the affordance, not decoration.** WCAG 1.4.1 requires body
+links to be distinguishable by more than colour, so the underline was always
+carrying that load. Once it does so explicitly, the text colour is free to stay
+calm, which is what long-form reading wants.
+
+**Do not "simplify" this back to a coloured link.** The colour it replaced,
+`#0066d6`, was itself an accessibility fix: it displaced `--color-primary`
+`#1a8cff` in Sprint #2 because the brand blue measured **3.37:1** and failed
+AA (`#0066d6` is 4.78:1). Phase 1a.3 retires that rule for its late-cascade
+specificity, NOT for its colour choice — any replacement must land at AA or
+better. `--ink-900` on white clears it comfortably.
+
 # Where dark is still deliberate
 
 Light is the default, not a monopoly. Three surfaces keep dark **by design** —
