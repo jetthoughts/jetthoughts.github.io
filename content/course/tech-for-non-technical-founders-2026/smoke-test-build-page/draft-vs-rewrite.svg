@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" role="img" aria-labelledby="rewrite-title rewrite-desc">
+  <title id="rewrite-title">Rewrite the headline and the value props - the builder's draft is generic by default.</title>
+  <desc id="rewrite-desc">Two columns compare an AI page builder's first draft with the version you ship. In the headline row, the draft reads "Smart Solutions for Modern Businesses"; the rewrite reads "Solo chiropractors: resubmit denied claims in 30 seconds". In the value-prop row, the draft reads "Calendar integration"; the rewrite reads "Stop re-typing the same denied claim". The draft cards carry a ruby edge marking the block to replace. Basis: one AI-builder first draft for a solo-chiropractor claims tool.</desc>
+  <defs>
+    <style>
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .colr  { font-size: 20px; font-weight: 700; fill: #cc342d; }
+      .colk  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .row   { font-size: 18px; font-weight: 600; fill: #555555; letter-spacing: 0.6px; }
+      .copy  { font-size: 20px; font-weight: 600; fill: #121212; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+    </style>
+    <marker id="tri2" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
+    </marker>
+  </defs>
+
+  <!-- page tone + editorial card -->
+  <rect width="720" height="400" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="384" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="48" text-anchor="middle" class="gk title">Rewrite the headline and the value props</text>
+  <text x="360" y="80" text-anchor="middle" class="gk msg">An AI builder's first draft is generic by default</text>
+
+  <!-- column headers -->
+  <text x="182" y="116" text-anchor="middle" class="gk colr">BUILDER'S FIRST DRAFT</text>
+  <text x="538" y="116" text-anchor="middle" class="gk colk">WHAT YOU SHIP</text>
+
+  <!-- Row 1: headline -->
+  <text x="24" y="142" class="sys row">HEADLINE</text>
+  <rect x="24" y="152" width="316" height="80" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <rect x="24" y="152" width="5" height="80" fill="#cc342d"/>
+  <text x="182" y="187" text-anchor="middle" class="gk copy">Smart Solutions for</text>
+  <text x="182" y="213" text-anchor="middle" class="gk copy">Modern Businesses</text>
+
+  <line x1="344" y1="192" x2="374" y2="192" stroke="#3a3a3a" stroke-width="2" marker-end="url(#tri2)"/>
+
+  <rect x="380" y="152" width="316" height="80" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="538" y="187" text-anchor="middle" class="gk copy">Solo chiropractors: resubmit</text>
+  <text x="538" y="213" text-anchor="middle" class="gk copy">denied claims in 30 seconds</text>
+
+  <!-- Row 2: value prop -->
+  <text x="24" y="262" class="sys row">VALUE PROP</text>
+  <rect x="24" y="272" width="316" height="80" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <rect x="24" y="272" width="5" height="80" fill="#cc342d"/>
+  <text x="182" y="320" text-anchor="middle" class="gk copy">Calendar integration</text>
+
+  <line x1="344" y1="312" x2="374" y2="312" stroke="#3a3a3a" stroke-width="2" marker-end="url(#tri2)"/>
+
+  <rect x="380" y="272" width="316" height="80" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="538" y="307" text-anchor="middle" class="gk copy">Stop re-typing the same</text>
+  <text x="538" y="333" text-anchor="middle" class="gk copy">denied claim</text>
+
+  <!-- one basis line -->
+  <text x="360" y="378" text-anchor="middle" class="sys basis">Basis: one AI-builder first draft for a solo-chiropractor claims tool</text>
+</svg>
