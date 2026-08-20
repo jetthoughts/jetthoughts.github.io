@@ -7,6 +7,7 @@ status: stable
 generated:
   by: claude/opus-5
   at: 2026-08-20T00:00:00Z
+timestamp: 2026-08-20T00:00:00Z
 sources:
   - id: hugo-config
     resource: config/_default/hugo.toml
@@ -146,6 +147,33 @@ grep):
 - Deliberately **not** banned: "15+ years". It cannot distinguish company tenure
   from staff experience ("our fractional CTOs average 15+ years") and
   false-positives immediately. A ban that cannot tell those apart is noise.
+
+# Ranking legacy posts are a live reservoir of fabricated claims (2026-08-20)
+
+The fabricated-claims purge (PRs #475 / #477 / #481) swept landing and course
+surfaces. It did not reach the blog archive, and the blog archive is where the
+traffic is. `ruby-3-4-yjit-performance-guide` - **6,310 impressions at position
+9.5**, one of the site's better-ranking pages - carried four classes of
+invention at once:
+
+| Fabrication | What it claimed |
+|---|---|
+| Invented third-party internals | Shopify saving "$2.4M" from YJIT |
+| Invented third-party results | GitHub deployment outcomes |
+| Invented client work | two JetThoughts case studies with no client behind them |
+| Invented future | a Ruby 3.5 / 3.6 / 4.0 roadmap |
+
+Rewritten in place 2026-08-20 as the Ruby 4.0 YJIT-vs-ZJIT guide with every
+claim sourced. Two rules follow:
+
+- **Extend the purge to ranking legacy posts, highest-impression first.** A
+  fabricated client story on a page nobody reads is a liability; on a page at
+  position 9.5 it is the first thing a prospect sees. SEO-era posts predate the
+  sourced-numbers policy and were never audited against it.
+- **Audit the premise before refreshing.** The content plan's *named* refresh
+  candidate had decayed to 4 impressions while this unnamed post was the real
+  asset. Pull live GSC at decision time; see
+  [content-plan](/content-strategy/content-plan.md).
 
 # Where this canon is repeated
 

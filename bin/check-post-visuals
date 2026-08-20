@@ -13,7 +13,7 @@
 # Usage: bin/check-post-visuals [dir]   (default: content/blog)
 #        POST_VISUALS_LIST=1 to print the full burn-down list.
 
-FLOOR = 78
+FLOOR = 72
 MIN_WORDS = 800
 root = ARGV[0] || "content/blog"
 
