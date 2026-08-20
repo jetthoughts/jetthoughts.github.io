@@ -265,14 +265,16 @@ $ falcon --config config/falcon.rb serve
 
 ### Rails Integration
 
-For Rails applications, Falcon works as a drop-in replacement for Puma, and it configures the one setting that matters on your behalf. Its [Railtie](https://github.com/socketry/falcon/blob/main/lib/falcon/railtie.rb) sets this unconditionally at boot:
+For Rails applications, Falcon works as a drop-in replacement for Puma, and it configures the setting most migration guides tell you to add. Its [Railtie](https://github.com/socketry/falcon/blob/v0.57.0/lib/falcon/railtie.rb) sets this whenever Falcon is loaded:
 
 ```ruby
-# what Falcon's Railtie already does for you - you do not add this
+# Falcon's Railtie sets this for you wherever the gem is loaded
 config.active_support.isolation_level = :fiber
 ```
 
-That scopes per-request state - `CurrentAttributes`, ActiveRecord connection leases - to the fiber rather than the thread. Size `pool:` in `config/database.yml` against the concurrency you expect; that one is your job.
+That scopes per-request state - `CurrentAttributes`, ActiveRecord connection leases - to the fiber rather than the thread. One caveat if you keep `falcon` in the production group only: in development the Railtie never loads, so the isolation level stays `:thread` there.
+
+The setting that is your job is `pool:` in `config/database.yml`, sized against the concurrency you expect rather than a thread count.
 
 Configure Falcon for Rails:
 
