@@ -161,6 +161,22 @@ conversion is buried under thousands of page-view "conversions". Un-marking
 `page_view` was deliberately **not** done here - it changes how a headline
 metric reads and belongs to 2608 Phase 0.1, not to this request.
 
+### Which browser channel you have decides whether it's doable *this session*
+
+Follow-up to the above, 2026-08-20: the UI path is right, but it needs an
+**authenticated** browser. Two channels exist and they are not equivalent:
+
+| Channel | GA session |
+|---|---|
+| `claude-in-chrome` extension | drives Paul's real Chrome - **signed in**, this is the one that worked for #495 |
+| `chrome-devtools` MCP | a separate Chrome-for-Testing profile - **signed out**; `analytics.google.com` redirects to `accounts.google.com` |
+
+If the extension reports "Browser extension is not connected", the GA UI is
+genuinely out of reach for that session and the honest report names *that*
+(with the fix: connect the extension / restart Chrome), not "console-only,
+Paul's". Never sign in to reach it - entering credentials is prohibited, and
+the block is the channel, not the task.
+
 ### Marking a key event is an agent-doable UI task, not an Admin-API task
 
 Recorded because the opposite was asserted twice in one session. The read-only

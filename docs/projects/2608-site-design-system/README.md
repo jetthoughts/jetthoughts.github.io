@@ -45,7 +45,7 @@ engagement** vs site avg 33–40% / 28–34s.
 
 | Phase | What | Gate | Status |
 |---|---|---|---|
-| 0 (slim) | record-baselines wrapper, blog scroll/CTA events, coverage, baseline doc | events verified firing | **PR #489** (GA4 admin steps manual) |
+| 0 (slim) | record-baselines wrapper, blog scroll/CTA events, coverage, baseline doc | events verified firing | **merged #489**; GA4 key-event toggles are agent-doable via the GA4 UI (see #495), not Paul's |
 | 2.1 | `blog-list` restyle + tag pages | A + B + C | **shipped 2026-08-20** (PR pending) |
 | 2.2 | posts: article-end CTA, ink tags (measure/full-bleed/code-ink deferred to 1a) | A + B + C | **shipped 2026-08-20** (PR pending) |
 | 2.2b | **Whole-blog rebuild** (post template: full-bleed cover, ink code blocks, meta-above-title; mobile covers on lists) | A + C | **in progress** (Paul 2026-08-20: no measure gates) |
