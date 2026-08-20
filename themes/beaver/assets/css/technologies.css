@@ -13,6 +13,19 @@
     padding-bottom: 60px;
 }
 
+/* Inline prose link in .description. It has no class of its own, so it
+   inherits the surrounding text colour - which keeps it legible on BOTH the
+   light variant and the .white variant over the near-black band. The
+   underline is what marks it as a link (WCAG 1.4.1); the reboot's
+   `a { text-decoration: none }` would otherwise leave it indistinguishable
+   from the sentence around it. */
+.technologies-component .description a {
+    text-decoration: underline;
+    text-decoration-color: var(--color-ruby);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
 .technologies-component .heading {
     margin-bottom: 20px;
     margin-top: 30px;

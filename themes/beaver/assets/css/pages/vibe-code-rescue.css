@@ -426,6 +426,22 @@
   margin-bottom: 18px;
 }
 
+/* Inline prose links inside the obsidian band. The site-wide `a` rule
+   resolves --link (--ink-900) for the light page ground; on this dark
+   section that lands at 1.03:1 and the link disappears. Give the dark
+   surface its own link role rather than letting the page default leak in. */
+.vcr-why p a {
+  color: var(--color-on-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--color-ruby);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.vcr-why p a:hover {
+  color: #ffffff;
+}
+
 .vcr-final {
   margin-top: 36px;
 }

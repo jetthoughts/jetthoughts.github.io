@@ -463,7 +463,7 @@ strong {
   font-weight: bolder;
 }
 a {
-  color: var(--link); /* was Bootstrap-reboot #007bff, masked by the old anchor rule */
+  color: inherit; /* was Bootstrap-reboot #007bff, masked by the old anchor rule; inherit so links stay legible on any ground - see navigation.css */
   text-decoration: none;
   background-color: transparent;
 }

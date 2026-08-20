@@ -190,7 +190,7 @@
 }
 
 /* Links: visible brand blue with hover underline (WCAG AA contrast)
-   #0066d6 = 4.78:1 on white. Sprint #2 promoted this from old var(--color-primary)
+   Sprint #2 promoted this from old var(--color-primary)
    which was 3.37:1 (WCAG fail). */
 .blog p a,
 .blog li a,
@@ -467,7 +467,8 @@
   hyphens: auto;
 }
 
-/* Links: WCAG AA contrast (#0066d6 = 4.78:1 on white) + visible underline */
+/* Body prose links: --link with a ruby underline (2608 Phase 1a.3). The
+   underline, not the colour, is what makes these distinguishable. */
 .blog p a, .blog li a, .blog td a {
   color: var(--link);
   text-decoration: underline;

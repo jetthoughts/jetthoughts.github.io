@@ -572,8 +572,20 @@ a.action-button:hover {
    Fixed at the cause instead: those eight reboot rules now resolve --link as
    well, so all bare `a` rules agree and no specificity contest is left to
    win. Do not reintroduce a :not() chain here — if a link needs a different
-   colour, give it a class. */
+   colour, give it a class.
+
+   WHY `inherit` AND NOT `var(--link)`: a bare <a> can sit on ANY ground.
+   Pinning one colour site-wide is what made the old rule paint #0066d6 onto
+   dark bands, and pinning --ink-900 there instead measured 1.03:1 — an
+   invisible link — on the homepage dark row, the dark case-study cards and
+   the vibe-code-rescue obsidian band. Inheriting means an unclassed link
+   takes the colour of the text around it, so it is legible on every surface
+   by construction and no dark section needs its own override.
+
+   Link-ness is then carried by the UNDERLINE, not the colour, which is what
+   WCAG 1.4.1 asks for anyway — see the prose link rules in style.css, which
+   apply --link plus the ruby underline where a link sits in body copy. */
 a {
-  color: var(--link);
+  color: inherit;
   text-decoration-color: var(--link-underline);
 }
