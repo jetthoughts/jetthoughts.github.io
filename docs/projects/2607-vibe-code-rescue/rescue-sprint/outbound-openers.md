@@ -40,7 +40,7 @@
 
 ### 4. r/startups OP 1sgsq6o (Reddit thread-reply)
 
-> "Vibe coding gave me a product. It also gave me a problem I couldn't fix." - this is exactly the pattern we built our rescue service around. AI tools are great for prototypes but the code they write often can't hold real users.
+> "Vibe coding gave me a product. It also gave me a problem I'm still paying for." - this is exactly the pattern we built our rescue service around. AI tools are great for prototypes but the code they write often can't hold real users.
 >
 > Book 45 minutes, walk us through it, and we'll map your codebase, task board, and dev chats - you get a no-jargon write-up of what's breaking and why within 48 hours. It's yours either way. Might save you another month of guessing.
 >

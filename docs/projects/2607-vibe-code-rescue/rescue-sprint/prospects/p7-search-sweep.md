@@ -272,6 +272,29 @@ The ≤30-day rule is not what is starving the list - the venue is. IH is openab
 
 ---
 
+## 8. Reddit access log - 2026-08-20 (Paul granted browser access)
+
+**Decision**: Paul, 2026-08-20 - no API access, use a browser instead, on the theory that the 403 was a `curl`/user-agent block.
+
+**Result: partly right, and it does not get us a sourcing lane.** 4 of the 10 Reddit rows were dated; a fresh sweep is not possible. What each route does, so nobody re-tries this blind:
+
+| Route | Result |
+|---|---|
+| `www.reddit.com/.../<thread>/.rss` via `curl` | **WORKS.** Atom feed, ~14KB, carries an exact `<published>` datetime, the OP's handle, the post body, and often the comment tree. This is the only route that produced verified dates. **But it rate-limits hard** - roughly 4 requests before it starts returning non-XML, and a 20-second gap between calls did not clear it. |
+| `www.reddit.com/r/<sub>/new/.rss` (listing feed) | **429 immediately.** No discovery lane. |
+| `old.reddit.com/...` HTML | Returns HTTP 200 and ~318KB, which looks like success and is not - the body is the `Welcome to Reddit` interstitial with zero posts. **Check the title, not the status code or the byte count.** |
+| `www.reddit.com/.../new.json` | **403.** |
+| **Automation Chrome** (`chrome-devtools`) on a public thread | `Reddit - Prove your humanity` - an interactive bot challenge. |
+| **Automation Chrome** on a subreddit listing | The page's own JS auto-answered a `js_challenge`, then Reddit escalated to **`You've been blocked by network security.`** Zero posts rendered. |
+
+**Stopped there.** The brief says document the block and stop rather than work around detection, so nothing was attempted past this point: no CAPTCHA solving, no login, no fingerprint spoofing, no proxy. Reddit is telling us plainly that automated reading is not welcome, and the campaign's own politeness rule ("if a URL won't load without login, DROP it - never force") says the same thing.
+
+**What this settles about the venue premise.** Reddit was the last hope for a cold public sourcing lane, on the strength of 10 of the 25 v1 rows having come from it. Those 10 rows are now the evidence against it: the 4 that could be dated are **98, 133, 230 and 363 days old**, meaning they were already 1-11 months stale on the day they were logged. Reddit is where this ICP talks, but we cannot read it at the cadence a ≤30-day lead window needs, and we could not read it in July either - the v1 rows only ever came from search excerpts, which is exactly how a misquote reached the openers (see `cold-prospect-list.md` §Pass 3).
+
+**A browser does not unblock this. An account or the official API would - that is a real decision with real terms attached, not a tooling tweak.** Until then, cold public sourcing has no venue: IndieHackers is open but empty of fresh distress (§7), HN is retired, X is supplier-dominated, Reddit is closed.
+
+---
+
 ## Rows
 
 | handle/channel | source URL | verified date | post\|comment | trigger# | why-ICP (verbatim quote) | verdict | thread health | best path |

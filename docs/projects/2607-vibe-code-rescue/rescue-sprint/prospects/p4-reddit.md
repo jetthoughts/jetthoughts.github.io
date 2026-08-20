@@ -8,7 +8,7 @@
 |---|---|---|---|---|
 | r/nocode OP (1tdaqs9) | https://www.reddit.com/r/nocode/comments/1tdaqs9/what_happens_when_nontechnical_people_try_to/ | 7 | "Im a non technical founder, and im stuck with my app" | ICP |
 | r/nocode OP (1qo1nug) | https://www.reddit.com/r/nocode/comments/1qo1nug/i_thought_nocode_would_save_me_months_it_actually/ | 7 | "I thought no-code would save me months — it actually made me more stuck" | ICP |
-| r/startups OP (1sgsq6o) | https://www.reddit.com/r/startups/comments/1sgsq6o/vibe_coding_gave_me_a_product_it_also_gave_me_a/ | 1 | "Vibe coding gave me a product. It also gave me a problem I couldn't fix." | ICP |
+| r/startups OP (1sgsq6o) | https://www.reddit.com/r/startups/comments/1sgsq6o/vibe_coding_gave_me_a_product_it_also_gave_me_a/ | 1 | "Vibe coding gave me a product. It also gave me a problem I'm still paying for." | ICP |
 | r/replit OP (1pneqwa) | https://www.reddit.com/r/replit/comments/1pneqwa/replit_deleted_my_project_heres_what_i_learned/ | 1 | "Replit deleted my project. Not maliciously. Just... it happened." | ICP |
 | r/replit OP (1ucjd4y) | https://www.reddit.com/r/replit/comments/1ucjd4y/broken/ | 1 | "Now it's just reached a point where it's completely broken and it gets stuck in this loop of Found it, Let me fix this, that didn't work" | ICP |
 | r/startups OP (1thpn8u) | https://www.reddit.com/r/startups/comments/1thpn8u/vibe_coding_and_the_if_you_buildit_paradox/ | 7 | "Vibe coding creates the illusion of progress. You describe the app, the tool writes the code, but you have no idea what it actually did." | semi-ICP |
@@ -29,7 +29,7 @@ Reddit thread bodies are not reliably fetchable. All quotes above are from searc
 ## VoC (verbatim founder lines - force-tag Push/Pull/Anxiety/Habit + speaker tag + URL)
 - **[Push]** "Im a non technical founder, and im stuck with my app" - `[VERBATIM-founder]` r/nocode OP, https://www.reddit.com/r/nocode/comments/1tdaqs9/what_happens_when_nontechnical_people_try_to/
 - **[Push]** "I thought no-code would save me months — it actually made me more stuck" - `[VERBATIM-founder]` r/nocode OP, https://www.reddit.com/r/nocode/comments/1qo1nug/i_thought_nocode_would_save_me_months_it_actually/
-- **[Push]** "Vibe coding gave me a product. It also gave me a problem I couldn't fix." - `[VERBATIM-founder]` r/startups OP, https://www.reddit.com/r/startups/comments/1sgsq6o/vibe_coding_gave_me_a_product_it_also_gave_me_a/
+- **[Push]** "Vibe coding gave me a product. It also gave me a problem I'm still paying for." - `[VERBATIM-founder]` r/startups OP, https://www.reddit.com/r/startups/comments/1sgsq6o/vibe_coding_gave_me_a_product_it_also_gave_me_a/
 - **[Anxiety]** "Replit deleted my project. Not maliciously. Just... it happened." - `[VERBATIM-founder]` r/replit OP, https://www.reddit.com/r/replit/comments/1pneqwa/replit_deleted_my_project_heres_what_i_learned/
 - **[Anxiety]** "it gets stuck in this loop of Found it, Let me fix this, that didn't work" - `[VERBATIM-founder]` r/replit OP, https://www.reddit.com/r/replit/comments/1ucjd4y/broken/
 - **[Anxiety]** "the complete app is a mess... totally unmaintainable." - `[VERBATIM-founder]` r/startups OP, https://www.reddit.com/r/startups/comments/1oex6aw/true_story_nontechnical_founder_tried_to_sell_a/
