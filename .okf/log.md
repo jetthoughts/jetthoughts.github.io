@@ -1276,3 +1276,43 @@ data, so any before/after read spanning 2026-08-13 to 08-20 compares a polluted
 before against a clean after. Date-bound every keyEvents query, or read the
 underlying event names rather than the aggregate. A fix that changes only
 future collection is not a fix to the series you are about to analyse.
+
+## 2026-08-20 - The stalled checkout is a hang, not a slow clone - make it fail fast
+
+Asked to "optimize the slow checkout" on a 7-minute `Asset Pipeline` job. The
+optimisation was the wrong frame, and the histogram said so before any code
+changed: across 170 checkout steps in the last 40 `publish.yml` runs, **137
+finished in 12-19s** and the bad tail piled up on **599s and 899s** - which
+are exactly the 10- and 15-minute `timeout-minutes` values. A duration that
+lands precisely on the cap did not run slowly; it never ran. Evidence: run
+32407671265 logs `git fetch` at 19:15:42 and `The operation was canceled` at
+19:30:41, with **zero output in between**.
+
+That reframes every "make the clone smaller" lever as beside the point. In
+particular the obvious one was already spent: **every job except
+`_hugo.yml / build` was already at the default `--depth=1`**, and run
+32414801788 hung 10 minutes on a shallow fetch. The one job that needs
+`fetch-depth: 0` needs it for `enableGitInfo` -> `.Lastmod`, so it cannot go
+shallow either. Nothing left to shrink.
+
+The fix works with the grain of the tool instead of around it: `actions/checkout`
+**already retries a failed fetch three times** (`src/git-command-manager.ts`
+wraps `fetch` in `retryHelper`) - it just never fires, because a hang is not a
+failure. So make the hang a failure. `http.lowSpeedLimit=1000` +
+`http.lowSpeedTime=30` abort a transfer that stops moving, and checkout's own
+retry recovers. No new action, no dependency, no per-step retry scaffolding.
+
+Two mechanics that would have silently no-op'd this:
+
+* It must be **`GIT_CONFIG_*` env, not `git config --global`.** Checkout logs
+  "Temporarily overriding HOME=..." before it runs git, so a global config set
+  by an earlier step never reaches it. The env form survives the HOME override.
+* **Reusable workflows do not inherit the caller's env**, and neither do
+  sibling workflow files. Six workflows check out; six copies of the block.
+
+The habit worth keeping is the last step, not the first: a config you can only
+*read back* is not a guard. Verified both directions against the real remote -
+at an absurd 100 MB/s floor a healthy fetch aborts with `curl 28 Operation too
+slow` (exit 128, an error `retryHelper` catches), and at the shipped 1 KB/s
+floor a real fetch of master completes clean. Reading the value back would have
+"passed" either way, including if the knob were inert.

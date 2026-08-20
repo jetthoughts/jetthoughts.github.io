@@ -64,9 +64,46 @@ above: since **2026-05-19** `actions/checkout` has been stalling silently on
 described upstream as silent stalls of 15-25 minutes killed by
 `timeout-minutes`. That is our signature exactly.
 
+**The duration histogram decides slow-vs-stalled — you do not have to guess**
+(2026-08-20, 170 checkout steps across the last 40 `publish.yml` runs):
+
+| Checkout duration | Steps |
+|---|---|
+| < 30s | 137 |
+| 30-120s | 13 |
+| 2-5 min | 7 |
+| 5-8 min | 3 |
+| > 8 min | 10 |
+
+A healthy checkout of this repo is **12-19s**. The bad tail is not a slow
+transfer smeared across a range — it piles up on **599s and 899s**, which ARE
+the 10- and 15-minute `timeout-minutes` values. A step that ends exactly at
+the cap never finished; it hung. And it is **not size**: run 32414801788 hung
+for 10 minutes on an already-shallow `--depth=1` fetch, and run 32407671265
+logged `git fetch` at 19:15:42 with the next line
+`The operation was canceled` at 19:30:41 — 15 minutes of zero output.
+
 Consequences for how to react:
 
-* **Re-run; do not raise the cap.** A timeout cannot rescue a step that never
+* **The stall now self-heals — a low-speed guard turns the hang into an
+  error** (2026-08-20). Every workflow that checks out sets, at workflow
+  level, `GIT_CONFIG_COUNT=2` / `http.lowSpeedLimit=1000` /
+  `http.lowSpeedTime=30`. Git aborts a transfer that has moved <1 KB/s for
+  30s, and `actions/checkout` **already retries a FAILED fetch 3 times**
+  (`src/git-command-manager.ts` wraps `fetch` in `retryHelper`, 3 attempts) —
+  it just never got the chance, because a hang is not a failure. A stall now
+  costs ~30s instead of the whole job.
+  Two details that make or break this: it must be **`GIT_CONFIG_*` env, not
+  `git config --global`** (checkout logs "Temporarily overriding HOME=..."
+  before it runs git, so an earlier step's global config is invisible), and
+  **reusable workflows do not inherit the caller's env** — `_hugo.yml` needs
+  its own copy, as does every sibling workflow file.
+  Verified both directions before shipping: at an absurd 100 MB/s floor a
+  healthy fetch aborts with `curl 28 Operation too slow` (exit 128 — an error
+  `retryHelper` catches), and at the shipped 1 KB/s floor a real fetch of
+  master completes normally. A config you can only read is not a guard.
+* **If it still stalls: re-run; do not raise the cap.** A timeout cannot
+  rescue a step that never
   progresses — raising it only makes each failure cost longer. Confirm first
   by pulling the job log
   (`gh api repos/<owner>/<repo>/actions/jobs/<job_id>/logs`) and looking for
@@ -91,6 +128,11 @@ Consequences for how to react:
   skipped. Measured: bare blobless clone **4.7 MB in 1.1s** vs the 1.70 GiB
   pack, and `git log -1 -- content/blog/<post>/index.md` still returned the
   correct date in **0.02s with zero blobs fetched**, so GitInfo is unaffected.
+  **"Just shallow-clone it" is not an available lever** — every job other than
+  `_hugo.yml / build` already checks out at the default `--depth=1`, and they
+  stall anyway (run 32414801788, 10 min on `--depth=1`). The one job that
+  cannot go shallow is the one that must not: `enableGitInfo` in
+  `config/_default/hugo.toml` needs commit history to resolve `.Lastmod`.
 * **The deeper fix is the content weight**, not the checkout flags: 625 MB of
   images in git is the floor every job pays. Moving them to LFS or
   CDN-only would be a separate, larger decision.
