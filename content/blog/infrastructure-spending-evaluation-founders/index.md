@@ -664,9 +664,11 @@ If <5% → GREEN FLAG (reasonable spending)
 
 ---
 
-## Real Founder Stories: Wasted Infrastructure & Lessons Learned
+## Where the Money Actually Goes: Three Patterns
 
-These are real stories from our clients (names changed, numbers accurate).
+The three walkthroughs below are illustrative composites of how infrastructure
+overspend happens. They are not client case studies, and the figures are
+round numbers chosen to show the shape of the problem.
 
 ### Story 1: "We Spent $60,000 on Infrastructure for 100 Users"
 
