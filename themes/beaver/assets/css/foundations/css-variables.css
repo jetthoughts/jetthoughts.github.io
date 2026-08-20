@@ -48,4 +48,49 @@
   --color-ruby-hover: #e04a42;
   --color-on-dark: #dfe2eb;
   --color-label-dark: #8f97a8;
+
+  /* ==================================================================
+     Rescue Room light palette — promoted here 2026-08-20 (2608 Phase 1a.1)
+     from the three blog page files that scoped them under an `rr-` prefix
+     (single-post.css, pages/blog-single.css, pages/blog-list.css).
+     Palette resolved LIGHT in ADR-0003; this file loads inline site-wide
+     via the `navigation` bundle, so defining them here is what makes them
+     available to the other 17 bundles in 1a.2-1a.4.
+
+     ZERO-DELTA BY CONSTRUCTION: the values are identical to the `rr-`
+     definitions being replaced, and the `rr-` names are kept below as
+     aliases, so every existing consumer resolves to exactly the same
+     colour. Nothing should move in a screenshot. That is the point —
+     it turns the 1a.2 deletion into a value change rather than a rename.
+     ================================================================== */
+
+  /* Ink: warm neutral ramp. Replaces the cool --color-dark #121212 /
+     --color-muted #969798 pair as those consumers migrate in 1a.2. */
+  --ink-900: #14110f;   /* headings, primary text */
+  --ink-700: #3d3733;   /* body */
+  --ink-500: #6b625c;   /* secondary, captions, meta */
+  --ink-300: #a49b94;   /* disabled, placeholder */
+  --line:    #e7e1d9;   /* hairlines — the only border colour */
+
+  /* Light surfaces. The dark counterpart is the existing
+     --color-obsidian* family; one dark band per page (ADR-0003). */
+  --surface:         #ffffff;
+  --surface-raised:  #faf7f3;   /* warm, not the cool #f5f6f7 it replaces */
+  --surface-sunken:  #f2ece4;
+  --surface-ink:     #14110f;   /* the single dark band */
+
+  /* Ruby tints. --color-ruby #cc342d (5.1:1 on white, AA both
+     directions) and --color-ruby-hover already exist above. */
+  --ruby-700: #9e2620;  /* pressed / text-on-light where AA needs more */
+  --ruby-100: #fbeae8;  /* tint background */
+  --ruby-050: #fdf5f4;  /* hero blush (course page, campaign heroes) */
+
+  /* Aliases: the blog shipped against these names. Kept so 1a.1 renders
+     identically; DELETE in 1a.4 once the three page files consume the
+     canonical names. */
+  --rr-ink-900: var(--ink-900);
+  --rr-ink-700: var(--ink-700);
+  --rr-ink-500: var(--ink-500);
+  --rr-line: var(--line);
+  --rr-surface-raised: var(--surface-raised);
 }
