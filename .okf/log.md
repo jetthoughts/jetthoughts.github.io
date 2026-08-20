@@ -2063,3 +2063,28 @@ bot traffic. The concept existed and said so. Read `.okf/` for the domain
 before querying it, not after.
 Detail: `docs/adr/0003-site-design-system.md`, `docs/adr/0004-static-site-experimentation.md`,
 `docs/projects/2608-site-design-system/`, `.okf/workflows/analytics-access.md`.
+
+## 2026-08-20 - Blog-first: index restyled; the feature-slot mask lesson
+
+Paul re-sequenced 2608 to blog-first - confirm engagement where the humans
+already land before touching chrome or money pages. Clarity baseline
+(bot-filtered): blog pages 25.2% avg scroll depth / 26.3s engagement vs site
+avg 33-40% / 28-34s. Phase 2.1 shipped: feature slot for the newest post,
+curated ICP filter pills (rails/ruby/security/startup/hiring/ai - verified
+live in prod; top-by-count would surface dev.to noise), 1200:630 landscape
+covers replacing the letterboxed 180x180 squares, reading time on every row,
+CTA band with Clutch note. Tokens scoped into blog-list.css under an rr-
+prefix for Phase 1a promotion. The late-cascade #0066d6 anchor monster
+(a:not(...)x7, ~8 class-levels) forced the same scoped !important workaround
+vibe-code-rescue.css documents; a third page fighting it strengthens the
+Phase 1a case for deleting it.
+
+Testing lesson worth keeping: a NEW content-churning region needs a skip_area
+mask THE SAME COMMIT it ships. The feature slot escaped the existing
+.blog-post mask, and its lazy cover raced the snapshot - baselines
+re-recorded differently on consecutive runs. Masking .post-feature fixed
+determinism AND the future churn (the slot rotates with every published
+post; unmasked it would break the baseline weekly). Also re-learned: the
+dirty-fixture guard diffs against git HEAD - staging an accepted PNG changes
+nothing; commit it, then re-run.
+Detail: docs/projects/2608-site-design-system/20-29-strategy/20.01-rollout-plan.md
