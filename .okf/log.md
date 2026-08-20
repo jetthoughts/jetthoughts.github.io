@@ -2,6 +2,46 @@
 
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
+## 2026-08-21 - Two gate lessons from merging six PRs: the stall masks, the local red lies
+
+Both are sharpenings of rules the bundle already had, and both came from the
+same PR (#511) during a queue-clearing pass.
+
+**The checkout stall can hide a real failure behind it.** ci-gates already said
+"re-run, don't raise the cap" and "if the job got past checkout it is a real
+failure". Necessary, not sufficient. #511's `Unit Tests` read `fail 10m2s` - the
+stall signature exactly - and the tempting call was "known flake, merge". The
+fresh run got past checkout and failed again in **1m48s** on a genuine defect:
+`PavedPathGuardTest` caught `friday-report.css` wired into `bin/qtest` but
+missing from `css-bundle-ownership-map.md`, which is the other half of
+new-page.md step 6. Same check, same PR, two unrelated causes. The rule added:
+**a slow failure and a fast failure are different failures** - multi-minute with
+no assertion output is infrastructure, fast with an assertion is the code, and
+the first red's explanation must never carry over to the second.
+
+**A local visual red cannot condemn a branch until master has been run the same
+way.** `bin/qtest --changed` on #511 went red pointing at
+`services/fractional-cto` - a page the PR never touched - and the available
+story was that its `postcss.config.js` edit had shifted CSS site-wide. It had
+not: the edit only ADDS purgecss safelist entries, and safelisting more can only
+preserve more CSS, never remove any. The check that settled it was the same
+system test on clean `origin/master` on this macOS host: **34 runs, 6 failures,
+8 of 77 screenshots mismatched.** The suite is red on master here, so the local
+leg was unusable for the question. CI's native-Linux Screenshot Tests passed
+#511 in 16m15s; CI was right and local was noise. Also worth knowing: the run
+rewrites two of those baselines mid-run and then fails its own dirty-check, so
+`git checkout -- test/fixtures/screenshots/` never converges.
+
+**Half-wired page bundles are a real recurring class.** The guard exists because
+`docs/workflows/new-page.md` step 6 has two halves - `bin/qtest` PAGE_TESTS and
+the ownership map - and #511 did one. Anyone adding `themes/beaver/assets/css/pages/*.css`
+does both or the guard reds.
+
+**Repo hygiene:** #505 landed two Phase-1a verification PNGs (392KB) at the repo
+root. Every other screenshot in this repo lives under `docs/projects/<project>/`.
+Removed in #514. Binary at the repo root is the kind of thing the next session
+copies because it looks sanctioned.
+
 ## 2026-08-21 - The course's "good positions" were an artifact; GA4 UI setup closed out
 
 **Course discovery diagnosed, and the inherited premise is retracted.** Two

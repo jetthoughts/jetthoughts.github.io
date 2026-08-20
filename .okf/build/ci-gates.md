@@ -12,6 +12,8 @@ verified:
     at: 2026-08-07T00:00:00Z
   - by: claude/sonnet-5
     at: 2026-08-20T00:00:00Z
+  - by: claude/opus-5
+    at: 2026-08-21T00:00:00Z
 ---
 
 # What CI enforces on a PR
@@ -70,6 +72,16 @@ Consequences for how to react:
   (`gh api repos/<owner>/<repo>/actions/jobs/<job_id>/logs`) and looking for
   that group/error pair. If the job got PAST checkout, it is a real failure and
   a re-run is the wrong move.
+* **Re-read the re-run — the stall can be hiding a real failure** (2026-08-21).
+  On PR #511 `Unit Tests` read `fail 10m2s`, the stall signature exactly, and
+  "known flake, merge it" was the tempting call. The fresh run got past
+  checkout and failed again in **1m48s** — a genuine defect (`PavedPathGuardTest`
+  caught a page CSS bundle wired into `bin/qtest` but absent from
+  `css-bundle-ownership-map.md`). Same check, same PR, two different causes. So
+  the rule above is necessary but not sufficient: **a slow failure and a fast
+  failure are different failures.** Multi-minute with no assertion output is
+  infrastructure; fast with an assertion is the code. Never let the first red's
+  explanation carry over to the second.
 * **Shrink what we ask for.** We cannot fix upstream, only reduce exposure.
   This repo is a heavy ask: **1.70 GiB pack**, and `content/` alone is
   **625 MB across 1,576 images**, downloaded by every job regardless of depth.
