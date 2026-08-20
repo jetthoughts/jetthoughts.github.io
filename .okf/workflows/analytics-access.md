@@ -13,6 +13,8 @@ verified:
     at: 2026-08-13T09:56:20Z
   - by: claude/fable-5
     at: 2026-08-17T14:30:00Z
+  - by: claude/opus-5
+    at: 2026-08-20T00:00:00Z
 status: stable
 sources:
   - resource: "/content-strategy/content-plan.md"
@@ -141,6 +143,34 @@ GA4 `keyEvents` = **0**. The full 28-day event inventory is `page_view`,
 `session_start`, `first_visit`, `user_engagement`, `scroll`, `click` (4 total),
 and 9 `course_*` events. No form submit, no contact-CTA click, no booking. Any
 question of the form "did traffic convert" is currently unanswerable from GA4.
+
+**Update 2026-08-20 — `keyEvents` is now non-zero and still means nothing.**
+A 56-day pull returns 4,063 key events: `page_view` has been marked a **key
+event** in the GA4 admin since the 2026-08-13 audit. The underlying inventory is
+unchanged — still no form submit, no `generate_lead`, no booking; `click` is 9
+in 56 days. This is worse than the zero it replaced, because a non-zero
+conversion count that counts page views reads as conversions to anyone who does
+not check the event behind it. **Never quote `keyEvents` or "conversions" from
+this property without listing the events behind the number.** Fix queued as
+2608 Phase 0.1 (un-mark `page_view`, add `generate_lead` on form submit).
+
+## No A/B test can reach power here — do not design one
+
+Falls directly out of the bot correction above. Real human traffic is ~255
+sessions / 28 days ≈ **9–15/day**, not the ~300/day the raw GA4 number implies.
+Sample size per arm at α=0.05, power 0.80, n ≈ 16·p(1−p)/δ²:
+
+| Metric | Baseline | Effect | Sessions | Days at ~12/day |
+|---|---|---|---|---|
+| Blog index → post CTR | 30% | +20% rel. | 1,866 | **155** |
+| Scroll-to-CTA reach | 25% | +20% rel. | 2,400 | **200** |
+| Lead conversion | 1% | +50% rel. | 12,672 | **~3 years** |
+
+Even the cheapest engagement metric needs five months. **A/B testing is not
+available on this site** — the trap is sizing a test on the raw GA4 figure,
+which makes an 8-day run look feasible and would in fact be measuring bots.
+Revisit only above ~200 human sessions/day sustained. Full reasoning and the
+replacement gates: `docs/adr/0004-static-site-experimentation.md`.
 
 # Baseline at setup
 

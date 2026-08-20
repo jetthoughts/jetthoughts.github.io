@@ -2032,3 +2032,31 @@ Also settled: `bin/qtest --changed` rotates random extra pages per run, so two
 consecutive runs cover different sets. A green qtest is not "these pages are
 fine", it is "the pages it happened to pick are fine". `bin/test` is the
 constant net.
+## 2026-08-20 — Site design system proposed; A/B testing ruled out on arithmetic
+
+Proposed one design system for site chrome (ADR-0003 "Rescue Room") after
+measuring the incoherence: `--color-primary: #1a8cff` is named primary but
+appears in no brand definition, with 161 `var()` references (~140 painting
+visibly) and 52 literals; two spacing tokens total; homepage 10,394px with six
+background switches and six primary CTAs. The course page already implements
+the proposed language independently, which makes this extraction rather than a
+rebrand. Rollout is the FL-burn-down strangler, sequenced by whether layout
+moves — recolour and spatial split into separate PRs so reverting one leaves a
+coherent state.
+
+The request was "A/B test before each big change". It cannot be met, and the
+reason is already in `.okf/workflows/analytics-access.md`: GA4 is 85–90% bots,
+so real traffic is ~9–15 human sessions/day, not the ~300/day a raw pull
+reports. At that volume the cheapest viable engagement test needs 155 days and
+lead conversion needs ~3 years. ADR-0004 records this plus the replacement
+gates (qualitative / guardrails / reversibility) and a ~200 sessions-a-day
+revisit threshold. Also found: `keyEvents` is no longer 0 — `page_view` has
+been marked a key event since the 08-13 audit, so GA4 now reports 4,063 "key
+events" that count page views. Worse than the zero it replaced.
+
+Process note: the raw GA4 numbers were pulled before reading the OKF concept
+that explains how to read them, and the first draft of ADR-0004 was sized on
+bot traffic. The concept existed and said so. Read `.okf/` for the domain
+before querying it, not after.
+Detail: `docs/adr/0003-site-design-system.md`, `docs/adr/0004-static-site-experimentation.md`,
+`docs/projects/2608-site-design-system/`, `.okf/workflows/analytics-access.md`.
