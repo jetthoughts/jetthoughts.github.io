@@ -30,6 +30,37 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - what a self-iterating loop can and cannot do
+
+New concept [workflows/autonomous-loops.md](workflows/autonomous-loops.md),
+written from running Phase 1a.4 under `/ralph-loop`.
+
+**The structural limit:** a loop re-feeds one prompt until a completion promise
+is true, and ends only on that promise, the iteration cap, or a human cancel.
+**An agent concluding the work is blocked cannot end it** - that conclusion just
+produces another iteration. So a loop fits work whose completion is mechanically
+checkable AND whose scope is known-correct. It has no move for "the
+specification is wrong".
+
+1a.4 was the demonstration: one of four scope items was as written, two were
+gated by an unnamed design token, and the loop kept iterating past the point
+where delivery was blocked - producing investigation and documentation instead
+of the merge the prompt asked for. Useful output, but not what "execute until
+merged" meant. **Cancel signal recorded: the same blocking question asked in
+three or more consecutive iterations.**
+
+**What held up and is worth keeping:** WIP=1 with a codex review before every
+merge, and reverting rather than shipping when a change proved null or harmful -
+five reverts, including a 41-rule sweep that measured as an AA regression. A
+loop rewards visible progress, so revert-discipline is the first thing it
+erodes.
+
+Also recorded: put gate traps IN the prompt. The 1a.4 prompt carried the
+vacuous-green dtest warning, the compared-count rule and the `--strict` exit
+code, and none was violated across the whole run - the loop re-reads the prompt
+every iteration, which makes it the cheapest place for rules that otherwise
+decay.
+
 ## 2026-08-21 - the NULL CHANGE, and empty results that are not absence
 
 Two patterns recurred through Phase 1a.4 often enough to be rules, and neither
