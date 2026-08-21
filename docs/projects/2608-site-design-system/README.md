@@ -164,13 +164,11 @@ accent either.
 Applying it is a visible brand change on the dark bands, so it is recorded as
 a decision rather than executed - but the analysis is done and every number
 here is measured.
-Only `--color-ruby-hover` clears AA on both grounds, and it is named for a
-hover state - using it as a static on-dark accent is semantically wrong. The
-ramp has `--ruby-700` for "text-on-light where AA needs more" and no
-counterpart for dark. **The decision is whether to name one** (e.g.
-`--ruby-on-ink`, seeded at `#e04a42` or lighter for more margin), which is a
-design call rather than a sweep. `technologies.css:10` already gestures at
-the problem in a comment.
+
+The ramp has `--ruby-700` for "text-on-light where AA needs more" and no
+counterpart for dark; naming one is the decision. `technologies.css:10`
+already gestures at the problem in a comment.
+
 **"THREE button roles" is already built - and unused.** Investigated
 2026-08-21. `themes/beaver/assets/css/components/c-button.css` defines exactly
 three roles (`--primary` ruby/white, `--secondary` white/dark, `--tertiary`
