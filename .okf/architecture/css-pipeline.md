@@ -135,8 +135,9 @@ The services painter was `rect.fl-shape` inside the same
 const s = document.createElement('style');
 s.textContent = '*, *::before, *::after { pointer-events: auto !important; }';
 document.head.appendChild(s);
-document.elementsFromPoint(x, y);   // overlays now appear in the stack
+const stack = document.elementsFromPoint(x, y);  // overlays now appear
 s.remove();
+stack;   // <- must be last: otherwise the completion value is s.remove()'s undefined
 ```
 
 Forcing hit-testability turns a click-through overlay into an ordinary stack
