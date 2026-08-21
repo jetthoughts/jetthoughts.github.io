@@ -189,7 +189,8 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_text "This is a composite example, not a real client's report"
     assert_link "Get a free code audit", minimum: 2
 
-    # No screenshot baseline yet - see the desktop test for why.
+    # Baseline recorded 2026-08-21 - see the desktop test.
+    assert_stable_screenshot "friday_report"
   end
 
   def test_free_consultation

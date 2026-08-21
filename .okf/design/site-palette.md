@@ -7,7 +7,7 @@ tags: [design, palette, css, tokens, adr]
 generated:
   by: claude/opus-5
   at: 2026-08-20T00:00:00Z
-timestamp: 2026-08-21T02:05:49Z
+timestamp: 2026-08-21T02:51:33Z
 ---
 
 # Resolved: LIGHT (ADR-0003, 2026-08-20)
@@ -82,6 +82,40 @@ calm, which is what long-form reading wants.
 AA (`#0066d6` is 4.78:1). Phase 1a.3 retires that rule for its late-cascade
 specificity, NOT for its colour choice — any replacement must land at AA or
 better. `--ink-900` on white clears it comfortably.
+
+# Ruby fails AA on the dark surfaces — unresolved, and it gates two phases
+
+Measured 2026-08-21 in the rendered production build:
+
+| Token | on `#000` | on `--surface-ink` `#14110f` |
+|---|---|---|
+| `--color-ruby` `#cc342d` | 4.10 **FAIL** | 3.67 **FAIL** |
+| `--color-ruby-hover` `#e04a42` | 5.23 pass | 4.68 pass (thin) |
+| `--ruby-700` `#9e2620` | 2.75 **FAIL** | 2.46 **FAIL** |
+
+Two consequences, and the second is the one that is easy to miss:
+
+1. **A single site-wide eyebrow style is not possible as specified.** The
+   canonical eyebrow (`--color-ruby`, 12px) was designed against LIGHT
+   surfaces. Applied site-wide it drops `home-services-eyebrow` and
+   `home-clients-eyebrow` to 4.10:1 - below AA for normal text, which 12px
+   unambiguously is. A full 41-rule sweep was written, measured and reverted
+   on 2026-08-21 for exactly this.
+2. **Migrating the dark bands to `--surface-ink` makes it WORSE**, because
+   `#14110f` is lighter than `#000`: ruby-on-dark falls 4.10 -> 3.67. So the
+   footer/dark-surface migration cannot ship before the on-dark accent is
+   decided, or it degrades contrast on every band it touches.
+
+Only `--color-ruby-hover` clears AA on both grounds, and it is named for a
+hover state - semantically wrong as a static accent. The ramp has `--ruby-700`
+for "text-on-light where AA needs more" and **no counterpart for dark**.
+Naming one is a design decision; tracked in
+`docs/projects/2608-site-design-system/README.md` under Outstanding.
+
+**Until it is named: do not apply a ruby text token to any surface in the
+section below.** Neither of the two automated gates catches this - those
+homepage sections carry no contrast test, and the screenshot suite passes a
+colour change of this size.
 
 # Where dark is still deliberate
 

@@ -312,8 +312,11 @@ class DesktopSiteTest < ApplicationSystemTestCase
     # promised a report, this one has to promise the next step.
     assert_link "Get a free code audit", minimum: 2
 
-    # No screenshot baseline yet: the 2608 site-wide recolour is mid-flight and
-    # would churn it immediately. Record with the bundle's first visual PR.
+    # Baseline recorded 2026-08-21: this is the bundle's first visual PR
+    # (2608 1a.4 moved .friday-eyebrow onto the canonical eyebrow style), which
+    # is the trigger the deferral named. It will churn again when the dark-surface
+    # recolour lands - that is what a baseline is for.
+    assert_stable_screenshot "friday_report"
   end
 
   def test_free_consultation

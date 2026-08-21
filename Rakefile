@@ -28,7 +28,7 @@ namespace :test do
   CRITICAL_TESTS =
     "/homepage|blog_index|blog_post$|visit_blog_post|course_|old_blog_url|" \
     "test_services($|_menu)|contact_us|free_consultation|not_found|" \
-    "hamburger|color_system|mermaid|codeblock_language/"
+    "hamburger|color_system|mermaid|codeblock_language|friday_report/"
 
   Rake::TestTask.new(:critical) do |t|
     t.libs << "test"
