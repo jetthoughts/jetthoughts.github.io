@@ -73,8 +73,15 @@
 {{- end -}}
 <meta name="robots" content="{{ $robots }}" />
 
-{{/* Canonical URL */}}
-<link rel="canonical" href="{{ .Permalink }}" />
+{{/* Canonical URL. A /next/ staging stub (ADR-0006) points at the page it
+     mirrors: the copy lives there, so that URL is the canonical one. Done
+     here rather than in layouts/next/baseof.html because this partial always
+     emits a canonical - a second tag in the v2 baseof would ship TWO. */}}
+{{- $canonical := .Permalink -}}
+{{- with .Params.source_page -}}
+  {{- with site.GetPage . -}}{{- $canonical = .Permalink -}}{{- end -}}
+{{- end -}}
+<link rel="canonical" href="{{ $canonical }}" />
 
 {{/* Open Graph Tags */}}
 <meta property="og:type" content="website" />

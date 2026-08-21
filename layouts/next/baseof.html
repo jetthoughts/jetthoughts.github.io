@@ -1,0 +1,156 @@
+{{/* v2 clean-slate rail (ADR-0006). Forked from themes/beaver/layouts/baseof.html:
+     every FUNCTIONAL part is kept verbatim - SEO meta, the five schema
+     partials, favicons, analytics (conversion events are attribute-driven, so
+     keeping the partial keeps them firing), theme-color/msapplication, the
+     service-worker block, the skip link and <main id="main-content">.
+     DROPPED: the 7 hardcoded fl-* body classes, the .fl-page wrapper and the
+     two site-wide css-inline calls - foundations/css-variables.css rides the
+     page bundle instead (layouts/next/single.html). Chrome partials are
+     reused verbatim; their CSS comes via the page bundle. */}}
+<!doctype html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{ partial "seo/enhanced-meta-tags.html" . }}
+
+    {{ block "header" . }}{{ end }}
+
+    {{ partialCached "page/favicons.html" . "favicons" }}
+    {{/* Analytics (GA4 + Clarity) load ONLY on the real production host -
+         local dev, test builds and any other baseURL never inject tracking. */}}
+    {{/* analytics stays OFF for noindexed staging pages so /next/ testing
+         never pollutes the engagement read (ADR-0004 gate). */}}
+    {{ if and (strings.Contains site.BaseURL "jetthoughts.com") (not .Params.noindex) }}
+    {{ partial "page/analytics.html" . }}
+    {{ end }}
+    {{ $favicon := resources.Get "/img/favicon/favicon.ico" | fingerprint "md5" }}
+    <link rel="shortcut icon" href="{{ $favicon.Permalink }}" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    {{ $browserConfig := resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint "md5" }}
+    <meta
+      name="msapplication-config"
+      content="{{ $browserConfig.Permalink }}" />
+    <meta name="theme-color" content="#ffffff" />
+
+    {{/* Enhanced SEO Schema Markup */}}
+    {{ partial "seo/enhanced-organization-schema.html" . }}
+    {{ partial "seo/comprehensive-service-schema.html" . }}
+    {{ partial "seo/article-schema.html" . }}
+    {{ partial "seo/breadcrumb-schema.html" . }}
+    {{ partial "seo/faq-schema.html" . }}
+  </head>
+
+  <body lang="en">
+    <a class="skip-link sr-only" href="#main-content">Skip to main content</a>
+
+    {{ partialCached "page/header.html" . "header" }}
+
+    <main id="main-content" role="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partialCached "page/footer.html" . "footer" }}
+    {{ block "footer" . }}{{ end }}
+
+    {{ partialCached "page/site-scripts" . "site-scripts" }}
+    {{/* Mermaid/font feature block — copied from the theme baseof (kept
+         verbatim per 20.06 §PR-1 "functional parts"; its omission was a codex
+         finding). One difference: a /next/ stub renders the SOURCE page's
+         content, so the render hook sets the Store flags on the SOURCE page —
+         $mp resolves source-or-self so diagrams keep working when a
+         mermaid-carrying page is staged or flipped. */}}
+    {{ $mp := . }}
+    {{ with .Params.source_page }}{{ with site.GetPage . }}{{ $mp = . }}{{ end }}{{ end }}
+    {{/* features.mermaid-font: pages whose diagrams were pre-rendered by
+         bin/render-mermaid need Caveat but not mermaid.js. */}}
+    {{ if or ($mp.Store.Get "features.mermaid") ($mp.Store.Get "features.mermaid-font") }}
+      {{/* The house diagram font. Without this, 'Caveat, Patrick Hand,
+           cursive' resolves to the PLATFORM generic cursive (Apple
+           Chancery on macOS, varies elsewhere) - a per-visitor identity
+           lottery caught by the 2026-07-12 M5 design review. Loaded only
+           on pages that render mermaid. */}}
+      {{/* Self-hosted (2026-08-01): same Google woff2 binaries + unicode
+           ranges, served same-origin. Kills 2 preconnects + a css2 fetch +
+           a jsdelivr fetch per mermaid page, and makes the visual tests
+           hermetic (no third-party network inside test runs). The vendored
+           mermaid.min.js hash-matches the old SRI pin. */}}
+      <link rel="preload" href="/fonts/caveat-latin.woff2" as="font" type="font/woff2" crossorigin />
+      <link href="/css/fonts-caveat.css" rel="stylesheet" />
+    {{ end }}
+    {{ if $mp.Store.Get "features.mermaid" }}
+      <script src="/js/vendor/mermaid-11.15.0.min.js"></script>
+      <script>
+        // useMaxWidth: true is Mermaid's default. SVGs scale to fit the
+        // content column on desktop (no big empty space when diagrams
+        // are tall) and shrink on mobile. For diagrams with too many
+        // nodes to fit legibly on mobile, the fix is to simplify the
+        // Mermaid source (fewer nodes, shorter labels, or split into
+        // sub-diagrams), not CSS gymnastics.
+        //
+        // Site-wide house theme (2026-07-12 design-critic pass). The
+        // handwritten family is the house identity - a clean-sans variant
+        // was tried on 2026-07-12 and rejected by the owner on sight.
+        // Legibility problems get fixed structurally (decision tables,
+        // compact SVGs, shorter node labels), not by changing the font.
+        // Per-diagram %%init%% directives still override these.
+        mermaid.initialize({
+          // startOnLoad is off: we render only after document.fonts.ready,
+          // so mermaid MEASURES node boxes with the same font it renders
+          // with. Rendering before Caveat loads measured labels in the
+          // fallback font's metrics - the root cause of the recurring
+          // "last character clipped" defects.
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: {
+            // Comic Sans MS mirrors the in-post SVGs' fallback so the two
+            // asset families stay visually related if the webfont fails.
+            fontFamily: "'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive",
+            fontSize: '20px',
+            primaryColor: '#fff5f5',
+            primaryBorderColor: '#cc342d',
+            primaryTextColor: '#1a1a1a',
+            lineColor: '#333',
+            edgeLabelBackground: '#faf7f2'
+          },
+          flowchart: { nodeSpacing: 45, rankSpacing: 55, padding: 14 },
+          // Never set font-size or padding on .edgeLabel via themeCSS:
+          // mermaid measures the label box BEFORE themeCSS applies, so any
+          // late metric change renders text wider than the measured box and
+          // clips trailing characters. border-radius is safe (non-metric).
+          themeCSS: '.edgePaths path { stroke-width: 2.25px; } .edgeLabel { border-radius: 6px; }'
+        });
+        // fonts.ready alone is not enough: it resolves when the fonts
+        // REQUESTED so far settle, and the hidden .mermaid source may never
+        // request Caveat - mermaid then measures with the fallback and the
+        // late Caveat repaint shifts every glyph (the recurring screenshot
+        // flake + clipped-label defect). fonts.load() forces the fetch.
+        Promise.all([
+          document.fonts.load("20px Caveat"),
+          document.fonts.load("20px 'Patrick Hand'"),
+          document.fonts.ready
+        ]).then(function () {
+          mermaid.run();
+        });
+      </script>
+    {{ end }}
+    <script>
+      // Skip SW registration on local dev so cache never serves stale content
+      // during iteration. Production hosts keep SW for offline + repeat visits.
+      if (
+        "serviceWorker" in navigator &&
+        location.hostname !== "localhost" &&
+        !location.hostname.startsWith("127.") &&
+        location.hostname !== "0.0.0.0"
+      ) {
+        navigator.serviceWorker.register("/sw.js?v={{ now.Unix }}");
+      } else if ("serviceWorker" in navigator && navigator.serviceWorker.getRegistrations) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          regs.forEach(function (reg) { reg.unregister(); });
+        });
+      }
+    </script>
+  </body>
+</html>

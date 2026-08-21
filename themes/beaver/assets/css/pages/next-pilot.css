@@ -1,0 +1,44 @@
+/* next-pilot — the v2 clean-slate rail (ADR-0006).
+ *
+ * Loaded ONLY by layouts/next/single.html, for the staging pages under
+ * /next/. It shares nothing with the legacy cascade on purpose: no style.css,
+ * no 586.css, no vendors/base-4.min.css, no legacy-theme-skin.css. Everything
+ * a /next/ page renders comes from foundations/css-variables.css, the two
+ * reused chrome stylesheets (navigation.css, footer.css), and this file.
+ *
+ * Deliberately near-empty: PR-2 styles the pilot per the winning design
+ * direction. House style written here before that decision is work done
+ * twice — the exact failure mode this rail exists to stop. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink-700);
+  font-family: var(--font-system-ui);
+}
+
+/* Rail-level, not page-level: the reused site header is `position: absolute`
+   (navigation.css `.top-panel`), so it takes no space in flow. Every legacy
+   page happens to clear it with a hero that carries its own top padding - a
+   v2 page has no hero, and content renders UNDER the nav until something
+   reserves the room. On <main> rather than the article so any future
+   layouts/next/* template inherits the clearance. */
+main#main-content {
+  padding-top: 6.25rem;
+}
+
+.next-article {
+  max-width: 68ch;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-sm);
+}
+
+.next-article h1 {
+  color: var(--ink-900);
+}

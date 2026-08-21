@@ -1,0 +1,31 @@
+{{ define "header" }}
+  {{/* The clean-slate slice: deliberately NO style.css / 586.css /
+       base-4.min.css / legacy-theme-skin.css. css-variables rides this bundle
+       because the v2 baseof drops the site-wide inline calls; navigation.css
+       and footer.css carry the reused chrome. bundleName must stay unique
+       repo-wide - Concat races on a collision. */}}
+  {{- $resources := slice
+    (resources.Get "css/foundations/css-variables.css")
+    (resources.Get "css/navigation.css")
+    (resources.Get "css/footer.css")
+    (resources.Get "css/pages/next-pilot.css")
+  -}}
+  {{ partial "assets/css-processor.html" (dict "resources" $resources "bundleName" "next-pilot") }}
+{{ end }}
+
+{{ define "main" }}
+  {{/* The stub owns only the URL - copy keeps one source of truth, the real
+       page. Falls back to self so a stub with an unresolvable source_page
+       renders visibly wrong rather than failing silently. */}}
+  {{- $src := . -}}
+  {{- with .Params.source_page -}}
+    {{- with site.GetPage . -}}{{- $src = . -}}{{- end -}}
+  {{- end -}}
+  <article class="next-article">
+    <h1>{{ $src.Params.headline | default $src.Title }}</h1>
+    {{- with $src.Params.excerpt }}
+    <p class="next-lede">{{ . }}</p>
+    {{- end }}
+    {{ $src.Content }}
+  </article>
+{{ end }}
