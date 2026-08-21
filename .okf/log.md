@@ -3,6 +3,27 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+## 2026-08-21 - "tracked separately" was not true; now it is
+
+The DESIGN.md banner written earlier today claimed the full regeneration "is
+tracked separately". Nothing tracked it - the 2608 project had no outstanding
+section at all, so the only record was a sentence inside the very file that
+cannot be trusted.
+
+Fixed by giving it a real home: an **Outstanding** section in
+`docs/projects/2608-site-design-system/README.md` with the scope written out
+(reconcile the two-layers section with ADR-0003, strip every `--color-primary`
+reference including the primary-button spec, restate `.stitch/design.md` as
+cover-scoped, and regenerate `.impeccable/design.json` if it encodes the same
+palette - `/impeccable critique` now carries the design-review gate and would
+score against stale values). Both `DESIGN.md` and
+[site-palette](/design/site-palette.md) now point at it.
+
+Worth keeping as a shape: **"tracked separately" is a claim like any other.**
+It is the most natural thing to write when deferring work and the least likely
+to be checked, because it sounds like process rather than fact. If nothing can
+be named as the tracker, the work is not deferred - it is dropped.
+
 ## 2026-08-21 - design review is `/impeccable critique`, not stitch
 
 Paul reversed his own instruction the same day: *"i was wrong, you should use

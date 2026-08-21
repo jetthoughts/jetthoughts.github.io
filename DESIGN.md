@@ -113,9 +113,10 @@ instrument panel of a serious engineering shop, not a marketing gradient.
 >
 > `.stitch/design.md` is the **cover-image** system, not the page visual
 > language. This file still governs cover work and the brand ink; for PAGE
-> design follow `.okf/design/site-palette.md`. A full regeneration is
-> outstanding and is tracked separately - this banner exists so the file
-> cannot be followed into a resolved-and-reversed decision in the meantime.
+> design follow `.okf/design/site-palette.md`. The full regeneration is tracked
+> in `docs/projects/2608-site-design-system/README.md` under **Outstanding** -
+> this banner exists so the file cannot be followed into a
+> resolved-and-reversed decision in the meantime.
 
 The repository carries **two coexisting layers**, both real:
 
