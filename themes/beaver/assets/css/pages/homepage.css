@@ -1823,7 +1823,7 @@ img.mfp-img {
 
 
 .home-proof .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: #000000;
+  fill: var(--surface-ink);
 }
 
 
@@ -1902,7 +1902,7 @@ img.mfp-img {
 
 
 .home-why-us .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: #000000;
+  fill: var(--surface-ink);
 }
 
 
