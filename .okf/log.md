@@ -51,6 +51,40 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - the autonomous delivery prompt, and what its own review caught
+
+Added `docs/workflows/autonomous-delivery-prompt.md` - the operating prompt for
+running a goal unattended at a bar that survives adversarial review. Linked from
+[workflows/autonomous-loops.md](workflows/autonomous-loops.md), which is its
+complement: that concept says what a self-iterating LOOP can and cannot do, the
+prompt says what a delivery PASS must contain.
+
+It encodes this installation's own hard-won rules rather than generic
+orchestration advice - the evidence ladder with what each rung cannot say, test
+the instrument with positive AND negative controls, establish the
+baseline-of-the-baseline on pristine master, beware the batch, prefer
+description to prescription, panels must disagree by construction, round three
+on an invented instrument means delete it, one CLEAN round is the stopping
+signal.
+
+**Its own first draft failed review on three P1s, and the third is the useful
+one.** The appendix hardcoded surface counts - and two were wrong, because the
+count came from a shell call whose output I read as one listing when it was two
+commands concatenated. It also pointed the audit at `.claude/skills/`, which is
+a POINTER README; the real project skills live in `.agents/skills/` and
+`.skills/`, so following the draft would have skipped every one of them.
+
+Both defects are instances of rules written in the same document, three sections
+above the place that violated them: do not freeze a decaying number into durable
+prose, and measure the artifact rather than a proxy for it. Counts are now
+replaced by the commands that produce them, and the pointer trap is called out
+by name.
+
+The other two findings were also real: a blanket ban on parallel agents
+contradicted this repo's ENFORCED parallel okf-maintainer SOP (`AGENTS.md`), and
+the change shipped without its own OKF update, which is the same-commit gate.
+Both fixed here.
+
 ## 2026-08-21 - PR #540 hands 16 stale Linux baselines to the parallel PR
 
 Making the debt legible rather than silent, per the async-first rule. The
