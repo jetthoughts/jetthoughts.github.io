@@ -99,8 +99,8 @@ verification event.
 
 `git log -S` selects every commit that CHANGES a string`s occurrence count, so
 one hit means one net count change, not one event - a neighbouring question accepted as the answer,
-which is exactly what this entry is about. Both entries are restored with their times marked
-UNKNOWN - `at` omitted rather than guessed.
+which is exactly what this entry is about. Neither entry is restored to the frontmatter, and
+that is the honest end of it.
 
 A first repair attempt converted them by -3h, reading +03:00 off git commit
 stamps. Review refuted that too: e046adc54 records that the session clock was
@@ -118,11 +118,22 @@ last is the closest, and still wrong for a reason worth keeping: a commit instan
 records when TEXT LANDED, not when the check ran. Every attempt was an effort to
 produce a number, and the honest answer was that there isn`t one.
 
-The root index already said it - convert with a recoverable offset, or mark
-unknown - and only the second branch ever applied. `at` is optional in the spec
-and consumers must tolerate its absence, so omitting it IS the encoding for
-unknown. A YAML comment carries the reasoning and the bounding commits, because
-an identical-looking pair is what made me delete one in the first place.
+Omitting `at` was the fifth attempt and also failed: OKF v0.2 defines a
+`verified` event as `{ by, at }`, so an entry without a time is malformed, not
+unknown. The trust family as a whole is optional; the fields inside an event are
+not.
+
+So the two checks are recorded HERE, in prose, and not in the frontmatter: they
+happened, they landed in 8fa41494b and 86c2c91cc, and their times are
+unrecoverable. A schema that requires a timestamp cannot represent an event
+without one, and the correct response to that is to stop trying to encode it
+rather than to encode it falsely. A YAML comment in the concept points here so
+the absence reads as deliberate.
+
+The whole sub-thread cost six attempts over two metadata entries on one concept.
+Worth naming as its own lesson: when a fix has failed five times, the question to
+ask is not "what is the sixth encoding" but "does this belong in this field at
+all".
 
 ## 2026-08-21 - CSS ships both inline and as a linked file; text search cannot prove a selector applies
 

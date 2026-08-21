@@ -5,16 +5,14 @@ description: The proven module-review loop - a design critic (full render walk) 
 tags: [swarm, review, process]
 generated:
   by: claude/opus-5
-  at: 2026-08-21T05:22:29Z
+  at: 2026-08-21T05:33:58Z
 verified:
-  - { by: claude/opus-5, at: 2026-08-21T05:22:29Z }
-  # Two real checks whose times are UNKNOWN. The originals were invented, no
-  # offset recovers them, and a commit instant records when text landed, not
-  # when the check ran - so `at` is omitted rather than guessed. They landed in
-  # 8fa41494b and 86c2c91cc if a bound is ever needed. Do NOT dedup them.
-  - { by: claude/opus-5 }
-  - { by: claude/opus-5 }
-timestamp: 2026-08-21T05:22:29Z
+  - { by: claude/opus-5, at: 2026-08-21T05:33:58Z }
+  # Two earlier checks are NOT listed here: their times were invented, no offset
+  # recovers them, and a `verified` event requires `at`. They are recorded in
+  # log.md 2026-08-21 with their bounding commits (8fa41494b, 86c2c91cc) - prose
+  # can say "time unknown", this schema cannot.
+timestamp: 2026-08-21T05:33:58Z
 ---
 
 # The loop
