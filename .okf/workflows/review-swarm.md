@@ -9,7 +9,7 @@ generated:
 verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-21T00:14:52Z
+timestamp: 2026-08-21T00:21:12Z
 ---
 
 # The loop
@@ -49,14 +49,15 @@ taste-a's recolor suggestion because the anchor names Ruby as the brand
 accent ink.
 
 **Route design review through `/stitch-design`** (Paul, 2026-08-21) - but
-**name the design source for the surface first. There are three, and the
+**name the design source for the surface first. There are four, and the
 wrong one inverts the verdict.**
 
 | Surface | Design source | Note |
 |---|---|---|
 | Blog cover images | `.stitch/design.md` | "The Obsidian Engine" - **DARK**, canvas 2400x1260 |
 | Site chrome and pages | [site-palette](/design/site-palette.md) | **LIGHT by DEFAULT** (ADR-0003), ruby accent. Dark by design and NOT defects: blog cover art, ONE dark proof band per page, `/services/vibe-code-rescue/` |
-| Course pages | `.stitch/course-taste-design.md` | third system, taste-scoring anchor |
+| Course pages | `.stitch/course-taste-design.md` | taste-scoring anchor |
+| In-post SVG / Mermaid / LinkedIn exhibits | [house-visual-spec](/design/house-visual-spec.md) | hand-drawn style, 2-2.5px strokes, semantic colour (green = money ONLY), labels INSIDE shapes; social assets also per `linkedin-posts/README.md` |
 
 `.stitch/design.md` is the COVER project, not the site. Point stitch at it
 while reviewing a light page and it will judge light chrome against dark cover

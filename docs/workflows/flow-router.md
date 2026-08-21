@@ -22,6 +22,10 @@ Read this at session start to route tasks to the right workflow without explicit
   - Blog COVER images → `.stitch/design.md` (the dark "Obsidian Engine").
     Reviewing a *page* against this yields the recolour ADR-0003 rules out.
   - Course pages → `.stitch/course-taste-design.md`.
+  - In-post SVG, Mermaid diagrams, LinkedIn exhibits →
+    `.okf/design/house-visual-spec.md` (hand-drawn style, semantic colour —
+    green = money ONLY, labels inside shapes); social assets also
+    `linkedin-posts/README.md`.
 
   Stitch complements the rendered gates rather than replacing them: baselines
   check what SHIPPED, stitch checks what was INTENDED. Rule detail in

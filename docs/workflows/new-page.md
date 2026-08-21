@@ -66,9 +66,19 @@ Never edit `components/*.css` for one page's needs.
 ## 4. Design tokens
 
 Use the vars from `foundations/css-variables.css` (inlined site-wide):
-`--color-ruby` (#cc342d) · `--color-primary` (#1a8cff) · `--color-dark`
-(#121212) · `--color-muted` · `--font-system-ui` · `--radius-default` ·
-`--spacing-sm/md`. Visual language: `.stitch/design.md` (JetVelocity).
+`--color-ruby` (#cc342d) · `--color-dark` (#121212) · `--color-muted` ·
+`--font-system-ui` · `--radius-default` · `--spacing-sm/md`.
+
+**`--color-primary` (#1a8cff) was DELETED in Phase 1a.2 (#518) — do not use it.**
+`var(--color-primary)` now resolves to nothing and the declaration is dropped
+silently. Use the ink/surface/ruby tokens instead.
+
+**Visual language for a PAGE is `.okf/design/site-palette.md` — LIGHT by
+default** (ADR-0003), with three deliberate dark surfaces (blog cover art, one
+proof band per page, `/services/vibe-code-rescue/`). `.stitch/design.md` is the
+dark COVER-IMAGE system and is NOT the page visual language; building a page
+against it produces the recolour ADR-0003 rules out. In-body SVG/Mermaid follow
+`.okf/design/house-visual-spec.md`.
 
 ## 5. PurgeCSS greedy prefix (DO NOT SKIP)
 
