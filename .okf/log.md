@@ -52,8 +52,8 @@ time, which is verifiable - never invented).
 
 ## 2026-08-21 - CSS ships both inline and as a linked file; text search cannot prove a selector applies
 
-Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). Seven
-findings across three codex review rounds on PR #537, every one verified against
+Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). Eleven
+findings across five codex review rounds on PR #537, every one verified against
 the tree before acceptance. The count is the finding.
 
 **The mechanism** (unchallenged across all three rounds):
@@ -82,20 +82,22 @@ JavaScript is invisible to any static read.
 So the concept no longer proposes a check. Text search can prove a string is
 ABSENT from what a page loads, and that is the only question it settles.
 
-A fourth round then split the remainder three ways, because routing everything to
-`getComputedStyle` was itself imprecise: **shipped** (search the loaded CSS),
-**matched** (CSSOM + `el.matches(rule.selectorText)`), and **won the paint**
-(`getComputedStyle`) are three questions with three instruments. Computed style
-cannot name WHICH selector produced a value - another matching rule with the same
-value is indistinguishable - so a green computed style is not proof that a
-specific rule applies, though it is routinely quoted as such. Both browser-side
-techniques were already in this concept; the entry now points at the right one
-per question instead of collapsing them.
+Rounds four and five then rebuilt what replaced it. Routing everything to
+`getComputedStyle` was imprecise, and so was the three-row table that followed:
+reviews showed each row still overclaiming. The honest version is a five-rung
+ladder where every rung states what it does NOT establish - text search proves
+ABSENCE only (a hit can be a comment, a URL, or a longer selector prefix); a
+CSSOM rule scan proves a rule shipped, not that it can apply inside an inactive
+`@media`; `el.matches` proves the SELECTOR matches, not the rule; `getComputedStyle`
+proves the value that won the cascade, not which selector produced it nor what is
+visible under an overlay; only a pixel sample is a fact about the rendered page.
+Every one of those limitations is demonstrated somewhere in this same concept.
 
-The process lesson: four rounds of patching a home-grown analyzer, each patch
-exposing the next hole, is the signal to delete the tool rather than fix it
-again. The mechanism table survived every round untouched; only the invented
-instrument kept failing.
+The process lesson: the factual mechanism table survived all five rounds
+untouched. Everything that failed was prescriptive - an instrument I invented, or
+a promise about what an instrument establishes. Describing what the code does is
+cheap to get right; telling a future reader what a measurement PROVES is where
+the overclaiming lives, and it took five adversarial rounds to stop doing it.
 
 ## 2026-08-21 - test the instrument, not just the result
 

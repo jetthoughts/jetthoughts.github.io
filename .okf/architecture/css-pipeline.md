@@ -70,22 +70,26 @@ shipped Swiper CSS), then the deeper one - a token present in an unmatched
 contextual selector, an inactive media/state rule, or an overridden declaration
 still counts, and a class JavaScript adds later is invisible to any static read.
 
-Text search over CSS can tell you a string is ABSENT from what a page loads.
-That is the only question it settles. Three different questions hide behind
-"does this selector work", and each needs its own instrument:
+Four instruments sit between "the source says so" and "the user sees it", and
+each one's honest claim is narrower than the question people ask it. Every row's
+limitation below is demonstrated somewhere in this file:
 
-| Question | Instrument | What it cannot tell you |
+| Instrument | Establishes | Does NOT establish |
 |---|---|---|
-| Did the rule **ship**? | search the loaded CSS (see the traps above) | whether anything matches it |
-| Does it **match** this element? | CSSOM + `el.matches(rule.selectorText)` | which rule won the cascade |
-| Did it **win** the paint? | `getComputedStyle` | *which* selector produced the value - another matching rule with the same value is indistinguishable |
+| text search over the loaded CSS | **absence only** - the string is nowhere in what the page loads | presence. A hit can be a comment, a URL, or a longer selector's prefix (see the three traps above) |
+| CSSOM rule scan | a rule with that `selectorText` shipped | that it can apply - the rule may sit inside an inactive `@media` or `@supports` |
+| `el.matches(rule.selectorText)` | the SELECTOR matches this element | that the RULE applies (same enclosing-condition gap), or that it won the cascade |
+| `getComputedStyle(el)` | the value that won the cascade for that element | which selector produced it (another rule with the same value is indistinguishable), or what is actually visible - an overlay can cover it |
+| screenshot + pixel sample | what was painted | why |
 
-Both browser-side techniques, and the overlay trap that breaks the naive form
-of the third, are documented below:
-[computed style, not source, proves the paint](#the-white-wash-trap-computed-style-not-source-proves-the-paint)
-and its `elementFromPoint` subsection. Don't collapse the three - a green
-`getComputedStyle` is routinely quoted as proof that a specific rule applies,
-and it is not.
+Only the last is a fact about the rendered page; the rest are facts about
+intermediate representations. The technique for each, and the overlay trap that
+breaks the naive form of `getComputedStyle`, are below:
+[computed style, not source, proves the paint](#the-white-wash-trap-computed-style-not-source-proves-the-paint).
+
+The recurring error is not using the wrong tool - it is quoting a tool's result
+as an answer to the next question up the ladder. A green `getComputedStyle` gets
+read as "that rule applies"; a grep hit gets read as "it ships".
 
 # Token layer: `foundations/css-variables.css`
 
