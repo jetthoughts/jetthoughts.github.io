@@ -50,45 +50,44 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
-## 2026-08-21 - CSS ships both inline and as a linked file; how to check what actually ships
+## 2026-08-21 - CSS ships both inline and as a linked file; text search cannot prove a selector applies
 
-Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). Five
-wrong claims were caught in this entry across two codex review rounds on PR
-#537, every one verified before acceptance. Recording that count because the
-subject IS measurement error.
+Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). Seven
+findings across three codex review rounds on PR #537, every one verified against
+the tree before acceptance. The count is the finding.
 
-The mechanism: `partials/assets/css-inline.html` emits `<style>` (production
-adds only `| minify`); `partials/assets/css-processor.html` emits preload +
-stylesheet links to `/css/<bundle>[.min].<hash>.css` (production adds `minify`,
-`resources.PostProcess`, and `integrity` on both links - `fingerprint "sha256"`
-runs in dev too). On the homepage: 3 `<style>` of which 2 are pipeline bundles,
-and 2 `link[rel=stylesheet]` of which one is a `<noscript>` swiper fallback.
+**The mechanism** (unchallenged across all three rounds):
+`partials/assets/css-inline.html` emits `<style>`, production adding only
+`| minify`; `partials/assets/css-processor.html` emits preload + stylesheet links
+to `/css/<bundle>[.min].<hash>.css`, production adding `minify`,
+`resources.PostProcess`, and `integrity` on both links (`fingerprint "sha256"`
+runs in dev too). Homepage: 3 `<style>` of which 2 are pipeline bundles, 2
+`link[rel=stylesheet]` of which one is a `<noscript>` swiper fallback.
 
-What was wrong, in order:
+**Three naive greps that lie**, each verified: grepping rendered `*.html` for a
+class matches the `class="..."` attribute (`c-nav` is on the homepage with zero
+matching CSS); grepping `_dest/*/css/*.css` alone misses everything inlined;
+counting `rel="stylesheet"` with `rg` scores 3 where a parser says 2, because one
+match is inside `<noscript>` and one is the preload polyfill's JavaScript.
 
-1. "3 and 3", counted by grepping raw HTML. A parser says 3 and **2** - the
-   extra `rel="stylesheet"` is the preload polyfill's JS, `this.rel="stylesheet"`.
-2. "production only adds the `.min` infix". It also runs `resources.PostProcess`
-   and adds `integrity` to both links.
-3. "grep the rendered `*.html`" to ask whether CSS ships - that matches the
-   `class="..."` attribute. `c-nav` is on the homepage with zero matching CSS.
-4. The replacement check used `String#scan` with a String argument, which
-   matches LITERALLY, so `'\.c-nav'` hunted for a backslash. Its own
-   known-present control read 0 and caught it.
-5. The fixed check still matched substrings, so `\.c-content-block` scored 1
-   purely from `.c-content-block__text`. Needs an identifier boundary:
-   `Regexp.new('\.' + Regexp.escape(cls) + '(?![\w-])')`.
+**What I got wrong, and why it stopped mattering.** Four successive attempts at a
+text-search check were each refuted by the next round: literal `String#scan`
+(`'\.c-nav'` hunting a backslash), substring prefixes (`\.c-content-block`
+scoring on `.c-content-block__text`), comments and URLs (`idangero` scoring 1
+from `http://www.idangero.us/swiper/` in the shipped Swiper CSS), and finally the
+one no regex fixes - a token in an unmatched contextual selector, an inactive
+media/state rule, or an overridden declaration still counts, and a class added by
+JavaScript is invisible to any static read.
 
-And the control itself was mislabelled: `.c-content-block__text` was called a
-selector "the page paints", but the homepage DOM has zero such elements - the
-rule is present only because `baseof.html` inlines the global components bundle
-for every page. A `rules` count proves the rule SHIPS, not that the page paints
-it. The honest control for painted-on-this-page is `fl-button` (89 rules, 5 DOM
-elements).
+So the concept no longer proposes a check. Text search can prove a string is
+ABSENT from what a page loads; it cannot prove a selector applies. That routes to
+the section this file already had - computed style, not source, proves the paint -
+which was written for colour and turns out to be the general answer.
 
-Hence the check reports TWO numbers. `rules>0 dom=0` is a shipped-but-unused
-rule; `rules=0 dom>0` is markup with no CSS, which is usually the defect being
-hunted; `0 0` is absent.
+The process lesson: four rounds of patching a home-grown analyzer, each patch
+exposing the next hole, is the signal to delete the tool rather than fix it
+again. The mechanism table survived every round untouched; only the invented
+instrument kept failing.
 
 ## 2026-08-21 - test the instrument, not just the result
 

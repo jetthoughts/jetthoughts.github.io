@@ -61,32 +61,20 @@ Three naive greps, three confident wrong answers:
   matches three times on the homepage: one real link, one inside `<noscript>`, and
   one in the preload polyfill's JavaScript (`this.rel="stylesheet"`).
 
-The check that answers it: parse the page, concatenate every `<style>` text with
-the contents of every `link[rel=stylesheet]` href resolved against the build root,
-then measure the selector against that blob AND against the DOM. Two numbers, not
-one - they answer different questions:
+**There is no reliable text-search answer, and this concept no longer proposes
+one.** Four successive attempts at a grep/parse check were each refuted by the
+next review round: literal `String#scan`, then substring prefixes
+(`\.c-content-block` scoring on `.c-content-block__text`), then comments and
+URLs (`idangero` scoring `1` from `http://www.idangero.us/swiper/` inside the
+shipped Swiper CSS), then the deeper one - a token present in an unmatched
+contextual selector, an inactive media/state rule, or an overridden declaration
+still counts, and a class JavaScript adds later is invisible to any static read.
 
-| `rules` | `dom` | Meaning | Homepage example |
-|---|---|---|---|
-| >0 | >0 | shipped and painted | `fl-button` (89 / 5) |
-| >0 | 0 | rule ships, this page doesn't use it | `c-content-block__text` (1 / 0) - the global components bundle is inlined by `baseof.html` for every page |
-| 0 | >0 | **markup with no CSS** - usually the defect you're hunting | `c-nav` (0 / 1) |
-| 0 | 0 | absent | `zzz-not-a-class` |
-
-Two traps in writing that check, both found by their own controls:
-
-- **Require an identifier boundary.** A bare substring makes any class a false
-  positive for its own prefix: `\.c-content-block` scores 1 on the homepage
-  purely from `.c-content-block__text`, though no `.c-content-block` rule exists.
-  Use `Regexp.new('\.' + Regexp.escape(cls) + '(?![\w-])')`.
-- **`String#scan` with a String argument matches LITERALLY**, so `'\.c-nav'`
-  hunts for a backslash. Wrap it in `Regexp.new` or every escaped control
-  silently reads 0.
-
-Pick controls in both directions before believing a zero, and label them for what
-they prove - a `rules` count proves the rule SHIPS, not that the page paints it.
-If the known-present control also returns 0, the instrument is broken, not the
-codebase; see the instrument rule in [test-gates](/build/test-gates.md).
+Text search over CSS can tell you a string is ABSENT from what a page loads.
+It cannot tell you a selector applies. For that, use the browser:
+[computed style, not source, proves the paint](#the-white-wash-trap-computed-style-not-source-proves-the-paint)
+below - which is the same conclusion this file already reached for colour, now
+confirmed for selector presence.
 
 # Token layer: `foundations/css-variables.css`
 
