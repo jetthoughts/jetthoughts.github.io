@@ -4,7 +4,7 @@ title: CSS Build Pipeline (PostCSS + per-bundle PurgeCSS)
 description: PostCSS pipeline that concatenates per-page CSS resource slices and purges unused rules per bundle before shipping.
 resource: postcss.config.js
 tags: [css, build, performance]
-timestamp: 2026-08-21T01:43:19Z
+timestamp: 2026-08-21T01:59:50Z
 verified:
   - { by: claude/opus-5, at: 2026-08-21T01:43:19Z }
 generated:
@@ -104,10 +104,21 @@ It was an **FL Builder SVG shape layer**:
 
 **What actually answers "which rule paints this pixel":** enumerate
 `document.styleSheets`, filter rules by the property, and ask the browser
-`el.matches(rule.selectorText)`. That returns the winning rule with its
-stylesheet, including overlays, pseudo-content and SVG fills. Cheaper
-fallback: screenshot the region and sample it (`magick img -format
-'%[pixel:p{x,y}]' info:`) - a pixel value is a fact, an impression is not.
+`el.matches(rule.selectorText)`. **That narrows the field; it does not name the
+winner.** `matches()` only proves a selector APPLIES - it resolves neither
+cascade order nor specificity, and a pseudo-element selector (`::before`) can
+never match an Element at all, so pseudo-painted surfaces need
+`getComputedStyle(el, '::before')` separately. Use it to collect CANDIDATE
+rules, then decide between them by comparing against the element's computed
+value.
+
+The check that is actually decisive: screenshot the region and sample the pixel
+(`magick img -format '%[pixel:p{x,y}]' info:`). A pixel value is a fact; a rule
+list is a hypothesis. On 2026-08-21 the candidate-rule method found the homepage
+painter and then FAILED on the equivalent /services/ surface - both
+`elementFromPoint` and a geometric scan of every element reported white where
+the rendered pixel was black, and that painter is still unidentified. Treat DOM
+inspection as evidence that can be silently incomplete.
 
 **The layered lesson:** source grep proves what the CSS says; computed style
 proves what an ELEMENT resolves to; only the rendered pixel proves what the
