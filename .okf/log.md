@@ -62,7 +62,9 @@ analysis there loads on every onboarding.
 routes agents through `/okf:validate`, which runs the `okf@scaccogatto` plugin - a
 v0.1 checker with no `check_trust` at all, so under the documented workflow every
 generated/verified defect passes silently. The concept now carries the explicit
-v0.2 invocation (`uv run ~/.agents/skills/validate/scripts/okf_validate.py .okf`),
+v0.2 invocation with `--strict`, plus the fact that NEITHER exit code gates trust
+on this bundle - plain is error-only, and `--strict` is permanently red because
+the log-heading deviation always produces warnings, so the output has to be read,
 because the TRUST-FIELD material below describes that checker only. The
 error-only conformance caveat applies to BOTH: the v0.1 plugin also computes
 `conformant = not r.errors` and prints the checkmark with warnings outstanding.
