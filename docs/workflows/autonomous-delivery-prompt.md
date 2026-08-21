@@ -152,10 +152,17 @@ Decline the half that overclaims and record the disposition with its evidence.
 
 One unit in flight. One PR open. Merge it, then start the next.
 
-Parallelism is allowed in exactly one place: **independent reviewers judging one
-artifact**, which must run in parallel and must disagree. Never run parallel
-agents over the same body of work — they collide, and the collision is invisible
-until merge.
+Parallelism is allowed in exactly two places:
+
+1. **Independent reviewers judging one artifact** — which must run in parallel
+   and must disagree.
+2. **The OKF maintainer**, which this repo requires to run *in parallel with* the
+   work rather than after it, so the bundle update rides the same commit
+   (`AGENTS.md` §OKF maintenance). It does not touch the work's files, so it
+   does not collide.
+
+Otherwise: never run parallel agents over the same body of work — they collide,
+and the collision is invisible until merge.
 
 Before fanning out, check what is **in flight**, not just what the agents own.
 An agent is also colliding with any unmerged branch touching its files.
@@ -219,16 +226,24 @@ corrections, non-obvious failure modes. Not what the code already says.
 > behind §5.
 > **NOT IN SCOPE:** authoring new skills, or restructuring `docs/` wholesale.
 
-Surfaces, with current counts:
+Surfaces, and the command that enumerates each. **No counts are written here on
+purpose** — §3 forbids freezing a decaying number into durable prose, and the
+first draft of this appendix did it anyway, with two of the numbers wrong.
 
-| Surface | Where | Count |
+| Surface | Where | Enumerate with |
 |---|---|---|
-| Project agents | `.claude/agents/` (+ `core/`, `ruby/`, `validation/`) | 15 |
-| Project skills | `.claude/skills/` | 3 |
-| Global skills | `~/.claude/skills/` | 491 |
-| Global agents | `~/.claude/agents/` | 1 |
-| Project docs | `docs/` — 10 Johnny-Decimal areas + `adr/`, `incidents/`, `projects/`, `design-system/` | — |
-| Knowledge bundle | `.okf/` — 5 sections | 36 concepts |
+| Project agents | `.claude/agents/**` incl. `core/`, `ruby/`, `validation/` | `find .claude/agents -name '*.md'` |
+| Project skills | **`.agents/skills/`** and **`.skills/`** | `ls .agents/skills .skills` |
+| — pointer only | `.claude/skills/` holds a README naming the two real locations | `cat .claude/skills/README.md` |
+| Global skills | `~/.claude/skills/` | `ls ~/.claude/skills` |
+| Global agents | `~/.claude/agents/` | `ls ~/.claude/agents` |
+| Project docs | `docs/` — Johnny-Decimal areas + `adr/`, `incidents/`, `projects/`, `design-system/` | `ls docs` |
+| Knowledge bundle | `.okf/` | `find .okf -name '*.md' -not -name 'index.md' -not -name 'log.md'` |
+
+**Do not assume `.claude/skills/` is the skill surface.** It is a pointer. The
+first draft audited it and would have skipped every real project skill — a
+worked example of §3's "measure the artifact, not a proxy for it", found by
+review rather than by the author.
 
 Questions each surface must answer, with evidence:
 

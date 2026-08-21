@@ -6,8 +6,8 @@ tags: [automation, loop, process, ralph]
 status: stable
 generated:
   by: claude/opus-5
-  at: 2026-08-21T03:34:22Z
-timestamp: 2026-08-21T03:34:22Z
+  at: 2026-08-21T08:27:15Z
+timestamp: 2026-08-21T08:27:15Z
 ---
 
 # What it does
@@ -73,3 +73,20 @@ gate rules that would otherwise decay. The 1a.4 prompt carried "never cite
 `bin/dtest` from this worktree - it is vacuous-green", "quote the
 `[snap_diff] N screenshots compared` count", and "`--strict` EXITS 1 by design",
 and none of those was violated across the whole run.
+
+# The delivery prompt that wraps this
+
+`docs/workflows/autonomous-delivery-prompt.md` is the operating prompt for
+running a goal unattended: DISCOVER -> DECIDE -> BUILD -> VERIFY -> 4-EYES ->
+SHIP -> LEARN, WIP=1, with the evidence ladder and the review-panel rules.
+
+It is the complement to this concept rather than a competitor. This file says
+what a self-iterating LOOP can and cannot do; that file says what a delivery
+PASS must contain. The loop rule that carries across: a loop can iterate but
+cannot re-scope, so "the specification is wrong" has to end the run rather than
+start another iteration.
+
+Its own review found three P1s, one of which is the reason to trust it more
+rather than less: the appendix hardcoded surface counts, and two were wrong,
+violating the rule against decaying numbers written three sections above it.
+Counts were replaced with the commands that produce them.
