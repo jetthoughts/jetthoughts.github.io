@@ -100,8 +100,13 @@ starts before it:
      binaries/baselines do not count; docs-only work may batch bigger). A
      sprint whose code diff would exceed the cap splits into sequential PRs:
      merge N before opening N+1.
-   - *swarm scale*: only on explicit request — `ruflo-swarm`, workers in
-     worktrees (committing agents get isolation).
+   - *swarm scale*: NOT the default (decided 2026-08-21 — the 2025 hive era
+     produced the incidents today's rules prevent; sequential author/verifier
+     caught every defect the same day swarm-by-default was considered). When
+     a sprint contains 3+ independent same-shaped units (batch posts,
+     per-surface audits), PROPOSE swarm in the triage verdict; it activates
+     only on explicit request — `ruflo-swarm`, workers in worktrees
+     (committing agents get isolation).
 5. **The contract — non-negotiable regardless of orchestration shape**:
    feature branch + PR, never master, PR ≤ ~500 changed CODE lines
    (docs/logs exempt) · rebase when master moves, never merge it in (tag a
