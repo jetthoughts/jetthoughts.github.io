@@ -102,12 +102,19 @@ fails on any warning. CLAUDE.md requires this gate before bundle commits, so
 it has been reported green while failing. Measured 2026-08-21: 82 warnings —
 **57** §7 date headings, **23** missing recommended fields.
 
-Two jobs: (1) restructure `log.md` so same-day themes sit as sub-sections
-beneath ONE `## YYYY-MM-DD` heading — a whole-file restructure, not a
-find-and-replace, and it conflicts with every parallel session appending to
-that file, so do it when the repo is quiet; (2) add `timestamp` to the 23
-concepts missing it, anchored to each file's last commit time
-(`git log -1 --format=%cI -- <file>`), never invented.
+**Re-measure before executing — do not trust the counts above.** They come from
+the validator this machine resolved on 2026-08-21 (the 0.4.0 cache and the
+marketplace copy, which agree). Review flagged that another build may score a
+v0.2 bundle differently; this session could not reproduce that composition with
+either available copy, so treat the numbers as a snapshot, not a spec. The
+bundle declares `okf_version: "0.2"` — run `/okf:validate .okf --strict`
+through the SKILL so it resolves whatever is canonical at the time, re-derive
+the breakdown, and fix what THAT run reports.
+
+The one job that is version-independent: restructure `log.md` so same-day
+themes sit as sub-sections beneath ONE `## YYYY-MM-DD` heading. That is a
+whole-file restructure, not a find-and-replace, and it conflicts with every
+parallel session appending to that file — do it when the repo is quiet.
 
 ## Working notes
 
