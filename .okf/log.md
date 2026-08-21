@@ -41,8 +41,9 @@ The date headings are a deliberate deviation. The spec's template is a bare
 bundle lands several thematic entries per day (12 on 2026-08-21), so bare
 dates would produce a dozen identical headings. **Do not collapse them
 casually** - the conformant shape is one dated heading per day with the themes
-as sub-sections beneath it, which is a restructure of the whole file, not a
-find-and-replace.
+as flat ENTRIES beneath it (bullets or bold labels; §9 wants a flat list, and
+nested `###` headings would escape the validator while still violating it),
+which is a restructure of the whole file, not a find-and-replace.
 
 **This is a known-red gate, not accepted noise, and it is tracked** in
 `docs/projects/2608-site-design-system/README.md` under Outstanding. Two jobs
@@ -62,8 +63,9 @@ routes agents through `/okf:validate`, which runs the `okf@scaccogatto` plugin -
 v0.1 checker with no `check_trust` at all, so under the documented workflow every
 generated/verified defect passes silently. The concept now carries the explicit
 v0.2 invocation (`uv run ~/.agents/skills/validate/scripts/okf_validate.py .okf`),
-because everything below describes that checker and none of it applies to the
-plugin route.
+because the TRUST-FIELD material below describes that checker only. The
+error-only conformance caveat applies to BOTH: the v0.1 plugin also computes
+`conformant = not r.errors` and prints the checkmark with warnings outstanding.
 
 **That validator checks trust-field SHAPE, with two holes**: `check_instant`
 returns early on `None`, so a `verified` event with no `at` passes; and the
@@ -81,7 +83,10 @@ still prints. Green and not §11-conformant simultaneously, both true.
 That heading style is a deliberate deviation this log already recorded, and the
 first draft of this entry contradicted it by calling the repair "mechanical".
 It is not: bare dates would stack a dozen identical headings on a busy day, so
-the conformant shape is one dated heading per day with themes as sub-sections -
+the conformant shape is one dated heading per day with the themes as flat
+ENTRIES beneath it - bullets or bold labels, since §9 wants a flat list. Nested
+`###` headings would escape the validator (it only inspects `##`) and still
+violate §9 -
 a whole-file restructure.
 
 **Two OKF specs, disagreeing section numbers.** The `/okf:okf` skill points at
@@ -105,10 +110,17 @@ of the merge base), and blind to the block form `- by:` / `at:` that
 `ci-gates.md` uses. It is deleted rather than patched a fifth time, per the
 delete-dont-patch rule in the same concept. Reading the block has none of those
 holes, and the rule caught its own instrument for the second time in this PR
-chain. Scoped to those rows on
-purpose: a legitimate stamp bumps `generated.at` and `timestamp`, so a
-whole-frontmatter diff shows `-`/`+` pairs on every valid edit and would cry
-wolf.
+chain.
+
+Three review rounds on this entry were spent on the SAME defect: the concept was
+corrected and its log mirror was not. Plugin-route scope, the log-repair shape,
+and a rationale left dangling after its command was deleted - each fixed in
+`build/test-gates.md` and each left stale here. A concept and its log entry are
+two files saying the same thing, so every correction is two edits, and the one
+that gets forgotten is the one nobody is looking at. The existing
+"sweep a corrected metric through the canonical summaries" rule in
+[workflows/review-swarm.md](workflows/review-swarm.md) covers this; the
+concept/log pair is its most frequent instance.
 
 No counts appear above. Three drafts of this entry hard-coded one - warning
 totals, then a `git log -S` result, then "69 of 87 headings" - and each was

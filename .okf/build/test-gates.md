@@ -4,8 +4,9 @@ title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
 status: stable
-generated: { by: claude/opus-5, at: 2026-08-21T06:27:54Z }
+generated: { by: claude/opus-5, at: 2026-08-21T06:36:48Z }
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T06:36:48Z }
   - { by: claude/opus-5, at: 2026-08-21T06:27:54Z }
   - { by: claude/opus-5, at: 2026-08-21T06:15:51Z }
   - { by: claude/opus-5, at: 2026-08-21T06:04:00Z }
@@ -17,7 +18,7 @@ verified:
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
   - { by: claude/opus-5, at: 2026-08-20T21:43:35Z }
   - { by: claude/opus-5, at: 2026-08-20T21:47:30Z }
-timestamp: 2026-08-21T06:27:54Z
+timestamp: 2026-08-21T06:36:48Z
 ---
 
 # The suites
@@ -299,6 +300,18 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
     confirming a false one. Flatten first (`tr '\n' ' ' < file | tr -s ' '`),
     then grep; same reason `marketing_copy_test` misses banned phrases split
     across two template lines.
+
+    Caveat on that flattened form, found 2026-08-21 while using it: the result is
+    ONE line, so `grep -c` - which counts matching LINES - can only ever return 0
+    or 1. A control expecting "2 occurrences" silently reads 1 and looks like a
+    failed edit. Use `grep -o PATTERN file | wc -l` for counts, and keep `grep -c`
+    for present/absent only.
+
+    The two fixes COMPOSE and must be applied together: `grep -o` on the raw file
+    still misses a wrapped phrase, and `grep -c` on the flattened file still caps
+    at 1. Counting occurrences of possibly-wrapped text needs
+    `tr '\n' ' ' < file | tr -s ' ' > flat && grep -o PATTERN flat | wc -l`.
+    Each fix was applied alone first, and each alone still read 1.
 
 A third instance, 2026-08-21: two identical `verified` entries looked like a
 duplication artifact, and `git log -S <timestamp>` returned exactly ONE
