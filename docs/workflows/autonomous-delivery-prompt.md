@@ -30,20 +30,29 @@ adjacent, defensible, and not asked for.
 One pass per unit of work. Never start unit N+1 before N is merged.
 
 ```
-DISCOVER → DECIDE → BUILD → VERIFY → 4-EYES → SHIP → LEARN
-     ↑                                              │
-     └──────────────────────────────────────────────┘
+DISCOVER → DECIDE → BUILD → VERIFY → SHIP → LEARN
+    │         │        │        │       │      │
+    └─────────┴────────┴────────┴───────┴──────┘
+         4-EYES gates EVERY stage, not just the last
 ```
 
-| Stage | Output | Gate to leave it |
-|---|---|---|
-| **DISCOVER** | what is already true, in the tree and in the world | you can cite a file:line or a URL for every premise |
-| **DECIDE** | the smallest unit that delivers value | you named what you are NOT doing |
-| **BUILD** | the shortest working diff | it runs |
-| **VERIFY** | evidence from the live artifact | a check that would FAIL if the work were wrong |
-| **4-EYES** | independent findings | see §5 |
-| **SHIP** | merged, on a branch, via PR | gates quoted with their real numbers |
-| **LEARN** | `.okf/` concept + `log.md` entry | a cold session could repeat or avoid it |
+**Review each stage before the next begins.** A wrong premise costs the whole
+pass; a wrong diff costs an hour. Reviewing only before SHIP finds the cheap
+defect and misses the expensive one — by then the wrong premise is load-bearing
+under everything built on it.
+
+| Stage | Output | Gate to leave it | Reviewed for |
+|---|---|---|---|
+| **DISCOVER** | what is already true, in the tree and in the world | you can cite a file:line or a URL for every premise | *is the premise real, and is it current?* |
+| **DECIDE** | the smallest unit that delivers value | you named what you are NOT doing | *is this the right unit, and is the scope honest?* |
+| **BUILD** | the shortest working diff | it runs | *correctness, and what it touches that it should not* |
+| **VERIFY** | evidence from the live artifact | a check that would FAIL if the work were wrong | *does the evidence support the claim — see §3* |
+| **SHIP** | merged, on a branch, via PR | gates quoted with their real numbers | *do the quoted gates say what you claim* |
+| **LEARN** | `.okf/` concept + `log.md` entry | a cold session could repeat or avoid it | *is this derivable already, or genuinely new* |
+
+The review weight scales with the stage's cost of being wrong, but none of them
+is zero. A cheap stage gets a cheap check — one skeptical pass with a named
+lens — not a skipped one.
 
 **Continuous delivery:** every unit ships on its own. A unit that cannot ship
 alone was scoped wrong — split it. **Continuous discovery:** DISCOVER runs every
@@ -73,8 +82,12 @@ that check.** Everything below is a way of getting that wrong.
   (something you know is absent). Known-positive returning nothing means the
   instrument is broken, not the codebase.
 - Establish the **baseline of the baseline**: run the suite on pristine `master`
-  before trusting a green run. If master is not green here, this machine cannot
-  produce trustworthy baselines.
+  first, then compare **failure sets**, not pass/fail. Master red is normal —
+  `okf_validate .okf --strict` is known-red by design, and this repo's macOS
+  screenshot baselines can be red in a worktree before you touch anything. The
+  signal is the *difference*: failures your branch adds, or base failures it
+  silently fixes. Reject the instrument only when its controls fail or the
+  environment differs, not merely because the base is not green.
 
 **Beware the batch.** A set of expected changes is where an unexpected one hides.
 Screen every bulk result — by size delta, by category — and look at the outliers.
@@ -112,8 +125,26 @@ is the most expensive thing in this document — see §5's stopping rule.
 
 ## 5. Four eyes, and zero trust
 
+**Separation of duties is the rule, not a nicety: every change is WRITTEN by one
+sub-agent and VERIFIED by a different one.** The author cannot be the verifier.
+Not "the author double-checks", not "the author runs the tests" — a second agent
+that did not write the change produces the evidence that it is correct.
+
+The reason is not diligence, it is blindness. An author verifies the thing they
+meant to build; only someone who did not build it checks the thing that is
+actually there. Every serious defect in this repo's recent history got past an
+author who had just re-read their own work.
+
 Nothing merges on the strength of the author's own review. The session's own
 check does not count as the second pair of eyes.
+
+| Role | Does | Must not |
+|---|---|---|
+| **Author** | makes the change, states the claim | produce the evidence for its own claim |
+| **Verifier** | independently re-derives the evidence | be briefed with the author's conclusions |
+
+Give the verifier the GOAL and the artifact — never the author's reasoning about
+why it works. See "brief with evidence, not conclusions" below.
 
 **Panels must disagree by construction.** Give each reviewer a *distinct lens*
 and require a dissent. Same-lens reviewers produce a chorus that ratifies the
@@ -235,9 +266,9 @@ first draft of this appendix did it anyway, with two of the numbers wrong.
 | Project agents | `.claude/agents/**` incl. `core/`, `ruby/`, `validation/` | `find .claude/agents -name '*.md'` |
 | Project skills | **`.agents/skills/`** and **`.skills/`** | `ls .agents/skills .skills` |
 | — pointer only | `.claude/skills/` holds a README naming the two real locations | `cat .claude/skills/README.md` |
-| Global skills | `~/.claude/skills/` | `ls ~/.claude/skills` |
-| Global agents | `~/.claude/agents/` | `ls ~/.claude/agents` |
-| Project docs | `docs/` — Johnny-Decimal areas + `adr/`, `incidents/`, `projects/`, `design-system/` | `ls docs` |
+| Global / plugin skills | **the running tool's own roster** — not a directory | list the roster of the runtime you are in; `~/.claude/skills/` is Claude Code's slice of it, not the whole |
+| Global agents | the runtime's agent roster | same — enumerate per runtime |
+| Project docs | `docs/` — Johnny-Decimal areas + `adr/`, `incidents/`, `projects/`, `design-system/` | `find docs -name '*.md'` — **recursive**; `ls docs` returns areas, not documents |
 | Knowledge bundle | `.okf/` | `find .okf -name '*.md' -not -name 'index.md' -not -name 'log.md'` |
 
 **Do not assume `.claude/skills/` is the skill surface.** It is a pointer. The
@@ -247,9 +278,17 @@ review rather than by the author.
 
 Questions each surface must answer, with evidence:
 
-1. **Is it reachable?** A skill or agent nothing routes to is read only by
-   sessions already looking for it. Cite the router or index entry, or mark it
-   orphaned.
+1. **Is it reachable?** Two discovery paths count, and conflating them
+   manufactures false orphans:
+   - **Roster/metadata match** — global and plugin skills are found by
+     description against a real task, with no router entry anywhere. This is the
+     normal path (`.claude/skills/README.md`: *"invoke by name, never by
+     absolute path"*).
+   - **Explicit routing** — an index or router entry. Required for *project*
+     surfaces, which nothing surfaces by metadata.
+
+   Mark orphaned only when **neither** applies. A DELETE call justified by a
+   missing router entry alone is unsupported.
 2. **Is it true?** Does it describe the tree as it is today? Cite a file:line
    that confirms or contradicts. Prefer concepts that store reasoning; flag
    concepts that store state.
