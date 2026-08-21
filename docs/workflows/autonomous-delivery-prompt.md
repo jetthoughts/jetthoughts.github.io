@@ -1,487 +1,66 @@
-# Autonomous delivery prompt
+# Autonomous delivery — repo binding
 
-**Onboard in 60 seconds** — the map, then read only what the task needs:
+**The contract itself lives in the `jt-delivery` plugin** (per ADR-0005):
+invoke the **`jt-delivery:contract`** skill for the full operating contract —
+GOAL/intake (§1–1a), the DISCOVER→LEARN loop (§2), evidence standard (§3),
+research order (§4), 4-eyes roles (§5), WIP=1 (§6), async-first (§7),
+scope/stopping (§8), learn-every-pass (§9). Kickoff any idea with
+**`/deliver <idea>`** (also from the plugin).
 
-- **Loop** (§2): `DISCOVER → DECIDE → BUILD → VERIFY → SHIP → LEARN`, 4-eyes
-  gating every stage. The unit is the PR; commits within it land one at a time,
-  each independently reviewed; a sprint PR carries at most ~500 changed lines
-  of CODE (§1a — docs/logs exempt).
-- **Roles** (§5): Author writes, a different Verifier proves — author never
-  produces evidence for its own claim. Internal sub-agents per stage;
-  `/codex:review` once at the merge gate.
-- **Principles**: evidence over confidence (§3 — produce the check that would
-  fail if the claim were false), research before deciding (§4 — in-tree first,
-  NotebookLM for deep research), async-first artifacts (§7), deliver the scope
-  or say what you left (§8), learn every pass (§9).
-- **Tools**: Appendix B is the current surface snapshot — do not re-discover.
-  Appendix C maps each work domain to its references. Commands and repo gates:
-  `CLAUDE.md` header + `docs/workflows/BASE_HANDBOOK.md`. Business/weekly loop
-  lives in the vault (`jt-operations`), not here.
+Not installed? `claude plugin marketplace add jetthoughts/claude-plugins` then
+`claude plugin install jt-delivery@jetthoughts`. Source:
+<https://github.com/jetthoughts/claude-plugins>.
 
-**Kickoff prompt** — paste this into a session to spawn the team on any idea;
-it carries the whole contract by reference:
-
-```text
-Act as the delivery manager per docs/workflows/autonomous-delivery-prompt.md
-(pull master first, read its 60-second map, then only what the task needs).
-
-IDEA: <what I want, 1-2 sentences>
-CONSTRAINTS: <optional - deadline, budget, explicit not-in-scope>
-
-Run the §1a intake: one-line triage verdict → groom only if ambiguous →
-write GOAL / DONE WHEN / NOT IN SCOPE → orchestrate by size. Spawn an
-author and a DISTINCT verifier per stage (§5); pick references and agents
-from the Appendix C domain map; use the Appendix B tool snapshot - do not
-re-discover. Contract is non-negotiable (§1a): feature branch + ONE sprint
-PR ≤ ~500 changed CODE lines (docs/logs exempt - split sequentially if
-over), rebase never merge, gates per diff class (§2 SHIP), claims-canon +
-voice on customer-facing copy, OKF sync in the same commit.
-
-Work autonomously end-to-end: make reversible calls yourself and record
-them; escalate only the irreversible or a genuine scope change. Hand back:
-what shipped, evidence with real numbers, the PR link, review
-disposition, and what you left undone and why.
-```
-
-The full document: the operating prompt for running a goal to completion
-without babysitting, at a quality bar that survives adversarial review. Paste
-§1–§9 into a session, fill the GOAL slot, and let it run.
-
-It exists because the failure mode is never "the agent could not do the work".
-It is "the agent produced confident work nobody could verify, and the verification
-it offered was itself unverified."
-
-**What the whole document is for: agents collaborating to find the truth.** Not
-to produce output faster, and not to produce more of it. A single agent cannot
-find its own blind spot — it checks the thing it meant to build. Truth comes out
-of the friction between agents with different jobs and different lenses, which is
-why the rules below are mostly about keeping that friction real: separate the
-author from the verifier, brief with evidence rather than conclusions, require a
-dissent, and treat every finding as a claim that must itself survive.
-
-Structure the collaboration well and the system converges on what is actually
-there. Structure it badly — same lens, shared assumptions, author checking
-author — and it converges just as confidently on whatever the first agent
-believed.
+**Precedence: THIS repo's instructions override the plugin on every conflict.**
+This file carries the repo-specific bindings the generic contract defers to.
 
 ---
 
-## 1. GOAL
+## Repo bindings — what this repo adds to the contract
 
-> **GOAL:** `<one sentence, falsifiable, with the artifact named>`
-> **DONE WHEN:** `<a command anyone can re-run, or an artifact anyone can open>`
-> **NOT IN SCOPE:** `<the adjacent work you will be tempted into>`
-
-If DONE WHEN cannot be written as something re-runnable, stop and rewrite the
-goal. "Improve X" is not a goal. "`bin/qtest --changed` green on the 4 pages that
-load `pages/foo.css`, with the seam check clean at 1920 and 390" is.
-
-**NOT IN SCOPE is load-bearing.** Most wasted cycles are spent on work that was
-adjacent, defensible, and not asked for.
-
-### 1a. Intake — from a raw idea to a running unit
-
-When Paul hands a feature or idea, this is the path in — orchestration never
-starts before it:
-
-1. **TRIAGE** (manager rule, `CLAUDE.md`): now / sequenced / backlog /
-   groom-first. One-line verdict so Paul can override.
-2. **SHAPE**: ambiguous or structural → grooming first (`structural-decisions`,
-   brainstorming, persona panel). Concrete → straight to GOAL.
-3. **GOAL**: write §1's three lines. No re-runnable DONE WHEN → no dispatch.
-4. **ORCHESTRATE by size** — the contract holds at every scale. Pick WHICH
-   agents from Appendix C's route-through column for the work's domain
-   (reviewer lenses per §5):
-   - *trivial edit*: inline; a verifier agent still reviews before commit.
-   - *one unit*: author agent + distinct verifier (§5).
-   - *a feature*: commits proceed one at a time on the sprint branch, each
-     independently reviewed (§2); the sprint ships as **ONE PR capped at ~500
-     changed lines of CODE** (Paul 2026-08-21 — docs, `.okf/` logs, and
-     binaries/baselines do not count; docs-only work may batch bigger). A
-     sprint whose code diff would exceed the cap splits into sequential PRs:
-     merge N before opening N+1.
-   - *swarm scale*: NOT the default (decided 2026-08-21 — the 2025 hive era
-     produced the incidents today's rules prevent; sequential author/verifier
-     caught every defect the same day swarm-by-default was considered). When
-     a sprint contains 3+ independent same-shaped units (batch posts,
-     per-surface audits), PROPOSE swarm in the triage verdict; it activates
-     only on explicit request — `ruflo-swarm`, workers in worktrees
-     (committing agents get isolation).
-5. **The contract — non-negotiable regardless of orchestration shape**:
-   feature branch + PR, never master, PR ≤ ~500 changed CODE lines
-   (docs/logs exempt) · rebase when master moves, never merge it in (tag a
-   backup ref first; `--autostash` when unstaged changes block it) ·
-   author ≠ verifier at every stage (§5) ·
-   gates matched to the diff type (§2 SHIP + `CLAUDE.md`) ·
-   claims-canon + voice gates on anything customer-facing · OKF sync rides the
-   same commit · async-first artifacts (§7) · escalate only the irreversible
-   or a genuine scope change (§8).
-
-An orchestration that would break any contract line is scoped wrong — reshape
-the work, never waive the line.
-
----
-
-## 2. The loop
-
-One pass per unit of work. **The unit is the PR**: within it, commits proceed one
-at a time, each independently reviewed before it lands, and none is started while
-the previous one is still unreviewed. Do not open a second PR until this one
-merges.
-
-Saying "never start N+1 before N MERGES" would deadlock any bundled sprint — the
-appendix audits several surfaces in one PR, and no surface could ever merge on
-its own. WIP=1 constrains what is IN FLIGHT, not how many commits a PR contains.
-
-```
-DISCOVER → DECIDE → BUILD → VERIFY → SHIP → LEARN
-    │         │        │        │       │      │
-    └─────────┴────────┴────────┴───────┴──────┘
-         4-EYES gates EVERY stage, not just the last
-```
-
-**Review each stage before the next begins.** A wrong premise costs the whole
-pass; a wrong diff costs an hour. Reviewing only before SHIP finds the cheap
-defect and misses the expensive one — by then the wrong premise is load-bearing
-under everything built on it.
-
-| Stage | Output | Gate to leave it | Reviewed for |
-|---|---|---|---|
-| **DISCOVER** | what is already true, in the tree and in the world | a reviewer has READ each cited line and confirmed it says what the premise claims | *is the premise real, and is it current?* |
-| **DECIDE** | the smallest unit that delivers value | you named what you are NOT doing | *is this the right unit, and is the scope honest?* |
-| **BUILD** | the shortest working diff | it runs | *correctness, and what it touches that it should not* |
-| **VERIFY** | evidence from the live artifact | a check that would FAIL if the work were wrong | *does the evidence support the claim — see §3* |
-| **SHIP** | merged, on a branch, via PR | the gate matrix for THIS change class, quoted with real numbers — see below | *do the quoted gates say what you claim* |
-| **LEARN** | a durable learning captured, or "none this pass" **naming what was checked and found derivable** | a cold session could repeat or avoid it | *is this derivable already, or genuinely new* |
-
-The review weight scales with the stage's cost of being wrong, but none of them
-is zero. A cheap stage gets a cheap check — one skeptical pass with a named
-lens — not a skipped one, **and it leaves one line in the record**: lens,
-strongest objection found, disposition. Without that line the pass is
-undetectable afterwards, which makes it optional in practice.
-
-**This matters most where it feels least necessary.** A skipped LEARN is visible
-in a `log.md` diff; a skipped DISCOVER review leaves no trace at all — so the
-stages whose omission is invisible are exactly the ones the document calls most
-expensive to get wrong. Left unrecorded, the enforcement gradient runs backwards:
-strongest detection over the cheapest failures.
-
-### SHIP — the stage with no section, until now
-
-Review found this was one table row governing the only irreversible stage. The
-gates are **not** listed here, on purpose: they live in `CLAUDE.md` and they
-change. What belongs here is *which class you are in*, because picking the wrong
-class is the actual failure.
+### SHIP: the change-class gate matrix (contract §2's SHIP row resolves here)
 
 | Change class | Gate |
 |---|---|
 | content only — markdown prose/frontmatter, no `themes/`, no `layouts/`, no CSS, no body HTML | `bin/hugo-build` + the rendered scroll gate. **Not** the visual suites. |
 | anything touching `themes/`, `layouts/`, `*.css`, or body HTML/SVG | `bin/qtest --changed` before every commit; the full `bin/test` **and** `bin/dtest` pair once at PR prep |
-| docs / instruction layer only | `bin/hugo-build`; internal review; the slow external reviewer does not gate the merge |
+| docs / instruction layer only | `bin/hugo-build`; internal review; the slow external reviewer does not gate the merge; app-build CI auto-skips (publish.yml paths-ignore) |
 
 Check the **actual diff**, not your intent — the class is decided by what the
-patch touches.
+patch touches. If you cannot name your change class, you are not ready to SHIP.
 
-PR mechanics that have bitten this repo, all in `CLAUDE.md` in full: branch and
-PR for everything including docs · **rebase, never merge** when master moves,
-after tagging a backup ref · `gh pr merge --auto` does **not** queue here, it
-merges immediately · a PR touching visuals must not open without the `dtest` leg.
+PR mechanics, all in `CLAUDE.md` in full: branch + PR for everything including
+docs · one sprint PR ≤ ~500 changed CODE lines (docs/logs exempt) · rebase
+never merge, backup ref first, `--autostash` when unstaged changes block ·
+`gh pr merge --auto` does NOT queue here · a PR touching visuals never opens
+without the `dtest` leg.
 
-If you cannot name your change class, you are not ready to SHIP.
+### Contract additions (non-negotiable here, beyond the generic §1a list)
 
-**Continuous delivery:** every unit ships on its own. A unit that cannot ship
-alone was scoped wrong — split it. **Continuous discovery:** DISCOVER runs every
-pass, not once at the start; what you learned in pass N changes the scope of N+1.
+- **Claims-canon + voice gates** on anything customer-facing
+  (`.okf/content/claims-canon.md`, voice-guide 90.11, blog-pipeline gates).
+- **OKF sync rides the same commit** as the change it describes (CLAUDE.md
+  §OKF — ENFORCED).
+- **Ruflo memory is §4 step 0 and §9's second store**: `mcp__ruflo__memory_search`
+  before non-obvious decisions, `mcp__ruflo__memory_store` for
+  decisions/corrections (prefixes + CLI-keyword-only gotcha: `CLAUDE.md`
+  §Memory).
 
----
+### Reviewer routing (contract §5's cost tiers resolve here)
 
-## 3. Evidence standard
+Internal sub-agents (distinct lens per call) for every per-stage review;
+**`/codex:review` ONCE at the final verify before merge, for user-facing
+changes only** — never in the inner loop. Docs/instruction-layer changes ship
+on internal review + CI.
 
-The bar is: **produce the check that would fail if the claim were false, and cite
-that check.** Everything below is a way of getting that wrong.
+### Where everything else is
 
-**Measure the artifact, not a proxy for it.**
-- Source says ≠ what shipped. Computed style ≠ what is painted. A green suite ≠
-  no visual change.
-- Climb only as far as the question needs, and know what each rung cannot say:
-  text search proves **absence** only · CSSOM proves a rule **shipped** · `el.matches()`
-  proves a **selector** matches, not a rule · `getComputedStyle` proves the
-  **value that won**, not which selector produced it · only a **pixel sample** is
-  a fact about the render.
-- Read the element that **paints**, not the one your selector matched.
-
-**Test the instrument before believing it.**
-- Ask what the command returns if the claim were FALSE. If it cannot differ, it
-  is a ritual.
-- Run a **positive control** (something you know is present) and a **negative**
-  (something you know is absent). Known-positive returning nothing means the
-  instrument is broken, not the codebase.
-- Establish the **baseline of the baseline**: run the suite at the branch's
-  **merge base** (`git merge-base origin/master HEAD`) — not current `master`,
-  which has moved and will smuggle unrelated upstream failures into your delta —
-  then compare **failure sets**, not pass/fail. Rebase immediately before
-  measuring, and run both sides in the same environment. Master red is normal —
-  `/okf:validate .okf --strict` is known-red by design (invoke it through the
-  skill or the full script path - there is no `okf_validate` on `PATH`), and this repo's macOS
-  screenshot baselines can be red in a worktree before you touch anything. The
-  signal is the *difference*: failures your branch adds, or base failures it
-  silently fixes. Reject the instrument only when its controls fail or the
-  environment differs, not merely because the base is not green.
-
-**Beware the batch.** A set of expected changes is where an unexpected one hides.
-Screen every bulk result — by size delta, by category — and look at the outliers.
-The outliers are often somebody else's work.
-
-**Do not freeze decaying numbers into durable prose.** Warning counts, `git log -S`
-results, file counts: they change on the next edit, including the edit that
-records them.
-
-**Prefer description to prescription.** "X emits Y" is checkable against X.
-"Run Z to prove Y" smuggles in an unstated universal, and that is what fails
-review. If you must document a check, write what it does NOT establish in the
-same breath.
+- Tool surface (MCP servers, skills, agents, ruflo-first): **Appendix B**.
+- Per-domain read-first/route-through map: **Appendix C**.
+- The instantiated audit GOAL for instruction surfaces: **Appendix A**.
+- Commands, gates, canon, memory rule: `CLAUDE.md` (always loaded).
 
 ---
-
-## 4. Do not trust priors — research
-
-Agent experience is stale by construction. Before any non-obvious technical or
-design decision:
-
-0. **Memory first.** `mcp__ruflo__memory_search` (semantic, MCP path — the
-   CLI's semantic mode is broken, keyword only in terminals) for prior
-   decisions and corrections on the topic. A stored 🔧 CORRECTION outranks
-   fresh reasoning; a stored 🎯-prefixed decision is not re-litigated without
-   new evidence.
-1. **In-tree first.** `qmd` for markdown (`docs/`, `.okf/`, `content/`),
-   semantic code search for code, `rg` last. The answer is usually already
-   written down and arguing from the model's own recollection instead of
-   looking is the recurring error.
-2. **Then the world.** Current docs (`context7`), targeted web research
-   (`tavily-*`, `lightpanda` for headless fetch); substantial multi-source
-   research goes through the NotebookLM MCP (Paul 2026-08-21). Take the best
-   available pattern rather than the first plausible one.
-3. **Cite what you used.** A decision with no citation is a guess wearing
-   confidence.
-
-**Exploit tools that already exist** before writing one. A home-grown instrument
-is the most expensive thing in this document — see §5's stopping rule.
-
----
-
-## 5. Four eyes, and zero trust
-
-**Separation of duties is the rule, not a nicety: every change is WRITTEN by one
-sub-agent and VERIFIED by a different one.** The author cannot be the verifier.
-Not "the author double-checks", not "the author runs the tests" — a second agent
-that did not write the change produces the evidence that it is correct.
-
-The reason is not diligence, it is blindness. An author verifies the thing they
-meant to build; only someone who did not build it checks the thing that is
-actually there. Every serious defect in this repo's recent history got past an
-author who had just re-read their own work.
-
-Nothing merges on the strength of the author's own review. The session's own
-check does not count as the second pair of eyes.
-
-| Role | Does | Must not |
-|---|---|---|
-| **Author** | makes the change, states the claim | produce the evidence for its own claim |
-| **Verifier** | independently re-derives the evidence | be briefed with the author's conclusions |
-
-Give the verifier the GOAL, the artifact, **and the author's reasoning** — with
-the instruction to attack the assumptions in it and to produce **one measurement
-the author did not run**.
-
-*This reverses an earlier rule that said to withhold the reasoning, and the
-reviewer who overturned it proved the point by method: it read this document's
-own argument, attacked it, and produced ten findings the blind version would have
-forbidden it to look for.* Withholding the reasoning withholds the assumptions,
-and the assumptions are the attack surface. The defects that actually get through
-here are reasoning-shaped — stale premises, prescriptive claims, flattering
-denominators — not arithmetic.
-
-The original fear was real but misdiagnosed: a panel handed your **verdict**
-returns it wearing independent confidence. That is verdict contamination, and it
-is already handled by demanding measurements rather than verdicts. Exposing how
-you reasoned is not the same as telling them what to conclude.
-
-**Where the handoff lands, concretely.** The review happens *before the artifact
-leaves the workshop* — before the human sees it, before it is committed. Not
-before merge.
-
-**These STACK, they do not replace each other:** internal review before every
-commit, plus the external companion once more before merge. The pre-commit gate
-is the one that catches a defect while it is still cheap; the pre-merge gate
-catches what only the whole diff reveals. Neither is optional because the other
-ran.
-
-| You produced | Peer review happens | Only then |
-|---|---|---|
-| a **plan** | a second agent reviews the plan | → ask the user. They never see an unreviewed plan. |
-| a **code change** | a second agent reviews the diff | → commit. Not "commit then review the PR". |
-| a **finding** or claim | a second agent tries to reproduce it | → report it |
-| a **measurement** | a second agent re-derives it independently | → quote it as evidence |
-| a **doc / concept** | a cold-eyes agent reads it without your context | → ship it |
-
-The test for whether you got this right: **at the moment the user reads
-something, has someone other than the author already checked it?** If no, the
-gate was in the wrong place.
-
-### Which reviewer, and what it costs
-
-Reviewing every stage is only affordable if you match the reviewer to the stage.
-Using the slowest one everywhere is how four-eyes gets quietly abandoned.
-
-| Reviewer | Use for | Cost |
-|---|---|---|
-| **Internal sub-agent** (`Agent` tool, distinct lens per call) | every per-stage review — plans, diffs before commit, findings, measurements, docs | fast; the default |
-| **External companion** (`/codex:review`) | the final verify before merge, once — **for user-facing changes** | slow — do not put it in the inner loop |
-
-**Select the reviewer by what the runtime actually has.** Some environments
-expose neither a sub-agent tool nor `/codex:review`. The requirement is a second
-pair of eyes, not a particular tool, so fall back in this order: another agent →
-an external reviewer → **a peer session** (`ListAgents` / `SendMessage`) → the
-human. If none is reachable, say so in the handback and mark the change
-UNREVIEWED rather than describing it as verified. A review you could not run is
-a disclosure, never a silent skip.
-
-**Docs-only and instruction-layer changes do not wait on the slow reviewer**
-(Paul, 2026-08-21). Ship on internal review plus CI, and apply the external
-findings afterwards as a follow-up. Holding a green docs PR behind a ten-minute
-reviewer buys nothing and teaches everyone that the gate is negotiable.
-
-`/codex:review` earns its cost at the merge gate, where the whole diff exists and
-being wrong is expensive. Spending it on a premise check or a two-line fix buys
-little and trains everyone to skip the gate because "review is slow".
-
-Rule of thumb: **internal agents all the way through, the external companion once
-at the end.** If the external reviewer finds something the internal ones should
-have caught, that is a signal about your per-stage lenses, not a reason to run
-the slow reviewer more often.
-
-**Panels must disagree by construction.** Give each reviewer a *distinct lens*.
-Require each to name **the strongest finding against shipping, with the evidence
-for it** — "no objection" is a permitted answer only when it names the check that
-was run. A dissent requirement satisfied by a manufactured nitpick is worse than
-none: it looks like friction and produces none. Same-lens reviewers produce a
-chorus that ratifies the author's error.
-
-Lenses that have actually caught things here: correctness · does-it-reproduce ·
-the cold-eyes reader who is not in your head · accessibility and contrast ·
-scope creep · "what does this claim that it did not measure".
-
-**Brief reviewers with evidence and reasoning, never with a VERDICT.** The brief
-is itself auditable — the reviewer prompt is logged, so quote it as evidence, and
-it may contain no verdict-shaped sentence ("this is correct because…",
-"confirm that…"). A rule only the author can check is not a rule.
-
-**Ask for measurements, not verdicts.** A critic who returns an opinion can be
-argued with; a critic who returns a count cannot. "This resolves 1 URL, not 683"
-ends a discussion.
-
-**Re-review after fixing.** Round N's fixes introduce round N+1's defects — the
-correcting mindset asks "am I right *here*" and does not look sideways at the
-invariants the file already held. After correcting a claim, re-read the whole
-file.
-
-**Findings are claims too.** Reproduce a finding before accepting it, and
-reproduce it against the artifact it *cites* — not a copy you happen to have.
-Decline the half that overclaims and record the disposition with its evidence.
-
-**Stopping rules.**
-- One **clean** round is the signal to stop. One round is not. *Clean* means **no
-  confirmed blocking findings** - not "nobody objected". The dissent requirement
-  above applies to judgement panels choosing between options; it does not oblige
-  a verification round to manufacture an objection, and a round that ends with a
-  reviewer naming its strongest objection and showing it does not block IS clean.
-- **Round three on an instrument you invented means delete it**, not patch it.
-  Each patch will be individually correct and expose the next hole.
-- Same blocking question three passes running means you are waiting on a
-  decision, not stuck on execution. See §8.
-
----
-
-## 6. WIP = 1
-
-One unit in flight. One PR open. Merge it, then start the next.
-
-Parallelism is allowed in exactly three places:
-
-1. **Independent reviewers judging one artifact** — run in parallel, each with a
-   distinct lens and each required to make its strongest attempt at an
-   objection. Independent agreement is a valid outcome; manufactured
-   disagreement is not.
-2. **The OKF maintainer**, which this repo requires to run *in parallel with* the
-   work rather than after it, so the bundle update rides the same commit
-   (`AGENTS.md` §OKF maintenance). It does not touch the work's files, so it
-   does not collide.
-3. **Explicitly-requested swarm workers** (§1a), each isolated in its own
-   worktree — isolation is what removes the collision, so a swarm worker
-   without a worktree is not allowed.
-
-Otherwise: never run parallel agents over the same body of work — they collide,
-and the collision is invisible until merge.
-
-Before fanning out, check what is **in flight**, not just what the agents own.
-An agent is also colliding with any unmerged branch touching its files.
-
-Brief every agent with the **branch state**, not just the task. An agent
-inherits whatever is checked out and will reason confidently from a partial tree.
-
----
-
-## 7. Async-first
-
-A task is not done until its state is readable by a cold session with zero
-questions. Written, discoverable artifacts are the default for every decision,
-finding, status change, and handoff.
-
-- Decisions → the doc that owns them, with the reasoning
-- Findings → the PR when one exists, with evidence. **Most stage reviews happen
-  before any commit**, so their verdicts have no PR to land in: put those in the
-  commit message of the change they gated, or the sprint working doc. A finding
-  with nowhere to live fails this section's own cold-session bar.
-- Handoffs → an explicit list, in the artifact the next person will open
-- Debt → named and listed, never silent
-
-**A concept that stores STATE rots. A concept that stores REASONING does not.**
-Status comes from git; documents record why.
-
----
-
-## 8. Scope, and when to stop
-
-- **Deliver the scope asked for.** If part is blocked, finish the rest and say
-  plainly what you left and why.
-- **A loop can iterate but cannot re-scope.** Its only response to "this cannot
-  be done as specified" is to try again. If the specification is wrong, say so
-  and stop.
-- **Decisions you are authorized to make, make.** Parking a reversible call on a
-  human is a gate that never opens. Decide, record the reasoning, ship it,
-  and make it easy to reverse.
-- **Escalate only what is genuinely irreversible or genuinely theirs.**
-
----
-
-## 9. Learn, every pass
-
-Both directions: what failed *and* what worked.
-
-Write it where it will be read again — the affected `.okf/` concept plus a dated
-`log.md` entry, in the same commit as the change it describes. Not at session
-end; the batch loses the detail that made it useful. Decisions, corrections,
-and cross-session state ALSO go to ruflo memory (`mcp__ruflo__memory_store`,
-one fact per entry, prefix conventions per `CLAUDE.md` §Memory) — that is what
-§4's step 0 searches, so an unstored decision is invisible to the next pass.
-
-Store what a competent successor could not derive: decisions and their reasons,
-corrections, non-obvious failure modes. Not what the code already says.
-
-**Correct, do not accumulate.** Two contradictory records are worse than none.
-
----
-
 ## Appendix A — instantiated GOAL: review the skills, agents, and knowledge base
 
 > **GOAL:** Produce a ranked, evidence-backed assessment of this installation's
