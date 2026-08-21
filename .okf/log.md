@@ -99,10 +99,8 @@ verification event.
 
 `git log -S` selects every commit that CHANGES a string`s occurrence count, so
 one hit means one net count change, not one event - a neighbouring question accepted as the answer,
-which is exactly what this entry is about. Both entries are restored, each ANCHORED to the
-commit that landed it: 8fa41494b (2026-08-20T22:27:35Z) and 86c2c91cc
-(23:11:35Z). Commit instants are measured facts, so this keeps two events, keeps
-their order, and invents nothing.
+which is exactly what this entry is about. Both entries are restored with their times marked
+UNKNOWN - `at` omitted rather than guessed.
 
 A first repair attempt converted them by -3h, reading +03:00 off git commit
 stamps. Review refuted that too: e046adc54 records that the session clock was
@@ -113,12 +111,18 @@ fabricated precise-looking numbers out of invented ones. The root index allows
 exactly two moves - convert with a recoverable offset, or mark unknown - and only
 the second applies here.
 
-A second attempt then flattened both to one measured value, which review caught
-as the same order-destroying move under a new name. The resolution that actually
-holds was already in this repo`s history and I had to be walked back to it twice:
-anchor each entry to the commit that landed it. A YAML comment now records the
-anchors, because an identical-looking pair is what made me delete one in the
-first place.
+It took four wrong answers to get there. Delete one as a duplicate; convert by an
+offset read off the wrong commits; flatten both to one measured value (the same
+order-destroying move under a new name); anchor each to its landing commit. The
+last is the closest, and still wrong for a reason worth keeping: a commit instant
+records when TEXT LANDED, not when the check ran. Every attempt was an effort to
+produce a number, and the honest answer was that there isn`t one.
+
+The root index already said it - convert with a recoverable offset, or mark
+unknown - and only the second branch ever applied. `at` is optional in the spec
+and consumers must tolerate its absence, so omitting it IS the encoding for
+unknown. A YAML comment carries the reasoning and the bounding commits, because
+an identical-looking pair is what made me delete one in the first place.
 
 ## 2026-08-21 - CSS ships both inline and as a linked file; text search cannot prove a selector applies
 

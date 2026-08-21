@@ -8,10 +8,12 @@ generated:
   at: 2026-08-21T05:22:29Z
 verified:
   - { by: claude/opus-5, at: 2026-08-21T05:22:29Z }
-  # The two below are anchored to the commits that LANDED them (8fa41494b and
-  # 86c2c91cc) - measured instants, not the invented originals. Two real checks.
-  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-  - { by: claude/opus-5, at: 2026-08-20T22:27:35Z }
+  # Two real checks whose times are UNKNOWN. The originals were invented, no
+  # offset recovers them, and a commit instant records when text landed, not
+  # when the check ran - so `at` is omitted rather than guessed. They landed in
+  # 8fa41494b and 86c2c91cc if a bound is ever needed. Do NOT dedup them.
+  - { by: claude/opus-5 }
+  - { by: claude/opus-5 }
 timestamp: 2026-08-21T05:22:29Z
 ---
 

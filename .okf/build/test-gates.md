@@ -301,9 +301,10 @@ A third instance, 2026-08-21: two identical `verified` entries looked like a
 duplication artifact, and `git log -S <timestamp>` returned exactly ONE
 commit - read as proof one commit emitted both. `-S` selects every commit that
 CHANGES a string`s occurrence count - additions, removals, deduplications,
-reintroductions - so ONE hit means one net count change, not one event, and
-later edits change the answer (the same search now returns three commits, two
-of them mine). The parent commit held
+reintroductions - so ONE hit means one net count change, not one event. Do not
+freeze such a count into prose either: the number this file first recorded was
+stale within the same PR, because the commits fixing the entry changed the
+occurrence count the entry was citing. The parent commit held
 two DISTINCT entries that a timestamp-repair commit had normalised, so the
 "duplicate" was a real verification and deleting it destroyed provenance.
 Positive control that would have caught it in one command: read the file at
