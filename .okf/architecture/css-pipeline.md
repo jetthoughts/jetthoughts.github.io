@@ -4,6 +4,9 @@ title: CSS Build Pipeline (PostCSS + per-bundle PurgeCSS)
 description: PostCSS pipeline that concatenates per-page CSS resource slices and purges unused rules per bundle before shipping.
 resource: postcss.config.js
 tags: [css, build, performance]
+timestamp: 2026-08-21T01:43:19Z
+verified:
+  - { by: claude/opus-5, at: 2026-08-21T01:43:19Z }
 generated:
   by: process:okf-migrate
   at: 2026-07-12T00:00:00Z
@@ -82,6 +85,38 @@ a latent instance.
 
 Same family as the uppercase `#1A8CFF` that survived a case-sensitive sweep:
 verification that rests on grep alone is verification of the wrong artifact.
+
+## And computed style is not enough either: `elementFromPoint` cannot see overlays
+
+Extended 2026-08-21 (Phase 1a.4). Moving the footer to `--surface-ink`
+exposed a black band above it. Every DOM probe said the region was WHITE while
+the screenshot said BLACK - and the screenshot was right.
+
+It was an **FL Builder SVG shape layer**:
+`.fl-builder-bottom-edge-layer .fl-shape-content .fl-shape`, a `path` filled
+`#000000`. Three properties made it invisible to the obvious instruments:
+
+| Instrument | Why it missed |
+|---|---|
+| `document.elementFromPoint` | the layer is `pointer-events: none`; that API is HIT-TESTING, not painting, and skips it |
+| `grep background-color` | the paint is `fill`, an SVG property - no background involved |
+| editing `assets/css/homepage.css` | the rule lives in `assets/css/PAGES/homepage.css` - two different files, one obvious name |
+
+**What actually answers "which rule paints this pixel":** enumerate
+`document.styleSheets`, filter rules by the property, and ask the browser
+`el.matches(rule.selectorText)`. That returns the winning rule with its
+stylesheet, including overlays, pseudo-content and SVG fills. Cheaper
+fallback: screenshot the region and sample it (`magick img -format
+'%[pixel:p{x,y}]' info:`) - a pixel value is a fact, an impression is not.
+
+**The layered lesson:** source grep proves what the CSS says; computed style
+proves what an ELEMENT resolves to; only the rendered pixel proves what the
+user sees. Each layer catches what the one before it cannot, and a
+`pointer-events: none` overlay defeats the middle one silently.
+
+Sweep result: 12 shape-layer rules across 9 page bundles were still `#000000`
+and are now `var(--surface-ink)`. Any future dark-surface token move must
+include them - `grep -rn 'fill: *#000' themes/beaver/assets/css/pages/`.
 
 # Legacy liability: FL-Builder export CSS
 
