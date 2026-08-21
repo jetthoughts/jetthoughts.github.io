@@ -50,6 +50,38 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - the validator does not check trust fields, and there are two specs
+
+Recorded in the bundle-root [index.md](index.md), where the v0.2 trust
+conventions live, because both facts change how a session should read a green
+gate.
+
+**`okf_validate` is silent on `generated`/`verified`.** Measured with a probe
+bundle carrying `verified: [{ by: claude/opus-5 }]` - a malformed event, no `at`.
+BOTH validators on this machine report it **conformant with 3 warnings**.
+Conformance is §9 only: parseable frontmatter with a non-empty `type`. Six review
+rounds on PR #538 were spent almost entirely on trust-field correctness, and
+every `okf_validate ... exit=0` quoted alongside them covered none of it. The
+gate is structural; trust metadata is review-checked, not tool-checked.
+
+Note what the probe refuted: the expectation going in was that the v0.2 validator
+would catch what the v0.1 one missed. It does not. Running it was the difference
+between recording that and recording a plausible guess.
+
+**Two OKF specs, disagreeing section numbers.** The `/okf:okf` skill points at
+the plugin-cache copy, which is **v0.1** (340 lines), calls itself "the source of
+truth", never defines `generated` or `verified`, and numbers §5.2 as "Relative
+links". The v0.2 spec at `~/.agents/skills/okf/reference/SPEC.md` (792 lines)
+makes provenance/trust/lifecycle/attestation first-class and numbers §5.2 as
+"Trust: `generated` and `verified`". This bundle is `okf_version: "0.2"`, so v0.2
+governs.
+
+That mismatch produced two confident wrong rejections of a correct review finding
+on #538 - §5.2 looked up in the wrong copy, twice. The validators differ as well
+(261 vs 565 lines; the v0.2 one adds §13.1 `sources` checks and reports 84
+warnings on this bundle against the v0.1 one's 90), which means a warning total
+is only meaningful next to the validator that produced it.
+
 ## 2026-08-21 - what survives adversarial review, and when to stop patching
 
 Added to [workflows/review-swarm.md](workflows/review-swarm.md) under Known

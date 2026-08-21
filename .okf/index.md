@@ -37,6 +37,31 @@ distinct checks became three identical entries, losing their order. Convert with
 the offset the stamp was WRITTEN at (recoverable from the session or the
 commit), or mark it unknown - never overwrite history with now.
 
+**`okf_validate` does NOT check the trust fields, so a green run says nothing
+about them** (2026-08-21, measured). A probe bundle carrying a malformed event -
+`verified: [{ by: claude/opus-5 }]`, no `at` - is reported **conformant with 3
+warnings** by BOTH validators on this machine. Conformance is §9 only: parseable
+frontmatter with a non-empty `type`. Six review rounds on PR #538 were spent
+almost entirely on `generated`/`verified` correctness, and every
+`okf_validate ... exit=0` quoted alongside them was silent on the subject. Quote
+that gate for what it covers - structure - and treat trust metadata as
+review-checked, not tool-checked.
+
+**There are TWO OKF specs on this machine and their section numbers disagree.**
+The `/okf:okf` skill ships and points at
+`.claude/plugins/cache/.../skills/okf/reference/SPEC.md`, which is **v0.1** (340
+lines) and calls itself "the source of truth"; it never defines `generated` or
+`verified` at all, and its §5.2 is "Relative links". The v0.2 spec at
+`~/.agents/skills/okf/reference/SPEC.md` (792 lines) makes provenance, trust,
+lifecycle and attestation first-class, and ITS §5.2 is "Trust: `generated` and
+`verified`". **This bundle is `okf_version: "0.2"`, so the v0.2 copy governs.**
+
+That mismatch cost two wrong rejections of a correct review finding: §5.2 was
+looked up in the v0.1 copy, found to say something else, and the finding declared
+miscited - twice. The validators differ too (261 vs 565 lines; the v0.2 one adds
+§13.1 `sources` checks and reports 84 warnings here against the v0.1 one's 90).
+When a spec section is cited, resolve WHICH copy before disputing it.
+
 # Sections
 
 * [Build & Test](build/) - build pipeline, validators, and the blocking test gates
