@@ -55,10 +55,13 @@ time, which is verifiable - never invented).
 
 The course lesson eyebrow ships with a detail worth keeping: **the module number
 has two sources and only six lessons carry the obvious one.** `module-N` tags
-exist on 6 lessons; the `N.N ·` title prefix exists on 25. The template derives
-from the tag first, then falls back to `findRESubmatch` on the title prefix -
-25 lessons render an eyebrow, spread Module 1-5, verified in the built output.
-Lessons with neither get none (correct - not everything belongs to a module).
+exist on 6 lessons; the `N.N ·` title prefix exists on 25 - and opus review
+proved the tag set is a strict SUBSET of the prefix set, so the tag branch was
+dead code and was DELETED. The shipped template derives ONLY from the title
+prefix via `findRESubmatch`, plus a canonical module-name dict - 25 lessons
+render "Module N · <name>", spread Module 1-5, verified in the built output.
+Lessons without a prefix get none (correct - not everything belongs to a
+module).
 
 Canonical eyebrow spec confirmed portable: 12px/700/0.14em/uppercase/ruby
 measured EXACTLY in the browser (letter-spacing computes to 1.68px = 0.14em at
