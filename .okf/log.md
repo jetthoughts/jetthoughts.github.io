@@ -74,9 +74,11 @@ part. Prefer description; if a check must be documented, write what it does NOT
 establish in the same breath.
 
 Two companions recorded with it: round three on a home-grown instrument is the
-signal to DELETE it rather than patch it again (each of the four patches was
-individually correct and each exposed the next hole, while the honest version
-was far shorter and routed to a method the file already carried); and verify a citation
+signal to DELETE it rather than patch it again - which is what happened, in
+7ae28566e. Worth separating from what followed: the instrument died in round
+three, but the PROSE describing what instruments prove kept failing for two more
+rounds (88a87b322, d07cd3428). Deleting the tool does not end the problem it
+came from; and verify a citation
 against the artifact it CITES. The finding I declined twice was right twice: it
 asked to update `generated` for current content, citing canonical OKF §5.2. I read
 §5.2 as "Relative links" and called it miscited - but that was an older v0.1 copy
@@ -97,8 +99,10 @@ verification event.
 
 `git log -S` selects every commit that CHANGES a string`s occurrence count, so
 one hit means one net count change, not one event - a neighbouring question accepted as the answer,
-which is exactly what this entry is about. Both entries are restored, at the single MEASURED
-value e046adc54 chose - which is to say the pre-dedup state exactly.
+which is exactly what this entry is about. Both entries are restored, each ANCHORED to the
+commit that landed it: 8fa41494b (2026-08-20T22:27:35Z) and 86c2c91cc
+(23:11:35Z). Commit instants are measured facts, so this keeps two events, keeps
+their order, and invents nothing.
 
 A first repair attempt converted them by -3h, reading +03:00 off git commit
 stamps. Review refuted that too: e046adc54 records that the session clock was
@@ -109,10 +113,12 @@ fabricated precise-looking numbers out of invented ones. The root index allows
 exactly two moves - convert with a recoverable offset, or mark unknown - and only
 the second applies here.
 
-The two entries are therefore identical ON PURPOSE: two real checks whose
-individual times are unrecoverable. A YAML comment now sits above them saying so,
-because the identical pair is what made them look like an artifact in the first
-place - the note is the fix that stops the next session repeating my mistake.
+A second attempt then flattened both to one measured value, which review caught
+as the same order-destroying move under a new name. The resolution that actually
+holds was already in this repo`s history and I had to be walked back to it twice:
+anchor each entry to the commit that landed it. A YAML comment now records the
+anchors, because an identical-looking pair is what made me delete one in the
+first place.
 
 ## 2026-08-21 - CSS ships both inline and as a linked file; text search cannot prove a selector applies
 

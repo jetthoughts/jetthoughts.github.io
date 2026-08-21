@@ -5,15 +5,14 @@ description: The proven module-review loop - a design critic (full render walk) 
 tags: [swarm, review, process]
 generated:
   by: claude/opus-5
-  at: 2026-08-21T05:15:00Z
+  at: 2026-08-21T05:22:29Z
 verified:
-  - { by: claude/opus-5, at: 2026-08-21T04:52:57Z }
-  # The pair below is TWO real checks whose individual times are unrecoverable
-  # (e046adc54: the originals were invented, offsets not uniform). They are
-  # identical on purpose - do NOT dedup them. See log 2026-08-21.
+  - { by: claude/opus-5, at: 2026-08-21T05:22:29Z }
+  # The two below are anchored to the commits that LANDED them (8fa41494b and
+  # 86c2c91cc) - measured instants, not the invented originals. Two real checks.
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-21T04:52:57Z
+  - { by: claude/opus-5, at: 2026-08-20T22:27:35Z }
+timestamp: 2026-08-21T05:22:29Z
 ---
 
 # The loop
@@ -274,10 +273,12 @@ verdict format, and the two or three specific things to attack.
   adds - was corrected ONCE, in round one (a stylesheet-link count of three that
   a parser put at two; "production only adds `.min`" that also runs
   `resources.PostProcess` and adds `integrity`), and then stood unchallenged
-  through rounds two to six, while the INVENTED INSTRUMENT in the same file was
-  refuted five times running and finally deleted. Not every later finding was
-  about measurement - round six caught a stale round count - but every finding
-  that forced a rewrite rather than a word was.
+  through rounds two to six. What kept failing came in two distinct waves: the
+  invented INSTRUMENT was refuted three times and deleted in round three
+  (7ae28566e), and then the PROSE describing what instruments prove failed twice
+  more (88a87b322, d07cd3428) after the instrument itself was gone. Not every
+  later finding was about measurement - round six caught a stale round count -
+  but every finding that forced a rewrite rather than a word was.
 
   The planning shape: budget roughly one round for what the code does, and
   several for anything you claim a check PROVES. If you are on round three of
