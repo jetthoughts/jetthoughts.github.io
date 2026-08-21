@@ -28,6 +28,32 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - the --rr-* aliases are gone; 1a.4's other half is blocked
+
+**Done:** all 18 `--rr-*` consumer references migrated to canonical names and
+the alias block deleted from `foundations/css-variables.css`. Zero visual delta
+by construction - each alias was `--rr-X: var(--X)`, an exact 1:1 indirection -
+and the suite agreed at 53 screenshots compared, no failures.
+`design/site-palette.md` updated from "die next" to gone.
+
+The method is the durable part: the precondition was re-grepped AT THE MOMENT
+of deletion (18 -> 0), not read from a doc. A written inventory of those same
+consumers had been wrong twice in one review, and `single-post.css` belongs to
+the COURSE bundle as well as the blog, so deleting on the doc's word would have
+broken both. **Verify a deletion precondition by running the check, never by
+reading what the check returned last time.**
+
+**Blocked, and re-scoped:** "footer onto surface-ink" is not a footer change.
+Moving it leaves every adjacent dark surface at pure black - measured seams on
+homepage and services. Migrating the shape-layer dividers closes those and OPENS
+internal ones (`.home-proof` divider vs `.home-services` section). Dividers and
+the dark sections they abut have to move together, across 7+ page bundles -
+Phase 1b in size. All visual changes were reverted rather than shipping a seam.
+
+Still unidentified: a painter on `/services/` that `elementFromPoint` and a
+geometric scan of every element both miss, reporting white against a rendered
+black pixel. See [architecture/css-pipeline.md](architecture/css-pipeline.md).
+
 ## 2026-08-21 - the footer moved and twelve invisible shape layers came with it
 
 Phase 1a.4 step 1 was a 5-line footer change. It exposed a black band above the
