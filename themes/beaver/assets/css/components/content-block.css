@@ -113,8 +113,12 @@
  * Common in eyebrow text, labels, and highlights
  */
 .c-content-block--eyebrow {
+  /* 2608 1a.4: one eyebrow style - matches pages/blog-list.css .blog-eyebrow */
   color: var(--color-ruby);
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 /*

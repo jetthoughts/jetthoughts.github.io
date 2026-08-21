@@ -28,6 +28,34 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - ruby fails AA on dark surfaces, and it gates two phases
+
+Measured, not estimated: `--color-ruby` is **4.10:1 on #000 and 3.67:1 on
+`--surface-ink`** - below AA for normal text both times. `--ruby-700` is worse
+(2.75 / 2.46). Only `--color-ruby-hover` clears AA on both, and it is named for
+a hover state.
+
+Synced into [design/site-palette.md](design/site-palette.md) rather than left in
+the project README, because the README is not on the path a session reads. The
+concept now carries the table and a standing instruction: **until an on-dark
+ruby is named, do not apply a ruby text token to any of the three deliberate
+dark surfaces.**
+
+Two phases are blocked by the same unnamed token, which nothing in the plan
+connected:
+
+* "ONE eyebrow style" cannot be one style - the canonical form was designed
+  against LIGHT surfaces, and applying it site-wide drops two homepage eyebrows
+  to 4.10:1. A full 41-rule sweep was written, measured and REVERTED for this.
+* Migrating the dark bands to `--surface-ink` makes contrast WORSE, not better
+  (`#14110f` is lighter than `#000`), so the footer work cannot ship first
+  either.
+
+Neither automated gate catches it: those homepage sections have no contrast
+test, and the screenshot suite passes a colour change of this magnitude. The
+only reason it surfaced is that the eyebrow sweep was contrast-measured before
+being accepted.
+
 ## 2026-08-21 - the --rr-* aliases are gone; 1a.4's other half is blocked
 
 **Done:** all 18 `--rr-*` consumer references migrated to canonical names and
