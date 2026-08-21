@@ -50,6 +50,30 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - test the instrument, not just the result
+
+Recorded in [build/test-gates.md](build/test-gates.md), distinct from the NULL
+CHANGE rule beside it: a null change does nothing and is at least silent about
+it, while a wrong instrument RUNS, returns a plausible number, and gets believed.
+
+The real instance: `okf_validate .okf --strict | grep -c 'warn'` also matches the
+summary line `✓ conformant (89 warning(s))`, returning 90 - every warning total
+published on 2026-08-21 was one high.
+
+**The rule caught its own draft.** A second instance was nearly recorded:
+`grep -rc 'c-button--primary' _dest/public-dev/css/*.css` returning 0, dismissed
+as vacuous on the theory that bundles ship inline and never land under `css/`.
+The positive control refuted it in one command - `blog-eyebrow`, a class known to
+be adopted, returns 13 files through the identical glob. The instrument is valid
+and its 0 was true (`c-button` sits in 2 source files that reach 0 bundles). The
+accusation was as unevidenced as the measurement it accused.
+
+The control is therefore NOT "run it somewhere else" - re-running that grep
+against a production tree proves nothing, since `css-inline.html` inlines the
+bundle in every environment and only adds `minify` under `hugo.IsProduction`
+(found by codex review of PR #536). The control is **a positive case through the
+identical command**.
+
 ## 2026-08-21 - stop recording warning totals; they cannot stay true
 
 A sync check found the header's stated total stale AGAIN - 87 written, 88
