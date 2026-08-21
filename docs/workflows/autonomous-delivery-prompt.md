@@ -146,6 +146,22 @@ check does not count as the second pair of eyes.
 Give the verifier the GOAL and the artifact — never the author's reasoning about
 why it works. See "brief with evidence, not conclusions" below.
 
+**Where the handoff lands, concretely.** The review happens *before the artifact
+leaves the workshop* — before the human sees it, before it is committed. Not
+before merge; by merge it is far too late.
+
+| You produced | Peer review happens | Only then |
+|---|---|---|
+| a **plan** | a second agent reviews the plan | → ask the user. They never see an unreviewed plan. |
+| a **code change** | a second agent reviews the diff | → commit. Not "commit then review the PR". |
+| a **finding** or claim | a second agent tries to reproduce it | → report it |
+| a **measurement** | a second agent re-derives it independently | → quote it as evidence |
+| a **doc / concept** | a cold-eyes agent reads it without your context | → ship it |
+
+The test for whether you got this right: **at the moment the user reads
+something, has someone other than the author already checked it?** If no, the
+gate was in the wrong place.
+
 **Panels must disagree by construction.** Give each reviewer a *distinct lens*
 and require a dissent. Same-lens reviewers produce a chorus that ratifies the
 author's error.
