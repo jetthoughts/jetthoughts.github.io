@@ -42,6 +42,19 @@ mobile; and a lead conversion event exists so the next change can be measured.
 
 ## Two lanes — read this before changing any design artifact
 
+> **PIVOT 2026-08-21 (later the same day, Paul — plan approved): the lanes
+> merged into a forward strategy.** The discovery lane was upgraded from
+> "no authority" to an approved implementation path: a **clean-slate v2 rail**
+> with dual-run cutover and a non-indexed `/next/` staging path on production.
+> The design exploration is now **FULLY OPEN (rebrand allowed)** — ruby/LIGHT/
+> logo may be reproposed by the competition; ADR-0003's brand decisions hold on
+> the LIVE site only until Paul picks a winner. Legacy propagation is frozen
+> (the 780 button sites and 39 blacks are dropped as work-done-twice).
+> **The plan of record is [20.06](20-29-strategy/20.06-clean-slate-v2-plan.md)**
+> — it carries the cold-session state ledger. The table below is kept as the
+> state before the pivot; where they disagree, 20.06 wins.
+
+
 Since 2026-08-21 this project runs **two lanes at once**, and confusing them is
 the failure this section exists to prevent.
 
@@ -75,7 +88,7 @@ rejected the logo wall, the testimonial carousel and the repeated
 previews) predates this and renders the EXTRACTED system — do not confuse the
 two.
 
-**What it would take for discovery to win:** a superseding ADR, with evidence
+**[Superseded 2026-08-21 by the pivot above — see [20.06](20-29-strategy/20.06-clean-slate-v2-plan.md); kept as pre-pivot history.]** What it would have taken for discovery to win: a superseding ADR, with evidence
 that it beats the extracted system for the ICP. Until that exists, discovery
 output has **no authority** and must not be implemented. The cost of switching
 is not theoretical: 2.1 and 2.2 already shipped the extracted system to the
@@ -111,7 +124,7 @@ traffic**.
 | — | Whole-blog measure (28d after rebuild deploys, [40.01](40-49-measurement/40.01-blog-engagement-baseline.md) protocol) | informational | after rebuild |
 | **1a** | Site-wide recolour: token promotion, `--color-primary` deletion, retire the `#0066d6` rule (+55 `!important`s) | A + B + C | **ready** — [20.02](20-29-strategy/20.02-phase-1a-plan.md) |
 | 1b | Spatial chrome (dead fold, nav 7→5, space scale) | A + B + C | after 1a |
-| 2.4/2.5 | homepage, single-service | A + B + C, GSC gate on homepage | after the read |
+| 2.4/2.5 | homepage, single-service | **superseded 2026-08-21: rebuilt on the v2 rail per [20.06](20-29-strategy/20.06-clean-slate-v2-plan.md), not restyled in legacy** — 2.4's ≈09-17 read gate still governs its public flip | v2 rail |
 | 3 | Content: real numbers, sample report | A + cold-eyes review | parallel |
 
 Gates per ADR-0004: **A** qualitative (Clarity recordings, screenshots, visual

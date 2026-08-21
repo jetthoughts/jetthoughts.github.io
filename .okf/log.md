@@ -51,6 +51,35 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - clean-slate pivot approved: v2 rail, dual-run, fully-open design
+
+Paul approved (plan mode) the revised strategy the same evening the two-lane
+model was recorded - the lane model lasted half a day, and the log keeps both
+honestly. Recorded in
+[workflows/site-redesign-rollout.md](workflows/site-redesign-rollout.md); plan
+of record with the cold-session state ledger is
+`docs/projects/2608-site-design-system/20-29-strategy/20.06-clean-slate-v2-plan.md`.
+
+The pivot, in one line: stop propagating the design system through the
+recovered-from-obfuscation legacy CSS; build a clean v2 rail (root
+`layouts/next/`, clean bundles, functional partials reused verbatim), stage on a
+non-indexed `/next/` production path, cut over page-by-page.
+
+Decisions of record: design exploration FULLY OPEN (rebrand allowed - ruby/LIGHT
+hold on the live site only until Paul picks a winner); 2 directions, Claude
+Design and stitch COLLABORATING, not competing; legacy frozen, 780 button sites
+and 39 blacks dropped as work-done-twice; /next/ sunsets after two clean flips;
+sub-agents on sonnet/haiku with Fable reserved for critical judgment.
+
+Why it survived review: the track record. Born-clean pages shipped clean (0-11
+fl-lines); every propagation attempt reverted or stalled. The strategy now
+matches the evidence instead of fighting it.
+
+Two traps the rail must respect, verified before approval: bin/qtest has no
+^layouts/ case (root-layouts-only diffs exit 0 silently - fix rides PR-1), and
+the conversion events are attribute-driven, so v2 markup must carry
+data-lead-form / data-cta-location for events to keep firing.
+
 ## 2026-08-21 - two lanes on the redesign, and three confusions removed
 
 Paul opened a from-scratch design exploration ALONGSIDE the extraction, not
