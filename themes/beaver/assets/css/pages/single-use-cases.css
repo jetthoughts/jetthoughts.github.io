@@ -816,7 +816,7 @@ img.mfp-img {
   padding-bottom: 0px;
 }
 .use-case-details > .fl-row-content-wrap {
-  background-color: #000;
+  background-color: var(--surface-ink);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;

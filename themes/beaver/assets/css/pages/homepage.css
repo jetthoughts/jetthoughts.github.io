@@ -1844,7 +1844,7 @@ img.mfp-img {
 
 
 .home-services > .fl-row-content-wrap {
-  background-color: #000;
+  background-color: var(--surface-ink);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
