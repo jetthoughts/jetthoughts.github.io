@@ -9,7 +9,7 @@ generated:
 verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-21T00:21:12Z
+timestamp: 2026-08-21T00:29:15Z
 ---
 
 # The loop
@@ -59,6 +59,14 @@ wrong one inverts the verdict.**
 | Course pages | `.stitch/course-taste-design.md` | taste-scoring anchor |
 | In-post SVG / Mermaid / LinkedIn exhibits | [house-visual-spec](/design/house-visual-spec.md) | hand-drawn style, 2-2.5px strokes, semantic colour (green = money ONLY), labels INSIDE shapes; social assets also per `linkedin-posts/README.md` |
 
+**Precedence when two rows match.** A visual inside a COURSE lesson hits both
+the course row and the in-post row. Use **BOTH, course first**:
+`.stitch/course-taste-design.md` declares itself the single source of truth for
+course in-post visuals and carries course-specific rules the house spec lacks,
+while the house spec carries the stroke, semantic-colour and label rules the
+course file does not repeat. Taking only one silently drops half the governing
+rules - which is why this lists SOURCES rather than picking one per file type.
+
 `.stitch/design.md` is the COVER project, not the site. Point stitch at it
 while reviewing a light page and it will judge light chrome against dark cover
 tokens and recommend the recolour ADR-0003 explicitly rules out - the exact
@@ -79,6 +87,28 @@ neither substitutes.
 
 Scope its output like any critic's: a punch-list of surgical fixes, not a
 licence to redesign a working page.
+
+**The stitch skills GENERATE; none of them reviews.** `stitch-design` produces
+screens, `stitch-design-taste` produces a `DESIGN.md`, `stitch-loop` iterates,
+and the MCP surface is create/edit/apply with no critique verb. Left
+undefined, "route review through stitch" gets improvised - or worse, generates
+a screen nobody asked for. So the review contract is explicit:
+
+1. **Render first.** Capture the page at 1280x800 AND 390x844 via the
+   [render-verification recipe](/workflows/render-verification.md). Stitch
+   reviews an image, not a URL.
+2. **Name the anchor.** State which of the four sources governs this surface
+   (table above) and paste its rules into the prompt. Stitch does not know
+   which system applies and will assume whatever was last loaded.
+3. **Ask for a DELTA, not an opinion.** "List where this render departs from
+   these rules, each with the rule it breaks." Ask for a redesign and you get
+   a redesign; ask for departures and you get a punch-list.
+4. **Verify each item against the rendered output** before acting - the same
+   adjudication rule as any critic here.
+
+If a step cannot be performed, report that the gate DID NOT RUN rather than
+substituting a generic design opinion. That substitution is the exact failure
+this route exists to prevent.
 
 # Mechanical runbook
 
