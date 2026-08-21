@@ -57,7 +57,15 @@ The first draft put it in the bundle-root index; review moved it out - the root
 index is a reserved progressive-disclosure file, and a page of operational
 analysis there loads on every onboarding.
 
-**The validator checks trust-field SHAPE with two holes**: `check_instant`
+**Which validator you run decides whether any of this is checked.** `CLAUDE.md`
+routes agents through `/okf:validate`, which runs the `okf@scaccogatto` plugin - a
+v0.1 checker with no `check_trust` at all, so under the documented workflow every
+generated/verified defect passes silently. The concept now carries the explicit
+v0.2 invocation (`uv run ~/.agents/skills/validate/scripts/okf_validate.py .okf`),
+because everything below describes that checker and none of it applies to the
+plugin route.
+
+**That validator checks trust-field SHAPE, with two holes**: `check_instant`
 returns early on `None`, so a `verified` event with no `at` passes; and the
 `RFC3339` pattern makes time, seconds and timezone all optional, so
 `2026-08-21T05:30` and a bare date pass too. A green run is real evidence about
@@ -89,7 +97,11 @@ A stamping bug worth its own line: updating this concept with
 `generated.at` and `timestamp`, deleting a real verification. A global replace
 cannot tell which occurrences are the same fact. Recorded on the instrument rule
 in [build/test-gates.md](build/test-gates.md) with the check that catches it -
-diff the frontmatter against the merge base and expect additions only.
+diff the VERIFIED ROWS against the merge base
+(`grep -E "^[-+]  - \{ by:"`) and expect additions only. Scoped to those rows on
+purpose: a legitimate stamp bumps `generated.at` and `timestamp`, so a
+whole-frontmatter diff shows `-`/`+` pairs on every valid edit and would cry
+wolf.
 
 No counts appear above. Three drafts of this entry hard-coded one - warning
 totals, then a `git log -S` result, then "69 of 87 headings" - and each was
