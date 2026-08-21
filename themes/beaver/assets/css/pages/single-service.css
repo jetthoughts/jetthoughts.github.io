@@ -808,7 +808,7 @@ img.mfp-img {
   background-size: cover;
 }
 .service-hero .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: #000000;
+  fill: var(--surface-ink);
 }
 
 
@@ -857,7 +857,7 @@ img.mfp-img {
 
 
 .service-clients .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: #000000;
+  fill: var(--surface-ink);
 }
 
 
