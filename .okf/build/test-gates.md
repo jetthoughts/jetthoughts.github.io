@@ -289,6 +289,13 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   positive also returns nothing, the command is looking in the wrong place. If
   it returns a count, the zero you got is real.
 
+    Worked once immediately, on this very entry: `grep -c` for the new wording
+    returned 0, and so did the positive control - both phrases wrap across lines
+    and `grep` is line-oriented. The control refused the answer instead of
+    confirming a false one. Flatten first (`tr '\n' ' ' < file | tr -s ' '`),
+    then grep; same reason `marketing_copy_test` misses banned phrases split
+    across two template lines.
+
 - **An empty query result is not evidence of absence** (2026-08-21). Hunting a
   black band on `/services/`, `document.querySelectorAll('path.fl-shape')`
   returned `[]`. That read as "no shape layer on this page" and an entire
