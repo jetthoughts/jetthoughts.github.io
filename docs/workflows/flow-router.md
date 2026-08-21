@@ -11,6 +11,14 @@ Read this at session start to route tasks to the right workflow without explicit
 - Cover image work → `docs/workflows/cover-images.md` and `.stitch/design.md`
 - Image/cover requests (even without content) → `@docs/workflows/cover-images.md` and `@.stitch/design.md`
 - HTML/CSS changes → `@docs/workflows/css-consolidation.md`
+- **Design review of a page or visual change → `/stitch-design`** (Paul,
+  2026-08-21). Name the design source for the surface FIRST: site chrome and
+  pages are LIGHT (`.okf/design/site-palette.md`, ADR-0003), blog COVERS are the
+  dark Obsidian Engine (`.stitch/design.md`), course pages use
+  `.stitch/course-taste-design.md`. Loading the cover system to review a light
+  page produces the recolour ADR-0003 rules out. It complements the rendered
+  gates rather than replacing them - baselines check what SHIPPED, stitch checks
+  what was INTENDED. Detail: `.okf/workflows/review-swarm.md`.
 - Ruby/Rails changes → `@docs/workflows/ruby.md`
 - AI configuration, agents, skills → `@docs/workflows/ai-config.md`
 

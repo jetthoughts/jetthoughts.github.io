@@ -19,7 +19,10 @@ timestamp: 2026-08-20T23:52:10Z
    [render-verification recipe](/workflows/render-verification.md), scores
    worst-first) and a CONTENT-CANON critic (diffs numbers against the
    [course canon](/content/course-canon.md), sweeps banned patterns, checks
-   links) in parallel, in the background.
+   links) in parallel, in the background. **The DESIGN critic runs
+   `/stitch-design` against the surface's own design source** (table below) -
+   a generic critic scores taste and keeps proposing recolours the anchor text
+   already ruled out.
 3. Adjudicate reports; VERIFY every claim against the actual files/renders
    before acting - critics are sometimes wrong about line numbers or values.
 4. Fix surgically (one attribute = one edit; never re-theme the page).
@@ -38,9 +41,24 @@ anchor text, not majority vote: taste-e's red-metric ruling beat
 taste-a's recolor suggestion because the anchor names Ruby as the brand
 accent ink.
 
-**Route design review through `/stitch-design`** (Paul, 2026-08-21). Stitch
-holds the house visual system, so it reviews a change against the DESIGN
-SYSTEM rather than against taste - which is what a generic critic gives you,
+**Route design review through `/stitch-design`** (Paul, 2026-08-21) - but
+**name the design source for the surface first. There are three, and the
+wrong one inverts the verdict.**
+
+| Surface | Design source | Note |
+|---|---|---|
+| Blog cover images | `.stitch/design.md` | "The Obsidian Engine" - **DARK**, canvas 2400x1260 |
+| Site chrome and pages | [site-palette](/design/site-palette.md) | **LIGHT** (ADR-0003), ruby accent |
+| Course pages | `.stitch/course-taste-design.md` | third system, taste-scoring anchor |
+
+`.stitch/design.md` is the COVER project, not the site. Point stitch at it
+while reviewing a light page and it will judge light chrome against dark cover
+tokens and recommend the recolour ADR-0003 explicitly rules out - the exact
+failure this route exists to prevent.
+
+With the right source loaded, stitch reviews against the DESIGN SYSTEM rather
+than against taste
+ - which is what a generic critic gives you,
 and why generic critics keep suggesting recolours the anchor text already
 ruled out. It is also the consult for a CRITICAL call that is genuinely
 unclear: get its input before deciding, not instead of deciding. The
