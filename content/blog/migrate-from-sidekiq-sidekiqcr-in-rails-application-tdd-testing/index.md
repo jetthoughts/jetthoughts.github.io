@@ -5,7 +5,8 @@ remote_id: 1853610
 dev_to_id: 1853610
 dev_to_url: https://dev.to/jetthoughts/migrate-from-sidekiq-to-sidekiqcr-in-rails-application-1a85
 title: Migrate from Sidekiq to Sidekiq.cr in Rails application
-description: Where is it better to start the Sidekiq jobs transition from Ruby to Crystal in order to...
+description: "Running Sidekiq jobs in Crystal from a Rails app: isolate the job behind a service first, then point that service at the Crystal worker."
+seo_override: true
 created_at: '2024-05-15T07:33:16Z'
 edited_at: '2024-11-26T16:04:15Z'
 date: 2024-05-15

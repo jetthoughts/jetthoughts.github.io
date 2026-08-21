@@ -5,7 +5,8 @@ remote_id: 1879467
 dev_to_id: 1879467
 dev_to_url: https://dev.to/jetthoughts/pay-attention-to-method-names-in-minitestunit-2828
 title: Pay Attention to Method Names in Minitest::Unit
-description: "**TL,DR: *don't define any methods with names name, message, time, pass in Minitest::Unit test..."
+description: "Defining name, message, time or pass in a Minitest test case overrides Minitest::TestCase's own methods. What breaks, and what to call them instead."
+seo_override: true
 created_at: '2024-06-06T17:07:35Z'
 edited_at: '2024-11-26T16:02:33Z'
 draft: false

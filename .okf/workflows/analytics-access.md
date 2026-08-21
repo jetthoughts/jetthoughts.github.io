@@ -6,7 +6,7 @@ tags: [analytics, ga4, search-console, mcp, seo, tooling]
 generated:
   by: claude/opus-5
   at: 2026-08-13T00:00:00Z
-timestamp: 2026-08-20T23:44:03Z
+timestamp: 2026-08-21T02:40:00Z
 verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - by: claude/opus-5
@@ -138,6 +138,56 @@ that can never convert.
 Use `sc-domain:jetthoughts.com` for *coverage* questions (what exists, what is
 indexed); use the `https://jetthoughts.com/` prefix property, or a
 `page notContains elital` filter, for any *performance* question.
+
+## Page-level impressions are mostly queries GSC will not name
+
+A page row and that page's query breakdown do not add up. The gap varies widely -
+30x on the example below, 3.9x on the Falcon post - so treat it as "check every
+time", not as a constant. `rails-virtual-attributes-use-cases-ruby` (90d,
+2026-05-23..08-20):
+
+| Source | Impressions | Position | CTR |
+|---|---|---|---|
+| page row (`dimensions=page`) | **7,902** | 7.8 | 0.09% |
+| sum of its named queries (`get_search_by_page_query`) | **265** | 3.7-5.9 on the head terms | **4.26%** on `rails virtual attribute` |
+
+GSC omits low-volume queries for privacy, so ~97% of that page's impressions
+belong to queries it will never show you. The page-level 0.09% is an
+aggregation artifact: on the queries that are actually its topic, the page
+ranks top-5 and converts fine.
+
+**Rule: before calling a page a CTR failure, pull `get_search_by_page_query`
+and compare the named total against the page total. If named ≪ page, the
+page-level CTR is noise and a snippet rewrite will change nothing.**
+
+**Two traps sit inside this one, and the second cost a shipped recommendation
+on 2026-08-21.**
+
+*Trap A - the row limit silently truncates the denominator.*
+`get_search_by_page_query` defaults to 20 rows and the `totals` field it returns
+sums **only the rows returned**, not the page's real named total. The Falcon post
+read 804 impressions at `row_limit=20` and 920 at `row_limit=100`. A truncated
+denominator is worse than no denominator, because it looks like an answer. Always
+pass an explicit high `row_limit` and check `row_count` against it.
+
+*Trap B - do not claim the inverse without running the test.*
+The Falcon post was written up as this trap's mirror image: named queries
+genuinely on-topic, therefore a real snippet failure worth fixing. Re-pulling
+killed it. Named 920 vs page 3,590 = **26% named**, so named ≪ page and it is the
+SAME artifact class as the example above. The "5 clicks / 0.62%" quoted as the
+page's performance were the NAMED-QUERY totals; the page actually takes **37
+clicks at 1.03% CTR** and is the site's best blog earner.
+
+So this rule is **one-way**. `named ≪ page` tells you the page-level CTR is
+noise. It does NOT license the converse, and no clean inverse case has been found
+in this data yet. If you think you have one, run the comparison and report the
+ratio before drawing any conclusion from it - the case that felt most obviously
+like an inverse returned 26% when actually measured.
+
+Same family as the 2026-08-14 error of quoting an average position computed over
+1-3 impression rows: a GSC figure is only as good as the denominator you did not
+look at - and, per Trap A, the denominator you did look at may itself be
+truncated.
 
 ## `/blog/` fires no `scroll_depth` - GA4 cannot see the blog index
 

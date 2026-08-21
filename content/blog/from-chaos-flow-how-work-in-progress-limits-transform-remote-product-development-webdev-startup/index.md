@@ -5,7 +5,8 @@ remote_id: 2157625
 dev_to_id: 2157625
 dev_to_url: https://dev.to/jetthoughts/from-chaos-to-flow-how-work-in-progress-limits-transform-remote-product-development-1l4h
 title: 'From Chaos to Flow: How Work-in-Progress Limits Transform Remote Product Development'
-description: "\"I felt like a circus performer spinning plates. Each new project added another wobbling dish. I..."
+description: "Work-in-progress limits for remote teams: how capping parallel work cuts context switching without adding headcount."
+seo_override: true
 created_at: '2024-12-15T12:34:48Z'
 edited_at: '2024-12-15T13:11:21Z'
 draft: false

@@ -5,7 +5,8 @@ remote_id: 2086243
 dev_to_id: 2086243
 dev_to_url: https://dev.to/jetthoughts/ruby-on-rails-8-how-to-batch-with-custom-columns-510p
 title: 'Ruby on Rails 8: How to Batch with Custom Columns'
-description: 'Ruby on Rails 8 introduces a handy feature for developers handling large datasets: batching with...'
+description: "Rails 8 lets in_batches cursor on columns other than the primary key. What that changes for multi-tenant data and large migrations."
+seo_override: true
 created_at: '2024-11-08T08:42:28Z'
 edited_at: '2024-11-25T15:42:11Z'
 date: 2024-11-08

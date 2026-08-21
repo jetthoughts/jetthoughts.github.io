@@ -5,7 +5,8 @@ remote_id: 2167036
 dev_to_id: 2167036
 dev_to_url: https://dev.to/jetthoughts/stop-looking-for-product-market-fit-4ic7
 title: Stop Looking for Product Market Fit
-description: Everyone's obsessed with product-market fit. As if it's some magical moment when confetti falls from...
+description: "Product-market fit gets built one customer at a time. Why treating it as a search sends founders chasing the wrong signals."
+seo_override: true
 created_at: '2024-12-20T15:21:45Z'
 edited_at: '2024-12-20T15:28:06Z'
 date: 2024-12-20

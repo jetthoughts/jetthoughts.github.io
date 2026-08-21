@@ -5,7 +5,8 @@ remote_id: 2190242
 dev_to_id: 2190242
 dev_to_url: https://dev.to/jetthoughts/mastering-debugging-insights-from-chelsea-troy-on-ruby-663-3ngf
 title: 'Mastering Debugging: Insights from Chelsea Troy on RUBY 663'
-description: In a recent episode of Ruby Rogues, Chelsea Troy shared her expertise on debugging, emphasizing the...
+description: "Chelsea Troy on Ruby Rogues: how debugging instincts get built, and what separates a fast diagnosis from a long hunt."
+seo_override: true
 created_at: '2025-01-05T17:47:13Z'
 edited_at: '2025-01-30T02:52:36Z'
 draft: false

@@ -5,7 +5,8 @@ remote_id: 1677293
 dev_to_id: 1677293
 dev_to_url: https://dev.to/jetthoughts/custom-ordering-without-custom-sql-with-ruby-on-rails-7-33o
 title: Custom ordering without custom SQL with Ruby on Rails 7
-description: 'The problem It''s a common case for Rails applications to have enum fields on a model like:    class...'
+description: "Ordering records by an enum in Rails 7 without hand-written SQL: in_order_of puts the rows in the sequence you name."
+seo_override: true
 created_at: '2023-11-24T11:37:01Z'
 edited_at: '2024-11-25T15:39:43Z'
 draft: false

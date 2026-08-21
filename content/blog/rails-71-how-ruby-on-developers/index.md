@@ -5,7 +5,8 @@ remote_id: 2427475
 dev_to_id: 2427475
 dev_to_url: https://dev.to/jetthoughts/rails-71-how-ruby-on-rails-developers-can-use-the-with-query-method-for-ctes-2p9a
 title: 'Rails 7.1: How Ruby on Rails Developers Can Use the .with Query Method for CTEs'
-description: For Ruby on Rails developers looking to level up their database query skills, Rails 7.1 introduced a...
+description: "Rails 7.1 added the .with query method, bringing Common Table Expressions into Active Record. How CTEs work, and when they make a query clearer."
+seo_override: true
 created_at: '2025-04-23T16:02:26Z'
 date: 2025-04-23
 edited_at: '2025-05-04T10:56:32Z'

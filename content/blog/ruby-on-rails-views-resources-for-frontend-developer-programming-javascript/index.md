@@ -5,7 +5,8 @@ remote_id: 1559624
 dev_to_id: 1559624
 dev_to_url: https://dev.to/jetthoughts/ruby-on-rails-views-resources-for-frontend-developer-3pi9
 title: Ruby on Rails Views Resources for Frontend Developer
-description: "\U0001F680 Excited to share some awesome resources to help front-end developers onboard into the Ruby on Rails..."
+description: "Resources for front-end developers landing in a Rails codebase: ViewComponent, Phlex and the other view-layer options worth knowing about."
+seo_override: true
 created_at: '2023-08-04T22:31:55Z'
 edited_at: '2024-11-25T15:39:59Z'
 draft: false
