@@ -57,8 +57,10 @@ conventions live.
 
 **The validator checks trust-field SHAPE; a missing `at` is the hole.** The v0.2
 `check_trust` requires `generated` to be a mapping, requires `generated.by`,
-validates actor shapes, and rejects non-RFC-3339 instants, and `--strict` turns
-each warning into a failure. But `check_instant` returns early on `None`, so
+validates actor shapes, and shape-checks instants, and `--strict` turns each
+warning into a failure. The shape check is permissive - time, seconds and
+timezone are all optional in its pattern, so `2026-08-21T05:30` and a bare date
+both pass. But `check_instant` returns early on `None`, so
 `verified: [{ by: claude/opus-5 }]` with no `at` passes both validators on this
 machine.
 
@@ -73,7 +75,13 @@ dismissed, but it cannot tell you an event HAS a time, and it can never tell you
 a recorded time is TRUE. Six review rounds on #538 turned on exactly that and no
 tool caught any of it. Conformance is v0.2 §11 and has THREE conditions -
 parseable frontmatter, a non-empty `type`, AND reserved files (`index.md`,
-`log.md`) following §8 and §9. The first draft listed two and cited "§9" for
+`log.md`) following §8 and §9. Documenting that third condition exposed a
+contradiction the entry now carries: THIS log violates it. 69 of 87 date headings
+carry a themed suffix where §9 wants a bare `## YYYY-MM-DD`, and the validator
+warns on every one - but computes `conformant` from ERRORS only, so it prints a
+checkmark anyway. The bundle is green and not §11-conformant simultaneously.
+Converting the headings is mechanical but trades a spec rule against human
+scannability, so it is flagged for Paul rather than swept. The first draft listed two and cited "§9" for
 conformance itself, which is the v0.1 numbering: under v0.2, §9 is the LOG
 structure section. Citing a section without naming the version means two
 different things, which is the two-spec trap below in miniature.
