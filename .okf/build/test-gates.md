@@ -4,8 +4,9 @@ title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
 status: stable
-generated: { by: claude/opus-5, at: 2026-08-21T07:42:17Z }
+generated: { by: claude/opus-5, at: 2026-08-21T09:59:40Z }
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T09:59:40Z }
   - { by: claude/opus-5, at: 2026-08-21T07:42:17Z }
   - { by: claude/opus-5, at: 2026-08-21T06:44:05Z }
   - { by: claude/opus-5, at: 2026-08-21T06:36:48Z }
@@ -20,7 +21,7 @@ verified:
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
   - { by: claude/opus-5, at: 2026-08-20T21:43:35Z }
   - { by: claude/opus-5, at: 2026-08-20T21:47:30Z }
-timestamp: 2026-08-21T07:42:17Z
+timestamp: 2026-08-21T09:59:40Z
 ---
 
 # The suites
@@ -41,7 +42,7 @@ is `simple-page`); the changed-file→page map lives in the script itself -
 extend it when adding components or critical files. The macOS full suite remains the only dedup-trap catcher
 (Linux font resolution masks it) - never finish a component on qtest alone.
 
-# Run the suite on PRISTINE master before trusting a green screenshot run
+# Run the suite at the MERGE BASE before trusting a green screenshot run
 
 A green screenshot run proves nothing until you know the suite is green with NO
 change in the tree. Measured in a worktree on 2026-08-21:
@@ -62,8 +63,15 @@ article body VERTICALLY SHIFTED. A `background-color` change cannot move layout,
 and it nearly got accepted anyway because it arrived batched with diffs that
 genuinely were the intended recolour.
 
-So establish the baseline-of-the-baseline first - `git checkout origin/master --
-themes/ test/fixtures/screenshots/`, build, run. If master is not green here,
+So establish the baseline-of-the-baseline first - `git checkout "$(git merge-base
+origin/master HEAD)" -- themes/ test/fixtures/screenshots/`, build, run.
+
+**The merge base, NOT current `origin/master`** (corrected 2026-08-21 by review of
+PR #543). Master moves after a branch is cut, so comparing against its current
+tip smuggles unrelated upstream failures into your delta and attributes them to
+your change. Rebase immediately before measuring and run both sides in the same
+environment. Same correction this bundle already made for `git diff` when
+checking `verified` rows. If master is not green here,
 this machine cannot produce trustworthy baselines: record them where the
 canonical ones came from (`gh workflow run test.yml --ref <branch> -f
 screenshots=true -f update-baselines=true`), which is the rule

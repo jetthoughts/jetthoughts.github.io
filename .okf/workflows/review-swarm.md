@@ -5,14 +5,15 @@ description: The proven module-review loop - a design critic (full render walk) 
 tags: [swarm, review, process]
 generated:
   by: claude/opus-5
-  at: 2026-08-21T05:33:58Z
+  at: 2026-08-21T09:59:40Z
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T09:59:40Z }
   - { by: claude/opus-5, at: 2026-08-21T05:33:58Z }
   # Two earlier checks are NOT listed here: their times were invented, no offset
   # recovers them, and a `verified` event requires `at`. They are recorded in
   # log.md 2026-08-21 with their bounding commits (8fa41494b, 86c2c91cc) - prose
   # can say "time unknown", this schema cannot.
-timestamp: 2026-08-21T05:33:58Z
+timestamp: 2026-08-21T09:59:40Z
 ---
 
 # The loop
@@ -258,6 +259,46 @@ verdict format, and the two or three specific things to attack.
   A number lives in more places than the document that owns it. `grep -rn` the
   old value across docs and the bundle, and treat every surviving hit as stale
   unless it is explicitly framed as retracted history.
+
+- **Brief verifiers WITH the author's reasoning - the blind version reproduces
+  the author's error** (2026-08-21, reversal). An earlier rule said to give a
+  verifier the goal and artifact but never the reasoning, on the theory that
+  exposure contaminates. A verifier overturned it and proved the point by method:
+  it read the document's own argument, attacked it, and returned 10 findings -
+  including two logical contradictions and a conflict with `CLAUDE.md` - that the
+  blind version would have forbidden it to look for.
+
+  A blind verifier re-derives from scratch, which in practice means running the
+  same command on the same instrument and reproducing the instrument error at
+  double cost. The defects that actually ship here are reasoning-shaped - stale
+  premises, prescriptive claims, flattering denominators - and those live in the
+  ASSUMPTIONS, which is exactly what withholding the reasoning hides.
+
+  The original fear was real but misdiagnosed: handing over a **verdict** gets it
+  back wearing independent confidence. That is verdict contamination, already
+  handled by demanding measurements rather than verdicts. Exposing HOW you
+  reasoned is not telling them WHAT to conclude. Ask the verifier to attack the
+  assumptions and produce one measurement the author did not run.
+
+- **Two reviewers are not redundant - they catch different GENERATIONS of defect**
+  (2026-08-21, measured on PRs #541/#543). An internal sub-agent reviewed the
+  original document and found 10 defects. The external companion then reviewed
+  the REPAIR and found 5 more, two of which were introduced by the fixes for the
+  first set: a WIP rule that deadlocked the appendix it had just corrected, and a
+  docs-only exception that contradicted the instruction layer written an hour
+  earlier.
+
+  Neither reviewer would have found the other's set. This is the concrete form of
+  "round N's fixes introduce round N+1's defects" above: the cheap internal
+  reviewer belongs on every stage, and the expensive external one earns its cost
+  by reading what the repairs did.
+
+- **A dissent satisfied by a nitpick is worse than none** (2026-08-21). "Require
+  a dissent" is compliable by instructing a reviewer to disagree about anything.
+  Ask instead for the strongest finding AGAINST shipping with its evidence, and
+  permit "no objection" only when it names the check that was run. Independent
+  agreement is a valid outcome; manufactured disagreement buys the appearance of
+  friction and none of its value.
 
 - **Docs review converges slowly - budget more than one round** (2026-08-21).
   Three rounds returned 8, 7 and 9 findings on a documentation-only PR, and

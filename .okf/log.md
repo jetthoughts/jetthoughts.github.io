@@ -51,6 +51,46 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - what 15 review findings on one document taught, and one rule reversed
+
+Closing the OKF gap on PRs #541/#543: the delivery prompt shipped and was then
+corrected 15 times, but the durable learnings from those corrections never
+reached the bundle. #543 changed durable process rules without an `.okf/` update
+- the same-commit gate failing on the PR that documents the gate.
+
+**A correction, not an addition.** `build/test-gates.md` said to run the suite on
+PRISTINE master. That is wrong once a branch is a few hours old: master moves
+after the branch is cut, so its current tip is not the branch's counterfactual
+baseline and unrelated upstream failures land in your delta attributed to your
+change. Corrected to the MERGE BASE, rebased immediately before measuring, both
+sides in one environment. Same correction this bundle already made for `git diff`
+when checking `verified` rows - I made it there and did not carry it here.
+
+**The reversal, recorded in [workflows/review-swarm.md](workflows/review-swarm.md).**
+The delivery prompt originally said to brief a verifier with the goal and
+artifact but NEVER the author's reasoning. A verifier overturned that and proved
+it by method: it read the document's own argument, attacked it, and produced 10
+findings - two logical contradictions and a conflict with `CLAUDE.md` among them
+- that the blind version would have forbidden it to look for. A blind verifier
+re-derives from scratch, which means running the same command on the same
+instrument and reproducing the instrument error at double cost. The defects that
+ship here are reasoning-shaped, and the reasoning is where the assumptions are.
+The original fear was real but misdiagnosed - handing over a VERDICT is what
+contaminates, and that is already handled by demanding measurements.
+
+**Two reviewers catch different GENERATIONS of defect.** The internal sub-agent
+reviewed the original and found 10. The external companion then reviewed the
+REPAIR and found 5 more, two of them introduced by the fixes for the first set: a
+WIP rule that deadlocked the appendix it had just corrected, and a docs-only
+exception that contradicted the instruction layer written an hour earlier.
+Neither would have found the other's set. That is the concrete form of "round N's
+fixes introduce round N+1's defects" - cheap internal reviewer on every stage,
+expensive external one reading what the repairs did.
+
+Also recorded: a dissent satisfied by a manufactured nitpick is worse than none.
+Ask for the strongest finding AGAINST shipping with evidence; permit "no
+objection" only when it names the check that ran.
+
 ## 2026-08-21 - the autonomous delivery prompt, and what its own review caught
 
 Added `docs/workflows/autonomous-delivery-prompt.md` - the operating prompt for
