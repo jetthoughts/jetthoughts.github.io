@@ -4,7 +4,7 @@ title: CSS Build Pipeline (PostCSS + per-bundle PurgeCSS)
 description: PostCSS pipeline that concatenates per-page CSS resource slices and purges unused rules per bundle before shipping.
 resource: postcss.config.js
 tags: [css, build, performance]
-timestamp: 2026-08-21T01:59:50Z
+timestamp: 2026-08-21T03:20:07Z
 verified:
   - { by: claude/opus-5, at: 2026-08-21T01:43:19Z }
 generated:
@@ -115,10 +115,34 @@ value.
 The check that is actually decisive: screenshot the region and sample the pixel
 (`magick img -format '%[pixel:p{x,y}]' info:`). A pixel value is a fact; a rule
 list is a hypothesis. On 2026-08-21 the candidate-rule method found the homepage
-painter and then FAILED on the equivalent /services/ surface - both
-`elementFromPoint` and a geometric scan of every element reported white where
-the rendered pixel was black, and that painter is still unidentified. Treat DOM
-inspection as evidence that can be silently incomplete.
+painter and then FAILED on the equivalent /services/ surface. **Resolved
+2026-08-21, and the cause generalises twice over.**
+
+The services painter was `rect.fl-shape` inside the same
+`.fl-builder-bottom-edge-layer`, filled by
+`.services-showcase .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape`
+(`pages/services.css`). Two things hid it:
+
+* **The homepage shape is a `<path>`; the services shape is a `<rect>`.** A
+  query scoped to `path.fl-shape` returns `[]` on services, which reads as
+  "no shape layer here" rather than "wrong primitive". Match on the CLASS
+  (`.fl-shape`) or the layer, never on the element name.
+* `pointer-events: none` again, so every hit-test skipped it.
+
+**The one-line technique that works, and should be reached for first:**
+
+```js
+const s = document.createElement('style');
+s.textContent = '*, *::before, *::after { pointer-events: auto !important; }';
+document.head.appendChild(s);
+document.elementsFromPoint(x, y);   // overlays now appear in the stack
+s.remove();
+```
+
+Forcing hit-testability turns a click-through overlay into an ordinary stack
+entry. It found in one call what a geometric element scan, a pseudo-element
+sweep and a stylesheet walk had all missed.
+
 
 **The layered lesson:** source grep proves what the CSS says; computed style
 proves what an ELEMENT resolves to; only the rendered pixel proves what the
