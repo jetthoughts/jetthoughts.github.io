@@ -51,6 +51,22 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - three register pilots shipped; the comparison is controlled; Editorial recommended
+
+All three register pilots merged on the /next/ rail (#561 rescue-room, #562
+editorial, #563 precision, #564 cross-pilot column fix): one landing anatomy,
+three skins, copy parity verified at DOM level (identical text tokens, tags,
+class sequences). Four-persona panel + fable critique recorded in 20.08:
+pilot vote B 2 / C 1 / A 1; artifact head-to-head Editorial 4-1; recommendation
+= Artifact Editorial + graft package (Precision's ledger table for data,
+Rescue Room's mobile rhythm patterns - which are ANATOMY patterns, portable;
+its template-silhouette weakness is intrinsic). Paul decides on the live URLs.
+Durable instrument lesson added to test-gates: local production checks must
+set BASE_URL or the browser silently loads the LIVE site's CSS. The shared
+mobile table-clip defect (all three pilots, column 2 off-edge without
+affordance) is deliberately deferred to the winner's graft round - fixing it
+three times buys nothing.
+
 ## 2026-08-21 - register pilot B, and the two ways a second pilot breaks the first pilot's gates
 
 `/next/pilots/editorial/fractional-cto/` ships the "Artifact Editorial" register
