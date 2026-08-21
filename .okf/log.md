@@ -28,6 +28,31 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - the footer moved and twelve invisible shape layers came with it
+
+Phase 1a.4 step 1 was a 5-line footer change. It exposed a black band above the
+footer that took an embarrassing number of wrong turns to find, and the lesson
+is worth more than the fix.
+
+* `architecture/css-pipeline.md` - extended the existing "computed style, not
+  source, proves the paint" trap with the layer beyond it: **computed style is
+  not enough either.** The band was an FL Builder SVG shape layer with
+  `pointer-events: none`, so `document.elementFromPoint` - which is HIT-TESTING,
+  not painting - skipped it and reported the white element underneath. It paints
+  via SVG `fill`, so no `background-color` grep could see it. And its rule lives
+  in `assets/css/PAGES/homepage.css`, a different file from
+  `assets/css/homepage.css`, so one attempted fix edited the wrong file entirely.
+
+  What answers "which rule paints this pixel": enumerate `document.styleSheets`
+  and ask `el.matches(rule.selectorText)`. Cheaper fallback: sample the rendered
+  pixel with `magick -format '%[pixel:p{x,y}]'`. Source grep proves what the CSS
+  says, computed style proves what an element resolves to, only the pixel proves
+  what the user sees.
+
+Twelve shape-layer rules across nine page bundles were still `#000000`; all now
+`var(--surface-ink)`. Recorded the grep that finds them for any future
+dark-token move.
+
 ## 2026-08-21 - the strict gate has been RED and was being reported green
 
 `okf_validate.py .okf --strict` **exits 1**, and has for some time. It prints
