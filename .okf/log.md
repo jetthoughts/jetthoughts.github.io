@@ -118,9 +118,17 @@ holds the work this hour is a state snapshot and would rot within days.
   `rails-virtual-attributes` shows 7,902 impressions / 0.09% CTR at page level,
   but its named queries total 265 impressions at position 3.7-5.9 with 4.26% CTR
   on the head term. Rule: compare named-query total against page total before
-  calling anything a CTR failure. The inverse case (Falcon post: 804 named
-  impressions on-topic at position ~5 for 5 clicks) is a real snippet failure -
-  same shape of number, opposite verdict.
+  calling anything a CTR failure. The rule is ONE-WAY - `named ≪ page` means the
+  page CTR is noise, but the converse is not licensed and no clean inverse case
+  has been found in this data.
+- **A pre-merge review falsified the "inverse case" this entry originally
+  claimed** (PR #524). The Falcon post was written up as a real snippet failure
+  at "804 named impressions / 5 clicks / 0.62%". Re-pulling: 804 came from a
+  truncated `row_limit=20` call (real named total 920), and the 5 clicks / 0.62%
+  were named-query totals quoted as page performance - the page takes 37 clicks
+  at 1.03%. Named 920 vs page 3,590 = 26%, so it is the SAME artifact as
+  rails-virtual-attributes. Two durable traps recorded in the concept: the row
+  limit silently truncates the denominator, and `totals` sums only returned rows.
 - **All site descriptions are now untruncated, and the earlier count was wrong.**
   36 written by hand. 19 of them were missed by every prior pass because their
   `...` sits inside single quotes (`description: 'foo...'`), which
