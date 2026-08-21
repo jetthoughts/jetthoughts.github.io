@@ -10,11 +10,31 @@ exit code is 1. Reading the friendly line and calling the gate green is the
 easy mistake; it was made repeatedly on 2026-08-20/21 before review caught it.
 **Check `$?`, not the checkmark.**
 
-Measured 2026-08-21 (re-derive rather than trusting these numbers; they move
-with every entry appended to this file, including the one you are about to
-write): **87 warnings** as of 2026-08-21T03:27Z, of which **63 are §7 date
-headings** and
-**22 are missing recommended fields**.
+**No warning totals are recorded here, deliberately.** Every entry appended to
+this file adds a §7 heading warning, so any number written down is wrong by the
+next append - it was corrected twice on 2026-08-21 and went stale within one
+commit each time.
+
+Measure when you need it, via the SKILL so it resolves whatever validator is
+canonical (`/okf:validate .okf --strict`), and count warning RECORDS:
+
+```
+<validator> .okf --strict | grep -c '! warn'          # total
+<validator> .okf --strict | grep '! warn' | sed 's/.*: //' | sort | uniq -c | sort -rn
+```
+
+**Count `'! warn'`, not `'warn'`.** The summary line reads
+`✓ conformant (N warning(s))` and matches the looser pattern, so `grep -c 'warn'`
+returns one more than the real count - every total published on 2026-08-21 was
+inflated by exactly one because of this.
+
+**Derive the classes; do not assume them.** On the validator installed here the
+bulk are §7 date headings from this file, with ~22 missing-recommended-field
+and one tolerated out-of-bundle cross-link. Review reported a different
+breakdown from another build (legacy `# Citations` warnings, no missing-field
+ones) that could not be reproduced with either copy on this machine - so run the
+classifier above rather than trusting any written composition, including this
+sentence.
 
 The date headings are a deliberate deviation. The spec's template is a bare
 `## <YYYY-MM-DD>` with bullets beneath, which assumes one entry per day; this
@@ -29,6 +49,27 @@ find-and-replace.
 make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
+
+## 2026-08-21 - stop recording warning totals; they cannot stay true
+
+A sync check found the header's stated total stale AGAIN - 87 written, 88
+measured, one entry later. It had already been corrected twice today and went
+stale within a commit each time.
+
+The fix is not a third correction. **Any hardcoded count in an append-only file
+is wrong by the next append**, and this file's dominant warning class is its own
+headings - so writing the number down guarantees a false statement and invites
+the next reader to trust it. Both the header here and the tracker in
+`docs/projects/2608-site-design-system/README.md` now carry the measurement
+COMMAND instead of a number.
+
+What survives is the part that is actually stable: the composition. The large
+majority are §7 date headings from this file, the rest are concepts missing a
+recommended field, and **a warning that is neither is worth reading**. That is
+the useful signal the totals were burying.
+
+Historical log entries keep their measured numbers - the log records what was
+true when written, and rewriting that would destroy the audit trail.
 
 ## 2026-08-21 - what a self-iterating loop can and cannot do
 
