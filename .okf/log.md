@@ -3,6 +3,39 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+**Heading format is a DELIBERATE deviation from OKF §7 — do not "fix" it.**
+The spec's template is a bare `## <YYYY-MM-DD>` with bullets beneath, which
+assumes one entry per day. This bundle lands several thematic entries per day
+(12 on 2026-08-21 alone), so bare dates would produce a dozen identical
+headings and destroy scannability. We use `## YYYY-MM-DD - what changed`
+instead.
+
+The cost is visible and accepted: `okf validate --strict` reports ~33 §7 date
+warnings, and they are the dominant warning class. **They are known, not
+unnoticed.** When reading validator output, filter them out before concluding
+the bundle is noisy — a genuine warning hides easily among them. Warnings
+never block conformance (§9).
+
+## 2026-08-21 - the dominant warning class is a deliberate deviation, now said so
+
+A sync check found the bundle already in sync: the one "broken cross-link"
+warning points at a file that EXISTS
+(`docs/projects/2605-.../course-landing-components-2026-08.md`) - the validator
+simply declines to resolve outside the bundle and tolerates it under §5.3.
+"Fixing" that would have broken a working link.
+
+What IS real: **33 of the ~80 warnings are §7 date-heading violations**, and
+they come from this file's own convention. The spec's template is a bare
+`## <YYYY-MM-DD>` with bullets, which assumes one entry per day; this bundle
+lands several thematic entries per day (12 on 2026-08-21), so conforming would
+produce a dozen identical headings.
+
+Keeping the deviation, and documenting it in the header rather than leaving it
+to be rediscovered. The reason to write it down is not the warnings themselves -
+they never block - but that a future session reading validator output either
+"fixes" it destructively or learns to ignore ALL warnings, and the second is how
+a real one gets missed.
+
 ## 2026-08-21 - "tracked separately" was not true; now it is
 
 The DESIGN.md banner written earlier today claimed the full regeneration "is
