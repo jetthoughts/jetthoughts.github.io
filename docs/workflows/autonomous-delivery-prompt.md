@@ -89,7 +89,9 @@ starts before it:
 2. **SHAPE**: ambiguous or structural → grooming first (`structural-decisions`,
    brainstorming, persona panel). Concrete → straight to GOAL.
 3. **GOAL**: write §1's three lines. No re-runnable DONE WHEN → no dispatch.
-4. **ORCHESTRATE by size** — the contract holds at every scale:
+4. **ORCHESTRATE by size** — the contract holds at every scale. Pick WHICH
+   agents from Appendix C's route-through column for the work's domain
+   (reviewer lenses per §5):
    - *trivial edit*: inline; a verifier agent still reviews before commit.
    - *one unit*: author agent + distinct verifier (§5).
    - *a feature*: commits proceed one at a time on the sprint branch, each
