@@ -138,6 +138,32 @@ Two consequences, and the second is the one that is easy to miss:
    the on-dark accent is decided, or it degrades contrast on every band it
    touches.
 
+
+**Candidate values, derived 2026-08-21 - this is a yes/no, not an open
+question.** Walking lighter along the ruby hue:
+
+| Candidate | on `--surface-ink` | on `#000` | on white |
+|---|---|---|---|
+| `--color-ruby` `#cc342d` | 3.67 FAIL | 4.10 FAIL | 5.13 pass |
+| `--color-ruby-hover` `#e04a42` | 4.68 thin | 5.23 pass | **4.02 FAIL** |
+| **`#e85a52` (recommended)** | **5.39 pass** | 6.02 pass | 3.49 FAIL |
+| `#ef6a61` | 6.18 pass | 6.90 pass | 3.04 FAIL |
+
+**Recommendation: `#e85a52`, named `--ruby-on-ink`.** It clears AA on the dark
+surfaces with real margin rather than the 4.68 squeak, and stays recognisably
+ruby rather than drifting pink.
+
+**The naming is the load-bearing part, not the value.** Every candidate that
+works on dark FAILS on white - `#e85a52` is 3.49:1 there. This token is
+dark-surface-ONLY, and a neutral name like `--ruby-400` invites exactly the
+misuse that breaks it; `--ruby-on-ink` says where it may be used. The same
+finding rules out reusing `--color-ruby-hover`: besides being semantically a
+hover state, it fails on white at 4.02, so it is not a safe general-purpose
+accent either.
+
+Applying it is a visible brand change on the dark bands, so it is recorded as
+a decision rather than executed - but the analysis is done and every number
+here is measured.
 Only `--color-ruby-hover` clears AA on both grounds, and it is named for a
 hover state - using it as a static on-dark accent is semantically wrong. The
 ramp has `--ruby-700` for "text-on-light where AA needs more" and no
