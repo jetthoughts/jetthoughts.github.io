@@ -181,7 +181,7 @@
   transform: scaleX(-1) scaleY(-1);
 }
 .cs-more .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: var(--surface-ink);
+  fill: #000000;
 }
 .cs-more > .fl-row-content-wrap {
   padding-top: 80px;

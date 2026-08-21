@@ -807,7 +807,7 @@ img.mfp-img {
   background-size: cover;
 }
 .use-case-hero .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: var(--surface-ink);
+  fill: #000000;
 }
 
 
@@ -848,7 +848,7 @@ img.mfp-img {
 
 
 .use-case-clients .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: var(--surface-ink);
+  fill: #000000;
 }
 
 
