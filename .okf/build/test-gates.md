@@ -320,7 +320,7 @@ edit `generated.at`/`timestamp` in place, and diff the VERIFIED ROWS against the
 merge base before committing:
 
 ```bash
-git diff origin/master -- <concept> | grep -E "^[-+]  - \{ by:"
+git diff "$(git merge-base origin/master HEAD)" -- <concept> | grep -E "^[-+]  - \{ by:"
 ```
 
 Additions only means you appended; a `-` line means you overwrote an event. Scope

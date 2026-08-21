@@ -98,7 +98,7 @@ A stamping bug worth its own line: updating this concept with
 cannot tell which occurrences are the same fact. Recorded on the instrument rule
 in [build/test-gates.md](build/test-gates.md) with the check that catches it -
 diff the VERIFIED ROWS against the merge base
-(`grep -E "^[-+]  - \{ by:"`) and expect additions only. Scoped to those rows on
+(`git diff "$(git merge-base origin/master HEAD)" -- <concept> | grep -E "^[-+]  - \{ by:"`) and expect additions only. Scoped to those rows on
 purpose: a legitimate stamp bumps `generated.at` and `timestamp`, so a
 whole-frontmatter diff shows `-`/`+` pairs on every valid edit and would cry
 wolf.
