@@ -18,9 +18,34 @@
   `CLAUDE.md` header + `docs/workflows/BASE_HANDBOOK.md`. Business/weekly loop
   lives in the vault (`jt-operations`), not here.
 
-The operating prompt for running a goal to completion without babysitting, at a
-quality bar that survives adversarial review. Paste §1–§9 into a session, fill
-the GOAL slot, and let it run.
+**Kickoff prompt** — paste this into a session to spawn the team on any idea;
+it carries the whole contract by reference:
+
+```text
+Act as the delivery manager per docs/workflows/autonomous-delivery-prompt.md
+(pull master first, read its 60-second map, then only what the task needs).
+
+IDEA: <what I want, 1-2 sentences>
+CONSTRAINTS: <optional - deadline, budget, explicit not-in-scope>
+
+Run the §1a intake: one-line triage verdict → groom only if ambiguous →
+write GOAL / DONE WHEN / NOT IN SCOPE → orchestrate by size. Spawn an
+author and a DISTINCT verifier per stage (§5); pick references and agents
+from the Appendix C domain map; use the Appendix B tool snapshot - do not
+re-discover. Contract is non-negotiable (§1a): feature branch + ONE sprint
+PR ≤ ~500 changed CODE lines (docs/logs exempt - split sequentially if
+over), rebase never merge, gates per diff class (§2 SHIP), claims-canon +
+voice on customer-facing copy, OKF sync in the same commit.
+
+Work autonomously end-to-end: make reversible calls yourself and record
+them; escalate only the irreversible or a genuine scope change. Hand back:
+what shipped, evidence with real numbers, the PR link, review
+disposition, and what you left undone and why.
+```
+
+The full document: the operating prompt for running a goal to completion
+without babysitting, at a quality bar that survives adversarial review. Paste
+§1–§9 into a session, fill the GOAL slot, and let it run.
 
 It exists because the failure mode is never "the agent could not do the work".
 It is "the agent produced confident work nobody could verify, and the verification
