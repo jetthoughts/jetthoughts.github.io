@@ -50,6 +50,30 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - CSS ships BOTH inline and as a file under css/
+
+Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). Found
+while verifying a codex finding on PR #536, and it corrects a belief this bundle
+was one commit away from recording as fact.
+
+A built page uses both delivery paths - measured on `_dest/public-test/index.html`:
+3 `<style>` tags AND 3 `<link rel="stylesheet">`.
+
+* `partials/assets/css-inline.html` emits `<style>`; its only
+  `if hugo.IsProduction` branch wraps `| minify`.
+* `partials/assets/css-processor.html` emits `preload` + `stylesheet` links to
+  `/css/<bundle>[.min].<hash>.css`; production only adds the `.min` infix.
+
+So `_dest/*/css/*.css` is a real population - a class absent there really is
+absent from the file-served bundles (`blog-eyebrow` returns 13 files in
+`public-dev` as the control). But it is only HALF the shipped CSS: inline
+`<style>` content never lands under `css/`, so "does this ship at all" has to be
+asked of the rendered `*.html`.
+
+The earlier claim that a `css/` grep is vacuous "because the CSS ships inline"
+was wrong in both directions - it ships inline AND as a file, and dev vs
+production changes filenames, not delivery.
+
 ## 2026-08-21 - test the instrument, not just the result
 
 Recorded in [build/test-gates.md](build/test-gates.md), distinct from the NULL

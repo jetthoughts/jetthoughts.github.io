@@ -4,8 +4,9 @@ title: CSS Build Pipeline (PostCSS + per-bundle PurgeCSS)
 description: PostCSS pipeline that concatenates per-page CSS resource slices and purges unused rules per bundle before shipping.
 resource: postcss.config.js
 tags: [css, build, performance]
-timestamp: 2026-08-21T03:20:07Z
+timestamp: 2026-08-21T04:17:19Z
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T04:17:19Z }
   - { by: claude/opus-5, at: 2026-08-21T01:43:19Z }
 generated:
   by: process:okf-migrate
@@ -30,6 +31,32 @@ nothing about shipped bytes: consolidating shared source files can
 gzip first-visit per page). Any size/perf claim must be validated on
 **compiled + gzip per-page payload**, never raw source line counts —
 see [css-maintainability-plan](/workflows/css-maintainability-plan.md).
+
+# Where the CSS actually lands: BOTH inline and a file
+
+Two partials ship bundles, and a built page uses both. Measured on
+`_dest/public-test/index.html` (2026-08-21): 3 `<style>` tags AND 3
+`<link rel="stylesheet">`.
+
+| Partial | Emits | Production-only difference |
+|---|---|---|
+| `partials/assets/css-inline.html` | `<style>{{ bundle }}</style>` | one `if hugo.IsProduction` branch, wrapping `\| minify` - nothing else |
+| `partials/assets/css-processor.html` | `<link rel=preload>` + `<link rel=stylesheet>` to `/css/<bundle>[.min].<hash>.css` | the `.min` infix |
+
+Consequences when you grep a built tree:
+
+- **`_dest/*/css/*.css` is a real population, not empty.** A class absent
+  there is genuinely absent from the file-served bundles. Control it before
+  believing a zero: a known-adopted class (`blog-eyebrow`) returns 13 files
+  through the same glob in `public-dev` - see the instrument rule in
+  [test-gates](/build/test-gates.md).
+- **But it is only HALF the shipped CSS.** Inline `<style>` content never
+  appears under `css/`, so a class can be live on the page and absent from
+  every file. To ask "does this ship at all", grep the rendered `*.html`.
+- **Dev vs production changes filenames, not delivery.** `public-dev` has
+  `about-us.<hash>.css`, `public-test` has `about-us.min.<hash>.css`. Re-running
+  a `css/` grep "against production" therefore proves nothing about inlining -
+  both trees inline the same way.
 
 # Token layer: `foundations/css-variables.css`
 
