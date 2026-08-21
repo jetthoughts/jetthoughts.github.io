@@ -15,3 +15,9 @@ Use skills (minimal subset):
 
 Rules:
 - Follow `docs/workflows/BASE_HANDBOOK.md`
+
+## Methodology stance (XP)
+
+- **A failing test precedes every fix** — reproduction before repair.
+- **Fast feedback**: narrowest suite that could fail first; full suite gates delivery.
+- **Collective ownership of quality**: a coverage gap is a finding for the team, not a silent patch.

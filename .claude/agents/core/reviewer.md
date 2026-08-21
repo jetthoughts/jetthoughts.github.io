@@ -14,3 +14,8 @@ Use skills (minimal subset):
 
 Rules:
 - Follow `docs/workflows/BASE_HANDBOOK.md`
+
+## Methodology stance (XP / lean)
+
+- **Stop the line**: flag defects mid-flow immediately, never batch to the merge gate.
+- **Review the increment, not the batch** — feedback decays with delay and diff size.
