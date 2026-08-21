@@ -8,6 +8,19 @@ It exists because the failure mode is never "the agent could not do the work".
 It is "the agent produced confident work nobody could verify, and the verification
 it offered was itself unverified."
 
+**What the whole document is for: agents collaborating to find the truth.** Not
+to produce output faster, and not to produce more of it. A single agent cannot
+find its own blind spot — it checks the thing it meant to build. Truth comes out
+of the friction between agents with different jobs and different lenses, which is
+why the rules below are mostly about keeping that friction real: separate the
+author from the verifier, brief with evidence rather than conclusions, require a
+dissent, and treat every finding as a claim that must itself survive.
+
+Structure the collaboration well and the system converges on what is actually
+there. Structure it badly — same lens, shared assumptions, author checking
+author — and it converges just as confidently on whatever the first agent
+believed.
+
 ---
 
 ## 1. GOAL
@@ -48,7 +61,7 @@ under everything built on it.
 | **BUILD** | the shortest working diff | it runs | *correctness, and what it touches that it should not* |
 | **VERIFY** | evidence from the live artifact | a check that would FAIL if the work were wrong | *does the evidence support the claim — see §3* |
 | **SHIP** | merged, on a branch, via PR | gates quoted with their real numbers | *do the quoted gates say what you claim* |
-| **LEARN** | `.okf/` concept + `log.md` entry | a cold session could repeat or avoid it | *is this derivable already, or genuinely new* |
+| **LEARN** | a durable learning captured, or an explicit "none this pass" | a cold session could repeat or avoid it | *is this derivable already, or genuinely new* |
 
 The review weight scales with the stage's cost of being wrong, but none of them
 is zero. A cheap stage gets a cheap check — one skeptical pass with a named
@@ -83,7 +96,8 @@ that check.** Everything below is a way of getting that wrong.
   instrument is broken, not the codebase.
 - Establish the **baseline of the baseline**: run the suite on pristine `master`
   first, then compare **failure sets**, not pass/fail. Master red is normal —
-  `okf_validate .okf --strict` is known-red by design, and this repo's macOS
+  `/okf:validate .okf --strict` is known-red by design (invoke it through the
+  skill or the full script path - there is no `okf_validate` on `PATH`), and this repo's macOS
   screenshot baselines can be red in a worktree before you touch anything. The
   signal is the *difference*: failures your branch adds, or base failures it
   silently fixes. Reject the instrument only when its controls fail or the
@@ -161,6 +175,25 @@ before merge; by merge it is far too late.
 The test for whether you got this right: **at the moment the user reads
 something, has someone other than the author already checked it?** If no, the
 gate was in the wrong place.
+
+### Which reviewer, and what it costs
+
+Reviewing every stage is only affordable if you match the reviewer to the stage.
+Using the slowest one everywhere is how four-eyes gets quietly abandoned.
+
+| Reviewer | Use for | Cost |
+|---|---|---|
+| **Internal sub-agent** (`Agent` tool, distinct lens per call) | every per-stage review — plans, diffs before commit, findings, measurements, docs | fast; the default |
+| **External companion** (`/codex:review`) | **the final verify before merge, once** | slow — do not put it in the inner loop |
+
+`/codex:review` earns its cost at the merge gate, where the whole diff exists and
+being wrong is expensive. Spending it on a premise check or a two-line fix buys
+little and trains everyone to skip the gate because "review is slow".
+
+Rule of thumb: **internal agents all the way through, the external companion once
+at the end.** If the external reviewer finds something the internal ones should
+have caught, that is a signal about your per-stage lenses, not a reason to run
+the slow reviewer more often.
 
 **Panels must disagree by construction.** Give each reviewer a *distinct lens*
 and require a dissent. Same-lens reviewers produce a chorus that ratifies the
@@ -285,7 +318,8 @@ first draft of this appendix did it anyway, with two of the numbers wrong.
 | Global / plugin skills | **the running tool's own roster** — not a directory | list the roster of the runtime you are in; `~/.claude/skills/` is Claude Code's slice of it, not the whole |
 | Global agents | the runtime's agent roster | same — enumerate per runtime |
 | Project docs | `docs/` — Johnny-Decimal areas + `adr/`, `incidents/`, `projects/`, `design-system/` | `find docs -name '*.md'` — **recursive**; `ls docs` returns areas, not documents |
-| Knowledge bundle | `.okf/` | `find .okf -name '*.md' -not -name 'index.md' -not -name 'log.md'` |
+| Knowledge bundle - concepts | `.okf/` | `find .okf -name '*.md' -not -name 'index.md' -not -name 'log.md'` |
+| Knowledge bundle - **reserved files** | `.okf/index.md`, section `index.md`s, `.okf/log.md` | `find .okf \( -name 'index.md' -o -name 'log.md' \)` - audit these SEPARATELY: the root index is the mandatory discovery entry point, so broken routing there is invisible to a concept-only sweep |
 
 **Do not assume `.claude/skills/` is the skill surface.** It is a pointer. The
 first draft audited it and would have skipped every real project skill — a
@@ -300,8 +334,13 @@ Questions each surface must answer, with evidence:
      description against a real task, with no router entry anywhere. This is the
      normal path (`.claude/skills/README.md`: *"invoke by name, never by
      absolute path"*).
-   - **Explicit routing** — an index or router entry. Required for *project*
-     surfaces, which nothing surfaces by metadata.
+   - **Explicit routing** — an index or router entry.
+
+   Do not assume project surfaces need routing: under some runtimes
+   `.agents/skills/*/SKILL.md` is surfaced in the roster automatically, while
+   `.skills/*` may not be. Check both locations against the ACTIVE runtime's
+   roster before concluding either way - guessing here produces both false
+   orphans and redundant routing.
 
    Mark orphaned only when **neither** applies. A DELETE call justified by a
    missing router entry alone is unsupported.
