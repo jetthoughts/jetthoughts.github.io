@@ -20,6 +20,7 @@
        register adds one line here. */}}
   {{- $skins := dict
     "rescue-room" (resources.Get "css/pages/next-rescue-room.css")
+    "editorial" (resources.Get "css/pages/next-editorial.css")
   -}}
   {{- $resources := slice (index $skins $register) -}}
   {{ partial "assets/css-processor.html" (dict "resources" $resources "bundleName" (printf "next-%s" $register)) }}

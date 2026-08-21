@@ -13,10 +13,13 @@ class NextRailTest < BasePageTestCase
   PILOT = "next/services/fractional-cto/index.html"
 
   # Design-register pilots (10.01): one landing page per candidate register,
-  # all on the rail. Globbed, not listed - a pilot added without its noindex
-  # is exactly the failure this rail exists to prevent, and a hand-typed list
-  # would not see it.
-  REGISTER_PILOT = "next/pilots/rescue-room/fractional-cto/index.html"
+  # all on the rail. Every REGISTER-PILOT assertion below runs over the glob,
+  # not over a named path (PILOT above stays - its three tests target the v2
+  # services page, which is not a pilot). A pilot added without its noindex,
+  # or with a testimonial smoothed for its own skin, is exactly the failure
+  # these gates exist to catch, and a hand-typed list would not see it.
+  # Pilot B was added on 2026-08-21 and two of them had to be widened to
+  # reach it.
 
   def test_next_pages_are_marked_noindex
     robots = parse_html_file(PILOT).css('meta[name="robots"]').first
@@ -51,13 +54,8 @@ class NextRailTest < BasePageTestCase
 
   # Every register pilot, not just the one this test knows the name of.
   def test_every_register_pilot_is_noindexed_and_unlisted
-    pilots = Dir.glob(File.join(root_path, "next/pilots/**/index.html"))
-
-    assert pilots.any?, "no built pages under next/pilots/ - this gate would pass by finding nothing"
-
     sitemap = File.read(File.join(root_path, "sitemap.xml"))
-    pilots.each do |path|
-      relative = path.sub("#{root_path}/", "")
+    register_pilots.each do |relative|
       robots = parse_html_file(relative).css('meta[name="robots"]').first
 
       assert robots, "#{relative} must carry a robots meta tag"
@@ -72,11 +70,14 @@ class NextRailTest < BasePageTestCase
   # derived value equals the "18" a careless author would type, so this cannot
   # tell them apart until 2027-01-01 - from then on it bites forever.
   def test_register_pilot_tenure_stat_is_derived_not_frozen
-    values = parse_html_file(REGISTER_PILOT).css(".rr-stat-value").map(&:text)
+    register_pilots.each do |relative|
+      values = parse_html_file(relative).css(".rr-stat-value").map(&:text)
 
-    assert_includes values, "#{Time.now.year - 2008}+",
-      "the pilot's tenure stat must derive from foundingYear, not a frozen number - " \
-      "the derived: tenure branch in layouts/next/landing.html falls back to .value silently"
+      refute_empty values, "#{relative} renders no stat values - this gate would pass by finding nothing"
+      assert_includes values, "#{Time.now.year - 2008}+",
+        "#{relative}: the tenure stat must derive from foundingYear, not a frozen number - " \
+        "the derived: tenure branch in layouts/next/landing.html falls back to .value silently"
+    end
   end
 
   # A testimonial is a person's words, not copy to tighten. The design
@@ -89,14 +90,16 @@ class NextRailTest < BasePageTestCase
       .find { |t| t["name"] == "Bruno Wozniak" }
     refute_nil canon, "the canon testimonial must exist in data/testimonials.yaml"
 
-    rendered = parse_html_file(REGISTER_PILOT).css("blockquote").text.strip.delete("“”")
+    register_pilots.each do |relative|
+      rendered = parse_html_file(relative).css("blockquote").text.strip.delete("“”")
 
-    # Every string contains "", so a blockquote that vanished would sail
-    # through the substring assert below - the same false-green shape this
-    # file already carries scar tissue for.
-    refute_empty rendered, "the pilot must render a testimonial blockquote"
-    assert_includes canon["description"], rendered,
-      "the rendered quote is not a verbatim slice of the canon testimonial"
+      # Every string contains "", so a blockquote that vanished would sail
+      # through the substring assert below - the same false-green shape this
+      # file already carries scar tissue for.
+      refute_empty rendered, "#{relative} must render a testimonial blockquote"
+      assert_includes canon["description"], rendered,
+        "#{relative}: the rendered quote is not a verbatim slice of the canon testimonial"
+    end
   end
 
   def test_next_pages_canonicalise_to_their_source_page
@@ -105,5 +108,18 @@ class NextRailTest < BasePageTestCase
     assert_equal 1, canonicals.size, "a page must emit exactly one canonical"
     assert_match %r{/services/fractional-cto/\z}, canonicals.first["href"]
     refute_match %r{/next/}, canonicals.first["href"] # a fallback to .Permalink must FAIL here
+  end
+
+  private
+
+  # Built paths of every register pilot, relative to the destination root.
+  # The empty check lives HERE so no caller can iterate zero pages and report
+  # green - iterating nothing is the false-green this whole file guards against.
+  def register_pilots
+    pilots = Dir.glob(File.join(root_path, "next/pilots/**/index.html"))
+      .map { |path| path.sub("#{root_path}/", "") }
+
+    assert pilots.any?, "no built pages under next/pilots/ - this gate would pass by finding nothing"
+    pilots
   end
 end

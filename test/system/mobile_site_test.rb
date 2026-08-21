@@ -215,6 +215,17 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "next/rescue-room"
   end
 
+  # Pilot B on a phone - same assertions as pilot A for the same reason (see
+  # the desktop test): one anatomy, one set of words, two skins.
+  def test_next_editorial
+    visit "/next/pilots/editorial/fractional-cto/"
+
+    assert_text "A technical partner in days, not months of hiring"
+    assert_text "What you're comparing it against"
+
+    assert_stable_screenshot "next/editorial"
+  end
+
   def test_free_consultation
     visit "/"
     # Add more specific scoping for Talk to an Expert button

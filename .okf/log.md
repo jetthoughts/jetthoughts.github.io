@@ -51,6 +51,48 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - register pilot B, and the two ways a second pilot breaks the first pilot's gates
+
+`/next/pilots/editorial/fractional-cto/` ships the "Artifact Editorial" register
+over the SAME anatomy and the SAME words as pilot A - `diff` between the two
+stubs is six lines (title, description, `register`, `font`). Added to
+[/design/landing-anatomy.md](/design/landing-anatomy.md), which was also missing
+from the design index until now.
+
+Two findings worth more than the pilot itself:
+
+**The accent dies when the band inverts.** The settled anatomy has a dark
+testimonial/closing band, so every register meets it even when its own artifact
+has none. Deep red `#a91918` is 7.05:1 on paper and **2.31:1** on ink `#1b1c1c` -
+pilot A shipped exactly that miss. On ink, text takes a light neutral
+(`#c9c2ba`, 9.69:1), the accent survives only as a lightened non-text rule
+(`#e07a6e`, 5.84:1), and the filled CTA inverts to paper, because an accent fill
+on the `#232424` card is ~2.2:1 - a button with no visible edge (1.4.11).
+Verified by walking every text node's computed colour against its resolved
+background in the browser: 117 elements at 1440 and at 390, zero failures.
+Palette arithmetic in your head is not this evidence.
+
+**Gates pinned to one pilot's path quietly stop guarding.** The
+testimonial-verbatim and tenure-derived gates in `test/unit/next_rail_test.rb`
+named the pilot-A path, so pilot B could have smoothed the Wozniak quote
+undetected. Both now iterate `next/pilots/**/index.html` through one helper that
+owns the "found nothing" assertion. Proved by smoothing pilot B's quote and
+watching the failure name `next/pilots/editorial/fractional-cto/index.html`,
+then reverting.
+
+**A declaration grep cannot see an inherited weight, and the browser fake-bolds
+the difference.** A multi-family register ships ONE
+`static/css/fonts-<register>.css` (the stub's `font:` key is one stylesheet +
+one preload) carrying only the weights the artifact uses - but picking those
+weights by grepping `font-weight` declarations shipped a defect: JetBrains Mono
+ships 400 only, while the brand mark inherited 700 from `.rr-brand` and the nav
+button inherited 600 from `:where(.rr-nav-links a)`, so Chrome synthesized both
+and the same mono label rendered heavier in the nav than in the hero. Caught by
+the reviewer, not by any gate. The check is a computed-weight walk in the
+rendered page - resolve `fontFamily` per node, histogram `fontWeight`: 55 mono
+nodes, 53 at 400 and 2 synthesized before the fix, 55 at 400 after. Pin
+`font-weight` on any component that sets `font-family` to a single-weight face.
+
 ## 2026-08-21 - the visual gate was blind by 50x, and green runs never refresh a baseline
 
 `DEFAULT_SCREENSHOT_CONFIG` tolerance 0.02 -> **0.0001**

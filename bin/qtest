@@ -49,6 +49,7 @@ PAGE_TESTS = {
   "next-pilot" => "next_pilot",
   # Design-register pilots on the same rail: pages/next-<register>.css
   "next-rescue-room" => "next_rescue_room",
+  "next-editorial" => "next_editorial",
   "simple-page" => "privacy_policy",
   # critical/privacy-policy-critical.css maps by basename; alias it to the
   # simple-page tests so a touch there doesn't abort as an unknown key
