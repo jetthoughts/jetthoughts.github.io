@@ -7,8 +7,8 @@ tags: [design, rollout, sequencing, decision, adr]
 status: stable
 generated:
   by: claude/opus-5
-  at: 2026-08-20T23:11:35Z
-timestamp: 2026-08-20T23:44:03Z
+  at: 2026-08-21T10:57:01Z
+timestamp: 2026-08-21T10:57:01Z
 ---
 
 # Why this concept exists
@@ -118,6 +118,38 @@ learning whether the design engages anyone before the whole site commits to it.
   course - and that file drives `bin/generate-template-pdfs`, so a change there
   moves PDFs too. Scope tripwire: `macos/{desktop,mobile}/course/chapter.png`
   must come out byte-identical.
+
+# Two lanes: extraction governs, discovery explores
+
+Since 2026-08-21 the redesign runs an **extraction** lane and a **discovery**
+lane at once, and conflating them is the live confusion risk.
+
+* **Extraction governs.** ADR-0003 is the decision of record and says plainly
+  that it is "extraction and propagation, not a redesign" - the system is taken
+  from the two pages already implementing it (course page,
+  `/services/vibe-code-rescue/`). 2.1/2.2 shipped it to the blog.
+* **Discovery has no authority.** A from-scratch exploration (Paul, 2026-08-21)
+  runs ALONGSIDE extraction, not instead of it. Its brief deliberately never
+  mentions the course page - anchoring it there reproduces extraction wearing a
+  different hat and proves nothing. Output is candidate designs, never a PR.
+* **Brand invariants are fixed even in discovery**: logo, ruby `#cc342d`,
+  display face, cover system. "From scratch" means layout, structure and
+  components.
+* **Switching lanes costs shipped work.** Discovery wins only via a superseding
+  ADR carrying evidence, because 2.1/2.2 already shipped the extracted system to
+  the blog - 77% of the site's Google traffic.
+
+A discovery lane does not consume WIP: it produces nothing mergeable, so it
+cannot collide with the delivery lane. That is continuous discovery, not a third
+parallelism exception.
+
+# The 2.4 gate is time-bound, and "held until the read is in" hides the date
+
+The homepage phase is gated on a blog engagement read due **28 days after the
+`e1fa5409d` deploy, approximately 2026-09-17** - and that clock starts at the
+first production DEPLOY, which was never confirmed. Writing the read up early
+does not unblock anything; it pre-writes a conclusion the data cannot support.
+Confirm the live date first, because the window is measured from it.
 
 # Citations
 

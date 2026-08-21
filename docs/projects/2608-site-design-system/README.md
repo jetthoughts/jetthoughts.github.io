@@ -40,6 +40,48 @@ mobile; and a lead conversion event exists so the next change can be measured.
   page, and `/services/vibe-code-rescue/` as a dark-variant campaign page.
   Phase 1a is unblocked — see [20.02](20-29-strategy/20.02-phase-1a-plan.md).
 
+## Two lanes — read this before changing any design artifact
+
+Since 2026-08-21 this project runs **two lanes at once**, and confusing them is
+the failure this section exists to prevent.
+
+| Lane | Authority | Produces | Status |
+|---|---|---|---|
+| **Extraction** (governing) | **ADR-0003** — the decision of record | merged CSS, shipped phases | active; 2.1/2.2 shipped, 2.3 next |
+| **Discovery** (exploration) | **none** — informs a future decision | candidate designs only, never a PR | opened 2026-08-21 (Paul) |
+
+**Extraction is still the decision.** ADR-0003 is explicit: *"this ADR is not
+proposing a new language… That makes this extraction and propagation, not a
+redesign."* The system is taken from the two pages that already implement it —
+the course page and `/services/vibe-code-rescue/`. Nothing below changes that.
+
+**Discovery answers a different question:** what would a designer produce for
+this ICP with no anchor at all? Paul asked for it 2026-08-21 *alongside*
+extraction, explicitly not instead of it. Its brief deliberately never mentions
+the course page — anchoring it there would reproduce extraction wearing a
+different hat and prove nothing.
+
+**Fixed even in discovery** (ADR-0003 brand invariants, not up for exploration):
+logo, ruby `#cc342d`, display face, cover system. "From scratch" means layout,
+structure and components — a rebrand was not asked for.
+
+**Discovery artifacts so far** — Stitch project `4487418121858436329`
+("JetThoughts — From-Scratch Exploration"), generated 2026-08-21. It produced a
+system it named *"Artifact Editorial"*: warm paper `#fbf9f8`, Source Serif 4
+headlines with Hanken Grotesk body, sharp 0px corners, ruby reserved for
+critical actions only, evidence-over-assertion structure. Unprompted, it
+rejected the logo wall, the testimonial carousel and the repeated
+"Book a call". A Claude Design project (*JetThoughts — Rescue Room*, 14
+previews) predates this and renders the EXTRACTED system — do not confuse the
+two.
+
+**What it would take for discovery to win:** a superseding ADR, with evidence
+that it beats the extracted system for the ICP. Until that exists, discovery
+output has **no authority** and must not be implemented. The cost of switching
+is not theoretical: 2.1 and 2.2 already shipped the extracted system to the
+blog, which carries 77% of the site's Google traffic.
+
+
 ## Current state
 
 **Re-sequenced 2026-08-20 (Paul): BLOG FIRST** — confirm engagement on the
@@ -78,6 +120,21 @@ suites), **B** guardrails with declared rollback thresholds, **C** reversibility
 estimated) the cheapest viable test needs 192 days.
 
 ## Outstanding
+
+**Phase 2.5 has no spec — write `20.05` before any 2.5 code.** 2.1 and 2.2 each
+got a written spec (`20.03`, `20.04`); 2.5 is nine words in the Phase 2 table:
+"stock photo → month-one card, decision table, 4-step timeline". Found
+2026-08-21 while sequencing. Two things the spec must settle, because they are
+not CSS decisions:
+
+* The real bulk of 2.5 is **per-page frontmatter copy ×12**, not stylesheet —
+  and that copy is canon-sensitive. `content/services/fractional-cto/index.md`
+  already carries "15+ years of industry experience" in its FAQs, the exact
+  figure class corrected on 2026-08-14. Copy review, not the ~500-line code cap,
+  is the binding constraint.
+* **Only 2 of 12 service pages have screenshot baselines** (`fractional_cto`,
+  `app_web_development`). Ten ship visually blind unless coverage is added
+  first — the plan's own 0.3 coverage rule applies.
 
 **Regenerate root `DESIGN.md` against ADR-0003.** It still frames dark
 JetVelocity as *"normative for new brand/conversion surfaces"*, calls LIGHT
