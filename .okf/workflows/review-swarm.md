@@ -9,7 +9,7 @@ generated:
 verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-21T00:39:00Z
+timestamp: 2026-08-21T00:41:51Z
 ---
 
 # The loop
@@ -17,7 +17,7 @@ timestamp: 2026-08-21T00:39:00Z
 **Scope: this loop is COURSE-oriented.** Step 2's content-canon critic diffs
 against the course canon and the taste pass scores against
 `.stitch/course-taste-design.md`. For SITE or BLOG surfaces take the
-`/stitch-design` step and the render gate from here, and skip the course-canon
+`/impeccable critique` step and the render gate from here, and skip the course-canon
 and course-taste steps - running them off-surface produces findings from rules
 that do not govern the page.
 
@@ -27,7 +27,7 @@ that do not govern the page.
    worst-first) and a CONTENT-CANON critic (diffs numbers against the
    [course canon](/content/course-canon.md), sweeps banned patterns, checks
    links) in parallel, in the background. **The DESIGN critic runs
-   `/stitch-design` against the surface's own design source** (table below) -
+   `/impeccable critique` against the surface's own design source** (table below) -
    a generic critic scores taste and keeps proposing recolours the anchor text
    already ruled out.
 3. Adjudicate reports; VERIFY every claim against the actual files/renders
@@ -48,7 +48,7 @@ anchor text, not majority vote: taste-e's red-metric ruling beat
 taste-a's recolor suggestion because the anchor names Ruby as the brand
 accent ink.
 
-**Route design review through `/stitch-design`** (Paul, 2026-08-21) - but
+**Route design review through `/impeccable critique`** (Paul, 2026-08-21) - but
 **name the design source for the surface first. There are four, and the
 wrong one inverts the verdict.**
 
@@ -114,18 +114,23 @@ neither substitutes.
 Scope its output like any critic's: a punch-list of surgical fixes, not a
 licence to redesign a working page.
 
-**The stitch skills GENERATE; none of them reviews.** `stitch-design` produces
-screens, `stitch-design-taste` produces a `DESIGN.md`, `stitch-loop` iterates,
-and the MCP surface is create/edit/apply with no critique verb. Left
-undefined, "route review through stitch" gets improvised - or worse, generates
-a screen nobody asked for. So the review contract is explicit:
+**Why impeccable and not stitch.** Paul first named `/stitch-design`
+(2026-08-21) and retracted it the same day once review established the gap:
+all three stitch skills GENERATE - `stitch-design` produces screens,
+`stitch-design-taste` produces a `DESIGN.md`, `stitch-loop` iterates - and the
+MCP surface is create/edit/apply with no critique verb. Routed there, a review
+request gets improvised or, worse, returns a generated screen nobody asked
+for. **Stitch stays for GENERATION; `/impeccable critique` carries review.**
+
+The contract is the same whichever critic runs, and every step earns its place:
 
 1. **Render first.** Capture the page at 1280x800 AND 390x844 via the
-   [render-verification recipe](/workflows/render-verification.md). Stitch
+   [render-verification recipe](/workflows/render-verification.md). A critic
    reviews an image, not a URL.
 2. **Name the anchor.** State which of the four sources governs this surface
-   (table above) and paste its rules into the prompt. Stitch does not know
-   which system applies and will assume whatever was last loaded.
+   (table above) and paste its rules in. No critic knows which system applies;
+   unanchored, it scores taste and proposes recolours the source already
+   ruled out.
 3. **Ask for a DELTA, not an opinion.** "List where this render departs from
    these rules, each with the rule it breaks." Ask for a redesign and you get
    a redesign; ask for departures and you get a punch-list.
@@ -133,21 +138,8 @@ a screen nobody asked for. So the review contract is explicit:
    adjudication rule as any critic here.
 
 If a step cannot be performed, report that the gate DID NOT RUN rather than
-substituting a generic design opinion. That substitution is the exact failure
-this route exists to prevent.
-
-**Fallback, not a substitution.** Because the skills are generation-oriented,
-stitch may return a generated screen instead of a delta. If it does, pair it
-with `/impeccable critique` - a genuinely critique-shaped skill the paved path
-already uses (`docs/workflows/new-page.md` Evaluate step) - anchored to the
-SAME named source, and **say which one produced the findings.** Do not
-silently swap: Paul's 2026-08-21 instruction named stitch specifically, and a
-tooling gap is a reason to report back, not to quietly route elsewhere.
-
-**Open question for Paul** (raised by review, 2026-08-21): stitch exposes no
-critique verb. If a delta review is the intent, either a review wrapper is
-needed or `/impeccable critique` should carry this gate with stitch reserved
-for generation.
+substituting a generic design opinion. That substitution is the failure this
+route exists to prevent.
 
 # Mechanical runbook
 

@@ -1,8 +1,10 @@
 # Design
 
-Design REVIEW routes through `/stitch-design` - it checks a change against this
-system rather than against taste, and is the consult for unclear critical calls.
-Process detail in [review-swarm](/workflows/review-swarm.md).
+Design REVIEW routes through `/impeccable critique`, anchored to the surface's
+design source (Paul, 2026-08-21 - superseding his earlier `/stitch-design`
+instruction, retracted once review established that the stitch skills only
+GENERATE). Surface-to-source table and the review contract:
+[review-swarm](/workflows/review-swarm.md). Stitch stays for generation.
 
 * [Site chrome palette](site-palette.md) - LIGHT resolved (ADR-0003), the ruby/ink/surface tokens, and the three places dark is still deliberate
 * [Mermaid theme](mermaid-theme.md) - the Caveat webfont root-cause fix and the theming gotchas

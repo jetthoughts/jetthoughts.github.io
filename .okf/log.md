@@ -3,6 +3,27 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+## 2026-08-21 - design review is `/impeccable critique`, not stitch
+
+Paul reversed his own instruction the same day: *"i was wrong, you should use
+`/impeccable critique`."* Review had established the gap - all three stitch
+skills GENERATE (`stitch-design` screens, `stitch-design-taste` a `DESIGN.md`,
+`stitch-loop` iterations) and the MCP surface is create/edit/apply with no
+critique verb - so routing review there returns a generated screen or an
+improvisation. **Stitch stays for generation.**
+
+Switched in `workflows/review-swarm.md`, `design/index.md`, and the two repo
+docs on the mandatory path (`docs/workflows/flow-router.md`,
+`docs/workflows/new-page.md`). The retraction is recorded at each site rather
+than silently overwritten, so a reader who remembers the first instruction
+learns why it changed.
+
+**What survived the tool change, and was always the valuable part: the ANCHOR.**
+Four design sources, and the wrong one inverts the verdict regardless of which
+critic runs. The surface-to-source table, the course-visual precedence rule, and
+the render/name-the-anchor/ask-for-a-delta contract are all tool-independent.
+The tool was the least durable thing in the rule.
+
 ## 2026-08-21 - the routing rule exposed a contradicting design authority
 
 Adding one routing line took five review rounds. The findings were worth more
