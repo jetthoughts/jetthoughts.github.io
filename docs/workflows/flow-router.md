@@ -27,6 +27,10 @@ Read this at session start to route tasks to the right workflow without explicit
     green = money ONLY, labels inside shapes); social assets also
     `linkedin-posts/README.md`.
 
+
+  If stitch returns a generated screen rather than a delta, pair it with
+  `/impeccable critique` against the SAME named source and say which produced
+  the findings - a tooling gap is reported, never silently rerouted.
   Stitch complements the rendered gates rather than replacing them: baselines
   check what SHIPPED, stitch checks what was INTENDED. Rule detail in
   `.okf/workflows/review-swarm.md` — note its surrounding loop (content-canon

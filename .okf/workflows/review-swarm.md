@@ -9,7 +9,7 @@ generated:
 verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-21T00:31:29Z
+timestamp: 2026-08-21T00:39:00Z
 ---
 
 # The loop
@@ -135,6 +135,19 @@ a screen nobody asked for. So the review contract is explicit:
 If a step cannot be performed, report that the gate DID NOT RUN rather than
 substituting a generic design opinion. That substitution is the exact failure
 this route exists to prevent.
+
+**Fallback, not a substitution.** Because the skills are generation-oriented,
+stitch may return a generated screen instead of a delta. If it does, pair it
+with `/impeccable critique` - a genuinely critique-shaped skill the paved path
+already uses (`docs/workflows/new-page.md` Evaluate step) - anchored to the
+SAME named source, and **say which one produced the findings.** Do not
+silently swap: Paul's 2026-08-21 instruction named stitch specifically, and a
+tooling gap is a reason to report back, not to quietly route elsewhere.
+
+**Open question for Paul** (raised by review, 2026-08-21): stitch exposes no
+critique verb. If a delta review is the intent, either a review wrapper is
+needed or `/impeccable critique` should carry this gate with stitch reserved
+for generation.
 
 # Mechanical runbook
 
