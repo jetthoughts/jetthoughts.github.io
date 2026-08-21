@@ -1,0 +1,774 @@
+/* next-rescue-room — register pilot A, "Rescue Room" (warm humanist).
+ *
+ * Loaded ONLY by layouts/next/landing.html for pages with
+ * `register: rescue-room`, and it is the page's ONLY stylesheet: no
+ * style.css, no 586.css, no navigation.css, no footer.css, not even
+ * foundations/css-variables.css. A register pilot has to be judged on its own
+ * surface, so nothing from the legacy cascade may leak in.
+ *
+ * Translated from Paul's approved Claude Design artifact (project 3dc819cf),
+ * whose values were inline styles: warm paper #faf7f3 / #f2ece4, white cards
+ * with 1px #e7e1d9 borders and 16px radius, ink #14110f, ruby #cc342d for the
+ * one filled CTA and the small-caps eyebrows, and a #14110f closing band.
+ * Poppins (self-hosted, /css/fonts-poppins.css) for headings, eyebrows and
+ * buttons; system stack for body copy.
+ */
+
+:root {
+  --rr-paper: #faf7f3;
+  --rr-sand: #f2ece4;
+  --rr-card: #fff;
+  --rr-line: #e7e1d9;
+  --rr-ink: #14110f;
+  --rr-body: #3d3733;
+  --rr-muted: #6b625c;
+  --rr-ruby: #cc342d;
+  --rr-ruby-dark: #9e2620;
+  --rr-ruby-wash: #fbeae8;
+  --rr-band-ink: #14110f;
+  --rr-card-ink: #221c19;
+  --rr-ink-eyebrow: #ff8a7a;
+  --rr-ink-muted: #a49b94;
+  --rr-display: Poppins, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --rr-text: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --rr-shell: 1184px;
+  --rr-gutter: 32px;
+  --rr-radius: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--rr-card);
+  color: var(--rr-body);
+  font-family: var(--rr-text);
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Kept from navigation.css rather than pulled in with it: baseof's skip link
+   is invisible only because of .sr-only, and shipping the rail without it is
+   how a visible "Skip to main content" reached production in 2026-07. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  clip: auto;
+  clip-path: none;
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--rr-ink);
+  color: #fff;
+}
+
+/* Scoped to the page's own links: a blanket `a` rule here would also claim
+   the .rr-btn anchors, and a single-class component must win on specificity,
+   not on source order (the PR-2 lesson). */
+:where(a) {
+  color: var(--rr-ruby);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+:where(a):hover {
+  color: var(--rr-ruby-dark);
+}
+
+.rr-container {
+  max-width: var(--rr-shell);
+  margin: 0 auto;
+  padding: 0 var(--rr-gutter);
+}
+
+/* ---- Type scale ---------------------------------------------------- */
+
+.rr-h1,
+.rr-h2,
+.rr-card-title,
+.rr-step-title,
+.rr-footer-head {
+  font-family: var(--rr-display);
+  color: var(--rr-ink);
+  letter-spacing: -0.022em;
+  margin: 0;
+}
+
+.rr-h1 {
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  text-wrap: balance;
+}
+
+.rr-h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.rr-h2-narrow {
+  max-width: 26ch;
+}
+
+.rr-card-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.rr-eyebrow {
+  font-family: var(--rr-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rr-ruby);
+  margin: 0 0 12px;
+}
+
+/* Ruby on the sand band is 4.37:1 - below AA for 12px text. The darker cut
+   is 6.5:1 on #f2ece4. */
+.rr-band-sand .rr-eyebrow {
+  color: var(--rr-ruby-dark);
+}
+
+.rr-lede {
+  font-size: 1.1875rem;
+  color: var(--rr-muted);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+
+/* ---- Buttons ------------------------------------------------------- */
+
+.rr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--rr-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  padding: 14px 26px;
+  /* Transparent border so the filled and outlined cuts are the same height -
+     only the ghost carries a visible one. */
+  border: 1px solid transparent;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.rr-btn-primary,
+.rr-btn-primary:hover {
+  background: var(--rr-ruby);
+  color: #fff;
+}
+
+.rr-btn-primary:hover {
+  background: var(--rr-ruby-dark);
+}
+
+.rr-btn-ghost,
+.rr-btn-ghost:hover {
+  background: transparent;
+  color: var(--rr-ink);
+  border: 1px solid var(--rr-line);
+}
+
+.rr-btn-ghost:hover {
+  border-color: var(--rr-ink);
+}
+
+/* ---- Nav ----------------------------------------------------------- */
+
+.rr-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: var(--rr-shell);
+  margin: 0 auto;
+  padding: 16px var(--rr-gutter);
+  border-bottom: 1px solid var(--rr-line);
+}
+
+.rr-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--rr-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--rr-ink);
+  text-decoration: none;
+}
+
+.rr-brand-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--rr-ruby);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.rr-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* :where() flattens this to zero specificity so the .rr-btn-ghost CTA sitting
+   in the same row keeps its own colour and border. A bare `.rr-nav-links a`
+   scores 0,1,1 and silently outranks every single-class button component
+   inside it - the PR-2 defect. */
+:where(.rr-nav-links a) {
+  color: var(--rr-body);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+:where(.rr-nav-links a:hover) {
+  color: var(--rr-ink);
+}
+
+/* The nav CTA is the compact cut of the ghost button. */
+.rr-nav-links .rr-btn {
+  font-size: 0.9375rem;
+  padding: 9px 16px;
+}
+
+/* ---- Hero ---------------------------------------------------------- */
+
+.rr-hero {
+  max-width: var(--rr-shell);
+  margin: 0 auto;
+  padding: 64px var(--rr-gutter) 96px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.rr-hero-copy {
+  flex: 1 1 460px;
+  min-width: 0;
+}
+
+.rr-hero .rr-lede {
+  margin-bottom: 32px;
+}
+
+.rr-cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.rr-derisk {
+  font-size: 0.9375rem;
+  color: var(--rr-muted);
+  margin: 12px 0 24px;
+}
+
+.rr-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 32px;
+  font-size: 0.9375rem;
+  color: var(--rr-muted);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rr-strip strong {
+  color: var(--rr-ink);
+  font-weight: 600;
+}
+
+/* The Clutch rating is a link (claims-canon wants the profile reachable) but
+   it is one item in a quiet proof strip, not a call to action - ruby link
+   colour on half the phrase and ink on the <strong> read as broken styling. */
+.rr-strip :where(a) {
+  color: inherit;
+}
+
+.rr-strip :where(a):hover {
+  color: var(--rr-ink);
+}
+
+/* ---- Cards --------------------------------------------------------- */
+
+.rr-card {
+  background: var(--rr-card);
+  border: 1px solid var(--rr-line);
+  border-radius: var(--rr-radius);
+  padding: 32px;
+}
+
+.rr-month-one {
+  flex: 1 1 380px;
+  min-width: 0;
+}
+
+.rr-bullets {
+  margin: 16px 0 0;
+  padding-left: 1.15em;
+  font-size: 0.9375rem;
+  color: var(--rr-muted);
+  display: grid;
+  gap: 12px;
+}
+
+/* ---- Bands --------------------------------------------------------- */
+
+.rr-band {
+  padding: 96px 0;
+}
+
+.rr-band-paper {
+  background: var(--rr-paper);
+}
+
+.rr-band-sand {
+  background: var(--rr-sand);
+}
+
+.rr-band-ink {
+  background: var(--rr-band-ink);
+  color: #ece7e1;
+}
+
+.rr-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.rr-split-center {
+  align-items: center;
+}
+
+.rr-split-copy {
+  flex: 1 1 400px;
+  min-width: 0;
+}
+
+.rr-split-copy .rr-h2 {
+  margin-bottom: 16px;
+  max-width: 20ch;
+}
+
+.rr-split-copy .rr-lede {
+  max-width: 44ch;
+}
+
+/* ---- Comparison table ---------------------------------------------- */
+
+.rr-band-paper .rr-h2 {
+  margin-bottom: 32px;
+}
+
+.rr-table-wrap {
+  background: var(--rr-card);
+  border: 1px solid var(--rr-line);
+  border-radius: var(--rr-radius);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.rr-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  min-width: 640px;
+}
+
+.rr-table th,
+.rr-table td {
+  text-align: left;
+  padding: 16px;
+  border-bottom: 1px solid var(--rr-line);
+}
+
+.rr-table tbody tr:last-child th,
+.rr-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.rr-table thead th {
+  font-family: var(--rr-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* By position, not by class: Hugo 0.165 writeStats records no class attrs on
+   <th>, so a .rr-th-* selector is absent from hugo_stats.json and PurgeCSS
+   strips it from the production bundle. The visual gate cannot catch that -
+   baseline and candidate are both built purged. */
+.rr-table thead th:nth-child(2) {
+  color: var(--rr-ruby);
+}
+
+.rr-table thead th:nth-child(3) {
+  color: var(--rr-muted);
+}
+
+.rr-table tbody th {
+  color: var(--rr-ink);
+  font-weight: 600;
+}
+
+.rr-table tbody td {
+  color: var(--rr-body);
+  font-weight: 400;
+}
+
+.rr-td-muted {
+  color: var(--rr-muted);
+}
+
+/* ---- Timeline ------------------------------------------------------ */
+
+.rr-steps {
+  flex: 1 1 420px;
+  min-width: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rr-steps li {
+  position: relative;
+  padding: 0 0 32px 54px;
+}
+
+.rr-steps li:last-child {
+  padding-bottom: 0;
+}
+
+/* The connector runs from under one marker to the next; the last item has
+   nothing to connect to. */
+.rr-steps li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 34px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--rr-line);
+}
+
+.rr-step-num {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--rr-ruby-wash);
+  color: var(--rr-ruby-dark);
+  font-family: var(--rr-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  display: grid;
+  place-items: center;
+}
+
+.rr-step-title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 4px 0 4px;
+}
+
+.rr-steps p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--rr-muted);
+}
+
+/* ---- Clients ------------------------------------------------------- */
+
+.rr-clients-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 64px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.rr-stats {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rr-stat-value {
+  display: block;
+  font-family: var(--rr-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--rr-ink);
+}
+
+.rr-stat-label {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--rr-muted);
+  max-width: 16ch;
+}
+
+.rr-cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.rr-case p {
+  margin: 12px 0 16px;
+  font-size: 0.9375rem;
+  color: var(--rr-muted);
+}
+
+.rr-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.rr-pills li {
+  background: var(--rr-sand);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--rr-muted);
+}
+
+.rr-case-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.rr-case-link:hover {
+  text-decoration: underline;
+}
+
+/* ---- Testimonial + closing band ------------------------------------ */
+
+.rr-quote-col {
+  flex: 1.3 1 460px;
+  min-width: 0;
+}
+
+.rr-eyebrow-ink {
+  color: var(--rr-ink-eyebrow);
+}
+
+.rr-quote {
+  margin: 0;
+  font-family: var(--rr-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #fff;
+  letter-spacing: -0.018em;
+  max-width: 30ch;
+  text-wrap: pretty;
+}
+
+.rr-attrib {
+  margin: 24px 0 0;
+  font-size: 0.9375rem;
+  color: var(--rr-ink-muted);
+}
+
+.rr-attrib a {
+  color: var(--rr-ink-muted);
+}
+
+.rr-attrib a:hover {
+  color: #fff;
+}
+
+.rr-strip-ink {
+  color: var(--rr-ink-muted);
+  margin-top: 32px;
+}
+
+.rr-strip-ink strong {
+  color: #fff;
+}
+
+/* colour inherits from .rr-strip :where(a) above; only the hover differs */
+.rr-strip-ink a:hover {
+  color: #fff;
+}
+
+.rr-card-ink {
+  flex: 1 1 320px;
+  min-width: 0;
+  background: var(--rr-card-ink);
+  border-color: rgb(255 255 255 / 9%);
+}
+
+.rr-card-ink .rr-card-title {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.rr-card-body {
+  font-size: 0.9375rem;
+  color: var(--rr-ink-muted);
+  margin: 0 0 24px;
+}
+
+/* ---- Footer -------------------------------------------------------- */
+
+.rr-footer {
+  background: var(--rr-paper);
+  border-top: 1px solid var(--rr-line);
+  padding: 64px 0 32px;
+}
+
+.rr-footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px;
+}
+
+.rr-footer-head {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rr-ink);
+  margin-bottom: 16px;
+}
+
+.rr-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.rr-footer a {
+  color: var(--rr-muted);
+  font-size: 0.9375rem;
+  text-decoration: none;
+}
+
+.rr-footer a:hover {
+  color: var(--rr-ruby);
+}
+
+.rr-footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: center;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rr-line);
+  font-size: 0.875rem;
+  color: var(--rr-muted);
+}
+
+/* ---- Narrow viewports ---------------------------------------------- */
+
+@media (width <= 640px) {
+  :root {
+    --rr-gutter: 20px;
+  }
+
+  .rr-hero {
+    padding-top: 40px;
+    padding-bottom: 56px;
+    gap: 40px;
+  }
+
+  .rr-band {
+    padding: 56px 0;
+  }
+
+  .rr-split {
+    gap: 40px;
+  }
+
+  .rr-card {
+    padding: 24px;
+  }
+
+  .rr-nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .rr-nav-links {
+    gap: 16px;
+    justify-content: flex-start;
+  }
+
+  /* Its own row: wrapping inline with the text links leaves whichever link
+     lands beside it looking orphaned. */
+  .rr-nav-links .rr-btn {
+    flex: 1 0 100%;
+  }
+
+  .rr-stats {
+    gap: 24px 32px;
+  }
+
+  .rr-quote {
+    font-size: 1.35rem;
+  }
+
+  .rr-btn {
+    flex: 1 1 auto;
+  }
+}

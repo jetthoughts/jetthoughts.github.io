@@ -330,6 +330,18 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "next/pilot"
   end
 
+  # Design-register pilot A (10.01). The register is the thing under review, so
+  # the assertions guard the two properties a re-skin can silently break: the
+  # H1 that carries the offer, and the tenure stat that must stay derived.
+  def test_next_rescue_room
+    visit "/next/pilots/rescue-room/fractional-cto/"
+
+    assert_text "A technical partner in days, not months of hiring"
+    assert_text "#{Time.now.year - 2008}+"
+
+    assert_stable_screenshot "next/rescue-room"
+  end
+
   def test_free_consultation
     visit "/"
 

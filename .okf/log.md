@@ -145,6 +145,50 @@ any truthy value, `test/support/setup_snap_diff.rb:28` enters record mode only
 on the literal `"true"`. `=1` on qtest therefore gets the worst of both: the
 suite still compares and fails, and the cleanup is skipped. That is the
 mechanism behind the older "the flag appears to be ignored on qtest" note.
+## 2026-08-21 - register pilot A, and three ways a /next/ change ships green and wrong
+
+Pilot A ("Rescue Room") landed on the rail at
+`/next/pilots/rescue-room/fractional-cto/`: Paul's approved Claude Design
+artifact translated onto `layouts/next/landing.html`, all copy in stub
+frontmatter so pilots B and C reuse the template, self-hosted Poppins (a
+fonts.googleapis.com link would put a third-party fetch inside the screenshot
+runs). New concept `build/hugo-stats-th-classes.md` records the finding that
+adversarial review surfaced and the two siblings it belongs with.
+
+The finding: **Hugo 0.165 writeStats records no class attributes on `<th>`**,
+so `.rr-th-ours` / `.rr-th-theirs` were absent from `hugo_stats.json` and
+PurgeCSS deleted them from the production bundle - while `rr-td-muted` on a
+`<td>` in the same table was recorded fine. Dev builds skip PurgeCSS entirely,
+so the page looked correct locally and shipped unstyled. **No gate catches
+this**: the visual suite compares a baseline and a candidate that were both
+built purged, and `css_orphan_guard_test` asks whether a FILE is reachable,
+never whether a SELECTOR survived. Fix is positional (`th:nth-child(2)`) or a
+class on a child span. Two siblings, same shape: `page/site-scripts` in a
+landing baseof throws on every load (navigation.js binds unconditionally to
+header nodes the layout dropped, and nothing asserts a clean console), and a
+`printf`-computed `resources.Get` path silently drops a file from the orphan
+guard's reachable set so the guard passes while guarding nothing.
+
+Two corrections to how the evidence was gathered, both worth keeping.
+`FORCE_SCREENSHOT_UPDATE=1` does NOT force a re-record - in `bin/qtest` its
+only effect is skipping the post-run `git checkout` restore - so a
+byte-identical PNG under that flag proves nothing. And the system tests serve
+`_dest/public-test-local` while qtest's build step refreshes
+`_dest/public-test`; a probe verified in the wrong tree returns a meaningless
+pass. Related, still open: a marker placed in an in-frame table cell did not
+fail the desktop screenshot test even with the served tree confirmed to
+contain it, so the capture path is under separate diagnosis and pilots B/C are
+on hold until it is understood.
+
+Also: `bin/qtest` now maps `themes/beaver/static/(css|fonts)/` to `:all` - a
+webfont change alters text rendering on every page but mapped to nil, the same
+false-green class the untracked-file guard was added for. And a real person's
+words are not copy to tighten: the design blueprint had smoothed the Wozniak
+Clutch quote ("Their team was also detailed and precise, helping us to find
+problems..." became "They were detailed and precise, helping us find
+problems...") and it was carried through with a "verbatim" claim that nobody
+had checked. The pilot now asserts the rendered blockquote against
+`data/testimonials.yaml`.
 
 ## 2026-08-21 - anatomy settled, register under test: the pilots flow
 
