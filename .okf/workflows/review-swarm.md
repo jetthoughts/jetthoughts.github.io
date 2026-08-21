@@ -8,7 +8,8 @@ generated:
   at: 2026-07-24T00:00:00Z
 verified:
   - { by: claude/opus-5, at: 2026-08-21T04:52:57Z }
-  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
+  - { by: claude/opus-5, at: 2026-08-21T00:50:00Z }
+  - { by: claude/opus-5, at: 2026-08-21T00:10:00Z }
 timestamp: 2026-08-21T04:52:57Z
 ---
 
@@ -264,11 +265,17 @@ verdict format, and the two or three specific things to attack.
   compiler and no test, so the ONLY gate is a reader who checks claims against
   the tree. One clean round is the signal to stop; one round is not.
 
-- **Descriptive claims survive review; PRESCRIPTIVE ones fail** (2026-08-21).
+- **Descriptive claims converge fast; PRESCRIPTIVE ones fail for rounds** (2026-08-21).
   Six codex rounds on one bundle-only PR (#537) returned 13 findings, 12
-  accepted. The split was clean: the *factual* content - which partial emits
-  what, what production adds - was unchallenged in all six rounds. Every single
-  failure was a claim about what a MEASUREMENT establishes. Four successive
+  accepted. The factual content - which partial emits what, what production
+  adds - was corrected ONCE, in round one (a stylesheet-link count of three that
+  a parser put at two; "production only adds `.min`" that also runs
+  `resources.PostProcess` and adds `integrity`), and then stood unchallenged
+  through rounds two to six. Every failure after round one was a claim about
+  what a MEASUREMENT establishes.
+
+  That is the shape worth planning around: descriptive claims converge in about
+  one round, prescriptive ones took five and then had to be deleted. Four successive
   text-search checks were each refuted in turn: literal `String#scan`
   (`'\.c-nav'` hunting a backslash), substring prefixes (`\.c-content-block`
   scoring on `.c-content-block__text`), comments and URLs (`idangero` scoring 1

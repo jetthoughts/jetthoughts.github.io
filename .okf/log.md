@@ -57,9 +57,13 @@ failure modes, extending the existing "docs review converges slowly" entry with
 WHICH sentences converge slowly.
 
 Six codex rounds on the bundle-only PR #537 returned 13 findings, 12 accepted.
-The split was clean: the factual content - which partial emits what, what
-production adds - was unchallenged in all six rounds. Every failure was a claim
-about what a MEASUREMENT establishes. Four successive text-search checks were
+The factual content - which partial emits what, what production adds - was
+corrected ONCE, in round one (a stylesheet-link count of three that a parser put
+at two; "production only adds `.min`" which also runs `resources.PostProcess`
+and adds `integrity`), and then stood unchallenged through rounds two to six.
+Every failure after round one was a claim about what a MEASUREMENT establishes.
+Descriptive claims converge in about one round; prescriptive ones took five and
+then had to be deleted. Four successive text-search checks were
 refuted in turn: literal `String#scan`, substring prefixes, comments and URLs,
 then semantics no regex fixes.
 
@@ -77,11 +81,23 @@ separately - the one finding declined on #537 correctly identified imprecise
 authorship recording but proposed a fix that would have claimed authorship of
 sections written by others.
 
-Also deduplicated a `verified` entry in the same concept. Two byte-identical
-entries (`claude/opus-5`, `2026-08-20T23:11:35Z`) were added by a SINGLE commit
-(e046adc54), so they cannot be the concurrent-verification case the root index
-protects with "keep BOTH entries" - that rule covers two sessions producing
-DIFFERENT entries. One commit is one verification.
+**A dedup in this same concept was wrong and has been reverted** - the sharpest
+instance yet of the rule above. Two byte-identical `verified` entries
+(`claude/opus-5`, `2026-08-20T23:11:35Z`) looked like a duplication artifact, and
+`git log -S` on that timestamp returned exactly one commit (`e046adc54`), which
+read as proof that one commit had emitted both. It was not. `e046adc54^` carries
+two DISTINCT entries, `00:10:00Z` and `00:50:00Z`; e046 was a timestamp-repair
+commit that normalised both to one value. Deleting one destroyed a real
+verification event.
+
+`git log -S` answers "when did this string first appear", not "how many events
+does this line represent" - a neighbouring question accepted as the answer,
+which is exactly what this entry is about. Both entries are restored at their
+originally-recorded times. Those values are themselves suspect (round-number
+seconds mean they were composed, not measured, which is what e046 was repairing)
+but the number of events is the reliable fact, and the root index is explicit:
+keep BOTH, because dropping one falsifies the provenance the field exists to
+carry.
 
 ## 2026-08-21 - CSS ships both inline and as a linked file; text search cannot prove a selector applies
 

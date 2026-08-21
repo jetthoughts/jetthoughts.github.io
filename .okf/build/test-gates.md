@@ -296,6 +296,15 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
     then grep; same reason `marketing_copy_test` misses banned phrases split
     across two template lines.
 
+A third instance, 2026-08-21: two identical `verified` entries looked like a
+duplication artifact, and `git log -S <timestamp>` returned exactly ONE
+commit - read as proof one commit emitted both. `-S` counts when a string
+first appears, not how many events a line represents. The parent commit held
+two DISTINCT entries that a timestamp-repair commit had normalised, so the
+"duplicate" was a real verification and deleting it destroyed provenance.
+Positive control that would have caught it in one command: read the file at
+the parent commit.
+
 - **An empty query result is not evidence of absence** (2026-08-21). Hunting a
   black band on `/services/`, `document.querySelectorAll('path.fl-shape')`
   returned `[]`. That read as "no shape layer on this page" and an entire
