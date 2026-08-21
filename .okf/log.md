@@ -51,6 +51,38 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - the bundle's last cross-link warning was not a broken link
+
+Swept the bundle for claims that rot, after `design/site-palette.md` was found
+carrying a closed blocker as open. Two findings, and the first is a
+non-finding worth stating.
+
+**`workflows/site-redesign-rollout.md` does not need fixing, by design.** It
+states outright that phase status comes from GIT rather than any document, and
+records the reasoning that outlives a phase instead of a state snapshot. Adding
+current phase status to it would make it worse. A concept built not to rot is the
+counter-example to site-palette, and the difference is whether it stores
+REASONING or STATE.
+
+**The one remaining cross-link warning was a correct link.**
+`design/course-landing-components.md` referenced a repo doc with
+`../../docs/projects/...`, which resolves fine on disk - verified by listing the
+target from the concept's own directory - but the validator cannot follow a link
+out of `.okf/`, so it warned on every run. A permanent warning is worse than
+noise: it invites someone to "fix" a link that was never broken.
+
+The canonical path was already in that concept's `resource:` frontmatter, so the
+body link was duplicating it. Converted to inline code, and the bundle's
+cross-link warnings went to zero. Recorded as a convention in
+[index.md](index.md): reference out-of-bundle files by PATH in the body, with the
+canonical form in `resource:`/`sources:`.
+
+A postscript from verifying that: the control `grep -ci .cross-link.` returned 1
+and looked like a regression, because it matched the words in THIS ENTRY'S OWN
+HEADING. The real message form is `cross-link target not found`, which returns 0.
+A search term general enough to match your own prose about the thing is not a
+measurement of the thing - match the tool's actual output string.
+
 ## 2026-08-21 - the on-dark accent is decided, and the dark band is three groups
 
 Two concepts corrected against what actually shipped in PR #540.
