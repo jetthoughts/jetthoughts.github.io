@@ -8,7 +8,7 @@ status: stable
 generated:
   by: claude/opus-5
   at: 2026-08-21T10:57:01Z
-timestamp: 2026-08-21T10:57:01Z
+timestamp: 2026-08-21T11:28:24Z
 ---
 
 # Why this concept exists
@@ -119,7 +119,32 @@ learning whether the design engages anyone before the whole site commits to it.
   moves PDFs too. Scope tripwire: `macos/{desktop,mobile}/course/chapter.png`
   must come out byte-identical.
 
-# Two lanes: extraction governs, discovery explores
+# Two lanes, then a pivot: the clean-slate v2 rail (2026-08-21)
+
+**The lane model below lasted half a day and is superseded.** Paul approved the
+clean-slate pivot the same evening: un-shipped pages are rebuilt on a **v2 rail**
+(root `layouts/next/`, clean bundles, functional partials reused verbatim) and
+cut over page-by-page through a non-indexed `/next/` production path. The design
+exploration is **fully open — rebrand allowed**; ADR-0003's brand decisions hold
+on the live site only until the competition winner is picked. Legacy bundles are
+frozen (defect fixes only); the 780 button sites and 39 blacks are dropped as
+work-done-twice. Plan of record with the cold-session state ledger:
+`docs/projects/2608-site-design-system/20-29-strategy/20.06-clean-slate-v2-plan.md`.
+
+Why the pivot survived review where propagation kept failing: every born-clean
+page shipped without reverts (blog 0 fl-lines, blog-single 2, course 11), while
+every propagation attempt into the recovered-from-obfuscation CSS was reverted
+or never started. The strategy now matches the track record instead of fighting
+it.
+
+Two traps the v2 rail must respect (verified 2026-08-21):
+- `bin/qtest` `pages_for` has NO `^layouts/` case — a root-layouts-only diff
+  exits 0 having tested nothing. Fix rides PR-1, before any v2 template lands.
+- The conversion events in `page/analytics.html` are attribute-driven
+  (`data-lead-form`, `data-cta-location`) — a v2 page keeps them firing only if
+  its markup carries the same attributes.
+
+# Superseded 2026-08-21 (kept for the reasoning): extraction governs, discovery explores
 
 Since 2026-08-21 the redesign runs an **extraction** lane and a **discovery**
 lane at once, and conflating them is the live confusion risk.

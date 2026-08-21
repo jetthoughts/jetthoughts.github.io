@@ -45,3 +45,16 @@
 .section-course .blog article.single-content .fl-rich-text .ws-route p {
   font-size: 16.5px;
 }
+
+/* 2608 2.3: module eyebrow above the lesson H1 — canonical eyebrow spec
+   (matches blog-list.css .blog-eyebrow: 12/700/0.14em/uppercase/ruby).
+   Ruby on white is 5.13:1 — AA pass for 12px text. Sits in <header>, outside
+   .fl-rich-text, so the course reading-scale selectors don't reach it. */
+.section-course .course-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ruby);
+  margin: 0 0 6px;
+}

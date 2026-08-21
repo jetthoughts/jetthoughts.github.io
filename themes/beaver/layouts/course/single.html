@@ -56,6 +56,17 @@
         class="single-content"
         style="max-width: 720px; margin:0 auto; padding-left:18px;padding-right:18px">
         <header>
+          {{/* 2608 2.3: module eyebrow from the "N.N ·" title prefix. The
+               module-N tags are a strict SUBSET of prefixed lessons (verified
+               2026-08-21), so the prefix is the single derivation. The module
+               NAME is what earns the eyebrow its place - the digit alone would
+               duplicate the H1. Names mirror the canonical module map in
+               how-this-course-works. */}}
+          {{ with findRESubmatch `^(\d+)\.\d+` .Title }}
+            {{ $n := index (index . 0) 1 }}
+            {{ $names := dict "1" "Hypothesis & Smoke Test" "2" "Validate the Problem" "3" "Design from Evidence" "4" "Build It Yourself" "5" "First Paying Customer" }}
+            <p class="course-eyebrow">Module {{ $n }}{{ with index $names $n }} · {{ . }}{{ end }}</p>
+          {{ end }}
           <h1 class="post-title">{{ .Title }}</h1>
 
           {{/* Author byline + date */}}
