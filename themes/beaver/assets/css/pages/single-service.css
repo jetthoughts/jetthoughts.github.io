@@ -808,7 +808,7 @@ img.mfp-img {
   background-size: cover;
 }
 .service-hero .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: #000000;
+  fill: var(--surface-ink);
 }
 
 
@@ -825,7 +825,7 @@ img.mfp-img {
 
 
 .service-overview > .fl-row-content-wrap {
-  background-color: #000;
+  background-color: var(--surface-ink);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -857,7 +857,7 @@ img.mfp-img {
 
 
 .service-clients .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: #000000;
+  fill: var(--surface-ink);
 }
 
 
@@ -1298,7 +1298,7 @@ img.mfp-img {
   padding-bottom: 40px !important;
 }
 .fl-builder-content .service-overview-eyebrow .fl-module-content .fl-rich-text, .fl-builder-content .service-overview-eyebrow .fl-module-content .fl-rich-text * {
-  color: var(--color-ruby);
+  color: var(--ruby-on-ink);
 }
 
 

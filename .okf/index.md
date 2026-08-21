@@ -22,6 +22,14 @@ sessions verify the same concept concurrently and a rebase conflicts on the
 verification really happened, and dropping one falsifies the provenance the
 field exists to carry (2026-08-20, `build/test-gates.md`).
 
+**Reference files OUTSIDE the bundle by PATH, not by a `../../` markdown link**
+(2026-08-21). Such a link resolves fine on disk but the validator cannot follow
+it out of `.okf/`, so it warns on every run forever - and a permanent warning
+invites someone to "fix" a link that was never broken. Put the canonical
+repo-relative path in `resource:` (or `sources:`) frontmatter and write the path
+as inline code in the body. Removing the one instance took the bundle's
+cross-link warnings to zero.
+
 **Stamp actual UTC - take it from `date -u`, never compose it** (2026-08-20).
 Eighteen stamps across nine concepts were written as local time carrying a `Z`
 suffix, putting them ~2h in the future. That is not cosmetic HERE of all

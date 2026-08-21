@@ -1043,7 +1043,7 @@ img.mfp-img {
 
 
 .use-cases-cta .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: #000000;
+  fill: var(--surface-ink);
 }
 
 

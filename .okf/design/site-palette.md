@@ -6,8 +6,8 @@ resource: themes/beaver/assets/css/foundations/css-variables.css
 tags: [design, palette, css, tokens, adr]
 generated:
   by: claude/opus-5
-  at: 2026-08-20T00:00:00Z
-timestamp: 2026-08-21T03:17:09Z
+  at: 2026-08-21T07:45:14Z
+timestamp: 2026-08-21T07:45:14Z
 ---
 
 # Resolved: LIGHT (ADR-0003, 2026-08-20)
@@ -106,8 +106,8 @@ Two consequences, and the second is the one that is easy to miss:
    footer/dark-surface migration cannot ship before the on-dark accent is
    decided, or it degrades contrast on every band it touches.
 
-**Candidates derived and measured 2026-08-21. Recommended: `#e85a52`, named
-`--ruby-on-ink`.**
+**DECIDED and SHIPPED 2026-08-21: `#e85a52`, named `--ruby-on-ink`**, in
+`foundations/css-variables.css` (PR #540). Candidates as measured:
 
 | Candidate | on `--surface-ink` | on `#000` | on white |
 |---|---|---|---|
@@ -127,14 +127,17 @@ general accent trades an AA failure on dark for one on light. The ramp has
 `--ruby-700` for "text-on-light where AA needs more" and no counterpart for
 dark; that gap is the whole issue.
 
-Not yet applied - it changes the rendered colour on every dark band, which is
-Paul's call. Tracked in
-`docs/projects/2608-site-design-system/README.md` under Outstanding.
+Applied in PR #540 to the four eyebrows that measured below AA:
+`home-services-eyebrow` and `home-clients-eyebrow` (4.10 -> 6.02),
+`about-achievements-eyebrow` and `service-overview-eyebrow` (3.67 -> pass after
+their bands migrated). NOT swept site-wide - only rules measured failing on a
+dark surface were changed, which is what the reverted 41-rule sweep got wrong.
 
-**Until it is named: do not apply a ruby text token to any surface in the
-section below.** Neither of the two automated gates catches this - those
-homepage sections carry no contrast test, and the screenshot suite passes a
-colour change of this size.
+**Still true after the decision: neither automated gate catches a contrast
+regression here.** Those homepage sections carry no contrast test, and the
+screenshot suite passes a colour change of this size. Ruby text landing on a dark
+surface must be measured in the browser, per the ladder in
+[architecture/css-pipeline.md](/architecture/css-pipeline.md).
 
 # Where dark is still deliberate
 

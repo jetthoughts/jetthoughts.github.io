@@ -4,13 +4,15 @@ title: CSS Build Pipeline (PostCSS + per-bundle PurgeCSS)
 description: PostCSS pipeline that concatenates per-page CSS resource slices and purges unused rules per bundle before shipping.
 resource: postcss.config.js
 tags: [css, build, performance]
-timestamp: 2026-08-21T04:17:19Z
+timestamp: 2026-08-21T07:45:14Z
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T07:45:14Z }
+  - { by: claude/opus-5, at: 2026-08-21T07:08:22Z }
   - { by: claude/opus-5, at: 2026-08-21T04:17:19Z }
   - { by: claude/opus-5, at: 2026-08-21T01:43:19Z }
 generated:
-  by: process:okf-migrate
-  at: 2026-07-12T00:00:00Z
+  by: claude/opus-5
+  at: 2026-08-21T07:45:14Z
 sources:
   - resource: "/workflows/css-maintainability-plan.md"
     title: "css-maintainability-plan"
@@ -81,6 +83,17 @@ limitation below is demonstrated somewhere in this file:
 | `el.matches(rule.selectorText)` | the SELECTOR matches this element | that the RULE applies (same enclosing-condition gap), or that it won the cascade |
 | `getComputedStyle(el)` | the value that won the cascade for that element | which selector produced it (another rule with the same value is indistinguishable), or what is actually visible - an overlay can cover it |
 | screenshot + pixel sample | what was painted | why |
+
+**Read the element that PAINTS the text, not the one that matches your
+selector** (2026-08-21). Auditing eyebrow contrast, `[class*="eyebrow"]`
+matched `.fl-module` wrappers whose own `color` is inherited-but-unpainted; the
+audit reported 1.12:1 (near-black on black, i.e. invisible) for a page that
+renders fine. Walking down to the deepest element holding the text gave the
+real 4.1:1 - a genuine AA failure that the bogus reading would have buried
+under an implausible one. FL-Builder markup nests
+`.fl-module > .fl-module-content > .fl-rich-text`, so the wrapper is almost
+never the painter. A computed-style reading that contradicts the render is the
+instrument being wrong, not the page.
 
 Only the last is a fact about the rendered page; the rest are facts about
 intermediate representations. The technique for each, and the overlay trap that
@@ -213,6 +226,34 @@ user sees. Each layer catches what the one before it cannot, and a
 Sweep result: 12 shape-layer rules across 9 page bundles were still `#000000`
 and are now `var(--surface-ink)`. Any future dark-surface token move must
 include them - `grep -rn 'fill: *#000' themes/beaver/assets/css/pages/`.
+
+# The dark band is THREE groups, and a subset ships a seam
+
+Moving "the footer to `--surface-ink`" is not one edit. Measured while doing it
+on 2026-08-21:
+
+| Group | Count | Where |
+|---|---|---|
+| footer background | 1 | `footer.css` |
+| bottom-edge SVG fills | **12** | `.fl-builder-bottom-edge-layer .fl-shape-content .fl-shape` across 9 `pages/*.css` |
+| section bands | **5** | `.home-services`, `.about-achievements`, `.careers-testimonial`, `.service-overview`, `.use-case-details` — each `> .fl-row-content-wrap` |
+
+A first pass moved the footer and the 12 fills and left the 5 bands at `#000`,
+which CREATED the seam the migration exists to remove: `.home-proof`'s edge
+computed `rgb(20, 17, 15)` meeting `.home-services` at `rgb(0, 0, 0)`. An earlier
+attempt had moved the footer alone and was reverted for the mirror-image reason.
+
+**And the text on those bands moves with them.** `--color-ruby` measures 4.10:1
+on `#000` but only **3.67:1** on `--surface-ink`, so migrating a band makes any
+ruby text on it worse. Two eyebrows that passed the first pass failed after the
+bands moved. Band and accent are one change; see
+[design/site-palette.md](/design/site-palette.md) for `--ruby-on-ink`.
+
+The check that catches a subset, run per page in the browser: for each
+`.fl-builder-bottom-edge-layer`, compare the shape's computed `fill` against the
+NEXT row's `.fl-row-content-wrap` background, and flag any pair that differs
+while either side is dark.
+
 
 # Legacy liability: FL-Builder export CSS
 

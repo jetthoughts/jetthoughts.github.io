@@ -9,6 +9,8 @@ generated:
   at: 2026-07-31T16:30:00Z
 verified:
   - by: claude/opus-5
+    at: 2026-08-21T07:53:17Z
+  - by: claude/opus-5
     at: 2026-08-07T00:00:00Z
   - by: claude/sonnet-5
     at: 2026-08-20T00:00:00Z
@@ -237,6 +239,18 @@ Two gotchas the first record run hit (both fixed; evidence: [run 30629929407](ht
 Two more, hit re-recording Linux baselines from CI on 2026-08-20 (see [test-gates.md](test-gates.md) for why CI, not local `bin/dtest`, is the only honest place to record them):
 - **"no checks reported" has TWO causes - check `mergeable_state` FIRST**: (a) the bot's baseline commit carries `[ci skip]`, so a record dispatch leaves the PR with no new run; (b) far more silent, an UNMERGEABLE PR produces ZERO checks at all - `pull_request` runs are built against a merge ref GitHub cannot compute, so it creates nothing rather than erroring. On 2026-08-20 (b) was the real blocker and (a) was wrongly blamed for 25 minutes; `gh api repos/OWNER/REPO/pulls/N --jq .mergeable_state` returned `dirty`. A baseline record takes ~20 min while master keeps moving, and the record commit plus any `.okf/log.md` edit conflicts easily - merge master and the checks appear. Never read missing checks as "still running" or "passing."
 - **Record mode has no accept/reject gate**: `FORCE_SCREENSHOT_UPDATE=true` overwrites every baseline blind, with no diff review before the commit. Screen the result by per-file byte-size delta and visually inspect only the outliers - sub-pixel noise lands under ~1.2%, real content changes stand out (2026-08-20: mermaid_post +21%/+24%, nav/use_cases -10%).
+
+  **And the outliers are often SOMEBODY ELSE'S work** (2026-08-21). A record
+  dispatched for a one-colour change wrote 84 Linux baselines: 76 under the noise
+  floor, 7 footers and CTA bands that were genuinely the change, and one at
+  **12.44%** - `desktop/blog/tag.png`, whose diff showed different blog POSTS
+  ("108 posts tagged rails" against 106). Content published since the previous
+  recording, folded into an unrelated PR. A baseline record snapshots the whole
+  site, not your diff. `bin/record-baselines <glob>` filters that locally; a CI
+  dispatch has no filter, so screen and drop after the fact - the record commit
+  can simply be rebased out (`git rebase --onto <sha>^ <sha>`), and on a PR the
+  screenshot job is `continue-on-error` (`test.yml:72`) so stale baselines report
+  without blocking.
 
 **Stale Linux baselines drift silently on master** while the PR screenshot gate stays `continue-on-error` (report-only, see below) - two live examples found 2026-08-20: PR #470 updated only the `macos/` mermaid baselines and left `linux/` stale; and `linux/desktop/nav/use_cases.png` was still encoding copy banned by `.okf/content/claims-canon.md` ("Rated 4.8/5 by 32 clients", "2011") that was corrected on the live site on 2026-08-14 - the LIVE SITE was correct, only the frozen PNG carried the stale wording, which is why the banned-string ratchet (a text grep) never caught it. A frozen baseline PNG is not covered by any text validator.
 

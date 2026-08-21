@@ -75,6 +75,11 @@
   /* Ruby tints. --color-ruby #cc342d (5.1:1 on white, AA both
      directions) and --color-ruby-hover already exist above. */
   --ruby-700: #9e2620;  /* pressed / text-on-light where AA needs more */
+  --ruby-on-ink: #e85a52;  /* ruby ON --surface-ink. --color-ruby is 3.67:1
+                              there (fails AA-normal, large-text only);
+                              this is 5.39:1. Use for any ruby TEXT or icon
+                              on the dark band — not for ruby BACKGROUNDS,
+                              which keep --color-ruby with white on top. */
   --ruby-100: #fbeae8;  /* tint background */
   --ruby-050: #fdf5f4;  /* hero blush (course page, campaign heroes) */
 

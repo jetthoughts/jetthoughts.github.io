@@ -51,6 +51,156 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - PR #540 hands 16 stale Linux baselines to the parallel PR
+
+Making the debt legible rather than silent, per the async-first rule. The
+phase-1a.4 recolour invalidates these Linux baselines, measured from CI run
+32460674225 on the branch:
+
+```
+desktop/blog/index/_pagination          desktop/services/_cta-contact_us
+desktop/blog/special/codeblocks/bare    desktop/services/_footer
+desktop/blog/special/codeblocks/indented desktop/services/_overview
+desktop/contact_us                      desktop/services/_services
+desktop/homepage/_clients               mobile/blog/index/_pagination
+desktop/homepage/_cta-contact_us        mobile/blog/special/codeblocks/indented
+desktop/homepage/_footer                mobile/services
+desktop/homepage/_services
+desktop/homepage/_technologies
+```
+
+All 16 are dark-band surfaces - footers, CTA bands, section bands, and pages
+whose captures include one. The reds are the predicted reds, checked against the
+run rather than assumed, per the "a slow failure and a fast failure are different
+failures" rule in [build/ci-gates.md](build/ci-gates.md).
+
+They are NOT recorded on this PR, deliberately. Paul 2026-08-19: Linux rides a
+parallel PR. A record was dispatched and dropped when screening found it carried
+content drift (see the previous entry), and re-dispatching to curate it here
+would take the same instruction the other way.
+
+Two facts that make merging safe rather than reckless:
+
+* `test.yml` triggers on `pull_request` and `workflow_dispatch` ONLY - there is
+  no `push` trigger, so merging does not turn master red; the job simply does not
+  run there.
+* On PRs the job is `continue-on-error` (`test.yml:72`), so it reports.
+
+Which is also exactly the silent-drift condition ci-gates.md already documents.
+This entry exists so the next session picks the list up from a document instead
+of re-deriving it from a run that will have aged out.
+
+## 2026-08-21 - a blind baseline record bakes in content drift
+
+Dispatched `test.yml -f update-baselines=true` on the phase-1a.4 branch, because
+this worktree's macOS render is drifted and cannot produce trustworthy baselines.
+The bot recorded **84 Linux baselines** for a change that touches one colour.
+
+Screened them by the byte-size procedure this bundle already documents in
+[build/ci-gates.md](build/ci-gates.md) - "record mode has no accept/reject gate":
+
+* 76 of 84 under the ~1.2% noise floor
+* 8 above it; seven are footers and CTA bands, consistent with the change
+* one outlier at **12.44%**: `desktop/blog/tag.png`
+
+Diffing that outlier showed **different blog posts** - "108 posts tagged rails"
+against 106, different titles and dates. That is CONTENT drift published since
+the previous recording, not the recolour. A blind record captures whatever the
+site says today, and folds it into whatever PR dispatched it.
+
+So the record commit was dropped from the branch (`git rebase --onto <sha>^
+<sha>`, backup tag first). Two reasons, and the second is the load-bearing one:
+the PR is CSS-only and 84 mostly-unrelated binaries make its visual evidence
+unreadable; and the screenshot job is `continue-on-error` on `pull_request`
+(`test.yml:72`), so a stale Linux baseline reports without blocking. Linux rides
+its own PR, per Paul 2026-08-19.
+
+**The generalisable part:** a baseline record is a snapshot of the whole site,
+not of your diff. Screen it before accepting, and expect the outliers to be other
+people's work. `bin/record-baselines <glob>` exists for exactly this locally; a
+CI dispatch has no such filter, so the filtering has to happen after the fact.
+
+## 2026-08-21 - the bundle's last cross-link warning was not a broken link
+
+Swept the bundle for claims that rot, after `design/site-palette.md` was found
+carrying a closed blocker as open. Two findings, and the first is a
+non-finding worth stating.
+
+**`workflows/site-redesign-rollout.md` does not need fixing, by design.** It
+states outright that phase status comes from GIT rather than any document, and
+records the reasoning that outlives a phase instead of a state snapshot. Adding
+current phase status to it would make it worse. A concept built not to rot is the
+counter-example to site-palette, and the difference is whether it stores
+REASONING or STATE.
+
+**The one remaining cross-link warning was a correct link.**
+`design/course-landing-components.md` referenced a repo doc with
+`../../docs/projects/...`, which resolves fine on disk - verified by listing the
+target from the concept's own directory - but the validator cannot follow a link
+out of `.okf/`, so it warned on every run. A permanent warning is worse than
+noise: it invites someone to "fix" a link that was never broken.
+
+The canonical path was already in that concept's `resource:` frontmatter, so the
+body link was duplicating it. Converted to inline code, and the bundle's
+cross-link warnings went to zero. Recorded as a convention in
+[index.md](index.md): reference out-of-bundle files by PATH in the body, with the
+canonical form in `resource:`/`sources:`.
+
+A postscript from verifying that: the control `grep -ci .cross-link.` returned 1
+and looked like a regression, because it matched the words in THIS ENTRY'S OWN
+HEADING. The real message form is `cross-link target not found`, which returns 0.
+A search term general enough to match your own prose about the thing is not a
+measurement of the thing - match the tool's actual output string.
+
+## 2026-08-21 - the on-dark accent is decided, and the dark band is three groups
+
+Two concepts corrected against what actually shipped in PR #540.
+
+**[design/site-palette.md](design/site-palette.md) was stale in the way that
+matters most.** It carried `#e85a52` as a *recommendation* and said "Not yet
+applied - Paul's call", describing an open blocker that is now closed. A cold
+session reading it would conclude the phase was still gated, which is exactly the
+false state that produced hours of adjacent work instead of the CSS. Now recorded
+as DECIDED and SHIPPED, with where it was applied - four eyebrows that MEASURED
+below AA, not a site-wide sweep, since sweeping is what the reverted 41-rule
+attempt got wrong.
+
+What survives the decision unchanged, and is re-stated: neither automated gate
+catches a contrast regression on those bands. No contrast test covers them and
+the screenshot suite passes a colour change of this size.
+
+**[architecture/css-pipeline.md](architecture/css-pipeline.md) documented how to
+HUNT the shape layer but never what the dark band is made of.** It is three
+groups - 1 footer background, 12 bottom-edge SVG fills across 9 page files, 5
+section bands - and moving a subset ships a seam. A first pass moved the footer
+and the 12 fills, leaving the 5 bands black, and created the seam the migration
+exists to remove; an earlier attempt moved the footer alone and was reverted for
+the mirror-image reason.
+
+The coupling that makes them one change: `--color-ruby` measures 4.10:1 on `#000`
+but 3.67:1 on `--surface-ink`, so migrating a band makes ruby text on it WORSE.
+Two eyebrows that were fine before the bands moved failed after.
+
+## 2026-08-21 - Phase 1a.4 dark surfaces: what shipped, and two live AA failures
+
+Shipped in `phase-1a4-dark-surfaces`: the footer and the 12
+`.fl-builder-bottom-edge-layer` shape fills moved onto `--surface-ink` together
+(either alone leaves a seam - that is why the earlier attempt was reverted), the
+`--ruby-on-ink: #e85a52` token landed (5.39:1 on `--surface-ink` vs
+`--color-ruby`'s 3.67:1), and two eyebrows that were failing WCAG AA on the live
+homepage at 4.1:1 were fixed to 6.02:1.
+
+Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md): the
+audit that found those failures first reported 1.12:1, because
+`[class*="eyebrow"]` matches the `.fl-module` WRAPPER and the text is painted
+three levels down. An implausible reading on a page that renders fine is the
+instrument, not the page.
+
+Scope stopped deliberately short of the remaining 18 ruby eyebrow rules and 36
+hardcoded black backgrounds. Only measured failures were fixed; a blanket sweep
+is exactly what produced the reverted AA regression, and several of those blacks
+are code-block surfaces, which is a design decision rather than a token rename.
+
 ## 2026-08-21 - what okf_validate actually guards, and the two-spec trap
 
 Recorded in [build/test-gates.md](build/test-gates.md), where the gates live.

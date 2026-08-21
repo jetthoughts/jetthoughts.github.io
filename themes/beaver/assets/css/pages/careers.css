@@ -763,7 +763,7 @@ img.mfp-img {
   }
 }
 .careers-testimonial > .fl-row-content-wrap {
-  background-color: #000;
+  background-color: var(--surface-ink);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -812,7 +812,7 @@ img.mfp-img {
 }
 
 .careers-positions .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: #000000;
+  fill: var(--surface-ink);
 }
 
 .careers-positions > .fl-row-content-wrap {

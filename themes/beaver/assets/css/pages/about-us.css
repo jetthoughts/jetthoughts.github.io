@@ -846,7 +846,7 @@ img.mfp-img {
   padding-bottom: 0px;
 }
 .about-achievements > .fl-row-content-wrap {
-  background-color: #000;
+  background-color: var(--surface-ink);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -902,7 +902,7 @@ img.mfp-img {
 
 
 .about-testimonials-cta .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: #000000;
+  fill: var(--surface-ink);
 }
 
 
@@ -1540,7 +1540,7 @@ img.mfp-img {
   border-bottom-right-radius: px;
 }
 .fl-builder-content .about-achievements-eyebrow .fl-module-content .fl-rich-text, .fl-builder-content .about-achievements-eyebrow .fl-module-content .fl-rich-text * {
-  color: var(--color-ruby);
+  color: var(--ruby-on-ink);
 }
 
 

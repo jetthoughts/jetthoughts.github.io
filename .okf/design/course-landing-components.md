@@ -7,8 +7,9 @@ tags: [css, design, course, landing]
 status: stable
 generated:
   by: claude/opus-5
-  at: 2026-08-13T00:00:00Z
+  at: 2026-08-21T07:49:13Z
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T07:49:13Z }
   - by: human:pftg
     at: 2026-08-13T00:00:00Z
 ---
@@ -60,6 +61,11 @@ mistake-grid CTA, or a module card.
 
 # Citations
 
-* [Component library + the shuffle2 reference](../../docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/course-landing-components-2026-08.md)
+* Component library + the shuffle2 reference:
+  `docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/course-landing-components-2026-08.md`
+  (repo-relative, and the same path as this concept`s `resource:`). Written as a
+  PATH, not a markdown link: a link escaping the bundle with `../../` resolves
+  correctly on disk but the validator cannot follow it out of `.okf/`, so it
+  warns forever and invites someone to "fix" a link that was never broken.
 * [Visual scroll gate](../workflows/visual-scroll-gate.md)
 * [ICP profile](../content-strategy/icp-primary-website-target.md)
