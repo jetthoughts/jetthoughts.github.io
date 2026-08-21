@@ -7,9 +7,9 @@ generated:
   by: process:okf-migrate
   at: 2026-07-24T00:00:00Z
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T04:52:57Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-21T00:41:51Z
+timestamp: 2026-08-21T04:52:57Z
 ---
 
 # The loop
@@ -263,3 +263,37 @@ verdict format, and the two or three specific things to attack.
   error in a measurement plan, an overstated bot multiplier. Prose has no
   compiler and no test, so the ONLY gate is a reader who checks claims against
   the tree. One clean round is the signal to stop; one round is not.
+
+- **Descriptive claims survive review; PRESCRIPTIVE ones fail** (2026-08-21).
+  Six codex rounds on one bundle-only PR (#537) returned 13 findings, 12
+  accepted. The split was clean: the *factual* content - which partial emits
+  what, what production adds - was unchallenged in all six rounds. Every single
+  failure was a claim about what a MEASUREMENT establishes. Four successive
+  text-search checks were each refuted in turn: literal `String#scan`
+  (`'\.c-nav'` hunting a backslash), substring prefixes (`\.c-content-block`
+  scoring on `.c-content-block__text`), comments and URLs (`idangero` scoring 1
+  from a Swiper URL), then semantics no regex fixes.
+
+  "X emits Y" is checkable against X. "Run Z to prove Y" smuggles in an unstated
+  universal - *no other path produces this result* - and that is the falsifiable
+  part. So when writing durable guidance, prefer description; if a check must be
+  documented, write what it does NOT establish in the same breath. Extends
+  "docs review converges slowly" above by saying WHICH sentences will converge
+  slowly.
+
+- **Round three on a home-grown instrument means DELETE it, not patch it**
+  (2026-08-21). Each of the four patches above was individually correct and each
+  exposed the next hole; the honest version turned out to be much shorter than
+  the one being defended, and routed to a method the same file already carried.
+  A patch that fixes a real finding still reads as progress, which is what makes
+  this hard to stop. If the tool is invented rather than the subject, the third
+  round is the signal.
+
+- **A fair diagnosis can carry an overclaiming prescription - decline that half**
+  (2026-08-21). The one finding rejected on #537 asked to rewrite
+  `generated.by` to the editing session. The diagnosis (new authorship recorded
+  only under `verified` is imprecise) was fair; the fix would have claimed
+  authorship of sections written by others, and contradicted the convention
+  every other concept follows - `generated` = who first produced the file,
+  `verified` = who touched it since. Check the prescription against the tree
+  separately from the diagnosis, and record the disposition with its evidence.

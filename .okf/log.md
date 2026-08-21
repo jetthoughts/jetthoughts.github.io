@@ -50,6 +50,39 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - what survives adversarial review, and when to stop patching
+
+Added to [workflows/review-swarm.md](workflows/review-swarm.md) under Known
+failure modes, extending the existing "docs review converges slowly" entry with
+WHICH sentences converge slowly.
+
+Six codex rounds on the bundle-only PR #537 returned 13 findings, 12 accepted.
+The split was clean: the factual content - which partial emits what, what
+production adds - was unchallenged in all six rounds. Every failure was a claim
+about what a MEASUREMENT establishes. Four successive text-search checks were
+refuted in turn: literal `String#scan`, substring prefixes, comments and URLs,
+then semantics no regex fixes.
+
+"X emits Y" is checkable against X. "Run Z to prove Y" smuggles in an unstated
+universal - no other path produces this result - and that is the falsifiable
+part. Prefer description; if a check must be documented, write what it does NOT
+establish in the same breath.
+
+Two companions recorded with it: round three on a home-grown instrument is the
+signal to DELETE it rather than patch it again (each of the four patches was
+individually correct and each exposed the next hole, while the honest version
+was far shorter and routed to a method the file already carried); and a fair
+diagnosis can carry an overclaiming prescription, so check the two halves
+separately - the one finding declined on #537 correctly identified imprecise
+authorship recording but proposed a fix that would have claimed authorship of
+sections written by others.
+
+Also deduplicated a `verified` entry in the same concept. Two byte-identical
+entries (`claude/opus-5`, `2026-08-20T23:11:35Z`) were added by a SINGLE commit
+(e046adc54), so they cannot be the concurrent-verification case the root index
+protects with "keep BOTH entries" - that rule covers two sessions producing
+DIFFERENT entries. One commit is one verification.
+
 ## 2026-08-21 - CSS ships both inline and as a linked file; text search cannot prove a selector applies
 
 Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). Eleven
