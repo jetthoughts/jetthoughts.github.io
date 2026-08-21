@@ -6,9 +6,24 @@
  * a /next/ page renders comes from foundations/css-variables.css, the two
  * reused chrome stylesheets (navigation.css, footer.css), and this file.
  *
- * Deliberately near-empty: PR-2 styles the pilot per the winning design
- * direction. House style written here before that decision is work done
- * twice — the exact failure mode this rail exists to stop. */
+ * Design direction: D1 "Artifact Editorial" (won the 4-1 vote, 2026-08-21).
+ * Warm paper surface, charcoal ink, brand ruby ONLY as hairline rules / small
+ * caps labels / the single filled CTA. Sharp 0px corners; depth from 1px
+ * outlines and hairline rules (--line) — the #fff-on-paper tonal step is 1.05:1, near-invisible; the lines do the work, never shadows. */
+
+:root {
+  --np-paper: #fbf9f8;
+  --np-card: var(--surface);
+  --np-ink: #1b1c1c;
+  --np-ink-muted: #5a5a58;
+  /* No serif/grotesk is self-hosted in this repo (only Caveat and Space
+     Grotesk are, and neither is the D1 pair), and the visual tests must stay
+     hermetic - no external font fetch. Source Serif 4 / Hanken Grotesk are
+     named first so the intended faces apply where the visitor has them, with
+     a system stack behind. Self-hosting them is its own PR. */
+  --np-serif: "Source Serif 4", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --np-sans: "Hanken Grotesk", var(--font-system-ui);
+}
 
 *,
 *::before,
@@ -16,11 +31,17 @@
   box-sizing: border-box;
 }
 
+/* navigation.css:20 sets a site-wide `body { font-size: 18px; line-height:
+   1.6; color: #121212 }` and it is inlined ahead of this file in the bundle,
+   so every one of those three has to be restated here or it leaks into the
+   rail (ADR-0006 trap). */
 body {
   margin: 0;
-  background: var(--surface);
-  color: var(--ink-700);
-  font-family: var(--font-system-ui);
+  background: var(--np-paper);
+  color: var(--np-ink);
+  font-family: var(--np-sans);
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 /* Rail-level, not page-level: the reused site header is `position: absolute`
@@ -34,11 +55,206 @@ main#main-content {
 }
 
 .next-article {
-  max-width: 68ch;
+  max-width: 40rem;
   margin: 0 auto;
-  padding: var(--spacing-md) var(--spacing-sm);
+  padding: 0 1.25rem 5rem;
 }
 
-.next-article h1 {
-  color: var(--ink-900);
+.next-article h1,
+.next-article h2,
+.next-article h3 {
+  font-family: var(--np-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.next-article :where(a) {
+  color: var(--np-ink);
+  text-decoration-color: var(--color-ruby);
+  text-underline-offset: 2px;
+}
+
+/* Small caps label - one of the three sanctioned ruby uses. */
+.np-label {
+  margin: 0 0 0.75rem;
+  color: var(--color-ruby);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ---- hero ---- */
+
+.np-hero {
+  padding: 2rem 0 2.5rem;
+}
+
+.np-hero h1 {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+}
+
+.np-lede {
+  margin: 1.25rem 0 0;
+  color: var(--np-ink-muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Link-with-arrow, deliberately NOT a button: the page carries exactly one
+   filled CTA and it is at the bottom. */
+.np-link-cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--color-ruby);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-ruby);
+  padding-bottom: 2px;
+}
+
+/* ---- editorial sections ---- */
+
+/* The Rule of Red Line: a section opens on a ruby hairline. */
+.np-section {
+  border-top: 1px solid var(--color-ruby);
+  padding-top: 2rem;
+  margin-top: 3rem;
+}
+
+.np-section > h2:not(.np-label) {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 2rem;
+}
+
+.np-block + .np-block {
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.np-block h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.np-block p {
+  margin: 0;
+  color: var(--np-ink-muted);
+}
+
+/* ---- outcome stats ---- */
+
+.np-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  list-style: none;
+  margin: 3rem 0 0;
+  padding: 0;
+}
+
+.np-stats li {
+  background: var(--np-card);
+  padding: 1.5rem;
+}
+
+.np-stat-value {
+  display: block;
+  font-family: var(--np-serif);
+  font-size: 2.5rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.np-stat-label {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--np-ink-muted);
+  font-size: 0.875rem;
+}
+
+/* ---- FAQ ---- */
+
+.np-faq {
+  margin: 0;
+}
+
+.np-faq dt {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+  font-family: var(--np-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.np-faq dt:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.np-faq dd {
+  margin: 0.5rem 0 1.5rem;
+  color: var(--np-ink-muted);
+}
+
+.np-faq dd p {
+  margin: 0;
+}
+
+/* ---- closing CTA (the only filled button on the page) ---- */
+
+.np-close {
+  border: 1px solid var(--line);
+  background: var(--np-card);
+  margin-top: 4rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.np-close h2 {
+  font-size: 1.75rem;
+}
+
+.np-close p {
+  margin: 1rem auto 2rem;
+  max-width: 32rem;
+  color: var(--np-ink-muted);
+}
+
+.np-button {
+  display: inline-block;
+  background: var(--color-ruby);
+  color: #fff;
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.np-button:hover {
+  background: var(--ruby-700);
+}
+
+@media (min-width: 40rem) {
+  .np-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .np-close {
+    padding: 3.5rem 3rem;
+  }
+}
+
+/* Review F3: the minimal canon-safe proof line under the stats. */
+.np-proof {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--np-ink-muted);
+}
+.np-proof a {
+  color: var(--color-ruby);
 }

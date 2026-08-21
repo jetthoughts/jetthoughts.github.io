@@ -30,7 +30,7 @@ faqs:
   - question: "How does the engagement model work?"
     answer: "We offer flexible engagement models including part-time (10-20 hours/week), project-based contracts, interim CTO roles during transitions, and strategic consulting relationships. Most clients start with a part-time arrangement that can scale up or down based on your needs and growth stage."
   - question: "What experience do your Fractional CTOs have?"
-    answer: "Our Fractional CTOs average 8+ years of development experience with 15+ years of industry experience. They've led technical teams, managed complex software projects, and helped companies scale from startup to enterprise level. All have hands-on experience with modern technology stacks and proven track records of successful product delivery."
+    answer: "Our Fractional CTOs average 8+ years of development experience. They've led technical teams, managed complex software projects, and helped companies scale from startup to enterprise level. All have hands-on experience with modern technology stacks and proven track records of successful product delivery."
 
 overview:
   headline: The power of a CTO at a fraction of the cost

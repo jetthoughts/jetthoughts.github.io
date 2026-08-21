@@ -22,10 +22,64 @@
     {{- with site.GetPage . -}}{{- $src = . -}}{{- end -}}
   {{- end -}}
   <article class="next-article">
-    <h1>{{ $src.Params.headline | default $src.Title }}</h1>
-    {{- with $src.Params.excerpt }}
-    <p class="next-lede">{{ . }}</p>
+    <header class="np-hero">
+      <h1>{{ $src.Params.headline | default $src.Title }}</h1>
+      {{- with $src.Params.excerpt }}
+      <p class="np-lede">{{ . }}</p>
+      {{- end }}
+      <a class="np-link-cta" href="{{ relURL "free-consultation/" }}">Talk to an expert <span aria-hidden="true">&rarr;</span></a>
+    </header>
+
+    {{- with $src.Params.overview }}
+    <section class="np-section">
+      <p class="np-label">Service overview</p>
+      <h2>{{ .headline }}</h2>
+      {{- range .list }}
+      <div class="np-block">
+        <h3>{{ .name }}</h3>
+        {{ .value | markdownify }}
+      </div>
+      {{- end }}
+      {{- with .outcome }}
+      <ul class="np-stats">
+        {{- range . }}
+        {{/* tenure derives from foundingYear (claims canon) - frontmatter values rot */}}
+        {{- $value := .value }}
+        {{- if eq .name "Years of Industry Experience" }}
+          {{- $value = sub now.Year (int site.Params.foundingYear) }}
+        {{- end }}
+        <li>
+          <span class="np-stat-value">{{ $value }}+</span>
+          <span class="np-stat-label">{{ .name }}</span>
+        </li>
+        {{- end }}
+      </ul>
+      {{/* Minimal proof line (review F3): the composition swap dropped every
+           trust signal; this restores the one that is canon-exact - 4.8/5 on
+           Clutch with the profile linked, NO review count (claims-canon). */}}
+      <p class="np-proof">Rated <strong>4.8/5 on Clutch</strong> &mdash; <a href="https://clutch.co/profile/jetthoughts" rel="noopener">read the verified reviews</a>.</p>
+      {{- end }}
+    </section>
     {{- end }}
+
+    {{- with $src.Params.faqs }}
+    <section class="np-section">
+      <h2 class="np-label">Common questions</h2>
+      <dl class="np-faq">
+        {{- range . }}
+        <dt>{{ .question }}</dt>
+        <dd>{{ .answer | markdownify }}</dd>
+        {{- end }}
+      </dl>
+    </section>
+    {{- end }}
+
     {{ $src.Content }}
+
+    <section class="np-close">
+      <h2>Let&rsquo;s get started now</h2>
+      <p>Get in touch with one of our experts to get a technical strategy &amp; planning session for your project at no cost.</p>
+      <a class="np-button" href="{{ relURL "contact-us/" }}">Contact Us</a>
+    </section>
   </article>
 {{ end }}

@@ -35,6 +35,7 @@ class MarketingCopyTest < Minitest::Test
     "content/pages/**/*.md",
     "content/services/**/*.md",
     "content/use-cases/**/*.md",
+    "layouts/next/**/*.html", # the v2 rail is template-authored marketing copy on root layouts
     "themes/beaver/layouts/home.html",
     "themes/beaver/layouts/page/*.html",
     # Blog CHROME (list hero, section furniture) is a marketing surface even
@@ -119,7 +120,7 @@ class MarketingCopyTest < Minitest::Test
   # original authors and are governed by the separate dev.to ICP gate, not this
   # ratchet. The excluded set is DERIVED from `source: dev_to` frontmatter, so
   # it tracks the imports instead of rotting as a hand-typed list.
-  RENDERED_GLOBS = %w[blog/**/*.html course/**/*.html services/**/*.html].freeze
+  RENDERED_GLOBS = %w[blog/**/*.html course/**/*.html services/**/*.html next/**/*.html].freeze
 
   # Paginated list views (/blog/page/7/, /blog/tags/startup/page/4/) only
   # re-print excerpts from posts this pass already counts, so every hit on them

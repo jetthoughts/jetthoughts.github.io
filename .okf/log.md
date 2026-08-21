@@ -51,6 +51,36 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - PR-2 pilot: two CSS traps and a claims fix, from adversarial review
+
+The styled D1 pilot shipped through author -> verifier -> fixes. Three durable
+learnings from the verifier's HOLD:
+
+**`.parent a { }` outranks single-class components.** `.next-article a` (0,1,1)
+beat both `.np-link-cta` and `.np-button` (0,1,0) - the page's ONE filled CTA
+shipped black-on-ruby at 3.33:1, an AA failure, verified in pixels (385px of ink
+glyphs where ruby was intended). The fix is one token: scope descendant link
+rules as `:where(a)` so they carry (0,1,0) and components win on order. Applies
+to every future rail page.
+
+**A rendered guard can be non-discriminating NOW and still be right.** The
+tenure assertion (np-stat-value == now.Year - foundingYear) cannot distinguish
+derived from frozen until 2027, because this year they are equal - documented in
+the test rather than pretended away.
+
+**The rail sat outside both copy ratchets.** marketing_copy_test globbed
+`themes/beaver/layouts/**` (not root `layouts/`) and its RENDERED_GLOBS had no
+`next/**` - the one surface with template-authored marketing copy was the one
+neither pass read. Both globs extended.
+
+Also: the composition swap (FAQs in, clients/testimonials out) silently dropped
+every trust signal on the page - restored as a minimal canon-exact proof line
+(4.8/5 on Clutch, profile linked, no review count). And FAQ 5 carried an
+unsourced "15+ years of industry experience" CONTRADICTING the derived 18+ stat
+on the same screen - removed at the frontmatter source, which also fixes the
+LIVE page's JSON-LD. Measured payoff of the rail, per the repo's own evidence
+form: next-pilot 3.1 KB gzip vs single-service 21.6 KB - minus 85.6%.
+
 ## 2026-08-21 - Phase 2.3 shipped: course module eyebrow, dual derivation
 
 The course lesson eyebrow ships with a detail worth keeping: **the module number

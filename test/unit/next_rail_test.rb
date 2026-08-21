@@ -28,6 +28,19 @@ class NextRailTest < BasePageTestCase
 
   # The stub mirrors a real page; the copy lives there, so that URL is the
   # canonical one - and exactly one canonical may ship.
+  # HONEST LIMIT: in 2026 the derived value equals the frozen frontmatter 18,
+  # so this assertion cannot distinguish them until 2027-01-01 - from then on
+  # it bites forever. Kept rendered-level per repo doctrine (no template greps).
+  def test_tenure_stat_is_derived_not_frozen
+    doc = parse_html_file(PILOT)
+    tenure = doc.css(".np-stat-value").map(&:text).find { |t| t.include?("+") }
+    expected = "#{Time.now.year - 2008}+"
+    assert_includes doc.css(".np-stat-value").map(&:text), expected,
+      "tenure stat must derive from foundingYear (#{expected}), not the frozen frontmatter 18 - " \
+      "the label-keyed branch in layouts/next/single.html silently falls back if the label is renamed"
+    refute_nil tenure
+  end
+
   def test_next_pages_canonicalise_to_their_source_page
     canonicals = parse_html_file(PILOT).css("link[rel='canonical']")
 
