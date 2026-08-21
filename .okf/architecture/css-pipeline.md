@@ -48,32 +48,45 @@ pipeline bundles (the third is 174 chars of hard-coded page CSS), and **2**
 
 # Answering "does this selector actually ship?"
 
-Neither naive grep works, and both fail in the confident direction:
+Three naive greps, three confident wrong answers:
 
 - **Grepping the rendered `*.html` for a class is a false positive.** It matches
   the `class="..."` attribute in markup, which says nothing about CSS. Live
-  example: `c-nav` appears in the homepage markup with **zero** matching CSS
-  anywhere in what that page loads.
-- **Grepping `_dest/*/css/*.css` alone is a false negative.** That population is
-  real - a class absent there really is absent from the file-served bundles - but
-  inline `<style>` content never lands under `css/`, so it is only part of what
-  ships.
+  example: `c-nav` is on the homepage with **zero** matching CSS in anything that
+  page loads.
+- **Grepping `_dest/*/css/*.css` alone is a false negative.** Real population -
+  a class absent there really is absent from the file-served bundles - but inline
+  `<style>` content never lands under `css/`.
 - **Counting tags with `rg` over raw HTML is a false positive.** `rel="stylesheet"`
-  matches three times on the homepage: one real link, one inside `<noscript>`,
-  and one in the preload polyfill's JavaScript (`this.rel="stylesheet"`).
+  matches three times on the homepage: one real link, one inside `<noscript>`, and
+  one in the preload polyfill's JavaScript (`this.rel="stylesheet"`).
 
 The check that answers it: parse the page, concatenate every `<style>` text with
-the contents of every `link[rel=stylesheet]` href resolved against the build
-root, and search that blob. Control it in both directions before believing a
-zero - a selector you know the page paints (`.c-content-block__text` → 1) and one
-you know is absent (`.zzz-not-a-class` → 0). If the known-present one also
-returns 0, the instrument is broken, not the codebase; see the instrument rule in
-[test-gates](/build/test-gates.md).
+the contents of every `link[rel=stylesheet]` href resolved against the build root,
+then measure the selector against that blob AND against the DOM. Two numbers, not
+one - they answer different questions:
 
-Ruby trap when writing that check: `String#scan(needle)` with a **String**
-argument matches literally, so `'\.c-nav'` hunts for a backslash. Wrap it -
-`blob.scan(Regexp.new(needle))` - or the control silently reads 0 for everything
-that contains an escape.
+| `rules` | `dom` | Meaning | Homepage example |
+|---|---|---|---|
+| >0 | >0 | shipped and painted | `fl-button` (89 / 5) |
+| >0 | 0 | rule ships, this page doesn't use it | `c-content-block__text` (1 / 0) - the global components bundle is inlined by `baseof.html` for every page |
+| 0 | >0 | **markup with no CSS** - usually the defect you're hunting | `c-nav` (0 / 1) |
+| 0 | 0 | absent | `zzz-not-a-class` |
+
+Two traps in writing that check, both found by their own controls:
+
+- **Require an identifier boundary.** A bare substring makes any class a false
+  positive for its own prefix: `\.c-content-block` scores 1 on the homepage
+  purely from `.c-content-block__text`, though no `.c-content-block` rule exists.
+  Use `Regexp.new('\.' + Regexp.escape(cls) + '(?![\w-])')`.
+- **`String#scan` with a String argument matches LITERALLY**, so `'\.c-nav'`
+  hunts for a backslash. Wrap it in `Regexp.new` or every escaped control
+  silently reads 0.
+
+Pick controls in both directions before believing a zero, and label them for what
+they prove - a `rules` count proves the rule SHIPS, not that the page paints it.
+If the known-present control also returns 0, the instrument is broken, not the
+codebase; see the instrument rule in [test-gates](/build/test-gates.md).
 
 # Token layer: `foundations/css-variables.css`
 

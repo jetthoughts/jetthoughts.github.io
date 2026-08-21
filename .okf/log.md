@@ -52,36 +52,43 @@ time, which is verifiable - never invented).
 
 ## 2026-08-21 - CSS ships both inline and as a linked file; how to check what actually ships
 
-Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). The
-first draft of this entry was itself wrong in three ways, all caught by codex
-review of PR #537 and all verified before accepting.
+Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). Five
+wrong claims were caught in this entry across two codex review rounds on PR
+#537, every one verified before acceptance. Recording that count because the
+subject IS measurement error.
 
 The mechanism: `partials/assets/css-inline.html` emits `<style>` (production
 adds only `| minify`); `partials/assets/css-processor.html` emits preload +
 stylesheet links to `/css/<bundle>[.min].<hash>.css` (production adds `minify`,
-`resources.PostProcess`, and an `integrity` attribute on both links -
-`fingerprint "sha256"` runs in dev too). On the homepage: 3 `<style>` of which
-2 are pipeline bundles, and 2 `link[rel=stylesheet]` of which one is a
-`<noscript>` swiper fallback.
+`resources.PostProcess`, and `integrity` on both links - `fingerprint "sha256"`
+runs in dev too). On the homepage: 3 `<style>` of which 2 are pipeline bundles,
+and 2 `link[rel=stylesheet]` of which one is a `<noscript>` swiper fallback.
 
-What the draft got wrong, and what replaced it:
+What was wrong, in order:
 
-* Counted "3 and 3" by grepping raw HTML. A parser says 3 and **2** - the extra
-  `rel="stylesheet"` match is the preload polyfill's JavaScript
-  (`this.rel="stylesheet"`). Counting tags with `rg` is a false positive.
-* Said production "only adds the `.min` infix". It also runs
-  `resources.PostProcess` and adds `integrity` to both links.
-* Recommended grepping the rendered `*.html` to ask whether CSS ships. That
-  matches the `class="..."` attribute in markup: `c-nav` is on the homepage with
-  **zero** matching CSS in anything that page loads.
+1. "3 and 3", counted by grepping raw HTML. A parser says 3 and **2** - the
+   extra `rel="stylesheet"` is the preload polyfill's JS, `this.rel="stylesheet"`.
+2. "production only adds the `.min` infix". It also runs `resources.PostProcess`
+   and adds `integrity` to both links.
+3. "grep the rendered `*.html`" to ask whether CSS ships - that matches the
+   `class="..."` attribute. `c-nav` is on the homepage with zero matching CSS.
+4. The replacement check used `String#scan` with a String argument, which
+   matches LITERALLY, so `'\.c-nav'` hunted for a backslash. Its own
+   known-present control read 0 and caught it.
+5. The fixed check still matched substrings, so `\.c-content-block` scored 1
+   purely from `.c-content-block__text`. Needs an identifier boundary:
+   `Regexp.new('\.' + Regexp.escape(cls) + '(?![\w-])')`.
 
-The check that does answer it: parse the page, concatenate every `<style>` text
-with the contents of every `link[rel=stylesheet]` href, search that blob, and
-control it in both directions (`.c-content-block__text` -> 1,
-`.zzz-not-a-class` -> 0). Ruby trap found while building it:
-`String#scan` with a String argument matches literally, so `'\.c-nav'` hunts for
-a backslash - the known-present control read 0 until it was wrapped in
-`Regexp.new`.
+And the control itself was mislabelled: `.c-content-block__text` was called a
+selector "the page paints", but the homepage DOM has zero such elements - the
+rule is present only because `baseof.html` inlines the global components bundle
+for every page. A `rules` count proves the rule SHIPS, not that the page paints
+it. The honest control for painted-on-this-page is `fl-button` (89 rules, 5 DOM
+elements).
+
+Hence the check reports TWO numbers. `rules>0 dom=0` is a shipped-but-unused
+rule; `rules=0 dom>0` is markup with no CSS, which is usually the defect being
+hunted; `0 0` is absent.
 
 ## 2026-08-21 - test the instrument, not just the result
 
