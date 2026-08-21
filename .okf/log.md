@@ -50,29 +50,38 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
-## 2026-08-21 - CSS ships BOTH inline and as a file under css/
+## 2026-08-21 - CSS ships both inline and as a linked file; how to check what actually ships
 
-Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). Found
-while verifying a codex finding on PR #536, and it corrects a belief this bundle
-was one commit away from recording as fact.
+Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). The
+first draft of this entry was itself wrong in three ways, all caught by codex
+review of PR #537 and all verified before accepting.
 
-A built page uses both delivery paths - measured on `_dest/public-test/index.html`:
-3 `<style>` tags AND 3 `<link rel="stylesheet">`.
+The mechanism: `partials/assets/css-inline.html` emits `<style>` (production
+adds only `| minify`); `partials/assets/css-processor.html` emits preload +
+stylesheet links to `/css/<bundle>[.min].<hash>.css` (production adds `minify`,
+`resources.PostProcess`, and an `integrity` attribute on both links -
+`fingerprint "sha256"` runs in dev too). On the homepage: 3 `<style>` of which
+2 are pipeline bundles, and 2 `link[rel=stylesheet]` of which one is a
+`<noscript>` swiper fallback.
 
-* `partials/assets/css-inline.html` emits `<style>`; its only
-  `if hugo.IsProduction` branch wraps `| minify`.
-* `partials/assets/css-processor.html` emits `preload` + `stylesheet` links to
-  `/css/<bundle>[.min].<hash>.css`; production only adds the `.min` infix.
+What the draft got wrong, and what replaced it:
 
-So `_dest/*/css/*.css` is a real population - a class absent there really is
-absent from the file-served bundles (`blog-eyebrow` returns 13 files in
-`public-dev` as the control). But it is only HALF the shipped CSS: inline
-`<style>` content never lands under `css/`, so "does this ship at all" has to be
-asked of the rendered `*.html`.
+* Counted "3 and 3" by grepping raw HTML. A parser says 3 and **2** - the extra
+  `rel="stylesheet"` match is the preload polyfill's JavaScript
+  (`this.rel="stylesheet"`). Counting tags with `rg` is a false positive.
+* Said production "only adds the `.min` infix". It also runs
+  `resources.PostProcess` and adds `integrity` to both links.
+* Recommended grepping the rendered `*.html` to ask whether CSS ships. That
+  matches the `class="..."` attribute in markup: `c-nav` is on the homepage with
+  **zero** matching CSS in anything that page loads.
 
-The earlier claim that a `css/` grep is vacuous "because the CSS ships inline"
-was wrong in both directions - it ships inline AND as a file, and dev vs
-production changes filenames, not delivery.
+The check that does answer it: parse the page, concatenate every `<style>` text
+with the contents of every `link[rel=stylesheet]` href, search that blob, and
+control it in both directions (`.c-content-block__text` -> 1,
+`.zzz-not-a-class` -> 0). Ruby trap found while building it:
+`String#scan` with a String argument matches literally, so `'\.c-nav'` hunts for
+a backslash - the known-present control read 0 until it was wrapped in
+`Regexp.new`.
 
 ## 2026-08-21 - test the instrument, not just the result
 

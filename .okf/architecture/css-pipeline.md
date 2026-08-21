@@ -32,31 +32,48 @@ gzip first-visit per page). Any size/perf claim must be validated on
 **compiled + gzip per-page payload**, never raw source line counts —
 see [css-maintainability-plan](/workflows/css-maintainability-plan.md).
 
-# Where the CSS actually lands: BOTH inline and a file
+# Where the CSS actually lands: both a `<style>` block and a linked file
 
-Two partials ship bundles, and a built page uses both. Measured on
-`_dest/public-test/index.html` (2026-08-21): 3 `<style>` tags AND 3
-`<link rel="stylesheet">`.
+Two partials ship bundles and a built page uses both. Counted with a parser on
+`_dest/public-test/index.html` (2026-08-21) - `rg` gets this wrong, see below:
 
-| Partial | Emits | Production-only difference |
+| Partial | Emits | What production adds |
 |---|---|---|
-| `partials/assets/css-inline.html` | `<style>{{ bundle }}</style>` | one `if hugo.IsProduction` branch, wrapping `\| minify` - nothing else |
-| `partials/assets/css-processor.html` | `<link rel=preload>` + `<link rel=stylesheet>` to `/css/<bundle>[.min].<hash>.css` | the `.min` infix |
+| `partials/assets/css-inline.html` | `<style>{{ bundle }}</style>` | `\| minify`, and nothing else |
+| `partials/assets/css-processor.html` | `<link rel=preload as=style>` + `<link rel=stylesheet>` → `/css/<bundle>[.min].<hash>.css` | `\| minify`, `resources.PostProcess`, and an `integrity` attribute on BOTH links (`fingerprint "sha256"` runs in dev too) |
 
-Consequences when you grep a built tree:
+On the homepage that resolves to 3 `<style>` elements of which only **2** are
+pipeline bundles (the third is 174 chars of hard-coded page CSS), and **2**
+`link[rel=stylesheet]` of which one is a `<noscript>` swiper-vendor fallback.
 
-- **`_dest/*/css/*.css` is a real population, not empty.** A class absent
-  there is genuinely absent from the file-served bundles. Control it before
-  believing a zero: a known-adopted class (`blog-eyebrow`) returns 13 files
-  through the same glob in `public-dev` - see the instrument rule in
-  [test-gates](/build/test-gates.md).
-- **But it is only HALF the shipped CSS.** Inline `<style>` content never
-  appears under `css/`, so a class can be live on the page and absent from
-  every file. To ask "does this ship at all", grep the rendered `*.html`.
-- **Dev vs production changes filenames, not delivery.** `public-dev` has
-  `about-us.<hash>.css`, `public-test` has `about-us.min.<hash>.css`. Re-running
-  a `css/` grep "against production" therefore proves nothing about inlining -
-  both trees inline the same way.
+# Answering "does this selector actually ship?"
+
+Neither naive grep works, and both fail in the confident direction:
+
+- **Grepping the rendered `*.html` for a class is a false positive.** It matches
+  the `class="..."` attribute in markup, which says nothing about CSS. Live
+  example: `c-nav` appears in the homepage markup with **zero** matching CSS
+  anywhere in what that page loads.
+- **Grepping `_dest/*/css/*.css` alone is a false negative.** That population is
+  real - a class absent there really is absent from the file-served bundles - but
+  inline `<style>` content never lands under `css/`, so it is only part of what
+  ships.
+- **Counting tags with `rg` over raw HTML is a false positive.** `rel="stylesheet"`
+  matches three times on the homepage: one real link, one inside `<noscript>`,
+  and one in the preload polyfill's JavaScript (`this.rel="stylesheet"`).
+
+The check that answers it: parse the page, concatenate every `<style>` text with
+the contents of every `link[rel=stylesheet]` href resolved against the build
+root, and search that blob. Control it in both directions before believing a
+zero - a selector you know the page paints (`.c-content-block__text` → 1) and one
+you know is absent (`.zzz-not-a-class` → 0). If the known-present one also
+returns 0, the instrument is broken, not the codebase; see the instrument rule in
+[test-gates](/build/test-gates.md).
+
+Ruby trap when writing that check: `String#scan(needle)` with a **String**
+argument matches literally, so `'\.c-nav'` hunts for a backslash. Wrap it -
+`blob.scan(Regexp.new(needle))` - or the control silently reads 0 for everything
+that contains an escape.
 
 # Token layer: `foundations/css-variables.css`
 
