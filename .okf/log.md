@@ -51,6 +51,101 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - the visual gate was blind by 50x, and green runs never refresh a baseline
+
+`DEFAULT_SCREENSHOT_CONFIG` tolerance 0.02 -> **0.0001**
+(`test/support/screenshot_section_config.rb:29`). On a 1920x1080 capture 0.02 means
+~41,472 pixels must differ before the assertion fails; a real one-cell copy
+change measures **0.0004 (844 px)** and passed silently. Measured run-to-run
+noise on a static page is **0.0**, so the floor only has to clear zero -
+acceptance was double-checked both ways: at 0.0001 the copy edit FAILS
+(0.000454) and goes green again when reverted.
+
+**Why passing quietly is worse than failing.** capybara-screenshot-diff writes
+the fresh capture over the baseline PNG, and on a PASS the runner restores the
+git-HEAD image back over it. The two compose into fossilization: a green run
+never refreshes a baseline, so every sub-tolerance change leaves the committed
+PNG showing the OLD render until something big enough to fail arrives and the
+accumulated drift is accepted in one unattributable lump. Corollary for
+re-recording: only a RED run leaves a committable candidate on disk. Deleting
+the PNG first does nothing - the base is read from git HEAD, not the file.
+
+**`SECTION_CONFIGS` was a no-op and is now a shield - do not delete it in this
+commit.** Its 7 keys all held 0.02, identical to the old default, so it did
+nothing for as long as it existed. Lowering the default INVERTED that: it now
+holds ~22 section screenshots at the old tolerance while their drift is
+unmeasured. Kept deliberately, with a comment saying so, and deleted by the
+follow-up that measures and re-records them.
+
+**A measurement error worth remembering: the default change and the shield
+deletion move DIFFERENT screenshots, and I conflated them.** The first pass
+deleted `SECTION_CONFIGS` in the same commit, measured `test_services` at 5
+failures vs 2, and reported the default change as costing +3 screenshots -
+contradicting an earlier +1 estimate and asserting the estimate had failed to
+reproduce. Re-measured three ways on the same test (7 screenshots compared):
+**0.02 → 2 failures, shipped config → 3, shield also deleted → 5.** The default
+change costs exactly **+1** (`services/_testimonials-header`, 0.005923); the
+other +2 (`services/_use-cases` 0.017498, `services/_technologies` 0.013838)
+are the shield deletion, and they are precisely the two whose names hit a
+SECTION_CONFIGS key - `/_technologies` matches `technologies`, while
+`/_testimonials-header` does NOT match `testimonials`. Two changes that look
+like one line plus one dead constant were never one measurement. The reds are
+the #540 dark-surface recolour - the macOS twin of the Linux list in the entry
+"PR #540 hands 16 stale Linux baselines to the parallel PR" - not machine drift
+and not caused by this change, and NOT re-recorded here.
+
+**Tolerance is the smaller blind spot; the bigger one is the fold.** Captures
+are viewport-only at scroll top (1920x1080 desktop, 360x800 mobile,
+`test/support/setup_capybara.rb:85-86`), so below-fold content is invisible at
+ANY tolerance - a table-cell edit measured difference_level exactly 0 on mobile
+even at tolerance 0. The tell is in every failure payload: `region` never
+exceeds the viewport height. Per-section screenshots scroll their section into
+view first, which is why the suite leans on them. Out of scope here.
+
+**The shield went from inert to safety-critical with zero coverage**, so the
+mapping moved to `test/support/screenshot_section_config.rb` and is pinned by
+`test/unit/screenshot_section_config_test.rb` (5 cases, no browser). It had to
+move: requiring `application_system_test_case.rb` from a unit test boots Hugo,
+Capybara AND that file's dirty-fixtures `abort` - a unit suite that dies when
+screenshots are dirty is worse than no test. The guard was verified by mutation
+(make `extract_section_key` split on `-` so `_testimonials-header` matches the
+`testimonials` shield → 1 failure; revert → 289 runs green). The dead
+`|| name.to_s.split("/").last` fallback went with it - unreachable, since
+`String#split.last` is nil only for `""`, where the fallback is nil too.
+
+**A third blind spot, tolerance-independent like the fold:**
+`perceptual_threshold = 2.0` (`test/support/setup_snap_diff.rb:25`) means vips
+only counts a pixel as differing above CIE dE00 2.0 from the baseline. A
+recolour staying under that contributes ZERO differing pixels and passes at ANY
+tolerance including 0 - which is precisely the palette/dark-surface work this
+repo keeps doing.
+
+**Live doctrine still taught the old world**, swept truthful per the
+canon-sweeps-the-instruction-layer rule:
+`20.02-screenshot-testing-workflow-tutorial.md` documented a
+`SCREENSHOT_TOLERANCE` env var that exists NOWHERE in the codebase (fiction
+predating this change, and it claimed a 1% default the code never had) plus a
+0.02 example; `visual-qa-criteria.md:120` pinned 0.02. Removed/corrected. The
+archived SCREENSHOT_GUARDIAN_PROTOCOL is left alone - it is an archive.
+Two MORE fictions surfaced in the same tutorial and were swept too:
+`assert_stable_problematic_screenshot` (a helper with its own documented
+section, defaults and three call sites - the real aliases are
+`assert_stable_screenshot` / `assert_cta_screenshot` / `assert_quick_screenshot`)
+and the per-OS "tolerance multiplier" table (0.8x/1.2x/1.3x). Neither matches
+anything in `test/`, `bin/` or `lib/`. **A doctrine file names its own
+mechanisms, so its fiction is executable-looking and gets copied** - the
+tutorial's fake helper had already propagated into three "recommendations"
+elsewhere in the same file.
+
+Concept updated: [build/test-gates.md](build/test-gates.md).
+
+**Known wart, identified and NOT fixed:** the two `FORCE_SCREENSHOT_UPDATE`
+readers disagree on what counts as set - `bin/qtest:209` skips its restore on
+any truthy value, `test/support/setup_snap_diff.rb:28` enters record mode only
+on the literal `"true"`. `=1` on qtest therefore gets the worst of both: the
+suite still compares and fails, and the cleanup is skipped. That is the
+mechanism behind the older "the flag appears to be ignored on qtest" note.
+
 ## 2026-08-21 - anatomy settled, register under test: the pilots flow
 
 Paul's PR-2 review ("looks like a blog, not a presentation") exposed that we

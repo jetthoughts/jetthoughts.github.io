@@ -10,6 +10,7 @@ require "puma"
 require "support/setup_capybara"
 require "support/setup_snap_diff"
 require "support/hugo_helpers"
+require "support/screenshot_section_config"
 
 # Every system-test run REWRITES the committed baseline PNGs in place
 # (snap_diff design: working tree = candidate, git HEAD = baseline). Starting
@@ -73,18 +74,7 @@ class ApplicationSystemTestCase < Minitest::Test
   include CapybaraScreenshotDiff::Minitest::Assertions
   include NavigationHelpers
 
-  # Ruby hash-based configuration for screenshot sections
-  SECTION_CONFIGS = {
-    "cta" => {tolerance: 0.02},
-    "cta-contact_us" => {tolerance: 0.02},
-    "clients" => {tolerance: 0.02},
-    "use-cases" => {tolerance: 0.02},
-    "technologies" => {tolerance: 0.02},
-    "testimonials" => {tolerance: 0.02},
-    "why-us" => {tolerance: 0.02}
-  }.freeze
-
-  DEFAULT_SCREENSHOT_CONFIG = {tolerance: 0.02}.freeze
+  include ScreenshotSectionConfig
 
   private
 
@@ -120,15 +110,6 @@ class ApplicationSystemTestCase < Minitest::Test
     Capybara.using_wait_time(0) do
       assert_matches_screenshot(name, **final_options)
     end
-  end
-
-  def screenshot_config_for(name)
-    section_key = extract_section_key(name)
-    SECTION_CONFIGS.fetch(section_key, DEFAULT_SCREENSHOT_CONFIG)
-  end
-
-  def extract_section_key(name)
-    name.to_s.split("/_").last || name.to_s.split("/").last
   end
 
   # Backward compatibility aliases - will be deprecated once all tests updated
