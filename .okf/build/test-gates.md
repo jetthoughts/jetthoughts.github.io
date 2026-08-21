@@ -261,22 +261,33 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   and check that one thing. "The suite is still green" is consistent with
   having changed nothing at all.
 
-- **Test the instrument, not just the result: ask what your command would
-  return if the claim were FALSE** (2026-08-21, two instances). A null change
-  does nothing and is at least silent about it. A wrong instrument RUNS,
-  returns a plausible number, and is believed.
+- **Test the instrument, not just the result: run it against a case where the
+  answer is KNOWN to differ** (2026-08-21). A null change does nothing and is
+  at least silent about it. A wrong instrument RUNS, returns a plausible
+  number, and gets believed.
 
-  | Command | Why it could not answer the question |
-  |---|---|
-  | `okf_validate .okf --strict \| grep -c 'warn'` | the summary line `✓ conformant (N warning(s))` matches too, so every total was one high - every count published on 2026-08-21 was inflated, including the ones inside an argument about not trusting written numbers |
-  | `grep -rc 'c-button--primary' _dest/public-dev/css/*.css` | `public-dev` is a DEV build with PurgeCSS disabled, and that CSS ships INLINE in the HTML - the command returns 0 whether or not the component is adopted |
+  The real instance: `okf_validate .okf --strict | grep -c 'warn'` also matches
+  the summary line `✓ conformant (89 warning(s))`, so it returns 90 - every
+  warning total published on 2026-08-21 was one high, including the totals
+  inside an argument about not trusting written numbers.
 
-  The second is the pure case: **it returns the same answer either way**, so it
-  carries no information at all, and it was quoted as proof. The check that
-  catches both takes one run - execute the command against a case where the
-  answer is known to differ (`grep -c '! warn'` against the record count; the
-  same grep against a PRODUCTION tree) and confirm the two disagree. If they
-  cannot disagree, you have a ritual, not a measurement.
+  **The check cuts both ways, and that is the point.** The same day, this file
+  nearly recorded a second instance: `grep -rc 'c-button--primary'
+  _dest/public-dev/css/*.css` returning 0, dismissed as vacuous on the theory
+  that the bundles ship inline via `partials/assets/css-inline.html` and never
+  land under `css/`. Running the positive control refuted that in one command -
+  `blog-eyebrow`, a class known to be adopted, returns **13 files** through the
+  exact same glob. The command can differ, so it is a valid instrument, and its
+  0 was a TRUE reading: `c-button` lives in 2 source files that reach 0 bundles.
+  The accusation was as unevidenced as the measurement it accused.
+
+  So the control is not "run it somewhere else" - re-running the c-button grep
+  against a production tree proves nothing, because `css-inline.html` inlines
+  the bundle in every environment and only adds `minify` under
+  `hugo.IsProduction`. The control is **a positive case through the identical
+  command**: a class, string, or file you already know is present. If the known
+  positive also returns nothing, the command is looking in the wrong place. If
+  it returns a count, the zero you got is real.
 
 - **An empty query result is not evidence of absence** (2026-08-21). Hunting a
   black band on `/services/`, `document.querySelectorAll('path.fl-shape')`

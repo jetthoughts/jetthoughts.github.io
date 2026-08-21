@@ -52,29 +52,27 @@ time, which is verifiable - never invented).
 
 ## 2026-08-21 - test the instrument, not just the result
 
-Recorded in [build/test-gates.md](build/test-gates.md) as its own rule, because
-it is distinct from the NULL CHANGE beside it: a null change does nothing and is
-at least silent about it, while a wrong instrument RUNS, returns a plausible
-number, and gets believed.
+Recorded in [build/test-gates.md](build/test-gates.md), distinct from the NULL
+CHANGE rule beside it: a null change does nothing and is at least silent about
+it, while a wrong instrument RUNS, returns a plausible number, and gets believed.
 
-Two instances tonight:
+The real instance: `okf_validate .okf --strict | grep -c 'warn'` also matches the
+summary line `✓ conformant (89 warning(s))`, returning 90 - every warning total
+published on 2026-08-21 was one high.
 
-* `okf_validate .okf --strict | grep -c 'warn'` also matches the summary line
-  `✓ conformant (N warning(s))`, so every total published on 2026-08-21 was one
-  high - including the ones inside an argument about not trusting written
-  numbers.
-* `grep -rc 'c-button--primary' _dest/public-dev/css/*.css` returns 0 whether or
-  not the component is adopted: `public-dev` is a DEV build with PurgeCSS
-  disabled, and that CSS ships INLINE in the HTML rather than under `css/`.
+**The rule caught its own draft.** A second instance was nearly recorded:
+`grep -rc 'c-button--primary' _dest/public-dev/css/*.css` returning 0, dismissed
+as vacuous on the theory that bundles ship inline and never land under `css/`.
+The positive control refuted it in one command - `blog-eyebrow`, a class known to
+be adopted, returns 13 files through the identical glob. The instrument is valid
+and its 0 was true (`c-button` sits in 2 source files that reach 0 bundles). The
+accusation was as unevidenced as the measurement it accused.
 
-The second is the pure case - **it cannot return a different answer**, so it
-carries no information, and it was quoted as proof. The test that catches both
-takes one run: execute the command against a case where the answer is KNOWN to
-differ and confirm the two disagree. If they cannot disagree, it is a ritual,
-not a measurement.
-
-This is "produce the check that would fail if the claim were false" turned on
-the check itself.
+The control is therefore NOT "run it somewhere else" - re-running that grep
+against a production tree proves nothing, since `css-inline.html` inlines the
+bundle in every environment and only adds `minify` under `hugo.IsProduction`
+(found by codex review of PR #536). The control is **a positive case through the
+identical command**.
 
 ## 2026-08-21 - stop recording warning totals; they cannot stay true
 
