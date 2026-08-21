@@ -51,6 +51,26 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - Phase 2.3 shipped: course module eyebrow, dual derivation
+
+The course lesson eyebrow ships with a detail worth keeping: **the module number
+has two sources and only six lessons carry the obvious one.** `module-N` tags
+exist on 6 lessons; the `N.N ·` title prefix exists on 25. The template derives
+from the tag first, then falls back to `findRESubmatch` on the title prefix -
+25 lessons render an eyebrow, spread Module 1-5, verified in the built output.
+Lessons with neither get none (correct - not everything belongs to a module).
+
+Canonical eyebrow spec confirmed portable: 12px/700/0.14em/uppercase/ruby
+measured EXACTLY in the browser (letter-spacing computes to 1.68px = 0.14em at
+12px), 5.13:1 on white - AA pass. The eyebrow sits in <header> OUTSIDE
+`.fl-rich-text`, so the course reading-scale selectors cannot reach it; that
+placement is load-bearing, not incidental.
+
+Model routing finalized (Paul, three refinements converging): critical
+decisions on fable, coding and code review on opus, mechanical/simple on
+sonnet; spawns never inherit the session model - pass `model` explicitly.
+Recorded in CLAUDE.md's 4-eyes bullet.
+
 ## 2026-08-21 - clean-slate pivot approved: v2 rail, dual-run, fully-open design
 
 Paul approved (plan mode) the revised strategy the same evening the two-lane
