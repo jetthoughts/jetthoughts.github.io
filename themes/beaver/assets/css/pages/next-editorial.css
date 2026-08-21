@@ -511,7 +511,10 @@ body {
   font-weight: 400;
 }
 
-.rr-td-muted {
+/* Scoped past `.rr-table tbody td` above, which scores 0,1,2 on its two tag
+   names and beats a bare `.rr-td-muted` at 0,1,0 - the "theirs" column then
+   renders in body ink and the comparison stops comparing. */
+.rr-table tbody .rr-td-muted {
   color: var(--ed-muted);
 }
 
