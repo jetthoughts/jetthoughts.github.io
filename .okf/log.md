@@ -56,7 +56,7 @@ Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). Eleven
 findings across five codex review rounds on PR #537, every one verified against
 the tree before acceptance. The count is the finding.
 
-**The mechanism** (unchallenged across all three rounds):
+**The mechanism** (unchallenged across all five rounds):
 `partials/assets/css-inline.html` emits `<style>`, production adding only
 `| minify`; `partials/assets/css-processor.html` emits preload + stylesheet links
 to `/css/<bundle>[.min].<hash>.css`, production adding `minify`,
