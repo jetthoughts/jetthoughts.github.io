@@ -51,6 +51,20 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - anatomy settled, register under test: the pilots flow
+
+Paul's PR-2 review ("looks like a blog, not a presentation") exposed that we
+styled article anatomy instead of designing a landing page - a design system
+is not a page design. His finished Claude Design artifact (`3dc819cf`)
+independently produced the same landing skeleton as the 20.05 spec and the
+external research sweep, so the anatomy question is closed and the register
+(palette/type/surface) is the only variable worth piloting. New concept:
+[landing-anatomy](design/landing-anatomy.md); research + 3-candidate shortlist:
+`docs/projects/2608-site-design-system/10-19-research/10.01-*.md`. Flow is now
+research -> 2-3 register pilots on /next/ (shared skeleton) -> lightning demo.
+Claims gate before styling: the CD artifact carries pricing/audit-promise/
+stay-stats NOT in canon - Paul approves or they come out.
+
 ## 2026-08-21 - PR-2 pilot: two CSS traps and a claims fix, from adversarial review
 
 The styled D1 pilot shipped through author -> verifier -> fixes. Three durable
