@@ -41,14 +41,94 @@ The date headings are a deliberate deviation. The spec's template is a bare
 bundle lands several thematic entries per day (12 on 2026-08-21), so bare
 dates would produce a dozen identical headings. **Do not collapse them
 casually** - the conformant shape is one dated heading per day with the themes
-as sub-sections beneath it, which is a restructure of the whole file, not a
-find-and-replace.
+as flat ENTRIES beneath it (bullets or bold labels; §9 wants a flat list, and
+nested `###` headings would escape the validator while still violating it),
+which is a restructure of the whole file, not a find-and-replace.
 
 **This is a known-red gate, not accepted noise, and it is tracked** in
 `docs/projects/2608-site-design-system/README.md` under Outstanding. Two jobs
 make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
+
+## 2026-08-21 - what okf_validate actually guards, and the two-spec trap
+
+Recorded in [build/test-gates.md](build/test-gates.md), where the gates live.
+The first draft put it in the bundle-root index; review moved it out - the root
+index is a reserved progressive-disclosure file, and a page of operational
+analysis there loads on every onboarding.
+
+**Which validator you run decides whether any of this is checked.** `CLAUDE.md`
+routes agents through `/okf:validate`, which runs the `okf@scaccogatto` plugin - a
+v0.1 checker with no `check_trust` at all, so under the documented workflow every
+generated/verified defect passes silently. The concept now carries the explicit
+v0.2 invocation with `--strict`, plus the fact that NEITHER exit code gates trust
+on this bundle - plain is error-only, and `--strict` is permanently red because
+the log-heading deviation always produces warnings, so the output has to be read,
+because the TRUST-FIELD material below describes that checker only. The
+error-only conformance caveat applies to BOTH: the v0.1 plugin also computes
+`conformant = not r.errors` and prints the checkmark with warnings outstanding.
+
+**That validator checks trust-field SHAPE, with two holes**: `check_instant`
+returns early on `None`, so a `verified` event with no `at` passes; and the
+`RFC3339` pattern makes time, seconds and timezone all optional, so
+`2026-08-21T05:30` and a bare date pass too. A green run is real evidence about
+shape, but cannot say an event HAS a time and can never say a recorded time is
+TRUE - which is what six review rounds on #538 were about, with no tool catching
+any of it.
+
+**`✓ conformant` is an ERROR-ONLY verdict.** v0.2 §11 has three conditions, and
+the third - reserved files following §8/§9 - surfaces as warnings only. This
+bundle proves it: the themed log headings warn on every entry and the checkmark
+still prints. Green and not §11-conformant simultaneously, both true.
+
+That heading style is a deliberate deviation this log already recorded, and the
+first draft of this entry contradicted it by calling the repair "mechanical".
+It is not: bare dates would stack a dozen identical headings on a busy day, so
+the conformant shape is one dated heading per day with the themes as flat
+ENTRIES beneath it - bullets or bold labels, since §9 wants a flat list. Nested
+`###` headings would escape the validator (it only inspects `##`) and still
+violate §9 -
+a whole-file restructure.
+
+**Two OKF specs, disagreeing section numbers.** The `/okf:okf` skill points at
+the plugin-cache v0.1 copy, which calls itself the source of truth and never
+defines `generated`/`verified`; `~/.agents/skills/okf/reference/SPEC.md` is v0.2
+and makes them first-class. §5.2 means "Relative links" in one and "Trust" in
+the other. This bundle is v0.2, so v0.2 governs. That cost two confident wrong
+rejections of a correct finding on #538, plus a §9/§11 slip - v0.1 §9 was
+conformance, v0.2 §9 is log structure.
+
+A stamping bug worth its own line: updating this concept with
+`gsub(old_time, new_time)` rewrote the previous `verified` EVENT along with
+`generated.at` and `timestamp`, deleting a real verification. A global replace
+cannot tell which occurrences are the same fact. Append the new event, edit
+`generated.at`/`timestamp` in place, and READ the whole `verified` block in the
+diff before committing.
+
+That last instruction started as a grep and went through four corrections -
+unscoped (flagging every legitimate stamp), wrong base (`origin/master` instead
+of the merge base), and blind to the block form `- by:` / `at:` that
+`ci-gates.md` uses. It is deleted rather than patched a fifth time, per the
+delete-dont-patch rule in the same concept. Reading the block has none of those
+holes, and the rule caught its own instrument for the second time in this PR
+chain.
+
+Three review rounds on this entry were spent on the SAME defect: the concept was
+corrected and its log mirror was not. Plugin-route scope, the log-repair shape,
+and a rationale left dangling after its command was deleted - each fixed in
+`build/test-gates.md` and each left stale here. A concept and its log entry are
+two files saying the same thing, so every correction is two edits, and the one
+that gets forgotten is the one nobody is looking at. The existing
+"sweep a corrected metric through the canonical summaries" rule in
+[workflows/review-swarm.md](workflows/review-swarm.md) covers this; the
+concept/log pair is its most frequent instance.
+
+No counts appear above. Three drafts of this entry hard-coded one - warning
+totals, then a `git log -S` result, then "69 of 87 headings" - and each was
+stale within the same PR, because the commits fixing the entry changed the thing
+the entry counted. The rule was already in
+[build/test-gates.md](build/test-gates.md) before any of those drafts.
 
 ## 2026-08-21 - what survives adversarial review, and when to stop patching
 

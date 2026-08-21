@@ -4,8 +4,13 @@ title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
 status: stable
-generated: { by: claude/opus-5, at: 2026-08-21T05:33:58Z }
+generated: { by: claude/opus-5, at: 2026-08-21T06:44:05Z }
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T06:44:05Z }
+  - { by: claude/opus-5, at: 2026-08-21T06:36:48Z }
+  - { by: claude/opus-5, at: 2026-08-21T06:27:54Z }
+  - { by: claude/opus-5, at: 2026-08-21T06:15:51Z }
+  - { by: claude/opus-5, at: 2026-08-21T06:04:00Z }
   - { by: claude/opus-5, at: 2026-08-21T05:33:58Z }
   - { by: claude/opus-5, at: 2026-08-21T04:01:38Z }
   - { by: claude/opus-5, at: 2026-08-21T03:27:09Z }
@@ -14,7 +19,7 @@ verified:
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
   - { by: claude/opus-5, at: 2026-08-20T21:43:35Z }
   - { by: claude/opus-5, at: 2026-08-20T21:47:30Z }
-timestamp: 2026-08-21T05:33:58Z
+timestamp: 2026-08-21T06:44:05Z
 ---
 
 # The suites
@@ -297,6 +302,19 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
     then grep; same reason `marketing_copy_test` misses banned phrases split
     across two template lines.
 
+    Caveat on that flattened form, found 2026-08-21 while using it: the result is
+    ONE line, so `grep -c` - which counts matching LINES - can only ever return 0
+    or 1. A control expecting "2 occurrences" silently reads 1 and looks like a
+    failed edit. Use `grep -o PATTERN file | wc -l` for counts, and keep `grep -c`
+    for present/absent only.
+
+    The two fixes COMPOSE and must be applied together: `grep -o` on the raw file
+    still misses a wrapped phrase, and `grep -c` on the flattened file still caps
+    at 1. Counting occurrences of possibly-wrapped text needs
+    `tr '\n' ' ' < file | tr -s ' ' | grep -o PATTERN | wc -l` - piped, so it
+    leaves no throwaway file behind and cannot clobber one that already exists.
+    Each fix was applied alone first, and each alone still read 1.
+
 A third instance, 2026-08-21: two identical `verified` entries looked like a
 duplication artifact, and `git log -S <timestamp>` returned exactly ONE
 commit - read as proof one commit emitted both. `-S` selects every commit that
@@ -309,6 +327,19 @@ two DISTINCT entries that a timestamp-repair commit had normalised, so the
 "duplicate" was a real verification and deleting it destroyed provenance.
 Positive control that would have caught it in one command: read the file at
 the parent commit.
+
+A fourth, 2026-08-21, and the cheapest to avoid: stamping a concept with
+`gsub(old_time, new_time)` rewrote the previous `verified` EVENT as well as
+`generated.at` and `timestamp`, silently deleting a real verification. A global
+replace does not know which occurrences are the same fact. Append the new event,
+edit `generated.at`/`timestamp` in place, and READ the whole `verified` block in
+the diff before committing - no `-` line should touch an event you did not mean
+to remove.
+
+That instruction replaces a grep this file carried through four corrections
+(unscoped, then wrong base, then blind to the block form `- by:` / `at:` that
+`ci-gates.md` actually uses). Per the delete-dont-patch rule above, the check is
+gone rather than patched a fifth time: reading the block has none of those holes.
 
 - **An empty query result is not evidence of absence** (2026-08-21). Hunting a
   black band on `/services/`, `document.querySelectorAll('path.fl-shape')`
@@ -454,3 +485,77 @@ the parent commit.
 - Running a suite with multiple files - `ruby a_test.rb b_test.rb` - silently
   executes only the FIRST file. A guard test covers this (2026-07-31, R3-1);
   use rake tasks or `-n` filters, never a multi-file ruby invocation.
+
+# What `okf_validate` actually guards
+
+**First: which validator you run decides whether ANY of this is checked.**
+`CLAUDE.md` routes agents through `/okf:validate`, which runs the installed
+`okf@scaccogatto` plugin - a **v0.1** checker with no `check_trust` at all. Under
+the documented workflow every `generated`/`verified` defect passes silently. To
+actually check the trust family, invoke the v0.2 checker by path:
+
+```bash
+uv run ~/.agents/skills/validate/scripts/okf_validate.py .okf --strict
+```
+
+**Neither exit code is a usable trust gate on this bundle, so READ THE OUTPUT.**
+Without `--strict` the exit code is error-only, and trust defects are warnings.
+With `--strict` it exits 1 on ANY warning - and this bundle always carries some
+(the log-heading deviation below guarantees it), so strict is permanently red
+here and says nothing specific. Grep the output for `§5.2` to see the trust
+findings.
+
+The TRUST-FIELD paragraphs below describe THAT validator only - run the plugin
+route and none of them apply. The error-only conformance behaviour further down
+applies to BOTH checkers: each warns on malformed log headings and computes its
+checkmark from errors alone.
+
+**It checks trust-field SHAPE, and a missing `at` slips through.** The v0.2
+`check_trust` requires `generated` to be a mapping, requires `generated.by`,
+validates actor shapes, and shape-checks instants - and `--strict` turns every
+one of those warnings into a failure. Two holes worth knowing:
+
+- `check_instant` returns early on `None`, so `verified: [{ by: claude/opus-5 }]`
+  with no `at` passes.
+- The `RFC3339` pattern makes the time, the seconds AND the timezone optional, so
+  `2026-08-21T05:30` and a bare `2026-08-21` both pass.
+
+So a green run is real evidence about shape - do not dismiss it - but it cannot
+tell you an event HAS a time, and it can never tell you a recorded time is TRUE.
+Six review rounds on PR #538 turned on exactly that and no tool caught any of it.
+
+**`✓ conformant` is an ERROR-ONLY verdict, not a §11 verdict.** v0.2 §11 has
+three conditions: parseable frontmatter on every non-reserved `.md`, a non-empty
+`type` in every block, and reserved files (`index.md`, `log.md`) following §8 and
+§9. The third surfaces as WARNINGS - `check_log` warns and never errors - and
+conformance is computed from errors alone.
+
+This bundle is a live example: its `log.md` uses themed date headings
+(`## 2026-08-21 - <theme>`) where §9 wants a bare `## YYYY-MM-DD`, so the
+validator warns on each and still prints the checkmark. **Green and not
+§11-conformant at the same time, both true.** Every `okf_validate ... exit=0`
+quoted in this repo means "no errors".
+
+That heading style is a DELIBERATE deviation already recorded in
+[log.md](/log.md) (2026-08-21): the bundle lands several thematic entries per
+day, and bare dates would produce a stack of identical headings. The conformant
+repair is one dated heading per day with the themes as ENTRIES beneath it - bold
+labels or list items, since §9 wants a flat list of date-grouped entries. Nested
+`###` headings would look warning-free (the validator only inspects `##`) while
+still violating §9. Either way it is a restructure of the whole file, not a
+find-and-replace. Do not sweep it casually.
+
+**Two OKF specs live on this machine and their section numbers disagree.** The
+`/okf:okf` skill ships and points at
+`.claude/plugins/cache/.../skills/okf/reference/SPEC.md`, which is **v0.1**,
+calls itself "the source of truth", never defines `generated` or `verified`, and
+numbers §5.2 as "Relative links". The v0.2 spec at
+`~/.agents/skills/okf/reference/SPEC.md` makes provenance, trust, lifecycle and
+attestation first-class and numbers §5.2 as "Trust: `generated` and `verified`".
+**This bundle is `okf_version: "0.2"`, so the v0.2 copy governs.** Only the v0.2
+validator checks the trust family and the §13.1 `sources` convention.
+
+That mismatch cost two confident wrong rejections of a correct review finding on
+#538 - §5.2 looked up in the v0.1 copy, twice - and a §9/§11 slip, since v0.1 §9
+was conformance while v0.2 §9 is log structure. When a spec section is cited,
+resolve WHICH copy before disputing it.
