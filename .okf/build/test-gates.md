@@ -703,3 +703,14 @@ That mismatch cost two confident wrong rejections of a correct review finding on
 #538 - §5.2 looked up in the v0.1 copy, twice - and a §9/§11 slip, since v0.1 §9
 was conformance while v0.2 §9 is log structure. When a spec section is cited,
 resolve WHICH copy before disputing it.
+
+## Verifying production builds locally
+
+A plain production build hard-codes absolute asset URLs at the live domain, so
+a browser pointed at the local tree **silently loads the LIVE site's
+stylesheet** - every computed-style check then measures the wrong CSS and
+passes or fails meaninglessly. Build with `BASE_URL` set to the local origin
+and confirm the page loads its own fingerprinted `.min.<hash>.css` before
+trusting any computed value (caught 2026-08-21 during the pilot column-fix
+verification; the earlier "inconclusive" production check had exactly this
+cause).
