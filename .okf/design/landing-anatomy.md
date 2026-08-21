@@ -68,12 +68,35 @@ with the "found nothing" assertion inside the shared helper so no caller can
 iterate zero pages and report green. Widen these when adding a pilot, and prove
 it by breaking the new pilot's copy and watching the failure name that file.
 
+**A class the shared template hands you can be silently outranked by your own
+tag-scoped default.** `landing.html` marks the comparison's "theirs" column
+`.rr-td-muted` (0,1,0), but a register that sets `.rr-table tbody td` (0,1,2)
+for its body colour beats it, and the column renders in full ink - the
+comparison stops comparing while the CSS still READS correct. Found in pilot C
+by walking computed colours (`oursColor !== theirsColor` per row); the same
+shape is live in `next-editorial.css`, so pilot B's muted column is its body
+tone. Scope the override past the default (`.rr-table tbody .rr-td-muted`).
+Applies to every class the template supplies: assert the computed value, never
+the declaration.
+
+**The accent does not always die on the inverted band - measure YOUR cut.**
+Pilot B's deep red is 2.31:1 on ink and had to invert to paper. The standard
+ruby `#cc342d` is 3.46:1 on `#18181b`: still under the 4.5:1 text floor, but
+over the 3:1 a filled button's edge needs, with white on ruby at 5.13:1
+inside it - so pilot C's closing CTA stays ruby. The rule is "no accent TEXT
+on ink", not "no accent on ink". A register drawn in hairlines must also step
+its structural rules up when the ground inverts (`#71717a`, 3.67:1) or the
+geometry that IS the design dissolves.
+
 **Self-hosted faces: one file per REGISTER when a register needs several.**
 The stub's `font:` key carries one stylesheet and one preload, so a three-family
 register ships `static/css/fonts-<register>.css` rather than three
 `fonts-<family>.css` files and an edited shared template. Variable families
 serve every declared weight from ONE latin binary, which is why two
-`@font-face` rules can point at the same URL.
+`@font-face` rules can point at the same URL. A register-keyed stylesheet may
+also point at a binary ANOTHER register already shipped - pilot C declares its
+own JetBrains Mono face against pilot B's `/fonts/jetbrains-mono-latin.woff2`
+rather than committing a second copy of the same bytes.
 
 Ship only the weights the artifact actually uses - then **walk computed
 `font-weight` in the rendered page**, because a declaration grep cannot see

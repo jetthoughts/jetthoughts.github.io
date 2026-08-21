@@ -354,6 +354,17 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "next/editorial"
   end
 
+  # Design-register pilot C, "Engineered Precision" - same assertions again,
+  # for the same reason. Three skins, one anatomy, one set of words.
+  def test_next_precision
+    visit "/next/pilots/precision/fractional-cto/"
+
+    assert_text "A technical partner in days, not months of hiring"
+    assert_text "#{Time.now.year - 2008}+"
+
+    assert_stable_screenshot "next/precision"
+  end
+
   def test_free_consultation
     visit "/"
 

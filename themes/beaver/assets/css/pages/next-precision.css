@@ -1,0 +1,1000 @@
+/* next-precision — register pilot C, "Engineered Precision".
+ *
+ * Loaded ONLY by layouts/next/landing.html for pages with
+ * `register: precision`, and it is the page's ONLY stylesheet: no style.css,
+ * no navigation.css, no footer.css, not even foundations/css-variables.css.
+ * A register pilot has to be judged on its own surface, so nothing from the
+ * legacy cascade may leak in.
+ *
+ * The register is the 2026 premium-precision column of the 10.01 research
+ * ("precise, engineered, nothing hidden"), not a translation of a Claude
+ * Design artifact - pilots A and B each had one, this one is built from the
+ * spec: white #fff and near-white #fafafa panels, cool structural 1px borders
+ * (#e4e4e7 hairline, #d4d4d8 where a division is load-bearing), zero radius,
+ * cool ink #18181b. The BORDERS are the design: cells butt against each other
+ * and a 1px rule does the dividing, so the page reads as one white sheet
+ * ruled into a grid rather than as blocks of tinted background.
+ *
+ * Ruby is the standard #cc342d and it is RESTRAINED to four jobs on the whole
+ * page - the eyebrow marker, the comparison table's active-column rule, the
+ * step marker, and the filled primary CTA. It never washes a surface and
+ * never tints one.
+ *
+ * Inter (400/500/600/700) for everything that is prose, JetBrains Mono (400
+ * ONLY) for every label, numeral readout and button; both self-hosted from
+ * /css/fonts-precision.css. Every rule that sets --pr-mono also PINS
+ * font-weight: 400, because the face ships one weight and Chrome synthesizes
+ * a bold from any inherited 500/600/700 (the defect review caught in pilot B).
+ *
+ * The class names are the `rr-` set layouts/next/landing.html emits for every
+ * register (they were named for pilot A). The prefix is shared skeleton
+ * vocabulary here, not a rescue-room reference.
+ *
+ * CONTRAST: every text/background pair computes >= 4.5:1, on paper and on the
+ * ink band. Unlike pilot B's palette the accent survives the inversion -
+ * #cc342d on #18181b is 3.46:1, too low for text but over the 3:1 a filled
+ * button's edge needs, and white on #cc342d is 5.13:1 - so the closing CTA
+ * stays ruby here instead of inverting to paper. Structural hairlines on the
+ * ink band step up to #71717a (3.67:1 against the band) rather than a
+ * translucent white, because a register whose design IS its geometry cannot
+ * let the geometry dissolve when the ground goes dark.
+ */
+
+:root {
+  --pr-white: #fff;
+  --pr-panel: #fafafa;
+  --pr-line: #e4e4e7;
+  --pr-line-strong: #d4d4d8;
+  --pr-edge: #71717a;
+  --pr-ink: #18181b;
+  --pr-body: #3f3f46;
+  --pr-muted: #71717a;
+  --pr-ruby: #cc342d;
+  --pr-ruby-hover: #a92a24;
+  --pr-band-ink: #18181b;
+  --pr-ink-text: #fafafa;
+  --pr-ink-body: #d4d4d8;
+  --pr-ink-muted: #a1a1aa;
+  --pr-sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --pr-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --pr-shell: 1200px;
+  --pr-gutter: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--pr-white);
+  color: var(--pr-body);
+  font-family: var(--pr-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Kept from navigation.css rather than pulled in with it: baseof's skip link
+   is invisible only because of .sr-only, and shipping the rail without it is
+   how a visible "Skip to main content" reached production in 2026-07. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  clip: auto;
+  clip-path: none;
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--pr-ink);
+  color: var(--pr-white);
+}
+
+/* :where() keeps the base link at zero specificity so the .rr-btn anchors and
+   the label links below win on their own single class, not on source order
+   (PR-2). */
+:where(a) {
+  color: var(--pr-ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+:where(a):hover {
+  color: var(--pr-ruby);
+}
+
+.rr-container {
+  max-width: var(--pr-shell);
+  margin: 0 auto;
+  padding: 0 var(--pr-gutter);
+}
+
+/* ---- Type scale ---------------------------------------------------- */
+
+.rr-h1,
+.rr-h2,
+.rr-card-title,
+.rr-step-title {
+  color: var(--pr-ink);
+  margin: 0;
+}
+
+/* Tight tracking is the whole point of a neo-grotesque display line: at
+   -0.035em the headline sets as one dense block rather than a row of words. */
+.rr-h1 {
+  font-size: clamp(2.25rem, 4.4vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  margin-bottom: 24px;
+  text-wrap: balance;
+}
+
+.rr-h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2.125rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.rr-h2-narrow {
+  max-width: 24ch;
+}
+
+.rr-card-title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+/* Every label on the page is mono 400, uppercase and widely tracked, in the
+   muted grey - NOT in the accent (that is pilot B's device). The accent shows
+   up as a 6px square ahead of it: the smallest mark that still reads as a
+   deliberate marker rather than decoration. */
+.rr-eyebrow {
+  font-family: var(--pr-mono);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pr-muted);
+  margin: 0 0 20px;
+}
+
+.rr-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--pr-ruby);
+  margin-right: 10px;
+  vertical-align: 0.05em;
+}
+
+.rr-lede {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--pr-body);
+  margin: 0;
+  max-width: 58ch;
+  text-wrap: pretty;
+}
+
+/* ---- Buttons ------------------------------------------------------- */
+
+.rr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--pr-mono);
+  /* Pinned: the face ships 400 only and the nav row sets 500 on its links. */
+  font-weight: 400;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  /* Transparent border so filled and outlined cuts match in height; no radius
+     anywhere - the register is drawn entirely with square rules. */
+  border: 1px solid transparent;
+  border-radius: 0;
+  text-decoration: none;
+}
+
+.rr-btn-primary,
+.rr-btn-primary:hover {
+  background: var(--pr-ruby);
+  color: var(--pr-white);
+}
+
+.rr-btn-primary:hover {
+  background: var(--pr-ruby-hover);
+}
+
+/* A hairline outline, not pilot B's near-black one: #71717a is 4.83:1 against
+   paper, so the button's own edge clears 1.4.11 while staying a cool grey
+   rule rather than a heavy frame. */
+.rr-btn-ghost,
+.rr-btn-ghost:hover {
+  background: transparent;
+  color: var(--pr-ink);
+  border: 1px solid var(--pr-edge);
+}
+
+.rr-btn-ghost:hover {
+  border-color: var(--pr-ink);
+}
+
+/* ---- Nav ----------------------------------------------------------- */
+
+.rr-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: var(--pr-shell);
+  margin: 0 auto;
+  padding: 20px var(--pr-gutter);
+  border-bottom: 1px solid var(--pr-line);
+}
+
+.rr-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  letter-spacing: -0.02em;
+  color: var(--pr-ink);
+  text-decoration: none;
+}
+
+/* An outlined hairline box, not a solid block: the mark is drawn with the
+   same 1px rule as every other division on the page. */
+.rr-brand-mark {
+  border: 1px solid var(--pr-ink);
+  color: var(--pr-ink);
+  font-family: var(--pr-mono);
+  /* Would be synthesized from .rr-brand's 600 without this. */
+  font-weight: 400;
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  padding: 3px 6px;
+}
+
+.rr-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Sentence case, not the uppercase mono of the other pilots' nav: the modern
+   technical register keeps navigation quiet and spends its uppercase on
+   labels. :where() flattens this to zero specificity so the .rr-btn-ghost CTA
+   in the same row keeps its own colour and border - a bare `.rr-nav-links a`
+   scores 0,1,1 and silently outranks every single-class button component
+   inside it (the PR-2 defect). */
+:where(.rr-nav-links a) {
+  color: var(--pr-body);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+:where(.rr-nav-links a:hover) {
+  color: var(--pr-ink);
+}
+
+.rr-nav-links .rr-btn {
+  font-size: 0.625rem;
+  padding: 10px 18px;
+}
+
+/* ---- Hero ---------------------------------------------------------- */
+
+/* Two grid cells butted against a single vertical rule, rather than two
+   floated blocks with a gap: the division IS the drawing. Both cells stretch,
+   so the panel's ground runs the full height of the copy beside it. */
+.rr-hero {
+  max-width: var(--pr-shell);
+  margin: 0 auto;
+  padding: 0 var(--pr-gutter);
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  border-bottom: 1px solid var(--pr-line);
+}
+
+.rr-hero-copy {
+  padding: 88px 56px 88px 0;
+  min-width: 0;
+}
+
+.rr-hero .rr-lede {
+  margin-bottom: 36px;
+}
+
+.rr-cta-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.rr-derisk {
+  font-size: 0.875rem;
+  color: var(--pr-muted);
+  margin: 18px 0 26px;
+}
+
+/* The proof strip sets like an instrument legend: mono, tracked, divided by
+   the same 1px rule as everything else. */
+.rr-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: var(--pr-mono);
+  font-weight: 400;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pr-muted);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rr-strip li + li {
+  border-left: 1px solid var(--pr-line);
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+/* <strong> would be synthesized: the mono face ships 400 only. */
+.rr-strip strong {
+  color: var(--pr-ink);
+  font-weight: 400;
+}
+
+/* The Clutch rating is a link (claims-canon wants the profile reachable) but
+   it is one item in a quiet proof strip, not a call to action - a second
+   colour on half the phrase reads as broken styling. */
+.rr-strip :where(a) {
+  color: inherit;
+}
+
+.rr-strip :where(a):hover {
+  color: var(--pr-ink);
+}
+
+/* ---- Cards --------------------------------------------------------- */
+
+.rr-card {
+  background: var(--pr-white);
+  border: 1px solid var(--pr-line);
+  padding: 36px;
+}
+
+/* Not a card floating in the hero - the hero's second cell. Its left edge is
+   the strong rule that splits the fold, and its ground is the register's
+   near-white panel. */
+.rr-month-one {
+  background: var(--pr-panel);
+  border: 0;
+  border-left: 1px solid var(--pr-line-strong);
+  padding: 88px 56px;
+  min-width: 0;
+}
+
+/* A ruled header row, the way a spec sheet titles a block. */
+.rr-month-one .rr-card-title {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--pr-line-strong);
+}
+
+.rr-bullets {
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--pr-body);
+}
+
+/* A 1px dash, not a disc or a filled square: the marker is drawn with the
+   page's own rule weight. */
+.rr-bullets li {
+  position: relative;
+  padding-left: 26px;
+}
+
+.rr-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 12px;
+  height: 1px;
+  background: var(--pr-edge);
+}
+
+/* ---- Bands --------------------------------------------------------- */
+
+.rr-band {
+  padding: 88px 0;
+  border-bottom: 1px solid var(--pr-line);
+}
+
+/* The alternation is a whisper - #fafafa against #fff - so the page reads as
+   one continuous sheet ruled into sections, not as stacked coloured blocks. */
+.rr-band-paper,
+.rr-band-sand {
+  background: var(--pr-panel);
+}
+
+.rr-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.rr-split-center {
+  align-items: flex-start;
+}
+
+.rr-split-copy {
+  flex: 0 1 320px;
+  min-width: 0;
+}
+
+.rr-split-copy .rr-h2 {
+  margin-bottom: 16px;
+  max-width: 18ch;
+}
+
+.rr-split-copy .rr-lede {
+  font-size: 0.9375rem;
+  max-width: 38ch;
+}
+
+/* ---- Comparison table ---------------------------------------------- */
+
+.rr-band-paper .rr-h2 {
+  margin-bottom: 36px;
+}
+
+.rr-table-wrap {
+  background: var(--pr-white);
+  border: 1px solid var(--pr-line-strong);
+  overflow-x: auto;
+}
+
+.rr-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  min-width: 680px;
+  font-variant-numeric: tabular-nums;
+}
+
+.rr-table th,
+.rr-table td {
+  text-align: left;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--pr-line);
+}
+
+/* Ruled in both directions - a spec sheet, not a list. */
+.rr-table tr > * + * {
+  border-left: 1px solid var(--pr-line);
+}
+
+.rr-table tbody tr:last-child th,
+.rr-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.rr-table thead th {
+  font-family: var(--pr-mono);
+  font-weight: 400;
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pr-muted);
+  /* Transparent on the other two so the accent rule below does not change the
+     header row's height. */
+  border-top: 2px solid transparent;
+  border-bottom: 1px solid var(--pr-ink);
+}
+
+/* By position, not by class: Hugo 0.165 writeStats records no class attrs on
+   <th>, so a .rr-th-* selector is absent from hugo_stats.json and PurgeCSS
+   strips it from the production bundle. The visual gate cannot catch that -
+   baseline and candidate are both built purged. */
+.rr-table thead th:nth-child(2) {
+  color: var(--pr-ink);
+  border-top: 2px solid var(--pr-ruby);
+}
+
+/* Parameter names in the label column, values in prose beside them. */
+.rr-table tbody th {
+  font-family: var(--pr-mono);
+  font-weight: 400;
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pr-body);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.rr-table tbody td {
+  color: var(--pr-ink);
+  font-weight: 400;
+}
+
+/* Scoped past `.rr-table tbody td` above, which scores 0,1,2 on its two tag
+   names and beats a bare `.rr-td-muted` at 0,1,0 - the "theirs" column then
+   renders in full ink and the comparison stops comparing. Caught by reading
+   the computed colour in the browser; the rule LOOKS applied in source. */
+.rr-table tbody .rr-td-muted {
+  color: var(--pr-muted);
+}
+
+/* ---- Timeline ------------------------------------------------------ */
+
+.rr-steps {
+  flex: 1 1 480px;
+  min-width: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--pr-line);
+}
+
+/* A numbered protocol: a fixed numeral gutter divided from the body by a
+   rule that runs the full height of the row, meeting the rule under it. No
+   chips, no connectors. The row's padding lives on the cells rather than on
+   the <li> so the two rules actually touch. */
+.rr-steps li {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  border-bottom: 1px solid var(--pr-line);
+}
+
+.rr-step-num {
+  grid-row: 1 / span 2;
+  align-self: stretch;
+  padding: 26px 24px 26px 0;
+  border-right: 1px solid var(--pr-line);
+  font-family: var(--pr-mono);
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--pr-ruby);
+  font-variant-numeric: tabular-nums;
+}
+
+/* The template renders a bare 1-4; the leading zero is the protocol's, and it
+   is CSS because the numeral belongs to this register, not to the shared
+   anatomy. Correct while a protocol has fewer than ten steps - this one has
+   four, and a fifth would still read 05. */
+.rr-step-num::before {
+  content: "0";
+}
+
+.rr-step-title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  padding: 26px 0 8px 24px;
+}
+
+.rr-steps p {
+  margin: 0;
+  padding: 0 0 26px 24px;
+  font-size: 0.9375rem;
+  color: var(--pr-body);
+}
+
+/* ---- Clients ------------------------------------------------------- */
+
+.rr-clients-head {
+  display: grid;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Instrument readouts: butted cells sharing single 1px rules, drawn by a 1px
+   grid gap over a line-coloured ground rather than by per-cell borders that
+   would double up where they meet. */
+.rr-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--pr-line-strong);
+  border: 1px solid var(--pr-line-strong);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rr-stats li {
+  background: var(--pr-white);
+  padding: 22px 24px;
+}
+
+.rr-stat-value {
+  display: block;
+  font-family: var(--pr-mono);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--pr-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.rr-stat-label {
+  display: block;
+  font-family: var(--pr-mono);
+  font-weight: 400;
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: var(--pr-muted);
+  max-width: 22ch;
+  margin-top: 10px;
+}
+
+.rr-cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--pr-line-strong);
+  border: 1px solid var(--pr-line-strong);
+}
+
+/* Cells in that grid, so the borders they appear to carry are the shared
+   rules between them. */
+.rr-case {
+  background: var(--pr-white);
+  border: 0;
+  padding: 32px;
+}
+
+.rr-case p {
+  margin: 10px 0 20px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--pr-body);
+}
+
+/* Filled hairline-less chips on the panel tone, so the card's only rules are
+   the ones the grid draws. */
+.rr-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.rr-pills li {
+  background: var(--pr-panel);
+  padding: 4px 8px;
+  font-family: var(--pr-mono);
+  font-weight: 400;
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pr-muted);
+}
+
+/* Ink, not accent: the accent has four jobs on this page and a card link is
+   not one of them. */
+.rr-case-link {
+  display: inline-block;
+  font-family: var(--pr-mono);
+  font-weight: 400;
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pr-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--pr-line-strong);
+  padding-bottom: 5px;
+}
+
+.rr-case-link:hover {
+  color: var(--pr-ruby);
+  border-bottom-color: var(--pr-ruby);
+}
+
+/* ---- Testimonial + closing band ------------------------------------ */
+
+/* The ground inverts; the geometry does not. Hairlines step up to #71717a
+   (3.67:1 on the band) so the grid stays visible, and the accent survives as
+   the filled CTA - #cc342d is 3.46:1 against this ground, under the 4.5:1
+   text needs but over the 3:1 a button edge needs, with white on ruby at
+   5.13:1 inside it. */
+.rr-band-ink {
+  background: var(--pr-band-ink);
+  color: var(--pr-ink-text);
+  border-bottom: 0;
+}
+
+.rr-quote-col {
+  flex: 1.3 1 440px;
+  min-width: 0;
+}
+
+.rr-eyebrow-ink {
+  color: var(--pr-ink-muted);
+}
+
+.rr-quote {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--pr-ink-text);
+  max-width: 34ch;
+  text-wrap: pretty;
+}
+
+.rr-attrib {
+  margin: 26px 0 0;
+  font-family: var(--pr-mono);
+  font-weight: 400;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  color: var(--pr-ink-muted);
+}
+
+.rr-attrib a {
+  color: var(--pr-ink-muted);
+}
+
+.rr-attrib a:hover {
+  color: var(--pr-ink-text);
+}
+
+.rr-strip-ink {
+  color: var(--pr-ink-muted);
+  margin-top: 30px;
+}
+
+.rr-strip-ink li + li {
+  border-left-color: var(--pr-edge);
+}
+
+.rr-strip-ink strong {
+  color: var(--pr-ink-text);
+}
+
+/* colour inherits from .rr-strip :where(a) above; only the hover differs */
+.rr-strip-ink a:hover {
+  color: var(--pr-ink-text);
+}
+
+/* The closing panel is the band's ground inside a visible rule - a filled
+   card would be a second dark tone doing what one hairline already does. */
+.rr-card-ink {
+  flex: 1 1 320px;
+  min-width: 0;
+  background: transparent;
+  border: 1px solid var(--pr-edge);
+  padding: 36px;
+}
+
+.rr-card-ink .rr-card-title {
+  color: var(--pr-ink-text);
+  margin-bottom: 12px;
+}
+
+.rr-card-body {
+  font-size: 0.9375rem;
+  color: var(--pr-ink-body);
+  margin: 0 0 26px;
+}
+
+/* ---- Footer -------------------------------------------------------- */
+
+.rr-footer {
+  background: var(--pr-white);
+  border-top: 1px solid var(--pr-line);
+  padding: 56px 0 28px;
+}
+
+.rr-footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px;
+}
+
+.rr-footer-head {
+  font-family: var(--pr-mono);
+  font-weight: 400;
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pr-muted);
+  margin: 0 0 18px;
+}
+
+.rr-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.rr-footer a {
+  color: var(--pr-body);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.rr-footer a:hover {
+  color: var(--pr-ink);
+}
+
+.rr-footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: center;
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid var(--pr-line);
+  font-family: var(--pr-mono);
+  font-weight: 400;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  color: var(--pr-muted);
+}
+
+.rr-footer-legal a {
+  font-size: inherit;
+  color: var(--pr-muted);
+}
+
+/* ---- Narrow viewports ---------------------------------------------- */
+
+/* The hero's two cells stack before the copy column gets too narrow to hold
+   the headline; the vertical rule becomes the horizontal one. */
+@media (width <= 900px) {
+  .rr-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rr-hero-copy {
+    padding: 64px 0 48px;
+  }
+
+  /* The vertical rule becomes the horizontal one; the panel keeps its ground
+     and gains the inset padding its left edge used to supply. */
+  .rr-month-one {
+    border-left: 0;
+    border-top: 1px solid var(--pr-line-strong);
+    padding: 32px 24px 40px;
+    margin-bottom: 56px;
+  }
+}
+
+@media (width <= 640px) {
+  :root {
+    --pr-gutter: 20px;
+  }
+
+  .rr-nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .rr-nav-links {
+    gap: 14px 18px;
+    justify-content: flex-start;
+  }
+
+  /* Its own row: wrapping inline with the text links leaves whichever link
+     lands beside it looking orphaned. */
+  .rr-nav-links .rr-btn {
+    flex: 1 0 100%;
+  }
+
+  .rr-hero-copy {
+    padding-top: 48px;
+  }
+
+  /* A wrapped row would carry its divider to the start of the next line,
+     where it reads as a stray mark. */
+  .rr-strip li + li {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .rr-strip {
+    gap: 8px 20px;
+  }
+
+  .rr-band {
+    padding: 48px 0;
+  }
+
+  .rr-split {
+    gap: 32px;
+  }
+
+  .rr-card {
+    padding: 24px 20px;
+  }
+
+  .rr-case {
+    padding: 24px 20px;
+  }
+
+  .rr-steps li {
+    grid-template-columns: 52px 1fr;
+  }
+
+  .rr-step-num {
+    padding: 22px 14px 22px 0;
+  }
+
+  .rr-step-title {
+    padding: 22px 0 8px 16px;
+  }
+
+  .rr-steps p {
+    padding: 0 0 22px 16px;
+  }
+
+  /* One column, not auto-fit: at phone widths two tracks fit but three stats
+     do not fill them, and the leftover cell in the final row shows the grid's
+     line-coloured ground as an empty grey block. */
+  .rr-stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rr-stats li {
+    padding: 18px 20px;
+  }
+
+  .rr-stat-value {
+    font-size: 1.75rem;
+  }
+
+  .rr-btn {
+    flex: 1 1 auto;
+  }
+}

@@ -226,6 +226,16 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "next/editorial"
   end
 
+  # Pilot C on a phone. Same words again - three skins now.
+  def test_next_precision
+    visit "/next/pilots/precision/fractional-cto/"
+
+    assert_text "A technical partner in days, not months of hiring"
+    assert_text "What you're comparing it against"
+
+    assert_stable_screenshot "next/precision"
+  end
+
   def test_free_consultation
     visit "/"
     # Add more specific scoping for Talk to an Expert button

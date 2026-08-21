@@ -2839,3 +2839,36 @@ cached marketplaces use. This repo's delivery prompt became a 241-line repo
 binding (was 662): SHIP gate matrix, canon/OKF/memory contract additions,
 reviewer routing, Appendices A-C; generic par.1-9 deleted per the ADR's
 net-deletion rule; repo /deliver command deleted (plugin provides it).
+
+## 2026-08-21 - Register pilot C "Engineered Precision" completes the three-way
+
+/next/pilots/precision/fractional-cto/ built from the 10.01 column-C spec
+(the other two pilots each translated a Claude Design artifact; this register
+had none). Cool white/#fafafa panels, 1px #e4e4e7/#d4d4d8 structural borders
+carrying the design, zero radius, Inter 400/500/600/700 over JetBrains Mono
+400. Stub is a cp of pilot B's with six lines changed - title, description,
+register, font - so the demo still varies only the skin.
+
+Two defects the browser caught that the source could not. (1) The comparison
+table's "theirs" column rendered in full ink: `.rr-table tbody td` (0,1,2)
+outranks the template's `.rr-td-muted` (0,1,0), so the comparison stopped
+comparing while the CSS read correct - the same shape is live in
+next-editorial.css. (2) A `gap:1px over a line-coloured ground` grid shows
+that ground as an empty cell whenever the final row is partial; `auto-fit`
+collapses only tracks empty in EVERY row, so three stats in two phone-width
+tracks left a grey block.
+
+Register fidelity note worth keeping: the accent does NOT automatically die on
+the inverted band. Ruby #cc342d is 3.46:1 on #18181b - under the text floor,
+over the 3:1 a filled button edge needs, white-on-ruby 5.13:1 inside - so this
+CTA stays ruby where pilot B's had to invert to paper.
+
+Gates: hugo-build clean; test:unit 292 runs / 6164 assertions / 0 failures;
+the pilot-glob gates were proven to reach the new path by smoothing its quote
+and watching the failure name next/pilots/precision/fractional-cto/index.html;
+PurgeCSS set-diff empty over 56 selectors, and an injected orphan rule was
+stripped, so the diff bites; computed font-weight walk 123 elements / 0
+synthesized; contrast walk 122 elements / 0 failures at 1440 and 390 (worst
+4.63:1), proven live by an injected 1.67:1 probe; all four buttons clear
+3:1 edge / 4.5:1 label; zero console messages, zero non-2xx, zero third-party
+hosts.
