@@ -6,3 +6,4 @@
 - `0002-css-validation-checklist.md` (renamed 2026-08-08; was a second `0001-`)
 - `0003-site-design-system.md` — one design system for site chrome ("Rescue Room")
 - `0004-static-site-experimentation.md` — what gets A/B tested, what cannot be, what replaces it
+- `0005-reusable-ai-instruction-layer.md` — extract generic skills/agents/contract as a Claude Code plugin; repos keep thin bindings
