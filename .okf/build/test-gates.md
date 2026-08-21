@@ -4,8 +4,9 @@ title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
 status: stable
-generated: { by: claude/opus-5, at: 2026-08-21T06:15:51Z }
+generated: { by: claude/opus-5, at: 2026-08-21T06:27:54Z }
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T06:27:54Z }
   - { by: claude/opus-5, at: 2026-08-21T06:15:51Z }
   - { by: claude/opus-5, at: 2026-08-21T06:04:00Z }
   - { by: claude/opus-5, at: 2026-08-21T05:33:58Z }
@@ -16,7 +17,7 @@ verified:
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
   - { by: claude/opus-5, at: 2026-08-20T21:43:35Z }
   - { by: claude/opus-5, at: 2026-08-20T21:47:30Z }
-timestamp: 2026-08-21T06:15:51Z
+timestamp: 2026-08-21T06:27:54Z
 ---
 
 # The suites
@@ -316,17 +317,14 @@ A fourth, 2026-08-21, and the cheapest to avoid: stamping a concept with
 `gsub(old_time, new_time)` rewrote the previous `verified` EVENT as well as
 `generated.at` and `timestamp`, silently deleting a real verification. A global
 replace does not know which occurrences are the same fact. Append the new event,
-edit `generated.at`/`timestamp` in place, and diff the VERIFIED ROWS against the
-merge base before committing:
+edit `generated.at`/`timestamp` in place, and READ the whole `verified` block in
+the diff before committing - no `-` line should touch an event you did not mean
+to remove.
 
-```bash
-git diff "$(git merge-base origin/master HEAD)" -- <concept> | grep -E "^[-+]  - \{ by:"
-```
-
-Additions only means you appended; a `-` line means you overwrote an event. Scope
-it to those rows - a legitimate stamp bumps `generated.at` and `timestamp`, so a
-whole-frontmatter diff always shows `-`/`+` pairs and would cry wolf on every
-valid edit.
+That instruction replaces a grep this file carried through four corrections
+(unscoped, then wrong base, then blind to the block form `- by:` / `at:` that
+`ci-gates.md` actually uses). Per the delete-dont-patch rule above, the check is
+gone rather than patched a fifth time: reading the block has none of those holes.
 
 - **An empty query result is not evidence of absence** (2026-08-21). Hunting a
   black band on `/services/`, `document.querySelectorAll('path.fl-shape')`
@@ -485,8 +483,10 @@ actually check the trust family, invoke the v0.2 checker by path:
 uv run ~/.agents/skills/validate/scripts/okf_validate.py .okf
 ```
 
-Everything below describes THAT validator. Run the plugin route and none of it
-applies.
+The TRUST-FIELD paragraphs below describe THAT validator only - run the plugin
+route and none of them apply. The error-only conformance behaviour further down
+applies to BOTH checkers: each warns on malformed log headings and computes its
+checkmark from errors alone.
 
 **It checks trust-field SHAPE, and a missing `at` slips through.** The v0.2
 `check_trust` requires `generated` to be a mapping, requires `generated.by`,
@@ -517,8 +517,11 @@ quoted in this repo means "no errors".
 That heading style is a DELIBERATE deviation already recorded in
 [log.md](/log.md) (2026-08-21): the bundle lands several thematic entries per
 day, and bare dates would produce a stack of identical headings. The conformant
-repair is one dated heading per day with themes as sub-sections beneath - a
-restructure of the whole file, NOT a find-and-replace. Do not sweep it casually.
+repair is one dated heading per day with the themes as ENTRIES beneath it - bold
+labels or list items, since §9 wants a flat list of date-grouped entries. Nested
+`###` headings would look warning-free (the validator only inspects `##`) while
+still violating §9. Either way it is a restructure of the whole file, not a
+find-and-replace. Do not sweep it casually.
 
 **Two OKF specs live on this machine and their section numbers disagree.** The
 `/okf:okf` skill ships and points at

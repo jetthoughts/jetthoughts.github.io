@@ -95,10 +95,17 @@ conformance, v0.2 §9 is log structure.
 A stamping bug worth its own line: updating this concept with
 `gsub(old_time, new_time)` rewrote the previous `verified` EVENT along with
 `generated.at` and `timestamp`, deleting a real verification. A global replace
-cannot tell which occurrences are the same fact. Recorded on the instrument rule
-in [build/test-gates.md](build/test-gates.md) with the check that catches it -
-diff the VERIFIED ROWS against the merge base
-(`git diff "$(git merge-base origin/master HEAD)" -- <concept> | grep -E "^[-+]  - \{ by:"`) and expect additions only. Scoped to those rows on
+cannot tell which occurrences are the same fact. Append the new event, edit
+`generated.at`/`timestamp` in place, and READ the whole `verified` block in the
+diff before committing.
+
+That last instruction started as a grep and went through four corrections -
+unscoped (flagging every legitimate stamp), wrong base (`origin/master` instead
+of the merge base), and blind to the block form `- by:` / `at:` that
+`ci-gates.md` uses. It is deleted rather than patched a fifth time, per the
+delete-dont-patch rule in the same concept. Reading the block has none of those
+holes, and the rule caught its own instrument for the second time in this PR
+chain. Scoped to those rows on
 purpose: a legitimate stamp bumps `generated.at` and `timestamp`, so a
 whole-frontmatter diff shows `-`/`+` pairs on every valid edit and would cry
 wolf.
