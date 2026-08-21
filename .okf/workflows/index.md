@@ -3,7 +3,7 @@
 * [Company-layer ownership](company-layer-ownership.md) - vault owns ALL operations (loop, pipeline, runbook; re-settled 2026-08-20), repo owns growth/marketing campaigns, claims canon owns the facts
 * [Render verification](render-verification.md) - headless Chrome + slicing recipes for the visual scroll gate
 * [Autonomous loops](autonomous-loops.md) - ralph-loop fits verifiable work with known-correct scope; it can iterate but cannot re-scope, and only a true promise or the human ends it
-* [Review swarm](review-swarm.md) - the two-critic review pattern, its failure modes, and the /stitch-design design-review route with the surface-to-design-source table
+* [Review swarm](review-swarm.md) - the two-critic review pattern, its failure modes, and the `/impeccable critique` design-review route with the surface-to-design-source table (stitch GENERATES, it does not review)
 * [Blog Post Pipeline](blog-pipeline.md) - mandatory end-to-end workflow for writing/publishing blog posts, plus the execute-don't-read claims gate, the frontmatter claims check, and the `## Sources` citation convention
 * [LinkedIn Post Pipeline](linkedin-post-pipeline.md) - Paul Keen voice rules and posting workflow
 * [CSS Maintainability Redesign](css-maintainability-plan.md) - approved plan for hand-editable CSS + FL-Builder retirement

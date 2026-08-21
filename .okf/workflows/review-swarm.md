@@ -4,12 +4,15 @@ title: Two-critic review swarm
 description: The proven module-review loop - a design critic (full render walk) plus a content-canon critic, followed by verified fixer waves.
 tags: [swarm, review, process]
 generated:
-  by: process:okf-migrate
-  at: 2026-07-24T00:00:00Z
+  by: claude/opus-5
+  at: 2026-08-21T05:33:58Z
 verified:
-  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-21T00:41:51Z
+  - { by: claude/opus-5, at: 2026-08-21T05:33:58Z }
+  # Two earlier checks are NOT listed here: their times were invented, no offset
+  # recovers them, and a `verified` event requires `at`. They are recorded in
+  # log.md 2026-08-21 with their bounding commits (8fa41494b, 86c2c91cc) - prose
+  # can say "time unknown", this schema cannot.
+timestamp: 2026-08-21T05:33:58Z
 ---
 
 # The loop
@@ -263,3 +266,61 @@ verdict format, and the two or three specific things to attack.
   error in a measurement plan, an overstated bot multiplier. Prose has no
   compiler and no test, so the ONLY gate is a reader who checks claims against
   the tree. One clean round is the signal to stop; one round is not.
+
+- **Descriptive claims converge fast; PRESCRIPTIVE ones fail for rounds** (2026-08-21).
+  Six codex rounds on one bundle-only PR (#537) returned 13 findings, 12
+  accepted. The factual content - which partial emits what, what production
+  adds - was corrected ONCE, in round one (a stylesheet-link count of three that
+  a parser put at two; "production only adds `.min`" that also runs
+  `resources.PostProcess` and adds `integrity`), and then stood unchallenged
+  through rounds two to six. What kept failing came in two distinct waves: the
+  invented INSTRUMENT was refuted three times and deleted in round three
+  (7ae28566e), and then the PROSE describing what instruments prove failed twice
+  more (88a87b322, d07cd3428) after the instrument itself was gone. Not every
+  later finding was about measurement - round six caught a stale round count -
+  but every finding that forced a rewrite rather than a word was.
+
+  The planning shape: budget roughly one round for what the code does, and
+  several for anything you claim a check PROVES. If you are on round three of
+  patching an instrument you invented, delete it and route to a method that
+  already exists. Four successive
+  text-search checks were each refuted in turn: literal `String#scan`
+  (`'\.c-nav'` hunting a backslash), substring prefixes (`\.c-content-block`
+  scoring on `.c-content-block__text`), comments and URLs (`idangero` scoring 1
+  from a Swiper URL), then semantics no regex fixes.
+
+  "X emits Y" is checkable against X. "Run Z to prove Y" smuggles in an unstated
+  universal - *no other path produces this result* - and that is the falsifiable
+  part. So when writing durable guidance, prefer description; if a check must be
+  documented, write what it does NOT establish in the same breath. Extends
+  "docs review converges slowly" above by saying WHICH sentences will converge
+  slowly.
+
+- **Round three on a home-grown instrument means DELETE it, not patch it**
+  (2026-08-21). Each of the four patches above was individually correct and each
+  exposed the next hole; the honest version turned out to be much shorter than
+  the one being defended, and routed to a method the same file already carried.
+  A patch that fixes a real finding still reads as progress, which is what makes
+  this hard to stop. If the tool is invented rather than the subject, the third
+  round is the signal.
+
+- **Verify a citation against the artifact it CITES, not a copy you happen to
+  have** (2026-08-21). The same finding was declined twice on #537/#538 and was
+  right both times. It asked to update `generated` for current content; I
+  checked "canonical OKF §5.2", found "Relative links", and declined it as
+  miscited. The reviewer was reading `~/.agents/skills/okf/reference/SPEC.md`,
+  where §5.2 IS "Trust: `generated` and `verified`" and states plainly that
+  `generated` records how the CURRENT content was produced and `generated.at`
+  marks its last meaningful change. I was reading an older v0.1 copy in a plugin
+  cache that never defines the fields at all.
+
+  Two versions of a spec on one machine, and the section numbers do not agree.
+  "Not reproducible as cited" is a claim about the reviewer that needs the same
+  evidence as any other - resolve the path first. The correct semantics are now
+  applied: `generated` = how the current content was produced, `verified` = who
+  actually REVALIDATED it (an ordinary edit is not a verification).
+
+  The general form still holds - a fair diagnosis can carry an overclaiming
+  prescription, so check the halves separately - but this was not an instance of
+  it. It was an instance of checking the wrong file twice and calling it
+  evidence.

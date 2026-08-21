@@ -50,6 +50,91 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - what survives adversarial review, and when to stop patching
+
+Added to [workflows/review-swarm.md](workflows/review-swarm.md) under Known
+failure modes, extending the existing "docs review converges slowly" entry with
+WHICH sentences converge slowly.
+
+Six codex rounds on the bundle-only PR #537 returned 13 findings, 12 accepted.
+The factual content - which partial emits what, what production adds - was
+corrected ONCE, in round one (a stylesheet-link count of three that a parser put
+at two; "production only adds `.min`" which also runs `resources.PostProcess`
+and adds `integrity`), and then stood unchallenged through rounds two to six.
+Not every later finding was about measurement - round six caught a stale round
+count - but every finding that forced a REWRITE rather than a word was. Budget
+roughly one round for what the code does, and several for anything you claim a
+check proves. Four successive text-search checks were
+refuted in turn: literal `String#scan`, substring prefixes, comments and URLs,
+then semantics no regex fixes.
+
+"X emits Y" is checkable against X. "Run Z to prove Y" smuggles in an unstated
+universal - no other path produces this result - and that is the falsifiable
+part. Prefer description; if a check must be documented, write what it does NOT
+establish in the same breath.
+
+Two companions recorded with it: round three on a home-grown instrument is the
+signal to DELETE it rather than patch it again - which is what happened, in
+7ae28566e. Worth separating from what followed: the instrument died in round
+three, but the PROSE describing what instruments prove kept failing for two more
+rounds (88a87b322, d07cd3428). Deleting the tool does not end the problem it
+came from; and verify a citation
+against the artifact it CITES. The finding I declined twice was right twice: it
+asked to update `generated` for current content, citing canonical OKF §5.2. I read
+§5.2 as "Relative links" and called it miscited - but that was an older v0.1 copy
+in a plugin cache. In `~/.agents/skills/okf/reference/SPEC.md`, §5.2 IS "Trust:
+`generated` and `verified`", stating that `generated` records how the CURRENT
+content was produced and `generated.at` marks its last meaningful change. Two spec
+versions on one machine, section numbers disagreeing. `generated` is now updated
+on both concepts this PR rewrote.
+
+**A dedup in this same concept was wrong and has been reverted** - the sharpest
+instance yet of the rule above. Two byte-identical `verified` entries
+(`claude/opus-5`, `2026-08-20T23:11:35Z`) looked like a duplication artifact, and
+`git log -S` on that timestamp returned exactly one commit (`e046adc54`), which
+read as proof that one commit had emitted both. It was not. `e046adc54^` carries
+two DISTINCT entries, `00:10:00Z` and `00:50:00Z`; e046 was a timestamp-repair
+commit that normalised both to one value. Deleting one destroyed a real
+verification event.
+
+`git log -S` selects every commit that CHANGES a string`s occurrence count, so
+one hit means one net count change, not one event - a neighbouring question accepted as the answer,
+which is exactly what this entry is about. Neither entry is restored to the frontmatter, and
+that is the honest end of it.
+
+A first repair attempt converted them by -3h, reading +03:00 off git commit
+stamps. Review refuted that too: e046adc54 records that the session clock was
++0200, that its own converted values `were never MEASURED - I derived them by
+subtracting two hours from times I had invented`, and that the originating
+offsets are not uniform. So no offset recovers those times, and converting
+fabricated precise-looking numbers out of invented ones. The root index allows
+exactly two moves - convert with a recoverable offset, or mark unknown - and only
+the second applies here.
+
+It took four wrong answers to get there. Delete one as a duplicate; convert by an
+offset read off the wrong commits; flatten both to one measured value (the same
+order-destroying move under a new name); anchor each to its landing commit. The
+last is the closest, and still wrong for a reason worth keeping: a commit instant
+records when TEXT LANDED, not when the check ran. Every attempt was an effort to
+produce a number, and the honest answer was that there isn`t one.
+
+Omitting `at` was the fifth attempt and also failed: OKF v0.2 defines a
+`verified` event as `{ by, at }`, so an entry without a time is malformed, not
+unknown. The trust family as a whole is optional; the fields inside an event are
+not.
+
+So the two checks are recorded HERE, in prose, and not in the frontmatter: they
+happened, they landed in 8fa41494b and 86c2c91cc, and their times are
+unrecoverable. A schema that requires a timestamp cannot represent an event
+without one, and the correct response to that is to stop trying to encode it
+rather than to encode it falsely. A YAML comment in the concept points here so
+the absence reads as deliberate.
+
+The whole sub-thread cost six attempts over two metadata entries on one concept.
+Worth naming as its own lesson: when a fix has failed five times, the question to
+ask is not "what is the sixth encoding" but "does this belong in this field at
+all".
+
 ## 2026-08-21 - CSS ships both inline and as a linked file; text search cannot prove a selector applies
 
 Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). Eleven
