@@ -4,10 +4,27 @@ name: Deploy Hugo site to Pages
 on:
   workflow_dispatch:
   pull_request:
+    # docs/instruction-only changes don't alter the built site - skip the
+    # app build. A PR mixing docs with code still runs everything
+    # (paths-ignore skips only when ALL changed files match).
+    paths-ignore:
+      - 'docs/**'
+      - '.okf/**'
+      - '.claude/**'
+      - '.agents/**'
+      - '.skills/**'
+      - '*.md'
   schedule:
     - cron: '0 0 * * *'
   push:
     branches: [ master ]
+    paths-ignore:
+      - 'docs/**'
+      - '.okf/**'
+      - '.claude/**'
+      - '.agents/**'
+      - '.skills/**'
+      - '*.md'
   workflow_run:
     workflows: ["Sync articles"]
     types:

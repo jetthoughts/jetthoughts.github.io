@@ -2420,3 +2420,60 @@ at an absurd 100 MB/s floor a healthy fetch aborts with `curl 28 Operation too
 slow` (exit 128, an error `retryHelper` catches), and at the shipped 1 KB/s
 floor a real fetch of master completes clean. Reading the value back would have
 "passed" either way, including if the knob were inert.
+
+## 2026-08-21 - Delivery prompt gains Appendix B: enforced tool/skill routing
+
+`docs/workflows/autonomous-delivery-prompt.md` now carries Appendix B: enumerate
+the live MCP/skill/agent surface at session start (`claude mcp list`, batched
+`ToolSearch select:`, the runtime rosters), and route work skill > MCP tool >
+hand-rolled shell as an ENFORCED order, with repo instructions winning on
+conflict. Ruflo plugins are preferred over generic equivalents (memory, swarm,
+loops/cron, autopilot, security, testgen, docs) - Paul 2026-08-21; canonical
+table in the host-only `~/.claude/CLAUDE.md`, category list inlined in the doc
+for container sessions. A near-miss the same day: a session almost authored a
+duplicate `LOCAL_PROMPT.md` because the delivery prompt had not yet been pulled
+from master - update the repo before concluding a doc does not exist.
+
+## 2026-08-21 - Ruflo memory_store fixed: legacy schema drift in .swarm/memory.db
+
+`mcp__ruflo__memory_store` failed with SQLite "datatype mismatch" while reads
+worked and every entry listed as size 0. Root cause: the repo's memory.db was
+created by an old claude-flow and half-migrated - `id INTEGER PRIMARY KEY` +
+`value` column, while the current CLI writes TEXT ids and reads `content`.
+Fixed by an in-place table rebuild to the canonical schema (obtained by running
+`npx @claude-flow/cli memory init` in a scratch dir - compare against ground
+truth, do not guess), preserving all 2,775 rows; backup in
+`.swarm/backups/memory-pre-schema-migration-2026-08-21.db`. Second trap: an
+external sqlite3 session leaves -wal/-shm sidecars and sql.js then refuses
+whole-image writes - checkpoint TRUNCATE, journal_mode=DELETE, remove -shm.
+Writes now succeed with 384-dim embeddings. Appendix B of the delivery prompt
+was also revised to a dated tool-surface snapshot (Paul: explicit results, not
+discovery lessons).
+
+## 2026-08-21 - Delivery prompt: intake path (par.1a), unit/sprint reconciliation, domain map
+
+Paul's ask: orchestrate any incoming feature/idea without breaking the contract.
+Added par.1a (triage -> shape -> GOAL -> orchestrate-by-size -> non-negotiable
+contract list) and reconciled a live contradiction the review surfaced: the doc
+said "every unit ships its own PR" while CLAUDE.md mandates one PR per sprint.
+Resolution: unit = reviewed commit on the sprint branch, sprint = the one PR -
+applied to the header map, par.2 SHIP row, par.6, and Appendix A (two of these
+were BLOCKING leftovers caught by the pre-commit reviewer, not the author).
+Par.6 parallelism list grew to three: reviewers, OKF maintainer, and
+explicitly-requested swarm workers in worktrees. Appendix C added: per-domain
+read-first/route-through map (coding, design, content, docs, planning,
+research, brainstorming, testing, SEO, AI-instructions development).
+
+## 2026-08-21 - PR size cap: ~500 changed lines
+
+Paul: batch work into one sprint PR, but a PR must not exceed ~500 changed
+lines (reviewable diff; binaries/baselines excluded). Encoded in CLAUDE.md's
+feature-branch rule and delivery-prompt par.1a: an oversized sprint splits into
+sequential PRs, merge N before opening N+1. The "one big PR" rule now has a
+ceiling - bundling stops where reviewability ends.
+
+## 2026-08-21 - PR cap refined: 500 lines of CODE; docs and logs exempt
+
+Correction to the same-day cap entry: the ~500-line ceiling counts CODE only
+(templates, CSS, Ruby, scripts, config, content markup). Docs, .okf/ logs, and
+binaries/baselines are exempt - documentation may batch into bigger PRs.

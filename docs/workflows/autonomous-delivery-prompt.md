@@ -1,8 +1,51 @@
 # Autonomous delivery prompt
 
-The operating prompt for running a goal to completion without babysitting, at a
-quality bar that survives adversarial review. Paste §1–§9 into a session, fill
-the GOAL slot, and let it run.
+**Onboard in 60 seconds** — the map, then read only what the task needs:
+
+- **Loop** (§2): `DISCOVER → DECIDE → BUILD → VERIFY → SHIP → LEARN`, 4-eyes
+  gating every stage. The unit is the PR; commits within it land one at a time,
+  each independently reviewed; a sprint PR carries at most ~500 changed lines
+  of CODE (§1a — docs/logs exempt).
+- **Roles** (§5): Author writes, a different Verifier proves — author never
+  produces evidence for its own claim. Internal sub-agents per stage;
+  `/codex:review` once at the merge gate.
+- **Principles**: evidence over confidence (§3 — produce the check that would
+  fail if the claim were false), research before deciding (§4 — in-tree first,
+  NotebookLM for deep research), async-first artifacts (§7), deliver the scope
+  or say what you left (§8), learn every pass (§9).
+- **Tools**: Appendix B is the current surface snapshot — do not re-discover.
+  Appendix C maps each work domain to its references. Commands and repo gates:
+  `CLAUDE.md` header + `docs/workflows/BASE_HANDBOOK.md`. Business/weekly loop
+  lives in the vault (`jt-operations`), not here.
+
+**Kickoff prompt** — paste this into a session to spawn the team on any idea;
+it carries the whole contract by reference:
+
+```text
+Act as the delivery manager per docs/workflows/autonomous-delivery-prompt.md
+(pull master first, read its 60-second map, then only what the task needs).
+
+IDEA: <what I want, 1-2 sentences>
+CONSTRAINTS: <optional - deadline, budget, explicit not-in-scope>
+
+Run the §1a intake: one-line triage verdict → groom only if ambiguous →
+write GOAL / DONE WHEN / NOT IN SCOPE → orchestrate by size. Spawn an
+author and a DISTINCT verifier per stage (§5); pick references and agents
+from the Appendix C domain map; use the Appendix B tool snapshot - do not
+re-discover. Contract is non-negotiable (§1a): feature branch + ONE sprint
+PR ≤ ~500 changed CODE lines (docs/logs exempt - split sequentially if
+over), rebase never merge, gates per diff class (§2 SHIP), claims-canon +
+voice on customer-facing copy, OKF sync in the same commit.
+
+Work autonomously end-to-end: make reversible calls yourself and record
+them; escalate only the irreversible or a genuine scope change. Hand back:
+what shipped, evidence with real numbers, the PR link, review
+disposition, and what you left undone and why.
+```
+
+The full document: the operating prompt for running a goal to completion
+without babysitting, at a quality bar that survives adversarial review. Paste
+§1–§9 into a session, fill the GOAL slot, and let it run.
 
 It exists because the failure mode is never "the agent could not do the work".
 It is "the agent produced confident work nobody could verify, and the verification
@@ -35,6 +78,42 @@ load `pages/foo.css`, with the seam check clean at 1920 and 390" is.
 
 **NOT IN SCOPE is load-bearing.** Most wasted cycles are spent on work that was
 adjacent, defensible, and not asked for.
+
+### 1a. Intake — from a raw idea to a running unit
+
+When Paul hands a feature or idea, this is the path in — orchestration never
+starts before it:
+
+1. **TRIAGE** (manager rule, `CLAUDE.md`): now / sequenced / backlog /
+   groom-first. One-line verdict so Paul can override.
+2. **SHAPE**: ambiguous or structural → grooming first (`structural-decisions`,
+   brainstorming, persona panel). Concrete → straight to GOAL.
+3. **GOAL**: write §1's three lines. No re-runnable DONE WHEN → no dispatch.
+4. **ORCHESTRATE by size** — the contract holds at every scale. Pick WHICH
+   agents from Appendix C's route-through column for the work's domain
+   (reviewer lenses per §5):
+   - *trivial edit*: inline; a verifier agent still reviews before commit.
+   - *one unit*: author agent + distinct verifier (§5).
+   - *a feature*: commits proceed one at a time on the sprint branch, each
+     independently reviewed (§2); the sprint ships as **ONE PR capped at ~500
+     changed lines of CODE** (Paul 2026-08-21 — docs, `.okf/` logs, and
+     binaries/baselines do not count; docs-only work may batch bigger). A
+     sprint whose code diff would exceed the cap splits into sequential PRs:
+     merge N before opening N+1.
+   - *swarm scale*: only on explicit request — `ruflo-swarm`, workers in
+     worktrees (committing agents get isolation).
+5. **The contract — non-negotiable regardless of orchestration shape**:
+   feature branch + PR, never master, PR ≤ ~500 changed CODE lines
+   (docs/logs exempt) · rebase when master moves, never merge it in (tag a
+   backup ref first; `--autostash` when unstaged changes block it) ·
+   author ≠ verifier at every stage (§5) ·
+   gates matched to the diff type (§2 SHIP + `CLAUDE.md`) ·
+   claims-canon + voice gates on anything customer-facing · OKF sync rides the
+   same commit · async-first artifacts (§7) · escalate only the irreversible
+   or a genuine scope change (§8).
+
+An orchestration that would break any contract line is scoped wrong — reshape
+the work, never waive the line.
 
 ---
 
@@ -168,8 +247,9 @@ design decision:
    semantic code search for code, `rg` last. The answer is usually already
    written down and being argued from memory is the recurring error.
 2. **Then the world.** Current docs (`context7`), targeted web research
-   (`tavily-*`, `lightpanda` for headless fetch). Take the best available
-   pattern rather than the first plausible one.
+   (`tavily-*`, `lightpanda` for headless fetch); substantial multi-source
+   research goes through the NotebookLM MCP (Paul 2026-08-21). Take the best
+   available pattern rather than the first plausible one.
 3. **Cite what you used.** A decision with no citation is a guess wearing
    confidence.
 
@@ -315,7 +395,7 @@ Decline the half that overclaims and record the disposition with its evidence.
 
 One unit in flight. One PR open. Merge it, then start the next.
 
-Parallelism is allowed in exactly two places:
+Parallelism is allowed in exactly three places:
 
 1. **Independent reviewers judging one artifact** — run in parallel, each with a
    distinct lens and each required to make its strongest attempt at an
@@ -325,6 +405,9 @@ Parallelism is allowed in exactly two places:
    work rather than after it, so the bundle update rides the same commit
    (`AGENTS.md` §OKF maintenance). It does not touch the work's files, so it
    does not collide.
+3. **Explicitly-requested swarm workers** (§1a), each isolated in its own
+   worktree — isolation is what removes the collision, so a swarm worker
+   without a worktree is not allowed.
 
 Otherwise: never run parallel agents over the same body of work — they collide,
 and the collision is invisible until merge.
@@ -449,3 +532,117 @@ time, WIP=1 — **one COMMIT per surface on the audit branch, one PR for the aud
 Not one PR per surface: `CLAUDE.md` requires related work bundled into a single
 PR (Paul, 2026-04-30: *"let's have one big PR instead of small PR"*), and eight
 surfaces would otherwise become eight PRs.
+
+---
+
+## Appendix B — the tool surface, as of 2026-08-21
+
+A **dated snapshot** so agents do not re-discover what is already known (Paul
+2026-08-21: docs are explicit; do not spend cycles enumerating). Regenerate
+each surface with the command in its header when a plugin changes; trust the
+snapshot otherwise.
+
+### MCP servers — regenerate: `claude mcp list`
+
+Connected and load-bearing for this repo:
+
+| Job | Server(s) |
+|---|---|
+| Markdown search (`docs/`, `.okf/`, `content/`) | `qmd` (collection `jt-site`) — FIRST for any doc/content lookup |
+| Memory, swarm, hooks, loops | `ruflo` (plugin:ruflo-core; `.swarm/memory.db`) |
+| Code search / symbols | `serena`, `tokensave`, `grepai`, `claude-context` |
+| Library docs | `context7` |
+| Visual checks, screenshots | `chrome-devtools` (headless) + plugin chrome-devtools |
+| GitHub API | `github` (plugin) |
+| Search Console / Analytics / Clarity | `gsc`, `google-analytics`, `clarity` |
+| Web search / fetch | `parallel`, `brave-search`, `lightpanda` skill |
+| Deep research, source-grounded Q&A | `notebooklm` / `notebooklm-mcp` (Google NotebookLM) — run substantial research through it, not ad hoc web calls |
+| Design generation | `stitch` |
+| Memory fallbacks | `memoria`, `mem0` (ruflo-first — see below) |
+| Language server (Ruby) | `ruby-lsp` plugin + the `LSP` tool (diagnostics, go-to-def) |
+
+Known state: `telegram` and `aci` fail to connect; `legalzoom` and `sentry`
+need auth; interactively-authenticated (claude.ai) servers are absent in
+headless/cron runs. A memoria cold-start "connection error" is a false alarm —
+call the tool before believing it. Deferred tool schemas load via `ToolSearch`
+— batch every tool you need into ONE comma-separated `select:` call.
+
+### Skills — regenerate: read the roster in the session's system listing
+
+The operational set for this repo (invoke via Skill tool; `/name` from the
+user is an invocation request): `okf:okf` + `okf:validate` (bundle work),
+`qmd:qmd`, `ponytail:ponytail` (held at ultra), `reflexion-reflect` /
+`reflexion-critique` (voice-sensitive content, BLOCKING), `content-cold-eyes`,
+`search-routing`, `code-review:code-review`, `commit-commands:*`, the
+`superpowers:*` process family, and the ruflo set: `ruflo-swarm:swarm`,
+`ruflo-loop-workers:ruflo-loop`/`cron-schedule`, `ruflo-autopilot:autopilot`,
+`ruflo-security-audit:security-scan`, `ruflo-testgen:testgen`,
+`ruflo-docs:doc-gen`, `ruflo-rag-memory:recall`. Repo pipelines (blog,
+LinkedIn, new-page, cover-images) live in `docs/workflows/` and are executed
+end-to-end like skills.
+
+### Agents — regenerate: the Agent tool roster / `ListAgents`
+
+The ones this repo actually routes to: `core-reviewer` / `core-coder` /
+`core-researcher` / `core-planner` / `core-tester` (per-stage 4-eyes),
+`hugo-expert`, `ruby-coder` + `ruby-reviewer`, `content-creator`,
+`blog-batch-orchestrator` + `blog-post-coordinator`, `screenshot-guardian`,
+`qa-browser-tester`, `ux-browser-validator`, `seo-specialist`,
+`codex:codex-rescue` (external second opinion), `Explore` (read-only fan-out).
+Project agent definitions: `.claude/agents/**` — audit per Appendix A.
+
+**Routing through the roster is ENFORCED, not advisory (Paul 2026-08-21).**
+If a listed skill or tool covers the task, invoke it — hand-rolling what a
+skill already does is the same defect as writing a helper that exists two files
+over. The order of preference:
+
+1. **A matching skill** — invoke it before any response or action; its
+   instructions replace your default approach. The roster proves presence,
+   reading the skill proves fit — and **repo instructions win on conflict**
+   (repo voice guides and workflow docs override generic writing/SEO/humanizer
+   skill advice, per `CLAUDE.md`). Repo pipelines (blog, LinkedIn, OKF,
+   new-page) are skills-by-another-name: execute them end-to-end.
+2. **A matching MCP tool** — `qmd` for markdown search, semantic code search
+   for code, `context7` for library docs, chrome-devtools for visual checks
+   (§4's order). Load deferred schemas via `ToolSearch`, batched.
+3. **Hand-rolled shell/code** — last, and only when neither exists.
+
+Skipping a covering skill because "it's a simple task" is the named failure
+mode: simple things become complex, and the skill carried the gate you just
+bypassed.
+
+**CI runs a different slice than your local gate — know which before quoting
+"green".** The authority is `.github/workflows/`, not this sentence: as of
+2026-08-21, `test.yml` runs `rake test:critical` on PRs and full `rake test` on
+push, and `publish.yml` runs `rake test:unit` + `rake test:integration` on
+master before deploying. CI is Linux — a macOS-green screenshot suite says
+nothing about the Linux baselines CI compares against. Re-read the workflow
+files before trusting this paragraph; they change more often than this doc.
+
+**Ruflo-first (Paul 2026-08-21).** When a ruflo plugin covers the job — memory
+store/search, swarm coordination, recurring loops/cron, autonomous completion,
+security scanning, test-gap/TDD, doc generation — prefer its tools, skills, and
+agents over the global/generic equivalent. The generic one is the fallback, not
+the default. The full routing table lives in `~/.claude/CLAUDE.md` §Ruflo-first
+(host-only — in container/CI sessions the category list above is the summary to
+use); project instructions still override it.
+
+---
+
+## Appendix C — domain reference map
+
+Per domain: read these first, route work through these. Explicit so onboarding
+costs nothing (Paul 2026-08-21). All paths repo-relative; skills by roster name.
+
+| Domain | Read first | Route through |
+|---|---|---|
+| **Coding** (templates, CSS, Ruby, config) | `CLAUDE.md` critical-files table; `docs/projects/2509-css-migration/` for CSS; `ponytail` held at ultra | `hugo-expert`, `ruby-coder` + `ruby-reviewer`, `core-coder`; gates per diff type |
+| **Design / visual** | `.stitch/design.md`, `docs/design-system/`, `docs/workflows/visual-scroll-gate.md`, `.okf/design/` | `impeccable` skill, `stitch` MCP (generation only), `screenshot-guardian`, `qa-browser-tester`, chrome-devtools at 1280×800 + 390×844 |
+| **Content / blog / LinkedIn** | voice guide `90.11`, ICP `90.10`, `docs/workflows/blog-pipeline.md` / `linkedin-post-pipeline.md`, `.okf/content/claims-canon.md` | `content-creator`, `content-cold-eyes`, `reflexion-reflect` (BLOCKING pre-handback), banned-strings ratchet |
+| **Docs / knowledge** | new-doc location rules (`CLAUDE.md`), `.okf/index.md`, `writing-documentation-with-diataxis` | `okf:okf` (consume/produce/maintain), `okf:validate`, `ruflo-docs:doc-gen` |
+| **Planning** | manager-triage rule (`CLAUDE.md`), active content plan `20.09`, §1a intake | `core-planner`, `plan-writing`, `task-breakdown`; plans peer-reviewed before Paul sees them (§5) |
+| **Research** | §4 order: `qmd` in-tree → `context7` docs → NotebookLM MCP for deep multi-source → web (`parallel`/`tavily`) | `core-researcher`, `Explore` (read-only fan-out); cite everything |
+| **Brainstorming / shaping** | `superpowers:brainstorming` (BEFORE creative work), `structural-decisions` | persona panels with distinct lenses + required dissent (§5) |
+| **Testing / QA** | `CLAUDE.md` header Test line, `docs/20-29-testing-qa/` | `core-tester`, `ruflo-testgen:testgen`, `screenshot-guardian`; behavior-focused tests only |
+| **SEO / analytics** | `docs/90-99-content-strategy/`, `bin/site-report`, `bin/campaign-metrics` | `seo-specialist`, `gsc` + `google-analytics` MCP; recompute averages, never quote them |
+| **AI-instructions development** (skills, agents, CLAUDE.md, prompts, OKF) | this doc; `superpowers:writing-skills`; `.claude/agents/**` for agent shape; Appendix A for the audit method | `create-skill` / `create-agent` / `create-rule` skills, `claude-md-management:*`; instruction changes are code: branch + PR, 4-eyes, and a worked-example check (break the rule, watch the gate fail) before merge |
