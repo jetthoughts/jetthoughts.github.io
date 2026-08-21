@@ -117,8 +117,10 @@ Why 0.0001: on a 1920x1080 capture, 0.02 means ~41,472 pixels must differ
 before the assertion fails. A one-cell copy edit measures 0.0004 (844 px), so
 the gate was blind to it by 50x - and passed, which is worse than failing
 (see the fossilization bullet below). Measured run-to-run noise on a static
-page is 0.0, so the floor only has to clear zero; 0.0001 (~207 px) fails that
-copy edit and goes green again when it is reverted. The noise claim is
+page is ~1e-6, not 0 (three runs of `services/_technologies`: 0.013838252,
+0.013838252, 0.013837770 - about 2 px of 2,073,600), so the floor has to clear
+that; 0.0001 (~207 px) sits 100x above it, fails that copy edit, and goes green
+again when it is reverted. The noise claim is
 checkable without re-running the copy edit: two independent runs of the same
 test reported difference_levels identical to 16 decimal places (0.6893909143518518
 for `services/_footer` every time), and 2 of the 7 screenshots stayed GREEN at
@@ -159,8 +161,12 @@ from #528's eyebrow consolidation, which touched `services-critical.css` and
 `content-block.css` and re-recorded only the two sections that exceeded 0.02;
 everything below the eyebrow on /services/ shifted 1px, passed under the old
 default, and fossilized. Measured, not inferred: realigning baseline to
-candidate by one pixel drops the residual to **exactly 0.0000** in several
-bands, i.e. the content is pixel-identical and only its position moved. The
+candidate by one pixel drops the residual to **exactly 0.0000 in several
+bands** and collapses the non-blend suspect count by orders of magnitude
+(`blog/index/_pagination`: 32,652 px at dy=0 -> 106 at dy=-1). It does NOT
+reach zero page-wide - a sub-pixel shift re-rasterizes glyphs rather than
+translating them, so `services/_use-cases` still differs in 22,895 px after
+the best realignment. Content is identical on inspection; position moved. The
 lesson is the one this file already teaches - a plausible cause that matches
 the loudest diffs will happily absorb the quiet ones that have a different
 cause entirely.

@@ -87,10 +87,16 @@ by baseline-vs-candidate pixel transitions, never by difference_level:
 | 42 | #540 dark-surface recolour | `rgb(0,0,0)` -> `rgb(20,17,15)` is 94-100% of changed px |
 | 3 | #520 `description` backfill | template renders it as a grey lead; rendered text matches the frontmatter string verbatim |
 | 2 | #552 course module eyebrow | ruby eyebrow above the H1 shifts the page down |
-| 3 | #528 eyebrow consolidation | 1px vertical offset; realigning by one pixel gives residual **exactly 0.0000** |
+| 3 | #528 eyebrow consolidation | 1px vertical offset; realigning by one pixel gives residual **exactly 0.0000** in several bands |
 
-Nothing was left unexplained, so nothing was withheld as a suspected
-regression.
+The DOMINANT cause of every file is explained, so nothing was withheld as a
+suspected regression. Independent review (opus, own instruments, exact
+transition count over all 50) reproduced the 42/3/2/3 split and agreed
+file-by-file. It also found what the classification does not name: three files
+carry a SECONDARY 1px displacement on top of the recolour, and two mobile files
+carry #540's sibling `--ruby-on-ink` token change. All position-or-token only,
+content identical - which is why no baseline is wrong, and why "zero
+unexplained" is the wrong phrase for "every dominant cause identified".
 
 **`SECTION_CONFIGS` is deleted, on a measurement rather than a judgement.**
 Its stated exit condition was "delete once the shielded screenshots are
