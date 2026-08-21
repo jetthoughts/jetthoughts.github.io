@@ -1,5 +1,5 @@
 .footer-component {
-    background-color: black;
+    background-color: var(--surface-ink);
     color: white;
     padding-top: 130px;
     padding-bottom: 40px;
