@@ -74,11 +74,14 @@ gate rules that would otherwise decay. The 1a.4 prompt carried "never cite
 `[snap_diff] N screenshots compared` count", and "`--strict` EXITS 1 by design",
 and none of those was violated across the whole run.
 
-# The delivery prompt that wraps this
+# The delivery contract that wraps this
 
-`docs/workflows/autonomous-delivery-prompt.md` is the operating prompt for
-running a goal unattended: DISCOVER -> DECIDE -> BUILD -> VERIFY -> 4-EYES ->
-SHIP -> LEARN, WIP=1, with the evidence ladder and the review-panel rules.
+The `jt-delivery:contract` skill (plugin `jt-delivery@jetthoughts`, per
+ADR-0005) is the operating contract for running a goal unattended:
+DISCOVER -> DECIDE -> BUILD -> VERIFY -> 4-EYES -> SHIP -> LEARN, WIP=1,
+with the evidence ladder and the review-panel rules. The repo-specific
+bindings (gate matrix, canon, reviewer routing, Appendices) live in
+`docs/workflows/autonomous-delivery-prompt.md`.
 
 It is the complement to this concept rather than a competitor. This file says
 what a self-iterating LOOP can and cannot do; that file says what a delivery

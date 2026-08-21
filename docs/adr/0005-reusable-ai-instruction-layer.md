@@ -2,7 +2,7 @@
 
 **ADR-0005**
 **Date:** 2026-08-21
-**Status:** Accepted (2026-08-21 — direction set by Paul's reuse request; mechanism chosen per alternatives analysis; reversible until the extraction sprint ships)
+**Status:** Accepted (2026-08-21 — direction set by Paul's reuse request; mechanism chosen per alternatives analysis; extraction shipped same day: plugin v0.1.0 + migration PR)
 
 ## Title
 

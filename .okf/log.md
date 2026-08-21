@@ -2547,3 +2547,18 @@ jt-gotcha-cli-semantic-search-broken: CLI semantic empty without ruvector;
 global HNSW misses CLI-written vectors until server restart (scoped search
 finds them); sql.js whole-image flushes resurrect external SQL deletes -
 mutate only via MCP/CLI, never raw SQL while the server runs.
+
+## 2026-08-21 - ADR-0005 extraction shipped: jt-delivery plugin v0.1.0
+
+jetthoughts/claude-plugins created (public - the contract was already public
+in this repo); plugin jt-delivery v0.1.0: contract skill (genericized par.1-9),
+/deliver, async-first skill, five core author/verifier agents. Pre-publish
+review: 1 blocking + 5 minor, all fixed - notably a verifier-briefing
+regression (the skill had reverted to blind-briefing; restored
+reasoning-handover + one-independent-measurement per the verifiers-need-the-
+reasoning correction). Marketplace format gotchas: owner object required;
+plugin source must be a plain string path, not the {source,path} object some
+cached marketplaces use. This repo's delivery prompt became a 241-line repo
+binding (was 662): SHIP gate matrix, canon/OKF/memory contract additions,
+reviewer routing, Appendices A-C; generic par.1-9 deleted per the ADR's
+net-deletion rule; repo /deliver command deleted (plugin provides it).
