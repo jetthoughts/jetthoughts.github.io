@@ -342,6 +342,18 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "next/rescue-room"
   end
 
+  # Design-register pilot B, "Artifact Editorial". Deliberately the SAME
+  # assertions as pilot A: the demo compares two skins over one set of words,
+  # so a copy edit that reached only one pilot has to fail here.
+  def test_next_editorial
+    visit "/next/pilots/editorial/fractional-cto/"
+
+    assert_text "A technical partner in days, not months of hiring"
+    assert_text "#{Time.now.year - 2008}+"
+
+    assert_stable_screenshot "next/editorial"
+  end
+
   def test_free_consultation
     visit "/"
 

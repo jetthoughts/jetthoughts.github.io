@@ -1,0 +1,909 @@
+/* next-editorial — register pilot B, "Artifact Editorial".
+ *
+ * Loaded ONLY by layouts/next/landing.html for pages with
+ * `register: editorial`, and it is the page's ONLY stylesheet: no style.css,
+ * no navigation.css, no footer.css, not even foundations/css-variables.css.
+ * A register pilot has to be judged on its own surface, so nothing from the
+ * legacy cascade may leak in.
+ *
+ * Translated from Paul's in-progress Claude Design artifact ("Fractional CTO -
+ * Artifact Editorial", canvas mode, DESKTOP_1440 + MOBILE_390 screens), whose
+ * values were inline styles: paper #fbf9f8 with #f3f0ed tint bands, white
+ * cards on 1px #d8d3cd, sections divided by 1px #e5e1dd hairlines, ink
+ * #1b1c1c, deep red #a91918 (NOT the standard ruby #cc342d - the artifact
+ * uses the darker cut, and #cc342d is its hover only), and ZERO border-radius
+ * anywhere on the page. Source Serif 4 for headlines and the wordmark, Hanken
+ * Grotesk for body and nav, JetBrains Mono for every eyebrow and label - all
+ * three self-hosted from /css/fonts-editorial.css.
+ *
+ * The class names are the `rr-` set layouts/next/landing.html emits for every
+ * register (they were named for pilot A). The prefix is shared skeleton
+ * vocabulary here, not a rescue-room reference.
+ *
+ * CONTRAST: every text/background pair on this page computes >= 4.5:1,
+ * including the ones on the ink band, where the accent CANNOT be used for text
+ * (#a91918 on #1b1c1c is 2.31:1 - the exact miss pilot A shipped). The band's
+ * eyebrow and muted tones are the light warm greys below, and the accent rule
+ * lightens to --ed-accent-ink so even the graphic device clears 3:1.
+ */
+
+:root {
+  --ed-paper: #fbf9f8;
+  --ed-tint: #f3f0ed;
+  --ed-card: #fff;
+  --ed-line: #d8d3cd;
+  --ed-rule: #e5e1dd;
+  --ed-ink: #1b1c1c;
+  --ed-body: #45413d;
+  --ed-muted: #6b6560;
+  --ed-accent: #a91918;
+  --ed-accent-hover: #cc342d;
+  --ed-band-ink: #1b1c1c;
+  --ed-card-ink: #232424;
+  --ed-ink-label: #c9c2ba;
+  --ed-ink-muted: #b9b2aa;
+  --ed-accent-ink: #e07a6e;
+  --ed-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --ed-sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ed-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --ed-shell: 1312px;
+  --ed-gutter: 64px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ed-paper);
+  color: var(--ed-body);
+  font-family: var(--ed-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Kept from navigation.css rather than pulled in with it: baseof's skip link
+   is invisible only because of .sr-only, and shipping the rail without it is
+   how a visible "Skip to main content" reached production in 2026-07. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  clip: auto;
+  clip-path: none;
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--ed-ink);
+  color: var(--ed-paper);
+}
+
+/* The artifact's own link rule: ink with an underline, accent on hover.
+   :where() keeps it at zero specificity so the .rr-btn anchors and the label
+   links below win on their own single class, not on source order (PR-2). */
+:where(a) {
+  color: var(--ed-ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+:where(a):hover {
+  color: var(--ed-accent);
+}
+
+.rr-container {
+  max-width: var(--ed-shell);
+  margin: 0 auto;
+  padding: 0 var(--ed-gutter);
+}
+
+/* ---- Type scale ---------------------------------------------------- */
+
+.rr-h1,
+.rr-h2,
+.rr-card-title,
+.rr-step-title {
+  font-family: var(--ed-serif);
+  color: var(--ed-ink);
+  margin: 0;
+}
+
+.rr-h1 {
+  font-size: clamp(2.0625rem, 4.2vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+  text-wrap: balance;
+}
+
+.rr-h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.rr-h2-narrow {
+  max-width: 26ch;
+}
+
+.rr-card-title {
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* Every label on this page is mono, uppercase and tracked - the artifact
+   never sets a weight on a mono run, so this stays 400. */
+.rr-eyebrow {
+  font-family: var(--ed-mono);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-accent);
+  margin: 0 0 24px;
+}
+
+/* The register's signature: a 32x2 accent rule opening each band. The hero is
+   the one exception - directly under the nav it reads as a stray mark, and
+   the artifact starts that screen with the eyebrow alone. */
+.rr-eyebrow::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--ed-accent);
+  margin-bottom: 20px;
+}
+
+.rr-hero .rr-eyebrow::before {
+  display: none;
+}
+
+.rr-lede {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--ed-body);
+  margin: 0;
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+/* ---- Buttons ------------------------------------------------------- */
+
+.rr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ed-mono);
+  font-size: 0.8125rem;
+  /* Pinned, not inherited: JetBrains Mono ships 400 only, and the nav cut sits
+     inside :where(.rr-nav-links a), which sets 600 - Chrome then FAKE-BOLDS it
+     and the same label renders heavier in the nav than in the hero. */
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 17px 32px;
+  /* Transparent border so the filled and outlined cuts are the same height,
+     and no radius anywhere - the register is drawn entirely with square
+     rules. */
+  border: 1px solid transparent;
+  border-radius: 0;
+  text-decoration: none;
+}
+
+.rr-btn-primary,
+.rr-btn-primary:hover {
+  background: var(--ed-accent);
+  color: var(--ed-paper);
+}
+
+.rr-btn-primary:hover {
+  background: var(--ed-accent-hover);
+}
+
+.rr-btn-ghost,
+.rr-btn-ghost:hover {
+  background: transparent;
+  color: var(--ed-ink);
+  border: 1px solid var(--ed-ink);
+}
+
+.rr-btn-ghost:hover {
+  background: var(--ed-ink);
+  color: var(--ed-paper);
+}
+
+/* ---- Nav ----------------------------------------------------------- */
+
+.rr-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: var(--ed-shell);
+  margin: 0 auto;
+  padding: 28px var(--ed-gutter);
+  border-bottom: 1px solid var(--ed-rule);
+}
+
+.rr-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--ed-serif);
+  font-weight: 700;
+  font-size: 1.375rem;
+  letter-spacing: -0.01em;
+  color: var(--ed-ink);
+  text-decoration: none;
+}
+
+/* The artifact's own screen-label chip: a solid ink block with paper mono
+   type, square. Same device, promoted to the wordmark's colophon. */
+.rr-brand-mark {
+  background: var(--ed-ink);
+  color: var(--ed-paper);
+  font-family: var(--ed-mono);
+  /* Same trap as .rr-btn: the 700 on .rr-brand would be synthesized here. */
+  font-weight: 400;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  padding: 4px 7px;
+}
+
+.rr-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* :where() flattens this to zero specificity so the .rr-btn-ghost CTA sitting
+   in the same row keeps its own colour and border. A bare `.rr-nav-links a`
+   scores 0,1,1 and silently outranks every single-class button component
+   inside it - the PR-2 defect. */
+:where(.rr-nav-links a) {
+  color: var(--ed-ink);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+:where(.rr-nav-links a:hover) {
+  color: var(--ed-accent);
+}
+
+.rr-nav-links .rr-btn {
+  font-size: 0.75rem;
+  padding: 9px 16px;
+}
+
+/* ---- Hero ---------------------------------------------------------- */
+
+.rr-hero {
+  max-width: var(--ed-shell);
+  margin: 0 auto;
+  padding: 104px var(--ed-gutter) 96px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--ed-rule);
+}
+
+.rr-hero-copy {
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+.rr-hero .rr-lede {
+  margin-bottom: 40px;
+}
+
+.rr-cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.rr-derisk {
+  font-size: 0.9375rem;
+  color: var(--ed-muted);
+  margin: 20px 0 28px;
+}
+
+.rr-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 32px;
+  font-family: var(--ed-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ed-muted);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rr-strip strong {
+  color: var(--ed-ink);
+  font-weight: 400;
+}
+
+/* The Clutch rating is a link (claims-canon wants the profile reachable) but
+   it is one item in a quiet proof strip, not a call to action - a second
+   colour on half the phrase reads as broken styling. */
+.rr-strip :where(a) {
+  color: inherit;
+}
+
+.rr-strip :where(a):hover {
+  color: var(--ed-ink);
+}
+
+/* ---- Cards --------------------------------------------------------- */
+
+.rr-card {
+  background: var(--ed-card);
+  border: 1px solid var(--ed-line);
+  padding: 40px;
+}
+
+.rr-month-one {
+  flex: 1 1 380px;
+  min-width: 0;
+}
+
+.rr-bullets {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ed-body);
+}
+
+/* The artifact marks list items with a solid ink square, never a disc. */
+.rr-bullets li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.rr-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  background: var(--ed-ink);
+}
+
+/* ---- Bands --------------------------------------------------------- */
+
+.rr-band {
+  padding: 96px 0;
+  border-bottom: 1px solid var(--ed-rule);
+}
+
+/* Both tinted bands take the same wash: the artifact alternates paper and
+   #f3f0ed and lets the hairlines do the dividing, rather than giving each
+   section its own tone. */
+.rr-band-paper,
+.rr-band-sand {
+  background: var(--ed-tint);
+}
+
+.rr-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.rr-split-center {
+  align-items: flex-start;
+}
+
+.rr-split-copy {
+  flex: 0 1 340px;
+  min-width: 0;
+}
+
+.rr-split-copy .rr-h2 {
+  margin-bottom: 16px;
+  max-width: 20ch;
+}
+
+.rr-split-copy .rr-lede {
+  font-size: 1rem;
+  max-width: 40ch;
+}
+
+/* ---- Comparison table ---------------------------------------------- */
+
+.rr-band-paper .rr-h2 {
+  margin-bottom: 40px;
+}
+
+.rr-table-wrap {
+  background: var(--ed-card);
+  border: 1px solid var(--ed-line);
+  overflow-x: auto;
+}
+
+.rr-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  min-width: 640px;
+}
+
+.rr-table th,
+.rr-table td {
+  text-align: left;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--ed-rule);
+}
+
+.rr-table tbody tr:last-child th,
+.rr-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* The artifact rules the report header off in accent, not in hairline grey -
+   it is the one place a red line separates rather than decorates. */
+.rr-table thead th {
+  font-family: var(--ed-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-bottom: 1px solid var(--ed-accent);
+}
+
+/* By position, not by class: Hugo 0.165 writeStats records no class attrs on
+   <th>, so a .rr-th-* selector is absent from hugo_stats.json and PurgeCSS
+   strips it from the production bundle. The visual gate cannot catch that -
+   baseline and candidate are both built purged. */
+.rr-table thead th:nth-child(2) {
+  color: var(--ed-accent);
+}
+
+.rr-table thead th:nth-child(3) {
+  color: var(--ed-muted);
+}
+
+.rr-table tbody th {
+  font-family: var(--ed-sans);
+  color: var(--ed-ink);
+  font-weight: 600;
+}
+
+.rr-table tbody td {
+  color: var(--ed-body);
+  font-weight: 400;
+}
+
+.rr-td-muted {
+  color: var(--ed-muted);
+}
+
+/* ---- Timeline ------------------------------------------------------ */
+
+.rr-steps {
+  flex: 1 1 520px;
+  min-width: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Hairline-separated rows, the way the artifact sets its FAQ - no connector
+   line, no dots. The rule between items IS the timeline. */
+.rr-steps li {
+  position: relative;
+  padding: 28px 0 28px 76px;
+  border-top: 1px solid var(--ed-rule);
+}
+
+.rr-steps li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* A boxed mono numeral, square - the artifact's STATUS chip applied to the
+   step marker. */
+.rr-step-num {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  min-width: 36px;
+  padding: 4px 0;
+  border: 1px solid var(--ed-ink);
+  color: var(--ed-accent);
+  font-family: var(--ed-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.rr-steps li:first-child .rr-step-num {
+  top: 2px;
+}
+
+.rr-step-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 10px;
+}
+
+.rr-steps p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--ed-body);
+}
+
+/* ---- Clients ------------------------------------------------------- */
+
+.rr-clients-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 64px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.rr-stats {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rr-stat-value {
+  display: block;
+  font-family: var(--ed-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ed-ink);
+}
+
+.rr-stat-label {
+  display: block;
+  font-family: var(--ed-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: var(--ed-muted);
+  max-width: 20ch;
+  margin-top: 8px;
+}
+
+.rr-cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.rr-case {
+  background: var(--ed-card);
+  border: 1px solid var(--ed-line);
+  padding: 32px;
+}
+
+/* The 24x2 accent rule the artifact opens every card with. */
+.rr-case::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ed-accent);
+  margin-bottom: 20px;
+}
+
+.rr-case p {
+  margin: 12px 0 20px;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--ed-body);
+}
+
+/* Square hairline chips, not pills - the register has no rounded corner
+   anywhere, and the artifact tags everything with a boxed mono label. */
+.rr-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.rr-pills li {
+  border: 1px solid var(--ed-line);
+  padding: 3px 9px;
+  font-family: var(--ed-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ed-muted);
+}
+
+/* The artifact's link CTA: mono, tracked, underlined by a real 1px accent
+   border rather than text-decoration. */
+.rr-case-link {
+  display: inline-block;
+  font-family: var(--ed-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ed-accent);
+  padding-bottom: 5px;
+}
+
+.rr-case-link:hover {
+  color: var(--ed-ink);
+  border-bottom-color: var(--ed-ink);
+}
+
+/* ---- Testimonial + closing band ------------------------------------ */
+
+/* The artifact has no dark band - its closing section stays on paper. The
+   anatomy under test does have one, and it is held constant across the
+   pilots, so the register is inverted here rather than dropped: ink ground,
+   paper type, and NO accent on text (2.31:1). */
+.rr-band-ink {
+  background: var(--ed-band-ink);
+  color: var(--ed-paper);
+  border-bottom: 0;
+}
+
+.rr-quote-col {
+  flex: 1.3 1 460px;
+  min-width: 0;
+}
+
+.rr-eyebrow-ink {
+  color: var(--ed-ink-label);
+}
+
+.rr-eyebrow-ink::before {
+  background: var(--ed-accent-ink);
+}
+
+.rr-quote {
+  margin: 0;
+  font-family: var(--ed-serif);
+  font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ed-paper);
+  max-width: 32ch;
+  text-wrap: pretty;
+}
+
+.rr-attrib {
+  margin: 28px 0 0;
+  font-family: var(--ed-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--ed-ink-muted);
+}
+
+.rr-attrib a {
+  color: var(--ed-ink-muted);
+}
+
+.rr-attrib a:hover {
+  color: var(--ed-paper);
+}
+
+.rr-strip-ink {
+  color: var(--ed-ink-muted);
+  margin-top: 32px;
+}
+
+.rr-strip-ink strong {
+  color: var(--ed-paper);
+}
+
+/* colour inherits from .rr-strip :where(a) above; only the hover differs */
+.rr-strip-ink a:hover {
+  color: var(--ed-paper);
+}
+
+.rr-card-ink {
+  flex: 1 1 340px;
+  min-width: 0;
+  background: var(--ed-card-ink);
+  border-color: rgb(255 255 255 / 14%);
+}
+
+.rr-card-ink .rr-card-title {
+  color: var(--ed-paper);
+  margin-bottom: 14px;
+}
+
+.rr-card-body {
+  font-size: 1rem;
+  color: var(--ed-ink-muted);
+  margin: 0 0 28px;
+}
+
+/* The accent fill would sit at 2.2:1 against the ink card - a button whose
+   own edge is invisible (1.4.11). Inverted, it is the loudest thing on the
+   band, which is what a closing CTA is for. */
+.rr-card-ink .rr-btn-primary,
+.rr-card-ink .rr-btn-primary:hover {
+  background: var(--ed-paper);
+  color: var(--ed-ink);
+}
+
+.rr-card-ink .rr-btn-primary:hover {
+  background: var(--ed-ink-label);
+}
+
+/* ---- Footer -------------------------------------------------------- */
+
+.rr-footer {
+  background: var(--ed-paper);
+  border-top: 1px solid var(--ed-rule);
+  padding: 64px 0 32px;
+}
+
+.rr-footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px;
+}
+
+.rr-footer-head {
+  font-family: var(--ed-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-muted);
+  margin: 0 0 20px;
+}
+
+.rr-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.rr-footer a {
+  color: var(--ed-body);
+  font-size: 0.9375rem;
+  text-decoration: none;
+}
+
+.rr-footer a:hover {
+  color: var(--ed-accent);
+}
+
+.rr-footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: center;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ed-rule);
+  font-family: var(--ed-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--ed-muted);
+}
+
+.rr-footer-legal a {
+  font-size: inherit;
+  color: var(--ed-muted);
+}
+
+/* ---- Narrow viewports ---------------------------------------------- */
+
+@media (width <= 640px) {
+  :root {
+    --ed-gutter: 24px;
+  }
+
+  .rr-nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .rr-nav-links {
+    gap: 16px 20px;
+    justify-content: flex-start;
+  }
+
+  /* Its own row: wrapping inline with the text links leaves whichever link
+     lands beside it looking orphaned. */
+  .rr-nav-links .rr-btn {
+    flex: 1 0 100%;
+  }
+
+  .rr-hero {
+    padding-top: 56px;
+    padding-bottom: 48px;
+    gap: 40px;
+  }
+
+  .rr-hero .rr-lede {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+
+  .rr-band {
+    padding: 48px 0;
+  }
+
+  .rr-split {
+    gap: 32px;
+  }
+
+  .rr-card {
+    padding: 24px 20px;
+  }
+
+  .rr-case {
+    padding: 22px;
+  }
+
+  .rr-steps li {
+    padding: 22px 0 22px 60px;
+  }
+
+  .rr-stats {
+    gap: 24px 32px;
+  }
+
+  .rr-stat-value {
+    font-size: 2rem;
+  }
+
+  .rr-btn {
+    flex: 1 1 auto;
+  }
+}

@@ -39,6 +39,7 @@ zero FL-Builder export files remain in any slice.
 | pagination | `list.html` (second bundle) | — (pagination.css only) | 0.2K → 0.2K | no-FL |
 | next-pilot | `layouts/next/single.html` (repo root, NOT in theme) | pages/next-pilot.css | new 2026-08-21 | v2 clean-slate rail (ADR-0006): css-variables + navigation.css + footer.css only — no style.css/586/base-4/legacy-theme-skin. Serves `/next/*` staging pages |
 | next-rescue-room | `layouts/next/landing.html` (repo root, NOT in theme) | pages/next-rescue-room.css | new 2026-08-21 | Design-register pilot A (10.01). The register skin is the bundle's ONLY file — not even css-variables — because the pilot renders its own nav and footer and must be judged on its own surface. Serves `/next/pilots/rescue-room/*`. A new register adds a row here, a skin file, and one line to the `$skins` dict |
+| next-editorial | `layouts/next/landing.html` (repo root, NOT in theme) | pages/next-editorial.css | new 2026-08-21 | Design-register pilot B, "Artifact Editorial" (10.01). Same rule as pilot A — the skin is the bundle's only file. Serves `/next/pilots/editorial/*`. Its three webfonts ship as ONE `static/css/fonts-editorial.css`, keyed by register rather than by family, so the shared `font:` frontmatter key stays one stylesheet + one preload |
 
 ¹ careers was a byte-identical verbatim move (3086-layout2 had zero dead
 nodes); the small growth vs 07-12 is upstream content drift (course v2 merge
