@@ -255,7 +255,7 @@ Questions each surface must answer, with evidence:
    concepts that store state.
 3. **Does it duplicate?** Two files half-covering one topic is how a config
    rots. Name the survivor and merge.
-4. **Does it earn 491?** For global skills, the question is not quality per file
+4. **Does the SET earn its size?** For global skills, the question is not quality per file
    but whether the set is navigable. Measure: how many are reachable by
    description-match for a real task, and how many have never been invoked.
 5. **What does it claim that it never measured?** The highest-yield defect class
