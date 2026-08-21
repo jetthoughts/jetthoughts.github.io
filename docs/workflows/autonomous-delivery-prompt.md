@@ -40,7 +40,14 @@ adjacent, defensible, and not asked for.
 
 ## 2. The loop
 
-One pass per unit of work. Never start unit N+1 before N is merged.
+One pass per unit of work. **The unit is the PR**: within it, commits proceed one
+at a time, each independently reviewed before it lands, and none is started while
+the previous one is still unreviewed. Do not open a second PR until this one
+merges.
+
+Saying "never start N+1 before N MERGES" would deadlock any bundled sprint — the
+appendix audits several surfaces in one PR, and no surface could ever merge on
+its own. WIP=1 constrains what is IN FLIGHT, not how many commits a PR contains.
 
 ```
 DISCOVER → DECIDE → BUILD → VERIFY → SHIP → LEARN
@@ -56,16 +63,47 @@ under everything built on it.
 
 | Stage | Output | Gate to leave it | Reviewed for |
 |---|---|---|---|
-| **DISCOVER** | what is already true, in the tree and in the world | you can cite a file:line or a URL for every premise | *is the premise real, and is it current?* |
+| **DISCOVER** | what is already true, in the tree and in the world | a reviewer has READ each cited line and confirmed it says what the premise claims | *is the premise real, and is it current?* |
 | **DECIDE** | the smallest unit that delivers value | you named what you are NOT doing | *is this the right unit, and is the scope honest?* |
 | **BUILD** | the shortest working diff | it runs | *correctness, and what it touches that it should not* |
 | **VERIFY** | evidence from the live artifact | a check that would FAIL if the work were wrong | *does the evidence support the claim — see §3* |
-| **SHIP** | merged, on a branch, via PR | gates quoted with their real numbers | *do the quoted gates say what you claim* |
-| **LEARN** | a durable learning captured, or an explicit "none this pass" | a cold session could repeat or avoid it | *is this derivable already, or genuinely new* |
+| **SHIP** | merged, on a branch, via PR | the gate matrix for THIS change class, quoted with real numbers — see below | *do the quoted gates say what you claim* |
+| **LEARN** | a durable learning captured, or "none this pass" **naming what was checked and found derivable** | a cold session could repeat or avoid it | *is this derivable already, or genuinely new* |
 
 The review weight scales with the stage's cost of being wrong, but none of them
 is zero. A cheap stage gets a cheap check — one skeptical pass with a named
-lens — not a skipped one.
+lens — not a skipped one, **and it leaves one line in the record**: lens,
+strongest objection found, disposition. Without that line the pass is
+undetectable afterwards, which makes it optional in practice.
+
+**This matters most where it feels least necessary.** A skipped LEARN is visible
+in a `log.md` diff; a skipped DISCOVER review leaves no trace at all — so the
+stages whose omission is invisible are exactly the ones the document calls most
+expensive to get wrong. Left unrecorded, the enforcement gradient runs backwards:
+strongest detection over the cheapest failures.
+
+### SHIP — the stage with no section, until now
+
+Review found this was one table row governing the only irreversible stage. The
+gates are **not** listed here, on purpose: they live in `CLAUDE.md` and they
+change. What belongs here is *which class you are in*, because picking the wrong
+class is the actual failure.
+
+| Change class | Gate |
+|---|---|
+| content only — markdown prose/frontmatter, no `themes/`, no `layouts/`, no CSS, no body HTML | `bin/hugo-build` + the rendered scroll gate. **Not** the visual suites. |
+| anything touching `themes/`, `layouts/`, `*.css`, or body HTML/SVG | `bin/qtest --changed` before every commit; the full `bin/test` **and** `bin/dtest` pair once at PR prep |
+| docs / instruction layer only | `bin/hugo-build`; internal review; the slow external reviewer does not gate the merge |
+
+Check the **actual diff**, not your intent — the class is decided by what the
+patch touches.
+
+PR mechanics that have bitten this repo, all in `CLAUDE.md` in full: branch and
+PR for everything including docs · **rebase, never merge** when master moves,
+after tagging a backup ref · `gh pr merge --auto` does **not** queue here, it
+merges immediately · a PR touching visuals must not open without the `dtest` leg.
+
+If you cannot name your change class, you are not ready to SHIP.
 
 **Continuous delivery:** every unit ships on its own. A unit that cannot ship
 alone was scoped wrong — split it. **Continuous discovery:** DISCOVER runs every
@@ -94,8 +132,11 @@ that check.** Everything below is a way of getting that wrong.
 - Run a **positive control** (something you know is present) and a **negative**
   (something you know is absent). Known-positive returning nothing means the
   instrument is broken, not the codebase.
-- Establish the **baseline of the baseline**: run the suite on pristine `master`
-  first, then compare **failure sets**, not pass/fail. Master red is normal —
+- Establish the **baseline of the baseline**: run the suite at the branch's
+  **merge base** (`git merge-base origin/master HEAD`) — not current `master`,
+  which has moved and will smuggle unrelated upstream failures into your delta —
+  then compare **failure sets**, not pass/fail. Rebase immediately before
+  measuring, and run both sides in the same environment. Master red is normal —
   `/okf:validate .okf --strict` is known-red by design (invoke it through the
   skill or the full script path - there is no `okf_validate` on `PATH`), and this repo's macOS
   screenshot baselines can be red in a worktree before you touch anything. The
@@ -157,12 +198,32 @@ check does not count as the second pair of eyes.
 | **Author** | makes the change, states the claim | produce the evidence for its own claim |
 | **Verifier** | independently re-derives the evidence | be briefed with the author's conclusions |
 
-Give the verifier the GOAL and the artifact — never the author's reasoning about
-why it works. See "brief with evidence, not conclusions" below.
+Give the verifier the GOAL, the artifact, **and the author's reasoning** — with
+the instruction to attack the assumptions in it and to produce **one measurement
+the author did not run**.
+
+*This reverses an earlier rule that said to withhold the reasoning, and the
+reviewer who overturned it proved the point by method: it read this document's
+own argument, attacked it, and produced ten findings the blind version would have
+forbidden it to look for.* Withholding the reasoning withholds the assumptions,
+and the assumptions are the attack surface. The defects that actually get through
+here are reasoning-shaped — stale premises, prescriptive claims, flattering
+denominators — not arithmetic.
+
+The original fear was real but misdiagnosed: a panel handed your **verdict**
+returns it wearing independent confidence. That is verdict contamination, and it
+is already handled by demanding measurements rather than verdicts. Exposing how
+you reasoned is not the same as telling them what to conclude.
 
 **Where the handoff lands, concretely.** The review happens *before the artifact
 leaves the workshop* — before the human sees it, before it is committed. Not
-before merge; by merge it is far too late.
+before merge.
+
+**These STACK, they do not replace each other:** internal review before every
+commit, plus the external companion once more before merge. The pre-commit gate
+is the one that catches a defect while it is still cheap; the pre-merge gate
+catches what only the whole diff reveals. Neither is optional because the other
+ran.
 
 | You produced | Peer review happens | Only then |
 |---|---|---|
@@ -184,7 +245,20 @@ Using the slowest one everywhere is how four-eyes gets quietly abandoned.
 | Reviewer | Use for | Cost |
 |---|---|---|
 | **Internal sub-agent** (`Agent` tool, distinct lens per call) | every per-stage review — plans, diffs before commit, findings, measurements, docs | fast; the default |
-| **External companion** (`/codex:review`) | **the final verify before merge, once** | slow — do not put it in the inner loop |
+| **External companion** (`/codex:review`) | the final verify before merge, once — **for user-facing changes** | slow — do not put it in the inner loop |
+
+**Select the reviewer by what the runtime actually has.** Some environments
+expose neither a sub-agent tool nor `/codex:review`. The requirement is a second
+pair of eyes, not a particular tool, so fall back in this order: another agent →
+an external reviewer → **a peer session** (`ListAgents` / `SendMessage`) → the
+human. If none is reachable, say so in the handback and mark the change
+UNREVIEWED rather than describing it as verified. A review you could not run is
+a disclosure, never a silent skip.
+
+**Docs-only and instruction-layer changes do not wait on the slow reviewer**
+(Paul, 2026-08-21). Ship on internal review plus CI, and apply the external
+findings afterwards as a follow-up. Holding a green docs PR behind a ten-minute
+reviewer buys nothing and teaches everyone that the gate is negotiable.
 
 `/codex:review` earns its cost at the merge gate, where the whole diff exists and
 being wrong is expensive. Spending it on a premise check or a two-line fix buys
@@ -195,16 +269,21 @@ at the end.** If the external reviewer finds something the internal ones should
 have caught, that is a signal about your per-stage lenses, not a reason to run
 the slow reviewer more often.
 
-**Panels must disagree by construction.** Give each reviewer a *distinct lens*
-and require a dissent. Same-lens reviewers produce a chorus that ratifies the
-author's error.
+**Panels must disagree by construction.** Give each reviewer a *distinct lens*.
+Require each to name **the strongest finding against shipping, with the evidence
+for it** — "no objection" is a permitted answer only when it names the check that
+was run. A dissent requirement satisfied by a manufactured nitpick is worse than
+none: it looks like friction and produces none. Same-lens reviewers produce a
+chorus that ratifies the author's error.
 
 Lenses that have actually caught things here: correctness · does-it-reproduce ·
 the cold-eyes reader who is not in your head · accessibility and contrast ·
 scope creep · "what does this claim that it did not measure".
 
-**Brief reviewers with evidence, never with conclusions.** A panel handed your
-inference returns it wearing independent-sounding confidence.
+**Brief reviewers with evidence and reasoning, never with a VERDICT.** The brief
+is itself auditable — the reviewer prompt is logged, so quote it as evidence, and
+it may contain no verdict-shaped sentence ("this is correct because…",
+"confirm that…"). A rule only the author can check is not a rule.
 
 **Ask for measurements, not verdicts.** A critic who returns an opinion can be
 argued with; a critic who returns a count cannot. "This resolves 1 URL, not 683"
@@ -220,7 +299,11 @@ reproduce it against the artifact it *cites* — not a copy you happen to have.
 Decline the half that overclaims and record the disposition with its evidence.
 
 **Stopping rules.**
-- One **clean** round is the signal to stop. One round is not.
+- One **clean** round is the signal to stop. One round is not. *Clean* means **no
+  confirmed blocking findings** - not "nobody objected". The dissent requirement
+  above applies to judgement panels choosing between options; it does not oblige
+  a verification round to manufacture an objection, and a round that ends with a
+  reviewer naming its strongest objection and showing it does not block IS clean.
 - **Round three on an instrument you invented means delete it**, not patch it.
   Each patch will be individually correct and expose the next hole.
 - Same blocking question three passes running means you are waiting on a
@@ -234,8 +317,10 @@ One unit in flight. One PR open. Merge it, then start the next.
 
 Parallelism is allowed in exactly two places:
 
-1. **Independent reviewers judging one artifact** — which must run in parallel
-   and must disagree.
+1. **Independent reviewers judging one artifact** — run in parallel, each with a
+   distinct lens and each required to make its strongest attempt at an
+   objection. Independent agreement is a valid outcome; manufactured
+   disagreement is not.
 2. **The OKF maintainer**, which this repo requires to run *in parallel with* the
    work rather than after it, so the bundle update rides the same commit
    (`AGENTS.md` §OKF maintenance). It does not touch the work's files, so it
@@ -259,7 +344,10 @@ questions. Written, discoverable artifacts are the default for every decision,
 finding, status change, and handoff.
 
 - Decisions → the doc that owns them, with the reasoning
-- Findings → the PR, with evidence
+- Findings → the PR when one exists, with evidence. **Most stage reviews happen
+  before any commit**, so their verdicts have no PR to land in: put those in the
+  commit message of the change they gated, or the sprint working doc. A finding
+  with nowhere to live fails this section's own cold-session bar.
 - Handoffs → an explicit list, in the artifact the next person will open
 - Debt → named and listed, never silent
 
@@ -357,4 +445,7 @@ Questions each surface must answer, with evidence:
 
 Sequence: cheapest signal first — orphan and duplicate detection are mechanical
 and can run before any judgement. Judgement passes come after, one surface at a
-time, WIP=1, each shipping its own PR.
+time, WIP=1 — **one COMMIT per surface on the audit branch, one PR for the audit**.
+Not one PR per surface: `CLAUDE.md` requires related work bundled into a single
+PR (Paul, 2026-04-30: *"let's have one big PR instead of small PR"*), and eight
+surfaces would otherwise become eight PRs.
