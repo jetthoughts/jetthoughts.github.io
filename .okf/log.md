@@ -51,6 +51,45 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - PR #540 hands 16 stale Linux baselines to the parallel PR
+
+Making the debt legible rather than silent, per the async-first rule. The
+phase-1a.4 recolour invalidates these Linux baselines, measured from CI run
+32460674225 on the branch:
+
+```
+desktop/blog/index/_pagination          desktop/services/_cta-contact_us
+desktop/blog/special/codeblocks/bare    desktop/services/_footer
+desktop/blog/special/codeblocks/indented desktop/services/_overview
+desktop/contact_us                      desktop/services/_services
+desktop/homepage/_clients               mobile/blog/index/_pagination
+desktop/homepage/_cta-contact_us        mobile/blog/special/codeblocks/indented
+desktop/homepage/_footer                mobile/services
+desktop/homepage/_services
+desktop/homepage/_technologies
+```
+
+All 16 are dark-band surfaces - footers, CTA bands, section bands, and pages
+whose captures include one. The reds are the predicted reds, checked against the
+run rather than assumed, per the "a slow failure and a fast failure are different
+failures" rule in [build/ci-gates.md](build/ci-gates.md).
+
+They are NOT recorded on this PR, deliberately. Paul 2026-08-19: Linux rides a
+parallel PR. A record was dispatched and dropped when screening found it carried
+content drift (see the previous entry), and re-dispatching to curate it here
+would take the same instruction the other way.
+
+Two facts that make merging safe rather than reckless:
+
+* `test.yml` triggers on `pull_request` and `workflow_dispatch` ONLY - there is
+  no `push` trigger, so merging does not turn master red; the job simply does not
+  run there.
+* On PRs the job is `continue-on-error` (`test.yml:72`), so it reports.
+
+Which is also exactly the silent-drift condition ci-gates.md already documents.
+This entry exists so the next session picks the list up from a document instead
+of re-deriving it from a run that will have aged out.
+
 ## 2026-08-21 - a blind baseline record bakes in content drift
 
 Dispatched `test.yml -f update-baselines=true` on the phase-1a.4 branch, because
