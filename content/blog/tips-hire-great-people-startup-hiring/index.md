@@ -5,7 +5,8 @@ remote_id: 1853537
 dev_to_id: 1853537
 dev_to_url: https://dev.to/jetthoughts/tips-to-hire-great-people-54ab
 title: Tips to hire great people
-description: At JetThoughts, we don't typically fire our employees. We always strive to find the right people who...
+description: "How a small remote team hires: why communication and fit weigh as heavily as technical skill when everyone ends up working with everyone."
+seo_override: true
 created_at: '2024-05-15T06:46:12Z'
 edited_at: '2024-11-26T16:04:41Z'
 draft: false

@@ -5,7 +5,8 @@ remote_id: 1852952
 dev_to_id: 1852952
 dev_to_url: https://dev.to/jetthoughts/what-are-the-steps-of-an-automation-test-plan-3l7k
 title: What are the steps of an Automation Test Plan?
-description: 'Step 1: Defining the Scope of Automation   Here are the things to consider while identifying...'
+description: "Scoping a test-automation plan: how to judge which tool fits your stack, and what to settle before anyone writes the first automated test."
+seo_override: true
 created_at: '2024-05-14T17:02:29Z'
 edited_at: '2024-12-05T14:45:35Z'
 draft: false

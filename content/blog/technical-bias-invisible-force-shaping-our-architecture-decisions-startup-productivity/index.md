@@ -5,7 +5,8 @@ remote_id: 2157559
 dev_to_id: 2157559
 dev_to_url: https://dev.to/jetthoughts/technical-bias-the-invisible-force-shaping-our-architecture-decisions-1cpc
 title: 'Technical Bias: The Invisible Force Shaping Our Architecture Decisions'
-description: 'After 20+ years in tech leadership, I''ve observed a pattern that should concern us all: our cognitive...'
+description: "Architecture reviews kill workable solutions for reasons that are not technical. How preference dressed as judgment shapes the stack you end up with."
+seo_override: true
 created_at: '2024-12-15T11:38:39Z'
 edited_at: '2024-12-15T12:10:31Z'
 draft: false

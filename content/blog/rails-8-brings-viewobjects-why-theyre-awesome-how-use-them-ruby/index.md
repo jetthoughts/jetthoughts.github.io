@@ -5,7 +5,8 @@ remote_id: 2130465
 dev_to_id: 2130465
 dev_to_url: https://dev.to/jetthoughts/rails-8-brings-viewobjects-why-theyre-awesome-and-how-to-use-them-323c
 title: 'Rails 8 Brings ViewObjects: Why They’re Awesome and How to Use Them'
-description: 'Rails 8 brings an exciting addition to its arsenal: ViewComponents, powered by the...'
+description: "ViewComponents put UI logic in a Ruby class instead of scattering it across views, helpers and partials. Building a product card to show how."
+seo_override: true
 date: 2024-12-02
 created_at: '2024-12-02T06:54:57Z'
 edited_at: '2024-12-12T12:47:03Z'

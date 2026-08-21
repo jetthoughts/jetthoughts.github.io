@@ -5,7 +5,8 @@ remote_id: 2167581
 dev_to_id: 2167581
 dev_to_url: https://dev.to/jetthoughts/from-slim-to-erb-a-developers-journey-back-to-classic-templates-3ipd
 title: 'From SLIM to ERB: A Developer''s Journey Back to Classic Templates'
-description: In a recent discussion on Reddit, a developer shared their experience of transitioning back to ERB...
+description: "A developer moved back to ERB after years on Slim. What pushed the switch, and where each templating engine still earns its place in Rails."
+seo_override: true
 created_at: '2024-12-20T23:09:29Z'
 edited_at: '2025-01-30T03:26:35Z'
 date: 2024-12-20

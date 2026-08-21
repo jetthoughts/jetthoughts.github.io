@@ -5,7 +5,8 @@ remote_id: 1853596
 dev_to_id: 1853596
 dev_to_url: https://dev.to/jetthoughts/a-typical-day-at-jetthoughts-2p9
 title: A typical day at JetThoughts
-description: 'In this article, I want to tell you about a typical day at JetThoughts: culture, values, and the...'
+description: "What a working day at JetThoughts actually looks like, and how the team's self-management principle plays out on a live client project."
+seo_override: true
 created_at: '2024-05-15T07:22:32Z'
 edited_at: '2024-11-26T16:04:20Z'
 draft: false

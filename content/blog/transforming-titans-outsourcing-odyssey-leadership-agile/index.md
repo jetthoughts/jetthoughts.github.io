@@ -5,7 +5,8 @@ remote_id: 1911972
 dev_to_id: 1911972
 dev_to_url: https://dev.to/jetthoughts/transforming-titans-outsourcing-odyssey-4mb8
 title: 'Transforming Titans: A Novel Journey of Agile Leadership in Outsourcing'
-description: 'Chapter 1: The New Beginning   Paul Keen stood in his new office, his mind racing with...'
+description: "A CTO hired to turn an outstaffing company into an outsourcing provider, and what had to change before clients bought solutions instead of people."
+seo_override: true
 created_at: '2024-07-04T19:54:09Z'
 edited_at: '2024-11-25T15:33:13Z'
 date: 2024-07-04
