@@ -51,6 +51,45 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - two lanes on the redesign, and three confusions removed
+
+Paul opened a from-scratch design exploration ALONGSIDE the extraction, not
+instead of it. Recorded everywhere a cold session might read one as the other:
+`docs/projects/2608-site-design-system/README.md`, the rollout plan, and
+[workflows/site-redesign-rollout.md](workflows/site-redesign-rollout.md).
+
+**Extraction governs; discovery has no authority.** ADR-0003 states plainly that
+this is "extraction and propagation, not a redesign" - the system comes from the
+course page and `/services/vibe-code-rescue/`. The discovery lane produces
+candidate designs and never a PR; it wins only via a superseding ADR carrying
+evidence, because 2.1/2.2 already shipped the extracted system to the blog,
+which is 77% of the site's Google traffic. Brand invariants (logo, ruby, display
+face, covers) are fixed even in discovery - "from scratch" means layout,
+structure and components, not a rebrand.
+
+The discovery brief deliberately never mentions the course page. Anchoring it
+there would reproduce extraction wearing a different hat and prove nothing.
+First artifact: Stitch project `4487418121858436329`, which produced a system it
+called "Artifact Editorial" and, unprompted, rejected the logo wall, the
+testimonial carousel and the repeated "Book a call".
+
+Three confusions removed while writing this up:
+
+1. **"Held until the read is in" hid a date.** The 2.4 gate needs a read due
+   approximately 2026-09-17 - 28 days after the `e1fa5409d` DEPLOY, which was
+   never confirmed. It reads as imminent and is not. Anything depending on 2.4
+   is parked until mid-September, and the first action on picking it up is
+   confirming that live date.
+2. **Phase 2.5 has no spec.** 2.1 and 2.2 each got one; 2.5 is nine words in a
+   table cell. Its first deliverable is `20.05`, not code - and the binding
+   constraint is canon-sensitive copy across 12 pages, not the code-line cap.
+   Only 2 of 12 service pages carry screenshot baselines.
+3. **The sequencing decision was unrecorded.** Next unit is 2.3, not 2.5,
+   decided by a three-lens panel that SPLIT - the ICP lens ranked service pages
+   first, the risk lens won on facts the ICP lens lacked (no spec, 2/12
+   baselines, and 2.3 rehearses the gate chain that failed in #540 at near-zero
+   blast radius).
+
 ## 2026-08-21 - what 15 review findings on one document taught, and one rule reversed
 
 Closing the OKF gap on PRs #541/#543: the delivery prompt shipped and was then
