@@ -37,15 +37,20 @@ distinct checks became three identical entries, losing their order. Convert with
 the offset the stamp was WRITTEN at (recoverable from the session or the
 commit), or mark it unknown - never overwrite history with now.
 
-**`okf_validate` does NOT check the trust fields, so a green run says nothing
-about them** (2026-08-21, measured). A probe bundle carrying a malformed event -
-`verified: [{ by: claude/opus-5 }]`, no `at` - is reported **conformant with 3
-warnings** by BOTH validators on this machine. Conformance is §9 only: parseable
-frontmatter with a non-empty `type`. Six review rounds on PR #538 were spent
-almost entirely on `generated`/`verified` correctness, and every
-`okf_validate ... exit=0` quoted alongside them was silent on the subject. Quote
-that gate for what it covers - structure - and treat trust metadata as
-review-checked, not tool-checked.
+**`okf_validate` checks the trust fields, but a MISSING `at` slips through**
+(2026-08-21, measured). The v0.2 checker's `check_trust` does real work - it
+requires `generated` to be a mapping, requires `generated.by`, validates actor
+shapes, and rejects non-RFC-3339 instants - and `--strict` turns every one of
+those warnings into a failure. The one hole found by probe: `check_instant`
+returns early when the value is `None`, so an event like
+`verified: [{ by: claude/opus-5 }]` with no `at` is reported **conformant** by
+both validators on this machine.
+
+Two things follow. A green run is real evidence about trust-field SHAPE - do not
+dismiss it. But it cannot tell you an event has a time, and it can never tell you
+a recorded time is TRUE; six review rounds on PR #538 turned on exactly that, and
+no tool caught any of it. Conformance itself is narrow: v0.2 **§11** (parseable
+frontmatter, non-empty `type`), not the trust family.
 
 **There are TWO OKF specs on this machine and their section numbers disagree.**
 The `/okf:okf` skill ships and points at
@@ -58,9 +63,10 @@ lifecycle and attestation first-class, and ITS §5.2 is "Trust: `generated` and
 
 That mismatch cost two wrong rejections of a correct review finding: §5.2 was
 looked up in the v0.1 copy, found to say something else, and the finding declared
-miscited - twice. The validators differ too (261 vs 565 lines; the v0.2 one adds
-§13.1 `sources` checks and reports 84 warnings here against the v0.1 one's 90).
-When a spec section is cited, resolve WHICH copy before disputing it.
+miscited - twice. The validators differ in coverage too (261 vs 565 lines; only
+the v0.2 one checks the trust family and the §13.1 `sources` convention), so a
+warning count is only meaningful next to the validator that produced it - and is
+not worth writing down at all, since every edit to this bundle changes it.
 
 # Sections
 

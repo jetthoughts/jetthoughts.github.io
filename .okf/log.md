@@ -50,37 +50,48 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
-## 2026-08-21 - the validator does not check trust fields, and there are two specs
+## 2026-08-21 - what okf_validate actually guards, and the two-spec trap
 
 Recorded in the bundle-root [index.md](index.md), where the v0.2 trust
-conventions live, because both facts change how a session should read a green
-gate.
+conventions live.
 
-**`okf_validate` is silent on `generated`/`verified`.** Measured with a probe
-bundle carrying `verified: [{ by: claude/opus-5 }]` - a malformed event, no `at`.
-BOTH validators on this machine report it **conformant with 3 warnings**.
-Conformance is §9 only: parseable frontmatter with a non-empty `type`. Six review
-rounds on PR #538 were spent almost entirely on trust-field correctness, and
-every `okf_validate ... exit=0` quoted alongside them covered none of it. The
-gate is structural; trust metadata is review-checked, not tool-checked.
+**The validator checks trust-field SHAPE; a missing `at` is the hole.** The v0.2
+`check_trust` requires `generated` to be a mapping, requires `generated.by`,
+validates actor shapes, and rejects non-RFC-3339 instants, and `--strict` turns
+each warning into a failure. But `check_instant` returns early on `None`, so
+`verified: [{ by: claude/opus-5 }]` with no `at` passes both validators on this
+machine.
 
-Note what the probe refuted: the expectation going in was that the v0.2 validator
-would catch what the v0.1 one missed. It does not. Running it was the difference
-between recording that and recording a plausible guess.
+The first draft of this entry claimed the validator was "silent on the trust
+fields" - generalising a one-hole probe into blanket silence, in an entry about
+not over-reading measurements. Review caught it. The measurement was real; the
+sentence written on top of it was not, which is the same descriptive-vs-
+prescriptive split recorded in [workflows/review-swarm.md](workflows/review-swarm.md).
+
+What survives: a green run is real evidence about shape and should not be
+dismissed, but it cannot tell you an event HAS a time, and it can never tell you
+a recorded time is TRUE. Six review rounds on #538 turned on exactly that and no
+tool caught any of it. Conformance is v0.2 §11 - parseable frontmatter and a
+non-empty `type` - not the trust family. (The first draft cited §9, which is the
+v0.1 numbering; see below for why that keeps happening.)
 
 **Two OKF specs, disagreeing section numbers.** The `/okf:okf` skill points at
-the plugin-cache copy, which is **v0.1** (340 lines), calls itself "the source of
-truth", never defines `generated` or `verified`, and numbers §5.2 as "Relative
-links". The v0.2 spec at `~/.agents/skills/okf/reference/SPEC.md` (792 lines)
-makes provenance/trust/lifecycle/attestation first-class and numbers §5.2 as
-"Trust: `generated` and `verified`". This bundle is `okf_version: "0.2"`, so v0.2
-governs.
+the plugin-cache copy: **v0.1**, 340 lines, calls itself "the source of truth",
+never defines `generated` or `verified`, §5.2 = "Relative links". The v0.2 spec
+at `~/.agents/skills/okf/reference/SPEC.md` is 792 lines, makes
+provenance/trust/lifecycle/attestation first-class, §5.2 = "Trust: `generated`
+and `verified`". This bundle is `okf_version: "0.2"`, so v0.2 governs. The
+validators differ in coverage as well (261 vs 565 lines; only the v0.2 one checks
+the trust family and the §13.1 `sources` convention).
 
 That mismatch produced two confident wrong rejections of a correct review finding
-on #538 - §5.2 looked up in the wrong copy, twice. The validators differ as well
-(261 vs 565 lines; the v0.2 one adds §13.1 `sources` checks and reports 84
-warnings on this bundle against the v0.1 one's 90), which means a warning total
-is only meaningful next to the validator that produced it.
+on #538, and the §9/§11 slip above. When a spec section is cited, resolve WHICH
+copy before disputing it.
+
+No warning totals are recorded here. The first draft quoted two, and they were
+stale in the same checkout - this entry's own heading changes them. That is the
+self-invalidating-count rule from
+[build/test-gates.md](build/test-gates.md), broken one round after writing it.
 
 ## 2026-08-21 - what survives adversarial review, and when to stop patching
 
