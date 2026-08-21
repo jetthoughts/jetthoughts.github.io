@@ -47,6 +47,8 @@ PAGE_TESTS = {
   "friday-report" => "friday_report",
   # v2 clean-slate rail (ADR-0006): layouts/next/* + pages/next-pilot.css
   "next-pilot" => "next_pilot",
+  # Design-register pilots on the same rail: pages/next-<register>.css
+  "next-rescue-room" => "next_rescue_room",
   "simple-page" => "privacy_policy",
   # critical/privacy-policy-critical.css maps by basename; alias it to the
   # simple-page tests so a touch there doesn't abort as an unknown key
@@ -76,6 +78,12 @@ def pages_for(file)
   when %r{^themes/beaver/assets/css/critical/([^/]+)-critical\.css$} then [Regexp.last_match(1)]
   when %r{^themes/beaver/layouts/blog/}, %r{^content/blog/} then %w[blog-list blog-single]
   when %r{^layouts/next/}, %r{^content/next/} then PAGE_TESTS.keys.grep(/^next-/) # every v2 key; shared v2 templates affect them all
+  # Self-hosted webfonts and the @font-face files that declare them change how
+  # EVERY page renders text, but they live outside the asset CSS tree, so the
+  # rules below never saw them - a fonts-only diff mapped to nil and qtest
+  # exited 0 having tested nothing. Same false-green class the untracked-file
+  # guard above was added for.
+  when %r{^themes/beaver/static/(css|fonts)/} then :all
   # Terminal: root layouts/ had NO case at all, so a root-layouts-only diff
   # mapped to nil and qtest exited 0 having tested nothing (false green).
   when %r{^themes/beaver/assets/css/}, %r{^themes/beaver/layouts/}, %r{^layouts/} then :all

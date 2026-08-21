@@ -203,6 +203,18 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "next/pilot"
   end
 
+  # Design-register pilot A - see the desktop test. The register is judged on a
+  # phone too: the ICP arrives there, and the comparison table is the one
+  # element that has to survive the narrow column.
+  def test_next_rescue_room
+    visit "/next/pilots/rescue-room/fractional-cto/"
+
+    assert_text "A technical partner in days, not months of hiring"
+    assert_text "What you're comparing it against"
+
+    assert_stable_screenshot "next/rescue-room"
+  end
+
   def test_free_consultation
     visit "/"
     # Add more specific scoping for Talk to an Expert button

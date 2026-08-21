@@ -1,0 +1,238 @@
+{{/* Design-register pilot landing page (/next/pilots/<register>/…).
+
+     One template, one anatomy - hero, comparison table, timeline, clients,
+     testimonial + closing CTA, footer - wearing whichever register the stub
+     names. `register` picks the CSS file AND the bundle name (Concat races on
+     a duplicate bundleName, so it must stay unique repo-wide); every word on
+     screen comes from the stub's frontmatter. Pilots B and C reuse this file
+     by changing those two things, which is the whole point of piloting the
+     REGISTER rather than the anatomy (10.01 research). */}}
+
+{{ define "header" }}
+  {{- $register := .Params.register -}}
+  {{/* Deliberately the ONLY stylesheet: no css-variables, no navigation.css,
+       no footer.css. The register defines its own surface from scratch and
+       renders its own chrome, so nothing from the legacy cascade can leak in
+       and make the comparison unfair. */}}
+  {{/* Literal resources.Get calls, one per register - a printf'd path is
+       invisible to test/unit/css_orphan_guard_test.rb, which is the only
+       thing standing between this rail and a graveyard of dead skins. A new
+       register adds one line here. */}}
+  {{- $skins := dict
+    "rescue-room" (resources.Get "css/pages/next-rescue-room.css")
+  -}}
+  {{- $resources := slice (index $skins $register) -}}
+  {{ partial "assets/css-processor.html" (dict "resources" $resources "bundleName" (printf "next-%s" $register)) }}
+  {{- with .Params.font }}
+  <link rel="preload" href="{{ .preload }}" as="font" type="font/woff2" crossorigin>
+  <link href="{{ .css }}" rel="stylesheet">
+  {{- end }}
+{{ end }}
+
+{{ define "nav" }}
+  {{- with .Params.nav }}
+  <nav class="rr-nav" aria-label="Primary">
+    <a class="rr-brand" href="{{ relURL "/" }}">
+      <span class="rr-brand-mark" aria-hidden="true">JT</span>JetThoughts
+    </a>
+    <div class="rr-nav-links">
+      {{- range .links }}
+      <a href="{{ relURL .url }}">{{ .name }}</a>
+      {{- end }}
+      {{- with .cta }}
+      <a class="rr-btn rr-btn-ghost" href="{{ relURL .url }}">{{ .name }}</a>
+      {{- end }}
+    </div>
+  </nav>
+  {{- end }}
+{{ end }}
+
+{{ define "main" }}
+  {{- $p := .Params }}
+
+  <header class="rr-hero">
+    <div class="rr-hero-copy">
+      {{- with $p.hero }}
+      <p class="rr-eyebrow">{{ .eyebrow }}</p>
+      <h1 class="rr-h1">{{ .headline }}</h1>
+      <p class="rr-lede">{{ .subhead }}</p>
+      <div class="rr-cta-row">
+        <a class="rr-btn rr-btn-primary" href="{{ relURL .primary.url }}">{{ .primary.name }}</a>
+        <a class="rr-btn rr-btn-ghost" href="{{ relURL .secondary.url }}">{{ .secondary.name }}</a>
+      </div>
+      <p class="rr-derisk">{{ .derisk }}</p>
+      <ul class="rr-strip">
+        {{- range .stats }}
+        <li>{{ . | markdownify }}</li>
+        {{- end }}
+      </ul>
+      {{- end }}
+    </div>
+    {{- with $p.monthOne }}
+    <aside class="rr-card rr-month-one">
+      <h2 class="rr-card-title">{{ .headline }}</h2>
+      <ul class="rr-bullets">
+        {{- range .items }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+    </aside>
+    {{- end }}
+  </header>
+
+  {{- with $p.comparison }}
+  <section class="rr-band rr-band-paper">
+    <div class="rr-container">
+      <p class="rr-eyebrow">{{ .eyebrow }}</p>
+      <h2 class="rr-h2 rr-h2-narrow">{{ .headline }}</h2>
+      <div class="rr-table-wrap">
+        <table class="rr-table">
+          <thead>
+            <tr>
+              {{/* No class attributes on these th: Hugo 0.165 writeStats does
+                   not record class attrs on <th>, so PurgeCSS deletes any
+                   selector that only ever matches one. Column colour comes
+                   from nth-child in the stylesheet. */}}
+              <th scope="col"><span class="sr-only">What is being compared</span></th>
+              <th scope="col">{{ .fractionalLabel }}</th>
+              <th scope="col">{{ .fulltimeLabel }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{- range .rows }}
+            <tr>
+              <th scope="row">{{ .label }}</th>
+              <td>{{ .fractional }}</td>
+              <td class="rr-td-muted">{{ .fulltime }}</td>
+            </tr>
+            {{- end }}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  {{- end }}
+
+  {{- with $p.steps }}
+  <section class="rr-band">
+    <div class="rr-container rr-split">
+      <div class="rr-split-copy">
+        <p class="rr-eyebrow">{{ .eyebrow }}</p>
+        <h2 class="rr-h2">{{ .headline }}</h2>
+        <p class="rr-lede">{{ .intro }}</p>
+      </div>
+      <ol class="rr-steps">
+        {{- range $i, $step := .list }}
+        <li>
+          <span class="rr-step-num" aria-hidden="true">{{ add $i 1 }}</span>
+          <h3 class="rr-step-title">{{ $step.title }}</h3>
+          <p>{{ $step.body }}</p>
+        </li>
+        {{- end }}
+      </ol>
+    </div>
+  </section>
+  {{- end }}
+
+  {{- with $p.clients }}
+  <section class="rr-band rr-band-sand">
+    <div class="rr-container">
+      <div class="rr-clients-head">
+        <div>
+          <p class="rr-eyebrow">{{ .eyebrow }}</p>
+          <h2 class="rr-h2 rr-h2-narrow">{{ .headline }}</h2>
+        </div>
+        <ul class="rr-stats">
+          {{- range .stats }}
+          {{/* Company tenure DERIVES from foundingYear - a frozen number in
+               frontmatter is wrong every January (claims-canon). */}}
+          {{- $value := .value }}
+          {{- if eq .derived "tenure" }}
+            {{- $value = printf "%d+" (sub now.Year (int site.Params.foundingYear)) }}
+          {{- end }}
+          <li>
+            <span class="rr-stat-value">{{ $value }}</span>
+            <span class="rr-stat-label">{{ .label }}</span>
+          </li>
+          {{- end }}
+        </ul>
+      </div>
+      <div class="rr-cases">
+        {{- range .cases }}
+        <article class="rr-card rr-case">
+          <h3 class="rr-card-title">{{ .name }}</h3>
+          <p>{{ .body }}</p>
+          <ul class="rr-pills">
+            {{- range .tech }}
+            <li>{{ . }}</li>
+            {{- end }}
+          </ul>
+          {{/* Three identical link texts on one screen give a screen-reader
+               user nothing to choose between (WCAG 2.4.4) - the client name
+               rides along, hidden. */}}
+          <a class="rr-case-link" href="{{ relURL .url }}">Read the case study<span class="sr-only">: {{ .name }}</span> <span aria-hidden="true">&rarr;</span></a>
+        </article>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+  {{- end }}
+
+  {{/* Guarded like every other band: a register that omits both keys should
+       render no band at all, not an empty dark stripe. */}}
+  {{- if or $p.testimonial $p.closing }}
+  <section class="rr-band rr-band-ink">
+    <div class="rr-container rr-split rr-split-center">
+      {{- with $p.testimonial }}
+      <div class="rr-quote-col">
+        <p class="rr-eyebrow rr-eyebrow-ink">{{ .eyebrow }}</p>
+        <blockquote class="rr-quote">&ldquo;{{ .quote }}&rdquo;</blockquote>
+        <p class="rr-attrib">{{ .attribution }} &middot; <a href="{{ .sourceUrl }}" rel="noopener">{{ .sourceName }}</a></p>
+        <ul class="rr-strip rr-strip-ink">
+          {{- range .proof }}
+          <li>{{ . | markdownify }}</li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
+      {{- with $p.closing }}
+      <aside class="rr-card rr-card-ink">
+        <h2 class="rr-card-title">{{ .headline }}</h2>
+        <p class="rr-card-body">{{ .body }}</p>
+        <a class="rr-btn rr-btn-primary" href="{{ relURL .cta.url }}">{{ .cta.name }}</a>
+      </aside>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+{{ end }}
+
+{{ define "footer" }}
+  {{- with .Params.footer }}
+  <footer class="rr-footer">
+    <div class="rr-container rr-footer-cols">
+      {{- range .columns }}
+      <div>
+        <h2 class="rr-footer-head">{{ .heading }}</h2>
+        <ul>
+          {{- range .links }}
+          <li><a href="{{ relURL .url }}">{{ .name }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
+      <div>
+        <h2 class="rr-footer-head">Contact</h2>
+        <ul>
+          <li><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
+          <li><a href="tel:{{ site.Params.phone }}">{{ site.Params.phone }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rr-container rr-footer-legal">
+      <span>&copy; {{ now.Year }} JetThoughts</span>
+      <a href="{{ relURL "privacy-policy/" }}">Privacy Policy</a>
+    </div>
+  </footer>
+  {{- end }}
+{{ end }}

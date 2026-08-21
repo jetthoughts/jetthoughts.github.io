@@ -1,0 +1,88 @@
+{{/* Landing baseof for the /next/ design-register pilots. Hugo picks
+     <layout>-baseof.html, so any page with `layout: landing` gets this
+     instead of layouts/next/baseof.html.
+
+     Forked from layouts/next/baseof.html. The <head> is kept VERBATIM -
+     enhanced-meta-tags emits the noindex that makes /next/ safe to stage on
+     the production host, and the schema partials, favicons and the analytics
+     gate all ride with it. The skip link, <main id="main-content"> and the
+     service-worker block are kept for the same reason.
+
+     DROPPED vs the sibling baseof: the site header and footer partials and
+     the mermaid block. A register pilot renders its OWN nav and footer from
+     the blueprint - reusing the site chrome would put the register being
+     tested next to the register being replaced, which is the one comparison
+     the demo must not make. No /next/ pilot carries mermaid. */}}
+<!doctype html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{ partial "seo/enhanced-meta-tags.html" . }}
+
+    {{ block "header" . }}{{ end }}
+
+    {{ partialCached "page/favicons.html" . "favicons" }}
+    {{/* Analytics (GA4 + Clarity) load ONLY on the real production host -
+         local dev, test builds and any other baseURL never inject tracking. */}}
+    {{/* analytics stays OFF for noindexed staging pages so /next/ testing
+         never pollutes the engagement read (ADR-0004 gate). */}}
+    {{ if and (strings.Contains site.BaseURL "jetthoughts.com") (not .Params.noindex) }}
+    {{ partial "page/analytics.html" . }}
+    {{ end }}
+    {{ $favicon := resources.Get "/img/favicon/favicon.ico" | fingerprint "md5" }}
+    <link rel="shortcut icon" href="{{ $favicon.Permalink }}" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    {{ $browserConfig := resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint "md5" }}
+    <meta
+      name="msapplication-config"
+      content="{{ $browserConfig.Permalink }}" />
+    <meta name="theme-color" content="#ffffff" />
+
+    {{/* Enhanced SEO Schema Markup */}}
+    {{ partial "seo/enhanced-organization-schema.html" . }}
+    {{ partial "seo/comprehensive-service-schema.html" . }}
+    {{ partial "seo/article-schema.html" . }}
+    {{ partial "seo/breadcrumb-schema.html" . }}
+    {{ partial "seo/faq-schema.html" . }}
+  </head>
+
+  <body lang="en">
+    <a class="skip-link sr-only" href="#main-content">Skip to main content</a>
+
+    {{/* The pilot's own nav and footer sit OUTSIDE <main> - inside it, the
+         skip link would land the reader back on top of the navigation it
+         exists to skip. */}}
+    {{ block "nav" . }}{{ end }}
+
+    <main id="main-content" role="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ block "footer" . }}{{ end }}
+
+    {{/* page/site-scripts is deliberately absent: its only payload is
+         navigation.js, which unconditionally binds to .js-mobile-menu-opener
+         from the site header partial this layout drops - including it threw
+         "Cannot read properties of null" on every pilot page load. A pilot
+         that grows real interactive chrome adds its own script. */}}
+    <script>
+      // Skip SW registration on local dev so cache never serves stale content
+      // during iteration. Production hosts keep SW for offline + repeat visits.
+      if (
+        "serviceWorker" in navigator &&
+        location.hostname !== "localhost" &&
+        !location.hostname.startsWith("127.") &&
+        location.hostname !== "0.0.0.0"
+      ) {
+        navigator.serviceWorker.register("/sw.js?v={{ now.Unix }}");
+      } else if ("serviceWorker" in navigator && navigator.serviceWorker.getRegistrations) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          regs.forEach(function (reg) { reg.unregister(); });
+        });
+      }
+    </script>
+  </body>
+</html>
