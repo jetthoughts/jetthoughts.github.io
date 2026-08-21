@@ -50,6 +50,32 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - test the instrument, not just the result
+
+Recorded in [build/test-gates.md](build/test-gates.md) as its own rule, because
+it is distinct from the NULL CHANGE beside it: a null change does nothing and is
+at least silent about it, while a wrong instrument RUNS, returns a plausible
+number, and gets believed.
+
+Two instances tonight:
+
+* `okf_validate .okf --strict | grep -c 'warn'` also matches the summary line
+  `✓ conformant (N warning(s))`, so every total published on 2026-08-21 was one
+  high - including the ones inside an argument about not trusting written
+  numbers.
+* `grep -rc 'c-button--primary' _dest/public-dev/css/*.css` returns 0 whether or
+  not the component is adopted: `public-dev` is a DEV build with PurgeCSS
+  disabled, and that CSS ships INLINE in the HTML rather than under `css/`.
+
+The second is the pure case - **it cannot return a different answer**, so it
+carries no information, and it was quoted as proof. The test that catches both
+takes one run: execute the command against a case where the answer is KNOWN to
+differ and confirm the two disagree. If they cannot disagree, it is a ritual,
+not a measurement.
+
+This is "produce the check that would fail if the claim were false" turned on
+the check itself.
+
 ## 2026-08-21 - stop recording warning totals; they cannot stay true
 
 A sync check found the header's stated total stale AGAIN - 87 written, 88

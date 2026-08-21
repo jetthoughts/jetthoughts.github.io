@@ -6,13 +6,14 @@ tags: [testing, visual-regression, gates]
 status: stable
 generated: { by: claude/opus-4-8, at: 2026-08-12T20:20:00Z }
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T04:01:38Z }
   - { by: claude/opus-5, at: 2026-08-21T03:27:09Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/fable-5, at: 2026-08-01T11:30:00Z }
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
   - { by: claude/opus-5, at: 2026-08-20T21:43:35Z }
   - { by: claude/opus-5, at: 2026-08-20T21:47:30Z }
-timestamp: 2026-08-21T03:27:09Z
+timestamp: 2026-08-21T04:01:38Z
 ---
 
 # The suites
@@ -259,6 +260,23 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   style, a rendered pixel, a test that newly runs, a byte in the built output -
   and check that one thing. "The suite is still green" is consistent with
   having changed nothing at all.
+
+- **Test the instrument, not just the result: ask what your command would
+  return if the claim were FALSE** (2026-08-21, two instances). A null change
+  does nothing and is at least silent about it. A wrong instrument RUNS,
+  returns a plausible number, and is believed.
+
+  | Command | Why it could not answer the question |
+  |---|---|
+  | `okf_validate .okf --strict \| grep -c 'warn'` | the summary line `✓ conformant (N warning(s))` matches too, so every total was one high - every count published on 2026-08-21 was inflated, including the ones inside an argument about not trusting written numbers |
+  | `grep -rc 'c-button--primary' _dest/public-dev/css/*.css` | `public-dev` is a DEV build with PurgeCSS disabled, and that CSS ships INLINE in the HTML - the command returns 0 whether or not the component is adopted |
+
+  The second is the pure case: **it returns the same answer either way**, so it
+  carries no information at all, and it was quoted as proof. The check that
+  catches both takes one run - execute the command against a case where the
+  answer is known to differ (`grep -c '! warn'` against the record count; the
+  same grep against a PRODUCTION tree) and confirm the two disagree. If they
+  cannot disagree, you have a ritual, not a measurement.
 
 - **An empty query result is not evidence of absence** (2026-08-21). Hunting a
   black band on `/services/`, `document.querySelectorAll('path.fl-shape')`
