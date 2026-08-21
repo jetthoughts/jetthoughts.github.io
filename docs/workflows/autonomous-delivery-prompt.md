@@ -40,7 +40,14 @@ adjacent, defensible, and not asked for.
 
 ## 2. The loop
 
-One pass per unit of work. Never start unit N+1 before N is merged.
+One pass per unit of work. **The unit is the PR**: within it, commits proceed one
+at a time, each independently reviewed before it lands, and none is started while
+the previous one is still unreviewed. Do not open a second PR until this one
+merges.
+
+Saying "never start N+1 before N MERGES" would deadlock any bundled sprint — the
+appendix audits several surfaces in one PR, and no surface could ever merge on
+its own. WIP=1 constrains what is IN FLIGHT, not how many commits a PR contains.
 
 ```
 DISCOVER → DECIDE → BUILD → VERIFY → SHIP → LEARN
@@ -125,8 +132,11 @@ that check.** Everything below is a way of getting that wrong.
 - Run a **positive control** (something you know is present) and a **negative**
   (something you know is absent). Known-positive returning nothing means the
   instrument is broken, not the codebase.
-- Establish the **baseline of the baseline**: run the suite on pristine `master`
-  first, then compare **failure sets**, not pass/fail. Master red is normal —
+- Establish the **baseline of the baseline**: run the suite at the branch's
+  **merge base** (`git merge-base origin/master HEAD`) — not current `master`,
+  which has moved and will smuggle unrelated upstream failures into your delta —
+  then compare **failure sets**, not pass/fail. Rebase immediately before
+  measuring, and run both sides in the same environment. Master red is normal —
   `/okf:validate .okf --strict` is known-red by design (invoke it through the
   skill or the full script path - there is no `okf_validate` on `PATH`), and this repo's macOS
   screenshot baselines can be red in a worktree before you touch anything. The
@@ -237,6 +247,14 @@ Using the slowest one everywhere is how four-eyes gets quietly abandoned.
 | **Internal sub-agent** (`Agent` tool, distinct lens per call) | every per-stage review — plans, diffs before commit, findings, measurements, docs | fast; the default |
 | **External companion** (`/codex:review`) | the final verify before merge, once — **for user-facing changes** | slow — do not put it in the inner loop |
 
+**Select the reviewer by what the runtime actually has.** Some environments
+expose neither a sub-agent tool nor `/codex:review`. The requirement is a second
+pair of eyes, not a particular tool, so fall back in this order: another agent →
+an external reviewer → **a peer session** (`ListAgents` / `SendMessage`) → the
+human. If none is reachable, say so in the handback and mark the change
+UNREVIEWED rather than describing it as verified. A review you could not run is
+a disclosure, never a silent skip.
+
 **Docs-only and instruction-layer changes do not wait on the slow reviewer**
 (Paul, 2026-08-21). Ship on internal review plus CI, and apply the external
 findings afterwards as a follow-up. Holding a green docs PR behind a ten-minute
@@ -299,8 +317,10 @@ One unit in flight. One PR open. Merge it, then start the next.
 
 Parallelism is allowed in exactly two places:
 
-1. **Independent reviewers judging one artifact** — which must run in parallel
-   and must disagree.
+1. **Independent reviewers judging one artifact** — run in parallel, each with a
+   distinct lens and each required to make its strongest attempt at an
+   objection. Independent agreement is a valid outcome; manufactured
+   disagreement is not.
 2. **The OKF maintainer**, which this repo requires to run *in parallel with* the
    work rather than after it, so the bundle update rides the same commit
    (`AGENTS.md` §OKF maintenance). It does not touch the work's files, so it
