@@ -28,6 +28,28 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - the unidentified /services/ painter, found
+
+Closed the one technical unknown left from the footer work. The painter was
+`rect.fl-shape` in the same `.fl-builder-bottom-edge-layer` pattern as the
+homepage, filled by `.services-showcase ...` in `pages/services.css` - the exact
+rule the broad sweep had converted and I then reverted as "internal".
+
+Two causes, both now in
+[architecture/css-pipeline.md](architecture/css-pipeline.md):
+
+* **Homepage uses `<path>`, services uses `<rect>`.** My query was
+  `path.fl-shape`, which returned `[]` on services - and an empty result reads
+  as "no shape layer here" rather than "wrong primitive". That single wrong
+  assumption sent the investigation sideways for a long stretch. Match on the
+  CLASS or the layer, never the element name.
+* `pointer-events: none`, again, so every hit-test skipped it.
+
+**The technique worth keeping:** force `pointer-events: auto !important` on
+`*, *::before, *::after`, then call `elementsFromPoint`. Click-through overlays
+become ordinary stack entries. One call found what a geometric element scan, a
+pseudo-element sweep and a stylesheet walk had all missed.
+
 ## 2026-08-21 - ruby fails AA on dark surfaces, and it gates two phases
 
 Measured, not estimated: `--color-ruby` is **4.10:1 on #000 and 3.67:1 on
