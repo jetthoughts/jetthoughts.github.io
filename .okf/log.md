@@ -2493,3 +2493,18 @@ codex-review line gaining the "user-facing" qualifier to match par.5.
 Method note: the compression is safe ONLY because the verifier enumerated
 rules and returned counts, not an opinion - author self-review missed all
 four losses.
+
+## 2026-08-21 - Ruflo memory wired into the flow; three verified gotchas
+
+Instructions now route memory through ruflo: par.4 step 0 (memory_search
+before deciding - a stored correction outranks fresh reasoning), par.9
+(decisions/corrections ALSO stored via memory_store, prefix conventions),
+CLAUDE.md par-Memory rule, AGENTS.md SOP line. Reviewer caught 6 findings
+pre-commit incl. a measurably false claim (hybrid search is NOT empty - it
+degrades to its keyword leg) and a prefix-token split. Backfill: 541
+knowledge rows re-embedded via CLI store (0 failures); coordination-state
+rows deliberately left unembedded. Verified gotchas stored in memory key
+jt-gotcha-cli-semantic-search-broken: CLI semantic empty without ruvector;
+global HNSW misses CLI-written vectors until server restart (scoped search
+finds them); sql.js whole-image flushes resurrect external SQL deletes -
+mutate only via MCP/CLI, never raw SQL while the server runs.

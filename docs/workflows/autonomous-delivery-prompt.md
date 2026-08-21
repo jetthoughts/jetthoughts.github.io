@@ -248,9 +248,15 @@ same breath.
 Agent experience is stale by construction. Before any non-obvious technical or
 design decision:
 
+0. **Memory first.** `mcp__ruflo__memory_search` (semantic, MCP path — the
+   CLI's semantic mode is broken, keyword only in terminals) for prior
+   decisions and corrections on the topic. A stored 🔧 CORRECTION outranks
+   fresh reasoning; a stored 🎯-prefixed decision is not re-litigated without
+   new evidence.
 1. **In-tree first.** `qmd` for markdown (`docs/`, `.okf/`, `content/`),
    semantic code search for code, `rg` last. The answer is usually already
-   written down and being argued from memory is the recurring error.
+   written down and arguing from the model's own recollection instead of
+   looking is the recurring error.
 2. **Then the world.** Current docs (`context7`), targeted web research
    (`tavily-*`, `lightpanda` for headless fetch); substantial multi-source
    research goes through the NotebookLM MCP (Paul 2026-08-21). Take the best
@@ -464,7 +470,10 @@ Both directions: what failed *and* what worked.
 
 Write it where it will be read again — the affected `.okf/` concept plus a dated
 `log.md` entry, in the same commit as the change it describes. Not at session
-end; the batch loses the detail that made it useful.
+end; the batch loses the detail that made it useful. Decisions, corrections,
+and cross-session state ALSO go to ruflo memory (`mcp__ruflo__memory_store`,
+one fact per entry, prefix conventions per `CLAUDE.md` §Memory) — that is what
+§4's step 0 searches, so an unstored decision is invisible to the next pass.
 
 Store what a competent successor could not derive: decisions and their reasons,
 corrections, non-obvious failure modes. Not what the code already says.
