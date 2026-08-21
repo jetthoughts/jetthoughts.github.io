@@ -9,17 +9,27 @@ generated:
 verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-20T23:44:03Z
+timestamp: 2026-08-21T00:41:51Z
 ---
 
 # The loop
+
+**Scope: this loop is COURSE-oriented.** Step 2's content-canon critic diffs
+against the course canon and the taste pass scores against
+`.stitch/course-taste-design.md`. For SITE or BLOG surfaces take the
+`/impeccable critique` step and the render gate from here, and skip the course-canon
+and course-taste steps - running them off-surface produces findings from rules
+that do not govern the page.
 
 1. Build the site so critics inspect fresh output.
 2. Spawn a DESIGN critic (renders every page via the
    [render-verification recipe](/workflows/render-verification.md), scores
    worst-first) and a CONTENT-CANON critic (diffs numbers against the
    [course canon](/content/course-canon.md), sweeps banned patterns, checks
-   links) in parallel, in the background.
+   links) in parallel, in the background. **The DESIGN critic runs
+   `/impeccable critique` against the surface's own design source** (table below) -
+   a generic critic scores taste and keeps proposing recolours the anchor text
+   already ruled out.
 3. Adjudicate reports; VERIFY every claim against the actual files/renders
    before acting - critics are sometimes wrong about line numbers or values.
 4. Fix surgically (one attribute = one edit; never re-theme the page).
@@ -37,6 +47,99 @@ cover, wall-shaped diagrams). Adjudicate critic conflicts against the
 anchor text, not majority vote: taste-e's red-metric ruling beat
 taste-a's recolor suggestion because the anchor names Ruby as the brand
 accent ink.
+
+**Route design review through `/impeccable critique`** (Paul, 2026-08-21) - but
+**name the design source for the surface first. There are four, and the
+wrong one inverts the verdict.**
+
+| Surface | Design source | Note |
+|---|---|---|
+| Blog cover images | `.stitch/design.md` | "The Obsidian Engine" - **DARK**, canvas 2400x1260 |
+| Site chrome and pages | [site-palette](/design/site-palette.md) | **LIGHT by DEFAULT** (ADR-0003), ruby accent. Dark by design and NOT defects: blog cover art, ONE dark proof band per page, `/services/vibe-code-rescue/` |
+| Course pages | `.stitch/course-taste-design.md` | taste-scoring anchor |
+| In-post SVG / Mermaid / LinkedIn exhibits | [house-visual-spec](/design/house-visual-spec.md) | hand-drawn style, 2-2.5px strokes, semantic colour (green = money ONLY), labels INSIDE shapes; social assets also per `linkedin-posts/README.md` |
+
+**Precedence when two rows match.** A visual inside a COURSE lesson hits both
+the course row and the in-post row. Use **BOTH, course first**:
+`.stitch/course-taste-design.md` declares itself the single source of truth for
+course in-post visuals and carries course-specific rules the house spec lacks,
+while the house spec carries the stroke, semantic-colour and label rules the
+course file does not repeat. Taking only one silently drops half the governing
+rules - which is why this lists SOURCES rather than picking one per file type.
+
+
+# Routing text drops the qualifier that made the source correct
+
+Adding ONE routing rule on 2026-08-21 took five review rounds, and every
+finding had the same shape: a line summarising a source lost the condition
+that made the source true.
+
+| What the routing line said | What the source actually says |
+|---|---|
+| "site pages are LIGHT" | light by DEFAULT; three surfaces are dark by design |
+| "detail in review-swarm" | that loop's canon and taste steps are COURSE-scoped |
+| "there are three sources" | four - in-post SVG/Mermaid/social has its own |
+| "route review through stitch" | stitch has no review verb; all three skills GENERATE |
+
+Routing text is the most-read and least-reviewed prose in a repo, and the
+compression that makes it readable is exactly what makes it wrong. Two habits
+follow. **Carry the qualifier into the routing line** - "LIGHT by default,
+three documented exceptions" is barely longer than "LIGHT" and is the
+difference between a correct review and a recolour of a deliberate dark page.
+And **check the destination is executable** before making a route mandatory:
+a gate an agent cannot run gets improvised, which is worse than no gate
+because it reports as done.
+
+Related, same session: a rule recorded in this bundle is not ON THE PATH.
+`AGENTS.md` routes every session through `docs/workflows/flow-router.md`; a
+concept nobody is routed to is read only by sessions already looking for it.
+`.stitch/design.md` is the COVER project, not the site. Point stitch at it
+while reviewing a light page and it will judge light chrome against dark cover
+tokens and recommend the recolour ADR-0003 explicitly rules out - the exact
+failure this route exists to prevent.
+
+With the right source loaded, stitch reviews against the DESIGN SYSTEM rather
+than against taste - which is what a generic critic gives you, and why generic
+critics keep suggesting recolours the anchor text already ruled out. It is also the consult for a CRITICAL call that is genuinely
+unclear: get its input before deciding, not instead of deciding. The
+decide-don't-wait rule still holds - stitch informs the call, it does not
+own it, and it is never a reason to park a decision.
+
+It complements rather than replaces the rendered gates. Baselines and the
+scroll gate check what SHIPPED; stitch checks what was INTENDED. A change can
+be pixel-identical to its baseline and still wrong against the system, and a
+stitch-approved design can still ship broken - both passes are needed and
+neither substitutes.
+
+Scope its output like any critic's: a punch-list of surgical fixes, not a
+licence to redesign a working page.
+
+**Why impeccable and not stitch.** Paul first named `/stitch-design`
+(2026-08-21) and retracted it the same day once review established the gap:
+all three stitch skills GENERATE - `stitch-design` produces screens,
+`stitch-design-taste` produces a `DESIGN.md`, `stitch-loop` iterates - and the
+MCP surface is create/edit/apply with no critique verb. Routed there, a review
+request gets improvised or, worse, returns a generated screen nobody asked
+for. **Stitch stays for GENERATION; `/impeccable critique` carries review.**
+
+The contract is the same whichever critic runs, and every step earns its place:
+
+1. **Render first.** Capture the page at 1280x800 AND 390x844 via the
+   [render-verification recipe](/workflows/render-verification.md). A critic
+   reviews an image, not a URL.
+2. **Name the anchor.** State which of the four sources governs this surface
+   (table above) and paste its rules in. No critic knows which system applies;
+   unanchored, it scores taste and proposes recolours the source already
+   ruled out.
+3. **Ask for a DELTA, not an opinion.** "List where this render departs from
+   these rules, each with the rule it breaks." Ask for a redesign and you get
+   a redesign; ask for departures and you get a punch-list.
+4. **Verify each item against the rendered output** before acting - the same
+   adjudication rule as any critic here.
+
+If a step cannot be performed, report that the gate DID NOT RUN rather than
+substituting a generic design opinion. That substitution is the failure this
+route exists to prevent.
 
 # Mechanical runbook
 

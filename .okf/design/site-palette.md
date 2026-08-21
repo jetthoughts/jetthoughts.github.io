@@ -7,7 +7,7 @@ tags: [design, palette, css, tokens, adr]
 generated:
   by: claude/opus-5
   at: 2026-08-20T00:00:00Z
-timestamp: 2026-08-20T23:11:35Z
+timestamp: 2026-08-21T00:44:07Z
 ---
 
 # Resolved: LIGHT (ADR-0003, 2026-08-20)
@@ -15,6 +15,17 @@ timestamp: 2026-08-20T23:11:35Z
 Site chrome is light. Not a default anyone drifted into — decided on a
 lightning demo of the peer set, and the reasoning is worth keeping because it
 predicts future calls:
+
+> **Known contradicting sibling: root `DESIGN.md`.** It still frames dark
+> JetVelocity as "normative for new brand/conversion surfaces" and light
+> chrome as "legacy/incumbent" — the reverse of this decision — and specifies
+> `#1a8cff` primary buttons, a token deleted in #518. A superseded-in-part
+> banner was added there on 2026-08-21, but the file is not yet regenerated —
+> the regeneration is tracked in
+> `docs/projects/2608-site-design-system/README.md` under **Outstanding**.
+> **This concept wins for page design.** Recorded here because an authority
+> that does not name the document contradicting it leaves the reader to
+> discover the conflict by shipping the wrong thing.
 
 **The light/dark split is audience-shaped, not taste-shaped.** Dark marketing
 belongs to products bought by *developers evaluating a tool*; light belongs to

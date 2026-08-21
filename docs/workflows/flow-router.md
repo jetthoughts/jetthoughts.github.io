@@ -11,6 +11,35 @@ Read this at session start to route tasks to the right workflow without explicit
 - Cover image work → `docs/workflows/cover-images.md` and `.stitch/design.md`
 - Image/cover requests (even without content) → `@docs/workflows/cover-images.md` and `@.stitch/design.md`
 - HTML/CSS changes → `@docs/workflows/css-consolidation.md`
+- **Design review of a page or visual change → `/impeccable critique`** (Paul,
+  2026-08-21; supersedes his earlier `/stitch-design` instruction, retracted
+  once review established the stitch skills only GENERATE — stitch stays for
+  generation). Name the design source for the surface FIRST — loading the wrong
+  one inverts the verdict:
+  - Site chrome and pages → `.okf/design/site-palette.md`. **Light is the
+    DEFAULT, not a monopoly.** Three surfaces are dark *by design* and must not
+    be flagged for recolour: blog cover art, ONE dark proof band per page, and
+    `/services/vibe-code-rescue/` (a dark variant of the same tokens, not a
+    second system). Anything else going dark IS a defect.
+  - Blog COVER images → `.stitch/design.md` (the dark "Obsidian Engine").
+    Reviewing a *page* against this yields the recolour ADR-0003 rules out.
+  - Course pages → `.stitch/course-taste-design.md`.
+  - In-post SVG, Mermaid diagrams, LinkedIn exhibits →
+    `.okf/design/house-visual-spec.md` (hand-drawn style, semantic colour —
+    green = money ONLY, labels inside shapes); social assets also
+    `linkedin-posts/README.md`.
+
+
+  Render at 1280x800 AND 390x844 first, paste the named source's rules in, and
+  ask for a DELTA ("where does this render depart from these rules") rather than
+  an opinion — unanchored, any critic scores taste and proposes recolours the
+  source already ruled out.
+
+  This complements the rendered gates rather than replacing them: baselines
+  check what SHIPPED, stitch checks what was INTENDED. Rule detail in
+  `.okf/workflows/review-swarm.md` — note its surrounding loop (content-canon
+  critic, taste pass) is COURSE-scoped; for site and blog surfaces take the
+  stitch step and the render gate, not the course-canon steps.
 - Ruby/Rails changes → `@docs/workflows/ruby.md`
 - AI configuration, agents, skills → `@docs/workflows/ai-config.md`
 

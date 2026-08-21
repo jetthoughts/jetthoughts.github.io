@@ -95,15 +95,37 @@ surface is deep obsidian shading toward violet, lit by two inks — Ruby red
 grid-dot backdrops, stat chips, mono status indicators. It reads like the
 instrument panel of a serious engineering shop, not a marketing gradient.
 
+> **SUPERSEDED IN PART, 2026-08-21.** The framing below predates
+> **ADR-0003 (2026-08-20), which resolved site chrome as LIGHT** - see
+> `.okf/design/site-palette.md`. Two statements here are now wrong and will
+> mislead anyone building a page:
+>
+> * Dark JetVelocity is **NOT** "normative for new brand/conversion surfaces".
+>   Light is the default for site chrome. Dark survives on exactly three
+>   surfaces by design: blog cover art, ONE dark proof band per page, and
+>   `/services/vibe-code-rescue/`.
+> * Light chrome is **NOT** "legacy/incumbent" awaiting replacement. It is the
+>   resolved system.
+> * **`--color-primary` (`#1a8cff`) was DELETED in Phase 1a.2 (#518).** Every
+>   reference to it below, including the primary-button spec, is dead -
+>   `var(--color-primary)` resolves to nothing and the declaration is dropped
+>   silently.
+>
+> `.stitch/design.md` is the **cover-image** system, not the page visual
+> language. This file still governs cover work and the brand ink; for PAGE
+> design follow `.okf/design/site-palette.md`. The full regeneration is tracked
+> in `docs/projects/2608-site-design-system/README.md` under **Outstanding** -
+> this banner exists so the file cannot be followed into a
+> resolved-and-reversed decision in the meantime.
+
 The repository carries **two coexisting layers**, both real:
 
-1. **JetVelocity (brand world, normative for new brand/conversion surfaces)** —
-   the obsidian-dark language above. Canonical spec: `.stitch/design.md`
-   (born for blog covers; CLAUDE.md names it the site design system).
-2. **Legacy page chrome (incumbent, light)** — white pages with `#121212` ink,
-   BEM `c-*` components, `--color-primary` blue `#1a8cff` buttons, 4px radius,
-   system-ui type. Being consolidated by the 2509 CSS migration; extend it for
-   continuity pages, do not re-skin it ad hoc.
+1. **JetVelocity (brand world)** — the obsidian-dark language above. Canonical
+   spec: `.stitch/design.md`. **Scope corrected 2026-08-21: cover images and
+   brand ink, NOT new page/conversion surfaces.**
+2. **Page chrome (LIGHT, resolved by ADR-0003)** — white pages with `#121212`
+   ink and BEM `c-*` components. Being consolidated by the 2509 CSS migration.
+   **The `--color-primary` blue is gone**; use the ink/surface/ruby tokens.
 
 **Key Characteristics:**
 - Obsidian dark + ruby/purple dual-ink accents (brand surfaces)

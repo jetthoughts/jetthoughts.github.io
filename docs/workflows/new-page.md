@@ -66,9 +66,19 @@ Never edit `components/*.css` for one page's needs.
 ## 4. Design tokens
 
 Use the vars from `foundations/css-variables.css` (inlined site-wide):
-`--color-ruby` (#cc342d) · `--color-primary` (#1a8cff) · `--color-dark`
-(#121212) · `--color-muted` · `--font-system-ui` · `--radius-default` ·
-`--spacing-sm/md`. Visual language: `.stitch/design.md` (JetVelocity).
+`--color-ruby` (#cc342d) · `--color-dark` (#121212) · `--color-muted` ·
+`--font-system-ui` · `--radius-default` · `--spacing-sm/md`.
+
+**`--color-primary` (#1a8cff) was DELETED in Phase 1a.2 (#518) — do not use it.**
+`var(--color-primary)` now resolves to nothing and the declaration is dropped
+silently. Use the ink/surface/ruby tokens instead.
+
+**Visual language for a PAGE is `.okf/design/site-palette.md` — LIGHT by
+default** (ADR-0003), with three deliberate dark surfaces (blog cover art, one
+proof band per page, `/services/vibe-code-rescue/`). `.stitch/design.md` is the
+dark COVER-IMAGE system and is NOT the page visual language; building a page
+against it produces the recolour ADR-0003 rules out. In-body SVG/Mermaid follow
+`.okf/design/house-visual-spec.md`.
 
 ## 5. PurgeCSS greedy prefix (DO NOT SKIP)
 
@@ -114,6 +124,7 @@ For any conversion/marketing page, **impeccable owns the design lifecycle**; the
 | Iterate | `/impeccable live` (dev server) | In-browser element variants — the "canvas iteration" loop. |
 | Consolidate | `/impeccable extract` | Promote tokens/components used **3+ times with same intent** into `foundations/css-variables.css` / `components/`. One page's patterns stay page-local — premature abstraction is worse than duplication. |
 | Evaluate | `/impeccable critique` + `/impeccable audit` | Scored design review + a11y/perf/responsive checks before the PR. |
+| Evaluate (design system) | `/impeccable critique`, anchored | Judges the page against the DESIGN SYSTEM rather than against taste (Paul, 2026-08-21 - supersedes his earlier `/stitch-design` instruction; stitch only generates). **Name the surface's source first** - site pages are LIGHT BY DEFAULT (`.okf/design/site-palette.md`), with three documented dark exceptions (cover art, one proof band per page, `/services/vibe-code-rescue/`); `.stitch/design.md` is the DARK cover system and reviewing a page against it yields the recolour ADR-0003 forbids. Complements the rendered gates: they check what shipped, this checks what was intended. |
 
 **Detector disposition protocol**: every hook finding gets classified, never ignored silently. (a) Real drift → fix BOTH sides: align the page AND document the deliberate addition in DESIGN.md (ramp steps, new colors) — the detector validates against DESIGN.md frontmatter, so documenting IS the fix. (b) Committed-world signature (gradient hero word, chip left-borders, grid-dot texture, Space Grotesk) → leave the code, state the pinning rule, get Paul's explicit confirmation before persisting a config ignore.
 

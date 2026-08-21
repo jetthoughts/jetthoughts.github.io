@@ -3,6 +3,114 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+## 2026-08-21 - "tracked separately" was not true; now it is
+
+The DESIGN.md banner written earlier today claimed the full regeneration "is
+tracked separately". Nothing tracked it - the 2608 project had no outstanding
+section at all, so the only record was a sentence inside the very file that
+cannot be trusted.
+
+Fixed by giving it a real home: an **Outstanding** section in
+`docs/projects/2608-site-design-system/README.md` with the scope written out
+(reconcile the two-layers section with ADR-0003, strip every `--color-primary`
+reference including the primary-button spec, restate `.stitch/design.md` as
+cover-scoped, and regenerate `.impeccable/design.json` if it encodes the same
+palette - `/impeccable critique` now carries the design-review gate and would
+score against stale values). Both `DESIGN.md` and
+[site-palette](/design/site-palette.md) now point at it.
+
+Worth keeping as a shape: **"tracked separately" is a claim like any other.**
+It is the most natural thing to write when deferring work and the least likely
+to be checked, because it sounds like process rather than fact. If nothing can
+be named as the tracker, the work is not deferred - it is dropped.
+
+## 2026-08-21 - design review is `/impeccable critique`, not stitch
+
+Paul reversed his own instruction the same day: *"i was wrong, you should use
+`/impeccable critique`."* Review had established the gap - all three stitch
+skills GENERATE (`stitch-design` screens, `stitch-design-taste` a `DESIGN.md`,
+`stitch-loop` iterations) and the MCP surface is create/edit/apply with no
+critique verb - so routing review there returns a generated screen or an
+improvisation. **Stitch stays for generation.**
+
+Switched in `workflows/review-swarm.md`, `design/index.md`, and the two repo
+docs on the mandatory path (`docs/workflows/flow-router.md`,
+`docs/workflows/new-page.md`). The retraction is recorded at each site rather
+than silently overwritten, so a reader who remembers the first instruction
+learns why it changed.
+
+**What survived the tool change, and was always the valuable part: the ANCHOR.**
+Four design sources, and the wrong one inverts the verdict regardless of which
+critic runs. The surface-to-source table, the course-visual precedence rule, and
+the render/name-the-anchor/ask-for-a-delta contract are all tool-independent.
+The tool was the least durable thing in the rule.
+
+## 2026-08-21 - the routing rule exposed a contradicting design authority
+
+Adding one routing line took five review rounds. The findings were worth more
+than the rule.
+
+* **Root `DESIGN.md` contradicts the resolved palette and would have been
+  followed.** It frames dark JetVelocity as "normative for new brand/conversion
+  surfaces", calls LIGHT chrome "legacy/incumbent", and specifies `#1a8cff`
+  primary buttons - against ADR-0003 (light, 2026-08-20) and #518, which DELETED
+  that token. An agent building a new conversion page would have gone dark with
+  a `var()` that resolves to nothing. Superseded-in-part banner added there;
+  full regeneration outstanding. `design/site-palette.md` now NAMES it as a
+  known contradicting sibling - an authority that does not name what contradicts
+  it leaves the reader to find the conflict by shipping the wrong thing.
+
+* **`workflows/review-swarm.md` - routing text drops the qualifier that made the
+  source correct.** Four for four this session: "pages are LIGHT" lost three
+  deliberate dark surfaces; "see review-swarm" lost that the loop is
+  COURSE-scoped; "three sources" lost the in-post/social fourth; "use stitch"
+  lost that stitch has no review verb - all three skills GENERATE. Carry the
+  qualifier into the routing line, and check the destination is EXECUTABLE
+  before making a route mandatory: a gate an agent cannot run gets improvised,
+  which is worse than no gate because it reports as done.
+
+* Same section records the sibling trap: a rule in this bundle is not ON THE
+  PATH. `AGENTS.md` routes sessions through `docs/workflows/flow-router.md`, so
+  a concept nobody is routed to is read only by sessions already looking.
+
+## 2026-08-21 - design review has a route: /stitch-design
+
+* `workflows/review-swarm.md` + `design/index.md` + `workflows/index.md`, and
+  the two REPO docs on the mandatory path (`docs/workflows/flow-router.md`,
+  `docs/workflows/new-page.md`) - **design review routes through
+  `/stitch-design`** (Paul, 2026-08-21). It reviews against the DESIGN
+  SYSTEM rather than against taste, which is what a generic critic gives and why
+  generic critics keep proposing recolours the anchor text already ruled out. It
+  is also the consult for a critical call that is genuinely unclear - input
+  before deciding, not instead of deciding; decide-don't-wait still holds.
+
+  Recorded with two boundaries, because both are easy to get wrong: it
+  COMPLEMENTS the rendered gates rather than replacing them (baselines check
+  what shipped, stitch checks what was intended - a change can match its
+  baseline exactly and still be wrong against the system), and its output is
+  scoped like any critic's, a punch-list rather than a licence to redesign.
+
+Review then found two things the first draft got wrong, both worth keeping:
+
+* **It named no design SOURCE, and there are three.** `.stitch/design.md` is
+  the DARK "Obsidian Engine" COVER system; site chrome is LIGHT
+  ([site-palette](/design/site-palette.md), ADR-0003, confirmed by Paul
+  2026-08-21); course pages use `.stitch/course-taste-design.md`. Loading the
+  cover system to review a page yields exactly the recolour ADR-0003 rules out
+  - the failure the route exists to prevent. A surface-to-source table now
+  leads the rule.
+* **The rule was in the bundle but not ON THE PATH.** `AGENTS.md` sends every
+  session through `docs/workflows/flow-router.md`, which routed HTML/CSS to
+  css-consolidation only; `new-page.md`'s Evaluate step named Impeccable
+  alone; and this playbook's own step 2 still spawned a generic DESIGN critic.
+  An agent following the canonical flow would never have seen it. Recording a
+  rule in the bundle is not the same as putting it where a session that is not
+  looking will hit it.
+
+Deliberately NOT recorded: that a parallel PR currently owns the Linux baseline
+re-record. The accepted-debt POLICY is already in `build/test-gates.md`; who
+holds the work this hour is a state snapshot and would rot within days.
+
 ## 2026-08-21 - what three review rounds taught, lifted from the PR into concepts
 
 #519 took three Codex rounds (8, 7, 9 findings). None cosmetic. The durable

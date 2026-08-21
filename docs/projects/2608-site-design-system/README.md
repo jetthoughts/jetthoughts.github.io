@@ -77,6 +77,25 @@ suites), **B** guardrails with declared rollback thresholds, **C** reversibility
 **No phase is A/B tested** — at ~9.7 real human sessions/day (measured, not
 estimated) the cheapest viable test needs 192 days.
 
+## Outstanding
+
+**Regenerate root `DESIGN.md` against ADR-0003.** It still frames dark
+JetVelocity as *"normative for new brand/conversion surfaces"*, calls LIGHT
+page chrome *"legacy/incumbent"*, and specifies `#1a8cff` primary buttons —
+a token **deleted in Phase 1a.2 (#518)**, so `var(--color-primary)` now
+resolves to nothing and the declaration is dropped silently. An agent building
+a new conversion page from it goes dark with a dead token.
+
+A superseded-in-part banner was added at the top of that file on 2026-08-21
+and `.okf/design/site-palette.md` names it as a known contradicting sibling,
+so nobody following either authority is misled today. **The regeneration
+itself is not done.** Scope when it runs: reconcile the two-layers section
+with ADR-0003, strip every `--color-primary` reference including the
+primary-button spec, and restate `.stitch/design.md`'s scope as cover images
+rather than "the site design system". Also regenerate `.impeccable/design.json`
+if it encodes the same palette, since `/impeccable critique` now carries the
+design-review gate and would score against stale values.
+
 ## Working notes
 
 Coordinator/session reports do not belong in this directory — write them to
