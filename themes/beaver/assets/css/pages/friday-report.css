@@ -43,11 +43,13 @@
 }
 
 .friday-eyebrow {
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.18em;
+  /* 2608 1a.4: one eyebrow style - matches pages/blog-list.css .blog-eyebrow.
+     Was 13px/600/0.18em on --ruby-700; margin is page rhythm and stays. */
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ruby-700);
+  color: var(--color-ruby);
   margin: 0 0 16px;
 }
 
