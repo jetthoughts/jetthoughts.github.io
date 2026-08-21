@@ -90,14 +90,17 @@ two DISTINCT entries, `00:10:00Z` and `00:50:00Z`; e046 was a timestamp-repair
 commit that normalised both to one value. Deleting one destroyed a real
 verification event.
 
-`git log -S` answers "when did this string first appear", not "how many events
-does this line represent" - a neighbouring question accepted as the answer,
-which is exactly what this entry is about. Both entries are restored at their
-originally-recorded times. Those values are themselves suspect (round-number
-seconds mean they were composed, not measured, which is what e046 was repairing)
-but the number of events is the reliable fact, and the root index is explicit:
-keep BOTH, because dropping one falsifies the provenance the field exists to
-carry.
+`git log -S` selects every commit that CHANGES a string`s occurrence count, so
+one hit means one net count change, not one event - a neighbouring question accepted as the answer,
+which is exactly what this entry is about. Both entries are restored, and CONVERTED
+rather than restored verbatim: the recorded 00:10:00Z / 00:50:00Z were local time
+carrying a `Z`, and the offset in force then was +03:00 (recoverable from
+e046adc54`s own commit stamp), so they land at 2026-08-20T21:10:00Z and
+21:50:00Z. Restoring the future-dated originals would have re-created the exact
+harm the root index warns about - a stamp ~2h ahead silently outranks a genuinely
+newer concurrent edit, because conflicts resolve by taking the later timestamp.
+The root index is explicit that both events stay: dropping one falsifies the
+provenance the field exists to carry.
 
 ## 2026-08-21 - CSS ships both inline and as a linked file; text search cannot prove a selector applies
 

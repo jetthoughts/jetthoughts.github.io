@@ -6,6 +6,7 @@ tags: [testing, visual-regression, gates]
 status: stable
 generated: { by: claude/opus-4-8, at: 2026-08-12T20:20:00Z }
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T05:06:54Z }
   - { by: claude/opus-5, at: 2026-08-21T04:01:38Z }
   - { by: claude/opus-5, at: 2026-08-21T03:27:09Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
@@ -13,7 +14,7 @@ verified:
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
   - { by: claude/opus-5, at: 2026-08-20T21:43:35Z }
   - { by: claude/opus-5, at: 2026-08-20T21:47:30Z }
-timestamp: 2026-08-21T04:01:38Z
+timestamp: 2026-08-21T05:06:54Z
 ---
 
 # The suites
@@ -298,8 +299,11 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
 
 A third instance, 2026-08-21: two identical `verified` entries looked like a
 duplication artifact, and `git log -S <timestamp>` returned exactly ONE
-commit - read as proof one commit emitted both. `-S` counts when a string
-first appears, not how many events a line represents. The parent commit held
+commit - read as proof one commit emitted both. `-S` selects every commit that
+CHANGES a string`s occurrence count - additions, removals, deduplications,
+reintroductions - so ONE hit means one net count change, not one event, and
+later edits change the answer (the same search now returns three commits, two
+of them mine). The parent commit held
 two DISTINCT entries that a timestamp-repair commit had normalised, so the
 "duplicate" was a real verification and deleting it destroyed provenance.
 Positive control that would have caught it in one command: read the file at

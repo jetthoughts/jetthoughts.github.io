@@ -8,8 +8,8 @@ generated:
   at: 2026-07-24T00:00:00Z
 verified:
   - { by: claude/opus-5, at: 2026-08-21T04:52:57Z }
-  - { by: claude/opus-5, at: 2026-08-21T00:50:00Z }
-  - { by: claude/opus-5, at: 2026-08-21T00:10:00Z }
+  - { by: claude/opus-5, at: 2026-08-20T21:50:00Z }
+  - { by: claude/opus-5, at: 2026-08-20T21:10:00Z }
 timestamp: 2026-08-21T04:52:57Z
 ---
 
@@ -302,5 +302,5 @@ verdict format, and the two or three specific things to attack.
   only under `verified` is imprecise) was fair; the fix would have claimed
   authorship of sections written by others, and contradicted the convention
   every other concept follows - `generated` = who first produced the file,
-  `verified` = who touched it since. Check the prescription against the tree
+  `verified` = who actually REVALIDATED its content (an ordinary edit is not a verification). Check the prescription against the tree
   separately from the diagnosis, and record the disposition with its evidence.
