@@ -11,8 +11,10 @@ easy mistake; it was made repeatedly on 2026-08-20/21 before review caught it.
 **Check `$?`, not the checkmark.**
 
 Measured 2026-08-21 (re-derive rather than trusting these numbers; they move
-with every entry): 82 warnings, of which **57 are §7 date headings** and
-**23 are missing recommended fields**.
+with every entry appended to this file, including the one you are about to
+write): **87 warnings** as of 2026-08-21T03:27Z, of which **63 are §7 date
+headings** and
+**22 are missing recommended fields**.
 
 The date headings are a deliberate deviation. The spec's template is a bare
 `## <YYYY-MM-DD>` with bullets beneath, which assumes one entry per day; this
