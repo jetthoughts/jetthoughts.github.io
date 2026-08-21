@@ -7,7 +7,7 @@ tags: [design, palette, css, tokens, adr]
 generated:
   by: claude/opus-5
   at: 2026-08-20T00:00:00Z
-timestamp: 2026-08-21T02:51:33Z
+timestamp: 2026-08-21T03:17:09Z
 ---
 
 # Resolved: LIGHT (ADR-0003, 2026-08-20)
@@ -106,10 +106,29 @@ Two consequences, and the second is the one that is easy to miss:
    footer/dark-surface migration cannot ship before the on-dark accent is
    decided, or it degrades contrast on every band it touches.
 
-Only `--color-ruby-hover` clears AA on both grounds, and it is named for a
-hover state - semantically wrong as a static accent. The ramp has `--ruby-700`
-for "text-on-light where AA needs more" and **no counterpart for dark**.
-Naming one is a design decision; tracked in
+**Candidates derived and measured 2026-08-21. Recommended: `#e85a52`, named
+`--ruby-on-ink`.**
+
+| Candidate | on `--surface-ink` | on `#000` | on white |
+|---|---|---|---|
+| `--color-ruby` `#cc342d` | 3.67 FAIL | 4.10 FAIL | 5.13 pass |
+| `--color-ruby-hover` `#e04a42` | 4.68 thin | 5.23 pass | **4.02 FAIL** |
+| **`#e85a52`** | **5.39 pass** | 6.02 pass | 3.49 FAIL |
+| `#ef6a61` | 6.18 pass | 6.90 pass | 3.04 FAIL |
+
+**The name carries the constraint, and that is the point.** Every value that
+works on dark FAILS on white - `#e85a52` is 3.49:1 there - so this token is
+dark-surface-ONLY. A neutral name like `--ruby-400` invites the misuse that
+breaks it; `--ruby-on-ink` says where it may be used.
+
+**Do not reach for `--color-ruby-hover` as the shortcut.** Besides being
+semantically a hover state, it fails on white at 4.02, so using it as a
+general accent trades an AA failure on dark for one on light. The ramp has
+`--ruby-700` for "text-on-light where AA needs more" and no counterpart for
+dark; that gap is the whole issue.
+
+Not yet applied - it changes the rendered colour on every dark band, which is
+Paul's call. Tracked in
 `docs/projects/2608-site-design-system/README.md` under Outstanding.
 
 **Until it is named: do not apply a ruby text token to any surface in the
