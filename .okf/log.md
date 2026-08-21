@@ -12,17 +12,29 @@ easy mistake; it was made repeatedly on 2026-08-20/21 before review caught it.
 
 **No warning totals are recorded here, deliberately.** Every entry appended to
 this file adds a §7 heading warning, so any number written down is wrong by the
-next append - it was corrected twice on 2026-08-21 and was stale again within
-one commit each time. Measure when you need it:
+next append - it was corrected twice on 2026-08-21 and went stale within one
+commit each time.
+
+Measure when you need it, via the SKILL so it resolves whatever validator is
+canonical (`/okf:validate .okf --strict`), and count warning RECORDS:
 
 ```
-uv run .../validate/scripts/okf_validate.py .okf --strict | grep -c 'warn'
-uv run .../validate/scripts/okf_validate.py .okf --strict | grep -c 'is not ISO 8601'
+<validator> .okf --strict | grep -c '! warn'          # total
+<validator> .okf --strict | grep '! warn' | sed 's/.*: //' | sort | uniq -c | sort -rn
 ```
 
-The composition is stable even though the total is not: the large majority are
-§7 date headings from this file, the rest are concepts missing a recommended
-field. If a warning appears that is neither, it is worth reading.
+**Count `'! warn'`, not `'warn'`.** The summary line reads
+`✓ conformant (N warning(s))` and matches the looser pattern, so `grep -c 'warn'`
+returns one more than the real count - every total published on 2026-08-21 was
+inflated by exactly one because of this.
+
+**Derive the classes; do not assume them.** On the validator installed here the
+bulk are §7 date headings from this file, with ~22 missing-recommended-field
+and one tolerated out-of-bundle cross-link. Review reported a different
+breakdown from another build (legacy `# Citations` warnings, no missing-field
+ones) that could not be reproduced with either copy on this machine - so run the
+classifier above rather than trusting any written composition, including this
+sentence.
 
 The date headings are a deliberate deviation. The spec's template is a bare
 `## <YYYY-MM-DD>` with bullets beneath, which assumes one entry per day; this

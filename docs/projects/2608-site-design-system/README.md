@@ -101,21 +101,26 @@ some time; the `✓ conformant` line refers to §9 (no ERRORS), while `--strict`
 fails on any warning. CLAUDE.md requires this gate before bundle commits, so
 it has been reported green while failing.
 
-**No total is recorded here** - every entry appended to `.okf/log.md` adds a §7
-heading warning, so a written count is wrong by the next append. It was
-corrected twice on 2026-08-21 and went stale within one commit each time.
-Measure at execution time. The composition is stable even though the total is
-not: the large majority are §7 date headings from `log.md`, the rest are
-concepts missing a recommended field.
+**No total or breakdown is recorded here, deliberately.** Every entry appended
+to `.okf/log.md` adds a §7 heading warning, so a written count is wrong by the
+next append - corrected twice on 2026-08-21, stale within a commit each time.
+Measure at execution time, through the SKILL so it resolves whatever validator
+is canonical:
 
-**Re-measure before executing — do not trust the counts above.** They come from
-the validator this machine resolved on 2026-08-21 (the 0.4.0 cache and the
-marketplace copy, which agree). Review flagged that another build may score a
-v0.2 bundle differently; this session could not reproduce that composition with
-either available copy, so treat the numbers as a snapshot, not a spec. The
-bundle declares `okf_version: "0.2"` — run `/okf:validate .okf --strict`
-through the SKILL so it resolves whatever is canonical at the time, re-derive
-the breakdown, and fix what THAT run reports.
+```
+/okf:validate .okf --strict
+<validator> .okf --strict | grep -c '! warn'   # count RECORDS, not 'warn'
+```
+
+Count `'! warn'`: the summary line `✓ conformant (N warning(s))` matches the
+looser pattern, and every total published on 2026-08-21 was inflated by one
+because of it.
+
+Classify the live output rather than trusting a written composition. Different
+validator builds have reported materially different breakdowns for this v0.2
+bundle - one review reported legacy `# Citations` warnings and no
+missing-recommended-field ones, which neither copy on this machine reproduces.
+Fix what YOUR run reports.
 
 The one job that is version-independent: restructure `log.md` so same-day
 themes sit as sub-sections beneath ONE `## YYYY-MM-DD` heading. That is a
