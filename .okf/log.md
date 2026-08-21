@@ -52,57 +52,43 @@ time, which is verifiable - never invented).
 
 ## 2026-08-21 - what okf_validate actually guards, and the two-spec trap
 
-Recorded in the bundle-root [index.md](index.md), where the v0.2 trust
-conventions live.
+Recorded in [build/test-gates.md](build/test-gates.md), where the gates live.
+The first draft put it in the bundle-root index; review moved it out - the root
+index is a reserved progressive-disclosure file, and a page of operational
+analysis there loads on every onboarding.
 
-**The validator checks trust-field SHAPE; a missing `at` is the hole.** The v0.2
-`check_trust` requires `generated` to be a mapping, requires `generated.by`,
-validates actor shapes, and shape-checks instants, and `--strict` turns each
-warning into a failure. The shape check is permissive - time, seconds and
-timezone are all optional in its pattern, so `2026-08-21T05:30` and a bare date
-both pass. But `check_instant` returns early on `None`, so
-`verified: [{ by: claude/opus-5 }]` with no `at` passes both validators on this
-machine.
+**The validator checks trust-field SHAPE with two holes**: `check_instant`
+returns early on `None`, so a `verified` event with no `at` passes; and the
+`RFC3339` pattern makes time, seconds and timezone all optional, so
+`2026-08-21T05:30` and a bare date pass too. A green run is real evidence about
+shape, but cannot say an event HAS a time and can never say a recorded time is
+TRUE - which is what six review rounds on #538 were about, with no tool catching
+any of it.
 
-The first draft of this entry claimed the validator was "silent on the trust
-fields" - generalising a one-hole probe into blanket silence, in an entry about
-not over-reading measurements. Review caught it. The measurement was real; the
-sentence written on top of it was not, which is the same descriptive-vs-
-prescriptive split recorded in [workflows/review-swarm.md](workflows/review-swarm.md).
+**`✓ conformant` is an ERROR-ONLY verdict.** v0.2 §11 has three conditions, and
+the third - reserved files following §8/§9 - surfaces as warnings only. This
+bundle proves it: the themed log headings warn on every entry and the checkmark
+still prints. Green and not §11-conformant simultaneously, both true.
 
-What survives: a green run is real evidence about shape and should not be
-dismissed, but it cannot tell you an event HAS a time, and it can never tell you
-a recorded time is TRUE. Six review rounds on #538 turned on exactly that and no
-tool caught any of it. Conformance is v0.2 §11 and has THREE conditions -
-parseable frontmatter, a non-empty `type`, AND reserved files (`index.md`,
-`log.md`) following §8 and §9. Documenting that third condition exposed a
-contradiction the entry now carries: THIS log violates it. 69 of 87 date headings
-carry a themed suffix where §9 wants a bare `## YYYY-MM-DD`, and the validator
-warns on every one - but computes `conformant` from ERRORS only, so it prints a
-checkmark anyway. The bundle is green and not §11-conformant simultaneously.
-Converting the headings is mechanical but trades a spec rule against human
-scannability, so it is flagged for Paul rather than swept. The first draft listed two and cited "§9" for
-conformance itself, which is the v0.1 numbering: under v0.2, §9 is the LOG
-structure section. Citing a section without naming the version means two
-different things, which is the two-spec trap below in miniature.
+That heading style is a deliberate deviation this log already recorded, and the
+first draft of this entry contradicted it by calling the repair "mechanical".
+It is not: bare dates would stack a dozen identical headings on a busy day, so
+the conformant shape is one dated heading per day with themes as sub-sections -
+a whole-file restructure.
 
 **Two OKF specs, disagreeing section numbers.** The `/okf:okf` skill points at
-the plugin-cache copy: **v0.1**, 340 lines, calls itself "the source of truth",
-never defines `generated` or `verified`, §5.2 = "Relative links". The v0.2 spec
-at `~/.agents/skills/okf/reference/SPEC.md` is 792 lines, makes
-provenance/trust/lifecycle/attestation first-class, §5.2 = "Trust: `generated`
-and `verified`". This bundle is `okf_version: "0.2"`, so v0.2 governs. The
-validators differ in coverage as well (261 vs 565 lines; only the v0.2 one checks
-the trust family and the §13.1 `sources` convention).
+the plugin-cache v0.1 copy, which calls itself the source of truth and never
+defines `generated`/`verified`; `~/.agents/skills/okf/reference/SPEC.md` is v0.2
+and makes them first-class. §5.2 means "Relative links" in one and "Trust" in
+the other. This bundle is v0.2, so v0.2 governs. That cost two confident wrong
+rejections of a correct finding on #538, plus a §9/§11 slip - v0.1 §9 was
+conformance, v0.2 §9 is log structure.
 
-That mismatch produced two confident wrong rejections of a correct review finding
-on #538, and the §9/§11 slip above. When a spec section is cited, resolve WHICH
-copy before disputing it.
-
-No warning totals are recorded here. The first draft quoted two, and they were
-stale in the same checkout - this entry's own heading changes them. That is the
-self-invalidating-count rule from
-[build/test-gates.md](build/test-gates.md), broken one round after writing it.
+No counts appear above. Three drafts of this entry hard-coded one - warning
+totals, then a `git log -S` result, then "69 of 87 headings" - and each was
+stale within the same PR, because the commits fixing the entry changed the thing
+the entry counted. The rule was already in
+[build/test-gates.md](build/test-gates.md) before any of those drafts.
 
 ## 2026-08-21 - what survives adversarial review, and when to stop patching
 
