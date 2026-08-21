@@ -145,6 +145,40 @@ counterpart for dark. **The decision is whether to name one** (e.g.
 `--ruby-on-ink`, seeded at `#e04a42` or lighter for more margin), which is a
 design call rather than a sweep. `technologies.css:10` already gestures at
 the problem in a comment.
+**"THREE button roles" is already built - and unused.** Investigated
+2026-08-21. `themes/beaver/assets/css/components/c-button.css` defines exactly
+three roles (`--primary` ruby/white, `--secondary` white/dark, `--tertiary`
+transparent/ruby), already tokenised apart from four `#ffffff` literals. It is
+imported by `components.css`, which one layout bundles.
+**But `c-button--*` appears ZERO times in any template or content file, and it
+is absent from the entire PRODUCTION tree** - `grep -rl 'c-button'
+_dest/public-test/` returns nothing, and `components.css` is not referenced
+from `index.html` at all. The component was built and never adopted.
+
+*Method note, because the first check was a false green:* `_dest/public-dev` is
+built in DEV mode where PurgeCSS is disabled, and this CSS is emitted INLINE in
+the HTML rather than under `css/*.css`, so grepping `public-dev/css/*.css`
+returns zero whether or not the component is adopted. The conclusion survived
+re-verification against the production tree; the original evidence did not.
+
+The live buttons are **five separate families**, verified in the templates:
+`.fl-button` (FL Builder), `.btn`/`.btn-primary`
+(`partials/page/navigation.html`), `.btn--primary` (`shortcodes/cta.html`),
+`.action-button` (`partials/page/use-cases.html`) and `.pp-button`
+(`page/services.html`). A sweep scoped to `.fl-button` alone would leave four
+families outside the roles.
+never adopted. The live buttons are FL Builder's `.fl-button`.
+
+So the 1a.4 item is not "tokenise the button component" - that changes nothing
+a visitor sees. It is either **adopt `c-button` in the templates** (a markup
+migration) or **bring `.fl-button` onto the three roles** (another sweep
+through the per-page FL export CSS). Both are larger than the plan line
+implies, and the second is the same legacy-export problem as the footer and
+eyebrow items.
+
+Note the tertiary role (`color: var(--color-ruby)` on a transparent ground)
+hits the on-dark AA blocker above wherever it sits on a dark band - so this
+item is partly gated by the same unnamed token.
 
 ## Working notes
 
