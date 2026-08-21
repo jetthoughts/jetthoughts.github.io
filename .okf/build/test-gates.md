@@ -4,7 +4,7 @@ title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
 status: stable
-generated: { by: claude/opus-5, at: 2026-08-21T09:59:40Z }
+generated: { by: claude/opus-5, at: 2026-08-21T16:28:27Z }
 verified:
   - { by: claude/opus-5, at: 2026-08-21T09:59:40Z }
   - { by: claude/opus-5, at: 2026-08-21T07:42:17Z }
@@ -21,7 +21,7 @@ verified:
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
   - { by: claude/opus-5, at: 2026-08-20T21:43:35Z }
   - { by: claude/opus-5, at: 2026-08-20T21:47:30Z }
-timestamp: 2026-08-21T09:59:40Z
+timestamp: 2026-08-21T16:28:27Z
 ---
 
 # The suites
@@ -85,9 +85,91 @@ evidence is independent of baseline drift.
 
 **0.0 for refactors** (a refactor must move zero pixels), **<=0.03 for
 genuinely new features**. This is the policy for what you ACCEPT, distinct from
-the mechanical defaults: `DEFAULT_SCREENSHOT_CONFIG` is 0.02
-(`test/application_system_test_case.rb:87`) and individual calls may pin their
-own (e.g. 0.03 at `test/system/blog_special_content_test.rb:136`).
+the mechanical default that decides whether the suite even reports a diff.
+
+That default is **0.0001** (`DEFAULT_SCREENSHOT_CONFIG`,
+`test/support/screenshot_section_config.rb:29`), lowered from 0.02 on 2026-08-21.
+Both halves still hold: the accept-policy is unchanged, and individual calls
+may still pin their own tolerance (~30 do, mostly 0.03 - e.g.
+`test/system/blog_special_content_test.rb:136`), which the default never
+overrides. What changed is the floor for calls that pin NOTHING.
+
+**`SECTION_CONFIGS` is now a deliberate temporary shield, not configuration.**
+Its 7 keys all held 0.02, which equalled the old default - so the table was a
+silent no-op for as long as it existed. Lowering the default made it
+load-bearing: it now holds ~22 section screenshots at the OLD tolerance while
+their drift is unmeasured. It is kept ON PURPOSE and deleted once those are
+measured and re-recorded. Its keys match the tail after `/_`, which is easy to
+misread: `services/_technologies` hits the `technologies` key (0.02), while
+`services/_testimonials-header` does NOT hit `testimonials` and gets the
+default - one string, not a prefix. Both the table and the rule live in
+`test/support/screenshot_section_config.rb`, apart from
+`ApplicationSystemTestCase` so they can be unit-tested without booting Hugo,
+Capybara, or that file's dirty-fixtures `abort`; the near-miss above is pinned
+in `test/unit/screenshot_section_config_test.rb`.
+
+Why 0.0001: on a 1920x1080 capture, 0.02 means ~41,472 pixels must differ
+before the assertion fails. A one-cell copy edit measures 0.0004 (844 px), so
+the gate was blind to it by 50x - and passed, which is worse than failing
+(see the fossilization bullet below). Measured run-to-run noise on a static
+page is 0.0, so the floor only has to clear zero; 0.0001 (~207 px) fails that
+copy edit and goes green again when it is reverted. The noise claim is
+checkable without re-running the copy edit: two independent runs of the same
+test reported difference_levels identical to 16 decimal places (0.6893909143518518
+for `services/_footer` every time), and 2 of the 7 screenshots stayed GREEN at
+0.0001 even with the shield removed - a floor that low is not tripping on
+render jitter.
+
+**What the change actually catches**, measured three ways on
+`DesktopSiteTest#test_services` at clean HEAD (macOS, 7 screenshots compared
+each run). The middle column is what shipped:
+
+| screenshot | difference_level | 0.02 | shipped | +deleting the shield |
+|---|---|---|---|---|
+| `services/_footer` | 0.689391 | FAIL | FAIL | FAIL |
+| `services/_cta-contact_us` | 0.457970 | FAIL | FAIL | FAIL |
+| `services/_testimonials-header` | 0.005923 | pass | **FAIL** | **FAIL** |
+| `services/_use-cases` | 0.017498 | pass | pass (shield) | **FAIL** |
+| `services/_technologies` | 0.013838 | pass | pass (shield) | **FAIL** |
+| totals | | 2 | **3** | 5 |
+
+**Measure the default change and the shield deletion SEPARATELY** - conflating
+them is a mistake that was actually made here. A first pass deleted
+`SECTION_CONFIGS` in the same commit, measured 5 failures, and reported the
+default change as costing +3 screenshots. It costs **+1**; the other +2 are the
+shield deletion, and they are exactly the two whose names happen to hit a
+SECTION_CONFIGS key. The two changes look like one line and one dead constant,
+but they move different screenshots.
+
+All of these are the #540 dark-surface recolour: real stale-baseline
+detections, not machine drift, and not caused by the tolerance change.
+
+# Below the fold is invisible to the gate at ANY tolerance
+
+Tolerance is the smaller of the two blind spots. Captures are **viewport-only,
+taken at scroll top**: 1920x1080 desktop, 360x800 mobile
+(`test/support/setup_capybara.rb:85-86`). Everything below that first fold is
+simply not in the image, so no tolerance can catch a change there - measured, a
+table-cell edit produced difference_level **exactly 0** on mobile even at
+tolerance 0. Corroborating tell in any failure payload: the reported `region`
+never exceeds the viewport height (e.g. `[0.0,42.0,1920.0,1080.0]` for
+`services/_footer`).
+
+There is a second tolerance-independent axis: `Capybara::Screenshot::Diff.perceptual_threshold = 2.0`
+(`test/support/setup_snap_diff.rb:25`) means the vips driver only counts a
+pixel as differing once it is more than CIE dE00 2.0 from the baseline pixel.
+A recolour that stays under that contributes ZERO differing pixels, so it
+passes at ANY tolerance including 0 - most relevant to palette and
+dark-surface work, where a shift can be deliberate, visible and still
+sub-threshold.
+
+This is why the suite leans on per-section screenshots - each one scrolls its
+section INTO the viewport first (`verify_section_for` →
+`scroll_to find(css)`), which is the existing workaround, not an accident.
+A page asserted only as one top-of-page shot is verified for its first fold and
+nothing else. Closing the gap properly means either more section shots or
+full-page capture; both are out of scope for the tolerance change and belong to
+the follow-up that re-records baselines.
 
 # Rake tasks and suite layout
 
@@ -107,15 +189,16 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
 
 # Hard-won caveats
 
-- **The 2% default tolerance hides small text/colour changes** (2026-08-14).
-  `DEFAULT_SCREENSHOT_CONFIG = {tolerance: 0.02}`
-  (`test/application_system_test_case.rb:87`). Turning a four-word phrase into
-  a link on the homepage changed ~0.24% of the frame, so the gate PASSED and
-  the baseline was never re-recorded - it still shows the pre-change render.
-  Consequence: a green visual suite does NOT mean "no visual change", only "no
-  change larger than 2% of the frame". For link/colour/short-text edits,
-  verify by reading the built HTML or the render, not by trusting green. This
-  is the false-green class documented in
+- **The 2% default tolerance hid small text/colour changes** (2026-08-14,
+  FIXED 2026-08-21 by lowering the default to 0.0001 - see Tolerance policy).
+  Turning a four-word phrase into a link on the homepage changed ~0.24% of the
+  frame, so the gate PASSED and the baseline was never re-recorded - it still
+  showed the pre-change render. The residual rule outlives the fix, because
+  ~30 calls still pin 0.03 of their own: a green visual suite does NOT mean
+  "no visual change", only "no change larger than THAT call's tolerance". For
+  link/colour/short-text edits on a page whose call pins a tolerance, verify by
+  reading the built HTML or the render, not by trusting green. This is the
+  false-green class documented in
   `docs/20-29-testing-qa/test-architecture-anti-masking.md`.
 - **Flat-file posts are invisible to the visuals ratchet** (2026-08-20).
   `bin/check-post-visuals` globs `content/blog/*/index.md`, so a post living as
@@ -130,6 +213,14 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   normally discards sub-tolerance Rosetta drift, so a run rewrites all 45
   Linux baselines rather than the few your change moved. On `bin/qtest`
   the flag appears to be ignored entirely - the suite still compares.
+
+  **The two readers disagree on what counts as set** (identified 2026-08-21,
+  NOT fixed - known wart): `bin/qtest:209` skips its restore on ANY truthy
+  value, while `test/support/setup_snap_diff.rb:28` enters record mode only
+  on the literal string `"true"`. So `FORCE_SCREENSHOT_UPDATE=1` on qtest
+  gets the worst of both - the suite still compares and fails, and the
+  restore that would have cleaned up is skipped. Spell it `=true`, or better,
+  use `bin/record-baselines`.
 
   **Use `bin/record-baselines <glob>...` instead of doing this by hand**
   (shipped 2026-08-20, PR #489; the manual dance had been done 3x). It runs
@@ -179,8 +270,8 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   the re-record was never needed at all. Full suite green after the CI
   record: 356 runs, 6329 assertions, 0 failures (run 32347402944). Note the
   governing tolerance for these is **0.03**, set per-call at
-  `test/system/blog_special_content_test.rb:136` - NOT the 0.02
-  `DEFAULT_SCREENSHOT_CONFIG` in `test/application_system_test_case.rb:87`,
+  `test/system/blog_special_content_test.rb:136` - NOT the
+  `DEFAULT_SCREENSHOT_CONFIG` in `test/support/screenshot_section_config.rb:29`,
   which only applies when a call omits an explicit tolerance.
 
 - **Content-only diffs skip the visual suites entirely** (Paul 2026-07-31).
@@ -199,8 +290,11 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   every later local run red until someone re-records (2026-07-31: #405's
   28px mobile hero gap shipped with a commit-message note instead of updated
   baselines - cost a full false "bistable render" investigation). Re-record =
-  run the suite, keep the rewritten PNG, COMMIT it; only then can a rerun go
-  green.
+  run the suite so the FAILING run leaves its candidate on disk, keep that
+  rewritten PNG, COMMIT it; only then can a rerun go green. Deleting the PNG
+  first does nothing - the base is read from git HEAD, not from the file - and
+  a run that PASSES restores the HEAD image over the fresh capture, so there
+  is nothing to keep. Only a red run produces a committable baseline.
 - **A local visual red cannot condemn a branch until you have run the same
   thing on master** (2026-08-21). Verifying PR #511 (template/CSS class),
   `bin/qtest --changed` went red pointing at `services/fractional-cto`
@@ -242,7 +336,16 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   in one checkout; skipped under `FORCE_SCREENSHOT_UPDATE`),
   so passing runs no longer leave the tree dirty or arm the dirty-fixture
   guard against the next run. A RED run still keeps candidates + diff
-  artifacts for inspection. Never edit CSS while a suite is running - a
+  artifacts for inspection.
+
+  **This is why a sub-tolerance change FOSSILIZES the baseline.** The two
+  behaviours compose: the capture overwrites the PNG, then the pass restores
+  the git-HEAD image back over it. So a green run never refreshes anything,
+  and any real change small enough to pass leaves the baseline showing the
+  OLD render - permanently, until something large enough to fail arrives and
+  the accumulated drift gets accepted in one lump nobody can attribute. The
+  lower the tolerance, the less can accumulate; it does not remove the
+  mechanic, which is inherent to the gem's design. Never edit CSS while a suite is running - a
   raced run once saved a corrupt baseline missing its hero image.
 - Test builds MUST use `baseURL "/"` - enforced as `bin/build-if-stale`'s
   default, which all four runners build through (CI's setup-hugo action

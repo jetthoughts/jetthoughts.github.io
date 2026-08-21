@@ -117,7 +117,7 @@ required_pattern: /section_[a-z_]+_\d{8}_\d{6}\.png/
 
 ### Production Deployment
 ```yaml
-tolerance_threshold: 0.02  # 2% maximum difference
+tolerance_threshold: 0.0001  # default since 2026-08-21; was 0.02
 minimum_score: 9.0         # Grade A- minimum
 requires_manual_review: false
 auto_deployment: true
