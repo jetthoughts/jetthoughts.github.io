@@ -9,10 +9,17 @@ generated:
 verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-21T00:07:25Z
+timestamp: 2026-08-21T00:14:52Z
 ---
 
 # The loop
+
+**Scope: this loop is COURSE-oriented.** Step 2's content-canon critic diffs
+against the course canon and the taste pass scores against
+`.stitch/course-taste-design.md`. For SITE or BLOG surfaces take the
+`/stitch-design` step and the render gate from here, and skip the course-canon
+and course-taste steps - running them off-surface produces findings from rules
+that do not govern the page.
 
 1. Build the site so critics inspect fresh output.
 2. Spawn a DESIGN critic (renders every page via the
@@ -48,7 +55,7 @@ wrong one inverts the verdict.**
 | Surface | Design source | Note |
 |---|---|---|
 | Blog cover images | `.stitch/design.md` | "The Obsidian Engine" - **DARK**, canvas 2400x1260 |
-| Site chrome and pages | [site-palette](/design/site-palette.md) | **LIGHT** (ADR-0003), ruby accent |
+| Site chrome and pages | [site-palette](/design/site-palette.md) | **LIGHT by DEFAULT** (ADR-0003), ruby accent. Dark by design and NOT defects: blog cover art, ONE dark proof band per page, `/services/vibe-code-rescue/` |
 | Course pages | `.stitch/course-taste-design.md` | third system, taste-scoring anchor |
 
 `.stitch/design.md` is the COVER project, not the site. Point stitch at it

@@ -12,13 +12,22 @@ Read this at session start to route tasks to the right workflow without explicit
 - Image/cover requests (even without content) → `@docs/workflows/cover-images.md` and `@.stitch/design.md`
 - HTML/CSS changes → `@docs/workflows/css-consolidation.md`
 - **Design review of a page or visual change → `/stitch-design`** (Paul,
-  2026-08-21). Name the design source for the surface FIRST: site chrome and
-  pages are LIGHT (`.okf/design/site-palette.md`, ADR-0003), blog COVERS are the
-  dark Obsidian Engine (`.stitch/design.md`), course pages use
-  `.stitch/course-taste-design.md`. Loading the cover system to review a light
-  page produces the recolour ADR-0003 rules out. It complements the rendered
-  gates rather than replacing them - baselines check what SHIPPED, stitch checks
-  what was INTENDED. Detail: `.okf/workflows/review-swarm.md`.
+  2026-08-21). Name the design source for the surface FIRST — loading the wrong
+  one inverts the verdict:
+  - Site chrome and pages → `.okf/design/site-palette.md`. **Light is the
+    DEFAULT, not a monopoly.** Three surfaces are dark *by design* and must not
+    be flagged for recolour: blog cover art, ONE dark proof band per page, and
+    `/services/vibe-code-rescue/` (a dark variant of the same tokens, not a
+    second system). Anything else going dark IS a defect.
+  - Blog COVER images → `.stitch/design.md` (the dark "Obsidian Engine").
+    Reviewing a *page* against this yields the recolour ADR-0003 rules out.
+  - Course pages → `.stitch/course-taste-design.md`.
+
+  Stitch complements the rendered gates rather than replacing them: baselines
+  check what SHIPPED, stitch checks what was INTENDED. Rule detail in
+  `.okf/workflows/review-swarm.md` — note its surrounding loop (content-canon
+  critic, taste pass) is COURSE-scoped; for site and blog surfaces take the
+  stitch step and the render gate, not the course-canon steps.
 - Ruby/Rails changes → `@docs/workflows/ruby.md`
 - AI configuration, agents, skills → `@docs/workflows/ai-config.md`
 
