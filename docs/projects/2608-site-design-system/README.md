@@ -116,6 +116,36 @@ themes sit as sub-sections beneath ONE `## YYYY-MM-DD` heading. That is a
 whole-file restructure, not a find-and-replace, and it conflicts with every
 parallel session appending to that file — do it when the repo is quiet.
 
+**Decide the ruby-on-dark token — it blocks BOTH remaining 1a.4 items.**
+Measured 2026-08-21 in the rendered production build:
+
+| Token | on `#000` | on `--surface-ink` `#14110f` |
+|---|---|---|
+| `--color-ruby` `#cc342d` | 4.10 FAIL | **3.67 FAIL** |
+| `--color-ruby-hover` `#e04a42` | 5.23 pass | 4.68 pass (thin) |
+| `--ruby-700` `#9e2620` | 2.75 FAIL | 2.46 FAIL |
+
+Two consequences, and the second is the one that is easy to miss:
+
+1. **"ONE eyebrow style" is self-contradictory as written.** The canonical
+   eyebrow (`--color-ruby`, 12px) was designed against the blog's LIGHT
+   surfaces. Applying it site-wide drops `home-services-eyebrow` and
+   `home-clients-eyebrow` to 4.10:1 on their dark band - below AA for normal
+   text, which 12px is. The style needs a dark-surface variant.
+2. **Migrating the dark bands to `--surface-ink` makes this WORSE, not
+   better.** `#14110f` is lighter than `#000`, so ruby-on-dark falls from
+   4.10 to 3.67. The footer/dark-surface work therefore cannot ship before
+   the on-dark accent is decided, or it degrades contrast on every band it
+   touches.
+
+Only `--color-ruby-hover` clears AA on both grounds, and it is named for a
+hover state - using it as a static on-dark accent is semantically wrong. The
+ramp has `--ruby-700` for "text-on-light where AA needs more" and no
+counterpart for dark. **The decision is whether to name one** (e.g.
+`--ruby-on-ink`, seeded at `#e04a42` or lighter for more margin), which is a
+design call rather than a sweep. `technologies.css:10` already gestures at
+the problem in a comment.
+
 ## Working notes
 
 Coordinator/session reports do not belong in this directory — write them to
