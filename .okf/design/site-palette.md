@@ -7,7 +7,7 @@ tags: [design, palette, css, tokens, adr]
 generated:
   by: claude/opus-5
   at: 2026-08-20T00:00:00Z
-timestamp: 2026-08-21T00:44:07Z
+timestamp: 2026-08-21T02:05:49Z
 ---
 
 # Resolved: LIGHT (ADR-0003, 2026-08-20)
@@ -104,21 +104,25 @@ var(--color-primary) */`); a grep that counts them reads as if the token
 survived. Grep for `var(--color-primary` with the opening paren and read the
 hits before concluding a token is still live.
 
-## The `--rr-*` aliases die next, in 1a.4 — verify by grep, never by list
+## The `--rr-*` aliases are GONE (deleted in 1a.4, 2026-08-21)
 
-Phase 1a.1 promoted the Rescue Room tokens into
-`foundations/css-variables.css:110-116` as `--rr-*` aliases marked
-DELETE-in-1a.4. They are consumed in three files as of 2026-08-21:
-`pages/blog-list.css`, `single-post.css`, and `pages/blog-single.css`.
+Phase 1a.1 promoted the Rescue Room tokens as `--rr-*` aliases marked
+DELETE-in-1a.4. All 18 consumer references across `pages/blog-list.css`,
+`single-post.css` and `pages/blog-single.css` were migrated to the canonical
+names and the alias block was removed from `foundations/css-variables.css`.
+Zero visual delta - each alias was `--rr-X: var(--X)`, an exact 1:1
+indirection, so removing the hop cannot change a computed value; the suite
+agreed at 53 screenshots compared, no failures.
 
-**Do not delete the alias block against a written inventory.** A spec's list
-of consumers was wrong twice in one review (2026-08-21): it omitted a live
-line and named a file carrying zero references. `single-post.css` is the one
-that makes this dangerous — its `--rr-*` declarations set CTA and tag colour
-and background, and that file is a member of the COURSE bundle too, so
-deleting the aliases early breaks styling on blog AND course. Re-run
-`grep -rn 'var(--rr-' themes/beaver/assets/css/` at the moment of deletion and
-believe the output, not the doc.
+**The method is the part worth keeping.** The precondition was re-grepped at
+the moment of deletion rather than read from a doc - `grep -rn 'var(--rr-'
+themes/beaver/assets/css/` returned 18, then 0, and only then was the block
+removed. That mattered: a written inventory of these same consumers was wrong
+TWICE in one review, omitting a live line and naming a file with zero
+references. `single-post.css` belongs to the COURSE bundle as well as the
+blog, so deleting on the strength of that inventory would have broken styling
+on both. **Verify a deletion precondition by running the check, never by
+reading a list of what the check returned last time.**
 
 **It is the logo's colour, and that is the point, not a reason to keep it.**
 `themes/beaver/assets/img/icons/logo-dark.svg` contains exactly one hex value:
