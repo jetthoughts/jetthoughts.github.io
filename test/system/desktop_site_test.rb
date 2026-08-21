@@ -319,6 +319,17 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "friday_report"
   end
 
+  # The v2 clean-slate rail (ADR-0006). The stub owns only the URL, so the
+  # copy on screen has to be the SOURCE page's copy - if the source_page
+  # lookup breaks, the page still renders and only this text disappears.
+  def test_next_pilot
+    visit "/next/services/fractional-cto/"
+
+    assert_text "Fractional CTO Services for Startups"
+
+    assert_stable_screenshot "next/pilot"
+  end
+
   def test_free_consultation
     visit "/"
 

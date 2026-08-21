@@ -7,3 +7,4 @@
 - `0003-site-design-system.md` — one design system for site chrome ("Rescue Room")
 - `0004-static-site-experimentation.md` — what gets A/B tested, what cannot be, what replaces it
 - `0005-reusable-ai-instruction-layer.md` — extract generic skills/agents/contract as a Claude Code plugin; repos keep thin bindings
+- `0006-clean-slate-dual-run.md` — freeze legacy, build v2 on its own rail, stage at `/next/`; supersedes ADR-0003's propagate-into-legacy mechanism

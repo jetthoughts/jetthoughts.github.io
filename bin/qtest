@@ -45,6 +45,8 @@ PAGE_TESTS = {
   "free-consultation" => "free_consultation",
   "vibe-code-rescue" => "vibe_code_rescue",
   "friday-report" => "friday_report",
+  # v2 clean-slate rail (ADR-0006): layouts/next/* + pages/next-pilot.css
+  "next-pilot" => "next_pilot",
   "simple-page" => "privacy_policy",
   # critical/privacy-policy-critical.css maps by basename; alias it to the
   # simple-page tests so a touch there doesn't abort as an unknown key
@@ -73,7 +75,10 @@ def pages_for(file)
   when %r{^themes/beaver/assets/css/pages/([^/]+)\.css$} then [Regexp.last_match(1)]
   when %r{^themes/beaver/assets/css/critical/([^/]+)-critical\.css$} then [Regexp.last_match(1)]
   when %r{^themes/beaver/layouts/blog/}, %r{^content/blog/} then %w[blog-list blog-single]
-  when %r{^themes/beaver/assets/css/}, %r{^themes/beaver/layouts/} then :all
+  when %r{^layouts/next/}, %r{^content/next/} then %w[next-pilot]
+  # Terminal: root layouts/ had NO case at all, so a root-layouts-only diff
+  # mapped to nil and qtest exited 0 having tested nothing (false green).
+  when %r{^themes/beaver/assets/css/}, %r{^themes/beaver/layouts/}, %r{^layouts/} then :all
   end
 end
 

@@ -37,6 +37,7 @@ zero FL-Builder export files remain in any slice.
 | not_found | `404.html` | — (404.css, dynamic-404.css) | 16.2K → 16.2K | no-FL |
 | friday-report | `page/friday-report.html` | pages/friday-report.css | new 2026-08-20 | born semantic (no FL modules; one `#fl-main-content` specificity override against legacy-theme-skin) |
 | pagination | `list.html` (second bundle) | — (pagination.css only) | 0.2K → 0.2K | no-FL |
+| next-pilot | `layouts/next/single.html` (repo root, NOT in theme) | pages/next-pilot.css | new 2026-08-21 | v2 clean-slate rail (ADR-0006): css-variables + navigation.css + footer.css only — no style.css/586/base-4/legacy-theme-skin. Serves `/next/*` staging pages |
 
 ¹ careers was a byte-identical verbatim move (3086-layout2 had zero dead
 nodes); the small growth vs 07-12 is upstream content drift (course v2 merge

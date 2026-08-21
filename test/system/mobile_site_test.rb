@@ -193,6 +193,16 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "friday_report"
   end
 
+  # The v2 clean-slate rail (ADR-0006) - see the desktop test. The ICP arrives
+  # on a phone, so the rail gets a mobile baseline from its first commit.
+  def test_next_pilot
+    visit "/next/services/fractional-cto/"
+
+    assert_text "Fractional CTO Services for Startups"
+
+    assert_stable_screenshot "next/pilot"
+  end
+
   def test_free_consultation
     visit "/"
     # Add more specific scoping for Talk to an Expert button

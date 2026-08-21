@@ -1,0 +1,76 @@
+{{/* v2 clean-slate rail (ADR-0006). Forked from themes/beaver/layouts/baseof.html:
+     every FUNCTIONAL part is kept verbatim - SEO meta, the five schema
+     partials, favicons, analytics (conversion events are attribute-driven, so
+     keeping the partial keeps them firing), theme-color/msapplication, the
+     service-worker block, the skip link and <main id="main-content">.
+     DROPPED: the 7 hardcoded fl-* body classes, the .fl-page wrapper and the
+     two site-wide css-inline calls - foundations/css-variables.css rides the
+     page bundle instead (layouts/next/single.html). Chrome partials are
+     reused verbatim; their CSS comes via the page bundle. */}}
+<!doctype html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{ partial "seo/enhanced-meta-tags.html" . }}
+
+    {{ block "header" . }}{{ end }}
+
+    {{ partialCached "page/favicons.html" . "favicons" }}
+    {{/* Analytics (GA4 + Clarity) load ONLY on the real production host -
+         local dev, test builds and any other baseURL never inject tracking. */}}
+    {{/* analytics stays OFF for noindexed staging pages so /next/ testing
+         never pollutes the engagement read (ADR-0004 gate). */}}
+    {{ if and (strings.Contains site.BaseURL "jetthoughts.com") (not .Params.noindex) }}
+    {{ partial "page/analytics.html" . }}
+    {{ end }}
+    {{ $favicon := resources.Get "/img/favicon/favicon.ico" | fingerprint "md5" }}
+    <link rel="shortcut icon" href="{{ $favicon.Permalink }}" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    {{ $browserConfig := resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint "md5" }}
+    <meta
+      name="msapplication-config"
+      content="{{ $browserConfig.Permalink }}" />
+    <meta name="theme-color" content="#ffffff" />
+
+    {{/* Enhanced SEO Schema Markup */}}
+    {{ partial "seo/enhanced-organization-schema.html" . }}
+    {{ partial "seo/comprehensive-service-schema.html" . }}
+    {{ partial "seo/article-schema.html" . }}
+    {{ partial "seo/breadcrumb-schema.html" . }}
+    {{ partial "seo/faq-schema.html" . }}
+  </head>
+
+  <body lang="en">
+    <a class="skip-link sr-only" href="#main-content">Skip to main content</a>
+
+    {{ partialCached "page/header.html" . "header" }}
+
+    <main id="main-content" role="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partialCached "page/footer.html" . "footer" }}
+    {{ block "footer" . }}{{ end }}
+
+    {{ partialCached "page/site-scripts" . "site-scripts" }}
+    <script>
+      // Skip SW registration on local dev so cache never serves stale content
+      // during iteration. Production hosts keep SW for offline + repeat visits.
+      if (
+        "serviceWorker" in navigator &&
+        location.hostname !== "localhost" &&
+        !location.hostname.startsWith("127.") &&
+        location.hostname !== "0.0.0.0"
+      ) {
+        navigator.serviceWorker.register("/sw.js?v={{ now.Unix }}");
+      } else if ("serviceWorker" in navigator && navigator.serviceWorker.getRegistrations) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          regs.forEach(function (reg) { reg.unregister(); });
+        });
+      }
+    </script>
+  </body>
+</html>

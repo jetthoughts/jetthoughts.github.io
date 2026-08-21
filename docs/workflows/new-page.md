@@ -4,6 +4,32 @@ The checklist for building a new page that reuses the shared components and
 stays consistent with the design system. Every trap listed here has bitten a
 real sprint; do not skip steps.
 
+## 0. Pick your fork first — LEGACY or v2 rail
+
+Since ADR-0006 there are **two** paved paths, and §1–8 below describe the
+**LEGACY** one. Legacy is frozen: it takes defect fixes and pages already on
+it, not new design work.
+
+| | LEGACY (§1–8 below) | **v2 rail** |
+|---|---|---|
+| Baseof | `themes/beaver/layouts/baseof.html` (7 `fl-*` body classes, `.fl-page` wrapper) | `layouts/next/baseof.html` (neither) |
+| Shell | `fl-row` / `fl-col-group` / `fl-col` nesting is load-bearing | plain semantic HTML; **no `fl-*` anywhere** |
+| Bundle | `critical/base.css` + `586.css` + `vendors/base-4.min.css` + `style.css` + `legacy-theme-skin.css` + … | `foundations/css-variables.css` + `navigation.css` + `footer.css` + your page CSS. Nothing else. |
+| Where it renders | its own permalink | `/next/<path>/` — `noindex`, out of the sitemap |
+
+**A NEW page, or a page being redesigned, goes on the v2 rail.** Copy
+`layouts/next/single.html` and `themes/beaver/assets/css/pages/next-pilot.css`
+as the starting shape, add a stub under `content/next/` whose `source_page`
+points at the real page (the stub owns only the URL — copy keeps one source of
+truth), and flip the real page with `type: next` ONLY once the v2 template renders every frontmatter section the page uses (ADR-0006 §5 checklist) — flipping before that guts the live page to whatever subset the template reads.
+
+Steps 2 (bundle order), 5 (purge prefix) and 6 (qtest map, screenshot tests,
+ownership map) apply to BOTH forks — a v2 page still needs its `PAGE_TESTS`
+key and its ownership-map row, and `test/unit/paved_path_guard_test.rb` fails
+without them. Steps 1, 3 and 4's `fl-*` guidance apply to legacy only.
+
+Read `docs/adr/0006-clean-slate-dual-run.md` before starting either.
+
 ## 1. Template
 
 Create `themes/beaver/layouts/page/<name>.html`. Start from
@@ -17,10 +43,11 @@ structural shell:
     ... fl-row / fl-col-group / fl-col / fl-col-content nesting ...
 ```
 
-The `fl-*` framework classes are load-bearing (layout grid from
-`critical/fl-layout-grid.css`) — keep the nesting; name YOUR elements with a
-page prefix (`<name>-hero`, `<name>-grid`, ...). Never introduce hash-like
-class names.
+The `fl-*` framework classes are load-bearing **on this fork** (layout grid
+from `critical/fl-layout-grid.css`) — keep the nesting; name YOUR elements
+with a page prefix (`<name>-hero`, `<name>-grid`, ...). Never introduce
+hash-like class names. On the **v2 rail** there is no grid framework and no
+`fl-*` at all — see §0.
 
 ## 2. CSS bundle slice
 
