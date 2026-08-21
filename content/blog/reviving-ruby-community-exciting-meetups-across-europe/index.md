@@ -5,7 +5,7 @@ remote_id: 2179540
 dev_to_id: 2179540
 dev_to_url: https://dev.to/jetthoughts/reviving-the-ruby-community-exciting-meetups-across-europe-52af
 title: 'Reviving the Ruby Community: Exciting Meetups Across Europe'
-description: "Ruby meetups are running again across Europe, from a relaunched GenevaRB to newer groups. Where they meet and what is pulling developers back."
+description: "Ruby meetups are running again across Europe, including a relaunched GenevaRB, and what is pulling developers back together."
 seo_override: true
 created_at: '2024-12-28T14:07:24Z'
 date: 2024-12-28

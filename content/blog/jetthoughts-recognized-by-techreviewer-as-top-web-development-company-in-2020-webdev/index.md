@@ -5,7 +5,7 @@ remote_id: 1852611
 dev_to_id: 1852611
 dev_to_url: https://dev.to/jetthoughts/jetthoughts-is-recognized-by-techreviewer-as-a-top-web-development-company-in-2020-oom
 title: JetThoughts is recognized by Techreviewer as a Top Web Development Company in 2020
-description: "Techreviewer named JetThoughts among its leading web development companies for 2020, following its review of full-cycle development providers."
+description: "Techreviewer named JetThoughts one of its leading web development companies for 2020."
 seo_override: true
 created_at: '2024-05-14T12:23:26Z'
 edited_at: '2024-11-26T16:05:43Z'

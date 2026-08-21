@@ -5,7 +5,7 @@ remote_id: 1880251
 dev_to_id: 1880251
 dev_to_url: https://dev.to/jetthoughts/our-default-ruby-development-stack-72k
 title: Our Default Ruby Development Stack
-description: "The technology choices behind JetThoughts Rails projects: which omakase defaults we keep, and where client requirements push us off them."
+description: "The technology choices behind JetThoughts Rails projects: which omakase defaults carry most of the work, and when a team reaches past them."
 seo_override: true
 created_at: '2024-06-07T10:47:23Z'
 date: 2024-06-07

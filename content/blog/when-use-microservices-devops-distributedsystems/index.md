@@ -5,7 +5,7 @@ remote_id: 1283284
 dev_to_id: 1283284
 dev_to_url: https://dev.to/jetthoughts/when-to-use-microservices-1o5e
 title: When to use Microservices?
-description: "What microservices buy you in exchange for their cost, and the point where splitting a monolith starts to make sense rather than just sounding modern."
+description: "What microservices buy in scalability and what they cost in coordination, and the team size where that trade starts to pay off."
 seo_override: true
 date: 2022-12-03
 created_at: '2022-12-03T12:26:09Z'

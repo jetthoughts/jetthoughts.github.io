@@ -5,7 +5,7 @@ remote_id: 1852562
 dev_to_id: 1852562
 dev_to_url: https://dev.to/jetthoughts/tips-to-attract-readers-to-read-your-post-2n9j
 title: Tips to attract readers to read your post
-description: "Readers scan before they commit. What we changed about our articles to survive that skim, and how to tell whether your own posts do."
+description: "Readers scan before they commit. How to make a post survive that skim, and how heatmaps show whether yours does."
 seo_override: true
 date: 2024-05-14
 created_at: '2024-05-14T11:25:32Z'

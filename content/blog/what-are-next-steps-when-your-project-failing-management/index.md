@@ -5,7 +5,7 @@ remote_id: 462546
 dev_to_id: 462546
 dev_to_url: https://dev.to/jetthoughts/what-are-the-next-steps-when-your-project-is-failing-1ai8
 title: What are the next steps when your project is failing?
-description: "Projects fail for reasons nobody planned for. What to do once blame has stopped helping, and how a team recovers direction without losing people."
+description: "Projects fail for reasons nobody planned for. What to do once blame has stopped helping, and how a team gets its direction back."
 seo_override: true
 created_at: '2020-09-22T07:32:43Z'
 edited_at: '2024-11-25T15:41:56Z'

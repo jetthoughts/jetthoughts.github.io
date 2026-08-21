@@ -5,7 +5,7 @@ remote_id: 1877555
 dev_to_id: 1877555
 dev_to_url: https://dev.to/jetthoughts/how-jetthoughts-implements-joels-test-497h
 title: How JetThoughts implements Joel’s test?
-description: "Joel Spolsky's twelve-point test, answered honestly for a working Rails consultancy, and where day-to-day practice actually lands on each point."
+description: "Joel Spolsky's twelve-point test, answered for a working Rails consultancy in 2016, and where its practice landed on each point."
 seo_override: true
 created_at: '2024-06-05T05:51:10Z'
 edited_at: '2024-11-26T16:03:37Z'
