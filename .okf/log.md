@@ -3,6 +3,34 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
+## 2026-08-21 - the routing rule exposed a contradicting design authority
+
+Adding one routing line took five review rounds. The findings were worth more
+than the rule.
+
+* **Root `DESIGN.md` contradicts the resolved palette and would have been
+  followed.** It frames dark JetVelocity as "normative for new brand/conversion
+  surfaces", calls LIGHT chrome "legacy/incumbent", and specifies `#1a8cff`
+  primary buttons - against ADR-0003 (light, 2026-08-20) and #518, which DELETED
+  that token. An agent building a new conversion page would have gone dark with
+  a `var()` that resolves to nothing. Superseded-in-part banner added there;
+  full regeneration outstanding. `design/site-palette.md` now NAMES it as a
+  known contradicting sibling - an authority that does not name what contradicts
+  it leaves the reader to find the conflict by shipping the wrong thing.
+
+* **`workflows/review-swarm.md` - routing text drops the qualifier that made the
+  source correct.** Four for four this session: "pages are LIGHT" lost three
+  deliberate dark surfaces; "see review-swarm" lost that the loop is
+  COURSE-scoped; "three sources" lost the in-post/social fourth; "use stitch"
+  lost that stitch has no review verb - all three skills GENERATE. Carry the
+  qualifier into the routing line, and check the destination is EXECUTABLE
+  before making a route mandatory: a gate an agent cannot run gets improvised,
+  which is worse than no gate because it reports as done.
+
+* Same section records the sibling trap: a rule in this bundle is not ON THE
+  PATH. `AGENTS.md` routes sessions through `docs/workflows/flow-router.md`, so
+  a concept nobody is routed to is read only by sessions already looking.
+
 ## 2026-08-21 - design review has a route: /stitch-design
 
 * `workflows/review-swarm.md` + `design/index.md` + `workflows/index.md`, and

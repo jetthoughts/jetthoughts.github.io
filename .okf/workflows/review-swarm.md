@@ -9,7 +9,7 @@ generated:
 verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-21T00:29:15Z
+timestamp: 2026-08-21T00:31:29Z
 ---
 
 # The loop
@@ -67,6 +67,32 @@ while the house spec carries the stroke, semantic-colour and label rules the
 course file does not repeat. Taking only one silently drops half the governing
 rules - which is why this lists SOURCES rather than picking one per file type.
 
+
+# Routing text drops the qualifier that made the source correct
+
+Adding ONE routing rule on 2026-08-21 took five review rounds, and every
+finding had the same shape: a line summarising a source lost the condition
+that made the source true.
+
+| What the routing line said | What the source actually says |
+|---|---|
+| "site pages are LIGHT" | light by DEFAULT; three surfaces are dark by design |
+| "detail in review-swarm" | that loop's canon and taste steps are COURSE-scoped |
+| "there are three sources" | four - in-post SVG/Mermaid/social has its own |
+| "route review through stitch" | stitch has no review verb; all three skills GENERATE |
+
+Routing text is the most-read and least-reviewed prose in a repo, and the
+compression that makes it readable is exactly what makes it wrong. Two habits
+follow. **Carry the qualifier into the routing line** - "LIGHT by default,
+three documented exceptions" is barely longer than "LIGHT" and is the
+difference between a correct review and a recolour of a deliberate dark page.
+And **check the destination is executable** before making a route mandatory:
+a gate an agent cannot run gets improvised, which is worse than no gate
+because it reports as done.
+
+Related, same session: a rule recorded in this bundle is not ON THE PATH.
+`AGENTS.md` routes every session through `docs/workflows/flow-router.md`; a
+concept nobody is routed to is read only by sessions already looking for it.
 `.stitch/design.md` is the COVER project, not the site. Point stitch at it
 while reviewing a light page and it will judge light chrome against dark cover
 tokens and recommend the recolour ADR-0003 explicitly rules out - the exact
