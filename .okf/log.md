@@ -51,6 +51,35 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - the on-dark accent is decided, and the dark band is three groups
+
+Two concepts corrected against what actually shipped in PR #540.
+
+**[design/site-palette.md](design/site-palette.md) was stale in the way that
+matters most.** It carried `#e85a52` as a *recommendation* and said "Not yet
+applied - Paul's call", describing an open blocker that is now closed. A cold
+session reading it would conclude the phase was still gated, which is exactly the
+false state that produced hours of adjacent work instead of the CSS. Now recorded
+as DECIDED and SHIPPED, with where it was applied - four eyebrows that MEASURED
+below AA, not a site-wide sweep, since sweeping is what the reverted 41-rule
+attempt got wrong.
+
+What survives the decision unchanged, and is re-stated: neither automated gate
+catches a contrast regression on those bands. No contrast test covers them and
+the screenshot suite passes a colour change of this size.
+
+**[architecture/css-pipeline.md](architecture/css-pipeline.md) documented how to
+HUNT the shape layer but never what the dark band is made of.** It is three
+groups - 1 footer background, 12 bottom-edge SVG fills across 9 page files, 5
+section bands - and moving a subset ships a seam. A first pass moved the footer
+and the 12 fills, leaving the 5 bands black, and created the seam the migration
+exists to remove; an earlier attempt moved the footer alone and was reverted for
+the mirror-image reason.
+
+The coupling that makes them one change: `--color-ruby` measures 4.10:1 on `#000`
+but 3.67:1 on `--surface-ink`, so migrating a band makes ruby text on it WORSE.
+Two eyebrows that were fine before the bands moved failed after.
+
 ## 2026-08-21 - Phase 1a.4 dark surfaces: what shipped, and two live AA failures
 
 Shipped in `phase-1a4-dark-surfaces`: the footer and the 12
