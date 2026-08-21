@@ -61,9 +61,10 @@ The factual content - which partial emits what, what production adds - was
 corrected ONCE, in round one (a stylesheet-link count of three that a parser put
 at two; "production only adds `.min`" which also runs `resources.PostProcess`
 and adds `integrity`), and then stood unchallenged through rounds two to six.
-Every failure after round one was a claim about what a MEASUREMENT establishes.
-Descriptive claims converge in about one round; prescriptive ones took five and
-then had to be deleted. Four successive text-search checks were
+Not every later finding was about measurement - round six caught a stale round
+count - but every finding that forced a REWRITE rather than a word was. Budget
+roughly one round for what the code does, and several for anything you claim a
+check proves. Four successive text-search checks were
 refuted in turn: literal `String#scan`, substring prefixes, comments and URLs,
 then semantics no regex fixes.
 
@@ -75,11 +76,15 @@ establish in the same breath.
 Two companions recorded with it: round three on a home-grown instrument is the
 signal to DELETE it rather than patch it again (each of the four patches was
 individually correct and each exposed the next hole, while the honest version
-was far shorter and routed to a method the file already carried); and a fair
-diagnosis can carry an overclaiming prescription, so check the two halves
-separately - the one finding declined on #537 correctly identified imprecise
-authorship recording but proposed a fix that would have claimed authorship of
-sections written by others.
+was far shorter and routed to a method the file already carried); and verify a citation
+against the artifact it CITES. The finding I declined twice was right twice: it
+asked to update `generated` for current content, citing canonical OKF §5.2. I read
+§5.2 as "Relative links" and called it miscited - but that was an older v0.1 copy
+in a plugin cache. In `~/.agents/skills/okf/reference/SPEC.md`, §5.2 IS "Trust:
+`generated` and `verified`", stating that `generated` records how the CURRENT
+content was produced and `generated.at` marks its last meaningful change. Two spec
+versions on one machine, section numbers disagreeing. `generated` is now updated
+on both concepts this PR rewrote.
 
 **A dedup in this same concept was wrong and has been reverted** - the sharpest
 instance yet of the rule above. Two byte-identical `verified` entries
@@ -92,15 +97,22 @@ verification event.
 
 `git log -S` selects every commit that CHANGES a string`s occurrence count, so
 one hit means one net count change, not one event - a neighbouring question accepted as the answer,
-which is exactly what this entry is about. Both entries are restored, and CONVERTED
-rather than restored verbatim: the recorded 00:10:00Z / 00:50:00Z were local time
-carrying a `Z`, and the offset in force then was +03:00 (recoverable from
-e046adc54`s own commit stamp), so they land at 2026-08-20T21:10:00Z and
-21:50:00Z. Restoring the future-dated originals would have re-created the exact
-harm the root index warns about - a stamp ~2h ahead silently outranks a genuinely
-newer concurrent edit, because conflicts resolve by taking the later timestamp.
-The root index is explicit that both events stay: dropping one falsifies the
-provenance the field exists to carry.
+which is exactly what this entry is about. Both entries are restored, at the single MEASURED
+value e046adc54 chose - which is to say the pre-dedup state exactly.
+
+A first repair attempt converted them by -3h, reading +03:00 off git commit
+stamps. Review refuted that too: e046adc54 records that the session clock was
++0200, that its own converted values `were never MEASURED - I derived them by
+subtracting two hours from times I had invented`, and that the originating
+offsets are not uniform. So no offset recovers those times, and converting
+fabricated precise-looking numbers out of invented ones. The root index allows
+exactly two moves - convert with a recoverable offset, or mark unknown - and only
+the second applies here.
+
+The two entries are therefore identical ON PURPOSE: two real checks whose
+individual times are unrecoverable. A YAML comment now sits above them saying so,
+because the identical pair is what made them look like an artifact in the first
+place - the note is the fix that stops the next session repeating my mistake.
 
 ## 2026-08-21 - CSS ships both inline and as a linked file; text search cannot prove a selector applies
 

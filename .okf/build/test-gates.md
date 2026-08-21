@@ -4,7 +4,7 @@ title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
 status: stable
-generated: { by: claude/opus-4-8, at: 2026-08-12T20:20:00Z }
+generated: { by: claude/opus-5, at: 2026-08-21T05:15:00Z }
 verified:
   - { by: claude/opus-5, at: 2026-08-21T05:06:54Z }
   - { by: claude/opus-5, at: 2026-08-21T04:01:38Z }

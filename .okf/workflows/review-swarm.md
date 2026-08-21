@@ -4,12 +4,15 @@ title: Two-critic review swarm
 description: The proven module-review loop - a design critic (full render walk) plus a content-canon critic, followed by verified fixer waves.
 tags: [swarm, review, process]
 generated:
-  by: process:okf-migrate
-  at: 2026-07-24T00:00:00Z
+  by: claude/opus-5
+  at: 2026-08-21T05:15:00Z
 verified:
   - { by: claude/opus-5, at: 2026-08-21T04:52:57Z }
-  - { by: claude/opus-5, at: 2026-08-20T21:50:00Z }
-  - { by: claude/opus-5, at: 2026-08-20T21:10:00Z }
+  # The pair below is TWO real checks whose individual times are unrecoverable
+  # (e046adc54: the originals were invented, offsets not uniform). They are
+  # identical on purpose - do NOT dedup them. See log 2026-08-21.
+  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
+  - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
 timestamp: 2026-08-21T04:52:57Z
 ---
 
@@ -271,11 +274,15 @@ verdict format, and the two or three specific things to attack.
   adds - was corrected ONCE, in round one (a stylesheet-link count of three that
   a parser put at two; "production only adds `.min`" that also runs
   `resources.PostProcess` and adds `integrity`), and then stood unchallenged
-  through rounds two to six. Every failure after round one was a claim about
-  what a MEASUREMENT establishes.
+  through rounds two to six, while the INVENTED INSTRUMENT in the same file was
+  refuted five times running and finally deleted. Not every later finding was
+  about measurement - round six caught a stale round count - but every finding
+  that forced a rewrite rather than a word was.
 
-  That is the shape worth planning around: descriptive claims converge in about
-  one round, prescriptive ones took five and then had to be deleted. Four successive
+  The planning shape: budget roughly one round for what the code does, and
+  several for anything you claim a check PROVES. If you are on round three of
+  patching an instrument you invented, delete it and route to a method that
+  already exists. Four successive
   text-search checks were each refuted in turn: literal `String#scan`
   (`'\.c-nav'` hunting a backslash), substring prefixes (`\.c-content-block`
   scoring on `.c-content-block__text`), comments and URLs (`idangero` scoring 1
@@ -296,11 +303,23 @@ verdict format, and the two or three specific things to attack.
   this hard to stop. If the tool is invented rather than the subject, the third
   round is the signal.
 
-- **A fair diagnosis can carry an overclaiming prescription - decline that half**
-  (2026-08-21). The one finding rejected on #537 asked to rewrite
-  `generated.by` to the editing session. The diagnosis (new authorship recorded
-  only under `verified` is imprecise) was fair; the fix would have claimed
-  authorship of sections written by others, and contradicted the convention
-  every other concept follows - `generated` = who first produced the file,
-  `verified` = who actually REVALIDATED its content (an ordinary edit is not a verification). Check the prescription against the tree
-  separately from the diagnosis, and record the disposition with its evidence.
+- **Verify a citation against the artifact it CITES, not a copy you happen to
+  have** (2026-08-21). The same finding was declined twice on #537/#538 and was
+  right both times. It asked to update `generated` for current content; I
+  checked "canonical OKF §5.2", found "Relative links", and declined it as
+  miscited. The reviewer was reading `~/.agents/skills/okf/reference/SPEC.md`,
+  where §5.2 IS "Trust: `generated` and `verified`" and states plainly that
+  `generated` records how the CURRENT content was produced and `generated.at`
+  marks its last meaningful change. I was reading an older v0.1 copy in a plugin
+  cache that never defines the fields at all.
+
+  Two versions of a spec on one machine, and the section numbers do not agree.
+  "Not reproducible as cited" is a claim about the reviewer that needs the same
+  evidence as any other - resolve the path first. The correct semantics are now
+  applied: `generated` = how the current content was produced, `verified` = who
+  actually REVALIDATED it (an ordinary edit is not a verification).
+
+  The general form still holds - a fair diagnosis can carry an overclaiming
+  prescription, so check the halves separately - but this was not an instance of
+  it. It was an instance of checking the wrong file twice and calling it
+  evidence.
