@@ -6,7 +6,7 @@ tags: [analytics, ga4, search-console, mcp, seo, tooling]
 generated:
   by: claude/opus-5
   at: 2026-08-13T00:00:00Z
-timestamp: 2026-08-20T23:44:03Z
+timestamp: 2026-08-21T02:40:00Z
 verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - by: claude/opus-5
@@ -138,6 +138,36 @@ that can never convert.
 Use `sc-domain:jetthoughts.com` for *coverage* questions (what exists, what is
 indexed); use the `https://jetthoughts.com/` prefix property, or a
 `page notContains elital` filter, for any *performance* question.
+
+## Page-level impressions are mostly queries GSC will not name
+
+A page row and that page's query breakdown do not add up, and the gap is
+routinely 30x. `rails-virtual-attributes-use-cases-ruby` (90d, 2026-05-23..08-20):
+
+| Source | Impressions | Position | CTR |
+|---|---|---|---|
+| page row (`dimensions=page`) | **7,902** | 7.8 | 0.09% |
+| sum of its named queries (`get_search_by_page_query`) | **265** | 3.7-5.9 on the head terms | **4.26%** on `rails virtual attribute` |
+
+GSC omits low-volume queries for privacy, so ~97% of that page's impressions
+belong to queries it will never show you. The page-level 0.09% is an
+aggregation artifact: on the queries that are actually its topic, the page
+ranks top-5 and converts fine.
+
+**Rule: before calling a page a CTR failure, pull `get_search_by_page_query`
+and compare the named total against the page total. If named ≪ page, the
+page-level CTR is noise and a snippet rewrite will change nothing.**
+
+The inverse case is the one worth acting on. The Falcon post's named queries
+total 804 impressions against its topic (`ruby falcon` pos 5.4, `falcon ruby`
+pos 4.8, `falcon web server` pos 6.6) for 5 clicks - there the named queries
+ARE the volume, position ~5 should return roughly 8%, and 0.62% is a real
+snippet failure. Same shape of number, opposite verdict; only the named-vs-page
+comparison separates them.
+
+Same family as the 2026-08-14 error of quoting an average position computed
+over 1-3 impression rows: a GSC figure is only as good as the denominator you
+did not look at.
 
 ## `/blog/` fires no `scroll_depth` - GA4 cannot see the blog index
 

@@ -110,6 +110,28 @@ Review then found two things the first draft got wrong, both worth keeping:
 Deliberately NOT recorded: that a parallel PR currently owns the Linux baseline
 re-record. The accepted-debt POLICY is already in `build/test-gates.md`; who
 holds the work this hour is a state snapshot and would rot within days.
+## 2026-08-21 - descriptions finished, R-queue restocked, and a GSC metric that lies
+
+- **GSC page-level CTR is usually an artifact** - added to
+  [analytics-access](/workflows/analytics-access.md). A page row and its query
+  breakdown disagree by ~30x because GSC anonymizes low-volume queries:
+  `rails-virtual-attributes` shows 7,902 impressions / 0.09% CTR at page level,
+  but its named queries total 265 impressions at position 3.7-5.9 with 4.26% CTR
+  on the head term. Rule: compare named-query total against page total before
+  calling anything a CTR failure. The inverse case (Falcon post: 804 named
+  impressions on-topic at position ~5 for 5 clicks) is a real snippet failure -
+  same shape of number, opposite verdict.
+- **All site descriptions are now untruncated, and the earlier count was wrong.**
+  36 written by hand. 19 of them were missed by every prior pass because their
+  `...` sits inside single quotes (`description: 'foo...'`), which
+  `/\.\.\.$/` never matches. Found only by grepping RENDERED meta tags, not
+  source - the rule this repo already states for text ratchets. Verified 0
+  remaining across `name="description"`, `og:description` and
+  `twitter:description` site-wide.
+- **The 2510 R-queue is empty and replaced by §13** of the content plan,
+  restocked from live GSC. Headline: fix what already ranks before publishing
+  more - named-query clicks across the property are in the low hundreds per
+  quarter while pages sit unclicked at positions 3-8.
 
 ## 2026-08-21 - what three review rounds taught, lifted from the PR into concepts
 
