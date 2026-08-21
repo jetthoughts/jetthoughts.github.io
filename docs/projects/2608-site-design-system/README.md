@@ -150,10 +150,23 @@ the problem in a comment.
 three roles (`--primary` ruby/white, `--secondary` white/dark, `--tertiary`
 transparent/ruby), already tokenised apart from four `#ffffff` literals. It is
 imported by `components.css`, which one layout bundles.
+**But `c-button--*` appears ZERO times in any template or content file, and it
+is absent from the entire PRODUCTION tree** - `grep -rl 'c-button'
+_dest/public-test/` returns nothing, and `components.css` is not referenced
+from `index.html` at all. The component was built and never adopted.
 
-**But `c-button--*` appears ZERO times in any template or content file, and
-PurgeCSS strips it from every shipped bundle** (`grep -rc 'c-button--primary'
-_dest/public-dev/css/*.css` returns nothing). The component was built and
+*Method note, because the first check was a false green:* `_dest/public-dev` is
+built in DEV mode where PurgeCSS is disabled, and this CSS is emitted INLINE in
+the HTML rather than under `css/*.css`, so grepping `public-dev/css/*.css`
+returns zero whether or not the component is adopted. The conclusion survived
+re-verification against the production tree; the original evidence did not.
+
+The live buttons are **five separate families**, verified in the templates:
+`.fl-button` (FL Builder), `.btn`/`.btn-primary`
+(`partials/page/navigation.html`), `.btn--primary` (`shortcodes/cta.html`),
+`.action-button` (`partials/page/use-cases.html`) and `.pp-button`
+(`page/services.html`). A sweep scoped to `.fl-button` alone would leave four
+families outside the roles.
 never adopted. The live buttons are FL Builder's `.fl-button`.
 
 So the 1a.4 item is not "tokenise the button component" - that changes nothing
