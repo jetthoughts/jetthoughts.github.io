@@ -99,8 +99,14 @@ design-review gate and would score against stale values.
 **Make `okf_validate.py .okf --strict` exit 0.** It exits 1 today and has for
 some time; the `✓ conformant` line refers to §9 (no ERRORS), while `--strict`
 fails on any warning. CLAUDE.md requires this gate before bundle commits, so
-it has been reported green while failing. Measured 2026-08-21: 82 warnings —
-**57** §7 date headings, **23** missing recommended fields.
+it has been reported green while failing.
+
+**No total is recorded here** - every entry appended to `.okf/log.md` adds a §7
+heading warning, so a written count is wrong by the next append. It was
+corrected twice on 2026-08-21 and went stale within one commit each time.
+Measure at execution time. The composition is stable even though the total is
+not: the large majority are §7 date headings from `log.md`, the rest are
+concepts missing a recommended field.
 
 **Re-measure before executing — do not trust the counts above.** They come from
 the validator this machine resolved on 2026-08-21 (the 0.4.0 cache and the
