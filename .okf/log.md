@@ -3,38 +3,57 @@
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 
-**Heading format is a DELIBERATE deviation from OKF §7 — do not "fix" it.**
-The spec's template is a bare `## <YYYY-MM-DD>` with bullets beneath, which
-assumes one entry per day. This bundle lands several thematic entries per day
-(12 on 2026-08-21 alone), so bare dates would produce a dozen identical
-headings and destroy scannability. We use `## YYYY-MM-DD - what changed`
-instead.
+**`okf_validate.py .okf --strict` EXITS 1 on this bundle. It has for some
+time.** The command prints `✓ conformant (N warnings)` and that line is true -
+conformance (§9) means no ERRORS - but `--strict` fails on any warning, so the
+exit code is 1. Reading the friendly line and calling the gate green is the
+easy mistake; it was made repeatedly on 2026-08-20/21 before review caught it.
+**Check `$?`, not the checkmark.**
 
-The cost is visible and accepted: `okf validate --strict` reports ~33 §7 date
-warnings, and they are the dominant warning class. **They are known, not
-unnoticed.** When reading validator output, filter them out before concluding
-the bundle is noisy — a genuine warning hides easily among them. Warnings
-never block conformance (§9).
+Measured 2026-08-21 (re-derive rather than trusting these numbers; they move
+with every entry): 82 warnings, of which **57 are §7 date headings** and
+**23 are missing recommended fields**.
 
-## 2026-08-21 - the dominant warning class is a deliberate deviation, now said so
+The date headings are a deliberate deviation. The spec's template is a bare
+`## <YYYY-MM-DD>` with bullets beneath, which assumes one entry per day; this
+bundle lands several thematic entries per day (12 on 2026-08-21), so bare
+dates would produce a dozen identical headings. **Do not collapse them
+casually** - the conformant shape is one dated heading per day with the themes
+as sub-sections beneath it, which is a restructure of the whole file, not a
+find-and-replace.
 
-A sync check found the bundle already in sync: the one "broken cross-link"
+**This is a known-red gate, not accepted noise, and it is tracked** in
+`docs/projects/2608-site-design-system/README.md` under Outstanding. Two jobs
+make it green: restructure same-day entries under one heading, and add
+`timestamp` to the 23 concepts missing it (anchored to each file's last commit
+time, which is verifiable - never invented).
+
+## 2026-08-21 - the strict gate has been RED and was being reported green
+
+`okf_validate.py .okf --strict` **exits 1**, and has for some time. It prints
+`✓ conformant (N warnings)` - true, since conformance (§9) means no ERRORS -
+and that line was read as a pass repeatedly through 2026-08-20/21 without ever
+checking `$?`. CLAUDE.md requires this gate before bundle commits, so it was
+being reported green while failing. **Check the exit code, not the checkmark.**
+Textbook evidence-over-assertion: the human-readable summary and the machine
+signal disagreed, and the friendlier one won.
+
+Measured, not estimated: 82 warnings, **57** §7 date headings and **23**
+missing recommended fields. An earlier draft of this entry said "33 of ~80" -
+itself an unmeasured number in a note whose whole purpose was separating known
+noise from real signal.
+
+Also recorded, because it is the opposite mistake: the one "broken cross-link"
 warning points at a file that EXISTS
-(`docs/projects/2605-.../course-landing-components-2026-08.md`) - the validator
-simply declines to resolve outside the bundle and tolerates it under §5.3.
-"Fixing" that would have broken a working link.
+(`docs/projects/2605-.../course-landing-components-2026-08.md`); the validator
+declines to resolve outside the bundle and tolerates it under §5.3. Acting on
+that warning would have broken a working link. One warning class is real and
+was ignored; another looks real and must be.
 
-What IS real: **33 of the ~80 warnings are §7 date-heading violations**, and
-they come from this file's own convention. The spec's template is a bare
-`## <YYYY-MM-DD>` with bullets, which assumes one entry per day; this bundle
-lands several thematic entries per day (12 on 2026-08-21), so conforming would
-produce a dozen identical headings.
-
-Keeping the deviation, and documenting it in the header rather than leaving it
-to be rediscovered. The reason to write it down is not the warnings themselves -
-they never block - but that a future session reading validator output either
-"fixes" it destructively or learns to ignore ALL warnings, and the second is how
-a real one gets missed.
+Header now carries the measured breakdown and the two jobs that make the gate
+green (restructure same-day entries under one heading; add `timestamp` to the
+23 concepts missing it, anchored to each file's last commit time). Tracked in
+`docs/projects/2608-site-design-system/README.md` under Outstanding.
 
 ## 2026-08-21 - "tracked separately" was not true; now it is
 

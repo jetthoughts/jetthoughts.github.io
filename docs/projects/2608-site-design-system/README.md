@@ -96,6 +96,19 @@ rather than "the site design system". Also regenerate `.impeccable/design.json`
 if it encodes the same palette, since `/impeccable critique` now carries the
 design-review gate and would score against stale values.
 
+**Make `okf_validate.py .okf --strict` exit 0.** It exits 1 today and has for
+some time; the `✓ conformant` line refers to §9 (no ERRORS), while `--strict`
+fails on any warning. CLAUDE.md requires this gate before bundle commits, so
+it has been reported green while failing. Measured 2026-08-21: 82 warnings —
+**57** §7 date headings, **23** missing recommended fields.
+
+Two jobs: (1) restructure `log.md` so same-day themes sit as sub-sections
+beneath ONE `## YYYY-MM-DD` heading — a whole-file restructure, not a
+find-and-replace, and it conflicts with every parallel session appending to
+that file, so do it when the repo is quiet; (2) add `timestamp` to the 23
+concepts missing it, anchored to each file's last commit time
+(`git log -1 --format=%cI -- <file>`), never invented.
+
 ## Working notes
 
 Coordinator/session reports do not belong in this directory — write them to
