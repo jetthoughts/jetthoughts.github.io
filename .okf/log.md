@@ -51,6 +51,36 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - a blind baseline record bakes in content drift
+
+Dispatched `test.yml -f update-baselines=true` on the phase-1a.4 branch, because
+this worktree's macOS render is drifted and cannot produce trustworthy baselines.
+The bot recorded **84 Linux baselines** for a change that touches one colour.
+
+Screened them by the byte-size procedure this bundle already documents in
+[build/ci-gates.md](build/ci-gates.md) - "record mode has no accept/reject gate":
+
+* 76 of 84 under the ~1.2% noise floor
+* 8 above it; seven are footers and CTA bands, consistent with the change
+* one outlier at **12.44%**: `desktop/blog/tag.png`
+
+Diffing that outlier showed **different blog posts** - "108 posts tagged rails"
+against 106, different titles and dates. That is CONTENT drift published since
+the previous recording, not the recolour. A blind record captures whatever the
+site says today, and folds it into whatever PR dispatched it.
+
+So the record commit was dropped from the branch (`git rebase --onto <sha>^
+<sha>`, backup tag first). Two reasons, and the second is the load-bearing one:
+the PR is CSS-only and 84 mostly-unrelated binaries make its visual evidence
+unreadable; and the screenshot job is `continue-on-error` on `pull_request`
+(`test.yml:72`), so a stale Linux baseline reports without blocking. Linux rides
+its own PR, per Paul 2026-08-19.
+
+**The generalisable part:** a baseline record is a snapshot of the whole site,
+not of your diff. Screen it before accepting, and expect the outliers to be other
+people's work. `bin/record-baselines <glob>` exists for exactly this locally; a
+CI dispatch has no such filter, so the filtering has to happen after the fact.
+
 ## 2026-08-21 - the bundle's last cross-link warning was not a broken link
 
 Swept the bundle for claims that rot, after `design/site-palette.md` was found
