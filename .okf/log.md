@@ -84,6 +84,13 @@ the other. This bundle is v0.2, so v0.2 governs. That cost two confident wrong
 rejections of a correct finding on #538, plus a §9/§11 slip - v0.1 §9 was
 conformance, v0.2 §9 is log structure.
 
+A stamping bug worth its own line: updating this concept with
+`gsub(old_time, new_time)` rewrote the previous `verified` EVENT along with
+`generated.at` and `timestamp`, deleting a real verification. A global replace
+cannot tell which occurrences are the same fact. Recorded on the instrument rule
+in [build/test-gates.md](build/test-gates.md) with the check that catches it -
+diff the frontmatter against the merge base and expect additions only.
+
 No counts appear above. Three drafts of this entry hard-coded one - warning
 totals, then a `git log -S` result, then "69 of 87 headings" - and each was
 stale within the same PR, because the commits fixing the entry changed the thing

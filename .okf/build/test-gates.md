@@ -7,6 +7,7 @@ status: stable
 generated: { by: claude/opus-5, at: 2026-08-21T06:04:00Z }
 verified:
   - { by: claude/opus-5, at: 2026-08-21T06:04:00Z }
+  - { by: claude/opus-5, at: 2026-08-21T05:33:58Z }
   - { by: claude/opus-5, at: 2026-08-21T04:01:38Z }
   - { by: claude/opus-5, at: 2026-08-21T03:27:09Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
@@ -309,6 +310,13 @@ two DISTINCT entries that a timestamp-repair commit had normalised, so the
 "duplicate" was a real verification and deleting it destroyed provenance.
 Positive control that would have caught it in one command: read the file at
 the parent commit.
+
+A fourth, 2026-08-21, and the cheapest to avoid: stamping a concept with
+`gsub(old_time, new_time)` rewrote the previous `verified` EVENT as well as
+`generated.at` and `timestamp`, silently deleting a real verification. A global
+replace does not know which occurrences are the same fact. Append the new event,
+edit `generated.at`/`timestamp` in place, and diff the frontmatter against the
+merge base before committing.
 
 - **An empty query result is not evidence of absence** (2026-08-21). Hunting a
   black band on `/services/`, `document.querySelectorAll('path.fl-shape')`
