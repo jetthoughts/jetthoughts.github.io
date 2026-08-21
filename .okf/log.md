@@ -2477,3 +2477,19 @@ ceiling - bundling stops where reviewability ends.
 Correction to the same-day cap entry: the ~500-line ceiling counts CODE only
 (templates, CSS, Ruby, scripts, config, content markup). Docs, .okf/ logs, and
 binaries/baselines are exempt - documentation may batch into bigger PRs.
+
+## 2026-08-21 - CLAUDE.md compressed 4,915 -> 2,269 words; zero rules lost
+
+Research-driven (arXiv 2602.11988 + 2605.10039: instruction COUNT drives
+adherence; context files help only when minimal): every rule kept its
+operative line + dated attribution, incident narratives collapsed to
+one-line evidence pointers into their canonical homes (.okf/build/
+test-gates.md, delivery prompt par.1a/2/5, voice-guide, blog-pipeline).
+Verifier swept ~170 rules against the old file: 4 initially LOST (DeepWiki,
+CWV check, the regression-sweep grep, 6+-bullets rule) and 9 weakened - all
+restored before commit. Two drift fixes on the way: content-plan pointer
+20.07 -> 20.09 (table contradicted Workflow Pointers) and the 4-eyes
+codex-review line gaining the "user-facing" qualifier to match par.5.
+Method note: the compression is safe ONLY because the verifier enumerated
+rules and returned counts, not an opinion - author self-review missed all
+four losses.
