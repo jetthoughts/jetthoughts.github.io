@@ -62,7 +62,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--rr-ink-500);
+  color: var(--ink-500);
   margin-bottom: 10px;
 }
 
@@ -70,7 +70,7 @@
 .post-article .post-lead {
   font-size: 1.15rem;
   line-height: 1.6;
-  color: var(--rr-ink-500);
+  color: var(--ink-500);
   margin: 0.25rem auto 0.75rem;
 }
 
@@ -85,7 +85,7 @@
    !important beats the inline background Chroma emits with noClasses. */
 .post-article .highlight pre,
 .post-article .post-prose > pre {
-  background-color: var(--rr-ink-900) !important;
+  background-color: var(--ink-900) !important;
 }
 
 .post-article .highlight {

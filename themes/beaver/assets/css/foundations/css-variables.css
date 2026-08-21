@@ -105,13 +105,4 @@
   --link-hover:   var(--ruby-700);
   --link-visited: var(--ink-700);
   --link-underline: var(--color-ruby);
-
-  /* Aliases: the blog shipped against these names. Kept so 1a.1 renders
-     identically; DELETE in 1a.4 once the three page files consume the
-     canonical names. */
-  --rr-ink-900: var(--ink-900);
-  --rr-ink-700: var(--ink-700);
-  --rr-ink-500: var(--ink-500);
-  --rr-line: var(--line);
-  --rr-surface-raised: var(--surface-raised);
 }
