@@ -71,9 +71,12 @@ prescriptive split recorded in [workflows/review-swarm.md](workflows/review-swar
 What survives: a green run is real evidence about shape and should not be
 dismissed, but it cannot tell you an event HAS a time, and it can never tell you
 a recorded time is TRUE. Six review rounds on #538 turned on exactly that and no
-tool caught any of it. Conformance is v0.2 §11 - parseable frontmatter and a
-non-empty `type` - not the trust family. (The first draft cited §9, which is the
-v0.1 numbering; see below for why that keeps happening.)
+tool caught any of it. Conformance is v0.2 §11 and has THREE conditions -
+parseable frontmatter, a non-empty `type`, AND reserved files (`index.md`,
+`log.md`) following §8 and §9. The first draft listed two and cited "§9" for
+conformance itself, which is the v0.1 numbering: under v0.2, §9 is the LOG
+structure section. Citing a section without naming the version means two
+different things, which is the two-spec trap below in miniature.
 
 **Two OKF specs, disagreeing section numbers.** The `/okf:okf` skill points at
 the plugin-cache copy: **v0.1**, 340 lines, calls itself "the source of truth",

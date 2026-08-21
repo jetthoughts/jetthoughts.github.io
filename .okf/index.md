@@ -49,8 +49,15 @@ both validators on this machine.
 Two things follow. A green run is real evidence about trust-field SHAPE - do not
 dismiss it. But it cannot tell you an event has a time, and it can never tell you
 a recorded time is TRUE; six review rounds on PR #538 turned on exactly that, and
-no tool caught any of it. Conformance itself is narrow: v0.2 **§11** (parseable
-frontmatter, non-empty `type`), not the trust family.
+no tool caught any of it.
+
+Conformance itself is narrow, and has exactly three conditions under v0.2 **§11**:
+every non-reserved `.md` has parseable YAML frontmatter, every block has a
+non-empty `type`, and the reserved files (`index.md`, `log.md`) follow §8 and §9
+respectively. The trust family is not among them - when present it is a SHOULD.
+Note the trap in that sentence: in v0.2, §9 is the LOG structure section, while in
+v0.1 §9 WAS conformance. Citing "§9" without naming the version means two
+different things.
 
 **There are TWO OKF specs on this machine and their section numbers disagree.**
 The `/okf:okf` skill ships and points at
