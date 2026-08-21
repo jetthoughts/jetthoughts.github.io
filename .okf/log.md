@@ -28,6 +28,29 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - the NULL CHANGE, and empty results that are not absence
+
+Two patterns recurred through Phase 1a.4 often enough to be rules, and neither
+was in the bundle. Both now in
+[build/test-gates.md](build/test-gates.md).
+
+**The null change: a diff that passes every gate and alters nothing at
+runtime.** Four instances in one phase - an eyebrow rule overridden by a
+later-loading file, a screenshot assertion excluded from `CRITICAL_TESTS` so it
+never ran, a tokenisation of code absent from the production tree, and a
+DevTools recipe whose last statement discarded its own result. Every gate here
+is built to catch a change doing the WRONG thing; none catches one doing
+NOTHING, because nothing is indistinguishable from no-regression. The rule:
+before counting a change done, NAME the observable it moves - a computed style,
+a rendered pixel, a test that newly runs - and check that one thing.
+
+**An empty query result is not evidence of absence.**
+`querySelectorAll('path.fl-shape')` returned `[]` on /services/, which read as
+"no shape layer here". Services uses `<rect>`; the homepage uses `<path>`. An
+entire theory of an undetectable painter got built on one wrong query, and the
+answer was in a rule already edited once. Suspect the query before concluding
+the thing does not exist.
+
 ## 2026-08-21 - the unidentified /services/ painter, found
 
 Closed the one technical unknown left from the footer work. The painter was

@@ -11,7 +11,7 @@ verified:
   - { by: claude/sonnet-5, at: 2026-08-20T00:00:00Z }
   - { by: claude/opus-5, at: 2026-08-20T21:43:35Z }
   - { by: claude/opus-5, at: 2026-08-20T21:47:30Z }
-timestamp: 2026-08-20T23:11:35Z
+timestamp: 2026-08-21T03:27:09Z
 ---
 
 # The suites
@@ -238,6 +238,35 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   `_dest/public-test-local`. Clear the dest dir before trusting a RED, the
   same way a screenshot baseline must be COMMITTED before trusting a
   re-record (both are "the assertion is right, the input is stale").
+
+- **The NULL CHANGE: a diff that passes every gate and alters nothing at
+  runtime** (2026-08-21, four instances in one phase). Every gate here is
+  designed to catch a change that does the WRONG thing. None catches a change
+  that does NOTHING, because nothing is indistinguishable from no-regression.
+  The four, all caught only by asking "what does this alter at runtime?" AFTER
+  the edit looked finished:
+
+  | Change | Why it was null |
+  |---|---|
+  | An eyebrow rule in `critical/careers-critical.css` | `pages/careers.css` redeclares the same selector at equal specificity and loads LATER |
+  | A screenshot assertion for `/friday-report/` | the test name was not in `CRITICAL_TESTS`, so `bin/test` never ran it - suite reported the same 34 runs / 53 screenshots |
+  | Tokenising `components/c-button.css` | `c-button--*` appears zero times in markup; absent from the whole production tree |
+  | A DevTools recipe added to a concept | its last statement was the cleanup call, so pasting it returned `undefined` and discarded the result it promised |
+
+  Each produced a clean diff, a green suite and a plausible commit message.
+  **Before counting a change done, name the observable it moves** - a computed
+  style, a rendered pixel, a test that newly runs, a byte in the built output -
+  and check that one thing. "The suite is still green" is consistent with
+  having changed nothing at all.
+
+- **An empty query result is not evidence of absence** (2026-08-21). Hunting a
+  black band on `/services/`, `document.querySelectorAll('path.fl-shape')`
+  returned `[]`. That read as "no shape layer on this page" and an entire
+  theory of an undetectable painter got built on it. The real answer: services
+  uses `<rect>`, the homepage uses `<path>`, and the layer was in a rule
+  already edited once. Match on the CLASS or the container, never the element
+  name - and when a query comes back empty, suspect the query before
+  concluding the thing does not exist.
 
 - **A `skip_area` mask can blind a gate completely, at any tolerance**
   (2026-08-21). All four blog-index screenshots mask BOTH `.blog-post` and
