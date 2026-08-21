@@ -71,10 +71,21 @@ contextual selector, an inactive media/state rule, or an overridden declaration
 still counts, and a class JavaScript adds later is invisible to any static read.
 
 Text search over CSS can tell you a string is ABSENT from what a page loads.
-It cannot tell you a selector applies. For that, use the browser:
+That is the only question it settles. Three different questions hide behind
+"does this selector work", and each needs its own instrument:
+
+| Question | Instrument | What it cannot tell you |
+|---|---|---|
+| Did the rule **ship**? | search the loaded CSS (see the traps above) | whether anything matches it |
+| Does it **match** this element? | CSSOM + `el.matches(rule.selectorText)` | which rule won the cascade |
+| Did it **win** the paint? | `getComputedStyle` | *which* selector produced the value - another matching rule with the same value is indistinguishable |
+
+Both browser-side techniques, and the overlay trap that breaks the naive form
+of the third, are documented below:
 [computed style, not source, proves the paint](#the-white-wash-trap-computed-style-not-source-proves-the-paint)
-below - which is the same conclusion this file already reached for colour, now
-confirmed for selector presence.
+and its `elementFromPoint` subsection. Don't collapse the three - a green
+`getComputedStyle` is routinely quoted as proof that a specific rule applies,
+and it is not.
 
 # Token layer: `foundations/css-variables.css`
 

@@ -80,9 +80,17 @@ media/state rule, or an overridden declaration still counts, and a class added b
 JavaScript is invisible to any static read.
 
 So the concept no longer proposes a check. Text search can prove a string is
-ABSENT from what a page loads; it cannot prove a selector applies. That routes to
-the section this file already had - computed style, not source, proves the paint -
-which was written for colour and turns out to be the general answer.
+ABSENT from what a page loads, and that is the only question it settles.
+
+A fourth round then split the remainder three ways, because routing everything to
+`getComputedStyle` was itself imprecise: **shipped** (search the loaded CSS),
+**matched** (CSSOM + `el.matches(rule.selectorText)`), and **won the paint**
+(`getComputedStyle`) are three questions with three instruments. Computed style
+cannot name WHICH selector produced a value - another matching rule with the same
+value is indistinguishable - so a green computed style is not proof that a
+specific rule applies, though it is routinely quoted as such. Both browser-side
+techniques were already in this concept; the entry now points at the right one
+per question instead of collapsing them.
 
 The process lesson: four rounds of patching a home-grown analyzer, each patch
 exposing the next hole, is the signal to delete the tool rather than fix it
