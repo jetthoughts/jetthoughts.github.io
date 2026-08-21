@@ -75,7 +75,7 @@ def pages_for(file)
   when %r{^themes/beaver/assets/css/pages/([^/]+)\.css$} then [Regexp.last_match(1)]
   when %r{^themes/beaver/assets/css/critical/([^/]+)-critical\.css$} then [Regexp.last_match(1)]
   when %r{^themes/beaver/layouts/blog/}, %r{^content/blog/} then %w[blog-list blog-single]
-  when %r{^layouts/next/}, %r{^content/next/} then %w[next-pilot]
+  when %r{^layouts/next/}, %r{^content/next/} then PAGE_TESTS.keys.grep(/^next-/) # every v2 key; shared v2 templates affect them all
   # Terminal: root layouts/ had NO case at all, so a root-layouts-only diff
   # mapped to nil and qtest exited 0 having tested nothing (false green).
   when %r{^themes/beaver/assets/css/}, %r{^themes/beaver/layouts/}, %r{^layouts/} then :all
