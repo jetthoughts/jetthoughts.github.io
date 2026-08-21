@@ -5,8 +5,10 @@ Newest first. Entries before 2026-08-19 are squashed to one line each
 
 ## 2026-08-21 - design review has a route: /stitch-design
 
-* `workflows/review-swarm.md` + `design/index.md` - **design review routes
-  through `/stitch-design`** (Paul, 2026-08-21). It reviews against the DESIGN
+* `workflows/review-swarm.md` + `design/index.md` + `workflows/index.md`, and
+  the two REPO docs on the mandatory path (`docs/workflows/flow-router.md`,
+  `docs/workflows/new-page.md`) - **design review routes through
+  `/stitch-design`** (Paul, 2026-08-21). It reviews against the DESIGN
   SYSTEM rather than against taste, which is what a generic critic gives and why
   generic critics keep proposing recolours the anchor text already ruled out. It
   is also the consult for a critical call that is genuinely unclear - input
@@ -17,6 +19,23 @@ Newest first. Entries before 2026-08-19 are squashed to one line each
   what shipped, stitch checks what was intended - a change can match its
   baseline exactly and still be wrong against the system), and its output is
   scoped like any critic's, a punch-list rather than a licence to redesign.
+
+Review then found two things the first draft got wrong, both worth keeping:
+
+* **It named no design SOURCE, and there are three.** `.stitch/design.md` is
+  the DARK "Obsidian Engine" COVER system; site chrome is LIGHT
+  ([site-palette](/design/site-palette.md), ADR-0003, confirmed by Paul
+  2026-08-21); course pages use `.stitch/course-taste-design.md`. Loading the
+  cover system to review a page yields exactly the recolour ADR-0003 rules out
+  - the failure the route exists to prevent. A surface-to-source table now
+  leads the rule.
+* **The rule was in the bundle but not ON THE PATH.** `AGENTS.md` sends every
+  session through `docs/workflows/flow-router.md`, which routed HTML/CSS to
+  css-consolidation only; `new-page.md`'s Evaluate step named Impeccable
+  alone; and this playbook's own step 2 still spawned a generic DESIGN critic.
+  An agent following the canonical flow would never have seen it. Recording a
+  rule in the bundle is not the same as putting it where a session that is not
+  looking will hit it.
 
 Deliberately NOT recorded: that a parallel PR currently owns the Linux baseline
 re-record. The accepted-debt POLICY is already in `build/test-gates.md`; who

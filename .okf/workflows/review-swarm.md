@@ -9,7 +9,7 @@ generated:
 verified:
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
-timestamp: 2026-08-20T23:52:10Z
+timestamp: 2026-08-21T00:07:25Z
 ---
 
 # The loop
@@ -57,10 +57,8 @@ tokens and recommend the recolour ADR-0003 explicitly rules out - the exact
 failure this route exists to prevent.
 
 With the right source loaded, stitch reviews against the DESIGN SYSTEM rather
-than against taste
- - which is what a generic critic gives you,
-and why generic critics keep suggesting recolours the anchor text already
-ruled out. It is also the consult for a CRITICAL call that is genuinely
+than against taste - which is what a generic critic gives you, and why generic
+critics keep suggesting recolours the anchor text already ruled out. It is also the consult for a CRITICAL call that is genuinely
 unclear: get its input before deciding, not instead of deciding. The
 decide-don't-wait rule still holds - stitch informs the call, it does not
 own it, and it is never a reason to park a decision.
