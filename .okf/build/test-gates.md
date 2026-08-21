@@ -229,6 +229,24 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   frontmatter is set, and adds it to the ratchet. The script self-reports slack
   (`post-visuals: floor is loose, lower FLOOR to N`) - obey it: `FLOOR` dropped
   78 -> 72 on 2026-08-20 on the script's own prompt.
+- **Screen a CI re-record with the gate's own instrument** (2026-08-21).
+  `FORCE_SCREENSHOT_UPDATE` rewrites every baseline, so a CI record commit is
+  much larger than the real change set - the 2026-08-21 Linux record touched
+  83 files. Do not screen it by eye or by file size. Compute the libvips
+  **dE00 fraction above `perceptual_threshold = 2.0`** (what
+  `difference_level` actually measures) for each file and compare against the
+  0.0001 default: files above it would FAIL the gate, so the rewrite is real
+  and dropping them leaves CI red; files at exactly 0 are encoder churn and
+  should be reverted. That split was 77 keep / 6 drop, and it needs no
+  judgement call.
+
+  **Neither OS baseline set is a subset of the other**, so never infer one
+  from the other. Earlier PRs re-recorded only the OS they ran on: #528
+  committed `macos/mobile/services.png` and left `linux/mobile/services.png`
+  stale (still carrying the shift), while `linux/.../inline_style_post` was
+  already current from a post-#520 CI record when macOS was 25% stale. The
+  Linux record here was legitimately BROADER than the macOS one (77 vs 50).
+
 - **`FORCE_SCREENSHOT_UPDATE=1` re-records EVERYTHING** (2026-08-14). On
   `bin/dtest` it also disables the `git checkout -- .../linux` guard that
   normally discards sub-tolerance Rosetta drift, so a run rewrites all 45

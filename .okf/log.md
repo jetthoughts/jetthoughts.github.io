@@ -120,6 +120,24 @@ rewritten script carries a permanent control: an unchanged baseline
 "Test the instrument against a case where the answer is known" earned its
 keep here.
 
+**The Linux leg, and a screening rule worth reusing.** Recorded through CI on
+the branch (`gh workflow run test.yml --ref <branch> -f screenshots=true -f
+update-baselines=true`), never locally - local ARM Docker plants false drift.
+`FORCE_SCREENSHOT_UPDATE` rewrites EVERYTHING, so the bot commit touched 83
+files and had to be screened. Screen it with **the gate's own instrument**,
+not by eye or by file size: compute the libvips dE00 fraction above
+`perceptual_threshold = 2.0` for each file and compare it to the 0.0001
+default. That splits 83 into **77 keep** (would fail the gate, so the rewrite
+is real) and **6 drop** (difference_level exactly 0 - pure encoder churn).
+
+The Linux set being BROADER than the macOS one (77 vs 50) looks wrong and is
+not: earlier PRs re-recorded only one OS. #528 committed
+`macos/mobile/services.png` and left its `linux/` twin stale, so that file
+still carries a visible #528 shift on Linux; conversely
+`linux/.../inline_style_post` barely moves because Linux was re-recorded after
+#520 while macOS was 25% stale. **Neither OS baseline set is a subset of the
+other** - do not reason about one from the other.
+
 Run-to-run noise, measured across three runs of `services/_technologies`:
 0.013838252, 0.013838252, 0.013837770 - about **2 px of 2,073,600** (~1e-6),
 comfortably under the 0.0001 floor. The earlier claim that noise is exactly
