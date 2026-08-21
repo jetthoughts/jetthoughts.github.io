@@ -145,6 +145,27 @@ counterpart for dark. **The decision is whether to name one** (e.g.
 `--ruby-on-ink`, seeded at `#e04a42` or lighter for more margin), which is a
 design call rather than a sweep. `technologies.css:10` already gestures at
 the problem in a comment.
+**"THREE button roles" is already built - and unused.** Investigated
+2026-08-21. `themes/beaver/assets/css/components/c-button.css` defines exactly
+three roles (`--primary` ruby/white, `--secondary` white/dark, `--tertiary`
+transparent/ruby), already tokenised apart from four `#ffffff` literals. It is
+imported by `components.css`, which one layout bundles.
+
+**But `c-button--*` appears ZERO times in any template or content file, and
+PurgeCSS strips it from every shipped bundle** (`grep -rc 'c-button--primary'
+_dest/public-dev/css/*.css` returns nothing). The component was built and
+never adopted. The live buttons are FL Builder's `.fl-button`.
+
+So the 1a.4 item is not "tokenise the button component" - that changes nothing
+a visitor sees. It is either **adopt `c-button` in the templates** (a markup
+migration) or **bring `.fl-button` onto the three roles** (another sweep
+through the per-page FL export CSS). Both are larger than the plan line
+implies, and the second is the same legacy-export problem as the footer and
+eyebrow items.
+
+Note the tertiary role (`color: var(--color-ruby)` on a transparent ground)
+hits the on-dark AA blocker above wherever it sits on a dark band - so this
+item is partly gated by the same unnamed token.
 
 ## Working notes
 
