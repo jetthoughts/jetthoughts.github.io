@@ -4,8 +4,9 @@ title: CSS Build Pipeline (PostCSS + per-bundle PurgeCSS)
 description: PostCSS pipeline that concatenates per-page CSS resource slices and purges unused rules per bundle before shipping.
 resource: postcss.config.js
 tags: [css, build, performance]
-timestamp: 2026-08-21T03:20:07Z
+timestamp: 2026-08-21T04:17:19Z
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T04:17:19Z }
   - { by: claude/opus-5, at: 2026-08-21T01:43:19Z }
 generated:
   by: process:okf-migrate
@@ -30,6 +31,65 @@ nothing about shipped bytes: consolidating shared source files can
 gzip first-visit per page). Any size/perf claim must be validated on
 **compiled + gzip per-page payload**, never raw source line counts —
 see [css-maintainability-plan](/workflows/css-maintainability-plan.md).
+
+# Where the CSS actually lands: both a `<style>` block and a linked file
+
+Two partials ship bundles and a built page uses both. Counted with a parser on
+`_dest/public-test/index.html` (2026-08-21) - `rg` gets this wrong, see below:
+
+| Partial | Emits | What production adds |
+|---|---|---|
+| `partials/assets/css-inline.html` | `<style>{{ bundle }}</style>` | `\| minify`, and nothing else |
+| `partials/assets/css-processor.html` | `<link rel=preload as=style>` + `<link rel=stylesheet>` → `/css/<bundle>[.min].<hash>.css` | `\| minify`, `resources.PostProcess`, and an `integrity` attribute on BOTH links (`fingerprint "sha256"` runs in dev too) |
+
+On the homepage that resolves to 3 `<style>` elements of which only **2** are
+pipeline bundles (the third is 174 chars of hard-coded page CSS), and **2**
+`link[rel=stylesheet]` of which one is a `<noscript>` swiper-vendor fallback.
+
+# Answering "does this selector actually ship?"
+
+Three naive greps, three confident wrong answers:
+
+- **Grepping the rendered `*.html` for a class is a false positive.** It matches
+  the `class="..."` attribute in markup, which says nothing about CSS. Live
+  example: `c-nav` is on the homepage with **zero** matching CSS in anything that
+  page loads.
+- **Grepping `_dest/*/css/*.css` alone is a false negative.** Real population -
+  a class absent there really is absent from the file-served bundles - but inline
+  `<style>` content never lands under `css/`.
+- **Counting tags with `rg` over raw HTML is a false positive.** `rel="stylesheet"`
+  matches three times on the homepage: one real link, one inside `<noscript>`, and
+  one in the preload polyfill's JavaScript (`this.rel="stylesheet"`).
+
+**There is no reliable text-search answer, and this concept no longer proposes
+one.** Four successive attempts at a grep/parse check were each refuted by the
+next review round: literal `String#scan`, then substring prefixes
+(`\.c-content-block` scoring on `.c-content-block__text`), then comments and
+URLs (`idangero` scoring `1` from `http://www.idangero.us/swiper/` inside the
+shipped Swiper CSS), then the deeper one - a token present in an unmatched
+contextual selector, an inactive media/state rule, or an overridden declaration
+still counts, and a class JavaScript adds later is invisible to any static read.
+
+Four instruments sit between "the source says so" and "the user sees it", and
+each one's honest claim is narrower than the question people ask it. Every row's
+limitation below is demonstrated somewhere in this file:
+
+| Instrument | Establishes | Does NOT establish |
+|---|---|---|
+| text search over the loaded CSS | **absence only** - the string is nowhere in what the page loads | presence. A hit can be a comment, a URL, or a longer selector's prefix (see the three traps above) |
+| CSSOM rule scan | a rule with that `selectorText` shipped | that it can apply - the rule may sit inside an inactive `@media` or `@supports` |
+| `el.matches(rule.selectorText)` | the SELECTOR matches this element | that the RULE applies (same enclosing-condition gap), or that it won the cascade |
+| `getComputedStyle(el)` | the value that won the cascade for that element | which selector produced it (another rule with the same value is indistinguishable), or what is actually visible - an overlay can cover it |
+| screenshot + pixel sample | what was painted | why |
+
+Only the last is a fact about the rendered page; the rest are facts about
+intermediate representations. The technique for each, and the overlay trap that
+breaks the naive form of `getComputedStyle`, are below:
+[computed style, not source, proves the paint](#the-white-wash-trap-computed-style-not-source-proves-the-paint).
+
+The recurring error is not using the wrong tool - it is quoting a tool's result
+as an answer to the next question up the ladder. A green `getComputedStyle` gets
+read as "that rule applies"; a grep hit gets read as "it ships".
 
 # Token layer: `foundations/css-variables.css`
 

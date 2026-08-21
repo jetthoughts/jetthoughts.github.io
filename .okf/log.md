@@ -50,6 +50,55 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - CSS ships both inline and as a linked file; text search cannot prove a selector applies
+
+Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md). Eleven
+findings across five codex review rounds on PR #537, every one verified against
+the tree before acceptance. The count is the finding.
+
+**The mechanism** (unchallenged across all five rounds):
+`partials/assets/css-inline.html` emits `<style>`, production adding only
+`| minify`; `partials/assets/css-processor.html` emits preload + stylesheet links
+to `/css/<bundle>[.min].<hash>.css`, production adding `minify`,
+`resources.PostProcess`, and `integrity` on both links (`fingerprint "sha256"`
+runs in dev too). Homepage: 3 `<style>` of which 2 are pipeline bundles, 2
+`link[rel=stylesheet]` of which one is a `<noscript>` swiper fallback.
+
+**Three naive greps that lie**, each verified: grepping rendered `*.html` for a
+class matches the `class="..."` attribute (`c-nav` is on the homepage with zero
+matching CSS); grepping `_dest/*/css/*.css` alone misses everything inlined;
+counting `rel="stylesheet"` with `rg` scores 3 where a parser says 2, because one
+match is inside `<noscript>` and one is the preload polyfill's JavaScript.
+
+**What I got wrong, and why it stopped mattering.** Four successive attempts at a
+text-search check were each refuted by the next round: literal `String#scan`
+(`'\.c-nav'` hunting a backslash), substring prefixes (`\.c-content-block`
+scoring on `.c-content-block__text`), comments and URLs (`idangero` scoring 1
+from `http://www.idangero.us/swiper/` in the shipped Swiper CSS), and finally the
+one no regex fixes - a token in an unmatched contextual selector, an inactive
+media/state rule, or an overridden declaration still counts, and a class added by
+JavaScript is invisible to any static read.
+
+So the concept no longer proposes a check. Text search can prove a string is
+ABSENT from what a page loads, and that is the only question it settles.
+
+Rounds four and five then rebuilt what replaced it. Routing everything to
+`getComputedStyle` was imprecise, and so was the three-row table that followed:
+reviews showed each row still overclaiming. The honest version is a five-rung
+ladder where every rung states what it does NOT establish - text search proves
+ABSENCE only (a hit can be a comment, a URL, or a longer selector prefix); a
+CSSOM rule scan proves a rule shipped, not that it can apply inside an inactive
+`@media`; `el.matches` proves the SELECTOR matches, not the rule; `getComputedStyle`
+proves the value that won the cascade, not which selector produced it nor what is
+visible under an overlay; only a pixel sample is a fact about the rendered page.
+Every one of those limitations is demonstrated somewhere in this same concept.
+
+The process lesson: the factual mechanism table survived all five rounds
+untouched. Everything that failed was prescriptive - an instrument I invented, or
+a promise about what an instrument establishes. Describing what the code does is
+cheap to get right; telling a future reader what a measurement PROVES is where
+the overclaiming lives, and it took five adversarial rounds to stop doing it.
+
 ## 2026-08-21 - test the instrument, not just the result
 
 Recorded in [build/test-gates.md](build/test-gates.md), distinct from the NULL
