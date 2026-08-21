@@ -51,6 +51,26 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-21 - Phase 1a.4 dark surfaces: what shipped, and two live AA failures
+
+Shipped in `phase-1a4-dark-surfaces`: the footer and the 12
+`.fl-builder-bottom-edge-layer` shape fills moved onto `--surface-ink` together
+(either alone leaves a seam - that is why the earlier attempt was reverted), the
+`--ruby-on-ink: #e85a52` token landed (5.39:1 on `--surface-ink` vs
+`--color-ruby`'s 3.67:1), and two eyebrows that were failing WCAG AA on the live
+homepage at 4.1:1 were fixed to 6.02:1.
+
+Recorded in [architecture/css-pipeline.md](architecture/css-pipeline.md): the
+audit that found those failures first reported 1.12:1, because
+`[class*="eyebrow"]` matches the `.fl-module` WRAPPER and the text is painted
+three levels down. An implausible reading on a page that renders fine is the
+instrument, not the page.
+
+Scope stopped deliberately short of the remaining 18 ruby eyebrow rules and 36
+hardcoded black backgrounds. Only measured failures were fixed; a blanket sweep
+is exactly what produced the reverted AA regression, and several of those blacks
+are code-block surfaces, which is a design decision rather than a token rename.
+
 ## 2026-08-21 - what okf_validate actually guards, and the two-spec trap
 
 Recorded in [build/test-gates.md](build/test-gates.md), where the gates live.

@@ -4,13 +4,14 @@ title: CSS Build Pipeline (PostCSS + per-bundle PurgeCSS)
 description: PostCSS pipeline that concatenates per-page CSS resource slices and purges unused rules per bundle before shipping.
 resource: postcss.config.js
 tags: [css, build, performance]
-timestamp: 2026-08-21T04:17:19Z
+timestamp: 2026-08-21T07:08:22Z
 verified:
+  - { by: claude/opus-5, at: 2026-08-21T07:08:22Z }
   - { by: claude/opus-5, at: 2026-08-21T04:17:19Z }
   - { by: claude/opus-5, at: 2026-08-21T01:43:19Z }
 generated:
-  by: process:okf-migrate
-  at: 2026-07-12T00:00:00Z
+  by: claude/opus-5
+  at: 2026-08-21T07:08:22Z
 sources:
   - resource: "/workflows/css-maintainability-plan.md"
     title: "css-maintainability-plan"
@@ -81,6 +82,17 @@ limitation below is demonstrated somewhere in this file:
 | `el.matches(rule.selectorText)` | the SELECTOR matches this element | that the RULE applies (same enclosing-condition gap), or that it won the cascade |
 | `getComputedStyle(el)` | the value that won the cascade for that element | which selector produced it (another rule with the same value is indistinguishable), or what is actually visible - an overlay can cover it |
 | screenshot + pixel sample | what was painted | why |
+
+**Read the element that PAINTS the text, not the one that matches your
+selector** (2026-08-21). Auditing eyebrow contrast, `[class*="eyebrow"]`
+matched `.fl-module` wrappers whose own `color` is inherited-but-unpainted; the
+audit reported 1.12:1 (near-black on black, i.e. invisible) for a page that
+renders fine. Walking down to the deepest element holding the text gave the
+real 4.1:1 - a genuine AA failure that the bogus reading would have buried
+under an implausible one. FL-Builder markup nests
+`.fl-module > .fl-module-content > .fl-rich-text`, so the wrapper is almost
+never the painter. A computed-style reading that contradicts the render is the
+instrument being wrong, not the page.
 
 Only the last is a fact about the rendered page; the rest are facts about
 intermediate representations. The technique for each, and the overlay trap that
