@@ -14,16 +14,18 @@ record - you write plans and reports, not post prose.
 ## The outer loop
 
 0. **Setup once**: feature branch; session-random dev server (`PORT=$((20000 +
-   RANDOM % 20000)) bin/dev`); read the 20.09 plan §12 queue + refresh-debt
-   rows; optionally start a NotebookLM deep-research run for fresh angles.
-1. **Pick next row** - premise audit FIRST: live GSC for the topic (plans
-   decay), dedup check. Collision → record the rescope verdict in the plan and
-   take the next row. Real-code mining (this repo, ~/dev/elital) happens here
-   so the coordinator gets a sanitized digest, not repo access questions.
-2. **Dispatch ONE `blog-post-coordinator`** with the topic row, branch, the
-   dev-server port/base-URL from step 0, the digest, and an explicit
-   "premise audited: yes/no" flag (you did step 1, so say yes - it saves the
-   coordinator a duplicate GSC/dedup pull). WIP=1: wait for its
+   RANDOM % 20000)) bin/dev`); read the 20.09 plan **§13** queue + refresh-debt
+   rows (§12's R-queue is retired - do not draft from R1-R9).
+1. **Pick next row** - run the `blog-next` skill's Stage A through C for the
+   row: premise audit FIRST (live GSC/GA4, plans decay), dedup check, research,
+   then the gated outline. Skipping Stage C here is how a batch run loses the
+   outline gate the single-post path gets. Collision → record the rescope
+   verdict in the plan and take the next row. Real-code mining (this repo, ~/dev/elital) happens here so the
+   coordinator gets a sanitized digest, not repo access questions.
+2. **Dispatch ONE `blog-post-coordinator`** (`model: fable`) with the topic row,
+   branch, the dev-server port/base-URL from step 0, the digest, the gated
+   outline, and an explicit "premise audited: yes/no" flag (you did step 1, so
+   say yes - it saves the coordinator a duplicate GSC/dedup pull). WIP=1: wait for its
    SHIPPED / RESCOPE / BLOCKED report before the next row. Independent
    research/recon agents (read-only) may run in parallel; never a second
    committing coordinator in the same checkout - if a second one must run,

@@ -1,5 +1,11 @@
 # Blog Pipeline — From Idea to Published Post
 
+> **Entry point: the `/blog-next` skill owns STEP 1-3** (pick the topic from live
+> GSC+GA4, research primary sources, gate the outline) and hands off to
+> `blog-post-coordinator` / `blog-batch-orchestrator`. Prefer it over running
+> STEP 1-3 inline: it carries the premise audit that catches a decayed queue row
+> before anyone spends a draft. This file stays canonical for STEP 4 onward.
+
 ## Quick start prompt
 
 Copy this prompt to write the next post:
@@ -182,6 +188,13 @@ sounds like a textbook chapter. Specifically:
 Pass 2 reliably strips ~15-25 points off the AI-detector's first-read score.
 The cost is ~30% more writer tokens; the value is review rounds spend their
 budget on real issues, not on rewriting textbook prose.
+
+STEP 4e — SELF-CRITIQUE (BLOCKING — before the anti-AI pass and the critics)
+Run `reflexion-reflect` on the draft. After pushback on the same draft, escalate
+to `reflexion-critique`. Solo iteration misses pattern-level tells — this is the
+CLAUDE.md gate for "any LinkedIn/blog/marketing draft", and the blog lane was the
+one lane that never wired it in (the LinkedIn lane has carried it in
+`.okf/workflows/linkedin-post-pipeline.md` since it was written).
 
 STEP 5a — ANTI-AI WRITING PASS (MANDATORY — run BEFORE review loop)
 Run /humanizer on the draft. Scan every paragraph for these AI tells:

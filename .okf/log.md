@@ -282,6 +282,131 @@ banned claim on pages with ranking history; a repo-wide test would fail on
 first run and the honest fix is a scoping decision, not a regex. Scope is
 recorded in the canon rule itself so the next person does not mistake the
 absence of a test for the absence of a rule.
+## 2026-08-22 - second blog-next run: the replacement topic died too, and the skill learned to rebuild
+
+The morning run falsified N2 and proposed "the Rails environment-setup /
+dependency-installation neighbourhood" as its replacement. The afternoon run
+killed that too, on dedup - **there is no neighbourhood.** The `install` query
+family is complete at 27 rows (`has_more FALSE`) and totals ~129 impressions /
+90 days; 84 of them are `rails install dependencies`, which we already own at
+position 6.5 and 15.48% CTR. Ceiling on a new post: `84 x 0.30 - 13 = +12 clicks
+/ 90 days = +0.13/day`, while cannibalising our own best converter.
+
+**The demand floor is the finding that outlasts both rows.** Across 500 sampled
+`rails` query rows, seven earned any click - 23 clicks in 90 days. The whole
+blog is 62 named non-brand clicks / 90 days = **0.69 clicks/day**. Any candidate
+must be converted to clicks/day and compared against that before it is scheduled;
+most "findings" at this volume are noise wearing a percentage.
+
+**Second candidate, also rejected.** The data-migration family: 533 impressions,
+zero clicks, weighted position 11.19, and the owning page contains the exact
+answer at `index.md:123-129`. The tempting reading is a snippet failure. It fits
+worst: P(0 clicks | 1% CTR, n=189) = **15%**, an ordinary event; the family
+carries the synthetic fingerprint recorded here this morning (7 permutations of
+one stem, plus `evaluate rubie on data migration` at 79 impressions and position
+5.6 - "rubie" is not a word); a near-exact-match title taking 0 of 533 is not how
+a weak snippet fails; and zero-click SERPs are unexcluded, since per-query
+position can never proxy for visibility. FLAGGED, not scheduled, behind a
+15-minute date/device + live-SERP check.
+
+**Skill change (Paul, this session): split find-the-topic from deliver-the-post,
+and give the finding half somewhere to go when the plan fails.** Both runs
+dead-ended at "the queue needs re-grooming" with no path forward, because Stage A
+could audit a row but not rebuild the plan. `blog-next` now produces one of three
+things and never a draft: a topic row, a **rebuilt plan section**, or a HOLD. Two
+new Stage A steps came directly from what these runs needed: an "are these
+impressions human?" check before treating volume as demand, and the demand floor
+above. When live data cannot settle a row, the skill now names the cheap
+experiment instead of guessing.
+
+**Two errors of mine, caught by the Stage A gate and recorded so neither
+propagates.** The dedup grep reported as 11 slugs returned 9, and listed a page
+its own order-dependent `docker.*rails` clause never matched - a filename grep is
+not a coverage audit. And 15.48% is n=13 clicks: 95% CI [7.7%, 23.2%], so no
+x-fold claim to two significant figures survives it.
+
+## 2026-08-22 - the first /blog-next run falsified the queue's lead item
+
+Ran the new skill's Stage A against the §13 queue. The premise audit killed N2,
+the row §13c called "the one finding here strong enough to act on".
+
+**The 52x was a denominator.** CTR ratios factorize: (14/165)/(10/6131) =
+**1.4x clicks × 37.2x impressions**. Auto-install earned 14 clicks, the YJIT
+page it "beats 52x" earned 10. N2's corroborating datapoint was worse -
+custom-compression beats YJIT 24x on 4 clicks against 10. The foil fails §13a's
+own test in one step: named/page = 85/6,131 = **1.4%**.
+
+Three new rules, written to `analytics-access.md` as Traps C and D rather than
+into the plan, because the named-vs-page rule already had three copies and a
+correction would have to be chased through all of them:
+
+- **When the CTR is an artifact, so is the position.** Page-level position is an
+  impression-weighted mean over the page's own query mix. YJIT reads 9.1 at page
+  level and 16.7 across every query GSC will name. So page position cannot serve
+  as the controlled variable in a cross-page comparison - which is exactly what
+  N2 used it for.
+- **The fix for a bad comparison can be a worse one.** §13 correctly caught the
+  query-vs-page CTR splice, then over-corrected to page-vs-page, which carries
+  almost no signal: impressions vs CTR runs rho = -0.93 across 12 pages while
+  clicks vs impressions is +0.32 and not significant. Any two pages from opposite
+  ends of the impression range manufacture a ~50x result. Query-vs-query at
+  comparable position is the legitimate move.
+- **Synthetic query families are not long tail.** The langchain page reads 36.9%
+  named - good coverage - but >=1,423 of those impressions are combinatorial
+  keyword strings at position 5.4 with zero clicks. Long tail is demand you
+  cannot see; synthetic is no demand at all. Addressable volume was ~550, not
+  6,895.
+
+**Why the section missed it.** §13 is careful - it self-corrects four of its own
+errors and applies both traps to N1 and N6. It applied the rule to every row
+where the rule *disagreed* with the desired conclusion, and not to the row that
+*was* the conclusion.
+
+**No post written.** The 2607 P0 gate has not cleared (backlog: 0 send-ready, #12
+blocked); Paul's 2026-08-20 override was scoped to one post. He took the
+re-groom and declined the write. Stage A's own 4-eyes gate caught one over-read
+of mine: 55% named coverage does not make a CTR *validated* - that is the
+converse the one-way rule refuses.
+
+## 2026-08-22 - the blog lane gets a front end, and the gate it never had
+
+`/blog-next` now owns STEP 1-3 of the blog pipeline (pick from live GSC+GA4,
+research primary sources, gate the outline) and hands off to
+`blog-post-coordinator` / `blog-batch-orchestrator`. `blog-pipeline.md` stays
+canonical for STEP 4 onward; the skill points rather than restates, because the
+named-query-vs-page-total rule already had three copies before it and a
+correction to `analytics-access.md:181-185` would have had to be chased into all
+of them.
+
+**`reflexion-reflect` was never wired into the blog lane.** CLAUDE.md declares it
+BLOCKING for "any LinkedIn/blog/marketing draft". Grep found it live in
+`.okf/workflows/linkedin-post-pipeline.md`, `autonomous-delivery-prompt.md`, and
+three 2605 course docs - and absent from `blog-pipeline.md` and both blog agents.
+The LinkedIn lane had the gate, the course lane had it, the blog lane did not,
+and nothing anywhere recorded the gap. Now `blog-pipeline.md` STEP 4e, modelled
+on the LinkedIn pipeline's version.
+
+**Two review catches worth keeping:**
+
+*A skill can be inert and look installed.* The first draft went to
+`.agents/skills/`, reasoning that `impeccable` lives there and appears in the
+session roster. It appears because it is ALSO installed globally;
+`async-first-communication` lives only there and is absent. `.agents/skills/`
+and `.skills/` are Codex/course profiles Claude Code does not load. Confirm a
+skill BY NAME in the roster, never by "that directory has skills in it".
+
+*And then the correct location was gitignored.* `.gitignore` ignored
+`.claude/skills/` wholesale as claude-flow scaffolding, so the skill would have
+worked locally and never reached the repo - `git status` shows nothing. Narrowed
+to `.claude/skills/*` with name-based negations (`*` not `/`, or git will not
+descend and the negation cannot match). Tested both directions: the skill is
+tracked, a fake generated skill is still ignored.
+
+*Scale collision.* CLAUDE.md said `Slop <=25` (0-100, lower better) under a
+header claiming the gates are "enforced by blog-pipeline.md", which enforces
+`slop >= 8/10` (0-10, higher better). Two scales, one gate name. The <=25 line
+was course-scoped text that had drifted into the blog section; both are now
+labelled with their lane.
 
 ## 2026-08-22 - a re-record that fixed 21 of 22, and the one it could not
 

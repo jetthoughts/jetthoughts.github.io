@@ -189,6 +189,49 @@ Same family as the 2026-08-14 error of quoting an average position computed over
 look at - and, per Trap A, the denominator you did look at may itself be
 truncated.
 
+*Trap A generalises: a FILTER truncates a denominator as readily as a row limit.*
+Added 2026-08-22. `has_more: FALSE` means complete **given the filter**, not
+complete. A `query contains "vertical ai"` pull returned 20 rows and read as
+exhaustive; `get_search_by_page_query` on the same page returned **38**, and the
+filter had structurally excluded both sibling pages because their queries say
+`vertical llm`. Before treating a filtered set as a family, pull the same
+question a second way - by page dimension, or a broader stem - and see whether
+the row count moves.
+
+*Trap C - when the CTR is an artifact, so is the POSITION.* Added 2026-08-22.
+Page-level position is an impression-weighted mean over that page's own query
+mix, so a page whose impressions are mostly unattributable has an
+unattributable position too. `ruby-3-4-yjit-performance-guide` reads page
+position **9.1**; every query GSC will name for it averages **16.7**.
+`auto-install-system-dependencies` reads **10.2** while the query that earns
+93% of its clicks sits at **6.5**. The example in Trap B already contained this
+- virtual-attributes reads 7.8 at page level against 3.7-5.9 on its head terms -
+and it was recorded as a CTR finding only. Consequence: **page-level position
+cannot be used as the "controlled" variable in a cross-page comparison.** A plan
+row did exactly that on 2026-08-21 and the comparison collapsed on re-pull
+(20.09 §13d).
+
+*Trap D - the fix for a bad comparison can be a worse comparison.* Query-level
+CTR spliced against page-level CTR is a LEVEL mismatch and is banned. The
+correction is query-vs-query, not page-vs-page: across 12 sampled pages,
+impressions vs CTR runs **rho = -0.93** while clicks vs impressions is **+0.32
+(not significant)**. Clicks span 7x and impressions span 134x, so page CTR
+mostly reproduces the impression ranking inverted, and any two pages picked from
+opposite ends of the impression range yield a ~50x "finding" regardless of what
+is being compared. Page-vs-page carries almost no signal; query-vs-query at
+comparable position does.
+
+*Synthetic query families are not long tail.* Long tail means real demand you
+cannot see; a synthetic family means no demand at all, and the two call for
+opposite decisions. `getting-started-langchain-ruby` reads 36.9% named - good
+coverage by the Trap B threshold - but >=1,423 of those named impressions are
+combinatorial keyword strings (`langchainrb ruby gem openai` + `{2024}`,
+`{2024 2025}`, `{integration 2024}`, 15+ variants) at average position **5.4
+with zero clicks**; P(0 clicks | 1% CTR) is about 6e-7, so they were not served
+to humans. Human-addressable volume was ~550 impressions, not 6,895. **Tell:** a
+shared stem with tokens appended, high volume per string, top-10 positions, and
+a flat zero on clicks.
+
 ## `/blog/` fires no `scroll_depth` - GA4 cannot see the blog index
 
 `themes/beaver/layouts/partials/page/analytics.html:72` gates the scroll

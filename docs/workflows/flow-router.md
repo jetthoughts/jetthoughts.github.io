@@ -9,6 +9,7 @@ Read this at session start to route tasks to the right workflow without explicit
 - **Identity, positioning, bet status** → the vault note `jt-business-os` (`~/Documents/pkm`) FIRST, then reflect into the `docs/business/` mirror
 - LinkedIn post creation or edits, especially `linkedin-posts/**` → `@docs/workflows/linkedin-post-pipeline.md` (it routes to the active campaign plan — check the campaign's status banner; the ICP campaign is LIVE since 2026-08-18, see `linkedin-posts/metrics-ledger.md`)
 - Content creation or edits → `@docs/workflows/blog-pipeline.md` (mandatory; its P0 gate can halt content entirely)
+- **Which blog post to write next / a blog sprint → `/blog-next`** — picks the topic from live GSC+GA4 against the 20.09 §13 queue, researches primary sources, gates the outline, then hands off to `blog-post-coordinator` (one post) or `blog-batch-orchestrator` (N posts). It owns STEP 1-3 of the pipeline; the pipeline still owns STEP 4 onward.
 - Cover image work → `docs/workflows/cover-images.md` and `.stitch/design.md`
 - Image/cover requests (even without content) → `@docs/workflows/cover-images.md` and `@.stitch/design.md`
 - HTML/CSS changes → `@docs/workflows/css-consolidation.md`
