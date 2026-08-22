@@ -1272,7 +1272,7 @@ Want to go deeper? Explore these advanced patterns:
 **Building RAG (Retrieval-Augmented Generation) Systems with pgvector**:
 - Combine semantic search with OpenAI GPT-4 for context-aware AI responses
 - Store documentation embeddings, retrieve relevant chunks, generate answers
-- [Read our complete Ruby AI Integration guide](/blog/2025/complete-guide-ruby-rails-ai-integration-2025/) for RAG implementation patterns
+- [Read our complete Ruby AI Integration guide](/blog/complete-guide-ruby-rails-ai-integration-2025/) for RAG implementation patterns
 
 **Hybrid Search: Combining Full-Text and Vector Search**:
 - Use PostgreSQL `tsvector` for keyword matching + pgvector for semantic similarity
@@ -1354,7 +1354,7 @@ For 90% of Rails applications, **pgvector is the right choice**. Start here, upg
 - [OpenAI Embeddings API](https://platform.openai.com/docs/guides/embeddings) - Embedding models comparison
 
 **JetThoughts Guides**:
-- [Complete Guide to Ruby on Rails AI Integration 2025](/blog/2025/complete-guide-ruby-rails-ai-integration-2025/) - OpenAI/Anthropic integration patterns
+- [Complete Guide to Ruby on Rails AI Integration 2025](/blog/complete-guide-ruby-rails-ai-integration-2025/) - OpenAI/Anthropic integration patterns
 - [Building RAG Applications with Rails and pgvector](/blog/building-rag-applications-rails-pgvector/) - Retrieval-Augmented Generation tutorial
 - [Rails Performance Monitoring](/blog/rails-performance-monitoring-complete-guide/) - APM setup for production apps
 
