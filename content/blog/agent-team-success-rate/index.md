@@ -16,6 +16,8 @@ canonical_url: 'https://jetthoughts.com/blog/agent-team-success-rate/'
 related_posts: false
 ---
 
+Cards on the table: we run agents in our own delivery, so I am not a neutral party on whether they work. Everything numeric below comes from three published sources that are not us, and two of them undercut the enthusiasm.
+
 You can stand up a team of autonomous agents this afternoon. The frameworks are real, the demos are real, and the question worth asking is the one nobody puts on the landing page: how often does it work?
 
 Somebody measured. A group at UC Berkeley - the author list includes Matei Zaharia, Joseph Gonzalez and Ion Stoica - collected execution traces from seven multi-agent frameworks and published the success rates. Across six of them, on their respective benchmarks:
@@ -73,7 +75,16 @@ Start by asking whether your task actually has parallel parts. Research does: tw
 
 Then keep the write path single-threaded, and let the extra agents do everything that is not writing - reading, checking, disagreeing.
 
-We run our own delivery this way, though not because we read the papers first. We arrived at it after review findings kept getting lost between agents, and the rule that fixed it was that whoever wrote a change never reviews it. That is the same single-threaded-writes shape from the other direction: the reviewers contribute findings, one author owns the diff.
+We run our own delivery this way, though not because we read the papers first. We arrived at it after review findings kept getting lost between agents. The rule that fixed it is four lines:
+
+```text
+One author owns the diff. Nobody else writes.
+Reviewers get the artifact and the goal, never my conclusion.
+Every reviewer must name one thing they would cut.
+Author never reviews their own change.
+```
+
+Line one is the topology the papers describe. Lines two and three are what stops the readers from simply agreeing with you, which is the failure mode that replaces the coordination failure once you fix the topology.
 
 If you want the implementation rather than the argument, we wrote up [our production multi-agent pipeline in Rails](/blog/multi-agent-llm-rails-rubyllm/), including where one agent turned out to be enough.
 
@@ -83,9 +94,9 @@ And budget for the 15×. A system that is right slightly more often and costs an
 
 Fewer than the demos suggest, more than the sceptics claim, and the number moves a lot depending on whether you picked a shape that suits the work.
 
-The honest read of the evidence in 2026 is that this technology works in a narrow configuration that two competing labs independently converged on, and fails in the wide-open configuration that is easier to build and much more fun to demo. If you are standing one up, copy the narrow one.
+The honest read of the evidence in 2026 is that this works in a narrow configuration two competing labs converged on separately, and fails in the wide-open configuration that is easier to build and much more fun to demo.
 
-If you have a team of agents running and cannot tell whether it is earning its keep, [that is a good thing to get an outside read on](/services/vibe-code-rescue/).
+So copy the narrow one, and hold your own setup to the standard you would hold Cemri's. If you cannot say what share of your agent runs produced something you shipped without rework, then you do not have a success rate, you have an impression. Most of us are running on the impression.
 
 ## Sources
 

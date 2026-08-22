@@ -16,6 +16,8 @@ canonical_url: 'https://jetthoughts.com/blog/dev-shop-ai-code-review-what-to-ask
 related_posts: false
 ---
 
+Cards on the table before I start: we get hired to audit other people's codebases, so a post telling you to check your shop's work is not a neutral document. The four questions at the bottom are the ones I would ask, written so you can ask them yourself. Nothing in here needs us.
+
 "It's been reviewed" used to mean a person read it.
 
 That is no longer a safe assumption, and the change happened fast enough that most founders never got told. GitHub published the number in March: Copilot code review usage "has grown 10X, now accounting for more than one in five code reviews on GitHub." If your shop works on GitHub, there is a reasonable chance the reviewer on your last release was software.
@@ -77,6 +79,22 @@ None of these require you to evaluate a line of anything. They are artifacts - e
 
 The third row is the one I would not compromise on. The research points the same direction from both ends: run something deterministic for the security categories, and do not let the tool that was tuned for developer patience be the only thing standing between you and a weak hashing bug.
 
+If you want it as something to paste into an email, this is the whole thing:
+
+```text
+Four questions about our review process, no rush:
+
+1. What categories does our AI reviewer suppress, and who chose them?
+2. Can you send me a recent review with its comments, including
+   any the author disagreed with?
+3. Do we run a separate security scan that is not the same tool?
+   Which one, and on what schedule?
+4. Who signs off on a merge, by name, and what do they check that
+   the tooling does not?
+```
+
+A shop that has thought about this answers in a paragraph. A shop that has not will tell you the tool handles it, which is itself an answer.
+
 ## What this does not tell you
 
 The suppression study is Java, against a benchmark and one real-world dataset. The scanner comparison is C#. Neither is Rails, or Python, or whatever your product is built in, and a number measured on one stack does not transfer to another just because it is inconvenient to re-measure.
@@ -89,11 +107,11 @@ That convergence is worth more than either number. The filter is a decision, som
 
 ## The question for your next status call
 
-Not "was the code reviewed." You will get a yes, and it will be true, and it will not mean what you wanted it to mean.
+Not "was the code reviewed." You will get a yes, it will be true, and it will not mean what you wanted it to mean.
 
-Ask what the review was configured to ignore, and who decided that. A shop that has thought about this will have an answer ready and will be glad you asked. A shop that has not will tell you the tool handles it.
+Ask what the review was configured to ignore, and who decided that.
 
-If you want a second opinion on what you have been shipped, that is [what a rescue context call is for](/services/vibe-code-rescue/). And if the answers you get make you want to leave, [there is a way to do that without losing the codebase](/blog/switch-dev-shops-safely-transition-guide/).
+I have been on the other side of this question, and the honest thing to say is that a good shop will not be offended by it. The ones who bristle are usually the ones who set the filter to default and never looked at it again. If the answers send you looking for the exit, [there is a way to leave without losing the codebase](/blog/switch-dev-shops-safely-transition-guide/).
 
 ## Sources
 

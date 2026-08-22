@@ -16,6 +16,8 @@ canonical_url: 'https://jetthoughts.com/blog/generate-then-verify-moved-the-work
 related_posts: false
 ---
 
+Cards on the table: we sell engineering time, so "your AI workflow is costing you more than you think" is a convenient thing for me to believe. The numbers below are other people's, all linked, and the practice at the end costs nothing.
+
 The advice is everywhere, and it always has the same shape. Let the model write the code, then you check it. Sometimes it comes with a seatbelt metaphor. Sometimes it is phrased as trust but verify, which at least admits there is a cost.
 
 Look at the word doing the work: *then*. It puts checking second, and things that come second sound smaller. The sentence is describing a division of labour, and what it actually describes is a transfer.
@@ -66,7 +68,22 @@ The question we ask is not "can it write this" but "how fast can I tell whether 
 
 The pattern on the left is not "easy work." It is work where the check is fast and the blast radius is bounded, which is a different axis entirely.
 
-Two habits carry the rest of it. We say the review number out loud during planning, because a task that is two hours of writing may also be twenty minutes of generating plus ninety minutes of careful reading, and teams get into trouble quoting the twenty. And we keep the tidying in the same pull request rather than in a someday ticket, since a someday ticket is where that 3.8% went.
+Two habits carry the rest of it. The first is saying the review number out loud during planning, which in practice means estimating like this:
+
+```text
+Task: add rate limiting to the public API
+
+  write it yourself        ~2h, and I understand it afterwards
+  generate + verify        ~20m generating
+                           ~90m reading it properly
+                           = 1h50m, and I understand it less
+
+Decision: generate. The check is fast here - there is a test
+that fails when the limit is wrong. Would not generate the
+billing reconciliation on the same trade.
+```
+
+Quoting the twenty minutes and discovering the ninety is how teams end up feeling slower while shipping more. The second habit is keeping the tidying in the same pull request rather than in a someday ticket, since a someday ticket is where that 3.8% went.
 
 Then somebody owns the merge by name. Not a rubber stamp, not a bot's approval, a person who read it and would be embarrassed by it later. That was always the rule. It just got much easier to skip.
 
@@ -74,9 +91,9 @@ Then somebody owns the merge by name. Not a rubber stamp, not a bot's approval, 
 
 I have watched a lot of code get produced very quickly and then get read very slowly, including in this repository. The generating is not the part that takes the day.
 
-If your team has adopted AI tooling and velocity has not moved the way you expected, you are not doing it wrong and the tools are not broken. The work moved to a place nobody was measuring. Start measuring there.
+If your team has adopted AI tooling and velocity has not moved the way you expected, you are not doing it wrong and the tools are not broken. The work moved somewhere nobody was measuring.
 
-If you would like an outside read on where your time is actually going, [that is what a rescue context call is for](/services/vibe-code-rescue/).
+So measure there. Put the review estimate in the ticket next to the build estimate, for two weeks, and see which one you keep getting wrong. That is a cheaper experiment than any conclusion I could sell you.
 
 ## Sources
 
