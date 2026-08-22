@@ -3,7 +3,7 @@ title: "What Senior Devs Catch That AI Misses"
 description: "A change swapped a made-up number for a confident, wrong explanation of how Propshaft works. Spotting the difference is the thing you are actually hiring for."
 date: 2026-08-22
 draft: false
-author: 'JetThoughts Team'
+author: "Paul Keen"
 slug: what-senior-developers-catch-that-ai-misses
 keywords: 'ai code review, senior developer value, llm expertise, ai generated code errors, hiring developers ai, technical due diligence'
 tags: ['ai', 'hiring', 'startup', 'engineering', 'code-review']
@@ -16,7 +16,9 @@ canonical_url: 'https://jetthoughts.com/blog/what-senior-developers-catch-that-a
 related_posts: false
 ---
 
-Here is a diff we stopped in review. It is small, it is plausible, and it is wrong in a way you cannot see without knowing Rails.
+Cards on the table before I start: I run a development shop, and this post argues you need experienced people reviewing AI output. That is convenient for me. So I am going to make the case with a diff you can check yourself, and if the Rails reasoning does not hold up, none of the rest should persuade you either.
+
+Here is a change we stopped in review. It is small, it is plausible, and it is wrong in a way you cannot see without knowing Rails.
 
 ```diff
 - Propshaft is dramatically faster than Sprockets: precompilation drops from
@@ -75,7 +77,7 @@ It came back with four findings. This was one, stated flatly:
 
 > On applications with many assets, Propshaft still enumerates, fingerprints, and copies every asset during `assets:precompile`, so its work still scales with asset count. Removing transpilation and concatenation reduces the per-asset cost but does not make the build independent of asset count; the new wording gives readers an incorrect performance expectation.
 
-Then a person had to decide whether the reviewer was right. That took knowing the answer independently, or being willing to go read the Propshaft source until you did.
+Then a person had to decide whether the reviewer was right, and I want to be precise about what that took: either knowing the answer already, or being willing to go and read the Propshaft source until you did.
 
 Three links in that chain, and only one of them is automatable. A model wrote, another model challenged, and someone with domain knowledge adjudicated.
 
@@ -109,7 +111,7 @@ Nobody skipped the check there. The check ran, felt complete, and stopped one ro
 
 You are not buying keystrokes any more. That part got cheap, and pretending otherwise is how founders end up overpaying for output they could have generated themselves.
 
-What stayed expensive is the ability to look at a fluent, well-structured, technically-worded paragraph and say *that specific clause is false*. There is no shortcut to it. It comes from having been wrong about the same thing before.
+What stayed expensive is the ability to look at a fluent, well-structured, technically-worded paragraph and say *that specific clause is false*. I have not found a shortcut to it. It comes from having been wrong about the same thing before, which is a slow way to acquire anything.
 
 So when you are deciding who to hire, or whether the shop you are already paying is worth it, the question changed. It is no longer "can they build this." It is: **when the AI hands them something plausible, do they check it, and can they?**
 
@@ -128,6 +130,8 @@ Every defect in this post was caught the same way: a second pass whose brief was
 Neither half works alone. The reviewer that only agrees is decoration, and the reviewer that objects to something nobody can adjudicate is noise.
 
 Expertise earns its money in a handful of moments per week, and none of them look like productivity. Someone reads a paragraph that scans perfectly and says no, and cannot always explain why until they go and check.
+
+That is an awkward thing to sell and an awkward thing to measure. I would still rather tell you that than quote you a velocity number.
 
 ## Sources
 

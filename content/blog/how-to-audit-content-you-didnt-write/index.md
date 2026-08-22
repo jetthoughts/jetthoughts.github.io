@@ -3,7 +3,7 @@ title: "How to Audit Content You Didn't Write"
 description: "Someone spent $900,000 publishing fake research so chatbots would repeat it. The same economics apply to the blog your agency built. Four checks you can run."
 date: 2026-08-22
 draft: false
-author: 'JetThoughts Team'
+author: "Paul Keen"
 slug: how-to-audit-content-you-didnt-write
 keywords: 'content audit, ai generated content, fabricated case studies, blog credibility, agency content review, non-technical founder'
 tags: ['content', 'ai', 'startup', 'marketing', 'trust']
@@ -54,7 +54,7 @@ So the honest position is that the web's average is unknown and the detectors th
 
 ## Four checks, and the commands that run them
 
-Run them in this order. It is ranked by what each one costs you to skip, not by how quick it is.
+Run them in this order. I have ranked them by what each one costs you to skip, not by how quick it is.
 
 The commands assume a Hugo or Jekyll-shaped repo where posts are markdown files. Adapt the paths; the shapes they look for are the same everywhere. If you do not have repo access, these are exactly the four things to ask whoever does.
 
@@ -95,7 +95,7 @@ Run the first one and read every hit. Real client work names the client or does 
 
 Count how many of your long posts link to nothing outside your own domain.
 
-A post with no external citation is not necessarily wrong. It is unverifiable, which means nobody could have checked it - including whoever wrote it, at the moment they wrote it.
+A post with no external citation is not necessarily wrong. It is unverifiable, which means nobody could have checked it - including whoever wrote it, at the moment they wrote it. That is the distinction I care about, and it is the one this count actually measures.
 
 Uncheckable is where wrong survives, and the number usually comes back higher than anyone guesses.
 
