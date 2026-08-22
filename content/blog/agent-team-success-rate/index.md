@@ -63,9 +63,9 @@ Ten months later Walden Yan wrote the follow-up, and this is the part I find gen
 
 > we've found a narrower class of patterns that do [work]: setups where multiple agents contribute intelligence to a task while writes stay single-threaded.
 
-Put that next to Anthropic's lead-agent-with-subagents design and the two most-cited positions in this argument are describing the same architecture in different vocabulary. **Many agents may think. One agent writes.**
+Put that next to Anthropic's lead-agent-with-subagents design and the two most-cited positions in this argument are describing the same architecture in different vocabulary: many agents may read and reason, exactly one is allowed to change anything.
 
-The thing that keeps failing is parallel writers. The thing that works is parallel readers feeding one writer.
+That constraint is doing specific work. Two agents editing the same codebase each make choices the other never sees, and the incoherence shows up at integration rather than at the point either one went wrong. Route every change through one writer and the disagreements surface as review comments instead, which is a form you can act on.
 
 ![Diagram contrasting two agents both editing a codebase and producing incompatible halves, against several agents reading and checking while a single agent owns every change](writers.svg)
 
@@ -75,7 +75,7 @@ Start by asking whether your task actually has parallel parts. Research does: tw
 
 Then keep the write path single-threaded, and let the extra agents do everything that is not writing - reading, checking, disagreeing.
 
-We run our own delivery this way, though not because we read the papers first. We arrived at it after review findings kept getting lost between agents. The rule that fixed it is four lines:
+We run our own delivery this way, and not because we read the papers first. We arrived at it by losing review findings between agents until we stopped letting more than one of them write. The rule is four lines:
 
 ```text
 One author owns the diff. Nobody else writes.
@@ -84,7 +84,11 @@ Every reviewer must name one thing they would cut.
 Author never reviews their own change.
 ```
 
-Line one is the topology the papers describe. Lines two and three are what stops the readers from simply agreeing with you, which is the failure mode that replaces the coordination failure once you fix the topology.
+Line one is the topology the papers describe. Lines two and three are what stops the readers from simply agreeing with you, which is the failure mode that replaces the coordination failure once the topology is right. A reviewer told what you already concluded will confirm it. A reviewer required to name a cut has to form an opinion.
+
+On our own projects that formula now runs the loop end to end: agents pick work off a queue, write, review each other, and open pull requests, with a short written list of decisions that come back to a human. Pricing, publishing outward, whether a claimed number is real, and anything both split and irreversible. Everything else they settle.
+
+I want to be precise about the scope, because this is the kind of claim that gets inflated. That is our own codebases, not client delivery, and the list of human decisions is the reason it works rather than an admission that it does not. The formula is the four lines above. There is nothing else to it.
 
 If you want the implementation rather than the argument, we wrote up [our production multi-agent pipeline in Rails](/blog/multi-agent-llm-rails-rubyllm/), including where one agent turned out to be enough.
 
@@ -92,11 +96,11 @@ And budget for the 15×. A system that is right slightly more often and costs an
 
 ## So, how many got success?
 
-Fewer than the demos suggest, more than the sceptics claim, and the number moves a lot depending on whether you picked a shape that suits the work.
+Between 13% and 59% on the published benchmarks, in the wide-open configuration most of those frameworks were attempting.
 
-The honest read of the evidence in 2026 is that this works in a narrow configuration two competing labs converged on separately, and fails in the wide-open configuration that is easier to build and much more fun to demo.
+For our own projects the answer is different, and I want to be careful about how I say it: the loop runs unattended and produces work we ship, which is a description rather than a rate. I have not published a percentage because we have not measured one, and quoting a feeling next to Cemri's numbers would be exactly the move this post is complaining about.
 
-So copy the narrow one, and hold your own setup to the standard you would hold Cemri's. If you cannot say what share of your agent runs produced something you shipped without rework, then you do not have a success rate, you have an impression. Most of us are running on the impression.
+So that is the question to take away, pointed at yourself. What share of your agent runs produced something you shipped without rework? If you cannot answer it, you do not have a success rate. You have an impression, and impressions in this field have been running well ahead of the measurements.
 
 ## Sources
 
