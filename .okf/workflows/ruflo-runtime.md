@@ -30,13 +30,19 @@ two silent failure modes, both closed 2026-08-22 by a self-heal block in
 
 # The okf memory namespace mirrors this bundle
 
-Backfilled 2026-08-22: namespace `okf` holds one entry per OKF concept
-(key `okf-<section>-<slug>`), each a distilled fact plus a pointer to its
-`.okf/` file. Semantic recall routes a session to the right concept; the file
-stays canon. **Sync rule: a commit that changes a concept's title/description
-also upserts its `okf-*` entry** (`npx @claude-flow/cli@latest memory store
--n okf -k <key> -v "<desc> Details: <path>"`), or the namespace drifts from
-the bundle.
+Backfilled 2026-08-22: namespace `okf` holds one entry per OKF concept — all
+39 concepts across all six sections, plus two log-derived lessons and the
+backfill marker. Key prefixes abbreviate the section: `okf-build-`,
+`okf-content-`, `okf-wf-` (workflows), `okf-design-`, `okf-arch-`
+(architecture), `okf-cs-` (content-strategy), `okf-log-`. Each entry is a
+distilled fact plus a pointer to its `.okf/` file; semantic recall routes a
+session to the right concept, the file stays canon. **Sync rule: a commit
+that changes a concept's title/description also upserts its `okf-*` entry**
+(`npx @claude-flow/cli@latest memory store -n okf -k <key> -v "<desc>
+Details: <path>"`), or the namespace drifts from the bundle. The mirror lives
+in the gitignored `.swarm/` store, so a fresh MACHINE (not worktree) starts
+with an empty namespace — regenerate by re-running the backfill: one store
+per concept from its frontmatter title/description, exactly as above.
 
 # The learning loop, and where each piece lives
 
@@ -50,9 +56,13 @@ the bundle.
   initialised" means you pointed it at the wrong DB, not that init is needed.
 - 12 background workers exist (`hooks worker list`); the daemon runs them.
 
-# Version-pinned bugs (v3.6.30) - do not re-fight these
+# CLI bugs observed 2026-08-22 (ruflo v3.38.16) - do not re-fight these
 
-- `config init` generates a config its own loader rejects ("reading 'map'"
+The bootstrap installs `@latest`, so no pin can hold - these are dated
+observations, not version guarantees; re-measure before assuming one is fixed
+or still present.
+
+- `config init` generates a config the loader rejects ("reading 'map'"
   warning on every call). Run on defaults; delete any generated config.
 - `memory export` fails ("Exported to undefined"); `memory_import_claude`
   finds 0 files even with `allProjects: true` (path-encoding). The auto-memory
