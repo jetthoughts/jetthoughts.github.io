@@ -45,14 +45,11 @@ Projects live in `docs/projects/<project-id>/`. Each project follows a standard
 onboarding path:
 
 **First visit — read in this order:**
-1. `PROJECT-INDEX.md` — navigation hub, agent routes, integration rules
-2. `GOAL-AT-A-GLANCE.md` — one-page exec summary, strategy, metrics
-3. `.agent/prd/PRD.md` — formal spec (if PRD-driven project)
-4. `.agent/tasks.json` — machine-readable task graph (if PRD-driven)
-5. `TASK-TRACKER.md` — live task queue, migration schedule, active phase
+1. `STATUS.md` (repo root) — cross-project view: what's in flight, goals, blockers
+2. The project's `README.md` or `GOAL-AT-A-GLANCE.md` — one-page status / exec summary (2608's README is the template: status paragraph, read-order table, open decisions, known reds)
+3. `TASK-TRACKER.md` or `backlog.md` — live task queue, active phase
 
-**Project health:** `.agent/STATUS.md` — cross-project RAG dashboard.
-Per-project PM health reports in `40-49-review/40.10-*.md`.
+(The former `.agent/STATUS.md` / `.agent/prd/PRD.md` / `.agent/tasks.json` stack never existed in this repo — removed 2026-08-22; root `STATUS.md` is the cross-project dashboard.)
 
 **Skills:** Project-specific skills in `.skills/`. Global skills loaded via
 `skill` tool.
