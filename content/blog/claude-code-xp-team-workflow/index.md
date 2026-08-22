@@ -2,6 +2,7 @@
 title: 'How We Replicated a Full Product Team With Claude Code Agents'
 description: 'Solo Claude Code agents ship like solo developers - missing PM, designer, QA, customer voice. Here is the team-mode setup running Shape Up plus XP plus reflection-driven Kaizen.'
 date: 2026-05-04
+edited_at: 2026-08-22
 draft: false
 author: 'JetThoughts Team'
 slug: claude-code-xp-team-workflow
@@ -87,6 +88,41 @@ Solo agents inherit all of that, compressed into one process. One agent makes th
 
 Team mode splits those decisions across collaborative agents, each holding one job, accountable through a written rule set. A PM agent blocks tickets without acceptance criteria. A simplicity critic stops unrequested abstractions before the diff lands. When two agents disagree, the rule file decides - we don't let the last-run agent win by default.
 
+## The exit we were missing
+
+Team mode fixed who decides. It did not fix whether to proceed at all.
+
+Each formation above ends in an artifact. Pitching produces a pitch doc, slicing produces AC items, delivery produces a diff, and the critics answer revise or approve. Nothing in that set can return "this should not be built."
+
+The gap stayed invisible while we pointed the setup at code, because a ticket that reaches an agent has usually already earned its existence. Content exposed it inside a week.
+
+We aimed the same machinery at this blog - one agent picks the next post from live search data, another writes it. The picker ran twice in one day and both times concluded the queued topic wasn't worth writing. One rested on a statistic that fell apart on a fresh pull; the other collided with a post we'd already published.
+
+Both calls were right.
+
+With two outcomes available it would have written both posts anyway. "Try again" is all a loop can do when nothing lets it stop.
+
+So the rule file grew a third exit. A run now ends SHIPPED, or HOLD with the evidence that killed it, or BLOCKED on a decision it names out loud - and HOLD gets filed as a success rather than a failed run.
+
+That last clause carries the weight. An agent that reads stopping as failure will find a reason to keep going.
+
+The finish condition had to move with it, away from quality and toward checks. "The post is good" is not a claim anyone can catch an agent being wrong about. "A critic that didn't write it scored the draft, and every external claim was fetched rather than recalled" is.
+
+## Four-eyes only counts across agent types
+
+The critic panel assumes the critics see what the writer missed. That assumption breaks quietly when a critic runs on the same model as the writer, because a fresh context window resets what an agent knows without touching what it finds plausible.
+
+Different type, or it doesn't count.
+
+Four things got caught this month that self-review had already passed, each one held with confidence at the time:
+
+- a skill file sitting in a directory the runtime never loads, which looked installed and did nothing
+- a `.gitignore` rule that swallowed the deliverable, so the work existed locally and would never have shipped
+- a query subtotal reported as a whole page's performance, where the numbers were real and the label was wrong
+- a filtered data pull read as complete, when the filter had quietly dropped half the rows
+
+None of those are exotic. Each looks correct to whoever made it, and that is the failure a same-type second opinion is worst at catching.
+
 ## Why the rules need to change every sprint
 
 A rigid rule set ships yesterday's bias. Strategy docs get revised when the market signal changes. Rule files change when reflection surfaces a failure the current rules let through. And sprint goals shift mid-sprint when discovery surfaces new evidence about what users actually need.
@@ -96,6 +132,8 @@ Standups happen at the agent level: the discovery agent posts what it learned fr
 ## Where to start
 
 You don't need every role from day one. Begin with a strategy doc the agent reads at session start, a critic panel that blocks merges, and a reflection log that turns failures into rules. From there, add a designer when the UI starts drifting, a customer-voice capability into the PM agent when feature requests stop matching user pain, and a QA/visual verifier when builds keep going green on broken screens.
+
+Write the three exits into the rule file on day one, though. It costs a paragraph and it's the piece we added last, after watching a two-outcome loop reach for work that didn't need doing.
 
 Setup eats one sprint of overhead. Rule files need writing, agent definitions need configuring, and the team needs convincing. By sprint two, the rule files write themselves from reflection logs and the overhead drops to about 30 minutes per week.
 
