@@ -51,7 +51,27 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
-## 2026-08-22 - the codeblocks drift was Debian vs Ubuntu, after four wrong answers
+## 2026-08-22 - ARM migration shipped, and the "Debian vs Ubuntu" answer is withdrawn
+
+**`rendering-stack`**: the whole stack moved to arm64 - CfT pinned to
+`153.0.8010.5` (first Beta publishing `linux-arm64`), container native, CI on
+`ubuntu-24.04-arm` ([#589](https://github.com/jetthoughts/jetthoughts.github.io/pull/589)).
+Paul overrode the pin-to-Stable policy to take Beta now rather than wait for 153
+to promote. Two unplanned blockers, both of which would have hit CI as well: a
+`Gemfile.lock` missing the `aarch64-linux` platform (nokogiri had no native
+candidate), and `bin/dc`'s dead `DOCKER_DEFAULT_PLATFORM` export.
+
+**The correction that matters**: the entry below concluded the 8 codeblocks
+failures were caused by Debian-vs-Ubuntu. That conclusion is **not established
+and has been withdrawn from the concept.** Local ARM (Debian) and CI ARM
+(Ubuntu) fail the same 8 keys, which looks like confirmation but cannot
+discriminate - both compare against baselines recorded on the OLD stack, so
+every hypothesis predicts red on both. Asserting it anyway was the fifth
+instance of the same shape the entry below catalogues four of, committed in the
+migration's own commit message. Cause is UNKNOWN until the re-record on master
+lands and local `bin/dtest` runs against it.
+
+## 2026-08-22 - the codeblocks drift was blamed on Debian vs Ubuntu (SUPERSEDED - see above)
 
 The 8 `mobile/blog/special/codeblocks/*` failures in `bin/dtest` were blamed on
 arm64-vs-amd64 three separate times, and on the tolerance change, the PR
