@@ -11,7 +11,13 @@ metatags:
   image: cover.png
 ---
 
-> **Read this first (updated 2026-08-22): Laravel 11 is out of support.** Per Laravel's own [version support table](https://laravel.com/docs/releases), active support for 11.x ended 2025-09-03 and security fixes ended 2026-03-12. If you are still on Laravel 10, **11 is no longer the version to land on** - Laravel 12 has the same PHP 8.2 minimum and is supported into 2027, so the 10 → 12 path costs you the same PHP upgrade and does not leave you on an unpatched release. Everything below about the structural changes still applies, because 12 inherits 11's skeleton. Treat it as the 10 → 11 half of a 10 → 12 move.
+> **Read this first (updated 2026-08-22). Do not land on Laravel 11 - target 13.**
+>
+> Both ends of this guide are now out of support. Per Laravel's own [support policy table](https://laravel.com/docs/13.x/releases): Laravel 10 security fixes ended **2025-02-04**, and Laravel 11 security fixes ended **2026-03-12**. Laravel 12 stopped receiving bug fixes on **2026-08-13** and is on security-only until February 2027.
+>
+> **Laravel 13 is the current release** (released 2026-03-17, bug fixes into Q3 2027, security to 2028). It needs **PHP 8.3 or higher** - a step past the 8.2 this guide assumes, so budget for that. Laravel's own release notes call 13 "a relatively minor upgrade in terms of effort" and say "most Laravel applications may upgrade to Laravel 13 without changing much application code."
+>
+> **The structural work below is still the work.** Laravel 11 rewrote the application skeleton - no `Kernel.php`, no default service providers, no `config/app.php` aliases - and 12 and 13 inherit that skeleton. Coming from Laravel 10, this is the hard leg, and 11 → 12 → 13 on top of it is comparatively light. Read this as the first and largest step, then follow the [official upgrade guide](https://laravel.com/docs/13.x/upgrade) for the remainder. Use PHP 8.3+ throughout rather than the 8.2 targeted below.
 
 ## TL;DR
 

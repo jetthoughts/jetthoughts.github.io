@@ -12,7 +12,7 @@ canonical_url: 'https://jetthoughts.com/blog/what-senior-developers-catch-that-a
 related_posts: false
 ---
 
-The sentence looked fine.
+The sentence looked fine, and it sat in an open pull request waiting to be merged.
 
 An agent had just pulled an unsourced performance number out of one of our older Rails posts and written a replacement in its place. Propshaft, it said, "drops the transpilation and concatenation stages entirely, so asset precompilation stops being a build step that scales with your asset count."
 
@@ -69,6 +69,18 @@ Going in, those developers expected a 24% speedup. Coming out, having just lived
 METR is careful about what that does not show, so I will be too: early-2025 models, Claude 3.5 and 3.7 Sonnet through Cursor Pro, on mature codebases with demanding quality standards, and they explicitly decline to claim it generalises to most developers or to later tools.
 
 What travels is the gap itself. Being experienced did not make the self-assessment accurate, which is the whole problem with judging this by feel.
+
+## Partial checking feels exactly like checking
+
+Here is the same failure again, from later the same day, after the rule above had been written down.
+
+We found an old Laravel migration guide with no citations at all and went to verify it. The framework's support table said Laravel 11 had been out of security support since March. So a correction went on the page: do not land on 11, go to 12, same PHP floor.
+
+Two of those three facts were right.
+
+Laravel 12 had stopped getting bug fixes nine days earlier, and Laravel 13 - current since March, and the sensible target - requires PHP 8.3 rather than the 8.2 the correction promised. The table had four rows and two of them got read.
+
+Nobody skipped the check. The check got done, felt done, and stopped one row short of the answer. That is a harder failure to design against than not checking at all, because it produces the same feeling of having been careful.
 
 ## What this means if you are the one paying for it
 
