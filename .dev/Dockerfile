@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1
 # Multi-stage Dockerfile for JetThoughts test environment.
 #
 # Debian (glibc) base, NOT Alpine: this image records the canonical
@@ -32,6 +33,7 @@ ENV \
     BUNDLE_JOBS=4 \
     BUNDLE_PATH=/opt/bundle \
     BUNDLE_RETRY=3 \
+    BUNDLE_WITHOUT=development:assets \
     CHROME_BIN=/opt/cft/chrome/chrome \
     CHROMEDRIVER_PATH=/opt/cft/chromedriver/chromedriver \
     DEBUG_COLORS=true \
@@ -55,7 +57,10 @@ ENV \
     RUBY_YJIT_ENABLE=1 \
     TEST_SERVER_PORT=1314
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    rm -f /etc/apt/apt.conf.d/docker-clean \
+    && apt-get update && apt-get install -y --no-install-recommends \
         bash \
         build-essential git pkg-config curl ca-certificates unzip \
         libjpeg62-turbo libvips42 \
@@ -73,8 +78,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
                 libxkbcommon0 libxrandr2; do \
           apt-cache show "$p" >/dev/null 2>&1 && deps="$deps $p"; \
         done \
-    && apt-get install -y --no-install-recommends $deps \
-    && rm -rf /var/lib/apt/lists/*
+    && apt-get install -y --no-install-recommends $deps
 
 # Pinned Chrome for Testing + matching chromedriver (the rendering pin that
 # makes linux/ baselines reproducible - version in .dev/cft-version).
@@ -104,18 +108,14 @@ WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
 
+# No `bundle config set --local`: that writes /app/.bundle/config, and the
+# `..:/app` bind mount replaces /app at runtime, so those settings never reach
+# the running container. Every one of them is an ENV above instead, which does
+# survive.
 RUN --mount=type=cache,target=/usr/local/bundle/cache,sharing=locked \
     --mount=type=cache,target=/root/.bundle \
     echo "gem: --no-document" > /root/.gemrc && \
-    bundle config set --local deployment false && \
-    bundle config set --local path /opt/bundle && \
-    bundle config set --local jobs 4 && \
-    bundle config set --local retry 3 && \
-    bundle config set --local without development:assets && \
     bundle install
-
-VOLUME /app/node_modules
-VOLUME /opt/bundle
 
 COPY --from=node-deps /temp/dev/node_modules ./node_modules
 
