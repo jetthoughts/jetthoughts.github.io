@@ -244,6 +244,45 @@ parallel makes the deep sweep free. This is the default, not an optimisation.
    ask the user to run `nlm login` · `unverified` means THE CHECK failed, not the
    credentials - try the call anyway rather than sending them to re-auth.
 
+### NotebookLM also makes VISUALS, not just text
+
+`studio_create` builds artifacts from the notebook's sources and
+`download_artifact` saves them. Verified signatures 2026-08-23:
+
+```
+studio_create(notebook_id=..., artifact_type="infographic",
+              infographic_style=..., orientation="landscape")
+studio_status(notebook_id=...)                 # poll until complete
+download_artifact(notebook_id=..., artifact_type="infographic",
+                  output_path="content/blog/<slug>/figure.png")
+```
+
+Types: `infographic` (PNG) · `mind_map` (JSON) · `slide_deck` (PDF/PPTX) ·
+`data_table` (CSV) · `report` · `audio` · `video` · `flashcards` · `quiz`.
+Poll `studio_status` after creating - generation is asynchronous.
+
+**Where these earn their place:**
+
+- `mind_map` BEFORE outlining. It shows how the sources cluster, which is the
+  fastest way to see that your six planned H2s are really three.
+- `data_table` to pull every number the sources state into one CSV, so the
+  claim-verification pass has a checklist instead of a memory.
+- `infographic` as a STRUCTURE draft - what a diagram of this argument wants to
+  contain - not as the shipped asset.
+
+**Two limits, and both matter.**
+
+A generated infographic does not use the house palette
+(`#0e0e14` ground, ruby `#cc342d`, purple `#a855f7`, labels INSIDE the diagram)
+and will not match `.stitch/design.md`. Shipped covers and in-post figures are
+still hand-built SVG exported to PNG with `rsvg-convert`, which is also what the
+standing rule requires: the PNG is the artifact, not the source.
+
+And the numbers inside a generated visual are **generated**. They carry exactly
+the same burden as prose and are harder to notice, because a chart reads as a
+measurement rather than as a sentence. Verify every figure in a generated visual
+at its primary before shipping it, or do not ship it.
+
 2. **To interrogate sources you already have** (rather than find new ones):
    `notebook_create` → `source_add` (`source_type: "url"`, `urls` takes a list)
    → `notebook_query`.

@@ -220,6 +220,13 @@ Which instrument, by claim type:
   from an empty notebook. Gate on `server_info`: `stale` = ask for `nlm login`,
   `unverified` = the CHECK failed, not the credentials, so try the call anyway.
   **The report is a lead, not a citation** - open the primary and quote there.
+- **A diagram or mind map from that same notebook** → `studio_create(artifact_type=
+  "infographic" | "mind_map" | "data_table" | "slide_deck")`, poll `studio_status`,
+  then `download_artifact`. Use `mind_map` before outlining to see how sources
+  actually cluster, and `data_table` to list every number the sources state so the
+  claim pass has a checklist. A generated infographic is a STRUCTURE draft only:
+  it does not use the house palette, and its numbers are generated, so they carry
+  the same verification burden as prose while looking like measurements.
 - **What practitioners actually argue** → the HN Algolia API, and read the
   thread, not the headline.
 
