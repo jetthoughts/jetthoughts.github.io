@@ -241,16 +241,22 @@ mostly legitimate prose) — see `.okf/content/fabrication-ratchet.md`.
 
 STEP 5a — ANTI-AI WRITING PASS (MANDATORY — run BEFORE review loop)
 
-RUN THE SCRIPT FIRST — `bin/check-post-voice content/blog/<slug>/index.md`.
-It measures STEP 4b's cadence quotas and the tell list below mechanically, and
-exits non-zero on failure. This exists because the prose checklist kept getting
-skipped: three posts shipped on 2026-08-22 having passed neither, and the slop
-was obvious to a reader immediately. It also enforces the two rules that are not
-cadence choices — an artifact (code block or image) and at least one external
-citation.
+NO SCRIPT DOES THIS. A `bin/check-post-voice` was built and deleted on the same
+day (2026-08-22, Paul's call). A regex catches "Not X. Not Y." and misses prose
+that is fluent, on-pattern and lifeless — which is the actual defect. Worse, a
+passing run reads as "the voice is fine", the same false-confidence failure as a
+link checker reporting green over a tenth of the site.
 
-It measures SHAPE. It cannot tell you the post is good, so the human passes
-below still run — but do not send a draft to them that the script rejects.
+**Slop is found by COLD EYES.** Spawn reviewers of a DIFFERENT agent type than
+the writer, give each a distinct lens — the ICP reading it cold, voice and AI
+tells, the competitor standard from `blog-writer-reference-samples.md` — brief
+them with goal and artifact and never with your conclusions, and require each to
+name something it would cut. A panel that returns three approvals has told you
+nothing.
+
+The genuinely deterministic subset (banned words, em dashes) is already ratcheted
+in `test/unit/marketing_copy_test.rb` over rendered HTML, so deleting the script
+loses no mechanical coverage.
 
 Then run /humanizer on the draft. Scan every paragraph for these AI tells:
 - Rule of three (parallel triads) — break or combine

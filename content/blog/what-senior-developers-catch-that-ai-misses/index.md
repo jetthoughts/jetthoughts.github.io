@@ -75,7 +75,11 @@ There is a measurement for this, and it is worse than the anecdote. METR ran a r
 
 They were 19% slower with AI.
 
-Going in, those developers expected a 24% speedup. Coming out, having just lived through the slowdown, they still estimated AI had made them 20% faster. Roughly forty points between what happened and what they believed happened - in experts, on their own code.
+Going in, those developers expected a 24% speedup. Coming out, having just lived through the slowdown, they still estimated AI had made them 20% faster.
+
+![Predicted 24% faster, measured 19% slower, believed afterwards 20% faster - roughly forty points between measurement and belief.](metr.svg)
+
+Forty points between what happened and what they believed happened, in experts, on code they knew.
 
 METR is careful about what that does not show: early-2025 models, Claude 3.5 and 3.7 Sonnet through Cursor Pro, on mature codebases with demanding quality standards, and they explicitly decline to claim it generalises to most developers or to later tools.
 
