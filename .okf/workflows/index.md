@@ -12,3 +12,4 @@
 * Test suites, rake tasks, and the visual-regression gate live in [test-gates](/build/test-gates.md) (`workflows/testing.md` was squashed into it 2026-08-20 - it duplicated the gate rules and still carried the superseded "run both suites per commit" instruction)
 * [Analytics Access](analytics-access.md) - live GA4 + Search Console MCP servers, correct property IDs, credential split, data-lag traps, and why GA4 sessions must be reconciled against GSC clicks before being quoted
 * [Outbound Sprint Machinery](outbound-sprint.md) - 2607 browser-agent send/monitor loop, pipeline ledger, board conventions, mail-routing gotchas
+* [Ruflo runtime](ruflo-runtime.md) - agent-bootstrap self-heals the gitignored scaffolding, worktrees share the main .swarm memory via symlink, the okf memory namespace mirrors this bundle, and the v3.6.30 CLI bugs not to re-fight

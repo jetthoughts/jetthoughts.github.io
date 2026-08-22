@@ -40,7 +40,7 @@
 
 Operational knowledge lives in `.okf/` (`build/`, `content/`, `design/`, `workflows/` — one concept per file). Consume via progressive disclosure: `/okf:okf` (consume) at session start; never hand-read or hand-edit the bundle format — the skills carry the spec. Validate with `/okf:validate .okf --strict` before committing bundle changes.
 
-**Maintain as you work (ENFORCED)**: a durable learning updates its concept + section index + a dated `.okf/log.md` entry, riding the SAME commit as the change — dispatch a background okf-maintainer in parallel, or inline for tiny fixes; a weekly maintain pass back-fills misses. A session that shipped durable knowledge without an OKF entry is not done.
+**Maintain as you work (ENFORCED)**: a durable learning updates its concept + section index + a dated `.okf/log.md` entry, riding the SAME commit as the change — dispatch a background okf-maintainer in parallel, or inline for tiny fixes; a weekly maintain pass back-fills misses. A session that shipped durable knowledge without an OKF entry is not done. **Ruflo mirror**: a concept title/description change also upserts its `okf-<section>-<slug>` entry in ruflo memory namespace `okf` (backfilled 2026-08-22, one entry per concept; runtime map: `.okf/workflows/ruflo-runtime.md`).
 
 ---
 
