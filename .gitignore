@@ -73,6 +73,8 @@ claude-flow.config.json
 .claude/skills/*
 !.claude/skills/README.md
 !.claude/skills/blog-next/
+!.claude/skills/blog-write/
+!.claude/skills/blog-operator/
 # `:33` (.claude/**/*.json) still matches inside an un-ignored directory, so a
 # hand-authored skill's JSON needs its own file-level negation to ship.
 !.claude/skills/blog-next/**/*.json
