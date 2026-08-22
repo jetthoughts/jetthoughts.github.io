@@ -8,6 +8,10 @@ slug: what-senior-developers-catch-that-ai-misses
 keywords: 'ai code review, senior developer value, llm expertise, ai generated code errors, hiring developers ai, technical due diligence'
 tags: ['ai', 'hiring', 'startup', 'engineering', 'code-review']
 categories: ['Engineering']
+cover_image: "cover.png"
+cover_image_alt: 'Obsidian-dark cover reading Fluent, Confident, Wrong, with a faceted ruby gem and three chips: METR 19% slower but felt faster, the rule is a different agent type, caught before the merge'
+metatags:
+  image: cover.png
 canonical_url: 'https://jetthoughts.com/blog/what-senior-developers-catch-that-ai-misses/'
 related_posts: false
 ---
