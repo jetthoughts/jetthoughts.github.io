@@ -80,6 +80,32 @@ class NextRailTest < BasePageTestCase
     end
   end
 
+  # The SOURCE half of the pair above. The rendered assertion cannot tell a
+  # frozen "18+" from a derived one while 2026-2008 == 18, so on its own it is
+  # blind until 2027-01-01 - a fault injection replacing `derived: tenure` with
+  # `value: "18+"` passed it green (20.11 defect D). This half sees the freeze
+  # directly, today.
+  #
+  # This is NOT a config test. The hardcoded literal IS the defect class: the
+  # 2026-08-14 canon audit found the founding year wrong in eight places
+  # precisely because each one kept its own copy of the number instead of
+  # deriving it. The two assertions are one gate - keep both.
+  def test_register_pilot_tenure_stat_is_not_frozen_in_source
+    frozen = "#{Time.now.year - 2008}+"
+
+    pilot_frontmatter.each do |path, front|
+      stats = front.dig("clients", "stats")
+      refute_nil stats, "#{path}: no clients.stats block - this gate would pass by finding nothing"
+
+      assert stats.any? { |stat| stat["derived"] == "tenure" },
+        "#{path}: the tenure stat must be `derived: tenure` so layouts/next/landing.html computes it " \
+        "from site.Params.foundingYear - a frontmatter number is wrong every January (claims-canon)"
+      assert_empty stats.select { |stat| stat["value"].to_s.strip == frozen }.map { |stat| stat["label"] },
+        "#{path}: a stat is frozen at #{frozen} in frontmatter. Today that reads the same as the " \
+        "derived value, which is exactly why the rendered assertion cannot see it - use `derived: tenure`"
+    end
+  end
+
   # A testimonial is a person's words, not copy to tighten. The design
   # blueprint had smoothed this one ("They were detailed and precise, helping
   # us find problems...") and it shipped with a hand-waved "verbatim" claim.
@@ -121,5 +147,18 @@ class NextRailTest < BasePageTestCase
 
     assert pilots.any?, "no built pages under next/pilots/ - this gate would pass by finding nothing"
     pilots
+  end
+
+  # Frontmatter of every pilot stub, keyed by repo-relative path. Same
+  # empty-check reflex as register_pilots: iterating nothing reports green.
+  def pilot_frontmatter
+    stubs = Dir.glob(File.join(REPO_ROOT, "content/next/pilots/**/*.md"))
+    assert stubs.any?, "no pilot stubs under content/next/pilots/ - this gate would pass by finding nothing"
+
+    stubs.to_h do |path|
+      front = File.read(path)[/\A---\n(.*?)\n---\n/m, 1]
+      refute_nil front, "#{path}: no YAML frontmatter"
+      [path.sub("#{REPO_ROOT}/", ""), YAML.safe_load(front)]
+    end
   end
 end

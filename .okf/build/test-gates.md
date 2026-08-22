@@ -196,9 +196,45 @@ This is why the suite leans on per-section screenshots - each one scrolls its
 section INTO the viewport first (`verify_section_for` →
 `scroll_to find(css)`), which is the existing workaround, not an accident.
 A page asserted only as one top-of-page shot is verified for its first fold and
-nothing else. Closing the gap properly means either more section shots or
-full-page capture; both are out of scope for the tolerance change and belong to
-the follow-up that re-records baselines.
+nothing else.
+
+# Computed styles beat more screenshots for below-fold and for contrast
+
+More captures is the tempting answer to the fold problem and the expensive one:
+each new baseline inherits the tolerance problem above (a font/SVG-heavy band
+needs its noise floor MEASURED by recording twice - the 0.0001 default is
+unsafe there), and every one is a file two platforms have to agree on.
+
+A computed-style assertion in a system test has neither cost. It does not care
+about the viewport, and it returns a NUMBER rather than a pixel delta - which
+matters because a screenshot cannot tell an intentional recolour from an
+accessibility regression. Nothing in this suite measured contrast until
+2026-08-22; a 3.33:1 black-on-ruby button shipped and was caught in human
+review.
+
+`test/system/next_pilot_contrast_test.rb` is the worked example, ~1.3s for
+three pages, no baselines, wired into `test:critical`:
+
+- The comparison table's "theirs" column must compute the register's own
+  `--*-muted` token. Asserted against the token, not a literal and not the
+  sibling cell: two registers set the "ours" column to the body colour and one
+  sets it to ink, so a sibling comparison passes on a real defect in the
+  registers where ink and body differ. That mistake was made and caught here by
+  injection, not by reading.
+- A contrast walk over every visible text run: composite each translucent layer
+  down to an opaque background, then require 4.5:1 (3:1 for large text, SC
+  1.4.3) and 3:1 for a control's fill against its surround (SC 1.4.11). Text
+  over a background image or gradient is REPORTED as unresolvable rather than
+  measured against a guessed white.
+- Guarded against the false green it would otherwise be: the walk asserts it
+  measured more than 50 text pairs and at least one fill, because a walk that
+  finds nothing is empty and empty passes.
+
+Broken before trusted (2026-08-22), all three branches: an above-fold
+`.rr-btn-primary { color: var(--ed-ink) }` failed at `2.31:1 (needs 4.5:1)`; a
+below-fold `.rr-td-muted { color: #b5b0ab }` - the class the screenshot gate
+cannot see at all - failed at `2.15:1` on five cells; a low-contrast fill with
+a readable label failed only the fill branch at `1.12:1 (needs 3.0:1)`.
 
 # Rake tasks and suite layout
 
@@ -815,10 +851,17 @@ Skipping step 1 has cost this repo repeatedly:
   on a site with five real broken links, one of them a conversion path and one
   a post's own canonical pointing at a 404.
 
-**When a gate cannot discriminate yet, write that in the test.** The derived
-tenure assertion cannot tell `derived` from `frozen` while both read "18+" in
-2026 - it starts biting on 2027-01-01. That is stated in the test body, so the
-next reader does not mistake a passing run for proof.
+**When a gate cannot discriminate yet, write that in the test - then ask what
+CAN see the defect today.** The rendered tenure assertion cannot tell `derived`
+from `frozen` while both read "18+" in 2026; it starts biting on 2027-01-01,
+and that limit is stated in the test body so a passing run is not mistaken for
+proof. But the limit is a property of the RENDERED surface, not of the defect:
+the freeze is plainly visible in the stub's frontmatter. `NextRailTest`
+therefore carries both halves, and they are one gate - the rendered assertion
+for the value, a source assertion that the tenure stat is `derived: tenure` and
+that no stat is frozen at today's derived string. This is not a config test:
+the hardcoded literal IS the defect class, the way the 2026-08-14 canon audit
+found the founding year wrong in eight places because each kept its own copy.
 
 Full fault-injection matrix, including what nothing guards:
 `docs/20-29-testing-qa/20.11-gate-fault-injection-2026-08-22-reference.md`.
