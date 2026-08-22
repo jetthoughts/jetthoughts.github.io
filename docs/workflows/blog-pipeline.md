@@ -196,6 +196,29 @@ CLAUDE.md gate for "any LinkedIn/blog/marketing draft", and the blog lane was th
 one lane that never wired it in (the LinkedIn lane has carried it in
 `.okf/workflows/linkedin-post-pipeline.md` since it was written).
 
+STEP 4f — CLAIM SOURCING (BLOCKING — the gates cannot do this one for you)
+List every sentence in the draft that says how something external behaves — a
+gem, a framework, a service, a competitor's product. For each one, name where
+you checked it in THIS session. Not "I know this": a URL you opened.
+
+Anything you cannot name a source for gets softened until it stops being a
+claim, or cut. A mechanism reads as reasoning rather than as data, so it gets
+waved through where a number would be challenged — which is exactly why wrong
+mechanisms outlive wrong numbers.
+
+**Hardest when EDITING.** Deleting a bad claim and writing a replacement feels
+like cleanup, so the replacement is scrutinised less than anything written from
+scratch, while carrying the same burden. A replacement is a new claim
+(`.okf/content/claims-canon.md`). The 2026-08-22 Propshaft case is the worked
+example: same author, same sentence, same day — wrong when framed as a fix,
+right when framed as writing, because only the second framing triggered
+"go read the README".
+
+No ratchet catches this. A ratchet counts invented SHAPES; a wrong explanation
+is a well-formed sentence with the right vocabulary pointing roughly the right
+way. Two candidate markers were measured and rejected (10 and 185 hits, both
+mostly legitimate prose) — see `.okf/content/fabrication-ratchet.md`.
+
 STEP 5a — ANTI-AI WRITING PASS (MANDATORY — run BEFORE review loop)
 Run /humanizer on the draft. Scan every paragraph for these AI tells:
 - Rule of three (parallel triads) — break or combine

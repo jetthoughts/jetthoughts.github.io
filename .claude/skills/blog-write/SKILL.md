@@ -33,7 +33,25 @@ correction lands in one place:**
 - `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` - voice.
 - `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` - the reader.
 - `.okf/content/claims-canon.md` - what you are allowed to say. A number with no
-  in-repo source is a defect, not a detail.
+  in-repo source is a defect, not a detail, and so is a mechanism.
+
+## The claim rule that catches the errors gates cannot
+
+Fetch the source before you assert how something works. Not after, and not from
+memory - training memory returns a confident sentence whether or not it is true,
+which is the failure it cannot warn you about.
+
+**This applies hardest when you are EDITING.** Deleting a bad claim and writing
+a replacement feels like cleanup, so the replacement gets less scrutiny than
+anything you write from scratch - and it is a fresh assertion carrying the same
+burden. Claims-canon records the case: the same author wrote the same Propshaft
+sentence twice on one day, wrong when it was framed as a fix, right when it was
+framed as writing, because only the second one triggered "go read the README".
+
+The mechanical gates cannot help you here. A ratchet counts invented SHAPES; a
+wrong explanation has no shape. If a sentence says how something behaves and you
+did not open its documentation in this session, either open it or soften the
+sentence until it stops being a claim.
 
 ## What you need before drafting
 
@@ -69,6 +87,8 @@ paraphrase it from memory - open it.
 The gates that most often get skipped, named here so they are not:
 
 - **STEP 4e self-critique** (`reflexion-reflect`) before the critic panel.
+- **STEP 4f claim sourcing** - name the URL you opened for every claim about how
+  an external thing behaves. No gate covers this one.
 - **STEP 5a anti-AI pass** before the review loop, not after.
 - **STEP 5b slop gate: `slop >= 8/10`.** This is the blog scale, 0-10, higher is
   better. The course's `Slop <= 25` is a different scale in the other direction -

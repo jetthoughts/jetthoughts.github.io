@@ -166,7 +166,10 @@ reviewer verdict), a rebuilt plan section, or a HOLD.
    practitioners disagree, the strongest counter-argument. Not "summarize this."
 4. **Mine our real code** (this repo, `~/dev/elital`) for first-hand material.
    Sanitize: shapes and lessons yes; prompts, model IDs, proprietary numbers no.
-5. Verify every statistic against its source. Zero fabricated clients, stats,
+5. Verify every statistic against its source - **and every mechanism too.** How
+   a tool behaves is a claim, not context; it just reads as reasoning, so it
+   gets waved through where a number would be challenged. Fetch the README or
+   the release notes. Zero fabricated clients, stats,
    quotes or personas - `.okf/content/claims-canon.md` records "Sarah" as banned.
 6. Internal links per `blog-pipeline.md` STEP 3b.
 
