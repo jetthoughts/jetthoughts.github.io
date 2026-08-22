@@ -255,6 +255,46 @@ class MarketingCopyTest < Minitest::Test
       "#{FABRICATION_BASELINE}, now #{hits.size}). These shapes carry invented " \
       "client work - see .okf/content/claims-canon.md:\n  " + hits.join("\n  ")
   end
+
+  # ---------------------------------------------------------------------------
+  # CHECKABILITY ratchet.
+  #
+  # The gate above counts invented shapes. Neither it nor any regex can tell you
+  # whether a claim is TRUE - a wrong mechanism is a well-formed sentence using
+  # the right vocabulary (two candidate markers for it were measured and
+  # rejected at 10 and 185 mostly-legitimate hits, 2026-08-22).
+  #
+  # What IS mechanical is whether a claim can be checked AT ALL. A long
+  # technical post that cites nothing external is unverifiable by construction:
+  # the reader cannot check it, and - the part that actually bites - neither
+  # could whoever wrote it. Uncheckable is where false hides.
+  #
+  # Found on 2026-08-22: 39 of 93 substantial non-dev.to posts cited nothing (38
+  # after the Laravel fix below),
+  # including a 7,794-word APM comparison that links to no APM tool's docs and a
+  # 20,226-impression Laravel migration guide whose target version had been out
+  # of security support for five months. Nobody could have noticed that from
+  # inside the post, because there was nothing to notice it against.
+  #
+  # 400 words is the floor: below it a post is a note, and demanding citations
+  # of a note is the noise this file's header warns about. Internal jetthoughts
+  # links do not count - the question is whether the claim can be checked
+  # against something we do not control.
+  CITATION_WORD_FLOOR = 400
+
+  # RATCHET: fails when the count goes UP. Tighten it whenever a batch is cited.
+  UNCITED_BASELINE = 38
+
+  def test_substantial_blog_posts_do_not_regress_on_uncitedness
+    uncited = uncited_posts.sort
+
+    assert_operator uncited.size, :<=, UNCITED_BASELINE,
+      "Substantial blog posts with ZERO external citations went up (baseline " \
+      "#{UNCITED_BASELINE}, now #{uncited.size}). A claim nobody can check is " \
+      "where a false one hides - cite the primary source (blog-pipeline.md " \
+      "STEP 4f routes the tool):\n  " + uncited.join("\n  ")
+  end
+
   private
 
   def rendered_root
@@ -411,6 +451,21 @@ class MarketingCopyTest < Minitest::Test
 
     FABRICATION_PHRASE_MARKERS.filter_map do |pattern, reason|
       "#{relative} - #{reason}" if haystack.match?(pattern)
+    end
+  end
+
+  def uncited_posts
+    posts = blog_source_files
+
+    assert posts.any?, "No blog source found - this gate would pass by finding nothing."
+
+    posts.filter_map do |path|
+      body = File.read(path, encoding: "bom|utf-8").split(/^---\s*$/m)[2].to_s
+      next if body.split.size < CITATION_WORD_FLOOR
+
+      external = body.scan(%r{\]\((https?://[^)]+)\)}).flatten
+                     .reject { |url| url.include?("jetthoughts.com") }
+      path.sub("#{REPO_ROOT}/", "") if external.empty?
     end
   end
 

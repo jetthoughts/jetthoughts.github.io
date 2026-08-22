@@ -11,6 +11,8 @@ metatags:
   image: cover.png
 ---
 
+> **Read this first (updated 2026-08-22): Laravel 11 is out of support.** Per Laravel's own [version support table](https://laravel.com/docs/releases), active support for 11.x ended 2025-09-03 and security fixes ended 2026-03-12. If you are still on Laravel 10, **11 is no longer the version to land on** - Laravel 12 has the same PHP 8.2 minimum and is supported into 2027, so the 10 → 12 path costs you the same PHP upgrade and does not leave you on an unpatched release. Everything below about the structural changes still applies, because 12 inherits 11's skeleton. Treat it as the 10 → 11 half of a 10 → 12 move.
+
 ## TL;DR
 
 Laravel 11 removes boilerplate: no more `Kernel.php` files, no default service providers, no `config/app.php` aliases. This guide walks through every breaking change with a step-by-step migration checklist, zero-downtime deployment strategy, and testing plan. For apps running Laravel 10 in production.
