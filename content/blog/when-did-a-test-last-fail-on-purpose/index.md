@@ -1,12 +1,12 @@
 ---
-title: "When Did a Test Last Fail on Purpose?"
-description: "SQLite had to write code to deliberately trigger a bug before its tests could see it. We planted eight defects in our own gates and five walked through."
+title: "Your Link Checker Is Probably Checking Nothing"
+description: "We planted eight defects in our own CI. Three were caught. One gate was skipping 133,874 of 149,516 links and reporting green. Here is the command that proves it."
 date: 2026-08-22
 draft: false
 author: 'JetThoughts Team'
 slug: when-did-a-test-last-fail-on-purpose
-keywords: 'test coverage, green tests, fault injection, ci gates, technical due diligence, non-technical founder testing'
-tags: ['testing', 'quality', 'startup', 'engineering', 'ci']
+keywords: 'lychee link checker, flaky ci gates, fault injection testing, green tests false confidence, rails ci gates'
+tags: ['testing', 'quality', 'ci', 'engineering', 'ruby']
 categories: ['Engineering']
 cover_image: "cover.png"
 cover_image_alt: 'Obsidian-dark cover reading Eight Planted, Three Caught, with a faceted ruby gem and three chips: SQLite 16 years hidden, 133,874 links skipped, and the rule break it on purpose'
@@ -16,71 +16,140 @@ canonical_url: 'https://jetthoughts.com/blog/when-did-a-test-last-fail-on-purpos
 related_posts: false
 ---
 
-SQLite is about as thoroughly tested as software gets. Its test suite is famously larger than the database itself.
+Our CI link checker reported zero broken links for months.
 
-It still carried a data-race bug for sixteen years.
+It was checking a tenth of the site.
 
-Tailscale hit it in production and [wrote up the hunt](https://tailscale.com/blog/sqlite-wal-reset-bug). The detail worth stopping on is not the bug. It is what SQLite's developers had to do to see it: "It could exist that long because it was rare - so rare, the SQLite developers had to add code to deliberately trigger it in their testing environments."
+Here is the number, from the run that caught it:
 
-They had to break it on purpose. Until they did, every run was green, and green meant nothing about that bug.
+```
+🔍 149516 Total  🔗 15642 Unique  ✅ 15642 OK  🚫 0 Errors  👻 133874 Excluded
+```
 
-## Green answers a question nobody asked
+**133,874 excluded.** That is not a filter doing its job - it is a green check mark attached to nothing, sitting on every pull request for as long as anyone on the team could remember seeing it any other way.
 
-A passing suite tells you the tests ran. It does not tell you they would have noticed.
+## The bug is one flag, and you probably have it too
 
-Those are different claims, and only one of them is what you actually wanted to know when you asked, but the two arrive in the same green icon and nothing distinguishes them. The gap is invisible from outside the team, and mostly invisible from inside it.
+We use [lychee](https://github.com/lycheeverse/lychee) with `--offline`, which is correct: internal link checking should not hit the network. The problem is what "internal" means after Hugo renders.
 
-We went looking for ours.
+Production emits absolute URLs. Your `/blog/foo/` becomes `https://jetthoughts.com/blog/foo/` in the built HTML. And `--offline` drops every `http(s)` URI as external, by design.
 
-## Eight planted defects, three caught
+So the crawler saw a page full of absolute links, classified all of them as "not my problem", and reported success on what remained - which on our homepage was a single skip-link anchor.
 
-We took our own checks and injected realistic failures into the codebase one at a time - a broken link, a banned phrase, a wrong figure in published copy - writing down beforehand which check should catch each one.
+The fix is `--remap`, pointing the public origin back at the built tree:
+
+```ruby
+# Rakefile
+task :links do
+  dir  = ENV.fetch("OUTPUT_DIR", "_dest/public-linkcheck")
+  root = File.expand_path(dir)
+
+  sh("lychee", "--offline", "--no-progress",
+    "--remap", "https://jetthoughts.com/(.*) file://#{root}/$1",
+    "--root-dir", root, "#{dir}/**/*.html")
+end
+```
+
+Same command, same flags, one addition. The next run:
+
+```
+🔍 149740 Total  🔗 31888 Unique  ✅ 114239 OK  🚫 0 Errors  👻 35501 Excluded
+```
+
+From 15,642 links checked to 114,239.
+
+## Run this on your own repo before you keep reading
+
+The diagnostic is the same whatever you use.
+
+**Compare what your checker says it inspected against how many links your built site actually contains.**
+
+```bash
+# how many internal links does the built site actually contain?
+grep -rhoE 'href="[^"]+"' public/ | wc -l
+
+# now compare that to the "checked" number your CI prints
+```
+
+If your checker reports a few hundred links on a site that renders tens of thousands of them, it is not passing your build so much as abstaining from it.
+
+## What it found the moment it could see
+
+Five real defects, invisible until that flag changed:
+
+- two wrong blog slugs, five links between them
+- a post whose own `canonical_url` pointed at a 404
+- a dead `/contact/` on a conversion page
+- a closing section offering a downloadable ROI calculator - itemising five things inside it, promising "no email required, instant download" - for a spreadsheet that had never existed
+
+That last one had been live long enough that nobody remembered writing it. It was a template ending nobody ever filled in, and every green run since had quietly confirmed that the page was in good shape.
+
+## Then we went looking on purpose
+
+The link checker was found by accident, which was the uncomfortable part. So we ran a deliberate exercise: **eight realistic defects, planted one at a time, with a prediction written down before each one about which check should catch it.**
 
 Three of eight were caught.
 
-Two of the five misses were not gaps in coverage. They were checks reporting green while inspecting almost nothing, which is a worse failure, because a gap at least looks like a gap.
+The predictions mattered more than the score. Writing "the banned-phrase ratchet will catch this" before planting it turns a vague sense of coverage into a falsifiable claim - and two of those claims were wrong in a specific way.
 
-Our internal link checker was skipping **133,874 of the 149,516 links** it claimed to be checking. Production renders internal links as absolute URLs, and the crawler had been configured to drop every `http(s)` address as external. It was checking about a tenth of the site and reporting the rest clean.
+The ratchet was carrying slack. It was set to fail above 14 hits when the tree actually had 11, so a planted phrase landed in the gap and the suite stayed green. A ratchet with three spare slots does not guard the last three defects.
 
-Pointing it at the built tree took it to 114,050 links actually checked. It immediately found five real defects that had been sitting there invisibly: two wrong blog slugs, a post whose own canonical URL pointed at a 404, a dead link on a conversion page, and a closing section offering a downloadable ROI calculator - itemising five things inside it, promising "no email required, instant download" - for a spreadsheet that had never existed.
+```ruby
+# The fix is boring: set the baseline to the MEASURED count,
+# then prove it is exact by dropping it one lower and watching it fail.
+RENDERED_BASELINE = 11   # was 14, against an actual 11
 
-Nobody wrote that last one to deceive anyone. It was a template ending that never got filled in, and every green run since had confirmed the page was fine.
+def test_rendered_pages_do_not_regress_on_banned_phrases
+  violations = rendered_files.flat_map { |path| rendered_hits(path) }.sort
 
-## The one that should worry you most
+  assert_operator violations.size, :<=, RENDERED_BASELINE,
+    "Banned phrases in BUILT HTML went up (baseline #{RENDERED_BASELINE}, " \
+    "now #{violations.size}):\n  " + violations.join("\n  ")
+end
+```
 
-A second gate, our visual regression suite, was passing because it was comparing screenshots to nothing at all.
+Setting it to 10 and watching it fail takes fifteen seconds. It is the only thing that distinguishes a ratchet from a decoration.
 
-Run from a particular working directory, it silently lost its reference images and wrote fresh captures over them instead. Every run went green. It had been green for a while.
+## The one that should genuinely worry you
 
-Someone finally tested the tester: they injected a red background into the site, confirmed the change reached the built page, and measured the captured image against the baseline. The difference was unambiguous - and the suite reported zero failures.
+Our visual regression suite was passing because it compared screenshots against nothing.
 
-Three earlier attempts to break it had also come back green, and the person doing it had blamed their own injections. That is the honest shape of this problem. When a gate is broken, the evidence that it is broken looks exactly like evidence that everything is fine.
+Run from a git worktree, it lost its reference images and wrote fresh captures over them instead. Every run green. It had been green for a while.
 
-## What to ask instead
+Someone finally tested the tester: injected `body { background: red !important }`, confirmed the rule reached the built CSS bundle, confirmed the page referenced that fingerprinted file, then measured the captured PNG against the baseline.
 
-You cannot audit a test suite you cannot read.
+Candidate `[255,0,0]`. Baseline `[255,255,255]`. Difference level **0.68**.
 
-You can ask questions whose answers are checkable, and these four are.
+The run reported `0 failures`.
 
-**"When did a test last fail on purpose?"** Not a flaky failure - a deliberate one, where someone broke the code to confirm the test noticed. If the answer is "we don't do that", the suite's green has never been tested.
+Three earlier injections had failed to go red, and the person doing it had blamed their own injections each time. That is the honest shape of this problem: **when a check is broken, the evidence that it is broken is indistinguishable from everything being fine.**
 
-**"Which check would have caught the last bug that reached a customer?"** A good answer names one and explains why it did not. A bad answer is that the bug was unusual. Every shipped bug was unusual; that is why it shipped.
+## Say the number, not the name
 
-**"What does this check actually look at?"** Ask for a number, not a name. Ours claimed to check links and checked a tenth of them. A test named after the thing it should do is not evidence it does it.
+Every one of these failures shared a tell, and it is cheap to look for: the check reported a verdict without ever reporting the size of the thing it had just examined.
 
-**"What happens when a gate fails - who is allowed to say stop?"** A team where every check ends in approval does not have checks. It has a ritual with a green icon.
+A gate that reports `0 failures` is telling you about its exit code and nothing else. A gate that reports `114,239 links checked, 0 errors` is telling you what it actually inspected before it decided everything was fine. Only the second kind can be caught lying.
 
-## Why this is worth your attention specifically
+So: make every check print its denominator, and read it.
 
-If you are not technical, "the tests pass" is where the conversation usually ends, because it sounds like a fact and you have no way to interrogate it.
+```
+[snap_diff] 287 screenshots compared     # a real number you can watch move
+lychee: 31,888 unique links checked      # not "link check passed"
+```
 
-It is a fact. It is just a fact about the tests, not about the software.
+If your CI output cannot distinguish "inspected everything and found nothing" from "inspected nothing", it is not a check. It is a green icon with a job title.
 
-The rule we adopted after the eight-defect exercise fits in a sentence, and you can hold a team to it without reading a line of code: **a new test is not finished until someone has broken the thing it guards and watched it fail.** Until that happens, a passing run proves the test executed. Nothing more.
+## What we do now, and what it costs
 
-SQLite's developers understood this well enough to write code whose only purpose was to make their own software fail. That is what taking your tests seriously looks like, and it is the opposite of trusting them.
+A new test is not finished until someone has broken the thing it guards and watched it fail. Not a flaky failure - a deliberate one.
+
+That adds maybe two minutes to writing a test.
+
+We think it is the highest-return two minutes in the whole suite, and we would rather tell you that than quote you a coverage percentage that cannot distinguish a working check from a decorative one.
+
+If you want the exercise: pick your three most important checks, plant one realistic defect against each, and write down beforehand which one should catch it. You will learn more in an afternoon than a coverage report has told you all year.
 
 ## Sources
 
-- Tailscale, ["Tracking down the 16-year-old WAL-reset SQLite bug"](https://tailscale.com/blog/sqlite-wal-reset-bug) - the sixteen-year lifetime, the `tmstmpvfs` shim built to catch it in production, and the deliberate-trigger quote
-- Our own fault-injection run and its numbers are recorded in this repository's engineering log, along with the link-checker misconfiguration and the visual-suite failure described above
+- [lychee](https://github.com/lycheeverse/lychee) - the link checker, and its `--offline` and `--remap` behaviour
+- Tailscale, ["Tracking down the 16-year-old WAL-reset SQLite bug"](https://tailscale.com/blog/sqlite-wal-reset-bug) - SQLite carried a data-race bug for sixteen years, and its developers "had to add code to deliberately trigger it in their testing environments" before any test could see it
