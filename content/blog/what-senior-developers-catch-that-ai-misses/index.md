@@ -16,13 +16,26 @@ canonical_url: 'https://jetthoughts.com/blog/what-senior-developers-catch-that-a
 related_posts: false
 ---
 
-The sentence looked fine, and it sat in an open pull request waiting to be merged.
+Here is a diff that sat in an open pull request, waiting to be merged.
 
-An agent had just pulled an unsourced performance number out of one of our older Rails posts and written a replacement in its place. Propshaft, it said, "drops the transpilation and concatenation stages entirely, so asset precompilation stops being a build step that scales with your asset count."
+```diff
+- Propshaft is dramatically faster than Sprockets: precompilation drops from
+- 45-60 seconds to under 5 seconds on a medium app.
++ Propshaft drops the transpilation and concatenation stages entirely, so asset
++ precompilation stops being a build step that scales with your asset count.
+```
 
-Read that again if you know Rails. It is wrong.
+An agent had pulled an unsourced timing figure out of one of our older Rails posts and written that replacement in its place. The removal was correct. Nobody had ever measured those 45-60 seconds.
 
-Propshaft still walks every asset, fingerprints it, and copies it into place. The work scales with how many assets you have - what drops is the cost of each one. The agent had removed a made-up number and replaced it with a made-up mechanism, which is worse, because a mechanism reads as reasoning rather than as a claim someone should go and check.
+Read the addition again if you know Rails. It is wrong.
+
+Propshaft still walks every asset, fingerprints it, and copies it into place. Its own README says so:
+
+> All assets in the load path will be copied (or compiled) in a precompilation step for production that also stamps all of them with a digest hash
+
+The work scales with how many assets you have. What drops is the cost of each one, because transpiling and bundling are gone - which is a real and useful thing to say, and not what the sentence said.
+
+The agent had removed a made-up number and replaced it with a made-up mechanism. That is worse, because a mechanism reads as reasoning rather than as a claim someone should go and check.
 
 ## Nobody skimming that paragraph would have stopped
 
@@ -54,7 +67,11 @@ That last part is the uncomfortable bit. The task was *clean up unsourced number
 
 A second model, told to attack the diff.
 
-The fix was not a better model or a longer prompt. It was a different one, with a brief that made disagreement its job rather than a risk. It came back with four findings, and this was one of them, stated flatly: Propshaft still enumerates, fingerprints and copies every asset, so its work still scales with asset count.
+The fix was not a better model or a longer prompt. It was a different one, with a brief that made disagreement its job rather than a risk.
+
+It came back with four findings. This was one, stated flatly:
+
+> On applications with many assets, Propshaft still enumerates, fingerprints, and copies every asset during `assets:precompile`, so its work still scales with asset count. Removing transpilation and concatenation reduces the per-asset cost but does not make the build independent of asset count; the new wording gives readers an incorrect performance expectation.
 
 Then a person had to decide whether the reviewer was right. That took knowing the answer independently, or being willing to go read the Propshaft source until you did.
 
