@@ -32,7 +32,7 @@
 | What | Where the full ask lives |
 |---|---|
 | Five 2608 decisions (register pick, 3 claims, first page, legacy CTO sweep, Sept measurement gate) | [`2608 README`](docs/projects/2608-site-design-system/README.md) |
-| **One rendering stack, or two?** dtest fails 8 codeblocks screenshots because local renders on **Debian 13** and CI on **ubuntu-latest** — same arch, same pinned Chrome, same fonts.conf, different distro libraries. Run CI in the same container (one stack, dtest becomes authoritative) or accept the split and let CI own pixels | [`2608 README §Known red`](docs/projects/2608-site-design-system/README.md) |
+| **Rendering stack: wait for Chrome 153 Stable, then go all-ARM.** dtest fails 8 codeblocks screenshots (local Debian 13 vs CI ubuntu-latest). Don't chase that parity now — Chrome for Testing ships `linux-arm64` from 153 (Beta today, Stable pins at 152), and migrating to arm64 both sides removes the emulation tax AND forces one re-record anyway. **Trigger: CfT Stable ≥ 153** | [`rendering-stack`](.okf/build/rendering-stack.md) |
 | **Joy Adamson override** (1 min; Paul's one override candidate from outreach batch 1, still publicly unanswered) | [`20.09 §1`](docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md) desk table + 2607 backlog card #12 |
 | Three 2605 fabricated-fact findings (five-tech-words client claim, $78K/$400 story, SVG chart stats) | [`2605 TASK-TRACKER`](docs/projects/2605-tech-for-non-technical-founders/TASK-TRACKER.md) §Aug-20 sweep |
 | 2607 T3 (Gmail warm-source consent) + T10 (split strategy docs, [#449](https://github.com/jetthoughts/jetthoughts.github.io/issues/449)) | [`2607 backlog`](docs/projects/2607-vibe-code-rescue/backlog.md) |
