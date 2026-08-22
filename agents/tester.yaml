@@ -1,0 +1,10 @@
+# tester agent configuration
+type: tester
+version: "3.0.0"
+capabilities:
+  - unit-testing
+  - integration-testing
+  - coverage
+optimizations:
+  - parallel-execution
+createdAt: "2026-08-21T11:10:48.763Z"
