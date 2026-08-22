@@ -89,6 +89,67 @@ tutorial vs essay) and lean toward that one.
 
 ---
 
+
+## Sample 4: Arkency (the competitor we are furthest from)
+
+**Sources**: [Ingress is not the owner of the invariant](https://blog.arkency.com/ingress-is-not-the-owner-of-the-invariant/) (Szymon Fiedler, 2026-06-16) and [Maintaining an organizational knowledge graph with an LLM and event sourcing](https://blog.arkency.com/maintaining-an-organizational-knowledge-graph-with-an-llm-and-event-sourcing/) (Piotr Jurewicz, 2026-08-11)
+
+**Why this voice**: added 2026-08-22 after Paul called our own posts off-level. Arkency does four things our drafts had not been doing at all, and each one is copyable without copying phrasing.
+
+**1. A named human writes it.** Every post carries an author name and an author page. Ours said `author: 'JetThoughts Team'`, which is the faceless register we were trying to avoid everywhere else.
+
+**2. Cards on the table, before the argument.** Fiedler opens a polemic about invariants with:
+
+> A disclaimer: I'm a [RailsEventStore](https://railseventstore.org) maintainer and this article ends up on the Arkency blog — so cards are on the table. Despite this, I'm keeping the core of my argument in pure `ActiveRecord`: no step of the reasoning requires _RES_. I only show the _RES_ version at the end, separately, as "and this is what it looks like when you're not typing it in manually". If you're convinced by the bare-metal _AR_ reasoning, not the library, that's what matters.
+
+Declaring the conflict AND then deliberately arguing without the product is credibility engineering of a kind we have no equivalent for. Copy the move, not the words: when a post could be read as selling something, say so, then make the argument survive without the sale.
+
+**3. Argue with a named peer, respectfully.** That post is subtitled "A polemic with *Callbacks Are Not Invariants* by Brandon Weaver", links it, and includes a section called "Where Weaver is right — and what I'm not saying". We cite aggregate HN comment counts; they engage one person's actual argument. Aggregates cost nothing to cite, which is why they persuade nobody.
+
+**4. H2s that are moves in an argument.** "We agree about the disease" → "A name that promises more than it delivers" → "Core: ingress doesn't own the invariant" → "Where Weaver is right — and what I'm not saying" → "Landing". Each heading advances a case. Compare our "Green answers a question nobody asked", which is an observation wearing a heading.
+
+**Opening lines carry the thesis and sound human:**
+
+> Organizations are surprisingly good at forgetting.
+> Decisions are made on calls, insights get buried in Slack threads, and a month later no one remembers why things are the way they are.
+
+**Density to match**: the knowledge-graph post runs 8 code blocks AND 4 images - an ontology diagram, an extraction screenshot, a provenance view, and a cost chart. The invariant post runs 8-10 code examples across ~3,500-4,000 words. First person throughout: "I enjoy", "I hate", "My claim".
+
+---
+
+## Sample 5: Evil Martians
+
+**Source**: [Flaky tests, be gone](https://evilmartians.com/chronicles/flaky-tests-be-gone-long-lasting-relief-chronic-ci-retry-irritation.md)
+
+**Why this voice**: the density ceiling. ~28 code blocks in one post, a named and linked client (ClickFunnels), and the outcome stated as a measured range with its scope: "from flaky tests with ~80% success rates to 100% reliability across their massive test suite (9k+ unit, 1k+ feature tests)".
+
+Two moves worth stealing:
+
+**A table of contents as anchor links** in the opening, so a reader who only wants the quarantine protocol can jump to it. Long posts owe the reader navigation.
+
+**Playfulness that does not undercut authority.** The reliability claim carries a mock-pharmaceutical disclaimer - "These statements have not been evaluated by the FDA (Flaky Detection Authority)" - which lets them state a strong number and immediately show they know its limits. Humour is doing honesty's job here, not decoration's.
+
+> Every developer knows this pain: your test suite passes locally but fails on CI. You click "Retry" and hold your breath. It passes! But was it a real fix or just luck?
+
+Second person, present tense, a scene the reader has lived. No throat-clearing.
+
+---
+
+## The 2026-08-22 audit: what our posts were missing
+
+Measured against the three above, not asserted:
+
+| | Evil Martians | thoughtbot | Arkency | ours (before) |
+|---|---|---|---|---|
+| code blocks | ~28 | console + timings | 8-10 | **0** |
+| images/diagrams | 0 | - | 4 | **0** |
+| named client | ClickFunnels | David Pace, Merck | - | **none** |
+| named author | - | - | every post | **"JetThoughts Team"** |
+| engages a named peer | - | - | Brandon Weaver, linked | **none** |
+| discloses own interest | - | - | explicit, up front | **none** |
+| costly position | - | "don't hire thoughtbot" | argues against a friend | **none** |
+
+The pattern across all three: **an artifact the reader can use, plus receipts.** Ours were essays about ideas. An essay with no code, no diagram, no named source and no disclosed interest is asking to be believed on tone alone, which is the one thing a sceptical founder will not extend.
 ## How to use these samples in the writer prompt
 
 Pick ONE sample as the cadence anchor for each post based on structural
@@ -104,7 +165,26 @@ in the middle, closing measurement that proves the trade-off. Field notes,
 investigations lean toward Sample 3 - jvns.ca cadence: first-person,
 admits weakness, comfortable with parenthetical asides, varies sentence
 length aggressively (one-clause sentences next to three-clause ones),
-credits collaborators by name. Mimic the CADENCE - sentence rhythm,
+credits collaborators by name. Opinion and positioning posts - the ones aimed at a founder rather than a
+practitioner - lean toward **Sample 4, Arkency**: a named human author, the
+conflict of interest declared before the argument starts, one named peer
+engaged rather than an aggregate cited, and H2s that are moves in a case
+rather than observations. Dense technical walkthroughs lean toward
+**Sample 5, Evil Martians**: anchor-link navigation up front, a named client,
+and an outcome stated with its scope.
+
+**Two things are not cadence choices and apply to every post** (added
+2026-08-22, after three of ours shipped without either):
+
+1. **An artifact the reader can use.** A command they run, a diff they apply,
+   a config they copy. A post with zero code blocks and zero diagrams is
+   asking to be believed on tone, which is what a sceptical founder will not
+   extend. Check the count before handback, not after.
+2. **Receipts.** A named source, a linked study read at the primary, or our own
+   measured number with its denominator. "Studies show" and aggregate comment
+   counts cost nothing to write and persuade nobody.
+
+Mimic the CADENCE - sentence rhythm,
 specificity density, level of self-disclosure - never the phrasing. At the
 end of every draft, the writer agent must include the comment
 `<!-- Reference cadence: <author> -->` immediately above the frontmatter

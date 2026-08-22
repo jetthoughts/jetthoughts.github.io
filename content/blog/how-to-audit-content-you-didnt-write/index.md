@@ -52,15 +52,24 @@ One more number from Pew is the one that should interest you: **around one in te
 
 So the honest position is that the web's average is unknown and the detectors that estimate it are themselves approximate. Which is fine, because the average was never the thing you needed. **You need to know about your property, and your property is countable.**
 
-## Four checks, none of which require you to read code
+## Four checks, and the commands that run them
 
-We ran these on our own archive. They are ordered by what they cost you to skip.
+We ran these on our own archive, in this order, ranked by what it costs you to skip each one.
+
+The commands assume a Hugo or Jekyll-shaped repo where posts are markdown files. Adapt the paths; the shapes they look for are the same everywhere. If you do not have repo access, these are exactly the four things to ask whoever does.
 
 **1. Rank by who reads it, not by how bad it looks.**
 
-Start with your search console, sort pages by impressions, and work down.
+Export your top pages from Search Console, then work down that list and nothing else.
 
 We got this wrong first. The worst-sounding claim we found sat on a page flagged `featured` in the site config, which felt urgent, and it turned out to have four impressions in ninety days while the page that actually mattered had thousands.
+
+`featured` is a flag someone set once. Impressions are what readers did.
+
+```bash
+# Export "Pages" from Search Console as CSV, then rank what you actually have:
+sort -t, -k2 -rn pages.csv | head -20
+```
 
 A false claim on a page nobody opens is a liability. On a page that ranks, it is the first thing a prospect reads.
 
@@ -70,7 +79,17 @@ A fabricated case study is written in ordinary vocabulary, so no word list catch
 
 Its structure gives it away: a heading saying "Case Study", followed by a company that is never named. "A mid-sized content platform." "An anonymous HR tech SaaS with 15,000 customers." Precise numbers attached to a subject nobody can look up.
 
-Real client work names the client or does not get published. That is the whole test, and you can apply it without understanding a word of the subject matter.
+That shape is greppable:
+
+```bash
+# every case-study heading in the archive
+grep -rniE '^#{2,4} .*case stud' content/ 
+
+# the anonymous-subject tell, right after one
+grep -rniE 'a (mid-siz|medium-siz|large)|\(anonymous' content/
+```
+
+Run the first one and read every hit. Real client work names the client or does not get published, and you can apply that test without understanding a word of the subject matter.
 
 **3. Ask whether a claim can be checked at all.**
 
@@ -78,7 +97,20 @@ This one surprised us.
 
 Roughly two in five of our own substantial posts cited nothing external whatsoever - no link to a framework's documentation, a study, a release note, anything at all. Those posts are not necessarily wrong.
 
-They are unverifiable, which means nobody could have checked them, including the person who wrote them. Uncheckable is where wrong survives. A post making technical claims with zero citations is not a red flag about that post's accuracy so much as a flag that accuracy was never tested.
+They are unverifiable, which means nobody could have checked them, including the person who wrote them. Uncheckable is where wrong survives.
+
+Count yours:
+
+```bash
+# posts over 400 words carrying zero outbound links to anywhere but your own domain
+for f in content/blog/**/index.md; do
+  words=$(wc -w < "$f")
+  links=$(grep -oE '\]\(https?://[^)]+\)' "$f" | grep -vc 'yourdomain.com')
+  [ "$words" -gt 400 ] && [ "$links" -eq 0 ] && echo "$words words, 0 sources: $f"
+done
+```
+
+A post making technical claims with zero citations is not a red flag about that post's accuracy so much as a flag that accuracy was never tested.
 
 **4. Check whether the advice has expired.**
 
@@ -86,7 +118,14 @@ Any post with a version number in the title has a shelf life its author never wr
 
 We found a migration guide sending real traffic to a framework release whose security support had ended five months earlier. Nothing in it was invented.
 
-It was true when written and became harmful without changing a word. Two minutes on the vendor's support-policy page settles it.
+It was true when written and became harmful without changing a word.
+
+```bash
+# every post whose title names a version - each one has an expiry date
+grep -rlE '^title:.*[0-9]+(\.[0-9]+)?' content/blog/ | head -30
+```
+
+Then check each against the vendor's own support table. Laravel, Rails and Node all publish one; it takes two minutes and it is the only way this class of defect surfaces.
 
 ## What a check like this cannot do
 
