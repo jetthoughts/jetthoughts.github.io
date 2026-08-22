@@ -59,22 +59,50 @@ dispatch **on master**, where the recorder and the tester see the same tree -
 recording on a feature branch is what had produced a baseline the PR run never
 matched. Verified green: CI screenshot run 32565008850, zero failing keys.
 
-**The open one is different.** `bin/dtest` on an ARM Mac now fails 8
-`mobile/blog/special/codeblocks/*` screenshots at ~0.055-0.063, because the
-container renders arm64 while the committed `linux/` baselines come from CI on
-amd64. This only became visible once #578 fixed dtest comparing nothing at all
-from a worktree - it is pre-existing, not a regression. Three options, none
-free, and the choice is a speed-versus-fidelity call:
+**The open one is different, and it is NOT architecture.** `bin/dtest` on a Mac
+fails 8 `mobile/blog/special/codeblocks/*` screenshots at ~0.055-0.063. The
+first three explanations offered for this were wrong, including "arm64 vs
+amd64" - measured 2026-08-22, the test container is **x86_64** already
+(`.dev/compose.yml` pins `platform: linux/amd64` on the `t` service, and that
+does override `bin/dc`'s `DOCKER_DEFAULT_PLATFORM=linux/arm64/v8`).
 
-1. screen those keys as known-arch and keep dtest fast,
-2. pin the container to `linux/amd64` so local matches CI (correct, slower
-   under emulation - note `.dev/compose.yml` already declares
-   `platform: linux/amd64` on the `t` service while `bin/dc` exports
-   `DOCKER_DEFAULT_PLATFORM=linux/arm64/v8`; reconcile those before deciding),
-3. let CI own the Linux leg entirely.
+What actually differs is the base OS:
 
-Do not re-record them from a Mac either way: an arm64 candidate must never
-overwrite the amd64 set (`.okf/build/test-gates.md`).
+| | local container | CI |
+|---|---|---|
+| arch | x86_64 | x86_64 |
+| Chrome | 152.0.7977.54 (`.dev/cft-version`) | same pin, cached by its hash |
+| `fonts.conf` + font packages | same | same |
+| **base OS** | **Debian 13 trixie**, freetype 2.13.3 | **ubuntu-latest** |
+
+Same architecture, same browser, same fonts by name - different distro, so
+different freetype/harfbuzz builds. Dense monospace (syntax-highlighted code)
+is where that shows first. The `linux/` baselines are a recording OF a
+rendering stack; two stacks means they are only valid for one of them.
+
+**The decision, then, is not arm-vs-amd. It is one rendering stack or two:**
+
+1. **Run CI in this same container.** Local and CI become identical by
+   construction, dtest becomes authoritative for visuals, and the "is this
+   drift or a defect?" question disappears. CI is amd64 native, so the image
+   runs without emulation; the cost is image build/pull per job, cacheable.
+   **Measure that cost before committing** - it is the only real argument
+   against.
+2. **Accept the split**: CI owns pixel truth, dtest is a behavioural gate, and
+   those 8 keys are screened as known-divergent. Free today, but an
+   expected-red list is exactly what rotted into "everything is expected red"
+   before #566.
+
+Chasing parity by pinning font/library versions across two distros is a third
+option and not a serious one - Debian and Ubuntu drift independently, forever.
+
+Either way: never re-record `linux/` baselines from a Mac. The container is a
+different stack from the recorder (`.okf/build/test-gates.md`).
+
+Also worth cleaning up regardless: `bin/dc` exports
+`DOCKER_DEFAULT_PLATFORM=linux/arm64/v8`, which the `t` service overrides but
+the `hugo` dev service does not - and it is what made three separate arch
+explanations look plausible today.
 
 ## What the sprint shipped (PRs #560-#578, 2026-08-21/22)
 

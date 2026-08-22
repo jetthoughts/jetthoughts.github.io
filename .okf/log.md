@@ -51,6 +51,28 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-22 - the codeblocks drift was Debian vs Ubuntu, after four wrong answers
+
+The 8 `mobile/blog/special/codeblocks/*` failures in `bin/dtest` were blamed on
+arm64-vs-amd64 three separate times, and on the tolerance change, the PR
+merge-commit checkout, and a date-gated post once each. All wrong, and each
+asserted without measuring the thing it named.
+
+Measured: the container is **x86_64** (`.dev/compose.yml` pins
+`platform: linux/amd64` on `t`, which overrides `bin/dc`'s
+`DOCKER_DEFAULT_PLATFORM=linux/arm64/v8` - a booby-trap that made the arch
+story look right), runs the **same** pinned Chrome 152.0.7977.54 as CI, and the
+same `fonts.conf` and font packages. What differs is the base OS: **Debian 13
+trixie** locally against **ubuntu-latest** in CI, so freetype/harfbuzz differ.
+Dense monospace is where that surfaces. One `uname -m` plus `/etc/os-release`
+would have ended it in a minute.
+
+New concept: [rendering-stack](build/rendering-stack.md) - a baseline is a
+recording OF a stack, not of a page; the two-stack table; the four wrong
+answers kept deliberately, because the SHAPE recurs; and the open decision
+(run CI in the same container vs accept the split). STATUS.md and the 2608
+README carried the wrong arch explanation for an hour and are corrected.
+
 ## 2026-08-22 - the Linux visual gate was green because it was not testing
 
 `bin/dtest` run from a git worktree compared NOTHING. A worktree's `.git` is a
