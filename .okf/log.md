@@ -51,6 +51,38 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-22 - fault injection: the suite caught 3 of 8, and the misses were the point
+
+Eight realistic defects planted one at a time, predictions written down BEFORE
+measuring. Three caught. Two of the five misses were gates reporting green
+while inspecting almost nothing:
+
+`rake test:links` excluded **133,874 of 149,516 links** - production renders
+internal links absolute and `lychee --offline` drops every http(s) URI, so the
+homepage's one "OK" was its own skip-link anchor. A `--remap` onto the built
+tree took it to 114,050 checked, and it immediately found five real defects
+that had been invisible: two wrong blog slugs (5 links), a post whose own
+`canonical_url` pointed at a 404, `/contact/` on a conversion page, and a
+closing section promising an "Internal Product ROI Calculator" spreadsheet -
+itemising five things inside it, "no email required, instant download" - for a
+resource that never existed. That last one is a fabricated deliverable, the
+same class as an unsourced number, and was removed rather than redirected.
+
+The rendered banned-phrase ratchet carried 3 hits of slack (baseline 14, actual
+11) which swallowed a planted phrase whole; `SURFACES` never globbed
+`content/next/**`, so the entire v2 rail had no source-side cover.
+
+**The rule this produced, now in CLAUDE.md and in test-gates.md:** a new test is
+not done until you have broken the code and watched it fail. Green proves the
+test runs, not that it works. Where a gate genuinely cannot discriminate yet -
+the derived-tenure assertion, blind until 2027-01-01 - say so in the test body
+instead of letting a passing run read as proof.
+
+Two misses were left unguarded on purpose: the `<th>` PurgeCSS trap cannot be
+caught by the visual gate even in principle (it builds production, so it purges
+exactly as production does and matches its own baseline), and no bespoke gate
+is proportionate for it yet.
+
 ## 2026-08-22 - the noise floor is per-page, and the pinned tolerances are load-bearing
 
 Chasing the last red Linux key produced a better finding than the fix. Four

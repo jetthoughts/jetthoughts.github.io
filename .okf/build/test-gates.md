@@ -789,3 +789,36 @@ permanently on pages that have no defect.
 the platform that will judge it, by recording it twice on the same commit. The
 floor for a page is its measured noise, not the repo default. A tolerance that
 looks like slack may be the only thing absorbing a rasteriser.
+
+# A new gate is not trusted until you have broken it
+
+Adding a test and watching it pass proves the test RUNS. It does not prove the
+test WORKS - a gate that asserts nothing passes forever, and looks identical in
+CI to one that guards something.
+
+**Procedure, both halves required:**
+1. Inject the exact defect the gate exists to catch.
+2. Run it. Quote the failure message - that string is the evidence.
+3. Revert. Re-run. Green.
+
+Skipping step 1 has cost this repo repeatedly:
+
+- The testimonial gate asserted `assert_includes canon, rendered`, which passes
+  when `rendered` is `""` - every string contains the empty string. A vanished
+  blockquote would have reported green. Caught by a reviewer breaking it, not
+  by writing it.
+- The rendered banned-phrase ratchet sat at 14 against an actual 11. Those 3
+  spare hits swallowed a planted banned adjective whole. A ratchet with slack
+  is a gate that has already been disarmed.
+- `rake test:links` excluded 133,874 of 149,516 links (production renders
+  absolute URLs; `--offline` drops every http(s) URI) and was green for a year
+  on a site with five real broken links, one of them a conversion path and one
+  a post's own canonical pointing at a 404.
+
+**When a gate cannot discriminate yet, write that in the test.** The derived
+tenure assertion cannot tell `derived` from `frozen` while both read "18+" in
+2026 - it starts biting on 2027-01-01. That is stated in the test body, so the
+next reader does not mistake a passing run for proof.
+
+Full fault-injection matrix, including what nothing guards:
+`docs/20-29-testing-qa/20.11-gate-fault-injection-2026-08-22-reference.md`.
