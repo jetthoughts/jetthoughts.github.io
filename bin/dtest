@@ -22,10 +22,15 @@ bin/build-if-stale _dest/public-dtest
 #   AFTER, via trap, so a red or interrupted run cleans up after itself. The
 #   old restore sat on the success path only, below `set -e`.
 #
-# Discarding those candidates costs nothing: bin/dc pins
-# DOCKER_DEFAULT_PLATFORM=linux/arm64/v8 on an ARM Mac while the committed
-# linux/ baselines are recorded by CI on amd64, so a candidate produced here
+# Discarding those candidates costs nothing, because a candidate produced here
 # is never committable - and it is one `git add -A` from corrupting the set.
+#
+# Since 2026-08-22 the ARCHITECTURE argument for that no longer applies: both
+# this container and CI run arm64 on the same pinned Chrome. Do not read that
+# as permission to commit local candidates. The base OS still differs (Debian
+# trixie here, Ubuntu 24.04 on the runner) and that is the last unpinned
+# rendering variable - see .okf/build/rendering-stack.md, which also records
+# why "same failures on both sides" is NOT evidence the two agree.
 # The only legitimate linux re-record is the CI `update-baselines` dispatch
 # (.okf/build/test-gates.md). Diff artifacts (*.diff.png, *.heatmap.diff.png)
 # are untracked and survive the restore, so a red run stays inspectable.
