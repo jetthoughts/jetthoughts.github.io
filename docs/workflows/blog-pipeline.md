@@ -468,6 +468,22 @@ Before flipping draft: false or before any LinkedIn/external promotion drives tr
 If any of the above checks fail, fix before proceeding to STEP 7.
 
 STEP 7 — VALIDATE
+- **CONFIRM THE POST IS IN THE PRODUCTION BUILD.** `bin/hugo-build` passing does
+  NOT prove this and never did: it writes to `_dest/public-dev`, which builds
+  future-dated content. Production does not. A post dated even one day ahead
+  merges cleanly, passes every gate, and silently does not publish — that
+  happened on 2026-08-22 with `how-to-audit-content-you-didnt-write`, dated
+  tomorrow, merged, absent from the live set.
+
+  ```
+  bin/rake test:links   # builds production into _dest/public-linkcheck
+  find _dest/public-linkcheck -type d -name "<slug>"
+  ```
+
+  Quote the page-count delta as the evidence: the run above went 1,768 → 1,775
+  pages when the post entered the set. A link check that reports zero errors
+  while your post is missing from the crawl is a vacuous green — it scanned
+  everything except the thing you wrote.
 - bin/hugo-build must pass (zero errors)
 - Chrome DevTools: open the post page, verify:
   - Zero console errors
