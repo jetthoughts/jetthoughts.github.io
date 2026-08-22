@@ -24,7 +24,7 @@ It does not exist.
 
 The interesting part is who the reports were written for. Piro's founder said it on LinkedIn: "When someone asks ChatGPT, Gemini, or Perplexity about your category, an answer comes back in one confident paragraph... we spent months reverse-engineering it."
 
-Not readers. The machine that answers readers.
+Those reports were never aimed at readers. Their audience was the machine that answers readers, and the reports were shaped to be the thing it repeats.
 
 ## Your blog runs on the same economics
 
@@ -46,7 +46,7 @@ You would think there is a number. There are several and they disagree.
 
 Ten percent, a third, or half. The numbers are not contradicting each other so much as answering different questions, on different samples, with different detectors.
 
-Both teams publish their error bars, which is the part worth copying. Graphite reports a 4.2% false-positive rate against GPT-4o content and no measurement at all of AI-assisted-then-human-edited writing. Pew says plainly that "AI detection models aren't perfect" on individual documents and only hold up in aggregate.
+Both teams publish their error bars, and that habit is worth stealing regardless of what you make of their numbers. Graphite reports a 4.2% false-positive rate against GPT-4o content and no measurement at all of AI-assisted-then-human-edited writing. Pew says plainly that "AI detection models aren't perfect" on individual documents and only hold up in aggregate.
 
 One more number from Pew is the one that should interest you: **around one in ten `.com` pages carry those signals - roughly double the `.org` rate and ten times what `.edu` and `.gov` show.** Commercial sites are where this concentrates, and yours is a commercial site.
 
@@ -54,7 +54,7 @@ So the honest position is that the web's average is unknown and the detectors th
 
 ## Four checks, and the commands that run them
 
-We ran these on our own archive, in this order, ranked by what it costs you to skip each one.
+Run them in this order. It is ranked by what each one costs you to skip, not by how quick it is.
 
 The commands assume a Hugo or Jekyll-shaped repo where posts are markdown files. Adapt the paths; the shapes they look for are the same everywhere. If you do not have repo access, these are exactly the four things to ask whoever does.
 
@@ -62,9 +62,9 @@ The commands assume a Hugo or Jekyll-shaped repo where posts are markdown files.
 
 Export your top pages from Search Console, then work down that list and nothing else.
 
-We got this wrong first. The worst-sounding claim we found sat on a page flagged `featured` in the site config, which felt urgent, and it turned out to have four impressions in ninety days while the page that actually mattered had thousands.
+The instinct is to start with whatever reads worst. Resist it - the page that makes you wince and the page that gets read are rarely the same one, and a `featured` flag in your site config tells you what someone decided once, not what anyone has done since.
 
-`featured` is a flag someone set once. Impressions are what readers did.
+Impressions are what readers actually did.
 
 ```bash
 # Export "Pages" from Search Console as CSV, then rank what you actually have:
@@ -93,11 +93,11 @@ Run the first one and read every hit. Real client work names the client or does 
 
 **3. Ask whether a claim can be checked at all.**
 
-This one surprised us.
+Count how many of your long posts link to nothing outside your own domain.
 
-Roughly two in five of our own substantial posts cited nothing external whatsoever - no link to a framework's documentation, a study, a release note, anything at all. Those posts are not necessarily wrong.
+A post with no external citation is not necessarily wrong. It is unverifiable, which means nobody could have checked it - including whoever wrote it, at the moment they wrote it.
 
-They are unverifiable, which means nobody could have checked them, including the person who wrote them. Uncheckable is where wrong survives.
+Uncheckable is where wrong survives, and the number usually comes back higher than anyone guesses.
 
 Count yours:
 
@@ -116,9 +116,9 @@ A post making technical claims with zero citations is not a red flag about that 
 
 Any post with a version number in the title has a shelf life its author never wrote down.
 
-We found a migration guide sending real traffic to a framework release whose security support had ended five months earlier. Nothing in it was invented.
+A migration guide that recommends Laravel 11 today is sending readers onto a release whose security support ended in March 2026. Nothing in that guide has to be invented for it to do damage.
 
-It was true when written and became harmful without changing a word.
+It was true when written, and became harmful without a word of it changing.
 
 ```bash
 # every post whose title names a version - each one has an expiry date

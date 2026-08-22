@@ -36,7 +36,7 @@ Production emits absolute URLs. Your `/blog/foo/` becomes `https://jetthoughts.c
 
 So the crawler saw a page full of absolute links, classified all of them as "not my problem", and reported success on what remained - which on our homepage was a single skip-link anchor.
 
-The fix is `--remap`, pointing the public origin back at the built tree:
+Adding `--remap` points the public origin back at the built tree:
 
 ```ruby
 # Rakefile
@@ -60,7 +60,7 @@ From 15,642 links checked to 114,239.
 
 ## Run this on your own repo before you keep reading
 
-The diagnostic is the same whatever you use.
+Whatever checker you run, the diagnostic is the same.
 
 **Compare what your checker says it inspected against how many links your built site actually contains.**
 
@@ -90,9 +90,9 @@ The link checker was found by accident, which was the uncomfortable part. So we 
 
 Three of eight were caught.
 
-The predictions mattered more than the score. Writing "the banned-phrase ratchet will catch this" before planting it turns a vague sense of coverage into a falsifiable claim - and two of those claims were wrong in a specific way.
+Those written-down predictions mattered more than the score. Writing "the banned-phrase ratchet will catch this" before planting it turns a vague sense of coverage into a falsifiable claim - and two of those claims were wrong in a specific way.
 
-The ratchet was carrying slack. It was set to fail above 14 hits when the tree actually had 11, so a planted phrase landed in the gap and the suite stayed green. A ratchet with three spare slots does not guard the last three defects.
+One ratchet was carrying slack. It was set to fail above 14 hits when the tree actually had 11, so a planted phrase landed in the gap and the suite stayed green. A ratchet with three spare slots does not guard the last three defects.
 
 ```ruby
 # The fix is boring: set the baseline to the MEASURED count,
@@ -118,7 +118,7 @@ Run from a git worktree, it lost its reference images and wrote fresh captures o
 
 Someone finally tested the tester: injected `body { background: red !important }`, confirmed the rule reached the built CSS bundle, confirmed the page referenced that fingerprinted file, then measured the captured PNG against the baseline.
 
-Candidate `[255,0,0]`. Baseline `[255,255,255]`. Difference level **0.68**.
+Candidate `[255,0,0]` against a baseline of `[255,255,255]`, for a difference level of **0.68**.
 
 The run reported `0 failures`.
 
@@ -141,7 +141,7 @@ If your CI output cannot distinguish "inspected everything and found nothing" fr
 
 ## What we do now, and what it costs
 
-A new test is not finished until someone has broken the thing it guards and watched it fail. Not a flaky failure - a deliberate one.
+A new test is not finished until someone has broken the thing it guards and watched it fail. Flaky failures do not count; this has to be deliberate, and someone has to be watching when it goes red.
 
 That adds maybe two minutes to writing a test.
 
