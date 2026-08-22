@@ -73,6 +73,47 @@ answers kept deliberately, because the SHAPE recurs; and the open decision
 (run CI in the same container vs accept the split). STATUS.md and the 2608
 README carried the wrong arch explanation for an hour and are corrected.
 
+## 2026-08-22 - three hand-sweeps, three different blind spots, one gate
+
+The blog archive carried invented case studies on its highest-traffic pages -
+the class claims-canon flagged on 2026-08-20 with a standing policy nobody had
+run. Executing it exposed something more useful than the defects.
+
+Three sweeps, each keyed on a different surface, each missing what the last one
+missed. A `N clients/companies/times` regex missed everything phrased as a case
+study. A case-study-heading sweep missed everything phrased as "in our
+experience". Both missed frontmatter, where a `description` ships the claim to
+every SERP and social card. Sweep 2 found the two biggest carriers by
+impressions and neither appeared in sweep 1's list at all.
+
+That is claims-canon's own line - "manual sweeps under-count badly" - happening
+inside one session to someone who had read it that morning. The answer was a
+gate: [fabrication-ratchet](/content/fabrication-ratchet.md).
+
+**Rank by impressions, not by indignation.** The first thing flagged was a
+`featured: true` ICP-facing post claiming "200+ times with clients". Live GSC:
+4 impressions in 90 days. The top carrier had 40,025. `featured` is a
+site-internal flag and says nothing about who reads the page.
+
+Peer review found four defects in the gate itself, and three are worth keeping:
+
+- A case-study heading is a SUSPICION, not a verdict. `async-remote-xp-practices`
+  writes up this repo's own CSS migration - as verifiable as a case study gets -
+  and the marker classed it as fabrication. Verified subjects are now allowlisted
+  by path, and the test for entry is whether a reader could go check the subject.
+- Line-by-line matching has a hole that ordinary Markdown wrapping opens:
+  `/\bin our experience\b/` returns false against `"in our\nexperience"`. Prose
+  markers now match the whitespace-collapsed document, the same reason the
+  rendered pass collapses. Headings stay line-based; Markdown ends them at the
+  newline.
+- Removing a fabricated number and replacing it with a confident mechanism claim
+  is not a fix. The Propshaft rewrite said precompilation "stops being a build
+  step that scales with your asset count" - Propshaft still walks, fingerprints
+  and copies every asset, so it does scale. What drops is the per-asset cost.
+
+The third one is the general lesson: de-fabrication has its own failure mode.
+The removed claim leaves a hole, and the thing written into the hole gets less
+scrutiny than the claim that was there before it.
 ## 2026-08-22 - the Linux visual gate was green because it was not testing
 
 `bin/dtest` run from a git worktree compared NOTHING. A worktree's `.git` is a

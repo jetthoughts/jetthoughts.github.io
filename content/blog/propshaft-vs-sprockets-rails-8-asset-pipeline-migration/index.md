@@ -22,7 +22,7 @@ cover_image_alt: "Propshaft vs Sprockets comparison for Rails 8 asset pipeline m
 
 Your Sprockets precompile takes 60 seconds. You change one CSS variable. Sixty seconds again. Every deploy, every CI run, every developer on the team—waiting.
 
-Propshaft replaces Sprockets as the default asset pipeline in Rails 8. It drops the transpilation and concatenation stages entirely, so asset precompilation stops being a build step that scales with your asset count. But Propshaft isn't a drop-in replacement. It removes features you might depend on—Sass compilation, CoffeeScript transpilation, asset concatenation. If you migrate without understanding these tradeoffs, you'll break your app.
+Propshaft replaces Sprockets as the default asset pipeline in Rails 8. It drops the transpilation and concatenation stages, so precompilation digests and copies assets instead of compiling and bundling them. Every asset is still walked and fingerprinted, so the work still scales with how many you have - what drops is the cost per asset. But Propshaft isn't a drop-in replacement. It removes features you might depend on - Sass compilation, CoffeeScript transpilation, asset concatenation. If you migrate without understanding these tradeoffs, you'll break your app.
 
 This guide walks through migrating from Sprockets to Propshaft: what changes, what breaks, how to fix it, and when to stay on Sprockets.
 

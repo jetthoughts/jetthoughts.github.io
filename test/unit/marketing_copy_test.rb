@@ -200,11 +200,34 @@ class MarketingCopyTest < Minitest::Test
   # their stats belong to their original authors. That is a TEST-scoping call,
   # NOT editorial absolution - those posts are still published on our domain and
   # are governed by the separate dev.to ICP gate.
-  FABRICATION_MARKERS = {
-    /^\#{2,4}\s.*\bcase stud/i => "case-study heading - invented client work every time it has been checked",
+  # Headings cannot wrap - Markdown ends them at the newline - so these match
+  # line by line and report a line number, which is what you want when fixing.
+  FABRICATION_HEADING_MARKERS = {
+    /^\#{2,4}\s.*\bcase stud/i => "case-study heading - check there is a real, nameable subject behind it"
+  }.freeze
+
+  # Prose DOES wrap, and a line-by-line scan never shows the regex a phrase that
+  # straddles a newline: `/\bin our experience\b/` returns false against
+  # "in our\nexperience". So these match the whitespace-collapsed document, the
+  # same reason the rendered pass above collapses before matching. The cost is
+  # losing the line number; the alternative is a gate with a hole in it.
+  FABRICATION_PHRASE_MARKERS = {
     /\bin our experience\b/i => "recurrence-generalisation - unfalsifiable authority claim",
     /\bthe pattern (we see|across the)/i => "recurrence-generalisation - the de-fabrication escape hatch",
     /\(figures unverified\)/i => "a tagged number is still a published number"
+  }.freeze
+
+  # A case-study heading is a SUSPICION, not a verdict - the shape is identical
+  # whether the subject is invented or real. `async-remote-xp-practices` writes
+  # up this repository's own CSS migration, which is as verifiable as a case
+  # study gets: the commits are in this git history.
+  #
+  # Adding a line here is a claim that someone checked. The test is whether the
+  # write-up names a subject a reader could go and verify - this repo, a named
+  # client, a public postmortem. "A medium-sized content platform" is not a
+  # subject, and that is the whole difference.
+  VERIFIED_CASE_STUDIES = {
+    "content/blog/async-remote-xp-practices/index.md" => ["jt_site CSS Migration"]
   }.freeze
 
   # RATCHET, not a cleanup gate: fails only when the count goes UP.
@@ -219,14 +242,9 @@ class MarketingCopyTest < Minitest::Test
   # measured count, then prove it is exact by dropping it one lower and watching
   # it fail.
   #
-  # 17 survivors, and 8 of them are one deferred decision rather than 8 defects:
-  # the fractional-CTO posts (fractional-cto-vs-full-time-cto-complete-comparison,
-  # fractional-vs-full-time-cto-cost-benefit-analysis, fractional-cto-roi-calculator)
-  # are already subject to Paul's 2026-08-21 positioning ban on fractional-CTO
-  # title claims. Those need a wholesale call - rewrite, redirect or retire - and
-  # editing their case-study headings first would bury that decision under a
-  # cosmetic fix. Recorded here so the count is legible rather than mysterious.
-  FABRICATION_BASELINE = 17
+  # 16 survivors, all case-study headings in posts not yet swept. Run the test
+  # to list them - it prints file:line for every one.
+  FABRICATION_BASELINE = 16
 
   def test_blog_does_not_regress_on_fabricated_claim_markers
     hits = fabrication_hits.sort
@@ -368,11 +386,30 @@ class MarketingCopyTest < Minitest::Test
 
     posts.flat_map do |path|
       relative = path.sub("#{REPO_ROOT}/", "")
-      File.readlines(path, encoding: "bom|utf-8").each_with_index.flat_map do |line, i|
-        FABRICATION_MARKERS.filter_map do |pattern, reason|
-          "#{relative}:#{i + 1} - #{reason}" if line.match?(pattern)
-        end
+      body = File.read(path, encoding: "bom|utf-8")
+
+      heading_hits(relative, body) + phrase_hits(relative, body)
+    end
+  end
+
+  def heading_hits(relative, body)
+    verified = VERIFIED_CASE_STUDIES.fetch(relative, [])
+
+    body.lines.each_with_index.flat_map do |line, i|
+      next [] if verified.any? { |subject| line.include?(subject) }
+
+      FABRICATION_HEADING_MARKERS.filter_map do |pattern, reason|
+        "#{relative}:#{i + 1} - #{reason}" if line.match?(pattern)
       end
+    end
+  end
+
+  # Collapsed to one line first, so a phrase broken across a wrap still matches.
+  def phrase_hits(relative, body)
+    haystack = body.gsub(/\s+/, " ")
+
+    FABRICATION_PHRASE_MARKERS.filter_map do |pattern, reason|
+      "#{relative} - #{reason}" if haystack.match?(pattern)
     end
   end
 

@@ -5,3 +5,4 @@
 * [Company claims canon](claims-canon.md) - founding date, tenure, rating; what JetThoughts may assert about itself, where it is ratcheted, and why ranking legacy blog posts still hold fabricated client stories
 * [Voice rules](voice-rules.md) - Sam voice, banned patterns, and the em-dash rule
 * [Banned-strings ratchet](banned-strings-ratchet.md) - how fixed prose defects stay fixed
+* [Fabricated-claim ratchet](fabrication-ratchet.md) - the structural gate over blog source, why three hand-sweeps each missed what the last one missed, and why you rank by impressions rather than indignation
