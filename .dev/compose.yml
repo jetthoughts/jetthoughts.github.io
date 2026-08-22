@@ -30,13 +30,16 @@ services:
     # began publishing linux-arm64 at 153 (.dev/cft-version pins 153.0.8010.5,
     # the first Beta with it) and the Dockerfile picks the matching build.
     #
-    # PIN, not "follow the host". Following the host is what an earlier draft
-    # did, and it silently breaks the visual gate on an x86 developer machine:
-    # Chrome would render amd64 while every linux/ baseline is an arm64
+    # arm64 IS THE STACK (Paul, 2026-08-22) - not a preference, not a trial.
+    # It is reversed only if something is found that genuinely cannot support
+    # it, and "an x86 machine would be slower" is not that.
+    #
+    # So this is a PIN, not "follow the host". Following the host is what an
+    # earlier draft did, and it silently breaks the visual gate on an x86
+    # machine: Chrome renders amd64 while every linux/ baseline is an arm64
     # recording, so bin/dtest and required CI disagree by construction. On an
-    # ARM Mac this pin IS the host arch, so it is free - it costs only an x86
-    # host, which then emulates arm64 and is correct-but-slow rather than
-    # fast-and-wrong. The gate is BLOCKING; correctness wins.
+    # ARM Mac the pin IS the host arch, so it costs nothing here; on x86 it
+    # emulates, which is the correct trade because the gate is BLOCKING.
     platform: linux/arm64
     build:
       context: ../
@@ -81,8 +84,11 @@ services:
       HUGO_CACHEDIR: "/tmp/hugo_cache_dtest"
       CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
       RUBY_THREAD_VM_STACK_SIZE: 1048576
-    # 4g was sized for amd64 EMULATION ("tab crashed" OOM at 2g). Native arm64
-    # should need less; left at 4g until measured rather than guessed down.
+    # 4g was originally sized for amd64 EMULATION ("tab crashed" OOM at 2g).
+    # Native arm64 probably needs less - and 4g STAYS anyway (Paul, 2026-08-22).
+    # Settled, not pending: do not "optimize" this down. Headroom on a test
+    # container is free; an OOM-killed Chrome costs a red suite and an hour of
+    # diagnosis, and it fails as a rendering difference rather than as an OOM.
     mem_limit: 4g
     cpus: '4.0'
     ulimits:

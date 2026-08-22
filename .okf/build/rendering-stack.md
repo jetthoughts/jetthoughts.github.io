@@ -78,7 +78,19 @@ yet, which is exactly why it is listed here rather than in Rules.
 - A green visual run that prints no `[snap_diff] N screenshots compared` line
   compared nothing - see [test-gates](/build/test-gates.md).
 
-## ARM on Linux: SHIPPED 2026-08-22 (was "waiting for Stable")
+## arm64 is THE stack (Paul, 2026-08-22) - shipped, not on trial
+
+**Standing decision: arm64 everywhere - container, CI, baselines. It is
+reversed only on evidence that something genuinely cannot support it.** Slower
+on some hypothetical x86 box does not qualify; neither does an unexplained
+pixel diff, which is a measurement job, not grounds to go back. Treat "should
+we return to amd64?" as answered unless you can name the thing ARM cannot do.
+
+This matters because the 8 unexplained codeblocks keys below are exactly the
+kind of loose end that invites a retreat to the old stack. They predate the
+migration and survived it unchanged - so they are not evidence against ARM.
+
+### How it became available (was "waiting for Stable")
 
 Chrome for Testing **does** publish `linux-arm64` - chrome and chromedriver
 both - from **153.0.8001.0** onward. An earlier check here concluded "no
