@@ -47,6 +47,43 @@ everywhere:**
   - §13 is the live queue (§12 retired). §13a/§13d record the traps, including
   the ones that killed rows in this same file.
 
+## Stage A0 - the calendar, before anything else
+
+**Run this first. A topic is not "next" in isolation - it is next relative to
+what shipped, when, and on what.** Skipping it is how the blog got 11 posts in
+three days (2026-08-20 x6, 08-21 x2, 08-22 x3) against a stated capacity of ~6
+per month, then nothing for the twelve days before that.
+
+```sh
+# what shipped, when - the whole calendar in one line
+for f in content/blog/*/index.md; do
+  d=$(grep -m1 '^date:' "$f" | sed -E 's/date: *.?([0-9-]+).*/\1/')
+  echo "$d $(dirname $f | sed 's|content/blog/||')"
+done | sort -r | head -25
+```
+
+Check three things, and record each in the topic row:
+
+1. **Spacing.** How many posts in the last 7 days? Capacity is ~6/month
+   (`20.09`, three streams). If the last week already holds three, the correct
+   output is a SCHEDULED row with a future date, not another same-day post.
+2. **Theme recency.** Does a post in the last 14 days already carry this
+   thesis or this proof-signal? If yes the topic is not dead - it is
+   **deferred**. See the exit list.
+3. **Stream and stack balance.** Which of the three streams (Rails Technical /
+   Snippet Hygiene / Founder-ICP-E) has gone quiet, and which stack? Measured
+   2026-08-22 across 620 posts: `rails` 114, `ruby` 100, `css` 16, `llm` 13,
+   `react` 12 - against `postgres` 3, `laravel` 3, `tailwind` 2, `python` 2.
+   **Thin does not mean unwanted.** The single highest-impression uncited guide
+   on the property is Laravel (19,841), and `langchain-python-tutorial` earns
+   the best CTR of any high-impression page (15 clicks / 7,329). Under-covered
+   stacks that already rank are the cheapest expansion available; a fourth
+   Rails post in a week is the most expensive.
+
+**Publishing three posts on one day is a calendar failure even when all three
+are good.** They compete with each other for the same reader and collapse into
+one impression of the blog.
+
 ## Stage A - find candidates, then audit them
 
 **Search demand cannot generate topics on this property; it can only veto them.**
@@ -72,7 +109,31 @@ three sources below, then use search to kill the bad ones.
 2. **Paul's raw material**, when he supplies it - one sentence about something
    that happened is a topic ("the agents cancelled half their backlog"). Treat
    this as the highest-value source when present; he may not always have it.
-3. **Our real work** - this repo and `~/dev/elital`. The 2026-08-20 batch's best
+3. **Reddit** - where practitioners complain in their own words, which is the
+   phrasing a search-purposed post needs. **The `.json` endpoint is BLOCKED**
+   from this host - `reddit.com/r/<sub>/top.json` returns HTTP 403 with an HTML
+   block page and `old.reddit.com` returns a 302 (both verified 2026-08-22).
+   Do not put that curl in a script. Use `WebSearch` instead, which surfaces
+   `old.reddit.com` threads WITH their comment text:
+   ```
+   web_search(search_queries=["reddit r/rails discussion this week",
+                              "reddit ExperiencedDevs <topic> complaint"])
+   ```
+   Worth sweeping: `r/rails`, `r/ruby`, `r/laravel`, `r/webdev`,
+   `r/ExperiencedDevs`, `r/LocalLLaMA`, `r/devops`. Read the COMMENTS, not the
+   title - the top comment on a complaint thread is usually the real topic, and
+   a thread with 200 comments and no accepted answer is an unwritten post.
+   Quote the practitioner phrasing verbatim into the topic row; it is the one
+   thing this source has that HN and our own work do not.
+4. **X/Twitter** - no free API. Use `WebSearch` scoped to the site, or read the
+   accounts that set the agenda for our stacks via `WebFetch` on nitter-style
+   mirrors when reachable. If neither works, say so and lean on the other four
+   sources rather than inventing a trend.
+5. **Changelogs and release notes as a trend source** - a framework's own
+   release is a dated, citable event with a built-in audience: Rails/Ruby
+   releases, Laravel releases, and the security advisories for both. This is
+   the highest-signal source for the under-covered stacks in Stage A0.
+6. **Our real work** - this repo and `~/dev/elital`. The 2026-08-20 batch's best
    material was a commit-documented outage. Sanitize: shapes and lessons yes;
    prompts, model IDs, proprietary numbers no.
 
@@ -153,25 +214,61 @@ reviewer verdict), a rebuilt plan section, or a HOLD.
 
 **Fetch sources; do not recall them.** Training memory is not a citation.
 
-1. **Web search** per `blog-pipeline.md` STEP 3 - official docs, release notes,
+**Start the slow one first.** NotebookLM deep research takes ~5 minutes and runs
+server-side, so `research_start` it BEFORE the web searches and collect it at the
+end. Running them in sequence wastes the whole five minutes; running them in
+parallel makes the deep sweep free. This is the default, not an optimisation.
+
+1. **NotebookLM deep research - fire this FIRST** (`notebooklm-mcp`). It searches
+   the open web and returns ~40 sources with a synthesised report, which is a
+   different instrument from `web_search`: it goes wider and returns things a
+   3-6 word query never surfaces.
+
+   ```
+   server_info()                      # gate - see auth below
+   research_start(query=..., mode="deep", title=..., source="web")
+   #   mode: "fast" ~30s / ~10 sources · "deep" ~5min / ~40 sources, web only
+   # ... do the web searches and the code mining while this runs ...
+   research_status(notebook_id=..., task_id=..., max_wait=600)
+   research_import(notebook_id=..., task_id=..., cited_only=True)
+   notebook_query(notebook_id=..., ...)
+   ```
+
+   **`research_import` is not optional** - without it the sources are discovered
+   but never enter the notebook, and `notebook_query` then answers from nothing.
+   Prefer `cited_only=True`: the report's own citations are the sources that
+   earned their place, and importing all 40 buries them.
+
+   **Auth gate.** Check `server_info` first and read `auth_status` precisely:
+   `configured` go · `not_configured` first-time setup · `stale` means expired,
+   ask the user to run `nlm login` · `unverified` means THE CHECK failed, not the
+   credentials - try the call anyway rather than sending them to re-auth.
+
+2. **To interrogate sources you already have** (rather than find new ones):
+   `notebook_create` → `source_add` (`source_type: "url"`, `urls` takes a list)
+   → `notebook_query`.
+
+3. **Web search** per `blog-pipeline.md` STEP 3 - official docs, release notes,
    primary reports. This is Stage B's job; the coordinator starts at the writer
    and never re-runs research.
-2. **NotebookLM** to interrogate a body of sources: `notebook_create` →
-   `source_add` (`source_type: "url"`, `urls` takes a list) → `notebook_query`.
-   To *find* sources: `research_start` → `research_status` →
-   **`research_import`**; without the import nothing enters the notebook. Check
-   `server_info` first - `stale` means ask the user to run `nlm login`;
-   `unverified` means the check failed, not that credentials are bad.
-3. Ask what a draft needs: what changed and when, the official position, where
+
+**A NotebookLM report is a LEAD, never a citation.** It is a synthesis over
+sources it chose, and the same rule that governs a `web_search` excerpt governs
+it: open the primary and quote from there. On 2026-08-22 two figures reached a
+topic row through search excerpts - GitHub's "more than one in five code reviews"
+and an ISSRE study's findings - and BOTH had to be re-fetched at source before
+they could be written down. One of them, the study, turned out to say something
+more interesting than the summary implied.
+4. Ask what a draft needs: what changed and when, the official position, where
    practitioners disagree, the strongest counter-argument. Not "summarize this."
-4. **Mine our real code** (this repo, `~/dev/elital`) for first-hand material.
+5. **Mine our real code** (this repo, `~/dev/elital`) for first-hand material.
    Sanitize: shapes and lessons yes; prompts, model IDs, proprietary numbers no.
-5. Verify every statistic against its source - **and every mechanism too.** How
+6. Verify every statistic against its source - **and every mechanism too.** How
    a tool behaves is a claim, not context; it just reads as reasoning, so it
    gets waved through where a number would be challenged. Fetch the README or
    the release notes. Zero fabricated clients, stats,
    quotes or personas - `.okf/content/claims-canon.md` records "Sarah" as banned.
-6. Internal links per `blog-pipeline.md` STEP 3b.
+7. Internal links per `blog-pipeline.md` STEP 3b.
 
 Stage B output: a sourced digest - every claim with its URL, links verified.
 
@@ -200,10 +297,24 @@ it straight on and let the gates decide. Paul asked for delivery without a human
 in the loop (2026-08-22), and the stop list below is the whole of what he still
 owns.
 
-**One post** → the **`blog-write` skill**, with the topic row, research digest,
-**the approved outline**, and `premise audited: yes`. That skill owns STEP 4
-onward and is what the user can also invoke directly; it delegates to
+**One post** → **INVOKE the `blog-write` skill NOW.** Not "recommend it", not
+"name it in the handback" - call it, in this same run, via the Skill tool:
+
+```
+Skill(skill="blog-write", args="<slug> - topic row 20.09 §<N>, premise audited: yes")
+```
+
+Pass the topic row, the research digest, the approved outline, and
+`premise audited: yes`. That skill owns STEP 4 onward and delegates to
 `blog-post-coordinator` when agent spawning is available.
+
+**Ending a run by telling the user to run `/blog-write` themselves is a FAILED
+run, not a handback** (Paul 2026-08-23). Someone who asked for a post and
+received a topic row reasonably concludes the pipeline is broken. The ONLY
+reasons not to invoke it are the exits below - HOLD, SCHEDULED-and-parked, or
+BLOCKED - and each needs its evidence. "The outline gate could not run" is not
+one of them: say so and invoke anyway, because `blog-write` runs its own gates
+and a stated gap is worth more than a stalled pipeline.
 
 **Several posts** → `blog-batch-orchestrator` with N; it runs Stages A-C per row.
 
@@ -216,12 +327,25 @@ Full unattended contract, including the completion promise and why it must be
 about gates rather than quality: `docs/workflows/autonomous-delivery-prompt.md`
 §"Running CONTENT unattended".
 
-## Three exits, and only three
+## Four exits, and only four
 
 A run ends in exactly one of these. **Two exits are not enough** - a loop whose
-only outcomes are "shipped" or "try again" will always ship something.
+only outcomes are "shipped" or "try again" will always ship something. But
+three were not enough either: with only SHIP / HOLD / BLOCKED, a good topic that
+merely collides with this week's calendar gets recorded as DO-NOT-WRITE and is
+lost. That happened on 2026-08-22 and Paul corrected it - **a spacing conflict
+is a scheduling decision, not a verdict on the topic.**
 
 - **SHIPPED** - gates green, committed, PR open, verdicts quoted.
+- **SCHEDULED** - the topic is good and the slot is not. Hand it to
+  `blog-write` NOW with an explicit future `date:` in the frontmatter; a
+  future-dated post is normal scheduling, and production skips future content
+  until the date arrives (`bin/hugo-build` builds it, `rake test:links` does
+  not). Pre-writing is the point: the research is hot today and cold in a
+  fortnight. Pick the date from Stage A0 - the next gap of >=3 days on a stream
+  that has gone quiet. Record the date and the reason for it in the topic row.
+  **Use this whenever the only objection is "we just published something like
+  this"** - that is exactly the case it exists for.
 - **HOLD, with evidence** - a terminal success, not a failure. Every candidate
   failed its floor, or the queue is dry after rescopes. Record the numbers that
   killed each one so nobody re-proposes them from intuition next quarter. Never
