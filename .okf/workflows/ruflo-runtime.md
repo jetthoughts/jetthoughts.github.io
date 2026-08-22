@@ -77,10 +77,13 @@ or still present.
 
 - `config init` generates a config the loader rejects ("reading 'map'"
   warning on every call). Run on defaults; delete any generated config.
-- `memory export` fails ("Exported to undefined"); `memory_import_claude`
-  finds 0 files even with `allProjects: true` (path-encoding). The auto-memory
-  corpus is deliberately NOT mirrored into ruflo - `MEMORY.md` already loads
-  every session.
+- `memory export` fails ("Exported to undefined"). `memory_import_claude`
+  has a path-encoding bug (replaces only slashes, but Claude's memory dir
+  name also dashes the dots) — WORKAROUND: pass a pre-dashed projectPath,
+  e.g. `/Users/pftg/dev/jetthoughts-github-io`, and it imports. The
+  auto-memory corpus (48 files) IS mirrored via that workaround since
+  2026-08-22, namespace `claude-memories`, semantic recall verified —
+  re-import after big memory-file batches (idempotent, dedups).
 - CLI `memory search --type semantic` returns empty in terminals (needs
   @ruvector/core); single-term `--type keyword` works; real semantic search is
   MCP-only. (Also in CLAUDE.md research protocol.)
