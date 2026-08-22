@@ -36,6 +36,32 @@ sources:
 
 # Rules
 
+**No fractional-CTO and no tech-lead title claims (Paul, 2026-08-21).** Do not
+write, on any NEW or v2 surface, that JetThoughts supplies a fractional CTO, a
+CTO, a tech lead, an engineering manager, or any other titled leader. The basis
+is factual: Paul was the lead tech at Crosslake, a PM opened the engagement, and
+leadership was promoted from inside the team - so a title claim misstates what
+happened. Treat it as the same class as a fabricated testimonial, not as a style
+preference.
+
+What the site sells instead, and the only thing it sells: **an embedded team of
+senior self-managed full-stack developers who drive the development while the
+client runs the rest of the business.** Chosen over migration assurance, CRA,
+SOC 2 and umbrella positioning because it is the only offer that has ever
+converted, and because every canon proof point below (tenure, retention, the
+five-year average relationship) is evidence for exactly this claim. Migration
+assurance stays off the site until the r/msp test converts; `/vibe-code-rescue`
+remains an SEO lander only.
+
+SCOPE, and the reason it is not yet absolute: the LEGACY live site still sells
+fractional CTO on `/services/fractional-cto/`, the homepage, footers and blog
+cross-links. Those pages carry the banned claim today. Removing them is Paul's
+call and needs a GSC check first - `/services/fractional-cto/` has ranking
+history - so the ratchet for this rule must scope to v2 surfaces until that is
+decided. A repo-wide ban fails instantly on legacy pages, which is why one has
+not been added yet. Full working paper, including the repositioned copy this
+rule produced: `docs/projects/2608-site-design-system/20-29-strategy/20.09-repositioned-pilot-copy.md`.
+
 **Derive tenure, never hardcode it.** Use `since {{ site.Params.foundingYear }}`
 or `{{ sub now.Year (int site.Params.foundingYear) }}+ years`. The 2026-08-14
 correction found the year wrong in eight places precisely because each had
