@@ -18,7 +18,7 @@ canonical_url: "https://jetthoughts.com/blog/rails-event-structured-logging-8-1/
 related_posts: false
 ---
 
-*TL;DR: Rails 8.1 replaces log scraping with structured events your monitoring can trust. We migrated four production apps and the false-positive alert rate dropped by **60%**. Migration runs one to two days per app.*
+*TL;DR: Rails 8.1 replaces log scraping with structured events your monitoring can trust. Alerts fire on the event your app actually emitted instead of on a regex that matched the wrong line.*
 
 ```ruby
 # Replace regex-against-log-output with this:

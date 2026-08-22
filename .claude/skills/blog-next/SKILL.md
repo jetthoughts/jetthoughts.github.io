@@ -26,8 +26,13 @@ reviewing and shipping are the other half and belong to the agents below.
 | A. Plan health + pick, or REBUILD the plan | **this skill** |
 | B. Research | **this skill** |
 | C. Outline + outline gate | **this skill** |
-| Draft → 3 critics → cold-eyes → ship gates → commit | `blog-post-coordinator` |
+| Draft → 3 critics → cold-eyes → ship gates → commit | **`blog-write` skill** |
 | N-post sprint, cluster sweep, one PR, CI watch | `blog-batch-orchestrator` |
+
+**If the user wanted a POST and you return a verdict, say so in one line and
+name `blog-write`.** This skill deciding not to write is a legitimate outcome,
+but it is not what someone asking for a post expects, and leaving them to infer
+the second half exists is how they end up thinking the pipeline is broken.
 
 You produce one of three things, never a draft: a **topic row**, a **rebuilt
 plan section**, or a **HOLD** saying the slot should not be spent.
@@ -192,8 +197,10 @@ it straight on and let the gates decide. Paul asked for delivery without a human
 in the loop (2026-08-22), and the stop list below is the whole of what he still
 owns.
 
-**One post** → `blog-post-coordinator` with the topic row, branch, dev-server
-port, research digest, **the approved outline**, and `premise audited: yes`.
+**One post** → the **`blog-write` skill**, with the topic row, research digest,
+**the approved outline**, and `premise audited: yes`. That skill owns STEP 4
+onward and is what the user can also invoke directly; it delegates to
+`blog-post-coordinator` when agent spawning is available.
 
 **Several posts** → `blog-batch-orchestrator` with N; it runs Stages A-C per row.
 

@@ -854,21 +854,11 @@ services:
       retries: 5
 ```
 
-## Real-World Case Studies
-
-### Case Study: SaaS Platform Migration to Docker
-
-**Company:** B2B SaaS platform with 50,000 active users
-**Before:** Traditional server deployments with Capistrano
-**After:** Docker-based deployment with container orchestration
-
-On a recent client project, the migration changed how the whole team worked. Their deploys went from slow Capistrano runs where everyone held their breath to fast image pulls that nobody even noticed. The "works on my machine" conversations disappeared entirely once every environment ran the same container. When something did go wrong, the on-call engineer swapped a container tag instead of manually reverting files -- rollbacks dropped from a tense 30-minute procedure to under a minute. New developers went from two days of setup to running the full stack before lunch on day one. The tradeoff was about three weeks of upfront migration work and a steeper learning curve for the team members who had never touched Docker.
-
-We wrote about a common gotcha during this migration in [Solving Kamal's "target failed to become healthy"](/blog/solving-kamals-target-failed-become-healthy/) -- health check timing is the number one deployment blocker we see.
+Health check timing is a common blocker on this path - see [Solving Kamal's "target failed to become healthy"](/blog/solving-kamals-target-failed-become-healthy/).
 
 ## When NOT to Use Docker for Rails Deploys
 
-Docker isn't always the right call, and we've talked founders out of it more than once.
+Docker isn't always the right call.
 
 If you're a solo founder shipping on Heroku or Render, those platforms already containerize your app behind the scenes. Adding your own Docker layer means you're maintaining infrastructure instead of building features.
 

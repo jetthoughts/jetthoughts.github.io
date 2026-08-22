@@ -1935,56 +1935,35 @@ $queue_optimization = [
 ];
 ```
 
-## Real-World Performance Optimization Case Studies
+## Two Fixes APM Points You Straight At
 
-Understanding how other teams used APM tools to identify and fix performance bottlenecks provides actionable insights for your own optimization efforts.
+APM earns its cost on problems that are invisible in application logs. These are the two you will hit first.
 
-### Case Study 1: E-Commerce Platform Database Optimization
+### N+1 queries behind a slow dashboard
 
-### Background:
-- **Application**: High-traffic Laravel e-commerce platform
-- **Issue**: Dashboard loading 8+ seconds, user complaints
-- **APM Tool**: Scout APM
-- **Team Size**: 4 developers
-
-#### Problem Discovery:
+A trace showing most of the request time inside the database, spread across thousands of small identical queries, is the N+1 signature. The nested loop is the cause:
 
 ```php
-// Scout APM revealed the issue
-$apm_insights = [
-    'endpoint' => 'GET /dashboard',
-    'avg_response_time' => 8734,        // ms
-    'database_percentage' => 94,        // 94% of time in database
-    'n_plus_one_queries' => 7,          // 7 different N+1 patterns
-    'total_queries' => 12456,
-    'memory_usage' => 234               // MB
-];
-
-// Slowest queries identified by Scout:
-// 1. SELECT * FROM products WHERE category_id = ? (executed 2,345 times)
-// 2. SELECT * FROM reviews WHERE product_id = ? (executed 5,678 times)
-// 3. SELECT * FROM images WHERE product_id = ? (executed 4,123 times)
-```
-
-#### Solution Implementation:
-
-```php
-// Before: Multiple N+1 queries
+// Before: a query per category, then per product, then per relation
 public function dashboard()
 {
-    $categories = Category::all();  // 1 query
+    $categories = Category::all();
 
     foreach ($categories as $category) {
-        $products = $category->products;  // +50 queries
+        $products = $category->products;
 
         foreach ($products as $product) {
-            $reviews = $product->reviews;  // +2,345 queries
-            $images = $product->images;    // +2,345 queries
+            $reviews = $product->reviews;
+            $images = $product->images;
         }
     }
 }
+```
 
-// After: Optimized eager loading + caching
+Eager-load the relations in one pass, constrain what each one returns, and cache the assembled result:
+
+```php
+// After: eager loading with constrained relations, plus a cache window
 public function dashboard()
 {
     $categories = Cache::remember('dashboard_categories', 600, function () {
@@ -2005,8 +1984,11 @@ public function dashboard()
 
     return view('dashboard', compact('categories'));
 }
+```
 
-// Added strategic indexes
+Eager loading alone will still scan without the right composite indexes, so add them to match the constraints above:
+
+```php
 Schema::table('products', function (Blueprint $table) {
     $table->index(['category_id', 'featured', 'active']);
 });
@@ -2016,102 +1998,26 @@ Schema::table('reviews', function (Blueprint $table) {
 });
 ```
 
-#### Results:
+### Memory exhaustion in report generation
+
+The tell in APM is memory climbing with result-set size until the process dies. `get()` materialises every row and every eager-loaded relation at once:
 
 ```php
-$optimization_results = [
-    'performance' => [
-        'response_time_before' => 8734,     // ms
-        'response_time_after' => 187,       // ms
-        'improvement' => '97.9%',
-
-        'queries_before' => 12456,
-        'queries_after' => 5,
-        'query_reduction' => '99.96%',
-
-        'database_time_before' => 8212,     // ms
-        'database_time_after' => 67,        // ms
-        'database_improvement' => '99.2%'
-    ],
-
-    'business_impact' => [
-        'user_satisfaction' => '+42 NPS points',
-        'bounce_rate_reduction' => '67%',
-        'conversion_rate_increase' => '23%',
-        'support_tickets_reduction' => '84%'
-    ],
-
-    'infrastructure' => [
-        'database_cpu_reduction' => '73%',
-        'monthly_rds_cost_savings' => '$1,840',
-        'able_to_downgrade_rds_instance' => true
-    ],
-
-    'timeline' => [
-        'issue_identification' => '2 hours (with Scout APM)',
-        'optimization_implementation' => '8 hours',
-        'testing_validation' => '4 hours',
-        'total_time_to_fix' => '14 hours'
-    ]
-];
-```
-
-#### Key Learnings:
-1. **Scout's N+1 detection was critical**: Identified 7 separate N+1 patterns with specific fix recommendations
-2. **Caching multiplied benefits**: Combined eager loading with caching for 600-second TTL
-3. **Indexes dramatically improved**: Adding composite indexes reduced query time 98%
-4. **Monitoring prevented regression**: Continued Scout monitoring ensured optimizations remained effective
-
-### Case Study 2: SaaS Application Memory Leak Resolution
-
-### Background:
-- **Application**: Multi-tenant SaaS platform
-- **Issue**: Memory exhaustion errors, 500 internal server errors
-- **APM Tool**: New Relic + Blackfire
-- **Team Size**: 8 developers
-
-#### Problem Discovery:
-
-```php
-// New Relic alert: Memory threshold exceeded
-$memory_alert = [
-    'transaction' => 'POST /api/reports/generate',
-    'peak_memory' => 3200,              // MB (exceeds 2GB limit)
-    'frequency' => 47,                  // times per day
-    'error_type' => 'Fatal error: Allowed memory size exhausted',
-    'affected_tenants' => 23
-];
-
-// Blackfire deep profiling revealed:
-$blackfire_profile = [
-    'memory_allocation_hotspot' => [
-        'function' => 'Illuminate\Database\Eloquent\Collection::load',
-        'memory_allocated' => 2847,     // MB
-        'calls' => 1,
-        'line' => 'app/Services/ReportService.php:45'
-    ],
-
-    'root_cause' => 'Loading 500,000+ Eloquent models into memory at once'
-];
-```
-
-#### Solution Implementation:
-
-```php
-// Before: Loading everything into memory
+// Before: the whole result set in memory at once
 public function generateReport($tenant_id)
 {
     $orders = Order::where('tenant_id', $tenant_id)
         ->with('items', 'customer', 'payments')
-        ->get();  // Loads 500,000+ orders into memory
-
-    // Memory peak: 3.2 GB
-    // Result: Fatal error
+        ->get();
 
     return $this->processOrders($orders);
 }
+```
 
-// After: Chunk-based processing
+`chunk()` holds one batch at a time, so peak memory stays flat regardless of how many rows match:
+
+```php
+// After: constant memory across the run
 public function generateReport($tenant_id)
 {
     $results = [];
@@ -2122,83 +2028,15 @@ public function generateReport($tenant_id)
             $processed = $this->processOrders($orders);
             $results = array_merge($results, $processed);
 
-            // Clear Eloquent model cache after each chunk
             $orders = null;
             gc_collect_cycles();
         });
 
-    // Memory peak: 87 MB (constant across chunks)
-
     return $results;
 }
-
-// Added memory monitoring
-public function generateReport($tenant_id)
-{
-    $initial_memory = memory_get_usage(true);
-
-    // ... processing logic ...
-
-    $peak_memory = memory_get_peak_usage(true);
-    $memory_used = $peak_memory - $initial_memory;
-
-    NewRelic::recordMetric('Custom/Report/MemoryUsage', $memory_used / 1024 / 1024);  // MB
-
-    if ($memory_used > 100 * 1024 * 1024) {  // >100 MB
-        logger()->warning('High memory usage detected', [
-            'tenant_id' => $tenant_id,
-            'memory_mb' => $memory_used / 1024 / 1024
-        ]);
-    }
-}
 ```
 
-#### Results:
-
-```php
-$memory_optimization_results = [
-    'performance' => [
-        'peak_memory_before' => 3200,       // MB
-        'peak_memory_after' => 87,          // MB
-        'memory_reduction' => '97.3%',
-
-        'processing_time_before' => 45,     // seconds (when it worked)
-        'processing_time_after' => 67,      // seconds (acceptable trade-off)
-        'time_increase' => '48.9%',
-
-        'error_rate_before' => 0.47,        // 47% of requests failed
-        'error_rate_after' => 0.0,          // 0% failures
-        'reliability_improvement' => '100%'
-    ],
-
-    'business_impact' => [
-        'reports_generated_successfully' => '100%',
-        'customer_complaints_eliminated' => true,
-        'refunds_due_to_errors' => '$0 (previously $12,400/month)',
-        'customer_churn_reduction' => '8 customers retained'
-    ],
-
-    'cost_savings' => [
-        'reduced_server_instances' => 3,
-        'monthly_ec2_savings' => '$840',
-        'prevented_refunds' => '$12,400'
-    ]
-];
-```
-
-#### Key Learnings:
-1. **New Relic alerts identified pattern**: Memory threshold alerts showed consistent failure pattern
-2. **Blackfire profiling pinpointed root cause**: Function-level profiling revealed exact memory allocation point
-3. **Chunking solved memory issue**: Processing in batches kept memory constant
-4. **Trade-off was acceptable**: 48% longer processing time was acceptable vs 47% error rate
-
----
-
-Pick one APM tool. Install it. Measure your baseline. Then fix the worst bottleneck first.
-
-Scout APM if you want Laravel-specific simplicity. New Relic or Datadog if you need enterprise-grade observability across multiple services. Blackfire if your problem is deep code-level profiling. Most teams don't need more than one - start with Scout or Blackfire's free tier, and add complexity only when the data tells you to.
-
-The pattern we see repeatedly: teams add APM, find 3-5 N+1 queries they didn't know existed, fix them in a day, and cut response times by half. The tool pays for itself in the first week.
+Measure both before and after on your own data with `memory_get_peak_usage(true)` - the chunk size that works depends on how wide your rows are.
 
 ## FAQ: Laravel Performance Monitoring
 

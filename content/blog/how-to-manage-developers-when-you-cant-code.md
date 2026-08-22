@@ -17,8 +17,6 @@ Your dev team says they need two months. Is that reasonable? You have no idea.
 
 This scenario plays out in thousands of startups every day. You're brilliant at your business domain – maybe you're a killer salesperson, a design genius, or an industry expert. But when your technical co-founder left or you're hiring your first dev team, you're suddenly responsible for managing people who speak in acronyms and seem to live in a world of mysterious complexity.
 
-We've seen this exact situation 200+ times with clients at JetThoughts.
-
 Here's the truth: you don't need to code to manage developers effectively. You need the right framework, clear communication patterns, and metrics that translate technical work into business outcomes.
 
 ---

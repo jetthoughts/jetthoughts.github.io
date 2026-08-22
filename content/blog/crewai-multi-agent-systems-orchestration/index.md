@@ -379,7 +379,7 @@ Five patterns that consistently produce better results:
 2. Complementary skills: design teams where skills cover each other's gaps. A content crew needs researchers, writers, and editors.
 3. Tool alignment: only give tools to agents that need them. Research agents get search tools; analysts get calculation tools.
 4. Backstory matters: "You're a cautious compliance officer" produces very different output than "You're an innovative growth hacker." Encode domain expertise and risk tolerance in the backstory.
-5. Model selection by role: not every agent needs the largest model. Use big models for hard reasoning (financial, legal); use smaller models for routine work (formatting, simple search). In our experience, swapping editor and SEO from gpt-4o to gpt-4o-mini cut per-task cost by roughly half on benchmark crews.
+5. Model selection by role: not every agent needs the largest model. Use big models for hard reasoning (financial, legal); use smaller models for routine work (formatting, simple search).
 
 ## Sequential and hierarchical
 
@@ -443,7 +443,7 @@ This pattern gives you async processing (long-running crews don't block API requ
 
 Multi-agent systems can become expensive if not optimized. Here are production techniques for managing costs:
 
-1. **Model selection by role.** Use a large model for complex reasoning and a smaller model for routine ops. A content crew might use gpt-4o for the researcher and writer, and gpt-4o-mini for the editor and SEO specialist. In our experience, swapping editor and SEO from gpt-4o to gpt-4o-mini cut per-task cost by roughly half on benchmark crews.
+1. **Model selection by role.** Use a large model for complex reasoning and a smaller model for routine ops. A content crew might use gpt-4o for the researcher and writer, and gpt-4o-mini for the editor and SEO specialist.
 
 2. Context window management. Don't pass entire previous outputs to every agent. The SEO specialist doesn't need the full research report - just the final article. CrewAI's `context` parameter lets you scope this precisely.
 

@@ -1010,16 +1010,9 @@ This guide introduced LangGraph's state machine fundamentals and production patt
 - **API Reference**: [Python API](https://langchain-ai.github.io/langgraph/reference/graphs/)
 - **Community**: [LangChain Forum](https://forum.langchain.com/)
 
-### Production Case Studies
+## Workflow Patterns Library
 
-- **Uber**: Code migration automation with multi-agent systems (figures unverified)
-- **LinkedIn**: SQL bot serving millions of employees (figures unverified)
-- **Klarna**: 80% reduction in customer resolution time with AI assistant (figures unverified)
-- **AppFolio**: 2x accuracy improvement in property management copilot (figures unverified)
-
-## Bonus: Workflow Patterns Library
-
-**Download our free Workflow Patterns Library** with 10+ production-ready templates:
+Production-ready templates you can adapt:
 
 ### Template 1: Research and Summarization
 **Use Case**: Automated research reports with source validation

@@ -22,7 +22,7 @@ cover_image_alt: "Propshaft vs Sprockets comparison for Rails 8 asset pipeline m
 
 Your Sprockets precompile takes 60 seconds. You change one CSS variable. Sixty seconds again. Every deploy, every CI run, every developer on the team—waiting.
 
-Propshaft replaces Sprockets as the default asset pipeline in Rails 8, and the difference is dramatic: in our experience, build times drop from 45-60 seconds to under 5 seconds for medium-sized apps. But Propshaft isn't a drop-in replacement. It removes features you might depend on—Sass compilation, CoffeeScript transpilation, asset concatenation. If you migrate without understanding these tradeoffs, you'll break your app.
+Propshaft replaces Sprockets as the default asset pipeline in Rails 8. It drops the transpilation and concatenation stages, so precompilation digests and copies assets instead of compiling and bundling them. Every asset is still walked and fingerprinted, so the work still scales with how many you have - what drops is the cost per asset. But Propshaft isn't a drop-in replacement. It removes features you might depend on - Sass compilation, CoffeeScript transpilation, asset concatenation. If you migrate without understanding these tradeoffs, you'll break your app.
 
 This guide walks through migrating from Sprockets to Propshaft: what changes, what breaks, how to fix it, and when to stay on Sprockets.
 
@@ -50,7 +50,7 @@ Consider a typical Rails application with Sprockets:
 
 This manifest triggers a multi-stage compilation process. Sprockets scans your entire directory tree, then walks every `require` directive across hundreds of files to resolve dependencies. It concatenates everything into massive bundles, runs compression over the whole result, and finally generates fingerprinted filenames.
 
-In our experience, this process takes **45-60 seconds** on moderate-sized applications with 200+ assets. For larger applications, precompilation can exceed **2 minutes**, dragging down every deploy and CI run.
+Every one of those stages runs on every deploy and every CI build, and the cost scales with how many assets you have. Time it on your own app with `time RAILS_ENV=production bin/rails assets:precompile` - that number is the one that matters for your migration decision.
 
 ### The Maintenance Burden
 
@@ -665,10 +665,7 @@ $ bin/rails assets:clobber
 $ time RAILS_ENV=production bin/rails assets:precompile
 ```
 
-Our typical results:
-- **Small apps** (50 assets): 1-2 seconds (vs 10-15s with Sprockets)
-- **Medium apps** (200 assets): 3-5 seconds (vs 45-60s with Sprockets)
-- **Large apps** (500+ assets): 8-12 seconds (vs 2-3min with Sprockets)
+Run the same command on your Sprockets branch before you migrate, so the comparison is your app rather than someone else's. The gap widens with asset count, because Sprockets transpiles and concatenates where Propshaft only fingerprints and copies.
 
 ### Phase 5: Production Deployment
 
@@ -771,253 +768,11 @@ Rails.application.configure do
 end
 ```
 
-## Production Case Studies and Real-World Results
-
-Here's what we've seen in actual migrations. If you're also containerizing your Rails app, check our [Rails 8 Docker deployment guide](/blog/rails-8-docker-deployment-production-guide/) for how Propshaft interacts with Docker-based builds.
-
-### Case Study 1: E-Commerce Platform Migration
-
-#### Background:
-- **Application**: Large e-commerce Rails application
-- **Assets**: 450+ JavaScript files, 200+ stylesheets
-- **Previous setup**: Sprockets with heavy CoffeeScript usage
-- **Team size**: 8 developers
-
-#### Migration Timeline:
-
-#### Week 1-2: Assessment and Planning
-- Audited 450+ asset files
-- Identified 87 CoffeeScript files requiring conversion
-- Documented 23 Sass files with complex mixins
-- Created migration checklist and rollback plan
-
-#### Week 3-4: Preparation
-```bash
-# Converted CoffeeScript to JavaScript
-$ find app/assets/javascripts -name "*.coffee" | wc -l
-87
-$ decaffeinate app/assets/javascripts/**/*.coffee
-# Manual review and cleanup of converted files
-
-# Set up Dart Sass for preprocessing
-$ bundle add dartsass-rails
-```
-
-#### Week 5-6: Migration Execution
-```ruby
-# Gemfile
-gem "propshaft"
-# Removed: gem "sprockets-rails"
-
-# Restructured assets
-$ mv app/assets/javascripts app/javascript
-```
-
-#### Week 7: Testing and Deployment
-- Comprehensive testing across 50+ pages
-- Staged rollout: 10% → 50% → 100% of traffic
-- Zero downtime deployment using blue-green strategy
-
-#### Results:
-
-| Metric | Before (Sprockets) | After (Propshaft) | Change |
-|--------|--------------------|--------------------|--------|
-| Asset precompile | 127.3s | 12.8s | 90% faster |
-| Full deployment | 892s | 445s | 50% faster |
-| CI pipeline | 1240s | 687s | 45% faster |
-
-The team also measured runtime improvements: first paint dropped by 0.4s, time to interactive improved by 0.7s, and their Lighthouse performance score jumped from 83 to 95. Cache hit ratio improved by 23% because individual file digests meant most assets survived deploys untouched.
-
-On the developer experience side, hot reload got 3.2 seconds faster, the team deployed 2.3x more often, and production incidents related to the asset pipeline dropped by 67%.
-
-#### What We Learned:
-
-The CoffeeScript conversion ate most of the migration time. Automated tooling handled the syntax, but the team spent days reviewing edge cases by hand. Import maps turned out to be a net simplifier because they eliminated the npm package conflicts the team had been fighting for years. HTTP/2 multiplexing handled 40+ concurrent asset requests without degradation, which surprised even the optimists on the team. And the monitoring setup they built during migration caught 12 missing-asset issues before any user saw them.
-
-```ruby
-# Monitoring setup that caught 12 issues before production
-# config/initializers/asset_audit.rb
-# Walk Propshaft's load_path at boot in production-like environments
-# and log assets the layouts reference but the pipeline cannot resolve.
-if Rails.env.production? || Rails.env.staging?
-  Rails.application.config.after_initialize do
-    referenced = %w[application.js application.css logo.png]
-    referenced.each do |logical_path|
-      asset = Rails.application.assets&.load_path&.find(logical_path)
-      Sentry.capture_message("Missing asset: #{logical_path}") if asset.nil?
-    end
-  end
-end
-```
-
-Propshaft does not currently publish a documented `load.propshaft`
-ActiveSupport notification, so we audit the load path on boot instead.
-
-### Case Study 2: SaaS Application with Microservices
-
-#### Background:
-- **Application**: Multi-tenant SaaS platform
-- **Architecture**: 5 Rails services sharing asset pipeline
-- **Assets**: 280+ files across services
-- **Complexity**: Shared component library
-
-#### Migration Challenge:
-
-Coordinating asset pipeline changes across 5 microservices while maintaining shared component compatibility.
-
-#### Solution Architecture:
-
-```ruby
-# Shared asset gem approach
-# shared_assets/shared_assets.gemspec
-Gem::Specification.new do |spec|
-  spec.name          = "shared_assets"
-  spec.version       = "1.0.0"
-  spec.files         = Dir["app/assets/**/*"]
-  spec.add_dependency "propshaft"
-end
-
-# Each microservice's Gemfile
-gem 'shared_assets', path: '../shared_assets'
-
-# config/application.rb (in each service)
-config.assets.paths << SharedAssets.asset_path
-```
-
-#### Phased Rollout Strategy:
-
-The team migrated services in dependency order, starting with the simplest:
-
-| Service | Dependencies | Assets | Migration Week |
-|---------|-------------|--------|----------------|
-| analytics_service | 0 | 45 | 1-2 |
-| auth_service | 1 | 32 | 2-3 |
-| admin_service | 1 | 9 | 3 |
-| reporting_service | 2 | 38 | 4 |
-| core_service | 3 | 156 | 5-6 |
-
-They started with analytics (zero dependencies, low risk) and saved core_service for last because it had the most shared assets and the highest dependency count.
-
-#### Results:
-
-The team completed the migration across all 5 services in 6 weeks with zero downtime and zero rollbacks. Asset compile times dropped by 88%, and the shared asset cache hit rate reached 94%.
-
-On the cost side, the faster builds saved roughly $4,800/year in CI pipeline costs, better caching cut CDN bandwidth by $2,100/year, and the team estimated $14,200/year in developer time savings from faster deploys. Those numbers add up when you multiply across 5 services.
-
-#### Implementation Highlights:
-
-```javascript
-// Shared component with import map
-// shared_assets/app/assets/javascripts/components/modal.js
-export class Modal {
-  constructor(element) {
-    this.element = element;
-    this.setupEventListeners();
-  }
-
-  setupEventListeners() {
-    this.element.querySelector('.close').addEventListener('click', () => {
-      this.close();
-    });
-  }
-
-  open() {
-    this.element.classList.add('active');
-  }
-
-  close() {
-    this.element.classList.remove('active');
-  }
-}
-
-// Each service's import map pins the shared component
-// config/importmap.rb
-pin "components/modal", to: "shared_assets/components/modal.js"
-```
-
-### Case Study 3: Legacy Application Gradual Migration
-
-#### Background:
-- **Application**: 10-year-old Rails monolith
-- **Assets**: 600+ files with heavy jQuery dependencies
-- **Challenge**: Cannot afford complete rewrite
-- **Goal**: Incremental modernization
-
-#### Hybrid Approach Strategy:
-
-```ruby
-# Running Propshaft and Sprockets simultaneously during transition
-# Gemfile
-gem 'propshaft'
-# Note: bundling both propshaft and sprockets-rails simultaneously
-# is not officially supported. Most teams migrate by serving legacy
-# pre-compiled assets from a separate URL prefix until the cutover.
-
-# config/environments/production.rb
-# Serve legacy assets from separate path
-config.assets.prefix = '/assets'
-
-# Mount legacy Sprockets assets via Rack::Static
-config.middleware.insert_before ActionDispatch::Static, Rack::Static,
-  urls: ['/legacy-assets'], root: Rails.root.join('public')
-```
-
-#### Incremental Migration Plan:
-
-| Phase | Duration | Scope | Assets Migrated | Approach |
-|-------|----------|-------|----------------|----------|
-| 1 | 2 months | New features only | 45 | Build new features with Propshaft/import maps |
-| 2 | 3 months | High-traffic pages | 120 | Migrate pages covering 80% of traffic |
-| 3 | 4 months | Admin/internal tools | 200 | Modernize internal tooling with lower risk |
-| 4 | 3 months | Remaining pages | 235 | Complete migration, remove Sprockets |
-
-The key insight was starting with new features. Every new page the team built used Propshaft from day one, so the legacy surface area stopped growing while the team chipped away at existing pages.
-
-#### Feature Flag Implementation:
-
-```ruby
-# lib/asset_pipeline_feature_flag.rb
-class AssetPipelineFeatureFlag
-  def self.use_propshaft_for?(controller_name, action_name)
-    # Gradual rollout based on traffic patterns
-    migrated_routes = [
-      {controller: "home", action: "index"},
-      {controller: "products", action: "show"},
-      {controller: "cart", action: "index"}
-    ]
-
-    migrated_routes.any? do |route|
-      route[:controller] == controller_name &&
-      route[:action] == action_name
-    end
-  end
-end
-
-# app/views/layouts/application.html.erb
-<% if AssetPipelineFeatureFlag.use_propshaft_for?(controller_name, action_name) %>
-  <%= javascript_importmap_tags %>
-<% else %>
-  <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
-<% end %>
-```
-
-#### Results After 12-Month Migration:
-
-The team migrated all 600 assets. Build time dropped from 187.5 seconds to 14.2 seconds, a 92% improvement.
-
-Page loads improved across the board: the homepage loaded 1.2 seconds faster, product pages gained 0.8 seconds, and checkout improved by 0.6 seconds. Cache hit rates jumped from 67% to 91% because individual file digests meant most assets survived code changes. Average cache size per user dropped from 8.7MB to 2.3MB, cutting bandwidth by 73%.
-
-#### What Made This Work:
-
-The founders gave the team a 12-month runway for incremental migration instead of demanding a big-bang cutover. Two developers worked on it full-time, which sounds expensive until you compare it to the cost of a botched migration on a 10-year-old monolith. The team built monitoring before they migrated a single asset, so they could track performance at every phase. And they ran A/B tests comparing Propshaft and Sprockets in production, which gave them hard data to justify continuing the migration when stakeholders got nervous.
-
-After 12 months, build times dropped from over 3 minutes to under 15 seconds, and the asset pipeline stopped being a topic at standup.
-
-If you're planning a large-scale migration and want a second pair of eyes, our [Rails development team](/services/app-web-development/) has done this migration dozens of times.
+If you're also containerizing your Rails app, check our [Rails 8 Docker deployment guide](/blog/rails-8-docker-deployment-production-guide/) for how Propshaft interacts with Docker-based builds.
 
 ## Troubleshooting Common Migration Issues
 
-Even with careful planning, Propshaft migrations can encounter challenges. This section covers the most common issues and their solutions based on real-world migration experiences.
+Even with careful planning, Propshaft migrations can encounter challenges. This section covers the most common issues and their solutions.
 
 ### Issue 1: Missing Asset Errors in Production
 

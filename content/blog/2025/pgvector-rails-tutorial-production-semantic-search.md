@@ -1,6 +1,6 @@
 ---
 title: "pgvector Rails Production Guide: Semantic Search 2025"
-description: "Build production semantic search in Rails with pgvector and PostgreSQL. Save $6,000/year vs Pinecone. Complete tutorial with 45+ code examples and benchmarks."
+description: "Build production semantic search in Rails with pgvector and PostgreSQL - no external vector database. Complete tutorial with working code examples and a benchmark you run on your own data."
 created_at: "2025-01-18T10:00:00Z"
 edited_at: "2025-01-18T10:00:00Z"
 draft: false
@@ -9,24 +9,17 @@ canonical_url: "https://jetthoughts.com/blog/pgvector-rails-tutorial-production-
 slug: "pgvector-rails-tutorial-production-semantic-search"
 ---
 
-**TL;DR**: pgvector delivers 40% faster similarity search than Pinecone for typical Rails apps while saving $500+/month in infrastructure costs. Here's how to migrate your Rails app from external vector databases to PostgreSQL in under 1 day.
+**TL;DR**: pgvector runs vector similarity search inside the PostgreSQL you already operate, which removes a service, a bill, and a synchronisation path. Here's how to migrate a Rails app off an external vector database.
 
-## The $6,000 Question: Why Am I Paying for Pinecone?
+## Why Am I Paying for a Separate Vector Database?
 
-Last month, a Rails startup CTO reached out: "We're spending $600/month on Pinecone for 50,000 product embeddings. Is there a cheaper option?"
+A separate vector database means a second store holding a copy of your data, a sync path between the two, a second uptime dependency, and a bill. For a catalogue that already lives in Postgres, every one of those is a cost you took on to get one feature.
 
-I asked him to run a simple test: dump his vectors into PostgreSQL with pgvector and compare query performance. The results shocked both of us.
+pgvector removes them by putting the vectors in the database that already holds the rows they describe. Embeddings update in the same transaction as the product. There is no eventual consistency window, because there is no second system.
 
-**Pinecone query time**: 89ms average (P95: 142ms)
-**pgvector query time**: 52ms average (P95: 78ms)
+Whether it is also *faster* for your workload is a question only your own data answers - it depends on vector count, dimensionality, index type, and how much of your working set fits in memory. This tutorial shows how to set up the benchmark so you measure that yourself rather than taking anyone's number for it.
 
-Not only was pgvector **40% faster**, but it ran on infrastructure he already paid for. His monthly savings: $600. His annual savings: **$7,200**.
-
-But here's what really convinced him to migrate: When Pinecone experienced a 3-hour outage, his semantic search went down. With pgvector, his search shared the same uptime as his primary database—99.95% over the past year.
-
-What if you could eliminate your vector database bill, simplify your infrastructure, improve performance, AND increase reliability? pgvector makes this possible by bringing semantic search directly into PostgreSQL—no new services, no data synchronization, no vendor lock-in.
-
-In this tutorial, you'll learn how to implement production-ready vector search in Rails using pgvector and the neighbor gem. You'll see working code, real performance benchmarks, and migration strategies that saved real startups thousands of dollars annually.
+In this tutorial, you'll learn how to implement production-ready vector search in Rails using pgvector and the neighbor gem, with working code and a migration path off an external vector database.
 
 ## What is pgvector? PostgreSQL Vector Search Explained
 
@@ -50,7 +43,7 @@ pgvector is a PostgreSQL extension that enables vector similarity search directl
 
 **Infrastructure Simplification**: Use your existing PostgreSQL server instead of managing another service. No Pinecone pods, no Qdrant clusters, no Weaviate instances.
 
-**Cost Savings**: Typical Rails apps save $300-1,000+/month by eliminating external vector database costs. For a 100K product catalog with 50K searches/month, pgvector costs $0 (using existing infrastructure) vs Pinecone's $70/month.
+**Cost Savings**: you stop paying for a separate service. Price your own case against the provider's current pricing page - the saving is whatever that line item costs you, and pgvector adds only storage on a server you already run.
 
 **Team Knowledge**: Your team already knows PostgreSQL. No learning curve for specialized vector databases, no new deployment pipelines, no additional monitoring tools.
 
@@ -62,7 +55,7 @@ pgvector is a PostgreSQL extension that enables vector similarity search directl
 
 **Choose pgvector when**:
 - Vector count < 10 million (pgvector's sweet spot)
-- Cost optimization is important ($500-2,000/year savings typical)
+- Cost optimization is important (you drop a per-service bill entirely)
 - Data sovereignty matters (healthcare, finance, government)
 - Team size is small (1-5 developers without specialized DevOps)
 - You value simplicity over absolute maximum performance
@@ -1379,7 +1372,7 @@ Implementing production-ready vector search requires careful architecture decisi
 - 🗓️ Book consultation: [Schedule with JetThoughts](https://calendly.com/jetthoughts)
 - 💬 Twitter: [@jetthoughts](https://twitter.com/jetthoughts)
 
-We've helped 15+ Rails teams save $500-2,000/month by migrating to pgvector. Let's see if it's right for you.
+If you're weighing pgvector against a hosted vector database, the deciding factors are usually collection size, write volume, and whether you already run Postgres.
 
 ---
 
