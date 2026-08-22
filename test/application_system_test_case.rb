@@ -10,7 +10,6 @@ require "puma"
 require "support/setup_capybara"
 require "support/setup_snap_diff"
 require "support/hugo_helpers"
-require "support/screenshot_section_config"
 
 # Every system-test run REWRITES the committed baseline PNGs in place
 # (snap_diff design: working tree = candidate, git HEAD = baseline). Starting
@@ -74,7 +73,13 @@ class ApplicationSystemTestCase < Minitest::Test
   include CapybaraScreenshotDiff::Minitest::Assertions
   include NavigationHelpers
 
-  include ScreenshotSectionConfig
+  # Floor for calls that pin no tolerance of their own. 0.02 let ~41,472 pixels
+  # of a 1920x1080 frame change before failing, so real diffs passed green and
+  # the baseline fossilized. Measured run-to-run noise is ~1e-6 (three runs of
+  # services/_technologies: 0.013838252 twice, then 0.013837770 - about 2 px of
+  # 2,073,600), so the floor only has to clear that: 0.0001 is ~207 px. Calls
+  # needing real slack (font-swap, animation) still pin their own tolerance.
+  DEFAULT_SCREENSHOT_CONFIG = {tolerance: 0.0001}.freeze
 
   private
 
@@ -96,8 +101,7 @@ class ApplicationSystemTestCase < Minitest::Test
     # resolves instantly once fonts are cached, so warm sessions pay ~0.
     page.evaluate_async_script("var done = arguments[0]; document.fonts.ready.then(function() { done(true) })")
 
-    section_config = screenshot_config_for(name)
-    final_options = section_config.merge(options)
+    final_options = DEFAULT_SCREENSHOT_CONFIG.merge(options)
 
     # skip_area CSS selectors resolve via Capybara `all(sel, visible: true)`
     # INSIDE the gem, which waits default_max_wait_time (5s) for EVERY selector

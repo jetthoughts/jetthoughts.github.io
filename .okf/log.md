@@ -66,6 +66,88 @@ set BASE_URL or the browser silently loads the LIVE site's CSS. The shared
 mobile table-clip defect (all three pilots, column 2 off-edge without
 affordance) is deliberately deferred to the winner's graft round - fixing it
 three times buys nothing.
+## 2026-08-21 - the macOS suite is green again: 50 baselines re-recorded, and the shield deleted on a measurement
+
+The macOS visual suite had been red on master since #540. It is green now:
+**79 runs, 218 assertions, 0 failures; 134 screenshots compared, no failures.**
+
+**What was stale, and why.** Two mechanics compose into fossilization: a
+capture overwrites the baseline PNG, then a PASSING run restores the git-HEAD
+image back over it. So any change small enough to pass leaves the baseline
+showing the OLD render, permanently. #540 was large enough to FAIL and simply
+was not re-recorded; #520 and #528 were not, and had been accumulating quietly
+under the old 0.02 default. Lowering the default to 0.0001 (#560) is what
+finally surfaced the quiet ones.
+
+**50 baselines re-recorded, every one classified before it was accepted** -
+by baseline-vs-candidate pixel transitions, never by difference_level:
+
+| n | class | evidence |
+|---|---|---|
+| 42 | #540 dark-surface recolour | `rgb(0,0,0)` -> `rgb(20,17,15)` is 94-100% of changed px |
+| 3 | #520 `description` backfill | template renders it as a grey lead; rendered text matches the frontmatter string verbatim |
+| 2 | #552 course module eyebrow | ruby eyebrow above the H1 shifts the page down |
+| 3 | #528 eyebrow consolidation | 1px vertical offset; realigning by one pixel gives residual **exactly 0.0000** in several bands |
+
+The DOMINANT cause of every file is explained, so nothing was withheld as a
+suspected regression. Independent review (opus, own instruments, exact
+transition count over all 50) reproduced the 42/3/2/3 split and agreed
+file-by-file. It also found what the classification does not name: three files
+carry a SECONDARY 1px displacement on top of the recolour, and two mobile files
+carry #540's sibling `--ruby-on-ink` token change. All position-or-token only,
+content identical - which is why no baseline is wrong, and why "zero
+unexplained" is the wrong phrase for "every dominant cause identified".
+
+**`SECTION_CONFIGS` is deleted, on a measurement rather than a judgement.**
+Its stated exit condition was "delete once the shielded screenshots are
+measured and re-recorded", so it was measured both ways in the same
+environment: **shield in place 48 failing screenshots, shield emptied 50**.
+Cost of deletion: **+2**, both on /services/, both the #528 1px offset, both
+re-recorded. Gone with it: `screenshot_config_for`, `extract_section_key`,
+`test/support/screenshot_section_config.rb` and its unit test.
+`DEFAULT_SCREENSHOT_CONFIG` survives as a plain constant on
+`ApplicationSystemTestCase`.
+
+**A correction to this bundle, found by doing the work.** test-gates said all
+five failing `/services/` screenshots were the #540 recolour. Only two are;
+the three small ones carry **0.13% or less** of the black->ink transition and
+are #528's 1px shift instead. A plausible cause that fits the loudest diffs
+will absorb the quiet ones that have a different cause - which is why the
+transition histogram, not the difference_level, is the classifier.
+
+**And one instrument error, caught by this bundle's own rule.** The first
+transition script loaded each baseline from a reused temp filename; libvips
+caches operations by filename, so runs 2..n silently re-compared image 1. It
+reported `services/_footer`'s baseline as a pure-black frame - a dramatic,
+completely false finding. A brightness audit over all 155 tracked macOS
+baselines refuted it in one pass (darkest mean 69/255, none below 1.0). The
+rewritten script carries a permanent control: an unchanged baseline
+(`desktop/vibe_code_rescue`) must report exactly 0 changed pixels, and does.
+"Test the instrument against a case where the answer is known" earned its
+keep here.
+
+**The Linux leg, and a screening rule worth reusing.** Recorded through CI on
+the branch (`gh workflow run test.yml --ref <branch> -f screenshots=true -f
+update-baselines=true`), never locally - local ARM Docker plants false drift.
+`FORCE_SCREENSHOT_UPDATE` rewrites EVERYTHING, so the bot commit touched 83
+files and had to be screened. Screen it with **the gate's own instrument**,
+not by eye or by file size: compute the libvips dE00 fraction above
+`perceptual_threshold = 2.0` for each file and compare it to the 0.0001
+default. That splits 83 into **77 keep** (would fail the gate, so the rewrite
+is real) and **6 drop** (difference_level exactly 0 - pure encoder churn).
+
+The Linux set being BROADER than the macOS one (77 vs 50) looks wrong and is
+not: earlier PRs re-recorded only one OS. #528 committed
+`macos/mobile/services.png` and left its `linux/` twin stale, so that file
+still carries a visible #528 shift on Linux; conversely
+`linux/.../inline_style_post` barely moves because Linux was re-recorded after
+#520 while macOS was 25% stale. **Neither OS baseline set is a subset of the
+other** - do not reason about one from the other.
+
+Run-to-run noise, measured across three runs of `services/_technologies`:
+0.013838252, 0.013838252, 0.013837770 - about **2 px of 2,073,600** (~1e-6),
+comfortably under the 0.0001 floor. The earlier claim that noise is exactly
+0.0 was very nearly right and is now stated as what was actually observed.
 
 ## 2026-08-21 - register pilot B, and the two ways a second pilot breaks the first pilot's gates
 

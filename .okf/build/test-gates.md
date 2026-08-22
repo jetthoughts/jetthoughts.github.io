@@ -88,32 +88,39 @@ genuinely new features**. This is the policy for what you ACCEPT, distinct from
 the mechanical default that decides whether the suite even reports a diff.
 
 That default is **0.0001** (`DEFAULT_SCREENSHOT_CONFIG`,
-`test/support/screenshot_section_config.rb:29`), lowered from 0.02 on 2026-08-21.
+`test/application_system_test_case.rb`), lowered from 0.02 on 2026-08-21.
 Both halves still hold: the accept-policy is unchanged, and individual calls
 may still pin their own tolerance (~30 do, mostly 0.03 - e.g.
 `test/system/blog_special_content_test.rb:136`), which the default never
 overrides. What changed is the floor for calls that pin NOTHING.
 
-**`SECTION_CONFIGS` is now a deliberate temporary shield, not configuration.**
-Its 7 keys all held 0.02, which equalled the old default - so the table was a
-silent no-op for as long as it existed. Lowering the default made it
-load-bearing: it now holds ~22 section screenshots at the OLD tolerance while
-their drift is unmeasured. It is kept ON PURPOSE and deleted once those are
-measured and re-recorded. Its keys match the tail after `/_`, which is easy to
-misread: `services/_technologies` hits the `technologies` key (0.02), while
-`services/_testimonials-header` does NOT hit `testimonials` and gets the
-default - one string, not a prefix. Both the table and the rule live in
-`test/support/screenshot_section_config.rb`, apart from
-`ApplicationSystemTestCase` so they can be unit-tested without booting Hugo,
-Capybara, or that file's dirty-fixtures `abort`; the near-miss above is pinned
-in `test/unit/screenshot_section_config_test.rb`.
+**`SECTION_CONFIGS` is GONE (deleted 2026-08-21), and its exit condition was
+met by measurement, not by judgement.** It existed for one day as a temporary
+shield holding ~22 section screenshots at the old 0.02 while their drift was
+unmeasured. Measured on the full macOS system suite, both sides in the same
+environment: **shield in place 48 failing screenshots, shield emptied 50** -
+a cost of exactly **+2**, `desktop/services/_use-cases` (0.017498) and
+`desktop/services/_technologies` (0.013838). Both were then classified and
+re-recorded, so the table was deleted along with `screenshot_config_for`,
+`extract_section_key`, `test/support/screenshot_section_config.rb` and its
+unit test. `DEFAULT_SCREENSHOT_CONFIG` survives as a plain constant on
+`ApplicationSystemTestCase`; there is no per-section tolerance table any more,
+and a call that needs slack pins its own tolerance.
+
+The deleted table's keys matched the tail after `/_`, which mattered because
+it was easy to misread: `services/_technologies` hit the `technologies` key
+(0.02) while `services/_testimonials-header` did NOT hit `testimonials` and
+got the default - one string, not a prefix. That subtlety is only recorded
+here now; nothing in the tree implements it.
 
 Why 0.0001: on a 1920x1080 capture, 0.02 means ~41,472 pixels must differ
 before the assertion fails. A one-cell copy edit measures 0.0004 (844 px), so
 the gate was blind to it by 50x - and passed, which is worse than failing
 (see the fossilization bullet below). Measured run-to-run noise on a static
-page is 0.0, so the floor only has to clear zero; 0.0001 (~207 px) fails that
-copy edit and goes green again when it is reverted. The noise claim is
+page is ~1e-6, not 0 (three runs of `services/_technologies`: 0.013838252,
+0.013838252, 0.013837770 - about 2 px of 2,073,600), so the floor has to clear
+that; 0.0001 (~207 px) sits 100x above it, fails that copy edit, and goes green
+again when it is reverted. The noise claim is
 checkable without re-running the copy edit: two independent runs of the same
 test reported difference_levels identical to 16 decimal places (0.6893909143518518
 for `services/_footer` every time), and 2 of the 7 screenshots stayed GREEN at
@@ -141,8 +148,28 @@ shield deletion, and they are exactly the two whose names happen to hit a
 SECTION_CONFIGS key. The two changes look like one line and one dead constant,
 but they move different screenshots.
 
-All of these are the #540 dark-surface recolour: real stale-baseline
-detections, not machine drift, and not caused by the tolerance change.
+All are real stale-baseline detections, not machine drift, and none is caused
+by the tolerance change.
+
+**Correction (2026-08-21, from the re-record that measured them):** an earlier
+version of this section attributed all five to the #540 dark-surface recolour.
+Only the two big ones are. `_footer` and `_cta-contact_us` are #540
+(`rgb(0,0,0)` -> `rgb(20,17,15)` is 97-99% of their changed pixels). The three
+small ones - `_testimonials-header`, `_use-cases`, `_technologies` - contain
+**0.13% or less** of that transition. They are a **1-pixel vertical offset**
+from #528's eyebrow consolidation, which touched `services-critical.css` and
+`content-block.css` and re-recorded only the two sections that exceeded 0.02;
+everything below the eyebrow on /services/ shifted 1px, passed under the old
+default, and fossilized. Measured, not inferred: realigning baseline to
+candidate by one pixel drops the residual to **exactly 0.0000 in several
+bands** and collapses the non-blend suspect count by orders of magnitude
+(`blog/index/_pagination`: 32,652 px at dy=0 -> 106 at dy=-1). It does NOT
+reach zero page-wide - a sub-pixel shift re-rasterizes glyphs rather than
+translating them, so `services/_use-cases` still differs in 22,895 px after
+the best realignment. Content is identical on inspection; position moved. The
+lesson is the one this file already teaches - a plausible cause that matches
+the loudest diffs will happily absorb the quiet ones that have a different
+cause entirely.
 
 # Below the fold is invisible to the gate at ANY tolerance
 
@@ -208,6 +235,24 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   frontmatter is set, and adds it to the ratchet. The script self-reports slack
   (`post-visuals: floor is loose, lower FLOOR to N`) - obey it: `FLOOR` dropped
   78 -> 72 on 2026-08-20 on the script's own prompt.
+- **Screen a CI re-record with the gate's own instrument** (2026-08-21).
+  `FORCE_SCREENSHOT_UPDATE` rewrites every baseline, so a CI record commit is
+  much larger than the real change set - the 2026-08-21 Linux record touched
+  83 files. Do not screen it by eye or by file size. Compute the libvips
+  **dE00 fraction above `perceptual_threshold = 2.0`** (what
+  `difference_level` actually measures) for each file and compare against the
+  0.0001 default: files above it would FAIL the gate, so the rewrite is real
+  and dropping them leaves CI red; files at exactly 0 are encoder churn and
+  should be reverted. That split was 77 keep / 6 drop, and it needs no
+  judgement call.
+
+  **Neither OS baseline set is a subset of the other**, so never infer one
+  from the other. Earlier PRs re-recorded only the OS they ran on: #528
+  committed `macos/mobile/services.png` and left `linux/mobile/services.png`
+  stale (still carrying the shift), while `linux/.../inline_style_post` was
+  already current from a post-#520 CI record when macOS was 25% stale. The
+  Linux record here was legitimately BROADER than the macOS one (77 vs 50).
+
 - **`FORCE_SCREENSHOT_UPDATE=1` re-records EVERYTHING** (2026-08-14). On
   `bin/dtest` it also disables the `git checkout -- .../linux` guard that
   normally discards sub-tolerance Rosetta drift, so a run rewrites all 45
@@ -271,7 +316,7 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
   record: 356 runs, 6329 assertions, 0 failures (run 32347402944). Note the
   governing tolerance for these is **0.03**, set per-call at
   `test/system/blog_special_content_test.rb:136` - NOT the
-  `DEFAULT_SCREENSHOT_CONFIG` in `test/support/screenshot_section_config.rb:29`,
+  `DEFAULT_SCREENSHOT_CONFIG` in `test/application_system_test_case.rb`,
   which only applies when a call omits an explicit tolerance.
 
 - **Content-only diffs skip the visual suites entirely** (Paul 2026-07-31).
