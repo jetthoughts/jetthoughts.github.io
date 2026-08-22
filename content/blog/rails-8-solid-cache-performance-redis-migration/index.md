@@ -864,17 +864,7 @@ class RedisOptimalUseCases
 end
 ```
 
-## Real-World Case Studies
-
-### Case Study 1: Content Management Platform
-
-A medium-sized content platform was running a 5GB Redis cache that cost $450/month. Their team migrated the bulk of their caching to Solid Cache and kept Redis only for real-time features -- about 10% of the original usage. After the switch, their infrastructure bill dropped to $125/month (a 72% reduction). They maintained an 85% cache hit rate, and average response times went up by 12ms -- a tradeoff they accepted because their users never noticed the difference and their ops team stopped getting paged about Redis memory pressure.
-
 We've covered [Rails performance optimization strategies](/blog/ruby-on-rails-performance-optimization-patterns-2026/) in depth if you're looking at the broader picture beyond caching.
-
-### Case Study 2: E-commerce Application (Memcached, not Redis)
-
-This one wasn't a Redis migration -- it was Memcached -- but the pattern applies to any external cache service. An online retail platform had been fighting cache invalidation race conditions in their Memcached cluster for months. A customer would place an order, the inventory cache wouldn't invalidate in time, and another customer would buy the same item. Their team switched to Solid Cache specifically for the transactional consistency: cache writes and deletes now live inside the same database transaction as the business logic, so race conditions disappeared entirely. They saved $320/month on Memcached hosting, simplified their deploys (no more Memcached cluster to coordinate), and their developers spent less time debugging stale cache issues because they could trace cache state in the same database queries they already knew.
 
 ## When NOT to Use Solid Cache
 
