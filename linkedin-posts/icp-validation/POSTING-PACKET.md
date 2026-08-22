@@ -4,11 +4,13 @@ build:
   list: never
 ---
 
-# Posting Packet — ICP post #1 (PULLED, being reworked)
+# Posting Packet — ICP post #1 (HISTORICAL — reworked and posted 2026-08-18)
 
 > **STATUS 2026-08-13: this jira-not-progress post was scheduled, then DELETED before publish** — Paul judged it AI slop (staged parable, no tactic, "So..." beat-marking). It exposed a broken doctrine in the pipeline ("story, not advice"), now corrected to **idea-first, deliver the point** (see `docs/workflows/linkedin-post-pipeline.md` + `linkedin-posts/README.md`). This post is a **rescue-lane** draft to be REVISED to the new shape, not reposted as-is. The first idea-first post that DID ship is the course-lane `course-promo/week1-thu-validate-before-build.md` (scheduled 3:30pm CEST 2026-08-13, text-only; image is the manual gap). The rescue-lane 2-week clock has NOT started.
 
-**For Paul. Total effort: copy the text block below, paste into LinkedIn, post.** Nothing else. This activates the campaign and starts the kill-criteria clock (register C1 addendum, 2026-08-08).
+> **STATUS 2026-08-22 — supersedes the 08-13 note above AND the paste block below.** The rework happened and SHIPPED: `week1-mon-jira-not-progress.md` (idea-first revision) was posted **2026-08-18** (`posted_url` in its frontmatter; metrics row in `../metrics-ledger.md`, first read 2026-08-20). **The rescue-lane clock IS running.** Do NOT paste the block below — it is the deleted 08-13 parable, kept only as history. Next post comes from the approved drafts (`week1-tue-staging-question.md`, `week1-wed-trust-signals-poll.md`) at the Stream 0 cadence.
+
+~~**For Paul. Total effort: copy the text block below, paste into LinkedIn, post.** Nothing else. This activates the campaign and starts the kill-criteria clock (register C1 addendum, 2026-08-08).~~ *(Superseded 2026-08-22 — already activated; see the status note above.)*
 
 Source draft: `week1-mon-jira-not-progress.md` — quoted **verbatim** below; it passed 5 documented critic passes including Paul's own 2026-05-11 corrections (cinematic beat-marking removed). Do not edit before posting; if you want changes, say so and the revision goes back through `reflexion-reflect` first.
 

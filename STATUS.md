@@ -17,7 +17,7 @@
 
 | Workstream | State | Next step | Entry point |
 |---|---|---|---|
-| LinkedIn (primary demand lane) | **LIVE** — 3 posts published (2026-08-13/18/19), first metrics read 2026-08-20; ICP-E lane 3/10 drafted, validation clock running | Next post per POSTING-PACKET cadence (Stream 0, 3-4/wk) | [`metrics-ledger`](linkedin-posts/metrics-ledger.md) · [`plan`](docs/workflows/linkedin-icp-validation-plan.md) |
+| LinkedIn (primary demand lane) | **LIVE** — 3 posts published (2026-08-13/18/19), first metrics read 2026-08-20; ICP-E lane on disk: 1 posted + 4 approved (of 10 planned), validation clock running | Post an approved draft (week1-tue / week1-wed) at Stream 0 cadence (3-4/wk) | [`metrics-ledger`](linkedin-posts/metrics-ledger.md) · [`plan`](docs/workflows/linkedin-icp-validation-plan.md) |
 | 2608 site design system (v2 `/next/` rail) | Paused 2026-08-22 mid-flight; 3 pilots built + voted | Apply 20.09 repositioned copy; then Paul's 5 decisions | [`2608 README`](docs/projects/2608-site-design-system/README.md) |
 | Blog / SEO (2510) | Constrained by 20.09 §1 (outreach first). R-queue empty/retired; replacement queue is §13 (restocked 2026-08-21) | Per §1: LinkedIn cadence + sourcing outrank a new post; when drafting, take §13 N-queue | [`20.09 §13`](docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md) |
 | 2605 course | v2 live; measuring. Diagnosis: **arrival, not content** (GSC/GA/Clarity triple-read 2026-08-20) | Arrival/discovery actions per 50.05; no new funnel posts on the unproven bridge | [`TASK-TRACKER`](docs/projects/2605-tech-for-non-technical-founders/TASK-TRACKER.md) |
