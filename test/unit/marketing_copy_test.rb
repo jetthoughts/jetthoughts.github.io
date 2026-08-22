@@ -242,9 +242,10 @@ class MarketingCopyTest < Minitest::Test
   # measured count, then prove it is exact by dropping it one lower and watching
   # it fail.
   #
-  # 16 survivors, all case-study headings in posts not yet swept. Run the test
-  # to list them - it prints file:line for every one.
-  FABRICATION_BASELINE = 16
+  # 9 survivors, all in the same three posts, all parked by an explicit decision
+  # rather than by neglect. Every other carrier has been cleared. Run the test to
+  # list them - it prints file:line for every one.
+  FABRICATION_BASELINE = 9
 
   def test_blog_does_not_regress_on_fabricated_claim_markers
     hits = fabrication_hits.sort

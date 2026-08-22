@@ -227,47 +227,6 @@ Document specific examples of business value creation. Instead of general statem
 
 ---
 
-## Case study: How a 12-person team created $5M in value
-
-Let's look at a real example of transformation. A mid-size financial services company had a 12-person internal development team that was constantly defending their budget.
-
-**The Challenge:**
-- $2.8M annual team cost
-- Increasing pressure to outsource
-- No clear business value measurement
-- Competing with external vendors on cost alone
-
-**The Transformation:**
-We helped them implement a comprehensive value measurement framework and stakeholder communication strategy.
-
-**Value Creation Breakdown:**
-
-*Efficiency Gains: $2.4M annually*
-- Loan processing automation: 65% time reduction = $900K
-- Compliance reporting automation: 80% time reduction = $650K
-- Customer onboarding optimization: 45% time reduction = $420K
-- Internal workflow improvements: Various = $430K
-
-*Revenue Enablement: $1.8M annually*
-- Faster loan approvals increased customer satisfaction and referrals
-- Sales configuration tools reduced quote generation time by 60%
-- Customer portal improvements reduced churn by 8%
-
-*Risk Mitigation: $800K annually*
-- Compliance automation prevented estimated $600K in potential fines
-- Security monitoring prevented estimated $200K in incident costs
-
-**Total Value Created: $5M**
-**Investment: $2.8M**
-**Net ROI: 79%**
-
-**The Result:**
-Instead of facing budget cuts, the team received approval for 3 additional developers and a $400K platform modernization project.
-
-The key wasn't just measuring value—it was communicating that value in terms executives understood and cared about.
-
----
-
 ## Practical implementation: Your 90-day transformation plan
 
 Ready to transform your internal team from cost center to profit driver? Here's a practical implementation plan.
