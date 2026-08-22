@@ -206,6 +206,17 @@ Also corrected: the ~1e-6 noise figure in test-gates and in the code comment
 was macOS-local and read as universal. Same overclaim shape the #566 reviewer
 caught one layer down.
 
+## 2026-08-22 - /call-it-a-day: session close is now a skill, not a memory
+
+The end-of-day close that was performed by hand today (settle threads, sync
+STATUS.md/OKF/trackers, store episodic+plan memories with resume recipes,
+stop own background tasks, hand back a day ledger) is codified as the
+repo-committed skill `.claude/skills/call-it-a-day/` - invocable as
+/call-it-a-day. Its self-check rule: every "later" in the handback must map
+to a written artifact, because a promise that lives only in the handback
+dies with the session. Placement verified against the known gitignore trap
+(check-ignore exit 1 + ls-files + live roster load - all three legs).
+
 ## 2026-08-22 - retrieval benchmark: distillation beats corpus size
 
 Five known-answer questions run against three knowledge stores. Ruflo memory
