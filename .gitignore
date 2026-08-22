@@ -68,7 +68,14 @@ claude-flow.config.json
 # only - regenerate with /ruflo-core:init-project; hand-authored skills/agents
 # elsewhere under .claude/ stay tracked)
 .claude/helpers/
-.claude/skills/
+# Generated skills are ignored; hand-authored ones are un-ignored by name below.
+# `*` not `/` so git descends into the directory and the negations can match.
+.claude/skills/*
+!.claude/skills/README.md
+!.claude/skills/blog-next/
+# `:33` (.claude/**/*.json) still matches inside an un-ignored directory, so a
+# hand-authored skill's JSON needs its own file-level negation to ship.
+!.claude/skills/blog-next/**/*.json
 .claude/commands/claude-flow-*.md
 .claude/agents/browser/
 .claude/agents/consensus/
