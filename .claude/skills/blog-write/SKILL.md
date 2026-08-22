@@ -33,7 +33,36 @@ correction lands in one place:**
 - `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` - voice.
 - `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` - the reader.
 - `.okf/content/claims-canon.md` - what you are allowed to say. A number with no
-  in-repo source is a defect, not a detail.
+  in-repo source is a defect, not a detail, and so is a mechanism.
+
+## The claim rule that catches the errors gates cannot
+
+Fetch the source before you assert how something works. Not after, and not from
+memory - training memory returns a confident sentence whether or not it is true,
+which is the failure it cannot warn you about.
+
+Reach for the instrument that matches the claim: **`context7`** for how a
+library behaves (it reads the project's own docs and names real classes and
+methods), **`WebSearch` then `WebFetch` the primary source** for a study or
+statistic - press coverage of a study is not the study - and **NotebookLM** when
+you need to interrogate a body of sources. `blog-pipeline.md` STEP 4f has the
+full routing.
+
+**Search for the rebuttal, not the confirmation.** Query for criticism and
+failed replications of what you are about to assert. Searching for support
+returns support; that is what it is for.
+
+**This applies hardest when you are EDITING.** Deleting a bad claim and writing
+a replacement feels like cleanup, so the replacement gets less scrutiny than
+anything you write from scratch - and it is a fresh assertion carrying the same
+burden. Claims-canon records the case: the same author wrote the same Propshaft
+sentence twice on one day, wrong when it was framed as a fix, right when it was
+framed as writing, because only the second one triggered "go read the README".
+
+The mechanical gates cannot help you here. A ratchet counts invented SHAPES; a
+wrong explanation has no shape. If a sentence says how something behaves and you
+did not open its documentation in this session, either open it or soften the
+sentence until it stops being a claim.
 
 ## What you need before drafting
 
@@ -69,6 +98,8 @@ paraphrase it from memory - open it.
 The gates that most often get skipped, named here so they are not:
 
 - **STEP 4e self-critique** (`reflexion-reflect`) before the critic panel.
+- **STEP 4f claim sourcing** - name the URL you opened for every claim about how
+  an external thing behaves. No gate covers this one.
 - **STEP 5a anti-AI pass** before the review loop, not after.
 - **STEP 5b slop gate: `slop >= 8/10`.** This is the blog scale, 0-10, higher is
   better. The course's `Slop <= 25` is a different scale in the other direction -
@@ -97,6 +128,16 @@ criteria scored, and the scores written into the commit message.
 ## Ship
 
 Feature branch, commit, `gh pr create` with the evidence. Never push to master.
+
+**Do NOT wait for CI on a content-only PR** (Paul 2026-08-22). Prose and
+frontmatter cannot move the app build, so local gates decide and you merge as
+soon as they are green.
+
+One thing does not come free: `content/**` triggers the link checker, and
+internal links are exactly what a post adds. Run **`bin/rake test:links`**
+locally in place of the wait. If you skip it, say so in the handback - the
+master push-run still crawls, so a broken link becomes a fix-forward defect
+rather than a caught one.
 
 **End the handback with the local review link** - `http://localhost:<port>/blog/<slug>/`.
 One dev server per session, never 1313:

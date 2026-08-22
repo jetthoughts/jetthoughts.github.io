@@ -71,6 +71,49 @@ hardcoded its own copy instead of reading the param.
 shipped in structured data on ~1,147 URLs for years with nothing backing it; the
 real figure was 9. Before publishing a number, name where it comes from.
 
+**A MECHANISM is a claim too, and it is the more dangerous kind.** A number
+announces itself as something to check. An explanation of how a thing works
+reads as reasoning, so it gets waved through - which makes a wrong mechanism
+outlive a wrong number. Verify it against the primary source (the README, the
+release notes, the code) exactly as you would a figure, and prefer linking that
+source over asserting the mechanism unlinked.
+
+**A REPLACEMENT IS A NEW CLAIM (2026-08-22).** When you delete an unsourced
+claim, whatever you write in its place is not a fix - it is a fresh assertion,
+and it needs the same source you just demanded of the thing you removed. This is
+the failure mode de-fabrication has all of its own: the hole gets filled with
+less scrutiny than the claim that was in it, because the edit feels like
+cleanup rather than authorship.
+
+Demonstrated the same day, by the same author, on the same sentence. An agent
+removed an unsourced Propshaft timing figure and wrote that precompilation
+"stops being a build step that scales with your asset count" - false; every
+asset is still walked, fingerprinted and copied. Hours later the same claim went
+into a blog post, and *that* time the Propshaft README was fetched first and the
+sentence came out right. Same fact, same author, same day: sourced when it was
+framed as writing, unsourced when it was framed as fixing.
+
+**Use an instrument, and point it at the rebuttal.** `context7` for how a
+library behaves; `WebSearch` then `WebFetch` the PRIMARY source for a study
+(press coverage of a study is not the study, and the caveats travel with the
+number); NotebookLM for a body of sources. Then query for the criticism and the
+failed replications rather than the supporting case - searching for support
+returns support. Doing that on 2026-08-22 surfaced a randomised trial that
+complicated the claim being written and improved it: METR measured experienced
+developers 19% SLOWER with AI while they estimated themselves 20% faster, a
+~40-point gap between measurement and belief among experts working on their own
+code.
+
+**Correctness is not greppable, and no ratchet here claims otherwise.** Two
+candidate markers for wrong-mechanism claims were measured and rejected on
+2026-08-22 - an anonymous-company pattern (10 hits, mostly legitimate: "we
+measured a mid-size Rails API app") and an absolute-claim pattern (185 hits,
+almost entirely ordinary prose: "remote work is no longer a perk"). A gate
+noisier than the defect it guards is worse than no gate. What catches a wrong
+mechanism is a reader with domain knowledge and a brief that makes disagreement
+their job - see [fabrication-ratchet](/content/fabrication-ratchet.md) for what
+the mechanical gate does and does not cover.
+
 **Prefer a linked claim over a bigger unlinked one.** "4.8/5 on Clutch" with the
 profile linked beats "4.8/5 by 32 clients" unlinked. The link is the proof, and
 it cannot go stale the way a transcribed count does.

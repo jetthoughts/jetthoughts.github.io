@@ -196,6 +196,49 @@ CLAUDE.md gate for "any LinkedIn/blog/marketing draft", and the blog lane was th
 one lane that never wired it in (the LinkedIn lane has carried it in
 `.okf/workflows/linkedin-post-pipeline.md` since it was written).
 
+STEP 4f — CLAIM SOURCING (BLOCKING — the gates cannot do this one for you)
+List every sentence in the draft that says how something external behaves — a
+gem, a framework, a service, a competitor's product. For each one, name the tool
+you checked it with in THIS session. Not "I know this".
+
+Which instrument, by claim type:
+
+- **How a library/framework behaves** → `context7` (`resolve-library-id`, then
+  `query-docs`). It reads the project's own docs and returns class and method
+  names, so it settles mechanism questions a README summary can leave open.
+- **A study, benchmark or statistic** → `WebSearch` to find it, then `WebFetch`
+  the PRIMARY source. Press coverage of a study is not the study; go to the
+  publisher's own page and take the caveats along with the number.
+- **A body of sources you need to interrogate** → NotebookLM (`notebook_create`
+  → `source_add` → `notebook_query`; `research_start` → `research_status` →
+  **`research_import`** to find them first).
+- **What practitioners actually argue** → the HN Algolia API, and read the
+  thread, not the headline.
+
+**Search for the REBUTTAL, not the confirmation.** Query for criticism,
+disagreement and failed replications of the thing you are about to assert. On
+2026-08-22 that one habit turned up a randomised trial (METR) whose result
+complicated the post's own thesis and made it stronger — searching only for
+support would have returned support, which is what searching for support does.
+
+Anything you cannot name a source for gets softened until it stops being a
+claim, or cut. A mechanism reads as reasoning rather than as data, so it gets
+waved through where a number would be challenged — which is exactly why wrong
+mechanisms outlive wrong numbers.
+
+**Hardest when EDITING.** Deleting a bad claim and writing a replacement feels
+like cleanup, so the replacement is scrutinised less than anything written from
+scratch, while carrying the same burden. A replacement is a new claim
+(`.okf/content/claims-canon.md`). The 2026-08-22 Propshaft case is the worked
+example: same author, same sentence, same day — wrong when framed as a fix,
+right when framed as writing, because only the second framing triggered
+"go read the README".
+
+No ratchet catches this. A ratchet counts invented SHAPES; a wrong explanation
+is a well-formed sentence with the right vocabulary pointing roughly the right
+way. Two candidate markers were measured and rejected (10 and 185 hits, both
+mostly legitimate prose) — see `.okf/content/fabrication-ratchet.md`.
+
 STEP 5a — ANTI-AI WRITING PASS (MANDATORY — run BEFORE review loop)
 Run /humanizer on the draft. Scan every paragraph for these AI tells:
 - Rule of three (parallel triads) — break or combine
@@ -433,6 +476,12 @@ STEP 7 — VALIDATE
   - og:image resolves
   - Cover image renders correctly
   - All internal links work
+- `bin/rake test:links` — run it LOCALLY on a content PR (Paul 2026-08-22).
+  Content-only PRs merge on local gates and do not wait for CI, but `content/**`
+  is one of the link checker's trigger paths and internal links are exactly what
+  a post adds. This command is what you are skipping the wait for. Skipping it
+  too is allowed only if you say so — the master push-run still crawls, and the
+  broken link is then found after merge instead of before.
 
 STEP 8 — UPDATE CONTENT PLAN
 Edit docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md:

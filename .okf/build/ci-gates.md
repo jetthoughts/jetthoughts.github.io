@@ -198,6 +198,23 @@ A CSS/test/docs-only PR does not trigger it. Non-PR events carry no `paths` filt
 
 Caveat: with native `paths`, a filtered-out PR reports NO check (not a passing one). Fine unless `link_check` becomes a *required* status check - then add a skip-reporting companion job.
 
+## Content PRs do not wait for CI - but they DO owe the link check (2026-08-22)
+
+Docs/instruction/tooling PRs merge on local gates because no CI fires on them.
+Blog CONTENT was folded into the same no-wait rule by Paul on 2026-08-22, and
+the two cases are NOT symmetric: `content/**` is a trigger path above, so a
+content PR does fire this workflow, and internal links are precisely what a new
+post adds.
+
+The rule therefore carries an obligation rather than a blanket exemption: run
+**`bin/rake test:links`** locally in place of the wait - it is the same task the
+job runs, over a production build. Skipping both is allowed only when stated out
+loud, because the `push: branches: [master]` trigger still crawls after merge,
+which converts a pre-merge catch into a fix-forward defect.
+
+Reading "content-only merges on local gates" as "content-only has no link gate"
+is the misreading to guard against; the gate moved from CI to your terminal.
+
 # Visual regression is NOT a CI gate today - but the historical blocker is gone
 
 A CI screenshot job (`quick_test` + `bin/qtest`) was built and removed in PR #386. At the time the divergence was unfixable: baselines were captured on the then-Alpine/musl docker image while CI runs Ubuntu (glibc), and text rendered differently enough that measured divergence ran **3-28%** (mobile code blocks 0.28, plain content pages up to 0.21) - far above any tolerance that still catches a real regression.

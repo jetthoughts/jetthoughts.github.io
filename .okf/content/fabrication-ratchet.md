@@ -61,6 +61,25 @@ recognise a fabrication - it only has to notice the count going up.
   authors. That is a TEST-scoping call and NOT editorial absolution - those
   posts are still published on our domain.
 
+# What this gate does NOT catch
+
+It counts INVENTED shapes. It cannot tell you whether a claim is TRUE.
+
+A wrong mechanism has no shape - it is a well-formed sentence using the right
+vocabulary, and it usually points in roughly the right direction while getting
+the reason wrong. Two candidate markers were measured and rejected on
+2026-08-22: an anonymous-company pattern returned 10 hits mostly legitimate
+("we measured a mid-size Rails API app (60 controllers...)"), and an
+absolute-claim pattern returned 185 hits that were almost entirely ordinary
+prose ("remote work is no longer a perk", "eliminates Rails boot time"). Either
+one would cry wolf until people stopped reading the output.
+
+So a green run means "no invented-client shapes", not "the post is accurate".
+Correctness is caught by a reader with domain knowledge and a brief that makes
+disagreement their job - and by the sourcing rules in
+[claims-canon](/content/claims-canon.md), especially **a replacement is a new
+claim**, which is the rule this gate's own creation violated.
+
 # Prioritise by impressions, never by indignation
 
 When clearing survivors, rank by live GSC impressions. The first sweep

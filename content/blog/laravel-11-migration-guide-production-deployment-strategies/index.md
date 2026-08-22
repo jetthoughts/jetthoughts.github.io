@@ -11,6 +11,14 @@ metatags:
   image: cover.png
 ---
 
+> **Read this first (updated 2026-08-22). Do not land on Laravel 11 - target 13.**
+>
+> Both ends of this guide are now out of support. Per Laravel's own [support policy table](https://laravel.com/docs/13.x/releases): Laravel 10 security fixes ended **2025-02-04**, and Laravel 11 security fixes ended **2026-03-12**. Laravel 12 stopped receiving bug fixes on **2026-08-13** and is on security-only until February 2027.
+>
+> **Laravel 13 is the current release** (released 2026-03-17, bug fixes into Q3 2027, security to 2028). It needs **PHP 8.3 or higher** - a step past the 8.2 this guide assumes, so budget for that. Laravel's own release notes call 13 "a relatively minor upgrade in terms of effort" and say "most Laravel applications may upgrade to Laravel 13 without changing much application code."
+>
+> **The structural work below is still the work.** Laravel 11 rewrote the application skeleton - no `Kernel.php`, no default service providers, no `config/app.php` aliases - and 12 and 13 inherit that skeleton. Coming from Laravel 10, this is the hard leg, and 11 → 12 → 13 on top of it is comparatively light. Read this as the first and largest step, then follow the [official upgrade guide](https://laravel.com/docs/13.x/upgrade) for the remainder. Use PHP 8.3+ throughout rather than the 8.2 targeted below.
+
 ## TL;DR
 
 Laravel 11 removes boilerplate: no more `Kernel.php` files, no default service providers, no `config/app.php` aliases. This guide walks through every breaking change with a step-by-step migration checklist, zero-downtime deployment strategy, and testing plan. For apps running Laravel 10 in production.
