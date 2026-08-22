@@ -3,14 +3,11 @@
 
 set -euo pipefail
 
-# Set Docker platform for ARM-based Macs (M1/M2 chips)
-if [ "$(uname -s)" = "Darwin" ]; then
-  case "$(uname -m)" in
-    arm*)
-      export DOCKER_DEFAULT_PLATFORM=linux/arm64/v8
-      ;;
-  esac
-fi
+# No DOCKER_DEFAULT_PLATFORM override. Docker already defaults to the host
+# arch; forcing linux/arm64/v8 here did nothing for the test services (they
+# pinned linux/amd64 and won) while making four separate "it must be an arch
+# problem" diagnoses look plausible on 2026-08-22. See
+# .okf/build/rendering-stack.md.
 
 # One compose project PER WORKTREE. The project name namespaces containers,
 # networks and volumes, so a fixed "jtcom" meant two worktrees running

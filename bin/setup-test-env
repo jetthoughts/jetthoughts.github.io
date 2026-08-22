@@ -16,9 +16,13 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 CFT=$(tr -d '[:space:]' < .dev/cft-version)
-CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/jt-cft/$CFT"
-CHROME="$CACHE/chrome-linux64/chrome"
-DRIVER="$CACHE/chromedriver-linux64/chromedriver"
+case "$(uname -m)" in
+  aarch64|arm64) CFT_PLAT=linux-arm64 ;;
+  *)             CFT_PLAT=linux64 ;;
+esac
+CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/jt-cft/$CFT-$CFT_PLAT"
+CHROME="$CACHE/chrome-$CFT_PLAT/chrome"
+DRIVER="$CACHE/chromedriver-$CFT_PLAT/chromedriver"
 
 if [ "${1:-}" = "--print-env" ]; then
   echo "export CHROME_BIN=\"$CHROME\""
@@ -35,10 +39,10 @@ fi
 if [ ! -x "$CHROME" ] || [ ! -x "$DRIVER" ]; then
   echo "==> Downloading Chrome for Testing $CFT to $CACHE"
   mkdir -p "$CACHE" && cd "$CACHE"
-  curl -sSLO "https://storage.googleapis.com/chrome-for-testing-public/$CFT/linux64/chrome-linux64.zip"
-  curl -sSLO "https://storage.googleapis.com/chrome-for-testing-public/$CFT/linux64/chromedriver-linux64.zip"
-  unzip -oq chrome-linux64.zip && unzip -oq chromedriver-linux64.zip
-  rm -f chrome-linux64.zip chromedriver-linux64.zip
+  curl -sSLO "https://storage.googleapis.com/chrome-for-testing-public/$CFT/$CFT_PLAT/chrome-$CFT_PLAT.zip"
+  curl -sSLO "https://storage.googleapis.com/chrome-for-testing-public/$CFT/$CFT_PLAT/chromedriver-$CFT_PLAT.zip"
+  unzip -oq "chrome-$CFT_PLAT.zip" && unzip -oq "chromedriver-$CFT_PLAT.zip"
+  rm -f "chrome-$CFT_PLAT.zip" "chromedriver-$CFT_PLAT.zip"
   cd - >/dev/null
 fi
 "$CHROME" --version

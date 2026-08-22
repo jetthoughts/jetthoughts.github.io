@@ -65,7 +65,9 @@ jobs:
   screenshots:
     name: Screenshot Tests
     if: ${{ github.event_name == 'pull_request' || inputs.screenshots || inputs.update-baselines }}
-    runs-on: ubuntu-latest
+    # arm64 to match the local container (both run CfT linux-arm64 since
+    # .dev/cft-version moved to 153). Free for public repos.
+    runs-on: ubuntu-24.04-arm
     timeout-minutes: 20
     # BLOCKING since 2026-08-22: the report-only soak (2026-07-31, #413) ended —
     # its motivating defects were fixed (#560 tolerance, #566 baselines, #570

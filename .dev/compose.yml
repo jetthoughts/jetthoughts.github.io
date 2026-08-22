@@ -25,11 +25,11 @@ services:
   # Interactive shell (optimized)
   sh:
     image: jetthoughts.com-test:1.0.0
-    # amd64, not the host arch: this image pins Chrome for Testing linux64
-    # (.dev/cft-version) and records the linux/ screenshot baselines that CI
-    # (ubuntu-latest = amd64) renders. Building/running arm64 downloads an
-    # amd64 chrome it can only exec under emulation and drifts pixels from CI.
-    platform: linux/amd64
+    # Follows the HOST arch since 2026-08-22. Chrome for Testing began
+    # publishing linux-arm64 at 153 (.dev/cft-version pins 153.0.8010.5, the
+    # first Beta with it), and the Dockerfile picks the matching build - so an
+    # ARM Mac runs native instead of emulating amd64. CI moved to arm64
+    # runners in the same change, so both sides still render alike.
     build:
       context: ../
       dockerfile: ./.dev/Dockerfile
@@ -48,8 +48,7 @@ services:
   # Test runner with optimized dependency management
   t:
     image: jetthoughts.com-test:1.0.0
-    # amd64 to match CI's rendering (see `sh` service note above).
-    platform: linux/amd64
+    # Host arch, matching CI's arm64 runners (see `sh` service note above).
     build:
       context: ../
       dockerfile: ./.dev/Dockerfile
@@ -64,7 +63,8 @@ services:
       HUGO_CACHEDIR: "/tmp/hugo_cache_dtest"
       CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
       RUBY_THREAD_VM_STACK_SIZE: 1048576
-    # Chrome 152 needs >2g under amd64 emulation (OOM "tab crashed" at 2g).
+    # 4g was sized for amd64 EMULATION ("tab crashed" OOM at 2g). Native arm64
+    # should need less; left at 4g until measured rather than guessed down.
     mem_limit: 4g
     cpus: '4.0'
     ulimits:

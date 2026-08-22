@@ -32,8 +32,8 @@ ENV \
     BUNDLE_JOBS=4 \
     BUNDLE_PATH=/opt/bundle \
     BUNDLE_RETRY=3 \
-    CHROME_BIN=/opt/cft/chrome-linux64/chrome \
-    CHROMEDRIVER_PATH=/opt/cft/chromedriver-linux64/chromedriver \
+    CHROME_BIN=/opt/cft/chrome/chrome \
+    CHROMEDRIVER_PATH=/opt/cft/chromedriver/chromedriver \
     DEBUG_COLORS=true \
     DISPLAY=:99 \
     DOCKER=true \
@@ -79,11 +79,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Pinned Chrome for Testing + matching chromedriver (the rendering pin that
 # makes linux/ baselines reproducible - version in .dev/cft-version).
 COPY .dev/cft-version /tmp/cft-version
-RUN CFT=$(tr -d '[:space:]' < /tmp/cft-version) && mkdir -p /opt/cft && cd /opt/cft && \
-    curl -sSLO "https://storage.googleapis.com/chrome-for-testing-public/${CFT}/linux64/chrome-linux64.zip" && \
-    curl -sSLO "https://storage.googleapis.com/chrome-for-testing-public/${CFT}/linux64/chromedriver-linux64.zip" && \
-    unzip -q chrome-linux64.zip && unzip -q chromedriver-linux64.zip && \
-    rm chrome-linux64.zip chromedriver-linux64.zip && \
+RUN CFT=$(tr -d '[:space:]' < /tmp/cft-version) && \
+    case "$(dpkg --print-architecture)" in \
+      arm64) CFT_PLAT=linux-arm64 ;; \
+      *)     CFT_PLAT=linux64 ;; \
+    esac && \
+    mkdir -p /opt/cft && cd /opt/cft && \
+    curl -sSLO "https://storage.googleapis.com/chrome-for-testing-public/${CFT}/${CFT_PLAT}/chrome-${CFT_PLAT}.zip" && \
+    curl -sSLO "https://storage.googleapis.com/chrome-for-testing-public/${CFT}/${CFT_PLAT}/chromedriver-${CFT_PLAT}.zip" && \
+    unzip -q "chrome-${CFT_PLAT}.zip" && unzip -q "chromedriver-${CFT_PLAT}.zip" && \
+    rm "chrome-${CFT_PLAT}.zip" "chromedriver-${CFT_PLAT}.zip" && \
+    ln -sfn "/opt/cft/chrome-${CFT_PLAT}" /opt/cft/chrome && \
+    ln -sfn "/opt/cft/chromedriver-${CFT_PLAT}" /opt/cft/chromedriver && \
     "$CHROME_BIN" --version && "$CHROMEDRIVER_PATH" --version
 
 # Deterministic font rendering (see .dev/fonts.conf header).
