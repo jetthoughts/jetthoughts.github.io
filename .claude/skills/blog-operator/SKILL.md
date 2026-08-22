@@ -81,6 +81,17 @@ Concrete, in the order these tend to pay:
 Volume is not on that list. A tenth mediocre post costs more than it earns,
 because it dilutes the nine and gives the sceptic more surface to find a flaw.
 
+## Budget for the panel, not just the draft
+
+Writing a post is the cheap half. On 2026-08-22 three posts passed every check
+their author could run and a four-lens cold-eyes panel then found wrong numbers,
+footer-only citations, a broken shell command, and a section-level rhythm
+identical across all three.
+
+So when you sequence work, a post is not one unit. It is draft, then panel, then
+a fix pass that waits for all four reviewers before touching anything. Plan for
+the panel or you will ship the draft.
+
 ## The gates are not yours to waive
 
 Both hands carry their own blocking gates and they stay blocking. You may

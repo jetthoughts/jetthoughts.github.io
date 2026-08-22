@@ -16,17 +16,15 @@ canonical_url: 'https://jetthoughts.com/blog/when-did-a-test-last-fail-on-purpos
 related_posts: false
 ---
 
-Our CI link checker reported zero broken links for months.
+A link checker reporting zero broken links is telling you one of two things, and the output looks identical either way: it inspected everything and found nothing, or it inspected almost nothing. Ours had been doing the second since the day it shipped.
 
-It was checking a tenth of the site.
-
-Here is the number, from the run that caught it:
+Here is the run that caught it:
 
 ```
-🔍 149516 Total  🔗 15642 Unique  ✅ 15642 OK  🚫 0 Errors  👻 133874 Excluded
+🔍 149516 Total  🔗 31937 Unique  ✅ 15642 OK  🚫 0 Errors  👻 133874 Excluded
 ```
 
-**133,874 excluded.** That is not a filter doing its job - it is a green check mark attached to nothing, sitting on every pull request for as long as anyone on the team could remember seeing it any other way.
+**133,874 excluded** of 149,516. Only 15,642 links were ever looked at, and the gate had been reporting that as a pass on every pull request since the day it shipped.
 
 ## The bug is one flag, and you probably have it too
 
@@ -50,15 +48,11 @@ task :links do
 end
 ```
 
-Same command, same flags, one addition. The next run:
+Same command, same flags, one addition.
 
-```
-🔍 149740 Total  🔗 31888 Unique  ✅ 114239 OK  🚫 0 Errors  👻 35501 Excluded
-```
+Checked links went from 15,642 to **114,050** on the run that landed the fix - roughly a sevenfold increase in what the gate could actually see, with the excluded count dropping from 133,874 to the genuinely external links it should have been skipping all along.
 
-From 15,642 links checked to 114,239.
-
-![Links actually inspected, before and after the remap flag: 15,642 of 149,516 versus 114,239. Both runs reported zero errors.](checked.svg)
+![Links actually inspected, before and after the remap flag: 15,642 of 149,516 versus 114,050. Both runs reported zero errors.](checked.svg)
 
 ## Run this on your own repo before you keep reading
 
@@ -132,22 +126,24 @@ Three earlier injections had failed to go red, and the person doing it had blame
 
 Every one of these failures shared a tell, and it is cheap to look for: the check reported a verdict without ever reporting the size of the thing it had just examined.
 
-A gate that reports `0 failures` is telling you about its exit code and nothing else. A gate that reports `114,239 links checked, 0 errors` is telling you what it actually inspected before it decided everything was fine. Only the second kind can be caught lying.
+A gate that reports `0 failures` is telling you about its exit code and nothing else. A gate that reports `114,050 links checked, 0 errors` is telling you what it actually inspected before it decided everything was fine. Only the second kind can be caught lying.
 
 So: make every check print its denominator, and read it.
 
 ```
-[snap_diff] 287 screenshots compared     # a real number you can watch move
-lychee: 31,888 unique links checked      # not "link check passed"
+[snap_diff] 55 screenshots compared      # a real number you can watch move
+lychee: 114,050 links checked            # not "link check passed"
 ```
 
 If your CI output cannot distinguish "inspected everything and found nothing" from "inspected nothing", it is not a check. It is a green icon with a job title.
 
 ## What we do now, and what it costs
 
-One rule, and it is not negotiable here.
+SQLite is the case that should settle this. Its test suite is famously larger than the database itself, and it still carried a data-race bug for sixteen years. Tailscale hit it in production and [wrote up the hunt](https://tailscale.com/blog/sqlite-wal-reset-bug); the detail worth stealing is what the maintainers had to do to see it at all - the bug was "so rare, the SQLite developers had to add code to deliberately trigger it in their testing environments."
 
-A new test is not finished until someone has broken the thing it guards and watched it fail. Flaky failures do not count; this has to be deliberate, and someone has to be watching when it goes red.
+They broke it on purpose. Until they did, every run was green, and green meant nothing about that bug.
+
+So: a new test is not finished until someone has broken the thing it guards and watched it fail. Flaky failures do not count; this has to be deliberate, and someone has to be watching when it goes red.
 
 That adds maybe two minutes to writing a test.
 

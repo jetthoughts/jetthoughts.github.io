@@ -1,6 +1,6 @@
 ---
 title: "How to Audit Content You Didn't Write"
-description: "Someone spent $900,000 publishing fake research so chatbots would repeat it. The same economics apply to the blog your agency built. Four checks you can run."
+description: "A fake think tank published 100+ reports built to be repeated by chatbots, behind a $900,000 government contract. The same economics reached your blog. Four checks you can run."
 date: 2026-08-22
 draft: false
 author: "Paul Keen"
@@ -16,11 +16,9 @@ canonical_url: 'https://jetthoughts.com/blog/how-to-audit-content-you-didnt-writ
 related_posts: false
 ---
 
-The Hanover Institute for Public Policy published more than a hundred research reports, complete with footnotes, tables of contents, and the flat neutral register that policy writing has.
+There is no Hanover Institute for Public Policy. There is a website carrying more than a hundred reports under that name - footnotes, tables of contents, the flat neutral register that policy writing has - and behind it a marketing firm working on a government contract.
 
-It does not exist.
-
-[Responsible Statecraft traced it](https://responsiblestatecraft.org/israel-influence-chatgpt/) to Piro, Inc., and Politico found the Department of Justice filing showing $900,000 of Israeli government funding behind it. GPTZero flagged eleven of twelve sampled articles as machine-written.
+NewsGuard analyst Alice Lee connected it to Piro, Inc., [reported by Responsible Statecraft](https://responsiblestatecraft.org/israel-influence-chatgpt/); Politico first reported the Department of Justice filing, under which Piro has received $900,000 from the Israeli government for its work. GPTZero flagged all twelve sampled articles as AI-written - eleven with high confidence, one moderate.
 
 The interesting part is who the reports were written for. Piro's founder said it on LinkedIn: "When someone asks ChatGPT, Gemini, or Perplexity about your category, an answer comes back in one confident paragraph... we spent months reverse-engineering it."
 
@@ -28,7 +26,7 @@ Those reports were never aimed at readers. Their audience was the machine that a
 
 ## Your blog runs on the same economics
 
-Nobody spent $900,000 on your content.
+Nobody put a government contract behind your blog.
 
 That is the point. They did not have to, and neither did whoever produced yours, because manufacturing text that reads like expertise stopped being expensive somewhere around the middle of 2023.
 
@@ -40,7 +38,7 @@ Then a tool started drafting, and the person approving its output was not equipp
 
 You would think there is a number. There are several and they disagree - ten percent, a third, or half, depending on whose sample and whose detector.
 
-[Graphite](https://graphite.io/five-percent/more-articles-are-now-created-by-ai-than-humans) put the crossover, more machine-written articles than human ones, in November 2024. [Pew](https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/) ran ~490,000 Common Crawl pages through Open Pangram this month and found 10% carrying AI-authorship signals, rising to over a third among pages published after ChatGPT shipped. Both publish their error bars, which is the habit worth stealing whatever you make of the figures.
+[Graphite](https://graphite.io/five-percent/more-articles-are-now-created-by-ai-than-humans) put the crossover, more machine-written articles than human ones, in November 2024. [Pew](https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/) ran ~490,000 Common Crawl pages through Open Pangram this month and found 10% carrying AI-authorship signals, rising to over a third among pages published after ChatGPT shipped. Graphite states its own 4.2% false-positive rate and notes on its own page that this finding has since been superseded by a study averaging three detectors. Pew publishes no error bars at all - only the caveat that detectors "sometimes misclassify individual documents" and hold up in aggregate. Graphite tells you how wrong it might be; Pew tells you it might be wrong.
 
 Pew also split it by domain, and that is where you come in:
 
@@ -82,12 +80,11 @@ That shape is greppable:
 ```bash
 # every case-study heading in the archive
 grep -rniE '^#{2,4} .*case stud' content/ 
-
-# the anonymous-subject tell, right after one
-grep -rniE 'a (mid-siz|medium-siz|large)|\(anonymous' content/
 ```
 
-Run the first one and read every hit. Real client work names the client or does not get published, and you can apply that test without understanding a word of the subject matter.
+Run it and read every hit. Real client work names the client or does not get published, and you can apply that test without understanding a word of the subject matter.
+
+Do not try to automate the second half. We tried: an anonymous-subject pattern (`a mid-sized`, `a large`) returned ten matches that were nearly all legitimate, because "a large number of" and "a large team" are ordinary English. The heading is the cheap signal; the judgement stays human.
 
 **3. Ask whether a claim can be checked at all.**
 
@@ -101,12 +98,14 @@ Count yours:
 
 ```bash
 # posts over 400 words carrying zero outbound links to anywhere but your own domain
-for f in content/blog/**/index.md; do
+find content/blog -name '*.md' | while read -r f; do
   words=$(wc -w < "$f")
   links=$(grep -oE '\]\(https?://[^)]+\)' "$f" | grep -vc 'yourdomain.com')
   [ "$words" -gt 400 ] && [ "$links" -eq 0 ] && echo "$words words, 0 sources: $f"
 done
 ```
+
+Use `find`, not `content/blog/**/*.md` - bash does not expand `**` recursively unless `shopt -s globstar` is set, so the glob version silently matches nothing and reports success. That is the exact defect this post is about, and it was in my first draft of this command.
 
 A post making technical claims with zero citations is not a red flag about that post's accuracy so much as a flag that accuracy was never tested.
 
@@ -114,9 +113,9 @@ A post making technical claims with zero citations is not a red flag about that 
 
 Any post with a version number in the title has a shelf life its author never wrote down.
 
-A migration guide that recommends Laravel 11 today is sending readers onto a release whose security support ended in March 2026. Nothing in that guide has to be invented for it to do damage.
+Every framework you write about has a support table, and every one of your version-numbered posts is silently betting that the version it recommends is still on it. When that stops being true, the post does not change and nothing in it becomes false - it just starts pointing readers at an unpatched release.
 
-It was true when written, and became harmful without a word of it changing.
+That is the whole failure. No invention required.
 
 ```bash
 # every post whose title names a version - each one has an expiry date

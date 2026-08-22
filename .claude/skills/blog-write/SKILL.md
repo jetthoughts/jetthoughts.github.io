@@ -156,6 +156,68 @@ One dev server per session, never 1313:
 PORT=$((20000 + RANDOM % 20000)) bin/dev
 ```
 
+## What four cold-eyes reviewers found, and what it costs to skip them
+
+Three posts shipped on 2026-08-22 having passed my own checks. A four-lens panel
+then found defects in all three, and every category below is something no script
+and no self-review caught.
+
+**Numbers I was confident about were wrong.** A tool output was reproduced inside
+a fence with one field silently edited. A `[snap_diff] 287 screenshots compared`
+line took 287 from the *unit-test run count*. A link figure from today's run was
+used to illustrate a fix that landed weeks earlier at a different number. Every
+one felt remembered rather than invented, which is exactly why they survived.
+
+> Before you put a number in a fence, open the artifact that produced it and copy
+> the line. Numbers you "remember measuring" are the dangerous ones - you did
+> measure something, just not this.
+
+**Cited but never spent.** Two of three posts listed a source in the footer that
+the body never engages. A citation nobody uses is dressing, and one of ours had
+its claim on the cover image while the post never told the story.
+
+**A source's own words checked, its attribution not.** "Responsible Statecraft
+traced it" - they reported it; a NewsGuard analyst traced it. "Both publish their
+error bars" - one does. Verifying the quote is not verifying the sentence around
+the quote.
+
+**Commands shipped without running them.** A `for f in content/blog/**/index.md`
+loop matches nothing in bash without `shopt -s globstar` - it reports success
+having checked zero files, in a post about checks that check nothing. Run every
+command you publish, in a clean shell, and show what it returned.
+
+**The macro-rhythm, which is the actual slop.** Every H2 ended on a one-sentence
+aphorism paragraph. Sentence lengths varied; the choreography did not -
+"evidence, evidence, punchline, white space, next heading", five times a post,
+three posts. And all three opened on the identical two-beat reveal: flat claim,
+one-line rug-pull. Individually each works. As a set, a reader hears the machine.
+
+> Read two consecutive sections aloud. If they land the same way, one of them
+> has to change shape - not wording.
+
+**Cross-post repetition.** The same Laravel anecdote carried two same-day posts;
+all three closed on the same pitch. The ICP reviewer's verdict: "as a subscriber
+I'd feel I read one post three times."
+
+## Run the panel, do not self-review
+
+Four lenses, spawned as separate agents of a DIFFERENT type than the writer:
+
+1. **ICP cold read** - give it `90.10`, ask where it stops reading and what it
+   would cut. Require three cuts per post.
+2. **Voice and AI tells** - give it `90.11` and STEP 5a. Ask for what a regex
+   cannot see: prose that is grammatical, on-pattern and lifeless.
+3. **Competitor standard** - give it `blog-writer-reference-samples.md` and have
+   it FETCH two current competitor posts, so it compares against writing rather
+   than a summary.
+4. **Claim verification** - every external claim fetched at the primary, every
+   in-repo number checked against the artifact that produced it.
+
+Brief each with goal and artifact, never with your conclusions. Require each to
+name something it would cut; a panel returning three approvals was not asked a
+real question. Run them in parallel and wait for all four before editing, or you
+will fix the same post four times.
+
 ## Three exits, and only three
 
 - **SHIPPED** - committed, PR open, gate verdicts quoted with their numbers.
