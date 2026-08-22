@@ -10,7 +10,7 @@
 ## Goals
 
 - **Company goals / OKR / weekly numbers**: vault `~/Documents/pkm/jt-operations.md` (host-only — vault owns operations; this repo carries growth/marketing execution).
-- **Bet of record**: Vibe Code Rescue — status is vault-owned (`jt-vcr-runbook.md`; repo mirror [`docs/business/index.md`](docs/business/index.md)); campaign artifacts in [`docs/projects/2607-vibe-code-rescue/`](docs/projects/2607-vibe-code-rescue/backlog.md).
+- **Bet of record**: Vibe Code Rescue — **Parked until Sept 2026** per the repo mirror [`docs/business/index.md`](docs/business/index.md) (vault `jt-vcr-runbook.md` is authoritative); campaign artifacts in [`docs/projects/2607-vibe-code-rescue/`](docs/projects/2607-vibe-code-rescue/backlog.md).
 - **Content plan of record**: [`20.09 (Aug 2026)`](docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md) — its §1 governing constraint: **outreach outranks new posts**.
 
 ## Now / WIP
@@ -18,20 +18,20 @@
 | Workstream | State | Next step | Entry point |
 |---|---|---|---|
 | LinkedIn (primary demand lane) | **LIVE** — 3 posts published (2026-08-13/18/19), first metrics read 2026-08-20; ICP-E lane on disk: 1 posted + 4 approved (of 10 planned), validation clock running | Post an approved draft (week1-tue / week1-wed) at Stream 0 cadence (3-4/wk) | [`metrics-ledger`](linkedin-posts/metrics-ledger.md) · [`plan`](docs/workflows/linkedin-icp-validation-plan.md) |
-| 2608 site design system (v2 `/next/` rail) | Paused 2026-08-22 mid-flight; 3 pilots built + voted | Apply 20.09 repositioned copy; then Paul's 5 decisions | [`2608 README`](docs/projects/2608-site-design-system/README.md) |
+| 2608 site design system (v2 `/next/` rail) | Paused 2026-08-22 mid-flight; 3 pilots built + voted | Apply the [repositioned pilot copy](docs/projects/2608-site-design-system/20-29-strategy/20.09-repositioned-pilot-copy.md) (2608's own 20.09 — not the content plan); then Paul's 5 decisions | [`2608 README`](docs/projects/2608-site-design-system/README.md) |
 | Blog / SEO (2510) | Constrained by 20.09 §1 (outreach first). R-queue empty/retired; replacement queue is §13 (restocked 2026-08-21) | Per §1: LinkedIn cadence + sourcing outrank a new post; when drafting, take §13 N-queue | [`20.09 §13`](docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md) |
-| 2605 course | v2 live; measuring. Diagnosis: **arrival, not content** (GSC/GA/Clarity triple-read 2026-08-20) | Arrival/discovery actions per 50.05; no new funnel posts on the unproven bridge | [`TASK-TRACKER`](docs/projects/2605-tech-for-non-technical-founders/TASK-TRACKER.md) |
+| 2605 course | v2 live; measuring. Diagnosis: **arrival, not content**; course SEO/AEO **closed** (Paul 2026-08-21) | LinkedIn arrival-test cards **LI-0…LI-D** in [`content-plan`](linkedin-posts/content-plan.md); no new funnel posts on the unproven bridge | [`TASK-TRACKER`](docs/projects/2605-tech-for-non-technical-founders/TASK-TRACKER.md) |
 | 2607 campaign tasks | Cold-public-sourcing premise tested and **failed** (3 sweeps, 4 venues, 0 verified-fresh rows; Reddit still un-openable) | Sept-restart Paul decision: retire the cold lane or buy Reddit API access (backlog §c) | [`2607 backlog`](docs/projects/2607-vibe-code-rescue/backlog.md) |
-| Test/CI hygiene | One known red (stale linux baseline, see 2608 README §Known red) | Diff record-vs-test build paths before re-recording | [`test-gates`](.okf/build/test-gates.md) |
+| Test/CI hygiene | One known red (stale linux baseline) | Diff record-vs-test build paths before re-recording | [`2608 README §Known red`](docs/projects/2608-site-design-system/README.md) |
 
-**Not in flight**: 2604 typography — closed 2026-08-08 (P2 leftovers re-homed). 2509 CSS migration — Phase C complete 2026-07-19, Phase D backlog dormant; the 2608 clean-slate rail is the live CSS strategy ([ADR-0006](docs/adr/0006-clean-slate-dual-run.md)).
+**Not in flight**: 2604 typography — closed 2026-08-08 (P2 leftovers re-homed). 2509 CSS migration — **project complete 2026-07-19** (tracker in maintenance mode; the dormant remainder is the Phase-E groomed backlog + trigger-conditioned items); the 2608 clean-slate rail is the live CSS strategy ([ADR-0006](docs/adr/0006-clean-slate-dual-run.md)).
 
 ## Blocked on Paul
 
 | What | Where the full ask lives |
 |---|---|
 | Five 2608 decisions (register pick, 3 claims, first page, legacy CTO sweep, Sept measurement gate) | [`2608 README`](docs/projects/2608-site-design-system/README.md) |
-| **Joy Adamson override** (1 min; only survivor of outreach batch 1, still publicly unanswered) | [`20.09 §1`](docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md) desk table + 2607 backlog card #12 |
+| **Joy Adamson override** (1 min; Paul's one override candidate from outreach batch 1, still publicly unanswered) | [`20.09 §1`](docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md) desk table + 2607 backlog card #12 |
 | Three 2605 fabricated-fact findings (five-tech-words client claim, $78K/$400 story, SVG chart stats) | [`2605 TASK-TRACKER`](docs/projects/2605-tech-for-non-technical-founders/TASK-TRACKER.md) §Aug-20 sweep |
 | 2607 T3 (Gmail warm-source consent) + T10 (split strategy docs, [#449](https://github.com/jetthoughts/jetthoughts.github.io/issues/449)) | [`2607 backlog`](docs/projects/2607-vibe-code-rescue/backlog.md) |
 

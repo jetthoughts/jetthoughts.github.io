@@ -6,7 +6,7 @@
 >
 > **Company FACTS are NOT vault-owned.** Every claim in `.okf/content/claims-canon.md` is canon HERE, enforced by `test/unit/marketing_copy_test.rb`. Never copy a company number out of a vault note into published copy (the vault itself carried two banned strings on 2026-08-17). The vault decides what we're doing; the canon decides what we're allowed to say.
 
-**What's in flight + goals**: `STATUS.md` at repo root — the cold-start surface; update it in the same commit as any WIP change (rule in §Behavioral Constraints).
+**What's in flight + goals**: `STATUS.md` at repo root — the cold-start surface; update it in the same commit/PR as any WIP change (rule in §Behavioral Constraints).
 
 **Type**: Hugo static site blog | **Build**: `bin/hugo-build`
 **Test**: `bin/qtest --changed` (per change — tests the pages your diff touches) / `bin/test --smoke` (fixed 17-test core net, ~50s / ~30s CI) / `bin/rake test:critical` (milestones) / `bin/test` + `bin/dtest` (PR prep). qtest and smoke are complementary: qtest follows your diff, smoke is a constant basics check.

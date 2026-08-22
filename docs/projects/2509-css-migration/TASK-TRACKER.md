@@ -3,7 +3,7 @@
 **Purpose**: Status tracking for the CSS maintainability goal — FL-Builder export CSS retired page-by-page (strangler rewrites)
 **Update Frequency**: After each sprint or status change
 **Last Updated**: 2026-07-19
-**Current Phase**: ✅ PHASE C COMPLETE (2026-07-19) - C1 #371 · C2 #372 · C3 #374 · C4 #375 · C5 dedup. Phase D backlog defined below.
+**Current Phase**: ✅ **PROJECT COMPLETE (2026-07-19)** — see §PHASE D COMPLETE below; tracker in maintenance mode, Phase-E groomed backlog + trigger-conditioned items dormant. *(Header corrected 2026-08-22 — it still said "Phase C complete, Phase D backlog defined" long after line ~700 recorded Phase D done; the stale header was copied into STATUS.md's first commit, exactly the failure the artifact-not-tracker-line rule exists for.)*
 
 ---
 

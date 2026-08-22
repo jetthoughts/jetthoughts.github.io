@@ -46,9 +46,10 @@ onboarding path:
 
 **First visit — read in this order:**
 1. `STATUS.md` (repo root) — cross-project view: what's in flight, goals, blockers
-2. The project's `README.md` or `GOAL-AT-A-GLANCE.md` — one-page status / exec summary (2608's README is the template: status paragraph, read-order table, open decisions, known reds)
+2. The project's one-page entry: `README.md`, `GOAL-AT-A-GLANCE.md`, or `PROJECT-INDEX.md` — whichever exists (2608's README is the template: status paragraph, read-order table, open decisions, known reds)
 3. `TASK-TRACKER.md` or `backlog.md` — live task queue, active phase
 
+**Project health** (where present): PM health reports in `40-49-review/40.10-*.md` (e.g. 2605).
 (The former `.agent/STATUS.md` / `.agent/prd/PRD.md` / `.agent/tasks.json` stack never existed in this repo — removed 2026-08-22; root `STATUS.md` is the cross-project dashboard.)
 
 **Skills:** Project-specific skills in `.skills/`. Global skills loaded via

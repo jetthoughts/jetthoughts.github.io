@@ -2,7 +2,7 @@
 
 > **Status: READY TO ACTIVATE (2026-08-08)** — 3 of 10 posts drafted, zero posted; the 2-week window starts when **Paul posts #1 from [`linkedin-posts/icp-validation/POSTING-PACKET.md`](../../linkedin-posts/icp-validation/POSTING-PACKET.md)** (copy, paste, post — nothing else). This campaign is now the **PRIMARY demand lane** (OS Rock 1, re-weighted 2026-08-08 after the warm-names premise fell). When live, cadence fits inside 20.09 §7's **Stream 0 total of 3-4 posts/week** (shared with course-promo) — not the original 5/week. The hypotheses, hooks, and reply-keyword CTAs below remain the campaign design of record.
 
-> **Update 2026-08-22:** posting is LIVE — the status line above ("zero posted") is superseded. `linkedin-posts/metrics-ledger.md` carries three posted rows (2026-08-13, 08-18, 08-19; first metrics read 2026-08-20), including `week1-mon-jira-not-progress` from this campaign's own lane, so the validation clock is running.
+> **Update 2026-08-22:** posting is LIVE — the status line above is superseded on both counts: "zero posted" (three posted rows in `linkedin-posts/metrics-ledger.md`: 2026-08-13, 08-18, 08-19, first metrics read 2026-08-20, including `week1-mon-jira-not-progress` from this campaign's own lane — the validation clock is running) and "3 of 10 posts drafted" (lane on disk: 1 posted + 4 approved, measured from frontmatter `status:` fields).
 
 **Purpose:** Validate whether LinkedIn can surface and qualify ICP-E: non-technical founders who feel stuck with a dev shop, freelancer, offshore team, or AI-heavy build they cannot evaluate.
 **Window:** 2 weeks from first post (clock starts when Paul posts #1)

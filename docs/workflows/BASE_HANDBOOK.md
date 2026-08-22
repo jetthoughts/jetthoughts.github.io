@@ -17,6 +17,9 @@ Use this as the shared boilerplate for agents and skills. Keep agent/skill files
 2. `Search the codebase at <repo root>/knowledge for: "[topic]"`
 3. `Get library docs for "[framework]"`
 
+## Current WIP + goals (repo state)
+**Read `STATUS.md` at the repo root at session start** — the cross-project cold-start surface (goals, WIP, blocked-on-Paul, links only). Any session that changes what's in flight updates it in the same commit/PR.
+
 ## Business layer (company state)
 **All operations live in the vault** (`~/Documents/pkm`, host-only; Paul 2026-08-20): goal/OKR/rocks/weekly numbers in `jt-operations.md`, identity/positioning/bet status in `jt-business-os.md`, the bet's execution entry point in `jt-vcr-runbook.md` **▶ START HERE**. This repo carries growth/marketing campaigns only; `docs/business/` holds pointer stubs.
 

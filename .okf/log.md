@@ -79,6 +79,22 @@ Also corrected: the ~1e-6 noise figure in test-gates and in the code comment
 was macOS-local and read as universal. Same overclaim shape the #566 reviewer
 caught one layer down.
 
+## 2026-08-22 - STATUS.md round two: the surface broke its own rule on commit one
+
+A clean-context peer reviewer (second, independent 4-eyes pass after the
+in-session reviewer's 5-round PASS) failed the merged surface: STATUS.md
+called 2509 "Phase D dormant" because it copied the tracker's line-6 header -
+which still said "Phase C complete" while line ~700 recorded PROJECT COMPLETE
+2026-07-19. The file violated its own "verify against the artifact, never a
+tracker line" header rule on its first commit, written by the rule's author.
+Lesson reinforced, not new: a stale header is a tracker line too - read the
+file's END (newest state) before quoting its top. Also fixed on the same pass:
+STATUS.md was absent from the two session-start docs (BASE_HANDBOOK,
+flow-router - the exact path meant to discover it), flow-router still called
+the LIVE ICP campaign "PAUSED", and the AGENTS.md read-order rewrite had
+dropped two resolvable pointers (PROJECT-INDEX.md, 40.10 health reports)
+under a note that only justified deleting the phantom `.agent/` ones.
+
 ## 2026-08-22 - STATUS.md is the repo's cold-start surface
 
 Paul asked for a way for anyone landing in the repo to know the goals and the
