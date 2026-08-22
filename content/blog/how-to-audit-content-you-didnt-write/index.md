@@ -1,7 +1,7 @@
 ---
 title: "How to Audit Content You Didn't Write"
 description: "Someone spent $900,000 publishing fake research so chatbots would repeat it. The same economics apply to the blog your agency built. Four checks you can run."
-date: 2026-08-23
+date: 2026-08-22
 draft: false
 author: 'JetThoughts Team'
 slug: how-to-audit-content-you-didnt-write
