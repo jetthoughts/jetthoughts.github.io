@@ -2,7 +2,15 @@
 
 **ADR-0007**
 **Date:** 2026-08-21
-**Status:** Proposed
+**Status:** Proposed — paused 2026-08-22, resume via `docs/projects/2608-niche-research/HANDOFF.md`
+
+> **Two corrections landed after this ADR was drafted and change parts of it.**
+> (1) JetThoughts can hire anyone and is not limited to the current bench, so any reasoning
+> here that turns on "the bench already writes it" or "we cannot staff that" needs re-reading.
+> (2) The ICP is a startup that cannot afford more than one or two developers and whose founder
+> has little management skill — not the burned non-technical founder of ICP-E, which came from
+> the killed rescue campaign. The copy below is still written for ICP-E in places and needs
+> re-pointing. The Clutch quotes used in drafting are unverified pending a browser read.
 **Supersedes:** the rescue-led homepage positioning shipped with the Vibe Code Rescue campaign
 **Related:** vault `jt-business-os.md` (owns the offer decision), ADR-0006 (the `/next/` rail this copy will eventually ship through)
 
