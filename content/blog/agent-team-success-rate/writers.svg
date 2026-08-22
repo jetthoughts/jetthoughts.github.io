@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="330" viewBox="0 0 720 330" role="img" aria-labelledby="wt wd">
+  <title id="wt">The shape that fails and the shape both labs converged on</title>
+  <desc id="wd">Parallel writers fail: two agents each edit the codebase without seeing the other's decisions, producing incompatible halves. The pattern that works keeps writes single-threaded: several agents read and check, and one agent makes every change.</desc>
+
+  <rect width="720" height="330" fill="#0e0e14"/>
+
+  <text x="32" y="38" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="17" font-weight="700" fill="#e8eaf0">Many agents may think. One agent writes.</text>
+
+  <!-- FAILS -->
+  <text x="32" y="76" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#cc342d">PARALLEL WRITERS - THE SHAPE THAT KEEPS FAILING</text>
+
+  <rect x="32" y="90" width="112" height="34" rx="5" fill="#cc342d" opacity="0.85"/>
+  <text x="88" y="112" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#e8eaf0">Agent A</text>
+  <rect x="32" y="132" width="112" height="34" rx="5" fill="#cc342d" opacity="0.85"/>
+  <text x="88" y="154" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#e8eaf0">Agent B</text>
+
+  <text x="160" y="112" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" fill="#cc342d">&#8594;</text>
+  <text x="160" y="154" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" fill="#cc342d">&#8594;</text>
+
+  <rect x="188" y="90" width="150" height="76" rx="5" fill="#3a3f4d"/>
+  <text x="263" y="124" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#e8eaf0">both edit</text>
+  <text x="263" y="144" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#e8eaf0">the codebase</text>
+
+  <text x="356" y="122" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cc342d">Neither saw the other's decisions.</text>
+  <text x="356" y="142" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cc342d">Two reasonable halves that disagree.</text>
+
+  <line x1="32" y1="192" x2="688" y2="192" stroke="#3a3f4d" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- WORKS -->
+  <text x="32" y="222" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#a855f7">SINGLE-THREADED WRITES - WHAT BOTH LABS CONVERGED ON</text>
+
+  <rect x="32" y="236" width="112" height="26" rx="5" fill="#a855f7" opacity="0.45"/>
+  <text x="88" y="254" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" fill="#e8eaf0">reads</text>
+  <rect x="32" y="268" width="112" height="26" rx="5" fill="#a855f7" opacity="0.45"/>
+  <text x="88" y="286" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" fill="#e8eaf0">checks</text>
+
+  <text x="160" y="254" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" fill="#a855f7">&#8594;</text>
+  <text x="160" y="286" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" fill="#a855f7">&#8594;</text>
+
+  <rect x="188" y="236" width="150" height="58" rx="5" fill="#a855f7" opacity="0.85"/>
+  <text x="263" y="262" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#0e0e14">ONE writer</text>
+  <text x="263" y="282" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" fill="#0e0e14">owns every change</text>
+
+  <text x="356" y="262" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">The extra agents contribute</text>
+  <text x="356" y="282" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">intelligence, not actions.</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="290" viewBox="0 0 720 290" role="img" aria-labelledby="ft fd">
+  <title id="ft">Moved code as a share of changed lines, 2022 to 2026</title>
+  <desc id="fd">GitClear measured moved code - their proxy for reorganising work - at 21 percent of changed lines in 2022, 13 percent in 2023, and 3.8 percent year to date in 2026, across 623 million analyzed changes.</desc>
+
+  <rect width="720" height="290" fill="#0e0e14"/>
+
+  <text x="32" y="40" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="17" font-weight="700" fill="#e8eaf0">The tidying stopped</text>
+  <text x="32" y="62" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">Moved code as a share of changed lines - GitClear, 623M analyzed changes</text>
+
+  <!-- baseline -->
+  <line x1="70" y1="222" x2="660" y2="222" stroke="#3a3f4d" stroke-width="1.5"/>
+
+  <!-- 2022: 21% -->
+  <rect x="110" y="96" width="110" height="126" rx="4" fill="#a855f7" opacity="0.8"/>
+  <text x="165" y="88" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="20" font-weight="700" fill="#a855f7">21%</text>
+  <text x="165" y="244" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">2022</text>
+
+  <!-- 2023: 13% -->
+  <rect x="300" y="144" width="110" height="78" rx="4" fill="#a855f7" opacity="0.5"/>
+  <text x="355" y="136" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="20" font-weight="700" fill="#a855f7">13%</text>
+  <text x="355" y="244" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">2023</text>
+
+  <!-- 2026: 3.8% -->
+  <rect x="490" y="199" width="110" height="23" rx="4" fill="#cc342d"/>
+  <text x="545" y="191" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="20" font-weight="700" fill="#cc342d">3.8%</text>
+  <text x="545" y="244" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">2026 so far</text>
+
+  <text x="32" y="278" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#8b90a0">Duplication you can find later. The habit is harder to restart.</text>
+</svg>
