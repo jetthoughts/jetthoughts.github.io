@@ -1379,7 +1379,7 @@ Implementing production-ready vector search requires careful architecture decisi
 - 🗓️ Book consultation: [Schedule with JetThoughts](https://calendly.com/jetthoughts)
 - 💬 Twitter: [@jetthoughts](https://twitter.com/jetthoughts)
 
-We've helped 15+ Rails teams save $500-2,000/month by migrating to pgvector. Let's see if it's right for you.
+If you're weighing pgvector against a hosted vector database, the deciding factors are usually collection size, write volume, and whether you already run Postgres.
 
 ---
 

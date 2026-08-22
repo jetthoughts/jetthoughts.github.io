@@ -1344,29 +1344,7 @@ To help you estimate potential savings from implementing these strategies, we've
 
 ## Scaling Efficiently: Putting It All Together
 
-Let's see how combining all these strategies enables cost-effective scaling. Consider a real-world case study:
-
-### Case Study: Customer Support Chatbot
-
-**Initial State** (Month 1):
-- Volume: 5,000 conversations/month
-- Model: claude-3-5-sonnet for all requests
-- Average conversation: 6 turns, 400 tokens per turn
-- **Cost: ~$1,200/month**
-
-**After Optimization** (Month 3):
-- Volume: 20,000 conversations/month (4x growth)
-- Changes implemented:
-  1. **Caching layer**: 75% cache hit rate for common questions
-  2. **Model routing**: gpt-4o-mini for 70% of requests, claude-3-5-sonnet for 30%
-  3. **Context optimization**: Sliding window reduced context tokens by 60%
-  4. **Prompt compression**: 40% fewer instruction tokens
-
-**Results**:
-- Gross cost without optimization: $1,200 × 4 = $4,800/month
-- Actual cost with optimization: **~$1,400/month**
-- **Savings: ~$3,400/month (~70% reduction)**
-- **ROI: Implementation took 40 hours ($8,000 developer time), pays for itself in 2-3 months**
+These strategies compound: caching cuts the request count, routing cuts the per-request price, and budgets cap the tail. Sequence them in that order, because each one shrinks the surface the next has to cover.
 
 ### Implementation Roadmap
 

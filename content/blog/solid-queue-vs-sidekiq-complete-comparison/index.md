@@ -369,34 +369,6 @@ class FeedUpdatePipeline
 end
 ```
 
-## Real-World Case Studies
-
-### Case Study 1: E-commerce Platform Migration
-
-**Company:** Medium-sized e-commerce platform
-**Before:** Sidekiq processing 500 jobs/hour
-**After:** Solid Queue handling same workload
-
-**Results:**
-- **Operational complexity:** Reduced by 40% (eliminated Redis management)
-- **Monthly costs:** Saved $200/month on Redis hosting
-- **Performance:** Negligible impact on job processing times
-- **Reliability:** Improved due to transactional job storage
-
-Our [Ruby on Rails development team](/services/app-web-development/) has guided similar migrations, helping teams evaluate their background job requirements and choose the optimal solution. We've successfully migrated applications processing 50,000+ jobs daily from Sidekiq to Solid Queue, reducing infrastructure costs by an average of 35% while maintaining reliability standards.
-
-### Case Study 2: SaaS Application Scaling
-
-**Company:** B2B SaaS with growing job volumes
-**Challenge:** Scaling from 1,000 to 10,000 jobs/hour
-**Decision:** Stayed with Sidekiq
-
-**Reasoning:**
-- **Performance requirements:** Needed sub-second job latency
-- **Complex workflows:** Required advanced job routing and priorities
-- **Existing expertise:** Team already skilled in Redis operations
-- **Monitoring needs:** Relied heavily on Sidekiq Pro features
-
 ## Performance Optimization Strategies
 
 ### Optimizing Solid Queue Performance

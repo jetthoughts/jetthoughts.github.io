@@ -1935,6 +1935,109 @@ $queue_optimization = [
 ];
 ```
 
+## Two Fixes APM Points You Straight At
+
+APM earns its cost on problems that are invisible in application logs. These are the two you will hit first.
+
+### N+1 queries behind a slow dashboard
+
+A trace showing most of the request time inside the database, spread across thousands of small identical queries, is the N+1 signature. The nested loop is the cause:
+
+```php
+// Before: a query per category, then per product, then per relation
+public function dashboard()
+{
+    $categories = Category::all();
+
+    foreach ($categories as $category) {
+        $products = $category->products;
+
+        foreach ($products as $product) {
+            $reviews = $product->reviews;
+            $images = $product->images;
+        }
+    }
+}
+```
+
+Eager-load the relations in one pass, constrain what each one returns, and cache the assembled result:
+
+```php
+// After: eager loading with constrained relations, plus a cache window
+public function dashboard()
+{
+    $categories = Cache::remember('dashboard_categories', 600, function () {
+        return Category::with([
+            'products' => function ($query) {
+                $query->active()
+                    ->orderBy('featured', 'desc')
+                    ->limit(10);
+            },
+            'products.reviews' => function ($query) {
+                $query->latest()->limit(3);
+            },
+            'products.images' => function ($query) {
+                $query->orderBy('order')->limit(5);
+            }
+        ])->get();
+    });
+
+    return view('dashboard', compact('categories'));
+}
+```
+
+Eager loading alone will still scan without the right composite indexes, so add them to match the constraints above:
+
+```php
+Schema::table('products', function (Blueprint $table) {
+    $table->index(['category_id', 'featured', 'active']);
+});
+
+Schema::table('reviews', function (Blueprint $table) {
+    $table->index(['product_id', 'created_at']);
+});
+```
+
+### Memory exhaustion in report generation
+
+The tell in APM is memory climbing with result-set size until the process dies. `get()` materialises every row and every eager-loaded relation at once:
+
+```php
+// Before: the whole result set in memory at once
+public function generateReport($tenant_id)
+{
+    $orders = Order::where('tenant_id', $tenant_id)
+        ->with('items', 'customer', 'payments')
+        ->get();
+
+    return $this->processOrders($orders);
+}
+```
+
+`chunk()` holds one batch at a time, so peak memory stays flat regardless of how many rows match:
+
+```php
+// After: constant memory across the run
+public function generateReport($tenant_id)
+{
+    $results = [];
+
+    Order::where('tenant_id', $tenant_id)
+        ->with('items', 'customer', 'payments')
+        ->chunk(1000, function ($orders) use (&$results) {
+            $processed = $this->processOrders($orders);
+            $results = array_merge($results, $processed);
+
+            $orders = null;
+            gc_collect_cycles();
+        });
+
+    return $results;
+}
+```
+
+Measure both before and after on your own data with `memory_get_peak_usage(true)` - the chunk size that works depends on how wide your rows are.
+
 ## FAQ: Laravel Performance Monitoring
 
 #### Q: Which APM tool is best for small Laravel teams with limited budget?

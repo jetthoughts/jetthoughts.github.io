@@ -201,7 +201,7 @@ The third mistake is bundling tidy and behavior commits. We covered the mechanic
 
 When we inherit a codebase, the three failure modes above are usually all present at once - tests coupled to internals, refactor steps skipped for months, commits that mix tidy with behavior. We rescue Ruby on Rails projects from devshops that shipped this exact configuration with a CI suite that takes 22 minutes to run. The 90-second loop is the rhythm we put back first.
 
-The pattern's consistent across the rescues we've taken: either no tests at all (the last three we picked up), or a brittle test suite written months after the code, mocked-to-the-teeth and useless under change pressure. We rebuild the rhythm first. Then we fix the bugs. [Refactoring callbacks back into services](/blog/how-avoid-callbacks-using-services-rails-refactoring/) and tightening the test suite go hand in hand once the rhythm is in place.
+A codebase in trouble usually has one of two test situations: no tests at all, or a brittle suite written months after the code, mocked-to-the-teeth and useless under change pressure. Rebuild the rhythm first. Then fix the bugs. [Refactoring callbacks back into services](/blog/how-avoid-callbacks-using-services-rails-refactoring/) and tightening the test suite go hand in hand once the rhythm is in place.
 
 If you're holding a Rails codebase you can't change without breaking, we run a free 45-minute audit: one senior developer reads your suite and your most recent five PRs, and you get a one-page written assessment naming the three fixes that would help most. We don't follow up to sell you something - that isn't the offer.
 

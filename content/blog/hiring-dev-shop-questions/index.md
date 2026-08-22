@@ -116,7 +116,7 @@ But if you're committing $50K+ for core functionality the business depends on, e
 
 ## The Pattern That Kills Projects
 
-The pattern across the rescues we've taken is consistent. Most arrive with test coverage in single digits, no clause in the contract that names the founder as code owner, and a spend that's already crossed six figures. The five questions don't catch every bad shop. They do catch most of the ones that can't answer them - those shops self-select out before the contract is drawn up.
+The failure mode is recognisable: test coverage in single digits, no clause in the contract naming the founder as code owner, and a spend that is already substantial before anyone asks to see the repository. The five questions don't catch every bad shop. They do catch most of the ones that can't answer them - those shops self-select out before the contract is drawn up.
 
 The founders who asked "what's your rate?" first and skipped the rest? They hired a shop that looked good on the website and fell apart three months in, usually around the first real deadline. If this sounds like your situation, we have a [comprehensive guide for founders who've been burned](/blog/founders-guide-hiring-dev-shop/) by dev shops.
 

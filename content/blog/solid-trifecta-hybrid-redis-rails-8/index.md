@@ -15,11 +15,11 @@ cover_image_alt: "JetThoughts blog cover for Solid Trifecta When to Keep Redis -
 canonical_url: "https://jetthoughts.com/blog/solid-trifecta-hybrid-redis-rails-8/"
 ---
 
-Last quarter we migrated a B2B SaaS client off Redis for $360/month in savings. The Solid stack made it possible. Whether your app should follow them off Redis is a different question, and the answer is "it depends on three things."
+Rails 8 ships a database-backed replacement for Redis. Whether your app should actually drop Redis is a different question, and the answer is "it depends on three things."
 
 Solid Cache, Solid Queue, and Solid Cable (the "Solid Trifecta") replace Redis for caching, background jobs, and WebSockets. All three are database-backed and ship as defaults in new Rails 8 apps. 37signals runs Solid Cache in production across Basecamp and HEY, handling what used to require [1.1 terabytes of Redis RAM](https://dev.37signals.com/solid-cache/) with 80 gigabytes of database storage, an 80% infrastructure cost reduction at their scale.
 
-Across the migrations we've shipped this year, the rough split is half fully Redis-free, half hybrid. The decision came down to throughput, data structure usage, and burstiness. Here's the framework.
+Going fully Redis-free and staying hybrid are both defensible outcomes. The decision comes down to throughput, data structure usage, and burstiness. Here's the framework.
 
 ## What each component replaces
 

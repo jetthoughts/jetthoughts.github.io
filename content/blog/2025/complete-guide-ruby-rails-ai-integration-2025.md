@@ -388,7 +388,7 @@ end
 5. Deploy again
 6. Revoke old key #1 safely
 
-**Why this matters**: We've seen 3 clients avoid production outages using this pattern.
+**Why this matters**: rotating without this overlap window takes every in-flight request down with the old key.
 
 ### 4. Prompt Injection Prevention (Security Critical)
 
@@ -1172,7 +1172,7 @@ Ruby on Rails AI integration in 2025 is production-ready. With ruby-openai, anth
 
 The Ruby AI ecosystem has reached critical mass. The question isn't "Can I build AI features in Rails?" but "Which AI features should I prioritize?"
 
-At JetThoughts, we've helped 200+ clients integrate AI into production Rails applications. If you need hands-on guidance for your specific use case, [schedule a consultation](https://jetthoughts.com/contact-us/).
+If you want hands-on guidance for your specific use case, [schedule a consultation](https://jetthoughts.com/contact-us/).
 
 ## Resources
 
