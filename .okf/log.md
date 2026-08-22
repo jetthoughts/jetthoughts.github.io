@@ -206,6 +206,24 @@ Also corrected: the ~1e-6 noise figure in test-gates and in the code comment
 was macOS-local and read as universal. Same overclaim shape the #566 reviewer
 caught one layer down.
 
+## 2026-08-22 - retrieval benchmark: distillation beats corpus size
+
+Five known-answer questions run against three knowledge stores. Ruflo memory
+(namespace okf, one distilled entry per concept): 5/5 correct top hits,
+25-437ms. OKF-native progressive disclosure (read the six section indexes,
+~1,017 words total): 5/5 routed deterministically. qmd over all of jt-site:
+1/5 clean - the canonical concepts were outranked by 2025 archive docs on
+three questions (candidate fix: exclude 70-79-archives from the collection).
+OpenViking (fully local: qwen3-embedding:8b GGUF + gemma4:12b-mlx, now a
+~/.infra service): 2 partial hits, 3 unanswerable at measure time because its
+VLM abstract pipeline was still processing the 41-file ingest - verdict
+INTERIM, re-measure after the queue drains. The transferable lesson: the
+namespaces that scored 5/5 both consumed PRE-DISTILLED one-line facts;
+the stores that searched raw corpora lost to noise or lag. Distill at write
+time, not query time. Ollama gotcha recorded in the openviking service
+README: MLX-format models cannot serve /api/embed on 0.32.x - embedders
+must stay GGUF.
+
 ## 2026-08-22 - audit P0s executed: re-tiered agents, live gates, one rule source
 
 All 70.12 P0s landed the same day. Five agents re-tiered off fable/sonnet to
