@@ -51,6 +51,34 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-22 - the noise floor is per-page, and the pinned tolerances are load-bearing
+
+Chasing the last red Linux key produced a better finding than the fix. Four
+hypotheses died on the way - arm64-vs-amd64 drift (the files measured
+pixel-identical against a control), #560's tolerance drop (that test pins its
+own 0.03, so the default never applied), the PR-merge-commit checkout, and a
+date-gated post - and each one cost a cycle because it was reasoned rather
+than measured.
+
+What the measurement says: two `update-baselines` dispatches of the SAME commit
+twelve hours apart left **135 of 147 Linux baselines byte-identical**. CI is
+deterministic for ~92% of pages. Eleven font/SVG-heavy pages (mermaid, syntax
+highlighting, course, about, clients) moved by 0.0003-0.002, and the twelfth,
+`mobile/blog/index/_pagination`, moved by 0.0425 with a max channel delta of
+238 - a real content difference, which is why it was the only failure.
+
+**Every one of those eleven pins `tolerance: 0.03` at its call site.** Those
+pins are not legacy padding from the blind era; they are the only thing
+absorbing a rasteriser on CI. An earlier plan to measure and lower the section
+tolerances toward the new 0.0001 default would have reddened CI permanently on
+pages with no defect. That plan is now scoped out, and the rule is written
+where the tolerance lives: measure a page's noise on the platform that judges
+it - by recording it twice on one commit - before lowering anything.
+
+Also corrected: the ~1e-6 noise figure in test-gates and in the code comment
+was macOS-local and read as universal. Same overclaim shape the #566 reviewer
+caught one layer down.
+
 ## 2026-08-22 - the site sells one thing, and title claims are now a canon rule
 
 Paul changed the positioning: the site sells an embedded team of senior

@@ -78,7 +78,12 @@ class ApplicationSystemTestCase < Minitest::Test
   # the baseline fossilized. Measured run-to-run noise is ~1e-6 (three runs of
   # services/_technologies: 0.013838252 twice, then 0.013837770 - about 2 px of
   # 2,073,600), so the floor only has to clear that: 0.0001 is ~207 px. Calls
-  # needing real slack (font-swap, animation) still pin their own tolerance.
+  # needing real slack (font-swap, animation) still pin their own tolerance -
+  # and on CI those pins are LOAD-BEARING, not padding. That 1e-6 is macOS
+  # local; two CI recordings of the same commit left 135 of 147 baselines
+  # byte-identical but moved 11 font/SVG-heavy pages by 0.0003-0.002, every one
+  # of which pins 0.03 here. Do not lower a pinned tolerance without measuring
+  # that page's noise on the platform that judges it (.okf/build/test-gates.md).
   DEFAULT_SCREENSHOT_CONFIG = {tolerance: 0.0001}.freeze
 
   private
