@@ -25,11 +25,22 @@ services:
   # Interactive shell (optimized)
   sh:
     image: jetthoughts.com-test:1.0.0
-    # amd64, not the host arch: this image pins Chrome for Testing linux64
-    # (.dev/cft-version) and records the linux/ screenshot baselines that CI
-    # (ubuntu-latest = amd64) renders. Building/running arm64 downloads an
-    # amd64 chrome it can only exec under emulation and drifts pixels from CI.
-    platform: linux/amd64
+    # Pinned to arm64 since 2026-08-22, because that is what records the
+    # committed linux/ baselines: CI runs ubuntu-24.04-arm. Chrome for Testing
+    # began publishing linux-arm64 at 153 (.dev/cft-version pins 153.0.8010.5,
+    # the first Beta with it) and the Dockerfile picks the matching build.
+    #
+    # arm64 IS THE STACK (Paul, 2026-08-22) - not a preference, not a trial.
+    # It is reversed only if something is found that genuinely cannot support
+    # it, and "an x86 machine would be slower" is not that.
+    #
+    # So this is a PIN, not "follow the host". Following the host is what an
+    # earlier draft did, and it silently breaks the visual gate on an x86
+    # machine: Chrome renders amd64 while every linux/ baseline is an arm64
+    # recording, so bin/dtest and required CI disagree by construction. On an
+    # ARM Mac the pin IS the host arch, so it costs nothing here; on x86 it
+    # emulates, which is the correct trade because the gate is BLOCKING.
+    platform: linux/arm64
     build:
       context: ../
       dockerfile: ./.dev/Dockerfile
@@ -39,6 +50,10 @@ services:
     tty: true
     volumes:
       - ..:/app:delegated
+      # Anonymous mount, not a named volume: it shields the image's
+      # Linux-built node_modules from the bind mount (the host's are
+      # macOS binaries) without persisting stale modules between runs.
+      - /app/node_modules
       - history:/usr/local/hist
     environment:
       HISTFILE: /usr/local/hist/.bash_history
@@ -48,8 +63,9 @@ services:
   # Test runner with optimized dependency management
   t:
     image: jetthoughts.com-test:1.0.0
-    # amd64 to match CI's rendering (see `sh` service note above).
-    platform: linux/amd64
+    # Pinned to CI's arch, not the host's - this is the service that produces
+    # screenshot candidates. See the `sh` service note above for why.
+    platform: linux/arm64
     build:
       context: ../
       dockerfile: ./.dev/Dockerfile
@@ -58,13 +74,21 @@ services:
     command: bin/test
     volumes:
       - ..:/app:delegated
+      # Anonymous mount, not a named volume: it shields the image's
+      # Linux-built node_modules from the bind mount (the host's are
+      # macOS binaries) without persisting stale modules between runs.
+      - /app/node_modules
       - hugo_cache_dtest:/tmp/hugo_cache_dtest
     environment:
       HUGO_DEFAULT_PATH: "_dest/public-dtest"
       HUGO_CACHEDIR: "/tmp/hugo_cache_dtest"
       CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
       RUBY_THREAD_VM_STACK_SIZE: 1048576
-    # Chrome 152 needs >2g under amd64 emulation (OOM "tab crashed" at 2g).
+    # 4g was originally sized for amd64 EMULATION ("tab crashed" OOM at 2g).
+    # Native arm64 probably needs less - and 4g STAYS anyway (Paul, 2026-08-22).
+    # Settled, not pending: do not "optimize" this down. Headroom on a test
+    # container is free; an OOM-killed Chrome costs a red suite and an hour of
+    # diagnosis, and it fails as a rendering difference rather than as an OOM.
     mem_limit: 4g
     cpus: '4.0'
     ulimits:
@@ -73,10 +97,6 @@ services:
         hard: -1
 
 volumes:
-  node_modules:
-    driver: local
-  bundle:
-    driver: local
   history:
     driver: local
   hugo_cache:
