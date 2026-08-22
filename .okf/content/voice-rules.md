@@ -82,6 +82,26 @@ Full table in 90.11 §1b.
   from the writer brief reached published HTML on five posts. Report cadence
   in the handback, never in the file.
 
+# Slop is found by cold eyes, not by a score or a grep (2026-08-22)
+
+A `bin/check-post-voice` was written and deleted the same day, on Paul's call. A
+regex catches "Not X. Not Y." and misses prose that is fluent, on-pattern and
+lifeless - and a passing run reads as "the voice is fine", the same false
+confidence as a link checker reporting green over a tenth of a site.
+
+What a four-lens panel caught that no script could: **section-level rhythm**.
+Every H2 in three posts landed on a one-sentence aphorism paragraph -
+"evidence, evidence, punchline, white space, next heading" - and all three posts
+opened on the identical two-beat reveal. Sentence lengths varied; the
+choreography did not. Read two consecutive sections aloud; if they land the same
+way, one has to change SHAPE, not wording.
+
+The panel: ICP cold read, voice/AI tells, competitor standard (the reviewer
+fetches two current competitor posts), claim verification. Different agent type
+than the writer, briefed with goal and artifact rather than conclusions, each
+required to name something it would cut. Three approvals means the panel was not
+asked a real question.
+
 # Banned structural patterns (reject on sight)
 
 Slogany reveal-twist flips ("X wasn't Y - it was Z") **unless the text names WHO

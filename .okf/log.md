@@ -51,6 +51,52 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-22 - four cold-eyes reviewers found what a script had just passed
+
+Three posts shipped having passed every check their author could run, including
+a purpose-built `bin/check-post-voice`. Paul read them as slop and overruled the
+script: "it's hard to have determined automate to detect ai slops, you need to
+run different agents from cold eyes review". Deleted the same day it was written.
+
+The category error is worth naming because it was made hours after the opposite
+lesson was written down. Correctness is not greppable - established that morning,
+recorded in [claims-canon](/content/claims-canon.md) - and then a regex was built
+for SLOP, which has the same property. Worse, a green PASS from it reads as "the
+voice is fine", which is the exact false-confidence failure the same day's blog
+post is about.
+
+A four-lens panel then found, in posts a script had passed:
+
+- **Section-level rhythm.** Every H2 landing on a one-sentence aphorism -
+  "evidence, evidence, punchline, white space, next heading" - five times a post,
+  three posts. Plus an identical two-beat opening reveal in all three. Sentence
+  lengths varied; the choreography did not. This is the actual slop and no
+  pattern-matcher can see it.
+- **Numbers I was confident about.** `[snap_diff] 287 screenshots compared` took
+  287 from the unit-test run count; a link total came from today's build while
+  describing a fix that landed at 114,050; a tool output was reproduced inside a
+  fence with one field edited. Not fabrication - real measurements from the wrong
+  run, which is why they survived self-review.
+- **Cited but never spent.** Two of three posts listed a footer source the body
+  never engages; one had its claim on the cover image while the post never told
+  the story.
+- **A command that reports success having checked nothing.**
+  `content/blog/**/index.md` matches nothing in bash without `shopt -s globstar` -
+  published in a post about checks that check nothing.
+- **Attribution unchecked while the quote was checked.** "Responsible Statecraft
+  traced it" - they reported it, NewsGuard traced it. "Both publish their error
+  bars" - one does.
+
+Also corrected at source: `Rakefile` and this bundle's test-gates both said the
+link gate was green "for a year"; git says it shipped 2026-07-21, one month
+before it was caught.
+
+Rules written where writers will hit them:
+[voice-rules](/content/voice-rules.md) gains the cold-eyes section,
+[test-gates](/build/test-gates.md) gains the both-directions injection rule,
+and CLAUDE.md's blog section lost two bullets that routed future sessions into
+the rejected method.
+
 ## 2026-08-22 - the codeblocks drift was STALE BASELINES; five theories closed at once
 
 **`rendering-stack`**: re-recorded `linux/` on master (`dc11791ab`, all 55) and
