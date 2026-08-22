@@ -19,10 +19,12 @@ related_posts: false
 Here is a change we caught before it merged. It is small, it is plausible, and it is wrong in a way you cannot see without knowing Rails.
 
 ```diff
-- Propshaft is dramatically faster than Sprockets: precompilation drops from
-- 45-60 seconds to under 5 seconds on a medium app.
-+ Propshaft drops the transpilation and concatenation stages entirely, so asset
-+ precompilation stops being a build step that scales with your asset count.
+- Propshaft replaces Sprockets as the default asset pipeline in Rails 8, and the
+- difference is dramatic: in our experience, build times drop from 45-60 seconds
+- to under 5 seconds for medium-sized apps.
++ Propshaft replaces Sprockets as the default asset pipeline in Rails 8. It drops
++ the transpilation and concatenation stages entirely, so asset precompilation
++ stops being a build step that scales with your asset count.
 ```
 
 The deletion is correct. That timing figure had no measurement behind it and deserved to go.
@@ -49,6 +51,8 @@ You catch it by already knowing what `assets:precompile` does. Sean Goedecke put
 
 He calls the thing experts do "steering" - you recognise a suboptimal suggestion and redirect it. This diff is that mechanism running backwards. Without someone who knows the asset pipeline, there is nothing to steer against and the confident answer wins by default.
 
+Senko Rašić pushed back on that framing a fortnight later, insisting that "creating good code is a craft that requires skill, patience, attention to detail, experience and wisdom". The diff above argues for his side better than it does for Goedecke's. Writing that sentence took no craft at all. Knowing it was wrong took every item on his list.
+
 Note what the change was *for*. The task was removing an unsourced number, and the same edit introduced a new defect while completing it. Cleanup is where this happens most, because a correction feels like tidying rather than authorship.
 
 ## What actually caught it
@@ -57,13 +61,11 @@ A second model, told to attack the diff.
 
 The fix was not a better model or a longer prompt. It was a different one, with a brief that made disagreement its job rather than a risk.
 
-It came back with four findings. This was one, stated flatly:
-
-> On applications with many assets, Propshaft still enumerates, fingerprints, and copies every asset during `assets:precompile`, so its work still scales with asset count. Removing transpilation and concatenation reduces the per-asset cost but does not make the build independent of asset count; the new wording gives readers an incorrect performance expectation.
+It came back with four findings. One was this: on applications with many assets, Propshaft still enumerates, fingerprints and copies every asset during `assets:precompile`, so the work still scales with asset count. Dropping transpilation and concatenation lowers the cost per asset without making the build independent of how many there are, and the new wording promised the wrong thing.
 
 Then a person had to decide whether the objection was correct, and that step took either already knowing the answer or being willing to go and read the Propshaft source until you did.
 
-Three links in that chain, and only one of them is automatable. A model wrote, another model challenged, and someone with domain knowledge adjudicated.
+Three links, and the last one is the only one you cannot automate. A model wrote, another model challenged, and someone with domain knowledge decided which was right.
 
 ![Three links in the chain: a model writes, a second model challenges, a person referees. Only the first two are automatable.](chain.svg)
 
@@ -115,7 +117,7 @@ We wrote about the [team structure that makes this hold up](/blog/claude-code-xp
 
 ## Sources
 
-- Sean Goedecke, ["LLMs reward expertise"](https://www.seangoedecke.com/llms-reward-expertise/) - [HN discussion](https://news.ycombinator.com/item?id=49161518), 573 comments
-- Senko Rašić, ["'Code was never the hard part' is an insult to all programmers"](https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers) - [HN discussion](https://news.ycombinator.com/item?id=49222189), 590 comments
+- Sean Goedecke, ["LLMs reward expertise"](https://www.seangoedecke.com/llms-reward-expertise/)
+- Senko Rašić, ["'Code was never the hard part' is an insult to all programmers"](https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers)
 - METR, ["Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) - the 19% slowdown, the 24% predicted speedup, the 20% believed speedup, and METR's own limits on what it shows
 - [Propshaft](https://github.com/rails/propshaft) - the asset pipeline whose behaviour the claim got wrong. Its README settles both halves. It is faster: "a dramatically simpler and faster asset pipeline compared to previous options, like Sprockets." And it still does per-asset work: "All assets in the load path will be copied (or compiled) in a precompilation step for production that also stamps all of them with a digest hash." The original sentence took the first half as the reason for the second.

@@ -446,8 +446,14 @@ class MarketingCopyTest < Minitest::Test
   end
 
   # Collapsed to one line first, so a phrase broken across a wrap still matches.
+  # Fenced code is stripped first. A post can legitimately QUOTE bad writing as
+  # an exhibit - a diff showing the sentence that was wrong, a log line, a
+  # command someone should not run - and scanning inside the fence flags the
+  # exhibit as if we were asserting it. Found 2026-08-22 when a post about a
+  # corrected claim reproduced the original claim in a ```diff and tripped this
+  # ratchet on its own evidence.
   def phrase_hits(relative, body)
-    haystack = body.gsub(/\s+/, " ")
+    haystack = body.gsub(/^```.*?^```/m, " ").gsub(/\s+/, " ")
 
     FABRICATION_PHRASE_MARKERS.filter_map do |pattern, reason|
       "#{relative} - #{reason}" if haystack.match?(pattern)

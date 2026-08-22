@@ -847,7 +847,7 @@ Skipping step 1 has cost this repo repeatedly:
   spare hits swallowed a planted banned adjective whole. A ratchet with slack
   is a gate that has already been disarmed.
 - `rake test:links` excluded 133,874 of 149,516 links (production renders
-  absolute URLs; `--offline` drops every http(s) URI) and was green for a year
+  absolute URLs; `--offline` drops every http(s) URI) and was green from the day it shipped (2026-07-21) until 2026-08-22
   on a site with five real broken links, one of them a conversion path and one
   a post's own canonical pointing at a 404.
 

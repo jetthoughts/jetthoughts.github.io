@@ -97,7 +97,7 @@ namespace :test do
   # emits is globbed from disk and passed as an explicit input, so no PAGE is
   # skipped.
   #
-  # That is not the same as no LINK being skipped, and for a year it wasn't:
+  # That is not the same as no LINK being skipped, and from the day the gate shipped (2026-07-21) it wasn't:
   # the production build renders internal links absolute
   # (https://jetthoughts.com/...) and `--offline` excludes every http(s) URI by
   # design, so 133,874 of 149,516 links were excluded and the job was green
