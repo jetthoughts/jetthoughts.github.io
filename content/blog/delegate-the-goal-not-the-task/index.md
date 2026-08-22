@@ -16,9 +16,9 @@ canonical_url: 'https://jetthoughts.com/blog/delegate-the-goal-not-the-task/'
 related_posts: false
 ---
 
-We had a reviewer that approved everything.
+We had an AI code reviewer that approved everything.
 
-Not carelessly. It read the diff, it considered the criteria, and it came back with some version of "this looks good, here are two small suggestions." Every time. The work was not that good, and I knew it was not that good, which is the only reason I noticed.
+Not carelessly. It read the diff, it applied the criteria, and it came back with some version of "this looks good, here are two small suggestions." Every time. The work was not that good, and I knew it was not that good, which is the only reason I noticed.
 
 The instruction was the problem. Here is roughly what we had been sending:
 
@@ -79,7 +79,7 @@ This bites harder with agents than with people, and Anthropic's engineers say wh
 
 ## It is the same rule for people and for agents
 
-I did not arrive at this from management books. I arrived at it because our review process was producing agreeable nonsense, and the fix that worked on an AI reviewer turned out to be the fix I should have been applying to humans for years.
+I did not arrive at this from management books. I arrived at it because that reviewer was producing agreeable nonsense, and the clause that fixed it turned out to be the thing I should have been doing with people for years.
 
 The mechanism is identical. A junior developer told exactly what to do will do it and not tell you the requirement was wrong. A senior developer given the goal will come back and say the feature should not exist. You hired the second one for that, and then you brief them like the first one.
 
