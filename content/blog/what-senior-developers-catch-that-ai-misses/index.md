@@ -1,6 +1,6 @@
 ---
 title: "What Senior Devs Catch That AI Misses"
-description: "An AI agent replaced a made-up number in our own blog post with a confident, wrong explanation. What caught it is the thing you are actually hiring for."
+description: "A change swapped a made-up number for a confident, wrong explanation of how Propshaft works. Spotting the difference is the thing you are actually hiring for."
 date: 2026-08-22
 draft: false
 author: 'JetThoughts Team'
@@ -16,7 +16,7 @@ canonical_url: 'https://jetthoughts.com/blog/what-senior-developers-catch-that-a
 related_posts: false
 ---
 
-Here is a diff that sat in an open pull request, waiting to be merged.
+Here is a diff we stopped in review. It is small, it is plausible, and it is wrong in a way you cannot see without knowing Rails.
 
 ```diff
 - Propshaft is dramatically faster than Sprockets: precompilation drops from
@@ -25,9 +25,9 @@ Here is a diff that sat in an open pull request, waiting to be merged.
 + precompilation stops being a build step that scales with your asset count.
 ```
 
-An agent had pulled an unsourced timing figure out of one of our older Rails posts and written that replacement in its place. The removal was correct. Nobody had ever measured those 45-60 seconds.
+The deletion is correct. That timing figure had no measurement behind it and deserved to go.
 
-Read the addition again if you know Rails. It is wrong.
+Read the addition again. It is wrong.
 
 Propshaft still walks every asset, fingerprints it, and copies it into place. Its own README says so:
 
@@ -35,11 +35,11 @@ Propshaft still walks every asset, fingerprints it, and copies it into place. It
 
 The work scales with how many assets you have. What drops is the cost of each one, because transpiling and bundling are gone - which is a real and useful thing to say, and not what the sentence said.
 
-The agent had removed a made-up number and replaced it with a made-up mechanism. That is worse, because a mechanism reads as reasoning rather than as a claim someone should go and check.
+So a made-up number was swapped for a made-up mechanism. That is the worse trade, because a mechanism reads as reasoning rather than as a claim someone should go and check - and reasoning gets waved through where a number gets questioned.
 
 ## Nobody skimming that paragraph would have stopped
 
-That is the part worth sitting with.
+Sit with that for a second.
 
 The sentence had a subject, a cause and an effect, and it used the right vocabulary throughout. It also agreed with the general direction of the truth - Propshaft *is* faster - while getting the reason for it wrong.
 
@@ -53,15 +53,17 @@ Two weeks later Senko Rašić's ["'Code was never the hard part' is an insult to
 
 Both threads circle the same question and neither settles it. If the model writes the code, what is the person for?
 
-## The answer our own mistake gave
+## What the diff answers
 
-Not typing - the agent typed fine.
+It was not the typing.
+
+The prose came out clean, grammatical and confident on the first pass, and would have survived any editor who did not happen to know how Rails compiles assets.
 
 What it could not do was notice that its own explanation was false. It had no way to check, because checking meant knowing something about the Rails asset pipeline that was not in the sentence it had just written.
 
-Goedecke calls the thing experts do "steering" - you recognise a suboptimal suggestion and redirect it. Our incident is the same mechanism running backwards. Nobody steered, so a confident wrong answer went straight into a draft, inside a change whose entire purpose was removing unreliable claims.
+Goedecke calls the thing experts do "steering" - you recognise a suboptimal suggestion and redirect it. This diff is that mechanism running backwards: without someone who knows the asset pipeline, there is nothing to steer against, and the confident answer wins by default.
 
-That last part is the uncomfortable bit. The task was *clean up unsourced numbers*, and the agent did the task and introduced a new defect in the same motion.
+Note what the change was *for*. The task was removing an unsourced number, and the same edit introduced a new defect while completing it. Cleanup is where this happens most, because a correction feels like tidying rather than authorship, and gets read that way.
 
 ## What actually caught it
 
@@ -89,19 +91,19 @@ Going in, those developers expected a 24% speedup. Coming out, having just lived
 
 METR is careful about what that does not show, so I will be too: early-2025 models, Claude 3.5 and 3.7 Sonnet through Cursor Pro, on mature codebases with demanding quality standards, and they explicitly decline to claim it generalises to most developers or to later tools.
 
-What travels is the gap itself. Being experienced did not make the self-assessment accurate, which is the whole problem with judging this by feel.
+What travels is the gap itself. Experience did not make those developers better at estimating their own speed. It made them more certain about an estimate that was forty points off.
 
 ## Partial checking feels exactly like checking
 
 Here is the same failure again, from later the same day, after the rule above had been written down.
 
-We found an old Laravel migration guide with no citations at all and went to verify it. The framework's support table said Laravel 11 had been out of security support since March. So a correction went on the page: do not land on 11, go to 12, same PHP floor.
+Take a Laravel migration guide that recommends upgrading to 11. Checking it against Laravel's support table shows 11 left security support in March, so the obvious correction is: do not land on 11, go to 12, same PHP floor.
 
-Two of those three facts were right.
+Two of those three facts are right.
 
-Laravel 12 had stopped getting bug fixes nine days earlier, and Laravel 13 - current since March, and the sensible target - requires PHP 8.3 rather than the 8.2 the correction promised. The table had four rows and two of them got read.
+Laravel 12 stopped getting bug fixes on 13 August 2026. Laravel 13 has been current since March and requires PHP 8.3, not the 8.2 that correction promises. The table has four rows, and stopping after two produces a fix that is still wrong.
 
-Nobody skipped the check. The check got done, felt done, and stopped one row short of the answer. That is a harder failure to design against than not checking at all, because it produces the same feeling of having been careful.
+Nobody skipped the check there. The check ran, felt complete, and stopped one row short. That is harder to design against than not checking at all, because it produces the identical feeling of having been careful.
 
 ## What this means if you are the one paying for it
 
@@ -121,11 +123,11 @@ We wrote about the [team structure that makes this hold up](/blog/claude-code-xp
 
 ## The uncomfortable version
 
-Our agent produced a wrong claim while cleaning up wrong claims. We caught it because we had built the habit of pointing a second, adversarial pass at anything an agent wrote, and because someone on the other end knew Rails well enough to referee.
+Every defect in this post was caught the same way: a second pass whose brief was to disagree, followed by someone who knew the subject well enough to referee the disagreement.
 
-If we had not, that sentence would be live right now, sounding authoritative, on a post about Rails performance.
+Neither half works alone. The reviewer that only agrees is decoration, and the reviewer that objects to something nobody can adjudicate is noise.
 
-That is the whole argument for expertise, and it is not a comfortable one. The value is not in what gets produced. It is in the small number of moments where someone looks at fluent output and says no.
+Expertise earns its money in a handful of moments per week, and none of them look like productivity. Someone reads a paragraph that scans perfectly and says no, and cannot always explain why until they go and check.
 
 ## Sources
 
