@@ -41,6 +41,17 @@ Fetch the source before you assert how something works. Not after, and not from
 memory - training memory returns a confident sentence whether or not it is true,
 which is the failure it cannot warn you about.
 
+Reach for the instrument that matches the claim: **`context7`** for how a
+library behaves (it reads the project's own docs and names real classes and
+methods), **`WebSearch` then `WebFetch` the primary source** for a study or
+statistic - press coverage of a study is not the study - and **NotebookLM** when
+you need to interrogate a body of sources. `blog-pipeline.md` STEP 4f has the
+full routing.
+
+**Search for the rebuttal, not the confirmation.** Query for criticism and
+failed replications of what you are about to assert. Searching for support
+returns support; that is what it is for.
+
 **This applies hardest when you are EDITING.** Deleting a bad claim and writing
 a replacement feels like cleanup, so the replacement gets less scrutiny than
 anything you write from scratch - and it is a fresh assertion carrying the same

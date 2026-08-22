@@ -93,6 +93,17 @@ into a blog post, and *that* time the Propshaft README was fetched first and the
 sentence came out right. Same fact, same author, same day: sourced when it was
 framed as writing, unsourced when it was framed as fixing.
 
+**Use an instrument, and point it at the rebuttal.** `context7` for how a
+library behaves; `WebSearch` then `WebFetch` the PRIMARY source for a study
+(press coverage of a study is not the study, and the caveats travel with the
+number); NotebookLM for a body of sources. Then query for the criticism and the
+failed replications rather than the supporting case - searching for support
+returns support. Doing that on 2026-08-22 surfaced a randomised trial that
+complicated the claim being written and improved it: METR measured experienced
+developers 19% SLOWER with AI while they estimated themselves 20% faster, a
+~40-point gap between measurement and belief among experts working on their own
+code.
+
 **Correctness is not greppable, and no ratchet here claims otherwise.** Two
 candidate markers for wrong-mechanism claims were measured and rejected on
 2026-08-22 - an anonymous-company pattern (10 hits, mostly legitimate: "we

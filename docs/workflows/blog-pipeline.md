@@ -198,8 +198,28 @@ one lane that never wired it in (the LinkedIn lane has carried it in
 
 STEP 4f — CLAIM SOURCING (BLOCKING — the gates cannot do this one for you)
 List every sentence in the draft that says how something external behaves — a
-gem, a framework, a service, a competitor's product. For each one, name where
-you checked it in THIS session. Not "I know this": a URL you opened.
+gem, a framework, a service, a competitor's product. For each one, name the tool
+you checked it with in THIS session. Not "I know this".
+
+Which instrument, by claim type:
+
+- **How a library/framework behaves** → `context7` (`resolve-library-id`, then
+  `query-docs`). It reads the project's own docs and returns class and method
+  names, so it settles mechanism questions a README summary can leave open.
+- **A study, benchmark or statistic** → `WebSearch` to find it, then `WebFetch`
+  the PRIMARY source. Press coverage of a study is not the study; go to the
+  publisher's own page and take the caveats along with the number.
+- **A body of sources you need to interrogate** → NotebookLM (`notebook_create`
+  → `source_add` → `notebook_query`; `research_start` → `research_status` →
+  **`research_import`** to find them first).
+- **What practitioners actually argue** → the HN Algolia API, and read the
+  thread, not the headline.
+
+**Search for the REBUTTAL, not the confirmation.** Query for criticism,
+disagreement and failed replications of the thing you are about to assert. On
+2026-08-22 that one habit turned up a randomised trial (METR) whose result
+complicated the post's own thesis and made it stronger — searching only for
+support would have returned support, which is what searching for support does.
 
 Anything you cannot name a source for gets softened until it stops being a
 claim, or cut. A mechanism reads as reasoning rather than as data, so it gets

@@ -58,6 +58,18 @@ Three links in that chain, and only one of them is automatable. A model wrote, a
 
 Drop the third link and you have two confident systems agreeing with each other.
 
+## It is not only the model that is confident
+
+There is a measurement for this, and it is worse than the anecdote. METR ran a randomised trial with sixteen experienced open-source developers across 246 real issues, in repositories they had worked in for years.
+
+They were 19% slower with AI.
+
+Going in, those developers expected a 24% speedup. Coming out, having just lived through the slowdown, they still estimated AI had made them 20% faster. Roughly forty points between what happened and what they believed happened - in experts, on their own code.
+
+METR is careful about what that does not show, so I will be too: early-2025 models, Claude 3.5 and 3.7 Sonnet through Cursor Pro, on mature codebases with demanding quality standards, and they explicitly decline to claim it generalises to most developers or to later tools.
+
+What travels is the gap itself. Being experienced did not make the self-assessment accurate, which is the whole problem with judging this by feel.
+
 ## What this means if you are the one paying for it
 
 You are not buying keystrokes any more. That part got cheap, and pretending otherwise is how founders end up overpaying for output they could have generated themselves.
@@ -86,4 +98,5 @@ That is the whole argument for expertise, and it is not a comfortable one. The v
 
 - Sean Goedecke, ["LLMs reward expertise"](https://www.seangoedecke.com/llms-reward-expertise/) - [HN discussion](https://news.ycombinator.com/item?id=49161518), 573 comments
 - Senko Rašić, ["'Code was never the hard part' is an insult to all programmers"](https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers) - [HN discussion](https://news.ycombinator.com/item?id=49222189), 590 comments
+- METR, ["Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) - the 19% slowdown, the 24% predicted speedup, the 20% believed speedup, and METR's own limits on what it shows
 - [Propshaft](https://github.com/rails/propshaft) - the asset pipeline whose behaviour the claim got wrong. Its README settles both halves. It is faster: "a dramatically simpler and faster asset pipeline compared to previous options, like Sprockets." And it still does per-asset work: "All assets in the load path will be copied (or compiled) in a precompilation step for production that also stamps all of them with a digest hash." The original sentence took the first half as the reason for the second.
