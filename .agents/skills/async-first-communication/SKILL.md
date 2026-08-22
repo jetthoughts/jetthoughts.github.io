@@ -25,6 +25,7 @@ the work. A task is not done until its state is readable asynchronously.
 
 | What | Where |
 |---|---|
+| Current WIP + goals snapshot (cold-start entry) | `STATUS.md` at repo root — links only, updated in the same commit as the state change |
 | Decision / groomed design / vote | the project's docs (`docs/projects/<id>/`), with rationale |
 | Task status + claims + handoffs | kanban board (`kanban-md`, local) AND the committed snapshot (project `backlog.md` State section) |
 | Operational state across sessions | the project runbook (statuses + handoff notes pasted VERBATIM) |

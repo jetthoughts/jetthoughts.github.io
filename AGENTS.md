@@ -3,7 +3,7 @@
 Canonical instructions live in `CLAUDE.md`. Read that first.
 Session start: always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflows/flow-router.md`.
 
-**Async-first communication (SOP for ALL agents):** written, discoverable artifacts are the default for every decision, finding, status change, and handoff — sync interaction is the exception and its outcome gets written back same-day. Full rules + canonical surfaces table: `.agents/skills/async-first-communication/SKILL.md`. A task is not done until its state is readable asynchronously.
+**Async-first communication (SOP for ALL agents):** written, discoverable artifacts are the default for every decision, finding, status change, and handoff — sync interaction is the exception and its outcome gets written back same-day. Full rules + canonical surfaces table: `.agents/skills/async-first-communication/SKILL.md`. A task is not done until its state is readable asynchronously. **Cold-start surface: `STATUS.md` at repo root** (goals + WIP + blockers, links only) — a session that changed what's in flight updates it in the same commit/PR, or the session is not done.
 
 **Four eyes on every stage, author != verifier (SOP for ALL agents):** the point is agents collaborating to find the TRUTH — a single agent cannot find its own blind spot, because it checks the thing it MEANT to build. Every change is **written by one sub-agent and verified by a different one**; the author never produces the evidence for its own claim. The review lands before the artifact leaves the workshop: a plan is peer-reviewed BEFORE the user is asked, a diff BEFORE commit, a finding is reproduced before it is reported, a measurement re-derived before it is quoted. Brief reviewers with the goal and the artifact, never your conclusions; ask for measurements, not verdicts. Routing: internal sub-agents for every per-stage review, `/codex:review` ONCE at the final verify before merge for USER-FACING changes (it is slow — never in the inner loop); docs-only and instruction-layer changes ship on internal review + CI and apply its findings as a follow-up. No reviewer tooling in this runtime? Fall back agent → external → peer session → human, and mark the change UNREVIEWED if none is reachable. Full protocol: the `jt-delivery:contract` skill (plugin `jt-delivery@jetthoughts`); repo bindings: `docs/workflows/autonomous-delivery-prompt.md`.
 
@@ -45,14 +45,11 @@ Projects live in `docs/projects/<project-id>/`. Each project follows a standard
 onboarding path:
 
 **First visit — read in this order:**
-1. `PROJECT-INDEX.md` — navigation hub, agent routes, integration rules
-2. `GOAL-AT-A-GLANCE.md` — one-page exec summary, strategy, metrics
-3. `.agent/prd/PRD.md` — formal spec (if PRD-driven project)
-4. `.agent/tasks.json` — machine-readable task graph (if PRD-driven)
-5. `TASK-TRACKER.md` — live task queue, migration schedule, active phase
+1. `STATUS.md` (repo root) — cross-project view: what's in flight, goals, blockers
+2. The project's `README.md` or `GOAL-AT-A-GLANCE.md` — one-page status / exec summary (2608's README is the template: status paragraph, read-order table, open decisions, known reds)
+3. `TASK-TRACKER.md` or `backlog.md` — live task queue, active phase
 
-**Project health:** `.agent/STATUS.md` — cross-project RAG dashboard.
-Per-project PM health reports in `40-49-review/40.10-*.md`.
+(The former `.agent/STATUS.md` / `.agent/prd/PRD.md` / `.agent/tasks.json` stack never existed in this repo — removed 2026-08-22; root `STATUS.md` is the cross-project dashboard.)
 
 **Skills:** Project-specific skills in `.skills/`. Global skills loaded via
 `skill` tool.
