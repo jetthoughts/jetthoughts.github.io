@@ -33,13 +33,33 @@ Development builds hide it completely: `postcss.config.js` sets
 entirely, so `bin/hugo-build` renders the styling correctly while production
 ships it unstyled.
 
-# Why no gate catches it
+# Why the VISUAL gate cannot catch it, and what does
 
 The visual regression suite compares a baseline against a candidate that were
 **both** built the same way, so a rule that is purged in both is invisible to
-it. `css_orphan_guard_test.rb` does not help either - it asks whether a FILE
-is reachable from a template, never whether a SELECTOR survived the purge.
-This class of defect reaches production green.
+it - not at a lower tolerance, not with a bigger capture. It is unguardable
+there in principle. `css_orphan_guard_test.rb` does not help either: it asks
+whether a FILE is reachable from a template, never whether a SELECTOR survived
+the purge.
+
+A unit test does catch it, because the defect is a set relation, not a picture.
+`test/unit/next_purge_guard_test.rb` flags any class that is (a) styled in the
+register's source CSS, (b) present on an element in the rendered production
+HTML, and (c) missing from the fingerprinted bundle that page actually links.
+All three at once is a silently-purged rule every time. It is keyed on the
+MECHANISM, not on `th`, so the next element type Hugo stops recording is
+covered without an edit.
+
+Two things make it trustworthy rather than decorative:
+
+- It reads the bundle from the page's own `<link href>`, never a glob of
+  `css/` - stale fingerprinted bundles from earlier builds sit in the same
+  directory, and reading one measures a build nobody ships.
+- Broken before trusted (2026-08-22): injecting `class="rr-th-theirs"` on a
+  `<th>` plus a matching rule failed it with `Expected ["rr-th-theirs"] to be
+  empty`; moving the SAME class onto the `<td>` in the same row went green,
+  which is the control that proves it flags the purge and not merely a new
+  class.
 
 # What to do instead
 

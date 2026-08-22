@@ -25,10 +25,15 @@ namespace :test do
   # (2026-07-19 analysis: blog + homepage + course + site-wide dominate
   # 6-month history) + the lead-gen funnel (services, contact,
   # free-consultation). Full system suite = test:system; everything = test:all.
+  # NextPilotContrastTest rides along (~1.3s, no baselines): it is the only
+  # thing in this suite that measures contrast as a NUMBER rather than as a
+  # pixel delta, and the only thing that sees the 71.7% of a register pilot
+  # that sits below the 1080px capture (20.11 §"What nothing guards").
   CRITICAL_TESTS =
     "/homepage|blog_index|blog_post$|visit_blog_post|course_|old_blog_url|" \
     "test_services($|_menu)|contact_us|free_consultation|not_found|" \
-    "hamburger|color_system|mermaid|codeblock_language|friday_report/"
+    "hamburger|color_system|mermaid|codeblock_language|friday_report|" \
+    "NextPilotContrastTest/"
 
   Rake::TestTask.new(:critical) do |t|
     t.libs << "test"

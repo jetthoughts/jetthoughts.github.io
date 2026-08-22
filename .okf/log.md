@@ -51,6 +51,53 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-22 - closing three of the fault-injection gaps, each broken before it was trusted
+
+Three of the five misses above now have gates. Every one of them was injected,
+watched fail, reverted and watched pass - the procedure this bundle added the
+same day, applied to its own output.
+
+**A gate blind until 2027 needed a second half, not a note.** The rendered
+tenure assertion cannot separate a frozen `18+` from a derived one in 2026, and
+saying so in the test body is honest but does not guard anything. The freeze is
+plainly visible one layer down, in the stub's frontmatter, so `NextRailTest`
+now asserts both: the rendered value AND that every pilot's tenure stat is
+`derived: tenure` with no stat frozen at today's derived string. General
+lesson: when a gate cannot discriminate on one surface, ask which surface it
+CAN discriminate on before accepting the hole.
+
+**"Unguardable" was true only of the gate that was reached for first.** The
+`<th>` PurgeCSS trap really is invisible to the visual suite in principle -
+baseline and candidate are both built purged. It is trivially visible to a set
+diff: styled in source CSS ∩ present in rendered HTML − present in the built
+bundle. `test/unit/next_purge_guard_test.rb` is 60 lines, adds ~0.1s, and is
+keyed on the mechanism rather than on `th`. The control that makes it
+believable is the second injection, not the first: the same class moved onto a
+`<td>` goes green, so it flags the purge and not merely a new class.
+
+**The audit's own recommendation was the expensive answer.** It proposed
+per-band screenshots for the 71.7% of a pilot page below the fold. That buys
+four more baselines per pilot, each needing its noise floor measured on the
+platform that judges it, and still returns a pixel delta rather than a ratio -
+so an intentional recolour and an AA regression stay indistinguishable.
+`test/system/next_pilot_contrast_test.rb` does both jobs in ~1.3s with no
+baselines: computed styles ignore the viewport, and contrast comes out as a
+number. It closes the separately-flagged hole that nothing in this suite
+measured contrast at all - a 3.33:1 black-on-ruby button shipped this rail and
+only human review caught it.
+
+One mistake worth keeping. The muted-column assertion was first written as
+"differs from the sibling cell and from body colour". It PASSED the exact #564
+injection, because in that register the "ours" column is body colour and the
+injected ink is a third value. Rewritten to assert the register's own
+`--*-muted` token, it fails with the token it actually landed on. The test was
+wrong for two runs and green both times; only the injection said so.
+
+Gates: `test:unit` 289 runs / 6187 assertions / 0 failures in 1.42s (287 /
+6143 / 1.33s before - the purge guard reuses the build the suite already
+makes); `test:critical` 38 runs / 0 failures, 55 screenshots compared, no
+failures, no baseline rewritten; `bin/hugo-build` clean.
+
 ## 2026-08-22 - fault injection: the suite caught 3 of 8, and the misses were the point
 
 Eight realistic defects planted one at a time, predictions written down BEFORE
