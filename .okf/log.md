@@ -111,6 +111,23 @@ Also corrected: the ~1e-6 noise figure in test-gates and in the code comment
 was macOS-local and read as universal. Same overclaim shape the #566 reviewer
 caught one layer down.
 
+## 2026-08-22 - six-lens AI-ops audit: the failure mode is silent no-ops, not missing rules
+
+A /swarm panel (six read-only lenses, mandatory dissents) audited the AI
+operations layer. Converged diagnosis: things that REPORT activity while doing
+nothing - a mandated memory store with 1 read across 591 entries, a course
+validator whose only caller is an uninstalled git hook (while a unit test
+asserts the hook's TEXT and passes), an ENFORCED rule naming an agent that was
+never built, quota-dead fallbacks, un-vendored BLOCKING gate skills that skip
+silently. Review effort is inverted vs risk (multi-round review on CI-skipped
+docs; rendered-output gates blind to 71.7% of page height). The reviewer
+Fable-quota deaths trace to agent FRONTMATTER (core coder/reviewer pinned
+fable against the routing rule), not spawn parameters. ~100k duplicate MCP
+schema tokens per session (ruflo registered twice). Full findings + ranked
+actions: docs/70-79-ai-intelligence/70.12-ai-operations-audit-2026-08-22-reference.md.
+The audit reproduced its subject: 4 of 6 reviewers idled without reporting
+until pinged.
+
 ## 2026-08-22 - ruflo self-learning enabled, memory unified, OKF backfilled
 
 Two silent failure modes closed: fresh worktrees had dead learning hooks
