@@ -22,9 +22,15 @@ is publish-ready when flipped to `false`).
 
 # Steps
 
-1. **Pick topic** — from the active content plan
-   (`docs/projects/2510-seo-content-strategy/20-29-strategy/20.08-content-plan-data-driven-q3-2026.md`),
-   next 🔲 Planned topic.
+Steps 1-4 are owned by the `/blog-next` skill (`.claude/skills/blog-next/`),
+which adds the premise audit and an outline gate before any prose exists, then
+hands off to `blog-post-coordinator` / `blog-batch-orchestrator`. Running them
+inline is the fallback, not the default.
+
+1. **Pick topic** — from §13 of
+   `docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md`,
+   audited against live GSC/GA4 first: plans decay between grooming and
+   drafting. (§12's R-queue is retired; 20.08 is superseded as a schedule.)
 2. **Read context (mandatory)** — [icp](/content-strategy/icp-primary-website-target.md),
    [voice-guide](/content-strategy/voice-guide.md), the topic's content-plan
    brief, and `.stitch/design.md` for the cover image.
@@ -39,6 +45,10 @@ is publish-ready when flipped to `false`).
    structure: hook → primary keyword in first 100 words → numbered H2s →
    vibe-coding angle → "when NOT to" → JetThoughts proof point → CTA →
    related reading → 5+ external citations.
+5b. **Self-critique (BLOCKING)** — `reflexion-reflect` on the draft before the
+   critic panel (STEP 4e), escalating to `reflexion-critique` after pushback on
+   the same draft. Added 2026-08-22: the LinkedIn and course lanes carried this
+   gate, the blog lane never did.
 6. Cover image generation, SEO validation, `bin/hugo-build`, and the
    [visual-scroll-gate](/workflows/visual-scroll-gate.md) all run before
    the post is considered done — the pipeline does not stop after the

@@ -12,8 +12,11 @@ docs already answer.
 
 Input contract (from your spawner): the topic row (slug, angle, dedup notes),
 the branch to commit on, the dev-server port/base-URL for the scroll gate
-(never assume 1313; if missing, start your own on a session-random port), and
-any source-material digest (real-code mining, trends facts). If a required input is missing, derive it from
+(never assume 1313; if missing, start your own on a session-random port),
+any source-material digest (real-code mining, trends facts), and the approved
+outline if one was gated upstream (the `blog-next` skill produces one; treat it
+as the agreed structure and report back if the draft has to depart from it).
+If a required input is missing, derive it from
 `docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md`
 before asking anyone.
 
@@ -24,8 +27,9 @@ before asking anyone.
    RESCOPE verdict back to spawner instead of writing.
 2. **Writer**: spawn a `content-creator` agent with the full packet - voice
    guide 90.11, cadence anchor from `docs/workflows/blog-writer-reference-samples.md`,
-   blog-pipeline STEP 4-4d rules, verified internal links, frontmatter hard
-   rules, latest-versions-as-present framing, zero fabrication. Two-pass write.
+   blog-pipeline STEP 4-4d rules, verified internal links, the approved outline
+   if you were given one, frontmatter hard rules, latest-versions-as-present
+   framing, zero fabrication. Two-pass write.
 3. **Critic panel** (parallel, resumable via SendMessage): `core-reviewer` as
    (a) tech fact-checker - fetch every cited source, verify every claim and
    every line of copyable code; (b) slop/SEO - AI-pattern scan, SEO checklist,
