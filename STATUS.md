@@ -3,7 +3,8 @@
 > Cold-start surface. One screen: goals, WIP, blockers. Links carry the detail —
 > this file never duplicates project state, it points at it.
 > **Update rule**: any session that changes what's in flight (starts/finishes/parks
-> a workstream, ships a PR, hits a blocker) updates this file in the same commit/PR.
+> a workstream, ships a PR that changes a workstream's state, hits a blocker)
+> updates this file in the same commit/PR.
 > **When updating: verify against the artifact (the ledger, the file, the PR), never
 > a tracker line — trackers rot, and this file must not inherit their staleness.**
 

@@ -111,6 +111,20 @@ Also corrected: the ~1e-6 noise figure in test-gates and in the code comment
 was macOS-local and read as universal. Same overclaim shape the #566 reviewer
 caught one layer down.
 
+## 2026-08-22 - ruflo self-learning enabled, memory unified, OKF backfilled
+
+Two silent failure modes closed: fresh worktrees had dead learning hooks
+(`.claude/helpers/` is gitignored; every settings.json hook no-opped behind
+`|| true` - stats sat at zero for months) and a private `.swarm` memory DB
+that died with the worktree. `bin/agent-bootstrap` now self-heals both at
+SessionStart: `init upgrade` when the handler is missing, and a `.swarm`
+symlink to the main checkout so every session shares ONE memory store.
+The OKF bundle was backfilled into ruflo memory (namespace `okf`, one entry
+per concept + pointer) with a sync rule, and the first distill run mined 660
+reasoning patterns / 650 causal edges (44 promoted) from the main agentdb.
+Full runtime map incl. the v3.6.30 CLI bugs:
+[ruflo-runtime](workflows/ruflo-runtime.md).
+
 ## 2026-08-22 - STATUS.md round two: the surface broke its own rule on commit one
 
 A clean-context peer reviewer (second, independent 4-eyes pass after the

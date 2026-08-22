@@ -21,6 +21,30 @@ bundle install --quiet || log "WARN bundle install failed - Ruby tests/validator
 log "bun install"
 bun install --frozen-lockfile >/dev/null 2>&1 || log "WARN bun install failed - PostCSS/lint unavailable"
 
+# Ruflo (claude-flow) runtime self-heal. .claude/helpers/ and .swarm/ are
+# gitignored scaffolding, so in a fresh worktree the settings.json hooks call a
+# missing handler (silent no-op) and memory writes land in a DB that dies with
+# the worktree. Skipped in CI: no MCP session there to feed.
+if [ -z "${CI:-}" ]; then
+  log "ruflo runtime"
+  GIT_COMMON="$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null)"
+  MAIN_ROOT="${GIT_COMMON%/.git}"
+  if [ -n "$MAIN_ROOT" ] && [ "$MAIN_ROOT" != "$PWD" ] && [ -d "$MAIN_ROOT/.swarm" ] && [ ! -e .swarm ]; then
+    # -sfn also heals a DANGLING .swarm symlink (main checkout moved/renamed):
+    # -e follows links, so a dangling one enters this branch and gets replaced.
+    ln -sfn "$MAIN_ROOT/.swarm" .swarm && log "  .swarm -> shared main-checkout memory DB" \
+      || log "WARN .swarm symlink failed - ruflo memory will die with this worktree"
+  fi
+  if [ ! -f .claude/helpers/hook-handler.cjs ]; then
+    npx @claude-flow/cli@latest init upgrade >/dev/null 2>&1
+    if [ -f .claude/helpers/hook-handler.cjs ]; then
+      log "  helpers regenerated (init upgrade)"
+    else
+      log "WARN ruflo init upgrade did not produce hook-handler.cjs - learning hooks will silently no-op"
+    fi
+  fi
+fi
+
 # libvips runtime for screenshot diffs (Debian/Ubuntu containers)
 if ! ruby -e 'require "vips"' >/dev/null 2>&1 && type apt-get >/dev/null 2>&1; then
   log "installing libvips42"
