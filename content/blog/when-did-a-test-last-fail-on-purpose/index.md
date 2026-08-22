@@ -8,6 +8,10 @@ slug: when-did-a-test-last-fail-on-purpose
 keywords: 'test coverage, green tests, fault injection, ci gates, technical due diligence, non-technical founder testing'
 tags: ['testing', 'quality', 'startup', 'engineering', 'ci']
 categories: ['Engineering']
+cover_image: "cover.png"
+cover_image_alt: 'Obsidian-dark cover reading Eight Planted, Three Caught, with a faceted ruby gem and three chips: SQLite 16 years hidden, 133,874 links skipped, and the rule break it on purpose'
+metatags:
+  image: cover.png
 canonical_url: 'https://jetthoughts.com/blog/when-did-a-test-last-fail-on-purpose/'
 related_posts: false
 ---

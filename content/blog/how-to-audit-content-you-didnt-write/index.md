@@ -8,6 +8,10 @@ slug: how-to-audit-content-you-didnt-write
 keywords: 'content audit, ai generated content, fabricated case studies, blog credibility, agency content review, non-technical founder'
 tags: ['content', 'ai', 'startup', 'marketing', 'trust']
 categories: ['Engineering']
+cover_image: "cover.png"
+cover_image_alt: 'Obsidian-dark cover reading $900,000 Of Fake Research, with a faceted ruby gem and three chips: Pew 1 in 10 .com pages, the tell is an unnamed client, start with your top 10 by traffic'
+metatags:
+  image: cover.png
 canonical_url: 'https://jetthoughts.com/blog/how-to-audit-content-you-didnt-write/'
 related_posts: false
 ---
