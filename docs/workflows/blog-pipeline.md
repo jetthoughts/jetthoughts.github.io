@@ -468,22 +468,26 @@ Before flipping draft: false or before any LinkedIn/external promotion drives tr
 If any of the above checks fail, fix before proceeding to STEP 7.
 
 STEP 7 — VALIDATE
-- **CONFIRM THE POST IS IN THE PRODUCTION BUILD.** `bin/hugo-build` passing does
-  NOT prove this and never did: it writes to `_dest/public-dev`, which builds
-  future-dated content. Production does not. A post dated even one day ahead
-  merges cleanly, passes every gate, and silently does not publish — that
-  happened on 2026-08-22 with `how-to-audit-content-you-didnt-write`, dated
-  tomorrow, merged, absent from the live set.
+- **Know whether the post is LIVE or SCHEDULED, and say which.** Production does
+  not build future-dated content; `bin/hugo-build` does, because it writes to
+  `_dest/public-dev`. So a post dated ahead is absent from the live set until
+  its date arrives.
+
+  **That is a normal, supported way to schedule a post (Paul 2026-08-22) — not a
+  defect.** Do not "fix" a future date you were not asked to change.
+
+  What matters is not confusing the two states in a handback. Say "live" or say
+  "scheduled for <date>", and if you claim gate evidence, check that the gate
+  actually saw the post:
 
   ```
   bin/rake test:links   # builds production into _dest/public-linkcheck
   find _dest/public-linkcheck -type d -name "<slug>"
   ```
 
-  Quote the page-count delta as the evidence: the run above went 1,768 → 1,775
-  pages when the post entered the set. A link check that reports zero errors
-  while your post is missing from the crawl is a vacuous green — it scanned
-  everything except the thing you wrote.
+  A link check reporting zero errors while your post is future-dated has not
+  validated your post — it crawled everything else. That is fine for a scheduled
+  post; it is only a problem if you quote it as proof the post is good.
 - bin/hugo-build must pass (zero errors)
 - Chrome DevTools: open the post page, verify:
   - Zero console errors

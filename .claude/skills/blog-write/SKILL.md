@@ -129,20 +129,15 @@ criteria scored, and the scores written into the commit message.
 
 Feature branch, commit, `gh pr create` with the evidence. Never push to master.
 
-**Prove the post is in the PRODUCTION build before you call it delivered.**
-`bin/hugo-build` does not prove it - that writes to `_dest/public-dev`, which
-builds future-dated content, and production does not. Set `date:` to today or
-earlier, then:
+**Say whether the post is LIVE or SCHEDULED.** Production skips future-dated
+content, so a post dated ahead publishes on its date rather than now. **That is
+a supported way to schedule (Paul 2026-08-22) - leave a future date alone unless
+asked.**
 
-```
-bin/rake test:links
-find _dest/public-linkcheck -type d -name "<slug>"
-```
-
-Quote the page-count delta. A post dated one day ahead merges, passes every
-gate, and does not publish - and the link check reports a clean zero because it
-crawled everything except your post. "Merged" and "delivered" are different
-claims; only the second one needs this check (2026-08-22).
+The only real error is claiming gate evidence the gate could not have produced:
+`bin/rake test:links` reporting zero errors across a build that excluded your
+future-dated post has validated everything except your post. Fine for a
+scheduled piece, wrong to quote as proof it is good.
 
 **Do NOT wait for CI on a content-only PR** (Paul 2026-08-22). Prose and
 frontmatter cannot move the app build, so local gates decide and you merge as
