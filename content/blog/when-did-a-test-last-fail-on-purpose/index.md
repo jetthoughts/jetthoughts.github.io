@@ -3,7 +3,7 @@ title: "Your Link Checker Is Probably Checking Nothing"
 description: "We planted eight defects in our own CI. Three were caught. One gate was skipping 133,874 of 149,516 links and reporting green. Here is the command that proves it."
 date: 2026-08-22
 draft: false
-author: 'JetThoughts Team'
+author: "Paul Keen"
 slug: when-did-a-test-last-fail-on-purpose
 keywords: 'lychee link checker, flaky ci gates, fault injection testing, green tests false confidence, rails ci gates'
 tags: ['testing', 'quality', 'ci', 'engineering', 'ruby']
@@ -60,7 +60,9 @@ From 15,642 links checked to 114,239.
 
 ## Run this on your own repo before you keep reading
 
-Whatever checker you run, the diagnostic is the same.
+The diagnostic is cheap.
+
+Whatever checker you run, it works the same way.
 
 **Compare what your checker says it inspected against how many links your built site actually contains.**
 
@@ -108,7 +110,7 @@ def test_rendered_pages_do_not_regress_on_banned_phrases
 end
 ```
 
-Setting it to 10 and watching it fail takes fifteen seconds. It is the only thing that distinguishes a ratchet from a decoration.
+Setting it to 10 and watching it fail takes fifteen seconds. As far as I can tell it is the only thing separating a ratchet from a decoration.
 
 ## The one that should genuinely worry you
 
@@ -141,11 +143,13 @@ If your CI output cannot distinguish "inspected everything and found nothing" fr
 
 ## What we do now, and what it costs
 
+One rule, and it is not negotiable here.
+
 A new test is not finished until someone has broken the thing it guards and watched it fail. Flaky failures do not count; this has to be deliberate, and someone has to be watching when it goes red.
 
 That adds maybe two minutes to writing a test.
 
-We think it is the highest-return two minutes in the whole suite, and we would rather tell you that than quote you a coverage percentage that cannot distinguish a working check from a decorative one.
+I think it is the highest-return two minutes in the whole suite, and I would rather tell you that than quote you a coverage percentage that cannot tell a working check apart from a decorative one.
 
 If you want the exercise: pick your three most important checks, plant one realistic defect against each, and write down beforehand which one should catch it. You will learn more in an afternoon than a coverage report has told you all year.
 
