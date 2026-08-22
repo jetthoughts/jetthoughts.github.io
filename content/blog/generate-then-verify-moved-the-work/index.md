@@ -16,11 +16,7 @@ canonical_url: 'https://jetthoughts.com/blog/generate-then-verify-moved-the-work
 related_posts: false
 ---
 
-Cards on the table: we sell engineering time, so "your AI workflow is costing you more than you think" is a convenient thing for me to believe. The numbers below are other people's, all linked, and the practice at the end costs nothing.
-
-The advice is everywhere, and it always has the same shape. Let the model write the code, then you check it. Sometimes it comes with a seatbelt metaphor. Sometimes it is phrased as trust but verify, which at least admits there is a cost.
-
-Look at the word doing the work: *then*. It puts checking second, and things that come second sound smaller. The sentence is describing a division of labour, and what it actually describes is a transfer.
+The advice is everywhere, and it always has the same shape. Let the model write the code, then you check it. Look at the word doing the work: *then*. It puts checking second, and things that come second sound smaller. The sentence is describing a division of labour, and what it actually describes is a transfer.
 
 ## Somebody measured where the hours went
 
@@ -93,7 +89,7 @@ I have watched a lot of code get produced very quickly and then get read very sl
 
 If your team has adopted AI tooling and velocity has not moved the way you expected, you are not doing it wrong and the tools are not broken. The work moved somewhere nobody was measuring.
 
-So measure there. Put the review estimate in the ticket next to the build estimate, for two weeks, and see which one you keep getting wrong. That is a cheaper experiment than any conclusion I could sell you.
+So measure there. Put the review estimate in the ticket next to the build estimate, for two weeks, and see which one you keep getting wrong.
 
 ## Sources
 

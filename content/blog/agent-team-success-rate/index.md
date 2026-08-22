@@ -16,11 +16,9 @@ canonical_url: 'https://jetthoughts.com/blog/agent-team-success-rate/'
 related_posts: false
 ---
 
-Cards on the table: we run agents in our own delivery, so I am not a neutral party on whether they work. Everything numeric below comes from three published sources that are not us, and two of them undercut the enthusiasm.
-
 You can stand up a team of autonomous agents this afternoon. The frameworks are real, the demos are real, and the question worth asking is the one nobody puts on the landing page: how often does it work?
 
-Somebody measured. A group at UC Berkeley - the author list includes Matei Zaharia, Joseph Gonzalez and Ion Stoica - collected execution traces from seven multi-agent frameworks and published the success rates. Across six of them, on their respective benchmarks:
+Somebody measured. A group at UC Berkeley - collected execution traces from seven multi-agent frameworks and published the success rates. Across six of them, on their respective benchmarks:
 
 | Framework | Benchmark | Success |
 |---|---|---:|
@@ -94,7 +92,7 @@ If you want the implementation rather than the argument, we wrote up [our produc
 
 And budget for the 15×. A system that is right slightly more often and costs an order of magnitude more per run is not automatically a good trade. It depends entirely on what a wrong answer costs you, which is a question about your business rather than about agents.
 
-## So, how many got success?
+## So how many of them work?
 
 Between 13% and 59% on the published benchmarks, in the wide-open configuration most of those frameworks were attempting.
 
