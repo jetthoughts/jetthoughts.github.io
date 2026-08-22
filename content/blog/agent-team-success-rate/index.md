@@ -29,7 +29,7 @@ Somebody measured. A group at UC Berkeley - collected execution traces from seve
 | HyperAgent | SWE-Bench Lite | 25.3% |
 | AppWorld | Test-C | 13.3% |
 
-Read that as a range, not a league table. The paper's own figure caption says it plainly: "Performances are measured on different benchmarks, therefore they are not directly comparable." AppWorld is not four times worse than AG2; they are not attempting the same thing.
+Two things travel with those numbers. The paper's own caption says "Performances are measured on different benchmarks, therefore they are not directly comparable," so read it as a range rather than a league table: AppWorld is not four times worse than AG2, they are not attempting the same thing. And the runs used GPT-4o and Claude-3, which are not what you would wire up today. Frontier models have moved; whether the coordination failures moved with them is the open question, and the paper does not answer it.
 
 What the spread does tell you is the shape of the answer. On the tasks these systems were built for, the modal outcome is failure, and the paper opens by saying so: "Despite enthusiasm for Multi-Agent LLM Systems (MAS), their performance gains on popular benchmarks are often minimal."
 

@@ -75,7 +75,7 @@ So the goal has to carry its boundaries. Not steps - boundaries. What must remai
 
 The second failure is subtler. Goal delegation needs the person or the agent to have enough context to make the decisions you are handing over. Give a goal to someone who does not know the system and you have not empowered them, you have abandoned them. That is not an argument for task lists. It is an argument for the context arriving first.
 
-This bites harder with agents than with people. A human team repairs a bad brief by asking each other what you meant. A set of agents mostly does not, so whatever you left out of the instruction stays out.
+This bites harder with agents than with people, and Anthropic's engineers say why in their write-up of their own multi-agent system: coordinating and delegating between agents in real time is the thing these systems are still worst at. A human team repairs a bad brief by asking each other what you meant. Agents mostly do not ask, so whatever you left out of the instruction stays out.
 
 ## It is the same rule for people and for agents
 
@@ -96,4 +96,4 @@ And if what comes back is alarming enough that you want another pair of eyes on 
 ## Sources
 
 - Anthropic, [How we built our multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system) - on the current limits of agents delegating to each other.
-- The idea has a formal home in US Army mission command doctrine (ADP 6-0). I have deliberately not quoted it here: the publication is public, the historical lineage usually told alongside it is disputed by military historians, and I have not read those sources closely enough to summarise the argument fairly.
+- US Army mission command doctrine (ADP 6-0) is the formal version of this argument. I have pointed rather than quoted: the lineage usually told alongside it is disputed by military historians and I have not read them closely enough to take a side.
