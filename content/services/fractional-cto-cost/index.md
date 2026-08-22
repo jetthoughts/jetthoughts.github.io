@@ -226,4 +226,4 @@ Our fractional CTO cost-effective solutions support businesses across multiple i
 
 Understanding fractional CTO cost is the first step toward getting senior technology leadership for your business. Our transparent pricing and flexible engagement models make strategic CTO expertise accessible to companies of all sizes.
 
-[Contact us today](/contact/) for a free consultation and customized fractional CTO cost proposal tailored to your specific needs and growth objectives.
+[Contact us today](/contact-us/) for a free consultation and customized fractional CTO cost proposal tailored to your specific needs and growth objectives.

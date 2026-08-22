@@ -36,6 +36,10 @@ class MarketingCopyTest < Minitest::Test
     "content/services/**/*.md",
     "content/use-cases/**/*.md",
     "layouts/next/**/*.html", # the v2 rail is template-authored marketing copy on root layouts
+    # ...and its CONTENT side. Without this the pilots' copy had no source-side
+    # cover at all: a planted "world-class" in a pilot stub passed the whole
+    # suite on 2026-08-22 (docs/20-29-testing-qa/20.11).
+    "content/next/**/*.md",
     "themes/beaver/layouts/home.html",
     "themes/beaver/layouts/page/*.html",
     # Blog CHROME (list hero, section furniture) is a marketing surface even
@@ -141,9 +145,13 @@ class MarketingCopyTest < Minitest::Test
   # pages - which is the whole argument for reading RENDERED output: source
   # matching sees two files, the reader sees twelve.
   #
-  # The remaining 14 live in individual post bodies. Tighten this number every
-  # time a batch is cleared; a ratchet left slack lets the win regress silently.
-  RENDERED_BASELINE = 14
+  # The remaining hits live in individual post bodies. Tighten this number every
+  # time a batch is cleared; a ratchet left slack lets the win regress silently
+  # - which is not hypothetical: this sat at 14 against an actual 11, and those
+  # three spare hits swallowed a planted "world-class" whole (2026-08-22,
+  # docs/20-29-testing-qa/20.11). Set it to the measured count, then prove the
+  # ratchet is exact by dropping it one lower and watching it fail.
+  RENDERED_BASELINE = 11
 
   def test_rendered_pages_do_not_regress_on_banned_phrases
     violations = rendered_files.flat_map { |path| rendered_hits(path) }.sort

@@ -88,10 +88,19 @@ namespace :test do
     end
   end
 
-  # Broken-link checks (2026-07-21: GA 404 spike audit). Coverage is total by
-  # construction - every *.html the build emits is globbed from disk and
-  # passed to lychee as an explicit input, so nothing is skipped the way a
-  # single-URL or sitemap-only scan would skip.
+  # Broken-link checks (2026-07-21: GA 404 spike audit). Every *.html the build
+  # emits is globbed from disk and passed as an explicit input, so no PAGE is
+  # skipped.
+  #
+  # That is not the same as no LINK being skipped, and for a year it wasn't:
+  # the production build renders internal links absolute
+  # (https://jetthoughts.com/...) and `--offline` excludes every http(s) URI by
+  # design, so 133,874 of 149,516 links were excluded and the job was green
+  # because it inspected almost nothing (measured 2026-08-22 by planting a
+  # broken link and watching it pass - docs/20-29-testing-qa/20.11). The
+  # --remap below rewrites those absolute URLs back onto the built tree so
+  # they are actually resolved; without it this task checks little more than
+  # each page's own #main-content skip-link anchor.
   #
   # These build with ENVIRONMENT=production (not the top-level :build task's
   # dev default) rather than depending on :build - the dev config mounts
@@ -118,7 +127,10 @@ namespace :test do
     html_files = Dir.glob("#{dir}/**/*.html")
     abort "No HTML files found in #{dir} - did the build fail?" if html_files.empty?
     puts "lychee: scanning #{html_files.size} pages for broken internal links..."
-    sh("lychee", "--offline", "--no-progress", "--root-dir", File.expand_path(dir), "#{dir}/**/*.html")
+    root = File.expand_path(dir)
+    sh("lychee", "--offline", "--no-progress",
+      "--remap", "https://jetthoughts.com/(.*) file://#{root}/$1",
+      "--root-dir", root, "#{dir}/**/*.html")
   end
 
   # Same page set including external links. Non-blocking: third-party

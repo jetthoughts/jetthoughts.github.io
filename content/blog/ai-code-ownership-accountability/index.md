@@ -96,7 +96,7 @@ While you wait, open your hosting dashboard. Find out who can deploy to producti
 
 Two of the three rescues we ran last quarter started with a 48-hour silence on exactly this email.
 
-> **If you'd rather have a second pair of eyes do the audit:** [send us](https://jetthoughts.com/contact/) a read-only repo invite. We send back a one-page report in 48 hours - AI-vs-human commit ratio, any unscoped tokens or god-mode keys, and any AI-introduced dependencies nobody vetted. No force-push, no deploy keys, no rebuild pitch. Revoke the invite the moment the report ships. Not ready to share code yet? Send your three biggest concerns and we'll send back a one-page checklist.
+> **If you'd rather have a second pair of eyes do the audit:** [send us](/contact-us/) a read-only repo invite. We send back a one-page report in 48 hours - AI-vs-human commit ratio, any unscoped tokens or god-mode keys, and any AI-introduced dependencies nobody vetted. No force-push, no deploy keys, no rebuild pitch. Revoke the invite the moment the report ships. Not ready to share code yet? Send your three biggest concerns and we'll send back a one-page checklist.
 
 ## When Not To Bother
 

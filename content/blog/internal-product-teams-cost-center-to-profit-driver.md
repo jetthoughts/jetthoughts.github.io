@@ -393,25 +393,6 @@ Your transformation is possible. It just requires measuring and communicating th
 
 ---
 
-## Ready to prove your team's value?
-
-Download our **Internal Product ROI Calculator** to start quantifying your team's business impact today. This spreadsheet template includes:
-
-- Four-pillar value calculation framework
-- Executive dashboard templates
-- Stakeholder communication guides
-- 90-day implementation timeline
-- Real-world calculation examples
-
-{{< cta title="Get the ROI Calculator"
-     description="Transform your internal team from cost center to profit driver with our proven framework and templates."
-     button-text="Download Free Calculator"
-     button-url="/resources/internal-product-roi-calculator" >}}
-
-*No email required. Instant download.*
-
----
-
 *Need help implementing value measurement for your internal team? Our engineering management consultants have helped dozens of internal product leaders prove ROI and secure budget increases. [Schedule a consultation](/contact-us) to discuss your specific situation.*
 
 ---
