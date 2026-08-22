@@ -38,17 +38,15 @@ Then a tool started drafting, and the person approving its output was not equipp
 
 ## Nobody can tell you how much of the web this is
 
-You would think there is a number. There are several and they disagree.
+You would think there is a number. There are several and they disagree - ten percent, a third, or half, depending on whose sample and whose detector.
 
-[Graphite](https://graphite.io/five-percent/more-articles-are-now-created-by-ai-than-humans) sampled 43,000 CommonCrawl URLs published between January 2020 and May 2025, ran them through Surfer's detector, and put the crossover - more machine-written articles than human ones - in November 2024.
+[Graphite](https://graphite.io/five-percent/more-articles-are-now-created-by-ai-than-humans) put the crossover, more machine-written articles than human ones, in November 2024. [Pew](https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/) ran ~490,000 Common Crawl pages through Open Pangram this month and found 10% carrying AI-authorship signals, rising to over a third among pages published after ChatGPT shipped. Both publish their error bars, which is the habit worth stealing whatever you make of the figures.
 
-[Pew](https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/) ran roughly 490,000 English-language pages from the same archive through Open Pangram this month and found 10% of all sampled pages showing significant signs of AI authorship - rising to over a third when you look only at pages published after ChatGPT shipped.
+Pew also split it by domain, and that is where you come in:
 
-Ten percent, a third, or half. The numbers are not contradicting each other so much as answering different questions, on different samples, with different detectors.
+![Share of pages showing AI-authorship signals by domain: .com around 10 percent, .org 4.6 percent, .edu and .gov around 1 percent.](domains.svg)
 
-Both teams publish their error bars, and that habit is worth stealing regardless of what you make of their numbers. Graphite reports a 4.2% false-positive rate against GPT-4o content and no measurement at all of AI-assisted-then-human-edited writing. Pew says plainly that "AI detection models aren't perfect" on individual documents and only hold up in aggregate.
-
-One more number from Pew is the one that should interest you: **around one in ten `.com` pages carry those signals - roughly double the `.org` rate and ten times what `.edu` and `.gov` show.** Commercial sites are where this concentrates, and yours is a commercial site.
+Commercial sites are where this concentrates, and yours is a commercial site.
 
 So the honest position is that the web's average is unknown and the detectors that estimate it are themselves approximate. Which is fine, because the average was never the thing you needed. **You need to know about your property, and your property is countable.**
 
@@ -95,7 +93,7 @@ Run the first one and read every hit. Real client work names the client or does 
 
 Count how many of your long posts link to nothing outside your own domain.
 
-A post with no external citation is not necessarily wrong. It is unverifiable, which means nobody could have checked it - including whoever wrote it, at the moment they wrote it. That is the distinction I care about, and it is the one this count actually measures.
+A post with no external citation is not necessarily wrong. It is unverifiable, which means nobody could have checked it - including whoever wrote it, at the moment they wrote it.
 
 Uncheckable is where wrong survives, and the number usually comes back higher than anyone guesses.
 
@@ -131,9 +129,9 @@ Then check each against the vendor's own support table. Laravel, Rails and Node 
 
 It cannot tell you whether a claim is true.
 
-We tried to build that and failed honestly. Two candidate patterns for detecting wrong technical claims got measured against the archive before we trusted either: one matched ten passages, mostly legitimate; the other matched a hundred and eighty-five, almost all ordinary prose. Both would have cried wolf until people stopped reading the output.
+We tried to build that and failed. Two candidate patterns for detecting wrong technical claims got measured before either was trusted: one matched ten passages, mostly legitimate, the other a hundred and eighty-five, almost all ordinary prose. Both would have cried wolf until people stopped reading the output.
 
-A wrong explanation is a well-formed sentence using correct vocabulary, pointing roughly the right direction. There is no pattern for it. What catches it is someone who knows the subject, reading with permission to disagree - which is a different investment, and the one worth making after the four checks above have narrowed where to look.
+A wrong explanation is a well-formed sentence using correct vocabulary, pointing roughly the right direction. What catches it is someone who knows the subject reading with permission to disagree - a different investment, and the one worth making after these four have narrowed where to look.
 
 ## Where to start this week
 

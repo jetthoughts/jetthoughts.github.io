@@ -58,6 +58,8 @@ Same command, same flags, one addition. The next run:
 
 From 15,642 links checked to 114,239.
 
+![Links actually inspected before and after adding --remap: 15,642 of 149,516 versus 114,239. Both runs reported zero errors.](checked.svg)
+
 ## Run this on your own repo before you keep reading
 
 The diagnostic is cheap.
@@ -110,7 +112,7 @@ def test_rendered_pages_do_not_regress_on_banned_phrases
 end
 ```
 
-Setting it to 10 and watching it fail takes fifteen seconds. As far as I can tell it is the only thing separating a ratchet from a decoration.
+Setting it to 10 and watching it fail takes fifteen seconds. It is the only thing separating a ratchet from a decoration.
 
 ## The one that should genuinely worry you
 
@@ -149,7 +151,7 @@ A new test is not finished until someone has broken the thing it guards and watc
 
 That adds maybe two minutes to writing a test.
 
-I think it is the highest-return two minutes in the whole suite, and I would rather tell you that than quote you a coverage percentage that cannot tell a working check apart from a decorative one.
+It is the highest-return two minutes in the suite, and worth more than a coverage percentage that cannot tell a working check apart from a decorative one.
 
 If you want the exercise: pick your three most important checks, plant one realistic defect against each, and write down beforehand which one should catch it. You will learn more in an afternoon than a coverage report has told you all year.
 
