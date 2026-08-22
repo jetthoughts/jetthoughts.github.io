@@ -1,7 +1,7 @@
 ---
 type: build-concept
 title: A screenshot baseline is a recording of a rendering stack
-description: Which environment records the linux/ baselines, why local dtest can differ from CI, the all-arm64 migration, and the five wrong explanations for one drift - two of them formally withdrawn
+description: Which environment records the linux/ baselines, why bin/dtest is now authoritative for detecting visual defects, and the five wrong explanations for a drift whose real cause was stale baselines
 tags: [testing, screenshots, docker, ci, rendering]
 timestamp: 2026-08-22T00:00:00Z
 ---
@@ -22,19 +22,31 @@ produced the baseline and which produced the candidate**.
 | **base OS** | **Debian 13 trixie** (freetype 2.13.3) | **Ubuntu 24.04** |
 
 Architecture, browser and fonts are deliberately pinned to match. The base OS
-is not - so freetype/harfbuzz may differ, which would be enough to move dense
-monospace text. 8 `mobile/blog/special/codeblocks/*` screenshots differ
-~0.055-0.063 with no defect present, and **the base OS is the last unpinned
-variable, not a demonstrated cause** - see the open question below.
+is not - and **measurement on 2026-08-22 says that does not matter today.**
+Against baselines recorded by CI on Ubuntu ARM, local `bin/dtest` on Debian ARM
+reports `55 screenshots compared, no failures`. Pixel-identical across the
+distro boundary.
+
+**Measured, not structural.** Debian and Ubuntu upgrade freetype/harfbuzz
+independently, so this agreement can end without anyone changing this repo.
+It is a fact about today's two images, not a guarantee - which is why
+"re-record where the tester runs" stays a rule below.
 
 **macOS is a third stack.** `bin/test` records `macos/`; `bin/dtest` and CI
 record `linux/`. Neither OS's set is a subset of the other, and a candidate
 rendered on one must never be committed as a baseline for another.
 
-## Five wrong explanations, in the order they were believed
+## Five wrong explanations, and the boring answer (RESOLVED 2026-08-22)
 
-Each sounded mechanical and each was asserted without measuring the thing it
-named. Listed because the *shape* recurs, not the specific causes:
+**The cause was stale baselines.** Nothing else. The `linux/` set had been
+recorded on amd64/Chrome-152 against older content; every "drift" was that old
+recording compared against a current render. Re-recording on master made all 55
+match everywhere, local and CI.
+
+Five explanations were believed before that. Each sounded mechanical, each was
+asserted without measuring the thing it named, and the true cause was never
+proposed as a hypothesis because it was not interesting enough to be suspicious
+of. Listed because the *shape* recurs, not the specific causes:
 
 1. **"arm64 vs amd64 drift."** The container was x86_64 at the time. `.dev/compose.yml`
    pins `platform: linux/amd64` on the `t` service and that DOES override
@@ -49,19 +61,33 @@ named. Listed because the *shape* recurs, not the specific causes:
    both see the same tree.
 4. **"A date-gated post appeared."** Both candidate posts were dated before
    the baseline was recorded.
-5. **"Debian container vs Ubuntu runner."** Believed 2026-08-22 and asserted in
-   #589's commit message. The base OS is the last unpinned variable, which makes
-   it the standing candidate - but it has never been measured either. Withdrawn;
-   see the codeblocks section below for the observation that fooled it.
+5. **"Debian container vs Ubuntu runner."** Believed 2026-08-22, asserted in
+   #589's commit message, and **DISPROVEN the same day**: after the re-record,
+   Debian ARM and Ubuntu ARM agree on all 55. What made it persuasive was that
+   local and CI failed the *same 8 keys* - which reads as corroboration and is
+   not, because both were comparing against the same stale baselines, so every
+   hypothesis predicted red on both. **Two observers agreeing tells you nothing
+   when they share the input you are trying to test.**
 
-The measurement that resolved #1-#4 took one command and should have been
-first: read the container's OS and library versions. #5 has no such measurement
-yet, which is exactly why it is listed here rather than in Rules.
+Why this family and not others: dense monospace text is where any rendering
+difference lands first, so the codeblocks screenshots were the most sensitive
+surface in the suite. They were not arbitrary - they were the canary, which is
+also why they looked like evidence for whichever theory was current.
+
+The lesson is the ranking. Every one of these five was a story about a
+*mechanism*; none was a check on the *instrument*. "Are the baselines current?"
+is cheap, boring, and would have ended it in a day.
 
 ## Rules
 
+- **Suspect the baselines BEFORE the mechanism.** "Are these current?" is the
+  cheapest question available and it is the one that resolved a drift five
+  mechanism-theories failed on. Ask it first, every time.
 - **Identical `difference_level` across two runs = stale baseline, not flake.**
   Flake varies; a stack mismatch does not.
+- **Agreement between two observers proves nothing if they share the input
+  under test.** Local and CI failing the same keys looked like corroboration
+  and was an artifact: both were reading the same stale baselines.
 - **Re-record where the tester runs.** An `update-baselines` dispatch on a
   feature branch records the branch tree while PR runs test the merge commit;
   dispatch on **master** so recorder and tester agree. That is what fixed
@@ -86,9 +112,9 @@ on some hypothetical x86 box does not qualify; neither does an unexplained
 pixel diff, which is a measurement job, not grounds to go back. Treat "should
 we return to amd64?" as answered unless you can name the thing ARM cannot do.
 
-This matters because the 8 unexplained codeblocks keys below are exactly the
-kind of loose end that invites a retreat to the old stack. They predate the
-migration and survived it unchanged - so they are not evidence against ARM.
+The loose end that would have invited a retreat - the 8 codeblocks keys - is
+closed: they were stale baselines, not an ARM problem, and the re-record made
+them green. ARM cost nothing in correctness and removed the emulation tax.
 
 ### How it became available (was "waiting for Stable")
 
@@ -130,47 +156,40 @@ Two things the plan did not anticipate, both of which would have broken CI too:
   kept-and-now-correct: it is precisely what made wrong explanation #1 above
   look plausible.
 
-### The 8 codeblocks keys: still UNRESOLVED, and beware the false confirmation
+### The 8 codeblocks keys: CLOSED 2026-08-22
 
-After changing both architecture and Chrome major version, 47 of 55 screenshots
-still matched baselines recorded on amd64/Chrome-152. The 8 that did not are the
-same `mobile/blog/special/codeblocks/*` family, at the same magnitudes - so the
-divergence is neither arch nor Chrome version.
+The experiment: re-record `linux/` via an `update-baselines` dispatch on master
+(`dc11791ab`, all 55 rewritten), then run local `bin/dtest` against it.
 
-**It does NOT follow that the base OS is the cause.** Local ARM (Debian) and CI
-ARM (Ubuntu) fail the *same 8 keys*, which reads like confirmation and is not:
-both are being compared against baselines recorded on the OLD stack, so every
-hypothesis predicts red on both. The observation cannot discriminate. An earlier
-commit message in this very migration asserted the distro cause anyway - the
-fifth instance of the exact shape catalogued above.
+**Result: `55 screenshots compared, no failures`.** The distro never mattered.
 
-**The discriminating experiment, still to run:** re-record `linux/` via an
-`update-baselines` dispatch on master, then run local `bin/dtest`. Green means
-the distro never mattered; the same 8 red means it does. Until that runs, the
-cause is unknown, not "Debian vs Ubuntu".
+Then, because a green gate and a blind gate look identical, the instrument was
+checked: forcing `background-color: #ff0000` on `.post-article .highlight pre`
+produced `16 failures` - all 8 desktop plus all 8 mobile codeblocks keys, and
+nothing else. Reverting returned it to 0. Clean 0 -> injected 16 -> reverted 0
+is the evidence that the green means something.
 
-## The open decision: one rendering stack, or two?
+## One stack or two: DECIDED 2026-08-22 - two, and do nothing
 
-Running CI inside this same container makes local and CI identical by
-construction and lets `bin/dtest` be authoritative for visuals; both sides are
-now arm64 native so there is no emulation either way, and the cost is image
-build/pull per job -
-**measure it before committing.** Feasibility checked 2026-08-22: the repo is
-PUBLIC so GHCR is free, the image is 2.54 GB uncompressed, and GitHub Actions
-can run a whole job inside it via the job-level `container:` key. Publish on
-changes to `.dev/Dockerfile` or `.dev/cft-version` only - the same hash that
-already keys the Chrome cache. Note the honest comparison is not "pull vs
-nothing": CI already spends the same class of time on
-`setup-ruby-and-dependencies`, the Chrome-for-Testing download and the font
-packages, all of which the container replaces.
+The plan was to publish this image to GHCR and run CI inside it, so local and
+CI would be identical *by construction*. **Do not build that.** Its entire
+justification was closing a Debian-vs-Ubuntu gap that measurement says is not
+open: the two images already agree on all 55 screenshots. A 2.54 GB build/pull
+per job, retired before it was built.
 
-The tempting cheaper alternative - move the CONTAINER to Ubuntu so it matches
-the runner - is blocked: the image builds on `ruby:$RUBY_VERSION-slim`, and the
-official Ruby images are Debian-only. Matching that way means hand-rolling Ruby
-on an Ubuntu base, which is more moving parts than publishing one image.
+The other rejected option was accepting a split where CI owned pixel truth and
+`bin/dtest` was merely behavioural, with divergent keys screened. Also dead, and
+good riddance: an expected-red list is exactly what rotted into "everything is
+expected red" before #566.
 
-The alternative is to accept the split: CI owns pixel truth, `bin/dtest` is a
-behavioural gate, and the divergent keys are screened. Free today, but an
-expected-red list is exactly what rotted into "everything is expected red"
-before #566. Pinning font and library versions across two distros is a third
-option and not a serious one - they drift independently, forever.
+What holds instead:
+
+- **`bin/dtest` is authoritative for DETECTING visual defects.** It agrees with
+  CI, so a local red is a real defect. There is no expected-red list.
+- **CI remains authoritative for RECORDING.** Agreement is measured, not
+  structural - Debian and Ubuntu move independently - so re-recording stays a
+  master dispatch. Detection and recording are different powers; this split is
+  deliberate, not leftover caution.
+- **Revisit only on evidence**, i.e. a `bin/dtest` red that a master re-record
+  then makes green. That is the signature of the distros having drifted apart,
+  and it is the only thing that should reopen the GHCR question.

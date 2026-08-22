@@ -25,12 +25,16 @@ bin/build-if-stale _dest/public-dtest
 # Discarding those candidates costs nothing, because a candidate produced here
 # is never committable - and it is one `git add -A` from corrupting the set.
 #
-# Since 2026-08-22 the ARCHITECTURE argument for that no longer applies: both
-# this container and CI run arm64 on the same pinned Chrome. Do not read that
-# as permission to commit local candidates. The base OS still differs (Debian
-# trixie here, Ubuntu 24.04 on the runner) and that is the last unpinned
-# rendering variable - see .okf/build/rendering-stack.md, which also records
-# why "same failures on both sides" is NOT evidence the two agree.
+# Measured 2026-08-22: this container and CI now agree on all 55 screenshots
+# (same arch, same pinned Chrome, and the Debian-vs-Ubuntu difference turned
+# out not to matter). So a red here is a REAL defect - there is no
+# expected-red list any more.
+#
+# Detecting and RECORDING are still different powers, which is why the restore
+# below stays. The agreement is measured, not structural: Debian and Ubuntu
+# upgrade freetype/harfbuzz independently, so it can end without anything in
+# this repo changing. Re-recording remains a master `update-baselines`
+# dispatch. See .okf/build/rendering-stack.md.
 # The only legitimate linux re-record is the CI `update-baselines` dispatch
 # (.okf/build/test-gates.md). Diff artifacts (*.diff.png, *.heatmap.diff.png)
 # are untracked and survive the restore, so a red run stays inspectable.

@@ -51,6 +51,29 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-22 - the codeblocks drift was STALE BASELINES; five theories closed at once
+
+**`rendering-stack`**: re-recorded `linux/` on master (`dc11791ab`, all 55) and
+ran local `bin/dtest` against it: **`55 screenshots compared, no failures`**.
+Debian ARM and Ubuntu ARM are pixel-identical. The drift that produced five
+successive explanations over three weeks was old baselines compared against
+current renders - nothing more.
+
+Verified the gate can still fail before believing the green: forcing
+`background-color: #ff0000` on `.post-article .highlight pre` produced 16
+failures (all 8 desktop + all 8 mobile codeblocks, nothing else), and reverting
+returned it to 0.
+
+Consequences recorded in the concept:
+- **The GHCR container-publishing plan is CANCELLED.** It existed solely to
+  close the Debian-vs-Ubuntu gap by construction. There is no gap; a 2.54 GB
+  build/pull per CI job is retired before being built.
+- **`bin/dtest` is authoritative for DETECTING visual defects** - local red now
+  means a real defect, and there is no expected-red list. CI keeps RECORDING,
+  because the agreement is measured, not structural.
+- Two new rules: suspect the baselines before the mechanism, and two observers
+  agreeing proves nothing when they share the input under test.
+
 ## 2026-08-22 - ARM migration shipped, and the "Debian vs Ubuntu" answer is withdrawn
 
 **`rendering-stack`**: the whole stack moved to arm64 - CfT pinned to
