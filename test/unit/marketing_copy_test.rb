@@ -25,8 +25,13 @@ class MarketingCopyTest < Minitest::Test
   REPO_ROOT = File.expand_path("../..", __dir__)
 
   # Surfaces a prospect actually reads before deciding. content/blog/** is
-  # excluded (540+ imported posts, audited separately per the dev.to ICP gate)
-  # and content/clients/** is a KNOWN remaining offender - "to the next level"
+  # excluded FROM THIS PASS (540+ imported posts, audited separately per the
+  # dev.to ICP gate) - but it is NOT unguarded: the rendered pass below covers
+  # blog/**/*.html for the same banned phrases, and the fabrication ratchet at
+  # the end covers blog SOURCE for invented-client-work shapes. Do not read this
+  # exclusion as "the blog has no gate".
+  #
+  # content/clients/** is a KNOWN remaining offender - "to the next level"
   # in two case-study excerpts - deferred, not covered here. Add it when that
   # work is scheduled rather than pretending this gate already covers it.
   SURFACES = [
@@ -162,6 +167,75 @@ class MarketingCopyTest < Minitest::Test
       "reads - fix the source that produced these:\n  " + violations.join("\n  ")
   end
 
+
+  # ---------------------------------------------------------------------------
+  # Fabricated-claim ratchet over blog SOURCE.
+  #
+  # BANNED above is a phrase guard - it catches stale tenure and commodity-agency
+  # voice. It cannot catch the class claims-canon.md calls "invented client
+  # work", because a fabricated case study is built from ordinary words. What it
+  # does have is a STRUCTURE, and structure is greppable.
+  #
+  # Why this exists: three successive hand-sweeps on 2026-08-22 each found
+  # carriers the previous one missed, because each keyed on the wrong surface. A
+  # "N clients" regex missed everything phrased as a case study; a
+  # case-study-heading sweep missed everything phrased as "in our experience";
+  # both missed frontmatter. That is claims-canon.md's own finding ("manual
+  # sweeps under-count badly") reproducing itself inside one session. A ratchet
+  # does not need to recognise a fabrication - it only has to notice the count
+  # going up.
+  #
+  # Markers are SHAPE, not judgement:
+  #
+  # - a case-study heading. Real client work belongs in content/clients with a
+  #   named client behind it; a "Case Study" heading inside a technical post has
+  #   been an invented company every time it has been checked.
+  # - "in our experience" / "the pattern we see" - the recurrence-generalisation
+  #   hatch, which is what a fabricated specific collapses into when someone
+  #   drops the number but keeps the authority.
+  # - "(figures unverified)" - a number tagged instead of removed. The tag is the
+  #   part a reader skips; the number still does the persuading.
+  #
+  # dev.to imports are excluded on the same derivation the rendered pass uses:
+  # their stats belong to their original authors. That is a TEST-scoping call,
+  # NOT editorial absolution - those posts are still published on our domain and
+  # are governed by the separate dev.to ICP gate.
+  FABRICATION_MARKERS = {
+    /^\#{2,4}\s.*\bcase stud/i => "case-study heading - invented client work every time it has been checked",
+    /\bin our experience\b/i => "recurrence-generalisation - unfalsifiable authority claim",
+    /\bthe pattern (we see|across the)/i => "recurrence-generalisation - the de-fabrication escape hatch",
+    /\(figures unverified\)/i => "a tagged number is still a published number"
+  }.freeze
+
+  # RATCHET, not a cleanup gate: fails only when the count goes UP.
+  #
+  # Measured after the 2026-08-22 purge, which cleared nine posts including the
+  # two largest carriers by impressions - langgraph (40,025) and propshaft
+  # (6,194). Survivors are lower-traffic posts not yet swept.
+  #
+  # Tighten this every time a batch is cleared. A ratchet left slack lets the win
+  # regress silently - the rendered baseline above sat at 14 against an actual 11
+  # and those three spare hits swallowed a planted phrase whole. Set it to the
+  # measured count, then prove it is exact by dropping it one lower and watching
+  # it fail.
+  #
+  # 17 survivors, and 8 of them are one deferred decision rather than 8 defects:
+  # the fractional-CTO posts (fractional-cto-vs-full-time-cto-complete-comparison,
+  # fractional-vs-full-time-cto-cost-benefit-analysis, fractional-cto-roi-calculator)
+  # are already subject to Paul's 2026-08-21 positioning ban on fractional-CTO
+  # title claims. Those need a wholesale call - rewrite, redirect or retire - and
+  # editing their case-study headings first would bury that decision under a
+  # cosmetic fix. Recorded here so the count is legible rather than mysterious.
+  FABRICATION_BASELINE = 17
+
+  def test_blog_does_not_regress_on_fabricated_claim_markers
+    hits = fabrication_hits.sort
+
+    assert_operator hits.size, :<=, FABRICATION_BASELINE,
+      "Fabricated-claim markers in blog source went up (baseline " \
+      "#{FABRICATION_BASELINE}, now #{hits.size}). These shapes carry invented " \
+      "client work - see .okf/content/claims-canon.md:\n  " + hits.join("\n  ")
+  end
   private
 
   def rendered_root
@@ -285,5 +359,27 @@ class MarketingCopyTest < Minitest::Test
       .gsub(%r{\S*://\S*}, " ")   # absolute URLs
       .gsub(PATH_TOKEN, " ")      # slugs and partial names (theme/world-class-training)
       .gsub(ASSET_TOKEN, " ")
+  end
+
+  def fabrication_hits
+    posts = blog_source_files
+
+    assert posts.any?, "No blog source found - this gate would pass by finding nothing."
+
+    posts.flat_map do |path|
+      relative = path.sub("#{REPO_ROOT}/", "")
+      File.readlines(path, encoding: "bom|utf-8").each_with_index.flat_map do |line, i|
+        FABRICATION_MARKERS.filter_map do |pattern, reason|
+          "#{relative}:#{i + 1} - #{reason}" if line.match?(pattern)
+        end
+      end
+    end
+  end
+
+  # Frontmatter lives in the first few lines; bound the read so 689 posts stay cheap.
+  def blog_source_files
+    Dir.glob(File.join(REPO_ROOT, "content/blog/**/*.md")).reject do |path|
+      File.foreach(path).first(60).any? { |l| l.start_with?("source: dev_to") }
+    end
   end
 end
