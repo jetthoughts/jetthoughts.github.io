@@ -34,22 +34,35 @@ if [ -z "${FORCE_SCREENSHOT_UPDATE:-}" ]; then
   trap 'git checkout -- test/fixtures/screenshots/linux 2>/dev/null || true' EXIT
 fi
 
-# A git worktree's .git is a FILE pointing at an absolute host path under the
-# main repo (<main>/.git/worktrees/<name>), and compose mounts only this
-# directory - so git inside the container reports "not a git repository",
-# snap_diff cannot resolve a single baseline, and the visual gate silently
-# becomes a no-op. Measured 2026-08-22: a body painted red (68% of pixels)
-# passed with 0 failures from a worktree. setup_snap_diff now fails on an
-# unresolvable baseline, but failing HERE says why in one line instead of
-# 29 confusing screenshot errors.
+# Make git work inside the container when this is a git WORKTREE.
+#
+# A worktree's .git is a FILE holding `gitdir: <main>/.git/worktrees/<name>` -
+# an absolute HOST path that compose never mounts. Git in the container then
+# reports "not a git repository", and because snap_diff resolves every
+# baseline with `git show HEAD:<path>`, the visual gate silently compares
+# NOTHING: captures are written over the baselines and every run is green.
+# Measured 2026-08-22 - a contact page with `body { background: red }`,
+# difference_level 0.68, passed with 0 failures, and the only tell was a
+# missing `[snap_diff] N screenshots compared` line.
+#
+# Mount the COMMON git dir (the main repo's .git, which holds objects/refs and
+# every worktree's entry) and point GIT_DIR at this worktree inside it. The
+# worktree's own `commondir` file is relative (`../..`), so it resolves there
+# without rewriting anything. A normal checkout has a .git DIRECTORY, already
+# inside the mount, and needs none of this.
+git_args=()
 if [ -f .git ]; then
-  echo "bin/dtest: this is a git worktree - the container cannot reach"
-  echo "  $(sed 's/^gitdir: //' .git)"
-  echo "  so screenshot baselines cannot be resolved and the visual gate would"
-  echo "  pass without comparing anything. Run bin/dtest from the main checkout."
-  exit 2
+  git_common=$(git rev-parse --path-format=absolute --git-common-dir)
+  git_wt=$(basename "$(git rev-parse --absolute-git-dir)")
+  git_args=(
+    -v "${git_common}:/gitcommon"
+    --env "GIT_DIR=/gitcommon/worktrees/${git_wt}"
+    --env "GIT_WORK_TREE=/app"
+  )
+  echo "bin/dtest: git worktree detected - mounting ${git_common} so baselines resolve"
 fi
 
 echo "Running tests in Docker..."
-bin/docked --env PRECOMPILED_ASSETS=true --env TEST_SERVER_PORT=1314 \
+bin/docked ${git_args[@]+"${git_args[@]}"} \
+  --env PRECOMPILED_ASSETS=true --env TEST_SERVER_PORT=1314 \
   --env HUGO_DEFAULT_PATH=_dest/public-dtest t bin/test "$@"

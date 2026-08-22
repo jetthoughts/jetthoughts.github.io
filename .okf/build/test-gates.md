@@ -890,9 +890,36 @@ such line at all.
   1 failures`. A genuinely new page now fails its first run until recorded,
   which is the same run-to-fail -> inspect -> commit flow this file already
   documents.
-- `bin/dtest` aborts from a worktree (exit 2) naming the unreachable gitdir,
-  instead of emitting 29 baseline errors.
+- `bin/dtest` now MAKES git work from a worktree instead of refusing to run:
+  it mounts the common git dir (`git rev-parse --path-format=absolute
+  --git-common-dir`) at `/gitcommon` and sets `GIT_DIR=/gitcommon/worktrees/
+  <name>` + `GIT_WORK_TREE=/app`. The worktree's own `commondir` file is
+  relative (`../..`), so it resolves inside the container with nothing
+  rewritten. Gated on `[ -f .git ]`, so a normal checkout is untouched.
+  Verified by re-injecting the red body: `[snap_diff] 55 screenshots compared,
+  10 failures`, with `desktop/contact_us` and `mobile/contact_us` among them.
 
 **Reading rule: a visual run that does not print `[snap_diff] N screenshots
 compared` compared nothing.** Check for that line before believing green -
 counting `0 failures` is not the same as counting comparisons.
+
+# arm64 dtest and amd64 CI genuinely disagree on text-heavy pages
+
+Once the worktree no-op above was fixed and comparisons actually ran, `bin/dtest`
+on an ARM Mac failed **8 `mobile/blog/special/codeblocks/*` screenshots at
+~0.055-0.063** against the CI-recorded baselines. Syntax-highlighted code is
+the most rasteriser-sensitive surface on the site, and `bin/dc` pins
+`DOCKER_DEFAULT_PLATFORM=linux/arm64/v8` while CI records on amd64.
+
+**A retraction, because the method matters more than the conclusion.** Earlier
+the same day this drift was declared refuted, on a measurement that compared
+the committed baselines against *themselves*: the candidates had already been
+restored by dtest's cleanup before they were measured. A vacuous comparison
+returns 0 and looks like proof of agreement. Measure candidates BEFORE any
+restore runs, or measure nothing.
+
+Consequence: on an ARM Mac, dtest is expected-red on that family. The options,
+none free - accept and screen those keys, pin the container to `linux/amd64`
+so local matches CI (correct, slower under emulation), or let CI own the Linux
+leg entirely. Not decided here; recorded so the next person does not read the
+red as a regression they caused.
