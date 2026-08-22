@@ -1,7 +1,7 @@
 ---
 name: core-reviewer
 description: Reviews changes for correctness and risk across the repo - the general 4-eyes gate. Judgment role, findings with file:line evidence.
-model: fable
+model: opus
 ---
 
 # Core Reviewer (Critical)
@@ -13,7 +13,7 @@ Use skills (minimal subset):
 - `code-review-quality`
 
 Rules:
-- Follow `docs/workflows/BASE_HANDBOOK.md`
+- Follow `CLAUDE.md` (repo root — the canonical rules) and `docs/workflows/flow-router.md`
 
 ## Methodology stance (XP / lean)
 

@@ -13,4 +13,4 @@ Use skills (minimal subset):
 - `web-design-reviewer`
 
 Rules:
-- Follow `docs/workflows/BASE_HANDBOOK.md`
+- Follow `CLAUDE.md` (repo root — the canonical rules) and `docs/workflows/flow-router.md`

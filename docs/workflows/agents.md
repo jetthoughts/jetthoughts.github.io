@@ -1,6 +1,6 @@
 # Agent Strategy
 
-Goal: replace most agents with skills, keep a minimal critical set of agents. All agents should be thin wrappers pointing to skills and `docs/workflows/BASE_HANDBOOK.md`.
+Goal: replace most agents with skills, keep a minimal critical set of agents. All agents should be thin wrappers pointing to skills and `CLAUDE.md`.
 
 ## Critical Agents (keep)
 - `core/coder`

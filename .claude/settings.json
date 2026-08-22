@@ -8,6 +8,11 @@
             "type": "command",
             "command": "bin/agent-bootstrap > /tmp/agent-bootstrap.log 2>&1 || true",
             "timeout": 600
+          },
+          {
+            "type": "command",
+            "command": "npx @claude-flow/cli@latest memory search -q CORRECTION --type keyword --limit 5 2>/dev/null || true",
+            "timeout": 45
           }
         ]
       }

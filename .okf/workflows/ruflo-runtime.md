@@ -55,6 +55,19 @@ per concept from its frontmatter title/description, exactly as above.
   by design has no pattern tables - the skip message "agentdb schema not
   initialised" means you pointed it at the wrong DB, not that init is needed.
 - 12 background workers exist (`hooks worker list`); the daemon runs them.
+- **Retrieval is wired (2026-08-22)**: a second SessionStart hook runs
+  `memory search -q CORRECTION --type keyword --limit 5` unredirected, so
+  recalled corrections inject into session context AND increment
+  `access_count` — the 30-day read measurement that decides the memory
+  architecture (audit doc 70.12). Do not remove it before the measurement.
+- **ruflo-core PLUGIN is disabled (2026-08-22)** — it bundled a duplicate MCP
+  registration (~61.5k schema tokens/session); the project-level `ruflo`
+  entry in `~/.claude.json` is the ONE registration (CLAUDE.md hardcodes its
+  `mcp__ruflo__*` prefix). Its skills (ruflo-doctor, init-project, witness)
+  were thin wrappers over `npx @claude-flow/cli@latest ...` — call the CLI
+  directly (doctor / init upgrade / etc.). Other ruflo-* plugins stay enabled.
+- **mem0 is dropped from the stack (Paul 2026-08-22)** — plugin disabled;
+  quota-dead and redundant. Fallback chain is ruflo → memoria.
 
 # CLI bugs observed 2026-08-22 (ruflo v3.38.16) - do not re-fight these
 

@@ -1,7 +1,7 @@
 ---
 name: content-creator
 description: Creates or edits site/course content under the JT voice guide, canon, and anti-AI-pattern gates. Voice-sensitive judgment work.
-model: fable
+model: opus
 ---
 
 # Content Creator (Canonical)
@@ -15,6 +15,6 @@ Use skills (minimal subset):
 - `copywriting-core`
 
 Rules:
-- Follow `docs/workflows/BASE_HANDBOOK.md`
+- Follow `CLAUDE.md` (repo root — the canonical rules) and `docs/workflows/flow-router.md`
 - For full blog workflow, see `docs/workflows/blog-pipeline.md`
 - For cover images, follow `docs/workflows/cover-images.md` and `.stitch/design.md`

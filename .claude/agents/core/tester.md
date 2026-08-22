@@ -14,7 +14,7 @@ Use skills (minimal subset):
 - `tdd-fix-tests`
 
 Rules:
-- Follow `docs/workflows/BASE_HANDBOOK.md`
+- Follow `CLAUDE.md` (repo root — the canonical rules) and `docs/workflows/flow-router.md`
 
 ## Methodology stance (XP)
 

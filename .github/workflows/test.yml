@@ -9,8 +9,8 @@ name: Screenshot Tests
 # PR #386) - and record mode would silently overwrite the canonical
 # baselines with unpinned renders.
 #
-# PR runs are REPORT-ONLY during the soak period (continue-on-error) -
-# flip that flag off to make the gate blocking.
+# PR runs are BLOCKING (2026-08-22): the report-only soak that started
+# 2026-07-31 ended after its motivating defects were fixed.
 
 on:
   workflow_dispatch:
@@ -67,9 +67,10 @@ jobs:
     if: ${{ github.event_name == 'pull_request' || inputs.screenshots || inputs.update-baselines }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    # Report-only soak for the PR gate: failures upload the diff report and
-    # comment on the PR but do not block merging. Remove after the soak.
-    continue-on-error: ${{ github.event_name == 'pull_request' }}
+    # BLOCKING since 2026-08-22: the report-only soak (2026-07-31, #413) ended —
+    # its motivating defects were fixed (#560 tolerance, #566 baselines, #570
+    # per-page pins) and 22 days report-only meant nothing blocking checked
+    # Linux pixels (dtest-from-worktree is vacuous).
 
     steps:
       # PR events use the default checkout (the PR *merge* commit): testing

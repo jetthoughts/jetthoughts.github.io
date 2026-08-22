@@ -14,5 +14,5 @@ Use skills (minimal subset):
 - `postcss-best-practices`
 
 Rules:
-- Follow `docs/workflows/BASE_HANDBOOK.md`
+- Follow `CLAUDE.md` (repo root — the canonical rules) and `docs/workflows/flow-router.md`
 - For CSS rules see `docs/workflows/css-consolidation.md`
