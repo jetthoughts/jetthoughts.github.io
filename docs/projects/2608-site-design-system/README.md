@@ -53,17 +53,46 @@ three offers (one a banned title claim), and its audit exhibit is presented as
 
 ## Known red, do not re-record blindly
 
-`linux/mobile/blog/index/_pagination` fails at difference_level
-`0.03960763888888889`, **identical across two runs** - which by this repo's own
-rule means a stale committed baseline, not flake. It survived the #566
-re-record. Diff the `workflow_dispatch` record path against the `pull_request`
-test path before touching it; the suspicion is they build the page differently
-and blog-index pagination is driven by the post count. Details in `.okf/log.md`.
+**RESOLVED 2026-08-22.** `linux/mobile/blog/index/_pagination` was a real
+content difference (0.0425, max_delta 238), fixed by an `update-baselines`
+dispatch **on master**, where the recorder and the tester see the same tree -
+recording on a feature branch is what had produced a baseline the PR run never
+matched. Verified green: CI screenshot run 32565008850, zero failing keys.
 
-## What the sprint shipped (PRs #560-#567, 2026-08-21)
+**The open one is different.** `bin/dtest` on an ARM Mac now fails 8
+`mobile/blog/special/codeblocks/*` screenshots at ~0.055-0.063, because the
+container renders arm64 while the committed `linux/` baselines come from CI on
+amd64. This only became visible once #578 fixed dtest comparing nothing at all
+from a worktree - it is pre-existing, not a regression. Three options, none
+free, and the choice is a speed-versus-fidelity call:
 
-Visual gate un-blinded (#560) and 127 baselines re-recorded with the tolerance
-shield deleted on a measurement (#566) - the macOS suite is green for the first
-time since #540, and CI Linux red went from 22 keys to 1. Three register pilots
-(#561-#563) with a cross-pilot specificity fix (#564), the demo board (#565),
-and the session's working papers (#567).
+1. screen those keys as known-arch and keep dtest fast,
+2. pin the container to `linux/amd64` so local matches CI (correct, slower
+   under emulation - note `.dev/compose.yml` already declares
+   `platform: linux/amd64` on the `t` service while `bin/dc` exports
+   `DOCKER_DEFAULT_PLATFORM=linux/arm64/v8`; reconcile those before deciding),
+3. let CI own the Linux leg entirely.
+
+Do not re-record them from a Mac either way: an arm64 candidate must never
+overwrite the amd64 set (`.okf/build/test-gates.md`).
+
+## What the sprint shipped (PRs #560-#578, 2026-08-21/22)
+
+**The redesign**: three register pilots on the `/next/` rail (#561-#563) with a
+cross-pilot specificity fix (#564), the demo board and panel vote (#565), and
+the working papers (#567).
+
+**The instrument, which turned out to need more work than the redesign**: the
+visual gate was blind by 50x and green runs restored old baselines over fresh
+captures (#560); 127 baselines re-recorded with every diff classified and the
+tolerance shield deleted on a measurement (#566); the noise floor is per-page,
+so the hand-pinned `0.03` tolerances are load-bearing rather than padding
+(#570); fault-injecting 8 realistic defects caught only **3** (#572), which
+un-blinded the link checker - 114,050 links checked against 15,642, finding
+five real site defects including a self-canonical pointing at a 404 and a
+promised download that never existed (#574) - and then closed the gaps to
+**8 of 8** (#576); and `bin/dtest` was found to be comparing **nothing** from a
+git worktree, with five-worktree parallelism added alongside the fix (#578).
+
+The rule that came out of it, now blocking in `CLAUDE.md`: a new test is not
+done until you have broken the code and watched it fail.
