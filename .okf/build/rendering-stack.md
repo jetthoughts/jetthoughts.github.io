@@ -63,19 +63,41 @@ been first: read the container's OS and library versions.
 - A green visual run that prints no `[snap_diff] N screenshots compared` line
   compared nothing - see [test-gates](/build/test-gates.md).
 
-## ARM on Linux is a dead end, and that is why compose pins amd64
+## ARM on Linux: not a dead end, a WAITING one (re-checked 2026-08-22)
 
-Verified 2026-08-22 against the Chrome for Testing manifest: version
-152.0.7977.54 publishes `linux64, mac-arm64, mac-x64, win32, win64` - **there is
-no `linux-arm64` build**. So an arm64 Linux container cannot run the pinned
-Chrome natively; it can only emulate the amd64 one, which is both slower and
-pixel-divergent. GitHub's `ubuntu-24.04-arm` runners are free for this public
-repo, so runner availability is NOT the constraint - the browser is.
+Chrome for Testing **does** publish `linux-arm64` - chrome and chromedriver
+both - from **153.0.8001.0** onward. An earlier check here concluded "no
+linux-arm64 build" because it queried the PINNED version, 152.0.7977.54, which
+is one major release too early. Query the manifest, not the pin.
 
-That makes `platform: linux/amd64` on the `t` service a forced choice rather
-than a preference, and `bin/dc`'s `DOCKER_DEFAULT_PLATFORM=linux/arm64/v8`
-straightforwardly wrong for anything that renders. Do not "try ARM" again
-without first re-checking that manifest.
+| channel | version | `linux-arm64` |
+|---|---|---|
+| **Stable** | 152.0.7977.54 | **no** |
+| Beta | 153.0.8010.5 | yes |
+| Dev / Canary | 154.x | yes |
+
+`.dev/cft-version` pins current Stable, which is the right policy - so ARM is
+blocked only until **153 promotes to Stable**. Google shipped official Chrome
+for ARM64 Linux on 2026-07-30, so this is a channel-timing question now, not an
+availability one.
+
+**TRIGGER: when CfT Stable >= 153, migrate the whole stack to arm64.** It is
+strictly better than today on every axis:
+
+- the container currently runs **amd64 under emulation on an ARM Mac** - that
+  is why `.dev/compose.yml` carries `mem_limit: 4g` with the note "Chrome 152
+  needs >2g under amd64 emulation (OOM 'tab crashed' at 2g)". Native arm64
+  removes that tax entirely.
+- GitHub's `ubuntu-24.04-arm` runners are free for this public repo, so CI can
+  match.
+- same arch on both sides, and if CI also runs this image, the same distro -
+  which closes the Debian-vs-Ubuntu gap below at the same time.
+
+Cost: bump `.dev/cft-version`, drop the `platform: linux/amd64` pins, switch
+`runs-on`, and re-record every `linux/` baseline once on the new stack.
+
+**Do not chase the Debian-vs-Ubuntu difference before that trigger** - the ARM
+migration forces a full re-record anyway, so paying for parity twice is waste.
 
 ## The open decision: one rendering stack, or two?
 
