@@ -120,7 +120,9 @@ the gate was blind to it by 50x - and passed, which is worse than failing
 page is ~1e-6, not 0 (three runs of `services/_technologies`: 0.013838252,
 0.013838252, 0.013837770 - about 2 px of 2,073,600), so the floor has to clear
 that; 0.0001 (~207 px) sits 100x above it, fails that copy edit, and goes green
-again when it is reverted. The noise claim is
+again when it is reverted. **That 1e-6 is the macOS-local figure and does NOT
+generalise - see the per-platform noise section below before you lower any
+tolerance.** The noise claim is
 checkable without re-running the copy edit: two independent runs of the same
 test reported difference_levels identical to 16 decimal places (0.6893909143518518
 for `services/_footer` every time), and 2 of the 7 screenshots stayed GREEN at
@@ -759,3 +761,31 @@ and confirm the page loads its own fingerprinted `.min.<hash>.css` before
 trusting any computed value (caught 2026-08-21 during the pilot column-fix
 verification; the earlier "inconclusive" production check had exactly this
 cause).
+
+# The noise floor is per-PAGE, not per-repo (measured 2026-08-22)
+
+The ~1e-6 above was measured on macOS, locally, on a static page. CI amd64 is
+different, and the difference decides whether a tolerance may be lowered.
+
+**Method**: two `update-baselines` dispatches of the SAME commit, ~12 hours
+apart, compared file by file. Anything that moves between two recordings of
+identical content is render noise by definition.
+
+**Result**: **135 of 147 Linux baselines were byte-identical.** CI is
+deterministic for ~92% of pages. The remaining 12 split cleanly:
+
+| Pages | difference_level | What they are |
+|---|---|---|
+| 11 | 0.0003 - 0.002 | mermaid diagrams, syntax-highlighted code, course + about + clients pages - font and SVG rasterisation |
+| 1 | 0.0425 (max_delta 238) | `mobile/blog/index/_pagination` - a real content difference, not noise |
+
+**The consequence that matters: every one of those 11 noisy pages already pins
+`tolerance: 0.03` at its call site.** Those pins are LOAD-BEARING on CI, not
+legacy padding left over from the blind era. Lowering them toward the 0.0001
+default - which an earlier plan proposed as a tidy-up - would redden CI
+permanently on pages that have no defect.
+
+**Rule.** Before lowering any pinned tolerance, measure that page's noise on
+the platform that will judge it, by recording it twice on the same commit. The
+floor for a page is its measured noise, not the repo default. A tolerance that
+looks like slack may be the only thing absorbing a rasteriser.
