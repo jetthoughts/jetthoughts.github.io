@@ -1,7 +1,7 @@
 ---
 type: build-concept
 title: A screenshot baseline is a recording of a rendering stack
-description: Which environment records the linux/ baselines, why local dtest differs from CI, and the four wrong explanations that cost a session
+description: Which environment records the linux/ baselines, why local dtest can differ from CI, the all-arm64 migration, and the five wrong explanations for one drift - two of them formally withdrawn
 tags: [testing, screenshots, docker, ci, rendering]
 timestamp: 2026-08-22T00:00:00Z
 ---
@@ -31,12 +31,12 @@ variable, not a demonstrated cause** - see the open question below.
 record `linux/`. Neither OS's set is a subset of the other, and a candidate
 rendered on one must never be committed as a baseline for another.
 
-## Four wrong explanations, in the order they were believed
+## Five wrong explanations, in the order they were believed
 
 Each sounded mechanical and each was asserted without measuring the thing it
 named. Listed because the *shape* recurs, not the specific causes:
 
-1. **"arm64 vs amd64 drift."** The container is x86_64. `.dev/compose.yml`
+1. **"arm64 vs amd64 drift."** The container was x86_64 at the time. `.dev/compose.yml`
    pins `platform: linux/amd64` on the `t` service and that DOES override
    `bin/dc`'s `DOCKER_DEFAULT_PLATFORM=linux/arm64/v8` - which is a real
    booby-trap in the tooling, since it makes the arm64 story look right. One
@@ -49,9 +49,14 @@ named. Listed because the *shape* recurs, not the specific causes:
    both see the same tree.
 4. **"A date-gated post appeared."** Both candidate posts were dated before
    the baseline was recorded.
+5. **"Debian container vs Ubuntu runner."** Believed 2026-08-22 and asserted in
+   #589's commit message. The base OS is the last unpinned variable, which makes
+   it the standing candidate - but it has never been measured either. Withdrawn;
+   see the codeblocks section below for the observation that fooled it.
 
-The measurement that actually resolved it took one command and should have
-been first: read the container's OS and library versions.
+The measurement that resolved #1-#4 took one command and should have been
+first: read the container's OS and library versions. #5 has no such measurement
+yet, which is exactly why it is listed here rather than in Rules.
 
 ## Rules
 
@@ -62,6 +67,14 @@ been first: read the container's OS and library versions.
   dispatch on **master** so recorder and tester agree. That is what fixed
   `mobile/blog/index/_pagination` (a real 0.0425 content difference).
 - **Never re-record `linux/` from a Mac**, whatever the container reports.
+- **Pin the test container to CI's arch, never to "the host's".** They coincide
+  only while every developer is on the same architecture, so "follow the host"
+  is a guarantee that silently expires on the first machine that differs -
+  amd64 Chrome compared against arm64 baselines, on a BLOCKING gate. `.dev/
+  compose.yml` pins `linux/arm64` on `t` and `sh` for this reason. Bare metal
+  cannot pin (an x86 CPU cannot run arm64 Chrome), so `bin/setup-test-env`
+  warns instead. Caught by review on #589, not by any gate - no suite fails
+  when the only x86 host is one nobody has yet.
 - A green visual run that prints no `[snap_diff] N screenshots compared` line
   compared nothing - see [test-gates](/build/test-gates.md).
 
@@ -102,7 +115,7 @@ Two things the plan did not anticipate, both of which would have broken CI too:
   `bundle lock --add-platform aarch64-linux`.
 - `bin/dc` exported `DOCKER_DEFAULT_PLATFORM=linux/arm64/v8`, which never took
   effect because the services pinned `linux/amd64` and won. Deleted rather than
-  kept-and-now-correct: it is precisely what made wrong explanation #1 below
+  kept-and-now-correct: it is precisely what made wrong explanation #1 above
   look plausible.
 
 ### The 8 codeblocks keys: still UNRESOLVED, and beware the false confirmation
