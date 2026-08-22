@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="340" viewBox="0 0 720 340" role="img" aria-labelledby="st sd">
+  <title id="st">What the noise filter removes along with the noise</title>
+  <desc id="sd">Filtering cuts static-analysis false positives from over 92 percent to as low as 6.3 percent. The same configuration also suppresses 22.25 percent of real vulnerabilities, and the miss rate exceeds 50 percent for cryptography and policy categories such as weak encryption and weak password hashing.</desc>
+
+  <rect width="720" height="340" fill="#0e0e14"/>
+
+  <text x="32" y="40" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="17" font-weight="700" fill="#e8eaf0">The filter works. That is the problem.</text>
+  <text x="32" y="62" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">Xiong &amp; Zhang, ISSTA 2026 - best-performing configuration tested</text>
+
+  <!-- what it was built to do -->
+  <text x="32" y="104" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#6b7080">WHAT IT WAS BUILT TO DO</text>
+  <rect x="32" y="116" width="300" height="30" rx="4" fill="#3a3f4d"/>
+  <text x="44" y="136" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#e8eaf0">False alarms: over 92%</text>
+  <text x="348" y="136" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" fill="#6b7080">&#8594;</text>
+  <rect x="376" y="116" width="80" height="30" rx="4" fill="#a855f7" opacity="0.8"/>
+  <text x="388" y="136" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#0e0e14">6.3%</text>
+  <text x="470" y="136" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">noise gone</text>
+
+  <!-- what it also does -->
+  <text x="32" y="196" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#cc342d">WHAT IT ALSO DOES</text>
+
+  <rect x="32" y="208" width="424" height="30" rx="4" fill="#cc342d" opacity="0.22"/>
+  <rect x="32" y="208" width="94" height="30" rx="4" fill="#cc342d"/>
+  <text x="44" y="228" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#e8eaf0">22.25%</text>
+  <text x="140" y="228" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#e8eaf0">of REAL vulnerabilities suppressed</text>
+
+  <rect x="32" y="250" width="424" height="30" rx="4" fill="#cc342d" opacity="0.22"/>
+  <rect x="32" y="250" width="222" height="30" rx="4" fill="#cc342d"/>
+  <text x="44" y="270" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#e8eaf0">over 50%</text>
+  <text x="140" y="270" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#e8eaf0">missed in crypto &amp; policy categories</text>
+
+  <text x="470" y="228" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" fill="#8b90a0">roughly one</text>
+  <text x="470" y="244" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" fill="#8b90a0">in five findings</text>
+  <text x="470" y="270" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" fill="#8b90a0">weak encryption,</text>
+  <text x="470" y="286" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" fill="#8b90a0">weak password hashing</text>
+
+  <text x="32" y="322" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#8b90a0">The categories a founder would care most about are the ones it keeps worst.</text>
+</svg>

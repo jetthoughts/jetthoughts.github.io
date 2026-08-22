@@ -8,6 +8,11 @@ slug: dev-shop-ai-code-review-what-to-ask
 keywords: 'ai code review, dev shop code quality, non-technical founder, vendor due diligence, ai generated code security, outsourced development'
 tags: ['ai', 'startup', 'code-review', 'hiring', 'security']
 categories: ['Startups']
+cover_image: "cover.png"
+cover_image_alt: 'Obsidian-dark cover reading It was reviewed. By what? Ask what it ignored, with a faceted ruby gem and three chips: 22.25% of real bugs suppressed as noise, over 50% missed in crypto categories, 1 in 5 reviews on GitHub are Copilot'
+metatags:
+  image: cover.png
+canonical_url: 'https://jetthoughts.com/blog/dev-shop-ai-code-review-what-to-ask/'
 related_posts: false
 ---
 
@@ -22,6 +27,8 @@ This is not an argument that you were cheated. The evidence for AI review is bet
 Uber built an AI reviewer called uReview and published what it does. The system now analyses over 90% of the roughly 65,000 diffs that land at Uber each week, inside a median of four minutes.
 
 The number worth sitting with is the comparison they ran against their own engineers. By Uber's measurement, "only 51% of human-written comments are considered as bugs by the author and addressed in the same changeset." uReview gets "over 65% of its posted comments addressed," and engineers mark 75% of them as useful.
+
+![Bar chart comparing review comments that authors agreed with and fixed at Uber: human reviewers 51 percent, the uReview AI reviewer over 65 percent](reviewers.svg)
 
 So the machine reviewer, at least at Uber's scale, produces a higher share of comments that a developer looks at and agrees with than the humans do. Anyone selling you the idea that AI review is uniformly sloppy is not reading the same evidence.
 
@@ -41,7 +48,9 @@ Yunpeng Xiong and Ting Zhang at Monash University tested three agent frameworks 
 
 The measurement behind it: even the best-performing configuration "incorrectly suppresses 22.25% of real vulnerabilities." Roughly one in five genuine findings, quietly reclassified as noise.
 
-It gets worse in a specific place. The miss rate is close to nothing for the injection-style bugs everyone knows about, and it "exceeds 50% for cryptography- and policy-related categories." Weak encryption. Weak password hashing. Trust boundaries. The failures a founder would care most about are the ones the filter is worst at keeping.
+It gets worse in a specific place. The miss rate is close to nothing for the injection-style bugs everyone knows about, and it "exceeds 50% for cryptography- and policy-related categories" - weak encryption, weak password hashing, trust boundaries. Those are the failures a founder would care most about, and they are the ones the filter is worst at keeping.
+
+![Diagram showing the filter cutting false alarms from over 92 percent to 6.3 percent, while also suppressing 22.25 percent of real vulnerabilities and over 50 percent in cryptography and policy categories](suppressed.svg)
 
 ## Why this lands harder on AI-written code
 
