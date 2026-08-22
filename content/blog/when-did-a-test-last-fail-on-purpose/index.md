@@ -58,7 +58,7 @@ Same command, same flags, one addition. The next run:
 
 From 15,642 links checked to 114,239.
 
-![Links actually inspected before and after adding --remap: 15,642 of 149,516 versus 114,239. Both runs reported zero errors.](checked.svg)
+![Links actually inspected, before and after the remap flag: 15,642 of 149,516 versus 114,239. Both runs reported zero errors.](checked.svg)
 
 ## Run this on your own repo before you keep reading
 
