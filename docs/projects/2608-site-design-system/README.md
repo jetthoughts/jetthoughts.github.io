@@ -1,291 +1,69 @@
-# 2608 — Site design system ("Rescue Room")
+# 2608 - Site design system (v2 clean-slate)
 
-**Status:** Proposed — awaiting go/no-go on Phase 0
-**Opened:** 2026-08-20
-**Decisions:** [ADR-0003](../../adr/0003-site-design-system.md) (the system) ·
-[ADR-0004](../../adr/0004-static-site-experimentation.md) (how it's validated)
-**Plan:** [20.01 rollout plan](20-29-strategy/20.01-rollout-plan.md)
-**Prototype:** Claude Design project *JetThoughts — Rescue Room* (14 previews:
-foundations, components, and five page templates)
+**Paused 2026-08-22, mid-flight. Start here.**
 
-## Goal at a glance
+## Where the work stands in one paragraph
 
-Replace four stacked visual languages with one, so that every new page starts
-from a system instead of a choice, and so the site reads to a non-technical
-founder the way the course page already does.
+The legacy CSS was recovered from an obfuscated export and fights every change,
+so v2 is being built clean on a noindexed `/next/` rail and cut over page by
+page (ADR-0006). Three visual registers were built as full landing pages,
+compared under controlled conditions, and voted on. Then the positioning
+changed underneath them: the site now sells one offer and bans title claims, so
+the pilots' copy has been rewritten but not yet applied. Nothing is blocked on
+engineering - it is blocked on five decisions from Paul.
 
-**Done when:** all five page templates in the prototype ship the token set;
-`--color-primary` is deleted; the homepage carries proof above the fold on
-mobile; and a lead conversion event exists so the next change can be measured.
+## Read in this order
 
-## The short version of why
+| Doc | What it holds |
+|---|---|
+| `20-29-strategy/20.06-clean-slate-v2-plan.md` | **The plan of record + the COLD-SESSION STATE LEDGER.** Every row's status. Read the ledger first. |
+| `20-29-strategy/20.09-repositioned-pilot-copy.md` | **The next task.** Repositioned copy, drafted and canon-verified, with a step-by-step apply checklist. |
+| `20-29-strategy/20.08-register-demo-board.md` | The three pilots, the panel ballots, the recommendation, the decision protocol. |
+| `10-19-research/10.01-design-register-research-2026-08-reference.md` | Why these three registers, the external research, the candidate table. |
+| `../../adr/0006-clean-slate-dual-run.md` | The dual-run mechanism, supersession scope, flip checklist, sunset condition. |
 
-- `--color-primary: #1a8cff` is named "primary" and appears in no brand
-  definition. ~140 live paint sites, 52 literals. It is why the site has blue
-  bands, blue tags and blue links on a red brand.
-- Two spacing tokens exist, so every section invented its own padding.
-- The homepage is 10,394px with six background switches and six primary CTAs.
-- There **was** no conversion event on the site, and `page_view` had been
-  marked a key event since 2026-08-13, so GA4 reported ~4,063 "key events" that
-  counted page views. Phase 0.1 shipped the events (#489) and the GA4 toggles
-  were closed 2026-08-20 (#495, #508). **Un-marking is not retroactive** — the
-  polluted figures stay in history, so date-bound any `keyEvents` query.
-- **Two pages already implement the system independently** — the course page and
-  `/services/vibe-code-rescue/`. They agree on structure (proof in fold 1, one
-  repeated CTA, artifacts not stock photos, ~4,300px, no blue) and disagree on
-  one thing: light vs dark background. This is extraction, not a rebrand.
-- **Palette resolved 2026-08-20: LIGHT** (Paul, on a lightning demo of the peer
-  set — every services peer is light, and even Linear ships a light marketing
-  site). Dark stays in three places: blog cover art, one dark proof band per
-  page, and `/services/vibe-code-rescue/` as a dark-variant campaign page.
-  Phase 1a is unblocked — see [20.02](20-29-strategy/20.02-phase-1a-plan.md).
+## The five decisions waiting on Paul
 
-## Two lanes — read this before changing any design artifact
+1. **Pick the register** on the live pilots. Panel first choices: B 2 / C 1 / A 1;
+   restricted to the two Claude Design artifact sets it is Editorial 4-1;
+   recommendation is Editorial plus grafts (Precision's ledger table for data
+   surfaces, Rescue Room's mobile rhythm patterns).
+2. **Three claims**, all currently cut from the page: "the repo stays in your
+   account", "starts in days", "no equity, no lock-in".
+3. **Which page ships first** - homepage, or a standalone offer page. Under
+   one-offer positioning these largely collapse into the same page.
+4. **The legacy fractional-CTO sweep.** Those pages carry a claim now ruled
+   inaccurate, today. `/services/fractional-cto/` has ranking history, so this
+   needs a GSC check, not a deletion.
+5. **Whether the ~2026-09-17 homepage measurement gate should fall**, given the
+   homepage is being repositioned anyway.
 
-> **PIVOT 2026-08-21 (later the same day, Paul — plan approved): the lanes
-> merged into a forward strategy.** The discovery lane was upgraded from
-> "no authority" to an approved implementation path: a **clean-slate v2 rail**
-> with dual-run cutover and a non-indexed `/next/` staging path on production.
-> The design exploration is now **FULLY OPEN (rebrand allowed)** — ruby/LIGHT/
-> logo may be reproposed by the competition; ADR-0003's brand decisions hold on
-> the LIVE site only until Paul picks a winner. Legacy propagation is frozen
-> (the 780 button sites and 39 blacks are dropped as work-done-twice).
-> **The plan of record is [20.06](20-29-strategy/20.06-clean-slate-v2-plan.md)**
-> — it carries the cold-session state ledger. The table below is kept as the
-> state before the pivot; where they disagree, 20.06 wins.
+## Live artifacts
 
+Pilots (noindexed staging, on production once deployed):
+`/next/pilots/{rescue-room,editorial,precision}/fractional-cto/` - renaming to
+`/embedded-team/` when 20.09 is applied.
 
-Since 2026-08-21 this project runs **two lanes at once**, and confusing them is
-the failure this section exists to prevent.
+Claude Design projects (Paul's, external): `8eb98dd6-e460-469c-a43c-93fdc3f8592e`
+holds the Editorial service page **and the homepage blueprint**;
+`3dc819cf-084f-4dd6-b7aa-7275c2424e68` holds the Rescue Room service page.
+The homepage blueprint has two open problems: its "Three ways in" section lists
+three offers (one a banned title claim), and its audit exhibit is presented as
+"from a real one, redacted" without a named source.
 
-| Lane | Authority | Produces | Status |
-|---|---|---|---|
-| **Extraction** (governing) | **ADR-0003** — the decision of record | merged CSS, shipped phases | active; 2.1/2.2 shipped, 2.3 next |
-| **Discovery** (exploration) | **none** — informs a future decision | candidate designs only, never a PR | opened 2026-08-21 (Paul) |
+## Known red, do not re-record blindly
 
-**Extraction is still the decision.** ADR-0003 is explicit: *"this ADR is not
-proposing a new language… That makes this extraction and propagation, not a
-redesign."* The system is taken from the two pages that already implement it —
-the course page and `/services/vibe-code-rescue/`. Nothing below changes that.
+`linux/mobile/blog/index/_pagination` fails at difference_level
+`0.03960763888888889`, **identical across two runs** - which by this repo's own
+rule means a stale committed baseline, not flake. It survived the #566
+re-record. Diff the `workflow_dispatch` record path against the `pull_request`
+test path before touching it; the suspicion is they build the page differently
+and blog-index pagination is driven by the post count. Details in `.okf/log.md`.
 
-**Discovery answers a different question:** what would a designer produce for
-this ICP with no anchor at all? Paul asked for it 2026-08-21 *alongside*
-extraction, explicitly not instead of it. Its brief deliberately never mentions
-the course page — anchoring it there would reproduce extraction wearing a
-different hat and prove nothing.
+## What the sprint shipped (PRs #560-#567, 2026-08-21)
 
-**Fixed even in discovery** (ADR-0003 brand invariants, not up for exploration):
-logo, ruby `#cc342d`, display face, cover system. "From scratch" means layout,
-structure and components — a rebrand was not asked for.
-
-**Discovery artifacts so far** — Stitch project `4487418121858436329`
-("JetThoughts — From-Scratch Exploration"), generated 2026-08-21. It produced a
-system it named *"Artifact Editorial"*: warm paper `#fbf9f8`, Source Serif 4
-headlines with Hanken Grotesk body, sharp 0px corners, ruby reserved for
-critical actions only, evidence-over-assertion structure. Unprompted, it
-rejected the logo wall, the testimonial carousel and the repeated
-"Book a call". A Claude Design project (*JetThoughts — Rescue Room*, 14
-previews) predates this and renders the EXTRACTED system — do not confuse the
-two.
-
-**[Superseded 2026-08-21 by the pivot above — see [20.06](20-29-strategy/20.06-clean-slate-v2-plan.md); kept as pre-pivot history.]** What it would have taken for discovery to win: a superseding ADR, with evidence
-that it beats the extracted system for the ICP. Until that exists, discovery
-output has **no authority** and must not be implemented. The cost of switching
-is not theoretical: 2.1 and 2.2 already shipped the extracted system to the
-blog, which carries 77% of the site's Google traffic.
-
-
-## Current state
-
-**Re-sequenced 2026-08-20 (Paul): BLOG FIRST** — confirm engagement on the
-surface where the humans already land before touching chrome or money pages.
-Tokens scope into the blog bundles first, promote site-wide later.
-
-**Blog engagement baseline, corrected 2026-08-21** (Clarity, bot-filtered):
-**56.4% avg scroll depth / 40.1s engagement over 451 sessions**, pre-ship
-window 08-06 → 08-17. **Provisional**: the 08-18→20 window is excluded on MERGE
-times, not a confirmed Pages deploy - if the deploy landed after 08-20 those 292
-sessions come back. The **25.2% / 26.3s** figure previously quoted here was
-ONE 3-day window of five, the lowest, and is BELIEVED to straddle the 08-20
-ship (merge times only - deploy unconfirmed) - it is NOT
-the baseline and does not support "visitors leave in the first quarter". Full
-record: [40.01](40-49-measurement/40.01-blog-engagement-baseline.md).
-
-The durable reason for blog-first is traffic share, not an engagement deficit:
-the blog draws **105 GSC clicks / 28d - 77% of the site's entire Google
-traffic**.
-
-| Phase | What | Gate | Status |
-|---|---|---|---|
-| 0 (slim) | record-baselines wrapper, blog scroll/CTA events, coverage, baseline doc | events verified firing | **merged #489**; GA4 key-event toggles are agent-doable via the GA4 UI (see #495), not Paul's |
-| 2.1 | `blog-list` restyle + tag pages | A + B + C | **merged #487** |
-| 2.2 | posts: article-end CTA, ink tags | A + B + C | **merged #487/#489** |
-| 2.2b | Whole-blog rebuild: post header, ink code, wide + responsive mobile covers | A + C | **merged #494** |
-| — | Whole-blog measure (28d after rebuild deploys, [40.01](40-49-measurement/40.01-blog-engagement-baseline.md) protocol) | informational | after rebuild |
-| **1a** | Site-wide recolour: token promotion, `--color-primary` deletion, retire the `#0066d6` rule (+55 `!important`s) | A + B + C | **ready** — [20.02](20-29-strategy/20.02-phase-1a-plan.md) |
-| 1b | Spatial chrome (dead fold, nav 7→5, space scale) | A + B + C | after 1a |
-| 2.4/2.5 | homepage, single-service | **superseded 2026-08-21: rebuilt on the v2 rail per [20.06](20-29-strategy/20.06-clean-slate-v2-plan.md), not restyled in legacy** — 2.4's ≈09-17 read gate still governs its public flip | v2 rail |
-| 3 | Content: real numbers, sample report | A + cold-eyes review | parallel |
-
-Gates per ADR-0004: **A** qualitative (Clarity recordings, screenshots, visual
-suites), **B** guardrails with declared rollback thresholds, **C** reversibility.
-**No phase is A/B tested** — at ~9.7 real human sessions/day (measured, not
-estimated) the cheapest viable test needs 192 days.
-
-## Outstanding
-
-**Phase 2.5 has no spec — write `20.05` before any 2.5 code.** 2.1 and 2.2 each
-got a written spec (`20.03`, `20.04`); 2.5 is nine words in the Phase 2 table:
-"stock photo → month-one card, decision table, 4-step timeline". Found
-2026-08-21 while sequencing. Two things the spec must settle, because they are
-not CSS decisions:
-
-* The real bulk of 2.5 is **per-page frontmatter copy ×12**, not stylesheet —
-  and that copy is canon-sensitive. `content/services/fractional-cto/index.md`
-  already carries "15+ years of industry experience" in its FAQs, the exact
-  figure class corrected on 2026-08-14. Copy review, not the ~500-line code cap,
-  is the binding constraint.
-* **Only 2 of 12 service pages have screenshot baselines** (`fractional_cto`,
-  `app_web_development`). Ten ship visually blind unless coverage is added
-  first — the plan's own 0.3 coverage rule applies.
-
-**Regenerate root `DESIGN.md` against ADR-0003.** It still frames dark
-JetVelocity as *"normative for new brand/conversion surfaces"*, calls LIGHT
-page chrome *"legacy/incumbent"*, and specifies `#1a8cff` primary buttons —
-a token **deleted in Phase 1a.2 (#518)**, so `var(--color-primary)` now
-resolves to nothing and the declaration is dropped silently. An agent building
-a new conversion page from it goes dark with a dead token.
-
-A superseded-in-part banner was added at the top of that file on 2026-08-21
-and `.okf/design/site-palette.md` names it as a known contradicting sibling,
-so nobody following either authority is misled today. **The regeneration
-itself is not done.** Scope when it runs: reconcile the two-layers section
-with ADR-0003, strip every `--color-primary` reference including the
-primary-button spec, and restate `.stitch/design.md`'s scope as cover images
-rather than "the site design system". Also regenerate `.impeccable/design.json`
-if it encodes the same palette, since `/impeccable critique` now carries the
-design-review gate and would score against stale values.
-
-**Make `okf_validate.py .okf --strict` exit 0.** It exits 1 today and has for
-some time; the `✓ conformant` line refers to §9 (no ERRORS), while `--strict`
-fails on any warning. CLAUDE.md requires this gate before bundle commits, so
-it has been reported green while failing.
-
-**No total or breakdown is recorded here, deliberately.** Every entry appended
-to `.okf/log.md` adds a §7 heading warning, so a written count is wrong by the
-next append - corrected twice on 2026-08-21, stale within a commit each time.
-Measure at execution time, through the SKILL so it resolves whatever validator
-is canonical:
-
-```
-/okf:validate .okf --strict
-<validator> .okf --strict | grep -c '! warn'   # count RECORDS, not 'warn'
-```
-
-Count `'! warn'`: the summary line `✓ conformant (N warning(s))` matches the
-looser pattern, and every total published on 2026-08-21 was inflated by one
-because of it.
-
-Classify the live output rather than trusting a written composition. Different
-validator builds have reported materially different breakdowns for this v0.2
-bundle - one review reported legacy `# Citations` warnings and no
-missing-recommended-field ones, which neither copy on this machine reproduces.
-Fix what YOUR run reports.
-
-The one job that is version-independent: restructure `log.md` so same-day
-themes sit as sub-sections beneath ONE `## YYYY-MM-DD` heading. That is a
-whole-file restructure, not a find-and-replace, and it conflicts with every
-parallel session appending to that file — do it when the repo is quiet.
-
-**Decide the ruby-on-dark token — it blocks BOTH remaining 1a.4 items.**
-Measured 2026-08-21 in the rendered production build:
-
-| Token | on `#000` | on `--surface-ink` `#14110f` |
-|---|---|---|
-| `--color-ruby` `#cc342d` | 4.10 FAIL | **3.67 FAIL** |
-| `--color-ruby-hover` `#e04a42` | 5.23 pass | 4.68 pass (thin) |
-| `--ruby-700` `#9e2620` | 2.75 FAIL | 2.46 FAIL |
-
-Two consequences, and the second is the one that is easy to miss:
-
-1. **"ONE eyebrow style" is self-contradictory as written.** The canonical
-   eyebrow (`--color-ruby`, 12px) was designed against the blog's LIGHT
-   surfaces. Applying it site-wide drops `home-services-eyebrow` and
-   `home-clients-eyebrow` to 4.10:1 on their dark band - below AA for normal
-   text, which 12px is. The style needs a dark-surface variant.
-2. **Migrating the dark bands to `--surface-ink` makes this WORSE, not
-   better.** `#14110f` is lighter than `#000`, so ruby-on-dark falls from
-   4.10 to 3.67. The footer/dark-surface work therefore cannot ship before
-   the on-dark accent is decided, or it degrades contrast on every band it
-   touches.
-
-
-**Candidate values, derived 2026-08-21 - this is a yes/no, not an open
-question.** Walking lighter along the ruby hue:
-
-| Candidate | on `--surface-ink` | on `#000` | on white |
-|---|---|---|---|
-| `--color-ruby` `#cc342d` | 3.67 FAIL | 4.10 FAIL | 5.13 pass |
-| `--color-ruby-hover` `#e04a42` | 4.68 thin | 5.23 pass | **4.02 FAIL** |
-| **`#e85a52` (recommended)** | **5.39 pass** | 6.02 pass | 3.49 FAIL |
-| `#ef6a61` | 6.18 pass | 6.90 pass | 3.04 FAIL |
-
-**Recommendation: `#e85a52`, named `--ruby-on-ink`.** It clears AA on the dark
-surfaces with real margin rather than the 4.68 squeak, and stays recognisably
-ruby rather than drifting pink.
-
-**The naming is the load-bearing part, not the value.** Every candidate that
-works on dark FAILS on white - `#e85a52` is 3.49:1 there. This token is
-dark-surface-ONLY, and a neutral name like `--ruby-400` invites exactly the
-misuse that breaks it; `--ruby-on-ink` says where it may be used. The same
-finding rules out reusing `--color-ruby-hover`: besides being semantically a
-hover state, it fails on white at 4.02, so it is not a safe general-purpose
-accent either.
-
-Applying it is a visible brand change on the dark bands, so it is recorded as
-a decision rather than executed - but the analysis is done and every number
-here is measured.
-
-The ramp has `--ruby-700` for "text-on-light where AA needs more" and no
-counterpart for dark; naming one is the decision. `technologies.css:10`
-already gestures at the problem in a comment.
-
-**"THREE button roles" is already built - and unused.** Investigated
-2026-08-21. `themes/beaver/assets/css/components/c-button.css` defines exactly
-three roles (`--primary` ruby/white, `--secondary` white/dark, `--tertiary`
-transparent/ruby), already tokenised apart from four `#ffffff` literals. It is
-imported by `components.css`, which one layout bundles.
-**But `c-button--*` appears ZERO times in any template or content file, and it
-is absent from the entire PRODUCTION tree** - `grep -rl 'c-button'
-_dest/public-test/` returns nothing, and `components.css` is not referenced
-from `index.html` at all. The component was built and never adopted.
-
-*Method note, because the first check was a false green:* `_dest/public-dev` is
-built in DEV mode where PurgeCSS is disabled, and this CSS is emitted INLINE in
-the HTML rather than under `css/*.css`, so grepping `public-dev/css/*.css`
-returns zero whether or not the component is adopted. The conclusion survived
-re-verification against the production tree; the original evidence did not.
-
-The live buttons are **five separate families**, verified in the templates:
-`.fl-button` (FL Builder), `.btn`/`.btn-primary`
-(`partials/page/navigation.html`), `.btn--primary` (`shortcodes/cta.html`),
-`.action-button` (`partials/page/use-cases.html`) and `.pp-button`
-(`page/services.html`). A sweep scoped to `.fl-button` alone would leave four
-families outside the roles.
-never adopted. The live buttons are FL Builder's `.fl-button`.
-
-So the 1a.4 item is not "tokenise the button component" - that changes nothing
-a visitor sees. It is either **adopt `c-button` in the templates** (a markup
-migration) or **bring `.fl-button` onto the three roles** (another sweep
-through the per-page FL export CSS). Both are larger than the plan line
-implies, and the second is the same legacy-export problem as the footer and
-eyebrow items.
-
-Note the tertiary role (`color: var(--color-ruby)` on a transparent ground)
-hits the on-dark AA blocker above wherever it sits on a dark band - so this
-item is partly gated by the same unnamed token.
-
-## Working notes
-
-Coordinator/session reports do not belong in this directory — write them to
-`/tmp`. Findings and audits that a cold session needs do.
+Visual gate un-blinded (#560) and 127 baselines re-recorded with the tolerance
+shield deleted on a measurement (#566) - the macOS suite is green for the first
+time since #540, and CI Linux red went from 22 keys to 1. Three register pilots
+(#561-#563) with a cross-pilot specificity fix (#564), the demo board (#565),
+and the session's working papers (#567).

@@ -51,6 +51,29 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-22 - the site sells one thing, and title claims are now a canon rule
+
+Paul changed the positioning: the site sells an embedded team of senior
+self-managed full-stack developers, and **no fractional-CTO or tech-lead title
+claims** anywhere. The basis is factual rather than stylistic - Paul was the
+lead tech at Crosslake, a PM opened the engagement, leadership was promoted
+from inside - so it belongs in [claims-canon](content/claims-canon.md) next to
+the fabricated-testimonial rule, and that is where it now lives.
+
+Two things this immediately reached that a copy edit would have missed. The
+three register pilots are fractional-CTO framed end to end, so the rewrite had
+to change the page's SHAPE, not its words: the comparison table's whole axis
+moves from "vs a full-time CTO" to "vs hiring in-house", because the offer
+being compared changed. And Paul's own homepage blueprint sells three offers,
+one of them the banned title - his artifact contradicts his decision, which is
+worth saying out loud rather than quietly implementing around.
+
+The ratchet is deliberately NOT written yet. The legacy live site carries the
+banned claim on pages with ranking history; a repo-wide test would fail on
+first run and the honest fix is a scoping decision, not a regex. Scope is
+recorded in the canon rule itself so the next person does not mistake the
+absence of a test for the absence of a rule.
+
 ## 2026-08-22 - a re-record that fixed 21 of 22, and the one it could not
 
 #566 merged: 127 baselines re-recorded and the tolerance shield deleted. CI
