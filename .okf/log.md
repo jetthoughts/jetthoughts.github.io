@@ -51,6 +51,32 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-22 - the Linux visual gate was green because it was not testing
+
+`bin/dtest` run from a git worktree compared NOTHING. A worktree's `.git` is a
+file pointing at an absolute host path under the main repo, compose mounts only
+the worktree, so git inside the container cannot resolve it - and the gem reads
+every baseline via `git show HEAD:<path>`. Captures were written over the
+baselines, nothing was compared, every run was green.
+
+Proven rather than inferred: injected `body { background: red !important }`,
+confirmed the rule reached the built bundle and that the page references that
+fingerprinted CSS, then measured the captured PNG - candidate [255,0,0],
+baseline [255,255,255], **difference_level 0.68** - and the run reported
+`0 failures`. Three earlier injections had failed to go red and I had blamed
+the injections; the fourth proved the gate.
+
+I had reported earlier the same day that "bin/dtest is green, nothing to fix on
+the Linux side". That was worthless: it was green because it was not testing.
+Paul's main checkout has a real .git, so his dtest DID compare - which is why
+he saw 31 modified baselines from a red run and I could never reproduce one.
+
+Root cause is not worktree-specific: outside CI the gem defaults `fail_if_new`
+to false, so a baseline it cannot RETRIEVE is treated as a new screenshot and
+passes. Now `true`, verified by a probe with a name absent from git. The tell to
+remember is a missing line - a real run ends with `[snap_diff] N screenshots
+compared`; the no-op run printed none, while still reporting `0 failures`.
+
 ## 2026-08-22 - closing three of the fault-injection gaps, each broken before it was trusted
 
 Three of the five misses above now have gates. Every one of them was injected,

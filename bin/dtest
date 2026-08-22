@@ -10,14 +10,59 @@ bin/build-if-stale _dest/public-dtest
 # path would be exec'd as the command itself (mirrors bin/dtest-all).
 # HUGO_DEFAULT_PATH must be passed explicitly: bin/test honors it, and
 # PRECOMPILED_ASSETS stops the container (which has no hugo) from building.
-echo "Running tests in Docker..."
-bin/docked --env PRECOMPILED_ASSETS=true --env TEST_SERVER_PORT=1314 \
-  --env HUGO_DEFAULT_PATH=_dest/public-dtest t bin/test "$@"
-
-# Green run: the container rewrote the linux/ baselines through the bind mount
-# with sub-tolerance Rosetta pixel drift (~0.004%/run); restore so the host
-# dirty-fixture guard doesn't block the next bin/test/bin/qtest. Red runs exit
-# above (set -e) and keep candidates for inspection.
+# The container rewrites every linux/ baseline it captures, through the bind
+# mount, whether the run is green or red. Cleanup therefore happens at BOTH
+# ends and neither end is a special case:
+#
+#   BEFORE, because a red or killed run used to leave every captured baseline
+#   modified - 31 files after one red `test:critical`, not just the failures -
+#   and the in-container dirty-fixtures guard then aborted every subsequent
+#   run until someone reset by hand.
+#
+#   AFTER, via trap, so a red or interrupted run cleans up after itself. The
+#   old restore sat on the success path only, below `set -e`.
+#
+# Discarding those candidates costs nothing: bin/dc pins
+# DOCKER_DEFAULT_PLATFORM=linux/arm64/v8 on an ARM Mac while the committed
+# linux/ baselines are recorded by CI on amd64, so a candidate produced here
+# is never committable - and it is one `git add -A` from corrupting the set.
+# The only legitimate linux re-record is the CI `update-baselines` dispatch
+# (.okf/build/test-gates.md). Diff artifacts (*.diff.png, *.heatmap.diff.png)
+# are untracked and survive the restore, so a red run stays inspectable.
 if [ -z "${FORCE_SCREENSHOT_UPDATE:-}" ]; then
-  git checkout -- test/fixtures/screenshots/linux
+  git checkout -- test/fixtures/screenshots/linux 2>/dev/null || true
+  trap 'git checkout -- test/fixtures/screenshots/linux 2>/dev/null || true' EXIT
 fi
+
+# Make git work inside the container when this is a git WORKTREE.
+#
+# A worktree's .git is a FILE holding `gitdir: <main>/.git/worktrees/<name>` -
+# an absolute HOST path that compose never mounts. Git in the container then
+# reports "not a git repository", and because snap_diff resolves every
+# baseline with `git show HEAD:<path>`, the visual gate silently compares
+# NOTHING: captures are written over the baselines and every run is green.
+# Measured 2026-08-22 - a contact page with `body { background: red }`,
+# difference_level 0.68, passed with 0 failures, and the only tell was a
+# missing `[snap_diff] N screenshots compared` line.
+#
+# Mount the COMMON git dir (the main repo's .git, which holds objects/refs and
+# every worktree's entry) and point GIT_DIR at this worktree inside it. The
+# worktree's own `commondir` file is relative (`../..`), so it resolves there
+# without rewriting anything. A normal checkout has a .git DIRECTORY, already
+# inside the mount, and needs none of this.
+git_args=()
+if [ -f .git ]; then
+  git_common=$(git rev-parse --path-format=absolute --git-common-dir)
+  git_wt=$(basename "$(git rev-parse --absolute-git-dir)")
+  git_args=(
+    -v "${git_common}:/gitcommon"
+    --env "GIT_DIR=/gitcommon/worktrees/${git_wt}"
+    --env "GIT_WORK_TREE=/app"
+  )
+  echo "bin/dtest: git worktree detected - mounting ${git_common} so baselines resolve"
+fi
+
+echo "Running tests in Docker..."
+bin/docked ${git_args[@]+"${git_args[@]}"} \
+  --env PRECOMPILED_ASSETS=true --env TEST_SERVER_PORT=1314 \
+  --env HUGO_DEFAULT_PATH=_dest/public-dtest t bin/test "$@"

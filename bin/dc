@@ -12,7 +12,20 @@ if [ "$(uname -s)" = "Darwin" ]; then
   esac
 fi
 
-echo "Running docker compose with project name: ${DOCKED_PROJECT_NAME:-jtcom}"
+# One compose project PER WORKTREE. The project name namespaces containers,
+# networks and volumes, so a fixed "jtcom" meant two worktrees running
+# bin/dtest at once shared them - and `--remove-orphans` (bin/docked) would
+# delete the other run's container mid-test. Derived from the checkout root so
+# it is stable across runs in one worktree and distinct across worktrees;
+# sanitised because compose only accepts [a-z0-9_-].
+if [ -z "${DOCKED_PROJECT_NAME:-}" ]; then
+  _root="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+  _slug="$(basename "$_root" | tr '[:upper:]' '[:lower:]' | tr -c 'a-z0-9_-' '-')"
+  DOCKED_PROJECT_NAME="jtcom-${_slug%-}"
+  export DOCKED_PROJECT_NAME
+fi
+
+echo "Running docker compose with project name: ${DOCKED_PROJECT_NAME}"
 pwd
 
 export DOCKER_BUILDKIT=1
@@ -20,5 +33,5 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 
 docker "compose" \
   -f ".dev/compose.yml" \
-  -p "${DOCKED_PROJECT_NAME:-jtcom}" \
+  -p "${DOCKED_PROJECT_NAME}" \
   "$@"

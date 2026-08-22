@@ -12,7 +12,8 @@ services:
       - ..:/app:delegated
       - hugo_cache:/tmp/hugo_cache
     ports:
-      - '1313:1313'
+      # Fixed 1313 let only one worktree run this service at a time.
+      - '${HUGO_PORT:-1313}:1313'
     command: server --bind 0.0.0.0 --poll 500ms --disableFastRender=false
     environment:
       HUGO_CACHEDIR: /tmp/hugo_cache

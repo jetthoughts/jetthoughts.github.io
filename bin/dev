@@ -12,7 +12,19 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PATH="$SCRIPT_DIR/../node_modules/.bin:$PATH"
 export PATH
 
-PORT="${PORT:-1313}"
+# Default the port PER WORKTREE instead of everyone landing on 1313. Derived
+# from the checkout root, so it is stable across restarts in one worktree (the
+# review links you hand out keep working) and distinct across parallel
+# worktrees. Explicit PORT still wins.
+if [ -z "${PORT:-}" ]; then
+  _root="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+  if [ "$(basename "$_root")" = "jetthoughts.github.io" ]; then
+    PORT=1313                                   # the main checkout keeps 1313
+  else
+    _h="$(printf '%s' "$_root" | cksum | cut -d' ' -f1)"
+    PORT=$((20000 + _h % 15000))                # sidecar rides PORT+1000
+  fi
+fi
 echo "🚀 Hugo dev: http://localhost:$PORT (board sidecar on $((PORT + 1000)))"
 
 PORT=$((PORT + 1000)) "$SCRIPT_DIR/li-review" & LI_PID=$!

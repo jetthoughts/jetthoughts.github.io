@@ -865,3 +865,81 @@ found the founding year wrong in eight places because each kept its own copy.
 
 Full fault-injection matrix, including what nothing guards:
 `docs/20-29-testing-qa/20.11-gate-fault-injection-2026-08-22-reference.md`.
+
+# A green visual run means nothing without its `[snap_diff]` line
+
+The gem resolves every baseline with `git show HEAD:<path>`. Anything that
+breaks git turns the whole visual gate into a no-op: captures are still
+written over the baselines, nothing is compared, and the run is green.
+
+**Measured 2026-08-22.** Run from a git WORKTREE, `.git` is a FILE pointing at
+an absolute host path under the main repo (`<main>/.git/worktrees/<name>`),
+which compose does not mount. Git inside the container reports "not a git
+repository", every baseline lookup returns empty, and a contact page carrying
+`body { background: red !important }` - **difference_level 0.68, 68% of the
+frame** - passed with `0 failures`. The tell was one missing line: macOS runs
+end with `[snap_diff] N screenshots compared`, the container run printed no
+such line at all.
+
+**Two fixes, each verified by breaking it:**
+
+- `Capybara::Screenshot::Diff.fail_if_new = true` (test/support/setup_snap_diff.rb).
+  Outside CI the gem defaulted this to false, so an unresolvable baseline
+  passed silently - that default is what made the no-op invisible rather than
+  loud. Probe with a screenshot name absent from git: `1 runs, 1 assertions,
+  1 failures`. A genuinely new page now fails its first run until recorded,
+  which is the same run-to-fail -> inspect -> commit flow this file already
+  documents.
+- `bin/dtest` now MAKES git work from a worktree instead of refusing to run:
+  it mounts the common git dir (`git rev-parse --path-format=absolute
+  --git-common-dir`) at `/gitcommon` and sets `GIT_DIR=/gitcommon/worktrees/
+  <name>` + `GIT_WORK_TREE=/app`. The worktree's own `commondir` file is
+  relative (`../..`), so it resolves inside the container with nothing
+  rewritten. Gated on `[ -f .git ]`, so a normal checkout is untouched.
+  Verified by re-injecting the red body: `[snap_diff] 55 screenshots compared,
+  10 failures`, with `desktop/contact_us` and `mobile/contact_us` among them.
+
+**Reading rule: a visual run that does not print `[snap_diff] N screenshots
+compared` compared nothing.** Check for that line before believing green -
+counting `0 failures` is not the same as counting comparisons.
+
+# arm64 dtest and amd64 CI genuinely disagree on text-heavy pages
+
+Once the worktree no-op above was fixed and comparisons actually ran, `bin/dtest`
+on an ARM Mac failed **8 `mobile/blog/special/codeblocks/*` screenshots at
+~0.055-0.063** against the CI-recorded baselines. Syntax-highlighted code is
+the most rasteriser-sensitive surface on the site, and `bin/dc` pins
+`DOCKER_DEFAULT_PLATFORM=linux/arm64/v8` while CI records on amd64.
+
+**A retraction, because the method matters more than the conclusion.** Earlier
+the same day this drift was declared refuted, on a measurement that compared
+the committed baselines against *themselves*: the candidates had already been
+restored by dtest's cleanup before they were measured. A vacuous comparison
+returns 0 and looks like proof of agreement. Measure candidates BEFORE any
+restore runs, or measure nothing.
+
+Consequence: on an ARM Mac, dtest is expected-red on that family. The options,
+none free - accept and screen those keys, pin the container to `linux/amd64`
+so local matches CI (correct, slower under emulation), or let CI own the Linux
+leg entirely. Not decided here; recorded so the next person does not read the
+red as a regression they caused.
+
+# Running N worktrees in parallel
+
+Five agents in five worktrees can run `bin/dev`, `bin/test` and `bin/dtest`
+concurrently. What was actually shared, and what was not:
+
+| Surface | Shared? | Resolution |
+|---|---|---|
+| compose project name | **was fixed `jtcom`** | derived per worktree in `bin/dc` - containers, networks and volumes are namespaced by it, and `bin/docked` passes `--remove-orphans`, so two runs under one project would delete each other's container mid-test |
+| `bin/dev` port | **was fixed 1313** | derived per worktree (stable across restarts, so handed-out review links keep working); the main checkout keeps 1313; explicit `PORT` still wins |
+| compose `hugo` published port | **was fixed 1313** | `${HUGO_PORT:-1313}` |
+| `bin/test` server port | no | Capybara picks a free port unless `TEST_SERVER_PORT` is set |
+| `bin/dtest` `TEST_SERVER_PORT=1314` | no | inside the container's own network namespace, never published |
+| `_dest/public-*` builds | no | each worktree has its own tree |
+| screenshot fixtures | no | per worktree; and each worktree has its own git index, so concurrent `git checkout --` does not contend |
+| the git STASH stack | **yes** | unchanged hazard - never a bare `git stash` (see CLAUDE.md) |
+
+Per-worktree compose projects mean per-worktree named volumes, so the first
+`bin/dtest` in a new worktree repopulates `hugo_cache_dtest`. Gems are baked
+into the image, not a volume, so nothing re-bundles.
