@@ -476,6 +476,12 @@ STEP 7 — VALIDATE
   - og:image resolves
   - Cover image renders correctly
   - All internal links work
+- `bin/rake test:links` — run it LOCALLY on a content PR (Paul 2026-08-22).
+  Content-only PRs merge on local gates and do not wait for CI, but `content/**`
+  is one of the link checker's trigger paths and internal links are exactly what
+  a post adds. This command is what you are skipping the wait for. Skipping it
+  too is allowed only if you say so — the master push-run still crawls, and the
+  broken link is then found after merge instead of before.
 
 STEP 8 — UPDATE CONTENT PLAN
 Edit docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md:

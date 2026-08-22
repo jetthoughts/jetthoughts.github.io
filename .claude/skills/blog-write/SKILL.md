@@ -129,6 +129,16 @@ criteria scored, and the scores written into the commit message.
 
 Feature branch, commit, `gh pr create` with the evidence. Never push to master.
 
+**Do NOT wait for CI on a content-only PR** (Paul 2026-08-22). Prose and
+frontmatter cannot move the app build, so local gates decide and you merge as
+soon as they are green.
+
+One thing does not come free: `content/**` triggers the link checker, and
+internal links are exactly what a post adds. Run **`bin/rake test:links`**
+locally in place of the wait. If you skip it, say so in the handback - the
+master push-run still crawls, so a broken link becomes a fix-forward defect
+rather than a caught one.
+
 **End the handback with the local review link** - `http://localhost:<port>/blog/<slug>/`.
 One dev server per session, never 1313:
 
