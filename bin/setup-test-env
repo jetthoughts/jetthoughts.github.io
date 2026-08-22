@@ -16,9 +16,22 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 CFT=$(tr -d '[:space:]' < .dev/cft-version)
+# Follows the host here, unlike the container (.dev/compose.yml pins arm64):
+# bare metal cannot run an arm64 Chrome on an x86 CPU, so there is nothing to
+# pin TO. That makes an x86 host structurally unable to reproduce the linux/
+# baselines, which CI records on arm64 - so say so instead of rendering a
+# whole suite of false reds and letting someone re-record from it.
 case "$(uname -m)" in
   aarch64|arm64) CFT_PLAT=linux-arm64 ;;
-  *)             CFT_PLAT=linux64 ;;
+  *)
+    CFT_PLAT=linux64
+    echo "WARNING: host is $(uname -m), but test/fixtures/screenshots/linux/" >&2
+    echo "  is recorded on arm64 (CI: ubuntu-24.04-arm). Chrome here renders" >&2
+    echo "  amd64, so visual comparisons will differ from CI for reasons that" >&2
+    echo "  are NOT defects. Non-visual suites are unaffected." >&2
+    echo "  Do NOT re-record linux/ from this host. Use .dev/compose.yml (it" >&2
+    echo "  pins arm64) or the CI update-baselines dispatch." >&2
+    ;;
 esac
 CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/jt-cft/$CFT-$CFT_PLAT"
 CHROME="$CACHE/chrome-$CFT_PLAT/chrome"

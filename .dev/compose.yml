@@ -25,11 +25,19 @@ services:
   # Interactive shell (optimized)
   sh:
     image: jetthoughts.com-test:1.0.0
-    # Follows the HOST arch since 2026-08-22. Chrome for Testing began
-    # publishing linux-arm64 at 153 (.dev/cft-version pins 153.0.8010.5, the
-    # first Beta with it), and the Dockerfile picks the matching build - so an
-    # ARM Mac runs native instead of emulating amd64. CI moved to arm64
-    # runners in the same change, so both sides still render alike.
+    # Pinned to arm64 since 2026-08-22, because that is what records the
+    # committed linux/ baselines: CI runs ubuntu-24.04-arm. Chrome for Testing
+    # began publishing linux-arm64 at 153 (.dev/cft-version pins 153.0.8010.5,
+    # the first Beta with it) and the Dockerfile picks the matching build.
+    #
+    # PIN, not "follow the host". Following the host is what an earlier draft
+    # did, and it silently breaks the visual gate on an x86 developer machine:
+    # Chrome would render amd64 while every linux/ baseline is an arm64
+    # recording, so bin/dtest and required CI disagree by construction. On an
+    # ARM Mac this pin IS the host arch, so it is free - it costs only an x86
+    # host, which then emulates arm64 and is correct-but-slow rather than
+    # fast-and-wrong. The gate is BLOCKING; correctness wins.
+    platform: linux/arm64
     build:
       context: ../
       dockerfile: ./.dev/Dockerfile
@@ -52,7 +60,9 @@ services:
   # Test runner with optimized dependency management
   t:
     image: jetthoughts.com-test:1.0.0
-    # Host arch, matching CI's arm64 runners (see `sh` service note above).
+    # Pinned to CI's arch, not the host's - this is the service that produces
+    # screenshot candidates. See the `sh` service note above for why.
+    platform: linux/arm64
     build:
       context: ../
       dockerfile: ./.dev/Dockerfile
