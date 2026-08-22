@@ -16,9 +16,7 @@ canonical_url: 'https://jetthoughts.com/blog/what-senior-developers-catch-that-a
 related_posts: false
 ---
 
-Cards on the table before I start: I run a development shop, and this post argues you need experienced people reviewing AI output. That is convenient for me. So I am going to make the case with a diff you can check yourself, and if the Rails reasoning does not hold up, none of the rest should persuade you either.
-
-Here is a change we stopped in review. It is small, it is plausible, and it is wrong in a way you cannot see without knowing Rails.
+Here is a change we caught before it merged. It is small, it is plausible, and it is wrong in a way you cannot see without knowing Rails.
 
 ```diff
 - Propshaft is dramatically faster than Sprockets: precompilation drops from
@@ -29,7 +27,9 @@ Here is a change we stopped in review. It is small, it is plausible, and it is w
 
 The deletion is correct. That timing figure had no measurement behind it and deserved to go.
 
-Read the addition again. It is wrong.
+Read the addition again.
+
+It is wrong.
 
 Propshaft still walks every asset, fingerprints it, and copies it into place. Its own README says so:
 
@@ -41,31 +41,15 @@ So a made-up number was swapped for a made-up mechanism. That is the worse trade
 
 ## Nobody skimming that paragraph would have stopped
 
-Sit with that for a second.
-
 The sentence had a subject, a cause and an effect, and it used the right vocabulary throughout. It also agreed with the general direction of the truth - Propshaft *is* faster - while getting the reason for it wrong.
 
 You cannot catch that by reading carefully.
 
-You catch it by already knowing what `assets:precompile` does.
+You catch it by already knowing what `assets:precompile` does. Sean Goedecke put the general version well in ["LLMs reward expertise"](https://www.seangoedecke.com/llms-reward-expertise/): "The most important skill in prompting is expertise in the domain you're prompting for."
 
-Hacker News spent the last three weeks arguing about exactly this, mostly without noticing it was one argument. Sean Goedecke's ["LLMs reward expertise"](https://www.seangoedecke.com/llms-reward-expertise/) drew 573 comments with a simple claim: "The most important skill in prompting is expertise in the domain you're prompting for."
+He calls the thing experts do "steering" - you recognise a suboptimal suggestion and redirect it. This diff is that mechanism running backwards. Without someone who knows the asset pipeline, there is nothing to steer against and the confident answer wins by default.
 
-Two weeks later Senko Rašić's ["'Code was never the hard part' is an insult to all programmers"](https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers) drew 590 more, insisting that "creating good code is a craft that requires skill, patience, attention to detail, experience and wisdom."
-
-Both threads circle the same question and neither settles it. If the model writes the code, what is the person for?
-
-## What the diff answers
-
-It was not the typing.
-
-The prose came out clean, grammatical and confident on the first pass, and would have survived any editor who did not happen to know how Rails compiles assets.
-
-What it could not do was notice that its own explanation was false. It had no way to check, because checking meant knowing something about the Rails asset pipeline that was not in the sentence it had just written.
-
-Goedecke calls the thing experts do "steering" - you recognise a suboptimal suggestion and redirect it. This diff is that mechanism running backwards: without someone who knows the asset pipeline, there is nothing to steer against, and the confident answer wins by default.
-
-Note what the change was *for*. The task was removing an unsourced number, and the same edit introduced a new defect while completing it. Cleanup is where this happens most, because a correction feels like tidying rather than authorship, and gets read that way.
+Note what the change was *for*. The task was removing an unsourced number, and the same edit introduced a new defect while completing it. Cleanup is where this happens most, because a correction feels like tidying rather than authorship.
 
 ## What actually caught it
 
@@ -77,9 +61,11 @@ It came back with four findings. This was one, stated flatly:
 
 > On applications with many assets, Propshaft still enumerates, fingerprints, and copies every asset during `assets:precompile`, so its work still scales with asset count. Removing transpilation and concatenation reduces the per-asset cost but does not make the build independent of asset count; the new wording gives readers an incorrect performance expectation.
 
-Then a person had to decide whether the reviewer was right, and I want to be precise about what that took: either knowing the answer already, or being willing to go and read the Propshaft source until you did.
+Then a person had to decide whether the objection was correct, and that step took either already knowing the answer or being willing to go and read the Propshaft source until you did.
 
 Three links in that chain, and only one of them is automatable. A model wrote, another model challenged, and someone with domain knowledge adjudicated.
+
+![Three links in the chain: a model writes, a second model challenges, a person referees. Only the first two are automatable.](chain.svg)
 
 Drop the third link and you have two confident systems agreeing with each other.
 
@@ -91,7 +77,7 @@ They were 19% slower with AI.
 
 Going in, those developers expected a 24% speedup. Coming out, having just lived through the slowdown, they still estimated AI had made them 20% faster. Roughly forty points between what happened and what they believed happened - in experts, on their own code.
 
-METR is careful about what that does not show, so I will be too: early-2025 models, Claude 3.5 and 3.7 Sonnet through Cursor Pro, on mature codebases with demanding quality standards, and they explicitly decline to claim it generalises to most developers or to later tools.
+METR is careful about what that does not show: early-2025 models, Claude 3.5 and 3.7 Sonnet through Cursor Pro, on mature codebases with demanding quality standards, and they explicitly decline to claim it generalises to most developers or to later tools.
 
 What travels is the gap itself. Experience did not make those developers better at estimating their own speed. It made them more certain about an estimate that was forty points off.
 
@@ -122,16 +108,6 @@ Three things worth asking, none of which require you to read code:
 - **Ask what happens when a check fails.** A team that treats "stop and don't ship this" as a normal outcome has a working process. A team where every review ends in approval has a ritual.
 
 We wrote about the [team structure that makes this hold up](/blog/claude-code-xp-team-workflow/) if you want the operating detail. The short version fits in a sentence: the reviewer has to be someone other than the writer, and they have to be allowed to say no.
-
-## The uncomfortable version
-
-Every defect in this post was caught the same way: a second pass whose brief was to disagree, followed by someone who knew the subject well enough to referee the disagreement.
-
-Neither half works alone. The reviewer that only agrees is decoration, and the reviewer that objects to something nobody can adjudicate is noise.
-
-Expertise earns its money in a handful of moments per week, and none of them look like productivity. Someone reads a paragraph that scans perfectly and says no, and cannot always explain why until they go and check.
-
-That is an awkward thing to sell and an awkward thing to measure. I would still rather tell you that than quote you a velocity number.
 
 ## Sources
 

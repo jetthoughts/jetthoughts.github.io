@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img" aria-labelledby="t d">
+  <title id="t">Links actually checked, before and after adding the --remap flag</title>
+  <desc id="d">Before: 15,642 of 149,516 links checked, about one tenth. After: 114,239 checked. Both runs reported zero errors.</desc>
+
+  <rect width="720" height="300" fill="#0e0e14"/>
+
+  <text x="32" y="42" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="17" font-weight="700" fill="#e8eaf0">Links the checker actually inspected</text>
+  <text x="32" y="64" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">Same site. Same command. One extra flag.</text>
+
+  <!-- BEFORE -->
+  <text x="32" y="112" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="600" fill="#8b90a0" letter-spacing="1.2">BEFORE</text>
+  <rect x="32" y="124" width="640" height="34" rx="6" fill="#1a1a24"/>
+  <rect x="32" y="124" width="67" height="34" rx="6" fill="#cc342d"/>
+  <text x="112" y="146" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" font-weight="700" fill="#e8eaf0">15,642 checked</text>
+  <text x="672" y="146" text-anchor="end" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">133,874 skipped</text>
+
+  <!-- AFTER -->
+  <text x="32" y="204" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="600" fill="#8b90a0" letter-spacing="1.2">AFTER</text>
+  <rect x="32" y="216" width="640" height="34" rx="6" fill="#1a1a24"/>
+  <rect x="32" y="216" width="489" height="34" rx="6" fill="#a855f7"/>
+  <text x="46" y="238" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" font-weight="700" fill="#0e0e14">114,239 checked</text>
+  <text x="672" y="238" text-anchor="end" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">35,501 external</text>
+
+  <text x="32" y="284" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">Both runs reported</text>
+  <text x="152" y="284" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" font-weight="700" fill="#4ade80">0 Errors</text>
+  <text x="212" y="284" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">- only one of them meant it.</text>
+</svg>

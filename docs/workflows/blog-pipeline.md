@@ -240,7 +240,19 @@ way. Two candidate markers were measured and rejected (10 and 185 hits, both
 mostly legitimate prose) — see `.okf/content/fabrication-ratchet.md`.
 
 STEP 5a — ANTI-AI WRITING PASS (MANDATORY — run BEFORE review loop)
-Run /humanizer on the draft. Scan every paragraph for these AI tells:
+
+RUN THE SCRIPT FIRST — `bin/check-post-voice content/blog/<slug>/index.md`.
+It measures STEP 4b's cadence quotas and the tell list below mechanically, and
+exits non-zero on failure. This exists because the prose checklist kept getting
+skipped: three posts shipped on 2026-08-22 having passed neither, and the slop
+was obvious to a reader immediately. It also enforces the two rules that are not
+cadence choices — an artifact (code block or image) and at least one external
+citation.
+
+It measures SHAPE. It cannot tell you the post is good, so the human passes
+below still run — but do not send a draft to them that the script rejects.
+
+Then run /humanizer on the draft. Scan every paragraph for these AI tells:
 - Rule of three (parallel triads) — break or combine
 - Signposting ("This post is about...", "Here's what you need to know")
 - Bold inline-header lists — rewrite as flowing prose

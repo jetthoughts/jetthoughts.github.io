@@ -1,0 +1,124 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+#
+# Mechanical check for blog-pipeline.md STEP 4b (cadence quotas) and STEP 5a
+# (anti-AI tells). Both were prose checklists, and prose checklists get skipped:
+# three posts shipped on 2026-08-22 having passed neither, and the slop was
+# visible to a reader immediately.
+#
+#   bin/check-post-voice content/blog/<slug>/index.md
+#
+# Exits non-zero if any rule fails, so it can gate a commit.
+# It measures SHAPE only. It cannot tell you whether the post is any good.
+
+require "set"
+
+path = ARGV[0] or abort "usage: bin/check-post-voice <post.md>"
+raw  = File.read(path, encoding: "bom|utf-8")
+parts = raw.split(/^---\s*$/m)
+body  = parts[2].to_s
+
+MANNERISM = %w[discipline cycle pattern canonical workflow framework cadence
+               rhythm contract gate gatekeeper layer round review pass].freeze
+BANNED = %w[unlock harness leverage game-changer journey seamless robust
+            supercharge revolutionize embark delve discover].freeze
+
+# --- split into sections of prose paragraphs, skipping fenced code ------------
+sections = Hash.new { |h, k| h[k] = [] }
+current  = "(lead)"
+buf      = []
+in_code  = false
+
+flush = lambda do
+  para = buf.join(" ").strip
+  buf = []
+  return if para.empty?
+  sections[current] << para
+end
+
+body.each_line do |line|
+  if line.strip.start_with?("```")
+    flush.call unless in_code
+    in_code = !in_code
+    next
+  end
+  next if in_code
+
+  if line =~ /^##+\s+(.*)/
+    flush.call
+    current = Regexp.last_match(1).strip
+  elsif line.strip.empty?
+    flush.call
+  elsif !line.start_with?("#", ">", "-", "|", "!")
+    buf << line.strip
+  end
+end
+flush.call
+
+failures = []
+prose = sections.values.flatten
+abort "no prose found in #{path}" if prose.empty?
+
+# --- STEP 4b: cadence quotas, per H2 -----------------------------------------
+sections.each do |name, paras|
+  sents = paras.flat_map { |p| p.split(/(?<=[.!?])\s+/) }.reject { |s| s.strip.empty? }
+  next if sents.empty?
+  lens = sents.map { |s| s.split.size }
+
+  failures << "#{name}: no sentence under 9 words (min #{lens.min})" if lens.min >= 9
+  failures << "#{name}: no sentence over 22 words (max #{lens.max})" if lens.max <= 22
+  failures << "#{name}: no single-sentence paragraph" unless paras.any? { |p| p.split(/(?<=[.!?])\s+/).reject { |x| x.strip.empty? }.size == 1 }
+
+  over = paras.count { |p| p.split(/(?<=[.!?])\s+/).reject { |x| x.strip.empty? }.size > 3 }
+  failures << "#{name}: #{over} paragraph(s) over the 3-sentence cap" if over.positive?
+end
+
+# --- STEP 5a: anti-AI tells --------------------------------------------------
+sents = prose.flat_map { |p| p.split(/(?<=[.!?])\s+/) }.reject { |s| s.strip.empty? }
+
+tell = lambda do |label, matches|
+  return if matches.empty?
+  failures << "#{label} (#{matches.size}): #{matches.first.strip[0, 90]}"
+end
+
+tell.("negative parallelism", sents.select { |s| s.strip =~ /\ANot [a-z]/ })
+# Only flags the generic subject DOING something ("the team ships", "most
+# founders assume"). "anyone on the team could remember" names a real team and
+# is not the tell - matching it was a false positive on 2026-08-22.
+tell.("generalized actor", sents.select { |s| s =~ /\b(the developer|the team|most teams|most founders)\s+(is|are|was|were|has|have|will|can|should|does|do|needs?|assumes?|ships?|writes?)\b/i })
+tell.("definitional cadence", sents.select { |s| s =~ /\b(is|that is) the (canonical|largest|whole|real|part|version|move|rule|reason|kind)\b/i })
+tell.("signposting", sents.select { |s| s =~ /\A(This post|Here'?s what|In this article|Let'?s (dive|explore))/i })
+tell.("therapist voice", sents.select { |s| s =~ /that'?s the (hardest|worst|tricky)/i })
+tell.("copula avoidance", sents.select { |s| s =~ /\bserves as\b/i })
+
+banned_hits = BANNED.select { |w| body.downcase =~ /\b#{Regexp.escape(w)}\b/ }
+failures << "banned words: #{banned_hits.join(', ')}" unless banned_hits.empty?
+failures << "em dash present - use '-'" if body.include?("—")
+
+mann = MANNERISM.sum { |w| body.scan(/\b#{w}s?\b/i).size }
+failures << "mannerism nouns: #{mann} (cap 5)" if mann > 5
+
+opener = prose.count { |p| p =~ /\A(The|We)\b/ }
+pct = (100.0 * opener / prose.size).round
+failures << "The/We paragraph openers: #{pct}% (cap 20%)" if pct > 20
+
+# --- artifact + receipts (2026-08-22: every post owes both) ------------------
+code_blocks = body.scan(/^```/).size / 2
+images = body.scan(/!\[[^\]]*\]\(/).size
+failures << "no artifact: 0 code blocks and 0 images" if code_blocks.zero? && images.zero?
+
+external = body.scan(%r{\]\((https?://[^)]+)\)}).flatten.reject { |u| u.include?("jetthoughts.com") }
+failures << "no receipts: zero external citations" if external.empty?
+
+# --- report ------------------------------------------------------------------
+puts "#{path}"
+puts "  #{prose.size} paragraphs, #{code_blocks} code blocks, #{images} images, #{external.size} external citations"
+
+if failures.empty?
+  puts "  PASS"
+  exit 0
+end
+
+puts "  FAIL (#{failures.size})"
+failures.each { |f| puts "    - #{f}" }
+exit 1
