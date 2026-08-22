@@ -866,6 +866,23 @@ found the founding year wrong in eight places because each kept its own copy.
 Full fault-injection matrix, including what nothing guards:
 `docs/20-29-testing-qa/20.11-gate-fault-injection-2026-08-22-reference.md`.
 
+## Inject BOTH directions, or the gate is half-tested (2026-08-22)
+
+Planting the defect and watching it fail proves the gate can fire. It does not
+prove the gate can stay quiet. Plant a legitimate LOOKALIKE and watch it PASS.
+
+The missing half cost four false positives in one day: a marker accused this
+repo's own real `jt_site` case study of being fabricated; an AI-tell rule fired
+on "anyone on **the team** could remember"; a phrase marker flagged a quoted
+exhibit inside a ```diff fence as our own claim; a single-line `<img>` grep
+reported a working diagram as missing because Hugo wraps the tag across lines.
+Each verdict was trusted, and correct work was nearly changed to satisfy it.
+
+**When a gate accuses something, reproduce the accusation by hand before
+believing it.** The fabrication ratchet's phrase scan now strips fenced code for
+exactly this reason, and was verified both ways on a throwaway probe post:
+legitimate exhibit PASS, same phrase in prose FAIL.
+
 # A green visual run means nothing without its `[snap_diff]` line
 
 The gem resolves every baseline with `git show HEAD:<path>`. Anything that
