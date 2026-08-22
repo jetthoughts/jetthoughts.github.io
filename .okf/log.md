@@ -79,6 +79,17 @@ Also corrected: the ~1e-6 noise figure in test-gates and in the code comment
 was macOS-local and read as universal. Same overclaim shape the #566 reviewer
 caught one layer down.
 
+## 2026-08-22 - STATUS.md is the repo's cold-start surface
+
+Paul asked for a way for anyone landing in the repo to know the goals and the
+WIP without archaeology. The answer is `STATUS.md` at repo root: goals (links),
+a WIP table, blocked-on-Paul — links only, no duplicated state, updated in the
+same commit as the state change (same enforcement wording as the OKF rule,
+which is the one that has held). Ownership boundary unchanged: the vault still
+owns operations; STATUS.md points, never copies. Recorded in
+[company-layer-ownership](workflows/company-layer-ownership.md); pointer + rule
+added to CLAUDE.md, AGENTS.md, and the async-first skill's surfaces table.
+
 ## 2026-08-22 - the site sells one thing, and title claims are now a canon rule
 
 Paul changed the positioning: the site sells an embedded team of senior

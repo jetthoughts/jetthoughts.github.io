@@ -43,6 +43,19 @@ into published copy days after they were removed from 13 blog posts.
 Never copy a company number out of a vault note into published copy. Corrected
 in the vault the same day; the guard lives in the CLAUDE.md banner.
 
+# The repo's cold-start surface: STATUS.md
+
+Added 2026-08-22 (Paul, via /claude-md-improver): `STATUS.md` at repo root is
+the single cold-start index — goals, WIP table, blocked-on-Paul — **links
+only**. It never copies vault-owned state (bet status, numbers, weekly loop)
+or company facts into itself; it points at the vault and the per-project
+surfaces (`docs/projects/<id>/README.md` / `backlog.md`). Update rule
+(CLAUDE.md §Behavioral Constraints, AGENTS.md): a session that changed what's
+in flight updates `STATUS.md` in the same commit/PR, or the session is not
+done. Enforcement is rule-only by deliberate choice — no freshness test, no
+hook (the 2510 `_ARCHIVED_TASK-TRACKER` rotted under tooling-free neglect;
+the OKF same-commit wording is the pattern that has held).
+
 # Where the routers point
 
 Aligned 2026-08-17: `AGENTS.md`, `docs/workflows/BASE_HANDBOOK.md`,
