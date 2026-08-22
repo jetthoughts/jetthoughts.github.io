@@ -46,6 +46,51 @@ without the `dtest` leg.
   decisions/corrections (prefixes + CLI-keyword-only gotcha: `CLAUDE.md`
   §Memory).
 
+### Running CONTENT unattended (added 2026-08-22, Paul: "deliver confident and stable work without human in the loop")
+
+`.okf/workflows/autonomous-loops.md` says a loop fits work whose completion is
+**mechanically checkable**. Content's completion looks like a judgement, which is
+why it was never run unattended here. It can be, but only by converting the
+judgement into gates that are allowed to FAIL the work.
+
+**The completion promise is about the gates, never about quality.** Never promise
+"the post is good" - that is unfalsifiable and an agent under loop pressure will
+assert it. Promise the checkable set:
+
+> slop >= 8/10 from a critic that did not write it · cold-eyes verdict
+> PUBLISH-READY on all 9 checks · every external claim fetched and quoted from
+> source, no claim written from memory · zero numbers absent from
+> `.okf/content/claims-canon.md` or a cited primary source · `bin/hugo-build`
+> green · rendered scroll gate desktop+mobile, zero console errors, zero 404s ·
+> committed on a branch with a PR open
+
+**HOLD is a terminal success state, and the promise must say so.**
+`autonomous-loops.md` records that a loop "rewards visible progress, so [revert
+rather than ship] is the discipline it erodes first." The content form of that
+failure is manufacturing a post because stopping feels like failing. On
+2026-08-22 two `/blog-next` runs correctly returned HOLD - every queue row was an
+artifact - and a loop that could not terminate on HOLD would have written
+something nobody should publish. **A loop whose only exits are "shipped" or
+"iterate" will always ship.** Give it three exits: SHIPPED, HOLD-with-evidence,
+BLOCKED-on-a-named-decision.
+
+**Author never verifies.** Writer and critic are different agent types, not the
+same type with fresh context - same-type fresh context still carries the
+writer's default tells. Cold-eyes runs a third type. Cap at 2 failed fix rounds,
+then BLOCKED; a third round is the loop rationalising.
+
+**What still stops for Paul, unattended or not.** Narrow and explicit, so
+everything else proceeds without asking:
+1. Whether a claimed client engagement, number, or case study is **real**.
+2. Publishing outward - LinkedIn, email, anything leaving the repo.
+3. Overriding a documented gate (the 2607 P0 content gate; precedent for how an
+   override is recorded: `20.09 §1`, 2026-08-20).
+4. Pricing, naming, disclosing internal numbers.
+5. Split-and-irreversible calls.
+
+Everything else: decide, record the call with its evidence, continue. Parking a
+reversible decision on Paul is the failure mode, not the safe choice.
+
 ### Reviewer routing (contract §5's cost tiers resolve here)
 
 Internal sub-agents (distinct lens per call) for every per-stage review;

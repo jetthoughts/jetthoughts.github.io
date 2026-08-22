@@ -66,6 +66,27 @@ shipped:
    so this is the discipline it erodes first - see the NULL CHANGE rule in
    [test-gates](/build/test-gates.md).
 
+# Content can run in a loop, but only with three exits (2026-08-22)
+
+Content looks like it fails the "mechanically checkable" test above, because
+"is this any good" is a judgement. It passes once the judgement is converted into
+**gates that are allowed to fail the work** - a slop critic that did not write
+the draft, a cold-eyes reviewer of a third agent type, every external claim
+fetched rather than recalled. The promise is then about those gates, never about
+quality. A promise containing "the post is good" is unfalsifiable, and an agent
+under loop pressure will assert it.
+
+**The specific way a content loop goes wrong: it manufactures a post.** The
+revert-rather-than-ship erosion described above has an exact content analogue -
+stopping feels like failing, so the loop writes something. A loop whose only
+exits are SHIPPED and ITERATE will always ship. Give it three: **SHIPPED**,
+**HOLD-with-evidence** (a terminal success), **BLOCKED on a named decision**.
+
+Evidence this is real: on 2026-08-22 two `/blog-next` runs ended in HOLD, and
+both were right - the groomed queue's lead row was an artifact (a 52x "finding"
+that factorised to 1.4x clicks × 37.2x impressions), and its same-day replacement
+failed dedup. A two-exit loop would have written both.
+
 # Write the prompt with the traps in it
 
 The loop re-reads the prompt every iteration, so it is the cheapest place to put
