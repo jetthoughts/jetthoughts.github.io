@@ -184,6 +184,24 @@ Also corrected: the ~1e-6 noise figure in test-gates and in the code comment
 was macOS-local and read as universal. Same overclaim shape the #566 reviewer
 caught one layer down.
 
+## 2026-08-22 - audit P0s executed: re-tiered agents, live gates, one rule source
+
+All 70.12 P0s landed the same day. Five agents re-tiered off fable/sonnet to
+opus (core coder+reviewer, ruby pair, content-creator) - the reviewer
+quota-death root cause. bin/validate-course now runs in CI's unit job and the
+config test that green-covered its uninstalled pre-push hook is DELETED (the
+enforcement lens's own dissent: fix by deletion, not elaboration). The CI
+visual gate's 22-day report-only soak ended - continue-on-error removed.
+BASE_HANDBOOK.md deleted with a full reference sweep; CLAUDE.md is the one
+rule source and all 20 agents now cite it. okf-maintainer exists as a real
+agent (the ENFORCED rule's phantom executor, built); the phantom "weekly
+maintain pass" claim removed from both rule copies. Docs-CI three-way
+contradiction resolved (no CI fires on docs-only; none is waited for). mem0
+dropped (plugin off, fallback = memoria); machine config deduped (~100k
+schema tokens/session: ruflo-core plugin MCP, chrome-devtools x2, github,
+serena, context7 x2, notebooklm). Ruflo retrieval wired into SessionStart
+for the 30-day read measurement. Full audit: docs/70-79-ai-intelligence/70.12.
+
 ## 2026-08-22 - six-lens AI-ops audit: the failure mode is silent no-ops, not missing rules
 
 A /swarm panel (six read-only lenses, mandatory dissents) audited the AI

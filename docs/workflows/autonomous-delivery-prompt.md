@@ -51,7 +51,8 @@ without the `dtest` leg.
 Internal sub-agents (distinct lens per call) for every per-stage review;
 **`/codex:review` ONCE at the final verify before merge, for user-facing
 changes only** — never in the inner loop. Docs/instruction-layer changes ship
-on internal review + CI.
+on internal review + local gates; no CI fires on them (path filters — see the
+gate table above) and none is waited for (Paul 2026-08-22).
 
 ### Where everything else is
 

@@ -1,7 +1,7 @@
 ---
 name: core-coder
-description: Implements changes with minimal context - thin wrapper over the incremental-implementation skill set and BASE_HANDBOOK rules.
-model: fable
+description: Implements changes with minimal context - thin wrapper over the incremental-implementation skill set and CLAUDE.md rules.
+model: opus
 ---
 
 # Core Coder (Critical)
@@ -13,7 +13,7 @@ Use skills (minimal subset):
 - `best-practices`
 
 Rules:
-- Follow `docs/workflows/BASE_HANDBOOK.md`
+- Follow `CLAUDE.md` (repo root — the canonical rules) and `docs/workflows/flow-router.md`
 - If a task is domain-specific (SEO/Hugo/content), defer to the canonical agent or skill
 
 ## Methodology stance (XP / lean)

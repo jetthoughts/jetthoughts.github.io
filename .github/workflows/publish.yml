@@ -89,6 +89,14 @@ jobs:
           PRECOMPILED_ASSETS: '1'
           HUGO_DEFAULT_PATH: _dest/public-test
 
+      # Course content validators (chapter numbering, links, em-dash,
+      # year-stamp...). Previously only wired to an uninstalled pre-push hook —
+      # a green config test stood in front of a gate that never ran
+      # (docs/70-79-ai-intelligence/70.12, P0). CI is where it cannot be
+      # uninstalled.
+      - name: Course validators
+        run: bin/validate-course
+
   # Asset-pipeline integration: dev vs prod branching in css-processor,
   # css-inline, and js-processor (fingerprint/integrity/minify/crossorigin).
   # Previously ran only inside `rake test` on push-to-master, so a PR could

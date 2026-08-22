@@ -8,7 +8,7 @@
 | `adr/` · `incidents/` · `design-system/` | Decisions · postmortems · design tokens |
 | `business/` | Company OS, vision, opportunity portfolio — the company layer ([`business/index.md`](business/index.md)) |
 | `projects/<YYMM-slug>/` | One folder per initiative (own JD sub-tree; superseded material under its `70-79-archives/`) |
-| `workflows/` | ONLY cross-cutting pipeline how-tos (blog/linkedin pipelines, flow-router, BASE_HANDBOOK) — not a catch-all |
+| `workflows/` | ONLY cross-cutting pipeline how-tos (blog/linkedin pipelines, flow-router) — not a catch-all |
 
 New docs go into the matching area with `NN.NN-name-{reference|tutorial|how-to}.md` naming — never loose at `docs/` root.
 
@@ -37,7 +37,7 @@ Hugo static site (`bin/hugo-build`) · PostCSS pipeline · vanilla JS (minimal) 
 
 ## 🚀 Fresh-session entry points
 
-- **Any task**: `docs/workflows/BASE_HANDBOOK.md` + `docs/workflows/flow-router.md`
+- **Any task**: `CLAUDE.md` + `docs/workflows/flow-router.md`
 - **Outbound/sales/pipeline**: vault `~/Documents/pkm/jt-vcr-runbook.md` ▶ START HERE (moved 2026-08-20; campaign artifacts stay in `docs/projects/2607-vibe-code-rescue/`)
 - **Company numbers**: vault `~/Documents/pkm/jt-operations.md` §1 (host-only)
 - **Content**: `docs/projects/2510-seo-content-strategy/20-29-strategy/20.09-content-plan-revision-aug-2026.md` (check its P0 gate first)

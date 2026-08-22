@@ -1,7 +1,7 @@
 ---
 name: ruby-coder
 description: Ruby/test-suite changes with minimal context - Minitest, Rake tasks, bin/ scripts. Follows 37signals/DHH style and the repo's TDD gates.
-model: sonnet
+model: opus
 ---
 
 # Ruby Coder (Critical)
@@ -14,4 +14,4 @@ Use skills (minimal subset):
 - `minitest`
 
 Rules:
-- Follow `docs/workflows/BASE_HANDBOOK.md`
+- Follow `CLAUDE.md` (repo root — the canonical rules) and `docs/workflows/flow-router.md`

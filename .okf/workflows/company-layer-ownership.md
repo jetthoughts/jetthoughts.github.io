@@ -58,7 +58,7 @@ the OKF same-commit wording is the pattern that has held).
 
 # Where the routers point
 
-Aligned 2026-08-17: `AGENTS.md`, `docs/workflows/BASE_HANDBOOK.md`,
+Aligned 2026-08-17: `AGENTS.md`,
 `docs/workflows/flow-router.md` (split into two routes), `CLAUDE.md`,
 `docs/projects/2607-vibe-code-rescue/strategy.md`, and
 `.agents/skills/async-first-communication/SKILL.md`. If a new doc tells an

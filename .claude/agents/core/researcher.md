@@ -13,7 +13,7 @@ Use skills (minimal subset):
 - `knowledge-synthesis`
 
 Rules:
-- Follow `docs/workflows/BASE_HANDBOOK.md`
+- Follow `CLAUDE.md` (repo root — the canonical rules) and `docs/workflows/flow-router.md`
 - Obey the Research Protocol for claude-context searches
 
 ## Methodology stance (lean)
