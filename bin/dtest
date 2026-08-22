@@ -10,14 +10,46 @@ bin/build-if-stale _dest/public-dtest
 # path would be exec'd as the command itself (mirrors bin/dtest-all).
 # HUGO_DEFAULT_PATH must be passed explicitly: bin/test honors it, and
 # PRECOMPILED_ASSETS stops the container (which has no hugo) from building.
+# The container rewrites every linux/ baseline it captures, through the bind
+# mount, whether the run is green or red. Cleanup therefore happens at BOTH
+# ends and neither end is a special case:
+#
+#   BEFORE, because a red or killed run used to leave every captured baseline
+#   modified - 31 files after one red `test:critical`, not just the failures -
+#   and the in-container dirty-fixtures guard then aborted every subsequent
+#   run until someone reset by hand.
+#
+#   AFTER, via trap, so a red or interrupted run cleans up after itself. The
+#   old restore sat on the success path only, below `set -e`.
+#
+# Discarding those candidates costs nothing: bin/dc pins
+# DOCKER_DEFAULT_PLATFORM=linux/arm64/v8 on an ARM Mac while the committed
+# linux/ baselines are recorded by CI on amd64, so a candidate produced here
+# is never committable - and it is one `git add -A` from corrupting the set.
+# The only legitimate linux re-record is the CI `update-baselines` dispatch
+# (.okf/build/test-gates.md). Diff artifacts (*.diff.png, *.heatmap.diff.png)
+# are untracked and survive the restore, so a red run stays inspectable.
+if [ -z "${FORCE_SCREENSHOT_UPDATE:-}" ]; then
+  git checkout -- test/fixtures/screenshots/linux 2>/dev/null || true
+  trap 'git checkout -- test/fixtures/screenshots/linux 2>/dev/null || true' EXIT
+fi
+
+# A git worktree's .git is a FILE pointing at an absolute host path under the
+# main repo (<main>/.git/worktrees/<name>), and compose mounts only this
+# directory - so git inside the container reports "not a git repository",
+# snap_diff cannot resolve a single baseline, and the visual gate silently
+# becomes a no-op. Measured 2026-08-22: a body painted red (68% of pixels)
+# passed with 0 failures from a worktree. setup_snap_diff now fails on an
+# unresolvable baseline, but failing HERE says why in one line instead of
+# 29 confusing screenshot errors.
+if [ -f .git ]; then
+  echo "bin/dtest: this is a git worktree - the container cannot reach"
+  echo "  $(sed 's/^gitdir: //' .git)"
+  echo "  so screenshot baselines cannot be resolved and the visual gate would"
+  echo "  pass without comparing anything. Run bin/dtest from the main checkout."
+  exit 2
+fi
+
 echo "Running tests in Docker..."
 bin/docked --env PRECOMPILED_ASSETS=true --env TEST_SERVER_PORT=1314 \
   --env HUGO_DEFAULT_PATH=_dest/public-dtest t bin/test "$@"
-
-# Green run: the container rewrote the linux/ baselines through the bind mount
-# with sub-tolerance Rosetta pixel drift (~0.004%/run); restore so the host
-# dirty-fixture guard doesn't block the next bin/test/bin/qtest. Red runs exit
-# above (set -e) and keep candidates for inspection.
-if [ -z "${FORCE_SCREENSHOT_UPDATE:-}" ]; then
-  git checkout -- test/fixtures/screenshots/linux
-fi

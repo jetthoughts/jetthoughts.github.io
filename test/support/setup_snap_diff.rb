@@ -25,6 +25,23 @@ Capybara::Screenshot::Diff.driver = :vips
 Capybara::Screenshot::Diff.perceptual_threshold = 2.0
 Capybara::Screenshot::Diff.delayed = true
 
+# A screenshot whose baseline cannot be RETRIEVED must fail, not pass. The gem
+# resolves baselines with `git show HEAD:<path>`, so anything that breaks git
+# silently turns the whole visual gate into a no-op: captures are written,
+# nothing is compared, every run is green.
+#
+# Measured 2026-08-22: run from a git WORKTREE, `.git` is a file pointing at an
+# absolute host path under the main repo, which the container does not mount -
+# so git inside it reports "not a git repository", every baseline lookup
+# returns nothing, and a contact page with a `background: red !important` body
+# (difference_level 0.68) passed with 0 failures. Defaulting fail_if_new to
+# false outside CI is what made that invisible.
+#
+# Consequence: a genuinely NEW page fails its first run until recorded. That is
+# the same run-to-fail -> inspect -> commit flow .okf/build/test-gates.md
+# already documents for re-records; record mode below still bypasses it.
+Capybara::Screenshot::Diff.fail_if_new = true
+
 if ENV["FORCE_SCREENSHOT_UPDATE"] == "true"
   Capybara::Screenshot::Diff.fail_on_difference = false
   # Record mode must be able to create FIRST baselines for new pages: with

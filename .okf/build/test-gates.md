@@ -865,3 +865,34 @@ found the founding year wrong in eight places because each kept its own copy.
 
 Full fault-injection matrix, including what nothing guards:
 `docs/20-29-testing-qa/20.11-gate-fault-injection-2026-08-22-reference.md`.
+
+# A green visual run means nothing without its `[snap_diff]` line
+
+The gem resolves every baseline with `git show HEAD:<path>`. Anything that
+breaks git turns the whole visual gate into a no-op: captures are still
+written over the baselines, nothing is compared, and the run is green.
+
+**Measured 2026-08-22.** Run from a git WORKTREE, `.git` is a FILE pointing at
+an absolute host path under the main repo (`<main>/.git/worktrees/<name>`),
+which compose does not mount. Git inside the container reports "not a git
+repository", every baseline lookup returns empty, and a contact page carrying
+`body { background: red !important }` - **difference_level 0.68, 68% of the
+frame** - passed with `0 failures`. The tell was one missing line: macOS runs
+end with `[snap_diff] N screenshots compared`, the container run printed no
+such line at all.
+
+**Two fixes, each verified by breaking it:**
+
+- `Capybara::Screenshot::Diff.fail_if_new = true` (test/support/setup_snap_diff.rb).
+  Outside CI the gem defaulted this to false, so an unresolvable baseline
+  passed silently - that default is what made the no-op invisible rather than
+  loud. Probe with a screenshot name absent from git: `1 runs, 1 assertions,
+  1 failures`. A genuinely new page now fails its first run until recorded,
+  which is the same run-to-fail -> inspect -> commit flow this file already
+  documents.
+- `bin/dtest` aborts from a worktree (exit 2) naming the unreachable gitdir,
+  instead of emitting 29 baseline errors.
+
+**Reading rule: a visual run that does not print `[snap_diff] N screenshots
+compared` compared nothing.** Check for that line before believing green -
+counting `0 failures` is not the same as counting comparisons.
