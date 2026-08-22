@@ -51,6 +51,28 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-22 - a re-record that fixed 21 of 22, and the one it could not
+
+#566 merged: 127 baselines re-recorded and the tolerance shield deleted. CI
+Linux red went from 22 keys to 1. The residual, `mobile/blog/index/_pagination`,
+is worth its own note because it defeated two wrong diagnoses in a row.
+
+**It is not flake.** Two runs of the same job returned difference_level
+0.03960763888888889 to sixteen decimals. This file's own rule says identical
+difference_levels across runs mean a stale committed baseline, not flaky
+rendering - and that rule held, against an intuition that said otherwise (the
+key had just been re-recorded 35 minutes earlier, which FEELS like flake).
+A run-level `conclusion: success` was also misread as a passing re-run; the
+job-level conclusion was `failure`. **Read the job, not the run.**
+
+**What it probably is, unverified:** the `workflow_dispatch` record path and
+the `pull_request` test path build the site differently, so the baseline was
+captured from a page the test run never renders. Blog-index pagination is
+driven by the post count, which is exactly the kind of thing a draft-handling
+difference would move. Whoever picks this up: diff the two runs' build steps
+before touching a baseline. Re-recording it again without that answer just
+buys the same failure at a different sha.
+
 ## 2026-08-21 - three register pilots shipped; the comparison is controlled; Editorial recommended
 
 All three register pilots merged on the /next/ rail (#561 rescue-room, #562
