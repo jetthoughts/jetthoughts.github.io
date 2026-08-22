@@ -923,3 +923,23 @@ none free - accept and screen those keys, pin the container to `linux/amd64`
 so local matches CI (correct, slower under emulation), or let CI own the Linux
 leg entirely. Not decided here; recorded so the next person does not read the
 red as a regression they caused.
+
+# Running N worktrees in parallel
+
+Five agents in five worktrees can run `bin/dev`, `bin/test` and `bin/dtest`
+concurrently. What was actually shared, and what was not:
+
+| Surface | Shared? | Resolution |
+|---|---|---|
+| compose project name | **was fixed `jtcom`** | derived per worktree in `bin/dc` - containers, networks and volumes are namespaced by it, and `bin/docked` passes `--remove-orphans`, so two runs under one project would delete each other's container mid-test |
+| `bin/dev` port | **was fixed 1313** | derived per worktree (stable across restarts, so handed-out review links keep working); the main checkout keeps 1313; explicit `PORT` still wins |
+| compose `hugo` published port | **was fixed 1313** | `${HUGO_PORT:-1313}` |
+| `bin/test` server port | no | Capybara picks a free port unless `TEST_SERVER_PORT` is set |
+| `bin/dtest` `TEST_SERVER_PORT=1314` | no | inside the container's own network namespace, never published |
+| `_dest/public-*` builds | no | each worktree has its own tree |
+| screenshot fixtures | no | per worktree; and each worktree has its own git index, so concurrent `git checkout --` does not contend |
+| the git STASH stack | **yes** | unchanged hazard - never a bare `git stash` (see CLAUDE.md) |
+
+Per-worktree compose projects mean per-worktree named volumes, so the first
+`bin/dtest` in a new worktree repopulates `hugo_cache_dtest`. Gems are baked
+into the image, not a volume, so nothing re-bundles.
