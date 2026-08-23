@@ -48,6 +48,15 @@ Full table in 90.11 §1b.
 - **Progressive disclosure**: orientation blocks orient; thresholds and
   mechanics belong where the reader acts on them.
 - **Callout rhythm**: no two adjacent same-form callouts.
+- ⚠️ **Measure the brick PER PARAGRAPH, not per run between headings
+  (2026-08-23).** An agent invented a stricter metric - words between structural
+  elements (heading, image, table, list) - and it reported 208-word "bricks" in
+  three posts whose longest ACTUAL paragraphs were 361, 427 and 485 chars, all
+  comfortably under the 700 line below. Prose was rewritten to satisfy an
+  instrument nobody had calibrated. Split on blank lines, take the longest
+  paragraph, compare to 700 chars. This is the second time a self-invented
+  measurement drove edits to correct work; the rule is the same as everywhere
+  else - calibrate the instrument before believing its verdict.
 - **No text bricks (Paul 2026-08-17; threshold calibrated 2026-08-17 after a
   course-wide audit)**: a brick is a paragraph over **~700 source chars**
   (~8+ rendered lines). An earlier ~400-char draft of this rule flagged ~300

@@ -210,8 +210,23 @@ Which instrument, by claim type:
   the PRIMARY source. Press coverage of a study is not the study; go to the
   publisher's own page and take the caveats along with the number.
 - **A body of sources you need to interrogate** → NotebookLM (`notebook_create`
-  → `source_add` → `notebook_query`; `research_start` → `research_status` →
-  **`research_import`** to find them first).
+  → `source_add` → `notebook_query`).
+- **A WIDE sweep of a topic you do not yet know the shape of** → NotebookLM deep
+  research: `research_start(mode="deep")` → `research_status` →
+  **`research_import(cited_only=True)`** → `notebook_query`. ~5 min, ~40 sources,
+  server-side. **FIRE IT FIRST and let it run while you do the web searches** -
+  in sequence it costs five minutes, in parallel it costs nothing. Without the
+  import step the sources never enter the notebook and `notebook_query` answers
+  from an empty notebook. Gate on `server_info`: `stale` = ask for `nlm login`,
+  `unverified` = the CHECK failed, not the credentials, so try the call anyway.
+  **The report is a lead, not a citation** - open the primary and quote there.
+- **A diagram or mind map from that same notebook** → `studio_create(artifact_type=
+  "infographic" | "mind_map" | "data_table" | "slide_deck")`, poll `studio_status`,
+  then `download_artifact`. Use `mind_map` before outlining to see how sources
+  actually cluster, and `data_table` to list every number the sources state so the
+  claim pass has a checklist. A generated infographic is a STRUCTURE draft only:
+  it does not use the house palette, and its numbers are generated, so they carry
+  the same verification burden as prose while looking like measurements.
 - **What practitioners actually argue** → the HN Algolia API, and read the
   thread, not the headline.
 

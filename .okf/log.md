@@ -3530,3 +3530,53 @@ synthesized; contrast walk 122 elements / 0 failures at 1440 and 390 (worst
 4.63:1), proven live by an injected 1.67:1 probe; all four buttons clear
 3:1 edge / 4.5:1 label; zero console messages, zero non-2xx, zero third-party
 hosts.
+
+## 2026-08-23 - Two true quotes can compose into a false claim
+
+A four-lens cold-eyes panel over four scheduled posts found three defects that
+change what a post asserts, plus a section-level rhythm defect. Concept touched:
+[fabrication-ratchet](/content/fabrication-ratchet.md), new section "Two true
+quotes can compose into a false claim".
+
+The headline finding is a new defect CLASS, not another instance of an old one.
+`dev-shop-ai-code-review-what-to-ask` compared Uber's 51% (human authors judging
+comments) with uReview's 65% (addressed comments) and concluded the machine
+wins. Both quotes verbatim, both figures real, and the comparison unsupported:
+the 65% is uReview re-running itself five times on the final commit, no person
+involved. Nothing is fabricated, so no ratchet can see it - the defect is in the
+join between two true sentences. The operational check is "were these produced
+by the same instrument?", asked whenever two figures appear in a comparison.
+
+Second-order lesson with teeth: **correcting the prose did not correct the
+claim.** The same comparison was drawn as `reviewers.svg`, which survived the
+sentence edit, stayed in the page bundle and stayed reachable at its own URL. A
+claim fix now includes grepping the bundle for a diagram carrying it. That file
+is deleted.
+
+Also caught: `+15%` two-week code churn attributed to a 2022 baseline when the
+source's "vs 2022 levels" governed the reuse signals and the chart was indexed
+to 2023; an ISSTA paper measuring SAST-alert triage cited as measuring
+AI-reviewer comment filtering; 22.25% quoted without its "on the OWASP
+Benchmark positives" scope; an Anthropic non-ranking ("not yet great at")
+promoted to a superlative ("the thing these systems are still worst at"); and
+an Anthropic/Cognition equivalence asserted as a restatement of Anthropic's,
+when their research subagents write no code and so have no writes to serialise.
+
+The voice half is why the panel is not optional. A single agent counted section
+closers: **20 of 26 end on a short declarative verdict generalising the evidence
+just given, 13 of those on an is/are copula**, plus ten sentences ranking the
+evidence for the reader before showing it (four literally "the third one is the
+important one"). That is measurable only across a set, which is exactly what
+per-post self-review and any regex cannot reach - and it is what Paul was
+reacting to when he called the batch AI slop.
+
+One panel claim was wrong and was caught by checking it: the ICP lens reported
+the hedge landing at ~80% in all four posts; measured body-line positions are
+75 / 79 / 64 / 15%. Brief-and-verify applies to reviewers too.
+
+Gates: hugo-build clean; test:critical 38 runs / 126 assertions / 0 failures;
+snap_diff 55 screenshots no failures; test:links 0 errors over 31,948 unique
+links - which covered NONE of the four posts, since all are future-dated and
+production skips future content. Their internal links were checked by hand.
+A green link run over a build that excludes the changed pages is vacuous
+evidence; say so rather than quoting the number.

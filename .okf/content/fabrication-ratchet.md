@@ -80,6 +80,35 @@ disagreement their job - and by the sourcing rules in
 [claims-canon](/content/claims-canon.md), especially **a replacement is a new
 claim**, which is the rule this gate's own creation violated.
 
+## Two true quotes can compose into a false claim (2026-08-23)
+
+The hardest defect a claim pass has found here was built entirely from
+verbatim quotes. `dev-shop-ai-code-review-what-to-ask` set Uber's "only 51% of
+human-written comments are considered as bugs by the author" against uReview
+getting "over 65% of its posted comments addressed", and concluded the machine
+reviewer beats the humans. Both quotes exact. Both figures real. **They are
+different instruments** - the 65% is Uber re-running uReview five times on the
+final commit and checking whether the comment still fires, with no person
+involved, while the 51% is a human author's verdict.
+
+Nothing in the sentence is fabricated and no ratchet can see it, because the
+defect lives in the JOIN, not in either half. So the check is not "is this
+quote real" but **"were these two numbers produced by the same instrument?"** -
+ask it every time a sentence puts two figures in a comparison, especially when
+one of them flatters the argument.
+
+**The prose fix is not the whole fix.** That comparison was also rendered as a
+bar chart. Deleting the sentence left `reviewers.svg` asserting it in a form
+nobody re-reads, still shipped in the page bundle and still reachable at its
+own URL. When a claim is corrected, grep the bundle for a diagram carrying it.
+
+Related instrument errors from the same pass, all invisible to shape-counting:
+a figure scoped "on the OWASP Benchmark positives" quoted as if it spanned the
+real-world dataset too; a paper measuring SAST-alert triage cited as if it
+measured AI-reviewer comment filtering; and `+15%` attached to "vs 2022 levels"
+when that clause governed the OTHER half of the source sentence and the chart
+was indexed to 2023.
+
 # Prioritise by impressions, never by indignation
 
 When clearing survivors, rank by live GSC impressions. The first sweep
