@@ -2,7 +2,11 @@
 title: "Stop Handing Out Tasks. Hand Out the Goal."
 description: "A task list caps the result at your own understanding of the problem. Here is the one clause we added to our reviewer instructions that turned approvals into findings."
 date: 2026-09-16
-draft: false
+# HELD 2026-08-23: the before/after prompt pair below describes a tenant-scoped
+# caching layer that does not exist in this repo, and "Try it on the next thing
+# you send" asserts it as a real instruction. Flip to false once the real pair
+# replaces it. See STATUS.md > Blocked on Paul.
+draft: true
 author: "Paul Keen"
 slug: delegate-the-goal-not-the-task
 keywords: 'delegation, engineering management, commander intent, ai agents delegation, briefing teams, outcome delegation'
