@@ -51,6 +51,28 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-24 - the uncited gate was truncating its input at the first `---` rule
+
+`MarketingCopyTest#uncited_posts` read post bodies as
+`split(/^---\s*$/m)[2]` - everything between the frontmatter close and the
+FIRST in-body horizontal rule. Posts keep their "Resources and Further
+Reading" links after such a rule, so the gate was blind to exactly the
+citations it exists to count. Reproduced by hand before believing the
+accusation either way: 58 posts were truncated; the true uncited count was
+**34, not 38** - 6 phantoms left the queue (solid-cache among them, which
+20.09 §13i had just put FIRST), and 2 genuinely-uncited posts entered it
+because the truncated word count had kept them under the 400-word floor.
+
+The instrument had already won a dispute it was wrong about: §13i recorded
+"a grep disagreed - the instrument wins", when the grep had the right answer.
+The rule stands whichever side the gate is on: reproduce the accusation by
+hand before believing it.
+
+Fixed in the same change: the extractor joins all post-frontmatter parts,
+the baseline was re-proven exact by fault injection (33 fails listing all
+34, 34 passes), and 20.09 §13h/§13i + STATUS were corrected. The repair
+queue's real top by clicks is propshaft (5), then crewai (0).
+
 ## 2026-08-22 - four cold-eyes reviewers found what a script had just passed
 
 Three posts shipped having passed every check their author could run, including

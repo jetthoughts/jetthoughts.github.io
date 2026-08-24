@@ -4,7 +4,7 @@ title: Test gates and when they block commits
 description: bin/qtest --changed is the routine gate; bin/rake test:critical at milestones; bin/test AND bin/dtest once at PR prep (or on explicit confirmation) for themes/, layouts/, or CSS changes.
 tags: [testing, visual-regression, gates]
 status: stable
-generated: { by: claude/opus-5, at: 2026-08-21T16:28:27Z }
+generated: { by: commandcode/2026-08-24, at: 2026-08-24T11:38:01Z }
 verified:
   - { by: claude/opus-5, at: 2026-08-21T09:59:40Z }
   - { by: claude/opus-5, at: 2026-08-21T07:42:17Z }
@@ -712,6 +712,19 @@ gone rather than patched a fifth time: reading the block has none of those holes
 - Running a suite with multiple files - `ruby a_test.rb b_test.rb` - silently
   executes only the FIRST file. A guard test covers this (2026-07-31, R3-1);
   use rake tasks or `-n` filters, never a multi-file ruby invocation.
+- **A source-reading gate that skips frontmatter with `split[2]` truncates at
+  the first in-body `---` rule** (2026-08-24). `uncited_posts` read
+  `split(/^---\s*$/m)[2]` - everything up to the FIRST in-body horizontal
+  rule, not everything after the frontmatter. 58 posts were truncated;
+  citations living in "Resources and Further Reading" sections (which sit
+  after a `---`) were invisible, so 6 cited posts sat in the uncited queue as
+  phantoms - one of them ranked FIRST in 20.09 §13i's repair order - while 2
+  genuinely-uncited posts hid under the under-counted word floor. The fix is
+  `parts[2..].to_a.join("\n")`. The general rule: any "skip the frontmatter"
+  idiom gets fault-injected with a fixture that HAS content after an in-body
+  `---`, in both directions (cited-after-rule must pass, linkless must fail).
+  And when a gate's count disagrees with a hand grep, reproduce both by hand
+  before picking a winner - §13i picked the gate, and the gate was wrong.
 
 # What `okf_validate` actually guards
 
