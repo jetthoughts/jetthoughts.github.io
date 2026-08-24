@@ -231,8 +231,11 @@ Use Puma when your app blocks - shell-outs, C extensions without GVL release, sy
 The fork in the road is one command. Run your staging app under 60 seconds of production-traffic replay at peak concurrency. If Falcon's P95 latency beats Puma's by more than 30%, migrate. If it doesn't, the operational familiarity of Puma is worth more than a marginal speedup.
 ## Sources
 
-- [Falcon gem repository](https://github.com/socketry/falcon). README, configuration, and Rack integration.
+- [Falcon gem repository](https://github.com/socketry/falcon). README, configuration, Rack integration, and the in-tree benchmark suite.
+- [HttpArena: rack-falcon benchmark](https://www.http-arena.com/frameworks/rack-falcon/). Independent throughput, latency, CPU and memory data across 6 runs — Falcon vs Puma vs Pitchfork.
+- [DeployHQ: Ruby Application Servers in 2026](https://www.deployhq.com/blog/ruby-application-servers-in-2025-a-complete-performance-and-architecture-guide). Practical comparison of Passenger, Puma, Falcon, iodine, and Pitchfork with production-oriented benchmarks.
 - [Falcon — Getting Started](https://socketry.github.io/falcon/). Official documentation: architecture, deployment, tuning.
+- Manu Janardhanan, [Understanding Ruby Web Server Internals: Puma, Falcon, and Pitchfork Compared](https://www.youtube.com/watch?v=kAW5O2dkSU8) (RailsConf 2025). Deep dive into the async model difference.
 - Rails Guides, [Threading and Code Execution](https://guides.rubyonrails.org/threading_and_code_execution.html). Autoloading and concurrency in Rails — relevant for Falcon's async model.
 
 

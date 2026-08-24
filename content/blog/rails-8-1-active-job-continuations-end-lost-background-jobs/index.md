@@ -221,5 +221,6 @@ We audit shutdown signal handling, queue isolation, and resume safety on product
 - [Rails 8.1 Release Announcement - rubyonrails.org](https://rubyonrails.org/2025/10/22/rails-8-1)
 - [ActiveJob::Continuation API Reference - api.rubyonrails.org](https://api.rubyonrails.org/classes/ActiveJob/Continuation.html)
 - [Rails 8.1 Release Notes - guides.rubyonrails.org](https://guides.rubyonrails.org/8_1_release_notes.html)
-- [Active Job Continuations: The end of lost jobs - MarsBased](https://marsbased.com/blog/2025/10/15/active-job-continuations-the-end-of-lost-jobs)
-- [Rails 8.1 Job Continuations Could Save You Dollars in Server Costs - DEV](https://dev.to/raisa_kanagaraj/rails-81s-job-continuations-could-save-you-dollars-in-server-costs-122c)
+- [This Week in Rails: Active Job Continuations merged](https://world.hey.com/this.week.in.rails/active-job-continuations-and-more-f704355f) (May 2025). The merge notice linking to the commits and PRs that landed the feature.
+- Donal McBreen, [Resumable Jobs with Active Job Continuations](https://www.youtube.com/watch?v=xbyRJtWbWyM) (Rails World 2025). The feature author walks through the design: checkpointing, resumption, and failure semantics.
+- [Active Job Continuations: The end of lost jobs - MarsBased](https://marsbased.com/blog/2025/10/15/active-job-continuations-the-end-of-lost-jobs). Practitioner migration walkthrough with before/after code.

@@ -122,10 +122,13 @@ If you want a second pair of eyes on a Rails app whose response times stopped ma
 
 ## Sources
 
-- [Ruby 4.0.0 release notes](https://www.ruby-lang.org/en/news/2025/12/25/ruby-4-0-0-released/) - the primary source for what changed
-- [ZJIT launch post on Rails at Scale](https://railsatscale.com/2025-12-24-launch-zjit/) - architecture and roadmap from the team building it
-- [speed.ruby-lang.org](https://speed.ruby-lang.org/) - continuously updated JIT benchmarks
-- [Official YJIT documentation](https://github.com/ruby/ruby/blob/master/doc/jit/yjit.md) - every flag and counter referenced above
-- [Rails 7.2 release announcement](https://rubyonrails.org/2024/8/10/Rails-7-2-0-has-been-released) - the change that made YJIT a default
+- Shopify Engineering, [Ruby 3.2's YJIT is Production-Ready](https://shopify.engineering/ruby-yjit-is-production-ready) (January 2023). 38% speedup on railsbench over the interpreter; YJIT 57% faster than Ruby 3.1.3.
+- [Rails at Scale: Ruby 3.3's YJIT Runs Shopify's Production Code 15% Faster](https://railsatscale.com/2023-09-18-ruby-3-3-s-yjit-runs-shopify-s-production-code-15-faster/) (September 2023). Production measurement: 15.8–19.6% speedup on Storefront Renderer at Shopify scale.
+- Shopify, [yjit-metrics](https://github.com/Shopify/yjit-metrics). Continuously updated YJIT speedups — the raw data behind every benchmark in this post.
+- [speed.ruby-lang.org](https://speed.ruby-lang.org/). Live dashboard: YJIT vs. interpreter across microbenchmarks, Railsbench, and yjit-bench.
+- [ZJIT launch post on Rails at Scale](https://railsatscale.com/2025-12-24-launch-zjit/). Architecture and roadmap from the team building Ruby 4.0's successor JIT.
+- [Ruby 4.0.0 release notes](https://www.ruby-lang.org/en/news/2025/12/25/ruby-4-0-0-released/) — primary source for what changed.
+- [Official YJIT documentation](https://github.com/ruby/ruby/blob/master/doc/jit/yjit.md) — every flag, counter, and `--yjit-stats` field referenced above.
+- [Rails 7.2 release announcement](https://rubyonrails.org/2024/8/10/Rails-7-2-0-has-been-released) — the release that made YJIT the default JIT for new Rails apps.
 
 <!-- Reference cadence: thoughtbot -->
