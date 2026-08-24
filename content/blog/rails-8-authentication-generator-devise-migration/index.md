@@ -1354,6 +1354,14 @@ The honest test: count how many Devise modules your User model actually declares
 If you're starting fresh on Rails 8, skip Devise entirely. Run `rails generate authentication` and build only what you need.
 
 If you're migrating, start with Phase 1: audit your Devise usage and map it to Rails 8 equivalents. The password hashes are compatible -- that's the hardest part already solved. Run dual auth in production for at least two weeks before cutting over.
+## Sources
+
+- Rails Guides, [Securing Rails Applications — Authentication](https://guides.rubyonrails.org/security.html). The `has_secure_password` and authentication generator documentation, starting with Rails 8.0.
+- [Ruby on Rails 8.0 Release Notes — Authentication Generator](https://guides.rubyonrails.org/8_0_release_notes.html#authentication-generator). The PR that shipped the generator with `bin/rails generate authentication`.
+- [Devise gem repository](https://github.com/heartcombo/devise). The authentication library Rails 8's generator replaces — useful for understanding what the migration leaves behind.
+- Rails Guides, [Active Record Validations](https://guides.rubyonrails.org/active_record_validations.html). Uniqueness, presence, and format validations the generator wires by default.
+- [BCrypt gem](https://github.com/bcrypt-ruby/bcrypt-ruby). The password hashing library underlying both Devise and the Rails 8 generator.
+- Saeloun Blog, [Rails 8 adds built in authentication generator](https://blog.saeloun.com/2025/05/12/rails-8-adds-built-in-authentication-generator/) (May 2025). Walkthrough of the generator's output and what it does not include (registration, email verification).
 
 For related reading: our [Argon2 migration guide](/blog/rails-argon2-has-secure-password-migration-guide/) covers upgrading password hashing beyond BCrypt.
 

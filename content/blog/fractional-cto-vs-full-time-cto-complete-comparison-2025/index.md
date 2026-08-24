@@ -551,6 +551,11 @@ Ready to explore fractional CTO services for your company? [Contact JetThoughts]
 ---
 
 ## Additional Resources
+## Sources
+
+- CB Insights, [The Top 12 Reasons Startups Fail](https://www.cbinsights.com/research/startup-failure-reasons-top/). Annual analysis of startup failure causes.
+- David Skok, [For Entrepreneurs — SaaS Metrics](https://www.forentrepreneurs.com/saas-metrics-2/). The canonical reference for unit economics underlying CTO staffing decisions.
+
 
 - [Fractional CTO Services at JetThoughts](https://jetthoughts.com/services/fractional-cto/)
 - [Complete Guide to Hiring Technical Leadership](https://jetthoughts.com/blog/)

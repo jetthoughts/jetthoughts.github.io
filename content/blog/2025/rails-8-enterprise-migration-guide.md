@@ -744,5 +744,11 @@ Rails 8.0 represents a significant evolution in Rails development, offering ente
 The key to successful Rails 8 migration lies in thorough preparation, gradual implementation, and comprehensive testing. Take the time to understand each new feature's implications for your specific use case, and don't hesitate to maintain hybrid approaches during the transition period.
 
 Enterprise Rails 8 migrations require deep expertise in both legacy system management and modern Rails architecture. Our [expert Ruby on Rails development team](/services/app-web-development/) has successfully guided numerous enterprise migrations, helping companies navigate complex technical decisions while minimizing business disruption and ensuring optimal performance outcomes.
+## Sources
+
+- [Ruby on Rails 8.0 Release Notes](https://guides.rubyonrails.org/8_0_release_notes.html). The full changelog for the version this guide targets.
+- Rails Guides, [Upgrading Ruby on Rails](https://guides.rubyonrails.org/upgrading_ruby_on_rails.html). The canonical upgrade guide with `app:update` task.
+- [Ruby on Rails Discussion forum](https://discuss.rubyonrails.org/). Community knowledge base for version-specific migration issues.
+
 
 Remember: every successful enterprise migration is unique. Use this guide as a foundation, but adapt the approach to your specific requirements, constraints, and organizational capabilities.

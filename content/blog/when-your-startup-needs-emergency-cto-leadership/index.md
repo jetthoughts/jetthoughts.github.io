@@ -239,6 +239,11 @@ The companies that call me at midnight aren't broken. They're just stuck. With t
 - **Technical debt management practices** with regular audits and refactoring schedules
 - **Continuous improvement culture** that proactively identifies and addresses issues
 - **Knowledge transfer** to internal team members for ongoing leadership
+## Sources
+
+- CB Insights, [The Top 12 Reasons Startups Fail](https://www.cbinsights.com/research/startup-failure-reasons-top/). Annual analysis of startup failure causes — product and technology problems feature prominently.
+- David Skok, [For Entrepreneurs — SaaS Metrics](https://www.forentrepreneurs.com/saas-metrics-2/). The framework for measuring what an emergency CTO would need to fix.
+
 
 ---
 

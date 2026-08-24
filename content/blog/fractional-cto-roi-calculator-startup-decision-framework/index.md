@@ -1518,6 +1518,11 @@ JetThoughts provides fractional CTO services to startups from pre-seed to Series
 - Review your technical risk profile
 - Discuss engagement options and pricing
 - Get honest assessment of fractional vs full-time fit
+## Sources
+
+- CB Insights, [The Top 12 Reasons Startups Fail](https://www.cbinsights.com/research/startup-failure-reasons-top/). Annual analysis of startup failure causes — technical leadership gaps rank in the top tier.
+- David Skok, [For Entrepreneurs — SaaS Metrics](https://www.forentrepreneurs.com/saas-metrics-2/). Definitive reference for LTV, CAC, churn, and unit economics — the numbers that drive fractional-vs-full-time decisions.
+
 
 ---
 

@@ -284,5 +284,10 @@ The biggest barriers include perfectionism (fear of shipping 'imperfect' code), 
 Developer mindset dramatically affects team dynamics and project outcomes. Growth-minded developers collaborate better, adapt to changing requirements more easily, take ownership of problems, and contribute to psychological safety. Teams with positive developer mindsets deliver 40% faster and have 65% lower turnover rates according to our analysis of engineering teams.
 
 ### Can developer mindset be taught, or is it an inherent trait?
+## Sources
+
+- Carol Dweck, [Mindset: The New Psychology of Success](https://www.amazon.com/Mindset-Psychology-Carol-S-Dweck/dp/0345472322). The foundational research on fixed vs. growth mindset — the framework this post applies to software careers.
+- Angela Duckworth, [Grit: The Power of Passion and Perseverance](https://angeladuckworth.com/grit-book/). Research on how sustained effort and interest predict long-term success across domains.
+
 
 Developer mindset is absolutely learnable and can be developed at any career stage. Research shows that understanding how mindsets work, practicing new thought patterns, getting feedback on behavior changes, and working in environments that reward learning over knowing can transform mindset. The key is consistent practice and environmental support.

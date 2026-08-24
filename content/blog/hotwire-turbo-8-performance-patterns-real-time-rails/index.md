@@ -1329,4 +1329,12 @@ Mastering Turbo 8 performance patterns transforms Rails applications into respon
 
 Start with Turbo's core components (Drive, Frames, Streams, Morphing), add the patterns that match your bottlenecks (debounced broadcasts, batch updates, lazy loading), set up monitoring (APM, RUM, load testing), and iterate based on real user metrics.
 
+## Sources
+
+- [Hotwire Turbo Handbook](https://turbo.hotwired.dev/handbook/drive). Official docs for Turbo Drive, Frames, Streams, and morphing page refreshes.
+- [turbo-rails gem repository](https://github.com/hotwired/turbo-rails). The Ruby gem integrating Turbo with Rails — helpers, broadcasts, and configuration.
+- 37signals, [A happier happy path in Turbo with morphing](https://dev.37signals.com/a-happier-happy-path-in-turbo-with-morphing/) (October 2023). The design rationale for Turbo 8 morphing, from the team that builds it.
+- [Stimulus Reference](https://stimulus.hotwired.dev/reference/controllers). Controllers, actions, targets, and values — the companion library for Turbo's server-rendered approach.
+- Rails Guides, [Working with JavaScript in Rails](https://guides.rubyonrails.org/working_with_javascript_in_rails.html). Import maps, Turbo, Stimulus, and how they fit together in a Rails 8 application.
+
 For teams building real-time Rails applications, our [development team](/services/app-web-development/) provides Turbo performance optimization from architecture through production monitoring.

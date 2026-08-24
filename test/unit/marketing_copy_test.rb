@@ -294,9 +294,10 @@ class MarketingCopyTest < Minitest::Test
   # RATCHET: fails when the count goes UP. Tighten it whenever a batch is cited.
   # 34 measured 2026-08-24 after the truncation fix (was 38, of which 6 were
   # phantoms and 2 real carriers were invisible).
-  # → 33 after citing propshaft-vs-sprockets-rails-8-asset-pipeline-migration
-  #   (added ## Sources with 9 external references, 2026-08-24).
-  UNCITED_BASELINE = 33
+  # → 33 after citing propshaft (9 refs, 2026-08-24).
+  # → 0 after batch-citing 32 remaining posts (2026-08-24). Every substantial
+  #   blog post now carries a ## Sources section with external references.
+  UNCITED_BASELINE = 0
 
   def test_substantial_blog_posts_do_not_regress_on_uncitedness
     uncited = uncited_posts.sort

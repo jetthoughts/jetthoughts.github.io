@@ -1126,6 +1126,11 @@ JetThoughts performs code quality assessments for startups, helping non-technica
 - CTO coaching on sustainable development practices
 
 [**Schedule a code quality assessment**](/contact-us) to understand your technical risk before it becomes a $260K problem.
+## Sources
+
+- Capers Jones, [Applied Software Measurement](https://www.amazon.com/Applied-Software-Measurement-Global-Productivity/dp/0071482448). Canonical reference on defect density, technical debt measurement, and software cost estimation.
+- Adam Tornhill, [Your Code as a Crime Scene](https://pragprog.com/titles/atcrime2/your-code-as-a-crime-scene-second-edition/). Using version control data to identify hotspots and measure code health — accessible to non-engineers.
+
 
 ---
 

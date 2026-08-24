@@ -1305,6 +1305,11 @@ If you've identified wasteful infrastructure spending and want expert guidance o
 - "Finally understand what we're paying for and why" - Mobile app, $50K MRR
 
 [**Book your infrastructure audit**](/contact-us) or [**explore our Fractional CTO services**](/services/fractional-cto) for ongoing guidance.
+## Sources
+
+- AWS, [AWS Pricing Calculator](https://calculator.aws/). Tool for estimating cloud infrastructure costs.
+- David Heinemeier Hansson, [We have left the cloud](https://world.hey.com/dhh/we-have-left-the-cloud-251760fb). 37signals' analysis of cloud vs. on-premise costs that sparked broad re-evaluation of infrastructure spending.
+
 
 ---
 

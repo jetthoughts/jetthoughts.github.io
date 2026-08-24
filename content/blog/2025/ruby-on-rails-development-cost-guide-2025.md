@@ -351,6 +351,11 @@ The Rails ecosystem offers incredible value when approached strategically. Wheth
 [Get your free Rails project estimate today →](/contact-us)
 
 *Want more insights on Rails development? Subscribe to our newsletter for weekly tips on building better Rails applications faster and more cost-effectively.*
+## Sources
+
+- Clutch, [App Development Cost Guide](https://clutch.co/developers/resources/cost-build-mobile-app) (updated 2025). Third-party benchmark for market-rate development costs.
+- Indeed / Glassdoor, [Rails Developer Salary Data](https://www.glassdoor.com/Salaries/ruby-on-rails-developer-salary-SRCH_KO0,24.htm). US-based salary benchmarks informing contract-to-hire cost conversions.
+
 
 ---
 

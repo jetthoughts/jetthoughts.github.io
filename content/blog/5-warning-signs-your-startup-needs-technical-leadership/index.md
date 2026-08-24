@@ -247,5 +247,10 @@ Most startups need technical leadership when they reach 5-10 developers, are han
 Addressing warning signs early typically costs 10-20% of development velocity temporarily. Waiting for a crisis can cost 50-80% of development velocity for 3-6 months, plus the risk of losing key team members, missing funding deadlines, or losing customers. Early intervention through fractional CTO services costs significantly less than emergency crisis management.
 
 ### Can these warning signs be addressed without hiring a full-time CTO?
+## Sources
+
+- CB Insights, [The Top 12 Reasons Startups Fail](https://www.cbinsights.com/research/startup-failure-reasons-top/). Annual analysis — technical and team problems drive a large share of failures.
+- Steve Blank, [The Four Steps to the Epiphany](https://www.amazon.com/Four-Steps-Epiphany-Steve-Blank/dp/0989200507). The customer development methodology that many startups lack the technical leadership to execute.
+
 
 Yes, many of these warning signs can be effectively addressed through fractional CTO services, technical mentorship for existing team leads, or bringing in senior technical consultants for specific initiatives. The key is getting experienced technical leadership involved before problems compound into full crises.

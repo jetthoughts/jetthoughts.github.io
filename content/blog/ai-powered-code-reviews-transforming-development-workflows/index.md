@@ -148,6 +148,11 @@ AI-powered code reviews represent a fundamental shift in how we ensure code qual
 Teams that embrace this technology thoughtfully are seeing dramatic improvements in both velocity and quality. The key is starting small, measuring results, and gradually expanding AI's role as your team builds confidence.
 
 Ready to transform your code review process? Start with a pilot project, measure the results, and iterate. The future of development is collaborative—between humans and AI.
+## Sources
+
+- GitHub Blog, [How AI is transforming code review at GitHub](https://github.blog/ai-and-ml/github-copilot/how-ai-is-transforming-code-review-at-github/). GitHub's own data on Copilot code review adoption and impact.
+- C. Bird et al., [Expectations, Outcomes, and Challenges of Modern Code Review](https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/), IEEE Software (2016). Foundational paper on what code review actually catches — the baseline AI tools are measured against.
+
 
 ---
 

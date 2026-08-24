@@ -543,6 +543,13 @@ agent = Agent(
 Multi-agent systems are a shift from single-model applications to coordinated AI teams. CrewAI makes that orchestration cheap to build: define roles, hand off context between tasks, pick the cheapest model that does each job, and instrument every external call. As LLMs get more capable, the bottleneck moves from model intelligence to coordination - and that's exactly what CrewAI handles.
 
 ## Need help shipping production agents?
+## Sources
+
+- [CrewAI Documentation](https://docs.crewai.com/). Official docs: agents, tasks, crews, tools, memory, knowledge, and guardrails.
+- [crewAIInc/crewAI GitHub repository](https://github.com/crewaiinc/crewai). Source, changelog, and issues for the framework — the v0.98+ patterns referenced in this post.
+- [crewAIInc/crewAI-examples](https://github.com/crewAIInc/crewAI-examples). End-to-end example projects: customer support, content pipelines, financial analysis.
+- Mert Cemri et al., [Why Do Multi-Agent LLM Systems Fail?](https://arxiv.org/abs/2503.13657), arXiv 2503.13657 (NeurIPS 2025). Systematic analysis of multi-agent failure modes — context needed when evaluating whether CrewAI fits a given problem.
+- Anthropic, [How we built our multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system). Real-world tradeoffs of manager-worker architectures at scale.
 
 We help startups build agent systems that survive production traffic - from prototype crews to FastAPI deployments with cost monitoring and rate limits. If you're stuck on a multi-agent prototype that won't scale, talk to us.
 
