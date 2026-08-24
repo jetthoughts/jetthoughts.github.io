@@ -32,7 +32,8 @@ course is patient and second-person with first-mention glossing (this concept);
 LinkedIn is first-person and committed - Register B, hammering one idea. What
 never varies: the banned words, the banned structural patterns, the
 who/show/practitioner tests, and sourced numbers
-([claims canon](claims-canon.md)). A shorter register is not a licence to slop.
+([claims canon](claims-canon.md) — including the citation-quality tier:
+best source per claim, not just any link that matches). A shorter register is not a licence to slop.
 Full table in 90.11 §1b.
 
 # Core rules

@@ -118,6 +118,32 @@ the mechanical gate does and does not cover.
 profile linked beats "4.8/5 by 32 clients" unlinked. The link is the proof, and
 it cannot go stale the way a transcribed count does.
 
+**Prefer the BEST source, not just the first one that verifies the claim
+(Paul, 2026-08-24).** A blog post's `## Sources` block exists for two distinct
+reasons, and they pull in opposite directions:
+
+1. **Anti-fabrication tripwire** — the uncited ratchet is a cheap, machine-checkable
+   proxy for "this claim rests on something external, not something hallucinated."
+   A link to the official docs satisfies this job. It is necessary but not
+   sufficient for reader value.
+2. **Reader value** — the reader came for your synthesis *above* the source, not
+   a restatement of it. A citation to the Rails guides for "Rails 8 ships with
+   Solid Queue" earns nothing — the reader already knows the gem exists or can
+   Google it in five seconds. What earns its place: primary research, a
+   benchmark with its denominator, the original GitHub issue thread, a
+   practitioner's production measurement, a study fetched at the publisher's own
+   page, or our own measured number with its methodology.
+
+The test: **could the reader have found this source in five seconds of
+Googling?** If yes, it is verification, not value — keep it if the ratchet
+requires it, but do not mistake it for the job being done. The real bar is
+"this is the BEST source for this claim, and the best source is one the reader
+would not have found on their own."
+
+A mechanical gate can only measure the first job (external links exist). The
+second job is a judgment call for the cold-eyes review panel — see
+`docs/workflows/blog-pipeline.md` STEP 5c Check 10.
+
 **"32 clients" is ambiguous - do not treat the two meanings as one.** As a
 *review* count it is false. As *total clients served* it appears in the 2607
 referral and assumptions docs and is plausible for an 18-year-old firm, though it
