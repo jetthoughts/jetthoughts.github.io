@@ -1271,6 +1271,11 @@ And you'll sleep better at night knowing the answer.
 ---
 
 **Need Help Implementing This?**
+## Sources
+
+- GitLab, [The Remote Work Report](https://about.gitlab.com/remote-work-report/). Annual survey data on remote work practices, productivity, and challenges.
+- Basecamp, [REMOTE: Office Not Required](https://basecamp.com/books/remote). Foundational book on distributed work practices from one of the longest-running remote companies in software.
+
 
 JetThoughts has supported non-technical founders through similar engagements. We provide:
 - Team assessment (are they actually productive?)

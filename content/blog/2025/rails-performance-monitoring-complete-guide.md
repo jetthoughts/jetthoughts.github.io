@@ -748,6 +748,13 @@ Effective Rails performance monitoring requires a combination of the right tools
 Need expert help implementing comprehensive Rails performance monitoring for your production application? Our [experienced Rails development team](/services/app-web-development/) has successfully implemented APM solutions, custom instrumentation, and performance optimization strategies for applications handling millions of requests daily, ensuring optimal user experience and system reliability.
 
 Remember, performance monitoring is not a one-time setup but an ongoing process that evolves with your application. The investment in proper monitoring pays dividends in user satisfaction, system reliability, and development productivity.
+## Sources
+
+- Rails Guides, [Caching with Rails](https://guides.rubyonrails.org/caching_with_rails.html). Fragment, Russian doll, and low-level caching.
+- Nate Berkopec, [The Complete Guide to Rails Performance](https://www.railsspeed.com/). Canonical book on Rails performance profiling and optimization.
+- [rack-mini-profiler](https://github.com/MiniProfiler/rack-mini-profiler). Middleware for per-request profiling in development and production.
+- [derailed_benchmarks](https://github.com/zombocom/derailed_benchmarks). Rails-specific memory and performance benchmarks.
+
 
 ---
 

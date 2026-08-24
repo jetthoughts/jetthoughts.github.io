@@ -729,6 +729,10 @@ Ready to explore cost-effective fractional CTO services? [Contact JetThoughts](h
 ---
 
 ## Additional Resources
+## Sources
+
+- CB Insights, [The Top 12 Reasons Startups Fail](https://www.cbinsights.com/research/startup-failure-reasons-top/). Annual analysis of startup failure causes — technical leadership gaps rank in the top tier.
+
 
 - [Fractional CTO Cost Calculator Tool](https://jetthoughts.com/services/fractional-cto-cost/)
 - [Complete CTO Investment Decision Guide](https://jetthoughts.com/blog/fractional-cto-vs-full-time-cto-complete-comparison-2025/)

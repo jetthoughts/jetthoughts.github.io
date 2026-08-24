@@ -495,6 +495,13 @@ Solid Queue represents more than just a technical upgrade—it's a fundamental s
 The migration from DelayedJob to Solid Queue isn't just about better performance metrics. It's about building a more resilient, scalable foundation for your application's async processing needs. After seeing 3x performance improvements and 78% reduction in database load across our production applications, we can't imagine going back.
 
 Ready to make the switch? Start with a small, non-critical application to build confidence with the migration process. The investment in migration pays dividends in reduced operational overhead and improved application performance.
+## Sources
+
+- [Solid Queue gem repository](https://github.com/rails/solid_queue). README, configuration, and migration notes.
+- [Ruby on Rails 8.0 Release Notes](https://guides.rubyonrails.org/8_0_release_notes.html). Solid Queue as default Active Job backend.
+- [DelayedJob gem repository](https://github.com/collectiveidea/delayed_job). The background job library Solid Queue replaces.
+- Rails Guides, [Active Job Basics](https://guides.rubyonrails.org/active_job_basics.html).
+
 
 ---
 

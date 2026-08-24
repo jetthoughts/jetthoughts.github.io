@@ -269,6 +269,13 @@ Consider professional assistance when:
 - Scaling strategy and execution
 
 Contact us for a free consultation: [Schedule Now](/free-consultation/)
+## Sources
+
+- Rails Guides, [Caching with Rails](https://guides.rubyonrails.org/caching_with_rails.html). Fragment, Russian doll, and low-level caching.
+- Rails Guides, [Active Record Query Interface](https://guides.rubyonrails.org/active_record_querying.html). N+1 detection, eager loading, and batch queries.
+- Nate Berkopec, [The Complete Guide to Rails Performance](https://www.railsspeed.com/). Canonical book covering database optimization, caching, background jobs, and memory profiling for Rails at scale.
+- [rack-mini-profiler](https://github.com/MiniProfiler/rack-mini-profiler). Per-request profiling for finding bottlenecks in development and production.
+
 
 ---
 

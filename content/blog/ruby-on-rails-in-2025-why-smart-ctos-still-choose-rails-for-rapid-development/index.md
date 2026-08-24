@@ -494,6 +494,12 @@ Rails isn't the right choice for every project, but it remains an excellent choi
 As we look toward the future, Rails continues adapting to modern development needs while maintaining the philosophy that made it revolutionary: developer happiness through intelligent conventions. For teams that value shipping over complexity, Rails in 2025 offers a compelling path forward.
 
 The smart CTOs choosing Rails aren't living in the past—they're making pragmatic decisions based on business realities. In a world obsessed with the latest frameworks and architectural patterns, Rails provides something increasingly rare: a stable, productive foundation for building successful businesses.
+## Sources
+
+- [Ruby on Rails Doctrine](https://rubyonrails.org/doctrine). The design philosophy behind Rails: Convention over Configuration, DRY, The Menu is Omakase.
+- David Heinemeier Hansson, [Rails 8: The Demo](https://www.youtube.com/watch?v=xhXBZ4Nv9_Y) (Rails World 2024). The Rails 8 keynote covering Propshaft, Solid Trifecta, and the Kamal deployment story.
+- [GitHub Octoverse Report](https://octoverse.github.com/). Programming language rankings and community growth data.
+
 
 ---
 

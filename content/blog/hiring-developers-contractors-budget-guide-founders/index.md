@@ -1849,6 +1849,11 @@ JetThoughts has helped dozens of non-technical founders navigate the "full-time 
 - Realistic cost and timeline expectations
 
 Or **[explore our Fractional CTO services](/services/fractional-cto)** if you need deliberate technical guidance while building your offshore or contractor team.
+## Sources
+
+- Glassdoor, [Software Developer Salary Data](https://www.glassdoor.com/Salaries/software-developer-salary-SRCH_KO0,20.htm). US-based full-time salary benchmarks used to calibrate contractor rate comparisons.
+- Upwork, [Hourly Rates for Developers](https://www.upwork.com/hire/developers/cost/). Freelance marketplace rate data by skill and region.
+
 
 ---
 

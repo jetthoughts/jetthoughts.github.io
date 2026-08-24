@@ -55,6 +55,11 @@ Firing the agency is the easy part. Rebuilding is harder, and founders who rush 
 Start with an honest assessment of what you have. Our field guide for [fixing slow engineering teams](/blog/fixing-slow-engineering-teams-an-extended/) covers how to diagnose whether the problem is the code, the team, the process, or all three. For founders who need technical leadership but cannot afford a full-time CTO, a [fractional CTO engagement](/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/) can bridge the gap - we documented what the first two weeks actually look like so you know what to expect.
 
 One more thing to watch for during recovery: the temptation to outsource again on the same terms. We broke down exactly how that trap works in [The Outsourcing Trap: Why Your Product Deserves Better](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/). The pattern is predictable: a lower cost gets you less control, and the same outcome lands in month four. The founders who break the cycle invest in visibility and technical oversight from day one.
+## Sources
+
+- Clutch, [App Development Cost Guide](https://clutch.co/developers/resources/cost-build-mobile-app). Third-party benchmarks for dev shop rates, retainers, and project scope pricing.
+- Clutch, [Top Software Developers](https://clutch.co/developers). Directory and reviews of development firms — what to look for when hiring.
+
 
 ## Get a Free Code Audit
 

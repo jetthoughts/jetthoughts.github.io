@@ -1408,6 +1408,14 @@ For more on building production-ready LLM applications, check out our guides on 
 
 **Ready to optimize your LLM costs? [Download our Cost Optimization Calculator](#calculator) to estimate your potential savings.**
 
+## Sources
+
+- OpenAI, [tiktoken](https://github.com/openai/tiktoken). The BPE tokenizer for OpenAI models — fast local token counting before API calls.
+- [OpenAI API Pricing](https://platform.openai.com/docs/pricing). Per-model token rates, batch API discounts, and cached pricing.
+- Anthropic, [Claude API Pricing](https://platform.claude.com/docs/en/about-claude/pricing). Per-model pricing, prompt caching, and batch processing discounts.
+- Anthropic, [Prompt Caching Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching). How to cache long prompts across calls — the highest-leverage cost optimization for multi-turn applications.
+- [LiteLLM](https://github.com/BerriAI/litellm). Unified interface across 100+ LLM providers with built-in cost tracking and budget controls.
+
 ---
 
 *Have questions about implementing these optimization strategies? [Contact our team](https://jetthoughts.com/contact-us) for a free cost optimization consultation.*

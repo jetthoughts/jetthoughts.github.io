@@ -936,5 +936,11 @@ Key takeaways:
 - Consider the debugging complexity when designing concurrent systems
 
 The Ruby ecosystem continues to evolve, with improvements in each concurrency mechanism. Stay updated with the latest Ruby releases and community best practices to make the most of these powerful concurrency tools.
+## Sources
+
+- Ilya Grigorik, [Working with Ruby Threads](https://workingwithrubythreads.com/). The canonical guide to Ruby threading, GVL behaviour, and thread safety.
+- Samuel Williams, [Fibers and the Async Ecosystem](https://socketry.github.io/). Fibers as the foundation for async Ruby — Falcon, async-http, async-container.
+- Ruby documentation, [Thread](https://docs.ruby-lang.org/en/master/Thread.html) and [Fiber](https://docs.ruby-lang.org/en/master/Fiber.html) classes.
+
 
 Looking to implement high-performance concurrent Ruby applications for your business? Our [experienced Ruby on Rails development team](/services/app-web-development/) has architected and optimized concurrent systems handling millions of operations daily, from background job processing to real-time web applications. We specialize in choosing the right concurrency patterns and ensuring your applications scale efficiently.

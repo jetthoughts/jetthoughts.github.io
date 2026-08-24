@@ -1708,6 +1708,12 @@ Migrating enterprise Django applications from 4.2 to 5.0 represents a significan
 Start with detailed pre-migration assessment, follow the phase-by-phase migration strategy, implement robust testing protocols, and deploy using blue-green methodology with gradual traffic shifting. Real-world migrations demonstrate that teams investing in proper preparation achieve smooth transitions with substantial performance and maintainability improvements.
 
 The investment in Django 5.0 migration pays dividends through faster application performance, reduced infrastructure costs, improved developer productivity, and enhanced security posture. Enterprise teams benefit from simplified async programming, optimized database queries, and modern Python type hints that improve code quality and reduce bugs.
+## Sources
+
+- Django Project, [Django 5.0 Release Notes](https://docs.djangoproject.com/en/5.0/releases/5.0/). Official changelog.
+- [Django documentation](https://docs.djangoproject.com/en/stable/). Canonical reference for models, views, templates, and deployment.
+- Django Project, [How to upgrade Django to a newer version](https://docs.djangoproject.com/en/stable/howto/upgrade-version/). Official upgrade checklist.
+
 
 For organizations undertaking complex Django migrations or requiring expert guidance through enterprise deployment strategies, our [expert Python and Django development team](/services/app-web-development/) provides comprehensive migration support, performance optimization, security auditing, and production deployment assistance, ensuring successful outcomes while maintaining business continuity and data integrity.
 

@@ -1999,6 +1999,13 @@ Automated testing workflows require careful architecture, team change management
 
 📧 **Email**: [hello@jetthoughts.com](mailto:hello@jetthoughts.com)
 🗓️ **Schedule**: Book consultation
+## Sources
+
+- Rails Guides, [Testing Rails Applications](https://guides.rubyonrails.org/testing.html). System tests, integration tests, and fixtures.
+- [Minitest](https://github.com/minitest/minitest). The default Rails test framework — assertions, mocking, benchmarking.
+- [RSpec Rails](https://github.com/rspec/rspec-rails). Alternative test framework documentation for teams not using Minitest.
+- [Guard](https://github.com/guard/guard). File-system watcher for auto-running tests on save.
+
 
 ---
 

@@ -229,6 +229,12 @@ Use Falcon when most of your request time is waiting - external APIs, slow datab
 Use Puma when your app blocks - shell-outs, C extensions without GVL release, synchronous file I/O, CPU-bound request handling. Falcon can't fix what it can't yield on.
 
 The fork in the road is one command. Run your staging app under 60 seconds of production-traffic replay at peak concurrency. If Falcon's P95 latency beats Puma's by more than 30%, migrate. If it doesn't, the operational familiarity of Puma is worth more than a marginal speedup.
+## Sources
+
+- [Falcon gem repository](https://github.com/socketry/falcon). README, configuration, and Rack integration.
+- [Falcon — Getting Started](https://socketry.github.io/falcon/). Official documentation: architecture, deployment, tuning.
+- Rails Guides, [Threading and Code Execution](https://guides.rubyonrails.org/threading_and_code_execution.html). Autoloading and concurrency in Rails — relevant for Falcon's async model.
+
 
 We've done both. The answer depends on your app's actual bottleneck, not a Hello World benchmark.
 

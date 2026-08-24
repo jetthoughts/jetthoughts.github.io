@@ -2256,6 +2256,13 @@ $profiling_strategy = [
 ```
 
 ## Need help with Laravel performance?
+## Sources
+
+- [Laravel Documentation](https://laravel.com/docs). Canonical reference for configuration, queues, caching, and logging.
+- [Laravel Telescope](https://laravel.com/docs/telescope). Built-in debugging and monitoring companion for Laravel applications.
+- [New Relic APM](https://docs.newrelic.com/docs/apm/). Application performance monitoring reference.
+- [Datadog APM](https://docs.datadoghq.com/tracing/). Tracing and observability platform documentation.
+
 
 We rescue Laravel projects with N+1 query storms, memory leaks, and APM that nobody set up properly. If your team is debating between New Relic and Datadog while production keeps timing out, we can shorten that decision and fix the bottlenecks behind it.
 

@@ -523,6 +523,10 @@ The key to successful Rails development is choosing the right team and approach 
 At JetThoughts, we've helped hundreds of companies bring their Rails applications to market successfully. Our combination of technical expertise, cost-effective development processes, and commitment to quality ensures your project delivers maximum value for your investment.
 
 **Ready to start your Rails project?** Contact us for a free consultation and detailed project estimate. We'll help you understand exactly what your Rails application will cost and create a development plan that fits your budget and timeline.
+## Sources
+
+- Clutch, [App Development Cost Guide](https://clutch.co/developers/resources/cost-build-mobile-app) (updated 2025). Third-party benchmark for development costs by region and scope.
+
 
 ---
 

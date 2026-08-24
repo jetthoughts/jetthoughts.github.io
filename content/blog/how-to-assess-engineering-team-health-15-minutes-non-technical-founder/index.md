@@ -508,5 +508,10 @@ Traditional project management focuses on task completion. This framework focuse
 The principles apply broadly, but the specific indicators are engineering-focused. Sales, marketing, and operations teams need different health metrics, though the assessment approach is similar.
 
 ### What if my team says everything is fine but the business results suggest otherwise?
+## Sources
+
+- Nicole Forsgren, Jez Humble, Gene Kim, [Accelerate: The Science of Lean Software and DevOps](https://itrevolution.com/product/accelerate/). The research foundation for DORA metrics — deploy frequency, lead time, MTTR, change fail rate.
+- DORA, [State of DevOps Report](https://cloud.google.com/devops/state-of-devops/). Annual industry benchmark for engineering team performance, published by Google Cloud.
+
 
 This disconnect usually indicates communication problems or misaligned priorities. Focus on bridging the gap between engineering activities and business outcomes. Consider bringing in external facilitation.

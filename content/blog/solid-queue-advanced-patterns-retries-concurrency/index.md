@@ -327,4 +327,12 @@ Solid Queue replaces Sidekiq for most Rails apps. The cases where it doesn't:
 
 For the rest of us - the apps processing 10K-200K jobs/hour, running on reasonable hardware - Solid Queue eliminates a Redis dependency, simplifies the stack, and gives you job visibility in the same database you already query. The trade-off is real but the simplification wins for most workloads.
 
+## Sources
+
+- [Solid Queue gem repository](https://github.com/rails/solid_queue). README with configuration, concurrency controls, recurring tasks, and Puma plugin integration.
+- Rails Guides, [Active Job Basics](https://guides.rubyonrails.org/active_job_basics.html). The canonical reference for Rails background job processing — retries, callbacks, queue prioritisation.
+- [Ruby on Rails 8.0 Release Notes](https://guides.rubyonrails.org/8_0_release_notes.html). Solid Queue as the default Active Job backend, plus the Mission Control UI.
+- [Mission Control — Jobs](https://github.com/rails/mission_control-jobs). The dashboard for inspecting and managing Solid Queue jobs, retries, and dead sets in production.
+- Nate Berkopec, [The Complete Guide to Rails Background Jobs](https://www.railsspeed.com/background-jobs/). Deep treatment of worker concurrency, queue latency, and memory profiling for Rails job backends.
+
 *For the migration guide and benchmarks, see [Rails 8 Solid Queue: Migration Guide for Production Apps](/blog/rails-8-solid-queue-migration-guide/). For deployment patterns that pair well with Solid Queue, see [Falcon in Production: Benchmarks, Memory & Worker Count](/blog/falcon-web-server-production-tuning-benchmarks/). For replacing Devise in the same stack, see [Rails 8 Authentication Generator: Complete Migration from Devise](/blog/rails-8-authentication-generator-devise-migration/). If you're running Solid Queue at scale, [our Rails team can help](/services/app-web-development/).*

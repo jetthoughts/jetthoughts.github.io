@@ -1324,6 +1324,13 @@ Our memory optimization services include:
 - Code review focused on memory efficiency
 - Production monitoring and alerting setup
 - Team training on Ruby memory best practices
+## Sources
+
+- Peter Zhu, [Ruby Memory Profiling Guide](https://github.com/Shopify/ruby_memprof). Shopify's guide and tooling for Ruby memory analysis.
+- [derailed_benchmarks](https://github.com/zombocom/derailed_benchmarks). Rails-specific memory profiling: per-gem memory, memory at boot, object counts.
+- [memory_profiler](https://github.com/SamSaffron/memory_profiler). Per-line memory allocation reports for Ruby.
+- Nate Berkopec, [The Complete Guide to Rails Performance](https://www.railsspeed.com/). Chapter on memory bloat, GC tuning, and object allocation.
+
 
 Ready to build memory-efficient Ruby applications? [Contact us for a memory optimization consultation](https://jetthoughts.com/contact-us/) and let's discuss how we can help your application run leaner and faster.
 
