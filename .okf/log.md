@@ -73,6 +73,12 @@ the baseline was re-proven exact by fault injection (33 fails listing all
 34, 34 passes), and 20.09 §13h/§13i + STATUS were corrected. The repair
 queue's real top by clicks is propshaft (5), then crewai (0).
 
+**Same day follow-up**: propshaft cited — 9 external references in a new
+`## Sources` section (Rails 8.0 release notes, Propshaft README, Asset
+Pipeline guide, HTTP/2 HPBN + MDN, importmap-rails, Working with JS in
+Rails, Sprockets repo, Thoughtbot). Baseline tightened 34 → 33. First
+§13h repair complete; crewai next by clicks (0).
+
 ## 2026-08-22 - four cold-eyes reviewers found what a script had just passed
 
 Three posts shipped having passed every check their author could run, including

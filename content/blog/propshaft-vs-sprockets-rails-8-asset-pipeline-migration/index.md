@@ -1271,6 +1271,20 @@ $ RAILS_ENV=production bin/rails assets:precompile
 
 ---
 
+## Sources
+
+- Rails Core Team, [Ruby on Rails 8.0 Release Notes — Propshaft](https://guides.rubyonrails.org/8_0_release_notes.html#propshaft). Propshaft replaces Sprockets as the default asset pipeline in Rails 8.
+- [Propshaft gem repository](https://github.com/rails/propshaft). Official README with architecture, configuration, and limitations.
+- [The Rails Asset Pipeline guide](https://guides.rubyonrails.org/asset_pipeline.html). Covers Propshaft setup, migration from Sprockets, and integration with other asset libraries.
+- Ilya Grigorik, [HTTP/2](https://hpbn.co/http2/), *High Performance Browser Networking* (O'Reilly). The canonical reference on HTTP/2 multiplexing and why concatenation stopped being necessary.
+- MDN Web Docs, [HTTP/2 glossary](https://developer.mozilla.org/en-US/docs/Glossary/HTTP_2). Multiplexing, header compression, and the goals that make individual file serving viable.
+- [importmap-rails gem](https://github.com/rails/importmap-rails). Official README for import maps in Rails — the no-build JavaScript strategy that replaces Sprockets directives.
+- Rails Guides, [Working with JavaScript in Rails](https://guides.rubyonrails.org/working_with_javascript_in_rails.html). Import maps, Turbo, Stimulus, and alternatives for when you need a bundler.
+- [Sprockets gem repository](https://github.com/rails/sprockets). The asset pipeline Propshaft replaces — useful for understanding what gets dropped during migration.
+- Thoughtbot, [Rails 8's Propshaft, A Sprockets' Quiet Replacement?](https://thoughtbot.com/blog/rails-8-s-propshaft-a-sprockets-quiet-replacement) (April 2025). Migration walkthrough and tradeoff analysis from another Rails consultancy.
+
+---
+
 Propshaft is simpler, faster, and the right default for new Rails 8 apps. For existing apps on Sprockets, the migration is worth it when asset compilation is a real bottleneck—not before.
 
 Assess your asset stack first. Run `bin/rails assets:precompile` and time it. If it hurts, migrate. If it doesn't, ship features instead and revisit later. When you do migrate, do it in phases: swap the gem, fix broken paths, test in staging, then deploy. The [Kamal 2 deployment guide](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/) covers how to automate the deploy side of this transition.

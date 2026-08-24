@@ -292,9 +292,11 @@ class MarketingCopyTest < Minitest::Test
   CITATION_WORD_FLOOR = 400
 
   # RATCHET: fails when the count goes UP. Tighten it whenever a batch is cited.
-  # 34 measured 2026-08-24 after the truncation fix below (was 38, of which 6
-  # were phantoms and 2 real carriers were invisible).
-  UNCITED_BASELINE = 34
+  # 34 measured 2026-08-24 after the truncation fix (was 38, of which 6 were
+  # phantoms and 2 real carriers were invisible).
+  # → 33 after citing propshaft-vs-sprockets-rails-8-asset-pipeline-migration
+  #   (added ## Sources with 9 external references, 2026-08-24).
+  UNCITED_BASELINE = 33
 
   def test_substantial_blog_posts_do_not_regress_on_uncitedness
     uncited = uncited_posts.sort
