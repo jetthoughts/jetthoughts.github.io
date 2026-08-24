@@ -276,6 +276,15 @@ class MarketingCopyTest < Minitest::Test
   # of security support for five months. Nobody could have noticed that from
   # inside the post, because there was nothing to notice it against.
   #
+  # Corrected 2026-08-24: the count was 34, not 38. The extractor below read
+  # split(/^---/)[2], which truncates the body at the first in-body "---"
+  # horizontal rule - and these posts keep their "Resources and Further
+  # Reading" links AFTER one. 6 posts were phantoms (cited, but past the cut;
+  # solid-cache among them, which 20.09 §13i then put FIRST in the repair
+  # queue), and 2 genuinely-uncited posts were invisible because the truncated
+  # word count fell under the floor. The instrument beat the grep that day and
+  # was wrong anyway - reproduce the accusation by hand before believing it.
+  #
   # 400 words is the floor: below it a post is a note, and demanding citations
   # of a note is the noise this file's header warns about. Internal jetthoughts
   # links do not count - the question is whether the claim can be checked
@@ -283,7 +292,9 @@ class MarketingCopyTest < Minitest::Test
   CITATION_WORD_FLOOR = 400
 
   # RATCHET: fails when the count goes UP. Tighten it whenever a batch is cited.
-  UNCITED_BASELINE = 38
+  # 34 measured 2026-08-24 after the truncation fix below (was 38, of which 6
+  # were phantoms and 2 real carriers were invisible).
+  UNCITED_BASELINE = 34
 
   def test_substantial_blog_posts_do_not_regress_on_uncitedness
     uncited = uncited_posts.sort
@@ -466,7 +477,11 @@ class MarketingCopyTest < Minitest::Test
     assert posts.any?, "No blog source found - this gate would pass by finding nothing."
 
     posts.filter_map do |path|
-      body = File.read(path, encoding: "bom|utf-8").split(/^---\s*$/m)[2].to_s
+      # Everything after the frontmatter close, NOT just up to the first
+      # in-body "---" rule: [2] alone truncates there, which hid citations in
+      # "Resources" sections (6 phantom posts) and under-counted words (2 real
+      # carriers fell under the floor). Found 2026-08-24.
+      body = File.read(path, encoding: "bom|utf-8").split(/^---\s*$/m)[2..].to_a.join("\n")
       next if body.split.size < CITATION_WORD_FLOOR
 
       external = body.scan(%r{\]\((https?://[^)]+)\)}).flatten
