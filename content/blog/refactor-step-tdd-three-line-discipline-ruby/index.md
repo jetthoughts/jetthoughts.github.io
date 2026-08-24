@@ -238,7 +238,9 @@ If your suite is too slow for TCR or your inherited code keeps blocking the Core
 ## Sources
 
 - [Arlo Belshee, "The Core 6 Refactorings"](https://arlobelshee.com/the-core-6-refactorings/) - the six moves every safe refactor is built from
-- [Kent Beck, "test && commit || revert"](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) - the auto-revert discipline that enforces tiny steps
+- [Kent Beck, "test && commit || revert"](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) (2018) — the canonical introduction, by Beck himself. The auto-revert discipline that enforces tiny steps.
+- ThoughtWorks, [TCR (Test && Commit || Revert)](https://www.thoughtworks.com/en-us/radar/techniques/tcr-test-commit-revert) — Technology Radar assessment: "reinforces positive coding practices such as YAGNI and KISS."
+- [Kent Beck on TCR, Hanselminutes Podcast](https://hanselminutes.com/663/test-commit-revert-with-kent-beck) (December 2018) — Beck walks through the mechanic and the reasoning.
 - [Daniel Brolund and Ola Ellnestam, *The Mikado Method* (Manning, 2014)](https://www.manning.com/books/the-mikado-method) - safe refactoring on legacy codebases
 - [Sandi Metz, *99 Bottles of OOP*](https://sandimetz.com/99bottles) - Shameless Green and the Flocking Rules
 - [Nicolas Carlo, "A process to do safe changes in a complex codebase"](https://understandlegacycode.com/blog/a-process-to-do-safe-changes-in-a-complex-codebase/) - Mikado Method walkthrough on real legacy code

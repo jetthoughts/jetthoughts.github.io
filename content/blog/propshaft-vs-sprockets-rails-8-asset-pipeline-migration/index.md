@@ -1282,6 +1282,7 @@ $ RAILS_ENV=production bin/rails assets:precompile
 - Rails Guides, [Working with JavaScript in Rails](https://guides.rubyonrails.org/working_with_javascript_in_rails.html). Import maps, Turbo, Stimulus, and alternatives for when you need a bundler.
 - [Sprockets gem repository](https://github.com/rails/sprockets). The asset pipeline Propshaft replaces — useful for understanding what gets dropped during migration.
 - Thoughtbot, [Rails 8's Propshaft, A Sprockets' Quiet Replacement?](https://thoughtbot.com/blog/rails-8-s-propshaft-a-sprockets-quiet-replacement) (April 2025). Migration walkthrough and tradeoff analysis from another Rails consultancy.
+- Saeloun, [Migrating from Sprockets to Propshaft in Rails 8](https://blog.saeloun.com/2026/05/19/rails-8-uses-propshaft-by-default/) (May 2026). Links the exact Rails commit that made Propshaft the default, with a step-by-step migration.
 
 ---
 

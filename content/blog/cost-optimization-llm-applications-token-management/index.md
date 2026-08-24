@@ -1410,10 +1410,11 @@ For more on building production-ready LLM applications, check out our guides on 
 
 ## Sources
 
+- Anthropic, [Optimizing for Cost and Intelligence](https://platform.claude.com/docs/en/about-claude/models/optimizing-for-cost-and-intelligence). Prompt caching cut agent-loop cost by **2.5× to 3.7×** in their benchmarks — the largest single lever by a wide margin.
+- Yang et al., [An Evaluation of Prompt Caching for Long-Horizon Agentic Workloads](https://arxiv.org/abs/2601.06007) (2026). TTFT improvements of 20.9–22.9% across all cache strategies, with full-context analysis.
 - OpenAI, [tiktoken](https://github.com/openai/tiktoken). The BPE tokenizer for OpenAI models — fast local token counting before API calls.
-- [OpenAI API Pricing](https://platform.openai.com/docs/pricing). Per-model token rates, batch API discounts, and cached pricing.
-- Anthropic, [Claude API Pricing](https://platform.claude.com/docs/en/about-claude/pricing). Per-model pricing, prompt caching, and batch processing discounts.
 - Anthropic, [Prompt Caching Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching). How to cache long prompts across calls — the highest-leverage cost optimization for multi-turn applications.
+- [OpenAI API Pricing](https://platform.openai.com/docs/pricing). Per-model token rates, batch API discounts, and cached pricing.
 - [LiteLLM](https://github.com/BerriAI/litellm). Unified interface across 100+ LLM providers with built-in cost tracking and budget controls.
 
 ---

@@ -438,6 +438,23 @@ GOOD: 'There were no tests. The endpoints had no auth. Three production
 tables were corrupted.'
 Every sentence needs a person or concrete subject doing something.
 
+CHECK 10 — WEAK SOURCES (citation-quality bar)
+Every external link must be the BEST source for the claim, not just any
+source that vaguely matches. The test is: would the reader have found this
+same source in 5 seconds on Google? If yes, it's the wrong source.
+- Tier 1 (always prefer): primary research, original benchmarks, issue
+  threads, commit logs, our own client data, government/public datasets.
+- Tier 2 (acceptable when tier 1 doesn't exist): official docs, gem
+  READMEs, MDN, RFCs — but only when they're the actual authority for the
+  specific claim.
+- Tier 3 (replace immediately): marketing pages, vendor blogs, Wikipedia
+  (use its cited source instead), generic tutorials, other people's blog
+  posts repeating the same claim.
+Action: For every link in the post, state its tier. If any tier-3 links
+exist, replace them with the source they're summarizing. If a tier-2 link
+is used where a tier-1 source exists (e.g., a marketing page instead of the
+original research paper), flag it as a downgrade to fix.
+
 OUTPUT FORMAT
 1. Report which checks PASSED (one line each)
 2. For each check that FAILED, fix it directly using Edit and report the
@@ -448,7 +465,7 @@ OUTPUT FORMAT
 
 If anything is unclear, re-read the original brief in the content plan to
 verify alignment. Do NOT relax the checks. Do NOT pass with warnings.
-Either the post passes all 9 checks or it doesn't."
+Either the post passes all 10 checks or it doesn't."
 
 The 3-persona loop + this cold-eyes gate is the new shape of the workflow.
 The cold-eyes gate is non-optional. If it returns NEEDS-MORE-WORK, fix and
