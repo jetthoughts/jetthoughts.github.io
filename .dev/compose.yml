@@ -2,14 +2,8 @@
 # Simplified Docker Compose configuration for JetThoughts Hugo development
 # Optimized for fast feedback loops with minimal complexity
 #
-# Host docker daemon (2026-08-25): this repo's docker commands (bin/dc, bin/docked)
-# run against CO.LIMA (`docker context show` -> colima; socket
-# ~/.colima/default/docker.sock, macOS Virtualization.framework), not Docker
-# Desktop. Gotcha: colima does not ship `docker-credential-osxkeychain` (Docker
-# Desktop does), so with `credsStore: osxkeychain` in ~/.docker/config.json any
-# `docker compose build` fails with "docker-credential-osxkeychain: executable
-# file not found in $PATH" at the image-pull step. Fix: `brew install
-# docker-credential-helper` (installs docker-credential-osxkeychain on macOS).
+# Host docker = colima (not Docker Desktop). Gotcha: credsStore: osxkeychain
+# needs `brew install docker-credential-helper` (colima ships no osxkeychain helper).
 
 services:
   hugo:

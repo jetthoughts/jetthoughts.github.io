@@ -131,12 +131,7 @@ jobs:
           HUGO_DEFAULT_PATH: _dest/public-test
           # Record mode intentionally dirties the fixtures as it runs.
           ALLOW_DIRTY_SCREENSHOTS: '1'
-          # 2.0: FORCE_SCREENSHOT_UPDATE sets record=:all (re-record everything,
-          # compare nothing) in setup_snap_diff.rb, and the gem refuses `:all`
-          # under CI by design - a mode left in a committed config that compares
-          # nothing with nobody to review. This dispatch IS the human-reviewed
-          # bulk accept (.okf/build/ci-gates.md), so unset CI for this step only
-          # (empty string, not 'false' - the gem checks ENV["CI"].to_s.empty?).
+          # record=:all refuses under CI; this dispatch is the reviewed bulk accept.
           CI: ''
 
       # always(): freshly recorded baselines must be committed even when a
