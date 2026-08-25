@@ -184,7 +184,7 @@ tolerance 0. Corroborating tell in any failure payload: the reported `region`
 never exceeds the viewport height (e.g. `[0.0,42.0,1920.0,1080.0]` for
 `services/_footer`).
 
-There is a second tolerance-independent axis: `Capybara::Screenshot::Diff.perceptual_threshold = 2.0`
+There is a second tolerance-independent axis: `SnapDiff.config.perceptual_threshold = 2.0`
 (`test/support/setup_snap_diff.rb:25`) means the vips driver only counts a
 pixel as differing once it is more than CIE dE00 2.0 from the baseline pixel.
 A recolour that stays under that contributes ZERO differing pixels, so it
@@ -299,7 +299,7 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
 
   **The two readers disagree on what counts as set** (identified 2026-08-21,
   NOT fixed - known wart): `bin/qtest:209` skips its restore on ANY truthy
-  value, while `test/support/setup_snap_diff.rb:28` enters record mode only
+  value, while `test/support/setup_snap_diff.rb:33` enters record mode only
   on the literal string `"true"`. So `FORCE_SCREENSHOT_UPDATE=1` on qtest
   gets the worst of both - the suite still compares and fails, and the
   restore that would have cleaned up is skipped. Spell it `=true`, or better,
@@ -613,12 +613,12 @@ gone rather than patched a fifth time: reading the block has none of those holes
   recording locally. Say so in the PR rather than letting a reader assume
   both legs were run.
 
-- **Quote the compared COUNT, not just "0 failures"** (2026-08-21). A suite
-  that compared nothing and a suite that compared everything both print
-  `0 failures`. The distinguishing line is
-  `[snap_diff] N screenshots compared, no failures.` - cite the N. #518 cites
-  `53 screenshots compared`, which is what makes its green legible as
-  evidence rather than as an absence of errors.
+- **Quote the verified COUNT, not just "0 failures"** (2026-08-21; format
+  updated 2026-08-25 for snap_diff 2.0). A suite that compared nothing and a
+  suite that compared everything both print `0 failures`. The distinguishing
+  line is now `[snap_diff] N verified, N changed, N new (not verified).` -
+  cite the N (verified). #518 cites `53 screenshots compared`, which is what
+  makes its green legible as evidence rather than as an absence of errors.
 
 - **A rendered-output sweep can look thorough and check almost nothing**
   (2026-08-20). Count the DISTINCT values a sweep actually resolves before
@@ -913,13 +913,15 @@ such line at all.
 
 **Two fixes, each verified by breaking it:**
 
-- `Capybara::Screenshot::Diff.fail_if_new = true` (test/support/setup_snap_diff.rb).
-  Outside CI the gem defaulted this to false, so an unresolvable baseline
-  passed silently - that default is what made the no-op invisible rather than
-  loud. Probe with a screenshot name absent from git: `1 runs, 1 assertions,
-  1 failures`. A genuinely new page now fails its first run until recorded,
-  which is the same run-to-fail -> inspect -> commit flow this file already
-  documents.
+- `SnapDiff.config.record = :none` (test/support/setup_snap_diff.rb) - the
+  2.0 spelling of the old `Capybara::Screenshot::Diff.fail_if_new = true`
+  (`record` replaces `fail_if_new`, which 2.1 removes). The 2.0 default is
+  `:once` (record a missing baseline and compare the rest) outside CI, so an
+  unresolvable baseline still passed silently - that default is what made the
+  no-op invisible rather than loud. Probe with a screenshot name absent from
+  git: `1 runs, 1 assertions, 1 failures`. A genuinely new page now fails its
+  first run until recorded, which is the same run-to-fail -> inspect -> commit
+  flow this file already documents.
 - `bin/dtest` now MAKES git work from a worktree instead of refusing to run:
   it mounts the common git dir (`git rev-parse --path-format=absolute
   --git-common-dir`) at `/gitcommon` and sets `GIT_DIR=/gitcommon/worktrees/
@@ -929,9 +931,13 @@ such line at all.
   Verified by re-injecting the red body: `[snap_diff] 55 screenshots compared,
   10 failures`, with `desktop/contact_us` and `mobile/contact_us` among them.
 
-**Reading rule: a visual run that does not print `[snap_diff] N screenshots
-compared` compared nothing.** Check for that line before believing green -
-counting `0 failures` is not the same as counting comparisons.
+**Reading rule: a visual run whose `[snap_diff]` summary line shows
+`0 verified` (or prints no line at all) compared nothing.** Since 2.0 the line
+- `[snap_diff] N verified, N changed, N new (not verified).` - prints on EVERY
+run, passing or failing, and `0 verified` is the shout (the gem appends
+`NOTHING WAS VERIFIED` when nothing was compared and nothing was re-recorded).
+Check the verified count before believing green - counting `0 failures` is not
+the same as counting comparisons.
 
 # arm64 dtest and amd64 CI genuinely disagree on text-heavy pages
 

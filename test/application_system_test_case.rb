@@ -23,7 +23,7 @@ require "support/hugo_helpers"
 # an unscoped glob let dirty macos/ baselines abort the linux/ leg - bin/dtest
 # refusing to start on a Mac mid-review was never the intent.
 unless ENV["ALLOW_DIRTY_SCREENSHOTS"]
-  os_dir = "test/fixtures/screenshots/#{Capybara::Screenshot::Os.name}"
+  os_dir = "test/fixtures/screenshots/#{SnapDiff::Os.name}"
   dirty = `git status --porcelain #{os_dir} 2>/dev/null`.lines
   if dirty.any?
     warn "Screenshot fixtures are dirty (a previous run rewrote baselines):"
@@ -69,8 +69,8 @@ end
 class ApplicationSystemTestCase < Minitest::Test
   include Capybara::DSL
   include Capybara::Minitest::Assertions
-  include CapybaraScreenshotDiff::DSL
-  include CapybaraScreenshotDiff::Minitest::Assertions
+  include SnapDiff::DSL
+  include SnapDiff::Minitest::Assertions
   include NavigationHelpers
 
   # Floor for calls that pin no tolerance of their own. 0.02 let ~41,472 pixels

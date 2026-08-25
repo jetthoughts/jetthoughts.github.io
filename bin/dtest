@@ -52,7 +52,7 @@ fi
 # NOTHING: captures are written over the baselines and every run is green.
 # Measured 2026-08-22 - a contact page with `body { background: red }`,
 # difference_level 0.68, passed with 0 failures, and the only tell was a
-# missing `[snap_diff] N screenshots compared` line.
+# missing `[snap_diff] N verified` line.
 #
 # Mount the COMMON git dir (the main repo's .git, which holds objects/refs and
 # every worktree's entry) and point GIT_DIR at this worktree inside it. The

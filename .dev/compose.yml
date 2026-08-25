@@ -1,6 +1,9 @@
 ---
 # Simplified Docker Compose configuration for JetThoughts Hugo development
 # Optimized for fast feedback loops with minimal complexity
+#
+# Host docker = colima (not Docker Desktop). Gotcha: credsStore: osxkeychain
+# needs `brew install docker-credential-helper` (colima ships no osxkeychain helper).
 
 services:
   hugo:

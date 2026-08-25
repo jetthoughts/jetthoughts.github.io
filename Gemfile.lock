@@ -1,10 +1,3 @@
-GIT
-  remote: https://github.com/snap-diff/snap_diff-capybara.git
-  revision: 5ee298fbc3c1e070c78e3d83862ffd3228204214
-  specs:
-    capybara-screenshot-diff (1.12.0)
-      capybara (>= 2, < 4)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -171,6 +164,8 @@ GEM
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
     simplecov (1.1.1)
+    snap_diff-capybara (2.0.0.beta4)
+      capybara (>= 2, < 4)
     standard (1.56.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -210,7 +205,6 @@ PLATFORMS
 DEPENDENCIES
   bigdecimal
   capybara
-  capybara-screenshot-diff!
   faraday
   html-proofer
   httparty
@@ -225,6 +219,7 @@ DEPENDENCIES
   sanity-ruby
   selenium-webdriver
   simplecov
+  snap_diff-capybara (= 2.0.0.beta4)
   standard
   vips
 

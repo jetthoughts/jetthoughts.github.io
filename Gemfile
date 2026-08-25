@@ -14,7 +14,8 @@ gem "ostruct"
 
 gem "sanity-ruby"
 
-gem "capybara-screenshot-diff", github: "snap-diff/snap_diff-capybara"
+# Same gem as capybara-screenshot-diff; install one, never both.
+gem "snap_diff-capybara", "2.0.0.beta4"
 gem "simplecov", require: false
 gem "vips"
 

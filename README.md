@@ -83,7 +83,7 @@ JetThoughts website is a sophisticated static site generator project that showca
 gem "minitest"
 gem "capybara"
 gem "selenium-webdriver"
-gem "capybara-screenshot-diff"
+gem "snap_diff-capybara", "2.0.0.beta4"
 
 # API & HTTP
 gem "httparty"
