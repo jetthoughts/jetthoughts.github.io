@@ -845,7 +845,7 @@ screenshots are dirty is worse than no test. The guard was verified by mutation
 `String#split.last` is nil only for `""`, where the fallback is nil too.
 
 **A third blind spot, tolerance-independent like the fold:**
-`perceptual_threshold = 2.0` (`test/support/setup_snap_diff.rb:27`) means vips
+`perceptual_threshold = 2.0` (`test/support/setup_snap_diff.rb:25`) means vips
 only counts a pixel as differing above CIE dE00 2.0 from the baseline. A
 recolour staying under that contributes ZERO differing pixels and passes at ANY
 tolerance including 0 - which is precisely the palette/dark-surface work this
@@ -872,7 +872,7 @@ Concept updated: [build/test-gates.md](build/test-gates.md).
 
 **Known wart, identified and NOT fixed:** the two `FORCE_SCREENSHOT_UPDATE`
 readers disagree on what counts as set - `bin/qtest:209` skips its restore on
-any truthy value, `test/support/setup_snap_diff.rb:49` enters record mode only
+any truthy value, `test/support/setup_snap_diff.rb:33` enters record mode only
 on the literal `"true"`. `=1` on qtest therefore gets the worst of both: the
 suite still compares and fails, and the cleanup is skipped. That is the
 mechanism behind the older "the flag appears to be ignored on qtest" note.

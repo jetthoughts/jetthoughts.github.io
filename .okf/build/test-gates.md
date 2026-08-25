@@ -185,7 +185,7 @@ never exceeds the viewport height (e.g. `[0.0,42.0,1920.0,1080.0]` for
 `services/_footer`).
 
 There is a second tolerance-independent axis: `SnapDiff.config.perceptual_threshold = 2.0`
-(`test/support/setup_snap_diff.rb:27`) means the vips driver only counts a
+(`test/support/setup_snap_diff.rb:25`) means the vips driver only counts a
 pixel as differing once it is more than CIE dE00 2.0 from the baseline pixel.
 A recolour that stays under that contributes ZERO differing pixels, so it
 passes at ANY tolerance including 0 - most relevant to palette and
@@ -299,7 +299,7 @@ Minitest under `test/`, driven by `Rakefile` (`Rake::TestTask`).
 
   **The two readers disagree on what counts as set** (identified 2026-08-21,
   NOT fixed - known wart): `bin/qtest:209` skips its restore on ANY truthy
-  value, while `test/support/setup_snap_diff.rb:49` enters record mode only
+  value, while `test/support/setup_snap_diff.rb:33` enters record mode only
   on the literal string `"true"`. So `FORCE_SCREENSHOT_UPDATE=1` on qtest
   gets the worst of both - the suite still compares and fails, and the
   restore that would have cleaned up is skipped. Spell it `=true`, or better,
