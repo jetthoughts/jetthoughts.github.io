@@ -251,11 +251,14 @@ the Linux side". That was worthless: it was green because it was not testing.
 Paul's main checkout has a real .git, so his dtest DID compare - which is why
 he saw 31 modified baselines from a red run and I could never reproduce one.
 
-Root cause is not worktree-specific: outside CI the gem defaults `fail_if_new`
-to false, so a baseline it cannot RETRIEVE is treated as a new screenshot and
-passes. Now `true`, verified by a probe with a name absent from git. The tell to
-remember is a missing line - a real run ends with `[snap_diff] N screenshots
-compared`; the no-op run printed none, while still reporting `0 failures`.
+Root cause is not worktree-specific: outside CI the 2.0 default `record =
+:once` treats a baseline it cannot RETRIEVE as a new screenshot and passes
+(1.x: `fail_if_new` defaulted to false; `SnapDiff.config.record = :none` now
+restores strictness in setup_snap_diff.rb, verified by a probe with a name
+absent from git). The tell to remember is the summary line - a real run ends
+with `[snap_diff] N verified, N changed, N new (not verified).`; the no-op run
+shows `0 verified` (or printed nothing at all in 1.x), while still reporting
+`0 failures`.
 
 ## 2026-08-22 - closing three of the fault-injection gaps, each broken before it was trusted
 
@@ -842,7 +845,7 @@ screenshots are dirty is worse than no test. The guard was verified by mutation
 `String#split.last` is nil only for `""`, where the fallback is nil too.
 
 **A third blind spot, tolerance-independent like the fold:**
-`perceptual_threshold = 2.0` (`test/support/setup_snap_diff.rb:25`) means vips
+`perceptual_threshold = 2.0` (`test/support/setup_snap_diff.rb:27`) means vips
 only counts a pixel as differing above CIE dE00 2.0 from the baseline. A
 recolour staying under that contributes ZERO differing pixels and passes at ANY
 tolerance including 0 - which is precisely the palette/dark-surface work this
@@ -869,7 +872,7 @@ Concept updated: [build/test-gates.md](build/test-gates.md).
 
 **Known wart, identified and NOT fixed:** the two `FORCE_SCREENSHOT_UPDATE`
 readers disagree on what counts as set - `bin/qtest:209` skips its restore on
-any truthy value, `test/support/setup_snap_diff.rb:28` enters record mode only
+any truthy value, `test/support/setup_snap_diff.rb:49` enters record mode only
 on the literal `"true"`. `=1` on qtest therefore gets the worst of both: the
 suite still compares and fails, and the cleanup is skipped. That is the
 mechanism behind the older "the flag appears to be ignored on qtest" note.

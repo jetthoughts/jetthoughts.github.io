@@ -92,7 +92,8 @@ failed dedup. A two-exit loop would have written both.
 The loop re-reads the prompt every iteration, so it is the cheapest place to put
 gate rules that would otherwise decay. The 1a.4 prompt carried "never cite
 `bin/dtest` from this worktree - it is vacuous-green", "quote the
-`[snap_diff] N screenshots compared` count", and "`--strict` EXITS 1 by design",
+`[snap_diff] N verified` count" (2.0 summary format; the old wording was
+`[snap_diff] N screenshots compared`), and "`--strict` EXITS 1 by design",
 and none of those was violated across the whole run.
 
 # The delivery contract that wraps this

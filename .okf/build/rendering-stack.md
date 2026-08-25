@@ -101,8 +101,10 @@ is cheap, boring, and would have ended it in a day.
   cannot pin (an x86 CPU cannot run arm64 Chrome), so `bin/setup-test-env`
   warns instead. Caught by review on #589, not by any gate - no suite fails
   when the only x86 host is one nobody has yet.
-- A green visual run that prints no `[snap_diff] N screenshots compared` line
-  compared nothing - see [test-gates](/build/test-gates.md).
+- A green visual run whose `[snap_diff]` line shows `0 verified` (or prints no
+  line) compared nothing - since 2.0 the line is `[snap_diff] N verified, N
+  changed, N new (not verified).` and prints on every run - see
+  [test-gates](/build/test-gates.md).
 
 ## arm64 is THE stack (Paul, 2026-08-22) - shipped, not on trial
 
