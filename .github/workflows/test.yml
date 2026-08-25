@@ -131,7 +131,7 @@ jobs:
           HUGO_DEFAULT_PATH: _dest/public-test
           # Record mode intentionally dirties the fixtures as it runs.
           ALLOW_DIRTY_SCREENSHOTS: '1'
-          # record=:all refuses under CI; this dispatch is the reviewed bulk accept.
+          # record=:all refuses under CI; this dispatch is the manual review.
           CI: ''
 
       # always(): freshly recorded baselines must be committed even when a
