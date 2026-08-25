@@ -67,6 +67,8 @@ OUTPUT STYLE: concise-default
 - No preamble, no filler, no recaps unless asked.
 - Code blocks: untouched (never compress code syntax).
 - Each line: max 80 chars.
+- Comments: skip unless the "why" isn't obvious; one line max.
+- GitHub artifacts (commits, PR titles/bodies, issues): shortest informative form.
 <!-- /lean-ctx-compression -->
 
 ---
