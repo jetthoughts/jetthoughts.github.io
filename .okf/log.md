@@ -3626,3 +3626,11 @@ links - which covered NONE of the four posts, since all are future-dated and
 production skips future content. Their internal links were checked by hand.
 A green link run over a build that excludes the changed pages is vacuous
 evidence; say so rather than quoting the number.
+
+## 2026-08-28 - comparison validity as a fabrication class
+Added `content/fabrication-ratchet.md` section "The comparison itself can be
+the defect". Source: a Rails-vs-JS post whose premise was falsified twice
+during research. Three named failure modes: comparing unlike scopes, trimming
+a quote at its contradicting clause, and citing a flattering result against
+its own authors' caveats. Panel evidence: the unlike-scope premise produced an
+8:1 hiring ratio that should have been 3.4:1.
