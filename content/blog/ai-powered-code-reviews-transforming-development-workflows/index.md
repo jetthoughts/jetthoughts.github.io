@@ -3,7 +3,7 @@ title: "Your AI Reviewer Approved It. Did It Read Its Own Report?"
 description: "Our AI code reviewer found a SQL injection, described it accurately, and set the verdict to approve in the same response. Here is what we changed."
 created_at: '2025-01-16T00:00:00Z'
 edited_at: '2026-08-28T00:00:00Z'
-date: 2025-01-16
+date: 2026-08-28
 draft: false
 tags: ["ai", "code-review", "startup", "engineering", "automation"]
 canonical_url: https://jetthoughts.com/blog/ai-powered-code-reviews-transforming-development-workflows/
