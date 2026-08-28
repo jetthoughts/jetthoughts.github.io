@@ -3634,3 +3634,11 @@ during research. Three named failure modes: comparing unlike scopes, trimming
 a quote at its contradicting clause, and citing a flattering result against
 its own authors' caveats. Panel evidence: the unlike-scope premise produced an
 8:1 hiring ratio that should have been 3.4:1.
+
+## 2026-08-28 - gate verdicts go stale when the artifact moves
+Added `build/test-gates.md` section "A gate verdict is bound to a version, not
+to a session". Source: a Five Whys on skipping pipeline steps during a post that
+was restructured three times after its review panel ran. Three root causes:
+recalled process substituted for loaded process (the skill was never invoked),
+gate verdicts held as memory rather than bound to a sha, and cost-driven gate
+frequency that ran greps constantly and the browser gate once.
