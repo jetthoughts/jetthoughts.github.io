@@ -17,8 +17,9 @@ Canonical spec: `.stitch/design.md` (read before any cover work)
 - No subtitle unless it adds new benefit
 
 ## Reference Files (duplicate, never author from scratch)
-- `.stitch/designs/rails-8-1-active-job-continuations-cover.html`
-- `.stitch/designs/rails-argon2-has-secure-password-cover.html`
+`.stitch/designs/` is gitignored (.gitignore:148), so only these force-added exemplars survive a fresh clone - duplicate one of them, not a neighbour you happen to have locally:
+- `.stitch/designs/rails-8-authentication-cover.html`
+- `.stitch/designs/rubyllm-retries-cover.html`
 
 ## Pipeline
 HTML → chrome-devtools 2× retina → Lanczos downsample → `content/blog/<slug>/cover.png` → `bin/hugo-build`

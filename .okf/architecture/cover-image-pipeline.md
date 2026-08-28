@@ -1,11 +1,14 @@
 ---
 type: Playbook
 title: Blog Cover Image Pipeline
-description: How a blog post's cover image is generated (JetVelocity design system), stored, and rendered as thumbnail vs og:image.
+description: How a blog post's cover image is generated (JetVelocity design system), stored, and rendered as thumbnail vs og:image; also why a workflow doc's "duplicate this reference" pointer must name a tracked file, not a gitignored one.
 tags: [images, seo, design, cdn]
 generated:
   by: process:okf-migrate
   at: 2026-07-12T00:00:00Z
+verified:
+  - by: claude/opus-5
+    at: 2026-08-28T14:34:59Z
 ---
 
 # Overview
@@ -63,6 +66,21 @@ Any new cover image or thumbnail change is subject to the
 [visual-scroll-gate](/workflows/visual-scroll-gate.md) — visual
 defects (clipped text, wrong aspect, stale badges) are invisible to
 text-only validation.
+
+# A workflow doc must name a TRACKED file (fixed 2026-08-28)
+
+`docs/workflows/cover-images.md` named two reference HTMLs under
+`.stitch/designs/` for "duplicate this, don't author from scratch" — but that
+directory is gitignored (`.gitignore:148`), so neither file exists in a fresh
+clone. Nine cover HTMLs are tracked (force-added past the ignore); the doc now
+points at two of those instead, with a one-line note on why.
+
+Generalizes past this doc: a "duplicate this reference" instruction rots
+silently the moment its target directory is gitignored — nothing fails until
+someone works from a clean checkout, so the rot is invisible to whoever wrote
+or last edited the instruction. When adding a "copy this file" pointer to any
+workflow doc, confirm the target is tracked (`git ls-files <path>`), not just
+present locally.
 
 # Citations
 

@@ -4,7 +4,7 @@ title: Blog Post Pipeline (Idea to Published)
 description: Canonical end-to-end workflow for drafting, reviewing, and publishing a JetThoughts blog post — mandatory for any write/draft/schedule/publish request.
 resource: docs/workflows/blog-pipeline.md
 tags: [content, blog, workflow]
-timestamp: 2026-08-20T00:00:00Z
+timestamp: 2026-08-28T14:34:59Z
 generated:
   by: process:okf-migrate
   at: 2026-07-19T00:00:00Z
@@ -120,6 +120,27 @@ converted (#510). Internal JT links do NOT belong in this list — they go
 in body prose or the theme's auto-generated `Read next`
 (`themes/beaver/layouts/partials/blog/related-posts.html`, opt out with
 `related_posts: false`).
+
+# A post serving two readers grows abstraction slop at the seam (2026-08-28)
+
+When a post welds a first-hand incident to a second, already-covered angle
+(here: an engineering post grafted onto a founder checklist that already
+existed as its own published post), it has to GENERALISE to travel from the
+specific case to the second audience. That bridge is what produces the
+abstraction slop — a bridging section, an anaphora of invented failures, a
+bolded universal rule — not a wording problem the panel can edit line by line.
+
+Tell: a four-lens panel run with four DIFFERENT briefs converges on the same
+region of the post even though each names a different local fix. The ICP
+reader's own words on `ai-powered-code-reviews-transforming-development-
+workflows`: "my four questions are a guest paragraph inside somebody else's
+engineering post."
+
+**Rule**: when a panel flags heavy abstraction concentrated in one region,
+check whether the post is serving two readers before rewriting sentences.
+Cutting the second audience removes the abstraction with it (934 -> 563 words
+that day, AI-tells went with the section). Fixing the tells one at a time
+regrows them, because the bridge still has to be crossed.
 
 # Cross-post repetition gates (blocking for cluster posts)
 

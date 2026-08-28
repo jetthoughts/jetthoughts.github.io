@@ -51,6 +51,65 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-28 - the longest-unbroken-run metric can't be moved by splitting a paragraph
+
+**Extended** [Visual Scroll Gate](/workflows/visual-scroll-gate.md), same
+`blog/upgrade-ai-code-review-trust` session. The cognitive-load metric counts
+the longest run of PROSE between any two of `h2 img pre table ul ol` - a
+one-line paragraph is still prose, so splitting a paragraph ADDS a paragraph
+to the run and never breaks it. Measured: isolating a bolded sentence in the
+closing section left the run unchanged (720px/23 lines mobile, 609px/16 lines
+desktop, four paragraphs became five); a reviewer's predicted drop to ~12
+lines was withdrawn after measuring. Only a non-prose element (callout, list,
+heading) moves the number - which means the metric can push furniture onto a
+page purely to satisfy a gate, and accepting the unmoved number was the right
+call here (the isolated bold works as a landing point; a second callout would
+have diluted the first).
+
+Companion measurement that DOES discriminate: rendered bold ink (summed
+client-rect area per bold element, not a `<strong>` count) - a 77-character
+bold carried 9.5x the ink of a 7-character one at equal weight/colour, the
+Christmas-tree rule biting in a form counting can't detect. Also check
+whether two bolds can co-occur in one viewport (720px apart on an 844px
+viewport competes; 3,026px apart cannot).
+
+## 2026-08-28 - three learnings from the AI-code-review post upgrade: a corrupted file, a two-reader seam, a gitignored reference
+
+From the `blog/upgrade-ai-code-review-trust` session (content edit itself owned
+by another agent; this entry is the OKF-only capture).
+
+**New concept** [Shell in-place-edit gotchas](/workflows/shell-editing-gotchas.md):
+`perl -0pi -e 's/.../\x{00A7}/'` on a UTF-8 file writes a lone 0xA7 byte, not
+the UTF-8 sequence - perl runs byte semantics without `-C`/`-CSD`, so any bare
+`\x{...}` above 0x7F corrupts the whole file. Silent and misleading: `file`
+reports "Non-ISO extended-ASCII text", `grep` returns NOTHING (not `0`) on the
+now-binary file. Detection tell: `grep -c` returning empty. Verify with
+`iconv -f UTF-8 -t UTF-8 <file> >/dev/null`. Repair:
+`perl -pi -e 's/(?<!\xC2)\xA7/\xC2\xA7/g'`. Rule: type the literal UTF-8
+character in the shell string instead of escaping it.
+
+**Extended** [Blog Post Pipeline](/workflows/blog-pipeline.md): a post
+serving two readers grows abstraction slop AT THE SEAM, not throughout - the
+symptom is a bridging section built to travel from a specific case to a
+second, already-covered audience. A four-lens panel with four different
+briefs converged on the same region of
+`ai-powered-code-reviews-transforming-development-workflows` even though each
+proposed a different local fix. Cutting the second audience (a founder
+checklist that already existed as its own post) removed the abstraction with
+it: 934 -> 563 words, AI-tells went with the section rather than needing
+individual repair.
+
+**Extended** [Blog Cover Image Pipeline](/architecture/cover-image-pipeline.md):
+`docs/workflows/cover-images.md` named two `.stitch/designs/` reference files
+that `.gitignore:148` excludes, so neither exists in a fresh clone (already
+fixed in the same branch - the doc now points at two of the nine tracked cover
+HTMLs). General rule added: a workflow doc's "duplicate this reference"
+pointer must name a TRACKED file; the rot is invisible until someone works
+from a clean checkout.
+
+Ruflo mirror upserted for all three (`okf-wf-shell-editing-gotchas`,
+`okf-wf-blog-pipeline`, `okf-arch-cover-image-pipeline`).
+
 ## 2026-08-28 - editorial-system blueprint consolidated: four gate upgrades, corpus factory rejected
 
 Paul supplied a thoughtbot-style editorial/pipeline blueprint; consolidation
