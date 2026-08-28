@@ -124,3 +124,41 @@ the first thing a prospect sees.
   `FABRICATION_PHRASE_MARKERS`, `VERIFIED_CASE_STUDIES`, `FABRICATION_BASELINE`.
 - [claims-canon](/content/claims-canon.md) - the standing purge policy and the
   four fabrication classes.
+
+## The comparison itself can be the defect (2026-08-28)
+
+A post set out to argue that Rails' ecosystem is more stable than JavaScript's.
+Every quote in the draft was verbatim and verified at primary. The argument
+still inverted under checking, twice, for reasons no quote-level gate can see.
+
+**1. Comparing unlike things.** The draft used Express's release cadence (one
+breaking major in ten years) against Rails' five asset-pipeline defaults. Both
+figures were correct. Express is a routing library and Rails is a full-stack
+framework that also decides your ORM, view layer, jobs and file uploads, so
+release cadence across that gap measures nothing. Paul flagged it as
+"apple with orange". The reviewer independently found the consequence: the
+draft declared Express "the equivalent framework", then silently used Node.js's
+48.7% rather than Express's 19.9% for a hiring ratio, turning 3.4:1 into 8:1.
+**An unstable premise produces a numerator nobody can defend.**
+
+**2. Trimming a quote at the clause that contradicts it.** Rails' policy reads
+"Only bug fixes, no API changes, no new features. *Except as necessary for
+security fixes.*" The draft quoted through "no new features", dropped the
+exception with no ellipsis, and concluded there was a lane "not allowed to
+break your app" - when the dropped clause carves out exactly the urgent case.
+The contradiction was one click away through a link in the same paragraph.
+
+**3. The flattering citation you must not use.** A 2019 follow-up
+(arxiv.org/abs/1911.11894) finds Ruby has a NEGATIVE association with defects.
+Its authors also say the result "has no clear interpretation" and that such
+findings are "no more useful than observing that it often rains on Tuesdays",
+and they counted 26 citations implying causality where they found association.
+Using it would have made us the 27th.
+
+**Checks that would have caught these:**
+- Before comparing two things, state what each one's SCOPE is. If the scopes
+  differ, the comparison is decoration.
+- Read one sentence PAST the end of every quote before trimming it.
+- When a citation flatters you unusually, read the authors' own caveats first.
+- Re-derive any ratio from the same table both numerator and denominator
+  come from.

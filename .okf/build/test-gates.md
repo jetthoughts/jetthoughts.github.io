@@ -979,3 +979,30 @@ concurrently. What was actually shared, and what was not:
 Per-worktree compose projects mean per-worktree named volumes, so the first
 `bin/dtest` in a new worktree repopulates `hugo_cache_dtest`. Gems are baked
 into the image, not a volume, so nothing re-bundles.
+
+## A gate verdict is bound to a version, not to a session (2026-08-28)
+
+A blog post ran a four-lens cold-eyes panel, then was restructured three more
+times in response to mid-turn corrections. "The panel ran" stayed true in the
+author's head while the draft it reviewed no longer existed. Only a single
+final reviewer ever saw the shipped text.
+
+**Rule: record `gate: result @ <sha>`. If HEAD has moved since, the verdict is
+STALE and the gate counts as UNRUN.** This makes "it passed review" falsifiable
+instead of a memory. It is the same defect the visual suite already documents -
+identical difference_level across two runs means a stale baseline, never flake -
+appearing in prose rather than pixels.
+
+**Corollary, cost-vs-risk inversion.** On the same post, grep gates (em dashes,
+banned words) ran after nearly every edit while the browser cognitive-load gate
+ran once, at the end, only because the operator asked. Cost is visible in the
+moment; risk is not. The skipped gate is the one greps cannot replace: it found
+a 3,246-character unbroken prose run and, on a second pass, two SVG labels
+overlapping - neither visible to any text check.
+
+**When a change is STRUCTURAL, re-run the discriminating gate first.** A
+restructure invalidates layout and rhythm before it invalidates spelling.
+
+**Trigger the visual gate at WRITE time.** Word count over 800 is knowable the
+moment a draft exists, which is when the diagram budget should be set - not
+after prose has hardened into walls.
