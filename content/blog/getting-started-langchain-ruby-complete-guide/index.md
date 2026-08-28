@@ -165,7 +165,7 @@ openai_llm = Langchain::LLM::OpenAI.new(
 anthropic_llm = Langchain::LLM::Anthropic.new(
   api_key: ENV['ANTHROPIC_API_KEY'],
   default_options: {
-    model: 'claude-3-sonnet-20240229',
+    model: 'claude-sonnet-4-6',
     max_tokens: 1024,
     temperature: 0.5
   }

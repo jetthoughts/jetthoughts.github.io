@@ -32,7 +32,6 @@ This tutorial assumes intermediate Rails knowledge. If you're new to AI concepts
 
 We're building a document Q&A system where users can ask questions in natural language and receive AI-generated answers based on your documentation. Think of it as ChatGPT trained specifically on your company's knowledge base.
 
-The complete code examples are available on [GitHub](https://github.com/jetthoughts/rails-rag-pgvector-example).
 
 ## Part 1: Setup & Fundamentals 🟢
 
@@ -753,4 +752,3 @@ What matters most in practice:
 
 ---
 
-**Source code**: Complete working examples available at [github.com/jetthoughts/rails-rag-pgvector-example](https://github.com/jetthoughts/rails-rag-pgvector-example)

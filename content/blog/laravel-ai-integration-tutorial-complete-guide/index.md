@@ -196,7 +196,7 @@ use OpenAI\Laravel\Facades\OpenAI;
 Route::get('/ai/test', function () {
     try {
         $result = OpenAI::chat()->create([
-            'model' => 'gpt-4-turbo-preview',
+            'model' => 'gpt-4.1',
             'messages' => [
                 ['role' => 'system', 'content' => 'You are a helpful Laravel assistant.'],
                 ['role' => 'user', 'content' => 'Explain Laravel in exactly 3 sentences. Be encouraging!'],
@@ -452,7 +452,7 @@ use Illuminate\Support\Facades\Log;
 
 class OpenAIService
 {
-    private string $model = 'gpt-4-turbo-preview';
+    private string $model = 'gpt-4.1';
     private float $temperature = 0.7;
     private int $maxTokens = 1000;
 
@@ -1002,7 +1002,7 @@ class BlogPost extends Model
         }
 
         $result = OpenAI::chat()->create([
-            'model' => 'gpt-4-turbo-preview',
+            'model' => 'gpt-4.1',
             'messages' => [
                 [
                     'role' => 'system',
@@ -1026,7 +1026,7 @@ class BlogPost extends Model
     public function generateTags(): void
     {
         $result = OpenAI::chat()->create([
-            'model' => 'gpt-4-turbo-preview',
+            'model' => 'gpt-4.1',
             'messages' => [
                 [
                     'role' => 'system',
@@ -1915,10 +1915,10 @@ class ModelSelector
     public static function selectForTask(string $taskComplexity): string
     {
         return match($taskComplexity) {
-            'simple' => 'gpt-3.5-turbo',      // Grammar, simple classification ($0.0005/1K tokens)
-            'moderate' => 'gpt-4-turbo-preview', // Summaries, reasoning ($0.01/1K tokens)
-            'complex' => 'gpt-4',             // Advanced reasoning ($0.03/1K tokens)
-            default => 'gpt-4-turbo-preview',
+            'simple' => 'gpt-5.6-terra',   // Grammar, simple classification - cheapest tier
+            'moderate' => 'gpt-4.1',       // Summaries, reasoning - mid tier
+            'complex' => 'gpt-5.6-sol',    // Advanced reasoning - most capable tier
+            default => 'gpt-4.1',
         };
     }
 }
@@ -1979,7 +1979,7 @@ use Illuminate\Support\Facades\Log;
 class RobustOpenAIService
 {
     private array $fallbackModels = [
-        'gpt-4-turbo-preview',  // Primary
+        'gpt-4.1',  // Primary
         'gpt-3.5-turbo',        // Fallback
     ];
 
@@ -2249,7 +2249,7 @@ $result = Retry::times(3)
     ->throw()
     ->run(function () use ($messages) {
         return OpenAI::chat()->create([
-            'model' => 'gpt-4-turbo-preview',
+            'model' => 'gpt-4.1',
             'messages' => $messages,
         ]);
     });
@@ -2330,7 +2330,7 @@ public function failed(\Throwable $exception): void
 
 **Q: How much does Laravel AI integration cost?**
 
-A: OpenAI API costs vary by model. GPT-3.5-Turbo costs $0.0005 per 1K tokens (20x cheaper than GPT-4 at $0.03 per 1K tokens). Implementing proper caching can reduce costs by 40-60%.
+A: OpenAI API costs vary by model, and the per-token rates change often enough that any figure printed here would be wrong within months. Check [OpenAI's pricing page](https://openai.com/api/pricing/) for current rates; the point that matters for architecture is that the cheap tier runs roughly an order of magnitude below the capable one, so routing simple work away from the expensive model is where the saving is. Implementing proper caching can reduce costs by 40-60%.
 
 **Q: Can I use Laravel AI integration with existing Laravel apps?**
 

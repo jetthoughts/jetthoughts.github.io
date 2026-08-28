@@ -17,7 +17,6 @@ This comprehensive tutorial walks you through everything you need to build your 
 
 **Note**: Complete working code examples are available in this tutorial. All 15 examples can be copy-pasted directly from the sections below.
 
-<!-- GitHub repository coming soon at https://github.com/jetthoughts/elixir-ai-examples -->
 
 ## Table of Contents
 
@@ -257,7 +256,7 @@ defmodule ElixirAiApp.AI.OpenAIClient do
   @behaviour ElixirAiApp.AI.AIClientBehaviour
 
   @base_url "https://api.openai.com/v1"
-  @default_model "gpt-4-turbo-preview"
+  @default_model "gpt-4.1"
   @default_temperature 0.7
   @default_max_tokens 1000
 
@@ -485,7 +484,7 @@ defmodule ElixirAiApp.AI.Assistant do
   @impl true
   def init(opts) do
     max_history = Keyword.get(opts, :max_history, 10)
-    model = Keyword.get(opts, :model, "gpt-4-turbo-preview")
+    model = Keyword.get(opts, :model, "gpt-4.1")
 
     state = %{
       history: [],
@@ -800,7 +799,7 @@ defmodule ElixirAiApp.AI.BatchProcessor do
   Process questions with different AI models concurrently.
   """
   def multi_model_consensus(question) do
-    models = ["gpt-4-turbo-preview", "gpt-3.5-turbo", "gpt-4"]
+    models = ["gpt-4.1", "gpt-3.5-turbo", "gpt-4"]
 
     tasks =
       Enum.map(models, fn model ->
