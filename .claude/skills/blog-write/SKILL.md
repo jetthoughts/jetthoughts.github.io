@@ -125,6 +125,16 @@ not what you intended to change.
 New media gets the visual gate in `blog-pipeline.md`: 1280x800 and 390x844, four
 criteria scored, and the scores written into the commit message.
 
+**The reading gate applies to EVERY post over 800 words, images or none.** Two
+gates already cover that and neither is optional: `ruby bin/check-post-visuals`
+(BLOCKING, `blog-pipeline.md` STEP 6b - a ratchet, so a new long post with no
+diagram pushes the count over the floor and fails) and CLAUDE.md's
+cognitive-load rule, which says measure screens-to-scroll and the longest
+unbroken prose run in the browser instead of eyeballing them. Quote both numbers
+in the handback, then look at the screenshot: numbers do not catch two labels
+colliding inside an SVG, and that shipped into a PR on 2026-08-28 with every
+measurement green.
+
 ## Ship
 
 Feature branch, commit, `gh pr create` with the evidence. Never push to master.
@@ -221,6 +231,30 @@ Brief each with goal and artifact, never with your conclusions. Require each to
 name something it would cut; a panel returning three approvals was not asked a
 real question. Run them in parallel and wait for all four before editing, or you
 will fix the same post four times.
+
+## A verdict binds to a version, not to the session
+
+Record every gate result as `gate: verdict @ <sha>`. If HEAD has moved since,
+that verdict is stale for the gates named below and they count as UNRUN. Saying
+"the panel approved it" about a draft since restructured is not a lie told on
+purpose; it is what happens when a result lives in memory rather than against a
+commit. On 2026-08-28 a four-lens panel reviewed a draft, the post was rewritten
+three times after operator corrections, and it reached a merge-ready PR with one
+reviewer having read the shipped text.
+
+| What you changed | Re-run |
+|---|---|
+| Structure, section order, the thesis | Reading gate, slop score, one cold-eyes lens |
+| A claim, a number, a citation | Claim verification for that claim |
+| Sentences inside one section | The greps, on the changed text - they ran against the old words and re-running is free. A replacement sentence that asserts anything is a claim change, row 2. |
+
+**The slop score is a floor you re-measure, not a badge you keep.** Below 8 it
+does not ship, and an 8 taken before a restructure is worth nothing after one.
+
+**Expensive gates are the ones that get skipped.** Greps cost one command so
+they run constantly; the browser gate and the panel cost real time, so they
+slide to the end and then off. When a change is structural, run the expensive
+one FIRST.
 
 ## Three exits, and only three
 
