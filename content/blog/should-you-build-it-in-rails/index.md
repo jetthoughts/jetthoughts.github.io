@@ -47,7 +47,7 @@ Then we went looking for where the 90% comes from. The only place we could find 
 
 So we tried to build the argument properly, comparing Rails against the JavaScript frameworks, and it fell apart for a duller reason: the things people put on either side of that comparison are not the same kind of thing. Rails decides your database layer, your page rendering, your background jobs and your file uploads. Most of what it gets compared to decides one of those. Release cadences measured across that gap tell you almost nothing, in either direction.
 
-What is left is Rails on its own terms, which is checkable. And a better version of the original complaint, which is not about anything reinventing itself.
+What is left is Rails on its own terms, plus a better version of the original complaint that has nothing to do with anything reinventing itself.
 
 ![Diagram contrasting an assembled project, where the team picked routing, data layer, folders and testing, against a conventional project where the framework picked all four, so a new developer learns four local decisions in one case and nothing new in the other](assembly-vs-convention.svg)
 
@@ -67,7 +67,7 @@ Here is how Rails has answered one question, how an app should handle its JavaSc
 
 Four of the five land from 2017 on.
 
-In August 2019 Rails made a tool called Webpacker the standard way every new app handled its JavaScript. Twenty-nine months later the Rails team put a heading at the top of it: "Webpacker has been retired." They committed to fixing security problems "on the Ruby side of the gem" and said they "will not be updating the gem to include newer versions of the JavaScript libraries." Read that qualifier twice. A tool whose job is bundling JavaScript depends on a great deal of JavaScript, and that half is the half they stopped updating. Continued development passed to a project run by someone outside the Rails team.
+In August 2019 Rails made a tool called Webpacker the standard way every new app handled its JavaScript. Twenty-nine months later the Rails team put a heading at the top of it: "Webpacker has been retired." They promised to keep fixing security problems in the Ruby half of it, and said plainly that they "will not be updating the gem to include newer versions of the JavaScript libraries." The tool's whole job was handling JavaScript, so the half they stopped maintaining was the important one. Continued development passed to somebody outside the Rails team.
 
 If an agency built your app in 2020 by following the defaults, that is your app. Nobody did anything wrong.
 
@@ -83,7 +83,7 @@ In plain terms, Rails warns before it removes. A team that upgrades regularly se
 
 That promise is worth nothing on its own. It pays out only for a team that keeps shipping, which is the same team that answers question one well.
 
-Last December we moved one of our own applications from Rails 8.0 to 8.1. The changed files were dependency versions, generated configuration, migrations Rails wrote itself, and stock error pages: nothing under the directories holding code we wrote by hand. You cannot check that, so do not take it on trust. Anyone can reproduce the shape of it by generating an empty app on two Rails versions and comparing the two, which takes about five minutes and needs no access to us.
+Last December we moved one of our own applications from Rails 8.0 to 8.1. The changed files were dependency versions, generated configuration, migrations Rails wrote itself, and stock error pages: nothing under the directories holding code we wrote by hand. You cannot check that, so do not take it on trust. Ask the team proposing Rails to show you the same thing from their own last upgrade, which is question one in a different form.
 
 ## Hiring is the cost nobody volunteers
 
@@ -93,7 +93,9 @@ The [2025 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2025/
 
 ![Bar chart of languages used in the past year from the Stack Overflow 2025 survey: JavaScript 66 percent, TypeScript 43.6 percent, Ruby 6.4 percent, of 31,771 responses](hiring-pool.svg)
 
-That survey is self-selected and measures what people used rather than what employers are hiring for, so treat it as a direction. The direction is that Ruby is a small pool and JavaScript is a large one, and no argument about framework quality changes that. Price it, or pick something else.
+That survey is self-selected and measures what people used rather than what employers are hiring for, so treat it as a direction. The direction is that Ruby is a small pool and JavaScript is a large one, and no argument about framework quality changes that.
+
+What softens it is the next section. A smaller pool hurts most when replacing someone takes months, and the whole point of a conventional codebase is that it does not. That is why question four asks how quickly a stranger could add a feature, and why a vague answer there should worry you more than the 6.4% does.
 
 ## What Rails actually does for delivery
 
@@ -101,15 +103,15 @@ The honest case for Rails has nothing to do with stability. It is about how quic
 
 Rails apps are arranged the same way as each other. Where the database code lives, how a form reaches a table, where background work goes: the framework decides, not whoever set up your project. A developer who has never seen your product knows where to look on the first day, and there is less of your own invented structure for them to learn.
 
-The cost of an assembled project is easy to miss, because you only pay it the second time. On an assembled project, each new developer learns the arrangement that this team invented, finds out which parts of it have quietly broken, and cannot carry any of it to the next project. On a conventional one, someone who has worked on any Rails app has already met most of yours. That is what question four is testing. You are not buying better code. You are buying a shorter answer to "how does this thing work".
+The cost of an assembled project is easy to miss, because you only pay it the second time. On an assembled project, each new developer learns the arrangement that this team invented, finds out which parts of it have quietly broken, and cannot carry any of it to the next project. On a conventional one, someone who has worked on any Rails app has already met most of yours. That is what question four is testing. What you are buying is a shorter answer to "how does this thing work".
 
 That changes who has to be involved in a feature. Splitting work between a front-end specialist and a back-end specialist is normal on JavaScript projects and unusual on Rails ones, where one person can carry a feature from the database to the screen. One person shipping end to end is faster than two coordinating.
 
 Ruby also says things in less code, and that part has been measured: a [study of 7,087 programs](https://arxiv.org/abs/1409.0252) across eight languages, Ruby among them, found scripting languages more concise than the procedural and object-oriented ones. Ruby's solutions came out around twice as short as Java's and C's.
 
-Read that paper to the end, though, because it also counted which languages produced programs that ran without failing, and the scripting languages came last. Ruby managed 86% where Go managed 98%. Shorter is not automatically safer, and the study we are citing for the first half says so in the second.
+That same study also counted which languages produced programs that ran without failing, and the scripting languages came last, Ruby included. Which is why we will not tell you shorter code means fewer bugs: the paper we just used for the first half contradicts it in the second, and you should hold that against any vendor who quotes you only the flattering page.
 
-Dependency counts run the same way in our experience. Every installed package is maintained by somebody else, on their schedule, and can be abandoned without asking you.
+Dependency counts run the same way in our experience. Your team names the handful of outside libraries it wants; each of those quietly brings its own, and so on down the chain, until the number actually installed is far larger than the number anybody chose. Every one of them is maintained by a stranger on their own schedule, and can be abandoned without asking you.
 
 ![Diagram showing this website declares 19 Ruby libraries and installs 81, about four times, while it declares 15 JavaScript packages and installs 500, about thirty-three times](dependency-fan-out.svg)
 
@@ -123,7 +125,7 @@ Say yes without much worry if the team answered the four questions, if Rails is 
 
 Push back if what you were sold was the stability story, because that story does not survive Rails' own release history and the person telling it has not looked. Push back harder if the answer to any of the four is a shrug, because every one of them is about how they work rather than about Rails.
 
-If the answers come back bad, the answer is not a different framework. It is a different team, while this is still a proposal rather than a codebase somebody has to [rescue](/services/vibe-code-rescue/).
+If the answers come back bad, change the team while this is still a proposal rather than a codebase somebody has to [rescue](/services/vibe-code-rescue/).
 
 ## Sources
 
