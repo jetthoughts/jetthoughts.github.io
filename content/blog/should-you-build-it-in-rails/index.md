@@ -111,7 +111,7 @@ Ruby also says things in less code, and that part has been measured: a [study of
 
 That same study also counted which languages produced programs that ran without failing, and the scripting languages came last, Ruby included. Which is why we will not tell you shorter code means fewer bugs: the paper we just used for the first half contradicts it in the second, and you should hold that against any vendor who quotes you only the flattering page.
 
-Dependency counts run the same way in our experience. Your team names the handful of outside libraries it wants; each of those quietly brings its own, and so on down the chain, until the number actually installed is far larger than the number anybody chose. Every one of them is maintained by a stranger on their own schedule, and can be abandoned without asking you.
+Dependency counts run the same way. Your team names the handful of outside libraries it wants; each of those quietly brings its own, and so on down the chain, until the number actually installed is far larger than the number anybody chose. Every one of them is maintained by a stranger on their own schedule, and can be abandoned without asking you.
 
 ![Diagram showing this website declares 19 Ruby libraries and installs 81, about four times, while it declares 15 JavaScript packages and installs 500, about thirty-three times](dependency-fan-out.svg)
 
