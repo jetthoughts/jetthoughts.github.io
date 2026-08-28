@@ -44,7 +44,20 @@ leadership was promoted from inside the team - so a title claim misstates what
 happened. Treat it as the same class as a fabricated testimonial, not as a style
 preference.
 
-What the site sells instead, and the only thing it sells: **an embedded team of
+**AMENDED (Paul, 2026-08-28).** The ban above is about MISDESCRIBING PAST
+ENGAGEMENTS, not about what we are willing to sell. We do sell technical
+advising in whatever role a client needs it, including fractional CTO and
+engineering manager, and we can deliver it. What is true is that it has found
+no clients and is not the main product.
+
+So: **do not flag existing posts or service pages for offering fCTO/EM
+advising, and do not "repair" them.** The `/services/fractional-cto`,
+`/services/emergency-cto-leadership` and related pages stay, and blog CTAs
+pointing at them are fine. What still applies is the original factual point -
+do not claim we supplied a titled leader on an engagement where we did not,
+which is what the Crosslake basis below is about.
+
+The main offer, and what new marketing copy should lead with: **an embedded team of
 senior self-managed full-stack developers who drive the development while the
 client runs the rest of the business.** Chosen over migration assurance, CRA,
 SOC 2 and umbrella positioning because it is the only offer that has ever
