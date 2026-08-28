@@ -6,9 +6,7 @@ edited_at: '2025-01-16T00:00:00Z'
 draft: false
 tags: ["ai", "code-review", "github-copilot", "claude", "developer-tools", "productivity", "automation"]
 canonical_url: https://jetthoughts.com/blog/ai-powered-code-reviews-transforming-development-workflows/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ai-powered-code-reviews-transforming-development-workflows/cover.jpeg
 metatags:
-  image: cover.jpeg
 slug: ai-powered-code-reviews-transforming-development-workflows
 ---
 

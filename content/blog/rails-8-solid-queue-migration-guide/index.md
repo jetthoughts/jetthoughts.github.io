@@ -6,9 +6,7 @@ edited_at: '2025-01-16T19:00:00Z'
 draft: false
 tags: ['rails', 'ruby', 'performance', 'background-jobs', 'rails-8', 'solid-queue', 'migration', 'production', 'deployment']
 canonical_url: https://jetthoughts.com/blog/rails-8-solid-queue-migration-guide/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rails-8-solid-queue-migration-guide/cover.jpeg
 metatags:
-  image: cover.jpeg
 slug: rails-8-solid-queue-migration-guide
 keywords: 'Rails 8, Solid Queue, DelayedJob, background jobs, migration guide, performance, Ruby on Rails, job processing, production deployment'
 author: 'JetThoughts Team'

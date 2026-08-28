@@ -63,7 +63,7 @@ end
 # config/environments/production.rb
 config.cache_store = :solid_cache_store
 
-# Advanced configuration options (verify against rails/solid_cache for current option names)
+# Advanced configuration options - full list in the solid_cache README
 config.cache_store = :solid_cache_store, {
   database: :cache,              # Use separate cache database
   expires_in: 2.weeks,           # Default expiration
