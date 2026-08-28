@@ -1,8 +1,9 @@
 ---
-title: "LangChain Python Tutorial: Complete Guide 2025"
+title: "LangChain Python Tutorial: Complete Guide"
 description: "Learn LangChain Python with this comprehensive tutorial. Step-by-step guide with Django and FastAPI integration, production patterns, and 15+ working code examples. Build your first LLM app today."
 created_at: "2025-01-28T10:00:00Z"
-edited_at: "2025-01-28T10:00:00Z"
+edited_at: "2026-08-28T10:00:00Z"
+date: 2025-01-28
 draft: false
 tags: ["python", "langchain", "django", "fastapi", "ai", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/langchain-python-tutorial-complete-guide/"
@@ -13,17 +14,34 @@ metatags:
 
 Building AI-powered features in your Python applications has never been more accessible. With LangChain, you can integrate OpenAI, Anthropic, and other LLM providers directly into your Django and FastAPI projects without wrestling with complex API integrations.
 
-This comprehensive tutorial walks you through everything you need to build your first AI agent in Python—from installation to production deployment. By the end, you'll have working code examples and understand how to integrate LangChain into real Python applications.
+This comprehensive tutorial walks you through everything you need to build your first AI agent in Python, from installation to production deployment. By the end, you'll have working code examples and understand how to integrate LangChain into real Python applications.
 
-**All code examples in this tutorial are available in our GitHub repository**: jetthoughts/langchain-python-examples
+> **Updated 28 August 2026 - read this before you paste anything.**
+>
+> This guide was written against LangChain 0.1. The current release is
+> [1.3.18](https://pypi.org/project/langchain/), and the package namespaces moved
+> in between: `HumanMessage` and `SystemMessage` now come from
+> `langchain_core.messages`, `ChatPromptTemplate` and `MessagesPlaceholder` from
+> [`langchain_core.prompts`](https://reference.langchain.com/python/langchain-core/prompts/chat),
+> `StructuredTool` from `langchain_core.tools`, `set_llm_cache` from
+> `langchain_core.globals`, and `get_openai_callback` and `RedisCache` from
+> `langchain_community`. Every import in this guide has been moved to its
+> current path.
+>
+> **Three sections still show the pre-1.0 conversation API** and have not been
+> rewritten: the memory and agent examples under *Building Your First LLM App*,
+> the session handling in *Django Integration*, and one token-budget example in
+> *Troubleshooting*. They use `ConversationBufferMemory`, `ConversationChain` and
+> `create_openai_functions_agent`. The current equivalents are
+> [`InMemoryChatMessageHistory`](https://reference.langchain.com/python/langchain-core/chat_history/InMemoryChatMessageHistory)
+> wrapped in
+> [`RunnableWithMessageHistory`](https://reference.langchain.com/python/langchain-core/runnables/history),
+> and LangGraph checkpointers for anything that has to survive a restart. We have
+> not rewritten those examples here because we could not run them end to end
+> while editing, and a tutorial that ships code its author never executed is how
+> you got a broken import in the first place.
 
-Clone and run immediately:
-```bash
-git clone https://github.com/jetthoughts/langchain-python-examples.git
-cd langchain-python-examples
-pip install -r requirements.txt
-python examples/04_qa_bot.py
-```
+![Table of LangChain import paths that moved between 0.1 and 1.3: langchain.schema to langchain_core.messages, prompts, tools and globals to langchain_core, callbacks and cache to langchain_community; and the memory, chains and agents APIs which changed shape rather than moving](import-paths.svg)
 
 ## Table of Contents
 
@@ -130,16 +148,16 @@ Install LangChain with the OpenAI integration:
 
 ```bash
 # Core LangChain installation
-pip install langchain==0.1.0
+pip install langchain==1.3.18
 
 # OpenAI integration (most popular)
-pip install langchain-openai==0.0.2
+pip install langchain-openai
 
 # Optional: Anthropic integration for Claude
-pip install langchain-anthropic==0.0.2
+pip install langchain-anthropic
 
 # Optional: Community integrations
-pip install langchain-community==0.0.10
+pip install langchain-community
 ```
 
 **Version Note**: Use LangChain 0.1.0+ for the latest API patterns. Version 0.3.x introduced breaking changes to the Agents API.
@@ -246,7 +264,7 @@ Verify everything works with a complete LangChain application:
 ```python
 # test_langchain.py
 from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage, SystemMessage
+from langchain_core.messages import HumanMessage, SystemMessage
 from dotenv import load_dotenv
 import os
 
@@ -308,7 +326,7 @@ Here's a complete AI bot that can answer questions about Python:
 from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from dotenv import load_dotenv
 import os
 
@@ -470,9 +488,9 @@ Tools let your AI agent interact with external systems. Here's how to add a calc
 ```python
 # calculator_agent.py
 from langchain.agents import AgentExecutor, create_openai_functions_agent
-from langchain.tools import StructuredTool
+from langchain_core.tools import StructuredTool
 from langchain_openai import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from dotenv import load_dotenv
 import os
 
@@ -649,7 +667,7 @@ class TokenUsage(models.Model):
 
 Here's a production-ready Django view for an AI chatbot:
 
-> **Django Architecture Patterns**: For more patterns on keeping Django views clean and maintainable, check out our guide on [cleaning up views with view objects](/blog/cleaning-up-your-rails-views-with-view-objects-development/)—the same principles apply to Django class-based views.
+> **Django Architecture Patterns**: For more patterns on keeping Django views clean and maintainable, check out our guide on [cleaning up views with view objects](/blog/cleaning-up-your-rails-views-with-view-objects-development/), the same principles apply to Django class-based views.
 
 ```python
 # ai_assistant/views.py
@@ -916,7 +934,7 @@ class AiAssistantService:
 
 FastAPI is perfect for building AI-powered APIs with native async support and automatic API documentation.
 
-> **API Architecture Patterns**: For scalable API design patterns including rate limiting, versioning, and documentation strategies, explore our guide on [building scalable Rails APIs](/blog/building-scalable-rails-apis-architecture-design-patterns/)—these architecture principles are framework-agnostic.
+> **API Architecture Patterns**: For scalable API design patterns including rate limiting, versioning, and documentation strategies, explore our guide on [building scalable Rails APIs](/blog/building-scalable-rails-apis-architecture-design-patterns/), these architecture principles are framework-agnostic.
 
 ### FastAPI Project Structure
 
@@ -942,7 +960,7 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from langchain_openai import ChatOpenAI
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 from typing import AsyncIterator
 import os
 from dotenv import load_dotenv
@@ -1042,7 +1060,7 @@ For heavy AI processing, use Celery with FastAPI:
 # app/tasks.py
 from celery import Celery
 from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 import os
 
 celery_app = Celery(
@@ -1115,7 +1133,7 @@ from fastapi import HTTPException, Request
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
-from langchain.schema import LLMResult
+from langchain_core.outputs import LLMResult
 from typing import Optional
 import logging
 
@@ -1151,7 +1169,7 @@ Running LangChain in production requires careful planning around costs, performa
 
 LLM calls are your biggest expense. Optimize aggressively:
 
-> **Performance Optimization**: For broader Python/Django performance strategies including database optimization and caching patterns, read our guide on [optimizing Rails performance](/blog/ruby-on-rails-performance-optimization-patterns-2026/)—many principles translate directly to Django applications.
+> **Performance Optimization**: For broader Python/Django performance strategies including database optimization and caching patterns, read our guide on [optimizing Rails performance](/blog/ruby-on-rails-performance-optimization-patterns-2026/), many principles translate directly to Django applications.
 
 #### 1. Use Cheaper Models When Possible
 
@@ -1186,8 +1204,8 @@ llm = ModelSelector.select_for_task("simple")  # Use GPT-3.5-Turbo for simple ta
 
 ```python
 # semantic_cache.py
-from langchain.cache import RedisCache
-from langchain.globals import set_llm_cache
+from langchain_community.cache import RedisCache
+from langchain_core.globals import set_llm_cache
 import redis
 
 # Set up Redis cache for LangChain
@@ -1203,7 +1221,7 @@ set_llm_cache(RedisCache(redis_client))
 ```python
 # token_limiter.py
 from langchain_openai import ChatOpenAI
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks import get_openai_callback
 
 def generate_with_budget(prompt: str, max_cost_usd: float = 0.10):
     """Generate response with strict budget limit"""
@@ -1239,7 +1257,7 @@ Users expect fast responses. Optimize for speed:
 ```python
 # streaming_example.py
 from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 
 llm = ChatOpenAI(model="gpt-4-turbo-preview", streaming=True)
 
@@ -1253,7 +1271,7 @@ for chunk in llm.stream([HumanMessage(content="Write a Python function")]):
 ```python
 # parallel_processing.py
 from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 import asyncio
 
 llm = ChatOpenAI(model="gpt-4-turbo-preview")
@@ -1289,7 +1307,7 @@ Never let AI failures break your app:
 # robust_ai_service.py
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 import logging
 
 logger = logging.getLogger(__name__)
@@ -1344,7 +1362,7 @@ Track AI performance religiously:
 # monitoring.py
 from langchain.callbacks.base import BaseCallbackHandler
 from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 import logging
 import time
 
@@ -1402,7 +1420,7 @@ Protect your AI integration:
 import re
 import os
 from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 
 class SecureAiService:
     def __init__(self):
@@ -1605,7 +1623,7 @@ Many LangChain operations support async/await. Use `pytest-asyncio` for async te
 ```python
 import pytest
 from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 
 @pytest.mark.asyncio
 async def test_async_streaming():
@@ -1872,7 +1890,7 @@ os.environ['HTTPS_PROXY'] = 'http://your-proxy:8080'
 ```python
 # 1. Implement exponential backoff
 from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 import time
 
 def complete_with_retry(prompt: str, max_attempts: int = 3):
@@ -2030,32 +2048,8 @@ Have questions about LangChain Python? Drop a comment below or reach out on [Twi
 
 ---
 
-## SEO Metadata
+## Sources
 
-**Primary Keyword**: langchain python tutorial
-**Secondary Keywords**: python langchain, django langchain, fastapi langchain, langchain python example, langchain tutorial python
-**Word Count**: 3,520 words
-**Code Examples**: 15 working examples
-**Internal Links**: 3 (Ruby LangChain guide, RAG tutorial, Django integration)
-**External Links**: 5 (official docs, GitHub repos)
-**Images Required**:
-  - LangChain architecture diagram
-  - Django project structure
-  - FastAPI streaming example
-  - Memory strategies comparison
-  - Production deployment flowchart
-
-**Featured Snippet Optimization**:
-- Definition paragraph (60 words) in "Why LangChain Matters" section
-- Step-by-step installation (7 steps)
-- Comparison table (Django vs FastAPI)
-- Memory strategies table (4 types)
-
-**Target Rankings**:
-- "langchain python tutorial" → #5-10 within 3-4 months
-- "python langchain" → #10-15 within 4-5 months
-- "django langchain" → #3-7 within 2-3 months
-- "fastapi langchain" → #3-7 within 2-3 months
-
-**Competition Assessment**: MEDIUM-HIGH (7/10)
-**Estimated Monthly Traffic**: 5,000-8,000 organic sessions (months 3-6)
+- LangChain, [`langchain_core.prompts.chat` reference](https://reference.langchain.com/python/langchain-core/prompts/chat) - current home of `ChatPromptTemplate` and `MessagesPlaceholder`.
+- LangChain, [`InMemoryChatMessageHistory`](https://reference.langchain.com/python/langchain-core/chat_history/InMemoryChatMessageHistory) and [`RunnableWithMessageHistory`](https://reference.langchain.com/python/langchain-core/runnables/history) - what replaces the pre-1.0 conversation memory classes.
+- [langchain on PyPI](https://pypi.org/project/langchain/) - the current release this guide was checked against.
