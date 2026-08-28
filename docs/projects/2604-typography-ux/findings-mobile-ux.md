@@ -60,6 +60,13 @@ H1→H2 = 1.33×, H2→body = 1.41× (good). H3→body = 1.12× (tight).
 }
 
 /* 3. Code block: smaller token + tighter padding */
+   SUPERSEDED 2026-08-28: the font-size half never took effect. A later global
+   `.blog pre code { font-size: 15.5px }` sorts after this block, and media
+   queries add no specificity, so mobile has always rendered 15.5px. Re-measured
+   at 390x844 in Aug 2026: fences wrap (pre-wrap), scroll is contained, no
+   horizontal page overflow - the horizontal-scroll concern this rule addressed
+   does not reproduce. Ratified rather than restored; the dead declaration is
+   deleted. The padding half was always live and stays. */
 @media (max-width: 768px) {
   .blog pre code { font-size: 14.5px; line-height: 1.6; }
   .blog pre { padding: 18px 20px; }

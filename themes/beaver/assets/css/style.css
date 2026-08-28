@@ -433,13 +433,12 @@
     font-size: 18px;
     line-height: 1.55;
   }
-  /* Code blocks: tighter padding + smaller token to reduce horizontal scroll */
+  /* Code blocks: tighter padding to reduce horizontal scroll. The token size
+     that used to live here was dead - the global .blog pre code rule below
+     sorts later and media queries add no specificity, so mobile always
+     rendered 15.5px. Measured fine at that size; ratified 2026-08-28. */
   .blog pre {
     padding: 18px 20px;
-  }
-  .blog pre code {
-    font-size: 14.5px;
-    line-height: 1.6;
   }
 }
 
