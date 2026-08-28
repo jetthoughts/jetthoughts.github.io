@@ -39,7 +39,7 @@ A team that answers those four well is worth hiring whatever they build in. The 
 
 ## The argument you were probably given, and why we dropped it
 
-Most pitches for Rails run like this: the JavaScript world reinvents itself constantly, Rails is mature and stable, so your product stays maintainable.
+Most pitches for Rails run like this: the JavaScript world reinvents itself constantly, Rails is mature and stable, so your product stays maintainable. It is the wrong argument, and we know because we tried to write it.
 
 Evil Martians published the best-known version, [The Long Game](https://evilmartians.com/chronicles/the-long-game-why-rails-survived-the-hype-cycle-and-what-it-means-for-your-startup), in August 2025. It calls Rails "the framework that once powered 90% of Y Combinator batches." We set out to write our own version of that post.
 
@@ -47,7 +47,9 @@ Then we went looking for where the 90% comes from. The only place it appears is 
 
 So we tried to build the argument properly, comparing Rails against the JavaScript frameworks, and it fell apart for a duller reason: the things people put on either side of that comparison are not the same kind of thing. Rails decides your database layer, your page rendering, your background jobs and your file uploads. Most of what it gets compared to decides one of those. Release cadences measured across that gap tell you almost nothing, in either direction.
 
-What is left is Rails on its own terms, which is checkable.
+What is left is Rails on its own terms, which is checkable. And a better version of the original complaint, which is not about anything reinventing itself.
+
+The real difference is where your application's shape comes from. A JavaScript project is assembled: somebody picks the routing, the data layer, the folder structure, the testing approach, and those choices belong to that project. A Rails project inherits most of them. That is a genuine trade, and the cost of it lands on the second developer rather than the first.
 
 ## Rails moves more than the pitch admits
 
@@ -94,6 +96,8 @@ That survey is self-selected and measures what people used rather than what empl
 The honest case for Rails has nothing to do with stability. It is about how quickly a small team can add the next thing, and it is easier to argue than to prove.
 
 Rails apps are arranged the same way as each other. Where the database code lives, how a form reaches a table, where background work goes: the framework decides, not whoever set up your project. A developer who has never seen your product knows where to look on the first day, and there is less of your own invented structure for them to learn.
+
+That cost is easy to miss because you only pay it the second time. On an assembled project, each new developer learns the arrangement that this team invented, finds out which parts of it have quietly broken, and cannot carry any of it to the next project. On a conventional one, someone who has worked on any Rails app has already met most of yours. You are not buying better code. You are buying a shorter answer to "how does this thing work".
 
 That changes who has to be involved in a feature. Splitting work between a front-end specialist and a back-end specialist is normal on JavaScript projects and unusual on Rails ones, where one person can carry a feature from the database to the screen. One person shipping end to end is faster than two coordinating, and it is the reason question four is worth asking.
 
