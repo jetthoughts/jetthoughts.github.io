@@ -12,9 +12,7 @@ tags:
 - technical-debt
 - startup-growth
 canonical_url: https://jetthoughts.com/blog/5-warning-signs-your-startup-needs-technical-leadership/
-cover_image: 5-warning-signs-cover.jpg
 metatags:
-  image: 5-warning-signs-og.jpg
   title: "5 Warning Signs Your Startup Needs Technical Leadership"
   description: "These warning signs predict technical crises 6 months early. Ignore them at your own risk. Real stories, proven frameworks."
   keywords: "fractional CTO services, emergency CTO leadership, technical debt prevention, startup technical leadership, when to hire CTO, development crisis management"

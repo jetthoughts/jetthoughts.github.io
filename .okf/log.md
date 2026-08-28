@@ -3642,3 +3642,11 @@ was restructured three times after its review panel ran. Three root causes:
 recalled process substituted for loaded process (the skill was never invoked),
 gate verdicts held as memory rather than bound to a sha, and cost-driven gate
 frequency that ran greps constantly and the browser gate once.
+
+## 2026-08-28 - fCTO/EM advising is sellable; canon wording was too broad
+Amended `content/claims-canon.md`. Paul: "We sell tech advising by any role
+like fCTO or EM... It's not our main product... We can handle such services."
+The 2026-08-21 ban read as prohibiting the OFFER; it was only ever about
+misdescribing a past engagement (Crosslake). A corpus sweep had flagged 36
+posts and 7 CTAs into /services/fractional-cto as canon violations - all false
+positives. Service pages stay, CTAs stay, no repairs.

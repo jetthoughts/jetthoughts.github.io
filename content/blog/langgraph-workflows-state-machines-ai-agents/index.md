@@ -30,7 +30,7 @@ A linear LangChain pipeline works fine until the second agent shows up. Two agen
 
 This is the wall every team hits between prototype and production. State machines exist for this exact problem in classical software, and LangGraph is the LangChain team's port of that pattern to agent orchestration: nodes, edges, checkpoints, and a runtime that knows where the system is at any moment so a failure mid-run doesn't lose the work that already happened.
 
-LangGraph 1.0 - the version this post targets - is what's running in production at Uber, LinkedIn, and Klarna (cite the [LangGraph 1.0 release post](https://blog.langchain.dev/langgraph-1-0/) for the latest list). It's not the only orchestration option, but it's the one we land on when the alternative is a homegrown state manager that nobody wants to debug at 3 AM.
+LangGraph 1.0 - the version this post targets - is what's running in production at Uber, LinkedIn and Klarna, the three companies LangChain named in its [1.0 general availability announcement](https://changelog.langchain.com/announcements/langgraph-1-0-is-now-generally-available). It's not the only orchestration option, but it's the one we land on when the alternative is a homegrown state manager that nobody wants to debug at 3 AM.
 
 The rest of this post covers node caching for performance, deferred nodes for map-reduce, pre/post hooks for control flow, human-in-the-loop patterns for critical decisions, and consensus mechanisms for multi-agent agreement - all with working code examples.
 

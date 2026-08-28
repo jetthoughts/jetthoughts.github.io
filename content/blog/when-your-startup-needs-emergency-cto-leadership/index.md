@@ -13,9 +13,7 @@ tags:
 - technical-debt-crisis
 - engineering-management
 canonical_url: https://jetthoughts.com/blog/when-your-startup-needs-emergency-cto-leadership/
-cover_image: cover.jpg
 metatags:
-  image: cover.jpg
 slug: when-your-startup-needs-emergency-cto-leadership
 faqs:
 - question: "When should a startup consider emergency CTO leadership?"

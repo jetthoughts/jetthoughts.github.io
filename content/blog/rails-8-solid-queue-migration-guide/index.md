@@ -6,9 +6,7 @@ edited_at: '2025-01-16T19:00:00Z'
 draft: false
 tags: ['rails', 'ruby', 'performance', 'background-jobs', 'rails-8', 'solid-queue', 'migration', 'production', 'deployment']
 canonical_url: https://jetthoughts.com/blog/rails-8-solid-queue-migration-guide/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rails-8-solid-queue-migration-guide/cover.jpeg
 metatags:
-  image: cover.jpeg
 slug: rails-8-solid-queue-migration-guide
 keywords: 'Rails 8, Solid Queue, DelayedJob, background jobs, migration guide, performance, Ruby on Rails, job processing, production deployment'
 author: 'JetThoughts Team'
@@ -58,13 +56,13 @@ The beauty? Your job classes remain largely unchanged, but the underlying engine
 
 Let's talk real numbers from our production migrations:
 
-| Metric | DelayedJob | Solid Queue | Improvement |
-|--------|-----------|------------|-------------|
-| Jobs/second | 12 | 38 | **3.2x** |
-| P95 Latency | 450ms | 120ms | **73% reduction** |
-| Database Load | 68% CPU | 15% CPU | **78% reduction** |
-| Memory Usage | 2.8GB | 890MB | **68% reduction** |
-| Deployment Downtime | 45 seconds | 0 seconds | **Zero-downtime** |
+| Metric | DelayedJob to Solid Queue |
+|---|---|
+| Jobs/second | 12 to 38, **3.2x** |
+| P95 latency | 450ms to 120ms, **73% lower** |
+| Database load | 68% to 15% CPU, **78% lower** |
+| Memory usage | 2.8GB to 890MB, **68% lower** |
+| Deployment downtime | 45 seconds to 0, **zero-downtime** |
 
 These aren't synthetic benchmarks—this is real production data from a Rails app processing 1.2 million jobs daily.
 
