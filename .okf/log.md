@@ -51,6 +51,21 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-28 - editorial-system blueprint consolidated: four gate upgrades, corpus factory rejected
+
+Paul supplied a thoughtbot-style editorial/pipeline blueprint; consolidation
+verdict and the full adopt/reject map live in
+`docs/90-99-content-strategy/strategy-analysis/90.13-editorial-system-consolidation-2026-08-28-reference.md`.
+Adopted as surgical skill edits (two-lens review panel, both PASS-with-edits,
+all findings applied): falsifiable-thesis outline test (`blog-next` Stage C),
+evidence-pack excerpt + wording-strength discipline (Stage B, wired to
+`blog-write` panel lens 4 with citation-spend tracing), five-search-results
+rejection clause (Stage A1), and a code-rot REPAIR trigger in `blog-operator`
+(51 own posts carry runnable fences with no re-check path - the blueprint's
+180-day leg, the one refresh element nothing here covered). The rules live in
+the skills; no `.okf` concept owns the blog pipeline (deliberate - the skills
+are the canonical process surface).
+
 ## 2026-08-24 - the uncited gate was truncating its input at the first `---` rule
 
 `MarketingCopyTest#uncited_posts` read post bodies as

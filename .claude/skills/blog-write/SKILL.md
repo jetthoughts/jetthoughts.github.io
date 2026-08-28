@@ -211,7 +211,11 @@ Four lenses, spawned as separate agents of a DIFFERENT type than the writer:
    it FETCH two current competitor posts, so it compares against writing rather
    than a summary.
 4. **Claim verification** - every external claim fetched at the primary, every
-   in-repo number checked against the artifact that produced it.
+   in-repo number checked against the artifact that produced it. Where the
+   research digest carries a source excerpt (`blog-next` Stage B), diff the
+   draft's sentence against the excerpt, not against memory of the source.
+   Trace every footer source to the sentence that spends it - a citation the
+   body never engages is dressing, not evidence.
 
 Brief each with goal and artifact, never with your conclusions. Require each to
 name something it would cut; a panel returning three approvals was not asked a

@@ -38,6 +38,23 @@ that.
    not by how bad the claim reads - `.okf/content/claims-canon.md` carries the
    rule and the reasoning. Use `blog-write` in UPGRADE mode.
 
+   The ratchet only catches invented claims. Code rots too, and a rotted
+   snippet costs the same trust - it just fails in the reader's terminal
+   instead of on the page. Second REPAIR trigger: a top-impressions post
+   carrying runnable commands or pinned versions, never re-checked since it
+   shipped. Candidates (51 of our own posts as of 2026-08-28):
+
+   ````
+   rg -l '```(bash|ruby|sh|console)' content/blog/*/index.md |
+     xargs rg --files-without-match 'source: dev_to'
+   ````
+
+   Do NOT sweep all 51 - intersect with the impression ranking you already
+   pulled and take the top few. Run their commands in a clean shell against
+   current versions; broken means fix, or date-stamp what it was verified
+   against ("verified on Rails 8.1, Feb 2026"). The grep finds candidates;
+   deciding is judgment.
+
 2. **UPGRADE - is an approved upgrade waiting?**
    Check 20.09 §13 for UPGRADE verdicts with nothing shipped against them. An
    upgrade to a page that already ranks beats a new post that has to earn its
