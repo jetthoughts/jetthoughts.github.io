@@ -98,3 +98,18 @@ jobs:
       # process, so the pair shares a single production build. Two steps
       # would build the whole site twice and blow the job timeout.
       - run: bundle exec rake test:links test:html_proofer
+
+      # test:links_external existed in the Rakefile and was wired into no
+      # workflow - the same dead-code-reading-as-coverage defect the comment
+      # above describes for html_proofer. It is what would have caught the dead
+      # LangChain cookbook link, the dead langchainai Twitter link and the 404
+      # blog.langchain.dev source, all of which shipped and were only found by
+      # hand on 2026-08-28.
+      #
+      # Scheduled and manual runs only. External URLs rate-limit and flap, so
+      # running this per-PR would train everyone to ignore a red check; the
+      # daily cron catches rot without blocking anyone. Non-blocking by design.
+      - name: External links (scheduled only, non-blocking)
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: bundle exec rake test:links_external
