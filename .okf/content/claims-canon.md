@@ -45,10 +45,13 @@ happened. Treat it as the same class as a fabricated testimonial, not as a style
 preference.
 
 **AMENDED (Paul, 2026-08-28).** The ban above is about MISDESCRIBING PAST
-ENGAGEMENTS, not about what we are willing to sell. We do sell technical
-advising in whatever role a client needs it, including fractional CTO and
-engineering manager, and we can deliver it. What is true is that it has found
-no clients and is not the main product.
+ENGAGEMENTS, not about what we are able to deliver.
+
+The accurate position, in Paul's words: we do not lead with fractional CTO and
+we do not claim it as a flagship, but we can provide it if a client turns up.
+It has not found clients and it is not the main service. So it is available
+rather than advertised - do not put it at the front of new positioning work,
+and do not delete it either.
 
 So: **do not flag existing posts or service pages for offering fCTO/EM
 advising, and do not "repair" them.** The `/services/fractional-cto`,
