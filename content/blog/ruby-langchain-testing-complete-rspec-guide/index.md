@@ -674,7 +674,7 @@ FactoryBot.define do
         text: Faker::Lorem.paragraph(sentence_count: 3)
       }]
     end
-    model { 'claude-3-sonnet-20240229' }
+    model { 'claude-sonnet-4-6' }
     stop_reason { 'end_turn' }
     usage do
       {
