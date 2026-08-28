@@ -138,7 +138,9 @@ three sources below, then use search to kill the bad ones.
    prompts, model IDs, proprietary numbers no.
 
 A candidate is only worth writing when an external hook meets first-hand
-evidence. A hot topic we have nothing to say about is somebody else's post.
+evidence. A hot topic we have nothing to say about is somebody else's post -
+the cheap test: could the post be written entirely from the first five search
+results?
 
 ### A2 - audit the candidates (search as veto, never as source)
 
@@ -309,12 +311,35 @@ more interesting than the summary implied.
    quotes or personas - `.okf/content/claims-canon.md` records "Sarah" as banned.
 7. Internal links per `blog-pipeline.md` STEP 3b.
 
-Stage B output: a sourced digest - every claim with its URL, links verified.
+Stage B output: a sourced digest, one entry per claim: the claim, the primary
+URL, the **exact supporting excerpt copied from the source**, and any caveat
+the source itself states. The claim-verification lens diffs the draft's
+sentence against the excerpt, not against memory of the source. Record what
+the excerpt licenses, not just what it says: a study **demonstrates**, a
+vendor **reports**, a correlation **suggests**, a projection **may** -
+matching the verb to the evidence is accuracy, not hedging; the voice guide's
+"never hedge" rule governs opinions, not sources. A claim whose excerpt you
+cannot paste is a claim you have not verified.
 
 ## Stage C - outline, then gate it
 
 Write the outline: hook shape, H2 sequence, what the reader does differently
 after each section, where internal links land, the CTA.
+
+**The outline carries a thesis, and the thesis must be falsifiable.** One
+sentence a competent reader could disagree with. Before gating, answer four
+questions in the outline itself:
+
+- What flawed default does this correct, and who actually holds it? No named
+  population, no thesis - §3's attribution test, applied to the post instead
+  of the sentence.
+- Would the counterargument's holder sign your statement of it?
+- Where does the advice stop applying? These boundary conditions feed the
+  "When NOT to" section blog-pipeline STEP 4 already requires.
+- What will the post NOT cover? One line, so scope creep is visible at review.
+
+"Testing matters" cannot be false in any situation - that is a topic, not an
+argument; send it back to Stage A.
 
 Apply `blog-pipeline.md`'s cut test here, where a cut costs a line instead of a
 section. Pick a cadence anchor and hook shape from
