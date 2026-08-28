@@ -56,13 +56,13 @@ The beauty? Your job classes remain largely unchanged, but the underlying engine
 
 Let's talk real numbers from our production migrations:
 
-| Metric | DelayedJob | Solid Queue | Improvement |
-|--------|-----------|------------|-------------|
-| Jobs/second | 12 | 38 | **3.2x** |
-| P95 Latency | 450ms | 120ms | **73% reduction** |
-| Database Load | 68% CPU | 15% CPU | **78% reduction** |
-| Memory Usage | 2.8GB | 890MB | **68% reduction** |
-| Deployment Downtime | 45 seconds | 0 seconds | **Zero-downtime** |
+| Metric | DelayedJob to Solid Queue |
+|---|---|
+| Jobs/second | 12 to 38, **3.2x** |
+| P95 latency | 450ms to 120ms, **73% lower** |
+| Database load | 68% to 15% CPU, **78% lower** |
+| Memory usage | 2.8GB to 890MB, **68% lower** |
+| Deployment downtime | 45 seconds to 0, **zero-downtime** |
 
 These aren't synthetic benchmarks—this is real production data from a Rails app processing 1.2 million jobs daily.
 
