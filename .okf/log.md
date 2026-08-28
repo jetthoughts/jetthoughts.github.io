@@ -3653,3 +3653,12 @@ active offer, which overstates it. Paul's position is that we do not lead with
 fractional CTO or claim it as a flagship, but can provide it if a client turns
 up. Available rather than advertised - keep it off the front of new positioning
 work, and do not delete it either.
+
+## 2026-08-28 - three verdicts on three number sets
+Added `content/fabrication-ratchet.md` section "Three verdicts on three sets of
+numbers, same sweep". One sweep, three benchmark tables, three different
+answers: arithmetically impossible (delete), same triple across unrelated stacks
+(delete), coherent but unreproducible (keep and qualify). Records the
+discriminator order - self-contradiction, corpus repetition, competitor rows
+running against the author, reproducibility - and the finding that the uncited
+ratchet measures link presence rather than attribution.

@@ -162,3 +162,41 @@ Using it would have made us the 27th.
 - When a citation flatters you unusually, read the authors' own caveats first.
 - Re-derive any ratio from the same table both numerator and denominator
   come from.
+
+## Three verdicts on three sets of numbers, same sweep (2026-08-28)
+
+A credibility sweep hit three benchmark tables in one day and reached three
+different answers. The differences are the useful part, because "delete numbers
+that look suspicious" is as wrong as inventing them.
+
+**1. ARITHMETICALLY IMPOSSIBLE - delete.** A table claimed "real production data
+from a Rails app processing 1.2 million jobs daily" with a before-throughput of
+12 jobs/second. 1.2M/86,400 = 13.89/sec sustained, so at 12/sec the queue falls
+163,200 jobs behind every day and never drains. Two figures in the same
+paragraph refuting each other needs no external source. **Check the internal
+arithmetic before going looking for a citation - it is faster and it is
+conclusive.**
+
+**2. THE SAME FIGURES ACROSS UNRELATED STACKS - delete.** `450ms -> 120ms -> 73%`
+appeared three times: once for Rails background-job latency, twice for Django
+async views. One post used the identical triple for two DIFFERENT scenarios of
+its own ("sequential operations" and "heavy I/O"). Different measurements do not
+land on the same three numbers. **Grep a suspicious figure across the whole
+corpus; a template shows up as repetition, not as a bad single value.**
+
+**3. COHERENT BUT UNREPRODUCIBLE - keep and qualify.** Falcon's benchmark tables
+survived. Falcon at 102ms against a forced 100ms I/O delay is exactly right, the
+Puma row degrades in proportion to its worker slots, and the hello-world table
+shows a COMPETITOR (Agoo) beating our recommendation on every column. Nobody
+fabricates a rival beating their own pick. What was actually wrong: no load
+generator named, no date, no app described - unreproducible rather than false.
+Fixed by saying so and pointing at the sibling post that does record its method.
+
+**The discriminator, in order of cost:** does it contradict itself; does the same
+figure appear elsewhere; does a competitor row run against the author; can a
+reader re-run it. Only the last one was missing on Falcon, and that is a
+disclosure problem, not a fabrication.
+
+**Corollary on gates.** The uncited-posts ratchet counts a post as cited if it
+carries ANY external link. Falcon has 17 links and 24 unattributed benchmark
+tables, so it sat green. Link presence is not attribution.
