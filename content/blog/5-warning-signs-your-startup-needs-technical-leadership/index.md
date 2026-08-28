@@ -37,6 +37,8 @@ The CTO had been working 90-hour weeks for eight months, the engineering team wa
 
 Here's the thing: **every single warning sign was visible six months earlier**. I've helped startups navigate technical leadership challenges, and the patterns are eerily consistent. The companies that thrive are the ones that recognize these warning signs early and act on them. The ones that don't... well, you probably never heard of them.
 
+![Five warning signs a startup needs technical leadership, ordered from easiest to spot to most serious: simple changes taking longer, the team avoiding parts of the codebase, technical decisions needing multiple meetings, developers proposing a full rewrite, and team confidence visibly dropping](five-warning-signs.svg)
+
 ## Warning Sign #1: Simple Changes Take Exponentially Longer
 
 **The Pattern**: What used to take hours now takes days. What used to take days now takes weeks. Your developers are spending more time figuring out *how* to make changes than actually making them.

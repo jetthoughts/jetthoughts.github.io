@@ -93,6 +93,8 @@ Here's the kicker: these problems are like a three-legged stool. You can't fix t
 
 Walking into these situations has taught me that effective crisis leadership isn't about being the smartest person in the room—it's about creating clarity when everything feels chaotic.
 
+![Timeline of the first three weeks: week one listening and diagnosis before changing anything, week two small visible wins that rebuild trust, week three onward building systems that outlast the crisis](first-three-weeks.svg)
+
 ### Week One: Listen Before You Leap
 
 My first week in any crisis situation follows the same playbook, and it's probably not what you'd expect. I don't immediately dive into the codebase or start whiteboarding new architectures. Instead, I become a professional listener.
