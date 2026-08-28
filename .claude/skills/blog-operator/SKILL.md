@@ -118,6 +118,9 @@ today. If a gate blocks, that is the system working.
 **Author ≠ verifier.** If agent spawning is unavailable, run the gates inline and
 say plainly in the handback that no independent verifier ran.
 
+**Name which gates ran, and against which commit.** A gate you cannot name a sha
+for did not run - see `blog-write` §"A verdict binds to a version".
+
 ## Three exits
 
 - **SHIPPED** - one or more units delivered, each with its PR and gate numbers.
