@@ -43,13 +43,15 @@ Most pitches for Rails run like this: the JavaScript world reinvents itself cons
 
 Evil Martians published the best-known version, [The Long Game](https://evilmartians.com/chronicles/the-long-game-why-rails-survived-the-hype-cycle-and-what-it-means-for-your-startup), in August 2025. It calls Rails "the framework that once powered 90% of Y Combinator batches." We set out to write our own version of that post.
 
-Then we went looking for where the 90% comes from. The only place it appears is that post. Several revenue and funding figures alongside it have the same problem. That does not make them false, but nobody reading can check them, and neither could we.
+Then we went looking for where the 90% comes from. The only place we could find it is that post. Several revenue and funding figures alongside it have the same problem. That does not make them false, but nobody reading can check them, and neither could we.
 
 So we tried to build the argument properly, comparing Rails against the JavaScript frameworks, and it fell apart for a duller reason: the things people put on either side of that comparison are not the same kind of thing. Rails decides your database layer, your page rendering, your background jobs and your file uploads. Most of what it gets compared to decides one of those. Release cadences measured across that gap tell you almost nothing, in either direction.
 
 What is left is Rails on its own terms, which is checkable. And a better version of the original complaint, which is not about anything reinventing itself.
 
-The real difference is where your application's shape comes from. A JavaScript project is assembled: somebody picks the routing, the data layer, the folder structure, the testing approach, and those choices belong to that project. A Rails project inherits most of them. That is a genuine trade, and the cost of it lands on the second developer rather than the first.
+![Diagram contrasting an assembled project, where the team picked routing, data layer, folders and testing, against a conventional project where the framework picked all four, so a new developer learns four local decisions in one case and nothing new in the other](assembly-vs-convention.svg)
+
+The real difference is where your application's shape comes from. A JavaScript project is assembled: somebody picks the routing, the data layer, the folder structure, the testing approach, and those choices belong to that project. A Rails project inherits most of them. That is a genuine trade, and the cost of it lands on the second developer rather than the first. It is also what question three is asking about, which is why the answer you want is that they invented as little as possible.
 
 ## Rails moves more than the pitch admits
 
@@ -63,9 +65,9 @@ Here is how Rails has answered one question, how an app should handle its JavaSc
 | 7.0, December 2021 | **importmaps; Webpacker retired** |
 | 8.0, November 2024 | **Propshaft replaces Sprockets** |
 
-Four of those five changes land in the seven years after 2017.
+Four of the five land from 2017 on.
 
-In August 2019 Rails made a tool called Webpacker the standard way every new app handled its JavaScript. Twenty-nine months later the Rails team put a heading at the top of it: "Webpacker has been retired." They committed to fixing security problems "on the Ruby side of the gem" and said they "will not be updating the gem to include newer versions of the JavaScript libraries." Read that qualifier twice, because the JavaScript libraries are where most of the security problems in that tool actually live. Continued development passed to a project run by someone outside the Rails team.
+In August 2019 Rails made a tool called Webpacker the standard way every new app handled its JavaScript. Twenty-nine months later the Rails team put a heading at the top of it: "Webpacker has been retired." They committed to fixing security problems "on the Ruby side of the gem" and said they "will not be updating the gem to include newer versions of the JavaScript libraries." Read that qualifier twice. A tool whose job is bundling JavaScript depends on a great deal of JavaScript, and that half is the half they stopped updating. Continued development passed to a project run by someone outside the Rails team.
 
 If an agency built your app in 2020 by following the defaults, that is your app. Nobody did anything wrong.
 
@@ -89,6 +91,8 @@ This decides what happens the day your developer resigns.
 
 The [2025 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2025/technology) asked developers which languages they had used that year. Of the 31,771 who answered, 66% named JavaScript and 43.6% named TypeScript. Ruby, the language Rails is written in, came back at 6.4%.
 
+![Bar chart of languages used in the past year from the Stack Overflow 2025 survey: JavaScript 66 percent, TypeScript 43.6 percent, Ruby 6.4 percent, of 31,771 responses](hiring-pool.svg)
+
 That survey is self-selected and measures what people used rather than what employers are hiring for, so treat it as a direction. The direction is that Ruby is a small pool and JavaScript is a large one, and no argument about framework quality changes that. Price it, or pick something else.
 
 ## What Rails actually does for delivery
@@ -97,17 +101,19 @@ The honest case for Rails has nothing to do with stability. It is about how quic
 
 Rails apps are arranged the same way as each other. Where the database code lives, how a form reaches a table, where background work goes: the framework decides, not whoever set up your project. A developer who has never seen your product knows where to look on the first day, and there is less of your own invented structure for them to learn.
 
-That cost is easy to miss because you only pay it the second time. On an assembled project, each new developer learns the arrangement that this team invented, finds out which parts of it have quietly broken, and cannot carry any of it to the next project. On a conventional one, someone who has worked on any Rails app has already met most of yours. You are not buying better code. You are buying a shorter answer to "how does this thing work".
+The cost of an assembled project is easy to miss, because you only pay it the second time. On an assembled project, each new developer learns the arrangement that this team invented, finds out which parts of it have quietly broken, and cannot carry any of it to the next project. On a conventional one, someone who has worked on any Rails app has already met most of yours. That is what question four is testing. You are not buying better code. You are buying a shorter answer to "how does this thing work".
 
-That changes who has to be involved in a feature. Splitting work between a front-end specialist and a back-end specialist is normal on JavaScript projects and unusual on Rails ones, where one person can carry a feature from the database to the screen. One person shipping end to end is faster than two coordinating, and it is the reason question four is worth asking.
+That changes who has to be involved in a feature. Splitting work between a front-end specialist and a back-end specialist is normal on JavaScript projects and unusual on Rails ones, where one person can carry a feature from the database to the screen. One person shipping end to end is faster than two coordinating.
 
 Ruby also says things in less code, and that part has been measured: a [study of 7,087 programs](https://arxiv.org/abs/1409.0252) across eight languages, Ruby among them, found scripting languages more concise than the procedural and object-oriented ones. Ruby's solutions came out around twice as short as Java's and C's.
 
 Read that paper to the end, though, because it also counted which languages produced programs that ran without failing, and the scripting languages came last. Ruby managed 86% where Go managed 98%. Shorter is not automatically safer, and the study we are citing for the first half says so in the second.
 
-Dependency counts run the same way in our experience. This website declares 19 Ruby libraries and installs 81. It declares 15 JavaScript packages and installs 500. Every one of those is maintained by somebody else, on their schedule, and can be abandoned without asking you. That is a build toolchain rather than two comparable applications, so read it as the shape of the difference and not its size.
+Dependency counts run the same way in our experience. Every installed package is maintained by somebody else, on their schedule, and can be abandoned without asking you.
 
-What nobody has measured is whether any of this actually makes you faster. No study compares Rails against a TypeScript stack for delivery speed, or for the cost of running the same application for five years. When a vendor quotes you a productivity multiplier, they are quoting a feeling, and so are we when we tell you Rails suits this.
+![Diagram showing this website declares 19 Ruby libraries and installs 81, about four times, while it declares 15 JavaScript packages and installs 500, about thirty-three times](dependency-fan-out.svg)
+
+What nobody seems to have measured is whether any of this actually makes you faster. We went looking for a study comparing Rails against a TypeScript stack on delivery speed, or on the cost of running the same application for five years, and did not find one. When a vendor quotes you a productivity multiplier, they are quoting a feeling, and so are we when we tell you Rails suits this.
 
 The most useful thing we found while checking is also the least convenient. Comparing programs written in seven languages, Lutz Prechelt reported that "the performance variability that derives from differences among programmers of the same language ... is on average as large or larger than the variability found among the different languages." He was careful that his results held for the one problem he tested. Take it as a caution rather than a law: who you hire looks like it matters more than what they build it in.
 
