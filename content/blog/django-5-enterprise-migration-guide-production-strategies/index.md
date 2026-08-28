@@ -1357,10 +1357,10 @@ class DashboardView(View):
             )
             return response.json()
 
-# Performance comparison:
-# Synchronous: 450ms (sequential operations)
-# Async: 120ms (concurrent operations)
-# Improvement: 73% faster
+# The win here is concurrency, not raw speed: three independent awaits that
+# used to run one after another now overlap, so the view costs roughly the
+# slowest call instead of their sum. Measure your own - it depends entirely on
+# how many external calls you make and how slow they are.
 ```
 
 ### Database Connection Pool Optimization
@@ -1655,9 +1655,8 @@ A: Performance gains depend on I/O-bound operations:
 
 ```python
 # Scenario 1: Heavy I/O (database + external APIs)
-# Django 4.2 sync view: 450ms average
-# Django 5.0 async view: 120ms average
-# Improvement: 73% faster
+# This is where async pays. The more independent I/O a view does, the more
+# there is to overlap. A view making one query gains nothing.
 
 # Scenario 2: CPU-bound operations
 # Django 4.2 sync view: 180ms average
