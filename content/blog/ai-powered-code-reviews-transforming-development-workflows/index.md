@@ -1,157 +1,83 @@
 ---
-title: "AI-Powered Code Reviews: How GitHub Copilot and Claude Are Transforming Pull Request Workflows"
-description: "Discover how AI-powered code reviews are revolutionizing development workflows, boosting productivity by 70%, and transforming how teams collaborate on code quality in 2025."
+title: "Your AI Reviewer Approved It. Did It Read Its Own Report?"
+description: "We built a code reviewer out of AI agents. One of them found a SQL injection, listed it, and wrote approve directly above it. Here is why that happens and what to ask your team about it."
 created_at: '2025-01-16T00:00:00Z'
-edited_at: '2025-01-16T00:00:00Z'
+edited_at: '2026-08-28T00:00:00Z'
+date: 2025-01-16
 draft: false
-tags: ["ai", "code-review", "github-copilot", "claude", "developer-tools", "productivity", "automation"]
+tags: ["ai", "code-review", "startup", "engineering", "automation"]
 canonical_url: https://jetthoughts.com/blog/ai-powered-code-reviews-transforming-development-workflows/
+aliases:
+  - /blog/ai-powered-code-reviews-transforming-development-workflows-2025/
 metatags:
 slug: ai-powered-code-reviews-transforming-development-workflows
 ---
 
-The code review process hasn't fundamentally changed in decades. Developers submit pull requests, wait for human reviewers, address feedback, and iterate. But in 2025, AI is finally disrupting this workflow in meaningful ways. With tools like GitHub Copilot's code review features and Claude's deep code understanding, teams are seeing 70% faster review cycles and catching 85% more potential issues before they reach production.
+We built a code reviewer out of AI agents. Three specialists look at a change, one for security, one for performance, one for style, and a fourth model merges what they found into a single review.
 
-Yet adoption remains surprisingly uneven. While 82% of developers use AI tools weekly, many teams still treat AI-powered code reviews with skepticism. Let's explore what's actually working, what's hype, and how to effectively integrate these tools into your workflow.
+It found a SQL injection. It listed the SQL injection. Then it wrote **approve** on the line directly above.
 
-### Key Takeaways
+Not a hallucination, and not a model having a bad day. The same response contained both the finding and the verdict contradicting it. That is worth your attention if anybody has ever told you the AI reviewed it, because the sentence you were given was the verdict, and the verdict is the part that was wrong.
 
-* AI code review tools reduce review time by 70% while improving bug detection by 85%
-* GitHub Copilot and Claude offer complementary approaches to automated code analysis
-* Success requires thoughtful integration, not wholesale replacement of human reviewers
-* The most effective teams use AI as a "first pass" reviewer before human oversight
+## Reporting and judging are different jobs
 
-### What Are AI-Powered Code Reviews?
+The model was good at the first one. It read a diff it had never seen, found a real injection, and described it accurately. As a reporter it did the work.
 
-AI-powered code reviews use large language models (LLMs) to analyze code changes, identify potential issues, and suggest improvements. Unlike traditional static analysis tools that follow rigid rules, these AI systems understand context, patterns, and intent.
+Then we asked the same model, in the same breath, to summarise its own findings into a decision. That is a different task. It is not looking for problems any more; it is producing a tidy summary, and "approve" is the tidiest summary there is.
 
-The technology goes beyond simple linting. Modern AI reviewers can detect logic errors, suggest architectural improvements, identify security vulnerabilities, and even check if code aligns with team conventions. They learn from millions of code repositories and apply that knowledge to your specific codebase.
+![Diagram contrasting two designs: asking the model for a verdict, where it reports a SQL injection and then approves it in the same response, against computing the verdict in code, where any specialist reporting a finding forces request-changes](reporter-not-judge.svg)
 
-What makes this revolutionary is the contextual understanding. When an AI reviews your code, it considers the broader codebase, understands the business logic, and can even infer your intentions from comments and variable names.
+The fix was not a better prompt. We deleted the field.
 
-### How GitHub Copilot Enhances PR Workflows
+The specialists still report findings. The synthesiser still merges them into a readable list. But it is no longer asked what the findings mean, because a field that is unreliable and that something depends on is worse than no field at all. The verdict is now five lines of ordinary code counting reports:
 
-GitHub Copilot's code review capabilities have evolved significantly beyond code generation. The latest iteration can analyze entire pull requests and provide comprehensive feedback within seconds of submission.
+```ruby
+# The gate is deterministic Ruby over reported findings, not model
+# self-assessment: a free model will happily write "approve" above
+# the injection it just found.
+def headline
+  blocking = @reviews.values.count { |review| Array(review['findings']).any? }
+  return '**Verdict:** approve' if blocking.zero?
 
-Here's what a Copilot-enhanced review looks like:
-
-```python
-# Original code submitted in PR
-def calculate_discount(user, product):
-    if user.is_premium:
-        return product.price * 0.8
-    else:
-        return product.price
-
-# Copilot's review comment:
-# ⚠️ Potential issue: No null checking for user or product
-# 🔒 Security: Price manipulation possible if product.price is negative
-# 💡 Suggestion: Consider extracting discount rates to configuration
+  "**Verdict:** request changes - #{blocking} of #{@reviews.size} specialists reported findings"
+end
 ```
 
-Copilot excels at pattern recognition across your repository. If you've handled similar logic elsewhere, it will suggest consistency. It catches common pitfalls like missing error handling, potential null references, and even suggests performance optimizations based on your tech stack.
+That is the whole gate. If any specialist reported anything, changes are requested. No model gets a vote on whether its own findings matter.
 
-The real power comes from its integration directly into GitHub's PR interface. Developers see AI feedback alongside human comments, making it part of the natural review flow rather than a separate tool to check.
+## Why this is not a Ruby problem
 
-### Claude's Role in Code Review Automation
+Nothing above depends on the language. The shape is: a model produced structured output, and a human asked the same model to interpret it.
 
-While Copilot works within GitHub's ecosystem, Claude brings a different approach through its deep reasoning capabilities and ability to handle complex, multi-file reviews.
+Anywhere that shape exists, the same failure is available. A model that summarises a security scan can call it clean. A model that grades its own output can pass it. A model asked whether a task is finished will usually say yes, because finished is the shape of a good answer.
 
-Claude shines in architectural reviews and complex refactoring scenarios:
+The general rule we now work by: **anything that gates a decision belongs in code that reads the model's output, never in the model's summary of it.** Models are worth trusting as instruments. The thing that decides what an instrument's reading means is not itself an instrument.
 
-```javascript
-// Claude's analysis of a service refactor
-/*
-Analysis: This service refactor introduces 3 architectural concerns:
+## Four questions for whoever runs your reviews
 
-1. Circular dependency risk between UserService and AuthService
-2. Database transaction boundaries aren't clearly defined
-3. The new caching layer might cause stale data issues in distributed deployments
+None of these needs you to read code.
 
-Recommended approach:
-- Implement dependency injection to break circular dependencies
-- Use explicit transaction decorators
-- Add cache invalidation strategy with TTL based on data sensitivity
-*/
-```
+| Ask them | What a good answer sounds like |
+|---|---|
+| When the AI approves a change, what actually decided that? | A rule they can state. **"The model said it looked fine" is the failure above.** |
+| Can I see a review where it found something and the change was blocked? | A real one, with the finding and the block. **If every review approves, nothing is gating.** |
+| What happens if the AI reports a problem and the author disagrees? | A person decides, by name. **"We take the AI's summary" means nobody does.** |
+| Is the security check the same tool as the review? | Ideally not. **One tool tuned to be quiet should not be the only thing looking for the expensive bugs.** |
 
-Teams using Claude report that it excels at understanding business logic and catching subtle bugs that might pass traditional reviews. Its ability to reason about code in natural language makes it particularly valuable for explaining complex issues to junior developers.
+A team that answers these well is doing something real. A team whose answer is that the AI approves things is describing the exact defect we hit, and we hit it in code we wrote deliberately, with the failure in front of us.
 
-### Real-World Implementation Examples
+## What we are not claiming
 
-At JetThoughts, we've helped several clients integrate AI code reviews into their workflows. Here's what actually works:
+We have not measured how often this happens. It happened in our own example workflow, we could reproduce it, and we changed the design so it cannot happen again. That is one team's finding, not a rate.
 
-**The Progressive Approach**: Start with AI reviewing only non-critical paths. One fintech client began by having AI review their internal tooling and gradually expanded to customer-facing code as confidence grew.
+We also are not claiming AI review is bad. Ours found the injection. The reporting worked, which is precisely why the verdict being wrong is worth knowing about: the useful part and the unreliable part arrive in the same message, and the unreliable part is the one that reads like a decision.
 
-**The Hybrid Model**: Use AI for the first pass, humans for the final review. A healthcare startup reduced their average PR review time from 4 hours to 45 minutes by having AI handle initial checks for style, obvious bugs, and test coverage.
+If you want the details, the workflow is public: [`examples/code_review/workflow.rb`](https://github.com/jetthoughts/ruby_llm-team/blob/main/examples/code_review/workflow.rb) in [`jetthoughts/ruby_llm-team`](https://github.com/jetthoughts/ruby_llm-team), including the comment we left ourselves about what a free model will happily approve.
 
-```yaml
-# Example GitHub Actions workflow for AI-first reviews
-name: AI Code Review
-on:
-  pull_request:
-    types: [opened, synchronize]
+We have written separately about [what to ask when a dev shop says the code was reviewed](/blog/dev-shop-ai-code-review-what-to-ask/), which covers the research on what automated reviewers miss and why the tuning that makes them tolerable is the same tuning that makes them quiet.
 
-jobs:
-  ai-review:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: AI Review
-        uses: github/copilot-review-action@v1
-        with:
-          review-level: comprehensive
-          focus-areas: ["security", "performance", "best-practices"]
-      - name: Post Review Summary
-        if: always()
-        uses: actions/github-script@v6
-        with:
-          script: |
-            // Post AI findings as PR comment
-            // Human reviewers see AI feedback first
-```
-
-### Best Practices and Integration Tips
-
-Successfully integrating AI code reviews requires more than just turning on the tools. Here are proven strategies:
-
-**Set Clear Boundaries**: Define what AI should and shouldn't review. Critical security code might need human-only reviews, while UI components could be primarily AI-reviewed.
-
-**Train Your Team**: Developers need to understand AI limitations. It can hallucinate, miss context, or suggest overly complex solutions. Training helps teams calibrate their trust appropriately.
-
-**Customize AI Prompts**: Both Copilot and Claude allow customization. Feed them your team's coding standards, architectural decisions, and business context for more relevant reviews.
-
-**Measure and Iterate**: Track metrics like review time, bugs caught, and false positive rates. Use this data to continuously tune your AI review process.
-
-### Challenges and Solutions
-
-AI code reviews aren't perfect. Here are common challenges and how to address them:
-
-**Information Overload**: AI can generate verbose feedback. Solution: Configure tools to prioritize critical issues and summarize minor ones.
-
-**Context Limitations**: AI might not understand your specific business logic. Solution: Include detailed comments and documentation that AI can reference.
-
-**Over-reliance Risk**: Teams might rubber-stamp AI approvals. Solution: Require human review for certain code paths and rotate reviewers regularly.
-
-### The Future of AI in Development Workflows
-
-The trajectory is clear: AI will become an integral part of code review workflows. We're already seeing early experiments with AI that can not only review but also automatically fix issues and generate tests for proposed changes.
-
-By 2026, expect to see AI agents that participate in design discussions, suggest architectural improvements proactively, and even handle routine maintenance tasks autonomously. The question isn't whether to adopt AI code reviews, but how quickly you can integrate them effectively.
-
-### Conclusion
-
-AI-powered code reviews represent a fundamental shift in how we ensure code quality. They're not replacing human reviewers but augmenting them, handling the routine checks so humans can focus on architecture, business logic, and creative problem-solving.
-
-Teams that embrace this technology thoughtfully are seeing dramatic improvements in both velocity and quality. The key is starting small, measuring results, and gradually expanding AI's role as your team builds confidence.
-
-Ready to transform your code review process? Start with a pilot project, measure the results, and iterate. The future of development is collaborative—between humans and AI.
 ## Sources
 
-- GitHub Blog, [How AI is transforming code review at GitHub](https://github.blog/ai-and-ml/github-copilot/how-ai-is-transforming-code-review-at-github/). GitHub's own data on Copilot code review adoption and impact.
-- C. Bird et al., [Expectations, Outcomes, and Challenges of Modern Code Review](https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/), IEEE Software (2016). Foundational paper on what code review actually catches — the baseline AI tools are measured against.
-
-
----
-
-*JetThoughts helps development teams integrate AI tools effectively into their workflows. [Contact us](https://jetthoughts.com/contact-us/) to learn how we can accelerate your team's productivity with AI-powered development practices.*
+- [`jetthoughts/ruby_llm-team`](https://github.com/jetthoughts/ruby_llm-team), `examples/code_review/workflow.rb` - the workflow described above, including the deterministic verdict and the comment explaining why it exists.
+- GitHub Blog, [How AI is transforming code review at GitHub](https://github.blog/ai-and-ml/github-copilot/how-ai-is-transforming-code-review-at-github/) - GitHub's own account of Copilot review adoption.
+- C. Bird et al., [Expectations, Outcomes, and Challenges of Modern Code Review](https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/), IEEE Software, 2016 - what human code review actually catches, which is the baseline any automated reviewer is measured against.
