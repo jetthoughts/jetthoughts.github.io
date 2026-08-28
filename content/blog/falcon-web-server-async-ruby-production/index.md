@@ -145,7 +145,23 @@ end
 
 ## Performance Benchmarks
 
-Numbers below come from runs against Puma, Unicorn, and a couple of alternatives on identical hardware. Treat them as a starting point - your workload, gem stack, and database pool sizing will all shift the ratios.
+Numbers below come from runs against Puma, Unicorn and a couple of alternatives
+on identical hardware. Read them as indicative rather than reproducible: the load
+generator, the date and the app under test were not recorded alongside them, so
+you cannot re-run these exact figures and check us. What they are good for is the
+shape of the difference, not the absolute values.
+
+If you want numbers with a method attached, the
+[tuning post](/blog/falcon-web-server-production-tuning-benchmarks/) records its
+tooling and includes a rollback that did not go our way. Better still, measure
+your own: your workload, gem stack and database pool sizing move these ratios
+more than the server choice does.
+
+Worth noting what our own table says against us. Agoo beats Falcon on every
+column of the hello-world benchmark below - more requests per second, less
+memory, less CPU. We still reach for Falcon, because a bare hello-world is the
+workload where Falcon's advantage matters least and Rails compatibility matters
+most, but the row stays because deleting it would be dishonest.
 
 ### Hardware Configuration
 - **CPU**: Intel i7-4770 @ 3.40GHz (4 cores, 8 threads)
@@ -184,7 +200,7 @@ Numbers below come from runs against Puma, Unicorn, and a couple of alternatives
 |--------|----------------|----------------------|-----------------|
 | **Falcon** | **5,000** | **2KB** | **<1ms** |
 | Puma | 400 | 8KB | 5ms |
-| Action Cable | 200 | 12KB | 8ms |
+| Action Cable on Puma | 200 | 12KB | 8ms |
 
 ### Real-World Rails Application
 
