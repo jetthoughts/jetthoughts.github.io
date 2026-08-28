@@ -47,42 +47,28 @@ everywhere:**
   - §13 is the live queue (§12 retired). §13a/§13d record the traps, including
   the ones that killed rows in this same file.
 
-## Stage A0 - the calendar, before anything else
+## The calendar - only when asked
 
-**Run this first. A topic is not "next" in isolation - it is next relative to
-what shipped, when, and on what.** Skipping it is how the blog got 11 posts in
-three days (2026-08-20 x6, 08-21 x2, 08-22 x3) against a stated capacity of ~6
-per month, then nothing for the twelve days before that.
+**Pick topics on merit. Do not let the calendar veto a good one.** Spacing is a
+scheduling question, and scheduling is `blog-write`'s job when it sets `date:`.
+
+Run this only when the request is about timing - "what should we publish next
+week", "are we posting too often", or when you need a date for a SCHEDULED exit:
 
 ```sh
-# what shipped, when - the whole calendar in one line
+# `.?` in the old version of this ate the first digit, so 2026 posts came out
+# as "026-..." and sorted below 2025 - the whole current year vanished from the
+# top. 19 legacy posts carry only created_at, hence the alternation.
 for f in content/blog/*/index.md; do
-  d=$(grep -m1 '^date:' "$f" | sed -E 's/date: *.?([0-9-]+).*/\1/')
+  d=$(grep -m1 -E '^(date|created_at):' "$f" \
+      | sed -E "s/^[a-z_]+: *['\"]?([0-9-]+).*/\1/")
   echo "$d $(dirname $f | sed 's|content/blog/||')"
 done | sort -r | head -25
 ```
 
-Check three things, and record each in the topic row:
-
-1. **Spacing.** How many posts in the last 7 days? Capacity is ~6/month
-   (`20.09`, three streams). If the last week already holds three, the correct
-   output is a SCHEDULED row with a future date, not another same-day post.
-2. **Theme recency.** Does a post in the last 14 days already carry this
-   thesis or this proof-signal? If yes the topic is not dead - it is
-   **deferred**. See the exit list.
-3. **Stream and stack balance.** Which of the three streams (Rails Technical /
-   Snippet Hygiene / Founder-ICP-E) has gone quiet, and which stack? Measured
-   2026-08-22 across 620 posts: `rails` 114, `ruby` 100, `css` 16, `llm` 13,
-   `react` 12 - against `postgres` 3, `laravel` 3, `tailwind` 2, `python` 2.
-   **Thin does not mean unwanted.** The single highest-impression uncited guide
-   on the property is Laravel (19,841), and `langchain-python-tutorial` earns
-   the best CTR of any high-impression page (15 clicks / 7,329). Under-covered
-   stacks that already rank are the cheapest expansion available; a fourth
-   Rails post in a week is the most expensive.
-
-**Publishing three posts on one day is a calendar failure even when all three
-are good.** They compete with each other for the same reader and collapse into
-one impression of the blog.
+Capacity is ~6/month across three streams (`20.09`). Three posts on one day
+compete for the same reader and collapse into one impression of the blog, so
+when a date IS being chosen, spread them.
 
 ## Stage A - find candidates, then audit them
 
@@ -132,8 +118,16 @@ three sources below, then use search to kill the bad ones.
 5. **Changelogs and release notes as a trend source** - a framework's own
    release is a dated, citable event with a built-in audience: Rails/Ruby
    releases, Laravel releases, and the security advisories for both. This is
-   the highest-signal source for the under-covered stacks in Stage A0.
-6. **Our real work** - this repo and `~/dev/elital`. The 2026-08-20 batch's best
+   the highest-signal source for the under-covered stacks in A1.6.
+6. **Under-covered stacks that already rank** - the cheapest expansion
+   available. Measured 2026-08-22 across 620 posts: `rails` 114, `ruby` 100,
+   `css` 16, `llm` 13, `react` 12 - against `postgres` 3, `laravel` 3,
+   `tailwind` 2, `python` 2. **Thin does not mean unwanted.** The highest-
+   impression uncited guide on the property is Laravel (19,841) and
+   `langchain-python-tutorial` earns the best CTR of any high-impression page
+   (15 clicks / 7,329). A fourth Rails post is the most expensive option on the
+   board; a Laravel or Python one is the cheapest.
+7. **Our real work** - this repo and `~/dev/elital`. The 2026-08-20 batch's best
    material was a commit-documented outage. Sanitize: shapes and lessons yes;
    prompts, model IDs, proprietary numbers no.
 
@@ -406,8 +400,8 @@ is a scheduling decision, not a verdict on the topic.**
   future-dated post is normal scheduling, and production skips future content
   until the date arrives (`bin/hugo-build` builds it, `rake test:links` does
   not). Pre-writing is the point: the research is hot today and cold in a
-  fortnight. Pick the date from Stage A0 - the next gap of >=3 days on a stream
-  that has gone quiet. Record the date and the reason for it in the topic row.
+  fortnight. Pick the date by running the calendar snippet above - the next gap of >=3
+  days. Record the date and the reason for it in the topic row.
   **Use this whenever the only objection is "we just published something like
   this"** - that is exactly the case it exists for.
 - **HOLD, with evidence** - a terminal success, not a failure. Every candidate
