@@ -28,11 +28,18 @@ This comprehensive tutorial walks you through everything you need to build your 
 > `langchain_community`. Every import in this guide has been moved to its
 > current path.
 >
-> **Three sections still show the pre-1.0 conversation API** and have not been
-> rewritten: the memory and agent examples under *Building Your First LLM App*,
-> the session handling in *Django Integration*, and one token-budget example in
-> *Troubleshooting*. They use `ConversationBufferMemory`, `ConversationChain` and
-> `create_openai_functions_agent`. The current equivalents are
+> **Three sections still show the pre-1.0 conversation API, and on langchain 1.x
+> those imports will not resolve from the `langchain` package.** LangChain 1.0
+> moved its legacy modules into a separate
+> [`langchain-classic`](https://pypi.org/project/langchain-classic/) package, so
+> the six code blocks that import `langchain.memory`, `langchain.chains` or
+> `langchain.agents` need either that package installed or a rewrite. They are
+> the memory and agent examples under *Building Your First LLM App*, the session
+> handling in *Django Integration*, and one token-budget example in
+> *Troubleshooting*, using `ConversationBufferMemory`, `ConversationChain` and
+> `create_openai_functions_agent`. The `langchain-classic` description names
+> legacy chains explicitly; we did not confirm the exact new home of the memory
+> and agent classes inside it. The forward-looking equivalents are
 > [`InMemoryChatMessageHistory`](https://reference.langchain.com/python/langchain-core/chat_history/InMemoryChatMessageHistory)
 > wrapped in
 > [`RunnableWithMessageHistory`](https://reference.langchain.com/python/langchain-core/runnables/history),
