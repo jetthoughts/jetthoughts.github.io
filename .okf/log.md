@@ -3643,10 +3643,13 @@ recalled process substituted for loaded process (the skill was never invoked),
 gate verdicts held as memory rather than bound to a sha, and cost-driven gate
 frequency that ran greps constantly and the browser gate once.
 
-## 2026-08-28 - fCTO/EM advising is sellable; canon wording was too broad
-Amended `content/claims-canon.md`. Paul: "We sell tech advising by any role
-like fCTO or EM... It's not our main product... We can handle such services."
-The 2026-08-21 ban read as prohibiting the OFFER; it was only ever about
-misdescribing a past engagement (Crosslake). A corpus sweep had flagged 36
-posts and 7 CTAs into /services/fractional-cto as canon violations - all false
-positives. Service pages stay, CTAs stay, no repairs.
+## 2026-08-28 - fCTO is available, not advertised; canon wording was too broad
+Amended `content/claims-canon.md` twice. The 2026-08-21 ban read as prohibiting
+the OFFER; it was only ever about misdescribing a past engagement (Crosslake).
+A corpus sweep had flagged 36 posts and 7 CTAs into /services/fractional-cto as
+canon violations - all false positives. Service pages stay, CTAs stay, no
+repairs. Second pass sharpened the wording: the first amendment read as an
+active offer, which overstates it. Paul's position is that we do not lead with
+fractional CTO or claim it as a flagship, but can provide it if a client turns
+up. Available rather than advertised - keep it off the front of new positioning
+work, and do not delete it either.
