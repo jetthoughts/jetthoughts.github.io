@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-label="Five warning signs a startup needs technical leadership, ordered from easiest to spot to most serious: simple changes take longer, the team avoids parts of the codebase, technical decisions need multiple meetings, developers start talking about rewriting everything, and team confidence visibly drops">
+  <rect width="640" height="420" fill="#0e0e14"/>
+  <text x="24" y="38" fill="#dfe2eb" font-family="Inter,Helvetica,sans-serif" font-size="21" font-weight="600">Five signs, in the order you notice them</text>
+  <text x="24" y="61" fill="#8b90a0" font-family="Inter,Helvetica,sans-serif" font-size="14">None of these needs you to read code</text>
+
+  <g font-family="Inter,Helvetica,sans-serif" font-size="15">
+    <rect x="24" y="82" width="592" height="52" rx="7" fill="#1c2026" stroke="#7dd0fe" stroke-width="2"/>
+    <text x="44" y="106" fill="#bfe5ff" font-size="14" font-weight="700">1</text>
+    <text x="70" y="106" fill="#dfe2eb">Simple changes take longer and longer</text>
+    <text x="70" y="126" fill="#8b90a0" font-size="13">A one-line fix becomes a two-day estimate</text>
+
+    <rect x="24" y="146" width="592" height="52" rx="7" fill="#1c2026" stroke="#7dd0fe" stroke-width="2"/>
+    <text x="44" y="170" fill="#bfe5ff" font-size="14" font-weight="700">2</text>
+    <text x="70" y="170" fill="#dfe2eb">The team avoids parts of the codebase</text>
+    <text x="70" y="190" fill="#8b90a0" font-size="13">You hear "nobody wants to touch that"</text>
+
+    <rect x="24" y="210" width="592" height="52" rx="7" fill="#1c2026" stroke="#a855f7" stroke-width="2"/>
+    <text x="44" y="234" fill="#c9a2fb" font-size="14" font-weight="700">3</text>
+    <text x="70" y="234" fill="#dfe2eb">Every technical decision needs another meeting</text>
+    <text x="70" y="254" fill="#8b90a0" font-size="13">Nobody is authorised to decide</text>
+
+    <rect x="24" y="274" width="592" height="52" rx="7" fill="#1c2026" stroke="#cc342d" stroke-width="2"/>
+    <text x="44" y="298" fill="#ff8a7a" font-size="14" font-weight="700">4</text>
+    <text x="70" y="298" fill="#dfe2eb">Developers start saying "rewrite everything"</text>
+    <text x="70" y="318" fill="#8b90a0" font-size="13">The codebase is now scarier than a blank page</text>
+
+    <rect x="24" y="338" width="592" height="52" rx="7" fill="#1c2026" stroke="#cc342d" stroke-width="2"/>
+    <text x="44" y="362" fill="#ff8a7a" font-size="14" font-weight="700">5</text>
+    <text x="70" y="362" fill="#dfe2eb">Confidence visibly drops</text>
+    <text x="70" y="382" fill="#8b90a0" font-size="13">Estimates get vague, demos get postponed</text>
+  </g>
+
+  <text x="24" y="410" fill="#8b90a0" font-family="Inter,Helvetica,sans-serif" font-size="13">Blue you can live with for a while. Red is where the cost compounds.</text>
+</svg>
