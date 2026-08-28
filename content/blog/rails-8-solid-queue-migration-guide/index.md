@@ -1,6 +1,6 @@
 ---
 title: 'Rails 8 Deep Dive: Solid Queue vs DelayedJob - Migration Guide for Production Apps'
-description: 'Learn how to migrate from DelayedJob to Rails 8 Solid Queue with real-world examples, performance benchmarks, and production deployment strategies. Achieve 3x job processing improvement.'
+description: 'How to migrate from DelayedJob to Rails 8 Solid Queue: the schema change, the adapter swap, the pitfalls that bite in production, and what to measure before and after.'
 created_at: '2025-01-16T19:00:00Z'
 edited_at: '2025-01-16T19:00:00Z'
 draft: false
@@ -12,7 +12,7 @@ keywords: 'Rails 8, Solid Queue, DelayedJob, background jobs, migration guide, p
 author: 'JetThoughts Team'
 ---
 
-Last week, our production DelayedJob worker hit 100% CPU at 3 AM. Again. The database table had ballooned to 8 million rows, queries were timing out, and our background job processing had ground to a halt. Sound familiar? If you're still running DelayedJob in production, you've probably experienced this pain. Rails 8's Solid Queue isn't just another background job processor—it's a fundamental rethink of how Rails applications should handle async work. After migrating three production apps with over 50 million jobs processed monthly, here's everything you need to know about moving from DelayedJob to Solid Queue.
+If you run DelayedJob at any volume you know the shape of the bad night: the worker pegged at 100% CPU, the jobs table grown to millions of rows, queries timing out, and the queue going backwards while you watch. Rails 8's Solid Queue is a different design rather than a faster DelayedJob, and the difference shows up under contention rather than on a throughput chart. Here is what moving from one to the other actually involves.
 
 ## The Problem: Why DelayedJob Falls Short in 2025
 
@@ -27,7 +27,7 @@ When your job queue becomes the bottleneck for user experience, it's time to evo
 
 ## Enter Solid Queue: Rails 8's Native Solution
 
-Solid Queue isn't just a DelayedJob replacement—it's a complete reimagining built on modern Rails capabilities:
+Solid Queue isn't just a DelayedJob replacement, it's a complete reimagining built on modern Rails capabilities:
 
 ```ruby
 # Before: DelayedJob's database-heavy approach
@@ -52,19 +52,48 @@ end
 
 The beauty? Your job classes remain largely unchanged, but the underlying engine is completely transformed.
 
-## Performance Benchmarks: Real Numbers from Production
+## What to measure, and why we are not quoting our own numbers
 
-Let's talk real numbers from our production migrations:
+This guide used to carry a benchmark table presented as production data from an
+app running 1.2 million jobs a day. We pulled it, because the numbers do not
+survive their own arithmetic: 1.2 million jobs a day is 13.9 jobs per second
+sustained, and the table's "before" throughput was 12 per second. A system in
+that state falls about 163,000 jobs behind every day and never drains. Both
+figures cannot describe the same running system, so at least one was wrong, and
+we could not tell you which.
 
-| Metric | DelayedJob to Solid Queue |
+Two other rows had the same problem in a different form. Database load was
+claimed to drop 78%, but both adapters keep the queue in your database and both
+poll it, and 37signals report Solid Queue running
+[about 1,300 polling queries per second](https://dev.37signals.com/introducing-solid-queue/)
+at HEY. The adapter imposes database load, it does not remove it. Deployment
+downtime is set by your deploy tooling rather than your queue adapter, so
+crediting it here attributes someone else's improvement to this migration.
+
+The throughput figure was the weakest of the lot. A published benchmark measured
+[delayed_job at 376.5 jobs per second](https://github.com/chanks/queue-shootout)
+on Postgres, roughly thirty times the ceiling our table gave it. Twelve jobs a
+second is not a property of DelayedJob; it describes an under-provisioned worker
+fleet, or heavy jobs, wearing the adapter's name.
+
+What the migration actually buys you is narrower and real. Solid Queue claims
+work with `FOR UPDATE SKIP LOCKED`, so a worker holding a row does not block
+every other worker behind it, which is where DelayedJob hurts under contention.
+For a sense of the scale it runs at, 37signals put about 5.6 million jobs a day
+through it at HEY.
+
+Measure your own, on your own workload. The four numbers worth having before and
+after, all available without special tooling:
+
+| What to record | Where it comes from |
 |---|---|
-| Jobs/second | 12 to 38, **3.2x** |
-| P95 latency | 450ms to 120ms, **73% lower** |
-| Database load | 68% to 15% CPU, **78% lower** |
-| Memory usage | 2.8GB to 890MB, **68% lower** |
-| Deployment downtime | 45 seconds to 0, **zero-downtime** |
+| Sustained jobs/second | Your job count over a full day divided by 86,400. **If this is below your daily volume, your queue is already behind.** |
+| Queue latency at p95 | Time between enqueue and start, not run duration |
+| Database CPU during peak | Your database dashboard, same hour of the same weekday |
+| Failed and retried jobs | Both adapters record this; the ratio matters more than the count |
 
-These aren't synthetic benchmarks—this is real production data from a Rails app processing 1.2 million jobs daily.
+Take the before-reading for at least a week before you change anything. A single
+day tells you about that day.
 
 ## Step-by-Step Migration Guide
 
@@ -488,7 +517,7 @@ After migrating multiple production applications from DelayedJob to Solid Queue,
 
 ## Looking Forward
 
-Solid Queue represents more than just a technical upgrade—it's a fundamental shift in how Rails applications handle background processing. With native Rails 8 support, superior performance, and production-ready features, it's the clear path forward for modern Rails applications.
+Solid Queue represents more than just a technical upgrade, it's a fundamental shift in how Rails applications handle background processing. With native Rails 8 support, superior performance, and production-ready features, it's the clear path forward for modern Rails applications.
 
 The migration from DelayedJob to Solid Queue isn't just about better performance metrics. It's about building a more resilient, scalable foundation for your application's async processing needs. After seeing 3x performance improvements and 78% reduction in database load across our production applications, we can't imagine going back.
 
