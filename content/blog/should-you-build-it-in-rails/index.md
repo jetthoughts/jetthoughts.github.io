@@ -9,7 +9,7 @@ keywords: 'should i use ruby on rails, choosing a tech stack, non-technical foun
 tags: ['rails', 'startup', 'engineering', 'management']
 categories: ['Startups']
 cover_image: "cover.png"
-cover_image_alt: 'Obsidian-dark cover reading Should you let them build it in Rails, with a faceted ruby gem and three chips: asset pipelines since 2011 five defaults, Ruby 6.4% of devs on Stack Overflow 2025, this site declares 15 JS packages and installs 501'
+cover_image_alt: 'Obsidian-dark cover reading Should you let them build it in Rails, with a faceted ruby gem and three chips: asset pipelines since 2011 five defaults, Ruby 6.4% of devs on Stack Overflow 2025, this site declares 15 JS packages and installs 500'
 metatags:
   image: cover.png
 canonical_url: 'https://jetthoughts.com/blog/should-you-build-it-in-rails/'
@@ -101,9 +101,11 @@ That cost is easy to miss because you only pay it the second time. On an assembl
 
 That changes who has to be involved in a feature. Splitting work between a front-end specialist and a back-end specialist is normal on JavaScript projects and unusual on Rails ones, where one person can carry a feature from the database to the screen. One person shipping end to end is faster than two coordinating, and it is the reason question four is worth asking.
 
-Ruby also says things in less code, and that part has been measured: a [study of 7,087 programs](https://arxiv.org/abs/1409.0252) across eight languages, Ruby among them, found scripting languages more concise than the procedural and object-oriented ones. Less code is less to read and less to get wrong.
+Ruby also says things in less code, and that part has been measured: a [study of 7,087 programs](https://arxiv.org/abs/1409.0252) across eight languages, Ruby among them, found scripting languages more concise than the procedural and object-oriented ones. Ruby's solutions came out around twice as short as Java's and C's.
 
-Dependency counts run the same way in our experience. This website declares 19 Ruby libraries and installs 80. It declares 15 JavaScript packages and installs 501. Every one of those is maintained by somebody else, on their schedule, and can be abandoned without asking you. That is a build toolchain rather than two comparable applications, so read it as the shape of the difference and not its size.
+Read that paper to the end, though, because it also counted which languages produced programs that ran without failing, and the scripting languages came last. Ruby managed 86% where Go managed 98%. Shorter is not automatically safer, and the study we are citing for the first half says so in the second.
+
+Dependency counts run the same way in our experience. This website declares 19 Ruby libraries and installs 81. It declares 15 JavaScript packages and installs 500. Every one of those is maintained by somebody else, on their schedule, and can be abandoned without asking you. That is a build toolchain rather than two comparable applications, so read it as the shape of the difference and not its size.
 
 What nobody has measured is whether any of this actually makes you faster. No study compares Rails against a TypeScript stack for delivery speed, or for the cost of running the same application for five years. When a vendor quotes you a productivity multiplier, they are quoting a feeling, and so are we when we tell you Rails suits this.
 
@@ -122,5 +124,5 @@ If the answers come back bad, the answer is not a different framework. It is a d
 - Rails, [Maintenance Policy](https://guides.rubyonrails.org/maintenance_policy.html) - the support windows and the deprecation commitment quoted above.
 - [Webpacker README](https://github.com/rails/webpacker) - the retirement notice and its security scope.
 - Stack Overflow, [2025 Developer Survey: Technology](https://survey.stackoverflow.co/2025/technology) - language usage, 31,771 responses.
-- Nanz and Furia, [A Comparative Study of Programming Languages in Rosetta Code](https://arxiv.org/abs/1409.0252), ICSE 2015 - the conciseness finding.
+- Nanz and Furia, [A Comparative Study of Programming Languages in Rosetta Code](https://arxiv.org/abs/1409.0252), ICSE 2015 - both the conciseness finding and the runtime-failure finding that complicates it.
 - Lutz Prechelt, [An Empirical Comparison of Seven Programming Languages](https://www.cs.tufts.edu/~nr/cs257/archive/lutz-prechelt/comparison.pdf), IEEE Computer, October 2000 - the programmer-variability finding.
