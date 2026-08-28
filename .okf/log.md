@@ -51,6 +51,28 @@ make it green: restructure same-day entries under one heading, and add
 `timestamp` to the 23 concepts missing it (anchored to each file's last commit
 time, which is verifiable - never invented).
 
+## 2026-08-28 - the longest-unbroken-run metric can't be moved by splitting a paragraph
+
+**Extended** [Visual Scroll Gate](/workflows/visual-scroll-gate.md), same
+`blog/upgrade-ai-code-review-trust` session. The cognitive-load metric counts
+the longest run of PROSE between any two of `h2 img pre table ul ol` - a
+one-line paragraph is still prose, so splitting a paragraph ADDS a paragraph
+to the run and never breaks it. Measured: isolating a bolded sentence in the
+closing section left the run unchanged (720px/23 lines mobile, 609px/16 lines
+desktop, four paragraphs became five); a reviewer's predicted drop to ~12
+lines was withdrawn after measuring. Only a non-prose element (callout, list,
+heading) moves the number - which means the metric can push furniture onto a
+page purely to satisfy a gate, and accepting the unmoved number was the right
+call here (the isolated bold works as a landing point; a second callout would
+have diluted the first).
+
+Companion measurement that DOES discriminate: rendered bold ink (summed
+client-rect area per bold element, not a `<strong>` count) - a 77-character
+bold carried 9.5x the ink of a 7-character one at equal weight/colour, the
+Christmas-tree rule biting in a form counting can't detect. Also check
+whether two bolds can co-occur in one viewport (720px apart on an 844px
+viewport competes; 3,026px apart cannot).
+
 ## 2026-08-28 - three learnings from the AI-code-review post upgrade: a corrupted file, a two-reader seam, a gitignored reference
 
 From the `blog/upgrade-ai-code-review-trust` session (content edit itself owned
