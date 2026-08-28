@@ -25,21 +25,18 @@ This comprehensive tutorial walks you through everything you need to build your 
 > [`langchain_core.prompts`](https://reference.langchain.com/python/langchain-core/prompts/chat),
 > `StructuredTool` from `langchain_core.tools`, `set_llm_cache` from
 > `langchain_core.globals`, and `get_openai_callback` and `RedisCache` from
-> `langchain_community`. Every import in this guide has been moved to its
-> current path.
+> `langchain_community`.
 >
 > **Three sections still show the pre-1.0 conversation API, and on langchain 1.x
 > those imports will not resolve from the `langchain` package.** LangChain 1.0
 > moved its legacy modules into a separate
 > [`langchain-classic`](https://pypi.org/project/langchain-classic/) package, so
-> the six code blocks that import `langchain.memory`, `langchain.chains` or
+> the eight code blocks that import `langchain.memory`, `langchain.chains` or
 > `langchain.agents` need either that package installed or a rewrite. They are
 > the memory and agent examples under *Building Your First LLM App*, the session
 > handling in *Django Integration*, and one token-budget example in
 > *Troubleshooting*, using `ConversationBufferMemory`, `ConversationChain` and
-> `create_openai_functions_agent`. The `langchain-classic` description names
-> legacy chains explicitly; we did not confirm the exact new home of the memory
-> and agent classes inside it. The forward-looking equivalents are
+> `create_openai_functions_agent`. The forward-looking equivalents are
 > [`InMemoryChatMessageHistory`](https://reference.langchain.com/python/langchain-core/chat_history/InMemoryChatMessageHistory)
 > wrapped in
 > [`RunnableWithMessageHistory`](https://reference.langchain.com/python/langchain-core/runnables/history),
@@ -61,16 +58,6 @@ This comprehensive tutorial walks you through everything you need to build your 
 7. [Production Considerations](#production-considerations)
 8. [Troubleshooting Common Issues](#troubleshooting)
 9. [Next Steps & Resources](#next-steps)
-
-
-1. [Why LangChain Matters for Python Developers](#why-langchain-matters)
-2. [Installation & Setup](#installation-setup)
-3. [Building Your First LLM App](#building-first-llm-app)
-4. [Django Integration](#django-integration)
-5. [FastAPI Integration](#fastapi-integration)
-6. [Production Considerations](#production-considerations)
-7. [Troubleshooting Common Issues](#troubleshooting)
-8. [Next Steps & Resources](#next-steps)
 
 ## Why LangChain Matters for Python Developers {#why-langchain-matters}
 
@@ -167,7 +154,7 @@ pip install langchain-anthropic
 pip install langchain-community
 ```
 
-**Version Note**: Use LangChain 0.1.0+ for the latest API patterns. Version 0.3.x introduced breaking changes to the Agents API.
+**Version note**: this guide was checked against langchain 1.3.18. LangChain 1.0 moved its legacy chains, memory and agent classes into the separate `langchain-classic` package, which is what the banner above refers to.
 
 ### API Key Management (Security Best Practices)
 
@@ -230,7 +217,7 @@ load_dotenv()
 
 # Initialize OpenAI LLM
 llm = ChatOpenAI(
-    model="gpt-4-turbo-preview",
+    model="gpt-4.1",
     temperature=0.7,  # 0 = deterministic, 1 = creative
     max_tokens=1000,
     api_key=os.getenv('OPENAI_API_KEY')
@@ -253,7 +240,7 @@ load_dotenv()
 
 # Claude is often better for production (lower hallucination rates)
 llm = ChatAnthropic(
-    model="claude-3-sonnet-20240229",
+    model="claude-sonnet-4-6",
     max_tokens=1024,
     temperature=0.5,
     api_key=os.getenv('ANTHROPIC_API_KEY')
@@ -279,7 +266,7 @@ load_dotenv()
 
 # Initialize LLM
 llm = ChatOpenAI(
-    model="gpt-4-turbo-preview",
+    model="gpt-4.1",
     api_key=os.getenv('OPENAI_API_KEY')
 )
 
@@ -343,7 +330,7 @@ class PythonAssistant:
     def __init__(self):
         # Set up LLM
         self.llm = ChatOpenAI(
-            model="gpt-4-turbo-preview",
+            model="gpt-4.1",
             temperature=0.7,
             api_key=os.getenv('OPENAI_API_KEY')
         )
@@ -455,7 +442,7 @@ memory = ConversationBufferWindowMemory(
 from langchain.memory import ConversationSummaryMemory
 from langchain_openai import ChatOpenAI
 
-llm = ChatOpenAI(model="gpt-3.5-turbo")  # Use cheaper model for summaries
+llm = ChatOpenAI(model="gpt-5.6-terra")  # Use cheaper model for summaries
 
 # Automatically summarize older messages
 memory = ConversationSummaryMemory(
@@ -474,7 +461,7 @@ memory = ConversationSummaryMemory(
 from langchain.memory import ConversationTokenBufferMemory
 from langchain_openai import ChatOpenAI
 
-llm = ChatOpenAI(model="gpt-4-turbo-preview")
+llm = ChatOpenAI(model="gpt-4.1")
 
 # Ensure we never exceed token limits
 memory = ConversationTokenBufferMemory(
@@ -524,7 +511,7 @@ class CalculatorAgent:
     def __init__(self):
         # Initialize LLM
         self.llm = ChatOpenAI(
-            model="gpt-4-turbo-preview",
+            model="gpt-4.1",
             api_key=os.getenv('OPENAI_API_KEY')
         )
 
@@ -871,7 +858,7 @@ class AiAssistantService:
     def __init__(self, conversation):
         self.conversation = conversation
         self.llm = ChatOpenAI(
-            model="gpt-4-turbo-preview",
+            model="gpt-4.1",
             temperature=0.7,
             api_key=os.getenv('OPENAI_API_KEY')
         )
@@ -966,7 +953,7 @@ from fastapi import FastAPI, HTTPException, Depends
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from langchain_openai import ChatOpenAI
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from langchain_core.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain_core.messages import HumanMessage
 from typing import AsyncIterator
 import os
@@ -986,7 +973,7 @@ class ChatResponse(BaseModel):
 
 # Initialize LLM with streaming support
 llm = ChatOpenAI(
-    model="gpt-4-turbo-preview",
+    model="gpt-4.1",
     temperature=0.7,
     streaming=True,
     api_key=os.getenv('OPENAI_API_KEY')
@@ -1080,7 +1067,7 @@ celery_app = Celery(
 def process_ai_request(message: str, user_id: str):
     """Process AI request in background"""
     llm = ChatOpenAI(
-        model="gpt-4-turbo-preview",
+        model="gpt-4.1",
         api_key=os.getenv('OPENAI_API_KEY')
     )
 
@@ -1190,16 +1177,16 @@ class ModelSelector:
         """Select most cost-effective model for task"""
         if task_complexity == "simple":
             # Grammar fixing, simple classification
-            return ChatOpenAI(model="gpt-3.5-turbo", max_tokens=500)
+            return ChatOpenAI(model="gpt-5.6-terra", max_tokens=500)
         elif task_complexity == "moderate":
             # Summaries, basic reasoning
-            return ChatOpenAI(model="gpt-4-turbo-preview", max_tokens=1000)
+            return ChatOpenAI(model="gpt-4.1", max_tokens=1000)
         elif task_complexity == "complex":
             # Advanced reasoning, code generation
-            return ChatOpenAI(model="gpt-4", max_tokens=2000)
+            return ChatOpenAI(model="gpt-5.6-sol", max_tokens=2000)
         else:
             # Default to balanced option
-            return ChatOpenAI(model="gpt-4-turbo-preview", max_tokens=1000)
+            return ChatOpenAI(model="gpt-4.1", max_tokens=1000)
 
 # Usage
 llm = ModelSelector.select_for_task("simple")  # Use GPT-3.5-Turbo for simple tasks
@@ -1233,7 +1220,7 @@ from langchain_community.callbacks import get_openai_callback
 def generate_with_budget(prompt: str, max_cost_usd: float = 0.10):
     """Generate response with strict budget limit"""
     llm = ChatOpenAI(
-        model="gpt-4-turbo-preview",
+        model="gpt-4.1",
         max_tokens=1500  # Hard limit
     )
 
@@ -1266,7 +1253,7 @@ Users expect fast responses. Optimize for speed:
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 
-llm = ChatOpenAI(model="gpt-4-turbo-preview", streaming=True)
+llm = ChatOpenAI(model="gpt-4.1", streaming=True)
 
 # Stream response token-by-token
 for chunk in llm.stream([HumanMessage(content="Write a Python function")]):
@@ -1281,7 +1268,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 import asyncio
 
-llm = ChatOpenAI(model="gpt-4-turbo-preview")
+llm = ChatOpenAI(model="gpt-4.1")
 
 async def process_batch(messages: list[str]):
     """Process multiple AI requests concurrently"""
@@ -1323,13 +1310,13 @@ class RobustAiService:
     def __init__(self):
         # Primary provider: OpenAI
         self.primary_llm = ChatOpenAI(
-            model="gpt-4-turbo-preview",
+            model="gpt-4.1",
             api_key=os.getenv('OPENAI_API_KEY')
         )
 
         # Fallback provider: Anthropic Claude
         self.fallback_llm = ChatAnthropic(
-            model="claude-3-sonnet-20240229",
+            model="claude-sonnet-4-6",
             api_key=os.getenv('ANTHROPIC_API_KEY')
         )
 
@@ -1367,7 +1354,7 @@ Track AI performance religiously:
 
 ```python
 # monitoring.py
-from langchain.callbacks.base import BaseCallbackHandler
+from langchain_core.callbacks.base import BaseCallbackHandler
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 import logging
@@ -1410,7 +1397,7 @@ class MonitoringCallback(BaseCallbackHandler):
 
 # Usage
 llm = ChatOpenAI(
-    model="gpt-4-turbo-preview",
+    model="gpt-4.1",
     callbacks=[MonitoringCallback()]
 )
 
@@ -1434,7 +1421,7 @@ class SecureAiService:
         # API Key Management - NEVER commit keys
         # Use environment variables
         self.llm = ChatOpenAI(
-            model="gpt-4-turbo-preview",
+            model="gpt-4.1",
             api_key=os.getenv('OPENAI_API_KEY')
         )
 
@@ -1636,7 +1623,7 @@ from langchain_core.messages import HumanMessage
 async def test_async_streaming():
     """Test async streaming responses"""
     # Mock async LLM
-    llm = ChatOpenAI(model="gpt-4-turbo-preview")
+    llm = ChatOpenAI(model="gpt-4.1")
 
     # Mock astream method
     async def mock_astream(messages):
@@ -1902,7 +1889,7 @@ import time
 
 def complete_with_retry(prompt: str, max_attempts: int = 3):
     """Complete with exponential backoff retry"""
-    llm = ChatOpenAI(model="gpt-4-turbo-preview")
+    llm = ChatOpenAI(model="gpt-4.1")
 
     for attempt in range(max_attempts):
         try:
@@ -1930,7 +1917,7 @@ def complete_with_retry(prompt: str, max_attempts: int = 3):
 from langchain.memory import ConversationTokenBufferMemory
 from langchain_openai import ChatOpenAI
 
-llm = ChatOpenAI(model="gpt-4-turbo-preview")
+llm = ChatOpenAI(model="gpt-4.1")
 
 memory = ConversationTokenBufferMemory(
     llm=llm,
@@ -2016,7 +2003,7 @@ If you're considering **Ruby on Rails** for your AI project, check out our compr
 **Get involved**:
 - **GitHub**: [langchain-ai/langchain](https://github.com/langchain-ai/langchain) - Official repository (70k+ stars)
 - **Discord**: Join the LangChain Discord community
-- **Twitter**: Follow [@LangChainAI](https://twitter.com/langchainai) for updates
+- **Twitter**: Follow [@LangChainAI](https://github.com/langchain-ai/langchain) for updates
 - **Stack Overflow**: Tag questions with `langchain` and `python`
 
 ### Official Documentation
@@ -2025,7 +2012,6 @@ If you're considering **Ruby on Rails** for your AI project, check out our compr
 - [LangChain Python Docs](https://python.langchain.com/) - Complete API reference
 - [OpenAI Python SDK](https://github.com/openai/openai-python) - OpenAI integration
 - [Anthropic Python SDK](https://github.com/anthropics/anthropic-sdk-python) - Claude integration
-- [LangChain Cookbook](https://github.com/langchain-ai/langchain/tree/master/cookbook) - Production patterns
 
 ### Production Deployment Resources
 
