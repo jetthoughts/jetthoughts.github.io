@@ -147,6 +147,40 @@ The course is the process of record for zero-to-first-customer. Read it before d
 
 **JT has never written a Founding Hypothesis.** Two years of positioning notes, an offer, a rate card and five drafted messages exist — and not one sentence naming customer, problem, approach, competition and differentiation in testable form. **That, not more research, is the missing first artifact**, and it costs 90 minutes.
 
+
+## Amendment 3 (2026-08-29) — the loop had no way to find a NEW opportunity
+
+Adversarial review of Amendment 1 (`.ai/evidence/2026-08-29-adr0008-amendment-challenge.md`), by an agent that did not write it. **PARTLY REFUTED**, with one objection that answers the half of Paul's question the earlier amendments quoted and dodged.
+
+**The proof, and it is clean:** the `n=13` pain evidence the amendment itself cites came from **review mining** — a desk stage with zero conversations that appears nowhere in TALK → CODE → PATTERN. **The loop cannot reproduce its own cited evidence.** It only refines the bet already chosen, and the segment it talks to was chosen by the `days-open` screen that was later proven inverted. Circular.
+
+### Fix: PATTERN has two inputs, not one
+
+```
+TALK (conversations, strong)  ──┐
+                                ├──→ PATTERN → HYPOTHESIS revision
+DESK (review mining, forum      ──┘
+      and complaint scraping,
+      competitor teardowns,
+      demand counts — weaker)
+```
+
+**Desk discovery is a legitimate first-class input, flagged weaker.** It cannot establish willingness to pay and never promotes a hypothesis on its own, but it is how a *rival* pain — one nobody is currently asking about — enters the system at all. It costs agent-minutes, not founder-minutes, which is why it can run continuously while founder attention stays on conversations.
+
+**Re-trigger condition corrected.** Steps 0-2 of the SOP (choose what to validate) fire on **"TALK returns empty OR a rival pain appears from any source"**, not on the earlier "two or more patterns compete" — which was circular, since only TALK could fire it and TALK only reached the already-chosen segment.
+
+### Two further corrections from the same review
+
+**`n>=3` was invented provenance.** Amendment 1 called it *"the vault's own standing bar"*. Grepped: no such written rule exists in the decision log, AGENTS.md, jt-business-os or the opportunity-testing note. Practice echoes it (review mining flagged a 3-complaint convergence; scouts triangulate in threes) but the bar is **adopted here, not inherited**. Number kept, attribution corrected — a false citation is precisely the cargo cult this ADR exists to stop.
+
+**Correction 1's rationale mischaracterised the SOP.** Step 0's own header reads *"choose what to validate. Skip this and you validate whatever idea you happened to have first."* It is not an arbiter among already-validated candidates, as Amendment 1 claimed. Amendment 2 already withdrew "enter at TALK" on separate grounds; this records that the stated reason was also wrong. What survives is narrower: **for the current wedge only**, the five drafted messages are near-free re-qualification and go first.
+
+**Hypothesis Summary compresses from ten fields to seven** — Falsifier, Kill and Cheapest-test are three names for one thing; Bet and What-we-sell duplicate.
+
+### What survived the attack
+
+**The lead-gen tool timing holds, and is possibly still too generous.** TALK needs no subscription — contacts are public and sourcing costs agent-minutes. Apollo and Sales Navigator exist to enable cold volume, which house rule 6 forbids at any stage. Paul's original correction stands unweakened.
+
 ## Kill criteria
 
 - **2026-10-09:** if conversations remain 0, the constraint was never process — it is the owner's willingness or ability to hold sales conversations, and that is the only thing worth working on.
