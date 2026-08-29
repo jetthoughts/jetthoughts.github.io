@@ -181,6 +181,23 @@ DESK (review mining, forum      ──┘
 
 **The lead-gen tool timing holds, and is possibly still too generous.** TALK needs no subscription — contacts are public and sourcing costs agent-minutes. Apollo and Sales Navigator exist to enable cold volume, which house rule 6 forbids at any stage. Paul's original correction stands unweakened.
 
+
+## Amendment 4 (2026-08-29) — two additions from a verified framework sweep, and three warnings
+
+A landscape sweep of 0-to-1 frameworks with every URL fetched live (`.ai/evidence/2026-08-29-framework-landscape.md`) confirmed the process already uses the standard set. Two additions change what we do; three findings warn about artifacts we already hold.
+
+**Addition 1 — Assumptions Mapping decides which blank to test first** (Bland, *Testing Business Ideas*, 2019). The Founding Hypothesis has five blanks and Amendment 2 gave each a designated test, but nothing said which order. Plot the five on **important x unknown** and test the risky quadrant first. This is the missing prioritiser, and it is cheap: one grid, once.
+
+**Addition 2 — name the PMF type before choosing a posture** (Sequoia Arc, Apr 2024). Three types, each dictating different behaviour: **Hair-on-Fire** (urgent pain, crowded market, wins on speed and trust), **Hard-Fact** (accepted pain, requires behaviour change), **Future-Vision**. JT's market is Hair-on-Fire by inspection: agencies with signed unstaffed work, many vendors, urgent. That classification answers Paul's standing question about winning on a crowded plateau better than a generic wedge argument does, and it is testable in the first conversations.
+
+**Warning 1 — the Sean Ellis 40% test is not a gate.** Threshold derived from ~100 mostly consumer/SaaS startups in 2009; teams re-survey and re-segment until they pass, making it unfalsifiable. Four vault notes and the course's Module 5.1 use it. **Keep it as a directional signal; never as a pass/fail.**
+
+**Warning 2 — Design Sprint momentum has decayed.** thesprintbook.com now redirects to Knapp's VC firm, and the method survives mostly inside agencies selling sprints. Our workshop library routes to Strategy Signal, which is that lineage. Not fatal (Foundation Sprint / *Click* is 2025 and current) but recorded.
+
+**Warning 3 — do not build on AI "validation tool" frameworks.** The 2025-26 Predict-Validate-Iterate / ValidatorAI class are content-marketing inventions with no named originator and vendor-blog-only sourcing.
+
+**Nothing else from the sweep is adopted.** Play Bigger's category-design claims are unattributable and survivorship-biased; the one-person-unicorn thesis has no methodology to apply.
+
 ## Kill criteria
 
 - **2026-10-09:** if conversations remain 0, the constraint was never process — it is the owner's willingness or ability to hold sales conversations, and that is the only thing worth working on.
