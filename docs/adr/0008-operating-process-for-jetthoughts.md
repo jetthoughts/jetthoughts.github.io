@@ -1,3 +1,9 @@
+<!-- A4 print: 210x297mm, 20mm margins. Renders as pages in any markdown-to-PDF path. -->
+<style>
+@page { size: A4 portrait; margin: 20mm; }
+@media print { .pagebreak { page-break-after: always; } body { font-size: 10.5pt; line-height: 1.45; } pre { font-size: 8.5pt; } }
+</style>
+
 # ADR-0008: The operating process for JetThoughts
 
 - **Status:** Proposed
@@ -26,6 +32,83 @@ Agents may decide alone only on read-only or reversible work checkable against a
 
 **4. The tool layer — ~$100-200/mo ceiling, and only when a stage is proven manually first.** Apollo.io Basic $59/mo and LinkedIn Sales Navigator ~$99/mo are the candidates. Clay ($185/mo) only if weekly enrichment waterfalls actually run. Skip 6sense, Demandbase, Common Room, UserGems as enterprise-only.
 
+
+## The shape of it — fat marker sketches
+
+Deliberately coarse. A thick marker cannot draw detail, which is the point: these show the shape of the decision, not its specification. Detail lives in the prose and the amendments.
+
+**1. The loop. It starts with a bet, not a conversation.**
+
+```
+        ┌──────────────── revise ────────────────┐
+        │                                        │
+        ▼                                        │
+   ╔═════════╗    ┌───────┐    ┌────────────┐   │
+   ║ FOUNDING║───▶│ SMOKE │───▶│  10 MOM    │───┘
+   ║HYPOTHESIS║   │ TEST  │    │TEST INTERVI│
+   ╚═════════╝    └───────┘    └─────┬──────┘
+    5 blanks       strangers          │ survives
+    90 minutes                        ▼
+                              ┌──────────────┐
+                              │    OFFER     │  ← PR-FAQ written here
+                              └──────┬───────┘
+                                     ▼
+                              ┌──────────────┐
+                              │   LEAD-GEN   │  ← tools bought HERE, not before
+                              └──────┬───────┘
+                                     ▼
+                                 ╔═══════╗
+                                 ║ SELL  ║  ← Paul only, always
+                                 ╚═══════╝
+```
+
+**2. Two inputs, or the loop can only polish the bet it already has.**
+
+```
+   TALK ─────────────┐
+   conversations     │
+   STRONG            ├────▶  PATTERN  ────▶  revise the hypothesis
+                     │       n≥3 = real
+   DESK ─────────────┘
+   review mining,            (a rival pain can
+   teardowns, counts          only enter here)
+   WEAKER
+```
+
+**3. The gate. Nothing crosses on silence.**
+
+```
+        AGENTS                    ║              PAUL
+   ──────────────────             ║        ──────────────
+   source                         ║        DECIDE
+   qualify                        ║        ACT
+   draft                          ║
+   verify (different agent)       ║        send · money · accounts
+                                  ║        price · terms · veto
+   read-only, reversible,         ║
+   checkable vs a spec            ║
+                                  ║
+   ════════════════════════════════════════════════════
+        no 48h timer.  no auto-send.  explicit yes only.
+```
+
+**4. Where JT actually is.**
+
+```
+   [0]──────[1]──────[2]══════[3]──────[4]
+  problem   offer     ▲      repeat   scale
+   pain    priced     ║
+   found   & termed   ║
+                      ║
+              JT IS HERE
+        2 clients · <10 customers
+        offer exists · 0 conversations
+        two debts: wedge durability (7 Powers)
+                   per-account hypothesis
+```
+
+<div class="pagebreak"></div>
+
 ## Alternatives considered, and why rejected
 
 | Alternative | Rejected because | Source |
@@ -49,6 +132,8 @@ Agents may decide alone only on read-only or reversible work checkable against a
 - Agents' honest job: make ~5 owner conversations a week better-prepared. Not 50 automated ones.
 - The owner's reading hours become the declared pipeline ceiling. No amount of agent throughput raises it.
 
+
+<div class="pagebreak"></div>
 
 ## Amendment 1 (2026-08-29) — the discovery engine, and where tools actually sit
 
@@ -102,6 +187,8 @@ A Hypothesis Summary missing **Forcing party**, **Falsifier** or **Kill** is rej
 The five discovery messages are the TALK stage — pain research, not selling. They also carry the wedge's kill test. **JT currently has n=13 pain evidence for one adjacent buyer (Toptal's end clients) and n=0 for its actual buyer, the agency.** That is why no Hypothesis Summary exists yet and why buying a lead-gen tool now would be premature by two full stages.
 
 
+<div class="pagebreak"></div>
+
 ## Amendment 2 (2026-08-29) — Amendment 1 had the loop backwards
 
 Paul: *"'ask about behaviour that already happened' — with whom? about what? you need hypothesis first."* And: *"have you checked `~/dev/jetthoughts.github.io/content/course/`?"*
@@ -148,6 +235,8 @@ The course is the process of record for zero-to-first-customer. Read it before d
 **JT has never written a Founding Hypothesis.** Two years of positioning notes, an offer, a rate card and five drafted messages exist — and not one sentence naming customer, problem, approach, competition and differentiation in testable form. **That, not more research, is the missing first artifact**, and it costs 90 minutes.
 
 
+<div class="pagebreak"></div>
+
 ## Amendment 3 (2026-08-29) — the loop had no way to find a NEW opportunity
 
 Adversarial review of Amendment 1 (`.ai/evidence/2026-08-29-adr0008-amendment-challenge.md`), by an agent that did not write it. **PARTLY REFUTED**, with one objection that answers the half of Paul's question the earlier amendments quoted and dodged.
@@ -182,6 +271,8 @@ DESK (review mining, forum      ──┘
 **The lead-gen tool timing holds, and is possibly still too generous.** TALK needs no subscription — contacts are public and sourcing costs agent-minutes. Apollo and Sales Navigator exist to enable cold volume, which house rule 6 forbids at any stage. Paul's original correction stands unweakened.
 
 
+<div class="pagebreak"></div>
+
 ## Amendment 4 (2026-08-29) — two additions from a verified framework sweep, and three warnings
 
 A landscape sweep of 0-to-1 frameworks with every URL fetched live (`.ai/evidence/2026-08-29-framework-landscape.md`) confirmed the process already uses the standard set. Two additions change what we do; three findings warn about artifacts we already hold.
@@ -199,6 +290,8 @@ A landscape sweep of 0-to-1 frameworks with every URL fetched live (`.ai/evidenc
 **Nothing else from the sweep is adopted.** Play Bigger's category-design claims are unattributable and survivorship-biased; the one-person-unicorn thesis has no methodology to apply.
 
 
+<div class="pagebreak"></div>
+
 ## Amendment 5 (2026-08-29) — independent corroboration, and two instruments we lacked
 
 A second, independent framework sweep (`.ai/evidence/2026-08-29-framework-operating.md`, all URLs fetched live) reached the same core verdict without seeing this ADR.
@@ -214,6 +307,8 @@ A second, independent framework sweep (`.ai/evidence/2026-08-29-framework-operat
 **Housekeeping:** this ADR now carries five amendments and should be consolidated into a clean accepted version once Paul rules. The amendment trail stays in git history as the record of what was wrong and who caught it.
 
 
+<div class="pagebreak"></div>
+
 ## Amendment 6 (2026-08-29, final) — channel discipline, and the one causal finding
 
 Third sweep (`.ai/evidence/2026-08-29-framework-growth.md`). **This is the last amendment; the ADR is consolidated on acceptance.**
@@ -227,6 +322,8 @@ Third sweep (`.ai/evidence/2026-08-29-framework-growth.md`). **This is the last 
 **Third independent rejection of the outbound-tool category.** Clay, Apollo and signal-based selling are machines for outbound volume; zero outbound plus house rule 6 kills the category by definition. Paul's original correction has now been reached separately by three sweeps. And the hiring hype is quantified: **128 GTM-engineer postings in three months, one per ninety-two SDR postings**, ~45% of title-holders at agencies.
 
 **Not adopted:** MEDDPICC, Challenger Sale (no independent replication outside CEB/Gartner; Capon 2015 found ~50% of variables undisclosed and "stars" rated by manager opinion rather than quota), Command of the Message, PLG, community-led growth (CMX's own data: 24% can measure financial impact), AARRR/North Star as systems.
+
+<div class="pagebreak"></div>
 
 ## Kill criteria
 
