@@ -101,6 +101,52 @@ A Hypothesis Summary missing **Forcing party**, **Falsifier** or **Kill** is rej
 
 The five discovery messages are the TALK stage — pain research, not selling. They also carry the wedge's kill test. **JT currently has n=13 pain evidence for one adjacent buyer (Toptal's end clients) and n=0 for its actual buyer, the agency.** That is why no Hypothesis Summary exists yet and why buying a lead-gen tool now would be premature by two full stages.
 
+
+## Amendment 2 (2026-08-29) — Amendment 1 had the loop backwards
+
+Paul: *"'ask about behaviour that already happened' — with whom? about what? you need hypothesis first."* And: *"have you checked `~/dev/jetthoughts.github.io/content/course/`?"*
+
+Both land. **Amendment 1 started the loop at TALK. That is impossible**: a Mom Test interview needs a subject — whom to interview and which problem to ask about — and only a hypothesis supplies it. Talking without one produces unfocused anecdotes, which is the "polite nods" failure the discipline exists to prevent.
+
+**And the canonical process was already published by JetThoughts itself.** `content/course/tech-for-non-technical-founders-2026` is a five-module course whose entire subject is zero to first paying customer. Neither ADR-0008 nor Amendment 1 referenced it. External frameworks were researched while our own published method sat unread — the same defect as Amendment 1's failure to reference the vault SOP, one level up.
+
+### The corrected loop
+
+```
+FOUNDING HYPOTHESIS → SMOKE TEST → 10 MOM TEST INTERVIEWS → CODE → REVISE OR KILL → (repeat)
+                                                                    ↓ survives
+                                                        OFFER → LEAD-GEN → SELL
+```
+
+**It starts with a hypothesis written from what you already know** — 90 minutes, not research. Course Lesson 1.1, using the Founding Hypothesis frame from Knapp and Zeratsky's *Click* (2025):
+
+> *"If we help **[CUSTOMER]** solve **[PROBLEM]** with **[APPROACH]**, they'll choose it over **[COMPETITION]** because **[DIFFERENTIATION]**."*
+
+Five blanks, one sentence, and **each blank is an assumption with a designated test:**
+
+| Blank | Where it gets tested |
+| --- | --- |
+| `[CUSTOMER]` + `[PROBLEM]` | strangers recognise themselves in the headline; then ten Mom Test interviews confirm the pain |
+| `[APPROACH]` | a clickable prototype in front of 5 interviewees |
+| `[COMPETITION]` + `[DIFFERENTIATION]` | ~300 cold strangers convert on the page, or do not |
+| the whole bet: will they pay | the Stripe price test |
+
+**Specificity is the whole discipline.** *"We help small businesses save time with automation"* cannot be argued with and cannot be validated. *"Solo chiropractors, insurance-claim resubmission, one-click resubmit, versus billing services that take 14 days and charge 8%"* gets either *"I dealt with this last Tuesday"* or *"not my problem."* Both are useful.
+
+**The hypothesis is kept private during interviews.** Pitching it contaminates the answers. This retroactively confirms the standing instruction that the five discovery messages must not mention the entry wedge.
+
+### What this corrects in Amendment 1
+
+- **"Enter at TALK, not Foundation Sprint" was wrong** and is withdrawn. Something hypothesis-shaped must exist first. The Foundation Sprint objection was that it is a *strategy* instrument requiring facts JT lacks; the 90-minute Founding Hypothesis is not that — it is an explicit bet written from existing knowledge precisely so it can be proven wrong cheaply.
+- **The Hypothesis Summary's ten fields are demoted to a later artifact.** They describe a hypothesis that has already survived interviews and is heading for an offer. The *entry* artifact is one sentence with five blanks. Requiring ten fields before the first conversation is the overhead failure this ADR was written to avoid.
+- **What Amendment 1 got right and stands:** lead-gen tools are a stage cost, not a layer; nothing is subscribed until a hypothesis has survived; n>=3 independent instances make a pattern.
+
+### The canonical sequence, and where JT actually is
+
+The course is the process of record for zero-to-first-customer. Read it before designing anything new.
+
+**JT has never written a Founding Hypothesis.** Two years of positioning notes, an offer, a rate card and five drafted messages exist — and not one sentence naming customer, problem, approach, competition and differentiation in testable form. **That, not more research, is the missing first artifact**, and it costs 90 minutes.
+
 ## Kill criteria
 
 - **2026-10-09:** if conversations remain 0, the constraint was never process — it is the owner's willingness or ability to hold sales conversations, and that is the only thing worth working on.
