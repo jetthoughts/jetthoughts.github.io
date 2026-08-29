@@ -213,6 +213,21 @@ A second, independent framework sweep (`.ai/evidence/2026-08-29-framework-operat
 
 **Housekeeping:** this ADR now carries five amendments and should be consolidated into a clean accepted version once Paul rules. The amendment trail stays in git history as the record of what was wrong and who caught it.
 
+
+## Amendment 6 (2026-08-29, final) — channel discipline, and the one causal finding
+
+Third sweep (`.ai/evidence/2026-08-29-framework-growth.md`). **This is the last amendment; the ADR is consolidated on acceptance.**
+
+**Bullseye discipline is adopted, in its honest form: one channel, explicit written rejection of the rest.** At 15 owner-minutes a day a second channel does not exist. This vault's measured history is channel-hopping — Upwork, HN, Clutch, cofounder platforms, VC networks, each abandoned before a full send-reply-follow-up arc — which is the failure this rule prevents. **The chosen channel is named in the weekly list and the rejected ones are named beside it.**
+
+**The only causal number in three sweeps, and it hits a channel JetThoughts actually has.** Pre-registered randomised field experiment (ISB/CMU, n=1065, Jan-Feb 2026): **AI Overviews cut organic clicks 38%**; zero-click sessions rose 54% to 72%. jetthoughts.com runs a blog and a published course, so this is not abstract. **Two consequences:** any inbound assumption built on organic search is now measurably weaker, and **optimising for citability in AI answers is agent work, not owner work** — entities, citable numbers, mentions — which makes it one of the few growth activities that does not compete for the 15 minutes.
+
+**Test whether a growth loop exists before designing one.** The candidate is case study → reputation → inbound → case study. JT publishes no case studies (no client may be named), so the loop is broken at its first link by a standing constraint. **Do not draw a loop by force**; either fix the first link with permission-free proof (the gem's download count is the existing example) or accept there is no loop and run the channel manually.
+
+**Third independent rejection of the outbound-tool category.** Clay, Apollo and signal-based selling are machines for outbound volume; zero outbound plus house rule 6 kills the category by definition. Paul's original correction has now been reached separately by three sweeps. And the hiring hype is quantified: **128 GTM-engineer postings in three months, one per ninety-two SDR postings**, ~45% of title-holders at agencies.
+
+**Not adopted:** MEDDPICC, Challenger Sale (no independent replication outside CEB/Gartner; Capon 2015 found ~50% of variables undisclosed and "stars" rated by manager opinion rather than quota), Command of the Message, PLG, community-led growth (CMX's own data: 24% can measure financial impact), AARRR/North Star as systems.
+
 ## Kill criteria
 
 - **2026-10-09:** if conversations remain 0, the constraint was never process — it is the owner's willingness or ability to hold sales conversations, and that is the only thing worth working on.
