@@ -103,6 +103,11 @@
       "skillPath": "skills/lean-ctx/SKILL.md",
       "computedHash": "ce53f21116e7bec44548baf127192b4c38edaff1f31f784b38037310378ee0ce"
     },
+    "lighthouse-verification": {
+      "source": "lighthouse",
+      "sourceType": "node_modules",
+      "computedHash": "b0dede60484e6de19ef6d98e4adbdc0bc15f8a1440d5eddb69e4a14ef43e1906"
+    },
     "marketing-for-founders-saas-growth": {
       "source": "aradotso/marketing-skills",
       "sourceType": "github",

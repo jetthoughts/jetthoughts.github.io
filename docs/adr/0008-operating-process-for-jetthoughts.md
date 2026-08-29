@@ -49,6 +49,58 @@ Agents may decide alone only on read-only or reversible work checkable against a
 - Agents' honest job: make ~5 owner conversations a week better-prepared. Not 50 automated ones.
 - The owner's reading hours become the declared pipeline ceiling. No amount of agent throughput raises it.
 
+
+## Amendment 1 (2026-08-29) — the discovery engine, and where tools actually sit
+
+Paul, on reading the ADR: *"I do not see any way how you would find the actual pain points, new opportunities, which will be used for generating the Hypothesis Summary which will be tested"* — and separately, that Apollo/Sales Navigator/Clay *"are for lead generation, after you generated idea, build Hypothesis and then run validation and try to find leads."*
+
+Both correct, and the same defect: **the ADR specified guardrails and never specified the engine.** Measured: the words hypothesis, pain, discovery and learn appeared **zero times** in the original text. It said what not to run and who approves; it did not say how the business learns or generates a testable bet.
+
+**The engine already exists in the vault and the ADR failed to reference it:** `_templates-sop-opportunity-validation-framework.md` — Foundation Sprint → ICE triage → SCIPAB → 10-Conversation Sprint → Minimum Viable Assets → HADI experiment → Go/No-Go. Nothing new is written here; two corrections are made to it.
+
+### The loop, and where JT enters it
+
+```
+TALK → CODE → PATTERN → HYPOTHESIS SUMMARY → VALIDATE → LEAD-GEN → SELL
+```
+
+| Stage | What it produces | Rule |
+| --- | --- | --- |
+| **TALK** | verbatim conversation notes, Mom Test discipline: ask about behaviour that already happened, never future intent | Torres: *"at a minimum, weekly touchpoints"* — discovery is a habit, not a phase |
+| **CODE** | each conversation coded into named pains, in the buyer's words | a paraphrase is not evidence; verbatim or it did not happen |
+| **PATTERN** | a pain register with a count per pain | **n=1 is a candidate, n≥3 independent is a pattern.** The vault's own standing bar |
+| **HYPOTHESIS SUMMARY** | one page per candidate offer, format below | no summary, no experiment |
+| **VALIDATE** | the cheapest instrument that could falsify it | HADI, 14 days, per the SOP's Step 5 |
+| **LEAD-GEN** | a list of named accounts for a *validated* offer | **this is where Apollo/Sales Navigator/Clay enter, and not before** |
+| **SELL** | owner conversations | owner only, always |
+
+**Correction 1 — JT enters at TALK, not at Foundation Sprint.** The SOP's Steps 0-2 (Foundation Sprint, ICE triage, SCIPAB) exist to choose *among* candidate opportunities. That is a problem you have when several validated candidates compete. At 0 conversations there is nothing to triage, and per the research (Blank: *"there are no facts inside your building"*; Rumelt: a diagnosis without facts produces bad strategy) those steps are premature. **Enter at Step 3, the 10-conversation sprint.** Steps 0-2 become due once two or more patterns compete.
+
+**Correction 2 — tools are a LEAD-GEN stage cost, not a standing layer.** The original text listed Apollo ($59/mo), Sales Navigator (~$99/mo) and Clay ($185/mo) as "the tool layer" with no position in the sequence. They buy *reach to named accounts for a known offer*. Bought earlier they are a list for an unknown offer. **Nothing is subscribed until a Hypothesis Summary has passed VALIDATE.** Until then, lead sourcing is manual and free.
+
+### The Hypothesis Summary — the artifact, its required fields
+
+One page, in `.ai/evidence/` while forming, refactored into the note that owns the offer once it survives.
+
+| Field | Content |
+| --- | --- |
+| **Pain** | the pain in buyers' verbatim words, with **n** and the sources |
+| **Who** | the segment that has it, specifically enough to build a list from |
+| **Chequebook** | who holds the budget, and evidence the pain lands on *them* |
+| **Forcing party + date** | who compels the spend and when. **No forcing party → no experiment**, whatever the score |
+| **The bet** | "If we offer [X] to [segment], [metric] moves by [amount]" |
+| **What we would sell** | unit, price, scope boundary |
+| **Why us, not the incumbent** | the structural reason they cannot copy it |
+| **Falsifier** | the single observation that would prove this wrong |
+| **Cheapest test** | the instrument, its cost in money and founder-minutes, its dates |
+| **Kill** | the number and the date that retires it |
+
+A Hypothesis Summary missing **Forcing party**, **Falsifier** or **Kill** is rejected at the challenger gate, same as any other recommendation.
+
+### Applied to JT today
+
+The five discovery messages are the TALK stage — pain research, not selling. They also carry the wedge's kill test. **JT currently has n=13 pain evidence for one adjacent buyer (Toptal's end clients) and n=0 for its actual buyer, the agency.** That is why no Hypothesis Summary exists yet and why buying a lead-gen tool now would be premature by two full stages.
+
 ## Kill criteria
 
 - **2026-10-09:** if conversations remain 0, the constraint was never process — it is the owner's willingness or ability to hold sales conversations, and that is the only thing worth working on.
