@@ -198,6 +198,21 @@ A landscape sweep of 0-to-1 frameworks with every URL fetched live (`.ai/evidenc
 
 **Nothing else from the sweep is adopted.** Play Bigger's category-design claims are unattributable and survivorship-biased; the one-person-unicorn thesis has no methodology to apply.
 
+
+## Amendment 5 (2026-08-29) — independent corroboration, and two instruments we lacked
+
+A second, independent framework sweep (`.ai/evidence/2026-08-29-framework-operating.md`, all URLs fetched live) reached the same core verdict without seeing this ADR.
+
+**The corroboration that matters most:** for the 2024-26 solo/agentic model, **no canonical framework has consolidated** — the layer is stacks and playbooks, not a named operating system. And the consultant-driven OS category is *structurally* mismatched to a one-person firm because **its unit of operation is the leadership-team meeting**, which does not exist here. Two independent sweeps now support this ADR's core decision to adopt no operating system. The rejections also harden: OKRs carry the best-documented failure rates of anything surveyed (**~70% miss, ~60% abandoned within 12 months**), EOS's adoption number is unfalsifiable, Scaling Up's and Pinnacle's growth multiples have no published methodology.
+
+**Instrument 1 — 7 Powers tests whether the wedge is durable** (Helmer, 2016; used internally at Spotify and Netflix). The entry wedge claims incumbents *structurally cannot* copy open cost-plus and client-approved hour logs. That is a moat claim, and it has never been tested as one. Run it against the seven power types before the wedge is built into pricing or contracts. Caveat recorded: 7 Powers explains winners retrospectively better than it predicts, so it is a filter, not a forecast.
+
+**Instrument 2 — PR-FAQ for offer definition** (Amazon, *Working Backwards*). Write the launch announcement and the customer FAQ **before** the offer exists; iterate the document until the offer is worth selling. One document, solo-usable, and it forces the buyer's questions to surface before a contract does. Its known weakness is front-loading certainty, which is why it belongs at OFFER, after a hypothesis has survived interviews, and never before.
+
+**Not adopted:** V2MOM (single-company provenance, and its only differentiator over what we run is an Obstacles section) · Blue Ocean (survivorship) · Wardley Mapping (steep curve, near-zero documented outcomes) · Empowered (needs multiple durable teams).
+
+**Housekeeping:** this ADR now carries five amendments and should be consolidated into a clean accepted version once Paul rules. The amendment trail stays in git history as the record of what was wrong and who caught it.
+
 ## Kill criteria
 
 - **2026-10-09:** if conversations remain 0, the constraint was never process — it is the owner's willingness or ability to hold sales conversations, and that is the only thing worth working on.
