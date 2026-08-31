@@ -2,8 +2,11 @@
 
 ## 2026-08-31
 
-- `workflows/analytics-access.md` — recorded the **2026-08-21 traffic cliff**: impressions fell ~85%
-  (2,166–13,871/day → 444) and average position fell ~47 places (20.9 → 67), holding low since.
+- `workflows/analytics-access.md` — recorded the **2026-08-21 traffic cliff**: impressions fell to 444/day
+  from a prior band of 2,166–13,871 and average position went from 14–24 to 61–68, holding low
+  since. **Corrected within the hour:** the first version of this entry said "~85%", which is a rate
+  computed against a band maximum. No percentage is computable without a single-day pre-drop
+  baseline, and none exists.
   Measured live through the GSC MCP on 2026-08-31; the cause is **not** established and the concept
   says so. Also recorded what the traffic actually is — the estate's largest impression source is an
   article about logging into Upwork at 0.03% CTR, while the homepage ranks 32.8.

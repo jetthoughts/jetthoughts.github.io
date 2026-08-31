@@ -272,8 +272,10 @@ The daily series contains a cliff, not a drift:
 | **21 Aug** | **444** | **61.1** |
 | 22–30 Aug | 211 – 649 | 65.7 – 68.6 |
 
-Impressions fell ~85% and average position fell ~47 places in one day. **The cause is not
-established** — candidates, cheapest first: a deploy or robots/sitemap change dated 21 Aug, a Google
+Impressions fell to **444/day** from a prior 18-day band of 2,166–13,871, and average position went
+from 14–24 to 61–68, in one day. **No percentage is computable and none should be quoted** — 13,871
+is the band maximum, not the 20 August value, and no single-day pre-drop baseline exists
+(fact-check, 2026-08-31). **The cause is not established** — candidates, cheapest first: a deploy or robots/sitemap change dated 21 Aug, a Google
 core update, or a manual action. Nothing in this bundle or the vault recorded it at the time.
 
 **Two things this changes about using the playbook.** The traps below are about *reading* the data;
