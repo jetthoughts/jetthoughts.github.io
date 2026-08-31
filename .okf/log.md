@@ -1,5 +1,17 @@
 # Bundle Update Log
 
+## 2026-08-31
+
+- `workflows/analytics-access.md` — recorded the **2026-08-21 traffic cliff**: impressions fell ~85%
+  (2,166–13,871/day → 444) and average position fell ~47 places (20.9 → 67), holding low since.
+  Measured live through the GSC MCP on 2026-08-31; the cause is **not** established and the concept
+  says so. Also recorded what the traffic actually is — the estate's largest impression source is an
+  article about logging into Upwork at 0.03% CTR, while the homepage ranks 32.8.
+  **Why it matters for the playbook:** its previous `verified` entry was dated 2026-08-20, the day
+  before the cliff, so a concept marked `stable` was describing a site that no longer existed.
+  Migrated its frontmatter from v0.1 while touching it (§13.1): the legacy `timestamp` field is
+  dropped in favour of `generated.at`.
+
 Newest first. Entries before 2026-08-19 are squashed to one line each
 (compacted 2026-08-20); their full text is in this file's git history.
 

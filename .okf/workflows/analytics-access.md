@@ -4,10 +4,10 @@ title: Analytics access (GA4 + Search Console MCP)
 description: How an agent session queries live GA4 and Search Console data for jetthoughts.com - the two local MCP servers, which property IDs are correct, why the two servers cannot share credentials, and the data-lag/duplicate-property traps.
 tags: [analytics, ga4, search-console, mcp, seo, tooling]
 generated:
-  by: claude/opus-5
-  at: 2026-08-13T00:00:00Z
-timestamp: 2026-08-21T02:40:00Z
+  by: claude/fable-5
+  at: 2026-08-31T00:00:00Z
 verified:
+  - { by: claude/fable-5, at: 2026-08-31T10:30:00Z }
   - { by: claude/opus-5, at: 2026-08-20T23:11:35Z }
   - by: claude/opus-5
     at: 2026-08-13T00:00:00Z
@@ -251,6 +251,54 @@ Clarity is unaffected regardless - it measures client-side without site
 instrumentation - and remains the richer index-scroll source. What still holds:
 never answer an index-engagement question from the CUSTOM milestones; they have
 no data there, which reads identically to zero engagement.
+
+## The estate collapsed on 2026-08-21 and nobody noticed for ten days
+
+**Read this before quoting any figure from before that date.** Measured live through the GSC MCP on
+2026-08-31 for `sc-domain:jetthoughts.com`, 28 days to 2026-08-31:
+
+| | |
+| --- | --- |
+| Clicks | **100** |
+| Impressions | **84,858** |
+| CTR | **0.12%** |
+| Average position | **20.9** |
+
+The daily series contains a cliff, not a drift:
+
+| Date | Impressions/day | Avg position |
+| --- | --- | --- |
+| 03–20 Aug | 2,166 – 13,871 | 14 – 24 |
+| **21 Aug** | **444** | **61.1** |
+| 22–30 Aug | 211 – 649 | 65.7 – 68.6 |
+
+Impressions fell ~85% and average position fell ~47 places in one day. **The cause is not
+established** — candidates, cheapest first: a deploy or robots/sitemap change dated 21 Aug, a Google
+core update, or a manual action. Nothing in this bundle or the vault recorded it at the time.
+
+**Two things this changes about using the playbook.** The traps below are about *reading* the data;
+this is a trap about *trusting* it — any comparison spanning 21 Aug compares two different sites.
+And the previous `verified` entry on this concept is dated 2026-08-20, **the day before**, which is
+exactly how a stable-looking playbook goes quietly wrong.
+
+### What the traffic actually is
+
+Top pages by impressions on the same pull:
+
+| Page | Impressions | Clicks | CTR |
+| --- | --- | --- | --- |
+| `elital.jetthoughts.com/...upwork-login...` | **9,289** | 3 | **0.03%** |
+| `/blog/langchain-python-tutorial-complete-guide/` | 3,162 | 8 | 0.25% |
+| **`jetthoughts.com/` (the homepage)** | **249** | 13 | 5.2% — **position 32.8** |
+
+The single largest impression source in the estate is an article about **logging into Upwork**, on a
+subdomain, converting at 0.03%. The rest is Rails and LangChain tutorials, which attract developers.
+The one page written for a buyer ranks at position 33 and is out-impressioned 37-to-1 by the Upwork
+piece. The brand query `jetthoughts` drew **23 impressions in 28 days**.
+
+The business conclusion drawn from these numbers is not this bundle's to hold — it lives in the vault
+at `.ai/evidence/2026-08-31-owned-assets-measured.md`. What belongs here is the reading itself and
+the date it was taken.
 
 ## A 3-day window is not a baseline - recompute before quoting
 
