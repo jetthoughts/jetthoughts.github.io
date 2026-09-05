@@ -22,7 +22,7 @@ scheduled post with an empty `posted` cell has not been confirmed live yet.
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-08-13 | week1-thu-validate-before-build | course | idea-led | 307 | 0 | 1 | 0 | 0 | n/a (3 raw) | 0 | no | *(best reach of the three; its one comment is Paul's own first-comment link, which drew 69 impressions of its own)* |
 | 2026-08-18 | week1-mon-jira-not-progress | rescue | observation-led | 192 | 1 | 0 | 0 | 0 | n/a (1 raw) | 0 | no | *(only post of the three to earn a reaction)* |
-| 2026-08-19 | week1-tue-founding-hypothesis | course | framework-led | 181 | 0 | 0 | 0 | 0 | n/a (0 raw) | 0 | no | *(read at ~24h, earlier in its life than the other two)* |
+| 2026-08-19 | week1-tue-founding-hypothesis | course | framework-led | 181 | 0 | 0 | 0 | 0 | n/a (0 raw) | 0 | no | *(read at ~24h, earlier in its life than the other two; staged first-comment course link was never posted at publish - shipped 2026-09-05, so any `course_promo_module1` UTM arrivals start then, not at post date)* |
 
 ### Read of 2026-08-20 (first filled rows)
 
