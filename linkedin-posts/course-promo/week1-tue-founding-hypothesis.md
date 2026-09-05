@@ -25,6 +25,8 @@ first_comment: |
   The 90-minute version of this exercise, with an AI stress-test for each blank, is Chapter 1.1 of a free course I wrote, no email gate: https://jetthoughts.com/course/tech-for-non-technical-founders-2026/?utm_source=linkedin&utm_medium=social&utm_campaign=course_promo_module1&utm_content=week1_tue_founding_hypothesis
 image: "assets/week1-tue-founding-hypothesis.png"
 notes: |
+  first_comment posted 2026-09-05 (17 days late - staged at publish time but never shipped;
+  ledger 2026-08-20 read showed 0 comments, which is how the gap was caught). UTM intact.
   REVISED 2026-08-13 to idea-first (opener: habit-led "The first thing I do..." -> idea-led belief stated flat).
   Opener archetype: idea-led (belief stated flat). Give-away = the five-blank Founding Hypothesis sentence from
   Chapter 1.1, complete in the post; the sketch carries the formula so the post survives without
