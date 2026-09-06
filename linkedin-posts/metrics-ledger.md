@@ -20,9 +20,73 @@ scheduled post with an empty `posted` cell has not been confirmed live yet.
 
 | posted | slug | lane | opener | impressions | reactions | comments | reposts | dms | icp_profile_views | icp_replies | reply_protocol_run | what to reuse |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2026-08-13 | week1-thu-validate-before-build | course | idea-led | 307 | 0 | 1 | 0 | 0 | n/a (3 raw) | 0 | no | *(best reach of the three; its one comment is Paul's own first-comment link, which drew 69 impressions of its own)* |
-| 2026-08-18 | week1-mon-jira-not-progress | rescue | observation-led | 192 | 1 | 0 | 0 | 0 | n/a (1 raw) | 0 | no | *(only post of the three to earn a reaction)* |
-| 2026-08-19 | week1-tue-founding-hypothesis | course | framework-led | 181 | 0 | 0 | 0 | 0 | n/a (0 raw) | 0 | no | *(read at ~24h, earlier in its life than the other two; staged first-comment course link was never posted at publish - shipped 2026-09-05, so any `course_promo_module1` UTM arrivals start then, not at post date)* |
+| 2026-08-13 | week1-thu-validate-before-build | course | idea-led | 332 | 0 | 1 | 0 | 0 | n/a (3 raw) | 0 | no | *(re-read 2026-09-06 at 24 days; its one comment is Paul's own first-comment link)* |
+| 2026-08-13 | organic-saas-disposable *(not in repo)* | organic | opinion | 631 | 5 | 11 | 0 | 0 | n/a (6 raw) | not read | no | *(off-plan post 10:40 CEST, same day as validate-before-build: 2x its reach, 11 comments; comments not yet scored)* |
+| 2026-08-18 | week1-mon-jira-not-progress | rescue | observation-led | 245 | 1 | 0 | 0 | 0 | n/a (1 raw) | 0 | no | *(re-read 2026-09-06 at 19 days)* |
+| 2026-08-19 | week1-tue-founding-hypothesis | course | framework-led | 219 | 0 | 0 | 0 | 0 | n/a (0 raw) | 0 | no | *(re-read 2026-09-06; the 1 comment LinkedIn shows is Paul's own first-comment link, shipped 2026-09-05 - so `course_promo_module1` UTM arrivals start then, not at post date)* |
+| 2026-09-03 | organic-qa-department-question | organic | opinion + mechanism | 9,749 | 14 | 13 | 0 | 0 | n/a (74 raw) | 0 | partial | *(08:45 CEST Thu; 96% out-of-network, 6,201 reached; every commenter is a QA/test professional defending the function - not ICP; Paul replied in-thread)* |
+| 2026-09-03 | organic-vibe-coded-mvp-rewrite | rescue (organic) | conviction + mechanism | 26,711 | 64 | 23 | 2 | 0 | n/a (37 raw) | 0 | no | *(17:00 CEST Thu - the plan's own slot; 99% out-of-network, 19,295 reached, 14 saves; commenters are engineers and AI-dev suppliers arguing the definition of vibe coding; one near-miss "school SaaS, 574 green runs against a 401" is SELF+ARTIFACT but reads as a contractor - fails NON-SUPPLIER)* |
+| 2026-09-03 | organic-zg-local-search *(not in repo)* | organic | curation | 355 | n/r | 0 | 0 | 0 | n/a (2 raw) | 0 | no | *(18:21 CEST; 4 engagements incl. 1 save + 2 link clicks)* |
+| 2026-09-04 | organic-wasted-tokens-api-keys *(not in repo)* | organic | anecdote | 112 | 0 | 0 | 0 | 0 | n/a (0 raw) | 0 | no | *(14:00 CEST Fri; 77% in-network - no distribution)* |
+| 2026-09-04 | organic-fable-vs-gpt6 *(not in repo)* | organic | reaction | 558 | 2 | 3 | 0 | 0 | n/a (3 raw) | 0 | no | *(14:35 CEST Fri; 1 follower gained)* |
+
+Also posted off-plan around 2026-08-20 and not readable here: a LeanCTX co-founder
+ad (no activity URN captured) and the Berlin Ruby meetup announcement (analytics
+page returns no permission - likely a shared page post). Neither is an ICP post.
+
+### Read of 2026-09-06 (organic run vs planned queue)
+
+All rows above re-read from `/analytics/post-summary/` via BrowserOS on
+2026-09-06; timestamps decoded from the activity IDs (`id >> 22` = ms epoch).
+
+**The reach ceiling was never the account.** Two off-plan posts did 26,711 and
+9,749 impressions against 219-332 for the three planned posts - 80x and 30x -
+and 96-99% of that reach was *out-of-network*. LinkedIn distributed them to
+people who do not follow Paul. So the 2026-08-20 reading ("1.5% of followers,
+distribution is the problem") is corrected: **distribution is topic-gated, not
+account-gated.** The account reaches 19k when the post gives the feed something
+to fight about.
+
+**What the two viral posts share, and the planned posts do not:**
+
+- A flat contrarian conviction in the first line ("you probably can't turn that
+  code into the real product"; "a dedicated QA department makes me question
+  their ability to deliver").
+- **One concrete failure mechanism in plain words** - "the AI doesn't edit your
+  code, it writes new code, so the same logic ends up in five or six places and
+  the bug comes back from the others". This is the sentence people quoted and
+  argued with. The planned posts state conclusions and frameworks; none names a
+  mechanism.
+- Text only, ~130 words, no link, no first comment, one real question at the
+  close.
+- The vibe post went out Thu 17:00 CEST - exactly the cadence slot the plan
+  reserves - while the planned posts for that week sat unposted.
+
+**What they did not deliver: ICP replies. 0 on both.** Demographics on both
+posts skew Software Development / Senior / Software Engineer; the QA thread is
+QA professionals defending their function, the vibe thread is engineers and
+AI-dev shops arguing definitions. 37 + 74 profile viewers is real, and the
+kill criterion's arrival override now has a live counter-example (reach
+without a single qualifying reply), but the campaign's question - do
+non-technical founders answer in symptom language - is still unanswered.
+
+**Decision (options weighed, call made 2026-09-06):**
+
+- *A - keep the planned ICP posts as they are, treat organic as a separate
+  channel.* Rejected: it leaves the 80x reach lever untouched.
+- *B - rewrite the queue into engineer-bait.* Rejected: the reach came from
+  engineers, who are not who we sell to.
+- *C - keep the ICP topics, borrow the shape.* **Chosen.** Every queued post
+  gets a mechanism sentence a founder can repeat ("the vendor bills the fix,
+  the fix is the same bug moved one file over"), keeps the flat opener and the
+  closing question, and drops nothing else. `bip-vendors-still-burning-founders`
+  (Sep 9) already has the shape; re-check the other five before their slots.
+
+Corrections to the standing record: the "nothing was ever recorded that turned
+out not to have posted" line above is now false in the other direction - seven
+posts went out that the repo never recorded. `content-plan.md` carries them;
+the two that matter are captured as posted drafts in `icp-validation/` and
+`personal/`.
 
 ### Read of 2026-08-20 (first filled rows)
 
