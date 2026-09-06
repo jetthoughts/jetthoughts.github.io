@@ -1,5 +1,7 @@
 # LinkedIn Course Promotion Plan — "From Idea to First Paying Customer"
 
+> **STOPPED 2026-09-06.** The first-comment course-link mechanic was measured and produced nothing: 2 sessions of one page at 0 seconds from the only post whose link shipped on time, 0 from the second, and no other discovery path to the course works (Google and AI assistants closed 2026-08-21). Course-lane posts that are value posts keep running without the link; the pure promo posts (`backlog-40k`, `why-i-wrote-it`) sit in backlog. The course is now what Paul sends in a DM or after a call. Decision of record: `linkedin-posts/content-plan.md` § "Decision of record (2026-09-06)". Everything below is kept as history.
+
 **Purpose:** Weekly LinkedIn promotion of the free course at `/course/tech-for-non-technical-founders-2026/`, posted as Paul Keen.
 **Status (2026-08-08):** 9 of ~25 drafts written (through week2-fri), none posted; the Aug-14 first-evidence read has not happened. Cadence when live fits inside 20.09 §7's **Stream 0 total of 3-4 posts/week shared with the ICP campaign** — the original "up to 5/week" is superseded (two live plans at 5/wk each would claim 10/wk against a 3-4/wk budget).
 **Cadence:** One course module per week, 5-week core cycle, then evergreen rotation — volume per the status line above.

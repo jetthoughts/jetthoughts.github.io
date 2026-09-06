@@ -70,17 +70,13 @@ kill criterion's arrival override now has a live counter-example (reach
 without a single qualifying reply), but the campaign's question - do
 non-technical founders answer in symptom language - is still unanswered.
 
-**Decision (options weighed, call made 2026-09-06):**
-
-- *A - keep the planned ICP posts as they are, treat organic as a separate
-  channel.* Rejected: it leaves the 80x reach lever untouched.
-- *B - rewrite the queue into engineer-bait.* Rejected: the reach came from
-  engineers, who are not who we sell to.
-- *C - keep the ICP topics, borrow the shape.* **Chosen.** Every queued post
-  gets a mechanism sentence a founder can repeat ("the vendor bills the fix,
-  the fix is the same bug moved one file over"), keeps the flat opener and the
-  closing question, and drops nothing else. `bip-vendors-still-burning-founders`
-  (Sep 9) already has the shape; re-check the other five before their slots.
+**Decision:** first written here as "keep the ICP topics, borrow the shape"
+(2026-09-06 morning). Superseded the same day by the three-lens panel and
+Paul's call: LinkedIn is the peer/authority channel; course-link lane stopped;
+rescue lane continues one post a week in the viral shape as its reach test;
+founder discovery moves to commenting, calls and a referral ask; no exhibits
+on LinkedIn posts. Decision of record with kill dates:
+`content-plan.md` § "Decision of record (2026-09-06)".
 
 Corrections to the standing record: the "nothing was ever recorded that turned
 out not to have posted" line above is now false in the other direction - seven

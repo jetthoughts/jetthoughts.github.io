@@ -3751,3 +3751,22 @@ and 79 gitignored scaffolding agents (backup:
 curated set: 4 skills (blog-next/operator/write, call-it-a-day), 30 tracked
 agents. The stale `mcp__claude-flow__*` permission became `mcp__ruflo__*` -
 the server registers as `ruflo` now; the old prefix resolves to nothing.
+
+## 2026-09-06 - LinkedIn re-purposed: peer/authority channel, course-link lane stopped
+
+Ledger read via BrowserOS: three planned ICP posts at 219-332 impressions;
+two off-plan text-only posts (Sep 3) at 26,711 and 9,749, 96-99%
+out-of-network, 0 icp_replies, founder/CEO absent from top-3 viewer titles.
+Reach is topic-gated, not account-gated: the 2026 feed routes by topic and
+early engagers, and Paul's early engagers are engineers. Three-lens panel
+3-0 for re-purposing; Paul approved. Decision of record in
+`linkedin-posts/content-plan.md`: LinkedIn = referrals and credibility with
+CTOs/agencies; posts text-only with one concrete failure mechanism; no
+exhibits; course-link first-comment lane stopped (2 bounced sessions);
+rescue lane 1/week in the viral shape with verdict 2026-09-30; founder
+discovery via commenting on founders' posts, calls and a referral ask to
+five non-competing commenters, verdict 2026-09-20. Superseded: the
+2026-08-21 "LinkedIn is the only unblocked arrival test" section, the
+course-promo plan, the 10% promo slot in content-pillars, and the
+"PRIMARY demand lane" label on the ICP plan - each carries a dated banner
+pointing here.

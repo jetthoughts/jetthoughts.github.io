@@ -15,9 +15,10 @@ design_file: linkedin-posts/course-promo/assets/week1-fri-course-page.png
 course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_fri_why_i_wrote_it
-status: approved
+status: postponed
 revised: idea-first 2026-08-20
-stage: next
+stage: backlog
+postponed_reason: "2026-09-06: course-link promo lane stopped (2 bounced sessions, no discovery path); the course goes in DMs and after calls. Returns only if a promo slot is re-opened"
 proposed_for: "2026-10-21 17:00 CEST"
 first_comment: |
   Free, no email gate:

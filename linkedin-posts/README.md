@@ -9,6 +9,8 @@ build:
 How we run Paul's LinkedIn: two lanes, a slow cadence, one voice doctrine, and
 per-post analytics tracking. Nothing publishes without Paul.
 
+> **Decision of record 2026-09-06 (read first; overrides anything below that conflicts):** LinkedIn is the **peer/authority channel** (CTOs, heads of engineering, agencies who see broken founder apps), not the founder-discovery channel. Posts are **text-only** (no exhibits), ~130 words, flat contrarian opener + one concrete failure mechanism + question. **Course-link lane stopped; no link in body or first comment.** Rescue lane 1/week in that shape, verdict 2026-09-30. Founder discovery: commenting on founders' posts, calls, DMs, a referral ask (verdict 2026-09-20). Reddit/IndieHackers stay off until that fails. Full text and evidence: [`content-plan.md`](content-plan.md) § "Decision of record (2026-09-06)", [`metrics-ledger.md`](metrics-ledger.md) § "Read of 2026-09-06".
+
 ## Voice + shape (the engine)
 
 **Canonical:** `docs/workflows/linkedin-post-pipeline.md` → "Post shape: idea-first,
@@ -28,7 +30,7 @@ Posts are inbound/passive; **outreach is the faster Rock-1 signal** (direct repl
 
 **The rule (BLOCKING, same bar as posts): a reply, not a pitch.** Quote the prospect's specific post/comment in line 1, answer their actual question, and mention the free course only if it genuinely fits. No cold pitch, no slop, no "DM me". ~10 min/day.
 
-**Channel discipline: exactly two ponds, then scale the winner.** LinkedIn (posts + outreach) is warm/set-up but skews employed; idea-stage non-technical founders skew Reddit/IndieHackers - so run **LinkedIn + one ICP-native channel (Reddit/IH) in parallel**, read the `metrics-ledger` + reply quality over ~2 weeks, then pour into whichever pond actually engages. Don't spray 4 channels thin.
+**Channel discipline (superseded 2026-09-06 - the second pond waits until the referral test fails; see the banner above): exactly two ponds, then scale the winner.** LinkedIn (posts + outreach) is warm/set-up but skews employed; idea-stage non-technical founders skew Reddit/IndieHackers - so run **LinkedIn + one ICP-native channel (Reddit/IH) in parallel**, read the `metrics-ledger` + reply quality over ~2 weeks, then pour into whichever pond actually engages. Don't spray 4 channels thin.
 
 ## The two lanes
 
@@ -46,8 +48,8 @@ it's worth following, not a promo machine. See
 [`content-pillars.md`](content-pillars.md) for the strategy,
 [`story-bank.md`](story-bank.md) for Paul's real cases + the interview backlog
 (value posts run on real material, never invented), and [`trends.md`](trends.md)
-for curation/reaction fuel. Most value posts carry NO course link - only the ~10%
-promo slot does.
+for curation/reaction fuel. Value posts carry NO course link; the ~10% promo
+slot is **stopped since 2026-09-06** (measured: 2 bounced sessions).
 
 ## Cadence (2026-08-13, Paul)
 
@@ -56,10 +58,15 @@ want a daily firehose). Post at the ICP's peak read time: **Tue-Thu, US-morning
 (9-11am ET = ~15:00-17:00 CEST)**. Schedule via LinkedIn's native scheduler. One
 lane per post, alternating.
 
-## Every post carries a visual (Paul: "missed images")
+## Visuals - superseded 2026-09-06: LinkedIn posts go out text-only
 
-Each post gets one image in its lane's `assets/`. Frontmatter records the path
-(`image: assets/<slug>.png`).
+Every imaged post stayed under 350 impressions; both text-only posts cleared
+9,000. Exhibits stay for the blog and course. The section below is kept for
+the house exhibit procedure, which still applies to blog/course exhibits and
+to the rare LinkedIn post where Paul explicitly asks for one.
+
+Each post used to get one image in its lane's `assets/`. Frontmatter may still
+record a path (`image: assets/<slug>.png`); do not attach it.
 
 **Prefer a purpose-built exhibit over a reused course SVG** (Paul 2026-08-13:
 reused exhibits carry "too much info" for the LinkedIn context). Build one
