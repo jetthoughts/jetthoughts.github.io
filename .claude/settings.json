@@ -78,7 +78,27 @@
       "Bash(npx @claude-flow*)",
       "Bash(npx claude-flow*)",
       "Bash(node .claude/*)",
-      "mcp__claude-flow__*"
+      "mcp__ruflo__*"
     ]
+  },
+  "enabledPlugins": {
+    "jt-delivery@jetthoughts": true,
+    "okf@scaccogatto": true,
+    "codex@openai-codex": true,
+    "ponytail@ponytail": true
+  },
+  "extraKnownMarketplaces": {
+    "jetthoughts": {
+      "source": { "source": "github", "repo": "jetthoughts/claude-plugins" }
+    },
+    "scaccogatto": {
+      "source": { "source": "github", "repo": "scaccogatto/okf-skills" }
+    },
+    "openai-codex": {
+      "source": { "source": "github", "repo": "openai/codex-plugin-cc" }
+    },
+    "ponytail": {
+      "source": { "source": "github", "repo": "DietrichGebert/ponytail" }
+    }
   }
 }

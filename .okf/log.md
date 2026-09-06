@@ -3736,3 +3736,18 @@ answers: arithmetically impossible (delete), same triple across unrelated stacks
 discriminator order - self-contradiction, corpus repetition, competitor rows
 running against the author, reproducibility - and the finding that the uncited
 ratchet measures link presence rather than attribution.
+
+## 2026-09-06 - project plugin profile declared; claude-flow scaffolding removed
+
+`.claude/settings.json` now declares the plugins this repo requires
+(jt-delivery, okf, codex, ponytail) plus their marketplaces, so a fresh
+machine or worktree self-serves instead of depending on user-scope
+enablement. Deleted in the same pass: `.claude/commands/` (134 tracked
+claude-flow scaffolding files, zero invocations on record), 119 imported
+skill-pack dirs and 12 broken `.agents/skills` symlinks under
+`.claude/skills/` (backup: `~/.claude/doctor-backup-project-skills-20260906.tar.gz`),
+and 79 gitignored scaffolding agents (backup:
+`~/.claude/doctor-backup-agents-20260906.tar.gz`). What remains is the
+curated set: 4 skills (blog-next/operator/write, call-it-a-day), 30 tracked
+agents. The stale `mcp__claude-flow__*` permission became `mcp__ruflo__*` -
+the server registers as `ruflo` now; the old prefix resolves to nothing.
