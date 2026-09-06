@@ -18,10 +18,13 @@ readers. Polls ride the +1/week budget, preferring Wednesdays.
 
 **Shared account (noted 2026-09-06):** the jobseek campaign
 (`linkedin-posts/jobseek/`, 8-week calendar, plan in the vault) posts from the
-same account. One feed, one cadence budget: a jobseek post takes a slot from
-the table below, never adds a third post that week. Check both calendars before
-dating anything; the jobseek posts are also text-only under the 2026-09-06
-decision unless Paul says otherwise.
+same account. **Parked until the jobseek roadmap reaches C3** (Paul
+2026-09-06): the calendar is the content leg of jobseek channel C3 (network /
+LinkedIn engagement); the roadmap is in C1 (direct ATS) and C3 opens only
+once applications produce lanes. Its one drafted post sits in backlog with the
+reason in frontmatter. When C3 opens: one feed, one cadence budget - a jobseek
+post takes a slot from the table below, never adds a third post that week, and
+is text-only under the 2026-09-06 decision.
 
 **Plan by PILLAR, not just lane** (adopted 2026-08-13, see `content-pillars.md`):
 hold roughly **70% value / 20% personal / 10% promo** across each ~2-week window,

@@ -16,8 +16,9 @@ first_comment: |
   (value post - no link, no CTA)
 utm_campaign: ""
 utm_content: small_team_preference
-status: draft
-scheduled_for: "2026-09-25 08:30 CEST"
+status: postponed
+stage: backlog
+postponed_reason: "2026-09-06 (Paul): jobseek LinkedIn content is the C3 (network) channel leg of the jobseek roadmap; we are in C1 (direct ATS). Parked until C3 opens - see vault jobseek-on-paperclip.md § C3. Original slot was 2026-09-25 08:30 CEST"
 supersedes: "jobseek-linkedin-content-calendar.md post #6, 'The 15-engineer ceiling, why I stopped wanting bigger orgs'"
 story_gap: |
   BLOCKING for concreteness, not for landing this file. The post carries no
