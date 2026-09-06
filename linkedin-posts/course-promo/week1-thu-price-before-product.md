@@ -17,6 +17,7 @@ utm_campaign: course_promo_module1
 utm_content: week1_thu_price_before_product
 status: approved
 stage: next
+scheduled_for: "2026-09-10 17:00 CEST"
 proposed_for: "2026-09-09 17:00 CEST"
 first_comment: |
   (value post - no link; reply-CTA only. Dropped the course link 2026-08-13 to make this one of the free 70% - see content-pillars.md)

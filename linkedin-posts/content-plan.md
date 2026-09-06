@@ -152,17 +152,19 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Date | Pillar | Post | Link? | Status |
 |---|---|---|---|---|
 | Aug 13 | story/opinion | `course-promo/week1-thu-validate-before-build` | course | **posted** |
-| Aug 18 | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **scheduled** ✓ |
-| Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **scheduled** ✓ |
-| Aug 25 Tue | reaction | `personal/reaction-claude-code-trust` | none | **approved** (Paul, board 2026-08-17) |
-| Aug 26 Wed | opinion | `course-promo/sidepath-status-meetings-friday-demo` | course *(1st comment)* | **approved** (Paul, board 2026-08-17) |
-| Sep 2 Wed | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved** (Paul, board 2026-08-17, post-swarm rewrite; caricature regenerated same day - no open items) |
-| Sep 3 Thu | teach | `course-promo/week1-thu-price-before-product` | none | **approved** (Paul, board 2026-08-17) |
-| Sep 8 Tue | reaction | `personal/reaction-vibe-coding-front-back` | none | **approved** (Paul, board 2026-08-17) |
-| Sep 9 Wed | opinion | `personal/opinion-permission-to-fix` | none | **approved** (Paul, board 2026-08-17; pulled forward from Oct 15) |
+| Aug 18 | opinion | `icp-validation/week1-mon-jira-not-progress` | none | **posted** |
+| Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **posted** (first comment shipped late, 2026-09-05) |
+| Aug 20-22 | off-plan | LeanCTX co-founder ad; Ruby meetup Berlin | none | posted organically - not in repo, no ledger row |
+| Sep 3-5 | off-plan | QA-department opinion; vibe-coded MVP rewrite; zg tool; wasted tokens/API keys; Fable 5.1 vs GPT-6 | none | 5 posts in 3 days, posted organically - not in repo, no ledger rows (LI-0 card) |
+| Sep 9 Wed | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved**, re-slotted from Sep 2 (slipped unposted) |
+| Sep 10 Thu | teach | `course-promo/week1-thu-price-before-product` | none | **approved**, re-slotted from Sep 3 (slipped unposted) |
+| Sep 15 Tue | opinion | `course-promo/sidepath-status-meetings-friday-demo` | course *(1st comment)* | **approved**, re-slotted from Aug 26 (slipped unposted) |
 | Sep 16 Wed | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | **approved** (Paul, board 2026-08-17) |
-| Sep 17 Thu | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | **approved** (Paul, board 2026-08-17; hook shortened same day) |
 | Sep 23 Wed | poll | `course-promo/week1-wed-first-move-poll` | none | **approved** (Paul, board 2026-08-17; +1/week budget; link moved to the post-close follow-up comment per balance audit) |
+| Sep 24 Thu | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | **approved**, moved Sep 17 -> 24 (Tue/Thu rotation: week of Sep 14 is Tue+Wed) |
+| Sep 29 Tue | opinion | `personal/opinion-permission-to-fix` | none | **approved**, moved Sep 9 -> 29 (the Sep 3 QA-department post already spent the org-dysfunction angle this fortnight) |
+| backlog | reaction | `personal/reaction-claude-code-trust` | none | **postponed** 2026-09-06 - same thesis as the organic Sep 4 wasted-tokens post; re-verify after Oct 1 |
+| backlog | reaction | `personal/reaction-vibe-coding-front-back` | none | **postponed** 2026-09-06 - superseded by the organic Sep 4 vibe-coded-MVP post (same thesis, same close); needs a new angle |
 | Oct 7 Wed | teach | `course-promo/week2-tue-mom-test-past-questions` | none | **approved** (Paul, board 2026-08-17) - re-slotted Sep 22 -> Oct 7 per balance audit (Sep 16/22/23 would have been a three-post interview run); space `ten-interviews-recap` (Oct 1, draft) further out if it gets approved |
 | Sep 24 | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | draft |
 | Sep 29 | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |

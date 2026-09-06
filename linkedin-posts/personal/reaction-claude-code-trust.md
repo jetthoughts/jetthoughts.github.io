@@ -9,8 +9,9 @@ icp_test: Does the economic objection land - do builders/founders reply about ag
 image: "assets/reaction-claude-code-trust.jpg"
 first_comment: |
   (value post - no link; reply-CTA only)
-status: approved
-stage: next
+status: postponed
+stage: backlog
+postponed_reason: "2026-09-06: Paul posted organic AI-tooling reactions Sep 4-5 (wasted tokens / API keys; Fable vs GPT-6) - same thesis cluster; re-verify after 2026-10-01"
 proposed_for: "2026-08-25 17:00 CEST"
 notes: |
   Pillar: reaction (the 70% value lane; NO course link). Caricature added 2026-08-14

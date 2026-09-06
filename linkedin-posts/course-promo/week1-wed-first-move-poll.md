@@ -18,6 +18,7 @@ utm_content: week1_wed_first_move_poll
 status: approved
 revised: idea-first 2026-08-20
 stage: next
+scheduled_for: "2026-09-23 17:00 CEST"
 proposed_for: "2026-09-23 17:00 CEST"
 first_comment: |
   (no link at poll time - the plan table lists this post as link-free. Paul owes the
