@@ -35,7 +35,13 @@ me"), no rubric-beige neutrality. Deliver the point, not the setup.
 - ❌ "Comment DEMO and I'll send..." / "DM me if..."
 - ❌ Any body link to JT website, scheduling tool, or lead magnet
 - ✅ Real peer question that invites founders to share their own experience
-- Course-promo lane: the course link goes in the FIRST COMMENT with UTM, never the body (`course_link_placement: first-comment`). Rescue lane ships no link at all (reply-CTA only).
+- **No course link anywhere, including the first comment (stopped 2026-09-06).** The course goes in a DM or after a call. Rescue lane ships no link (reply-CTA only).
+
+**Shape that the feed routes (decision of record 2026-09-06, `linkedin-posts/content-plan.md`):**
+- First line: flat contrarian conviction on a live professional topic.
+- **One concrete failure mechanism in plain words** - the sentence a reader can quote and argue with ("the AI doesn't edit your code, it writes new code, so the bug comes back from the copies").
+- ~130 words, **text only - no designed exhibit** (every imaged post stayed under 350 impressions, both text-only posts cleared 9,000), no hashtags, one real question to close.
+- LinkedIn's job is referrals and credibility with CTOs, heads of engineering and agencies who see broken founder apps. Founder discovery happens in comments on founders' posts, in calls and in DMs, not in Paul's broadcast.
 
 **Anti-AI structural rules (zero tolerance):**
 - No rule-of-three negative parallelism ("Not X. Not Y. Z.")
@@ -60,9 +66,9 @@ Length target: 150-200 words.
 ## Save location (three lanes)
 
 ```
-linkedin-posts/course-promo/week{N}-{day}-{slug}.md    # course link in first comment
-linkedin-posts/icp-validation/week{N}-{day}-{slug}.md  # rescue lane, no links
-linkedin-posts/personal/{slug}.md                      # brand/opinion posts
+linkedin-posts/course-promo/week{N}-{day}-{slug}.md    # course-topic value posts, NO link (link lane stopped 2026-09-06)
+linkedin-posts/icp-validation/week{N}-{day}-{slug}.md  # rescue lane, no links, 1/week in the viral shape
+linkedin-posts/personal/{slug}.md                      # brand/opinion/engineering posts - the main lane now
 ```
 
 Outside `content/` (Hugo renders drafts only via the dev-only board mount).

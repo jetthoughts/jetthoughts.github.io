@@ -4,7 +4,9 @@
 
 **Status:** Canonical voice reference for all `linkedin-posts/**/*.md` drafts.
 
-**Last updated:** 2026-05-09
+**Last updated:** 2026-09-06
+
+> **Decision of record 2026-09-06 (overrides anything below that conflicts):** LinkedIn is the peer/authority channel (CTOs, heads of engineering, agencies who see broken founder apps), not the founder-discovery channel. Every post: **text-only, no designed exhibit** (imaged posts stayed under 350 impressions; text-only posts cleared 9,000), ~130 words, a flat contrarian first line, **one concrete failure mechanism in plain words**, one question to close. **No course link anywhere, including the first comment** - that lane is stopped (2 bounced sessions). Rescue lane: one post a week in this shape, verdict 2026-09-30. Founder discovery: 15 min/day commenting on non-technical founders' posts, calls, DMs. Full decision and kill dates: `linkedin-posts/content-plan.md` § "Decision of record (2026-09-06)".
 
 ---
 

@@ -67,7 +67,7 @@ the ratio across each ~2-week window:
 | | **Story / lesson** | a real thing that happened + the takeaway (incl. mistakes) | **no** |
 | **20% personal** | **Build-in-public** | real audit findings, what Paul's seeing across founders, changed-my-mind | rarely |
 | | **Curation / reaction** | Paul's take on an industry thing (an AI tool, a thread, a study) - NEW, we do none | no |
-| **10% promo** | **Course / validation** | the ask - but framed as story/lesson | **yes (first comment)** |
+| **10% promo** | **Course / validation** | the ask - but framed as story/lesson | ~~yes (first comment)~~ **no - promo slot stopped 2026-09-06** (measured: 2 bounced sessions; the course goes in DMs and after calls). See `content-plan.md` § Decision of record |
 | (weekly) | **Poll** | engagement slot, tests a topic | lane-dependent |
 
 **Two behavioural changes that matter most:**

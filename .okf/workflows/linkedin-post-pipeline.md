@@ -69,8 +69,12 @@ type action.
   in the empty area below it does not focus and typing is silently lost.
 - Compose text = post **body + the frontmatter `cta` line** (the cta is
   not stored in the body).
-- Image must be attached BEFORE scheduling; Paul attaches (file dialog
+- Images: **none by default since 2026-09-06** (every imaged post stayed
+  under 350 impressions, both text-only posts cleared 9,000). If one is ever
+  needed it must be attached BEFORE scheduling; Paul attaches (file dialog
   is not automatable).
+- No course link, body or first comment (lane stopped 2026-09-06 - 2 bounced
+  sessions). Decision of record: `linkedin-posts/content-plan.md`.
 - Schedule dialog uses the account's local timezone (CEST for Paul);
   date via calendar click, time via the field's dropdown.
 - The scheduled queue has **no direct URL**

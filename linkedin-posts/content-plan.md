@@ -30,7 +30,53 @@ links the course. Decoupling the give from the ask is what makes the ask land.
 
 Status legend: `draft` · `revised` (idea-first, ready) · `approved` · `scheduled` · `posted`.
 
-## Next actions (2026-08-21) - LinkedIn is now the ONLY unblocked arrival test
+## Decision of record (2026-09-06): LinkedIn is the peer/authority channel, not the founder-discovery channel
+
+**Supersedes** the 2026-08-21 section below ("LinkedIn is the ONLY unblocked
+arrival test") and the 2026-08-13 pillar mix wherever they conflict. Evidence:
+`metrics-ledger.md` § "Read of 2026-09-06". Panel: customer / distribution /
+cold-eyes lenses, 3-0 for re-purposing, each naming where it fails; Paul
+approved 2026-09-06.
+
+What changed: two off-plan text-only posts (Sep 3) did 26,711 and 9,749
+impressions, 96-99% out-of-network, 0 icp_replies, founder/CEO absent from the
+top-3 viewer titles; the three planned ICP posts did 219-332. LinkedIn's 2026
+feed routes by topic and early engagers, and Paul's early engagers are
+engineers. The account reaches engineers, CTOs and rescue suppliers at scale
+and reaches founders not at all.
+
+1. **LinkedIn's job is referrals and credibility.** Post what the graph routes:
+   engineering conviction + one concrete failure mechanism, text-only, ~130
+   words, no link, one question. Thu 17:00 CEST plus one more slot a week.
+   Readers to win: CTOs, heads of engineering, agencies who *see* broken
+   founder apps.
+2. **Course-promo first-comment link lane: STOPPED.** Two bounced sessions from
+   the only measured post; no discovery path to the course works from any
+   direction. The course is what Paul sends in a DM or after a call. Queued
+   course-link posts (`backlog-40k-mvp-chasing-fixes`, `week1-fri-why-i-wrote-it`)
+   move to backlog; `sidepath-status-meetings-friday-demo` keeps its post and
+   drops its link.
+3. **Rescue ICP lane continues in the viral shape**, one post a week: text-only,
+   mechanism sentence, founder topic. This is the reach test the kill criterion
+   never got. Four rows by **2026-09-30**; founder/CEO in top-3 titles on none
+   → lane closes on its own rule.
+4. **Founder discovery moves off broadcast:** 15 min/day commenting on
+   non-technical founders' posts; the warm-network call slots in the vault plan;
+   and a direct referral ask to the five non-competing commenters on the
+   vibe-coding post (2 CTOs, staff engineer, head of software, technical
+   founder) inside one call slot. **Verdict 2026-09-20**: ≥1 founder intro →
+   peer channel confirmed, keep 2-3 posts/week; zero → LinkedIn is brand-only,
+   one post/week, minutes go to calls.
+5. **No designed exhibits for LinkedIn posts.** Every imaged post landed under
+   350 impressions; both text-only posts cleared 9,000. Exhibits stay for the
+   blog and course.
+6. Reddit / IndieHackers stay off the table until the referral test fails.
+
+Strongest reason this fails: it needs the two 45-minute call slots the
+2026-08-29 channel strategy already said were uncommitted. Without them, item 4
+never runs.
+
+## Superseded: Next actions (2026-08-21) - LinkedIn is now the ONLY unblocked arrival test
 
 **Decision of record, Paul 2026-08-21.** The course-discovery diagnosis
 (`docs/projects/2605-tech-for-non-technical-founders/50-59-execution/50.05-course-discovery-diagnosis-2026-08-21.md`)
@@ -156,9 +202,9 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | Aug 19 | teach | `course-promo/week1-tue-founding-hypothesis` | course *(promo)* | **posted** (first comment shipped late, 2026-09-05) |
 | Aug 20-22 | off-plan | LeanCTX co-founder ad; Ruby meetup Berlin | none | posted organically - not in repo, no ledger row |
 | Sep 3-5 | off-plan | QA-department opinion; vibe-coded MVP rewrite; zg tool; wasted tokens/API keys; Fable 5.1 vs GPT-6 | none | 5 posts in 3 days, posted organically - not in repo, no ledger rows (LI-0 card) |
-| Sep 9 Wed | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved**, re-slotted from Sep 2 (slipped unposted) |
-| Sep 10 Thu | teach | `course-promo/week1-thu-price-before-product` | none | **approved**, re-slotted from Sep 3 (slipped unposted) |
-| Sep 15 Tue | opinion | `course-promo/sidepath-status-meetings-friday-demo` | course *(1st comment)* | **approved**, re-slotted from Aug 26 (slipped unposted) |
+| Sep 9 Wed | build-in-public | `personal/bip-vendors-still-burning-founders` | none | **approved**, re-slotted from Sep 2 (slipped unposted). Post TEXT-ONLY per the 2026-09-06 decision; the exhibit stays in the repo unused |
+| Sep 10 Thu | teach | `course-promo/week1-thu-price-before-product` | none | **approved**, re-slotted from Sep 3 (slipped unposted). Text-only |
+| Sep 15 Tue | opinion | `course-promo/sidepath-status-meetings-friday-demo` | none *(link dropped 2026-09-06)* | **approved**, re-slotted from Aug 26 (slipped unposted). Text-only, no first-comment link |
 | Sep 16 Wed | teach/opinion | `course-promo/week2-mon-friends-politely-lying` | none | **approved** (Paul, board 2026-08-17) |
 | Sep 23 Wed | poll | `course-promo/week1-wed-first-move-poll` | none | **approved** (Paul, board 2026-08-17; +1/week budget; link moved to the post-close follow-up comment per balance audit) |
 | Sep 24 Thu | build-in-public | `personal/bip-build-your-own-tools-with-ai` | none | **approved**, moved Sep 17 -> 24 (Tue/Thu rotation: week of Sep 14 is Tue+Wed) |
@@ -166,12 +212,12 @@ sorts by each post's `proposed_for`, so this table = the live board order.
 | backlog | reaction | `personal/reaction-claude-code-trust` | none | **postponed** 2026-09-06 - same thesis as the organic Sep 4 wasted-tokens post; re-verify after Oct 1 |
 | backlog | reaction | `personal/reaction-vibe-coding-front-back` | none | **postponed** 2026-09-06 - superseded by the organic Sep 4 vibe-coded-MVP post (same thesis, same close); needs a new angle |
 | Oct 7 Wed | teach | `course-promo/week2-tue-mom-test-past-questions` | none | **approved** (Paul, board 2026-08-17) - re-slotted Sep 22 -> Oct 7 per balance audit (Sep 16/22/23 would have been a three-post interview run); space `ten-interviews-recap` (Oct 1, draft) further out if it gets approved |
-| Sep 24 | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | draft |
+| backlog | story | `course-promo/backlog-40k-mvp-chasing-fixes` | course *(promo)* | **postponed** 2026-09-06 - course-link lane stopped |
 | Sep 29 | poll | `icp-validation/week1-wed-trust-signals-poll` | none | revised ✓ |
 | Oct 1 | teach | `course-promo/week2-fri-ten-interviews-recap` | none | revised ✓ |
 | Oct 6 | opinion | `icp-validation/backlog-vibe-coding-disposable` | none | draft |
 | Oct 8 | poll | `course-promo/week2-wed-interview-count-poll` | none | draft |
-| Oct 13 | story/promo | `course-promo/week1-fri-why-i-wrote-it` | course *(promo)* | draft |
+| backlog | story/promo | `course-promo/week1-fri-why-i-wrote-it` | course *(promo)* | **postponed** 2026-09-06 - course-link lane stopped |
 | Oct 15 | opinion | `icp-validation/week1-tue-staging-question` | blog | revised ✓ (moved from Sep 8 - spaces the progress-visibility cluster further from Aug 18/26) |
 
 **Ratio:** across 19 posts, **4 course links** (founding, status-meetings
