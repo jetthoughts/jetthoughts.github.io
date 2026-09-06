@@ -12,6 +12,7 @@ utm_campaign: ""
 utm_content: bip_build_your_own_tools_with_ai
 status: approved
 stage: next
+scheduled_for: "2026-09-24 17:00 CEST"
 proposed_for: "2026-09-16 17:00 CEST"
 notes: |
   Pillar: build-in-public (the 70% value; NO course link). From Paul's real work

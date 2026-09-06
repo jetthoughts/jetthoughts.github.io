@@ -12,6 +12,7 @@ first_comment: |
   (value post - no link; reply-CTA only)
 status: approved
 stage: next
+scheduled_for: "2026-09-09 17:00 CEST"
 proposed_for: "2026-09-02 17:00 CEST"
 notes: |
   Pillar: build-in-public (the 70% value; NO course link). From Paul's interview

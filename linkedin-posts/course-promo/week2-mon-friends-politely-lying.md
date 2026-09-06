@@ -18,6 +18,7 @@ utm_content: week2_mon_friends_politely_lying
 status: approved
 revised: idea-first 2026-08-20
 stage: next
+scheduled_for: "2026-09-16 17:00 CEST"
 proposed_for: "2026-09-17 17:00 CEST"
 first_comment: |
   (value post - no link; reply-CTA only. Dropped the course link 2026-08-13 to make this one of the free 70% - see content-pillars.md)
