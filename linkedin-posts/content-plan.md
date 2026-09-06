@@ -16,6 +16,13 @@ in Buffer's after-work window (3-8pm local, 4.8M-post analysis:
 <https://buffer.com/resources/best-time-to-post-on-linkedin/>) for European
 readers. Polls ride the +1/week budget, preferring Wednesdays.
 
+**Shared account (noted 2026-09-06):** the jobseek campaign
+(`linkedin-posts/jobseek/`, 8-week calendar, plan in the vault) posts from the
+same account. One feed, one cadence budget: a jobseek post takes a slot from
+the table below, never adds a third post that week. Check both calendars before
+dating anything; the jobseek posts are also text-only under the 2026-09-06
+decision unless Paul says otherwise.
+
 **Plan by PILLAR, not just lane** (adopted 2026-08-13, see `content-pillars.md`):
 hold roughly **70% value / 20% personal / 10% promo** across each ~2-week window,
 plus ~1 poll/week. Course/rescue are just the *topics*; the pillar is what the post
