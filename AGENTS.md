@@ -74,3 +74,13 @@ OUTPUT STYLE: concise-default
 ---
 
 *(Removed 2026-08-08: 545 lines of vendored Memoria memory-tool documentation — the memory MCP server is not configured in this repo, so every `memory_*` tool those instructions mandated was unavailable. If Memoria is ever wired up via `.mcp.json`, restore its docs from git history or the Memoria distribution, not by hand.)*
+
+## MCP tools
+
+This repo runs the **`site`** profile: chrome-devtools, gsc, google-analytics —
+on top of the `core` set (openviking, searxng, tavily, browseros-neo). Measured
+usage here: chrome-devtools 1,799 calls, claude-in-chrome 581, gsc 165.
+
+The catalogue and the exact `claude mcp add -s local` command for each live in
+`tool_profiles` in `~/.infra/.okf/data/services.json` (`bin/services --json`).
+Use `-s local` — do not commit MCP config into this repo.
