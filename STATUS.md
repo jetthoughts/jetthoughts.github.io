@@ -18,6 +18,7 @@
 
 | Workstream | State | Next step | Entry point |
 |---|---|---|---|
+| Founder app-idea walkthrough (Paul-requested, 2026-09-09) | Unpublished draft: problem interview, one-page concept, rough screens, sample-data demo. No change to the outreach-first priority or course distribution plan | Review the draft PR; publication requires a separate decision | [`Article draft`](content/blog/app-idea-where-to-start/index.md) |
 | LinkedIn (peer/authority channel, re-purposed 2026-09-06) | 3 planned posts at 219-332 impressions vs two off-plan text-only posts at 26.7k / 9.7k (96-99% out-of-network, 0 ICP replies). Decision of record: course-link lane STOPPED; rescue lane 1/wk in the viral shape as reach test (verdict 2026-09-30); founder discovery via commenting + calls + referral ask (verdict 2026-09-20); no exhibits on LI posts | Post `bip-vendors` Wed Sep 9 text-only; work the reply drafts in `linkedin-posts/replies/`; make the referral ask | [`content-plan` § Decision of record](linkedin-posts/content-plan.md) · [`metrics-ledger`](linkedin-posts/metrics-ledger.md) |
 | 2608 site design system (v2 `/next/` rail) | Paused 2026-08-22 mid-flight; 3 pilots built + voted | Apply the [repositioned pilot copy](docs/projects/2608-site-design-system/20-29-strategy/20.09-repositioned-pilot-copy.md) (2608's own 20.09 — not the content plan); then Paul's 5 decisions | [`2608 README`](docs/projects/2608-site-design-system/README.md) |
 | Positioning / homepage offer (2608 niche research + [ADR-0007](docs/adr/0007-homepage-main-offer-and-copy.md)) | **Paused 2026-08-22** — 8 research lanes complete, copy drafted + panel-voted, nothing shipped to the live site; landed on master via [#606](https://github.com/jetthoughts/jetthoughts.github.io/pull/606) | Resume via the HANDOFF — read its corrections first: the staffing constraint was briefed backwards, so every lane's discards need re-reading before acting on a shortlist | [`HANDOFF`](docs/projects/2608-niche-research/HANDOFF.md) |
@@ -42,4 +43,4 @@
 
 **Nothing new blocked on Paul from the 2026-08-28 PM sweep.** Two items stay open and both are MINE, not his: the full external-link crawl has never completed (the local run was SIGTERM'd, so the first real result comes from the `test:links_external` cron added in [#636](https://github.com/jetthoughts/jetthoughts.github.io/pull/636)), and the uncited-posts ratchet counts link PRESENCE rather than attribution, which is how a page carrying 24 unsourced benchmark tables sat green. Both are recorded in [`fabrication-ratchet`](.okf/content/fabrication-ratchet.md).
 
-Last updated: 2026-08-28
+Last updated: 2026-09-09
