@@ -4,7 +4,7 @@ description: "Turn your app idea into a clear concept and a small prototype. A p
 slug: "app-idea-where-to-start"
 author: "Paul Keen"
 date: 2026-09-09
-draft: true
+draft: false
 cover_image: "cover.png"
 cover_image_alt: "Have an App Idea? Start Here, with a ruby illustration and prompts to focus on one task, three screens, and made-up data."
 metatags:
