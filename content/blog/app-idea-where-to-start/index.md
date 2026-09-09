@@ -26,7 +26,7 @@ You have an app idea, but you're stuck before the first step. Should you find a 
 
 Start by describing one task someone should be able to complete. A request like "build an app for freelancers" leaves too much undecided: which freelancer, what problem, and what should happen when they open it?
 
-You can work through those decisions in ordinary language. For your first attempt, aim for a short description of the problem and roughly three sketches, then use an AI builder to turn them into a clickable demo.
+You can work through those decisions in ordinary language. For your first attempt, aim for a short description of the problem and a few rough screens for the approach you choose, then use an AI builder to turn them into a clickable demo.
 
 ## Describe a situation you want to improve
 
@@ -36,7 +36,7 @@ For a running example, take a fictional app that helps freelancers keep track of
 
 Now you have something to investigate. A freelancer might already handle this well with a calendar reminder, or they might need to see the date beside their client notes.
 
-Before drawing anything, ask someone who does this work:
+Before choosing screens, ask someone who does this work:
 
 > "Tell me about the last time you needed to follow up with a client. How did you remember when to do it?"
 
@@ -44,7 +44,7 @@ Follow their account of what happened, using [questions about past behavior](htt
 
 Write down what you learn separately from what you hope is true. "They searched three places for a note" describes an observation; "they would switch to my app" is still a guess.
 
-If you can't yet reach someone, you can sketch an idea to help explain it. Label the unanswered questions so you don't mistake your own assumptions for customer research.
+If you can't yet reach someone, you can ask AI for rough screens to help explain the idea. Label the unanswered questions so you don't mistake your own assumptions for customer research.
 
 ## Ask AI to interview you before it builds
 
@@ -70,9 +70,9 @@ Don't invent customer feedback or tell me the idea is validated.
 Compare a simple manual solution with a small app concept.
 Help me choose one task to test. Put extra features in "Not now."
 
-When we have enough detail, draft a one-page concept and describe
-roughly three screens. For each screen, explain what the person
-sees, what they can do, and what happens next.
+When we have enough detail, draft a one-page concept with the task,
+what success looks like, and what we're leaving out.
+Leave screen choices open so we can compare approaches next.
 
 Don't build or write code yet. Stop for my corrections.
 Don't ask me to choose programming languages or databases.
@@ -94,7 +94,7 @@ For the fictional follow-up app, that page might look like this:
 |---|---|
 | Who is it for? | A solo freelancer who handles their own client calls. |
 | What should they accomplish? | Record the next follow-up date and find it beside the client notes. |
-| What do they do in the demo? | Open a client, change the date, and see the updated follow-up list. |
+| What do they do in the demo? | Change a follow-up date and check that it was saved. |
 | What are we assuming? | Keeping dates beside client notes is more useful than the person's current calendar or spreadsheet. |
 | What won't we build yet? | Email sending, notifications, account creation, or team access. |
 | What should we learn? | Can someone complete the task without help, and where would it fit into their existing work? |
@@ -105,13 +105,44 @@ This page also helps you notice a mismatch early. If users mainly want automatic
 
 Keep this early concept separate from a brief backed by customer research. After customer interviews and prototype sessions have supplied that evidence, the [one-page product brief lesson](https://jetthoughts.com/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) shows how to include it in what you hand to a builder or developer.
 
-## Draw screens you can explain
+## Ask AI to propose rough screens you can explain
 
-A rough screen sketch is often called a wireframe. It shows where the information and controls go, without asking you to choose a visual style.
+You don't need to draw these yourself. Ask AI to propose two ways of completing the task. They should change what the person does, rather than just the colors.
 
-Paper is enough for this step. Draw a box for each screen and write the actual words someone would see, including the button labels.
+Describe what the person sees and does at each step; add rough screens when seeing the layout would help you choose ([Shape Up: Find the Elements](https://basecamp.com/shapeup/1.3-chapter-04)).
 
-Here is a rough version of the follow-up app:
+For the fictional follow-up app, compare:
+
+- Change the date in the list: choose a new date beside the client and save.
+- Read the note first: open the client, read the note, then change the date and return to the list.
+
+Does the person need the note to choose the date, or does opening it add a step they don't need? Treat both as proposals to test.
+
+Continue the AI conversation with this prompt:
+
+```text
+Use the concept we've already discussed. Ask only for missing context.
+Keep our one task and "Not now" limits. Don't invent customer evidence.
+
+Only inspect existing approaches if we have a specific unanswered
+question about these options and you have web access; otherwise skip browsing.
+Use at most two examples. Give URLs and separate observations from suggestions.
+Don't invent findings or URLs.
+
+Propose two ways to complete the task, with rough labeled screens if you
+can show them here. Otherwise give screen outlines: words, controls,
+and what happens after each action. Skip visual polish.
+
+Explain the downside of each option and one question that could change our choice.
+Discuss my feedback and revise only the affected part. Wait for my approval.
+Don't build the app, connect services, or publish anything.
+```
+
+You don't need another tool by default. Lovable's Plan mode lets you discuss the options without changing code and can show diagrams ([Lovable Plan mode](https://docs.lovable.dev/features/plan-mode)). If Lovable offers visual design options, wait until you're ready before submitting a direction: submitting starts the full build ([Lovable design guidance](https://docs.lovable.dev/features/design-guidance)).
+
+If you'd rather discuss visible rough screens, Studio Lofi can draft them from a prompt and revise individual screens through chat ([Studio Lofi](https://studiolofi.com/)). Export the images and bring them into Lovable with a short brief ([Studio Lofi](https://studiolofi.com/)). Paper is still an option if you prefer it.
+
+For the rest of this example, choose the second approach. The sketch below illustrates it; we haven't tested whether the note is needed:
 
 ![Rough follow-up app screens: open a client, read their note, choose a new date, then save to return to the list.](follow-up-wireframe.svg)
 
@@ -127,14 +158,14 @@ That is useful detail to give a builder. You can postpone choosing a logo, but t
 
 For a first demo, request sample data and leave real accounts disconnected. Lovable's own guide recommends starting with realistic sample data, no login, and no database, then adding those pieces later ([Lovable's idea-to-app guide](https://docs.lovable.dev/tips-tricks/from-idea-to-app)).
 
-Keep your approved concept in the conversation and attach a photo of your sketch if you made one; Lovable supports mockups and product briefs as attachments ([Lovable Chat](https://docs.lovable.dev/features/projects/chat)). When you're ready to build, use this instruction:
+Keep your approved concept and chosen approach in the conversation. Screen outlines are enough; if you have a sketch, attach it. Lovable supports mockups and product briefs as attachments ([Lovable Chat](https://docs.lovable.dev/features/projects/chat)). When you're ready to build, use this instruction:
 
 ```text
 Build a clickable demo of the approved concept.
 Use only the agreed screens and task.
 
 Use white backgrounds, readable text, and simple gray borders.
-Keep the sketch's labels. Don't add a marketing page or decoration.
+Keep the agreed labels. Don't add a marketing page or decoration.
 
 Use fictional clients and sample data. Don't add real accounts,
 payments, email sending, a database, or external connections.
@@ -151,7 +182,7 @@ After building, explain how to try the task, what is simulated,
 and which checks you actually tested. Don't publish it publicly.
 ```
 
-Approve the build only after the brief and sketches describe what you want. These instructions are a request to the tool, so check what it actually creates before sharing it.
+Approve the build only after the brief and chosen sketches or screen outlines describe what you want. These instructions are a request to the tool, so check what it actually creates before sharing it.
 
 For the follow-up demo, open a client and change the date yourself. Confirm that Save updates the list, Cancel keeps the original value, and an empty date produces the agreed message.
 
