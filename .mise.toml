@@ -9,6 +9,4 @@
 hugo = "0.165.0"
 bun = "1.3.14"
 node = "latest"
-# Exact patch version: rbenv reads .ruby-version (mirrored below) and only
-# matches exact installs - a fuzzy "4.0" would never resolve there.
 ruby = "4.0.6"
