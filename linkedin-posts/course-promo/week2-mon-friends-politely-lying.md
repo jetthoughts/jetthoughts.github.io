@@ -15,7 +15,7 @@ design_file: none
 course_link_placement: first-comment
 utm_campaign: course-pilot-aug26
 utm_content: week2_mon_friends_politely_lying
-status: approved
+status: scheduled
 revised: idea-first 2026-08-20
 stage: next
 scheduled_for: "2026-09-16 17:00 CEST"

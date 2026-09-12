@@ -10,9 +10,9 @@ icp_test: Do non-technical founders recognize the "paid for something I didn't n
 image: "assets/bip-vendors-still-burning-founders.png"
 first_comment: |
   (value post - no link; reply-CTA only)
-status: approved
+status: scheduled
 stage: next
-scheduled_for: "2026-09-09 17:00 CEST"
+scheduled_for: "2026-09-12 (posted immediately, not LinkedIn-scheduled - staged text-only, Paul clicks Post)"
 proposed_for: "2026-09-02 17:00 CEST"
 notes: |
   Pillar: build-in-public (the 70% value; NO course link). From Paul's interview

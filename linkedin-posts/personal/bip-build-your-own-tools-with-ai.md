@@ -10,7 +10,7 @@ first_comment: |
   (value post - no link; reply-CTA only)
 utm_campaign: ""
 utm_content: bip_build_your_own_tools_with_ai
-status: approved
+status: scheduled
 stage: next
 scheduled_for: "2026-09-24 17:00 CEST"
 proposed_for: "2026-09-16 17:00 CEST"

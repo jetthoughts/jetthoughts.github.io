@@ -11,7 +11,7 @@ design: B
 design_file: linkedin-posts/course-promo/assets/sidepath-status-meetings-friday-demo.png
 image: "assets/sidepath-status-meetings-friday-demo.png"
 first_comment: "(link dropped 2026-09-06 - course-link lane stopped; value post, reply-CTA only. Original: course chapter friday-demo-rule-founder-progress with utm_campaign=course_promo_friday_demo)"
-status: approved
+status: scheduled
 stage: next
 scheduled_for: "2026-09-15 17:00 CEST"
 proposed_for: "2026-10-07 17:00 CEST"
