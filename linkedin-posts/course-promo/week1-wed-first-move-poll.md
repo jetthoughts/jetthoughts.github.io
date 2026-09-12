@@ -15,7 +15,7 @@ design_file: none
 course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_wed_first_move_poll
-status: approved
+status: scheduled
 revised: idea-first 2026-08-20
 stage: next
 scheduled_for: "2026-09-23 17:00 CEST"

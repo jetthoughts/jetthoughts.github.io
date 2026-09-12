@@ -10,7 +10,7 @@ first_comment: |
   (value post - no link; reply-CTA only)
 utm_campaign: ""
 utm_content: opinion_permission_to_fix
-status: approved
+status: scheduled
 stage: next
 scheduled_for: "2026-09-29 17:00 CEST"
 proposed_for: "2026-10-20 17:00 CEST"

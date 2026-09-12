@@ -15,9 +15,9 @@ design_file: linkedin-posts/course-promo/assets/week1-thu-price-button-framings.
 course_link_placement: first-comment
 utm_campaign: course_promo_module1
 utm_content: week1_thu_price_before_product
-status: approved
+status: scheduled
 stage: next
-scheduled_for: "2026-09-10 17:00 CEST"
+scheduled_for: "2026-09-12 (posted immediately, not LinkedIn-scheduled - staged text-only, Paul clicks Post)"
 proposed_for: "2026-09-09 17:00 CEST"
 first_comment: |
   (value post - no link; reply-CTA only. Dropped the course link 2026-08-13 to make this one of the free 70% - see content-pillars.md)
