@@ -12,7 +12,7 @@ first_comment: |
   (value post - no link; reply-CTA only)
 status: scheduled
 stage: next
-scheduled_for: "2026-09-12 (posted immediately, not LinkedIn-scheduled - staged text-only, Paul clicks Post)"
+scheduled_for: "2026-09-30 17:00 CEST"
 proposed_for: "2026-09-02 17:00 CEST"
 notes: |
   Pillar: build-in-public (the 70% value; NO course link). From Paul's interview
