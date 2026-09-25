@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Caveat, 'Patrick Hand', 'Comic Sans MS', cursive" role="img" aria-labelledby="title desc">
+  <title id="title">Weekly report comparison: jargon wall vs. one-page five-section format</title>
+  <desc id="desc">Two side-by-side mock email screenshots covering the same five working days. The left panel is a 1,840-word jargon wall with no clickable URL. The right panel is a one-page report with five labelled sections - Shipped, In review, Blocked, Cut, Concern.</desc>
+
+  <rect width="900" height="560" fill="#fafaf7"/>
+
+  <!-- Header -->
+  <text x="450" y="38" text-anchor="middle" font-size="26" fill="#1a1a1a">Same five days. Two reports.</text>
+  <text x="450" y="62" text-anchor="middle" font-size="16" fill="#555">Open both on Monday at 9am. Which one orients you?</text>
+
+  <!-- Left panel: bad report -->
+  <g>
+    <rect x="30" y="90" width="400" height="440" fill="#ffffff" stroke="#cc342d" stroke-width="2.5" rx="6"/>
+    <rect x="30" y="90" width="400" height="34" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5" rx="6"/>
+    <text x="50" y="113" font-size="18" fill="#1a1a1a">Sprint 12 - Status Report</text>
+    <text x="385" y="113" text-anchor="end" font-size="14" fill="#777">1,840 words</text>
+
+    <!-- Jargon body lines (redacted look) -->
+    <g font-size="13" fill="#555" font-family="Helvetica, Arial, sans-serif">
+      <text x="50" y="148">Team made significant progress on the v2 architectural</text>
+      <text x="50" y="166">refactor and dependency hardening this sprint, prioritising</text>
+      <text x="50" y="184">long-term maintainability across the platform...</text>
+
+      <rect x="50" y="200" width="340" height="10" fill="#eee"/>
+      <rect x="50" y="216" width="320" height="10" fill="#eee"/>
+      <rect x="50" y="232" width="350" height="10" fill="#eee"/>
+
+      <text x="50" y="262">Velocity remained steady at 34 points (vs. 32 last sprint).</text>
+      <text x="50" y="280">RAG status: Amber. Three risks tracked. Iterating on...</text>
+
+      <rect x="50" y="296" width="330" height="10" fill="#eee"/>
+      <rect x="50" y="312" width="345" height="10" fill="#eee"/>
+      <rect x="50" y="328" width="300" height="10" fill="#eee"/>
+      <rect x="50" y="344" width="335" height="10" fill="#eee"/>
+
+      <!-- Mock burndown chart -->
+      <rect x="50" y="370" width="160" height="80" fill="#f5f5f5" stroke="#ccc"/>
+      <polyline points="60,440 90,425 120,410 150,400 180,395 200,388" fill="none" stroke="#cc342d" stroke-width="1.5"/>
+      <text x="130" y="465" text-anchor="middle" font-size="11" fill="#888">[burndown chart]</text>
+
+      <!-- Mock Jira screenshot -->
+      <rect x="230" y="370" width="160" height="80" fill="#f5f5f5" stroke="#ccc"/>
+      <rect x="240" y="380" width="140" height="8" fill="#ddd"/>
+      <rect x="240" y="392" width="120" height="8" fill="#ddd"/>
+      <rect x="240" y="404" width="135" height="8" fill="#ddd"/>
+      <rect x="240" y="416" width="100" height="8" fill="#ddd"/>
+      <text x="310" y="465" text-anchor="middle" font-size="11" fill="#888">[Jira screenshot]</text>
+    </g>
+
+    <!-- Verdict stamp -->
+    <g transform="translate(40, 485)">
+      <rect x="0" y="0" width="380" height="34" fill="#fff5f5" stroke="#cc342d" stroke-width="1.5" rx="4"/>
+      <text x="190" y="22" text-anchor="middle" font-size="17" fill="#cc342d">No URL. No names. No decision needed by you.</text>
+    </g>
+  </g>
+
+  <!-- Right panel: good report -->
+  <g>
+    <rect x="470" y="90" width="400" height="440" fill="#ffffff" stroke="#2e7d32" stroke-width="2.5" rx="6"/>
+    <rect x="470" y="90" width="400" height="34" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" rx="6"/>
+    <text x="490" y="113" font-size="18" fill="#1a1a1a">Weekly report - week of 5 Oct</text>
+    <text x="855" y="113" text-anchor="end" font-size="14" fill="#777">1 page</text>
+
+    <!-- 5 sections -->
+    <g font-size="13" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">
+      <!-- 1 Shipped -->
+      <text x="490" y="150" font-weight="bold" fill="#2e7d32">1. Shipped</text>
+      <text x="490" y="168" fill="#333">staging.acme.app/co/v2 - login below</text>
+      <text x="490" y="184" fill="#333">discount-code field live; webhook fires</text>
+
+      <!-- 2 In review -->
+      <text x="490" y="215" font-weight="bold" fill="#b8860b">2. In review</text>
+      <text x="490" y="233" fill="#333">PR #843 - Marcos, Priya reviewing Tue</text>
+      <text x="490" y="249" fill="#333">PR #851 - Marcos, no reviewer (PTO)</text>
+
+      <!-- 3 Blocked -->
+      <text x="490" y="280" font-weight="bold" fill="#cc342d">3. Blocked</text>
+      <text x="490" y="298" fill="#333">Stripe live keys - waiting on YOU</text>
+      <text x="490" y="314" fill="#333">Need by Wed end-of-day or slip 1 wk</text>
+
+      <!-- 4 Cut -->
+      <text x="490" y="345" font-weight="bold" fill="#0277bd">4. Cut to ship</text>
+      <text x="490" y="363" fill="#333">Admin override - Postgres console v1</text>
+      <text x="490" y="379" fill="#333">Date-range picker - last-30-days only</text>
+
+      <!-- 5 Concern -->
+      <text x="490" y="410" font-weight="bold" fill="#6a1b9a">5. Concern next week</text>
+      <text x="490" y="428" fill="#333">Orders-table migration locks ~30s</text>
+      <text x="490" y="444" fill="#333">Want a 6am UK window to deploy</text>
+    </g>
+
+    <!-- Verdict stamp -->
+    <g transform="translate(480, 485)">
+      <rect x="0" y="0" width="380" height="34" fill="#f0f9f0" stroke="#2e7d32" stroke-width="1.5" rx="4"/>
+      <text x="190" y="22" text-anchor="middle" font-size="17" fill="#2e7d32">URL + named humans + 1 decision you owe</text>
+    </g>
+  </g>
+
+  <!-- Reading time annotations -->
+  <g font-size="14" fill="#555">
+    <text x="230" y="84" text-anchor="middle">read time: 9:00 → 9:18</text>
+    <text x="670" y="84" text-anchor="middle">read time: 9:00 → 9:02</text>
+  </g>
+</svg>

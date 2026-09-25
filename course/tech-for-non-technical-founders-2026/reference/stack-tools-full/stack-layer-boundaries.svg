@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600" font-family='"Caveat", "Patrick Hand", "Comic Sans MS", cursive'>
+  <defs>
+    <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+  <rect width="980" height="600" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="490" y="40" font-size="30" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Three tools, three jobs</text>
+  <text x="490" y="66" font-size="19" text-anchor="middle" fill="#555">The layer boundaries are the only architecture you need on day one</text>
+
+  <!-- Lovable - UI layer -->
+  <g filter="url(#rough)">
+    <rect x="60" y="95" width="560" height="110" rx="10" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  </g>
+  <text x="340" y="128" font-size="22" text-anchor="middle" fill="#cc342d" font-weight="bold">Lovable - the UI layer</text>
+  <text x="340" y="156" font-size="17" text-anchor="middle" fill="#1a1a1a">Describe screens in English - every save deploys to a staging URL</text>
+  <text x="340" y="182" font-size="16" text-anchor="middle" fill="#555" font-style="italic">Not for: backend logic, auth flows, the database</text>
+
+  <!-- GitHub backup -->
+  <g filter="url(#rough)">
+    <rect x="700" y="95" width="240" height="110" rx="10" fill="#faf7f2" stroke="#555" stroke-width="2.5"/>
+  </g>
+  <text x="820" y="128" font-size="21" text-anchor="middle" fill="#555" font-weight="bold">GitHub - the backup</text>
+  <text x="820" y="156" font-size="16" text-anchor="middle" fill="#1a1a1a">Sync in Lovable Settings,</text>
+  <text x="820" y="176" font-size="16" text-anchor="middle" fill="#1a1a1a">day 1 - code survives Lovable</text>
+  <line x1="623" y1="150" x2="695" y2="150" stroke="#555" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+
+  <!-- Arrow Lovable -> Supabase -->
+  <line x1="340" y1="208" x2="340" y2="250" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="355" y="237" font-size="17" fill="#1a1a1a" font-style="italic">reads / writes rows</text>
+
+  <!-- Supabase - data layer -->
+  <g filter="url(#rough)">
+    <rect x="60" y="255" width="560" height="110" rx="10" fill="#e8f4f8" stroke="#0277bd" stroke-width="2.5"/>
+  </g>
+  <text x="340" y="288" font-size="22" text-anchor="middle" fill="#0277bd" font-weight="bold">Supabase - the data layer</text>
+  <text x="340" y="316" font-size="17" text-anchor="middle" fill="#1a1a1a">Postgres + auth + file storage + row-level security</text>
+  <text x="340" y="342" font-size="16" text-anchor="middle" fill="#555" font-style="italic">RLS keeps each user's rows private to them</text>
+
+  <!-- Arrow Supabase -> Stripe (paywall) -->
+  <line x1="340" y1="368" x2="340" y2="410" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="355" y="397" font-size="17" fill="#1a1a1a" font-style="italic">user hits the paywall</text>
+
+  <!-- Stripe - money layer -->
+  <g filter="url(#rough)">
+    <rect x="60" y="415" width="560" height="110" rx="10" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5"/>
+  </g>
+  <text x="340" y="448" font-size="22" text-anchor="middle" fill="#2e7d32" font-weight="bold">Stripe - the money layer</text>
+  <text x="340" y="476" font-size="17" text-anchor="middle" fill="#1a1a1a">Stripe Checkout: one hosted page Lovable links to</text>
+  <text x="340" y="502" font-size="16" text-anchor="middle" fill="#555" font-style="italic">Not the source of truth for user state</text>
+
+  <!-- Webhook elbow: Stripe -> Supabase -->
+  <path d="M 623 470 L 720 470 L 720 310 L 628 310" fill="none" stroke="#2e7d32" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+  <text x="740" y="400" font-size="17" fill="#2e7d32" font-style="italic">webhook: charge</text>
+  <text x="740" y="422" font-size="17" fill="#2e7d32" font-style="italic">clears, subscription</text>
+  <text x="740" y="444" font-size="17" fill="#2e7d32" font-style="italic">status flips to active</text>
+
+  <!-- Footnote -->
+  <text x="490" y="565" font-size="19" text-anchor="middle" fill="#a3621e" font-style="italic">Strict boundaries: Lovable renders screens, Supabase stores data, Stripe collects payment.</text>
+  <text x="490" y="588" font-size="19" text-anchor="middle" fill="#a3621e" font-style="italic">Do not let one tool do another tool's job.</text>
+</svg>

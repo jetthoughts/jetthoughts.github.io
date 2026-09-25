@@ -1,0 +1,11 @@
+Contact: mailto:info@jetthoughts.com
+Contact: https://jetthoughts.com/contact-us
+Expires: 2025-12-31T23:59:59.000Z
+Encryption: https://jetthoughts.com/.well-known/pgp-key.txt
+Acknowledgments: https://jetthoughts.com/security-acknowledgments
+Policy: https://jetthoughts.com/security-policy
+Hiring: https://jetthoughts.com/careers
+
+# Security Contact Information for JetThoughts
+# Report security vulnerabilities to: info@jetthoughts.com
+# We take security seriously and will respond promptly to verified issues.

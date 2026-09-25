@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Side-by-side comparison: a polite hypothetical answer on the left in red marked Bad, and a specific past-behavior answer on the right in green marked Good. Same interviewee, same problem, opposite signal.">
+  <title>Mom Test answers - polite hypothetical vs specific past behavior</title>
+  <desc>Bad answer: yeah I would totally pay for that. Good answer: last Tuesday 9pm I spent 40 minutes copying spreadsheets and called my CFO. The good answer has a date a time a tool a person a duration and feeling.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .bad-card { fill: #fff5f5; stroke: #cc342d; stroke-width: 3; }
+      .good-card { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 3; }
+      .header-bad { font-size: 22px; font-weight: bold; fill: #cc342d; }
+      .header-good { font-size: 22px; font-weight: bold; fill: #2e7d32; }
+      .quote { font-size: 17px; fill: #1a1a1a; font-style: italic; }
+      .label { font-size: 16px; font-weight: bold; fill: #1a1a1a; }
+      .meta-bad { font-size: 14px; fill: #c62828; }
+      .meta-good { font-size: 14px; fill: #2e7d32; }
+      .legend { font-size: 14px; fill: #333; }
+      .vsline { stroke: #888; stroke-width: 2; stroke-dasharray: 6,4; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="640" fill="#fafafa"/>
+
+  <text x="500" y="38" text-anchor="middle" class="h" font-size="26" fill="#1a1a1a">Same interviewee. Same problem. Opposite signal.</text>
+  <text x="500" y="62" text-anchor="middle" class="h legend">The question wording decides which answer you get.</text>
+
+  <!-- VS line down the middle -->
+  <line x1="500" y1="100" x2="500" y2="600" class="vsline"/>
+  <circle cx="500" cy="335" r="22" fill="#fff" stroke="#888" stroke-width="2"/>
+  <text x="500" y="342" text-anchor="middle" class="h" font-size="18" fill="#888">vs</text>
+
+  <!-- BAD card (left) -->
+  <rect x="40" y="100" width="430" height="490" rx="8" class="bad-card"/>
+  <text x="60" y="135" class="h header-bad">BAD - polite hypothetical</text>
+
+  <text x="60" y="170" class="h label">You asked:</text>
+  <text x="60" y="195" class="h quote">"Would you pay $49/month for a tool</text>
+  <text x="60" y="218" class="h quote">that automates this reporting?"</text>
+
+  <text x="60" y="260" class="h label">They said:</text>
+  <text x="60" y="285" class="h quote">"Yeah I'd totally pay for that!</text>
+  <text x="60" y="308" class="h quote">Sign me up when it ships."</text>
+
+  <text x="60" y="360" class="h label">What you learned:</text>
+  <text x="60" y="385" class="h meta-bad">- No date, no real story</text>
+  <text x="60" y="408" class="h meta-bad">- No quantified pain</text>
+  <text x="60" y="431" class="h meta-bad">- No workaround mentioned</text>
+  <text x="60" y="454" class="h meta-bad">- Hypothetical commitment</text>
+
+  <text x="60" y="500" class="h label" fill="#c62828">Score: 2/10</text>
+  <text x="60" y="528" class="h meta-bad">Interviewee was kind.</text>
+  <text x="60" y="551" class="h meta-bad">They will not pay you.</text>
+  <text x="60" y="574" class="h meta-bad">8 of these = 0 customers.</text>
+
+  <!-- GOOD card (right) -->
+  <rect x="530" y="100" width="430" height="490" rx="8" class="good-card"/>
+  <text x="550" y="135" class="h header-good">GOOD - past behavior</text>
+
+  <text x="550" y="170" class="h label">You asked:</text>
+  <text x="550" y="195" class="h quote">"Tell me about the last time</text>
+  <text x="550" y="218" class="h quote">you ran a board report. Walk me</text>
+  <text x="550" y="241" class="h quote">through what you did."</text>
+
+  <text x="550" y="280" class="h label">They said:</text>
+  <text x="550" y="305" class="h quote">"Last Tuesday 9pm I spent 40 min</text>
+  <text x="550" y="328" class="h quote">copying spreadsheets into a deck.</text>
+  <text x="550" y="351" class="h quote">Called my CFO. I felt stupid."</text>
+
+  <text x="550" y="395" class="h label">What you learned:</text>
+  <text x="550" y="420" class="h meta-good">- Date, time, tool, person, duration</text>
+  <text x="550" y="443" class="h meta-good">- Emotional flag: "felt stupid"</text>
+  <text x="550" y="466" class="h meta-good">- A real recent incident</text>
+  <text x="550" y="489" class="h meta-good">- Workaround named (CFO did it)</text>
+
+  <text x="550" y="528" class="h label" fill="#2e7d32">Score: 8/10</text>
+  <text x="550" y="556" class="h meta-good">Real felt problem.</text>
+  <text x="550" y="579" class="h meta-good">7+ of these = validated.</text>
+</svg>

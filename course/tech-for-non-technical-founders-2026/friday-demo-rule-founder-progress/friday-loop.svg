@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" role="img" aria-labelledby="friloop-title">
+  <title id="friloop-title">The Friday demo weekly loop, then the 4-week checkpoint</title>
+  <desc>Monday 9am the founder posts the 7-question template in #dev Slack. Tuesday through Thursday the team builds and reviews against the questions. Wednesday end of day: anything not going to be ready? If yes, the team replans before Friday, then continues on; if no, it goes straight on. Friday 4pm: a 15-minute Loom or live demo, working software only. The founder clicks every staging URL during the call, then forwards the Loom URL to their inbox that evening. A dashed loop returns to Monday: the cycle repeats every week. After 4 Fridays, review the pattern: 4 of 4 demos clickable means the cadence works, continue weekly. 2 of 4 or fewer means something is stalling - run the Org Chart audit and the red-flags checklist.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub    { font-size: 17px; fill: #666; font-style: italic; }
+      .chip   { font-size: 12.5px; font-weight: 700; fill: #fff; }
+      .step   { font-size: 16px; font-weight: 700; fill: #1a1a1a; }
+      .stepsm { font-size: 13px; fill: #555; }
+      .note   { font-size: 12.5px; fill: #1a1a1a; }
+      .lbl    { font-size: 13px; fill: #666; font-style: italic; }
+      .out    { font-size: 18px; font-weight: 700; }
+      .outg   { fill: #2e7d32; }
+      .outr   { fill: #cc342d; }
+      .body   { font-size: 15px; fill: #1a1a1a; }
+      .card   { fill: #faf7f2; stroke: #555; stroke-width: 2; }
+      .card-g { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .card-r { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .chipbg { fill: #cc342d; }
+      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
+      .loop   { stroke: #888; stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+    </style>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="30" text-anchor="middle" class="h title">The Friday demo: the weekly loop</text>
+  <text x="480" y="53" text-anchor="middle" class="h sub">One 15-minute call, every week - here is the cycle it runs on.</text>
+
+  <!-- Card 1: Monday -->
+  <g transform="translate(29,74) rotate(-0.6 103 48)">
+    <rect width="206" height="96" rx="12" class="card"/>
+    <rect x="10" y="10" width="94" height="20" rx="10" class="chipbg"/>
+    <text x="57" y="24" text-anchor="middle" class="h chip">MON · 9AM</text>
+    <text x="14" y="52" class="h step">Post the 7</text>
+    <text x="14" y="72" class="h step">questions</text>
+    <text x="14" y="90" class="h stepsm">in #dev Slack</text>
+  </g>
+
+  <!-- Card 2: Tue-Thu -->
+  <g transform="translate(261,74) rotate(0.5 103 48)">
+    <rect width="206" height="96" rx="12" class="card"/>
+    <rect x="10" y="10" width="88" height="20" rx="10" class="chipbg"/>
+    <text x="54" y="24" text-anchor="middle" class="h chip">TUE–THU</text>
+    <text x="14" y="52" class="h step">Team builds +</text>
+    <text x="14" y="72" class="h step">reviews</text>
+    <text x="14" y="90" class="h stepsm">against the questions</text>
+  </g>
+
+  <!-- Card 3: Friday demo -->
+  <g transform="translate(493,74) rotate(-0.5 103 48)">
+    <rect width="206" height="96" rx="12" class="card"/>
+    <rect x="10" y="10" width="90" height="20" rx="10" class="chipbg"/>
+    <text x="55" y="24" text-anchor="middle" class="h chip">FRI · 4PM</text>
+    <text x="14" y="50" class="h step">15-min demo,</text>
+    <text x="14" y="68" class="h stepsm">Loom or live, working</text>
+    <text x="14" y="84" class="h stepsm">software only</text>
+  </g>
+
+  <!-- Card 4: click + forward -->
+  <g transform="translate(725,74) rotate(0.6 103 48)">
+    <rect width="206" height="96" rx="12" class="card"/>
+    <rect x="10" y="10" width="94" height="20" rx="10" class="chipbg"/>
+    <text x="57" y="24" text-anchor="middle" class="h chip">FRI · LIVE</text>
+    <text x="14" y="50" class="h step">Click every URL,</text>
+    <text x="14" y="68" class="h stepsm">then forward the Loom to</text>
+    <text x="14" y="84" class="h stepsm">your inbox that evening</text>
+  </g>
+
+  <!-- Row arrows -->
+  <path d="M 235 122 L 259 122" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 699 122 L 723 122" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- No / straight-through arrow card2 -> card3 -->
+  <path d="M 467 122 L 491 122" class="arrow" marker-end="url(#ah)"/>
+  <text x="479" y="112" text-anchor="middle" class="h lbl">no</text>
+
+  <!-- Wednesday side-note (Yes branch) -->
+  <path d="M 320 170 C 335 178, 350 181, 366 186" class="arrow" marker-end="url(#ah)"/>
+  <text x="304" y="184" text-anchor="middle" class="h lbl">yes</text>
+  <g transform="translate(360,182) rotate(0.6 120 26)">
+    <rect width="240" height="54" rx="12" class="card-g"/>
+    <text x="14" y="22" class="h note">Wed EOD: anything not ready?</text>
+    <text x="14" y="41" class="h note">→ team replans before Friday</text>
+  </g>
+  <path d="M 588 194 C 575 182, 555 178, 528 170" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Weekly loop: card4 back to card1, dashed -->
+  <path d="M 828 170 C 910 268, 50 268, 132 170" class="loop" marker-end="url(#ahg)"/>
+  <text x="480" y="280" text-anchor="middle" class="h lbl">Then Monday: the cycle repeats, every week.</text>
+
+  <!-- Fork down to the 4-week checkpoint -->
+  <text x="480" y="298" text-anchor="middle" class="h lbl">after 4 Fridays</text>
+
+  <path d="M 480 306 C 400 314, 310 318, 258 322" class="arrow" marker-end="url(#ah)"/>
+  <path d="M 480 306 C 560 314, 650 318, 700 322" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Outcome: healthy -->
+  <g transform="translate(60,322) rotate(0.5 195 55)">
+    <rect width="390" height="110" rx="12" class="card-g"/>
+    <text x="24" y="34" class="h out outg">4 of 4 demos clickable</text>
+    <text x="24" y="62" class="h body">Cadence works - keep it</text>
+    <text x="24" y="86" class="h body">weekly, no changes needed.</text>
+  </g>
+
+  <!-- Outcome: stalling -->
+  <g transform="translate(510,322) rotate(-0.5 195 55)">
+    <rect width="390" height="110" rx="12" class="card-r"/>
+    <text x="24" y="34" class="h out outr">2 of 4 or fewer clickable</text>
+    <text x="24" y="60" class="h body">Something is stalling. Run the</text>
+    <text x="24" y="82" class="h body">Org Chart audit + the</text>
+    <text x="24" y="104" class="h body">red-flags checklist.</text>
+  </g>
+
+</svg>

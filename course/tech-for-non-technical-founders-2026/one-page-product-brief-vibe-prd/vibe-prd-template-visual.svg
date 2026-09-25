@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-labelledby="vprd-title vprd-desc">
+  <title id="vprd-title">The one-page Vibe PRD: five sections you fill in one 90-minute sitting, then hand to the builder.</title>
+  <desc id="vprd-desc">Five stacked section cards make a one-page product brief. Section 1 the problem - copy the validated problem statement verbatim. Section 2 the user and context - who they are and the 60 seconds before and after using it. Section 3 what you are building - the smallest end-to-end thing in plain English. Section 4 the success metric - one number, unit, and timeframe, plus the event that measures it. Section 5 what you are NOT building - five to eight lines the builder would add unprompted; a longer no-go list means a cheaper build. Basis: one page, filled in a single 90-minute sitting.</desc>
+  <defs>
+    <style>
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .mono  { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .snum  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .stitle{ font-size: 20px; font-weight: 700; fill: #121212; }
+      .prompt{ font-size: 18px; font-weight: 400; fill: #333333; }
+      .eg    { font-size: 18px; font-weight: 400; fill: #666666; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+    </style>
+  </defs>
+
+  <!-- page tone + editorial card -->
+  <rect width="720" height="900" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="884" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="50" text-anchor="middle" class="gk title">One page, five sections, hand it off</text>
+  <text x="360" y="83" text-anchor="middle" class="gk msg">One 90-minute sitting - then hand it to the builder</text>
+
+  <!-- Section 1: The problem -->
+  <rect x="24" y="108" width="672" height="138" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="40" y="146" class="gk snum">1</text>
+  <text x="64" y="146" class="gk stitle">The problem</text>
+  <text x="40" y="180" class="sys prompt">Copy the validated problem statement verbatim - don't paraphrase.</text>
+  <text x="40" y="212" class="sys eg">e.g. persona + industry + dated sample + a quote + the cost.</text>
+
+  <!-- Section 2: The user and context -->
+  <rect x="24" y="258" width="672" height="138" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="40" y="296" class="gk snum">2</text>
+  <text x="64" y="296" class="gk stitle">The user and their context</text>
+  <text x="40" y="330" class="sys prompt">Who they are, and the 60 seconds before and after they use it.</text>
+  <text x="40" y="362" class="sys eg">e.g. "Founder alone at 9pm, two finance tabs open, wants 10 min."</text>
+
+  <!-- Section 3: What you're building -->
+  <rect x="24" y="408" width="672" height="138" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="40" y="446" class="gk snum">3</text>
+  <text x="64" y="446" class="gk stitle">What you're building</text>
+  <text x="40" y="480" class="sys prompt">The smallest end-to-end thing the user can do, in plain English.</text>
+  <text x="40" y="512" class="sys eg">e.g. paste a <tspan class="mono">Stripe CSV</tspan>, get a <tspan class="mono">QuickBooks CSV</tspan> back. USD only.</text>
+
+  <!-- Section 4: Success metric -->
+  <rect x="24" y="558" width="672" height="138" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="40" y="596" class="gk snum">4</text>
+  <text x="64" y="596" class="gk stitle">Success metric (one number)</text>
+  <text x="40" y="630" class="sys prompt">One number + unit + timeframe, and the event that measures it.</text>
+  <text x="40" y="662" class="sys eg">e.g. 10 of first 20 signups convert in 30 days. Event: <tspan class="mono">conversion_completed</tspan>.</text>
+
+  <!-- Section 5: What you're NOT building -->
+  <rect x="24" y="708" width="672" height="138" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="40" y="746" class="gk snum">5</text>
+  <text x="64" y="746" class="gk stitle">What you're NOT building</text>
+  <text x="40" y="780" class="sys prompt">5-8 lines the builder would add unprompted - list them to block them.</text>
+  <text x="40" y="812" class="sys eg">A longer no-go list means a smaller, cheaper build.</text>
+
+  <!-- one basis line -->
+  <text x="360" y="874" text-anchor="middle" class="sys basis">Basis: one page, filled in a single 90-minute sitting - hand to Lovable, Cursor, or a junior dev</text>
+</svg>

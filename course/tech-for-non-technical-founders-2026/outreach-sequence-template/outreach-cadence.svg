@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="cadence-title">
+  <title id="cadence-title">The 3-message outreach cadence: Day 0 message names their exact words. Day 3 bump picks the honest variant. Day 7 close leaves the door open. A handful a day, by hand - a stagger beats a burst.</title>
+  <desc>Three numbered step cards in a row, each with a sub-card. Day 0: first message, sub-card says "name something they actually wrote." Day 3: bump, sub-card forks into two variants - first research round (curiosity hook) or already interviewed (social proof). Day 7: close, sub-card says "even two sentences by email would help." A bottom tracker row shows the spreadsheet columns: Sent on, Bumped, Replied, Booked, Done. A note below: stop sending when 10 are booked.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub    { font-size: 16px; fill: #666; font-style: italic; }
+      .step   { font-size: 22px; font-weight: 700; fill: #1a1a1a; }
+      .num    { font-size: 15px; font-weight: 700; fill: #fff; }
+      .body   { font-size: 15px; fill: #1a1a1a; }
+      .body-sm{ font-size: 13px; fill: #555; }
+      .note   { font-size: 15px; fill: #666; font-style: italic; }
+      .tag    { font-size: 13px; font-weight: 700; }
+      .tag-r  { fill: #cc342d; }
+      .tag-a  { fill: #b8860b; }
+      .tag-g  { fill: #2e7d32; }
+      .card   { fill: #faf7f2; stroke: #555; stroke-width: 2; }
+      .card-inner { fill: #ffffff; stroke: #ccc; stroke-width: 2; }
+      .card-a { fill: #fffbeb; stroke: #b8860b; stroke-width: 2; }
+      .card-p { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2; }
+      .numdot { fill: #cc342d; }
+      .arrow  { stroke: #555; stroke-width: 2.25; fill: none; }
+      .track  { fill: #faf7f2; stroke: #aaa; stroke-width: 2; }
+      .track-hd { font-size: 14px; font-weight: 700; fill: #555; }
+      .track-cell { font-size: 13px; fill: #888; }
+    </style>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="34" text-anchor="middle" class="h title">The 3-message outreach cadence</text>
+  <text x="480" y="58" text-anchor="middle" class="h sub">A handful a day, by hand - a stagger beats a burst.</text>
+
+  <!-- ====== STEP 1: Day 0 ====== -->
+  <g transform="translate(28, 80) rotate(-0.4 270 65)">
+    <rect width="270" height="130" rx="12" class="card"/>
+    <!-- Number badge -->
+    <circle cx="24" cy="24" r="13" class="numdot"/>
+    <text x="24" y="29" text-anchor="middle" class="h num">1</text>
+    <!-- Title row -->
+    <text x="46" y="30" class="h step">Day 0</text>
+    <rect x="112" y="15" width="96" height="20" rx="10" fill="#cc342d" opacity="0.12"/>
+    <text x="160" y="30" text-anchor="middle" class="h tag tag-r">first message</text>
+    <!-- Inner card -->
+    <rect x="20" y="52" width="230" height="62" rx="8" class="card-inner"/>
+    <text x="135" y="74" text-anchor="middle" class="h body">email or DM - subject line</text>
+    <text x="135" y="92" text-anchor="middle" class="h body-sm">names their exact words from</text>
+    <text x="135" y="108" text-anchor="middle" class="h body-sm">the post you found in Lesson 2.3</text>
+  </g>
+
+  <!-- Arrow 1 → 2 -->
+  <path d="M 300 145 L 332 145" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- ====== STEP 2: Day 3 ====== -->
+  <g transform="translate(342, 80) rotate(0.3 270 65)">
+    <rect width="270" height="130" rx="12" class="card"/>
+    <circle cx="24" cy="24" r="13" class="numdot"/>
+    <text x="24" y="29" text-anchor="middle" class="h num">2</text>
+    <text x="46" y="30" class="h step">Day 3</text>
+    <rect x="112" y="15" width="52" height="20" rx="10" fill="#b8860b" opacity="0.12"/>
+    <text x="138" y="30" text-anchor="middle" class="h tag tag-a">bump</text>
+    <!-- Two variant sub-cards -->
+    <rect x="14" y="52" width="118" height="62" rx="8" class="card-p"/>
+    <text x="73" y="70" text-anchor="middle" class="h body-sm" fill="#a855f7">first round</text>
+    <text x="73" y="88" text-anchor="middle" class="h body-sm">honest curiosity</text>
+    <text x="73" y="104" text-anchor="middle" class="h body-sm">about their post</text>
+    <rect x="138" y="52" width="118" height="62" rx="8" class="card-a"/>
+    <text x="197" y="70" text-anchor="middle" class="h body-sm" fill="#b8860b">interviewed</text>
+    <text x="197" y="88" text-anchor="middle" class="h body-sm">social proof</text>
+    <text x="197" y="104" text-anchor="middle" class="h body-sm">(true number only)</text>
+  </g>
+
+  <!-- Arrow 2 → 3 -->
+  <path d="M 614 145 L 646 145" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- ====== STEP 3: Day 7 ====== -->
+  <g transform="translate(656, 80) rotate(-0.5 270 65)">
+    <rect width="270" height="130" rx="12" class="card"/>
+    <circle cx="24" cy="24" r="13" class="numdot"/>
+    <text x="24" y="29" text-anchor="middle" class="h num">3</text>
+    <text x="46" y="30" class="h step">Day 7</text>
+    <rect x="112" y="15" width="52" height="20" rx="10" fill="#2e7d32" opacity="0.12"/>
+    <text x="138" y="30" text-anchor="middle" class="h tag tag-g">close</text>
+    <!-- Inner card -->
+    <rect x="20" y="52" width="230" height="62" rx="8" class="card-inner"/>
+    <text x="135" y="74" text-anchor="middle" class="h body">last note - no pressure</text>
+    <text x="135" y="92" text-anchor="middle" class="h body-sm">"even two sentences by email</text>
+    <text x="135" y="108" text-anchor="middle" class="h body-sm">would genuinely help"</text>
+  </g>
+
+  <!-- ====== LINKEDIN DM VARIANT (below the main row) ====== -->
+  <g transform="translate(28, 232) rotate(0.4 445 34)">
+    <rect width="890" height="68" rx="10" class="card-p"/>
+    <text x="24" y="28" class="h step">LinkedIn DM opener</text>
+    <text x="24" y="52" class="h body-sm">"your comment on [POST/THREAD] about [TOPIC] is why I'm writing. 20 minutes this week for everything you'd warn someone about?"</text>
+  </g>
+
+  <!-- ====== TRACKER ROW ====== -->
+  <g transform="translate(28, 322)">
+    <rect width="900" height="62" rx="10" class="track"/>
+    <text x="24" y="36" class="h track-hd">Tracking spreadsheet</text>
+    <!-- 5 columns -->
+    <rect x="180" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+    <text x="225" y="36" text-anchor="middle" class="h track-cell">Sent on</text>
+
+    <rect x="280" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+    <text x="325" y="36" text-anchor="middle" class="h track-cell">Bumped</text>
+
+    <rect x="380" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+    <text x="425" y="36" text-anchor="middle" class="h track-cell">Replied</text>
+
+    <rect x="480" y="14" width="90" height="34" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+    <text x="525" y="36" text-anchor="middle" class="h track-cell">Booked</text>
+
+    <rect x="580" y="14" width="90" height="34" rx="6" fill="#f0f9f0" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="625" y="36" text-anchor="middle" class="h track-cell" fill="#2e7d32">✓ Done</text>
+
+    <text x="690" y="36" class="h body-sm" fill="#888">stop sending when 10 are booked</text>
+  </g>
+
+  <!-- ====== BOTTOM NOTE ====== -->
+  <g transform="translate(28, 406)">
+    <rect width="900" height="72" rx="12" fill="#fff8e0" stroke="#b8860b" stroke-width="2"/>
+    <text x="450" y="30" text-anchor="middle" class="h body" fill="#1a1a1a"><tspan font-weight="700">Rule:</tspan> Never bump someone who has replied. Never claim conversations you have not had.</text>
+    <text x="450" y="56" text-anchor="middle" class="h note">The whole sequence rests on the first line naming something they actually wrote - if it could be sent to anyone, rewrite it.</text>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="290" viewBox="0 0 720 290" role="img" aria-labelledby="t d">
+  <title id="t">Share of pages showing AI-authorship signals, by domain type</title>
+  <desc id="d">Pew Research, July 2026: about 10 percent of .com pages show significant signs of AI authorship, against 4.6 percent for .org and roughly 1 percent for .edu and .gov. Sample of about 490,000 Common Crawl pages analysed with Open Pangram.</desc>
+
+  <rect width="720" height="290" fill="#0e0e14"/>
+
+  <text x="32" y="40" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="17" font-weight="700" fill="#e8eaf0">Where AI-written pages concentrate</text>
+  <text x="32" y="62" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">Pew Research, July 2026 - ~490,000 Common Crawl pages, Open Pangram</text>
+
+  <!-- .com -->
+  <text x="32" y="112" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#e8eaf0">.com</text>
+  <rect x="96" y="98" width="520" height="22" rx="4" fill="#1a1a24"/>
+  <rect x="96" y="98" width="520" height="22" rx="4" fill="#cc342d"/>
+  <text x="628" y="114" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" font-weight="700" fill="#e8eaf0">~10%</text>
+
+  <!-- .org -->
+  <text x="32" y="158" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#8b90a0">.org</text>
+  <rect x="96" y="144" width="520" height="22" rx="4" fill="#1a1a24"/>
+  <rect x="96" y="144" width="239" height="22" rx="4" fill="#a855f7"/>
+  <text x="628" y="160" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" font-weight="700" fill="#8b90a0">4.6%</text>
+
+  <!-- .edu / .gov -->
+  <text x="32" y="204" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#8b90a0">.edu</text>
+  <rect x="96" y="190" width="520" height="22" rx="4" fill="#1a1a24"/>
+  <rect x="96" y="190" width="52" height="22" rx="4" fill="#4b5060"/>
+  <text x="628" y="206" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" font-weight="700" fill="#8b90a0">~1%</text>
+
+  <text x="32" y="254" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#8b90a0">Commercial sites carry ten times what universities do.</text>
+  <text x="32" y="276" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" font-weight="700" fill="#e8eaf0">Yours is a commercial site.</text>
+</svg>

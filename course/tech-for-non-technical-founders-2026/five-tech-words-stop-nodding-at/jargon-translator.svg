@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1010" role="img" aria-labelledby="jt-title">
+  <title id="jt-title">Jargon Translator: what your dev shop says vs what it usually means. Five phrases, each with its real meaning.</title>
+  <desc>A translation table. Left column, red, "What they say"; right column, blue, "What it means". Five rows: refactoring the order flow means rewriting code we shipped before, on your dime, called tidy-up. A Docker upgrade means something on the server broke and they can't reproduce it locally. Tech debt to pay down means we wrote it badly, pay us to fix what you already paid us to write. Ship the MVP first means the cheapest scope they can finish inside the budget you have left. Fix the architecture means they want resume-building tech the senior dev has not tried yet. Footer: five words, five invoices - take the meaning column to standup.</desc>
+  <defs>
+    <style>
+      .h    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .em   { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 30px; }
+      .title{ font-size: 48px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .sub  { font-size: 24px; fill: #667085; }
+      .hdrS { font-size: 27px; font-weight: 700; fill: #e5484d; letter-spacing: 1px; filter: url(#gR); }
+      .hdrM { font-size: 27px; font-weight: 700; fill: #2b7fff; letter-spacing: 1px; filter: url(#gB); }
+      .say  { font-size: 24px; font-weight: 700; fill: #b42318; }
+      .mean { font-size: 22px; fill: #175cd3; }
+      .pillS{ fill: #fff1f0; stroke: #f2635a; stroke-width: 2.5; filter: url(#soft); }
+      .pillM{ fill: #eff6ff; stroke: #6aa8ff; stroke-width: 2.5; filter: url(#soft); }
+      .foot { font-size: 22px; font-weight: 700; fill: #1a1a1a; }
+    </style>
+    <filter id="soft" x="-8%" y="-8%" width="116%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
+    <filter id="gR" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#f2635a" flood-opacity="0.5"/></filter>
+    <filter id="gB" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2b7fff" flood-opacity="0.5"/></filter>
+    <marker id="ar" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#2b7fff"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="58" text-anchor="middle" class="h title">The Jargon Translator</text>
+  <text x="360" y="94" text-anchor="middle" class="h sub">What your dev shop says vs what it usually means</text>
+
+  <text x="185" y="152" text-anchor="middle" class="h hdrS">WHAT THEY SAY</text>
+  <text x="540" y="152" text-anchor="middle" class="h hdrM">WHAT IT MEANS</text>
+
+  <g transform="translate(0,174) rotate(-0.5 360 64)">
+    <rect x="24" y="0" width="322" height="128" rx="18" class="pillS"/>
+    <text x="44" y="54" class="h say">"We're refactoring</text><text x="44" y="84" class="h say">the order flow"</text>
+    <path d="M 352 64 L 388 64" stroke="#2b7fff" stroke-width="3.5" fill="none" marker-end="url(#ar)"/>
+    <rect x="394" y="0" width="302" height="128" rx="18" class="pillM"/>
+    <text x="414" y="48" class="h mean">Rewriting code we shipped</text><text x="414" y="76" class="h mean">before, on your dime -</text><text x="414" y="104" class="h mean">called "tidy-up".</text>
+  </g>
+  <g transform="translate(0,320) rotate(0.5 360 64)">
+    <rect x="24" y="0" width="322" height="128" rx="18" class="pillS"/>
+    <text x="44" y="54" class="h say">"We need a</text><text x="44" y="84" class="h say">Docker upgrade"</text>
+    <path d="M 352 64 L 388 64" stroke="#2b7fff" stroke-width="3.5" fill="none" marker-end="url(#ar)"/>
+    <rect x="394" y="0" width="302" height="128" rx="18" class="pillM"/>
+    <text x="414" y="48" class="h mean">Something on the server</text><text x="414" y="76" class="h mean">broke; they can't</text><text x="414" y="104" class="h mean">reproduce it locally.</text>
+  </g>
+  <g transform="translate(0,466) rotate(-0.4 360 64)">
+    <rect x="24" y="0" width="322" height="128" rx="18" class="pillS"/>
+    <text x="44" y="54" class="h say">"Lots of tech debt</text><text x="44" y="84" class="h say">to pay down"</text>
+    <path d="M 352 64 L 388 64" stroke="#2b7fff" stroke-width="3.5" fill="none" marker-end="url(#ar)"/>
+    <rect x="394" y="0" width="302" height="128" rx="18" class="pillM"/>
+    <text x="414" y="48" class="h mean">We wrote it badly. Pay us</text><text x="414" y="76" class="h mean">to fix what you already</text><text x="414" y="104" class="h mean">paid us to write.</text>
+  </g>
+  <g transform="translate(0,612) rotate(0.4 360 64)">
+    <rect x="24" y="0" width="322" height="128" rx="18" class="pillS"/>
+    <text x="44" y="54" class="h say">"Let's just ship</text><text x="44" y="84" class="h say">the MVP first"</text>
+    <path d="M 352 64 L 388 64" stroke="#2b7fff" stroke-width="3.5" fill="none" marker-end="url(#ar)"/>
+    <rect x="394" y="0" width="302" height="128" rx="18" class="pillM"/>
+    <text x="414" y="48" class="h mean">The cheapest scope they</text><text x="414" y="76" class="h mean">can finish inside the</text><text x="414" y="104" class="h mean">budget you have left.</text>
+  </g>
+  <g transform="translate(0,758) rotate(-0.5 360 64)">
+    <rect x="24" y="0" width="322" height="128" rx="18" class="pillS"/>
+    <text x="44" y="54" class="h say">"We need to fix</text><text x="44" y="84" class="h say">the architecture"</text>
+    <path d="M 352 64 L 388 64" stroke="#2b7fff" stroke-width="3.5" fill="none" marker-end="url(#ar)"/>
+    <rect x="394" y="0" width="302" height="128" rx="18" class="pillM"/>
+    <text x="414" y="48" class="h mean">They want resume-building</text><text x="414" y="76" class="h mean">tech the senior dev</text><text x="414" y="104" class="h mean">hasn't tried yet.</text>
+  </g>
+
+  <text x="360" y="964" text-anchor="middle" class="h foot">Five words, five invoices - take the meaning column to standup.</text>
+</svg>

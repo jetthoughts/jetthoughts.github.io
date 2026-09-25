@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-label="Where an application's shape comes from: on an assembled project the team chooses routing, data layer, folder structure and testing, so a new developer learns four local decisions; on a conventional project the framework chooses them, so a new developer learns none">
+  <rect width="640" height="400" fill="#0e0e14"/>
+  <text x="24" y="38" fill="#dfe2eb" font-family="Inter,Helvetica,sans-serif" font-size="21" font-weight="600">Where does your app's shape come from?</text>
+
+  <text x="24" y="76" fill="#ff8a7a" font-family="Inter,Helvetica,sans-serif" font-size="17" font-weight="700">ASSEMBLED</text>
+  <text x="330" y="76" fill="#c9a2fb" font-family="Inter,Helvetica,sans-serif" font-size="17" font-weight="700">CONVENTIONAL</text>
+
+  <g font-family="Inter,Helvetica,sans-serif" font-size="15">
+    <rect x="24" y="92" width="272" height="42" rx="7" fill="#1c2026" stroke="#cc342d" stroke-width="2"/>
+    <text x="38" y="118" fill="#dfe2eb">Routing<tspan fill="#8b90a0"> - your team picked</tspan></text>
+    <rect x="24" y="144" width="272" height="42" rx="7" fill="#1c2026" stroke="#cc342d" stroke-width="2"/>
+    <text x="38" y="170" fill="#dfe2eb">Data layer<tspan fill="#8b90a0"> - your team picked</tspan></text>
+    <rect x="24" y="196" width="272" height="42" rx="7" fill="#1c2026" stroke="#cc342d" stroke-width="2"/>
+    <text x="38" y="222" fill="#dfe2eb">Folders<tspan fill="#8b90a0"> - your team picked</tspan></text>
+    <rect x="24" y="248" width="272" height="42" rx="7" fill="#1c2026" stroke="#cc342d" stroke-width="2"/>
+    <text x="38" y="274" fill="#dfe2eb">Testing<tspan fill="#8b90a0"> - your team picked</tspan></text>
+
+    <rect x="330" y="92" width="286" height="42" rx="7" fill="#1c2026" stroke="#a855f7" stroke-width="2"/>
+    <text x="344" y="118" fill="#dfe2eb">Routing<tspan fill="#8b90a0"> - framework picked</tspan></text>
+    <rect x="330" y="144" width="286" height="42" rx="7" fill="#1c2026" stroke="#a855f7" stroke-width="2"/>
+    <text x="344" y="170" fill="#dfe2eb">Data layer<tspan fill="#8b90a0"> - framework picked</tspan></text>
+    <rect x="330" y="196" width="286" height="42" rx="7" fill="#1c2026" stroke="#a855f7" stroke-width="2"/>
+    <text x="344" y="222" fill="#dfe2eb">Folders<tspan fill="#8b90a0"> - framework picked</tspan></text>
+    <rect x="330" y="248" width="286" height="42" rx="7" fill="#1c2026" stroke="#a855f7" stroke-width="2"/>
+    <text x="344" y="274" fill="#dfe2eb">Testing<tspan fill="#8b90a0"> - framework picked</tspan></text>
+  </g>
+
+  <line x1="24" y1="312" x2="616" y2="312" stroke="#2a2f3a" stroke-width="1"/>
+  <text x="24" y="344" fill="#8b90a0" font-family="Inter,Helvetica,sans-serif" font-size="15">A new developer learns</text>
+  <text x="24" y="376" fill="#ff8a7a" font-family="Inter,Helvetica,sans-serif" font-size="22" font-weight="700">4 local decisions</text>
+  <text x="330" y="344" fill="#8b90a0" font-family="Inter,Helvetica,sans-serif" font-size="15">A new developer learns</text>
+  <text x="330" y="376" fill="#c9a2fb" font-family="Inter,Helvetica,sans-serif" font-size="22" font-weight="700">nothing new</text>
+</svg>

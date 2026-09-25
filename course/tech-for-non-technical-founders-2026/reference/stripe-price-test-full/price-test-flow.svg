@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" role="img" aria-labelledby="pricetest-title">
+  <title id="pricetest-title">The Stripe price-test flow: build the Payment Link, wire it to the page, read the click rate, then act on the band it lands in.</title>
+  <desc>Three numbered step cards in a row: create the Stripe Payment Link with a one-time product at your hypothesis price, wire it to the landing-page button in live mode, and read the visit-to-Stripe-click rate. The rate forks into three outcome bands. Under 5 percent, amber: iterate - cut the price by half, add founding-member framing; below 2 percent means the audience or hypothesis is wrong, not the price. Five to ten percent, green: advance - the price is validated, move to Module 2 interviews and email everyone who clicked but did not buy. Over 10 percent, purple: verify - run a second cold channel; if both hold the signal is real, if one spikes the targeting was hot, not the pricing.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub    { font-size: 18px; fill: #666; font-style: italic; }
+      .step   { font-size: 21px; font-weight: 700; fill: #1a1a1a; }
+      .stepsm { font-size: 16px; fill: #555; }
+      .num    { font-size: 15px; font-weight: 700; fill: #fff; }
+      .out    { font-size: 20px; font-weight: 700; }
+      .outa   { fill: #b8860b; }
+      .outg   { fill: #2e7d32; }
+      .outp   { fill: #7b2fb5; }
+      .body   { font-size: 16px; fill: #1a1a1a; }
+      .card   { fill: #faf7f2; stroke: #555; stroke-width: 2; stroke-linejoin: round; }
+      .card-a { fill: #fffbeb; stroke: #b8860b; stroke-width: 2.5; stroke-linejoin: round; }
+      .card-g { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; stroke-linejoin: round; }
+      .card-p { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; stroke-linejoin: round; }
+      .numdot { fill: #cc342d; }
+      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
+    </style>
+    <marker id="pt-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="34" text-anchor="middle" class="h title">The Stripe price test, step by step</text>
+  <text x="480" y="60" text-anchor="middle" class="h sub">An email costs nothing; a card entry costs intent. Measure the one that counts.</text>
+
+  <!-- Step cards: x = 30, 342, 654 ; width 276 -->
+  <!-- 1 -->
+  <g transform="translate(0,0)">
+    <g transform="rotate(-0.5 168 134)">
+      <rect x="30" y="90" width="276" height="88" rx="12" class="card"/>
+      <circle cx="56" cy="114" r="13" class="numdot"/>
+      <text x="56" y="119" text-anchor="middle" class="h num">1</text>
+      <text x="78" y="121" class="h step">Create the Payment Link</text>
+      <text x="78" y="150" class="h stepsm">one-time product, your price</text>
+    </g>
+  </g>
+  <!-- 2 -->
+  <g transform="rotate(0.5 480 134)">
+    <rect x="342" y="90" width="276" height="88" rx="12" class="card"/>
+    <circle cx="368" cy="114" r="13" class="numdot"/>
+    <text x="368" y="119" text-anchor="middle" class="h num">2</text>
+    <text x="390" y="121" class="h step">Wire it to the button</text>
+    <text x="390" y="150" class="h stepsm">live mode, not test mode</text>
+  </g>
+  <!-- 3 -->
+  <g transform="rotate(-0.5 792 134)">
+    <rect x="654" y="90" width="276" height="88" rx="12" class="card"/>
+    <circle cx="680" cy="114" r="13" class="numdot"/>
+    <text x="680" y="119" text-anchor="middle" class="h num">3</text>
+    <text x="702" y="121" class="h step">Read the click rate</text>
+    <text x="702" y="150" class="h stepsm">page visits &#8594; Stripe clicks</text>
+  </g>
+
+  <!-- Step arrows -->
+  <path d="M 308 134 L 340 134" class="arrow" marker-end="url(#pt-ah)"/>
+  <path d="M 620 134 L 652 134" class="arrow" marker-end="url(#pt-ah)"/>
+
+  <!-- Fork arrows from step 3 down to the three bands -->
+  <path d="M 760 180 C 560 220, 320 210, 180 254" class="arrow" marker-end="url(#pt-ah)"/>
+  <path d="M 792 180 C 700 214, 560 216, 485 254" class="arrow" marker-end="url(#pt-ah)"/>
+  <path d="M 815 180 C 815 210, 800 226, 792 254" class="arrow" marker-end="url(#pt-ah)"/>
+
+  <!-- Outcome bands: x = 30, 335, 640 ; width 290 -->
+  <!-- Under 5% -->
+  <g transform="rotate(0.4 175 335)">
+    <rect x="30" y="258" width="290" height="152" rx="12" class="card-a"/>
+    <text x="50" y="290" class="h out outa">Under 5% - iterate</text>
+    <text x="50" y="320" class="h body">Cut the price 50%, add a</text>
+    <text x="50" y="342" class="h body">"founding member" framing.</text>
+    <text x="50" y="372" class="h body">Below 2% after that = the</text>
+    <text x="50" y="394" class="h body">audience is wrong, not the price.</text>
+  </g>
+  <!-- 5-10% -->
+  <g transform="rotate(-0.4 480 335)">
+    <rect x="335" y="258" width="290" height="152" rx="12" class="card-g"/>
+    <text x="355" y="290" class="h out outg">5 - 10% - advance</text>
+    <text x="355" y="320" class="h body">Price-validated. Move to</text>
+    <text x="355" y="342" class="h body">Module 2 customer interviews.</text>
+    <text x="355" y="372" class="h body">Email everyone who clicked</text>
+    <text x="355" y="394" class="h body">but didn't buy - your best group.</text>
+  </g>
+  <!-- Over 10% -->
+  <g transform="rotate(0.4 785 335)">
+    <rect x="640" y="258" width="290" height="152" rx="12" class="card-p"/>
+    <text x="660" y="290" class="h out outp">Over 10% - verify</text>
+    <text x="660" y="320" class="h body">Run a second cold channel.</text>
+    <text x="660" y="342" class="h body">Both hold &#8594; the signal is real.</text>
+    <text x="660" y="372" class="h body">One spikes &#8594; hot targeting,</text>
+    <text x="660" y="394" class="h body">not your pricing.</text>
+  </g>
+</svg>

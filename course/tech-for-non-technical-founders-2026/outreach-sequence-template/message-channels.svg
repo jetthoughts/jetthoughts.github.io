@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 268" role="img" aria-labelledby="ch-title">
+  <title id="ch-title">Four message channels, each with a specific job. Email or DM for anyone with an address. LinkedIn DM when there's no email. Reddit comment when DMs are closed on a public thread. Waitlist signup opener for smoke-test signups - highest reply rate, start here.</title>
+  <desc>Four channel cards in a row, ordered by reply rate from highest to lowest. Card 1 (green, highest reply rate): Waitlist signups - people who already raised a hand. Card 2 (cream): Email or DM - your primary channel for the 30-name list. Card 3 (purple, alternate): LinkedIn DM - when there's no email. Card 4 (cream): Reddit comment - for public threads with DMs closed. Each card has a brief when-to-use note.</desc>
+  <defs>
+    <style>
+      .h       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title   { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub     { font-size: 15px; fill: #666; font-style: italic; }
+      .ch-hd   { font-size: 19px; font-weight: 700; fill: #1a1a1a; }
+      .ch-sub  { font-size: 13px; fill: #555; }
+      .ch-num  { font-size: 15px; font-weight: 700; fill: #fff; }
+      .ch-rate { font-size: 14px; fill: #888; }
+      .note    { font-size: 14px; fill: #666; font-style: italic; }
+      .card    { fill: #faf7f2; stroke: #555; stroke-width: 2; }
+      .card-g  { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .card-p  { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2; }
+      .numdot  { fill: #cc342d; }
+      .txt-g   { fill: #2e7d32; }
+    </style>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="34" text-anchor="middle" class="h title">Which message to send: pick your channel</text>
+  <text x="480" y="58" text-anchor="middle" class="h sub">Four channels, each for a specific situation. Start with waitlist signups - they reply at the highest rate.</text>
+
+  <!-- Ch1: Waitlist signups -->
+  <g transform="translate(18, 80) rotate(-0.4 108 60)">
+    <rect width="216" height="120" rx="12" class="card-g"/>
+    <!-- "Start here" badge -->
+    <rect x="70" y="8" width="76" height="20" rx="10" fill="#2e7d32"/>
+    <text x="108" y="23" text-anchor="middle" class="h" font-size="12" font-weight="700" fill="#fff">start here</text>
+    <text x="20" y="52" class="h ch-hd">Waitlist signups</text>
+    <text x="20" y="74" class="h ch-sub">People who already raised</text>
+    <text x="20" y="92" class="h ch-sub">a hand. Highest reply rate.</text>
+    <text x="20" y="112" class="h txt-g" font-size="13" font-weight="700">Module 1 smoke-test list</text>
+  </g>
+
+  <!-- Ch2: Email or DM -->
+  <g transform="translate(250, 80) rotate(0.3 108 60)">
+    <rect width="216" height="120" rx="12" class="card"/>
+    <circle cx="22" cy="20" r="12" class="numdot"/>
+    <text x="22" y="25" text-anchor="middle" class="h ch-num">1</text>
+    <text x="44" y="26" class="h ch-hd">Email or DM</text>
+    <text x="22" y="52" class="h ch-sub">Your primary channel.</text>
+    <text x="22" y="72" class="h ch-sub">The Day-0 message works</text>
+    <text x="22" y="92" class="h ch-sub">for anyone with an address.</text>
+    <text x="22" y="112" class="h ch-rate">30-name list from 2.3</text>
+  </g>
+
+  <!-- Ch3: LinkedIn DM -->
+  <g transform="translate(482, 80) rotate(-0.5 108 60)">
+    <rect width="216" height="120" rx="12" class="card-p"/>
+    <circle cx="22" cy="20" r="12" class="numdot"/>
+    <text x="22" y="25" text-anchor="middle" class="h ch-num">2</text>
+    <text x="44" y="26" class="h ch-hd">LinkedIn DM</text>
+    <text x="22" y="52" class="h ch-sub">When there's no email.</text>
+    <text x="22" y="72" class="h ch-sub">Same 3-line format,</text>
+    <text x="22" y="92" class="h ch-sub">leads with their comment.</text>
+    <rect x="70" y="100" width="76" height="18" rx="9" fill="#a855f7" opacity="0.15"/>
+    <text x="108" y="114" text-anchor="middle" class="h" font-size="12" fill="#a855f7" font-weight="700">alternate path</text>
+  </g>
+
+  <!-- Ch4: Reddit comment -->
+  <g transform="translate(714, 80) rotate(0.4 108 60)">
+    <rect width="216" height="120" rx="12" class="card"/>
+    <circle cx="22" cy="20" r="12" class="numdot"/>
+    <text x="22" y="25" text-anchor="middle" class="h ch-num">3</text>
+    <text x="44" y="26" class="h ch-hd">Reddit comment</text>
+    <text x="22" y="52" class="h ch-sub">For public threads with</text>
+    <text x="22" y="72" class="h ch-sub">DMs closed. Drop a</text>
+    <text x="22" y="92" class="h ch-sub">comment, leave DMs open.</text>
+    <text x="22" y="112" class="h ch-rate">lowest volume, worth it</text>
+  </g>
+
+  <!-- Bottom rule -->
+  <g transform="translate(28, 228)">
+    <rect width="900" height="24" rx="8" fill="#fff8e0" stroke="#b8860b" stroke-width="2"/>
+    <text x="450" y="18" text-anchor="middle" class="h note">All four channels use the same formula: name their exact words in the first line. If it could be sent to anyone, rewrite it.</text>
+  </g>
+</svg>

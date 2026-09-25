@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-labelledby="seg-title">
+  <title id="seg-title">Segment isolation without a Venn: three cohort cards side by side. The blended average of 28% hides one segment scoring 64%, which passes the 40% line and is the one to sell to first.</title>
+  <desc>Three cohort cards. B2B Marketers score 64% must-have (9 of 14) and pass the 40% line, highlighted green and tagged sell here first. Solo Founders 14% (1 of 7) and Agencies 0% (0 of 7) fall below the line, shown neutral. A red dashed 40% line crosses each mini fill-bar; only the marketers' bar clears it.</desc>
+  <defs>
+    <style>
+      .h       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title   { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub     { font-size: 17px; fill: #666; font-style: italic; }
+      .name    { font-size: 21px; font-weight: 700; fill: #1a1a1a; }
+      .pct-g   { font-size: 34px; font-weight: 700; fill: #2e7d32; }
+      .pct-n   { font-size: 34px; font-weight: 700; fill: #888; }
+      .count   { font-size: 15px; fill: #1a1a1a; }
+      .trait   { font-size: 15px; fill: #666; font-style: italic; }
+      .tick    { font-size: 13px; font-weight: 700; fill: #cc342d; }
+      .pill-g  { fill: #2e7d32; }
+      .pilltxt { font-size: 15px; font-weight: 700; fill: #fff; }
+      .verdict { font-size: 15px; font-weight: 700; fill: #888; }
+      .card-g  { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .card-n  { fill: #faf7f2; stroke: #999; stroke-width: 2; }
+      .track   { fill: #ffffff; stroke: #bbb; stroke-width: 1.5; }
+      .fill-g  { fill: #2e7d32; }
+      .fill-n  { fill: #b8b0a8; }
+      .line40  { stroke: #cc342d; stroke-width: 2.5; stroke-dasharray: 5 4; }
+    </style>
+  </defs>
+
+  <!-- Header: the average-hides-the-signal point -->
+  <text x="480" y="38" text-anchor="middle" class="h title">One blended average hides three different products.</text>
+  <text x="480" y="64" text-anchor="middle" class="h sub">Same 28 responses. The overall 28% looks like failure - until you slice by who the user is.</text>
+
+  <!-- CARD 1: B2B Marketers (PASS) -->
+  <rect x="24" y="86" width="288" height="288" rx="15" class="card-g" transform="rotate(-0.5 168 230)"/>
+  <text x="168" y="124" text-anchor="middle" class="h name">B2B Marketers</text>
+  <text x="168" y="176" text-anchor="middle" class="h pct-g">64%</text>
+  <text x="168" y="198" text-anchor="middle" class="h count">must-have</text>
+  <!-- fill bar -->
+  <rect x="48" y="214" width="240" height="24" rx="6" class="track"/>
+  <rect x="48" y="214" width="153.6" height="24" rx="6" class="fill-g"/>
+  <line class="line40" x1="144" y1="208" x2="144" y2="244"/>
+  <text x="144" y="256" text-anchor="middle" class="h tick">40% line</text>
+  <text x="168" y="272" text-anchor="middle" class="h count">9 of 14 said "very disappointed"</text>
+  <text x="168" y="296" text-anchor="middle" class="h trait">Use it daily. Dropped another tool.</text>
+  <rect x="60" y="316" width="216" height="34" rx="17" class="pill-g"/>
+  <text x="168" y="339" text-anchor="middle" class="h pilltxt">→ SELL HERE FIRST</text>
+
+  <!-- CARD 2: Solo Founders (neutral) -->
+  <rect x="336" y="86" width="288" height="288" rx="15" class="card-n" transform="rotate(0.4 480 230)"/>
+  <text x="480" y="124" text-anchor="middle" class="h name">Solo Founders</text>
+  <text x="480" y="176" text-anchor="middle" class="h pct-n">14%</text>
+  <text x="480" y="198" text-anchor="middle" class="h count">must-have</text>
+  <rect x="360" y="214" width="240" height="24" rx="6" class="track"/>
+  <rect x="360" y="214" width="33.6" height="24" rx="6" class="fill-n"/>
+  <line class="line40" x1="456" y1="208" x2="456" y2="244"/>
+  <text x="456" y="256" text-anchor="middle" class="h tick">40% line</text>
+  <text x="480" y="272" text-anchor="middle" class="h count">1 of 7 said "very disappointed"</text>
+  <text x="480" y="296" text-anchor="middle" class="h trait">Tried it once. Forgot it existed.</text>
+  <text x="480" y="339" text-anchor="middle" class="h verdict">Below the line - not now</text>
+
+  <!-- CARD 3: Agencies (neutral) -->
+  <rect x="648" y="86" width="288" height="288" rx="15" class="card-n" transform="rotate(-0.4 792 230)"/>
+  <text x="792" y="124" text-anchor="middle" class="h name">Agencies</text>
+  <text x="792" y="176" text-anchor="middle" class="h pct-n">0%</text>
+  <text x="792" y="198" text-anchor="middle" class="h count">must-have</text>
+  <rect x="672" y="214" width="240" height="24" rx="6" class="track"/>
+  <line class="line40" x1="768" y1="208" x2="768" y2="244"/>
+  <text x="768" y="256" text-anchor="middle" class="h tick">40% line</text>
+  <text x="792" y="272" text-anchor="middle" class="h count">0 of 7 said "very disappointed"</text>
+  <text x="792" y="296" text-anchor="middle" class="h trait">Already have an internal tool.</text>
+  <text x="792" y="339" text-anchor="middle" class="h verdict">Never your buyer</text>
+</svg>

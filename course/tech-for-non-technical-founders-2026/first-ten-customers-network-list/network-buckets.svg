@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="bk-title bk-desc">
+  <title id="bk-title">Sort 50 names into four priority buckets and send in order, champions first.</title>
+  <desc id="bk-desc">Four numbered bucket cards. 1 Champions, 5 names - already complained to you about this problem. 2 Hot, 10 names - your must-have segment, knows you, last contact under six months. 3 Warm, 15 names - adjacent, knew you six to 24 months ago. 4 Cold, 20 names - dormant first-degree connections, unclear if they have the problem. A send-order strip reads champions, then hot, then warm, then cold, 50 names total. Basis: people who already know you - your Module 2 interviewees, smoke-test signups, and first-degree network.</desc>
+  <defs>
+    <style>
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 32px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .name  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .count { font-size: 20px; font-weight: 600; fill: #4a4a4a; }
+      .num   { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .def   { font-size: 18px; font-weight: 400; fill: #333333; }
+      .order { font-size: 20px; font-weight: 600; fill: #121212; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+    </style>
+  </defs>
+
+  <!-- page tone + editorial card -->
+  <rect width="720" height="480" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="464" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">Sort 50 names, champions first</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">Rank by who already knows you - send in this order</text>
+
+  <!-- bucket cards: 2x2, neutral numbered (priority order) -->
+  <!-- 1 Champions (24,98) -->
+  <g>
+    <rect x="24" y="98" width="330" height="140" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="50" cy="128" r="14" fill="#121212"/>
+    <text x="50" y="134" text-anchor="middle" class="gk num">1</text>
+    <text x="76" y="135" class="gk name">Champions</text>
+    <text x="330" y="135" text-anchor="end" class="gk count">5 names</text>
+    <text x="40" y="176" class="sys def">Already complained to you</text>
+    <text x="40" y="200" class="sys def">about this exact problem.</text>
+  </g>
+  <!-- 2 Hot (366,98) -->
+  <g>
+    <rect x="366" y="98" width="330" height="140" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="392" cy="128" r="14" fill="#121212"/>
+    <text x="392" y="134" text-anchor="middle" class="gk num">2</text>
+    <text x="418" y="135" class="gk name">Hot</text>
+    <text x="672" y="135" text-anchor="end" class="gk count">10 names</text>
+    <text x="382" y="176" class="sys def">Must-have segment, knows you,</text>
+    <text x="382" y="200" class="sys def">last contact under 6 months.</text>
+  </g>
+  <!-- 3 Warm (24,250) -->
+  <g>
+    <rect x="24" y="250" width="330" height="140" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="50" cy="280" r="14" fill="#121212"/>
+    <text x="50" y="286" text-anchor="middle" class="gk num">3</text>
+    <text x="76" y="287" class="gk name">Warm</text>
+    <text x="330" y="287" text-anchor="end" class="gk count">15 names</text>
+    <text x="40" y="328" class="sys def">Adjacent. Knew you 6-24</text>
+    <text x="40" y="352" class="sys def">months ago.</text>
+  </g>
+  <!-- 4 Cold (366,250) -->
+  <g>
+    <rect x="366" y="250" width="330" height="140" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="392" cy="280" r="14" fill="#121212"/>
+    <text x="392" y="286" text-anchor="middle" class="gk num">4</text>
+    <text x="418" y="287" class="gk name">Cold</text>
+    <text x="672" y="287" text-anchor="end" class="gk count">20 names</text>
+    <text x="382" y="328" class="sys def">Dormant 1st-degree. Unclear</text>
+    <text x="382" y="352" class="sys def">if they have the problem.</text>
+  </g>
+
+  <!-- send-order strip -->
+  <rect x="24" y="406" width="672" height="44" rx="4" fill="#faf7f2" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="360" y="434" text-anchor="middle" class="gk order">Send in order: Champions &#8594; Hot &#8594; Warm &#8594; Cold  ·  50 total</text>
+
+  <!-- one basis line -->
+  <text x="360" y="466" text-anchor="middle" class="sys basis">Basis: people who already know you - your interviewees, signups, and network</text>
+</svg>

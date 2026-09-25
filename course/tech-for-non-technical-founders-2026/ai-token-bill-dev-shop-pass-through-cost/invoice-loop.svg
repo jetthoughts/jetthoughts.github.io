@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 410" role="img" aria-labelledby="il-title">
+  <title id="il-title">The month-2 invoice loop. Predict the bill first, then the invoice is just a comparison. Within plus-or-minus 20 percent of your prediction, pay it and set the baseline. 20 percent or more over, demand the itemized breakdown - a real ticket is fine, padding gets cited under Clause 1. Quarterly, re-predict from the usage dashboards under Clause 3.</title>
+  <desc>A single gauge split at the plus-20-percent threshold. A wide green segment, within 20 percent, means pay it and set the baseline. A narrower amber segment past the threshold, 20 percent or more over, means demand the itemized breakdown; a real ticket is fine, padding gets cited under Clause 1. Footer: quarterly, re-predict from the dashboards under Clause 3.</desc>
+  <defs>
+    <style>
+      .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title{ font-size: 42px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .sub  { font-size: 24px; fill: #667085; }
+      .payg { font-size: 42px; font-weight: 700; fill: #2e9e4f; filter: url(#gG); }
+      .demand { font-size: 34px; font-weight: 700; fill: #b8860b; filter: url(#gA); }
+      .zg { font-size: 22px; fill: #1a6b34; }
+      .za { font-size: 22px; fill: #8a6d1f; }
+      .thr { font-size: 22px; font-weight: 700; fill: #667085; }
+      .note { font-size: 21px; fill: #667085; }
+      .foot { font-size: 21px; fill: #667085; font-style: italic; }
+    </style>
+    <filter id="soft" x="-8%" y="-14%" width="116%" height="132%"><feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
+    <filter id="gG" x="-25%" y="-45%" width="150%" height="190%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2e9e4f" flood-opacity="0.5"/></filter>
+    <filter id="gA" x="-25%" y="-45%" width="150%" height="190%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#e2b93b" flood-opacity="0.55"/></filter>
+  </defs>
+
+  <text x="360" y="58" text-anchor="middle" class="h title">The Month-2 Invoice Loop</text>
+  <text x="360" y="96" text-anchor="middle" class="h sub">Predict the bill first - then it's just a comparison.</text>
+
+  <!-- One continuous gauge bar, split at +20% -->
+  <g filter="url(#soft)">
+    <path d="M 76 166 H 452 V 316 H 76 A 28 28 0 0 1 48 288 V 194 A 28 28 0 0 1 76 166 Z" fill="#eafaef" stroke="#57c06f" stroke-width="3"/>
+    <path d="M 452 166 H 644 A 28 28 0 0 1 672 194 V 288 A 28 28 0 0 1 644 316 H 452 Z" fill="#fff6e6" stroke="#e2b93b" stroke-width="3"/>
+  </g>
+  <line x1="452" y1="150" x2="452" y2="332" stroke="#98a2b3" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <text x="452" y="140" text-anchor="middle" class="h thr">+20%</text>
+
+  <text x="250" y="230" text-anchor="middle" class="h payg">&#10003; PAY IT</text>
+  <text x="250" y="270" text-anchor="middle" class="h zg">Within &#177;20%.</text>
+  <text x="250" y="300" text-anchor="middle" class="h zg">Set the baseline.</text>
+
+  <text x="562" y="228" text-anchor="middle" class="h demand">&#10007; DEMAND</text>
+  <text x="562" y="266" text-anchor="middle" class="h za">Get the</text>
+  <text x="562" y="296" text-anchor="middle" class="h za">breakdown.</text>
+
+  <text x="360" y="366" text-anchor="middle" class="h note">A real ticket is fine - padding gets cited under Clause 1.</text>
+  <text x="360" y="398" text-anchor="middle" class="h foot">Quarterly, re-predict from the dashboards (Clause 3).</text>
+</svg>

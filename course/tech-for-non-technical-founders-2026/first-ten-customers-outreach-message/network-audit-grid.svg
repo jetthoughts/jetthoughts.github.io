@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="ag-title ag-desc">
+  <title id="ag-title">Audit three facts per name, then let the last contact pick the opener's warmth.</title>
+  <desc id="ag-desc">A short audit table with three columns - name, last contact, and warm-intro path - a worked example row (Jordan T., 3 months ago on LinkedIn, via Casey - champion #2) and two blank rows to fill for your first eight names. Below, three mapping cards turn the last-contact date into an opener: recent contact runs a hot opener, six to 24 months runs a warm opener, and no path means cold or drop (in ruby). Basis: your first 8 names - recency of contact sets the opener's warmth.</desc>
+  <defs>
+    <style>
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 32px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .colh  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .ex    { font-size: 18px; font-weight: 400; fill: #333333; }
+      .rn    { font-size: 18px; font-weight: 700; fill: #888888; }
+      .maph  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .mapt  { font-size: 18px; font-weight: 400; fill: #333333; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+    </style>
+  </defs>
+
+  <!-- page tone + editorial card -->
+  <rect width="720" height="480" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="464" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">Audit three facts before you write</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">Last contact picks the opener - recent runs hot</text>
+
+  <!-- audit table (structure = stroked white) -->
+  <rect x="24" y="98" width="672" height="156" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <!-- column headers -->
+  <text x="40" y="130" class="gk colh">Name</text>
+  <text x="288" y="130" class="gk colh">Last contact</text>
+  <text x="512" y="130" class="gk colh">Warm-intro path</text>
+  <!-- column dividers -->
+  <line x1="276" y1="98" x2="276" y2="254" stroke="#e0e0e0" stroke-width="1.5"/>
+  <line x1="500" y1="98" x2="500" y2="254" stroke="#e0e0e0" stroke-width="1.5"/>
+  <!-- header underline -->
+  <line x1="24" y1="144" x2="696" y2="144" stroke="#e0e0e0" stroke-width="1.5"/>
+  <!-- worked example row (tinted) -->
+  <rect x="24" y="150" width="672" height="34" fill="#f5f5f5"/>
+  <text x="40" y="173" class="sys ex">Jordan T. (ex.)</text>
+  <text x="288" y="173" class="sys ex">3 months ago, LinkedIn</text>
+  <text x="512" y="173" class="sys ex">via Casey, champ #2</text>
+  <!-- two blank rows to fill -->
+  <text x="40" y="212" class="sys rn">2.</text>
+  <line x1="72" y1="216" x2="256" y2="216" stroke="#bbbbbb" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <line x1="288" y1="216" x2="480" y2="216" stroke="#bbbbbb" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <line x1="512" y1="216" x2="680" y2="216" stroke="#bbbbbb" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <text x="40" y="244" class="sys rn">3.</text>
+  <line x1="72" y1="248" x2="256" y2="248" stroke="#bbbbbb" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <line x1="288" y1="248" x2="480" y2="248" stroke="#bbbbbb" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <line x1="512" y1="248" x2="680" y2="248" stroke="#bbbbbb" stroke-width="1.5" stroke-dasharray="2 4"/>
+
+  <!-- mapping cards: last contact -> opener warmth -->
+  <!-- recent -> hot (neutral) -->
+  <g>
+    <rect x="24" y="278" width="216" height="120" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="132" y="318" text-anchor="middle" class="gk maph">Recent</text>
+    <text x="132" y="352" text-anchor="middle" class="sys mapt">Hot opener</text>
+  </g>
+  <!-- 6-24 mo -> warm (neutral) -->
+  <g>
+    <rect x="252" y="278" width="216" height="120" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="360" y="318" text-anchor="middle" class="gk maph">6-24 months</text>
+    <text x="360" y="352" text-anchor="middle" class="sys mapt">Warm opener</text>
+  </g>
+  <!-- no path -> cold/drop (ruby = the reject) -->
+  <g>
+    <rect x="480" y="278" width="216" height="120" rx="4" fill="#ffffff" stroke="#cc342d" stroke-width="2"/>
+    <text x="588" y="318" text-anchor="middle" class="gk maph" fill="#cc342d">No path</text>
+    <text x="588" y="352" text-anchor="middle" class="sys mapt">Cold, or drop</text>
+  </g>
+
+  <!-- one basis line -->
+  <text x="360" y="442" text-anchor="middle" class="sys basis">Basis: your first 8 names - recency of contact sets the opener's warmth</text>
+</svg>

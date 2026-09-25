@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="aps-title aps-desc">
+  <title id="aps-title">Ask for "a simple admin panel" and a vague brief comes back as a 10-week, $15K spaceship of 47 buttons.</title>
+  <desc id="aps-desc">A two-panel comparison. Left, "What you asked for" - a small admin panel with three buttons: hide this post, ban this user, refund this charge; 3 buttons, 2 days of work. A ruby arrow labeled 10 weeks, $15,000 crosses to the right. Right, "What got built", outlined in ruby - a dense control deck of tab and button motifs with the tally 5 tabs, 47 buttons, 1 role matrix, 12 feature flags, 1 AI co-pilot, and the note that only 2 of these get used. Basis: a vague scope lets the builder fill the gap with features you never asked for.</desc>
+  <defs>
+    <style>
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 30px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .plab  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .plabr { font-size: 20px; font-weight: 700; fill: #cc342d; }
+      .head  { font-size: 20px; font-weight: 700; fill: #121212; }
+      .headr { font-size: 20px; font-weight: 700; fill: #cc342d; }
+      .btn   { font-size: 18px; font-weight: 400; fill: #222222; }
+      .tally { font-size: 18px; font-weight: 400; fill: #333333; }
+      .hint  { font-size: 18px; font-weight: 400; fill: #666666; }
+      .cost  { font-size: 18px; font-weight: 700; fill: #cc342d; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+    </style>
+    <marker id="aps-tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#cc342d"/>
+    </marker>
+  </defs>
+
+  <!-- page tone + editorial card -->
+  <rect width="720" height="480" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="464" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">"A simple admin panel" arrives as a spaceship</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">Vague scope - the builder fills the gap with 47 buttons</text>
+
+  <!-- panel labels -->
+  <text x="174" y="112" text-anchor="middle" class="gk plab">What you asked for</text>
+  <text x="546" y="112" text-anchor="middle" class="gk plabr">What got built</text>
+
+  <!-- transformation arrow with cost pill -->
+  <line x1="250" y1="131" x2="470" y2="131" stroke="#cc342d" stroke-width="2.5" marker-end="url(#aps-tri)"/>
+  <rect x="280" y="117" width="160" height="28" rx="6" fill="#faf7f2" stroke="#e6b3b0" stroke-width="1"/>
+  <text x="360" y="136" text-anchor="middle" class="gk cost">10 weeks - $15,000</text>
+
+  <!-- LEFT panel: what you asked for (neutral ink = structure) -->
+  <rect x="24" y="152" width="300" height="258" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="174" y="186" text-anchor="middle" class="gk head">Admin</text>
+  <line x1="44" y1="198" x2="304" y2="198" stroke="#e0e0e0" stroke-width="1.5"/>
+  <rect x="48" y="212" width="252" height="44" rx="6" fill="#ffffff" stroke="#9a9a9a" stroke-width="1.5"/>
+  <text x="174" y="240" text-anchor="middle" class="sys btn">Hide this post</text>
+  <rect x="48" y="266" width="252" height="44" rx="6" fill="#ffffff" stroke="#9a9a9a" stroke-width="1.5"/>
+  <text x="174" y="294" text-anchor="middle" class="sys btn">Ban this user</text>
+  <rect x="48" y="320" width="252" height="44" rx="6" fill="#ffffff" stroke="#9a9a9a" stroke-width="1.5"/>
+  <text x="174" y="348" text-anchor="middle" class="sys btn">Refund this charge</text>
+  <text x="174" y="392" text-anchor="middle" class="sys hint">3 buttons - 2 days of work</text>
+
+  <!-- RIGHT panel: the spaceship (anti-pattern = ruby) -->
+  <rect x="396" y="152" width="300" height="258" rx="4" fill="#ffffff" stroke="#cc342d" stroke-width="2"/>
+  <text x="546" y="186" text-anchor="middle" class="gk headr">Admin Control Center</text>
+  <line x1="416" y1="198" x2="676" y2="198" stroke="#f0cfcd" stroke-width="1.5"/>
+  <!-- tab motif (no sub-floor text - density carries the meaning) -->
+  <g fill="#fbeae9" stroke="#e2a6a2" stroke-width="1.2">
+    <rect x="416" y="210" width="56" height="20" rx="3"/>
+    <rect x="478" y="210" width="56" height="20" rx="3"/>
+    <rect x="540" y="210" width="56" height="20" rx="3"/>
+    <rect x="602" y="210" width="56" height="20" rx="3"/>
+  </g>
+  <!-- button grid motif (represents the 47 buttons) -->
+  <g fill="#fbeae9" stroke="#e2a6a2" stroke-width="1.2">
+    <rect x="416" y="242" width="44" height="20" rx="3"/>
+    <rect x="466" y="242" width="44" height="20" rx="3"/>
+    <rect x="516" y="242" width="44" height="20" rx="3"/>
+    <rect x="566" y="242" width="44" height="20" rx="3"/>
+    <rect x="616" y="242" width="42" height="20" rx="3"/>
+    <rect x="416" y="268" width="44" height="20" rx="3"/>
+    <rect x="466" y="268" width="44" height="20" rx="3"/>
+    <rect x="516" y="268" width="44" height="20" rx="3"/>
+    <rect x="566" y="268" width="44" height="20" rx="3"/>
+    <rect x="616" y="268" width="42" height="20" rx="3"/>
+    <rect x="416" y="294" width="44" height="20" rx="3"/>
+    <rect x="466" y="294" width="44" height="20" rx="3"/>
+    <rect x="516" y="294" width="44" height="20" rx="3"/>
+    <rect x="566" y="294" width="44" height="20" rx="3"/>
+    <rect x="616" y="294" width="42" height="20" rx="3"/>
+  </g>
+  <text x="416" y="340" class="sys tally">5 tabs, 47 buttons, 1 role matrix</text>
+  <text x="416" y="364" class="sys tally">12 feature flags, 1 AI co-pilot</text>
+  <text x="416" y="394" class="gk cost">2 of these you actually use</text>
+
+  <!-- one basis line -->
+  <text x="360" y="452" text-anchor="middle" class="sys basis">Basis: a vague scope lets the builder add features you never asked for</text>
+</svg>

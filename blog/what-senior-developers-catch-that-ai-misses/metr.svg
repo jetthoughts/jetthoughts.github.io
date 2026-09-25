@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img" aria-labelledby="t d">
+  <title id="t">What sixteen experienced developers predicted, experienced, and then believed</title>
+  <desc id="d">METR randomised trial: developers predicted AI would make them 24 percent faster. They were measured 19 percent slower. Afterwards they still estimated they had been 20 percent faster - a gap of roughly forty points between measurement and belief.</desc>
+
+  <rect width="720" height="300" fill="#0e0e14"/>
+
+  <text x="32" y="40" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="17" font-weight="700" fill="#e8eaf0">Predicted, measured, then believed anyway</text>
+  <text x="32" y="62" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">METR - 16 experienced developers, 246 real issues, repos they knew for years</text>
+
+  <!-- zero line -->
+  <line x1="360" y1="86" x2="360" y2="238" stroke="#3a3f4d" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <text x="360" y="258" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11" fill="#6b7080">no change</text>
+
+  <!-- predicted +24% (faster, right) -->
+  <text x="32" y="112" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">They predicted</text>
+  <rect x="360" y="96" width="168" height="26" rx="4" fill="#a855f7" opacity="0.55"/>
+  <text x="540" y="115" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" font-weight="700" fill="#a855f7">+24% faster</text>
+
+  <!-- actual -19% (slower, left) -->
+  <text x="32" y="162" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#e8eaf0" font-weight="700">Measured</text>
+  <rect x="227" y="146" width="133" height="26" rx="4" fill="#cc342d"/>
+  <text x="215" y="165" text-anchor="end" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" font-weight="700" fill="#cc342d">19% slower</text>
+
+  <!-- believed +20% (faster, right) -->
+  <text x="32" y="212" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#8b90a0">Afterwards, believed</text>
+  <rect x="360" y="196" width="140" height="26" rx="4" fill="#a855f7" opacity="0.55"/>
+  <text x="512" y="215" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" font-weight="700" fill="#a855f7">+20% faster</text>
+
+  <text x="32" y="288" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#8b90a0">Roughly forty points between what happened and what they believed happened.</text>
+</svg>

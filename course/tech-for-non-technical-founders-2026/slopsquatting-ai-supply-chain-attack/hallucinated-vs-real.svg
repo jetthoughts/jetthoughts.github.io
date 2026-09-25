@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Caveat','Patrick Hand','Comic Sans MS',cursive">
+  <defs>
+    <filter id="rough2" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="13"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
+  </defs>
+  <rect width="960" height="540" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="480" y="44" font-size="32" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Hallucinated vs Real Packages: 3 Languages</text>
+  <text x="480" y="72" font-size="18" text-anchor="middle" fill="#555">Each row is one real-world hallucination caught by Lasso Security and Snyk reproduction tests in 2025.</text>
+
+  <!-- Header -->
+  <rect x="40" y="100" width="880" height="44" fill="#1a1a1a" filter="url(#rough2)"/>
+  <text x="60" y="130" font-size="18" fill="#fafaf7" font-weight="bold">Stack</text>
+  <text x="240" y="130" font-size="18" fill="#fafaf7" font-weight="bold">AI suggested (HALLUCINATED)</text>
+  <text x="600" y="130" font-size="18" fill="#fafaf7" font-weight="bold">Real package (CORRECT)</text>
+
+  <!-- Row 1: Rails -->
+  <rect x="40" y="150" width="880" height="100" fill="#fff5f5" stroke="#cc342d" stroke-width="2" filter="url(#rough2)"/>
+  <text x="60" y="184" font-size="20" fill="#cc342d" font-weight="bold">Rails / Ruby</text>
+  <text x="60" y="212" font-size="14" fill="#444">Gemfile</text>
+  <text x="60" y="232" font-size="14" fill="#444">bundle install</text>
+  <text x="240" y="184" font-size="16" fill="#cc342d" font-family="'Courier New',monospace" font-weight="bold">gem 'active_support_extras_helper'</text>
+  <text x="240" y="210" font-size="14" fill="#888">Does not exist on Rubygems.</text>
+  <text x="240" y="230" font-size="14" fill="#888">Plausible-sounding name.</text>
+  <text x="600" y="184" font-size="16" fill="#2e7d32" font-family="'Courier New',monospace" font-weight="bold">gem 'active_record_extra'</text>
+  <text x="600" y="210" font-size="14" fill="#444">Real, maintained, on Rubygems</text>
+  <text x="600" y="230" font-size="14" fill="#444">since 2014.</text>
+
+  <!-- Row 2: Python -->
+  <rect x="40" y="256" width="880" height="100" fill="#fffbe6" stroke="#bf8a00" stroke-width="2" filter="url(#rough2)"/>
+  <text x="60" y="290" font-size="20" fill="#bf8a00" font-weight="bold">Django / Python</text>
+  <text x="60" y="318" font-size="14" fill="#444">requirements.txt</text>
+  <text x="60" y="338" font-size="14" fill="#444">pip install</text>
+  <text x="240" y="290" font-size="16" fill="#cc342d" font-family="'Courier New',monospace" font-weight="bold">pip install requestz</text>
+  <text x="240" y="316" font-size="14" fill="#888">Typo of `requests`. Was an</text>
+  <text x="240" y="336" font-size="14" fill="#888">unregistered name on PyPI.</text>
+  <text x="600" y="290" font-size="16" fill="#2e7d32" font-family="'Courier New',monospace" font-weight="bold">pip install requests</text>
+  <text x="600" y="316" font-size="14" fill="#444">Real, the standard HTTP library</text>
+  <text x="600" y="336" font-size="14" fill="#444">on PyPI since 2011.</text>
+
+  <!-- Row 3: Laravel/Node -->
+  <rect x="40" y="362" width="880" height="100" fill="#f5e9ff" stroke="#7c3aed" stroke-width="2" filter="url(#rough2)"/>
+  <text x="60" y="396" font-size="20" fill="#7c3aed" font-weight="bold">Laravel / npm</text>
+  <text x="60" y="424" font-size="14" fill="#444">package.json</text>
+  <text x="60" y="444" font-size="14" fill="#444">npm install</text>
+  <text x="240" y="396" font-size="15" fill="#cc342d" font-family="'Courier New',monospace" font-weight="bold">npm install react-toastify-fork</text>
+  <text x="240" y="422" font-size="14" fill="#888">Plausible "fork" suffix the model</text>
+  <text x="240" y="442" font-size="14" fill="#888">invented. Unregistered on npm.</text>
+  <text x="600" y="396" font-size="15" fill="#2e7d32" font-family="'Courier New',monospace" font-weight="bold">npm install react-toastify</text>
+  <text x="600" y="422" font-size="14" fill="#444">Real, 2M weekly downloads,</text>
+  <text x="600" y="442" font-size="14" fill="#444">on npm since 2017.</text>
+
+  <!-- Footer note -->
+  <text x="480" y="498" font-size="18" text-anchor="middle" fill="#1a1a1a" font-weight="bold">All three names were registered by Lasso researchers as proof-of-concept in April 2025.</text>
+  <text x="480" y="522" font-size="15" text-anchor="middle" fill="#555">Real attackers do this within 7-14 days of a model first suggesting a name.</text>
+</svg>

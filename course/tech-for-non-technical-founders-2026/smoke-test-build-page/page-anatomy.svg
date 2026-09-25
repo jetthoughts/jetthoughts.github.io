@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" role="img" aria-labelledby="anatomy-title anatomy-desc">
+  <title id="anatomy-title">A smoke-test page is four copy blocks stacked above one call-to-action.</title>
+  <desc id="anatomy-desc">A stacked page layout. The headline block names the customer and outcome in a 3-second test. The sub-headline block explains the mechanism. A row of four value-prop blocks lists outcomes the customer wants, not features. At the bottom, the call-to-action block, marked in ruby as the one click-target, reads "Get on the waitlist" with a coming-soon footer. Basis: a one-page email-capture smoke test, built before any product exists.</desc>
+  <defs>
+    <style>
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .label { font-size: 20px; font-weight: 600; fill: #121212; }
+      .cta   { font-size: 20px; font-weight: 700; fill: #ffffff; }
+      .annot { font-size: 18px; font-weight: 400; fill: #555555; }
+      .ctaft { font-size: 17px; font-weight: 400; fill: #ffffff; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+    </style>
+  </defs>
+
+  <!-- page tone + editorial card -->
+  <rect width="720" height="470" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="454" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">Four blocks, then one clear ask</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">The anatomy of a page strangers can act on</text>
+
+  <!-- STRUCTURE blocks: white fill, ink outline, labels inside -->
+  <!-- Headline -->
+  <rect x="60" y="104" width="600" height="64" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="360" y="132" text-anchor="middle" class="gk label">HEADLINE</text>
+  <text x="360" y="156" text-anchor="middle" class="sys annot">names the customer + the outcome (3-second test)</text>
+
+  <!-- Sub-headline -->
+  <rect x="60" y="180" width="600" height="56" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="360" y="205" text-anchor="middle" class="gk label">SUB-HEADLINE</text>
+  <text x="360" y="227" text-anchor="middle" class="sys annot">explains how - the mechanism</text>
+
+  <!-- Value props row -->
+  <rect x="60"  y="248" width="141" height="84" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="130.5" y="290" text-anchor="middle" class="gk label">VALUE</text>
+  <text x="130.5" y="314" text-anchor="middle" class="gk label">PROP 1</text>
+  <rect x="213" y="248" width="141" height="84" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="283.5" y="290" text-anchor="middle" class="gk label">VALUE</text>
+  <text x="283.5" y="314" text-anchor="middle" class="gk label">PROP 2</text>
+  <rect x="366" y="248" width="141" height="84" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="436.5" y="290" text-anchor="middle" class="gk label">VALUE</text>
+  <text x="436.5" y="314" text-anchor="middle" class="gk label">PROP 3</text>
+  <rect x="519" y="248" width="141" height="84" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="589.5" y="290" text-anchor="middle" class="gk label">VALUE</text>
+  <text x="589.5" y="314" text-anchor="middle" class="gk label">PROP 4</text>
+
+  <text x="360" y="354" text-anchor="middle" class="sys annot">outcomes the customer wants, not features</text>
+
+  <!-- CTA: ruby = the one actionable click-target (DATA/action mark, filled) -->
+  <rect x="60" y="368" width="600" height="66" rx="4" fill="#cc342d"/>
+  <text x="360" y="398" text-anchor="middle" class="gk cta">Get on the waitlist</text>
+  <text x="360" y="422" text-anchor="middle" class="sys ctaft">Coming soon. Email reserves your spot at launch.</text>
+
+  <!-- one basis line -->
+  <text x="360" y="456" text-anchor="middle" class="sys basis">Basis: a one-page email-capture smoke test, before any product exists</text>
+</svg>

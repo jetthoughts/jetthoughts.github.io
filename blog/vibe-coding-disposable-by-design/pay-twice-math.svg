@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" role="img" aria-labelledby="ptm-title">
+  <title id="ptm-title">Three paths to a production app, drawn to scale. Build from scratch skipping validation: 40 thousand dollars, full price for an unvalidated guess. Vibe-validate, kill it, build fresh: 1.5 thousand for the weekend prototype plus 40 thousand for the production build, 41.5 thousand total - the play this post recommends. Vibe-validate, ship it, rebuild under fire: 1.5 thousand prototype plus 80 thousand rebuild after the prototype fails in production, 81.5 thousand total plus three to six months of runway.</title>
+  <desc>Three horizontal hand-drawn bars drawn to a common dollar scale. First bar, 40 thousand, cream: production build with no validation, marked with an amber warning. Second bar: a thin purple sliver for the 1.5 thousand weekend prototype, then a 40 thousand cream production build segment; green total 41.5 thousand with a check mark. Third bar, the longest: the same thin purple prototype sliver, then a red 80 thousand segment labeled rebuild after the prototype fails in production; red total 81.5 thousand plus three to six months of runway. Caption: the forty-thousand premium is the same app built twice - once rushed into production, once properly.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub    { font-size: 17px; fill: #666; font-style: italic; }
+      .row    { font-size: 20px; font-weight: 700; fill: #1a1a1a; }
+      .inbar  { font-size: 17px; fill: #1a1a1a; }
+      .totg   { font-size: 22px; font-weight: 700; fill: #2e7d32; }
+      .tota   { font-size: 22px; font-weight: 700; fill: #b8860b; }
+      .totr   { font-size: 22px; font-weight: 700; fill: #cc342d; }
+      .notea  { font-size: 16px; font-style: italic; fill: #b8860b; }
+      .noteg  { font-size: 16px; font-style: italic; fill: #2e7d32; }
+      .noter  { font-size: 16px; font-style: italic; fill: #cc342d; }
+      .note   { font-size: 16px; font-style: italic; fill: #666; }
+      .lbl    { font-size: 15px; fill: #7e22ce; }
+      .bar    { fill: #faf7f2; stroke: #555; stroke-width: 2; }
+      .bar-p  { fill: #fbe9ff; stroke: #7e22ce; stroke-width: 2; }
+      .bar-r  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .leader { stroke: #7e22ce; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Header -->
+  <text x="480" y="34" text-anchor="middle" class="h title">Three paths to a production app</text>
+  <text x="480" y="60" text-anchor="middle" class="h sub">Drawn to scale. The prototype is cheap either way - the detour is not.</text>
+
+  <!-- Row 1: greenfield, no validation -->
+  <text x="40" y="106" class="h row">Build from scratch, skip validation</text>
+  <rect x="40" y="116" width="320" height="44" rx="6" class="bar"/>
+  <text x="200" y="144" text-anchor="middle" class="h inbar">$40K - production build</text>
+  <text x="374" y="146" class="h tota">$40K</text>
+  <text x="452" y="145" class="h notea">full price for an unvalidated guess</text>
+
+  <!-- Row 2: validate, kill, rebuild (recommended) -->
+  <text x="40" y="212" class="h row">Vibe-validate, kill it, build fresh</text>
+  <rect x="40" y="222" width="12" height="44" rx="4" class="bar-p"/>
+  <rect x="55" y="222" width="320" height="44" rx="6" class="bar"/>
+  <text x="215" y="250" text-anchor="middle" class="h inbar">$40K - production build</text>
+  <text x="389" y="252" class="h totg">$41.5K &#10003;</text>
+  <text x="502" y="251" class="h noteg">validated first - the play this post recommends</text>
+  <path d="M 46 268 C 46 280, 52 286, 62 290" class="leader"/>
+  <text x="68" y="296" class="h lbl">$1.5K - the weekend prototype</text>
+
+  <!-- Row 3: ship the prototype, rebuild under fire -->
+  <text x="40" y="342" class="h row">Vibe-validate, ship it, rebuild under fire</text>
+  <rect x="40" y="352" width="12" height="44" rx="4" class="bar-p"/>
+  <rect x="55" y="352" width="640" height="44" rx="6" class="bar-r"/>
+  <text x="375" y="380" text-anchor="middle" class="h inbar">$80K - rebuild after the prototype fails in production</text>
+  <text x="709" y="382" class="h totr">$81.5K</text>
+  <text x="709" y="408" class="h noter">plus 3-6 months of runway</text>
+
+  <!-- Caption -->
+  <text x="480" y="446" text-anchor="middle" class="h note">The $40K premium is the same app built twice - once rushed into production, once properly.</text>
+</svg>

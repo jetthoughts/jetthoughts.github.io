@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="funnel-title funnel-desc">
+  <title id="funnel-title">One batch of 30 hand-sent messages funnels to 2-3 booked calls.</title>
+  <desc id="funnel-desc">A three-stage outreach funnel for one batch. SENT 30, by hand, staggered. A 20-30% reply rate leads to REPLIED about 7, where a named post earns the reply. A roughly 50%-or-more show rate leads to BOOKED 2-3 calls, marked green - stack batches to reach 10. A guardrail strip reads the reply rate: under 10% means rewrite the opener (ruby), 10-20% is workable (amber), 20-30% means the reference line is landing (green). Basis: one 30-message batch, replies over page views.</desc>
+  <defs>
+    <style>
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 30px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 22px; font-weight: 600; fill: #4a4a4a; }
+      .stage { font-size: 20px; font-weight: 600; fill: #121212; }
+      .stat  { font-size: 44px; font-weight: 700; fill: #121212; }
+      .statg { font-size: 44px; font-weight: 700; fill: #2e7d32; }
+      .sub   { font-size: 18px; font-weight: 400; fill: #444444; }
+      .pill  { font-size: 18px; font-weight: 600; fill: #121212; }
+      .guard { font-size: 18px; font-weight: 400; fill: #333333; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+    </style>
+    <marker id="fn-tri" viewBox="0 0 9 7" refX="8" refY="3.5" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#3a3a3a"/>
+    </marker>
+  </defs>
+
+  <!-- page tone + editorial card -->
+  <rect width="720" height="420" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="404" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="48" text-anchor="middle" class="gk title">Thirty hand-sent messages, 2-3 booked calls</text>
+  <text x="360" y="80" text-anchor="middle" class="gk msg">Reply rate is the dial - under 10% means rewrite the opener</text>
+
+  <!-- Stage cards (white, ink outline = structure) -->
+  <rect x="24" y="104" width="188" height="150" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="118" y="140" text-anchor="middle" class="gk stage">SENT</text>
+  <text x="118" y="192" text-anchor="middle" class="gk stat">30</text>
+  <text x="118" y="226" text-anchor="middle" class="sys sub">by hand, staggered</text>
+
+  <rect x="266" y="104" width="188" height="150" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="360" y="140" text-anchor="middle" class="gk stage">REPLIED</text>
+  <text x="360" y="192" text-anchor="middle" class="gk stat">~7</text>
+  <text x="360" y="226" text-anchor="middle" class="sys sub">named post = replies</text>
+
+  <rect x="508" y="104" width="188" height="150" rx="4" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+  <text x="602" y="140" text-anchor="middle" class="gk stage">BOOKED</text>
+  <text x="602" y="192" text-anchor="middle" class="gk statg">2-3</text>
+  <text x="602" y="226" text-anchor="middle" class="sys sub">stack batches to 10</text>
+
+  <!-- connectors with conversion pills centered on the line -->
+  <line x1="212" y1="179" x2="266" y2="179" stroke="#3a3a3a" stroke-width="2" marker-end="url(#fn-tri)"/>
+  <rect x="206" y="164" width="66" height="28" rx="6" fill="#faf7f2" stroke="#d8d8d8" stroke-width="1"/>
+  <text x="239" y="183" text-anchor="middle" class="gk pill">20-30%</text>
+
+  <line x1="454" y1="179" x2="508" y2="179" stroke="#3a3a3a" stroke-width="2" marker-end="url(#fn-tri)"/>
+  <rect x="450" y="164" width="58" height="28" rx="6" fill="#faf7f2" stroke="#d8d8d8" stroke-width="1"/>
+  <text x="479" y="183" text-anchor="middle" class="gk pill">~50%+</text>
+
+  <!-- guardrail strip: reply-rate reading, thresholds color-coded -->
+  <rect x="24" y="280" width="672" height="86" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="360" y="314" text-anchor="middle" class="sys guard"><tspan fill="#cc342d" font-weight="700">Under 10%</tspan> replies? The opener is too generic - rewrite it.</text>
+  <text x="360" y="344" text-anchor="middle" class="sys guard"><tspan fill="#c47d16" font-weight="700">10-20%</tspan> is workable. <tspan fill="#2e7d32" font-weight="700">20-30%</tspan> means the reference line is landing.</text>
+
+  <!-- one basis line -->
+  <text x="360" y="398" text-anchor="middle" class="sys basis">Basis: one 30-message batch - replies staggered by hand, not bulk-sent</text>
+</svg>

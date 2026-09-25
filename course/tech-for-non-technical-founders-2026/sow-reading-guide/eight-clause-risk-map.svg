@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-labelledby="clause-map-title">
+  <title id="clause-map-title">The 8-clause SOW risk map: each clause and what it quietly costs</title>
+  <defs>
+    <style>
+      .heading    { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 27px; fill: #1a1a1a; font-weight: 700; }
+      .subtitle   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .clabel     { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #1a1a1a; font-weight: 700; }
+      .ccost      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #cc342d; }
+      .card       { fill: #fff5f5; stroke: #cc342d; stroke-width: 2; }
+      .callout    { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
+      .call-label { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 19px; fill: #1a1a1a; font-weight: 700; }
+      .call-note  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #444; font-style: italic; }
+    </style>
+  </defs>
+
+  <text x="500" y="34" class="heading" text-anchor="middle">The 8-clause SOW risk map</text>
+  <text x="500" y="58" class="subtitle" text-anchor="middle">Each clause, and what it quietly costs you if you skim it.</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="90" width="218" height="150" rx="12" class="card" transform="rotate(-0.3 149 165)"/>
+  <text x="149" y="120" class="clabel" text-anchor="middle">1. SCOPE</text>
+  <text x="149" y="150" class="ccost" text-anchor="middle">Vague scope = blank</text>
+  <text x="149" y="168" class="ccost" text-anchor="middle">check.</text>
+
+  <rect x="274" y="90" width="218" height="150" rx="12" class="card" transform="rotate(0.3 383 165)"/>
+  <text x="383" y="120" class="clabel" text-anchor="middle">2. MILESTONE</text>
+  <text x="383" y="140" class="clabel" text-anchor="middle">ACCEPTANCE</text>
+  <text x="383" y="168" class="ccost" text-anchor="middle">Paid for staging no</text>
+  <text x="383" y="186" class="ccost" text-anchor="middle">one uses.</text>
+
+  <rect x="508" y="90" width="218" height="150" rx="12" class="card" transform="rotate(-0.3 617 165)"/>
+  <text x="617" y="120" class="clabel" text-anchor="middle">3. CHANGE</text>
+  <text x="617" y="140" class="clabel" text-anchor="middle">REQUESTS</text>
+  <text x="617" y="168" class="ccost" text-anchor="middle">$185/hr, no cap,</text>
+  <text x="617" y="186" class="ccost" text-anchor="middle">no compare.</text>
+
+  <rect x="742" y="90" width="218" height="150" rx="12" class="card" transform="rotate(0.3 851 165)"/>
+  <text x="851" y="120" class="clabel" text-anchor="middle">4. IP</text>
+  <text x="851" y="140" class="clabel" text-anchor="middle">OWNERSHIP</text>
+  <text x="851" y="168" class="ccost" text-anchor="middle">Agency holds repo</text>
+  <text x="851" y="186" class="ccost" text-anchor="middle">hostage.</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="260" width="218" height="150" rx="12" class="card" transform="rotate(0.3 149 335)"/>
+  <text x="149" y="290" class="clabel" text-anchor="middle">5. 3RD-PARTY</text>
+  <text x="149" y="310" class="clabel" text-anchor="middle">ACCOUNTS</text>
+  <text x="149" y="338" class="ccost" text-anchor="middle">Rented accounts</text>
+  <text x="149" y="356" class="ccost" text-anchor="middle">+ 15% fee.</text>
+
+  <rect x="274" y="260" width="218" height="150" rx="12" class="card" transform="rotate(-0.3 383 335)"/>
+  <text x="383" y="290" class="clabel" text-anchor="middle">6. TERMINATION</text>
+  <text x="383" y="330" class="ccost" text-anchor="middle">Can't exit for</text>
+  <text x="383" y="348" class="ccost" text-anchor="middle">bad work.</text>
+
+  <rect x="508" y="260" width="218" height="150" rx="12" class="card" transform="rotate(0.3 617 335)"/>
+  <text x="617" y="290" class="clabel" text-anchor="middle">7. WARRANTY</text>
+  <text x="617" y="330" class="ccost" text-anchor="middle">Clock runs out</text>
+  <text x="617" y="348" class="ccost" text-anchor="middle">before launch.</text>
+
+  <rect x="742" y="260" width="218" height="150" rx="12" class="card" transform="rotate(-0.3 851 335)"/>
+  <text x="851" y="290" class="clabel" text-anchor="middle">8. DISPUTES</text>
+  <text x="851" y="330" class="ccost" text-anchor="middle">Their city,</text>
+  <text x="851" y="348" class="ccost" text-anchor="middle">their lawyer.</text>
+
+  <!-- Bottom callout -->
+  <rect x="50" y="440" width="900" height="65" rx="12" class="callout"/>
+  <text x="500" y="466" class="call-label" text-anchor="middle">$78K invoiced. 4 of 5 milestones. Runway 12mo to 7mo.</text>
+  <text x="500" y="490" class="call-note" text-anchor="middle">One email with all 8 questions, before you sign, catches this.</text>
+</svg>

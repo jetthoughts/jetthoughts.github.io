@@ -1,0 +1,19 @@
+{
+    "name": "JetThoughts",
+    "short_name": "JetThoughts",
+    "icons": [
+        {
+            "src": "/img/favicon/android-chrome-192x192.d918da627a97ba9c86514cf3057112d3.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/favicon/android-chrome-512x512.a68086c2ce94db3da631be928f0eb65c.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

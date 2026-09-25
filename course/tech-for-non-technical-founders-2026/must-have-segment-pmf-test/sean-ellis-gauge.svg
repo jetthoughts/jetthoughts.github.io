@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="gauge-title gauge-desc">
+  <title id="gauge-title">At 40% very-disappointed the product is a must-have: read the share of your first users against the 40% line.</title>
+  <desc id="gauge-desc">A horizontal signal meter reading 0 to 100 percent of first users who answer "very disappointed" if the product vanished. Under 40 percent is amber - a product problem no ad budget fixes. 40 percent or more is green - a must-have user, go sell. A ruby line and pointer mark the 40 percent go line. Axis ticks at 0, 40, and 100 percent. Basis: share answering "very disappointed" to "How would you feel if you could no longer use it?", 10 to 30 recent users, the Sean Ellis test.</desc>
+  <defs>
+    <style>
+      .gk   { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys  { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .label { font-size: 20px; font-weight: 600; fill: #ffffff; }
+      .annot { font-size: 18px; font-weight: 400; fill: #ffffff; }
+      .tick  { font-size: 20px; font-weight: 600; fill: #3a3a3a; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+      .ptr   { font-size: 20px; font-weight: 700; fill: #cc342d; }
+      .ptrsub{ font-size: 18px; font-weight: 400; fill: #444444; }
+    </style>
+    <clipPath id="gauge-bar"><rect x="56" y="150" width="608" height="64" rx="4"/></clipPath>
+  </defs>
+
+  <!-- page tone + editorial card -->
+  <rect width="720" height="300" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="284" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">40% who'd miss it = a must-have</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">Survey your first users before you buy traffic</text>
+
+  <!-- hero reading: the 40% go line (ruby = the one actionable reading) -->
+  <g>
+    <text x="299" y="110" text-anchor="middle" class="gk ptr">40% = the line</text>
+    <text x="299" y="130" text-anchor="middle" class="sys ptrsub">must-have, start selling</text>
+    <path d="M293,134 L305,134 L299,144 Z" fill="#cc342d"/>
+  </g>
+
+  <!-- meter track: DATA bands filled, no stroke, 4px outer radius via clip -->
+  <g clip-path="url(#gauge-bar)">
+    <rect x="56"  y="150" width="243" height="64" fill="#c47d16"/>
+    <rect x="299" y="150" width="365" height="64" fill="#2e7d32"/>
+  </g>
+
+  <!-- band labels: pct (label rung) + verdict (annotation rung), inside shape -->
+  <text x="177" y="180" text-anchor="middle" class="gk label">Under 40%</text>
+  <text x="177" y="200" text-anchor="middle" class="sys annot">Product problem</text>
+  <text x="481" y="180" text-anchor="middle" class="gk label">40% or more</text>
+  <text x="481" y="200" text-anchor="middle" class="sys annot">Must-have user, go sell</text>
+
+  <!-- STRUCTURE: axis baseline + ticks, stroked ink, no fill -->
+  <line x1="56" y1="216" x2="664" y2="216" stroke="#3a3a3a" stroke-width="2"/>
+  <g stroke="#3a3a3a" stroke-width="2">
+    <line x1="56"  y1="216" x2="56"  y2="224"/>
+    <line x1="664" y1="216" x2="664" y2="224"/>
+  </g>
+  <text x="56"  y="242" text-anchor="middle" class="gk tick">0%</text>
+  <text x="664" y="242" text-anchor="middle" class="gk tick">100%</text>
+
+  <!-- the 40% go-line threshold: ruby, the hero action marker (structure, stroked) -->
+  <line x1="299" y1="146" x2="299" y2="228" stroke="#cc342d" stroke-width="2.5"/>
+  <text x="299" y="242" text-anchor="middle" class="gk tick" fill="#cc342d" font-weight="700">40%</text>
+
+  <!-- one basis line -->
+  <text x="360" y="278" text-anchor="middle" class="sys basis">Basis: "very disappointed" share among 10-30 recent users - the Sean Ellis test</text>
+</svg>

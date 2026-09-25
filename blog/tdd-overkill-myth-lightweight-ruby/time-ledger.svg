@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 340" width="600" height="340" role="img" aria-labelledby="title desc">
+  <title id="title">Time-ledger comparison: lightweight TDD vs no tests</title>
+  <desc id="desc">Without TDD: 1 hour code plus 6 hours debug equals 7 hours total. With lightweight TDD: about 1.5 hours code-with-tests and minimal debug. Lightweight TDD ships in roughly one fifth the time and with 40-90% fewer defects.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .ink { fill: #dfe2eb; font-family: 'Caveat', 'Architects Daughter', 'Comic Neue', cursive, system-ui; }
+      .label { font-size: 18px; font-weight: 700; }
+      .seg { font-size: 17px; font-weight: 700; }
+      .total { font-size: 17px; font-weight: 700; fill: #dfe2eb; }
+      .caption { font-size: 16px; font-style: italic; fill: #bfc4d1; }
+      .source { font-size: 14px; font-style: italic; }
+      .ruby-fill { fill: #cc342d; fill-opacity: 0.78; }
+      .purple-fill { fill: #a855f7; fill-opacity: 0.78; }
+      .stroke { fill: none; stroke: #dfe2eb; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .stroke-ruby { fill: none; stroke: #cc342d; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+      .stroke-purple { fill: none; stroke: #a855f7; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+      .hatch-ruby { stroke: #ffb4ab; stroke-width: 1.1; stroke-opacity: 0.55; fill: none; }
+      .hatch-purple { stroke: #d8b4fe; stroke-width: 1.1; stroke-opacity: 0.55; fill: none; }
+    </style>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.6"/>
+    </filter>
+    <pattern id="hatchRuby" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(28)">
+      <line x1="0" y1="0" x2="0" y2="8" class="hatch-ruby"/>
+    </pattern>
+    <pattern id="hatchPurple" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(-32)">
+      <line x1="0" y1="0" x2="0" y2="8" class="hatch-purple"/>
+    </pattern>
+  </defs>
+
+  <rect class="bg" width="600" height="340"/>
+
+  <!-- Without TDD label -->
+  <text class="ink label" x="40" y="46">Without TDD</text>
+
+  <!-- Bar 1: 1h coding (purple) + 6h debugging (ruby), total 7h
+       Scale: 1h = ~68 units (480 units = 7h, x=40 to x=520) -->
+  <g filter="url(#rough)">
+    <!-- 1h code segment (40-108) -->
+    <path class="purple-fill" d="M40,62 Q40,58 44,58 L104,57 Q108,58 108,62 L108,98 Q108,102 104,102 L43,103 Q40,102 40,98 Z"/>
+    <rect x="40" y="58" width="68" height="44" fill="url(#hatchPurple)"/>
+    <path class="stroke-purple" d="M40,62 Q40,58 44,58 L104,57 Q108,58 108,62 L108,98 Q108,102 104,102 L43,103 Q40,102 40,98 Z"/>
+
+    <!-- 6h debug segment (108-516) -->
+    <path class="ruby-fill" d="M109,58 L512,57 Q516,58 516,62 L516,98 Q516,102 512,102 L109,103 Z"/>
+    <rect x="109" y="58" width="407" height="44" fill="url(#hatchRuby)"/>
+    <path class="stroke-ruby" d="M109,58 L512,57 Q516,58 516,62 L516,98 Q516,102 512,102 L109,103 Z"/>
+  </g>
+
+  <!-- Bar 1 labels -->
+  <text class="ink seg" x="46" y="86" fill="#ffb4ab">1h code</text>
+  <text class="ink seg" x="270" y="86" fill="#ffe8e3">6h debugging</text>
+  <text class="total" x="528" y="86">= 7 hrs</text>
+
+  <!-- separator -->
+  <path d="M40,135 Q200,131 320,135 T560,134" stroke="#3a3f4a" stroke-width="1.4" stroke-dasharray="4,5" fill="none" filter="url(#rough)"/>
+
+  <!-- With lightweight TDD label -->
+  <text class="ink label" x="40" y="172">With lightweight TDD</text>
+
+  <!-- Bar 2: 1.3h code+tests (purple) + tiny debug, total ~1.5h
+       Scale: same as Bar 1, so 1.5h = ~102 units (40 to 142) -->
+  <g filter="url(#rough)">
+    <path class="purple-fill" d="M40,188 Q40,184 44,184 L138,184 Q142,185 142,189 L142,225 Q142,229 138,229 L43,229 Q40,228 40,224 Z"/>
+    <rect x="40" y="184" width="102" height="45" fill="url(#hatchPurple)"/>
+    <path class="stroke-purple" d="M40,188 Q40,184 44,184 L138,184 Q142,185 142,189 L142,225 Q142,229 138,229 L43,229 Q40,228 40,224 Z"/>
+  </g>
+
+  <text class="ink seg" x="46" y="213" fill="#ede9fe">~1.5h code+tests</text>
+  <text class="total" x="155" y="213">= ~1.5 hrs</text>
+
+  <!-- arrow + caption -->
+  <g filter="url(#rough)">
+    <path class="stroke" d="M64,256 Q300,250 540,256" stroke-dasharray="2,6" opacity="0.5"/>
+  </g>
+  <text class="ink caption" x="40" y="285">Lightweight TDD ships in ~1/5 the time and with 40-90% fewer defects.</text>
+  <text class="ink source" x="40" y="308" fill="#a855f7" opacity="0.85">Sources: Nagappan et al. (Microsoft + IBM, 2008): 15-35% slower</text>
+  <text class="ink source" x="40" y="326" fill="#a855f7" opacity="0.85">initial coding, 40-90% fewer defects. Debug time falls from 56% to &lt;8%.</text>
+</svg>

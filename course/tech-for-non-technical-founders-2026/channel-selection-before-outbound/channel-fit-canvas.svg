@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="cf-title cf-desc">
+  <title id="cf-title">Score a candidate channel 1-3 on four dimensions out of 12, then let the total pick your move.</title>
+  <desc id="cf-desc">A scoring rubric. Four dimension cards each scored 1 to 3: price fit (price versus what the channel buys), buyer type (is your ICP active here), time budget (sustainable pace for four weeks), and interview signal (did interviewees name it). The total out of 12 sets the move: 9 or more out of 12 in green - commit to one full send, reply, follow-up arc; 7 to 8 in amber - pilot your top two for one week; 6 or less in ruby - no fit yet, re-read your transcripts. Note: the signal is already in your 10 interview transcripts - how they discover tools. Basis: score one canvas per candidate channel; the fill-in worksheet is the PDF.</desc>
+  <defs>
+    <style>
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 32px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .dim   { font-size: 20px; font-weight: 700; fill: #121212; }
+      .sub   { font-size: 18px; font-weight: 400; fill: #444444; }
+      .chip  { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .gnum  { font-size: 20px; font-weight: 700; }
+      .gtx   { font-size: 18px; font-weight: 400; fill: #222222; }
+      .note  { font-size: 18px; font-weight: 400; fill: #333333; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+    </style>
+  </defs>
+
+  <!-- page tone + editorial card -->
+  <rect width="720" height="480" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="464" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="46" text-anchor="middle" class="gk title">Score a channel out of 12 before you send</text>
+  <text x="360" y="78" text-anchor="middle" class="gk msg">Four dimensions, 1-3 each - the total picks your move</text>
+
+  <!-- four dimension cards (structure = stroked white) -->
+  <!-- card1 24-180 c102 -->
+  <g>
+    <rect x="24" y="98" width="156" height="128" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="102" y="128" text-anchor="middle" class="gk dim">Price fit</text>
+    <text x="102" y="154" text-anchor="middle" class="sys sub">price vs what</text>
+    <text x="102" y="174" text-anchor="middle" class="sys sub">it buys</text>
+    <rect x="76" y="188" width="52" height="26" rx="4" fill="#121212"/>
+    <text x="102" y="206" text-anchor="middle" class="gk chip">1-3</text>
+  </g>
+  <!-- card2 196-352 c274 -->
+  <g>
+    <rect x="196" y="98" width="156" height="128" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="274" y="128" text-anchor="middle" class="gk dim">Buyer type</text>
+    <text x="274" y="154" text-anchor="middle" class="sys sub">is your ICP</text>
+    <text x="274" y="174" text-anchor="middle" class="sys sub">active here?</text>
+    <rect x="248" y="188" width="52" height="26" rx="4" fill="#121212"/>
+    <text x="274" y="206" text-anchor="middle" class="gk chip">1-3</text>
+  </g>
+  <!-- card3 368-524 c446 -->
+  <g>
+    <rect x="368" y="98" width="156" height="128" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="446" y="128" text-anchor="middle" class="gk dim">Time budget</text>
+    <text x="446" y="154" text-anchor="middle" class="sys sub">sustainable</text>
+    <text x="446" y="174" text-anchor="middle" class="sys sub">4 weeks?</text>
+    <rect x="420" y="188" width="52" height="26" rx="4" fill="#121212"/>
+    <text x="446" y="206" text-anchor="middle" class="gk chip">1-3</text>
+  </g>
+  <!-- card4 540-696 c618 -->
+  <g>
+    <rect x="540" y="98" width="156" height="128" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+    <text x="618" y="128" text-anchor="middle" class="gk dim">Signal</text>
+    <text x="618" y="154" text-anchor="middle" class="sys sub">did interviews</text>
+    <text x="618" y="174" text-anchor="middle" class="sys sub">name it?</text>
+    <rect x="592" y="188" width="52" height="26" rx="4" fill="#121212"/>
+    <text x="618" y="206" text-anchor="middle" class="gk chip">1-3</text>
+  </g>
+
+  <!-- gate ladder: three verdict cards -->
+  <!-- commit (green = go) -->
+  <g>
+    <rect x="24" y="248" width="216" height="120" rx="4" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+    <text x="40" y="286" class="gk gnum" fill="#2e7d32">9+ / 12</text>
+    <text x="40" y="316" class="sys gtx">Commit - one full</text>
+    <text x="40" y="340" class="sys gtx">send / reply /</text>
+    <text x="40" y="364" class="sys gtx">follow-up arc.</text>
+  </g>
+  <!-- pilot (amber = caution) -->
+  <g>
+    <rect x="252" y="248" width="216" height="120" rx="4" fill="#ffffff" stroke="#c47d16" stroke-width="2"/>
+    <text x="268" y="286" class="gk gnum" fill="#c47d16">7-8 / 12</text>
+    <text x="268" y="316" class="sys gtx">Pilot your top</text>
+    <text x="268" y="340" class="sys gtx">two for 1 week -</text>
+    <text x="268" y="364" class="sys gtx">higher reply wins.</text>
+  </g>
+  <!-- no fit (ruby = stop) -->
+  <g>
+    <rect x="480" y="248" width="216" height="120" rx="4" fill="#ffffff" stroke="#cc342d" stroke-width="2"/>
+    <text x="496" y="286" class="gk gnum" fill="#cc342d">6 or less</text>
+    <text x="496" y="316" class="sys gtx">No fit yet -</text>
+    <text x="496" y="340" class="sys gtx">re-read your</text>
+    <text x="496" y="364" class="sys gtx">transcripts first.</text>
+  </g>
+
+  <!-- note band -->
+  <rect x="24" y="388" width="672" height="44" rx="4" fill="#faf7f2" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="360" y="416" text-anchor="middle" class="sys note">The signal is already in your 10 interview transcripts - how they discover tools.</text>
+
+  <!-- one basis line -->
+  <text x="360" y="460" text-anchor="middle" class="sys basis">Basis: score one canvas per candidate channel - the fill-in worksheet is the PDF</text>
+</svg>

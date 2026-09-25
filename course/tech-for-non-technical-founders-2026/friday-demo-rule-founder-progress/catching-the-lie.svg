@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 800" role="img" aria-labelledby="ctl-title">
+  <title id="ctl-title">One Loom from a small full-stack team versus five Looms from a microservice-detached team. The full-stack team shows one 90-second Loom of the whole checkout flow end-to-end; the detached team sends five separate service Looms and asks you to sync about them next week. That is what you are paying for.</title>
+  <desc>Left, green, a small full-stack team's ONE Loom, 9 minutes 42, of the checkout flow on staging: sign up, add to cart, checkout, $1 Stripe charge, receipt with email sent - one developer narrates end-to-end in 90 seconds while the founder clicks along. Right, red, a microservice-detached team's FIVE Looms: order-service, billing-service, notifications, front-end, and infra gateway, each a separate video, with "watch these five videos and we can sync about them next week". Footer: this is what you are paying for.</desc>
+  <defs>
+    <style>
+      .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title{ font-size: 44px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .sub  { font-size: 22px; fill: #667085; }
+      .hg { font-size: 26px; font-weight: 700; fill: #2e9e4f; filter: url(#gG); }
+      .hr { font-size: 26px; font-weight: 700; fill: #e5484d; filter: url(#gR); }
+      .tg { font-size: 20px; fill: #2e9e4f; }
+      .tr { font-size: 20px; fill: #b42318; }
+      .ig { font-size: 21px; fill: #1a6b34; }
+      .cardG{ fill: #f2fbf4; stroke: #57c06f; stroke-width: 2.5; filter: url(#soft); }
+      .cardR{ fill: #fff5f4; stroke: #f2635a; stroke-width: 2.5; filter: url(#soft); }
+      .loomG{ fill: #eef2ff; stroke: #6a7bff; stroke-width: 2; }
+      .loomR{ fill: #fdeeee; stroke: #f2635a; stroke-width: 2; }
+      .loomt{ font-size: 19px; font-weight: 700; fill: #384bcc; }
+      .loomr{ font-size: 19px; font-weight: 700; fill: #b42318; }
+      .resG { font-size: 22px; font-weight: 700; fill: #1a6b34; }
+      .resR { font-size: 22px; font-weight: 700; fill: #b42318; }
+      .foot { font-size: 26px; font-weight: 700; fill: #1a1a1a; }
+    </style>
+    <filter id="soft" x="-8%" y="-6%" width="116%" height="116%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1a1a2e" flood-opacity="0.13"/></filter>
+    <filter id="gG" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2e9e4f" flood-opacity="0.5"/></filter>
+    <filter id="gR" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#f2635a" flood-opacity="0.5"/></filter>
+  </defs>
+
+  <text x="360" y="52" text-anchor="middle" class="h title">One Loom vs Five Looms</text>
+  <text x="360" y="88" text-anchor="middle" class="h sub">The Friday demo: one story, or five you must stitch?</text>
+
+  <!-- Green: one coherent Loom -->
+  <rect x="18" y="108" width="340" height="560" rx="20" class="cardG"/>
+  <text x="188" y="150" text-anchor="middle" class="h hg">&#10003; ONE LOOM</text>
+  <text x="188" y="178" text-anchor="middle" class="h tg">small full-stack team</text>
+  <rect x="42" y="196" width="292" height="40" rx="10" class="loomG"/>
+  <text x="60" y="223" class="h loomt">&#9654; 9:42 &#183; checkout flow</text>
+  <!-- one connected flow -->
+  <line x1="70" y1="262" x2="70" y2="470" stroke="#57c06f" stroke-width="3"/>
+  <circle cx="70" cy="272" r="6" fill="#2e9e4f"/><text x="90" y="279" class="h ig">sign up</text>
+  <circle cx="70" cy="312" r="6" fill="#2e9e4f"/><text x="90" y="319" class="h ig">add to cart</text>
+  <circle cx="70" cy="352" r="6" fill="#2e9e4f"/><text x="90" y="359" class="h ig">checkout</text>
+  <circle cx="70" cy="392" r="6" fill="#2e9e4f"/><text x="90" y="399" class="h ig">$1 Stripe charge</text>
+  <circle cx="70" cy="432" r="6" fill="#2e9e4f"/><text x="90" y="439" class="h ig">receipt &#183; email &#10003;</text>
+  <text x="188" y="612" text-anchor="middle" class="h resG">One dev, end-to-end.</text>
+  <text x="188" y="642" text-anchor="middle" class="h resG">90 seconds.</text>
+
+  <!-- Red: five scattered Looms -->
+  <rect x="378" y="108" width="324" height="560" rx="20" class="cardR"/>
+  <text x="540" y="150" text-anchor="middle" class="h hr">&#10007; FIVE LOOMS</text>
+  <text x="540" y="178" text-anchor="middle" class="h tr">detached team</text>
+  <rect x="402" y="198" width="276" height="42" rx="10" class="loomR"/><text x="418" y="226" class="h loomr">&#9654; 6:18 order-service</text>
+  <rect x="402" y="250" width="276" height="42" rx="10" class="loomR"/><text x="418" y="278" class="h loomr">&#9654; 4:51 billing-service</text>
+  <rect x="402" y="302" width="276" height="42" rx="10" class="loomR"/><text x="418" y="330" class="h loomr">&#9654; 7:33 notifications</text>
+  <rect x="402" y="354" width="276" height="42" rx="10" class="loomR"/><text x="418" y="382" class="h loomr">&#9654; 8:02 front-end</text>
+  <rect x="402" y="406" width="276" height="42" rx="10" class="loomR"/><text x="418" y="434" class="h loomr">&#9654; 5:47 infra &#183; gateway</text>
+  <text x="540" y="612" text-anchor="middle" class="h resR">Watch five videos,</text>
+  <text x="540" y="642" text-anchor="middle" class="h resR">sync next week.</text>
+
+  <text x="360" y="740" text-anchor="middle" class="h foot">This is what you're paying for.</text>
+</svg>

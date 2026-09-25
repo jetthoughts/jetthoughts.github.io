@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="wm-title">
+  <title id="wm-title">The walkthrough phase by phase. Phase 1 Lovable UI, five sessions, demo a clickable staging URL. Phase 2 Supabase, five sessions, demo the first real signup. Phase 3 Stripe, five sessions, demo a one-dollar paid flow. Phase 4 go live, five sessions, demo five ICP users clicking. Twenty build sessions of about ninety minutes each - roughly ten weeks evenings-only or four weeks full-time.</title>
+  <desc>Four milestone cards on a timeline - Phase 1 Lovable UI, Phase 2 Supabase, Phase 3 Stripe, Phase 4 go live - each carrying a five-sessions chip and its demo checkpoint, joined by arrows. A note underneath reads roughly ten weeks evenings-only or four weeks full-time, the same twenty sessions either way.</desc>
+  <defs>
+    <style>
+      .h      { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title  { font-size: 27px; font-weight: 700; fill: #1a1a1a; }
+      .sub    { font-size: 17px; fill: #666; font-style: italic; }
+      .ph     { font-size: 20px; font-weight: 700; fill: #1a1a1a; }
+      .demo   { font-size: 15px; fill: #555; }
+      .chip   { font-size: 14px; font-weight: 700; fill: #cc342d; }
+      .note   { font-size: 16px; fill: #666; font-style: italic; }
+      .card   { fill: #faf7f2; stroke: #555; stroke-width: 2; }
+      .chipbg { fill: #fff5f5; stroke: #cc342d; stroke-width: 1.5; }
+      .arrow  { stroke: #333; stroke-width: 2.25; fill: none; }
+      .tick   { font-size: 15px; font-weight: 700; fill: #2e7d32; }
+    </style>
+    <marker id="wm-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="36" text-anchor="middle" class="h title">The walkthrough, phase by phase</text>
+  <text x="480" y="62" text-anchor="middle" class="h sub">20 build sessions (~90 min each) - one demo closes each phase.</text>
+
+  <!-- Milestone cards -->
+  <g transform="translate(24,88) rotate(-0.5 100 60)">
+    <rect width="200" height="120" rx="12" class="card"/>
+    <text x="18" y="34" class="h ph">Phase 1</text>
+    <rect x="108" y="15" width="82" height="26" rx="13" class="chipbg"/>
+    <text x="149" y="34" text-anchor="middle" class="h chip">5 sessions</text>
+    <text x="18" y="62" class="h ph" style="font-size:17px;">Lovable UI</text>
+    <text x="18" y="96" class="h demo"><tspan class="tick">&#10003;</tspan> clickable staging URL</text>
+  </g>
+  <g transform="translate(261,88) rotate(0.4 100 60)">
+    <rect width="200" height="120" rx="12" class="card"/>
+    <text x="18" y="34" class="h ph">Phase 2</text>
+    <rect x="108" y="15" width="82" height="26" rx="13" class="chipbg"/>
+    <text x="149" y="34" text-anchor="middle" class="h chip">5 sessions</text>
+    <text x="18" y="62" class="h ph" style="font-size:17px;">Supabase + auth</text>
+    <text x="18" y="96" class="h demo"><tspan class="tick">&#10003;</tspan> first real signup</text>
+  </g>
+  <g transform="translate(498,88) rotate(-0.4 100 60)">
+    <rect width="200" height="120" rx="12" class="card"/>
+    <text x="18" y="34" class="h ph">Phase 3</text>
+    <rect x="108" y="15" width="82" height="26" rx="13" class="chipbg"/>
+    <text x="149" y="34" text-anchor="middle" class="h chip">5 sessions</text>
+    <text x="18" y="62" class="h ph" style="font-size:17px;">Stripe checkout</text>
+    <text x="18" y="96" class="h demo"><tspan class="tick">&#10003;</tspan> $1 paid flow clears</text>
+  </g>
+  <g transform="translate(735,88) rotate(0.5 100 60)">
+    <rect width="200" height="120" rx="12" class="card"/>
+    <text x="18" y="34" class="h ph">Phase 4</text>
+    <rect x="108" y="15" width="82" height="26" rx="13" class="chipbg"/>
+    <text x="149" y="34" text-anchor="middle" class="h chip">5 sessions</text>
+    <text x="18" y="62" class="h ph" style="font-size:17px;">Go live</text>
+    <text x="18" y="96" class="h demo"><tspan class="tick">&#10003;</tspan> 5 ICP users click</text>
+  </g>
+
+  <!-- timeline arrows -->
+  <path d="M 226 148 L 259 148" class="arrow" marker-end="url(#wm-ah)"/>
+  <path d="M 463 148 L 496 148" class="arrow" marker-end="url(#wm-ah)"/>
+  <path d="M 700 148 L 733 148" class="arrow" marker-end="url(#wm-ah)"/>
+
+  <text x="480" y="284" text-anchor="middle" class="h note">~10 weeks evenings-only  -  ~4 weeks full-time  -  the same 20 sessions either way.</text>
+</svg>

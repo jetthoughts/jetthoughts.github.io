@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-labelledby="ml-title">
+  <title id="ml-title">Fill five specific blanks and the founding hypothesis becomes one testable sentence: if we help CUSTOMER solve PROBLEM with APPROACH, they'll choose it over COMPETITION because DIFFERENTIATION. Categories get a polite nod; specifics get pushback - "small businesses" gets a shrug, "solo chiropractors" gets "that's me". Basis: the founding-hypothesis frame from Click by Knapp and Zeratsky, 2025.</title>
+  <desc>A fill-in-the-blank sentence with five outlined placeholder chips - customer, problem, approach, competition, differentiation - stitched by connecting words: if we help CUSTOMER solve PROBLEM with APPROACH, they'll choose it over COMPETITION because DIFFERENTIATION. Below, the customer blank filled two ways: the vague fill "small businesses" gets a shrug; the specific fill "solo chiropractors", in ruby, gets "that's me". Basis: Click by Knapp and Zeratsky, 2025.</desc>
+  <defs>
+    <style>
+      .h  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+      .title{ font-size: 40px; font-weight: 700; fill: #1a1a1a; filter: url(#soft); }
+      .sub  { font-size: 23px; fill: #667085; }
+      .word { font-size: 27px; fill: #1a1a1a; }
+      .blank{ fill: #eef4ff; stroke: #2b7fff; stroke-width: 2.5; stroke-dasharray: 7 5; }
+      .blankt{ font-size: 22px; font-weight: 700; fill: #2b7fff; }
+      .lbl  { font-size: 23px; font-weight: 700; fill: #1a1a1a; }
+      .cvag { fill: #f2f4f7; stroke: #98a2b3; stroke-width: 2.5; }
+      .cvagt{ font-size: 23px; fill: #667085; }
+      .cspec{ fill: #fff1f0; stroke: #cc342d; stroke-width: 2.5; filter: url(#soft); }
+      .cspect{ font-size: 23px; font-weight: 700; fill: #cc342d; }
+      .react{ font-size: 24px; font-weight: 700; }
+      .foot { font-size: 20px; fill: #98a2b3; font-style: italic; }
+    </style>
+    <filter id="soft" x="-10%" y="-14%" width="120%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#1a1a2e" flood-opacity="0.12"/></filter>
+  </defs>
+
+  <text x="360" y="52" text-anchor="middle" class="h title">Five blanks, one testable sentence</text>
+  <text x="360" y="88" text-anchor="middle" class="h sub">Categories get a polite nod - specifics get pushback.</text>
+
+  <!-- The mad-libs sentence -->
+  <text x="30" y="168" class="h word">If we help</text>
+  <rect x="170" y="142" width="150" height="40" rx="12" class="blank"/><text x="245" y="170" text-anchor="middle" class="h blankt">CUSTOMER</text>
+  <text x="332" y="168" class="h word">solve</text>
+  <rect x="410" y="142" width="140" height="40" rx="12" class="blank"/><text x="480" y="170" text-anchor="middle" class="h blankt">PROBLEM</text>
+
+  <text x="30" y="234" class="h word">with</text>
+  <rect x="96" y="208" width="150" height="40" rx="12" class="blank"/><text x="171" y="236" text-anchor="middle" class="h blankt">APPROACH</text>
+  <text x="258" y="234" class="h word">, they'll choose it over</text>
+
+  <rect x="30" y="274" width="184" height="40" rx="12" class="blank"/><text x="122" y="302" text-anchor="middle" class="h blankt">COMPETITION</text>
+  <text x="226" y="300" class="h word">because</text>
+  <rect x="344" y="274" width="208" height="40" rx="12" class="blank"/><text x="448" y="302" text-anchor="middle" class="h blankt">DIFFERENTIATION</text>
+
+  <!-- Contrast: vague vs specific (the CUSTOMER blank) -->
+  <line x1="40" y1="356" x2="680" y2="356" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="360" y="392" text-anchor="middle" class="h lbl">Fill the CUSTOMER blank:</text>
+
+  <rect x="60" y="418" width="270" height="46" rx="14" class="cvag"/><text x="195" y="448" text-anchor="middle" class="h cvagt">small businesses</text>
+  <text x="352" y="448" class="h react" fill="#98a2b3">&#8594; a polite nod</text>
+
+  <rect x="60" y="480" width="270" height="46" rx="14" class="cspec"/><text x="195" y="510" text-anchor="middle" class="h cspect">solo chiropractors</text>
+  <text x="352" y="510" class="h react" fill="#2e9e4f">&#8594; "that's me!"</text>
+
+  <text x="690" y="548" text-anchor="end" class="h foot">Basis: Click (Knapp &amp; Zeratsky, 2025)</text>
+</svg>

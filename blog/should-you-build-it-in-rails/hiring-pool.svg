@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300" role="img" aria-label="Stack Overflow 2025 Developer Survey, 31,771 responses: JavaScript used by 66 percent, TypeScript 43.6 percent, Ruby 6.4 percent">
+  <rect width="640" height="300" fill="#0e0e14"/>
+  <text x="24" y="38" fill="#dfe2eb" font-family="Inter,Helvetica,sans-serif" font-size="21" font-weight="600">Languages used in the past year</text>
+  <text x="24" y="62" fill="#8b90a0" font-family="Inter,Helvetica,sans-serif" font-size="15">Stack Overflow 2025, of the 31,771 who answered</text>
+
+  <g font-family="Inter,Helvetica,sans-serif" font-size="17">
+    <text x="24" y="112" fill="#dfe2eb">JavaScript</text>
+    <rect x="150" y="94" width="396" height="26" rx="5" fill="#7dd0fe"/>
+    <text x="558" y="113" fill="#dfe2eb" font-weight="700">66%</text>
+
+    <text x="24" y="166" fill="#dfe2eb">TypeScript</text>
+    <rect x="150" y="148" width="262" height="26" rx="5" fill="#a855f7"/>
+    <text x="424" y="167" fill="#dfe2eb" font-weight="700">43.6%</text>
+
+    <text x="24" y="220" fill="#dfe2eb">Ruby</text>
+    <rect x="150" y="202" width="38" height="26" rx="5" fill="#cc342d"/>
+    <text x="200" y="221" fill="#dfe2eb" font-weight="700">6.4%</text>
+  </g>
+
+  <line x1="24" y1="248" x2="616" y2="248" stroke="#2a2f3a" stroke-width="1"/>
+  <text x="24" y="278" fill="#8b90a0" font-family="Inter,Helvetica,sans-serif" font-size="15">Self-selected survey. Read it as a direction, not a hiring forecast.</text>
+</svg>

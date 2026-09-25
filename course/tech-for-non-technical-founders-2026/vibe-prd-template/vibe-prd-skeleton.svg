@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" role="img" aria-labelledby="skeleton-title">
+  <title id="skeleton-title">The one-page brief skeleton - five labeled sections</title>
+  <defs>
+    <style>
+      .heading   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .sub       { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .sec-num   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 17px; fill: #1a1a1a; font-weight: 700; }
+      .sec-rule  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 14px; fill: #444; }
+      .cue-good  { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #1a7a3c; font-weight: 700; }
+      .cue-bad   { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; font-size: 13px; fill: #cc342d; font-weight: 700; }
+      .card      { fill: #faf7f2; stroke: #1a1a1a; stroke-width: 2.5; }
+      .metric    { fill: #f0f9f0; stroke: #2f9e44; stroke-width: 3; }
+      .nogo      { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <text x="500" y="32" class="heading" text-anchor="middle">The one-page brief, five sections</text>
+  <text x="500" y="54" class="sub" text-anchor="middle">Sections 1-2 from research. 3-5 written fresh. 90 minutes, hard cap.</text>
+
+  <!-- Row 1: sections 1-3 -->
+  <rect x="30" y="72" width="300" height="170" rx="14" class="card" transform="rotate(-0.3 180 157)"/>
+  <text x="180" y="105" class="sec-num" text-anchor="middle">1 - THE PROBLEM</text>
+  <text x="180" y="135" class="sec-rule" text-anchor="middle">Copied word for word from</text>
+  <text x="180" y="155" class="sec-rule" text-anchor="middle">your validated statement -</text>
+  <text x="180" y="175" class="sec-rule" text-anchor="middle">do not soften it.</text>
+
+  <rect x="350" y="72" width="300" height="170" rx="14" class="card" transform="rotate(0.3 500 157)"/>
+  <text x="500" y="105" class="sec-num" text-anchor="middle">2 - USER + CONTEXT</text>
+  <text x="500" y="135" class="sec-rule" text-anchor="middle">The 60 seconds before and</text>
+  <text x="500" y="155" class="sec-rule" text-anchor="middle">after they reach for it -</text>
+  <text x="500" y="175" class="sec-rule" text-anchor="middle">moment of use, not TAM.</text>
+
+  <rect x="670" y="72" width="300" height="170" rx="14" class="card" transform="rotate(-0.3 820 157)"/>
+  <text x="820" y="105" class="sec-num" text-anchor="middle">3 - WHAT YOU'RE BUILDING</text>
+  <text x="820" y="132" class="sec-rule" text-anchor="middle">One verb-led paragraph.</text>
+  <text x="820" y="160" class="cue-good" text-anchor="middle">✓ outcome-shaped</text>
+  <text x="820" y="180" class="cue-bad" text-anchor="middle">✗ feature list</text>
+
+  <!-- Row 2: sections 4-5 -->
+  <rect x="30" y="262" width="455" height="170" rx="14" class="metric" transform="rotate(0.3 257 347)"/>
+  <text x="257" y="300" class="sec-num" text-anchor="middle">4 - SUCCESS METRIC</text>
+  <text x="257" y="335" class="sec-rule" text-anchor="middle">One metric. One target number.</text>
+  <text x="257" y="358" class="sec-rule" text-anchor="middle">One 30-day calendar reminder.</text>
+
+  <rect x="515" y="262" width="455" height="170" rx="14" class="nogo" transform="rotate(-0.3 743 347)"/>
+  <text x="743" y="300" class="sec-num" text-anchor="middle">5 - WHAT YOU'RE NOT BUILDING</text>
+  <text x="743" y="335" class="sec-rule" text-anchor="middle">The no-go list - name what a</text>
+  <text x="743" y="358" class="sec-rule" text-anchor="middle">competent agent would add.</text>
+</svg>

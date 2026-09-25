@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 468" role="img" aria-labelledby="cvp-title cvp-desc">
+  <title id="cvp-title">Same 3 payments, opposite diagnosis - the click count decides what 3 payments mean.</title>
+  <desc id="cvp-desc">Two dot fields, one dot per click. On the left, 60 clicks: 3 dots are green for paid and 57 are gray for clicked without paying, a 5 percent completion rate - the verdict reads "Checkout is killing intent". On the right, 6 clicks: 3 green paid and 3 gray, a 50 percent rate, sitting inside 20 dashed empty slots that are not yet clicked - the verdict reads "Too few clicks to call it", with a note that 20 clicks is the minimum before the ratio means anything. Basis: the same 3 completed payments, read against two different click counts.</desc>
+  <defs>
+    <style>
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 24px; font-weight: 600; fill: #4a4a4a; }
+      .label { font-size: 20px; font-weight: 700; fill: #121212; }
+      .rate  { font-size: 18px; font-weight: 400; fill: #555555; }
+      .lgnd  { font-size: 18px; font-weight: 400; fill: #555555; }
+      .vd    { font-size: 19px; font-weight: 700; fill: #ffffff; }
+      .basis { font-size: 17px; font-weight: 400; fill: #555555; }
+      .paid  { fill: #2e7d32; }
+      .drop  { fill: #d5d5d5; }
+      .slot  { fill: none; stroke: #c7c7c7; stroke-width: 1.5; stroke-dasharray: 3 3; }
+    </style>
+  </defs>
+
+  <!-- page tone + editorial card -->
+  <rect width="720" height="468" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="452" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <!-- title block: action title + one message -->
+  <text x="360" y="48" text-anchor="middle" class="gk title">Same 3 payments, opposite diagnosis</text>
+  <text x="360" y="80" text-anchor="middle" class="gk msg">The click count decides what 3 payments mean</text>
+
+  <!-- legend: one dot = one click -->
+  <circle cx="150" cy="106" r="7" class="paid"/>
+  <text x="164" y="112" class="sys lgnd">paid</text>
+  <circle cx="242" cy="106" r="7" class="drop"/>
+  <text x="256" y="112" class="sys lgnd">clicked, no payment</text>
+  <circle cx="454" cy="106" r="7" class="slot"/>
+  <text x="468" y="112" class="sys lgnd">not yet clicked</text>
+
+  <!-- Left card: 60 clicks -->
+  <rect x="24" y="128" width="316" height="292" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="182" y="162" text-anchor="middle" class="gk label">60 clicks &#8594; 3 paid</text>
+  <text x="182" y="186" text-anchor="middle" class="sys rate">5% of clickers completed</text>
+
+  <!-- 60 dots: 10 columns x 6 rows, first 3 paid -->
+  <g>
+    <circle cx="58" cy="216" r="7" class="paid"/><circle cx="86" cy="216" r="7" class="paid"/><circle cx="114" cy="216" r="7" class="paid"/>
+    <circle cx="142" cy="216" r="7" class="drop"/><circle cx="170" cy="216" r="7" class="drop"/><circle cx="198" cy="216" r="7" class="drop"/><circle cx="226" cy="216" r="7" class="drop"/><circle cx="254" cy="216" r="7" class="drop"/><circle cx="282" cy="216" r="7" class="drop"/><circle cx="310" cy="216" r="7" class="drop"/>
+    <circle cx="58" cy="242" r="7" class="drop"/><circle cx="86" cy="242" r="7" class="drop"/><circle cx="114" cy="242" r="7" class="drop"/><circle cx="142" cy="242" r="7" class="drop"/><circle cx="170" cy="242" r="7" class="drop"/><circle cx="198" cy="242" r="7" class="drop"/><circle cx="226" cy="242" r="7" class="drop"/><circle cx="254" cy="242" r="7" class="drop"/><circle cx="282" cy="242" r="7" class="drop"/><circle cx="310" cy="242" r="7" class="drop"/>
+    <circle cx="58" cy="268" r="7" class="drop"/><circle cx="86" cy="268" r="7" class="drop"/><circle cx="114" cy="268" r="7" class="drop"/><circle cx="142" cy="268" r="7" class="drop"/><circle cx="170" cy="268" r="7" class="drop"/><circle cx="198" cy="268" r="7" class="drop"/><circle cx="226" cy="268" r="7" class="drop"/><circle cx="254" cy="268" r="7" class="drop"/><circle cx="282" cy="268" r="7" class="drop"/><circle cx="310" cy="268" r="7" class="drop"/>
+    <circle cx="58" cy="294" r="7" class="drop"/><circle cx="86" cy="294" r="7" class="drop"/><circle cx="114" cy="294" r="7" class="drop"/><circle cx="142" cy="294" r="7" class="drop"/><circle cx="170" cy="294" r="7" class="drop"/><circle cx="198" cy="294" r="7" class="drop"/><circle cx="226" cy="294" r="7" class="drop"/><circle cx="254" cy="294" r="7" class="drop"/><circle cx="282" cy="294" r="7" class="drop"/><circle cx="310" cy="294" r="7" class="drop"/>
+    <circle cx="58" cy="320" r="7" class="drop"/><circle cx="86" cy="320" r="7" class="drop"/><circle cx="114" cy="320" r="7" class="drop"/><circle cx="142" cy="320" r="7" class="drop"/><circle cx="170" cy="320" r="7" class="drop"/><circle cx="198" cy="320" r="7" class="drop"/><circle cx="226" cy="320" r="7" class="drop"/><circle cx="254" cy="320" r="7" class="drop"/><circle cx="282" cy="320" r="7" class="drop"/><circle cx="310" cy="320" r="7" class="drop"/>
+    <circle cx="58" cy="346" r="7" class="drop"/><circle cx="86" cy="346" r="7" class="drop"/><circle cx="114" cy="346" r="7" class="drop"/><circle cx="142" cy="346" r="7" class="drop"/><circle cx="170" cy="346" r="7" class="drop"/><circle cx="198" cy="346" r="7" class="drop"/><circle cx="226" cy="346" r="7" class="drop"/><circle cx="254" cy="346" r="7" class="drop"/><circle cx="282" cy="346" r="7" class="drop"/><circle cx="310" cy="346" r="7" class="drop"/>
+  </g>
+
+  <!-- ruby = the one actionable reading -->
+  <rect x="40" y="368" width="284" height="36" rx="4" fill="#cc342d"/>
+  <text x="182" y="392" text-anchor="middle" class="gk vd">Checkout is killing intent</text>
+
+  <!-- Right card: 6 clicks -->
+  <rect x="380" y="128" width="316" height="292" rx="4" fill="#ffffff" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="538" y="162" text-anchor="middle" class="gk label">6 clicks &#8594; 3 paid</text>
+  <text x="538" y="186" text-anchor="middle" class="sys rate">50% of clickers completed</text>
+
+  <!-- 6 real clicks inside 20 slots: 10 columns x 2 rows -->
+  <g>
+    <circle cx="414" cy="216" r="7" class="paid"/><circle cx="442" cy="216" r="7" class="paid"/><circle cx="470" cy="216" r="7" class="paid"/>
+    <circle cx="498" cy="216" r="7" class="drop"/><circle cx="526" cy="216" r="7" class="drop"/><circle cx="554" cy="216" r="7" class="drop"/>
+    <circle cx="582" cy="216" r="7" class="slot"/><circle cx="610" cy="216" r="7" class="slot"/><circle cx="638" cy="216" r="7" class="slot"/><circle cx="666" cy="216" r="7" class="slot"/>
+    <circle cx="414" cy="242" r="7" class="slot"/><circle cx="442" cy="242" r="7" class="slot"/><circle cx="470" cy="242" r="7" class="slot"/><circle cx="498" cy="242" r="7" class="slot"/><circle cx="526" cy="242" r="7" class="slot"/><circle cx="554" cy="242" r="7" class="slot"/><circle cx="582" cy="242" r="7" class="slot"/><circle cx="610" cy="242" r="7" class="slot"/><circle cx="638" cy="242" r="7" class="slot"/><circle cx="666" cy="242" r="7" class="slot"/>
+  </g>
+
+  <text x="538" y="292" text-anchor="middle" class="sys rate">20 clicks is the minimum</text>
+  <text x="538" y="316" text-anchor="middle" class="sys rate">before the ratio means anything</text>
+
+  <rect x="396" y="368" width="284" height="36" rx="4" fill="#b26a00"/>
+  <text x="538" y="392" text-anchor="middle" class="gk vd">Too few clicks to call it</text>
+
+  <!-- one basis line -->
+  <text x="360" y="442" text-anchor="middle" class="sys basis">Basis: the same 3 completed payments, read against two different click counts</text>
+</svg>

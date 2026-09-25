@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="kit-sample-title kit-sample-desc">
+  <title id="kit-sample-title">Sample rows from the First 10 Customers tracker.</title>
+  <desc id="kit-sample-desc">A four-column table from the Google Sheet tracker: Name, Bucket, Progress, and Deposit. Priya Shah, a Champion (purple pill), paid May 10, deposit 2,400 dollars. Marcus Liu, Hot (ruby pill), demo scheduled May 12, no deposit yet. Sarah Okafor, Warm (amber pill), replied no fit, no deposit. Ana Reyes, a Champion, paid May 9, deposit 1,800 dollars. Color-coded bucket pills, date-stamped progress, and a Deposit column that sums to your live ARR. Names are illustrative composites.</desc>
+  <defs>
+    <style>
+      .gk    { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+      .sys   { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .title { font-size: 30px; font-weight: 700; fill: #121212; letter-spacing: -0.4px; }
+      .msg   { font-size: 22px; font-weight: 600; fill: #4a4a4a; }
+      .hdr   { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .cell  { font-size: 18px; font-weight: 400; fill: #121212; }
+      .money { font-size: 18px; font-weight: 700; fill: #2e7d32; }
+      .pill  { font-size: 17px; font-weight: 700; fill: #ffffff; }
+      .note  { font-size: 17px; font-weight: 400; fill: #555555; }
+    </style>
+  </defs>
+
+  <rect width="720" height="420" fill="#faf7f2"/>
+  <rect x="8" y="8" width="704" height="404" rx="6" fill="#ffffff" stroke="#ececec" stroke-width="1"/>
+
+  <text x="360" y="42" text-anchor="middle" class="gk title">First 10 Customers tracker</text>
+  <text x="360" y="70" text-anchor="middle" class="gk msg">Sample rows from the Google Sheet template</text>
+
+  <!-- Header row -->
+  <rect x="24" y="94" width="672" height="40" rx="4" fill="#121212"/>
+  <text x="44" y="120" class="gk hdr">Name</text>
+  <text x="250" y="120" class="gk hdr">Bucket</text>
+  <text x="430" y="120" class="gk hdr">Progress</text>
+  <text x="600" y="120" class="gk hdr">Deposit</text>
+
+  <!-- Row 1: Champion converted -->
+  <rect x="24" y="134" width="672" height="48" fill="#fbe9ff"/>
+  <text x="44" y="164" class="sys cell">Priya Shah</text>
+  <rect x="244" y="146" width="128" height="26" rx="4" fill="#a855f7"/>
+  <text x="308" y="164" text-anchor="middle" class="gk pill">CHAMPION</text>
+  <text x="430" y="164" class="sys cell">Paid May 10</text>
+  <text x="600" y="164" class="gk money">$2,400</text>
+
+  <!-- Row 2: Hot in demo -->
+  <rect x="24" y="182" width="672" height="48" fill="#fdfdfd"/>
+  <text x="44" y="212" class="sys cell">Marcus Liu</text>
+  <rect x="244" y="194" width="72" height="26" rx="4" fill="#cc342d"/>
+  <text x="280" y="212" text-anchor="middle" class="gk pill">HOT</text>
+  <text x="430" y="212" class="sys cell">Demo May 12</text>
+  <text x="600" y="212" class="sys cell">-</text>
+
+  <!-- Row 3: Warm declined -->
+  <rect x="24" y="230" width="672" height="48" fill="#fdfdfd"/>
+  <text x="44" y="260" class="sys cell">Sarah Okafor</text>
+  <rect x="244" y="242" width="86" height="26" rx="4" fill="#b8860b"/>
+  <text x="287" y="260" text-anchor="middle" class="gk pill">WARM</text>
+  <text x="430" y="260" class="sys cell">Replied - no fit</text>
+  <text x="600" y="260" class="sys cell">-</text>
+
+  <!-- Row 4: Champion converted -->
+  <rect x="24" y="278" width="672" height="48" fill="#fbe9ff"/>
+  <text x="44" y="308" class="sys cell">Ana Reyes</text>
+  <rect x="244" y="290" width="128" height="26" rx="4" fill="#a855f7"/>
+  <text x="308" y="308" text-anchor="middle" class="gk pill">CHAMPION</text>
+  <text x="430" y="308" class="sys cell">Paid May 9</text>
+  <text x="600" y="308" class="gk money">$1,800</text>
+
+  <text x="360" y="356" text-anchor="middle" class="sys note">Color-coded buckets, date-stamped progress - Deposit sums to live ARR.</text>
+
+  <!-- Composites callout -->
+  <rect x="120" y="374" width="480" height="30" rx="4" fill="#fffbeb" stroke="#b8860b" stroke-width="2"/>
+  <text x="360" y="394" text-anchor="middle" class="sys note" fill="#8a6100">Names in this sample are illustrative composites.</text>
+</svg>

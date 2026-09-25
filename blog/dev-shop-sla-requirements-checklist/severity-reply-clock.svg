@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" role="img" aria-labelledby="src-title">
+  <title id="src-title">Put three numbers in the contract - how fast they reply depends on how bad it is. Three stacked rows. Severity 1, marked in red: the app is down, or nobody can pay you - reply in 2 business hours. Severity 2, marked in amber: a feature broke, but there is a workaround - reply in 8 business hours. Severity 3, in grey: typos and cosmetic glitches - reply in 2 business days. Footer note: these are fair asks, and you name your own timezone for business hours.</title>
+  <desc>Hand-drawn severity ladder: three rows, each with a coloured severity badge, the plain-English meaning of that level, and the first-reply deadline to write into the contract.</desc>
+  <style>
+    .h { font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive; }
+    .title { font-size: 34px; font-weight: 700; fill: #1a1a1a; }
+    .sub { font-size: 22px; fill: #667085; }
+    .badge { font-size: 22px; font-weight: 700; fill: #ffffff; }
+    .mean { font-size: 21px; fill: #333333; }
+    .clock1 { font-size: 26px; font-weight: 700; fill: #cc342d; }
+    .clock2 { font-size: 26px; font-weight: 700; fill: #b45309; }
+    .clock3 { font-size: 26px; font-weight: 700; fill: #4a4a4a; }
+    .basis { font-size: 20px; fill: #667085; }
+  </style>
+
+  <text class="h title" x="36" y="44">Put three numbers in the contract</text>
+  <text class="h sub" x="36" y="74">how fast they reply depends on how bad it is</text>
+
+  <!-- Sev 1 -->
+  <rect x="36" y="94" width="606" height="98" rx="10" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <rect x="54" y="114" width="108" height="58" rx="10" fill="#cc342d"/>
+  <text class="h badge" x="108" y="153" text-anchor="middle">Sev 1</text>
+  <text class="h mean" x="182" y="138">app is down - or nobody can pay you</text>
+  <text class="h clock1" x="182" y="170">reply in 2 business hours</text>
+
+  <!-- Sev 2 -->
+  <rect x="36" y="204" width="606" height="98" rx="10" fill="#faf7f2" stroke="#b45309" stroke-width="2.5"/>
+  <rect x="54" y="224" width="108" height="58" rx="10" fill="#b45309"/>
+  <text class="h badge" x="108" y="263" text-anchor="middle">Sev 2</text>
+  <text class="h mean" x="182" y="248">a feature broke - there is a workaround</text>
+  <text class="h clock2" x="182" y="280">reply in 8 business hours</text>
+
+  <!-- Sev 3 -->
+  <rect x="36" y="314" width="606" height="98" rx="10" fill="#faf7f2" stroke="#8a8378" stroke-width="2.5"/>
+  <rect x="54" y="334" width="108" height="58" rx="10" fill="#8a8378"/>
+  <text class="h badge" x="108" y="373" text-anchor="middle">Sev 3</text>
+  <text class="h mean" x="182" y="358">typos and cosmetic glitches</text>
+  <text class="h clock3" x="182" y="390">reply in 2 business days</text>
+
+  <text class="h basis" x="36" y="446">Fair asks - and name YOUR timezone for business hours.</text>
+</svg>
