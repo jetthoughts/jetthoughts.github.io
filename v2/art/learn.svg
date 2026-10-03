@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 190" fill="none" aria-hidden="true">
+  <!-- Learn: five modules as stops on one climbing route; dashed loop = pivot back to a new hypothesis; ruby stop = first paying customer. Line art only, no text. -->
+  <g stroke="#8a6f78" stroke-opacity=".16"><path d="M0 150 H400 M100 0 V190 M200 0 V190 M300 0 V190"/></g>
+  <path d="M28 150 L104 128 L180 104 L256 80 L336 46" stroke="#8a6f78" stroke-opacity=".8" stroke-width="1.5"/>
+  <path d="M104 128 C 96 168, 40 176, 30 158" stroke="#8a6f78" stroke-opacity=".6" stroke-dasharray="2 4"/>
+  <g stroke="#8a6f78" stroke-opacity=".9" stroke-width="1.5" fill="#18000f">
+    <circle cx="28" cy="150" r="7"/>
+    <circle cx="104" cy="128" r="7"/>
+    <circle cx="180" cy="104" r="7"/>
+    <circle cx="256" cy="80" r="7"/>
+  </g>
+  <g stroke="#8a6f78" stroke-opacity=".5" stroke-width="1.2">
+    <path d="M28 150 V182 M104 128 V182 M180 104 V182 M256 80 V182 M336 46 V182" stroke-dasharray="1 5"/>
+  </g>
+  <circle cx="336" cy="46" r="16" stroke="#cc342d" stroke-width="2" fill="#18000f"/>
+  <circle cx="336" cy="46" r="6" fill="#cc342d"/>
+  <circle cx="336" cy="46" r="34" stroke="#cc342d" stroke-opacity=".35"/>
+</svg>

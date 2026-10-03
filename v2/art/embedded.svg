@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none" aria-hidden="true">
+  <!-- Embedded: two of ours inside your team, and your team growing (dashed = hires still to come). -->
+  <rect x="8" y="8" width="144" height="104" rx="4" stroke="#8a6f78" stroke-opacity=".6" stroke-width="1.2"/>
+  <g stroke="#8a6f78" stroke-opacity=".6" stroke-width="1.2">
+    <path d="M46 32 H74 M86 32 H114 M46 60 H74 M86 60 H114 M46 88 H74 M86 88 H114"/>
+    <path d="M40 38 V54 M40 66 V82 M80 38 V54 M80 66 V82 M120 38 V54 M120 66 V82"/>
+  </g>
+  <g stroke="#8a6f78" stroke-opacity=".9" stroke-width="1.2">
+    <circle cx="40" cy="32" r="6"/><circle cx="80" cy="32" r="6"/><circle cx="40" cy="60" r="6"/><circle cx="40" cy="88" r="6"/>
+  </g>
+  <g stroke="#8a6f78" stroke-opacity=".9" stroke-width="1.2" stroke-dasharray="2 3">
+    <circle cx="120" cy="32" r="6"/><circle cx="80" cy="88" r="6"/><circle cx="120" cy="88" r="6"/>
+  </g>
+  <circle cx="80" cy="60" r="6" fill="#cc342d"/>
+  <circle cx="120" cy="60" r="6" fill="#cc342d"/>
+</svg>

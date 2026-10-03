@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 96" width="400" height="96" fill="none" aria-hidden="true">
+<g stroke="#8a6f78" stroke-opacity=".16"><path d="M5 18 V96 M200 18 V96 M395 18 V96"/></g>
+<g stroke="#8a6f78" stroke-opacity=".85" stroke-width="1.2"><path d="M5 46 H395"/><path d="M5 40 v12 M135 40 v12 M265 40 v12 M395 40 v12"/></g>
+<path d="M5 84 H395" stroke="#8a6f78" stroke-opacity=".5"/>
+<g stroke="#cc342d" stroke-width="2"><path d="M5 78 v12 M50 78 v12 M95 78 v12 M140 78 v12 M185 78 v12 M230 78 v12 M275 78 v12 M320 78 v12 M365 78 v12"/></g>
+</svg>

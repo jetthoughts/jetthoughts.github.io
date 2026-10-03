@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 190" fill="none" aria-hidden="true">
+  <!-- Work: six client relationships drawn to scale (40px = 1 year, case-study floors); end tick = the listed duration, current status open (Q-36) -->
+  <g stroke="#8a6f78" stroke-opacity=".16"><path d="M20 0 V190 M180 0 V190 M340 0 V190"/></g>
+  <g stroke="#8a6f78" stroke-opacity=".8" stroke-width="1.5">
+    <path d="M20 22 H187"/>
+    <path d="M20 50 H380"/>
+    <path d="M20 78 H57"/>
+    <path d="M20 106 H120"/>
+    <path d="M20 134 H100"/>
+    <path d="M20 162 H180"/>
+    <path d="M20 16 v12 M20 44 v12 M20 72 v12 M20 100 v12 M20 128 v12 M20 156 v12"/>
+  </g>
+  <g stroke="#cc342d" stroke-width="1.5"><path d="M187 16 v12 M380 44 v12 M57 72 v12 M120 100 v12 M100 128 v12 M180 156 v12"/></g>
+</svg>

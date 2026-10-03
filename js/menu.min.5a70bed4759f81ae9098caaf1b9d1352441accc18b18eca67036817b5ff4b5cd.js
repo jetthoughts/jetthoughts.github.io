@@ -1,0 +1,1 @@
+document.querySelectorAll("details.menu").forEach(e=>{e.addEventListener("toggle",()=>e.open&&e.querySelector("nav a").focus()),e.addEventListener("keydown",t=>{t.key==="Escape"&&e.open&&(e.open=!1,e.querySelector("summary").focus())})})

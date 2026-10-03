@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" fill="none" aria-hidden="true">
+  <!-- Services: one call, two tracks. Upper: fourteen days to one live point (Sprint). Lower: a team that keeps growing (Embedded; dashed = hires to come). Line art only, no text. -->
+  <g stroke="#8a6f78" stroke-opacity=".16">
+    <path d="M0 150 H640"/>
+    <path d="M160 0 V300 M320 0 V300 M480 0 V300"/>
+  </g>
+  <g stroke="#8a6f78" stroke-opacity=".75" stroke-width="1.5">
+    <circle cx="48" cy="150" r="14"/>
+    <path d="M62 150 H104 q16 0 16 -16 V88 q0 -16 16 -16 H420"/>
+    <path d="M104 150 q16 0 16 16 V212 q0 16 16 16 H600"/>
+  </g>
+  <g stroke="#8a6f78" stroke-opacity=".8" stroke-width="1.2">
+    <path d="M160 64 v16 M180 64 v16 M200 64 v16 M220 64 v16 M240 64 v16 M260 64 v16 M280 64 v16 M300 64 v16 M320 64 v16 M340 64 v16 M360 64 v16 M380 64 v16 M400 64 v16"/>
+  </g>
+  <circle cx="436" cy="72" r="14" stroke="#cc342d" stroke-width="2"/>
+  <circle cx="436" cy="72" r="5" fill="#cc342d"/>
+  <circle cx="436" cy="72" r="30" stroke="#cc342d" stroke-opacity=".35"/>
+  <g stroke="#8a6f78" stroke-opacity=".9" stroke-width="1.2">
+    <circle cx="180" cy="228" r="7"/><circle cx="260" cy="228" r="7"/><circle cx="260" cy="204" r="7"/>
+    <circle cx="340" cy="228" r="7"/><circle cx="340" cy="204" r="7"/><circle cx="340" cy="252" r="7"/>
+    <circle cx="420" cy="228" r="7"/><circle cx="420" cy="204" r="7"/><circle cx="420" cy="252" r="7"/><circle cx="420" cy="180" r="7"/>
+  </g>
+  <g stroke="#8a6f78" stroke-opacity=".9" stroke-width="1.2" stroke-dasharray="2 3">
+    <circle cx="500" cy="228" r="7"/><circle cx="500" cy="204" r="7"/><circle cx="500" cy="252" r="7"/><circle cx="500" cy="180" r="7"/><circle cx="500" cy="276" r="7"/>
+    <circle cx="580" cy="228" r="7"/><circle cx="580" cy="204" r="7"/><circle cx="580" cy="252" r="7"/><circle cx="580" cy="180" r="7"/><circle cx="580" cy="276" r="7"/><circle cx="580" cy="156" r="7"/>
+  </g>
+  <circle cx="180" cy="252" r="7" fill="#cc342d"/>
+  <circle cx="260" cy="252" r="7" fill="#cc342d"/>
+</svg>

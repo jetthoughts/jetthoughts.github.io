@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 190" fill="none" aria-hidden="true">
+  <!-- Case template: one engagement drawn left to right. Dashed = before us, ruby node = we start, ring = first release, ticks = the months that follow. No numbers: the page carries them. -->
+  <g stroke="#8a6f78" stroke-opacity=".16"><path d="M0 110 H400 M100 0 V190 M200 0 V190 M300 0 V190"/></g>
+  <path d="M10 110 H112" stroke="#8a6f78" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="2 5"/>
+  <g stroke="#8a6f78" stroke-opacity=".8" stroke-width="1.5">
+    <path d="M124 110 H390"/>
+    <path d="M230 102 v16 M260 102 v16 M290 102 v16 M320 102 v16 M350 102 v16 M380 102 v16"/>
+    <path d="M230 80 H380" stroke-dasharray="2 4" stroke-width="1"/>
+  </g>
+  <circle cx="118" cy="110" r="6" fill="#cc342d"/>
+  <path d="M124 110 H190" stroke="#cc342d" stroke-width="2"/>
+  <circle cx="200" cy="110" r="10" stroke="#cc342d" stroke-width="2"/>
+  <circle cx="200" cy="110" r="3" fill="#cc342d"/>
+  <circle cx="200" cy="110" r="26" stroke="#cc342d" stroke-opacity=".35"/>
+</svg>
