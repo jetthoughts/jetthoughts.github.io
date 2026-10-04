@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" aria-hidden="true">
 <!-- LimeLeads: a list of leads; ruby = the one found -->
-<rect x="8" y="8" width="48" height="8" fill="#fff1e8"/>
+<rect x="8" y="8" width="48" height="8" fill="#a38c86"/>
 <rect x="8" y="24" width="48" height="8" fill="#cc342d"/>
-<rect x="8.75" y="40.75" width="46.5" height="6.5" stroke="#fff1e8" stroke-width="1.5"/>
-<path d="M8 56 H56" stroke="#fff1e8" stroke-width="1.5"/>
+<rect x="8.75" y="40.75" width="46.5" height="6.5" stroke="#a38c86" stroke-width="1.5"/>
+<path d="M8 56 H56" stroke="#a38c86" stroke-width="1.5"/>
 </svg>
