@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" aria-hidden="true">
-<!-- Mobile Coach: a question asked, a reply that lands -->
-<path d="M8 8 H40 V32 H16 L8 40 Z" fill="#a38c86"/>
-<rect x="24.75" y="32.75" width="30.5" height="22.5" stroke="#a38c86" stroke-width="1.5"/>
-<rect x="32" y="40" width="16" height="8" fill="#cc342d"/>
-</svg>

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" aria-hidden="true">
-<!-- Embedded: your team (frame, solid seats) with our engineer inside it -->
-<rect x="8.75" y="8.75" width="46.5" height="46.5" stroke="#a38c86" stroke-width="1.5"/>
-<rect x="16" y="16" width="8" height="8" fill="#a38c86"/>
-<rect x="40" y="40" width="8" height="8" fill="#a38c86"/>
-<rect x="24" y="24" width="16" height="16" fill="#cc342d"/>
-</svg>
