@@ -1,19 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 190" fill="none" aria-hidden="true">
-  <!-- Contact: three ways in (call, email, agency) meet at one point; the dashed line out is the reply still to be set. Line art only, no text. -->
-  <g stroke="#8a6f78" stroke-opacity=".16">
-    <path d="M0 110 H400 M100 0 V190 M200 0 V190 M300 0 V190"/>
+  <!-- Contact (direction C): three ways in (solid) meet at one ruby point; the outlined block after it is the next step we set together. -->
+  <style>*{vector-effect:non-scaling-stroke}</style>
+  <path d="M0 104 H400 M104 0 V190 M200 0 V190 M296 0 V190" stroke="#45293b" stroke-opacity=".55" stroke-width="1.5"/>
+  <path d="M32 40 H192 V88 M32 168 H192 V120 M32 104 H272 M320 104 H336" stroke="#a38c86" stroke-width="1.5"/>
+  <g fill="#a38c86"><rect x="16" y="32" width="16" height="16"/><rect x="16" y="96" width="16" height="16"/><rect x="16" y="160" width="16" height="16"/></g>
+  <rect x="336.75" y="88.75" width="46.5" height="30.5" fill="#18000f" stroke="#a38c86" stroke-width="1.5"/>
+  <g stroke="#cc342d" stroke-width="1.5">
+    <circle cx="288" cy="104" r="16"/>
+    <circle cx="288" cy="104" r="6" fill="#cc342d" stroke="none"/>
   </g>
-  <g stroke="#8a6f78" stroke-opacity=".8" stroke-width="1.5">
-    <circle cx="24" cy="46" r="10"/><path d="M20 42 q4 8 8 8"/>
-    <rect x="12" y="98" width="24" height="24" rx="3"/><path d="M12 101 l12 10 l12 -10"/>
-    <rect x="12" y="164" width="24" height="18" rx="2"/><path d="M18 164 v-4 h12 v4"/>
-    <path d="M34 46 H150 q40 0 70 40 q16 24 46 24"/>
-    <path d="M36 110 H266"/>
-    <path d="M36 173 H150 q40 0 70 -40 q16 -23 46 -23"/>
-  </g>
-  <path d="M276 110 H300" stroke="#cc342d" stroke-width="2"/>
-  <circle cx="316" cy="110" r="16" stroke="#cc342d" stroke-width="2"/>
-  <circle cx="316" cy="110" r="6" fill="#cc342d"/>
-  <circle cx="316" cy="110" r="34" stroke="#cc342d" stroke-opacity=".35"/>
-  <path d="M350 110 H400" stroke="#8a6f78" stroke-opacity=".6" stroke-dasharray="2 4"/>
 </svg>

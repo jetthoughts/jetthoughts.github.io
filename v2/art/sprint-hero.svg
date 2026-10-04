@@ -1,17 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 190" width="400" height="190" fill="none" aria-hidden="true">
-<g stroke="#8a6f78" stroke-opacity=".16"><path d="M0 110 H400 M100 0 V190 M200 0 V190 M300 0 V190"/></g>
-<g stroke="#8a6f78" stroke-opacity=".8" stroke-width="1.5">
-  <rect x="14" y="98" width="24" height="24" rx="3"/><path d="M20 106 h12 M20 114 h8"/>
-  <path d="M38 110 H316"/>
-</g>
-<g stroke="#8a6f78" stroke-opacity=".85" stroke-width="1.2">
-  <path d="M60 94 v32 M80 94 v32 M100 94 v32 M120 94 v32 M140 94 v32"/>
-  <path d="M196 94 v32 M216 94 v32 M236 94 v32 M256 94 v32 M276 94 v32"/>
-  <path d="M60 80 H140 M196 80 H276" stroke-dasharray="2 4"/>
-</g>
-<path d="M296 110 H316" stroke="#cc342d" stroke-width="2"/>
-<circle cx="332" cy="110" r="16" stroke="#cc342d" stroke-width="2"/>
-<circle cx="332" cy="110" r="6" fill="#cc342d"/>
-<circle cx="332" cy="110" r="34" stroke="#cc342d" stroke-opacity=".35"/>
-<path d="M366 110 H400" stroke="#8a6f78" stroke-opacity=".6" stroke-dasharray="2 4"/>
-    </svg>
+  <!-- Sprint hero (direction C): solid scope, two outlined weeks with a Friday report each, one ruby point live. -->
+  <path d="M0 112 H400 M104 0 V190 M200 0 V190 M296 0 V190" stroke="#45293b" stroke-opacity=".55" stroke-width="1.5"/>
+  <path d="M48 112 H320" stroke="#a38c86" stroke-width="1.5"/>
+  <rect x="16" y="96" width="32" height="32" fill="#a38c86"/>
+  <rect x="64.75" y="88.75" width="94.5" height="46.5" fill="#18000f" stroke="#a38c86" stroke-width="1.5"/>
+  <rect x="176.75" y="88.75" width="94.5" height="46.5" fill="#18000f" stroke="#a38c86" stroke-width="1.5"/>
+  <rect x="72" y="120" width="8" height="8" fill="#a38c86"/>
+  <rect x="184" y="120" width="8" height="8" fill="#a38c86"/>
+  <g stroke="#cc342d" stroke-width="1.5">
+    <circle cx="336" cy="112" r="16"/>
+    <circle cx="336" cy="112" r="6" fill="#cc342d" stroke="none"/>
+  </g>
+</svg>

@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 96" width="400" height="96" fill="none" aria-hidden="true">
-<g stroke="#8a6f78" stroke-opacity=".16"><path d="M5 18 V96 M200 18 V96 M395 18 V96"/></g>
-<g stroke="#8a6f78" stroke-opacity=".85" stroke-width="1.2"><path d="M5 46 H395"/><path d="M5 40 v12 M135 40 v12 M265 40 v12 M395 40 v12"/></g>
-<path d="M5 84 H395" stroke="#8a6f78" stroke-opacity=".5"/>
-<g stroke="#cc342d" stroke-width="2"><path d="M5 78 v12 M50 78 v12 M95 78 v12 M140 78 v12 M185 78 v12 M230 78 v12 M275 78 v12 M320 78 v12 M365 78 v12"/></g>
+  <!-- Partners (direction C): your brand in front (solid bar), our weeks inside your frame (outline), one ruby block = the build your client gets. -->
+  <rect x="8" y="16" width="384" height="16" fill="#a38c86"/>
+  <rect x="8.75" y="40.75" width="382.5" height="46.5" stroke="#a38c86" stroke-width="1.5"/>
+  <path d="M104 48 V80 M200 48 V80 M296 48 V80" stroke="#45293b" stroke-opacity=".55" stroke-width="1.5"/>
+  <rect x="120.75" y="56.75" width="62.5" height="14.5" stroke="#a38c86" stroke-width="1.5"/>
+  <rect x="216.75" y="56.75" width="62.5" height="14.5" stroke="#a38c86" stroke-width="1.5"/>
+  <rect x="312" y="56" width="64" height="16" fill="#cc342d"/>
 </svg>

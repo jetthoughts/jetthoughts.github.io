@@ -1,13 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none" aria-hidden="true">
-  <!-- Sprint: fourteen days, then one feature live. -->
-  <g stroke="#8a6f78" stroke-opacity=".8" stroke-width="1.2">
-    <rect x="8" y="8" width="16" height="16"/><rect x="28" y="8" width="16" height="16"/><rect x="48" y="8" width="16" height="16"/><rect x="68" y="8" width="16" height="16"/><rect x="88" y="8" width="16" height="16"/><rect x="108" y="8" width="16" height="16"/><rect x="128" y="8" width="16" height="16"/>
-    <rect x="8" y="28" width="16" height="16"/><rect x="28" y="28" width="16" height="16"/><rect x="48" y="28" width="16" height="16"/><rect x="68" y="28" width="16" height="16"/><rect x="88" y="28" width="16" height="16"/><rect x="108" y="28" width="16" height="16"/>
-    <path d="M8 56 H136 q8 0 8 8 V92 q0 8 -8 8 H124"/>
-    <path d="M28 52 v8 M48 52 v8 M68 52 v8 M88 52 v8 M108 52 v8 M128 52 v8"/>
-    <rect x="36" y="80" width="88" height="32" rx="4"/>
-    <path d="M36 88 H124"/>
-  </g>
-  <rect x="128" y="28" width="16" height="16" fill="#cc342d"/>
-  <rect x="48" y="96" width="32" height="8" fill="#cc342d"/>
+  <!-- Sprint (direction C): solid scope fixed before work starts, two outlined weeks with a Friday report each, one ruby point live. -->
+  <path d="M8 96 H152" stroke="#45293b" stroke-opacity=".55" stroke-width="1.5"/>
+  <path d="M32 60 H136" stroke="#a38c86" stroke-width="1.5"/>
+  <rect x="8" y="48" width="24" height="24" fill="#a38c86"/>
+  <rect x="40.75" y="40.75" width="38.5" height="38.5" fill="#18000f" stroke="#a38c86" stroke-width="1.5"/>
+  <rect x="88.75" y="40.75" width="38.5" height="38.5" fill="#18000f" stroke="#a38c86" stroke-width="1.5"/>
+  <rect x="48" y="64" width="8" height="8" fill="#a38c86"/>
+  <rect x="96" y="64" width="8" height="8" fill="#a38c86"/>
+  <rect x="136" y="52" width="16" height="16" fill="#cc342d"/>
 </svg>

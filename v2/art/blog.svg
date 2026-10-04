@@ -1,19 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 190" fill="none" aria-hidden="true">
-  <!-- Blog: a stack of posts, newest on top (ruby). Line art only, no text. -->
-  <g stroke="#8a6f78" stroke-opacity=".16"><path d="M20 0 V190 M180 0 V190 M340 0 V190"/></g>
-  <g stroke="#8a6f78" stroke-opacity=".55" stroke-width="1.2">
-    <rect x="132" y="12" width="200" height="120"/>
-    <rect x="160" y="36" width="200" height="120"/>
-  </g>
-  <rect x="188" y="60" width="200" height="120" fill="#18000f" stroke="#8a6f78" stroke-opacity=".9" stroke-width="1.5"/>
-  <g stroke="#8a6f78" stroke-opacity=".8" stroke-width="1.5">
-    <path d="M188 112 H388"/>
-    <path d="M204 128 H340 M204 144 H364 M204 160 H300"/>
-  </g>
-  <g stroke="#cc342d" stroke-width="1.5">
-    <path d="M188 76 V60 H204 M372 60 H388 V76"/>
-    <path d="M204 84 H260"/>
-  </g>
-  <circle cx="368" cy="86" r="5" fill="#cc342d"/>
-  <circle cx="368" cy="86" r="14" stroke="#cc342d" stroke-opacity=".35"/>
+  <!-- Blog (direction C): posts as a stack. Outline = the next one, ruby = the newest, solid = the archive. -->
+  <path d="M128 0 V190 M392 0 V190" stroke="#45293b" stroke-opacity=".55" stroke-width="1.5"/>
+  <rect x="144.75" y="24.75" width="230.5" height="14.5" stroke="#a38c86" stroke-width="1.5"/>
+  <rect x="144" y="56" width="232" height="16" fill="#cc342d"/>
+  <g fill="#a38c86"><rect x="144" y="88" width="200" height="16"/><rect x="144" y="120" width="232" height="16"/><rect x="144" y="152" width="168" height="16"/></g>
 </svg>
