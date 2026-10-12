@@ -1,3 +1,2 @@
 User-Agent: *
-Disallow: /blog/page/
 Sitemap: https://jetthoughts.com/sitemap.xml
