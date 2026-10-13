@@ -1,0 +1,29 @@
+# JetThoughts
+
+> Senior engineers for funded startups. A Sprint first. Embedded after, if you want us to stay. JetThoughts has been building software since 2008 and is rated 4.8/5 on Clutch (https://clutch.co/profile/jetthoughts).
+
+Contact: sales@jetthoughts.com
+
+## Services
+
+- [Services](https://jetthoughts.com/services/): Two ways to hire senior engineers: a two-week Sprint that ships one feature, or Embedded engineers who stay for years.
+- [Sprint](https://jetthoughts.com/services/sprint/): One feature live for your users in two weeks. Scope and price are agreed before any work starts.
+- [Embedded](https://jetthoughts.com/services/embedded/): Engineers who stay for years. The average JetThoughts client relationship is five years.
+- [Performance](https://jetthoughts.com/services/performance/): A two-week Sprint that times the requests users wait on in a Rails app, fixes the slowest ones and shows the numbers before and after.
+- [For agencies](https://jetthoughts.com/partners/): Engineers for builds an agency has already sold.
+
+## Work
+
+- [Clients](https://jetthoughts.com/clients/): Six clients: what changed for each, and how long we worked together.
+- [elital](https://jetthoughts.com/clients/elital/): Our own AI product: candidate matching with vector search, a 0-100 match score and an LLM-written reason.
+- [Open source](https://github.com/jetthoughts): Our gems and repositories on GitHub.
+
+## Learn
+
+- [Blog](https://jetthoughts.com/blog/): Articles on Ruby on Rails, software development and working with engineers.
+- [Course: Tech for non-technical founders](https://jetthoughts.com/course/tech-for-non-technical-founders-2026/): A free five-module course from idea to first paying users.
+
+## Optional
+
+- [Contact](https://jetthoughts.com/contact-us/): Book a call or write to us.
+- [Careers](https://jetthoughts.com/careers/): Engineering roles, remote.
