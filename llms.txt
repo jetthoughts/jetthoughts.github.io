@@ -11,6 +11,7 @@ Contact: sales@jetthoughts.com
 - [Embedded](https://jetthoughts.com/services/embedded/): Engineers who stay for years. The average JetThoughts client relationship is five years.
 - [Performance](https://jetthoughts.com/services/performance/): A two-week Sprint that times the requests users wait on in a Rails app, fixes the slowest ones and shows the numbers before and after.
 - [AI features](https://jetthoughts.com/services/ai-features/): A Sprint that adds an AI feature to your product. Our proof is elital, our own AI product; no client LLM feature has shipped yet.
+- [Code audit](https://jetthoughts.com/services/vibe-code-audit/): A fixed-price, read-only audit of an AI-built Next.js and Supabase app. A written report says what is wrong, how serious each finding is, and what each fix costs.
 - [For agencies](https://jetthoughts.com/partners/): Engineers for builds an agency has already sold.
 
 ## Work
