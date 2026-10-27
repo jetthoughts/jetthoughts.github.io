@@ -1,8 +1,8 @@
 // Service Worker for offline functionality
-// Bump CACHE_NAME whenever you ship a structural change you want propagated
-// to repeat visitors immediately. The registration URL also carries a
-// build-time `?v=` cache-buster (see baseof.html), so SW updates whenever
-// the surrounding HTML rebuilds.
+// Bump CACHE_NAME whenever you ship a caching change you want propagated to
+// repeat visitors. Keep the registration URL (/sw.js, see baseof.html) free of
+// per-build query strings: Google crawls each one as a new URL. Browsers
+// re-fetch this file and compare bytes, so an edit here is the only update trigger.
 const CACHE_NAME = 'jetthoughts-v2';
 const urlsToCache = ['/'];
 
